@@ -5,14 +5,39 @@
 
 const visit = require('unist-util-visit');
 
+const parseOptions = (meta) => {
+	const availableOptions = {};
+
+	if (meta) {
+		meta.map((option) => {
+			const key = option.match(/.*(?=:)|.*$/);
+			const value = option.match(/(?<=:).+/);
+
+			if (key) {
+				availableOptions[key[0].trim()] =
+					value === null ? true : value[0].trim();
+			}
+		});
+	}
+
+	return availableOptions;
+};
+
 module.exports = ({markdownAST}) => {
 	visit(markdownAST, 'html', (node) => {
 		if (typeof node.lang === 'undefined') {
 			return;
 		}
 
+		const language = node.meta ? node.lang + node.meta : node.lang;
+
+		const {expanded} = parseOptions(language.match(/(?<=\{).+?(?=\})/g));
+
+		const expandedClass = expanded ? ' expanded' : '';
+		const hideClass = expanded ? ' hide' : '';
+
 		node.value = `
-			<div class="code-container">
+			<div class="code-container${expandedClass}">
 				<div class="copied-alert alert alert-fluid alert-info d-none" role="alert">
 					<div class="container">
 						<div class="alert-autofit-row autofit-row">
@@ -35,7 +60,7 @@ module.exports = ({markdownAST}) => {
 					</div>
 				</div>
 
-				<span class="clay-p code-sample-info">
+				<span class="clay-p code-sample-info${hideClass}">
 					Code Sample (expand to see it)
 				</span>
 

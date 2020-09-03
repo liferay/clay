@@ -23,7 +23,7 @@ We believe that using composition is helpful and is a widely used standard in th
 
 The composition is very common in React because the JSX syntactic sugar makes it very powerful and more viable when coupled with the `children` prop for passing arbitrary child elements. Props in React components allows us to pass objects and consequently React elements since they are objects.
 
-```jsx
+```jsx{expanded}
 <ClayModal>
 	<ClayModal.Footer
 		first={
@@ -83,7 +83,7 @@ Clay follows a namespace pattern for low-level layer components, components are 
 
 </div>
 
-```jsx
+```jsx{expanded}
 <ClayDropDown
 	active={expand}
 	onActiveChange={setExpand}
@@ -117,7 +117,7 @@ The standard for differentiating high-level components from low-level components
    There are some exceptions to some components, Date Picker, Color Picker and Time Picker are examples of this.
 </div>
 
-```jsx
+```jsx{expanded}
 <ClayDropDownWithItems
 	items={[
 		{

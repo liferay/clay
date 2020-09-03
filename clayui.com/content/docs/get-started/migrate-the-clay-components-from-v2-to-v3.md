@@ -55,7 +55,7 @@ To symbolize this change, Clay is distributing the new packages on the scope npm
 
 ClayAlert v3 combines Alert, Stripe Alert, and Toast Notifications all in one.
 
-```jsx
+```jsx{expanded}
 import ClayAlert from '@clayui/alert';
 ```
 
@@ -78,7 +78,7 @@ To get to the behavior of Clay Toast Notifications, you need to use `ClayAlert.T
 
 For Example:
 
-```jsx
+```jsx{expanded}
 <ClayAlert.ToastContainer>
 	<ClayAlert title="One!" />
 	<ClayAlert title="Two!" />
@@ -88,7 +88,7 @@ For Example:
 
 **Note:** If you use `autoClose` and `onClose` is setting state, you need to make sure that `onClose` does so asynchronously. For example below, if you are using the `useState` hook, you need to make sure to use a callback for `setAlerts`.
 
-```diff
+```diff{expanded}
 const [alerts, setAlerts] = useState([]);
 
 {alerts.map(alertItem => (
@@ -113,11 +113,11 @@ const [alerts, setAlerts] = useState([]);
 
 Use `<ClayButton />` to compose with any element. A common case is to have a button with icon, so use `<ClayButtonWithIcon />`.
 
-```jsx
+```jsx{expanded}
 import ClayButton from '@clayui/button';
 ```
 
-```diff
+```diff{expanded}
 <Button
 -	label="Icon positioned at right"
 -	icon="plus"
@@ -134,11 +134,11 @@ import ClayButton from '@clayui/button';
 
 ClayCard v3 is offered in composable components such as `ClayCard.AspectRatio`, `ClayCard.Body`, `ClayCard.Description`, `ClayCard.Caption`, and `ClayCard.Header`.
 
-```jsx
+```jsx{expanded}
 import ClayCard from '@clayui/card';
 ```
 
-```diff
+```diff{expanded}
 - <ClayUserCard name="User Name" spritemap={spritemap} selectable />
 + <ClayCard displayType="user" selectable>
 + 		<ClayCard.Header>
@@ -188,7 +188,7 @@ import ClayCard from '@clayui/card';
 
 To get to the behavior of having a ClayCard with an image, use the following composition with ClayCard:
 
-```diff
+```diff{expanded}
 - <ClayImageCard labels={[label: 'Approved']} imageSrc="https://via.placeholder.com/256" spritemap={spritemap} subtitle="Author Action" title="My Title" />
 + <ClayCard displayType="image">
 + 		<ClayCard.Header>
@@ -224,7 +224,7 @@ To get to the behavior of having a ClayCard with an image, use the following com
 
 To get to the behavior of having a ClayCard with a user image, use the following composition with ClayCard:
 
-```diff
+```diff{expanded}
 - <ClayUserCard labels={[label: 'Approved']} spritemap={spritemap} subtitle="Author Action" title="Adélaide" />
 + <ClayCard displayType="user">
 + 		<ClayCard.Header>
@@ -257,7 +257,7 @@ To get to the behavior of having a ClayCard with a user image, use the following
 
 To get to the behavior of having a ClayCard with a horizontal, use the following composition with ClayCard:
 
-```diff
+```diff{expanded}
 - <ClayHorizontalCard spritemap={spritemap} icon="folder" title="Very Large Folder" />
 + <ClayCard displayType="directory">
 + 	<ClayCard.Body>
@@ -279,7 +279,7 @@ To get to the behavior of having a ClayCard with a horizontal, use the following
 
 To get to the behavior of having a ClayCard with a folder, use the following composition with ClayCard:
 
-```diff
+```diff{expanded}
 - <ClayCardFile labels={[{label: 'Approved'}]} spritemap={spritemap} title="deliverable.doc" subtitle="Stevie Ray Vaughn" />
 + <ClayCard displayType="file" selectable>
 + 	<ClayCard.Header>
@@ -312,7 +312,7 @@ To get to the behavior of having a ClayCard with a folder, use the following com
 
 To get the behavior of having a ClayCardGrid with Cards, use the following composition with ClayCard:
 
-```diff
+```diff{expanded}
 - <ClayCardGrid spritemap={spritemap} items={items} schema={schema} />
 + <ClayCard.Group label="Test Files">
 +	<CardFile spritemap={imageOrSpritemap} />
@@ -330,7 +330,7 @@ Also, Clay V3 offers you some high-levels cards:
 
 #### Clay Card with User
 
-```diff
+```diff{expanded}
 - <ClayUserCard
 	spritemap={spritemap}
 -	userColor="danger"
@@ -349,7 +349,7 @@ Also, Clay V3 offers you some high-levels cards:
 
 #### Clay Card Horizontal
 
-```diff
+```diff{expanded}
 - <ClayHorizontalCard
 	spritemap={spritemap}
 	title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
@@ -362,7 +362,7 @@ Also, Clay V3 offers you some high-levels cards:
 
 #### Clay File Card
 
-```diff
+```diff{expanded}
 - <ClayFileCard
 -	actionItems={items}
 -	stickerLabel="PDF"
@@ -397,7 +397,7 @@ Also, Clay V3 offers you some high-levels cards:
 
 #### Clay Card Image
 
-```diff
+```diff{expanded}
 - <ClayImageCard
 -	actionItems={items}
 	href="#image-card-block"
@@ -424,7 +424,7 @@ Also, Clay V3 offers you some high-levels cards:
 
 ClayCardGrid was deprecated due to ClayCard.Group.
 
-```jsx
+```jsx{expanded}
 import ClayCard, {ClayCardWithInfo} from '@clayui/card';
 
 <ClayCard.Group label="files">
@@ -436,7 +436,7 @@ import ClayCard, {ClayCardWithInfo} from '@clayui/card';
 
 ## ClayCheckbox
 
-```jsx
+```jsx{expanded}
 import {ClayCheckbox} from '@clayui/form';
 
 <ClayCheckbox aria-label="hello! Can you see me?" checked={true} readOnly />;
@@ -446,11 +446,11 @@ import {ClayCheckbox} from '@clayui/form';
 
 ClayLink has become simpler with v3, removing APIs from `icon` and `image`, making it flexible for you to define your content but complying with [Lexicon specifications](http://lexicondesign.io).
 
-```jsx
+```jsx{expanded}
 import ClayLink from '@clayui/link';
 ```
 
-```diff
+```diff{expanded}
 <ClayLink
 	href="#link-styles"
 -	label="Default"
@@ -482,7 +482,7 @@ import ClayLink from '@clayui/link';
 
 To get to the behavior of having a ClayLink with icon, use the composition with ClayIcon:
 
-```diff
+```diff{expanded}
 <ClayLink
 	href="#link-icons"
 -	icon="add-cell"
@@ -497,7 +497,7 @@ To get to the behavior of having a ClayLink with icon, use the composition with 
 
 To get to the behavior of having a ClayLink with image, use the composition with the `<img />` tag:
 
-```diff
+```diff{expanded}
 <ClayLink
 	href="#link-icons"
 -	imageSrc="image.jpg"
@@ -511,11 +511,11 @@ To get to the behavior of having a ClayLink with image, use the composition with
 
 ClayNavigationBar has become simpler than the version `v2`, removing APIs from `items` and making the development more flexible passing elements by composition.
 
-```jsx
+```jsx{expanded}
 import ClayNavigationBar from '@clayui/navigation-bar';
 ```
 
-```diff
+```diff{expanded}
  <ClayNavigationBar
 -    items={[{ label: 'Page 1', href: '#1' }, { label: 'Page 2', href: '#2' }]}
      inverted
@@ -557,11 +557,11 @@ To get the behavior of having a ClayNavigationBar using Buttons instead of Link 
 
 ## ClaySticker
 
-```jsx
+```jsx{expanded}
 import ClaySticker from '@clayui/sticker';
 ```
 
-```diff
+```diff{expanded}
 <ClaySticker
 	shape="circle"
 -	label="A"
@@ -591,7 +591,7 @@ import ClaySticker from '@clayui/sticker';
 
 To get to the behavior of having a ClaySticker with image, use the composition with the `<img />` tag:
 
-```diff
+```diff{expanded}
 -<ClaySticker
 -	imageSrc="image.jpg"
 -	imageAlt="my image"
@@ -603,7 +603,7 @@ To get to the behavior of having a ClaySticker with image, use the composition w
 
 To get to the behavior of having a ClaySticker with icon, use the composition with the `<ClayIcon />` component:
 
-```diff
+```diff{expanded}
 -<ClaySticker
 -	spritemap="icons.svg"
 -	symbol="user"
@@ -617,11 +617,11 @@ To get to the behavior of having a ClaySticker with icon, use the composition wi
 
 ClayTable has become more simpler than v2 with Table Head, Body, Row and Cell compositions. Removing all necessary schemas and complex APIs from the component and possibiliting a lot of variations with compositions.
 
-```jsx
+```jsx{expanded}
 import ClayTable from '@clayui/table';
 ```
 
-```diff
+```diff{expanded}
 - <ClayTable
 -     items={[
 -         {
@@ -707,7 +707,7 @@ Take a look at the [ClayTable documentation](/docs/components/table.html) for mo
 
 Added ability to utilize context for passing spritemap down instead of having to pass the prop everywhere.
 
-```jsx
+```jsx{expanded}
 import {ClayIconSpriteContext} from '@clayui/icon';
 import React from 'react';
 
@@ -728,7 +728,7 @@ Become a low-level API, you can compose Modal's small blocks to get the results 
 
 Read more about using [ClayModal in the documentation](/docs/components/modal.html).
 
-```jsx
+```jsx{expanded}
 import ClayButton from '@clayui/button';
 import ClayModal, {useModal} from '@clayui/modal';
 import React, {useState} from 'react';
@@ -798,7 +798,7 @@ const Component = () => {
 
 To render an iframe inside Modal, you can compose with the `<ClayModal.Body />` component by passing the url to the prop `url`.
 
-```jsx
+```jsx{expanded}
 <ClayModal>
 	<ClayModal.Header>{'Title'}</ClayModal.Header>
 	<ClayModal.Body url="https://clayui.com" />
@@ -809,7 +809,7 @@ To render an iframe inside Modal, you can compose with the `<ClayModal.Body />` 
 
 Using a radio by itself doesn't make much sense, only when 2+ exist does the functionality of radio actually work, which is why we moved from `radio` to `radio-group`. The functionality is the same, but by being grouped together it should make it easier to use because the `ClayRadioGroup` component will internally handle which radio is checked and requires less re-duplication of `inline` and `name` props.
 
-```jsx
+```jsx{expanded}
 import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 
 //v2
@@ -837,7 +837,7 @@ import {ClayRadio, ClayRadioGroup} from '@clayui/form';
 
 Read more about using [ClayLabel in the documentation](/docs/components/label.html).
 
-```jsx
+```jsx{expanded}
 import ClayLabel from '@clayui/label';
 
 <ClayLabel displayType="success">Label Success</ClayLabel>;
@@ -861,7 +861,7 @@ ClayProgressBar has become simpler with v3 by defaulting many styles based off o
 
 For example:
 
-```jsx
+```jsx{expanded}
 import ClayProgressBar from '@clayui/progress-bar';
 
 <ClayProgressBar value={value}>
@@ -888,7 +888,7 @@ ClayList has changed quite a bit. Instead of being "one size fits all" it is now
 
 For example:
 
-```jsx
+```jsx{expanded}
 import ClayList from '@clayui/list';
 
 <ClayList>
@@ -951,7 +951,7 @@ ClayCollapse has been renamed to ClayPanel due to collapse being just a part of 
 
 For example:
 
-```jsx
+```jsx{expanded}
 import ClayPanel from '@clayui/panel';
 
 <ClayPanel>
@@ -988,7 +988,7 @@ import ClayPanel from '@clayui/panel';
 
 ClayDropDown's API has been refactored quite a bit and is now created via composition. This gives the end user greater flexibility in how the dropdown is created and what the dropdown is used for. The following components are available for composition.
 
-```jsx
+```jsx{expanded}
 import ClayDropDown from '@clayui/drop-down';
 
 <ClayDropDown>
@@ -1007,7 +1007,7 @@ ClayDropDown also exports `<ClayDropDown.Menu>` which can be used independently 
 
 #### Compositions
 
-```jsx
+```jsx{expanded}
 <ClayDropDown
 	active={active}
 	onActiveChange={(newVal) => setActive(newVal)}
@@ -1033,7 +1033,7 @@ ClayPaginationWithBasicItems's high-level API is very similar to v2.x with a few
 
 Usage Example:
 
-```jsx
+```jsx{expanded}
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
 
 <ClayPaginationWithBasicItems
@@ -1066,11 +1066,11 @@ Receiving improvements in the mechanism of failed requests attempts, avoiding th
 
 See the [documentation](/docs/components/data-provider.html) to get the most out of the component.
 
-```jsx
+```jsx{expanded}
 import ClayDataProvider from '@clayui/data-provider';
 ```
 
-```diff
+```diff{expanded}
 <ClayDataProvider
 -	content={...}
 -	dataSource={...}
@@ -1120,11 +1120,11 @@ Autocomplete has received many changes due to the change of approach we had in v
 
 For example purposes you can get to the same result you had in v2 using composition, autocomplete alone does not do what it really promises, you need to compose with other components, ClayDropDown, ClayDataProvider and LoadingIndicator is where all the beauty of it is, it decreases the coupling and gigantic lists of API descriptions and offers flexibility for customizing and implementing new rules.
 
-```jsx
+```jsx{expanded}
 import ClayAutocomplete from '@clayui/autocomplete';
 ```
 
-```diff
+```diff{expanded}
 <ClayAutocomplete
 -	dataSource={dataSource}
 -	placeholder="Placeholder"
@@ -1159,7 +1159,7 @@ import ClayAutocomplete from '@clayui/autocomplete';
 
 If you use ClaySelect only for simple cases that do not need props for `options`, you can use `<ClaySelectWithOption />` which will have the same result as the previous version.
 
-```jsx
+```jsx{expanded}
 import {ClaySelect} from '@clayui/form';
 
 <ClaySelectWithOption
@@ -1194,7 +1194,7 @@ import {ClaySelect} from '@clayui/form';
 
 Still you can take advantage of composition if you think `ClaySelectWithOption` does not cover your cases.
 
-```jsx
+```jsx{expanded}
 <ClaySelect aria-label="Select Label" id="mySelectId">
 	<ClaySelect.Option label="Option 1" value="1" />
 	<ClaySelect.Option label="Option 2" value="2" />
@@ -1205,7 +1205,7 @@ Still you can take advantage of composition if you think `ClaySelectWithOption` 
 
 With the new clay-charts, we removed the dependency of `react-billboardjs` and implemented the interaction with Billboard ourself to give us more leverage. There are not many other changes and the component should be very similar to how it was used before in metal-jsx.
 
-```jsx
+```jsx{expanded}
 import ClayChart from '@clayui/charts';
 
 <ClayChart
