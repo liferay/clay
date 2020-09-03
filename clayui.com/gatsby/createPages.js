@@ -13,15 +13,42 @@ require('dotenv').config({
 
 const path = require('path');
 
-/* eslint-enable liferay/imports-first */
-
 const {GATSBY_CLAY_NIGHTLY} = process.env;
+
+const TAB_MAP_NAME = {
+	css: 'CSS / Markup',
+};
 
 const slugWithBar = (path) => {
 	return path.startsWith('/') ? path : `/${path}`;
 };
 
-const createDocs = (actions, edges, mdx, blacklist = []) => {
+const getTabs = (permalink, pathGroup) => {
+	const tabs = pathGroup.filter(
+		({
+			node: {
+				fields: {mainTabURL},
+			},
+		}) => mainTabURL === permalink
+	);
+
+	if (tabs.length === 0) {
+		return [];
+	}
+
+	return [
+		{
+			href: permalink,
+			name: 'React Component',
+		},
+		...tabs.map(({node: {fields: {slug}}}) => ({
+			href: slug,
+			name: TAB_MAP_NAME[path.basename(slug, '.html')],
+		})),
+	];
+};
+
+const createDocs = (actions, edges, mdx, pathGroup) => {
 	const {createPage, createRedirect} = actions;
 	const docsTemplate = path.resolve(__dirname, '../src/templates/docs.js');
 	const blogTemplate = path.resolve(__dirname, '../src/templates/blog.js');
@@ -33,21 +60,9 @@ const createDocs = (actions, edges, mdx, blacklist = []) => {
 		.forEach(
 			({
 				node: {
-					fields: {layout, redirect, redirectFrom, sibling, slug},
+					fields: {layout, mainTabURL, redirect, redirectFrom, slug},
 				},
 			}) => {
-				const hasSibling = blacklist.find(
-					({
-						node: {
-							fields: {sibling},
-						},
-					}) => sibling === slug
-				);
-
-				if (hasSibling) {
-					return;
-				}
-
 				if (redirect) {
 					const slugBar = slugWithBar(slug);
 					const fromPath = slugBar.endsWith('index.html')
@@ -92,21 +107,19 @@ const createDocs = (actions, edges, mdx, blacklist = []) => {
 					(slug.includes('docs/') || slug.includes('blog/')) &&
 					layout !== 'redirect'
 				) {
-					const blacklistSlugs = blacklist.map(
-						({
-							node: {
-								fields: {sibling},
-							},
-						}) => sibling
-					);
-
 					createPage({
 						component: template,
 						context: {
-							blacklist: blacklistSlugs,
-							markdownJsx: mdx,
-							sibling,
+							mainTabURL,
+							pathGroup: pathGroup.map(
+								({
+									node: {
+										fields: {slug},
+									},
+								}) => slug
+							),
 							slug,
+							tabs: getTabs(mainTabURL || slug, pathGroup),
 						},
 						path: slug,
 					});
@@ -140,7 +153,7 @@ module.exports = async ({actions, graphql}) => {
 							redirect
 							redirectFrom
 							slug
-							sibling
+							mainTabURL
 						}
 						body
 					}
@@ -155,7 +168,7 @@ module.exports = async ({actions, graphql}) => {
 							redirect
 							redirectFrom
 							slug
-							sibling
+							mainTabURL
 						}
 					}
 				}
@@ -166,22 +179,22 @@ module.exports = async ({actions, graphql}) => {
 			return Promise.reject(errors);
 		}
 
-		const blacklist = [
+		const pathGroup = [
 			...data.allMdx.edges,
 			...data.allMarkdownRemark.edges,
 		].filter(
 			({
 				node: {
-					fields: {sibling},
+					fields: {mainTabURL},
 				},
-			}) => sibling
+			}) => mainTabURL
 		);
 
 		if (data.allMdx.edges) {
-			createDocs(actions, data.allMdx.edges, true, blacklist);
+			createDocs(actions, data.allMdx.edges, true, pathGroup);
 		}
 
-		createDocs(actions, data.allMarkdownRemark.edges, false, blacklist);
+		createDocs(actions, data.allMarkdownRemark.edges, false, pathGroup);
 
 		const newestBlogEntry = await graphql(
 			`

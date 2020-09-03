@@ -46,22 +46,21 @@ class Navigation extends Component {
 			return true;
 		}
 
-		const {location} = this.props;
+		const {active = [], location} = this.props;
 		const match = location.pathname.split('/');
-		const id = match[match.length - 1].split('.');
 
 		if (section.items) {
 			return match.includes(section.id);
 		}
 
-		return id[0] === section.id;
+		return active.includes(section.pathname);
 	}
 
 	/**
 	 * @return {React.Component}
 	 */
 	renderNavigationItems() {
-		const {depth = 0, location, sectionList} = this.props;
+		const {active, depth = 0, location, sectionList} = this.props;
 
 		return sectionList.map((section, index) => {
 			const style = classNames({
@@ -90,6 +89,7 @@ class Navigation extends Component {
 
 					{section.items && (
 						<Navigation
+							active={active}
 							depth={depth + 1}
 							location={location}
 							onNavigation={() => this.handleOnNavigation()}

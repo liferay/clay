@@ -2,6 +2,7 @@
 title: 'Breadcrumb'
 description: 'Breadcrumb is a secondary navigation pattern that identifies the page position inside a hierarchy.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/breadcrumb/'
+mainTabURL: 'docs/components/breadcrumb.html'
 ---
 
 A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.

@@ -2,6 +2,7 @@
 title: 'Checkbox and Radio'
 description: 'Checkboxes and radios provide users with different selection and activation tools.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-check-toggle/'
+mainTabURL: 'docs/components/checkbox.html'
 ---
 
 <div class="nav-toc-absolute">

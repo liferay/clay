@@ -2,6 +2,7 @@
 title: 'Multi Select'
 description: 'Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/selector/'
+mainTabURL: 'docs/components/multi-select.html'
 ---
 
 <div class="nav-toc-absolute">

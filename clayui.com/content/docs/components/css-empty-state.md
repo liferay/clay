@@ -2,6 +2,7 @@
 title: 'Empty State'
 description: 'Empty states provide users with feedback on the reasons behind the empty state and what they can do to move out of the empty state.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/empty-states/'
+mainTabURL: 'docs/components/empty-state.html'
 ---
 
 <div class="nav-toc-absolute">

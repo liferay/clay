@@ -1,6 +1,7 @@
 ---
 title: 'Panel'
 description: 'Panel provides an expandable details-summary view.'
+mainTabURL: 'docs/components/panel.html'
 ---
 
 <div class="nav-toc-absolute">

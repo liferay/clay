@@ -2,6 +2,7 @@
 title: 'Toggle Switch'
 description: 'Toggle provide users with different selection and activation tools.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/radio-check-toggle/#toggle'
+mainTabURL: 'docs/components/toggle-switch.html'
 ---
 
 <div class="nav-toc-absolute">

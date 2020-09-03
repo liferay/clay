@@ -41,7 +41,7 @@ const SideNavScroll = (props) => {
 	);
 };
 
-export default (props) => (
+export default ({active, data, location}) => (
 	<>
 		<nav
 			className="sidebar-toggler-content sidenav-menu-slider sidenav-sticky"
@@ -97,8 +97,9 @@ export default (props) => (
 				<div className="p-0 sidebar-body">
 					<div className="mt-3">
 						<Navigation
-							location={props.location}
-							sectionList={props.data}
+							active={active}
+							location={location}
+							sectionList={data}
 						/>
 					</div>
 				</div>

@@ -2,6 +2,7 @@
 title: 'Input Autocomplete'
 description: 'An autocomplete text field is an input that offers the user text suggestions while they type.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-input-variations/'
+mainTabURL: 'docs/components/autocomplete.html'
 ---
 
 <div class="nav-toc-absolute">

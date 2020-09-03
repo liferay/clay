@@ -2,6 +2,7 @@
 title: 'Popover'
 description: 'Popovers contain helpful information such as an explanation of a context.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/popovers-tooltips/'
+mainTabURL: 'docs/components/popover.html'
 ---
 
 <div class="nav-toc-absolute">

@@ -2,6 +2,7 @@
 title: 'Select Box'
 description: 'This section demonstrates the different text input types, including usage and validation states.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/dual-listbox/'
+mainTabURL: 'docs/components/select-box.html'
 ---
 
 <div class="nav-toc-absolute">

@@ -2,6 +2,7 @@
 title: 'Links'
 description: 'Also known as a hyperlink, a link is a clickable (text or image) element used for navigation purposes.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/link/'
+mainTabURL: 'docs/components/link.html'
 ---
 
 <div class="nav-toc-absolute">
