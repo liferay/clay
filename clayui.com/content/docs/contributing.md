@@ -1,5 +1,6 @@
 ---
 title: 'Contributing'
 order: 4
-redirect: 'https://github.com/liferay/clay/blob/master/CONTRIBUTING.md'
 ---
+
+See [CONTRIBUTING doc](https://github.com/liferay/clay/blob/master/CONTRIBUTING.md) on our Github repository.
