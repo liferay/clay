@@ -2,7 +2,7 @@
 title: 'Dual List Box'
 description: 'Dual List Box provides users with two Select Boxes with the ability to move items between lists.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/dual-listbox/'
-mainTabLink: 'docs/components/dual-list_box.html'
+mainTabURL: 'docs/components/dual-list_box.html'
 ---
 
 <div class="clay-site-alert alert alert-warning">

@@ -2,7 +2,7 @@
 title: 'Dropdown'
 description: 'A dropdown menu displays a list of options for the element that triggers it.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/dropdowns/'
-mainTabLink: 'docs/components/drop-down.html'
+mainTabURL: 'docs/components/drop-down.html'
 ---
 
 <div class="nav-toc-absolute">

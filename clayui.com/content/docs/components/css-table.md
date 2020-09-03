@@ -2,7 +2,7 @@
 title: 'Tables'
 description: 'A table is a specific pattern for comparing datasets in a very direct and analytical way.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/table/'
-mainTabLink: 'docs/components/table.html'
+mainTabURL: 'docs/components/table.html'
 ---
 
 <div class="nav-toc-absolute">

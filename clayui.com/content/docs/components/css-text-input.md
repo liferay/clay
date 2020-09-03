@@ -2,7 +2,7 @@
 title: 'Input'
 description: 'This section demonstrates the different text input types, including usage and validation states.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/text-input/'
-mainTabLink: 'docs/components/input.html'
+mainTabURL: 'docs/components/input.html'
 ---
 
 <div class="nav-toc-absolute">

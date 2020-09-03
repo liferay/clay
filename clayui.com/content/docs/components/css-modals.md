@@ -2,7 +2,7 @@
 title: 'Modals'
 description: 'A modal is a secondary window that communicates or provides an action inside the same process.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/modals/'
-mainTabLink: 'docs/components/modal.html'
+mainTabURL: 'docs/components/modal.html'
 ---
 
 <div class="nav-toc-absolute">

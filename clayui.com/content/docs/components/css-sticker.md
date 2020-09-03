@@ -2,7 +2,7 @@
 title: 'Stickers'
 description: 'Stickers are a visual way to quickly identify content.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/stickers/'
-mainTabLink: 'docs/components/sticker.html'
+mainTabURL: 'docs/components/sticker.html'
 ---
 
 <div class="nav-toc-absolute">

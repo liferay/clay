@@ -31,7 +31,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			indexVisible,
 			layout,
 			lexiconDefinition = '',
-			mainTabLink,
+			mainTabURL,
 			nightly,
 			order,
 			packageNpm,
@@ -92,8 +92,8 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 					slug = relativePath.replace('.mdx', '.html');
 				}
 
-				if (mainTabLink) {
-					slug = generateTabSlug(slug, mainTabLink);
+				if (mainTabURL) {
+					slug = generateTabSlug(slug, mainTabURL);
 				}
 			}
 
@@ -225,9 +225,9 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		});
 
 		createNodeField({
-			name: 'mainTabLink',
+			name: 'mainTabURL',
 			node,
-			value: mainTabLink || '',
+			value: mainTabURL || '',
 		});
 
 		createNodeField({

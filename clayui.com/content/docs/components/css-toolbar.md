@@ -2,7 +2,7 @@
 title: 'Toolbar'
 description: 'Toolbar used as part of some Clay components like Management Toolbar and Modal'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/toolbars/'
-mainTabLink: 'docs/components/toolbar.html'
+mainTabURL: 'docs/components/toolbar.html'
 ---
 
 <div class="nav-toc-absolute">

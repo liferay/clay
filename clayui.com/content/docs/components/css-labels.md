@@ -2,7 +2,7 @@
 title: 'Labels'
 description: 'Labels categorize information, providing quick recognition.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/labels/'
-mainTabLink: 'docs/components/label.html'
+mainTabURL: 'docs/components/label.html'
 ---
 
 <div class="nav-toc-absolute">

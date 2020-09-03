@@ -357,7 +357,7 @@ export default (props) => {
 };
 
 export const pageQuery = graphql`
-	query($pathGroup: [String!], $slug: String!, $mainTabLink: String!) {
+	query($pathGroup: [String!], $slug: String!, $mainTabURL: String!) {
 		pageMdx: mdx(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead
@@ -386,7 +386,7 @@ export const pageQuery = graphql`
 				version
 			}
 		}
-		mainTab: mdx(fields: {slug: {eq: $mainTabLink}}) {
+		mainTab: mdx(fields: {slug: {eq: $mainTabURL}}) {
 			frontmatter {
 				description
 				disableTOC

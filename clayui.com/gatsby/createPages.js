@@ -27,9 +27,9 @@ const getTabs = (permalink, pathGroup) => {
 	const tabs = pathGroup.filter(
 		({
 			node: {
-				fields: {mainTabLink},
+				fields: {mainTabURL},
 			},
-		}) => mainTabLink === permalink
+		}) => mainTabURL === permalink
 	);
 
 	if (tabs.length === 0) {
@@ -60,7 +60,7 @@ const createDocs = (actions, edges, mdx, pathGroup) => {
 		.forEach(
 			({
 				node: {
-					fields: {layout, mainTabLink, redirect, redirectFrom, slug},
+					fields: {layout, mainTabURL, redirect, redirectFrom, slug},
 				},
 			}) => {
 				if (redirect) {
@@ -110,7 +110,7 @@ const createDocs = (actions, edges, mdx, pathGroup) => {
 					createPage({
 						component: template,
 						context: {
-							mainTabLink,
+							mainTabURL,
 							pathGroup: pathGroup.map(
 								({
 									node: {
@@ -119,7 +119,7 @@ const createDocs = (actions, edges, mdx, pathGroup) => {
 								}) => slug
 							),
 							slug,
-							tabs: getTabs(mainTabLink || slug, pathGroup),
+							tabs: getTabs(mainTabURL || slug, pathGroup),
 						},
 						path: slug,
 					});
@@ -153,7 +153,7 @@ module.exports = async ({actions, graphql}) => {
 							redirect
 							redirectFrom
 							slug
-							mainTabLink
+							mainTabURL
 						}
 						body
 					}
@@ -168,7 +168,7 @@ module.exports = async ({actions, graphql}) => {
 							redirect
 							redirectFrom
 							slug
-							mainTabLink
+							mainTabURL
 						}
 					}
 				}
@@ -185,9 +185,9 @@ module.exports = async ({actions, graphql}) => {
 		].filter(
 			({
 				node: {
-					fields: {mainTabLink},
+					fields: {mainTabURL},
 				},
-			}) => mainTabLink
+			}) => mainTabURL
 		);
 
 		if (data.allMdx.edges) {
