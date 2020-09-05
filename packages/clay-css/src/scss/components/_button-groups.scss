@@ -161,6 +161,14 @@
 
 	> .btn-monospaced {
 		width: $btn-monospaced-size;
+
+		&.btn-lg {
+			@extend %clay-btn-monospaced-lg !optional;
+		}
+
+		&.btn-sm {
+			@extend %clay-btn-monospaced-sm !optional;
+		}
 	}
 }
 
