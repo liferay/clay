@@ -270,7 +270,6 @@ $btn-outline-secondary: map-deep-merge(
 	(
 		bg: null,
 		border-color: $secondary-l2,
-		color: null,
 		hover-bg: rgba($gray-900, 0.03),
 		hover-border-color: transparent,
 		hover-color: map-get($btn-secondary, hover-color),
