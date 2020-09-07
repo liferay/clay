@@ -56,6 +56,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
               <button
                 aria-label="Reorder Up"
                 class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
+                disabled=""
                 type="button"
               >
                 <svg
@@ -70,6 +71,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
               <button
                 aria-label="Reorder Down"
                 class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
+                disabled=""
                 type="button"
               >
                 <svg
