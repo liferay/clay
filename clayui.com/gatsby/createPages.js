@@ -18,7 +18,8 @@ const redirects = require('../redirects.json');
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
 const TAB_MAP_NAME = {
-	css: 'CSS / Markup',
+	api: 'API',
+	css: 'Markup',
 };
 
 const slugWithBar = (path) => {
@@ -26,6 +27,8 @@ const slugWithBar = (path) => {
 };
 
 const getTabs = (permalink, pathGroup) => {
+	const sortTabs = (a) => (a.name === 'API' ? 1 : -1);
+
 	const tabs = pathGroup.filter(
 		({
 			node: {
@@ -41,12 +44,14 @@ const getTabs = (permalink, pathGroup) => {
 	return [
 		{
 			href: permalink,
-			name: 'React Component',
+			name: 'Overview',
 		},
-		...tabs.map(({node: {fields: {slug}}}) => ({
-			href: slug,
-			name: TAB_MAP_NAME[path.basename(slug, '.html')],
-		})),
+		...tabs
+			.map(({node: {fields: {slug}}}) => ({
+				href: slug,
+				name: TAB_MAP_NAME[path.basename(slug, '.html')],
+			}))
+			.sort(sortTabs),
 	];
 };
 

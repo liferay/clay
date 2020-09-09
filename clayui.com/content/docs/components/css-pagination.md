@@ -2,7 +2,7 @@
 title: 'Pagination'
 description: 'Preset pagination styles helps divide up large blocks of content on your site or app.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/pagination/'
-mainTabURL: 'docs/components/pagination.html'
+mainTabURL: 'docs/components/pagination-bar.html'
 ---
 
 <div class="nav-toc-absolute">

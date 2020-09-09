@@ -151,6 +151,7 @@ export default (props) => {
 		location,
 		pageContext: {tabs = [], slug},
 	} = props;
+
 	const {allMarkdownRemark, allMdx, mainTab, pageMd, pageMdx} = data;
 
 	const hasMainTab = !!mainTab.frontmatter.title;
@@ -218,11 +219,13 @@ export default (props) => {
 														<h1 className="docs-title">
 															{frontmatter.title}
 														</h1>
+
 														{frontmatter.packageNpm && (
 															<p className="docs-subtitle">
 																{`yarn add ${frontmatter.packageNpm}`}
 															</p>
 														)}
+
 														{frontmatter.description && (
 															<p className="docs-subtitle">
 																{
@@ -238,13 +241,10 @@ export default (props) => {
 																modern
 															>
 																{tabs.map(
-																	(
-																		{
-																			href,
-																			name,
-																		},
-																		index
-																	) => (
+																	({
+																		href,
+																		name,
+																	}) => (
 																		<ClayTabs.Item
 																			active={
 																				`/${href}` ===
@@ -252,7 +252,7 @@ export default (props) => {
 																			}
 																			href={`/${href}`}
 																			key={
-																				index
+																				name
 																			}
 																		>
 																			<span
