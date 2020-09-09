@@ -16,19 +16,19 @@ order: 6
 
 Add the following snippet into either the JSP file you're using the component in, or in the module's `init.jsp` file:
 
-```jsx
+```jsx{expanded}
 <%@ taglib prefix="clay" uri="http://liferay.com/tld/clay" %>
 ```
 
 The syntax for using Clay taglibs follows this principle:
 
-```jsx
+```jsx{expanded}
 <clay:componentName backendProperty="<%= Value %>" property="Property Value" />
 ```
 
 This is how it's supposed to look like with a ClayButton:
 
-```jsx
+```jsx{expanded}
 <clay:button label="<%= Button Label %>" style="primary" />
 ```
 

@@ -20,19 +20,19 @@ Sidebar is an opinionated container to display related content.
 
 Is composed by:
 
-```html
+```html{expanded}
 <div class="sidebar-header">
 	Sidebar Header
 </div>
 ```
 
-```html
+```html{expanded}
 <div class="sidebar-body">
 	Sidebar Body
 </div>
 ```
 
-```html
+```html{expanded}
 <div class="sidebar-footer">
 	Sidebar Footer
 </div>

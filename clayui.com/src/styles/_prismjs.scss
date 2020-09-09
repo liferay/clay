@@ -29,6 +29,10 @@ $insertedBack: #f0fff4;
 	overflow: auto;
 	position: relative;
 	tab-size: 1.5em;
+
+	.gatsby-code-text {
+		background-color: inherit;
+	}
 }
 
 .gatsby-highlight pre[class*='gatsby-code-'],

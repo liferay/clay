@@ -8,7 +8,10 @@ description: 'Clay CSS Framework provides some utilities for you to work with SC
 <div class="nav-toc">
 
 -   [Variables](#css-variables)
+    -   [Default Flag](#css-default-flag)
+    -   [Sass Maps](#css-sass-maps)
 -   [Mixins](#css-mixins)
+    -   [Extending With Mixins](#css-extending-with-mixins)
 -   [Functions](#css-functions)
 
 </div>
@@ -16,11 +19,11 @@ description: 'Clay CSS Framework provides some utilities for you to work with SC
 
 ## Variables(#css-variables)
 
-Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the \$ symbol to make something a variable. [SASS](https://sass-lang.com/guide)
+Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. <a href="https://sass-lang.com/guide" rel="noopener noreferrer" target="_blank">Sass</a> uses the `$` symbol to make something a variable.
 
 Example:
 
-```scss
+```scss{expanded}
 // Alert Dismissible
 
 $alert-dismissible-padding-bottom: null !default;
@@ -31,46 +34,279 @@ $alert-dismissible-padding-top: null !default;
 
 > [All **variables** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/variables)
 
-## Mixins(#css-mixins)
+### Default Flag(#css-default-flag)
 
-Some things in CSS are a bit tedious to write, especially with CSS3 and the many vendor prefixes that exist. A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes. Here's an example for transform. [SASS](https://sass-lang.com/guide)
+All variables provided by Clay CSS are defined with the `!default` flag. Default values in Sass are only assigned if the variable isn't defined or its value is `null`. This allows Clay CSS variables to be overwritten by variables placed or imported at the top of `base.scss` and `atlas.scss`.
 
-```scss
-$map: (
-	bg: '#0B5FFF',
+<div class="clay-site-alert alert alert-warning">Unfortunately, Clay CSS variables with the <code>!default</code> flag can't be overwritten with a <code>null !default</code> value due to the Sass spec. We work around this with Sass maps. Nested Sass map values don't use the <code>!default</code> flag allowing us to skirt the rule.</div>
+
+The snippet below illustrates how values get assigned to variables in Sass:
+
+```scss{expanded}
+// Overwrites
+
+$primary: red !default;
+$secondary: null !default;
+$info: #2e5aac !default;
+$success: null;
+$danger: #da1414 !default;
+
+// Original Values
+
+$primary: #0b5fff !default;
+$secondary: #6b6c7e !default;
+$info: null !default;
+$success: #287d3c !default;
+$danger: null;
+```
+
+Result:
+
+```text{expanded}
+$primary   => red
+$secondary => #6b6c7e
+$info      => #2e5aac
+$success   => #287d3c
+$danger    => null
+```
+
+### Sass Maps(#css-sass-maps)
+
+Clay CSS heavily leverages <a href="https://sass-lang.com/documentation/values/maps" rel="noopener noreferrer" target="_blank">Sass maps</a>. The main reason is to be able to reset values to `null` since Sass doesn't output a CSS declaration if its value is `null`. This is a great feature. It lets us reuse CSS rulesets instead of having to redeclare and overwrite. This saves a lot in terms of file size.
+
+<div class="clay-site-alert alert alert-warning">Assigning a <code>null</code> value to a CSS Custom Property (CSS Variable) generated with Sass will still be output.</div>
+
+The <a href="https://sass-lang.com/documentation/modules/map#merge" rel="noopener noreferrer" target="_blank">map-merge</a> is a Sass function that takes two maps as parameters and combines them. The second parameter wins over the first. This means, if there are duplicate keys, the key value pair in the second map will win. We pass in our default values as the first parameter and an empty map as the second. The empty map `$my-component: () !default` can be filled with overwrites that will win over the defaults.
+
+If we start with the code below:
+
+```scss{expanded}
+$my-component: () !default;
+$my-component: map-merge(
+	(
+		background-color: null,
+		color: #000,
+	),
+	$my-component
 );
 
-.my-button {
-	@include clay-button-variant($map);
+.my-component {
+	background-color: map-get($my-component, background-color);
+	color: map-get($my-component, color);
 }
 ```
 
-[clay-button-variant#L1](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_buttons.scss#L1)
+Output:
+
+```css{expanded}
+.my-component {
+	color: #000;
+}
+```
+
+We can overwrite the original `$my-component: () !default;` with our new Sass map below. This tells Sass to output no properties.
+
+```scss{expanded}
+// Overwrite
+
+$my-component: (
+	background-color: null,
+	color: null,
+) !default;
+
+// Original
+
+$my-component: () !default;
+$my-component: map-merge(
+	(
+		background-color: null,
+		color: #000,
+	),
+	$my-component
+);
+
+.my-component {
+	background-color: map-get($my-component, background-color);
+	color: map-get($my-component, color);
+}
+```
+
+Output:
+
+```css{expanded}
+/* Nothing is output because both values are `null` */
+```
+
+## Mixins(#css-mixins)
+
+<a href="https://sass-lang.com/documentation/at-rules/mixin" rel="noopener noreferrer" target="_blank">Sass mixins</a> are used in Clay CSS to define custom CSS components, such as `.btn`, `.dropdown-menu`, and `.label`. Mixins help normalize the CSS selector output and are mostly used to generate variants of an existing CSS component. Take <a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/mixins/_buttons.scss#L79" rel="noopener noreferrer" target="_blank">clay-button-variant</a> for example, it accepts a Sass map as a parameter with several predefined keys. We can create our own purple `btn` variant in our `_custom.scss` with:
+
+\_custom.scss
+
+```scss{expanded}
+$btn-custom: (
+	background-color: #6200ee,
+	color: #fff,
+	font-size: 0.875rem,
+	letter-spacing: 0.0892857143em,
+	text-transform: uppercase,
+	hover: (
+		background-color: #651fff,
+		color: #fff,
+	),
+	focus: (
+		background-color: #7c4dff,
+	),
+	active: (
+		background-color: #b388ff,
+	),
+	disabled: (
+		background-color: #e0e0e0,
+		color: #9e9e9e,
+	),
+);
+
+.btn-custom {
+	@include clay-button-variant($btn-custom);
+}
+```
+
+Output:
+
+```css{expanded}
+.btn-custom {
+	background-color: #6200ee;
+	color: #fff;
+	font-size: 0.875rem;
+	letter-spacing: 0.08928571em;
+	text-transform: uppercase;
+}
+
+.btn-custom:hover {
+	background-color: #651fff;
+	color: #fff;
+}
+
+.btn-custom:focus,
+.btn-custom.focus {
+	background-color: #7c4dff;
+}
+
+.btn-custom:active,
+.btn-custom.active,
+.show > .btn-custom.dropdown-toggle {
+	background-color: #b388ff;
+}
+
+.btn-custom:disabled,
+.btn-custom.disabled {
+	background-color: #e0e0e0;
+	color: #9e9e9e;
+}
+```
+
+Your html:
+
+```html{expanded}
+<button class="btn btn-custom" type="button">Custom Btn</button>
+<a class="btn btn-custom" href="#" role="button"
+	>Custom Anchor that Looks Like a Button</a
+>
+```
+
+<div class="clay-site-alert alert alert-warning">Modifying the <code>btn</code> or variant classes like <code>btn-primary</code> directly can have unintended consequences. Liferay uses these classes in all admin controls, modifying them will change styles there as well. We recommend extending by creating your own modifier classes.</div>
+
+### Extending With Mixins(#css-extending-with-mixins)
+
+The proper way to extend components in your theme is to piggy back of the base class and add modifier classes to change them. We will continue with our Custom Button example. In Atlas Theme (Classic), `btn` is 40px tall by default. If we want to make our default `btn` shorter (36px) and narrower we can create our own base modifier.
+
+```scss{expanded}
+$my-btn-base: (
+	padding: 0.40625rem 0.5rem,
+);
+
+$btn-custom: (...);
+
+.my-btn-base {
+	@include clay-button-variant($my-btn-base);
+}
+
+.btn-custom {
+	@include clay-button-variant($btn-custom);
+}
+```
+
+Your html:
+
+```html{expanded}
+<button class="btn my-btn-base btn-custom" type="button">Custom Btn</button>
+<a class="btn my-btn-base btn-custom" href="#" role="button"
+	>Custom Anchor that Looks Like a Button</a
+>
+```
+
+This gives us the most compatibility with default Liferay styles and our custom styles. This pattern will also make it a lot easier to integrate with Clay React Components.
+
+<div class="clay-site-alert alert alert-info">If you are up for the task of unifying admin controls with your site's theme, go ahead and modify all our components directly.</div>
 
 You can find all mixins available by component if you want to create a component extension.
 
-> [All **mixins** available](https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/mixins)
+<blockquote>
+	<p class="clay-p">
+		<a href="https://github.com/liferay/clay/tree/master/packages/clay-css/src/scss/mixins" rel="noopener noreferrer" target="_blank">All <strong>mixins</strong> available</a>
+	</p>
+</blockquote>
 
 ## Functions(#css-functions)
 
-Clay CSS provides some **SCSS** functions that help you be more productive. To learn more about **functions** see [sass-lang.com](https://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives).
+Clay CSS <a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives" rel="noopener noreferrer" target="_blank">Sass functions</a> are generally only for internal use. Many of our functions were written so we could comply with Bootstrap 4's patterns as well as providing support for variable themeing.
 
-Sass ternary shorthand: `if($variable-name, true, false);`. See [setter#L5](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#L5)
+We do provide some functions that may help you be more productive. Some of the noteworthy ones are `clay-icon($name, $color)`, `clay-svg-url($svg)`, and `math-sign($num)`.
 
-```scss
-// @param $var - The variable name
-// @param $val - The default value
+The function <a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#L310" rel="noopener noreferrer" target="_blank">clay-icon($name, $color)</a> takes a Clay SVG icon name and color. It returns the icon as a data uri to be used as a `background-image`.
 
-setter($var, $val);
+```scss{expanded}
+.check-icon-bg {
+	background-image: clay-icon(
+		check,
+		orange
+	); // check svg icon as background image
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-right: 15px;
+	padding-left: 28px;
+}
 ```
 
-Helper for displaying warning messages for required variables. See [required#L29](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#29)
+<a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#L279" rel="noopener noreferrer" target="_blank">clay-svg-url(\$svg)</a> accepts an SVG as a parameter. The SVG must be wrapped in single quotes ('') or double quotes ("") depending on whether attributes are delimited by double quotes or single quotes.
 
-```scss
-// @param $var - The variable to check
-// @param $msg - The error message
-
-required($var, $msg);
+```scss{expanded}
+.check-icon-bg {
+	background-image: clay-svg-url(
+		'<svg id="check" viewBox="0 0 512 512"><path class="lexicon-icon-outline" d="M192.9,429.5c-8.3,0-16.4-3.3-22.3-9.2L44.5,294.1C15,263.2,62.7,222,89.1,249.5L191.5,352l230-258.9 c27.2-30.5,74.3,11.5,47.1,41.9L216.4,418.9c-5.8,6.5-14,10.3-22.6,10.6C193.5,429.5,193.2,429.5,192.9,429.5z"></path>
+</svg>'
+	);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-right: 15px;
+	padding-left: 28px;
+}
 ```
 
-> [All **functions** available](https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss)
+<a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss#L279" rel="noopener noreferrer" target="_blank">math-sign(\$number)</a> takes a number as a parameter and returns the opposite value, generally used for `null` values so Sass doesn't output a value `-null` This is useful for offseting `border-width` among other things.
+
+```scss{expanded}
+.offset-border {
+	padding-top: math-sign(0.5rem - $border-top-width);
+}
+```
+
+<blockquote>
+	<p class="clay-p">
+		<a href="https://github.com/liferay/clay/blob/master/packages/clay-css/src/scss/functions/_global-functions.scss" rel="noopener noreferrer" target="_blank">All <strong>functions</strong> available</a>
+	</p>
+</blockquote>

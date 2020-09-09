@@ -32,13 +32,13 @@ You can check out the full list of [packages available in NPM](https://www.npmjs
 
 #### NPM
 
-```shell
+```shell{expanded}
 npm install @clayui/css @clayui/*
 ```
 
 #### Yarn
 
-```shell
+```shell{expanded}
 yarn add @clayui/css @clayui/*
 ```
 
@@ -46,7 +46,7 @@ yarn add @clayui/css @clayui/*
 
 We provide Clay CSS via CDN, which is an option when you do not want to install the clay package via NPM or Yarn.
 
-```html
+```html{expanded}
 <link
 	rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css"
@@ -57,7 +57,7 @@ If you want a specific version of CSS, specify the desired version.
 
 Example:
 
-```diff
+```diff{expanded}
 - https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css
 + https://cdn.jsdelivr.net/npm/@clayui/css@3.0.0/lib/css/atlas.css
 ```
@@ -89,7 +89,7 @@ Let's use the **DropDown** component (`@clayui/drop-down`) and understand how th
 
 Before we get started, let's import the main packages that we will use to create a low-level Drop Down with Clay components.
 
-```js
+```js{expanded}
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import ClayButton from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
@@ -102,13 +102,13 @@ import ClayDropDown from '@clayui/drop-down';
 
 As you learned from [Clay's compositional philosophy](/docs/get-started/composing.html), we are using a low-level DropDown component, as its essence is a controlled component and for that you need to control DropDown's expand state. Let's use React's [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate) to control the state.
 
-```js
+```js{expanded}
 const [expand, setExpand] = useState(false);
 ```
 
 Soon after we can add the components to see rendered on the screen.
 
-```jsx
+```jsx{expanded}
 <ClayDropDown
 	active={expand}
 	onActiveChange={setExpand}
@@ -120,7 +120,7 @@ At first we are seeing only ClayButton being rendered with empty DropDown, as it
 
 Try this:
 
-```jsx
+```jsx{expanded}
 <ClayDropDown
 	active={expand}
 	onActiveChange={setExpand}
@@ -132,7 +132,7 @@ Try this:
 
 Now we can compose with other Clay components and add a Checkbox and Radio to the content.
 
-```jsx
+```jsx{expanded}
 <ClayDropDown
 	active={expand}
 	onActiveChange={setExpand}
@@ -154,11 +154,11 @@ Low-level components in Clay allow you to compose and add your own rules, allowi
 
 See the same example above being reflected in a high-level component.
 
-```js
+```js{expanded}
 import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
 ```
 
-```jsx
+```jsx{expanded}
 <ClayDropDownWithItems
 	items={[
 		{
