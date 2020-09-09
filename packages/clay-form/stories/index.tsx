@@ -87,15 +87,11 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 		<ClayDualListBox
 			disableLTR={
 				boolean('disableLTR', false) ||
-				secondSelectBoxItems.length >= rightMaxItems ||
-				!firstSelectBoxItems.length ||
-				!leftSelected.length
+				secondSelectBoxItems.length >= rightMaxItems
 			}
 			disableRTL={
 				boolean('disableRTL', false) ||
-				firstSelectBoxItems.length >= leftMaxItems ||
-				!secondSelectBoxItems.length ||
-				!rightSelected.length
+				firstSelectBoxItems.length >= leftMaxItems
 			}
 			items={items}
 			left={{

@@ -156,6 +156,17 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 
 	const selectedIndex = selectedIndexes.length === 1 && selectedIndexes[0];
 
+	const noItems = !items.length;
+
+	const noItemsSelected = !selectedIndexes.length;
+
+	const firstItemSelected =
+		selectedIndex === 0 || selectedIndexes.includes(0);
+
+	const lastItemSelected =
+		selectedIndex === items.length - 1 ||
+		selectedIndexes.includes(items.length - 1);
+
 	return (
 		<div className={classNames(className, 'form-group')}>
 			{label && (
@@ -215,11 +226,9 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 								aria-label={ariaLabels.reorderUp}
 								className="reorder-button reorder-button-up"
 								disabled={
-									!value.length ||
-									selectedIndex === 0 ||
-									selectedIndexes.includes(0) ||
-									!items.length ||
-									selectedIndexes.length === 0
+									firstItemSelected ||
+									noItemsSelected ||
+									noItems
 								}
 								displayType="secondary"
 								onClick={() =>
@@ -236,13 +245,9 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 								aria-label={ariaLabels.reorderDown}
 								className="reorder-button reorder-button-down"
 								disabled={
-									!value.length ||
-									selectedIndex === items.length - 1 ||
-									selectedIndexes.includes(
-										items.length - 1
-									) ||
-									!items.length ||
-									selectedIndexes.length === 0
+									lastItemSelected ||
+									noItemsSelected ||
+									noItems
 								}
 								displayType="secondary"
 								onClick={() =>
