@@ -12,6 +12,45 @@ import React from 'react';
 
 import ClayNav, {ClayVerticalNav} from '../src';
 
+const items = [
+	{
+		initialExpanded: true,
+		items: [
+			{
+				href: '#',
+				label: 'Nested1',
+			},
+		],
+		label: 'Home',
+	},
+	{
+		href: '#',
+		label: 'About',
+	},
+	{
+		href: '#',
+		label: 'Contact',
+	},
+	{
+		items: [
+			{
+				active: true,
+				href: '#',
+				label: 'Five',
+			},
+			{
+				href: '#',
+				label: 'Six',
+			},
+		],
+		label: 'Projects',
+	},
+	{
+		href: '#',
+		label: 'Seven',
+	},
+];
+
 storiesOf('Components|ClayNav', module)
 	.add('default', () => {
 		return (
@@ -35,44 +74,7 @@ storiesOf('Components|ClayNav', module)
 	.add('ClayVerticalNav', () => {
 		return (
 			<ClayVerticalNav
-				items={[
-					{
-						initialExpanded: true,
-						items: [
-							{
-								href: '#',
-								label: 'Nested1',
-							},
-						],
-						label: 'Home',
-					},
-					{
-						href: '#',
-						label: 'About',
-					},
-					{
-						href: '#',
-						label: 'Contact',
-					},
-					{
-						items: [
-							{
-								active: true,
-								href: '#',
-								label: 'Five',
-							},
-							{
-								href: '#',
-								label: 'Six',
-							},
-						],
-						label: 'Projects',
-					},
-					{
-						href: '#',
-						label: 'Seven',
-					},
-				]}
+				items={items}
 				large={boolean('large: ', false)}
 				spritemap={spritemap}
 			/>
@@ -81,44 +83,7 @@ storiesOf('Components|ClayNav', module)
 	.add('ClayVerticalNav w/ custom trigger', () => {
 		return (
 			<ClayVerticalNav
-				items={[
-					{
-						initialExpanded: true,
-						items: [
-							{
-								href: '#',
-								label: 'Nested1',
-							},
-						],
-						label: 'Home',
-					},
-					{
-						href: '#',
-						label: 'About',
-					},
-					{
-						href: '#',
-						label: 'Contact',
-					},
-					{
-						items: [
-							{
-								active: true,
-								href: '#',
-								label: 'Five',
-							},
-							{
-								href: '#',
-								label: 'Six',
-							},
-						],
-						label: 'Projects',
-					},
-					{
-						href: '#',
-						label: 'Seven',
-					},
-				]}
+				items={items}
 				large={boolean('large: ', false)}
 				spritemap={spritemap}
 				trigger={(props) => (
@@ -133,4 +98,12 @@ storiesOf('Components|ClayNav', module)
 				)}
 			/>
 		);
-	});
+	})
+	.add('ClayVerticalNav w/ Decorator', () => (
+		<ClayVerticalNav
+			decorated
+			items={items}
+			large={boolean('large: ', false)}
+			spritemap={spritemap}
+		/>
+	));

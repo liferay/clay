@@ -54,6 +54,11 @@ interface IProps {
 	activeLabel?: string;
 
 	/**
+	 * Flag to activate the Decorator variation.
+	 */
+	decorated?: boolean;
+
+	/**
 	 * Label of the button that appears on smaller resolutions to open the vertical navigation.
 	 */
 	triggerLabel?: string;
@@ -167,6 +172,7 @@ const ClayVerticalNav: React.FunctionComponent<IProps> & {
 	Trigger: typeof Trigger;
 } = ({
 	activeLabel,
+	decorated,
 	items,
 	large,
 	spritemap,
@@ -185,6 +191,7 @@ const ClayVerticalNav: React.FunctionComponent<IProps> & {
 		<nav
 			{...otherProps}
 			className={classNames('menubar menubar-transparent', {
+				['menubar-decorated']: decorated,
 				['menubar-vertical-expand-lg']: large,
 				['menubar-vertical-expand-md']: !large,
 			})}
