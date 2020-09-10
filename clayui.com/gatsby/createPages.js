@@ -13,6 +13,8 @@ require('dotenv').config({
 
 const path = require('path');
 
+const redirects = require('../redirects.json');
+
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
 const TAB_MAP_NAME = {
@@ -129,17 +131,15 @@ const createDocs = (actions, edges, mdx, pathGroup) => {
 };
 
 module.exports = async ({actions, graphql}) => {
-	actions.createRedirect({
-		fromPath: '/docs/css/utilities/index.html',
-		isPermanent: true,
-		redirectInBrowser: true,
-		toPath: '/docs/css/utilities/autofit.html',
-	});
-	actions.createRedirect({
-		fromPath: '/docs/css/content/index.html',
-		isPermanent: true,
-		redirectInBrowser: true,
-		toPath: '/docs/css/content/typography.html',
+	Object.keys(redirects).forEach((fromPath) => {
+		const toPath = redirects[fromPath];
+
+		actions.createRedirect({
+			fromPath,
+			isPermanent: true,
+			redirectInBrowser: true,
+			toPath,
+		});
 	});
 
 	return graphql(`
