@@ -22,6 +22,11 @@ export default (props) => {
 					type="image/png"
 				/>
 				<link href="/css/atlas.css" id="clayCSSFile" rel="stylesheet" />
+				<link
+					href="/css/colors.css"
+					id="clayuiCSSFile"
+					rel="stylesheet"
+				/>
 
 				{props.headComponents}
 				<link

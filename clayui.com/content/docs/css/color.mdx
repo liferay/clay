@@ -5,7 +5,7 @@ description: 'A consistent color palette is an essential asset in the communicat
 order: 3
 ---
 
-import {Swatch} from '../../../src/components/clay-css-framework/Swatch';
+import ClayUISwatch from '../../../src/components/ClayUISwatch';
 
 <div class="clay-site-alert alert alert-info">
 	Check the <a href="https://liferay.design/lexicon">Lexicon</a>{' '}
@@ -33,112 +33,427 @@ import {Swatch} from '../../../src/components/clay-css-framework/Swatch';
 ## Grays
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="N/A" varName="$black" />
-	<Swatch lexiconName="Dark" varName="$gray-900" />
-	<Swatch lexiconName="Dark L2" varName="$gray-800" />
-	<Swatch lexiconName="N/A" varName="$gray-700" />
-	<Swatch lexiconName="Secondary" varName="$gray-600" />
-	<Swatch lexiconName="Secondary L1" varName="$gray-500" />
-	<Swatch lexiconName="Secondary L2" varName="$gray-400" />
-	<Swatch lexiconName="Secondary L3" varName="$gray-300" />
-	<Swatch lexiconName="Light" varName="$gray-200" />
-	<Swatch lexiconName="Light L1" varName="$gray-100" />
-	<Swatch lexiconName="White" varName="$white" />
+	<ClayUISwatch
+		hex="#000"
+		lexiconName="N/A"
+		rgb="rgb(0, 0, 0)"
+		varName="$black"
+	/>
+	<ClayUISwatch
+		hex="#272833"
+		lexiconName="Dark"
+		rgb="rgb(39, 40, 51)"
+		varName="$gray-900"
+	/>
+	<ClayUISwatch
+		hex="#343a40"
+		lexiconName="Dark L2"
+		rgb="rgb(52, 58, 64)"
+		varName="$gray-800"
+	/>
+	<ClayUISwatch
+		hex="#495057"
+		lexiconName="N/A"
+		rgb="rgb(73, 80, 87)"
+		varName="$gray-700"
+	/>
+	<ClayUISwatch
+		hex="#6b6c7e"
+		lexiconName="Secondary"
+		rgb="rgb(107, 108, 126)"
+		varName="$gray-600"
+	/>
+	<ClayUISwatch
+		hex="#a7a9bc"
+		lexiconName="Secondary L1"
+		rgb="rgb(167, 169, 188)"
+		varName="$gray-500"
+	/>
+	<ClayUISwatch
+		hex="#cdced9"
+		lexiconName="Secondary L2"
+		rgb="rgb(205, 206, 217)"
+		varName="$gray-400"
+	/>
+	<ClayUISwatch
+		hex="#e7e7ed"
+		lexiconName="Secondary L3"
+		rgb="rgb(231, 231, 237)"
+		varName="$gray-300"
+	/>
+	<ClayUISwatch
+		hex="#f1f2f5"
+		lexiconName="Light"
+		rgb="rgb(241, 242, 245)"
+		varName="$gray-200"
+	/>
+	<ClayUISwatch
+		hex="#f7f8f9"
+		lexiconName="Light L1"
+		rgb="rgb(247, 248, 249)"
+		varName="$gray-100"
+	/>
+	<ClayUISwatch
+		hex="#fff"
+		lexiconName="White"
+		rgb="rgb(255, 255, 255)"
+		varName="$white"
+	/>
 </div>
 
 ## Colors
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Blue" varName="$blue" />
-	<Swatch lexiconName="Orange" varName="$orange" />
-	<Swatch lexiconName="Red" varName="$red" />
-	<Swatch lexiconName="Teal" varName="$teal" />
-	<Swatch lexiconName="Pink" varName="$pink" />
-	<Swatch lexiconName="Green" varName="$green" />
-	<Swatch lexiconName="Purple" varName="$purple" />
-	<Swatch lexiconName="Yellow" varName="$yellow" />
-	<Swatch lexiconName="Cyan" varName="$cyan" />
-	<Swatch lexiconName="Indigo" varName="$indigo" />
+	<ClayUISwatch
+		hex="#4b9fff"
+		lexiconName="Blue"
+		rgb="rgb(75, 159, 255)"
+		varName="$blue"
+	/>
+	<ClayUISwatch
+		hex="#ffb46e"
+		lexiconName="Orange"
+		rgb="rgb(255, 180, 110)"
+		varName="$orange"
+	/>
+	<ClayUISwatch
+		hex="#ff5f5f"
+		lexiconName="Red"
+		rgb="rgb(255, 95, 95)"
+		varName="$red"
+	/>
+	<ClayUISwatch
+		hex="#50d2a0"
+		lexiconName="Teal"
+		rgb="rgb(80, 210, 160)"
+		varName="$teal"
+	/>
+	<ClayUISwatch
+		hex="#ff73c3"
+		lexiconName="Pink"
+		rgb="rgb(255, 115, 195)"
+		varName="$pink"
+	/>
+	<ClayUISwatch
+		hex="#9be169"
+		lexiconName="Green"
+		rgb="rgb(155, 225, 105)"
+		varName="$green"
+	/>
+	<ClayUISwatch
+		hex="#af78ff"
+		lexiconName="Purple"
+		rgb="rgb(175, 120, 255)"
+		varName="$purple"
+	/>
+	<ClayUISwatch
+		hex="#ffd76e"
+		lexiconName="Yellow"
+		rgb="rgb(255, 215, 110)"
+		varName="$yellow"
+	/>
+	<ClayUISwatch
+		hex="#5fc8ff"
+		lexiconName="Cyan"
+		rgb="rgb(95, 200, 255)"
+		varName="$cyan"
+	/>
+	<ClayUISwatch
+		hex="#7785ff"
+		lexiconName="Indigo"
+		rgb="rgb(119, 133, 255)"
+		varName="$indigo"
+	/>
 </div>
 
 ## Primary
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Primary D2" varName="$primary-d2" />
-	<Swatch lexiconName="Primary D1" varName="$primary-d1" />
-	<Swatch lexiconName="Primary" varName="$primary" />
-	<Swatch lexiconName="Primary L1" varName="$primary-l1" />
-	<Swatch lexiconName="Primary L2" varName="$primary-l2" />
-	<Swatch lexiconName="Primary L3" varName="$primary-l3" />
+	<ClayUISwatch
+		hex="#004ad7"
+		lexiconName="Primary D2"
+		rgb="rgb(0, 74, 215)"
+		varName="$primary-d2"
+	/>
+	<ClayUISwatch
+		hex="#0053f0"
+		lexiconName="Primary D1"
+		rgb="rgb(0, 83, 240)"
+		varName="$primary-d1"
+	/>
+	<ClayUISwatch
+		hex="#0b5fff"
+		lexiconName="Primary"
+		rgb="rgb(11, 95, 255)"
+		varName="$primary"
+	/>
+	<ClayUISwatch
+		hex="#80acff"
+		lexiconName="Primary L1"
+		rgb="rgb(128, 172, 255)"
+		varName="$primary-l1"
+	/>
+	<ClayUISwatch
+		hex="#b3cdff"
+		lexiconName="Primary L2"
+		rgb="rgb(179, 205, 255)"
+		varName="$primary-l2"
+	/>
+	<ClayUISwatch
+		hex="#f0f5ff"
+		lexiconName="Primary L3"
+		rgb="rgb(240, 245, 255)"
+		varName="$primary-l3"
+	/>
 </div>
 
 ## Secondary
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Dark L1" varName="$secondary-d2" />
-	<Swatch lexiconName="Dark L2" varName="$secondary-d1" />
-	<Swatch lexiconName="Secondary" varName="$secondary" />
-	<Swatch lexiconName="Secondary L1" varName="$secondary-l1" />
-	<Swatch lexiconName="Secondary L2" varName="$secondary-l2" />
-	<Swatch lexiconName="Secondary L3" varName="$secondary-l3" />
+	<ClayUISwatch
+		hex="#30313f"
+		lexiconName="Dark L1"
+		rgb="rgb(48, 49, 63)"
+		varName="$secondary-d2"
+	/>
+	<ClayUISwatch
+		hex="#393a4a"
+		lexiconName="Dark L2"
+		rgb="rgb(57, 58, 74)"
+		varName="$secondary-d1"
+	/>
+	<ClayUISwatch
+		hex="#6b6c7e"
+		lexiconName="Secondary"
+		rgb="rgb(107, 108, 126)"
+		varName="$secondary"
+	/>
+	<ClayUISwatch
+		hex="#a7a9bc"
+		lexiconName="Secondary L1"
+		rgb="rgb(167, 169, 188)"
+		varName="$secondary-l1"
+	/>
+	<ClayUISwatch
+		hex="#cdced9"
+		lexiconName="Secondary L2"
+		rgb="rgb(205, 206, 217)"
+		varName="$secondary-l2"
+	/>
+	<ClayUISwatch
+		hex="#e7e7ed"
+		lexiconName="Secondary L3"
+		rgb="rgb(231, 231, 237)"
+		varName="$secondary-3"
+	/>
 </div>
 
 ## Success
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Success D2" varName="$success-d2" />
-	<Swatch lexiconName="Success D1" varName="$success-d1" />
-	<Swatch lexiconName="Success" varName="$success" />
-	<Swatch lexiconName="Success L1" varName="$success-l1" />
-	<Swatch lexiconName="Success L2" varName="$success-l2" />
+	<ClayUISwatch
+		hex="#1c5629"
+		lexiconName="Success D2"
+		rgb="rgb(28, 86, 41)"
+		varName="$success-d2"
+	/>
+	<ClayUISwatch
+		hex="#226a33"
+		lexiconName="Success D1"
+		rgb="rgb(34, 106, 51)"
+		varName="$success-d1"
+	/>
+	<ClayUISwatch
+		hex="#287d3c"
+		lexiconName="Success"
+		rgb="rgb(40, 125, 60)"
+		varName="$success"
+	/>
+	<ClayUISwatch
+		hex="#5aca75"
+		lexiconName="Success L1"
+		rgb="rgb(90, 202, 117)"
+		varName="$success-l1"
+	/>
+	<ClayUISwatch
+		hex="#edf9f0"
+		lexiconName="Success L2"
+		rgb="rgb(237, 249, 240)"
+		varName="$success-l2"
+	/>
 </div>
 
 ## Info
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Info D2" varName="$info-d2" />
-	<Swatch lexiconName="Info D1" varName="$info-d1" />
-	<Swatch lexiconName="Info" varName="$info" />
-	<Swatch lexiconName="Info L1" varName="$info-l1" />
-	<Swatch lexiconName="Info L2" varName="$info-l2" />
+	<ClayUISwatch
+		hex="#234584"
+		lexiconName="Info D2"
+		rgb="rgb(35, 69, 132)"
+		varName="$info-d2"
+	/>
+	<ClayUISwatch
+		hex="#294f98"
+		lexiconName="Info D1"
+		rgb="rgb(41, 79, 152)"
+		varName="$info-d1"
+	/>
+	<ClayUISwatch
+		hex="#2e5aac"
+		lexiconName="Info"
+		rgb="rgb(46, 90, 172)"
+		varName="$info"
+	/>
+	<ClayUISwatch
+		hex="#89a7e0"
+		lexiconName="Info L1"
+		rgb="rgb(137, 167, 224)"
+		varName="$info-l1"
+	/>
+	<ClayUISwatch
+		hex="#eef2fa"
+		lexiconName="Info L2"
+		rgb="rgb(238, 242, 250)"
+		varName="$info-l2"
+	/>
 </div>
 
 ## Warning
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Warning D2" varName="$warning-d2" />
-	<Swatch lexiconName="Warning D1" varName="$warning-d1" />
-	<Swatch lexiconName="Warning" varName="$warning" />
-	<Swatch lexiconName="Warning L1" varName="$warning-l1" />
-	<Swatch lexiconName="Warning L2" varName="$warning-l2" />
+	<ClayUISwatch
+		hex="#863a00"
+		lexiconName="Warning D2"
+		rgb="rgb(134, 58, 0)"
+		varName="$warning-d2"
+	/>
+	<ClayUISwatch
+		hex="#9f4500"
+		lexiconName="Warning D1"
+		rgb="rgb(159, 69, 0)"
+		varName="$warning-d1"
+	/>
+	<ClayUISwatch
+		hex="#b95000"
+		lexiconName="Warning"
+		rgb="rgb(185, 80, 0)"
+		varName="$warning"
+	/>
+	<ClayUISwatch
+		hex="#ff8f39"
+		lexiconName="Warning L1"
+		rgb="rgb(255, 143, 57)"
+		varName="$warning-l1"
+	/>
+	<ClayUISwatch
+		hex="#fff4ec"
+		lexiconName="Warning L2"
+		rgb="rgb(255, 244, 236)"
+		varName="$warning-l2"
+	/>
 </div>
 
 ## Danger
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Error D2" varName="$danger-d2" />
-	<Swatch lexiconName="Error D1" varName="$danger-d1" />
-	<Swatch lexiconName="Error" varName="$danger" />
-	<Swatch lexiconName="Error L1" varName="$danger-l1" />
-	<Swatch lexiconName="Error L2" varName="$danger-l2" />
+	<ClayUISwatch
+		hex="#ab1010"
+		lexiconName="Error D2"
+		rgb="rgb(171, 16, 16)"
+		varName="$danger-d2"
+	/>
+	<ClayUISwatch
+		hex="#c31212"
+		lexiconName="Error D1"
+		rgb="rgb(195, 18, 18)"
+		varName="$danger-d1"
+	/>
+	<ClayUISwatch
+		hex="#da1414"
+		lexiconName="Error"
+		rgb="rgb(218, 20, 20)"
+		varName="$danger"
+	/>
+	<ClayUISwatch
+		hex="#f48989"
+		lexiconName="Error L1"
+		rgb="rgb(244, 137, 137)"
+		varName="$danger-l1"
+	/>
+	<ClayUISwatch
+		hex="#feefef"
+		lexiconName="Error L2"
+		rgb="rgb(254, 239, 239)"
+		varName="$danger-l2"
+	/>
 </div>
 
 ## Light
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="Light D2" varName="$light-d2" />
-	<Swatch lexiconName="Light D1" varName="$light-d1" />
-	<Swatch lexiconName="Light" varName="$light" />
-	<Swatch lexiconName="Light L1" varName="$light-l1" />
-	<Swatch lexiconName="White" varName="$light-l2" />
+	<ClayUISwatch
+		hex="#d3d6e0"
+		lexiconName="Light D2"
+		rgb="rgb(211, 214, 224)"
+		varName="$light-d2"
+	/>
+	<ClayUISwatch
+		hex="#e2e4ea"
+		lexiconName="Light D1"
+		rgb="rgb(226, 228, 234)"
+		varName="$light-d1"
+	/>
+	<ClayUISwatch
+		hex="#f1f2f5"
+		lexiconName="Light"
+		rgb="rgb(241, 242, 245)"
+		varName="$light"
+	/>
+	<ClayUISwatch
+		hex="#f7f8f9"
+		lexiconName="Light L1"
+		rgb="rgb(247, 248, 249)"
+		varName="$light-l1"
+	/>
+	<ClayUISwatch
+		hex="#fff"
+		lexiconName="White"
+		rgb="rgb(255, 255, 255)"
+		varName="$light-l2"
+	/>
 </div>
 
 ## Dark
 
 <div class="clay-site-swatches">
-	<Swatch lexiconName="N/A" varName="$dark-d2" />
-	<Swatch lexiconName="N/A" varName="$dark-d1" />
-	<Swatch lexiconName="Dark" varName="$dark" />
-	<Swatch lexiconName="Dark L1" varName="$dark-l2" />
-	<Swatch lexiconName="Dark L2" varName="$dark-l2" />
+	<ClayUISwatch
+		hex="#111116"
+		lexiconName="N/A"
+		rgb="rgb(17, 17, 22)"
+		varName="$dark-d2"
+	/>
+	<ClayUISwatch
+		hex="#1c1c24"
+		lexiconName="N/A"
+		rgb="rgb(28, 28, 36)"
+		varName="$dark-d1"
+	/>
+	<ClayUISwatch
+		hex="#272833"
+		lexiconName="Dark"
+		rgb="rgb(39, 40, 51)"
+		varName="$dark"
+	/>
+	<ClayUISwatch
+		hex="#393a4a"
+		lexiconName="Dark L1"
+		rgb="rgb(57, 58, 74)"
+		varName="$dark-l1"
+	/>
+	<ClayUISwatch
+		hex="#393a4a"
+		lexiconName="Dark L2"
+		rgb="rgb(57, 58, 74)"
+		varName="$dark-l2"
+	/>
 </div>
