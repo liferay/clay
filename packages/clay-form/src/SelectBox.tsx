@@ -154,18 +154,13 @@ const ClaySelectBox: React.FunctionComponent<IProps> = ({
 		Array.isArray(value) ? value : [value]
 	);
 
-	const selectedIndex = selectedIndexes.length === 1 && selectedIndexes[0];
-
 	const noItems = !items.length;
 
 	const noItemsSelected = !selectedIndexes.length;
 
-	const firstItemSelected =
-		selectedIndex === 0 || selectedIndexes.includes(0);
+	const firstItemSelected = selectedIndexes.includes(0);
 
-	const lastItemSelected =
-		selectedIndex === items.length - 1 ||
-		selectedIndexes.includes(items.length - 1);
+	const lastItemSelected = selectedIndexes.includes(items.length - 1);
 
 	return (
 		<div className={classNames(className, 'form-group')}>
