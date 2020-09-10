@@ -84,6 +84,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
           <button
             aria-label="Reorder Up"
             class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
+            disabled=""
             type="button"
           >
             <svg
