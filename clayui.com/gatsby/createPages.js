@@ -19,7 +19,7 @@ const {GATSBY_CLAY_NIGHTLY} = process.env;
 
 const TAB_MAP_NAME = {
 	api: 'API',
-	css: 'Markup',
+	markup: 'Markup',
 };
 
 const slugWithBar = (path) => {
@@ -44,7 +44,7 @@ const getTabs = (permalink, pathGroup) => {
 	return [
 		{
 			href: permalink,
-			name: 'Overview',
+			name: 'Examples',
 		},
 		...tabs
 			.map(({node: {fields: {slug}}}) => ({
