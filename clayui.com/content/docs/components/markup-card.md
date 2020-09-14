@@ -1,5 +1,5 @@
 ---
-title: 'Cards'
+title: 'Card'
 description: 'Cards are a specific form of data visualization focused mainly on displaying images.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/cards/'
 mainTabURL: 'docs/components/card.html'

@@ -11,21 +11,6 @@ import {
 	ResultsBar,
 } from '$packages/clay-management-toolbar/docs/index';
 
-<div class="nav-toc-absolute">
-<div class="nav-toc">
-
--   [Composing](#composing)
--   [API](#api)
-    -   [ManagementToolbar](#managementtoolbar)
-    -   [ItemList](#itemlist)
-    -   [Item](#item)
-    -   [ResultsBar](#resultsbar)
-        -   [ResultsBar.Item](#resultsbar.item)
-    -   [Search](#search)
-
-</div>
-</div>
-
 ## Composing
 
 With ClayManagementToolbar you can create a variety of [Management Toolbar variations](https://liferay.design/lexicon/core-components/toolbars/management-bar/#layout-variations), use `ClayManagementToolbar` component as the outside container, `ClayManagementToolbar.ItemList` for creating groups of items and `ClayManagementToolbar.Item` for create items inside groups. Use `expand` property on `ClayManagementToolbar.ItemList` for expanding the item list.
@@ -47,33 +32,3 @@ Aggregating `ClayManagementToolbar.ItemList` and `ClayManagementToolbar.ResultsB
 Use `ClayManagementToolbar.ResultsBar` for creating a results bar and `ClayManagementToolbar.ResultsBarItem` for defining items inside Results Bar.
 
 <ResultsBar />
-
-## API
-
-### ManagementToolbar
-
-<div>[APITable "clay-management-toolbar/src/ManagementToolbar.tsx"]</div>
-
-### ItemList
-
-<div>[APITable "clay-management-toolbar/src/ItemList.tsx"]</div>
-
-### Item
-
-<code class="list-api-item-type">
-	Extends from {`React.HTMLAttributes<HTMLLIElement>`}
-</code>
-
-### ResultsBar
-
-<code class="list-api-item-type">
-	Extends from {`React.HTMLAttributes<HTMLElement>`}
-</code>
-
-#### ResultsBar.Item
-
-<div>[APITable "clay-management-toolbar/src/ResultsBarItem.tsx"]</div>
-
-### Search
-
-<div>[APITable "clay-management-toolbar/src/Search.tsx"]</div>

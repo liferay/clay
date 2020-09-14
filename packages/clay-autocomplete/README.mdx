@@ -21,12 +21,6 @@ import {
 
 -   [Loading state](#loading-state)
 -   [Data from outside](#data-from-outside)
--   [API](#api)
-    -   [Autocomplete](#autocomplete)
-    -   [Autocomplete.DropDown](#autocomplete.dropdown)
-    -   [Autocomplete.Input](#autocomplete.input)
-    -   [Autocomplete.Item](#autocomplete.item)
-    -   [Autocomplete.LoadingIndicator](#autocomplete.loadingindicator)
 
 </div>
 </div>
@@ -77,27 +71,3 @@ If you already have the raw data, it is becomes simpler to create an autocomplet
 For cases where you do not have all the data in the client and need to pass the value for the filter to the backend, use the `<ClayDataProvider />` component or `useResource` hook for this.
 
 <AutocompleteWithDataProvider />
-
-## API
-
-### Autocomplete
-
-<div>[APITable "clay-autocomplete/src/index.tsx"]</div>
-
-### Autocomplete.DropDown
-
-<div>[APITable "clay-autocomplete/src/DropDown.tsx"]</div>
-
-### Autocomplete.Input
-
-<code class="list-api-item-type">Extends from `ClayForm.Input`</code>
-
-### Autocomplete.Item
-
-`ClayAutocomplete.Item` is a wrapper around `ClayDropDown.Item` but also underlines the bold characters that are matched. Feel free to create your own match rule using `ClayDropDown.Item`'s API.
-
-<div>[APITable "clay-autocomplete/src/Item.tsx"]</div>
-
-### Autocomplete.LoadingIndicator
-
-<div>[APITable "clay-autocomplete/src/LoadingIndicator.tsx"]</div>

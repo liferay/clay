@@ -12,16 +12,6 @@ import {List, ListQuickActionsMenu} from '$packages/clay-list/docs/index';
 
 -   [QuickActionMenu](#quickactionmenu)
 -   [ClayList children](#claylist-children)
--   [API](#api)
-    -   [ClayList](#claylist)
-    -   [ClayList.Header](#claylist.header)
-    -   [ClayList.Item](#claylist.item)
-    -   [ClayList.ItemField](#claylist.itemfield)
-    -   [ClayList.ItemText](#claylist.itemtext)
-    -   [ClayList.ItemTitle](#claylist.itemtitle)
-    -   [ClayList.QuickActionMenu](#claylist.quickactionmenu)
-    -   [ClayList.QuickActionMenu.Item](#claylist.quickactionmenu.item)
-    -   [ClayListWithItems](#claylistwithitems)
 
 </div>
 </div>
@@ -41,47 +31,3 @@ Wrap `QuickActionMenu.Item` inside `QuickActionMenu` for defining an `Item` of Q
 ## ClayList children
 
 To ensure your html structure is accessible, make sure any children passed to `ClayList` are `li` elements. Both `ClayList.Item` and `ClayListHeader` are `li` elements.
-
-## API
-
-### ClayList
-
-<div>[APITable "clay-list/src/List.tsx"]</div>
-
-### ClayList.Header
-
-<code class="list-api-item-type">
-	Extends from {`React.HTMLAttributes<HTMLLIElement>`}
-</code>
-
-### ClayList.Item
-
-<div>[APITable "clay-list/src/Item.tsx"]</div>
-
-### ClayList.ItemField
-
-<div>[APITable "clay-list/src/ItemField.tsx"]</div>
-
-### ClayList.ItemText
-
-<div>[APITable "clay-list/src/ItemText.tsx"]</div>
-
-### ClayList.ItemTitle
-
-<code class="list-api-item-type">
-	Extends from {`React.HTMLAttributes<HTMLHeadingElement>`}
-</code>
-
-### ClayList.QuickActionMenu
-
-<code class="list-api-item-type">
-	Extends from {`React.HTMLAttributes<HTMLDivElement>`}
-</code>
-
-### ClayList.QuickActionMenu.Item
-
-<div>[APITable "clay-list/src/QuickActionMenuItem.tsx"]</div>
-
-### ClayListWithItems
-
-<div>[APITable "clay-list/src/ListWithItems.tsx"]</div>
