@@ -1,5 +1,5 @@
 ---
-title: 'Badges'
+title: 'Badge'
 description: 'Badges help highlight important information, such as notifications or new and unread messages. Badges have circular borders and are only used to specify a number.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/badges/'
 mainTabURL: 'docs/components/badge.html'
