@@ -78,10 +78,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 						'@clayui/',
 						''
 					)}.html`;
-				} else if (
-					!relativePath.includes('api-') ||
-					!relativePath.includes('markup-')
-				) {
+				} else if (mainTabURL) {
 					slug = `docs/components/${fileName
 						.replace('_', '-')
 						.toLowerCase()}.html`;

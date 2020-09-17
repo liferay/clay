@@ -154,7 +154,7 @@ export default (props) => {
 
 	const {allMarkdownRemark, allMdx, mainTab, pageMd, pageMdx} = data;
 
-	const hasMainTab = !!mainTab.frontmatter.title;
+	const hasMainTab = mainTab ? !!mainTab.frontmatter.title : false;
 
 	const {body, excerpt, fields, frontmatter, html, timeToRead} = {
 		...(pageMdx || pageMd),
