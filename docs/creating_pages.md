@@ -3,6 +3,13 @@
 This documents how Clay's page creation works. We'll be looking at three key files: `createPages.js`, `docs.js`, and `onCreateNode.js`
 To create our markdown (or MDX) pages, we need to use two Gatsby APIs: `onCreateNode` and `createPages`. These are two workhorse APIs you’ll see used in many sites and plugins.
 
+Suggested links to check out when trying to understand this topic:
+
+-   [Programmatically create pages from data](https://www.gatsbyjs.com/tutorial/part-seven/)
+-   [Project structure](https://www.gatsbyjs.com/docs/gatsby-project-structure/)
+-   [Gatsby concepts](https://www.gatsbyjs.com/docs/graphql-concepts/)
+-   [Gatsby Lifecycle APIs](https://www.gatsbyjs.com/docs/gatsby-lifecycle-apis/)
+
 ## `createPages.js`
 
 This file goes through all of the data retrieved by our GraphQL query which gets massaged by `onCreateNode.js` and applies our templates (`docsTemplate` and `blogTemplate`) that can be found in `docs.js` and `blogs.js`
