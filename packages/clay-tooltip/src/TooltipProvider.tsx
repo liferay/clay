@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal} from '@clayui/shared';
+import {ClayPortal, Keys} from '@clayui/shared';
 import domAlign from 'dom-align';
-import React from 'react';
+import React, {useCallback} from 'react';
 import warning from 'warning';
 
 import ClayTooltip from './Tooltip';
@@ -139,7 +139,7 @@ const TooltipProvider: React.FunctionComponent<{
 	const titleNodeRef = React.useRef<HTMLElement | null>(null);
 	const tooltipRef = React.useRef<HTMLElement | null>(null);
 
-	const handleHide = ({target}: any) => {
+	const handleHide = useCallback(({target}: any) => {
 		if (!titleNodeRef.current) {
 			return;
 		}
@@ -147,6 +147,7 @@ const TooltipProvider: React.FunctionComponent<{
 		const dataTitle = titleNodeRef.current.getAttribute('data-title');
 
 		if (dataTitle) {
+			document.removeEventListener('keyup', handleEsc, true);
 			target.removeEventListener('click', handleHide);
 			titleNodeRef.current.setAttribute('title', dataTitle);
 			titleNodeRef.current.removeAttribute('data-title');
@@ -157,9 +158,16 @@ const TooltipProvider: React.FunctionComponent<{
 			dispatch({type: 'hide'});
 			clearTimeout(timeoutIdRef.current);
 		}
-	};
+	}, []);
 
-	const handleShow = ({target}: any) => {
+	const handleEsc = useCallback((event: KeyboardEvent) => {
+		if (event.key === Keys.Esc) {
+			event.stopImmediatePropagation();
+			handleHide(event);
+		}
+	}, []);
+
+	const handleShow = useCallback(({target}: any) => {
 		const hasTitle = target && target.hasAttribute('title');
 
 		const titleNode = hasTitle
@@ -172,6 +180,7 @@ const TooltipProvider: React.FunctionComponent<{
 			titleNodeRef.current = titleNode;
 			targetRef.current = target;
 
+			document.addEventListener('keyup', handleEsc, true);
 			target.addEventListener('click', handleHide);
 			titleNode.setAttribute('data-title', title);
 			titleNode.removeAttribute('title');
@@ -190,7 +199,7 @@ const TooltipProvider: React.FunctionComponent<{
 				customDelay ? Number(customDelay) : delay
 			);
 		}
-	};
+	}, []);
 
 	React.useEffect(() => {
 		if (
