@@ -78,7 +78,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 						'@clayui/',
 						''
 					)}.html`;
-				} else if (mainTabURL) {
+				} else if (!mainTabURL) {
 					slug = `docs/components/${fileName
 						.replace('_', '-')
 						.toLowerCase()}.html`;
