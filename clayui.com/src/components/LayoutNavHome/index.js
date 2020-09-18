@@ -147,6 +147,10 @@ const LayoutNavHome = () => {
 													'clayCSSFile'
 												);
 
+												const clayuiCSSFile = document.getElementById(
+													'clayuiCSSFile'
+												);
+
 												setShowAtlas(checked);
 
 												if (checked) {
@@ -154,10 +158,20 @@ const LayoutNavHome = () => {
 														'href',
 														'/css/atlas.css'
 													);
+
+													clayuiCSSFile.setAttribute(
+														'href',
+														'/css/colors.css'
+													);
 												} else {
 													clayCSSFile.setAttribute(
 														'href',
 														'/css/base.css'
+													);
+
+													clayuiCSSFile.setAttribute(
+														'href',
+														'/css/colors-base.css'
 													);
 												}
 											},

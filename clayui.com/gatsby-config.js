@@ -16,9 +16,10 @@ module.exports = {
 		'gatsby-plugin-meta-redirect',
 		{
 			options: {
-				clay: clay.srcDir,
-				srcDir: path.join(clay.srcDir, 'images', 'icons'),
-				staticDir: path.join(__dirname, 'static'),
+				clayCssSrc: clay.srcDir,
+				clayCssSrcIcons: path.join(clay.srcDir, 'images', 'icons'),
+				clayuiSrc: path.join(__dirname, 'src'),
+				clayuiStatic: path.join(__dirname, 'static'),
 			},
 			resolve: 'gatsby-plugin-clay-css-tasks',
 		},

@@ -13,12 +13,16 @@ export const onClientEntry = () => {
 	const showAtlas = isNullOrTrue(localStorage.getItem('clay.showAtlas'));
 
 	const clayCSSFile = document.getElementById('clayCSSFile');
+	const clayuiCSSFile = document.getElementById('clayuiCSSFile');
 
-	if (showAtlas) {
-		clayCSSFile.setAttribute('href', '/css/atlas.css');
-	} else {
-		clayCSSFile.setAttribute('href', '/css/base.css');
-	}
+	clayCSSFile.setAttribute(
+		'href',
+		showAtlas ? '/css/atlas.css' : '/css/base.css'
+	);
+	clayuiCSSFile.setAttribute(
+		'href',
+		showAtlas ? '/css/colors.css' : '/css/colors-base.css'
+	);
 
 	require('./src/styles/main.scss');
 };

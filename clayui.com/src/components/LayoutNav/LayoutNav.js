@@ -14,6 +14,35 @@ import Search from './Search';
 
 const spritemap = '/images/icons/icons.svg';
 
+const isColorsLoaded = (checked) => {
+	const themeEl = document.createElement('div');
+
+	themeEl.setAttribute('id', 'clayCSSTheme');
+
+	const loaded = () => {
+		clearInterval(checkCSS);
+
+		const colorsLoadedEvent = document.createEvent('Event');
+
+		colorsLoadedEvent.initEvent('colorsLoaded', true, true);
+
+		document.dispatchEvent(colorsLoadedEvent);
+
+		themeEl.remove();
+	};
+
+	const checkCSS = setInterval(() => {
+		const clayCSSTheme = window.getComputedStyle(themeEl);
+		const themeName = checked ? 'atlas' : 'base';
+
+		if (clayCSSTheme.content.replace(/"/g, '') === themeName) {
+			loaded();
+		}
+	}, 100);
+
+	document.body.appendChild(themeEl);
+};
+
 export default (location) => {
 	const [showAtlas, setShowAtlas] = useStateWithLocalStorage(
 		true,
@@ -140,17 +169,32 @@ export default (location) => {
 												'clayCSSFile'
 											);
 
+											const clayuiCSSFile = document.getElementById(
+												'clayuiCSSFile'
+											);
+
 											setShowAtlas(checked);
+											isColorsLoaded(checked);
 
 											if (checked) {
 												clayCSSFile.setAttribute(
 													'href',
 													'/css/atlas.css'
 												);
+
+												clayuiCSSFile.setAttribute(
+													'href',
+													'/css/colors.css'
+												);
 											} else {
 												clayCSSFile.setAttribute(
 													'href',
 													'/css/base.css'
+												);
+
+												clayuiCSSFile.setAttribute(
+													'href',
+													'/css/colors-base.css'
 												);
 											}
 										},
