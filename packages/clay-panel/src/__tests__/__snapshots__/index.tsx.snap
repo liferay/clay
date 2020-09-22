@@ -75,7 +75,6 @@ exports[`ClayPanel renders with custom displayTitle 1`] = `
   </button>
   <div
     className="panel-collapse collapse"
-    onTransitionEnd={[Function]}
     role="tabpanel"
   >
     <div
@@ -215,7 +214,6 @@ exports[`ClayPanel renders with multiple panels 1`] = `
     </button>
     <div
       className="panel-collapse collapse"
-      onTransitionEnd={[Function]}
       role="tabpanel"
     >
       <div
@@ -266,7 +264,6 @@ exports[`ClayPanel renders without displayTitle 1`] = `
   </button>
   <div
     className="panel-collapse collapse"
-    onTransitionEnd={[Function]}
     role="tabpanel"
   >
     <div

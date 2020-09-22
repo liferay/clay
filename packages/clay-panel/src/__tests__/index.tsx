@@ -4,7 +4,7 @@
  */
 
 import ClayPanel from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {act, cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
@@ -105,6 +105,7 @@ describe('ClayPanel Interactions', () => {
 	afterEach(cleanup);
 
 	it('clicking the title should expand and close the content', () => {
+		jest.useFakeTimers();
 		const {container} = render(
 			<ClayPanel
 				collapsable
@@ -130,12 +131,9 @@ describe('ClayPanel Interactions', () => {
 			container.querySelector('.panel-collapse.collapsing')
 		).toBeTruthy();
 
-		fireEvent.transitionEnd(
-			container.querySelector(
-				'.panel-collapse.collapsing'
-			) as HTMLDivElement,
-			{}
-		);
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(
 			container.querySelector('.panel-collapse.collapsing')
@@ -148,12 +146,9 @@ describe('ClayPanel Interactions', () => {
 			container.querySelector('.panel-collapse.collapsing')
 		).toBeTruthy();
 
-		fireEvent.transitionEnd(
-			container.querySelector(
-				'.panel-collapse.collapsing'
-			) as HTMLDivElement,
-			{}
-		);
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		expect(container.querySelector('.panel-collapse.show')).toBeFalsy();
 		expect(
