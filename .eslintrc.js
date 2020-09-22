@@ -34,6 +34,7 @@ module.exports = {
 			},
 		],
 		'prefer-template': 'error',
+		'react/display-name': 'error',
 		'react/jsx-boolean-value': 'error',
 		'react/jsx-no-bind': [
 			'error',
