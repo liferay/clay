@@ -84,4 +84,6 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 	)
 );
 
+ClayButton.displayName = 'ClayButton';
+
 export default Object.assign(ClayButton, {Group: ButtonGroup});

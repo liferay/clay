@@ -16,4 +16,6 @@ const ClayTableHead = React.forwardRef<
 	);
 });
 
+ClayTableHead.displayName = 'ClayTableHead';
+
 export default ClayTableHead;

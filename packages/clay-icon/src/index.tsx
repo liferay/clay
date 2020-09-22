@@ -52,4 +52,6 @@ const ClayIcon = React.forwardRef<SVGSVGElement, IProps>(
 	}
 );
 
+ClayIcon.displayName = 'ClayIcon';
+
 export default ClayIcon;

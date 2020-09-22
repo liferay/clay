@@ -103,4 +103,6 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 	}
 );
 
+ClayCheckbox.displayName = 'ClayCheckbox';
+
 export default ClayCheckbox;

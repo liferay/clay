@@ -60,4 +60,6 @@ const ClayTooltip = React.forwardRef<HTMLElement, IProps>(
 	}
 );
 
+ClayTooltip.displayName = 'ClayTooltip';
+
 export default ClayTooltip;

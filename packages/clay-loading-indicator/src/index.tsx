@@ -34,4 +34,6 @@ const ClayLoadingIndicator = React.forwardRef<HTMLSpanElement, IProps>(
 	}
 );
 
+ClayLoadingIndicator.displayName = 'ClayLoadingIndicator';
+
 export default ClayLoadingIndicator;

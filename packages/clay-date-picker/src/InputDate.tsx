@@ -65,4 +65,6 @@ const ClayDatePickerInputDate = React.forwardRef<HTMLInputElement, IProps>(
 	}
 );
 
+ClayDatePickerInputDate.displayName = 'ClayDatePickerInputDate';
+
 export default ClayDatePickerInputDate;

@@ -81,4 +81,6 @@ const ClayRadio = React.forwardRef<HTMLInputElement, IRadioProps>(
 	}
 );
 
+ClayRadio.displayName = 'ClayRadio';
+
 export default ClayRadio;

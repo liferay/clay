@@ -21,6 +21,8 @@ const AutocompleteMarkup = React.forwardRef<
 	</ClayInput.Group>
 ));
 
+AutocompleteMarkup.displayName = 'ClayAutocompleteMarkup';
+
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Div component to render. It can be a one component that will replace the markup.
@@ -71,6 +73,8 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 		);
 	}
 );
+
+ClayAutocomplete.displayName = 'ClayAutocomplete';
 
 export default Object.assign(ClayAutocomplete, {
 	DropDown,

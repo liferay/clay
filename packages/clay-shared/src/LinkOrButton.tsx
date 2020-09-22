@@ -17,7 +17,7 @@ interface IProps {
 	[propName: string]: any;
 }
 
-export const LinkOrButton = React.forwardRef<any, IProps>(
+const LinkOrButton = React.forwardRef<any, IProps>(
 	(
 		{
 			buttonDisplayType,
@@ -52,3 +52,7 @@ export const LinkOrButton = React.forwardRef<any, IProps>(
 		);
 	}
 );
+
+LinkOrButton.displayName = 'ClayLinkOrButton';
+
+export {LinkOrButton};

@@ -73,4 +73,6 @@ const Item = React.forwardRef<any, IProps>(
 	)
 );
 
+Item.displayName = 'ClayTabsItem';
+
 export default Item;

@@ -10,7 +10,7 @@ import React from 'react';
 const {ClayTooltipProvider, default: ClayTooltip} =
 	typeof window !== `undefined`
 		? require('@clayui/tooltip')
-		: {ClayTooltipProvider: () => <div />, default: () => <div />};
+		: {ClayTooltipProvider: () => <div />, default: () => <div />}; // eslint-disable-line react/display-name
 
 const tooltipImportsCode = `import ClayTooltip from '@clayui/tooltip';
 `;

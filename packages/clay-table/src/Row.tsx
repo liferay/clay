@@ -54,4 +54,6 @@ const ClayTableRow = React.forwardRef<HTMLTableRowElement, IRowProps>(
 	}
 );
 
+ClayTableRow.displayName = 'ClayTableRow';
+
 export default ClayTableRow;

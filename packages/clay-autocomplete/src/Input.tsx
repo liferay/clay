@@ -20,4 +20,6 @@ const ClayAutocompleteInput = React.forwardRef<HTMLInputElement, IProps>(
 	}
 );
 
+ClayAutocompleteInput.displayName = 'ClayAutocompleteInput';
+
 export default ClayAutocompleteInput;

@@ -37,4 +37,6 @@ const ClayDropDownSection = React.forwardRef<HTMLLIElement, IProps>(
 	)
 );
 
+ClayDropDownSection.displayName = 'ClayDropDownSection';
+
 export default ClayDropDownSection;

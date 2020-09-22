@@ -105,4 +105,6 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 	}
 );
 
+ClayDropDownItem.displayName = 'ClayDropDownItem';
+
 export default ClayDropDownItem;

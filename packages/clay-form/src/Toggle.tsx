@@ -116,4 +116,6 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 	}
 );
 
+ClayToggle.displayName = 'ClayToggle';
+
 export default ClayToggle;
