@@ -8,8 +8,6 @@ import classNames from 'classnames';
 import domAlign from 'dom-align';
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
-import {useDropdownCloseInteractions} from './hooks';
-
 export const Align = {
 	BottomCenter: 4,
 	BottomLeft: 5,
@@ -175,11 +173,33 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 	) => {
 		const subPortalRef = useRef<HTMLDivElement | null>(null);
 
-		useDropdownCloseInteractions(
-			[alignElementRef, subPortalRef],
-			onSetActive,
-			focusRefOnEsc
-		);
+		useEffect(() => {
+			const handleClick = (event: MouseEvent) => {
+				const nodeRefs = [alignElementRef, subPortalRef];
+				const nodes: Array<Node> = (Array.isArray(nodeRefs)
+					? nodeRefs
+					: [nodeRefs]
+				)
+					.filter((ref) => ref.current)
+					.map((ref) => ref.current!);
+
+				if (
+					event.target instanceof Node &&
+					!nodes.find((element) =>
+						element.contains(event.target as Node)
+					)
+				) {
+					onSetActive(false);
+				}
+			};
+
+			window.addEventListener('mousedown', handleClick);
+
+			return () => {
+				window.removeEventListener('mousedown', handleClick);
+			};
+		}, []);
+
 		useEffect(() => {
 			const handleEsc = (event: KeyboardEvent) => {
 				if (event.key === Keys.Esc) {
