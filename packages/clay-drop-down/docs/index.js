@@ -5,7 +5,10 @@
 
 import Editor from '$clayui.com/src/components/Editor';
 import ClayButton from '@clayui/button';
-import ClayDropDown, {ClayDropDownWithItems} from '@clayui/drop-down';
+import ClayDropDown, {
+	ClayDropDownWithDrilldown,
+	ClayDropDownWithItems,
+} from '@clayui/drop-down';
 import React from 'react';
 
 const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';`;
@@ -166,4 +169,43 @@ const DropDownWithItems = () => {
 	);
 };
 
-export {DropDown, DropDownWithItems};
+const dropDownWithDrilldownImportsCode = `import ClayButton from '@clayui/button';
+import {ClayDropDownWithDrilldown} from '@clayui/drop-down';`;
+
+const dropDownWithDrilldownCode = `const Component = () => {
+	return (
+		<ClayDropDownWithDrilldown
+			initialActiveMenu="x0a3"
+			menus={{
+				x0a3: [
+					{href: '#', title: 'Hash Link'},
+					{onClick: () => alert('test'), title: 'Alert!'},
+					{child: 'x0a4', title: 'Subnav'},
+				],
+				x0a4: [
+					{href: '#', title: '2nd hash link'},
+					{child: 'x0a5', title: 'Subnav'},
+				],
+				x0a5: [{title: 'The'}, {title: 'End'}],
+			}}
+			spritemap={spritemap}
+			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+		/>
+    );
+}
+
+render(<Component />)`;
+
+const DropDownWithDrilldown = () => {
+	const scope = {ClayButton, ClayDropDownWithDrilldown};
+
+	return (
+		<Editor
+			code={dropDownWithDrilldownCode}
+			imports={dropDownWithDrilldownImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+export {DropDown, DropDownWithItems, DropDownWithDrilldown};

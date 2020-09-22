@@ -142,5 +142,3 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 };
 
 ClayDropDownWithDrilldown.displayName = 'ClayDropDownWithDrilldown';
-
-export default ClayDropDownWithDrilldown;
