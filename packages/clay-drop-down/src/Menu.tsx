@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal} from '@clayui/shared';
+import {ClayPortal, Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
-import React from 'react';
+import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
 import {useDropdownCloseInteractions} from './hooks';
 
@@ -173,15 +173,36 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 		// See https://github.com/microsoft/TypeScript/issues/30748#issuecomment-480197036
 		ref
 	) => {
-		const subPortalRef = React.useRef<HTMLDivElement | null>(null);
+		const subPortalRef = useRef<HTMLDivElement | null>(null);
 
 		useDropdownCloseInteractions(
 			[alignElementRef, subPortalRef],
 			onSetActive,
 			focusRefOnEsc
 		);
+		useEffect(() => {
+			const handleEsc = (event: KeyboardEvent) => {
+				if (event.key === Keys.Esc) {
+					event.stopImmediatePropagation();
 
-		React.useLayoutEffect(() => {
+					if (focusRefOnEsc && focusRefOnEsc.current) {
+						focusRefOnEsc.current.focus();
+					}
+
+					onSetActive(false);
+				}
+			};
+
+			if (active) {
+				document.addEventListener('keyup', handleEsc, true);
+			}
+
+			return () => {
+				document.removeEventListener('keyup', handleEsc, true);
+			};
+		}, [active]);
+
+		useLayoutEffect(() => {
 			if (
 				alignElementRef.current &&
 				(ref as React.RefObject<HTMLDivElement>).current &&
