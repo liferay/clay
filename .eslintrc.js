@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
+ * SPDX-FileCopyrightText: © 2020 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
@@ -31,6 +31,7 @@ module.exports = {
 			'error',
 			{
 				templateFile: path.join(__dirname, 'copyright.js'),
+				varRegexps: {YEAR: new Date().getFullYear()},
 			},
 		],
 		'prefer-template': 'error',
