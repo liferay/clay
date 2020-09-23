@@ -16,4 +16,6 @@ const ClayTableBody = React.forwardRef<
 	);
 });
 
+ClayTableBody.displayName = 'ClayTableBody';
+
 export default ClayTableBody;

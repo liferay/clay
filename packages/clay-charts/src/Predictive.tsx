@@ -64,4 +64,6 @@ const PredictiveChart = React.forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
+PredictiveChart.displayName = 'ClayPredictiveChart';
+
 export default PredictiveChart;

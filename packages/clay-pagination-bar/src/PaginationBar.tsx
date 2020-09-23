@@ -32,4 +32,6 @@ const ClayPaginationBar = React.forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
+ClayPaginationBar.displayName = 'ClayPaginationBar';
+
 export default Object.assign(ClayPaginationBar, {DropDown, Results});

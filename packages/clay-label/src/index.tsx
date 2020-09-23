@@ -21,6 +21,8 @@ const ClayLabelItemAfter = React.forwardRef<
 	</span>
 ));
 
+ClayLabelItemAfter.displayName = 'ClayLabelItemAfter';
+
 const ClayLabelItemBefore = React.forwardRef<
 	HTMLSpanElement,
 	React.HTMLAttributes<HTMLSpanElement>
@@ -33,6 +35,8 @@ const ClayLabelItemBefore = React.forwardRef<
 		{children}
 	</span>
 ));
+
+ClayLabelItemBefore.displayName = 'ClayLabelItemBefore';
 
 const ClayLabelItemExpand = React.forwardRef<
 	HTMLAnchorElement | HTMLSpanElement,
@@ -51,6 +55,8 @@ const ClayLabelItemExpand = React.forwardRef<
 		</TagName>
 	);
 });
+
+ClayLabelItemExpand.displayName = 'ClayLabelItemExpand';
 
 type DisplayType =
 	| 'secondary'
@@ -104,6 +110,8 @@ const ClayLabel = React.forwardRef<HTMLSpanElement, IBaseProps>(
 		);
 	}
 );
+
+ClayLabel.displayName = 'ClayLabel';
 
 interface IProps extends IBaseProps {
 	/**
@@ -182,6 +190,8 @@ const ClayLabelHybrid = React.forwardRef<
 		);
 	}
 );
+
+ClayLabelHybrid.displayName = 'ClayLabel';
 
 export default Object.assign(ClayLabelHybrid, {
 	ItemAfter: ClayLabelItemAfter,

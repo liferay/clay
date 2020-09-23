@@ -51,4 +51,6 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 	}
 );
 
+ClayColorPickerSplotch.displayName = 'ClayColorPickerSplotch';
+
 export default ClayColorPickerSplotch;

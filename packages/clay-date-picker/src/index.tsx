@@ -478,4 +478,6 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 	}
 );
 
+ClayDatePicker.displayName = 'ClayDatePicker';
+
 export default ClayDatePicker;

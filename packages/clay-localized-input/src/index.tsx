@@ -234,4 +234,6 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 	}
 );
 
+ClayLocalizedInput.displayName = 'ClayLocalizedInput';
+
 export default ClayLocalizedInput;

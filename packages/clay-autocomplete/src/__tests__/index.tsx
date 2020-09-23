@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+/* eslint-disable react/display-name */
 import ClayAutocomplete from '..';
 import {cleanup, render} from '@testing-library/react';
 import React from 'react';

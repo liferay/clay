@@ -44,4 +44,6 @@ const ClayAutocompleteItem = React.forwardRef<HTMLLIElement, IProps>(
 	}
 );
 
+ClayAutocompleteItem.displayName = 'ClayAutocompleteItem';
+
 export default ClayAutocompleteItem;

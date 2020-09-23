@@ -404,4 +404,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
+ClayMultiSelect.displayName = 'ClayMultiSelect';
+
 export default ClayMultiSelect;

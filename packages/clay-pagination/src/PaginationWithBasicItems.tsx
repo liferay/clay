@@ -58,10 +58,7 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	spritemap?: string;
 }
 
-export const ClayPaginationWithBasicItems = React.forwardRef<
-	HTMLUListElement,
-	IProps
->(
+const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 	(
 		{
 			activePage,
@@ -150,3 +147,7 @@ export const ClayPaginationWithBasicItems = React.forwardRef<
 		);
 	}
 );
+
+ClayPaginationWithBasicItems.displayName = 'ClayPaginationWithBasicItems';
+
+export {ClayPaginationWithBasicItems};

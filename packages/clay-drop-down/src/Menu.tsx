@@ -230,4 +230,6 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
+ClayDropDownMenu.displayName = 'ClayDropDownMenu';
+
 export default ClayDropDownMenu;

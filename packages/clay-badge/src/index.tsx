@@ -41,4 +41,6 @@ const ClayBadge = React.forwardRef<HTMLSpanElement, IProps>(
 	)
 );
 
+ClayBadge.displayName = 'ClayBadge';
+
 export default ClayBadge;

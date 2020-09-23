@@ -58,4 +58,6 @@ const ClayMultiStepNavIndicator = React.forwardRef<HTMLDivElement, IProps>(
 	)
 );
 
+ClayMultiStepNavIndicator.displayName = 'ClayMultiStepNavIndicator';
+
 export default ClayMultiStepNavIndicator;

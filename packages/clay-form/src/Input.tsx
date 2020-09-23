@@ -204,6 +204,8 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 	)
 );
 
+ClayInput.displayName = 'ClayInput';
+
 export default Object.assign(ClayInput, {
 	Group: ClayInputGroup,
 	GroupInsetItem: ClayInputGroupInsetItem,

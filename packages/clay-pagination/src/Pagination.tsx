@@ -32,4 +32,6 @@ const ClayPagination = React.forwardRef<HTMLUListElement, IProps>(
 	}
 );
 
+ClayPagination.displayName = 'ClayPagination';
+
 export default Object.assign(ClayPagination, {Ellipsis, Item});

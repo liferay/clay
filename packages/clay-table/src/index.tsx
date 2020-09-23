@@ -129,6 +129,8 @@ const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
+ClayTable.displayName = 'ClayTable';
+
 export default Object.assign(ClayTable, {
 	Body,
 	Cell,

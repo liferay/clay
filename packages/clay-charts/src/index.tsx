@@ -82,6 +82,8 @@ const ClayChart = React.forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
+ClayChart.displayName = 'ClayChart';
+
 export {bb};
 
 export default ClayChart;

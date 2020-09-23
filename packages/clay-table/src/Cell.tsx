@@ -107,4 +107,6 @@ const ClayTableCell = React.forwardRef<
 	}
 );
 
+ClayTableCell.displayName = 'ClayTableCell';
+
 export default ClayTableCell;

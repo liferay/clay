@@ -41,4 +41,6 @@ const ClayDatePickerSelect = React.forwardRef(
 	)
 );
 
+ClayDatePickerSelect.displayName = 'ClayDatePickerSelect';
+
 export default ClayDatePickerSelect;

@@ -28,4 +28,6 @@ const ClayButtonWithIcon = React.forwardRef<HTMLButtonElement, IProps>(
 	)
 );
 
+ClayButtonWithIcon.displayName = 'ClayButtonWithIcon';
+
 export default ClayButtonWithIcon;

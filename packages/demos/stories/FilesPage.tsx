@@ -11,7 +11,7 @@ import ClayLayout from '@clayui/layout';
 import ClayManagementToolbar from '@clayui/management-toolbar';
 import React from 'react';
 
-export default () => {
+export default function DemosPage() {
 	const [value, setValue] = React.useState('');
 
 	const dogNames: Array<[string, number]> = [
@@ -79,4 +79,4 @@ export default () => {
 			</ClayLayout.ContainerFluid>
 		</div>
 	);
-};
+}

@@ -188,4 +188,6 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 	}
 );
 
+ClayPopover.displayName = 'ClayPopover';
+
 export default ClayPopover;
