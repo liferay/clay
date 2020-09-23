@@ -2,6 +2,7 @@
 
 This article explains best practices, concepts, and common pitfalls when making components for Clay.
 We go over concepts of high and low level components, composition, and advice on tying it all together.
+When we make new components we must determine how high-level the component should be, and know what the component needs to offer, to better understand this, read [component offerings](https://github.com/liferay/clay/wiki/Component-Offerings)
 
 ## High-level vs low-level components and composition
 
@@ -14,7 +15,7 @@ This refers to [Composition vs Inheritance](https://reactjs.org/docs/composition
 
 > React has a powerful composition model, and we recommend using composition instead of inheritance to reuse code between components.
 
-In Clay we compose our low-level components to build powerful high-level components, allowing users to use either to compose their own components depending on their needs.
+In Clay we compose our low-level components to build powerful high-level components, allowing users to use either to compose their own components depending on their needs. [Compositional philosophy](https://dev.to/matuzalemsteles/design-system-compositional-philosophy-of-components-1cc4) is good reading matieral to wrap your head around the concept.
 
 ### Low-level components
 
@@ -36,7 +37,7 @@ const ClayComponent = ({
 }: IProps) => {
 ```
 
--   When creating a brand new component we often forget some of the boilerplate, one of those errors is `Error TS4082: Default export of the module has or is using private name ...`. The reason this error pops up is because it needs it's low-level components defined here, like `ClayToolbar.Item = Item` and `ClayToolbar.Label = Label`.
+-   When creating a brand new component we often forget some of the boilerplate, one of those errors is `Error TS4082: Default export of the module has or is using private name ...`. The reason this error pops up is because it needs it's low-level components assigned to the parent component, like so:
 
 ```tsx
 const ClayComponent: React.FunctionComponent<IProps> & {
@@ -44,8 +45,10 @@ const ClayComponent: React.FunctionComponent<IProps> & {
     Label: typeof Label;
 } = ({...});
 
-ClayToolbar.Item = Item;
-ClayToolbar.Label = Label;
-
-export default ClayComponent;
+export default Object.assign(ClayComponent, {
+	Item,
+	Label,
+});
 ```
+
+-   We must specify the `displayName` of the component for it's entry in React Dev Tools to show the name we want for the component
