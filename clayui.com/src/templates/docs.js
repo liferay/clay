@@ -172,11 +172,13 @@ export default (props) => {
 	}, []);
 
 	useEffect(() => {
-		document
-			.querySelectorAll('.clay-site-custom-checkbox-indeterminate')
-			.forEach((item) => {
-				item.indeterminate = true;
-			});
+		const elements = document.querySelectorAll(
+			'.clay-site-custom-checkbox-indeterminate'
+		);
+
+		[...elements].forEach((item) => {
+			item.indeterminate = true;
+		});
 	}, []);
 
 	return (
