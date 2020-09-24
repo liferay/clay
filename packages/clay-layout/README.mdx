@@ -16,7 +16,19 @@ import {LayoutContainer, LayoutContent} from '$packages/clay-layout/docs/index';
 </div>
 </div>
 
-## Container, Rows, Columns
+## Containers, Rows and Columns
+
+These are the basic building blocks of any layout, we made Clay Layout very flexible with it's offerings of containers, rows and columns. All of these components allow for a custom HTML element to be used via the `containerElement` prop.
+
+`Container` is a low-level component that serves as a wrapper of smaller building blocks like rows and columns. It is also used as a basis for a high-level variant `ContainerFluid` which is a `Container` without a fixed width.
+
+`Row` and `Col` are self-explanatory, their purpose is to structure content inside them horizontally, or vertically. They are the next component in a typical DOM structure under a `Container`.
+
+`Row` can be customized so that its `gutters` are removed, and its content can be `justified`.
+
+`Col` (column) has various sizing options, from `xs` (extra small) to `xl` (extra large), as well as a `size` prop that allows custom sizing to be provided.
+
+`ContentRow`, `ContentCol`, and `ContentSection` are small container components to be used as direct wrappers of your content. These elements are the lowest in the container structure while also serving layouting capabilities.
 
 <LayoutContainer />
 
