@@ -5,7 +5,11 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/dropdowns/'
 packageNpm: '@clayui/drop-down'
 ---
 
-import {DropDown, DropDownWithItems} from '$packages/clay-drop-down/docs/index';
+import {
+	DropDown,
+	DropDownWithItems,
+	DropDownWithDrilldown,
+} from '$packages/clay-drop-down/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
@@ -13,6 +17,7 @@ import {DropDown, DropDownWithItems} from '$packages/clay-drop-down/docs/index';
 -   [Composing](#composing)
     -   [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
 -   [DropDownWithItems](#dropdownwithitems)
+-   [DropDownWithDrilldown](#dropdownwithdrilldown)
 
 </div>
 </div>
@@ -88,3 +93,26 @@ const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
 Allows you to create a simple DropDown, through its API you are able to create a Menu with groups of checkboxes and radios, links, buttons, search, caption, etc.
 
 <DropDownWithItems />
+
+## DropDownWithDrilldown
+
+A Drilldown menu allows the user to navigate to and/or select an element from a contextual list. It can be triggered by a dropdown button.
+
+<DropDownWithDrilldown />
+
+The way the Drilldown component links the menus is done via reference, the menu needs a unique `id`.
+
+```js{expanded}
+const menus = {
+	of23: [{title: 'First'}],
+};
+```
+
+From the `id` you are able to link to another menu using the `child` property.
+
+```js{expanded}
+const menus = {
+	of23: [{title: 'First', child: 'of09'}],
+	of09: [{title: 'Three'}],
+};
+```
