@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = findAllReactCreateClassCalls;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _isReactComponentClass = _interopRequireDefault(require("../utils/isReactComponentClass"));
 
@@ -29,15 +29,11 @@ var _resolveToValue = _interopRequireDefault(require("../utils/resolveToValue"))
  *
  * 
  */
-const {
-  visit,
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Given an AST, this function tries to find all object expressions that are
  * passed to `React.createClass` calls, by resolving all references properly.
  */
-
 function findAllReactCreateClassCalls(ast) {
   const definitions = new Set();
 
@@ -58,7 +54,7 @@ function findAllReactCreateClassCalls(ast) {
     return false;
   }
 
-  visit(ast, {
+  (0, _astTypes.visit)(ast, {
     visitFunctionDeclaration: statelessVisitor,
     visitFunctionExpression: statelessVisitor,
     visitArrowFunctionExpression: statelessVisitor,
@@ -76,7 +72,7 @@ function findAllReactCreateClassCalls(ast) {
       } else if ((0, _isReactCreateClassCall.default)(path)) {
         const resolvedPath = (0, _resolveToValue.default)(path.get('arguments', 0));
 
-        if (t.ObjectExpression.check(resolvedPath.node)) {
+        if (_astTypes.namedTypes.ObjectExpression.check(resolvedPath.node)) {
           definitions.add(resolvedPath);
         } // Do not traverse into arguments
 

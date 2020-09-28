@@ -7,7 +7,7 @@
  * @flow
  */
 
-import types from 'ast-types';
+import { namedTypes as t } from 'ast-types';
 import { getDocblock } from './docblock';
 import getFlowType from './getFlowType';
 import getTSType from './getTSType';
@@ -15,8 +15,7 @@ import getParameterName from './getParameterName';
 import getPropertyName from './getPropertyName';
 import getTypeAnnotation from './getTypeAnnotation';
 import type { FlowTypeDescriptor } from '../types';
-
-const { namedTypes: t } = types;
+import resolveToValue from './resolveToValue';
 
 type MethodParameter = {
   name: string,
@@ -36,9 +35,17 @@ type MethodDocumentation = {
   returns: ?MethodReturn,
 };
 
+function getMethodFunctionExpression(methodPath) {
+  if (t.AssignmentExpression.check(methodPath.node)) {
+    return resolveToValue(methodPath.get('right'));
+  }
+  // Otherwise this is a method/property node
+  return methodPath.get('value');
+}
+
 function getMethodParamsDoc(methodPath) {
   const params = [];
-  const functionExpression = methodPath.get('value');
+  const functionExpression = getMethodFunctionExpression(methodPath);
 
   // Extract param flow types.
   functionExpression.get('params').each(paramPath => {
@@ -70,7 +77,7 @@ function getMethodParamsDoc(methodPath) {
 
 // Extract flow return type.
 function getMethodReturnDoc(methodPath) {
-  const functionExpression = methodPath.get('value');
+  const functionExpression = getMethodFunctionExpression(methodPath);
 
   if (functionExpression.node.returnType) {
     const returnType = getTypeAnnotation(functionExpression.get('returnType'));
@@ -85,6 +92,12 @@ function getMethodReturnDoc(methodPath) {
 }
 
 function getMethodModifiers(methodPath) {
+  if (t.AssignmentExpression.check(methodPath.node)) {
+    return ['static'];
+  }
+
+  // Otherwise this is a method/property node
+
   const modifiers = [];
 
   if (methodPath.node.static) {
@@ -106,17 +119,65 @@ function getMethodModifiers(methodPath) {
   return modifiers;
 }
 
+function getMethodName(methodPath) {
+  if (
+    t.AssignmentExpression.check(methodPath.node) &&
+    t.MemberExpression.check(methodPath.node.left)
+  ) {
+    const left = methodPath.node.left;
+    const property = left.property;
+    if (!left.computed) {
+      return property.name;
+    }
+    if (t.Literal.check(property)) {
+      return String(property.value);
+    }
+    return null;
+  }
+  return getPropertyName(methodPath);
+}
+
+function getMethodAccessibility(methodPath) {
+  if (t.AssignmentExpression.check(methodPath.node)) {
+    return null;
+  }
+
+  // Otherwise this is a method/property node
+  return methodPath.node.accessibility;
+}
+
+function getMethodDocblock(methodPath) {
+  if (t.AssignmentExpression.check(methodPath.node)) {
+    let path = methodPath;
+    do {
+      path = path.parent;
+    } while (path && !t.ExpressionStatement.check(path.node));
+    if (path) {
+      return getDocblock(path);
+    }
+    return null;
+  }
+
+  // Otherwise this is a method/property node
+  return getDocblock(methodPath);
+}
+
+// Gets the documentation object for a component method.
+// Component methods may be represented as class/object method/property nodes
+// or as assignment expresions of the form `Component.foo = function() {}`
 export default function getMethodDocumentation(
   methodPath: NodePath,
 ): ?MethodDocumentation {
-  const name = getPropertyName(methodPath);
-  if (!name) return null;
+  if (getMethodAccessibility(methodPath) === 'private') {
+    return null;
+  }
 
-  const docblock = getDocblock(methodPath);
+  const name = getMethodName(methodPath);
+  if (!name) return null;
 
   return {
     name,
-    docblock,
+    docblock: getMethodDocblock(methodPath),
     modifiers: getMethodModifiers(methodPath),
     params: getMethodParamsDoc(methodPath),
     returns: getMethodReturnDoc(methodPath),

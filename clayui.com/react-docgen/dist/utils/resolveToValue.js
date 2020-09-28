@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = resolveToValue;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getMemberExpressionRoot = _interopRequireDefault(require("./getMemberExpressionRoot"));
 
@@ -25,24 +25,18 @@ var _traverse = require("./traverse");
  *
  * 
  */
-const {
-  namedTypes: t,
-  NodePath,
-  builders
-} = _astTypes.default;
-
 function buildMemberExpressionFromPattern(path) {
   const node = path.node;
 
-  if (t.Property.check(node)) {
+  if (_astTypes.namedTypes.Property.check(node)) {
     const objPath = buildMemberExpressionFromPattern(path.parent);
 
     if (objPath) {
-      return new NodePath(builders.memberExpression(objPath.node, node.key, t.Literal.check(node.key)), objPath);
+      return new _astTypes.NodePath(_astTypes.builders.memberExpression(objPath.node, node.key, _astTypes.namedTypes.Literal.check(node.key)), objPath);
     }
-  } else if (t.ObjectPattern.check(node)) {
+  } else if (_astTypes.namedTypes.ObjectPattern.check(node)) {
     return buildMemberExpressionFromPattern(path.parent);
-  } else if (t.VariableDeclarator.check(node)) {
+  } else if (_astTypes.namedTypes.VariableDeclarator.check(node)) {
     return path.get('init');
   }
 
@@ -57,9 +51,9 @@ function findScopePath(paths, path) {
   let resultPath = paths[0];
   const parentPath = resultPath.parent;
 
-  if (t.ImportDefaultSpecifier.check(parentPath.node) || t.ImportSpecifier.check(parentPath.node) || t.ImportNamespaceSpecifier.check(parentPath.node) || t.VariableDeclarator.check(parentPath.node) || t.TypeAlias.check(parentPath.node) || t.InterfaceDeclaration.check(parentPath.node) || t.TSTypeAliasDeclaration.check(parentPath.node) || t.TSInterfaceDeclaration.check(parentPath.node)) {
+  if (_astTypes.namedTypes.ImportDefaultSpecifier.check(parentPath.node) || _astTypes.namedTypes.ImportSpecifier.check(parentPath.node) || _astTypes.namedTypes.ImportNamespaceSpecifier.check(parentPath.node) || _astTypes.namedTypes.VariableDeclarator.check(parentPath.node) || _astTypes.namedTypes.TypeAlias.check(parentPath.node) || _astTypes.namedTypes.InterfaceDeclaration.check(parentPath.node) || _astTypes.namedTypes.TSTypeAliasDeclaration.check(parentPath.node) || _astTypes.namedTypes.TSInterfaceDeclaration.check(parentPath.node)) {
     resultPath = parentPath;
-  } else if (t.Property.check(parentPath.node)) {
+  } else if (_astTypes.namedTypes.Property.check(parentPath.node)) {
     // must be inside a pattern
     const memberExpressionPath = buildMemberExpressionFromPattern(parentPath);
 
@@ -80,18 +74,29 @@ function findScopePath(paths, path) {
  */
 
 
-function findLastAssignedValue(scope, name) {
+function findLastAssignedValue(scope, idPath) {
   const results = [];
-  (0, _traverse.traverseShallow)(scope.path.node, {
+  const name = idPath.node.name;
+  (0, _traverse.traverseShallow)(scope.path, {
     visitAssignmentExpression: function (path) {
       const node = path.node; // Skip anything that is not an assignment to a variable with the
       // passed name.
+      // Ensure the LHS isn't the reference we're trying to resolve.
 
-      if (!t.Identifier.check(node.left) || node.left.name !== name || node.operator !== '=') {
+      if (!_astTypes.namedTypes.Identifier.check(node.left) || node.left === idPath.node || node.left.name !== name || node.operator !== '=') {
         return this.traverse(path);
+      } // Ensure the RHS doesn't contain the reference we're trying to resolve.
+
+
+      const candidatePath = path.get('right');
+
+      for (let p = idPath; p && p.node != null; p = p.parent) {
+        if (p.node === candidatePath.node) {
+          return this.traverse(path);
+        }
       }
 
-      results.push(path.get('right'));
+      results.push(candidatePath);
       return false;
     }
   });
@@ -114,18 +119,18 @@ function findLastAssignedValue(scope, name) {
 function resolveToValue(path) {
   const node = path.node;
 
-  if (t.VariableDeclarator.check(node)) {
+  if (_astTypes.namedTypes.VariableDeclarator.check(node)) {
     if (node.init) {
       return resolveToValue(path.get('init'));
     }
-  } else if (t.MemberExpression.check(node)) {
+  } else if (_astTypes.namedTypes.MemberExpression.check(node)) {
     const resolved = resolveToValue((0, _getMemberExpressionRoot.default)(path));
 
-    if (t.ObjectExpression.check(resolved.node)) {
+    if (_astTypes.namedTypes.ObjectExpression.check(resolved.node)) {
       let propertyPath = resolved;
 
       for (const propertyName of (0, _expressionTo.Array)(path).slice(1)) {
-        if (propertyPath && t.ObjectExpression.check(propertyPath.node)) {
+        if (propertyPath && _astTypes.namedTypes.ObjectExpression.check(propertyPath.node)) {
           propertyPath = (0, _getPropertyValuePath.default)(propertyPath, propertyName);
         }
 
@@ -138,17 +143,17 @@ function resolveToValue(path) {
 
       return propertyPath;
     }
-  } else if (t.ImportDefaultSpecifier.check(node) || t.ImportNamespaceSpecifier.check(node) || t.ImportSpecifier.check(node)) {
+  } else if (_astTypes.namedTypes.ImportDefaultSpecifier.check(node) || _astTypes.namedTypes.ImportNamespaceSpecifier.check(node) || _astTypes.namedTypes.ImportSpecifier.check(node)) {
     // go up two levels as first level is only the array of specifiers
     return path.parentPath.parentPath;
-  } else if (t.AssignmentExpression.check(node)) {
+  } else if (_astTypes.namedTypes.AssignmentExpression.check(node)) {
     if (node.operator === '=') {
       return resolveToValue(path.get('right'));
     }
-  } else if (t.TypeCastExpression.check(node)) {
+  } else if (_astTypes.namedTypes.TypeCastExpression.check(node) || _astTypes.namedTypes.TSAsExpression.check(node) || _astTypes.namedTypes.TSTypeAssertion.check(node)) {
     return resolveToValue(path.get('expression'));
-  } else if (t.Identifier.check(node)) {
-    if ((t.ClassDeclaration.check(path.parentPath.node) || t.ClassExpression.check(path.parentPath.node) || t.Function.check(path.parentPath.node)) && path.parentPath.get('id') === path) {
+  } else if (_astTypes.namedTypes.Identifier.check(node)) {
+    if ((_astTypes.namedTypes.ClassDeclaration.check(path.parentPath.node) || _astTypes.namedTypes.ClassExpression.check(path.parentPath.node) || _astTypes.namedTypes.Function.check(path.parentPath.node)) && path.parentPath.get('id') === path) {
       return path.parentPath;
     }
 
@@ -159,7 +164,7 @@ function resolveToValue(path) {
       // The variable may be assigned a different value after initialization.
       // We are first trying to find all assignments to the variable in the
       // block where it is defined (i.e. we are not traversing into statements)
-      resolvedPath = findLastAssignedValue(scope, node.name);
+      resolvedPath = findLastAssignedValue(scope, path);
 
       if (!resolvedPath) {
         const bindings = scope.getBindings()[node.name];

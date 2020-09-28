@@ -9,7 +9,7 @@
 
 /*eslint no-use-before-define: 0*/
 
-import types from 'ast-types';
+import { namedTypes as t } from 'ast-types';
 import { getDocblock } from '../utils/docblock';
 import getMembers from './getMembers';
 import getPropertyName from './getPropertyName';
@@ -19,8 +19,6 @@ import resolveToValue from './resolveToValue';
 import resolveObjectKeysToArray from './resolveObjectKeysToArray';
 import resolveObjectValuesToArray from './resolveObjectValuesToArray';
 import type { PropTypeDescriptor, PropDescriptor } from '../types';
-
-const { namedTypes: t } = types;
 
 function getEnumValues(path) {
   const values = [];
@@ -188,15 +186,15 @@ const simplePropTypes = [
   'elementType',
 ];
 
-const propTypes = {
-  oneOf: getPropTypeOneOf,
-  oneOfType: getPropTypeOneOfType,
-  instanceOf: getPropTypeInstanceOf,
-  arrayOf: getPropTypeArrayOf,
-  objectOf: getPropTypeObjectOf,
-  shape: getPropTypeShapish.bind(null, 'shape'),
-  exact: getPropTypeShapish.bind(null, 'exact'),
-};
+const propTypes = new Map([
+  ['oneOf', getPropTypeOneOf],
+  ['oneOfType', getPropTypeOneOfType],
+  ['instanceOf', getPropTypeInstanceOf],
+  ['arrayOf', getPropTypeArrayOf],
+  ['objectOf', getPropTypeObjectOf],
+  ['shape', getPropTypeShapish.bind(null, 'shape')],
+  ['exact', getPropTypeShapish.bind(null, 'exact')],
+]);
 
 /**
  * Tries to identify the prop type by inspecting the path for known
@@ -220,8 +218,9 @@ export default function getPropType(path: NodePath): PropTypeDescriptor {
       if (simplePropTypes.includes(name)) {
         descriptor = { name };
         return true;
-      } else if (propTypes.hasOwnProperty(name) && member.argumentsPath) {
-        descriptor = propTypes[name](member.argumentsPath.get(0));
+      } else if (propTypes.has(name) && member.argumentsPath) {
+        // $FlowIssue
+        descriptor = propTypes.get(name)(member.argumentsPath.get(0));
         return true;
       }
     }
@@ -233,12 +232,14 @@ export default function getPropType(path: NodePath): PropTypeDescriptor {
     } else if (
       t.CallExpression.check(node) &&
       t.Identifier.check(node.callee) &&
-      propTypes.hasOwnProperty(node.callee.name)
+      propTypes.has(node.callee.name)
     ) {
-      descriptor = propTypes[node.callee.name](path.get('arguments', 0));
+      // $FlowIssue
+      descriptor = propTypes.get(node.callee.name)(path.get('arguments', 0));
     } else {
       descriptor = { name: 'custom', raw: printValue(path) };
     }
   }
+  // $FlowIssue
   return descriptor;
 }

@@ -1,13 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getNameOrValue;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -17,22 +15,19 @@ var _astTypes = _interopRequireDefault(require("ast-types"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * If node is an Identifier, it returns its name. If it is a literal, it returns
  * its value.
  */
-
 function getNameOrValue(path, raw) {
   const node = path.node;
 
   switch (node.type) {
-    case t.Identifier.name:
+    case _astTypes.namedTypes.Identifier.name:
       return node.name;
 
-    case t.Literal.name:
+    case _astTypes.namedTypes.Literal.name:
       return raw ? node.raw : node.value;
 
     default:

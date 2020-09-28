@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = normalizeClassDefinition;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getMemberExpressionRoot = _interopRequireDefault(require("../utils/getMemberExpressionRoot"));
 
@@ -21,12 +21,6 @@ var _getMembers = _interopRequireDefault(require("../utils/getMembers"));
  *
  * 
  */
-const {
-  builders,
-  visit,
-  namedTypes: t
-} = _astTypes.default;
-
 const ignore = () => false;
 /**
  * Given a class definition (i.e. `class` declaration or expression), this
@@ -52,21 +46,21 @@ const ignore = () => false;
 function normalizeClassDefinition(classDefinition) {
   let variableName;
 
-  if (t.ClassDeclaration.check(classDefinition.node)) {
+  if (_astTypes.namedTypes.ClassDeclaration.check(classDefinition.node)) {
     // Class declarations don't have an id, e.g.: `export default class extends React.Component {}`
     if (classDefinition.node.id) {
       variableName = classDefinition.node.id.name;
     }
-  } else if (t.ClassExpression.check(classDefinition.node)) {
+  } else if (_astTypes.namedTypes.ClassExpression.check(classDefinition.node)) {
     let {
       parentPath
     } = classDefinition;
 
-    while (parentPath.node !== classDefinition.scope.node && !t.BlockStatement.check(parentPath.node)) {
-      if (t.VariableDeclarator.check(parentPath.node) && t.Identifier.check(parentPath.node.id)) {
+    while (parentPath.node !== classDefinition.scope.node && !_astTypes.namedTypes.BlockStatement.check(parentPath.node)) {
+      if (_astTypes.namedTypes.VariableDeclarator.check(parentPath.node) && _astTypes.namedTypes.Identifier.check(parentPath.node.id)) {
         variableName = parentPath.node.id.name;
         break;
-      } else if (t.AssignmentExpression.check(parentPath.node) && t.Identifier.check(parentPath.node.left)) {
+      } else if (_astTypes.namedTypes.AssignmentExpression.check(parentPath.node) && _astTypes.namedTypes.Identifier.check(parentPath.node.left)) {
         variableName = parentPath.node.left.name;
         break;
       }
@@ -80,21 +74,22 @@ function normalizeClassDefinition(classDefinition) {
   }
 
   const scopeRoot = classDefinition.scope;
-  visit(scopeRoot.node, {
+  (0, _astTypes.visit)(scopeRoot.node, {
     visitFunction: ignore,
     visitClassDeclaration: ignore,
     visitClassExpression: ignore,
     visitForInStatement: ignore,
     visitForStatement: ignore,
     visitAssignmentExpression: function (path) {
-      if (t.MemberExpression.check(path.node.left)) {
+      if (_astTypes.namedTypes.MemberExpression.check(path.node.left)) {
         const first = (0, _getMemberExpressionRoot.default)(path.get('left'));
 
-        if (t.Identifier.check(first.node) && first.node.name === variableName) {
+        if (_astTypes.namedTypes.Identifier.check(first.node) && first.node.name === variableName) {
           const [member] = (0, _getMembers.default)(path.get('left'));
 
           if (member && !member.path.node.computed) {
-            const classProperty = builders.classProperty(member.path.node, path.node.right, null, true);
+            const classProperty = _astTypes.builders.classProperty(member.path.node, path.node.right, null, true);
+
             classDefinition.get('body', 'body').value.push(classProperty);
             return false;
           }

@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = findExportedComponentDefinitions;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _isExportsOrModuleAssignment = _interopRequireDefault(require("../utils/isExportsOrModuleAssignment"));
 
@@ -35,11 +35,6 @@ var _resolveHOC = _interopRequireDefault(require("../utils/resolveHOC"));
  *
  * 
  */
-const {
-  visit,
-  namedTypes: t
-} = _astTypes.default;
-
 function ignore() {
   return false;
 }
@@ -53,7 +48,7 @@ function resolveDefinition(definition) {
     // return argument
     const resolvedPath = (0, _resolveToValue.default)(definition.get('arguments', 0));
 
-    if (t.ObjectExpression.check(resolvedPath.node)) {
+    if (_astTypes.namedTypes.ObjectExpression.check(resolvedPath.node)) {
       return resolvedPath;
     }
   } else if ((0, _isReactComponentClass.default)(definition)) {
@@ -112,7 +107,7 @@ function findExportedComponentDefinitions(ast) {
     return false;
   }
 
-  visit(ast, {
+  (0, _astTypes.visit)(ast, {
     visitFunctionDeclaration: ignore,
     visitFunctionExpression: ignore,
     visitClassDeclaration: ignore,

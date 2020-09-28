@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = getPropertyValuePath;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getPropertyName = _interopRequireDefault(require("./getPropertyName"));
 
@@ -19,15 +19,13 @@ var _getPropertyName = _interopRequireDefault(require("./getPropertyName"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Given an ObjectExpression, this function returns the path of the value of
  * the property with name `propertyName`.
  */
-
 function getPropertyValuePath(path, propertyName) {
-  t.ObjectExpression.assert(path.node);
+  _astTypes.namedTypes.ObjectExpression.assert(path.node);
+
   return path.get('properties').filter(propertyPath => (0, _getPropertyName.default)(propertyPath) === propertyName).map(propertyPath => propertyPath.get('value'))[0];
 }

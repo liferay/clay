@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = resolveGenericTypeAnnotation;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _isUnreachableFlowType = _interopRequireDefault(require("../utils/isUnreachableFlowType"));
 
@@ -23,19 +23,15 @@ var _flowUtilityTypes = require("./flowUtilityTypes");
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function tryResolveGenericTypeAnnotation(path) {
   let typePath = (0, _flowUtilityTypes.unwrapUtilityType)(path);
   let idPath;
 
   if (typePath.node.id) {
     idPath = typePath.get('id');
-  } else if (t.TSTypeReference.check(typePath.node)) {
+  } else if (_astTypes.namedTypes.TSTypeReference.check(typePath.node)) {
     idPath = typePath.get('typeName');
-  } else if (t.TSExpressionWithTypeArguments.check(typePath.node)) {
+  } else if (_astTypes.namedTypes.TSExpressionWithTypeArguments.check(typePath.node)) {
     idPath = typePath.get('expression');
   }
 
@@ -46,9 +42,9 @@ function tryResolveGenericTypeAnnotation(path) {
       return;
     }
 
-    if (t.TypeAlias.check(typePath.node)) {
+    if (_astTypes.namedTypes.TypeAlias.check(typePath.node)) {
       return tryResolveGenericTypeAnnotation(typePath.get('right'));
-    } else if (t.TSTypeAliasDeclaration.check(typePath.node)) {
+    } else if (_astTypes.namedTypes.TSTypeAliasDeclaration.check(typePath.node)) {
       return tryResolveGenericTypeAnnotation(typePath.get('typeAnnotation'));
     }
 

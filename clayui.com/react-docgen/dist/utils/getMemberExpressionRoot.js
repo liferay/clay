@@ -1,13 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getMemberExpressionRoot;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -17,9 +15,7 @@ var _astTypes = _interopRequireDefault(require("ast-types"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Returns the path to the first part of the MemberExpression. I.e. given a
  * path representing
@@ -28,11 +24,10 @@ const {
  *
  * it returns the path of/to `foo`.
  */
-
 function getMemberExpressionRoot(memberExpressionPath) {
   do {
     memberExpressionPath = memberExpressionPath.get('object');
-  } while (t.MemberExpression.check(memberExpressionPath.node));
+  } while (_astTypes.namedTypes.MemberExpression.check(memberExpressionPath.node));
 
   return memberExpressionPath;
 }

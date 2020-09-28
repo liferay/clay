@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isReactCreateClassCall;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _match = _interopRequireDefault(require("./match"));
 
@@ -23,9 +23,7 @@ var _isReactBuiltinCall = _interopRequireDefault(require("./isReactBuiltinCall")
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Returns true if the expression is a function call of the form
  * ```
@@ -33,9 +31,8 @@ const {
  * createReactClass(...);
  * ```
  */
-
 function isReactCreateClassCallModular(path) {
-  if (t.ExpressionStatement.check(path.node)) {
+  if (_astTypes.namedTypes.ExpressionStatement.check(path.node)) {
     path = path.get('expression');
   }
 

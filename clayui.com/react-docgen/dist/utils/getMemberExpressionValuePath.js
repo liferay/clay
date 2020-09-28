@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = getMemberExpressionValuePath;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getNameOrValue = _interopRequireDefault(require("./getNameOrValue"));
 
@@ -23,13 +23,8 @@ var _isReactForwardRefCall = _interopRequireDefault(require("./isReactForwardRef
  *
  * 
  */
-const {
-  visit,
-  namedTypes: t
-} = _astTypes.default;
-
 function resolveName(path) {
-  if (t.VariableDeclaration.check(path.node)) {
+  if (_astTypes.namedTypes.VariableDeclaration.check(path.node)) {
     const declarations = path.get('declarations');
 
     if (declarations.value.length && declarations.value.length !== 1) {
@@ -40,15 +35,15 @@ function resolveName(path) {
     return value;
   }
 
-  if (t.FunctionDeclaration.check(path.node)) {
+  if (_astTypes.namedTypes.FunctionDeclaration.check(path.node)) {
     return path.get('id', 'name').value;
   }
 
-  if (t.FunctionExpression.check(path.node) || t.ArrowFunctionExpression.check(path.node) || t.TaggedTemplateExpression.check(path.node) || t.CallExpression.check(path.node) || (0, _isReactForwardRefCall.default)(path)) {
+  if (_astTypes.namedTypes.FunctionExpression.check(path.node) || _astTypes.namedTypes.ArrowFunctionExpression.check(path.node) || _astTypes.namedTypes.TaggedTemplateExpression.check(path.node) || _astTypes.namedTypes.CallExpression.check(path.node) || (0, _isReactForwardRefCall.default)(path)) {
     let currentPath = path;
 
     while (currentPath.parent) {
-      if (t.VariableDeclarator.check(currentPath.parent.node)) {
+      if (_astTypes.namedTypes.VariableDeclarator.check(currentPath.parent.node)) {
         return currentPath.parent.get('id', 'name').value;
       }
 
@@ -82,15 +77,15 @@ function getMemberExpressionValuePath(variableDefinition, memberName) {
   }
 
   let result;
-  visit(program, {
+  (0, _astTypes.visit)(program, {
     visitAssignmentExpression(path) {
       const memberPath = path.get('left');
 
-      if (!t.MemberExpression.check(memberPath.node)) {
+      if (!_astTypes.namedTypes.MemberExpression.check(memberPath.node)) {
         return this.traverse(path);
       }
 
-      if ((!memberPath.node.computed || t.Literal.check(memberPath.node.property)) && (0, _getNameOrValue.default)(memberPath.get('property')) === memberName && (0, _expressionTo.String)(memberPath.get('object')) === localName) {
+      if ((!memberPath.node.computed || _astTypes.namedTypes.Literal.check(memberPath.node.property)) && (0, _getNameOrValue.default)(memberPath.get('property')) === memberName && (0, _expressionTo.String)(memberPath.get('object')) === localName) {
         result = path.get('right');
         return false;
       }

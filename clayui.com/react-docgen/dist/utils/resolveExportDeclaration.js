@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = resolveExportDeclaration;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _resolveToValue = _interopRequireDefault(require("./resolveToValue"));
 
@@ -19,17 +19,13 @@ var _resolveToValue = _interopRequireDefault(require("./resolveToValue"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function resolveExportDeclaration(path) {
   const definitions = [];
 
   if (path.node.default) {
     definitions.push(path.get('declaration'));
   } else if (path.node.declaration) {
-    if (t.VariableDeclaration.check(path.node.declaration)) {
+    if (_astTypes.namedTypes.VariableDeclaration.check(path.node.declaration)) {
       path.get('declaration', 'declarations').each(declarator => definitions.push(declarator));
     } else {
       definitions.push(path.get('declaration'));

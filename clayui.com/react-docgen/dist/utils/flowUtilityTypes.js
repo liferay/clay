@@ -1,14 +1,12 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.isSupportedUtilityType = isSupportedUtilityType;
 exports.unwrapUtilityType = unwrapUtilityType;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -18,9 +16,6 @@ var _astTypes = _interopRequireDefault(require("ast-types"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
 const supportedUtilityTypes = new Set(['$Exact', '$ReadOnly']);
 /**
  * See `supportedUtilityTypes` for which types are supported and
@@ -28,7 +23,7 @@ const supportedUtilityTypes = new Set(['$Exact', '$ReadOnly']);
  */
 
 function isSupportedUtilityType(path) {
-  if (t.GenericTypeAnnotation.check(path.node)) {
+  if (_astTypes.namedTypes.GenericTypeAnnotation.check(path.node)) {
     const idPath = path.get('id');
     return !!idPath && supportedUtilityTypes.has(idPath.node.name);
   }

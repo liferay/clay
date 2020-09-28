@@ -7,7 +7,7 @@
  * @flow
  */
 
-import types from 'ast-types';
+import { namedTypes as t } from 'ast-types';
 import getPropertyName from '../utils/getPropertyName';
 import getMemberValuePath from '../utils/getMemberValuePath';
 import printValue from '../utils/printValue';
@@ -16,8 +16,6 @@ import resolveFunctionDefinitionToReturnValue from '../utils/resolveFunctionDefi
 import isReactComponentClass from '../utils/isReactComponentClass';
 import isReactForwardRefCall from '../utils/isReactForwardRefCall';
 import type Documentation from '../Documentation';
-
-const { namedTypes: t } = types;
 
 function getDefaultValue(path: NodePath) {
   let node = path.node;
@@ -53,7 +51,7 @@ function getDefaultValue(path: NodePath) {
 function getStatelessPropsPath(componentDefinition): NodePath {
   const value = resolveToValue(componentDefinition);
   if (isReactForwardRefCall(value)) {
-    const inner = value.get('arguments', 0);
+    const inner = resolveToValue(value.get('arguments', 0));
     return inner.get('params', 0);
   }
   return value.get('params', 0);
@@ -92,7 +90,6 @@ function getDefaultValuesFromProps(
   isStateless: boolean,
 ) {
   properties
-    .filter(propertyPath => t.Property.check(propertyPath.node))
     // Don't evaluate property if component is functional and the node is not an AssignmentPattern
     .filter(
       propertyPath =>
@@ -100,17 +97,28 @@ function getDefaultValuesFromProps(
         t.AssignmentPattern.check(propertyPath.get('value').node),
     )
     .forEach(propertyPath => {
-      const propName = getPropertyName(propertyPath);
-      if (!propName) return;
+      if (t.Property.check(propertyPath.node)) {
+        const propName = getPropertyName(propertyPath);
+        if (!propName) return;
 
-      const propDescriptor = documentation.getPropDescriptor(propName);
-      const defaultValue = getDefaultValue(
-        isStateless
-          ? propertyPath.get('value', 'right')
-          : propertyPath.get('value'),
-      );
-      if (defaultValue) {
-        propDescriptor.defaultValue = defaultValue;
+        const propDescriptor = documentation.getPropDescriptor(propName);
+        const defaultValue = getDefaultValue(
+          isStateless
+            ? propertyPath.get('value', 'right')
+            : propertyPath.get('value'),
+        );
+        if (defaultValue) {
+          propDescriptor.defaultValue = defaultValue;
+        }
+      } else if (t.SpreadElement.check(propertyPath.node)) {
+        const resolvedValuePath = resolveToValue(propertyPath.get('argument'));
+        if (t.ObjectExpression.check(resolvedValuePath.node)) {
+          getDefaultValuesFromProps(
+            resolvedValuePath.get('properties'),
+            documentation,
+            isStateless,
+          );
+        }
       }
     });
 }

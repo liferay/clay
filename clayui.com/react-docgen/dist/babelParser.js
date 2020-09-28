@@ -27,7 +27,7 @@ function getDefaultPlugins(options) {
     decoratorsBeforeExport: false
   }], 'doExpressions', 'dynamicImport', 'exportDefaultFrom', 'exportNamespaceFrom', 'functionBind', 'functionSent', 'importMeta', 'logicalAssignment', 'nullishCoalescingOperator', 'numericSeparator', 'objectRestSpread', 'optionalCatchBinding', 'optionalChaining', ['pipelineOperator', {
     proposal: 'minimal'
-  }], 'throwExpressions'];
+  }], 'throwExpressions', 'topLevelAwait'];
 }
 
 function buildOptions(parserOptions, babelOptions) {

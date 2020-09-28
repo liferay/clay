@@ -7,9 +7,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = componentDocblockHandler;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _docblock = require("../utils/docblock");
+
+var _isReactForwardRefCall = _interopRequireDefault(require("../utils/isReactForwardRefCall"));
+
+var _resolveToValue = _interopRequireDefault(require("../utils/resolveToValue"));
 
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -19,20 +23,12 @@ var _docblock = require("../utils/docblock");
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function isClassDefinition(nodePath) {
   const node = nodePath.node;
-  return t.ClassDeclaration.check(node) || t.ClassExpression.check(node);
+  return _astTypes.namedTypes.ClassDeclaration.check(node) || _astTypes.namedTypes.ClassExpression.check(node);
 }
-/**
- * Finds the nearest block comment before the component definition.
- */
 
-
-function componentDocblockHandler(documentation, path) {
+function getDocblockFromComponent(path) {
   let description = null;
 
   if (isClassDefinition(path)) {
@@ -47,13 +43,13 @@ function componentDocblockHandler(documentation, path) {
     // Find parent statement (e.g. var Component = React.createClass(<path>);)
     let searchPath = path;
 
-    while (searchPath && !t.Statement.check(searchPath.node)) {
+    while (searchPath && !_astTypes.namedTypes.Statement.check(searchPath.node)) {
       searchPath = searchPath.parent;
     }
 
     if (searchPath) {
       // If the parent is an export statement, we have to traverse one more up
-      if (t.ExportNamedDeclaration.check(searchPath.parentPath.node) || t.ExportDefaultDeclaration.check(searchPath.parentPath.node)) {
+      if (_astTypes.namedTypes.ExportNamedDeclaration.check(searchPath.parentPath.node) || _astTypes.namedTypes.ExportDefaultDeclaration.check(searchPath.parentPath.node)) {
         searchPath = searchPath.parentPath;
       }
 
@@ -61,5 +57,21 @@ function componentDocblockHandler(documentation, path) {
     }
   }
 
-  documentation.set('description', description || '');
+  if (!description && (0, _isReactForwardRefCall.default)(path)) {
+    const inner = (0, _resolveToValue.default)(path.get('arguments', 0));
+
+    if (inner.node !== path.node) {
+      return getDocblockFromComponent(inner);
+    }
+  }
+
+  return description;
+}
+/**
+ * Finds the nearest block comment before the component definition.
+ */
+
+
+function componentDocblockHandler(documentation, path) {
+  documentation.set('description', getDocblockFromComponent(path) || '');
 }

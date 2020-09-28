@@ -7,13 +7,11 @@
  * @flow
  */
 
-import types from 'ast-types';
+import { NodePath, builders, namedTypes as t } from 'ast-types';
 import getMemberExpressionRoot from './getMemberExpressionRoot';
 import getPropertyValuePath from './getPropertyValuePath';
 import { Array as toArray } from './expressionTo';
 import { traverseShallow } from './traverse';
-
-const { namedTypes: t, NodePath, builders } = types;
 
 function buildMemberExpressionFromPattern(path: NodePath): ?NodePath {
   const node = path.node;
@@ -74,22 +72,32 @@ function findScopePath(paths: Array<NodePath>, path: NodePath): ?NodePath {
  * Tries to find the last value assigned to `name` in the scope created by
  * `scope`. We are not descending into any statements (blocks).
  */
-function findLastAssignedValue(scope, name) {
+function findLastAssignedValue(scope, idPath) {
   const results = [];
+  const name = idPath.node.name;
 
-  traverseShallow(scope.path.node, {
+  traverseShallow(scope.path, {
     visitAssignmentExpression: function(path) {
       const node = path.node;
       // Skip anything that is not an assignment to a variable with the
       // passed name.
+      // Ensure the LHS isn't the reference we're trying to resolve.
       if (
         !t.Identifier.check(node.left) ||
+        node.left === idPath.node ||
         node.left.name !== name ||
         node.operator !== '='
       ) {
         return this.traverse(path);
       }
-      results.push(path.get('right'));
+      // Ensure the RHS doesn't contain the reference we're trying to resolve.
+      const candidatePath = path.get('right');
+      for (let p = idPath; p && p.node != null; p = p.parent) {
+        if (p.node === candidatePath.node) {
+          return this.traverse(path);
+        }
+      }
+      results.push(candidatePath);
       return false;
     },
   });
@@ -139,7 +147,11 @@ export default function resolveToValue(path: NodePath): NodePath {
     if (node.operator === '=') {
       return resolveToValue(path.get('right'));
     }
-  } else if (t.TypeCastExpression.check(node)) {
+  } else if (
+    t.TypeCastExpression.check(node) ||
+    t.TSAsExpression.check(node) ||
+    t.TSTypeAssertion.check(node)
+  ) {
     return resolveToValue(path.get('expression'));
   } else if (t.Identifier.check(node)) {
     if (
@@ -157,7 +169,7 @@ export default function resolveToValue(path: NodePath): NodePath {
       // The variable may be assigned a different value after initialization.
       // We are first trying to find all assignments to the variable in the
       // block where it is defined (i.e. we are not traversing into statements)
-      resolvedPath = findLastAssignedValue(scope, node.name);
+      resolvedPath = findLastAssignedValue(scope, path);
       if (!resolvedPath) {
         const bindings = scope.getBindings()[node.name];
         resolvedPath = findScopePath(bindings, path);

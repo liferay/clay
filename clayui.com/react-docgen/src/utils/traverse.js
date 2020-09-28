@@ -7,7 +7,7 @@
  * @flow
  */
 
-import types from 'ast-types';
+import { visit } from 'ast-types';
 
 type Visitor = (path: NodePath) => any;
 
@@ -16,10 +16,10 @@ type Visitor = (path: NodePath) => any;
  * default.
  */
 export function traverseShallow(
-  ast: ASTNode,
+  path: NodePath,
   visitors: { [key: string]: Visitor },
 ): void {
-  types.visit(ast, { ...defaultVisitors, ...visitors });
+  visit(path, { ...defaultVisitors, ...visitors });
 }
 
 const ignore = () => false;
