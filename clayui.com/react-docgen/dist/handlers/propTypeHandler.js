@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.childContextTypeHandler = exports.contextTypeHandler = exports.propTypeHandler = void 0;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getPropType = _interopRequireDefault(require("../utils/getPropType"));
 
@@ -33,10 +33,6 @@ var _resolveToValue = _interopRequireDefault(require("../utils/resolveToValue"))
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function isPropTypesExpression(path) {
   const moduleName = (0, _resolveToModule.default)(path);
 
@@ -48,13 +44,13 @@ function isPropTypesExpression(path) {
 }
 
 function amendPropTypes(getDescriptor, path) {
-  if (!t.ObjectExpression.check(path.node)) {
+  if (!_astTypes.namedTypes.ObjectExpression.check(path.node)) {
     return;
   }
 
   path.get('properties').each(propertyPath => {
     switch (propertyPath.node.type) {
-      case t.Property.name:
+      case _astTypes.namedTypes.Property.name:
         {
           const propName = (0, _getPropertyName.default)(propertyPath);
           if (!propName) return;
@@ -73,12 +69,12 @@ function amendPropTypes(getDescriptor, path) {
           break;
         }
 
-      case t.SpreadElement.name:
+      case _astTypes.namedTypes.SpreadElement.name:
         {
           const resolvedValuePath = (0, _resolveToValue.default)(propertyPath.get('argument'));
 
           switch (resolvedValuePath.node.type) {
-            case t.ObjectExpression.name:
+            case _astTypes.namedTypes.ObjectExpression.name:
               // normal object literal
               amendPropTypes(getDescriptor, resolvedValuePath);
               break;

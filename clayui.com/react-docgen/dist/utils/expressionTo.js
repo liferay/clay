@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.String = toString;
 exports.Array = toArray;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _resolveToValue = _interopRequireDefault(require("./resolveToValue"));
 
@@ -22,14 +22,11 @@ var _resolveToValue = _interopRequireDefault(require("./resolveToValue"));
  */
 
 /*eslint no-loop-func: 0, no-use-before-define: 0*/
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Splits a MemberExpression or CallExpression into parts.
  * E.g. foo.bar.baz becomes ['foo', 'bar', 'baz']
  */
-
 function toArray(path) {
   const parts = [path];
   let result = [];
@@ -38,10 +35,10 @@ function toArray(path) {
     path = parts.shift();
     const node = path.node;
 
-    if (t.CallExpression.check(node)) {
+    if (_astTypes.namedTypes.CallExpression.check(node)) {
       parts.push(path.get('callee'));
       continue;
-    } else if (t.MemberExpression.check(node)) {
+    } else if (_astTypes.namedTypes.MemberExpression.check(node)) {
       parts.push(path.get('object'));
 
       if (node.computed) {
@@ -57,22 +54,22 @@ function toArray(path) {
       }
 
       continue;
-    } else if (t.Identifier.check(node)) {
+    } else if (_astTypes.namedTypes.Identifier.check(node)) {
       result.push(node.name);
       continue;
-    } else if (t.Literal.check(node)) {
+    } else if (_astTypes.namedTypes.Literal.check(node)) {
       result.push(node.raw);
       continue;
-    } else if (t.ThisExpression.check(node)) {
+    } else if (_astTypes.namedTypes.ThisExpression.check(node)) {
       result.push('this');
       continue;
-    } else if (t.ObjectExpression.check(node)) {
+    } else if (_astTypes.namedTypes.ObjectExpression.check(node)) {
       const properties = path.get('properties').map(function (property) {
         return toString(property.get('key')) + ': ' + toString(property.get('value'));
       });
       result.push('{' + properties.join(', ') + '}');
       continue;
-    } else if (t.ArrayExpression.check(node)) {
+    } else if (_astTypes.namedTypes.ArrayExpression.check(node)) {
       result.push('[' + path.get('elements').map(toString).join(', ') + ']');
       continue;
     }

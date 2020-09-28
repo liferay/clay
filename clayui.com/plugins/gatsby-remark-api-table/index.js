@@ -106,7 +106,7 @@ module.exports = ({markdownAST}) => {
 						// eslint-disable-next-line require-atomic-updates
 						node.value = `<ul class="list-api">
 							<li class="list-api-item">
-							<code class="list-api-item-type">{'${error.message}'}</code>
+							<code class="list-api-item-type">{"${error.message}"}</code>
 							</li>
 						</ul>`;
 						// eslint-disable-next-line no-console

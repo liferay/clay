@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isReactChildrenElementCall;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _isReactModuleName = _interopRequireDefault(require("./isReactModuleName"));
 
@@ -23,16 +23,13 @@ var _resolveToModule = _interopRequireDefault(require("./resolveToModule"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Returns true if the expression is a function call of the form
  * `React.Children.only(...)`.
  */
-
 function isReactChildrenElementCall(path) {
-  if (t.ExpressionStatement.check(path.node)) {
+  if (_astTypes.namedTypes.ExpressionStatement.check(path.node)) {
     path = path.get('expression');
   }
 

@@ -34,7 +34,7 @@ function getStatelessPropsPath(componentDefinition) {
   const value = (0, _resolveToValue.default)(componentDefinition);
 
   if ((0, _isReactForwardRefCall.default)(value)) {
-    const inner = value.get('arguments', 0);
+    const inner = (0, _resolveToValue.default)(value.get('arguments', 0));
     return inner.get('params', 0);
   }
 

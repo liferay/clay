@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = getPropType;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _docblock = require("../utils/docblock");
 
@@ -35,24 +35,20 @@ var _resolveObjectValuesToArray = _interopRequireDefault(require("./resolveObjec
  */
 
 /*eslint no-use-before-define: 0*/
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function getEnumValues(path) {
   const values = [];
   path.get('elements').each(function (elementPath) {
-    if (t.SpreadElement.check(elementPath.node)) {
+    if (_astTypes.namedTypes.SpreadElement.check(elementPath.node)) {
       const value = (0, _resolveToValue.default)(elementPath.get('argument'));
 
-      if (t.ArrayExpression.check(value.node)) {
+      if (_astTypes.namedTypes.ArrayExpression.check(value.node)) {
         // if the SpreadElement resolved to an Array, add all their elements too
         return values.push(...getEnumValues(value));
       } else {
         // otherwise we'll just print the SpreadElement itself
         return values.push({
           value: (0, _printValue.default)(elementPath),
-          computed: !t.Literal.check(elementPath.node)
+          computed: !_astTypes.namedTypes.Literal.check(elementPath.node)
         });
       }
     } // try to resolve the array element to it's value
@@ -61,7 +57,7 @@ function getEnumValues(path) {
     const value = (0, _resolveToValue.default)(elementPath);
     return values.push({
       value: (0, _printValue.default)(value),
-      computed: !t.Literal.check(value.node)
+      computed: !_astTypes.namedTypes.Literal.check(value.node)
     });
   });
   return values;
@@ -73,7 +69,7 @@ function getPropTypeOneOf(argumentPath) {
   };
   let value = (0, _resolveToValue.default)(argumentPath);
 
-  if (!t.ArrayExpression.check(value.node)) {
+  if (!_astTypes.namedTypes.ArrayExpression.check(value.node)) {
     value = (0, _resolveObjectKeysToArray.default)(value) || (0, _resolveObjectValuesToArray.default)(value);
 
     if (value) {
@@ -95,7 +91,7 @@ function getPropTypeOneOfType(argumentPath) {
     name: 'union'
   };
 
-  if (!t.ArrayExpression.check(argumentPath.node)) {
+  if (!_astTypes.namedTypes.ArrayExpression.check(argumentPath.node)) {
     type.computed = true;
     type.value = (0, _printValue.default)(argumentPath);
   } else {
@@ -167,14 +163,14 @@ function getPropTypeShapish(name, argumentPath) {
     name
   };
 
-  if (!t.ObjectExpression.check(argumentPath.node)) {
+  if (!_astTypes.namedTypes.ObjectExpression.check(argumentPath.node)) {
     argumentPath = (0, _resolveToValue.default)(argumentPath);
   }
 
-  if (t.ObjectExpression.check(argumentPath.node)) {
+  if (_astTypes.namedTypes.ObjectExpression.check(argumentPath.node)) {
     const value = {};
     argumentPath.get('properties').each(function (propertyPath) {
-      if (propertyPath.get('type').value === t.SpreadElement.name) {
+      if (propertyPath.get('type').value === _astTypes.namedTypes.SpreadElement.name) {
         // It is impossible to resolve a name for a spread element
         return;
       }
@@ -210,15 +206,7 @@ function getPropTypeInstanceOf(argumentPath) {
 }
 
 const simplePropTypes = ['array', 'bool', 'func', 'number', 'object', 'string', 'any', 'element', 'node', 'symbol', 'elementType'];
-const propTypes = {
-  oneOf: getPropTypeOneOf,
-  oneOfType: getPropTypeOneOfType,
-  instanceOf: getPropTypeInstanceOf,
-  arrayOf: getPropTypeArrayOf,
-  objectOf: getPropTypeObjectOf,
-  shape: getPropTypeShapish.bind(null, 'shape'),
-  exact: getPropTypeShapish.bind(null, 'exact')
-};
+const propTypes = new Map([['oneOf', getPropTypeOneOf], ['oneOfType', getPropTypeOneOfType], ['instanceOf', getPropTypeInstanceOf], ['arrayOf', getPropTypeArrayOf], ['objectOf', getPropTypeObjectOf], ['shape', getPropTypeShapish.bind(null, 'shape')], ['exact', getPropTypeShapish.bind(null, 'exact')]]);
 /**
  * Tries to identify the prop type by inspecting the path for known
  * prop type names. This method doesn't check whether the found type is actually
@@ -234,9 +222,9 @@ function getPropType(path) {
     const node = member.path.node;
     let name;
 
-    if (t.Literal.check(node)) {
+    if (_astTypes.namedTypes.Literal.check(node)) {
       name = node.value;
-    } else if (t.Identifier.check(node) && !member.computed) {
+    } else if (_astTypes.namedTypes.Identifier.check(node) && !member.computed) {
       name = node.name;
     }
 
@@ -246,8 +234,9 @@ function getPropType(path) {
           name
         };
         return true;
-      } else if (propTypes.hasOwnProperty(name) && member.argumentsPath) {
-        descriptor = propTypes[name](member.argumentsPath.get(0));
+      } else if (propTypes.has(name) && member.argumentsPath) {
+        // $FlowIssue
+        descriptor = propTypes.get(name)(member.argumentsPath.get(0));
         return true;
       }
     }
@@ -256,19 +245,21 @@ function getPropType(path) {
   if (!descriptor) {
     const node = path.node;
 
-    if (t.Identifier.check(node) && simplePropTypes.includes(node.name)) {
+    if (_astTypes.namedTypes.Identifier.check(node) && simplePropTypes.includes(node.name)) {
       descriptor = {
         name: node.name
       };
-    } else if (t.CallExpression.check(node) && t.Identifier.check(node.callee) && propTypes.hasOwnProperty(node.callee.name)) {
-      descriptor = propTypes[node.callee.name](path.get('arguments', 0));
+    } else if (_astTypes.namedTypes.CallExpression.check(node) && _astTypes.namedTypes.Identifier.check(node.callee) && propTypes.has(node.callee.name)) {
+      // $FlowIssue
+      descriptor = propTypes.get(node.callee.name)(path.get('arguments', 0));
     } else {
       descriptor = {
         name: 'custom',
         raw: (0, _printValue.default)(path)
       };
     }
-  }
+  } // $FlowIssue
+
 
   return descriptor;
 }

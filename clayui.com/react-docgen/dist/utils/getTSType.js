@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = getTSType;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getPropertyName = _interopRequireDefault(require("./getPropertyName"));
 
@@ -29,9 +29,6 @@ var _getTypeParameters = _interopRequireDefault(require("../utils/getTypeParamet
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
 const tsTypes = {
   TSAnyKeyword: 'any',
   TSBooleanKeyword: 'boolean',
@@ -72,7 +69,7 @@ function handleTSArrayType(path, typeParams) {
 function handleTSTypeReference(path, typeParams) {
   let type;
 
-  if (t.TSQualifiedName.check(path.node.typeName)) {
+  if (_astTypes.namedTypes.TSQualifiedName.check(path.node.typeName)) {
     const typeName = path.get('typeName');
 
     if (typeName.node.left.name === 'React') {
@@ -98,7 +95,7 @@ function handleTSTypeReference(path, typeParams) {
   }
 
   if (typeParams && typeParams[type.name]) {
-    type = getTSTypeWithResolvedTypes(resolvedPath, typeParams);
+    type = getTSTypeWithResolvedTypes(resolvedPath);
   }
 
   if (resolvedPath && resolvedPath.node.typeAnnotation) {
@@ -130,7 +127,7 @@ function handleTSTypeLiteral(path, typeParams) {
     }
   };
   path.get('members').each(param => {
-    if (t.TSPropertySignature.check(param.node) || t.TSMethodSignature.check(param.node)) {
+    if (_astTypes.namedTypes.TSPropertySignature.check(param.node) || _astTypes.namedTypes.TSMethodSignature.check(param.node)) {
       const propName = (0, _getPropertyName.default)(param);
 
       if (!propName) {
@@ -141,9 +138,9 @@ function handleTSTypeLiteral(path, typeParams) {
         key: propName,
         value: getTSTypeWithRequirements(param.get('typeAnnotation'), typeParams)
       });
-    } else if (t.TSCallSignatureDeclaration.check(param.node)) {
+    } else if (_astTypes.namedTypes.TSCallSignatureDeclaration.check(param.node)) {
       type.signature.constructor = handleTSFunctionType(param, typeParams);
-    } else if (t.TSIndexSignature.check(param.node)) {
+    } else if (_astTypes.namedTypes.TSIndexSignature.check(param.node)) {
       type.signature.properties.push({
         key: getTSTypeWithResolvedTypes(param.get('parameters').get(0).get('typeAnnotation'), typeParams),
         value: getTSTypeWithRequirements(param.get('typeAnnotation'), typeParams)
@@ -256,7 +253,7 @@ function handleTSTypeOperator(path) {
 
   let value = path.get('typeAnnotation');
 
-  if (t.TSTypeQuery.check(value.node)) {
+  if (_astTypes.namedTypes.TSTypeQuery.check(value.node)) {
     value = value.get('exprName');
   } else if (value.node.id) {
     value = value.get('id');
@@ -264,7 +261,7 @@ function handleTSTypeOperator(path) {
 
   const resolvedPath = (0, _resolveToValue.default)(value);
 
-  if (resolvedPath && (t.ObjectExpression.check(resolvedPath.node) || t.TSTypeLiteral.check(resolvedPath.node))) {
+  if (resolvedPath && (_astTypes.namedTypes.ObjectExpression.check(resolvedPath.node) || _astTypes.namedTypes.TSTypeLiteral.check(resolvedPath.node))) {
     const keys = (0, _resolveObjectKeysToArray.resolveObjectToNameArray)(resolvedPath, true);
 
     if (keys) {
@@ -310,14 +307,16 @@ function handleTSIndexedAccessType(path, typeParams) {
 let visitedTypes = {};
 
 function getTSTypeWithResolvedTypes(path, typeParams) {
-  if (t.TSTypeAnnotation.check(path.node)) {
+  if (_astTypes.namedTypes.TSTypeAnnotation.check(path.node)) {
     path = path.get('typeAnnotation');
   }
 
   const node = path.node;
   let type;
-  const isTypeAlias = t.TSTypeAliasDeclaration.check(path.parentPath.node); // When we see a typealias mark it as visited so that the next
+
+  const isTypeAlias = _astTypes.namedTypes.TSTypeAliasDeclaration.check(path.parentPath.node); // When we see a typealias mark it as visited so that the next
   // call of this function does not run into an endless loop
+
 
   if (isTypeAlias) {
     if (visitedTypes[path.parentPath.node.id.name] === true) {
@@ -339,7 +338,7 @@ function getTSTypeWithResolvedTypes(path, typeParams) {
     type = {
       name: tsTypes[node.type]
     };
-  } else if (t.TSLiteralType.check(node)) {
+  } else if (_astTypes.namedTypes.TSLiteralType.check(node)) {
     type = {
       name: 'literal',
       value: node.literal.raw || `${node.literal.value}`

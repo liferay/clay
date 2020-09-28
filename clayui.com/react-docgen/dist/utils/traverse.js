@@ -1,13 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.traverseShallow = traverseShallow;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -22,8 +20,8 @@ var _astTypes = _interopRequireDefault(require("ast-types"));
  * A helper function that doesn't traverse into nested blocks / statements by
  * default.
  */
-function traverseShallow(ast, visitors) {
-  _astTypes.default.visit(ast, { ...defaultVisitors,
+function traverseShallow(path, visitors) {
+  (0, _astTypes.visit)(path, { ...defaultVisitors,
     ...visitors
   });
 }

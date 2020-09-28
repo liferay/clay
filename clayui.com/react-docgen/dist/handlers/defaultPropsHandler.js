@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = defaultPropsHandler;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getPropertyName = _interopRequireDefault(require("../utils/getPropertyName"));
 
@@ -31,24 +31,20 @@ var _isReactForwardRefCall = _interopRequireDefault(require("../utils/isReactFor
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function getDefaultValue(path) {
   let node = path.node;
   let defaultValue;
 
-  if (t.Literal.check(node)) {
+  if (_astTypes.namedTypes.Literal.check(node)) {
     defaultValue = node.raw;
   } else {
-    if (t.AssignmentPattern.check(path.node)) {
+    if (_astTypes.namedTypes.AssignmentPattern.check(path.node)) {
       path = (0, _resolveToValue.default)(path.get('right'));
     } else {
       path = (0, _resolveToValue.default)(path);
     }
 
-    if (t.ImportDeclaration.check(path.node)) {
+    if (_astTypes.namedTypes.ImportDeclaration.check(path.node)) {
       defaultValue = node.name;
     } else {
       node = path.node;
@@ -59,7 +55,7 @@ function getDefaultValue(path) {
   if (typeof defaultValue !== 'undefined') {
     return {
       value: defaultValue,
-      computed: t.CallExpression.check(node) || t.MemberExpression.check(node) || t.Identifier.check(node)
+      computed: _astTypes.namedTypes.CallExpression.check(node) || _astTypes.namedTypes.MemberExpression.check(node) || _astTypes.namedTypes.Identifier.check(node)
     };
   }
 
@@ -70,7 +66,7 @@ function getStatelessPropsPath(componentDefinition) {
   const value = (0, _resolveToValue.default)(componentDefinition);
 
   if ((0, _isReactForwardRefCall.default)(value)) {
-    const inner = value.get('arguments', 0);
+    const inner = (0, _resolveToValue.default)(value.get('arguments', 0));
     return inner.get('params', 0);
   }
 
@@ -90,12 +86,12 @@ function getDefaultPropsPath(componentDefinition) {
     return null;
   }
 
-  if (t.FunctionExpression.check(defaultPropsPath.node)) {
+  if (_astTypes.namedTypes.FunctionExpression.check(defaultPropsPath.node)) {
     // Find the value that is returned from the function and process it if it is
     // an object literal.
     const returnValue = (0, _resolveFunctionDefinitionToReturnValue.default)(defaultPropsPath);
 
-    if (returnValue && t.ObjectExpression.check(returnValue.node)) {
+    if (returnValue && _astTypes.namedTypes.ObjectExpression.check(returnValue.node)) {
       defaultPropsPath = returnValue;
     }
   }
@@ -104,15 +100,23 @@ function getDefaultPropsPath(componentDefinition) {
 }
 
 function getDefaultValuesFromProps(properties, documentation, isStateless) {
-  properties.filter(propertyPath => t.Property.check(propertyPath.node)) // Don't evaluate property if component is functional and the node is not an AssignmentPattern
-  .filter(propertyPath => !isStateless || t.AssignmentPattern.check(propertyPath.get('value').node)).forEach(propertyPath => {
-    const propName = (0, _getPropertyName.default)(propertyPath);
-    if (!propName) return;
-    const propDescriptor = documentation.getPropDescriptor(propName);
-    const defaultValue = getDefaultValue(isStateless ? propertyPath.get('value', 'right') : propertyPath.get('value'));
+  properties // Don't evaluate property if component is functional and the node is not an AssignmentPattern
+  .filter(propertyPath => !isStateless || _astTypes.namedTypes.AssignmentPattern.check(propertyPath.get('value').node)).forEach(propertyPath => {
+    if (_astTypes.namedTypes.Property.check(propertyPath.node)) {
+      const propName = (0, _getPropertyName.default)(propertyPath);
+      if (!propName) return;
+      const propDescriptor = documentation.getPropDescriptor(propName);
+      const defaultValue = getDefaultValue(isStateless ? propertyPath.get('value', 'right') : propertyPath.get('value'));
 
-    if (defaultValue) {
-      propDescriptor.defaultValue = defaultValue;
+      if (defaultValue) {
+        propDescriptor.defaultValue = defaultValue;
+      }
+    } else if (_astTypes.namedTypes.SpreadElement.check(propertyPath.node)) {
+      const resolvedValuePath = (0, _resolveToValue.default)(propertyPath.get('argument'));
+
+      if (_astTypes.namedTypes.ObjectExpression.check(resolvedValuePath.node)) {
+        getDefaultValuesFromProps(resolvedValuePath.get('properties'), documentation, isStateless);
+      }
     }
   });
 }
@@ -129,11 +133,11 @@ function defaultPropsHandler(documentation, componentDefinition) {
   } // Do both statelessProps and defaultProps if both are available so defaultProps can override
 
 
-  if (statelessProps && t.ObjectPattern.check(statelessProps.node)) {
+  if (statelessProps && _astTypes.namedTypes.ObjectPattern.check(statelessProps.node)) {
     getDefaultValuesFromProps(statelessProps.get('properties'), documentation, true);
   }
 
-  if (defaultPropsPath && t.ObjectExpression.check(defaultPropsPath.node)) {
+  if (defaultPropsPath && _astTypes.namedTypes.ObjectExpression.check(defaultPropsPath.node)) {
     getDefaultValuesFromProps(defaultPropsPath.get('properties'), documentation, false);
   }
 }

@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = propDocBlockHandler;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getMemberValuePath = _interopRequireDefault(require("../utils/getMemberValuePath"));
 
@@ -23,19 +23,15 @@ var _setPropDescription = _interopRequireDefault(require("../utils/setPropDescri
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function resolveDocumentation(documentation, path) {
-  if (!t.ObjectExpression.check(path.node)) {
+  if (!_astTypes.namedTypes.ObjectExpression.check(path.node)) {
     return;
   }
 
   path.get('properties').each(propertyPath => {
-    if (t.Property.check(propertyPath.node)) {
+    if (_astTypes.namedTypes.Property.check(propertyPath.node)) {
       (0, _setPropDescription.default)(documentation, propertyPath);
-    } else if (t.SpreadElement.check(propertyPath.node)) {
+    } else if (_astTypes.namedTypes.SpreadElement.check(propertyPath.node)) {
       const resolvedValuePath = (0, _resolveToValue.default)(propertyPath.get('argument'));
       resolveDocumentation(documentation, resolvedValuePath);
     }

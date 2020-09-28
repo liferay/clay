@@ -7,7 +7,7 @@
  * @flow
  */
 
-import types from 'ast-types';
+import { namedTypes as t } from 'ast-types';
 import getPropertyName from './getPropertyName';
 import printValue from './printValue';
 import getTypeAnnotation from '../utils/getTypeAnnotation';
@@ -24,8 +24,6 @@ import type {
   FlowTypeDescriptor,
 } from '../types';
 
-const { namedTypes: t } = types;
-
 const flowTypes = {
   AnyTypeAnnotation: 'any',
   BooleanTypeAnnotation: 'boolean',
@@ -34,6 +32,7 @@ const flowTypes = {
   NumberTypeAnnotation: 'number',
   StringTypeAnnotation: 'string',
   VoidTypeAnnotation: 'void',
+  EmptyTypeAnnotation: 'empty',
 };
 
 const flowLiteralTypes = {
@@ -139,6 +138,14 @@ function handleGenericTypeAnnotation(
       path.get('typeParameters'),
       typeParams,
     );
+  }
+
+  if (
+    typeParams &&
+    typeParams[type.name] &&
+    typeParams[type.name].value.type === t.GenericTypeAnnotation.name
+  ) {
+    return type;
   }
 
   if (typeParams && typeParams[type.name]) {

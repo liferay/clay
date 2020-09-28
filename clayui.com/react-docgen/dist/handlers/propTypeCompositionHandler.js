@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = propTypeCompositionHandler;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getMemberValuePath = _interopRequireDefault(require("../utils/getMemberValuePath"));
 
@@ -23,14 +23,11 @@ var _resolveToValue = _interopRequireDefault(require("../utils/resolveToValue"))
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * It resolves the path to its module name and adds it to the "composes" entry
  * in the documentation.
  */
-
 function amendComposes(documentation, path) {
   const moduleName = (0, _resolveToModule.default)(path);
 
@@ -42,7 +39,7 @@ function amendComposes(documentation, path) {
 function processObjectExpression(documentation, path) {
   path.get('properties').each(function (propertyPath) {
     switch (propertyPath.node.type) {
-      case t.SpreadElement.name:
+      case _astTypes.namedTypes.SpreadElement.name:
         amendComposes(documentation, (0, _resolveToValue.default)(propertyPath.get('argument')));
         break;
     }
@@ -63,7 +60,7 @@ function propTypeCompositionHandler(documentation, path) {
   }
 
   switch (propTypesPath.node.type) {
-    case t.ObjectExpression.name:
+    case _astTypes.namedTypes.ObjectExpression.name:
       processObjectExpression(documentation, propTypesPath);
       break;
 

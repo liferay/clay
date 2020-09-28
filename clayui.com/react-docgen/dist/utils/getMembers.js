@@ -1,13 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getMembers;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -17,9 +15,6 @@ var _astTypes = _interopRequireDefault(require("ast-types"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
 
 /**
  * Given a "nested" Member/CallExpression, e.g.
@@ -39,7 +34,7 @@ function getMembers(path, includeRoot = false) {
 
   loop: while (true) {
     switch (true) {
-      case t.MemberExpression.check(path.node):
+      case _astTypes.namedTypes.MemberExpression.check(path.node):
         result.push({
           path: path.get('property'),
           computed: path.node.computed,
@@ -49,7 +44,7 @@ function getMembers(path, includeRoot = false) {
         path = path.get('object');
         break;
 
-      case t.CallExpression.check(path.node):
+      case _astTypes.namedTypes.CallExpression.check(path.node):
         argumentsPath = path.get('arguments');
         path = path.get('callee');
         break;

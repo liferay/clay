@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isReactComponentClass;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _isReactModuleName = _interopRequireDefault(require("./isReactModuleName"));
 
@@ -25,13 +25,9 @@ var _resolveToValue = _interopRequireDefault(require("./resolveToValue"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function isRenderMethod(node) {
   const isProperty = node.type === 'ClassProperty';
-  return (t.MethodDefinition.check(node) || isProperty) && !node.computed && !node.static && (node.kind === '' || node.kind === 'method' || isProperty) && node.key.name === 'render';
+  return (_astTypes.namedTypes.MethodDefinition.check(node) || isProperty) && !node.computed && !node.static && (node.kind === '' || node.kind === 'method' || isProperty) && node.key.name === 'render';
 }
 /**
  * Returns `true` of the path represents a class definition which either extends
@@ -42,7 +38,7 @@ function isRenderMethod(node) {
 function isReactComponentClass(path) {
   const node = path.node;
 
-  if (!t.ClassDeclaration.check(node) && !t.ClassExpression.check(node)) {
+  if (!_astTypes.namedTypes.ClassDeclaration.check(node) && !_astTypes.namedTypes.ClassExpression.check(node)) {
     return false;
   } // extends something
 

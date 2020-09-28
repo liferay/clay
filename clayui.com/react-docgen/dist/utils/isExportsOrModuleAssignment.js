@@ -2,14 +2,12 @@
 
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = isExportsOrModuleAssignment;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var expressionTo = _interopRequireWildcard(require("./expressionTo"));
 
@@ -21,20 +19,17 @@ var expressionTo = _interopRequireWildcard(require("./expressionTo"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Returns true if the expression is of form `exports.foo = ...;` or
  * `modules.exports = ...;`.
  */
-
 function isExportsOrModuleAssignment(path) {
-  if (t.ExpressionStatement.check(path.node)) {
+  if (_astTypes.namedTypes.ExpressionStatement.check(path.node)) {
     path = path.get('expression');
   }
 
-  if (!t.AssignmentExpression.check(path.node) || !t.MemberExpression.check(path.node.left)) {
+  if (!_astTypes.namedTypes.AssignmentExpression.check(path.node) || !_astTypes.namedTypes.MemberExpression.check(path.node.left)) {
     return false;
   }
 

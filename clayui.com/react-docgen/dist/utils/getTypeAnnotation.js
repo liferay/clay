@@ -1,13 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getTypeAnnotation;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -17,10 +15,6 @@ var _astTypes = _interopRequireDefault(require("ast-types"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function hasTypeAnnotation(path) {
   return !!path.node.typeAnnotation;
 }
@@ -36,7 +30,7 @@ function getTypeAnnotation(path) {
 
   do {
     resultPath = resultPath.get('typeAnnotation');
-  } while (hasTypeAnnotation(resultPath) && !t.FlowType.check(resultPath.node) && !t.TSType.check(resultPath.node));
+  } while (hasTypeAnnotation(resultPath) && !_astTypes.namedTypes.FlowType.check(resultPath.node) && !_astTypes.namedTypes.TSType.check(resultPath.node));
 
   return resultPath;
 }

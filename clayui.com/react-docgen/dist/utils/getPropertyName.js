@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = getPropertyName;
 exports.COMPUTED_PREFIX = void 0;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getNameOrValue = _interopRequireDefault(require("./getNameOrValue"));
 
@@ -22,9 +22,6 @@ var _resolveToValue = _interopRequireDefault(require("./resolveToValue"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
 const COMPUTED_PREFIX = '@computed#';
 /**
  * In an ObjectExpression, the name of a property can either be an identifier
@@ -35,25 +32,25 @@ const COMPUTED_PREFIX = '@computed#';
 exports.COMPUTED_PREFIX = COMPUTED_PREFIX;
 
 function getPropertyName(propertyPath) {
-  if (t.ObjectTypeSpreadProperty.check(propertyPath.node)) {
+  if (_astTypes.namedTypes.ObjectTypeSpreadProperty.check(propertyPath.node)) {
     return (0, _getNameOrValue.default)(propertyPath.get('argument').get('id'), false);
   } else if (propertyPath.node.computed) {
     const key = propertyPath.get('key'); // Try to resolve variables and member expressions
 
-    if (t.Identifier.check(key.node) || t.MemberExpression.check(key.node)) {
+    if (_astTypes.namedTypes.Identifier.check(key.node) || _astTypes.namedTypes.MemberExpression.check(key.node)) {
       const value = (0, _resolveToValue.default)(key).node;
 
-      if (t.Literal.check(value) && (typeof value.value === 'string' || typeof value.value === 'number')) {
+      if (_astTypes.namedTypes.Literal.check(value) && (typeof value.value === 'string' || typeof value.value === 'number')) {
         return `${value.value}`;
       }
     } // generate name for identifier
 
 
-    if (t.Identifier.check(key.node)) {
+    if (_astTypes.namedTypes.Identifier.check(key.node)) {
       return `${COMPUTED_PREFIX}${key.node.name}`;
     }
 
-    if (t.Literal.check(key.node) && (typeof key.node.value === 'string' || typeof key.node.value === 'number')) {
+    if (_astTypes.namedTypes.Literal.check(key.node) && (typeof key.node.value === 'string' || typeof key.node.value === 'number')) {
       return `${key.node.value}`;
     }
 

@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = getMemberValuePath;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _getClassMemberValuePath = _interopRequireDefault(require("./getClassMemberValuePath"));
 
@@ -25,31 +25,28 @@ var _resolveFunctionDefinitionToReturnValue = _interopRequireDefault(require("..
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
 const SYNONYMS = {
   getDefaultProps: 'defaultProps',
   defaultProps: 'getDefaultProps'
 };
 const POSTPROCESS_MEMBERS = {
-  propTypes: path => t.Function.check(path.node) ? (0, _resolveFunctionDefinitionToReturnValue.default)(path) : path
+  propTypes: path => _astTypes.namedTypes.Function.check(path.node) ? (0, _resolveFunctionDefinitionToReturnValue.default)(path) : path
 };
 const LOOKUP_METHOD = {
-  [t.ArrowFunctionExpression.name]: _getMemberExpressionValuePath.default,
-  [t.CallExpression.name]: _getMemberExpressionValuePath.default,
-  [t.FunctionExpression.name]: _getMemberExpressionValuePath.default,
-  [t.FunctionDeclaration.name]: _getMemberExpressionValuePath.default,
-  [t.VariableDeclaration.name]: _getMemberExpressionValuePath.default,
-  [t.ObjectExpression.name]: _getPropertyValuePath.default,
-  [t.ClassDeclaration.name]: _getClassMemberValuePath.default,
-  [t.ClassExpression.name]: _getClassMemberValuePath.default
+  [_astTypes.namedTypes.ArrowFunctionExpression.name]: _getMemberExpressionValuePath.default,
+  [_astTypes.namedTypes.CallExpression.name]: _getMemberExpressionValuePath.default,
+  [_astTypes.namedTypes.FunctionExpression.name]: _getMemberExpressionValuePath.default,
+  [_astTypes.namedTypes.FunctionDeclaration.name]: _getMemberExpressionValuePath.default,
+  [_astTypes.namedTypes.VariableDeclaration.name]: _getMemberExpressionValuePath.default,
+  [_astTypes.namedTypes.ObjectExpression.name]: _getPropertyValuePath.default,
+  [_astTypes.namedTypes.ClassDeclaration.name]: _getClassMemberValuePath.default,
+  [_astTypes.namedTypes.ClassExpression.name]: _getClassMemberValuePath.default
 };
 
 function isSupportedDefinitionType({
   node
 }) {
-  return t.ObjectExpression.check(node) || t.ClassDeclaration.check(node) || t.ClassExpression.check(node) ||
+  return _astTypes.namedTypes.ObjectExpression.check(node) || _astTypes.namedTypes.ClassDeclaration.check(node) || _astTypes.namedTypes.ClassExpression.check(node) ||
   /**
    * Adds support for libraries such as
    * [styled components]{@link https://github.com/styled-components} that use
@@ -60,8 +57,8 @@ function isSupportedDefinitionType({
    * https://github.com/Jmeyering/react-docgen-annotation-resolver) could be
    * used to add these definitions.
    */
-  t.TaggedTemplateExpression.check(node) || // potential stateless function component
-  t.VariableDeclaration.check(node) || t.ArrowFunctionExpression.check(node) || t.FunctionDeclaration.check(node) || t.FunctionExpression.check(node) ||
+  _astTypes.namedTypes.TaggedTemplateExpression.check(node) || // potential stateless function component
+  _astTypes.namedTypes.VariableDeclaration.check(node) || _astTypes.namedTypes.ArrowFunctionExpression.check(node) || _astTypes.namedTypes.FunctionDeclaration.check(node) || _astTypes.namedTypes.FunctionExpression.check(node) ||
   /**
    * Adds support for libraries such as
    * [system-components]{@link https://jxnblk.com/styled-system/system-components} that use
@@ -72,7 +69,7 @@ function isSupportedDefinitionType({
    * https://github.com/Jmeyering/react-docgen-annotation-resolver) could be
    * used to add these definitions.
    */
-  t.CallExpression.check(node);
+  _astTypes.namedTypes.CallExpression.check(node);
 }
 /**
  * This is a helper method for handlers to make it easier to work either with

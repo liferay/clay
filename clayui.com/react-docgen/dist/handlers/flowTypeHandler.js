@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = flowTypeHandler;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _flowUtilityTypes = require("../utils/flowUtilityTypes");
 
@@ -33,15 +33,11 @@ var _setPropDescription = _interopRequireDefault(require("../utils/setPropDescri
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
-
 function setPropDescriptor(documentation, path, typeParams) {
-  if (t.ObjectTypeSpreadProperty.check(path.node)) {
+  if (_astTypes.namedTypes.ObjectTypeSpreadProperty.check(path.node)) {
     const argument = (0, _flowUtilityTypes.unwrapUtilityType)(path.get('argument'));
 
-    if (t.ObjectTypeAnnotation.check(argument.node)) {
+    if (_astTypes.namedTypes.ObjectTypeAnnotation.check(argument.node)) {
       (0, _getFlowTypeFromReactComponent.applyToFlowTypeProperties)(documentation, argument, (propertyPath, innerTypeParams) => {
         setPropDescriptor(documentation, propertyPath, innerTypeParams);
       }, typeParams);
@@ -51,7 +47,7 @@ function setPropDescriptor(documentation, path, typeParams) {
     const name = argument.get('id').get('name');
     const resolvedPath = (0, _resolveToValue.default)(name);
 
-    if (resolvedPath && t.TypeAlias.check(resolvedPath.node)) {
+    if (resolvedPath && _astTypes.namedTypes.TypeAlias.check(resolvedPath.node)) {
       const right = resolvedPath.get('right');
       (0, _getFlowTypeFromReactComponent.applyToFlowTypeProperties)(documentation, right, (propertyPath, innerTypeParams) => {
         setPropDescriptor(documentation, propertyPath, innerTypeParams);
@@ -59,7 +55,7 @@ function setPropDescriptor(documentation, path, typeParams) {
     } else {
       documentation.addComposes(name.node.name);
     }
-  } else if (t.ObjectTypeProperty.check(path.node)) {
+  } else if (_astTypes.namedTypes.ObjectTypeProperty.check(path.node)) {
     const type = (0, _getFlowType.default)(path.get('value'), typeParams);
     const propName = (0, _getPropertyName.default)(path);
     if (!propName) return;
@@ -70,7 +66,7 @@ function setPropDescriptor(documentation, path, typeParams) {
     // imported types that are spread in to props.
 
     (0, _setPropDescription.default)(documentation, path);
-  } else if (t.TSPropertySignature.check(path.node)) {
+  } else if (_astTypes.namedTypes.TSPropertySignature.check(path.node)) {
     const type = (0, _getTSType.default)(path.get('typeAnnotation'), typeParams);
     const propName = (0, _getPropertyName.default)(path);
     if (!propName) return;

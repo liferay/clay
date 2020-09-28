@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isReactBuiltinCall;
 
-var _astTypes = _interopRequireDefault(require("ast-types"));
+var _astTypes = require("ast-types");
 
 var _isReactModuleName = _interopRequireDefault(require("./isReactModuleName"));
 
@@ -25,16 +25,13 @@ var _resolveToValue = _interopRequireDefault(require("./resolveToValue"));
  *
  * 
  */
-const {
-  namedTypes: t
-} = _astTypes.default;
+
 /**
  * Returns true if the expression is a function call of the form
  * `React.foo(...)`.
  */
-
 function isReactBuiltinCall(path, name) {
-  if (t.ExpressionStatement.check(path.node)) {
+  if (_astTypes.namedTypes.ExpressionStatement.check(path.node)) {
     path = path.get('expression');
   }
 
@@ -49,13 +46,13 @@ function isReactBuiltinCall(path, name) {
     return Boolean(module && (0, _isReactModuleName.default)(module));
   }
 
-  if (t.CallExpression.check(path.node)) {
+  if (_astTypes.namedTypes.CallExpression.check(path.node)) {
     const value = (0, _resolveToValue.default)(path.get('callee'));
     if (value === path.get('callee')) return false;
 
     if ( // `require('react').createElement`
-    t.MemberExpression.check(value.node) && t.Identifier.check(value.get('property').node) && value.get('property').node.name === name || // `import { createElement } from 'react'`
-    t.ImportDeclaration.check(value.node) && value.node.specifiers.some(specifier => specifier.imported && specifier.imported.name === name)) {
+    _astTypes.namedTypes.MemberExpression.check(value.node) && _astTypes.namedTypes.Identifier.check(value.get('property').node) && value.get('property').node.name === name || // `import { createElement } from 'react'`
+    _astTypes.namedTypes.ImportDeclaration.check(value.node) && value.node.specifiers.some(specifier => specifier.imported && specifier.imported.name === name)) {
       const module = (0, _resolveToModule.default)(value);
       return Boolean(module && (0, _isReactModuleName.default)(module));
     }
