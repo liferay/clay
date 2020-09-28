@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import DropDown from '@clayui/drop-down';
+import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
+import ClayIcon from '@clayui/icon';
 import {FocusScope, sub} from '@clayui/shared';
 import React from 'react';
 import tinycolor from 'tinycolor2';
@@ -12,7 +13,6 @@ import tinycolor from 'tinycolor2';
 import Basic from './Basic';
 import Custom from './Custom';
 import Splotch from './Splotch';
-import {useHexInput} from './hooks';
 
 const DEFAULT_COLORS = [
 	'000000',
@@ -72,7 +72,6 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Flag for adding ColorPicker in disabled state
 	 */
 	disabled?: boolean;
-
 	/**
 	 * The label describing the collection of colors in the menu
 	 */
@@ -137,7 +136,6 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	disabled,
 	label,
 	name,
-	onBlur = () => {},
 	onColorsChange,
 	onValueChange = () => {},
 	showHex = true,
@@ -149,7 +147,9 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	value = 'FFFFFF',
 	...otherProps
 }: IProps) => {
-	if (value.indexOf('#') === 0) {
+	const isHex = tinycolor(value).getFormat() === 'hex';
+
+	if (isHex && value.indexOf('#') === 0) {
 		value = value.slice(1);
 	}
 
@@ -175,13 +175,6 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	const splotchRef = React.useRef<HTMLButtonElement>(null);
 
 	const [active, setActive] = React.useState(false);
-	const [hexInputValue, setHexInputValue] = useHexInput(value);
-
-	React.useEffect(() => {
-		if (document.activeElement !== inputRef.current) {
-			setHexInputValue(value);
-		}
-	}, [value]);
 
 	return (
 		<FocusScope arrowKeysUpDown={false}>
@@ -201,7 +194,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							width: 0,
 						}}
 						type={useNative ? 'color' : 'text'}
-						value={hexInputValue ? `#${hexInputValue}` : ''}
+						value={value ? `${isHex ? '#' : ''}${value}` : ''}
 					/>
 				)}
 
@@ -229,7 +222,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 
-					<DropDown.Menu
+					<ClayDropDown.Menu
 						active={active}
 						alignElementRef={triggerElementRef}
 						className="clay-color-dropdown-menu"
@@ -241,8 +234,8 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							<Basic
 								colors={colors || DEFAULT_COLORS}
 								label={label}
-								onChange={(value) => {
-									onValueChange(value);
+								onChange={(newVal) => {
+									onValueChange(newVal);
 									setActive((val: boolean) => !val);
 
 									if (splotchRef.current) {
@@ -262,15 +255,15 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 										: BLANK_COLORS
 								}
 								label={label}
-								onChange={(value) => {
-									onValueChange(value);
+								onChange={(newVal) => {
+									onValueChange(newVal);
 								}}
 								onColorsChange={onColorsChange}
 								showPalette={showPalette}
 								spritemap={spritemap}
 							/>
 						)}
-					</DropDown.Menu>
+					</ClayDropDown.Menu>
 
 					{showHex && (
 						<ClayInput.GroupItem append>
@@ -281,39 +274,24 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								])}
 								disabled={disabled}
 								insetBefore
-								onBlur={(event) => {
-									const newColor = tinycolor(
-										event.target.value
-									);
-
-									const hexString = newColor.isValid()
-										? newColor.toHex()
-										: event.target.value;
-
-									onValueChange(hexString);
-									setHexInputValue(hexString);
-									onBlur(event);
-								}}
 								onChange={(event) => {
-									const newHexValue = event.target.value;
-
-									const newColor = tinycolor(newHexValue);
-
-									setHexInputValue(newHexValue);
-
-									if (newColor.isValid()) {
-										onValueChange(newColor.toHex());
-									}
+									onValueChange(event.target.value);
 								}}
 								ref={inputRef}
 								type="text"
-								value={hexInputValue
-									.toUpperCase()
-									.substring(0, 6)}
+								value={value}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
-								{'#'}
+								{isHex ? (
+									'#'
+								) : (
+									<ClayIcon
+										spritemap={spritemap}
+										style={{width: 10}}
+										symbol="color-picker"
+									/>
+								)}
 							</ClayInput.GroupInsetItem>
 						</ClayInput.GroupItem>
 					)}

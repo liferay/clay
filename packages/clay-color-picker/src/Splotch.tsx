@@ -29,7 +29,12 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  */
 const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 	({active, className, size, value, ...otherProps}, ref) => {
-		const requireBorder = tinycolor.readability('#FFF', value) < 1.1;
+		const color = tinycolor(value);
+
+		const isHex = (color.getFormat() || '').match('hex');
+
+		const requireBorder =
+			!color.isValid() || tinycolor.readability('#FFF', value) < 1.1;
 
 		return (
 			<button
@@ -40,7 +45,7 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 				})}
 				ref={ref}
 				style={{
-					background: `#${value}`,
+					background: `${isHex ? '#' : ''}${value}`,
 					height: size,
 					width: size,
 				}}
