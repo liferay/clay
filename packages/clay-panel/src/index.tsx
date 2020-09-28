@@ -72,11 +72,11 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 	const panelRef = React.useRef<HTMLDivElement>(null);
 	const [expanded, setExpaned] = React.useState<boolean>(defaultExpanded);
 
-	const [
-		transitioning,
-		handleTransitionEnd,
-		handleClickToggler,
-	] = useTransitionHeight(expanded, setExpaned, panelRef);
+	const {animate, transitioning} = useTransitionHeight(
+		expanded,
+		setExpaned,
+		panelRef
+	);
 
 	const showIconCollapsed = !(
 		(!expanded && transitioning) ||
@@ -120,7 +120,7 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 								collapsed: showIconCollapsed,
 							}
 						)}
-						onClick={handleClickToggler}
+						onClick={animate}
 						role="tab"
 					>
 						{displayTitle &&
@@ -160,7 +160,6 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 								show: expanded,
 							}
 						)}
-						onTransitionEnd={handleTransitionEnd}
 						ref={panelRef}
 						role="tabpanel"
 					>

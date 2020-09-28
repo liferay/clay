@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 /**
  * Removes the height style that triggers a transition when collapse
@@ -35,45 +35,51 @@ function setCollapseHeight(collapseElementRef: React.RefObject<any>) {
 
 export function useTransitionHeight(
 	visible: boolean,
-	setVisible: any,
+	setVisible: React.Dispatch<React.SetStateAction<boolean>>,
 	contentRef: React.RefObject<any>
 ) {
-	const [transitioning, setTransitioning] = React.useState<boolean>(false);
+	const [transitioning, setTransitioning] = useState<boolean>(false);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (transitioning) {
 			setCollapseHeight(contentRef);
+
 			if (visible) {
 				removeCollapseHeight(contentRef);
 			}
+
+			const {
+				transitionDelay,
+				transitionDuration,
+			} = window.getComputedStyle(contentRef.current);
+
+			const totalDuration =
+				(parseFloat(transitionDelay) + parseFloat(transitionDuration)) *
+				1000;
+
+			setTimeout(() => {
+				setVisible(!visible);
+				setTransitioning(false);
+
+				if (!visible) {
+					removeCollapseHeight(contentRef);
+				}
+			}, totalDuration);
 		}
 	}, [transitioning]);
 
-	const handleTransitionEnd = (event: React.TransitionEvent) => {
-		if (event.target === contentRef.current && transitioning && !visible) {
-			setVisible(true);
-			setTransitioning(false);
-			removeCollapseHeight(contentRef);
-		} else if (event.target === contentRef.current) {
-			setVisible(false);
-			setTransitioning(false);
-		}
-	};
+	const animate = useCallback(
+		(event: React.SyntheticEvent) => {
+			event.preventDefault();
 
-	const willTriggerTransition = (event: React.MouseEvent | MouseEvent) => {
-		event.preventDefault();
-		if (visible && !transitioning) {
-			setCollapseHeight(contentRef);
-		}
+			if (visible && !transitioning) {
+				setCollapseHeight(contentRef);
+			}
 
-		if (!transitioning) {
 			setTransitioning(true);
-		}
-	};
+		},
+		[transitioning, visible]
+	);
 
-	return [transitioning, handleTransitionEnd, willTriggerTransition] as [
-		boolean,
-		(event: React.TransitionEvent) => void,
-		(event: React.MouseEvent | MouseEvent) => void
-	];
+	return {animate, transitioning};
 }

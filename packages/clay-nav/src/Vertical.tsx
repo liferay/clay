@@ -110,11 +110,11 @@ function Item({
 	const menuRef = React.useRef(null);
 	const [expanded, setExpaned] = React.useState(!initialExpanded);
 
-	const [
-		transitioning,
-		handleTransitionEnd,
-		handleClickToggler,
-	] = useTransitionHeight(expanded, setExpaned, menuRef);
+	const {animate, transitioning} = useTransitionHeight(
+		expanded,
+		setExpaned,
+		menuRef
+	);
 
 	const showIconCollapsed = !(
 		(!expanded && transitioning) ||
@@ -128,7 +128,7 @@ function Item({
 				collapsed={showIconCollapsed}
 				href={href}
 				onClick={(e) => {
-					handleClickToggler(e);
+					animate(e);
 
 					if (onClick) {
 						onClick();
@@ -148,7 +148,6 @@ function Item({
 						collapsing: transitioning,
 						show: expanded,
 					})}
-					onTransitionEnd={handleTransitionEnd}
 					ref={menuRef}
 				>
 					<Nav stacked>

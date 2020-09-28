@@ -113,6 +113,8 @@ describe('ClayNavigationBar', () => {
 	});
 
 	it('collapses the previously expanded dropdown when trigger element is clicked', async () => {
+		jest.useFakeTimers();
+
 		const {container, getByTestId} = render(
 			<ClayNavigationBar
 				inverted
@@ -143,10 +145,16 @@ describe('ClayNavigationBar', () => {
 		);
 
 		fireEvent.click(getByTestId('navbarToggler'), 'Trigger Label');
-		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
+
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		fireEvent.click(getByTestId('navbarToggler'), 'Trigger Label');
-		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
+
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		let navigationBarDropdown;
 

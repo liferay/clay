@@ -47,11 +47,11 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 }: IProps) => {
 	const [visible, setVisible] = React.useState(false);
 	const contentRef = React.useRef<HTMLDivElement>(null);
-	const [
-		transitioning,
-		handleTransitionEnd,
-		handleClickToggler,
-	] = useTransitionHeight(visible, setVisible, contentRef);
+	const {animate, transitioning} = useTransitionHeight(
+		visible,
+		setVisible,
+		contentRef
+	);
 
 	const activeElementsCount = children.filter((child) => child.props.active)
 		.length;
@@ -89,7 +89,7 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 					)}
 					data-testid="navbarToggler"
 					displayType="unstyled"
-					onClick={handleClickToggler}
+					onClick={animate}
 				>
 					<span className="navbar-text-truncate">{triggerLabel}</span>
 
@@ -103,7 +103,6 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 						show: visible,
 					})}
 					data-testid="NavigationBarDropdown"
-					onTransitionEnd={handleTransitionEnd}
 					ref={contentRef}
 				>
 					<ClayLayout.ContainerFluid>
