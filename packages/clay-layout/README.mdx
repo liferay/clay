@@ -10,28 +10,42 @@ import {LayoutContainer, LayoutContent} from '$packages/clay-layout/docs/index';
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Container vs. Content](#container-vs-content)
 -   [Container, Rows, Columns](#basic-usage)
--   [Autofit](#autofit)
+-   [Container Demo](#container-demo)
+-   [Content Demo](#content-demo)
 
 </div>
 </div>
 
-## Containers, Rows and Columns
+## Container vs. Content
 
-These are the basic building blocks of any layout, we made Clay Layout very flexible with it's offerings of containers, rows and columns. All of these components allow for a custom HTML element to be used via the `containerElement` prop.
+When deciding between using `Container` vs `Content`, the big picture is that you typically use `Container` for structuring page layouts and then you would use `Content` components for structuring content within the page layout.
 
-`Container` is a low-level component that serves as a wrapper of smaller building blocks like rows and columns. It is also used as a basis for a high-level variant `ContainerFluid` which is a `Container` without a fixed width.
+## Building Blocks
 
-`Row` and `Col` are self-explanatory, their purpose is to structure content inside them horizontally, or vertically. They are the next component in a typical DOM structure under a `Container`.
+To provide basic building blocks for building layouts, we made Clay Layout very flexible with it's offerings of containers, rows and columns. All of these components allow for a custom HTML element to be used via the `containerElement` prop.
 
-`Row` can be customized so that its `gutters` are removed, and its content can be `justified`.
+### `Container`
 
-`Col` (column) has various sizing options, from `xs` (extra small) to `xl` (extra large), as well as a `size` prop that allows custom sizing to be provided.
+Low-level component that serves as a wrapper of smaller building blocks like rows and columns. It is also used as a basis for a high-level variant `ContainerFluid` which is a `Container` without a fixed width.
 
-`ContentRow`, `ContentCol`, and `ContentSection` are small container components to be used as direct wrappers of your content. These elements are the lowest in the container structure while also serving layouting capabilities.
+### `Row` and `Col`
+
+These are self-explanatory, their purpose is to structure content inside them horizontally, or vertically. They are the next component in a typical DOM structure under a `Container`.
+
+-   `Row` can be customized so that its `gutters` are removed, and its content can be `justified`.
+
+-   `Col` (column) has various sizing options, from `xs` (extra small) to `xl` (extra large), as well as a `size` prop that allows custom sizing to be provided.
+
+### `ContentRow`, `ContentCol`, and `ContentSection`
+
+Small container components to be used as direct wrappers of your content. These elements are the lowest in the container structure while also serving layouting capabilities.
+
+## Container Demo
 
 <LayoutContainer />
 
-## Autofit
+## Content Demo
 
 <LayoutContent />

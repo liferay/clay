@@ -5,38 +5,33 @@
 
 import React from 'react';
 
+const getId = (children) => {
+	return (
+		typeof children === 'string' &&
+		children.toLowerCase().split(' ').join('-')
+	);
+};
+
 export const H1 = (props) => (
-	<h1
-		className="clay-h1"
-		id={props.children.toLowerCase().split(' ').join('-')}
-	>
+	<h1 className="clay-h1" id={getId(props.children)}>
 		{props.children}
 	</h1>
 );
 
 export const H2 = (props) => (
-	<h2
-		className="clay-h2"
-		id={props.children.toLowerCase().split(' ').join('-')}
-	>
+	<h2 className="clay-h2" id={getId(props.children)}>
 		{props.children}
 	</h2>
 );
 
 export const H3 = (props) => (
-	<h3
-		className="clay-h3"
-		id={props.children.toLowerCase().split(' ').join('-')}
-	>
+	<h3 className="clay-h3" id={getId(props.children)}>
 		{props.children}
 	</h3>
 );
 
 export const H4 = (props) => (
-	<h4
-		className="clay-h4"
-		id={props.children.toLowerCase().split(' ').join('-')}
-	>
+	<h4 className="clay-h4" id={getId(props.children)}>
 		{props.children}
 	</h4>
 );
