@@ -18,7 +18,7 @@ interface IProps {
  * Predictive Chart component.
  */
 const PredictiveChart = React.forwardRef<HTMLDivElement, IProps>(
-	({data, predictionDate, ...otherProps}, ref) => {
+	({data, predictionDate, ...otherProps}: IProps, ref) => {
 		let columns = data.columns;
 
 		if (columns) {

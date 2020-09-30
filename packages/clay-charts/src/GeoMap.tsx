@@ -235,7 +235,7 @@ const Geomap: React.FunctionComponent<IProps> = ({
 	elementProps = {},
 	forwardRef,
 	...otherProps
-}) => {
+}: IProps) => {
 	const elementRef = React.useRef<HTMLDivElement>(null);
 
 	React.useEffect(() => {

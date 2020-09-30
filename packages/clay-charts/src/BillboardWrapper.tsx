@@ -15,7 +15,7 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 	forwardRef,
 	elementProps = {},
 	...otherProps
-}) => {
+}: IProps) => {
 	const elementRef = React.useRef<HTMLDivElement>(null);
 
 	const updateChart = React.useCallback((args: any) => {
