@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/loading-indicator@3.1.0...@clayui/loading-indicator@3.2.0) (2020-10-01)
+
+### Features
+
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+-   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+
 # [3.1.0](https://github.com/liferay/clay/compare/@clayui/loading-indicator@3.0.2...@clayui/loading-indicator@3.1.0) (2020-05-21)
 
 ### Features

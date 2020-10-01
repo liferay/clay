@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/progress-bar@3.1.0...@clayui/progress-bar@3.2.0) (2020-10-01)
+
+### Features
+
+-   **@clayui/progress-bar:** Add JSP code example ([3e2bfc5](https://github.com/liferay/clay/commit/3e2bfc5))
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+
 # [3.1.0](https://github.com/liferay/clay/compare/@clayui/progress-bar@3.0.5...@clayui/progress-bar@3.1.0) (2020-05-21)
 
 ### Features

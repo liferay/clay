@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.12.0](https://github.com/liferay/clay/compare/@clayui/form@3.11.1...@clayui/form@3.12.0) (2020-10-01)
+
+### Bug Fixes
+
+-   **@clayui/dual-list-box:** Remove responsibility from users to manage button state, and save checks into variables for clarity ([a10d17c](https://github.com/liferay/clay/commit/a10d17c))
+-   **@clayui/dual-list-box:** Simplify the checks and remove one of the variables no longer needed for them ([cee4f6a](https://github.com/liferay/clay/commit/cee4f6a))
+
+### Features
+
+-   **@clayui/dual-list-box:** Add more strict checks for disabling reorder/transfer buttons ([49512a3](https://github.com/liferay/clay/commit/49512a3))
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+-   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+
 ## [3.11.1](https://github.com/liferay/clay/compare/@clayui/form@3.11.0...@clayui/form@3.11.1) (2020-08-28)
 
 **Note:** Version bump only for package @clayui/form

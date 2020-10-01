@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/liferay/clay/compare/@clayui/icon@3.0.5...@clayui/icon@3.1.0) (2020-10-01)
+
+### Features
+
+-   **clayui.com:** Add JSP code example to Icon ([cffa4ca](https://github.com/liferay/clay/commit/cffa4ca))
+-   **clayui.com:** Add language flag icons to React Component docs of the Icon component ([c0a9538](https://github.com/liferay/clay/commit/c0a9538))
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+-   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+
 ## [3.0.5](https://github.com/liferay/clay/compare/@clayui/icon@3.0.4...@clayui/icon@3.0.5) (2020-04-24)
 
 **Note:** Version bump only for package @clayui/icon

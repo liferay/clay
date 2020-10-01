@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/liferay/clay/compare/@clayui/nav@3.3.2...@clayui/nav@3.4.0) (2020-10-01)
+
+### Bug Fixes
+
+-   **@clayui/shared:** removes the onTransitionEnd listener from elements by setTimeout ([4cf740a](https://github.com/liferay/clay/commit/4cf740a))
+
+### Features
+
+-   **@clayui/nav:** Adds support for Decorator variation in ClayVerticalNav ([a0bf0a2](https://github.com/liferay/clay/commit/a0bf0a2))
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+
 ## [3.3.2](https://github.com/liferay/clay/compare/@clayui/nav@3.3.1...@clayui/nav@3.3.2) (2020-08-28)
 
 **Note:** Version bump only for package @clayui/nav

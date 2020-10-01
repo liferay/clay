@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/liferay/clay/compare/@clayui/toolbar@3.0.0-alpha.3...@clayui/toolbar@3.0.0) (2020-10-01)
+
+### Features
+
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+
 # [3.0.0-alpha.3](https://github.com/liferay/clay/compare/@clayui/toolbar@3.0.0-alpha.2...@clayui/toolbar@3.0.0-alpha.3) (2020-08-28)
 
 **Note:** Version bump only for package @clayui/toolbar

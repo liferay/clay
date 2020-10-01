@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/liferay/clay/compare/@clayui/time-picker@3.1.10...@clayui/time-picker@3.2.0) (2020-10-01)
+
+### Features
+
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+
 ## [3.1.10](https://github.com/liferay/clay/compare/@clayui/time-picker@3.1.9...@clayui/time-picker@3.1.10) (2020-08-28)
 
 **Note:** Version bump only for package @clayui/time-picker

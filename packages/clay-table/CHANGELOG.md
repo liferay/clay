@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/liferay/clay/compare/@clayui/table@3.0.7...@clayui/table@3.1.0) (2020-10-01)
+
+### Features
+
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+-   **clayui.com:** Revert the change made to headings used, rename stickers and tables to sticker and table respectively, also change some wording ([791dabe](https://github.com/liferay/clay/commit/791dabe))
+-   **clayui.com:** Update content structure: Checkbox, Management Toolbar, Select Box, Sticker, Table & Tabs ([0fcd54a](https://github.com/liferay/clay/commit/0fcd54a))
+-   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+
 ## [3.0.7](https://github.com/liferay/clay/compare/@clayui/table@4.0.0...@clayui/table@3.0.7) (2020-04-24)
 
 ### Bug Fixes

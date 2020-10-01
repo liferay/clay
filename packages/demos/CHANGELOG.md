@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/bryceosterhaus/clay/compare/demos@0.4.9...demos@0.5.0) (2020-10-01)
+
+### Features
+
+-   add displayName for all components ([cc3211d](https://github.com/bryceosterhaus/clay/commit/cc3211d))
+
 ## [0.4.9](https://github.com/matuzalemsteles/clay/compare/demos@0.4.8...demos@0.4.9) (2020-08-28)
 
 **Note:** Version bump only for package demos

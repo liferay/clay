@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/liferay/clay/compare/@clayui/card@3.3.4...@clayui/card@3.4.0) (2020-10-01)
+
+### Features
+
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+
 ## [3.3.4](https://github.com/liferay/clay/compare/@clayui/card@3.3.3...@clayui/card@3.3.4) (2020-08-28)
 
 **Note:** Version bump only for package @clayui/card

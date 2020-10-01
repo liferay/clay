@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/liferay/clay/compare/@clayui/drop-down@3.7.0...@clayui/drop-down@3.8.0) (2020-10-01)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes DropDown error closing Modal when pressing Esc ([97cbfe4](https://github.com/liferay/clay/commit/97cbfe4))
+
+### Features
+
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+-   add displayName for all components ([cc3211d](https://github.com/liferay/clay/commit/cc3211d))
+
 # [3.7.0](https://github.com/liferay/clay/compare/@clayui/drop-down@3.6.2...@clayui/drop-down@3.7.0) (2020-08-28)
 
 ### Bug Fixes

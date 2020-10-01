@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.5.1...clayui.com@3.6.0) (2020-10-01)
+
+### Bug Fixes
+
+-   **@clayui/css:** SVG Icons `display`, `display-content`, `product-menu-open`, `product-menu-closed`, and `hidden` updates anchor points, weights, and minor alignment issues ([2a01b38](https://github.com/bryceosterhaus/clay/commit/2a01b38))
+-   **clayui.com:** Add Contributing link to the page ([bed3a90](https://github.com/bryceosterhaus/clay/commit/bed3a90))
+-   **clayui.com:** Change tab name from Overview to Examples, and css to markup ([3fafcf8](https://github.com/bryceosterhaus/clay/commit/3fafcf8))
+-   **clayui.com:** Check it mainTabURL is false instead of true ([54745f2](https://github.com/bryceosterhaus/clay/commit/54745f2))
+-   **clayui.com:** Code examples on certain parts of the documentation should be expanded by default ([c6ae729](https://github.com/bryceosterhaus/clay/commit/c6ae729))
+-   **clayui.com:** Downgrade gatsby-react-router-scroll@3.0.0 so hash link anchors scroll to the right spot and add @reach/router@1.3.4 to remove peer dependency warning ([9289e72](https://github.com/bryceosterhaus/clay/commit/9289e72)), closes [/github.com/gatsbyjs/gatsby/issues/25778#issuecomment-659953330](https://github.com//github.com/gatsbyjs/gatsby/issues/25778/issues/issuecomment-659953330)
+-   **clayui.com:** fixes the error when trying to iterate through a NodeList ([64e922a](https://github.com/bryceosterhaus/clay/commit/64e922a))
+-   **clayui.com:** Landing page nav and alert should be a little wider ([489bd67](https://github.com/bryceosterhaus/clay/commit/489bd67))
+-   **clayui.com:** Toggling Show Atlas Theme should update color values on Colors Page ([a6e0639](https://github.com/bryceosterhaus/clay/commit/a6e0639))
+-   **clayui.com:** Use mainTabURl instead of string checking ([6b985b5](https://github.com/bryceosterhaus/clay/commit/6b985b5))
+
+### Features
+
+-   **clayui.com:** add redirects.json file ([457274d](https://github.com/bryceosterhaus/clay/commit/457274d))
+-   **clayui.com:** Intercept the API and Markup files and format their names so they properly generate tabs ([c4e97b2](https://github.com/bryceosterhaus/clay/commit/c4e97b2))
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/bryceosterhaus/clay/commit/d812ee9))
+-   add react/display-name eslint rule ([4bfc800](https://github.com/bryceosterhaus/clay/commit/4bfc800))
+
 ## [3.5.1](https://github.com/matuzalemsteles/clay/compare/clayui.com@3.5.0...clayui.com@3.5.1) (2020-08-28)
 
 ### Bug Fixes

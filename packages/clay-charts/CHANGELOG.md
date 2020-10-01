@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/bryceosterhaus/clay/compare/@clayui/charts@3.1.2...@clayui/charts@3.2.0) (2020-10-01)
+
+### Features
+
+-   add displayName for all components ([cc3211d](https://github.com/bryceosterhaus/clay/commit/cc3211d))
+-   **@clayui/charts:** Split API into it's file, add notice we're switching to Recharts, and cast props to IProps ([9ca4e27](https://github.com/bryceosterhaus/clay/commit/9ca4e27))
+
 ## [3.1.2](https://github.com/bryceosterhaus/clay/compare/@clayui/charts@3.1.1...@clayui/charts@3.1.2) (2020-06-18)
 
 **Note:** Version bump only for package @clayui/charts

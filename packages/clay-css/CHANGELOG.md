@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.18.2](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.18.1...@clayui/css@3.18.2) (2020-10-01)
+
+
+### Bug Fixes
+
+* **@clayui.com:** Atlas Buttons `.btn-outline-secondary` should have color [#6](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/6)b6c7e, caused by [#3149](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3149) ([7418263](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7418263)), closes [#6b6c7](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/6b6c7)
+* **@clayui/css:** Atlas Custom Radio don't use % for icon background-size. Chrome has trouble rendering it when whitespace is removed. ([5375e63](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5375e63)), closes [#3722](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3722)
+* **@clayui/css:** Btn Group `.btn-monospaced.btn-sm` doesn't work inside `.btn-group-vertical` and same for `.btn-monospaced.btn-lg` ([750b061](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/750b061))
+* **@clayui/css:** SVG Icons `display`, `display-content`, `product-menu-open`, `product-menu-closed`, and `hidden` updates anchor points, weights, and minor alignment issues ([2a01b38](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2a01b38))
+
+
+
+
+
 ## [3.18.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.18.0...@clayui/css@3.18.1) (2020-08-28)
 
 
