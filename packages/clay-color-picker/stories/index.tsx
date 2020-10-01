@@ -5,6 +5,7 @@
 
 import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import ClayForm from '@clayui/form';
 import {boolean, text} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
@@ -29,6 +30,10 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 		'008000',
 		'00FFFF',
 		'0000FF',
+		'blue',
+		'black',
+		'var(--blue)',
+		'inherit',
 	]);
 
 	const [color, setColor] = React.useState(customColors[0]);
@@ -92,4 +97,31 @@ storiesOf('Components|ClayColorPicker', module)
 			small={boolean('Small', true)}
 			title={text('Title', 'Default')}
 		/>
-	));
+	))
+	.add('w/ validation', () => {
+		const [color, setColor] = React.useState('');
+
+		const valid = color.length === 6;
+
+		return (
+			<ClayForm.Group className={!valid ? 'has-error' : ''}>
+				<ClayColorPicker
+					onValueChange={setColor}
+					spritemap={spritemap}
+					value={color}
+				/>
+
+				{!valid && (
+					<ClayForm.FeedbackGroup>
+						<ClayForm.FeedbackItem>
+							<ClayForm.FeedbackIndicator
+								spritemap={spritemap}
+								symbol="exclamation-full"
+							/>
+							{'Input must be 6 letters long'}
+						</ClayForm.FeedbackItem>
+					</ClayForm.FeedbackGroup>
+				)}
+			</ClayForm.Group>
+		);
+	});
