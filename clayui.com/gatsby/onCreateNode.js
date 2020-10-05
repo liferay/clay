@@ -28,6 +28,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			description,
 			disableTOC,
 			draft,
+			formPackageMember,
 			indexVisible,
 			layout,
 			lexiconDefinition = '',
@@ -228,6 +229,12 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			name: 'mainTabURL',
 			node,
 			value: mainTabURL || '',
+		});
+
+		createNodeField({
+			name: 'formPackageMember',
+			node,
+			value: formPackageMember || false,
 		});
 
 		createNodeField({
