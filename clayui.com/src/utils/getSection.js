@@ -27,7 +27,7 @@ const toSectionElements = (
 	order,
 	alwaysActive,
 	draft,
-	formPackageMember,
+	navigationParent,
 	indexVisible
 ) => {
 	const slugs = slug.split('/');
@@ -45,13 +45,13 @@ const toSectionElements = (
 	return {
 		alwaysActive,
 		draft,
-		formPackageMember,
 		id,
 		indexVisible,
 		isFolder,
 		isFormFolder,
 		isRoot,
 		link,
+		navigationParent,
 		order,
 		parentLink,
 		pathname,
@@ -72,13 +72,13 @@ const toSectionItem = (item, paths) => {
 					path.link ===
 					item.parentLink + path.id + (path.isFolder ? '/index' : '')
 			)
-			.filter((path) => !path.formPackageMember)
+			.filter((path) => !path.navigationParent)
 			.map((path) => toSectionItem(path, paths))
 			.sort(sortByOrderAndTitle);
 
 		if (item.isFormFolder) {
 			item.items = paths
-				.filter((path) => path.formPackageMember)
+				.filter((path) => path.navigationParent)
 				.filter((path) => path.link !== item.link)
 				.map((path) => toSectionItem(path, paths))
 				.sort(sortByOrderAndTitle);
@@ -94,8 +94,8 @@ const getSection = (data) => {
 			fields: {
 				alwaysActive,
 				draft,
-				formPackageMember,
 				indexVisible,
+				navigationParent,
 				order,
 				slug,
 				title,
@@ -109,7 +109,7 @@ const getSection = (data) => {
 			order,
 			alwaysActive,
 			draft,
-			formPackageMember,
+			navigationParent,
 			indexVisible
 		);
 	});

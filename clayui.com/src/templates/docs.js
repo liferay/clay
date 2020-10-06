@@ -366,7 +366,7 @@ export const pageQuery = graphql`
 			frontmatter {
 				description
 				disableTOC
-				formPackageMember
+				navigationParent
 				lexiconDefinition
 				packageNpm
 				title
@@ -407,7 +407,7 @@ export const pageQuery = graphql`
 				node {
 					fields {
 						alwaysActive
-						formPackageMember
+						navigationParent
 						layout
 						packageVersion
 						packageStatus

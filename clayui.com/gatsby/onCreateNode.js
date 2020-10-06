@@ -28,11 +28,11 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			description,
 			disableTOC,
 			draft,
-			formPackageMember,
 			indexVisible,
 			layout,
 			lexiconDefinition = '',
 			mainTabURL,
+			navigationParent,
 			nightly,
 			order,
 			packageNpm,
@@ -232,9 +232,9 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		});
 
 		createNodeField({
-			name: 'formPackageMember',
+			name: 'navigationParent',
 			node,
-			value: formPackageMember || false,
+			value: navigationParent || '',
 		});
 
 		createNodeField({

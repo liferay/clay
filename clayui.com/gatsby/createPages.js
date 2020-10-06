@@ -153,8 +153,8 @@ module.exports = async ({actions, graphql}) => {
 				edges {
 					node {
 						fields {
-							formPackageMember
 							layout
+							navigationParent
 							nightly
 							redirect
 							redirectFrom
