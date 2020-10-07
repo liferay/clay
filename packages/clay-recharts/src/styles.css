@@ -1,0 +1,32 @@
+.recharts-cartesian-axis {
+	font-size: 14px;
+}
+
+.recharts-cartesian-grid-vertical line:first-child,
+.recharts-cartesian-grid-vertical line:last-child,
+.recharts-cartesian-grid-horizontal line:first-child,
+.recharts-cartesian-grid-horizontal line:last-child {
+	opacity: 0;
+}
+
+.recharts-legend-item {
+	margin-bottom: 9px;
+	margin-right: 20px !important;
+}
+
+.recharts-legend-item:last-child {
+	margin-bottom: 0;
+}
+
+.recharts-legend-item svg {
+	margin-right: 12px !important;
+}
+
+.recharts-legend-item-text {
+	font-size: 14px;
+	color: #6B6C7E;
+}
+
+.recharts-legend-item-text:hover {
+	color: #272833;
+}
