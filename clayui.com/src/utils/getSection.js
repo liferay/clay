@@ -20,10 +20,6 @@ const sortByOrderAndTitle = (a, b) => {
 	}
 };
 
-const navigationRelationships = {
-	'/docs/components/form.html': [],
-};
-
 const toSectionElements = (
 	slug,
 	pathname,
@@ -61,42 +57,32 @@ const toSectionElements = (
 	};
 };
 
-const toSectionItem = (item, paths) => {
-	const isParentPackage = Object.keys(navigationRelationships).includes(
-		`/${item.pathname}`
-	);
-
-	if (item.navigationParent) {
-		navigationRelationships[item.navigationParent].push(
-			`/${item.pathname}`
-		);
-	}
-
+const toSectionItem = (item, paths, parentPaths) => {
 	if (item.isFolder) {
 		item.items = paths
-			.filter((path) => path.link !== item.link)
+			.filter(path => path.link !== item.link)
 			.filter(
-				(path) =>
+				path =>
 					path.link ===
 					item.parentLink + path.id + (path.isFolder ? '/index' : '')
 			)
-			.filter((path) => !path.navigationParent)
-			.map((path) => toSectionItem(path, paths))
+			.filter(path => !path.navigationParent)
+			.map(path => toSectionItem(path, paths, parentPaths))
 			.sort(sortByOrderAndTitle);
 	}
 
-	if (isParentPackage) {
+	if (parentPaths.includes(item.pathname)) {
 		item.items = paths
-			.filter((path) => path.navigationParent)
-			.filter((path) => path.link !== item.link)
-			.map((path) => toSectionItem(path, paths))
+			.filter(path => path.navigationParent === item.pathname)
+			.filter(path => path.link !== item.link)
+			.map(path => toSectionItem(path, paths, parentPaths))
 			.sort(sortByOrderAndTitle);
 	}
 
 	return item;
 };
 
-const getSection = (data) => {
+const getSection = data => {
 	const elements = data.map(({node}) => {
 		const {
 			fields: {
@@ -122,10 +108,16 @@ const getSection = (data) => {
 		);
 	});
 
-	const rootElements = elements.filter((path) => path.isRoot);
+	const rootElements = elements.filter(path => path.isRoot);
+
+	const parentPaths = elements.reduce((acc, {navigationParent}) => {
+		return navigationParent && !acc.includes(navigationParent)
+			? [...acc, navigationParent]
+			: acc;
+	}, []);
 
 	return rootElements
-		.map((path) => toSectionItem(path, elements))
+		.map(path => toSectionItem(path, elements, parentPaths))
 		.sort(sortByOrderAndTitle);
 };
 
