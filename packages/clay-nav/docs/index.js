@@ -7,7 +7,7 @@ import Editor from '$clayui.com/src/components/Editor';
 import ClayNav, {ClayVerticalNav} from '@clayui/nav';
 import React from 'react';
 
-const navigationImports = `import {ClayNav} from '@clayui/nav';`;
+const navigationImports = `import ClayNav from '@clayui/nav';`;
 
 const navigationCode = `const Component = () => (
 	<ClayNav>
