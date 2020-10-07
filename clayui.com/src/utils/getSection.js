@@ -20,6 +20,10 @@ const sortByOrderAndTitle = (a, b) => {
 	}
 };
 
+const navigationRelationships = {
+	'/docs/components/form.html': [],
+};
+
 const toSectionElements = (
 	slug,
 	pathname,
@@ -38,7 +42,6 @@ const toSectionElements = (
 	const link = `/${slug}`;
 	const parentLink = `/${slug.substring(0, slug.lastIndexOf('/') + 1)}`;
 	const isFolder = lastSlug === 'index';
-	const isFormFolder = lastSlug === 'form';
 	const isRoot =
 		(slugs.length === 3 && isFolder) || (slugs.length === 2 && !isFolder);
 
@@ -48,7 +51,6 @@ const toSectionElements = (
 		id,
 		indexVisible,
 		isFolder,
-		isFormFolder,
 		isRoot,
 		link,
 		navigationParent,
@@ -60,8 +62,14 @@ const toSectionElements = (
 };
 
 const toSectionItem = (item, paths) => {
-	if (item.isFormFolder) {
-		item.isFolder = true;
+	const isParentPackage = Object.keys(navigationRelationships).includes(
+		`/${item.pathname}`
+	);
+
+	if (item.navigationParent) {
+		navigationRelationships[item.navigationParent].push(
+			`/${item.pathname}`
+		);
 	}
 
 	if (item.isFolder) {
@@ -75,14 +83,14 @@ const toSectionItem = (item, paths) => {
 			.filter((path) => !path.navigationParent)
 			.map((path) => toSectionItem(path, paths))
 			.sort(sortByOrderAndTitle);
+	}
 
-		if (item.isFormFolder) {
-			item.items = paths
-				.filter((path) => path.navigationParent)
-				.filter((path) => path.link !== item.link)
-				.map((path) => toSectionItem(path, paths))
-				.sort(sortByOrderAndTitle);
-		}
+	if (isParentPackage) {
+		item.items = paths
+			.filter((path) => path.navigationParent)
+			.filter((path) => path.link !== item.link)
+			.map((path) => toSectionItem(path, paths))
+			.sort(sortByOrderAndTitle);
 	}
 
 	return item;
