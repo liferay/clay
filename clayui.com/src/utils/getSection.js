@@ -60,29 +60,29 @@ const toSectionElements = (
 const toSectionItem = (item, paths, parentPaths) => {
 	if (item.isFolder) {
 		item.items = paths
-			.filter(path => path.link !== item.link)
+			.filter((path) => path.link !== item.link)
 			.filter(
-				path =>
+				(path) =>
 					path.link ===
 					item.parentLink + path.id + (path.isFolder ? '/index' : '')
 			)
-			.filter(path => !path.navigationParent)
-			.map(path => toSectionItem(path, paths, parentPaths))
+			.filter((path) => !path.navigationParent)
+			.map((path) => toSectionItem(path, paths, parentPaths))
 			.sort(sortByOrderAndTitle);
 	}
 
 	if (parentPaths.includes(item.pathname)) {
 		item.items = paths
-			.filter(path => path.navigationParent === item.pathname)
-			.filter(path => path.link !== item.link)
-			.map(path => toSectionItem(path, paths, parentPaths))
+			.filter((path) => path.navigationParent === item.pathname)
+			.filter((path) => path.link !== item.link)
+			.map((path) => toSectionItem(path, paths, parentPaths))
 			.sort(sortByOrderAndTitle);
 	}
 
 	return item;
 };
 
-const getSection = data => {
+const getSection = (data) => {
 	const elements = data.map(({node}) => {
 		const {
 			fields: {
@@ -108,7 +108,7 @@ const getSection = data => {
 		);
 	});
 
-	const rootElements = elements.filter(path => path.isRoot);
+	const rootElements = elements.filter((path) => path.isRoot);
 
 	const parentPaths = elements.reduce((acc, {navigationParent}) => {
 		return navigationParent && !acc.includes(navigationParent)
@@ -117,7 +117,7 @@ const getSection = data => {
 	}, []);
 
 	return rootElements
-		.map(path => toSectionItem(path, elements, parentPaths))
+		.map((path) => toSectionItem(path, elements, parentPaths))
 		.sort(sortByOrderAndTitle);
 };
 
