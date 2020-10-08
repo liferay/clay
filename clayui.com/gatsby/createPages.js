@@ -154,6 +154,7 @@ module.exports = async ({actions, graphql}) => {
 					node {
 						fields {
 							layout
+							navigationParent
 							nightly
 							redirect
 							redirectFrom

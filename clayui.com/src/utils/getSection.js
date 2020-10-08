@@ -27,6 +27,7 @@ const toSectionElements = (
 	order,
 	alwaysActive,
 	draft,
+	navigationParent,
 	indexVisible
 ) => {
 	const slugs = slug.split('/');
@@ -48,6 +49,7 @@ const toSectionElements = (
 		isFolder,
 		isRoot,
 		link,
+		navigationParent,
 		order,
 		parentLink,
 		pathname,
@@ -55,7 +57,7 @@ const toSectionElements = (
 	};
 };
 
-const toSectionItem = (item, paths) => {
+const toSectionItem = (item, paths, parentPaths) => {
 	if (item.isFolder) {
 		item.items = paths
 			.filter((path) => path.link !== item.link)
@@ -64,7 +66,16 @@ const toSectionItem = (item, paths) => {
 					path.link ===
 					item.parentLink + path.id + (path.isFolder ? '/index' : '')
 			)
-			.map((path) => toSectionItem(path, paths))
+			.filter((path) => !path.navigationParent)
+			.map((path) => toSectionItem(path, paths, parentPaths))
+			.sort(sortByOrderAndTitle);
+	}
+
+	if (parentPaths.includes(item.pathname)) {
+		item.items = paths
+			.filter((path) => path.navigationParent === item.pathname)
+			.filter((path) => path.link !== item.link)
+			.map((path) => toSectionItem(path, paths, parentPaths))
 			.sort(sortByOrderAndTitle);
 	}
 
@@ -74,7 +85,15 @@ const toSectionItem = (item, paths) => {
 const getSection = (data) => {
 	const elements = data.map(({node}) => {
 		const {
-			fields: {alwaysActive, draft, indexVisible, order, slug, title},
+			fields: {
+				alwaysActive,
+				draft,
+				indexVisible,
+				navigationParent,
+				order,
+				slug,
+				title,
+			},
 		} = node;
 
 		return toSectionElements(
@@ -84,14 +103,21 @@ const getSection = (data) => {
 			order,
 			alwaysActive,
 			draft,
+			navigationParent,
 			indexVisible
 		);
 	});
 
 	const rootElements = elements.filter((path) => path.isRoot);
 
+	const parentPaths = elements.reduce((acc, {navigationParent}) => {
+		return navigationParent && !acc.includes(navigationParent)
+			? [...acc, navigationParent]
+			: acc;
+	}, []);
+
 	return rootElements
-		.map((path) => toSectionItem(path, elements))
+		.map((path) => toSectionItem(path, elements, parentPaths))
 		.sort(sortByOrderAndTitle);
 };
 

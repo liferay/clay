@@ -32,6 +32,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			layout,
 			lexiconDefinition = '',
 			mainTabURL,
+			navigationParent,
 			nightly,
 			order,
 			packageNpm,
@@ -228,6 +229,12 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			name: 'mainTabURL',
 			node,
 			value: mainTabURL || '',
+		});
+
+		createNodeField({
+			name: 'navigationParent',
+			node,
+			value: navigationParent || '',
 		});
 
 		createNodeField({
