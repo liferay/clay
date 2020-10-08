@@ -104,9 +104,9 @@ const Legend = React.forwardRef(
 
 Legend.displayName = 'Legend';
 
-const XAxis: React.FunctionComponent<React.ComponentProps<typeof ReXAxis>> = (
-	props: React.ComponentProps<typeof ReXAxis>
-) => null;
+const XAxis: React.FunctionComponent<React.ComponentProps<
+	typeof ReXAxis
+>> = () => null;
 
 XAxis.defaultProps = {
 	...(ReXAxis as any).defaultProps,
@@ -116,9 +116,9 @@ XAxis.defaultProps = {
 };
 XAxis.displayName = 'XAxis';
 
-const YAxis: React.FunctionComponent<React.ComponentProps<typeof ReYAxis>> = (
-	props: React.ComponentProps<typeof ReYAxis>
-) => null;
+const YAxis: React.FunctionComponent<React.ComponentProps<
+	typeof ReYAxis
+>> = () => null;
 
 YAxis.defaultProps = {
 	...(ReYAxis as any).defaultProps,

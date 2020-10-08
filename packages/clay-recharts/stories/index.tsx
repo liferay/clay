@@ -124,7 +124,7 @@ storiesOf('Components|ClayRecharts', module)
 							['vertical', 'horizontal'],
 							'vertical'
 						)}
-						onMouseEnter={({dataKey}) => setActive(dataKey)}
+						onMouseEnter={({dataKey}: any) => setActive(dataKey)}
 						onMouseLeave={() => setActive('')}
 						verticalAlign={select(
 							'Legend Vertical Align',
@@ -197,7 +197,7 @@ storiesOf('Components|ClayRecharts', module)
 							['vertical', 'horizontal'],
 							'vertical'
 						)}
-						onMouseEnter={({dataKey}) => setActive(dataKey)}
+						onMouseEnter={({dataKey}: any) => setActive(dataKey)}
 						onMouseLeave={() => setActive('')}
 						verticalAlign={select(
 							'Legend Vertical Align',
@@ -333,7 +333,7 @@ storiesOf('Components|ClayRecharts', module)
 							['vertical', 'horizontal'],
 							'horizontal'
 						)}
-						onMouseEnter={({value}) => setActive(value)}
+						onMouseEnter={({value}: any) => setActive(value)}
 						onMouseLeave={() => setActive('')}
 						verticalAlign={select(
 							'Legend Vertical Align',
@@ -394,7 +394,7 @@ storiesOf('Components|ClayRecharts', module)
 							['vertical', 'horizontal'],
 							'horizontal'
 						)}
-						onMouseEnter={({value}) => setActive(value)}
+						onMouseEnter={({value}: any) => setActive(value)}
 						onMouseLeave={() => setActive('')}
 						verticalAlign={select(
 							'Legend Vertical Align',
