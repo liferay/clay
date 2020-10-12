@@ -12,6 +12,7 @@ import {Link, graphql} from 'gatsby';
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
 import React, {useEffect} from 'react';
 import Helmet from 'react-helmet';
+import svg4everybody from 'svg4everybody';
 
 import CodeClipboard from '../components/CodeClipboard';
 import CodeToggle from '../components/CodeToggle';
@@ -162,6 +163,12 @@ export default (props) => {
 	};
 
 	const title = `${frontmatter.title} - Clay`;
+
+	React.useEffect(() => {
+		svg4everybody({
+			polyfill: true,
+		});
+	}, []);
 
 	useEffect(() => {
 		const hash = window.location.hash;
