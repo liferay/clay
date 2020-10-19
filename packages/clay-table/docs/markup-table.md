@@ -349,6 +349,162 @@ A table is styled like a list. The active state can be invoked by adding class `
 
 ## Variants(#css-variants)
 
+### Sticky Header
+
+Use `.sticky-head` on your table that has a fixed height and `overflow: auto;` to have the table header stick to the top of the table on scroll.
+
+<div class="sheet-example">
+    <div style="height: 200px; overflow: auto;">
+        <table class="table sticky-head">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Purchasing Power Parity</th>
+                    <th>Official Exchange Rate</th>
+                    <th>Real Growth Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Afganistan</a>
+                        </div>
+                    </td>
+                    <td>$45.3 billion</td>
+                    <td>$20.65 billion</td>
+                    <td>3.1%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Brazil</a>
+                        </div>
+                    </td>
+                    <td>$2.416 trillion</td>
+                    <td>$2.19 trillion</td>
+                    <td>2.3%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Congo, Democratic Republic of the</a>
+                        </div>
+                    </td>
+                    <td>$29.39 billion</td>
+                    <td>$18.56 billion</td>
+                    <td>6.2%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Spain</a>
+                        </div>
+                    </td>
+                    <td>$1.389 trillion</td>
+                    <td>$1.356 trillion</td>
+                    <td>-1.3%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Spain</a>
+                        </div>
+                    </td>
+                    <td>$1.389 trillion</td>
+                    <td>$1.356 trillion</td>
+                    <td>-1.3%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Spain</a>
+                        </div>
+                    </td>
+                    <td>$1.389 trillion</td>
+                    <td>$1.356 trillion</td>
+                    <td>-1.3%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Spain</a>
+                        </div>
+                    </td>
+                    <td>$1.389 trillion</td>
+                    <td>$1.356 trillion</td>
+                    <td>-1.3%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-title">
+                            <a href="#1">Spain</a>
+                        </div>
+                    </td>
+                    <td>$1.389 trillion</td>
+                    <td>$1.356 trillion</td>
+                    <td>-1.3%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+```html
+<table class="table sticky-header">
+	<thead>
+		<tr>
+			<th>Country</th>
+			<th>Purchasing Power Parity</th>
+			<th>Official Exchange Rate</th>
+			<th>Real Growth Rate</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<div class="table-title">
+					<a href="#1">Afganistan</a>
+				</div>
+			</td>
+			<td>$45.3 billion</td>
+			<td>$20.65 billion</td>
+			<td>3.1%</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="table-title">
+					<a href="#1">Brazil</a>
+				</div>
+			</td>
+			<td>$2.416 trillion</td>
+			<td>$2.19 trillion</td>
+			<td>2.3%</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="table-title">
+					<a href="#1">Congo, Democratic Republic of the</a>
+				</div>
+			</td>
+			<td>$29.39 billion</td>
+			<td>$18.56 billion</td>
+			<td>6.2%</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="table-title">
+					<a href="#1">Spain</a>
+				</div>
+			</td>
+			<td>$1.389 trillion</td>
+			<td>$1.356 trillion</td>
+			<td>-1.3%</td>
+		</tr>
+	</tbody>
+</table>
+```
+
 ### Striped(#css-striped)
 
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.

@@ -64,6 +64,11 @@ interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	responsiveSize?: ResposiveSizeType;
 
 	/**
+	 * Flag to indicate if header should be sticky on scroll
+	 */
+	stickyHead?: boolean;
+
+	/**
 	 * Applies a Striped style on Table.
 	 */
 	striped?: boolean;
@@ -89,6 +94,7 @@ const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
 			noWrap,
 			responsive = true,
 			responsiveSize,
+			stickyHead = false,
 			striped,
 			tableVerticalAlignment,
 			...otherProps
@@ -108,15 +114,16 @@ const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
 						'table table-autofit',
 						{
 							'show-quick-actions-on-hover': hover,
+							'sticky-head': stickyHead,
 							'table-bordered': borderedColumns,
 							'table-heading-nowrap': headingNoWrap,
 							'table-hover': hover,
 							'table-list': !borderless,
 							'table-nowrap': noWrap,
 							'table-striped': striped,
+							[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
 							[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
 							[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
-							[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
 						},
 						className
 					)}

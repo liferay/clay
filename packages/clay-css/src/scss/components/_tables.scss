@@ -28,6 +28,16 @@ th {
 	margin-bottom: $table-margin-bottom;
 	width: 100%;
 
+	&.sticky-head {
+		position: relative;
+
+		thead th {
+			z-index: 1;
+			position: sticky;
+			top: 0;
+		}
+	}
+
 	thead {
 		td,
 		th {
