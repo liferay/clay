@@ -166,7 +166,7 @@ section: Components
 							<li>
 								<div class="dropdown-item">
 									<a class="dropdown-item-indicator-text-end" href="#1">Document</a>
-									<button class="btn btn-unstyled dropdown-item-indicator-end" data-drilldown="next" data-target="#_s950dwymf" role="button">
+									<button class="btn btn-unstyled dropdown-item-indicator-end" data-drilldown="next" data-target="#_s950dwymf" type="button">
 										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 										</svg>
@@ -295,19 +295,26 @@ section: Components
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" data-drilldown="next" href="#_tggascnpo" role="button">
-									<span class="dropdown-item-indicator-start">
-										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
-										</svg>
-									</span>
-									<span class="dropdown-item-indicator-text-end">Lexicon</span>
-									<span class="dropdown-item-indicator-end">
+								<div class="dropdown-item">
+									<a class="dropdown-item-indicator-text-end" href="#1" role="button">
+										<span class="dropdown-item-indicator-start">
+											<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+											</svg>
+										</span>
+										<span>Lexicon</span>
+										<span class="dropdown-item-indicator-end">
+											<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+											</svg>
+										</span>
+									</a>
+									<button class="btn btn-unstyled dropdown-item-indicator-end" data-drilldown="next" href="#_tggascnpo" type="button">
 										<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
 										</svg>
-									</span>
-								</a>
+									</button>
+								</div>
 							</li>
 							<li>
 								<a class="dropdown-item" href="#1">

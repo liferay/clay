@@ -139,7 +139,14 @@ $drilldown-dropdown-item-indicator-end: map-merge(
 $drilldown-dropdown-item-indicator-text-end: () !default;
 $drilldown-dropdown-item-indicator-text-end: map-merge(
 	(
+		margin-bottom: -0.59375rem,
+		margin-left: -1rem,
+		margin-top: -0.59375rem,
+		padding-bottom: inherit,
+		padding-left: inherit,
 		padding-right: 2rem,
+		padding-top: inherit,
+		width: auto,
 	),
 	$drilldown-dropdown-item-indicator-text-end
 );
