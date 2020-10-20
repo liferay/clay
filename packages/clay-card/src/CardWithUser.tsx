@@ -80,6 +80,11 @@ interface IProps {
 	 * Path to the user's image
 	 */
 	userImageSrc?: string;
+
+	/**
+	 * Icon name to use for user avatar
+	 */
+	userSymbol?: string;
 }
 
 export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
@@ -96,6 +101,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	spritemap,
 	userDisplayType,
 	userImageSrc,
+	userSymbol = 'user',
 }: IProps) => {
 	const content = (
 		<div className="aspect-ratio-item-center-middle card-type-asset-icon">
@@ -112,7 +118,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 					/>
 				)}
 				{!userImageSrc && (
-					<ClayIcon spritemap={spritemap} symbol="user" />
+					<ClayIcon spritemap={spritemap} symbol={userSymbol} />
 				)}
 			</ClaySticker>
 		</div>
