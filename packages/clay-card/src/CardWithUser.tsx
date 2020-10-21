@@ -77,9 +77,19 @@ interface IProps {
 	userDisplayType?: StickerDisplayType;
 
 	/**
+	 * Value for alt attribute for user image
+	 */
+	userImageAlt?: string;
+
+	/**
 	 * Path to the user's image
 	 */
 	userImageSrc?: string;
+
+	/**
+	 * Icon name to use for user avatar
+	 */
+	userSymbol?: string;
 }
 
 export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
@@ -94,8 +104,10 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	onSelectChange,
 	selected = false,
 	spritemap,
+	userImageAlt = 'thumbnail',
 	userDisplayType,
 	userImageSrc,
+	userSymbol = 'user',
 }: IProps) => {
 	const content = (
 		<div className="aspect-ratio-item-center-middle card-type-asset-icon">
@@ -106,13 +118,13 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 			>
 				{userImageSrc && (
 					<img
-						alt="thumbnail"
+						alt={userImageAlt}
 						className="aspect-ratio-item-fluid"
 						src={userImageSrc}
 					/>
 				)}
 				{!userImageSrc && (
-					<ClayIcon spritemap={spritemap} symbol="user" />
+					<ClayIcon spritemap={spritemap} symbol={userSymbol} />
 				)}
 			</ClaySticker>
 		</div>
