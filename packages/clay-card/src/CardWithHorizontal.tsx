@@ -16,6 +16,11 @@ interface IProps {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
+	 * Props to add to the checkbox element
+	 */
+	checkboxProps?: React.HTMLAttributes<HTMLInputElement>;
+
+	/**
 	 * Flag to indicate that all interactions on the card will be disabled.
 	 */
 	disabled?: boolean;
@@ -58,6 +63,7 @@ interface IProps {
 
 export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	actions,
+	checkboxProps = {},
 	disabled,
 	dropDownTriggerProps = {},
 	href,
@@ -114,6 +120,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 		<ClayCard horizontal selectable={!!onSelectChange}>
 			{onSelectChange && (
 				<ClayCheckbox
+					{...checkboxProps}
 					checked={selected}
 					disabled={disabled}
 					onChange={() => onSelectChange(!selected)}
