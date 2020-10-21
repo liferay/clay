@@ -21,6 +21,11 @@ interface IProps {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
+	 * Props to add to the checkbox element
+	 */
+	checkboxProps?: React.HTMLAttributes<HTMLInputElement>;
+
+	/**
 	 * Description of the file
 	 */
 	description?: React.ReactText;
@@ -100,6 +105,7 @@ interface IProps {
 
 export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	actions,
+	checkboxProps = {},
 	description,
 	disabled,
 	dropDownTriggerProps = {},
@@ -161,6 +167,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 		>
 			{onSelectChange && (
 				<ClayCheckbox
+					{...checkboxProps}
 					checked={selected}
 					disabled={disabled}
 					onChange={() => onSelectChange(!selected)}
