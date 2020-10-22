@@ -13,7 +13,7 @@ import React from 'react';
 
 import ClayCard from './Card';
 
-interface IProps {
+interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * List of actions in the dropdown menu
 	 */
@@ -108,6 +108,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	userDisplayType,
 	userImageSrc,
 	userSymbol = 'user',
+	...otherProps
 }: IProps) => {
 	const content = (
 		<div className="aspect-ratio-item-center-middle card-type-asset-icon">
@@ -131,7 +132,11 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	);
 
 	return (
-		<ClayCard displayType="user" selectable={!!onSelectChange}>
+		<ClayCard
+			{...otherProps}
+			displayType="user"
+			selectable={!!onSelectChange}
+		>
 			<ClayCard.AspectRatio className="card-item-first">
 				{onSelectChange && (
 					<ClayCheckbox

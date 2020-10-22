@@ -12,7 +12,7 @@ import React from 'react';
 
 import ClayCard from './Card';
 
-interface IProps {
+interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
 	/**
@@ -72,6 +72,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	spritemap,
 	symbol = 'folder',
 	title,
+	...otherProps
 }: IProps) => {
 	const content = (
 		<ClayCard.Body>
@@ -117,7 +118,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	);
 
 	return (
-		<ClayCard horizontal selectable={!!onSelectChange}>
+		<ClayCard {...otherProps} horizontal selectable={!!onSelectChange}>
 			{onSelectChange && (
 				<ClayCheckbox
 					{...checkboxProps}

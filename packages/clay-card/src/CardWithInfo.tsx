@@ -14,7 +14,7 @@ import React from 'react';
 
 import ClayCard from './Card';
 
-interface IProps {
+interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * List of actions in the dropdown menu
 	 */
@@ -120,6 +120,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	stickerProps,
 	symbol = 'documents-and-media',
 	title,
+	...otherProps
 }: IProps) => {
 	const headerContent = (
 		<ClayCard.AspectRatio className="card-item-first">
@@ -162,6 +163,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 
 	return (
 		<ClayCard
+			{...otherProps}
 			displayType={imgProps ? 'image' : 'file'}
 			selectable={!!onSelectChange}
 		>
