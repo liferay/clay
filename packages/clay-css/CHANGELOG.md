@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.19.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.18.2...@clayui/css@3.19.0) (2020-10-22)
+
+
+### Bug Fixes
+
+* **@clayui/css:** `drilldown-item-indicator-text-*` click area should be larger ([bc53c65](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bc53c65)), closes [#3579](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3579)
+* **@clayui/css:** Atlas fix custom radio button image, inline radio misaligned in Chrome ([ef1fc95](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ef1fc95))
+
+
+### Features
+
+* **@clayui/css:** SVG Icons adds shield-check ([5c1760c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5c1760c)), closes [#3755](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3755)
+
+
+
+
+
 ## [3.18.2](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.18.1...@clayui/css@3.18.2) (2020-10-01)
 
 

@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "clayui.com",
-	"version": "3.6.0",
+	"version": "3.7.0",
 	"license": "MIT",
 	"scripts": {
 		"copy:clay-css": "yarn copy:clay-css-js && yarn copy:clay-css-site-images && yarn copy:clay-css-images",
@@ -16,10 +16,10 @@
 		"@clayui/autocomplete": "^3.2.0",
 		"@clayui/breadcrumb": "^3.3.0",
 		"@clayui/button": "^3.5.0",
-		"@clayui/card": "^3.4.0",
+		"@clayui/card": "^3.5.0",
 		"@clayui/charts": "^3.2.0",
 		"@clayui/color-picker": "^3.4.0",
-		"@clayui/css": "^3.18.2",
+		"@clayui/css": "^3.19.0",
 		"@clayui/data-provider": "^3.3.5",
 		"@clayui/date-picker": "^3.6.0",
 		"@clayui/drop-down": "^3.8.0",

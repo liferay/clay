@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/liferay/clay/compare/@clayui/card@3.4.0...@clayui/card@3.5.0) (2020-10-22)
+
+### Bug Fixes
+
+-   **@clayui/card:** make alt attribute configurable ([8cf0551](https://github.com/liferay/clay/commit/8cf0551))
+
+### Features
+
+-   **@clayui/card:** add ability to change symbol for user icon ([057f497](https://github.com/liferay/clay/commit/057f497))
+-   **@clayui/card:** add API to pass props to the checkbox ([bad0491](https://github.com/liferay/clay/commit/bad0491))
+-   **@clayui/card:** add support for base HTMLDivElement and HTMLAnchorElement props in high-level components ([9b1a24b](https://github.com/liferay/clay/commit/9b1a24b))
+
 # [3.4.0](https://github.com/liferay/clay/compare/@clayui/card@3.3.4...@clayui/card@3.4.0) (2020-10-01)
 
 ### Features

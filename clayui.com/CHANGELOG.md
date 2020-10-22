@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.6.0...clayui.com@3.7.0) (2020-10-22)
+
+### Bug Fixes
+
+-   **@clayui/icon:** Add svg4everybody to docs template to speed up Icon page loading time ([62130f3](https://github.com/bryceosterhaus/clay/commit/62130f3))
+
+### Features
+
+-   **clayui.com:** Consume formPackageMember, put those packages under Form, and make Form a folder that's always open ([bc7bd95](https://github.com/bryceosterhaus/clay/commit/bc7bd95))
+-   **clayui.com:** Generalize navigation section generation for parent packages ([628926b](https://github.com/bryceosterhaus/clay/commit/628926b))
+-   **clayui.com:** Request formPackageMember from Gatsby and send it to where it needs to go ([caeb9dc](https://github.com/bryceosterhaus/clay/commit/caeb9dc))
+-   **clayui.com:** update logic for handling navigation ([8186ed0](https://github.com/bryceosterhaus/clay/commit/8186ed0))
+
 # [3.6.0](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.5.1...clayui.com@3.6.0) (2020-10-01)
 
 ### Bug Fixes
