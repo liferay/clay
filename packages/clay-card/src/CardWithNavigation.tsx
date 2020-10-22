@@ -11,7 +11,8 @@ import React from 'react';
 
 import ClayCard from './Card';
 
-interface IProps {
+interface IProps
+	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
 	children?: React.ReactNode;
 
 	/**
@@ -52,7 +53,7 @@ interface IProps {
 	/**
 	 * Value displayed for the card's title
 	 */
-	title?: React.ReactText;
+	title?: string;
 }
 
 const noop = () => {};
@@ -67,9 +68,11 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 	onKeyDown = noop,
 	spritemap,
 	title,
+	...otherProps
 }: IProps) => {
 	return (
 		<ClayCard
+			{...otherProps}
 			horizontal={horizontal}
 			href={href}
 			interactive
