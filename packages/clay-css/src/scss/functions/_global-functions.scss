@@ -219,6 +219,61 @@
 	@return null;
 }
 
+/// A Bootstrap 4 function that warns the user if values in key value pairs are not in ascending order. Used to evaluate Sass maps `$grid-breakpoints` and `$container-max-widths`.
+/// @param {Map} $map - The map to evaluate
+/// @param {String} $map-name - The name of the map
+
+@mixin _assert-ascending($map, $map-name) {
+	$prev-key: null;
+	$prev-num: null;
+
+	@each $key, $num in $map {
+		@if $prev-num == null or unit($num) == '%' or unit($prev-num) == '%' {
+			// Do nothing
+		} @else if not comparable($prev-num, $num) {
+			@warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+		} @else if $prev-num >= $num {
+			@warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+		}
+
+		$prev-key: $key;
+		$prev-num: $num;
+	}
+}
+
+/// A Bootstrap 4 function that warns the user if the first value in a Sass map is not 0. Used to evalute the Sass map `$grid-breakpoints`.
+/// @param {Map} $map - The map to evaluate
+/// @param {String} $map-name['$grid-breakpoints'] - The name of the map
+
+@mixin _assert-starts-at-zero($map, $map-name: '$grid-breakpoints') {
+	$values: map-values($map);
+
+	$first-value: nth($values, 1);
+
+	@if $first-value != 0 {
+		@warn "First breakpoint in #{$map-name} must start at 0, but starts at #{$first-value}.";
+	}
+}
+
+/// A Bootstrap 4 function that returns the name of the next breakpoint relative to the breakpoint passed in through `$name` in the Sass map `$grid-breakpoints`. If the breakpoint does not exist in the Sass map, it returns the first breakpoint key.
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+/// @param {List} $breakpoint-names[map-keys($breakpoints)] - A list of all the keys in $breakpoints
+
+@function breakpoint-next(
+	$name,
+	$breakpoints: $grid-breakpoints,
+	$breakpoint-names: map-keys($breakpoints)
+) {
+	$n: index($breakpoint-names, $name);
+
+	@return if(
+		$n != null and $n < length($breakpoint-names),
+		nth($breakpoint-names, $n + 1),
+		null
+	);
+}
+
 /// A function that returns the name of the previous breakpoint relative to the breakpoint passed in through `$name` in the Sass map `$grid-breakpoints`. If the breakpoint does not exist in the Sass map, it returns the first breakpoint key.
 /// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
@@ -238,6 +293,164 @@
 	@return nth($breakpoint-names, 1);
 }
 
+/// A Bootstrap 4 function that returns the minimum breakpoint width; returns `null` for the first breakpoint.
+/// >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)) => 576px
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+
+	@return if($min != 0, $min, null);
+}
+
+/// A Bootstrap 4 function that returns the maximum breakpoint width; returns `null` for the last breakpoint. Maximum breakpoint width. Null for the largest (last) breakpoint. The maximum value is calculated as the minimum of the next one less 0.02px to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
+/// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+/// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+/// See https://bugs.webkit.org/show_bug.cgi?id=178261
+/// >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)) => 767.98px
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+	$next: breakpoint-next($name, $breakpoints);
+
+	@return if($next, breakpoint-min($next, $breakpoints) - 0.02, null);
+}
+
+/// A Bootstrap 4 function that returns a blank string if smallest breakpoint,
+/// otherwise returns the name with a dash in front.
+/// >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)) => ''  (Returns a blank string)
+/// >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)) => '-sm'
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+	@return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
+}
+
+/// A Bootstrap 4 function that converts a color into the YIQ color space and returns 1 of 2 colors depending on `$yiq-contrasted-threshold`. This is a quick way to meet WCAG 2.0 contrast requirements.
+/// @param {Color} $color - The color to convert
+/// @param {Color} $dark[$yiq-text-dark] - The color to return if `$color` >= `$yiq-contrasted-threshold`
+/// @param {Color} $light[$yiq-text-light] - The color to return if `$color` < `$yiq-contrasted-threshold`
+
+@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
+	$r: red($color);
+	$g: green($color);
+	$b: blue($color);
+
+	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+	@if ($yiq >= $yiq-contrasted-threshold) {
+		@return $dark;
+	} @else {
+		@return $light;
+	}
+}
+
+/// A Bootstrap 4 function that returns a value inside the `$colors` Sass map.
+/// @deprecated just use `map-get($colors, 'blue')`
+/// @param {String} $key['blue'] - The name of the color
+
+@function color($key: 'blue') {
+	@return map-get($colors, $key);
+}
+
+/// A Bootstrap 4 function that returns a value inside the `$theme-colors` Sass map.
+/// @deprecated just use `map-get($theme-colors, 'primary')`
+/// @param {String} $key['primary'] - The name of the color
+
+@function theme-color($key: 'primary') {
+	@return map-get($theme-colors, $key);
+}
+
+/// A Bootstrap 4 function that returns a value inside the `$grays` Sass map.
+/// @deprecated just use `map-get($grays, '100')`
+/// @param {String} $key['100'] - The name of the color
+
+@function gray($key: '100') {
+	@return map-get($grays, $key);
+}
+
+/// A Bootstrap 4 function that returns a lighter or darker color based on `$theme-colors` and an arbitrary scale `$level`.
+/// @deprecated not useful unless you don't care about colors and just want something lighter or darker
+/// @param {String} $color-name['primary'] - A key in the Sass map `$theme-colors`
+/// @param {Number} $level[0]
+
+@function theme-color-level($color-name: 'primary', $level: 0) {
+	$color: theme-color($color-name);
+	$color-base: if($level > 0, $black, $white);
+	$level: abs($level);
+
+	@return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+/// A Bootstrap 4 function that returns a CSS `calc` addition expression. This is their workaround for returning a valid calc value with `null` variables.
+/// @deprecated Clay CSS allows customizing of any CSS property. If the output isn't a valid `calc` value, just replace the property with a `calc` value that works.
+/// @param {Number} $value1 - The first value
+/// @param {Number} $value2 - The second value
+/// @param {Bool} $return-calc[true] - Use `false` to return without the `calc()` wrapper
+
+@function add($value1, $value2, $return-calc: true) {
+	@if $value1 == null {
+		@return $value2;
+	}
+
+	@if $value2 == null {
+		@return $value1;
+	}
+
+	@if type-of($value1) ==
+		number and
+		type-of($value2) ==
+		number and
+		comparable($value1, $value2)
+	{
+		@return $value1 + $value2;
+	}
+
+	@return if(
+		$return-calc == true,
+		calc(#{$value1} + #{$value2}),
+		$value1 + unquote(' + ') + $value2
+	);
+}
+
+/// A Bootstrap 4 function that returns a CSS `calc` subtraction expression. This is their workaround for returning a valid calc value with `null` variables.
+/// @deprecated Clay CSS allows customizing of any CSS property. If the output isn't a valid `calc` value, just replace the property with a `calc` value that works.
+/// @param {Number} $value1 - The first value
+/// @param {Number} $value2 - The second value
+/// @param {Bool} $return-calc[true] - Use `false` to return without the `calc()` wrapper
+
+@function subtract($value1, $value2, $return-calc: true) {
+	@if $value1 == null and $value2 == null {
+		@return null;
+	}
+
+	@if $value1 == null {
+		@return -$value2;
+	}
+
+	@if $value2 == null {
+		@return $value1;
+	}
+
+	@if type-of($value1) ==
+		number and
+		type-of($value2) ==
+		number and
+		comparable($value1, $value2)
+	{
+		@return $value1 - $value2;
+	}
+
+	@return if(
+		$return-calc == true,
+		calc(#{$value1} - #{$value2}),
+		$value1 + unquote(' - ') + $value2
+	);
+}
+
 /// A function that returns the largest of two numbers. This returns `null` if either number is `null`.
 /// @param {Number} $val1 - The first number.
 /// @param {Number} $val2 - The second number.
@@ -250,11 +463,18 @@
 	@return max($val1, $val2);
 }
 
+// * REUSE-Snippet-Begin
+// * SPDX-License-Identifier: MIT
+// * SPDX-FileCopyrightText: © 2016 Hugo Giraudel <https://hugogiraudel.com/>
+// *
+
 /// A function to replace all instances of a specific character in a string.
+/// @author Hugo Giraudel
+/// @link https://www.sassmeister.com/gist/1b4f2da5527830088e4d
+/// @link http://codepen.io/jakob-e/pen/doMoML
 /// @param {String} $string - The string to operate on
 /// @param {String} $search - The character to replace
 /// @param {String} $replace[''] - The character to replace `$search` with
-/// @link http://codepen.io/jakob-e/pen/doMoML
 
 @function clay-str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
@@ -271,6 +491,24 @@
 
 	@return $string;
 }
+
+/// Bootstrap 4's `str-replace` function that is mapped to `clay-str-replace`, use that instead.
+/// @author Hugo Giraudel
+/// @link https://www.sassmeister.com/gist/1b4f2da5527830088e4d
+/// @param {String} $string - The string to operate on
+/// @param {String} $search - The character to replace
+/// @param {String} $replace[''] - The character to replace `$search` with
+
+@function str-replace($string, $search, $replace: '') {
+	@return clay-str-replace($string, $search, $replace);
+}
+
+// * REUSE-Snippet-End
+
+// * REUSE-Snippet-Begin
+// * SPDX-License-Identifier: MIT
+// * SPDX-FileCopyrightText: © 2018 Jakob Eriksen <http://codepen.io/jakob-e/pen/doMoML>
+// *
 
 /// A function to encode an SVG and provide back a data URI to be used in `background-image`. If the SVG uses double quotes to delimit attribute names and values, wrap the SVG in single quotes or vice versa.
 /// @param {String} $svg - The SVG markup to encode
@@ -302,6 +540,25 @@
 
 	@return url('data:image/svg+xml;charset=utf8,#{$encoded}');
 }
+
+// * REUSE-Snippet-End
+
+// * REUSE-Snippet-Begin
+// * SPDX-License-Identifier: MIT
+// * SPDX-FileCopyrightText: © 2018 Kevin Weber <https://codepen.io/kevinweber/pen/dXWoRw>
+// *
+
+@function escape-svg($string) {
+	@if str-index($string, 'data:image/svg+xml') {
+		@each $char, $encoded in $escaped-characters {
+			$string: str-replace($string, $char, $encoded);
+		}
+	}
+
+	@return $string;
+}
+
+// * REUSE-Snippet-End
 
 /// A function that returns a specific Lexicon Icon with a specific color as a data URI to be used in `background-image`.
 /// @param {String} $name - The Lexicon Icon name (e.g., angle-right)

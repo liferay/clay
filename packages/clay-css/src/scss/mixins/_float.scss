@@ -1,0 +1,30 @@
+////
+/// @group float
+////
+
+/// Bootstrap 4's Float Left Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin float-left() {
+	float: left !important;
+
+	@include deprecate('The `float-left` mixin', 'Clay 3.16.0', 'Clay 4');
+}
+
+/// Bootstrap 4's Float Right Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin float-right() {
+	float: right !important;
+
+	@include deprecate('The `float-right` mixin', 'Clay 3.16.0', 'Clay 4');
+}
+
+/// Bootstrap 4's Float None Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin float-none() {
+	float: none !important;
+
+	@include deprecate('The `float-none` mixin', 'Clay 3.16.0', 'Clay 4');
+}

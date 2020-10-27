@@ -2,6 +2,40 @@
 /// @group listGroup
 ////
 
+/// A Bootstrap 4 mixin for removing symbols from list elements.
+
+@mixin list-unstyled() {
+	list-style: none;
+	padding-left: 0;
+}
+
+/// A Bootstrap 4 Mixin for creating `.list-group-item-{state}` variants.
+/// @deprecated
+/// @param {String} $state - The state name
+/// @param {Color} $background - The `background-color`
+/// @param {Color} $color - The text color
+
+@mixin list-group-item-variant($state, $background, $color) {
+	.list-group-item-#{$state} {
+		background-color: $background;
+		color: $color;
+
+		&.list-group-item-action {
+			&:hover,
+			&:focus {
+				background-color: darken($background, 5%);
+				color: $color;
+			}
+
+			&.active {
+				background-color: $color;
+				border-color: $color;
+				color: $white;
+			}
+		}
+	}
+}
+
 /// A mixin for creating `.list-group-notification .list-group-item` variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example

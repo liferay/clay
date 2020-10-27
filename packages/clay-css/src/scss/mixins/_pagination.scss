@@ -1,0 +1,37 @@
+////
+/// @group pagination
+////
+
+/// A Bootstrap 4 mixin for generating larger or smaller pagination component.
+/// @param {Number} $padding-y
+/// @param {Number} $padding-x
+/// @param {Number} $font-size
+/// @param {Number} $line-height
+/// @param {Number} $border-radius
+
+@mixin pagination-size(
+	$padding-y,
+	$padding-x,
+	$font-size,
+	$line-height,
+	$border-radius
+) {
+	.page-link {
+		font-size: $font-size;
+		line-height: $line-height;
+		padding: $padding-y $padding-x;
+	}
+
+	.page-item {
+		&:first-child {
+			.page-link {
+				@include border-left-radius($border-radius);
+			}
+		}
+		&:last-child {
+			.page-link {
+				@include border-right-radius($border-radius);
+			}
+		}
+	}
+}

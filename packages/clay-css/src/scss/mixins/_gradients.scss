@@ -1,0 +1,138 @@
+////
+/// @group Gradients
+////
+
+/// A Bootstrap 4 mixin that outputs a gradient if the setting `$enable-gradients` is `true`.
+/// @deprecated Mixins don't work inside variables, use the function `clay-enable-gradients()` instead.
+/// @param {Color} $color - The color to convert into a gradient
+
+@mixin gradient-bg($color) {
+	@if $enable-gradients {
+		background: $color
+			linear-gradient(180deg, mix($body-bg, $color, 15%), $color)
+			repeat-x;
+	} @else {
+		background-color: $color;
+	}
+}
+
+/// A Bootstrap 4 mixin that outputs a horizontal gradient (left to right). This creates two color stops, start and end, by specifying a color and position for each color stop.
+/// @param {Color} $start-color[$gray-700] - The starting color
+/// @param {Color} $end-color[$gray-800] - The ending color
+/// @param {Number} $start-percent
+/// @param {Number} $end-percent
+
+@mixin gradient-x(
+	$start-color: $gray-700,
+	$end-color: $gray-800,
+	$start-percent: 0%,
+	$end-percent: 100%
+) {
+	background-image: linear-gradient(
+		to right,
+		$start-color $start-percent,
+		$end-color $end-percent
+	);
+	background-repeat: repeat-x;
+}
+
+/// A Bootstrap 4 mixin that outputs a vertical gradient (top to bottom). This creates two color stops, start and end, by specifying a color and position for each color stop.
+/// @param {Color} $start-color[$gray-700] - The starting color
+/// @param {Color} $end-color[$gray-800] - The ending color
+/// @param {Number} $start-percent
+/// @param {Number} $end-percent
+
+@mixin gradient-y(
+	$start-color: $gray-700,
+	$end-color: $gray-800,
+	$start-percent: 0%,
+	$end-percent: 100%
+) {
+	background-image: linear-gradient(
+		to bottom,
+		$start-color $start-percent,
+		$end-color $end-percent
+	);
+	background-repeat: repeat-x;
+}
+
+/// A Bootstrap 4 mixin that outputs a directional gradient (left to right).
+/// @param {Color} $start-color[$gray-700] - The starting color
+/// @param {Color} $end-color[$gray-800] - The ending color
+/// @param {String} $deg[45deg] - The direction parameter of the CSS `linear-gradient` function (e.g., `to right`, `to bottom`, or `45deg`).
+
+@mixin gradient-directional(
+	$start-color: $gray-700,
+	$end-color: $gray-800,
+	$deg: 45deg
+) {
+	background-image: linear-gradient($deg, $start-color, $end-color);
+	background-repeat: repeat-x;
+}
+
+/// A Bootstrap 4 mixin that outputs a horizontal gradient (left to right). This creates three color stops, start, mid, and end, by specifying a color and position for each color stop.
+/// @param {Color} $start-color[$blue] - The starting color
+/// @param {Color} $mid-color[$purple] - The middle color
+/// @param {Number} $color-stop[50%]
+/// @param {Color} $end-color[$red] - The ending color
+
+@mixin gradient-x-three-colors(
+	$start-color: $blue,
+	$mid-color: $purple,
+	$color-stop: 50%,
+	$end-color: $red
+) {
+	background-image: linear-gradient(
+		to right,
+		$start-color,
+		$mid-color $color-stop,
+		$end-color
+	);
+	background-repeat: no-repeat;
+}
+
+/// A Bootstrap 4 mixin that outputs a vertical gradient (top to bottom). This creates three color stops, start, mid, and end, by specifying a color and position for each color stop.
+/// @param {Color} $start-color[$blue] - The starting color
+/// @param {Color} $mid-color[$purple] - The middle color
+/// @param {Number} $color-stop[50%]
+/// @param {Color} $end-color[$red] - The ending color
+
+@mixin gradient-y-three-colors(
+	$start-color: $blue,
+	$mid-color: $purple,
+	$color-stop: 50%,
+	$end-color: $red
+) {
+	background-image: linear-gradient(
+		$start-color,
+		$mid-color $color-stop,
+		$end-color
+	);
+	background-repeat: no-repeat;
+}
+
+/// A Bootstrap 4 mixin that outputs a radial gradient (circle).
+/// @param {Color} $inner-color[$gray-700]
+/// @param {Color} $outer-color[$gray-800]
+
+@mixin gradient-radial($inner-color: $gray-700, $outer-color: $gray-800) {
+	background-image: radial-gradient(circle, $inner-color, $outer-color);
+	background-repeat: no-repeat;
+}
+
+/// A Bootstrap 4 mixin that outputs a striped gradient.
+/// @param {Color} $color[rgba($white, 0.15)]
+/// @param {Number} $angle[45deg]
+
+@mixin gradient-striped($color: rgba($white, 0.15), $angle: 45deg) {
+	background-image: linear-gradient(
+		$angle,
+		$color 25%,
+		transparent 25%,
+		transparent 50%,
+		$color 50%,
+		$color 75%,
+		transparent 75%,
+		transparent
+	);
+}

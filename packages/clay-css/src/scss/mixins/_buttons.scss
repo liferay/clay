@@ -420,3 +420,171 @@
 		}
 	}
 }
+
+/// Bootstrap 4's Button Variant Mixin. This is deprecated use the mixin `clay-button-variant` instead.
+/// @deprecated use the mixin `clay-button-variant` instead
+/// @param {Color} $background
+/// @param {Color} $border
+/// @param {Color} $hover-background[darken($background, 7.5%)]
+/// @param {Color} $hover-border[darken($border, 10%)]
+/// @param {Color} $active-background[darken($background, 10%)]
+/// @param {Color} $active-border[darken($border, 12.5%)]
+
+@mixin button-variant(
+	$background,
+	$border,
+	$hover-background: darken($background, 7.5%),
+	$hover-border: darken($border, 10%),
+	$active-background: darken($background, 10%),
+	$active-border: darken($border, 12.5%)
+) {
+	@include gradient-bg($background);
+
+	@include box-shadow($btn-box-shadow);
+
+	border-color: $border;
+	color: color-yiq($background);
+
+	&:hover {
+		@include gradient-bg($hover-background);
+
+		border-color: $hover-border;
+		color: color-yiq($hover-background);
+	}
+
+	&:focus,
+	&.focus {
+		@include gradient-bg($hover-background);
+
+		border-color: $hover-border;
+		color: color-yiq($hover-background);
+
+		@if $enable-shadows {
+			box-shadow: $btn-box-shadow,
+				0
+					0
+					0
+					$btn-focus-width
+					rgba(mix(color-yiq($background), $border, 15%), 0.5);
+		} @else {
+			box-shadow: 0
+				0
+				0
+				$btn-focus-width
+				rgba(mix(color-yiq($background), $border, 15%), 0.5);
+		}
+	}
+
+	&.disabled,
+	&:disabled {
+		background-color: $background;
+		border-color: $border;
+		color: color-yiq($background);
+
+		@if $enable-gradients {
+			background-image: none;
+		}
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	.show > &.dropdown-toggle {
+		background-color: $active-background;
+		color: color-yiq($active-background);
+		border-color: $active-border;
+
+		@if $enable-gradients {
+			background-image: none;
+		}
+
+		&:focus {
+			@if $enable-shadows and $btn-active-box-shadow != none {
+				box-shadow: $btn-active-box-shadow,
+					0
+						0
+						0
+						$btn-focus-width
+						rgba(mix(color-yiq($background), $border, 15%), 0.5);
+			} @else {
+				box-shadow: 0
+					0
+					0
+					$btn-focus-width
+					rgba(mix(color-yiq($background), $border, 15%), 0.5);
+			}
+		}
+	}
+}
+
+/// Bootstrap 4's Button Outline Variant Mixin. This is deprecated use the mixin `clay-button-variant` instead.
+/// @deprecated use the mixin `clay-button-variant` instead
+/// @param {Color} $color
+/// @param {Color} $color-hover[color-yiq($color)]
+/// @param {Color} $active-background[$color]
+/// @param {Color} $active-border[$color]
+
+@mixin button-outline-variant(
+	$color,
+	$color-hover: color-yiq($color),
+	$active-background: $color,
+	$active-border: $color
+) {
+	border-color: $color;
+	color: $color;
+
+	&:hover {
+		background-color: $active-background;
+		border-color: $active-border;
+		color: $color-hover;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+	}
+
+	&.disabled,
+	&:disabled {
+		background-color: transparent;
+		color: $color;
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	.show > &.dropdown-toggle {
+		background-color: $active-background;
+		border-color: $active-border;
+		color: color-yiq($active-background);
+
+		&:focus {
+			@if $enable-shadows and $btn-active-box-shadow != none {
+				box-shadow: $btn-active-box-shadow,
+					0 0 0 $btn-focus-width rgba($color, 0.5);
+			} @else {
+				box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+			}
+		}
+	}
+}
+
+/// This is Bootstrap 4's Button Size Mixin. This is deprecated use the mixin `clay-button-variant` instead.
+/// @deprecated use the mixin `clay-button-variant` instead
+/// @param {Number} $padding-y
+/// @param {Number} $padding-x
+/// @param {Number} $font-size
+/// @param {Number} $line-height
+/// @param {Number} $border-radius
+
+@mixin button-size(
+	$padding-y,
+	$padding-x,
+	$font-size,
+	$line-height,
+	$border-radius
+) {
+	@include border-radius($border-radius, 0);
+
+	font-size: $font-size;
+	line-height: $line-height;
+	padding: $padding-y $padding-x;
+}

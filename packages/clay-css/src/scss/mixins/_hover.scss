@@ -1,0 +1,44 @@
+////
+/// @group Hover
+////
+
+/// A Boostrap 4 mixin designed to prevent `:hover` stickiness on iOS, an issue where hover styles would persist after initial touch. https://github.com/twbs/bootstrap/issues/25195
+/// @deprecated
+
+@mixin hover() {
+	&:hover {
+		@content;
+	}
+}
+
+/// A Boostrap 4 mixin designed to prevent `:hover` stickiness on iOS, an issue where hover styles would persist after initial touch.
+/// @deprecated
+
+@mixin hover-focus() {
+	&:hover,
+	&:focus {
+		@content;
+	}
+}
+
+/// A Boostrap 4 mixin designed to prevent `:hover` stickiness on iOS, an issue where hover styles would persist after initial touch.
+/// @deprecated
+
+@mixin plain-hover-focus() {
+	&,
+	&:hover,
+	&:focus {
+		@content;
+	}
+}
+
+/// A Boostrap 4 mixin designed to prevent `:hover` stickiness on iOS, an issue where hover styles would persist after initial touch.
+/// @deprecated
+
+@mixin hover-focus-active() {
+	&:hover,
+	&:focus,
+	&:active {
+		@content;
+	}
+}

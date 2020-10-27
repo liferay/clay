@@ -1,0 +1,86 @@
+////
+/// @group Breakpoints
+////
+
+/// A Bootstrap 4 mixin that outputs a minimum width media query based on the `$grid-breakpoints` Sass map. The output is not wrapped in a media query if the minimum value is 0.
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+/// A Bootstrap 4 mixin that outputs a maximum width media query based on the `$grid-breakpoints` Sass map. The output is not wrapped in a media query if `$name` is the last breakpoint in `$breakpoints`.
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints`(e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+/// A Bootstrap 4 mixin that outputs a minimum and maximum width media query based on the `$grid-breakpoints` Sass map. If the minimum width breakpoint exists and the maximum width breakpoint is `null`, this outputs a maximum width media query. If the minimum width breakpoint is `null` and the maximum width breakpoint exists, a minimum width breakpoint is output.
+/// @param {Key} $lower - The lower bound breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Key} $upper - The upper bound breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+
+@mixin media-breakpoint-between(
+	$lower,
+	$upper,
+	$breakpoints: $grid-breakpoints
+) {
+	$min: breakpoint-min($lower, $breakpoints);
+	$max: breakpoint-max($upper, $breakpoints);
+
+	@if $min != null and $max != null {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($lower, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($upper, $breakpoints) {
+			@content;
+		}
+	}
+}
+
+/// A Bootstrap 4 mixin that outputs a minimum and maximum width media query based on the `$grid-breakpoints` Sass map. No minimum for the smallest breakpoint, and no maximum for the largest one.
+/// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
+/// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
+
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $min != null and $max != null {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($name, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($name, $breakpoints) {
+			@content;
+		}
+	}
+}

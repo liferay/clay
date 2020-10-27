@@ -1,0 +1,18 @@
+/// A Bootstrap 4 mixin that outputs a transition if `$enable-transition` is `true`. This also outputs the `prefers-reduced-motion` media query if `$enable-prefers-reduced-motion-media-query` is `true`.
+/// @param {Arglist} $transition...
+
+@mixin transition($transition...) {
+	@if $enable-transitions {
+		@if length($transition) == 0 {
+			transition: $transition-base;
+		} @else {
+			transition: $transition;
+		}
+	}
+
+	@if $enable-prefers-reduced-motion-media-query {
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
+	}
+}

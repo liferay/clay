@@ -2,6 +2,30 @@
 /// @group nav
 ////
 
+/// A Bootstrap 4 mixin for generating a `.nav-divider`. Used within dropdowns and nav lists.
+/// @deprecated
+/// @param {Color} $color[$nav-divider-color]
+/// @param {Number} $margin-y[$nav-divider-margin-y]
+/// @param {Bool} $ignore-warning[false]
+
+@mixin nav-divider(
+	$color: $nav-divider-color,
+	$margin-y: $nav-divider-margin-y,
+	$ignore-warning: false
+) {
+	border-top: 1px solid $color;
+	height: 0;
+	margin: $margin-y 0;
+	overflow: hidden;
+
+	@include deprecate(
+		'The `nav-divider()` mixin',
+		'v4.4.0',
+		'v5',
+		$ignore-warning
+	);
+}
+
 /// A mixin to create a `.nav` color variant.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example

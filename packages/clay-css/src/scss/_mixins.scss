@@ -1,18 +1,30 @@
+@import 'mixins/_rfs';
+
 @import 'mixins/_globals';
 
 @import 'mixins/_vendor-prefixes';
 
+@import 'mixins/_alerts';
 @import 'mixins/_aspect-ratio';
 @import 'mixins/_background';
 @import 'mixins/_badges';
+@import 'mixins/_border-radius';
 @import 'mixins/_box-shadow';
+@import 'mixins/_breakpoints';
 @import 'mixins/_buttons';
 @import 'mixins/_cards';
+@import 'mixins/_caret';
+@import 'mixins/_clearfix';
 @import 'mixins/_close';
+@import 'mixins/_deprecate';
 @import 'mixins/_dropdown-menu';
+@import 'mixins/_float';
 @import 'mixins/_forms';
+@import 'mixins/_gradients';
 @import 'mixins/_grid';
 @import 'mixins/_highlight';
+@import 'mixins/_hover';
+@import 'mixins/_image';
 @import 'mixins/_input-groups';
 @import 'mixins/_labels';
 @import 'mixins/_line-clamp';
@@ -25,6 +37,7 @@
 @import 'mixins/_nav';
 @import 'mixins/_nav-nested';
 @import 'mixins/_navbar';
+@import 'mixins/_pagination';
 @import 'mixins/_panels';
 @import 'mixins/_position';
 @import 'mixins/_scale-component';
@@ -36,5 +49,6 @@
 @import 'mixins/_tbar';
 @import 'mixins/_timelines';
 @import 'mixins/_toggle-switch';
+@import 'mixins/_transition';
 @import 'mixins/_type';
 @import 'mixins/_utilities';

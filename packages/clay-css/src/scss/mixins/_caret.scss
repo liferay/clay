@@ -1,0 +1,84 @@
+////
+/// @group caret
+////
+
+/// Bootstrap 4's Caret Down Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin caret-down() {
+	border-bottom: 0;
+	border-left: $caret-width solid transparent;
+	border-right: $caret-width solid transparent;
+	border-top: $caret-width solid;
+}
+
+/// Bootstrap 4's Caret Up Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin caret-up() {
+	border-bottom: $caret-width solid;
+	border-left: $caret-width solid transparent;
+	border-right: $caret-width solid transparent;
+	border-top: 0;
+}
+
+/// Bootstrap 4's Caret Right Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin caret-right() {
+	border-bottom: $caret-width solid transparent;
+	border-left: $caret-width solid;
+	border-right: 0;
+	border-top: $caret-width solid transparent;
+}
+
+/// Bootstrap 4's Caret Left Mixin. This is deprecated and will be removed.
+/// @deprecated
+
+@mixin caret-left() {
+	border-bottom: $caret-width solid transparent;
+	border-right: $caret-width solid;
+	border-top: $caret-width solid transparent;
+}
+
+/// Bootstrap 4's Caret Mixin.  This is deprecated and will be removed.
+/// @deprecated
+/// @param {String} $direction - up, down, left, or right
+
+@mixin caret($direction: down) {
+	@if $enable-caret {
+		&::after {
+			content: '';
+			display: inline-block;
+			margin-left: $caret-spacing;
+			vertical-align: $caret-vertical-align;
+
+			@if $direction == down {
+				@include caret-down();
+			} @else if $direction == up {
+				@include caret-up();
+			} @else if $direction == right {
+				@include caret-right();
+			}
+		}
+
+		@if $direction == left {
+			&::after {
+				display: none;
+			}
+
+			&::before {
+				content: '';
+				display: inline-block;
+				margin-right: $caret-spacing;
+				vertical-align: $caret-vertical-align;
+
+				@include caret-left();
+			}
+		}
+
+		&:empty::after {
+			margin-left: 0;
+		}
+	}
+}
