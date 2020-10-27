@@ -118,11 +118,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 				shape="circle"
 			>
 				{userImageSrc && (
-					<img
-						alt={userImageAlt}
-						className="aspect-ratio-item-fluid"
-						src={userImageSrc}
-					/>
+					<ClaySticker.Image alt={userImageAlt} src={userImageSrc} />
 				)}
 				{!userImageSrc && (
 					<ClayIcon spritemap={spritemap} symbol={userSymbol} />
