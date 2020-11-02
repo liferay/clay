@@ -491,7 +491,7 @@ exports[`ClayCard renders a ClayCard as a template navigation card truncating te
 exports[`ClayCard renders a ClayCard as image card 1`] = `
 <div>
   <div
-    class="card card-type-asset form-check form-check-card form-check-top-left image-card"
+    class="card card-type-asset image-card"
   >
     <div
       class="card-item-first aspect-ratio"
@@ -736,7 +736,7 @@ exports[`ClayCard renders a ClayCard as template navigation card with icon inste
 exports[`ClayCard renders a ClayCard as user card 1`] = `
 <div>
   <div
-    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+    class="card card-type-asset user-card"
   >
     <div
       class="card"
@@ -1141,7 +1141,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
       class="card-page-item card-page-item-directory"
     >
       <div
-        class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+        class="card card-type-asset user-card"
       >
         <div
           class="card"
@@ -1230,7 +1230,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
       class="card-page-item card-page-item-directory"
     >
       <div
-        class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+        class="card card-type-asset user-card"
       >
         <div
           class="card"
@@ -2081,7 +2081,7 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
 exports[`ClayCardWithUser renders with icon 1`] = `
 <div>
   <div
-    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+    class="card card-type-asset user-card"
   >
     <div
       class="card"
@@ -2172,7 +2172,7 @@ exports[`ClayCardWithUser renders with icon 1`] = `
 exports[`ClayCardWithUser renders with image 1`] = `
 <div>
   <div
-    class="card card-type-asset form-check form-check-card form-check-top-left user-card"
+    class="card card-type-asset user-card"
   >
     <div
       class="card"
