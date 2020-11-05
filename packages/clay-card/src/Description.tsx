@@ -59,7 +59,10 @@ const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
 		>
 			{truncate ? (
 				<span className="text-truncate-inline">
-					<InnerTag className="text-truncate" href={href}>
+					<InnerTag
+						className="text-truncate"
+						href={disabled ? undefined : href}
+					>
 						{children}
 					</InnerTag>
 				</span>
