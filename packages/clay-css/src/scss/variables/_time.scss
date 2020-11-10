@@ -64,12 +64,14 @@ $clay-time-input-group-text: map-deep-merge(
 	$clay-time-input-group-text
 );
 
-$clay-time-divider-margin-left: -3px !default;
-$clay-time-divider-margin-right: -3px !default;
+$clay-time-divider-margin-left: null !default;
+$clay-time-divider-margin-right: null !default;
 
 $clay-time-edit: () !default;
 $clay-time-edit: map-deep-merge(
 	(
+		display: flex,
+		flex-wrap: wrap,
 		margin-right: auto,
 		padding-left: 0.5rem,
 		padding-right: 0.5rem,
