@@ -12,6 +12,9 @@ mainTabURL: 'docs/components/drop-down.html'
     -   [Default](#css-default)
     -   [Wide](#css-wide)
     -   [Full](#css-full)
+    -   [Width Full](#css-width-full)
+    -   [Width Sm](#css-width-sm)
+    -   [Height Auto](#css-height-auto)
 -   [Content Types](#css-content-types)
     -   [Dividers](#css-dividers)
     -   [Form Elements](#css-form-elements)
@@ -402,6 +405,67 @@ Use `.dropdown-full` to create a dropdown menu as wide as its relative parent.
 		</div>
 	</ul>
 </div>
+```
+
+### Dropdown Menu Width Full(#css-width-full)
+
+<div class="clay-site-alert alert alert-warning">This is a separate component from `.dropdown-full`, use one or the other.</div>
+
+The modifier class `dropdown-menu-width-full` on `dropdown-menu` makes the menu expand the full width of the page. This should be used with the Clay Drop Down plugin which renders the `dropdown-menu` as a direct child of the `body` element.
+
+```html
+<ul
+	aria-labelledby="theDropdownToggleId"
+	class="dropdown-menu dropdown-menu-width-full"
+>
+	<li class="dropdown-header">Dropdown Header</li>
+	<li><a class="dropdown-item" href="#1">Action</a></li>
+	<li>
+		<a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li><a class="dropdown-item" href="#1">Scope</a></li>
+</ul>
+```
+
+### Dropdown Menu Width Sm(#css-width-sm)
+
+<div class="clay-site-alert alert alert-warning">This is a separate component from `.dropdown-wide`, use one or the other.</div>
+
+The modifier class `dropdown-menu-width-sm` on `dropdown-menu` makes the menu 500px wide. The `dropdown-menu` becomes 100% wide at screen sizes 767px and below. This should be used with the Clay Drop Down plugin which renders the `dropdown-menu` as a direct child of the `body` element.
+
+```html
+<ul
+	aria-labelledby="theDropdownToggleId"
+	class="dropdown-menu dropdown-menu-width-sm"
+>
+	<li class="dropdown-header">Dropdown Header</li>
+	<li><a class="dropdown-item" href="#1">Action</a></li>
+	<li>
+		<a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li><a class="dropdown-item" href="#1">Scope</a></li>
+</ul>
+```
+
+### Dropdown Menu Height Auto(#css-height-auto)
+
+The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `max-height` on the `dropdown-menu`.
+
+```html
+<ul
+	aria-labelledby="theDropdownToggleId"
+	class="dropdown-menu dropdown-menu-height-auto"
+>
+	<li class="dropdown-header">Dropdown Header</li>
+	<li><a class="dropdown-item" href="#1">Action</a></li>
+	<li>
+		<a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li><a class="dropdown-item" href="#1">Scope</a></li>
+</ul>
 ```
 
 ## Content Types(#css-content-types)
