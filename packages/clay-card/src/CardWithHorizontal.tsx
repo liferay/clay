@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
@@ -99,16 +100,13 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 							items={actions}
 							spritemap={spritemap}
 							trigger={
-								<button
+								<ClayButtonWithIcon
 									{...dropDownTriggerProps}
 									className="component-action"
 									disabled={disabled}
-								>
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="ellipsis-v"
-									/>
-								</button>
+									spritemap={spritemap}
+									symbol="ellipsis-v"
+								/>
 							}
 						/>
 					</ClayLayout.ContentCol>
