@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/liferay/clay/compare/@clayui/card@3.5.0...@clayui/card@3.5.1) (2020-11-16)
+
+### Bug Fixes
+
+-   **@clayui/card:** Add dependency ([6796038](https://github.com/liferay/clay/commit/6796038))
+-   **@clayui/card:** Avoid setting `href` on `span` element ([a0d9cf4](https://github.com/liferay/clay/commit/a0d9cf4)), closes [#3779](https://github.com/liferay/clay/issues/3779)
+-   **@clayui/card:** stops adding unnecessary classes when the component is not selectable ([2c91fc6](https://github.com/liferay/clay/commit/2c91fc6))
+-   **@clayui/card:** Use <ClayButtonWithIcon> instead of vanilla <button>. It sets type='button' that prevents form submission. ([03d8ff7](https://github.com/liferay/clay/commit/03d8ff7))
+-   **@clayui/card:** Use ClayButtonWithIcon instead of vanilla button in clay-card ([57b5a8f](https://github.com/liferay/clay/commit/57b5a8f))
+
 # [3.5.0](https://github.com/liferay/clay/compare/@clayui/card@3.4.0...@clayui/card@3.5.0) (2020-10-22)
 
 ### Bug Fixes

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.20.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.19.0...@clayui/css@3.20.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Time Picker `clay-time-edit` use `display: flex` and don't rely on white-space for spacing ([e4ab83d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e4ab83d)), closes [#3783](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3783)
+
+
+### Features
+
+* **@clayui/css:** Absorb Bootstrap 4 mixins into Clay CSS ([27032c4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/27032c4))
+* **@clayui/css:** Dropdown adds `.dropdown-menu-width-full`, `.dropdown-menu-width-sm`, `dropdown-menu-height-auto` modifier classes for larger dropdown menus with the Clay Drop Down plugin ([bab438c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bab438c)), closes [#3790](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3790)
+* **@clayui/css:** Removes Bootstrap 4 mixins and functions imports ([cba11d0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cba11d0))
+
+
+
+
+
 # [3.19.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.18.2...@clayui/css@3.19.0) (2020-10-22)
 
 
