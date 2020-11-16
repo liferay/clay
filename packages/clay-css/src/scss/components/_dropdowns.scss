@@ -579,6 +579,26 @@
 	}
 }
 
+// Dropdown Menu Width
+
+.dropdown-menu-width-full {
+	@include clay-css($dropdown-menu-width-full);
+}
+
+.dropdown-menu-width-sm {
+	@include clay-css($dropdown-menu-width-sm);
+
+	@include media-breakpoint-down(sm) {
+		@include clay-css($dropdown-menu-width-sm-sm-down);
+	}
+}
+
+// Dropdown Menu Height
+
+.dropdown-menu-height-auto {
+	@include clay-css($dropdown-menu-height-auto);
+}
+
 // Dropdown Menu Autocomplete
 
 .dropdown-full .autocomplete-dropdown-menu,

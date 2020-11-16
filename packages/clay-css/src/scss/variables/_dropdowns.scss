@@ -229,6 +229,52 @@ $dropdown-footer: map-merge(
 	$dropdown-footer
 );
 
+// Dropdown Menu Width
+
+$dropdown-menu-width-full: () !default;
+$dropdown-menu-width-full: map-merge(
+	(
+		left: 12px !important,
+		right: 12px !important,
+		max-width: none,
+		min-width: 0,
+		width: calc(100% - 24px),
+	),
+	$dropdown-menu-width-full
+);
+
+$dropdown-menu-width-sm: () !default;
+$dropdown-menu-width-sm: map-merge(
+	(
+		max-width: none,
+		min-width: 0,
+		width: 500px,
+	),
+	$dropdown-menu-width-sm
+);
+
+$dropdown-menu-width-sm-sm-down: () !default;
+$dropdown-menu-width-sm-sm-down: map-merge(
+	(
+		left: 12px !important,
+		right: 12px !important,
+		width: calc(100% - 24px),
+	),
+	$dropdown-menu-width-sm-sm-down
+);
+
+// Dropdown Menu Height
+
+$dropdown-menu-height-auto: () !default;
+$dropdown-menu-height-auto: map-merge(
+	(
+		height: auto,
+		max-height: none,
+		min-height: 0,
+	),
+	$dropdown-menu-height-auto
+);
+
 // Autocomplete Dropdown Menu
 
 $autocomplete-dropdown-menu: () !default;

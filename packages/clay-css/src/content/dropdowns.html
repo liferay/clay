@@ -1169,6 +1169,56 @@ section: Components
 </div>
 
 <div class="clay-site-row-spacer row">
+	<div class="col-md-12 position-static">
+		<h3>Dropdown Menu Width Full</h3>
+
+		<blockquote class="blockquote">
+			<p>The modifier class `dropdown-menu-width-full` on `dropdown-menu` makes the menu expand the full width of the page. This should be used with the Clay Drop Down plugin which renders the `dropdown-menu` as a direct child of the `body` element.</p>
+		</blockquote>
+
+		<button class="btn btn-primary" id="dropdownMenuFull1" type="button">Doesn't Work Button</button>
+		<ul aria-labelledby="dropdownMenuFull1" class="dropdown-menu dropdown-menu-width-full" style="display:block;">
+			<li class="dropdown-header">Dropdown Header</li>
+			<li><a class="dropdown-item" href="#1">Action</a></li>
+			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+			<li class="dropdown-divider"></li>
+			<li><a class="dropdown-item" href="#1">Scope</a></li>
+		</ul>
+		<div style="padding-bottom: 180px;"></div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12 position-static">
+		<h3>Dropdown Menu Width Sm</h3>
+
+		<blockquote class="blockquote">
+			<p>The modifier class `dropdown-menu-width-sm` on `dropdown-menu` makes the menu 500px wide. The `dropdown-menu` becomes 100% wide at screen sizes 767px and below. This should be used with the Clay Drop Down plugin which renders the `dropdown-menu` as a direct child of the `body` element.</p>
+		</blockquote>
+
+		<button class="btn btn-primary" id="dropdownMenuWide1" type="button">Doesn't Work Button</button>
+		<ul aria-labelledby="dropdownMenuWide1" class="dropdown-menu dropdown-menu-width-sm" style="display:block;">
+			<li class="dropdown-header">Dropdown Header</li>
+			<li><a class="dropdown-item" href="#1">Action</a></li>
+			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+			<li class="dropdown-divider"></li>
+			<li><a class="dropdown-item" href="#1">Scope</a></li>
+		</ul>
+		<div style="padding-bottom: 180px;"></div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Dropdown Menu Height Auto</h3>
+
+		<blockquote class="blockquote">
+			<p>The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `max-height` on the `dropdown-menu`.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Dropdown Alignment</h3>
 
@@ -1666,4 +1716,21 @@ section: Components
 	$('.input-group-inset').on('focusout', function(event) {
 		$(this).closest('.input-group-item').removeClass('focus');
 	});
+
+	var dropdownTriggerFull1 = document.querySelector('#dropdownMenuFull1');
+	var dropdownMenuFull1 = dropdownTriggerFull1.nextElementSibling;
+
+	var dropdownTriggerWide1 = document.querySelector('#dropdownMenuWide1');
+	var dropdownMenuWide1 = dropdownTriggerWide1.nextElementSibling;
+
+	dropdownMenuFull1.style.top = dropdownTriggerFull1.offsetTop + 40 + 'px';
+	dropdownMenuWide1.style.top = dropdownTriggerWide1.offsetTop + 40 + 'px';
+	dropdownMenuWide1.style.left = dropdownTriggerWide1.offsetLeft + 'px';
+
+	window.addEventListener('resize', function(event) {
+		dropdownMenuFull1.style.top = dropdownTriggerFull1.offsetTop + 40 + 'px';
+		dropdownMenuWide1.style.top = dropdownTriggerWide1.offsetTop + 40 + 'px';
+		dropdownMenuWide1.style.left = dropdownTriggerWide1.offsetLeft + 'px';
+	});
+
 </script>
