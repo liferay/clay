@@ -837,6 +837,66 @@ describe('ClayCardWithInfo', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders with custom sticker', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				description="A cool description"
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				spritemap="/some/spritemap"
+				stickerProps={{
+					className: 'custom-sticker-class',
+					displayType: 'danger',
+					outside: true,
+					position: 'top-right',
+					shape: 'circle',
+					size: 'xl',
+				}}
+				title="Very Large File"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with custom sticker with custom Icon', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				description="A cool description"
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				spritemap="/some/spritemap"
+				stickerProps={{
+					children: (
+						<ClayIcon
+							spritemap="/path/to/some/resource.svg"
+							symbol="custom-symbol"
+						/>
+					),
+					className: 'custom-sticker-class',
+					displayType: 'danger',
+					outside: true,
+					position: 'top-right',
+					shape: 'circle',
+					size: 'xl',
+				}}
+				title="Very Large File"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('clicking dropdown item calls callback and not call onSelectChange', () => {
 		const onDropDownItemClick = jest.fn();
 		const onSelectChangeFn = jest.fn();

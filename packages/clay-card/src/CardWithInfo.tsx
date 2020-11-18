@@ -9,7 +9,7 @@ import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
-import ClaySticker from '@clayui/sticker';
+import ClaySticker, {IClayStickerProps} from '@clayui/sticker';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -88,9 +88,8 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Values used in displaying bottom-left icon
 	 */
-	stickerProps?: {
-		content: React.ReactNode;
-		displayType: React.ComponentProps<typeof ClaySticker>['displayType'];
+	stickerProps?: IClayStickerProps & {
+		content?: React.ReactNode;
 	};
 
 	/**
@@ -149,12 +148,19 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 
 			<ClaySticker
 				displayType={
-					stickerProps ? stickerProps.displayType : 'primary'
+					stickerProps && stickerProps.displayType
+						? stickerProps.displayType
+						: 'primary'
 				}
 				position="bottom-left"
+				{...stickerProps}
 			>
 				{stickerProps ? (
-					stickerProps.content
+					stickerProps.children ? (
+						stickerProps.children
+					) : (
+						stickerProps.content
+					)
 				) : (
 					<ClayIcon spritemap={spritemap} symbol="document-text" />
 				)}
