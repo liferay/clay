@@ -112,7 +112,7 @@ const DEFAULT_CONFIG = {
 			pm: 'PM',
 		},
 		hours: {
-			max: 11,
+			max: 12,
 			min: 0,
 		},
 		minutes: {
@@ -242,6 +242,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 						(value && value !== DEFAULT_VALUE ? value : '') +
 							event.key
 					);
+					(configName === TimeType.ampm && event.key === 'a') ||
 				}
 				break;
 		}
