@@ -193,18 +193,18 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	) => {
 		const config = useConfig[configName];
 		const intrinsicValue = Number(value);
-		const setValue = (newValue: string | number) =>
-			onInputChange({
+		const setValue = (newValue: string | number) => {
+			const newVal =
+				configName === TimeType.ampm
+					? newValue
+					: handleMaxAndMin(String(newValue), config as ConfigMaxMin);
+
+			return onInputChange({
 				...values,
 				// eslint-disable-next-line sort-keys
-				[configName]:
-					configName === TimeType.ampm
-						? newValue
-						: handleMaxAndMin(
-								String(newValue),
-								config as ConfigMaxMin
-						  ),
+				[configName]: String(newVal).padStart(2, '0'),
 			});
+		};
 
 		switch (event.key) {
 			case 'Backspace':
@@ -238,11 +238,29 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 				break;
 			default:
 				if (regex.test(event.key) && configName !== TimeType.ampm) {
+					const maxFirstDigit =
+						configName === TimeType.hours
+							? use12Hours
+								? 1
+								: 2
+							: 5;
+
+					const newVal =
+						Number(value) > maxFirstDigit
+							? `0${event.key}`
+							: (value && value !== DEFAULT_VALUE ? value : '') +
+							  event.key;
+
+					setValue(newVal);
+				} else if (
+					configName === TimeType.ampm &&
+					(event.key === 'a' || event.key === 'p')
+				) {
 					setValue(
-						(value && value !== DEFAULT_VALUE ? value : '') +
-							event.key
+						event.key === 'a'
+							? (config as ConfigAmpm).am
+							: (config as ConfigAmpm).pm
 					);
-					(configName === TimeType.ampm && event.key === 'a') ||
 				}
 				break;
 		}
@@ -279,7 +297,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 		onInputChange({
 			...values,
 			// eslint-disable-next-line sort-keys
-			[configName]: value,
+			[configName]: String(value).padStart(2, '0'),
 		});
 	};
 

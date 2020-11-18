@@ -226,8 +226,8 @@ describe('IncrementalInteractions', () => {
 			fireEvent.keyDown(minutesEl, {key: '1'});
 			fireEvent.keyDown(ampmEl, {key: 'ArrowUp'});
 
-			expect(hoursEl.value).toBe('1');
-			expect(minutesEl.value).toBe('1');
+			expect(hoursEl.value).toBe('01');
+			expect(minutesEl.value).toBe('01');
 			expect(ampmEl.value).toBe('PM');
 
 			fireEvent.click(
@@ -251,7 +251,7 @@ describe('IncrementalInteractions', () => {
 			fireEvent.focus(hoursEl, {});
 			fireEvent.click(spinIncEl, {});
 
-			expect(hoursEl.value).toBe('0');
+			expect(hoursEl.value).toBe('00');
 		});
 
 		it('increment the value of the minutes input with focus by clicking on the increment spin action', () => {
@@ -265,7 +265,7 @@ describe('IncrementalInteractions', () => {
 			fireEvent.focus(minutesEl, {});
 			fireEvent.click(spinIncEl, {});
 
-			expect(minutesEl.value).toBe('0');
+			expect(minutesEl.value).toBe('00');
 		});
 
 		it('increment the value of the am/pm input with focus by clicking on the increment spin action', () => {
@@ -347,7 +347,7 @@ describe('IncrementalInteractions', () => {
 
 			fireEvent.keyDown(hoursEl, {key: '1'});
 
-			expect(hoursEl.value).toBe('1');
+			expect(hoursEl.value).toBe('01');
 
 			fireEvent.keyDown(hoursEl, {key: 'Backspace'});
 
@@ -360,7 +360,7 @@ describe('IncrementalInteractions', () => {
 
 			fireEvent.keyDown(minutesEl, {key: '1'});
 
-			expect(minutesEl.value).toBe('1');
+			expect(minutesEl.value).toBe('01');
 
 			fireEvent.keyDown(minutesEl, {key: 'Backspace'});
 
@@ -388,7 +388,7 @@ describe('IncrementalInteractions', () => {
 
 			fireEvent.keyDown(hoursEl, {key: 'ArrowUp'});
 
-			expect(hoursEl.value).toBe('0');
+			expect(hoursEl.value).toBe('00');
 		});
 
 		it('pressing arrow up on the minutes input should increase value', () => {
@@ -397,7 +397,7 @@ describe('IncrementalInteractions', () => {
 
 			fireEvent.keyDown(minutesEl, {key: 'ArrowUp'});
 
-			expect(minutesEl.value).toBe('0');
+			expect(minutesEl.value).toBe('00');
 		});
 
 		it('pressing arrow down on the hour input should decrement value', () => {
@@ -446,7 +446,7 @@ describe('IncrementalInteractions', () => {
 				fireEvent.keyDown(hoursEl, {key: value});
 			});
 
-			expect(hoursEl.value).toBe('9');
+			expect(hoursEl.value).toBe('09');
 		});
 
 		it('only allows numbers to be entered in the input minutes', () => {
@@ -457,7 +457,7 @@ describe('IncrementalInteractions', () => {
 				fireEvent.keyDown(minutesEl, {key: value});
 			});
 
-			expect(minutesEl.value).toBe('9');
+			expect(minutesEl.value).toBe('09');
 		});
 
 		it('returns to the maximum value when it reaches the minimum value when pressing in the arrow down', () => {
@@ -468,8 +468,8 @@ describe('IncrementalInteractions', () => {
 			fireEvent.keyDown(hoursEl, {key: '0'});
 			fireEvent.keyDown(minutesEl, {key: '0'});
 
-			expect(hoursEl.value).toBe('0');
-			expect(minutesEl.value).toBe('0');
+			expect(hoursEl.value).toBe('00');
+			expect(minutesEl.value).toBe('00');
 
 			fireEvent.keyDown(hoursEl, {key: 'ArrowDown'});
 			fireEvent.keyDown(minutesEl, {key: 'ArrowDown'});
@@ -492,8 +492,8 @@ describe('IncrementalInteractions', () => {
 			fireEvent.keyDown(hoursEl, {key: 'ArrowUp'});
 			fireEvent.keyDown(minutesEl, {key: 'ArrowUp'});
 
-			expect(hoursEl.value).toBe('0');
-			expect(minutesEl.value).toBe('0');
+			expect(hoursEl.value).toBe('00');
+			expect(minutesEl.value).toBe('00');
 		});
 	});
 });
