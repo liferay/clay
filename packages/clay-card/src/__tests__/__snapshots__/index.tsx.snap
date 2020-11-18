@@ -1812,6 +1812,187 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
 </div>
 `;
 
+exports[`ClayCardWithInfo renders with custom sticker 1`] = `
+<div>
+  <div
+    class="card card-type-asset file-card"
+  >
+    <div
+      class="card-item-first aspect-ratio"
+    >
+      <div
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-documents-and-media"
+          role="presentation"
+        >
+          <use
+            xlink:href="/some/spritemap#documents-and-media"
+          />
+        </svg>
+      </div>
+      <span
+        class="sticker custom-sticker-class sticker-circle sticker-danger sticker-top-right sticker-outside sticker-xl"
+      >
+        <span
+          class="sticker-overlay"
+        />
+      </span>
+    </div>
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-row"
+      >
+        <div
+          class="autofit-col autofit-col-expand"
+        >
+          <p
+            class="card-title"
+            title="Very Large File"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <a
+                class="text-truncate"
+                href="#"
+              >
+                Very Large File
+              </a>
+            </span>
+          </p>
+          <p
+            class="card-subtitle"
+            title="A cool description"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                A cool description
+              </span>
+            </span>
+          </p>
+          <div
+            class="card-detail"
+          >
+            <span
+              class="label label-success"
+            >
+              <span
+                class="label-item label-item-expand"
+              >
+                Awesome
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders with custom sticker with custom Icon 1`] = `
+<div>
+  <div
+    class="card card-type-asset file-card"
+  >
+    <div
+      class="card-item-first aspect-ratio"
+    >
+      <div
+        class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-documents-and-media"
+          role="presentation"
+        >
+          <use
+            xlink:href="/some/spritemap#documents-and-media"
+          />
+        </svg>
+      </div>
+      <span
+        class="sticker custom-sticker-class sticker-circle sticker-danger sticker-top-right sticker-outside sticker-xl"
+      >
+        <span
+          class="sticker-overlay"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-custom-symbol"
+            role="presentation"
+          >
+            <use
+              xlink:href="/path/to/some/resource.svg#custom-symbol"
+            />
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-row"
+      >
+        <div
+          class="autofit-col autofit-col-expand"
+        >
+          <p
+            class="card-title"
+            title="Very Large File"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <a
+                class="text-truncate"
+                href="#"
+              >
+                Very Large File
+              </a>
+            </span>
+          </p>
+          <p
+            class="card-subtitle"
+            title="A cool description"
+          >
+            <span
+              class="text-truncate-inline"
+            >
+              <span
+                class="text-truncate"
+              >
+                A cool description
+              </span>
+            </span>
+          </p>
+          <div
+            class="card-detail"
+          >
+            <span
+              class="label label-success"
+            >
+              <span
+                class="label-item label-item-expand"
+              >
+                Awesome
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayCardWithUser renders ClayCardWithNavigation with image 1`] = `
 <div>
   <a

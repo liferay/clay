@@ -23,7 +23,8 @@ type Position = 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
 
 type Size = 'lg' | 'sm' | 'xl';
 
-interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface IClayStickerProps
+	extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
 	 * Determines the color of the sticker.
 	 */
@@ -80,7 +81,7 @@ const Image: React.FunctionComponent<React.ImgHTMLAttributes<
 	<img className={classNames(className, 'sticker-img')} {...otherProps} />
 );
 
-const ClaySticker: React.FunctionComponent<IProps> = ({
+const ClaySticker: React.FunctionComponent<IClayStickerProps> = ({
 	children,
 	className,
 	displayType,
@@ -90,7 +91,7 @@ const ClaySticker: React.FunctionComponent<IProps> = ({
 	shape,
 	size,
 	...otherProps
-}: IProps) => (
+}: IClayStickerProps) => (
 	<span
 		{...otherProps}
 		className={classNames('sticker', className, {
