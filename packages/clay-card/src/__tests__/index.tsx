@@ -837,6 +837,71 @@ describe('ClayCardWithInfo', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders as file card specifying the displayType', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				disabled
+				displayType="file"
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders as image card specifying the displayType and no imageProps', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				disabled
+				displayType="image"
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders as image card specifying the displayType and imageProps', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				disabled
+				displayType="image"
+				href="#"
+				imgProps="path/to/an/image"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders as image card specifying imageProps and not the displayType', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				disabled
+				href="#"
+				imgProps="path/to/an/image"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('renders with custom sticker', () => {
 		const {container} = render(
 			<ClayCardWithInfo

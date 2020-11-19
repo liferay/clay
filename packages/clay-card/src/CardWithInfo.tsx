@@ -15,6 +15,8 @@ import React from 'react';
 
 import ClayCard from './Card';
 
+type CardWithInfoDisplayType = 'file' | 'image';
+
 interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * List of actions in the dropdown menu
@@ -35,6 +37,11 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Flag to indicate that all interactions on the card will be disabled.
 	 */
 	disabled?: boolean;
+
+	/**
+	 * Determines the style of the card
+	 */
+	displayType?: CardWithInfoDisplayType;
 
 	/**
 	 * Props to add to the dropdown trigger element
@@ -108,6 +115,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	checkboxProps = {},
 	description,
 	disabled,
+	displayType,
 	dropDownTriggerProps = {},
 	flushHorizontal,
 	flushVertical,
@@ -118,15 +126,29 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	selected = false,
 	spritemap,
 	stickerProps,
-	symbol = 'documents-and-media',
+	symbol,
 	title,
 	...otherProps
 }: IProps) => {
+	const isCardType = {
+		file: displayType === 'file' && !imgProps,
+		image: displayType === 'image' || imgProps,
+	};
+
 	const headerContent = (
 		<ClayCard.AspectRatio className="card-item-first">
 			{!imgProps && (
 				<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-					<ClayIcon spritemap={spritemap} symbol={symbol} />
+					<ClayIcon
+						spritemap={spritemap}
+						symbol={
+							symbol
+								? symbol
+								: isCardType.image
+								? 'camera'
+								: 'documents-and-media'
+						}
+					/>
 				</div>
 			)}
 
@@ -162,7 +184,14 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 						stickerProps.content
 					)
 				) : (
-					<ClayIcon spritemap={spritemap} symbol="document-text" />
+					<ClayIcon
+						spritemap={spritemap}
+						symbol={
+							isCardType.image
+								? 'document-image'
+								: 'document-default'
+						}
+					/>
 				)}
 			</ClaySticker>
 		</ClayCard.AspectRatio>
@@ -171,7 +200,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayCard
 			{...otherProps}
-			displayType={imgProps ? 'image' : 'file'}
+			displayType={isCardType.image ? 'image' : 'file'}
 			selectable={!!onSelectChange}
 		>
 			{onSelectChange && (

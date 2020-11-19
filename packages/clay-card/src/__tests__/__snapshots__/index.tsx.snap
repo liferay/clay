@@ -1567,11 +1567,379 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
                 class="sticker-overlay"
               >
                 <svg
-                  class="lexicon-icon lexicon-icon-document-text"
+                  class="lexicon-icon lexicon-icon-document-default"
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-text"
+                    xlink:href="/path/to/some/resource.svg#document-default"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <p
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Foo Bar
+                </span>
+              </span>
+            </p>
+            <p
+              class="card-subtitle"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                />
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as file card specifying the displayType 1`] = `
+<div>
+  <div
+    class="card-type-asset file-card form-check form-check-card form-check-top-left"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            disabled=""
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <div
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-documents-and-media"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                />
+              </svg>
+            </div>
+            <span
+              class="sticker sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-default"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-default"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <p
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Foo Bar
+                </span>
+              </span>
+            </p>
+            <p
+              class="card-subtitle"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                />
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as image card specifying imageProps and not the displayType 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left image-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            disabled=""
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <img
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+              src="path/to/an/image"
+            />
+            <span
+              class="sticker sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-image"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-image"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <p
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Foo Bar
+                </span>
+              </span>
+            </p>
+            <p
+              class="card-subtitle"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                />
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as image card specifying the displayType and imageProps 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left image-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            disabled=""
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <img
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+              src="path/to/an/image"
+            />
+            <span
+              class="sticker sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-image"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-image"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <p
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                >
+                  Foo Bar
+                </span>
+              </span>
+            </p>
+            <p
+              class="card-subtitle"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <span
+                  class="text-truncate"
+                />
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as image card specifying the displayType and no imageProps 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left image-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            disabled=""
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <div
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-camera"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#camera"
+                />
+              </svg>
+            </div>
+            <span
+              class="sticker sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-image"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-image"
                   />
                 </svg>
               </span>
@@ -1648,11 +2016,11 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
           class="sticker-overlay"
         >
           <svg
-            class="lexicon-icon lexicon-icon-document-text"
+            class="lexicon-icon lexicon-icon-document-default"
             role="presentation"
           >
             <use
-              xlink:href="/some/spritemap#document-text"
+              xlink:href="/some/spritemap#document-default"
             />
           </svg>
         </span>
@@ -1757,11 +2125,11 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
                 class="sticker-overlay"
               >
                 <svg
-                  class="lexicon-icon lexicon-icon-document-text"
+                  class="lexicon-icon lexicon-icon-document-default"
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-text"
+                    xlink:href="/path/to/some/resource.svg#document-default"
                   />
                 </svg>
               </span>
