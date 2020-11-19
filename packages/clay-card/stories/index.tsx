@@ -246,16 +246,6 @@ storiesOf('Components|ClayCard', module)
 						description="Assistant to the regional manager"
 						disabled={boolean('Disabled', false)}
 						href="#"
-						labels={[
-							{
-								displayType: 'success',
-								value: 'Awesome',
-							},
-							{
-								displayType: 'danger',
-								value: 'Crazy',
-							},
-						]}
 						name="Abraham Kuyper"
 						onSelectChange={() => {}}
 						selected={boolean('selected', false)}
@@ -265,16 +255,6 @@ storiesOf('Components|ClayCard', module)
 					<ClayCardWithUser
 						description="Assistant to the regional manager"
 						disabled={boolean('Disabled', false)}
-						labels={[
-							{
-								displayType: 'success',
-								value: 'Awesome',
-							},
-							{
-								displayType: 'danger',
-								value: 'Crazy',
-							},
-						]}
 						name="Abraham Kuyper"
 						onSelectChange={setValue}
 						selected={value}
