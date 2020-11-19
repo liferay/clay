@@ -613,12 +613,6 @@ describe('ClayCardWithUser', () => {
 			<ClayCardWithUser
 				description="Test"
 				href="#"
-				labels={[
-					{
-						displayType: 'success',
-						value: 'Awesome',
-					},
-				]}
 				name="Foo Bar"
 				onSelectChange={onSelectChangeFn}
 				selected={false}
@@ -639,12 +633,6 @@ describe('ClayCardWithUser', () => {
 				description="Test"
 				disabled
 				href="#"
-				labels={[
-					{
-						displayType: 'success',
-						value: 'Awesome',
-					},
-				]}
 				name="Foo Bar"
 				onSelectChange={jest.fn()}
 				selected={false}
@@ -660,12 +648,6 @@ describe('ClayCardWithUser', () => {
 			<ClayCardWithUser
 				description="Test"
 				href="#"
-				labels={[
-					{
-						displayType: 'success',
-						value: 'Awesome',
-					},
-				]}
 				name="Foo Bar"
 				spritemap="/path/to/some/resource.svg"
 			/>
@@ -679,12 +661,6 @@ describe('ClayCardWithUser', () => {
 			<ClayCardWithUser
 				description="Test"
 				href="#"
-				labels={[
-					{
-						displayType: 'success',
-						value: 'Awesome',
-					},
-				]}
 				name="Foo Bar"
 				spritemap="/path/to/some/resource.svg"
 				userImageSrc="/path/to/image.jpg"

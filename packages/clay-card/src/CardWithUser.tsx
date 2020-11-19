@@ -7,7 +7,6 @@ import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
-import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
 import ClaySticker, {DisplayType as StickerDisplayType} from '@clayui/sticker';
 import React from 'react';
@@ -44,13 +43,6 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Path or URL to user
 	 */
 	href?: string;
-
-	/**
-	 * List of labels that are applied to the user
-	 */
-	labels?: Array<
-		React.ComponentProps<typeof ClayLabel> & {value: React.ReactText}
-	>;
 
 	/**
 	 * Name of the user
@@ -100,7 +92,6 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	disabled,
 	dropDownTriggerProps = {},
 	href,
-	labels,
 	name,
 	onSelectChange,
 	selected = false,
@@ -162,15 +153,6 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 						<ClayCard.Description displayType="subtitle">
 							{description}
 						</ClayCard.Description>
-						{labels && (
-							<ClayCard.Caption>
-								{labels.map(({value, ...others}, i: number) => (
-									<ClayLabel {...others} key={i}>
-										{value}
-									</ClayLabel>
-								))}
-							</ClayCard.Caption>
-						)}
 					</ClayLayout.ContentCol>
 
 					{actions && (
