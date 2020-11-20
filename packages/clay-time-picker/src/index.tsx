@@ -113,7 +113,7 @@ const DEFAULT_CONFIG = {
 		},
 		hours: {
 			max: 12,
-			min: 0,
+			min: 1,
 		},
 		minutes: {
 			max: 59,
@@ -238,18 +238,22 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 				break;
 			default:
 				if (regex.test(event.key) && configName !== TimeType.ampm) {
-					const maxFirstDigit =
-						configName === TimeType.hours
-							? use12Hours
-								? 1
-								: 2
-							: 5;
+					const maxSecondDigit = Math.floor(
+						(config as ConfigMaxMin).max / 10
+					);
+
+					const minFirstDigit = (config as ConfigMaxMin).min;
+
+					const keyVal =
+						intrinsicValue < minFirstDigit
+							? minFirstDigit
+							: event.key;
 
 					const newVal =
-						Number(value) > maxFirstDigit
-							? `0${event.key}`
+						Number(value) > maxSecondDigit
+							? `0${keyVal}`
 							: (value && value !== DEFAULT_VALUE ? value : '') +
-							  event.key;
+							  keyVal;
 
 					setValue(newVal);
 				} else if (
