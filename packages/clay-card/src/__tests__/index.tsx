@@ -611,6 +611,11 @@ describe('ClayCardWithUser', () => {
 
 		const {container} = render(
 			<ClayCardWithUser
+				actions={[
+					{
+						onClick: () => {},
+					},
+				]}
 				description="Test"
 				href="#"
 				name="Foo Bar"
@@ -711,6 +716,11 @@ describe('ClayCardWithHorizontal', () => {
 	it('renders as not selectable', () => {
 		const {container} = render(
 			<ClayCardWithHorizontal
+				actions={[
+					{
+						onClick: () => {},
+					},
+				]}
 				href="#"
 				spritemap="/path/to/some/resource.svg"
 				title="Foo Bar"
@@ -762,6 +772,11 @@ describe('ClayCardWithInfo', () => {
 	it('renders as not selectable', () => {
 		const {container} = render(
 			<ClayCardWithInfo
+				actions={[
+					{
+						onClick: () => {},
+					},
+				]}
 				description="A cool description"
 				href="#"
 				labels={[

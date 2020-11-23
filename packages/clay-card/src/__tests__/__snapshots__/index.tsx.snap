@@ -1445,6 +1445,27 @@ exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
               </span>
             </p>
           </div>
+          <div
+            class="autofit-col"
+          >
+            <div
+              class="dropdown"
+            >
+              <button
+                class="dropdown-toggle component-action btn btn-monospaced btn-unstyled"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-ellipsis-v"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#ellipsis-v"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1708,6 +1729,27 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
                 Awesome
               </span>
             </span>
+          </div>
+        </div>
+        <div
+          class="autofit-col"
+        >
+          <div
+            class="dropdown"
+          >
+            <button
+              class="dropdown-toggle component-action btn btn-monospaced btn-unstyled"
+              type="button"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-ellipsis-v"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/some/spritemap#ellipsis-v"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -2222,6 +2264,27 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
                 </span>
               </span>
             </p>
+          </div>
+          <div
+            class="autofit-col"
+          >
+            <div
+              class="dropdown"
+            >
+              <button
+                class="dropdown-toggle component-action btn btn-monospaced btn-unstyled"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-ellipsis-v"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#ellipsis-v"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
