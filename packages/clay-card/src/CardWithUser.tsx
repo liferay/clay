@@ -165,6 +165,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 										{...dropDownTriggerProps}
 										className="component-action"
 										disabled={disabled}
+										displayType="unstyled"
 										spritemap={spritemap}
 										symbol="ellipsis-v"
 									/>
