@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/liferay/clay/compare/@clayui/card@3.5.1...@clayui/card@3.6.0) (2020-11-24)
+
+### Bug Fixes
+
+-   **@clayui/card:** Change default symbols and add displayType attribute to CardWithInfo so the the correct default symbol and sticker symbol could be used depending on the displayType ([2ebb132](https://github.com/liferay/clay/commit/2ebb132))
+-   **@clayui/card:** Extend card snapshot tests to include dropdown trigger markups ([18d9266](https://github.com/liferay/clay/commit/18d9266))
+-   **@clayui/card:** Remove support for labels in CardWithUser ([c2badc0](https://github.com/liferay/clay/commit/c2badc0))
+-   **@clayui/card:** Set display type of dropdown triggers to `unstyled` ([dee6728](https://github.com/liferay/clay/commit/dee6728))
+
+### Features
+
+-   **@clayui/card:** Add support for stickerProps ([072aef8](https://github.com/liferay/clay/commit/072aef8))
+
 ## [3.5.1](https://github.com/liferay/clay/compare/@clayui/card@3.5.0...@clayui/card@3.5.1) (2020-11-16)
 
 ### Bug Fixes

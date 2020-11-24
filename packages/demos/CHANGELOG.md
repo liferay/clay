@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/carloslancha/clay/compare/demos@0.5.0...demos@0.5.1) (2020-11-24)
+
+**Note:** Version bump only for package demos
+
 # [0.5.0](https://github.com/bryceosterhaus/clay/compare/demos@0.4.9...demos@0.5.0) (2020-10-01)
 
 ### Features

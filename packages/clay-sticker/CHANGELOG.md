@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/sticker@3.2.0...@clayui/sticker@3.3.0) (2020-11-24)
+
+### Features
+
+-   **@clayui/card:** Add support for stickerProps ([072aef8](https://github.com/liferay/clay/commit/072aef8))
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/sticker@3.1.1...@clayui/sticker@3.2.0) (2020-07-28)
 
 ### Features
