@@ -915,6 +915,38 @@ describe('ClayCardWithInfo', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders as image card with flush horizontal', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				flushHorizontal
+				href="#"
+				imgProps="path/to/an/image"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders as image card with flush vertical', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				flushVertical
+				href="#"
+				imgProps="path/to/an/image"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('renders with custom sticker', () => {
 		const {container} = render(
 			<ClayCardWithInfo

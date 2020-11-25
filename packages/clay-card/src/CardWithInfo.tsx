@@ -155,9 +155,11 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 			{imgProps && (
 				<img
 					className={classNames(
-						'aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid',
+						'aspect-ratio-item aspect-ratio-item-center-middle',
 						typeof imgProps !== 'string' && imgProps.className,
 						{
+							['aspect-ratio-item-fluid']:
+								!flushHorizontal && !flushVertical,
 							['aspect-ratio-item-flush']: flushHorizontal,
 							['aspect-ratio-item-vertical-flush']: flushVertical,
 						}
