@@ -616,7 +616,6 @@ describe('ClayCardWithUser', () => {
 						onClick: () => {},
 					},
 				]}
-				description="Test"
 				href="#"
 				name="Foo Bar"
 				onSelectChange={onSelectChangeFn}
@@ -635,7 +634,6 @@ describe('ClayCardWithUser', () => {
 	it('renders as disabled', () => {
 		const {container} = render(
 			<ClayCardWithUser
-				description="Test"
 				disabled
 				href="#"
 				name="Foo Bar"
@@ -648,10 +646,10 @@ describe('ClayCardWithUser', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders with icon', () => {
+	it('renders with description', () => {
 		const {container} = render(
 			<ClayCardWithUser
-				description="Test"
+				description="Awesome description of the user"
 				href="#"
 				name="Foo Bar"
 				spritemap="/path/to/some/resource.svg"
@@ -661,10 +659,22 @@ describe('ClayCardWithUser', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders with icon', () => {
+		const {container} = render(
+			<ClayCardWithUser
+				href="#"
+				name="Foo Bar"
+				spritemap="/path/to/some/resource.svg"
+				userSymbol="custom-icon"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('renders with image', () => {
 		const {container} = render(
 			<ClayCardWithUser
-				description="Test"
 				href="#"
 				name="Foo Bar"
 				spritemap="/path/to/some/resource.svg"
@@ -678,7 +688,6 @@ describe('ClayCardWithUser', () => {
 	it('renders ClayCardWithNavigation with image', () => {
 		const {container} = render(
 			<ClayCardWithNavigation
-				description="Pick and choose your layout..."
 				href="#"
 				spritemap="foo/bar"
 				title="Layout Page"
@@ -695,7 +704,6 @@ describe('ClayCardWithUser', () => {
 
 		const {container} = render(
 			<ClayCardWithNavigation
-				description="Pick and choose your layout..."
 				onClick={onClickFn}
 				spritemap="foo/bar"
 				title="Layout Page"
@@ -777,7 +785,6 @@ describe('ClayCardWithInfo', () => {
 						onClick: () => {},
 					},
 				]}
-				description="A cool description"
 				href="#"
 				labels={[
 					{
@@ -817,6 +824,21 @@ describe('ClayCardWithInfo', () => {
 		const {container} = render(
 			<ClayCardWithInfo
 				disabled
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with description', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				description="A cool description"
 				href="#"
 				onSelectChange={jest.fn()}
 				selected={false}
@@ -896,7 +918,6 @@ describe('ClayCardWithInfo', () => {
 	it('renders with custom sticker', () => {
 		const {container} = render(
 			<ClayCardWithInfo
-				description="A cool description"
 				href="#"
 				labels={[
 					{
@@ -923,7 +944,6 @@ describe('ClayCardWithInfo', () => {
 	it('renders with custom sticker with custom Icon', () => {
 		const {container} = render(
 			<ClayCardWithInfo
-				description="A cool description"
 				href="#"
 				labels={[
 					{
@@ -965,7 +985,6 @@ describe('ClayCardWithInfo', () => {
 						onClick: onDropDownItemClick,
 					},
 				]}
-				description="A cool description"
 				href="#"
 				onSelectChange={onSelectChangeFn}
 				selected={false}
