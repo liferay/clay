@@ -227,9 +227,11 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 							{title}
 						</ClayCard.Description>
 
-						<ClayCard.Description displayType="subtitle">
-							{description}
-						</ClayCard.Description>
+						{description && (
+							<ClayCard.Description displayType="subtitle">
+								{description}
+							</ClayCard.Description>
+						)}
 
 						{labels && (
 							<ClayCard.Caption>

@@ -27,7 +27,7 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Value of the description of the user
 	 */
-	description: string;
+	description?: string;
 
 	/**
 	 * Flag to indicate that all interactions on the card will be disabled.
@@ -150,9 +150,12 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 						>
 							{name}
 						</ClayCard.Description>
-						<ClayCard.Description displayType="subtitle">
-							{description}
-						</ClayCard.Description>
+
+						{description && (
+							<ClayCard.Description displayType="subtitle">
+								{description}
+							</ClayCard.Description>
+						)}
 					</ClayLayout.ContentCol>
 
 					{actions && (
