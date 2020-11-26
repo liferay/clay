@@ -1955,6 +1955,160 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and n
 </div>
 `;
 
+exports[`ClayCardWithInfo renders as image card with flush horizontal 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left image-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <img
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+              src="path/to/an/image"
+            />
+            <span
+              class="sticker sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-image"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-image"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <p
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithInfo renders as image card with flush vertical 1`] = `
+<div>
+  <div
+    class="card-type-asset form-check form-check-card form-check-top-left image-card"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <img
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-vertical-flush"
+              src="path/to/an/image"
+            />
+            <span
+              class="sticker sticker-primary sticker-bottom-left"
+            >
+              <span
+                class="sticker-overlay"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-document-image"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#document-image"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <p
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayCardWithInfo renders as not selectable 1`] = `
 <div>
   <div
