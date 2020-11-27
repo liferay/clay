@@ -1005,6 +1005,24 @@ describe('ClayCardWithInfo', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("doesn't render a sticker if stickerProps aren't passed", () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				href="#"
+				labels={[
+					{
+						displayType: 'success',
+						value: 'Awesome',
+					},
+				]}
+				spritemap="/some/spritemap"
+				title="No sticker"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('clicking dropdown item calls callback and not call onSelectChange', () => {
 		const onDropDownItemClick = jest.fn();
 		const onSelectChangeFn = jest.fn();

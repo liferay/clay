@@ -170,32 +170,34 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 				/>
 			)}
 
-			<ClaySticker
-				displayType={
-					stickerProps && stickerProps.displayType
-						? stickerProps.displayType
-						: 'primary'
-				}
-				position="bottom-left"
-				{...stickerProps}
-			>
-				{stickerProps ? (
-					stickerProps.children ? (
-						stickerProps.children
+			{stickerProps && (
+				<ClaySticker
+					displayType={
+						stickerProps && stickerProps.displayType
+							? stickerProps.displayType
+							: 'primary'
+					}
+					position="bottom-left"
+					{...stickerProps}
+				>
+					{stickerProps ? (
+						stickerProps.children ? (
+							stickerProps.children
+						) : (
+							stickerProps.content
+						)
 					) : (
-						stickerProps.content
-					)
-				) : (
-					<ClayIcon
-						spritemap={spritemap}
-						symbol={
-							isCardType.image
-								? 'document-image'
-								: 'document-default'
-						}
-					/>
-				)}
-			</ClaySticker>
+						<ClayIcon
+							spritemap={spritemap}
+							symbol={
+								isCardType.image
+									? 'document-image'
+									: 'document-default'
+							}
+						/>
+					)}
+				</ClaySticker>
+			)}
 		</ClayCard.AspectRatio>
 	);
 
