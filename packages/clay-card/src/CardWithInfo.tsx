@@ -11,7 +11,7 @@ import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
 import ClaySticker, {IClayStickerProps} from '@clayui/sticker';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React from 'react';
 
 import ClayCard from './Card';
 
@@ -135,25 +135,15 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 		image: displayType === 'image' || imgProps,
 	};
 
-	const contentSymbol = useMemo(() => {
-		if (!symbol) {
-			if (isCardType.image) {
-				return 'camera';
-			}
+	const contentSymbol = symbol
+		? symbol
+		: isCardType.image
+		? 'camera'
+		: 'documents-and-media';
 
-			return 'documents-and-media';
-		}
-
-		return symbol;
-	}, [isCardType]);
-
-	const stickerSymbol = useMemo(() => {
-		if (isCardType.image) {
-			return 'document-image';
-		}
-
-		return 'document-default';
-	}, [isCardType]);
+	const stickerSymbol = isCardType.image
+		? 'document-image'
+		: 'document-default';
 
 	const headerContent = (
 		<ClayCard.AspectRatio className="card-item-first">
