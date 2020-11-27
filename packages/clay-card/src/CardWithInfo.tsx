@@ -11,11 +11,9 @@ import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
 import ClaySticker, {IClayStickerProps} from '@clayui/sticker';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import ClayCard from './Card';
-
-type CardWithInfoDisplayType = 'file' | 'image';
 
 interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
@@ -41,7 +39,7 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Determines the style of the card
 	 */
-	displayType?: CardWithInfoDisplayType;
+	displayType?: 'file' | 'image';
 
 	/**
 	 * Props to add to the dropdown trigger element
@@ -95,9 +93,11 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Values used in displaying bottom-left icon
 	 */
-	stickerProps?: IClayStickerProps & {
-		content?: React.ReactNode;
-	};
+	stickerProps?:
+		| (IClayStickerProps & {
+				content?: React.ReactNode;
+		  })
+		| null;
 
 	/**
 	 * Name of icon
@@ -135,20 +135,31 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 		image: displayType === 'image' || imgProps,
 	};
 
+	const contentSymbol = useMemo(() => {
+		if (!symbol) {
+			if (isCardType.image) {
+				return 'camera';
+			}
+
+			return 'documents-and-media';
+		}
+
+		return symbol;
+	}, [isCardType]);
+
+	const stickerSymbol = useMemo(() => {
+		if (isCardType.image) {
+			return 'document-image';
+		}
+
+		return 'document-default';
+	}, [isCardType]);
+
 	const headerContent = (
 		<ClayCard.AspectRatio className="card-item-first">
 			{!imgProps && (
 				<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-					<ClayIcon
-						spritemap={spritemap}
-						symbol={
-							symbol
-								? symbol
-								: isCardType.image
-								? 'camera'
-								: 'documents-and-media'
-						}
-					/>
+					<ClayIcon spritemap={spritemap} symbol={contentSymbol} />
 				</div>
 			)}
 
@@ -170,32 +181,30 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 				/>
 			)}
 
-			<ClaySticker
-				displayType={
-					stickerProps && stickerProps.displayType
-						? stickerProps.displayType
-						: 'primary'
-				}
-				position="bottom-left"
-				{...stickerProps}
-			>
-				{stickerProps ? (
-					stickerProps.children ? (
-						stickerProps.children
+			{stickerProps !== null && (
+				<ClaySticker
+					displayType={
+						stickerProps && stickerProps.displayType
+							? stickerProps.displayType
+							: 'primary'
+					}
+					position="bottom-left"
+					{...stickerProps}
+				>
+					{stickerProps ? (
+						stickerProps.children ? (
+							stickerProps.children
+						) : (
+							stickerProps.content
+						)
 					) : (
-						stickerProps.content
-					)
-				) : (
-					<ClayIcon
-						spritemap={spritemap}
-						symbol={
-							isCardType.image
-								? 'document-image'
-								: 'document-default'
-						}
-					/>
-				)}
-			</ClaySticker>
+						<ClayIcon
+							spritemap={spritemap}
+							symbol={stickerSymbol}
+						/>
+					)}
+				</ClaySticker>
+			)}
 		</ClayCard.AspectRatio>
 	);
 

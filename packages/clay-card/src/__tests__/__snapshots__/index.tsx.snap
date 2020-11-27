@@ -2548,6 +2548,75 @@ exports[`ClayCardWithInfo renders with description 1`] = `
 </div>
 `;
 
+exports[`ClayCardWithInfo renders with no sticker 1`] = `
+<div>
+  <div
+    class="card-type-asset file-card form-check form-check-card form-check-top-left"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-item-first aspect-ratio"
+          >
+            <div
+              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
+            >
+              <svg
+                class="lexicon-icon lexicon-icon-documents-and-media"
+                role="presentation"
+              >
+                <use
+                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                />
+              </svg>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div
+        class="card-body"
+      >
+        <div
+          class="card-row"
+        >
+          <div
+            class="autofit-col autofit-col-expand"
+          >
+            <p
+              class="card-title"
+              title="Foo Bar"
+            >
+              <span
+                class="text-truncate-inline"
+              >
+                <a
+                  class="text-truncate"
+                  href="#"
+                >
+                  Foo Bar
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayCardWithUser renders ClayCardWithNavigation with image 1`] = `
 <div>
   <a
