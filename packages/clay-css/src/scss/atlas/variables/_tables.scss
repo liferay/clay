@@ -24,6 +24,8 @@ $table-head-link: map-deep-merge(
 	$table-head-link
 );
 
+$table-caption-color: $gray-900 !default;
+
 $table-divider-bg: $gray-100 !default;
 $table-divider-color: $gray-600 !default;
 $table-divider-font-size: 0.75rem !default; // 12px

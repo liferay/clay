@@ -6,6 +6,13 @@ th {
 	@include clay-css($c-th-base);
 }
 
+caption {
+	color: $table-caption-color;
+	padding-bottom: $table-cell-padding;
+	padding-top: $table-cell-padding;
+	text-align: left;
+}
+
 .table-head-title {
 	.inline-item-before {
 		margin-right: $table-head-title-inline-item-spacer-x;
@@ -21,7 +28,6 @@ th {
 }
 
 .table {
-	background-color: $table-bg;
 	border-spacing: 0;
 	color: $table-color;
 	font-size: $table-font-size;
@@ -97,6 +103,10 @@ th {
 		border-top: (2 * $table-border-width) solid $table-border-color;
 	}
 
+	caption {
+		@include clay-css($c-table-caption);
+	}
+
 	.autofit-col {
 		justify-content: center;
 		padding-left: $table-cell-padding;
@@ -140,6 +150,12 @@ th {
 %table-cell-contract {
 	display: table-cell;
 	width: 1%;
+}
+
+// Table Caption
+
+.table-caption-bottom caption {
+	caption-side: bottom;
 }
 
 // Table Sm
@@ -374,37 +390,44 @@ th {
 .table-list {
 	@include clay-css($c-table-list);
 
+	thead:first-child,
+	tbody:first-child,
+	tfoot:first-child,
+	caption:first-child + thead {
+		tr:first-child {
+			th,
+			td {
+				border-top-width: 0;
+			}
+
+			th:first-child,
+			td:first-child,
+			.table-cell-start {
+				border-top-left-radius: clay-enable-rounded(
+					$table-list-border-radius
+				);
+			}
+
+			th:last-child,
+			td:last-child,
+			.table-cell-start {
+				border-top-right-radius: clay-enable-rounded(
+					$table-list-border-radius
+				);
+			}
+		}
+	}
+
+	caption {
+		@include clay-css($c-table-list-caption);
+	}
+
 	thead,
 	tbody,
 	tfoot {
 		td,
 		th {
 			@include clay-css($c-table-list-cell);
-		}
-
-		&:first-child {
-			tr:first-child {
-				th,
-				td {
-					border-top-width: 0;
-				}
-
-				th:first-child,
-				td:first-child,
-				.table-cell-start {
-					border-top-left-radius: clay-enable-rounded(
-						$table-list-border-radius
-					);
-				}
-
-				th:last-child,
-				td:last-child,
-				.table-cell-end {
-					border-top-right-radius: clay-enable-rounded(
-						$table-list-border-radius
-					);
-				}
-			}
 		}
 
 		&:last-child {
