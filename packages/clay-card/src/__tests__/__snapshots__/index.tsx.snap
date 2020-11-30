@@ -2,9 +2,7 @@
 
 exports[`ClayCard renders a ClayCard as a directory 1`] = `
 <div>
-  <div
-    class="card"
-  >
+  <div>
     <div
       class="card card-horizontal"
     >
@@ -1394,9 +1392,7 @@ exports[`ClayCardWithHorizontal renders as disabled 1`] = `
 
 exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
 <div>
-  <div
-    class="card"
-  >
+  <div>
     <div
       class="card card-horizontal"
     >
