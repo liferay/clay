@@ -86,6 +86,18 @@ $table-cell-expand-smaller-width: 15% !default;
 $table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
 $table-cell-expand-smallest-width: 10% !default;
 
+// Table Caption
+
+$c-table-caption: () !default;
+$c-table-caption: map-merge(
+	(
+		caption-side: top,
+		padding-left: $table-cell-padding,
+		padding-right: $table-cell-padding,
+	),
+	$c-table-caption
+);
+
 // Table Bordered
 
 $table-bordered-border-width: $table-border-width !default;
@@ -228,6 +240,10 @@ $c-table-list-bordered-cell: map-merge(
 	),
 	$c-table-list-bordered-cell
 );
+
+// .table-list caption
+
+$c-table-list-caption: () !default;
 
 // .table-list .table-divider
 
