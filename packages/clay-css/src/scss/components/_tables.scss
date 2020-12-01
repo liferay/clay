@@ -621,10 +621,6 @@ th {
 		width: 1%;
 	}
 
-	.table-cell-expand {
-		@extend %table-cell-expand;
-	}
-
 	.table-cell-expand-small {
 		max-width: $table-cell-expand-small-max-width;
 		width: $table-cell-expand-small-width;
@@ -642,6 +638,10 @@ th {
 		width: $table-cell-expand-smallest-width;
 		word-wrap: break-word;
 	}
+}
+
+.table-cell-expand {
+	@extend %table-cell-expand;
 }
 
 .table-nowrap {
