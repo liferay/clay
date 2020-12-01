@@ -850,21 +850,6 @@ describe('ClayCardWithInfo', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders with no sticker', () => {
-		const {container} = render(
-			<ClayCardWithInfo
-				href="#"
-				onSelectChange={jest.fn()}
-				selected={false}
-				spritemap="/path/to/some/resource.svg"
-				stickerProps={null}
-				title="Foo Bar"
-			/>
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it('renders as file card specifying the displayType', () => {
 		const {container} = render(
 			<ClayCardWithInfo
@@ -1014,6 +999,21 @@ describe('ClayCardWithInfo', () => {
 					size: 'xl',
 				}}
 				title="Very Large File"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with no sticker', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				stickerProps={undefined}
+				title="Foo Bar"
 			/>
 		);
 

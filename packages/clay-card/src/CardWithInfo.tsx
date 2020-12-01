@@ -93,11 +93,9 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Values used in displaying bottom-left icon
 	 */
-	stickerProps?:
-		| (IClayStickerProps & {
-				content?: React.ReactNode;
-		  })
-		| null;
+	stickerProps?: IClayStickerProps & {
+		content?: React.ReactNode;
+	};
 
 	/**
 	 * Name of icon
@@ -125,7 +123,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	onSelectChange,
 	selected = false,
 	spritemap,
-	stickerProps,
+	stickerProps = {},
 	symbol,
 	title,
 	...otherProps
@@ -171,22 +169,20 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 				/>
 			)}
 
-			{stickerProps !== null && (
+			{stickerProps && (
 				<ClaySticker
 					displayType={
-						stickerProps && stickerProps.displayType
+						stickerProps.displayType
 							? stickerProps.displayType
 							: 'primary'
 					}
 					position="bottom-left"
 					{...stickerProps}
 				>
-					{stickerProps ? (
-						stickerProps.children ? (
-							stickerProps.children
-						) : (
-							stickerProps.content
-						)
+					{stickerProps.children ? (
+						stickerProps.children
+					) : stickerProps.content ? (
+						stickerProps.content
 					) : (
 						<ClayIcon
 							spritemap={spritemap}
