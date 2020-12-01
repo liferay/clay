@@ -15,8 +15,6 @@ import React from 'react';
 
 import ClayCard from './Card';
 
-type CardWithInfoDisplayType = 'file' | 'image';
-
 interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * List of actions in the dropdown menu
@@ -41,7 +39,7 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Determines the style of the card
 	 */
-	displayType?: CardWithInfoDisplayType;
+	displayType?: 'file' | 'image';
 
 	/**
 	 * Props to add to the dropdown trigger element
@@ -125,7 +123,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	onSelectChange,
 	selected = false,
 	spritemap,
-	stickerProps,
+	stickerProps = {},
 	symbol,
 	title,
 	...otherProps
@@ -135,20 +133,21 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 		image: displayType === 'image' || imgProps,
 	};
 
+	const contentSymbol = symbol
+		? symbol
+		: isCardType.image
+		? 'camera'
+		: 'documents-and-media';
+
+	const stickerSymbol = isCardType.image
+		? 'document-image'
+		: 'document-default';
+
 	const headerContent = (
 		<ClayCard.AspectRatio className="card-item-first">
 			{!imgProps && (
 				<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-					<ClayIcon
-						spritemap={spritemap}
-						symbol={
-							symbol
-								? symbol
-								: isCardType.image
-								? 'camera'
-								: 'documents-and-media'
-						}
-					/>
+					<ClayIcon spritemap={spritemap} symbol={contentSymbol} />
 				</div>
 			)}
 
@@ -170,32 +169,28 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 				/>
 			)}
 
-			<ClaySticker
-				displayType={
-					stickerProps && stickerProps.displayType
-						? stickerProps.displayType
-						: 'primary'
-				}
-				position="bottom-left"
-				{...stickerProps}
-			>
-				{stickerProps ? (
-					stickerProps.children ? (
+			{stickerProps && (
+				<ClaySticker
+					displayType={
+						stickerProps.displayType
+							? stickerProps.displayType
+							: 'primary'
+					}
+					position="bottom-left"
+					{...stickerProps}
+				>
+					{stickerProps.children ? (
 						stickerProps.children
-					) : (
+					) : stickerProps.content ? (
 						stickerProps.content
-					)
-				) : (
-					<ClayIcon
-						spritemap={spritemap}
-						symbol={
-							isCardType.image
-								? 'document-image'
-								: 'document-default'
-						}
-					/>
-				)}
-			</ClaySticker>
+					) : (
+						<ClayIcon
+							spritemap={spritemap}
+							symbol={stickerSymbol}
+						/>
+					)}
+				</ClaySticker>
+			)}
 		</ClayCard.AspectRatio>
 	);
 

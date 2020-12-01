@@ -1005,6 +1005,21 @@ describe('ClayCardWithInfo', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders with no sticker', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				stickerProps={undefined}
+				title="Foo Bar"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('clicking dropdown item calls callback and not call onSelectChange', () => {
 		const onDropDownItemClick = jest.fn();
 		const onSelectChangeFn = jest.fn();
