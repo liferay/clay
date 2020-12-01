@@ -3,25 +3,24 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
 import AspectRatio from './AspectRatio';
 import Body from './Body';
 import Caption from './Caption';
+import {ClayCardHorizontal} from './CardHorizontal';
+import {ClayCardNavigation} from './CardNavigation';
 import Context, {IContext} from './Context';
 import Description from './Description';
 import Group from './Group';
 import Row from './Row';
 
-type CardDisplayType = 'file' | 'image' | 'user';
-
 export interface ICardProps extends IContext {
 	/**
 	 * Determines the style of the card
 	 */
-	displayType?: CardDisplayType;
+	displayType?: 'file' | 'image' | 'user';
 
 	/**
 	 * Flag that indicates if the card can be selectable.
@@ -35,77 +34,69 @@ interface IProps
 			HTMLAnchorElement | HTMLSpanElement | HTMLDivElement
 		> {}
 
-const ClayCard: React.FunctionComponent<IProps> & {
-	AspectRatio: typeof AspectRatio;
-	Body: typeof Body;
-	Caption: typeof Caption;
-	Description: typeof Description;
-	Group: typeof Group;
-	Row: typeof Row;
-} = ({
+const ClayCard: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	displayType,
-	horizontal,
-	href,
-	interactive,
-	onClick,
 	selectable = false,
 	...otherProps
-}: IProps) => {
+}) => {
 	const isCardType = {
 		file: displayType === 'file',
 		image: displayType === 'image',
 		user: displayType === 'user',
 	};
 
-	const TagHeaderName = href ? ClayLink : 'div';
-
-	const TagName = interactive ? 'span' : 'div';
-
 	return (
-		<Context.Provider value={{horizontal, interactive}}>
-			<TagHeaderName
-				{...otherProps}
-				className={classNames(className, {
-					card: !selectable && (!horizontal || interactive),
-					'card-interactive card-interactive-primary card-type-template': interactive,
-					'card-type-asset':
-						isCardType.file || isCardType.image || isCardType.user,
-					'card-type-directory form-check form-check-card form-check-middle-left':
-						selectable && horizontal,
-					'file-card': isCardType.file,
-					'form-check form-check-card form-check-top-left':
-						selectable &&
-						(isCardType.file ||
-							isCardType.image ||
-							isCardType.user),
-					'image-card': isCardType.image,
-					'template-card': interactive && !horizontal,
-					'template-card-horizontal': horizontal && interactive,
-					'user-card': isCardType.user,
-				})}
-				href={interactive ? href : undefined}
-				onClick={onClick}
-				role={onClick ? 'button' : undefined}
-			>
-				{(selectable && !horizontal) ||
-				(selectable && isCardType.image) ||
-				isCardType.user ? (
-					<TagName className="card">{children}</TagName>
-				) : (
-					<>{children}</>
+		<Context.Provider value={{horizontal: false, interactive: false}}>
+			<div
+				className={classNames(
+					className,
+					{
+						card: !selectable,
+						'file-card': isCardType.file,
+						'form-check-card form-check form-check-top-left': selectable,
+						'image-card': isCardType.image,
+						'user-card': isCardType.user,
+					},
+					'card-type-asset'
 				)}
-			</TagHeaderName>
+				{...otherProps}
+			>
+				{selectable ? <div className="card">{children}</div> : children}
+			</div>
 		</Context.Provider>
 	);
 };
 
-ClayCard.AspectRatio = AspectRatio;
-ClayCard.Body = Body;
-ClayCard.Caption = Caption;
-ClayCard.Description = Description;
-ClayCard.Group = Group;
-ClayCard.Row = Row;
+const ClayCardHybrid: React.FunctionComponent<IProps> & {
+	AspectRatio: typeof AspectRatio;
+	Body: typeof Body;
+	Caption: typeof Caption;
+	Description: typeof Description;
+	Group: typeof Group;
+	Row: typeof Row;
+} = ({children, horizontal, interactive, ...otherProps}: IProps) => {
+	const Container = interactive
+		? ClayCardNavigation
+		: horizontal
+		? ClayCardHorizontal
+		: ClayCard;
 
-export default ClayCard;
+	return (
+		<Container horizontal={horizontal} {...otherProps}>
+			{children}
+		</Container>
+	);
+};
+
+ClayCardHybrid.displayName = 'ClayCard';
+
+ClayCardHybrid.AspectRatio = AspectRatio;
+ClayCardHybrid.Body = Body;
+ClayCardHybrid.Caption = Caption;
+ClayCardHybrid.Description = Description;
+ClayCardHybrid.Group = Group;
+ClayCardHybrid.Row = Row;
+
+export default ClayCardHybrid;

@@ -12,6 +12,7 @@ import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
 import ClayCard from './Card';
+import {ClayCardHorizontal} from './CardHorizontal';
 
 interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
@@ -117,7 +118,7 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	);
 
 	return (
-		<ClayCard {...otherProps} horizontal selectable={!!onSelectChange}>
+		<ClayCardHorizontal {...otherProps} selectable={!!onSelectChange}>
 			{onSelectChange && (
 				<ClayCheckbox
 					{...checkboxProps}
@@ -125,11 +126,11 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 					disabled={disabled}
 					onChange={() => onSelectChange(!selected)}
 				>
-					{content}
+					<ClayCardHorizontal.Body>{content}</ClayCardHorizontal.Body>
 				</ClayCheckbox>
 			)}
 
 			{!onSelectChange && content}
-		</ClayCard>
+		</ClayCardHorizontal>
 	);
 };

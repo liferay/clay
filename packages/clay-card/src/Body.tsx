@@ -11,21 +11,15 @@ import Context from './Context';
 const ClayCardBody: React.FunctionComponent<React.HTMLAttributes<
 	HTMLDivElement
 >> = ({children, className, ...otherProps}) => {
-	const {horizontal, interactive} = React.useContext(Context);
+	const {interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';
 
-	const content = (
+	return (
 		<TagName className={classNames('card-body', className)} {...otherProps}>
 			{children}
 		</TagName>
 	);
-
-	if (horizontal && !interactive) {
-		return <div className="card card-horizontal">{content}</div>;
-	}
-
-	return content;
 };
 
 export default ClayCardBody;
