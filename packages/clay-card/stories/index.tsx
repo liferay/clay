@@ -247,17 +247,16 @@ storiesOf('Components|ClayCard', module)
 						disabled={boolean('Disabled', false)}
 						href="#"
 						name="Abraham Kuyper"
-						onSelectChange={() => {}}
-						selected={boolean('selected', false)}
+						onSelectChange={setValue}
+						selected={value}
 						spritemap={spritemap}
 					/>
-
+				</div>
+				<div className="col-md-4">
 					<ClayCardWithUser
 						description="Assistant to the regional manager"
 						disabled={boolean('Disabled', false)}
 						name="Abraham Kuyper"
-						onSelectChange={setValue}
-						selected={value}
 						spritemap={spritemap}
 						userImageSrc="https://via.placeholder.com/256"
 					/>
