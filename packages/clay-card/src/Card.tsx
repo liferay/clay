@@ -68,9 +68,8 @@ const ClayCard: React.FunctionComponent<IProps> & {
 			<TagHeaderName
 				{...otherProps}
 				className={classNames(className, {
-					card: !selectable,
-					'card-interactive card-interactive-primary card-type-template':
-						(horizontal && interactive) || interactive,
+					card: !selectable && (!horizontal || interactive),
+					'card-interactive card-interactive-primary card-type-template': interactive,
 					'card-type-asset':
 						isCardType.file || isCardType.image || isCardType.user,
 					'card-type-directory form-check form-check-card form-check-middle-left':
