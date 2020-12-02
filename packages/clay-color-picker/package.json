@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/color-picker",
-	"version": "3.4.0",
+	"version": "3.4.1",
 	"description": "ClayColorPicker component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -26,10 +26,10 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/drop-down": "^3.8.0",
-		"@clayui/form": "^3.12.0",
+		"@clayui/drop-down": "^3.8.1",
+		"@clayui/form": "^3.13.0",
 		"@clayui/icon": "^3.1.0",
-		"@clayui/shared": "^3.3.0",
+		"@clayui/shared": "^3.3.1",
 		"classnames": "^2.2.6",
 		"tinycolor2": "^1.4.1"
 	},

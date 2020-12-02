@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/liferay/clay/compare/@clayui/card@3.6.0...@clayui/card@3.6.1) (2020-12-02)
+
+### Bug Fixes
+
+-   Do not render description if it's not passed. Make description optional in CardWithUser. Update tests and snapshots. ([bcfc809](https://github.com/liferay/clay/commit/bcfc809))
+-   don't use useMemo ([90ebd60](https://github.com/liferay/clay/commit/90ebd60))
+-   flush and fluid should not be used together in CardWithInfo ([287baef](https://github.com/liferay/clay/commit/287baef))
+-   Make stickerProps nullable and minor refactor ([a5aefb2](https://github.com/liferay/clay/commit/a5aefb2))
+-   **@clayui/card:** prevent double 'card' class on ClayCardWithHorizontal ([d7fb177](https://github.com/liferay/clay/commit/d7fb177))
+-   set stickerProps default value and use that instead make it nullable so stickerProps={undefined} can be passed to render no sticker ([f0cb681](https://github.com/liferay/clay/commit/f0cb681))
+-   **@clayui/card:** revert markup cleanup, SF ([3747b61](https://github.com/liferay/clay/commit/3747b61))
+
 # [3.6.0](https://github.com/liferay/clay/compare/@clayui/card@3.5.1...@clayui/card@3.6.0) (2020-11-24)
 
 ### Bug Fixes

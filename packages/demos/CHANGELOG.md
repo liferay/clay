@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/liferay/clay/compare/demos@0.5.1...demos@0.5.2) (2020-12-02)
+
+**Note:** Version bump only for package demos
+
 ## [0.5.1](https://github.com/carloslancha/clay/compare/demos@0.5.0...demos@0.5.1) (2020-11-24)
 
 **Note:** Version bump only for package demos

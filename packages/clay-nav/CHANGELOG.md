@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.1](https://github.com/liferay/clay/compare/@clayui/nav@3.4.0...@clayui/nav@3.4.1) (2020-12-02)
+
+### Bug Fixes
+
+-   **@clayui/nav:** fix documentation typo ([6c6bb46](https://github.com/liferay/clay/commit/6c6bb46))
+
 # [3.4.0](https://github.com/liferay/clay/compare/@clayui/nav@3.3.2...@clayui/nav@3.4.0) (2020-10-01)
 
 ### Bug Fixes

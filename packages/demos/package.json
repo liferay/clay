@@ -8,15 +8,15 @@
 	},
 	"dependencies": {
 		"@clayui/button": "^3.5.0",
-		"@clayui/form": "^3.12.0",
+		"@clayui/form": "^3.13.0",
 		"@clayui/layout": "^3.2.0",
-		"@clayui/list": "^3.4.1",
+		"@clayui/list": "^3.4.2",
 		"@clayui/management-toolbar": "^3.2.3",
-		"@clayui/multi-select": "^3.8.0",
-		"@clayui/nav": "^3.4.0",
-		"@clayui/pagination": "^3.3.0",
-		"@clayui/pagination-bar": "^3.2.0",
-		"@clayui/panel": "^3.3.0",
+		"@clayui/multi-select": "^3.8.1",
+		"@clayui/nav": "^3.4.1",
+		"@clayui/pagination": "^3.3.1",
+		"@clayui/pagination-bar": "^3.2.1",
+		"@clayui/panel": "^3.3.1",
 		"classnames": "^2.2.6",
 		"react-dnd": "^10.0.2",
 		"react-dnd-html5-backend": "^10.0.2",
@@ -25,5 +25,5 @@
 	"devDependencies": {
 		"@types/recharts": "1.8.10"
 	},
-	"version": "0.5.1"
+	"version": "0.5.2"
 }

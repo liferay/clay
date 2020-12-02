@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/liferay/clay/compare/@clayui/date-picker@3.6.0...@clayui/date-picker@3.6.1) (2020-12-02)
+
+**Note:** Version bump only for package @clayui/date-picker
+
 # [3.6.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.5.4...@clayui/date-picker@3.6.0) (2020-10-01)
 
 ### Features

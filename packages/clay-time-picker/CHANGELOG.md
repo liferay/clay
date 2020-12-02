@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.0...@clayui/time-picker@3.2.1) (2020-12-02)
+
+### Bug Fixes
+
+-   **@clayui/time-picker:** make sure hours can't be 0 when its a 12 hour clock ([47a582c](https://github.com/liferay/clay/commit/47a582c))
+-   **@clayui/time-picker:** make sure input always has a leading 0 for single digits ([5c9f410](https://github.com/liferay/clay/commit/5c9f410))
+-   **@clayui/time-picker:** Use 12 for AM/PM mode and allow keystroke for AM/PM change ([05900cb](https://github.com/liferay/clay/commit/05900cb))
+
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/time-picker@3.1.10...@clayui/time-picker@3.2.0) (2020-10-01)
 
 ### Features

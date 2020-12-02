@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.21.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.20.0...@clayui/css@3.21.0) (2020-12-02)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Tables don't require the class `table-autofit` for `table-cell-expand`, `table-cell-expand-small`, `table-cell-expand-smaller`, and `table-cell-expand-smallest` to work. Also adds `table-cell-contract`. ([6f7f2bf](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6f7f2bf)), closes [#3818](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3818)
+* **@clayui/css:** Tables moves caption styles from _reboot.scss to _tables.scss and change default to `caption-side: top` ([168abf4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/168abf4)), closes [#272833](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/272833)
+
+
+### Features
+
+* **@clayui/css:** SVG Icons adds automatic-translate.svg ([03eba11](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/03eba11))
+* **@clayui/css:** SVG Icons adds icon for React ([8e09e97](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8e09e97))
+
+
+
+
+
 # [3.20.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.19.0...@clayui/css@3.20.0) (2020-11-16)
 
 
