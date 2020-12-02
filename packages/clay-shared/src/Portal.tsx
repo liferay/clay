@@ -46,8 +46,12 @@ export const ClayPortal: React.FunctionComponent<
 		}
 
 		return () => {
-			if (elToMountTo && portalRef.current) {
-				elToMountTo.removeChild(portalRef.current);
+			if (portalRef.current) {
+				if (typeof portalRef.current.remove === 'function') {
+					portalRef.current.remove();
+				} else if (elToMountTo) {
+					elToMountTo.removeChild(portalRef.current);
+				}
 			}
 		};
 	}, [containerRef, parentPortalRef]);
