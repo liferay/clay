@@ -20,6 +20,7 @@
 /// focus: {Map | Null}, // See Mixin `clay-css` for available keys
 /// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
 /// active: {Map | Null}, // See Mixin `clay-css` for available keys
+/// active-class: {Map | Null}, // See Mixin `clay-css` for available keys
 /// active-focus: {Map | Null}, // See Mixin `clay-css` for available keys
 /// lexicon-icon: {Map | Null}, // See Mixin `clay-css` for available keys
 /// inline-item: {Map | Null}, // See Mixin `clay-css` for available keys
@@ -171,6 +172,9 @@
 				setter(map-get($map, active-z-index), map-get($active, z-index)),
 		)
 	);
+
+	$active-class: setter(map-get($map, active-class), ());
+	$active-class: map-merge($active, $active-class);
 
 	$active-class-after: setter(map-get($map, active-class-after), ());
 
@@ -372,9 +376,7 @@
 			@include clay-css($focus);
 		}
 
-		&:active,
-		&.active,
-		.show > &.dropdown-toggle {
+		&:active {
 			@include clay-css($active);
 
 			&:focus {
@@ -382,7 +384,12 @@
 			}
 		}
 
-		&.active {
+		&[aria-expanded='true'],
+		&.active,
+		&.show,
+		.show > &.dropdown-toggle {
+			@include clay-css($active-class);
+
 			&::after {
 				@include clay-css($active-class-after);
 			}
