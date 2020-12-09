@@ -3,6 +3,10 @@ th {
 	text-align: left;
 }
 
+caption {
+	caption-side: top;
+}
+
 .table-head-title {
 	.inline-item-before {
 		margin-right: $table-head-title-inline-item-spacer-x;
