@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.22.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.21.5...v2.22.0) (2020-12-09)
+
+
+### Features
+
+* **clay-css:** SVG Icons adds shield-check ([bcb3cb3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bcb3cb38de33d1beb050bb5e6faabca8c89f65c7))
+
+
+
+
+
 ## [2.21.4](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.21.3...v2.21.4) (2020-08-11)
 
 
