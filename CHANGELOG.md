@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.22.0](https://github.com/bryceosterhaus/clay/compare/v2.21.5...v2.22.0) (2020-12-09)
+
+
+### Bug Fixes
+
+* **clay-css:** Tables caption should be at the top and Atlas theme text color should be darker ([2b2163d](https://github.com/bryceosterhaus/clay/commit/2b2163d)), closes [#3806](https://github.com/bryceosterhaus/clay/issues/3806)
+
+
+### Features
+
+* **clay-css:** SVG Icons adds shield-check ([bcb3cb3](https://github.com/bryceosterhaus/clay/commit/bcb3cb3))
+
+
+
+
+
 ## [2.21.5](https://github.com/liferay/clay/compare/v2.21.4...v2.21.5) (2020-08-31)
 
 **Note:** Version bump only for package clay

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.22.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.21.5...v2.22.0) (2020-12-09)
+
+
+### Bug Fixes
+
+* **clay-css:** Tables caption should be at the top and Atlas theme text color should be darker ([2b2163d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2b2163d)), closes [#3806](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3806)
+
+
+### Features
+
+* **clay-css:** SVG Icons adds shield-check ([bcb3cb3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bcb3cb3))
+
+
+
+
+
 ## [2.21.4](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.21.3...v2.21.4) (2020-08-11)
 
 
