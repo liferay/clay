@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Rendering default 1`] = `
-<span
+<label
   className="toggle-switch simple-toggle-switch"
 >
   <span
@@ -22,14 +22,14 @@ exports[`Rendering default 1`] = `
       />
     </span>
   </span>
-</span>
+</label>
 `;
 
 exports[`Rendering inside radiogroup 1`] = `
 <div
   className=""
 >
-  <span
+  <label
     className="toggle-switch simple-toggle-switch"
   >
     <span
@@ -56,8 +56,8 @@ exports[`Rendering inside radiogroup 1`] = `
     >
       Foo
     </span>
-  </span>
-  <span
+  </label>
+  <label
     className="toggle-switch simple-toggle-switch"
   >
     <span
@@ -84,8 +84,8 @@ exports[`Rendering inside radiogroup 1`] = `
     >
       Bar
     </span>
-  </span>
-  <span
+  </label>
+  <label
     className="toggle-switch simple-toggle-switch"
   >
     <span
@@ -112,12 +112,12 @@ exports[`Rendering inside radiogroup 1`] = `
     >
       Baz
     </span>
-  </span>
+  </label>
 </div>
 `;
 
 exports[`Rendering w/ disabled 1`] = `
-<span
+<label
   className="toggle-switch simple-toggle-switch disabled"
 >
   <span
@@ -139,11 +139,11 @@ exports[`Rendering w/ disabled 1`] = `
       />
     </span>
   </span>
-</span>
+</label>
 `;
 
 exports[`Rendering w/ symbol 1`] = `
-<span
+<label
   className="toggle-switch simple-toggle-switch"
 >
   <span
@@ -189,5 +189,5 @@ exports[`Rendering w/ symbol 1`] = `
       </span>
     </span>
   </span>
-</span>
+</label>
 `;
