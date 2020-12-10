@@ -45,7 +45,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 		}
 
 		return (
-			<span
+			<label
 				className={classNames(
 					'toggle-switch',
 					'simple-toggle-switch',
@@ -111,7 +111,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 				</span>
 
 				{label && <span className="toggle-switch-label">{label}</span>}
-			</span>
+			</label>
 		);
 	}
 );
