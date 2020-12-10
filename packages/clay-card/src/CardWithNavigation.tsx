@@ -10,6 +10,7 @@ import ClaySticker from '@clayui/sticker';
 import React from 'react';
 
 import ClayCard from './Card';
+import {ClayCardNavigation} from './CardNavigation';
 
 interface IProps
 	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
@@ -71,11 +72,10 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 	...otherProps
 }: IProps) => {
 	return (
-		<ClayCard
+		<ClayCardNavigation
 			{...otherProps}
 			horizontal={horizontal}
 			href={href}
-			interactive
 			onClick={onClick}
 			onKeyDown={(event: React.KeyboardEvent) => {
 				if (
@@ -151,6 +151,6 @@ export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
 					)}
 				</ClayCard.Body>
 			)}
-		</ClayCard>
+		</ClayCardNavigation>
 	);
 };
