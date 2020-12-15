@@ -1012,7 +1012,7 @@ describe('ClayCardWithInfo', () => {
 				onSelectChange={jest.fn()}
 				selected={false}
 				spritemap="/path/to/some/resource.svg"
-				stickerProps={undefined}
+				stickerProps={null}
 				title="Foo Bar"
 			/>
 		);
