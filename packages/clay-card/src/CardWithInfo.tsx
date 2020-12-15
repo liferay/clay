@@ -93,9 +93,11 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Values used in displaying bottom-left icon
 	 */
-	stickerProps?: IClayStickerProps & {
-		content?: React.ReactNode;
-	};
+	stickerProps?:
+		| (IClayStickerProps & {
+				content?: React.ReactNode;
+		  })
+		| null;
 
 	/**
 	 * Name of icon

@@ -2567,22 +2567,6 @@ exports[`ClayCardWithInfo renders with no sticker 1`] = `
                 />
               </svg>
             </div>
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-default"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="/path/to/some/resource.svg#document-default"
-                  />
-                </svg>
-              </span>
-            </span>
           </div>
         </label>
       </div>
