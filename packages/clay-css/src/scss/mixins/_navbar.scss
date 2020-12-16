@@ -18,6 +18,7 @@
 	$border-top-width: setter(map-get($map, border-top-width), 0);
 	$box-shadow: map-get($map, box-shadow);
 	$font-size: setter(map-get($map, font-size), $font-size-base);
+	$min-height: map-get($map, min-height);
 	$padding-x: setter(map-get($map, padding-x), $navbar-padding-x);
 	$padding-y: setter(map-get($map, padding-y), $navbar-padding-y);
 	$link-height: setter(
@@ -85,6 +86,7 @@
 
 	$height-mobile: setter(map-get($map, height-mobile), $height);
 	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size);
+	$min-height-mobile: map-get($map, min-height-mobile);
 	$link-height-mobile: setter(
 		map-get($map, link-height-mobile),
 		$height-mobile - $border-bottom-width - $border-top-width -
@@ -250,6 +252,7 @@
 		@include box-shadow($box-shadow);
 
 		font-size: $font-size;
+		min-height: $min-height;
 		padding: $padding-y $padding-x;
 
 		.container,
@@ -425,6 +428,8 @@
 					@if not($infix == '') {
 						// .navbar-expand-sm, md, lg, xl
 						@include media-breakpoint-down($breakpoint) {
+							min-height: $min-height-mobile;
+
 							&.navbar-collapse-absolute {
 								.navbar-collapse {
 									border-color: transparent;
