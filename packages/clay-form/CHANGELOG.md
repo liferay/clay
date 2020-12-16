@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/liferay/clay/compare/@clayui/form@3.12.0...@clayui/form@3.14.0) (2020-12-16)
+
+### Bug Fixes
+
+-   **@clayui/form:** ClayToggle should use a label element instead of span ([d154e53](https://github.com/liferay/clay/commit/d154e53))
+
+### Features
+
+-   **clayui.com:** update logic for handling navigation ([8186ed0](https://github.com/liferay/clay/commit/8186ed0))
+
 # [3.13.0](https://github.com/liferay/clay/compare/@clayui/form@3.12.0...@clayui/form@3.13.0) (2020-12-02)
 
 ### Features

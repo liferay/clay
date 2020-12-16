@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.22.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.20.0...@clayui/css@3.22.0) (2020-12-16)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Mixin `clay-css` adds `-webkit-overflow-scrolling` and `fill` properties ([a18d2a6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a18d2a6)), closes [#3771](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3771)
+* **@clayui/css:** Mixins clay-link active-class should also style `&[aria-expanded='true']` and `&.show` so we can style collapse plugin open state ([a559fd3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a559fd3)), closes [#3767](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3767)
+* **@clayui/css:** SVG Icons adds dropdown.svg ([892d3ae](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/892d3ae))
+* **@clayui/css:** Tables don't require the class `table-autofit` for `table-cell-expand`, `table-cell-expand-small`, `table-cell-expand-smaller`, and `table-cell-expand-smallest` to work. Also adds `table-cell-contract`. ([6f7f2bf](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6f7f2bf)), closes [#3818](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3818)
+* **@clayui/css:** Tables moves caption styles from _reboot.scss to _tables.scss and change default to `caption-side: top` ([168abf4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/168abf4)), closes [#272833](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/272833)
+
+
+### Features
+
+* **@clayui/css:** Mixins `clay-button-variant` allow styling `.active` separately from `:active` with `active-class` ([d2370d3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d2370d3)), closes [#3797](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3797)
+* **@clayui/css:** SVG Icons adds arrow-right-full.svg ([631e2d0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/631e2d0))
+* **@clayui/css:** SVG Icons adds automatic-translate.svg ([03eba11](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/03eba11))
+* **@clayui/css:** SVG Icons adds fieldset.svg ([1900c8d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1900c8d)), closes [#3828](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3828)
+* **@clayui/css:** SVG Icons adds full-view.svg and split-view.svg ([bbd6ede](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bbd6ede))
+* **@clayui/css:** SVG Icons adds icon for React ([8e09e97](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8e09e97))
+
+
+
+
+
 # [3.21.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.20.0...@clayui/css@3.21.0) (2020-12-02)
 
 

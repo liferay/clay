@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.10](https://github.com/liferay/clay/compare/@clayui/upper-toolbar@3.1.8...@clayui/upper-toolbar@3.1.10) (2020-12-16)
+
+**Note:** Version bump only for package @clayui/upper-toolbar
+
 ## [3.1.9](https://github.com/liferay/clay/compare/@clayui/upper-toolbar@3.1.8...@clayui/upper-toolbar@3.1.9) (2020-12-02)
 
 **Note:** Version bump only for package @clayui/upper-toolbar

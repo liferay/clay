@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/liferay/clay/compare/@clayui/multi-select@3.8.0...@clayui/multi-select@3.9.0) (2020-12-16)
+
+### Features
+
+-   **@clayui/multi-select:** Add displayType and update snapshots to fit ([0c5cdcf](https://github.com/liferay/clay/commit/0c5cdcf))
+-   **@clayui/multi-select:** Update dependency ([ded5a81](https://github.com/liferay/clay/commit/ded5a81))
+-   **@clayui/multi-select:** Update snapshots ([51c2901](https://github.com/liferay/clay/commit/51c2901))
+-   **@clayui/multi-select:** Use ClayButtonWithIcon instead of <button> ([4e9ccb1](https://github.com/liferay/clay/commit/4e9ccb1))
+
 ## [3.8.1](https://github.com/liferay/clay/compare/@clayui/multi-select@3.8.0...@clayui/multi-select@3.8.1) (2020-12-02)
 
 **Note:** Version bump only for package @clayui/multi-select
