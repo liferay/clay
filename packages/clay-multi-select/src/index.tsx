@@ -4,9 +4,9 @@
  */
 
 import ClayAutocomplete from '@clayui/autocomplete';
+import {ClayButtonWithIcon} from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
-import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import {FocusScope, Keys, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
@@ -357,8 +357,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 						!disabledClearAll &&
 						(inputValue || items.length > 0) && (
 							<ClayInput.GroupItem shrink>
-								<button
+								<ClayButtonWithIcon
 									className="component-action"
+									displayType="unstyled"
 									onClick={() => {
 										onClearAllButtonClick();
 
@@ -366,14 +367,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 											inputRef.current.focus();
 										}
 									}}
+									spritemap={spritemap}
+									symbol="times-circle"
 									title={clearAllTitle}
-									type="button"
-								>
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="times-circle"
-									/>
-								</button>
+								/>
 							</ClayInput.GroupItem>
 						)}
 
