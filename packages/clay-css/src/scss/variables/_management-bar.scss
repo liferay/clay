@@ -4,12 +4,14 @@ $management-bar-size: () !default;
 $management-bar-size: map-deep-merge(
 	(
 		scaling-navbar: true,
+		border-bottom-width: 0.0625rem,
 		font-size: $navbar-font-size,
 		height: 4rem,
-		height-mobile: 3rem,
-		border-bottom-width: 0.0625rem,
+		min-height: 4rem,
 		padding-x: 0,
 		padding-y: 0,
+		height-mobile: 3rem,
+		min-height-mobile: 3rem,
 		btn-monospaced-font-size: 1rem,
 		link-height: 2rem,
 		link-height-mobile: 2rem,
