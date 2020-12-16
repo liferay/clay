@@ -359,6 +359,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							<ClayInput.GroupItem shrink>
 								<ClayButtonWithIcon
 									className="component-action"
+									displayType="unstyled"
 									onClick={() => {
 										onClearAllButtonClick();
 

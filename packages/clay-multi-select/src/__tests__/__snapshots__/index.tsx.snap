@@ -121,7 +121,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
@@ -370,7 +370,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
@@ -489,7 +489,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
@@ -528,7 +528,7 @@ exports[`Interactions add non-sequential text should filter the items when it is
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
@@ -595,7 +595,7 @@ exports[`Interactions adding text doesn not filter the items with a custom funct
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
@@ -678,7 +678,7 @@ exports[`Interactions adding text filters the items 1`] = `
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
@@ -747,7 +747,7 @@ exports[`Interactions adding text filters the items with a custom function 1`] =
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
@@ -816,7 +816,7 @@ exports[`Interactions adding upper or lower case text should filter the items wh
         class="input-group-item input-group-item-shrink"
       >
         <button
-          class="component-action btn btn-monospaced btn-primary"
+          class="component-action btn btn-monospaced btn-unstyled"
           title="Clear All"
           type="button"
         >
