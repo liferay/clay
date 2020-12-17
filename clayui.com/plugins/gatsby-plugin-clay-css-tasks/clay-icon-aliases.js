@@ -675,6 +675,8 @@ const iconsData = {
 	"quote-left":				'"\\\"", "commas"',
 	"quote-right":				'"\\\"", "commas"',
 	"radio-button":				'"check", "circle", "off", "on"',
+	"rectangle":				'"full-view"',
+	"rectangle-split":			'"split-view"',
 	"redo":						'"action", "arrow", "control", "editor", "right"',
 	"reload":					'"change", "circle", "update"',
 	"remove-style":				'"editor", "text"',
