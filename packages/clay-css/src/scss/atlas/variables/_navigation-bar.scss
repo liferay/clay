@@ -1,12 +1,12 @@
 $navigation-bar-size: () !default;
 $navigation-bar-size: map-deep-merge(
 	(
-		border-bottom-width: 0,
+		border-bottom-width: 0.0625rem,
 		collapse-dropdown-item-padding-y-mobile: 0.8125rem,
 		link-height-mobile: 2rem,
-		active-border-offset-bottom: -0.5rem,
+		active-border-offset-bottom: -0.53125rem,
 		toggler-link-height: 2rem,
-		toggler-link-margin-y: 0.5rem,
+		toggler-link-margin-y: 0.46875rem,
 		toggler-link-padding-y: 0,
 	),
 	$navigation-bar-size
@@ -27,6 +27,7 @@ $navigation-bar-light: () !default;
 $navigation-bar-light: map-deep-merge(
 	(
 		bg: $white,
+		border-color: $gray-200,
 		link-font-weight: $font-weight-semi-bold,
 		link-hover-color: $gray-900,
 		link-focus-color: $gray-900,
