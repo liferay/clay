@@ -46,6 +46,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 
 		return (
 			<label
+				{...containerProps}
 				className={classNames(
 					'toggle-switch',
 					'simple-toggle-switch',
@@ -53,7 +54,6 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 					{disabled}
 				)}
 				ref={ref}
-				{...containerProps}
 			>
 				<span className="toggle-switch-check-bar">
 					<input
