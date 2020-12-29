@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.14.1](https://github.com/liferay/clay/compare/@clayui/form@3.14.0...@clayui/form@3.14.1) (2020-12-29)
+
+### Bug Fixes
+
+-   **@clayui/form:** ClayToggle shouldn't overwrite props ([21d9702](https://github.com/liferay/clay/commit/21d9702))
+
 # [3.14.0](https://github.com/liferay/clay/compare/@clayui/form@3.12.0...@clayui/form@3.14.0) (2020-12-16)
 
 ### Bug Fixes

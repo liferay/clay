@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.22.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.22.0...@clayui/css@3.22.1) (2020-12-29)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Theme change body background-color to #fff to match Classic and Admin themes ([04f0a02](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/04f0a02))
+* **@clayui/css:** Management Bar set a min-height so swapping out contents via js doesn't resize the bar ([9a484d5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9a484d5))
+* **@clayui/css:** Mixins clay-navbar-size adds option to configure min-height and min-height-mobile ([4236b13](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4236b13))
+* **@clayui/css:** Navigation Bar Light should have 1px gray bottom border ([625e629](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/625e629))
+* **@clayui/css:** SVG Icons adds `rectangle.svg` and `rectangle-split.svg` ([bb2556b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/bb2556b))
+
+
+### Reverts
+
+* **@clayui.css): "feat(@clayui/css:** SVG Icons adds full-view.svg and split-view.svg" ([4bea06b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4bea06b))
+
+
+
+
+
 # [3.22.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.20.0...@clayui/css@3.22.0) (2020-12-16)
 
 
