@@ -10,6 +10,9 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 -   [Example](#css-example)
 -   [One Column](#css-one-column)
 -   [Two Columns](#css-two-columns)
+-   [Sheet Title](#css-sheet-title)
+-   [Sheet Subtitle](#css-sheet-subtitle)
+-   [Sheet Tertiary Title](#css-sheet-tertiary-title)
 
 </div>
 </div>
@@ -422,4 +425,230 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/forms/'
 		</div>
 	</div>
 </div>
+```
+
+## Sheet Title(#css-sheet-title)
+
+Use `autofit` utilities with `component-title` in `sheet-title` to vertically align the text with small sized buttons (32px tall). This pattern allows long text to break to new line while keeping the button(s) text centered on the first line of text.
+
+<div class="sheet-example">
+	<div class="sheet sheet-lg">
+		<div class="sheet-header">
+			<h4 class="sheet-title">Sheet Title</h4>
+			<h4 class="sheet-title">
+				<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">One Line Title</span>
+					</span>
+					<span class="autofit-col">
+						<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+					</span>
+					<span class="autofit-col">
+						<button class="btn btn-secondary btn-sm" type="button">Remove</button>
+					</span>
+				</span>
+			</h4>
+			<h4 class="sheet-title">
+				<span class="autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</span>
+					<span class="autofit-col">
+						<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+					</span>
+					<span class="autofit-col">
+						<button class="btn btn-secondary btn-sm" type="button">Remove</button>
+					</span>
+				</span>
+			</h4>
+		</div>
+	</div>
+</div>
+
+```html
+<h4 class="sheet-title">Sheet Title</h4>
+
+<h4 class="sheet-title">
+	<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+		<span class="autofit-col autofit-col-expand">
+			<span class="component-title">One Line Title</span>
+		</span>
+		<span class="autofit-col">
+			<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+		</span>
+		<span class="autofit-col">
+			<button class="btn btn-secondary btn-sm" type="button">
+				Remove
+			</button>
+		</span>
+	</span>
+</h4>
+
+<h4 class="sheet-title">
+	<span class="autofit-padded-no-gutters autofit-row">
+		<span class="autofit-col autofit-col-expand">
+			<span class="component-title"
+				>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+			>
+		</span>
+		<span class="autofit-col">
+			<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+		</span>
+		<span class="autofit-col">
+			<button class="btn btn-secondary btn-sm" type="button">
+				Remove
+			</button>
+		</span>
+	</span>
+</h4>
+```
+
+## Sheet Subtitle(#css-sheet-subtitle)
+
+Nest `autofit` utilities with `component-title` in `sheet-subtitle` to vertically align the text with small sized buttons (32px tall). This pattern, from the <a href="https://liferay.design/lexicon/core-components/forms/forms-sheet/" rel="noopener noreferrer" target="_blank">Lexicon specs</a>, aligns the text to the bottom of the button(s) when there is only one line of text. Multiple lines of text aligns the text to the top of the button(s).
+
+<div class="sheet-example">
+	<div class="sheet sheet-lg">
+		<div class="sheet-section">
+			<h4 class="sheet-subtitle">Sheet Subtitle</h4>
+			<h4 class="sheet-subtitle">
+				<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">One Line Subtitle</span>
+					</span>
+					<span class="autofit-col">
+						<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+					</span>
+					<span class="autofit-col">
+						<button class="btn btn-secondary btn-sm" type="button">Remove</button>
+					</span>
+				</span>
+			</h4>
+			<h4 class="sheet-subtitle">
+				<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</span>
+					<span class="autofit-col">
+						<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+					</span>
+					<span class="autofit-col">
+						<button class="btn btn-secondary btn-sm" type="button">Remove</button>
+					</span>
+				</span>
+			</h4>
+		</div>
+	</div>
+</div>
+
+```html
+<h4 clss="sheet-subtitle">Sheet Subtitle</h4>
+
+<h4 class="sheet-subtitle">
+	<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+		<span class="autofit-col autofit-col-expand">
+			<span class="component-title">One Line Subtitle</span>
+		</span>
+		<span class="autofit-col">
+			<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+		</span>
+		<span class="autofit-col">
+			<button class="btn btn-secondary btn-sm" type="button">
+				Remove
+			</button>
+		</span>
+	</span>
+</h4>
+
+<h4 class="sheet-subtitle">
+	<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+		<span class="autofit-col autofit-col-expand">
+			<span class="component-title"
+				>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+			>
+		</span>
+		<span class="autofit-col">
+			<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+		</span>
+		<span class="autofit-col">
+			<button class="btn btn-secondary btn-sm" type="button">
+				Remove
+			</button>
+		</span>
+	</span>
+</h4>
+```
+
+## Sheet Tertiary Title(#css-sheet-tertiary-title)
+
+<div class="sheet-example">
+	<div class="sheet sheet-lg">
+		<div class="sheet-section">
+			<h4 class="sheet-tertiary-title">Sheet Tertiary Title</h4>
+			<h4 class="sheet-tertiary-title">
+				<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">One Line Tertiary Title</span>
+					</span>
+					<span class="autofit-col">
+						<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+					</span>
+					<span class="autofit-col">
+						<button class="btn btn-secondary btn-sm" type="button">Remove</button>
+					</span>
+				</span>
+			</h4>
+			<h4 class="sheet-tertiary-title">
+				<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</span>
+					<span class="autofit-col">
+						<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+					</span>
+					<span class="autofit-col">
+						<button class="btn btn-secondary btn-sm" type="button">Remove</button>
+					</span>
+				</span>
+			</h4>
+		</div>
+	</div>
+</div>
+
+```html
+<h4 class="sheet-tertiary-title">Sheet Tertiary Title</h4>
+
+<h4 class="sheet-tertiary-title">
+	<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+		<span class="autofit-col autofit-col-expand">
+			<span class="component-title">One Line Tertiary Title</span>
+		</span>
+		<span class="autofit-col">
+			<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+		</span>
+		<span class="autofit-col">
+			<button class="btn btn-secondary btn-sm" type="button">
+				Remove
+			</button>
+		</span>
+	</span>
+</h4>
+
+<h4 class="sheet-tertiary-title">
+	<span class="autofit-float-sm-down autofit-padded-no-gutters autofit-row">
+		<span class="autofit-col autofit-col-expand">
+			<span class="component-title"
+				>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span
+			>
+		</span>
+		<span class="autofit-col">
+			<a class="btn btn-secondary btn-sm" href="#1" role="button">Add</a>
+		</span>
+		<span class="autofit-col">
+			<button class="btn btn-secondary btn-sm" type="button">
+				Remove
+			</button>
+		</span>
+	</span>
+</h4>
 ```
