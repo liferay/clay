@@ -22,6 +22,18 @@
 		padding-top: $sheet-padding-top-mobile;
 	}
 
+	+ .sheet {
+		@include clay-css($sheet-plus-sheet);
+	}
+
+	.component-title {
+		color: inherit;
+		display: inline-block;
+		font-size: inherit;
+		font-weight: inherit;
+		max-width: 100%;
+	}
+
 	.panel-group {
 		&,
 		.panel:last-child .panel-body {
@@ -208,6 +220,7 @@ fieldset {
 		top: $sheet-subtitle-collapse-icon-top;
 	}
 
+	.component-title,
 	.heading-text {
 		margin-bottom: $sheet-subtitle-heading-text-margin-bottom;
 		margin-top: $sheet-subtitle-heading-text-margin-top;
@@ -242,6 +255,10 @@ a.sheet-subtitle {
 	@include clay-scale-component {
 		font-size: $sheet-tertiary-title-font-size-mobile;
 		margin-bottom: $sheet-tertiary-title-margin-bottom-mobile;
+	}
+
+	.component-title {
+		margin-bottom: 0;
 	}
 }
 

@@ -19,6 +19,14 @@ $sheet-padding-left-mobile: null !default;
 $sheet-padding-right-mobile: null !default;
 $sheet-padding-top-mobile: null !default;
 
+$sheet-plus-sheet: () !default;
+$sheet-plus-sheet: map-merge(
+	(
+		margin-top: 3rem,
+	),
+	$sheet-plus-sheet
+);
+
 // Sheet Header
 
 $sheet-header-margin-bottom: 3rem !default; // 48px
@@ -90,7 +98,7 @@ $sheet-subtitle-font-size-mobile: null !default;
 $sheet-subtitle-margin-bottom-mobile: null !default;
 
 $sheet-subtitle-heading-text-margin-bottom: 0 !default;
-$sheet-subtitle-heading-text-margin-top: null !default;
+$sheet-subtitle-heading-text-margin-top: auto !default;
 
 // Sheet Subtitle as Panel Header
 
