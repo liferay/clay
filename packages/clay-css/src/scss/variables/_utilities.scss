@@ -8,6 +8,18 @@ $autofit-col-expand-min-width: 3.125rem !default; // 50px
 $autofit-padded-col-padding-x: 0.5rem !default; // 8px
 $autofit-padded-col-padding-y: 0.25rem !default; // 4px
 
+$autofit-padded-no-gutters-sm: () !default;
+$autofit-padded-no-gutters-sm: map-merge(
+	(
+		margin: -0.25rem,
+		width: auto,
+		autofit-col: (
+			padding: 0.25rem,
+		),
+	),
+	$autofit-padded-no-gutters-sm
+);
+
 // Close
 
 $close: () !default;

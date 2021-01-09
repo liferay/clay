@@ -77,7 +77,7 @@
 
 // Autofit Padded
 
-.autofit-padded {
+%autofit-padded {
 	> .autofit-col {
 		padding-bottom: $autofit-padded-col-padding-y;
 		padding-left: $autofit-padded-col-padding-x;
@@ -86,7 +86,11 @@
 	}
 }
 
-.autofit-padded-no-gutters-x {
+.autofit-padded {
+	@extend %autofit-padded !optional;
+}
+
+%autofit-padded-no-gutters-x {
 	margin-left: math-sign($autofit-padded-col-padding-x);
 	margin-right: math-sign($autofit-padded-col-padding-x);
 	width: auto;
@@ -99,8 +103,31 @@
 	}
 }
 
-.autofit-padded-no-gutters-y {
+.autofit-padded-no-gutters-x {
+	@extend %autofit-padded-no-gutters-x !optional;
+}
+
+%autofit-padded-no-gutters-y {
 	margin-bottom: math-sign($autofit-padded-col-padding-y);
+	margin-top: math-sign($autofit-padded-col-padding-y);
+	width: auto;
+
+	> .autofit-col {
+		padding-bottom: $autofit-padded-col-padding-y;
+		padding-left: $autofit-padded-col-padding-x;
+		padding-right: $autofit-padded-col-padding-x;
+		padding-top: $autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded-no-gutters-y {
+	@extend %autofit-padded-no-gutters-y !optional;
+}
+
+%autofit-padded-no-gutters {
+	margin-bottom: math-sign($autofit-padded-col-padding-y);
+	margin-left: math-sign($autofit-padded-col-padding-x);
+	margin-right: math-sign($autofit-padded-col-padding-x);
 	margin-top: math-sign($autofit-padded-col-padding-y);
 	width: auto;
 
@@ -113,18 +140,15 @@
 }
 
 .autofit-padded-no-gutters {
-	margin-bottom: math-sign($autofit-padded-col-padding-y);
-	margin-left: math-sign($autofit-padded-col-padding-x);
-	margin-right: math-sign($autofit-padded-col-padding-x);
-	margin-top: math-sign($autofit-padded-col-padding-y);
-	width: auto;
+	@extend %autofit-padded-no-gutters !optional;
+}
 
-	> .autofit-col {
-		padding-bottom: $autofit-padded-col-padding-y;
-		padding-left: $autofit-padded-col-padding-x;
-		padding-right: $autofit-padded-col-padding-x;
-		padding-top: $autofit-padded-col-padding-y;
-	}
+%autofit-padded-no-gutters-sm {
+	@include clay-autofit-row($autofit-padded-no-gutters-sm);
+}
+
+.autofit-padded-no-gutters-sm {
+	@extend %autofit-padded-no-gutters-sm !optional;
 }
 
 // Autofit Columns
@@ -139,6 +163,12 @@
 
 .autofit-col {
 	@extend %autofit-col;
+}
+
+.autofit-col-shrink {
+	flex-shrink: 1;
+	min-width: 1rem;
+	word-wrap: break-word;
 }
 
 %autofit-col-expand {
