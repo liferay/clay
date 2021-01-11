@@ -18,16 +18,16 @@ title: 'Autofit'
 
 ## Row(#css-row)
 
-Make content expand to fill remaining space or create equally spaced content with the `.autofit-row`, `.autofit-col`, and `.autofit-col-expand` classes.
+Make content expand to fill remaining space or create equally spaced content with `.autofit-row`, `.autofit-col`, `.autofit-col-shrink`, and `.autofit-col-expand`.
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
-	<code>.autofit-row</code>, <code>.autofit-col</code>, <code>.autofit-col-expand</code> shouldn't be used for laying out site pages, rather it's most useful for small chunks of content inside other components (e.g. cards or list-groups).
+	`.autofit-row`, `.autofit-col`, `.autofit-col-shrink`, and `.autofit-col-expand` shouldn't be used for laying out site pages, rather it's most useful for small chunks of content inside other components (e.g. cards or list-groups).
 </div>
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
-	Direct descendants of <code>.autofit-col</code> are <code>flex-direction: column;</code> (IE 10-11 workaround because they don't respect min/max width or min/max height in flex items) become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content inside <code>.autofit-col</code> using <code>floats</code>, <code>inline</code>, or <code>inline-block</code>, wrap the content with <code>.autofit-section</code>.
+	Direct descendants of `.autofit-col` are `flex-direction: column;` (IE 10-11 workaround because they don't respect min/max width or min/max height in flex items) become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content inside `.autofit-col` using `floats`, `inline`, or `inline-block`, wrap the content with `.autofit-section`.
 </div>
 
 <div class="sheet-example">
@@ -213,27 +213,98 @@ Make content expand to fill remaining space or create equally spaced content wit
 </div>
 ```
 
+## Autofit Col Shrink(#css-autofit-col-shrink)
+
+The modifier `autofit-col-shrink` makes the column only as wide as its content and will grow to fill the remaining space depending on the length of the content. This should be used with variable width content such as title text with adjoining buttons.
+
 <div class="sheet-example">
-	<div class="card">
-		<div class="card-body">
-			<div class="autofit-padded-no-gutters-x autofit-row">
-				<div class="autofit-col autofit-col-expand">
-					<h2 class="component-title" style="font-size:1.25rem;font-weight:700;">
-						ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
-					</h2>
-					<div>Sept 25 - 3 Views</div>
-				</div>
-				<div class="autofit-col">
-					<button class="btn btn-monospaced btn-outline-primary btn-outline-borderless btn-sm" type="button">
-						<span class="inline-item">
-							<svg class="lexicon-icon lexicon-icon-pencil" focusable="false" role="presentation">
-								<use href="/images/icons/icons.svg#pencil" />
+	<div class="sheet">
+		<h4 class="sheet-title">
+			<span class="autofit-padded-no-gutters autofit-row">
+				<span class="autofit-col autofit-col-shrink">
+					<span class="component-title">Collection</span>
+				</span>
+				<span class="autofit-col">
+					<button class="component-action" type="button">
+						<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</button>
+				</span>
+			</span>
+		</h4>
+		<h4 class="sheet-title">
+			<span class="autofit-padded-no-gutters autofit-row">
+				<span class="autofit-col">
+					<button class="component-action" type="button">
+						<svg class="lexicon-icon lexicon-icon-link" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#link" />
+						</svg>
+					</button>
+				</span>
+				<span class="autofit-col autofit-col-shrink">
+					<span class="component-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</span>
+				<span class="autofit-col">
+					<button class="component-action" type="button">
+						<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+						</svg>
+					</button>
+				</span>
+			</span>
+		</h4>
+	</div>
+</div>
+
+## Autofit Col Expand(#css-autofit-col-expand)
+
+The modifier `autofit-col-expand` makes the column fill the remaining space.
+
+<div class="sheet-example">
+	<div class="sheet">
+		<h4 class="sheet-title">
+			<span class="autofit-padded-no-gutters autofit-row">
+				<span class="autofit-col autofit-col-expand">
+					<span class="component-title">Collection</span>
+				</span>
+				<span class="autofit-col">
+					<button class="btn component-action" type="button">
+						<span class="c-inner" tabindex="-1">
+							<svg class="lexicon-icon lexicon-icon-cog" focusable="false" role="presentation">
+								<use xlink:href="/images/icons/icons.svg#cog" />
 							</svg>
 						</span>
 					</button>
-				</div>
-			</div>
-		</div>
+				</span>
+				<span class="autofit-col">
+					<button class="btn component-action" type="button">
+						<span class="c-inner" tabindex="-1">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+								<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</span>
+					</button>
+				</span>
+			</span>
+		</h4>
+		<h4 class="sheet-title">
+			<span class="autofit-padded-no-gutters-x autofit-row">
+				<span class="autofit-col autofit-col-expand">
+					<span class="component-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					<small>Sept 25 - 3 Views</small>
+				</span>
+				<span class="autofit-col">
+					<button class="btn btn-monospaced btn-outline-primary btn-outline-borderless btn-sm" type="button">
+						<span class="inline-item">
+							<svg class="lexicon-icon lexicon-icon-pencil" focusable="false" role="presentation">
+								<use xlink:href="/images/icons/icons.svg#pencil" />
+							</svg>
+						</span>
+					</button>
+				</span>
+			</span>
+		</h4>
 	</div>
 </div>
 
