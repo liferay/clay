@@ -77,6 +77,8 @@ $sheet-title-font-weight: $font-weight-semi-bold !default;
 $sheet-title-line-height: $headings-line-height !default; // 1.2
 $sheet-title-margin-bottom: 1.5rem !default; // 24px
 
+$sheet-title-autofit-padded-no-gutters-ext: 'autofit-padded-no-gutters-sm' !default;
+
 $sheet-title-font-size-mobile: 1.25rem !default; // 20px
 $sheet-title-margin-bottom-mobile: null !default;
 
@@ -155,3 +157,77 @@ $sheet-text-margin-bottom: 1.5rem !default; // 24px
 
 $sheet-text-font-size-mobile: null !default;
 $sheet-text-margin-bottom-mobile: null !default;
+
+// Sheet Multiple Form Variant
+
+$sheet-multiple-form: () !default;
+
+$sheet-multiple-form-sheet-header: () !default;
+$sheet-multiple-form-sheet-header: map-merge(
+	(
+		border-color: $gray-300,
+		border-style: solid,
+		border-width: 0 0 1px,
+		margin: -1.5rem -1.5rem 1.5rem,
+		padding: 1rem 1.5rem,
+	),
+	$sheet-multiple-form-sheet-header
+);
+
+$sheet-multiple-form-sheet-header-mobile: () !default;
+$sheet-multiple-form-sheet-header-mobile: map-merge(
+	(
+		margin: -1rem -1rem 1rem,
+		padding: 1rem,
+	),
+	$sheet-multiple-form-sheet-header-mobile
+);
+
+$sheet-multiple-form-sheet-title: () !default;
+$sheet-multiple-form-sheet-title: map-merge(
+	(
+		margin-bottom: 0,
+	),
+	$sheet-multiple-form-sheet-title
+);
+
+// Sheet Dataset Content Variant
+
+$sheet-dataset-content: () !default;
+
+$sheet-dataset-content-sheet-header: () !default;
+$sheet-dataset-content-sheet-header: map-merge(
+	(
+		border-width: 0,
+		margin: -1.5rem -1.5rem 1.5rem,
+		padding: 1rem 1.5rem,
+	),
+	$sheet-dataset-content-sheet-header
+);
+
+$sheet-dataset-content-sheet-header-mobile: () !default;
+$sheet-dataset-content-sheet-header-mobile: map-merge(
+	(
+		margin: -1rem -1rem 1rem,
+		padding: 1rem,
+	),
+	$sheet-dataset-content-sheet-header-mobile
+);
+
+$sheet-dataset-content-sheet-title: () !default;
+$sheet-dataset-content-sheet-title: map-merge(
+	(
+		margin-bottom: 0,
+	),
+	$sheet-dataset-content-sheet-title
+);
+
+// Sheet in Card Page
+
+$card-page-item-sheet: () !default;
+$card-page-item-sheet: map-merge(
+	(
+		margin-bottom: $grid-gutter-width,
+	),
+	$card-page-item-sheet
+);

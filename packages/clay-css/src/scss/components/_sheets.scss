@@ -22,6 +22,16 @@
 		padding-top: $sheet-padding-top-mobile;
 	}
 
+	&::after {
+		content: '';
+		display: block;
+		margin-top: $sheet-padding-top;
+
+		@include clay-scale-component {
+			margin-top: $sheet-padding-top-mobile;
+		}
+	}
+
 	+ .sheet {
 		@include clay-css($sheet-plus-sheet);
 	}
@@ -151,6 +161,10 @@ fieldset {
 		font-size: $sheet-title-font-size-mobile;
 		margin-bottom: $sheet-title-margin-bottom-mobile;
 	}
+
+	.autofit-padded-no-gutters {
+		@extend %#{$sheet-title-autofit-padded-no-gutters-ext} !optional;
+	}
 }
 
 // Sheet Subtitle
@@ -275,4 +289,56 @@ a.sheet-subtitle {
 		font-size: $sheet-text-font-size-mobile;
 		margin-bottom: $sheet-text-margin-bottom-mobile;
 	}
+}
+
+// Sheet Multiple Form Variant
+
+.sheet-multiple-form {
+	@include clay-css($sheet-multiple-form);
+
+	.sheet-header {
+		@include clay-css($sheet-multiple-form-sheet-header);
+
+		@include clay-scale-component {
+			@include clay-css($sheet-multiple-form-sheet-header-mobile);
+		}
+
+		.sheet-title {
+			@include clay-css($sheet-multiple-form-sheet-title);
+		}
+	}
+}
+
+// Sheet Dataset Content Variant
+
+.sheet-dataset-content {
+	@include clay-css($sheet-dataset-content);
+
+	.sheet-header {
+		@include clay-css($sheet-dataset-content-sheet-header);
+
+		@include clay-scale-component {
+			@include clay-css($sheet-dataset-content-sheet-header-mobile);
+		}
+
+		.sheet-title {
+			@include clay-css($sheet-dataset-content-sheet-title);
+		}
+	}
+}
+
+// Sheet in Card Page
+
+.card-page-equal-height .sheet {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	> .autofit-row {
+		flex-grow: 1;
+	}
+}
+
+.card-page-item .sheet {
+	@include clay-css($card-page-item-sheet);
 }
