@@ -13,3 +13,4 @@ export {sub} from './sub';
 export {useDebounce} from './useDebounce';
 export {useFocusManagement} from './useFocusManagement';
 export {useTransitionHeight} from './useTransitionHeight';
+export {useInternalState} from './useInternalState';
