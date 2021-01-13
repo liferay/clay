@@ -4,9 +4,10 @@
  */
 
 import ClayIcon from '@clayui/icon';
-import {useTransitionHeight} from '@clayui/shared';
+import {setElementFullHeight} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
+import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
 import Nav from './Nav';
@@ -107,28 +108,16 @@ function Item({
 	spritemap,
 	...otherProps
 }: INavItemProps) {
-	const menuRef = React.useRef(null);
 	const [expanded, setExpaned] = React.useState(!initialExpanded);
-
-	const {animate, transitioning} = useTransitionHeight(
-		expanded,
-		setExpaned,
-		menuRef
-	);
-
-	const showIconCollapsed = !(
-		(!expanded && transitioning) ||
-		(expanded && !transitioning)
-	);
 
 	return (
 		<Nav.Item {...otherProps}>
 			<Nav.Link
 				active={active}
-				collapsed={showIconCollapsed}
+				collapsed={!expanded}
 				href={href}
-				onClick={(e) => {
-					animate(e);
+				onClick={() => {
+					setExpaned(!expanded);
 
 					if (onClick) {
 						onClick();
@@ -142,18 +131,30 @@ function Item({
 			</Nav.Link>
 
 			{subItems && (
-				<div
-					className={classNames({
-						collapse: !transitioning,
-						collapsing: transitioning,
-						show: expanded,
-					})}
-					ref={menuRef}
+				<CSSTransition
+					className={!expanded && 'collapse'}
+					classNames={{
+						enter: 'collapsing',
+						enterActive: `show`,
+						enterDone: 'show',
+						exit: `show`,
+						exitActive: 'collapsing',
+					}}
+					in={expanded}
+					onEnter={(el: HTMLElement) =>
+						el.setAttribute('style', `height: 0px`)
+					}
+					onEntering={(el: HTMLElement) => setElementFullHeight(el)}
+					onExit={(el) => setElementFullHeight(el)}
+					onExiting={(el) => el.setAttribute('style', `height: 0px`)}
+					timeout={250}
 				>
-					<Nav stacked>
-						{renderItems(subItems, spritemap, level++)}
-					</Nav>
-				</div>
+					<div>
+						<Nav stacked>
+							{renderItems(subItems, spritemap, level++)}
+						</Nav>
+					</div>
+				</CSSTransition>
 			)}
 		</Nav.Item>
 	);
