@@ -33,7 +33,8 @@
 		position: relative;
 	}
 
-	&.active {
+	&.active,
+	.active {
 		color: $breadcrumb-active-color;
 		font-weight: $breadcrumb-active-font-weight;
 	}

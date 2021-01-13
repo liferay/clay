@@ -1,6 +1,8 @@
 $breadcrumb-bg: transparent !default;
 $breadcrumb-font-size: 0.875rem !default; // 14px
+$breadcrumb-margin-bottom: 0 !default;
 $breadcrumb-padding-x: 0.125rem !default; // 2px
+$breadcrumb-padding-y: 0.59375rem !default;
 
 $breadcrumb-link-color: $gray-600 !default;
 $breadcrumb-link-hover-color: $breadcrumb-link-color !default;
@@ -17,6 +19,7 @@ $breadcrumb-link: map-deep-merge(
 );
 
 $breadcrumb-active-color: $gray-900 !default;
+$breadcrumb-active-font-weight: $font-weight-semi-bold !default;
 
 $breadcrumb-divider-color: $breadcrumb-link-color !default;
 $breadcrumb-divider-svg-icon-height: 0.6em !default;
