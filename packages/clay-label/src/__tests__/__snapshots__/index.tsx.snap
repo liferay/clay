@@ -44,11 +44,11 @@ exports[`Rendering renders as a link and closable 1`] = `
       type="button"
     >
       <svg
-        className="lexicon-icon lexicon-icon-times"
+        className="lexicon-icon lexicon-icon-times-small"
         role="presentation"
       >
         <use
-          xlinkHref="path/to/spritemap#times"
+          xlinkHref="path/to/spritemap#times-small"
         />
       </svg>
     </button>
@@ -74,11 +74,11 @@ exports[`Rendering renders as closable 1`] = `
       type="button"
     >
       <svg
-        className="lexicon-icon lexicon-icon-times"
+        className="lexicon-icon lexicon-icon-times-small"
         role="presentation"
       >
         <use
-          xlinkHref="path/to/spritemap#times"
+          xlinkHref="path/to/spritemap#times-small"
         />
       </svg>
     </button>

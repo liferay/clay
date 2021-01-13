@@ -179,7 +179,7 @@ const ClayLabelHybrid = React.forwardRef<
 								>
 									<ClayIcon
 										spritemap={spritemap}
-										symbol="times"
+										symbol="times-small"
 									/>
 								</button>
 							</ClayLabelItemAfter>
