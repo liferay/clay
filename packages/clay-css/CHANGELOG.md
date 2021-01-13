@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.23.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.22.1...@clayui/css@3.23.0) (2021-01-13)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Breadcrumbs match sizes to Lexicon specs ([0d471aa](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0d471aa))
+* **@clayui/css:** Buttons shouldn't inherit `text-transform` from its parent ([a66dcba](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a66dcba))
+* **@clayui/css:** Component Title used in Sheet should work ([c338b71](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c338b71))
+* **@clayui/css:** Label use times-small icon and close button should be 16px by 16px ([c2270a9](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c2270a9))
+* **@clayui/css:** run format ([19ee791](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/19ee791))
+* **@clayui/css:** SVG Icons adds relationship.svg ([6253c68](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6253c68)), closes [#3873](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3873)
+
+
+### Features
+
+* **@clayui/css:** Sheet adds variants `.sheet-multiple-form` and `.sheet-dataset-content` ([cf4a4d1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cf4a4d1))
+* **@clayui/css:** SVG Icons adds google-drive ([3752c14](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3752c14)), closes [#3869](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3869)
+* **@clayui/css:** Utilities adds `.autofit-padded-no-gutters-sm` and placeholder `%autofit-padded-no-gutters-sm` for smaller (4px) gutters between columns ([f0cc8f4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f0cc8f4))
+
+
+
+
+
 ## [3.22.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.22.0...@clayui/css@3.22.1) (2020-12-29)
 
 

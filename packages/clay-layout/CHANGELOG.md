@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/liferay/clay/compare/@clayui/layout@3.2.0...@clayui/layout@3.3.0) (2021-01-13)
+
+### Bug Fixes
+
+-   **@clayui/layout:** add autofit-padded-no-gutters-sm and autofit-col-shrink utils ([4b5ac2b](https://github.com/liferay/clay/commit/4b5ac2b))
+
+### Features
+
+-   **clayui.com:** Move API tables to new files and update document tabs, rename files to use singular naming instead of plural, change mainTabURL of pagination-bar to a proper one ([d812ee9](https://github.com/liferay/clay/commit/d812ee9))
+
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/layout@3.1.1...@clayui/layout@3.2.0) (2020-08-11)
 
 ### Bug Fixes

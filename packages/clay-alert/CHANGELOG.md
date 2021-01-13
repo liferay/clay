@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/liferay/clay/compare/@clayui/alert@3.5.0...@clayui/alert@3.5.1) (2021-01-13)
+
+**Note:** Version bump only for package @clayui/alert
+
 # [3.5.0](https://github.com/liferay/clay/compare/@clayui/alert@3.4.1...@clayui/alert@3.5.0) (2020-10-01)
 
 ### Features

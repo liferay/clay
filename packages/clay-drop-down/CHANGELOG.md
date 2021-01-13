@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.4](https://github.com/liferay/clay/compare/@clayui/drop-down@3.8.3...@clayui/drop-down@3.8.4) (2021-01-13)
+
+**Note:** Version bump only for package @clayui/drop-down
+
 ## [3.8.3](https://github.com/liferay/clay/compare/@clayui/drop-down@3.8.2...@clayui/drop-down@3.8.3) (2020-12-29)
 
 **Note:** Version bump only for package @clayui/drop-down

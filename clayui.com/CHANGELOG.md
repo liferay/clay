@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.6](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.7.5...clayui.com@3.7.6) (2021-01-13)
+
+**Note:** Version bump only for package clayui.com
+
 ## [3.7.5](https://github.com/bryceosterhaus/clay/compare/clayui.com@3.7.4...clayui.com@3.7.5) (2020-12-29)
 
 ### Reverts

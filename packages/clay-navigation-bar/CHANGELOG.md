@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.3](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.3.2...@clayui/navigation-bar@3.3.3) (2021-01-13)
+
+### Bug Fixes
+
+-   **@clayui/navigation-bar:** use react-transition-group instead of custom hook for animations ([a51c3ec](https://github.com/liferay/clay/commit/a51c3ec))
+
 ## [3.3.2](https://github.com/liferay/clay/compare/@clayui/navigation-bar@3.3.0...@clayui/navigation-bar@3.3.2) (2020-12-16)
 
 **Note:** Version bump only for package @clayui/navigation-bar

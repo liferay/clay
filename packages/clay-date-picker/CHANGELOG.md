@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.6.3...@clayui/date-picker@3.7.0) (2021-01-13)
+
+### Bug Fixes
+
+-   **@clayui/shared:** update types so that storybook build doesn't complain ([38903aa](https://github.com/liferay/clay/commit/38903aa))
+
+### Features
+
+-   **@clayui/shared:** add custom hook for using an internal state if an external control isn't provided ([a34ccd9](https://github.com/liferay/clay/commit/a34ccd9))
+
 ## [3.6.3](https://github.com/liferay/clay/compare/@clayui/date-picker@3.6.2...@clayui/date-picker@3.6.3) (2020-12-29)
 
 **Note:** Version bump only for package @clayui/date-picker

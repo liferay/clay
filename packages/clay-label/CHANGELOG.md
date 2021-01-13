@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.1](https://github.com/liferay/clay/compare/@clayui/label@3.4.0...@clayui/label@3.4.1) (2021-01-13)
+
+### Bug Fixes
+
+-   **@clayui/label:** close icon should be times-small ([5181335](https://github.com/liferay/clay/commit/5181335))
+
 # [3.4.0](https://github.com/liferay/clay/compare/@clayui/label@3.3.1...@clayui/label@3.4.0) (2020-10-01)
 
 ### Features

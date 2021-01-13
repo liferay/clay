@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.3](https://github.com/liferay/clay/compare/@clayui/nav@3.4.2...@clayui/nav@3.4.3) (2021-01-13)
+
+### Bug Fixes
+
+-   **@clayui/nav:** use react-transition-group instead of custom hook for animations ([a9b5e6f](https://github.com/liferay/clay/commit/a9b5e6f))
+
 ## [3.4.2](https://github.com/liferay/clay/compare/@clayui/nav@3.4.0...@clayui/nav@3.4.2) (2020-12-16)
 
 ### Bug Fixes
