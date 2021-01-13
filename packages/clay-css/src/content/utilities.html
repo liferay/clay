@@ -8,11 +8,11 @@ section: Components
 		<h3>Autofit Row</h3>
 
 		<blockquote class="blockquote">
-			<p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.autofit-col</code>, and <code>.autofit-col-expand</code>.</p>
+			<p>Make content expand to fill remaining space or create equally spaced content with <code>.autofit-row</code>, <code>.autofit-col</code>, <code>.autofit-col-shrink</code>, and <code>.autofit-col-expand</code>.</p>
 		</blockquote>
 
 		<div class="alert alert-warning">
-			<code>.autofit-row</code>, <code>.autofit-col</code>, <code>.autofit-col-expand</code> shouldn't be used for laying out site pages, rather it's most useful for small chunks of content inside other components e.g. cards or list-groups.
+			<code>.autofit-row</code>, <code>.autofit-col</code>, <code>.autofit-col-shrink</code>, and <code>.autofit-col-expand</code> shouldn't be used for laying out site pages, rather it's most useful for small chunks of content inside other components e.g. cards or list-groups.
 		</div>
 
 		<div class="alert alert-warning">
@@ -167,16 +167,94 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<div class="card">
-			<div class="card-body">
-				<div class="autofit-padded-no-gutters-x autofit-row">
-					<div class="autofit-col autofit-col-expand">
-						<h2 class="component-title" style="font-size:1.25rem;font-weight:700;">
-							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
-						</h2>
-						<div>Sept 25 - 3 Views</div>
-					</div>
-					<div class="autofit-col">
+		<h3>Autofit Col Shrink</h3>
+
+		<blockquote class="blockquote">
+			<p>The modifier `autofit-col-shrink` makes the column only as wide as its content and will grow to fill the remaining space depending on the length of the content. This should be used with variable width content such as title text with adjoining buttons.</p>
+		</blockquote>
+
+		<div class="sheet">
+			<h4 class="sheet-title">
+				<span class="autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-shrink">
+						<span class="component-title">Collection</span>
+					</span>
+					<span class="autofit-col">
+						<button class="component-action" type="button">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</button>
+					</span>
+				</span>
+			</h4>
+			<h4 class="sheet-title">
+				<span class="autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col">
+						<button class="component-action" type="button">
+							<svg class="lexicon-icon lexicon-icon-link" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#link" />
+							</svg>
+						</button>
+					</span>
+					<span class="autofit-col autofit-col-shrink">
+						<span class="component-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</span>
+					<span class="autofit-col">
+						<button class="component-action" type="button">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</button>
+					</span>
+				</span>
+			</h4>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Autofit Col Expand</h3>
+
+		<blockquote class="blockquote">
+			<p>The modifier `autofit-col-expand` makes the column fill the remaining space.</p>
+		</blockquote>
+
+		<div class="sheet">
+			<h4 class="sheet-title">
+				<span class="autofit-padded-no-gutters autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">Collection</span>
+					</span>
+					<span class="autofit-col">
+						<button class="btn component-action" type="button">
+							<span class="c-inner" tabindex="-1">
+								<svg class="lexicon-icon lexicon-icon-cog" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
+								</svg>
+							</span>
+						</button>
+					</span>
+					<span class="autofit-col">
+						<button class="btn component-action" type="button">
+							<span class="c-inner" tabindex="-1">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
+						</button>
+					</span>
+				</span>
+			</h4>
+
+			<h4 class="sheet-title">
+				<span class="autofit-padded-no-gutters-x autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-title">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+						<small>Sept 25 - 3 Views</small>
+					</span>
+					<span class="autofit-col">
 						<button class="btn btn-monospaced btn-outline-primary btn-outline-borderless btn-sm" type="button">
 							<span class="inline-item">
 								<svg class="lexicon-icon lexicon-icon-pencil" focusable="false" role="presentation">
@@ -184,9 +262,9 @@ section: Components
 								</svg>
 							</span>
 						</button>
-					</div>
-				</div>
-			</div>
+					</span>
+				</span>
+			</h4>
 		</div>
 	</div>
 </div>
