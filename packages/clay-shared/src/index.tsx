@@ -12,5 +12,5 @@ export {LinkOrButton} from './LinkOrButton';
 export {sub} from './sub';
 export {useDebounce} from './useDebounce';
 export {useFocusManagement} from './useFocusManagement';
-export {useTransitionHeight} from './useTransitionHeight';
+export {setElementFullHeight} from './setElementFullHeight';
 export {useInternalState} from './useInternalState';
