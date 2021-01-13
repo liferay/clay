@@ -7,7 +7,7 @@ import Button from '@clayui/button';
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import {FocusScope} from '@clayui/shared';
+import {FocusScope, useInternalState} from '@clayui/shared';
 import React from 'react';
 
 import DateNavigation from './DateNavigation';
@@ -143,7 +143,9 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when dropdown changes its active state
 	 */
-	onExpandedChange?: (val: boolean) => void;
+	onExpandedChange?:
+		| ((val?: boolean) => void)
+		| React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const dateNow = new Date();
@@ -241,17 +243,14 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		const [weeks, setWeeks] = useWeeks(currentMonth, firstDayOfWeek);
 
 		/**
-		 * Flag to indicate if date is expanded.
+		 * Flag to indicate if date is expanded. Uses an internal state value
+		 * if component is not controlled by props.
 		 */
-		const [internalExpanded, setInternalExpanded] = React.useState(
-			initialExpanded
-		);
-
-		expanded = expanded !== undefined ? expanded : internalExpanded;
-
-		const setExpanded = onExpandedChange
-			? onExpandedChange
-			: setInternalExpanded;
+		const [expandedValue, setExpandedValue] = useInternalState({
+			initialValue: initialExpanded,
+			onChange: onExpandedChange,
+			value: expanded,
+		});
 
 		/**
 		 * Create a ref to store the datepicker DOM element
@@ -344,7 +343,8 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		/**
 		 * Handles datepicker view
 		 */
-		const handleCalendarButtonClicked = () => setExpanded(!expanded);
+		const handleCalendarButtonClicked = () =>
+			setExpandedValue(!expandedValue);
 
 		/**
 		 * Handle with the focus when it's outside of the component
@@ -357,7 +357,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				triggerElementRef.current &&
 				!triggerElementRef.current.contains(event.target as Node)
 			) {
-				setExpanded(false);
+				setExpandedValue(false);
 			}
 		};
 
@@ -409,11 +409,11 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 
 					{!useNative && (
 						<DropDown.Menu
-							active={expanded}
+							active={expandedValue}
 							alignElementRef={triggerElementRef}
 							className="date-picker-dropdown-menu"
 							data-testid="dropdown"
-							onSetActive={setExpanded}
+							onSetActive={setExpandedValue}
 							ref={dropdownContainerRef}
 						>
 							<div className="date-picker-calendar">

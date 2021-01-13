@@ -3,8 +3,7 @@
 exports[`ClayNavigationBar collapses the previously expanded dropdown when trigger element is clicked 1`] = `
 <div
   class="navbar-collapse collapse"
-  data-testid="NavigationBarDropdown"
-  style=""
+  style="height: 0px"
 >
   <div
     class="container-fluid container-fluid-max-xl"
@@ -75,7 +74,6 @@ exports[`ClayNavigationBar renders 1`] = `
       </button>
       <div
         class="navbar-collapse collapse"
-        data-testid="NavigationBarDropdown"
       >
         <div
           class="container-fluid container-fluid-max-xl"
@@ -135,9 +133,8 @@ exports[`ClayNavigationBar renders 1`] = `
 
 exports[`ClayNavigationBar renders a dropdown when clicking the trigger element from NavigationBar 1`] = `
 <div
-  class="navbar-collapse collapse show"
-  data-testid="NavigationBarDropdown"
-  style=""
+  class="navbar-collapse show"
+  style="height: 0px"
 >
   <div
     class="container-fluid container-fluid-max-xl"
@@ -208,7 +205,6 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
       </button>
       <div
         class="navbar-collapse collapse"
-        data-testid="NavigationBarDropdown"
       >
         <div
           class="container-fluid container-fluid-max-xl"
@@ -296,7 +292,6 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
       </button>
       <div
         class="navbar-collapse collapse"
-        data-testid="NavigationBarDropdown"
       >
         <div
           class="container-fluid container-fluid-max-xl"

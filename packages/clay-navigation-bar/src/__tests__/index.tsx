@@ -67,7 +67,9 @@ describe('ClayNavigationBar', () => {
 	});
 
 	it('renders a dropdown when clicking the trigger element from NavigationBar', async () => {
-		const {container, getByTestId, getByText} = render(
+		jest.useFakeTimers();
+
+		const {container, getByText} = render(
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
@@ -97,13 +99,14 @@ describe('ClayNavigationBar', () => {
 		);
 
 		fireEvent.click(getByText('Trigger Label'));
-		fireEvent.transitionEnd(getByTestId('NavigationBarDropdown'));
+
+		jest.runAllTimers();
 
 		let navigationBarDropdown;
 
 		await act(async () => {
 			navigationBarDropdown = await waitForElement(() =>
-				container.querySelector('.navbar-collapse.collapse.show')
+				container.querySelector('.navbar-collapse')
 			);
 		});
 

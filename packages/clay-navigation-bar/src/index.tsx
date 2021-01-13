@@ -6,9 +6,10 @@
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
-import {useTransitionHeight} from '@clayui/shared';
+import {setElementFullHeight} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
+import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
 import Item from './Item';
@@ -45,13 +46,7 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 	triggerLabel,
 	...otherProps
 }: IProps) => {
-	const [visible, setVisible] = React.useState(false);
-	const contentRef = React.useRef<HTMLDivElement>(null);
-	const {animate, transitioning} = useTransitionHeight(
-		visible,
-		setVisible,
-		contentRef
-	);
+	const [expanded, setExpanded] = React.useState(false);
 
 	const activeElementsCount = children.filter((child) => child.props.active)
 		.length;
@@ -79,36 +74,49 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 		>
 			<ClayLayout.ContainerFluid>
 				<ClayButton
-					aria-expanded={visible}
+					aria-expanded={expanded}
 					className={classNames(
 						'navbar-toggler',
 						'navbar-toggler-link',
 						{
-							collapsed: !visible,
+							collapsed: !expanded,
 						}
 					)}
 					data-testid="navbarToggler"
 					displayType="unstyled"
-					onClick={animate}
+					onClick={() => setExpanded(!expanded)}
 				>
 					<span className="navbar-text-truncate">{triggerLabel}</span>
 
 					<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
 				</ClayButton>
 
-				<div
+				<CSSTransition
 					className={classNames('navbar-collapse', {
-						collapse: !transitioning,
-						collapsing: transitioning,
-						show: visible,
+						collapse: !expanded,
 					})}
-					data-testid="NavigationBarDropdown"
-					ref={contentRef}
+					classNames={{
+						enter: 'collapsing',
+						enterActive: `show`,
+						enterDone: 'show',
+						exit: `show`,
+						exitActive: 'collapsing',
+					}}
+					in={expanded}
+					onEnter={(el: HTMLElement) =>
+						el.setAttribute('style', `height: 0px`)
+					}
+					onEntering={(el: HTMLElement) => setElementFullHeight(el)}
+					onExit={(el) => setElementFullHeight(el)}
+					onExiting={(el) => el.setAttribute('style', `height: 0px`)}
+					timeout={250}
 				>
-					<ClayLayout.ContainerFluid>
-						<ul className="navbar-nav">{children}</ul>
-					</ClayLayout.ContainerFluid>
-				</div>
+					<div>
+						<ClayLayout.ContainerFluid>
+							<ul className="navbar-nav">{children}</ul>
+						</ClayLayout.ContainerFluid>
+					</div>
+				</CSSTransition>
 			</ClayLayout.ContainerFluid>
 		</nav>
 	);
