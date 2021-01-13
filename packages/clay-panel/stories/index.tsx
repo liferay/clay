@@ -32,28 +32,63 @@ storiesOf('Components|ClayPanel', module)
 			<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
 		</ClayPanel>
 	))
-	.add('collapsable', () => (
-		<ClayPanel
-			collapsable
-			displayTitle="Toggle me for expanding!"
-			displayType={
-				select(
-					'Display Type',
-					{
-						secondary: 'secondary',
-						unstyled: 'unstyled',
-					},
-					undefined
-				) as undefined
-			}
-			showCollapseIcon={boolean('Show Collapse Icon', true)}
-			spritemap={spritemap}
-		>
-			<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
-			<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
-			<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
-		</ClayPanel>
-	))
+	.add('collapsable', () => {
+		const [expanded, setExpanded] = React.useState(false);
+
+		return (
+			<>
+				<ClayPanel
+					collapsable
+					displayTitle="Toggle me for expanding!"
+					displayType={
+						select(
+							'Display Type',
+							{
+								secondary: 'secondary',
+								unstyled: 'unstyled',
+							},
+							undefined
+						) as undefined
+					}
+					showCollapseIcon={boolean('Show Collapse Icon', true)}
+					spritemap={spritemap}
+				>
+					<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
+					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+					<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+				</ClayPanel>
+
+				<hr />
+				<h3>{'Controlled Component'}</h3>
+
+				<button onClick={() => setExpanded(!expanded)}>
+					{'Toggle Expand'}
+				</button>
+				<ClayPanel
+					collapsable
+					displayTitle="Toggle me for expanding!"
+					displayType={
+						select(
+							'Display Type',
+							{
+								secondary: 'secondary',
+								unstyled: 'unstyled',
+							},
+							undefined
+						) as undefined
+					}
+					expanded={expanded}
+					onExpandedChange={setExpanded}
+					showCollapseIcon={boolean('Show Collapse Icon', true)}
+					spritemap={spritemap}
+				>
+					<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
+					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+					<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+				</ClayPanel>
+			</>
+		);
+	})
 	.add('groups', () => (
 		<ClayPanel.Group>
 			{['One', 'Two', 'Three'].map((item) => (
