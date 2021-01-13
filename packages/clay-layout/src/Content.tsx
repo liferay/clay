@@ -32,7 +32,7 @@ interface IContentRowProps extends React.HTMLAttributes<HTMLDivElement> {
 	/*
 	 * Give negative margins on the top, right, bottom, and left to offset the padding
 	 */
-	noGutters?: 'x' | 'y' | true;
+	noGutters?: 'sm' | 'x' | 'y' | true;
 
 	/*
 	 * Gives padding to all autofit-cols that are direct children of autofit-row.
@@ -105,6 +105,11 @@ interface IContentColProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Applies the `autofit-col-gutters` class
 	 */
 	gutters?: boolean;
+
+	/**
+	 * Applies the `autofit-col-shrink` class.
+	 */
+	shrink?: boolean;
 }
 
 const ContentCol = React.forwardRef<HTMLElement, IContentColProps>(
@@ -116,6 +121,7 @@ const ContentCol = React.forwardRef<HTMLElement, IContentColProps>(
 			expand,
 			float,
 			gutters,
+			shrink,
 			...otherProps
 		}: IContentColProps,
 		ref
@@ -125,6 +131,7 @@ const ContentCol = React.forwardRef<HTMLElement, IContentColProps>(
 			className={classNames(className, 'autofit-col', {
 				'autofit-col-expand': expand,
 				'autofit-col-gutters': gutters,
+				'autofit-col-shrink': shrink,
 				[`autofit-col-float-${float}`]: float,
 			})}
 			ref={ref}
