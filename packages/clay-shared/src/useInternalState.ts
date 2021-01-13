@@ -5,7 +5,9 @@
 
 import React from 'react';
 
-type TOnChange<T> = (val?: T) => void;
+type TOnChange<T> =
+	| ((val?: T) => void)
+	| React.Dispatch<React.SetStateAction<T>>;
 
 interface IArgs<T> {
 	initialValue?: T;

@@ -143,7 +143,9 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when dropdown changes its active state
 	 */
-	onExpandedChange?: (val?: boolean) => void;
+	onExpandedChange?:
+		| ((val?: boolean) => void)
+		| React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const dateNow = new Date();
