@@ -33,7 +33,7 @@ storiesOf('Components|ClayPanel', module)
 		</ClayPanel>
 	))
 	.add('collapsable', () => {
-		const [expanded, setExpanded] = React.useState(false);
+		const [expanded, setExpanded] = React.useState(true);
 
 		return (
 			<>
