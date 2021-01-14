@@ -157,14 +157,16 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 
 					<CSSTransition
 						className={classNames(
-							'panel-collapse collapse',
-							collapseClassNames
+							'panel-collapse',
+							collapseClassNames,
+							{collapse: !internalExpanded}
 						)}
 						classNames={{
 							enter: 'collapsing',
 							enterActive: `show`,
 							enterDone: 'show',
-							exit: `collapsing show`,
+							exit: `show`,
+							exitActive: 'collapsing',
 						}}
 						in={internalExpanded}
 						onEnter={(el: HTMLElement) =>
