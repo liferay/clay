@@ -2,7 +2,7 @@
 $toggle-switch-bar-padding: 4px !default; // space between button and bar, can be negative value
 $toggle-switch-bar-padding-mobile: 4px !default;
 
-$toggle-switch-button-width: 24px !default; // 24px
+$toggle-switch-button-width: 16px !default; // 24px
 $toggle-switch-button-width-mobile: 16px !default; // 16px
 
 $toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
@@ -10,16 +10,16 @@ $toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
 $toggle-switch-bar-height-mobile: ($toggle-switch-bar-padding-mobile * 2) +
 	$toggle-switch-button-width-mobile !default;
 
-$toggle-switch-bar-width: 60px !default; // width of switch bar
-$toggle-switch-bar-width-mobile: 44px !default; // width of switch bar
+$toggle-switch-bar-width: 40px !default; // width of switch bar
+$toggle-switch-bar-width-mobile: 40px !default; // width of switch bar
 // must all be same units--end
 
 $toggle-switch-bar-bg: $gray-500 !default;
 $toggle-switch-bar-border-color: $toggle-switch-bar-bg !default;
 $toggle-switch-bar-border-radius: 20px !default;
 $toggle-switch-bar-border-width: 1px !default;
-$toggle-switch-bar-font-size: 0.75rem !default; // 12px
-$toggle-switch-bar-font-size-mobile: 0.625rem !default; // 10px
+$toggle-switch-bar-font-size: 0.625rem !default;
+$toggle-switch-bar-font-size-mobile: 0.625rem !default;
 $toggle-switch-bar-icon-color: $white !default;
 $toggle-switch-bar-focus-box-shadow: $custom-control-indicator-focus-box-shadow !default;
 
