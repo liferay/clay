@@ -131,6 +131,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	hasRightSymbols?: boolean;
 
 	/**
+	 * Adds utility class name `dropdown-menu-height-${height}`
+	 */
+	height?: 'auto';
+
+	/**
 	 * Element ref to call focus() on after menu is closed via Escape key
 	 */
 	focusRefOnEsc?: React.RefObject<HTMLElement>;
@@ -144,6 +149,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Callback function for when active state changes.
 	 */
 	onSetActive: (val: boolean) => void;
+
+	/**
+	 * `dropdown-menu-width-${width}`
+	 */
+	width?: 'sm' | 'auto';
 }
 
 const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
@@ -157,6 +167,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			className,
 			hasLeftSymbols,
 			hasRightSymbols,
+			height,
 			focusRefOnEsc,
 			offsetFn = (points) =>
 				OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
@@ -164,6 +175,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 					number
 				],
 			onSetActive,
+			width,
 			...otherProps
 		}: IProps,
 		// TS + refs don't always play nicely together, which is why it is casted
@@ -259,6 +271,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 						className={classNames('dropdown-menu', className, {
 							'dropdown-menu-indicator-end': hasRightSymbols,
 							'dropdown-menu-indicator-start': hasLeftSymbols,
+							[`dropdown-menu-height-${height}`]: height,
+							[`dropdown-menu-width-${width}`]: width,
 							show: active,
 						})}
 						ref={ref}

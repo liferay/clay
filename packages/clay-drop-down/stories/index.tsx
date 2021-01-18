@@ -32,6 +32,8 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 				Align,
 				Align.BottomLeft
 			)}
+			menuHeight={select('Height', ['', 'auto'], '')}
+			menuWidth={select('Width', ['', 'sm', 'full'], '')}
 			onActiveChange={(newVal) => setActive(newVal)}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
 		>
