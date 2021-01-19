@@ -8,13 +8,11 @@
  */
 export function setElementFullHeight(element: HTMLElement) {
 	if (element) {
-		// Cloned into a new array since `.reduce` is not a method on an HTMLCollection
-		const height = Array.prototype.slice
-			.call(element.children)
-			.reduce(
-				(acc: number, child: HTMLElement) => acc + child.clientHeight,
-				0
-			);
+		let height = 0;
+
+		for (let i = 0; i < element.children.length; i++) {
+			height += element.children[i].clientHeight;
+		}
 
 		element.setAttribute('style', `height: ${height}px`);
 	}
