@@ -26,7 +26,7 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
         >
           <button
             aria-label="Select a color"
-            class="btn clay-color-btn dropdown-toggle"
+            class="clay-color-btn dropdown-toggle btn"
             style="background: rgb(0, 128, 0);"
             title="008000"
             type="button"
@@ -81,7 +81,7 @@ exports[`Rendering default 1`] = `
           >
             <button
               aria-label="Select a color"
-              class="btn clay-color-btn dropdown-toggle clay-color-btn-bordered"
+              class="clay-color-btn dropdown-toggle clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFF"
               type="button"
@@ -127,7 +127,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 0, 0);"
               title="000000"
               type="button"
@@ -137,7 +137,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
@@ -147,7 +147,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
@@ -157,7 +157,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
@@ -167,7 +167,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
@@ -177,7 +177,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
@@ -187,7 +187,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
@@ -197,7 +197,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
@@ -207,7 +207,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
@@ -217,7 +217,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
@@ -227,7 +227,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
@@ -237,7 +237,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
@@ -247,7 +247,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
@@ -257,7 +257,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
@@ -267,7 +267,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
@@ -277,7 +277,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
@@ -287,7 +287,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
@@ -297,7 +297,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
@@ -307,7 +307,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
@@ -317,7 +317,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
@@ -327,7 +327,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
@@ -337,7 +337,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
@@ -347,7 +347,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
@@ -357,7 +357,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
@@ -367,7 +367,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
@@ -377,7 +377,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
@@ -387,7 +387,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
@@ -397,7 +397,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
@@ -407,7 +407,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
@@ -417,7 +417,7 @@ exports[`Rendering default 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
@@ -456,7 +456,7 @@ exports[`Rendering disabled palette 1`] = `
           >
             <button
               aria-label="Select a color"
-              class="btn clay-color-btn dropdown-toggle clay-color-btn-bordered"
+              class="clay-color-btn dropdown-toggle clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFF"
               type="button"
@@ -502,7 +502,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 0, 0);"
               title="000000"
               type="button"
@@ -512,7 +512,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
@@ -522,7 +522,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
@@ -532,7 +532,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
@@ -542,7 +542,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
@@ -552,7 +552,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
@@ -562,7 +562,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
@@ -572,7 +572,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
@@ -582,7 +582,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
@@ -592,7 +592,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
@@ -602,7 +602,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
@@ -612,7 +612,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
@@ -622,7 +622,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
@@ -632,7 +632,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
@@ -642,7 +642,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
@@ -652,7 +652,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
@@ -662,7 +662,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
@@ -672,7 +672,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
@@ -682,7 +682,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
@@ -692,7 +692,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
@@ -702,7 +702,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
@@ -712,7 +712,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
@@ -722,7 +722,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
@@ -732,7 +732,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
@@ -742,7 +742,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
@@ -752,7 +752,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
@@ -762,7 +762,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
@@ -772,7 +772,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
@@ -782,7 +782,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
@@ -792,7 +792,7 @@ exports[`Rendering disabled palette 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
@@ -831,7 +831,7 @@ exports[`Rendering disabled state 1`] = `
           >
             <button
               aria-label="Select a color"
-              class="btn clay-color-btn dropdown-toggle clay-color-btn-bordered"
+              class="clay-color-btn dropdown-toggle clay-color-btn-bordered btn"
               disabled=""
               style="background: rgb(255, 255, 255);"
               title="FFF"
@@ -879,7 +879,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 0, 0);"
               title="000000"
               type="button"
@@ -889,7 +889,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
@@ -899,7 +899,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
@@ -909,7 +909,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
@@ -919,7 +919,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
@@ -929,7 +929,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
@@ -939,7 +939,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
@@ -949,7 +949,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
@@ -959,7 +959,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
@@ -969,7 +969,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
@@ -979,7 +979,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
@@ -989,7 +989,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
@@ -999,7 +999,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
@@ -1009,7 +1009,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
@@ -1019,7 +1019,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
@@ -1029,7 +1029,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
@@ -1039,7 +1039,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
@@ -1049,7 +1049,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
@@ -1059,7 +1059,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
@@ -1069,7 +1069,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
@@ -1079,7 +1079,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
@@ -1089,7 +1089,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
@@ -1099,7 +1099,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
@@ -1109,7 +1109,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
@@ -1119,7 +1119,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
@@ -1129,7 +1129,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
@@ -1139,7 +1139,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
@@ -1149,7 +1149,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
@@ -1159,7 +1159,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
@@ -1169,7 +1169,7 @@ exports[`Rendering disabled state 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
@@ -1208,7 +1208,7 @@ exports[`Rendering renders w/ var() 1`] = `
           >
             <button
               aria-label="Select a color"
-              class="btn clay-color-btn dropdown-toggle clay-color-btn-bordered"
+              class="clay-color-btn dropdown-toggle clay-color-btn-bordered btn"
               title="var(--blue)"
               type="button"
             />
@@ -1261,7 +1261,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 0, 0);"
               title="000000"
               type="button"
@@ -1271,7 +1271,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
@@ -1281,7 +1281,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
@@ -1291,7 +1291,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
@@ -1301,7 +1301,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
@@ -1311,7 +1311,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
@@ -1321,7 +1321,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
@@ -1331,7 +1331,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
@@ -1341,7 +1341,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
@@ -1351,7 +1351,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
@@ -1361,7 +1361,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
@@ -1371,7 +1371,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
@@ -1381,7 +1381,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
@@ -1391,7 +1391,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
@@ -1401,7 +1401,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
@@ -1411,7 +1411,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
@@ -1421,7 +1421,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
@@ -1431,7 +1431,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
@@ -1441,7 +1441,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
@@ -1451,7 +1451,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
@@ -1461,7 +1461,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
@@ -1471,7 +1471,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
@@ -1481,7 +1481,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
@@ -1491,7 +1491,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
@@ -1501,7 +1501,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
@@ -1511,7 +1511,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
@@ -1521,7 +1521,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
@@ -1531,7 +1531,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
@@ -1541,7 +1541,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
@@ -1551,7 +1551,7 @@ exports[`Rendering renders w/ var() 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
@@ -1590,7 +1590,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
           >
             <button
               aria-label="Select a color"
-              class="btn clay-color-btn dropdown-toggle clay-color-btn-bordered"
+              class="clay-color-btn dropdown-toggle clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFF"
               type="button"
@@ -1636,7 +1636,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 0, 0);"
               title="000000"
               type="button"
@@ -1646,7 +1646,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
@@ -1656,7 +1656,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
@@ -1666,7 +1666,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
@@ -1676,7 +1676,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
@@ -1686,7 +1686,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
@@ -1696,7 +1696,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
@@ -1706,7 +1706,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
@@ -1716,7 +1716,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
@@ -1726,7 +1726,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
@@ -1736,7 +1736,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
@@ -1746,7 +1746,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
@@ -1756,7 +1756,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
@@ -1766,7 +1766,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
@@ -1776,7 +1776,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
@@ -1786,7 +1786,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
@@ -1796,7 +1796,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
@@ -1806,7 +1806,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
@@ -1816,7 +1816,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
@@ -1826,7 +1826,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
@@ -1836,7 +1836,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
@@ -1846,7 +1846,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
@@ -1856,7 +1856,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
@@ -1866,7 +1866,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
@@ -1876,7 +1876,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
@@ -1886,7 +1886,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
@@ -1896,7 +1896,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
@@ -1906,7 +1906,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
@@ -1916,7 +1916,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
@@ -1926,7 +1926,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
@@ -1965,7 +1965,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
           >
             <button
               aria-label="Select a color"
-              class="btn clay-color-btn dropdown-toggle"
+              class="clay-color-btn dropdown-toggle btn"
               style="background: red;"
               title="red"
               type="button"
@@ -2019,7 +2019,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 0, 0);"
               title="000000"
               type="button"
@@ -2029,7 +2029,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
@@ -2039,7 +2039,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
@@ -2049,7 +2049,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
@@ -2059,7 +2059,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
@@ -2069,7 +2069,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
@@ -2079,7 +2079,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
@@ -2089,7 +2089,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
@@ -2099,7 +2099,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
@@ -2109,7 +2109,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
@@ -2119,7 +2119,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
@@ -2129,7 +2129,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
@@ -2139,7 +2139,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
@@ -2149,7 +2149,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
@@ -2159,7 +2159,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
@@ -2169,7 +2169,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
@@ -2179,7 +2179,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
@@ -2189,7 +2189,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
@@ -2199,7 +2199,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
@@ -2209,7 +2209,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
@@ -2219,7 +2219,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
@@ -2229,7 +2229,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
@@ -2239,7 +2239,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
@@ -2249,7 +2249,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
@@ -2259,7 +2259,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
@@ -2269,7 +2269,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
@@ -2279,7 +2279,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
@@ -2289,7 +2289,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
@@ -2299,7 +2299,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
@@ -2309,7 +2309,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"
@@ -2348,7 +2348,7 @@ exports[`Rendering small color-picker 1`] = `
           >
             <button
               aria-label="Select a color"
-              class="btn clay-color-btn dropdown-toggle clay-color-btn-bordered"
+              class="clay-color-btn dropdown-toggle clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFF"
               type="button"
@@ -2394,7 +2394,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 0, 0);"
               title="000000"
               type="button"
@@ -2404,7 +2404,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(95, 95, 95);"
               title="5F5F5F"
               type="button"
@@ -2414,7 +2414,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(154, 154, 154);"
               title="9A9A9A"
               type="button"
@@ -2424,7 +2424,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(203, 203, 203);"
               title="CBCBCB"
               type="button"
@@ -2434,7 +2434,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(225, 225, 225);"
               title="E1E1E1"
               type="button"
@@ -2444,7 +2444,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 255, 255);"
               title="FFFFFF"
               type="button"
@@ -2454,7 +2454,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 13, 13);"
               title="FF0D0D"
               type="button"
@@ -2464,7 +2464,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 138, 28);"
               title="FF8A1C"
               type="button"
@@ -2474,7 +2474,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(43, 166, 118);"
               title="2BA676"
               type="button"
@@ -2484,7 +2484,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(0, 110, 248);"
               title="006EF8"
               type="button"
@@ -2494,7 +2494,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(127, 38, 255);"
               title="7F26FF"
               type="button"
@@ -2504,7 +2504,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 33, 160);"
               title="FF21A0"
               type="button"
@@ -2514,7 +2514,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 95, 95);"
               title="FF5F5F"
               type="button"
@@ -2524,7 +2524,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 180, 110);"
               title="FFB46E"
               type="button"
@@ -2534,7 +2534,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(80, 210, 160);"
               title="50D2A0"
               type="button"
@@ -2544,7 +2544,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(75, 155, 255);"
               title="4B9BFF"
               type="button"
@@ -2554,7 +2554,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(175, 120, 255);"
               title="AF78FF"
               type="button"
@@ -2564,7 +2564,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 115, 195);"
               title="FF73C3"
               type="button"
@@ -2574,7 +2574,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 177, 177);"
               title="FFB1B1"
               type="button"
@@ -2584,7 +2584,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 222, 192);"
               title="FFDEC0"
               type="button"
@@ -2594,7 +2594,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(145, 227, 195);"
               title="91E3C3"
               type="button"
@@ -2604,7 +2604,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(157, 200, 255);"
               title="9DC8FF"
               type="button"
@@ -2614,7 +2614,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(223, 202, 255);"
               title="DFCAFF"
               type="button"
@@ -2624,7 +2624,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 197, 230);"
               title="FFC5E6"
               type="button"
@@ -2634,7 +2634,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 217, 217);"
               title="FFD9D9"
               type="button"
@@ -2644,7 +2644,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(255, 243, 232);"
               title="FFF3E8"
               type="button"
@@ -2654,7 +2654,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(177, 235, 213);"
               title="B1EBD5"
               type="button"
@@ -2664,7 +2664,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(197, 223, 255);"
               title="C5DFFF"
               type="button"
@@ -2674,7 +2674,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn clay-color-btn-bordered"
+              class="clay-color-btn clay-color-btn-bordered btn"
               style="background: rgb(248, 242, 255);"
               title="F8F2FF"
               type="button"
@@ -2684,7 +2684,7 @@ exports[`Rendering small color-picker 1`] = `
             class="clay-color-swatch-item"
           >
             <button
-              class="btn clay-color-btn"
+              class="clay-color-btn btn"
               style="background: rgb(255, 237, 247);"
               title="FFEDF7"
               type="button"

@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {setElementFullHeight, useInternalState} from '@clayui/shared';
 import classNames from 'classnames';
@@ -115,16 +116,17 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 
 			{collapsable && (
 				<>
-					<button
+					<ClayButton
 						aria-expanded={internalExpanded}
 						className={classNames(
-							'btn btn-unstyled panel-header panel-header-link',
+							'panel-header panel-header-link',
 							{
 								'collapse-icon': showCollapseIcon,
 								'collapse-icon-middle': showCollapseIcon,
 								collapsed: !internalExpanded,
 							}
 						)}
+						displayType="unstyled"
 						onClick={() => setInternalExpanded(!internalExpanded)}
 						role="tab"
 					>
@@ -153,7 +155,7 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 								</span>
 							</>
 						)}
-					</button>
+					</ClayButton>
 
 					<CSSTransition
 						className={classNames(

@@ -39,9 +39,10 @@ exports[`ClayPanel renders with custom displayTitle 1`] = `
 >
   <button
     aria-expanded={false}
-    className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+    className="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
     onClick={[Function]}
     role="tab"
+    type="button"
   >
     <div>
       <h3>
@@ -178,9 +179,10 @@ exports[`ClayPanel renders with multiple panels 1`] = `
   >
     <button
       aria-expanded={false}
-      className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+      className="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
       onClick={[Function]}
       role="tab"
+      type="button"
     >
       <span
         className="panel-title"
@@ -233,9 +235,10 @@ exports[`ClayPanel renders without displayTitle 1`] = `
 >
   <button
     aria-expanded={false}
-    className="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
+    className="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
     onClick={[Function]}
     role="tab"
+    type="button"
   >
     <span
       className="collapse-icon-closed"

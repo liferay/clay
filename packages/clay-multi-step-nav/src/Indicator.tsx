@@ -49,6 +49,7 @@ const ClayMultiStepNavIndicator = React.forwardRef<HTMLDivElement, IProps>(
 				className="multi-step-icon"
 				onClick={onClick}
 				ref={innerRef}
+				type="button"
 			>
 				{complete && <ClayIcon spritemap={spritemap} symbol="check" />}
 

@@ -178,6 +178,7 @@ const ListItem: React.FunctionComponent<
 						spritemap={spritemap}
 						trigger={
 							<button
+								type="button"
 								{...dropDownTriggerProps}
 								className="component-action"
 							>
