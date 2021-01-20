@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from '@clayui/button';
 import classNames from 'classnames';
 import React from 'react';
 import tinycolor from 'tinycolor2';
@@ -37,12 +38,13 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 			!color.isValid() || tinycolor.readability('#FFF', value) < 1.1;
 
 		return (
-			<button
+			<ClayButton
 				{...otherProps}
-				className={classNames('btn clay-color-btn', className, {
+				className={classNames('clay-color-btn', className, {
 					active,
 					'clay-color-btn-bordered': requireBorder,
 				})}
+				displayType={null}
 				ref={ref}
 				style={{
 					background: `${isHex ? '#' : ''}${value}`,
@@ -50,7 +52,6 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 					width: size,
 				}}
 				title={value}
-				type="button"
 			/>
 		);
 	}
