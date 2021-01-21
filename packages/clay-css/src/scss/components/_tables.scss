@@ -35,6 +35,10 @@ caption {
 	width: 100%;
 
 	thead {
+		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+
+		@include clay-css($c-table-thead);
+
 		td,
 		th {
 			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
@@ -89,18 +93,34 @@ caption {
 		padding-right: $table-cell-gutters;
 	}
 
-	tbody,
-	tfoot {
+	tbody {
+		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+
+		@include clay-css($c-table-tbody);
+
 		td,
 		th {
 			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
 
-			background-color: $table-bg;
+			background-color: map-get($c-table-tbody, background-color);
 		}
 	}
 
 	tbody + tbody {
 		border-top: (2 * $table-border-width) solid $table-border-color;
+	}
+
+	tfoot {
+		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+
+		@include clay-css($c-table-tfoot);
+
+		td,
+		th {
+			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
+
+			background-color: map-get($c-table-tfoot, background-color);
+		}
 	}
 
 	caption {
@@ -427,6 +447,10 @@ caption {
 	}
 
 	thead {
+		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+
+		@include clay-css($c-table-list-thead);
+
 		td,
 		th {
 			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
@@ -443,13 +467,28 @@ caption {
 		}
 	}
 
-	tbody,
-	tfoot {
+	tbody {
+		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+
+		@include clay-css($c-table-list-tbody);
+
 		td,
 		th {
 			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
 
-			background-color: $table-list-bg;
+			background-color: map-get($c-table-list-tbody, background-color);
+			vertical-align: middle;
+		}
+	}
+
+	tfoot {
+		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+
+		@include clay-css($c-table-list-tfoot);
+
+		td,
+		th {
+			background-color: map-get($c-table-list-tfoot, background-color);
 			vertical-align: middle;
 		}
 	}
