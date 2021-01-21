@@ -49,6 +49,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	 */
 	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement>;
 
+	menuHeight?: React.ComponentProps<typeof Menu>['height'];
+
+	menuWidth?: React.ComponentProps<typeof Menu>['width'];
+
 	/**
 	 * Callback for when the active state changes.
 	 */
@@ -87,6 +91,8 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	hasLeftSymbols,
 	hasRightSymbols,
 	menuElementAttrs,
+	menuHeight,
+	menuWidth,
 	offsetFn,
 	onActiveChange,
 	trigger,
@@ -152,9 +158,11 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 					alignmentPosition={alignmentPosition}
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
+					height={menuHeight}
 					offsetFn={offsetFn}
 					onSetActive={onActiveChange}
 					ref={menuElementRef}
+					width={menuWidth}
 				>
 					{children}
 				</Menu>

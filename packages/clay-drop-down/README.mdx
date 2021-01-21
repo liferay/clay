@@ -18,6 +18,7 @@ import {
     -   [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
 -   [DropDownWithItems](#dropdownwithitems)
 -   [DropDownWithDrilldown](#dropdownwithdrilldown)
+-   [Caveats](#caveats)
 
 </div>
 </div>
@@ -116,3 +117,7 @@ const menus = {
 	of09: [{title: 'Three'}],
 };
 ```
+
+## Caveats
+
+One caveat with the drop down menu is that it is rendered inside of a [React Portal](https://reactjs.org/docs/portals.html) and is rendered directly to the `body` element. This means if you are using the `menuWidth` prop set to `auto`, it will not respect the size of the node parent of the drop down, since the menu is rendered directly to the body.

@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import ClayDropDown from './DropDown';
-import ClayMenu from './Menu';
+import ClayDropDownMenu from './Menu';
 import Drilldown from './drilldown';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -15,7 +15,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
 	alignmentPosition?: React.ComponentProps<
-		typeof ClayMenu
+		typeof ClayDropDownMenu
 	>['alignmentPosition'];
 
 	/**
@@ -44,6 +44,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 		[id: string]: React.ComponentProps<typeof Drilldown.Menu>['items'];
 	};
 
+	menuHeight?: React.ComponentProps<typeof ClayDropDown>['menuHeight'];
+
+	menuWidth?: React.ComponentProps<typeof ClayDropDown>['menuWidth'];
+
 	/**
 	 * Function for setting the offset of the menu from the trigger.
 	 */
@@ -71,6 +75,8 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	containerElement,
 	initialActiveMenu,
 	menuElementAttrs,
+	menuHeight,
+	menuWidth,
 	menus,
 	offsetFn,
 	spritemap,
@@ -94,6 +100,8 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 				...menuElementAttrs,
 				className: classNames(menuElementAttrs?.className, 'drilldown'),
 			}}
+			menuHeight={menuHeight}
+			menuWidth={menuWidth}
 			offsetFn={offsetFn}
 			onActiveChange={setActive}
 			trigger={trigger}
