@@ -25,20 +25,52 @@ $table-responsive-margin-bottom: 1.5rem !default;
 
 // Table
 
+$table-bg: null !default;
+$table-border-color: $border-color !default;
+$table-border-width: $border-width !default;
+$table-color: $body-color !default;
 $table-font-size: null !default;
 $table-margin-bottom: 0 !default;
 
-$table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
+$table-hover-bg: #ececec !default;
+$table-hover-color: $table-color !default;
+
+$table-active-bg: $table-hover-bg !default;
 
 $table-disabled-bg: $white !default;
 $table-disabled-color: #acacac !default;
 $table-disabled-cursor: $disabled-cursor !default;
 $table-disabled-pointer-events: none !default;
 
-// Table Header
+// Table Striped
 
+$table-accent-bg: #f2f2f2 !default;
+
+$table-striped-order: odd !default;
+
+// Table Cell applies to `th` and `td`
+
+$table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
+$table-cell-padding: 0.75rem !default;
+$table-cell-padding-sm: 0.3rem !default;
+
+$table-cell-expand-min-width: 12.5rem !default; // 200px
+
+$table-cell-expand-small-max-width: 12.5rem !default; // 200px
+$table-cell-expand-small-width: 25% !default;
+
+$table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smaller-width: 15% !default;
+
+$table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smallest-width: 10% !default;
+
+// TH
+
+$table-head-bg: $white !default;
 $table-head-border-bottom-width: 2 * $table-border-width !default;
 $table-head-border-top-width: 0 !default;
+$table-head-color: $gray-700 !default;
 $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
@@ -62,6 +94,8 @@ $table-head-title-text-truncate-max-width: calc(
 
 $c-table-tbody: () !default;
 
+// TD
+
 $table-data-border-bottom-width: $table-border-width !default;
 $table-data-border-left-width: 0 !default;
 $table-data-border-right-width: 0 !default;
@@ -70,6 +104,8 @@ $table-data-border-top-width: $table-border-width !default;
 $table-data-border-color: $table-border-color !default;
 $table-data-border-style: solid !default;
 $table-data-vertical-align: middle !default;
+
+// Table Divider
 
 $table-divider-bg: $white !default;
 $table-divider-color: null !default;
@@ -89,11 +125,6 @@ $table-quick-action-menu-accent-active-bg: $table-accent-bg !default;
 $table-quick-action-menu-active-bg: $table-active-bg !default;
 $table-quick-action-menu-hover-bg: $table-hover-bg !default;
 
-$table-cell-expand-min-width: 12.5rem !default; // 200px
-
-$table-cell-expand-small-max-width: 12.5rem !default; // 200px
-$table-cell-expand-small-width: 25% !default;
-
 $table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
 $table-cell-expand-smaller-width: 15% !default;
 
@@ -106,6 +137,8 @@ $c-table-tfoot: () !default;
 
 // Table Caption
 
+$table-caption-color: $text-muted !default;
+
 $c-table-caption: () !default;
 $c-table-caption: map-merge(
 	(
@@ -116,9 +149,9 @@ $c-table-caption: map-merge(
 	$c-table-caption
 );
 
-// Table Bordered
+// Table Img
 
-$table-bordered-border-width: $table-border-width !default;
+$table-img-max-height: 100px !default;
 
 // Table Title
 
@@ -171,9 +204,23 @@ $table-action-link: map-deep-merge(
 	$table-action-link
 );
 
-// Table Img
+// Table Dark Variant
 
-$table-img-max-height: 100px !default;
+$table-dark-bg: $gray-800 !default;
+$table-dark-border-color: lighten($table-dark-bg, 7.5%) !default;
+$table-dark-color: $white !default;
+
+$table-dark-hover-bg: rgba($white, 0.075) !default;
+$table-dark-hover-color: $table-dark-color !default;
+
+$table-dark-accent-bg: rgba($white, 0.05) !default;
+
+// Table Bordered
+
+$table-bordered-border-width: $table-border-width !default;
+
+$table-bg-level: -9 !default;
+$table-border-level: -6 !default;
 
 // Table List
 

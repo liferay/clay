@@ -2,15 +2,42 @@
 /// @group customForms
 ////
 
+$custom-forms-transition: background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+// Custom Control Indicator
+
+$custom-control-indicator-size: 1rem !default;
+
+$custom-control-indicator-bg: $input-bg !default;
+$custom-control-indicator-bg-size: 50% 50% !default;
+$custom-control-indicator-border-color: $gray-500 !default;
 $custom-control-indicator-border-style: solid !default;
+$custom-control-indicator-border-width: $border-width !default;
+$custom-control-indicator-box-shadow: $input-box-shadow !default;
 $custom-control-indicator-position-top: 0.25rem !default;
 
-$custom-control-indicator-active-border-color: null !default;
+$custom-control-indicator-focus-border-color: $input-focus-border-color !default;
+$custom-control-indicator-focus-box-shadow: $input-focus-box-shadow !default;
 
+$custom-control-indicator-active-bg: lighten(
+	$component-active-bg,
+	0.35
+) !default;
+$custom-control-indicator-active-box-shadow: none !default;
+$custom-control-indicator-active-border-color: $custom-control-indicator-active-bg !default;
+$custom-control-indicator-active-color: $component-active-color !default;
+
+$custom-control-indicator-disabled-bg: $input-disabled-bg !default;
 $custom-control-indicator-disabled-border-color: null !default;
 $custom-control-indicator-disabled-cursor: $disabled-cursor !default;
 
 // Custom Control Indicator Checked
+
+$custom-control-indicator-checked-bg: $component-active-bg !default;
+$custom-control-indicator-checked-color: $component-active-color !default;
+$custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default;
+$custom-control-indicator-checked-box-shadow: none !default;
 
 /// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-bg` instead
 
@@ -26,7 +53,7 @@ $custom-control-indicator-checked-border-color: null !default;
 
 /// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
 
-$custom-control-indicator-disabled-checked-bg: null !default;
+$custom-control-indicator-disabled-checked-bg: rgba($primary, 0.5) !default;
 $custom-control-indicator-checked-disabled-bg: $custom-control-indicator-disabled-checked-bg !default;
 
 /// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-border-color` instead
@@ -34,11 +61,11 @@ $custom-control-indicator-checked-disabled-bg: $custom-control-indicator-disable
 $custom-control-indicator-disabled-checked-border-color: null !default;
 $custom-control-indicator-checked-disabled-border-color: $custom-control-indicator-disabled-checked-border-color !default;
 
-// Custom Control Indicator Indeterminate
-
-$custom-control-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-border-color !default;
-
 // Custom Control
+
+$custom-control-cursor: null !default;
+$custom-control-gutter: 0.5rem !default;
+$custom-control-spacer-x: 1rem !default;
 
 /// @deprecated after of v3.5.0 use the Sass map `$custom-control` instead
 
@@ -56,6 +83,7 @@ $custom-control-min-height: $custom-control-indicator-size +
 $custom-control: () !default;
 $custom-control: map-deep-merge(
 	(
+		cursor: $custom-control-cursor,
 		display: block,
 		margin-bottom: $custom-control-margin-bottom,
 		margin-top: $custom-control-margin-top,
@@ -96,6 +124,8 @@ $custom-control-description-disabled-cursor: $disabled-cursor !default;
 
 $custom-control-description-small-font-size: null !default;
 
+$custom-control-label-color: null !default;
+
 $custom-control-label: () !default;
 $custom-control-label: map-deep-merge(
 	(
@@ -110,6 +140,8 @@ $custom-control-label: map-deep-merge(
 	),
 	$custom-control-label
 );
+
+$custom-control-label-disabled-color: $gray-600 !default;
 
 $custom-control-label-disabled: () !default;
 $custom-control-label-disabled: map-deep-merge(
@@ -148,11 +180,27 @@ $custom-control-primary-label-text: map-deep-merge(
 
 // Custom Checkbox
 
+$custom-checkbox-indicator-border-radius: $border-radius !default;
+
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default;
 $custom-checkbox-indicator-icon-checked-bg-size: null !default;
+
+$custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
+$custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default;
+
+$custom-control-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-border-color !default;
+
+$custom-checkbox-indicator-indeterminate-box-shadow: none !default;
+$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
+
+$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>") !default;
 $custom-checkbox-indicator-icon-indeterminate-bg-size: null !default;
 
 // Custom Radio
 
+$custom-radio-indicator-border-radius: 50% !default;
+
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
 $custom-radio-indicator-icon-checked-bg-size: null !default;
 
 $custom-radio-indicator-disabled-border-color: null !default;
@@ -161,3 +209,128 @@ $custom-radio-indicator-disabled-border-color: null !default;
 
 $custom-radio-indicator-disabled-checked-border-color: null !default;
 $custom-radio-indicator-checked-disabled-border-color: $custom-radio-indicator-disabled-checked-border-color !default;
+
+// Custom Switch
+
+$custom-switch-width: $custom-control-indicator-size * 1.75 !default;
+$custom-switch-indicator-border-radius: $custom-control-indicator-size / 2 !default;
+$custom-switch-indicator-size: $custom-control-indicator-size -
+	($custom-control-indicator-border-width * 4) !default;
+
+// Custom Select
+
+$custom-select-bg: $input-bg !default;
+$custom-select-bg-size: 8px 10px !default;
+$custom-select-border-color: $input-border-color !default;
+$custom-select-border-radius: $border-radius !default;
+$custom-select-border-width: $input-border-width !default;
+$custom-select-box-shadow: inset 0 1px 2px rgba($black, 0.075) !default;
+$custom-select-color: $input-color !default;
+$custom-select-font-family: $input-font-family !default;
+$custom-select-font-size: $input-font-size !default;
+$custom-select-font-weight: $input-font-weight !default;
+$custom-select-height: $input-height !default;
+$custom-select-indicator-padding: 1rem !default;
+$custom-select-line-height: $input-line-height !default;
+$custom-select-padding-x: $input-padding-x !default;
+$custom-select-padding-y: $input-padding-y !default;
+
+$custom-select-indicator-color: $gray-800 !default;
+$custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
+
+$custom-select-background: escape-svg($custom-select-indicator) no-repeat right
+	$custom-select-padding-x center / $custom-select-bg-size !default;
+
+// Custom Select Focus
+
+$custom-select-focus-border-color: $input-focus-border-color !default;
+
+$custom-select-focus-width: $input-focus-width !default;
+
+$custom-select-focus-box-shadow: 0 0 0 $custom-select-focus-width
+	$input-btn-focus-color !default;
+
+// Custom Select Disabled
+
+$custom-select-disabled-bg: $gray-200 !default;
+$custom-select-disabled-color: $gray-600 !default;
+
+// Custom Select Feedback
+
+$custom-select-feedback-icon-padding-right: calc(
+	(1em * 0.75) + (2 * #{$custom-select-padding-y} * 0.75) + #{$custom-select-padding-x} +
+		#{$custom-select-indicator-padding}
+) !default;
+
+$custom-select-feedback-icon-position: center right
+	($custom-select-padding-x + $custom-select-indicator-padding) !default;
+$custom-select-feedback-icon-size: $input-height-inner-half
+	$input-height-inner-half !default;
+
+// Custom Select Lg
+
+$custom-select-font-size-lg: $input-font-size-lg !default;
+$custom-select-height-lg: $input-height-lg !default;
+$custom-select-padding-x-lg: $input-padding-x-lg !default;
+$custom-select-padding-y-lg: $input-padding-y-lg !default;
+
+// Custom Select Sm
+
+$custom-select-font-size-sm: $input-font-size-sm !default;
+$custom-select-height-sm: $input-height-sm !default;
+$custom-select-padding-x-sm: $input-padding-x-sm !default;
+$custom-select-padding-y-sm: $input-padding-y-sm !default;
+
+// Custom Range
+
+$custom-range-track-bg: $gray-300 !default;
+$custom-range-track-border-radius: 1rem !default;
+$custom-range-track-box-shadow: inset 0 0.25rem 0.25rem rgba($black, 0.1) !default;
+$custom-range-track-cursor: pointer !default;
+$custom-range-track-height: 0.5rem !default;
+$custom-range-track-width: 100% !default;
+
+$custom-range-thumb-bg: $component-active-bg !default;
+$custom-range-thumb-border: 0 !default;
+$custom-range-thumb-border-radius: 1rem !default;
+$custom-range-thumb-box-shadow: 0 0.1rem 0.25rem rgba($black, 0.1) !default;
+
+$custom-range-thumb-width: 1rem !default;
+
+$custom-range-thumb-height: $custom-range-thumb-width !default;
+
+$custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg,
+	$input-focus-box-shadow !default;
+$custom-range-thumb-focus-box-shadow-width: $input-focus-width !default;
+
+$custom-range-thumb-active-bg: lighten($component-active-bg, 35%) !default;
+
+$custom-range-thumb-disabled-bg: $gray-500 !default;
+
+// Custom File
+
+$custom-file-bg: $input-bg !default;
+$custom-file-border-color: $input-border-color !default;
+$custom-file-border-width: $input-border-width !default;
+$custom-file-border-radius: $input-border-radius !default;
+$custom-file-box-shadow: $input-box-shadow !default;
+$custom-file-color: $input-color !default;
+$custom-file-font-family: $input-font-family !default;
+$custom-file-font-weight: $input-font-weight !default;
+$custom-file-height-inner: $input-height-inner !default;
+$custom-file-height: $input-height !default;
+$custom-file-line-height: $input-line-height !default;
+$custom-file-padding-x: $input-padding-x !default;
+$custom-file-padding-y: $input-padding-y !default;
+
+$custom-file-focus-border-color: $input-focus-border-color !default;
+$custom-file-focus-box-shadow: $input-focus-box-shadow !default;
+
+$custom-file-disabled-bg: $input-disabled-bg !default;
+
+$custom-file-button-bg: $input-group-addon-bg !default;
+$custom-file-button-color: $custom-file-color !default;
+
+$custom-file-text: (
+	en: 'Browse',
+) !default;

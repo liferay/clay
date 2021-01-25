@@ -1,16 +1,45 @@
+$list-group-bg: $white !default;
+$list-group-border-color: rgba($black, 0.125) !default;
+$list-group-border-width: $border-width !default;
+
+$list-group-border-radius: $border-radius !default;
+
 $list-group-box-shadow: null !default;
 $list-group-color: null !default;
 $list-group-font-size: null !default;
-
 $list-group-margin-bottom: 1.5rem !default;
 $list-group-margin-top: null !default;
 
+// List Group Item Action
+
+$list-group-action-color: $gray-700 !default;
+
+$list-group-hover-bg: $gray-100 !default;
+
+$list-group-action-hover-color: $list-group-action-color !default;
+
+$list-group-action-active-bg: $gray-200 !default;
+$list-group-action-active-color: $body-color !default;
+
+// List Group Item
+
+$list-group-item-padding-x: 1.25rem !default;
+$list-group-item-padding-y: 0.75rem !default;
+
 // Use values flex-start, flex-end, or center
+
 $list-group-item-flex-align-items: flex-start !default;
 
-$list-group-item-flex-checkbox-offset-top: 0.1875rem !default; // 3px
-$list-group-item-flex-offset-top: 0.0625rem !default; // 1px
-$list-group-item-flex-list-group-title-offset-top: -0.25rem !default; // -4px
+$list-group-item-flex-checkbox-offset-top: 0.1875rem !default;
+$list-group-item-flex-offset-top: 0.0625rem !default;
+$list-group-item-flex-list-group-title-offset-top: -0.25rem !default;
+
+$list-group-active-bg: $component-active-bg !default;
+$list-group-active-border-color: $list-group-active-bg !default;
+$list-group-active-color: $component-active-color !default;
+
+$list-group-disabled-bg: $list-group-bg !default;
+$list-group-disabled-color: $gray-600 !default;
 
 // List Group Header
 

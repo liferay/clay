@@ -1,6 +1,21 @@
+$card-bg: $white !default;
+$card-border-color: rgba($black, 0.125) !default;
 $card-border-style: solid !default;
+$card-border-width: $border-width !default;
+
+$card-border-radius: $border-radius !default;
+$card-inner-border-radius: $card-border-radius - $card-border-width !default;
+
 $card-box-shadow: null !default;
+$card-color: null !default;
+$card-height: null !default;
 $card-margin-bottom: 1.5rem !default;
+
+$card-spacer-x: 1.25rem !default;
+$card-spacer-y: 0.75rem !default;
+
+$card-cap-bg: rgba($black, 0.03) !default;
+$card-cap-color: null !default;
 
 $card-body-padding-bottom: $card-spacer-x !default;
 $card-body-padding-left: $card-spacer-x !default;
@@ -14,6 +29,16 @@ $card-section-header-line-height: 2.5 !default;
 $card-section-header-margin-bottom: 1.5rem !default;
 $card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
 $card-section-header-text-transform: uppercase !default;
+
+$card-img-overlay-padding: 1.25rem !default;
+
+$card-group-margin: $grid-gutter-width / 2 !default;
+
+$card-deck-margin: $card-group-margin !default;
+
+$card-columns-count: 3 !default;
+$card-columns-gap: 1.25rem !default;
+$card-columns-margin: $card-spacer-y !default;
 
 // Card Aspect Ratio
 
@@ -213,7 +238,7 @@ $card-interactive: map-deep-merge(
 		transition: $btn-transition,
 		hover-bg: $gray-100,
 		hover-text-decoration: none,
-		focus-border-color: $input-focus-border-color,
+		focus-border-color: lighten($component-active-bg, 25%),
 		focus-box-shadow: $input-btn-focus-box-shadow,
 		active-bg: $gray-200,
 		after-highlight: $card-interactive-after-highlight,
@@ -252,7 +277,7 @@ $card-interactive-secondary: map-deep-merge(
 		color: $gray-900,
 		hover-color: $gray-900,
 		hover-bg: $white,
-		hover-border-color: $input-focus-border-color,
+		hover-border-color: lighten($component-active-bg, 25%),
 		hover-box-shadow: $input-btn-focus-box-shadow,
 		active-bg: $white,
 	),

@@ -1,10 +1,18 @@
 @import 'variables/_globals';
 @import 'variables/_globals-z-index';
 
+@import 'variables/_images';
+
+@import 'variables/_carousel';
+@import 'variables/_jumbotron';
+@import 'variables/_toasts';
+@import 'variables/_spinners';
+
+@import 'variables/_buttons';
+
 @import 'variables/_alerts';
 @import 'variables/_badges';
 @import 'variables/_breadcrumbs';
-@import 'variables/_buttons';
 @import 'variables/_empty-state';
 @import 'variables/_labels';
 @import 'variables/_stickers';
