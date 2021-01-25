@@ -228,6 +228,13 @@
 		}
 	}
 
+	&.disabled,
+	&:disabled {
+		background-color: $list-group-disabled-bg;
+		color: $list-group-disabled-color;
+		pointer-events: none;
+	}
+
 	+ .list-group-item {
 		border-top-width: 0;
 
