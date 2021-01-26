@@ -166,6 +166,7 @@ $theme-colors: map-deep-merge(
 	$theme-colors
 );
 
+$yiq-contrasted-threshold: 150 !default;
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
 
