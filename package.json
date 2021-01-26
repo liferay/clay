@@ -23,6 +23,7 @@
 		"format:check": "prettier --list-different -- \"**/*.{js,ts,tsx,md,mdx,json,scss}\"",
 		"genBuildSize:compare": "NODE_ENV=production node scripts/check-size/index.js --compare",
 		"genBuildSize": "NODE_ENV=production node scripts/check-size/index.js",
+		"genGlobalChangeLog": "node scripts/generate-global-changelog.js && prettier --write -- \"CHANGELOG.md\"",
 		"lerna": "lerna bootstrap -- --no-optional --no-package-lock",
 		"lint:changed": "git ls-files -mz \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" | xargs -0 eslint",
 		"lint:fix": "eslint --fix \".*.js\" \"**/*.{js,ts,tsx}\"",
@@ -33,7 +34,7 @@
 		"storybook:build": "build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
 		"test": "jest",
-		"version": "yarn run format:all"
+		"version": "yarn genGlobalChangeLog && prettier --write -- \"packages/**/CHANGELOG.md\" && git add -- \"CHANGELOG.md\" \"packages/clay-css/src/scss/_license-text.scss\""
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.10.1",

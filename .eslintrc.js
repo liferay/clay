@@ -26,6 +26,7 @@ module.exports = {
 		],
 		'@typescript-eslint/no-unused-vars': 'error',
 		'lines-around-comment': 'off',
+		'no-for-of-loops/no-for-of-loops': 'off',
 		'no-unused-vars': 'off',
 		'notice/notice': [
 			'error',
