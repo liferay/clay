@@ -1,4 +1,6 @@
-# Change Log
+# CHANGELOG
+
+---
 
 ## v3.x
 
