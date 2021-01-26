@@ -24,6 +24,26 @@ $table-head-link: map-deep-merge(
 	$table-head-link
 );
 
+// Table Body
+
+$c-table-tbody: () !default;
+$c-table-tbody: map-merge(
+	(
+		background-color: $white,
+	),
+	$c-table-tbody
+);
+
+// Table Footer
+
+$c-table-tfoot: () !default;
+$c-table-tfoot: map-merge(
+	(
+		background-color: $table-bg,
+	),
+	$c-table-tfoot
+);
+
 $table-caption-color: $gray-900 !default;
 
 $table-divider-bg: $gray-100 !default;

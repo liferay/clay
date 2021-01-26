@@ -35,11 +35,21 @@ $table-disabled-color: #acacac !default;
 $table-disabled-cursor: $disabled-cursor !default;
 $table-disabled-pointer-events: none !default;
 
+// Table Header
+
 $table-head-border-bottom-width: 2 * $table-border-width !default;
 $table-head-border-top-width: 0 !default;
 $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
+
+$c-table-thead: () !default;
+$c-table-thead: map-merge(
+	(
+		background-color: $table-head-bg,
+	),
+	$c-table-thead
+);
 
 $table-head-link: () !default;
 
@@ -47,6 +57,10 @@ $table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
 $table-head-title-text-truncate-max-width: calc(
 	100% - 1em - #{$table-head-title-inline-item-spacer-x}
 ) !default;
+
+// Table Body
+
+$c-table-tbody: () !default;
 
 $table-data-border-bottom-width: $table-border-width !default;
 $table-data-border-left-width: 0 !default;
@@ -85,6 +99,10 @@ $table-cell-expand-smaller-width: 15% !default;
 
 $table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
 $table-cell-expand-smallest-width: 10% !default;
+
+// Table Footer
+
+$c-table-tfoot: () !default;
 
 // Table Caption
 
@@ -221,7 +239,7 @@ $c-table-list-cell: map-merge(
 
 // .table-list thead {th,td}
 
-$table-list-head-bg: null !default;
+$table-list-head-bg: $white !default;
 $table-list-head-font-size: null !default;
 $table-list-head-font-weight: null !default;
 $table-list-head-height: null !default;
@@ -230,6 +248,36 @@ $table-list-head-vertical-alignment: null !default;
 // .table-list thead th a
 
 $table-list-head-link: () !default;
+
+// Table List Thead
+
+$c-table-list-thead: () !default;
+$c-table-list-thead: map-merge(
+	(
+		background-color: $table-list-head-bg,
+	),
+	$c-table-list-thead
+);
+
+// Table List Tbody
+
+$c-table-list-tbody: () !default;
+$c-table-list-tbody: map-merge(
+	(
+		background-color: $white,
+	),
+	$c-table-list-tbody
+);
+
+// Table List Tfoot
+
+$c-table-list-tfoot: () !default;
+$c-table-list-tfoot: map-merge(
+	(
+		background-color: $white,
+	),
+	$c-table-list-tfoot
+);
 
 // .table-list.table-bordered {thead,tbody,tfoot} {th,td}
 
