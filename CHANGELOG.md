@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.22.1](https://github.com/bryceosterhaus/clay/compare/v2.22.0...v2.22.1) (2021-01-27)
+
+
+### Bug Fixes
+
+* **clay-css:** Atlas `color-yiq` function not useable in Atlas variables due to `$yiq-contrasted-threshold` undefined ([37a32fd](https://github.com/bryceosterhaus/clay/commit/37a32fd)), closes [#3708](https://github.com/bryceosterhaus/clay/issues/3708)
+
+
+
+
+
 # [2.22.0](https://github.com/bryceosterhaus/clay/compare/v2.21.5...v2.22.0) (2020-12-09)
 
 
