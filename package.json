@@ -34,7 +34,7 @@
 		"storybook:build": "build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
 		"test": "jest",
-		"version": "yarn genGlobalChangeLog && prettier --write -- \"packages/**/CHANGELOG.md\" && git add -- \"CHANGELOG.md\" \"packages/clay-css/src/scss/_license-text.scss\""
+		"version": "yarn genGlobalChangeLog && prettier --write -- \"**/CHANGELOG.md\" && git add -- \"CHANGELOG.md\" \"packages/clay-css/src/scss/_license-text.scss\""
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.10.1",
