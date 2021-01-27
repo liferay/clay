@@ -45,6 +45,15 @@ storiesOf('Components|ClayButton', module)
 			<ClayButton>{'group.'}</ClayButton>
 		</ClayButton.Group>
 	))
+	.add('button group vertical', () => (
+		<ClayButton.Group spaced={boolean('Spaced', false) as false} vertical>
+			<ClayButton>{'This'}</ClayButton>
+			<ClayButton displayType="secondary">{'is'}</ClayButton>
+			<ClayButton>{'a'}</ClayButton>
+			<ClayButton displayType="secondary">{'button'}</ClayButton>
+			<ClayButton>{'group.'}</ClayButton>
+		</ClayButton.Group>
+	))
 	.add('ButtonWithIcon', () => (
 		<>
 			<ClayButtonWithIcon

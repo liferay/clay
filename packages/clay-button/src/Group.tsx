@@ -12,6 +12,11 @@ export interface IButtonGroupProps
 	 * Flag to indicate the spacing between the buttons.
 	 */
 	spaced?: boolean;
+
+	/**
+	 * Flag to indicate if buttons are stacked vertically.
+	 */
+	vertical?: boolean;
 }
 
 const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
@@ -19,11 +24,15 @@ const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
 	className,
 	role = 'group',
 	spaced,
+	vertical,
 	...otherProps
 }: IButtonGroupProps) => (
 	<div
 		{...otherProps}
-		className={classNames(className, 'btn-group')}
+		className={classNames(
+			className,
+			vertical ? 'btn-group-vertical' : 'btn-group'
+		)}
 		role={role}
 	>
 		{spaced
