@@ -121,6 +121,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignmentPosition?: number | TPointOptions;
 
 	/**
+	 * Flag to indicate if clicking outside of the menu should automatically close it.
+	 */
+	closeOnClickOutside?: boolean;
+
+	/**
 	 * Flag to indicate if menu is displaying a clay-icon on the left.
 	 */
 	hasLeftSymbols?: boolean;
@@ -165,6 +170,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			autoBestAlign = true,
 			children,
 			className,
+			closeOnClickOutside = true,
 			hasLeftSymbols,
 			hasRightSymbols,
 			height,
@@ -186,31 +192,33 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 		const subPortalRef = useRef<HTMLDivElement | null>(null);
 
 		useEffect(() => {
-			const handleClick = (event: MouseEvent) => {
-				const nodeRefs = [alignElementRef, subPortalRef];
-				const nodes: Array<Node> = (Array.isArray(nodeRefs)
-					? nodeRefs
-					: [nodeRefs]
-				)
-					.filter((ref) => ref.current)
-					.map((ref) => ref.current!);
-
-				if (
-					event.target instanceof Node &&
-					!nodes.find((element) =>
-						element.contains(event.target as Node)
+			if (closeOnClickOutside) {
+				const handleClick = (event: MouseEvent) => {
+					const nodeRefs = [alignElementRef, subPortalRef];
+					const nodes: Array<Node> = (Array.isArray(nodeRefs)
+						? nodeRefs
+						: [nodeRefs]
 					)
-				) {
-					onSetActive(false);
-				}
-			};
+						.filter((ref) => ref.current)
+						.map((ref) => ref.current!);
 
-			window.addEventListener('mousedown', handleClick);
+					if (
+						event.target instanceof Node &&
+						!nodes.find((element) =>
+							element.contains(event.target as Node)
+						)
+					) {
+						onSetActive(false);
+					}
+				};
 
-			return () => {
-				window.removeEventListener('mousedown', handleClick);
-			};
-		}, []);
+				window.addEventListener('mousedown', handleClick);
+
+				return () => {
+					window.removeEventListener('mousedown', handleClick);
+				};
+			}
+		}, [closeOnClickOutside]);
 
 		useEffect(() => {
 			const handleEsc = (event: KeyboardEvent) => {

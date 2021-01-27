@@ -6,6 +6,7 @@
 import React from 'react';
 
 type TOnChange<T> =
+	| ((val: T) => void)
 	| ((val?: T) => void)
 	| React.Dispatch<React.SetStateAction<T>>;
 

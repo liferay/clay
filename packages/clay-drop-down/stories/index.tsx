@@ -17,6 +17,58 @@ import ClayDropDown, {
 	ClayDropDownWithItems,
 } from '../src';
 
+const ITEMS = [
+	{
+		label: 'clickable',
+		onClick: () => {
+			alert('you clicked!');
+		},
+	},
+	{
+		type: 'divider' as const,
+	},
+	{
+		items: [
+			{
+				label: 'one',
+				type: 'radio' as const,
+				value: 'one',
+			},
+			{
+				label: 'two',
+				type: 'radio' as const,
+				value: 'two',
+			},
+		],
+		label: 'radio',
+		name: 'radio',
+		onChange: (value: string) => alert(`New Radio checked ${value}`),
+		type: 'radiogroup' as const,
+	},
+	{
+		items: [
+			{
+				checked: true,
+				label: 'checkbox',
+				onChange: () => alert('checkbox changed'),
+				type: 'checkbox' as const,
+			},
+			{
+				checked: true,
+				label: 'checkbox 1',
+				onChange: () => alert('checkbox changed'),
+				type: 'checkbox' as const,
+			},
+		],
+		label: 'checkbox',
+		type: 'group' as const,
+	},
+	{
+		href: '#',
+		label: 'linkable',
+	},
+];
+
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
 	...others
@@ -187,91 +239,6 @@ storiesOf('Components|ClayDropDown', module)
 			</ClayDropDown.ItemList>
 		</DropDownWithState>
 	))
-	.add('w/ ClayDropDownWithItems', () => {
-		const [value, setValue] = React.useState('');
-
-		const items = [
-			{
-				label: 'clickable',
-				onClick: () => {
-					alert('you clicked!');
-				},
-			},
-			{
-				type: 'divider' as const,
-			},
-			{
-				items: [
-					{
-						label: 'one',
-						type: 'radio' as const,
-						value: 'one',
-					},
-					{
-						label: 'two',
-						type: 'radio' as const,
-						value: 'two',
-					},
-				],
-				label: 'radio',
-				name: 'radio',
-				onChange: (value: string) =>
-					alert(`New Radio checked ${value}`),
-				type: 'radiogroup' as const,
-			},
-			{
-				items: [
-					{
-						checked: true,
-						label: 'checkbox',
-						onChange: () => alert('checkbox changed'),
-						type: 'checkbox' as const,
-					},
-					{
-						checked: true,
-						label: 'checkbox 1',
-						onChange: () => alert('checkbox changed'),
-						type: 'checkbox' as const,
-					},
-				],
-				label: 'checkbox',
-				type: 'group' as const,
-			},
-			{
-				href: '#',
-				label: 'linkable',
-			},
-		];
-
-		return (
-			<ClayDropDownWithItems
-				caption="Showing 7 of 203 Structures"
-				footerContent={
-					<>
-						<ClayButton displayType="secondary">
-							{'Cancel'}
-						</ClayButton>
-						<ClayButton>{'Done'}</ClayButton>
-					</>
-				}
-				helpText="You can customize this menu or see all you have by pressing 'more'."
-				items={items}
-				onSearchValueChange={setValue}
-				searchProps={{
-					formProps: {
-						onSubmit: (e) => {
-							e.preventDefault();
-							alert('Submitted!');
-						},
-					},
-				}}
-				searchValue={value}
-				searchable={boolean('Searchable', true)}
-				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
-			/>
-		);
-	})
 	.add('w/ custom offset', () => (
 		<DropDownWithState offsetFn={() => [20, 20]}>
 			<ClayDropDown.ItemList>
@@ -329,4 +296,81 @@ storiesOf('Components|ClayDropDown', module)
 			spritemap={spritemap}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
 		/>
-	));
+	))
+	.add('ClayDropDownWithItems', () => {
+		const [value, setValue] = React.useState('');
+
+		return (
+			<ClayDropDownWithItems
+				caption="Showing 7 of 203 Structures"
+				footerContent={
+					<>
+						<ClayButton displayType="secondary">
+							{'Cancel'}
+						</ClayButton>
+						<ClayButton>{'Done'}</ClayButton>
+					</>
+				}
+				helpText="You can customize this menu or see all you have by pressing 'more'."
+				items={ITEMS}
+				onSearchValueChange={setValue}
+				searchProps={{
+					formProps: {
+						onSubmit: (e) => {
+							e.preventDefault();
+							alert('Submitted!');
+						},
+					},
+				}}
+				searchValue={value}
+				searchable={boolean('Searchable', true)}
+				spritemap={spritemap}
+				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			/>
+		);
+	})
+	.add('ClayDropDownWithItems w/ custom active', () => {
+		const [value, setValue] = React.useState('');
+		const [active, setActive] = React.useState(false);
+
+		return (
+			<>
+				<ClayDropDownWithItems
+					active={active}
+					caption="Showing 7 of 203 Structures"
+					closeOnClickOutside={false}
+					footerContent={
+						<>
+							<ClayButton displayType="secondary">
+								{'Cancel'}
+							</ClayButton>
+							<ClayButton>{'Done'}</ClayButton>
+						</>
+					}
+					helpText="You can customize this menu or see all you have by pressing 'more'."
+					items={ITEMS}
+					onActiveChange={setActive}
+					onSearchValueChange={setValue}
+					searchProps={{
+						formProps: {
+							onSubmit: (e) => {
+								e.preventDefault();
+								alert('Submitted!');
+							},
+						},
+					}}
+					searchValue={value}
+					searchable={boolean('Searchable', true)}
+					spritemap={spritemap}
+					trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				/>
+
+				<button
+					onClick={() => setActive(!active)}
+					style={{float: 'right'}}
+				>
+					{'External Control'}
+				</button>
+			</>
+		);
+	});
