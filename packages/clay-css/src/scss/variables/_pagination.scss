@@ -2,7 +2,29 @@
 /// @group pagination
 ////
 
+$pagination-bg: $white !default;
+$pagination-border-color: $gray-300 !default;
+$pagination-border-width: $border-width !default;
+$pagination-color: $link-color !default;
 $pagination-font-size: null !default;
+$pagination-line-height: 1.25 !default;
+$pagination-padding-x: 0.75rem !default;
+$pagination-padding-y: 0.5rem !default;
+
+$pagination-hover-bg: $gray-200 !default;
+$pagination-hover-border-color: $gray-300 !default;
+$pagination-hover-color: $link-hover-color !default;
+
+$pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$pagination-focus-outline: 0 !default;
+
+$pagination-active-bg: $component-active-bg !default;
+$pagination-active-border-color: $pagination-active-bg !default;
+$pagination-active-color: $component-active-color !default;
+
+$pagination-disabled-bg: $white !default;
+$pagination-disabled-border-color: $gray-300 !default;
+$pagination-disabled-color: $gray-600 !default;
 
 // Pagination Item
 
@@ -270,19 +292,29 @@ $pagination-items-per-page-link-disabled: map-deep-merge(
 
 $pagination-results-color: null !default;
 
-// Sizes
+// Pagination Sm
 
 $pagination-font-size-sm: $font-size-sm !default;
-$pagination-item-height-sm: 1.9375rem !default; // 31px
 $pagination-line-height-sm: 1 !default;
+$pagination-padding-x-sm: 0.5rem !default;
+$pagination-padding-y-sm: 0.25rem !default;
+
+$pagination-item-height-sm: 1.9375rem !default;
+
 $pagination-link-border-radius-sm: $border-radius-sm !default;
 
 $pagination-items-per-page-lexicon-icon-margin-left-sm: null !default;
 $pagination-items-per-page-lexicon-icon-margin-top-sm: null !default;
 
+// Pagination Lg
+
 $pagination-font-size-lg: $font-size-lg !default;
-$pagination-item-height-lg: 3.5rem !default; // 56px
 $pagination-line-height-lg: 1 !default;
+$pagination-padding-x-lg: 1.5rem !default;
+$pagination-padding-y-lg: 0.75rem !default;
+
+$pagination-item-height-lg: 3.5rem !default;
+
 $pagination-link-border-radius-lg: $border-radius-lg !default;
 
 $pagination-items-per-page-lexicon-icon-margin-left-lg: null !default;

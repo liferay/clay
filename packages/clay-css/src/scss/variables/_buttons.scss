@@ -1,10 +1,28 @@
+$btn-border-width: $input-btn-border-width !default;
+$btn-border-radius: $border-radius !default;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
 $btn-cursor: $link-cursor !default;
-$btn-font-size: $font-size-base !default;
+$btn-font-family: $input-btn-font-family !default;
+$btn-font-size: $input-btn-font-size !default;
+$btn-font-weight: $font-weight-normal !default;
+$btn-line-height: $input-btn-line-height !default;
+$btn-padding-x: $input-btn-padding-x !default;
+$btn-padding-y: $input-btn-padding-y !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-white-space: null !default;
+
 $btn-font-size-mobile: null !default;
 $btn-padding-x-mobile: null !default;
 $btn-padding-y-mobile: null !default;
 
+$btn-focus-width: $input-btn-focus-width !default;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+
+$btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
+
 $btn-disabled-cursor: $disabled-cursor !default;
+$btn-disabled-opacity: 0.65 !default;
 
 $btn-inline-item-font-size: null !default;
 
@@ -12,21 +30,33 @@ $btn-section-font-size: 0.6875rem !default; // 11px
 $btn-section-font-weight: $font-weight-normal !default;
 $btn-section-line-height: 1 !default;
 
-// Button Sizes
+// Button Lg
 
-$btn-font-size-lg: $font-size-lg !default;
-$btn-font-size-lg-mobile: null !default;
-$btn-padding-x-lg-mobile: null !default;
-$btn-padding-y-lg-mobile: null !default;
+$btn-border-radius-lg: $border-radius-lg !default;
+$btn-font-size-lg: $input-btn-font-size-lg !default;
+$btn-line-height-lg: $input-btn-line-height-lg !default;
+$btn-padding-x-lg: $input-btn-padding-x-lg !default;
+$btn-padding-y-lg: $input-btn-padding-y-lg !default;
 $btn-inline-item-font-size-lg: null !default;
 $btn-section-font-size-lg: 0.8125rem !default; // 13px
 
-$btn-font-size-sm: $font-size-sm !default;
+$btn-font-size-lg-mobile: null !default;
+$btn-padding-x-lg-mobile: null !default;
+$btn-padding-y-lg-mobile: null !default;
+
+// Button Sm
+
+$btn-border-radius-sm: $border-radius-sm !default;
+$btn-font-size-sm: $input-btn-font-size-sm !default;
+$btn-line-height-sm: $input-btn-line-height-sm !default;
+$btn-padding-x-sm: $input-btn-padding-x-sm !default;
+$btn-padding-y-sm: $input-btn-padding-y-sm !default;
+$btn-inline-item-font-size-sm: null !default;
+$btn-section-font-size-sm: 0.5625rem !default; // 9px
+
 $btn-font-size-sm-mobile: null !default;
 $btn-padding-x-sm-mobile: null !default;
 $btn-padding-y-sm-mobile: null !default;
-$btn-inline-item-font-size-sm: null !default;
-$btn-section-font-size-sm: 0.5625rem !default; // 9px
 
 // Button Monospaced
 
@@ -45,6 +75,10 @@ $btn-monospaced-size-sm: 1.9375rem !default; // 31px
 $btn-monospaced-size-mobile: null !default;
 $btn-monospaced-size-lg-mobile: null !default;
 $btn-monospaced-size-sm-mobile: null !default;
+
+// Button Block
+
+$btn-block-spacing-y: 0.5rem !default;
 
 // Button Group
 
@@ -463,6 +497,8 @@ $btn-dark: map-deep-merge(
 	),
 	$btn-dark
 );
+
+$btn-link-disabled-color: $gray-600 !default;
 
 $btn-link: () !default;
 $btn-link: map-deep-merge(

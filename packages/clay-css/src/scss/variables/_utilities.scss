@@ -22,6 +22,11 @@ $autofit-padded-no-gutters-sm: map-merge(
 
 // Close
 
+$close-color: $black !default;
+$close-font-size: $font-size-base * 1.5 !default;
+$close-font-weight: $font-weight-bold !default;
+$close-text-shadow: 0 1px 0 $white !default;
+
 $close: () !default;
 $close: map-deep-merge(
 	(
@@ -120,3 +125,16 @@ $inline-item-spacer-x: 0.5rem !default; // 8px
 $inline-item-loading-animation-font-size: 1.25em !default;
 
 $page-header-bg: $gray-200 !default;
+
+// Display
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex,
+	inline-flex !default;
+
+// Overflow
+
+$overflows: auto, hidden !default;
+
+// Position
+
+$positions: static, relative, absolute, fixed, sticky !default;

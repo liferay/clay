@@ -1,35 +1,111 @@
-$input-border-top-width: 0.0625rem !default; // 1px
-$input-border-right-width: 0.0625rem !default; // 1px
-$input-border-bottom-width: 0.0625rem !default; // 1px
-$input-border-left-width: 0.0625rem !default; // 1px
+$input-bg: $white !default;
 
+$input-border-color: $gray-400 !default;
 $input-border-style: solid !default;
+$input-border-top-width: 0.0625rem !default;
+$input-border-right-width: 0.0625rem !default;
+$input-border-bottom-width: 0.0625rem !default;
+$input-border-left-width: 0.0625rem !default;
 
-$input-font-size: $font-size-base !default;
+$input-border-width: $input-border-top-width $input-border-right-width
+	$input-border-bottom-width $input-border-left-width !default;
+
+$input-border-radius: $border-radius !default;
+$input-box-shadow: inset 0 1px 1px rgba($black, 0.075) !default;
+$input-color: $gray-700 !default;
+$input-font-family: $input-btn-font-family !default;
+$input-font-size: $input-btn-font-size !default;
+$input-font-weight: $font-weight-base !default;
+$input-height: 2.375rem !default;
+$input-line-height: $input-btn-line-height !default;
+$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: $input-btn-padding-y !default;
+$input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
 $input-font-size-mobile: null !default;
 $input-height-mobile: null !default;
 $input-height-inner-mobile: null !default;
 
-$input-font-size-lg: $font-size-lg !default;
-$input-font-size-lg-mobile: null !default;
-$input-height-lg-mobile: null !default;
-$input-height-inner-lg-mobile: null !default;
+// Input Focus
 
-$input-font-size-sm: $font-size-sm !default;
-$input-font-size-sm-mobile: null !default;
-$input-height-sm-mobile: null !default;
-$input-height-inner-sm-mobile: null !default;
+$input-focus-bg: $input-bg !default;
+$input-focus-border-color: lighten($component-active-bg, 25%) !default;
+$input-focus-color: $input-color !default;
+$input-focus-width: $input-btn-focus-width !default;
+$input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
+// Input Disabled
+
+$input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 $input-disabled-color: null !default;
 $input-disabled-cursor: $disabled-cursor !default;
 $input-disabled-opacity: 1 !default;
+
+// Input Placeholder
+
+$input-placeholder-color: $gray-600 !default;
+$input-placeholder-focus-color: null !default;
 $input-placeholder-disabled-color: null !default;
 
-$input-placeholder-focus-color: null !default;
+// Form Control Plaintext
+
+$input-plaintext-color: $body-color !default;
+
+/// Deprecated
+
+$input-height-border: $input-border-top-width + $input-border-bottom-width !default;
+
+/// Deprecated
+
+$input-height-inner: add(
+	$input-line-height * 1em,
+	$input-padding-y * 2
+) !default;
+
+/// Deprecated
+
+$input-height-inner-half: add(
+	$input-line-height * 0.5em,
+	$input-padding-y
+) !default;
+
+/// Deprecated
+
+$input-height-inner-quarter: add(
+	$input-line-height * 0.25em,
+	$input-padding-y / 2
+) !default;
+
+// Input Lg
+
+$input-border-radius-lg: $border-radius-lg !default;
+$input-font-size-lg: $input-btn-font-size-lg !default;
+$input-height-lg: 3rem !default;
+$input-line-height-lg: $input-btn-line-height-lg !default;
+$input-padding-x-lg: $input-btn-padding-x-lg !default;
+$input-padding-y-lg: $input-btn-padding-y-lg !default;
+
+$input-font-size-lg-mobile: null !default;
+$input-height-lg-mobile: null !default;
+$input-height-inner-lg-mobile: null !default;
+
+// Input Sm
+
+$input-border-radius-sm: $border-radius-sm !default;
+$input-font-size-sm: $input-btn-font-size-sm !default;
+$input-height-sm: 1.9375rem !default;
+$input-line-height-sm: $input-btn-line-height-sm !default;
+$input-padding-x-sm: $input-btn-padding-x-sm !default;
+$input-padding-y-sm: $input-btn-padding-y-sm !default;
+
+$input-font-size-sm-mobile: null !default;
+$input-height-sm-mobile: null !default;
+$input-height-inner-sm-mobile: null !default;
+
+// Input Label (<label>)
 
 $input-label-color: null !default;
-$input-label-focus-color: null !default;
 $input-label-font-size: null !default;
 $input-label-font-size-mobile: null !default;
 $input-label-font-weight: null !default;
@@ -37,8 +113,12 @@ $input-label-margin-bottom: $label-margin-bottom !default;
 
 $input-label-for-cursor: $link-cursor !default;
 
+$input-label-focus-color: null !default;
+
 $input-label-disabled-color: $gray-600 !default;
 $input-label-disabled-cursor: $disabled-cursor !default;
+
+// Label Reference Mark
 
 $input-label-reference-mark-color: $warning !default;
 $input-label-reference-mark-font-size: null !default;
@@ -214,7 +294,13 @@ $form-control-tag-group-btn-monospaced: map-deep-merge(
 	$form-control-tag-group-btn-monospaced
 );
 
+// Form Grid
+
+$form-grid-gutter-width: 10px !default;
+
 // Form Group
+
+$form-group-margin-bottom: 1rem !default;
 
 $form-group-margin-bottom-mobile: null !default;
 
@@ -234,17 +320,67 @@ $input-file-cursor: $link-cursor !default;
 // Form Check
 
 $form-check-input-cursor: $link-cursor !default;
-$form-check-input-disabled-cursor: $disabled-cursor !default;
+$form-check-input-gutter: 0 !default;
+$form-check-input-margin-x: 0.25rem !default;
+$form-check-input-margin-y: 0 !default;
 
 $form-check-label-cursor: $input-label-for-cursor !default;
 
-$form-check-label-text-margin-left: -0.1875rem !default; // 3px
-$form-check-label-text-padding-left: 0.5rem !default; // 8px
+$form-check-label-text-margin-left: -0.1875rem !default;
+$form-check-label-text-padding-left: 0.5rem !default;
+
+$form-check-input-disabled-cursor: $disabled-cursor !default;
 $form-check-label-text-disabled-cursor: $disabled-cursor !default;
 
-// Input Variants
+// Form Check Inline
+
+$form-check-inline-margin-x: 0.75rem !default;
+
+$form-check-inline-input-margin-x: auto !default;
+
+// Form Feedback
+
+$form-text-color: $gray-600 !default;
+$form-text-font-size: 0.875rem !default; // 14px
+$form-text-font-weight: null !default;
+$form-text-margin-top: 0.25rem !default;
+
+$form-feedback-font-size: $small-font-size !default;
+$form-feedback-font-weight: null !default;
+$form-feedback-margin-top: 0.25rem !default;
+
+$form-feedback-indicator-margin-x: 0.125rem !default;
+
+$form-feedback-valid-color: $success !default;
 
 $form-feedback-warning-color: $warning !default;
+
+$form-feedback-invalid-color: $danger !default;
+
+// Form Feedback Icon
+
+$form-feedback-icon-valid-color: $form-feedback-valid-color !default;
+$form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
+
+$form-feedback-icon-invalid-color: $form-feedback-invalid-color !default;
+$form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
+
+$form-validation-states: () !default;
+$form-validation-states: map-merge(
+	(
+		'valid': (
+			'color': $form-feedback-valid-color,
+			'icon': $form-feedback-icon-valid,
+		),
+		'invalid': (
+			'color': $form-feedback-invalid-color,
+			'icon': $form-feedback-icon-invalid,
+		),
+	),
+	$form-validation-states
+);
+
+// Input Variants
 
 $input-danger-bg: null !default;
 $input-danger-focus-bg: null !default;
@@ -357,12 +493,11 @@ $input-select-bg: null !default;
 $input-select-focus-bg: null !default;
 
 $input-select-bg-position: right $input-btn-padding-x center !default;
-$input-select-bg-size: $custom-select-bg-size !default;
+$input-select-bg-size: 8px 10px !default;
 $input-select-cursor: $link-cursor !default;
 $input-select-padding-bottom: null !default;
 $input-select-padding-left: null !default;
-$input-select-padding-right: $custom-select-indicator-padding +
-	$input-btn-padding-x !default;
+$input-select-padding-right: 1rem + $input-btn-padding-x !default;
 $input-select-padding-top: null !default;
 
 $input-select-icon-color: $input-color !default;
@@ -455,17 +590,6 @@ $input-select-multiple: map-deep-merge(
 	$input-select-multiple
 );
 
-// Form Feedback
-
-$form-feedback-font-weight: null !default;
-$form-feedback-margin-top: 0.25rem !default;
-
-$form-feedback-indicator-margin-x: 0.125rem !default;
-
-$form-text-color: $gray-600 !default;
-$form-text-font-size: 0.875rem !default; // 14px
-$form-text-font-weight: null !default;
-
 // Form Group Autofit
 
 $form-group-item-label-max-width: 12.5rem !default; // 200px
@@ -473,6 +597,9 @@ $form-group-item-label-spacer: 2rem !default; // 32px
 
 // Input Group
 
+$input-group-addon-bg: $gray-200 !default;
+$input-group-addon-border-color: $input-border-color !default;
+$input-group-addon-color: $input-color !default;
 $input-group-addon-font-weight: $font-weight-normal !default;
 $input-group-addon-min-width: 2.375rem !default; // 38px
 $input-group-addon-padding-x: $input-padding-x !default;

@@ -1,10 +1,20 @@
 $badge-border-color: transparent !default;
 $badge-border-style: solid !default;
 $badge-border-width: 1px !default;
+
+$badge-border-radius: $border-radius !default;
+
 $badge-line-height: 1 !default;
+$badge-font-size: 75% !default;
+$badge-font-weight: $font-weight-bold !default;
+$badge-padding-x: 0.4em !default;
+$badge-padding-y: 0.25em !default;
+$badge-transition: $btn-transition !default;
 
 $badge-spacer-x: 0.25rem !default; // 4px
 $badge-spacer-y: 0.125rem !default; // 2px
+
+$badge-focus-width: $input-btn-focus-width !default;
 
 $badge-lexicon-icon-height: 0.875em !default;
 $badge-lexicon-icon-margin-top: 0 !default;
@@ -34,6 +44,11 @@ $badge-close: map-deep-merge(
 	),
 	$badge-close
 );
+
+// Badge Pill
+
+$badge-pill-border-radius: 10rem !default;
+$badge-pill-padding-x: 0.6em !default;
 
 // Badge Variants
 

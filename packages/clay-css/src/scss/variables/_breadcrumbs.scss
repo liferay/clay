@@ -1,14 +1,28 @@
+$breadcrumb-bg: $gray-200 !default;
+$breadcrumb-border-radius: $border-radius !default;
 $breadcrumb-font-size: null !default;
 $breadcrumb-font-weight: null !default;
+$breadcrumb-margin-bottom: 1rem !default;
+$breadcrumb-padding-x: 1rem !default;
+$breadcrumb-padding-y: 0.75rem !default;
 $breadcrumb-text-transform: null !default;
 
+// Breadcrumb Item
+
+$breadcrumb-item-padding: 0.5rem !default;
+
+$breadcrumb-active-color: $gray-600 !default;
 $breadcrumb-active-font-weight: null !default;
 
-$breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default; // 14px
+// Breadcrumb Text Truncate
+
+$breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default;
 $breadcrumb-text-truncate-max-width: 18.75rem -
-	$breadcrumb-text-truncate-icon-spacer-x !default; // 300px
+	$breadcrumb-text-truncate-icon-spacer-x !default;
 $breadcrumb-text-truncate-max-width-mobile: 9.375rem -
-	$breadcrumb-text-truncate-icon-spacer-x !default; // 150px
+	$breadcrumb-text-truncate-icon-spacer-x !default;
+
+// Breadcrumb Link
 
 $breadcrumb-link-color: $link-color !default;
 $breadcrumb-link-text-decoration: $link-decoration !default;
@@ -31,7 +45,11 @@ $breadcrumb-link: map-deep-merge(
 	$breadcrumb-link
 );
 
-$breadcrumb-divider-color: $breadcrumb-active-color !default;
+// Breadcrumb Divider
+
+$breadcrumb-divider: quote('/') !default;
+
+$breadcrumb-divider-color: $gray-600 !default;
 $breadcrumb-divider-font-family: null !default;
 $breadcrumb-divider-font-weight: null !default;
 

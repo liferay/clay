@@ -1,3 +1,22 @@
+$tooltip-bg: $black !default;
+$tooltip-border-radius: $border-radius !default;
 $tooltip-box-shadow: null !default;
+$tooltip-color: $white !default;
+$tooltip-font-size: $font-size-sm !default;
+$tooltip-margin: 0 !default;
+$tooltip-max-width: 200px !default;
+$tooltip-opacity: 0.9 !default;
+$tooltip-padding-x: 0.5rem !default;
+$tooltip-padding-y: 0.25rem !default;
 
-$tooltip-arrow-offset: 0.25rem !default; // 4px
+$tooltip-arrow-color: $tooltip-bg !default;
+$tooltip-arrow-height: 0.4rem !default;
+$tooltip-arrow-offset: 0.25rem !default;
+$tooltip-arrow-width: 0.8rem !default;
+
+$form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
+$form-feedback-tooltip-font-size: $tooltip-font-size !default;
+$form-feedback-tooltip-line-height: $line-height-base !default;
+$form-feedback-tooltip-opacity: $tooltip-opacity !default;
+$form-feedback-tooltip-padding-x: $tooltip-padding-x !default;
+$form-feedback-tooltip-padding-y: $tooltip-padding-y !default;

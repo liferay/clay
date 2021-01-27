@@ -1,17 +1,65 @@
+$modal-backdrop-bg: $black !default;
+$modal-backdrop-opacity: 0.5 !default;
+
+// Modal Dialog
+
+$modal-dialog-margin: 0.5rem !default;
+$modal-dialog-margin-y-sm-up: 1.75rem !default;
+
+$modal-fade-transform: translate(0, -50px) !default;
+$modal-scale-transform: scale(1.02) !default;
+$modal-show-transform: none !default;
+$modal-transition: transform 0.3s ease-out !default;
+
+// Modal Content
+
+$modal-content-bg: $white !default;
+$modal-content-color: null !default;
+$modal-content-border-color: rgba($black, 0.2) !default;
+$modal-content-border-width: $border-width !default;
+
+$modal-content-border-radius: $border-radius-lg !default;
+$modal-content-inner-border-radius: $modal-content-border-radius -
+	$modal-content-border-width !default;
+
+$modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($black, 0.5) !default;
+$modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba($black, 0.5) !default;
+
+// Modal Header
+
 $modal-header-bg: null !default;
+$modal-header-border-color: $border-color !default;
+$modal-header-border-width: $modal-content-border-width !default;
 $modal-header-color: null !default;
-$modal-header-height: 4rem !default; // 64px
+$modal-header-height: 4rem !default;
+$modal-header-padding-y: 1rem !default;
+$modal-header-padding-x: 1rem !default;
+
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default;
+
 $modal-header-height-mobile: null !default;
+
+// Modal Body
+
+$modal-inner-padding: 1rem !default;
 
 $modal-body-bg: null !default;
 $modal-body-color: null !default;
 
+// Modal Footer
+
+$modal-footer-margin-between: 0.5rem !default;
+
 $modal-footer-bg: null !default;
+$modal-footer-border-color: $modal-header-border-color !default;
+$modal-footer-border-width: $modal-header-border-width !default;
+
 $modal-footer-box-shadow: null !default;
 $modal-footer-color: null !default;
 $modal-footer-height: null !default;
 $modal-footer-padding-x: 0.75rem !default;
-$modal-footer-padding-y: 0.75rem !default; // 12px
+$modal-footer-padding-y: 0.75rem !default;
+
 $modal-footer-height-mobile: null !default;
 
 $modal-item-padding-x: null !default;
@@ -83,13 +131,14 @@ $modal-item-shrink: map-deep-merge(
 
 // Modal Title
 
-$modal-title-font-size: 1.25rem !default; // 20px
+$modal-title-font-size: 1.25rem !default;
 $modal-title-font-weight: $font-weight-semi-bold !default;
+$modal-title-line-height: $line-height-base !default;
 $modal-title-text-align: null !default;
 $modal-title-font-size-mobile: null !default;
 
-$modal-title-indicator-font-size: 0.875rem !default; // 14px
-$modal-title-indicator-spacer-x: 0.5rem !default; // 8px
+$modal-title-indicator-font-size: 0.875rem !default;
+$modal-title-indicator-spacer-x: 0.5rem !default;
 
 // Modal Subtitle
 
@@ -115,12 +164,19 @@ $modal-subtitle-strong: () !default;
 
 // Modal Close
 
-$modal-close-spacer-x: 0.3125rem !default; // 5px
+$modal-close-spacer-x: 0.3125rem !default;
 
 // Modal Full Screen
 
 $modal-full-screen-spacer-x: 45px !default;
 $modal-full-screen-spacer-y: $modal-full-screen-spacer-x !default;
+
+// Modal Width
+
+$modal-xl: 1140px !default;
+$modal-lg: 800px !default;
+$modal-md: 500px !default;
+$modal-sm: 300px !default;
 
 // Modal Height
 

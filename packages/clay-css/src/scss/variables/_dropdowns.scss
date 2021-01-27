@@ -1,4 +1,27 @@
+$dropdown-bg: $white !default;
+$dropdown-border-color: rgba($black, 0.15) !default;
 $dropdown-border-style: solid !default;
+$dropdown-border-width: $border-width !default;
+
+$dropdown-border-radius: $border-radius !default;
+$dropdown-inner-border-radius: $dropdown-border-radius -$dropdown-border-width !default;
+
+$dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175) !default;
+$dropdown-color: $body-color !default;
+$dropdown-font-size: $font-size-base !default;
+$dropdown-max-height: 500px !default;
+$dropdown-max-width: 260px !default;
+$dropdown-min-height: null !default;
+$dropdown-min-width: 10rem !default;
+$dropdown-padding-y: 0.5rem !default;
+
+$dropdown-max-height-mobile: 295px !default;
+$dropdown-max-width-mobile: 230px !default;
+
+$dropdown-spacer: 0.125rem !default;
+
+$dropdown-divider-bg: $gray-200 !default;
+$dropdown-divider-margin-y: $spacer / 2 !default;
 
 $dropdown-full-wide-header-spacer-y: 20px !default;
 
@@ -7,13 +30,43 @@ $dropdown-wide-width: 500px !default;
 $dropdown-font-size: null !default;
 $dropdown-font-size-mobile: null !default;
 
+// Dropdown Item
+
+$dropdown-item-padding-x: 1.5rem !default;
+$dropdown-item-padding-y: 0.25rem !default;
+
+$dropdown-item-disabled-cursor: $disabled-cursor !default;
+
+$dropdown-item-indicator-size: 1rem !default;
+$dropdown-item-indicator-spacer-x: 1rem !default;
+
+// Dropdown Link
+
+$dropdown-link-color: $gray-900 !default;
+$dropdown-link-font-weight: null !default;
+
+$dropdown-link-hover-bg: $gray-100 !default;
+$dropdown-link-hover-color: darken($gray-900, 5%) !default;
+
+$dropdown-link-active-bg: $component-active-bg !default;
+$dropdown-link-active-color: $component-active-color !default;
+$dropdown-link-active-font-weight: null !default;
+
+$dropdown-link-disabled-color: $gray-600 !default;
+
+// Dropdown Header
+
+$dropdown-header-color: $gray-600 !default;
 $dropdown-header-font-size: null !default;
-$dropdown-header-font-size-mobile: null !default;
 $dropdown-header-margin-bottom: null !default;
 $dropdown-header-margin-top: null !default;
 $dropdown-header-padding-x: $dropdown-item-padding-x !default;
 $dropdown-header-padding-y: $dropdown-padding-y !default;
 $dropdown-header-text-transform: null !default;
+
+$dropdown-header-font-size-mobile: null !default;
+
+// Dropdown Subheader
 
 $dropdown-subheader-color: $dropdown-header-color !default;
 $dropdown-subheader-font-size: 0.75rem !default; // 12px
@@ -28,20 +81,71 @@ $dropdown-caption-color: $dropdown-header-color !default;
 $dropdown-caption-font-size: 0.875rem !default; // 14px
 $dropdown-caption-font-weight: null !default;
 
-$dropdown-link-font-weight: null !default;
-$dropdown-link-active-font-weight: null !default;
-
-$dropdown-max-height: 500px !default;
-$dropdown-max-height-mobile: 295px !default;
-$dropdown-min-height: null !default;
-
-$dropdown-max-width: 260px !default;
-$dropdown-max-width-mobile: 230px !default;
+// Dropdown Inline Scroller
 
 $dropdown-inline-scroller-max-height: 200px !default;
 $dropdown-inline-scroller-max-height-mobile: none !default;
 
+// Dropdown Item
+
 $dropdown-item-disabled-cursor: $disabled-cursor !default;
+
+// `background-color`, `border-width`, `text-align` for `<button>`s
+
+$dropdown-item-base: () !default;
+$dropdown-item-base: map-deep-merge(
+	(
+		background-color: transparent,
+		border-radius: 0,
+		border-width: 0,
+		clear: both,
+		color: $dropdown-link-color,
+		display: block,
+		font-weight: $font-weight-normal,
+		overflow: hidden,
+		padding-bottom: $dropdown-item-padding-y,
+		padding-left: $dropdown-item-padding-x,
+		padding-right: $dropdown-item-padding-x,
+		padding-top: $dropdown-item-padding-y,
+		position: relative,
+		text-align: inherit,
+		transition: none,
+		white-space: normal,
+		width: 100%,
+		word-wrap: break-word,
+		hover-text-decoration: none,
+		hover: (
+			background-color: $dropdown-link-hover-bg,
+			color: $dropdown-link-hover-color,
+		),
+		focus: (
+			background-color: $dropdown-link-hover-bg,
+			color: $dropdown-link-hover-color,
+			text-decoration: none,
+		),
+		active-color: $dropdown-link-active-color,
+		active: (
+			background-color: $dropdown-link-active-bg,
+			text-decoration: none,
+		),
+		active-class-font-weight: $dropdown-link-active-font-weight,
+		disabled-color: $dropdown-link-disabled-color,
+		disabled-cursor: $dropdown-item-disabled-cursor,
+		disabled-opacity: 1,
+		disabled-outline: 0,
+		disabled: (
+			background-color: transparent,
+		),
+		disabled-active-pointer-events: none,
+		disabled-c-kbd-inline: (
+			color: $dropdown-link-disabled-color,
+		),
+		c-kbd-inline: (
+			line-height: $dropdown-font-size * $line-height-base,
+		),
+	),
+	$dropdown-item-base
+);
 
 // Dropdown Item Indicator
 
@@ -202,6 +306,8 @@ $dropdown-item-base: map-deep-merge(
 	),
 	$dropdown-item-base
 );
+
+// Dropdown Section
 
 $dropdown-section-custom-control: () !default;
 $dropdown-section-custom-control: map-deep-merge(

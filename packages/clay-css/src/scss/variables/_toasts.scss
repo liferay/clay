@@ -1,0 +1,16 @@
+$toast-background-color: rgba($white, 0.85) !default;
+$toast-border-color: rgba(0, 0, 0, 0.1) !default;
+$toast-border-width: 1px !default;
+
+$toast-border-radius: 0.25rem !default;
+
+$toast-box-shadow: 0 0.25rem 0.75rem rgba($black, 0.1) !default;
+$toast-color: null !default;
+$toast-font-size: 0.875rem !default;
+$toast-max-width: 350px !default;
+$toast-padding-x: 0.75rem !default;
+$toast-padding-y: 0.25rem !default;
+
+$toast-header-background-color: rgba($white, 0.85) !default;
+$toast-header-border-color: rgba(0, 0, 0, 0.05) !default;
+$toast-header-color: $gray-600 !default;
