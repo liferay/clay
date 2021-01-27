@@ -21,6 +21,10 @@ import Section from './Section';
 interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Flag to indicate if the DropDown menu is active or not.
+	 *
+	 * This API is generally used in conjunction with `closeOnClickOutside=true`
+	 * since often we are controlling the active state by clicking another element
+	 * within the document.
 	 */
 	active: boolean;
 
@@ -33,6 +37,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	 * HTML element tag that the container should render.
 	 */
 	containerElement?: React.JSXElementConstructor<any> | 'div' | 'li';
+
+	closeOnClickOutside?: React.ComponentProps<
+		typeof Menu
+	>['closeOnClickOutside'];
 
 	/**
 	 * Flag to indicate if menu contains icon symbols on the right side.
@@ -55,6 +63,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 
 	/**
 	 * Callback for when the active state changes.
+	 *
+	 * This API is generally used in conjunction with `closeOnClickOutside=true`
+	 * since often we are controlling the active state by clicking another element
+	 * within the document.
 	 */
 	onActiveChange: (val: boolean) => void;
 
@@ -87,6 +99,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	alignmentPosition,
 	children,
 	className,
+	closeOnClickOutside,
 	containerElement: ContainerElement = 'div',
 	hasLeftSymbols,
 	hasRightSymbols,
@@ -156,6 +169,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 					active={active}
 					alignElementRef={triggerElementRef}
 					alignmentPosition={alignmentPosition}
+					closeOnClickOutside={closeOnClickOutside}
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
 					height={menuHeight}

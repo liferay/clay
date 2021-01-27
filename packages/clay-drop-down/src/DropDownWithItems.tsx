@@ -4,6 +4,7 @@
  */
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
+import {useInternalState} from '@clayui/shared';
 import React from 'react';
 import warning from 'warning';
 
@@ -46,6 +47,8 @@ interface IDropDownContentProps {
 }
 
 export interface IProps extends IDropDownContentProps {
+	active?: React.ComponentProps<typeof ClayDropDown>['active'];
+
 	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
@@ -59,6 +62,10 @@ export interface IProps extends IDropDownContentProps {
 	caption?: string;
 
 	className?: string;
+
+	closeOnClickOutside?: React.ComponentProps<
+		typeof ClayDropDown
+	>['closeOnClickOutside'];
 
 	/**
 	 * HTML element tag that the container should render.
@@ -98,6 +105,10 @@ export interface IProps extends IDropDownContentProps {
 	 * Function for setting the offset of the menu from the trigger.
 	 */
 	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
+
+	onActiveChange?: React.ComponentProps<
+		typeof ClayDropDown
+	>['onActiveChange'];
 
 	/**
 	 * Callback will always be called when the user is interacting with search.
@@ -291,9 +302,11 @@ const findNested = <
 	});
 
 export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
+	active,
 	alignmentPosition,
 	caption,
 	className,
+	closeOnClickOutside,
 	containerElement,
 	footerContent,
 	helpText,
@@ -302,6 +315,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	menuHeight,
 	menuWidth,
 	offsetFn,
+	onActiveChange,
 	onSearchValueChange = () => {},
 	searchable,
 	searchProps,
@@ -309,7 +323,12 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	spritemap,
 	trigger,
 }: IProps) => {
-	const [active, setActive] = React.useState(false);
+	const [internalActive, setInternalActive] = useInternalState({
+		initialValue: false,
+		onChange: onActiveChange,
+		value: active,
+	});
+
 	const hasRightSymbols = React.useMemo(
 		() => !!findNested(items, 'symbolRight'),
 		[items]
@@ -323,9 +342,10 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 
 	return (
 		<ClayDropDown
-			active={active}
+			active={internalActive}
 			alignmentPosition={alignmentPosition}
 			className={className}
+			closeOnClickOutside={closeOnClickOutside}
 			containerElement={containerElement}
 			hasLeftSymbols={hasLeftSymbols}
 			hasRightSymbols={hasRightSymbols}
@@ -333,11 +353,15 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			menuHeight={menuHeight}
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
-			onActiveChange={setActive}
+			onActiveChange={
+				setInternalActive as React.ComponentProps<
+					typeof ClayDropDown
+				>['onActiveChange']
+			}
 			trigger={trigger}
 		>
 			<ClayDropDownContext.Provider
-				value={{close: () => setActive(false)}}
+				value={{close: () => setInternalActive(false)}}
 			>
 				{helpText && <Help>{helpText}</Help>}
 
