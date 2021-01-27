@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.9](https://github.com/liferay/clay/compare/@clayui/data-provider@3.3.8...@clayui/data-provider@3.3.9) (2021-01-27)
+
+**Note:** Version bump only for package @clayui/data-provider
+
 ## [3.3.8](https://github.com/liferay/clay/compare/@clayui/data-provider@3.3.7...@clayui/data-provider@3.3.8) (2021-01-13)
 
 **Note:** Version bump only for package @clayui/data-provider

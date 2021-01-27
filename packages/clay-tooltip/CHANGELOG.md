@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.4](https://github.com/liferay/clay/compare/@clayui/tooltip@3.4.3...@clayui/tooltip@3.4.4) (2021-01-27)
+
+**Note:** Version bump only for package @clayui/tooltip
+
 ## [3.4.3](https://github.com/liferay/clay/compare/@clayui/tooltip@3.4.2...@clayui/tooltip@3.4.3) (2021-01-13)
 
 **Note:** Version bump only for package @clayui/tooltip

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.5](https://github.com/liferay/clay/compare/@clayui/color-picker@3.4.4...@clayui/color-picker@3.4.5) (2021-01-27)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** use ClayButton instead of button element ([18355fd](https://github.com/liferay/clay/commit/18355fd))
+
 ## [3.4.4](https://github.com/liferay/clay/compare/@clayui/color-picker@3.4.3...@clayui/color-picker@3.4.4) (2021-01-13)
 
 **Note:** Version bump only for package @clayui/color-picker
