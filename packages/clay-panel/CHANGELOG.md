@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.5](https://github.com/liferay/clay/compare/@clayui/panel@3.3.4...@clayui/panel@3.3.5) (2021-01-27)
+
+### Bug Fixes
+
+-   **@clayui/panel:** make sure <button> has a type ([361f151](https://github.com/liferay/clay/commit/361f151))
+
 ## [3.3.4](https://github.com/liferay/clay/compare/@clayui/panel@3.3.3...@clayui/panel@3.3.4) (2021-01-14)
 
 ### Bug Fixes

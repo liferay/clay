@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/liferay/clay/compare/@clayui/drop-down@3.8.4...@clayui/drop-down@3.9.0) (2021-01-27)
+
+### Features
+
+-   **@clayui/drop-down:** add api for controlling the active state of the menu ([28e5191](https://github.com/liferay/clay/commit/28e5191))
+-   **@clayui/drop-down:** add props for making menu different widths ([80396d8](https://github.com/liferay/clay/commit/80396d8))
+
 ## [3.8.4](https://github.com/liferay/clay/compare/@clayui/drop-down@3.8.3...@clayui/drop-down@3.8.4) (2021-01-13)
 
 **Note:** Version bump only for package @clayui/drop-down

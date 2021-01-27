@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/shared",
-	"version": "3.4.0",
+	"version": "3.5.0",
 	"description": "ClayShared component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -26,7 +26,7 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.5.0",
+		"@clayui/button": "^3.6.0",
 		"@clayui/link": "^3.2.0"
 	},
 	"peerDependencies": {

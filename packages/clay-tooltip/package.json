@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/tooltip",
-	"version": "3.4.3",
+	"version": "3.4.4",
 	"description": "ClayTooltip component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -26,7 +26,7 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/shared": "^3.4.0",
+		"@clayui/shared": "^3.5.0",
 		"classnames": "^2.2.6",
 		"dom-align": "^1.10.2",
 		"warning": "^4.0.3"

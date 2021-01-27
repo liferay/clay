@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.3](https://github.com/liferay/clay/compare/@clayui/multi-select@3.9.2...@clayui/multi-select@3.9.3) (2021-01-27)
+
+**Note:** Version bump only for package @clayui/multi-select
+
 ## [3.9.2](https://github.com/liferay/clay/compare/@clayui/multi-select@3.9.1...@clayui/multi-select@3.9.2) (2021-01-13)
 
 ### Bug Fixes

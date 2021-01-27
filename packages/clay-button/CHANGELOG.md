@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/liferay/clay/compare/@clayui/button@3.5.0...@clayui/button@3.6.0) (2021-01-27)
+
+### Features
+
+-   **@clayui/button:** add api for stacking button group vertically ([e6d457b](https://github.com/liferay/clay/commit/e6d457b))
+-   **@clayui/button:** add functionality to pass in null for displayType so that only 'btn' is added ([0cac172](https://github.com/liferay/clay/commit/0cac172))
+
 # [3.5.0](https://github.com/liferay/clay/compare/@clayui/button@3.4.0...@clayui/button@3.5.0) (2020-10-01)
 
 ### Features
