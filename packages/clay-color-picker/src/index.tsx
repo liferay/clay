@@ -128,12 +128,17 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Value of the selected color hex
 	 */
 	value?: string;
+
+	showPredefinedColorsWithCustom?: boolean;
+	predefinedColors?: Array<string>;
 }
 
 const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
 	disabled,
+	showPredefinedColorsWithCustom = false,
+	predefinedColors,
 	label,
 	name,
 	onColorsChange,
@@ -147,6 +152,9 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	value = 'FFFFFF',
 	...otherProps
 }: IProps) => {
+	const [customEditorActive, setCustomEditorActive] = React.useState(
+		!showPalette
+	);
 	const isHex = tinycolor(value).getFormat() === 'hex';
 
 	if (isHex && value.indexOf('#') === 0) {
@@ -230,9 +238,15 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 						onSetActive={setActive}
 						ref={dropdownContainerRef}
 					>
-						{!onColorsChange && (
+						{(!onColorsChange ||
+							(showPredefinedColorsWithCustom &&
+								!customEditorActive)) && (
 							<Basic
-								colors={colors || DEFAULT_COLORS}
+								colors={
+									(showPredefinedColorsWithCustom
+										? predefinedColors
+										: colors) || DEFAULT_COLORS
+								}
 								label={label}
 								onChange={(newVal) => {
 									onValueChange(newVal);
@@ -254,11 +268,13 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 												.slice(0, 12)
 										: BLANK_COLORS
 								}
+								editorActive={customEditorActive}
 								label={label}
 								onChange={(newVal) => {
 									onValueChange(newVal);
 								}}
 								onColorsChange={onColorsChange}
+								onEditorActiveChange={setCustomEditorActive}
 								showPalette={showPalette}
 								spritemap={spritemap}
 							/>

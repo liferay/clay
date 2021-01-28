@@ -5,6 +5,7 @@
 
 import ClayForm, {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
+import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
@@ -104,6 +105,10 @@ interface IProps {
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;
+
+	editorActive?: boolean;
+
+	onEditorActiveChange?: TInternalStateOnChange<boolean>;
 }
 
 /**
@@ -111,15 +116,21 @@ interface IProps {
  */
 const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	colors,
+	editorActive,
 	label,
 	onChange,
 	onColorsChange,
+	onEditorActiveChange,
 	showPalette,
 	spritemap,
 }) => {
 	const inputRef = React.useRef(null);
 	const [activeSplotchIndex, setActiveSplotchIndex] = React.useState(0);
-	const [editorActive, setEditorActive] = React.useState(!showPalette);
+	const [internalEditorActive, setInternalEditorActive] = useInternalState({
+		initialValue: !showPalette,
+		onChange: onEditorActiveChange,
+		value: editorActive,
+	});
 
 	const color = tinycolor(colors[activeSplotchIndex]);
 
@@ -166,14 +177,16 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 					{showPalette && (
 						<button
 							className={`${
-								editorActive ? 'close' : ''
+								internalEditorActive ? 'close' : ''
 							} component-action`}
-							onClick={() => setEditorActive(!editorActive)}
+							onClick={() =>
+								setInternalEditorActive(!internalEditorActive)
+							}
 							type="button"
 						>
 							<Icon
 								spritemap={spritemap}
-								symbol={editorActive ? 'times' : 'drop'}
+								symbol={internalEditorActive ? 'times' : 'drop'}
 							/>
 						</button>
 					)}
@@ -188,7 +201,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 								active={i === activeSplotchIndex}
 								onClick={() => {
 									if (hex === 'FFFFFF') {
-										setEditorActive(true);
+										setInternalEditorActive(true);
 									}
 
 									setActiveSplotchIndex(i);
