@@ -4,7 +4,7 @@
  */
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import {useInternalState} from '@clayui/shared';
+import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
 import React from 'react';
 import warning from 'warning';
 
@@ -106,9 +106,7 @@ export interface IProps extends IDropDownContentProps {
 	 */
 	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
 
-	onActiveChange?: React.ComponentProps<
-		typeof ClayDropDown
-	>['onActiveChange'];
+	onActiveChange?: TInternalStateOnChange<boolean>;
 
 	/**
 	 * Callback will always be called when the user is interacting with search.
@@ -353,11 +351,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			menuHeight={menuHeight}
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
-			onActiveChange={
-				setInternalActive as React.ComponentProps<
-					typeof ClayDropDown
-				>['onActiveChange']
-			}
+			onActiveChange={setInternalActive}
 			trigger={trigger}
 		>
 			<ClayDropDownContext.Provider
