@@ -205,51 +205,118 @@ You may want to use [Github search](https://help.github.com/articles/searching-i
 
 To publish a new version for all packages that have updated, follow these steps:
 
-1.  `git checkout master`
-2.  Make sure you have all of the tags from upstream. `git fetch $REMOTE --tags`
-3.  Run `lerna version --conventional-commits --no-push` and verify each package's version change.
+```bash
+# Checkout latest
+git checkout master
 
-    -   If you'd like to do a dry run first, you can also use `lerna changed` to see an output of what packages will be updated
-    -   The `--conventional-commits` flag should automatically determine what version each package should be updated to. If this doesn't seem accurate, you can maually choose each version by just running `lerna version` without the flag.
+# Install dependencies and build css package
+yarn
+yarn workspace @clayui/css run build
 
-    > Note, if package A requires package B and package B receives a minor update, package A will also receive a minor update via lerna.
+# Make sure you have all of the tags from upstream.
+git fetch $REMOTE --tags
 
-4.  Create a draft PR against `stable` (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
-5.  Once CI is green, run `git push $REMOTE master --follow-tags --dry-run` to see a preview first before running `git push $REMOTE master --follow-tags`
-6.  Once CI is green, run `git push $REMOTE master:stable`
-7.  Run `lerna publish from-package` - This will push the packages to NPM.
+# This updates each packages versions and makes proper version bumps
+# based on its dependencies. The `--conventional-commits` flag should
+# automatically determine what version each package should be updated to
+lerna version --conventional-commits --no-push
 
-In the last step it may happen that some things break, be it build failure or something else, so be aware and make sure all packages are published correctly.
+# Create draft pull-request against `stable` (not intended to be merged)
+# to the clay repo; this is to see CI green one last time.
+# (Example below uses node-gh CLI tool)
+gh pr --submit liferay --branch stable --draft
+
+# Once CI is green, close the pull-request and merge changes to stable and master.
+# If you want to see a preview first, use the `--dry-run` flag.
+git push $REMOTE master --follow-tags
+git push $REMOTE master:stable
+
+# Publish packages to NPM
+lerna publish from-package
+
+# Note: If this last step breaks, you may try running `lerna publish from-git` instead.
+```
 
 > NOTE: Publishing new packages automatically with Lerna is sometimes a problem, if you have problems try to publish the package separately manually.
 
 ### Releasing individual packages
 
-In a rare case you may want to release only one specific package. To do so, follow these steps:
+In a rare case you may want to release only one specific package. Follow these steps:
 
-1. `git checkout master`
-2. Navigate to specific package (`cd ./packages/$COMPONENT_DIR`)
-3. Look at the git history of the package and determine if it relies on any non-released code from other packages.
-4. If it relies on other packages, **you must publish those dependencies first** following these same steps (start at step 1 with the dependent package).
+Note: this is pretty rare to only release a single package, make sure you are only doing this as a last resort. Typically you should be able to just release everything at once.
 
-_After you have published any dependencies needed_
+```bash
+# Checkout latest
+git checkout master
 
-5. Run `yarn version` and choose what the new version will be. Any _feat_ commits since last release require a minor version. If only _chore_ or _fix_ commits, a patch is required.
-6. Create a draft PR (not intended to be merged) to the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
-7. Once CI is green, run `git push $REMOTE master --follow-tags --dry-run` to see a preview first before running `git push $REMOTE master --follow-tags`
-8. Run `yarn publish` to publish module to the npm registry.
+# Navigate to specific package
+cd ./packages/$COMPONENT_DIR
+
+# Look at the git history of the package and determine if it relies on any
+# non-released code from other packages.
+#
+# If it relies on other packages, you must publish those dependencies first following
+# these same steps (start at step 1 with the dependent package).
+#
+# After you have published any dependencies needed
+
+# Update Version.
+# Any feat commits since last release require a minor version.
+# If only chore or fix commits, a patch is required.
+yarn version
+
+# Create draft pull-request against `stable` (not intended to be merged)
+# to the clay repo; this is to see CI green one last time.
+# (Example below uses node-gh CLI tool)
+gh pr --submit liferay --branch stable --draft
+
+# Once CI is green, close the pull-request and merge changes to stable and master.
+# If you want to see a preview first, use the `--dry-run` flag.
+git push $REMOTE master --follow-tags
+
+# Publish to NPM.
+# Make sure you are in the directory of the package you want to publish.
+yarn publish
+```
 
 ## Updating release in [liferay-portal](https://github.com/liferay/liferay-portal)
 
-1. Navigate to `./modules/apps/frontend-taglib/frontend-taglib-clay`
-2. Run `ncu '/@clayui/' -u` ([npm-check-updates](https://www.npmjs.com/package/npm-check-updates))
-    - If there is a new version of `@clayui/css`, check to see if there are any changes to `_components.scss` or `variables.scss` in the new release. If there are changes, we need to also update the corresponding files in `/modules/apps/frontend-theme/frontend-theme-styled/src/main/resources/META-INF/resources/_styled/css/clay` so that they match. The files in liferay-portal are a copy of those in clay.
-3. Navigate to `./portal-impl` and run `ant format-source-all`
-    - Often this will also update other files other than `package.json`s and the `yarn.lock`. Disregard changes to files other than those.
-4. Run `yarn` from `./modules`
-5. Run `npx yarn-deduplicate yarn.lock`
-6. Check yarn.log stats (`git diff --stat yarn.lock`)
-    - If diff numbers are off (more + then - or viceversa), review the contents to find an explanation
-7. Verify `yarn.lock`changes for anything that is odd or stands out.
-8. Run unit tests locally to verify no failures before running pushing to CI. Navigate to `liferay-portal/modules` and run `../gradlew packageRunTest`
-9. Once all tests have passed, send pull request to https://github.com/liferay-frontend/liferay-portal
+```bash
+# Navigate
+cd {PORTAL_ROOT}/modules/apps/frontend-taglib/frontend-taglib-clay
+
+# Update clay dependencies in `package.json`
+# Typically is easiest to use a package like
+# https://www.npmjs.com/package/npm-check-updates
+#
+# Note that sometimes there is a delay between publishing a package
+# and it being seen on the registry. Make sure to verify all versions
+# have been properly updated in the package.json.
+ncu '/@clayui/' -u
+
+# Run source formatter
+#
+# Often this will also update other files other than `package.json`
+# files and the `yarn.lock`. Disregard changes to files other than those.
+cd {PORTAL_ROOT}/portal-impl
+ant format-source-all
+
+# Update an dedup yarn.lock
+cd {PORTAL_ROOT}/modules
+yarn
+npx yarn-deduplicate yarn.lock
+
+# Verify yarn.lock stats
+#
+# If diff numbers are off (more + then - or viceversa),
+# review the contents to find an explanation
+git diff --stat yarn.lock
+
+
+# Run unit tests locally
+cd {PORTAL_ROOT}/modules
+../gradlew packageRunTest
+
+# Once all tests have passed, send pull request to
+# https://github.com/liferay-frontend/liferay-portal
+```
