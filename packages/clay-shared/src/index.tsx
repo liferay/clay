@@ -13,4 +13,4 @@ export {sub} from './sub';
 export {useDebounce} from './useDebounce';
 export {useFocusManagement} from './useFocusManagement';
 export {setElementFullHeight} from './setElementFullHeight';
-export {useInternalState} from './useInternalState';
+export {useInternalState, TInternalStateOnChange} from './useInternalState';
