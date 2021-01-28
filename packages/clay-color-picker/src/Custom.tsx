@@ -6,6 +6,7 @@
 import ClayForm, {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
+import classNames from 'classnames';
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
@@ -196,7 +197,12 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 			{showPalette && (
 				<div className="clay-color-swatch">
 					{colors.map((hex, i) => (
-						<div className="clay-color-swatch-item" key={i}>
+						<div
+							className={classNames('clay-color-swatch-item', {
+								'clay-color-swatch-item-last-row': i >= 6,
+							})}
+							key={i}
+						>
 							<Splotch
 								active={i === activeSplotchIndex}
 								onClick={() => {
