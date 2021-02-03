@@ -1,0 +1,36 @@
+name: 'DXP Release Commenter'
+on:
+    milestone:
+        types: [closed]
+
+jobs:
+    labeler:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/github-script@v3
+              with:
+                  github-token: ${{secrets.GITHUB_TOKEN}}
+                  script: |
+                      const jiraIssueMatch = context.payload.milestone.title.match(/^LPS-\d+/);
+
+                      if (jiraIssueMatch) {
+                        const LPS = jiraIssueMatch;
+
+                        const issues = await github.issues.listForRepo({
+                          milestone: context.payload.milestone.number,
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          state: 'closed'
+                        });
+
+                        if (issues.data) {
+                          for (const issue of issues.data) {
+                            await github.issues.createComment({
+                              issue_number: issue.number,
+                              owner: context.repo.owner,
+                              repo: context.repo.repo,
+                              body: `This issue has been merged and will be released in DXP at https://https://issues.liferay.com/browse/${LPS}`
+                            });
+                          }
+                        } 
+                      }
