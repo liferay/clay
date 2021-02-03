@@ -149,7 +149,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 const dateNow = new Date();
-const TIME_FORMAT = 'H:m';
+const TIME_FORMAT = 'HH:mm';
 
 /**
  * ClayDatePicker component.

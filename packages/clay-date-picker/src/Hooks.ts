@@ -38,11 +38,11 @@ const useCurrentTime = (format: string) => {
 		const date = setDate(new Date(), {hours, minutes});
 
 		if (typeof hours !== 'string') {
-			hours = formatDate(date, 'H');
+			hours = formatDate(date, 'HH');
 		}
 
 		if (typeof minutes !== 'string') {
-			minutes = formatDate(date, 'm');
+			minutes = formatDate(date, 'mm');
 		}
 
 		set(`${hours}:${minutes}`);

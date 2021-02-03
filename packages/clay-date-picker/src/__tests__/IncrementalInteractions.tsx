@@ -387,7 +387,7 @@ describe('IncrementalInteractions', () => {
 
 			fireEvent.keyDown(hoursEl, {key: '10'});
 
-			expect(input.value).toBe('2019-04-24 10:0');
+			expect(input.value).toBe('2019-04-24 10:00');
 		});
 
 		it('value entered in the input value must be reflected in the time picker', () => {
@@ -411,7 +411,7 @@ describe('IncrementalInteractions', () => {
 				},
 			});
 
-			expect(hoursEl.value).toBe('1');
+			expect(hoursEl.value).toBe('01');
 			expect(minutesEl.value).toBe('20');
 		});
 	});
