@@ -33,11 +33,11 @@ $clay-color-input-group-inset-item-before: map-deep-merge(
 $clay-color-dropdown-menu: () !default;
 $clay-color-dropdown-menu: map-deep-merge(
 	(
-		max-height: 394px,
+		max-height: 400px,
 		max-width: none,
-		padding-bottom: 0.5rem,
-		padding-left: 1.5rem,
-		padding-right: 1.5rem,
+		padding-bottom: 0,
+		padding-left: 1rem,
+		padding-right: 1rem,
 		padding-top: 1rem,
 		width: 272px,
 	),
@@ -184,8 +184,7 @@ $clay-color-header: map-deep-merge(
 		display: flex,
 		justify-content: space-between,
 		margin-bottom: 1rem,
-		margin-top: 0.5rem,
-		margin-right: -0.3125rem,
+		margin-right: -0.25rem,
 	),
 	$clay-color-header
 );
