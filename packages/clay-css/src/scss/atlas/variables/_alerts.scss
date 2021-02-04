@@ -10,7 +10,15 @@ $alert-border-width: 0.0625rem !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
 
+$alert-close-font-size: 1rem !default;
+
+// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
 $alert-close-opacity: 1 !default;
+
+/// @deprecated as of v2.12.0 use the Sass map `$alert-close` instead
+
+$alert-close-position-top: 0.6875rem !default;
 
 $alert-close: () !default;
 $alert-close: map-deep-merge(
