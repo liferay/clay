@@ -286,7 +286,8 @@ select.form-control:not([multiple]):not([size]),
 	-webkit-appearance: none;
 
 	&::-ms-expand {
-		display: none;
+		background-color: transparent;
+		border: 0;
 	}
 
 	background-color: $input-select-bg;
