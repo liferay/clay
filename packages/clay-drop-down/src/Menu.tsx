@@ -8,6 +8,8 @@ import classNames from 'classnames';
 import domAlign from 'dom-align';
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
+import observeRect from './observeRect';
+
 export const Align = {
 	BottomCenter: 4,
 	BottomLeft: 5,
@@ -242,12 +244,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			};
 		}, [active]);
 
-		useLayoutEffect(() => {
-			if (
-				alignElementRef.current &&
-				(ref as React.RefObject<HTMLDivElement>).current &&
-				active
-			) {
+		const align = React.useCallback(() => {
+			if (alignElementRef && alignElementRef.current) {
 				let points = alignmentPosition;
 
 				if (typeof points === 'number') {
@@ -269,7 +267,21 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 					}
 				);
 			}
+		}, [autoBestAlign, alignmentPosition]);
+
+		useLayoutEffect(() => {
+			if (active) {
+				align();
+			}
 		}, [active]);
+
+		useEffect(() => {
+			if (alignElementRef && alignElementRef.current) {
+				const unobserve = observeRect(alignElementRef.current, align);
+
+				return unobserve;
+			}
+		}, []);
 
 		return (
 			<ClayPortal subPortalRef={subPortalRef}>
