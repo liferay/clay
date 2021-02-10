@@ -305,11 +305,10 @@ div {
 select.form-control {
 	@include clay-select-variant($input-select);
 
-	// Unstyle the caret on `<select>`s in IE10+.
+	// Unstyle the caret on `<select>`s in IE11.
 
 	&::-ms-expand {
-		background-color: transparent;
-		border: 0;
+		display: none;
 	}
 
 	// Remove dotted outline from select box in FF
