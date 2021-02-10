@@ -141,7 +141,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; left: -999px; top: -995px;"
+        style="max-width: none; left: -999px; top: -995px; width: 0px;"
       >
         <ul
           class="list-unstyled"
@@ -548,7 +548,7 @@ exports[`Interactions add non-sequential text should filter the items when it is
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; left: -999px; top: -995px;"
+        style="max-width: none; left: -999px; top: -995px; width: 0px;"
       >
         <ul
           class="list-unstyled"
@@ -615,7 +615,7 @@ exports[`Interactions adding text doesn not filter the items with a custom funct
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; left: -999px; top: -995px;"
+        style="max-width: none; left: -999px; top: -995px; width: 0px;"
       >
         <ul
           class="list-unstyled"
@@ -698,7 +698,7 @@ exports[`Interactions adding text filters the items 1`] = `
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; left: -999px; top: -995px;"
+        style="max-width: none; left: -999px; top: -995px; width: 0px;"
       >
         <ul
           class="list-unstyled"
@@ -767,7 +767,7 @@ exports[`Interactions adding text filters the items with a custom function 1`] =
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; left: -999px; top: -995px;"
+        style="max-width: none; left: -999px; top: -995px; width: 0px;"
       >
         <ul
           class="list-unstyled"
@@ -836,7 +836,7 @@ exports[`Interactions adding upper or lower case text should filter the items wh
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; width: 0px; left: -999px; top: -995px;"
+        style="max-width: none; left: -999px; top: -995px; width: 0px;"
       >
         <ul
           class="list-unstyled"
