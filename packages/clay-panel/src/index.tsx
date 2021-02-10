@@ -5,7 +5,11 @@
 
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
-import {setElementFullHeight, useInternalState} from '@clayui/shared';
+import {
+	TInternalStateOnChange,
+	setElementFullHeight,
+	useInternalState,
+} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
@@ -50,7 +54,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Callback for when dropdown changes its active state
 	 */
-	onExpandedChange?: (val: any) => void;
+	onExpandedChange?: TInternalStateOnChange<boolean>;
 
 	/**
 	 * Flag to toggle collapse icon visibility when `collapsable` is true.

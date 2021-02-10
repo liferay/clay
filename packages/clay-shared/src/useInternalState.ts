@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import * as React from 'react';
 
-type TOnChange<T> =
+export type TInternalStateOnChange<T> =
 	| ((val: T) => void)
 	| ((val?: T) => void)
 	| React.Dispatch<React.SetStateAction<T>>;
 
 interface IArgs<T> {
 	initialValue?: T;
-	onChange?: TOnChange<T>;
+	onChange?: TInternalStateOnChange<T>;
 	value?: T;
 }
 
@@ -31,5 +31,5 @@ export function useInternalState<TValue>({
 		onChange = setInternalValue;
 	}
 
-	return [value, onChange] as [TValue, TOnChange<TValue>];
+	return [value, onChange] as [TValue, TInternalStateOnChange<TValue>];
 }

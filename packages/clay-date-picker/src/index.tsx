@@ -7,7 +7,11 @@ import Button from '@clayui/button';
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import {FocusScope, useInternalState} from '@clayui/shared';
+import {
+	FocusScope,
+	TInternalStateOnChange,
+	useInternalState,
+} from '@clayui/shared';
 import React from 'react';
 
 import DateNavigation from './DateNavigation';
@@ -143,9 +147,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when dropdown changes its active state
 	 */
-	onExpandedChange?:
-		| ((val?: boolean) => void)
-		| React.Dispatch<React.SetStateAction<boolean>>;
+	onExpandedChange?: TInternalStateOnChange<boolean>;
 }
 
 const dateNow = new Date();

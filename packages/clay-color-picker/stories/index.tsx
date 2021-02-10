@@ -68,6 +68,15 @@ storiesOf('Components|ClayColorPicker', module)
 			title={text('Title', 'Default')}
 		/>
 	))
+	.add('custom and predefined colors', () => (
+		<ClayColorPickerWithCustomColors
+			label={text('Label', 'Custom Colors')}
+			name="colorPicker2"
+			showHex
+			showPredefinedColorsWithCustom
+			title={text('Title', 'Default')}
+		/>
+	))
 	.add('custom w/o palette', () => (
 		<ClayColorPickerWithCustomColors
 			disabled={boolean('Disabled', false)}

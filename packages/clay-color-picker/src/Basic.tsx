@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classNames from 'classnames';
 import React from 'react';
 
 import Splotch from './Splotch';
@@ -41,7 +42,12 @@ const ClayColorPickerBasic: React.FunctionComponent<IProps> = ({
 
 		<div className="clay-color-swatch">
 			{colors.map((hex, i) => (
-				<div className="clay-color-swatch-item" key={i}>
+				<div
+					className={classNames('clay-color-swatch-item', {
+						'clay-color-swatch-item-last-row': i >= 20,
+					})}
+					key={i}
+				>
 					<Splotch onClick={() => onChange(hex)} value={hex} />
 				</div>
 			))}
