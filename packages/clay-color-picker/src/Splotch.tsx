@@ -23,18 +23,13 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	 * The hex value of the splotch color
 	 */
 	value: string;
-
-	/**
-	 * Adds class `clay-color-swatch-item-last-row`
-	 */
-	last?: boolean;
 }
 
 /**
  * Renders component that displays a color
  */
 const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
-	({active, className, last, size, value, ...otherProps}, ref) => {
+	({active, className, size, value, ...otherProps}, ref) => {
 		const color = tinycolor(value);
 
 		const isHex = (color.getFormat() || '').match('hex');
@@ -48,7 +43,6 @@ const ClayColorPickerSplotch = React.forwardRef<HTMLButtonElement, IProps>(
 				className={classNames('clay-color-btn', className, {
 					active,
 					'clay-color-btn-bordered': requireBorder,
-					'clay-color-swatch-item-last-row': last,
 				})}
 				displayType={null}
 				ref={ref}
