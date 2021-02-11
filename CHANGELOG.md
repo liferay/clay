@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.22.2](https://github.com/bryceosterhaus/clay/compare/v2.22.1...v2.22.2) (2021-02-11)
+
+
+### Bug Fixes
+
+* **clay-css:** Atlas Theme Select Element IE11 should show caret-double-l icon ([d51c25c](https://github.com/bryceosterhaus/clay/commit/d51c25c)), closes [#3922](https://github.com/bryceosterhaus/clay/issues/3922)
+
+
+
+
+
 ## [2.22.1](https://github.com/bryceosterhaus/clay/compare/v2.22.0...v2.22.1) (2021-01-27)
 
 
