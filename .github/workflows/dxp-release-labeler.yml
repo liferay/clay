@@ -29,7 +29,7 @@ jobs:
                               issue_number: issue.number,
                               owner: context.repo.owner,
                               repo: context.repo.repo,
-                              body: `This issue has been merged and will be released in DXP at https://https://issues.liferay.com/browse/${LPS}`
+                              body: `This issue has been merged and will be released in DXP at https://issues.liferay.com/browse/${LPS}`
                             });
                           }
                         } 
