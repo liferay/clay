@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.24.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.24.0...@clayui/css@3.24.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Alert close font-size should be 16px ([245eac5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/245eac5)), closes [#3877](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3877)
+* **@clayui/css:** Atlas Clay Color change close button icon to be 16px ([2309d7a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2309d7a)), closes [#3878](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3878)
+* **@clayui/css:** Atlas Select Element IE11 should hide default icon and use caret-double-l instead ([6623ff7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6623ff7)), closes [#3922](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3922)
+* **@clayui/css:** Clay Color adjust spacing to be the same as Lexicon specs. See https://docs.google.com/document/d/1IUGl5VOWh6lqRa1baRoshVcytc8XbqVMkk30vRW4SM8/edit#heading=h.o2fss76woci2 ([704d25d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/704d25d))
+
+
+
+
+
 # [3.24.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.23.0...@clayui/css@3.24.0) (2021-01-27)
 
 

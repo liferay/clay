@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.6](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.5...@clayui/time-picker@3.2.6) (2021-02-11)
+
+### Bug Fixes
+
+-   **@clayui/time-picker:** stop propagating key events in time picker ([0e0d89b](https://github.com/liferay/clay/commit/0e0d89b))
+
 ## [3.2.5](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.4...@clayui/time-picker@3.2.5) (2021-01-27)
 
 **Note:** Version bump only for package @clayui/time-picker

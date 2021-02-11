@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/liferay/clay/compare/@clayui/color-picker@3.4.5...@clayui/color-picker@3.5.0) (2021-02-11)
+
+### Features
+
+-   **@clayui/color-picker:** add API to show both default colors and custom colors ([d149fc1](https://github.com/liferay/clay/commit/d149fc1))
+-   **@clayui/color-picker:** update markup for hybrid color-picker ([de4e90f](https://github.com/liferay/clay/commit/de4e90f))
+
 ## [3.4.5](https://github.com/liferay/clay/compare/@clayui/color-picker@3.4.4...@clayui/color-picker@3.4.5) (2021-01-27)
 
 ### Bug Fixes

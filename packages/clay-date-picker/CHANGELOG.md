@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/liferay/clay/compare/@clayui/date-picker@3.7.1...@clayui/date-picker@3.8.0) (2021-02-11)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** update timepicker format ([2c4f364](https://github.com/liferay/clay/commit/2c4f364))
+
+### Features
+
+-   **@clayui/color-picker:** add API to show both default colors and custom colors ([d149fc1](https://github.com/liferay/clay/commit/d149fc1))
+
 ## [3.7.1](https://github.com/liferay/clay/compare/@clayui/date-picker@3.7.0...@clayui/date-picker@3.7.1) (2021-01-27)
 
 **Note:** Version bump only for package @clayui/date-picker
