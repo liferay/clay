@@ -128,6 +128,7 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 								'collapse-icon': showCollapseIcon,
 								'collapse-icon-middle': showCollapseIcon,
 								collapsed: !internalExpanded,
+								show: internalExpanded,
 							}
 						)}
 						displayType="unstyled"
