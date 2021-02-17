@@ -122,6 +122,7 @@ export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayCard
 			{...otherProps}
+			active={selected}
 			displayType="user"
 			selectable={!!onSelectChange}
 		>

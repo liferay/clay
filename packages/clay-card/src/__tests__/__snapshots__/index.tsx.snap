@@ -918,6 +918,78 @@ exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
 </div>
 `;
 
+exports[`ClayCard renders a ClayCard with an active selected state 1`] = `
+<div>
+  <div
+    class="active form-check-card form-check form-check-top-left card-type-asset"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="custom-control custom-checkbox"
+      >
+        <label>
+          <input
+            class="custom-control-input"
+            type="checkbox"
+          />
+          <span
+            class="custom-control-label"
+          />
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-row"
+            >
+              <div
+                class="autofit-col"
+              >
+                <span
+                  class="sticker sticker-secondary"
+                >
+                  <span
+                    class="sticker-overlay inline-item"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-folder"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="/path/to/some/resource.svg#folder"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand autofit-col-gutters"
+              >
+                <p
+                  class="card-title"
+                  title="Very Large Folder"
+                >
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Very Large Folder
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayCard renders a group of ClayCards 1`] = `
 <div>
   <ul
