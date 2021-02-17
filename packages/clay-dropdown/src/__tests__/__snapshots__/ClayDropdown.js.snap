@@ -1296,7 +1296,7 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
     <div class="dropdown-section">
       <div class="input-group input-group-sm">
         <div class="input-group-item">
-          <input aria-label="Search for..." class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text" ref="searchInput">
+          <input aria-label="search-for" class="form-control input-group-inset input-group-inset-after" placeholder="search-for" type="text" ref="searchInput">
           <span class="input-group-inset-item input-group-inset-item-after">
             <button class="btn btn-link" aria-label="search" type="button">
               <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
