@@ -26,12 +26,15 @@ const portletImage = require('./static/portlet.svg');
 const ClayCheckboxWithState = (props: any) => {
 	const [value, setValue] = React.useState<boolean>(false);
 
+	const checked = props.value || value;
+	const onChange = props.onChange || setValue;
+
 	return (
 		<ClayCheckbox
-			checked={value}
+			checked={checked}
 			disabled={false}
 			label={props.label}
-			onChange={() => setValue((val) => !val)}
+			onChange={() => onChange((val: boolean) => !val)}
 		>
 			{props.children}
 		</ClayCheckbox>
@@ -264,47 +267,14 @@ storiesOf('Components|ClayCard', module)
 			</div>
 		);
 	})
-	.add('low-level w/ groups', () => (
-		<>
-			<ClayCard.Group label="files">
-				<ClayCard displayType="file">
-					<ClayCard.AspectRatio className="card-item-first">
-						<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="documents-and-media"
-							/>
-						</div>
-						<ClaySticker
-							displayType="danger"
-							position="bottom-left"
-						>
-							{'DOC'}
-						</ClaySticker>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Row>
-							<div className="autofit-col autofit-col-expand">
-								<section className="autofit-section">
-									<ClayCard.Description displayType="title">
-										{'deliverable.doc'}
-									</ClayCard.Description>
-									<ClayCard.Description displayType="subtitle">
-										{'Stevie Ray Vaughn'}
-									</ClayCard.Description>
-									<ClayCard.Caption>
-										<ClayLabel displayType="success">
-											{'Approved'}
-										</ClayLabel>
-									</ClayCard.Caption>
-								</section>
-							</div>
-						</ClayCard.Row>
-					</ClayCard.Body>
-				</ClayCard>
-				<ClayCard displayType="file" selectable>
-					<ClayCard.AspectRatio className="card-item-first">
-						<ClayCheckboxWithState>
+	.add('low-level w/ groups', () => {
+		const [selected, setSelected] = React.useState(false);
+
+		return (
+			<>
+				<ClayCard.Group label="files">
+					<ClayCard displayType="file">
+						<ClayCard.AspectRatio className="card-item-first">
 							<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
 								<ClayIcon
 									spritemap={spritemap}
@@ -317,105 +287,145 @@ storiesOf('Components|ClayCard', module)
 							>
 								{'DOC'}
 							</ClaySticker>
-						</ClayCheckboxWithState>
-					</ClayCard.AspectRatio>
-					<ClayCard.Body>
-						<ClayCard.Row>
-							<div className="autofit-col autofit-col-expand">
-								<section className="autofit-section">
+						</ClayCard.AspectRatio>
+						<ClayCard.Body>
+							<ClayCard.Row>
+								<div className="autofit-col autofit-col-expand">
+									<section className="autofit-section">
+										<ClayCard.Description displayType="title">
+											{'deliverable.doc'}
+										</ClayCard.Description>
+										<ClayCard.Description displayType="subtitle">
+											{'Stevie Ray Vaughn'}
+										</ClayCard.Description>
+										<ClayCard.Caption>
+											<ClayLabel displayType="success">
+												{'Approved'}
+											</ClayLabel>
+										</ClayCard.Caption>
+									</section>
+								</div>
+							</ClayCard.Row>
+						</ClayCard.Body>
+					</ClayCard>
+					<ClayCard active={selected} displayType="file" selectable>
+						<ClayCard.AspectRatio className="card-item-first">
+							<ClayCheckboxWithState
+								onChange={setSelected}
+								value={selected}
+							>
+								<div className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon">
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="documents-and-media"
+									/>
+								</div>
+								<ClaySticker
+									displayType="danger"
+									position="bottom-left"
+								>
+									{'DOC'}
+								</ClaySticker>
+							</ClayCheckboxWithState>
+						</ClayCard.AspectRatio>
+						<ClayCard.Body>
+							<ClayCard.Row>
+								<div className="autofit-col autofit-col-expand">
+									<section className="autofit-section">
+										<ClayCard.Description displayType="title">
+											{'deliverable.doc'}
+										</ClayCard.Description>
+										<ClayCard.Description displayType="subtitle">
+											{'Stevie Ray Vaughn'}
+										</ClayCard.Description>
+										<ClayCard.Caption>
+											<ClayLabel displayType="success">
+												{'Approved'}
+											</ClayLabel>
+										</ClayCard.Caption>
+									</section>
+								</div>
+							</ClayCard.Row>
+						</ClayCard.Body>
+					</ClayCard>
+				</ClayCard.Group>
+				<ClayCard.Group label="images">
+					<ClayCard displayType="image">
+						<ClayCard.AspectRatio className="card-item-first">
+							<img
+								alt="thumbnail"
+								className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+								src="https://via.placeholder.com/256"
+							/>
+							<ClaySticker
+								displayType="danger"
+								position="bottom-left"
+							>
+								<ClayIcon
+									spritemap={spritemap}
+									symbol="document-image"
+								/>
+							</ClaySticker>
+						</ClayCard.AspectRatio>
+
+						<ClayCard.Body>
+							<ClayCard.Row>
+								<div className="autofit-col autofit-col-expand">
 									<ClayCard.Description displayType="title">
-										{'deliverable.doc'}
+										{'thumbnail_coffee.jpg'}
 									</ClayCard.Description>
 									<ClayCard.Description displayType="subtitle">
-										{'Stevie Ray Vaughn'}
+										{'Author Action'}
 									</ClayCard.Description>
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
 											{'Approved'}
 										</ClayLabel>
 									</ClayCard.Caption>
-								</section>
-							</div>
-						</ClayCard.Row>
-					</ClayCard.Body>
-				</ClayCard>
-			</ClayCard.Group>
-			<ClayCard.Group label="images">
-				<ClayCard displayType="image">
-					<ClayCard.AspectRatio className="card-item-first">
-						<img
-							alt="thumbnail"
-							className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-							src="https://via.placeholder.com/256"
-						/>
-						<ClaySticker
-							displayType="danger"
-							position="bottom-left"
-						>
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="document-image"
+								</div>
+							</ClayCard.Row>
+						</ClayCard.Body>
+					</ClayCard>
+					<ClayCard displayType="image">
+						<ClayCard.AspectRatio className="card-item-first">
+							<img
+								alt="thumbnail"
+								className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
+								src="https://via.placeholder.com/256"
 							/>
-						</ClaySticker>
-					</ClayCard.AspectRatio>
+							<ClaySticker
+								displayType="danger"
+								position="bottom-left"
+							>
+								<ClayIcon
+									spritemap={spritemap}
+									symbol="document-image"
+								/>
+							</ClaySticker>
+						</ClayCard.AspectRatio>
 
-					<ClayCard.Body>
-						<ClayCard.Row>
-							<div className="autofit-col autofit-col-expand">
-								<ClayCard.Description displayType="title">
-									{'thumbnail_coffee.jpg'}
-								</ClayCard.Description>
-								<ClayCard.Description displayType="subtitle">
-									{'Author Action'}
-								</ClayCard.Description>
-								<ClayCard.Caption>
-									<ClayLabel displayType="success">
-										{'Approved'}
-									</ClayLabel>
-								</ClayCard.Caption>
-							</div>
-						</ClayCard.Row>
-					</ClayCard.Body>
-				</ClayCard>
-				<ClayCard displayType="image">
-					<ClayCard.AspectRatio className="card-item-first">
-						<img
-							alt="thumbnail"
-							className="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-							src="https://via.placeholder.com/256"
-						/>
-						<ClaySticker
-							displayType="danger"
-							position="bottom-left"
-						>
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="document-image"
-							/>
-						</ClaySticker>
-					</ClayCard.AspectRatio>
-
-					<ClayCard.Body>
-						<ClayCard.Row>
-							<div className="autofit-col autofit-col-expand">
-								<ClayCard.Description displayType="title">
-									{'thumbnail_coffee.jpg'}
-								</ClayCard.Description>
-								<ClayCard.Description displayType="subtitle">
-									{'Author Action'}
-								</ClayCard.Description>
-								<ClayCard.Caption>
-									<ClayLabel displayType="success">
-										{'Approved'}
-									</ClayLabel>
-								</ClayCard.Caption>
-							</div>
-						</ClayCard.Row>
-					</ClayCard.Body>
-				</ClayCard>
-			</ClayCard.Group>
-		</>
-	))
+						<ClayCard.Body>
+							<ClayCard.Row>
+								<div className="autofit-col autofit-col-expand">
+									<ClayCard.Description displayType="title">
+										{'thumbnail_coffee.jpg'}
+									</ClayCard.Description>
+									<ClayCard.Description displayType="subtitle">
+										{'Author Action'}
+									</ClayCard.Description>
+									<ClayCard.Caption>
+										<ClayLabel displayType="success">
+											{'Approved'}
+										</ClayLabel>
+									</ClayCard.Caption>
+								</div>
+							</ClayCard.Row>
+						</ClayCard.Body>
+					</ClayCard>
+				</ClayCard.Group>
+			</>
+		);
+	})
 	.add('ProductCard', () => {
 		const [dropdownActive, setDropdownActive] = React.useState(false);
 

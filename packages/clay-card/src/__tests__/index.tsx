@@ -90,6 +90,34 @@ describe('ClayCard', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders a ClayCard with an active selected state', () => {
+		const {container} = render(
+			<ClayCard active selectable>
+				<ClayCheckboxWithState>
+					<ClayCard.Body>
+						<ClayCard.Row>
+							<div className="autofit-col">
+								<ClaySticker displayType="secondary" inline>
+									<ClayIcon
+										spritemap="/path/to/some/resource.svg"
+										symbol="folder"
+									/>
+								</ClaySticker>
+							</div>
+							<div className="autofit-col autofit-col-expand autofit-col-gutters">
+								<ClayCard.Description displayType="title">
+									{'Very Large Folder'}
+								</ClayCard.Description>
+							</div>
+						</ClayCard.Row>
+					</ClayCard.Body>
+				</ClayCheckboxWithState>
+			</ClayCard>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('renders a ClayCard as image card', () => {
 		const {container} = render(
 			<ClayCard displayType="image">

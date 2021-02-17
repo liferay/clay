@@ -18,6 +18,11 @@ import Row from './Row';
 
 export interface ICardProps extends IContext {
 	/**
+	 * Flag that indicates if `active` class is applied
+	 */
+	active?: boolean;
+
+	/**
 	 * Determines the style of the card
 	 */
 	displayType?: 'file' | 'image' | 'user';
@@ -35,6 +40,7 @@ interface IProps
 		> {}
 
 const ClayCard: React.FunctionComponent<IProps> = ({
+	active,
 	children,
 	className,
 	displayType,
@@ -53,6 +59,7 @@ const ClayCard: React.FunctionComponent<IProps> = ({
 				className={classNames(
 					className,
 					{
+						active,
 						card: !selectable,
 						'file-card': isCardType.file,
 						'form-check-card form-check form-check-top-left': selectable,

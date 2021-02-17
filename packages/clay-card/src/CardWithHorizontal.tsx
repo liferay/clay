@@ -118,7 +118,11 @@ export const ClayCardWithHorizontal: React.FunctionComponent<IProps> = ({
 	);
 
 	return (
-		<ClayCardHorizontal {...otherProps} selectable={!!onSelectChange}>
+		<ClayCardHorizontal
+			{...otherProps}
+			active={selected}
+			selectable={!!onSelectChange}
+		>
 			{onSelectChange && (
 				<ClayCheckbox
 					{...checkboxProps}

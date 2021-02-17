@@ -199,6 +199,7 @@ export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayCard
 			{...otherProps}
+			active={selected}
 			displayType={isCardType.image ? 'image' : 'file'}
 			selectable={!!onSelectChange}
 		>
