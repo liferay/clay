@@ -65,7 +65,7 @@ module.exports = function(gulp, plugins, _, config) {
 						.pipe(plugins.rename(svgstore.rename))
 						.pipe(plugins.svgmin(svgstore.svgmin));
 
-		return gulp.src(['src/scss/functions/_global-functions.scss'])
+		return gulp.src(['src/scss/functions/_lx-icons-generated.scss'])
 				// .pipe(plugins.debug())
 				.pipe(plugins.inject(svgFiles, {
 					starttag: '$lx-icons: (',
