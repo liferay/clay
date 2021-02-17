@@ -156,7 +156,14 @@
 		<div class="dropdown-section">
 			<div class="input-group input-group-sm">
 				<div class="input-group-item">
-					<input aria-label="Search for..." class="form-control input-group-inset input-group-inset-after" data-oninput="{$_handleSearch}" placeholder="Search for..." type="text" ref="searchInput" />
+					<input 
+						aria-label="{msg desc=""}search-for{/msg}"
+						class="form-control input-group-inset input-group-inset-after" 
+						data-oninput="{$_handleSearch}" 
+						placeholder="{msg desc=""}search-for{/msg}" 
+						type="text" 
+						ref="searchInput" 
+					/>
 
 					<span class="input-group-inset-item input-group-inset-item-after">
 						{call ClayButton.render}
