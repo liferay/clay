@@ -11,6 +11,7 @@ exports[`ClayPaginationBar renders 1`] = `
       <button
         class="dropdown-toggle btn btn-unstyled"
         data-testid="selectPaginationBar"
+        style=""
         type="button"
       >
         10 items
@@ -87,6 +88,7 @@ exports[`ClayPaginationBar renders 1`] = `
       >
         <button
           class="dropdown-toggle page-link btn btn-unstyled"
+          style=""
           type="button"
         >
           ...

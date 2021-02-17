@@ -6,7 +6,8 @@
 import '@clayui/css/lib/css/atlas.css';
 import ClayButton from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {ClayCheckbox, ClayRadio} from '@clayui/form';
+import {ClayCheckbox, ClayInput, ClayRadio} from '@clayui/form';
+import ClayModal, {useModal} from '@clayui/modal';
 import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
@@ -371,6 +372,94 @@ storiesOf('Components|ClayDropDown', module)
 				>
 					{'External Control'}
 				</button>
+			</>
+		);
+	})
+	.add('in modal', () => {
+		const [visible, setVisible] = React.useState(false);
+		const {observer, onClose} = useModal({
+			onClose: () => setVisible(false),
+		});
+		const inputRef = React.useRef(null);
+		const dropdownMenuRef = React.useRef(null);
+		const [panelVisibility, setPanelVisibility] = React.useState(false);
+
+		return (
+			<>
+				{visible && (
+					<ClayModal
+						observer={observer}
+						size="lg"
+						spritemap={spritemap}
+						status="info"
+					>
+						<ClayModal.Header>{'Title'}</ClayModal.Header>
+						<ClayModal.Body scrollable>
+							<ClayInput
+								onClick={() =>
+									setPanelVisibility(!panelVisibility)
+								}
+								placeholder={'meow'}
+								ref={inputRef}
+							/>
+							<ClayDropDown.Menu
+								active={panelVisibility}
+								alignElementRef={inputRef}
+								onSetActive={() =>
+									setPanelVisibility(!panelVisibility)
+								}
+								ref={dropdownMenuRef}
+							>
+								<ClayDropDown.Item>
+									{'my panel item'}
+								</ClayDropDown.Item>
+							</ClayDropDown.Menu>
+							<img
+								alt="cat"
+								src="https://cataas.com/cat/says/it"
+							/>
+							<img
+								alt="cat"
+								src="https://cataas.com/cat/says/will"
+							/>
+							<img
+								alt="cat"
+								src="https://cataas.com/cat/says/have"
+							/>
+							<img
+								alt="cat"
+								src="https://cataas.com/cat/says/a"
+							/>
+							<img
+								alt="cat"
+								src="https://cataas.com/cat/says/scroll"
+							/>
+						</ClayModal.Body>
+						<ClayModal.Footer
+							first={
+								<ClayButton.Group spaced>
+									<ClayButton displayType="secondary">
+										{'Secondary'}
+									</ClayButton>
+									<ClayButton displayType="secondary">
+										{'Secondary'}
+									</ClayButton>
+								</ClayButton.Group>
+							}
+							last={
+								<ClayButton onClick={onClose}>
+									{'Primary'}
+								</ClayButton>
+							}
+						/>
+					</ClayModal>
+				)}
+				<ClayButton
+					displayType="primary"
+					onClick={() => setVisible(true)}
+				>
+					{'Open modal'}
+				</ClayButton>
 			</>
 		);
 	});
