@@ -1,6 +1,6 @@
 {
 	"lerna": "3.4.0",
-	"version": "independent",
+	"version": "3.24.1",
 	"npmClient": "yarn",
 	"useWorkspaces": true,
 	"command": {
@@ -10,9 +10,12 @@
 				"**/__tests__/**",
 				"**/*.md",
 				"**/*.mdx",
-				"**/docs/*"
+				"**/docs/*",
+				"**/packages/demos/**",
+				"**/packages/generator-clay-component/**",
+				"**/packages/browserlist-config-clay/**"
 			],
-			"message": "chore(release): publish updated packages"
+			"message": "chore(release): publish %s packages"
 		}
 	},
 	"packages": ["packages/*"]
