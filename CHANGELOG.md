@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.22.3](https://github.com/bryceosterhaus/clay/compare/v2.22.2...v2.22.3) (2021-02-18)
+
+
+### Bug Fixes
+
+* **clay-dropdown:** add localizable placeholder ([ab02736](https://github.com/bryceosterhaus/clay/commit/ab02736))
+* **clay-dropdown:** update snapshots ([7b97a88](https://github.com/bryceosterhaus/clay/commit/7b97a88))
+
+
+
+
+
 ## [2.22.2](https://github.com/bryceosterhaus/clay/compare/v2.22.1...v2.22.2) (2021-02-11)
 
 

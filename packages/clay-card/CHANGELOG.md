@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.22.3](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/v2.22.2...v2.22.3) (2021-02-18)
+
+**Note:** Version bump only for package clay-card
+
+
+
+
+
 ## [2.22.2](https://github.com/liferay/clay/tree/master/packages/clay-card/compare/v2.22.1...v2.22.2) (2021-02-11)
 
 **Note:** Version bump only for package clay-card
