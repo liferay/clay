@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## _Note: we changed our release process from [independent](https://github.com/lerna/lerna#independent-mode) to [fixed](https://github.com/lerna/lerna#fixedlocked-mode-default) at this point._
+
 ## 2021-2-11
 
 ### @clayui/autocomplete ([3.2.6](https://github.com/liferay/clay/compare/@clayui/autocomplete@3.2.5...@clayui/autocomplete@3.2.6))
