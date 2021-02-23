@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.25.0](https://github.com/bryceosterhaus/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
+
+**Note:** Version bump only for package demos
+
 ## [0.5.8](https://github.com/bryceosterhaus/clay/compare/demos@0.5.7...demos@0.5.8) (2021-02-11)
 
 **Note:** Version bump only for package demos

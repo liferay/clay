@@ -1,3 +1,21 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** remove last-row classes and API that was added on accident ([d4cb8e8](https://github.com/liferay/clay/commit/d4cb8e8))
+-   **@clayui/css:** Global Functions moves generated SVG icons Sass map to separate file `_lx-icons-generated.scss` ([7ffc523](https://github.com/liferay/clay/commit/7ffc523))
+
+### Features
+
+-   **@clayui/card:** add active state for card when it is selected ([607da9d](https://github.com/liferay/clay/commit/607da9d))
+-   **@clayui/drop-down:** add util for aligning dropdown on scroll ([09dc506](https://github.com/liferay/clay/commit/09dc506))
+-   **@clayui/panel:** add 'show' class to collapsable panel's button ([1e7f64a](https://github.com/liferay/clay/commit/1e7f64a))
+
 ## _Note: we changed our release process from [independent](https://github.com/lerna/lerna#independent-mode) to [fixed](https://github.com/lerna/lerna#fixedlocked-mode-default) at this point._
 
 ## 2021-2-11

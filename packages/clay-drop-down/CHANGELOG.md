@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
+
+### Features
+
+-   **@clayui/drop-down:** add util for aligning dropdown on scroll ([09dc506](https://github.com/liferay/clay/commit/09dc506))
+
 ## [3.9.1](https://github.com/liferay/clay/compare/@clayui/drop-down@3.9.0...@clayui/drop-down@3.9.1) (2021-02-11)
 
 **Note:** Version bump only for package @clayui/drop-down

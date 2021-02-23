@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.25.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.24.1...v3.25.0) (2021-02-23)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Global Functions moves generated SVG icons Sass map to separate file `_lx-icons-generated.scss` ([7ffc523](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7ffc523))
+
+
+
+
+
 ## [3.24.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/@clayui/css@3.24.0...@clayui/css@3.24.1) (2021-02-11)
 
 

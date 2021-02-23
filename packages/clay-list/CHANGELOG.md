@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
+
+**Note:** Version bump only for package @clayui/list
+
 ## [3.4.7](https://github.com/liferay/clay/compare/@clayui/list@3.4.6...@clayui/list@3.4.7) (2021-02-11)
 
 **Note:** Version bump only for package @clayui/list

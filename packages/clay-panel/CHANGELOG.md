@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
+
+### Features
+
+-   **@clayui/panel:** add 'show' class to collapsable panel's button ([1e7f64a](https://github.com/liferay/clay/commit/1e7f64a))
+
 ## [3.3.6](https://github.com/liferay/clay/compare/@clayui/panel@3.3.5...@clayui/panel@3.3.6) (2021-02-11)
 
 **Note:** Version bump only for package @clayui/panel
