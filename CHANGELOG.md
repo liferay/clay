@@ -1,5 +1,3 @@
-# CHANGELOG
-
 ## _Note: we changed our release process from [independent](https://github.com/lerna/lerna#independent-mode) to [fixed](https://github.com/lerna/lerna#fixedlocked-mode-default) at this point._
 
 ## 2021-2-11
