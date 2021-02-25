@@ -194,18 +194,32 @@ You may want to use [Github search](https://help.github.com/articles/searching-i
 
 To publish a new version
 
-1.  `git checkout 2.x`
-2.  Make sure you have all of the tags from upstream. `git fetch $REMOTE --tags`
-3.  Run `lerna version --conventional-commits --no-push` and the new version change.
 
-    -   You can also use `lerna changed` to see an output of what packages will be updated before running `lerna version`.
-    -   The `--conventional-commits` flag should automatically detect which version(minor/patch) the packages should be updated to.
+```bash
+# Check out latest 2.x
+git checkout 2.x
 
-4.  Create a draft PR against `2.x-stable` (not intended to be merged) on the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
-5.  Once CI is green, run `git push $REMOTE 2.x-stable --follow-tags`
-5.  Once CI is green, run `git push $REMOTE 2.x`
-6.  Run `lerna publish from-package` - This will push the packages to NPM.
+# Fetch latest tags
+git fetch $REMOTE --tags
 
-In the last step it may happen that some things break, be it build failure or something else, so be aware and make sure all packages are published correctly.
+# Run versioning
+#
+# Look through the list of commits between HEAD and the last release
+# If there are any `feat` commits, you will do a minor version. If it
+# only contains `fix` or `chore` commits, you will only do patch.
+lerna version --no-push
 
-> NOTE: Publishing new packages automatically with Lerna is sometimes a problem, if you have problems try to publish the package separately manually.
+# Note: Every clay-* package should now be bumped to the same version.
+
+# Create a draft PR against `2.x-stable` (not intended to be merged) on the clay repo; the sole purpose of this is to see CI green one last time before pushing the tag.
+
+# Once CI is green, you can close the test PR and push changes to 2.x and 2.x-stable
+# (assuming you are on the 2.x branch)
+git push $REMOTE 2.x --follow-tags
+git push $REMOTE 2.x:2.x-stable
+
+# Publish packages to npm
+lerna publish from-package
+
+# This last step can be flakey, be it build failure or something else, so be aware and make sure all packages are published correctly.
+```
