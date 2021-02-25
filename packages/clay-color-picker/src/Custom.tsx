@@ -55,6 +55,8 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 					<ClayInput
 						data-testid={`${name}Input`}
 						insetBefore
+						max="255"
+						min="0"
 						onChange={(event) => {
 							const newVal = Number(event.target.value);
 
@@ -63,7 +65,7 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 							onChange({[name]: newVal});
 						}}
 						ref={inputRef}
-						type="text"
+						type="number"
 						value={inputValue}
 					/>
 					<ClayInput.GroupInsetItem before tag="label">
