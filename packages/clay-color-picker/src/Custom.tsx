@@ -42,6 +42,26 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 	const inputRef = React.useRef(null);
 	const [inputValue, setInputValue] = React.useState(value);
 
+	const handleOnChange = (event: any) => {
+		const value = event.target.value;
+
+		if (value === '') {
+			return;
+		}
+
+		let newVal = Number(value);
+
+		if (newVal < 0) {
+			newVal = 0;
+		} else if (newVal > 255) {
+			newVal = 255;
+		}
+
+		setInputValue(newVal);
+
+		onChange({[name]: newVal});
+	};
+
 	React.useEffect(() => {
 		if (document.activeElement !== inputRef.current) {
 			setInputValue(value);
@@ -55,15 +75,11 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 					<ClayInput
 						data-testid={`${name}Input`}
 						insetBefore
-						onChange={(event) => {
-							const newVal = Number(event.target.value);
-
-							setInputValue(newVal);
-
-							onChange({[name]: newVal});
-						}}
+						max="255"
+						min="0"
+						onChange={handleOnChange}
 						ref={inputRef}
-						type="text"
+						type="number"
 						value={inputValue}
 					/>
 					<ClayInput.GroupInsetItem before tag="label">
