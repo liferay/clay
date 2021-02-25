@@ -244,7 +244,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			};
 		}, [active]);
 
-		const align = React.useCallback(() => {
+		const align = () => {
 			if (alignElementRef && alignElementRef.current) {
 				let points = alignmentPosition;
 
@@ -254,20 +254,22 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 					);
 				}
 
-				domAlign(
-					(ref as React.RefObject<HTMLElement>).current!,
-					alignElementRef.current,
-					{
-						offset: offsetFn(points),
-						overflow: {
-							adjustX: autoBestAlign,
-							adjustY: autoBestAlign,
-						},
-						points,
-					}
-				);
+				if ((ref as React.RefObject<HTMLElement>).current) {
+					domAlign(
+						(ref as React.RefObject<HTMLElement>).current!,
+						alignElementRef.current,
+						{
+							offset: offsetFn(points),
+							overflow: {
+								adjustX: autoBestAlign,
+								adjustY: autoBestAlign,
+							},
+							points,
+						}
+					);
+				}
 			}
-		}, [autoBestAlign, alignmentPosition]);
+		};
 
 		useLayoutEffect(() => {
 			if (active) {
