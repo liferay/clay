@@ -228,6 +228,7 @@ gh pr --submit liferay --branch stable --draft
 
 # Once CI is green, close the pull-request and merge changes to stable and master.
 # If you want to see a preview first, use the `--dry-run` flag.
+# (This assumes you are on the `master` branch)
 git push $REMOTE master --follow-tags
 git push $REMOTE master:stable
 
@@ -308,12 +309,17 @@ npx yarn-deduplicate yarn.lock
 
 # Verify yarn.lock stats
 #
-# If diff numbers are off (more + then - or viceversa),
+# If diff numbers are considerably off (more + then - or viceversa),
 # review the contents to find an explanation
 git diff --stat yarn.lock
 
+# Update taglib markup if necessary
+#
+# Take a look at the markup changes in this new version of clay and make the
+# corresponding changes to our serverside markup in `frontend-taglib-clay`.
 
 # Run unit tests locally
+# you may need to update snapshots for various modules
 cd {PORTAL_ROOT}/modules
 ../gradlew packageRunTest
 
