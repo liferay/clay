@@ -5,10 +5,6 @@ input[type="radio"] {
 
 fieldset {
 	word-wrap: break-word;
-
-	@-moz-document url-prefix() { // FF Fieldset workaround
-		display: table-cell;
-	}
 }
 
 label,
