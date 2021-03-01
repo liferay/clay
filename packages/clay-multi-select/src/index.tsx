@@ -151,6 +151,9 @@ const MultiSelectMenuRenderer: MenuRenderer = ({
 	</ClayDropDown.ItemList>
 );
 
+const useIsomorphicLayoutEffect =
+	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
+
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
@@ -190,7 +193,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const [active, setActive] = React.useState(false);
 		const [isFocused, setIsFocused] = React.useState(false);
 
-		React.useLayoutEffect(() => {
+		useIsomorphicLayoutEffect(() => {
 			if (sourceItems) {
 				const matchedItems = sourceItems.filter((item) =>
 					filter(item, inputValue, locator)
