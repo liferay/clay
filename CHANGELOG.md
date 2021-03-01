@@ -1,3 +1,6 @@
+### v1.0.31 - March 1, 2021
+* fix(lexicon-css): [#3958](https://github.com/liferay/clay/issues/3958)Remove firefox `display: table-cell` CSS reset for `fieldsets`
+
 ### v1.0.30 - February 15, 2019
 * Fixes [#1242](https://github.com/liferay/clay/issues/1242) - This reverts commit [e8825c2f81edb38a941159443fa07057a545dae9](https://github.com/liferay/clay/commit/e8825c2f81edb38a941159443fa07057a545dae9).
 * Fixes [#1242](https://github.com/liferay/clay/issues/1242) - (LexiconCSS) SVG Icons added `.lexicon-icon-container` to wrap svg icons so we can have the icon name spoken for screen readers at bare minimum
