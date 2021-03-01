@@ -80,7 +80,7 @@ gulp.task(
 		var questions = [
 			{
 				default: false,
-				message: 'Do you want to create a git tag and push to gh-pages?',
+				message: 'Do you want to create a git tag?',
 				name: 'publish',
 				type: 'confirm'
 			},
