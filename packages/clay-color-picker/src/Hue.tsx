@@ -20,6 +20,9 @@ interface IProps {
 	value: number;
 }
 
+const useIsomorphicLayoutEffect =
+	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
+
 /**
  * Renders Hue component
  */
@@ -39,7 +42,7 @@ const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
 		window.removeEventListener('pointerup', removeListeners);
 	};
 
-	React.useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		if (containerRef.current && selectorActive.current) {
 			onChange(xToHue(x, containerRef.current));
 		}
