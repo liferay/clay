@@ -1,0 +1,206 @@
+/**
+ * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import React from 'react';
+
+import {
+	ClayButton,
+	ClayDatePicker,
+	ClayForm,
+	ClayLayout,
+	ClayMultiSelect,
+	ClayNav,
+	ClayPanel,
+} from '../src';
+
+const ClayDatePickerWithState = (props: {[key: string]: any}) => {
+	const [value, setValue] = React.useState<string | Date>('');
+
+	return (
+		<ClayDatePicker
+			{...props}
+			onValueChange={setValue}
+			spritemap={spritemap}
+			value={value as string}
+		/>
+	);
+};
+
+export default () => {
+	const [formValues, setFormValues] = React.useState<any>({});
+	const [activePage, setActivePage] = React.useState(0);
+	const [value, setValue] = React.useState('');
+	const [selectedItems, setSelectedItems] = React.useState<any>([]);
+
+	return (
+		<ClayLayout.ContainerFluid>
+			<div className="row">
+				<div className="col col-3 col-sm-2">
+					<ClayNav.ClayVerticalNav
+						items={[
+							{
+								active: activePage === 0,
+								label: 'Form Page',
+								onClick: () => setActivePage(0),
+							},
+							{
+								active: activePage === 1,
+								label: 'Other Page',
+								onClick: () => setActivePage(1),
+							},
+						]}
+						spritemap={spritemap}
+					/>
+				</div>
+
+				<div className="col col-8">
+					{activePage === 0 && (
+						<ClayForm
+							className="sheet"
+							onSubmit={() => alert(JSON.stringify(formValues))}
+						>
+							<div className="sheet-header">
+								<h2 className="sheet-title">{'Form Input'}</h2>
+							</div>
+
+							<ClayPanel.Group>
+								<ClayPanel
+									displayTitle={'Organization Information'}
+									displayType="unstyled"
+									spritemap={spritemap}
+								>
+									<ClayPanel.Body>
+										<ClayForm.Group>
+											<label>{'Name'}</label>
+											<ClayForm.ClayInput
+												onChange={(e) =>
+													setFormValues({
+														...formValues,
+														name: e.target.value,
+													})
+												}
+												placeholder="Name"
+											/>
+										</ClayForm.Group>
+										<ClayForm.Group>
+											<label>{'Country'}</label>
+											<ClayForm.ClayInput
+												onChange={(e) =>
+													setFormValues({
+														...formValues,
+														country: e.target.value,
+													})
+												}
+												placeholder="Country"
+											/>
+										</ClayForm.Group>
+
+										<ClayForm.Group>
+											<label>{'Date'}</label>
+											<ClayDatePickerWithState />
+										</ClayForm.Group>
+
+										<ClayForm.Group>
+											<label>{'State'}</label>
+											<select
+												className="form-control"
+												onChange={(e) =>
+													setFormValues({
+														...formValues,
+														state: e.target.value,
+													})
+												}
+											>
+												<option disabled selected>
+													{'-- select an option --'}
+												</option>
+												<option>{'Happy'}</option>
+												<option>{'Mad'}</option>
+												<option>{'Sad'}</option>
+											</select>
+										</ClayForm.Group>
+									</ClayPanel.Body>
+								</ClayPanel>
+
+								<ClayPanel
+									collapsable
+									defaultExpanded
+									displayTitle={'More Information'}
+									displayType="unstyled"
+									showCollapseIcon
+									spritemap={spritemap}
+								>
+									<ClayPanel.Body>
+										<ClayForm.Group>
+											<ClayForm.Text>
+												{
+													'You can use this space to provide more information in this form.'
+												}
+											</ClayForm.Text>
+										</ClayForm.Group>
+
+										<ClayForm.Group>
+											<label>{'Tags'}</label>
+
+											<ClayForm.ClayInput.Group>
+												<ClayForm.ClayInput.GroupItem>
+													<ClayMultiSelect
+														inputValue={value}
+														items={selectedItems}
+														onChange={setValue}
+														onItemsChange={(
+															items
+														) => {
+															setFormValues({
+																...formValues,
+																tags: items,
+															});
+
+															setSelectedItems(
+																items
+															);
+														}}
+														placeholder="Tags..."
+														spritemap={spritemap}
+													/>
+
+													<ClayForm.FeedbackGroup>
+														<ClayForm.Text>
+															{
+																'Use comma to enter tags'
+															}
+														</ClayForm.Text>
+													</ClayForm.FeedbackGroup>
+												</ClayForm.ClayInput.GroupItem>
+											</ClayForm.ClayInput.Group>
+										</ClayForm.Group>
+									</ClayPanel.Body>
+								</ClayPanel>
+							</ClayPanel.Group>
+
+							<div className="sheet-footer">
+								<ClayButton.Group>
+									<div className="btn-group-item">
+										<ClayButton type="submit">
+											{'Submit'}
+										</ClayButton>
+									</div>
+									<div className="btn-group-item">
+										<ClayButton displayType="secondary">
+											{'Cancel'}
+										</ClayButton>
+									</div>
+								</ClayButton.Group>
+							</div>
+						</ClayForm>
+					)}
+
+					{activePage === 1 && <div>{'Some other page...'}</div>}
+				</div>
+			</div>
+		</ClayLayout.ContainerFluid>
+	);
+};

@@ -1,0 +1,74 @@
+{
+	"name": "@clayui/core",
+	"version": "3.0.0",
+	"description": "Collection of the core @clayui components",
+	"license": "BSD-3-Clause",
+	"repository": "https://github.com/liferay/clay",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"ts:main": "src/index.tsx",
+	"files": [
+		"lib",
+		"src"
+	],
+	"scripts": {
+		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
+		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
+		"prepublishOnly": "yarn build && yarn build:types",
+		"test": "jest --config ../../jest.config.js"
+	},
+	"keywords": [
+		"clay",
+		"react"
+	],
+	"dependencies": {
+		"@clayui/alert": "3.x",
+		"@clayui/autocomplete": "3.x",
+		"@clayui/badge": "3.x",
+		"@clayui/breadcrumb": "3.x",
+		"@clayui/button": "3.x",
+		"@clayui/card": "3.x",
+		"@clayui/color-picker": "3.x",
+		"@clayui/date-picker": "3.x",
+		"@clayui/drop-down": "3.x",
+		"@clayui/empty-state": "3.x",
+		"@clayui/form": "3.x",
+		"@clayui/icon": "3.x",
+		"@clayui/label": "3.x",
+		"@clayui/layout": "3.x",
+		"@clayui/link": "3.x",
+		"@clayui/list": "3.x",
+		"@clayui/loading-indicator": "3.x",
+		"@clayui/localized-input": "3.x",
+		"@clayui/management-toolbar": "3.x",
+		"@clayui/modal": "3.x",
+		"@clayui/multi-select": "3.x",
+		"@clayui/multi-step-nav": "3.x",
+		"@clayui/nav": "3.x",
+		"@clayui/navigation-bar": "3.x",
+		"@clayui/pagination": "3.x",
+		"@clayui/pagination-bar": "3.x",
+		"@clayui/panel": "3.x",
+		"@clayui/popover": "3.x",
+		"@clayui/progress-bar": "3.x",
+		"@clayui/slider": "3.x",
+		"@clayui/sticker": "3.x",
+		"@clayui/table": "3.x",
+		"@clayui/tabs": "3.x",
+		"@clayui/time-picker": "3.x",
+		"@clayui/toolbar": "3.x",
+		"@clayui/tooltip": "3.x"
+	},
+	"peerDependencies": {
+		"@clayui/css": "^3.x",
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1"
+	},
+	"browserslist": [
+		"extends browserslist-config-clay"
+	]
+}

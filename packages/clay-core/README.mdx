@@ -1,0 +1,46 @@
+---
+title: 'Core'
+description: 'Collection of all Clay components'
+packageNpm: '@clayui/core'
+---
+
+## Overview
+
+This package exposed the majority of `@clayui` components in a single import. Each component is named export.
+
+For Example:
+
+```js
+// Before
+import ClayAlert from '@clayui/alert';
+import ClayModal, {ClayModalProvider, useModal} from '@clayui/modal';
+
+() => {
+	const {observer, onClose} = useModal();
+
+	return (
+		<ClayModalProvider>
+			<ClayAlert />
+		</ClayModalProvider>
+	);
+};
+
+// After
+import {ClayAlert, ClayModal} from '@clayui/core';
+
+() => {
+	const {observer, onClose} = ClayModal.useModal();
+
+	return (
+		<ClayModal.ClayModalProvider>
+			<ClayAlert />
+		</ClayModal.ClayModalProvider>
+	);
+};
+```
+
+### Packages Not Included:
+
+-   `@clayui/charts` (Not commonly used and drastically increases library size)
+-   `@clayui/shared` (internal use only)
+-   `@clayui/upper-toolbar` (deprecated)
