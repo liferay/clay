@@ -163,6 +163,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	width?: 'sm' | 'auto';
 }
 
+const useIsomorphicLayoutEffect =
+	typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
 const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
@@ -271,7 +274,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		};
 
-		useLayoutEffect(() => {
+		useIsomorphicLayoutEffect(() => {
 			if (active) {
 				align();
 			}

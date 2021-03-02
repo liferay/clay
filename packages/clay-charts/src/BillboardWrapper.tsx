@@ -11,6 +11,9 @@ interface IProps extends ChartOptions {
 	elementProps?: React.HTMLAttributes<HTMLDivElement>;
 }
 
+const useIsomorphicLayoutEffect =
+	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
+
 const BillboardWrapper: React.FunctionComponent<IProps> = ({
 	forwardRef,
 	elementProps = {},
@@ -42,7 +45,7 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 		}
 	}, []);
 
-	React.useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		requestAnimationFrame(() => updateChart(otherProps));
 
 		return () => {
@@ -59,7 +62,7 @@ const BillboardWrapper: React.FunctionComponent<IProps> = ({
 		};
 	}, []);
 
-	React.useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		updateChart(otherProps);
 	}, [otherProps]);
 

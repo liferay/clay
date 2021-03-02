@@ -75,6 +75,9 @@ const calcProgressWidth = (
 	return offsetWidth;
 };
 
+const useIsomorphicLayoutEffect =
+	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
+
 const ClaySlider: React.FunctionComponent<IProps> = ({
 	className,
 	disabled,
@@ -91,7 +94,7 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 	const sliderRef = React.useRef<HTMLInputElement | null>(null);
 	const thumbRef = React.useRef<HTMLDivElement | null>(null);
 
-	React.useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		if (sliderRef.current && thumbRef.current) {
 			const thumbWidth = thumbRef.current.clientWidth;
 

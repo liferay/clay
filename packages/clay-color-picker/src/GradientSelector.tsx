@@ -26,6 +26,9 @@ interface IProps {
 	onChange?: (saturation: number, visibility: number) => void;
 }
 
+const useIsomorphicLayoutEffect =
+	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
+
 /**
  * Renders GradientSelector component
  */
@@ -46,7 +49,7 @@ const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
 		window.removeEventListener('pointerup', removeListeners);
 	};
 
-	React.useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		const {current} = containerRef;
 
 		if (current && selectorActive.current) {
