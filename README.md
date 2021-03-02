@@ -21,7 +21,7 @@ This is the repo of Liferay's Lexicon Design Language, and an implementation of 
 
 They are meant to help explain our design principles, offer direction and best practices in building your web apps, and provide a documented HTML and CSS API.
 
-You can view the guidelines on [the Lexicon site](https://liferay.github.io/lexicon).
+You can view the guidelines on [the Lexicon site](https://liferay.github.io/lexiconcss).
 
 ## Building
 If you would like to contribute to the guidelines, or make changes on your system you need to do the following:
@@ -29,12 +29,12 @@ If you would like to contribute to the guidelines, or make changes on your syste
 ### Clone the repo
 Clone the repo to your computer
 
-### Install Node.js (v4.6.0 LTS) and NPM
+### Install Node.js (v4.6.0 - v7.7.1) and NPM
 If you don't already have it installed. You can find more info here: http://nodejs.org/
 Node and NPM come bundled together, so you only need to install one package.
 
 ### Install the NPM modules
-Run `npm install` inside of the `lexicon` directory
+Run `npm install` inside of the `clay` directory
 
 ### Modify files in src/
 The files are generated from the `src/` directory, however, most of the files you'd be interested in changing are in `src/content/`. Files can be either HTML (`.html`) or Markdown (`.md`).
