@@ -15,8 +15,6 @@ module.exports = function(gulp, plugins, _, config) {
 
 	var TEMP_PATH = path.join(process.cwd(), 'temp');
 
-	var BRANCH_DEV = '1.x-develop';
-
 	var BRANCH_RELEASE = '1.x';
 
 	var getGitRemote = function() {
@@ -120,7 +118,6 @@ module.exports = function(gulp, plugins, _, config) {
 		function(done) {
 			var branchName = 'bower-staging-' + Math.random().toString(16).replace(/[^0-9a-fA-F]/g, '');
 			var browserCommitMessage = 'Browser files for v' + bumpedVersion;
-			var mergeCommitMessage = 'Merging ' + BRANCH_RELEASE + '@v' + bumpedVersion + ' into ' + BRANCH_DEV;
 			var rebuildCommitMessage = 'Rebuild v' + bumpedVersion;
 			var releaseCommitMessage = 'Release v' + bumpedVersion;
 			var tagMessage = 'Version ' + bumpedVersion;
@@ -136,10 +133,9 @@ module.exports = function(gulp, plugins, _, config) {
 			};
 
 			cmdPromise.resolve()
-				.git('checkout', BRANCH_DEV)
+				.git('checkout', BRANCH_RELEASE)
 				.cmd('gulp', 'build:svg:scss-icons')
 				.git('status', '--porcelain', './src/scss/lexicon-base/mixins/_global-functions.scss').then(checkStatus('It appears that there are new icons. Please commit the modified Sass functions file.'))
-				.git('checkout', BRANCH_RELEASE)
 				.git('status', '--porcelain').then(checkStatus('working directory not clean, aborting'))
 				.then(getGitRemote)
 				.then(function(remote) {
@@ -179,8 +175,6 @@ module.exports = function(gulp, plugins, _, config) {
 				.git('branch', '-D', branchName)
 				.git('checkout', tagName, '--', 'release')
 				.git('reset')
-				.git('checkout', BRANCH_DEV)
-				.git('merge', BRANCH_RELEASE, '-m', mergeCommitMessage)
 				.then(function() {
 					done();
 				});
@@ -193,7 +187,7 @@ module.exports = function(gulp, plugins, _, config) {
 			cmdPromise.resolve()
 				.then(getGitRemote)
 				.then(function(remote){
-					return cmdPromise.resolve().git('push', remote, '--tags', BRANCH_RELEASE, BRANCH_DEV);
+					return cmdPromise.resolve().git('push', remote, '--tags', BRANCH_RELEASE);
 				})
 				.then(function() {
 					done();
