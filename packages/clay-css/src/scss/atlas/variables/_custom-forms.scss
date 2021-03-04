@@ -33,6 +33,8 @@ $custom-control-indicator-checked-active-border-color: $custom-control-indicator
 
 $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-active-bg !default;
 
+$custom-control-indicator-checked-color: $component-active-color !default;
+
 // @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
 
 $custom-control-indicator-disabled-checked-bg: lighten(
@@ -107,9 +109,16 @@ $custom-checkbox-indicator-icon-checked: clay-icon(
 	$white
 ) !default;
 $custom-checkbox-indicator-icon-checked-bg-size: 100% !default;
-$custom-checkbox-indicator-icon-indeterminate-bg-size: 51% !default;
+$custom-checkbox-indicator-icon-indeterminate-bg-size: 100% !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
+$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
+
+$custom-checkbox-indicator-icon-indeterminate: clay-icon(
+	hr,
+	$custom-checkbox-indicator-indeterminate-color
+) !default;
+
 $custom-checkbox-indicator-border-radius: 0.125rem !default; // 2px
 
 // Custom Radio
