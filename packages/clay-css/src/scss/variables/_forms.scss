@@ -213,14 +213,42 @@ $form-control-inset-margin-y: (
 			$form-control-inset-min-height
 	) / 2 !default;
 
+$form-control-inset: () !default;
+$form-control-inset: map-deep-merge(
+	(
+		background-color: transparent,
+		border-width: 0,
+		color: $input-color,
+		flex-grow: 1,
+		margin-bottom: $form-control-inset-margin-y,
+		margin-top: $form-control-inset-margin-y,
+		min-height: $form-control-inset-min-height,
+		padding: 0,
+		width: 50px,
+		focus: (
+			outline: 0,
+		),
+		disabled: (
+			background-color: $input-disabled-bg,
+			border-color: $input-disabled-border-color,
+			color: $input-disabled-color,
+			cursor: $input-disabled-cursor,
+			opacity: $input-disabled-opacity,
+		),
+	),
+	$form-control-inset
+);
+
 $form-control-tag-group: () !default;
 $form-control-tag-group: map-deep-merge(
 	(
 		align-items: center,
+		color: $secondary,
 		display: flex,
 		flex-wrap: wrap,
 		height: auto,
 		padding-bottom: $form-control-tag-group-padding-y,
+		padding-right: 0.5rem,
 		padding-top: $form-control-tag-group-padding-y,
 	),
 	$form-control-tag-group
@@ -250,7 +278,7 @@ $form-control-tag-group-autofit-col: map-deep-merge(
 $form-control-tag-group-input-group-item: () !default;
 $form-control-tag-group-input-group-item: map-deep-merge(
 	(
-		align-items: flex-start,
+		align-items: center,
 	),
 	$form-control-tag-group-input-group-item
 );
@@ -292,6 +320,17 @@ $form-control-tag-group-btn-monospaced: map-deep-merge(
 		width: $form-control-inset-min-height,
 	),
 	$form-control-tag-group-btn-monospaced
+);
+
+$form-control-tag-group-component-action: () !default;
+$form-control-tag-group-component-action: map-deep-merge(
+	(
+		height: 100%,
+		margin-bottom: 0,
+		margin-top: 0,
+		width: 2rem,
+	),
+	$form-control-tag-group-component-action
 );
 
 // Form Grid
