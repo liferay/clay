@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.25.0...v3.25.1) (2021-03-05)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Custom Checkbox use hr icon for indeterminate indicator ([a894c5b](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a894c5bd1fe500894d55bfd656efde142ba81db6))
+* **@clayui/css:** Forms `form-control-tag-group component-action` should be height 100% ([4b4b140](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4b4b140b87019d9fa4c00186219090524dce1fcd))
+* **@clayui/css:** SVG Icons updates `hr` icon per Lexicon ([949944c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/949944ccaac1b21091628b15cedd3b7ea96287af))
+
+
+
+
+
 # [3.25.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.24.1...v3.25.0) (2021-02-23)
 
 

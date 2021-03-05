@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/liferay/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
+
+### Bug Fixes
+
+-   **@clayui/charts:** use isomorphic helper for useLayoutEffect ([6599030](https://github.com/liferay/clay/commit/6599030ee4b9c615db73dd8dc47302ff911d547b))
+-   **@clayui/color-picker:** RGB inputs should only accept numeric values from 0 to 255 ([4a7db84](https://github.com/liferay/clay/commit/4a7db845ac0a08919c523e4b4d77f00aa2c929bb))
+-   **@clayui/color-picker:** use isomorphic helper for useLayoutEffect ([42c069e](https://github.com/liferay/clay/commit/42c069ed866160f10cd9159345e59a62db473d83))
+-   **@clayui/css:** Atlas Custom Checkbox use hr icon for indeterminate indicator ([a894c5b](https://github.com/liferay/clay/commit/a894c5bd1fe500894d55bfd656efde142ba81db6))
+-   **@clayui/css:** Forms `form-control-tag-group component-action` should be height 100% ([4b4b140](https://github.com/liferay/clay/commit/4b4b140b87019d9fa4c00186219090524dce1fcd))
+-   **@clayui/css:** SVG Icons updates `hr` icon per Lexicon ([949944c](https://github.com/liferay/clay/commit/949944ccaac1b21091628b15cedd3b7ea96287af))
+-   **@clayui/drop-down:** make sure element exists before passing to domAlign ([80a5395](https://github.com/liferay/clay/commit/80a53956030c3dd6e1172fde2b808c26f784e120))
+-   **@clayui/drop-down:** use isomorphic helper for useLayoutEffect ([fd82b87](https://github.com/liferay/clay/commit/fd82b87d2b47fd614c698ce7ef0be926dfcafc16))
+-   **@clayui/multi-select:** use isomorphic helper for useLayoutEffect ([f25668d](https://github.com/liferay/clay/commit/f25668d92e691ba96b29f78669304169c48675f1))
+-   **@clayui/slider:** use isomorphic helper for useLayoutEffect ([33910de](https://github.com/liferay/clay/commit/33910dea1c6fcad8d1149d03d4c6ae92796123f1))
+
 # [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
 
 ### Bug Fixes

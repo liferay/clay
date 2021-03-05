@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/liferay/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** make sure element exists before passing to domAlign ([80a5395](https://github.com/liferay/clay/commit/80a53956030c3dd6e1172fde2b808c26f784e120))
+-   **@clayui/drop-down:** use isomorphic helper for useLayoutEffect ([fd82b87](https://github.com/liferay/clay/commit/fd82b87d2b47fd614c698ce7ef0be926dfcafc16))
+
 # [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
 
 ### Features

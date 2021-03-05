@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/liferay/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
+
+### Bug Fixes
+
+-   **@clayui/slider:** use isomorphic helper for useLayoutEffect ([33910de](https://github.com/liferay/clay/commit/33910dea1c6fcad8d1149d03d4c6ae92796123f1))
+
 # [3.2.0](https://github.com/liferay/clay/compare/@clayui/slider@3.1.1...@clayui/slider@3.2.0) (2020-05-21)
 
 ### Features

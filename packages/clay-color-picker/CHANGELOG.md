@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/liferay/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** RGB inputs should only accept numeric values from 0 to 255 ([4a7db84](https://github.com/liferay/clay/commit/4a7db845ac0a08919c523e4b4d77f00aa2c929bb))
+-   **@clayui/color-picker:** use isomorphic helper for useLayoutEffect ([42c069e](https://github.com/liferay/clay/commit/42c069ed866160f10cd9159345e59a62db473d83))
+
 # [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/liferay/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** use isomorphic helper for useLayoutEffect ([f25668d](https://github.com/liferay/clay/commit/f25668d92e691ba96b29f78669304169c48675f1))
+
 # [3.25.0](https://github.com/liferay/clay/compare/v3.24.1...v3.25.0) (2021-02-23)
 
 **Note:** Version bump only for package @clayui/multi-select

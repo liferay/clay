@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/ambrinchaudhary/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
+
+### Bug Fixes
+
+-   **@clayui/charts:** use isomorphic helper for useLayoutEffect ([6599030](https://github.com/ambrinchaudhary/clay/commit/6599030ee4b9c615db73dd8dc47302ff911d547b))
+
 # [3.2.0](https://github.com/bryceosterhaus/clay/compare/@clayui/charts@3.1.2...@clayui/charts@3.2.0) (2020-10-01)
 
 ### Features
