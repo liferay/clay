@@ -257,6 +257,10 @@ div {
 
 	.autofit-col {
 		@include clay-container($form-control-tag-group-autofit-col);
+
+		.form-control-inset {
+			width: auto;
+		}
 	}
 
 	.input-group-item {
@@ -271,32 +275,27 @@ div {
 		@include clay-button-variant($form-control-tag-group-btn);
 	}
 
-	.btn-monospaced,
-	.component-action {
+	.btn-monospaced {
 		@include clay-button-variant($form-control-tag-group-btn-monospaced);
+	}
+
+	.component-action {
+		@include clay-link($form-control-tag-group-component-action);
 	}
 }
 
 .form-control-inset {
-	background-color: transparent;
-	border-width: 0;
-	color: $input-color;
-	flex-grow: 1;
-	margin-bottom: $form-control-inset-margin-y;
-	margin-top: $form-control-inset-margin-y;
-	min-height: $form-control-inset-min-height;
-	padding: 0;
+	@include clay-form-control-variant($form-control-inset);
 
-	&:focus {
-		outline: 0;
-	}
+	// IE10+
+	// `::-ms-clear` disable clear button at the edge of an `<input type="text">`
+	// `::-ms-reveal` disable password reveal button on `<input type="password">`
 
-	&:disabled {
-		background-color: $input-disabled-bg;
-		border-color: $input-disabled-border-color;
-		color: $input-disabled-color;
-		cursor: $input-disabled-cursor;
-		opacity: $input-disabled-opacity;
+	&::-ms-clear,
+	&::-ms-reveal {
+		display: none;
+		height: 0;
+		width: 0;
 	}
 }
 
