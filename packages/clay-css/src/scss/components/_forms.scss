@@ -630,22 +630,22 @@ textarea.form-control-sm,
 	// Override the `<label>/<legend>` default
 
 	margin-bottom: 0;
-	padding-bottom: add($input-padding-y, $input-border-width);
-	padding-top: add($input-padding-y, $input-border-width);
+	padding-bottom: add($input-padding-y, $input-border-bottom-width);
+	padding-top: add($input-padding-y, $input-border-top-width);
 }
 
 .col-form-label-lg {
 	font-size: $input-font-size-lg;
 	line-height: $input-line-height-lg;
-	padding-bottom: add($input-padding-y-lg, $input-border-width);
-	padding-top: add($input-padding-y-lg, $input-border-width);
+	padding-bottom: add($input-padding-y-lg, $input-border-bottom-width);
+	padding-top: add($input-padding-y-lg, $input-border-top-width);
 }
 
 .col-form-label-sm {
 	font-size: $input-font-size-sm;
 	line-height: $input-line-height-sm;
-	padding-bottom: add($input-padding-y-sm, $input-border-width);
-	padding-top: add($input-padding-y-sm, $input-border-width);
+	padding-bottom: add($input-padding-y-sm, $input-border-bottom-width);
+	padding-top: add($input-padding-y-sm, $input-border-top-width);
 }
 
 // Form grid
