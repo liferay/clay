@@ -16,6 +16,7 @@ $clay-reorder-input-inset: map-deep-merge(
 		overflow: auto,
 		padding-bottom: $input-padding-y,
 		padding-top: $input-padding-y,
+		width: 100%,
 		focus: (
 			background-color: transparent,
 			box-shadow: none,
