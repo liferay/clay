@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.2](https://github.com/liferay/clay/compare/v3.25.1...v3.25.2) (2021-03-10)
+
+### Bug Fixes
+
+-   **@clayui/css:** Dual List Box `form-control-inset` is too narrow caused by [#3972](https://github.com/liferay/clay/issues/3972) ([637e65b](https://github.com/liferay/clay/commit/637e65b)), closes [#3976](https://github.com/liferay/clay/issues/3976)
+-   **@clayui/css:** Forms `.col-form-label-*` should use `$input-border-bottom-width` or `$input-border-top-width` to avoid invalid property value ([ade3649](https://github.com/liferay/clay/commit/ade3649)), closes [#3946](https://github.com/liferay/clay/issues/3946)
+
 ## [3.25.1](https://github.com/liferay/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
 
 ### Bug Fixes
