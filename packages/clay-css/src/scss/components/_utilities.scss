@@ -268,6 +268,106 @@
 	}
 }
 
+// Feedback
+
+.c-feedback {
+	@include clay-css($c-feedback);
+}
+
+.c-feedback-indicator {
+	@include clay-css($c-feedback-indicator);
+
+	&:only-child {
+		@include clay-css($c-feedback-indicator-only-child);
+	}
+}
+
+.c-feedback-lead {
+	@include clay-css($c-feedback-lead);
+}
+
+.c-feedback-text {
+	@include clay-css($c-feedback-text);
+}
+
+.c-feedback-inherit {
+	font-size: inherit;
+}
+
+.c-feedback-stacked {
+	@include clay-css($c-feedback-stacked);
+
+	.c-feedback {
+		@include clay-css($c-feedback-stacked-c-feedback);
+	}
+}
+
+.c-feedback-trimmed {
+	.c-feedback-indicator {
+		margin-right: $c-feedback-trimmed-spacer;
+
+		&:only-child {
+			margin-left: $c-feedback-trimmed-spacer;
+		}
+	}
+
+	.c-feedback-lead {
+		margin-right: $c-feedback-trimmed-spacer;
+	}
+
+	.c-feedback-text {
+		margin-right: $c-feedback-trimmed-spacer;
+	}
+}
+
+.c-feedback-secondary {
+	> .c-feedback-indicator,
+	> .c-feedback-lead,
+	> .c-feedback-text {
+		color: $c-feedback-secondary-color;
+	}
+}
+
+.c-feedback-success {
+	> .c-feedback-indicator,
+	> .c-feedback-lead,
+	> .c-feedback-text {
+		color: $c-feedback-success-color;
+	}
+}
+
+.c-feedback-info {
+	> .c-feedback-indicator,
+	> .c-feedback-lead,
+	> .c-feedback-text {
+		color: $c-feedback-info-color;
+	}
+}
+
+.c-feedback-warning {
+	> .c-feedback-indicator,
+	> .c-feedback-lead,
+	> .c-feedback-text {
+		color: $c-feedback-warning-color;
+	}
+}
+
+.c-feedback-danger {
+	> .c-feedback-indicator,
+	> .c-feedback-lead,
+	> .c-feedback-text {
+		color: $c-feedback-danger-color;
+	}
+}
+
+.c-feedback-dark {
+	> .c-feedback-indicator,
+	> .c-feedback-lead,
+	> .c-feedback-text {
+		color: $c-feedback-dark-color;
+	}
+}
+
 // Headings (h1-6)
 
 .heading-start {

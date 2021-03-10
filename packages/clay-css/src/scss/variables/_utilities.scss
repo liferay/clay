@@ -110,6 +110,85 @@ $c-inner: map-deep-merge(
 	$c-inner
 );
 
+// Feedback
+
+$c-feedback: () !default;
+$c-feedback: map-merge(
+	(
+		display: inline,
+		font-size: 0.875rem,
+	),
+	$c-feedback
+);
+
+$c-feedback-indicator: () !default;
+$c-feedback-indicator: map-merge(
+	(
+		display: inline,
+		margin-right: 0.25em,
+	),
+	$c-feedback-indicator
+);
+
+$c-feedback-indicator-only-child: () !default;
+$c-feedback-indicator-only-child: map-merge(
+	(
+		margin-left: 0.25em,
+	),
+	$c-feedback-indicator-only-child
+);
+
+$c-feedback-lead: () !default;
+$c-feedback-lead: map-merge(
+	(
+		display: inline,
+		font-weight: $font-weight-semi-bold,
+		margin-right: 0.25em,
+	),
+	$c-feedback-lead
+);
+
+$c-feedback-text: () !default;
+$c-feedback-text: map-merge(
+	(
+		display: inline,
+		margin-right: 0.25em,
+	),
+	$c-feedback-text
+);
+
+$c-feedback-stacked: () !default;
+$c-feedback-stacked: map-merge(
+	(
+		display: block,
+	),
+	$c-feedback-stacked
+);
+
+$c-feedback-stacked-c-feedback: () !default;
+$c-feedback-stacked-c-feedback: map-merge(
+	(
+		display: block,
+		margin-top: 0.25rem,
+		overflow-wrap: break-word,
+	),
+	$c-feedback-stacked-c-feedback
+);
+
+$c-feedback-trimmed-spacer: 0.5rem !default;
+
+$c-feedback-secondary-color: $secondary !default;
+
+$c-feedback-success-color: $success !default;
+
+$c-feedback-info-color: $info !default;
+
+$c-feedback-warning-color: $warning !default;
+
+$c-feedback-danger-color: $danger !default;
+
+$c-feedback-dark-color: $dark !default;
+
 // Heading
 
 $heading-spacer-x: 1rem !default; // 16px
