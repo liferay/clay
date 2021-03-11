@@ -103,6 +103,16 @@
 	); // -1px
 	$collapse-z-index-mobile: map-get($map, collapse-z-index-mobile);
 
+	$nav-nested-margins-item: setter(
+		map-get($map, nav-nested-margins-item),
+		()
+	);
+
+	$nav-nested-margins-item-mobile: setter(
+		map-get($map, nav-nested-margins-item-mobile),
+		()
+	);
+
 	// .menubar-toggler
 
 	$toggler-border-color-mobile: setter(
@@ -213,6 +223,16 @@
 
 				.lexicon-icon {
 					margin-top: 0;
+				}
+			}
+		}
+
+		.nav-nested-margins {
+			> li .nav > li {
+				@include clay-css($nav-nested-margins-item);
+
+				@include media-breakpoint-down($breakpoint-down) {
+					@include clay-css($nav-nested-margins-item-mobile);
 				}
 			}
 		}
@@ -441,6 +461,16 @@
 		$dropdown-box-shadow
 	);
 
+	$nav-nested-margins-item: setter(
+		map-get($map, nav-nested-margins-item),
+		()
+	);
+
+	$nav-nested-margins-item-mobile: setter(
+		map-get($map, nav-nested-margins-item-mobile),
+		()
+	);
+
 	// .menubar-toggler
 
 	// `$toggler-border-color-mobile` is deprecated use `$toggler-mobile` instead
@@ -495,6 +525,16 @@
 	.menubar-toggler {
 		@include media-breakpoint-down($breakpoint-down) {
 			@include clay-button-variant($toggler-mobile);
+		}
+	}
+
+	.nav-nested-margins {
+		> li .nav > li {
+			@include clay-css($nav-nested-margins-item);
+
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css($nav-nested-margins-item-mobile);
+			}
 		}
 	}
 
