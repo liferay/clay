@@ -268,6 +268,9 @@
 		)
 	);
 
+	$show: setter(map-get($map, show), ());
+	$show: map-merge($active-class, $show);
+
 	$btn-focus: setter(map-get($map, btn-focus), ());
 	$btn-focus: map-merge(
 		$btn-focus,
@@ -351,11 +354,14 @@
 			@include clay-css($active);
 		}
 
-		&[aria-expanded='true'],
-		&.show,
-		.show > &,
 		&.active {
 			@include clay-css($active-class);
+		}
+
+		&[aria-expanded='true'],
+		&.show,
+		.show > & {
+			@include clay-css($show);
 		}
 
 		&:disabled,
