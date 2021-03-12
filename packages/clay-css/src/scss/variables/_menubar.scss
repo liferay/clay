@@ -17,6 +17,9 @@ $menubar-vertical-expand-md: map-deep-merge(
 		nav-nested-margins-item-mobile: (
 			margin-left: 0,
 		),
+		toggler-c-inner: (
+			max-width: none,
+		),
 	),
 	$menubar-vertical-expand-md
 );
@@ -98,6 +101,9 @@ $menubar-vertical-expand-lg: map-deep-merge(
 			$zindex-menubar-vertical-expand-lg-collapse-mobile,
 		nav-nested-margins-item-mobile: (
 			margin-left: 0,
+		),
+		toggler-c-inner: (
+			max-width: none,
 		),
 	),
 	$menubar-vertical-expand-lg
