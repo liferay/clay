@@ -361,8 +361,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 						(inputValue || items.length > 0) && (
 							<ClayInput.GroupItem shrink>
 								<ClayButtonWithIcon
+									borderless
 									className="component-action"
-									displayType="unstyled"
+									displayType="secondary"
 									onClick={() => {
 										onClearAllButtonClick();
 
@@ -370,6 +371,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 											inputRef.current.focus();
 										}
 									}}
+									outline
 									spritemap={spritemap}
 									symbol="times-circle"
 									title={clearAllTitle}
