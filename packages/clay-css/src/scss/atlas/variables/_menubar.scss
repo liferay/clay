@@ -15,7 +15,16 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			focus-color: $gray-900,
 			focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
 			focus-outline: map-get($dropdown-item-base, focus-outline),
+			active-class: (
+				background-color: $primary-l3,
+				color: $primary,
+			),
 			disabled-box-shadow: none,
+			show: (
+				background-color: $c-unset,
+				color: $gray-900,
+				font-weight: $font-weight-semi-bold,
+			),
 		),
 		link-mobile: (
 			transition: none,
@@ -53,7 +62,16 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			focus-color: $gray-900,
 			focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
 			focus-outline: map-get($dropdown-item-base, focus-outline),
+			active-class: (
+				background-color: $primary-l3,
+				color: $primary,
+			),
 			disabled-box-shadow: none,
+			show: (
+				background-color: $c-unset,
+				color: $gray-900,
+				font-weight: $font-weight-semi-bold,
+			),
 		),
 		link-mobile: (
 			transition: none,
