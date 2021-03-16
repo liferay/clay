@@ -46,62 +46,178 @@
 @mixin clay-menubar-vertical-expand($map) {
 	$enabled: setter(map-get($map, enabled), true);
 	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
-	$breakpoint-down: clay-breakpoint-prev($breakpoint-up);
+	$breakpoint-down: setter(
+		map-get($map, breakpoint-down),
+		clay-breakpoint-prev($breakpoint-up)
+	);
 
 	// .menubar-vertical-expand-{md}
 
-	$border-color: map-get($map, border-color);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$max-width: setter(map-get($map, max-width), 15.625rem); // 250px
+	$base: setter($map, ());
 
-	$border-color-mobile: setter(
-		map-get($map, border-color-mobile),
-		transparent
+	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-merge(
+		$mobile,
+		(
+			border-color:
+				setter(
+					map-get($map, border-color-mobile),
+					map-get($mobile, border-color)
+				),
+			border-style:
+				setter(
+					map-get($map, border-style-mobile),
+					map-get($mobile, border-style)
+				),
+			border-width:
+				setter(
+					map-get($map, border-width-mobile),
+					map-get($mobile, border-width)
+				),
+			margin-bottom:
+				setter(
+					map-get($map, margin-bottom-mobile),
+					map-get($mobile, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, margin-left-mobile),
+					map-get($mobile, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, margin-right-mobile),
+					map-get($mobile, margin-right)
+				),
+			margin-top:
+				setter(
+					map-get($map, margin-top-mobile),
+					map-get($mobile, margin-top)
+				),
+			max-width:
+				setter(
+					map-get($map, max-width-mobile),
+					map-get($mobile, max-width)
+				),
+			min-height:
+				setter(
+					map-get($map, min-height-mobile),
+					map-get($mobile, min-height)
+				),
+			padding-bottom:
+				setter(
+					map-get($map, padding-y-mobile),
+					map-get($mobile, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, padding-x-mobile),
+					map-get($mobile, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, padding-x-mobile),
+					map-get($mobile, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, padding-y-mobile),
+					map-get($mobile, padding-top)
+				),
+		)
 	);
-	$border-style-mobile: setter(map-get($map, border-style-mobile), solid);
-	$border-width-mobile: setter(
-		map-get($map, border-width-mobile),
-		0.0625rem
-	); // 1px
-	$margin-bottom-mobile: map-get($map, margin-bottom-mobile);
-	$margin-left-mobile: map-get($map, margin-left-mobile);
-	$margin-right-mobile: map-get($map, margin-right-mobile);
-	$margin-top-mobile: map-get($map, margin-top-mobile);
-	$max-width-mobile: setter(map-get($map, max-width-mobile), none);
-	$min-height-mobile: setter(map-get($map, min-height-mobile), 3rem); // 48px
-	$padding-x-mobile: setter(map-get($map, padding-x-mobile), 0.5rem);
-	$padding-y-mobile: map-get($map, padding-y-mobile);
 
 	// .menubar-collapse
 
-	$collapse-border-color-mobile: setter(
-		map-get($map, collapse-border-color-mobile),
-		transparent
+	$collapse: setter(map-get($map, collapse), ());
+
+	$collapse-mobile: setter(map-get($map, collapse-mobile), ());
+	$collapse-mobile: map-merge(
+		$collapse-mobile,
+		(
+			border-color:
+				setter(
+					map-get($map, collapse-border-color-mobile),
+					map-get($collapse-mobile, border-color)
+				),
+			border-style:
+				setter(
+					map-get($map, collapse-border-style-mobile),
+					map-get($collapse-mobile, border-style)
+				),
+			border-width:
+				setter(
+					map-get($map, collapse-border-width-mobile),
+					map-get($collapse-mobile, border-width)
+				),
+			margin-top:
+				setter(
+					map-get($map, collapse-margin-top-mobile),
+					map-get($collapse-mobile, margin-top)
+				),
+			max-width:
+				setter(
+					map-get($map, collapse-max-width-mobile),
+					map-get($collapse-mobile, max-width)
+				),
+			left:
+				setter(
+					map-get($map, collapse-left-mobile),
+					map-get($collapse-mobile, left)
+				),
+			right:
+				setter(
+					map-get($map, collapse-right-mobile),
+					map-get($collapse-mobile, right)
+				),
+			z-index:
+				setter(
+					map-get($map, collapse-z-index-mobile),
+					map-get($collapse-mobile, z-index)
+				),
+		)
 	);
-	$collapse-border-style-mobile: setter(
-		map-get($map, collapse-border-style-mobile),
-		solid
+
+	$nav-nested: setter(map-get($map, nav-nested), ());
+
+	$nav-nested-mobile: setter(map-get($map, nav-nested-mobile), ());
+	$nav-nested-mobile: map-merge(
+		$nav-nested-mobile,
+		(
+			margin-bottom:
+				setter(
+					map-get($map, collapse-inner-spacer-y-mobile),
+					map-get($nav-nested-mobile, margin-bottom)
+				),
+			margin-top:
+				setter(
+					map-get($map, collapse-inner-spacer-y-mobile),
+					map-get($nav-nested-mobile, margin-top)
+				),
+		)
 	);
-	$collapse-border-width-mobile: setter(
-		map-get($map, collapse-border-width-mobile),
-		0.0625rem
-	); // 1px
-	$collapse-inner-spacer-y-mobile: setter(
-		map-get($map, collapse-inner-spacer-y-mobile),
-		0.5rem
-	); // 8px
-	$collapse-margin-top-mobile: map-get($map, collapse-margin-top-mobile);
-	$collapse-max-width-mobile: map-get($map, collapse-max-width-mobile);
-	$collapse-left-mobile: setter(
-		map-get($map, collapse-left-mobile),
-		-0.0625rem
-	); // -1px
-	$collapse-right-mobile: setter(
-		map-get($map, collapse-right-mobile),
-		-0.0625rem
-	); // -1px
-	$collapse-z-index-mobile: map-get($map, collapse-z-index-mobile);
+
+	$nav-nested-margins: setter(map-get($map, nav-nested-margins), ());
+
+	$nav-nested-margins-mobile: setter(
+		map-get($map, nav-nested-margins-mobile),
+		()
+	);
+	$nav-nested-margins-mobile: map-merge(
+		$nav-nested-margins-mobile,
+		(
+			margin-bottom:
+				setter(
+					map-get($map, collapse-inner-spacer-y-mobile),
+					map-get($nav-nested-margins-mobile, margin-bottom)
+				),
+			margin-top:
+				setter(
+					map-get($map, collapse-inner-spacer-y-mobile),
+					map-get($nav-nested-margins-mobile, margin-top)
+				),
+		)
+	);
 
 	$nav-nested-margins-item: setter(
 		map-get($map, nav-nested-margins-item),
@@ -115,85 +231,102 @@
 
 	// .menubar-toggler
 
-	$toggler-border-color-mobile: setter(
-		map-get($map, toggler-border-color-mobile),
-		transparent
-	);
-	$toggler-border-style-mobile: setter(
-		map-get($map, toggler-border-style-mobile),
-		solid
-	);
-	$toggler-border-width-mobile: setter(
-		map-get($map, toggler-border-width-mobile),
-		0.0625rem
-	); // 1px
-	$toggler-height-mobile: setter(
-		map-get($map, toggler-height-mobile),
-		2rem
-	); // 32px
-	$toggler-padding-x-mobile: setter(
-		map-get($map, toggler-padding-x-mobile),
-		0.5rem
-	); // 8px
-	$toggler-padding-y-mobile: map-get($map, toggler-padding-y-mobile);
-
-	$toggler-c-inner: setter(map-get($map, toggler-c-inner), ());
-	$toggler-c-inner: map-deep-merge(
+	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
+	$toggler-mobile: map-deep-merge(
+		$toggler-mobile,
 		(
-			margin-bottom: math-sign($toggler-padding-y-mobile),
-			margin-left: math-sign($toggler-padding-x-mobile),
-			margin-right: math-sign($toggler-padding-x-mobile),
-			margin-top: math-sign($toggler-padding-y-mobile),
-		),
-		$toggler-c-inner
+			border-color:
+				setter(
+					map-get($map, toggler-border-color-mobile),
+					map-get($toggler-mobile, border-color)
+				),
+			border-style:
+				setter(
+					map-get($map, toggler-border-style-mobile),
+					map-get($toggler-mobile, border-style)
+				),
+			border-width:
+				setter(
+					map-get($map, toggler-border-width-mobile),
+					map-get($toggler-mobile, border-width)
+				),
+			height:
+				setter(
+					map-get($map, toggler-height-mobile),
+					map-get($toggler-mobile, height)
+				),
+			padding-bottom:
+				setter(
+					map-get($map, toggler-padding-y-mobile),
+					map-get($toggler-mobile, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, toggler-padding-x-mobile),
+					map-get($toggler-mobile, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, toggler-padding-x-mobile),
+					map-get($toggler-mobile, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, toggler-padding-y-mobile),
+					map-get($toggler-mobile, padding-top)
+				),
+		)
+	);
+
+	$_toggler-mobile-lexicon-icon: setter(
+		map-get($toggler-mobile, lexicon-icon),
+		()
+	);
+
+	$_toggler-mobile-c-inner: setter(map-get($toggler-mobile, c-inner), ());
+	$_toggler-mobile-c-inner: map-merge(
+		$_toggler-mobile-c-inner,
+		(
+			margin-bottom:
+				setter(
+					math-sign(map-get($toggler-mobile, padding-bottom)),
+					map-get($_toggler-mobile-c-inner, margin-bottom)
+				),
+			margin-left:
+				setter(
+					math-sign(map-get($toggler-mobile, padding-left)),
+					map-get($_toggler-mobile-c-inner, margin-left)
+				),
+			margin-right:
+				setter(
+					math-sign(map-get($toggler-mobile, padding-right)),
+					map-get($_toggler-mobile-c-inner, margin-right)
+				),
+			margin-top:
+				setter(
+					math-sign(map-get($toggler-mobile, padding-top)),
+					map-get($_toggler-mobile-c-inner, margin-top)
+				),
+		)
+	);
+	$_old-toggler-c-inner: setter(map-get($map, toggler-c-inner), ());
+	$_toggler-mobile-c-inner: map-merge(
+		$_toggler-mobile-c-inner,
+		$_old-toggler-c-inner
 	);
 
 	@if ($enabled) {
-		border-color: $border-color;
-		border-style: $border-style;
-		border-width: $border-width;
-		max-width: $max-width;
+		@include clay-css($base);
 
 		@include media-breakpoint-down($breakpoint-down) {
-			align-items: center;
-			border-color: $border-color-mobile;
-			border-style: $border-style-mobile;
-			border-width: $border-width-mobile;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			margin-bottom: $margin-bottom-mobile;
-			margin-left: $margin-left-mobile;
-			margin-right: $margin-right-mobile;
-			margin-top: $margin-top-mobile;
-			max-width: $max-width-mobile;
-			min-height: $min-height-mobile;
-			padding-bottom: $padding-y-mobile;
-			padding-left: $padding-x-mobile;
-			padding-right: $padding-x-mobile;
-			padding-top: $padding-y-mobile;
+			@include clay-css($mobile);
 		}
 
 		.menubar-collapse {
-			display: block;
+			@include clay-css($collapse);
 
 			@include media-breakpoint-down($breakpoint-down) {
-				border-color: $collapse-border-color-mobile;
-				border-style: $collapse-border-style-mobile;
-				border-width: $collapse-border-width-mobile;
-				display: none;
-				left: $collapse-left-mobile;
-				margin-top: $collapse-margin-top-mobile;
-				max-width: $collapse-max-width-mobile;
-				position: absolute;
-				right: $collapse-right-mobile;
-				top: 100%;
-				z-index: $collapse-z-index-mobile;
-
-				> .nav {
-					margin-bottom: $collapse-inner-spacer-y-mobile;
-					margin-top: $collapse-inner-spacer-y-mobile;
-				}
+				@include clay-css($collapse-mobile);
 			}
 
 			&.collapsing,
@@ -204,30 +337,33 @@
 
 		.menubar-toggler {
 			@include media-breakpoint-down($breakpoint-down) {
-				align-items: center;
-				border-color: $toggler-border-color-mobile;
-				border-style: $toggler-border-style-mobile;
-				border-width: $toggler-border-width-mobile;
-				display: flex;
-				height: $toggler-height-mobile;
-				padding-bottom: $toggler-padding-y-mobile;
-				padding-left: $toggler-padding-x-mobile;
-				padding-right: $toggler-padding-x-mobile;
-				padding-top: $toggler-padding-y-mobile;
+				@include clay-css($toggler-mobile);
 
-				@if ($enable-c-inner) {
-					.c-inner {
-						@include clay-css($toggler-c-inner);
-					}
+				.c-inner {
+					@include clay-css($_toggler-mobile-c-inner);
 				}
 
 				.lexicon-icon {
-					margin-top: 0;
+					@include clay-css($_toggler-mobile-lexicon-icon);
 				}
 			}
 		}
 
+		.nav-nested {
+			@include clay-css($nav-nested);
+
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css($nav-nested-mobile);
+			}
+		}
+
 		.nav-nested-margins {
+			@include clay-css($nav-nested-margins);
+
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css($nav-nested-margins-mobile);
+			}
+
 			> li .nav > li {
 				@include clay-css($nav-nested-margins-item);
 
