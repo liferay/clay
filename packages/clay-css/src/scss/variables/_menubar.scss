@@ -3,22 +3,56 @@
 $menubar-vertical-expand-md: () !default;
 $menubar-vertical-expand-md: map-deep-merge(
 	(
-		margin-bottom-mobile: 1.5rem,
-		margin-left-mobile: -
-			(
-				$grid-gutter-width / 2,
-			),
-		margin-right-mobile: -
-			(
-				$grid-gutter-width / 2,
-			),
-		collapse-z-index-mobile:
-			$zindex-menubar-vertical-expand-md-collapse-mobile,
+		max-width: 15.625rem,
+		mobile: (
+			align-items: center,
+			display: flex,
+			flex-wrap: wrap,
+			justify-content: space-between,
+			margin-bottom: 1.5rem,
+			margin-left: math-sign($grid-gutter-width / 2),
+			margin-right: math-sign($grid-gutter-width / 2),
+		),
+		collapse: (
+			display: block,
+		),
+		collapse-mobile: (
+			border-color: transparent,
+			border-style: solid,
+			border-width: 0.0625rem,
+			display: none,
+			left: -0.0625rem,
+			position: absolute,
+			right: -0.0625rem,
+			top: 100%,
+			z-index: $zindex-menubar-vertical-expand-md-collapse-mobile,
+		),
+		collapse-nav-mobile: (
+			margin-bottom: 0.5rem,
+			margin-top: 0.5rem,
+		),
+		nav-nested-mobile: (
+			margin-bottom: 0.5rem,
+			margin-top: 0.5rem,
+		),
 		nav-nested-margins-item-mobile: (
 			margin-left: 0,
 		),
-		toggler-c-inner: (
-			max-width: none,
+		toggler-mobile: (
+			align-items: center,
+			border-color: transparent,
+			border-style: solid,
+			border-width: 0.0625rem,
+			display: flex,
+			height: 2rem,
+			padding-left: 0.5rem,
+			padding-right: 0.5rem,
+			c-inner: (
+				max-width: none,
+			),
+			lexicon-icon: (
+				margin-top: 0,
+			),
 		),
 	),
 	$menubar-vertical-expand-md
@@ -88,22 +122,56 @@ $menubar-vertical-expand-lg: () !default;
 $menubar-vertical-expand-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
-		margin-bottom-mobile: 1.5rem,
-		margin-left-mobile: -
-			(
-				$grid-gutter-width / 2,
-			),
-		margin-right-mobile: -
-			(
-				$grid-gutter-width / 2,
-			),
-		collapse-z-index-mobile:
-			$zindex-menubar-vertical-expand-lg-collapse-mobile,
+		max-width: 15.625rem,
+		mobile: (
+			align-items: center,
+			display: flex,
+			flex-wrap: wrap,
+			justify-content: space-between,
+			margin-bottom: 1.5rem,
+			margin-left: math-sign($grid-gutter-width / 2),
+			margin-right: math-sign($grid-gutter-width / 2),
+		),
+		collapse: (
+			display: block,
+		),
+		collapse-mobile: (
+			border-color: transparent,
+			border-style: solid,
+			border-width: 0.0625rem,
+			display: none,
+			left: -0.0625rem,
+			position: absolute,
+			right: -0.0625rem,
+			top: 100%,
+			z-index: $zindex-menubar-vertical-expand-md-collapse-mobile,
+		),
+		nav-nested-mobile: (
+			margin-bottom: 0.5rem,
+			margin-top: 0.5rem,
+		),
+		nav-nested-margins-mobile: (
+			margin-bottom: 0.5rem,
+			margin-top: 0.5rem,
+		),
 		nav-nested-margins-item-mobile: (
 			margin-left: 0,
 		),
-		toggler-c-inner: (
-			max-width: none,
+		toggler-mobile: (
+			align-items: center,
+			border-color: transparent,
+			border-style: solid,
+			border-width: 0.0625rem,
+			display: flex,
+			height: 2rem,
+			padding-left: 0.5rem,
+			padding-right: 0.5rem,
+			c-inner: (
+				max-width: none,
+			),
+			lexicon-icon: (
+				margin-top: 0,
+			),
 		),
 	),
 	$menubar-vertical-expand-lg
