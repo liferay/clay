@@ -72,6 +72,49 @@
 	@include clay-row($date-picker-row);
 }
 
+.date-picker-col {
+	@include clay-css($date-picker-col);
+
+	&.c-selected {
+		$_c-selected: setter(map-get($date-picker-col, c-selected), ());
+
+		@include clay-css($_c-selected);
+
+		&:first-child {
+			$_c-selected-first-child: setter(
+				map-get($date-picker-col, c-selected-first-child),
+				()
+			);
+
+			@include clay-css($_c-selected-first-child);
+		}
+
+		&:last-child {
+			$_c-selected-last-child: setter(
+				map-get($date-picker-col, c-selected-last-child),
+				()
+			);
+
+			@include clay-css($_c-selected-last-child);
+		}
+	}
+
+	&.c-selected-start {
+		$_c-selected-start: setter(
+			map-get($date-picker-col, c-selected-start),
+			()
+		);
+
+		@include clay-css($_c-selected-start);
+	}
+
+	&.c-selected-end {
+		$_c-selected-end: setter(map-get($date-picker-col, c-selected-end), ());
+
+		@include clay-css($_c-selected-end);
+	}
+}
+
 .date-picker-days-row {
 	@include clay-row($date-picker-days-row);
 }
