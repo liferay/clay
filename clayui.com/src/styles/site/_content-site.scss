@@ -118,8 +118,14 @@
 		margin-right: 15px;
 		vertical-align: top;
 
+		&.sheet-example {
+			display: block;
+			margin-right: 0;
+		}
+
 		.dropdown-menu {
 			display: block;
+			float: none;
 			position: static;
 		}
 
