@@ -10,8 +10,10 @@ interface IProps {
 }
 
 const ClayDatePickerWeekday: React.FunctionComponent<IProps> = ({weekday}) => (
-	<div className="date-picker-calendar-item date-picker-day">
-		<abbr>{weekday}</abbr>
+	<div className="date-picker-col">
+		<div className="date-picker-calendar-item date-picker-day">
+			<abbr>{weekday}</abbr>
+		</div>
 	</div>
 );
 
