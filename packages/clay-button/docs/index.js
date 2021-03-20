@@ -19,6 +19,9 @@ const ButtonDisplayTypesCode = `const Component = () => {
 			<ClayButton displayType="secondary">
 				Button Secondary
 			</ClayButton>
+			<ClayButton displayType={null}>
+				Base Button
+			</ClayButton>
 			<ClayButton displayType="link">
 				Button Link
 			</ClayButton>
