@@ -126,8 +126,9 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 				<div className="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand">
 					<Button
 						aria-label={ariaLabels.buttonPreviousMonth}
+						className="nav-btn nav-btn-monospaced"
 						disabled={disabled}
-						displayType="unstyled"
+						displayType={null}
 						monospaced
 						onClick={handlePreviousMonthClicked}
 						small
@@ -136,8 +137,9 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 					</Button>
 					<Button
 						aria-label={ariaLabels.buttonDot}
+						className="nav-btn nav-btn-monospaced"
 						disabled={disabled}
-						displayType="unstyled"
+						displayType={null}
 						monospaced
 						onClick={onDotClicked}
 						small
@@ -146,8 +148,9 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 					</Button>
 					<Button
 						aria-label={ariaLabels.buttonNextMonth}
+						className="nav-btn nav-btn-monospaced"
 						disabled={disabled}
-						displayType="unstyled"
+						displayType={null}
 						monospaced
 						onClick={handleNextMonthClicked}
 						small
