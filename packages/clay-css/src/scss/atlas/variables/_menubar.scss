@@ -3,23 +3,34 @@
 $menubar-vertical-transparent-md: () !default;
 $menubar-vertical-transparent-md: map-deep-merge(
 	(
-		bg-mobile: $white,
-		link-border-radius: 0.375rem,
-		link-border-radius-mobile: 0,
-		link-hover-bg: rgba($gray-900, 0.03),
-		link-hover-color: $gray-900,
-		link-active-font-weight: $font-weight-semi-bold,
+		mobile: (
+			background-color: $white,
+		),
 		link: (
-			transition: $btn-transition,
-			focus-bg: rgba($gray-900, 0.03),
-			focus-color: $gray-900,
-			focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
-			focus-outline: map-get($dropdown-item-base, focus-outline),
+			border-radius: 0.375rem,
+			transition: #{color 0.15s ease-in-out,
+			background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out,
+			box-shadow 0.15s ease-in-out},
+			hover: (
+				background-color: rgba($gray-900, 0.03),
+				color: $gray-900,
+			),
+			focus: (
+				background-color: rgba($gray-900, 0.03),
+				box-shadow:
+					clay-enable-shadows($component-focus-inset-box-shadow),
+				color: $gray-900,
+				outline: 0,
+			),
 			active-class: (
 				background-color: $primary-l3,
 				color: $primary,
+				font-weight: $font-weight-semi-bold,
 			),
-			disabled-box-shadow: none,
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+			),
 			show: (
 				background-color: $c-unset,
 				color: $gray-900,
@@ -27,19 +38,30 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			),
 		),
 		link-mobile: (
-			transition: none,
-			focus-bg: $dropdown-link-hover-bg,
-			focus-border-radius:
-				map-get($dropdown-item-base, focus-border-radius),
+			focus: (
+				background-color: lighten($component-active-bg, 44.9),
+			),
+			active: (
+				background-color: $c-unset,
+				color: $c-unset,
+			),
+			active-class: (
+				background-color: $primary-l3,
+				color: $primary,
+			),
 		),
-		toggler-font-size-mobile: 0.875rem,
-		toggler-font-weight-mobile: $font-weight-semi-bold,
 		toggler-mobile: (
-			border-radius: 0.375rem,
+			color: $gray-900,
+			font-size: 0.875rem,
+			font-weight: $font-weight-semi-bold,
 			transition: box-shadow 0.15s ease-in-out,
-			focus-box-shadow: $component-focus-box-shadow,
-			focus-outline: 0,
-			disabled-box-shadow: none,
+			focus: (
+				box-shadow: clay-enable-shadows($component-focus-box-shadow),
+				outline: 0,
+			),
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+			),
 		),
 	),
 	$menubar-vertical-transparent-md
@@ -50,23 +72,34 @@ $menubar-vertical-transparent-md: map-deep-merge(
 $menubar-vertical-transparent-lg: () !default;
 $menubar-vertical-transparent-lg: map-deep-merge(
 	(
-		bg-mobile: $white,
-		link-border-radius: 0.375rem,
-		link-border-radius-mobile: 0,
-		link-hover-bg: rgba($gray-900, 0.03),
-		link-hover-color: $gray-900,
-		link-active-font-weight: $font-weight-semi-bold,
+		mobile: (
+			background-color: $white,
+		),
 		link: (
-			transition: $btn-transition,
-			focus-bg: rgba($gray-900, 0.03),
-			focus-color: $gray-900,
-			focus-box-shadow: map-get($dropdown-item-base, focus-box-shadow),
-			focus-outline: map-get($dropdown-item-base, focus-outline),
+			border-radius: 0.375rem,
+			transition: #{color 0.15s ease-in-out,
+			background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out,
+			box-shadow 0.15s ease-in-out},
+			hover: (
+				background-color: rgba($gray-900, 0.03),
+				color: $gray-900,
+			),
+			focus: (
+				background-color: rgba($gray-900, 0.03),
+				box-shadow:
+					clay-enable-shadows($component-focus-inset-box-shadow),
+				color: $gray-900,
+				outline: 0,
+			),
 			active-class: (
 				background-color: $primary-l3,
 				color: $primary,
+				font-weight: $font-weight-semi-bold,
 			),
-			disabled-box-shadow: none,
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+			),
 			show: (
 				background-color: $c-unset,
 				color: $gray-900,
@@ -74,19 +107,30 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			),
 		),
 		link-mobile: (
-			transition: none,
-			focus-bg: $dropdown-link-hover-bg,
-			focus-border-radius:
-				map-get($dropdown-item-base, focus-border-radius),
+			focus: (
+				background-color: lighten($component-active-bg, 44.9),
+			),
+			active: (
+				background-color: $c-unset,
+				color: $c-unset,
+			),
+			active-class: (
+				background-color: $primary-l3,
+				color: $primary,
+			),
 		),
-		toggler-font-size-mobile: 0.875rem,
-		toggler-font-weight-mobile: $font-weight-semi-bold,
 		toggler-mobile: (
-			border-radius: 0.375rem,
+			color: $gray-900,
+			font-size: 0.875rem,
+			font-weight: $font-weight-semi-bold,
 			transition: box-shadow 0.15s ease-in-out,
-			focus-box-shadow: $component-focus-box-shadow,
-			focus-outline: 0,
-			disabled-box-shadow: none,
+			focus: (
+				box-shadow: clay-enable-shadows($component-focus-box-shadow),
+				outline: 0,
+			),
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+			),
 		),
 	),
 	$menubar-vertical-transparent-lg
