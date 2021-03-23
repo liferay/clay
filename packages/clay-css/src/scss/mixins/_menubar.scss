@@ -249,66 +249,79 @@
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
 /// breakpoint-up: {String}, // This uses Bootstrap 4's breakpoint up to calculate breakpoint down. Use `breakpoint-down` instead
 /// breakpoint-down: {String}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// // `bg` is deprecated use `background-color` instead
 /// bg: {Color | String | Null},
 /// border-color: {Color | String | List | Null},
 /// border-style: {String | List | Null},
-/// // `$link-bg` is deprecated use `$link` instead
-/// link-bg: {Color | String | Null},
-/// // `$link-border-radius` is deprecated use `$link` instead
-/// link-border-radius: {Number | String | List | Null},
-/// // `$link-color` is deprecated use `$link` instead
-/// link-color: {Color | String}, // Default: $navbar-light-color
-/// // `$link-hover-bg` is deprecated use `$link` instead
-/// link-hover-bg: {Color | String | Null},
-/// // `$link-hover-color` is deprecated use `$link` instead
-/// link-hover-color: {Color | String}, // Default: $navbar-light-hover-color
-/// // `$link-active-bg` is deprecated use `$link` instead
-/// link-active-bg: {Color | String | Null},
-/// // `$link-active-color` is deprecated use `$link` instead
-/// link-active-color: {Color | String}, // Default: $navbar-light-active-color
-/// // `$link-active-font-weight` is deprecated use `$link` instead
-/// link-active-font-weight: {Number | String | Null},
-/// // `$link-disabled-bg` is deprecated use `$link` instead
-/// link-disabled-bg: {Color | String | Null},
-/// // `$link-disabled-color` is deprecated use `$link` instead
-/// link-disabled-color: {Color | String}, // Default: $navbar-light-disabled-color
-/// link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// // `bg-mobile` is deprecated use Sass map `mobile` instead
 /// bg-mobile: {Color | String | Null},
+/// // `border-color-mobile` is deprecated use Sass map `mobile` instead
 /// border-color-mobile: {Color | String | List | Null},
+/// // `border-style-mobile` is deprecated use Sass map `mobile` instead
 /// border-style-mobile: {String | List | Null},
-/// // `$link-border-radius-mobile` is deprecated use `$link-mobile` instead
+/// // `link-bg` is deprecated use Sass map `link` instead
+/// link-bg: {Color | String | Null},
+/// // `link-border-radius` is deprecated use Sass map `link` instead
+/// link-border-radius: {Number | String | List | Null},
+/// // `link-color` is deprecated use Sass map `link` instead
+/// link-color: {Color | String},
+/// // `link-hover-bg` is deprecated use Sass map `link` instead
+/// link-hover-bg: {Color | String | Null},
+/// // `link-hover-color` is deprecated use Sass map `link` instead
+/// link-hover-color: {Color | String},
+/// // `link-active-bg` is deprecated use Sass map `link` instead
+/// link-active-bg: {Color | String | Null},
+/// // `link-active-color` is deprecated use Sass map `link` instead
+/// link-active-color: {Color | String},
+/// // `link-active-font-weight` is deprecated use Sass map `link` instead
+/// link-active-font-weight: {Number | String | Null},
+/// // `link-disabled-bg` is deprecated use Sass map `link` instead
+/// link-disabled-bg: {Color | String | Null},
+/// // `link-disabled-color` is deprecated use Sass map `link` instead
+/// link-disabled-color: {Color | String},
+/// link: {Map | Null}, // Pass parameters to `clay-link` mixin
+/// // `link-border-radius-mobile` is deprecated use Sass map `link-mobile` instead
 /// link-border-radius-mobile: {Number | String | List | Null},
-/// // `$link-color-mobile` is deprecated use `$link-mobile` instead
-/// link-color-mobile: {Color | String}, // Default: $dropdown-link-color
-/// // `$link-hover-bg-mobile` is deprecated use `$link-mobile` instead
-/// link-hover-bg-mobile: {Color | String}, // Default: $dropdown-link-hover-bg
-/// // `$link-hover-color-mobile` is deprecated use `$link-mobile` instead
-/// link-hover-color-mobile: {Color | String}, // Default: $dropdown-link-hover-color
-/// // `$link-active-bg-mobile` is deprecated use `$link-mobile` instead
-/// link-active-bg-mobile: {Color | String}, // Default: $dropdown-link-active-bg
-/// // `$link-active-font-weight-mobile` is deprecated use `$link-mobile` instead
-/// link-active-font-weight-mobile: {Number | String}, // Default: $dropdown-link-active-font-weight
-/// // `$link-active-color-mobile` is deprecated use `$link-mobile` instead
-/// link-active-color-mobile: {Color | String}, // Default: $dropdown-link-active-color
-/// // `$link-disabled-bg-mobile` is deprecated use `$link-mobile` instead
-/// link-disabled-bg-mobile: {Color | String}, // Default: transparent
-/// // `$link-disabled-color-mobile` is deprecated use `$link-mobile` instead
-/// link-disabled-color-mobile: {Color | String}, // Default: $dropdown-link-disabled-color
+/// // `link-color-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-color-mobile: {Color | String},
+/// // `link-hover-bg-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-hover-bg-mobile: {Color | String},
+/// // `link-hover-color-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-hover-color-mobile: {Color | String},
+/// // `link-active-bg-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-active-bg-mobile: {Color | String},
+/// // `link-active-font-weight-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-active-font-weight-mobile: {Number | String},
+/// // `link-active-color-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-active-color-mobile: {Color | String},
+/// // `link-disabled-bg-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-disabled-bg-mobile: {Color | String},
+/// // `link-disabled-color-mobile` is deprecated use Sass map `link-mobile` instead
+/// link-disabled-color-mobile: {Color | String},
 /// link-mobile: {Map | Null}, // Pass parameters to `clay-link` mixin
-/// collapse-bg-mobile: {Color | String}, // Default: $dropdown-bg
-/// collapse-border-color-mobile: {Color | String}, // Default: $dropdown-border-color
-/// collapse-border-radius-mobile: {Number | String | List}, // Default: $border-radius
+/// collapse: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// // `collapse-bg-mobile` is deprecated use Sass map `collapse-mobile` instead
+/// collapse-bg-mobile: {Color | String},
+/// // `collapse-border-color-mobile` is deprecated use Sass map `collapse-mobile` instead
+/// collapse-border-color-mobile: {Color | String},
+/// // `collapse-border-radius-mobile` is deprecated use Sass map `collapse-mobile` instead
+/// collapse-border-radius-mobile: {Number | String | List},
+/// // `collapse-border-style-mobile` is deprecated use Sass map `collapse-mobile` instead
 /// collapse-border-style-mobile: {String | List | Null},
-/// collapse-box-shadow-mobile: {String | List}, // Default: $dropdown-box-shadow
-/// // `$toggler-border-color-mobile` is deprecated use `$toggler-mobile` instead
+/// // `collapse-box-shadow-mobile` is deprecated use Sass map `collapse-mobile` instead
+/// collapse-box-shadow-mobile: {String | List},
+/// collapse-mobile: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// nav-nested-margins-item: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// nav-nested-margins-item-mobile: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// // `toggler-border-color-mobile` is deprecated use Sass map `toggler-mobile` instead
 /// toggler-border-color-mobile: {Color | String | Null},
-/// // `$toggler-border-style-mobile` is deprecated use `$toggler-mobile` instead
+/// // `toggler-border-style-mobile` is deprecated use Sass map `toggler-mobile` instead
 /// toggler-border-style-mobile: {String | List | Null},
-/// // `$toggler-color-mobile` is deprecated use `$toggler-mobile` instead
-/// toggler-color-mobile: {Color | String}, // Default: $link-active-color
-/// // `$toggler-font-size-mobile` is deprecated use `$toggler-mobile` instead
+/// // `toggler-color-mobile` is deprecated use Sass map `toggler-mobile` instead
+/// toggler-color-mobile: {Color | String},
+/// // `toggler-font-size-mobile` is deprecated use Sass map `toggler-mobile` instead
 /// toggler-font-size-mobile: {Number | String | Null},
-/// // `$toggler-font-weight-mobile` is deprecated use `$toggler-mobile` instead
+/// // `toggler-font-weight-mobile` is deprecated use Sass map `toggler-mobile` instead
 /// toggler-font-weight-mobile: {Number | String | Null},
 /// toggler-mobile: {Map | Null}, // Pass parameters to `clay-button-variant` mixin
 /// @todo
@@ -322,143 +335,198 @@
 
 	// .menubar-vertical-expand-{md}.menubar-{variant}
 
-	$bg: map-get($map, bg);
-	$border-color: map-get($map, border-color);
-	$border-style: map-get($map, border-style);
+	$base: map-merge(
+		$map,
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
+	);
 
-	$bg-mobile: map-get($map, bg-mobile);
-	$border-color-mobile: map-get($map, border-color-mobile);
-	$border-style-mobile: map-get($map, border-style-mobile);
+	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-merge(
+		$mobile,
+		(
+			background-color:
+				setter(
+					map-get($map, bg-mobile),
+					map-get($mobile, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, border-color-mobile),
+					map-get($mobile, border-color)
+				),
+			border-style:
+				setter(
+					map-get($map, border-style-mobile),
+					map-get($mobile, border-style)
+				),
+		)
+	);
 
 	// .nav-link
 
-	// `$link-bg` is deprecated use `$link` instead
-	$link-bg: map-get($map, link-bg);
-	// `$link-border-radius` is deprecated use `$link` instead
-	$link-border-radius: map-get($map, link-border-radius);
-	// `$link-color` is deprecated use `$link` instead
-	$link-color: setter(map-get($map, link-color), $navbar-light-color);
-	// `$link-hover-bg` is deprecated use `$link` instead
-	$link-hover-bg: map-get($map, link-hover-bg);
-	// `$link-hover-color` is deprecated use `$link` instead
-	$link-hover-color: setter(
-		map-get($map, link-hover-color),
-		$navbar-light-hover-color
-	);
-	// `$link-active-bg` is deprecated use `$link` instead
-	$link-active-bg: map-get($map, link-active-bg);
-	// `$link-active-color` is deprecated use `$link` instead
-	$link-active-color: setter(
-		map-get($map, link-active-color),
-		$navbar-light-active-color
-	);
-	// `$link-active-font-weight` is deprecated use `$link` instead
-	$link-active-font-weight: map-get($map, link-active-font-weight);
-	// `$link-disabled-bg` is deprecated use `$link` instead
-	$link-disabled-bg: map-get($map, link-disabled-bg);
-	// `$link-disabled-color` is deprecated use `$link` instead
-	$link-disabled-color: setter(
-		map-get($map, link-disabled-color),
-		$navbar-light-disabled-color
-	);
-
 	$link: setter(map-get($map, link), ());
-	$link: map-merge(
+	$link-hover: setter(map-get($link, hover), ());
+	$link-active: setter(map-get($link, active), ());
+	$link-active-class: setter(map-get($link, active-class), ());
+	$link-disabled: setter(map-get($link, disabled), ());
+	$link: map-deep-merge(
+		$link,
 		(
-			bg: $link-bg,
-			border-radius: $link-border-radius,
-			color: $link-color,
-			hover-bg: $link-hover-bg,
-			hover-color: $link-hover-color,
-			active-bg: $link-active-bg,
-			active-color: $link-active-color,
-			active-class-font-weight: $link-active-font-weight,
-			disabled-bg: $link-disabled-bg,
-			disabled-color: $link-disabled-color,
-		),
-		$link
-	);
-
-	// `$link-border-radius-mobile` is deprecated use `$link-mobile` instead
-	$link-border-radius-mobile: map-get($map, link-border-radius-mobile);
-	// `$link-color-mobile` is deprecated use `$link-mobile` instead
-	$link-color-mobile: setter(
-		map-get($map, link-color-mobile),
-		$dropdown-link-color
-	);
-
-	// `$link-hover-bg-mobile` is deprecated use `$link-mobile` instead
-	$link-hover-bg-mobile: setter(
-		map-get($map, link-hover-bg-mobile),
-		$dropdown-link-hover-bg
-	);
-	// `$link-hover-color-mobile` is deprecated use `$link-mobile` instead
-	$link-hover-color-mobile: setter(
-		map-get($map, link-hover-color-mobile),
-		$dropdown-link-hover-color
-	);
-
-	// `$link-active-bg-mobile` is deprecated use `$link-mobile` instead
-	$link-active-bg-mobile: setter(
-		map-get($map, link-active-bg-mobile),
-		$dropdown-link-active-bg
-	);
-	// `$link-active-font-weight-mobile` is deprecated use `$link-mobile` instead
-	$link-active-font-weight-mobile: setter(
-		map-get($map, link-active-font-weight-mobile),
-		$dropdown-link-active-font-weight
-	);
-	// `$link-active-color-mobile` is deprecated use `$link-mobile` instead
-	$link-active-color-mobile: setter(
-		map-get($map, link-active-color-mobile),
-		$dropdown-link-active-color
-	);
-
-	// `$link-disabled-bg-mobile` is deprecated use `$link-mobile` instead
-	$link-disabled-bg-mobile: setter(
-		map-get($map, link-disabled-bg-mobile),
-		transparent
-	);
-	// `$link-disabled-color-mobile` is deprecated use `$link-mobile` instead
-	$link-disabled-color-mobile: setter(
-		map-get($map, link-disabled-color-mobile),
-		$dropdown-link-disabled-color
+			background-color:
+				setter(map-get($map, link-bg), map-get($link, background-color)),
+			border-radius:
+				setter(
+					map-get($map, link-border-radius),
+					map-get($link, border-radius)
+				),
+			color: setter(map-get($map, link-color), map-get($link, color)),
+			hover: (
+				background-color:
+					setter(
+						map-get($map, link-hover-bg),
+						map-get($link-hover, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-hover-color),
+						map-get($link-hover, color)
+					),
+			),
+			active: (
+				background-color:
+					setter(
+						map-get($map, link-active-bg),
+						map-get($link-active, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-active-color),
+						map-get($link-active, color)
+					),
+			),
+			active-class: (
+				font-weight:
+					setter(
+						map-get($map, link-active-class-font-weight),
+						map-get($link-active-class, font-weight)
+					),
+			),
+			disabled: (
+				background-color:
+					setter(
+						map-get($map, link-disabled-bg),
+						map-get($link-disabled, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-disabled-color),
+						map-get($link-disabled, color)
+					),
+			),
+		)
 	);
 
 	$link-mobile: setter(map-get($map, link-mobile), ());
-	$link-mobile: map-merge(
+	$link-mobile-hover: setter(map-get($link-mobile, hover), ());
+	$link-mobile-active: setter(map-get($link-mobile, active), ());
+	$link-mobile-active-class: setter(map-get($link-mobile, active-class), ());
+	$link-mobile-disabled: setter(map-get($link-mobile, disabled), ());
+	$link-mobile: map-deep-merge(
+		$link-mobile,
 		(
-			border-radius: $link-border-radius-mobile,
-			color: $link-color-mobile,
-			hover-bg: $link-hover-bg-mobile,
-			hover-color: $link-hover-color-mobile,
-			active-bg: $link-active-bg-mobile,
-			active-color: $link-active-color-mobile,
-			active-class-font-weight: $link-active-font-weight-mobile,
-			disabled-bg: $link-disabled-bg-mobile,
-			disabled-color: $link-disabled-color-mobile,
-		),
-		$link-mobile
+			border-radius:
+				setter(
+					map-get($map, link-border-radius-mobile),
+					map-get($link-mobile, border-radius)
+				),
+			color:
+				setter(
+					map-get($map, link-color-mobile),
+					map-get($link-mobile, color)
+				),
+			hover: (
+				background-color:
+					setter(
+						map-get($map, link-hover-bg-mobile),
+						map-get($link-mobile-hover, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-hover-color-mobile),
+						map-get($link-mobile-hover, color)
+					),
+			),
+			active: (
+				background-color:
+					setter(
+						map-get($map, link-active-bg-mobile),
+						map-get($link-mobile-active, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-active-color-mobile),
+						map-get($link-mobile-active, color)
+					),
+			),
+			active-class: (
+				font-weight:
+					setter(
+						map-get($map, link-active-font-weight-mobile),
+						map-get($link-mobile-active-class, font-weight)
+					),
+			),
+			disabled: (
+				background-color:
+					setter(
+						map-get($map, link-disabled-bg-mobile),
+						map-get($link-mobile-disabled, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-disabled-color-mobile),
+						map-get($link-mobile-disabled, color)
+					),
+			),
+		)
 	);
 
 	// .menubar-collapse
 
-	$collapse-bg-mobile: setter(
-		map-get($map, collapse-bg-mobile),
-		$dropdown-bg
-	);
-	$collapse-border-color-mobile: setter(
-		map-get($map, collapse-border-color-mobile),
-		$dropdown-border-color
-	);
-	$collapse-border-radius-mobile: setter(
-		map-get($map, collapse-border-radius-mobile),
-		$border-radius
-	);
-	$collapse-border-style-mobile: map-get($map, collapse-border-style-mobile);
-	$collapse-box-shadow-mobile: setter(
-		map-get($map, collapse-box-shadow-mobile),
-		$dropdown-box-shadow
+	$collapse: setter(map-get($map, collapse), ());
+
+	$collapse-mobile: setter(map-get($map, collapse-mobile), ());
+	$collapse-mobile: map-deep-merge(
+		$collapse-mobile,
+		(
+			background-color:
+				setter(
+					map-get($map, collapse-bg-mobile),
+					map-get($collapse-mobile, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, collapse-border-color-mobile),
+					map-get($collapse-mobile, border-color)
+				),
+			border-radius:
+				setter(
+					map-get($map, collapse-border-radius-mobile),
+					map-get($collapse-mobile, border-radius)
+				),
+			border-style:
+				setter(
+					map-get($map, collapse-border-style-mobile),
+					map-get($collapse-mobile, border-style)
+				),
+			box-shadow:
+				setter(
+					map-get($map, collapse-box-shadow-mobile),
+					map-get($collapse-mobile, box-shadow)
+				),
+		)
 	);
 
 	$nav-nested-margins-item: setter(
@@ -473,76 +541,75 @@
 
 	// .menubar-toggler
 
-	// `$toggler-border-color-mobile` is deprecated use `$toggler-mobile` instead
-	$toggler-border-color-mobile: map-get($map, toggler-border-color-mobile);
-	// `$toggler-border-style-mobile` is deprecated use `$toggler-mobile` instead
-	$toggler-border-style-mobile: map-get($map, toggler-border-style-mobile);
-	// `$toggler-color-mobile` is deprecated use `$toggler-mobile` instead
-	$toggler-color-mobile: setter(
-		map-get($map, toggler-color-mobile),
-		$link-active-color
-	);
-	// `$toggler-font-size-mobile` is deprecated use `$toggler-mobile` instead
-	$toggler-font-size-mobile: map-get($map, toggler-font-size-mobile);
-	// `$toggler-font-weight-mobile` is deprecated use `$toggler-mobile` instead
-	$toggler-font-weight-mobile: map-get($map, toggler-font-weight-mobile);
-
 	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
-	$toggler-mobile: map-merge(
+	$toggler-mobile: map-deep-merge(
+		$toggler-mobile,
 		(
-			border-color: $toggler-border-color-mobile,
-			border-style: $toggler-border-style-mobile,
-			color: $toggler-color-mobile,
-			font-size: $toggler-font-size-mobile,
-			font-weight: $toggler-font-weight-mobile,
-		),
-		$toggler-mobile
+			border-color:
+				setter(
+					map-get($map, toggler-border-color-mobile),
+					map-get($toggler-mobile, border-color)
+				),
+			border-style:
+				setter(
+					map-get($map, toggler-border-style-mobile),
+					map-get($toggler-mobile, border-style)
+				),
+			color:
+				setter(
+					map-get($map, toggler-color-mobile),
+					map-get($toggler-mobile, color)
+				),
+			font-size:
+				setter(
+					map-get($map, toggler-font-size-mobile),
+					map-get($toggler-mobile, font-size)
+				),
+			font-weight:
+				setter(
+					map-get($map, toggler-font-weight-mobile),
+					map-get($toggler-mobile, font-weight)
+				),
+		)
 	);
 
-	background-color: $bg;
-	border-color: $border-color;
-	border-style: $border-style;
+	@if ($enable) {
+		@include clay-css($base);
 
-	@include media-breakpoint-down($breakpoint-down) {
-		background-color: $bg-mobile;
-		border-color: $border-color-mobile;
-		border-style: $border-style-mobile;
-	}
-
-	.menubar-collapse {
 		@include media-breakpoint-down($breakpoint-down) {
-			background-color: $collapse-bg-mobile;
-			border-color: $collapse-border-color-mobile;
-
-			@include border-radius($collapse-border-radius-mobile);
-
-			border-style: $collapse-border-style-mobile;
-
-			@include box-shadow($collapse-box-shadow-mobile);
+			@include clay-css($mobile);
 		}
-	}
 
-	.menubar-toggler {
-		@include media-breakpoint-down($breakpoint-down) {
-			@include clay-button-variant($toggler-mobile);
-		}
-	}
-
-	.nav-nested-margins {
-		> li .nav > li {
-			@include clay-css($nav-nested-margins-item);
+		.menubar-collapse {
+			@include clay-css($collapse);
 
 			@include media-breakpoint-down($breakpoint-down) {
-				@include clay-css($nav-nested-margins-item-mobile);
+				@include clay-css($collapse-mobile);
 			}
 		}
-	}
 
-	.nav-link {
-		@include clay-link($link);
+		.menubar-toggler {
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-button-variant($toggler-mobile);
+			}
+		}
 
-		@include media-breakpoint-down($breakpoint-down) {
-			@include clay-link($link-mobile);
+		.nav-nested-margins {
+			> li .nav > li {
+				@include clay-css($nav-nested-margins-item);
+
+				@include media-breakpoint-down($breakpoint-down) {
+					@include clay-css($nav-nested-margins-item-mobile);
+				}
+			}
+		}
+
+		.nav-link {
+			@include clay-link($link);
+
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-link($link-mobile);
+			}
 		}
 	}
 }
