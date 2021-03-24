@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.3](https://github.com/liferay/clay/compare/v3.25.2...v3.25.3) (2021-03-24)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** Use `btn-outline-secondary btn-outline-borderless` instead of `btn-unstyled` for Clear All Button ([3d71cf0](https://github.com/liferay/clay/commit/3d71cf0))
+
 ## [3.25.1](https://github.com/liferay/clay/compare/v3.25.0...v3.25.1) (2021-03-05)
 
 ### Bug Fixes

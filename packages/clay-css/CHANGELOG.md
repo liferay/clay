@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.3](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.25.2...v3.25.3) (2021-03-24)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Menubar (Vertical Navigation) link active state should be more visible ([5a94cfd](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5a94cfd))
+* **@clayui/css:** Menubar toggler with c-inner cuts off caret icon ([1932782](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1932782))
+* **@clayui/css:** Mixins `clay-link` adds option to style `&.show, &[aria-expanded='true']` separately from `active-class` so we can style panel toggles ([8a1a148](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8a1a148))
+
+
+
+
+
 ## [3.25.2](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.25.1...v3.25.2) (2021-03-10)
 
 
