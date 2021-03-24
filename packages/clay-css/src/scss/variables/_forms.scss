@@ -156,14 +156,16 @@ $input-readonly-focus-color: null !default;
 $input-readonly: () !default;
 $input-readonly: map-deep-merge(
 	(
-		bg: $input-readonly-bg,
+		background-color: $input-readonly-bg,
 		border-color: $input-readonly-border-color,
 		color: $input-readonly-color,
 		cursor: $input-readonly-cursor,
 		opacity: 1,
-		focus-bg: $input-readonly-focus-bg,
-		focus-border-color: $input-readonly-focus-border-color,
-		focus-color: $input-readonly-focus-color,
+		focus: (
+			background-color: $input-readonly-focus-bg,
+			border-color: $input-readonly-focus-border-color,
+			color: $input-readonly-focus-color,
+		),
 	),
 	$input-readonly
 );
@@ -174,7 +176,9 @@ $input-plaintext-readonly: map-deep-merge(
 		border-radius: $input-border-radius,
 		outline: 0,
 		transition: $input-transition,
-		focus-box-shadow: $input-focus-box-shadow,
+		focus: (
+			box-shadow: $input-focus-box-shadow,
+		),
 	),
 	$input-plaintext-readonly
 );

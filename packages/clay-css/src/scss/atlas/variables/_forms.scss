@@ -72,10 +72,12 @@ $input-readonly-bg: $white !default;
 $input-readonly: () !default;
 $input-readonly: map-deep-merge(
 	(
-		bg: $input-readonly-bg,
+		background-color: $input-readonly-bg,
 		border-color: $input-border-color,
-		focus-border-color: $input-focus-border-color,
-		focus-box-shadow: none,
+		focus: (
+			border-color: $input-focus-border-color,
+			box-shadow: none,
+		),
 	),
 	$input-readonly
 );
@@ -83,8 +85,10 @@ $input-readonly: map-deep-merge(
 $input-plaintext-readonly: () !default;
 $input-plaintext-readonly: map-deep-merge(
 	(
-		focus-border-color: $input-focus-border-color,
-		focus-box-shadow: none,
+		focus: (
+			border-color: $input-focus-border-color,
+			box-shadow: none,
+		),
 	),
 	$input-plaintext-readonly
 );
