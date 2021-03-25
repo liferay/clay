@@ -129,9 +129,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 						className="nav-btn nav-btn-monospaced"
 						disabled={disabled}
 						displayType={null}
-						monospaced
 						onClick={handlePreviousMonthClicked}
-						small
 					>
 						<Icon spritemap={spritemap} symbol="angle-left" />
 					</Button>
@@ -140,9 +138,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 						className="nav-btn nav-btn-monospaced"
 						disabled={disabled}
 						displayType={null}
-						monospaced
 						onClick={onDotClicked}
-						small
 					>
 						<Icon spritemap={spritemap} symbol="simple-circle" />
 					</Button>
@@ -151,9 +147,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 						className="nav-btn nav-btn-monospaced"
 						disabled={disabled}
 						displayType={null}
-						monospaced
 						onClick={handleNextMonthClicked}
-						small
 					>
 						<Icon spritemap={spritemap} symbol="angle-right" />
 					</Button>
