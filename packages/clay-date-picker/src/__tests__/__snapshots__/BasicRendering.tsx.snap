@@ -152,7 +152,7 @@ exports[`BasicRendering renders by default 1`] = `
               >
                 <button
                   aria-label="Select the previous month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -166,7 +166,7 @@ exports[`BasicRendering renders by default 1`] = `
                 </button>
                 <button
                   aria-label="Select current date"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -180,7 +180,7 @@ exports[`BasicRendering renders by default 1`] = `
                 </button>
                 <button
                   aria-label="Select the next month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -681,7 +681,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
               >
                 <button
                   aria-label="Select the previous month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -695,7 +695,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
                 </button>
                 <button
                   aria-label="Select current date"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -709,7 +709,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
                 </button>
                 <button
                   aria-label="Select the next month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -1240,7 +1240,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
               >
                 <button
                   aria-label="Select the previous month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -1254,7 +1254,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                 </button>
                 <button
                   aria-label="Select current date"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -1268,7 +1268,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                 </button>
                 <button
                   aria-label="Select the next month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -2046,7 +2046,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
               >
                 <button
                   aria-label="Select the previous month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -2060,7 +2060,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
                 </button>
                 <button
                   aria-label="Select current date"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
@@ -2074,7 +2074,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
                 </button>
                 <button
                   aria-label="Select the next month"
-                  class="btn btn-monospaced btn-sm btn-unstyled"
+                  class="nav-btn nav-btn-monospaced btn"
                   type="button"
                 >
                   <svg
