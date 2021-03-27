@@ -924,8 +924,8 @@ body.sidenav-transition {
 }
 
 .uxgl-switches:before, .uxgl-switches:after {
-  content: " ";
   display: table;
+  content: " ";
 }
 
 .uxgl-switches:after {
