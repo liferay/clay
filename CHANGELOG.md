@@ -1,3 +1,6 @@
+### v1.0.32 - March 26, 2021
+* Fixes [#4004](https://github.com/liferay/clay/issues/4004)Update Bootstrap from 3.3.5 to 3.4.1
+
 ### v1.0.31 - March 1, 2021
 * fix(lexicon-css): [#3958](https://github.com/liferay/clay/issues/3958)Remove firefox `display: table-cell` CSS reset for `fieldsets`
 
