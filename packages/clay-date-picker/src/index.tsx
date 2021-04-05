@@ -372,7 +372,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		}, [handleFocus]);
 
 		return (
-			<FocusScope arrowKeysLeftRight>
+			<FocusScope>
 				<div className="date-picker">
 					<ClayInput.Group id={id} ref={triggerElementRef}>
 						<ClayInput.GroupItem>
