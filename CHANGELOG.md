@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.4](https://github.com/liferay/clay/compare/v3.25.3...v3.25.4) (2021-04-07)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** Date Navigation Controls are wrong color. This adds clay css classes but also leaves btn-monospaced and btn-sm just incase. ([850286e](https://github.com/liferay/clay/commit/850286e))
+-   **@clayui/date-picker:** disable focus control using the arrow keys ([d21dd7d](https://github.com/liferay/clay/commit/d21dd7d))
+-   **@clayui/date-picker:** Removes `btn-sm` and `btn-monospaced` from Date Navigation controls. They're not needed. ([e70ad3c](https://github.com/liferay/clay/commit/e70ad3c))
+
 ## [3.25.3](https://github.com/liferay/clay/compare/v3.25.2...v3.25.3) (2021-03-24)
 
 ### Bug Fixes
