@@ -14,6 +14,7 @@ export enum FirstDayOfWeek {
 }
 
 export interface IAriaLabels {
+	buttonChooseDate: string;
 	buttonDot: string;
 	buttonNextMonth: string;
 	buttonPreviousMonth: string;
@@ -24,3 +25,8 @@ export interface IYears {
 	end: number;
 	start: number;
 }
+
+export type TDateRange = {
+	fromDate: Date;
+	toDate: Date;
+};

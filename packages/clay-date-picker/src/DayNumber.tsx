@@ -7,46 +7,88 @@ import {Keys} from '@clayui/shared';
 import classnames from 'classnames';
 import React from 'react';
 
-import {IDay, formatDate, setDate} from './Helpers';
+import {IDay, setDate} from './Helpers';
+import {TDateRange} from './types';
 
 interface IProps {
 	day: IDay;
-	daySelected: Date;
+	dateRange: TDateRange;
 	disabled?: boolean;
-	onClick: (date: Date) => void;
+	enableDateRange?: boolean;
+	onClick: (date: Date, enableDateRange?: boolean) => void;
+}
+
+interface IInterval {
+	start: Date;
+	end: Date;
+}
+
+function isWithinInterval(dirtyDate: Date, dirtyInterval: IInterval) {
+	const interval = dirtyInterval || {};
+	const time = dirtyDate.getTime();
+	const startTime = interval.start.getTime();
+	const endTime = interval.end.getTime();
+
+	if (!(startTime <= endTime)) {
+		return false;
+	}
+
+	return time >= startTime && time <= endTime;
 }
 
 const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
+	dateRange,
 	day,
-	daySelected,
 	disabled,
+	enableDateRange,
 	onClick,
 }) => {
 	const {date, outside} = day;
 
+	const isSelectedToDate =
+		date.toDateString() === dateRange.toDate.toDateString();
+	const isSelectedFromDate =
+		date.toDateString() === dateRange.fromDate.toDateString();
+
 	const classNames = classnames(
 		'date-picker-date date-picker-calendar-item',
 		{
-			active: date.toDateString() === daySelected.toDateString(),
+			active: isSelectedFromDate || (enableDateRange && isSelectedToDate),
 			disabled: outside || disabled,
 		}
 	);
 
 	return (
-		<div className="date-picker-col">
+		<div
+			className={classnames(
+				'date-picker-col',
+				enableDateRange && {
+					'c-selected':
+						!isSelectedFromDate &&
+						!isSelectedToDate &&
+						isWithinInterval(date, {
+							end: dateRange.toDate,
+							start: dateRange.fromDate,
+						}),
+					'c-selected c-selected-end':
+						isSelectedToDate &&
+						!(isSelectedToDate && isSelectedFromDate),
+					'c-selected c-selected-start':
+						isSelectedFromDate &&
+						!(isSelectedToDate && isSelectedFromDate),
+				}
+			)}
+		>
 			<button
-				aria-label={formatDate(
-					setDate(date, {
-						hours: 12,
-						milliseconds: 0,
-						minutes: 0,
-						seconds: 0,
-					}),
-					'yyyy MM dd'
-				)}
+				aria-label={setDate(date, {
+					hours: 12,
+					milliseconds: 0,
+					minutes: 0,
+					seconds: 0,
+				}).toLocaleDateString()}
 				className={classNames}
 				disabled={outside}
-				onClick={() => onClick(date)}
+				onClick={() => onClick(date, enableDateRange)}
 				onKeyDown={(event) => {
 					// When tabbing and selecting a DayNumber using
 					// SPACE key the active state it's not being removed.
@@ -57,7 +99,7 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 				}}
 				onKeyUp={(event) => {
 					if (event.key === Keys.Spacebar) {
-						onClick(date);
+						onClick(date, enableDateRange);
 					}
 				}}
 				type="button"

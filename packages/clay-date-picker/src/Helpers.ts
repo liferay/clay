@@ -4,9 +4,12 @@
  */
 
 import {default as formatDate} from 'date-fns/format';
+import {default as isWithinInterval} from 'date-fns/isWithinInterval';
 import {default as parseDate} from 'date-fns/parse';
 
-export {formatDate, parseDate};
+import {TDateRange} from './types';
+
+export {formatDate, parseDate, isWithinInterval};
 
 export interface IDay {
 	date: Date;
@@ -16,6 +19,18 @@ export interface IDay {
 export type WeekDays = Array<IDay>;
 
 export type Month = Array<WeekDays>;
+
+export const RANGE_SEPARATOR = ' - ';
+
+export function fromDateRangeToString(
+	dateRange: TDateRange,
+	dateFormat: string
+) {
+	return `${formatDate(
+		dateRange.fromDate,
+		dateFormat
+	)}${RANGE_SEPARATOR}${formatDate(dateRange.toDate, dateFormat)}`;
+}
 
 /**
  * Clone a date object.
