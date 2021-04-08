@@ -33,36 +33,38 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	);
 
 	return (
-		<button
-			aria-label={formatDate(
-				setDate(date, {
-					hours: 12,
-					milliseconds: 0,
-					minutes: 0,
-					seconds: 0,
-				}),
-				'yyyy MM dd'
-			)}
-			className={classNames}
-			disabled={outside}
-			onClick={() => onClick(date)}
-			onKeyDown={(event) => {
-				// When tabbing and selecting a DayNumber using
-				// SPACE key the active state it's not being removed.
-				// See https://github.com/liferay/clay/issues/3374 for more details.
-				if (event.key === Keys.Spacebar) {
-					event.preventDefault();
-				}
-			}}
-			onKeyUp={(event) => {
-				if (event.key === Keys.Spacebar) {
-					onClick(date);
-				}
-			}}
-			type="button"
-		>
-			{date.getDate()}
-		</button>
+		<div className="date-picker-col">
+			<button
+				aria-label={formatDate(
+					setDate(date, {
+						hours: 12,
+						milliseconds: 0,
+						minutes: 0,
+						seconds: 0,
+					}),
+					'yyyy MM dd'
+				)}
+				className={classNames}
+				disabled={outside}
+				onClick={() => onClick(date)}
+				onKeyDown={(event) => {
+					// When tabbing and selecting a DayNumber using
+					// SPACE key the active state it's not being removed.
+					// See https://github.com/liferay/clay/issues/3374 for more details.
+					if (event.key === Keys.Spacebar) {
+						event.preventDefault();
+					}
+				}}
+				onKeyUp={(event) => {
+					if (event.key === Keys.Spacebar) {
+						onClick(date);
+					}
+				}}
+				type="button"
+			>
+				{date.getDate()}
+			</button>
+		</div>
 	);
 };
 

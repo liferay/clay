@@ -104,6 +104,12 @@ yarn workspace @clayui/css run build && yarn storybook
 yarn test
 ```
 
+8. Update snapshots:
+
+```
+yarn run jest --u
+```
+
 #### clayui.com
 
 To contribute to the documentation and the site in general, you can try to run locally to test your changes:

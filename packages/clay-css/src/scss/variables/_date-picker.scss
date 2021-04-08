@@ -60,10 +60,41 @@ $date-picker-row: map-deep-merge(
 	(
 		display: flex,
 		justify-content: space-between,
+		list-style: none,
 		margin-bottom: 0.5rem,
 		margin-top: 0.5rem,
+		padding: 0,
 	),
 	$date-picker-row
+);
+
+$date-picker-col: () !default;
+$date-picker-col: map-deep-merge(
+	(
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
+		c-selected: (
+			background-image: linear-gradient($primary-l3, $primary-l3),
+			background-repeat: no-repeat,
+		),
+		c-selected-first-child: (
+			border-bottom-left-radius: 100px,
+			border-top-left-radius: 100px,
+		),
+		c-selected-last-child: (
+			border-bottom-right-radius: 100px,
+			border-top-right-radius: 100px,
+		),
+		c-selected-start: (
+			background-position: right top,
+			background-size: 50% 100%,
+		),
+		c-selected-end: (
+			background-position: left top,
+			background-size: 50% 100%,
+		),
+	),
+	$date-picker-col
 );
 
 $date-picker-days-row: () !default;
@@ -141,7 +172,6 @@ $date-picker-calendar-item: map-deep-merge(
 		align-items: center,
 		bg: transparent,
 		border-width: 0,
-		cursor: $link-cursor,
 		disabled-cursor: $disabled-cursor,
 		display: inline-flex,
 		flex-shrink: 0,
@@ -149,8 +179,8 @@ $date-picker-calendar-item: map-deep-merge(
 		height: 2rem,
 		justify-content: center,
 		line-height: 1,
-		margin-left: 0.5rem,
-		margin-right: 0.5rem,
+		margin-left: 0,
+		margin-right: 0,
 		padding-bottom: 0,
 		padding-left: 0,
 		padding-right: 0,
@@ -169,6 +199,8 @@ $date-picker-date: map-deep-merge(
 	(
 		border-radius: 100px,
 		color: $gray-600,
+		cursor: $link-cursor,
+		position: relative,
 		hover-bg: $gray-200,
 		focus-box-shadow: $input-btn-focus-box-shadow,
 		focus-outline: 0,

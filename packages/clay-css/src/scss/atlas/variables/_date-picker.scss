@@ -1,3 +1,13 @@
+// Date Picker Dropdown Menu
+
+$date-picker-dropdown-menu: () !default;
+$date-picker-dropdown-menu: map-deep-merge(
+	(
+		max-width: 368px,
+	),
+	$date-picker-dropdown-menu
+);
+
 // Date Picker Nav
 
 $date-picker-nav-btn: () !default;
