@@ -6,6 +6,8 @@
 import {default as formatDate} from 'date-fns/format';
 import {default as parseDate} from 'date-fns/parse';
 
+import {IYears, TDaysSelected} from './types';
+
 export {formatDate, parseDate};
 
 export interface IDay {
@@ -16,6 +18,36 @@ export interface IDay {
 export type WeekDays = Array<IDay>;
 
 export type Month = Array<WeekDays>;
+
+export const RANGE_SEPARATOR = ' - ';
+
+export function isDateRangeWithinYears(year: number, years: IYears) {
+	return year >= years.start && years.end >= year;
+}
+
+export function fromStringToRange(
+	value: string,
+	dateFormat: string,
+	referenceDate: Date
+): TDaysSelected {
+	const [fromDateString, toDateString] = value.split(RANGE_SEPARATOR);
+
+	return [
+		parseDate(fromDateString, dateFormat, referenceDate),
+		toDateString
+			? parseDate(toDateString, dateFormat, referenceDate)
+			: referenceDate,
+	];
+}
+
+export function fromRangeToString(range: TDaysSelected, dateFormat: string) {
+	const [startDate, endDate] = range;
+
+	return `${formatDate(startDate, dateFormat)}${RANGE_SEPARATOR}${formatDate(
+		endDate,
+		dateFormat
+	)}`;
+}
 
 /**
  * Clone a date object.

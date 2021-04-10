@@ -17,13 +17,21 @@ import React from 'react';
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
-import {isValid, parseDate, setDate} from './Helpers';
+import {
+	formatDate,
+	fromRangeToString,
+	fromStringToRange,
+	isDateRangeWithinYears,
+	isValid,
+	parseDate,
+	setDate,
+} from './Helpers';
 import {useCurrentTime, useWeeks} from './Hooks';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
-import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
+import {FirstDayOfWeek, IAriaLabels, IYears, TDaysSelected} from './types';
 
 export {FirstDayOfWeek};
 
@@ -93,15 +101,17 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 *
 	 * Second argument gives the type that caused the value change
 	 */
-	onValueChange: (
-		value: Date | string,
-		type?: 'click' | 'input' | 'time'
-	) => void;
+	onValueChange: (value: string, type?: 'click' | 'input' | 'time') => void;
 
 	/**
 	 * Describe a brief tip to help users interact.
 	 */
 	placeholder?: string;
+
+	/***
+	 * Flag to indicate the user will use the date-range date-picker
+	 */
+	range?: boolean;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -150,7 +160,8 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onExpandedChange?: TInternalStateOnChange<boolean>;
 }
 
-const dateNow = new Date();
+const DATE_NOW = new Date();
+
 const TIME_FORMAT = 'HH:mm';
 
 /**
@@ -163,6 +174,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 	(
 		{
 			ariaLabels = {
+				buttonChooseDate: 'Choose date',
 				buttonDot: 'Select current date',
 				buttonNextMonth: 'Select the next month',
 				buttonPreviousMonth: 'Select the previous month',
@@ -174,7 +186,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			footerElement,
 			id,
 			initialExpanded = false,
-			initialMonth = new Date(),
+			initialMonth = DATE_NOW,
 			inputName,
 			months = [
 				'January',
@@ -194,6 +206,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			onNavigation = () => {},
 			onValueChange = () => {},
 			placeholder,
+			range,
 			spritemap,
 			time = false,
 			timezone,
@@ -201,8 +214,8 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			value,
 			weekdaysShort = ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 			years = {
-				end: dateNow.getFullYear(),
-				start: dateNow.getFullYear(),
+				end: DATE_NOW.getFullYear(),
+				start: DATE_NOW.getFullYear(),
 			},
 			...otherProps
 		}: IProps,
@@ -227,17 +240,15 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			normalizeDate(initialMonth)
 		);
 
+		// TODO - Rename to daysSelected
+		const [daysSelected, setDaysSelected] = React.useState<TDaysSelected>(
+			() => [normalizeDate(initialMonth), normalizeDate(initialMonth)]
+		);
+
 		/**
 		 * Indicates the time selected by the user.
 		 */
 		const [currentTime, setCurrentTime] = useCurrentTime(TIME_FORMAT);
-
-		/**
-		 * The day selected by the user.
-		 */
-		const [daySelected, setDaySelected] = React.useState<Date>(
-			initialMonth
-		);
 
 		/**
 		 * An array of the weeks and days list for the current month
@@ -282,12 +293,64 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		};
 
 		/**
+		 * Holds the logic for how to behave when clicking on a date,
+		 * on the DatePicker using date ranges
+		 */
+		const handleDateRangeClicked = (
+			date: Date,
+			daysSelected: TDaysSelected
+		) => {
+			const [startDate, endDate] = daysSelected;
+
+			if (date < startDate) {
+				setDaysSelected([date, endDate]);
+
+				onValueChange(
+					fromRangeToString(daysSelected, dateFormat),
+					'click'
+				);
+
+				return;
+			}
+
+			setDaysSelected([startDate, date]);
+
+			onValueChange(
+				fromRangeToString([startDate, date], dateFormat),
+				'click'
+			);
+		};
+
+		/**
 		 * Handles the click on element of the day
 		 */
 		const handleDayClicked = (date: Date) => {
-			setDaySelected(date);
+			if (range) {
+				handleDateRangeClicked(date, daysSelected);
 
-			onValueChange(date, 'click');
+				return;
+			}
+
+			setDaysSelected([date, date]);
+
+			const dateFormatted = formatDate(date, dateFormat);
+
+			if (time) {
+				const dateString = formatDate(
+					parseDate(
+						`${dateFormatted} ${currentTime}`,
+						`${dateFormat} ${TIME_FORMAT}`,
+						date
+					),
+					`${dateFormat} ${TIME_FORMAT}`
+				);
+
+				onValueChange(dateString, 'click');
+
+				return;
+			}
+
+			onValueChange(dateFormatted, 'click');
 		};
 
 		/**
@@ -297,17 +360,30 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 			const {value} = event.target;
+
 			const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
 
-			const date = parseDate(value, format, new Date());
-			const year = date.getFullYear();
+			const [fromDate, toDate] = fromStringToRange(
+				value,
+				format,
+				DATE_NOW
+			);
 
-			if (isValid(date) && year >= years.start && years.end >= year) {
-				changeMonth(date);
-				setDaySelected(date);
+			const yearFrom = fromDate.getFullYear();
+			const yearTo = toDate.getFullYear();
+
+			if (
+				isValid(fromDate) &&
+				isValid(toDate) &&
+				isDateRangeWithinYears(yearFrom, years) &&
+				isDateRangeWithinYears(yearTo, years)
+			) {
+				changeMonth(fromDate);
+
+				setDaysSelected([fromDate, toDate]);
 
 				if (time) {
-					setCurrentTime(date.getHours(), date.getMinutes());
+					setCurrentTime(fromDate.getHours(), fromDate.getMinutes());
 				}
 			}
 
@@ -319,25 +395,37 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * is no date selected.
 		 */
 		const handleDotClicked = () => {
-			changeMonth(dateNow);
-			setDaySelected(dateNow);
-			onValueChange(dateNow);
+			changeMonth(DATE_NOW);
+
+			setDaysSelected([DATE_NOW, daysSelected[1]]);
+
+			if (range) {
+				return onValueChange(
+					fromRangeToString([DATE_NOW, daysSelected[1]], dateFormat)
+				);
+			}
+
+			const time = parseDate(currentTime, TIME_FORMAT, DATE_NOW);
+
+			onValueChange(formatDate(time, `${dateFormat} ${TIME_FORMAT}`));
 		};
 
 		const handleTimeChange = (
 			hours: number | string,
 			minutes: number | string
 		) => {
-			const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
+			const format = `${dateFormat} ${TIME_FORMAT}`;
+			const [day] = daysSelected;
 
-			// Hack to force InputDate to add `currentTime` to the value of
-			// the input when the value was edited by the user.
-			if (
-				typeof value === 'string' &&
-				isValid(parseDate(value, format, new Date()))
-			) {
-				onValueChange(parseDate(value, format, new Date()), 'time');
-			}
+			const dateParsed = parseDate(value, format, DATE_NOW);
+			const newDate = isValid(dateParsed)
+				? dateParsed
+				: new Date(day.getTime());
+
+			newDate.setHours(Number(hours));
+			newDate.setMinutes(Number(minutes));
+
+			onValueChange(formatDate(newDate, format), 'time');
 
 			setCurrentTime(hours, minutes);
 		};
@@ -379,20 +467,18 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 							<InputDate
 								{...otherProps}
 								ariaLabel={ariaLabels.input}
-								currentTime={currentTime}
-								dateFormat={dateFormat}
 								disabled={disabled}
 								inputName={inputName}
 								onChange={inputChange}
 								placeholder={placeholder}
 								ref={ref}
-								time={time}
 								useNative={useNative}
 								value={value}
 							/>
 							{!useNative && (
 								<ClayInput.GroupInsetItem after>
 									<Button
+										aria-label={ariaLabels.buttonChooseDate}
 										className="date-picker-dropdown-toggle"
 										data-testid="date-button"
 										disabled={disabled}
@@ -418,7 +504,11 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 							onSetActive={setExpandedValue}
 							ref={dropdownContainerRef}
 						>
-							<div className="date-picker-calendar">
+							<div
+								aria-modal="true"
+								className="date-picker-calendar"
+								role="dialog"
+							>
 								<DateNavigation
 									ariaLabels={ariaLabels}
 									currentMonth={currentMonth}
@@ -445,10 +535,11 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 										{({day, key}) => (
 											<DayNumber
 												day={day}
-												daySelected={daySelected}
+												daysSelected={daysSelected}
 												disabled={disabled}
 												key={key}
 												onClick={handleDayClicked}
+												range={range}
 											/>
 										)}
 									</DaysTable>
