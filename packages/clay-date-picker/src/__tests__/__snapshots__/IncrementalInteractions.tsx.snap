@@ -29,6 +29,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
               type="button"
@@ -55,7 +56,9 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-modal="true"
           class="date-picker-calendar"
+          role="dialog"
         >
           <div
             class="date-picker-calendar-header"
@@ -287,7 +290,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 06 30"
+                  aria-label="Sun Jun 30 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -299,7 +302,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 01"
+                  aria-label="Mon Jul 01 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -310,7 +313,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 02"
+                  aria-label="Tue Jul 02 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -321,7 +324,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 03"
+                  aria-label="Wed Jul 03 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -332,7 +335,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 04"
+                  aria-label="Thu Jul 04 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -343,7 +346,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 05"
+                  aria-label="Fri Jul 05 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -354,7 +357,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 06"
+                  aria-label="Sat Jul 06 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -369,7 +372,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 07"
+                  aria-label="Sun Jul 07 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -380,7 +383,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 08"
+                  aria-label="Mon Jul 08 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -391,7 +394,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 09"
+                  aria-label="Tue Jul 09 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -402,7 +405,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 10"
+                  aria-label="Wed Jul 10 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -413,7 +416,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 11"
+                  aria-label="Thu Jul 11 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -424,7 +427,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 12"
+                  aria-label="Fri Jul 12 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -435,7 +438,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 13"
+                  aria-label="Sat Jul 13 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -450,7 +453,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 14"
+                  aria-label="Sun Jul 14 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -461,7 +464,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 15"
+                  aria-label="Mon Jul 15 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -472,7 +475,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 16"
+                  aria-label="Tue Jul 16 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -483,7 +486,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 17"
+                  aria-label="Wed Jul 17 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -494,7 +497,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 18"
+                  aria-label="Thu Jul 18 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -505,7 +508,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 19"
+                  aria-label="Fri Jul 19 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -516,7 +519,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 20"
+                  aria-label="Sat Jul 20 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -531,7 +534,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 21"
+                  aria-label="Sun Jul 21 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -542,7 +545,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 22"
+                  aria-label="Mon Jul 22 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -553,7 +556,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 23"
+                  aria-label="Tue Jul 23 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -564,7 +567,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 24"
+                  aria-label="Wed Jul 24 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -575,7 +578,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 25"
+                  aria-label="Thu Jul 25 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -586,7 +589,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 26"
+                  aria-label="Fri Jul 26 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -597,7 +600,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 27"
+                  aria-label="Sat Jul 27 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -612,7 +615,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 28"
+                  aria-label="Sun Jul 28 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -623,7 +626,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 29"
+                  aria-label="Mon Jul 29 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -634,7 +637,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 30"
+                  aria-label="Tue Jul 30 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -645,7 +648,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 07 31"
+                  aria-label="Wed Jul 31 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -656,7 +659,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 08 01"
+                  aria-label="Thu Aug 01 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -668,7 +671,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 08 02"
+                  aria-label="Fri Aug 02 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -680,7 +683,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 08 03"
+                  aria-label="Sat Aug 03 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -726,6 +729,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
               type="button"
@@ -752,7 +756,9 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-modal="true"
           class="date-picker-calendar"
+          role="dialog"
         >
           <div
             class="date-picker-calendar-header"
@@ -984,7 +990,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 03 31"
+                  aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -996,8 +1002,8 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 01"
-                  class="date-picker-date date-picker-calendar-item"
+                  aria-label="Mon Apr 01 2019"
+                  class="date-picker-date date-picker-calendar-item active"
                   type="button"
                 >
                   1
@@ -1007,7 +1013,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 02"
+                  aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1018,7 +1024,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 03"
+                  aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1029,7 +1035,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 04"
+                  aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1040,7 +1046,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 05"
+                  aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1051,7 +1057,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 06"
+                  aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1066,7 +1072,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 07"
+                  aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1077,7 +1083,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 08"
+                  aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1088,7 +1094,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 09"
+                  aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1099,7 +1105,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 10"
+                  aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1110,7 +1116,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 11"
+                  aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1121,7 +1127,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 12"
+                  aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1132,7 +1138,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 13"
+                  aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1147,7 +1153,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 14"
+                  aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1158,7 +1164,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 15"
+                  aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1169,7 +1175,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 16"
+                  aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1180,7 +1186,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 17"
+                  aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1191,8 +1197,8 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 18"
-                  class="date-picker-date date-picker-calendar-item active"
+                  aria-label="Thu Apr 18 2019"
+                  class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
                   18
@@ -1202,7 +1208,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 19"
+                  aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1213,7 +1219,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 20"
+                  aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1228,7 +1234,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 21"
+                  aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1239,7 +1245,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 22"
+                  aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1250,7 +1256,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 23"
+                  aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1261,7 +1267,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 24"
+                  aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1272,7 +1278,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 25"
+                  aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1283,7 +1289,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 26"
+                  aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1294,7 +1300,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 27"
+                  aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1309,7 +1315,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 28"
+                  aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1320,7 +1326,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 29"
+                  aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1331,7 +1337,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 30"
+                  aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1342,7 +1348,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 01"
+                  aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -1354,7 +1360,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 02"
+                  aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -1366,7 +1372,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 03"
+                  aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -1378,7 +1384,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 04"
+                  aria-label="Sat May 04 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -1424,6 +1430,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
               type="button"
@@ -1450,7 +1457,9 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-modal="true"
           class="date-picker-calendar"
+          role="dialog"
         >
           <div
             class="date-picker-calendar-header"
@@ -1682,7 +1691,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 03 31"
+                  aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -1694,8 +1703,8 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 01"
-                  class="date-picker-date date-picker-calendar-item"
+                  aria-label="Mon Apr 01 2019"
+                  class="date-picker-date date-picker-calendar-item active"
                   type="button"
                 >
                   1
@@ -1705,7 +1714,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 02"
+                  aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1716,7 +1725,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 03"
+                  aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1727,7 +1736,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 04"
+                  aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1738,7 +1747,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 05"
+                  aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1749,7 +1758,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 06"
+                  aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1764,7 +1773,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 07"
+                  aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1775,7 +1784,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 08"
+                  aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1786,7 +1795,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 09"
+                  aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1797,7 +1806,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 10"
+                  aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1808,7 +1817,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 11"
+                  aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1819,7 +1828,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 12"
+                  aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1830,7 +1839,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 13"
+                  aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1845,7 +1854,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 14"
+                  aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1856,7 +1865,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 15"
+                  aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1867,7 +1876,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 16"
+                  aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1878,7 +1887,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 17"
+                  aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1889,8 +1898,8 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 18"
-                  class="date-picker-date date-picker-calendar-item active"
+                  aria-label="Thu Apr 18 2019"
+                  class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
                   18
@@ -1900,7 +1909,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 19"
+                  aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1911,7 +1920,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 20"
+                  aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1926,7 +1935,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 21"
+                  aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1937,7 +1946,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 22"
+                  aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1948,7 +1957,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 23"
+                  aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1959,7 +1968,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 24"
+                  aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1970,7 +1979,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 25"
+                  aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1981,7 +1990,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 26"
+                  aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -1992,7 +2001,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 27"
+                  aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2007,7 +2016,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 28"
+                  aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2018,7 +2027,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 29"
+                  aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2029,7 +2038,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 30"
+                  aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2040,7 +2049,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 01"
+                  aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2052,7 +2061,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 02"
+                  aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2064,7 +2073,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 03"
+                  aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2076,7 +2085,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 04"
+                  aria-label="Sat May 04 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2122,6 +2131,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
               type="button"
@@ -2148,7 +2158,9 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-modal="true"
           class="date-picker-calendar"
+          role="dialog"
         >
           <div
             class="date-picker-calendar-header"
@@ -2395,7 +2407,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 01"
+                  aria-label="Sun Apr 01 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2406,7 +2418,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 02"
+                  aria-label="Mon Apr 02 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2417,7 +2429,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 03"
+                  aria-label="Tue Apr 03 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2428,7 +2440,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 04"
+                  aria-label="Wed Apr 04 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2439,7 +2451,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 05"
+                  aria-label="Thu Apr 05 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2450,7 +2462,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 06"
+                  aria-label="Fri Apr 06 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2461,7 +2473,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 07"
+                  aria-label="Sat Apr 07 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2476,7 +2488,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 08"
+                  aria-label="Sun Apr 08 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2487,7 +2499,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 09"
+                  aria-label="Mon Apr 09 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2498,7 +2510,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 10"
+                  aria-label="Tue Apr 10 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2509,7 +2521,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 11"
+                  aria-label="Wed Apr 11 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2520,7 +2532,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 12"
+                  aria-label="Thu Apr 12 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2531,7 +2543,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 13"
+                  aria-label="Fri Apr 13 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2542,7 +2554,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 14"
+                  aria-label="Sat Apr 14 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2557,7 +2569,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 15"
+                  aria-label="Sun Apr 15 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2568,7 +2580,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 16"
+                  aria-label="Mon Apr 16 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2579,7 +2591,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 17"
+                  aria-label="Tue Apr 17 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2590,7 +2602,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 18"
+                  aria-label="Wed Apr 18 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2601,7 +2613,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 19"
+                  aria-label="Thu Apr 19 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2612,7 +2624,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 20"
+                  aria-label="Fri Apr 20 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2623,7 +2635,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 21"
+                  aria-label="Sat Apr 21 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2638,7 +2650,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 22"
+                  aria-label="Sun Apr 22 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2649,7 +2661,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 23"
+                  aria-label="Mon Apr 23 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2660,7 +2672,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 24"
+                  aria-label="Tue Apr 24 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2671,7 +2683,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 25"
+                  aria-label="Wed Apr 25 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2682,7 +2694,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 26"
+                  aria-label="Thu Apr 26 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2693,7 +2705,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 27"
+                  aria-label="Fri Apr 27 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2704,7 +2716,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 28"
+                  aria-label="Sat Apr 28 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2719,7 +2731,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 29"
+                  aria-label="Sun Apr 29 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2730,7 +2742,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 04 30"
+                  aria-label="Mon Apr 30 2018"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -2741,7 +2753,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 05 01"
+                  aria-label="Tue May 01 2018"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2753,7 +2765,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 05 02"
+                  aria-label="Wed May 02 2018"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2765,7 +2777,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 05 03"
+                  aria-label="Thu May 03 2018"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2777,7 +2789,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 05 04"
+                  aria-label="Fri May 04 2018"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2789,7 +2801,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2018 05 05"
+                  aria-label="Sat May 05 2018"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -2835,6 +2847,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
               type="button"
@@ -2866,7 +2879,9 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-modal="true"
           class="date-picker-calendar"
+          role="dialog"
         >
           <div
             class="date-picker-calendar-header"
@@ -3098,7 +3113,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 03 31"
+                  aria-label="Sun Mar 31 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -3110,8 +3125,8 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 01"
-                  class="date-picker-date date-picker-calendar-item"
+                  aria-label="Mon Apr 01 2019"
+                  class="date-picker-date date-picker-calendar-item active"
                   type="button"
                 >
                   1
@@ -3121,7 +3136,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 02"
+                  aria-label="Tue Apr 02 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3132,7 +3147,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 03"
+                  aria-label="Wed Apr 03 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3143,7 +3158,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 04"
+                  aria-label="Thu Apr 04 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3154,7 +3169,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 05"
+                  aria-label="Fri Apr 05 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3165,7 +3180,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 06"
+                  aria-label="Sat Apr 06 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3180,7 +3195,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 07"
+                  aria-label="Sun Apr 07 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3191,7 +3206,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 08"
+                  aria-label="Mon Apr 08 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3202,7 +3217,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 09"
+                  aria-label="Tue Apr 09 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3213,7 +3228,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 10"
+                  aria-label="Wed Apr 10 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3224,7 +3239,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 11"
+                  aria-label="Thu Apr 11 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3235,7 +3250,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 12"
+                  aria-label="Fri Apr 12 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3246,7 +3261,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 13"
+                  aria-label="Sat Apr 13 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3261,7 +3276,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 14"
+                  aria-label="Sun Apr 14 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3272,7 +3287,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 15"
+                  aria-label="Mon Apr 15 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3283,7 +3298,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 16"
+                  aria-label="Tue Apr 16 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3294,7 +3309,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 17"
+                  aria-label="Wed Apr 17 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3305,8 +3320,8 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 18"
-                  class="date-picker-date date-picker-calendar-item active"
+                  aria-label="Thu Apr 18 2019"
+                  class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
                   18
@@ -3316,7 +3331,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 19"
+                  aria-label="Fri Apr 19 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3327,7 +3342,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 20"
+                  aria-label="Sat Apr 20 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3342,7 +3357,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 21"
+                  aria-label="Sun Apr 21 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3353,7 +3368,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 22"
+                  aria-label="Mon Apr 22 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3364,7 +3379,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 23"
+                  aria-label="Tue Apr 23 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3375,7 +3390,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 24"
+                  aria-label="Wed Apr 24 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3386,7 +3401,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 25"
+                  aria-label="Thu Apr 25 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3397,7 +3412,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 26"
+                  aria-label="Fri Apr 26 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3408,7 +3423,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 27"
+                  aria-label="Sat Apr 27 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3423,7 +3438,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 28"
+                  aria-label="Sun Apr 28 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3434,7 +3449,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 29"
+                  aria-label="Mon Apr 29 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3445,7 +3460,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 04 30"
+                  aria-label="Tue Apr 30 2019"
                   class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
@@ -3456,7 +3471,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 01"
+                  aria-label="Wed May 01 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -3468,7 +3483,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 02"
+                  aria-label="Thu May 02 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -3480,7 +3495,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 03"
+                  aria-label="Fri May 03 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"
@@ -3492,7 +3507,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-col"
               >
                 <button
-                  aria-label="2019 05 04"
+                  aria-label="Sat May 04 2019"
                   class="date-picker-date date-picker-calendar-item disabled"
                   disabled=""
                   type="button"

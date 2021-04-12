@@ -12,6 +12,7 @@ import {FirstDayOfWeek} from '../types';
 const spritemap = 'icons.svg';
 
 const ariaLabels = {
+	buttonChooseDate: 'Choose your desired date',
 	buttonDot: 'Select current date',
 	buttonNextMonth: 'Select the next month',
 	buttonPreviousMonth: 'Select the previous month',
