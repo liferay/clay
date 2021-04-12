@@ -84,7 +84,7 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 					milliseconds: 0,
 					minutes: 0,
 					seconds: 0,
-				}).toLocaleDateString()}
+				}).toDateString()}
 				className={classNames}
 				disabled={outside}
 				onClick={() => onClick(date)}
