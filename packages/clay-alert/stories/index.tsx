@@ -91,10 +91,46 @@ storiesOf('Components|ClayAlert', module)
 			}
 			spritemap={spritemap}
 			title={text('Title', 'Info')}
-			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
+			variant={select(
+				'Variant',
+				{
+					feedback: 'feedback',
+					none: undefined,
+					stripe: 'stripe',
+				},
+				undefined
+			)}
 		>
 			{text('Content', 'This is an alert!')}
 		</ClayAlert>
+	))
+	.add('w/ feedback variant', () => (
+		<>
+			<ClayAlert
+				displayType="danger"
+				spritemap={spritemap}
+				title="Error Indicator"
+				variant="feedback"
+			/>
+			<ClayAlert
+				displayType="info"
+				spritemap={spritemap}
+				title="Success Indicator"
+				variant="feedback"
+			/>
+			<ClayAlert
+				displayType="success"
+				spritemap={spritemap}
+				title="Info Indicator"
+				variant="feedback"
+			/>
+			<ClayAlert
+				displayType="warning"
+				spritemap={spritemap}
+				title="Warning Indicator"
+				variant="feedback"
+			/>
+		</>
 	))
 	.add('w/o title', () => (
 		<ClayAlert
