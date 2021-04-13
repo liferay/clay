@@ -56,7 +56,7 @@ describe('IncrementalInteractions', () => {
 		);
 
 		const input: any = getByLabelText(ariaLabels.input);
-		const dayNumber = getByLabelText('2019 04 10');
+		const dayNumber = getByLabelText(new Date('2019 04 10').toDateString());
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
 
@@ -192,7 +192,7 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(backArrowButtonEl);
 
-		const days = queryAllByLabelText('2019 03', {exact: false});
+		const days = queryAllByLabelText('Mar', {exact: false});
 
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('2');
@@ -218,7 +218,7 @@ describe('IncrementalInteractions', () => {
 
 		expect(input.value).toBe(formatDate(currentDate, 'yyyy-MM-dd'));
 
-		const dayNumber = getByLabelText(formatDate(currentDate, 'yyyy MM dd'));
+		const dayNumber = getByLabelText(currentDate.toDateString());
 		expect(dayNumber.classList).toContain('active');
 	});
 
@@ -238,7 +238,7 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(nextArrowButtonEl);
 
-		const days = queryAllByLabelText('2019 05', {exact: false});
+		const days = queryAllByLabelText('May', {exact: false});
 
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('4');
@@ -268,7 +268,7 @@ describe('IncrementalInteractions', () => {
 
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
-		const days = queryAllByLabelText('2018 12', {exact: false});
+		const days = queryAllByLabelText('Dec', {exact: false});
 
 		expect(yearSelect.value).toBe('2018');
 		expect(monthSelect.value).toBe('11');
@@ -296,7 +296,7 @@ describe('IncrementalInteractions', () => {
 
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
-		const days = queryAllByLabelText('2020 01', {exact: false});
+		const days = queryAllByLabelText('Jan', {exact: false});
 
 		expect(yearSelect.value).toBe('2020');
 		expect(monthSelect.value).toBe('0');
@@ -314,7 +314,7 @@ describe('IncrementalInteractions', () => {
 		);
 
 		const input: any = getByLabelText(ariaLabels.input);
-		const dayNumber = getByLabelText('2019 04 28');
+		const dayNumber = getByLabelText(new Date('2019 04 28').toDateString());
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
 
@@ -337,7 +337,7 @@ describe('IncrementalInteractions', () => {
 		);
 
 		const input: any = getByLabelText(ariaLabels.input);
-		const dayNumber = getByLabelText('2019 05 01');
+		const dayNumber = getByLabelText(new Date('2019 05 01').toDateString());
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
 
@@ -381,7 +381,11 @@ describe('IncrementalInteractions', () => {
 			);
 
 			const input: any = getByLabelText(ariaLabels.input);
-			const dayNumber = getByLabelText('2019 04 24');
+
+			const dayNumber = getByLabelText(
+				new Date('2019 04 24').toDateString()
+			);
+
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
 			fireEvent.click(dayNumber);
