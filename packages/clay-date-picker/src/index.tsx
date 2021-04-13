@@ -405,9 +405,17 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				);
 			}
 
-			const time = parseDate(currentTime, TIME_FORMAT, DATE_NOW);
+			if (time) {
+				const time = parseDate(currentTime, TIME_FORMAT, DATE_NOW);
 
-			onValueChange(formatDate(time, `${dateFormat} ${TIME_FORMAT}`));
+				return onValueChange(
+					formatDate(time, `${dateFormat} ${TIME_FORMAT}`)
+				);
+			}
+
+			const dateFormatted = formatDate(DATE_NOW, dateFormat);
+
+			return onValueChange(dateFormatted);
 		};
 
 		const handleTimeChange = (
@@ -425,7 +433,9 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			newDate.setHours(Number(hours));
 			newDate.setMinutes(Number(minutes));
 
-			onValueChange(formatDate(newDate, format), 'time');
+			if (isValid(dateParsed)) {
+				onValueChange(formatDate(newDate, format), 'time');
+			}
 
 			setCurrentTime(hours, minutes);
 		};
