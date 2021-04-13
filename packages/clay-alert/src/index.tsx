@@ -94,7 +94,7 @@ export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Determines the variant of the alert.
 	 */
-	variant?: 'stripe';
+	variant?: 'feedback' | 'stripe';
 }
 
 const ICON_MAP = {
@@ -138,6 +138,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 			{...otherProps}
 			className={classNames(className, 'alert', {
 				'alert-dismissible': showDismissible,
+				'alert-feedback': variant === 'feedback',
 				'alert-fluid': variant === 'stripe',
 				[`alert-${displayType}`]: displayType,
 			})}
