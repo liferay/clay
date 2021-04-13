@@ -8,14 +8,13 @@ import classnames from 'classnames';
 import React from 'react';
 
 import {IDay, setDate} from './Helpers';
-import {TDaysSelected} from './types';
 
 interface IProps {
 	day: IDay;
-	daysSelected: TDaysSelected;
+	daysSelected: readonly [Date, Date];
 	disabled?: boolean;
 	range?: boolean;
-	onClick: (date: Date, range?: boolean) => void;
+	onClick: (date: Date) => void;
 }
 
 interface IInterval {
@@ -23,13 +22,12 @@ interface IInterval {
 	end: Date;
 }
 
-function isWithinInterval(dirtyDate: Date, dirtyInterval: IInterval) {
-	const interval = dirtyInterval || {};
+function isWithinInterval(dirtyDate: Date, interval: IInterval) {
 	const time = dirtyDate.getTime();
 	const startTime = interval.start.getTime();
 	const endTime = interval.end.getTime();
 
-	if (!(startTime <= endTime)) {
+	if (startTime > endTime) {
 		return false;
 	}
 
@@ -46,13 +44,13 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	const {date, outside} = day;
 	const [startDate, endDate] = daysSelected;
 
-	const isSelectedToDate = date.toDateString() === endDate.toDateString();
-	const isSelectedFromDate = date.toDateString() === startDate.toDateString();
+	const hasEndDateSelected = date.toDateString() === endDate.toDateString();
+	const hasStartDateSelected = date.toDateString() === startDate.toDateString();
 
 	const classNames = classnames(
 		'date-picker-date date-picker-calendar-item',
 		{
-			active: isSelectedFromDate || (range && isSelectedToDate),
+			active: hasStartDateSelected || (range && hasEndDateSelected),
 			disabled: outside || disabled,
 		}
 	);
@@ -63,18 +61,16 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 				'date-picker-col',
 				range && {
 					'c-selected':
-						!isSelectedFromDate &&
-						!isSelectedToDate &&
+						!hasStartDateSelected &&
+						!hasEndDateSelected &&
 						isWithinInterval(date, {
 							end: endDate,
 							start: startDate,
 						}),
 					'c-selected c-selected-end':
-						isSelectedToDate &&
-						!(isSelectedToDate && isSelectedFromDate),
+						hasEndDateSelected && !hasStartDateSelected,
 					'c-selected c-selected-start':
-						isSelectedFromDate &&
-						!(isSelectedToDate && isSelectedFromDate),
+						hasStartDateSelected && !hasEndDateSelected,
 				}
 			)}
 		>

@@ -17,23 +17,45 @@ import React from 'react';
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
-import {
-	formatDate,
-	fromRangeToString,
-	fromStringToRange,
-	isDateRangeWithinYears,
-	isValid,
-	parseDate,
-	setDate,
-} from './Helpers';
+import {formatDate, isValid, parseDate, setDate} from './Helpers';
 import {useCurrentTime, useWeeks} from './Hooks';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
-import {FirstDayOfWeek, IAriaLabels, IYears, TDaysSelected} from './types';
+import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
 export {FirstDayOfWeek};
+
+function isYearWithinYears(year: number, years: IYears) {
+	return years.start <= year && year <= years.end;
+}
+
+export const RANGE_SEPARATOR = ' - ';
+
+function fromStringToRange(
+	value: string,
+	dateFormat: string,
+	referenceDate: Date
+): readonly [Date, Date] {
+	const [fromDateString, toDateString] = value.split(RANGE_SEPARATOR);
+
+	return [
+		parseDate(fromDateString, dateFormat, referenceDate),
+		toDateString
+			? parseDate(toDateString, dateFormat, referenceDate)
+			: referenceDate,
+	];
+}
+
+function fromRangeToString(range: readonly [Date, Date], dateFormat: string) {
+	const [startDate, endDate] = range;
+
+	return `${formatDate(startDate, dateFormat)}${RANGE_SEPARATOR}${formatDate(
+		endDate,
+		dateFormat
+	)}`;
+}
 
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
@@ -160,9 +182,21 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onExpandedChange?: TInternalStateOnChange<boolean>;
 }
 
-const DATE_NOW = new Date();
+const NEW_DATE = new Date();
 
 const TIME_FORMAT = 'HH:mm';
+
+/**
+ * Normalize date for always set noon to avoid time zone issues
+ */
+const normalizeDate = (date: Date) =>
+	setDate(date, {
+		date: 1,
+		hours: 12,
+		milliseconds: 1,
+		minutes: 1,
+		seconds: 1,
+	});
 
 /**
  * ClayDatePicker component.
@@ -186,7 +220,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			footerElement,
 			id,
 			initialExpanded = false,
-			initialMonth = DATE_NOW,
+			initialMonth = NEW_DATE,
 			inputName,
 			months = [
 				'January',
@@ -214,35 +248,31 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			value,
 			weekdaysShort = ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 			years = {
-				end: DATE_NOW.getFullYear(),
-				start: DATE_NOW.getFullYear(),
+				end: NEW_DATE.getFullYear(),
+				start: NEW_DATE.getFullYear(),
 			},
 			...otherProps
 		}: IProps,
 		ref
 	) => {
 		/**
-		 * Normalize date for always set noon to avoid time zone issues
-		 */
-		const normalizeDate = (date: Date) =>
-			setDate(date, {
-				date: 1,
-				hours: 12,
-				milliseconds: 1,
-				minutes: 1,
-				seconds: 1,
-			});
-
-		/**
 		 * Indicates the current month rendered on the screen.
 		 */
-		const [currentMonth, setCurrentMonth] = React.useState<Date>(() =>
+		const [currentMonth, setCurrentMonth] = React.useState(() =>
 			normalizeDate(initialMonth)
 		);
 
-		// TODO - Rename to daysSelected
-		const [daysSelected, setDaysSelected] = React.useState<TDaysSelected>(
-			() => [normalizeDate(initialMonth), normalizeDate(initialMonth)]
+		/**
+		 * DaysSelected is a tuple that represents [startDate, endDate]
+		 * in the cases where We have a date range and when `range` property
+		 * is disabled we will just use the first element of the tuple(startDate)
+		 */
+		const [daysSelected, setDaysSelected] = React.useState(
+			() =>
+				[
+					normalizeDate(initialMonth),
+					normalizeDate(initialMonth),
+				] as const
 		);
 
 		/**
@@ -296,10 +326,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * Holds the logic for how to behave when clicking on a date,
 		 * on the DatePicker using date ranges
 		 */
-		const handleDateRangeClicked = (
-			date: Date,
-			daysSelected: TDaysSelected
-		) => {
+		const handleDateRangeClicked = (date: Date) => {
 			const [startDate, endDate] = daysSelected;
 
 			if (date < startDate) {
@@ -326,7 +353,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const handleDayClicked = (date: Date) => {
 			if (range) {
-				handleDateRangeClicked(date, daysSelected);
+				handleDateRangeClicked(date);
 
 				return;
 			}
@@ -366,7 +393,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			const [fromDate, toDate] = fromStringToRange(
 				value,
 				format,
-				DATE_NOW
+				NEW_DATE
 			);
 
 			const yearFrom = fromDate.getFullYear();
@@ -375,8 +402,8 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			if (
 				isValid(fromDate) &&
 				isValid(toDate) &&
-				isDateRangeWithinYears(yearFrom, years) &&
-				isDateRangeWithinYears(yearTo, years)
+				isYearWithinYears(yearFrom, years) &&
+				isYearWithinYears(yearTo, years)
 			) {
 				changeMonth(fromDate);
 
@@ -395,27 +422,29 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * is no date selected.
 		 */
 		const handleDotClicked = () => {
-			changeMonth(DATE_NOW);
+			const [, endDate] = daysSelected;
 
-			setDaysSelected([DATE_NOW, daysSelected[1]]);
+			changeMonth(NEW_DATE);
+
+			setDaysSelected([NEW_DATE, endDate]);
+
+			let dateFormatted;
 
 			if (range) {
-				return onValueChange(
-					fromRangeToString([DATE_NOW, daysSelected[1]], dateFormat)
+				dateFormatted = fromRangeToString(
+					[NEW_DATE, endDate],
+					dateFormat
 				);
+			} else if (time) {
+				dateFormatted = formatDate(
+					parseDate(currentTime, TIME_FORMAT, NEW_DATE),
+					`${dateFormat} ${TIME_FORMAT}`
+				);
+			} else {
+				dateFormatted = formatDate(NEW_DATE, dateFormat);
 			}
 
-			if (time) {
-				const time = parseDate(currentTime, TIME_FORMAT, DATE_NOW);
-
-				return onValueChange(
-					formatDate(time, `${dateFormat} ${TIME_FORMAT}`)
-				);
-			}
-
-			const dateFormatted = formatDate(DATE_NOW, dateFormat);
-
-			return onValueChange(dateFormatted);
+			onValueChange(dateFormatted);
 		};
 
 		const handleTimeChange = (
@@ -425,7 +454,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			const format = `${dateFormat} ${TIME_FORMAT}`;
 			const [day] = daysSelected;
 
-			const dateParsed = parseDate(value, format, DATE_NOW);
+			const dateParsed = parseDate(value, format, NEW_DATE);
 			const newDate = isValid(dateParsed)
 				? dateParsed
 				: new Date(day.getTime());
