@@ -37,6 +37,14 @@ describe('ClayAlert', () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
+	it('renders as `feedback` variant', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayAlert spritemap="/foo/bar" title="Hello!" variant="feedback" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
 	it('renders with an icon for closing', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayAlert onClose={() => {}} spritemap="/foo/bar" title="Hello!" />

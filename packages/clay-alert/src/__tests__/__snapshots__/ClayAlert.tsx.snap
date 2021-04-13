@@ -47,6 +47,53 @@ exports[`ClayAlert renders 1`] = `
 </div>
 `;
 
+exports[`ClayAlert renders as \`feedback\` variant 1`] = `
+<div
+  className="alert alert-feedback alert-info"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="alert"
+>
+  <div
+    className="alert-autofit-row autofit-row"
+  >
+    <div
+      className="autofit-col"
+    >
+      <div
+        className="autofit-section"
+      >
+        <span
+          className="alert-indicator"
+        >
+          <svg
+            className="lexicon-icon lexicon-icon-info-circle"
+            role="presentation"
+          >
+            <use
+              xlinkHref="/foo/bar#info-circle"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      className="autofit-col autofit-col-expand"
+    >
+      <div
+        className="autofit-section"
+      >
+        <strong
+          className="lead"
+        >
+          Hello!
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayAlert renders as \`stripe\` variant 1`] = `
 <div
   className="alert alert-fluid alert-info"
