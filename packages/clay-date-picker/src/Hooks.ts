@@ -39,7 +39,7 @@ function getDaysInMonth(d: Date) {
  * The `outside` property references when a day
  * does not belong to the current month.
  */
- function getWeekArray(d: Date, firstDayOfWeek = 0): Month {
+function getWeekArray(d: Date, firstDayOfWeek = 0): Month {
 	const daysInMonth = getDaysInMonth(d);
 	const dayArray: Array<IDay> = [];
 

@@ -45,7 +45,8 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	const [startDate, endDate] = daysSelected;
 
 	const hasEndDateSelected = date.toDateString() === endDate.toDateString();
-	const hasStartDateSelected = date.toDateString() === startDate.toDateString();
+	const hasStartDateSelected =
+		date.toDateString() === startDate.toDateString();
 
 	const classNames = classnames(
 		'date-picker-date date-picker-calendar-item',
