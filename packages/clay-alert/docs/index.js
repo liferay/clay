@@ -18,6 +18,10 @@ const AlertCode = `const Component = () => {
 			<ClayAlert displayType="warning" spritemap={spritemap} title="Warning" variant="stripe">
 				This is a stripe alert
 			</ClayAlert>
+
+			<div className="c-mt-3">
+				<ClayAlert displayType="danger" spritemap={spritemap} title="Error Indicator" variant="feedback" />
+			</div>
 		</>
 	);
 }
