@@ -334,8 +334,13 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			let daysSelectedToString;
 
 			if (range) {
-				newDaysSelected =
-					date < startDate ? [date, endDate] : [startDate, date];
+				if (date === endDate) {
+					newDaysSelected = [date, date];
+				} else if (date < startDate) {
+					newDaysSelected = [date, endDate];
+				} else {
+					newDaysSelected = [startDate, date];
+				}
 
 				daysSelectedToString = fromRangeToString(
 					newDaysSelected,
