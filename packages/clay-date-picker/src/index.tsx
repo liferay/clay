@@ -50,7 +50,7 @@ function fromStringToRange(
 	];
 }
 
-function fromRangeToString(range: readonly [Date, Date], dateFormat: string) {
+function fromRangeToString(range: [Date, Date], dateFormat: string) {
 	const [startDate, endDate] = range;
 
 	return `${formatDate(startDate, dateFormat)}${RANGE_SEPARATOR}${formatDate(
@@ -325,61 +325,41 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		};
 
 		/**
-		 * Holds the logic for how to behave when clicking on a date,
-		 * on the DatePicker using date ranges
-		 */
-		const handleDateRangeClicked = (date: Date) => {
-			const [startDate, endDate] = daysSelected;
-
-			if (date < startDate) {
-				setDaysSelected([date, endDate]);
-
-				onValueChange(
-					fromRangeToString(daysSelected, dateFormat),
-					'click'
-				);
-
-				return;
-			}
-
-			setDaysSelected([startDate, date]);
-
-			onValueChange(
-				fromRangeToString([startDate, date], dateFormat),
-				'click'
-			);
-		};
-
-		/**
 		 * Handles the click on element of the day
 		 */
 		const handleDayClicked = (date: Date) => {
+			const [startDate, endDate] = daysSelected;
+
+			let newDaysSelected: [Date, Date];
+			let daysSelectedToString;
+
 			if (range) {
-				handleDateRangeClicked(date);
+				newDaysSelected =
+					date < startDate ? [date, endDate] : [startDate, date];
 
-				return;
-			}
-
-			setDaysSelected([date, date]);
-
-			const dateFormatted = formatDate(date, dateFormat);
-
-			if (time) {
-				const dateString = formatDate(
-					parseDate(
-						`${dateFormatted} ${currentTime}`,
-						`${dateFormat} ${TIME_FORMAT}`,
-						date
-					),
-					`${dateFormat} ${TIME_FORMAT}`
+				daysSelectedToString = fromRangeToString(
+					newDaysSelected,
+					dateFormat
 				);
+			} else {
+				newDaysSelected = [date, date];
 
-				onValueChange(dateString, 'click');
+				daysSelectedToString = formatDate(date, dateFormat);
 
-				return;
+				if (time) {
+					daysSelectedToString = formatDate(
+						parseDate(
+							`${daysSelectedToString} ${currentTime}`,
+							`${dateFormat} ${TIME_FORMAT}`,
+							date
+						),
+						`${dateFormat} ${TIME_FORMAT}`
+					);
+				}
 			}
 
-			onValueChange(dateFormatted, 'click');
+			setDaysSelected(newDaysSelected);
+			onValueChange(daysSelectedToString, 'click');
 		};
 
 		/**
