@@ -40,11 +40,13 @@ function fromStringToRange(
 ): readonly [Date, Date] {
 	const [fromDateString, toDateString] = value.split(RANGE_SEPARATOR);
 
+	const fromDate = parseDate(fromDateString, dateFormat, referenceDate);
+
 	return [
-		parseDate(fromDateString, dateFormat, referenceDate),
+		fromDate,
 		toDateString
 			? parseDate(toDateString, dateFormat, referenceDate)
-			: referenceDate,
+			: fromDate,
 	];
 }
 
