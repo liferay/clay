@@ -198,6 +198,41 @@
 	@include clay-autofit-row($alert-autofit-row);
 }
 
+// Alert Feedback
+
+.alert-feedback.alert {
+	@include clay-css($alert-feedback);
+
+	.alert-autofit-row,
+	.autofit-row {
+		display: inline;
+		margin-left: 0;
+		margin-right: 0;
+
+		> .autofit-col {
+			display: inline;
+			padding-left: 0;
+			padding-right: 0.25em;
+
+			> .autofit-section {
+				display: inline;
+			}
+		}
+	}
+
+	.close {
+		@include clay-close($alert-feedback-close);
+	}
+
+	.lead {
+		margin-right: 0;
+
+		+ .component-text {
+			margin-left: 0.25em;
+		}
+	}
+}
+
 // Alert Variants
 
 @each $color, $value in $alert-palette {
