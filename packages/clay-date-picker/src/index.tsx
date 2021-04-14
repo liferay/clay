@@ -408,15 +408,17 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 
 			changeMonth(NEW_DATE);
 
-			setDaysSelected([NEW_DATE, endDate]);
+			const newDaysSelected: [Date, Date] =
+				range && endDate < NEW_DATE
+					? [endDate, NEW_DATE]
+					: [NEW_DATE, endDate];
+
+			setDaysSelected(newDaysSelected);
 
 			let dateFormatted;
 
 			if (range) {
-				dateFormatted = fromRangeToString(
-					[NEW_DATE, endDate],
-					dateFormat
-				);
+				dateFormatted = fromRangeToString(newDaysSelected, dateFormat);
 			} else if (time) {
 				dateFormatted = formatDate(
 					parseDate(currentTime, TIME_FORMAT, NEW_DATE),
