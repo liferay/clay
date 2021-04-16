@@ -1,0 +1,20 @@
+$cadmin-collapse-icon-padding-left: null !default;
+$cadmin-collapse-icon-padding-right: 2.28125rem !default; // 45px
+
+$cadmin-collapse-icon-position-bottom: null !default;
+$cadmin-collapse-icon-position-left: null !default;
+$cadmin-collapse-icon-position-right: 0.9375rem !default; // 15px
+$cadmin-collapse-icon-position-top: clay-collapse-icon-align(
+	$cadmin-nav-link-padding-y,
+	0.0625rem,
+	0.9375em
+) !default;
+
+$cadmin-lexicon-icon-size: 1em !default; // 16px
+
+$cadmin-lexicon-icon-sm-font-size: 0.5rem !default; // 8px
+$cadmin-lexicon-icon-lg-font-size: 2rem !default; // 32px
+$cadmin-lexicon-icon-xl-font-size: 8rem !default; // 128px
+
+$cadmin-order-arrow-down-active-color: rgba($cadmin-black, 0.9) !default;
+$cadmin-order-arrow-up-active-color: $cadmin-order-arrow-down-active-color !default;

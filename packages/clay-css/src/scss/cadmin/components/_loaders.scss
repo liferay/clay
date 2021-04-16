@@ -1,0 +1,35 @@
+.loading-animation {
+	display: block;
+	font-size: $cadmin-loading-icon-font-size;
+	height: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align: left;
+	vertical-align: middle;
+	width: 1em;
+}
+
+// Loading Icon Dotted
+
+%loading-animation {
+	@include clay-loading-animation-variant($cadmin-loading-animation);
+}
+
+%loading-animation-light {
+	@include clay-loading-animation-variant($cadmin-loading-animation-light);
+}
+
+.loading-animation {
+	@extend %loading-animation !optional;
+}
+
+.loading-animation-light {
+	@extend %loading-animation-light !optional;
+}
+
+// Loading Icon Sizes
+
+.loading-animation.loading-animation-sm {
+	font-size: $cadmin-loading-icon-font-size-sm;
+}

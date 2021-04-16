@@ -1,0 +1,82 @@
+// Date Picker Dropdown Menu
+
+$cadmin-date-picker-dropdown-menu: () !default;
+$cadmin-date-picker-dropdown-menu: map-deep-merge(
+	(
+		max-width: 368px,
+	),
+	$cadmin-date-picker-dropdown-menu
+);
+
+// Date Picker Nav
+
+$cadmin-date-picker-nav-btn: () !default;
+$cadmin-date-picker-nav-btn: map-deep-merge(
+	(
+		hover-color: $cadmin-gray-900,
+		focus-bg: $cadmin-gray-200,
+		focus-color: $cadmin-gray-900,
+		active-bg: $cadmin-gray-200,
+		disabled-color: $cadmin-gray-500,
+		disabled-opacity: null,
+	),
+	$cadmin-date-picker-nav-btn
+);
+
+$cadmin-date-picker-nav-select: () !default;
+$cadmin-date-picker-nav-select: map-deep-merge(
+	(
+		bg: transparent,
+		border-color: transparent,
+		color: $cadmin-secondary,
+		font-size: $cadmin-font-size-sm,
+		font-weight: $cadmin-font-weight-semi-bold,
+		height: $cadmin-input-height-sm,
+		padding-bottom: 0,
+		padding-left: 0.5rem,
+		padding-top: 0,
+		hover-bg: $cadmin-gray-200,
+		hover-color: $cadmin-gray-900,
+		focus-bg: $cadmin-gray-200,
+		focus-color: $cadmin-gray-900,
+		disabled-bg: transparent,
+		disabled-color: $cadmin-input-disabled-color,
+	),
+	$cadmin-date-picker-nav-select
+);
+
+// Date Picker Calendar Item
+
+$cadmin-date-picker-date: () !default;
+$cadmin-date-picker-date: map-deep-merge(
+	(
+		hover-color: $cadmin-gray-900,
+		focus-bg: $cadmin-gray-200,
+		focus-color: $cadmin-gray-900,
+		disabled-color: $cadmin-gray-500,
+		disabled-opacity: null,
+	),
+	$cadmin-date-picker-date
+);
+
+$cadmin-date-picker-previous-month-date: () !default;
+$cadmin-date-picker-previous-month-date: map-deep-merge(
+	(
+		color: $cadmin-gray-500,
+		opacity: null,
+		focus-opacity: null,
+		active-opacity: null,
+	),
+	$cadmin-date-picker-previous-month-date
+);
+
+$cadmin-date-picker-next-month-date: () !default;
+$cadmin-date-picker-next-month-date: map-deep-merge(
+	(
+		color: $cadmin-gray-500,
+		opacity: null,
+		focus-opacity: null,
+		active-opacity: null,
+	),
+	$cadmin-date-picker-next-month-date
+);

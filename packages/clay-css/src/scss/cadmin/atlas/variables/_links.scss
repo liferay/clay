@@ -1,0 +1,150 @@
+$cadmin-component-link: () !default;
+$cadmin-component-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-color: darken($cadmin-gray-600, 15%),
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-component-link
+);
+
+$cadmin-link-primary: () !default;
+$cadmin-link-primary: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-color: darken($cadmin-primary, 15%),
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-link-primary
+);
+
+$cadmin-link-secondary: () !default;
+$cadmin-link-secondary: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-link-secondary
+);
+
+// Component Title
+
+$cadmin-component-title: () !default;
+$cadmin-component-title: map-deep-merge(
+	(
+		font-size: 1rem,
+		line-height: 1.25,
+		margin-bottom:
+			calc((#{$cadmin-dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+		margin-top:
+			calc((#{$cadmin-dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+	),
+	$cadmin-component-title
+);
+
+$cadmin-component-title-link: () !default;
+$cadmin-component-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-color: darken($cadmin-gray-900, 15%),
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-component-title-link
+);
+
+// Component Subtitle
+
+$cadmin-component-subtitle: () !default;
+$cadmin-component-subtitle: map-deep-merge(
+	(
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: 1.45,
+	),
+	$cadmin-component-subtitle
+);
+
+$cadmin-component-subtitle-link: () !default;
+$cadmin-component-subtitle-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-component-subtitle-link
+);
+
+// Component Action
+
+$cadmin-component-action: () !default;
+$cadmin-component-action: map-deep-merge(
+	(
+		font-size: 1rem,
+		hover-bg: rgba($cadmin-gray-900, 0.03),
+		hover-color: $cadmin-gray-900,
+		focus-bg: rgba($cadmin-gray-900, 0.03),
+		focus-box-shadow: map-get($cadmin-btn-secondary, focus-box-shadow),
+		focus-color: $cadmin-gray-900,
+		focus-outline: 0,
+		active-bg: rgba($cadmin-gray-900, 0.06),
+		active-color: $cadmin-gray-900,
+		btn-focus-box-shadow: map-get($cadmin-btn-secondary, focus-box-shadow),
+		disabled-bg: transparent,
+		disabled-box-shadow: none,
+	),
+	$cadmin-component-action
+);
+
+// Link Outline
+
+$cadmin-link-outline-primary: () !default;
+$cadmin-link-outline-primary: map-deep-merge(
+	(
+		hover-bg: $cadmin-primary-l3,
+		hover-color: $cadmin-primary,
+		focus-bg: $cadmin-primary-l3,
+		focus-box-shadow: map-get($cadmin-btn-outline-primary, focus-box-shadow),
+		focus-color: $cadmin-primary,
+		focus-outline: 0,
+		btn-focus-box-shadow:
+			map-get($cadmin-btn-outline-primary, focus-box-shadow),
+		btn-focus-outline: 0,
+		active-bg: lighten(desaturate($cadmin-primary, 42.05), 41.76),
+		active-color: $cadmin-primary,
+		disabled-box-shadow: none,
+	),
+	$cadmin-link-outline-primary
+);
+
+$cadmin-link-outline-secondary: () !default;
+$cadmin-link-outline-secondary: map-deep-merge(
+	(
+		border-color: $cadmin-secondary-l2,
+		hover-bg: rgba($cadmin-gray-900, 0.03),
+		hover-color: $cadmin-gray-900,
+		focus-bg: rgba($cadmin-gray-900, 0.03),
+		focus-box-shadow:
+			map-get($cadmin-btn-outline-secondary, focus-box-shadow),
+		focus-color: $cadmin-gray-900,
+		focus-outline: 0,
+		btn-focus-box-shadow:
+			map-get($cadmin-btn-outline-secondary, focus-box-shadow),
+		btn-focus-outline: 0,
+		active-bg: rgba($cadmin-gray-900, 0.06),
+		active-color: $cadmin-gray-900,
+		disabled-box-shadow: none,
+	),
+	$cadmin-link-outline-secondary
+);

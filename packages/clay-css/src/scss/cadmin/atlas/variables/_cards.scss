@@ -1,0 +1,159 @@
+$cadmin-card-border-radius: $cadmin-border-radius !default;
+$cadmin-card-border-width: 0 !default;
+$cadmin-card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6) !default;
+
+$cadmin-card-body-padding-bottom: 1rem !default;
+$cadmin-card-body-padding-left: 1rem !default;
+$cadmin-card-body-padding-right: 1rem !default;
+$cadmin-card-body-padding-top: 1rem !default;
+
+$cadmin-card-inner-border-radius: if(
+	$cadmin-card-border-width > 0,
+	calc(#{$cadmin-card-border-radius} - #{$cadmin-card-border-width}),
+	$cadmin-card-border-radius
+) !default;
+
+// Card Title
+
+$cadmin-card-title: () !default;
+$cadmin-card-title: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		font-size: 0.875rem,
+	),
+	$cadmin-card-title
+);
+
+$cadmin-card-title-link: () !default;
+$cadmin-card-title-link: map-deep-merge(
+	(
+		hover-color: map-get($cadmin-card-title, color),
+	),
+	$cadmin-card-title-link
+);
+
+// Card Subtitle
+
+$cadmin-card-subtitle: () !default;
+$cadmin-card-subtitle: map-deep-merge(
+	(
+		font-weight: $cadmin-font-weight-normal,
+	),
+	$cadmin-card-subtitle
+);
+
+$cadmin-card-subtitle-link: () !default;
+$cadmin-card-subtitle-link: map-deep-merge(
+	(
+		hover-color: $cadmin-gray-600,
+	),
+	$cadmin-card-subtitle-link
+);
+
+// Card Link
+
+$cadmin-card-link: () !default;
+$cadmin-card-link: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: 0.875rem,
+		hover-color: $cadmin-gray-600,
+		hover-text-decoration: underline,
+	),
+	$cadmin-card-link
+);
+
+$cadmin-checkbox-left-card-padding: 50px !default;
+
+$cadmin-form-check-card-checked-box-shadow: 0 0 0 2px
+	lighten($cadmin-component-active-bg, 22.94) !default;
+
+// Card Interactive
+
+$cadmin-card-interactive: () !default;
+$cadmin-card-interactive: map-deep-merge(
+	(
+		hover-bg: #f7f8f9,
+		focus-border-color: null,
+		focus-box-shadow: 0 0 0 2px #FFF#{','} 0 0 0 4px #719aff,
+		active-bg: #f1f2f5,
+	),
+	$cadmin-card-interactive
+);
+
+// Card Interactive Secondary
+
+$cadmin-card-interactive-secondary: () !default;
+$cadmin-card-interactive-secondary: map-deep-merge(
+	(
+		hover-border-color: transparent,
+		hover-box-shadow: 0 0 0 2px #719aff,
+		focus-border-color: transparent,
+		focus-box-shadow: 0 0 0 2px #719aff,
+	),
+	$cadmin-card-interactive-secondary
+);
+
+// Card Type Asset
+
+$cadmin-card-type-asset: () !default;
+$cadmin-card-type-asset: map-deep-merge(
+	(
+		aspect-ratio-border-color: $cadmin-gray-300,
+		card-body-padding-top: 0.75rem,
+	),
+	$cadmin-card-type-asset
+);
+
+$cadmin-image-card: () !default;
+$cadmin-image-card: map-deep-merge(
+	(
+		aspect-ratio-checkered-fg: $cadmin-gray-300,
+	),
+	$cadmin-image-card
+);
+
+$cadmin-file-card: () !default;
+$cadmin-file-card: map-deep-merge(
+	(
+		asset-icon-color: $cadmin-gray-400,
+	),
+	$cadmin-file-card
+);
+
+// Card Type Template
+
+$cadmin-card-type-template-after-highlight: () !default;
+$cadmin-card-type-template-after-highlight: map-deep-merge(
+	(
+		bottom: -1px,
+		left: -1px,
+		right: -1px,
+	),
+	$cadmin-card-type-template-after-highlight
+);
+
+$cadmin-card-type-template-aspect-ratio: () !default;
+$cadmin-card-type-template-aspect-ratio: map-deep-merge(
+	(
+		bg-image: none,
+	),
+	$cadmin-card-type-template-aspect-ratio
+);
+
+$cadmin-card-type-template-aspect-ratio-item: () !default;
+$cadmin-card-type-template-aspect-ratio-item: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+	),
+	$cadmin-card-type-template-aspect-ratio-item
+);
+
+$cadmin-card-type-template: () !default;
+$cadmin-card-type-template: map-deep-merge(
+	(
+		border-width: 1px,
+		box-shadow: none,
+	),
+	$cadmin-card-type-template
+);

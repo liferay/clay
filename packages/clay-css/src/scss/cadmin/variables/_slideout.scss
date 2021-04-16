@@ -1,0 +1,186 @@
+$cadmin-c-slideout-sidebar-width: 320px !default;
+
+$cadmin-c-slideout-sidebar-width-mobile: 280px !default;
+
+$cadmin-c-slideout-tbar-stacked-min-width: 40px !default;
+
+$cadmin-c-slideout-tbar-stacked-min-width-mobile: 40px !default;
+
+// C Slideout Transitions
+
+$cadmin-c-slideout-transition-in: () !default;
+$cadmin-c-slideout-transition-in: map-merge(
+	(
+		transition: all 0.3s ease-in-out,
+	),
+	$cadmin-c-slideout-transition-in
+);
+
+$cadmin-c-slideout-transition-out: () !default;
+$cadmin-c-slideout-transition-out: map-merge(
+	(
+		transition: all 0.2s ease-in,
+	),
+	$cadmin-c-slideout-transition-out
+);
+
+// C Slideout Positions
+
+$cadmin-c-slideout-absolute: () !default;
+$cadmin-c-slideout-absolute: map-merge(
+	(
+		position: absolute,
+	),
+	$cadmin-c-slideout-absolute
+);
+
+$cadmin-c-slideout-fixed: () !default;
+$cadmin-c-slideout-fixed: map-merge(
+	(
+		position: fixed,
+	),
+	$cadmin-c-slideout-fixed
+);
+
+// C Slideout Base
+
+$cadmin-c-slideout: () !default;
+$cadmin-c-slideout: map-deep-merge(
+	(
+		display: flex,
+		overflow: hidden,
+		z-index: $cadmin-zindex-sidenav,
+		c-slideout-shown: (
+			overflow: visible,
+		),
+		sidebar: (
+			display: none,
+			flex-shrink: 0,
+			position: relative,
+			width: $cadmin-c-slideout-sidebar-width,
+		),
+		sidebar-c-slideout-show: (
+			display: block,
+		),
+		sidebar-c-slideout-transition: (
+			display: block,
+		),
+		tbar-stacked: (
+			display: none,
+			flex-shrink: 0,
+			min-width: $cadmin-c-slideout-tbar-stacked-min-width,
+			overflow: auto,
+			position: relative,
+			z-index: 1,
+		),
+		tbar-stacked-c-slideout-show: (
+			display: block,
+		),
+		tbar-stacked-c-slideout-transition: (
+			display: block,
+		),
+	),
+	$cadmin-c-slideout
+);
+
+$cadmin-c-slideout-sm-down: () !default;
+$cadmin-c-slideout-sm-down: map-deep-merge(
+	(
+		sidebar: (
+			width: $cadmin-c-slideout-sidebar-width-mobile,
+		),
+	),
+	$cadmin-c-slideout-sm-down
+);
+
+// C Slideout Start
+
+$cadmin-c-slideout-start: () !default;
+$cadmin-c-slideout-start: map-deep-merge(
+	(
+		bottom: 0,
+		left: 0,
+		top: 0,
+		c-slideout-tbar-shown-sidebar: (
+			left: math-sign($cadmin-c-slideout-sidebar-width),
+		),
+		sidebar: (
+			left: #{math-sign($cadmin-c-slideout-sidebar-width) +
+				math-sign($cadmin-c-slideout-tbar-stacked-min-width)},
+			width: $cadmin-c-slideout-sidebar-width,
+		),
+		sidebar-c-slideout-show: (
+			left: 0,
+		),
+		tbar-stacked: (
+			left: math-sign($cadmin-c-slideout-tbar-stacked-min-width),
+		),
+		tbar-stacked-c-slideout-show: (
+			left: 0,
+		),
+	),
+	$cadmin-c-slideout-start
+);
+
+$cadmin-c-slideout-start-sm-down: () !default;
+$cadmin-c-slideout-start-sm-down: map-deep-merge(
+	(
+		c-slideout-tbar-shown-sidebar: (
+			left: math-sign($cadmin-c-slideout-sidebar-width-mobile),
+		),
+		sidebar: (
+			left: #{math-sign($cadmin-c-slideout-sidebar-width-mobile) +
+				math-sign($cadmin-c-slideout-tbar-stacked-min-width-mobile)},
+			width: $cadmin-c-slideout-sidebar-width-mobile,
+		),
+		tbar-stacked: (
+			left: math-sign($cadmin-c-slideout-tbar-stacked-min-width-mobile),
+		),
+	),
+	$cadmin-c-slideout-start-sm-down
+);
+
+// C Slideout End
+
+$cadmin-c-slideout-end: () !default;
+$cadmin-c-slideout-end: map-deep-merge(
+	(
+		bottom: 0,
+		right: 0,
+		top: 0,
+		c-slideout-tbar-shown-sidebar: (
+			right: math-sign($cadmin-c-slideout-sidebar-width),
+		),
+		sidebar: (
+			right: #{math-sign($cadmin-c-slideout-sidebar-width) +
+				math-sign($cadmin-c-slideout-tbar-stacked-min-width)},
+		),
+		sidebar-c-slideout-show: (
+			right: 0,
+		),
+		tbar-stacked: (
+			right: math-sign($cadmin-c-slideout-tbar-stacked-min-width),
+		),
+		tbar-stacked-c-slideout-show: (
+			right: 0,
+		),
+	),
+	$cadmin-c-slideout-end
+);
+
+$cadmin-c-slideout-end-sm-down: () !default;
+$cadmin-c-slideout-end-sm-down: map-deep-merge(
+	(
+		c-slideout-tbar-shown-sidebar: (
+			right: math-sign($cadmin-c-slideout-sidebar-width-mobile),
+		),
+		sidebar: (
+			right: #{math-sign($cadmin-c-slideout-sidebar-width-mobile) +
+				math-sign($cadmin-c-slideout-tbar-stacked-min-width-mobile)},
+		),
+		tbar-stacked: (
+			right: math-sign($cadmin-c-slideout-tbar-stacked-min-width-mobile),
+		),
+	),
+	$cadmin-c-slideout-end-sm-down
+);

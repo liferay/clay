@@ -1,0 +1,39 @@
+.c-slideout-transition-in {
+	@include clay-css($cadmin-c-slideout-transition-in);
+}
+
+.c-slideout-transition-out {
+	@include clay-css($cadmin-c-slideout-transition-out);
+}
+
+.c-slideout-fixed {
+	@include clay-css($cadmin-c-slideout-fixed);
+}
+
+.c-slideout-absolute {
+	@include clay-css($cadmin-c-slideout-absolute);
+}
+
+.c-slideout {
+	@include clay-slideout-variant($cadmin-c-slideout);
+
+	@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+		@include clay-slideout-variant($cadmin-c-slideout-sm-down);
+	}
+}
+
+.c-slideout-start {
+	@include clay-slideout-variant($cadmin-c-slideout-start);
+
+	@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+		@include clay-slideout-variant($cadmin-c-slideout-start-sm-down);
+	}
+}
+
+.c-slideout-end {
+	@include clay-slideout-variant($cadmin-c-slideout-end);
+
+	@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+		@include clay-slideout-variant($cadmin-c-slideout-end-sm-down);
+	}
+}

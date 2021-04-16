@@ -1,0 +1,52 @@
+$cadmin-popover-bg: $cadmin-white !default;
+$cadmin-popover-border-color: rgba($cadmin-black, 0.2) !default;
+$cadmin-popover-border-width: $cadmin-border-width !default;
+
+$cadmin-popover-border-radius: $cadmin-border-radius-lg !default;
+$cadmin-popover-inner-border-radius: $cadmin-popover-border-radius -
+	$cadmin-popover-border-width !default;
+
+$cadmin-popover-box-shadow: 0 0.25rem 0.5rem rgba($cadmin-black, 0.2) !default;
+$cadmin-popover-font-size: $cadmin-font-size-sm !default;
+$cadmin-popover-max-width: 276px !default;
+
+$cadmin-popover-inline-scroller-max-height: 14.75rem !default;
+
+$cadmin-popover-header-bg: darken($cadmin-popover-bg, 3%) !default;
+$cadmin-popover-header-border-color: null !default;
+$cadmin-popover-header-color: $cadmin-headings-color !default;
+$cadmin-popover-header-font-size: $cadmin-font-size-base !default;
+$cadmin-popover-header-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-popover-header-margin-x: null !default;
+$cadmin-popover-header-margin-y: 0 !default;
+$cadmin-popover-header-padding-x: 0.75rem !default;
+$cadmin-popover-header-padding-y: 0.5rem !default;
+
+$cadmin-popover-body-color: $cadmin-body-color !default;
+$cadmin-popover-body-padding-x: $cadmin-popover-header-padding-x !default;
+$cadmin-popover-body-padding-y: $cadmin-popover-header-padding-y !default;
+
+$cadmin-popover-offset-border-width: $cadmin-popover-inner-border-radius !default;
+
+$cadmin-popover-arrow-color: $cadmin-popover-bg !default;
+$cadmin-popover-arrow-height: 0.5rem !default;
+$cadmin-popover-arrow-offset: 0.375rem !default;
+$cadmin-popover-arrow-width: 1rem !default;
+
+$cadmin-popover-arrow-outer-color: fade-in(
+	$cadmin-popover-border-color,
+	0.05
+) !default;
+
+$cadmin-popover-bottom-arrow-color: $cadmin-popover-header-bg !default;
+$cadmin-popover-bottom-left-arrow-color: $cadmin-popover-header-bg !default;
+$cadmin-popover-bottom-right-arrow-color: $cadmin-popover-header-bg !default;
+$cadmin-popover-left-arrow-color: $cadmin-popover-arrow-color !default;
+$cadmin-popover-left-bottom-arrow-color: null !default;
+$cadmin-popover-left-top-arrow-color: $cadmin-popover-header-bg !default;
+$cadmin-popover-right-arrow-color: $cadmin-popover-arrow-color !default;
+$cadmin-popover-right-bottom-arrow-color: null !default;
+$cadmin-popover-right-top-arrow-color: $cadmin-popover-header-bg !default;
+$cadmin-popover-top-arrow-color: $cadmin-popover-arrow-color !default;
+$cadmin-popover-top-left-arrow-color: null !default;
+$cadmin-popover-top-right-arrow-color: null !default;

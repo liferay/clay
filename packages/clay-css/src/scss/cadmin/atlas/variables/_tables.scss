@@ -1,0 +1,200 @@
+$cadmin-table-bg: $cadmin-white !default;
+$cadmin-table-accent-bg: $cadmin-gray-100 !default;
+$cadmin-table-hover-bg: lighten($cadmin-component-active-bg, 44.9) !default;
+$cadmin-table-border-color: $cadmin-gray-300 !default;
+$cadmin-table-font-size: 0.875rem !default;
+
+$cadmin-table-disabled-color: $cadmin-gray-500 !default;
+
+$cadmin-table-head-bg: $cadmin-white !default;
+$cadmin-table-head-border-bottom-width: 1px !default;
+$cadmin-table-head-color: $cadmin-gray-600 !default;
+$cadmin-table-head-font-weight: $cadmin-font-weight-semi-bold !default;
+
+$cadmin-table-head-link: () !default;
+$cadmin-table-head-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $cadmin-gray-600,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-table-head-link
+);
+
+// Table Body
+
+$cadmin-c-table-tbody: () !default;
+$cadmin-c-table-tbody: map-merge(
+	(
+		background-color: $cadmin-white,
+	),
+	$cadmin-c-table-tbody
+);
+
+// Table Footer
+
+$cadmin-c-table-tfoot: () !default;
+$cadmin-c-table-tfoot: map-merge(
+	(
+		background-color: $cadmin-table-bg,
+	),
+	$cadmin-c-table-tfoot
+);
+
+$cadmin-table-caption-color: $cadmin-gray-900 !default;
+
+$cadmin-table-divider-bg: $cadmin-gray-100 !default;
+$cadmin-table-divider-color: $cadmin-gray-600 !default;
+$cadmin-table-divider-font-size: 0.75rem !default; // 12px
+$cadmin-table-divider-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-table-divider-padding: 0.4375rem 0.75rem !default;
+$cadmin-table-divider-text-transform: uppercase !default;
+
+$cadmin-table-quick-action-menu-accent-bg: $cadmin-table-accent-bg !default;
+$cadmin-table-quick-action-menu-accent-active-bg: $cadmin-table-hover-bg !default;
+$cadmin-table-quick-action-menu-active-bg: $cadmin-gray-200 !default;
+$cadmin-table-quick-action-menu-hover-bg: $cadmin-table-hover-bg !default;
+
+// Table Title
+
+$cadmin-table-title-link: () !default;
+$cadmin-table-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-table-title-link
+);
+
+$cadmin-table-title: () !default;
+$cadmin-table-title: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		font-size: 0.875rem,
+	),
+	$cadmin-table-title
+);
+
+// Table Action Link
+
+$cadmin-table-action-link: () !default;
+$cadmin-table-action-link: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: 1rem,
+		transition: $cadmin-btn-transition,
+		hover-bg: rgba(0, 0, 0, 0.02),
+		hover-color: $cadmin-gray-900,
+		focus-bg: rgba(0, 0, 0, 0.02),
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+		active-bg: rgba(0, 0, 0, 0.04),
+	),
+	$cadmin-table-action-link
+);
+
+// Table Link
+
+$cadmin-table-link: () !default;
+$cadmin-table-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $cadmin-gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-table-link
+);
+
+// Table List
+
+$cadmin-table-list-border-color: $cadmin-gray-300 !default;
+$cadmin-table-list-color: $cadmin-body-color !default;
+
+$cadmin-table-list-accent-bg: $cadmin-gray-100 !default;
+$cadmin-table-list-hover-bg: $cadmin-table-hover-bg !default;
+$cadmin-table-list-active-bg: $cadmin-table-list-hover-bg !default;
+
+$cadmin-table-list-disabled-color: $cadmin-gray-500 !default;
+
+$cadmin-table-list-head-bg: $cadmin-white !default;
+
+$cadmin-table-list-link-color: $cadmin-gray-600 !default;
+
+$cadmin-table-list-divider-padding-x: 0.75rem !default; // 12px
+$cadmin-table-list-divider-padding-y: 0.4375rem !default; // 7px
+
+// Table List Title
+
+$cadmin-table-list-title: () !default;
+$cadmin-table-list-title: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		font-size: 0.875rem,
+		line-height: 1.45,
+	),
+	$cadmin-table-list-title
+);
+
+$cadmin-table-list-title-link: () !default;
+$cadmin-table-list-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $cadmin-gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-table-list-title-link
+);
+
+// Table List Link
+
+$cadmin-table-list-link: () !default;
+$cadmin-table-list-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $cadmin-gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-table-list-link
+);
+
+// Table List Action Link
+
+$cadmin-table-list-action-link: () !default;
+$cadmin-table-list-action-link: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: 1rem,
+		transition: $cadmin-btn-transition,
+		hover-bg: rgba(0, 0, 0, 0.02),
+		hover-color: $cadmin-gray-900,
+		focus-bg: rgba(0, 0, 0, 0.02),
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+		active-bg: rgba(0, 0, 0, 0.04),
+	),
+	$cadmin-table-list-action-link
+);

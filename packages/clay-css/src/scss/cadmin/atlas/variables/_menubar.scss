@@ -1,0 +1,95 @@
+// Menubar Vertical MD
+
+$cadmin-menubar-vertical-transparent-md: () !default;
+$cadmin-menubar-vertical-transparent-md: map-deep-merge(
+	(
+		bg-mobile: $cadmin-white,
+		link-border-radius: 0.375rem,
+		link-border-radius-mobile: 0,
+		link-hover-bg: rgba($cadmin-gray-900, 0.03),
+		link-hover-color: $cadmin-gray-900,
+		link-active-font-weight: $cadmin-font-weight-semi-bold,
+		link: (
+			transition: $cadmin-btn-transition,
+			focus-bg: rgba($cadmin-gray-900, 0.03),
+			focus-color: $cadmin-gray-900,
+			focus-box-shadow:
+				map-get($cadmin-dropdown-item-base, focus-box-shadow),
+			focus-outline: map-get($cadmin-dropdown-item-base, focus-outline),
+			active-class: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-primary,
+			),
+			disabled-box-shadow: none,
+			show: (
+				background-color: $cadmin-c-unset,
+				color: $cadmin-gray-900,
+				font-weight: $cadmin-font-weight-semi-bold,
+			),
+		),
+		link-mobile: (
+			transition: none,
+			focus-bg: $cadmin-dropdown-link-hover-bg,
+			focus-border-radius:
+				map-get($cadmin-dropdown-item-base, focus-border-radius),
+		),
+		toggler-font-size-mobile: 0.875rem,
+		toggler-font-weight-mobile: $cadmin-font-weight-semi-bold,
+		toggler-mobile: (
+			border-radius: 0.375rem,
+			transition: box-shadow 0.15s ease-in-out,
+			focus-box-shadow: $cadmin-component-focus-box-shadow,
+			focus-outline: 0,
+			disabled-box-shadow: none,
+		),
+	),
+	$cadmin-menubar-vertical-transparent-md
+);
+
+// Menubar Vertical LG
+
+$cadmin-menubar-vertical-transparent-lg: () !default;
+$cadmin-menubar-vertical-transparent-lg: map-deep-merge(
+	(
+		bg-mobile: $cadmin-white,
+		link-border-radius: 0.375rem,
+		link-border-radius-mobile: 0,
+		link-hover-bg: rgba($cadmin-gray-900, 0.03),
+		link-hover-color: $cadmin-gray-900,
+		link-active-font-weight: $cadmin-font-weight-semi-bold,
+		link: (
+			transition: $cadmin-btn-transition,
+			focus-bg: rgba($cadmin-gray-900, 0.03),
+			focus-color: $cadmin-gray-900,
+			focus-box-shadow:
+				map-get($cadmin-dropdown-item-base, focus-box-shadow),
+			focus-outline: map-get($cadmin-dropdown-item-base, focus-outline),
+			active-class: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-primary,
+			),
+			disabled-box-shadow: none,
+			show: (
+				background-color: $cadmin-c-unset,
+				color: $cadmin-gray-900,
+				font-weight: $cadmin-font-weight-semi-bold,
+			),
+		),
+		link-mobile: (
+			transition: none,
+			focus-bg: $cadmin-dropdown-link-hover-bg,
+			focus-border-radius:
+				map-get($cadmin-dropdown-item-base, focus-border-radius),
+		),
+		toggler-font-size-mobile: 0.875rem,
+		toggler-font-weight-mobile: $cadmin-font-weight-semi-bold,
+		toggler-mobile: (
+			border-radius: 0.375rem,
+			transition: box-shadow 0.15s ease-in-out,
+			focus-box-shadow: $cadmin-component-focus-box-shadow,
+			focus-outline: 0,
+			disabled-box-shadow: none,
+		),
+	),
+	$cadmin-menubar-vertical-transparent-lg
+);

@@ -1,0 +1,55 @@
+$cadmin-management-bar-base: () !default;
+
+$cadmin-management-bar-size: () !default;
+$cadmin-management-bar-size: map-deep-merge(
+	(
+		scaling-navbar: true,
+		border-bottom-width: 0.0625rem,
+		font-size: $cadmin-navbar-font-size,
+		height: 4rem,
+		min-height: 4rem,
+		padding-x: 0,
+		padding-y: 0,
+		height-mobile: 3rem,
+		min-height-mobile: 3rem,
+		btn-monospaced-font-size: 1rem,
+		link-height: 2rem,
+		link-height-mobile: 2rem,
+		link-margin-x: 0.5rem,
+		link-margin-x-mobile: 0.25rem,
+		link-padding-x-mobile: 0.25rem,
+		form-control-height-mobile: 2rem,
+		toggler-margin-x: 0.875rem,
+		active-border-bottom-width: 0.25rem,
+		nav-item-dropdown-margin-top: 0,
+	),
+	$cadmin-management-bar-size
+);
+
+$cadmin-management-bar-light: () !default;
+$cadmin-management-bar-light: map-deep-merge(
+	(
+		bg: $cadmin-light,
+		link-color: $cadmin-navbar-light-color,
+		link-hover-color: $cadmin-navbar-light-hover-color,
+		link-active-color: $cadmin-navbar-light-active-color,
+		link-disabled-color: $cadmin-navbar-light-disabled-color,
+		link-disabled-opacity: 1,
+	),
+	$cadmin-management-bar-light
+);
+
+$cadmin-management-bar-primary: () !default;
+$cadmin-management-bar-primary: map-deep-merge(
+	(
+		bg: $cadmin-primary-l3,
+		border-color: $cadmin-primary,
+		color: $cadmin-navbar-light-color,
+		link-color: $cadmin-navbar-light-color,
+		link-hover-color: $cadmin-navbar-light-hover-color,
+		link-active-color: $cadmin-navbar-light-active-color,
+		link-disabled-color: $cadmin-navbar-light-disabled-color,
+		link-disabled-opacity: 1,
+	),
+	$cadmin-management-bar-primary
+);

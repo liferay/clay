@@ -1,0 +1,29 @@
+// This is similar to the html and body tag allows you to isolate all styles inside it.
+
+%cadmin {
+	@include clay-css($cadmin);
+}
+
+// %cadmin-sizing-reset resets {min-|max-}height, margin, padding, {min-|max-}width properties to browser default
+
+%cadmin-reset {
+	@include clay-css($cadmin-reset);
+}
+
+// Resets pseudo elements
+
+%cadmin-pseudo-reset {
+	&::before,
+	&::after {
+		content: normal;
+		display: inline;
+
+		@extend %cadmin-reset !optional;
+	}
+}
+
+html#{$cadmin-selector} {
+	.cadmin {
+		@extend %cadmin !optional;
+	}
+}

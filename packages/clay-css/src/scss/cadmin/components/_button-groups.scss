@@ -1,0 +1,201 @@
+.btn-group,
+.btn-group-vertical {
+	display: inline-flex;
+	position: relative;
+	vertical-align: middle;
+
+	> .btn {
+		position: relative;
+
+		&:hover {
+			z-index: 1;
+		}
+
+		&:focus {
+			z-index: 3;
+		}
+
+		&:active,
+		&.active {
+			z-index: 2;
+		}
+	}
+}
+
+.btn-group {
+	> .btn:not(:first-child),
+	> .btn-group:not(:first-child) {
+		margin-left: math-sign($cadmin-btn-border-width);
+	}
+
+	> .btn:not(:last-child):not(.dropdown-toggle),
+	> .btn-group:not(:last-child) > .btn {
+		@include border-right-radius(0);
+	}
+
+	> .btn:not(:first-child),
+	> .btn-group:not(:first-child) > .btn {
+		@include border-left-radius(0);
+	}
+}
+
+.btn-group {
+	flex-wrap: wrap;
+}
+
+.btn-group-nowrap {
+	flex-wrap: nowrap;
+}
+
+.btn-group-item {
+	align-items: center;
+	display: inline-flex;
+	margin-right: $cadmin-btn-group-item-margin-right;
+}
+
+.btn-group-item:last-child,
+.btn-group-item-last {
+	margin-right: 0;
+}
+
+.btn-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	.btn-group,
+	.input-group {
+		margin-bottom: $cadmin-btn-toolbar-spacer-y;
+		margin-top: $cadmin-btn-toolbar-spacer-y;
+
+		&:not(:last-child) {
+			margin-right: $cadmin-btn-toolbar-spacer-x;
+		}
+	}
+
+	.input-group {
+		width: auto;
+	}
+}
+
+// Button Group Sizes
+
+.btn-group-lg {
+	> .btn,
+	.btn-group > .btn {
+		@extend %clay-btn-lg !optional;
+	}
+
+	.btn-monospaced {
+		@extend %clay-btn-monospaced-lg !optional;
+	}
+}
+
+.btn-group-sm {
+	> .btn,
+	.btn-group > .btn {
+		@extend %clay-btn-sm !optional;
+	}
+
+	.btn-monospaced {
+		@extend %clay-btn-monospaced-sm !optional;
+	}
+}
+
+// Dropdown Toggle Split
+// Makes .btn narrower
+
+.dropdown-toggle-split {
+	padding-left: $cadmin-btn-padding-x * 0.75;
+	padding-right: $cadmin-btn-padding-x * 0.75;
+
+	@if ($cadmin-enable-caret) {
+		&::after,
+		.dropup::after,
+		.dropright::after {
+			margin-left: 0;
+		}
+
+		.dropleft::before {
+			margin-right: 0;
+		}
+	}
+}
+
+.btn-sm + .dropdown-toggle-split {
+	padding-right: $cadmin-btn-padding-x-sm * 0.75;
+	padding-left: $cadmin-btn-padding-x-sm * 0.75;
+}
+
+.btn-lg + .dropdown-toggle-split {
+	padding-right: $cadmin-btn-padding-x-lg * 0.75;
+	padding-left: $cadmin-btn-padding-x-lg * 0.75;
+}
+
+// Button Group Vertical
+
+.btn-group-vertical {
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+
+	> .btn,
+	> .btn-group {
+		width: 100%;
+	}
+
+	> .btn:not(:first-child),
+	> .btn-group:not(:first-child) {
+		margin-top: math-sign($cadmin-btn-border-width);
+	}
+
+	> .btn:not(:last-child):not(.dropdown-toggle),
+	> .btn-group:not(:last-child) > .btn {
+		@include border-bottom-radius(0);
+	}
+
+	> .btn:not(:first-child),
+	> .btn-group:not(:first-child) > .btn {
+		@include border-top-radius(0);
+	}
+
+	> .btn-monospaced {
+		width: $cadmin-btn-monospaced-size;
+
+		&.btn-lg {
+			@extend %clay-btn-monospaced-lg !optional;
+		}
+
+		&.btn-sm {
+			@extend %clay-btn-monospaced-sm !optional;
+		}
+	}
+}
+
+// Checkbox and radio options
+//
+// In order to support the browser's form validation feedback, powered by the
+// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
+// `display: none;` or `visibility: hidden;` as that also hides the popover.
+// Simply visually hiding the inputs via `opacity` would leave them clickable in
+// certain cases which is prevented by using `clip` and `pointer-events`.
+// This way, we ensure a DOM element is visible to position the popover from.
+//
+// See https://github.com/twbs/bootstrap/pull/12794 and
+// https://github.com/twbs/bootstrap/pull/14559 for more information.
+
+.btn-group-toggle {
+	> .btn,
+	> .btn-group > .btn {
+		// Override default `<label>` value
+
+		margin-bottom: 0;
+
+		input[type='radio'],
+		input[type='checkbox'] {
+			clip: rect(0, 0, 0, 0);
+			pointer-events: none;
+			position: absolute;
+		}
+	}
+}

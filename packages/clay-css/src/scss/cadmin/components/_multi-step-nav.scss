@@ -1,0 +1,354 @@
+.multi-step-nav {
+	align-items: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-bottom: $cadmin-multi-step-nav-margin-bottom;
+	padding: $cadmin-multi-step-nav-padding-y $cadmin-multi-step-nav-padding-x;
+	position: relative;
+}
+
+.multi-step-indicator-label-bottom {
+	.multi-step-item {
+		padding-bottom: $cadmin-multi-step-indicator-label-font-size *
+			$cadmin-line-height-base;
+	}
+
+	.multi-step-indicator-label {
+		top: $cadmin-multi-step-icon-size;
+	}
+}
+
+.multi-step-indicator-label-top {
+	.multi-step-item {
+		padding-top: $cadmin-multi-step-indicator-label-font-size *
+			$cadmin-line-height-base;
+	}
+
+	.multi-step-indicator-label {
+		bottom: $cadmin-multi-step-icon-size + $cadmin-multi-step-divider-height;
+	}
+}
+
+.multi-step-title-center {
+	.multi-step-title {
+		margin-left: $cadmin-multi-step-icon-size / 2;
+		max-width: $cadmin-multi-step-title-max-width;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		text-overflow: ellipsis;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		width: auto;
+	}
+}
+
+.multi-step-item {
+	margin-bottom: $cadmin-multi-step-item-margin-bottom;
+	position: relative;
+
+	&.active {
+		.multi-step-icon {
+			background-color: $cadmin-multi-step-icon-active-bg;
+			background-image: $cadmin-multi-step-icon-active-bg-image;
+			background-position: $cadmin-multi-step-icon-active-bg-position;
+			background-repeat: no-repeat;
+			background-size: $cadmin-multi-step-icon-active-bg-size;
+			color: $cadmin-multi-step-icon-active-color;
+
+			@if ($cadmin-multi-step-icon-active-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+		}
+
+		.multi-step-divider {
+			background-color: $cadmin-multi-step-divider-active-bg;
+		}
+	}
+
+	&.active.complete {
+		.multi-step-icon {
+			background-color: $cadmin-multi-step-icon-active-bg;
+			color: $cadmin-multi-step-icon-active-color;
+		}
+	}
+
+	&.complete {
+		.dropdown .multi-step-icon {
+			&,
+			&:active {
+				background-image: none;
+			}
+		}
+
+		.multi-step-icon {
+			background-color: $cadmin-multi-step-icon-complete-bg;
+			color: $cadmin-multi-step-icon-complete-color;
+
+			@if ($cadmin-multi-step-icon-complete-bg-image) {
+				background-image: $cadmin-multi-step-icon-complete-bg-image;
+				background-position: $cadmin-multi-step-icon-complete-bg-position;
+				background-repeat: no-repeat;
+				background-size: $cadmin-multi-step-icon-complete-bg-size;
+
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+
+				// BS4 resets background-image in buttons https://github.com/twbs/bootstrap/issues/23353
+
+				&:active {
+					background-image: $cadmin-multi-step-icon-complete-bg-image;
+				}
+			}
+		}
+
+		.multi-step-divider {
+			background-color: $cadmin-multi-step-divider-complete-bg;
+		}
+	}
+
+	&.disabled {
+		.multi-step-title {
+			color: $cadmin-multi-step-title-disabled-color;
+		}
+
+		.multi-step-icon {
+			background-color: $cadmin-multi-step-icon-disabled-bg;
+			background-image: $cadmin-multi-step-icon-disabled-bg-image;
+			background-position: $cadmin-multi-step-icon-disabled-bg-position;
+			background-repeat: no-repeat;
+			background-size: $cadmin-multi-step-icon-disabled-bg-size;
+			color: $cadmin-multi-step-icon-disabled-color;
+			cursor: $cadmin-multi-step-icon-disabled-cursor;
+			opacity: $cadmin-multi-step-icon-disabled-opacity;
+
+			@if ($cadmin-multi-step-icon-disabled-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+
+			&:focus {
+				box-shadow: $cadmin-multi-step-icon-disabled-focus-box-shadow;
+			}
+		}
+
+		.multi-step-indicator-label {
+			color: $cadmin-multi-step-indicator-label-disabled-color;
+		}
+
+		.multi-step-divider {
+			background-color: $cadmin-multi-step-divider-disabled-bg;
+		}
+	}
+}
+
+.multi-step-title {
+	color: $cadmin-multi-step-title-color;
+	font-size: $cadmin-multi-step-title-font-size;
+	font-weight: $cadmin-multi-step-title-font-weight;
+	line-height: normal;
+	margin-bottom: $cadmin-multi-step-title-margin-bottom;
+	word-wrap: break-word;
+}
+
+.multi-step-item-expand {
+	flex-grow: 1;
+	width: $cadmin-multi-step-item-width;
+}
+
+.multi-step-divider {
+	background-color: $cadmin-multi-step-divider-bg;
+	height: $cadmin-multi-step-divider-height;
+	margin-left: $cadmin-multi-step-icon-size;
+	margin-top: -$cadmin-multi-step-divider-height;
+	position: relative;
+	top: $cadmin-multi-step-divider-top;
+}
+
+.multi-step-indicator {
+	position: relative;
+	width: $cadmin-multi-step-indicator-width;
+
+	.dropdown-item-indicator,
+	.dropdown-item-indicator-start,
+	.dropdown-item-indicator-end {
+		display: none;
+	}
+
+	.complete {
+		.dropdown-item-indicator,
+		.dropdown-item-indicator-start,
+		.dropdown-item-indicator-end {
+			display: block;
+		}
+	}
+
+	.multi-step-indicator-label {
+		color: $cadmin-multi-step-indicator-label-color;
+		font-size: $cadmin-multi-step-indicator-label-font-size;
+		font-weight: $cadmin-multi-step-indicator-label-font-weight;
+		left: 50%;
+		max-width: $cadmin-multi-step-indicator-label-max-width;
+		position: absolute;
+		transform: translateX(-50%);
+
+		@include text-truncate;
+	}
+}
+
+.multi-step-icon {
+	align-items: center;
+	background-color: $cadmin-multi-step-icon-bg;
+	border-color: $cadmin-multi-step-icon-border-color;
+	border-radius: $cadmin-multi-step-icon-border-radius;
+	border-style: $cadmin-multi-step-icon-border-style;
+	border-width: $cadmin-multi-step-icon-border-width;
+	color: $cadmin-multi-step-icon-color;
+	cursor: $cadmin-multi-step-icon-cursor;
+	display: flex;
+	font-size: $cadmin-multi-step-icon-font-size;
+	font-weight: $cadmin-multi-step-icon-font-weight;
+	justify-content: center;
+	height: $cadmin-multi-step-icon-size;
+	padding-bottom: $cadmin-multi-step-icon-padding-bottom;
+	padding-left: $cadmin-multi-step-icon-padding-left;
+	padding-right: $cadmin-multi-step-icon-padding-right;
+	padding-top: $cadmin-multi-step-icon-padding-top;
+	transition: $cadmin-multi-step-icon-transition;
+	width: $cadmin-multi-step-icon-size;
+
+	&:hover {
+		background-color: $cadmin-multi-step-icon-hover-bg;
+		color: $cadmin-multi-step-icon-hover-color;
+		text-decoration: $cadmin-multi-step-icon-hover-text-decoration;
+	}
+
+	&:focus {
+		background-color: $cadmin-multi-step-icon-focus-bg;
+		box-shadow: $cadmin-multi-step-icon-focus-box-shadow;
+		color: $cadmin-multi-step-icon-focus-color;
+		outline: $cadmin-multi-step-icon-focus-outline;
+		text-decoration: $cadmin-multi-step-icon-focus-text-decoration;
+	}
+
+	&[data-multi-step-icon]:before {
+		content: attr(data-multi-step-icon);
+		height: $cadmin-multi-step-icon-size;
+		line-height: $cadmin-multi-step-icon-size;
+		text-align: center;
+		width: $cadmin-multi-step-icon-size;
+	}
+
+	@if ($cadmin-enable-c-inner) {
+		.c-inner {
+			margin-bottom: #{math-sign($cadmin-multi-step-icon-padding-bottom)};
+			margin-left: #{math-sign($cadmin-multi-step-icon-padding-left)};
+			margin-right: #{math-sign($cadmin-multi-step-icon-padding-right)};
+			margin-top: #{math-sign($cadmin-multi-step-icon-padding-top)};
+			position: absolute;
+		}
+	}
+
+	.btn-link {
+		vertical-align: baseline;
+	}
+
+	.lexicon-icon {
+		height: $cadmin-multi-step-icon-font-size;
+		margin-top: 0;
+		width: $cadmin-multi-step-icon-font-size;
+	}
+}
+
+.multi-step-item-fixed-width {
+	&.multi-step-item,
+	.multi-step-item-expand {
+		flex-grow: 0;
+		width: $cadmin-multi-step-item-fixed-width;
+	}
+}
+
+.multi-step-nav-collapse-sm {
+	@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+		flex-wrap: nowrap;
+
+		&.multi-step-indicator-label-top {
+			.multi-step-indicator-label {
+				bottom: auto;
+				top: 0;
+			}
+		}
+
+		&.multi-step-indicator-label-bottom {
+			.multi-step-indicator-label {
+				bottom: 0;
+				top: auto;
+			}
+		}
+
+		&.multi-step-title-center {
+			.multi-step-title {
+				margin-left: 0;
+				max-width: none;
+				transform: none;
+			}
+		}
+
+		.active {
+			&.multi-step-item {
+				position: static;
+			}
+
+			.multi-step-title {
+				display: block;
+				left: 0;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+			}
+
+			.multi-step-indicator {
+				position: static;
+			}
+
+			.multi-step-indicator-label {
+				display: block;
+				left: 0;
+				max-width: none;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				transform: none;
+				width: auto;
+			}
+		}
+
+		.multi-step-item {
+			margin-bottom: 0;
+			min-width: $cadmin-multi-step-icon-size;
+			padding-top: $cadmin-multi-step-title-font-size +
+				$cadmin-multi-step-title-margin-bottom +
+				($cadmin-multi-step-divider-height / 2);
+		}
+
+		.multi-step-title {
+			display: none;
+		}
+
+		.multi-step-indicator-label {
+			display: none;
+		}
+	}
+}

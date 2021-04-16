@@ -1,0 +1,724 @@
+.form-file {
+	display: flex;
+	position: relative;
+}
+
+.form-file-input {
+	cursor: $cadmin-input-file-cursor;
+	height: 100%;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+
+	&::-webkit-file-upload-button {
+		cursor: $cadmin-input-file-cursor;
+	}
+
+	&:focus {
+		+ .btn-primary {
+			@extend %btn-primary-focus !optional;
+		}
+
+		+ .btn-secondary {
+			@extend %btn-secondary-focus !optional;
+		}
+
+		+ .btn-success {
+			@extend %btn-success-focus !optional;
+		}
+
+		+ .btn-warning {
+			@extend %btn-warning-focus !optional;
+		}
+
+		+ .btn-danger {
+			@extend %btn-danger-focus !optional;
+		}
+
+		+ .btn-light {
+			@extend %btn-light-focus !optional;
+		}
+
+		+ .btn-dark {
+			@extend %btn-dark-focus !optional;
+		}
+
+		+ .input-group {
+			border-radius: 1px;
+			box-shadow: 0 0 0 0.075rem #fff, $cadmin-btn-focus-box-shadow;
+		}
+	}
+
+	&:disabled {
+		cursor: $cadmin-input-disabled-cursor;
+
+		&::-webkit-file-upload-button {
+			cursor: $cadmin-input-disabled-cursor;
+		}
+	}
+}
+
+// Custom Checkbox and Radio
+
+.custom-control {
+	@include clay-css($cadmin-custom-control);
+
+	&:only-child {
+		margin-bottom: 0;
+	}
+
+	label {
+		cursor: map-get($cadmin-custom-control-label, cursor);
+		display: inline;
+		font-size: $cadmin-font-size-base;
+		margin-bottom: 0;
+	}
+}
+
+.custom-control-label {
+	@include clay-container($cadmin-custom-control-label);
+}
+
+label.custom-control-label {
+	font-size: map-get($cadmin-custom-control-label, font-size);
+}
+
+.custom-control-label-text {
+	@include clay-container($cadmin-custom-control-label-text);
+
+	small,
+	.small {
+		@include clay-container($cadmin-custom-control-label-text-small);
+	}
+}
+
+// Custom Control Primary
+
+.custom-control-primary {
+	.custom-control-label-text {
+		@include clay-container($cadmin-custom-control-primary-label-text);
+	}
+}
+
+// Custom Control Indicator
+
+.custom-control-label::before {
+	background-color: $cadmin-custom-control-indicator-bg;
+	border-color: $cadmin-custom-control-indicator-border-color;
+	border-style: $cadmin-custom-control-indicator-border-style;
+	border-width: $cadmin-custom-control-indicator-border-width;
+
+	@include box-shadow($cadmin-custom-control-indicator-box-shadow);
+
+	content: '';
+	display: block;
+	float: left;
+	font-size: $cadmin-custom-control-indicator-size;
+	height: $cadmin-custom-control-indicator-size;
+	left: 0;
+	position: relative;
+	top: $cadmin-custom-control-indicator-position-top;
+
+	@include transition($cadmin-custom-forms-transition);
+
+	width: $cadmin-custom-control-indicator-size;
+}
+
+.custom-control-label::after {
+	background: no-repeat 50% / #{$cadmin-custom-control-indicator-bg-size};
+	content: '';
+	display: block;
+	height: $cadmin-custom-control-indicator-size;
+	left: 0;
+	position: absolute;
+	top: $cadmin-custom-control-indicator-position-top;
+	width: $cadmin-custom-control-indicator-size;
+}
+
+.custom-control-input {
+	cursor: $cadmin-form-check-input-cursor;
+	height: $cadmin-custom-control-indicator-size;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: $cadmin-custom-control-indicator-position-top;
+	width: $cadmin-custom-control-indicator-size;
+	z-index: 1;
+
+	&:focus ~ .custom-control-label::before {
+		@if $cadmin-enable-shadows {
+			box-shadow: $cadmin-input-box-shadow, $cadmin-input-focus-box-shadow;
+		} @else {
+			box-shadow: $cadmin-custom-control-indicator-focus-box-shadow;
+		}
+	}
+
+	&:focus:not(:checked) ~ .custom-control-label::before {
+		border-color: $cadmin-custom-control-indicator-focus-border-color;
+	}
+
+	&:active ~ .custom-control-label::before {
+		background-color: $cadmin-custom-control-indicator-active-bg;
+		border-color: $cadmin-custom-control-indicator-active-border-color;
+
+		@include box-shadow($cadmin-custom-control-indicator-active-box-shadow);
+
+		color: $cadmin-custom-control-indicator-active-color;
+	}
+
+	&:active:checked ~ .custom-control-label::before {
+		background-color: $cadmin-custom-control-indicator-checked-active-bg;
+		border-color: $cadmin-custom-control-indicator-checked-active-border-color;
+	}
+
+	&:checked ~ .custom-control-label::before {
+		@include gradient-bg($cadmin-custom-control-indicator-checked-bg);
+
+		border-color: $cadmin-custom-control-indicator-checked-border-color;
+		border-color: $cadmin-custom-control-indicator-checked-border-color;
+
+		@include box-shadow(
+			$cadmin-custom-control-indicator-checked-box-shadow
+		);
+
+		color: $cadmin-custom-control-indicator-checked-color;
+	}
+
+	// Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+
+	&[disabled],
+	&:disabled {
+		cursor: $cadmin-custom-control-indicator-disabled-cursor;
+
+		~ .custom-control-label::before {
+			background-color: $cadmin-custom-control-indicator-disabled-bg;
+			border-color: $cadmin-custom-control-indicator-disabled-border-color;
+			box-shadow: none;
+		}
+
+		~ .custom-control-label {
+			@include clay-container($cadmin-custom-control-label-disabled);
+		}
+	}
+
+	&:disabled:checked ~ .custom-control-label::before {
+		background-color: $cadmin-custom-control-indicator-checked-disabled-bg;
+		border-color: $cadmin-custom-control-indicator-checked-disabled-border-color;
+	}
+}
+
+.custom-control .custom-control-input:focus ~ .custom-control-label::before {
+	box-shadow: $cadmin-custom-control-indicator-focus-box-shadow;
+}
+
+// Custom Checkbox
+
+.custom-checkbox {
+	.custom-control-input {
+		&:checked ~ .custom-control-label::after {
+			background-image: escape-svg(
+				$cadmin-custom-checkbox-indicator-icon-checked
+			);
+			background-size: $cadmin-custom-checkbox-indicator-icon-checked-bg-size;
+		}
+
+		&:indeterminate ~ .custom-control-label::before {
+			@include gradient-bg(
+				$cadmin-custom-checkbox-indicator-indeterminate-bg
+			);
+
+			border-color: $cadmin-custom-control-indicator-indeterminate-border-color;
+
+			@include box-shadow(
+				$cadmin-custom-checkbox-indicator-indeterminate-box-shadow
+			);
+		}
+
+		&:indeterminate ~ .custom-control-label::after {
+			background-image: escape-svg(
+				$cadmin-custom-checkbox-indicator-icon-indeterminate
+			);
+			background-size: $cadmin-custom-checkbox-indicator-icon-indeterminate-bg-size;
+		}
+
+		&:disabled:checked ~ .custom-control-label::before {
+			background-color: $cadmin-custom-control-indicator-checked-disabled-bg;
+		}
+
+		&:disabled:indeterminate ~ .custom-control-label::before {
+			background-color: $cadmin-custom-control-indicator-checked-disabled-bg;
+			border-color: $cadmin-custom-control-indicator-checked-disabled-border-color;
+		}
+	}
+
+	.custom-control-label::before {
+		@include border-radius($cadmin-custom-checkbox-indicator-border-radius);
+	}
+}
+
+// Custom Radio
+
+.custom-radio {
+	.custom-control-input {
+		&:checked ~ .custom-control-label::after {
+			background-image: escape-svg(
+				$cadmin-custom-radio-indicator-icon-checked
+			);
+			background-size: $cadmin-custom-radio-indicator-icon-checked-bg-size;
+		}
+
+		&:disabled ~ .custom-control-label::before {
+			border-color: $cadmin-custom-radio-indicator-disabled-border-color;
+		}
+
+		&:disabled:checked ~ .custom-control-label::before {
+			background-color: $cadmin-custom-control-indicator-checked-disabled-bg;
+			border-color: $cadmin-custom-radio-indicator-checked-disabled-border-color;
+		}
+	}
+
+	.custom-control-label::before {
+		border-radius: $cadmin-custom-radio-indicator-border-radius;
+	}
+}
+
+// Custom Control Inline
+
+.custom-control-inline {
+	display: inline-flex;
+
+	+ .custom-control-inline {
+		margin-left: $cadmin-custom-control-spacer-x;
+	}
+}
+
+// Bootstrap 4 Custom Switch
+
+.custom-switch {
+	padding-left: $cadmin-custom-switch-width + $cadmin-custom-control-gutter;
+
+	.custom-control-label {
+		&::before {
+			border-radius: $cadmin-custom-switch-indicator-border-radius;
+			left: -($cadmin-custom-switch-width + $cadmin-custom-control-gutter);
+			pointer-events: all;
+			width: $cadmin-custom-switch-width;
+		}
+
+		&::after {
+			background-color: $cadmin-custom-control-indicator-border-color;
+			border-radius: $cadmin-custom-switch-indicator-border-radius;
+			height: $cadmin-custom-switch-indicator-size;
+			left: add(
+				-($cadmin-custom-switch-width + $cadmin-custom-control-gutter),
+				$cadmin-custom-control-indicator-border-width * 2
+			);
+
+			@include transition(
+				transform 0.15s ease-in-out,
+				$cadmin-custom-forms-transition
+			);
+
+			top: add(
+				(
+						$cadmin-font-size-base * $cadmin-line-height-base -
+							$cadmin-custom-control-indicator-size
+					) / 2,
+				$cadmin-custom-control-indicator-border-width * 2
+			);
+			width: $cadmin-custom-switch-indicator-size;
+		}
+	}
+
+	.custom-control-input:checked ~ .custom-control-label {
+		&::after {
+			background-color: $cadmin-custom-control-indicator-bg;
+			transform: translateX(
+				$cadmin-custom-switch-width -
+					$cadmin-custom-control-indicator-size
+			);
+		}
+	}
+
+	.custom-control-input:disabled {
+		&:checked ~ .custom-control-label::before {
+			background-color: $cadmin-custom-control-indicator-checked-disabled-bg;
+		}
+	}
+}
+
+// Bootstrap 4 Custom Select
+
+.custom-select {
+	-webkit-appearance: none;
+	appearance: none;
+	background: $cadmin-custom-select-bg $cadmin-custom-select-background;
+	border: $cadmin-custom-select-border-width solid
+		$cadmin-custom-select-border-color;
+
+	@include border-radius($cadmin-custom-select-border-radius, 0);
+	@include box-shadow($cadmin-custom-select-box-shadow);
+
+	color: $cadmin-custom-select-color;
+	display: inline-block;
+	font-family: $cadmin-custom-select-font-family;
+
+	@include font-size($cadmin-custom-select-font-size);
+
+	font-weight: $cadmin-custom-select-font-weight;
+	height: $cadmin-custom-select-height;
+	line-height: $cadmin-custom-select-line-height;
+	padding: $cadmin-custom-select-padding-y
+		(
+			$cadmin-custom-select-padding-x +
+				$cadmin-custom-select-indicator-padding
+		)
+		$cadmin-custom-select-padding-y $cadmin-custom-select-padding-x;
+	vertical-align: middle;
+	width: 100%;
+
+	&:focus {
+		border-color: $cadmin-custom-select-focus-border-color;
+
+		@if $cadmin-enable-shadows {
+			box-shadow: $cadmin-custom-select-box-shadow,
+				$cadmin-custom-select-focus-box-shadow;
+		} @else {
+			box-shadow: $cadmin-custom-select-focus-box-shadow;
+		}
+
+		outline: 0;
+
+		&::-ms-value {
+			// For visual consistency with other platforms/browsers,
+			// suppress the default white text on blue background highlight given to
+			// the selected option text when the (still closed) <select> receives focus
+			// in IE and (under certain conditions) Edge.
+			// See https://github.com/twbs/bootstrap/issues/19398.
+
+			background-color: $cadmin-input-bg;
+			color: $cadmin-input-color;
+		}
+	}
+
+	&[multiple],
+	&[size]:not([size='1']) {
+		background-image: none;
+		height: auto;
+		padding-right: $cadmin-custom-select-padding-x;
+	}
+
+	&:disabled {
+		background-color: $cadmin-custom-select-disabled-bg;
+		color: $cadmin-custom-select-disabled-color;
+	}
+
+	// Hides the default caret in IE11
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	// Remove outline from select box in FF
+
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 $cadmin-custom-select-color;
+	}
+}
+
+.custom-select-sm {
+	@include font-size($cadmin-custom-select-font-size-sm);
+
+	height: $cadmin-custom-select-height-sm;
+	padding-bottom: $cadmin-custom-select-padding-y-sm;
+	padding-left: $cadmin-custom-select-padding-x-sm;
+	padding-top: $cadmin-custom-select-padding-y-sm;
+}
+
+.custom-select-lg {
+	@include font-size($cadmin-custom-select-font-size-lg);
+
+	height: $cadmin-custom-select-height-lg;
+	padding-bottom: $cadmin-custom-select-padding-y-lg;
+	padding-left: $cadmin-custom-select-padding-x-lg;
+	padding-top: $cadmin-custom-select-padding-y-lg;
+}
+
+// Boostrap 4 Custom File
+
+.custom-file {
+	display: inline-block;
+	height: $cadmin-custom-file-height;
+	margin-bottom: 0;
+	position: relative;
+	width: 100%;
+}
+
+.custom-file-input {
+	height: $cadmin-custom-file-height;
+	margin: 0;
+	opacity: 0;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+
+	&:focus ~ .custom-file-label {
+		border-color: $cadmin-custom-file-focus-border-color;
+		box-shadow: $cadmin-custom-file-focus-box-shadow;
+	}
+
+	// Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+
+	&[disabled] ~ .custom-file-label,
+	&:disabled ~ .custom-file-label {
+		background-color: $cadmin-custom-file-disabled-bg;
+	}
+
+	@each $cadmin-lang, $cadmin-value in $cadmin-custom-file-text {
+		&:lang(#{$cadmin-lang}) ~ .custom-file-label::after {
+			content: $cadmin-value;
+		}
+	}
+
+	~ .custom-file-label[data-browse]::after {
+		content: attr(data-browse);
+	}
+}
+
+.custom-file-label {
+	background-color: $cadmin-custom-file-bg;
+	border: $cadmin-custom-file-border-width solid
+		$cadmin-custom-file-border-color;
+
+	@include border-radius($cadmin-custom-file-border-radius);
+	@include box-shadow($cadmin-custom-file-box-shadow);
+
+	color: $cadmin-custom-file-color;
+	font-family: $cadmin-custom-file-font-family;
+	font-weight: $cadmin-custom-file-font-weight;
+	height: $cadmin-custom-file-height;
+	left: 0;
+	line-height: $cadmin-custom-file-line-height;
+	padding: $cadmin-custom-file-padding-y $cadmin-custom-file-padding-x;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+
+	&::after {
+		@include gradient-bg($cadmin-custom-file-button-bg);
+
+		border-left: inherit;
+
+		@include border-radius(
+			0 $cadmin-custom-file-border-radius
+				$cadmin-custom-file-border-radius 0
+		);
+
+		bottom: 0;
+		color: $cadmin-custom-file-button-color;
+		content: 'Browse';
+		display: block;
+		height: $cadmin-custom-file-height-inner;
+		line-height: $cadmin-custom-file-line-height;
+		padding: $cadmin-custom-file-padding-y $cadmin-custom-file-padding-x;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 3;
+	}
+}
+
+// Boostrap 4 Custom Range
+
+.custom-range {
+	appearance: none;
+	background-color: transparent;
+	height: add(
+		$cadmin-custom-range-thumb-height,
+		$cadmin-custom-range-thumb-focus-box-shadow-width * 2
+	);
+	padding: 0;
+	width: 100%;
+
+	&:focus {
+		outline: none;
+
+		// Pseudo-elements must be split across multiple rulesets to have an effect.
+		// No box-shadow() mixin for focus accessibility.
+
+		&::-webkit-slider-thumb {
+			box-shadow: $cadmin-custom-range-thumb-focus-box-shadow;
+		}
+
+		&::-moz-range-thumb {
+			box-shadow: $cadmin-custom-range-thumb-focus-box-shadow;
+		}
+
+		&::-ms-thumb {
+			box-shadow: $cadmin-custom-range-thumb-focus-box-shadow;
+		}
+	}
+
+	&::-moz-focus-outer {
+		border: 0;
+	}
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+
+		@include gradient-bg($cadmin-custom-range-thumb-bg);
+
+		border: $cadmin-custom-range-thumb-border;
+
+		@include border-radius($cadmin-custom-range-thumb-border-radius);
+		@include box-shadow($cadmin-custom-range-thumb-box-shadow);
+
+		height: $cadmin-custom-range-thumb-height;
+		margin-top: (
+				$cadmin-custom-range-track-height -
+					$cadmin-custom-range-thumb-height
+			) / 2; // Webkit specific
+
+		@include transition($cadmin-custom-forms-transition);
+
+		width: $cadmin-custom-range-thumb-width;
+
+		&:active {
+			@include gradient-bg($cadmin-custom-range-thumb-active-bg);
+		}
+	}
+
+	&::-webkit-slider-runnable-track {
+		@include border-radius($cadmin-custom-range-track-border-radius);
+		@include box-shadow($cadmin-custom-range-track-box-shadow);
+		background-color: $cadmin-custom-range-track-bg;
+		border-color: transparent;
+		color: transparent;
+		cursor: $cadmin-custom-range-track-cursor;
+		height: $cadmin-custom-range-track-height;
+		width: $cadmin-custom-range-track-width;
+	}
+
+	&::-moz-range-thumb {
+		-moz-appearance: none;
+		appearance: none;
+
+		@include gradient-bg($cadmin-custom-range-thumb-bg);
+		@include border-radius($cadmin-custom-range-thumb-border-radius);
+
+		border: $cadmin-custom-range-thumb-border;
+
+		@include box-shadow($cadmin-custom-range-thumb-box-shadow);
+
+		height: $cadmin-custom-range-thumb-height;
+
+		@include transition($cadmin-custom-forms-transition);
+
+		width: $cadmin-custom-range-thumb-width;
+
+		&:active {
+			@include gradient-bg($cadmin-custom-range-thumb-active-bg);
+		}
+	}
+
+	&::-moz-range-track {
+		background-color: $cadmin-custom-range-track-bg;
+		border-color: transparent;
+
+		@include border-radius($cadmin-custom-range-track-border-radius);
+		@include box-shadow($cadmin-custom-range-track-box-shadow);
+
+		color: transparent;
+		cursor: $cadmin-custom-range-track-cursor;
+		height: $cadmin-custom-range-track-height;
+		width: $cadmin-custom-range-track-width;
+	}
+
+	&::-ms-thumb {
+		appearance: none;
+
+		@include gradient-bg($cadmin-custom-range-thumb-bg);
+
+		border: $cadmin-custom-range-thumb-border;
+
+		@include border-radius($cadmin-custom-range-thumb-border-radius);
+		@include box-shadow($cadmin-custom-range-thumb-box-shadow);
+
+		height: $cadmin-custom-range-thumb-height;
+
+		// Workaround that overflowed box-shadow is hidden.
+
+		margin-left: $cadmin-custom-range-thumb-focus-box-shadow-width;
+		margin-right: $cadmin-custom-range-thumb-focus-box-shadow-width;
+
+		// Edge specific
+
+		margin-top: 0;
+
+		@include transition($cadmin-custom-forms-transition);
+
+		width: $cadmin-custom-range-thumb-width;
+
+		&:active {
+			@include gradient-bg($cadmin-custom-range-thumb-active-bg);
+		}
+	}
+
+	&::-ms-track {
+		background-color: transparent;
+		border-color: transparent;
+		border-width: $cadmin-custom-range-thumb-height / 2;
+
+		@include box-shadow($cadmin-custom-range-track-box-shadow);
+
+		color: transparent;
+		cursor: $cadmin-custom-range-track-cursor;
+		height: $cadmin-custom-range-track-height;
+		width: $cadmin-custom-range-track-width;
+	}
+
+	&::-ms-fill-lower {
+		background-color: $cadmin-custom-range-track-bg;
+
+		@include border-radius($cadmin-custom-range-track-border-radius);
+	}
+
+	&::-ms-fill-upper {
+		@include border-radius($cadmin-custom-range-track-border-radius);
+
+		background-color: $cadmin-custom-range-track-bg;
+		margin-right: 15px;
+	}
+
+	&:disabled {
+		&::-webkit-slider-thumb {
+			background-color: $cadmin-custom-range-thumb-disabled-bg;
+		}
+
+		&::-webkit-slider-runnable-track {
+			cursor: default;
+		}
+
+		&::-moz-range-thumb {
+			background-color: $cadmin-custom-range-thumb-disabled-bg;
+		}
+
+		&::-moz-range-track {
+			cursor: default;
+		}
+
+		&::-ms-thumb {
+			background-color: $cadmin-custom-range-thumb-disabled-bg;
+		}
+	}
+}
+
+.custom-file-label,
+.custom-select {
+	@include transition($cadmin-custom-forms-transition);
+}

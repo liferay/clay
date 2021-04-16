@@ -1,0 +1,50 @@
+.toast {
+	backdrop-filter: blur(10px);
+	background-clip: padding-box;
+	background-color: $cadmin-toast-background-color;
+	border: $cadmin-toast-border-width solid $cadmin-toast-border-color;
+
+	@include border-radius($cadmin-toast-border-radius);
+
+	box-shadow: $cadmin-toast-box-shadow;
+	color: $cadmin-toast-color;
+	font-size: $cadmin-toast-font-size;
+	max-width: $cadmin-toast-max-width;
+	opacity: 0;
+
+	// cheap rounded corners on nested items
+
+	overflow: hidden;
+
+	&:not(:last-child) {
+		margin-bottom: $cadmin-toast-padding-x;
+	}
+
+	&.showing {
+		opacity: 1;
+	}
+
+	&.show {
+		display: block;
+		opacity: 1;
+	}
+
+	&.hide {
+		display: none;
+	}
+}
+
+.toast-header {
+	align-items: center;
+	background-clip: padding-box;
+	background-color: $cadmin-toast-header-background-color;
+	border-bottom: $cadmin-toast-border-width solid
+		$cadmin-toast-header-border-color;
+	color: $cadmin-toast-header-color;
+	display: flex;
+	padding: $cadmin-toast-padding-y $cadmin-toast-padding-x;
+}
+
+.toast-body {
+	padding: $cadmin-toast-padding-x;
+}

@@ -1,0 +1,233 @@
+////
+/// @group sheet
+////
+
+$cadmin-sheet-bg: $cadmin-body-bg !default;
+$cadmin-sheet-border-color: $cadmin-gray-300 !default;
+$cadmin-sheet-border-style: solid !default;
+$cadmin-sheet-border-width: 0.0625rem !default; // 1px
+
+$cadmin-sheet-border-radius: $cadmin-border-radius !default;
+
+$cadmin-sheet-padding-bottom: 0.0625rem !default; // 1px
+$cadmin-sheet-padding-left: 1.5rem !default; // 24px
+$cadmin-sheet-padding-right: 1.5rem !default; // 24px
+$cadmin-sheet-padding-top: 1.5rem !default; // 24px
+
+$cadmin-sheet-padding-bottom-mobile: null !default;
+$cadmin-sheet-padding-left-mobile: null !default;
+$cadmin-sheet-padding-right-mobile: null !default;
+$cadmin-sheet-padding-top-mobile: null !default;
+
+$cadmin-sheet-plus-sheet: () !default;
+$cadmin-sheet-plus-sheet: map-merge(
+	(
+		margin-top: 3rem,
+	),
+	$cadmin-sheet-plus-sheet
+);
+
+// Sheet Header
+
+$cadmin-sheet-header-margin-bottom: 3rem !default; // 48px
+$cadmin-sheet-header-margin-bottom-mobile: null !default;
+
+// Sheet Section
+
+$cadmin-sheet-section-margin-bottom: 3rem !default; // 48px
+$cadmin-sheet-section-margin-bottom-mobile: null !default;
+
+$cadmin-sheet-panel-group-margin-bottom: 1.5rem !default; // 24px
+$cadmin-sheet-panel-group-margin-bottom-mobile: null !default;
+
+// Sheet Footer
+
+$cadmin-sheet-footer-margin-bottom: 1.5rem !default; // 24px
+$cadmin-sheet-footer-margin-left: null !default;
+$cadmin-sheet-footer-margin-right: null !default;
+$cadmin-sheet-footer-margin-top: 1.5rem !default; // 24px
+
+$cadmin-sheet-footer-margin-bottom-mobile: null !default;
+$cadmin-sheet-footer-margin-left-mobile: null !default;
+$cadmin-sheet-footer-margin-right-mobile: null !default;
+$cadmin-sheet-footer-margin-top-mobile: null !default;
+
+$cadmin-sheet-footer-btn-block-sm-down: () !default;
+$cadmin-sheet-footer-btn-block-sm-down: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		btn-margin-bottom-mobile: 1rem,
+	),
+	$cadmin-sheet-footer-btn-block-sm-down
+);
+
+// Sheet Sizes
+
+/// @deprecated as of 3.x.
+
+$cadmin-sheet-lg-max-width: ceil(
+	map-get($cadmin-container-max-widths, lg) * 0.83333
+) !default; // 800px
+
+// Sheet Title
+
+$cadmin-sheet-title-color: null !default;
+$cadmin-sheet-title-font-size: 1.5rem !default; // 24px
+$cadmin-sheet-title-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-sheet-title-line-height: $cadmin-headings-line-height !default; // 1.2
+$cadmin-sheet-title-margin-bottom: 1.5rem !default; // 24px
+
+$cadmin-sheet-title-autofit-padded-no-gutters-ext: 'autofit-padded-no-gutters-sm' !default;
+
+$cadmin-sheet-title-font-size-mobile: 1.25rem !default; // 20px
+$cadmin-sheet-title-margin-bottom-mobile: null !default;
+
+// Sheet Subtitle
+
+$cadmin-sheet-subtitle-border-color: null !default;
+$cadmin-sheet-subtitle-border-style: solid !default;
+$cadmin-sheet-subtitle-border-width: 0 0 1px 0 !default;
+$cadmin-sheet-subtitle-color: null !default;
+$cadmin-sheet-subtitle-font-size: 0.875rem !default; // 14px
+$cadmin-sheet-subtitle-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-sheet-subtitle-line-height: $cadmin-headings-line-height !default; // 1.2
+$cadmin-sheet-subtitle-margin-bottom: 1.5rem !default; // 24px
+$cadmin-sheet-subtitle-padding-x: null !default;
+$cadmin-sheet-subtitle-padding-y: 0.3125rem !default; // 5px
+$cadmin-sheet-subtitle-text-transform: uppercase !default;
+
+$cadmin-sheet-subtitle-font-size-mobile: null !default;
+$cadmin-sheet-subtitle-margin-bottom-mobile: null !default;
+
+$cadmin-sheet-subtitle-heading-text-margin-bottom: 0 !default;
+$cadmin-sheet-subtitle-heading-text-margin-top: auto !default;
+
+// Sheet Subtitle as Panel Header
+
+$cadmin-sheet-subtitle-link-color: $cadmin-sheet-subtitle-color !default;
+$cadmin-sheet-subtitle-link-text-decoration: null !default;
+$cadmin-sheet-subtitle-link-hover-color: null !default;
+$cadmin-sheet-subtitle-link-hover-text-decoration: none !default;
+
+$cadmin-sheet-subtitle-link: () !default;
+$cadmin-sheet-subtitle-link: map-deep-merge(
+	(
+		color: $cadmin-sheet-subtitle-link-color,
+		text-decoration: $cadmin-sheet-subtitle-link-text-decoration,
+		hover-color: $cadmin-sheet-subtitle-link-hover-color,
+		hover-text-decoration: $cadmin-sheet-subtitle-link-hover-text-decoration,
+	),
+	$cadmin-sheet-subtitle-link
+);
+
+$cadmin-sheet-subtitle-collapse-icon-font-size: null !default;
+$cadmin-sheet-subtitle-collapse-icon-bottom: null !default;
+$cadmin-sheet-subtitle-collapse-icon-left: null !default;
+$cadmin-sheet-subtitle-collapse-icon-right: null !default;
+$cadmin-sheet-subtitle-collapse-icon-top: clay-collapse-icon-align(
+	$cadmin-sheet-subtitle-padding-y,
+	0,
+	1em,
+	$cadmin-sheet-subtitle-line-height
+) !default;
+
+$cadmin-sheet-subtitle-collapse-icon-padding-left: null !default;
+$cadmin-sheet-subtitle-collapse-icon-padding-right: null !default;
+
+// Sheet Tertiary Title
+
+$cadmin-sheet-tertiary-title-color: $cadmin-sheet-subtitle-color !default;
+$cadmin-sheet-tertiary-title-font-size: $cadmin-sheet-subtitle-font-size !default;
+$cadmin-sheet-tertiary-title-font-weight: $cadmin-sheet-subtitle-font-weight !default;
+$cadmin-sheet-tertiary-title-line-height: $cadmin-sheet-subtitle-line-height !default;
+$cadmin-sheet-tertiary-title-margin-bottom: $cadmin-sheet-subtitle-margin-bottom !default;
+$cadmin-sheet-tertiary-title-padding-x: $cadmin-sheet-subtitle-padding-x !default;
+$cadmin-sheet-tertiary-title-padding-y: $cadmin-sheet-subtitle-padding-y !default;
+$cadmin-sheet-tertiary-title-text-transform: $cadmin-sheet-subtitle-text-transform !default;
+
+$cadmin-sheet-tertiary-title-font-size-mobile: null !default;
+$cadmin-sheet-tertiary-title-margin-bottom-mobile: null !default;
+
+// Sheet Text
+
+$cadmin-sheet-text-color: null !default;
+$cadmin-sheet-text-font-size: null !default;
+$cadmin-sheet-text-font-weight: null !default;
+$cadmin-sheet-text-margin-bottom: 1.5rem !default; // 24px
+
+$cadmin-sheet-text-font-size-mobile: null !default;
+$cadmin-sheet-text-margin-bottom-mobile: null !default;
+
+// Sheet Multiple Form Variant
+
+$cadmin-sheet-multiple-form: () !default;
+
+$cadmin-sheet-multiple-form-sheet-header: () !default;
+$cadmin-sheet-multiple-form-sheet-header: map-merge(
+	(
+		border-color: $cadmin-gray-300,
+		border-style: solid,
+		border-width: 0 0 1px,
+		margin: -1.5rem -1.5rem 1.5rem,
+		padding: 1rem 1.5rem,
+	),
+	$cadmin-sheet-multiple-form-sheet-header
+);
+
+$cadmin-sheet-multiple-form-sheet-header-mobile: () !default;
+$cadmin-sheet-multiple-form-sheet-header-mobile: map-merge(
+	(
+		margin: -1rem -1rem 1rem,
+		padding: 1rem,
+	),
+	$cadmin-sheet-multiple-form-sheet-header-mobile
+);
+
+$cadmin-sheet-multiple-form-sheet-title: () !default;
+$cadmin-sheet-multiple-form-sheet-title: map-merge(
+	(
+		margin-bottom: 0,
+	),
+	$cadmin-sheet-multiple-form-sheet-title
+);
+
+// Sheet Dataset Content Variant
+
+$cadmin-sheet-dataset-content: () !default;
+
+$cadmin-sheet-dataset-content-sheet-header: () !default;
+$cadmin-sheet-dataset-content-sheet-header: map-merge(
+	(
+		border-width: 0,
+		margin: -1.5rem -1.5rem 1.5rem,
+		padding: 1rem 1.5rem,
+	),
+	$cadmin-sheet-dataset-content-sheet-header
+);
+
+$cadmin-sheet-dataset-content-sheet-header-mobile: () !default;
+$cadmin-sheet-dataset-content-sheet-header-mobile: map-merge(
+	(
+		margin: -1rem -1rem 1rem,
+		padding: 1rem,
+	),
+	$cadmin-sheet-dataset-content-sheet-header-mobile
+);
+
+$cadmin-sheet-dataset-content-sheet-title: () !default;
+$cadmin-sheet-dataset-content-sheet-title: map-merge(
+	(
+		margin-bottom: 0,
+	),
+	$cadmin-sheet-dataset-content-sheet-title
+);
+
+// Sheet in Card Page
+
+$cadmin-card-page-item-sheet: () !default;
+$cadmin-card-page-item-sheet: map-merge(
+	(
+		margin-bottom: $cadmin-grid-gutter-width,
+	),
+	$cadmin-card-page-item-sheet
+);

@@ -1,0 +1,22 @@
+$cadmin-progress-border-radius: 100px !default;
+$cadmin-progress-box-shadow: none !default;
+$cadmin-progress-font-size: 0.5625rem !default;
+$cadmin-progress-height: 0.5rem !default;
+
+// Progress Sizes
+
+$cadmin-progress-border-radius-lg: 100px !default;
+
+// Progress Group
+
+$cadmin-progress-group-subtitle: () !default;
+$cadmin-progress-group-subtitle: map-deep-merge(
+	(
+		font-size: 0.75rem,
+		font-weight: $cadmin-font-weight-normal,
+	),
+	$cadmin-progress-group-subtitle
+);
+
+$cadmin-progress-group-addon-font-size: 0.875rem !default;
+$cadmin-progress-group-addon-font-weight: $cadmin-font-weight-semi-bold !default;

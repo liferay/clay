@@ -1,0 +1,177 @@
+// Clay Color
+
+.clay-color {
+	> .input-group-item {
+		> .form-control {
+			@include clay-form-control-variant(
+				$cadmin-clay-color-input-group-input
+			);
+		}
+
+		> .input-group-inset-item-before {
+			@include clay-container(
+				$cadmin-clay-color-input-group-inset-item-before
+			);
+		}
+
+		> .input-group-text {
+			@include clay-container($cadmin-clay-color-input-group-text);
+		}
+	}
+}
+
+// Clay Color Dropdown Menu
+
+.clay-color-dropdown-menu {
+	@include clay-dropdown-menu-variant($cadmin-clay-color-dropdown-menu);
+
+	.close {
+		@include clay-close($cadmin-clay-color-dropdown-menu-close);
+	}
+
+	.component-action {
+		@include clay-button-variant(
+			$cadmin-clay-color-dropdown-menu-component-action
+		);
+	}
+
+	.form-control {
+		@include clay-form-control-variant(
+			$cadmin-clay-color-dropdown-menu-input
+		);
+	}
+
+	.form-group {
+		@include clay-container($cadmin-clay-color-dropdown-menu-form-group);
+	}
+
+	.input-group .input-group-inset-item-before {
+		@include clay-container(
+			$cadmin-clay-color-dropdown-menu-input-group-inset-item-before
+		);
+	}
+}
+
+// Clay Color Btn
+
+.clay-color-btn {
+	@include clay-button-variant($cadmin-clay-color-btn);
+}
+
+.clay-color-btn-bordered {
+	@include clay-button-variant($cadmin-clay-color-btn-bordered);
+}
+
+// Clay Color Pointer
+
+.clay-color-pointer {
+	@include clay-button-variant($cadmin-clay-color-pointer);
+}
+
+// Clay Color Header
+
+.clay-color-header {
+	@include clay-container($cadmin-clay-color-header);
+
+	.component-title {
+		@include clay-title($cadmin-clay-color-header-component-title);
+	}
+}
+
+// Clay Color Footer
+
+.clay-color-footer {
+	@include clay-container($cadmin-clay-color-footer);
+}
+
+// Clay Color Swatch
+
+.clay-color-swatch {
+	@include clay-row($cadmin-clay-color-swatch);
+
+	+ .clay-color-swatch {
+		margin-top: 0;
+	}
+}
+
+.clay-color-swatch-item {
+	@include clay-container($cadmin-clay-color-swatch-item);
+}
+
+// Clay Color Map Group
+
+.clay-color-map-group {
+	@include clay-container($cadmin-clay-color-map-group);
+}
+
+.clay-color-map {
+	@include clay-container($cadmin-clay-color-map);
+}
+
+.clay-color-map-hsb {
+	background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)),
+		linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+
+	@include clay-container($cadmin-clay-color-map-hsb);
+}
+
+.clay-color-map-pointer {
+	@include clay-button-variant($cadmin-clay-color-map-pointer);
+}
+
+// Clay Color Map Values
+
+.clay-color-map-values {
+	@include clay-container($cadmin-clay-color-map-values);
+
+	.form-control {
+		@include clay-form-control-variant($cadmin-clay-color-map-values-input);
+	}
+
+	.input-group .input-group-inset-item-before {
+		@include clay-container(
+			$cadmin-clay-color-map-values-input-group-inset-item-before
+		);
+	}
+
+	.form-group {
+		@include clay-container($cadmin-clay-color-map-values-form-group);
+	}
+}
+
+// Clay Color Range
+
+.clay-color-range {
+	@include clay-container($cadmin-clay-color-range);
+}
+
+.clay-color-range-hue {
+	background-image: linear-gradient(
+		270deg,
+		#fc0d1b 0%,
+		#fc22d6 18.23%,
+		#1824fb 34.25%,
+		#2bf6fd 50.28%,
+		#2bfd2e 67.58%,
+		#fcfd37 81.22%,
+		#fc121b 100%
+	);
+}
+
+.clay-color-range-pointer {
+	@include clay-button-variant($cadmin-clay-color-range-pointer);
+}
+
+// Clay Color Sm
+
+%clay-color-sm-input-group-inset-item-before {
+	@include clay-css($cadmin-clay-color-sm-input-group-inset-item-before);
+}
+
+%clay-color-sm-input-group-text {
+	@include clay-css($cadmin-clay-color-sm-input-group-text);
+}
+
+%clay-color-sm-clay-color-btn {
+	@include clay-button-variant($cadmin-clay-color-sm-clay-color-btn);
+}

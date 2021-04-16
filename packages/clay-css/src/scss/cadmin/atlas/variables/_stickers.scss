@@ -1,0 +1,68 @@
+$cadmin-sticker-font-size: 1rem !default; // 16px
+$cadmin-sticker-font-weight: $cadmin-font-weight-bold !default;
+
+// Sticker Sizes
+
+$cadmin-sticker-sm: () !default;
+$cadmin-sticker-sm: map-deep-merge(
+	(
+		font-size: 0.75rem,
+	),
+	$cadmin-sticker-sm
+);
+
+$cadmin-sticker-lg: () !default;
+$cadmin-sticker-lg: map-deep-merge(
+	(
+		font-size: 1.25rem,
+	),
+	$cadmin-sticker-lg
+);
+
+$cadmin-sticker-xl: () !default;
+$cadmin-sticker-xl: map-deep-merge(
+	(
+		font-size: 1.5rem,
+	),
+	$cadmin-sticker-xl
+);
+
+// Sticker Positions
+
+$cadmin-sticker-inside-offset: 1rem !default; // 16px
+
+// Sticker User Icon
+
+$cadmin-sticker-user-icon: () !default;
+$cadmin-sticker-user-icon: map-deep-merge(
+	(
+		box-shadow: 0 0 0 1px $cadmin-gray-300,
+	),
+	$cadmin-sticker-user-icon
+);
+
+// Sticker Variants
+
+$cadmin-sticker-primary-bg: $cadmin-white !default;
+$cadmin-sticker-primary-color: $cadmin-primary !default;
+
+$cadmin-sticker-secondary-bg: $cadmin-white !default;
+$cadmin-sticker-secondary-color: $cadmin-secondary !default;
+
+$cadmin-sticker-info-bg: $cadmin-white !default;
+$cadmin-sticker-info-color: $cadmin-info !default;
+
+$cadmin-sticker-success-bg: $cadmin-white !default;
+$cadmin-sticker-success-color: $cadmin-success !default;
+
+$cadmin-sticker-warning-bg: $cadmin-white !default;
+$cadmin-sticker-warning-color: $cadmin-warning !default;
+
+$cadmin-sticker-danger-bg: $cadmin-white !default;
+$cadmin-sticker-danger-color: $cadmin-danger !default;
+
+$cadmin-sticker-light-bg: $cadmin-white !default;
+$cadmin-sticker-light-color: $cadmin-dark !default;
+
+$cadmin-sticker-dark-bg: $cadmin-dark !default;
+$cadmin-sticker-dark-color: $cadmin-white !default;

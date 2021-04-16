@@ -1,0 +1,330 @@
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	color: $cadmin-headings-color;
+	font-family: $cadmin-headings-font-family;
+	font-weight: $cadmin-headings-font-weight;
+	line-height: $cadmin-headings-line-height;
+	margin-bottom: $cadmin-headings-margin-bottom;
+	margin-top: 0;
+}
+
+h1,
+.h1 {
+	font-size: $cadmin-h1-font-size;
+
+	@include clay-scale-component {
+		font-size: $cadmin-h1-font-size-mobile;
+	}
+}
+
+h2,
+.h2 {
+	font-size: $cadmin-h2-font-size;
+
+	@include clay-scale-component {
+		font-size: $cadmin-h2-font-size-mobile;
+	}
+}
+
+h3,
+.h3 {
+	font-size: $cadmin-h3-font-size;
+
+	@include clay-scale-component {
+		font-size: $cadmin-h3-font-size-mobile;
+	}
+}
+
+h4,
+.h4 {
+	font-size: $cadmin-h4-font-size;
+
+	@include clay-scale-component {
+		font-size: $cadmin-h4-font-size-mobile;
+	}
+}
+
+h5,
+.h5 {
+	font-size: $cadmin-h5-font-size;
+
+	@include clay-scale-component {
+		font-size: $cadmin-h5-font-size-mobile;
+	}
+}
+
+h6,
+.h6 {
+	font-size: $cadmin-h6-font-size;
+
+	@include clay-scale-component {
+		font-size: $cadmin-h6-font-size-mobile;
+	}
+}
+
+.lead {
+	font-size: $cadmin-lead-font-size;
+	font-weight: $cadmin-lead-font-weight;
+}
+
+// Type display classes
+
+.display-1 {
+	font-size: $cadmin-display1-size;
+	font-weight: $cadmin-display1-weight;
+	line-height: $cadmin-display-line-height;
+}
+
+.display-2 {
+	font-size: $cadmin-display2-size;
+	font-weight: $cadmin-display2-weight;
+	line-height: $cadmin-display-line-height;
+}
+
+.display-3 {
+	font-size: $cadmin-display3-size;
+	font-weight: $cadmin-display3-weight;
+	line-height: $cadmin-display-line-height;
+}
+
+.display-4 {
+	font-size: $cadmin-display4-size;
+	font-weight: $cadmin-display4-weight;
+	line-height: $cadmin-display-line-height;
+}
+
+// Horizontal rules
+
+hr {
+	border-color: $cadmin-hr-border-color;
+	border-style: solid;
+	border-width: $cadmin-hr-border-width 0 0 0;
+	margin-bottom: $cadmin-hr-margin-y;
+	margin-top: $cadmin-hr-margin-y;
+}
+
+// Emphasis
+
+small,
+.small {
+	font-size: $cadmin-small-font-size;
+	font-weight: $cadmin-font-weight-normal;
+}
+
+mark,
+.mark {
+	@include clay-highlight-text($cadmin-mark-bg, $cadmin-mark-color);
+}
+
+// Lists
+
+.list-unstyled {
+	list-style: none;
+	padding-left: 0;
+}
+
+// Inline turns list items into inline-block
+
+.list-inline {
+	list-style: none;
+	padding-left: 0;
+}
+
+.list-inline-item {
+	display: inline-block;
+
+	&:not(:last-child) {
+		margin-right: $cadmin-list-inline-padding;
+	}
+}
+
+// Misc
+
+// Builds on `abbr`
+
+.initialism {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+// Blockquotes
+
+.blockquote {
+	font-size: $cadmin-blockquote-font-size;
+	margin-bottom: $cadmin-spacer;
+}
+
+.blockquote-footer {
+	color: $cadmin-blockquote-small-color;
+	display: block;
+	font-size: $cadmin-blockquote-small-font-size;
+
+	&::before {
+		// em dash, nbsp
+
+		content: '\2014\00A0';
+	}
+}
+
+// CLAY CSS START
+
+b {
+	font-weight: $cadmin-b-font-weight;
+}
+
+strong {
+	font-weight: $cadmin-strong-font-weight;
+}
+
+// Reference Mark
+
+.reference-mark {
+	display: inline-block;
+	font-size: $cadmin-reference-mark-font-size;
+	position: relative;
+	vertical-align: $cadmin-reference-mark-vertical-align;
+}
+
+// Kbd
+
+.c-kbd-group {
+	@include clay-css($cadmin-c-kbd-group);
+
+	> .c-kbd {
+		font-size: inherit;
+	}
+}
+
+.c-kbd {
+	@include clay-css($cadmin-c-kbd);
+}
+
+// Nested Kbd
+
+.c-kbd {
+	> .c-kbd {
+		@include clay-css($cadmin-c-kbd-c-kbd);
+
+		&[class*='c-kbd-'] {
+			border-width: inherit;
+			height: inherit;
+			min-width: inherit;
+			padding: inherit;
+
+			&:first-child {
+				margin-left: math-sign(map-get($cadmin-c-kbd, padding-left));
+			}
+
+			&:last-child {
+				margin-right: math-sign(map-get($cadmin-c-kbd, padding-right));
+			}
+		}
+	}
+
+	> .c-kbd.c-kbd-monospaced {
+		@include clay-css($cadmin-c-kbd-monospaced);
+	}
+
+	> .c-kbd-separator {
+		@include clay-css($cadmin-c-kbd-c-kbd-separator);
+	}
+}
+
+// Kbd Monospaced
+
+.c-kbd-monospaced {
+	@include clay-css($cadmin-c-kbd-monospaced);
+}
+
+// Kbd Inline
+
+.c-kbd-inline {
+	@include clay-css($cadmin-c-kbd-inline);
+
+	.c-kbd-separator {
+		@include clay-css($cadmin-c-kbd-inline-c-kbd-separator);
+	}
+}
+
+// Kbd Sm
+
+%c-kbd-sm {
+	@include clay-css($cadmin-c-kbd-sm);
+}
+
+.c-kbd-group-sm {
+	@include clay-css($cadmin-c-kbd-group-sm);
+}
+
+.c-kbd-sm,
+.c-kbd.c-kbd-sm {
+	@extend %c-kbd-sm !optional;
+}
+
+// Kbd Lg
+
+%c-kbd-lg {
+	@include clay-css($cadmin-c-kbd-lg);
+}
+
+.c-kbd-group-lg {
+	@include clay-css($cadmin-c-kbd-group-lg);
+}
+
+.c-kbd-lg,
+.c-kbd.c-kbd-lg {
+	@extend %c-kbd-lg !optional;
+}
+
+// Kbd Light
+
+.c-kbd-group-light {
+	@include clay-css($cadmin-c-kbd-group-light);
+}
+
+.c-kbd-light {
+	@include clay-css($cadmin-c-kbd-light);
+}
+
+// Kbd Dark
+
+.c-kbd-group-dark {
+	@include clay-css($cadmin-c-kbd-group-dark);
+}
+
+.c-kbd-dark {
+	@include clay-css($cadmin-c-kbd-dark);
+}
+
+// Text Truncate
+
+.text-truncate {
+	display: block;
+}
+
+.text-truncate-inline {
+	display: inline-flex;
+	max-width: 100%;
+
+	.text-truncate {
+		display: inline-block;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		vertical-align: bottom;
+		white-space: nowrap;
+		word-wrap: normal;
+	}
+}

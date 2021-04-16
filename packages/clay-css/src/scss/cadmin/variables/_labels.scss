@@ -1,0 +1,755 @@
+////
+/// @group labels
+////
+
+$cadmin-label-color: null !default;
+
+$cadmin-label-link-color: inherit !default;
+$cadmin-label-link-hover-color: inherit !default;
+
+$cadmin-label-font-size: 75% !default;
+$cadmin-label-font-weight: $cadmin-font-weight-bold !default;
+$cadmin-label-height: null !default;
+$cadmin-label-line-height: 1 !default;
+$cadmin-label-padding-x: 0.4375rem !default; // 7px
+$cadmin-label-padding-y: 0.1875rem !default; // 3px
+$cadmin-label-spacer-x: 0.25rem !default; // 4px
+$cadmin-label-spacer-y: 0.125rem !default; // 2px
+$cadmin-label-text-transform: null !default;
+
+$cadmin-label-lexicon-icon-height: null !default;
+$cadmin-label-lexicon-icon-margin-top: 0 !default;
+$cadmin-label-lexicon-icon-width: null !default;
+
+$cadmin-label-sticker-border-radius: 100px !default;
+$cadmin-label-sticker-size: 0.875em !default;
+
+$cadmin-label-dismissible-text-transform: null !default;
+
+$cadmin-label-item-spacer-x: 0.5em !default;
+$cadmin-label-item-spacer-y: null !default;
+
+$cadmin-label-anchor-text-decoration: none !default;
+$cadmin-label-anchor-hover-text-decoration: null !default;
+
+$cadmin-label-link-text-decoration: underline !default;
+$cadmin-label-link-hover-text-decoration: none !default;
+
+$cadmin-label-border-color: $cadmin-gray-900 !default;
+$cadmin-label-border-radius: $cadmin-border-radius !default;
+$cadmin-label-border-style: solid !default;
+$cadmin-label-border-width: 0.0625rem !default;
+
+// Label Close
+
+$cadmin-label-close: () !default;
+$cadmin-label-close: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: inherit,
+		display: inline-flex,
+		font-size: 1rem,
+		height: auto,
+		margin-bottom: -2px,
+		margin-top: -2px,
+		opacity: 1,
+		width: auto,
+		hover-color: inherit,
+		hover-opacity: 1,
+		focus-opacity: 1,
+		disabled-opacity: $cadmin-btn-disabled-opacity,
+	),
+	$cadmin-label-close
+);
+
+// Label Sizes
+
+$cadmin-label-lg: () !default;
+$cadmin-label-lg: map-deep-merge(
+	(
+		font-size: 0.875rem,
+		padding-x: 1rem,
+		padding-y: 0.375rem,
+		text-transform: none,
+	),
+	$cadmin-label-lg
+);
+
+// Label Variants
+
+$cadmin-label-base: () !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-color: $cadmin-primary !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-hover-color: darken(
+	$cadmin-label-primary-color,
+	10%
+) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-bg: $cadmin-white !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-border-color: $cadmin-label-primary-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-hover-border-color: $cadmin-label-primary-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+
+$cadmin-label-primary-link-hover-color: $cadmin-label-primary-hover-color !default;
+
+$cadmin-label-primary-close: () !default;
+$cadmin-label-primary-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-primary-hover-color,
+		focus-color: $cadmin-label-primary-hover-color,
+	),
+	$cadmin-label-primary-close
+);
+
+$cadmin-label-primary: () !default;
+$cadmin-label-primary: map-deep-merge(
+	(
+		bg: $cadmin-label-primary-bg,
+		border-color: $cadmin-label-primary-border-color,
+		color: $cadmin-label-primary-color,
+		hover-bg: $cadmin-label-primary-hover-bg,
+		hover-border-color: $cadmin-label-primary-hover-border-color,
+		hover-color: $cadmin-label-primary-hover-color,
+		focus-color: $cadmin-label-primary-hover-color,
+		link-color: $cadmin-label-primary-link-color,
+		link-hover-color: $cadmin-label-primary-link-hover-color,
+		close: $cadmin-label-primary-close,
+	),
+	$cadmin-label-primary
+);
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-color: $cadmin-secondary !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-hover-color: darken(
+	$cadmin-label-secondary-color,
+	10%
+) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-bg: $cadmin-white !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-border-color: $cadmin-label-secondary-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-hover-border-color: $cadmin-label-secondary-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+
+$cadmin-label-secondary-link-hover-color: $cadmin-label-secondary-hover-color !default;
+
+$cadmin-label-secondary-close: () !default;
+$cadmin-label-secondary-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-secondary-hover-color,
+		focus-color: $cadmin-label-secondary-hover-color,
+	),
+	$cadmin-label-secondary-close
+);
+
+$cadmin-label-secondary: () !default;
+$cadmin-label-secondary: map-deep-merge(
+	(
+		bg: $cadmin-label-secondary-bg,
+		border-color: $cadmin-label-secondary-border-color,
+		color: $cadmin-label-secondary-color,
+		hover-bg: $cadmin-label-secondary-hover-bg,
+		hover-border-color: $cadmin-label-secondary-hover-border-color,
+		hover-color: $cadmin-label-secondary-hover-color,
+		focus-color: $cadmin-label-secondary-hover-color,
+		link-color: $cadmin-label-secondary-link-color,
+		link-hover-color: $cadmin-label-secondary-link-hover-color,
+		close: $cadmin-label-secondary-close,
+	),
+	$cadmin-label-secondary
+);
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-color: $cadmin-success !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-hover-color: darken(
+	$cadmin-label-success-color,
+	10%
+) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-bg: $cadmin-white !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-border-color: $cadmin-label-success-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-hover-border-color: $cadmin-label-success-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+
+$cadmin-label-success-link-hover-color: $cadmin-label-success-hover-color !default;
+
+$cadmin-label-success-close: () !default;
+$cadmin-label-success-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-success-hover-color,
+		focus-color: $cadmin-label-success-hover-color,
+	),
+	$cadmin-label-success-close
+);
+
+$cadmin-label-success: () !default;
+$cadmin-label-success: map-deep-merge(
+	(
+		bg: $cadmin-label-success-bg,
+		border-color: $cadmin-label-success-border-color,
+		color: $cadmin-label-success-color,
+		hover-bg: $cadmin-label-success-hover-bg,
+		hover-border-color: $cadmin-label-success-hover-border-color,
+		hover-color: $cadmin-label-success-hover-color,
+		focus-color: $cadmin-label-success-hover-color,
+		link-color: $cadmin-label-success-link-color,
+		link-hover-color: $cadmin-label-success-link-hover-color,
+		close: $cadmin-label-success-close,
+	),
+	$cadmin-label-success
+);
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-color: $cadmin-info !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-hover-color: darken($cadmin-label-info-color, 10%) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-bg: $cadmin-white !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-border-color: $cadmin-label-info-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-hover-border-color: $cadmin-label-info-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+
+$cadmin-label-info-link-hover-color: $cadmin-label-info-hover-color !default;
+
+$cadmin-label-info-close: () !default;
+$cadmin-label-info-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-info-hover-color,
+		focus-color: $cadmin-label-info-hover-color,
+	),
+	$cadmin-label-info-close
+);
+
+$cadmin-label-info: () !default;
+$cadmin-label-info: map-deep-merge(
+	(
+		bg: $cadmin-label-info-bg,
+		border-color: $cadmin-label-info-border-color,
+		color: $cadmin-label-info-color,
+		hover-bg: $cadmin-label-info-hover-bg,
+		hover-border-color: $cadmin-label-info-hover-border-color,
+		hover-color: $cadmin-label-info-hover-color,
+		focus-color: $cadmin-label-info-hover-color,
+		link-color: $cadmin-label-info-link-color,
+		link-hover-color: $cadmin-label-info-link-hover-color,
+		close: $cadmin-label-info-close,
+	),
+	$cadmin-label-info
+);
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-color: $cadmin-warning !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-hover-color: darken(
+	$cadmin-label-warning-color,
+	10%
+) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-bg: $cadmin-white !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-border-color: $cadmin-label-warning-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-hover-border-color: $cadmin-label-warning-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+
+$cadmin-label-warning-link-hover-color: $cadmin-label-warning-hover-color !default;
+
+$cadmin-label-warning-close: () !default;
+$cadmin-label-warning-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-warning-hover-color,
+		focus-color: $cadmin-label-warning-hover-color,
+	),
+	$cadmin-label-warning-close
+);
+
+$cadmin-label-warning: () !default;
+$cadmin-label-warning: map-deep-merge(
+	(
+		bg: $cadmin-label-warning-bg,
+		border-color: $cadmin-label-warning-border-color,
+		color: $cadmin-label-warning-color,
+		hover-bg: $cadmin-label-warning-hover-bg,
+		hover-border-color: $cadmin-label-warning-hover-border-color,
+		hover-color: $cadmin-label-warning-hover-color,
+		focus-color: $cadmin-label-warning-hover-color,
+		link-color: $cadmin-label-warning-link-color,
+		link-hover-color: $cadmin-label-warning-link-hover-color,
+		close: $cadmin-label-warning-close,
+	),
+	$cadmin-label-warning
+);
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-color: $cadmin-danger !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-hover-color: darken(
+	$cadmin-label-danger-color,
+	10%
+) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-bg: $cadmin-white !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-border-color: $cadmin-label-danger-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-hover-border-color: $cadmin-label-danger-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+
+$cadmin-label-danger-link-hover-color: $cadmin-label-danger-hover-color !default;
+
+$cadmin-label-danger-close: () !default;
+$cadmin-label-danger-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-danger-hover-color,
+		focus-color: $cadmin-label-danger-hover-color,
+	),
+	$cadmin-label-danger-close
+);
+
+$cadmin-label-danger: () !default;
+$cadmin-label-danger: map-deep-merge(
+	(
+		bg: $cadmin-label-danger-bg,
+		border-color: $cadmin-label-danger-border-color,
+		color: $cadmin-label-danger-color,
+		hover-bg: $cadmin-label-danger-hover-bg,
+		hover-border-color: $cadmin-label-danger-hover-border-color,
+		hover-color: $cadmin-label-danger-hover-color,
+		focus-color: $cadmin-label-danger-hover-color,
+		link-color: $cadmin-label-danger-link-color,
+		link-hover-color: $cadmin-label-danger-link-hover-color,
+		close: $cadmin-label-danger-close,
+	),
+	$cadmin-label-danger
+);
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-color: $cadmin-light !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-hover-color: darken(
+	$cadmin-label-light-color,
+	10%
+) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-bg: $cadmin-gray-800 !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-border-color: $cadmin-label-light-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-hover-border-color: $cadmin-label-light-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+
+$cadmin-label-light-link-hover-color: $cadmin-label-light-hover-color !default;
+
+$cadmin-label-light-close: () !default;
+$cadmin-label-light-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-light-hover-color,
+		focus-color: $cadmin-label-light-hover-color,
+	),
+	$cadmin-label-light-close
+);
+
+$cadmin-label-light: () !default;
+$cadmin-label-light: map-deep-merge(
+	(
+		bg: $cadmin-label-light-bg,
+		border-color: $cadmin-label-light-border-color,
+		color: $cadmin-label-light-color,
+		hover-bg: $cadmin-label-light-hover-bg,
+		hover-border-color: $cadmin-label-light-hover-border-color,
+		hover-color: $cadmin-label-light-hover-color,
+		focus-color: $cadmin-label-light-hover-color,
+		link-color: $cadmin-label-light-link-color,
+		link-hover-color: $cadmin-label-light-link-hover-color,
+		close: $cadmin-label-light-close,
+	),
+	$cadmin-label-light
+);
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-color: $cadmin-dark !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-hover-color: darken($cadmin-label-dark-color, 10%) !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-bg: $cadmin-white !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-hover-bg: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-border-color: $cadmin-label-dark-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-hover-border-color: $cadmin-label-dark-hover-color !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-link-color: null !default;
+
+/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+
+$cadmin-label-dark-link-hover-color: $cadmin-label-dark-hover-color !default;
+
+$cadmin-label-dark-close: () !default;
+$cadmin-label-dark-close: map-deep-merge(
+	(
+		hover-color: $cadmin-label-dark-hover-color,
+		focus-color: $cadmin-label-dark-hover-color,
+	),
+	$cadmin-label-dark-close
+);
+
+$cadmin-label-dark: () !default;
+$cadmin-label-dark: map-deep-merge(
+	(
+		bg: $cadmin-label-dark-bg,
+		border-color: $cadmin-label-dark-border-color,
+		color: $cadmin-label-dark-color,
+		hover-bg: $cadmin-label-dark-hover-bg,
+		hover-border-color: $cadmin-label-dark-hover-border-color,
+		hover-color: $cadmin-label-dark-hover-color,
+		focus-color: $cadmin-label-dark-hover-color,
+		link-color: $cadmin-label-dark-link-color,
+		link-hover-color: $cadmin-label-dark-link-hover-color,
+		close: $cadmin-label-dark-close,
+	),
+	$cadmin-label-dark
+);
+
+// Label Inverse
+
+$cadmin-label-inverse-primary: () !default;
+$cadmin-label-inverse-primary: map-deep-merge(
+	(
+		background-color: $cadmin-primary,
+		border-color: $cadmin-primary,
+		color: color-yiq($cadmin-primary),
+		hover: (
+			background-color: darken($cadmin-primary, 10%),
+			border-color: darken($cadmin-primary, 10%),
+			color: color-yiq(darken($cadmin-primary, 10%)),
+		),
+		link-hover: (
+			color: darken(color-yiq(darken($cadmin-primary, 10%)), 10%),
+		),
+		close: (
+			hover-color: darken(color-yiq(darken($cadmin-primary, 10%)), 10%),
+		),
+	),
+	$cadmin-label-inverse-primary
+);
+
+$cadmin-label-inverse-secondary: () !default;
+$cadmin-label-inverse-secondary: map-deep-merge(
+	(
+		background-color: $cadmin-secondary,
+		border-color: $cadmin-secondary,
+		color: color-yiq($cadmin-secondary),
+		hover: (
+			background-color: darken($cadmin-secondary, 10%),
+			border-color: darken($cadmin-secondary, 10%),
+			color: color-yiq(darken($cadmin-secondary, 10%)),
+		),
+		link-hover: (
+			color: darken(color-yiq(darken($cadmin-secondary, 10%)), 10%),
+		),
+		close: (
+			hover-color: darken(color-yiq(darken($cadmin-secondary, 10%)), 10%),
+		),
+	),
+	$cadmin-label-inverse-secondary
+);
+
+$cadmin-label-inverse-success: () !default;
+$cadmin-label-inverse-success: map-deep-merge(
+	(
+		background-color: $cadmin-success,
+		border-color: $cadmin-success,
+		color: color-yiq($cadmin-success),
+		hover: (
+			background-color: darken($cadmin-success, 10%),
+			border-color: darken($cadmin-success, 10%),
+			color: color-yiq(darken($cadmin-success, 10%)),
+		),
+		link-hover: (
+			color: darken(color-yiq(darken($cadmin-success, 10%)), 10%),
+		),
+		close: (
+			hover-color: darken(color-yiq(darken($cadmin-success, 10%)), 10%),
+		),
+	),
+	$cadmin-label-inverse-success
+);
+
+$cadmin-label-inverse-info: () !default;
+$cadmin-label-inverse-info: map-deep-merge(
+	(
+		background-color: $cadmin-info,
+		border-color: $cadmin-info,
+		color: color-yiq($cadmin-info),
+		hover: (
+			background-color: darken($cadmin-info, 10%),
+			border-color: darken($cadmin-info, 10%),
+			color: color-yiq(darken($cadmin-info, 10%)),
+		),
+		link-hover: (
+			color: darken(color-yiq(darken($cadmin-info, 10%)), 10%),
+		),
+		close: (
+			hover-color: darken(color-yiq(darken($cadmin-info, 10%)), 10%),
+		),
+	),
+	$cadmin-label-inverse-info
+);
+
+$cadmin-label-inverse-warning: () !default;
+$cadmin-label-inverse-warning: map-deep-merge(
+	(
+		background-color: $cadmin-warning,
+		border-color: $cadmin-warning,
+		color: color-yiq($cadmin-warning),
+		hover: (
+			background-color: darken($cadmin-warning, 10%),
+			border-color: darken($cadmin-warning, 10%),
+			color: color-yiq(darken($cadmin-warning, 10%)),
+		),
+		link-hover: (
+			color: lighten(color-yiq(darken($cadmin-warning, 10%)), 20%),
+		),
+		close: (
+			hover-color: lighten(color-yiq(darken($cadmin-warning, 10%)), 20%),
+		),
+	),
+	$cadmin-label-inverse-warning
+);
+
+$cadmin-label-inverse-danger: () !default;
+$cadmin-label-inverse-danger: map-deep-merge(
+	(
+		background-color: $cadmin-danger,
+		border-color: $cadmin-danger,
+		color: color-yiq($cadmin-danger),
+		hover: (
+			background-color: darken($cadmin-danger, 10%),
+			border-color: darken($cadmin-danger, 10%),
+			color: color-yiq(darken($cadmin-danger, 10%)),
+		),
+		link-hover: (
+			color: darken(color-yiq(darken($cadmin-danger, 10%)), 10%),
+		),
+		close: (
+			hover-color: darken(color-yiq(darken($cadmin-danger, 10%)), 10%),
+		),
+	),
+	$cadmin-label-inverse-danger
+);
+
+$cadmin-label-inverse-light: () !default;
+$cadmin-label-inverse-light: map-deep-merge(
+	(
+		background-color: $cadmin-light,
+		border-color: $cadmin-light,
+		color: color-yiq($cadmin-light),
+		hover: (
+			background-color: darken($cadmin-light, 10%),
+			border-color: darken($cadmin-light, 10%),
+			color: color-yiq(darken($cadmin-light, 10%)),
+		),
+		link-hover: (
+			color: lighten(color-yiq(darken($cadmin-light, 10%)), 10%),
+		),
+		close: (
+			hover-color: lighten(color-yiq(darken($cadmin-light, 10%)), 10%),
+		),
+	),
+	$cadmin-label-inverse-light
+);
+
+$cadmin-label-inverse-dark: () !default;
+$cadmin-label-inverse-dark: map-deep-merge(
+	(
+		background-color: $cadmin-dark,
+		border-color: $cadmin-dark,
+		color: color-yiq($cadmin-dark),
+		hover: (
+			background-color: darken($cadmin-dark, 10%),
+			border-color: darken($cadmin-dark, 10%),
+			color: color-yiq(darken($cadmin-dark, 10%)),
+		),
+		link-hover: (
+			color: darken(color-yiq(darken($cadmin-dark, 10%)), 10%),
+		),
+		close: (
+			hover-color: darken(color-yiq(darken($cadmin-dark, 10%)), 10%),
+		),
+	),
+	$cadmin-label-inverse-dark
+);
+
+$cadmin-label-palette: () !default;
+$cadmin-label-palette: map-deep-merge(
+	(
+		primary: $cadmin-label-primary,
+		secondary: $cadmin-label-secondary,
+		success: $cadmin-label-success,
+		info: $cadmin-label-info,
+		warning: $cadmin-label-warning,
+		danger: $cadmin-label-danger,
+		dark: $cadmin-label-dark,
+		light: $cadmin-label-light,
+		inverse-primary: $cadmin-label-inverse-primary,
+		inverse-secondary: $cadmin-label-inverse-secondary,
+		inverse-success: $cadmin-label-inverse-success,
+		inverse-info: $cadmin-label-inverse-info,
+		inverse-warning: $cadmin-label-inverse-warning,
+		inverse-danger: $cadmin-label-inverse-danger,
+		inverse-light: $cadmin-label-inverse-light,
+		inverse-dark: $cadmin-label-inverse-dark,
+	),
+	$cadmin-label-palette
+);

@@ -1,0 +1,285 @@
+.pagination {
+	@include border-radius();
+
+	display: flex;
+	flex-wrap: wrap;
+	font-size: $cadmin-pagination-font-size;
+	list-style: none;
+	margin-bottom: $cadmin-pagination-margin-bottom;
+	padding-left: 0;
+}
+
+.pagination-bar {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+
+	@include clay-scale-component {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.pagination {
+		@include clay-scale-component {
+			margin-top: $cadmin-pagination-margin-top-mobile;
+		}
+	}
+}
+
+// Pagination Link
+
+.page-link {
+	@include clay-link($cadmin-pagination-link);
+
+	&:hover {
+		@include clay-link($cadmin-pagination-link-hover);
+	}
+
+	&:focus {
+		@include clay-link($cadmin-pagination-link-focus);
+	}
+
+	&:active,
+	&.active {
+		@include clay-link($cadmin-pagination-link-active);
+	}
+
+	&:disabled,
+	&.disabled {
+		@include clay-link($cadmin-pagination-link-disabled);
+	}
+}
+
+.page-item.active,
+.page-item.show {
+	.page-link {
+		@include clay-link($cadmin-pagination-link-active);
+	}
+}
+
+.page-item.disabled {
+	.page-link {
+		@include clay-link($cadmin-pagination-link-disabled);
+	}
+}
+
+// Pagination Item
+
+.page-item {
+	@include clay-container($cadmin-pagination-item);
+}
+
+.page-item:first-child .page-link,
+.page-link-first {
+	border-radius: $cadmin-pagination-link-first-border-radius;
+}
+
+.page-item:last-child .page-link,
+.page-link-last {
+	border-radius: $cadmin-pagination-link-last-border-radius;
+}
+
+// Pagination Items Per Page
+
+.pagination-items-per-page {
+	font-size: $cadmin-pagination-items-per-page-font-size;
+	margin-bottom: $cadmin-pagination-margin-bottom;
+
+	> a,
+	> button {
+		@include clay-link($cadmin-pagination-items-per-page-link);
+
+		&:hover {
+			@include clay-link($cadmin-pagination-items-per-page-link-hover);
+		}
+
+		&:focus {
+			@include clay-link($cadmin-pagination-items-per-page-link-focus);
+		}
+
+		&:active,
+		&.active {
+			@include clay-link($cadmin-pagination-items-per-page-link-active);
+		}
+
+		&:disabled,
+		&.disabled {
+			@include clay-link($cadmin-pagination-items-per-page-link-disabled);
+		}
+	}
+
+	&.active,
+	&.show {
+		> a,
+		> button {
+			@include clay-link($cadmin-pagination-items-per-page-link-active);
+		}
+	}
+
+	&.disabled {
+		> a,
+		> button {
+			@include clay-link($cadmin-pagination-items-per-page-link-disabled);
+		}
+	}
+
+	+ .pagination-results {
+		@include clay-scale-component {
+			margin-left: auto;
+		}
+	}
+}
+
+.page-item .dropdown-menu,
+.pagination-items-per-page .dropdown-menu {
+	margin-bottom: $cadmin-pagination-dropdown-menu-spacer-y;
+	margin-top: $cadmin-pagination-dropdown-menu-spacer-y;
+}
+
+.pagination-results {
+	border-color: transparent;
+	border-style: solid;
+	border-width: $cadmin-pagination-border-width;
+	color: $cadmin-pagination-results-color;
+	font-size: $cadmin-pagination-font-size;
+	line-height: $cadmin-pagination-line-height;
+	margin-bottom: $cadmin-pagination-margin-bottom;
+	margin-right: auto;
+	max-width: 100%;
+	padding: $cadmin-pagination-padding-y $cadmin-pagination-padding-x;
+	word-wrap: break-word;
+}
+
+// Pagination Sizes
+
+.pagination-sm {
+	.pagination-items-per-page {
+		@include border-radius($cadmin-pagination-link-border-radius-sm);
+
+		.lexicon-icon {
+			margin-left: $cadmin-pagination-items-per-page-lexicon-icon-margin-left-sm;
+			margin-right: $cadmin-pagination-items-per-page-lexicon-icon-margin-top-sm;
+		}
+	}
+
+	.pagination-items-per-page > a,
+	.pagination-items-per-page > .btn-unstyled {
+		font-size: $cadmin-pagination-font-size-sm;
+		height: $cadmin-pagination-item-height-sm;
+		line-height: $cadmin-pagination-line-height-sm;
+		padding: $cadmin-pagination-padding-y-sm $cadmin-pagination-padding-x;
+
+		@if ($cadmin-enable-c-inner) {
+			.c-inner {
+				margin: math-sign($cadmin-pagination-padding-y-sm)
+					math-sign($cadmin-pagination-padding-x);
+			}
+		}
+	}
+
+	.pagination-results {
+		font-size: $cadmin-pagination-font-size-sm;
+		line-height: $cadmin-pagination-line-height-sm;
+		padding: $cadmin-pagination-padding-y-sm $cadmin-pagination-padding-x;
+	}
+
+	.page-link {
+		font-size: $cadmin-pagination-font-size-sm;
+		height: $cadmin-pagination-item-height-sm;
+		line-height: $cadmin-pagination-line-height-sm;
+		padding-bottom: $cadmin-pagination-padding-y-sm;
+		padding-right: $cadmin-pagination-padding-x-sm;
+		padding-left: $cadmin-pagination-padding-x-sm;
+		padding-top: $cadmin-pagination-padding-y-sm;
+
+		@if ($cadmin-enable-c-inner) {
+			.c-inner {
+				margin: math-sign($cadmin-pagination-padding-y-sm)
+					math-sign($cadmin-pagination-padding-x-sm);
+			}
+		}
+
+		&.btn-unstyled {
+			padding: $cadmin-pagination-padding-y-sm
+				$cadmin-pagination-padding-x-sm;
+		}
+	}
+
+	.page-item:first-child .page-link,
+	.page-link-first {
+		border-bottom-left-radius: $cadmin-pagination-link-border-radius-sm;
+		border-top-left-radius: $cadmin-pagination-link-border-radius-sm;
+	}
+
+	.page-item:last-child .page-link,
+	.page-link-last {
+		border-bottom-right-radius: $cadmin-pagination-link-border-radius-sm;
+		border-top-right-radius: $cadmin-pagination-link-border-radius-sm;
+	}
+}
+
+.pagination-lg {
+	.pagination-items-per-page {
+		@include border-radius($cadmin-pagination-link-border-radius-lg);
+
+		.lexicon-icon {
+			margin-left: $cadmin-pagination-items-per-page-lexicon-icon-margin-left-lg;
+			margin-right: $cadmin-pagination-items-per-page-lexicon-icon-margin-top-lg;
+		}
+	}
+
+	.pagination-items-per-page > a,
+	.pagination-items-per-page > .btn-unstyled {
+		font-size: $cadmin-pagination-font-size-lg;
+		height: $cadmin-pagination-item-height-lg;
+		line-height: $cadmin-pagination-line-height-lg;
+		padding: $cadmin-pagination-padding-y-lg $cadmin-pagination-padding-x;
+
+		@if ($cadmin-enable-c-inner) {
+			.c-inner {
+				margin: math-sign($cadmin-pagination-padding-y-lg)
+					math-sign($cadmin-pagination-padding-x);
+			}
+		}
+	}
+
+	.pagination-results {
+		font-size: $cadmin-pagination-font-size-lg;
+		line-height: $cadmin-pagination-line-height-lg;
+		padding: $cadmin-pagination-padding-y-lg $cadmin-pagination-padding-x;
+	}
+
+	.page-link {
+		font-size: $cadmin-pagination-font-size-lg;
+		height: $cadmin-pagination-item-height-lg;
+		line-height: $cadmin-pagination-line-height-lg;
+		padding-bottom: $cadmin-pagination-padding-y-lg;
+		padding-left: $cadmin-pagination-padding-x-lg;
+		padding-right: $cadmin-pagination-padding-x-lg;
+		padding-top: $cadmin-pagination-padding-y-lg;
+
+		@if ($cadmin-enable-c-inner) {
+			.c-inner {
+				margin: math-sign($cadmin-pagination-padding-y-lg)
+					math-sign($cadmin-pagination-padding-x-lg);
+			}
+		}
+
+		&.btn-unstyled {
+			padding: $cadmin-pagination-padding-y-lg
+				$cadmin-pagination-padding-x-lg;
+		}
+	}
+
+	.page-item:first-child .page-link,
+	.page-link-first {
+		border-bottom-left-radius: $cadmin-pagination-link-border-radius-lg;
+		border-top-left-radius: $cadmin-pagination-link-border-radius-lg;
+	}
+
+	.page-item:last-child .page-link,
+	.page-link-last {
+		border-bottom-right-radius: $cadmin-pagination-link-border-radius-lg;
+		border-top-right-radius: $cadmin-pagination-link-border-radius-lg;
+	}
+}

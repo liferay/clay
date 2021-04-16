@@ -1,0 +1,15 @@
+$cadmin-drilldown-dropdown-item-indicator-start: () !default;
+$cadmin-drilldown-dropdown-item-indicator-start: map-merge(
+	(
+		top: 0.5rem,
+	),
+	$cadmin-drilldown-dropdown-item-indicator-start
+);
+
+$cadmin-drilldown-dropdown-item-indicator-end: () !default;
+$cadmin-drilldown-dropdown-item-indicator-end: map-merge(
+	(
+		top: 0.5rem,
+	),
+	$cadmin-drilldown-dropdown-item-indicator-end
+);

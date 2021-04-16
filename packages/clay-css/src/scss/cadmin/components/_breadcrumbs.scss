@@ -1,0 +1,116 @@
+.breadcrumb {
+	background-color: $cadmin-breadcrumb-bg;
+
+	@include border-radius($cadmin-breadcrumb-border-radius);
+
+	display: flex;
+	flex-wrap: wrap;
+	font-size: $cadmin-breadcrumb-font-size;
+	list-style: none;
+	margin-bottom: $cadmin-breadcrumb-margin-bottom;
+	padding: $cadmin-breadcrumb-padding-y $cadmin-breadcrumb-padding-x;
+}
+
+.breadcrumb-link {
+	@include clay-link($cadmin-breadcrumb-link);
+
+	> .breadcrumb-text-truncate {
+		text-decoration: $cadmin-breadcrumb-link-text-decoration;
+
+		&:hover,
+		&:focus {
+			text-decoration: $cadmin-breadcrumb-link-hover-text-decoration;
+		}
+	}
+}
+
+.breadcrumb-item {
+	font-size: $cadmin-breadcrumb-font-size;
+	font-weight: $cadmin-breadcrumb-font-weight;
+
+	@if ($cadmin-breadcrumb-divider-svg-icon) {
+		margin-right: 0.5em;
+		position: relative;
+	}
+
+	&.active,
+	.active {
+		color: $cadmin-breadcrumb-active-color;
+		font-weight: $cadmin-breadcrumb-active-font-weight;
+	}
+
+	> span {
+		text-transform: $cadmin-breadcrumb-text-transform;
+	}
+
+	+ .breadcrumb-item {
+		padding-left: if(
+			$cadmin-breadcrumb-divider-svg-icon,
+			1em,
+			$cadmin-breadcrumb-item-padding
+		);
+
+		&::before {
+			color: $cadmin-breadcrumb-divider-color;
+			display: block;
+			float: left;
+
+			@if ($cadmin-breadcrumb-divider-svg-icon) {
+				background-image: $cadmin-breadcrumb-divider-svg-icon;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				content: '';
+				height: $cadmin-breadcrumb-divider-svg-icon-height;
+				left: 0;
+				margin-top: -$cadmin-breadcrumb-divider-svg-icon-height / 2;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				width: $cadmin-breadcrumb-divider-svg-icon-width;
+			} @else {
+				content: escape-svg($cadmin-breadcrumb-divider);
+				font-family: $cadmin-breadcrumb-divider-font-family;
+				font-weight: $cadmin-breadcrumb-divider-font-weight;
+				padding-left: 0.4em;
+				padding-right: 0.4em;
+			}
+		}
+	}
+
+	// IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+	// without `<ul>`s. The `::before` pseudo-element generates an element
+	// *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+	//
+	// To trick IE into suppressing the underline, we give the pseudo-element an
+	// underline and then immediately remove it.
+
+	+ .breadcrumb-item:hover::before {
+		text-decoration: underline;
+	}
+
+	+ .breadcrumb-item:hover::before {
+		text-decoration: none;
+	}
+
+	.dropdown-toggle {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}
+
+.breadcrumb-text-truncate {
+	display: inline-block;
+	max-width: $cadmin-breadcrumb-text-truncate-max-width;
+
+	@include text-truncate;
+
+	vertical-align: bottom;
+
+	@include clay-scale-component {
+		max-width: $cadmin-breadcrumb-text-truncate-max-width-mobile;
+	}
+}

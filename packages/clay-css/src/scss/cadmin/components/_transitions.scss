@@ -1,0 +1,21 @@
+.fade {
+	@include transition($cadmin-transition-fade);
+
+	&:not(.show) {
+		opacity: 0;
+	}
+}
+
+.collapse {
+	&:not(.show) {
+		display: none;
+	}
+}
+
+.collapsing {
+	height: 0;
+	overflow: hidden;
+	position: relative;
+
+	@include transition($cadmin-transition-collapse);
+}

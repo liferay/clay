@@ -1,0 +1,345 @@
+////
+/// @group customForms
+////
+
+$cadmin-custom-forms-transition: background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+// Custom Control Indicator
+
+$cadmin-custom-control-indicator-size: 1rem !default;
+
+$cadmin-custom-control-indicator-bg: $cadmin-input-bg !default;
+$cadmin-custom-control-indicator-bg-size: 50% 50% !default;
+$cadmin-custom-control-indicator-border-color: $cadmin-gray-500 !default;
+$cadmin-custom-control-indicator-border-style: solid !default;
+$cadmin-custom-control-indicator-border-width: $cadmin-border-width !default;
+$cadmin-custom-control-indicator-box-shadow: $cadmin-input-box-shadow !default;
+$cadmin-custom-control-indicator-position-top: 0.25rem !default;
+
+$cadmin-custom-control-indicator-focus-border-color: $cadmin-input-focus-border-color !default;
+$cadmin-custom-control-indicator-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
+
+$cadmin-custom-control-indicator-active-bg: lighten(
+	$cadmin-component-active-bg,
+	0.35
+) !default;
+$cadmin-custom-control-indicator-active-box-shadow: none !default;
+$cadmin-custom-control-indicator-active-border-color: $cadmin-custom-control-indicator-active-bg !default;
+$cadmin-custom-control-indicator-active-color: $cadmin-component-active-color !default;
+
+$cadmin-custom-control-indicator-disabled-bg: $cadmin-input-disabled-bg !default;
+$cadmin-custom-control-indicator-disabled-border-color: null !default;
+$cadmin-custom-control-indicator-disabled-cursor: $cadmin-disabled-cursor !default;
+
+// Custom Control Indicator Checked
+
+$cadmin-custom-control-indicator-checked-bg: $cadmin-component-active-bg !default;
+$cadmin-custom-control-indicator-checked-color: $cadmin-component-active-color !default;
+$cadmin-custom-control-indicator-checked-border-color: $cadmin-custom-control-indicator-checked-bg !default;
+$cadmin-custom-control-indicator-checked-box-shadow: none !default;
+
+/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-active-bg` instead
+
+$cadmin-custom-control-indicator-active-checked-bg: null !default;
+$cadmin-custom-control-indicator-checked-active-bg: $cadmin-custom-control-indicator-active-checked-bg !default;
+
+/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-active-border-color` instead
+
+$cadmin-custom-control-indicator-active-checked-border-color: null !default;
+$cadmin-custom-control-indicator-checked-active-border-color: $cadmin-custom-control-indicator-active-checked-border-color !default;
+
+$cadmin-custom-control-indicator-checked-border-color: null !default;
+
+/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-bg` instead
+
+$cadmin-custom-control-indicator-disabled-checked-bg: rgba(
+	$cadmin-primary,
+	0.5
+) !default;
+$cadmin-custom-control-indicator-checked-disabled-bg: $cadmin-custom-control-indicator-disabled-checked-bg !default;
+
+/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-border-color` instead
+
+$cadmin-custom-control-indicator-disabled-checked-border-color: null !default;
+$cadmin-custom-control-indicator-checked-disabled-border-color: $cadmin-custom-control-indicator-disabled-checked-border-color !default;
+
+// Custom Control
+
+$cadmin-custom-control-cursor: null !default;
+$cadmin-custom-control-gutter: 0.5rem !default;
+$cadmin-custom-control-spacer-x: 1rem !default;
+
+/// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
+
+$cadmin-custom-control-margin-bottom: null !default;
+
+/// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
+
+$cadmin-custom-control-margin-top: null !default;
+
+/// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
+
+$cadmin-custom-control-min-height: $cadmin-custom-control-indicator-size +
+	($cadmin-custom-control-indicator-position-top * 2) !default;
+
+$cadmin-custom-control: () !default;
+$cadmin-custom-control: map-deep-merge(
+	(
+		cursor: $cadmin-custom-control-cursor,
+		display: block,
+		margin-bottom: $cadmin-custom-control-margin-bottom,
+		margin-top: $cadmin-custom-control-margin-top,
+		min-height: $cadmin-custom-control-min-height,
+		position: relative,
+		text-align: left,
+	),
+	$cadmin-custom-control
+);
+
+// Custom Description
+
+/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+
+$cadmin-custom-control-description-cursor: $cadmin-form-check-label-cursor !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+
+$cadmin-custom-control-description-font-size: 1rem !default; // 16px
+
+/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+
+$cadmin-custom-control-description-font-weight: null !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+
+$cadmin-custom-control-description-line-height: $cadmin-custom-control-min-height !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text` instead
+
+$cadmin-custom-control-description-padding-left: 0.5rem !default; // 8px
+
+/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-disabled` instead
+
+$cadmin-custom-control-description-disabled-cursor: $cadmin-disabled-cursor !default;
+
+/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text-small` instead
+
+$cadmin-custom-control-description-small-font-size: null !default;
+
+$cadmin-custom-control-label-color: null !default;
+
+$cadmin-custom-control-label: () !default;
+$cadmin-custom-control-label: map-deep-merge(
+	(
+		color: $cadmin-custom-control-label-color,
+		cursor: $cadmin-custom-control-description-cursor,
+		font-size: $cadmin-custom-control-description-font-size,
+		font-weight: $cadmin-custom-control-description-font-weight,
+		line-height: $cadmin-custom-control-description-line-height,
+		margin-bottom: 0,
+		position: static,
+		vertical-align: top,
+	),
+	$cadmin-custom-control-label
+);
+
+$cadmin-custom-control-label-disabled-color: $cadmin-gray-600 !default;
+
+$cadmin-custom-control-label-disabled: () !default;
+$cadmin-custom-control-label-disabled: map-deep-merge(
+	(
+		color: $cadmin-custom-control-label-disabled-color,
+		cursor: $cadmin-custom-control-description-disabled-cursor,
+	),
+	$cadmin-custom-control-label-disabled
+);
+
+$cadmin-custom-control-label-text: () !default;
+$cadmin-custom-control-label-text: map-deep-merge(
+	(
+		padding-left: $cadmin-custom-control-description-padding-left,
+	),
+	$cadmin-custom-control-label-text
+);
+
+$cadmin-custom-control-label-text-small: () !default;
+$cadmin-custom-control-label-text-small: map-deep-merge(
+	(
+		font-size: $cadmin-custom-control-description-small-font-size,
+	),
+	$cadmin-custom-control-label-text-small
+);
+
+// Custom Control Primary
+
+$cadmin-custom-control-primary-label-text: () !default;
+$cadmin-custom-control-primary-label-text: map-deep-merge(
+	(
+		font-weight: $cadmin-font-weight-semi-bold,
+	),
+	$cadmin-custom-control-primary-label-text
+);
+
+// Custom Checkbox
+
+$cadmin-custom-checkbox-indicator-border-radius: $cadmin-border-radius !default;
+
+$cadmin-custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$cadmin-custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default;
+$cadmin-custom-checkbox-indicator-icon-checked-bg-size: null !default;
+
+$cadmin-custom-checkbox-indicator-indeterminate-bg: $cadmin-component-active-bg !default;
+$cadmin-custom-checkbox-indicator-indeterminate-border-color: $cadmin-custom-checkbox-indicator-indeterminate-bg !default;
+
+$cadmin-custom-control-indicator-indeterminate-border-color: $cadmin-custom-checkbox-indicator-indeterminate-border-color !default;
+
+$cadmin-custom-checkbox-indicator-indeterminate-box-shadow: none !default;
+$cadmin-custom-checkbox-indicator-indeterminate-color: $cadmin-custom-control-indicator-checked-color !default;
+
+$cadmin-custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$cadmin-custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>") !default;
+$cadmin-custom-checkbox-indicator-icon-indeterminate-bg-size: null !default;
+
+// Custom Radio
+
+$cadmin-custom-radio-indicator-border-radius: 50% !default;
+
+$cadmin-custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$cadmin-custom-control-indicator-checked-color}'/></svg>") !default;
+$cadmin-custom-radio-indicator-icon-checked-bg-size: null !default;
+
+$cadmin-custom-radio-indicator-disabled-border-color: null !default;
+
+/// @deprecated as of v2.2.1 use `$cadmin-custom-radio-indicator-checked-disabled-border-color` instead
+
+$cadmin-custom-radio-indicator-disabled-checked-border-color: null !default;
+$cadmin-custom-radio-indicator-checked-disabled-border-color: $cadmin-custom-radio-indicator-disabled-checked-border-color !default;
+
+// Custom Switch
+
+$cadmin-custom-switch-width: $cadmin-custom-control-indicator-size * 1.75 !default;
+$cadmin-custom-switch-indicator-border-radius: $cadmin-custom-control-indicator-size /
+	2 !default;
+$cadmin-custom-switch-indicator-size: $cadmin-custom-control-indicator-size -
+	($cadmin-custom-control-indicator-border-width * 4) !default;
+
+// Custom Select
+
+$cadmin-custom-select-bg: $cadmin-input-bg !default;
+$cadmin-custom-select-bg-size: 8px 10px !default;
+$cadmin-custom-select-border-color: $cadmin-input-border-color !default;
+$cadmin-custom-select-border-radius: $cadmin-border-radius !default;
+$cadmin-custom-select-border-width: $cadmin-input-border-width !default;
+$cadmin-custom-select-box-shadow: inset 0 1px 2px rgba($cadmin-black, 0.075) !default;
+$cadmin-custom-select-color: $cadmin-input-color !default;
+$cadmin-custom-select-font-family: $cadmin-input-font-family !default;
+$cadmin-custom-select-font-size: $cadmin-input-font-size !default;
+$cadmin-custom-select-font-weight: $cadmin-input-font-weight !default;
+$cadmin-custom-select-height: $cadmin-input-height !default;
+$cadmin-custom-select-indicator-padding: 1rem !default;
+$cadmin-custom-select-line-height: $cadmin-input-line-height !default;
+$cadmin-custom-select-padding-x: $cadmin-input-padding-x !default;
+$cadmin-custom-select-padding-y: $cadmin-input-padding-y !default;
+
+$cadmin-custom-select-indicator-color: $cadmin-gray-800 !default;
+$cadmin-custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$cadmin-custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
+
+$cadmin-custom-select-background: escape-svg($cadmin-custom-select-indicator)
+	no-repeat right $cadmin-custom-select-padding-x center /
+	$cadmin-custom-select-bg-size !default;
+
+// Custom Select Focus
+
+$cadmin-custom-select-focus-border-color: $cadmin-input-focus-border-color !default;
+
+$cadmin-custom-select-focus-width: $cadmin-input-focus-width !default;
+
+$cadmin-custom-select-focus-box-shadow: 0 0 0 $cadmin-custom-select-focus-width
+	$cadmin-input-btn-focus-color !default;
+
+// Custom Select Disabled
+
+$cadmin-custom-select-disabled-bg: $cadmin-gray-200 !default;
+$cadmin-custom-select-disabled-color: $cadmin-gray-600 !default;
+
+// Custom Select Feedback
+
+$cadmin-custom-select-feedback-icon-padding-right: calc(
+	(1em * 0.75) + (2 * #{$cadmin-custom-select-padding-y} * 0.75) + #{$cadmin-custom-select-padding-x} +
+		#{$cadmin-custom-select-indicator-padding}
+) !default;
+
+$cadmin-custom-select-feedback-icon-position: center right
+	($cadmin-custom-select-padding-x + $cadmin-custom-select-indicator-padding) !default;
+$cadmin-custom-select-feedback-icon-size: $cadmin-input-height-inner-half
+	$cadmin-input-height-inner-half !default;
+
+// Custom Select Lg
+
+$cadmin-custom-select-font-size-lg: $cadmin-input-font-size-lg !default;
+$cadmin-custom-select-height-lg: $cadmin-input-height-lg !default;
+$cadmin-custom-select-padding-x-lg: $cadmin-input-padding-x-lg !default;
+$cadmin-custom-select-padding-y-lg: $cadmin-input-padding-y-lg !default;
+
+// Custom Select Sm
+
+$cadmin-custom-select-font-size-sm: $cadmin-input-font-size-sm !default;
+$cadmin-custom-select-height-sm: $cadmin-input-height-sm !default;
+$cadmin-custom-select-padding-x-sm: $cadmin-input-padding-x-sm !default;
+$cadmin-custom-select-padding-y-sm: $cadmin-input-padding-y-sm !default;
+
+// Custom Range
+
+$cadmin-custom-range-track-bg: $cadmin-gray-300 !default;
+$cadmin-custom-range-track-border-radius: 1rem !default;
+$cadmin-custom-range-track-box-shadow: inset 0 0.25rem 0.25rem
+	rgba($cadmin-black, 0.1) !default;
+$cadmin-custom-range-track-cursor: pointer !default;
+$cadmin-custom-range-track-height: 0.5rem !default;
+$cadmin-custom-range-track-width: 100% !default;
+
+$cadmin-custom-range-thumb-bg: $cadmin-component-active-bg !default;
+$cadmin-custom-range-thumb-border: 0 !default;
+$cadmin-custom-range-thumb-border-radius: 1rem !default;
+$cadmin-custom-range-thumb-box-shadow: 0 0.1rem 0.25rem rgba($cadmin-black, 0.1) !default;
+
+$cadmin-custom-range-thumb-width: 1rem !default;
+
+$cadmin-custom-range-thumb-height: $cadmin-custom-range-thumb-width !default;
+
+$cadmin-custom-range-thumb-focus-box-shadow: 0 0 0 1px $cadmin-body-bg,
+	$cadmin-input-focus-box-shadow !default;
+$cadmin-custom-range-thumb-focus-box-shadow-width: $cadmin-input-focus-width !default;
+
+$cadmin-custom-range-thumb-active-bg: lighten(
+	$cadmin-component-active-bg,
+	35%
+) !default;
+
+$cadmin-custom-range-thumb-disabled-bg: $cadmin-gray-500 !default;
+
+// Custom File
+
+$cadmin-custom-file-bg: $cadmin-input-bg !default;
+$cadmin-custom-file-border-color: $cadmin-input-border-color !default;
+$cadmin-custom-file-border-width: $cadmin-input-border-width !default;
+$cadmin-custom-file-border-radius: $cadmin-input-border-radius !default;
+$cadmin-custom-file-box-shadow: $cadmin-input-box-shadow !default;
+$cadmin-custom-file-color: $cadmin-input-color !default;
+$cadmin-custom-file-font-family: $cadmin-input-font-family !default;
+$cadmin-custom-file-font-weight: $cadmin-input-font-weight !default;
+$cadmin-custom-file-height-inner: $cadmin-input-height-inner !default;
+$cadmin-custom-file-height: $cadmin-input-height !default;
+$cadmin-custom-file-line-height: $cadmin-input-line-height !default;
+$cadmin-custom-file-padding-x: $cadmin-input-padding-x !default;
+$cadmin-custom-file-padding-y: $cadmin-input-padding-y !default;
+
+$cadmin-custom-file-focus-border-color: $cadmin-input-focus-border-color !default;
+$cadmin-custom-file-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
+
+$cadmin-custom-file-disabled-bg: $cadmin-input-disabled-bg !default;
+
+$cadmin-custom-file-button-bg: $cadmin-input-group-addon-bg !default;
+$cadmin-custom-file-button-color: $cadmin-custom-file-color !default;
+
+$cadmin-custom-file-text: (
+	en: 'Browse',
+) !default;

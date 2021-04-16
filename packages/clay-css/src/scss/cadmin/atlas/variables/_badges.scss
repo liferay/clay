@@ -1,0 +1,55 @@
+$cadmin-badge-border-radius: 10rem !default;
+$cadmin-badge-font-size: 0.625rem !default; // 10px
+$cadmin-badge-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-badge-line-height: 1.1 !default;
+$cadmin-badge-padding-x: 0.25rem !default; // 4px
+$cadmin-badge-padding-y: 0.09375rem !default; // 1.5px
+
+$cadmin-badge-item-spacer-x: 0.85714em !default;
+
+$cadmin-badge-pill-border-radius: $cadmin-border-radius !default;
+$cadmin-badge-pill-padding-x: 0.25rem !default; // 4px
+
+// Badge Variants
+
+$cadmin-badge-primary-color: $cadmin-white !default;
+$cadmin-badge-primary-bg: $cadmin-primary !default;
+$cadmin-badge-primary-hover-bg: $cadmin-badge-primary-bg !default;
+$cadmin-badge-primary-hover-color: $cadmin-badge-primary-color !default;
+
+$cadmin-badge-secondary-color: $cadmin-gray-900 !default;
+$cadmin-badge-secondary-bg: $cadmin-secondary-l3 !default;
+$cadmin-badge-secondary-hover-bg: $cadmin-badge-secondary-bg !default;
+$cadmin-badge-secondary-hover-color: $cadmin-badge-secondary-color !default;
+$cadmin-badge-secondary-link-color: $cadmin-badge-secondary-color !default;
+
+$cadmin-badge-success-color: $cadmin-white !default;
+$cadmin-badge-success-bg: $cadmin-success !default;
+$cadmin-badge-success-hover-bg: $cadmin-badge-success-bg !default;
+$cadmin-badge-success-hover-color: $cadmin-badge-success-color !default;
+
+$cadmin-badge-info-color: $cadmin-white !default;
+$cadmin-badge-info-bg: $cadmin-info !default;
+$cadmin-badge-info-hover-bg: $cadmin-badge-info-bg !default;
+$cadmin-badge-info-hover-color: $cadmin-badge-info-color !default;
+
+$cadmin-badge-warning-color: $cadmin-white !default;
+$cadmin-badge-warning-bg: $cadmin-warning !default;
+$cadmin-badge-warning-hover-bg: $cadmin-badge-warning-bg !default;
+$cadmin-badge-warning-hover-color: $cadmin-badge-warning-color !default;
+
+$cadmin-badge-danger-color: $cadmin-white !default;
+$cadmin-badge-danger-bg: $cadmin-danger !default;
+$cadmin-badge-danger-hover-bg: $cadmin-badge-danger-bg !default;
+$cadmin-badge-danger-hover-color: $cadmin-badge-danger-color !default;
+
+$cadmin-badge-light-color: $cadmin-gray-900 !default;
+$cadmin-badge-light-bg: $cadmin-light !default;
+$cadmin-badge-light-hover-bg: $cadmin-badge-light-bg !default;
+$cadmin-badge-light-hover-color: $cadmin-badge-light-color !default;
+$cadmin-badge-light-link-color: $cadmin-badge-light-color !default;
+
+$cadmin-badge-dark-color: $cadmin-white !default;
+$cadmin-badge-dark-bg: $cadmin-dark !default;
+$cadmin-badge-dark-hover-bg: $cadmin-badge-dark-bg !default;
+$cadmin-badge-dark-hover-color: $cadmin-badge-dark-color !default;

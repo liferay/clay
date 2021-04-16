@@ -1,0 +1,90 @@
+$cadmin-modal-sm: 320px !default;
+$cadmin-modal-md: 600px !default;
+$cadmin-modal-lg: 896px !default;
+$cadmin-modal-xl: 1140px !default;
+
+$cadmin-modal-backdrop-bg: $cadmin-gray-800 !default;
+$cadmin-modal-backdrop-opacity: 0.8 !default;
+
+$cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+$cadmin-modal-content-border-color: transparent !default;
+
+$cadmin-modal-inner-padding: 1.5rem !default; // 24px
+
+$cadmin-modal-header-border-color: $cadmin-gray-300 !default;
+$cadmin-modal-header-padding: 1.5rem !default; // 24px
+
+$cadmin-modal-title-font-size: 1.25rem !default; // 20px
+$cadmin-modal-title-font-weight: $cadmin-font-weight-bold !default;
+
+// Modal Success
+
+$cadmin-modal-success: () !default;
+$cadmin-modal-success: map-deep-merge(
+	(
+		header-bg: $cadmin-success-l2,
+		header-border-color: $cadmin-success-l1,
+		header-color: $cadmin-success,
+		header-close: (
+			color: $cadmin-success,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-success
+);
+
+// Modal Info
+
+$cadmin-modal-info: () !default;
+$cadmin-modal-info: map-deep-merge(
+	(
+		header-bg: $cadmin-info-l2,
+		header-border-color: $cadmin-info-l1,
+		header-color: $cadmin-info,
+		header-close: (
+			color: $cadmin-info,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-info
+);
+
+// Modal Warning
+
+$cadmin-modal-warning: () !default;
+$cadmin-modal-warning: map-deep-merge(
+	(
+		header-bg: $cadmin-warning-l2,
+		header-border-color: $cadmin-warning-l1,
+		header-color: $cadmin-warning,
+		header-close: (
+			color: $cadmin-warning,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-warning
+);
+
+// Modal Danger
+
+$cadmin-modal-danger: () !default;
+$cadmin-modal-danger: map-deep-merge(
+	(
+		header-bg: $cadmin-danger-l2,
+		header-border-color: $cadmin-danger-l1,
+		header-color: $cadmin-danger,
+		header-close: (
+			color: $cadmin-danger,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-danger
+);

@@ -1,0 +1,68 @@
+$cadmin-progress-bg: $cadmin-gray-200 !default;
+$cadmin-progress-border-radius: $cadmin-border-radius !default;
+$cadmin-progress-box-shadow: inset 0 0.1rem 0.1rem rgba($cadmin-black, 0.1) !default;
+$cadmin-progress-font-size: $cadmin-font-size-base * 0.75 !default;
+$cadmin-progress-height: 1rem !default;
+$cadmin-progress-min-width: 6.25rem !default;
+
+$cadmin-progress-bar-animation-timing: 1s linear infinite !default;
+$cadmin-progress-bar-bg: $cadmin-primary !default;
+$cadmin-progress-bar-box-shadow: null !default;
+$cadmin-progress-bar-color: $cadmin-white !default;
+$cadmin-progress-bar-transition: width 0.6s ease !default;
+
+// Progress Sizes
+
+$cadmin-progress-border-radius-lg: $cadmin-border-radius !default;
+$cadmin-progress-font-size-lg: $cadmin-font-size-lg !default;
+$cadmin-progress-height-lg: $cadmin-progress-height * 2 !default;
+
+// Progress Group
+
+$cadmin-progress-group-subtitle: () !default;
+
+$cadmin-progress-group-addon-font-size: null !default;
+$cadmin-progress-group-addon-font-weight: null !default;
+$cadmin-progress-group-addon-spacer-x: 1rem !default;
+
+$cadmin-progress-group-stacked-progress-margin-bottom: 0.25rem !default;
+$cadmin-progress-group-stacked-progress-margin-top: 0.25rem !default;
+
+// Progress Variants
+
+$cadmin-progress-group-feedback-color: $cadmin-primary !default;
+
+$cadmin-progress-bar-danger-bg: $cadmin-danger !default;
+$cadmin-progress-group-feedback-danger-color: $cadmin-progress-bar-danger-bg !default;
+
+$cadmin-progress-bar-info-bg: $cadmin-info !default;
+$cadmin-progress-group-feedback-info-color: $cadmin-progress-bar-info-bg !default;
+
+$cadmin-progress-bar-success-bg: $cadmin-success !default;
+$cadmin-progress-group-feedback-success-color: $cadmin-progress-bar-success-bg !default;
+
+$cadmin-progress-bar-warning-bg: $cadmin-warning !default;
+$cadmin-progress-group-feedback-warning-color: $cadmin-progress-bar-warning-bg !default;
+
+$cadmin-progress-palette: () !default;
+$cadmin-progress-palette: map-deep-merge(
+	(
+		success: (
+			bar-bg: $cadmin-progress-bar-success-bg,
+			group-feedback-color: $cadmin-progress-group-feedback-success-color,
+		),
+		info: (
+			bar-bg: $cadmin-progress-bar-info-bg,
+			group-feedback-color: $cadmin-progress-group-feedback-info-color,
+		),
+		warning: (
+			bar-bg: $cadmin-progress-bar-warning-bg,
+			group-feedback-color: $cadmin-progress-group-feedback-warning-color,
+		),
+		danger: (
+			bar-bg: $cadmin-progress-bar-danger-bg,
+			group-feedback-color: $cadmin-progress-group-feedback-danger-color,
+		),
+	),
+	$cadmin-progress-palette
+);

@@ -1,0 +1,41 @@
+.quick-action-menu {
+	align-items: center;
+	bottom: 0;
+	display: none;
+	font-size: $cadmin-quick-action-font-size;
+	left: auto;
+	padding-bottom: $cadmin-quick-action-padding-y;
+	padding-left: $cadmin-quick-action-padding-x;
+	padding-right: $cadmin-quick-action-padding-x;
+	padding-top: $cadmin-quick-action-padding-y;
+	position: absolute;
+	right: 100%;
+	top: 0;
+}
+
+.quick-action-item {
+	@include border-radius($cadmin-quick-action-item-border-radius);
+
+	display: flex;
+	line-height: 1;
+	margin-bottom: $cadmin-quick-action-item-margin-y;
+	margin-left: $cadmin-quick-action-item-margin-x;
+	margin-right: $cadmin-quick-action-item-margin-x;
+	margin-top: $cadmin-quick-action-item-margin-y;
+	min-height: $cadmin-quick-action-item-min-height;
+	min-width: $cadmin-quick-action-item-min-width;
+	padding-bottom: $cadmin-quick-action-item-padding-y;
+	padding-left: $cadmin-quick-action-item-padding-x;
+	padding-right: $cadmin-quick-action-item-padding-x;
+	padding-top: $cadmin-quick-action-item-padding-y;
+
+	&:disabled,
+	&.disabled {
+		cursor: $cadmin-quick-action-item-disabled-cursor;
+		opacity: $cadmin-quick-action-item-disabled-opacity;
+	}
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}

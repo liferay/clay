@@ -1,0 +1,55 @@
+$cadmin-component-tbar: () !default;
+$cadmin-component-tbar: map-deep-merge(
+	(
+		border-color: $cadmin-gray-300,
+		color: $cadmin-gray-600,
+	),
+	$cadmin-component-tbar
+);
+
+// Subnav Tbar Primary
+
+$cadmin-subnav-tbar-primary-component-link: () !default;
+$cadmin-subnav-tbar-primary-component-link: map-deep-merge(
+	(
+		disabled-opacity: 0.65,
+	),
+	$cadmin-subnav-tbar-primary-component-link
+);
+
+$cadmin-subnav-tbar-primary-component-label-close: () !default;
+$cadmin-subnav-tbar-primary-component-label-close: map-deep-merge(
+	(
+		disabled-opacity: 0.65,
+	),
+	$cadmin-subnav-tbar-primary-component-label-close
+);
+
+// Subnav Tbar Primary Disabled
+
+$cadmin-subnav-tbar-primary-disabled-component-label: () !default;
+$cadmin-subnav-tbar-primary-disabled-component-label: map-deep-merge(
+	(
+		border-color: #8e94aa,
+	),
+	$cadmin-subnav-tbar-primary-disabled-component-label
+);
+
+$cadmin-subnav-tbar-primary-disabled: () !default;
+$cadmin-subnav-tbar-primary-disabled: map-deep-merge(
+	(
+		color: #8e94aa,
+	),
+	$cadmin-subnav-tbar-primary-disabled
+);
+
+// Subnav Tbar Light
+
+$cadmin-subnav-tbar-light: () !default;
+$cadmin-subnav-tbar-light: map-deep-merge(
+	(
+		bg-color: $cadmin-light-l2,
+		color: $cadmin-gray-600,
+	),
+	$cadmin-subnav-tbar-light
+);

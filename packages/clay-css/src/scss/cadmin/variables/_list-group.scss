@@ -1,0 +1,216 @@
+$cadmin-list-group-bg: $cadmin-white !default;
+$cadmin-list-group-border-color: rgba($cadmin-black, 0.125) !default;
+$cadmin-list-group-border-width: $cadmin-border-width !default;
+
+$cadmin-list-group-border-radius: $cadmin-border-radius !default;
+
+$cadmin-list-group-box-shadow: null !default;
+$cadmin-list-group-color: null !default;
+$cadmin-list-group-font-size: null !default;
+$cadmin-list-group-margin-bottom: 1.5rem !default;
+$cadmin-list-group-margin-top: null !default;
+
+// List Group Item Action
+
+$cadmin-list-group-action-color: $cadmin-gray-700 !default;
+
+$cadmin-list-group-hover-bg: $cadmin-gray-100 !default;
+
+$cadmin-list-group-action-hover-color: $cadmin-list-group-action-color !default;
+
+$cadmin-list-group-action-active-bg: $cadmin-gray-200 !default;
+$cadmin-list-group-action-active-color: $cadmin-body-color !default;
+
+// List Group Item
+
+$cadmin-list-group-item-padding-x: 1.25rem !default;
+$cadmin-list-group-item-padding-y: 0.75rem !default;
+
+// Use values flex-start, flex-end, or center
+
+$cadmin-list-group-item-flex-align-items: flex-start !default;
+
+$cadmin-list-group-item-flex-checkbox-offset-top: 0.1875rem !default;
+$cadmin-list-group-item-flex-offset-top: 0.0625rem !default;
+$cadmin-list-group-item-flex-list-group-title-offset-top: -0.25rem !default;
+
+$cadmin-list-group-active-bg: $cadmin-component-active-bg !default;
+$cadmin-list-group-active-border-color: $cadmin-list-group-active-bg !default;
+$cadmin-list-group-active-color: $cadmin-component-active-color !default;
+
+$cadmin-list-group-disabled-bg: $cadmin-list-group-bg !default;
+$cadmin-list-group-disabled-color: $cadmin-gray-600 !default;
+
+// List Group Header
+
+$cadmin-list-group-header-bg: $cadmin-list-group-bg !default;
+$cadmin-list-group-header-padding-x: $cadmin-list-group-item-padding-x !default;
+$cadmin-list-group-header-padding-y: $cadmin-list-group-item-padding-y !default;
+
+$cadmin-list-group-header-title: () !default;
+$cadmin-list-group-header-title: map-deep-merge(
+	(
+		font-size: 1rem,
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: $cadmin-headings-line-height,
+		margin-bottom: 0,
+	),
+	$cadmin-list-group-header-title
+);
+
+// List Group Title
+
+$cadmin-list-group-title-link: () !default;
+$cadmin-list-group-title-link: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		max-width: 100%,
+		hover-color: darken($cadmin-gray-900, 15%),
+	),
+	$cadmin-list-group-title-link
+);
+
+$cadmin-list-group-title: () !default;
+$cadmin-list-group-title: map-deep-merge(
+	(
+		// 18px
+			font-size: 1.125rem,
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: $cadmin-line-height-base,
+		margin-bottom: 0,
+		margin-top: $cadmin-list-group-item-flex-list-group-title-offset-top,
+		clay-link: $cadmin-list-group-title-link
+	),
+	$cadmin-list-group-title
+);
+
+$cadmin-list-group-title-active-color: $cadmin-list-group-active-color !default;
+
+// List Group Subtitle
+
+$cadmin-list-group-subtitle-link: () !default;
+$cadmin-list-group-subtitle-link: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		hover-color: darken($cadmin-gray-600, 15%),
+	),
+	$cadmin-list-group-subtitle-link
+);
+
+$cadmin-list-group-subtitle: () !default;
+$cadmin-list-group-subtitle: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		margin-bottom: 0,
+		clay-link: $cadmin-list-group-subtitle-link,
+	),
+	$cadmin-list-group-subtitle
+);
+
+// List Group Text
+
+$cadmin-list-group-text-link: () !default;
+$cadmin-list-group-text-link: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		hover-color: darken($cadmin-gray-900, 15%),
+	),
+	$cadmin-list-group-text-link
+);
+
+$cadmin-list-group-text: () !default;
+$cadmin-list-group-text: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		margin-bottom: 0,
+		clay-link: $cadmin-list-group-text-link,
+	),
+	$cadmin-list-group-text
+);
+
+$cadmin-list-group-text-active-color: $cadmin-list-group-active-color !default;
+
+// List Group Subtext
+
+$cadmin-list-group-subtext-link: () !default;
+$cadmin-list-group-subtext-link: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		hover-color: darken($cadmin-gray-600, 15%),
+	),
+	$cadmin-list-group-subtext-link
+);
+
+$cadmin-list-group-subtext: () !default;
+$cadmin-list-group-subtext: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		margin-bottom: 0,
+		clay-link: $cadmin-list-group-subtext-link,
+	),
+	$cadmin-list-group-subtext
+);
+
+$cadmin-list-group-subtext-active-color: $cadmin-list-group-active-color !default;
+
+// List Group Detail
+
+$cadmin-list-group-detail-margin-bottom: null !default;
+$cadmin-list-group-detail-margin-top: null !default;
+
+$cadmin-list-group-link-color: null !default;
+$cadmin-list-group-link-hover-color: null !default;
+$cadmin-list-group-link-active-color: $cadmin-white !default;
+
+// List Group Notification
+
+$cadmin-list-group-notification-item-border-bottom-color: $cadmin-list-group-border-color !default;
+$cadmin-list-group-notification-item-border-left-color: $cadmin-list-group-border-color !default;
+$cadmin-list-group-notification-item-border-right-color: $cadmin-list-group-border-color !default;
+$cadmin-list-group-notification-item-border-top-color: $cadmin-list-group-border-color !default;
+
+$cadmin-list-group-notification-item-active-border-bottom-color: $cadmin-list-group-active-border-color !default;
+$cadmin-list-group-notification-item-active-border-left-color: $cadmin-list-group-active-border-color !default;
+$cadmin-list-group-notification-item-active-border-right-color: $cadmin-list-group-active-border-color !default;
+$cadmin-list-group-notification-item-active-border-top-color: $cadmin-list-group-active-border-color !default;
+
+$cadmin-list-group-notification-item-border-bottom-width: 0.0625rem !default;
+$cadmin-list-group-notification-item-border-left-width: 0.0625rem !default;
+$cadmin-list-group-notification-item-border-right-width: 0.0625rem !default;
+$cadmin-list-group-notification-item-border-top-width: 0.0625rem !default;
+
+$cadmin-list-group-notification-item: () !default;
+
+$cadmin-list-group-notification-item-primary: () !default;
+$cadmin-list-group-notification-item-primary: map-deep-merge(
+	(
+		border-left-color: theme-color-level(primary, -9),
+		border-left-width: 0.5rem,
+		border-bottom-left-radius: 0,
+		border-top-left-radius: 0,
+		active-border-left-color: theme-color-level(primary, -9),
+	),
+	$cadmin-list-group-notification-item-primary
+);
+
+// List Group Sm
+
+$cadmin-list-group-sm-item: () !default;
+$cadmin-list-group-sm-item: map-deep-merge(
+	(
+		padding-bottom: 0.40625rem,
+		padding-top: 0.40625rem,
+	),
+	$cadmin-list-group-sm-item
+);
+
+$cadmin-list-group-sm-quick-action-menu: () !default;
+$cadmin-list-group-sm-quick-action-menu: map-deep-merge(
+	(
+		margin-bottom: -0.40625rem,
+		margin-top: -0.40625rem,
+		padding-bottom: 0.40625rem,
+		padding-top: 0.40625rem,
+	),
+	$cadmin-list-group-sm-quick-action-menu
+);

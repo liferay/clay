@@ -1,0 +1,234 @@
+%aspect-ratio {
+	display: block;
+	overflow: hidden;
+	position: relative;
+
+	@include clay-aspect-ratio;
+}
+
+.aspect-ratio {
+	@extend %aspect-ratio;
+}
+
+// Aspect Ratio Item
+
+%aspect-ratio-item {
+	left: 0;
+	position: absolute;
+	word-wrap: break-word;
+}
+
+.aspect-ratio-item {
+	@extend %aspect-ratio-item;
+}
+
+// Fluid
+
+%aspect-ratio-item-fluid {
+	max-width: 100%;
+	position: absolute;
+	word-wrap: break-word;
+}
+
+.aspect-ratio-item-fluid {
+	@extend %aspect-ratio-item-fluid;
+}
+
+// Vertical Fluid
+
+%aspect-ratio-item-vertical-fluid {
+	max-height: 100%;
+	position: absolute;
+	word-wrap: break-word;
+}
+
+.aspect-ratio-item-vertical-fluid {
+	@extend %aspect-ratio-item-vertical-fluid;
+}
+
+// Flush
+
+%aspect-ratio-item-flush {
+	max-width: none;
+	position: absolute;
+	width: 100.6%; // Fixes subpixel rendering issues
+}
+
+.aspect-ratio-item-flush {
+	@extend %aspect-ratio-item-flush;
+}
+
+%aspect-ratio-item-vertical-flush {
+	height: 100.6%; // Fixes subpixel rendering issues
+	max-height: none;
+	position: absolute;
+}
+
+.aspect-ratio-item-vertical-flush {
+	@extend %aspect-ratio-item-vertical-flush;
+}
+
+// Top Left
+
+%aspect-ratio-item-top-left {
+	@include clay-position(top-left);
+}
+
+.aspect-ratio-item-top-left {
+	@extend %aspect-ratio-item-top-left;
+}
+
+// Top Center
+
+%aspect-ratio-item-top-center {
+	@include clay-position(top-center);
+}
+
+.aspect-ratio-item-top-center {
+	@extend %aspect-ratio-item-top-center;
+}
+
+// Top Right
+
+%aspect-ratio-item-top-right {
+	@include clay-position(top-right);
+}
+
+.aspect-ratio-item-top-right {
+	@extend %aspect-ratio-item-top-right;
+}
+
+// Right Middle
+
+%aspect-ratio-item-right-middle {
+	@include clay-position(right-middle);
+}
+
+.aspect-ratio-item-right-middle {
+	@extend %aspect-ratio-item-right-middle;
+}
+
+// Bottom Right
+
+%aspect-ratio-item-bottom-right {
+	@include clay-position(bottom-right);
+}
+
+.aspect-ratio-item-bottom-right {
+	@extend %aspect-ratio-item-bottom-right;
+}
+
+// Bottom Center
+
+%aspect-ratio-item-bottom-center {
+	@include clay-position(bottom-center);
+}
+
+.aspect-ratio-item-bottom-center {
+	@extend %aspect-ratio-item-bottom-center;
+}
+
+// Bottom Left
+
+%aspect-ratio-item-bottom-left {
+	@include clay-position(bottom-left);
+}
+
+.aspect-ratio-item-bottom-left {
+	@extend %aspect-ratio-item-bottom-left;
+}
+
+// Left Middle
+
+%aspect-ratio-item-left-middle {
+	@include clay-position(left-middle);
+}
+
+.aspect-ratio-item-left-middle {
+	@extend %aspect-ratio-item-left-middle;
+}
+
+// Center Middle
+
+%aspect-ratio-item-center-middle {
+	@include clay-position(center-middle);
+}
+
+.aspect-ratio-item-center-middle {
+	@extend %aspect-ratio-item-center-middle;
+}
+
+// 3 to 2
+
+%aspect-ratio-3-to-2 {
+	@include clay-aspect-ratio(3, 2);
+}
+
+.aspect-ratio-3-to-2 {
+	@extend %aspect-ratio-3-to-2;
+}
+
+// 4 to 3
+
+%aspect-ratio-4-to-3 {
+	@include clay-aspect-ratio(4, 3);
+}
+
+.aspect-ratio-4-to-3 {
+	@extend %aspect-ratio-4-to-3;
+}
+
+// 8 to 5
+
+%aspect-ratio-8-to-5 {
+	@include clay-aspect-ratio(8, 5);
+}
+
+.aspect-ratio-8-to-5 {
+	@extend %aspect-ratio-8-to-5;
+}
+
+// 16 to 9
+
+%aspect-ratio-16-to-9 {
+	@include clay-aspect-ratio(16, 9);
+}
+
+.aspect-ratio-16-to-9 {
+	@extend %aspect-ratio-16-to-9;
+}
+
+// Bg Contain
+
+%aspect-ratio-bg-contain {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.aspect-ratio-bg-contain {
+	@extend %aspect-ratio-bg-contain;
+}
+
+// Bg Cover
+
+%aspect-ratio-bg-cover {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.aspect-ratio-bg-cover {
+	@extend %aspect-ratio-bg-cover;
+}
+
+// Bg Center
+
+%aspect-ratio-bg-center {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.aspect-ratio-bg-center {
+	@extend %aspect-ratio-bg-center;
+}

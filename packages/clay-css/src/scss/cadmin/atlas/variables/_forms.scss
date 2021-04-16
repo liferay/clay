@@ -1,0 +1,264 @@
+$cadmin-input-font-size-mobile: 1rem !default; // 16px
+
+$cadmin-input-label-font-size: 0.875rem !default; // 14px
+$cadmin-input-label-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-input-label-margin-bottom: 0.25rem !default; // 4px
+
+$cadmin-input-label-reference-mark-font-size: 6px !default;
+
+$cadmin-input-border-width: 0.0625rem !default; // 1px
+
+$cadmin-input-border-bottom-width: $cadmin-input-border-width !default; // 1px
+$cadmin-input-border-left-width: $cadmin-input-border-width !default; // 1px
+$cadmin-input-border-right-width: $cadmin-input-border-width !default; // 1px
+$cadmin-input-border-top-width: $cadmin-input-border-width !default; // 1px
+
+$cadmin-input-border-radius-sm: $cadmin-border-radius !default;
+
+$cadmin-input-padding-x: 1rem !default; // 16px
+$cadmin-input-padding-y: 0.4375rem !default; // 7px
+
+$cadmin-input-padding-x-lg: $cadmin-input-padding-x !default;
+$cadmin-input-padding-y-lg: $cadmin-input-padding-y !default;
+
+$cadmin-input-padding-x-sm: 0.75rem !default; // 12px
+$cadmin-input-padding-y-sm: 0.25rem !default;
+
+$cadmin-input-height-border: $cadmin-input-border-bottom-width +
+	$cadmin-input-border-top-width !default;
+$cadmin-input-height: 2.5rem !default; // 40px
+$cadmin-input-height-inner: $cadmin-input-height - $cadmin-input-height-border !default;
+$cadmin-input-height-lg: 3rem !default; // 48px
+$cadmin-input-height-inner-lg: $cadmin-input-height-lg -
+	$cadmin-input-height-border !default;
+$cadmin-input-height-sm: 2rem !default; // 32px
+$cadmin-input-height-inner-sm: $cadmin-input-height-sm -
+	$cadmin-input-height-border !default;
+
+$cadmin-form-feedback-font-size: 0.875rem !default; // 14px
+
+$cadmin-form-text-color: $cadmin-gray-600 !default;
+
+// Form Group
+
+$cadmin-form-group-margin-bottom: 1.5rem !default; // 24px
+$cadmin-form-group-margin-bottom-mobile: 1rem !default; // 16px
+
+$cadmin-form-group-sm-input-label-margin-bottom: 0.1875rem !default; // 3px
+$cadmin-form-group-sm-item-label-spacer: 1.5625rem !default; // 25px
+
+// Skin
+
+$cadmin-input-color: $cadmin-gray-900 !default;
+$cadmin-input-bg: $cadmin-gray-200 !default;
+$cadmin-input-border-color: $cadmin-gray-300 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$cadmin-input-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-placeholder-color: $cadmin-gray-600 !default;
+$cadmin-input-label-color: $cadmin-gray-900 !default;
+
+$cadmin-input-focus-bg: lighten($cadmin-component-active-bg, 44.9) !default;
+$cadmin-input-focus-border-color: lighten(
+	$cadmin-component-active-bg,
+	22.94
+) !default;
+$cadmin-input-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
+
+$cadmin-input-disabled-color: $cadmin-gray-500 !default;
+$cadmin-input-disabled-bg: $cadmin-input-bg !default;
+$cadmin-input-disabled-border-color: $cadmin-input-bg !default;
+$cadmin-input-placeholder-disabled-color: $cadmin-input-disabled-color !default;
+
+$cadmin-input-label-disabled-color: $cadmin-gray-500 !default;
+
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+
+$cadmin-input-readonly-bg: $cadmin-white !default;
+
+$cadmin-input-readonly: () !default;
+$cadmin-input-readonly: map-deep-merge(
+	(
+		bg: $cadmin-input-readonly-bg,
+		border-color: $cadmin-input-border-color,
+		focus-border-color: $cadmin-input-focus-border-color,
+		focus-box-shadow: none,
+	),
+	$cadmin-input-readonly
+);
+
+$cadmin-input-plaintext-readonly: () !default;
+$cadmin-input-plaintext-readonly: map-deep-merge(
+	(
+		focus-border-color: $cadmin-input-focus-border-color,
+		focus-box-shadow: none,
+	),
+	$cadmin-input-plaintext-readonly
+);
+
+$cadmin-input-danger-bg: $cadmin-danger-l2 !default;
+$cadmin-input-danger-border-color: $cadmin-danger-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$cadmin-input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-danger-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
+$cadmin-input-danger-color: $cadmin-input-color !default;
+
+$cadmin-input-danger-readonly: () !default;
+$cadmin-input-danger-readonly: map-deep-merge(
+	(
+		bg: map-get($cadmin-input-readonly, bg),
+		border-color: map-get($cadmin-input-readonly, border-color),
+		focus-border-color: $cadmin-input-focus-border-color,
+	),
+	$cadmin-input-danger-readonly
+);
+
+$cadmin-input-danger-checkbox-label-color: $cadmin-danger !default;
+$cadmin-input-danger-select-icon-color: $cadmin-input-danger-border-color !default;
+$cadmin-input-danger-select-icon: clay-icon(
+	caret-double-l,
+	$cadmin-input-danger-select-icon-color
+) !default;
+
+$cadmin-input-success-bg: $cadmin-success-l2 !default;
+$cadmin-input-success-border-color: $cadmin-success-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$cadmin-input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-success-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
+$cadmin-input-success-color: $cadmin-input-color !default;
+
+$cadmin-input-success-readonly: () !default;
+$cadmin-input-success-readonly: map-deep-merge(
+	(
+		bg: map-get($cadmin-input-readonly, bg),
+		border-color: map-get($cadmin-input-readonly, border-color),
+		focus-border-color: $cadmin-input-focus-border-color,
+	),
+	$cadmin-input-success-readonly
+);
+
+$cadmin-input-success-checkbox-label-color: $cadmin-success !default;
+$cadmin-input-success-select-icon-color: $cadmin-input-success-border-color !default;
+$cadmin-input-success-select-icon: clay-icon(
+	caret-double-l,
+	$cadmin-input-success-select-icon-color
+) !default;
+
+$cadmin-input-warning-bg: $cadmin-warning-l2 !default;
+$cadmin-input-warning-border-color: $cadmin-warning-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$cadmin-input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-warning-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
+
+$cadmin-input-warning-readonly: () !default;
+$cadmin-input-warning-readonly: map-deep-merge(
+	(
+		bg: map-get($cadmin-input-readonly, bg),
+		border-color: map-get($cadmin-input-readonly, border-color),
+		focus-border-color: $cadmin-input-focus-border-color,
+	),
+	$cadmin-input-warning-readonly
+);
+
+$cadmin-input-warning-color: $cadmin-input-color !default;
+$cadmin-input-warning-checkbox-label-color: $cadmin-warning !default;
+$cadmin-input-warning-select-icon-color: $cadmin-input-warning-border-color !default;
+$cadmin-input-warning-select-icon: clay-icon(
+	caret-double-l,
+	$cadmin-input-warning-select-icon-color
+) !default;
+
+// Select Element
+
+$cadmin-input-select-bg-position: right 0.5em center !default;
+$cadmin-input-select-bg-size: 1.5em 1.5em !default;
+$cadmin-input-select-padding-right: 2em !default;
+
+$cadmin-input-select-icon-color: $cadmin-gray-600 !default;
+$cadmin-input-select-icon: clay-icon(
+	caret-double-l,
+	$cadmin-input-select-icon-color
+) !default;
+
+$cadmin-input-select-icon-focus-color: $cadmin-input-select-icon-color !default;
+$cadmin-input-select-icon-focus: clay-icon(
+	caret-double-l,
+	$cadmin-input-select-icon-focus-color
+) !default;
+
+$cadmin-input-select-icon-disabled-color: $cadmin-gray-500 !default;
+$cadmin-input-select-icon-disabled: clay-icon(
+	caret-double-l,
+	$cadmin-input-select-icon-disabled-color
+) !default;
+
+$cadmin-input-select-size: () !default;
+$cadmin-input-select-size: map-deep-merge(
+	(
+		option: (
+			padding: 0.25rem 0.5rem,
+		),
+	),
+	$cadmin-input-select-size
+);
+
+// Form Feedback
+
+$cadmin-form-feedback-font-weight: $cadmin-font-weight-semi-bold !default;
+
+$cadmin-form-feedback-indicator-margin-x: 0 !default;
+
+$cadmin-form-text-font-weight: $cadmin-font-weight-semi-bold !default;
+
+// Textarea
+
+$cadmin-input-textarea-height: 100px !default;
+$cadmin-input-textarea-height-lg: 120px !default;
+$cadmin-input-textarea-height-sm: 80px !default;
+
+// Form Control Label (Labels inside Form Control Tag Group)
+
+$cadmin-form-control-label-size: () !default;
+$cadmin-form-control-label-size: map-deep-merge(
+	(
+		border-width: 0.0625rem,
+		font-size: map-get($cadmin-label-lg, font-size),
+		height: 1.5rem,
+		margin-bottom: 0.3125rem,
+		margin-right: 0.625rem,
+		margin-top: 0.3125rem,
+		padding-x: map-get($cadmin-label-lg, padding-x),
+		padding-y: map-get($cadmin-label-lg, padding-y),
+		text-transform: none,
+		item-spacer-y: map-get($cadmin-label-lg, item-spacer-y),
+		lexicon-icon-height: map-get($cadmin-label-lg, lexicon-icon-height),
+		lexicon-icon-width: map-get($cadmin-label-lg, lexicon-icon-width),
+		sticker-size: map-get($cadmin-label-lg, sticker-size),
+		close: map-get($cadmin-label-lg, close),
+	),
+	$cadmin-form-control-label-size
+);
+
+// Form Group
+
+$cadmin-form-group-item-label-spacer: (
+		$cadmin-input-label-font-size * $cadmin-line-height-base
+	) + $cadmin-input-label-margin-bottom !default;
+
+// Input Groups
+
+$cadmin-input-group-addon-bg: $cadmin-gray-300 !default;
+$cadmin-input-group-addon-border-color: $cadmin-input-group-addon-bg !default;
+$cadmin-input-group-addon-color: $cadmin-gray-600 !default;
+$cadmin-input-group-addon-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-input-group-addon-min-width: 2.5rem !default; // 40px
+$cadmin-input-group-addon-padding-x: 0.75rem !default; // 12px
+
+// Input Group Sizes
+
+$cadmin-input-group-addon-min-width-sm: 2rem !default; // 32px
+
+// Input Group Secondary
+
+$cadmin-input-group-secondary-addon-bg: $cadmin-white !default;
+$cadmin-input-group-secondary-addon-border-color: $cadmin-secondary-l2 !default;
+$cadmin-input-group-secondary-addon-color: $cadmin-secondary !default;

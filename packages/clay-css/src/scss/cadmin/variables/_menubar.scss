@@ -1,0 +1,155 @@
+// Menubar Vertical MD
+
+$cadmin-menubar-vertical-expand-md: () !default;
+$cadmin-menubar-vertical-expand-md: map-deep-merge(
+	(
+		margin-bottom-mobile: 1.5rem,
+		margin-left-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		margin-right-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		collapse-z-index-mobile:
+			$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile,
+		nav-nested-margins-item-mobile: (
+			margin-left: 0,
+		),
+		toggler-c-inner: (
+			max-width: none,
+		),
+	),
+	$cadmin-menubar-vertical-expand-md
+);
+
+$cadmin-menubar-vertical-transparent-md: () !default;
+$cadmin-menubar-vertical-transparent-md: map-deep-merge(
+	(
+		link-color: $cadmin-gray-600,
+		link-hover-color: darken($cadmin-gray-600, 15),
+		link-active-color: $cadmin-gray-900,
+		bg-mobile: $cadmin-gray-100,
+	),
+	$cadmin-menubar-vertical-transparent-md
+);
+
+$cadmin-menubar-vertical-decorated-md-nav: () !default;
+$cadmin-menubar-vertical-decorated-md-nav: map-deep-merge(
+	(
+		border-left-color: $cadmin-gray-300,
+		border-left-style: solid,
+		border-left-width: 0.125rem,
+		display: block,
+		padding-left: 0.5rem,
+	),
+	$cadmin-menubar-vertical-decorated-md-nav
+);
+
+$cadmin-menubar-vertical-decorated-md-nav-item-nav: () !default;
+$cadmin-menubar-vertical-decorated-md-nav-item-nav: map-deep-merge(
+	(
+		margin-bottom: 0.25rem,
+		margin-left: 1rem,
+		margin-top: 0.25rem,
+	),
+	$cadmin-menubar-vertical-decorated-md-nav-item-nav
+);
+
+$cadmin-menubar-vertical-decorated-md-nav-link: () !default;
+$cadmin-menubar-vertical-decorated-md-nav-link: map-deep-merge(
+	(
+		padding-left: 1rem !important,
+	),
+	$cadmin-menubar-vertical-decorated-md-nav-link
+);
+
+$cadmin-menubar-vertical-decorated-md-nav-link-after-active: () !default;
+$cadmin-menubar-vertical-decorated-md-nav-link-after-active: map-deep-merge(
+	(
+		background-color: $cadmin-primary-l2,
+		bottom: 0,
+		content: '',
+		display: block,
+		left:
+			math-sign(
+				map-get($cadmin-menubar-vertical-decorated-md-nav, padding-left)
+			) -
+			map-get(
+				$cadmin-menubar-vertical-decorated-md-nav,
+				border-left-width
+			),
+		position: absolute,
+		top: 0,
+		width:
+			map-get(
+				$cadmin-menubar-vertical-decorated-md-nav,
+				border-left-width
+			),
+	),
+	$cadmin-menubar-vertical-decorated-md-nav-link-after-active
+);
+
+// Menubar Vertical LG
+
+$cadmin-menubar-vertical-expand-lg: () !default;
+$cadmin-menubar-vertical-expand-lg: map-deep-merge(
+	(
+		breakpoint-up: lg,
+		margin-bottom-mobile: 1.5rem,
+		margin-left-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		margin-right-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		collapse-z-index-mobile:
+			$cadmin-zindex-menubar-vertical-expand-lg-collapse-mobile,
+		nav-nested-margins-item-mobile: (
+			margin-left: 0,
+		),
+		toggler-c-inner: (
+			max-width: none,
+		),
+	),
+	$cadmin-menubar-vertical-expand-lg
+);
+
+$cadmin-menubar-vertical-transparent-lg: () !default;
+$cadmin-menubar-vertical-transparent-lg: map-deep-merge(
+	(
+		breakpoint-up: lg,
+		link-color: $cadmin-gray-600,
+		link-hover-color: darken($cadmin-gray-600, 15),
+		link-active-color: $cadmin-gray-900,
+		bg-mobile: $cadmin-gray-100,
+	),
+	$cadmin-menubar-vertical-transparent-lg
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav,
+	$cadmin-menubar-vertical-decorated-lg-nav
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav-item-nav: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav-item-nav: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav-item-nav,
+	$cadmin-menubar-vertical-decorated-lg-nav-item-nav
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav-link: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav-link: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav-link,
+	$cadmin-menubar-vertical-decorated-lg-nav-link
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav-link-after-active: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav-link-after-active: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav-link-after-active,
+	$cadmin-menubar-vertical-decorated-lg-nav-link-after-active
+);

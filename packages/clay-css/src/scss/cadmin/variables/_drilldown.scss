@@ -1,0 +1,209 @@
+$cadmin-drilldown-inner-transition: height 0.25s ease !default;
+
+$cadmin-drilldown-transition: all 0.25s ease !default;
+$cadmin-drilldown-width: $cadmin-dropdown-max-width !default;
+
+$cadmin-drilldown-inline-scroller-max-height: none !default;
+
+$cadmin-drilldown-inner: () !default;
+$cadmin-drilldown-inner: map-merge(
+	(
+		display: flex,
+		flex-grow: 1,
+		overflow: hidden,
+		transition: $cadmin-drilldown-inner-transition,
+	),
+	$cadmin-drilldown-inner
+);
+
+$cadmin-drilldown-item: () !default;
+$cadmin-drilldown-item: map-merge(
+	(
+		display: none,
+		flex-shrink: 0,
+		height: 0,
+		width: 100%,
+	),
+	$cadmin-drilldown-item
+);
+
+$cadmin-drilldown-item-inner: () !default;
+$cadmin-drilldown-item-inner: map-merge(
+	(
+		display: flex,
+		flex-direction: column,
+	),
+	$cadmin-drilldown-item-inner
+);
+
+// Drilldown Dropdown Menu
+
+$cadmin-drilldown-dropdown-menu: () !default;
+$cadmin-drilldown-dropdown-menu: map-merge(
+	(
+		flex-direction: column,
+		max-height: none,
+		max-width: none,
+		min-width: 0,
+		overflow: hidden,
+		width: $cadmin-drilldown-width,
+	),
+	$cadmin-drilldown-dropdown-menu
+);
+
+$cadmin-drilldown-dropdown-menu-drilldown-inner: () !default;
+$cadmin-drilldown-dropdown-menu-drilldown-inner: map-merge(
+	(
+		min-height: 266px,
+	),
+	$cadmin-drilldown-dropdown-menu-drilldown-inner
+);
+
+// Drilldown Dropdown Menu Indicator
+
+$cadmin-drilldown-dropdown-menu-indicator-start: () !default;
+$cadmin-drilldown-dropdown-menu-indicator-start: map-merge(
+	(
+		padding-left: 3rem,
+	),
+	$cadmin-drilldown-dropdown-menu-indicator-start
+);
+
+$cadmin-drilldown-dropdown-menu-indicator-end: () !default;
+$cadmin-drilldown-dropdown-menu-indicator-end: map-merge(
+	(
+		padding-right: 3rem,
+	),
+	$cadmin-drilldown-dropdown-menu-indicator-end
+);
+
+// Drilldown Dropdown Item
+
+$cadmin-drilldown-dropdown-item: () !default;
+$cadmin-drilldown-dropdown-item: map-deep-merge(
+	(
+		padding-bottom: 0.59375rem,
+		padding-left: 1rem,
+		padding-right: 1rem,
+		padding-top: 0.59375rem,
+	),
+	$cadmin-drilldown-dropdown-item
+);
+
+$cadmin-_drilldown-dropdown-item-pt: map-get(
+	$cadmin-drilldown-dropdown-item,
+	padding-top
+);
+
+// Drilldown Dropdown Item Indicators
+
+$cadmin-drilldown-dropdown-item-indicator-start: () !default;
+$cadmin-drilldown-dropdown-item-indicator-start: map-merge(
+	(
+		height: 1.5rem,
+		left: 0.5rem,
+		top:
+			calc(
+				#{$cadmin-_drilldown-dropdown-item-pt} - ((
+								1.5rem - (1em * #{$cadmin-line-height-base})
+							) / 2)
+			),
+		transition: none,
+		width: 1.5rem,
+	),
+	$cadmin-drilldown-dropdown-item-indicator-start
+);
+
+$cadmin-drilldown-dropdown-item-indicator-text-start: () !default;
+$cadmin-drilldown-dropdown-item-indicator-text-start: map-merge(
+	(
+		padding-left: 2rem,
+	),
+	$cadmin-drilldown-dropdown-item-indicator-text-start
+);
+
+$cadmin-drilldown-dropdown-item-indicator-end: () !default;
+$cadmin-drilldown-dropdown-item-indicator-end: map-merge(
+	(
+		height: 1.5rem,
+		right: 0.5rem,
+		top:
+			calc(
+				#{$cadmin-_drilldown-dropdown-item-pt} - ((
+								1.5rem - (1em * #{$cadmin-line-height-base})
+							) / 2)
+			),
+		transition: none,
+		width: 1.5rem,
+	),
+	$cadmin-drilldown-dropdown-item-indicator-end
+);
+
+$cadmin-drilldown-dropdown-item-indicator-text-end: () !default;
+$cadmin-drilldown-dropdown-item-indicator-text-end: map-merge(
+	(
+		margin-bottom: -0.59375rem,
+		margin-left: -1rem,
+		margin-top: -0.59375rem,
+		padding-bottom: inherit,
+		padding-left: inherit,
+		padding-right: 2rem,
+		padding-top: inherit,
+		width: auto,
+	),
+	$cadmin-drilldown-dropdown-item-indicator-text-end
+);
+
+// Drilldown Dropdown Header
+
+$cadmin-drilldown-dropdown-header: () !default;
+$cadmin-drilldown-dropdown-header: map-merge(
+	(
+		color: $cadmin-secondary,
+		font-weight: $cadmin-font-weight-semi-bold,
+		padding-bottom: map-get($cadmin-drilldown-dropdown-item, padding-bottom),
+		padding-left: map-get($cadmin-drilldown-dropdown-item, padding-left),
+		padding-right: map-get($cadmin-drilldown-dropdown-item, padding-right),
+		padding-top: map-get($cadmin-drilldown-dropdown-item, padding-top),
+		text-transform: uppercase,
+	),
+	$cadmin-drilldown-dropdown-header
+);
+
+// Drilldown Dropdown Footer
+
+$cadmin-drilldown-dropdown-footer: () !default;
+$cadmin-drilldown-dropdown-footer: map-merge(
+	(
+		padding: 1rem 1rem 0.625rem,
+	),
+	$cadmin-drilldown-dropdown-footer
+);
+
+// Drilldown Dropdown Divider
+
+$cadmin-drilldown-dropdown-divider: () !default;
+$cadmin-drilldown-dropdown-divider: map-merge(
+	(
+		margin: 0,
+	),
+	$cadmin-drilldown-dropdown-divider
+);
+
+// Drilldown Height Dropdown Menu
+
+$cadmin-drilldown-height-sm-dropdown-menu: () !default;
+$cadmin-drilldown-height-sm-dropdown-menu: map-merge(
+	(
+		height: 272px,
+	),
+	$cadmin-drilldown-height-sm-dropdown-menu
+);
+
+$cadmin-drilldown-height-md-dropdown-menu: () !default;
+$cadmin-drilldown-height-md-dropdown-menu: map-merge(
+	(
+		height: 344px,
+	),
+	$cadmin-drilldown-height-md-dropdown-menu
+);

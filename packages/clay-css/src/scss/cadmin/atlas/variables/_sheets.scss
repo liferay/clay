@@ -1,0 +1,53 @@
+$cadmin-sheet-bg: $cadmin-white !default;
+$cadmin-sheet-border-color: $cadmin-gray-300 !default;
+
+$cadmin-sheet-padding-bottom-mobile: null !default;
+$cadmin-sheet-padding-left-mobile: 1rem !default; // 16px
+$cadmin-sheet-padding-right-mobile: 1rem !default; // 16px
+$cadmin-sheet-padding-top-mobile: 1rem !default; // 16px
+
+$cadmin-sheet-header-margin-bottom-mobile: 2rem !default; // 32px
+
+$cadmin-sheet-section-margin-bottom-mobile: 2rem !default; // 32px
+
+$cadmin-sheet-panel-group-margin-bottom-mobile: 1rem !default; // 16px
+
+$cadmin-sheet-footer-margin-bottom-mobile: 1rem !default; // 16px
+$cadmin-sheet-footer-margin-top-mobile: 1rem !default; // 16px
+
+// Sheet Title
+
+$cadmin-sheet-title-font-size: 1.25rem !default; // 20px
+$cadmin-sheet-title-font-weight: $cadmin-font-weight-bold !default;
+$cadmin-sheet-title-margin-bottom-mobile: 1rem !default; // 16px
+
+// Sheet Subtitle
+
+$cadmin-sheet-subtitle-color: $cadmin-body-color !default;
+$cadmin-sheet-subtitle-border-color: $cadmin-gray-500 !default;
+$cadmin-sheet-subtitle-font-size: 0.875rem !default; // 14px
+$cadmin-sheet-subtitle-padding-y: 0.5rem !default; // 8px
+$cadmin-sheet-subtitle-margin-bottom-mobile: 1rem !default; // 16px
+
+// Sheet Subtitle as Panel Header
+
+$cadmin-sheet-subtitle-link: () !default;
+$cadmin-sheet-subtitle-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		transition: box-shadow 0.15s ease-in-out,
+		focus-box-shadow: 0 0 0 0.25rem $cadmin-white#{','} 0 0 0 0.375rem $cadmin-primary-l1,
+		focus-outline: 0,
+	),
+	$cadmin-sheet-subtitle-link
+);
+
+$cadmin-sheet-subtitle-collapse-icon-font-size: 0.75rem !default;
+
+// Sheet Tertiary Title
+
+$cadmin-sheet-tertiary-title-margin-bottom-mobile: 0.5rem !default; // 8px
+
+$cadmin-sheet-text-color: $cadmin-gray-600 !default;
+
+$cadmin-sheet-text-margin-bottom-mobile: 1rem !default; // 16px

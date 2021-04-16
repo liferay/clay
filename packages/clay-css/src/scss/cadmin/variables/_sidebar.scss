@@ -1,0 +1,154 @@
+$cadmin-sidebar-padding-bottom: 1rem !default; // 16px
+$cadmin-sidebar-padding-left: 1rem !default; // 16px
+$cadmin-sidebar-padding-right: 1rem !default; // 16px
+$cadmin-sidebar-padding-top: 1rem !default; // 16px
+
+// Sidebar Header Title
+
+$cadmin-sidebar-header-component-title: () !default;
+$cadmin-sidebar-header-component-title: map-deep-merge(
+	(
+		font-size: 1.5rem,
+		font-weight: $cadmin-font-weight-semi-bold,
+		clay-link: (
+			color: $cadmin-gray-900,
+		),
+	),
+	$cadmin-sidebar-header-component-title
+);
+
+// Sidebar Header Subtitle
+
+$cadmin-sidebar-header-component-subtitle: () !default;
+$cadmin-sidebar-header-component-subtitle: map-deep-merge(
+	(
+		font-size: 1.125rem,
+		font-weight: $cadmin-font-weight-semi-bold,
+		margin-bottom: 0,
+	),
+	$cadmin-sidebar-header-component-subtitle
+);
+
+// Sidebar DT
+
+$cadmin-sidebar-dt: () !default;
+$cadmin-sidebar-dt: map-deep-merge(
+	(
+		font-size: 0.875rem,
+		font-weight: $cadmin-font-weight-semi-bold,
+		margin-bottom: 0.25rem,
+		text-transform: uppercase,
+	),
+	$cadmin-sidebar-dt
+);
+
+// Sidebar DD
+
+$cadmin-sidebar-dd: () !default;
+$cadmin-sidebar-dd: map-deep-merge(
+	(
+		font-size: 0.875rem,
+		margin-bottom: 0.75rem,
+	),
+	$cadmin-sidebar-dd
+);
+
+// Sidebar Panel
+
+$cadmin-sidebar-panel-margin-bottom: 1rem !default; // 16px
+
+// Sidebar List Group
+
+$cadmin-sidebar-list-group-bg: transparent !default;
+$cadmin-sidebar-list-group-border-color: $cadmin-gray-300 !default;
+$cadmin-sidebar-list-group-font-size: 0.875rem !default; // 14px
+$cadmin-sidebar-list-group-type: list-group-flush !default;
+
+$cadmin-sidebar-list-group-item-padding: 0 !default;
+
+$cadmin-sidebar-list-group-autofit-col-padding-x: 0.5rem !default; // 8px
+$cadmin-sidebar-list-group-autofit-col-padding-y: 1rem !default; // 16px
+
+$cadmin-sidebar-list-group-sticker-size: () !default;
+$cadmin-sidebar-list-group-sticker-size: map-deep-merge(
+	$cadmin-sticker-sm,
+	$cadmin-sidebar-list-group-sticker-size
+);
+
+// Sidebar Light
+
+$cadmin-sidebar-light: () !default;
+$cadmin-sidebar-light: map-deep-merge(
+	(
+		bg: $cadmin-light,
+		border-color: $cadmin-gray-300,
+		border-left-width: 1px,
+		color: $cadmin-gray-900,
+		dd: (
+			clay-link: (
+				color: $cadmin-gray-900,
+			),
+		),
+		panel-bg: $cadmin-gray-200,
+		sidebar-list-group-title: (
+			font-size: 1rem,
+			clay-link: (
+				color: $cadmin-gray-900,
+			),
+		),
+	),
+	$cadmin-sidebar-light
+);
+
+$cadmin-sidebar-light-navigation-bar: () !default;
+$cadmin-sidebar-light-navigation-bar: map-deep-merge(
+	(
+		bg: $cadmin-light,
+		border-color: $cadmin-gray-300,
+		link-color: $cadmin-navbar-light-color,
+		link-hover-color: $cadmin-navbar-light-hover-color,
+		link-active-color: $cadmin-navbar-light-active-color,
+		link-disabled-color: $cadmin-navbar-light-disabled-color,
+	),
+	$cadmin-sidebar-light-navigation-bar
+);
+
+// Sidebar Dark
+
+$cadmin-sidebar-dark: () !default;
+$cadmin-sidebar-dark: map-deep-merge(
+	(
+		bg: $cadmin-dark,
+		color: $cadmin-white,
+		component-header-title: (
+			color: inherit,
+			clay-link: (
+				color: inherit,
+			),
+		),
+		component-header-subtitle: (
+			color: inherit,
+			clay-link: (
+				color: inherit,
+			),
+		),
+		close: (
+			color: $cadmin-secondary-l1,
+			hover-color: $cadmin-white,
+		),
+		nav-nested-link: (
+			border-radius: $cadmin-border-radius,
+			color: $cadmin-secondary-l1,
+			transition: box-shadow 0.15s ease-in-out,
+			hover-color: $cadmin-white,
+			focus-box-shadow: $cadmin-component-focus-box-shadow,
+			focus-outline: 0,
+			active-color: $cadmin-white,
+			disabled-box-shadow: none,
+			disabled-color: $cadmin-secondary-l1,
+			disabled-opacity: 0.65,
+			disabled-active-pointer-events: none,
+		),
+	),
+	$cadmin-sidebar-dark
+);

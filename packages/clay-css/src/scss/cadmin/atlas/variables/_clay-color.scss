@@ -1,0 +1,38 @@
+// Clay Color Dropdown Menu Close
+
+$cadmin-clay-color-dropdown-menu-close: () !default;
+$cadmin-clay-color-dropdown-menu-close: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: 1rem,
+		opacity: 1,
+		hover-bg: rgba($cadmin-gray-900, 0.03),
+		focus-bg: rgba($cadmin-gray-900, 0.03),
+		active-bg: rgba($cadmin-gray-900, 0.06),
+		disabled-bg: transparent,
+	),
+	$cadmin-clay-color-dropdown-menu-close
+);
+
+// Clay Color Dropdown Menu Component Action
+
+$cadmin-clay-color-dropdown-menu-component-action: () !default;
+$cadmin-clay-color-dropdown-menu-component-action: map-deep-merge(
+	(
+		hover-bg: null,
+		hover-color: null,
+		focus-box-shadow: null,
+		focus-color: null,
+	),
+	$cadmin-clay-color-dropdown-menu-component-action
+);
+
+// Clay Color Pointer
+
+$cadmin-clay-color-pointer: () !default;
+$cadmin-clay-color-pointer: map-deep-merge(
+	(
+		focus-box-shadow: 0 0 0 0.125rem $cadmin-primary-l1,
+	),
+	$cadmin-clay-color-pointer
+);

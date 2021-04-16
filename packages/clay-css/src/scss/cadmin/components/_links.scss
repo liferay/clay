@@ -1,0 +1,67 @@
+.component-link {
+	@include clay-link($cadmin-component-link);
+}
+
+.single-link {
+	font-weight: $cadmin-single-link-font-weight;
+}
+
+.link-primary {
+	@include clay-link($cadmin-link-primary);
+}
+
+.link-secondary {
+	@include clay-link($cadmin-link-secondary);
+}
+
+// Link Outline
+
+button.link-outline {
+	cursor: $cadmin-btn-cursor;
+}
+
+.link-outline {
+	@include clay-link($cadmin-link-outline);
+}
+
+.link-outline-primary {
+	@include clay-link($cadmin-link-outline-primary);
+}
+
+.link-outline-secondary {
+	@include clay-link($cadmin-link-outline-secondary);
+}
+
+.link-outline-borderless {
+	border-color: transparent;
+}
+
+%link-monospaced {
+	@include clay-link($cadmin-link-monospaced);
+}
+
+.link-monospaced {
+	@extend %link-monospaced;
+}
+
+// Component Links
+
+.component-title {
+	@include clay-text-typography($cadmin-component-title);
+
+	a {
+		@include clay-link($cadmin-component-title-link);
+	}
+}
+
+.component-subtitle {
+	@include clay-text-typography($cadmin-component-subtitle);
+
+	a {
+		@include clay-link($cadmin-component-subtitle-link);
+	}
+}
+
+.component-action {
+	@include clay-link($cadmin-component-action);
+}

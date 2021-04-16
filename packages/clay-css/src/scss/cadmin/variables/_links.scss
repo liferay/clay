@@ -1,0 +1,252 @@
+////
+/// @group Links
+////
+
+$cadmin-single-link-font-weight: $cadmin-font-weight-semi-bold !default;
+
+$cadmin-component-link: () !default;
+$cadmin-component-link: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		hover-color: darken($cadmin-gray-600, 15%),
+	),
+	$cadmin-component-link
+);
+
+$cadmin-link-primary: () !default;
+$cadmin-link-primary: map-deep-merge(
+	(
+		color: $cadmin-primary,
+		hover-color: darken($cadmin-primary, 15%),
+	),
+	$cadmin-link-primary
+);
+
+$cadmin-link-secondary: () !default;
+$cadmin-link-secondary: map-deep-merge(
+	(
+		color: $cadmin-secondary,
+		hover-color: darken($cadmin-secondary, 15%),
+	),
+	$cadmin-link-secondary
+);
+
+// Link Outline
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-border-radius: $cadmin-btn-border-radius !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-border-width: $cadmin-btn-border-width !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-font-size: $cadmin-btn-font-size-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-font-weight: $cadmin-font-weight-semi-bold !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-line-height: $cadmin-btn-line-height-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-padding-x: $cadmin-btn-padding-x-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-padding-y: $cadmin-btn-padding-y-sm !default;
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+
+$cadmin-link-outline-transition: $cadmin-btn-transition !default;
+
+$cadmin-link-outline: () !default;
+$cadmin-link-outline: map-deep-merge(
+	(
+		align-items: center,
+		bg: transparent,
+		border-color: transparent,
+		border-radius: $cadmin-link-outline-border-radius,
+		border-style: solid,
+		border-width: $cadmin-link-outline-border-width,
+		display: inline-flex,
+		font-size: $cadmin-link-outline-font-size,
+		font-weight: $cadmin-link-outline-font-weight,
+		justify-content: center,
+		line-height: $cadmin-link-outline-line-height,
+		padding-bottom: $cadmin-link-outline-padding-y,
+		padding-left: $cadmin-link-outline-padding-x,
+		padding-right: $cadmin-link-outline-padding-x,
+		padding-top: $cadmin-link-outline-padding-y,
+		transition: $cadmin-link-outline-transition,
+		vertical-align: middle,
+		hover-text-decoration: none,
+		disabled-active: (
+			pointer-events: none,
+		),
+		lexicon-icon-margin-top: 0,
+	),
+	$cadmin-link-outline
+);
+
+$cadmin-link-outline-primary: () !default;
+$cadmin-link-outline-primary: map-deep-merge(
+	(
+		border-color: $cadmin-primary,
+		color: $cadmin-primary,
+		hover-bg: $cadmin-primary,
+		hover-color: $cadmin-white,
+		btn-focus-box-shadow: 0 0 0 $cadmin-btn-focus-width
+			rgba($cadmin-primary, 0.5),
+		btn-focus-outline: 0,
+		disabled-bg: transparent,
+		disabled-color: $cadmin-primary,
+		disabled-cursor: $cadmin-btn-disabled-cursor,
+		disabled-opacity: $cadmin-btn-disabled-opacity,
+		active-bg: $cadmin-primary,
+		active-color: $cadmin-white,
+	),
+	$cadmin-link-outline-primary
+);
+
+$cadmin-link-outline-secondary: () !default;
+$cadmin-link-outline-secondary: map-deep-merge(
+	(
+		border-color: $cadmin-secondary,
+		color: $cadmin-secondary,
+		hover-bg: $cadmin-secondary,
+		hover-color: $cadmin-white,
+		btn-focus-box-shadow: 0 0 0 $cadmin-btn-focus-width
+			rgba($cadmin-secondary, 0.5),
+		btn-focus-outline: 0,
+		disabled-bg: transparent,
+		disabled-color: $cadmin-secondary,
+		disabled-cursor: $cadmin-btn-disabled-cursor,
+		disabled-opacity: $cadmin-btn-disabled-opacity,
+		active-bg: $cadmin-secondary,
+		active-color: $cadmin-white,
+	),
+	$cadmin-link-outline-secondary
+);
+
+// Link Monospaced
+
+/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-monospaced` instead
+
+$cadmin-link-monospaced-size: $cadmin-btn-monospaced-size-sm !default;
+
+$cadmin-link-monospaced: () !default;
+$cadmin-link-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		height: $cadmin-link-monospaced-size,
+		justify-content: center,
+		overflow: hidden,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+		vertical-align: middle,
+		width: $cadmin-link-monospaced-size,
+		lexicon-icon-margin-top: 0,
+	),
+	$cadmin-link-monospaced
+);
+
+// Component Title
+
+$cadmin-component-title: () !default;
+$cadmin-component-title: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		font-size: 1.125rem,
+		font-weight: $cadmin-headings-font-weight,
+		line-height: $cadmin-headings-line-height,
+		margin-bottom:
+			calc(
+				(
+						#{$cadmin-dropdown-action-toggle-size} - (1em * #{$cadmin-headings-line-height})
+					) / 2
+			),
+		margin-top:
+			calc(
+				(
+						#{$cadmin-dropdown-action-toggle-size} - (1em * #{$cadmin-headings-line-height})
+					) / 2
+			),
+	),
+	$cadmin-component-title
+);
+
+$cadmin-component-title-link: () !default;
+$cadmin-component-title-link: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		hover-color: darken($cadmin-gray-900, 15%),
+	),
+	$cadmin-component-title-link
+);
+
+// Component Subtitle
+
+$cadmin-component-subtitle: () !default;
+$cadmin-component-subtitle: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		margin-bottom: 0,
+	),
+	$cadmin-component-subtitle
+);
+
+$cadmin-component-subtitle-link: () !default;
+$cadmin-component-subtitle-link: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		hover-color: darken($cadmin-gray-600, 15%),
+	),
+	$cadmin-component-subtitle-link
+);
+
+// Component Action
+
+$cadmin-component-action: () !default;
+$cadmin-component-action: map-deep-merge(
+	(
+		align-items: center,
+		bg: transparent,
+		border-color: transparent,
+		border-radius: $cadmin-border-radius,
+		border-width: 0,
+		color: $cadmin-secondary,
+		display: inline-flex,
+		height: map-get($cadmin-link-monospaced, height),
+		justify-content: center,
+		overflow: hidden,
+		padding: 0,
+		vertical-align: middle,
+		width: map-get($cadmin-link-monospaced, width),
+		hover-bg: $cadmin-secondary,
+		hover-color: $cadmin-white,
+		btn-focus-box-shadow: 0 0 0 $cadmin-btn-focus-width
+			rgba($cadmin-secondary, 0.5),
+		btn-focus-outline: 0,
+		active-bg: $cadmin-secondary,
+		active-color: $cadmin-white,
+		disabled-bg: transparent,
+		disabled-color: $cadmin-secondary,
+		disabled-cursor: $cadmin-disabled-cursor,
+		disabled-opacity: $cadmin-btn-disabled-opacity,
+		disabled-active: (
+			pointer-events: none,
+		),
+		transition: $cadmin-btn-transition,
+		lexicon-icon-margin-top: 0,
+	),
+	$cadmin-component-action
+);

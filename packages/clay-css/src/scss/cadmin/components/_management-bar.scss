@@ -1,0 +1,19 @@
+.management-bar {
+	@include clay-navbar-size($cadmin-management-bar-size);
+	@include clay-navbar-variant($cadmin-management-bar-base);
+
+	&.navbar-nowrap {
+		.navbar-text {
+			white-space: normal;
+			word-wrap: break-word;
+		}
+	}
+}
+
+.management-bar-light {
+	@include clay-navbar-variant($cadmin-management-bar-light);
+}
+
+.management-bar-primary {
+	@include clay-navbar-variant($cadmin-management-bar-primary);
+}

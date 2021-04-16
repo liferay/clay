@@ -1,0 +1,387 @@
+.btn {
+	background-color: transparent;
+	border: $cadmin-btn-border-width solid transparent;
+
+	@include border-radius($cadmin-btn-border-radius, 0);
+	@include box-shadow($cadmin-btn-box-shadow);
+
+	color: $cadmin-body-color;
+	cursor: $cadmin-btn-cursor;
+	display: inline-block;
+	font-family: $cadmin-btn-font-family;
+	font-size: $cadmin-btn-font-size;
+	font-weight: $cadmin-btn-font-weight;
+	line-height: $cadmin-btn-line-height;
+	padding: $cadmin-btn-padding-y $cadmin-btn-padding-x;
+	text-align: center;
+	text-transform: none;
+
+	@include transition($cadmin-btn-transition);
+
+	user-select: none;
+	vertical-align: middle;
+	white-space: $cadmin-btn-white-space;
+
+	@include clay-scale-component {
+		font-size: $cadmin-btn-font-size-mobile;
+		padding-bottom: $cadmin-btn-padding-y-mobile;
+		padding-left: $cadmin-btn-padding-x-mobile;
+		padding-right: $cadmin-btn-padding-x-mobile;
+		padding-top: $cadmin-btn-padding-y-mobile;
+	}
+
+	&:hover {
+		color: $cadmin-body-color;
+		text-decoration: none;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: $cadmin-btn-focus-box-shadow;
+		outline: 0;
+	}
+
+	&:active,
+	&.active {
+		@include box-shadow($cadmin-btn-active-box-shadow);
+
+		&:focus {
+			@if (
+				$cadmin-enable-shadows and $cadmin-btn-active-box-shadow != none
+			) {
+				box-shadow: $cadmin-btn-focus-box-shadow,
+					$cadmin-btn-active-box-shadow;
+			} @else {
+				box-shadow: $cadmin-btn-focus-box-shadow;
+			}
+		}
+	}
+
+	&.disabled,
+	&:disabled {
+		cursor: $cadmin-btn-disabled-cursor;
+		opacity: $cadmin-btn-disabled-opacity;
+
+		&:focus,
+		&:focus:active {
+			box-shadow: none;
+		}
+
+		&:active {
+			pointer-events: none;
+		}
+	}
+}
+
+fieldset:disabled a.btn {
+	box-shadow: none;
+	cursor: $cadmin-btn-disabled-cursor;
+	opacity: $cadmin-btn-disabled-opacity;
+
+	&:active {
+		pointer-events: none;
+	}
+}
+
+.btn .inline-item {
+	font-size: $cadmin-btn-inline-item-font-size;
+}
+
+.btn-section {
+	display: block;
+	font-size: $cadmin-btn-section-font-size;
+	font-weight: $cadmin-btn-section-font-weight;
+	line-height: $cadmin-btn-section-line-height;
+}
+
+// Button Sizes
+
+%clay-btn-lg {
+	@include border-radius($cadmin-btn-border-radius-lg, 0);
+
+	font-size: $cadmin-btn-font-size-lg;
+	line-height: $cadmin-btn-line-height-lg;
+	padding-bottom: $cadmin-btn-padding-y-lg;
+	padding-left: $cadmin-btn-padding-x-lg;
+	padding-right: $cadmin-btn-padding-x-lg;
+	padding-top: $cadmin-btn-padding-y-lg;
+
+	@include clay-scale-component {
+		font-size: $cadmin-btn-font-size-lg-mobile;
+		padding-bottom: $cadmin-btn-padding-y-lg-mobile;
+		padding-left: $cadmin-btn-padding-x-lg-mobile;
+		padding-right: $cadmin-btn-padding-x-lg-mobile;
+		padding-top: $cadmin-btn-padding-y-lg-mobile;
+	}
+
+	.inline-item {
+		font-size: $cadmin-btn-inline-item-font-size-lg;
+	}
+
+	.btn-section {
+		font-size: $cadmin-btn-section-font-size-lg;
+	}
+}
+
+.btn-lg {
+	@extend %clay-btn-lg !optional;
+}
+
+%clay-btn-sm {
+	@include border-radius($cadmin-btn-border-radius-sm, 0);
+
+	font-size: $cadmin-btn-font-size-sm;
+	line-height: $cadmin-btn-line-height-sm;
+	padding-bottom: $cadmin-btn-padding-y-sm;
+	padding-left: $cadmin-btn-padding-x-sm;
+	padding-right: $cadmin-btn-padding-x-sm;
+	padding-top: $cadmin-btn-padding-y-sm;
+
+	@include clay-scale-component {
+		font-size: $cadmin-btn-font-size-sm-mobile;
+		padding-bottom: $cadmin-btn-padding-y-sm-mobile;
+		padding-left: $cadmin-btn-padding-x-sm-mobile;
+		padding-right: $cadmin-btn-padding-x-sm-mobile;
+		padding-top: $cadmin-btn-padding-y-sm-mobile;
+	}
+
+	.inline-item {
+		font-size: $cadmin-btn-inline-item-font-size-sm;
+	}
+
+	.btn-section {
+		font-size: $cadmin-btn-section-font-size-sm;
+	}
+}
+
+.btn-sm {
+	@extend %clay-btn-sm !optional;
+}
+
+// Button Block
+
+.btn-block {
+	display: block;
+	width: 100%;
+
+	+ .btn-block {
+		margin-top: $cadmin-btn-block-spacing-y;
+	}
+}
+
+// Specificity overrides
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+	&.btn-block {
+		width: 100%;
+	}
+}
+
+// Button Unstyled
+
+%btn-unstyled {
+	background-color: rgba(0, 0, 0, 0.001);
+	border-width: 0;
+	cursor: $cadmin-btn-cursor;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	max-width: 100%;
+	padding: 0;
+	text-align: left;
+	text-transform: inherit;
+	vertical-align: baseline;
+}
+
+.btn-unstyled {
+	@extend %btn-unstyled;
+}
+
+// Button Monospaced
+
+.btn-monospaced {
+	height: $cadmin-btn-monospaced-size;
+	line-height: 1;
+	overflow: hidden;
+	padding-bottom: $cadmin-btn-monospaced-padding-y;
+	padding-left: $cadmin-btn-monospaced-padding-x;
+	padding-right: $cadmin-btn-monospaced-padding-x;
+	padding-top: $cadmin-btn-monospaced-padding-y;
+	text-align: center;
+	white-space: normal;
+	width: $cadmin-btn-monospaced-size;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		height: $cadmin-btn-monospaced-size-mobile;
+		width: $cadmin-btn-monospaced-size-mobile;
+	}
+
+	&.btn .lexicon-icon {
+		margin-top: 0;
+	}
+}
+
+%clay-btn-monospaced-lg {
+	height: $cadmin-btn-monospaced-size-lg;
+	padding-bottom: $cadmin-btn-monospaced-padding-y-lg;
+	padding-left: $cadmin-btn-monospaced-padding-x-lg;
+	padding-right: $cadmin-btn-monospaced-padding-x-lg;
+	padding-top: $cadmin-btn-monospaced-padding-y-lg;
+	width: $cadmin-btn-monospaced-size-lg;
+
+	@include clay-scale-component {
+		height: $cadmin-btn-monospaced-size-lg-mobile;
+		width: $cadmin-btn-monospaced-size-lg-mobile;
+	}
+}
+
+.btn-monospaced.btn-lg {
+	@extend %clay-btn-monospaced-lg !optional;
+}
+
+%clay-btn-monospaced-sm {
+	height: $cadmin-btn-monospaced-size-sm;
+	padding-bottom: $cadmin-btn-monospaced-padding-y-sm;
+	padding-left: $cadmin-btn-monospaced-padding-x-sm;
+	padding-right: $cadmin-btn-monospaced-padding-x-sm;
+	padding-top: $cadmin-btn-monospaced-padding-y-sm;
+	width: $cadmin-btn-monospaced-size-sm;
+
+	@include clay-scale-component {
+		height: $cadmin-btn-monospaced-size-sm-mobile;
+		width: $cadmin-btn-monospaced-size-sm-mobile;
+	}
+}
+
+.btn-monospaced.btn-sm {
+	@extend %clay-btn-monospaced-sm !optional;
+}
+
+// Button C Inner
+
+@if ($cadmin-enable-c-inner) {
+	.btn .c-inner {
+		margin: #{math-sign($cadmin-btn-padding-y)}
+			#{math-sign($cadmin-btn-padding-x)};
+
+		@include clay-scale-component {
+			margin: #{math-sign($cadmin-btn-padding-y-mobile)} #{math-sign(
+					$cadmin-btn-padding-x-mobile
+				)};
+		}
+	}
+
+	.btn-unstyled .c-inner {
+		margin: 0;
+		max-width: none;
+	}
+
+	.btn-monospaced .c-inner {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		height: calc(100% + #{$cadmin-btn-monospaced-padding-y * 2});
+		justify-content: center;
+		margin: #{math-sign($cadmin-btn-monospaced-padding-y)} 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.btn-sm {
+		.c-inner {
+			margin: #{math-sign($cadmin-btn-padding-y-sm)}
+				#{math-sign($cadmin-btn-padding-x-sm)};
+
+			@include clay-scale-component {
+				margin: #{math-sign($cadmin-btn-padding-y-sm-mobile)} #{math-sign(
+						$cadmin-btn-padding-x-sm-mobile
+					)};
+			}
+		}
+
+		&.btn-monospaced .c-inner {
+			height: calc(100% + #{$cadmin-btn-monospaced-padding-y-sm * 2});
+			margin: #{math-sign($cadmin-btn-monospaced-padding-y-sm)} 0;
+		}
+	}
+
+	.btn-lg {
+		.c-inner {
+			margin: #{math-sign($cadmin-btn-padding-y-lg)}
+				#{math-sign($cadmin-btn-padding-x-lg)};
+
+			@include clay-scale-component {
+				margin: #{math-sign($cadmin-btn-padding-y-lg-mobile)} #{math-sign(
+						$cadmin-btn-padding-x-lg-mobile
+					)};
+			}
+		}
+
+		&.btn-monospaced .c-inner {
+			height: calc(100% + #{$cadmin-btn-monospaced-padding-y-lg * 2});
+			margin: #{math-sign($cadmin-btn-monospaced-padding-y-lg)} 0;
+		}
+	}
+}
+
+// Button Variants
+
+@each $cadmin-color, $cadmin-value in $cadmin-btn-palette {
+	.btn-#{$cadmin-color} {
+		@include clay-button-variant($cadmin-value);
+	}
+
+	%btn-#{$cadmin-color}-focus {
+		background-color: map-get($cadmin-value, focus-bg);
+		border-color: map-get($cadmin-value, focus-border-color);
+		box-shadow: map-get($cadmin-value, focus-box-shadow);
+		color: map-get($cadmin-value, focus-color);
+	}
+}
+
+// Button Outline Variants
+
+@each $cadmin-color, $cadmin-value in $cadmin-btn-outline-palette {
+	.btn-outline-#{$cadmin-color} {
+		@include clay-button-variant($cadmin-value);
+	}
+
+	%btn-outline-#{$cadmin-color}-focus {
+		background-color: map-get($cadmin-value, focus-bg);
+		border-color: map-get($cadmin-value, focus-border-color);
+		box-shadow: map-get($cadmin-value, focus-box-shadow);
+		color: map-get($cadmin-value, focus-color);
+	}
+}
+
+.btn-outline-borderless {
+	border-color: transparent;
+
+	&:hover,
+	&:focus {
+		border-color: transparent;
+	}
+
+	&:disabled,
+	&.disabled {
+		border-color: transparent;
+	}
+}
+
+.btn-outline-borderless:not(:disabled):not(.disabled):active {
+	border-color: transparent;
+}
+
+.show > .btn-outline-borderless.dropdown-toggle {
+	border-color: transparent;
+}
+
+// Loading Icons with Buttons
+
+.btn .loading-animation {
+	font-size: 1em;
+	margin-top: $cadmin-inline-item-lexicon-icon-margin-top;
+}

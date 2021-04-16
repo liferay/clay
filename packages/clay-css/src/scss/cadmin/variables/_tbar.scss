@@ -1,0 +1,399 @@
+$cadmin-tbar-item-padding-x: 0.5rem !default;
+$cadmin-tbar-item-padding-y: null !default;
+
+// Tbar Stacked
+
+$cadmin-tbar-stacked: () !default;
+$cadmin-tbar-stacked: map-deep-merge(
+	(
+		display: inline-flex,
+		height: 100%,
+		padding-bottom: 0.5rem,
+		padding-top: 0.5rem,
+		nav: (
+			flex-direction: column,
+			min-width: 0,
+		),
+		item: (
+			align-items: center,
+			justify-content: flex-start,
+			padding-left: 0,
+			padding-right: 0,
+		),
+		item-expand: (
+			flex-shrink: 0,
+			min-width: 0,
+		),
+		divider-before: (
+			background-color: $cadmin-body-color,
+			content: '',
+			display: block,
+			height: 1px,
+			margin-bottom: 0.25rem,
+			margin-top: 0.25rem,
+			width: 2.5rem,
+		),
+		divider-after: (
+			background-color: $cadmin-body-color,
+			content: '',
+			display: block,
+			height: 1px,
+			margin-bottom: 0.25rem,
+			margin-top: 0.25rem,
+			width: 2.5rem,
+		),
+		btn-monospaced: (
+			border-color: transparent,
+			border-radius: 0,
+			border-width: 0,
+			color: inherit,
+			height: 2.5rem,
+			margin-bottom: 0,
+			margin-top: 0,
+			overflow: visible,
+			padding-bottom: 0,
+			padding-left: 0,
+			padding-right: 0,
+			padding-top: 0,
+			position: relative,
+			width: 2.5rem,
+			focus: (
+				box-shadow: inset 0 0 0 0.125rem $cadmin-primary-l1#{','} inset 0
+					0 0 0.25rem $cadmin-white,
+			),
+			active-focus: (
+				box-shadow: inset 0 0 0 0.125rem $cadmin-primary-l1#{','} inset 0
+					0 0 0.25rem $cadmin-white,
+			),
+		),
+	),
+	$cadmin-tbar-stacked
+);
+
+// Tbar Inline {xs|sm|md|lg|xl} Down
+
+$cadmin-tbar-inline-xs-down: () !default;
+$cadmin-tbar-inline-xs-down: map-deep-merge(
+	(
+		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 1),
+		item-padding-left: 0,
+	),
+	$cadmin-tbar-inline-xs-down
+);
+
+$cadmin-tbar-inline-sm-down: () !default;
+$cadmin-tbar-inline-sm-down: map-deep-merge(
+	(
+		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 2),
+		item-padding-left: 0,
+	),
+	$cadmin-tbar-inline-sm-down
+);
+
+$cadmin-tbar-inline-md-down: () !default;
+$cadmin-tbar-inline-md-down: map-deep-merge(
+	(
+		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 3),
+		item-padding-left: 0,
+	),
+	$cadmin-tbar-inline-md-down
+);
+
+$cadmin-tbar-inline-lg-down: () !default;
+$cadmin-tbar-inline-lg-down: map-deep-merge(
+	(
+		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 4),
+		item-padding-left: 0,
+	),
+	$cadmin-tbar-inline-lg-down
+);
+
+$cadmin-tbar-inline-xl-down: () !default;
+$cadmin-tbar-inline-xl-down: map-deep-merge(
+	(
+		breakpoint-down: nth(map-keys($cadmin-grid-breakpoints), 5),
+		item-padding-left: 0,
+	),
+	$cadmin-tbar-inline-xl-down
+);
+
+// Component Tbar
+
+$cadmin-component-tbar: () !default;
+$cadmin-component-tbar: map-deep-merge(
+	(
+		border-color: $cadmin-gray-300,
+		border-style: solid,
+		border-width: 0 0 0.0625rem 0,
+		height: 3.5rem,
+	),
+	$cadmin-component-tbar
+);
+
+// Tbar Variants
+
+$cadmin-tbar-light: () !default;
+$cadmin-tbar-light: map-deep-merge(
+	(
+		background-color: $cadmin-white,
+		box-shadow: inset 1px 0 0 0 $cadmin-gray-200#{','} inset -1px 0 0 0
+			$cadmin-gray-200,
+		color: $cadmin-secondary,
+		divider-before: (
+			background-color: $cadmin-gray-200,
+		),
+		divider-after: (
+			background-color: $cadmin-gray-200,
+		),
+		btn-monospaced: (
+			hover: (
+				color: $cadmin-dark,
+			),
+			focus: (
+				color: $cadmin-dark,
+			),
+			disabled: (
+				color: inherit,
+			),
+			active: (
+				background-color: $cadmin-gray-200,
+				color: $cadmin-dark,
+			),
+		),
+	),
+	$cadmin-tbar-light
+);
+
+$cadmin-tbar-dark-d1: () !default;
+$cadmin-tbar-dark-d1: map-deep-merge(
+	(
+		background-color: $cadmin-dark-d1,
+		box-shadow: inset 1px 0 0 0 rgba($cadmin-white, 0.06) #{','} inset -1px
+			0 0 0 rgba($cadmin-white, 0.06),
+		color: $cadmin-gray-500,
+		divider-before: (
+			background-color: rgba($cadmin-white, 0.06),
+		),
+		divider-after: (
+			background-color: rgba($cadmin-white, 0.06),
+		),
+		btn-monospaced: (
+			hover: (
+				color: $cadmin-white,
+			),
+			focus: (
+				color: $cadmin-white,
+			),
+			disabled: (
+				color: inherit,
+			),
+			active: (
+				background-color: rgba($cadmin-white, 0.06),
+				color: $cadmin-white,
+			),
+			active-class-after: (
+				background-color: $cadmin-primary-l1,
+				bottom: 0,
+				content: '',
+				display: block,
+				left: 0,
+				position: absolute,
+				top: 0,
+				width: 0.25rem,
+			),
+		),
+	),
+	$cadmin-tbar-dark-d1
+);
+
+$cadmin-tbar-dark-l2: () !default;
+$cadmin-tbar-dark-l2: map-deep-merge(
+	(
+		background-color: $cadmin-dark-l2,
+		box-shadow: inset 1px 0 0 0 rgba($cadmin-white, 0.06) #{','} inset -1px
+			0 0 0 rgba($cadmin-white, 0.06),
+		border-color: rgba($cadmin-white, 0.06),
+		color: $cadmin-gray-500,
+		divider-before: (
+			background-color: rgba($cadmin-white, 0.06),
+		),
+		divider-after: (
+			background-color: rgba($cadmin-white, 0.06),
+		),
+		btn-monospaced: (
+			hover: (
+				color: $cadmin-white,
+			),
+			focus: (
+				color: $cadmin-white,
+			),
+			disabled: (
+				color: inherit,
+			),
+			active: (
+				background-color: rgba($cadmin-white, 0.06),
+				color: $cadmin-white,
+			),
+		),
+	),
+	$cadmin-tbar-dark-l2
+);
+
+// Subnav Tbar
+
+$cadmin-subnav-tbar-component-title: () !default;
+$cadmin-subnav-tbar-component-title: map-deep-merge(
+	(
+		display: inline-block,
+		font-size: 0.875rem,
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: 1.45,
+		margin-bottom: 0.25rem,
+		margin-top: 0.25rem,
+		max-width: 100%,
+	),
+	$cadmin-subnav-tbar-component-title
+);
+
+$cadmin-subnav-tbar-component-link: () !default;
+$cadmin-subnav-tbar-component-link: map-deep-merge(
+	(
+		color: $cadmin-link-color,
+		hover-color: $cadmin-link-hover-color,
+		font-weight: $cadmin-font-weight-semi-bold,
+	),
+	$cadmin-subnav-tbar-component-link
+);
+
+$cadmin-subnav-tbar-component-text: () !default;
+$cadmin-subnav-tbar-component-text: map-deep-merge(
+	(
+		display: inline-block,
+		line-height: 1.45,
+		margin-bottom: 0.25rem,
+		margin-top: 0.25rem,
+		max-width: 100%,
+	),
+	$cadmin-subnav-tbar-component-text
+);
+
+$cadmin-subnav-tbar: () !default;
+$cadmin-subnav-tbar: map-deep-merge(
+	(
+		font-size: 0.875rem,
+		section-text-align: left,
+		strong-font-weight: $cadmin-font-weight-semi-bold,
+		item-padding-x: 0.5rem,
+		btn-height: 1.5rem,
+		btn-line-height: 1,
+		btn-margin-y: 0.125rem,
+		btn-padding-y: 0,
+		btn-monospaced-margin-y: 0.125rem,
+		btn-monospaced-padding: 0.25rem,
+		component-link: $cadmin-subnav-tbar-component-link,
+		component-title: $cadmin-subnav-tbar-component-title,
+		component-text: $cadmin-subnav-tbar-component-text,
+		link-margin-y: 0.125rem,
+		link-padding-x: 0.25rem,
+		link-padding-y: 0.09375rem,
+		link-monospaced-margin-y: 0.125rem,
+		link-monospaced-size: 1.5rem,
+	),
+	$cadmin-subnav-tbar
+);
+
+// Subnav Tbar Variants
+
+$cadmin-subnav-tbar-light: () !default;
+$cadmin-subnav-tbar-light: map-deep-merge(
+	(
+		bg-color: $cadmin-light,
+		color: $cadmin-navbar-light-color,
+		padding-y: 0.125rem,
+	),
+	$cadmin-subnav-tbar-light
+);
+
+// Subnav Tbar Primary
+
+$cadmin-subnav-tbar-primary-component-link: () !default;
+$cadmin-subnav-tbar-primary-component-link: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+		hover-color: $cadmin-gray-900,
+		disabled-color: $cadmin-gray-600,
+		disabled-cursor: $cadmin-disabled-cursor,
+		disabled-opacity: $cadmin-btn-disabled-opacity,
+		disabled-text-decoration: none,
+	),
+	$cadmin-subnav-tbar-primary-component-link
+);
+
+$cadmin-subnav-tbar-primary-component-label-close: () !default;
+$cadmin-subnav-tbar-primary-component-label-close: map-deep-merge(
+	(
+		focus-color: inherit,
+		disabled-color: $cadmin-gray-600,
+		disabled-opacity: $cadmin-btn-disabled-opacity,
+	),
+	$cadmin-subnav-tbar-primary-component-label-close
+);
+
+$cadmin-subnav-tbar-primary-component-label: () !default;
+$cadmin-subnav-tbar-primary-component-label: map-deep-merge(
+	(
+		close: $cadmin-subnav-tbar-primary-component-label-close,
+	),
+	$cadmin-subnav-tbar-primary-component-label
+);
+
+$cadmin-subnav-tbar-primary-tbar-label-size: () !default;
+$cadmin-subnav-tbar-primary-tbar-label-size: map-deep-merge(
+	(
+		font-size: 0.75rem,
+		margin-right: 0,
+		padding-x: 0.625rem,
+		padding-y: 0.3125rem,
+		text-transform: none,
+	),
+	$cadmin-subnav-tbar-primary-tbar-label-size
+);
+
+$cadmin-subnav-tbar-primary: () !default;
+$cadmin-subnav-tbar-primary: map-deep-merge(
+	(
+		bg-color: $cadmin-primary-l2,
+		padding-x: 0.25rem,
+		padding-y: 0.625rem,
+		item-justify-content: flex-start,
+		item-padding-x: 0.25rem,
+		link-monospaced-border-radius: 0,
+		link-monospaced-border-width: 0,
+		link-monospaced-margin-y: -0.625rem,
+		link-monospaced-size: 3rem,
+		component-link: $cadmin-subnav-tbar-primary-component-link,
+		component-label: $cadmin-subnav-tbar-primary-component-label,
+		tbar-label-size: $cadmin-subnav-tbar-primary-tbar-label-size,
+	),
+	$cadmin-subnav-tbar-primary
+);
+
+// Subnav Tbar Primary Disabled
+
+$cadmin-subnav-tbar-primary-disabled-component-label: () !default;
+$cadmin-subnav-tbar-primary-disabled-component-label: map-deep-merge(
+	(
+		border-color: #6c757d,
+	),
+	$cadmin-subnav-tbar-primary-disabled-component-label
+);
+
+$cadmin-subnav-tbar-primary-disabled: () !default;
+$cadmin-subnav-tbar-primary-disabled: map-deep-merge(
+	(
+		bg-color: lighten(desaturate($cadmin-primary, 27.03), 37.06),
+		color: #6c757d,
+		component-label: $cadmin-subnav-tbar-primary-disabled-component-label,
+	),
+	$cadmin-subnav-tbar-primary-disabled
+);
