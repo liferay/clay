@@ -25,40 +25,6 @@ import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
 import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
-export {FirstDayOfWeek};
-
-function isYearWithinYears(year: number, years: IYears) {
-	return years.start <= year && year <= years.end;
-}
-
-export const RANGE_SEPARATOR = ' - ';
-
-function fromStringToRange(
-	value: string,
-	dateFormat: string,
-	referenceDate: Date
-): readonly [Date, Date] {
-	const [fromDateString, toDateString] = value.split(RANGE_SEPARATOR);
-
-	const fromDate = parseDate(fromDateString, dateFormat, referenceDate);
-
-	return [
-		fromDate,
-		toDateString
-			? parseDate(toDateString, dateFormat, referenceDate)
-			: fromDate,
-	];
-}
-
-function fromRangeToString(range: [Date, Date], dateFormat: string) {
-	const [startDate, endDate] = range;
-
-	return `${formatDate(startDate, dateFormat)}${RANGE_SEPARATOR}${formatDate(
-		endDate,
-		dateFormat
-	)}`;
-}
-
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Labels for the aria attributes
@@ -599,6 +565,39 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 	}
 );
 
+const RANGE_SEPARATOR = ' - ';
+
+function isYearWithinYears(year: number, years: IYears) {
+	return years.start <= year && year <= years.end;
+}
+
+function fromStringToRange(
+	value: string,
+	dateFormat: string,
+	referenceDate: Date
+): readonly [Date, Date] {
+	const [fromDateString, toDateString] = value.split(RANGE_SEPARATOR);
+
+	const fromDate = parseDate(fromDateString, dateFormat, referenceDate);
+
+	return [
+		fromDate,
+		toDateString
+			? parseDate(toDateString, dateFormat, referenceDate)
+			: fromDate,
+	];
+}
+
+function fromRangeToString(range: [Date, Date], dateFormat: string) {
+	const [startDate, endDate] = range;
+
+	return `${formatDate(startDate, dateFormat)}${RANGE_SEPARATOR}${formatDate(
+		endDate,
+		dateFormat
+	)}`;
+}
+
 ClayDatePicker.displayName = 'ClayDatePicker';
 
+export {FirstDayOfWeek};
 export default ClayDatePicker;
