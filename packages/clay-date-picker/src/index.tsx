@@ -318,14 +318,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				daysSelectedToString = formatDate(date, dateFormat);
 
 				if (time) {
-					daysSelectedToString = formatDate(
-						parseDate(
-							`${daysSelectedToString} ${currentTime}`,
-							`${dateFormat} ${TIME_FORMAT}`,
-							date
-						),
-						`${dateFormat} ${TIME_FORMAT}`
-					);
+					daysSelectedToString = `${daysSelectedToString} ${currentTime}`;
 				}
 			}
 
@@ -363,7 +356,10 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				setDaysSelected([startDate, endDate]);
 
 				if (time) {
-					setCurrentTime(startDate.getHours(), startDate.getMinutes());
+					setCurrentTime(
+						startDate.getHours(),
+						startDate.getMinutes()
+					);
 				}
 			}
 
@@ -405,21 +401,17 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			hours: number | string,
 			minutes: number | string
 		) => {
-			const format = `${dateFormat} ${TIME_FORMAT}`;
 			const [day] = daysSelected;
 
-			const dateParsed = parseDate(value, format, NEW_DATE);
-			const newDate = isValid(dateParsed)
-				? dateParsed
-				: new Date(day.getTime());
-
-			newDate.setHours(Number(hours));
-			newDate.setMinutes(Number(minutes));
-
-			if (isValid(dateParsed)) {
-				onValueChange(formatDate(newDate, format), 'time');
-			}
-
+			onValueChange(
+				typeof hours === 'string' && typeof minutes === 'string'
+					? `${formatDate(day, dateFormat)} ${hours}:${minutes}`
+					: formatDate(
+							setDate(day, {hours, minutes}),
+							`${dateFormat} ${TIME_FORMAT}`
+					  ),
+				'time'
+			);
 			setCurrentTime(hours, minutes);
 		};
 
