@@ -161,9 +161,9 @@ const normalizeDate = (date: Date) =>
 	setDate(date, {
 		date: 1,
 		hours: 12,
-		milliseconds: 1,
-		minutes: 1,
-		seconds: 1,
+		milliseconds: 0,
+		minutes: 0,
+		seconds: 0,
 	});
 
 /**
