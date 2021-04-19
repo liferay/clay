@@ -7,9 +7,29 @@
 /// @param {Color} $color - The color to convert into a gradient
 
 @mixin gradient-bg($color) {
-	@if $enable-gradients {
+	@if (
+		setter(
+			if(
+				variable-exists(enable-gradients),
+				$enable-gradients,
+				$cadmin-enable-gradients
+			),
+			false
+		)
+	) {
 		background: $color
-			linear-gradient(180deg, mix($body-bg, $color, 15%), $color)
+			linear-gradient(
+				180deg,
+				mix(
+					setter(
+						if(variable-exists(body-bg), $body-bg, $cadmin-body-bg),
+						#fff
+					),
+					$color,
+					15%
+				),
+				$color
+			)
 			repeat-x;
 	} @else {
 		background-color: $color;

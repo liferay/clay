@@ -409,7 +409,11 @@
 
 	$aspect-ratio-border-color: setter(
 		map-get($map, aspect-ratio-border-color),
-		$card-border-color
+		if(
+			variable-exists(card-border-color),
+			$card-border-color,
+			$cadmin-card-border-color
+		)
 	);
 	$aspect-ratio-border-style: setter(
 		map-get($map, aspect-ratio-border-style),
@@ -438,7 +442,10 @@
 		flex-start
 	);
 
-	$checkbox-cursor: setter(map-get($map, checkbox-cursor), $link-cursor);
+	$checkbox-cursor: setter(
+		map-get($map, checkbox-cursor),
+		if(variable-exists(link-cursor), $link-cursor, $cadmin-link-cursor)
+	);
 
 	$asset-icon-color: map-get($map, asset-icon-color);
 	$asset-icon-width: setter(map-get($map, asset-icon-width), 22.225%);

@@ -28,7 +28,14 @@
 /// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
 
 @mixin clay-label-size($map) {
-	$border-width: setter(map-get($map, border-width), $label-border-width);
+	$border-width: setter(
+		map-get($map, border-width),
+		if(
+			variable-exists(label-border-width),
+			$label-border-width,
+			$cadmin-label-border-width
+		)
+	);
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
 	$line-height: map-get($map, line-height);
@@ -58,6 +65,15 @@
 	$c-inner: setter(map-get($map, c-inner), ());
 	$c-inner: map-deep-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin-bottom: math-sign($padding-y),
 			margin-left: math-sign($padding-x),
 			margin-right: math-sign($padding-x),
@@ -131,7 +147,7 @@
 		border-radius: $sticker-border-radius;
 	}
 
-	@if ($enable-c-inner) {
+	@if (map-get($c-inner, enabled)) {
 		> .c-inner {
 			@include clay-css($c-inner);
 		}

@@ -2,7 +2,16 @@
 /// @param {Arglist} $transition...
 
 @mixin transition($transition...) {
-	@if $enable-transitions {
+	$enable: setter(
+		if(
+			variable-exists(enable-shadows),
+			$enable-transitions,
+			$cadmin-enable-transitions
+		),
+		true
+	);
+
+	@if ($enable) {
 		@if length($transition) == 0 {
 			transition: $transition-base;
 		} @else {
@@ -10,7 +19,16 @@
 		}
 	}
 
-	@if $enable-prefers-reduced-motion-media-query {
+	@if (
+		setter(
+			if(
+				variable-exists(enable-shadows),
+				$enable-prefers-reduced-motion-media-query,
+				$cadmin-enable-prefers-reduced-motion-media-query
+			),
+			true
+		)
+	) {
 		@media (prefers-reduced-motion: reduce) {
 			transition: none;
 		}

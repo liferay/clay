@@ -154,6 +154,15 @@
 	$header-c-inner: setter(map-get($map, header-c-inner), ());
 	$header-c-inner: map-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin-bottom: math-sign(map-get($header, padding-bottom)),
 			margin-left: math-sign(map-get($header, padding-left)),
 			margin-right: math-sign(map-get($header, padding-right)),
@@ -289,7 +298,7 @@
 		.panel-header {
 			@include clay-css($header);
 
-			@if ($enable-c-inner) {
+			@if (map-get($header-c-inner, enabled)) {
 				.c-inner {
 					@include clay-css($header-c-inner);
 				}
