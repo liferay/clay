@@ -17,23 +17,6 @@ interface IProps {
 	onClick: (date: Date) => void;
 }
 
-interface IInterval {
-	start: Date;
-	end: Date;
-}
-
-function isWithinInterval(dirtyDate: Date, interval: IInterval) {
-	const time = dirtyDate.getTime();
-	const startTime = interval.start.getTime();
-	const endTime = interval.end.getTime();
-
-	if (startTime > endTime) {
-		return false;
-	}
-
-	return time >= startTime && time <= endTime;
-}
-
 const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	day,
 	daysSelected,
@@ -64,10 +47,7 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 					'c-selected':
 						!hasStartDateSelected &&
 						!hasEndDateSelected &&
-						isWithinInterval(date, {
-							end: endDate,
-							start: startDate,
-						}),
+						isWithinInterval(date, daysSelected),
 					'c-selected c-selected-end':
 						hasEndDateSelected && !hasStartDateSelected,
 					'c-selected c-selected-start':
@@ -105,5 +85,19 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 		</div>
 	);
 };
+
+function isWithinInterval(date: Date, interval: readonly [Date, Date]) {
+	const [start, end] = interval;
+
+	const time = date.getTime();
+	const startTime = start.getTime();
+	const endTime = end.getTime();
+
+	if (startTime > endTime) {
+		return false;
+	}
+
+	return time >= startTime && time <= endTime;
+}
 
 export default ClayDatePickerDayNumber;
