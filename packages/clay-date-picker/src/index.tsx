@@ -403,15 +403,18 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		) => {
 			const [day] = daysSelected;
 
-			onValueChange(
-				typeof hours === 'string' && typeof minutes === 'string'
-					? `${formatDate(day, dateFormat)} ${hours}:${minutes}`
-					: formatDate(
-							setDate(day, {hours, minutes}),
-							`${dateFormat} ${TIME_FORMAT}`
-					  ),
-				'time'
-			);
+			if (value) {
+				onValueChange(
+					typeof hours === 'string' && typeof minutes === 'string'
+						? `${formatDate(day, dateFormat)} ${hours}:${minutes}`
+						: formatDate(
+								setDate(day, {hours, minutes}),
+								`${dateFormat} ${TIME_FORMAT}`
+						  ),
+					'time'
+				);
+			}
+
 			setCurrentTime(hours, minutes);
 		};
 
