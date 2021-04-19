@@ -45,12 +45,11 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 				'date-picker-col',
 				range && {
 					'c-selected':
-						!hasStartDateSelected &&
-						!hasEndDateSelected &&
+						startDate.toDateString() !== endDate.toDateString() &&
 						isWithinInterval(date, daysSelected),
-					'c-selected c-selected-end':
+					'c-selected-end':
 						hasEndDateSelected && !hasStartDateSelected,
-					'c-selected c-selected-start':
+					'c-selected-start':
 						hasStartDateSelected && !hasEndDateSelected,
 				}
 			)}
