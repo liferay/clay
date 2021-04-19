@@ -343,27 +343,27 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 
 			const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
 
-			const [fromDate, toDate] = fromStringToRange(
+			const [startDate, endDate] = fromStringToRange(
 				value,
 				format,
 				NEW_DATE
 			);
 
-			const yearFrom = fromDate.getFullYear();
-			const yearTo = toDate.getFullYear();
+			const yearFrom = startDate.getFullYear();
+			const yearTo = endDate.getFullYear();
 
 			if (
-				isValid(fromDate) &&
-				isValid(toDate) &&
+				isValid(startDate) &&
+				isValid(endDate) &&
 				isYearWithinYears(yearFrom, years) &&
 				isYearWithinYears(yearTo, years)
 			) {
-				changeMonth(fromDate);
+				changeMonth(startDate);
 
-				setDaysSelected([fromDate, toDate]);
+				setDaysSelected([startDate, endDate]);
 
 				if (time) {
-					setCurrentTime(fromDate.getHours(), fromDate.getMinutes());
+					setCurrentTime(startDate.getHours(), startDate.getMinutes());
 				}
 			}
 
@@ -384,8 +384,6 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 					? [endDate, NEW_DATE]
 					: [NEW_DATE, endDate];
 
-			setDaysSelected(newDaysSelected);
-
 			let dateFormatted;
 
 			if (range) {
@@ -399,6 +397,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				dateFormatted = formatDate(NEW_DATE, dateFormat);
 			}
 
+			setDaysSelected(newDaysSelected);
 			onValueChange(dateFormatted);
 		};
 
@@ -576,15 +575,15 @@ function fromStringToRange(
 	dateFormat: string,
 	referenceDate: Date
 ): readonly [Date, Date] {
-	const [fromDateString, toDateString] = value.split(RANGE_SEPARATOR);
+	const [startDateString, endDateString] = value.split(RANGE_SEPARATOR);
 
-	const fromDate = parseDate(fromDateString, dateFormat, referenceDate);
+	const startDate = parseDate(startDateString, dateFormat, referenceDate);
 
 	return [
-		fromDate,
-		toDateString
-			? parseDate(toDateString, dateFormat, referenceDate)
-			: fromDate,
+		startDate,
+		endDateString
+			? parseDate(endDateString, dateFormat, referenceDate)
+			: startDate,
 	];
 }
 
