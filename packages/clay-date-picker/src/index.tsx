@@ -150,21 +150,19 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onExpandedChange?: TInternalStateOnChange<boolean>;
 }
 
-const NEW_DATE = new Date();
-
-const TIME_FORMAT = 'HH:mm';
+const DEFAULT_DATE_TIME = {
+	hours: 12,
+	milliseconds: 0,
+	minutes: 0,
+	seconds: 0,
+};
 
 /**
  * Normalize date for always set noon to avoid time zone issues
  */
-const normalizeDate = (date: Date) =>
-	setDate(date, {
-		date: 1,
-		hours: 12,
-		milliseconds: 0,
-		minutes: 0,
-		seconds: 0,
-	});
+const NEW_DATE = setDate(new Date(), DEFAULT_DATE_TIME);
+
+const TIME_FORMAT = 'HH:mm';
 
 /**
  * ClayDatePicker component.
@@ -227,7 +225,9 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * Indicates the current month rendered on the screen.
 		 */
 		const [currentMonth, setCurrentMonth] = React.useState(() =>
-			normalizeDate(initialMonth)
+			// Normalize the date to always set noon to avoid time zone problems
+			// and to the 1st of the month.
+			setDate(initialMonth, {date: 1, ...DEFAULT_DATE_TIME})
 		);
 
 		/**
@@ -238,8 +238,8 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		const [daysSelected, setDaysSelected] = React.useState(
 			() =>
 				[
-					normalizeDate(initialMonth),
-					normalizeDate(initialMonth),
+					setDate(initialMonth, DEFAULT_DATE_TIME),
+					setDate(initialMonth, DEFAULT_DATE_TIME),
 				] as const
 		);
 
@@ -278,7 +278,10 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * content and takes care of updating the weeks.
 		 */
 		const changeMonth = (date: Date) => {
-			const dateNormalized = normalizeDate(date);
+			const dateNormalized = setDate(date, {
+				date: 1,
+				...DEFAULT_DATE_TIME,
+			});
 
 			setCurrentMonth(dateNormalized);
 			onNavigation(dateNormalized);
