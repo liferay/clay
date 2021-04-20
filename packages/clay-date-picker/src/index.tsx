@@ -235,13 +235,11 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * in the cases where We have a date range and when `range` property
 		 * is disabled we will just use the first element of the tuple(startDate)
 		 */
-		const [daysSelected, setDaysSelected] = React.useState(
-			() =>
-				[
-					setDate(initialMonth, DEFAULT_DATE_TIME),
-					setDate(initialMonth, DEFAULT_DATE_TIME),
-				] as const
-		);
+		const [daysSelected, setDaysSelected] = React.useState(() => {
+			const date = setDate(initialMonth, DEFAULT_DATE_TIME);
+
+			return [date, date] as const;
+		});
 
 		/**
 		 * Indicates the time selected by the user.
@@ -303,7 +301,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			let daysSelectedToString;
 
 			if (range) {
-				if (date === endDate) {
+				if (startDate !== endDate) {
 					newDaysSelected = [date, date];
 				} else if (date < startDate) {
 					newDaysSelected = [date, endDate];
