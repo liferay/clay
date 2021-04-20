@@ -162,9 +162,45 @@ render(<Component />)`;
 	);
 };
 
+const DatePickerWithRangeCode = `import ClayDatePicker from '@clayui/date-picker';
+`;
+
+const DatePickerWithRange = () => {
+	const scope = {ClayDatePicker};
+	const code = `const Component = () => {
+	const [value, setValue] = useState(null);
+
+	return (
+		<ClayDatePicker
+			onValueChange={setValue}
+			placeholder="YYYY-MM-DD - YYYY-MM-DD"
+			range
+			spritemap={spritemap}
+			value={value}
+			years={{
+				end: 2024,
+				start: 1997,
+			}}
+		/>
+	);
+}
+
+render(<Component />)`;
+
+	return (
+		<Editor
+			code={code}
+			disabled
+			imports={DatePickerWithRangeCode}
+			scope={scope}
+		/>
+	);
+};
+
 export {
-	DatePickerLocale,
-	DatePickerWithTime,
 	DatePickerCustomFooter,
+	DatePickerLocale,
+	DatePickerWithRange,
 	DatePickerWithState,
+	DatePickerWithTime,
 };
