@@ -313,6 +313,12 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 					newDaysSelected,
 					dateFormat
 				);
+
+				const [newStartDate, newEndDate] = newDaysSelected;
+
+				if (newStartDate.getMonth() !== newEndDate.getMonth()) {
+					changeMonth(startDate);
+				}
 			} else {
 				newDaysSelected = [date, date];
 
