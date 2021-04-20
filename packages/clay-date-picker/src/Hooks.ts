@@ -9,6 +9,31 @@ import {IDay, Month, WeekDays, clone, formatDate, setDate} from './Helpers';
 import {FirstDayOfWeek} from './types';
 
 /**
+ * Handles selected days and stabilize date time when set to avoid problems
+ * when the range is used to check intervals.
+ */
+export const useDaysSelected = (initialMonth: Date) => {
+	const [daysSelected, set] = useState(() => {
+		const date = normalizeTime(initialMonth);
+
+		return [date, date] as const;
+	});
+
+	const setDaysSelected = useCallback(([start, end]: [Date, Date]) => {
+		// Preserves the reference of dates
+		if (start === end) {
+			const date = normalizeTime(start);
+
+			set([date, date]);
+		} else {
+			set([normalizeTime(start), normalizeTime(end)]);
+		}
+	}, []);
+
+	return [daysSelected, setDaysSelected] as const;
+};
+
+/**
  * Generates the table of days of the month.
  */
 export const useWeeks = (
@@ -57,6 +82,9 @@ export const useCurrentTime = (format: string) => {
 		(hours: number | string, minutes: number | string) => void
 	];
 };
+
+const normalizeTime = (date: Date) =>
+	setDate(date, {hours: 12, milliseconds: 0, minutes: 0, seconds: 0});
 
 function getDaysInMonth(d: Date) {
 	const firstDayOfMonth = new Date(d.getFullYear(), d.getMonth(), 1, 12);

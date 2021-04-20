@@ -18,7 +18,7 @@ import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
 import {formatDate, isValid, parseDate, setDate} from './Helpers';
-import {useCurrentTime, useWeeks} from './Hooks';
+import {useCurrentTime, useDaysSelected, useWeeks} from './Hooks';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
@@ -157,10 +157,7 @@ const DEFAULT_DATE_TIME = {
 	seconds: 0,
 };
 
-/**
- * Normalize date for always set noon to avoid time zone issues
- */
-const NEW_DATE = setDate(new Date(), DEFAULT_DATE_TIME);
+const NEW_DATE = new Date();
 
 const TIME_FORMAT = 'HH:mm';
 
@@ -235,11 +232,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * in the cases where We have a date range and when `range` property
 		 * is disabled we will just use the first element of the tuple(startDate)
 		 */
-		const [daysSelected, setDaysSelected] = React.useState(() => {
-			const date = setDate(initialMonth, DEFAULT_DATE_TIME);
-
-			return [date, date] as const;
-		});
+		const [daysSelected, setDaysSelected] = useDaysSelected(initialMonth);
 
 		/**
 		 * Indicates the time selected by the user.
