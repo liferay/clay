@@ -420,4 +420,89 @@ describe('IncrementalInteractions', () => {
 			expect(minutesEl.value).toBe('20');
 		});
 	});
+
+	describe('Range', () => {
+		it('clicking on the previous day the start date changes the start date to the selected date', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					range
+					spritemap={spritemap}
+				/>
+			);
+
+			const dayNumber = getByLabelText(
+				new Date('2019 04 10').toDateString()
+			);
+			const endDate = getByLabelText(
+				new Date('2019 04 18').toDateString()
+			);
+
+			fireEvent.click(dayNumber);
+
+			expect(dayNumber.classList).toContain('active');
+			expect(endDate.classList).toContain('active');
+		});
+
+		it('clicking on the day later the start date sets the end date for the selected date', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					range
+					spritemap={spritemap}
+				/>
+			);
+
+			const dayNumber = getByLabelText(
+				new Date('2019 04 25').toDateString()
+			);
+			const startDate = getByLabelText(
+				new Date('2019 04 18').toDateString()
+			);
+
+			fireEvent.click(dayNumber);
+
+			expect(startDate.classList).toContain('active');
+			expect(dayNumber.classList).toContain('active');
+		});
+
+		it.each(['2019 04 23', '2019 04 10', '2019 04 30'])(
+			'clicking on any day (%s) sets the start and end date for the selected day when the range is already defined',
+			(date) => {
+				const {getByLabelText} = render(
+					<DatePickerWithState
+						ariaLabels={ariaLabels}
+						initialExpanded
+						placeholder="YYYY-MM-DD"
+						range
+						spritemap={spritemap}
+					/>
+				);
+
+				const endDate = getByLabelText(
+					new Date('2019 04 25').toDateString()
+				);
+				const startDate = getByLabelText(
+					new Date('2019 04 18').toDateString()
+				);
+
+				fireEvent.click(endDate);
+
+				expect(startDate.classList).toContain('active');
+				expect(endDate.classList).toContain('active');
+
+				const dayNumber = getByLabelText(new Date(date).toDateString());
+
+				fireEvent.click(dayNumber);
+
+				expect(dayNumber.classList).toContain('active');
+				expect(startDate.classList).not.toContain('active');
+				expect(endDate.classList).not.toContain('active');
+			}
+		);
+	});
 });
