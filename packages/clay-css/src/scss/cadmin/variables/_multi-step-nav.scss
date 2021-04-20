@@ -15,7 +15,7 @@ $cadmin-multi-step-icon-padding-bottom: 0 !default;
 $cadmin-multi-step-icon-padding-left: 0 !default;
 $cadmin-multi-step-icon-padding-right: 0 !default;
 $cadmin-multi-step-icon-padding-top: 0 !default;
-$cadmin-multi-step-icon-size: 2rem !default;
+$cadmin-multi-step-icon-size: 32px !default;
 $cadmin-multi-step-icon-transition: box-shadow 0.15s ease-in-out !default;
 
 $cadmin-multi-step-icon-hover-bg: $cadmin-multi-step-icon-bg !default;
@@ -29,7 +29,7 @@ $cadmin-multi-step-icon-focus-outline: 0 !default;
 $cadmin-multi-step-icon-focus-text-decoration: $cadmin-multi-step-icon-hover-text-decoration !default;
 
 $cadmin-multi-step-divider-bg: $cadmin-gray-200 !default;
-$cadmin-multi-step-divider-height: 0.25rem !default;
+$cadmin-multi-step-divider-height: 4px !default;
 $cadmin-multi-step-divider-spacer-x: 0 !default;
 $cadmin-multi-step-divider-top: ($cadmin-multi-step-divider-height / 2) +
 	($cadmin-multi-step-icon-size / 2) !default;
@@ -45,7 +45,7 @@ $cadmin-multi-step-indicator-label-max-width: 100px !default;
 $cadmin-multi-step-title-color: null !default;
 $cadmin-multi-step-title-font-size: $cadmin-font-size-base !default;
 $cadmin-multi-step-title-font-weight: null !default;
-$cadmin-multi-step-title-margin-bottom: 0.625rem !default; // 10px
+$cadmin-multi-step-title-margin-bottom: 10px !default; // 10px
 $cadmin-multi-step-title-max-width: 100px !default;
 
 $cadmin-multi-step-item-margin-bottom: 10px !default;
@@ -65,7 +65,7 @@ $cadmin-multi-step-dropdown-indicator-complete-icon: clay-icon(
 	check,
 	$cadmin-dropdown-link-active-color
 ) !default;
-$cadmin-multi-step-dropdown-indicator-complete-width: 0.875rem !default;
+$cadmin-multi-step-dropdown-indicator-complete-width: 14px !default;
 
 $cadmin-multi-step-icon-active-color: $cadmin-component-active-color !default;
 $cadmin-multi-step-icon-active-bg: $cadmin-component-active-bg !default;

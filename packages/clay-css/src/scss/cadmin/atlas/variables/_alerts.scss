@@ -2,15 +2,15 @@
 /// @group alerts
 ////
 
-$cadmin-alert-padding-x: 1rem !default;
-$cadmin-alert-padding-y: 1.03125rem !default;
+$cadmin-alert-padding-x: 16px !default;
+$cadmin-alert-padding-y: 16.5px !default;
 
 // For top only border use: 2px 0 0 0
-$cadmin-alert-border-width: 0.0625rem !default;
+$cadmin-alert-border-width: 1px !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
-$cadmin-alert-close-font-size: 1rem !default;
+$cadmin-alert-close-font-size: 16px !default;
 
 // @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
@@ -18,7 +18,7 @@ $cadmin-alert-close-opacity: 1 !default;
 
 /// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
-$cadmin-alert-close-position-top: 0.6875rem !default;
+$cadmin-alert-close-position-top: 11px !default;
 
 $cadmin-alert-close: () !default;
 $cadmin-alert-close: map-deep-merge(
@@ -31,7 +31,7 @@ $cadmin-alert-close: map-deep-merge(
 	$cadmin-alert-close
 );
 
-$cadmin-alert-font-size: 0.875rem !default; // 14px
+$cadmin-alert-font-size: 14px !default; // 14px
 
 $cadmin-alert-lead-font-size: $cadmin-alert-font-size !default;
 $cadmin-alert-lead-font-weight: $cadmin-font-weight-semi-bold !default;
@@ -45,8 +45,8 @@ $cadmin-alert-indicator-font-size: inherit !default;
 $cadmin-alert-title: () !default;
 $cadmin-alert-title: map-deep-merge(
 	(
-		font-size: 0.875rem,
-		margin-bottom: 0.25rem,
+		font-size: 14px,
+		margin-bottom: 4px,
 		margin-top: 0,
 	),
 	$cadmin-alert-title
@@ -55,7 +55,7 @@ $cadmin-alert-title: map-deep-merge(
 $cadmin-alert-subtitle: () !default;
 $cadmin-alert-subtitle: map-deep-merge(
 	(
-		font-size: 0.75rem,
+		font-size: 12px,
 		font-weight: $cadmin-font-weight-normal,
 	),
 	$cadmin-alert-subtitle
@@ -64,7 +64,7 @@ $cadmin-alert-subtitle: map-deep-merge(
 $cadmin-alert-footer: () !default;
 $cadmin-alert-footer: map-deep-merge(
 	(
-		margin-top: 1rem,
+		margin-top: 16px,
 	),
 	$cadmin-alert-footer
 );
@@ -74,22 +74,22 @@ $cadmin-alert-footer: map-deep-merge(
 $cadmin-alert-fluid-container: () !default;
 $cadmin-alert-fluid-container: map-merge(
 	(
-		padding-bottom: 1.0625rem,
-		padding-top: 1.0625rem,
+		padding-bottom: 17px,
+		padding-top: 17px,
 	),
 	$cadmin-alert-fluid-container
 );
 
 // Alert Notification
 
-$cadmin-alert-notifications-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3) !default;
+$cadmin-alert-notifications-box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.3) !default;
 
 $cadmin-alert-notification: () !default;
 $cadmin-alert-notification: map-merge(
 	(
 		box-shadow: $cadmin-alert-notifications-box-shadow,
-		padding-bottom: 1rem,
-		padding-top: 1rem,
+		padding-bottom: 16px,
+		padding-top: 16px,
 	),
 	$cadmin-alert-notification
 );
@@ -99,11 +99,11 @@ $cadmin-alert-notification: map-merge(
 $cadmin-alert-autofit-row: () !default;
 $cadmin-alert-autofit-row: map-deep-merge(
 	(
-		margin-left: -0.25rem,
-		margin-right: -0.25rem,
+		margin-left: -4px,
+		margin-right: -4px,
 		autofit-col: (
-			padding-left: 0.25rem,
-			padding-right: 0.25rem,
+			padding-left: 4px,
+			padding-right: 4px,
 		),
 	),
 	$cadmin-alert-autofit-row

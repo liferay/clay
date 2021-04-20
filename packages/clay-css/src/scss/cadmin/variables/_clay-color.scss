@@ -23,7 +23,7 @@ $cadmin-clay-color-input-group-inset-item-before: map-deep-merge(
 		color: $cadmin-gray-600,
 		font-size: inherit,
 		padding-left: $cadmin-input-padding-x,
-		padding-right: 0.5rem,
+		padding-right: 8px,
 	),
 	$cadmin-clay-color-input-group-inset-item-before
 );
@@ -36,9 +36,9 @@ $cadmin-clay-color-dropdown-menu: map-deep-merge(
 		max-height: 400px,
 		max-width: none,
 		padding-bottom: 0,
-		padding-left: 1rem,
-		padding-right: 1rem,
-		padding-top: 1rem,
+		padding-left: 16px,
+		padding-right: 16px,
+		padding-top: 16px,
 		width: 272px,
 	),
 	$cadmin-clay-color-dropdown-menu
@@ -49,7 +49,7 @@ $cadmin-clay-color-dropdown-menu: map-deep-merge(
 $cadmin-clay-color-dropdown-menu-form-group: () !default;
 $cadmin-clay-color-dropdown-menu-form-group: map-deep-merge(
 	(
-		margin-bottom: 1rem,
+		margin-bottom: 16px,
 	),
 	$cadmin-clay-color-dropdown-menu-form-group
 );
@@ -59,12 +59,12 @@ $cadmin-clay-color-dropdown-menu-form-group: map-deep-merge(
 $cadmin-clay-color-dropdown-menu-input: () !default;
 $cadmin-clay-color-dropdown-menu-input: map-deep-merge(
 	(
-		font-size: 0.875rem,
-		height: 2rem,
-		padding-bottom: 0.25rem,
-		padding-left: 0.75rem,
-		padding-right: 0.75rem,
-		padding-top: 0.25rem,
+		font-size: 14px,
+		height: 32px,
+		padding-bottom: 4px,
+		padding-left: 12px,
+		padding-right: 12px,
+		padding-top: 4px,
 	),
 	$cadmin-clay-color-dropdown-menu-input
 );
@@ -75,9 +75,9 @@ $cadmin-clay-color-dropdown-menu-input-group-inset-item-before: () !default;
 $cadmin-clay-color-dropdown-menu-input-group-inset-item-before: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		font-size: 0.875rem,
+		font-size: 14px,
 		padding-left: $cadmin-input-padding-x-sm,
-		padding-right: 0.5rem,
+		padding-right: 8px,
 	),
 	$cadmin-clay-color-dropdown-menu-input-group-inset-item-before
 );
@@ -106,9 +106,9 @@ $cadmin-clay-color-swatch: map-deep-merge(
 	(
 		display: flex,
 		flex-wrap: wrap,
-		margin-left: -0.5rem,
-		margin-right: -0.5rem,
-		margin-top: 0.5rem,
+		margin-left: -8px,
+		margin-right: -8px,
+		margin-top: 8px,
 	),
 	$cadmin-clay-color-swatch
 );
@@ -119,7 +119,7 @@ $cadmin-clay-color-swatch-item: map-deep-merge(
 		display: flex,
 		flex-wrap: wrap,
 		justify-content: center,
-		padding-bottom: 1rem,
+		padding-bottom: 16px,
 		width: 16.66667%,
 	),
 	$cadmin-clay-color-swatch-item
@@ -131,12 +131,12 @@ $cadmin-clay-color-btn: () !default;
 $cadmin-clay-color-btn: map-deep-merge(
 	(
 		border-radius: 2px,
-		height: 1.5rem,
+		height: 24px,
 		padding-bottom: 0,
 		padding-left: 0,
 		padding-right: 0,
 		padding-top: 0,
-		width: 1.5rem,
+		width: 24px,
 		active: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 		),
@@ -162,14 +162,14 @@ $cadmin-clay-color-pointer: map-deep-merge(
 		border-color: $cadmin-white,
 		border-style: solid,
 		border-width: 2px,
-		height: 0.875rem,
+		height: 14px,
 		padding-bottom: 0,
 		padding-left: 0,
 		padding-right: 0,
 		padding-top: 0,
 		position: absolute,
 		transition: box-shadow 0.15s ease-in-out,
-		width: 0.875rem,
+		width: 14px,
 		focus-box-shadow: $cadmin-btn-focus-box-shadow,
 		focus-outline: 0,
 	),
@@ -183,8 +183,8 @@ $cadmin-clay-color-header: map-deep-merge(
 	(
 		display: flex,
 		justify-content: space-between,
-		margin-bottom: 1rem,
-		margin-right: -0.25rem,
+		margin-bottom: 16px,
+		margin-right: -4px,
 	),
 	$cadmin-clay-color-header
 );
@@ -196,9 +196,9 @@ $cadmin-clay-color-header-component-title: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
 		display: inline-block,
-		font-size: 0.875rem,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
-		max-width: calc(100% - 2rem),
+		max-width: calc(100% - 32px),
 	),
 	$cadmin-clay-color-header-component-title
 );
@@ -208,7 +208,7 @@ $cadmin-clay-color-header-component-title: map-deep-merge(
 $cadmin-clay-color-footer: () !default;
 $cadmin-clay-color-footer: map-deep-merge(
 	(
-		margin-bottom: 1rem,
+		margin-bottom: 16px,
 	),
 	$cadmin-clay-color-footer
 );
@@ -219,7 +219,7 @@ $cadmin-clay-color-map-group: () !default;
 $cadmin-clay-color-map-group: map-deep-merge(
 	(
 		display: flex,
-		margin-top: 0.5rem,
+		margin-top: 8px,
 	),
 	$cadmin-clay-color-map-group
 );
@@ -229,8 +229,8 @@ $cadmin-clay-color-map: map-deep-merge(
 	(
 		flex-shrink: 0,
 		height: 128px,
-		margin-bottom: 1rem,
-		margin-right: 1rem,
+		margin-bottom: 16px,
+		margin-right: 16px,
 		position: relative,
 		touch-action: none,
 		user-select: none,
@@ -279,7 +279,7 @@ $cadmin-clay-color-map-values-input-group-inset-item-before: map-deep-merge(
 		font-weight: $cadmin-font-weight-semi-bold,
 		padding-left: 10%,
 		padding-right: 0,
-		min-width: 1.125rem,
+		min-width: 18px,
 	),
 	$cadmin-clay-color-map-values-input-group-inset-item-before
 );
@@ -290,9 +290,9 @@ $cadmin-clay-color-range: () !default;
 $cadmin-clay-color-range: map-deep-merge(
 	(
 		border-radius: 100px,
-		height: 0.5rem,
-		margin-bottom: 1.25rem,
-		margin-top: 0.25rem,
+		height: 8px,
+		margin-bottom: 20px,
+		margin-top: 4px,
 		position: relative,
 		touch-action: none,
 		user-select: none,
@@ -331,9 +331,9 @@ $cadmin-clay-color-sm-clay-color-btn: () !default;
 $cadmin-clay-color-sm-clay-color-btn: map-deep-merge(
 	(
 		border-radius: 2px,
-		height: 1.25rem,
+		height: 20px,
 		padding: 0,
-		width: 1.25rem,
+		width: 20px,
 	),
 	$cadmin-clay-color-sm-clay-color-btn
 );

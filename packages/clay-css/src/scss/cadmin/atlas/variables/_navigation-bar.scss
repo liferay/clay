@@ -1,12 +1,12 @@
 $cadmin-navigation-bar-size: () !default;
 $cadmin-navigation-bar-size: map-deep-merge(
 	(
-		border-bottom-width: 0.0625rem,
-		collapse-dropdown-item-padding-y-mobile: 0.8125rem,
-		link-height-mobile: 2rem,
-		active-border-offset-bottom: -0.53125rem,
-		toggler-link-height: 2rem,
-		toggler-link-margin-y: 0.46875rem,
+		border-bottom-width: 1px,
+		collapse-dropdown-item-padding-y-mobile: 13px,
+		link-height-mobile: 32px,
+		active-border-offset-bottom: -8.5px,
+		toggler-link-height: 32px,
+		toggler-link-margin-y: 7.5px,
 		toggler-link-padding-y: 0,
 	),
 	$cadmin-navigation-bar-size

@@ -2,7 +2,7 @@ $cadmin-table-bg: $cadmin-white !default;
 $cadmin-table-accent-bg: $cadmin-gray-100 !default;
 $cadmin-table-hover-bg: lighten($cadmin-component-active-bg, 44.9) !default;
 $cadmin-table-border-color: $cadmin-gray-300 !default;
-$cadmin-table-font-size: 0.875rem !default;
+$cadmin-table-font-size: 14px !default;
 
 $cadmin-table-disabled-color: $cadmin-gray-500 !default;
 
@@ -48,9 +48,9 @@ $cadmin-table-caption-color: $cadmin-gray-900 !default;
 
 $cadmin-table-divider-bg: $cadmin-gray-100 !default;
 $cadmin-table-divider-color: $cadmin-gray-600 !default;
-$cadmin-table-divider-font-size: 0.75rem !default; // 12px
+$cadmin-table-divider-font-size: 12px !default; // 12px
 $cadmin-table-divider-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-table-divider-padding: 0.4375rem 0.75rem !default;
+$cadmin-table-divider-padding: 7px 12px !default;
 $cadmin-table-divider-text-transform: uppercase !default;
 
 $cadmin-table-quick-action-menu-accent-bg: $cadmin-table-accent-bg !default;
@@ -77,7 +77,7 @@ $cadmin-table-title: () !default;
 $cadmin-table-title: map-deep-merge(
 	(
 		color: $cadmin-gray-900,
-		font-size: 0.875rem,
+		font-size: 14px,
 	),
 	$cadmin-table-title
 );
@@ -88,7 +88,7 @@ $cadmin-table-action-link: () !default;
 $cadmin-table-action-link: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		font-size: 1rem,
+		font-size: 16px,
 		transition: $cadmin-btn-transition,
 		hover-bg: rgba(0, 0, 0, 0.02),
 		hover-color: $cadmin-gray-900,
@@ -133,8 +133,8 @@ $cadmin-table-list-head-bg: $cadmin-white !default;
 
 $cadmin-table-list-link-color: $cadmin-gray-600 !default;
 
-$cadmin-table-list-divider-padding-x: 0.75rem !default; // 12px
-$cadmin-table-list-divider-padding-y: 0.4375rem !default; // 7px
+$cadmin-table-list-divider-padding-x: 12px !default; // 12px
+$cadmin-table-list-divider-padding-y: 7px !default; // 7px
 
 // Table List Title
 
@@ -142,7 +142,7 @@ $cadmin-table-list-title: () !default;
 $cadmin-table-list-title: map-deep-merge(
 	(
 		color: $cadmin-gray-900,
-		font-size: 0.875rem,
+		font-size: 14px,
 		line-height: 1.45,
 	),
 	$cadmin-table-list-title
@@ -186,7 +186,7 @@ $cadmin-table-list-action-link: () !default;
 $cadmin-table-list-action-link: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		font-size: 1rem,
+		font-size: 16px,
 		transition: $cadmin-btn-transition,
 		hover-bg: rgba(0, 0, 0, 0.02),
 		hover-color: $cadmin-gray-900,

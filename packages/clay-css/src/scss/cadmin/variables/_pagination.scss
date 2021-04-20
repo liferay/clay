@@ -8,8 +8,8 @@ $cadmin-pagination-border-width: $cadmin-border-width !default;
 $cadmin-pagination-color: $cadmin-link-color !default;
 $cadmin-pagination-font-size: null !default;
 $cadmin-pagination-line-height: 1.25 !default;
-$cadmin-pagination-padding-x: 0.75rem !default;
-$cadmin-pagination-padding-y: 0.5rem !default;
+$cadmin-pagination-padding-x: 12px !default;
+$cadmin-pagination-padding-y: 8px !default;
 
 $cadmin-pagination-hover-bg: $cadmin-gray-200 !default;
 $cadmin-pagination-hover-border-color: $cadmin-gray-300 !default;
@@ -28,7 +28,7 @@ $cadmin-pagination-disabled-color: $cadmin-gray-600 !default;
 
 // Pagination Item
 
-$cadmin-pagination-item-height: 2.375rem !default; // 38px
+$cadmin-pagination-item-height: 38px !default; // 38px
 
 /// @deprecated as of v2 use the Sass map `$cadmin-pagination-item` instead
 
@@ -68,9 +68,9 @@ $cadmin-pagination-link-first-border-radius: $cadmin-border-radius 0 0
 $cadmin-pagination-link-last-border-radius: 0 $cadmin-border-radius
 	$cadmin-border-radius 0 !default;
 
-$cadmin-pagination-margin-bottom: 0.5rem !default;
+$cadmin-pagination-margin-bottom: 8px !default;
 
-$cadmin-pagination-margin-top-mobile: 0.5rem !default;
+$cadmin-pagination-margin-top-mobile: 8px !default;
 
 /// @deprecated as of v2 use the Sass map `$cadmin-pagination-link-disabled` instead
 
@@ -211,11 +211,11 @@ $cadmin-pagination-items-per-page-focus-outline: 0 !default;
 
 /// @deprecated as of v2 use the Sass map `$cadmin-pagination-items-per-page-link` instead
 
-$cadmin-pagination-items-per-page-lexicon-icon-margin-left: 0.125rem !default; // 2px
+$cadmin-pagination-items-per-page-lexicon-icon-margin-left: 2px !default; // 2px
 
 /// @deprecated as of v2 use the Sass map `$cadmin-pagination-items-per-page-link` instead
 
-$cadmin-pagination-items-per-page-lexicon-icon-margin-top: 0.125rem !default; // 2px
+$cadmin-pagination-items-per-page-lexicon-icon-margin-top: 2px !default; // 2px
 
 // Pagination Items Per Page Link
 
@@ -298,10 +298,10 @@ $cadmin-pagination-results-color: null !default;
 
 $cadmin-pagination-font-size-sm: $cadmin-font-size-sm !default;
 $cadmin-pagination-line-height-sm: 1 !default;
-$cadmin-pagination-padding-x-sm: 0.5rem !default;
-$cadmin-pagination-padding-y-sm: 0.25rem !default;
+$cadmin-pagination-padding-x-sm: 8px !default;
+$cadmin-pagination-padding-y-sm: 4px !default;
 
-$cadmin-pagination-item-height-sm: 1.9375rem !default;
+$cadmin-pagination-item-height-sm: 31px !default;
 
 $cadmin-pagination-link-border-radius-sm: $cadmin-border-radius-sm !default;
 
@@ -312,10 +312,10 @@ $cadmin-pagination-items-per-page-lexicon-icon-margin-top-sm: null !default;
 
 $cadmin-pagination-font-size-lg: $cadmin-font-size-lg !default;
 $cadmin-pagination-line-height-lg: 1 !default;
-$cadmin-pagination-padding-x-lg: 1.5rem !default;
-$cadmin-pagination-padding-y-lg: 0.75rem !default;
+$cadmin-pagination-padding-x-lg: 24px !default;
+$cadmin-pagination-padding-y-lg: 12px !default;
 
-$cadmin-pagination-item-height-lg: 3.5rem !default;
+$cadmin-pagination-item-height-lg: 56px !default;
 
 $cadmin-pagination-link-border-radius-lg: $cadmin-border-radius-lg !default;
 

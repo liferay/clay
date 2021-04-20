@@ -2,11 +2,11 @@
 /// @group labels
 ////
 
-$cadmin-label-border-radius: 0.125rem !default; // 2px
-$cadmin-label-font-size: 0.625rem !default; // 10px
+$cadmin-label-border-radius: 2px !default; // 2px
+$cadmin-label-font-size: 10px !default; // 10px
 $cadmin-label-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-label-padding-x: 0.25rem !default; // 4px
-$cadmin-label-padding-y: 0.125rem !default; // 2px
+$cadmin-label-padding-x: 4px !default; // 4px
+$cadmin-label-padding-y: 2px !default; // 2px
 $cadmin-label-text-transform: uppercase !default;
 
 $cadmin-label-item-spacer-x: 0.85714em !default;
@@ -31,14 +31,14 @@ $cadmin-label-close: map-deep-merge(
 $cadmin-label-lg: () !default;
 $cadmin-label-lg: map-deep-merge(
 	(
-		font-size: 0.75rem,
-		height: 1.5rem,
-		padding-x: 0.5rem,
-		padding-y: 0.3125rem,
-		item-spacer-y: -0.0625rem,
+		font-size: 12px,
+		height: 24px,
+		padding-x: 8px,
+		padding-y: 5px,
+		item-spacer-y: -1px,
 		lexicon-icon-height: 1em,
 		lexicon-icon-width: 1em,
-		sticker-size: 0.875rem,
+		sticker-size: 14px,
 	),
 	$cadmin-label-lg
 );

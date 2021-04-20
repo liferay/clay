@@ -6,19 +6,19 @@ $cadmin-dropdown-border-width: $cadmin-border-width !default;
 $cadmin-dropdown-border-radius: $cadmin-border-radius !default;
 $cadmin-dropdown-inner-border-radius: $cadmin-dropdown-border-radius -$cadmin-dropdown-border-width !default;
 
-$cadmin-dropdown-box-shadow: 0 0.5rem 1rem rgba($cadmin-black, 0.175) !default;
+$cadmin-dropdown-box-shadow: 0 8px 16px rgba($cadmin-black, 0.175) !default;
 $cadmin-dropdown-color: $cadmin-body-color !default;
 $cadmin-dropdown-font-size: $cadmin-font-size-base !default;
 $cadmin-dropdown-max-height: 500px !default;
 $cadmin-dropdown-max-width: 260px !default;
 $cadmin-dropdown-min-height: null !default;
-$cadmin-dropdown-min-width: 10rem !default;
-$cadmin-dropdown-padding-y: 0.5rem !default;
+$cadmin-dropdown-min-width: 160px !default;
+$cadmin-dropdown-padding-y: 8px !default;
 
 $cadmin-dropdown-max-height-mobile: 295px !default;
 $cadmin-dropdown-max-width-mobile: 230px !default;
 
-$cadmin-dropdown-spacer: 0.125rem !default;
+$cadmin-dropdown-spacer: 2px !default;
 
 $cadmin-dropdown-divider-bg: $cadmin-gray-200 !default;
 $cadmin-dropdown-divider-margin-y: $cadmin-spacer / 2 !default;
@@ -32,13 +32,13 @@ $cadmin-dropdown-font-size-mobile: null !default;
 
 // Dropdown Item
 
-$cadmin-dropdown-item-padding-x: 1.5rem !default;
-$cadmin-dropdown-item-padding-y: 0.25rem !default;
+$cadmin-dropdown-item-padding-x: 24px !default;
+$cadmin-dropdown-item-padding-y: 4px !default;
 
 $cadmin-dropdown-item-disabled-cursor: $cadmin-disabled-cursor !default;
 
-$cadmin-dropdown-item-indicator-size: 1rem !default;
-$cadmin-dropdown-item-indicator-spacer-x: 1rem !default;
+$cadmin-dropdown-item-indicator-size: 16px !default;
+$cadmin-dropdown-item-indicator-spacer-x: 16px !default;
 
 // Dropdown Link
 
@@ -69,7 +69,7 @@ $cadmin-dropdown-header-font-size-mobile: null !default;
 // Dropdown Subheader
 
 $cadmin-dropdown-subheader-color: $cadmin-dropdown-header-color !default;
-$cadmin-dropdown-subheader-font-size: 0.75rem !default; // 12px
+$cadmin-dropdown-subheader-font-size: 12px !default; // 12px
 $cadmin-dropdown-subheader-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-dropdown-subheader-margin-bottom: null !default;
 $cadmin-dropdown-subheader-margin-top: null !default;
@@ -78,7 +78,7 @@ $cadmin-dropdown-subheader-padding-y: $cadmin-dropdown-header-padding-y !default
 $cadmin-dropdown-subheader-text-transform: uppercase !default;
 
 $cadmin-dropdown-caption-color: $cadmin-dropdown-header-color !default;
-$cadmin-dropdown-caption-font-size: 0.875rem !default; // 14px
+$cadmin-dropdown-caption-font-size: 14px !default; // 14px
 $cadmin-dropdown-caption-font-weight: null !default;
 
 // Dropdown Inline Scroller
@@ -149,8 +149,8 @@ $cadmin-dropdown-item-base: map-deep-merge(
 
 // Dropdown Item Indicator
 
-$cadmin-dropdown-item-indicator-size: 1rem !default;
-$cadmin-dropdown-item-indicator-spacer-x: 1rem !default;
+$cadmin-dropdown-item-indicator-size: 16px !default;
+$cadmin-dropdown-item-indicator-spacer-x: 16px !default;
 
 $cadmin-dropdown-item-indicator-start: () !default;
 $cadmin-dropdown-item-indicator-start: map-deep-merge(
@@ -331,7 +331,7 @@ $cadmin-dropdown-footer: () !default;
 $cadmin-dropdown-footer: map-merge(
 	(
 		box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
-		padding: 0.5rem $cadmin-dropdown-item-padding-x 0,
+		padding: 8px $cadmin-dropdown-item-padding-x 0,
 		position: relative,
 	),
 	$cadmin-dropdown-footer
@@ -388,7 +388,7 @@ $cadmin-dropdown-menu-height-auto: map-merge(
 $cadmin-autocomplete-dropdown-menu: () !default;
 $cadmin-autocomplete-dropdown-menu: map-deep-merge(
 	(
-		max-height: calc(9rem + 2px),
+		max-height: calc(144px + 2px),
 		max-width: none,
 		width: 100%,
 	),

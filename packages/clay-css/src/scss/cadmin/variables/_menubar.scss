@@ -3,7 +3,7 @@
 $cadmin-menubar-vertical-expand-md: () !default;
 $cadmin-menubar-vertical-expand-md: map-deep-merge(
 	(
-		margin-bottom-mobile: 1.5rem,
+		margin-bottom-mobile: 24px,
 		margin-left-mobile: -
 			(
 				$cadmin-grid-gutter-width / 2,
@@ -40,9 +40,9 @@ $cadmin-menubar-vertical-decorated-md-nav: map-deep-merge(
 	(
 		border-left-color: $cadmin-gray-300,
 		border-left-style: solid,
-		border-left-width: 0.125rem,
+		border-left-width: 2px,
 		display: block,
-		padding-left: 0.5rem,
+		padding-left: 8px,
 	),
 	$cadmin-menubar-vertical-decorated-md-nav
 );
@@ -50,9 +50,9 @@ $cadmin-menubar-vertical-decorated-md-nav: map-deep-merge(
 $cadmin-menubar-vertical-decorated-md-nav-item-nav: () !default;
 $cadmin-menubar-vertical-decorated-md-nav-item-nav: map-deep-merge(
 	(
-		margin-bottom: 0.25rem,
-		margin-left: 1rem,
-		margin-top: 0.25rem,
+		margin-bottom: 4px,
+		margin-left: 16px,
+		margin-top: 4px,
 	),
 	$cadmin-menubar-vertical-decorated-md-nav-item-nav
 );
@@ -60,7 +60,7 @@ $cadmin-menubar-vertical-decorated-md-nav-item-nav: map-deep-merge(
 $cadmin-menubar-vertical-decorated-md-nav-link: () !default;
 $cadmin-menubar-vertical-decorated-md-nav-link: map-deep-merge(
 	(
-		padding-left: 1rem !important,
+		padding-left: 16px !important,
 	),
 	$cadmin-menubar-vertical-decorated-md-nav-link
 );
@@ -97,7 +97,7 @@ $cadmin-menubar-vertical-expand-lg: () !default;
 $cadmin-menubar-vertical-expand-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
-		margin-bottom-mobile: 1.5rem,
+		margin-bottom-mobile: 24px,
 		margin-left-mobile: -
 			(
 				$cadmin-grid-gutter-width / 2,

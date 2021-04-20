@@ -10,10 +10,10 @@ $cadmin-card-inner-border-radius: $cadmin-card-border-radius -
 $cadmin-card-box-shadow: null !default;
 $cadmin-card-color: null !default;
 $cadmin-card-height: null !default;
-$cadmin-card-margin-bottom: 1.5rem !default;
+$cadmin-card-margin-bottom: 24px !default;
 
-$cadmin-card-spacer-x: 1.25rem !default;
-$cadmin-card-spacer-y: 0.75rem !default;
+$cadmin-card-spacer-x: 20px !default;
+$cadmin-card-spacer-y: 12px !default;
 
 $cadmin-card-cap-bg: rgba($cadmin-black, 0.03) !default;
 $cadmin-card-cap-color: null !default;
@@ -24,21 +24,21 @@ $cadmin-card-body-padding-right: $cadmin-card-spacer-x !default;
 $cadmin-card-body-padding-top: $cadmin-card-spacer-x !default;
 
 $cadmin-card-section-header-color: $cadmin-gray-600 !default;
-$cadmin-card-section-header-font-size: 0.75rem !default;
+$cadmin-card-section-header-font-size: 12px !default;
 $cadmin-card-section-header-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-card-section-header-line-height: 2.5 !default;
-$cadmin-card-section-header-margin-bottom: 1.5rem !default;
+$cadmin-card-section-header-margin-bottom: 24px !default;
 $cadmin-card-section-header-padding: 0 ($cadmin-grid-gutter-width / 2) !default;
 $cadmin-card-section-header-text-transform: uppercase !default;
 
-$cadmin-card-img-overlay-padding: 1.25rem !default;
+$cadmin-card-img-overlay-padding: 20px !default;
 
 $cadmin-card-group-margin: $cadmin-grid-gutter-width / 2 !default;
 
 $cadmin-card-deck-margin: $cadmin-card-group-margin !default;
 
 $cadmin-card-columns-count: 3 !default;
-$cadmin-card-columns-gap: 1.25rem !default;
+$cadmin-card-columns-gap: 20px !default;
 $cadmin-card-columns-margin: $cadmin-card-spacer-y !default;
 
 // Card Aspect Ratio
@@ -47,10 +47,10 @@ $cadmin-card-aspect-ratio-label: () !default;
 $cadmin-card-aspect-ratio-label: map-deep-merge(
 	(
 		display: block,
-		margin-bottom: 0.5rem,
+		margin-bottom: 8px,
 		margin-left: 0,
 		margin-right: 0,
-		margin-top: 0.5rem,
+		margin-top: 8px,
 	),
 	$cadmin-card-aspect-ratio-label
 );
@@ -58,8 +58,8 @@ $cadmin-card-aspect-ratio-label: map-deep-merge(
 $cadmin-card-aspect-ratio-item-top-left: () !default;
 $cadmin-card-aspect-ratio-item-top-left: map-deep-merge(
 	(
-		left: 1rem,
-		top: 1rem,
+		left: 16px,
+		top: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-top-left
 );
@@ -67,7 +67,7 @@ $cadmin-card-aspect-ratio-item-top-left: map-deep-merge(
 $cadmin-card-aspect-ratio-item-top-center: () !default;
 $cadmin-card-aspect-ratio-item-top-center: map-deep-merge(
 	(
-		top: 1rem,
+		top: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-top-center
 );
@@ -75,8 +75,8 @@ $cadmin-card-aspect-ratio-item-top-center: map-deep-merge(
 $cadmin-card-aspect-ratio-item-top-right: () !default;
 $cadmin-card-aspect-ratio-item-top-right: map-deep-merge(
 	(
-		right: 1rem,
-		top: 1rem,
+		right: 16px,
+		top: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-top-right
 );
@@ -84,7 +84,7 @@ $cadmin-card-aspect-ratio-item-top-right: map-deep-merge(
 $cadmin-card-aspect-ratio-item-right-middle: () !default;
 $cadmin-card-aspect-ratio-item-right-middle: map-deep-merge(
 	(
-		right: 1rem,
+		right: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-right-middle
 );
@@ -92,8 +92,8 @@ $cadmin-card-aspect-ratio-item-right-middle: map-deep-merge(
 $cadmin-card-aspect-ratio-item-bottom-right: () !default;
 $cadmin-card-aspect-ratio-item-bottom-right: map-deep-merge(
 	(
-		bottom: 1rem,
-		right: 1rem,
+		bottom: 16px,
+		right: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-bottom-right
 );
@@ -101,7 +101,7 @@ $cadmin-card-aspect-ratio-item-bottom-right: map-deep-merge(
 $cadmin-card-aspect-ratio-item-bottom-center: () !default;
 $cadmin-card-aspect-ratio-item-bottom-center: map-deep-merge(
 	(
-		bottom: 1rem,
+		bottom: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-bottom-center
 );
@@ -109,8 +109,8 @@ $cadmin-card-aspect-ratio-item-bottom-center: map-deep-merge(
 $cadmin-card-aspect-ratio-item-bottom-left: () !default;
 $cadmin-card-aspect-ratio-item-bottom-left: map-deep-merge(
 	(
-		bottom: 1rem,
-		left: 1rem,
+		bottom: 16px,
+		left: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-bottom-left
 );
@@ -120,7 +120,7 @@ $cadmin-card-aspect-ratio-item-bottom-left: map-deep-merge(
 $cadmin-card-title: () !default;
 $cadmin-card-title: map-deep-merge(
 	(
-		font-size: 1rem,
+		font-size: 16px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-line-height-base,
 		margin-bottom: 0,
@@ -142,7 +142,7 @@ $cadmin-card-subtitle: () !default;
 $cadmin-card-subtitle: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		font-size: 0.875rem,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		margin-bottom: 0,
 		margin-top: 0,
@@ -201,7 +201,7 @@ $cadmin-card-rounded-circle-inner-border-radius: if(
 $cadmin-checkbox-left-card-padding: 40px !default;
 $cadmin-checkbox-right-card-padding: $cadmin-checkbox-left-card-padding !default;
 
-$cadmin-checkbox-position: 1rem !default;
+$cadmin-checkbox-position: 16px !default;
 
 $cadmin-form-check-card-checked-box-shadow: $cadmin-input-btn-focus-box-shadow !default;
 
@@ -318,13 +318,13 @@ $cadmin-product-card: map-deep-merge(
 			text-align: center,
 		),
 		card-title: (
-			font-size: 1rem,
+			font-size: 16px,
 		),
 		card-subtitle: (
-			font-size: 0.75rem,
+			font-size: 12px,
 		),
 		card-text: (
-			font-size: 1.125rem,
+			font-size: 18px,
 			font-weight: $cadmin-font-weight-semi-bold,
 		),
 	),
@@ -412,7 +412,7 @@ $cadmin-card-page-item-user: map-deep-merge(
 $cadmin-card-type-directory: () !default;
 $cadmin-card-type-directory: map-deep-merge(
 	(
-		sticker-font-size: 1.125rem,
+		sticker-font-size: 18px,
 	),
 	$cadmin-card-type-directory
 );
@@ -455,7 +455,7 @@ $cadmin-card-type-template-card-title: () !default;
 $cadmin-card-type-template-card-title: map-deep-merge(
 	(
 		display: block,
-		margin-bottom: 0.5rem,
+		margin-bottom: 8px,
 	),
 	$cadmin-card-type-template-card-title
 );
@@ -506,7 +506,7 @@ $cadmin-template-card: map-deep-merge(
 $cadmin-template-card-horizontal-sticker: () !default;
 $cadmin-template-card-horizontal-sticker: map-deep-merge(
 	(
-		font-size: 1.25rem,
+		font-size: 20px,
 	),
 	$cadmin-template-card-horizontal-sticker
 );

@@ -21,7 +21,7 @@ $cadmin-c-th-base: map-merge(
 
 // Table Responsive
 
-$cadmin-table-responsive-margin-bottom: 1.5rem !default;
+$cadmin-table-responsive-margin-bottom: 24px !default;
 
 // Table
 
@@ -51,18 +51,18 @@ $cadmin-table-striped-order: odd !default;
 // Table Cell applies to `th` and `td`
 
 $cadmin-table-cell-gutters: $cadmin-grid-gutter-width / 2 !default; // 15px
-$cadmin-table-cell-padding: 0.75rem !default;
-$cadmin-table-cell-padding-sm: 0.3rem !default;
+$cadmin-table-cell-padding: 12px !default;
+$cadmin-table-cell-padding-sm: 4.8px !default;
 
-$cadmin-table-cell-expand-min-width: 12.5rem !default; // 200px
+$cadmin-table-cell-expand-min-width: 200px !default; // 200px
 
-$cadmin-table-cell-expand-small-max-width: 12.5rem !default; // 200px
+$cadmin-table-cell-expand-small-max-width: 200px !default; // 200px
 $cadmin-table-cell-expand-small-width: 25% !default;
 
-$cadmin-table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
+$cadmin-table-cell-expand-smaller-max-width: 200px !default; // 200px
 $cadmin-table-cell-expand-smaller-width: 15% !default;
 
-$cadmin-table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
+$cadmin-table-cell-expand-smallest-max-width: 200px !default; // 200px
 $cadmin-table-cell-expand-smallest-width: 10% !default;
 
 // TH
@@ -85,7 +85,7 @@ $cadmin-c-table-thead: map-merge(
 
 $cadmin-table-head-link: () !default;
 
-$cadmin-table-head-title-inline-item-spacer-x: 0.25rem !default; // 4px
+$cadmin-table-head-title-inline-item-spacer-x: 4px !default; // 4px
 $cadmin-table-head-title-text-truncate-max-width: calc(
 	100% - 1em - #{$cadmin-table-head-title-inline-item-spacer-x}
 ) !default;
@@ -125,10 +125,10 @@ $cadmin-table-quick-action-menu-accent-active-bg: $cadmin-table-accent-bg !defau
 $cadmin-table-quick-action-menu-active-bg: $cadmin-table-active-bg !default;
 $cadmin-table-quick-action-menu-hover-bg: $cadmin-table-hover-bg !default;
 
-$cadmin-table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
+$cadmin-table-cell-expand-smaller-max-width: 200px !default; // 200px
 $cadmin-table-cell-expand-smaller-width: 15% !default;
 
-$cadmin-table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
+$cadmin-table-cell-expand-smallest-max-width: 200px !default; // 200px
 $cadmin-table-cell-expand-smallest-width: 10% !default;
 
 // Table Footer
@@ -194,10 +194,10 @@ $cadmin-table-action-link: map-deep-merge(
 		align-items: center,
 		border-radius: $cadmin-btn-border-radius,
 		display: inline-flex,
-		height: 2rem,
+		height: 32px,
 		justify-content: center,
 		vertical-align: middle,
-		width: 2rem,
+		width: 32px,
 		hover-text-decoration: none,
 		lexicon-icon-margin-top: 0,
 	),
@@ -226,8 +226,8 @@ $cadmin-table-border-level: -6 !default;
 
 $cadmin-table-list-bg: $cadmin-white !default;
 $cadmin-table-list-border-color: $cadmin-table-border-color !default;
-$cadmin-table-list-border-x-width: 0.0625rem !default;
-$cadmin-table-list-border-y-width: 0.0625rem !default;
+$cadmin-table-list-border-x-width: 1px !default;
+$cadmin-table-list-border-y-width: 1px !default;
 
 $cadmin-table-list-border-width: $cadmin-table-list-border-y-width
 	$cadmin-table-list-border-x-width !default;
@@ -344,8 +344,8 @@ $cadmin-c-table-list-caption: () !default;
 
 // .table-list .table-divider
 
-$cadmin-table-list-divider-padding-x: 0.75rem !default;
-$cadmin-table-list-divider-padding-y: 0.75rem !default;
+$cadmin-table-list-divider-padding-x: 12px !default;
+$cadmin-table-list-divider-padding-y: 12px !default;
 
 // .table-list .quick-action-menu
 
@@ -396,10 +396,10 @@ $cadmin-table-list-action-link: map-deep-merge(
 	(
 		align-items: center,
 		display: inline-flex,
-		height: 2rem,
+		height: 32px,
 		justify-content: center,
 		vertical-align: middle,
-		width: 2rem,
+		width: 32px,
 		hover-text-decoration: none,
 		lexicon-icon-margin-top: 0,
 	),
@@ -408,9 +408,9 @@ $cadmin-table-list-action-link: map-deep-merge(
 
 // Table Valign
 
-$cadmin-table-valign-top-body-cell-padding-top: 1rem !default;
+$cadmin-table-valign-top-body-cell-padding-top: 16px !default;
 
-$cadmin-table-valign-bottom-body-cell-padding-bottom: 1rem !default;
+$cadmin-table-valign-bottom-body-cell-padding-bottom: 16px !default;
 
 // Table Draggable
 

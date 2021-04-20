@@ -4,7 +4,7 @@ $cadmin-sidebar-header-component-title: () !default;
 $cadmin-sidebar-header-component-title: map-deep-merge(
 	(
 		// 20px
-			font-size: 1.25rem
+			font-size: 20px,
 	),
 	$cadmin-sidebar-header-component-title
 );
@@ -14,7 +14,7 @@ $cadmin-sidebar-header-component-title: map-deep-merge(
 $cadmin-sidebar-header-component-subtitle: () !default;
 $cadmin-sidebar-header-component-subtitle: map-deep-merge(
 	(
-		font-size: 0.75rem,
+		font-size: 12px,
 		font-weight: $cadmin-font-weight-normal,
 	),
 	$cadmin-sidebar-header-component-subtitle
@@ -25,7 +25,7 @@ $cadmin-sidebar-header-component-subtitle: map-deep-merge(
 $cadmin-sidebar-dt: () !default;
 $cadmin-sidebar-dt: map-deep-merge(
 	(
-		font-size: 0.75rem,
+		font-size: 12px,
 	),
 	$cadmin-sidebar-dt
 );
@@ -35,7 +35,7 @@ $cadmin-sidebar-dt: map-deep-merge(
 $cadmin-sidebar-dd: () !default;
 $cadmin-sidebar-dd: map-deep-merge(
 	(
-		font-size: 0.875rem,
+		font-size: 14px,
 	),
 	$cadmin-sidebar-dd
 );
@@ -51,7 +51,7 @@ $cadmin-sidebar-light: map-deep-merge(
 	(
 		bg: $cadmin-white,
 		border-left-width: 0,
-		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		panel-bg: $cadmin-gray-200,
 		dt: (
 			color: $cadmin-gray-600,
@@ -63,8 +63,8 @@ $cadmin-sidebar-light: map-deep-merge(
 		),
 		panel-unstyled: (
 			header-link: (
-				focus-box-shadow: 0 0 0 0.25rem $cadmin-white#{','} 0 0 0 0.375rem
-					$cadmin-primary-l1,
+				focus-box-shadow: #{0 0 0 4px $cadmin-white, 0 0 0 6px
+					$cadmin-primary-l1},
 			),
 		),
 	),

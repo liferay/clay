@@ -20,8 +20,8 @@ $cadmin-date-picker-nav-row: () !default;
 $cadmin-date-picker-nav-row: map-deep-merge(
 	(
 		display: flex,
-		margin-left: -0.25rem,
-		margin-right: -0.25rem,
+		margin-left: -4px,
+		margin-right: -4px,
 	),
 	$cadmin-date-picker-nav-row
 );
@@ -64,8 +64,8 @@ $cadmin-date-picker-row: map-deep-merge(
 		display: flex,
 		justify-content: space-between,
 		list-style: none,
-		margin-bottom: 0.5rem,
-		margin-top: 0.5rem,
+		margin-bottom: 8px,
+		margin-top: 8px,
 		padding: 0,
 	),
 	$cadmin-date-picker-row
@@ -74,8 +74,8 @@ $cadmin-date-picker-row: map-deep-merge(
 $cadmin-date-picker-col: () !default;
 $cadmin-date-picker-col: map-deep-merge(
 	(
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		padding-left: 8px,
+		padding-right: 8px,
 		c-selected: (
 			background-image:
 				linear-gradient($cadmin-primary-l3, $cadmin-primary-l3),
@@ -104,7 +104,7 @@ $cadmin-date-picker-col: map-deep-merge(
 $cadmin-date-picker-days-row: () !default;
 $cadmin-date-picker-days-row: map-deep-merge(
 	(
-		margin-bottom: 1rem,
+		margin-bottom: 16px,
 		margin-top: 0,
 	),
 	$cadmin-date-picker-days-row
@@ -117,7 +117,7 @@ $cadmin-date-picker-date-row: () !default;
 $cadmin-date-picker-day: () !default;
 $cadmin-date-picker-day: map-deep-merge(
 	(
-		height: 1.3125rem,
+		height: 21px,
 	),
 	$cadmin-date-picker-day
 );
@@ -136,10 +136,10 @@ $cadmin-date-picker-calendar-container: map-deep-merge(
 $cadmin-date-picker-calendar-header-container: () !default;
 $cadmin-date-picker-calendar-header-container: map-deep-merge(
 	(
-		padding-bottom: 1rem,
-		padding-left: 1rem,
-		padding-right: 1rem,
-		padding-top: 1rem,
+		padding-bottom: 16px,
+		padding-left: 16px,
+		padding-right: 16px,
+		padding-top: 16px,
 	),
 	$cadmin-date-picker-calendar-header-container
 );
@@ -147,9 +147,9 @@ $cadmin-date-picker-calendar-header-container: map-deep-merge(
 $cadmin-date-picker-calendar-body-container: () !default;
 $cadmin-date-picker-calendar-body-container: map-deep-merge(
 	(
-		padding-left: 1rem,
-		padding-right: 1rem,
-		padding-bottom: 0.5rem,
+		padding-left: 16px,
+		padding-right: 16px,
+		padding-bottom: 8px,
 	),
 	$cadmin-date-picker-calendar-body-container
 );
@@ -160,10 +160,10 @@ $cadmin-date-picker-calendar-footer-container: map-deep-merge(
 		border-color: $cadmin-gray-400,
 		border-style: solid,
 		border-width: 1px 0 0 0,
-		padding-bottom: 1rem,
-		padding-left: 1.5rem,
-		padding-right: 1.5rem,
-		padding-top: 1rem,
+		padding-bottom: 16px,
+		padding-left: 24px,
+		padding-right: 24px,
+		padding-top: 16px,
 	),
 	$cadmin-date-picker-calendar-footer-container
 );
@@ -180,7 +180,7 @@ $cadmin-date-picker-calendar-item: map-deep-merge(
 		display: inline-flex,
 		flex-shrink: 0,
 		font-weight: $cadmin-font-weight-semi-bold,
-		height: 2rem,
+		height: 32px,
 		justify-content: center,
 		line-height: 1,
 		margin-left: 0,
@@ -193,7 +193,7 @@ $cadmin-date-picker-calendar-item: map-deep-merge(
 		user-select: none,
 		vertical-align: middle,
 		white-space: nowrap,
-		width: 2rem,
+		width: 32px,
 	),
 	$cadmin-date-picker-calendar-item
 );
@@ -244,9 +244,9 @@ $cadmin-date-picker-input-group-text: map-deep-merge(
 	(
 		bg: transparent,
 		border-color: transparent,
-		min-width: 2rem,
-		padding-left: 0.25rem,
-		padding-right: 0.25rem,
+		min-width: 32px,
+		padding-left: 4px,
+		padding-right: 4px,
 	),
 	$cadmin-date-picker-input-group-text
 );

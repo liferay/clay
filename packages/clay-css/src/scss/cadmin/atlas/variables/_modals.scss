@@ -9,12 +9,12 @@ $cadmin-modal-backdrop-opacity: 0.8 !default;
 $cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $cadmin-modal-content-border-color: transparent !default;
 
-$cadmin-modal-inner-padding: 1.5rem !default; // 24px
+$cadmin-modal-inner-padding: 24px !default; // 24px
 
 $cadmin-modal-header-border-color: $cadmin-gray-300 !default;
-$cadmin-modal-header-padding: 1.5rem !default; // 24px
+$cadmin-modal-header-padding: 24px !default; // 24px
 
-$cadmin-modal-title-font-size: 1.25rem !default; // 20px
+$cadmin-modal-title-font-size: 20px !default; // 20px
 $cadmin-modal-title-font-weight: $cadmin-font-weight-bold !default;
 
 // Modal Success

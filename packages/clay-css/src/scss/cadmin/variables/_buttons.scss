@@ -28,7 +28,7 @@ $cadmin-btn-disabled-opacity: 0.65 !default;
 
 $cadmin-btn-inline-item-font-size: null !default;
 
-$cadmin-btn-section-font-size: 0.6875rem !default; // 11px
+$cadmin-btn-section-font-size: 11px !default; // 11px
 $cadmin-btn-section-font-weight: $cadmin-font-weight-normal !default;
 $cadmin-btn-section-line-height: 1 !default;
 
@@ -40,7 +40,7 @@ $cadmin-btn-line-height-lg: $cadmin-input-btn-line-height-lg !default;
 $cadmin-btn-padding-x-lg: $cadmin-input-btn-padding-x-lg !default;
 $cadmin-btn-padding-y-lg: $cadmin-input-btn-padding-y-lg !default;
 $cadmin-btn-inline-item-font-size-lg: null !default;
-$cadmin-btn-section-font-size-lg: 0.8125rem !default; // 13px
+$cadmin-btn-section-font-size-lg: 13px !default; // 13px
 
 $cadmin-btn-font-size-lg-mobile: null !default;
 $cadmin-btn-padding-x-lg-mobile: null !default;
@@ -54,7 +54,7 @@ $cadmin-btn-line-height-sm: $cadmin-input-btn-line-height-sm !default;
 $cadmin-btn-padding-x-sm: $cadmin-input-btn-padding-x-sm !default;
 $cadmin-btn-padding-y-sm: $cadmin-input-btn-padding-y-sm !default;
 $cadmin-btn-inline-item-font-size-sm: null !default;
-$cadmin-btn-section-font-size-sm: 0.5625rem !default; // 9px
+$cadmin-btn-section-font-size-sm: 9px !default; // 9px
 
 $cadmin-btn-font-size-sm-mobile: null !default;
 $cadmin-btn-padding-x-sm-mobile: null !default;
@@ -63,16 +63,16 @@ $cadmin-btn-padding-y-sm-mobile: null !default;
 // Button Monospaced
 
 $cadmin-btn-monospaced-padding-x: 0 !default;
-$cadmin-btn-monospaced-padding-y: 0.1875rem !default; // 3px
-$cadmin-btn-monospaced-size: 2.375rem !default; // 38px
+$cadmin-btn-monospaced-padding-y: 3px !default; // 3px
+$cadmin-btn-monospaced-size: 38px !default; // 38px
 
 $cadmin-btn-monospaced-padding-x-lg: 0 !default;
-$cadmin-btn-monospaced-padding-y-lg: 0.3125rem !default; // 5px
-$cadmin-btn-monospaced-size-lg: 3rem !default; // 48px
+$cadmin-btn-monospaced-padding-y-lg: 5px !default; // 5px
+$cadmin-btn-monospaced-size-lg: 48px !default; // 48px
 
 $cadmin-btn-monospaced-padding-x-sm: 0 !default;
-$cadmin-btn-monospaced-padding-y-sm: 0.125rem !default; // 2px
-$cadmin-btn-monospaced-size-sm: 1.9375rem !default; // 31px
+$cadmin-btn-monospaced-padding-y-sm: 2px !default; // 2px
+$cadmin-btn-monospaced-size-sm: 31px !default; // 31px
 
 $cadmin-btn-monospaced-size-mobile: null !default;
 $cadmin-btn-monospaced-size-lg-mobile: null !default;
@@ -80,7 +80,7 @@ $cadmin-btn-monospaced-size-sm-mobile: null !default;
 
 // Button Block
 
-$cadmin-btn-block-spacing-y: 0.5rem !default;
+$cadmin-btn-block-spacing-y: 8px !default;
 
 // Button Group
 
@@ -88,8 +88,8 @@ $cadmin-btn-group-item-margin-right: map-get($cadmin-spacers, 2) !default;
 
 // Button Toolbar
 
-$cadmin-btn-toolbar-spacer-x: 0.5rem !default; // 8px
-$cadmin-btn-toolbar-spacer-y: 0.125rem !default; // 2px
+$cadmin-btn-toolbar-spacer-x: 8px !default; // 8px
+$cadmin-btn-toolbar-spacer-y: 2px !default; // 2px
 
 // Button Variants
 

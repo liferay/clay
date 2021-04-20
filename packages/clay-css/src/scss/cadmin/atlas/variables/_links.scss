@@ -40,7 +40,7 @@ $cadmin-link-secondary: map-deep-merge(
 $cadmin-component-title: () !default;
 $cadmin-component-title: map-deep-merge(
 	(
-		font-size: 1rem,
+		font-size: 16px,
 		line-height: 1.25,
 		margin-bottom:
 			calc((#{$cadmin-dropdown-action-toggle-size} - (1em * 1.25)) / 2),
@@ -91,7 +91,7 @@ $cadmin-component-subtitle-link: map-deep-merge(
 $cadmin-component-action: () !default;
 $cadmin-component-action: map-deep-merge(
 	(
-		font-size: 1rem,
+		font-size: 16px,
 		hover-bg: rgba($cadmin-gray-900, 0.03),
 		hover-color: $cadmin-gray-900,
 		focus-bg: rgba($cadmin-gray-900, 0.03),

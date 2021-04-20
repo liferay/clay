@@ -3,8 +3,8 @@ $cadmin-modal-backdrop-opacity: 0.5 !default;
 
 // Modal Dialog
 
-$cadmin-modal-dialog-margin: 0.5rem !default;
-$cadmin-modal-dialog-margin-y-sm-up: 1.75rem !default;
+$cadmin-modal-dialog-margin: 8px !default;
+$cadmin-modal-dialog-margin-y-sm-up: 28px !default;
 
 $cadmin-modal-fade-transform: translate(0, -50px) !default;
 $cadmin-modal-scale-transform: scale(1.02) !default;
@@ -22,8 +22,8 @@ $cadmin-modal-content-border-radius: $cadmin-border-radius-lg !default;
 $cadmin-modal-content-inner-border-radius: $cadmin-modal-content-border-radius -
 	$cadmin-modal-content-border-width !default;
 
-$cadmin-modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($cadmin-black, 0.5) !default;
-$cadmin-modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba($cadmin-black, 0.5) !default;
+$cadmin-modal-content-box-shadow-xs: 0 4px 8px rgba($cadmin-black, 0.5) !default;
+$cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;
 
 // Modal Header
 
@@ -31,9 +31,9 @@ $cadmin-modal-header-bg: null !default;
 $cadmin-modal-header-border-color: $cadmin-border-color !default;
 $cadmin-modal-header-border-width: $cadmin-modal-content-border-width !default;
 $cadmin-modal-header-color: null !default;
-$cadmin-modal-header-height: 4rem !default;
-$cadmin-modal-header-padding-y: 1rem !default;
-$cadmin-modal-header-padding-x: 1rem !default;
+$cadmin-modal-header-height: 64px !default;
+$cadmin-modal-header-padding-y: 16px !default;
+$cadmin-modal-header-padding-x: 16px !default;
 
 $cadmin-modal-header-padding: $cadmin-modal-header-padding-y
 	$cadmin-modal-header-padding-x !default;
@@ -42,14 +42,14 @@ $cadmin-modal-header-height-mobile: null !default;
 
 // Modal Body
 
-$cadmin-modal-inner-padding: 1rem !default;
+$cadmin-modal-inner-padding: 16px !default;
 
 $cadmin-modal-body-bg: null !default;
 $cadmin-modal-body-color: null !default;
 
 // Modal Footer
 
-$cadmin-modal-footer-margin-between: 0.5rem !default;
+$cadmin-modal-footer-margin-between: 8px !default;
 
 $cadmin-modal-footer-bg: null !default;
 $cadmin-modal-footer-border-color: $cadmin-modal-header-border-color !default;
@@ -58,8 +58,8 @@ $cadmin-modal-footer-border-width: $cadmin-modal-header-border-width !default;
 $cadmin-modal-footer-box-shadow: null !default;
 $cadmin-modal-footer-color: null !default;
 $cadmin-modal-footer-height: null !default;
-$cadmin-modal-footer-padding-x: 0.75rem !default;
-$cadmin-modal-footer-padding-y: 0.75rem !default;
+$cadmin-modal-footer-padding-x: 12px !default;
+$cadmin-modal-footer-padding-y: 12px !default;
 
 $cadmin-modal-footer-height-mobile: null !default;
 
@@ -72,9 +72,9 @@ $cadmin-modal-item-group: map-deep-merge(
 		align-items: center,
 		display: flex,
 		flex-wrap: wrap,
-		min-width: 3rem,
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		min-width: 48px,
+		padding-left: 8px,
+		padding-right: 8px,
 		width: 100%,
 	),
 	$cadmin-modal-item-group
@@ -114,7 +114,7 @@ $cadmin-modal-item: map-deep-merge(
 		flex-shrink: 1,
 		max-width: 100%,
 		min-height: 0,
-		min-width: 3.125rem,
+		min-width: 50px,
 		padding: 0,
 		position: relative,
 		word-wrap: break-word,
@@ -132,14 +132,14 @@ $cadmin-modal-item-shrink: map-deep-merge(
 
 // Modal Title
 
-$cadmin-modal-title-font-size: 1.25rem !default;
+$cadmin-modal-title-font-size: 20px !default;
 $cadmin-modal-title-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-modal-title-line-height: $cadmin-line-height-base !default;
 $cadmin-modal-title-text-align: null !default;
 $cadmin-modal-title-font-size-mobile: null !default;
 
-$cadmin-modal-title-indicator-font-size: 0.875rem !default;
-$cadmin-modal-title-indicator-spacer-x: 0.5rem !default;
+$cadmin-modal-title-indicator-font-size: 14px !default;
+$cadmin-modal-title-indicator-spacer-x: 8px !default;
 
 // Modal Subtitle
 
@@ -155,8 +155,8 @@ $cadmin-modal-subtitle-divider: () !default;
 $cadmin-modal-subtitle-divider: map-deep-merge(
 	(
 		display: inline-block,
-		margin-left: 0.25rem,
-		margin-right: 0.25rem,
+		margin-left: 4px,
+		margin-right: 4px,
 	),
 	$cadmin-modal-subtitle-divider
 );
@@ -165,7 +165,7 @@ $cadmin-modal-subtitle-strong: () !default;
 
 // Modal Close
 
-$cadmin-modal-close-spacer-x: 0.3125rem !default;
+$cadmin-modal-close-spacer-x: 5px !default;
 
 // Modal Full Screen
 

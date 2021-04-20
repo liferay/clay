@@ -3,18 +3,18 @@ $cadmin-inline-scroller-max-height: 125px !default;
 
 // Autofit Row
 
-$cadmin-autofit-col-expand-min-width: 3.125rem !default; // 50px
+$cadmin-autofit-col-expand-min-width: 50px !default; // 50px
 
-$cadmin-autofit-padded-col-padding-x: 0.5rem !default; // 8px
-$cadmin-autofit-padded-col-padding-y: 0.25rem !default; // 4px
+$cadmin-autofit-padded-col-padding-x: 8px !default; // 8px
+$cadmin-autofit-padded-col-padding-y: 4px !default; // 4px
 
 $cadmin-autofit-padded-no-gutters-sm: () !default;
 $cadmin-autofit-padded-no-gutters-sm: map-merge(
 	(
-		margin: -0.25rem,
+		margin: -4px,
 		width: auto,
 		autofit-col: (
-			padding: 0.25rem,
+			padding: 4px,
 		),
 	),
 	$cadmin-autofit-padded-no-gutters-sm
@@ -38,9 +38,9 @@ $cadmin-close: map-deep-merge(
 		color: $cadmin-close-color,
 		cursor: $cadmin-link-cursor,
 		display: inline-flex,
-		font-size: 1rem,
+		font-size: 16px,
 		font-weight: $cadmin-close-font-weight,
-		height: 2rem,
+		height: 32px,
 		justify-content: center,
 		line-height: 1,
 		opacity: 0.5,
@@ -48,7 +48,7 @@ $cadmin-close: map-deep-merge(
 		text-align: center,
 		text-shadow: $cadmin-close-text-shadow,
 		transition: $cadmin-btn-transition,
-		width: 2rem,
+		width: 32px,
 		hover: (
 			color: $cadmin-close-color,
 			opacity: 0.75,
@@ -112,7 +112,7 @@ $cadmin-c-inner: map-deep-merge(
 
 // Heading
 
-$cadmin-heading-spacer-x: 1rem !default; // 16px
+$cadmin-heading-spacer-x: 16px !default; // 16px
 
 $cadmin-heading-text-margin-bottom: auto !default;
 $cadmin-heading-text-margin-top: auto !default;
@@ -120,7 +120,7 @@ $cadmin-heading-text-margin-top: auto !default;
 // Inline Item
 
 $cadmin-inline-item-lexicon-icon-margin-top: -0.1em !default;
-$cadmin-inline-item-spacer-x: 0.5rem !default; // 8px
+$cadmin-inline-item-spacer-x: 8px !default; // 8px
 
 $cadmin-inline-item-loading-animation-font-size: 1.25em !default;
 

@@ -7,7 +7,7 @@ $cadmin-list-group-border-radius: $cadmin-border-radius !default;
 $cadmin-list-group-box-shadow: null !default;
 $cadmin-list-group-color: null !default;
 $cadmin-list-group-font-size: null !default;
-$cadmin-list-group-margin-bottom: 1.5rem !default;
+$cadmin-list-group-margin-bottom: 24px !default;
 $cadmin-list-group-margin-top: null !default;
 
 // List Group Item Action
@@ -23,16 +23,16 @@ $cadmin-list-group-action-active-color: $cadmin-body-color !default;
 
 // List Group Item
 
-$cadmin-list-group-item-padding-x: 1.25rem !default;
-$cadmin-list-group-item-padding-y: 0.75rem !default;
+$cadmin-list-group-item-padding-x: 20px !default;
+$cadmin-list-group-item-padding-y: 12px !default;
 
 // Use values flex-start, flex-end, or center
 
 $cadmin-list-group-item-flex-align-items: flex-start !default;
 
-$cadmin-list-group-item-flex-checkbox-offset-top: 0.1875rem !default;
-$cadmin-list-group-item-flex-offset-top: 0.0625rem !default;
-$cadmin-list-group-item-flex-list-group-title-offset-top: -0.25rem !default;
+$cadmin-list-group-item-flex-checkbox-offset-top: 3px !default;
+$cadmin-list-group-item-flex-offset-top: 1px !default;
+$cadmin-list-group-item-flex-list-group-title-offset-top: -4px !default;
 
 $cadmin-list-group-active-bg: $cadmin-component-active-bg !default;
 $cadmin-list-group-active-border-color: $cadmin-list-group-active-bg !default;
@@ -50,7 +50,7 @@ $cadmin-list-group-header-padding-y: $cadmin-list-group-item-padding-y !default;
 $cadmin-list-group-header-title: () !default;
 $cadmin-list-group-header-title: map-deep-merge(
 	(
-		font-size: 1rem,
+		font-size: 16px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-headings-line-height,
 		margin-bottom: 0,
@@ -74,7 +74,7 @@ $cadmin-list-group-title: () !default;
 $cadmin-list-group-title: map-deep-merge(
 	(
 		// 18px
-			font-size: 1.125rem,
+			font-size: 18px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-line-height-base,
 		margin-bottom: 0,
@@ -174,10 +174,10 @@ $cadmin-list-group-notification-item-active-border-left-color: $cadmin-list-grou
 $cadmin-list-group-notification-item-active-border-right-color: $cadmin-list-group-active-border-color !default;
 $cadmin-list-group-notification-item-active-border-top-color: $cadmin-list-group-active-border-color !default;
 
-$cadmin-list-group-notification-item-border-bottom-width: 0.0625rem !default;
-$cadmin-list-group-notification-item-border-left-width: 0.0625rem !default;
-$cadmin-list-group-notification-item-border-right-width: 0.0625rem !default;
-$cadmin-list-group-notification-item-border-top-width: 0.0625rem !default;
+$cadmin-list-group-notification-item-border-bottom-width: 1px !default;
+$cadmin-list-group-notification-item-border-left-width: 1px !default;
+$cadmin-list-group-notification-item-border-right-width: 1px !default;
+$cadmin-list-group-notification-item-border-top-width: 1px !default;
 
 $cadmin-list-group-notification-item: () !default;
 
@@ -185,7 +185,7 @@ $cadmin-list-group-notification-item-primary: () !default;
 $cadmin-list-group-notification-item-primary: map-deep-merge(
 	(
 		border-left-color: theme-color-level(primary, -9),
-		border-left-width: 0.5rem,
+		border-left-width: 8px,
 		border-bottom-left-radius: 0,
 		border-top-left-radius: 0,
 		active-border-left-color: theme-color-level(primary, -9),
@@ -198,8 +198,8 @@ $cadmin-list-group-notification-item-primary: map-deep-merge(
 $cadmin-list-group-sm-item: () !default;
 $cadmin-list-group-sm-item: map-deep-merge(
 	(
-		padding-bottom: 0.40625rem,
-		padding-top: 0.40625rem,
+		padding-bottom: 6.5px,
+		padding-top: 6.5px,
 	),
 	$cadmin-list-group-sm-item
 );
@@ -207,10 +207,10 @@ $cadmin-list-group-sm-item: map-deep-merge(
 $cadmin-list-group-sm-quick-action-menu: () !default;
 $cadmin-list-group-sm-quick-action-menu: map-deep-merge(
 	(
-		margin-bottom: -0.40625rem,
-		margin-top: -0.40625rem,
-		padding-bottom: 0.40625rem,
-		padding-top: 0.40625rem,
+		margin-bottom: -6.5px,
+		margin-top: -6.5px,
+		padding-bottom: 6.5px,
+		padding-top: 6.5px,
 	),
 	$cadmin-list-group-sm-quick-action-menu
 );

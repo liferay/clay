@@ -64,7 +64,7 @@ $cadmin-drilldown-dropdown-menu-drilldown-inner: map-merge(
 $cadmin-drilldown-dropdown-menu-indicator-start: () !default;
 $cadmin-drilldown-dropdown-menu-indicator-start: map-merge(
 	(
-		padding-left: 3rem,
+		padding-left: 48px,
 	),
 	$cadmin-drilldown-dropdown-menu-indicator-start
 );
@@ -72,7 +72,7 @@ $cadmin-drilldown-dropdown-menu-indicator-start: map-merge(
 $cadmin-drilldown-dropdown-menu-indicator-end: () !default;
 $cadmin-drilldown-dropdown-menu-indicator-end: map-merge(
 	(
-		padding-right: 3rem,
+		padding-right: 48px,
 	),
 	$cadmin-drilldown-dropdown-menu-indicator-end
 );
@@ -82,10 +82,10 @@ $cadmin-drilldown-dropdown-menu-indicator-end: map-merge(
 $cadmin-drilldown-dropdown-item: () !default;
 $cadmin-drilldown-dropdown-item: map-deep-merge(
 	(
-		padding-bottom: 0.59375rem,
-		padding-left: 1rem,
-		padding-right: 1rem,
-		padding-top: 0.59375rem,
+		padding-bottom: 9.5px,
+		padding-left: 16px,
+		padding-right: 16px,
+		padding-top: 9.5px,
 	),
 	$cadmin-drilldown-dropdown-item
 );
@@ -100,16 +100,16 @@ $cadmin-_drilldown-dropdown-item-pt: map-get(
 $cadmin-drilldown-dropdown-item-indicator-start: () !default;
 $cadmin-drilldown-dropdown-item-indicator-start: map-merge(
 	(
-		height: 1.5rem,
-		left: 0.5rem,
+		height: 24px,
+		left: 8px,
 		top:
 			calc(
 				#{$cadmin-_drilldown-dropdown-item-pt} - ((
-								1.5rem - (1em * #{$cadmin-line-height-base})
+								24px - (1em * #{$cadmin-line-height-base})
 							) / 2)
 			),
 		transition: none,
-		width: 1.5rem,
+		width: 24px,
 	),
 	$cadmin-drilldown-dropdown-item-indicator-start
 );
@@ -117,7 +117,7 @@ $cadmin-drilldown-dropdown-item-indicator-start: map-merge(
 $cadmin-drilldown-dropdown-item-indicator-text-start: () !default;
 $cadmin-drilldown-dropdown-item-indicator-text-start: map-merge(
 	(
-		padding-left: 2rem,
+		padding-left: 32px,
 	),
 	$cadmin-drilldown-dropdown-item-indicator-text-start
 );
@@ -125,16 +125,16 @@ $cadmin-drilldown-dropdown-item-indicator-text-start: map-merge(
 $cadmin-drilldown-dropdown-item-indicator-end: () !default;
 $cadmin-drilldown-dropdown-item-indicator-end: map-merge(
 	(
-		height: 1.5rem,
-		right: 0.5rem,
+		height: 24px,
+		right: 8px,
 		top:
 			calc(
 				#{$cadmin-_drilldown-dropdown-item-pt} - ((
-								1.5rem - (1em * #{$cadmin-line-height-base})
+								24px - (1em * #{$cadmin-line-height-base})
 							) / 2)
 			),
 		transition: none,
-		width: 1.5rem,
+		width: 24px,
 	),
 	$cadmin-drilldown-dropdown-item-indicator-end
 );
@@ -142,12 +142,12 @@ $cadmin-drilldown-dropdown-item-indicator-end: map-merge(
 $cadmin-drilldown-dropdown-item-indicator-text-end: () !default;
 $cadmin-drilldown-dropdown-item-indicator-text-end: map-merge(
 	(
-		margin-bottom: -0.59375rem,
-		margin-left: -1rem,
-		margin-top: -0.59375rem,
+		margin-bottom: -9.5px,
+		margin-left: -16px,
+		margin-top: -9.5px,
 		padding-bottom: inherit,
 		padding-left: inherit,
-		padding-right: 2rem,
+		padding-right: 32px,
 		padding-top: inherit,
 		width: auto,
 	),
@@ -175,7 +175,7 @@ $cadmin-drilldown-dropdown-header: map-merge(
 $cadmin-drilldown-dropdown-footer: () !default;
 $cadmin-drilldown-dropdown-footer: map-merge(
 	(
-		padding: 1rem 1rem 0.625rem,
+		padding: 16px 16px 10px,
 	),
 	$cadmin-drilldown-dropdown-footer
 );

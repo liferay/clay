@@ -3,14 +3,14 @@ $cadmin-clay-time-btn: map-deep-merge(
 	(
 		align-items: center,
 		display: inline-flex,
-		font-size: 0.75rem,
-		height: 1.5rem,
+		font-size: 12px,
+		height: 24px,
 		justify-content: center,
 		padding-bottom: 0,
 		padding-left: 0,
 		padding-right: 0,
 		padding-top: 0,
-		width: 1.5rem,
+		width: 24px,
 	),
 	$cadmin-clay-time-btn
 );
@@ -21,8 +21,8 @@ $cadmin-clay-time-form-control: map-deep-merge(
 		align-items: center,
 		display: inline-flex,
 		flex-wrap: wrap,
-		padding-bottom: 0.125rem,
-		padding-top: 0.125rem,
+		padding-bottom: 2px,
+		padding-top: 2px,
 	),
 	$cadmin-clay-time-form-control
 );
@@ -33,7 +33,7 @@ $cadmin-clay-time-form-control-inset: map-deep-merge(
 		margin-bottom: 0,
 		margin-top: 0,
 		text-align: center,
-		width: 1.25rem,
+		width: 20px,
 		selection-bg: transparent,
 		focus-bg: #b3d8fd,
 	),
@@ -44,9 +44,9 @@ $cadmin-clay-time-ampm: () !default;
 $cadmin-clay-time-ampm: map-deep-merge(
 	(
 		font-weight: 500,
-		margin-left: 0.25rem,
+		margin-left: 4px,
 		text-transform: uppercase,
-		width: 1.5rem,
+		width: 24px,
 	),
 	$cadmin-clay-time-ampm
 );
@@ -73,8 +73,8 @@ $cadmin-clay-time-edit: map-deep-merge(
 		display: flex,
 		flex-wrap: wrap,
 		margin-right: auto,
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		padding-left: 8px,
+		padding-right: 8px,
 	),
 	$cadmin-clay-time-edit
 );

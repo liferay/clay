@@ -178,7 +178,7 @@ $cadmin-enable-hover-media-query: false !default;
 
 // Spacers
 
-$cadmin-spacer: 1rem !default;
+$cadmin-spacer: 16px !default;
 $cadmin-spacers: () !default;
 $cadmin-spacers: map-deep-merge(
 	(
@@ -229,20 +229,20 @@ $cadmin-line-height-lg: 1.5 !default;
 $cadmin-line-height-sm: 1.5 !default;
 
 $cadmin-border-color: $cadmin-gray-300 !default;
-$cadmin-border-width: 0.0625rem !default;
+$cadmin-border-width: 1px !default;
 
-$cadmin-border-radius: 0.25rem !default;
-$cadmin-border-radius-lg: 0.3rem !default;
-$cadmin-border-radius-sm: 0.2rem !default;
+$cadmin-border-radius: 4px !default;
+$cadmin-border-radius-lg: 4.8px !default;
+$cadmin-border-radius-sm: 3.2px !default;
 
 $cadmin-rounded-border-radius: $cadmin-border-radius !default;
 $cadmin-rounded-circle-border-radius: 5000px !default;
 $cadmin-rounded-0-border-radius: 0 !default;
-$cadmin-rounded-pill: 50rem !default;
+$cadmin-rounded-pill: 800px !default;
 
-$cadmin-box-shadow-sm: 0 0.125rem 0.25rem rgba($cadmin-black, 0.075) !default;
-$cadmin-box-shadow: 0 0.5rem 1rem rgba($cadmin-black, 0.15) !default;
-$cadmin-box-shadow-lg: 0 1rem 3rem rgba($cadmin-black, 0.175) !default;
+$cadmin-box-shadow-sm: 0 2px 4px rgba($cadmin-black, 0.075) !default;
+$cadmin-box-shadow: 0 8px 16px rgba($cadmin-black, 0.15) !default;
+$cadmin-box-shadow-lg: 0 16px 48px rgba($cadmin-black, 0.175) !default;
 
 $cadmin-caret-width: 0.3em !default;
 $cadmin-caret-vertical-align: $cadmin-caret-width * 0.85 !default;
@@ -258,8 +258,8 @@ $cadmin-embed-responsive-aspect-ratios: join(
 	$cadmin-embed-responsive-aspect-ratios
 );
 
-$cadmin-component-focus-box-shadow: 0 0 0 0.2rem rgba($cadmin-primary, 0.25) !default;
-$cadmin-component-focus-inset-box-shadow: inset 0 0 0 0.2rem
+$cadmin-component-focus-box-shadow: 0 0 0 3.2px rgba($cadmin-primary, 0.25) !default;
+$cadmin-component-focus-inset-box-shadow: inset 0 0 0 3.2px
 	rgba($cadmin-primary, 0.25) !default;
 
 $cadmin-component-active-color: $cadmin-white !default;
@@ -313,10 +313,10 @@ $cadmin-container-form-lg: () !default;
 $cadmin-container-form-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
-		padding-bottom: 3rem,
-		padding-top: 3rem,
-		padding-bottom-mobile: 1rem,
-		padding-top-mobile: 1rem,
+		padding-bottom: 48px,
+		padding-top: 48px,
+		padding-bottom-mobile: 16px,
+		padding-top-mobile: 16px,
 	),
 	$cadmin-container-form-lg
 );
@@ -324,8 +324,8 @@ $cadmin-container-form-lg: map-deep-merge(
 $cadmin-container-view: () !default;
 $cadmin-container-view: map-deep-merge(
 	(
-		padding-bottom: 1.5rem,
-		padding-top: 1.5rem,
+		padding-bottom: 24px,
+		padding-top: 24px,
 	),
 	$cadmin-container-view
 );
@@ -346,7 +346,7 @@ $cadmin-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 
 $cadmin-font-family-base: $cadmin-font-family-sans-serif !default;
 
-$cadmin-font-size-base: 1rem !default;
+$cadmin-font-size-base: 16px !default;
 $cadmin-font-size-lg: $cadmin-font-size-base * 1.25 !default;
 $cadmin-font-size-sm: $cadmin-font-size-base * 0.875 !default;
 
@@ -503,12 +503,12 @@ $cadmin-emphasized-link-hover-darken-percentage: 15% !default;
 
 // Paragraph
 
-$cadmin-paragraph-margin-bottom: 1rem !default;
+$cadmin-paragraph-margin-bottom: 16px !default;
 
-$cadmin-display1-size: 6rem !default;
-$cadmin-display2-size: 5.5rem !default;
-$cadmin-display3-size: 4.5rem !default;
-$cadmin-display4-size: 3.5rem !default;
+$cadmin-display1-size: 96px !default;
+$cadmin-display2-size: 88px !default;
+$cadmin-display3-size: 72px !default;
+$cadmin-display4-size: 56px !default;
 
 $cadmin-display1-weight: 300 !default;
 $cadmin-display2-weight: 300 !default;
@@ -541,30 +541,30 @@ $cadmin-code-font-size: 87.5% !default;
 $cadmin-kbd-bg: $cadmin-gray-900 !default;
 $cadmin-kbd-color: $cadmin-white !default;
 $cadmin-kbd-font-size: $cadmin-code-font-size !default;
-$cadmin-kbd-padding-x: 0.4rem !default;
-$cadmin-kbd-padding-y: 0.2rem !default;
-$cadmin-kbd-box-shadow: inset 0 -0.1rem 0 rgba($cadmin-black, 0.25) !default;
+$cadmin-kbd-padding-x: 6.4px !default;
+$cadmin-kbd-padding-y: 3.2px !default;
+$cadmin-kbd-box-shadow: inset 0 -1.6px 0 rgba($cadmin-black, 0.25) !default;
 
 $cadmin-nested-kbd-font-weight: $cadmin-font-weight-bold !default;
 
 $cadmin-pre-color: $cadmin-gray-900 !default;
 $cadmin-pre-scrollable-max-height: 340px !default;
 
-$cadmin-list-inline-padding: 0.5rem !default;
+$cadmin-list-inline-padding: 8px !default;
 
 $cadmin-mark-bg: #fcf8e3 !default;
 
 // Buttons + Forms
 
-$cadmin-label-margin-bottom: 0.5rem !default;
+$cadmin-label-margin-bottom: 8px !default;
 
 $cadmin-input-btn-font-family: null !default;
 $cadmin-input-btn-font-size: $cadmin-font-size-base !default;
 $cadmin-input-btn-line-height: $cadmin-line-height-base !default;
-$cadmin-input-btn-padding-x: 0.75rem !default;
-$cadmin-input-btn-padding-y: 0.375rem !default;
+$cadmin-input-btn-padding-x: 12px !default;
+$cadmin-input-btn-padding-y: 6px !default;
 
-$cadmin-input-btn-focus-width: 0.2rem !default;
+$cadmin-input-btn-focus-width: 3.2px !default;
 
 $cadmin-input-btn-focus-color: rgba($cadmin-component-active-bg, 0.25) !default;
 $cadmin-input-btn-focus-box-shadow: 0 0 0 $cadmin-input-btn-focus-width
@@ -572,13 +572,13 @@ $cadmin-input-btn-focus-box-shadow: 0 0 0 $cadmin-input-btn-focus-width
 
 $cadmin-input-btn-font-size-sm: $cadmin-font-size-sm !default;
 $cadmin-input-btn-line-height-sm: $cadmin-line-height-sm !default;
-$cadmin-input-btn-padding-x-sm: 0.5rem !default;
-$cadmin-input-btn-padding-y-sm: 0.25rem !default;
+$cadmin-input-btn-padding-x-sm: 8px !default;
+$cadmin-input-btn-padding-y-sm: 4px !default;
 
 $cadmin-input-btn-font-size-lg: $cadmin-font-size-lg !default;
 $cadmin-input-btn-line-height-lg: $cadmin-line-height-lg !default;
-$cadmin-input-btn-padding-x-lg: 1rem !default;
-$cadmin-input-btn-padding-y-lg: 0.5rem !default;
+$cadmin-input-btn-padding-x-lg: 16px !default;
+$cadmin-input-btn-padding-y-lg: 8px !default;
 
 $cadmin-input-btn-border-width: $cadmin-border-width !default;
 

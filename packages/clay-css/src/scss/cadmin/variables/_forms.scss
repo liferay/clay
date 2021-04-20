@@ -2,10 +2,10 @@ $cadmin-input-bg: $cadmin-white !default;
 
 $cadmin-input-border-color: $cadmin-gray-400 !default;
 $cadmin-input-border-style: solid !default;
-$cadmin-input-border-top-width: 0.0625rem !default;
-$cadmin-input-border-right-width: 0.0625rem !default;
-$cadmin-input-border-bottom-width: 0.0625rem !default;
-$cadmin-input-border-left-width: 0.0625rem !default;
+$cadmin-input-border-top-width: 1px !default;
+$cadmin-input-border-right-width: 1px !default;
+$cadmin-input-border-bottom-width: 1px !default;
+$cadmin-input-border-left-width: 1px !default;
 
 $cadmin-input-border-width: $cadmin-input-border-top-width
 	$cadmin-input-border-right-width $cadmin-input-border-bottom-width
@@ -17,7 +17,7 @@ $cadmin-input-color: $cadmin-gray-700 !default;
 $cadmin-input-font-family: $cadmin-input-btn-font-family !default;
 $cadmin-input-font-size: $cadmin-input-btn-font-size !default;
 $cadmin-input-font-weight: $cadmin-font-weight-base !default;
-$cadmin-input-height: 2.375rem !default;
+$cadmin-input-height: 38px !default;
 $cadmin-input-line-height: $cadmin-input-btn-line-height !default;
 $cadmin-input-padding-x: $cadmin-input-btn-padding-x !default;
 $cadmin-input-padding-y: $cadmin-input-btn-padding-y !default;
@@ -87,7 +87,7 @@ $cadmin-input-height-inner-quarter: add(
 
 $cadmin-input-border-radius-lg: $cadmin-border-radius-lg !default;
 $cadmin-input-font-size-lg: $cadmin-input-btn-font-size-lg !default;
-$cadmin-input-height-lg: 3rem !default;
+$cadmin-input-height-lg: 48px !default;
 $cadmin-input-line-height-lg: $cadmin-input-btn-line-height-lg !default;
 $cadmin-input-padding-x-lg: $cadmin-input-btn-padding-x-lg !default;
 $cadmin-input-padding-y-lg: $cadmin-input-btn-padding-y-lg !default;
@@ -100,7 +100,7 @@ $cadmin-input-height-inner-lg-mobile: null !default;
 
 $cadmin-input-border-radius-sm: $cadmin-border-radius-sm !default;
 $cadmin-input-font-size-sm: $cadmin-input-btn-font-size-sm !default;
-$cadmin-input-height-sm: 1.9375rem !default;
+$cadmin-input-height-sm: 31px !default;
 $cadmin-input-line-height-sm: $cadmin-input-btn-line-height-sm !default;
 $cadmin-input-padding-x-sm: $cadmin-input-btn-padding-x-sm !default;
 $cadmin-input-padding-y-sm: $cadmin-input-btn-padding-y-sm !default;
@@ -194,11 +194,11 @@ $cadmin-input-textarea-height-sm: 120px !default;
 $cadmin-form-control-label-size: () !default;
 $cadmin-form-control-label-size: map-deep-merge(
 	(
-		border-width: 0.0625rem,
-		height: 1.25rem,
-		margin-bottom: 0.25rem,
-		margin-right: 0.5rem,
-		margin-top: 0.25rem,
+		border-width: 1px,
+		height: 20px,
+		margin-bottom: 4px,
+		margin-right: 8px,
+		margin-top: 4px,
 	),
 	$cadmin-form-control-label-size
 );
@@ -257,7 +257,7 @@ $cadmin-form-control-tag-group: map-deep-merge(
 		flex-wrap: wrap,
 		height: auto,
 		padding-bottom: $cadmin-form-control-tag-group-padding-y,
-		padding-right: 0.5rem,
+		padding-right: 8px,
 		padding-top: $cadmin-form-control-tag-group-padding-y,
 	),
 	$cadmin-form-control-tag-group
@@ -268,8 +268,8 @@ $cadmin-form-control-tag-group-autofit-row: map-deep-merge(
 	(
 		align-items: center,
 		flex-grow: 1,
-		margin-left: -0.5rem,
-		margin-right: -0.5rem,
+		margin-left: -8px,
+		margin-right: -8px,
 		width: auto,
 	),
 	$cadmin-form-control-tag-group-autofit-row
@@ -278,8 +278,8 @@ $cadmin-form-control-tag-group-autofit-row: map-deep-merge(
 $cadmin-form-control-tag-group-autofit-col: () !default;
 $cadmin-form-control-tag-group-autofit-col: map-deep-merge(
 	(
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		padding-left: 8px,
+		padding-right: 8px,
 	),
 	$cadmin-form-control-tag-group-autofit-col
 );
@@ -337,7 +337,7 @@ $cadmin-form-control-tag-group-component-action: map-deep-merge(
 		height: 100%,
 		margin-bottom: 0,
 		margin-top: 0,
-		width: 2rem,
+		width: 32px,
 	),
 	$cadmin-form-control-tag-group-component-action
 );
@@ -348,14 +348,14 @@ $cadmin-form-grid-gutter-width: 10px !default;
 
 // Form Group
 
-$cadmin-form-group-margin-bottom: 1rem !default;
+$cadmin-form-group-margin-bottom: 16px !default;
 
 $cadmin-form-group-margin-bottom-mobile: null !default;
 
-$cadmin-form-group-sm-margin-bottom: 1rem !default; // 16px
+$cadmin-form-group-sm-margin-bottom: 16px !default; // 16px
 $cadmin-form-group-sm-margin-bottom-mobile: null !default;
-$cadmin-form-group-sm-input-label-margin-bottom: 0.25rem !default; // 4px
-$cadmin-form-group-sm-item-label-spacer: 1.75rem !default; // 28px
+$cadmin-form-group-sm-input-label-margin-bottom: 4px !default; // 4px
+$cadmin-form-group-sm-item-label-spacer: 28px !default; // 28px
 
 // Form Group Autofit
 
@@ -369,35 +369,35 @@ $cadmin-input-file-cursor: $cadmin-link-cursor !default;
 
 $cadmin-form-check-input-cursor: $cadmin-link-cursor !default;
 $cadmin-form-check-input-gutter: 0 !default;
-$cadmin-form-check-input-margin-x: 0.25rem !default;
+$cadmin-form-check-input-margin-x: 4px !default;
 $cadmin-form-check-input-margin-y: 0 !default;
 
 $cadmin-form-check-label-cursor: $cadmin-input-label-for-cursor !default;
 
-$cadmin-form-check-label-text-margin-left: -0.1875rem !default;
-$cadmin-form-check-label-text-padding-left: 0.5rem !default;
+$cadmin-form-check-label-text-margin-left: -3px !default;
+$cadmin-form-check-label-text-padding-left: 8px !default;
 
 $cadmin-form-check-input-disabled-cursor: $cadmin-disabled-cursor !default;
 $cadmin-form-check-label-text-disabled-cursor: $cadmin-disabled-cursor !default;
 
 // Form Check Inline
 
-$cadmin-form-check-inline-margin-x: 0.75rem !default;
+$cadmin-form-check-inline-margin-x: 12px !default;
 
 $cadmin-form-check-inline-input-margin-x: auto !default;
 
 // Form Feedback
 
 $cadmin-form-text-color: $cadmin-gray-600 !default;
-$cadmin-form-text-font-size: 0.875rem !default; // 14px
+$cadmin-form-text-font-size: 14px !default; // 14px
 $cadmin-form-text-font-weight: null !default;
-$cadmin-form-text-margin-top: 0.25rem !default;
+$cadmin-form-text-margin-top: 4px !default;
 
 $cadmin-form-feedback-font-size: $cadmin-small-font-size !default;
 $cadmin-form-feedback-font-weight: null !default;
-$cadmin-form-feedback-margin-top: 0.25rem !default;
+$cadmin-form-feedback-margin-top: 4px !default;
 
-$cadmin-form-feedback-indicator-margin-x: 0.125rem !default;
+$cadmin-form-feedback-indicator-margin-x: 2px !default;
 
 $cadmin-form-feedback-valid-color: $cadmin-success !default;
 
@@ -545,7 +545,7 @@ $cadmin-input-select-bg-size: 8px 10px !default;
 $cadmin-input-select-cursor: $cadmin-link-cursor !default;
 $cadmin-input-select-padding-bottom: null !default;
 $cadmin-input-select-padding-left: null !default;
-$cadmin-input-select-padding-right: 1rem + $cadmin-input-btn-padding-x !default;
+$cadmin-input-select-padding-right: 16px + $cadmin-input-btn-padding-x !default;
 $cadmin-input-select-padding-top: null !default;
 
 $cadmin-input-select-icon-color: $cadmin-input-color !default;
@@ -617,14 +617,14 @@ $cadmin-input-select-size: map-deep-merge(
 	(
 		background-image: none,
 		height: auto,
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		padding-left: 8px,
+		padding-right: 8px,
 		scrollbar-width: thin,
 		focus: (
 			background-image: none,
 		),
 		option: (
-			padding: 0.25rem,
+			padding: 4px,
 		),
 	),
 	$cadmin-input-select-size
@@ -640,8 +640,8 @@ $cadmin-input-select-multiple: map-deep-merge(
 
 // Form Group Autofit
 
-$cadmin-form-group-item-label-max-width: 12.5rem !default; // 200px
-$cadmin-form-group-item-label-spacer: 2rem !default; // 32px
+$cadmin-form-group-item-label-max-width: 200px !default; // 200px
+$cadmin-form-group-item-label-spacer: 32px !default; // 32px
 
 // Input Group
 
@@ -649,7 +649,7 @@ $cadmin-input-group-addon-bg: $cadmin-gray-200 !default;
 $cadmin-input-group-addon-border-color: $cadmin-input-border-color !default;
 $cadmin-input-group-addon-color: $cadmin-input-color !default;
 $cadmin-input-group-addon-font-weight: $cadmin-font-weight-normal !default;
-$cadmin-input-group-addon-min-width: 2.375rem !default; // 38px
+$cadmin-input-group-addon-min-width: 38px !default; // 38px
 $cadmin-input-group-addon-padding-x: $cadmin-input-padding-x !default;
 $cadmin-input-group-addon-padding-y: $cadmin-input-padding-y !default;
 
@@ -657,12 +657,12 @@ $cadmin-input-group-addon-padding-y: $cadmin-input-padding-y !default;
 
 $cadmin-input-group-secondary-addon-bg: $cadmin-secondary !default;
 $cadmin-input-group-secondary-addon-border-color: $cadmin-secondary !default;
-$cadmin-input-group-secondary-addon-border-width: 0.0625rem !default; // 1px
+$cadmin-input-group-secondary-addon-border-width: 1px !default; // 1px
 $cadmin-input-group-secondary-addon-color: $cadmin-white !default;
 
 // Input Group Item
 
-$cadmin-input-group-item-margin-left: 0.5rem !default;
+$cadmin-input-group-item-margin-left: 8px !default;
 
 // Input Group Inset
 
@@ -676,11 +676,11 @@ $cadmin-input-group-inset-item-btn: map-deep-merge(
 		display: block,
 		height: 75%,
 		line-height: 1,
-		margin-left: 0.125rem,
-		margin-right: 0.125rem,
+		margin-left: 2px,
+		margin-right: 2px,
 		padding-bottom: 0,
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		padding-left: 8px,
+		padding-right: 8px,
 		padding-top: 0,
 		c-inner: (
 			align-items: center,
@@ -702,7 +702,7 @@ $cadmin-input-group-inset-form-file-btn: map-deep-merge(
 
 // Input Group Lg
 
-$cadmin-input-group-addon-min-width-lg: 3rem !default; // 48px
+$cadmin-input-group-addon-min-width-lg: 48px !default; // 48px
 $cadmin-input-group-addon-padding-x-lg: $cadmin-input-padding-x-lg !default;
 $cadmin-input-group-addon-padding-y-lg: null !default;
 
@@ -750,8 +750,8 @@ $cadmin-input-group-lg-inset-item-form-file-btn: map-deep-merge(
 		height: 100%,
 		line-height: 1,
 		padding-bottom: 0,
-		padding-left: 0.75rem,
-		padding-right: 0.75rem,
+		padding-left: 12px,
+		padding-right: 12px,
 		padding-top: 0,
 	),
 	$cadmin-input-group-lg-inset-item-form-file-btn
@@ -759,7 +759,7 @@ $cadmin-input-group-lg-inset-item-form-file-btn: map-deep-merge(
 
 // Input Group Sm
 
-$cadmin-input-group-addon-min-width-sm: 1.9375rem !default; // 31px
+$cadmin-input-group-addon-min-width-sm: 31px !default; // 31px
 $cadmin-input-group-addon-padding-x-sm: $cadmin-input-padding-x-sm !default;
 $cadmin-input-group-addon-padding-y-sm: null !default;
 
@@ -799,8 +799,8 @@ $cadmin-input-group-sm-inset-item-btn: map-deep-merge(
 	(
 		line-height: 1,
 		padding-bottom: 0,
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		padding-left: 8px,
+		padding-right: 8px,
 		padding-top: 0,
 	),
 	$cadmin-input-group-sm-inset-item-btn
@@ -812,8 +812,8 @@ $cadmin-input-group-sm-inset-item-form-file-btn: map-deep-merge(
 		height: 100%,
 		line-height: 1,
 		padding-bottom: 0,
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		padding-left: 8px,
+		padding-right: 8px,
 		padding-top: 0,
 	),
 	$cadmin-input-group-sm-inset-item-form-file-btn
@@ -825,9 +825,9 @@ $cadmin-input-group-stacked-sm-down: () !default;
 $cadmin-input-group-stacked-sm-down: map-deep-merge(
 	(
 		breakpoint: sm,
-		item-margin-bottom: 0.5rem,
+		item-margin-bottom: 8px,
 		item-margin-left: 0,
-		shrink-margin-right: 0.5rem,
+		shrink-margin-right: 8px,
 	),
 	$cadmin-input-group-stacked-sm-down
 );

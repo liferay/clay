@@ -8,20 +8,20 @@ $cadmin-list-group-active-bg: $cadmin-list-group-hover-bg !default;
 $cadmin-list-group-active-border-color: $cadmin-list-group-border-color !default;
 $cadmin-list-group-active-color: $cadmin-gray-900 !default;
 
-$cadmin-list-group-font-size: 0.875rem !default; // 14px
-$cadmin-list-group-item-padding-x: 1rem !default; // 16px
-$cadmin-list-group-item-padding-y: 1rem !default; // 16px
+$cadmin-list-group-font-size: 14px !default; // 14px
+$cadmin-list-group-item-padding-x: 16px !default; // 16px
+$cadmin-list-group-item-padding-y: 16px !default; // 16px
 
 // List Group Header
 
 $cadmin-list-group-header-bg: $cadmin-gray-100 !default;
-$cadmin-list-group-header-padding-y: 0.5rem !default; // 8px
+$cadmin-list-group-header-padding-y: 8px !default; // 8px
 
 $cadmin-list-group-header-title: () !default;
 $cadmin-list-group-header-title: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		font-size: 0.75rem,
+		font-size: 12px,
 		text-transform: uppercase,
 	),
 	$cadmin-list-group-header-title
@@ -46,7 +46,7 @@ $cadmin-list-group-title: () !default;
 $cadmin-list-group-title: map-deep-merge(
 	(
 		color: $cadmin-gray-900,
-		font-size: 0.875rem,
+		font-size: 14px,
 		line-height: 1.45,
 	),
 	$cadmin-list-group-title

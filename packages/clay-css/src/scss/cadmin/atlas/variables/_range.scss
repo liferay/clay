@@ -14,7 +14,7 @@ $cadmin-clay-range-input: map-deep-merge(
 		color: $cadmin-gray-500,
 		thumb-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3),
 		track-bg: $cadmin-gray-200,
-		tooltip-padding: 0.5rem 0.75rem,
+		tooltip-padding: 8px 12px,
 		hover-thumb-bg: $cadmin-primary-l3,
 		focus-thumb-box-shadow: $cadmin-component-focus-inset-box-shadow,
 		disabled-thumb-bg: $cadmin-gray-100,

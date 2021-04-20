@@ -1,14 +1,14 @@
-$cadmin-sidebar-padding-bottom: 1rem !default; // 16px
-$cadmin-sidebar-padding-left: 1rem !default; // 16px
-$cadmin-sidebar-padding-right: 1rem !default; // 16px
-$cadmin-sidebar-padding-top: 1rem !default; // 16px
+$cadmin-sidebar-padding-bottom: 16px !default; // 16px
+$cadmin-sidebar-padding-left: 16px !default; // 16px
+$cadmin-sidebar-padding-right: 16px !default; // 16px
+$cadmin-sidebar-padding-top: 16px !default; // 16px
 
 // Sidebar Header Title
 
 $cadmin-sidebar-header-component-title: () !default;
 $cadmin-sidebar-header-component-title: map-deep-merge(
 	(
-		font-size: 1.5rem,
+		font-size: 24px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		clay-link: (
 			color: $cadmin-gray-900,
@@ -22,7 +22,7 @@ $cadmin-sidebar-header-component-title: map-deep-merge(
 $cadmin-sidebar-header-component-subtitle: () !default;
 $cadmin-sidebar-header-component-subtitle: map-deep-merge(
 	(
-		font-size: 1.125rem,
+		font-size: 18px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		margin-bottom: 0,
 	),
@@ -34,9 +34,9 @@ $cadmin-sidebar-header-component-subtitle: map-deep-merge(
 $cadmin-sidebar-dt: () !default;
 $cadmin-sidebar-dt: map-deep-merge(
 	(
-		font-size: 0.875rem,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
-		margin-bottom: 0.25rem,
+		margin-bottom: 4px,
 		text-transform: uppercase,
 	),
 	$cadmin-sidebar-dt
@@ -47,27 +47,27 @@ $cadmin-sidebar-dt: map-deep-merge(
 $cadmin-sidebar-dd: () !default;
 $cadmin-sidebar-dd: map-deep-merge(
 	(
-		font-size: 0.875rem,
-		margin-bottom: 0.75rem,
+		font-size: 14px,
+		margin-bottom: 12px,
 	),
 	$cadmin-sidebar-dd
 );
 
 // Sidebar Panel
 
-$cadmin-sidebar-panel-margin-bottom: 1rem !default; // 16px
+$cadmin-sidebar-panel-margin-bottom: 16px !default; // 16px
 
 // Sidebar List Group
 
 $cadmin-sidebar-list-group-bg: transparent !default;
 $cadmin-sidebar-list-group-border-color: $cadmin-gray-300 !default;
-$cadmin-sidebar-list-group-font-size: 0.875rem !default; // 14px
+$cadmin-sidebar-list-group-font-size: 14px !default; // 14px
 $cadmin-sidebar-list-group-type: list-group-flush !default;
 
 $cadmin-sidebar-list-group-item-padding: 0 !default;
 
-$cadmin-sidebar-list-group-autofit-col-padding-x: 0.5rem !default; // 8px
-$cadmin-sidebar-list-group-autofit-col-padding-y: 1rem !default; // 16px
+$cadmin-sidebar-list-group-autofit-col-padding-x: 8px !default; // 8px
+$cadmin-sidebar-list-group-autofit-col-padding-y: 16px !default; // 16px
 
 $cadmin-sidebar-list-group-sticker-size: () !default;
 $cadmin-sidebar-list-group-sticker-size: map-deep-merge(
@@ -91,7 +91,7 @@ $cadmin-sidebar-light: map-deep-merge(
 		),
 		panel-bg: $cadmin-gray-200,
 		sidebar-list-group-title: (
-			font-size: 1rem,
+			font-size: 16px,
 			clay-link: (
 				color: $cadmin-gray-900,
 			),

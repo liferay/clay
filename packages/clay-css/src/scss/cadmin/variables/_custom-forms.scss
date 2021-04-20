@@ -7,7 +7,7 @@ $cadmin-custom-forms-transition: background-color 0.15s ease-in-out,
 
 // Custom Control Indicator
 
-$cadmin-custom-control-indicator-size: 1rem !default;
+$cadmin-custom-control-indicator-size: 16px !default;
 
 $cadmin-custom-control-indicator-bg: $cadmin-input-bg !default;
 $cadmin-custom-control-indicator-bg-size: 50% 50% !default;
@@ -15,7 +15,7 @@ $cadmin-custom-control-indicator-border-color: $cadmin-gray-500 !default;
 $cadmin-custom-control-indicator-border-style: solid !default;
 $cadmin-custom-control-indicator-border-width: $cadmin-border-width !default;
 $cadmin-custom-control-indicator-box-shadow: $cadmin-input-box-shadow !default;
-$cadmin-custom-control-indicator-position-top: 0.25rem !default;
+$cadmin-custom-control-indicator-position-top: 4px !default;
 
 $cadmin-custom-control-indicator-focus-border-color: $cadmin-input-focus-border-color !default;
 $cadmin-custom-control-indicator-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
@@ -67,8 +67,8 @@ $cadmin-custom-control-indicator-checked-disabled-border-color: $cadmin-custom-c
 // Custom Control
 
 $cadmin-custom-control-cursor: null !default;
-$cadmin-custom-control-gutter: 0.5rem !default;
-$cadmin-custom-control-spacer-x: 1rem !default;
+$cadmin-custom-control-gutter: 8px !default;
+$cadmin-custom-control-spacer-x: 16px !default;
 
 /// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
 
@@ -105,7 +105,7 @@ $cadmin-custom-control-description-cursor: $cadmin-form-check-label-cursor !defa
 
 /// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
 
-$cadmin-custom-control-description-font-size: 1rem !default; // 16px
+$cadmin-custom-control-description-font-size: 16px !default; // 16px
 
 /// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
 
@@ -117,7 +117,7 @@ $cadmin-custom-control-description-line-height: $cadmin-custom-control-min-heigh
 
 /// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text` instead
 
-$cadmin-custom-control-description-padding-left: 0.5rem !default; // 8px
+$cadmin-custom-control-description-padding-left: 8px !default; // 8px
 
 /// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-disabled` instead
 
@@ -234,7 +234,7 @@ $cadmin-custom-select-font-family: $cadmin-input-font-family !default;
 $cadmin-custom-select-font-size: $cadmin-input-font-size !default;
 $cadmin-custom-select-font-weight: $cadmin-input-font-weight !default;
 $cadmin-custom-select-height: $cadmin-input-height !default;
-$cadmin-custom-select-indicator-padding: 1rem !default;
+$cadmin-custom-select-indicator-padding: 16px !default;
 $cadmin-custom-select-line-height: $cadmin-input-line-height !default;
 $cadmin-custom-select-padding-x: $cadmin-input-padding-x !default;
 $cadmin-custom-select-padding-y: $cadmin-input-padding-y !default;
@@ -289,19 +289,19 @@ $cadmin-custom-select-padding-y-sm: $cadmin-input-padding-y-sm !default;
 // Custom Range
 
 $cadmin-custom-range-track-bg: $cadmin-gray-300 !default;
-$cadmin-custom-range-track-border-radius: 1rem !default;
-$cadmin-custom-range-track-box-shadow: inset 0 0.25rem 0.25rem
+$cadmin-custom-range-track-border-radius: 16px !default;
+$cadmin-custom-range-track-box-shadow: inset 0 4px 4px
 	rgba($cadmin-black, 0.1) !default;
 $cadmin-custom-range-track-cursor: pointer !default;
-$cadmin-custom-range-track-height: 0.5rem !default;
+$cadmin-custom-range-track-height: 8px !default;
 $cadmin-custom-range-track-width: 100% !default;
 
 $cadmin-custom-range-thumb-bg: $cadmin-component-active-bg !default;
 $cadmin-custom-range-thumb-border: 0 !default;
-$cadmin-custom-range-thumb-border-radius: 1rem !default;
-$cadmin-custom-range-thumb-box-shadow: 0 0.1rem 0.25rem rgba($cadmin-black, 0.1) !default;
+$cadmin-custom-range-thumb-border-radius: 16px !default;
+$cadmin-custom-range-thumb-box-shadow: 0 1.6px 4px rgba($cadmin-black, 0.1) !default;
 
-$cadmin-custom-range-thumb-width: 1rem !default;
+$cadmin-custom-range-thumb-width: 16px !default;
 
 $cadmin-custom-range-thumb-height: $cadmin-custom-range-thumb-width !default;
 

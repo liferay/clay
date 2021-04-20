@@ -6,7 +6,7 @@ $cadmin-c-empty-state-animation: map-deep-merge(
 		align-items: center,
 		display: flex,
 		flex-direction: column,
-		margin: 5rem auto 1.5rem,
+		margin: 80px auto 24px,
 		max-width: 340px,
 		text-align: center,
 	),
@@ -16,7 +16,7 @@ $cadmin-c-empty-state-animation: map-deep-merge(
 $cadmin-c-empty-state-image: () !default;
 $cadmin-c-empty-state-image: map-deep-merge(
 	(
-		margin-bottom: -0.5rem,
+		margin-bottom: -8px,
 		max-width: 250px,
 		width: 100%,
 		word-wrap: break-word,
@@ -41,11 +41,11 @@ $cadmin-c-empty-state-aspect-ratio: map-deep-merge(
 $cadmin-c-empty-state-title: () !default;
 $cadmin-c-empty-state-title: map-deep-merge(
 	(
-		font-size: 1.25rem,
+		font-size: 20px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-headings-line-height,
 		margin-bottom: 0,
-		margin-top: 2.5rem,
+		margin-top: 40px,
 		max-width: 100%,
 		word-wrap: break-word,
 	),
@@ -57,7 +57,7 @@ $cadmin-c-empty-state-text: map-deep-merge(
 	(
 		color: $cadmin-secondary,
 		margin-bottom: 0,
-		margin-top: 0.5rem,
+		margin-top: 8px,
 		max-width: 100%,
 		word-wrap: break-word,
 	),
@@ -67,7 +67,7 @@ $cadmin-c-empty-state-text: map-deep-merge(
 $cadmin-c-empty-state-footer: () !default;
 $cadmin-c-empty-state-footer: map-deep-merge(
 	(
-		margin-top: 1rem,
+		margin-top: 16px,
 		max-width: 100%,
 		word-wrap: break-word,
 	),

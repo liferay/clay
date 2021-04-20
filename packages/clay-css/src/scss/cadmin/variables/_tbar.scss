@@ -1,4 +1,4 @@
-$cadmin-tbar-item-padding-x: 0.5rem !default;
+$cadmin-tbar-item-padding-x: 8px !default;
 $cadmin-tbar-item-padding-y: null !default;
 
 // Tbar Stacked
@@ -8,8 +8,8 @@ $cadmin-tbar-stacked: map-deep-merge(
 	(
 		display: inline-flex,
 		height: 100%,
-		padding-bottom: 0.5rem,
-		padding-top: 0.5rem,
+		padding-bottom: 8px,
+		padding-top: 8px,
 		nav: (
 			flex-direction: column,
 			min-width: 0,
@@ -29,25 +29,25 @@ $cadmin-tbar-stacked: map-deep-merge(
 			content: '',
 			display: block,
 			height: 1px,
-			margin-bottom: 0.25rem,
-			margin-top: 0.25rem,
-			width: 2.5rem,
+			margin-bottom: 4px,
+			margin-top: 4px,
+			width: 40px,
 		),
 		divider-after: (
 			background-color: $cadmin-body-color,
 			content: '',
 			display: block,
 			height: 1px,
-			margin-bottom: 0.25rem,
-			margin-top: 0.25rem,
-			width: 2.5rem,
+			margin-bottom: 4px,
+			margin-top: 4px,
+			width: 40px,
 		),
 		btn-monospaced: (
 			border-color: transparent,
 			border-radius: 0,
 			border-width: 0,
 			color: inherit,
-			height: 2.5rem,
+			height: 40px,
 			margin-bottom: 0,
 			margin-top: 0,
 			overflow: visible,
@@ -56,14 +56,14 @@ $cadmin-tbar-stacked: map-deep-merge(
 			padding-right: 0,
 			padding-top: 0,
 			position: relative,
-			width: 2.5rem,
+			width: 40px,
 			focus: (
-				box-shadow: inset 0 0 0 0.125rem $cadmin-primary-l1#{','} inset 0
-					0 0 0.25rem $cadmin-white,
+				box-shadow: inset 0 0 0 2px $cadmin-primary-l1#{','} inset 0
+					0 0 4px $cadmin-white,
 			),
 			active-focus: (
-				box-shadow: inset 0 0 0 0.125rem $cadmin-primary-l1#{','} inset 0
-					0 0 0.25rem $cadmin-white,
+				box-shadow: inset 0 0 0 2px $cadmin-primary-l1#{','} inset 0
+					0 0 4px $cadmin-white,
 			),
 		),
 	),
@@ -124,8 +124,8 @@ $cadmin-component-tbar: map-deep-merge(
 	(
 		border-color: $cadmin-gray-300,
 		border-style: solid,
-		border-width: 0 0 0.0625rem 0,
-		height: 3.5rem,
+		border-width: 0 0 1px 0,
+		height: 56px,
 	),
 	$cadmin-component-tbar
 );
@@ -199,7 +199,7 @@ $cadmin-tbar-dark-d1: map-deep-merge(
 				left: 0,
 				position: absolute,
 				top: 0,
-				width: 0.25rem,
+				width: 4px,
 			),
 		),
 	),
@@ -245,11 +245,11 @@ $cadmin-subnav-tbar-component-title: () !default;
 $cadmin-subnav-tbar-component-title: map-deep-merge(
 	(
 		display: inline-block,
-		font-size: 0.875rem,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: 1.45,
-		margin-bottom: 0.25rem,
-		margin-top: 0.25rem,
+		margin-bottom: 4px,
+		margin-top: 4px,
 		max-width: 100%,
 	),
 	$cadmin-subnav-tbar-component-title
@@ -270,8 +270,8 @@ $cadmin-subnav-tbar-component-text: map-deep-merge(
 	(
 		display: inline-block,
 		line-height: 1.45,
-		margin-bottom: 0.25rem,
-		margin-top: 0.25rem,
+		margin-bottom: 4px,
+		margin-top: 4px,
 		max-width: 100%,
 	),
 	$cadmin-subnav-tbar-component-text
@@ -280,24 +280,24 @@ $cadmin-subnav-tbar-component-text: map-deep-merge(
 $cadmin-subnav-tbar: () !default;
 $cadmin-subnav-tbar: map-deep-merge(
 	(
-		font-size: 0.875rem,
+		font-size: 14px,
 		section-text-align: left,
 		strong-font-weight: $cadmin-font-weight-semi-bold,
-		item-padding-x: 0.5rem,
-		btn-height: 1.5rem,
+		item-padding-x: 8px,
+		btn-height: 24px,
 		btn-line-height: 1,
-		btn-margin-y: 0.125rem,
+		btn-margin-y: 2px,
 		btn-padding-y: 0,
-		btn-monospaced-margin-y: 0.125rem,
-		btn-monospaced-padding: 0.25rem,
+		btn-monospaced-margin-y: 2px,
+		btn-monospaced-padding: 4px,
 		component-link: $cadmin-subnav-tbar-component-link,
 		component-title: $cadmin-subnav-tbar-component-title,
 		component-text: $cadmin-subnav-tbar-component-text,
-		link-margin-y: 0.125rem,
-		link-padding-x: 0.25rem,
-		link-padding-y: 0.09375rem,
-		link-monospaced-margin-y: 0.125rem,
-		link-monospaced-size: 1.5rem,
+		link-margin-y: 2px,
+		link-padding-x: 4px,
+		link-padding-y: 1.5px,
+		link-monospaced-margin-y: 2px,
+		link-monospaced-size: 24px,
 	),
 	$cadmin-subnav-tbar
 );
@@ -309,7 +309,7 @@ $cadmin-subnav-tbar-light: map-deep-merge(
 	(
 		bg-color: $cadmin-light,
 		color: $cadmin-navbar-light-color,
-		padding-y: 0.125rem,
+		padding-y: 2px,
 	),
 	$cadmin-subnav-tbar-light
 );
@@ -350,10 +350,10 @@ $cadmin-subnav-tbar-primary-component-label: map-deep-merge(
 $cadmin-subnav-tbar-primary-tbar-label-size: () !default;
 $cadmin-subnav-tbar-primary-tbar-label-size: map-deep-merge(
 	(
-		font-size: 0.75rem,
+		font-size: 12px,
 		margin-right: 0,
-		padding-x: 0.625rem,
-		padding-y: 0.3125rem,
+		padding-x: 10px,
+		padding-y: 5px,
 		text-transform: none,
 	),
 	$cadmin-subnav-tbar-primary-tbar-label-size
@@ -363,14 +363,14 @@ $cadmin-subnav-tbar-primary: () !default;
 $cadmin-subnav-tbar-primary: map-deep-merge(
 	(
 		bg-color: $cadmin-primary-l2,
-		padding-x: 0.25rem,
-		padding-y: 0.625rem,
+		padding-x: 4px,
+		padding-y: 10px,
 		item-justify-content: flex-start,
-		item-padding-x: 0.25rem,
+		item-padding-x: 4px,
 		link-monospaced-border-radius: 0,
 		link-monospaced-border-width: 0,
-		link-monospaced-margin-y: -0.625rem,
-		link-monospaced-size: 3rem,
+		link-monospaced-margin-y: -10px,
+		link-monospaced-size: 48px,
 		component-link: $cadmin-subnav-tbar-primary-component-link,
 		component-label: $cadmin-subnav-tbar-primary-component-label,
 		tbar-label-size: $cadmin-subnav-tbar-primary-tbar-label-size,

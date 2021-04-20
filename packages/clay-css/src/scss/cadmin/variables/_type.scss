@@ -2,7 +2,7 @@ $cadmin-b-font-weight: null !default;
 
 $cadmin-strong-font-weight: null !default;
 
-$cadmin-reference-mark-font-size: 0.75rem !default;
+$cadmin-reference-mark-font-size: 12px !default;
 $cadmin-reference-mark-vertical-align: super !default;
 
 $cadmin-mark-color: null !default;
@@ -12,7 +12,7 @@ $cadmin-mark-color: null !default;
 $cadmin-c-kbd-group: () !default;
 $cadmin-c-kbd-group: map-deep-merge(
 	(
-		font-size: 0.875rem,
+		font-size: 14px,
 	),
 	$cadmin-c-kbd-group
 );
@@ -29,14 +29,14 @@ $cadmin-c-kbd: map-deep-merge(
 		color: inherit,
 		display: inline-block,
 		font-family: $cadmin-font-family-sans-serif,
-		font-size: 0.875rem,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
-		height: 1.5rem,
-		line-height: 1.375rem,
-		min-width: 1.5rem,
+		height: 24px,
+		line-height: 22px,
+		min-width: 24px,
 		padding-bottom: 0,
-		padding-left: 0.3125rem,
-		padding-right: 0.3125rem,
+		padding-left: 5px,
+		padding-right: 5px,
 		padding-top: 0,
 		text-align: center,
 		text-transform: capitalize,
@@ -108,7 +108,7 @@ $cadmin-c-kbd-inline-c-kbd-separator: map-merge(
 $cadmin-c-kbd-group-sm: () !default;
 $cadmin-c-kbd-group-sm: map-deep-merge(
 	(
-		font-size: 0.75rem,
+		font-size: 12px,
 	),
 	$cadmin-c-kbd-group-sm
 );
@@ -116,7 +116,7 @@ $cadmin-c-kbd-group-sm: map-deep-merge(
 $cadmin-c-kbd-sm: () !default;
 $cadmin-c-kbd-sm: map-deep-merge(
 	(
-		font-size: 0.75rem,
+		font-size: 12px,
 	),
 	$cadmin-c-kbd-sm
 );
@@ -124,7 +124,7 @@ $cadmin-c-kbd-sm: map-deep-merge(
 $cadmin-c-kbd-group-lg: () !default;
 $cadmin-c-kbd-group-lg: map-deep-merge(
 	(
-		font-size: 1rem,
+		font-size: 16px,
 	),
 	$cadmin-c-kbd-group-lg
 );
@@ -132,7 +132,7 @@ $cadmin-c-kbd-group-lg: map-deep-merge(
 $cadmin-c-kbd-lg: () !default;
 $cadmin-c-kbd-lg: map-deep-merge(
 	(
-		font-size: 1rem,
+		font-size: 16px,
 	),
 	$cadmin-c-kbd-lg
 );

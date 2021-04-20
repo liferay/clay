@@ -22,7 +22,7 @@ $cadmin-toggle-switch-bar-border-color: $cadmin-input-group-addon-border-color !
 $cadmin-toggle-switch-bar-border-radius: 3px !default;
 $cadmin-toggle-switch-bar-border-width: 1px !default;
 $cadmin-toggle-switch-bar-focus-box-shadow: $cadmin-input-btn-focus-box-shadow !default;
-$cadmin-toggle-switch-bar-font-size: 0.75rem !default; // 12px
+$cadmin-toggle-switch-bar-font-size: 12px !default; // 12px
 $cadmin-toggle-switch-bar-font-size-mobile: $cadmin-toggle-switch-bar-font-size !default;
 $cadmin-toggle-switch-bar-icon-color: $cadmin-input-color !default;
 
@@ -56,11 +56,11 @@ $cadmin-toggle-switch-label-disabled-color: $cadmin-input-label-disabled-color !
 
 // Toggle Switch Text
 
-$cadmin-toggle-switch-text-font-size: 0.75rem !default;
+$cadmin-toggle-switch-text-font-size: 12px !default;
 
 $cadmin-toggle-switch-text-disabled-color: $cadmin-input-label-disabled-color !default;
 
 // Simple Toggle Switch
 
 $cadmin-simple-toggle-switch-label-line-height: 1 !default;
-$cadmin-simple-toggle-switch-label-spacer-x: 0.5rem !default;
+$cadmin-simple-toggle-switch-label-spacer-x: 8px !default;

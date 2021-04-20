@@ -2,16 +2,16 @@
 /// @group pagination
 ////
 
-$cadmin-pagination-font-size: 0.875rem !default; // 14px
+$cadmin-pagination-font-size: 14px !default; // 14px
 $cadmin-pagination-line-height: 1 !default;
 
 // Pagination Item
 
-$cadmin-pagination-item-height: 2rem !default; // 32px
+$cadmin-pagination-item-height: 32px !default; // 32px
 
 // @deprecated as of v2 use the Sass map `$cadmin-pagination-item` instead
 
-$cadmin-pagination-item-margin-x: 0.25rem !default; // 4px
+$cadmin-pagination-item-margin-x: 4px !default; // 4px
 
 // Pagination Link
 
@@ -28,9 +28,9 @@ $cadmin-pagination-link-last-border-radius: $cadmin-pagination-link-border-radiu
 
 $cadmin-pagination-bg: transparent !default;
 $cadmin-pagination-border-color: $cadmin-pagination-bg !default;
-$cadmin-pagination-border-width: 0.0625rem !default; // 1px
+$cadmin-pagination-border-width: 1px !default; // 1px
 $cadmin-pagination-color: $cadmin-gray-600 !default;
-$cadmin-pagination-padding-x: 0.625rem !default; // 10px
+$cadmin-pagination-padding-x: 10px !default; // 10px
 $cadmin-pagination-padding-y: 0 !default;
 
 $cadmin-pagination-hover-bg: rgba(0, 0, 0, 0.02) !default;
@@ -61,7 +61,7 @@ $cadmin-pagination-link-focus: map-deep-merge(
 
 // Pagination Dropdown Menu
 
-$cadmin-pagination-dropdown-menu-spacer-y: 0.625rem !default; // 10px
+$cadmin-pagination-dropdown-menu-spacer-y: 10px !default; // 10px
 
 // Pagination Items Per Page Link
 
@@ -81,13 +81,13 @@ $cadmin-pagination-results-color: $cadmin-pagination-color !default;
 
 // Sizes
 
-$cadmin-pagination-link-border-radius-sm: 0.3125rem !default;
-$cadmin-pagination-font-size-sm: 0.75rem !default; // 12px
-$cadmin-pagination-item-height-sm: 1.5rem !default; // 24px
+$cadmin-pagination-link-border-radius-sm: 5px !default;
+$cadmin-pagination-font-size-sm: 12px !default; // 12px
+$cadmin-pagination-item-height-sm: 24px !default; // 24px
 $cadmin-pagination-padding-y-sm: 0 !default;
 
-$cadmin-pagination-link-border-radius-lg: 0.3125rem !default; // 5px
-$cadmin-pagination-font-size-lg: 1.125rem !default; // 18px
-$cadmin-pagination-item-height-lg: 2.75rem !default; //44px
-$cadmin-pagination-padding-x-lg: 1rem !default; // 16px
+$cadmin-pagination-link-border-radius-lg: 5px !default; // 5px
+$cadmin-pagination-font-size-lg: 18px !default; // 18px
+$cadmin-pagination-item-height-lg: 44px !default; //44px
+$cadmin-pagination-padding-x-lg: 16px !default; // 16px
 $cadmin-pagination-padding-y-lg: 0 !default;

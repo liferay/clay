@@ -5,15 +5,15 @@ $cadmin-navbar-font-size: null !default;
 $cadmin-navbar-padding-x: $cadmin-spacer !default;
 $cadmin-navbar-padding-y: $cadmin-spacer / 2 !default;
 
-$cadmin-navbar-nav-link-padding-x: 0.5rem !default;
+$cadmin-navbar-nav-link-padding-x: 8px !default;
 
-$cadmin-navbar-title-font-size: 1.25rem !default; // 20px
+$cadmin-navbar-title-font-size: 20px !default; // 20px
 $cadmin-navbar-title-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-navbar-title-margin-bottom: 0 !default;
 $cadmin-navbar-title-text-transform: null !default;
 
-$cadmin-navbar-text-truncate-spacer-right: 1.5625rem !default; // 25px
-$cadmin-navbar-text-truncate-max-width: 12.5rem !default; // 200px
+$cadmin-navbar-text-truncate-spacer-right: 25px !default; // 25px
+$cadmin-navbar-text-truncate-max-width: 200px !default; // 200px
 
 // Navbar Brand
 
@@ -34,8 +34,8 @@ $cadmin-navbar-brand-padding-y: (
 $cadmin-navbar-toggler-border-radius: $cadmin-btn-border-radius !default;
 $cadmin-navbar-toggler-cursor: null !default;
 $cadmin-navbar-toggler-font-size: $cadmin-font-size-lg !default;
-$cadmin-navbar-toggler-padding-x: 0.75rem !default;
-$cadmin-navbar-toggler-padding-y: 0.25rem !default;
+$cadmin-navbar-toggler-padding-x: 12px !default;
+$cadmin-navbar-toggler-padding-y: 4px !default;
 
 // Navbar Underline
 

@@ -3,9 +3,9 @@ $cadmin-sticker-border-radius: $cadmin-border-radius !default;
 $cadmin-sticker-border-style: null !default;
 $cadmin-sticker-border-width: null !default;
 $cadmin-sticker-color: $cadmin-label-color !default;
-$cadmin-sticker-font-size: 0.875rem !default; // 14px
+$cadmin-sticker-font-size: 14px !default; // 14px
 $cadmin-sticker-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-sticker-size: 2rem !default; // 32px
+$cadmin-sticker-size: 32px !default; // 32px
 
 $cadmin-sticker-inline-item-font-size: null !default;
 
@@ -14,8 +14,8 @@ $cadmin-sticker-inline-item-font-size: null !default;
 $cadmin-sticker-sm: () !default;
 $cadmin-sticker-sm: map-deep-merge(
 	(
-		font-size: 0.75rem,
-		size: 1.5rem,
+		font-size: 12px,
+		size: 24px,
 	),
 	$cadmin-sticker-sm
 );
@@ -23,8 +23,8 @@ $cadmin-sticker-sm: map-deep-merge(
 $cadmin-sticker-lg: () !default;
 $cadmin-sticker-lg: map-deep-merge(
 	(
-		font-size: 1.125rem,
-		size: 2.5rem,
+		font-size: 18px,
+		size: 40px,
 	),
 	$cadmin-sticker-lg
 );
@@ -32,8 +32,8 @@ $cadmin-sticker-lg: map-deep-merge(
 $cadmin-sticker-xl: () !default;
 $cadmin-sticker-xl: map-deep-merge(
 	(
-		font-size: 1.25rem,
-		size: 3rem,
+		font-size: 20px,
+		size: 48px,
 	),
 	$cadmin-sticker-xl
 );

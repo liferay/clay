@@ -1,9 +1,9 @@
 $cadmin-progress-bg: $cadmin-gray-200 !default;
 $cadmin-progress-border-radius: $cadmin-border-radius !default;
-$cadmin-progress-box-shadow: inset 0 0.1rem 0.1rem rgba($cadmin-black, 0.1) !default;
+$cadmin-progress-box-shadow: inset 0 1.6px 1.6px rgba($cadmin-black, 0.1) !default;
 $cadmin-progress-font-size: $cadmin-font-size-base * 0.75 !default;
-$cadmin-progress-height: 1rem !default;
-$cadmin-progress-min-width: 6.25rem !default;
+$cadmin-progress-height: 16px !default;
+$cadmin-progress-min-width: 100px !default;
 
 $cadmin-progress-bar-animation-timing: 1s linear infinite !default;
 $cadmin-progress-bar-bg: $cadmin-primary !default;
@@ -23,10 +23,10 @@ $cadmin-progress-group-subtitle: () !default;
 
 $cadmin-progress-group-addon-font-size: null !default;
 $cadmin-progress-group-addon-font-weight: null !default;
-$cadmin-progress-group-addon-spacer-x: 1rem !default;
+$cadmin-progress-group-addon-spacer-x: 16px !default;
 
-$cadmin-progress-group-stacked-progress-margin-bottom: 0.25rem !default;
-$cadmin-progress-group-stacked-progress-margin-top: 0.25rem !default;
+$cadmin-progress-group-stacked-progress-margin-bottom: 4px !default;
+$cadmin-progress-group-stacked-progress-margin-top: 4px !default;
 
 // Progress Variants
 
