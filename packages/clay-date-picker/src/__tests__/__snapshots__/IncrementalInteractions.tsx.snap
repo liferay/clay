@@ -1003,7 +1003,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               >
                 <button
                   aria-label="Mon Apr 01 2019"
-                  class="date-picker-date date-picker-calendar-item active"
+                  class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
                   1
@@ -1198,7 +1198,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               >
                 <button
                   aria-label="Thu Apr 18 2019"
-                  class="date-picker-date date-picker-calendar-item"
+                  class="date-picker-date date-picker-calendar-item active"
                   type="button"
                 >
                   18
@@ -1704,7 +1704,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               >
                 <button
                   aria-label="Mon Apr 01 2019"
-                  class="date-picker-date date-picker-calendar-item active"
+                  class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
                   1
@@ -1899,7 +1899,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               >
                 <button
                   aria-label="Thu Apr 18 2019"
-                  class="date-picker-date date-picker-calendar-item"
+                  class="date-picker-date date-picker-calendar-item active"
                   type="button"
                 >
                   18
@@ -3126,7 +3126,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               >
                 <button
                   aria-label="Mon Apr 01 2019"
-                  class="date-picker-date date-picker-calendar-item active"
+                  class="date-picker-date date-picker-calendar-item"
                   type="button"
                 >
                   1
@@ -3321,7 +3321,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               >
                 <button
                   aria-label="Thu Apr 18 2019"
-                  class="date-picker-date date-picker-calendar-item"
+                  class="date-picker-date date-picker-calendar-item active"
                   type="button"
                 >
                   18
