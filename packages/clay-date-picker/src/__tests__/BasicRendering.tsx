@@ -27,6 +27,23 @@ describe('BasicRendering', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
+	it('renders the date picker with the selected day using the initialMonth', () => {
+		const {getByLabelText} = render(
+			<ClayDatePicker
+				initialMonth={new Date(2019, 3, 18)}
+				onValueChange={() => {}}
+				placeholder="YYYY-MM-DD"
+				spritemap={spritemap}
+				value={''}
+				years={{end: 2019, start: 2019}}
+			/>
+		);
+
+		const daySelected = getByLabelText('Thu Apr 18 2019');
+
+		expect(daySelected.classList).toContain('active');
+	});
+
 	it('renders date picker with dropdown open', () => {
 		render(
 			<ClayDatePicker
