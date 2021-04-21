@@ -278,7 +278,21 @@ git push $REMOTE master --follow-tags
 # Publish to NPM.
 # Make sure you are in the directory of the package you want to publish.
 yarn publish
+
+# Congratulations! You should see successfully published packages.
+#
+# You may also need to do some post-publish administration and close
+# the current Milestone in the Github interface,
+#
+# Closing the milestone will trigger a Github action to comment on each closed
+# issue in the milestone, notifying that the issue is fixed and publicly
+# available in the latest release.
 ```
+
+Common Issues
+
+-   You must have "publish" access for @clayui packages on NPM
+-   Wrong node version. ([yarn build doesn't work on node v12](https://github.com/liferay/clay/issues/2053))
 
 ## Updating release in [liferay-portal](https://github.com/liferay/liferay-portal)
 
@@ -323,6 +337,13 @@ git diff --stat yarn.lock
 cd {PORTAL_ROOT}/modules
 ../gradlew packageRunTest
 
-# Once all tests have passed, send pull request to
-# https://github.com/liferay-frontend/liferay-portal
+# Once all tests have passed, send a pull request!
+#
+# 1. Send pull request to https://github.com/liferay-frontend/liferay-portal
+# 2. Copy the generated changelog and use that in your pull request description.
+# 3. Link your pull request to the LPS ticket in the current Jira Epic.
+#    - To find this, use the LPS from the Github milestone name and then look at
+#     the linked issues. The LPS is typically called "Update Clay Dependencies"
+
+# Lastly, share the release information in our public Slack channel!
 ```
