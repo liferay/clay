@@ -5,8 +5,6 @@
 
 import React from 'react';
 
-// import {Keys} from './Keys';
-
 // https://github.com/facebook/react/blob/master/packages/shared/ReactWorkTags.js#L39
 const HostComponent = 5;
 
