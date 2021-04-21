@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.26.0](https://github.com/liferay/clay/compare/v3.25.4...v3.26.0) (2021-04-21)
+
+### Features
+
+-   **@clayui/alert:** Adds the new feedback variant ([1e0a65a](https://github.com/liferay/clay/commit/1e0a65a))
+
 ## [3.5.1](https://github.com/liferay/clay/compare/@clayui/alert@3.5.0...@clayui/alert@3.5.1) (2021-01-13)
 
 **Note:** Version bump only for package @clayui/alert

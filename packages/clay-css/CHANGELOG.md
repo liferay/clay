@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.26.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.25.4...v3.26.0) (2021-04-21)
+
+
+### Features
+
+* **@clayui/css:** Alerts adds `alert-feedback` modifier ([51b57e6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/51b57e6)), closes [#3968](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3968)
+* **@clayui/css:** Date Picker adds Date Range styles ([a385e6a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a385e6a))
+
+
+
+
+
 ## [3.25.3](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.25.2...v3.25.3) (2021-03-24)
 
 

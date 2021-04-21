@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.26.0](https://github.com/bryceosterhaus/clay/compare/v3.25.4...v3.26.0) (2021-04-21)
+
+**Note:** Version bump only for package clayui.com
+
 ## [3.25.4](https://github.com/ambrinchaudhary/clay/compare/v3.25.3...v3.25.4) (2021-04-07)
 
 **Note:** Version bump only for package clayui.com
