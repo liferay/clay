@@ -1,4 +1,5 @@
-.modal-open {
+.modal-open,
+&.modal-open {
 	overflow: hidden;
 
 	.modal {
@@ -7,7 +8,8 @@
 	}
 }
 
-.modal {
+.modal,
+&.modal {
 	display: none;
 	height: 100%;
 	left: 0;
@@ -27,24 +29,31 @@
 
 	pointer-events: none;
 	width: auto;
+}
 
-	// When fading in the modal, animate it to slide down
+// When fading in the modal, animate it to slide down
 
-	.modal.fade & {
+.modal.fade,
+&.modal.fade {
+	.modal-dialog {
 		transform: $cadmin-modal-fade-transform;
 
 		@include transition($cadmin-modal-transition);
 	}
+}
 
-	.modal.show & {
+.modal.show,
+&.modal.show {
+	.modal-dialog {
 		transform: $cadmin-modal-show-transform;
 	}
+}
 
-	// When trying to close, animate focus to scale
+// When trying to close, animate focus to scale
 
-	.modal.modal-static & {
-		transform: $cadmin-modal-scale-transform;
-	}
+.modal.modal-static,
+&.modal.modal-static {
+	transform: $cadmin-modal-scale-transform;
 }
 
 // Default Modal Max Width
@@ -144,7 +153,8 @@
 	}
 }
 
-.modal-backdrop {
+.modal-backdrop,
+&.modal-backdrop {
 	background-color: $cadmin-modal-backdrop-bg;
 	height: 100vh;
 	left: 0;

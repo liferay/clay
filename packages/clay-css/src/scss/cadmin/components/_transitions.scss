@@ -1,4 +1,5 @@
-.fade {
+.fade,
+&.fade {
 	@include transition($cadmin-transition-fade);
 
 	&:not(.show) {
@@ -6,13 +7,15 @@
 	}
 }
 
-.collapse {
+.collapse,
+&.collapse {
 	&:not(.show) {
 		display: none;
 	}
 }
 
-.collapsing {
+.collapsing,
+&.collapsing {
 	height: 0;
 	overflow: hidden;
 	position: relative;
