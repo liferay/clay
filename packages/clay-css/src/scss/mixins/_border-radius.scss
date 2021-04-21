@@ -9,12 +9,12 @@
 	);
 
 	$radius: setter(
+		$radius,
 		if(
 			variable-exists(border-radius),
 			$border-radius,
 			$cadmin-border-radius
-		),
-		0.25rem
+		)
 	);
 
 	@if ($enable) {
