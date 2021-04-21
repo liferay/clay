@@ -14,6 +14,7 @@ export enum FirstDayOfWeek {
 }
 
 export interface IAriaLabels {
+	buttonChooseDate: string;
 	buttonDot: string;
 	buttonNextMonth: string;
 	buttonPreviousMonth: string;

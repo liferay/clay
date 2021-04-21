@@ -11,6 +11,7 @@ import React from 'react';
 const spritemap = 'icons.svg';
 
 const ariaLabels = {
+	buttonChooseDate: 'Choose your desired date',
 	buttonDot: 'Select current date',
 	buttonNextMonth: 'Select the next month',
 	buttonPreviousMonth: 'Select the previous month',
@@ -55,7 +56,7 @@ describe('IncrementalInteractions', () => {
 		);
 
 		const input: any = getByLabelText(ariaLabels.input);
-		const dayNumber = getByLabelText('2019 04 10');
+		const dayNumber = getByLabelText(new Date('2019 04 10').toDateString());
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
 
@@ -191,7 +192,7 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(backArrowButtonEl);
 
-		const days = queryAllByLabelText('2019 03', {exact: false});
+		const days = queryAllByLabelText('Mar', {exact: false});
 
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('2');
@@ -217,7 +218,7 @@ describe('IncrementalInteractions', () => {
 
 		expect(input.value).toBe(formatDate(currentDate, 'yyyy-MM-dd'));
 
-		const dayNumber = getByLabelText(formatDate(currentDate, 'yyyy MM dd'));
+		const dayNumber = getByLabelText(currentDate.toDateString());
 		expect(dayNumber.classList).toContain('active');
 	});
 
@@ -237,7 +238,7 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(nextArrowButtonEl);
 
-		const days = queryAllByLabelText('2019 05', {exact: false});
+		const days = queryAllByLabelText('May', {exact: false});
 
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('4');
@@ -267,7 +268,7 @@ describe('IncrementalInteractions', () => {
 
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
-		const days = queryAllByLabelText('2018 12', {exact: false});
+		const days = queryAllByLabelText('Dec', {exact: false});
 
 		expect(yearSelect.value).toBe('2018');
 		expect(monthSelect.value).toBe('11');
@@ -295,7 +296,7 @@ describe('IncrementalInteractions', () => {
 
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
-		const days = queryAllByLabelText('2020 01', {exact: false});
+		const days = queryAllByLabelText('Jan', {exact: false});
 
 		expect(yearSelect.value).toBe('2020');
 		expect(monthSelect.value).toBe('0');
@@ -313,7 +314,7 @@ describe('IncrementalInteractions', () => {
 		);
 
 		const input: any = getByLabelText(ariaLabels.input);
-		const dayNumber = getByLabelText('2019 04 28');
+		const dayNumber = getByLabelText(new Date('2019 04 28').toDateString());
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
 
@@ -336,7 +337,7 @@ describe('IncrementalInteractions', () => {
 		);
 
 		const input: any = getByLabelText(ariaLabels.input);
-		const dayNumber = getByLabelText('2019 05 01');
+		const dayNumber = getByLabelText(new Date('2019 05 01').toDateString());
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
 
@@ -380,7 +381,11 @@ describe('IncrementalInteractions', () => {
 			);
 
 			const input: any = getByLabelText(ariaLabels.input);
-			const dayNumber = getByLabelText('2019 04 24');
+
+			const dayNumber = getByLabelText(
+				new Date('2019 04 24').toDateString()
+			);
+
 			const hoursEl = getByTestId('hours') as HTMLInputElement;
 
 			fireEvent.click(dayNumber);
@@ -414,5 +419,90 @@ describe('IncrementalInteractions', () => {
 			expect(hoursEl.value).toBe('01');
 			expect(minutesEl.value).toBe('20');
 		});
+	});
+
+	describe('Range', () => {
+		it('clicking on the previous day the start date changes the start date to the selected date', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					range
+					spritemap={spritemap}
+				/>
+			);
+
+			const dayNumber = getByLabelText(
+				new Date('2019 04 10').toDateString()
+			);
+			const endDate = getByLabelText(
+				new Date('2019 04 18').toDateString()
+			);
+
+			fireEvent.click(dayNumber);
+
+			expect(dayNumber.classList).toContain('active');
+			expect(endDate.classList).toContain('active');
+		});
+
+		it('clicking on the day later the start date sets the end date for the selected date', () => {
+			const {getByLabelText} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					range
+					spritemap={spritemap}
+				/>
+			);
+
+			const dayNumber = getByLabelText(
+				new Date('2019 04 25').toDateString()
+			);
+			const startDate = getByLabelText(
+				new Date('2019 04 18').toDateString()
+			);
+
+			fireEvent.click(dayNumber);
+
+			expect(startDate.classList).toContain('active');
+			expect(dayNumber.classList).toContain('active');
+		});
+
+		it.each(['2019 04 23', '2019 04 10', '2019 04 30'])(
+			'clicking on any day (%s) sets the start and end date for the selected day when the range is already defined',
+			(date) => {
+				const {getByLabelText} = render(
+					<DatePickerWithState
+						ariaLabels={ariaLabels}
+						initialExpanded
+						placeholder="YYYY-MM-DD"
+						range
+						spritemap={spritemap}
+					/>
+				);
+
+				const endDate = getByLabelText(
+					new Date('2019 04 25').toDateString()
+				);
+				const startDate = getByLabelText(
+					new Date('2019 04 18').toDateString()
+				);
+
+				fireEvent.click(endDate);
+
+				expect(startDate.classList).toContain('active');
+				expect(endDate.classList).toContain('active');
+
+				const dayNumber = getByLabelText(new Date(date).toDateString());
+
+				fireEvent.click(dayNumber);
+
+				expect(dayNumber.classList).toContain('active');
+				expect(startDate.classList).not.toContain('active');
+				expect(endDate.classList).not.toContain('active');
+			}
+		);
 	});
 });

@@ -17,15 +17,13 @@ import React from 'react';
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
 import DaysTable from './DaysTable';
-import {isValid, parseDate, setDate} from './Helpers';
-import {useCurrentTime, useWeeks} from './Hooks';
+import {formatDate, isValid, parseDate, setDate} from './Helpers';
+import {useCurrentTime, useDaysSelected, useWeeks} from './Hooks';
 import InputDate from './InputDate';
 import TimePicker from './TimePicker';
 import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
 import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
-
-export {FirstDayOfWeek};
 
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
@@ -93,15 +91,17 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 *
 	 * Second argument gives the type that caused the value change
 	 */
-	onValueChange: (
-		value: Date | string,
-		type?: 'click' | 'input' | 'time'
-	) => void;
+	onValueChange: (value: string, type?: 'click' | 'input' | 'time') => void;
 
 	/**
 	 * Describe a brief tip to help users interact.
 	 */
 	placeholder?: string;
+
+	/***
+	 * Flag to indicate the user will use the date-range date-picker
+	 */
+	range?: boolean;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -150,7 +150,15 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onExpandedChange?: TInternalStateOnChange<boolean>;
 }
 
-const dateNow = new Date();
+const DEFAULT_DATE_TIME = {
+	hours: 12,
+	milliseconds: 0,
+	minutes: 0,
+	seconds: 0,
+};
+
+const NEW_DATE = new Date();
+
 const TIME_FORMAT = 'HH:mm';
 
 /**
@@ -163,6 +171,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 	(
 		{
 			ariaLabels = {
+				buttonChooseDate: 'Choose date',
 				buttonDot: 'Select current date',
 				buttonNextMonth: 'Select the next month',
 				buttonPreviousMonth: 'Select the previous month',
@@ -174,7 +183,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			footerElement,
 			id,
 			initialExpanded = false,
-			initialMonth = new Date(),
+			initialMonth = NEW_DATE,
 			inputName,
 			months = [
 				'January',
@@ -194,6 +203,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			onNavigation = () => {},
 			onValueChange = () => {},
 			placeholder,
+			range,
 			spritemap,
 			time = false,
 			timezone,
@@ -201,43 +211,33 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			value,
 			weekdaysShort = ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 			years = {
-				end: dateNow.getFullYear(),
-				start: dateNow.getFullYear(),
+				end: NEW_DATE.getFullYear(),
+				start: NEW_DATE.getFullYear(),
 			},
 			...otherProps
 		}: IProps,
 		ref
 	) => {
 		/**
-		 * Normalize date for always set noon to avoid time zone issues
-		 */
-		const normalizeDate = (date: Date) =>
-			setDate(date, {
-				date: 1,
-				hours: 12,
-				milliseconds: 1,
-				minutes: 1,
-				seconds: 1,
-			});
-
-		/**
 		 * Indicates the current month rendered on the screen.
 		 */
-		const [currentMonth, setCurrentMonth] = React.useState<Date>(() =>
-			normalizeDate(initialMonth)
+		const [currentMonth, setCurrentMonth] = React.useState(() =>
+			// Normalize the date to always set noon to avoid time zone problems
+			// and to the 1st of the month.
+			setDate(initialMonth, {date: 1, ...DEFAULT_DATE_TIME})
 		);
+
+		/**
+		 * DaysSelected is a tuple that represents [startDate, endDate]
+		 * in the cases where We have a date range and when `range` property
+		 * is disabled we will just use the first element of the tuple(startDate)
+		 */
+		const [daysSelected, setDaysSelected] = useDaysSelected(initialMonth);
 
 		/**
 		 * Indicates the time selected by the user.
 		 */
 		const [currentTime, setCurrentTime] = useCurrentTime(TIME_FORMAT);
-
-		/**
-		 * The day selected by the user.
-		 */
-		const [daySelected, setDaySelected] = React.useState<Date>(
-			initialMonth
-		);
 
 		/**
 		 * An array of the weeks and days list for the current month
@@ -269,7 +269,10 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * content and takes care of updating the weeks.
 		 */
 		const changeMonth = (date: Date) => {
-			const dateNormalized = normalizeDate(date);
+			const dateNormalized = setDate(date, {
+				date: 1,
+				...DEFAULT_DATE_TIME,
+			});
 
 			setCurrentMonth(dateNormalized);
 			onNavigation(dateNormalized);
@@ -285,9 +288,42 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * Handles the click on element of the day
 		 */
 		const handleDayClicked = (date: Date) => {
-			setDaySelected(date);
+			const [startDate, endDate] = daysSelected;
 
-			onValueChange(date, 'click');
+			let newDaysSelected: [Date, Date];
+			let daysSelectedToString;
+
+			if (range) {
+				if (startDate !== endDate) {
+					newDaysSelected = [date, date];
+				} else if (date < startDate) {
+					newDaysSelected = [date, endDate];
+				} else {
+					newDaysSelected = [startDate, date];
+				}
+
+				daysSelectedToString = fromRangeToString(
+					newDaysSelected,
+					dateFormat
+				);
+
+				const [newStartDate, newEndDate] = newDaysSelected;
+
+				if (newStartDate.getMonth() !== newEndDate.getMonth()) {
+					changeMonth(startDate);
+				}
+			} else {
+				newDaysSelected = [date, date];
+
+				daysSelectedToString = formatDate(date, dateFormat);
+
+				if (time) {
+					daysSelectedToString = `${daysSelectedToString} ${currentTime}`;
+				}
+			}
+
+			setDaysSelected(newDaysSelected);
+			onValueChange(daysSelectedToString, 'click');
 		};
 
 		/**
@@ -297,17 +333,33 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 			const {value} = event.target;
+
 			const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
 
-			const date = parseDate(value, format, new Date());
-			const year = date.getFullYear();
+			const [startDate, endDate] = fromStringToRange(
+				value,
+				format,
+				NEW_DATE
+			);
 
-			if (isValid(date) && year >= years.start && years.end >= year) {
-				changeMonth(date);
-				setDaySelected(date);
+			const yearFrom = startDate.getFullYear();
+			const yearTo = endDate.getFullYear();
+
+			if (
+				isValid(startDate) &&
+				isValid(endDate) &&
+				isYearWithinYears(yearFrom, years) &&
+				isYearWithinYears(yearTo, years)
+			) {
+				changeMonth(startDate);
+
+				setDaysSelected([startDate, endDate]);
 
 				if (time) {
-					setCurrentTime(date.getHours(), date.getMinutes());
+					setCurrentTime(
+						startDate.getHours(),
+						startDate.getMinutes()
+					);
 				}
 			}
 
@@ -319,24 +371,48 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * is no date selected.
 		 */
 		const handleDotClicked = () => {
-			changeMonth(dateNow);
-			setDaySelected(dateNow);
-			onValueChange(dateNow);
+			const [, endDate] = daysSelected;
+
+			changeMonth(NEW_DATE);
+
+			const newDaysSelected: [Date, Date] =
+				range && endDate < NEW_DATE
+					? [endDate, NEW_DATE]
+					: [NEW_DATE, endDate];
+
+			let dateFormatted;
+
+			if (range) {
+				dateFormatted = fromRangeToString(newDaysSelected, dateFormat);
+			} else if (time) {
+				dateFormatted = formatDate(
+					parseDate(currentTime, TIME_FORMAT, NEW_DATE),
+					`${dateFormat} ${TIME_FORMAT}`
+				);
+			} else {
+				dateFormatted = formatDate(NEW_DATE, dateFormat);
+			}
+
+			setDaysSelected(newDaysSelected);
+			onValueChange(dateFormatted);
 		};
 
 		const handleTimeChange = (
 			hours: number | string,
 			minutes: number | string
 		) => {
-			const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
+			const [day] = daysSelected;
 
-			// Hack to force InputDate to add `currentTime` to the value of
-			// the input when the value was edited by the user.
-			if (
-				typeof value === 'string' &&
-				isValid(parseDate(value, format, new Date()))
-			) {
-				onValueChange(parseDate(value, format, new Date()), 'time');
+			if (value) {
+				onValueChange(
+					typeof hours === 'string' && typeof minutes === 'string'
+						? `${formatDate(day, dateFormat)} ${hours}:${minutes}`
+						: formatDate(
+								setDate(day, {hours, minutes}),
+								`${dateFormat} ${TIME_FORMAT}`
+						  ),
+					'time'
+				);
 			}
 
 			setCurrentTime(hours, minutes);
@@ -379,20 +455,18 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 							<InputDate
 								{...otherProps}
 								ariaLabel={ariaLabels.input}
-								currentTime={currentTime}
-								dateFormat={dateFormat}
 								disabled={disabled}
 								inputName={inputName}
 								onChange={inputChange}
 								placeholder={placeholder}
 								ref={ref}
-								time={time}
 								useNative={useNative}
 								value={value}
 							/>
 							{!useNative && (
 								<ClayInput.GroupInsetItem after>
 									<Button
+										aria-label={ariaLabels.buttonChooseDate}
 										className="date-picker-dropdown-toggle"
 										data-testid="date-button"
 										disabled={disabled}
@@ -418,7 +492,11 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 							onSetActive={setExpandedValue}
 							ref={dropdownContainerRef}
 						>
-							<div className="date-picker-calendar">
+							<div
+								aria-modal="true"
+								className="date-picker-calendar"
+								role="dialog"
+							>
 								<DateNavigation
 									ariaLabels={ariaLabels}
 									currentMonth={currentMonth}
@@ -445,10 +523,11 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 										{({day, key}) => (
 											<DayNumber
 												day={day}
-												daySelected={daySelected}
+												daysSelected={daysSelected}
 												disabled={disabled}
 												key={key}
 												onClick={handleDayClicked}
+												range={range}
 											/>
 										)}
 									</DaysTable>
@@ -480,6 +559,39 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 	}
 );
 
+const RANGE_SEPARATOR = ' - ';
+
+function isYearWithinYears(year: number, years: IYears) {
+	return years.start <= year && year <= years.end;
+}
+
+function fromStringToRange(
+	value: string,
+	dateFormat: string,
+	referenceDate: Date
+): readonly [Date, Date] {
+	const [startDateString, endDateString] = value.split(RANGE_SEPARATOR);
+
+	const startDate = parseDate(startDateString, dateFormat, referenceDate);
+
+	return [
+		startDate,
+		endDateString
+			? parseDate(endDateString, dateFormat, referenceDate)
+			: startDate,
+	];
+}
+
+function fromRangeToString(range: [Date, Date], dateFormat: string) {
+	const [startDate, endDate] = range;
+
+	return `${formatDate(startDate, dateFormat)}${RANGE_SEPARATOR}${formatDate(
+		endDate,
+		dateFormat
+	)}`;
+}
+
 ClayDatePicker.displayName = 'ClayDatePicker';
 
+export {FirstDayOfWeek};
 export default ClayDatePicker;

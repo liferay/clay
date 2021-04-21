@@ -15,12 +15,24 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 	const [value, setValue] = React.useState<string | Date>('');
 
 	return (
-		<ClayDatePicker
-			{...props}
-			onValueChange={setValue}
-			spritemap={spritemap}
-			value={value as string}
-		/>
+		<>
+			<label>{'Date Picker'}</label>
+			<ClayDatePicker
+				{...props}
+				ariaLabels={{
+					buttonChooseDate: `Choose Date, selected date is ${
+						value.toLocaleString() ?? value
+					}`,
+					buttonDot: 'Go to today',
+					buttonNextMonth: 'Next month',
+					buttonPreviousMonth: 'Previous month',
+					input: value.toLocaleString(),
+				}}
+				onValueChange={setValue}
+				spritemap={spritemap}
+				value={value as string}
+			/>
+		</>
 	);
 };
 
@@ -133,5 +145,17 @@ storiesOf('Components|ClayDatePicker', module)
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
 			useNative
+		/>
+	))
+	.add('w/ date range', () => (
+		<ClayDatePickerWithState
+			dateFormat="yyyy/MM/dd"
+			placeholder="YYYY/MM/DD - YYYY/MM/DD"
+			range
+			spritemap={spritemap}
+			years={{
+				end: 2024,
+				start: 1997,
+			}}
 		/>
 	));
