@@ -178,7 +178,8 @@
 		);
 
 		@each $cadmin-value in $cadmin-displays {
-			.d#{$cadmin-infix}-#{$cadmin-value} {
+			.d#{$cadmin-infix}-#{$cadmin-value},
+			&.d#{$cadmin-infix}-#{$cadmin-value} {
 				display: $cadmin-value !important;
 			}
 		}
