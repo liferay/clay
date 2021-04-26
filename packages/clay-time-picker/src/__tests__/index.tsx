@@ -69,9 +69,7 @@ describe('BasicRendering', () => {
 describe('IncrementalInteractions', () => {
 	afterEach(cleanup);
 
-	// Once we find a solution so that useFocusManagement can get rid of the offsetParent
-	// to check if the element is visible, in tests this will always be null.
-	it.skip('pressing arrow right should move focus to minutes input', async () => {
+	it('pressing arrow right should move focus to minutes input', async () => {
 		const {getByTestId} = render(<TimePickerWithState />);
 
 		const hoursEl = getByTestId('hours');
@@ -83,9 +81,7 @@ describe('IncrementalInteractions', () => {
 		expect(document.activeElement).toBe(minutesEl);
 	});
 
-	// Once we find a solution so that useFocusManagement can get rid of the offsetParent
-	// to check if the element is visible, in tests this will always be null.
-	it.skip('pressing arrow left should move focus to hour input', () => {
+	it('pressing arrow left should move focus to hour input', () => {
 		const {getByTestId} = render(<TimePickerWithState />);
 
 		const hoursEl = getByTestId('hours');
