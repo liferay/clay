@@ -5,8 +5,7 @@
 
 import {ClayPortal, Keys} from '@clayui/shared';
 import domAlign from 'dom-align';
-import React, {useCallback} from 'react';
-import warning from 'warning';
+import React, {useCallback, useEffect} from 'react';
 
 import ClayTooltip from './Tooltip';
 
@@ -43,6 +42,8 @@ const ALIGNMENTS_INVERSE_MAP = {
 	trbr: 'bottom-right',
 } as const;
 
+const SYMBOL_TOOLTIP = Symbol('clay.tooltip.attached');
+
 interface IState {
 	align?: typeof ALIGNMENTS[number];
 	message?: string;
@@ -76,42 +77,6 @@ const reducer = (state: IState, {type, ...payload}: IAction): IState => {
 	}
 };
 
-function matches(
-	element: HTMLElement & {
-		msMatchesSelector?: HTMLElement['matches'];
-	},
-	selectorString: string
-) {
-	if (element.matches) {
-		return element.matches(selectorString);
-	} else if (element.msMatchesSelector) {
-		return element.msMatchesSelector(selectorString);
-	} else if (element.webkitMatchesSelector) {
-		return element.webkitMatchesSelector(selectorString);
-	} else {
-		return false;
-	}
-}
-
-function closestAncestor(node: HTMLElement, s: string) {
-	const el = node;
-	let ancestor: HTMLElement | null = node;
-
-	if (!document.documentElement.contains(el)) {
-		return null;
-	}
-
-	do {
-		if (matches(ancestor, s)) {
-			return ancestor;
-		}
-
-		ancestor = ancestor.parentElement;
-	} while (ancestor !== null);
-
-	return null;
-}
-
 type TContentRenderer = (props: {
 	targetNode?: HTMLElement | null;
 	title: string;
@@ -119,7 +84,6 @@ type TContentRenderer = (props: {
 
 const TooltipProvider: React.FunctionComponent<{
 	autoAlign?: boolean;
-	children: React.ReactElement;
 	contentRenderer?: TContentRenderer;
 	delay?: number;
 }> = ({
@@ -201,7 +165,7 @@ const TooltipProvider: React.FunctionComponent<{
 		}
 	}, []);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (
 			titleNodeRef.current &&
 			(tooltipRef as React.RefObject<HTMLDivElement>).current
@@ -231,10 +195,21 @@ const TooltipProvider: React.FunctionComponent<{
 		}
 	}, [align, show]);
 
-	warning(
-		children.type !== React.Fragment,
-		'<TooltipProvider />: React Fragment is not allowed as a child to TooltipProvider. Child must be a single HTML element.'
-	);
+	useEffect(() => {
+		if (!(window as any)[SYMBOL_TOOLTIP]) {
+			(window as any)[SYMBOL_TOOLTIP] = true;
+
+			document.body.addEventListener('mouseout', handleHide, true);
+			document.body.addEventListener('mouseover', handleShow, true);
+
+			return () => {
+				(window as any)[SYMBOL_TOOLTIP] = false;
+
+				document.body.removeEventListener('mouseout', handleHide, true);
+				document.body.removeEventListener('mouseover', handleShow, true);
+			};
+		}
+	}, [handleHide]);
 
 	return (
 		<>
@@ -249,13 +224,45 @@ const TooltipProvider: React.FunctionComponent<{
 				</ClayPortal>
 			)}
 
-			{React.cloneElement(children, {
-				...children.props,
-				onMouseOut: handleHide,
-				onMouseOver: handleShow,
-			})}
+			{children}
 		</>
 	);
 };
+
+function matches(
+	element: HTMLElement & {
+		msMatchesSelector?: HTMLElement['matches'];
+	},
+	selectorString: string
+) {
+	if (element.matches) {
+		return element.matches(selectorString);
+	} else if (element.msMatchesSelector) {
+		return element.msMatchesSelector(selectorString);
+	} else if (element.webkitMatchesSelector) {
+		return element.webkitMatchesSelector(selectorString);
+	} else {
+		return false;
+	}
+}
+
+function closestAncestor(node: HTMLElement, s: string) {
+	const el = node;
+	let ancestor: HTMLElement | null = node;
+
+	if (!document.documentElement.contains(el)) {
+		return null;
+	}
+
+	do {
+		if (matches(ancestor, s)) {
+			return ancestor;
+		}
+
+		ancestor = ancestor.parentElement;
+	} while (ancestor !== null);
+
+	return null;
+}
 
 export default TooltipProvider;
