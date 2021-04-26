@@ -44,45 +44,43 @@ storiesOf('Components|ClayTooltip', module)
 			<button title="Default">{'No Tooltip'}</button>
 
 			<ClayTooltipProvider>
-				<div>
-					<button title="Default">{'Default'}</button>
+				<button title="Default">{'Default'}</button>
 
-					{/* Note that the newline has to be a string within braces. */}
-					<button title={'Line1\nLine2'}>
-						{'With a line Break'}
-					</button>
+				{/* Note that the newline has to be a string within braces. */}
+				<button title={'Line1\nLine2'}>{'With a line Break'}</button>
 
-					<button data-tooltip-align="left" title="Left">
-						{'Left'}
-					</button>
+				<button data-tooltip-align="left" title="Left">
+					{'Left'}
+				</button>
 
-					<button data-tooltip-align="right" title="Right">
-						{'Right'}
-					</button>
+				<button data-tooltip-align="right" title="Right">
+					{'Right'}
+				</button>
 
-					<button data-tooltip-align="top" title="Top">
-						{'Top'}
-					</button>
+				<button data-tooltip-align="top" title="Top">
+					{'Top'}
+				</button>
+			</ClayTooltipProvider>
 
-					<button
-						data-tooltip-align="bottom"
-						data-tooltip-delay="0"
-						title="Bottom"
-					>
-						{'Custom Delay'}
-					</button>
+			<ClayTooltipProvider>
+				<button
+					data-tooltip-align="bottom"
+					data-tooltip-delay="0"
+					title="Bottom"
+				>
+					{'Custom Delay'}
+				</button>
 
-					<div
-						data-tooltip-align="bottom"
-						style={{
-							backgroundColor: '#F6F8FA',
-							border: '1px solid #D1D5DA',
-							padding: 8,
-						}}
-						title="I'm on the parent element"
-					>
-						<button>{'nested'}</button>
-					</div>
+				<div
+					data-tooltip-align="bottom"
+					style={{
+						backgroundColor: '#F6F8FA',
+						border: '1px solid #D1D5DA',
+						padding: 8,
+					}}
+					title="I'm on the parent element"
+				>
+					<button>{'nested'}</button>
 				</div>
 			</ClayTooltipProvider>
 		</div>
