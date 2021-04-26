@@ -11,7 +11,7 @@ import React from 'react';
 
 import {ClayPortal, FocusScope} from '../src';
 
-storiesOf('Components|FocusScope', module).add('default', () => {
+storiesOf('Internal Use Only|FocusScope', module).add('default', () => {
 	React.useEffect(() => {
 		const node1 = document && document.getElementById('test1');
 		const node2 = document && document.getElementById('test2');
