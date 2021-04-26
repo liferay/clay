@@ -229,13 +229,13 @@ const ManagementToolbarCode = `const Component = () => {
 
 					<ClayManagementToolbar.Item>
 						<ClayButton
-							className="nav-link nav-link-monospaced order-arrow-down-active"
+							className="nav-link nav-link-monospaced"
 							displayType="unstyled"
 							onClick={() => {}}
 						>
 							<ClayIcon
 								spritemap={spritemap}
-								symbol="order-arrow"
+								symbol="order-list-up"
 							/>
 						</ClayButton>
 					</ClayManagementToolbar.Item>

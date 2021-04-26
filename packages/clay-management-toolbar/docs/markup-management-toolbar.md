@@ -69,9 +69,9 @@ mainTabURL: 'docs/components/management-toolbar.html'
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#order-arrow"></use>
+                    <a class="nav-link nav-link-monospaced" href="#1" role="button">
+                        <svg class="lexicon-icon lexicon-icon-order-list-up" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#order-list-up"></use>
                         </svg>
                     </a>
                 </li>
@@ -225,9 +225,9 @@ mainTabURL: 'docs/components/management-toolbar.html'
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#order-arrow"></use>
+                    <a class="nav-link nav-link-monospaced" href="#1" role="button">
+                        <svg class="lexicon-icon lexicon-icon-order-list-up" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#order-list-up"></use>
                         </svg>
                     </a>
                 </li>
@@ -386,9 +386,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#order-arrow"></use>
+                    <a class="nav-link nav-link-monospaced" href="#1" role="button">
+                        <svg class="lexicon-icon lexicon-icon-order-list-up" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#order-list-up"></use>
                         </svg>
                     </a>
                 </li>
@@ -561,17 +561,13 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 				</ul>
 			</li>
 			<li class="nav-item">
-				<a
-					class="nav-link nav-link-monospaced order-arrow-down-active"
-					href="#1"
-					role="button"
-				>
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg
-						class="lexicon-icon lexicon-icon-order-arrow"
+						class="lexicon-icon lexicon-icon-order-list-up"
 						focusable="false"
 						role="presentation"
 					>
-						<use href="/images/icons/icons.svg#order-arrow"></use>
+						<use href="/images/icons/icons.svg#order-list-up"></use>
 					</svg>
 				</a>
 			</li>
@@ -784,9 +780,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-monospaced order-arrow-down-active" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#order-arrow"></use>
+                    <a class="nav-link nav-link-monospaced" href="#1" role="button">
+                        <svg class="lexicon-icon lexicon-icon-order-list-up" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#order-list-up"></use>
                         </svg>
                     </a>
                 </li>
@@ -956,17 +952,13 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 				</ul>
 			</li>
 			<li class="nav-item">
-				<a
-					class="nav-link nav-link-monospaced order-arrow-down-active"
-					href="#1"
-					role="button"
-				>
+				<a class="nav-link nav-link-monospaced" href="#1" role="button">
 					<svg
-						class="lexicon-icon lexicon-icon-order-arrow"
+						class="lexicon-icon lexicon-icon-order-list-up"
 						focusable="false"
 						role="presentation"
 					>
-						<use href="/images/icons/icons.svg#order-arrow"></use>
+						<use href="/images/icons/icons.svg#order-list-up"></use>
 					</svg>
 				</a>
 			</li>
@@ -1605,9 +1597,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button class="btn btn-unstyled nav-btn nav-btn-monospaced order-arrow-down-active" type="button">
-                    <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
-                        <use href="/images/icons/icons.svg#order-arrow"></use>
+                    <button class="btn btn-unstyled nav-btn nav-btn-monospaced" type="button">
+                    <svg class="lexicon-icon lexicon-icon-order-list-up" focusable="false" role="presentation">
+                        <use href="/images/icons/icons.svg#order-list-up"></use>
                     </svg>
                     </button>
                 </li>
@@ -1720,15 +1712,15 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 			</li>
 			<li class="nav-item">
 				<button
-					class="btn btn-unstyled nav-btn nav-btn-monospaced order-arrow-down-active"
+					class="btn btn-unstyled nav-btn nav-btn-monospaced"
 					type="button"
 				>
 					<svg
-						class="lexicon-icon lexicon-icon-order-arrow"
+						class="lexicon-icon lexicon-icon-order-list-up"
 						focusable="false"
 						role="presentation"
 					>
-						<use href="/images/icons/icons.svg#order-arrow"></use>
+						<use href="/images/icons/icons.svg#order-list-up"></use>
 					</svg>
 				</button>
 			</li>
