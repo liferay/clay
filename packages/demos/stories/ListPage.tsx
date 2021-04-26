@@ -12,7 +12,6 @@ import {ClayListWithItems} from '@clayui/list';
 import ClayManagementToolbar from '@clayui/management-toolbar';
 import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
 import {sub} from '@clayui/shared';
-import classNames from 'classnames';
 import React from 'react';
 
 export default () => {
@@ -183,19 +182,17 @@ export default () => {
 
 							<ClayManagementToolbar.Item>
 								<ClayButton
-									className={classNames(
-										'nav-link nav-link-monospaced',
-										{
-											'order-arrow-down-active': !sortAsc,
-											'order-arrow-up-active': sortAsc,
-										}
-									)}
+									className="nav-link nav-link-monospaced"
 									displayType="unstyled"
 									onClick={() => setSortAsc(!sortAsc)}
 								>
 									<ClayIcon
 										spritemap={spritemap}
-										symbol="order-arrow"
+										symbol={
+											sortAsc
+												? 'order-list-up'
+												: 'order-list-down'
+										}
 									/>
 								</ClayButton>
 							</ClayManagementToolbar.Item>
