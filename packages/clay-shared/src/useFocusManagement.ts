@@ -5,260 +5,238 @@
 
 import React from 'react';
 
-import {Keys} from './Keys';
-
 // https://github.com/facebook/react/blob/master/packages/shared/ReactWorkTags.js#L39
 const HostComponent = 5;
 
-export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
-	const nextElementOutsideScopeRef = React.useRef<HTMLElement | null>(null);
+export function isFocusable({
+	contentEditable,
+	disabled,
+	href,
+	offsetParent,
+	rel,
+	tabIndex,
+	tagName,
+	type,
+}: {
+	contentEditable?: string | boolean;
+	disabled?: string | boolean;
+	href?: string;
+	offsetParent?: Element | null;
+	rel?: string;
+	tabIndex?: string | number;
+	tagName?: string;
+	type?: string;
+}) {
+	// Normalize casing
+	tagName = tagName?.toLowerCase();
 
-	// https://github.com/facebook/react/pull/15849#diff-39a673d38713257d5fe7d90aac2acb5aR107
-	const isFiberHostComponentFocusable = (fiber: any): boolean => {
-		if (fiber.tag !== HostComponent) {
-			return false;
-		}
+	// Hack to check if element is visible
+	if (!offsetParent) {
+		return false;
+	}
 
-		const {memoizedProps, stateNode, type} = fiber;
+	if (disabled) {
+		return false;
+	}
 
-		// Hack to check if element is visible
-		if (!stateNode.offsetParent) {
-			return false;
-		}
+	const minTabIndex = 0;
 
-		if (memoizedProps.disabled) {
-			return false;
-		}
+	if (
+		(tabIndex != null && tabIndex >= minTabIndex) ||
+		!!contentEditable === true
+	) {
+		return true;
+	}
 
-		const minTabIndex = 0;
+	if (tagName === 'a' || tagName === 'area') {
+		return !!href && rel !== 'ignore';
+	}
 
-		if (
-			(memoizedProps.tabIndex != null &&
-				memoizedProps.tabIndex >= minTabIndex) ||
-			memoizedProps.contentEditable === true
-		) {
-			return true;
-		}
+	if (tagName === 'input') {
+		return type !== 'hidden' && type !== 'file';
+	}
 
-		if (type === 'a' || type === 'area') {
-			return !!memoizedProps.href && memoizedProps.rel !== 'ignore';
-		}
+	return (
+		tagName === 'button' ||
+		tagName === 'textarea' ||
+		tagName === 'object' ||
+		tagName === 'select' ||
+		tagName === 'iframe' ||
+		tagName === 'embed'
+	);
+}
 
-		if (type === 'input') {
-			return (
-				memoizedProps.type !== 'hidden' && memoizedProps.type !== 'file'
-			);
-		}
+export const FOCUSABLE_ELEMENTS = [
+	'a[href]',
+	'[contenteditable]',
+	'[tabindex]:not([tabindex^="-"])',
+	'area[href]',
+	'button:not([disabled]):not([aria-hidden])',
+	'embed',
+	'iframe',
+	'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',
+	'object',
+	'select:not([disabled]):not([aria-hidden])',
+	'textarea:not([disabled]):not([aria-hidden])',
+];
 
-		return (
-			type === 'button' ||
-			type === 'textarea' ||
-			type === 'object' ||
-			type === 'select' ||
-			type === 'iframe' ||
-			type === 'embed'
-		);
-	};
+function collectDocumentFocusableElements() {
+	return Array.from<HTMLElement>(
+		document.querySelectorAll(FOCUSABLE_ELEMENTS.join(','))
+	).filter((element) => isFocusable(element));
+}
 
-	const collectFocusableElements = (
-		node: any,
-		focusableElements: Array<any>
-	) => {
-		if (isFiberHostComponentFocusable(node)) {
-			focusableElements.push(node.stateNode);
-		}
+// https://github.com/facebook/react/pull/15849#diff-39a673d38713257d5fe7d90aac2acb5aR107
+const isFiberHostComponentFocusable = (fiber: any): boolean => {
+	if (fiber.tag !== HostComponent) {
+		return false;
+	}
 
-		const child = node.child;
+	const {memoizedProps, stateNode, type} = fiber;
 
-		if (child !== null) {
-			collectFocusableElements(child, focusableElements);
-		}
+	return isFocusable({
+		contentEditable: memoizedProps.contentEditable,
+		disabled: memoizedProps.disabled,
+		href: memoizedProps.href,
+		offsetParent: stateNode.offsetParent,
+		rel: memoizedProps.rel,
+		tabIndex: memoizedProps.tabIndex,
+		tagName: type,
+		type: memoizedProps.type,
+	});
+};
 
-		const sibling = node.sibling;
+const collectFocusableElements = (node: any, focusableElements: Array<any>) => {
+	if (isFiberHostComponentFocusable(node)) {
+		focusableElements.push(node.stateNode);
+	}
 
-		if (sibling) {
-			collectFocusableElements(sibling, focusableElements);
-		}
-	};
+	const child = node.child;
 
-	const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
-		if (!scope.current) {
-			return null;
-		}
+	if (child !== null) {
+		collectFocusableElements(child, focusableElements);
+	}
 
-		const internalKey = Object.keys(scope.current).find(
-			(key) => key.indexOf('__reactInternalInstance') === 0
-		);
+	const sibling = node.sibling;
 
-		if (internalKey) {
-			return (scope.current as any)[internalKey];
-		}
+	if (sibling) {
+		collectFocusableElements(sibling, focusableElements);
+	}
+};
 
+const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
+	if (!scope.current) {
 		return null;
-	};
+	}
 
-	const getFocusableElementsInScope = (fiberNode: any) => {
-		const focusableElements: Array<any> = [];
-		const {child} = fiberNode;
+	const internalKey = Object.keys(scope.current).find(
+		(key) => key.indexOf('__reactInternalInstance') === 0
+	);
 
-		if (child !== null) {
-			collectFocusableElements(child, focusableElements);
-		}
+	if (internalKey) {
+		return (scope.current as any)[internalKey];
+	}
 
-		return focusableElements;
-	};
+	return null;
+};
 
-	const handleNextElementOutsideScope = (event: KeyboardEvent) => {
-		// Ignores the call for cases where the element's children have tabIndex.
-		if (nextElementOutsideScopeRef.current !== event.target) {
-			return;
-		}
+const getFocusableElementsInScope = (fiberNode: any) => {
+	const focusableElements: Array<any> = [];
+	const {child} = fiberNode;
 
-		if (nextElementOutsideScopeRef.current !== event.currentTarget) {
-			(event.currentTarget as HTMLElement).removeEventListener(
-				'keydown',
-				handleNextElementOutsideScope
-			);
+	if (child !== null) {
+		collectFocusableElements(child, focusableElements);
+	}
 
-			return;
-		}
+	return focusableElements;
+};
 
-		if (event.key === Keys.Tab && event.shiftKey) {
-			const elements = getFocusableElementsInScope(getFiber(scope));
-
-			if (elements.length === 0) {
-				if (event.currentTarget) {
-					(event.currentTarget as HTMLElement).removeEventListener(
-						'keydown',
-						handleNextElementOutsideScope
-					);
-				}
-
-				return;
-			}
-
-			event.preventDefault();
-
-			elements[elements.length - 1].focus();
-		}
-	};
-
-	const setInteractionObserver = (element: HTMLElement) => {
-		if (nextElementOutsideScopeRef.current !== null) {
-			nextElementOutsideScopeRef.current.removeEventListener(
-				'keydown',
-				handleNextElementOutsideScope
-			);
-		}
-
-		nextElementOutsideScopeRef.current = element;
-		nextElementOutsideScopeRef.current.addEventListener(
-			'keydown',
-			handleNextElementOutsideScope
-		);
-	};
-
-	const getElementEdge = (
-		fiberNode: any,
-		backwards: boolean
-	): Element | null => {
-		const focusableElementsEdge: Array<Element> = [];
-		const fiberNodeReturn = fiberNode.return;
-
-		if (fiberNodeReturn !== null) {
-			collectFocusableElements(fiberNodeReturn, focusableElementsEdge);
-		}
-
-		if (!focusableElementsEdge.length) {
-			return null;
-		}
-
-		const nodePosition = focusableElementsEdge.findIndex(
-			(el) => document.activeElement === el
-		);
-		let nextElement = null;
-
-		if (backwards) {
-			nextElement = focusableElementsEdge[nodePosition - 1];
-		} else {
-			nextElement = focusableElementsEdge[nodePosition + 1];
-		}
-
-		if (!nextElement && fiberNodeReturn.return) {
-			return getElementEdge(fiberNodeReturn.return, backwards);
-		}
-
-		return nextElement;
-	};
+export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
+	const nextFocusInDocRef = React.useRef<HTMLElement | null>(null);
+	const prevFocusInDocRef = React.useRef<HTMLElement | null>(null);
 
 	const moveFocusInScope = (scope: any, backwards: boolean = false) => {
-		const elements = getFocusableElementsInScope(scope);
+		const fiberFocusElements = getFocusableElementsInScope(scope);
 
-		if (elements.length === 0) {
+		if (fiberFocusElements.length === 0) {
 			return null;
 		}
 
-		const node = document.activeElement;
+		const activeElement = document.activeElement as HTMLElement;
 
-		if (!node) {
+		if (!activeElement) {
 			return;
 		}
 
-		const position = elements.indexOf(node);
-		const lastPosition = elements.length - 1;
-		let nextElement = null;
+		const docFocusElements = collectDocumentFocusableElements();
+
+		const docPosition = docFocusElements.indexOf(activeElement);
+		const reactFiberPosition = fiberFocusElements.indexOf(activeElement);
 
 		// Ignore when the active element is not in the scope.
-		if (position < 0) {
+		if (reactFiberPosition < 0) {
 			return null;
 		}
 
-		if (backwards) {
-			if (position === 0) {
-				// is out of scope, so we go back through the fiber to pick up the
-				// focusable elements from the scopes edge.
-				nextElement = getElementEdge(scope, backwards);
-			} else {
-				nextElement = elements[position - 1];
-			}
-		} else {
-			if (position === lastPosition) {
-				// is out of scope, so we go back through the fiber to pick up the
-				// focusable elements from the scopes edge.
-				nextElement = getElementEdge(scope, backwards) as HTMLElement;
+		const nextFocusInDoc = docFocusElements[docPosition + 1];
+		const prevFocusInDoc = docFocusElements[docPosition - 1];
 
-				// Control the tab + shift keydown of the element next to the scope to
-				// return the focus to the last scopo element, this is necessary for
-				// when have React Portal.
-				if (nextElement) {
-					setInteractionObserver(nextElement);
-				}
-			} else {
-				nextElement = elements[position + 1];
-			}
+		const nextFocusInFiber = fiberFocusElements[reactFiberPosition + 1];
+		const prevFocusInFiber = fiberFocusElements[reactFiberPosition - 1];
+
+		// If these two nodes are not equal, that means React is likely using
+		// a portal to render the node in a different part of the DOM. When
+		// this happens, we want to track where the next node is in case we
+		// reach the end of the list of focusable nodes.
+		if (nextFocusInFiber !== nextFocusInDoc) {
+			nextFocusInDocRef.current = nextFocusInDoc;
 		}
 
-		if (nextElement) {
-			nextElement.focus();
+		// Same as above, except we track the previous node for tabbing backwards.
+		if (prevFocusInFiber !== prevFocusInDoc) {
+			prevFocusInDocRef.current = prevFocusInDoc;
+		}
 
-			return nextElement;
+		let nextActive = backwards ? prevFocusInFiber : nextFocusInFiber;
+
+		// We track the previous and next elements in the document flow due to React portals.
+		//
+		// Consider the following structure of dom elements and where a React Tree is:
+		//
+		// <HtmlFocusElement1>
+		// <ReactTree>
+		// <HtmlFocusElement2>
+		//
+		// When our focus gets to the end of the React Tree, we want to focus HtmlFocusElement2
+		// When we are at the beginning of the React Tree and want to go backwards with
+		// SHIFT + TAB, we want to focus HtmlFocusElement1. This allows the React Tree to
+		// render nodes whereever it would like in the document.
+		//
+		// If there is no `nextActive`, that means we are either at the beginning or end of the
+		// list of focusable elements in the React Tree. So we go back to the flow of the
+		// document instead of the flow of the React Tree.
+		if (!nextActive) {
+			nextActive = backwards
+				? prevFocusInDocRef.current
+				: nextFocusInDocRef.current;
+		}
+
+		if (nextActive) {
+			nextActive.focus();
+
+			if (
+				nextActive === prevFocusInDocRef.current ||
+				nextActive === nextFocusInDocRef.current
+			) {
+				nextFocusInDocRef.current = null;
+				prevFocusInDocRef.current = null;
+			}
+
+			return nextActive;
 		}
 
 		return null;
 	};
-
-	React.useEffect(() => {
-		if (nextElementOutsideScopeRef.current) {
-			nextElementOutsideScopeRef.current.removeEventListener(
-				'keydown',
-				handleNextElementOutsideScope
-			);
-
-			// Sets the value to null only to remove reference and prevent
-			// memory leak cases.
-			nextElementOutsideScopeRef.current = null;
-		}
-	}, [scope]);
 
 	return {
 		focusNext: () => moveFocusInScope(getFiber(scope)),

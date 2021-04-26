@@ -3,22 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Keys} from '@clayui/shared';
+import {FOCUSABLE_ELEMENTS, Keys} from '@clayui/shared';
 import React from 'react';
-
-const FOCUSABLE_ELEMENTS = [
-	'a[href]',
-	'[contenteditable]',
-	'[tabindex]:not([tabindex^="-"])',
-	'area[href]',
-	'button:not([disabled]):not([aria-hidden])',
-	'embed',
-	'iframe',
-	'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',
-	'object',
-	'select:not([disabled]):not([aria-hidden])',
-	'textarea:not([disabled]):not([aria-hidden])',
-];
 
 /**
  * A hook that takes care of controlling click, keyup and keydown events

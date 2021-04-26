@@ -41,7 +41,6 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {
 		const {key, shiftKey} = event;
-
 		if (
 			(arrowKeysUpDown && key === Keys.Down) ||
 			(arrowKeysLeftRight && key === Keys.Right) ||
