@@ -206,7 +206,11 @@ const TooltipProvider: React.FunctionComponent<{
 				(window as any)[SYMBOL_TOOLTIP] = false;
 
 				document.body.removeEventListener('mouseout', handleHide, true);
-				document.body.removeEventListener('mouseover', handleShow, true);
+				document.body.removeEventListener(
+					'mouseover',
+					handleShow,
+					true
+				);
 			};
 		}
 	}, [handleHide]);
