@@ -88,13 +88,13 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 						<ClayManagementToolbar.Item>
 							<ClayButton
 								aria-label="Order items"
-								className="nav-link nav-link-monospaced order-arrow-down-active"
+								className="nav-link nav-link-monospaced"
 								displayType="link"
 								onClick={() => {}}
 							>
 								<ClayIcon
 									spritemap={spritemap}
-									symbol="order-arrow"
+									symbol="order-list-up"
 								/>
 							</ClayButton>
 						</ClayManagementToolbar.Item>
