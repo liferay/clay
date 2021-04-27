@@ -53,16 +53,16 @@ export function isFocusable({
 	}
 
 	if (tagName === 'input') {
-		return type !== 'hidden' && type !== 'file';
+		return type !== 'file' && type !== 'hidden';
 	}
 
 	return (
 		tagName === 'button' ||
-		tagName === 'textarea' ||
+		tagName === 'embed' ||
+		tagName === 'iframe' ||
 		tagName === 'object' ||
 		tagName === 'select' ||
-		tagName === 'iframe' ||
-		tagName === 'embed'
+		tagName === 'textarea'
 	);
 }
 
