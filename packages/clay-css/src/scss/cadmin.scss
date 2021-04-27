@@ -9,12 +9,12 @@
 @import '_mixins';
 
 @import 'cadmin/components/_base';
+@import 'cadmin/components/_reboot';
 
 html#{$cadmin-selector} {
 	.cadmin {
 		// @import 'cadmin/components/_root';
 
-		@import 'cadmin/components/_reboot';
 		@import 'cadmin/components/_type';
 
 		@import 'cadmin/components/_code';
