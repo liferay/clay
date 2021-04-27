@@ -107,7 +107,8 @@
 
 // Alert Notifications
 
-.alert-container {
+.alert-container,
+&.alert-container {
 	height: 0;
 	position: relative;
 }
