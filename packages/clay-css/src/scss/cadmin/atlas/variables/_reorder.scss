@@ -1,7 +1,0 @@
-$cadmin-clay-reorder-underlay-focus: () !default;
-$cadmin-clay-reorder-underlay-focus: map-deep-merge(
-	(
-		box-shadow: null,
-	),
-	$cadmin-clay-reorder-underlay-focus
-);

@@ -1,7 +1,0 @@
-$cadmin-loading-animation: () !default;
-$cadmin-loading-animation: map-deep-merge(
-	(
-		color: $cadmin-gray-600,
-	),
-	$cadmin-loading-animation
-);
