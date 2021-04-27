@@ -7,8 +7,13 @@ $cadmin-single-link-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-component-link: () !default;
 $cadmin-component-link: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-gray-600,
+		transition: box-shadow 0.15s ease-in-out,
 		hover-color: darken($cadmin-gray-600, 15%),
+		focus-color: darken($cadmin-gray-600, 15%),
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-component-link
 );
@@ -16,8 +21,13 @@ $cadmin-component-link: map-deep-merge(
 $cadmin-link-primary: () !default;
 $cadmin-link-primary: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-primary,
+		transition: box-shadow 0.15s ease-in-out,
 		hover-color: darken($cadmin-primary, 15%),
+		focus-color: darken($cadmin-primary, 15%),
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-link-primary
 );
@@ -25,8 +35,13 @@ $cadmin-link-primary: map-deep-merge(
 $cadmin-link-secondary: () !default;
 $cadmin-link-secondary: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-secondary,
-		hover-color: darken($cadmin-secondary, 15%),
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-link-secondary
 );
@@ -99,17 +114,22 @@ $cadmin-link-outline-primary: map-deep-merge(
 	(
 		border-color: $cadmin-primary,
 		color: $cadmin-primary,
-		hover-bg: $cadmin-primary,
-		hover-color: $cadmin-white,
-		btn-focus-box-shadow: 0 0 0 $cadmin-btn-focus-width
-			rgba($cadmin-primary, 0.5),
+		hover-bg: $cadmin-primary-l3,
+		hover-color: $cadmin-primary,
+		focus-bg: $cadmin-primary-l3,
+		focus-box-shadow: map-get($cadmin-btn-outline-primary, focus-box-shadow),
+		focus-color: $cadmin-primary,
+		focus-outline: 0,
+		btn-focus-box-shadow:
+			map-get($cadmin-btn-outline-primary, focus-box-shadow),
 		btn-focus-outline: 0,
 		disabled-bg: transparent,
+		disabled-box-shadow: none,
 		disabled-color: $cadmin-primary,
 		disabled-cursor: $cadmin-btn-disabled-cursor,
 		disabled-opacity: $cadmin-btn-disabled-opacity,
-		active-bg: $cadmin-primary,
-		active-color: $cadmin-white,
+		active-bg: lighten(desaturate($cadmin-primary, 42.05), 41.76),
+		active-color: $cadmin-primary,
 	),
 	$cadmin-link-outline-primary
 );
@@ -117,19 +137,25 @@ $cadmin-link-outline-primary: map-deep-merge(
 $cadmin-link-outline-secondary: () !default;
 $cadmin-link-outline-secondary: map-deep-merge(
 	(
-		border-color: $cadmin-secondary,
+		border-color: $cadmin-secondary-l2,
 		color: $cadmin-secondary,
-		hover-bg: $cadmin-secondary,
-		hover-color: $cadmin-white,
-		btn-focus-box-shadow: 0 0 0 $cadmin-btn-focus-width
-			rgba($cadmin-secondary, 0.5),
+		hover-bg: rgba($cadmin-gray-900, 0.03),
+		hover-color: $cadmin-gray-900,
+		focus-bg: rgba($cadmin-gray-900, 0.03),
+		focus-box-shadow:
+			map-get($cadmin-btn-outline-secondary, focus-box-shadow),
+		focus-color: $cadmin-gray-900,
+		focus-outline: 0,
+		btn-focus-box-shadow:
+			map-get($cadmin-btn-outline-secondary, focus-box-shadow),
 		btn-focus-outline: 0,
 		disabled-bg: transparent,
+		disabled-box-shadow: none,
 		disabled-color: $cadmin-secondary,
 		disabled-cursor: $cadmin-btn-disabled-cursor,
 		disabled-opacity: $cadmin-btn-disabled-opacity,
-		active-bg: $cadmin-secondary,
-		active-color: $cadmin-white,
+		active-bg: rgba($cadmin-gray-900, 0.06),
+		active-color: $cadmin-gray-900,
 	),
 	$cadmin-link-outline-secondary
 );
@@ -165,21 +191,13 @@ $cadmin-component-title: () !default;
 $cadmin-component-title: map-deep-merge(
 	(
 		color: $cadmin-gray-900,
-		font-size: 18px,
+		font-size: 16px,
 		font-weight: $cadmin-headings-font-weight,
-		line-height: $cadmin-headings-line-height,
+		line-height: 1.25,
 		margin-bottom:
-			calc(
-				(
-						#{$cadmin-dropdown-action-toggle-size} - (1em * #{$cadmin-headings-line-height})
-					) / 2
-			),
+			calc((#{$cadmin-dropdown-action-toggle-size} - (1em * 1.25)) / 2),
 		margin-top:
-			calc(
-				(
-						#{$cadmin-dropdown-action-toggle-size} - (1em * #{$cadmin-headings-line-height})
-					) / 2
-			),
+			calc((#{$cadmin-dropdown-action-toggle-size} - (1em * 1.25)) / 2),
 	),
 	$cadmin-component-title
 );
@@ -187,8 +205,13 @@ $cadmin-component-title: map-deep-merge(
 $cadmin-component-title-link: () !default;
 $cadmin-component-title-link: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-gray-900,
+		transition: box-shadow 0.15s ease-in-out,
 		hover-color: darken($cadmin-gray-900, 15%),
+		focus-color: darken($cadmin-gray-900, 15%),
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-component-title-link
 );
@@ -199,6 +222,8 @@ $cadmin-component-subtitle: () !default;
 $cadmin-component-subtitle: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: 1.45,
 		margin-bottom: 0,
 	),
 	$cadmin-component-subtitle
@@ -207,8 +232,13 @@ $cadmin-component-subtitle: map-deep-merge(
 $cadmin-component-subtitle-link: () !default;
 $cadmin-component-subtitle-link: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-gray-600,
-		hover-color: darken($cadmin-gray-600, 15%),
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-component-subtitle-link
 );
@@ -225,20 +255,25 @@ $cadmin-component-action: map-deep-merge(
 		border-width: 0,
 		color: $cadmin-secondary,
 		display: inline-flex,
+		font-size: 16px,
 		height: map-get($cadmin-link-monospaced, height),
 		justify-content: center,
 		overflow: hidden,
 		padding: 0,
 		vertical-align: middle,
 		width: map-get($cadmin-link-monospaced, width),
-		hover-bg: $cadmin-secondary,
-		hover-color: $cadmin-white,
-		btn-focus-box-shadow: 0 0 0 $cadmin-btn-focus-width
-			rgba($cadmin-secondary, 0.5),
+		hover-bg: rgba($cadmin-gray-900, 0.03),
+		hover-color: $cadmin-gray-900,
+		focus-bg: rgba($cadmin-gray-900, 0.03),
+		focus-box-shadow: map-get($cadmin-btn-secondary, focus-box-shadow),
+		focus-color: $cadmin-gray-900,
+		focus-outline: 0,
+		btn-focus-box-shadow: map-get($cadmin-btn-secondary, focus-box-shadow),
 		btn-focus-outline: 0,
-		active-bg: $cadmin-secondary,
-		active-color: $cadmin-white,
+		active-bg: rgba($cadmin-gray-900, 0.06),
+		active-color: $cadmin-gray-900,
 		disabled-bg: transparent,
+		disabled-box-shadow: none,
 		disabled-color: $cadmin-secondary,
 		disabled-cursor: $cadmin-disabled-cursor,
 		disabled-opacity: $cadmin-btn-disabled-opacity,

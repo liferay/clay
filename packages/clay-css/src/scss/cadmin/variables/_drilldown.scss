@@ -102,12 +102,7 @@ $cadmin-drilldown-dropdown-item-indicator-start: map-merge(
 	(
 		height: 24px,
 		left: 8px,
-		top:
-			calc(
-				#{$cadmin-_drilldown-dropdown-item-pt} - ((
-								24px - (1em * #{$cadmin-line-height-base})
-							) / 2)
-			),
+		top: 8px,
 		transition: none,
 		width: 24px,
 	),
@@ -127,12 +122,7 @@ $cadmin-drilldown-dropdown-item-indicator-end: map-merge(
 	(
 		height: 24px,
 		right: 8px,
-		top:
-			calc(
-				#{$cadmin-_drilldown-dropdown-item-pt} - ((
-								24px - (1em * #{$cadmin-line-height-base})
-							) / 2)
-			),
+		top: 8px,
 		transition: none,
 		width: 24px,
 	),

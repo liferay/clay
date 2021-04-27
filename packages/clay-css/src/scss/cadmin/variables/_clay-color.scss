@@ -85,19 +85,22 @@ $cadmin-clay-color-dropdown-menu-input-group-inset-item-before: map-deep-merge(
 // Dropdown Menu Close
 
 $cadmin-clay-color-dropdown-menu-close: () !default;
+$cadmin-clay-color-dropdown-menu-close: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: 16px,
+		opacity: 1,
+		hover-bg: rgba($cadmin-gray-900, 0.03),
+		focus-bg: rgba($cadmin-gray-900, 0.03),
+		active-bg: rgba($cadmin-gray-900, 0.06),
+		disabled-bg: transparent,
+	),
+	$cadmin-clay-color-dropdown-menu-close
+);
 
 // Dropdown Menu Component Action
 
 $cadmin-clay-color-dropdown-menu-component-action: () !default;
-$cadmin-clay-color-dropdown-menu-component-action: map-deep-merge(
-	(
-		hover-bg: transparent,
-		hover-color: $cadmin-black,
-		focus-box-shadow: $cadmin-btn-focus-box-shadow,
-		focus-color: $cadmin-black,
-	),
-	$cadmin-clay-color-dropdown-menu-component-action
-);
 
 // Clay Color Swatch
 
@@ -170,7 +173,7 @@ $cadmin-clay-color-pointer: map-deep-merge(
 		position: absolute,
 		transition: box-shadow 0.15s ease-in-out,
 		width: 14px,
-		focus-box-shadow: $cadmin-btn-focus-box-shadow,
+		focus-box-shadow: 0 0 0 2px $cadmin-primary-l1,
 		focus-outline: 0,
 	),
 	$cadmin-clay-color-pointer

@@ -1,4 +1,4 @@
-$cadmin-bg-checkered-fg: $cadmin-gray-200 !default;
+$cadmin-bg-checkered-fg: $cadmin-gray-300 !default;
 $cadmin-inline-scroller-max-height: 125px !default;
 
 // Autofit Row
@@ -22,10 +22,10 @@ $cadmin-autofit-padded-no-gutters-sm: map-merge(
 
 // Close
 
-$cadmin-close-color: $cadmin-black !default;
+$cadmin-close-color: $cadmin-gray-900 !default;
 $cadmin-close-font-size: $cadmin-font-size-base * 1.5 !default;
 $cadmin-close-font-weight: $cadmin-font-weight-bold !default;
-$cadmin-close-text-shadow: 0 1px 0 $cadmin-white !default;
+$cadmin-close-text-shadow: null !default;
 
 $cadmin-close: () !default;
 $cadmin-close: map-deep-merge(
@@ -43,7 +43,7 @@ $cadmin-close: map-deep-merge(
 		height: 32px,
 		justify-content: center,
 		line-height: 1,
-		opacity: 0.5,
+		opacity: 1,
 		padding: 0,
 		text-align: center,
 		text-shadow: $cadmin-close-text-shadow,
@@ -51,22 +51,25 @@ $cadmin-close: map-deep-merge(
 		width: 32px,
 		hover: (
 			color: $cadmin-close-color,
-			opacity: 0.75,
+			opacity: 1,
 			text-decoration: none,
 		),
 		focus: (
-			opacity: 0.75,
+			box-shadow: $cadmin-btn-focus-box-shadow,
+			opacity: 1,
+			outline: 0,
 		),
 		disabled: (
 			box-shadow: none,
+			color: $cadmin-gray-600,
 			cursor: $cadmin-disabled-cursor,
-			opacity: 0.25,
+			opacity: $cadmin-btn-disabled-opacity,
 			outline: 0,
 		),
 		disabled-active: (
 			pointer-events: none,
 		),
-		btn-focus-box-shadow: $cadmin-input-btn-focus-box-shadow,
+		btn-focus-box-shadow: $cadmin-btn-focus-box-shadow,
 		btn-focus-outline: 0,
 		lexicon-icon-margin-top: 0,
 	),
@@ -79,7 +82,7 @@ $cadmin-c-focus-inset-focus: () !default;
 $cadmin-c-focus-inset-focus: map-deep-merge(
 	(
 		box-shadow: $cadmin-component-focus-inset-box-shadow,
-		border-color: $cadmin-input-btn-focus-color,
+		border-color: $cadmin-primary-l1,
 		outline: 0,
 	),
 	$cadmin-c-focus-inset-focus
@@ -124,7 +127,7 @@ $cadmin-inline-item-spacer-x: 8px !default; // 8px
 
 $cadmin-inline-item-loading-animation-font-size: 1.25em !default;
 
-$cadmin-page-header-bg: $cadmin-gray-200 !default;
+$cadmin-page-header-bg: $cadmin-white !default;
 
 // Display
 

@@ -25,26 +25,26 @@ $cadmin-table-responsive-margin-bottom: 24px !default;
 
 // Table
 
-$cadmin-table-bg: null !default;
-$cadmin-table-border-color: $cadmin-border-color !default;
+$cadmin-table-bg: $cadmin-white !default;
+$cadmin-table-border-color: $cadmin-gray-300 !default;
 $cadmin-table-border-width: $cadmin-border-width !default;
 $cadmin-table-color: $cadmin-body-color !default;
-$cadmin-table-font-size: null !default;
+$cadmin-table-font-size: 14px !default;
 $cadmin-table-margin-bottom: 0 !default;
 
-$cadmin-table-hover-bg: #ececec !default;
+$cadmin-table-hover-bg: lighten($cadmin-component-active-bg, 44.9) !default;
 $cadmin-table-hover-color: $cadmin-table-color !default;
 
 $cadmin-table-active-bg: $cadmin-table-hover-bg !default;
 
 $cadmin-table-disabled-bg: $cadmin-white !default;
-$cadmin-table-disabled-color: #acacac !default;
+$cadmin-table-disabled-color: $cadmin-gray-500 !default;
 $cadmin-table-disabled-cursor: $cadmin-disabled-cursor !default;
 $cadmin-table-disabled-pointer-events: none !default;
 
 // Table Striped
 
-$cadmin-table-accent-bg: #f2f2f2 !default;
+$cadmin-table-accent-bg: $cadmin-gray-100 !default;
 
 $cadmin-table-striped-order: odd !default;
 
@@ -68,11 +68,11 @@ $cadmin-table-cell-expand-smallest-width: 10% !default;
 // TH
 
 $cadmin-table-head-bg: $cadmin-white !default;
-$cadmin-table-head-border-bottom-width: 2 * $cadmin-table-border-width !default;
+$cadmin-table-head-border-bottom-width: 1px !default;
 $cadmin-table-head-border-top-width: 0 !default;
-$cadmin-table-head-color: $cadmin-gray-700 !default;
+$cadmin-table-head-color: $cadmin-gray-600 !default;
 $cadmin-table-head-font-size: null !default;
-$cadmin-table-head-font-weight: null !default;
+$cadmin-table-head-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-table-head-height: 36px !default;
 
 $cadmin-c-table-thead: () !default;
@@ -84,6 +84,17 @@ $cadmin-c-table-thead: map-merge(
 );
 
 $cadmin-table-head-link: () !default;
+$cadmin-table-head-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $cadmin-gray-600,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+	),
+	$cadmin-table-head-link
+);
 
 $cadmin-table-head-title-inline-item-spacer-x: 4px !default; // 4px
 $cadmin-table-head-title-text-truncate-max-width: calc(
@@ -93,6 +104,12 @@ $cadmin-table-head-title-text-truncate-max-width: calc(
 // Table Body
 
 $cadmin-c-table-tbody: () !default;
+$cadmin-c-table-tbody: map-merge(
+	(
+		background-color: $cadmin-white,
+	),
+	$cadmin-c-table-tbody
+);
 
 // TD
 
@@ -107,12 +124,12 @@ $cadmin-table-data-vertical-align: middle !default;
 
 // Table Divider
 
-$cadmin-table-divider-bg: $cadmin-white !default;
-$cadmin-table-divider-color: null !default;
-$cadmin-table-divider-font-weight: null !default;
-$cadmin-table-divider-font-size: null !default;
-$cadmin-table-divider-padding: $cadmin-table-cell-padding !default;
-$cadmin-table-divider-text-transform: null !default;
+$cadmin-table-divider-bg: $cadmin-gray-100 !default;
+$cadmin-table-divider-color: $cadmin-gray-600 !default;
+$cadmin-table-divider-font-size: 12px !default; // 12px
+$cadmin-table-divider-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-table-divider-padding: 7px 12px !default;
+$cadmin-table-divider-text-transform: uppercase !default;
 
 $cadmin-table-quick-action-menu-align-items: flex-start !default;
 $cadmin-table-quick-action-menu-bg: if(
@@ -121,8 +138,8 @@ $cadmin-table-quick-action-menu-bg: if(
 	$cadmin-table-bg
 ) !default;
 $cadmin-table-quick-action-menu-accent-bg: $cadmin-table-accent-bg !default;
-$cadmin-table-quick-action-menu-accent-active-bg: $cadmin-table-accent-bg !default;
-$cadmin-table-quick-action-menu-active-bg: $cadmin-table-active-bg !default;
+$cadmin-table-quick-action-menu-accent-active-bg: $cadmin-table-hover-bg !default;
+$cadmin-table-quick-action-menu-active-bg: $cadmin-gray-200 !default;
 $cadmin-table-quick-action-menu-hover-bg: $cadmin-table-hover-bg !default;
 
 $cadmin-table-cell-expand-smaller-max-width: 200px !default; // 200px
@@ -134,10 +151,16 @@ $cadmin-table-cell-expand-smallest-width: 10% !default;
 // Table Footer
 
 $cadmin-c-table-tfoot: () !default;
+$cadmin-c-table-tfoot: map-merge(
+	(
+		background-color: $cadmin-table-bg,
+	),
+	$cadmin-c-table-tfoot
+);
 
 // Table Caption
 
-$cadmin-table-caption-color: $cadmin-text-muted !default;
+$cadmin-table-caption-color: $cadmin-gray-900 !default;
 
 $cadmin-c-table-caption: () !default;
 $cadmin-c-table-caption: map-merge(
@@ -158,7 +181,8 @@ $cadmin-table-img-max-height: 100px !default;
 $cadmin-table-title: () !default;
 $cadmin-table-title: map-deep-merge(
 	(
-		font-size: $cadmin-font-size-base,
+		color: $cadmin-gray-900,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		line-height: $cadmin-line-height-base,
 		margin-bottom: 0,
@@ -169,8 +193,14 @@ $cadmin-table-title: map-deep-merge(
 $cadmin-table-title-link: () !default;
 $cadmin-table-title-link: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
 		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-table-title-link
 );
@@ -180,8 +210,14 @@ $cadmin-table-title-link: map-deep-merge(
 $cadmin-table-link: () !default;
 $cadmin-table-link: map-deep-merge(
 	(
-		color: $cadmin-gray-700,
-		hover-color: darken($cadmin-gray-700, 15%),
+		border-radius: 1px,
+		color: $cadmin-gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-table-link
 );
@@ -193,12 +229,22 @@ $cadmin-table-action-link: map-deep-merge(
 	(
 		align-items: center,
 		border-radius: $cadmin-btn-border-radius,
+		color: $cadmin-gray-600,
 		display: inline-flex,
+		font-size: 16px,
 		height: 32px,
 		justify-content: center,
+		transition: $cadmin-btn-transition,
 		vertical-align: middle,
 		width: 32px,
+		hover-bg: rgba(0, 0, 0, 0.02),
+		hover-color: $cadmin-gray-900,
 		hover-text-decoration: none,
+		focus-bg: rgba(0, 0, 0, 0.02),
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+		active-bg: rgba(0, 0, 0, 0.04),
 		lexicon-icon-margin-top: 0,
 	),
 	$cadmin-table-action-link
@@ -223,9 +269,8 @@ $cadmin-table-bg-level: -9 !default;
 $cadmin-table-border-level: -6 !default;
 
 // Table List
-
 $cadmin-table-list-bg: $cadmin-white !default;
-$cadmin-table-list-border-color: $cadmin-table-border-color !default;
+$cadmin-table-list-border-color: $cadmin-gray-300 !default;
 $cadmin-table-list-border-x-width: 1px !default;
 $cadmin-table-list-border-y-width: 1px !default;
 
@@ -233,7 +278,7 @@ $cadmin-table-list-border-width: $cadmin-table-list-border-y-width
 	$cadmin-table-list-border-x-width !default;
 
 $cadmin-table-list-border-radius: $cadmin-border-radius !default;
-$cadmin-table-list-color: null !default;
+$cadmin-table-list-color: $cadmin-body-color !default;
 $cadmin-table-list-font-size: null !default;
 $cadmin-table-list-margin-bottom: $cadmin-table-list-border-y-width !default;
 $cadmin-table-list-margin-top: null !default;
@@ -257,20 +302,20 @@ $cadmin-c-table-list: map-merge(
 
 // .table-list.table-striped
 
-$cadmin-table-list-accent-bg: #f2f2f2 !default;
+$cadmin-table-list-accent-bg: $cadmin-gray-100 !default;
 
 // .table-list.table-hover tbody tr:hover
 
-$cadmin-table-list-hover-bg: #ececec !default;
+$cadmin-table-list-hover-bg: $cadmin-table-hover-bg !default;
 
 // .table-list.table-active
 
-$cadmin-table-list-active-bg: #dadada !default;
+$cadmin-table-list-active-bg: $cadmin-table-list-hover-bg !default;
 
 // .table-list .table-disabled
 
 $cadmin-table-list-disabled-bg: $cadmin-white !default;
-$cadmin-table-list-disabled-color: #acacac !default;
+$cadmin-table-list-disabled-color: $cadmin-gray-500 !default;
 $cadmin-table-list-disabled-cursor: $cadmin-disabled-cursor !default;
 $cadmin-table-list-disabled-pointer-events: none !default;
 
@@ -344,8 +389,8 @@ $cadmin-c-table-list-caption: () !default;
 
 // .table-list .table-divider
 
-$cadmin-table-list-divider-padding-x: 12px !default;
-$cadmin-table-list-divider-padding-y: 12px !default;
+$cadmin-table-list-divider-padding-x: 12px !default; // 12px
+$cadmin-table-list-divider-padding-y: 7px !default; // 7px
 
 // .table-list .quick-action-menu
 
@@ -361,9 +406,10 @@ $cadmin-table-list-quick-action-menu-hover-bg: $cadmin-table-list-hover-bg !defa
 $cadmin-table-list-title: () !default;
 $cadmin-table-list-title: map-deep-merge(
 	(
-		font-size: $cadmin-font-size-base,
+		color: $cadmin-gray-900,
+		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
-		line-height: $cadmin-headings-line-height,
+		line-height: 1.45,
 		margin-bottom: 0,
 	),
 	$cadmin-table-list-title
@@ -372,8 +418,14 @@ $cadmin-table-list-title: map-deep-merge(
 $cadmin-table-list-title-link: () !default;
 $cadmin-table-list-title-link: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
 		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-table-list-title-link
 );
@@ -383,8 +435,14 @@ $cadmin-table-list-title-link: map-deep-merge(
 $cadmin-table-list-link: () !default;
 $cadmin-table-list-link: map-deep-merge(
 	(
-		color: $cadmin-gray-700,
-		hover-color: darken($cadmin-gray-700, 15%),
+		border-radius: 1px,
+		color: $cadmin-gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 	),
 	$cadmin-table-list-link
 );
@@ -395,12 +453,22 @@ $cadmin-table-list-action-link: () !default;
 $cadmin-table-list-action-link: map-deep-merge(
 	(
 		align-items: center,
+		color: $cadmin-gray-600,
 		display: inline-flex,
+		font-size: 16px,
 		height: 32px,
 		justify-content: center,
+		transition: $cadmin-btn-transition,
 		vertical-align: middle,
 		width: 32px,
+		hover-bg: rgba(0, 0, 0, 0.02),
+		hover-color: $cadmin-gray-900,
 		hover-text-decoration: none,
+		focus-bg: rgba(0, 0, 0, 0.02),
+		focus-color: $cadmin-gray-900,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+		active-bg: rgba(0, 0, 0, 0.04),
 		lexicon-icon-margin-top: 0,
 	),
 	$cadmin-table-list-action-link

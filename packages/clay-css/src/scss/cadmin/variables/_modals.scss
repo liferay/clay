@@ -1,5 +1,5 @@
-$cadmin-modal-backdrop-bg: $cadmin-black !default;
-$cadmin-modal-backdrop-opacity: 0.5 !default;
+$cadmin-modal-backdrop-bg: $cadmin-gray-800 !default;
+$cadmin-modal-backdrop-opacity: 0.8 !default;
 
 // Modal Dialog
 
@@ -15,34 +15,33 @@ $cadmin-modal-transition: transform 0.3s ease-out !default;
 
 $cadmin-modal-content-bg: $cadmin-white !default;
 $cadmin-modal-content-color: null !default;
-$cadmin-modal-content-border-color: rgba($cadmin-black, 0.2) !default;
+$cadmin-modal-content-border-color: transparent !default;
 $cadmin-modal-content-border-width: $cadmin-border-width !default;
 
 $cadmin-modal-content-border-radius: $cadmin-border-radius-lg !default;
 $cadmin-modal-content-inner-border-radius: $cadmin-modal-content-border-radius -
 	$cadmin-modal-content-border-width !default;
 
-$cadmin-modal-content-box-shadow-xs: 0 4px 8px rgba($cadmin-black, 0.5) !default;
+$cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;
 
 // Modal Header
 
 $cadmin-modal-header-bg: null !default;
-$cadmin-modal-header-border-color: $cadmin-border-color !default;
+$cadmin-modal-header-border-color: $cadmin-gray-300 !default;
 $cadmin-modal-header-border-width: $cadmin-modal-content-border-width !default;
 $cadmin-modal-header-color: null !default;
 $cadmin-modal-header-height: 64px !default;
-$cadmin-modal-header-padding-y: 16px !default;
-$cadmin-modal-header-padding-x: 16px !default;
+$cadmin-modal-header-padding-y: 24px !default;
+$cadmin-modal-header-padding-x: 24px !default;
 
-$cadmin-modal-header-padding: $cadmin-modal-header-padding-y
-	$cadmin-modal-header-padding-x !default;
+$cadmin-modal-header-padding: 24px !default; // 24px
 
 $cadmin-modal-header-height-mobile: null !default;
 
 // Modal Body
 
-$cadmin-modal-inner-padding: 16px !default;
+$cadmin-modal-inner-padding: 24px !default; // 24px
 
 $cadmin-modal-body-bg: null !default;
 $cadmin-modal-body-color: null !default;
@@ -132,8 +131,8 @@ $cadmin-modal-item-shrink: map-deep-merge(
 
 // Modal Title
 
-$cadmin-modal-title-font-size: 20px !default;
-$cadmin-modal-title-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-modal-title-font-size: 20px !default; // 20px
+$cadmin-modal-title-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-modal-title-line-height: $cadmin-line-height-base !default;
 $cadmin-modal-title-text-align: null !default;
 $cadmin-modal-title-font-size-mobile: null !default;
@@ -175,9 +174,9 @@ $cadmin-modal-full-screen-spacer-y: $cadmin-modal-full-screen-spacer-x !default;
 // Modal Width
 
 $cadmin-modal-xl: 1140px !default;
-$cadmin-modal-lg: 800px !default;
-$cadmin-modal-md: 500px !default;
-$cadmin-modal-sm: 300px !default;
+$cadmin-modal-lg: 896px !default;
+$cadmin-modal-md: 600px !default;
+$cadmin-modal-sm: 320px !default;
 
 // Modal Height
 
@@ -214,11 +213,11 @@ $cadmin-modal-height-full-modal-content-sm-up: map-merge(
 $cadmin-modal-success: () !default;
 $cadmin-modal-success: map-deep-merge(
 	(
-		header-bg: theme-color-level(success, -10),
-		header-border-color: theme-color-level(success, -9),
-		header-color: theme-color-level(success, 6),
+		header-bg: $cadmin-success-l2,
+		header-border-color: $cadmin-success-l1,
+		header-color: $cadmin-success,
 		header-close: (
-			color: theme-color-level(success, 6),
+			color: $cadmin-success,
 			hover-color: inherit,
 			focus-color: inherit,
 			disabled-color: inherit,
@@ -232,11 +231,11 @@ $cadmin-modal-success: map-deep-merge(
 $cadmin-modal-info: () !default;
 $cadmin-modal-info: map-deep-merge(
 	(
-		header-bg: theme-color-level(info, -10),
-		header-border-color: theme-color-level(info, -9),
-		header-color: theme-color-level(info, 6),
+		header-bg: $cadmin-info-l2,
+		header-border-color: $cadmin-info-l1,
+		header-color: $cadmin-info,
 		header-close: (
-			color: theme-color-level(info, 6),
+			color: $cadmin-info,
 			hover-color: inherit,
 			focus-color: inherit,
 			disabled-color: inherit,
@@ -250,11 +249,11 @@ $cadmin-modal-info: map-deep-merge(
 $cadmin-modal-warning: () !default;
 $cadmin-modal-warning: map-deep-merge(
 	(
-		header-bg: theme-color-level(warning, -10),
-		header-border-color: theme-color-level(warning, -9),
-		header-color: theme-color-level(warning, 6),
+		header-bg: $cadmin-warning-l2,
+		header-border-color: $cadmin-warning-l1,
+		header-color: $cadmin-warning,
 		header-close: (
-			color: theme-color-level(warning, 6),
+			color: $cadmin-warning,
 			hover-color: inherit,
 			focus-color: inherit,
 			disabled-color: inherit,
@@ -268,11 +267,11 @@ $cadmin-modal-warning: map-deep-merge(
 $cadmin-modal-danger: () !default;
 $cadmin-modal-danger: map-deep-merge(
 	(
-		header-bg: theme-color-level(danger, -10),
-		header-border-color: theme-color-level(danger, -9),
-		header-color: theme-color-level(danger, 6),
+		header-bg: $cadmin-danger-l2,
+		header-border-color: $cadmin-danger-l1,
+		header-color: $cadmin-danger,
 		header-close: (
-			color: theme-color-level(danger, 6),
+			color: $cadmin-danger,
 			hover-color: inherit,
 			focus-color: inherit,
 			disabled-color: inherit,

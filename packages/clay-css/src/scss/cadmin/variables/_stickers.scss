@@ -3,8 +3,8 @@ $cadmin-sticker-border-radius: $cadmin-border-radius !default;
 $cadmin-sticker-border-style: null !default;
 $cadmin-sticker-border-width: null !default;
 $cadmin-sticker-color: $cadmin-label-color !default;
-$cadmin-sticker-font-size: 14px !default; // 14px
-$cadmin-sticker-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-sticker-font-size: 16px !default; // 16px
+$cadmin-sticker-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-sticker-size: 32px !default; // 32px
 
 $cadmin-sticker-inline-item-font-size: null !default;
@@ -23,7 +23,7 @@ $cadmin-sticker-sm: map-deep-merge(
 $cadmin-sticker-lg: () !default;
 $cadmin-sticker-lg: map-deep-merge(
 	(
-		font-size: 18px,
+		font-size: 20px,
 		size: 40px,
 	),
 	$cadmin-sticker-lg
@@ -32,7 +32,7 @@ $cadmin-sticker-lg: map-deep-merge(
 $cadmin-sticker-xl: () !default;
 $cadmin-sticker-xl: map-deep-merge(
 	(
-		font-size: 20px,
+		font-size: 24px,
 		size: 48px,
 	),
 	$cadmin-sticker-xl
@@ -40,7 +40,7 @@ $cadmin-sticker-xl: map-deep-merge(
 
 // Sticker Positions
 
-$cadmin-sticker-inside-offset: $cadmin-grid-gutter-width / 2 !default;
+$cadmin-sticker-inside-offset: 16px !default; // 16px
 $cadmin-sticker-outside-offset: -($cadmin-sticker-size / 2) !default;
 
 // Sticker Circle
@@ -54,46 +54,44 @@ $cadmin-sticker-user-icon: map-deep-merge(
 	(
 		bg: $cadmin-white,
 		border-radius: $cadmin-rounded-circle-border-radius,
-		box-shadow: 0 0 0 1px rgba($cadmin-black, 0.125),
+		box-shadow: 0 0 0 1px $cadmin-gray-300,
 	),
 	$cadmin-sticker-user-icon
 );
 
 // Sticker Variants
 
-$cadmin-sticker-primary-bg: $cadmin-primary !default;
+$cadmin-sticker-primary-bg: $cadmin-white !default;
 $cadmin-sticker-primary-border-color: null !default;
-$cadmin-sticker-primary-color: color-yiq($cadmin-sticker-primary-bg) !default;
+$cadmin-sticker-primary-color: $cadmin-primary !default;
 
-$cadmin-sticker-secondary-bg: $cadmin-secondary !default;
+$cadmin-sticker-secondary-bg: $cadmin-white !default;
 $cadmin-sticker-secondary-border-color: null !default;
-$cadmin-sticker-secondary-color: color-yiq(
-	$cadmin-sticker-secondary-bg
-) !default;
+$cadmin-sticker-secondary-color: $cadmin-secondary !default;
 
-$cadmin-sticker-info-bg: $cadmin-info !default;
+$cadmin-sticker-info-bg: $cadmin-white !default;
 $cadmin-sticker-info-border-color: null !default;
-$cadmin-sticker-info-color: color-yiq($cadmin-sticker-info-bg) !default;
+$cadmin-sticker-info-color: $cadmin-info !default;
 
-$cadmin-sticker-success-bg: $cadmin-success !default;
+$cadmin-sticker-success-bg: $cadmin-white !default;
 $cadmin-sticker-success-border-color: null !default;
-$cadmin-sticker-success-color: color-yiq($cadmin-sticker-success-bg) !default;
+$cadmin-sticker-success-color: $cadmin-success !default;
 
-$cadmin-sticker-warning-bg: $cadmin-warning !default;
+$cadmin-sticker-warning-bg: $cadmin-white !default;
 $cadmin-sticker-warning-border-color: null !default;
-$cadmin-sticker-warning-color: color-yiq($cadmin-sticker-warning-bg) !default;
+$cadmin-sticker-warning-color: $cadmin-warning !default;
 
-$cadmin-sticker-danger-bg: $cadmin-danger !default;
+$cadmin-sticker-danger-bg: $cadmin-white !default;
 $cadmin-sticker-danger-border-color: null !default;
-$cadmin-sticker-danger-color: color-yiq($cadmin-sticker-danger-bg) !default;
+$cadmin-sticker-danger-color: $cadmin-danger !default;
 
-$cadmin-sticker-light-bg: $cadmin-light !default;
+$cadmin-sticker-light-bg: $cadmin-white !default;
 $cadmin-sticker-light-border-color: null !default;
-$cadmin-sticker-light-color: color-yiq($cadmin-sticker-light-bg) !default;
+$cadmin-sticker-light-color: $cadmin-dark !default;
 
 $cadmin-sticker-dark-bg: $cadmin-dark !default;
 $cadmin-sticker-dark-border-color: null !default;
-$cadmin-sticker-dark-color: color-yiq($cadmin-sticker-dark-bg) !default;
+$cadmin-sticker-dark-color: $cadmin-white !default;
 
 $cadmin-sticker-palette: () !default;
 $cadmin-sticker-palette: map-deep-merge(

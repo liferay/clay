@@ -1,8 +1,8 @@
 $cadmin-progress-bg: $cadmin-gray-200 !default;
-$cadmin-progress-border-radius: $cadmin-border-radius !default;
-$cadmin-progress-box-shadow: inset 0 1.6px 1.6px rgba($cadmin-black, 0.1) !default;
-$cadmin-progress-font-size: $cadmin-font-size-base * 0.75 !default;
-$cadmin-progress-height: 16px !default;
+$cadmin-progress-border-radius: 100px !default;
+$cadmin-progress-box-shadow: none !default;
+$cadmin-progress-font-size: 9px !default;
+$cadmin-progress-height: 8px !default;
 $cadmin-progress-min-width: 100px !default;
 
 $cadmin-progress-bar-animation-timing: 1s linear infinite !default;
@@ -13,16 +13,23 @@ $cadmin-progress-bar-transition: width 0.6s ease !default;
 
 // Progress Sizes
 
-$cadmin-progress-border-radius-lg: $cadmin-border-radius !default;
+$cadmin-progress-border-radius-lg: 100px !default;
 $cadmin-progress-font-size-lg: $cadmin-font-size-lg !default;
 $cadmin-progress-height-lg: $cadmin-progress-height * 2 !default;
 
 // Progress Group
 
 $cadmin-progress-group-subtitle: () !default;
+$cadmin-progress-group-subtitle: map-deep-merge(
+	(
+		font-size: 12px,
+		font-weight: $cadmin-font-weight-normal,
+	),
+	$cadmin-progress-group-subtitle
+);
 
-$cadmin-progress-group-addon-font-size: null !default;
-$cadmin-progress-group-addon-font-weight: null !default;
+$cadmin-progress-group-addon-font-size: 14px !default;
+$cadmin-progress-group-addon-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-progress-group-addon-spacer-x: 16px !default;
 
 $cadmin-progress-group-stacked-progress-margin-bottom: 4px !default;

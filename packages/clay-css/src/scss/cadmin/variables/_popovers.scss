@@ -1,42 +1,39 @@
 $cadmin-popover-bg: $cadmin-white !default;
-$cadmin-popover-border-color: rgba($cadmin-black, 0.2) !default;
+$cadmin-popover-border-color: transparent !default;
 $cadmin-popover-border-width: $cadmin-border-width !default;
 
-$cadmin-popover-border-radius: $cadmin-border-radius-lg !default;
+$cadmin-popover-border-radius: $cadmin-border-radius !default; // 4px
 $cadmin-popover-inner-border-radius: $cadmin-popover-border-radius -
 	$cadmin-popover-border-width !default;
 
-$cadmin-popover-box-shadow: 0 4px 8px rgba($cadmin-black, 0.2) !default;
+$cadmin-popover-box-shadow: 0 1px 15px -2px rgba(0, 0, 0, 0.2) !default;
 $cadmin-popover-font-size: $cadmin-font-size-sm !default;
-$cadmin-popover-max-width: 276px !default;
+$cadmin-popover-max-width: 232px !default; // 232px
 
-$cadmin-popover-inline-scroller-max-height: 236px !default;
+$cadmin-popover-inline-scroller-max-height: 238px !default; // 238px
 
-$cadmin-popover-header-bg: darken($cadmin-popover-bg, 3%) !default;
-$cadmin-popover-header-border-color: null !default;
-$cadmin-popover-header-color: $cadmin-headings-color !default;
-$cadmin-popover-header-font-size: $cadmin-font-size-base !default;
+$cadmin-popover-header-bg: $cadmin-white !default;
+$cadmin-popover-header-border-color: $cadmin-gray-300 !default;
+$cadmin-popover-header-color: $cadmin-gray-900 !default;
+$cadmin-popover-header-font-size: 14px !default; // 14px
 $cadmin-popover-header-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-popover-header-margin-x: null !default;
+$cadmin-popover-header-margin-x: 16px !default; // 16px
 $cadmin-popover-header-margin-y: 0 !default;
-$cadmin-popover-header-padding-x: 12px !default;
-$cadmin-popover-header-padding-y: 8px !default;
+$cadmin-popover-header-padding-x: 0 !default;
+$cadmin-popover-header-padding-y: 12px !default; // 12px
 
-$cadmin-popover-body-color: $cadmin-body-color !default;
-$cadmin-popover-body-padding-x: $cadmin-popover-header-padding-x !default;
-$cadmin-popover-body-padding-y: $cadmin-popover-header-padding-y !default;
+$cadmin-popover-body-color: $cadmin-gray-600 !default;
+$cadmin-popover-body-padding-x: 16px !default; // 16px
+$cadmin-popover-body-padding-y: 12px !default; // 12px
 
 $cadmin-popover-offset-border-width: $cadmin-popover-inner-border-radius !default;
 
 $cadmin-popover-arrow-color: $cadmin-popover-bg !default;
-$cadmin-popover-arrow-height: 8px !default;
-$cadmin-popover-arrow-offset: 6px !default;
-$cadmin-popover-arrow-width: 16px !default;
+$cadmin-popover-arrow-height: 4.8px !default;
+$cadmin-popover-arrow-offset: 10px !default; // 10px
+$cadmin-popover-arrow-width: $cadmin-popover-arrow-height * 2 !default;
 
-$cadmin-popover-arrow-outer-color: fade-in(
-	$cadmin-popover-border-color,
-	0.05
-) !default;
+$cadmin-popover-arrow-outer-color: transparent !default;
 
 $cadmin-popover-bottom-arrow-color: $cadmin-popover-header-bg !default;
 $cadmin-popover-bottom-left-arrow-color: $cadmin-popover-header-bg !default;

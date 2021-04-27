@@ -16,5 +16,5 @@ $cadmin-lexicon-icon-sm-font-size: 8px !default; // 8px
 $cadmin-lexicon-icon-lg-font-size: 32px !default; // 32px
 $cadmin-lexicon-icon-xl-font-size: 128px !default; // 128px
 
-$cadmin-order-arrow-down-active-color: rgba($cadmin-black, 0.9) !default;
+$cadmin-order-arrow-down-active-color: $cadmin-gray-500 !default;
 $cadmin-order-arrow-up-active-color: $cadmin-order-arrow-down-active-color !default;

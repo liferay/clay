@@ -12,18 +12,42 @@ $cadmin-c-unset: $cadmin-clay-unset !default;
 
 $cadmin-clay-unset-placeholder: clay-unset-placeholder !default;
 
+// Settings
+
+$cadmin-enable-lexicon-flat-colors: true !default;
+$cadmin-enable-scaling-components: true !default;
+$cadmin-enable-c-inner: true !default;
+$cadmin-scaling-breakpoint-down: sm !default;
+
+$cadmin-enable-caret: false !default;
+$cadmin-enable-rounded: true !default;
+$cadmin-enable-shadows: true !default;
+$cadmin-enable-gradients: false !default;
+$cadmin-enable-transitions: true !default;
+$cadmin-enable-prefers-reduced-motion-media-query: true !default;
+$cadmin-enable-grid-classes: true !default;
+$cadmin-enable-pointer-cursor-for-buttons: true !default;
+$cadmin-enable-print-styles: true !default;
+$cadmin-enable-responsive-font-sizes: false !default;
+$cadmin-enable-validation-icons: true !default;
+$cadmin-enable-deprecation-messages: true !default;
+
+// Deprecated, no longer affects any compiled CSS
+
+$cadmin-enable-hover-media-query: false !default;
+
 $cadmin-selector: ':not(#__):not(#___)' !default;
 
 $cadmin-white: #fff !default;
-$cadmin-gray-100: #f8f9fa !default;
-$cadmin-gray-200: #e9ecef !default;
-$cadmin-gray-300: #dee2e6 !default;
-$cadmin-gray-400: #ced4da !default;
-$cadmin-gray-500: #adb5bd !default;
-$cadmin-gray-600: #6c757d !default;
+$cadmin-gray-100: #f7f8f9 !default;
+$cadmin-gray-200: #f1f2f5 !default;
+$cadmin-gray-300: #e7e7ed !default;
+$cadmin-gray-400: #cdced9 !default;
+$cadmin-gray-500: #a7a9bc !default;
+$cadmin-gray-600: #6b6c7e !default;
 $cadmin-gray-700: #495057 !default;
-$cadmin-gray-800: #343a40 !default;
-$cadmin-gray-900: #212529 !default;
+$cadmin-gray-800: #393a4a !default;
+$cadmin-gray-900: #272833 !default;
 $cadmin-black: #000 !default;
 
 $cadmin-grays: () !default;
@@ -42,16 +66,36 @@ $cadmin-grays: map-merge(
 	$cadmin-grays
 );
 
-$cadmin-blue: #007bff !default;
-$cadmin-indigo: #6610f2 !default;
-$cadmin-purple: #6f42c1 !default;
-$cadmin-pink: #e83e8c !default;
-$cadmin-red: #dc3545 !default;
-$cadmin-orange: #fd7e14 !default;
-$cadmin-yellow: #ffc107 !default;
-$cadmin-green: #28a745 !default;
-$cadmin-teal: #20c997 !default;
-$cadmin-cyan: #17a2b8 !default;
+$cadmin-blue: if($cadmin-enable-lexicon-flat-colors, #4b9fff, #0b5fff) !default;
+$cadmin-indigo: if(
+	$cadmin-enable-lexicon-flat-colors,
+	#7785ff,
+	#6610f2
+) !default;
+$cadmin-purple: if(
+	$cadmin-enable-lexicon-flat-colors,
+	#af78ff,
+	#6f42c1
+) !default;
+$cadmin-pink: if($cadmin-enable-lexicon-flat-colors, #ff73c3, #e83e8c) !default;
+$cadmin-red: if($cadmin-enable-lexicon-flat-colors, #ff5f5f, #da1414) !default;
+$cadmin-orange: if(
+	$cadmin-enable-lexicon-flat-colors,
+	#ffb46e,
+	#b95000
+) !default;
+$cadmin-yellow: if(
+	$cadmin-enable-lexicon-flat-colors,
+	#ffd76e,
+	#ffc107
+) !default;
+$cadmin-green: if(
+	$cadmin-enable-lexicon-flat-colors,
+	#9be169,
+	#287d3d
+) !default;
+$cadmin-teal: if($cadmin-enable-lexicon-flat-colors, #50d2a0, #20c997) !default;
+$cadmin-cyan: if($cadmin-enable-lexicon-flat-colors, #5fc8ff, #17a2b8) !default;
 
 $cadmin-colors: () !default;
 $cadmin-colors: map-merge(
@@ -73,55 +117,70 @@ $cadmin-colors: map-merge(
 	$cadmin-colors
 );
 
-$cadmin-primary: $cadmin-blue !default;
-$cadmin-primary-d1: darken($cadmin-primary, 7.5) !default;
+$cadmin-primary: #0b5fff !default;
+$cadmin-primary-d1: darken($cadmin-primary, 5.1) !default;
 $cadmin-primary-d2: darken($cadmin-primary, 10) !default;
 $cadmin-primary-l1: lighten($cadmin-primary, 22.94) !default;
 $cadmin-primary-l2: lighten($cadmin-primary, 32.94) !default;
 $cadmin-primary-l3: lighten($cadmin-primary, 44.9) !default;
 
-$cadmin-secondary: $cadmin-gray-600 !default;
-$cadmin-secondary-d1: darken($cadmin-secondary, 7.5) !default;
-$cadmin-secondary-d2: darken($cadmin-secondary, 10) !default;
-$cadmin-secondary-l1: lighten($cadmin-secondary, 22.94) !default;
-$cadmin-secondary-l2: lighten($cadmin-secondary, 32.94) !default;
-$cadmin-secondary-l3: lighten($cadmin-secondary, 44.9) !default;
+$cadmin-secondary: #6b6c7e !default;
+$cadmin-secondary-d1: darken(saturate($cadmin-secondary, 4.82), 20) !default;
+$cadmin-secondary-d2: darken(saturate($cadmin-secondary, 5.36), 23.92) !default;
+$cadmin-secondary-l1: lighten(
+	saturate(adjust-hue($cadmin-secondary, -3), 5.39),
+	23.92
+) !default;
+$cadmin-secondary-l2: lighten(
+	saturate(adjust-hue($cadmin-secondary, -2), 5.48),
+	37.06
+) !default;
+$cadmin-secondary-l3: lighten(
+	saturate(adjust-hue($cadmin-secondary, 3), 6.13),
+	46.08
+) !default;
 
-$cadmin-info: $cadmin-cyan !default;
-$cadmin-info-d1: darken($cadmin-info, 7.5) !default;
+$cadmin-info: #2e5aac !default;
+$cadmin-info-d1: darken($cadmin-info, 5) !default;
 $cadmin-info-d2: darken($cadmin-info, 10) !default;
-$cadmin-info-l1: lighten($cadmin-info, 22.94) !default;
-$cadmin-info-l2: lighten($cadmin-info, 32.94) !default;
+$cadmin-info-l1: lighten(saturate($cadmin-info, 0.59), 28.04) !default;
+$cadmin-info-l2: lighten(desaturate($cadmin-info, 3.25), 52.94) !default;
 
-$cadmin-success: $cadmin-green !default;
-$cadmin-success-d1: darken($cadmin-success, 7.5) !default;
+$cadmin-success: #287d3c !default;
+$cadmin-success-d1: darken($cadmin-success, 5) !default;
 $cadmin-success-d2: darken($cadmin-success, 10) !default;
-$cadmin-success-l1: lighten($cadmin-success, 22.94) !default;
-$cadmin-success-l2: lighten($cadmin-success, 32.94) !default;
+$cadmin-success-l1: lighten(desaturate($cadmin-success, 0.14), 24.95) !default;
+$cadmin-success-l2: lighten(desaturate($cadmin-success, 1.52), 62.94) !default;
 
-$cadmin-warning: $cadmin-yellow !default;
-$cadmin-warning-d1: darken($cadmin-warning, 7.5) !default;
+$cadmin-warning: #b95000 !default;
+$cadmin-warning-d1: darken($cadmin-warning, 5.1) !default;
 $cadmin-warning-d2: darken($cadmin-warning, 10) !default;
-$cadmin-warning-l1: lighten($cadmin-warning, 22.94) !default;
-$cadmin-warning-l2: lighten($cadmin-warning, 32.94) !default;
+$cadmin-warning-l1: lighten($cadmin-warning, 24.9) !default;
+$cadmin-warning-l2: lighten($cadmin-warning, 60) !default;
 
-$cadmin-danger: $cadmin-red !default;
-$cadmin-danger-d1: darken($cadmin-danger, 7.5) !default;
+$cadmin-danger: #da1414 !default;
+$cadmin-danger-d1: darken($cadmin-danger, 5) !default;
 $cadmin-danger-d2: darken($cadmin-danger, 10) !default;
-$cadmin-danger-l1: lighten($cadmin-danger, 22.94) !default;
-$cadmin-danger-l2: lighten($cadmin-danger, 32.94) !default;
+$cadmin-danger-l1: lighten(desaturate($cadmin-danger, 0.25), 28.04) !default;
+$cadmin-danger-l2: lighten(saturate($cadmin-danger, 5.04), 50) !default;
 
-$cadmin-light: $cadmin-gray-100 !default;
-$cadmin-light-d1: darken($cadmin-light, 7.5) !default;
+$cadmin-light: #f1f2f5 !default;
+$cadmin-light-d1: darken($cadmin-light, 5.1) !default;
 $cadmin-light-d2: darken($cadmin-light, 10) !default;
-$cadmin-light-l1: lighten($cadmin-light, 22.94) !default;
-$cadmin-light-l2: lighten($cadmin-light, 32.94) !default;
+$cadmin-light-l1: lighten(
+	desaturate(adjust-hue($cadmin-light, -15), 2.38),
+	1.96
+) !default;
+$cadmin-light-l2: lighten(
+	desaturate(adjust-hue($cadmin-light, -225), 16.67),
+	4.71
+) !default;
 
-$cadmin-dark: $cadmin-gray-800 !default;
-$cadmin-dark-d1: darken($cadmin-dark, 7.5) !default;
+$cadmin-dark: #272833 !default;
+$cadmin-dark-d1: darken($cadmin-dark, 5.1) !default;
 $cadmin-dark-d2: darken($cadmin-dark, 10) !default;
-$cadmin-dark-l1: lighten($cadmin-dark, 22.94) !default;
-$cadmin-dark-l2: lighten($cadmin-dark, 32.94) !default;
+$cadmin-dark-l1: lighten(saturate($cadmin-dark, 0.18), 4.12) !default;
+$cadmin-dark-l2: lighten(desaturate($cadmin-dark, 0.36), 8.04) !default;
 
 $cadmin-theme-colors: () !default;
 $cadmin-theme-colors: map-merge(
@@ -153,29 +212,6 @@ $cadmin-yiq-text-light: $cadmin-white !default;
 
 $cadmin-escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23')) !default;
 
-// Settings
-
-$cadmin-enable-scaling-components: false !default;
-$cadmin-enable-c-inner: true !default;
-$cadmin-scaling-breakpoint-down: sm !default;
-
-$cadmin-enable-caret: false !default;
-$cadmin-enable-rounded: true !default;
-$cadmin-enable-shadows: false !default;
-$cadmin-enable-gradients: false !default;
-$cadmin-enable-transitions: true !default;
-$cadmin-enable-prefers-reduced-motion-media-query: true !default;
-$cadmin-enable-grid-classes: true !default;
-$cadmin-enable-pointer-cursor-for-buttons: true !default;
-$cadmin-enable-print-styles: true !default;
-$cadmin-enable-responsive-font-sizes: false !default;
-$cadmin-enable-validation-icons: true !default;
-$cadmin-enable-deprecation-messages: true !default;
-
-// Deprecated, no longer affects any compiled CSS
-
-$cadmin-enable-hover-media-query: false !default;
-
 // Spacers
 
 $cadmin-spacer: 16px !default;
@@ -189,7 +225,9 @@ $cadmin-spacers: map-deep-merge(
 		2: (
 			$cadmin-spacer * 0.5,
 		),
-		3: $cadmin-spacer,
+		3: (
+			$cadmin-spacer * 1,
+		),
 		4: (
 			$cadmin-spacer * 1.5,
 		),
@@ -204,6 +242,12 @@ $cadmin-spacers: map-deep-merge(
 		),
 		8: (
 			$cadmin-spacer * 7.5,
+		),
+		9: (
+			$cadmin-spacer * 9,
+		),
+		10: (
+			$cadmin-spacer * 10,
 		),
 	),
 	$cadmin-spacers
@@ -231,9 +275,9 @@ $cadmin-line-height-sm: 1.5 !default;
 $cadmin-border-color: $cadmin-gray-300 !default;
 $cadmin-border-width: 1px !default;
 
-$cadmin-border-radius: 4px !default;
-$cadmin-border-radius-lg: 4.8px !default;
-$cadmin-border-radius-sm: 3.2px !default;
+$cadmin-border-radius: 4px !default; // 4px
+$cadmin-border-radius-lg: 6px !default; // 6px
+$cadmin-border-radius-sm: 3px !default; // 3px
 
 $cadmin-rounded-border-radius: $cadmin-border-radius !default;
 $cadmin-rounded-circle-border-radius: 5000px !default;
@@ -258,12 +302,13 @@ $cadmin-embed-responsive-aspect-ratios: join(
 	$cadmin-embed-responsive-aspect-ratios
 );
 
-$cadmin-component-focus-box-shadow: 0 0 0 3.2px rgba($cadmin-primary, 0.25) !default;
-$cadmin-component-focus-inset-box-shadow: inset 0 0 0 3.2px
-	rgba($cadmin-primary, 0.25) !default;
+$cadmin-component-focus-box-shadow: #{0 0 0 2px $cadmin-white,
+	0 0 0 4px $cadmin-primary-l1} !default;
+$cadmin-component-focus-inset-box-shadow: #{inset 0 0 0 2px $cadmin-primary-l1,
+	inset 0 0 0 4px $cadmin-white} !default;
 
-$cadmin-component-active-color: $cadmin-white !default;
 $cadmin-component-active-bg: $cadmin-primary !default;
+$cadmin-component-active-color: $cadmin-white !default;
 
 // Cursors
 
@@ -277,7 +322,7 @@ $cadmin-grid-breakpoints: (
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1200px,
+	xl: 1280px,
 ) !default;
 
 @include _assert-ascending(
@@ -292,7 +337,7 @@ $cadmin-grid-breakpoints: (
 // Grid columns
 
 $cadmin-grid-columns: 12 !default;
-$cadmin-grid-gutter-width: 30px !default;
+$cadmin-grid-gutter-width: 24px !default;
 $cadmin-grid-row-columns: 6 !default;
 
 // Containers
@@ -301,7 +346,7 @@ $cadmin-container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px,
+	xl: 1248px,
 ) !default;
 
 @include _assert-ascending(
@@ -332,23 +377,23 @@ $cadmin-container-view: map-deep-merge(
 
 // Fonts
 
-$cadmin-moz-osx-font-smoothing: null !default;
-$cadmin-webkit-font-smoothing: null !default;
+$cadmin-moz-osx-font-smoothing: grayscale !default;
+$cadmin-webkit-font-smoothing: antialiased !default;
 
 $cadmin-font-import-url: null !default;
 
-$cadmin-font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-	Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-	'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$cadmin-font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
+	'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial,
+	sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 $cadmin-font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
 $cadmin-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 	'Liberation Mono', 'Courier New', monospace !default;
 
 $cadmin-font-family-base: $cadmin-font-family-sans-serif !default;
 
-$cadmin-font-size-base: 16px !default;
-$cadmin-font-size-lg: $cadmin-font-size-base * 1.25 !default;
-$cadmin-font-size-sm: $cadmin-font-size-base * 0.875 !default;
+$cadmin-font-size-base: 16px !default; // 16px
+$cadmin-font-size-lg: 18px !default; // 18px
+$cadmin-font-size-sm: 14px !default; // 14px
 
 $cadmin-font-size-base-mobile: $cadmin-font-size-base !default;
 $cadmin-font-size-lg-mobile: $cadmin-font-size-lg !default;
@@ -356,19 +401,19 @@ $cadmin-font-size-lg-mobile: $cadmin-font-size-lg !default;
 $cadmin-font-weight-lighter: lighter !default;
 $cadmin-font-weight-light: 300 !default;
 $cadmin-font-weight-normal: 400 !default;
-$cadmin-font-weight-semi-bold: 500 !default;
+$cadmin-font-weight-semi-bold: 600 !default;
 $cadmin-font-weight-bold: 700 !default;
 $cadmin-font-weight-bolder: 900 !default;
 
 $cadmin-font-weight-base: $cadmin-font-weight-normal !default;
 $cadmin-line-height-base: 1.5 !default;
 
-$cadmin-h1-font-size: $cadmin-font-size-base * 2.5 !default;
-$cadmin-h2-font-size: $cadmin-font-size-base * 2 !default;
-$cadmin-h3-font-size: $cadmin-font-size-base * 1.75 !default;
-$cadmin-h4-font-size: $cadmin-font-size-base * 1.5 !default;
-$cadmin-h5-font-size: $cadmin-font-size-base * 1.25 !default;
-$cadmin-h6-font-size: $cadmin-font-size-base !default;
+$cadmin-h1-font-size: 26px !default; // 26px
+$cadmin-h2-font-size: 22px !default; // 22px
+$cadmin-h3-font-size: 19px !default; // 19px
+$cadmin-h4-font-size: 16px !default; // 16px
+$cadmin-h5-font-size: 14px !default; // 14px
+$cadmin-h6-font-size: 13px !default; // 13px
 
 $cadmin-h1-font-size-mobile: null !default;
 $cadmin-h2-font-size-mobile: null !default;
@@ -379,7 +424,7 @@ $cadmin-h6-font-size-mobile: null !default;
 
 $cadmin-headings-margin-bottom: $cadmin-spacer / 2 !default;
 $cadmin-headings-font-family: null !default;
-$cadmin-headings-font-weight: 500 !default;
+$cadmin-headings-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-headings-line-height: 1.2 !default;
 $cadmin-headings-color: null !default;
 
@@ -496,7 +541,7 @@ $cadmin-c-button-base: map-merge(
 
 $cadmin-link-color: $cadmin-primary !default;
 $cadmin-link-decoration: none !default;
-$cadmin-link-hover-color: darken($cadmin-link-color, 15%) !default;
+$cadmin-link-hover-color: $cadmin-primary-d2 !default;
 $cadmin-link-hover-decoration: underline !default;
 
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
@@ -523,7 +568,7 @@ $cadmin-lead-font-weight: 300 !default;
 
 $cadmin-small-font-size: 80% !default;
 
-$cadmin-text-muted: $cadmin-gray-600 !default;
+$cadmin-text-muted: $cadmin-gray-500 !default;
 
 $cadmin-blockquote-small-color: $cadmin-gray-600 !default;
 $cadmin-blockquote-small-font-size: $cadmin-small-font-size !default;
@@ -537,7 +582,7 @@ $cadmin-mark-padding: 0.2em !default;
 
 $cadmin-dt-font-weight: $cadmin-font-weight-bold !default;
 
-$cadmin-code-color: $cadmin-pink !default;
+$cadmin-code-color: #e83e8c !default;
 $cadmin-code-font-size: 87.5% !default;
 
 $cadmin-kbd-bg: $cadmin-gray-900 !default;

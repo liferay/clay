@@ -8,7 +8,7 @@ $cadmin-sidebar-padding-top: 16px !default; // 16px
 $cadmin-sidebar-header-component-title: () !default;
 $cadmin-sidebar-header-component-title: map-deep-merge(
 	(
-		font-size: 24px,
+		font-size: 20px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		clay-link: (
 			color: $cadmin-gray-900,
@@ -22,8 +22,8 @@ $cadmin-sidebar-header-component-title: map-deep-merge(
 $cadmin-sidebar-header-component-subtitle: () !default;
 $cadmin-sidebar-header-component-subtitle: map-deep-merge(
 	(
-		font-size: 18px,
-		font-weight: $cadmin-font-weight-semi-bold,
+		font-size: 12px,
+		font-weight: $cadmin-font-weight-normal,
 		margin-bottom: 0,
 	),
 	$cadmin-sidebar-header-component-subtitle
@@ -34,7 +34,7 @@ $cadmin-sidebar-header-component-subtitle: map-deep-merge(
 $cadmin-sidebar-dt: () !default;
 $cadmin-sidebar-dt: map-deep-merge(
 	(
-		font-size: 14px,
+		font-size: 12px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		margin-bottom: 4px,
 		text-transform: uppercase,
@@ -80,16 +80,26 @@ $cadmin-sidebar-list-group-sticker-size: map-deep-merge(
 $cadmin-sidebar-light: () !default;
 $cadmin-sidebar-light: map-deep-merge(
 	(
-		bg: $cadmin-light,
+		bg: $cadmin-white,
 		border-color: $cadmin-gray-300,
-		border-left-width: 1px,
+		border-left-width: 0,
+		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		color: $cadmin-gray-900,
+		dt: (
+			color: $cadmin-gray-600,
+		),
 		dd: (
 			clay-link: (
 				color: $cadmin-gray-900,
 			),
 		),
 		panel-bg: $cadmin-gray-200,
+		panel-unstyled: (
+			header-link: (
+				focus-box-shadow: #{0 0 0 4px $cadmin-white,
+				0 0 0 6px $cadmin-primary-l1},
+			),
+		),
 		sidebar-list-group-title: (
 			font-size: 16px,
 			clay-link: (
@@ -103,8 +113,8 @@ $cadmin-sidebar-light: map-deep-merge(
 $cadmin-sidebar-light-navigation-bar: () !default;
 $cadmin-sidebar-light-navigation-bar: map-deep-merge(
 	(
-		bg: $cadmin-light,
-		border-color: $cadmin-gray-300,
+		bg: $cadmin-white,
+		border-color: $cadmin-secondary-l2,
 		link-color: $cadmin-navbar-light-color,
 		link-hover-color: $cadmin-navbar-light-hover-color,
 		link-active-color: $cadmin-navbar-light-active-color,

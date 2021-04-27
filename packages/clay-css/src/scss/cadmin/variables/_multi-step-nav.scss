@@ -6,11 +6,11 @@ $cadmin-multi-step-icon-bg: $cadmin-gray-200 !default;
 $cadmin-multi-step-icon-border-color: null !default;
 $cadmin-multi-step-icon-border-style: null !default;
 $cadmin-multi-step-icon-border-width: 0 !default;
-$cadmin-multi-step-icon-color: rgba($cadmin-black, 0.5) !default;
+$cadmin-multi-step-icon-color: $cadmin-gray-600 !default;
 $cadmin-multi-step-icon-cursor: $cadmin-link-cursor !default;
-$cadmin-multi-step-icon-border-radius: $cadmin-border-radius !default;
-$cadmin-multi-step-icon-font-size: $cadmin-font-size-base !default;
-$cadmin-multi-step-icon-font-weight: null !default;
+$cadmin-multi-step-icon-border-radius: 100px !default;
+$cadmin-multi-step-icon-font-size: 14px !default;
+$cadmin-multi-step-icon-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-multi-step-icon-padding-bottom: 0 !default;
 $cadmin-multi-step-icon-padding-left: 0 !default;
 $cadmin-multi-step-icon-padding-right: 0 !default;
@@ -19,7 +19,7 @@ $cadmin-multi-step-icon-size: 32px !default;
 $cadmin-multi-step-icon-transition: box-shadow 0.15s ease-in-out !default;
 
 $cadmin-multi-step-icon-hover-bg: $cadmin-multi-step-icon-bg !default;
-$cadmin-multi-step-icon-hover-color: rgba($cadmin-black, 0.7) !default;
+$cadmin-multi-step-icon-hover-color: $cadmin-multi-step-icon-color !default;
 $cadmin-multi-step-icon-hover-text-decoration: none !default;
 
 $cadmin-multi-step-icon-focus-bg: $cadmin-multi-step-icon-hover-bg !default;
@@ -37,14 +37,14 @@ $cadmin-multi-step-divider-top: ($cadmin-multi-step-divider-height / 2) +
 $cadmin-multi-step-indicator-width: $cadmin-multi-step-icon-size +
 	($cadmin-multi-step-divider-spacer-x * 2) !default;
 
-$cadmin-multi-step-indicator-label-color: null !default;
-$cadmin-multi-step-indicator-label-font-size: $cadmin-font-size-base !default;
-$cadmin-multi-step-indicator-label-font-weight: null !default;
+$cadmin-multi-step-indicator-label-color: $cadmin-gray-600 !default;
+$cadmin-multi-step-indicator-label-font-size: 14px !default;
+$cadmin-multi-step-indicator-label-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-multi-step-indicator-label-max-width: 100px !default;
 
-$cadmin-multi-step-title-color: null !default;
-$cadmin-multi-step-title-font-size: $cadmin-font-size-base !default;
-$cadmin-multi-step-title-font-weight: null !default;
+$cadmin-multi-step-title-color: $cadmin-gray-600 !default;
+$cadmin-multi-step-title-font-size: 14px !default;
+$cadmin-multi-step-title-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-multi-step-title-margin-bottom: 10px !default; // 10px
 $cadmin-multi-step-title-max-width: 100px !default;
 
@@ -74,11 +74,11 @@ $cadmin-multi-step-icon-active-bg-position: center !default;
 $cadmin-multi-step-icon-active-bg-size: $cadmin-multi-step-icon-font-size !default;
 $cadmin-multi-step-divider-active-bg: $cadmin-multi-step-divider-bg !default;
 
-$cadmin-multi-step-icon-disabled-bg: $cadmin-gray-100 !default;
+$cadmin-multi-step-icon-disabled-bg: $cadmin-multi-step-icon-bg !default;
 $cadmin-multi-step-icon-disabled-bg-image: null !default;
 $cadmin-multi-step-icon-disabled-bg-position: null !default;
 $cadmin-multi-step-icon-disabled-bg-size: null !default;
-$cadmin-multi-step-icon-disabled-color: $cadmin-gray-400 !default;
+$cadmin-multi-step-icon-disabled-color: $cadmin-gray-500 !default;
 $cadmin-multi-step-icon-disabled-cursor: $cadmin-disabled-cursor !default;
 $cadmin-multi-step-icon-disabled-opacity: 1 !default;
 $cadmin-multi-step-icon-disabled-focus-box-shadow: none !default;

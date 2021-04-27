@@ -1,4 +1,4 @@
-$cadmin-clay-range-disabled-color: $cadmin-gray-600 !default;
+$cadmin-clay-range-disabled-color: $cadmin-gray-500 !default;
 
 $cadmin-clay-range-input-group: () !default;
 $cadmin-clay-range-input-group: map-deep-merge(
@@ -21,7 +21,7 @@ $cadmin-clay-range-input-group-text: map-deep-merge(
 	(
 		bg: transparent,
 		border-width: 0,
-		color: $cadmin-body-color,
+		color: $cadmin-gray-500,
 		font-size: 14px,
 		font-weight: $cadmin-font-weight-semi-bold,
 		min-width: 24px,
@@ -48,6 +48,7 @@ $cadmin-clay-range-title: map-deep-merge(
 $cadmin-clay-range-input: () !default;
 $cadmin-clay-range-input: map-deep-merge(
 	(
+		color: $cadmin-gray-500,
 		display: block,
 		padding-bottom: 0.1px,
 		position: relative,
@@ -61,7 +62,7 @@ $cadmin-clay-range-input: map-deep-merge(
 		thumb-height: 24px,
 		thumb-width: 24px,
 		track-appearance: none,
-		track-bg: $cadmin-gray-300,
+		track-bg: $cadmin-gray-200,
 		track-border-radius: 100px,
 		track-height: 4px,
 		track-position: absolute,
@@ -72,7 +73,7 @@ $cadmin-clay-range-input: map-deep-merge(
 		progress-position: absolute,
 		progress-top: 50%,
 		progress-width: 50%,
-		tooltip-padding: 4px 8px,
+		tooltip-padding: 8px 12px,
 		tooltip-spacer-y: 4px,
 		tooltip-transition: opacity 0.15s linear,
 		tooltip-visibility: hidden,
@@ -96,10 +97,12 @@ $cadmin-clay-range-input: map-deep-merge(
 		data-label-after-content: attr(data-label-max),
 		data-label-after-right: 0,
 		hover-cursor: $cadmin-link-cursor,
+		hover-thumb-bg: $cadmin-primary-l3,
 		focus-outline: 0,
-		focus-thumb-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-thumb-box-shadow: $cadmin-component-focus-inset-box-shadow,
 		disabled-color: $cadmin-clay-range-disabled-color,
 		disabled-cursor: $cadmin-disabled-cursor,
+		disabled-thumb-bg: $cadmin-gray-100,
 		disabled-progress-bg: $cadmin-primary-l2,
 		disabled-track-bg: $cadmin-gray-200,
 	),

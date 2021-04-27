@@ -16,18 +16,18 @@ $cadmin-panel-margin-bottom: $cadmin-spacer !default;
 
 // Panel Header
 
-$cadmin-panel-header-border-bottom-width: 1px !default;
+$cadmin-panel-header-border-bottom-width: 0 !default;
 $cadmin-panel-header-offset-border-radius: if(
 	$cadmin-panel-border-top-width > 0,
 	calc(#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-top-width}),
 	$cadmin-panel-border-radius
 ) !default;
-$cadmin-panel-header-font-size: $cadmin-font-size-base !default;
+$cadmin-panel-header-font-size: 14px !default; // 14px
 $cadmin-panel-header-line-height: $cadmin-headings-line-height !default;
 $cadmin-panel-header-padding-x: 20px !default;
 $cadmin-panel-header-padding-y: 12px !default;
 
-$cadmin-panel-header-collapse-icon-font-size: 14px !default; // 14px
+$cadmin-panel-header-collapse-icon-font-size: 12px !default; // 12px
 $cadmin-panel-header-collapse-icon-bottom: null !default;
 $cadmin-panel-header-collapse-icon-left: null !default;
 $cadmin-panel-header-collapse-icon-right: null !default;
@@ -42,7 +42,7 @@ $cadmin-panel-header-collapse-icon-padding-left: null !default;
 $cadmin-panel-header-collapse-icon-padding-right: null !default;
 
 $cadmin-panel-header-link-text-decoration: null !default;
-$cadmin-panel-header-link-hover-text-decoration: null !default;
+$cadmin-panel-header-link-hover-text-decoration: none !default;
 
 $cadmin-panel-header-link: () !default;
 $cadmin-panel-header-link: map-deep-merge(
@@ -50,22 +50,17 @@ $cadmin-panel-header-link: map-deep-merge(
 		color: inherit,
 		display: block,
 		text-decoration: $cadmin-panel-header-link-text-decoration,
-		transition: border-color 0.1s ease#{','} border-radius 0.5s ease,
+		transition: box-shadow 0.15s ease-in-out,
 		hover-color: inherit,
 		hover-text-decoration: $cadmin-panel-header-link-hover-text-decoration,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
 		focus-z-index: $cadmin-zindex-panel-header-link-focus,
 	),
 	$cadmin-panel-header-link
 );
 
 $cadmin-panel-header-collapsed-link: () !default;
-$cadmin-panel-header-collapsed-link: map-deep-merge(
-	(
-		border-color: transparent,
-		transition: border-color 0.75s ease,
-	),
-	$cadmin-panel-header-collapsed-link
-);
 
 // Panel Body
 
@@ -74,7 +69,7 @@ $cadmin-panel-body-padding-y: 12px !default;
 
 // Panel Footer
 
-$cadmin-panel-footer-border-top-width: 1px !default;
+$cadmin-panel-footer-border-top-width: 0 !default;
 $cadmin-panel-footer-offset-border-radius: if(
 	$cadmin-panel-border-bottom-width > 0,
 	calc(#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-bottom-width}),
@@ -85,14 +80,14 @@ $cadmin-panel-footer-padding-y: $cadmin-panel-header-padding-y !default;
 
 // Panel Title
 
-$cadmin-panel-title-font-size: null !default;
+$cadmin-panel-title-font-size: 14px !default; // 14px
 $cadmin-panel-title-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-panel-title-text-transform: null !default;
+$cadmin-panel-title-text-transform: uppercase !default;
 
 // Panel Title Small Element
 
-$cadmin-panel-title-small-font-size: null !default;
-$cadmin-panel-title-small-margin-left: null !default;
+$cadmin-panel-title-small-font-size: 100% !default;
+$cadmin-panel-title-small-margin-left: 6px !default; // 6px
 
 // Panel Group
 
@@ -106,7 +101,7 @@ $cadmin-panel-group-sm: map-deep-merge(
 		font-size: 14px,
 		header-padding-bottom: 8px,
 		header-padding-top: 8px,
-		title-font-size: 14px,
+		title-font-size: 12px,
 		collapse-icon-top: 11px,
 	),
 	$cadmin-panel-group-sm
@@ -129,12 +124,11 @@ $cadmin-panel-secondary-header-link: () !default;
 $cadmin-panel-secondary: () !default;
 $cadmin-panel-secondary: map-deep-merge(
 	(
-		border-color: rgba($cadmin-black, 0.125),
-		header-bg: $cadmin-gray-100,
-		header-border-color: rgba($cadmin-black, 0.125),
+		border-color: $cadmin-gray-300,
+		color: $cadmin-gray-600,
+		header-border-color: $cadmin-gray-300,
 		header-link: $cadmin-panel-secondary-header-link,
-		footer-bg: $cadmin-gray-100,
-		footer-border-color: rgba($cadmin-black, 0.125),
+		footer-border-color: $cadmin-gray-300,
 	),
 	$cadmin-panel-secondary
 );
@@ -142,6 +136,14 @@ $cadmin-panel-secondary: map-deep-merge(
 // Panel Unstyled
 
 $cadmin-panel-unstyled-header-link: () !default;
+$cadmin-panel-unstyled-header-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		focus-box-shadow: #{0 0 0 4px $cadmin-body-bg,
+		0 0 0 6px $cadmin-primary-l1},
+	),
+	$cadmin-panel-unstyled-header-link
+);
 
 $cadmin-panel-unstyled: () !default;
 $cadmin-panel-unstyled: map-deep-merge(

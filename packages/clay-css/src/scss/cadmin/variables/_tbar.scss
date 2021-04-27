@@ -58,12 +58,12 @@ $cadmin-tbar-stacked: map-deep-merge(
 			position: relative,
 			width: 40px,
 			focus: (
-				box-shadow: inset 0 0 0 2px $cadmin-primary-l1#{','} inset 0
-					0 0 4px $cadmin-white,
+				box-shadow: inset 0 0 0 2px $cadmin-primary-l1#{','} inset 0 0 0
+					4px $cadmin-white,
 			),
 			active-focus: (
-				box-shadow: inset 0 0 0 2px $cadmin-primary-l1#{','} inset 0
-					0 0 4px $cadmin-white,
+				box-shadow: inset 0 0 0 2px $cadmin-primary-l1#{','} inset 0 0 0
+					4px $cadmin-white,
 			),
 		),
 	),
@@ -125,6 +125,7 @@ $cadmin-component-tbar: map-deep-merge(
 		border-color: $cadmin-gray-300,
 		border-style: solid,
 		border-width: 0 0 1px 0,
+		color: $cadmin-gray-600,
 		height: 56px,
 	),
 	$cadmin-component-tbar
@@ -307,8 +308,8 @@ $cadmin-subnav-tbar: map-deep-merge(
 $cadmin-subnav-tbar-light: () !default;
 $cadmin-subnav-tbar-light: map-deep-merge(
 	(
-		bg-color: $cadmin-light,
-		color: $cadmin-navbar-light-color,
+		bg-color: $cadmin-light-l2,
+		color: $cadmin-gray-600,
 		padding-y: 2px,
 	),
 	$cadmin-subnav-tbar-light
@@ -323,7 +324,7 @@ $cadmin-subnav-tbar-primary-component-link: map-deep-merge(
 		hover-color: $cadmin-gray-900,
 		disabled-color: $cadmin-gray-600,
 		disabled-cursor: $cadmin-disabled-cursor,
-		disabled-opacity: $cadmin-btn-disabled-opacity,
+		disabled-opacity: 0.65,
 		disabled-text-decoration: none,
 	),
 	$cadmin-subnav-tbar-primary-component-link
@@ -334,7 +335,7 @@ $cadmin-subnav-tbar-primary-component-label-close: map-deep-merge(
 	(
 		focus-color: inherit,
 		disabled-color: $cadmin-gray-600,
-		disabled-opacity: $cadmin-btn-disabled-opacity,
+		disabled-opacity: 0.65,
 	),
 	$cadmin-subnav-tbar-primary-component-label-close
 );
@@ -383,7 +384,7 @@ $cadmin-subnav-tbar-primary: map-deep-merge(
 $cadmin-subnav-tbar-primary-disabled-component-label: () !default;
 $cadmin-subnav-tbar-primary-disabled-component-label: map-deep-merge(
 	(
-		border-color: #6c757d,
+		border-color: #8e94aa,
 	),
 	$cadmin-subnav-tbar-primary-disabled-component-label
 );
@@ -392,7 +393,7 @@ $cadmin-subnav-tbar-primary-disabled: () !default;
 $cadmin-subnav-tbar-primary-disabled: map-deep-merge(
 	(
 		bg-color: lighten(desaturate($cadmin-primary, 27.03), 37.06),
-		color: #6c757d,
+		color: #8e94aa,
 		component-label: $cadmin-subnav-tbar-primary-disabled-component-label,
 	),
 	$cadmin-subnav-tbar-primary-disabled

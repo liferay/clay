@@ -1,7 +1,7 @@
 $cadmin-enable-scaling-navbar: $cadmin-enable-scaling-components !default;
 
 $cadmin-navbar-border-radius: null !default;
-$cadmin-navbar-font-size: null !default;
+$cadmin-navbar-font-size: 14px !default; // 14px
 $cadmin-navbar-padding-x: $cadmin-spacer !default;
 $cadmin-navbar-padding-y: $cadmin-spacer / 2 !default;
 
@@ -39,17 +39,20 @@ $cadmin-navbar-toggler-padding-y: 4px !default;
 
 // Navbar Underline
 
-$cadmin-navbar-underline-active-bg: $cadmin-component-active-bg !default;
+$cadmin-navbar-underline-active-bg: lighten(
+	$cadmin-component-active-bg,
+	22.94
+) !default;
 
 // Navbar Dark
 
-$cadmin-navbar-dark-color: rgba($cadmin-white, 0.5) !default;
+$cadmin-navbar-dark-color: $cadmin-white !default;
 
-$cadmin-navbar-dark-hover-color: rgba($cadmin-white, 0.75) !default;
+$cadmin-navbar-dark-hover-color: $cadmin-navbar-dark-color !default;
 
-$cadmin-navbar-dark-active-color: $cadmin-white !default;
+$cadmin-navbar-dark-active-color: $cadmin-navbar-dark-color !default;
 
-$cadmin-navbar-dark-disabled-color: rgba($cadmin-white, 0.25) !default;
+$cadmin-navbar-dark-disabled-color: $cadmin-nav-link-disabled-color !default;
 
 $cadmin-navbar-dark-brand-color: $cadmin-navbar-dark-active-color !default;
 
@@ -60,13 +63,13 @@ $cadmin-navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://
 
 // Navbar Light
 
-$cadmin-navbar-light-color: rgba($cadmin-black, 0.5) !default;
+$cadmin-navbar-light-color: $cadmin-gray-600 !default;
 
-$cadmin-navbar-light-hover-color: rgba($cadmin-black, 0.7) !default;
+$cadmin-navbar-light-hover-color: $cadmin-navbar-light-color !default;
 
-$cadmin-navbar-light-active-color: rgba($cadmin-black, 0.9) !default;
+$cadmin-navbar-light-active-color: $cadmin-gray-900 !default;
 
-$cadmin-navbar-light-disabled-color: rgba($cadmin-black, 0.3) !default;
+$cadmin-navbar-light-disabled-color: $cadmin-nav-link-disabled-color !default;
 
 $cadmin-navbar-light-brand-color: $cadmin-navbar-light-active-color !default;
 
