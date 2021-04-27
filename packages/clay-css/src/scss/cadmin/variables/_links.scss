@@ -1,7 +1,3 @@
-////
-/// @group Links
-////
-
 $cadmin-single-link-font-weight: $cadmin-font-weight-semi-bold !default;
 
 $cadmin-component-link: () !default;
@@ -48,35 +44,35 @@ $cadmin-link-secondary: map-deep-merge(
 
 // Link Outline
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-border-radius: $cadmin-btn-border-radius !default;
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-border-width: $cadmin-btn-border-width !default;
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-font-size: $cadmin-btn-font-size-sm !default;
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-font-weight: $cadmin-font-weight-semi-bold !default;
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-line-height: $cadmin-btn-line-height-sm !default;
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-padding-x: $cadmin-btn-padding-x-sm !default;
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-padding-y: $cadmin-btn-padding-y-sm !default;
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
 $cadmin-link-outline-transition: $cadmin-btn-transition !default;
 
@@ -162,7 +158,7 @@ $cadmin-link-outline-secondary: map-deep-merge(
 
 // Link Monospaced
 
-/// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-monospaced` instead
+// @deprecated as of v3.4.0 use the Sass map `$cadmin-link-monospaced` instead
 
 $cadmin-link-monospaced-size: $cadmin-btn-monospaced-size-sm !default;
 

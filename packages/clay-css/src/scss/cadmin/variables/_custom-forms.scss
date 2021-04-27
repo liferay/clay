@@ -1,7 +1,3 @@
-////
-/// @group customForms
-////
-
 $cadmin-custom-forms-transition: background-color 0.15s ease-in-out,
 	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
 
@@ -37,19 +33,19 @@ $cadmin-custom-control-indicator-checked-color: $cadmin-component-active-color !
 $cadmin-custom-control-indicator-checked-border-color: $cadmin-custom-control-indicator-checked-bg !default;
 $cadmin-custom-control-indicator-checked-box-shadow: none !default;
 
-/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-active-bg` instead
+// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-active-bg` instead
 
 $cadmin-custom-control-indicator-active-checked-bg: $cadmin-component-active-bg !default;
 $cadmin-custom-control-indicator-checked-active-bg: $cadmin-custom-control-indicator-active-checked-bg !default;
 
-/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-active-border-color` instead
+// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-active-border-color` instead
 
 $cadmin-custom-control-indicator-active-checked-border-color: $cadmin-custom-control-indicator-checked-active-bg !default;
 $cadmin-custom-control-indicator-checked-active-border-color: $cadmin-custom-control-indicator-active-checked-border-color !default;
 
 $cadmin-custom-control-indicator-checked-border-color: $cadmin-custom-control-indicator-checked-active-bg !default;
 
-/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-bg` instead
+// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-bg` instead
 
 $cadmin-custom-control-indicator-disabled-checked-bg: lighten(
 	$cadmin-component-active-bg,
@@ -57,7 +53,7 @@ $cadmin-custom-control-indicator-disabled-checked-bg: lighten(
 ) !default;
 $cadmin-custom-control-indicator-checked-disabled-bg: $cadmin-custom-control-indicator-disabled-checked-bg !default;
 
-/// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-border-color` instead
+// @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-border-color` instead
 
 $cadmin-custom-control-indicator-disabled-checked-border-color: $cadmin-custom-control-indicator-disabled-checked-bg !default;
 $cadmin-custom-control-indicator-checked-disabled-border-color: $cadmin-custom-control-indicator-disabled-checked-border-color !default;
@@ -68,15 +64,15 @@ $cadmin-custom-control-cursor: null !default;
 $cadmin-custom-control-gutter: 8px !default;
 $cadmin-custom-control-spacer-x: 16px !default;
 
-/// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
+// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
 
 $cadmin-custom-control-margin-bottom: 16px !default;
 
-/// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
+// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
 
 $cadmin-custom-control-margin-top: null !default;
 
-/// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
+// @deprecated after of v3.5.0 use the Sass map `$cadmin-custom-control` instead
 
 $cadmin-custom-control-min-height: $cadmin-custom-control-indicator-size +
 	($cadmin-custom-control-indicator-position-top * 2) !default;
@@ -98,31 +94,31 @@ $cadmin-custom-control: map-deep-merge(
 
 // Custom Description
 
-/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
 
 $cadmin-custom-control-description-cursor: $cadmin-form-check-label-cursor !default;
 
-/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
 
 $cadmin-custom-control-description-font-size: $cadmin-input-label-font-size !default; // 13px
 
-/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
 
 $cadmin-custom-control-description-font-weight: $cadmin-font-weight-normal !default;
 
-/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
+// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label` instead
 
 $cadmin-custom-control-description-line-height: $cadmin-custom-control-min-height !default;
 
-/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text` instead
+// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text` instead
 
 $cadmin-custom-control-description-padding-left: 8px !default; // 8px
 
-/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-disabled` instead
+// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-disabled` instead
 
 $cadmin-custom-control-description-disabled-cursor: $cadmin-disabled-cursor !default;
 
-/// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text-small` instead
+// @deprecated as of v2.19.0 use the Sass map `$cadmin-custom-control-label-text-small` instead
 
 $cadmin-custom-control-description-small-font-size: 100% !default;
 
@@ -216,7 +212,7 @@ $cadmin-custom-radio-indicator-icon-checked-bg-size: 50% !default;
 
 $cadmin-custom-radio-indicator-disabled-border-color: $cadmin-custom-control-indicator-disabled-bg !default;
 
-/// @deprecated as of v2.2.1 use `$cadmin-custom-radio-indicator-checked-disabled-border-color` instead
+// @deprecated as of v2.2.1 use `$cadmin-custom-radio-indicator-checked-disabled-border-color` instead
 
 $cadmin-custom-radio-indicator-disabled-checked-border-color: $cadmin-custom-control-indicator-disabled-checked-border-color !default;
 $cadmin-custom-radio-indicator-checked-disabled-border-color: $cadmin-custom-radio-indicator-disabled-checked-border-color !default;

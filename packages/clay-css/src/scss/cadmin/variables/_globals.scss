@@ -1,12 +1,8 @@
-////
-/// @group globals
-////
-
-/// The keyword `clay-unset` allows unsetting a Sass variable value so it doesn't get output in the final CSS file.
+// The keyword `clay-unset` allows unsetting a Sass variable value so it doesn't get output in the final CSS file.
 
 $cadmin-clay-unset: clay-unset !default;
 
-/// An alias for `$cadmin-clay-unset`
+// An alias for `$cadmin-clay-unset`
 
 $cadmin-c-unset: $cadmin-clay-unset !default;
 

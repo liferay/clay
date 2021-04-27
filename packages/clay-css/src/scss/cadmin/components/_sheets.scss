@@ -1,7 +1,3 @@
-////
-/// @group sheet
-////
-
 .sheet {
 	background-color: $cadmin-sheet-bg;
 	border-color: $cadmin-sheet-border-color;
@@ -138,7 +134,7 @@ fieldset {
 
 // Sheet Sizes
 
-/// @deprecated as of v3.x use `.container .sheet` instead
+// @deprecated as of v3.x use `.container .sheet` instead
 
 .sheet-lg {
 	margin-left: auto;

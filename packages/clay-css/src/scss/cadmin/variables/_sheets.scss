@@ -1,7 +1,3 @@
-////
-/// @group sheet
-////
-
 $cadmin-sheet-bg: $cadmin-white !default;
 $cadmin-sheet-border-color: $cadmin-gray-300 !default;
 $cadmin-sheet-border-style: solid !default;
@@ -62,7 +58,7 @@ $cadmin-sheet-footer-btn-block-sm-down: map-deep-merge(
 
 // Sheet Sizes
 
-/// @deprecated as of 3.x.
+// @deprecated as of 3.x.
 
 $cadmin-sheet-lg-max-width: ceil(
 	map-get($cadmin-container-max-widths, lg) * 0.83333

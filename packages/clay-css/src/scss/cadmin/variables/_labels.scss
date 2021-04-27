@@ -1,7 +1,3 @@
-////
-/// @group labels
-////
-
 $cadmin-label-color: null !default;
 
 $cadmin-label-link-color: inherit !default;
@@ -100,35 +96,35 @@ $cadmin-label-base: map-deep-merge(
 	$cadmin-label-base
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-color: $cadmin-primary !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-hover-color: $cadmin-primary-d2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-bg: $cadmin-white !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-border-color: $cadmin-primary-l1 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-hover-border-color: $cadmin-label-primary-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 
 $cadmin-label-primary-link-hover-color: $cadmin-label-primary-hover-color !default;
 
@@ -158,35 +154,35 @@ $cadmin-label-primary: map-deep-merge(
 	$cadmin-label-primary
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-color: $cadmin-secondary !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-hover-color: $cadmin-gray-900 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-bg: $cadmin-white !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-border-color: $cadmin-secondary-l2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-hover-border-color: $cadmin-label-secondary-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-secondary` instead
 
 $cadmin-label-secondary-link-hover-color: $cadmin-label-secondary-hover-color !default;
 
@@ -216,35 +212,35 @@ $cadmin-label-secondary: map-deep-merge(
 	$cadmin-label-secondary
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-color: $cadmin-success !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-hover-color: $cadmin-success-d2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-bg: $cadmin-white !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-border-color: $cadmin-success-l1 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-hover-border-color: $cadmin-label-success-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-success` instead
 
 $cadmin-label-success-link-hover-color: $cadmin-label-success-hover-color !default;
 
@@ -274,35 +270,35 @@ $cadmin-label-success: map-deep-merge(
 	$cadmin-label-success
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-color: $cadmin-info !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-hover-color: $cadmin-info-d2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-bg: $cadmin-white !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-border-color: $cadmin-info-l1 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-hover-border-color: $cadmin-label-info-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-info` instead
 
 $cadmin-label-info-link-hover-color: $cadmin-label-info-hover-color !default;
 
@@ -332,35 +328,35 @@ $cadmin-label-info: map-deep-merge(
 	$cadmin-label-info
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-color: $cadmin-warning !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-hover-color: $cadmin-warning-d2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-bg: $cadmin-white !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-border-color: $cadmin-warning-l1 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-hover-border-color: $cadmin-label-warning-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-warning` instead
 
 $cadmin-label-warning-link-hover-color: $cadmin-label-warning-hover-color !default;
 
@@ -390,35 +386,35 @@ $cadmin-label-warning: map-deep-merge(
 	$cadmin-label-warning
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-color: $cadmin-danger !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-hover-color: $cadmin-danger-d2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-bg: $cadmin-white !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-border-color: $cadmin-danger-l1 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-hover-border-color: $cadmin-label-danger-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-danger` instead
 
 $cadmin-label-danger-link-hover-color: $cadmin-label-danger-hover-color !default;
 
@@ -448,35 +444,35 @@ $cadmin-label-danger: map-deep-merge(
 	$cadmin-label-danger
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-color: $cadmin-light !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-hover-color: $cadmin-light-d2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-bg: $cadmin-dark !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-border-color: $cadmin-light !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-hover-border-color: $cadmin-label-light-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-light` instead
 
 $cadmin-label-light-link-hover-color: $cadmin-label-light-hover-color !default;
 
@@ -506,35 +502,35 @@ $cadmin-label-light: map-deep-merge(
 	$cadmin-label-light
 );
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-color: $cadmin-dark !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-hover-color: $cadmin-dark-l2 !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-bg: $cadmin-white !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-hover-bg: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-border-color: $cadmin-dark !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-hover-border-color: $cadmin-label-dark-border-color !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-link-color: null !default;
 
-/// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
+// @deprecated as of v2.4.1 use the Sass map `$cadmin-label-dark` instead
 
 $cadmin-label-dark-link-hover-color: $cadmin-label-dark-hover-color !default;
 

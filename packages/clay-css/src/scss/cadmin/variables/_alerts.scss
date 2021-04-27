@@ -1,7 +1,3 @@
-////
-/// @group alerts
-////
-
 $cadmin-alert-border-style: solid !default;
 $cadmin-alert-border-radius: $cadmin-border-radius !default;
 $cadmin-alert-border-width: 1px !default;
@@ -42,51 +38,51 @@ $cadmin-alert-btn-group-item: map-deep-merge(
 	$cadmin-alert-btn-group-item
 );
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-font-size: 16px !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-height: 32px !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-line-height: null !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-opacity: 1 !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-margin-left: null !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-padding-bottom: 0 !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-padding-left: 0 !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-padding-right: 0 !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-padding-top: 0 !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-position-right: 8px !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-position-top: 11px !default;
 
-/// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
+// @deprecated as of v2.12.0 use the Sass map `$cadmin-alert-close` instead
 
 $cadmin-alert-close-width: $cadmin-alert-close-height !default;
 

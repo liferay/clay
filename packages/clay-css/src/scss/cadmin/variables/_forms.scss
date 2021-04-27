@@ -57,23 +57,23 @@ $cadmin-input-placeholder-disabled-color: $cadmin-input-disabled-color !default;
 
 $cadmin-input-plaintext-color: $cadmin-body-color !default;
 
-/// Deprecated
+// Deprecated
 
 $cadmin-input-height-border: $cadmin-input-border-bottom-width +
 	$cadmin-input-border-top-width !default;
 
-/// Deprecated
+// Deprecated
 
 $cadmin-input-height-inner: $cadmin-input-height - $cadmin-input-height-border !default;
 
-/// Deprecated
+// Deprecated
 
 $cadmin-input-height-inner-half: add(
 	$cadmin-input-line-height * 0.5em,
 	$cadmin-input-padding-y
 ) !default;
 
-/// Deprecated
+// Deprecated
 
 $cadmin-input-height-inner-quarter: add(
 	$cadmin-input-line-height * 0.25em,
@@ -134,31 +134,31 @@ $cadmin-input-label-reference-mark-font-size: 6px !default;
 $cadmin-input-label-reference-mark-spacer: null !default;
 $cadmin-input-label-reference-mark-vertical-align: null !default;
 
-/// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
 $cadmin-input-readonly-bg: $cadmin-white !default;
 
-/// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
 $cadmin-input-readonly-border-color: $cadmin-input-border-color !default;
 
-/// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
 $cadmin-input-readonly-color: null !default;
 
-/// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
 $cadmin-input-readonly-cursor: null !default;
 
-/// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
 $cadmin-input-readonly-focus-bg: null !default;
 
-/// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
 $cadmin-input-readonly-focus-border-color: $cadmin-input-focus-border-color !default;
 
-/// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
+// @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
 $cadmin-input-readonly-focus-color: null !default;
 
