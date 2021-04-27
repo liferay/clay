@@ -13,17 +13,10 @@
 
 html#{$cadmin-selector} {
 	.cadmin {
-		// @import 'cadmin/components/_root';
-
 		@import 'cadmin/components/_type';
 
 		@import 'cadmin/components/_code';
 		@import 'cadmin/components/_images';
-
-		// @import 'cadmin/components/_carousel';
-		// @import 'cadmin/components/_jumbotron';
-		// @import 'cadmin/components/_spinners';
-		// @import 'cadmin/components/_toasts';
 
 		@import 'cadmin/components/_icons';
 
@@ -39,13 +32,11 @@ html#{$cadmin-selector} {
 		@import 'cadmin/components/_button-groups';
 		@import 'cadmin/components/_empty-state';
 		@import 'cadmin/components/_labels';
-		// @import 'cadmin/components/_media';
 		@import 'cadmin/components/_stickers';
 
 		@import 'cadmin/components/_cards';
 		@import 'cadmin/components/_dropdowns';
 
-		@import 'cadmin/components/_drilldown';
 		@import 'cadmin/components/_forms';
 		@import 'cadmin/components/_links';
 
@@ -69,7 +60,6 @@ html#{$cadmin-selector} {
 		@import 'cadmin/components/_menubar';
 		@import 'cadmin/components/_navbar';
 
-		// @import 'cadmin/components/_application-bar';
 		@import 'cadmin/components/_management-bar';
 		@import 'cadmin/components/_navigation-bar';
 
@@ -84,7 +74,6 @@ html#{$cadmin-selector} {
 		@import 'cadmin/components/_slideout';
 		@import 'cadmin/components/_tables';
 		@import 'cadmin/components/_tbar';
-		// @import 'cadmin/components/_timelines';
 		@import 'cadmin/components/_toggle-switch';
 		@import 'cadmin/components/_tooltip';
 
