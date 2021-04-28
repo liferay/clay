@@ -43,7 +43,8 @@ export function isFocusable({
 
 	if (
 		(tabIndex != null && tabIndex >= minTabIndex) ||
-		!!contentEditable === true
+		contentEditable === true ||
+		contentEditable === 'true'
 	) {
 		return true;
 	}
