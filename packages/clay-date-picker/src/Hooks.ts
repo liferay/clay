@@ -107,7 +107,8 @@ function getDaysInMonth(d: Date) {
  *   [
  *     {
  *       date: Sun Dec 30 2018 12:00:00 GMT-0300...
- *       outside: true
+ *       nextMonth: false
+ *       previousMonth: true
  * 	   },
  *     ...
  *   ]
@@ -145,7 +146,7 @@ function getWeekArray(d: Date, firstDayOfWeek = 0): Month {
 	for (let i = 7 - firstWeek.length; i > 0; i -= 1) {
 		const outsideDate = clone(firstWeek[0].date);
 		outsideDate.setDate(firstWeek[0].date.getDate() - 1);
-		firstWeek.unshift({date: outsideDate, outside: true});
+		firstWeek.unshift({date: outsideDate, previousMonth: true});
 	}
 
 	// push days until the end of the last week
@@ -153,7 +154,7 @@ function getWeekArray(d: Date, firstDayOfWeek = 0): Month {
 	for (let i = lastWeek.length; i < 7; i += 1) {
 		const outsideDate = clone(lastWeek[lastWeek.length - 1].date);
 		outsideDate.setDate(lastWeek[lastWeek.length - 1].date.getDate() + 1);
-		lastWeek.push({date: outsideDate, outside: true});
+		lastWeek.push({date: outsideDate, nextMonth: true});
 	}
 
 	return weekArray;

@@ -10,7 +10,8 @@ export {formatDate, parseDate};
 
 export interface IDay {
 	date: Date;
-	outside?: boolean;
+	nextMonth?: boolean;
+	previousMonth?: boolean;
 }
 
 export type WeekDays = Array<IDay>;
