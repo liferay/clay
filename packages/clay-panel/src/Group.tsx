@@ -30,6 +30,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * This class generally should be used inside card, sheet, or a type of padded container.
 	 */
 	flush?: boolean;
+
+	/**
+	 * Flag to enable the small variation for panels within a group of panels.
+	 */
+	small?: boolean;
 }
 
 const ClayPanelGroup: React.FunctionComponent<IProps> = ({
@@ -39,6 +44,7 @@ const ClayPanelGroup: React.FunctionComponent<IProps> = ({
 	fluidFirst,
 	fluidLast,
 	flush,
+	small,
 	...otherProps
 }: IProps) => {
 	return (
@@ -50,6 +56,7 @@ const ClayPanelGroup: React.FunctionComponent<IProps> = ({
 				'panel-group-fluid-first': fluidFirst,
 				'panel-group-fluid-last': fluidLast,
 				'panel-group-flush': flush,
+				'panel-group-sm': small,
 			})}
 			role="tablist"
 		>
