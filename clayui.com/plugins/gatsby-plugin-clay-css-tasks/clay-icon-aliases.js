@@ -683,6 +683,7 @@ const iconsData = {
 	"reply":					'"answer", "arrow", "left", "respond"',
 	"repository":				'"connection", "folder"',
 	"restore":					'"back", "history", "time"',
+	"rotate":					'"pivot", "spin", "move","turn"',
 	"rss":						'"notification", "updates"',
 	"rules":					'"condition"',
 	"search":					'"inspect", "lens", "zoom"',
