@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal} from '@clayui/shared';
+import {ClayPortal, observeRect} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 export const ALIGN_POSITIONS = [
 	'top',
@@ -100,12 +100,9 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		const show = externalShow ? externalShow : internalShow;
 		const setShow = onShowChange ? onShowChange : internalSetShow;
 
-		useEffect(() => {
+		const align = useCallback(() => {
 			if (
-				trigger &&
-				ref &&
 				(ref as React.RefObject<HTMLElement>).current &&
-				triggerRef &&
 				triggerRef.current
 			) {
 				const points = ALIGNMENTS_MAP[alignPosition] as [
@@ -121,7 +118,19 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					}
 				);
 			}
-		}, [show]);
+		}, [alignPosition, triggerRef, ref]);
+
+		useEffect(() => {
+			if (trigger) {
+				align();
+			}
+		}, [align, show]);
+
+		useEffect(() => {
+			if (trigger && triggerRef.current) {
+				return observeRect(triggerRef.current, align);
+			}
+		}, [align]);
 
 		useEffect(() => {
 			if (!disableScroll && popoverScrollerRef.current && show) {
