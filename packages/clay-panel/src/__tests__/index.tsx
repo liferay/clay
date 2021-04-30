@@ -6,11 +6,12 @@
 import ClayPanel from '..';
 import {act, cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
-import TestRenderer from 'react-test-renderer';
 
 describe('ClayPanel', () => {
+	afterEach(cleanup);
+
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayPanel displayTitle="Display Title" spritemap="/foo/bar">
 				<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
 				<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
@@ -18,11 +19,11 @@ describe('ClayPanel', () => {
 			</ClayPanel>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with different displayType', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayPanel
 				displayTitle="Display Title"
 				displayType="secondary"
@@ -34,11 +35,11 @@ describe('ClayPanel', () => {
 			</ClayPanel>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with multiple panels', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayPanel.Group>
 				<ClayPanel displayTitle="Display Title" spritemap="/foo/bar">
 					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
@@ -58,11 +59,35 @@ describe('ClayPanel', () => {
 			</ClayPanel.Group>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with multiple small panels', () => {
+		const {container} = render(
+			<ClayPanel.Group small>
+				<ClayPanel displayTitle="Display Title" spritemap="/foo/bar">
+					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+				</ClayPanel>
+
+				<ClayPanel displayTitle="Display Title" spritemap="/foo/bar">
+					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+				</ClayPanel>
+
+				<ClayPanel
+					collapsable
+					displayTitle="Display Title"
+					spritemap="/foo/bar"
+				>
+					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
+				</ClayPanel>
+			</ClayPanel.Group>
+		);
+
+		expect(container.querySelector('.panel-group-sm')).toBeTruthy();
 	});
 
 	it('renders with custom displayTitle', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayPanel
 				collapsable
 				displayTitle={
@@ -80,11 +105,11 @@ describe('ClayPanel', () => {
 			</ClayPanel>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders without displayTitle', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayPanel
 				collapsable
 				displayType="secondary"
@@ -97,7 +122,7 @@ describe('ClayPanel', () => {
 			</ClayPanel>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 });
 
