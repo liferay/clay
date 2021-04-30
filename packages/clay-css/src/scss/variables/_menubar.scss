@@ -61,10 +61,58 @@ $menubar-vertical-expand-md: map-deep-merge(
 $menubar-vertical-transparent-md: () !default;
 $menubar-vertical-transparent-md: map-deep-merge(
 	(
-		link-color: $gray-600,
-		link-hover-color: darken($gray-600, 15),
-		link-active-color: $gray-900,
-		bg-mobile: $gray-100,
+		breakpoint-up: md,
+		mobile: (
+			background-color: $gray-100,
+		),
+		link: (
+			color: $gray-600,
+			hover: (
+				color: darken($gray-600, 15),
+			),
+			active: (
+				color: rgba($black, 0.9),
+			),
+			show: (
+				color: $c-unset,
+			),
+			disabled: (
+				color: rgba($black, 0.3),
+			),
+		),
+		link-mobile: (
+			border-radius: clay-enable-rounded(0),
+			color: $gray-900,
+			hover: (
+				background-color: $gray-100,
+				color: darken($gray-900, 5%),
+			),
+			active: (
+				background-color: $component-active-bg,
+				color: $component-active-color,
+			),
+			active-class: (
+				font-weight: $font-weight-semi-bold,
+			),
+			disabled: (
+				background-color: transparent,
+				color: $gray-600,
+			),
+			show: (
+				background-color: $c-unset,
+				color: $c-unset,
+				font-weight: $c-unset,
+			),
+		),
+		collapse-mobile: (
+			background-color: $white,
+			border-color: $gray-300,
+			border-radius: clay-enable-rounded($border-radius),
+			box-shadow: clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
+		),
+		toggler-mobile: (
+			text-decoration: none,
+		),
 	),
 	$menubar-vertical-transparent-md
 );
@@ -181,10 +229,57 @@ $menubar-vertical-transparent-lg: () !default;
 $menubar-vertical-transparent-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
-		link-color: $gray-600,
-		link-hover-color: darken($gray-600, 15),
-		link-active-color: $gray-900,
-		bg-mobile: $gray-100,
+		mobile: (
+			background-color: $gray-100,
+		),
+		link: (
+			color: $gray-600,
+			hover: (
+				color: darken($gray-600, 15),
+			),
+			active: (
+				color: rgba($black, 0.9),
+			),
+			show: (
+				color: $c-unset,
+			),
+			disabled: (
+				color: rgba($black, 0.3),
+			),
+		),
+		link-mobile: (
+			border-radius: clay-enable-rounded(0),
+			color: $gray-900,
+			hover: (
+				background-color: $gray-100,
+				color: darken($gray-900, 5%),
+			),
+			active: (
+				background-color: $component-active-bg,
+				color: $component-active-color,
+			),
+			active-class: (
+				font-weight: $font-weight-semi-bold,
+			),
+			disabled: (
+				background-color: transparent,
+				color: $gray-600,
+			),
+			show: (
+				background-color: $c-unset,
+				color: $c-unset,
+				font-weight: $c-unset,
+			),
+		),
+		collapse-mobile: (
+			background-color: $white,
+			border-color: $gray-300,
+			border-radius: clay-enable-rounded($border-radius),
+			box-shadow: clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
+		),
+		toggler-mobile: (
+			text-decoration: none,
+		),
 	),
 	$menubar-vertical-transparent-lg
 );
