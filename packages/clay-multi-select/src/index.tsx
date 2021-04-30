@@ -8,10 +8,11 @@ import {ClayButtonWithIcon} from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import ClayLabel from '@clayui/label';
+import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {FocusScope, Keys, noop, sub} from '@clayui/shared';
 import classNames from 'classnames';
 import fuzzy from 'fuzzy';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 const DELIMITER_KEYS = ['Enter', ','];
 
@@ -35,7 +36,6 @@ type Locator = {
 };
 
 interface IMenuRendererProps {
-	filter?: (item: Item, inputValue: string, locator: Locator) => boolean;
 	inputValue: string;
 	locator: Locator;
 	onItemClick?: (item: Item) => void;
@@ -72,11 +72,6 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	disabledClearAll?: boolean;
 
 	/**
-	 * Callback to filter items based on the inputValue and locator
-	 */
-	filter?: (item: Item, inputValue: string, locator: Locator) => boolean;
-
-	/**
 	 * Value used for each selected item's hidden input name attribute
 	 */
 	inputName?: string;
@@ -85,6 +80,11 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Value of input
 	 */
 	inputValue: string;
+
+	/**
+	 * Flag to indicate if loading icon should be rendered
+	 */
+	isLoading?: boolean;
 
 	/**
 	 * Flag to indicate if input is valid or not
@@ -127,32 +127,23 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	spritemap?: string;
 }
 
-const defaultFilter = (item: Item, inputValue: string, locator: Locator) =>
-	!!inputValue && fuzzy.match(inputValue, item[locator.label]) !== null;
-
 const MultiSelectMenuRenderer: MenuRenderer = ({
-	filter = defaultFilter,
 	inputValue,
 	locator,
 	onItemClick = () => {},
 	sourceItems,
 }) => (
 	<ClayDropDown.ItemList>
-		{sourceItems
-			.filter((item) => filter(item, inputValue, locator))
-			.map((item) => (
-				<ClayAutocomplete.Item
-					key={item[locator.value]}
-					match={inputValue}
-					onClick={() => onItemClick(item)}
-					value={item[locator.label]}
-				/>
-			))}
+		{sourceItems.map((item) => (
+			<ClayAutocomplete.Item
+				key={item[locator.value]}
+				match={inputValue}
+				onClick={() => onItemClick(item)}
+				value={item[locator.label]}
+			/>
+		))}
 	</ClayDropDown.ItemList>
 );
-
-const useIsomorphicLayoutEffect =
-	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
 
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	(
@@ -161,9 +152,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			closeButtonAriaLabel = 'Remove {0}',
 			disabled,
 			disabledClearAll,
-			filter = defaultFilter,
 			inputName,
 			inputValue = '',
+			isLoading = false,
 			isValid = true,
 			items = [],
 			locator = {
@@ -193,15 +184,11 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const [active, setActive] = React.useState(false);
 		const [isFocused, setIsFocused] = React.useState(false);
 
-		useIsomorphicLayoutEffect(() => {
-			if (sourceItems) {
-				const matchedItems = sourceItems.filter((item) =>
-					filter(item, inputValue, locator)
-				);
-
-				setActive(matchedItems.length !== 0);
+		useEffect(() => {
+			if (isFocused) {
+				setActive(!!inputValue && sourceItems.length !== 0);
 			}
-		}, [sourceItems, inputValue]);
+		}, [inputValue, isFocused, sourceItems]);
 
 		const setNewValue = (newVal: Item) => {
 			onItemsChange([...items, newVal]);
@@ -356,6 +343,12 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 						/>
 					</ClayInput.GroupItem>
 
+					{isLoading && (
+						<ClayInput.GroupItem shrink>
+							<ClayLoadingIndicator small />
+						</ClayInput.GroupItem>
+					)}
+
 					{!disabled &&
 						!disabledClearAll &&
 						(inputValue || items.length > 0) && (
@@ -386,7 +379,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							onSetActive={setActive}
 						>
 							<MenuRenderer
-								filter={filter}
 								inputValue={inputValue}
 								locator={locator}
 								onItemClick={(item) => {
@@ -407,5 +399,15 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 );
 
 ClayMultiSelect.displayName = 'ClayMultiSelect';
+
+/**
+ * Utility used for filtering an array of items based off the locator which
+ * is set to `label` by default.
+ */
+export const itemLabelFilter = (
+	items: Array<Item>,
+	inputValue: string,
+	locator = 'label'
+) => items.filter((item) => fuzzy.match(inputValue, item[locator]));
 
 export default ClayMultiSelect;

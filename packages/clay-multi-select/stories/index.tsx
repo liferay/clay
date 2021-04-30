@@ -12,9 +12,9 @@ import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
 import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import React, {useRef} from 'react';
 
-import ClayMultiSelect from '../src';
+import ClayMultiSelect, {itemLabelFilter} from '../src';
 
 const ClayMultiSelectWithState = (props: any) => {
 	const [value, setValue] = React.useState('');
@@ -77,7 +77,7 @@ const ClayMultiSelectWithAutocomplete = (props: any) => {
 			items={items}
 			onChange={setValue}
 			onItemsChange={setItems}
-			sourceItems={sourceItems}
+			sourceItems={itemLabelFilter(sourceItems, value)}
 			spritemap={spritemap}
 			{...props}
 		/>
@@ -184,28 +184,6 @@ storiesOf('Components|ClayMultiSelect', module)
 			<ClayMultiSelectWithAutocomplete id="multiSelect" />
 		</>
 	))
-	.add('w/ no filter', () => (
-		<>
-			<label htmlFor="multiSelect">{'Multi Select'}</label>
-
-			<ClayMultiSelectWithAutocomplete
-				filter={() => true}
-				id="multiSelect"
-			/>
-		</>
-	))
-	.add('w/ custom filter', () => (
-		<>
-			<label htmlFor="multiSelect">{'Multi Select'}</label>
-
-			<ClayMultiSelectWithAutocomplete
-				filter={(item: any, inputValue: any, locator: any) =>
-					item[locator.label].match('two')
-				}
-				id="multiSelect"
-			/>
-		</>
-	))
 	.add('w/ custom menu', () => (
 		<>
 			<label htmlFor="multiSelect">{'Multi Select'}</label>
@@ -235,6 +213,60 @@ storiesOf('Components|ClayMultiSelect', module)
 			/>
 		</>
 	))
+	.add('custom filter', () => {
+		const [value, setValue] = React.useState('');
+		const [items, setItems] = React.useState<any>([]);
+
+		return (
+			<ClayMultiSelect
+				inputValue={value}
+				items={items}
+				onChange={setValue}
+				onItemsChange={setItems}
+				sourceItems={sourceItems.filter((item) =>
+					item.label.match(value)
+				)}
+				spritemap={spritemap}
+			/>
+		);
+	})
+	.add('async', () => {
+		const [dropdownItems, setDropdownItems] = React.useState<any>([]);
+		const [value, setValue] = React.useState('');
+		const [items, setItems] = React.useState<any>([]);
+		const [isLoading, setIsLoading] = React.useState(false);
+		const timeoutRef = useRef<number | NodeJS.Timeout>(0);
+
+		function asyncData(query: string) {
+			setIsLoading(true);
+
+			clearTimeout(timeoutRef.current as number);
+
+			timeoutRef.current = setTimeout(() => {
+				setDropdownItems(
+					sourceItems.filter((item) => item.label.match(query))
+				);
+
+				setIsLoading(false);
+			}, 2000);
+		}
+
+		return (
+			<ClayMultiSelect
+				inputValue={value}
+				isLoading={isLoading}
+				items={items}
+				onChange={(newInputVal) => {
+					setValue(newInputVal);
+
+					asyncData(newInputVal);
+				}}
+				onItemsChange={setItems}
+				sourceItems={dropdownItems}
+				spritemap={spritemap}
+			/>
+		);
+	})
 	.add('w/ group', () => {
 		const isValid = boolean('isValid', true);
 

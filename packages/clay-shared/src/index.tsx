@@ -14,4 +14,5 @@ export {observeRect} from './observeRect';
 export {useDebounce} from './useDebounce';
 export {useFocusManagement, FOCUSABLE_ELEMENTS} from './useFocusManagement';
 export {setElementFullHeight} from './setElementFullHeight';
-export {useInternalState, TInternalStateOnChange} from './useInternalState';
+export {useInternalState} from './useInternalState';
+export type {TInternalStateOnChange} from './useInternalState';
