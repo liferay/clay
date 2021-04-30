@@ -10,6 +10,7 @@ export {getEllipsisItems} from './getEllipsisItems';
 export {Keys} from './Keys';
 export {LinkOrButton} from './LinkOrButton';
 export {sub} from './sub';
+export {observeRect} from './observeRect';
 export {useDebounce} from './useDebounce';
 export {useFocusManagement, FOCUSABLE_ELEMENTS} from './useFocusManagement';
 export {setElementFullHeight} from './setElementFullHeight';

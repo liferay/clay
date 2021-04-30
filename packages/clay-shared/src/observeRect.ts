@@ -35,13 +35,13 @@ const run = (node: Element, state: IRectState) => {
 	rafId = window.requestAnimationFrame(() => run(node, state));
 };
 
-export default function observeRect(
+export const observeRect = (
 	node: Element,
 	callback: (rect?: DOMRect) => void
-) {
+) => {
 	run(node, {callback, hasRectChanged: false, rect: undefined});
 
 	return () => {
 		cancelAnimationFrame(rafId);
 	};
-}
+};

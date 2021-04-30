@@ -3,12 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, Keys} from '@clayui/shared';
+import {ClayPortal, Keys, observeRect} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
-
-import observeRect from './observeRect';
 
 export const Align = {
 	BottomCenter: 4,
