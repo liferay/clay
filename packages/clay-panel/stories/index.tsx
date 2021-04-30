@@ -158,4 +158,21 @@ storiesOf('Components|ClayPanel', module)
 			<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
 			<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
 		</ClayPanel>
+	))
+	.add('w/ small', () => (
+		<ClayPanel.Group small>
+			{['One', 'Two', 'Three'].map((item) => (
+				<ClayPanel
+					collapsable
+					displayTitle={item}
+					key={item}
+					showCollapseIcon={boolean('Show Collapse Icon', true)}
+					spritemap={spritemap}
+				>
+					<ClayPanel.Body>
+						{`Here is some content inside for number ${item}`}
+					</ClayPanel.Body>
+				</ClayPanel>
+			))}
+		</ClayPanel.Group>
 	));
