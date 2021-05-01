@@ -47,46 +47,6 @@
 		}
 	}
 
-	// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
-	// pattern instead
-	.inline-item {
-		a {
-			align-items: center;
-			display: inline-flex;
-			margin-top: $cadmin-label-lexicon-icon-margin-top;
-		}
-
-		.btn-unstyled {
-			color: inherit;
-			display: inline-flex;
-			margin-top: $cadmin-label-lexicon-icon-margin-top;
-			max-width: none;
-		}
-
-		.close {
-			color: inherit;
-			display: inline-flex;
-			float: none;
-			font-size: inherit;
-			margin-top: $cadmin-label-lexicon-icon-margin-top;
-			opacity: 1;
-		}
-
-		a,
-		.btn-unstyled,
-		.close {
-			.lexicon-icon {
-				margin-top: 0;
-			}
-		}
-
-		.lexicon-icon {
-			height: $cadmin-label-lexicon-icon-height;
-			margin-top: $cadmin-label-lexicon-icon-margin-top;
-			width: $cadmin-label-lexicon-icon-width;
-		}
-	}
-
 	.sticker {
 		border-radius: $cadmin-label-sticker-border-radius;
 		height: $cadmin-label-sticker-size;
