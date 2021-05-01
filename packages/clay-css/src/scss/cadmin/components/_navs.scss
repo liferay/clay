@@ -217,20 +217,6 @@
 	}
 }
 
-// Bootstrap 4 Nav Pills
-
-.nav-pills {
-	.nav-link {
-		@include border-radius($cadmin-nav-pills-border-radius);
-	}
-
-	.nav-link.active,
-	.show > .nav-link {
-		background-color: $cadmin-nav-pills-link-active-bg;
-		color: $cadmin-nav-pills-link-active-color;
-	}
-}
-
 // Nav Underline
 
 @each $cadmin-value in $cadmin-nav-underline-link-highlight-palette {
