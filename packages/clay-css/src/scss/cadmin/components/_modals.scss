@@ -105,27 +105,6 @@
 	}
 }
 
-.modal-dialog-scrollable {
-	display: flex;
-	max-height: calc(100% - #{$cadmin-modal-dialog-margin * 2});
-
-	.modal-content {
-		// IE10/11
-
-		max-height: calc(100vh - #{$cadmin-modal-dialog-margin * 2});
-		overflow: hidden;
-	}
-
-	.modal-header,
-	.modal-footer {
-		flex-shrink: 0;
-	}
-
-	.modal-body {
-		overflow-y: auto;
-	}
-}
-
 .modal-dialog-centered .modal-dialog,
 .modal-dialog-centered.modal-dialog {
 	align-items: center;
@@ -136,20 +115,6 @@
 		content: '';
 		display: block;
 		height: calc(100vh - #{$cadmin-modal-dialog-margin * 2});
-	}
-
-	&.modal-dialog-scrollable {
-		flex-direction: column;
-		height: 100%;
-		justify-content: center;
-
-		.modal-content {
-			max-height: none;
-		}
-
-		&::before {
-			content: none;
-		}
 	}
 }
 
