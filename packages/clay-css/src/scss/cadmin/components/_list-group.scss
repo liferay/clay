@@ -65,51 +65,6 @@
 	}
 }
 
-// List Group Horizontal
-
-@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
-	@include media-breakpoint-up($cadmin-breakpoint) {
-		$cadmin-infix: breakpoint-infix(
-			$cadmin-breakpoint,
-			$cadmin-grid-breakpoints
-		);
-
-		.list-group-horizontal#{$cadmin-infix} {
-			flex-direction: row;
-
-			.list-group-item {
-				&:first-child {
-					@include border-bottom-left-radius(
-						$cadmin-list-group-border-radius
-					);
-					@include border-top-right-radius(0);
-				}
-
-				&:last-child {
-					@include border-top-right-radius(
-						$cadmin-list-group-border-radius
-					);
-					@include border-bottom-left-radius(0);
-				}
-
-				&.active {
-					margin-top: 0;
-				}
-
-				+ .list-group-item {
-					border-left-width: 0;
-					border-top-width: $cadmin-list-group-border-width;
-
-					&.active {
-						border-left-width: $cadmin-list-group-border-width;
-						margin-left: -$cadmin-list-group-border-width;
-					}
-				}
-			}
-		}
-	}
-}
-
 // List Group Header
 
 .list-group-header {
