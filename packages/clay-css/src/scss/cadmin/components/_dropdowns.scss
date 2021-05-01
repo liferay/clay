@@ -582,31 +582,3 @@
 .dropdown-menu-autocomplete {
 	@include clay-dropdown-menu-variant($cadmin-autocomplete-dropdown-menu);
 }
-
-// Navbar Component Dropdowns
-
-.nav-item.dropdown-full {
-	position: static;
-}
-
-.nav-item.dropdown-wide {
-	// max-width 991px
-
-	@include media-breakpoint-down(md, $cadmin-grid-breakpoints) {
-		position: static;
-	}
-}
-
-.navbar-nav .dropdown-menu-center {
-	// max-width 767px
-
-	@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
-		-ms-transform: none;
-		transform: none;
-	}
-}
-
-.navbar-right .dropdown-menu-center {
-	left: 50%;
-	right: auto;
-}
