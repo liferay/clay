@@ -5,9 +5,7 @@
 
 .input-group {
 	> .form-control,
-	> .form-control-plaintext,
-	> .custom-select,
-	> .custom-file {
+	> .form-control-plaintext {
 		flex: 1 1 0%;
 		margin-bottom: 0;
 
@@ -19,28 +17,18 @@
 
 		position: relative;
 
-		+ .form-control,
-		+ .custom-select,
-		+ .custom-file {
+		+ .form-control {
 			margin-left: -$cadmin-input-border-width;
 		}
 	}
 
 	// Bring the "active" form control to the top of surrounding elements
 
-	> .form-control:focus,
-	> .custom-select:focus,
-	> .custom-file .custom-file-input:focus ~ .custom-file-label {
+	> .form-control:focus {
 		z-index: 3;
 	}
 
-	// Bring the custom file input above the label
-	> .custom-file .custom-file-input:focus {
-		z-index: 4;
-	}
-
-	> .form-control,
-	> .custom-select {
+	> .form-control {
 		&:not(:last-child) {
 			@include border-right-radius(0);
 		}
@@ -49,47 +37,6 @@
 			@include border-left-radius(0);
 		}
 	}
-
-	// Custom file inputs have more complex markup, thus requiring different
-	// border-radius overrides.
-
-	> .custom-file {
-		align-items: center;
-		display: flex;
-
-		&:not(:last-child) .custom-file-label,
-		&:not(:last-child) .custom-file-label::after {
-			@include border-right-radius(0);
-		}
-
-		&:not(:first-child) .custom-file-label {
-			@include border-left-radius(0);
-		}
-	}
-}
-
-.input-group-lg > .custom-select {
-	@include border-radius($cadmin-input-border-radius-lg);
-
-	font-size: $cadmin-input-font-size-lg;
-	height: $cadmin-input-height-lg;
-	line-height: $cadmin-input-line-height-lg;
-	padding: $cadmin-input-padding-y-lg $cadmin-input-padding-x-lg;
-}
-
-.input-group-sm > .custom-select {
-	@include border-radius($cadmin-input-border-radius-sm);
-
-	font-size: $cadmin-input-font-size-sm;
-	height: $cadmin-input-height-sm;
-	line-height: $cadmin-input-line-height-sm;
-	padding: $cadmin-input-padding-y-sm $cadmin-input-padding-x-sm;
-}
-
-.input-group-lg > .custom-select,
-.input-group-sm > .custom-select {
-	padding-right: $cadmin-custom-select-padding-x +
-		$cadmin-custom-select-indicator-padding;
 }
 
 .input-group-prepend,
