@@ -1,95 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayPanel renders 1`] = `
-<div
-  className="panel"
-  role="tablist"
->
+<div>
   <div
-    className="panel-header"
-  >
-    <span
-      className="panel-title"
-    >
-      Display Title
-    </span>
-  </div>
-  <div
-    className="panel-header"
-  >
-    Header!
-  </div>
-  <div
-    className="panel-body"
-  >
-    Body!
-  </div>
-  <div
-    className="panel-footer"
-  >
-    Footer!
-  </div>
-</div>
-`;
-
-exports[`ClayPanel renders with custom displayTitle 1`] = `
-<div
-  className="panel panel-secondary"
-  role="tablist"
->
-  <button
-    aria-expanded={false}
-    className="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
-    onClick={[Function]}
-    role="tab"
-    type="button"
-  >
-    <div>
-      <h3>
-        Custom Panel Title
-      </h3>
-    </div>
-    <span
-      className="collapse-icon-closed"
-    >
-      <svg
-        className="lexicon-icon lexicon-icon-angle-right"
-        role="presentation"
-      >
-        <use
-          xlinkHref="/foo/bar#angle-right"
-        />
-      </svg>
-    </span>
-    <span
-      className="collapse-icon-open"
-    >
-      <svg
-        className="lexicon-icon lexicon-icon-angle-down"
-        role="presentation"
-      >
-        <use
-          xlinkHref="/foo/bar#angle-down"
-        />
-      </svg>
-    </span>
-  </button>
-  <div
-    className="panel-collapse collapse"
-    role="tabpanel"
+    class="panel"
+    role="tablist"
   >
     <div
-      className="panel-header"
+      class="panel-header"
+    >
+      <span
+        class="panel-title"
+      >
+        Display Title
+      </span>
+    </div>
+    <div
+      class="panel-header"
     >
       Header!
     </div>
     <div
-      className="panel-body"
+      class="panel-body"
     >
       Body!
     </div>
     <div
-      className="panel-footer"
+      class="panel-footer"
     >
       Footer!
     </div>
@@ -97,131 +34,200 @@ exports[`ClayPanel renders with custom displayTitle 1`] = `
 </div>
 `;
 
-exports[`ClayPanel renders with different displayType 1`] = `
-<div
-  className="panel panel-secondary"
-  role="tablist"
->
+exports[`ClayPanel renders with custom displayTitle 1`] = `
+<div>
   <div
-    className="panel-header"
-  >
-    <span
-      className="panel-title"
-    >
-      Display Title
-    </span>
-  </div>
-  <div
-    className="panel-header"
-  >
-    Header!
-  </div>
-  <div
-    className="panel-body"
-  >
-    Body!
-  </div>
-  <div
-    className="panel-footer"
-  >
-    Footer!
-  </div>
-</div>
-`;
-
-exports[`ClayPanel renders with multiple panels 1`] = `
-<div
-  aria-orientation="vertical"
-  className="panel-group"
-  role="tablist"
->
-  <div
-    className="panel"
-    role="tablist"
-  >
-    <div
-      className="panel-header"
-    >
-      <span
-        className="panel-title"
-      >
-        Display Title
-      </span>
-    </div>
-    <div
-      className="panel-body"
-    >
-      Body!
-    </div>
-  </div>
-  <div
-    className="panel"
-    role="tablist"
-  >
-    <div
-      className="panel-header"
-    >
-      <span
-        className="panel-title"
-      >
-        Display Title
-      </span>
-    </div>
-    <div
-      className="panel-body"
-    >
-      Body!
-    </div>
-  </div>
-  <div
-    className="panel"
+    class="panel panel-secondary"
     role="tablist"
   >
     <button
-      aria-expanded={false}
-      className="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
-      onClick={[Function]}
+      aria-expanded="false"
+      class="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
       role="tab"
       type="button"
     >
+      <div>
+        <h3>
+          Custom Panel Title
+        </h3>
+      </div>
       <span
-        className="panel-title"
-      >
-        Display Title
-      </span>
-      <span
-        className="collapse-icon-closed"
+        class="collapse-icon-closed"
       >
         <svg
-          className="lexicon-icon lexicon-icon-angle-right"
+          class="lexicon-icon lexicon-icon-angle-right"
           role="presentation"
         >
           <use
-            xlinkHref="/foo/bar#angle-right"
+            xlink:href="/foo/bar#angle-right"
           />
         </svg>
       </span>
       <span
-        className="collapse-icon-open"
+        class="collapse-icon-open"
       >
         <svg
-          className="lexicon-icon lexicon-icon-angle-down"
+          class="lexicon-icon lexicon-icon-angle-down"
           role="presentation"
         >
           <use
-            xlinkHref="/foo/bar#angle-down"
+            xlink:href="/foo/bar#angle-down"
           />
         </svg>
       </span>
     </button>
     <div
-      className="panel-collapse collapse"
+      class="panel-collapse collapse"
       role="tabpanel"
     >
       <div
-        className="panel-body"
+        class="panel-header"
+      >
+        Header!
+      </div>
+      <div
+        class="panel-body"
       >
         Body!
+      </div>
+      <div
+        class="panel-footer"
+      >
+        Footer!
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayPanel renders with different displayType 1`] = `
+<div>
+  <div
+    class="panel panel-secondary"
+    role="tablist"
+  >
+    <div
+      class="panel-header"
+    >
+      <span
+        class="panel-title"
+      >
+        Display Title
+      </span>
+    </div>
+    <div
+      class="panel-header"
+    >
+      Header!
+    </div>
+    <div
+      class="panel-body"
+    >
+      Body!
+    </div>
+    <div
+      class="panel-footer"
+    >
+      Footer!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayPanel renders with multiple panels 1`] = `
+<div>
+  <div
+    aria-orientation="vertical"
+    class="panel-group"
+    role="tablist"
+  >
+    <div
+      class="panel"
+      role="tablist"
+    >
+      <div
+        class="panel-header"
+      >
+        <span
+          class="panel-title"
+        >
+          Display Title
+        </span>
+      </div>
+      <div
+        class="panel-body"
+      >
+        Body!
+      </div>
+    </div>
+    <div
+      class="panel"
+      role="tablist"
+    >
+      <div
+        class="panel-header"
+      >
+        <span
+          class="panel-title"
+        >
+          Display Title
+        </span>
+      </div>
+      <div
+        class="panel-body"
+      >
+        Body!
+      </div>
+    </div>
+    <div
+      class="panel"
+      role="tablist"
+    >
+      <button
+        aria-expanded="false"
+        class="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
+        role="tab"
+        type="button"
+      >
+        <span
+          class="panel-title"
+        >
+          Display Title
+        </span>
+        <span
+          class="collapse-icon-closed"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-angle-right"
+            role="presentation"
+          >
+            <use
+              xlink:href="/foo/bar#angle-right"
+            />
+          </svg>
+        </span>
+        <span
+          class="collapse-icon-open"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-angle-down"
+            role="presentation"
+          >
+            <use
+              xlink:href="/foo/bar#angle-down"
+            />
+          </svg>
+        </span>
+      </button>
+      <div
+        class="panel-collapse collapse"
+        role="tabpanel"
+      >
+        <div
+          class="panel-body"
+        >
+          Body!
+        </div>
       </div>
     </div>
   </div>
@@ -229,60 +235,61 @@ exports[`ClayPanel renders with multiple panels 1`] = `
 `;
 
 exports[`ClayPanel renders without displayTitle 1`] = `
-<div
-  className="panel panel-secondary"
-  role="tablist"
->
-  <button
-    aria-expanded={false}
-    className="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
-    onClick={[Function]}
-    role="tab"
-    type="button"
-  >
-    <span
-      className="collapse-icon-closed"
-    >
-      <svg
-        className="lexicon-icon lexicon-icon-angle-right"
-        role="presentation"
-      >
-        <use
-          xlinkHref="/foo/bar#angle-right"
-        />
-      </svg>
-    </span>
-    <span
-      className="collapse-icon-open"
-    >
-      <svg
-        className="lexicon-icon lexicon-icon-angle-down"
-        role="presentation"
-      >
-        <use
-          xlinkHref="/foo/bar#angle-down"
-        />
-      </svg>
-    </span>
-  </button>
+<div>
   <div
-    className="panel-collapse collapse"
-    role="tabpanel"
+    class="panel panel-secondary"
+    role="tablist"
   >
-    <div
-      className="panel-header"
+    <button
+      aria-expanded="false"
+      class="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
+      role="tab"
+      type="button"
     >
-      Header!
-    </div>
+      <span
+        class="collapse-icon-closed"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-angle-right"
+          role="presentation"
+        >
+          <use
+            xlink:href="/foo/bar#angle-right"
+          />
+        </svg>
+      </span>
+      <span
+        class="collapse-icon-open"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-angle-down"
+          role="presentation"
+        >
+          <use
+            xlink:href="/foo/bar#angle-down"
+          />
+        </svg>
+      </span>
+    </button>
     <div
-      className="panel-body"
+      class="panel-collapse collapse"
+      role="tabpanel"
     >
-      Body!
-    </div>
-    <div
-      className="panel-footer"
-    >
-      Footer!
+      <div
+        class="panel-header"
+      >
+        Header!
+      </div>
+      <div
+        class="panel-body"
+      >
+        Body!
+      </div>
+      <div
+        class="panel-footer"
+      >
+        Footer!
+      </div>
     </div>
   </div>
 </div>
