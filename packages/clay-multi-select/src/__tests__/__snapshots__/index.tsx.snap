@@ -140,8 +140,8 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
   <div>
     <div>
       <div
-        class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; left: -999px; top: -995px; width: 0px;"
+        class="dropdown-menu autocomplete-dropdown-menu"
+        style="max-width: none; left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
@@ -508,366 +508,50 @@ exports[`ClayMultiSelect renders with items 1`] = `
 </body>
 `;
 
-exports[`Interactions add non-sequential text should filter the items when it is the default function 1`] = `
-<body>
-  <div>
-    <div
-      class="form-control form-control-tag-group input-group"
-      style=""
-    >
-      <div
-        class="input-group-item"
+exports[`Interactions Use custom function for filtering autocomplete results 1`] = `
+<div
+  class="dropdown-menu autocomplete-dropdown-menu"
+  style="max-width: none; left: -999px; top: -995px; width: 0px;"
+>
+  <ul
+    class="list-unstyled"
+  >
+    <li>
+      <button
+        class="dropdown-item"
       >
-        <input
-          class="form-control-inset"
-          type="text"
-          value="bz"
-        />
-      </div>
-      <div
-        class="input-group-item input-group-item-shrink"
-      >
-        <button
-          class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
-          title="Clear All"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-times-circle"
-            role="presentation"
-          >
-            <use
-              xlink:href="/foo/bar#times-circle"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div
-        class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; left: -999px; top: -995px; width: 0px;"
-      >
-        <ul
-          class="list-unstyled"
-        >
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              <div>
-                <strong>
-                  b
-                </strong>
-                a
-                <strong>
-                  z
-                </strong>
-              </div>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
+        <div>
+          <strong>
+            b
+          </strong>
+          <strong>
+            a
+          </strong>
+          <strong>
+            r
+          </strong>
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>
 `;
 
-exports[`Interactions adding text doesn not filter the items with a custom function 1`] = `
-<body>
-  <div>
-    <div
-      class="form-control form-control-tag-group input-group"
-      style=""
-    >
-      <div
-        class="input-group-item"
+exports[`Interactions Use custom function for filtering autocomplete results 2`] = `
+<div
+  class="dropdown-menu autocomplete-dropdown-menu"
+  style="max-width: none; left: -999px; top: -995px; width: 0px;"
+>
+  <ul
+    class="list-unstyled"
+  >
+    <li>
+      <button
+        class="dropdown-item"
       >
-        <input
-          class="form-control-inset"
-          type="text"
-          value="foo"
-        />
-      </div>
-      <div
-        class="input-group-item input-group-item-shrink"
-      >
-        <button
-          class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
-          title="Clear All"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-times-circle"
-            role="presentation"
-          >
-            <use
-              xlink:href="/foo/bar#times-circle"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div
-        class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; left: -999px; top: -995px; width: 0px;"
-      >
-        <ul
-          class="list-unstyled"
-        >
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              <div>
-                <strong>
-                  f
-                </strong>
-                <strong>
-                  o
-                </strong>
-                <strong>
-                  o
-                </strong>
-              </div>
-            </button>
-          </li>
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              bar
-            </button>
-          </li>
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              baz
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`Interactions adding text filters the items 1`] = `
-<body>
-  <div>
-    <div
-      class="form-control form-control-tag-group input-group"
-      style=""
-    >
-      <div
-        class="input-group-item"
-      >
-        <input
-          class="form-control-inset"
-          type="text"
-          value="foo"
-        />
-      </div>
-      <div
-        class="input-group-item input-group-item-shrink"
-      >
-        <button
-          class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
-          title="Clear All"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-times-circle"
-            role="presentation"
-          >
-            <use
-              xlink:href="/foo/bar#times-circle"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div
-        class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; left: -999px; top: -995px; width: 0px;"
-      >
-        <ul
-          class="list-unstyled"
-        >
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              <div>
-                <strong>
-                  f
-                </strong>
-                <strong>
-                  o
-                </strong>
-                <strong>
-                  o
-                </strong>
-              </div>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`Interactions adding text filters the items with a custom function 1`] = `
-<body>
-  <div>
-    <div
-      class="form-control form-control-tag-group input-group"
-      style=""
-    >
-      <div
-        class="input-group-item"
-      >
-        <input
-          class="form-control-inset"
-          type="text"
-          value="bar"
-        />
-      </div>
-      <div
-        class="input-group-item input-group-item-shrink"
-      >
-        <button
-          class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
-          title="Clear All"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-times-circle"
-            role="presentation"
-          >
-            <use
-              xlink:href="/foo/bar#times-circle"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div
-        class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; left: -999px; top: -995px; width: 0px;"
-      >
-        <ul
-          class="list-unstyled"
-        >
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              <div>
-                <strong>
-                  b
-                </strong>
-                <strong>
-                  a
-                </strong>
-                <strong>
-                  r
-                </strong>
-              </div>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`Interactions adding upper or lower case text should filter the items when it is the default function 1`] = `
-<body>
-  <div>
-    <div
-      class="form-control form-control-tag-group input-group"
-      style=""
-    >
-      <div
-        class="input-group-item"
-      >
-        <input
-          class="form-control-inset"
-          type="text"
-          value="b"
-        />
-      </div>
-      <div
-        class="input-group-item input-group-item-shrink"
-      >
-        <button
-          class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
-          title="Clear All"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-times-circle"
-            role="presentation"
-          >
-            <use
-              xlink:href="/foo/bar#times-circle"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <div
-        class="dropdown-menu autocomplete-dropdown-menu show"
-        style="max-width: none; left: -999px; top: -995px; width: 0px;"
-      >
-        <ul
-          class="list-unstyled"
-        >
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              <div>
-                <strong>
-                  B
-                </strong>
-                az
-              </div>
-            </button>
-          </li>
-          <li>
-            <button
-              class="dropdown-item"
-            >
-              <div>
-                <strong>
-                  b
-                </strong>
-                ar
-              </div>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
+        foo
+      </button>
+    </li>
+  </ul>
+</div>
 `;

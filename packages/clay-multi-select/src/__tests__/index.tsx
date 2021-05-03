@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayMultiSelect from '..';
+import ClayMultiSelect, {itemLabelFilter} from '..';
 import ClayDropDown from '@clayui/drop-down';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
@@ -24,7 +24,7 @@ const items = [
 ];
 
 const ClayMultiSelectWithState = (props: any) => {
-	const [items, setItems] = React.useState(props.items as [] | []);
+	const [items, setItems] = React.useState((props.items as []) || []);
 	const [value, setValue] = React.useState(props.inputValue || '');
 
 	return (
@@ -33,6 +33,9 @@ const ClayMultiSelectWithState = (props: any) => {
 			items={items}
 			onChange={setValue}
 			onItemsChange={setItems}
+			sourceItems={
+				props.sourceItems && itemLabelFilter(props.sourceItems, value)
+			}
 			spritemap="/foo/bar"
 			{...props}
 		/>
@@ -221,17 +224,6 @@ describe('Interactions', () => {
 			/>
 		);
 
-		expect(document.querySelectorAll('.dropdown-item').length).toEqual(0);
-
-		fireEvent.change(
-			document.querySelectorAll(
-				'input[type=text]'
-			)[0] as HTMLInputElement,
-			{target: {value: 'bar'}}
-		);
-
-		expect(document.querySelectorAll('.dropdown-item').length).toEqual(1);
-
 		const menuStyles = (document.querySelector(
 			'.autocomplete-dropdown-menu'
 		) as HTMLElement).style;
@@ -252,18 +244,7 @@ describe('Interactions', () => {
 			/>
 		);
 
-		expect(document.querySelectorAll('.dropdown-item').length).toEqual(0);
-
 		expect(onItemsChangeFn).not.toHaveBeenCalled();
-
-		fireEvent.change(
-			document.querySelectorAll(
-				'input[type=text]'
-			)[0] as HTMLInputElement,
-			{target: {value: 'bar'}}
-		);
-
-		expect(document.querySelectorAll('.dropdown-item').length).toEqual(1);
 
 		fireEvent.click(
 			document.querySelectorAll('.dropdown-item')[0] as HTMLLIElement,
@@ -318,29 +299,31 @@ describe('Interactions', () => {
 		expect(document.activeElement).toBe(input);
 	});
 
-	it('adding text filters the items', () => {
-		const {container} = render(
-			<ClayMultiSelectWithState sourceItems={items} />
-		);
+	it('Use custom function for filtering autocomplete results', () => {
+		function myFilter(items: any, value: string) {
+			return items.filter(
+				(item: any) =>
+					item.label.match(value) || item.value.match(value)
+			);
+		}
 
-		const input = container.querySelector('input');
+		const WithCustomFilter = () => {
+			const [value, setValue] = React.useState('');
+			const [selectedItems, setSelectedItems] = React.useState<any>([]);
 
-		fireEvent.change(input as HTMLInputElement, {
-			target: {value: 'foo'},
-		});
+			return (
+				<ClayMultiSelect
+					inputValue={value}
+					items={selectedItems}
+					onChange={setValue}
+					onItemsChange={setSelectedItems}
+					sourceItems={myFilter(items, value)}
+					spritemap="/foo/bar"
+				/>
+			);
+		};
 
-		expect(document.body).toMatchSnapshot();
-	});
-
-	it('adding text filters the items with a custom function', () => {
-		const {container} = render(
-			<ClayMultiSelectWithState
-				filter={(item: any, inputValue: any, locator: any) =>
-					item[locator.label].match(inputValue)
-				}
-				sourceItems={items}
-			/>
-		);
+		const {container} = render(<WithCustomFilter />);
 
 		const input = container.querySelector('input');
 
@@ -348,27 +331,78 @@ describe('Interactions', () => {
 			target: {value: 'bar'},
 		});
 
-		expect(document.body).toMatchSnapshot();
+		expect(
+			document.querySelector('.autocomplete-dropdown-menu')
+		).toMatchSnapshot();
+
+		fireEvent.change(input as HTMLInputElement, {
+			target: {value: '1'},
+		});
+
+		expect(
+			document.querySelector('.autocomplete-dropdown-menu')
+		).toMatchSnapshot();
 	});
 
-	it('adding text doesn not filter the items with a custom function', () => {
-		const {container} = render(
-			<ClayMultiSelectWithState filter={() => true} sourceItems={items} />
-		);
+	it('allows for async sourceItems', () => {
+		jest.useFakeTimers();
+		const callbackFn = jest.fn();
+
+		const AsyncMultiSelect = () => {
+			const [value, setValue] = React.useState('');
+			const [selectedItems, setSelectedItems] = React.useState<any>([]);
+			const [isLoading, setIsLoading] = React.useState(false);
+
+			function asyncData(query: string) {
+				setIsLoading(true);
+
+				setTimeout(() => {
+					callbackFn(query);
+
+					setIsLoading(false);
+				}, 2000);
+			}
+
+			return (
+				<ClayMultiSelect
+					inputValue={value}
+					isLoading={isLoading}
+					items={selectedItems}
+					onChange={(newInputVal) => {
+						setValue(newInputVal);
+
+						asyncData(newInputVal);
+					}}
+					onItemsChange={setSelectedItems}
+					sourceItems={items}
+					spritemap="/foo/bar"
+				/>
+			);
+		};
+
+		const {container} = render(<AsyncMultiSelect />);
 
 		const input = container.querySelector('input');
 
 		fireEvent.change(input as HTMLInputElement, {
-			target: {value: 'foo'},
+			target: {value: 'b'},
 		});
 
-		expect(document.body).toMatchSnapshot();
-	});
+		expect(callbackFn).not.toHaveBeenCalled();
 
-	it('add non-sequential text should filter the items when it is the default function', () => {
-		const {container} = render(
-			<ClayMultiSelectWithState
-				sourceItems={[
+		jest.runAllTimers();
+
+		expect(callbackFn).toHaveBeenCalledWith('b');
+
+		jest.useRealTimers();
+	});
+});
+
+describe('itemLabelFilter', () => {
+	it('filters item with text', () => {
+		expect(
+			itemLabelFilter(
+				[
 					{
 						label: 'baz',
 						value: '1',
@@ -377,23 +411,48 @@ describe('Interactions', () => {
 						label: 'bar',
 						value: '2',
 					},
-				]}
-			/>
-		);
-
-		const input = container.querySelector('input');
-
-		fireEvent.change(input as HTMLInputElement, {
-			target: {value: 'bz'},
-		});
-
-		expect(document.body).toMatchSnapshot();
+				],
+				'baz'
+			)
+		).toMatchInlineSnapshot(`
+		Array [
+		  Object {
+		    "label": "baz",
+		    "value": "1",
+		  },
+		]
+	`);
 	});
 
-	it('adding upper or lower case text should filter the items when it is the default function', () => {
-		const {container} = render(
-			<ClayMultiSelectWithState
-				sourceItems={[
+	it('filters items with non-sequential text', () => {
+		expect(
+			itemLabelFilter(
+				[
+					{
+						label: 'baz',
+						value: '1',
+					},
+					{
+						label: 'bar',
+						value: '2',
+					},
+				],
+				'bz'
+			)
+		).toMatchInlineSnapshot(`
+		Array [
+		  Object {
+		    "label": "baz",
+		    "value": "1",
+		  },
+		]
+	`);
+	});
+
+	it('filters items with upper or lower case text', () => {
+		expect(
+			itemLabelFilter(
+				[
 					{
 						label: 'Baz',
 						value: '1',
@@ -402,16 +461,20 @@ describe('Interactions', () => {
 						label: 'bar',
 						value: '2',
 					},
-				]}
-			/>
-		);
-
-		const input = container.querySelector('input');
-
-		fireEvent.change(input as HTMLInputElement, {
-			target: {value: 'b'},
-		});
-
-		expect(document.body).toMatchSnapshot();
+				],
+				'B'
+			)
+		).toMatchInlineSnapshot(`
+		Array [
+		  Object {
+		    "label": "Baz",
+		    "value": "1",
+		  },
+		  Object {
+		    "label": "bar",
+		    "value": "2",
+		  },
+		]
+	`);
 	});
 });
