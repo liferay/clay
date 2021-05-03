@@ -530,17 +530,18 @@
 					map-get($map, link-border-radius),
 					map-get($link, border-radius)
 				),
-			color: setter(
-				map-get($map, link-color),
+			color:
 				setter(
-					map-get($link, color),
-					if(
-						variable-exists(navbar-light-color),
-						$navbar-light-color,
-						$cadmin-navbar-light-color
+					map-get($map, link-color),
+					setter(
+						map-get($link, color),
+						if(
+							variable-exists(navbar-light-color),
+							$navbar-light-color,
+							$cadmin-navbar-light-color
+						)
 					)
-				)
-			),
+				),
 			hover: (
 				background-color:
 					setter(
@@ -631,7 +632,7 @@
 							$dropdown-link-color,
 							$cadmin-dropdown-link-color
 						)
-					),
+					)
 				),
 			hover: (
 				background-color:
@@ -692,7 +693,9 @@
 						setter(
 							map-get($link-mobile-active-class, font-weight),
 							if(
-								variable-exists(dropdown-link-active-font-weight),
+								variable-exists(
+									dropdown-link-active-font-weight
+								),
 								$dropdown-link-active-font-weight,
 								$cadmin-dropdown-link-active-font-weight
 							)
@@ -737,7 +740,11 @@
 					map-get($map, collapse-bg-mobile),
 					setter(
 						map-get($collapse-mobile, background-color),
-						if(variable-exists(dropdown-bg), $dropdown-bg, $cadmin-dropdown-bg)
+						if(
+							variable-exists(dropdown-bg),
+							$dropdown-bg,
+							$cadmin-dropdown-bg
+						)
 					)
 				),
 			border-color:

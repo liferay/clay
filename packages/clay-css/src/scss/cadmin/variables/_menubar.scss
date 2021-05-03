@@ -3,6 +3,7 @@
 $cadmin-menubar-vertical-expand-md: () !default;
 $cadmin-menubar-vertical-expand-md: map-deep-merge(
 	(
+		max-width: 250px,
 		margin-bottom-mobile: 24px,
 		margin-left-mobile: -
 			(
@@ -134,6 +135,7 @@ $cadmin-menubar-vertical-expand-lg: () !default;
 $cadmin-menubar-vertical-expand-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
+		max-width: 250px,
 		margin-bottom-mobile: 24px,
 		margin-left-mobile: -
 			(
