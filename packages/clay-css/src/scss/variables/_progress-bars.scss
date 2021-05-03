@@ -23,7 +23,25 @@ $progress-group-subtitle: () !default;
 
 $progress-group-addon-font-size: null !default;
 $progress-group-addon-font-weight: null !default;
-$progress-group-addon-spacer-x: 1rem !default;
+$progress-group-addon-spacer-x: 0.25rem !default;
+
+$progress-group-addon: () !default;
+$progress-group-addon: map-deep-merge(
+	(
+		font-size: $progress-group-addon-font-size,
+		font-weight: $progress-group-addon-font-weight,
+		margin-right: $progress-group-addon-spacer-x,
+		min-width: 2rem,
+		text-align: center,
+		first-child: (
+			padding-left: 0,
+		),
+		last-child: (
+			padding-right: 0,
+		),
+	),
+	$progress-group-addon
+);
 
 $progress-group-stacked-progress-margin-bottom: 0.25rem !default;
 $progress-group-stacked-progress-margin-top: 0.25rem !default;

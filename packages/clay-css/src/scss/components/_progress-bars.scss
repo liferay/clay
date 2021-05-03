@@ -85,17 +85,18 @@
 }
 
 .progress-group-addon {
-	font-size: $progress-group-addon-font-size;
-	font-weight: $progress-group-addon-font-weight;
-	margin-right: $progress-group-addon-spacer-x;
-	text-align: center;
+	@include clay-css($progress-group-addon);
 
 	&:first-child {
-		padding-left: 0;
+		$first-child: setter(map-get($progress-group-addon, first-child), ());
+
+		@include clay-css($first-child);
 	}
 
 	&:last-child {
-		padding-right: 0;
+		$last-child: setter(map-get($progress-group-addon, last-child), ());
+
+		@include clay-css($last-child);
 	}
 }
 
