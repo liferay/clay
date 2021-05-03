@@ -355,10 +355,6 @@ $cadmin-form-control-tag-group-component-action: map-deep-merge(
 	$cadmin-form-control-tag-group-component-action
 );
 
-// Form Grid
-
-$cadmin-form-grid-gutter-width: 10px !default;
-
 // Form Group
 
 $cadmin-form-group-margin-bottom: 24px !default; // 24px
@@ -382,7 +378,6 @@ $cadmin-input-file-cursor: $cadmin-link-cursor !default;
 
 $cadmin-form-check-input-cursor: $cadmin-link-cursor !default;
 $cadmin-form-check-input-gutter: 0 !default;
-$cadmin-form-check-input-margin-x: 4px !default;
 $cadmin-form-check-input-margin-y: 0 !default;
 
 $cadmin-form-check-label-cursor: $cadmin-input-label-for-cursor !default;
@@ -406,40 +401,11 @@ $cadmin-form-text-font-size: 14px !default; // 14px
 $cadmin-form-text-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-form-text-margin-top: 4px !default;
 
-$cadmin-form-feedback-font-size: 14px !default; // 14px
-$cadmin-form-feedback-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-form-feedback-margin-top: 4px !default;
-
-$cadmin-form-feedback-indicator-margin-x: 0 !default;
-
 $cadmin-form-feedback-valid-color: $cadmin-success !default;
 
 $cadmin-form-feedback-warning-color: $cadmin-warning !default;
 
 $cadmin-form-feedback-invalid-color: $cadmin-danger !default;
-
-// Form Feedback Icon
-
-$cadmin-form-feedback-icon-valid-color: $cadmin-form-feedback-valid-color !default;
-$cadmin-form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$cadmin-form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
-
-$cadmin-form-feedback-icon-invalid-color: $cadmin-form-feedback-invalid-color !default;
-$cadmin-form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$cadmin-form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$cadmin-form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
-
-$cadmin-form-validation-states: () !default;
-$cadmin-form-validation-states: map-merge(
-	(
-		'valid': (
-			'color': $cadmin-form-feedback-valid-color,
-			'icon': $cadmin-form-feedback-icon-valid,
-		),
-		'invalid': (
-			'color': $cadmin-form-feedback-invalid-color,
-			'icon': $cadmin-form-feedback-icon-invalid,
-		),
-	),
-	$cadmin-form-validation-states
-);
 
 // Input Variants
 
