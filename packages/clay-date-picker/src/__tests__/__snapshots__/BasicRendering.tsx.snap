@@ -290,8 +290,7 @@ exports[`BasicRendering renders by default 1`] = `
               >
                 <button
                   aria-label="Sun Mar 31 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item previous-month-date"
                   type="button"
                 >
                   31
@@ -648,8 +647,7 @@ exports[`BasicRendering renders by default 1`] = `
               >
                 <button
                   aria-label="Wed May 01 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   1
@@ -660,8 +658,7 @@ exports[`BasicRendering renders by default 1`] = `
               >
                 <button
                   aria-label="Thu May 02 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   2
@@ -672,8 +669,7 @@ exports[`BasicRendering renders by default 1`] = `
               >
                 <button
                   aria-label="Fri May 03 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   3
@@ -684,8 +680,7 @@ exports[`BasicRendering renders by default 1`] = `
               >
                 <button
                   aria-label="Sat May 04 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   4
@@ -990,8 +985,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
               >
                 <button
                   aria-label="Sun Mar 31 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item previous-month-date"
                   type="button"
                 >
                   31
@@ -1348,8 +1342,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
               >
                 <button
                   aria-label="Wed May 01 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   1
@@ -1360,8 +1353,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
               >
                 <button
                   aria-label="Thu May 02 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   2
@@ -1372,8 +1364,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
               >
                 <button
                   aria-label="Fri May 03 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   3
@@ -1384,8 +1375,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
               >
                 <button
                   aria-label="Sat May 04 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   4
@@ -1720,8 +1710,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
               >
                 <button
                   aria-label="Sun Mar 31 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item previous-month-date"
                   type="button"
                 >
                   31
@@ -2078,8 +2067,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
               >
                 <button
                   aria-label="Wed May 01 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   1
@@ -2090,8 +2078,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
               >
                 <button
                   aria-label="Thu May 02 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   2
@@ -2102,8 +2089,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
               >
                 <button
                   aria-label="Fri May 03 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   3
@@ -2114,8 +2100,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
               >
                 <button
                   aria-label="Sat May 04 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   4
@@ -2697,8 +2682,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
               >
                 <button
                   aria-label="Sun Mar 31 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item previous-month-date"
                   type="button"
                 >
                   31
@@ -3055,8 +3039,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
               >
                 <button
                   aria-label="Wed May 01 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   1
@@ -3067,8 +3050,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
               >
                 <button
                   aria-label="Thu May 02 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   2
@@ -3079,8 +3061,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
               >
                 <button
                   aria-label="Fri May 03 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   3
@@ -3091,8 +3072,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
               >
                 <button
                   aria-label="Sat May 04 2019"
-                  class="date-picker-date date-picker-calendar-item disabled"
-                  disabled=""
+                  class="date-picker-date date-picker-calendar-item next-month-date"
                   type="button"
                 >
                   4

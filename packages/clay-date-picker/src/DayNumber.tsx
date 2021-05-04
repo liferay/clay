@@ -24,7 +24,7 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 	onClick,
 	range,
 }) => {
-	const {date, outside} = day;
+	const {date, nextMonth, previousMonth} = day;
 	const [startDate, endDate] = daysSelected;
 
 	const hasEndDateSelected = date.toDateString() === endDate.toDateString();
@@ -35,7 +35,9 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 		'date-picker-date date-picker-calendar-item',
 		{
 			active: hasStartDateSelected || (range && hasEndDateSelected),
-			disabled: outside || disabled,
+			disabled,
+			'next-month-date': nextMonth,
+			'previous-month-date': previousMonth,
 		}
 	);
 
@@ -62,7 +64,7 @@ const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
 					seconds: 0,
 				}).toDateString()}
 				className={classNames}
-				disabled={outside}
+				disabled={disabled}
 				onClick={() => onClick(date)}
 				onKeyDown={(event) => {
 					// When tabbing and selecting a DayNumber using

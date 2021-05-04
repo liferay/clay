@@ -326,7 +326,7 @@ describe('IncrementalInteractions', () => {
 		expect(dayNumber.classList).toContain('active');
 	});
 
-	it('clicking on the days number disabled not should change the date and the input value', () => {
+	it('clicking on the days number previous-month or next-month should change the date and the input value', () => {
 		const {getByLabelText, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
@@ -343,10 +343,10 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(dayNumber);
 
-		expect(input.value).not.toBe('2019-05-01');
+		expect(input.value).toBe('2019-05-01');
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('3');
-		expect(dayNumber.classList).not.toContain('active');
+		expect(dayNumber.classList).toContain('active');
 	});
 
 	describe('TimePicker', () => {

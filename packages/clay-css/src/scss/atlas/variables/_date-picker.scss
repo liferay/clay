@@ -65,7 +65,9 @@ $date-picker-previous-month-date: map-deep-merge(
 		color: $gray-500,
 		opacity: null,
 		focus-opacity: null,
-		active-opacity: null,
+		active: (
+			background-color: $primary-l2,
+		),
 	),
 	$date-picker-previous-month-date
 );
@@ -76,7 +78,9 @@ $date-picker-next-month-date: map-deep-merge(
 		color: $gray-500,
 		opacity: null,
 		focus-opacity: null,
-		active-opacity: null,
+		active: (
+			background-color: $primary-l2,
+		),
 	),
 	$date-picker-next-month-date
 );
