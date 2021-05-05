@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.27.0](https://github.com/liferay/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
+
+**Note:** Version bump only for package @clayui/time-picker
+
 ## [3.2.6](https://github.com/liferay/clay/compare/@clayui/time-picker@3.2.5...@clayui/time-picker@3.2.6) (2021-02-11)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.27.0](https://github.com/liferay/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
+
+### Features
+
+-   **@clayui/popover:** add observeRect to align the popover on the scroll ([8bedd2f](https://github.com/liferay/clay/commit/8bedd2f))
+
 ## [3.5.5](https://github.com/liferay/clay/compare/@clayui/popover@3.5.4...@clayui/popover@3.5.5) (2021-02-11)
 
 **Note:** Version bump only for package @clayui/popover

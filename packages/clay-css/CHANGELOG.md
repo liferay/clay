@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.27.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.26.0...v3.27.0) (2021-05-05)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Date Picker previous-month-date and next-month-date active should be lighter ([51a24f3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/51a24f3))
+* **@clayui/css:** Menubar convert old Sass map keys to key names so older keys used by previous versions will win ([9a1a73a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9a1a73a))
+* **@clayui/css:** Menubar update `$menubar-vertical-expand-md` and `$menubar-vertical-expand-lg` to use new keys. Older keys will still win over new keys to preserve backward compatibility. ([12b9636](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/12b9636))
+* **@clayui/css:** Mixins `clay-form-control-variant` old keys should win over new keys ([8986a81](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8986a81)), closes [#3987](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3987)
+* **@clayui/css:** Mixins `clay-menubar-vertical-expand` use `clay-css` mixin pattern ([6a9ba26](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6a9ba26))
+* **@clayui/css:** Mixins `clay-menubar-vertical-variant` moves default styles to variables. The mixin should only output styles if values are given. ([703b76e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/703b76e))
+* **@clayui/css:** Progress Bar sets a `min-width` on `progress-group-addon` to prevent resizing progress bar when numbers are changed to icons ([63e63c0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/63e63c0)), closes [#4024](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4024)
+* **@clayui/css:** Sass maps passed into `clay-form-control-variant` mixin should use new keys. This allows variable theme overwrites using deprecated keys to still win. ([f3be2d6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f3be2d6)), closes [#3987](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3987)
+
+
+### Features
+
+* **@clayui/css:** SVG Icons add rotate ([0fec9ce](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0fec9ce))
+* **@clayui/css:** SVG Icons adds `order-list-down` and `order-list-up` ([f80f8a0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f80f8a0)), closes [#4021](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4021)
+
+
+
+
+
 # [3.26.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.25.4...v3.26.0) (2021-04-21)
 
 

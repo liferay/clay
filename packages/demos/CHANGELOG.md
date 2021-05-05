@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.27.0](https://github.com/matuzalemsteles/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
+
+**Note:** Version bump only for package demos
+
 ## [3.25.3](https://github.com/ambrinchaudhary/clay/compare/v3.25.2...v3.25.3) (2021-03-24)
 
 **Note:** Version bump only for package demos
