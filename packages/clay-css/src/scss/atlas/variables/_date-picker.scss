@@ -26,7 +26,7 @@ $date-picker-nav-btn: map-deep-merge(
 $date-picker-nav-select: () !default;
 $date-picker-nav-select: map-deep-merge(
 	(
-		bg: transparent,
+		background-color: transparent,
 		border-color: transparent,
 		color: $secondary,
 		font-size: $font-size-sm,
@@ -35,12 +35,18 @@ $date-picker-nav-select: map-deep-merge(
 		padding-bottom: 0,
 		padding-left: 0.5rem,
 		padding-top: 0,
-		hover-bg: $gray-200,
-		hover-color: $gray-900,
-		focus-bg: $gray-200,
-		focus-color: $gray-900,
-		disabled-bg: transparent,
-		disabled-color: $input-disabled-color,
+		hover: (
+			background-color: $gray-200,
+			color: $gray-900,
+		),
+		focus: (
+			background-color: $gray-200,
+			color: $gray-900,
+		),
+		disabled: (
+			background-color: transparent,
+			color: $input-disabled-color,
+		),
 	),
 	$date-picker-nav-select
 );

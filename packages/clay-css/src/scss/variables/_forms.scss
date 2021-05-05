@@ -575,9 +575,9 @@ $input-select: map-deep-merge(
 		),
 		disabled: (
 			background-image: $input-select-icon-disabled,
-		),
-		disabled-option: (
-			cursor: $disabled-cursor,
+			option: (
+				cursor: $disabled-cursor,
+			),
 		),
 		option: (
 			cursor: $input-select-cursor,

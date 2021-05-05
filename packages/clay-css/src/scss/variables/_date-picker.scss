@@ -51,7 +51,6 @@ $date-picker-nav-btn-monospaced: map-deep-merge(
 );
 
 $date-picker-nav-select: () !default;
-$date-picker-nav-select: map-deep-merge((), $date-picker-nav-select);
 
 // Date Picker Row
 

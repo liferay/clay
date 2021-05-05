@@ -536,7 +536,7 @@
 
 	$base: setter($map, ());
 	$base: map-merge(
-		$map,
+		$base,
 		(
 			background-color:
 				setter(map-get($map, bg), map-get($map, background-color)),
@@ -568,48 +568,109 @@
 		)
 	);
 
+	$hover: setter(map-get($map, hover), ());
 	$hover: map-deep-merge(
+		$hover,
 		(
-			background-color: map-get($map, hover-bg),
-			border-color: map-get($map, hover-border-color),
-			box-shadow: map-get($map, hover-box-shadow),
-			color: map-get($map, hover-color),
-		),
-		map-get($map, hover)
+			background-color:
+				setter(
+					map-get($map, hover-bg),
+					map-get($hover, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, hover-border-color),
+					map-get($hover, border-color)
+				),
+			box-shadow:
+				setter(
+					map-get($map, hover-box-shadow),
+					map-get($hover, box-shadow)
+				),
+			color: setter(map-get($map, hover-color), map-get($hover, color)),
+		)
 	);
 
+	$focus: setter(map-get($map, focus), ());
 	$focus: map-deep-merge(
+		$focus,
 		(
-			background-color: map-get($map, focus-bg),
-			background-image: map-get($map, focus-bg-image),
-			border-color: map-get($map, focus-border-color),
-			box-shadow: map-get($map, focus-box-shadow),
-			color: map-get($map, focus-color),
-		),
-		map-get($map, focus)
+			background-color:
+				setter(
+					map-get($map, focus-bg),
+					map-get($focus, background-color)
+				),
+			background-image:
+				setter(
+					map-get($map, focus-bg-image),
+					map-get($focus, background-image)
+				),
+			border-color:
+				setter(
+					map-get($map, focus-border-color),
+					map-get($focus, border-color)
+				),
+			box-shadow:
+				setter(
+					map-get($map, focus-box-shadow),
+					map-get($focus, box-shadow)
+				),
+			color: setter(map-get($map, focus-color), map-get($focus, color)),
+		)
 	);
 
+	$disabled: setter(map-get($map, disabled), ());
 	$disabled: map-deep-merge(
+		$disabled,
 		(
-			background-color: map-get($map, disabled-bg),
-			background-image: map-get($map, disabled-bg-image),
-			border-color: map-get($map, disabled-border-color),
-			box-shadow: map-get($map, disabled-box-shadow),
-			color: map-get($map, disabled-color),
-			cursor: map-get($map, disabled-cursor),
-			opacity: map-get($map, disabled-opacity),
-		),
-		map-get($map, disabled)
+			background-color:
+				setter(
+					map-get($map, disabled-bg),
+					map-get($disabled, background-color)
+				),
+			background-image:
+				setter(
+					map-get($map, disabled-bg-image),
+					map-get($disabled, background-image)
+				),
+			border-color:
+				setter(
+					map-get($map, disabled-border-color),
+					map-get($disabled, border-color)
+				),
+			box-shadow:
+				setter(
+					map-get($map, disabled-box-shadow),
+					map-get($disabled, box-shadow)
+				),
+			color:
+				setter(map-get($map, disabled-color), map-get($disabled, color)),
+			cursor:
+				setter(
+					map-get($map, disabled-cursor),
+					map-get($disabled, cursor)
+				),
+			opacity:
+				setter(
+					map-get($map, disabled-opacity),
+					map-get($disabled, opacity)
+				),
+		)
 	);
 
+	$disabled-option: setter(map-get($disabled, option), ());
 	$disabled-option: map-deep-merge(
+		$disabled-option,
 		(
-			color: map-get($map, disabled-color),
-		),
-		map-get($map, disabled-option)
+			color:
+				setter(
+					map-get($map, disabled-color),
+					map-get($disabled-option, color)
+				),
+		)
 	);
 
-	$option: map-deep-merge((), map-get($map, option));
+	$option: setter(map-get($map, option), ());
 
 	@if ($enabled) {
 		@include clay-css($base);
