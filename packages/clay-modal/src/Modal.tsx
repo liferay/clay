@@ -69,7 +69,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	observer,
-	opener = document.body,
+	opener,
 	size,
 	spritemap,
 	status,
@@ -78,7 +78,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
-	const openerRef = useRef< Element| null>(opener);
+	const openerRef = useRef< Element| null>(opener ? opener : null);
 
 	warning(observer !== undefined, warningMessage);
 
