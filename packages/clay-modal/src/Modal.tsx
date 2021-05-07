@@ -43,6 +43,11 @@ interface IProps
 	observer: Observer;
 
 	/**
+	 * Element to render modal into.
+	 */
+	opener?: Element;
+
+	/**
 	 * Allows setting a custom z-index value, overriding the default one which is 1040, modal body z-index will be +10 of this value
 	 */
 	zIndex?: number;
@@ -64,6 +69,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	observer,
+	opener = document.body,
 	size,
 	spritemap,
 	status,
@@ -72,6 +78,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
+	const openerRef = useRef< Element| null>(opener);
 
 	warning(observer !== undefined, warningMessage);
 
@@ -85,7 +92,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 		observer && observer.mutation ? observer.mutation : [false, false];
 
 	return (
-		<ClayPortal subPortalRef={modalElementRef}>
+		<ClayPortal containerRef={openerRef} subPortalRef={modalElementRef}>
 			<div
 				className={classNames('modal-backdrop fade', {
 					show,
