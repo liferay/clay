@@ -294,20 +294,26 @@
 			padding-right: $input-group-addon-padding-x-lg;
 			padding-top: $input-group-addon-padding-y-lg;
 		}
-	}
 
-	> .input-group-inset-item {
-		> .btn {
-			@include clay-button-size($input-group-lg-inset-item-btn);
-		}
+		> .input-group-inset-item {
+			> .btn {
+				@include clay-button-size($input-group-lg-inset-item-btn);
+			}
 
-		> .form-file {
-			height: 75%;
-
-			.btn {
-				@include clay-button-size(
-					$input-group-lg-inset-item-form-file-btn
+			> .btn-monospaced {
+				@include clay-button-variant(
+					$input-group-lg-inset-item-btn-monospaced
 				);
+			}
+
+			> .form-file {
+				height: 75%;
+
+				.btn {
+					@include clay-button-size(
+						$input-group-lg-inset-item-form-file-btn
+					);
+				}
 			}
 		}
 	}
@@ -372,20 +378,26 @@
 			padding-right: $input-group-addon-padding-x-sm;
 			padding-top: $input-group-addon-padding-y-sm;
 		}
-	}
 
-	> .input-group-inset-item {
-		> .btn {
-			@include clay-button-size($input-group-sm-inset-item-btn);
-		}
+		> .input-group-inset-item {
+			> .btn {
+				@include clay-button-size($input-group-sm-inset-item-btn);
+			}
 
-		> .form-file {
-			height: 75%;
-
-			.btn {
-				@include clay-button-size(
-					$input-group-sm-inset-item-form-file-btn
+			> .btn-monospaced {
+				@include clay-button-variant(
+					$input-group-sm-inset-item-btn-monospaced
 				);
+			}
+
+			> .form-file {
+				height: 75%;
+
+				.btn {
+					@include clay-button-size(
+						$input-group-sm-inset-item-form-file-btn
+					);
+				}
 			}
 		}
 	}
@@ -510,6 +522,12 @@
 					}
 				}
 			}
+		}
+
+		.btn-monospaced {
+			@include clay-button-variant(
+				$input-group-inset-item-btn-monospaced
+			);
 		}
 
 		.form-file {
