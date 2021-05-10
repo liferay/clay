@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayModal custom opener renders inside a container element 1`] = `
+<body
+  class="modal-open"
+>
+  <div>
+    <div
+      id="container"
+    >
+      container
+      <div>
+        <div
+          class="modal-backdrop fade"
+        />
+        <div
+          class="fade modal d-block"
+        >
+          <div
+            class="modal-dialog"
+            tabindex="-1"
+          >
+            <div
+              class="modal-content"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

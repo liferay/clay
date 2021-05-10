@@ -32,6 +32,11 @@ interface IProps
 	center?: boolean;
 
 	/**
+	 * Container element to render modal into.
+	 */
+	containerElementRef?: React.RefObject<Element>;
+
+	/**
 	 * The size of element modal.
 	 */
 	size?: Size;
@@ -41,11 +46,6 @@ interface IProps
 	 * hook, adds observer from `useModal` hook here.
 	 */
 	observer: Observer;
-
-	/**
-	 * Element to render modal into.
-	 */
-	opener?: Element;
 
 	/**
 	 * Allows setting a custom z-index value, overriding the default one which is 1040, modal body z-index will be +10 of this value
@@ -68,8 +68,8 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	center,
 	children,
 	className,
+	containerElementRef,
 	observer,
-	opener,
 	size,
 	spritemap,
 	status,
@@ -78,7 +78,6 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
-	const openerRef = useRef< Element| null>(opener ? opener : null);
 
 	warning(observer !== undefined, warningMessage);
 
@@ -92,7 +91,10 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 		observer && observer.mutation ? observer.mutation : [false, false];
 
 	return (
-		<ClayPortal containerRef={openerRef} subPortalRef={modalElementRef}>
+		<ClayPortal
+			containerRef={containerElementRef}
+			subPortalRef={modalElementRef}
+		>
 			<div
 				className={classNames('modal-backdrop fade', {
 					show,
