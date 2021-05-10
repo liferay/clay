@@ -84,12 +84,12 @@ mainTabURL: 'docs/components/management-toolbar.html'
                                 <input class="form-control input-group-inset input-group-inset-after"
                                     placeholder="Search for..." type="text">
                                 <span class="input-group-inset-item input-group-inset-item-after">
-                                    <button class="btn btn-unstyled" type="submit">
+                                    <button class="btn btn-monospaced btn-unstyled" type="submit">
                                         <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#search"></use>
                                         </svg>
                                     </button>
-                                    <button class="btn btn-unstyled d-none" type="button">
+                                    <button class="btn btn-monospaced btn-unstyled d-none" type="button">
                                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#times"></use>
                                         </svg>
@@ -240,12 +240,12 @@ mainTabURL: 'docs/components/management-toolbar.html'
                                 <input class="form-control input-group-inset input-group-inset-after"
                                     placeholder="Search for..." type="text">
                                 <span class="input-group-inset-item input-group-inset-item-after">
-                                    <button class="btn btn-unstyled" type="submit">
+                                    <button class="btn btn-monospaced btn-unstyled" type="submit">
                                         <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#search"></use>
                                         </svg>
                                     </button>
-                                    <button class="btn btn-unstyled d-none" type="button">
+                                    <button class="btn btn-monospaced btn-unstyled d-none" type="button">
                                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#times"></use>
                                         </svg>
@@ -401,12 +401,12 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                                 <input class="form-control input-group-inset input-group-inset-after"
                                     placeholder="Search for..." type="text">
                                 <span class="input-group-inset-item input-group-inset-item-after">
-                                    <button class="btn btn-unstyled" type="submit">
+                                    <button class="btn btn-monospaced btn-unstyled" type="submit">
                                         <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#search"></use>
                                         </svg>
                                     </button>
-                                    <button class="btn btn-unstyled d-none" type="button">
+                                    <button class="btn btn-monospaced btn-unstyled d-none" type="button">
                                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#times"></use>
                                         </svg>
@@ -587,7 +587,10 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 							<span
 								class="input-group-inset-item input-group-inset-item-after"
 							>
-								<button class="btn btn-unstyled" type="submit">
+								<button
+									class="btn btn-monospaced btn-unstyled"
+									type="submit"
+								>
 									<svg
 										class="lexicon-icon lexicon-icon-search"
 										focusable="false"
@@ -599,7 +602,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 									</svg>
 								</button>
 								<button
-									class="btn btn-unstyled d-none"
+									class="btn btn-monospaced btn-unstyled d-none"
 									type="button"
 								>
 									<svg
@@ -794,12 +797,12 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                             <div class="input-group-item">
                                 <input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
                                 <span class="input-group-inset-item input-group-inset-item-after">
-                                    <button class="btn btn-unstyled" type="submit">
+                                    <button class="btn btn-monospaced btn-unstyled" type="submit">
                                         <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#search"></use>
                                         </svg>
                                     </button>
-                                    <button class="btn btn-unstyled d-none" type="button">
+                                    <button class="btn btn-monospaced btn-unstyled d-none" type="button">
                                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#times"></use>
                                         </svg>
@@ -978,7 +981,10 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 							<span
 								class="input-group-inset-item input-group-inset-item-after"
 							>
-								<button class="btn btn-unstyled" type="submit">
+								<button
+									class="btn btn-monospaced btn-unstyled"
+									type="submit"
+								>
 									<svg
 										class="lexicon-icon lexicon-icon-search"
 										focusable="false"
@@ -990,7 +996,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 									</svg>
 								</button>
 								<button
-									class="btn btn-unstyled d-none"
+									class="btn btn-monospaced btn-unstyled d-none"
 									type="button"
 								>
 									<svg
@@ -1142,12 +1148,12 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                             <input class="form-control input-group-inset input-group-inset-after"
                                 placeholder="Search for..." type="text">
                             <span class="input-group-inset-item input-group-inset-item-after">
-                                <button class="btn btn-unstyled" type="submit">
+                                <button class="btn btn-monospaced btn-unstyled" type="submit">
                                     <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                         <use href="/images/icons/icons.svg#search"></use>
                                     </svg>
                                 </button>
-                                <button class="btn btn-unstyled d-none" type="button">
+                                <button class="btn btn-monospaced btn-unstyled d-none" type="button">
                                     <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                         <use href="/images/icons/icons.svg#times"></use>
                                     </svg>
@@ -1176,7 +1182,10 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 						<span
 							class="input-group-inset-item input-group-inset-item-after"
 						>
-							<button class="btn btn-unstyled" type="submit">
+							<button
+								class="btn btn-monospaced btn-unstyled"
+								type="submit"
+							>
 								<svg
 									class="lexicon-icon lexicon-icon-search"
 									focusable="false"
@@ -1188,7 +1197,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 								</svg>
 							</button>
 							<button
-								class="btn btn-unstyled d-none"
+								class="btn btn-monospaced btn-unstyled d-none"
 								type="button"
 							>
 								<svg
@@ -1223,12 +1232,12 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                                 <input class="form-control input-group-inset input-group-inset-after"
                                     placeholder="Search for..." type="text">
                                 <span class="input-group-inset-item input-group-inset-item-after">
-                                    <button class="btn btn-unstyled" type="submit">
+                                    <button class="btn btn-monospaced btn-unstyled" type="submit">
                                         <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#search"></use>
                                         </svg>
                                     </button>
-                                    <button class="btn btn-unstyled d-none" type="button">
+                                    <button class="btn btn-monospaced btn-unstyled d-none" type="button">
                                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#times"></use>
                                         </svg>
@@ -1270,7 +1279,10 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 							<span
 								class="input-group-inset-item input-group-inset-item-after"
 							>
-								<button class="btn btn-unstyled" type="submit">
+								<button
+									class="btn btn-monospaced btn-unstyled"
+									type="submit"
+								>
 									<svg
 										class="lexicon-icon lexicon-icon-search"
 										focusable="false"
@@ -1282,7 +1294,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 									</svg>
 								</button>
 								<button
-									class="btn btn-unstyled d-none"
+									class="btn btn-monospaced btn-unstyled d-none"
 									type="button"
 								>
 									<svg
@@ -1437,9 +1449,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                             </span>
                             <span class="label-item label-item-after">
                                 <button class="btn close" aria-label="close" type="button">
-                                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                                    <svg class="lexicon-icon lexicon-icon-times-small" focusable="false" role="presentation">
                                         <title>times</title>
-                                        <use href="/images/icons/icons.svg#times"></use>
+                                        <use href="/images/icons/icons.svg#times-small"></use>
                                     </svg>
                                 </button>
                             </span>
@@ -1454,9 +1466,9 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                             </span>
                             <span class="label-item label-item-after">
                                 <button class="btn close" aria-label="close" type="button">
-                                    <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+                                    <svg class="lexicon-icon lexicon-icon-times-small" focusable="false" role="presentation">
                                         <title>times</title>
-                                        <use href="/images/icons/icons.svg#times"></use>
+                                        <use href="/images/icons/icons.svg#times-small"></use>
                                     </svg>
                                 </button>
                             </span>
@@ -1510,13 +1522,13 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 								type="button"
 							>
 								<svg
-									class="lexicon-icon lexicon-icon-times"
+									class="lexicon-icon lexicon-icon-times-small"
 									focusable="false"
 									role="presentation"
 								>
 									<title>times</title>
 									<use
-										href="/images/icons/icons.svg#times"
+										href="/images/icons/icons.svg#times-small"
 									></use>
 								</svg>
 							</button>
@@ -1541,13 +1553,13 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 								type="button"
 							>
 								<svg
-									class="lexicon-icon lexicon-icon-times"
+									class="lexicon-icon lexicon-icon-times-small"
 									focusable="false"
 									role="presentation"
 								>
 									<title>times</title>
 									<use
-										href="/images/icons/icons.svg#times"
+										href="/images/icons/icons.svg#times-small"
 									></use>
 								</svg>
 							</button>
@@ -1612,12 +1624,12 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                                 <input class="form-control input-group-inset input-group-inset-after"
                                     placeholder="Search for..." type="text">
                                 <span class="input-group-inset-item input-group-inset-item-after">
-                                    <button class="btn btn-unstyled" type="submit">
+                                    <button class="btn btn-monospaced btn-unstyled" type="submit">
                                         <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#search"></use>
                                         </svg>
                                     </button>
-                                    <button class="btn btn-unstyled d-none" type="button">
+                                    <button class="btn btn-monospaced btn-unstyled d-none" type="button">
                                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                                             <use href="/images/icons/icons.svg#times"></use>
                                         </svg>
@@ -1740,7 +1752,10 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 							<span
 								class="input-group-inset-item input-group-inset-item-after"
 							>
-								<button class="btn btn-unstyled" type="submit">
+								<button
+									class="btn btn-monospaced btn-unstyled"
+									type="submit"
+								>
 									<svg
 										class="lexicon-icon lexicon-icon-search"
 										focusable="false"
@@ -1752,7 +1767,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 									</svg>
 								</button>
 								<button
-									class="btn btn-unstyled d-none"
+									class="btn btn-monospaced btn-unstyled d-none"
 									type="button"
 								>
 									<svg
