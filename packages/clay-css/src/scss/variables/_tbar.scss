@@ -292,6 +292,9 @@ $subnav-tbar: map-deep-merge(
 		component-link: $subnav-tbar-component-link,
 		component-title: $subnav-tbar-component-title,
 		component-text: $subnav-tbar-component-text,
+		component-label: (
+			font-weight: $font-weight-normal,
+		),
 		link-margin-y: 0.125rem,
 		link-padding-x: 0.25rem,
 		link-padding-y: 0.09375rem,
