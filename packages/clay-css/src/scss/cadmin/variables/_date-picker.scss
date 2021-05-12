@@ -56,7 +56,7 @@ $cadmin-date-picker-nav-btn-monospaced: map-deep-merge(
 $cadmin-date-picker-nav-select: () !default;
 $cadmin-date-picker-nav-select: map-deep-merge(
 	(
-		bg: transparent,
+		background-color: transparent,
 		border-color: transparent,
 		color: $cadmin-secondary,
 		font-size: $cadmin-font-size-sm,
@@ -65,12 +65,18 @@ $cadmin-date-picker-nav-select: map-deep-merge(
 		padding-bottom: 0,
 		padding-left: 8px,
 		padding-top: 0,
-		hover-bg: $cadmin-gray-200,
-		hover-color: $cadmin-gray-900,
-		focus-bg: $cadmin-gray-200,
-		focus-color: $cadmin-gray-900,
-		disabled-bg: transparent,
-		disabled-color: $cadmin-input-disabled-color,
+		hover: (
+			background-color: $cadmin-gray-200,
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			background-color: $cadmin-gray-200,
+			color: $cadmin-gray-900,
+		),
+		disabled: (
+			background-color: transparent,
+			color: $cadmin-input-disabled-color,
+		),
 	),
 	$cadmin-date-picker-nav-select
 );
