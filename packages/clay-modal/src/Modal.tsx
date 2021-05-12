@@ -32,6 +32,11 @@ interface IProps
 	center?: boolean;
 
 	/**
+	 * Container element to render modal into.
+	 */
+	containerElementRef?: React.RefObject<Element>;
+
+	/**
 	 * The size of element modal.
 	 */
 	size?: Size;
@@ -63,6 +68,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	center,
 	children,
 	className,
+	containerElementRef,
 	observer,
 	size,
 	spritemap,
@@ -85,7 +91,10 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 		observer && observer.mutation ? observer.mutation : [false, false];
 
 	return (
-		<ClayPortal subPortalRef={modalElementRef}>
+		<ClayPortal
+			containerRef={containerElementRef}
+			subPortalRef={modalElementRef}
+		>
 			<div
 				className={classNames('modal-backdrop fade', {
 					show,
