@@ -24,7 +24,7 @@ export const ClayPortal: React.FunctionComponent<
 		 */
 		subPortalRef?: React.RefObject<Element>;
 	}
-> = ({children, containerRef, subPortalRef}) => {
+> = ({children, containerRef, subPortalRef, ...otherProps}) => {
 	const parentPortalRef = React.useContext(ClayPortalContext);
 	const portalRef = React.useRef(
 		typeof document !== 'undefined' ? document.createElement('div') : null
@@ -42,6 +42,13 @@ export const ClayPortal: React.FunctionComponent<
 				: closestParent;
 
 		if (elToMountTo && portalRef.current) {
+			if (otherProps?.className) {
+				portalRef.current.classList.add(otherProps.className);
+			}
+			if (otherProps?.id) {
+				portalRef.current.id = otherProps.id;
+			}
+
 			elToMountTo.appendChild(portalRef.current);
 		}
 
