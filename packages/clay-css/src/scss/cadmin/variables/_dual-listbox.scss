@@ -1,0 +1,71 @@
+$cadmin-clay-dual-listbox: () !default;
+$cadmin-clay-dual-listbox: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: row,
+	),
+	$cadmin-clay-dual-listbox
+);
+
+$cadmin-clay-dual-listbox-label: () !default;
+$cadmin-clay-dual-listbox-label: map-deep-merge(
+	(
+		margin-bottom: 16px,
+	),
+	$cadmin-clay-dual-listbox-label
+);
+
+$cadmin-clay-dual-listbox-clay-reorder: () !default;
+$cadmin-clay-dual-listbox-clay-reorder: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		flex-grow: 1,
+	),
+	$cadmin-clay-dual-listbox-clay-reorder
+);
+
+$cadmin-clay-dual-listbox-item: () !default;
+$cadmin-clay-dual-listbox-item: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		margin-right: 4px,
+	),
+	$cadmin-clay-dual-listbox-item
+);
+
+$cadmin-clay-dual-listbox-item-sm-up: () !default;
+$cadmin-clay-dual-listbox-item-sm-up: map-deep-merge(
+	(
+		margin-right: 24px,
+	),
+	$cadmin-clay-dual-listbox-item-sm-up
+);
+
+$cadmin-clay-dual-listbox-item-last-child: () !default;
+$cadmin-clay-dual-listbox-item-last-child: map-deep-merge(
+	(
+		margin-right: 0,
+	),
+	$cadmin-clay-dual-listbox-item-last-child
+);
+
+$cadmin-clay-dual-listbox-item-expand: () !default;
+$cadmin-clay-dual-listbox-item-expand: map-deep-merge(
+	(
+		flex-grow: 1,
+		width: 48px,
+		word-wrap: break-word,
+	),
+	$cadmin-clay-dual-listbox-item-expand
+);
+
+$cadmin-clay-dual-listbox-actions: () !default;
+$cadmin-clay-dual-listbox-actions: map-deep-merge(
+	(
+		align-self: center,
+		margin-top: calc(21px + 16px),
+	),
+	$cadmin-clay-dual-listbox-actions
+);

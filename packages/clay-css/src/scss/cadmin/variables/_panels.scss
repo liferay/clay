@@ -1,0 +1,164 @@
+$cadmin-panel-bg: $cadmin-white !default;
+$cadmin-panel-border-color: transparent !default;
+$cadmin-panel-border-style: solid !default;
+
+$cadmin-panel-border-bottom-width: 1px !default;
+$cadmin-panel-border-left-width: 1px !default;
+$cadmin-panel-border-right-width: 1px !default;
+$cadmin-panel-border-top-width: 1px !default;
+$cadmin-panel-border-width: $cadmin-panel-border-top-width
+	$cadmin-panel-border-right-width $cadmin-panel-border-bottom-width
+	$cadmin-panel-border-left-width !default;
+
+$cadmin-panel-border-radius: $cadmin-border-radius !default;
+$cadmin-panel-box-shadow: null !default;
+$cadmin-panel-margin-bottom: $cadmin-spacer !default;
+
+// Panel Header
+
+$cadmin-panel-header-border-bottom-width: 0 !default;
+$cadmin-panel-header-offset-border-radius: if(
+	$cadmin-panel-border-top-width > 0,
+	calc(#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-top-width}),
+	$cadmin-panel-border-radius
+) !default;
+$cadmin-panel-header-font-size: 14px !default; // 14px
+$cadmin-panel-header-line-height: $cadmin-headings-line-height !default;
+$cadmin-panel-header-padding-x: 20px !default;
+$cadmin-panel-header-padding-y: 12px !default;
+
+$cadmin-panel-header-collapse-icon-font-size: 12px !default; // 12px
+$cadmin-panel-header-collapse-icon-bottom: null !default;
+$cadmin-panel-header-collapse-icon-left: null !default;
+$cadmin-panel-header-collapse-icon-right: null !default;
+$cadmin-panel-header-collapse-icon-top: clay-collapse-icon-align(
+	$cadmin-panel-header-padding-y,
+	0,
+	1em,
+	$cadmin-panel-header-line-height
+) !default;
+
+$cadmin-panel-header-collapse-icon-padding-left: null !default;
+$cadmin-panel-header-collapse-icon-padding-right: null !default;
+
+$cadmin-panel-header-link-text-decoration: null !default;
+$cadmin-panel-header-link-hover-text-decoration: none !default;
+
+$cadmin-panel-header-link: () !default;
+$cadmin-panel-header-link: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		text-decoration: $cadmin-panel-header-link-text-decoration,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: inherit,
+		hover-text-decoration: $cadmin-panel-header-link-hover-text-decoration,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-outline: 0,
+		focus-z-index: $cadmin-zindex-panel-header-link-focus,
+	),
+	$cadmin-panel-header-link
+);
+
+$cadmin-panel-header-collapsed-link: () !default;
+
+// Panel Body
+
+$cadmin-panel-body-padding-x: 20px !default;
+$cadmin-panel-body-padding-y: 12px !default;
+
+// Panel Footer
+
+$cadmin-panel-footer-border-top-width: 0 !default;
+$cadmin-panel-footer-offset-border-radius: if(
+	$cadmin-panel-border-bottom-width > 0,
+	calc(#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-bottom-width}),
+	$cadmin-panel-border-radius
+) !default;
+$cadmin-panel-footer-padding-x: $cadmin-panel-header-padding-x !default;
+$cadmin-panel-footer-padding-y: $cadmin-panel-header-padding-y !default;
+
+// Panel Title
+
+$cadmin-panel-title-font-size: 14px !default; // 14px
+$cadmin-panel-title-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-panel-title-text-transform: uppercase !default;
+
+// Panel Title Small Element
+
+$cadmin-panel-title-small-font-size: 100% !default;
+$cadmin-panel-title-small-margin-left: 6px !default; // 6px
+
+// Panel Group
+
+$cadmin-panel-group-panel-margin-bottom: -$cadmin-panel-border-bottom-width !default;
+
+// Panel Group Sm
+
+$cadmin-panel-group-sm: () !default;
+$cadmin-panel-group-sm: map-deep-merge(
+	(
+		font-size: 14px,
+		header-padding-bottom: 8px,
+		header-padding-top: 8px,
+		title-font-size: 12px,
+		collapse-icon-top: 11px,
+	),
+	$cadmin-panel-group-sm
+);
+
+// Panel Group Flush
+
+$cadmin-panel-group-flush-body-margin-bottom: 24px !default;
+$cadmin-panel-group-flush-body-padding: 0 !default;
+
+$cadmin-panel-group-flush-collapse-icon-left: null !default;
+$cadmin-panel-group-flush-collapse-icon-right: 0 !default;
+$cadmin-panel-group-flush-collapse-icon-padding-left: null !default;
+$cadmin-panel-group-flush-collapse-icon-padding-right: 24px !default;
+
+// Panel Variants
+
+$cadmin-panel-secondary-header-link: () !default;
+
+$cadmin-panel-secondary: () !default;
+$cadmin-panel-secondary: map-deep-merge(
+	(
+		border-color: $cadmin-gray-300,
+		color: $cadmin-gray-600,
+		header-border-color: $cadmin-gray-300,
+		header-link: $cadmin-panel-secondary-header-link,
+		footer-border-color: $cadmin-gray-300,
+	),
+	$cadmin-panel-secondary
+);
+
+// Panel Unstyled
+
+$cadmin-panel-unstyled-header-link: () !default;
+$cadmin-panel-unstyled-header-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		focus-box-shadow: #{0 0 0 4px $cadmin-body-bg,
+		0 0 0 6px $cadmin-primary-l1},
+	),
+	$cadmin-panel-unstyled-header-link
+);
+
+$cadmin-panel-unstyled: () !default;
+$cadmin-panel-unstyled: map-deep-merge(
+	(
+		bg: transparent,
+		border-radius: 0,
+		border-width: 0,
+		header-border-color: $cadmin-gray-500,
+		header-border-style: solid,
+		header-border-width: 0 0 1px 0,
+		header-margin-bottom: 16px,
+		header-collapsed-border-color: $cadmin-gray-500,
+		header-link: $cadmin-panel-unstyled-header-link,
+		body-margin-bottom: 16px,
+		body-padding-top: 0,
+	),
+	$cadmin-panel-unstyled
+);

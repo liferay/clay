@@ -1,0 +1,80 @@
+$cadmin-clay-reorder: () !default;
+$cadmin-clay-reorder: map-deep-merge(
+	(
+		padding: 2px,
+		position: relative,
+		z-index: 0,
+	),
+	$cadmin-clay-reorder
+);
+
+$cadmin-clay-reorder-input-inset: () !default;
+$cadmin-clay-reorder-input-inset: map-deep-merge(
+	(
+		margin-bottom: 0,
+		margin-top: 0,
+		overflow: auto,
+		padding-bottom: $cadmin-input-padding-y,
+		padding-top: $cadmin-input-padding-y,
+		width: 100%,
+		focus: (
+			background-color: transparent,
+			box-shadow: none,
+		),
+	),
+	$cadmin-clay-reorder-input-inset
+);
+
+$cadmin-clay-reorder-underlay: () !default;
+$cadmin-clay-reorder-underlay: map-deep-merge(
+	(
+		bottom: 0,
+		left: 0,
+		position: absolute,
+		right: 0,
+		top: 0,
+		z-index: -1,
+	),
+	$cadmin-clay-reorder-underlay
+);
+
+$cadmin-clay-reorder-underlay-focus: () !default;
+$cadmin-clay-reorder-underlay-focus: map-deep-merge(
+	(
+		background-color: $cadmin-input-focus-bg,
+		border-color: $cadmin-input-focus-border-color,
+	),
+	$cadmin-clay-reorder-underlay-focus
+);
+
+$cadmin-clay-reorder-footer: () !default;
+$cadmin-clay-reorder-footer: map-deep-merge(
+	(
+		padding: 8px,
+	),
+	$cadmin-clay-reorder-footer
+);
+
+$cadmin-clay-reorder-footer-invisible: () !default;
+$cadmin-clay-reorder-footer-invisible: map-deep-merge(
+	(
+		visibility: hidden,
+	),
+	$cadmin-clay-reorder-footer-invisible
+);
+
+$cadmin-clay-reorder-footer-center: () !default;
+$cadmin-clay-reorder-footer-center: map-deep-merge(
+	(
+		text-align: center,
+	),
+	$cadmin-clay-reorder-footer-center
+);
+
+$cadmin-clay-reorder-footer-end: () !default;
+$cadmin-clay-reorder-footer-end: map-deep-merge(
+	(
+		text-align: right,
+	),
+	$cadmin-clay-reorder-footer-end
+);

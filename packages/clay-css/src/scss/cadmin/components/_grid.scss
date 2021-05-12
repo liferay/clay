@@ -1,0 +1,272 @@
+@if $cadmin-enable-grid-classes {
+	// Single container class with breakpoint max-widths
+
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: $cadmin-grid-gutter-width / 2;
+		padding-right: $cadmin-grid-gutter-width / 2;
+		width: 100%;
+
+		@each $cadmin-breakpoint,
+			$cadmin-container-max-width in $cadmin-container-max-widths
+		{
+			@include media-breakpoint-up(
+				$cadmin-breakpoint,
+				$cadmin-grid-breakpoints
+			) {
+				max-width: $cadmin-container-max-width;
+			}
+		}
+	}
+
+	// 100% wide container at all breakpoints
+
+	%container-fluid {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: $cadmin-grid-gutter-width / 2;
+		padding-right: $cadmin-grid-gutter-width / 2;
+		width: 100%;
+	}
+
+	.container-fluid {
+		@extend %container-fluid !optional;
+	}
+
+	// Responsive containers that are 100% wide until a breakpoint
+
+	@each $cadmin-breakpoint,
+		$cadmin-container-max-width in $cadmin-container-max-widths
+	{
+		.container-#{$cadmin-breakpoint} {
+			@extend %container-fluid !optional;
+		}
+
+		@include media-breakpoint-up(
+			$cadmin-breakpoint,
+			$cadmin-grid-breakpoints
+		) {
+			%responsive-container-#{$cadmin-breakpoint} {
+				max-width: $cadmin-container-max-width;
+			}
+
+			@each $cadmin-name, $cadmin-width in $cadmin-grid-breakpoints {
+				@if (
+					$cadmin-container-max-width >
+						$cadmin-width or
+						$cadmin-breakpoint ==
+						$cadmin-name
+				) {
+					.container#{breakpoint-infix($cadmin-name, $cadmin-grid-breakpoints)} {
+						@extend %responsive-container-#{$cadmin-breakpoint}
+								!optional;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Rows contain your columns.
+
+@if $cadmin-enable-grid-classes {
+	.row,
+	&.row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: math-sign($cadmin-grid-gutter-width / 2);
+		margin-right: math-sign($cadmin-grid-gutter-width / 2);
+	}
+
+	// Remove the negative margin from default .row, then the horizontal padding
+	// from all immediate children columns (to prevent runaway style inheritance).
+
+	.no-gutters {
+		margin-left: 0;
+		margin-right: 0;
+
+		> .col,
+		> [class*='col-'] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+// Common styles for small and large grid columns
+
+@if $cadmin-enable-grid-classes {
+	%grid-column {
+		padding-left: $cadmin-grid-gutter-width / 2;
+		padding-right: $cadmin-grid-gutter-width / 2;
+		position: relative;
+		width: 100%;
+	}
+
+	@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
+		$cadmin-infix: breakpoint-infix(
+			$cadmin-breakpoint,
+			$cadmin-grid-breakpoints
+		);
+
+		// Allow columns to stretch full width below their breakpoints
+
+		@for $cadmin-i from 1 through $cadmin-grid-columns {
+			.col#{$cadmin-infix}-#{$cadmin-i} {
+				@extend %grid-column !optional;
+			}
+		}
+
+		.col#{$cadmin-infix},
+		.col#{$cadmin-infix}-auto {
+			@extend %grid-column !optional;
+		}
+
+		@include media-breakpoint-up(
+			$cadmin-breakpoint,
+			$cadmin-grid-breakpoints
+		) {
+			// Provide basic `.col-{bp}` classes for equal-width flexbox columns
+
+			.col#{$cadmin-infix} {
+				flex-basis: 0;
+				flex-grow: 1;
+				max-width: 100%;
+			}
+
+			@for $cadmin-i from 1 through $cadmin-grid-row-columns {
+				.row-cols#{$cadmin-infix}-#{$cadmin-i} {
+					& > * {
+						flex: 0 0 100% / $cadmin-i;
+						max-width: 100% / $cadmin-i;
+					}
+				}
+			}
+
+			.col#{$cadmin-infix}-auto {
+				flex: 0 0 auto;
+				max-width: 100%;
+				width: auto;
+			}
+
+			@for $cadmin-i from 1 through $cadmin-grid-columns {
+				.col#{$cadmin-infix}-#{$cadmin-i} {
+					flex: 0 0 percentage($cadmin-i / $cadmin-grid-columns);
+
+					// Add a `max-width` to ensure content within each column does not blow out
+					// the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+					// do not appear to require this.
+
+					max-width: percentage($cadmin-i / $cadmin-grid-columns);
+				}
+			}
+
+			.order#{$cadmin-infix}-first {
+				order: -1;
+			}
+
+			.order#{$cadmin-infix}-last {
+				order: $cadmin-grid-columns + 1;
+			}
+
+			@for $cadmin-i from 0 through $cadmin-grid-columns {
+				.order#{$cadmin-infix}-#{$cadmin-i} {
+					order: $cadmin-i;
+				}
+			}
+
+			// `$cadmin-grid-columns - 1` because offsetting by the width of an entire row isn't possible
+			@for $cadmin-i from 0 through ($cadmin-grid-columns - 1) {
+				// Avoid emitting useless .offset-0
+
+				@if not($cadmin-infix == '' and $cadmin-i == 0) {
+					.offset#{$cadmin-infix}-#{$cadmin-i} {
+						$cadmin-num: $cadmin-i / $cadmin-grid-columns;
+
+						margin-left: if(
+							$cadmin-num == 0,
+							0,
+							percentage($cadmin-num)
+						);
+					}
+				}
+			}
+		}
+	}
+}
+
+@if ($cadmin-enable-grid-classes) {
+	.container-fluid-max {
+		@each $cadmin-breakpoint,
+			$cadmin-max-width in $cadmin-container-max-widths
+		{
+			$cadmin-infix: '-#{$cadmin-breakpoint}';
+
+			&#{$cadmin-infix} {
+				max-width: $cadmin-max-width;
+			}
+		}
+	}
+
+	.container-no-gutters {
+		@include clay-container-no-gutters;
+
+		@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
+			$cadmin-next: breakpoint-next(
+				$cadmin-breakpoint,
+				$cadmin-grid-breakpoints
+			);
+			$cadmin-infix: breakpoint-infix(
+				$cadmin-next,
+				$cadmin-grid-breakpoints
+			);
+
+			// .container-no-gutters-sm-down, md-down, lg-down, xl-down
+
+			@if not($cadmin-infix == '') {
+				&#{$cadmin-infix}-down {
+					@include media-breakpoint-down($cadmin-breakpoint) {
+						@include clay-container-no-gutters;
+					}
+				}
+			}
+		}
+	}
+
+	%clay-custom-grid-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
+
+		.container &,
+		.container-fluid & {
+			margin-left: -($cadmin-grid-gutter-width / 2);
+			margin-right: -($cadmin-grid-gutter-width / 2);
+		}
+	}
+
+	.container-form-lg,
+	&.container-form-lg {
+		@include clay-container($cadmin-container-form-lg);
+
+		.menubar-vertical-expand-lg {
+			$cadmin-container-form-lg-breakpoint-down: clay-breakpoint-prev(
+				map-get($cadmin-container-form-lg, breakpoint-up)
+			);
+
+			@include media-breakpoint-down(
+				$cadmin-container-form-lg-breakpoint-down
+			) {
+				margin-top: -(map-get($cadmin-container-form-lg, padding-top-mobile));
+			}
+		}
+	}
+
+	.container-view,
+	&.container-view {
+		@include clay-container($cadmin-container-view);
+	}
+}

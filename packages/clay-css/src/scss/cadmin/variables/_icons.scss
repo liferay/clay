@@ -1,0 +1,16 @@
+$cadmin-collapse-icon-padding-left: null !default;
+$cadmin-collapse-icon-padding-right: 45px !default; // 45px
+
+$cadmin-collapse-icon-position-bottom: null !default;
+$cadmin-collapse-icon-position-left: null !default;
+$cadmin-collapse-icon-position-right: 15px !default; // 15px
+$cadmin-collapse-icon-position-top: clay-collapse-icon-align(
+	$cadmin-nav-link-padding-y,
+	1px,
+	0.9375em
+) !default;
+
+$cadmin-lexicon-icon-size: 1em !default; // 16px
+
+$cadmin-order-arrow-down-active-color: $cadmin-gray-500 !default;
+$cadmin-order-arrow-up-active-color: $cadmin-order-arrow-down-active-color !default;

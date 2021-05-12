@@ -1,0 +1,176 @@
+$cadmin-b-font-weight: $cadmin-font-weight-semi-bold !default;
+
+$cadmin-strong-font-weight: $cadmin-font-weight-semi-bold !default;
+
+$cadmin-reference-mark-font-size: 12px !default;
+$cadmin-reference-mark-vertical-align: super !default;
+
+$cadmin-mark-color: null !default;
+
+// C Kbd
+
+$cadmin-c-kbd-group: () !default;
+$cadmin-c-kbd-group: map-deep-merge(
+	(
+		font-size: 14px,
+	),
+	$cadmin-c-kbd-group
+);
+
+$cadmin-c-kbd: () !default;
+$cadmin-c-kbd: map-deep-merge(
+	(
+		background-color: transparent,
+		border-radius: 2px,
+		border-color: transparent,
+		border-style: solid,
+		border-width: 1px,
+		box-shadow: none,
+		color: inherit,
+		display: inline-block,
+		font-family: $cadmin-font-family-sans-serif,
+		font-size: 14px,
+		font-weight: $cadmin-font-weight-semi-bold,
+		height: 24px,
+		line-height: 22px,
+		min-width: 24px,
+		padding-bottom: 0,
+		padding-left: 5px,
+		padding-right: 5px,
+		padding-top: 0,
+		text-align: center,
+		text-transform: capitalize,
+	),
+	$cadmin-c-kbd
+);
+
+// .c-kbd > .c-kbd
+
+$cadmin-c-kbd-c-kbd: () !default;
+$cadmin-c-kbd-c-kbd: map-merge(
+	(
+		border-width: 0,
+		font-size: inherit,
+		font-weight: inherit,
+		height: auto,
+		line-height: inherit,
+		min-width: 0,
+		padding: 0,
+	),
+	$cadmin-c-kbd-c-kbd
+);
+
+$cadmin-c-kbd-monospaced: () !default;
+$cadmin-c-kbd-monospaced: map-deep-merge(
+	(
+		padding: 0,
+	),
+	$cadmin-c-kbd-monospaced
+);
+
+$cadmin-c-kbd-inline: () !default;
+$cadmin-c-kbd-inline: map-deep-merge(
+	(
+		border-width: 0,
+		font-weight: $cadmin-font-weight-light,
+		height: auto,
+		line-height: inherit,
+		min-width: 0,
+		padding: 0,
+	),
+	$cadmin-c-kbd-inline
+);
+
+// Kbd Separator
+
+// .c-kbd > .c-kbd-separator
+
+$cadmin-c-kbd-c-kbd-separator: () !default;
+$cadmin-c-kbd-c-kbd-separator: map-merge(
+	(
+		font-weight: $cadmin-font-weight-normal,
+	),
+	$cadmin-c-kbd-c-kbd-separator
+);
+
+// .c-kbd-inline > .c-kbd-separator
+
+$cadmin-c-kbd-inline-c-kbd-separator: () !default;
+$cadmin-c-kbd-inline-c-kbd-separator: map-merge(
+	(
+		font-weight: inherit,
+	),
+	$cadmin-c-kbd-inline-c-kbd-separator
+);
+
+// Kbd Sizes
+
+$cadmin-c-kbd-group-sm: () !default;
+$cadmin-c-kbd-group-sm: map-deep-merge(
+	(
+		font-size: 12px,
+	),
+	$cadmin-c-kbd-group-sm
+);
+
+$cadmin-c-kbd-sm: () !default;
+$cadmin-c-kbd-sm: map-deep-merge(
+	(
+		font-size: 12px,
+	),
+	$cadmin-c-kbd-sm
+);
+
+$cadmin-c-kbd-group-lg: () !default;
+$cadmin-c-kbd-group-lg: map-deep-merge(
+	(
+		font-size: 16px,
+	),
+	$cadmin-c-kbd-group-lg
+);
+
+$cadmin-c-kbd-lg: () !default;
+$cadmin-c-kbd-lg: map-deep-merge(
+	(
+		font-size: 16px,
+	),
+	$cadmin-c-kbd-lg
+);
+
+// Kbd Variants
+
+$cadmin-c-kbd-group-light: () !default;
+$cadmin-c-kbd-group-light: map-deep-merge(
+	(
+		color: $cadmin-secondary,
+	),
+	$cadmin-c-kbd-group-light
+);
+
+$cadmin-c-kbd-light: () !default;
+$cadmin-c-kbd-light: map-deep-merge(
+	(
+		background-color: $cadmin-white,
+		border-color: $cadmin-gray-400,
+		color: $cadmin-secondary,
+	),
+	$cadmin-c-kbd-light
+);
+
+$cadmin-c-kbd-group-dark: () !default;
+$cadmin-c-kbd-group-dark: map-deep-merge(
+	(
+		color: $cadmin-white,
+	),
+	$cadmin-c-kbd-group-dark
+);
+
+$cadmin-c-kbd-dark: () !default;
+$cadmin-c-kbd-dark: map-deep-merge(
+	(
+		background-color: $cadmin-dark-l2,
+		border-color: $cadmin-dark-l2,
+		color: $cadmin-white,
+	),
+	$cadmin-c-kbd-dark
+);

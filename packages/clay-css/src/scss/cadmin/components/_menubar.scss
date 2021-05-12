@@ -1,0 +1,85 @@
+.menubar {
+	position: relative;
+}
+
+.menubar-toggler {
+	@extend %btn-unstyled !optional;
+
+	display: none;
+}
+
+// Menubar Vertical MD
+
+.menubar-vertical-expand-md {
+	@include clay-menubar-vertical-expand($cadmin-menubar-vertical-expand-md);
+
+	&.menubar-transparent {
+		@include clay-menubar-vertical-variant(
+			$cadmin-menubar-vertical-transparent-md
+		);
+	}
+
+	&.menubar-decorated {
+		@include media-breakpoint-up(md, $cadmin-grid-breakpoints) {
+			.nav {
+				@include clay-css($cadmin-menubar-vertical-decorated-md-nav);
+
+				> .nav-item .nav {
+					@include clay-css(
+						$cadmin-menubar-vertical-decorated-md-nav-item-nav
+					);
+				}
+			}
+
+			.nav-link {
+				@include clay-css(
+					$cadmin-menubar-vertical-decorated-md-nav-link
+				);
+
+				&.active::after {
+					@include clay-css(
+						$cadmin-menubar-vertical-decorated-md-nav-link-after-active
+					);
+				}
+			}
+		}
+	}
+}
+
+// Menubar Vertical LG
+
+.menubar-vertical-expand-lg {
+	@include clay-menubar-vertical-expand($cadmin-menubar-vertical-expand-lg);
+
+	&.menubar-transparent {
+		@include clay-menubar-vertical-variant(
+			$cadmin-menubar-vertical-transparent-lg
+		);
+	}
+
+	&.menubar-decorated {
+		@include media-breakpoint-up(lg, $cadmin-grid-breakpoints) {
+			.nav {
+				@include clay-css($cadmin-menubar-vertical-decorated-lg-nav);
+
+				> .nav-item .nav {
+					@include clay-css(
+						$cadmin-menubar-vertical-decorated-lg-nav-item-nav
+					);
+				}
+			}
+
+			.nav-link {
+				@include clay-css(
+					$cadmin-menubar-vertical-decorated-lg-nav-link
+				);
+
+				&.active::after {
+					@include clay-css(
+						$cadmin-menubar-vertical-decorated-lg-nav-link-after-active
+					);
+				}
+			}
+		}
+	}
+}

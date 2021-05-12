@@ -1,0 +1,137 @@
+.progress {
+	background-color: $cadmin-progress-bg;
+
+	@include border-radius($cadmin-progress-border-radius);
+	@include box-shadow($cadmin-progress-box-shadow);
+
+	display: flex;
+	flex-grow: 1;
+	font-size: $cadmin-progress-font-size;
+	height: $cadmin-progress-height;
+	min-width: $cadmin-progress-min-width;
+	overflow: hidden;
+}
+
+.progress-bar {
+	background-color: $cadmin-progress-bar-bg;
+
+	@include box-shadow($cadmin-progress-bar-box-shadow);
+
+	color: $cadmin-progress-bar-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	text-align: center;
+
+	@include transition($cadmin-progress-bar-transition);
+
+	white-space: nowrap;
+}
+
+.progress-bar-striped {
+	background-image: linear-gradient(
+		45deg,
+		rgba($cadmin-white, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba($cadmin-white, 0.15) 50%,
+		rgba($cadmin-white, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-size: $cadmin-progress-height $cadmin-progress-height;
+}
+
+@if $cadmin-enable-transitions {
+	@keyframes progress-bar-stripes {
+		from {
+			background-position: $cadmin-progress-height 0;
+		}
+		to {
+			background-position: 0 0;
+		}
+	}
+
+	.progress-bar-animated {
+		animation: progress-bar-stripes $cadmin-progress-bar-animation-timing;
+
+		@if $cadmin-enable-prefers-reduced-motion-media-query {
+			@media (prefers-reduced-motion: reduce) {
+				animation: none;
+			}
+		}
+	}
+}
+
+.progress-lg,
+.progress-lg > .progress {
+	@include border-radius($cadmin-progress-border-radius-lg);
+
+	font-size: $cadmin-progress-font-size-lg;
+	height: $cadmin-progress-height-lg;
+	line-height: $cadmin-progress-height-lg;
+}
+
+// Progress Group
+
+.progress-group {
+	align-items: center;
+	display: flex;
+
+	.component-subtitle {
+		@include clay-link($cadmin-progress-group-subtitle);
+	}
+}
+
+.progress-group-addon {
+	font-size: $cadmin-progress-group-addon-font-size;
+	font-weight: $cadmin-progress-group-addon-font-weight;
+	margin-right: $cadmin-progress-group-addon-spacer-x;
+	text-align: center;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.progress ~ .progress-group-addon {
+	margin-left: $cadmin-progress-group-addon-spacer-x;
+	margin-right: 0;
+}
+
+.progress-group-feedback {
+	color: $cadmin-progress-group-feedback-color;
+}
+
+.progress-group-stacked {
+	display: block;
+
+	.progress {
+		margin-bottom: $cadmin-progress-group-stacked-progress-margin-bottom;
+		margin-top: $cadmin-progress-group-stacked-progress-margin-top;
+	}
+
+	.progress-group-addon {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+// Progress Variants
+
+@each $cadmin-color, $cadmin-value in $cadmin-progress-palette {
+	.progress-#{$cadmin-color} {
+		.progress-bar {
+			background-color: map-get($cadmin-value, bar-bg);
+		}
+
+		.progress-group-feedback {
+			color: map-get($cadmin-value, group-feedback-color);
+		}
+	}
+}

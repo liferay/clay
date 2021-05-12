@@ -1,0 +1,65 @@
+$cadmin-breadcrumb-bg: transparent !default;
+$cadmin-breadcrumb-border-radius: $cadmin-border-radius !default;
+$cadmin-breadcrumb-font-size: 14px !default;
+$cadmin-breadcrumb-font-weight: null !default;
+$cadmin-breadcrumb-margin-bottom: 0 !default;
+$cadmin-breadcrumb-padding-x: 2px !default; // 2px
+$cadmin-breadcrumb-padding-y: 9.5px !default;
+$cadmin-breadcrumb-text-transform: null !default;
+
+// Breadcrumb Item
+
+$cadmin-breadcrumb-item-padding: 8px !default;
+
+$cadmin-breadcrumb-active-color: $cadmin-gray-900 !default;
+$cadmin-breadcrumb-active-font-weight: $cadmin-font-weight-semi-bold !default;
+
+// Breadcrumb Text Truncate
+
+$cadmin-breadcrumb-text-truncate-icon-spacer-x: 14px !default;
+$cadmin-breadcrumb-text-truncate-max-width: 300px -
+	$cadmin-breadcrumb-text-truncate-icon-spacer-x !default;
+$cadmin-breadcrumb-text-truncate-max-width-mobile: 150px -
+	$cadmin-breadcrumb-text-truncate-icon-spacer-x !default;
+
+// Breadcrumb Link
+
+$cadmin-breadcrumb-link-color: $cadmin-gray-600 !default;
+$cadmin-breadcrumb-link-text-decoration: $cadmin-link-decoration !default;
+
+$cadmin-breadcrumb-link-hover-color: $cadmin-breadcrumb-link-color !default;
+$cadmin-breadcrumb-link-hover-text-decoration: $cadmin-link-hover-decoration !default;
+
+$cadmin-breadcrumb-link: () !default;
+$cadmin-breadcrumb-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $cadmin-breadcrumb-link-color,
+		display: block,
+		text-decoration: $cadmin-breadcrumb-link-text-decoration,
+		text-transform: $cadmin-breadcrumb-text-transform,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-breadcrumb-link-hover-color,
+		hover-text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-color: $cadmin-breadcrumb-link-hover-color,
+		focus-outline: 0,
+		focus-text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
+	),
+	$cadmin-breadcrumb-link
+);
+
+// Breadcrumb Divider
+
+$cadmin-breadcrumb-divider: quote('/') !default;
+
+$cadmin-breadcrumb-divider-color: $cadmin-breadcrumb-link-color !default;
+$cadmin-breadcrumb-divider-font-family: null !default;
+$cadmin-breadcrumb-divider-font-weight: null !default;
+
+$cadmin-breadcrumb-divider-svg-icon: clay-icon(
+	angle-right,
+	$cadmin-breadcrumb-divider-color
+) !default;
+$cadmin-breadcrumb-divider-svg-icon-height: 0.6em !default;
+$cadmin-breadcrumb-divider-svg-icon-width: $cadmin-breadcrumb-divider-svg-icon-height !default;

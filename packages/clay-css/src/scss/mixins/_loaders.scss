@@ -38,7 +38,10 @@
 	$mixin-name: 'clay-loading-animation-variant';
 
 	$border-radius: setter(map-get($map, border-radius), 50%);
-	$color: setter(map-get($map, color), $secondary);
+	$color: setter(
+		map-get($map, color),
+		if(variable-exists(secondary), $secondary, $cadmin-secondary)
+	);
 	$transform: setter(map-get($map, transform), scale(0.33334));
 
 	$animation: setter(map-get($map, animation), 1.2s ease-out infinite);

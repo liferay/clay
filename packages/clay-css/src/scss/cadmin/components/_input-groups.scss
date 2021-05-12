@@ -1,0 +1,607 @@
+// Deprecate Bootstrap 4 Input Group markup. Clay CSS wraps all form elements,
+// buttons, and text inside `input-group-item`. It should be one item per
+// `input-group-item`. We don't need these styles, but still making them
+// available for backward compatibility.
+
+.input-group {
+	> .form-control,
+	> .form-control-plaintext {
+		flex: 1 1 0%;
+		margin-bottom: 0;
+
+		// https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+
+		min-width: 0;
+
+		// For focus state's z-index
+
+		position: relative;
+
+		+ .form-control {
+			margin-left: -$cadmin-input-border-width;
+		}
+	}
+
+	// Bring the "active" form control to the top of surrounding elements
+
+	> .form-control:focus {
+		z-index: 3;
+	}
+
+	> .form-control {
+		&:not(:last-child) {
+			@include border-right-radius(0);
+		}
+
+		&:not(:first-child) {
+			@include border-left-radius(0);
+		}
+	}
+}
+
+.input-group-prepend,
+.input-group-append {
+	> .btn + .btn,
+	> .btn + .input-group-text,
+	> .input-group-text + .input-group-text,
+	> .input-group-text + .btn {
+		margin-left: -$cadmin-input-border-width;
+	}
+}
+
+// Input Group
+
+.input-group {
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	width: 100%;
+
+	.btn {
+		position: relative;
+		z-index: 1;
+
+		&:hover {
+			z-index: $cadmin-zindex-input-group-hover;
+		}
+	}
+
+	.btn:focus,
+	.form-control:focus {
+		z-index: $cadmin-zindex-input-group-focus;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+	}
+}
+
+// Input Group Item
+
+.input-group-item {
+	display: flex;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	margin-left: $cadmin-input-group-item-margin-left;
+	width: 1%;
+	word-wrap: break-word;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	> .btn {
+		align-self: flex-start;
+	}
+
+	> .dropdown {
+		display: flex;
+		flex-wrap: wrap;
+		word-wrap: break-word;
+		width: 100%;
+	}
+}
+
+.input-group-item-shrink {
+	flex-grow: 0;
+	width: auto;
+}
+
+// Input Group Text
+
+.input-group-text {
+	align-items: center;
+	background-color: $cadmin-input-group-addon-bg;
+	border-color: $cadmin-input-group-addon-border-color;
+	border-style: solid;
+
+	border-bottom-width: $cadmin-input-border-bottom-width;
+	border-left-width: $cadmin-input-border-left-width;
+	border-right-width: $cadmin-input-border-right-width;
+	border-top-width: $cadmin-input-border-top-width;
+
+	@include border-radius($cadmin-input-border-radius);
+
+	color: $cadmin-input-group-addon-color;
+	display: flex;
+	font-size: $cadmin-input-font-size;
+	font-weight: $cadmin-input-group-addon-font-weight;
+	height: $cadmin-input-height;
+	justify-content: center;
+	line-height: $cadmin-input-line-height;
+
+	// Allow use of <label> elements by overriding our default margin-bottom
+
+	margin-bottom: 0;
+	min-width: $cadmin-input-group-addon-min-width;
+	padding-bottom: $cadmin-input-group-addon-padding-y;
+	padding-left: $cadmin-input-group-addon-padding-x;
+	padding-right: $cadmin-input-group-addon-padding-x;
+	padding-top: $cadmin-input-group-addon-padding-y;
+	text-align: center;
+	white-space: nowrap;
+
+	@include clay-scale-component {
+		height: $cadmin-input-height-mobile;
+	}
+
+	label {
+		color: $cadmin-input-group-addon-color;
+	}
+
+	// Nuke default margins from checkboxes and radios to vertically center within.
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		margin-top: 0;
+	}
+
+	.custom-control,
+	.form-check {
+		margin-bottom: 0;
+	}
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
+
+.input-group-text-secondary {
+	background-color: $cadmin-input-group-secondary-addon-bg;
+	border-color: $cadmin-input-group-secondary-addon-border-color;
+	border-width: $cadmin-input-group-secondary-addon-border-width;
+	color: $cadmin-input-group-secondary-addon-color;
+	z-index: 2;
+
+	label {
+		color: $cadmin-input-group-secondary-addon-color;
+	}
+}
+
+// Input Group Stacked
+
+.input-group-stacked-sm-down {
+	@include clay-input-group-stacked($cadmin-input-group-stacked-sm-down);
+}
+
+// Input Group Sizes
+
+%clay-input-group-lg {
+	> .input-group-item {
+		> .btn {
+			@include clay-button-size($cadmin-input-group-lg-item-btn);
+		}
+
+		> .btn-monospaced {
+			@include clay-button-size(
+				$cadmin-input-group-lg-item-btn-monospaced
+			);
+		}
+
+		> .form-control,
+		> .form-file .btn {
+			@include border-radius($cadmin-input-border-radius-lg);
+
+			font-size: $cadmin-input-font-size-lg;
+			height: $cadmin-input-height-lg;
+			line-height: $cadmin-input-line-height-lg;
+			padding-bottom: $cadmin-input-padding-y-lg;
+			padding-left: $cadmin-input-padding-x-lg;
+			padding-right: $cadmin-input-padding-x-lg;
+			padding-top: $cadmin-input-padding-y-lg;
+
+			@include clay-scale-component {
+				height: $cadmin-input-height-lg-mobile;
+			}
+		}
+
+		> textarea.form-control,
+		> .form-control-textarea {
+			height: $cadmin-input-textarea-height-lg;
+		}
+
+		> .form-control-plaintext {
+			font-size: $cadmin-input-font-size-lg;
+			height: $cadmin-input-height-lg;
+			line-height: $cadmin-input-line-height-lg;
+			padding-bottom: $cadmin-input-padding-y-lg;
+			padding-top: $cadmin-input-padding-y-lg;
+
+			@include clay-scale-component {
+				height: $cadmin-input-height-lg-mobile;
+			}
+		}
+
+		> .input-group-text {
+			@include border-radius($cadmin-input-border-radius-lg);
+
+			font-size: $cadmin-input-font-size-lg;
+			height: $cadmin-input-height-lg;
+			min-width: $cadmin-input-group-addon-min-width-lg;
+			padding-bottom: $cadmin-input-group-addon-padding-y-lg;
+			padding-left: $cadmin-input-group-addon-padding-x-lg;
+			padding-right: $cadmin-input-group-addon-padding-x-lg;
+			padding-top: $cadmin-input-group-addon-padding-y-lg;
+		}
+	}
+
+	> .input-group-inset-item {
+		> .btn {
+			@include clay-button-size($cadmin-input-group-lg-inset-item-btn);
+		}
+
+		> .form-file {
+			height: 75%;
+
+			.btn {
+				@include clay-button-size(
+					$cadmin-input-group-lg-inset-item-form-file-btn
+				);
+			}
+		}
+	}
+}
+
+.input-group-lg {
+	@extend %clay-input-group-lg;
+}
+
+%clay-input-group-sm {
+	> .input-group-item {
+		> .btn {
+			@include clay-button-size($cadmin-input-group-sm-item-btn);
+		}
+
+		> .btn-monospaced {
+			@include clay-button-size(
+				$cadmin-input-group-sm-item-btn-monospaced
+			);
+		}
+
+		> .form-control,
+		> .form-file .btn {
+			@include border-radius($cadmin-input-border-radius-sm);
+
+			font-size: $cadmin-input-font-size-sm;
+			height: $cadmin-input-height-sm;
+			line-height: $cadmin-input-line-height-sm;
+			padding-bottom: $cadmin-input-padding-y-sm;
+			padding-left: $cadmin-input-padding-x-sm;
+			padding-right: $cadmin-input-padding-x-sm;
+			padding-top: $cadmin-input-padding-y-sm;
+
+			@include clay-scale-component {
+				height: $cadmin-input-height-sm-mobile;
+			}
+		}
+
+		> .form-control-plaintext {
+			font-size: $cadmin-input-font-size-sm;
+			height: $cadmin-input-height-sm;
+			line-height: $cadmin-input-line-height-sm;
+			padding-bottom: $cadmin-input-padding-y-sm;
+			padding-top: $cadmin-input-padding-y-sm;
+
+			@include clay-scale-component {
+				height: $cadmin-input-height-sm-mobile;
+			}
+		}
+
+		> textarea.form-control,
+		> .form-control-textarea {
+			height: $cadmin-input-textarea-height-sm;
+		}
+
+		> .input-group-text {
+			@include border-radius($cadmin-input-border-radius-sm);
+
+			font-size: $cadmin-input-font-size-sm;
+			height: $cadmin-input-height-sm;
+			min-width: $cadmin-input-group-addon-min-width-sm;
+			padding-bottom: $cadmin-input-group-addon-padding-y-sm;
+			padding-left: $cadmin-input-group-addon-padding-x-sm;
+			padding-right: $cadmin-input-group-addon-padding-x-sm;
+			padding-top: $cadmin-input-group-addon-padding-y-sm;
+		}
+	}
+
+	> .input-group-inset-item {
+		> .btn {
+			@include clay-button-size($cadmin-input-group-sm-inset-item-btn);
+		}
+
+		> .form-file {
+			height: 75%;
+
+			.btn {
+				@include clay-button-size(
+					$cadmin-input-group-sm-inset-item-form-file-btn
+				);
+			}
+		}
+	}
+
+	&.clay-color {
+		> .input-group-item > .input-group-text {
+			@extend %clay-color-sm-input-group-text !optional;
+
+			> .clay-color-btn {
+				@extend %clay-color-sm-clay-color-btn !optional;
+			}
+		}
+
+		> .input-group-item > .input-group-inset-item-before {
+			@extend %clay-color-sm-input-group-inset-item-before !optional;
+		}
+	}
+}
+
+.input-group-sm {
+	@extend %clay-input-group-sm;
+}
+
+// Form Group with Input Group
+
+.form-group-sm .input-group {
+	@extend %clay-input-group-sm;
+}
+
+// Input Group Inset
+
+.input-group-item.focus {
+	@include border-radius($cadmin-input-border-radius);
+
+	box-shadow: $cadmin-input-focus-box-shadow;
+
+	.form-control,
+	.form-control[readonly] ~ .input-group-inset-item,
+	.input-group-inset-item {
+		background-color: $cadmin-input-focus-bg;
+		border-color: $cadmin-input-focus-border-color;
+	}
+}
+
+.input-group-item.input-group-prepend.focus {
+	@include border-right-radius(0);
+
+	z-index: 1;
+}
+
+.input-group-item.input-group-append.focus {
+	@include border-left-radius(0);
+}
+
+.input-group-inset {
+	flex-grow: 1;
+	order: 5;
+	width: 1%;
+
+	&[readonly] {
+		&:focus {
+			~ .input-group-inset-item {
+				background-color: $cadmin-input-readonly-focus-bg;
+				border-color: $cadmin-input-readonly-focus-border-color;
+				color: $cadmin-input-readonly-focus-color;
+			}
+		}
+
+		~ .input-group-inset-item {
+			background-color: $cadmin-input-readonly-bg;
+			border-color: $cadmin-input-readonly-border-color;
+			color: $cadmin-input-readonly-color;
+			cursor: $cadmin-input-readonly-cursor;
+		}
+	}
+
+	&:focus {
+		box-shadow: none;
+
+		~ .input-group-inset-item {
+			background-color: $cadmin-input-focus-bg;
+			border-color: $cadmin-input-focus-border-color;
+		}
+	}
+
+	&:disabled {
+		~ .input-group-inset-item {
+			background-color: $cadmin-input-disabled-bg;
+			border-color: $cadmin-input-disabled-border-color;
+		}
+	}
+
+	~ .form-feedback-group {
+		order: 13;
+	}
+}
+
+.input-group {
+	.input-group-inset-item {
+		align-items: center;
+		background-color: $cadmin-input-bg;
+		border-bottom-width: $cadmin-input-border-bottom-width;
+		border-color: $cadmin-input-border-color;
+		border-left-width: $cadmin-input-border-left-width;
+		border-right-width: $cadmin-input-border-right-width;
+		border-style: solid;
+		border-top-width: $cadmin-input-border-top-width;
+		display: flex;
+		// undo margin-bottom on `<label>`
+		margin-bottom: 0;
+		padding-left: $cadmin-input-group-inset-item-padding-left;
+		padding-right: $cadmin-input-group-inset-item-padding-right;
+		transition: $cadmin-input-transition;
+
+		.btn {
+			@include clay-button-size($cadmin-input-group-inset-item-btn);
+
+			@if ($cadmin-enable-c-inner) {
+				.c-inner {
+					.lexicon-icon {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		.form-file {
+			height: 75%;
+
+			.btn {
+				@include clay-button-size(
+					$cadmin-input-group-inset-form-file-btn
+				);
+			}
+		}
+	}
+
+	.input-group-item .input-group-inset-before.form-control {
+		@include border-left-radius(0);
+		@include border-right-radius($cadmin-input-border-radius);
+
+		border-left-width: 0;
+		padding-left: 0;
+	}
+
+	.input-group-inset-item-before {
+		@include border-left-radius($cadmin-input-border-radius);
+
+		border-right-width: 0;
+		color: $cadmin-input-group-inset-item-color;
+		order: 3;
+	}
+
+	.input-group-append > .input-group-inset-item-before {
+		@include border-left-radius(0);
+	}
+
+	.input-group-item .input-group-inset-after.form-control {
+		@include border-right-radius(0);
+
+		border-right-width: 0;
+		padding-right: 0;
+	}
+
+	.input-group-inset-item-after {
+		@include border-right-radius($cadmin-input-border-radius);
+
+		border-left-width: 0;
+		color: $cadmin-input-group-inset-item-color;
+		order: 9;
+
+		.input-group-prepend & {
+			@include border-right-radius(0);
+
+			z-index: 1;
+		}
+	}
+}
+
+// Input Group Prepend
+
+.input-group {
+	> .input-group-item {
+		&.input-group-prepend {
+			align-items: stretch;
+			display: flex;
+			margin-right: math-sign($cadmin-input-border-left-width);
+		}
+
+		&.input-group-prepend:not(:last-child) {
+			> .btn,
+			> .form-control,
+			> .input-group-text {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			> .btn + .btn {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+
+		&.input-group-prepend + .input-group-prepend {
+			margin-left: 0;
+
+			> .btn,
+			> .form-control,
+			> .input-group-text {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+	}
+}
+
+// Input Group Append
+
+.input-group {
+	> .input-group-item {
+		&.input-group-append {
+			align-items: stretch;
+			display: flex;
+			margin-right: math-sign($cadmin-input-border-left-width);
+		}
+
+		&.input-group-append:first-child {
+			> .btn,
+			> .form-control,
+			> .input-group-text {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+		}
+
+		&.input-group-append:not(:first-child) {
+			> .btn,
+			> .form-control,
+			> .form-file .btn,
+			> .input-group-text {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+
+		&.input-group-append + .input-group-append,
+		&.input-group-prepend + .input-group-append {
+			margin-left: 0;
+		}
+	}
+}
+
+// Input Group Password
+
+.input-group-password {
+	.form-control[type='text'] ~ .input-group-inset-item {
+		.input-password-label {
+			display: none;
+		}
+	}
+
+	.form-control[type='password'] ~ .input-group-inset-item {
+		.input-text-label {
+			display: none;
+		}
+	}
+}

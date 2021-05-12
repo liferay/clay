@@ -1,0 +1,79 @@
+$cadmin-enable-scaling-navbar: $cadmin-enable-scaling-components !default;
+
+$cadmin-navbar-border-radius: null !default;
+$cadmin-navbar-font-size: 14px !default; // 14px
+$cadmin-navbar-padding-x: $cadmin-spacer !default;
+$cadmin-navbar-padding-y: $cadmin-spacer / 2 !default;
+
+$cadmin-navbar-nav-link-padding-x: 8px !default;
+
+$cadmin-navbar-title-font-size: 20px !default; // 20px
+$cadmin-navbar-title-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-navbar-title-margin-bottom: 0 !default;
+$cadmin-navbar-title-text-transform: null !default;
+
+$cadmin-navbar-text-truncate-spacer-right: 25px !default; // 25px
+$cadmin-navbar-text-truncate-max-width: 200px !default; // 200px
+
+// Navbar Brand
+
+$cadmin-navbar-brand-font-size: $cadmin-font-size-lg !default;
+
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+
+$cadmin-nav-link-height: $cadmin-font-size-base * $cadmin-line-height-base +
+	$cadmin-nav-link-padding-y * 2 !default;
+$cadmin-navbar-brand-height: $cadmin-navbar-brand-font-size *
+	$cadmin-line-height-base !default;
+$cadmin-navbar-brand-padding-y: (
+		$cadmin-nav-link-height - $cadmin-navbar-brand-height
+	) / 2 !default;
+
+// Navbar Toggler
+
+$cadmin-navbar-toggler-border-radius: $cadmin-btn-border-radius !default;
+$cadmin-navbar-toggler-cursor: null !default;
+$cadmin-navbar-toggler-font-size: $cadmin-font-size-lg !default;
+$cadmin-navbar-toggler-padding-x: 12px !default;
+$cadmin-navbar-toggler-padding-y: 4px !default;
+
+// Navbar Underline
+
+$cadmin-navbar-underline-active-bg: lighten(
+	$cadmin-component-active-bg,
+	22.94
+) !default;
+
+// Navbar Dark
+
+$cadmin-navbar-dark-color: $cadmin-white !default;
+
+$cadmin-navbar-dark-hover-color: $cadmin-navbar-dark-color !default;
+
+$cadmin-navbar-dark-active-color: $cadmin-navbar-dark-color !default;
+
+$cadmin-navbar-dark-disabled-color: $cadmin-nav-link-disabled-color !default;
+
+$cadmin-navbar-dark-brand-color: $cadmin-navbar-dark-active-color !default;
+
+$cadmin-navbar-dark-brand-hover-color: $cadmin-navbar-dark-active-color !default;
+
+$cadmin-navbar-dark-toggler-border-color: rgba($cadmin-white, 0.1) !default;
+$cadmin-navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$cadmin-navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+
+// Navbar Light
+
+$cadmin-navbar-light-color: $cadmin-gray-600 !default;
+
+$cadmin-navbar-light-hover-color: $cadmin-navbar-light-color !default;
+
+$cadmin-navbar-light-active-color: $cadmin-gray-900 !default;
+
+$cadmin-navbar-light-disabled-color: $cadmin-nav-link-disabled-color !default;
+
+$cadmin-navbar-light-brand-color: $cadmin-navbar-light-active-color !default;
+
+$cadmin-navbar-light-brand-hover-color: $cadmin-navbar-light-active-color !default;
+
+$cadmin-navbar-light-toggler-border-color: rgba($cadmin-black, 0.1) !default;
+$cadmin-navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$cadmin-navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;

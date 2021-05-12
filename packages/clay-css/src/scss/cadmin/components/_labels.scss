@@ -1,0 +1,147 @@
+.label {
+	border-color: $cadmin-label-border-color;
+
+	@include border-radius($cadmin-label-border-radius);
+
+	border-style: $cadmin-label-border-style;
+	border-width: $cadmin-label-border-width;
+	color: $cadmin-label-color;
+	display: inline-flex;
+	font-size: $cadmin-label-font-size;
+	font-weight: $cadmin-label-font-weight;
+	height: $cadmin-label-height;
+	line-height: $cadmin-label-line-height;
+	margin-bottom: $cadmin-label-spacer-y;
+	margin-right: $cadmin-label-spacer-x;
+	margin-top: $cadmin-label-spacer-y;
+	max-width: 100%;
+	padding-bottom: $cadmin-label-padding-y;
+	padding-left: $cadmin-label-padding-x;
+	padding-right: $cadmin-label-padding-x;
+	padding-top: $cadmin-label-padding-y;
+	text-transform: $cadmin-label-text-transform;
+	white-space: inherit;
+	word-wrap: break-word;
+
+	@include clay-label-variant($cadmin-label-base);
+
+	a {
+		color: $cadmin-label-link-color;
+		display: inline-block;
+		text-decoration: $cadmin-label-link-text-decoration;
+
+		&:hover,
+		&:focus {
+			color: $cadmin-label-link-hover-color;
+			text-decoration: $cadmin-label-link-hover-text-decoration;
+		}
+	}
+
+	@if ($cadmin-enable-c-inner) {
+		> .c-inner {
+			margin-bottom: math-sign($cadmin-label-padding-y);
+			margin-left: math-sign($cadmin-label-padding-x);
+			margin-right: math-sign($cadmin-label-padding-x);
+			margin-top: math-sign($cadmin-label-padding-y);
+			max-width: none;
+		}
+	}
+
+	.sticker {
+		border-radius: $cadmin-label-sticker-border-radius;
+		height: $cadmin-label-sticker-size;
+		line-height: $cadmin-label-sticker-size;
+		width: $cadmin-label-sticker-size;
+	}
+
+	.sticker-overlay {
+		border-radius: $cadmin-label-sticker-border-radius;
+	}
+}
+
+a.label,
+button.label {
+	text-decoration: $cadmin-label-anchor-text-decoration;
+
+	&:hover,
+	&:focus {
+		text-decoration: $cadmin-label-anchor-hover-text-decoration;
+	}
+}
+
+button.label {
+	cursor: $cadmin-btn-cursor;
+}
+
+.label-dismissible {
+	text-transform: $cadmin-label-dismissible-text-transform;
+}
+
+.label-item {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	justify-content: center;
+	margin-bottom: $cadmin-label-item-spacer-y;
+	margin-top: $cadmin-label-item-spacer-y;
+	min-height: 0;
+	position: relative;
+
+	a {
+		display: inline-flex;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+		display: inline-flex;
+	}
+
+	.close {
+		@include clay-close($cadmin-label-close);
+	}
+
+	.lexicon-icon {
+		height: $cadmin-label-lexicon-icon-height;
+		margin-top: $cadmin-label-lexicon-icon-margin-top;
+		width: $cadmin-label-lexicon-icon-width;
+	}
+
+	.text-truncate-inline {
+		display: inline-flex;
+	}
+}
+
+.label-item-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 16px;
+	word-wrap: break-word;
+
+	a {
+		flex-direction: column;
+	}
+}
+
+.label-item-before {
+	margin-right: $cadmin-label-item-spacer-x;
+}
+
+.label-item-after {
+	margin-left: $cadmin-label-item-spacer-x;
+}
+
+// Label Sizes
+
+.label-lg {
+	@include clay-label-size($cadmin-label-lg);
+}
+
+// Label Variants
+
+@each $cadmin-color, $cadmin-value in $cadmin-label-palette {
+	.label-#{$cadmin-color} {
+		@include clay-label-variant(
+			map-get($cadmin-label-palette, $cadmin-color)
+		);
+	}
+}

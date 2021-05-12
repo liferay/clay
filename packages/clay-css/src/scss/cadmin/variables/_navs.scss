@@ -1,0 +1,284 @@
+$cadmin-nav-font-size: 14px !default;
+
+$cadmin-nav-link-padding-x: 16px !default; // 16px
+$cadmin-nav-link-padding-y: 10px !default; // 10px
+
+$cadmin-nav-link-disabled-color: $cadmin-gray-500 !default;
+$cadmin-nav-link-disabled-cursor: $cadmin-disabled-cursor !default;
+
+$cadmin-nav-link: () !default;
+$cadmin-nav-link: map-deep-merge(
+	(
+		display: block,
+		padding-bottom: $cadmin-nav-link-padding-y,
+		padding-left: $cadmin-nav-link-padding-x,
+		padding-right: $cadmin-nav-link-padding-x,
+		padding-top: $cadmin-nav-link-padding-y,
+		position: relative,
+		hover: (
+			text-decoration: none,
+		),
+		focus: (
+			text-decoration: none,
+		),
+		focus-z-index: 1,
+		disabled-color: $cadmin-nav-link-disabled-color,
+		disabled-box-shadow: none,
+		disabled-cursor: $cadmin-nav-link-disabled-cursor,
+		disabled-active-pointer-events: none,
+	),
+	$cadmin-nav-link
+);
+
+$cadmin-nav-link-btn-unstyled: () !default;
+$cadmin-nav-link-btn-unstyled: map-deep-merge(
+	(
+		width: 100%,
+		disabled-opacity: 1,
+		focus-box-shadow: #{0 0 0 2px $cadmin-white,
+		0 0 0 4px $cadmin-primary-l1},
+		c-inner: (
+			width: auto,
+		),
+	),
+	$cadmin-nav-link-btn-unstyled
+);
+
+$cadmin-nav-item-monospaced-size: 32px !default; // 32px
+
+// @deprecated after v3.4.0 use the Sass map `$cadmin-nav-btn` instead
+
+$cadmin-nav-btn-margin-x: 4px !default; // 4px
+
+// @deprecated after v3.4.0 use the Sass map `$cadmin-nav-btn` instead
+
+$cadmin-nav-btn-margin-y: (
+		($cadmin-line-height-base * $cadmin-font-size-base) +
+			($cadmin-nav-link-padding-y * 2) - $cadmin-nav-item-monospaced-size
+	) / 2 !default;
+
+// @deprecated after v3.4.0 use the Sass map `$cadmin-nav-btn` instead
+
+$cadmin-nav-btn-padding-x: $cadmin-btn-padding-x-sm !default;
+
+// @deprecated after v3.4.0 use the Sass map `$cadmin-nav-btn` instead
+
+$cadmin-nav-btn-padding-y: 0 !default;
+
+$cadmin-nav-btn: () !default;
+$cadmin-nav-btn: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $cadmin-nav-item-monospaced-size,
+		justify-content: center,
+		line-height: $cadmin-line-height-base,
+		margin: $cadmin-nav-btn-margin-y $cadmin-nav-btn-margin-x,
+		min-width: $cadmin-nav-item-monospaced-size,
+		padding: $cadmin-nav-btn-padding-y $cadmin-nav-btn-padding-x,
+		position: relative,
+		text-align: center,
+		width: auto,
+		focus-z-index: 1,
+		disabled-opacity: 1,
+		c-inner: (
+			margin-bottom: 0,
+			margin-left: math-sign($cadmin-nav-btn-padding-x),
+			margin-right: math-sign($cadmin-nav-btn-padding-x),
+			margin-top: math-sign($cadmin-btn-border-width),
+		),
+		lexicon-icon-margin-top: 0,
+	),
+	$cadmin-nav-btn
+);
+
+$cadmin-nav-btn-monospaced: () !default;
+$cadmin-nav-btn-monospaced: map-deep-merge(
+	(
+		padding: 0,
+		c-inner: (
+			margin-left: math-sign($cadmin-btn-border-width),
+			margin-right: math-sign($cadmin-btn-border-width),
+		),
+	),
+	$cadmin-nav-btn-monospaced
+);
+
+$cadmin-nav-link-monospaced: () !default;
+$cadmin-nav-link-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		height: $cadmin-nav-item-monospaced-size,
+		justify-content: center,
+		margin: $cadmin-nav-btn-margin-y $cadmin-nav-btn-margin-x,
+		min-width: $cadmin-nav-item-monospaced-size,
+		padding: 0,
+		lexicon-icon-margin-top: 0,
+	),
+	$cadmin-nav-link-monospaced
+);
+
+$cadmin-nav-divider-color: $cadmin-gray-200 !default;
+$cadmin-nav-divider-margin-y: $cadmin-spacer / 2 !default;
+
+$cadmin-nav-form-padding-bottom: 0 !default;
+$cadmin-nav-form-padding-left: $cadmin-nav-link-padding-x !default;
+$cadmin-nav-form-padding-right: $cadmin-nav-link-padding-x !default;
+$cadmin-nav-form-padding-top: 0 !default;
+
+// Nav Stacked
+
+$cadmin-nav-stacked-nav-form-padding-bottom: $cadmin-nav-link-padding-y !default;
+$cadmin-nav-stacked-nav-form-padding-left: 8px !default;
+$cadmin-nav-stacked-nav-form-padding-right: 8px !default;
+$cadmin-nav-stacked-nav-form-padding-top: $cadmin-nav-link-padding-y !default;
+
+// Nav Nested
+
+$cadmin-nav-nested-margins-spacer-x: $cadmin-nav-link-padding-x !default;
+$cadmin-nav-nested-spacer-x: 16px !default; // 16px
+
+// Nav Tabs
+
+$cadmin-nav-tabs-font-size: 14px !default; // 14px
+
+// Nav Tabs Link
+
+$cadmin-nav-tabs-border-color: transparent !default;
+$cadmin-nav-tabs-border-width: $cadmin-border-width !default;
+$cadmin-nav-tabs-border-radius: $cadmin-border-radius $cadmin-border-radius 0 0 !default;
+
+$cadmin-nav-tabs-link-color: $cadmin-gray-600 !default;
+$cadmin-nav-tabs-link-padding-x: null !default;
+$cadmin-nav-tabs-link-padding-y: 4.5px !default; // 4.5px
+
+$cadmin-nav-tabs-link-hover-border-color: transparent !default;
+
+$cadmin-nav-tabs-link-active-bg: $cadmin-white !default;
+$cadmin-nav-tabs-link-active-border-color: transparent transparent
+	$cadmin-body-bg !default;
+$cadmin-nav-tabs-link-active-color: $cadmin-gray-900 !default;
+
+$cadmin-nav-tabs-link: () !default;
+$cadmin-nav-tabs-link: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+		border-width: $cadmin-nav-tabs-border-width,
+		border-radius: $cadmin-nav-tabs-border-radius,
+		color: $cadmin-nav-tabs-link-color,
+		font-weight: $cadmin-font-weight-semi-bold,
+		padding-bottom: $cadmin-nav-tabs-link-padding-y,
+		padding-left: $cadmin-nav-tabs-link-padding-x,
+		padding-right: $cadmin-nav-tabs-link-padding-x,
+		padding-top: $cadmin-nav-tabs-link-padding-y,
+		transition: box-shadow 0.15s ease-in-out,
+		white-space: nowrap,
+		hover: (
+			border-color: $cadmin-nav-tabs-link-hover-border-color,
+		),
+		focus: (
+			border-color: $cadmin-nav-tabs-link-hover-border-color,
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			background-color: $cadmin-nav-tabs-link-active-bg,
+			border-color: $cadmin-nav-tabs-link-active-border-color,
+			color: $cadmin-nav-tabs-link-active-color,
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: transparent,
+			box-shadow: none,
+			color: $cadmin-nav-link-disabled-color,
+		),
+	),
+	$cadmin-nav-tabs-link
+);
+
+// Nav Tabs Link Show
+
+$cadmin-nav-tabs-link-show-color: $cadmin-nav-tabs-link-active-color !default;
+$cadmin-nav-tabs-link-show-bg: transparent !default;
+$cadmin-nav-tabs-link-show-border-color: transparent transparent
+	$cadmin-nav-tabs-border-color transparent !default;
+
+$cadmin-nav-tabs-link-show: () !default;
+$cadmin-nav-tabs-link-show: map-deep-merge(
+	(
+		bg: $cadmin-nav-tabs-link-show-bg,
+		border-color: $cadmin-nav-tabs-link-show-border-color,
+		color: $cadmin-nav-tabs-link-show-color,
+	),
+	$cadmin-nav-tabs-link-show
+);
+
+// Nav Tabs Tab Pane
+
+$cadmin-nav-tabs-tab-pane-bg: $cadmin-white !default;
+$cadmin-nav-tabs-tab-pane-border-radius: 4px !default;
+$cadmin-nav-tabs-tab-pane-padding: 32px !default;
+
+// Nav Underline
+
+$cadmin-nav-underline-font-size: null !default;
+
+$cadmin-nav-underline-link-highlight-palette: null !default;
+
+$cadmin-nav-underline-link-color: $cadmin-gray-600 !default;
+$cadmin-nav-underline-link-padding-x: null !default;
+$cadmin-nav-underline-link-padding-y: null !default;
+
+$cadmin-nav-underline-link-hover-color: null !default;
+
+$cadmin-nav-underline-link-active-color: $cadmin-gray-900 !default;
+
+$cadmin-nav-underline-link-disabled-color: $cadmin-nav-link-disabled-color !default;
+
+$cadmin-nav-underline-link: () !default;
+$cadmin-nav-underline-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $cadmin-nav-underline-link-color,
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: 1,
+		padding-bottom: 9px,
+		padding-left: $cadmin-nav-underline-link-padding-x,
+		padding-right: $cadmin-nav-underline-link-padding-x,
+		padding-top: 9px,
+		transition: box-shadow 0.15s ease-in-out,
+		hover-color: $cadmin-nav-underline-link-hover-color,
+		focus-box-shadow: $cadmin-component-focus-box-shadow,
+		focus-color: $cadmin-nav-underline-link-hover-color,
+		focus-outline: 0,
+		active-class-color: $cadmin-nav-underline-link-active-color,
+		disabled-box-shadow: none,
+		disabled-color: $cadmin-nav-underline-link-disabled-color,
+	),
+	$cadmin-nav-underline-link
+);
+
+$cadmin-nav-underline-link-show: () !default;
+$cadmin-nav-underline-link-show: map-deep-merge(
+	(
+		color: $cadmin-nav-underline-link-active-color,
+	),
+	$cadmin-nav-underline-link-show
+);
+
+// Nav Underline Link Highlight
+
+$cadmin-nav-underline-link-highlight-content: null !default;
+$cadmin-nav-underline-link-highlight-height: null !default;
+$cadmin-nav-underline-link-highlight-bottom: 0 !default;
+$cadmin-nav-underline-link-highlight-left: 0 !default;
+$cadmin-nav-underline-link-highlight-right: 0 !default;
+$cadmin-nav-underline-link-highlight-top: null !default;
+
+$cadmin-nav-underline-link-active-highlight: $cadmin-primary-l1 !default;
+$cadmin-nav-underline-link-active-content: '' !default;
+$cadmin-nav-underline-link-active-highlight-height: 2px !default; // 2px
+
+$cadmin-nav-underline-link-disabled-highlight: null !default;

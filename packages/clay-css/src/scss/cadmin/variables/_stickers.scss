@@ -1,0 +1,141 @@
+$cadmin-sticker-border-color: null !default;
+$cadmin-sticker-border-radius: $cadmin-border-radius !default;
+$cadmin-sticker-border-style: null !default;
+$cadmin-sticker-border-width: null !default;
+$cadmin-sticker-color: $cadmin-label-color !default;
+$cadmin-sticker-font-size: 16px !default; // 16px
+$cadmin-sticker-font-weight: $cadmin-font-weight-bold !default;
+$cadmin-sticker-size: 32px !default; // 32px
+
+$cadmin-sticker-inline-item-font-size: null !default;
+
+// Sticker Sizes
+
+$cadmin-sticker-sm: () !default;
+$cadmin-sticker-sm: map-deep-merge(
+	(
+		font-size: 12px,
+		size: 24px,
+	),
+	$cadmin-sticker-sm
+);
+
+$cadmin-sticker-lg: () !default;
+$cadmin-sticker-lg: map-deep-merge(
+	(
+		font-size: 20px,
+		size: 40px,
+	),
+	$cadmin-sticker-lg
+);
+
+$cadmin-sticker-xl: () !default;
+$cadmin-sticker-xl: map-deep-merge(
+	(
+		font-size: 24px,
+		size: 48px,
+	),
+	$cadmin-sticker-xl
+);
+
+// Sticker Positions
+
+$cadmin-sticker-inside-offset: 16px !default; // 16px
+$cadmin-sticker-outside-offset: -($cadmin-sticker-size / 2) !default;
+
+// Sticker Circle
+
+$cadmin-sticker-circle-border-radius: $cadmin-rounded-circle-border-radius !default;
+
+// Sticker User Icon
+
+$cadmin-sticker-user-icon: () !default;
+$cadmin-sticker-user-icon: map-deep-merge(
+	(
+		bg: $cadmin-white,
+		border-radius: $cadmin-rounded-circle-border-radius,
+		box-shadow: 0 0 0 1px $cadmin-gray-300,
+	),
+	$cadmin-sticker-user-icon
+);
+
+// Sticker Variants
+
+$cadmin-sticker-primary-bg: $cadmin-white !default;
+$cadmin-sticker-primary-border-color: null !default;
+$cadmin-sticker-primary-color: $cadmin-primary !default;
+
+$cadmin-sticker-secondary-bg: $cadmin-white !default;
+$cadmin-sticker-secondary-border-color: null !default;
+$cadmin-sticker-secondary-color: $cadmin-secondary !default;
+
+$cadmin-sticker-info-bg: $cadmin-white !default;
+$cadmin-sticker-info-border-color: null !default;
+$cadmin-sticker-info-color: $cadmin-info !default;
+
+$cadmin-sticker-success-bg: $cadmin-white !default;
+$cadmin-sticker-success-border-color: null !default;
+$cadmin-sticker-success-color: $cadmin-success !default;
+
+$cadmin-sticker-warning-bg: $cadmin-white !default;
+$cadmin-sticker-warning-border-color: null !default;
+$cadmin-sticker-warning-color: $cadmin-warning !default;
+
+$cadmin-sticker-danger-bg: $cadmin-white !default;
+$cadmin-sticker-danger-border-color: null !default;
+$cadmin-sticker-danger-color: $cadmin-danger !default;
+
+$cadmin-sticker-light-bg: $cadmin-white !default;
+$cadmin-sticker-light-border-color: null !default;
+$cadmin-sticker-light-color: $cadmin-dark !default;
+
+$cadmin-sticker-dark-bg: $cadmin-dark !default;
+$cadmin-sticker-dark-border-color: null !default;
+$cadmin-sticker-dark-color: $cadmin-white !default;
+
+$cadmin-sticker-palette: () !default;
+$cadmin-sticker-palette: map-deep-merge(
+	(
+		primary: (
+			bg: $cadmin-sticker-primary-bg,
+			border-color: $cadmin-sticker-primary-border-color,
+			color: $cadmin-sticker-primary-color,
+		),
+		secondary: (
+			bg: $cadmin-sticker-secondary-bg,
+			border-color: $cadmin-sticker-secondary-border-color,
+			color: $cadmin-sticker-secondary-color,
+		),
+		success: (
+			bg: $cadmin-sticker-success-bg,
+			border-color: $cadmin-sticker-success-border-color,
+			color: $cadmin-sticker-success-color,
+		),
+		info: (
+			bg: $cadmin-sticker-info-bg,
+			border-color: $cadmin-sticker-info-border-color,
+			color: $cadmin-sticker-info-color,
+		),
+		warning: (
+			bg: $cadmin-sticker-warning-bg,
+			border-color: $cadmin-sticker-warning-border-color,
+			color: $cadmin-sticker-warning-color,
+		),
+		danger: (
+			bg: $cadmin-sticker-danger-bg,
+			border-color: $cadmin-sticker-danger-border-color,
+			color: $cadmin-sticker-danger-color,
+		),
+		light: (
+			bg: $cadmin-sticker-light-bg,
+			border-color: $cadmin-sticker-light-border-color,
+			color: $cadmin-sticker-light-color,
+		),
+		dark: (
+			bg: $cadmin-sticker-dark-bg,
+			border-color: $cadmin-sticker-dark-border-color,
+			color: $cadmin-sticker-dark-color,
+		),
+	),
+	$cadmin-sticker-palette
+);

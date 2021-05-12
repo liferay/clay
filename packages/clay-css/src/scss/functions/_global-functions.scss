@@ -160,7 +160,16 @@
 /// @param {Bool} $custom-gradient[false] - Pass in `true` as the second parameter to this function if using a custom gradient.
 
 @function clay-enable-gradients($gradient, $custom-gradient: false) {
-	@if ($enable-gradients and $gradient) {
+	$enable: setter(
+		if(
+			variable-exists(enable-gradients),
+			$enable-gradients,
+			$cadmin-enable-gradients
+		),
+		false
+	);
+
+	@if ($enable and $gradient) {
 		@if ($custom-gradient or $gradient == none) {
 			@return $gradient;
 		} @else {
@@ -178,8 +187,17 @@
 /// A function that returns a number for use with the `border-radius` property. This function returns `null` if `$enable-rounded` is set to `false`. This is a workaround for complying with Bootstrap's `$enable-rounded` setting.
 /// @param {Number} $radius - The border radius.
 
-@function clay-enable-rounded($radius) {
-	@if ($enable-rounded) {
+@function clay-enable-rounded($radius, $enable: null) {
+	$enable: setter(
+		if(
+			variable-exists(enable-rounded),
+			$enable-rounded,
+			$cadmin-enable-rounded
+		),
+		true
+	);
+
+	@if ($enable) {
 		@return $radius;
 	}
 
@@ -189,20 +207,29 @@
 /// A function that returns a shadow for use with the `box-shadow` property. This function returns `null` if `$enable-shadows` is set to `false`. This is a workaround for complying with Bootstrap's `$enable-shadows` setting.
 /// @param {List} $shadows - The box shadow. Pass in a single shadow or two shadows using `[$shadow1, $shadow2]` if you need a default shadow even if `$enable-shadows` is `false`. A focus shadow for example.
 
-@function clay-enable-shadows($shadows) {
+@function clay-enable-shadows($shadows, $enable: null) {
 	$ret-val: null;
 
 	$length: length($shadows);
 	$separator: list-separator($shadows);
 
+	$enable: setter(
+		if(
+			variable-exists(enable-shadows),
+			$enable-shadows,
+			$cadmin-enable-shadows
+		),
+		true
+	);
+
 	@if ($length == 2 and $separator == 'comma') {
-		@if ($enable-shadows) {
+		@if ($enable) {
 			$ret-val: nth($shadows, 1);
 		} @else {
 			$ret-val: nth($shadows, 2);
 		}
 	} @else if ($separator == 'space') {
-		@if ($enable-shadows) {
+		@if ($enable) {
 			$ret-val: $shadows;
 		}
 	}
@@ -214,6 +241,15 @@
 /// @param {List} $transitions - The transitions.
 
 @function clay-enable-transitions($transitions) {
+	$enable: setter(
+		if(
+			variable-exists(enable-transitions),
+			$enable-transitions,
+			$cadmin-enable-transitions
+		),
+		true
+	);
+
 	@if ($enable-transitions) {
 		@return $transition;
 	}
@@ -262,11 +298,18 @@
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 /// @param {List} $breakpoint-names[map-keys($breakpoints)] - A list of all the keys in $breakpoints
 
-@function breakpoint-next(
-	$name,
-	$breakpoints: $grid-breakpoints,
-	$breakpoint-names: map-keys($breakpoints)
-) {
+@function breakpoint-next($name, $breakpoints: null, $breakpoint-names: null) {
+	$breakpoints: setter(
+		$breakpoints,
+		if(
+			variable-exists(grid-breakpoints),
+			$grid-breakpoints,
+			$cadmin-grid-breakpoints
+		)
+	);
+
+	$breakpoint-names: setter($breakpoint-names, map-keys($breakpoints));
+
 	$n: index($breakpoint-names, $name);
 
 	@return if(
@@ -283,9 +326,20 @@
 
 @function clay-breakpoint-prev(
 	$name,
-	$breakpoints: $grid-breakpoints,
-	$breakpoint-names: map-keys($breakpoints)
+	$breakpoints: null,
+	$breakpoint-names: null
 ) {
+	$breakpoints: setter(
+		$breakpoints,
+		if(
+			variable-exists(grid-breakpoints),
+			$grid-breakpoints,
+			$cadmin-grid-breakpoints
+		)
+	);
+
+	$breakpoint-names: setter($breakpoint-names, map-keys($breakpoints));
+
 	@each $value in $breakpoint-names {
 		@if (breakpoint-next($value) == $name) {
 			@return $value;
@@ -300,7 +354,16 @@
 /// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+@function breakpoint-min($name, $breakpoints: null) {
+	$breakpoints: setter(
+		$breakpoints,
+		if(
+			variable-exists(grid-breakpoints),
+			$grid-breakpoints,
+			$cadmin-grid-breakpoints
+		)
+	);
+
 	$min: map-get($breakpoints, $name);
 
 	@return if($min != 0, $min, null);
@@ -314,7 +377,15 @@
 /// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
-@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+@function breakpoint-max($name, $breakpoints: null) {
+	$breakpoints: setter(
+		$breakpoints,
+		if(
+			variable-exists(grid-breakpoints),
+			$grid-breakpoints,
+			$cadmin-grid-breakpoints
+		)
+	);
 	$next: breakpoint-next($name, $breakpoints);
 
 	@return if($next, breakpoint-min($next, $breakpoints) - 0.02, null);
@@ -327,7 +398,16 @@
 /// @param {Key} $name - The breakpoint name or keys in `$grid-breakpoints` (e.g., `xs`, `sm`, `md`, `lg`, `xl`)
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+@function breakpoint-infix($name, $breakpoints: null) {
+	$breakpoints: setter(
+		$breakpoints,
+		if(
+			variable-exists(grid-breakpoints),
+			$grid-breakpoints,
+			$cadmin-grid-breakpoints
+		)
+	);
+
 	@return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
 }
 
@@ -336,14 +416,41 @@
 /// @param {Color} $dark[$yiq-text-dark] - The color to return if `$color` >= `$yiq-contrasted-threshold`
 /// @param {Color} $light[$yiq-text-light] - The color to return if `$color` < `$yiq-contrasted-threshold`
 
-@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
+@function color-yiq($color, $dark: null, $light: null, $threshold: null) {
 	$r: red($color);
 	$g: green($color);
 	$b: blue($color);
 
 	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
-	@if ($yiq >= $yiq-contrasted-threshold) {
+	$dark: setter(
+		$dark,
+		if(
+			variable-exists(yiq-text-dark),
+			$yiq-text-dark,
+			$cadmin-yiq-text-dark
+		)
+	);
+
+	$light: setter(
+		$light,
+		if(
+			variable-exists(yiq-text-light),
+			$yiq-text-light,
+			$cadmin-yiq-text-light
+		)
+	);
+
+	$threshold: setter(
+		$threshold,
+		if(
+			variable-exists(yiq-contrasted-threshold),
+			$yiq-contrasted-threshold,
+			$cadmin-yiq-contrasted-threshold
+		)
+	);
+
+	@if ($yiq >= $threshold) {
 		@return $dark;
 	} @else {
 		@return $light;
@@ -362,8 +469,16 @@
 /// @deprecated just use `map-get($theme-colors, 'primary')`
 /// @param {String} $key['primary'] - The name of the color
 
-@function theme-color($key: 'primary') {
-	@return map-get($theme-colors, $key);
+@function theme-color($key: 'primary', $colors: null) {
+	@if ($colors == null) {
+		$colors: if(
+			variable-exists(theme-colors),
+			$theme-colors,
+			$cadmin-theme-colors
+		);
+	}
+
+	@return map-get($colors, $key);
 }
 
 /// A Bootstrap 4 function that returns a value inside the `$grays` Sass map.
@@ -379,12 +494,29 @@
 /// @param {String} $color-name['primary'] - A key in the Sass map `$theme-colors`
 /// @param {Number} $level[0]
 
-@function theme-color-level($color-name: 'primary', $level: 0) {
+@function theme-color-level(
+	$color-name: 'primary',
+	$level: 0,
+	$color-interval: null
+) {
+	$black: setter(if(variable-exists('black'), $black, $cadmin-black), #000);
+
+	$white: setter(if(variable-exists('white'), $white, $cadmin-white), #fff);
+
 	$color: theme-color($color-name);
 	$color-base: if($level > 0, $black, $white);
 	$level: abs($level);
 
-	@return mix($color-base, $color, $level * $theme-color-interval);
+	$color-interval: setter(
+		if(
+			variable-exists(theme-color-interval),
+			$theme-color-interval,
+			$cadmin-theme-color-interval
+		),
+		$color-interval
+	);
+
+	@return mix($color-base, $color, $level * $color-interval);
 }
 
 /// A Bootstrap 4 function that returns a CSS `calc` addition expression. This is their workaround for returning a valid calc value with `null` variables.
@@ -550,9 +682,17 @@
 // * SPDX-FileCopyrightText: © 2018 Kevin Weber <https://codepen.io/kevinweber/pen/dXWoRw>
 // *
 
-@function escape-svg($string) {
+@function escape-svg($string, $escaped: null) {
+	@if ($escaped == null) {
+		$escaped: if(
+			variable-exists(escaped-characters),
+			$escaped-characters,
+			$cadmin-escaped-characters
+		);
+	}
+
 	@if str-index($string, 'data:image/svg+xml') {
-		@each $char, $encoded in $escaped-characters {
+		@each $char, $encoded in $escaped {
 			$string: str-replace($string, $char, $encoded);
 		}
 	}

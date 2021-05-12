@@ -1,0 +1,442 @@
+$cadmin-dropdown-bg: $cadmin-white !default;
+$cadmin-dropdown-border-color: $cadmin-gray-300 !default;
+$cadmin-dropdown-border-style: solid !default;
+$cadmin-dropdown-border-width: 0 !default;
+
+$cadmin-dropdown-border-radius: $cadmin-border-radius !default;
+$cadmin-dropdown-inner-border-radius: $cadmin-dropdown-border-radius -$cadmin-dropdown-border-width !default;
+
+$cadmin-dropdown-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3) !default;
+$cadmin-dropdown-color: $cadmin-body-color !default;
+$cadmin-dropdown-font-size: 14px !default; // 14px
+$cadmin-dropdown-max-height: 500px !default;
+$cadmin-dropdown-max-width: 240px !default;
+$cadmin-dropdown-min-height: 40px !default;
+$cadmin-dropdown-min-width: 240px !default;
+$cadmin-dropdown-padding-y: 6px !default; // 6px
+
+$cadmin-dropdown-max-height-mobile: 295px !default;
+$cadmin-dropdown-max-width-mobile: 230px !default;
+
+$cadmin-dropdown-spacer: 5px !default; // 5px
+
+$cadmin-dropdown-divider-bg: $cadmin-dropdown-border-color !default;
+$cadmin-dropdown-divider-margin-y: $cadmin-spacer / 2 !default;
+
+$cadmin-dropdown-full-wide-header-spacer-y: 20px !default;
+
+$cadmin-dropdown-wide-width: 500px !default;
+
+$cadmin-dropdown-font-size: null !default;
+$cadmin-dropdown-font-size-mobile: null !default;
+
+// Dropdown Item
+
+$cadmin-dropdown-item-padding-x: 20px !default; // 20px
+$cadmin-dropdown-item-padding-y: 8px !default; // 8px
+
+$cadmin-dropdown-item-disabled-cursor: $cadmin-disabled-cursor !default;
+
+$cadmin-dropdown-item-indicator-size: 16px !default;
+$cadmin-dropdown-item-indicator-spacer-x: 16px !default;
+
+// Dropdown Link
+
+$cadmin-dropdown-link-color: $cadmin-gray-600 !default;
+$cadmin-dropdown-link-font-weight: $cadmin-font-weight-normal !default;
+
+$cadmin-dropdown-link-hover-bg: lighten(
+	$cadmin-component-active-bg,
+	44.9
+) !default;
+$cadmin-dropdown-link-hover-color: $cadmin-gray-900 !default;
+
+$cadmin-dropdown-link-active-bg: $cadmin-dropdown-link-hover-bg !default;
+$cadmin-dropdown-link-active-color: $cadmin-dropdown-link-hover-color !default;
+$cadmin-dropdown-link-active-font-weight: $cadmin-font-weight-semi-bold !default;
+
+$cadmin-dropdown-link-disabled-color: $cadmin-gray-500 !default;
+
+// Dropdown Header
+
+$cadmin-dropdown-header-color: $cadmin-gray-900 !default;
+$cadmin-dropdown-header-font-size: 14px !default; // 14px
+$cadmin-dropdown-header-margin-bottom: null !default;
+$cadmin-dropdown-header-margin-top: 10px !default; // 10px
+$cadmin-dropdown-header-padding-x: $cadmin-dropdown-item-padding-x !default;
+$cadmin-dropdown-header-padding-y: $cadmin-dropdown-padding-y !default;
+$cadmin-dropdown-header-text-transform: null !default;
+
+$cadmin-dropdown-header-font-size-mobile: null !default;
+
+// Dropdown Subheader
+
+$cadmin-dropdown-subheader-color: $cadmin-dropdown-header-color !default;
+$cadmin-dropdown-subheader-font-size: 12px !default; // 12px
+$cadmin-dropdown-subheader-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-dropdown-subheader-margin-bottom: null !default;
+$cadmin-dropdown-subheader-margin-top: 10px !default; // 10px
+$cadmin-dropdown-subheader-padding-x: $cadmin-dropdown-header-padding-x !default;
+$cadmin-dropdown-subheader-padding-y: $cadmin-dropdown-header-padding-y !default;
+$cadmin-dropdown-subheader-text-transform: uppercase !default;
+
+$cadmin-dropdown-caption-color: $cadmin-gray-600 !default;
+$cadmin-dropdown-caption-font-size: 14px !default; // 14px
+$cadmin-dropdown-caption-font-weight: null !default;
+
+// Dropdown Inline Scroller
+
+$cadmin-dropdown-inline-scroller-max-height: 200px !default;
+$cadmin-dropdown-inline-scroller-max-height-mobile: none !default;
+
+// Dropdown Item
+
+$cadmin-dropdown-item-disabled-cursor: $cadmin-disabled-cursor !default;
+
+// `background-color`, `border-width`, `text-align` for `<button>`s
+
+$cadmin-dropdown-item-base: () !default;
+$cadmin-dropdown-item-base: map-deep-merge(
+	(
+		background-color: transparent,
+		border-radius: 0,
+		border-width: 0,
+		clear: both,
+		color: $cadmin-dropdown-link-color,
+		display: block,
+		font-size: inherit,
+		font-weight: $cadmin-font-weight-normal,
+		overflow: hidden,
+		padding-bottom: $cadmin-dropdown-item-padding-y,
+		padding-left: $cadmin-dropdown-item-padding-x,
+		padding-right: $cadmin-dropdown-item-padding-x,
+		padding-top: $cadmin-dropdown-item-padding-y,
+		position: relative,
+		text-align: inherit,
+		transition: none,
+		white-space: normal,
+		width: 100%,
+		word-wrap: break-word,
+		hover: (
+			background-color: $cadmin-dropdown-link-hover-bg,
+			color: $cadmin-dropdown-link-hover-color,
+			text-decoration: none,
+		),
+		focus: (
+			background-color: $cadmin-dropdown-link-hover-bg,
+			box-shadow: $cadmin-component-focus-inset-box-shadow,
+			color: $cadmin-dropdown-link-hover-color,
+			outline: 0,
+			text-decoration: none,
+		),
+		active: (
+			background-color: $cadmin-dropdown-link-active-bg,
+			color: $cadmin-dropdown-link-active-color,
+			text-decoration: none,
+		),
+		active-class-font-weight: $cadmin-dropdown-link-active-font-weight,
+		active-class-c-kbd-inline: (
+			color: $cadmin-dropdown-link-active-color,
+		),
+		disabled: (
+			background-color: transparent,
+			box-shadow: none,
+			color: $cadmin-dropdown-link-disabled-color,
+			cursor: $cadmin-dropdown-item-disabled-cursor,
+			opacity: 1,
+			outline: 0,
+		),
+		disabled-active-pointer-events: none,
+		disabled-c-kbd-inline: (
+			color: $cadmin-dropdown-link-disabled-color,
+		),
+		c-kbd-inline: (
+			color: $cadmin-gray-500,
+			line-height: $cadmin-dropdown-font-size * $cadmin-line-height-base,
+		),
+	),
+	$cadmin-dropdown-item-base
+);
+
+// Dropdown Item Indicator
+
+$cadmin-dropdown-item-indicator-size: 16px !default;
+$cadmin-dropdown-item-indicator-spacer-x: 16px !default;
+
+$cadmin-dropdown-item-indicator-start: () !default;
+$cadmin-dropdown-item-indicator-start: map-deep-merge(
+	(
+		align-items: center,
+		color: inherit,
+		display: inline-flex,
+		height: $cadmin-dropdown-item-indicator-size,
+		justify-content: center,
+		left: $cadmin-dropdown-item-padding-x,
+		position: absolute,
+		right: auto,
+		top:
+			calc(
+				#{$cadmin-dropdown-item-padding-y} - ((
+								#{$cadmin-dropdown-item-indicator-size} - (1em *
+											#{$cadmin-line-height-base})
+							) / 2)
+			),
+		width: $cadmin-dropdown-item-indicator-size,
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$cadmin-dropdown-item-indicator-start
+);
+
+$cadmin-dropdown-item-indicator-text-start: () !default;
+$cadmin-dropdown-item-indicator-text-start: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		padding-left: $cadmin-dropdown-item-indicator-size +
+			$cadmin-dropdown-item-indicator-spacer-x,
+		text-decoration: inherit,
+		width: 100%,
+		hover: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+		focus: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+	),
+	$cadmin-dropdown-item-indicator-text-start
+);
+
+$cadmin-dropdown-item-indicator-end: () !default;
+$cadmin-dropdown-item-indicator-end: map-deep-merge(
+	(
+		align-items: center,
+		color: inherit,
+		display: inline-flex,
+		height: $cadmin-dropdown-item-indicator-size,
+		justify-content: center,
+		left: auto,
+		position: absolute,
+		right: $cadmin-dropdown-item-padding-x,
+		top:
+			calc(
+				#{$cadmin-dropdown-item-padding-y} - ((
+								#{$cadmin-dropdown-item-indicator-size} - (1em *
+											#{$cadmin-line-height-base})
+							) / 2)
+			),
+		width: $cadmin-dropdown-item-indicator-size,
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$cadmin-dropdown-item-indicator-end
+);
+
+$cadmin-dropdown-item-indicator-text-end: () !default;
+$cadmin-dropdown-item-indicator-text-end: map-deep-merge(
+	(
+		color: inherit,
+		display: block,
+		padding-right: $cadmin-dropdown-item-indicator-size +
+			$cadmin-dropdown-item-indicator-spacer-x,
+		text-decoration: inherit,
+		width: 100%,
+		hover: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+		focus: (
+			color: inherit,
+			text-decoration: inherit,
+		),
+	),
+	$cadmin-dropdown-item-indicator-text-end
+);
+
+// Dropdown Item
+
+$cadmin-dropdown-item-base: () !default;
+$cadmin-dropdown-item-base: map-deep-merge(
+	(
+		background-color: transparent,
+		border-radius: 0,
+		border-width: 0,
+		clear: both,
+		color: $cadmin-dropdown-link-color,
+		cursor: $cadmin-link-cursor,
+		display: block,
+		font-weight: $cadmin-font-weight-normal,
+		overflow: hidden,
+		padding-bottom: $cadmin-dropdown-item-padding-y,
+		padding-left: $cadmin-dropdown-item-padding-x,
+		padding-right: $cadmin-dropdown-item-padding-x,
+		padding-top: $cadmin-dropdown-item-padding-y,
+		position: relative,
+		text-align: inherit,
+		transition: none,
+		white-space: normal,
+		width: 100%,
+		word-wrap: break-word,
+		hover: (
+			background-color: $cadmin-dropdown-link-hover-bg,
+			color: $cadmin-dropdown-link-hover-color,
+			text-decoration: none,
+		),
+		focus: (
+			background-color: $cadmin-dropdown-link-hover-bg,
+			color: $cadmin-dropdown-link-hover-color,
+			text-decoration: none,
+		),
+		active: (
+			background-color: $cadmin-dropdown-link-active-bg,
+			color: $cadmin-dropdown-link-active-color,
+			text-decoration: none,
+		),
+		active-class: (
+			font-weight: $cadmin-dropdown-link-active-font-weight,
+			pointer-events: none,
+		),
+		disabled: (
+			background-color: transparent,
+			color: $cadmin-dropdown-link-disabled-color,
+			cursor: $cadmin-dropdown-item-disabled-cursor,
+			opacity: 1,
+			outline: 0,
+		),
+		disabled-active: (
+			pointer-events: none,
+		),
+		disabled-c-kbd-inline: (
+			color: $cadmin-dropdown-link-disabled-color,
+		),
+		c-kbd-inline: (
+			line-height: $cadmin-dropdown-font-size * $cadmin-line-height-base,
+		),
+	),
+	$cadmin-dropdown-item-base
+);
+
+// Dropdown Section
+
+$cadmin-dropdown-section-custom-control: () !default;
+$cadmin-dropdown-section-custom-control: map-deep-merge(
+	(
+		margin-bottom: 0,
+	),
+	$cadmin-dropdown-section-custom-control
+);
+
+$cadmin-dropdown-section-custom-control-label: () !default;
+$cadmin-dropdown-section-custom-control-label: map-deep-merge(
+	(
+		color: $cadmin-secondary,
+	),
+	$cadmin-dropdown-section-custom-control-label
+);
+
+$cadmin-dropdown-section-custom-control-label-text: () !default;
+$cadmin-dropdown-section-custom-control-label-text: map-deep-merge(
+	(
+		padding-left: 16px,
+	),
+	$cadmin-dropdown-section-custom-control-label-text
+);
+
+$cadmin-dropdown-section-active-custom-control-label: () !default;
+$cadmin-dropdown-section-active-custom-control-label: map-deep-merge(
+	(
+		color: $cadmin-gray-900,
+	),
+	$cadmin-dropdown-section-active-custom-control-label
+);
+
+// Dropdown Footer
+
+$cadmin-dropdown-footer: () !default;
+$cadmin-dropdown-footer: map-merge(
+	(
+		box-shadow: -1px -2px 3px -3px rgba(0, 0, 0, 0.5),
+		padding: 8px $cadmin-dropdown-item-padding-x 0,
+		position: relative,
+	),
+	$cadmin-dropdown-footer
+);
+
+// Dropdown Menu Width
+
+$cadmin-dropdown-menu-width-full: () !default;
+$cadmin-dropdown-menu-width-full: map-merge(
+	(
+		left: 12px !important,
+		right: 12px !important,
+		max-width: none,
+		min-width: 0,
+		width: calc(100% - 24px),
+	),
+	$cadmin-dropdown-menu-width-full
+);
+
+$cadmin-dropdown-menu-width-sm: () !default;
+$cadmin-dropdown-menu-width-sm: map-merge(
+	(
+		max-width: none,
+		min-width: 0,
+		width: 500px,
+	),
+	$cadmin-dropdown-menu-width-sm
+);
+
+$cadmin-dropdown-menu-width-sm-sm-down: () !default;
+$cadmin-dropdown-menu-width-sm-sm-down: map-merge(
+	(
+		left: 12px !important,
+		right: 12px !important,
+		width: calc(100% - 24px),
+	),
+	$cadmin-dropdown-menu-width-sm-sm-down
+);
+
+// Dropdown Menu Height
+
+$cadmin-dropdown-menu-height-auto: () !default;
+$cadmin-dropdown-menu-height-auto: map-merge(
+	(
+		height: auto,
+		max-height: none,
+		min-height: 0,
+	),
+	$cadmin-dropdown-menu-height-auto
+);
+
+// Autocomplete Dropdown Menu
+
+$cadmin-autocomplete-dropdown-menu: () !default;
+$cadmin-autocomplete-dropdown-menu: map-deep-merge(
+	(
+		max-height: 160px,
+		max-width: none,
+		width: 100%,
+	),
+	$cadmin-autocomplete-dropdown-menu
+);
+
+// Dropdown Action
+
+$cadmin-dropdown-action-toggle-border-radius: $cadmin-border-radius !default;
+$cadmin-dropdown-action-toggle-font-size: 16px !default; // 16px
+$cadmin-dropdown-action-toggle-size: $cadmin-btn-monospaced-size-sm !default;
+
+$cadmin-dropdown-action-toggle-disabled-cursor: $cadmin-disabled-cursor !default;
+$cadmin-dropdown-action-toggle-disabled-opacity: $cadmin-btn-disabled-opacity !default;
+
+// Alert inside Dropdowns
+
+$cadmin-dropdown-alert-font-size: null !default;
+$cadmin-dropdown-alert-line-height: normal !default;
+$cadmin-dropdown-alert-margin: ($cadmin-spacer / 2) !default;
+$cadmin-dropdown-alert-padding-x: $cadmin-dropdown-header-padding-x !default;
+$cadmin-dropdown-alert-padding-y: $cadmin-dropdown-header-padding-y !default;

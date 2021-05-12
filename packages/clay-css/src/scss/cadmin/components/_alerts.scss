@@ -1,0 +1,277 @@
+.alert {
+	border-color: transparent;
+	border-style: $cadmin-alert-border-style;
+	border-width: $cadmin-alert-border-width;
+
+	@include border-radius($cadmin-alert-border-radius);
+
+	display: block;
+	font-size: $cadmin-alert-font-size;
+	margin-bottom: $cadmin-alert-margin-bottom;
+	padding: $cadmin-alert-padding-y $cadmin-alert-padding-x;
+	position: relative;
+	word-wrap: break-word;
+
+	.alert-btn {
+		@include clay-button-variant($cadmin-alert-btn);
+	}
+
+	.btn-group {
+		@include clay-container($cadmin-alert-btn-group);
+	}
+
+	.btn-group-item {
+		@include clay-container($cadmin-alert-btn-group-item);
+	}
+
+	.close {
+		@include clay-close($cadmin-alert-close);
+	}
+
+	.lead {
+		font-size: $cadmin-alert-lead-font-size;
+		font-weight: $cadmin-alert-lead-font-weight;
+		margin-right: $cadmin-alert-lead-spacer-x;
+	}
+
+	.component-title {
+		@include clay-text-typography($cadmin-alert-title);
+	}
+
+	.component-subtitle {
+		@include clay-text-typography($cadmin-alert-subtitle);
+	}
+}
+
+.alert-heading {
+	// Specified to prevent conflicts of changing $cadmin-headings-color
+
+	color: inherit;
+}
+
+.alert-footer {
+	@include clay-container($cadmin-alert-footer);
+}
+
+.alert-link,
+.alert-link.btn-unstyled {
+	font-weight: $cadmin-alert-link-font-weight;
+	text-decoration: $cadmin-alert-link-decoration;
+
+	&:hover,
+	&:focus {
+		text-decoration: $cadmin-alert-link-hover-decoration;
+	}
+}
+
+.alert-indicator {
+	font-size: $cadmin-alert-indicator-font-size;
+
+	+ .lead {
+		margin-left: $cadmin-alert-lead-spacer-x;
+	}
+}
+
+// Alert Dismissible
+
+.alert-dismissible {
+	padding-bottom: $cadmin-alert-dismissible-padding-bottom;
+	padding-left: $cadmin-alert-dismissible-padding-left;
+	padding-right: $cadmin-alert-dismissible-padding-right;
+	padding-top: $cadmin-alert-dismissible-padding-top;
+}
+
+// Alert Fluid
+
+.alert-fluid {
+	@include clay-css($cadmin-alert-fluid);
+
+	&.alert-dismissible {
+		.container,
+		.container-fluid {
+			@include clay-css($cadmin-alert-fluid-dismissible-container);
+		}
+	}
+
+	.container,
+	.container-fluid {
+		@include clay-css($cadmin-alert-fluid-container);
+	}
+
+	.close {
+		right: calc(
+			#{$cadmin-grid-gutter-width / 2} + #{$cadmin-nav-btn-margin-x}
+		);
+	}
+}
+
+// Alert Notifications
+
+.alert-container,
+&.alert-container {
+	height: 0;
+	position: relative;
+}
+
+.alert-notifications {
+	.alert {
+		@include clay-css($cadmin-alert-notification);
+
+		@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+			@include clay-css($cadmin-alert-notification-sm-down);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.alert-fluid {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+}
+
+.alert-notifications-absolute {
+	bottom: $cadmin-alert-notifications-absolute-bottom;
+	height: 0;
+	left: $cadmin-alert-notifications-absolute-left;
+	position: absolute;
+	right: $cadmin-alert-notifications-absolute-right;
+	top: $cadmin-alert-notifications-absolute-top;
+	z-index: $cadmin-zindex-alert-notifications;
+
+	@include clay-scale-component {
+		bottom: $cadmin-alert-notifications-absolute-bottom-mobile;
+		left: $cadmin-alert-notifications-absolute-left-mobile;
+		right: $cadmin-alert-notifications-absolute-right-mobile;
+		top: $cadmin-alert-notifications-absolute-top-mobile;
+	}
+}
+
+.alert-notifications-fixed {
+	bottom: $cadmin-alert-notifications-fixed-bottom;
+	left: $cadmin-alert-notifications-fixed-left;
+	position: fixed;
+	right: $cadmin-alert-notifications-fixed-right;
+	top: $cadmin-alert-notifications-fixed-top;
+	z-index: $cadmin-zindex-alert-notifications;
+
+	@include clay-scale-component {
+		bottom: $cadmin-alert-notifications-fixed-bottom-mobile;
+		left: $cadmin-alert-notifications-fixed-left-mobile;
+		right: $cadmin-alert-notifications-fixed-right-mobile;
+		top: $cadmin-alert-notifications-fixed-top-mobile;
+	}
+}
+
+// Alert List
+
+.alert-list {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	.close {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+// Alert in Modal
+
+.modal-body {
+	.alert {
+		.close {
+			right: $cadmin-modal-inner-padding;
+		}
+	}
+
+	.alert-list {
+		.alert-fluid:last-child {
+			margin-bottom: -$cadmin-alert-fluid-border-bottom-width;
+		}
+	}
+}
+
+// Alert Autofit Row
+
+.autofit-row.alert-autofit-row {
+	@include clay-autofit-row($cadmin-alert-autofit-row);
+}
+
+// Alert Feedback
+
+.alert-feedback.alert {
+	@include clay-css($cadmin-alert-feedback);
+
+	.alert-autofit-row,
+	.autofit-row {
+		display: inline;
+		margin-left: 0;
+		margin-right: 0;
+
+		> .autofit-col {
+			display: inline;
+			padding-left: 0;
+			padding-right: 0.25em;
+
+			> .autofit-section {
+				display: inline;
+			}
+		}
+	}
+
+	.close {
+		@include clay-close($cadmin-alert-feedback-close);
+	}
+
+	.lead {
+		margin-right: 0;
+
+		+ .component-text {
+			margin-left: 0.25em;
+		}
+	}
+}
+
+// Alert Variants
+
+@each $cadmin-color, $cadmin-value in $cadmin-alert-palette {
+	.alert-#{$cadmin-color} {
+		background-color: map-get($cadmin-value, bg);
+		border-color: map-get($cadmin-value, border-color);
+		color: map-get($cadmin-value, color);
+
+		hr {
+			border-top-color: darken(map-get($cadmin-value, border-color), 5%);
+		}
+
+		.alert-btn {
+			@include clay-button-variant(map-get($cadmin-value, alert-btn));
+		}
+
+		.close {
+			color: map-get($cadmin-value, close-color);
+
+			&:hover,
+			&:focus {
+				color: map-get($cadmin-value, close-hover-color);
+			}
+		}
+
+		.alert-link {
+			color: map-get($cadmin-value, link-color);
+
+			&:hover,
+			&:focus {
+				color: map-get($cadmin-value, link-hover-color);
+			}
+		}
+
+		.lead {
+			color: map-get($cadmin-value, lead-color);
+		}
+	}
+}

@@ -1,0 +1,292 @@
+$cadmin-modal-backdrop-bg: $cadmin-gray-800 !default;
+$cadmin-modal-backdrop-opacity: 0.8 !default;
+
+// Modal Dialog
+
+$cadmin-modal-dialog-margin: 8px !default;
+$cadmin-modal-dialog-margin-y-sm-up: 28px !default;
+
+$cadmin-modal-fade-transform: translate(0, -50px) !default;
+$cadmin-modal-scale-transform: scale(1.02) !default;
+$cadmin-modal-show-transform: none !default;
+$cadmin-modal-transition: transform 0.3s ease-out !default;
+
+// Modal Content
+
+$cadmin-modal-content-bg: $cadmin-white !default;
+$cadmin-modal-content-color: null !default;
+$cadmin-modal-content-border-color: transparent !default;
+$cadmin-modal-content-border-width: $cadmin-border-width !default;
+
+$cadmin-modal-content-border-radius: $cadmin-border-radius-lg !default;
+$cadmin-modal-content-inner-border-radius: $cadmin-modal-content-border-radius -
+	$cadmin-modal-content-border-width !default;
+
+$cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+$cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;
+
+// Modal Header
+
+$cadmin-modal-header-bg: null !default;
+$cadmin-modal-header-border-color: $cadmin-gray-300 !default;
+$cadmin-modal-header-border-width: $cadmin-modal-content-border-width !default;
+$cadmin-modal-header-color: null !default;
+$cadmin-modal-header-height: 64px !default;
+$cadmin-modal-header-padding-y: 24px !default;
+$cadmin-modal-header-padding-x: 24px !default;
+
+$cadmin-modal-header-padding: 24px !default; // 24px
+
+$cadmin-modal-header-height-mobile: null !default;
+
+// Modal Body
+
+$cadmin-modal-inner-padding: 24px !default; // 24px
+
+$cadmin-modal-body-bg: null !default;
+$cadmin-modal-body-color: null !default;
+
+// Modal Footer
+
+$cadmin-modal-footer-margin-between: 8px !default;
+
+$cadmin-modal-footer-bg: null !default;
+$cadmin-modal-footer-border-color: $cadmin-modal-header-border-color !default;
+$cadmin-modal-footer-border-width: $cadmin-modal-header-border-width !default;
+
+$cadmin-modal-footer-box-shadow: null !default;
+$cadmin-modal-footer-color: null !default;
+$cadmin-modal-footer-height: null !default;
+$cadmin-modal-footer-padding-x: 12px !default;
+$cadmin-modal-footer-padding-y: 12px !default;
+
+$cadmin-modal-footer-height-mobile: null !default;
+
+$cadmin-modal-item-padding-x: null !default;
+$cadmin-modal-item-padding-y: null !default;
+
+$cadmin-modal-item-group: () !default;
+$cadmin-modal-item-group: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		flex-wrap: wrap,
+		min-width: 48px,
+		padding-left: 8px,
+		padding-right: 8px,
+		width: 100%,
+	),
+	$cadmin-modal-item-group
+);
+
+$cadmin-modal-item-group-first-child: () !default;
+$cadmin-modal-item-group-first-child: map-deep-merge(
+	(
+		padding-left: 0,
+	),
+	$cadmin-modal-item-group-first-child
+);
+
+$cadmin-modal-item-group-last-child: () !default;
+$cadmin-modal-item-group-last-child: map-deep-merge(
+	(
+		padding-right: 0,
+	),
+	$cadmin-modal-item-group-last-child
+);
+
+$cadmin-modal-item-group-only-child: () !default;
+$cadmin-modal-item-group-only-child: map-deep-merge(
+	(
+		padding-left: 0,
+		padding-right: 0,
+	),
+	$cadmin-modal-item-group-only-child
+);
+
+$cadmin-modal-item: () !default;
+$cadmin-modal-item: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		flex-grow: 1,
+		flex-shrink: 1,
+		max-width: 100%,
+		min-height: 0,
+		min-width: 50px,
+		padding: 0,
+		position: relative,
+		word-wrap: break-word,
+	),
+	$cadmin-modal-item
+);
+
+$cadmin-modal-item-shrink: () !default;
+$cadmin-modal-item-shrink: map-deep-merge(
+	(
+		flex-grow: 0,
+	),
+	$cadmin-modal-item-shrink
+);
+
+// Modal Title
+
+$cadmin-modal-title-font-size: 20px !default; // 20px
+$cadmin-modal-title-font-weight: $cadmin-font-weight-bold !default;
+$cadmin-modal-title-line-height: $cadmin-line-height-base !default;
+$cadmin-modal-title-text-align: null !default;
+$cadmin-modal-title-font-size-mobile: null !default;
+
+$cadmin-modal-title-indicator-font-size: 14px !default;
+$cadmin-modal-title-indicator-spacer-x: 8px !default;
+
+// Modal Subtitle
+
+$cadmin-modal-subtitle: () !default;
+$cadmin-modal-subtitle: map-deep-merge(
+	(
+		display: inline-block,
+	),
+	$cadmin-modal-subtitle
+);
+
+$cadmin-modal-subtitle-divider: () !default;
+$cadmin-modal-subtitle-divider: map-deep-merge(
+	(
+		display: inline-block,
+		margin-left: 4px,
+		margin-right: 4px,
+	),
+	$cadmin-modal-subtitle-divider
+);
+
+$cadmin-modal-subtitle-strong: () !default;
+
+// Modal Close
+
+$cadmin-modal-close-spacer-x: 5px !default;
+
+// Modal Full Screen
+
+$cadmin-modal-full-screen-spacer-x: 45px !default;
+$cadmin-modal-full-screen-spacer-y: $cadmin-modal-full-screen-spacer-x !default;
+
+// Modal Width
+
+$cadmin-modal-xl: 1140px !default;
+$cadmin-modal-lg: 896px !default;
+$cadmin-modal-md: 600px !default;
+$cadmin-modal-sm: 320px !default;
+
+// Modal Height
+
+$cadmin-modal-height-sm: 250px !default;
+$cadmin-modal-height-md: 450px !default;
+$cadmin-modal-height-lg: 650px !default;
+$cadmin-modal-height-xl: 800px !default;
+
+$cadmin-modal-height-full-modal-content: () !default;
+$cadmin-modal-height-full-modal-content: map-merge(
+	(
+		position: absolute,
+		bottom: $cadmin-modal-dialog-margin,
+		left: $cadmin-modal-dialog-margin,
+		right: $cadmin-modal-dialog-margin,
+		top: $cadmin-modal-dialog-margin,
+	),
+	$cadmin-modal-height-full-modal-content
+);
+
+$cadmin-modal-height-full-modal-content-sm-up: () !default;
+$cadmin-modal-height-full-modal-content-sm-up: map-merge(
+	(
+		bottom: $cadmin-modal-dialog-margin-y-sm-up,
+		left: auto,
+		right: auto,
+		top: $cadmin-modal-dialog-margin-y-sm-up,
+	),
+	$cadmin-modal-height-full-modal-content-sm-up
+);
+
+// Modal Success
+
+$cadmin-modal-success: () !default;
+$cadmin-modal-success: map-deep-merge(
+	(
+		header-bg: $cadmin-success-l2,
+		header-border-color: $cadmin-success-l1,
+		header-color: $cadmin-success,
+		header-close: (
+			color: $cadmin-success,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-success
+);
+
+// Modal Info
+
+$cadmin-modal-info: () !default;
+$cadmin-modal-info: map-deep-merge(
+	(
+		header-bg: $cadmin-info-l2,
+		header-border-color: $cadmin-info-l1,
+		header-color: $cadmin-info,
+		header-close: (
+			color: $cadmin-info,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-info
+);
+
+// Modal Warning
+
+$cadmin-modal-warning: () !default;
+$cadmin-modal-warning: map-deep-merge(
+	(
+		header-bg: $cadmin-warning-l2,
+		header-border-color: $cadmin-warning-l1,
+		header-color: $cadmin-warning,
+		header-close: (
+			color: $cadmin-warning,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-warning
+);
+
+// Modal Danger
+
+$cadmin-modal-danger: () !default;
+$cadmin-modal-danger: map-deep-merge(
+	(
+		header-bg: $cadmin-danger-l2,
+		header-border-color: $cadmin-danger-l1,
+		header-color: $cadmin-danger,
+		header-close: (
+			color: $cadmin-danger,
+			hover-color: inherit,
+			focus-color: inherit,
+			disabled-color: inherit,
+		),
+	),
+	$cadmin-modal-danger
+);
+
+$cadmin-modal-palette: () !default;
+$cadmin-modal-palette: map-deep-merge(
+	(
+		success: $cadmin-modal-success,
+		info: $cadmin-modal-info,
+		warning: $cadmin-modal-warning,
+		danger: $cadmin-modal-danger,
+	),
+	$cadmin-modal-palette
+);

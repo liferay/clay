@@ -1,0 +1,67 @@
+$cadmin-navigation-bar-size: () !default;
+$cadmin-navigation-bar-size: map-deep-merge(
+	(
+		scaling-navbar: false,
+		border-bottom-width: 1px,
+		font-size: $cadmin-navbar-font-size,
+		height: 48px,
+		padding-x: 0,
+		padding-y: 0,
+		link-padding-x: 16px,
+		nav-item-dropdown-margin-top: 0,
+		active-border-bottom-width: 4px,
+		active-border-offset-bottom: -8.5px,
+		link-height-mobile: 32px,
+		collapse-dropdown-item-padding-x-mobile: 16px,
+		collapse-dropdown-item-padding-y-mobile: 13px,
+		toggler-link-height: 32px,
+		toggler-link-margin-y: 7.5px,
+		toggler-link-padding-y: 0,
+	),
+	$cadmin-navigation-bar-size
+);
+
+$cadmin-navigation-bar-base: () !default;
+$cadmin-navigation-bar-base: map-deep-merge(
+	(
+		link-border-radius: 0,
+		link-outline: 0,
+		link-focus-box-shadow: $cadmin-btn-focus-box-shadow,
+		link-disabled-box-shadow: none,
+	),
+	$cadmin-navigation-bar-base
+);
+
+$cadmin-navigation-bar-light: () !default;
+$cadmin-navigation-bar-light: map-deep-merge(
+	(
+		bg: $cadmin-white,
+		border-color: $cadmin-gray-200,
+		link-color: $cadmin-navbar-light-color,
+		link-font-weight: $cadmin-font-weight-semi-bold,
+		link-hover-color: $cadmin-gray-900,
+		link-focus-color: $cadmin-gray-900,
+		link-active-color: $cadmin-navbar-light-active-color,
+		link-disabled-color: $cadmin-gray-600,
+		link-disabled-opacity: $cadmin-btn-disabled-opacity,
+	),
+	$cadmin-navigation-bar-light
+);
+
+$cadmin-navigation-bar-secondary: () !default;
+$cadmin-navigation-bar-secondary: map-deep-merge(
+	(
+		bg: $cadmin-secondary-d1,
+		color: $cadmin-white,
+		link-color: $cadmin-secondary-l2,
+		link-font-weight: $cadmin-font-weight-semi-bold,
+		link-hover-color: $cadmin-white,
+		link-focus-color: $cadmin-white,
+		link-active-color: $cadmin-white,
+		link-disabled-color: $cadmin-gray-400,
+		link-disabled-opacity: $cadmin-btn-disabled-opacity,
+		brand-color: rgba(255, 255, 255, 0.9),
+		brand-hover-color: rgba(255, 255, 255, 0.9),
+	),
+	$cadmin-navigation-bar-secondary
+);

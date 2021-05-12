@@ -1,0 +1,407 @@
+/* REUSE-Snippet-Begin
+ * SPDX-License-Identifier: MIT
+ * SPDX-FileCopyrightText: © 2016 Nicolas Gallagher and Jonathan Neal <https://github.com/necolas/normalize.css>
+ */
+
+html#{$cadmin-selector} {
+	.cadmin {
+		a,
+		abbr,
+		address,
+		area,
+		article,
+		aside,
+		audio,
+		b,
+		blockquote,
+		button,
+		caption,
+		cite,
+		code,
+		data,
+		datalist,
+		dd,
+		del,
+		details,
+		div,
+		dl,
+		dt,
+		em,
+		fieldset,
+		figcaption,
+		figure,
+		footer,
+		form,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		header,
+		hr,
+		i,
+		img,
+		input,
+		ins,
+		kbd,
+		label,
+		legend,
+		li,
+		main,
+		mark,
+		nav,
+		optgroup,
+		option,
+		p,
+		pre,
+		progress,
+		q,
+		s,
+		samp,
+		section,
+		select,
+		small,
+		span,
+		strong,
+		sub,
+		sup,
+		svg,
+		table,
+		tbody,
+		td,
+		textarea,
+		tfoot,
+		th,
+		thead,
+		tr,
+		ul,
+		var {
+			@extend %cadmin-reset !optional;
+		}
+
+		// Shim for "new" HTML5 structural elements to display correctly (IE11)
+
+		main {
+			display: block;
+		}
+
+		// Reset margins on paragraphs
+		// Similarly, the top margin on `<p>`s get reset. However, we also reset the
+		// bottom margin to use `rem` units instead of `em`.
+
+		p {
+			margin-bottom: $cadmin-paragraph-margin-bottom;
+			margin-top: 0;
+		}
+
+		abbr[title],
+		abbr[data-original-title] {
+			cursor: help;
+
+			// Add `text-decoration: underline` in IE and Safari, `underline dotted` not supported.
+
+			text-decoration: underline;
+			text-decoration: underline dotted;
+
+			// Prevent underline from disappearing on letters like `g`, `j`, `y`.
+
+			text-decoration-skip-ink: none;
+		}
+
+		address {
+			font-style: normal;
+			margin-bottom: 16px;
+		}
+
+		ol,
+		ul,
+		dl {
+			margin-bottom: 16px;
+			margin-top: 0;
+			padding-left: 40px;
+		}
+
+		ol ol,
+		ul ul,
+		ol ul,
+		ul ol {
+			margin-bottom: 0;
+		}
+
+		dt {
+			font-weight: $cadmin-dt-font-weight;
+		}
+
+		dd {
+			margin-bottom: 8px;
+
+			// Undo browser default
+
+			margin-left: 0;
+		}
+
+		blockquote {
+			margin: 0 0 16px;
+		}
+
+		b,
+		strong {
+			// Add the correct font weight in Chrome, Edge, and Safari
+
+			font-weight: $cadmin-font-weight-bolder;
+		}
+
+		sub,
+		sup {
+			// Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+
+			line-height: 0;
+
+			// Opinionated: Fixes alignment within multi-line text displayed oddly in all browsers
+
+			position: relative;
+			vertical-align: baseline;
+		}
+
+		sub {
+			bottom: -0.25em;
+		}
+
+		sup {
+			top: -0.5em;
+		}
+
+		a {
+			color: $cadmin-link-color;
+			cursor: $cadmin-link-cursor;
+			text-decoration: $cadmin-link-decoration;
+
+			&:hover {
+				color: $cadmin-link-hover-color;
+				text-decoration: $cadmin-link-hover-decoration;
+			}
+		}
+
+		[tabindex^='-'] {
+			outline: 0;
+		}
+
+		// Code
+
+		pre,
+		code,
+		kbd,
+		samp {
+			font-family: $cadmin-font-family-monospace;
+		}
+
+		pre {
+			// Reset browser default of `1em` to use `rem`s
+
+			margin-bottom: 16px;
+
+			// Remove browser default top margin
+
+			margin-top: 0;
+
+			// Don't allow content to break outside
+
+			overflow: auto;
+		}
+
+		// Figures
+
+		figure {
+			margin: 0 0 16px;
+		}
+
+		// Images and content
+
+		img {
+			vertical-align: middle;
+		}
+
+		svg {
+			// Workaround for the SVG overflow bug in IE10/11 is still required.
+			// See https://github.com/twbs/bootstrap/issues/26878
+
+			overflow: hidden;
+			vertical-align: middle;
+		}
+
+		// Forms
+
+		label {
+			// Allow labels to use `margin` for spacing. This is the reason we have `.form-control-label` and `.form-control-label-text pattern`.
+
+			display: inline-block;
+			margin-bottom: $cadmin-label-margin-bottom;
+		}
+
+		input,
+		button,
+		select,
+		optgroup,
+		textarea {
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+
+			// Remove the margin in Safari
+
+			margin: 0;
+		}
+
+		button,
+		input {
+			// Show the overflow in Edge
+
+			overflow: visible;
+		}
+
+		// Remove the inheritance of word-wrap in Safari.
+		// Details at https://github.com/twbs/bootstrap/issues/24990
+
+		select {
+			word-wrap: normal;
+		}
+
+		// `[type="button"] { -webkit-appearance: button; }` prevent WebKit bug where `-webkit-appearance` destroys native `audio` and `video` controls in Android 4 and correct the inability to style clickable types in iOS and Safari
+
+		button,
+		[type='button'],
+		[type='reset'],
+		[type='submit'] {
+			@include clay-css($cadmin-c-button-base);
+		}
+
+		// Remove inner border from Firefox, but don't restore the outline like Normalize.
+
+		button::-moz-focus-inner,
+		[type='button']::-moz-focus-inner,
+		[type='reset']::-moz-focus-inner,
+		[type='submit']::-moz-focus-inner {
+			border-style: none;
+		}
+
+		input[type='date'],
+		input[type='time'],
+		input[type='datetime-local'],
+		input[type='month'] {
+			// Remove the default appearance of temporal inputs to avoid a Mobile Safari
+			// bug where setting a custom line-height prevents text from being vertically
+			// centered within the input.
+			// See https://bugs.webkit.org/show_bug.cgi?id=139848
+			// and https://github.com/twbs/bootstrap/issues/11266
+
+			-webkit-appearance: listbox;
+		}
+
+		textarea {
+			// Remove the default vertical scrollbar in IE
+
+			overflow: auto;
+		}
+
+		fieldset {
+			border: 0;
+			margin: 0;
+
+			// Browsers set a default `min-width: min-content;` on fieldsets,
+			// unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+			// So we reset that to ensure fieldsets behave more like a standard block element.
+			// See https://github.com/twbs/bootstrap/issues/12359
+			// and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+
+			min-width: 0;
+
+			// Reset the default outline behavior of fieldsets so they don't affect page layout.
+
+			padding: 0;
+		}
+
+		legend {
+			// Correct the color inheritance from `fieldset` elements in IE
+
+			color: inherit;
+			display: block;
+			font-size: 24px;
+			line-height: inherit;
+			margin-bottom: 8px;
+
+			// Correct the text wrapping in Edge and IE
+
+			max-width: 100%;
+			padding: 0;
+
+			// Correct the text wrapping in Edge and IE
+
+			white-space: normal;
+			width: 100%;
+		}
+
+		progress {
+			// Add the correct vertical alignment in Chrome, Firefox, and Opera
+
+			vertical-align: baseline;
+		}
+
+		// Correct the cursor style of increment and decrement buttons in Chrome
+
+		[type='number']::-webkit-inner-spin-button,
+		[type='number']::-webkit-outer-spin-button {
+			height: auto;
+		}
+
+		[type='search'] {
+			// This overrides the extra rounded corners on search inputs in iOS so that our
+			// `.form-control` class can properly style them. Note that this cannot simply
+			// be added to `.form-control` as it's not specific enough. For details, see
+			// https://github.com/twbs/bootstrap/issues/11586
+			// Correct the outline style in Safari
+
+			outline-offset: -2px;
+			-webkit-appearance: none;
+		}
+
+		// Remove the inner padding in Chrome and Safari on macOS.
+
+		[type='search']::-webkit-search-decoration {
+			-webkit-appearance: none;
+		}
+
+		::-webkit-file-upload-button {
+			// Correct the inability to style clickable types in iOS and Safari
+
+			-webkit-appearance: button;
+
+			// Change font properties to `inherit` in Safari
+
+			font: inherit;
+		}
+
+		output {
+			display: inline-block;
+		}
+
+		summary {
+			// Add the correct display in all browsers
+
+			display: list-item;
+			cursor: pointer;
+		}
+
+		template {
+			// Add the correct display in IE
+
+			display: none;
+		}
+
+		[hidden] {
+			display: none !important;
+		}
+	}
+}
+
+/* REUSE-Snippet-End */

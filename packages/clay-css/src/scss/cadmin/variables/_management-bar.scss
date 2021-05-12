@@ -1,0 +1,78 @@
+$cadmin-management-bar-base: () !default;
+$cadmin-management-bar-base: map-deep-merge(
+	(
+		link-border-radius: $cadmin-border-radius,
+		link-outline: 0,
+		link-transition: box-shadow 0.15s ease-in-out,
+		link-focus-box-shadow: $cadmin-btn-focus-box-shadow,
+		link-disabled-box-shadow: none,
+	),
+	$cadmin-management-bar-base
+);
+
+$cadmin-management-bar-size: () !default;
+$cadmin-management-bar-size: map-deep-merge(
+	(
+		scaling-navbar: true,
+		border-bottom-width: 1px,
+		font-size: $cadmin-navbar-font-size,
+		height: 64px,
+		min-height: 64px,
+		padding-x: 0,
+		padding-y: 0,
+		height-mobile: 48px,
+		min-height-mobile: 48px,
+		btn-monospaced-font-size: 16px,
+		link-height: 32px,
+		link-height-mobile: 32px,
+		link-margin-x: 8px,
+		link-margin-x-mobile: 4px,
+		link-padding-x-mobile: 4px,
+		form-control-height-mobile: 32px,
+		toggler-margin-x: 14px,
+		active-border-bottom-width: 4px,
+		nav-item-dropdown-margin-top: 0,
+	),
+	$cadmin-management-bar-size
+);
+
+$cadmin-management-bar-light: () !default;
+$cadmin-management-bar-light: map-deep-merge(
+	(
+		bg: $cadmin-white,
+		link-color: $cadmin-navbar-light-color,
+		link-font-weight: $cadmin-font-weight-semi-bold,
+		link-hover-color: $cadmin-gray-900,
+		link-hover-bg: rgba($cadmin-gray-900, 0.03),
+		link-focus-color: $cadmin-gray-900,
+		link-focus-bg: rgba($cadmin-gray-900, 0.03),
+		link-active-bg: rgba($cadmin-gray-900, 0.06),
+		link-active-color: $cadmin-navbar-light-active-color,
+		link-disabled-bg: transparent,
+		link-disabled-color: $cadmin-navbar-light-disabled-color,
+		link-disabled-opacity: 1,
+	),
+	$cadmin-management-bar-light
+);
+
+$cadmin-management-bar-primary: () !default;
+$cadmin-management-bar-primary: map-deep-merge(
+	(
+		bg: $cadmin-primary-l3,
+		border-color: $cadmin-primary,
+		color: $cadmin-navbar-light-color,
+		link-border-radius: $cadmin-border-radius,
+		link-color: $cadmin-navbar-light-color,
+		link-font-weight: $cadmin-font-weight-semi-bold,
+		link-hover-color: $cadmin-gray-900,
+		link-hover-bg: rgba($cadmin-gray-900, 0.03),
+		link-focus-color: $cadmin-gray-900,
+		link-focus-bg: rgba($cadmin-gray-900, 0.03),
+		link-active-bg: rgba($cadmin-gray-900, 0.06),
+		link-active-color: $cadmin-navbar-light-active-color,
+		link-disabled-bg: transparent,
+		link-disabled-color: $cadmin-navbar-light-disabled-color,
+		link-disabled-opacity: 1,
+	),
+	$cadmin-management-bar-primary
+);

@@ -1,0 +1,231 @@
+// Menubar Vertical MD
+
+$cadmin-menubar-vertical-expand-md: () !default;
+$cadmin-menubar-vertical-expand-md: map-deep-merge(
+	(
+		max-width: 250px,
+		margin-bottom-mobile: 24px,
+		margin-left-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		margin-right-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		collapse-z-index-mobile:
+			$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile,
+		nav-nested-margins-item-mobile: (
+			margin-left: 0,
+		),
+		toggler-c-inner: (
+			max-width: none,
+		),
+	),
+	$cadmin-menubar-vertical-expand-md
+);
+
+$cadmin-menubar-vertical-transparent-md: () !default;
+$cadmin-menubar-vertical-transparent-md: map-deep-merge(
+	(
+		bg-mobile: $cadmin-white,
+		link-border-radius: 6px,
+		link-border-radius-mobile: 0,
+		link-color: $cadmin-gray-600,
+		link-hover-bg: rgba($cadmin-gray-900, 0.03),
+		link-hover-color: $cadmin-gray-900,
+		link-active-color: $cadmin-gray-900,
+		link-active-font-weight: $cadmin-font-weight-semi-bold,
+		link: (
+			transition: $cadmin-btn-transition,
+			focus-bg: rgba($cadmin-gray-900, 0.03),
+			focus-color: $cadmin-gray-900,
+			focus-box-shadow:
+				map-get($cadmin-dropdown-item-base, focus-box-shadow),
+			focus-outline: map-get($cadmin-dropdown-item-base, focus-outline),
+			active-class: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-primary,
+			),
+			disabled-box-shadow: none,
+			show: (
+				background-color: $cadmin-c-unset,
+				color: $cadmin-gray-900,
+				font-weight: $cadmin-font-weight-semi-bold,
+			),
+		),
+		link-mobile: (
+			transition: none,
+			focus-bg: $cadmin-dropdown-link-hover-bg,
+			focus-border-radius:
+				map-get($cadmin-dropdown-item-base, focus-border-radius),
+		),
+		toggler-font-size-mobile: 14px,
+		toggler-font-weight-mobile: $cadmin-font-weight-semi-bold,
+		toggler-mobile: (
+			border-radius: 6px,
+			transition: box-shadow 0.15s ease-in-out,
+			focus-box-shadow: $cadmin-component-focus-box-shadow,
+			focus-outline: 0,
+			disabled-box-shadow: none,
+		),
+	),
+	$cadmin-menubar-vertical-transparent-md
+);
+
+$cadmin-menubar-vertical-decorated-md-nav: () !default;
+$cadmin-menubar-vertical-decorated-md-nav: map-deep-merge(
+	(
+		border-left-color: $cadmin-gray-300,
+		border-left-style: solid,
+		border-left-width: 2px,
+		display: block,
+		padding-left: 8px,
+	),
+	$cadmin-menubar-vertical-decorated-md-nav
+);
+
+$cadmin-menubar-vertical-decorated-md-nav-item-nav: () !default;
+$cadmin-menubar-vertical-decorated-md-nav-item-nav: map-deep-merge(
+	(
+		margin-bottom: 4px,
+		margin-left: 16px,
+		margin-top: 4px,
+	),
+	$cadmin-menubar-vertical-decorated-md-nav-item-nav
+);
+
+$cadmin-menubar-vertical-decorated-md-nav-link: () !default;
+$cadmin-menubar-vertical-decorated-md-nav-link: map-deep-merge(
+	(
+		padding-left: 16px !important,
+	),
+	$cadmin-menubar-vertical-decorated-md-nav-link
+);
+
+$cadmin-menubar-vertical-decorated-md-nav-link-after-active: () !default;
+$cadmin-menubar-vertical-decorated-md-nav-link-after-active: map-deep-merge(
+	(
+		background-color: $cadmin-primary-l2,
+		bottom: 0,
+		content: '',
+		display: block,
+		left:
+			math-sign(
+				map-get($cadmin-menubar-vertical-decorated-md-nav, padding-left)
+			) -
+			map-get(
+				$cadmin-menubar-vertical-decorated-md-nav,
+				border-left-width
+			),
+		position: absolute,
+		top: 0,
+		width:
+			map-get(
+				$cadmin-menubar-vertical-decorated-md-nav,
+				border-left-width
+			),
+	),
+	$cadmin-menubar-vertical-decorated-md-nav-link-after-active
+);
+
+// Menubar Vertical LG
+
+$cadmin-menubar-vertical-expand-lg: () !default;
+$cadmin-menubar-vertical-expand-lg: map-deep-merge(
+	(
+		breakpoint-up: lg,
+		max-width: 250px,
+		margin-bottom-mobile: 24px,
+		margin-left-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		margin-right-mobile: -
+			(
+				$cadmin-grid-gutter-width / 2,
+			),
+		collapse-z-index-mobile:
+			$cadmin-zindex-menubar-vertical-expand-lg-collapse-mobile,
+		nav-nested-margins-item-mobile: (
+			margin-left: 0,
+		),
+		toggler-c-inner: (
+			max-width: none,
+		),
+	),
+	$cadmin-menubar-vertical-expand-lg
+);
+
+$cadmin-menubar-vertical-transparent-lg: () !default;
+$cadmin-menubar-vertical-transparent-lg: map-deep-merge(
+	(
+		breakpoint-up: lg,
+		bg-mobile: $cadmin-white,
+		link-border-radius: 6px,
+		link-border-radius-mobile: 0,
+		link-color: $cadmin-gray-600,
+		link-hover-bg: rgba($cadmin-gray-900, 0.03),
+		link-hover-color: $cadmin-gray-900,
+		link-active-color: $cadmin-gray-900,
+		link-active-font-weight: $cadmin-font-weight-semi-bold,
+		link: (
+			transition: $cadmin-btn-transition,
+			focus-bg: rgba($cadmin-gray-900, 0.03),
+			focus-color: $cadmin-gray-900,
+			focus-box-shadow:
+				map-get($cadmin-dropdown-item-base, focus-box-shadow),
+			focus-outline: map-get($cadmin-dropdown-item-base, focus-outline),
+			active-class: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-primary,
+			),
+			disabled-box-shadow: none,
+			show: (
+				background-color: $cadmin-c-unset,
+				color: $cadmin-gray-900,
+				font-weight: $cadmin-font-weight-semi-bold,
+			),
+		),
+		link-mobile: (
+			transition: none,
+			focus-bg: $cadmin-dropdown-link-hover-bg,
+			focus-border-radius:
+				map-get($cadmin-dropdown-item-base, focus-border-radius),
+		),
+		toggler-font-size-mobile: 14px,
+		toggler-font-weight-mobile: $cadmin-font-weight-semi-bold,
+		toggler-mobile: (
+			border-radius: 6px,
+			transition: box-shadow 0.15s ease-in-out,
+			focus-box-shadow: $cadmin-component-focus-box-shadow,
+			focus-outline: 0,
+			disabled-box-shadow: none,
+		),
+	),
+	$cadmin-menubar-vertical-transparent-lg
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav,
+	$cadmin-menubar-vertical-decorated-lg-nav
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav-item-nav: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav-item-nav: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav-item-nav,
+	$cadmin-menubar-vertical-decorated-lg-nav-item-nav
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav-link: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav-link: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav-link,
+	$cadmin-menubar-vertical-decorated-lg-nav-link
+);
+
+$cadmin-menubar-vertical-decorated-lg-nav-link-after-active: () !default;
+$cadmin-menubar-vertical-decorated-lg-nav-link-after-active: map-deep-merge(
+	$cadmin-menubar-vertical-decorated-md-nav-link-after-active,
+	$cadmin-menubar-vertical-decorated-lg-nav-link-after-active
+);

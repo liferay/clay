@@ -1,0 +1,126 @@
+.sidebar,
+&.sidebar {
+	height: 100%;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	.container-fluid {
+		padding-left: $cadmin-sidebar-padding-left;
+		padding-right: $cadmin-sidebar-padding-right;
+	}
+}
+
+// Sidebar Header / Footer
+
+.sidebar-header,
+.sidebar-footer {
+	padding-bottom: $cadmin-sidebar-padding-bottom;
+	padding-left: $cadmin-sidebar-padding-left;
+	padding-right: $cadmin-sidebar-padding-right;
+	padding-top: $cadmin-sidebar-padding-top;
+}
+
+.sidebar-header {
+	.component-title {
+		@include clay-text-typography($cadmin-sidebar-header-component-title);
+	}
+
+	.component-subtitle {
+		@include clay-text-typography(
+			$cadmin-sidebar-header-component-subtitle
+		);
+	}
+}
+
+// Sidebar Body
+
+.sidebar-body {
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding-bottom: $cadmin-sidebar-padding-bottom;
+	padding-left: $cadmin-sidebar-padding-left;
+	padding-right: $cadmin-sidebar-padding-right;
+	padding-top: $cadmin-sidebar-padding-top;
+
+	> .sidebar-section {
+		margin-bottom: 32px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Sidebar Section
+
+.sidebar-section {
+	position: relative;
+	word-wrap: break-word;
+}
+
+// Sidebar List Group
+
+.sidebar-list-group {
+	display: flex;
+	flex-direction: column;
+	font-size: $cadmin-sidebar-list-group-font-size;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	@extend %#{$cadmin-sidebar-list-group-type} !optional;
+
+	.autofit-col {
+		padding-bottom: $cadmin-sidebar-list-group-autofit-col-padding-y;
+		padding-left: $cadmin-sidebar-list-group-autofit-col-padding-x;
+		padding-right: $cadmin-sidebar-list-group-autofit-col-padding-x;
+		padding-top: $cadmin-sidebar-list-group-autofit-col-padding-y;
+
+		.list-group-title:only-child {
+			min-height: map-get($cadmin-sidebar-list-group-sticker-size, size);
+		}
+	}
+
+	.list-group-item {
+		background-color: $cadmin-sidebar-list-group-bg;
+		border-color: $cadmin-sidebar-list-group-border-color;
+		padding: $cadmin-sidebar-list-group-item-padding;
+	}
+
+	.sticker {
+		@include clay-sticker-size($cadmin-sidebar-list-group-sticker-size);
+	}
+}
+
+// Sidebar Panel
+
+.sidebar-panel {
+	margin-bottom: $cadmin-sidebar-panel-margin-bottom;
+	position: relative;
+}
+
+// Sidebar Definition List (dl dt dd)
+
+.sidebar-dt {
+	@include clay-text-typography($cadmin-sidebar-dt);
+}
+
+.sidebar-dd {
+	@include clay-text-typography($cadmin-sidebar-dd);
+}
+
+// Sidebar Variants
+
+.sidebar-light {
+	@include clay-sidebar-variant($cadmin-sidebar-light);
+}
+
+.sidebar-light .component-navigation-bar {
+	@include clay-navbar-variant($cadmin-sidebar-light-navigation-bar);
+}
+
+.sidebar-dark {
+	@include clay-sidebar-variant($cadmin-sidebar-dark);
+}

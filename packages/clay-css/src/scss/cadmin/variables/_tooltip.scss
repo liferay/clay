@@ -1,0 +1,22 @@
+$cadmin-tooltip-bg: $cadmin-gray-900 !default;
+$cadmin-tooltip-border-radius: $cadmin-border-radius !default;
+$cadmin-tooltip-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.4) !default;
+$cadmin-tooltip-color: $cadmin-white !default;
+$cadmin-tooltip-font-size: 14px !default; // 14px
+$cadmin-tooltip-margin: 0 !default;
+$cadmin-tooltip-max-width: 230px !default;
+$cadmin-tooltip-opacity: 1 !default;
+$cadmin-tooltip-padding-x: 12px !default; // 12px
+$cadmin-tooltip-padding-y: 12px !default; // 12px
+
+$cadmin-tooltip-arrow-color: $cadmin-tooltip-bg !default;
+$cadmin-tooltip-arrow-height: 6.4px !default;
+$cadmin-tooltip-arrow-offset: 8px !default; // 8px
+$cadmin-tooltip-arrow-width: 12.8px !default;
+
+$cadmin-form-feedback-tooltip-border-radius: $cadmin-tooltip-border-radius !default;
+$cadmin-form-feedback-tooltip-font-size: $cadmin-tooltip-font-size !default;
+$cadmin-form-feedback-tooltip-line-height: $cadmin-line-height-base !default;
+$cadmin-form-feedback-tooltip-opacity: $cadmin-tooltip-opacity !default;
+$cadmin-form-feedback-tooltip-padding-x: $cadmin-tooltip-padding-x !default;
+$cadmin-form-feedback-tooltip-padding-y: $cadmin-tooltip-padding-y !default;

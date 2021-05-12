@@ -1,0 +1,342 @@
+// Clay Color Input Group Text (.clay-color > .input-group-item > .input-group-text)
+
+$cadmin-clay-color-input-group-text: () !default;
+$cadmin-clay-color-input-group-text: map-deep-merge(
+	(
+		bg: $cadmin-white,
+		border-color: $cadmin-input-border-color,
+		padding-left: 0,
+		padding-right: 0,
+	),
+	$cadmin-clay-color-input-group-text
+);
+
+// Clay Color Input Group Input (.clay-color > .input-group-item > .form-control)
+
+$cadmin-clay-color-input-group-input: () !default;
+
+// Clay Color Input Group Inset Item Before (.clay-color > .input-group-item > .input-group-inset-item-before)
+
+$cadmin-clay-color-input-group-inset-item-before: () !default;
+$cadmin-clay-color-input-group-inset-item-before: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: inherit,
+		padding-left: $cadmin-input-padding-x,
+		padding-right: 8px,
+	),
+	$cadmin-clay-color-input-group-inset-item-before
+);
+
+// Dropdown Menu
+
+$cadmin-clay-color-dropdown-menu: () !default;
+$cadmin-clay-color-dropdown-menu: map-deep-merge(
+	(
+		max-height: 400px,
+		max-width: none,
+		padding-bottom: 0,
+		padding-left: 16px,
+		padding-right: 16px,
+		padding-top: 16px,
+		width: 272px,
+	),
+	$cadmin-clay-color-dropdown-menu
+);
+
+// Dropdown Menu Form Group
+
+$cadmin-clay-color-dropdown-menu-form-group: () !default;
+$cadmin-clay-color-dropdown-menu-form-group: map-deep-merge(
+	(
+		margin-bottom: 16px,
+	),
+	$cadmin-clay-color-dropdown-menu-form-group
+);
+
+// Dropdown Menu Input (.clay-color-dropdown-menu .form-control)
+
+$cadmin-clay-color-dropdown-menu-input: () !default;
+$cadmin-clay-color-dropdown-menu-input: map-deep-merge(
+	(
+		font-size: 14px,
+		height: 32px,
+		padding-bottom: 4px,
+		padding-left: 12px,
+		padding-right: 12px,
+		padding-top: 4px,
+	),
+	$cadmin-clay-color-dropdown-menu-input
+);
+
+// Dropdown Menu Input Group Inset Item Before
+
+$cadmin-clay-color-dropdown-menu-input-group-inset-item-before: () !default;
+$cadmin-clay-color-dropdown-menu-input-group-inset-item-before: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: 14px,
+		padding-left: $cadmin-input-padding-x-sm,
+		padding-right: 8px,
+	),
+	$cadmin-clay-color-dropdown-menu-input-group-inset-item-before
+);
+
+// Dropdown Menu Close
+
+$cadmin-clay-color-dropdown-menu-close: () !default;
+$cadmin-clay-color-dropdown-menu-close: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		font-size: 16px,
+		opacity: 1,
+		hover-bg: rgba($cadmin-gray-900, 0.03),
+		focus-bg: rgba($cadmin-gray-900, 0.03),
+		active-bg: rgba($cadmin-gray-900, 0.06),
+		disabled-bg: transparent,
+	),
+	$cadmin-clay-color-dropdown-menu-close
+);
+
+// Dropdown Menu Component Action
+
+$cadmin-clay-color-dropdown-menu-component-action: () !default;
+
+// Clay Color Swatch
+
+$cadmin-clay-color-swatch: () !default;
+$cadmin-clay-color-swatch: map-deep-merge(
+	(
+		display: flex,
+		flex-wrap: wrap,
+		margin-left: -8px,
+		margin-right: -8px,
+		margin-top: 8px,
+	),
+	$cadmin-clay-color-swatch
+);
+
+$cadmin-clay-color-swatch-item: () !default;
+$cadmin-clay-color-swatch-item: map-deep-merge(
+	(
+		display: flex,
+		flex-wrap: wrap,
+		justify-content: center,
+		padding-bottom: 16px,
+		width: 16.66667%,
+	),
+	$cadmin-clay-color-swatch-item
+);
+
+// Clay Color Btn
+
+$cadmin-clay-color-btn: () !default;
+$cadmin-clay-color-btn: map-deep-merge(
+	(
+		border-radius: 2px,
+		height: 24px,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+		width: 24px,
+		active: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+		),
+	),
+	$cadmin-clay-color-btn
+);
+
+$cadmin-clay-color-btn-bordered: () !default;
+$cadmin-clay-color-btn-bordered: map-deep-merge(
+	(
+		border-color: $cadmin-gray-300,
+	),
+	$cadmin-clay-color-btn-bordered
+);
+
+// Clay Color Pointer
+
+$cadmin-clay-color-pointer: () !default;
+$cadmin-clay-color-pointer: map-deep-merge(
+	(
+		bg: transparent,
+		border-radius: 100px,
+		border-color: $cadmin-white,
+		border-style: solid,
+		border-width: 2px,
+		height: 14px,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+		position: absolute,
+		transition: box-shadow 0.15s ease-in-out,
+		width: 14px,
+		focus-box-shadow: 0 0 0 2px $cadmin-primary-l1,
+		focus-outline: 0,
+	),
+	$cadmin-clay-color-pointer
+);
+
+// Clay Color Header
+
+$cadmin-clay-color-header: () !default;
+$cadmin-clay-color-header: map-deep-merge(
+	(
+		display: flex,
+		justify-content: space-between,
+		margin-bottom: 16px,
+		margin-right: -4px,
+	),
+	$cadmin-clay-color-header
+);
+
+// Clay Color Header Component Title
+
+$cadmin-clay-color-header-component-title: () !default;
+$cadmin-clay-color-header-component-title: map-deep-merge(
+	(
+		color: $cadmin-gray-600,
+		display: inline-block,
+		font-size: 14px,
+		font-weight: $cadmin-font-weight-semi-bold,
+		max-width: calc(100% - 32px),
+	),
+	$cadmin-clay-color-header-component-title
+);
+
+// Clay Color Footer
+
+$cadmin-clay-color-footer: () !default;
+$cadmin-clay-color-footer: map-deep-merge(
+	(
+		margin-bottom: 16px,
+	),
+	$cadmin-clay-color-footer
+);
+
+// Clay Color Map
+
+$cadmin-clay-color-map-group: () !default;
+$cadmin-clay-color-map-group: map-deep-merge(
+	(
+		display: flex,
+		margin-top: 8px,
+	),
+	$cadmin-clay-color-map-group
+);
+
+$cadmin-clay-color-map: () !default;
+$cadmin-clay-color-map: map-deep-merge(
+	(
+		flex-shrink: 0,
+		height: 128px,
+		margin-bottom: 16px,
+		margin-right: 16px,
+		position: relative,
+		touch-action: none,
+		user-select: none,
+		width: 144px,
+	),
+	$cadmin-clay-color-map
+);
+
+$cadmin-clay-color-map-hsb: () !default;
+
+// Clay Color Map Pointer
+
+$cadmin-clay-color-map-pointer: () !default;
+
+// Clay Color Map Values
+
+$cadmin-clay-color-map-values: () !default;
+$cadmin-clay-color-map-values: map-deep-merge(
+	(
+		flex-grow: 1,
+		flex-shrink: 1,
+		width: 1%,
+	),
+	$cadmin-clay-color-map-values
+);
+
+$cadmin-clay-color-map-values-form-group: () !default;
+
+// Clay Color Map Values (.clay-color-map-values .form-control)
+
+$cadmin-clay-color-map-values-input: () !default;
+$cadmin-clay-color-map-values-input: map-deep-merge(
+	(
+		padding-left: 0,
+		padding-right: 10%,
+		text-align: right,
+	),
+	$cadmin-clay-color-map-values-input
+);
+
+// Clay Color Map Values Input Group Inset Item Before (.clay-color-map-values .input-group-inset-item-before)
+
+$cadmin-clay-color-map-values-input-group-inset-item-before: () !default;
+$cadmin-clay-color-map-values-input-group-inset-item-before: map-deep-merge(
+	(
+		font-weight: $cadmin-font-weight-semi-bold,
+		padding-left: 10%,
+		padding-right: 0,
+		min-width: 18px,
+	),
+	$cadmin-clay-color-map-values-input-group-inset-item-before
+);
+
+// Clay Color Range
+
+$cadmin-clay-color-range: () !default;
+$cadmin-clay-color-range: map-deep-merge(
+	(
+		border-radius: 100px,
+		height: 8px,
+		margin-bottom: 20px,
+		margin-top: 4px,
+		position: relative,
+		touch-action: none,
+		user-select: none,
+	),
+	$cadmin-clay-color-range
+);
+
+$cadmin-clay-color-range-pointer: () !default;
+$cadmin-clay-color-range-pointer: map-deep-merge(
+	(
+		margin-top: -7px,
+		top: 50%,
+	),
+	$cadmin-clay-color-range-pointer
+);
+
+// Clay Color Sm
+
+$cadmin-clay-color-sm-input-group-inset-item-before: () !default;
+$cadmin-clay-color-sm-input-group-inset-item-before: map-merge(
+	(
+		padding-left: $cadmin-input-padding-x-sm,
+	),
+	$cadmin-clay-color-sm-input-group-inset-item-before
+);
+
+$cadmin-clay-color-sm-input-group-text: () !default;
+$cadmin-clay-color-sm-input-group-text: map-merge(
+	(
+		padding: 0,
+	),
+	$cadmin-clay-color-sm-input-group-text
+);
+
+$cadmin-clay-color-sm-clay-color-btn: () !default;
+$cadmin-clay-color-sm-clay-color-btn: map-deep-merge(
+	(
+		border-radius: 2px,
+		height: 20px,
+		padding: 0,
+		width: 20px,
+	),
+	$cadmin-clay-color-sm-clay-color-btn
+);

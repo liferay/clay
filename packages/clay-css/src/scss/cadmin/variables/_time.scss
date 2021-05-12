@@ -1,0 +1,112 @@
+$cadmin-clay-time-btn: () !default;
+$cadmin-clay-time-btn: map-deep-merge(
+	(
+		align-items: center,
+		color: $cadmin-secondary,
+		display: inline-flex,
+		font-size: 12px,
+		height: 24px,
+		justify-content: center,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+		width: 24px,
+		focus-box-shadow: 0 0 0 1px #80acff,
+	),
+	$cadmin-clay-time-btn
+);
+
+$cadmin-clay-time-form-control: () !default;
+$cadmin-clay-time-form-control: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		flex-wrap: wrap,
+		padding-bottom: 2px,
+		padding-top: 2px,
+	),
+	$cadmin-clay-time-form-control
+);
+
+$cadmin-clay-time-form-control-inset: () !default;
+$cadmin-clay-time-form-control-inset: map-deep-merge(
+	(
+		margin-bottom: 0,
+		margin-top: 0,
+		text-align: center,
+		width: 20px,
+		selection-bg: transparent,
+		focus-bg: #b3d8fd,
+	),
+	$cadmin-clay-time-form-control-inset
+);
+
+$cadmin-clay-time-ampm: () !default;
+$cadmin-clay-time-ampm: map-deep-merge(
+	(
+		font-weight: 500,
+		margin-left: 4px,
+		text-transform: uppercase,
+		width: 24px,
+	),
+	$cadmin-clay-time-ampm
+);
+
+$cadmin-clay-time-input-group-text: () !default;
+$cadmin-clay-time-input-group-text: map-deep-merge(
+	(
+		bg: transparent,
+		border-color: transparent,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+	),
+	$cadmin-clay-time-input-group-text
+);
+
+$cadmin-clay-time-divider-margin-left: null !default;
+$cadmin-clay-time-divider-margin-right: null !default;
+
+$cadmin-clay-time-edit: () !default;
+$cadmin-clay-time-edit: map-deep-merge(
+	(
+		display: flex,
+		flex-wrap: wrap,
+		margin-right: auto,
+		padding-left: 8px,
+		padding-right: 8px,
+	),
+	$cadmin-clay-time-edit
+);
+
+$cadmin-clay-time-inner-spin: () !default;
+$cadmin-clay-time-inner-spin: map-deep-merge(
+	(
+		border-color: $cadmin-secondary-l2,
+		border-radius: 8px,
+		border-style: solid,
+		border-width: $cadmin-btn-border-width,
+	),
+	$cadmin-clay-time-inner-spin
+);
+
+$cadmin-clay-time-inner-spin-btn: () !default;
+$cadmin-clay-time-inner-spin-btn: map-deep-merge(
+	(
+		align-items: center,
+		border-radius: map-get($cadmin-clay-time-inner-spin, border-radius),
+		border-width: 0,
+		display: inline-flex,
+		font-size: 8px,
+		height: auto,
+		justify-content: center,
+		padding-bottom: 2px,
+		padding-left: 2px,
+		padding-right: 2px,
+		padding-top: 2px,
+		width: auto,
+	),
+	$cadmin-clay-time-inner-spin-btn
+);

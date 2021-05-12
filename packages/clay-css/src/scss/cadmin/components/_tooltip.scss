@@ -1,0 +1,300 @@
+.tooltip {
+	display: block;
+	font-family: $cadmin-font-family-base;
+	font-size: $cadmin-tooltip-font-size;
+	font-style: normal;
+	font-weight: $cadmin-font-weight-normal;
+	letter-spacing: normal;
+	line-break: auto;
+	line-height: $cadmin-line-height-base;
+	margin: $cadmin-tooltip-margin;
+	opacity: 0;
+	position: absolute;
+	text-align: left;
+	text-align: start;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	white-space: normal;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: break-word;
+	z-index: $cadmin-zindex-tooltip;
+
+	&.show {
+		opacity: $cadmin-tooltip-opacity;
+	}
+
+	.arrow {
+		display: block;
+		height: $cadmin-tooltip-arrow-height;
+		position: absolute;
+		width: $cadmin-tooltip-arrow-width;
+
+		&::before {
+			border-color: transparent;
+			border-style: solid;
+			content: '';
+			position: absolute;
+		}
+	}
+}
+
+.tooltip-inner {
+	background-color: $cadmin-tooltip-bg;
+
+	@include border-radius($cadmin-tooltip-border-radius);
+	@include box-shadow($cadmin-tooltip-box-shadow);
+
+	color: $cadmin-tooltip-color;
+	max-width: $cadmin-tooltip-max-width;
+	padding: $cadmin-tooltip-padding-y $cadmin-tooltip-padding-x;
+	text-align: center;
+	white-space: pre-line;
+}
+
+.tooltip-arrow {
+	background-color: $cadmin-tooltip-bg;
+	position: absolute;
+	transform: rotate(45deg);
+}
+
+// Bootstrap 4 Tooltip Positions
+
+%bs-tooltip-top {
+	padding: $cadmin-tooltip-arrow-height 0;
+
+	.arrow {
+		bottom: 0;
+
+		&::before {
+			border-top-color: $cadmin-tooltip-arrow-color;
+			border-width: $cadmin-tooltip-arrow-height
+				($cadmin-tooltip-arrow-width / 2) 0;
+			top: 0;
+		}
+	}
+}
+
+%bs-tooltip-right {
+	padding: 0 $cadmin-tooltip-arrow-height;
+
+	.arrow {
+		height: $cadmin-tooltip-arrow-width;
+		left: 0;
+		width: $cadmin-tooltip-arrow-height;
+
+		&::before {
+			border-right-color: $cadmin-tooltip-arrow-color;
+			border-width: ($cadmin-tooltip-arrow-width / 2)
+				$cadmin-tooltip-arrow-height ($cadmin-tooltip-arrow-width / 2) 0;
+			right: 0;
+		}
+	}
+}
+
+%bs-tooltip-bottom {
+	padding: $cadmin-tooltip-arrow-height 0;
+
+	.arrow {
+		top: 0;
+
+		&::before {
+			border-bottom-color: $cadmin-tooltip-arrow-color;
+			border-width: 0 ($cadmin-tooltip-arrow-width / 2)
+				$cadmin-tooltip-arrow-height;
+			bottom: 0;
+		}
+	}
+}
+
+%bs-tooltip-left {
+	padding: 0 $cadmin-tooltip-arrow-height;
+
+	.arrow {
+		height: $cadmin-tooltip-arrow-width;
+		right: 0;
+		width: $cadmin-tooltip-arrow-height;
+
+		&::before {
+			border-left-color: $cadmin-tooltip-arrow-color;
+			border-width: ($cadmin-tooltip-arrow-width / 2) 0
+				($cadmin-tooltip-arrow-width / 2) $cadmin-tooltip-arrow-height;
+			left: 0;
+		}
+	}
+}
+
+.bs-tooltip-top,
+.bs-tooltip-auto[x-placement^='top'] {
+	@extend %bs-tooltip-top !optional;
+}
+
+.bs-tooltip-right,
+.bs-tooltip-auto[x-placement^='right'] {
+	@extend %bs-tooltip-right !optional;
+}
+
+.bs-tooltip-bottom,
+.bs-tooltip-auto[x-placement^='bottom'] {
+	@extend %bs-tooltip-bottom !optional;
+}
+
+.bs-tooltip-left,
+.bs-tooltip-auto[x-placement^='left'] {
+	@extend %bs-tooltip-left !optional;
+}
+
+// Tooltip Positions
+
+.clay-tooltip-bottom,
+.clay-tooltip-top {
+	.arrow {
+		left: 50%;
+		margin-left: -($cadmin-tooltip-arrow-width / 2);
+	}
+}
+
+.clay-tooltip-bottom-left,
+.clay-tooltip-top-left {
+	.arrow {
+		left: $cadmin-tooltip-arrow-offset;
+	}
+}
+
+.clay-tooltip-bottom-right,
+.clay-tooltip-top-right {
+	.arrow {
+		right: $cadmin-tooltip-arrow-offset;
+	}
+}
+
+.clay-tooltip-left,
+.clay-tooltip-right {
+	.arrow {
+		margin-top: -($cadmin-tooltip-arrow-width / 2);
+		top: 50%;
+	}
+}
+
+.clay-tooltip-left-bottom,
+.clay-tooltip-right-bottom {
+	.arrow {
+		bottom: $cadmin-tooltip-arrow-offset;
+	}
+}
+
+.clay-tooltip-left-top,
+.clay-tooltip-right-top {
+	.arrow {
+		top: $cadmin-tooltip-arrow-offset;
+	}
+}
+
+// Bottom
+
+.clay-tooltip-bottom,
+.clay-tooltip-bottom-left,
+.clay-tooltip-bottom-right {
+	padding-top: $cadmin-tooltip-arrow-height;
+
+	.arrow {
+		top: 0;
+
+		&::before {
+			border-bottom-color: $cadmin-tooltip-arrow-color;
+			border-width: 0 ($cadmin-tooltip-arrow-width / 2)
+				$cadmin-tooltip-arrow-height;
+			bottom: 0;
+		}
+	}
+
+	.tooltip-arrow {
+		border-bottom-color: transparent;
+		border-right-color: transparent;
+		left: 50%;
+		top: 0;
+	}
+}
+
+// Left
+
+.clay-tooltip-left,
+.clay-tooltip-left-bottom,
+.clay-tooltip-left-top {
+	padding-right: $cadmin-tooltip-arrow-height;
+
+	.arrow {
+		height: $cadmin-tooltip-arrow-width;
+		right: 0;
+		width: $cadmin-tooltip-arrow-height;
+
+		&::before {
+			border-left-color: $cadmin-tooltip-arrow-color;
+			border-width: ($cadmin-tooltip-arrow-width / 2) 0
+				($cadmin-tooltip-arrow-width / 2) $cadmin-tooltip-arrow-height;
+			left: 0;
+		}
+	}
+
+	.tooltip-arrow {
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		right: 0;
+		top: 50%;
+	}
+}
+
+// Right
+
+.clay-tooltip-right,
+.clay-tooltip-right-bottom,
+.clay-tooltip-right-top {
+	padding-left: $cadmin-tooltip-arrow-height;
+
+	.arrow {
+		height: $cadmin-tooltip-arrow-width;
+		left: 0;
+		width: $cadmin-tooltip-arrow-height;
+
+		&::before {
+			border-right-color: $cadmin-tooltip-arrow-color;
+			border-width: ($cadmin-tooltip-arrow-width / 2)
+				$cadmin-tooltip-arrow-height ($cadmin-tooltip-arrow-width / 2) 0;
+			right: 0;
+		}
+	}
+
+	.tooltip-arrow {
+		border-right-color: transparent;
+		border-top-color: transparent;
+		left: 0;
+		top: 50%;
+	}
+}
+
+// Top
+
+.clay-tooltip-top,
+.clay-tooltip-top-left,
+.clay-tooltip-top-right {
+	padding-bottom: $cadmin-tooltip-arrow-height;
+
+	.arrow {
+		bottom: 0;
+
+		&::before {
+			border-top-color: $cadmin-tooltip-arrow-color;
+			border-width: $cadmin-tooltip-arrow-height
+				($cadmin-tooltip-arrow-width / 2) 0;
+			top: 0;
+		}
+	}
+
+	.tooltip-arrow {
+		border-left-color: transparent;
+		border-top-color: transparent;
+		bottom: 0;
+		left: 50%;
+	}
+}

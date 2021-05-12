@@ -1,0 +1,342 @@
+.sheet {
+	background-color: $cadmin-sheet-bg;
+	border-color: $cadmin-sheet-border-color;
+	border-style: $cadmin-sheet-border-style;
+	border-width: $cadmin-sheet-border-width;
+
+	@include border-radius($cadmin-sheet-border-radius);
+
+	padding-bottom: $cadmin-sheet-padding-bottom;
+	padding-left: $cadmin-sheet-padding-left;
+	padding-right: $cadmin-sheet-padding-right;
+	padding-top: $cadmin-sheet-padding-top;
+
+	@include clay-scale-component {
+		padding-bottom: $cadmin-sheet-padding-bottom-mobile;
+		padding-left: $cadmin-sheet-padding-left-mobile;
+		padding-right: $cadmin-sheet-padding-right-mobile;
+		padding-top: $cadmin-sheet-padding-top-mobile;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		margin-top: $cadmin-sheet-padding-top;
+
+		@include clay-scale-component {
+			margin-top: $cadmin-sheet-padding-top-mobile;
+		}
+	}
+
+	+ .sheet {
+		@include clay-css($cadmin-sheet-plus-sheet);
+	}
+
+	.component-title {
+		color: inherit;
+		display: inline-block;
+		font-size: inherit;
+		font-weight: inherit;
+		max-width: 100%;
+	}
+
+	.panel-group {
+		&,
+		.panel:last-child .panel-body {
+			margin-bottom: $cadmin-sheet-panel-group-margin-bottom;
+
+			@include clay-scale-component {
+				margin-bottom: $cadmin-sheet-panel-group-margin-bottom-mobile;
+			}
+		}
+
+		.panel-body {
+			margin-bottom: $cadmin-sheet-section-margin-bottom;
+
+			@include clay-scale-component {
+				margin-bottom: $cadmin-sheet-section-margin-bottom-mobile;
+			}
+		}
+	}
+}
+
+.sheet-header {
+	margin-bottom: $cadmin-sheet-header-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $cadmin-sheet-header-margin-bottom-mobile;
+	}
+
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+}
+
+.sheet-section {
+	margin-bottom: $cadmin-sheet-section-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $cadmin-sheet-section-margin-bottom-mobile;
+	}
+
+	> fieldset {
+		margin-bottom: -$cadmin-sheet-section-margin-bottom;
+
+		@include clay-scale-component {
+			margin-bottom: -$cadmin-sheet-section-margin-bottom-mobile;
+		}
+	}
+
+	> .card-page:last-child,
+	.card-page-last {
+		margin-bottom: -$cadmin-card-margin-bottom;
+	}
+
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+}
+
+fieldset {
+	+ .sheet-footer {
+		margin-top: 0;
+	}
+}
+
+.sheet-footer {
+	display: flex;
+	margin-bottom: $cadmin-sheet-footer-margin-bottom;
+	margin-left: $cadmin-sheet-footer-margin-left;
+	margin-right: $cadmin-sheet-footer-margin-right;
+	margin-top: $cadmin-sheet-footer-margin-top;
+
+	@include clay-scale-component {
+		margin-bottom: $cadmin-sheet-footer-margin-bottom-mobile;
+		margin-left: $cadmin-sheet-footer-margin-left-mobile;
+		margin-right: $cadmin-sheet-footer-margin-right-mobile;
+		margin-top: $cadmin-sheet-footer-margin-top-mobile;
+	}
+
+	&::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+}
+
+.sheet-footer-btn-block-sm-down {
+	@include sheet-footer-btn-block($cadmin-sheet-footer-btn-block-sm-down);
+}
+
+// Sheet Sizes
+
+// @deprecated as of v3.x use `.container .sheet` instead
+
+.sheet-lg {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $cadmin-sheet-lg-max-width;
+}
+
+// Sheet Title
+
+.sheet-title {
+	color: $cadmin-sheet-title-color;
+	display: block;
+	font-size: $cadmin-sheet-title-font-size;
+	font-weight: $cadmin-sheet-title-font-weight;
+	line-height: $cadmin-sheet-title-line-height;
+	margin-bottom: $cadmin-sheet-title-margin-bottom;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $cadmin-sheet-title-font-size-mobile;
+		margin-bottom: $cadmin-sheet-title-margin-bottom-mobile;
+	}
+
+	.autofit-padded-no-gutters {
+		@extend %#{$cadmin-sheet-title-autofit-padded-no-gutters-ext} !optional;
+	}
+}
+
+// Sheet Subtitle
+
+.sheet-subtitle {
+	border-color: $cadmin-sheet-subtitle-border-color;
+	border-style: $cadmin-sheet-subtitle-border-style;
+	border-width: $cadmin-sheet-subtitle-border-width;
+	color: $cadmin-sheet-subtitle-color;
+	display: block;
+	font-size: $cadmin-sheet-subtitle-font-size;
+	font-weight: $cadmin-sheet-subtitle-font-weight;
+	line-height: $cadmin-sheet-subtitle-line-height;
+	margin-bottom: $cadmin-sheet-subtitle-margin-bottom;
+	padding-bottom: $cadmin-sheet-subtitle-padding-y;
+	padding-left: $cadmin-sheet-subtitle-padding-x;
+	padding-right: $cadmin-sheet-subtitle-padding-x;
+	padding-top: $cadmin-sheet-subtitle-padding-y;
+	position: relative;
+	text-transform: $cadmin-sheet-subtitle-text-transform;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $cadmin-sheet-subtitle-font-size-mobile;
+		margin-bottom: $cadmin-sheet-subtitle-margin-bottom-mobile;
+	}
+
+	@if ($cadmin-enable-c-inner) {
+		.c-inner {
+			margin-bottom: #{math-sign($cadmin-sheet-subtitle-padding-y)};
+			margin-left: #{math-sign($cadmin-sheet-subtitle-padding-x)};
+			margin-right: #{math-sign($cadmin-sheet-subtitle-padding-x)};
+			margin-top: #{math-sign($cadmin-sheet-subtitle-padding-y)};
+		}
+	}
+
+	&.autofit-row {
+		padding-bottom: 0;
+
+		.autofit-col {
+			margin-bottom: $cadmin-sheet-subtitle-padding-y;
+		}
+	}
+
+	&.collapse-icon {
+		padding-left: $cadmin-sheet-subtitle-collapse-icon-padding-left;
+		padding-right: $cadmin-sheet-subtitle-collapse-icon-padding-right;
+
+		@if ($cadmin-enable-c-inner) {
+			.c-inner {
+				margin-left: #{math-sign(
+						$cadmin-sheet-subtitle-collapse-icon-padding-left
+					)};
+				margin-right: #{math-sign(
+						$cadmin-sheet-subtitle-collapse-icon-padding-right
+					)};
+			}
+		}
+	}
+
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		bottom: $cadmin-sheet-subtitle-collapse-icon-bottom;
+		font-size: $cadmin-sheet-subtitle-collapse-icon-font-size;
+		left: $cadmin-sheet-subtitle-collapse-icon-left;
+		right: $cadmin-sheet-subtitle-collapse-icon-right;
+		top: $cadmin-sheet-subtitle-collapse-icon-top;
+	}
+
+	.component-title,
+	.heading-text {
+		margin-bottom: $cadmin-sheet-subtitle-heading-text-margin-bottom;
+		margin-top: $cadmin-sheet-subtitle-heading-text-margin-top;
+	}
+
+	a,
+	.btn {
+		text-transform: none;
+	}
+}
+
+a.sheet-subtitle {
+	@include clay-link($cadmin-sheet-subtitle-link);
+}
+
+// Sheet Tertiary Title
+
+.sheet-tertiary-title {
+	color: $cadmin-sheet-tertiary-title-color;
+	display: block;
+	font-size: $cadmin-sheet-tertiary-title-font-size;
+	font-weight: $cadmin-sheet-tertiary-title-font-weight;
+	line-height: $cadmin-sheet-tertiary-title-line-height;
+	margin-bottom: $cadmin-sheet-tertiary-title-margin-bottom;
+	padding-bottom: $cadmin-sheet-tertiary-title-padding-y;
+	padding-left: $cadmin-sheet-tertiary-title-padding-x;
+	padding-right: $cadmin-sheet-tertiary-title-padding-x;
+	padding-top: $cadmin-sheet-tertiary-title-padding-y;
+	text-transform: $cadmin-sheet-tertiary-title-text-transform;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $cadmin-sheet-tertiary-title-font-size-mobile;
+		margin-bottom: $cadmin-sheet-tertiary-title-margin-bottom-mobile;
+	}
+
+	.component-title {
+		margin-bottom: 0;
+	}
+}
+
+// Sheet Text
+
+.sheet-text {
+	color: $cadmin-sheet-text-color;
+	font-size: $cadmin-sheet-text-font-size;
+	font-weight: $cadmin-sheet-text-font-weight;
+	margin-bottom: $cadmin-sheet-text-margin-bottom;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $cadmin-sheet-text-font-size-mobile;
+		margin-bottom: $cadmin-sheet-text-margin-bottom-mobile;
+	}
+}
+
+// Sheet Multiple Form Variant
+
+.sheet-multiple-form {
+	@include clay-css($cadmin-sheet-multiple-form);
+
+	.sheet-header {
+		@include clay-css($cadmin-sheet-multiple-form-sheet-header);
+
+		@include clay-scale-component {
+			@include clay-css($cadmin-sheet-multiple-form-sheet-header-mobile);
+		}
+
+		.sheet-title {
+			@include clay-css($cadmin-sheet-multiple-form-sheet-title);
+		}
+	}
+}
+
+// Sheet Dataset Content Variant
+
+.sheet-dataset-content {
+	@include clay-css($cadmin-sheet-dataset-content);
+
+	.sheet-header {
+		@include clay-css($cadmin-sheet-dataset-content-sheet-header);
+
+		@include clay-scale-component {
+			@include clay-css(
+				$cadmin-sheet-dataset-content-sheet-header-mobile
+			);
+		}
+
+		.sheet-title {
+			@include clay-css($cadmin-sheet-dataset-content-sheet-title);
+		}
+	}
+}
+
+// Sheet in Card Page
+
+.card-page-equal-height .sheet {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	> .autofit-row {
+		flex-grow: 1;
+	}
+}
+
+.card-page-item .sheet {
+	@include clay-css($cadmin-card-page-item-sheet);
+}

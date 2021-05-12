@@ -1,0 +1,12 @@
+.navigation-bar {
+	@include clay-navbar-size($cadmin-navigation-bar-size);
+	@include clay-navbar-variant($cadmin-navigation-bar-base);
+}
+
+.navigation-bar-light {
+	@include clay-navbar-variant($cadmin-navigation-bar-light);
+}
+
+.navigation-bar-secondary {
+	@include clay-navbar-variant($cadmin-navigation-bar-secondary);
+}

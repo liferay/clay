@@ -556,7 +556,15 @@
 				),
 			background-size:
 				setter(map-get($map, bg-size), map-get($map, background-size)),
-			color: setter(map-get($map, color), $input-color),
+			color:
+				setter(
+					map-get($map, color),
+					if(
+						variable-exists(input-color),
+						$input-color,
+						$cadmin-input-color
+					)
+				),
 		)
 	);
 

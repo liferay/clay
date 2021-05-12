@@ -1,0 +1,433 @@
+// Background
+
+.bg-checkered {
+	@include clay-bg-checkered($cadmin-bg-checkered-fg);
+}
+
+// Rounded
+
+.rounded {
+	border-radius: $cadmin-rounded-border-radius !important;
+}
+
+.rounded-circle {
+	border-radius: $cadmin-rounded-circle-border-radius !important;
+}
+
+.rounded-0 {
+	border-radius: $cadmin-rounded-0-border-radius !important;
+}
+
+// Close
+
+.close {
+	@include clay-close($cadmin-close);
+}
+
+// C Focus Inset
+
+.c-focus-inset {
+	&:focus:not(:disabled):not(.disabled):not([disabled]),
+	&.focus:not(:disabled):not(.disabled):not([disabled]) {
+		@include clay-css($cadmin-c-focus-inset-focus);
+	}
+}
+
+// Autofit Row
+
+%autofit-row {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+
+	@at-root {
+		ul#{&} {
+			@include list-unstyled;
+		}
+	}
+}
+
+.autofit-row {
+	@extend %autofit-row;
+}
+
+// Autofit Row Center
+
+%autofit-row-center {
+	> .autofit-col {
+		justify-content: center;
+	}
+}
+
+.autofit-row-center {
+	@extend %autofit-row-center;
+}
+
+// Autofit Row End
+
+%autofit-row-end {
+	> .autofit-col {
+		justify-content: flex-end;
+	}
+}
+
+.autofit-row-end {
+	@extend %autofit-row-end;
+}
+
+// Autofit Padded
+
+%autofit-padded {
+	> .autofit-col {
+		padding-bottom: $cadmin-autofit-padded-col-padding-y;
+		padding-left: $cadmin-autofit-padded-col-padding-x;
+		padding-right: $cadmin-autofit-padded-col-padding-x;
+		padding-top: $cadmin-autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded {
+	@extend %autofit-padded !optional;
+}
+
+%autofit-padded-no-gutters-x {
+	margin-left: math-sign($cadmin-autofit-padded-col-padding-x);
+	margin-right: math-sign($cadmin-autofit-padded-col-padding-x);
+	width: auto;
+
+	> .autofit-col {
+		padding-bottom: $cadmin-autofit-padded-col-padding-y;
+		padding-left: $cadmin-autofit-padded-col-padding-x;
+		padding-right: $cadmin-autofit-padded-col-padding-x;
+		padding-top: $cadmin-autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded-no-gutters-x {
+	@extend %autofit-padded-no-gutters-x !optional;
+}
+
+%autofit-padded-no-gutters-y {
+	margin-bottom: math-sign($cadmin-autofit-padded-col-padding-y);
+	margin-top: math-sign($cadmin-autofit-padded-col-padding-y);
+	width: auto;
+
+	> .autofit-col {
+		padding-bottom: $cadmin-autofit-padded-col-padding-y;
+		padding-left: $cadmin-autofit-padded-col-padding-x;
+		padding-right: $cadmin-autofit-padded-col-padding-x;
+		padding-top: $cadmin-autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded-no-gutters-y {
+	@extend %autofit-padded-no-gutters-y !optional;
+}
+
+%autofit-padded-no-gutters {
+	margin-bottom: math-sign($cadmin-autofit-padded-col-padding-y);
+	margin-left: math-sign($cadmin-autofit-padded-col-padding-x);
+	margin-right: math-sign($cadmin-autofit-padded-col-padding-x);
+	margin-top: math-sign($cadmin-autofit-padded-col-padding-y);
+	width: auto;
+
+	> .autofit-col {
+		padding-bottom: $cadmin-autofit-padded-col-padding-y;
+		padding-left: $cadmin-autofit-padded-col-padding-x;
+		padding-right: $cadmin-autofit-padded-col-padding-x;
+		padding-top: $cadmin-autofit-padded-col-padding-y;
+	}
+}
+
+.autofit-padded-no-gutters {
+	@extend %autofit-padded-no-gutters !optional;
+}
+
+%autofit-padded-no-gutters-sm {
+	@include clay-autofit-row($cadmin-autofit-padded-no-gutters-sm);
+}
+
+.autofit-padded-no-gutters-sm {
+	@extend %autofit-padded-no-gutters-sm !optional;
+}
+
+// Autofit Columns
+
+%autofit-col {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	min-height: 0;
+	position: relative;
+}
+
+.autofit-col {
+	@extend %autofit-col;
+}
+
+.autofit-col-shrink {
+	flex-shrink: 1;
+	min-width: 16px;
+	word-wrap: break-word;
+}
+
+%autofit-col-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: $cadmin-autofit-col-expand-min-width;
+	word-wrap: break-word;
+}
+
+.autofit-col-expand {
+	@extend %autofit-col-expand;
+}
+
+// Autofit Section
+
+%autofit-section {
+	max-width: 100%;
+}
+
+.autofit-section {
+	@extend %autofit-section;
+}
+
+// Autofit Float
+
+%autofit-float {
+	@include clay-autofit-float;
+}
+
+.autofit-float {
+	@extend %autofit-float;
+}
+
+%autofit-float-sm-down {
+	@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+		@include clay-autofit-float;
+	}
+}
+
+.autofit-float-sm-down {
+	@extend %autofit-float-sm-down;
+}
+
+// Autofit Float Md Down
+
+%autofit-float-md-down {
+	@include media-breakpoint-down(md, $cadmin-grid-breakpoints) {
+		@include clay-autofit-float;
+	}
+}
+
+.autofit-float-md-down {
+	@extend %autofit-float-md-down;
+}
+
+// Autofit Float End
+
+%autofit-float-end {
+	@include clay-autofit-float;
+
+	justify-content: flex-end;
+}
+
+.autofit-float-end {
+	@extend %autofit-float-end;
+}
+
+%autofit-float-end-sm-down {
+	@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+		@include clay-autofit-float;
+
+		justify-content: flex-end;
+	}
+}
+
+.autofit-float-end-sm-down {
+	@extend %autofit-float-end-sm-down;
+}
+
+%autofit-float-end-md-down {
+	@include media-breakpoint-down(md, $cadmin-grid-breakpoints) {
+		@include clay-autofit-float;
+
+		justify-content: flex-end;
+	}
+}
+
+.autofit-float-end-md-down {
+	@extend %autofit-float-end-md-down;
+}
+
+// C Inner
+
+@if ($cadmin-enable-c-inner) {
+	.c-inner {
+		@include clay-css($cadmin-c-inner);
+	}
+}
+
+// Headings (h1-6)
+
+.heading-start {
+	margin-right: $cadmin-heading-spacer-x;
+}
+
+.heading-end {
+	margin-left: $cadmin-heading-spacer-x;
+}
+
+.heading-text {
+	margin-bottom: $cadmin-heading-text-margin-bottom;
+	margin-top: $cadmin-heading-text-margin-top;
+}
+
+// Inline Scroller
+
+.inline-scroller {
+	list-style: none;
+	margin: 0;
+	max-height: $cadmin-inline-scroller-max-height;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding: 0;
+}
+
+// Inline Item
+
+.inline-item {
+	align-items: center;
+	display: inline-flex;
+	vertical-align: middle;
+
+	.inline-item {
+		display: inline;
+	}
+
+	.lexicon-icon {
+		margin-top: $cadmin-inline-item-lexicon-icon-margin-top;
+	}
+
+	.loading-animation {
+		font-size: $cadmin-inline-item-loading-animation-font-size;
+	}
+}
+
+.inline-item-before {
+	margin-right: $cadmin-inline-item-spacer-x;
+}
+
+.inline-item-middle {
+	margin-left: $cadmin-inline-item-spacer-x;
+	margin-right: $cadmin-inline-item-spacer-x;
+
+	+ .inline-item-middle {
+		margin-left: 0;
+	}
+}
+
+.inline-item-after {
+	margin-left: $cadmin-inline-item-spacer-x;
+}
+
+// Page Header
+
+.page-header {
+	background-color: $cadmin-page-header-bg;
+}
+
+// Clay Margin and Padding
+
+@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
+	@include media-breakpoint-up($cadmin-breakpoint) {
+		$cadmin-infix: breakpoint-infix(
+			$cadmin-breakpoint,
+			$cadmin-grid-breakpoints
+		);
+
+		@each $cadmin-prop, $cadmin-abbrev in (margin: c-m, padding: c-p) {
+			@each $cadmin-size, $cadmin-length in $cadmin-spacers {
+				.#{$cadmin-abbrev}#{$cadmin-infix}-#{$cadmin-size} {
+					#{$cadmin-prop}: $cadmin-length;
+				}
+
+				.#{$cadmin-abbrev}t#{$cadmin-infix}-#{$cadmin-size},
+				.#{$cadmin-abbrev}y#{$cadmin-infix}-#{$cadmin-size} {
+					#{$cadmin-prop}-top: $cadmin-length;
+				}
+
+				.#{$cadmin-abbrev}r#{$cadmin-infix}-#{$cadmin-size},
+				.#{$cadmin-abbrev}x#{$cadmin-infix}-#{$cadmin-size} {
+					#{$cadmin-prop}-right: $cadmin-length;
+				}
+
+				.#{$cadmin-abbrev}b#{$cadmin-infix}-#{$cadmin-size},
+				.#{$cadmin-abbrev}y#{$cadmin-infix}-#{$cadmin-size} {
+					#{$cadmin-prop}-bottom: $cadmin-length;
+				}
+
+				.#{$cadmin-abbrev}l#{$cadmin-infix}-#{$cadmin-size},
+				.#{$cadmin-abbrev}x#{$cadmin-infix}-#{$cadmin-size} {
+					#{$cadmin-prop}-left: $cadmin-length;
+				}
+			}
+		}
+
+		// Negative margins (e.g., where `.c-mb-n1` is negative version of `.c-mb-1`)
+
+		@each $cadmin-size, $cadmin-length in $cadmin-spacers {
+			@if $cadmin-size != 0 {
+				.c-m#{$cadmin-infix}-n#{$cadmin-size} {
+					margin: -$cadmin-length;
+				}
+
+				.c-mt#{$cadmin-infix}-n#{$cadmin-size},
+				.c-my#{$cadmin-infix}-n#{$cadmin-size} {
+					margin-top: -$cadmin-length;
+				}
+
+				.c-mr#{$cadmin-infix}-n#{$cadmin-size},
+				.c-mx#{$cadmin-infix}-n#{$cadmin-size} {
+					margin-right: -$cadmin-length;
+				}
+
+				.c-mb#{$cadmin-infix}-n#{$cadmin-size},
+				.c-my#{$cadmin-infix}-n#{$cadmin-size} {
+					margin-bottom: -$cadmin-length;
+				}
+
+				.c-ml#{$cadmin-infix}-n#{$cadmin-size},
+				.c-mx#{$cadmin-infix}-n#{$cadmin-size} {
+					margin-left: -$cadmin-length;
+				}
+			}
+		}
+
+		.c-m#{$cadmin-infix}-auto {
+			margin: auto;
+		}
+
+		.c-mt#{$cadmin-infix}-auto,
+		.c-my#{$cadmin-infix}-auto {
+			margin-top: auto;
+		}
+
+		.c-mr#{$cadmin-infix}-auto,
+		.c-mx#{$cadmin-infix}-auto {
+			margin-right: auto;
+		}
+
+		.c-mb#{$cadmin-infix}-auto,
+		.c-my#{$cadmin-infix}-auto {
+			margin-bottom: auto;
+		}
+
+		.c-ml#{$cadmin-infix}-auto,
+		.c-mx#{$cadmin-infix}-auto {
+			margin-left: auto;
+		}
+	}
+}

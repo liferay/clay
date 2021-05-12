@@ -1,0 +1,160 @@
+.tbar {
+	display: flex;
+
+	> .container,
+	> .container-fluid {
+		display: flex;
+	}
+}
+
+.tbar-nav {
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: nowrap;
+	list-style: none;
+	margin-bottom: 0;
+	min-width: 50px;
+	padding-left: 0;
+	word-wrap: break-word;
+
+	> .tbar-item {
+		justify-content: center;
+	}
+}
+
+.tbar-nav-shrink {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: auto;
+}
+
+.tbar-nav-wrap {
+	flex-wrap: wrap;
+}
+
+.tbar-item {
+	@extend %autofit-col !optional;
+
+	max-width: 100%;
+	padding-bottom: $cadmin-tbar-item-padding-y;
+	padding-left: $cadmin-tbar-item-padding-x;
+	padding-right: $cadmin-tbar-item-padding-x;
+	padding-top: $cadmin-tbar-item-padding-y;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.tbar-item-expand {
+	@extend %autofit-col-expand !optional;
+
+	text-align: center;
+}
+
+.tbar-section {
+	@extend %autofit-section !optional;
+}
+
+.tbar-link {
+	display: inline-block;
+}
+
+.tbar-btn-monospaced,
+.tbar-link-monospaced {
+	align-items: center;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+
+	.inline-item .lexicon-icon,
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
+
+// Tbar Inline {xs|sm|md|lg|xl} Down
+
+.tbar-inline-xs-down {
+	@include clay-tbar-inline-down($cadmin-tbar-inline-xs-down);
+}
+
+.tbar-inline-sm-down {
+	@include clay-tbar-inline-down($cadmin-tbar-inline-sm-down);
+}
+
+.tbar-inline-md-down {
+	@include clay-tbar-inline-down($cadmin-tbar-inline-md-down);
+}
+
+.tbar-inline-lg-down {
+	@include clay-tbar-inline-down($cadmin-tbar-inline-lg-down);
+}
+
+.tbar-inline-xl-down {
+	@include clay-tbar-inline-down($cadmin-tbar-inline-xl-down);
+}
+
+// Component Tbar
+
+.component-tbar {
+	@include clay-tbar-variant($cadmin-component-tbar);
+}
+
+// Subnav Tbar
+
+.subnav-tbar {
+	.btn-unstyled {
+		color: $cadmin-link-color;
+		text-decoration: $cadmin-link-decoration;
+
+		&:hover {
+			color: $cadmin-link-hover-color;
+			text-decoration: $cadmin-link-hover-decoration;
+		}
+	}
+
+	@include clay-tbar-variant($cadmin-subnav-tbar);
+}
+
+// Subnav Tbar Variants
+
+.subnav-tbar-primary {
+	@include clay-tbar-variant($cadmin-subnav-tbar-primary);
+
+	&.subnav-tbar-disabled {
+		@include clay-tbar-variant($cadmin-subnav-tbar-primary-disabled);
+	}
+}
+
+.subnav-tbar-light {
+	@include clay-tbar-variant($cadmin-subnav-tbar-light);
+}
+
+// Tbar Stacked
+
+.tbar-stacked {
+	@include clay-tbar-variant($cadmin-tbar-stacked);
+}
+
+// Tbar Variants
+
+.tbar-light {
+	@include clay-tbar-variant($cadmin-tbar-light);
+}
+
+.tbar-dark-l2 {
+	@include clay-tbar-variant($cadmin-tbar-dark-l2);
+}
+
+.tbar-dark-d1 {
+	@include clay-tbar-variant($cadmin-tbar-dark-d1);
+}

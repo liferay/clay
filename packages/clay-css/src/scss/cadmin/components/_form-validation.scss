@@ -1,0 +1,262 @@
+// Non HTML5 Form Validator
+
+.has-error {
+	label {
+		color: $cadmin-input-danger-label-color;
+	}
+
+	.custom-control-label,
+	.form-check-label {
+		color: $cadmin-input-danger-checkbox-label-color;
+	}
+
+	.form-control {
+		background-color: $cadmin-input-danger-bg;
+		border-color: $cadmin-input-danger-border-color;
+		box-shadow: $cadmin-input-danger-box-shadow;
+		color: $cadmin-input-danger-color;
+
+		&:focus {
+			background-color: $cadmin-input-danger-focus-bg;
+			border-color: $cadmin-input-danger-focus-border-color;
+			box-shadow: $cadmin-input-danger-focus-box-shadow;
+			color: $cadmin-input-danger-focus-color;
+		}
+	}
+
+	.form-control[readonly] {
+		@include clay-button-variant($cadmin-input-danger-readonly);
+	}
+
+	.form-feedback-item {
+		color: $cadmin-form-feedback-invalid-color;
+	}
+
+	select.form-control {
+		background-image: $cadmin-input-danger-select-icon;
+
+		&[size] {
+			@include clay-select-variant($cadmin-input-danger-select-size);
+		}
+
+		&[multiple] {
+			@include clay-select-variant($cadmin-input-danger-select-multiple);
+		}
+	}
+
+	.input-group-item {
+		&.focus {
+			box-shadow: setter(
+				$cadmin-input-danger-focus-box-shadow,
+				$cadmin-input-danger-box-shadow
+			);
+
+			.form-control,
+			.input-group-inset-item {
+				background-color: setter(
+					$cadmin-input-danger-focus-bg,
+					$cadmin-input-danger-bg
+				);
+				border-color: setter(
+					$cadmin-input-danger-focus-border-color,
+					$cadmin-input-danger-border-color
+				);
+			}
+		}
+
+		.input-group-inset:focus {
+			box-shadow: none;
+
+			~ .input-group-inset-item {
+				background-color: setter(
+					$cadmin-input-danger-focus-bg,
+					$cadmin-input-danger-bg
+				);
+				border-color: setter(
+					$cadmin-input-danger-focus-border-color,
+					$cadmin-input-danger-border-color
+				);
+			}
+		}
+	}
+
+	.input-group .input-group-inset-item {
+		background-color: $cadmin-input-danger-bg;
+		border-color: $cadmin-input-danger-border-color;
+		box-shadow: $cadmin-input-danger-box-shadow;
+	}
+}
+
+.has-warning {
+	label {
+		color: $cadmin-input-warning-label-color;
+	}
+
+	.custom-control-label,
+	.form-check-label {
+		color: $cadmin-input-warning-checkbox-label-color;
+	}
+
+	.form-control {
+		background-color: $cadmin-input-warning-bg;
+		border-color: $cadmin-input-warning-border-color;
+		box-shadow: $cadmin-input-warning-box-shadow;
+		color: $cadmin-input-warning-color;
+
+		&:focus {
+			background-color: $cadmin-input-warning-focus-bg;
+			border-color: $cadmin-input-warning-focus-border-color;
+			box-shadow: $cadmin-input-warning-focus-box-shadow;
+			color: $cadmin-input-warning-focus-color;
+		}
+	}
+
+	.form-control[readonly] {
+		@include clay-button-variant($cadmin-input-warning-readonly);
+	}
+
+	.form-feedback-item {
+		color: $cadmin-form-feedback-warning-color;
+	}
+
+	select.form-control {
+		background-image: $cadmin-input-warning-select-icon;
+
+		&[size] {
+			@include clay-select-variant($cadmin-input-warning-select-size);
+		}
+
+		&[multiple] {
+			@include clay-select-variant($cadmin-input-warning-select-multiple);
+		}
+	}
+
+	.input-group-item {
+		&.focus {
+			box-shadow: setter(
+				$cadmin-input-warning-focus-box-shadow,
+				$cadmin-input-warning-box-shadow
+			);
+
+			.form-control,
+			.input-group-inset-item {
+				background-color: setter(
+					$cadmin-input-warning-focus-bg,
+					$cadmin-input-warning-bg
+				);
+				border-color: setter(
+					$cadmin-input-warning-focus-border-color,
+					$cadmin-input-warning-border-color
+				);
+			}
+		}
+
+		.input-group-inset:focus {
+			box-shadow: none;
+
+			~ .input-group-inset-item {
+				background-color: setter(
+					$cadmin-input-warning-focus-bg,
+					$cadmin-input-warning-bg
+				);
+				border-color: setter(
+					$cadmin-input-warning-focus-border-color,
+					$cadmin-input-warning-border-color
+				);
+			}
+		}
+	}
+
+	.input-group .input-group-inset-item {
+		background-color: $cadmin-input-warning-bg;
+		border-color: $cadmin-input-warning-border-color;
+		box-shadow: $cadmin-input-warning-box-shadow;
+	}
+}
+
+.has-success {
+	label {
+		color: $cadmin-input-success-label-color;
+	}
+
+	.custom-control-label,
+	.form-check-label {
+		color: $cadmin-input-success-checkbox-label-color;
+	}
+
+	.form-control {
+		background-color: $cadmin-input-success-bg;
+		border-color: $cadmin-input-success-border-color;
+		box-shadow: $cadmin-input-success-box-shadow;
+		color: $cadmin-input-success-color;
+
+		&:focus {
+			background-color: $cadmin-input-success-focus-bg;
+			border-color: $cadmin-input-success-focus-border-color;
+			box-shadow: $cadmin-input-success-focus-box-shadow;
+			color: $cadmin-input-success-focus-color;
+		}
+	}
+
+	.form-control[readonly] {
+		@include clay-button-variant($cadmin-input-success-readonly);
+	}
+
+	.form-feedback-item {
+		color: $cadmin-form-feedback-valid-color;
+	}
+
+	select.form-control {
+		background-image: $cadmin-input-success-select-icon;
+
+		&[size] {
+			@include clay-select-variant($cadmin-input-success-select-size);
+		}
+
+		&[multiple] {
+			@include clay-select-variant($cadmin-input-success-select-multiple);
+		}
+	}
+
+	.input-group-item {
+		&.focus {
+			box-shadow: setter(
+				$cadmin-input-success-focus-box-shadow,
+				$cadmin-input-success-box-shadow
+			);
+
+			.form-control,
+			.input-group-inset-item {
+				background-color: setter(
+					$cadmin-input-success-focus-bg,
+					$cadmin-input-success-bg
+				);
+				border-color: setter(
+					$cadmin-input-success-focus-border-color,
+					$cadmin-input-success-border-color
+				);
+			}
+		}
+
+		.input-group-inset:focus {
+			box-shadow: none;
+
+			~ .input-group-inset-item {
+				background-color: setter(
+					$cadmin-input-success-focus-bg,
+					$cadmin-input-success-bg
+				);
+				border-color: setter(
+					$cadmin-input-success-focus-border-color,
+					$cadmin-input-success-border-color
+				);
+			}
+		}
+	}
+
+	.input-group .input-group-inset-item {
+		background-color: $cadmin-input-success-bg;
+		border-color: $cadmin-input-success-border-color;
+		box-shadow: $cadmin-input-success-box-shadow;
+	}
+}

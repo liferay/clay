@@ -1,0 +1,687 @@
+.card,
+.card-horizontal {
+	background-color: $cadmin-card-bg;
+	border-color: $cadmin-card-border-color;
+	border-style: $cadmin-card-border-style;
+	border-width: $cadmin-card-border-width;
+
+	@include border-radius($cadmin-card-border-radius);
+	@include box-shadow($cadmin-card-box-shadow);
+
+	display: block;
+	height: $cadmin-card-height;
+	margin-bottom: $cadmin-card-margin-bottom;
+
+	// See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+
+	min-width: 0;
+	position: relative;
+	word-wrap: break-word;
+
+	@if ($cadmin-card-border-radius > 0) {
+		.autofit-col {
+			&:first-child {
+				@include border-left-radius($cadmin-card-inner-border-radius);
+			}
+
+			&:last-child {
+				@include border-right-radius($cadmin-card-inner-border-radius);
+			}
+		}
+	}
+
+	.aspect-ratio {
+		.label {
+			@include clay-css($cadmin-card-aspect-ratio-label);
+		}
+	}
+
+	.aspect-ratio-item-top-left {
+		@include clay-css($cadmin-card-aspect-ratio-item-top-left);
+	}
+
+	.aspect-ratio-item-top-center {
+		@include clay-css($cadmin-card-aspect-ratio-item-top-center);
+	}
+
+	.aspect-ratio-item-top-right {
+		@include clay-css($cadmin-card-aspect-ratio-item-top-right);
+	}
+
+	.aspect-ratio-item-right-middle {
+		@include clay-css($cadmin-card-aspect-ratio-item-right-middle);
+	}
+
+	.aspect-ratio-item-bottom-right {
+		@include clay-css($cadmin-card-aspect-ratio-item-bottom-right);
+	}
+
+	.aspect-ratio-item-bottom-center {
+		@include clay-css($cadmin-card-aspect-ratio-item-bottom-center);
+	}
+
+	.aspect-ratio-item-bottom-left {
+		@include clay-css($cadmin-card-aspect-ratio-item-bottom-left);
+	}
+
+	> hr {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	> .list-group:first-child {
+		.list-group-item:first-child {
+			@include border-top-radius($cadmin-card-border-radius);
+		}
+	}
+
+	> .list-group:last-child {
+		.list-group-item:last-child {
+			@include border-bottom-radius($cadmin-card-border-radius);
+		}
+	}
+}
+
+.card-body {
+	color: $cadmin-card-color;
+
+	// Enable `flex-grow: 1` for decks and groups so that card blocks take up
+	// as much space as possible, ensuring footers are aligned to the bottom.
+
+	flex: 1 1 auto;
+
+	// Workaround for the image size bug in IE
+	// See: https://github.com/twbs/bootstrap/pull/28855
+
+	min-height: 1px;
+
+	padding-bottom: $cadmin-card-body-padding-bottom;
+	padding-left: $cadmin-card-body-padding-left;
+	padding-right: $cadmin-card-body-padding-right;
+	padding-top: $cadmin-card-body-padding-top;
+}
+
+.card-section-header {
+	color: $cadmin-card-section-header-color;
+	font-size: $cadmin-card-section-header-font-size;
+	font-weight: $cadmin-card-section-header-font-weight;
+	line-height: $cadmin-card-section-header-line-height;
+	margin-bottom: $cadmin-card-section-header-margin-bottom;
+	padding: $cadmin-card-section-header-padding;
+	text-transform: $cadmin-card-section-header-text-transform;
+}
+
+// Card Title
+
+.card-title {
+	@include clay-text-typography($cadmin-card-title);
+}
+
+.card-title a {
+	@include clay-link($cadmin-card-title-link);
+}
+
+// Card Subtitle
+
+.card-subtitle {
+	@include clay-text-typography($cadmin-card-subtitle);
+}
+
+.card-subtitle a {
+	@include clay-link($cadmin-card-subtitle-link);
+}
+
+// Card Text
+
+.card-text:last-child {
+	margin-bottom: 0;
+}
+
+// Card Link
+
+.card-link {
+	@include clay-link($cadmin-card-link);
+
+	&.btn-unstyled {
+		white-space: normal;
+	}
+
+	+ .card-link {
+		margin-left: 0;
+	}
+}
+
+.card-divider {
+	background-color: $cadmin-card-divider-bg;
+	height: $cadmin-card-divider-height;
+	margin-bottom: $cadmin-card-divider-spacer-y;
+	margin-left: $cadmin-card-divider-spacer-x;
+	margin-right: $cadmin-card-divider-spacer-x;
+	margin-top: $cadmin-card-divider-spacer-y;
+}
+
+// Card Header
+
+.card-header {
+	background-color: $cadmin-card-cap-bg;
+	border-bottom: $cadmin-card-border-width solid $cadmin-card-border-color;
+	color: $cadmin-card-cap-color;
+
+	// Removes the default margin-bottom of <hN> (h1 - h6)
+
+	margin-bottom: 0;
+	padding: $cadmin-card-spacer-y $cadmin-card-spacer-x;
+
+	&:first-child {
+		@include border-radius(
+			$cadmin-card-inner-border-radius $cadmin-card-inner-border-radius 0
+				0
+		);
+	}
+
+	+ .list-group {
+		.list-group-item:first-child {
+			border-top: 0;
+		}
+	}
+}
+
+// Card Footer
+
+.card-footer {
+	background-color: $cadmin-card-cap-bg;
+	border-top: $cadmin-card-border-width solid $cadmin-card-border-color;
+	padding: $cadmin-card-spacer-y $cadmin-card-spacer-x;
+
+	&:last-child {
+		@include border-radius(
+			0 0 $cadmin-card-inner-border-radius
+				$cadmin-card-inner-border-radius
+		);
+	}
+}
+
+// Card Img
+
+.card-img-overlay {
+	bottom: 0;
+	left: 0;
+	padding: $cadmin-card-img-overlay-padding;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+	// For IE: https://github.com/twbs/bootstrap/issues/29396
+
+	flex-shrink: 0;
+
+	// Required because we use flexbox and this inherently applies align-self: stretch
+
+	width: 100%;
+}
+
+.card-img,
+.card-img-top {
+	@include border-top-radius($cadmin-card-inner-border-radius);
+}
+
+.card-img,
+.card-img-bottom {
+	@include border-bottom-radius($cadmin-card-inner-border-radius);
+}
+
+// Card Row
+
+.card-row {
+	display: flex;
+	width: 100%;
+
+	.autofit-col {
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.autofit-col-expand {
+		min-width: 25px;
+	}
+}
+
+.card-row .autofit-col-gutters {
+	padding-left: 10px;
+	padding-right: 10px;
+
+	.card-divider {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+// Card Row Content Alignment
+
+.autofit-col {
+	.justify-content-center & {
+		justify-content: center;
+	}
+
+	.justify-content-start & {
+		justify-content: flex-start;
+	}
+
+	.justify-content-end & {
+		justify-content: flex-end;
+	}
+
+	.text-center & {
+		text-align: center;
+	}
+
+	.text-left & {
+		text-align: left;
+	}
+
+	.text-right & {
+		text-align: right;
+	}
+}
+
+// Card Helpers
+
+.card-item-first {
+	@include border-top-radius($cadmin-card-inner-border-radius);
+
+	width: 100%;
+}
+
+.autofit-col:first-child .card-item-first {
+	@include border-radius(
+		$cadmin-card-inner-border-radius 0 0 $cadmin-card-inner-border-radius
+	);
+}
+
+.card-item-last {
+	@include border-bottom-radius($cadmin-card-inner-border-radius);
+
+	width: 100%;
+}
+
+.autofit-col:last-child .card-item-last {
+	@include border-radius(
+		0 $cadmin-card-inner-border-radius $cadmin-card-inner-border-radius 0
+	);
+}
+
+.rounded {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $cadmin-card-rounded-inner-border-radius;
+		border-top-right-radius: $cadmin-card-rounded-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $cadmin-card-rounded-inner-border-radius;
+		border-bottom-right-radius: $cadmin-card-rounded-inner-border-radius;
+	}
+
+	.autofit-col:first-child {
+		border-bottom-left-radius: $cadmin-card-rounded-inner-border-radius;
+		border-top-left-radius: $cadmin-card-rounded-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $cadmin-card-rounded-inner-border-radius 0 0
+				$cadmin-card-rounded-inner-border-radius;
+		}
+	}
+
+	.autofit-col:last-child {
+		border-bottom-right-radius: $cadmin-card-rounded-inner-border-radius;
+		border-top-right-radius: $cadmin-card-rounded-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $cadmin-card-rounded-inner-border-radius
+				$cadmin-card-rounded-inner-border-radius 0;
+		}
+	}
+}
+
+.rounded-0 {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $cadmin-card-rounded-0-inner-border-radius;
+		border-top-right-radius: $cadmin-card-rounded-0-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $cadmin-card-rounded-0-inner-border-radius;
+		border-bottom-right-radius: $cadmin-card-rounded-0-inner-border-radius;
+	}
+
+	.autofit-col:first-child {
+		border-bottom-left-radius: $cadmin-card-rounded-0-inner-border-radius;
+		border-top-left-radius: $cadmin-card-rounded-0-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $cadmin-card-rounded-0-inner-border-radius 0 0
+				$cadmin-card-rounded-0-inner-border-radius;
+		}
+	}
+
+	.autofit-col:last-child {
+		border-bottom-right-radius: $cadmin-card-rounded-0-inner-border-radius;
+		border-top-right-radius: $cadmin-card-rounded-0-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $cadmin-card-rounded-0-inner-border-radius
+				$cadmin-card-rounded-0-inner-border-radius 0;
+		}
+	}
+}
+
+.rounded-circle {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $cadmin-card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $cadmin-card-rounded-circle-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $cadmin-card-rounded-circle-inner-border-radius;
+		border-bottom-right-radius: $cadmin-card-rounded-circle-inner-border-radius;
+	}
+
+	.autofit-col:first-child {
+		border-bottom-left-radius: $cadmin-card-rounded-circle-inner-border-radius;
+		border-top-left-radius: $cadmin-card-rounded-circle-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $cadmin-card-rounded-circle-inner-border-radius 0 0
+				$cadmin-card-rounded-circle-inner-border-radius;
+		}
+	}
+
+	.autofit-col:last-child {
+		border-bottom-right-radius: $cadmin-card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $cadmin-card-rounded-circle-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $cadmin-card-rounded-circle-inner-border-radius
+				$cadmin-card-rounded-circle-inner-border-radius 0;
+		}
+	}
+}
+
+// Checkbox and Radio Cards
+
+.form-check-card {
+	margin-bottom: $cadmin-card-margin-bottom;
+	margin-top: 0;
+	padding-left: 0;
+
+	.card {
+		margin-bottom: 0;
+	}
+
+	.custom-control {
+		display: inline;
+		margin-right: 0;
+		position: static;
+
+		> label {
+			font-weight: $cadmin-font-weight-normal;
+			padding-left: 0;
+		}
+	}
+
+	.custom-control-input {
+		z-index: 2;
+	}
+
+	.custom-control-label {
+		position: absolute;
+		z-index: 1;
+
+		&::before,
+		&::after {
+			top: 0;
+		}
+	}
+
+	.form-check-input {
+		margin-left: 0;
+		margin-top: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.form-check-label {
+		color: $cadmin-body-color;
+		display: inline;
+		font-weight: $cadmin-font-weight-normal;
+		padding-left: 0;
+		position: static;
+	}
+
+	&.active .card,
+	.custom-control-input:checked ~ .card,
+	.form-check-input:checked ~ .card {
+		box-shadow: $cadmin-form-check-card-checked-box-shadow;
+	}
+}
+
+.form-check-card {
+	&:hover {
+		.card {
+			box-shadow: $cadmin-form-check-card-checked-box-shadow;
+		}
+	}
+}
+
+.custom-control-input,
+.form-check-input {
+	&:hover {
+		~ .card {
+			box-shadow: $cadmin-form-check-card-checked-box-shadow;
+		}
+	}
+}
+
+.form-check-bottom-left,
+.form-check-middle-left,
+.form-check-top-left {
+	.card-horizontal {
+		> .card-body {
+			padding-left: $cadmin-checkbox-left-card-padding;
+		}
+	}
+}
+
+.form-check-bottom-right,
+.form-check-middle-right,
+.form-check-top-right {
+	.card-horizontal {
+		> .card-body {
+			padding-right: $cadmin-checkbox-right-card-padding;
+		}
+	}
+}
+
+.form-check-bottom-left {
+	.custom-control-input,
+	.custom-control-label,
+	.form-check-input {
+		bottom: $cadmin-checkbox-position;
+		left: $cadmin-checkbox-position;
+		top: auto;
+		transform: none;
+	}
+}
+
+.form-check-bottom-right {
+	.custom-control-input,
+	.custom-control-label,
+	.form-check-input {
+		bottom: $cadmin-checkbox-position;
+		left: auto;
+		right: $cadmin-checkbox-position;
+		top: auto;
+		transform: none;
+	}
+}
+
+.form-check-middle-left {
+	.custom-control-input,
+	.custom-control-label,
+	.form-check-input {
+		left: $cadmin-checkbox-position;
+		margin-top: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.form-check-middle-right {
+	.custom-control-input,
+	.custom-control-label,
+	.form-check-input {
+		left: auto;
+		margin-top: 0;
+		right: $cadmin-checkbox-position;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.form-check-top-left {
+	.custom-control-input,
+	.custom-control-label,
+	.form-check-input {
+		left: $cadmin-checkbox-position;
+		top: $cadmin-checkbox-position;
+		transform: none;
+	}
+}
+
+.form-check-top-right {
+	.custom-control-input,
+	.custom-control-label,
+	.form-check-input {
+		left: auto;
+		right: $cadmin-checkbox-position;
+		top: $cadmin-checkbox-position;
+		transform: none;
+	}
+}
+
+// Card Page
+
+.card-page {
+	@extend %clay-custom-grid-wrapper !optional;
+
+	&.card-page-equal-height {
+		.card-page-item,
+		.card-page-item-asset,
+		.card-page-item-directory {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.form-check-card {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		}
+
+		.card {
+			flex-grow: 1;
+		}
+	}
+}
+
+.card-page-item-header {
+	padding-left: $cadmin-grid-gutter-width / 2;
+	padding-right: $cadmin-grid-gutter-width / 2;
+	width: 100%;
+}
+
+.card-page-item-directory {
+	@include clay-custom-grid-columns($cadmin-card-page-item-directory);
+}
+
+.card-page-item-asset {
+	@include clay-custom-grid-columns($cadmin-card-page-item-asset);
+}
+
+.card-page-item-user {
+	@include clay-custom-grid-columns($cadmin-card-page-item-user);
+}
+
+// Card Interactive
+
+.card-interactive {
+	@include clay-card-variant($cadmin-card-interactive);
+
+	label {
+		cursor: $cadmin-link-cursor;
+	}
+}
+
+.card-interactive-primary {
+	@include clay-card-variant($cadmin-card-interactive-primary);
+}
+
+.card-interactive-secondary {
+	@include clay-card-variant($cadmin-card-interactive-secondary);
+}
+
+// Card Type Asset
+
+.card-type-asset {
+	@include clay-card-type-asset($cadmin-card-type-asset);
+}
+
+.image-card {
+	@include clay-card-type-asset-variant($cadmin-image-card);
+}
+
+.file-card {
+	@include clay-card-type-asset-variant($cadmin-file-card);
+}
+
+.product-card {
+	@include clay-card-variant($cadmin-product-card);
+}
+
+.user-card {
+	@include clay-card-type-asset-variant($cadmin-user-card);
+}
+
+// Card Type Directory
+
+.card-type-directory {
+	@include clay-card-type-directory($cadmin-card-type-directory);
+}
+
+// Card Type Template
+
+.card-type-template {
+	@include clay-card-variant($cadmin-card-type-template);
+}
+
+// Template Card
+
+.template-card {
+	@include clay-card-variant($cadmin-template-card);
+}
+
+// Template Card Horizontal
+
+.template-card-horizontal {
+	@include clay-card-variant($cadmin-template-card-horizontal);
+}

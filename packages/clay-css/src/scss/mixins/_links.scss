@@ -323,6 +323,15 @@
 	$c-inner: setter(map-get($map, c-inner), ());
 	$c-inner: map-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin-bottom: math-sign(map-get($map, padding-bottom)),
 			margin-left: math-sign(map-get($map, padding-left)),
 			margin-right: math-sign(map-get($map, padding-right)),
@@ -373,7 +382,7 @@
 			}
 		}
 
-		@if ($enable-c-inner) {
+		@if (map-get($c-inner, enabled)) {
 			> .c-inner {
 				@include clay-css($c-inner);
 			}

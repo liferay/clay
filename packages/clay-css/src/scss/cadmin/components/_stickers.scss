@@ -1,0 +1,152 @@
+.sticker {
+	align-items: center;
+	border-color: $cadmin-sticker-border-color;
+
+	@include border-radius($cadmin-sticker-border-radius);
+
+	border-style: $cadmin-sticker-border-style;
+	border-width: $cadmin-sticker-border-width;
+	color: $cadmin-sticker-color;
+
+	@include clay-monospace($cadmin-sticker-size);
+
+	display: inline-flex;
+	font-size: $cadmin-sticker-font-size;
+	font-weight: $cadmin-sticker-font-weight;
+	justify-content: center;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+
+	> .inline-item {
+		font-size: $cadmin-sticker-inline-item-font-size;
+		justify-content: center;
+	}
+
+	> .inline-item .lexicon-icon,
+	.lexicon-icon {
+		margin-top: 0;
+	}
+
+	&.rounded .sticker-overlay {
+		border-radius: $cadmin-rounded-border-radius;
+	}
+
+	&.rounded-circle .sticker-overlay {
+		border-radius: $cadmin-rounded-circle-border-radius;
+	}
+
+	&.rounded-0 .sticker-overlay {
+		border-radius: 0;
+	}
+}
+
+.sticker-img {
+	@extend %aspect-ratio-item-center-middle !optional;
+	@extend %aspect-ratio-item-fluid !optional;
+}
+
+.sticker-overlay {
+	align-items: center;
+
+	@include border-radius($cadmin-sticker-border-radius);
+
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+// Sticker Positions
+
+.sticker-bottom-left {
+	bottom: $cadmin-sticker-inside-offset;
+	left: $cadmin-sticker-inside-offset;
+	position: absolute;
+	right: auto;
+	top: auto;
+}
+
+.sticker-bottom-right {
+	bottom: $cadmin-sticker-inside-offset;
+	left: auto;
+	position: absolute;
+	right: $cadmin-sticker-inside-offset;
+	top: auto;
+}
+
+.sticker-top-left {
+	left: $cadmin-sticker-inside-offset;
+	position: absolute;
+	top: $cadmin-sticker-inside-offset;
+}
+
+.sticker-top-right {
+	left: auto;
+	position: absolute;
+	right: $cadmin-sticker-inside-offset;
+	top: $cadmin-sticker-inside-offset;
+}
+
+.sticker-outside {
+	left: $cadmin-sticker-outside-offset;
+	top: $cadmin-sticker-outside-offset;
+
+	&.sticker-bottom-left {
+		bottom: $cadmin-sticker-outside-offset;
+		top: auto;
+	}
+
+	&.sticker-bottom-right {
+		bottom: $cadmin-sticker-outside-offset;
+		left: auto;
+		right: $cadmin-sticker-outside-offset;
+		top: auto;
+	}
+
+	&.sticker-top-right {
+		left: auto;
+		right: $cadmin-sticker-outside-offset;
+	}
+}
+
+// Sticker User Icon
+
+.sticker-user-icon {
+	@include clay-sticker-variant($cadmin-sticker-user-icon);
+}
+
+// Sticker Sizes
+
+.sticker-sm {
+	@include clay-sticker-size($cadmin-sticker-sm);
+}
+
+.sticker-lg {
+	@include clay-sticker-size($cadmin-sticker-lg);
+}
+
+.sticker-xl {
+	@include clay-sticker-size($cadmin-sticker-xl);
+}
+
+// Sticker Variants
+
+@each $cadmin-color, $cadmin-value in $cadmin-sticker-palette {
+	.sticker-#{$cadmin-color} {
+		background-color: map-get($cadmin-value, bg);
+		border-color: map-get($cadmin-value, border-color);
+		color: map-get($cadmin-value, color);
+	}
+}
+
+// Sticker Circle
+
+.sticker-circle,
+.sticker-circle .sticker-overlay {
+	@include border-radius($cadmin-sticker-circle-border-radius);
+}

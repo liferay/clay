@@ -1,0 +1,87 @@
+@import '_license-text';
+
+// Don't forget easy to include variable overwrites
+
+@import 'functions/_global-functions';
+
+@import '_cadmin-variables';
+
+@import '_mixins';
+
+@import 'cadmin/components/_base';
+@import 'cadmin/components/_reboot';
+
+html#{$cadmin-selector} {
+	.cadmin {
+		@import 'cadmin/components/_type';
+
+		@import 'cadmin/components/_code';
+		@import 'cadmin/components/_images';
+
+		@import 'cadmin/components/_icons';
+
+		@import 'cadmin/components/_aspect-ratio';
+		@import 'cadmin/components/_buttons';
+		@import 'cadmin/components/_transitions';
+
+		@import 'cadmin/components/_grid';
+
+		@import 'cadmin/components/_alerts';
+		@import 'cadmin/components/_badges';
+		@import 'cadmin/components/_breadcrumbs';
+		@import 'cadmin/components/_button-groups';
+		@import 'cadmin/components/_empty-state';
+		@import 'cadmin/components/_labels';
+		@import 'cadmin/components/_stickers';
+
+		@import 'cadmin/components/_cards';
+		@import 'cadmin/components/_dropdowns';
+
+		@import 'cadmin/components/_forms';
+		@import 'cadmin/components/_links';
+
+		@import 'cadmin/components/_range';
+		@import 'cadmin/components/_reorder';
+
+		@import 'cadmin/components/_clay-color';
+		@import 'cadmin/components/_custom-forms';
+		@import 'cadmin/components/_time';
+
+		@import 'cadmin/components/_date-picker';
+		@import 'cadmin/components/_dual-listbox';
+		@import 'cadmin/components/_form-validation';
+		@import 'cadmin/components/_input-groups';
+		@import 'cadmin/components/_list-group';
+		@import 'cadmin/components/_modals';
+		@import 'cadmin/components/_multi-step-nav';
+
+		@import 'cadmin/components/_navs';
+
+		@import 'cadmin/components/_menubar';
+		@import 'cadmin/components/_navbar';
+
+		@import 'cadmin/components/_management-bar';
+		@import 'cadmin/components/_navigation-bar';
+
+		@import 'cadmin/components/_pagination';
+		@import 'cadmin/components/_panels';
+		@import 'cadmin/components/_popovers';
+		@import 'cadmin/components/_progress-bars';
+		@import 'cadmin/components/_quick-action';
+		@import 'cadmin/components/_sheets';
+		@import 'cadmin/components/_side-navigation';
+		@import 'cadmin/components/_sidebar';
+		@import 'cadmin/components/_slideout';
+		@import 'cadmin/components/_tables';
+		@import 'cadmin/components/_tbar';
+		@import 'cadmin/components/_toggle-switch';
+		@import 'cadmin/components/_tooltip';
+
+		@import 'cadmin/components/_utilities';
+		@import 'cadmin/components/_utilities-functional-important';
+
+		@import 'cadmin/components/_loaders';
+
+		@import 'cadmin/components/_print';
+	}
+}

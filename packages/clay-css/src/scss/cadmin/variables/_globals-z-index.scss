@@ -1,0 +1,24 @@
+$cadmin-zindex-dropdown: 1000 !default;
+$cadmin-zindex-sticky: 1020 !default;
+$cadmin-zindex-fixed: 1030 !default;
+$cadmin-zindex-modal-backdrop: 1040 !default;
+$cadmin-zindex-modal: 1050 !default;
+$cadmin-zindex-popover: 1060 !default;
+$cadmin-zindex-tooltip: 1070 !default;
+
+$cadmin-zindex-alert-notifications: 5000 !default;
+$cadmin-zindex-clay-range-input-form-control: 1 !default;
+$cadmin-zindex-input-group-hover: 3 !default;
+$cadmin-zindex-input-group-focus: $cadmin-zindex-input-group-hover + 1 !default; // 4
+$cadmin-zindex-navbar-collapse-absolute: 500 !default;
+$cadmin-zindex-navbar-overlay: 450 !default;
+$cadmin-zindex-navbar-toggler-focus: 525 !default;
+$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile: $cadmin-zindex-navbar-collapse-absolute -
+	1 !default; // 499
+$cadmin-zindex-menubar-vertical-expand-lg-collapse-mobile: $cadmin-zindex-navbar-collapse-absolute -
+	1 !default; // 499
+$cadmin-zindex-pagination-link-focus: 4 !default;
+$cadmin-zindex-pagination-link-active: 3 !default;
+$cadmin-zindex-pagination-link-disabled: 0 !default;
+$cadmin-zindex-panel-header-link-focus: 1 !default;
+$cadmin-zindex-sidenav: $cadmin-zindex-fixed + 5 !default; // 1035

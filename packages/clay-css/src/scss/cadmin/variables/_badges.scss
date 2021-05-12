@@ -1,0 +1,207 @@
+$cadmin-badge-border-color: transparent !default;
+$cadmin-badge-border-style: solid !default;
+$cadmin-badge-border-width: 1px !default;
+
+$cadmin-badge-border-radius: 160px !default;
+
+$cadmin-badge-line-height: 1.1 !default;
+$cadmin-badge-font-size: 10px !default;
+$cadmin-badge-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-badge-padding-x: 4px !default;
+$cadmin-badge-padding-y: 1.5px !default;
+$cadmin-badge-transition: $cadmin-btn-transition !default;
+
+$cadmin-badge-spacer-x: 4px !default;
+$cadmin-badge-spacer-y: 2px !default;
+
+$cadmin-badge-focus-width: $cadmin-input-btn-focus-width !default;
+
+$cadmin-badge-lexicon-icon-height: 0.875em !default;
+$cadmin-badge-lexicon-icon-margin-top: 0 !default;
+$cadmin-badge-lexicon-icon-width: 0.875em !default;
+
+$cadmin-badge-item-expand-min-width: 6px !default;
+$cadmin-badge-item-spacer-x: 0.85714em !default;
+
+$cadmin-badge-link-color: $cadmin-white !default;
+$cadmin-badge-link-hover-color: null !default;
+$cadmin-badge-link-text-decoration: underline !default;
+$cadmin-badge-link-hover-text-decoration: none !default;
+
+$cadmin-badge-close: () !default;
+$cadmin-badge-close: map-deep-merge(
+	(
+		color: inherit,
+		opacity: 1,
+		hover-color: inherit,
+		hover-opacity: 1,
+		focus-opacity: 1,
+		border-radius: 1px,
+		display: inline-flex,
+		font-size: inherit,
+		height: auto,
+		width: auto,
+	),
+	$cadmin-badge-close
+);
+
+// Badge Variants
+
+$cadmin-badge-primary-bg: $cadmin-primary !default;
+$cadmin-badge-primary-hover-bg: $cadmin-badge-primary-bg !default;
+$cadmin-badge-primary-border-color: null !default;
+$cadmin-badge-primary-hover-border-color: null !default;
+$cadmin-badge-primary-color: $cadmin-white !default;
+$cadmin-badge-primary-hover-color: $cadmin-badge-primary-color !default;
+$cadmin-badge-primary-link-color: null !default;
+$cadmin-badge-primary-link-hover-color: null !default;
+
+$cadmin-badge-secondary-bg: $cadmin-secondary-l3 !default;
+$cadmin-badge-secondary-hover-bg: $cadmin-badge-secondary-bg !default;
+$cadmin-badge-secondary-border-color: null !default;
+$cadmin-badge-secondary-hover-border-color: null !default;
+$cadmin-badge-secondary-color: $cadmin-gray-900 !default;
+$cadmin-badge-secondary-hover-color: $cadmin-badge-secondary-color !default;
+$cadmin-badge-secondary-link-color: $cadmin-badge-secondary-color !default;
+$cadmin-badge-secondary-link-hover-color: null !default;
+
+$cadmin-badge-success-bg: $cadmin-success !default;
+$cadmin-badge-success-hover-bg: $cadmin-badge-success-bg !default;
+$cadmin-badge-success-border-color: null !default;
+$cadmin-badge-success-hover-border-color: null !default;
+$cadmin-badge-success-color: $cadmin-white !default;
+$cadmin-badge-success-hover-color: $cadmin-badge-success-color !default;
+$cadmin-badge-success-link-color: null !default;
+$cadmin-badge-success-link-hover-color: null !default;
+
+$cadmin-badge-info-bg: $cadmin-info !default;
+$cadmin-badge-info-hover-bg: $cadmin-badge-info-bg !default;
+$cadmin-badge-info-border-color: null !default;
+$cadmin-badge-info-hover-border-color: null !default;
+$cadmin-badge-info-color: $cadmin-white !default;
+$cadmin-badge-info-hover-color: $cadmin-badge-info-color !default;
+$cadmin-badge-info-link-color: null !default;
+$cadmin-badge-info-link-hover-color: null !default;
+
+$cadmin-badge-warning-bg: $cadmin-warning !default;
+$cadmin-badge-warning-hover-bg: $cadmin-badge-warning-bg !default;
+$cadmin-badge-warning-border-color: null !default;
+$cadmin-badge-warning-hover-border-color: null !default;
+$cadmin-badge-warning-color: $cadmin-white !default;
+$cadmin-badge-warning-hover-color: $cadmin-badge-warning-color !default;
+$cadmin-badge-warning-link-color: null !default;
+$cadmin-badge-warning-link-hover-color: null !default;
+
+$cadmin-badge-danger-bg: $cadmin-danger !default;
+$cadmin-badge-danger-hover-bg: $cadmin-badge-danger-bg !default;
+$cadmin-badge-danger-border-color: null !default;
+$cadmin-badge-danger-hover-border-color: null !default;
+$cadmin-badge-danger-color: $cadmin-white !default;
+$cadmin-badge-danger-hover-color: $cadmin-badge-danger-color !default;
+$cadmin-badge-danger-link-color: null !default;
+$cadmin-badge-danger-link-hover-color: null !default;
+
+$cadmin-badge-light-bg: $cadmin-light !default;
+$cadmin-badge-light-hover-bg: $cadmin-badge-light-bg !default;
+$cadmin-badge-light-border-color: null !default;
+$cadmin-badge-light-hover-border-color: null !default;
+$cadmin-badge-light-color: $cadmin-gray-900 !default;
+$cadmin-badge-light-hover-color: $cadmin-badge-light-color !default;
+$cadmin-badge-light-link-color: $cadmin-badge-light-color !default;
+$cadmin-badge-light-link-hover-color: null !default;
+
+$cadmin-badge-dark-bg: $cadmin-dark !default;
+$cadmin-badge-dark-hover-bg: $cadmin-badge-dark-bg !default;
+$cadmin-badge-dark-border-color: null !default;
+$cadmin-badge-dark-hover-border-color: null !default;
+$cadmin-badge-dark-color: $cadmin-white !default;
+$cadmin-badge-dark-hover-color: $cadmin-badge-dark-color !default;
+$cadmin-badge-dark-link-color: null !default;
+$cadmin-badge-dark-link-hover-color: null !default;
+
+$cadmin-badge-palette: () !default;
+$cadmin-badge-palette: map-deep-merge(
+	(
+		primary: (
+			bg: $cadmin-badge-primary-bg,
+			hover-bg: $cadmin-badge-primary-hover-bg,
+			border-color: $cadmin-badge-primary-border-color,
+			hover-border-color: $cadmin-badge-primary-hover-border-color,
+			color: $cadmin-badge-primary-color,
+			hover-color: $cadmin-badge-primary-hover-color,
+			link-color: $cadmin-badge-primary-link-color,
+			link-hover-color: $cadmin-badge-primary-link-hover-color,
+		),
+		secondary: (
+			bg: $cadmin-badge-secondary-bg,
+			hover-bg: $cadmin-badge-secondary-hover-bg,
+			border-color: $cadmin-badge-secondary-border-color,
+			hover-border-color: $cadmin-badge-secondary-hover-border-color,
+			color: $cadmin-badge-secondary-color,
+			hover-color: $cadmin-badge-secondary-hover-color,
+			link-color: $cadmin-badge-secondary-link-color,
+			link-hover-color: $cadmin-badge-secondary-link-hover-color,
+		),
+		success: (
+			bg: $cadmin-badge-success-bg,
+			hover-bg: $cadmin-badge-success-hover-bg,
+			border-color: $cadmin-badge-success-border-color,
+			hover-border-color: $cadmin-badge-success-hover-border-color,
+			color: $cadmin-badge-success-color,
+			hover-color: $cadmin-badge-success-hover-color,
+			link-color: $cadmin-badge-success-link-color,
+			link-hover-color: $cadmin-badge-success-link-hover-color,
+		),
+		info: (
+			bg: $cadmin-badge-info-bg,
+			hover-bg: $cadmin-badge-info-hover-bg,
+			border-color: $cadmin-badge-info-border-color,
+			hover-border-color: $cadmin-badge-info-hover-border-color,
+			color: $cadmin-badge-info-color,
+			hover-color: $cadmin-badge-info-hover-color,
+			link-color: $cadmin-badge-info-link-color,
+			link-hover-color: $cadmin-badge-info-link-hover-color,
+		),
+		warning: (
+			bg: $cadmin-badge-warning-bg,
+			hover-bg: $cadmin-badge-warning-hover-bg,
+			border-color: $cadmin-badge-warning-border-color,
+			hover-border-color: $cadmin-badge-warning-hover-border-color,
+			color: $cadmin-badge-warning-color,
+			hover-color: $cadmin-badge-warning-hover-color,
+			link-color: $cadmin-badge-warning-link-color,
+			link-hover-color: $cadmin-badge-warning-link-hover-color,
+		),
+		danger: (
+			bg: $cadmin-badge-danger-bg,
+			hover-bg: $cadmin-badge-danger-hover-bg,
+			border-color: $cadmin-badge-danger-border-color,
+			hover-border-color: $cadmin-badge-danger-hover-border-color,
+			color: $cadmin-badge-danger-color,
+			hover-color: $cadmin-badge-danger-hover-color,
+			link-color: $cadmin-badge-danger-link-color,
+			link-hover-color: $cadmin-badge-danger-link-hover-color,
+		),
+		light: (
+			bg: $cadmin-badge-light-bg,
+			hover-bg: $cadmin-badge-light-hover-bg,
+			border-color: $cadmin-badge-light-border-color,
+			hover-border-color: $cadmin-badge-light-hover-border-color,
+			color: $cadmin-badge-light-color,
+			hover-color: $cadmin-badge-light-hover-color,
+			link-color: $cadmin-badge-light-link-color,
+			link-hover-color: $cadmin-badge-light-link-hover-color,
+		),
+		dark: (
+			bg: $cadmin-badge-dark-bg,
+			hover-bg: $cadmin-badge-dark-hover-bg,
+			border-color: $cadmin-badge-dark-border-color,
+			hover-border-color: $cadmin-badge-dark-hover-border-color,
+			color: $cadmin-badge-dark-color,
+			hover-color: $cadmin-badge-dark-hover-color,
+			link-color: $cadmin-badge-dark-link-color,
+			link-hover-color: $cadmin-badge-dark-link-hover-color,
+		),
+	),
+	$cadmin-badge-palette
+);

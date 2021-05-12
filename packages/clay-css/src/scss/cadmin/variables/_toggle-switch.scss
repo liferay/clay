@@ -1,0 +1,68 @@
+$cadmin-toggle-switch-cursor: $cadmin-link-cursor !default;
+$cadmin-toggle-switch-font-weight: $cadmin-input-label-font-weight !default;
+$cadmin-toggle-switch-transition: background-color 100ms ease-in,
+	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
+	color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
+
+// must all be same units--start
+$cadmin-toggle-switch-bar-padding: 4px !default; // space between button and bar, can be negative value
+$cadmin-toggle-switch-bar-padding-mobile: 4px !default;
+$cadmin-toggle-switch-button-width: 16px !default;
+$cadmin-toggle-switch-button-width-mobile: 16px !default; // 16px
+
+$cadmin-toggle-switch-bar-height: ($cadmin-toggle-switch-bar-padding * 2) +
+	$cadmin-toggle-switch-button-width !default;
+$cadmin-toggle-switch-bar-height-mobile: (
+		$cadmin-toggle-switch-bar-padding-mobile * 2
+	) + $cadmin-toggle-switch-button-width-mobile !default;
+$cadmin-toggle-switch-bar-width: 40px !default; // width of switch bar
+$cadmin-toggle-switch-bar-width-mobile: 40px !default; // width of switch bar
+// must all be same units--end
+
+$cadmin-toggle-switch-bar-bg: $cadmin-gray-500 !default;
+$cadmin-toggle-switch-bar-border-color: $cadmin-toggle-switch-bar-bg !default;
+$cadmin-toggle-switch-bar-border-radius: 20px !default;
+$cadmin-toggle-switch-bar-border-width: 1px !default;
+$cadmin-toggle-switch-bar-focus-box-shadow: $cadmin-custom-control-indicator-focus-box-shadow !default;
+$cadmin-toggle-switch-bar-font-size: 10px !default;
+$cadmin-toggle-switch-bar-font-size-mobile: 10px !default;
+$cadmin-toggle-switch-bar-icon-color: $cadmin-white !default;
+
+$cadmin-toggle-switch-button-bg: $cadmin-white !default;
+$cadmin-toggle-switch-button-border-color: $cadmin-toggle-switch-button-bg !default;
+$cadmin-toggle-switch-button-border-radius: 50% !default;
+$cadmin-toggle-switch-button-border-width: 1px !default;
+$cadmin-toggle-switch-button-font-size: $cadmin-toggle-switch-bar-font-size !default; // 12px
+$cadmin-toggle-switch-button-font-size-mobile: $cadmin-toggle-switch-bar-font-size-mobile !default; // 10px
+$cadmin-toggle-switch-button-icon-color: $cadmin-gray-900 !default;
+
+// Toggle Switch On
+
+$cadmin-toggle-switch-bar-on-bg: $cadmin-component-active-bg !default;
+$cadmin-toggle-switch-bar-on-border-color: $cadmin-toggle-switch-bar-on-bg !default;
+$cadmin-toggle-switch-bar-on-icon-color: $cadmin-white !default;
+
+$cadmin-toggle-switch-button-on-bg: $cadmin-white !default;
+$cadmin-toggle-switch-button-on-border-color: $cadmin-white !default;
+$cadmin-toggle-switch-button-on-border-radius: $cadmin-toggle-switch-button-border-radius !default;
+$cadmin-toggle-switch-button-on-icon-color: $cadmin-primary !default;
+
+// Toggle Switch Disabled
+
+$cadmin-toggle-switch-disabled-cursor: $cadmin-disabled-cursor !default;
+$cadmin-toggle-switch-disabled-opacity: 0.4 !default;
+
+// Toggle Switch Label
+
+$cadmin-toggle-switch-label-disabled-color: $cadmin-input-label-disabled-color !default;
+
+// Toggle Switch Text
+
+$cadmin-toggle-switch-text-font-size: 12px !default;
+
+$cadmin-toggle-switch-text-disabled-color: $cadmin-input-label-disabled-color !default;
+
+// Simple Toggle Switch
+
+$cadmin-simple-toggle-switch-label-line-height: 1 !default;
+$cadmin-simple-toggle-switch-label-spacer-x: 8px !default;

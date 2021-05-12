@@ -1,0 +1,49 @@
+.clay-range {
+	padding-bottom: 0.1px;
+
+	.input-group {
+		@include clay-container($cadmin-clay-range-input-group);
+	}
+
+	.input-group-item {
+		@include clay-container($cadmin-clay-range-input-group-item);
+	}
+
+	.input-group-text {
+		@include clay-container($cadmin-clay-range-input-group-text);
+	}
+
+	&.disabled {
+		.clay-range-title {
+			color: $cadmin-clay-range-disabled-color;
+		}
+
+		.input-group-text {
+			color: $cadmin-clay-range-disabled-color;
+		}
+	}
+}
+
+.clay-range-progress-none .clay-range-progress {
+	visibility: hidden;
+}
+
+.clay-range-title {
+	@include clay-link($cadmin-clay-range-title);
+}
+
+.clay-range-input {
+	@include clay-range-input-variant($cadmin-clay-range-input);
+}
+
+.clay-range-align-items-start {
+	.input-group {
+		align-items: flex-start;
+	}
+}
+
+.clay-range-align-items-end {
+	.input-group {
+		align-items: flex-end;
+	}
+}

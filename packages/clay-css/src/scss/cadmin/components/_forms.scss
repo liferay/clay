@@ -1,0 +1,767 @@
+[type='checkbox'] {
+	cursor: $cadmin-form-check-input-cursor;
+	height: 14px;
+	width: 14px;
+
+	&:disabled {
+		cursor: $cadmin-form-check-input-disabled-cursor;
+	}
+}
+
+[type='radio'] {
+	cursor: $cadmin-form-check-input-cursor;
+	height: 15px;
+	width: 14px;
+
+	&:disabled {
+		cursor: $cadmin-form-check-input-disabled-cursor;
+	}
+}
+
+fieldset {
+	word-wrap: break-word;
+}
+
+label {
+	color: $cadmin-input-label-color;
+	font-size: $cadmin-input-label-font-size;
+	font-weight: $cadmin-input-label-font-weight;
+	margin-bottom: $cadmin-input-label-margin-bottom;
+	max-width: 100%;
+	word-wrap: break-word;
+
+	@include clay-scale-component {
+		font-size: $cadmin-input-label-font-size-mobile;
+	}
+
+	&.focus {
+		color: $cadmin-input-label-focus-color;
+	}
+
+	&[for] {
+		cursor: $cadmin-input-label-for-cursor;
+	}
+
+	+ .form-text {
+		margin-bottom: $cadmin-input-label-margin-bottom;
+		margin-top: 0;
+	}
+
+	.reference-mark {
+		color: $cadmin-input-label-reference-mark-color;
+		font-size: $cadmin-input-label-reference-mark-font-size;
+		margin-left: $cadmin-input-label-reference-mark-spacer;
+		margin-right: $cadmin-input-label-reference-mark-spacer;
+		vertical-align: $cadmin-input-label-reference-mark-vertical-align;
+	}
+}
+
+// Label without for attribute
+
+.form-control-label {
+	display: inline;
+	margin-bottom: 0;
+}
+
+.form-control-label-text {
+	cursor: $cadmin-input-label-for-cursor;
+	display: inline-block;
+	margin-bottom: $cadmin-input-label-margin-bottom;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+// Inputs
+
+.form-control {
+	background-color: $cadmin-input-bg;
+	border-color: $cadmin-input-border-color;
+	border-style: $cadmin-input-border-style;
+
+	border-bottom-width: $cadmin-input-border-bottom-width;
+	border-left-width: $cadmin-input-border-left-width;
+	border-right-width: $cadmin-input-border-right-width;
+	border-top-width: $cadmin-input-border-top-width;
+
+	@include border-radius($cadmin-input-border-radius, 0);
+	@include box-shadow($cadmin-input-box-shadow);
+
+	color: $cadmin-input-color;
+	display: block;
+	font-family: $cadmin-input-font-family;
+	font-size: $cadmin-input-font-size;
+	font-weight: $cadmin-input-font-weight;
+	height: $cadmin-input-height;
+	line-height: $cadmin-input-line-height;
+	min-width: 0;
+	padding-bottom: $cadmin-input-padding-y;
+	padding-left: $cadmin-input-padding-x;
+	padding-right: $cadmin-input-padding-x;
+	padding-top: $cadmin-input-padding-y;
+	width: 100%;
+
+	@include transition($cadmin-input-transition);
+
+	@include clay-scale-component {
+		font-size: $cadmin-input-font-size-mobile;
+		height: $cadmin-input-height-mobile;
+	}
+
+	// Placeholder
+
+	&::placeholder {
+		color: $cadmin-input-placeholder-color;
+
+		// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+
+		opacity: 1;
+	}
+
+	&:focus,
+	&.focus {
+		background-color: $cadmin-input-focus-bg;
+		border-color: $cadmin-input-focus-border-color;
+
+		// Avoid using mixin so we can pass custom focus shadow properly
+
+		@if $cadmin-enable-shadows {
+			box-shadow: $cadmin-input-box-shadow, $cadmin-input-focus-box-shadow;
+		} @else {
+			box-shadow: $cadmin-input-focus-box-shadow;
+		}
+
+		color: $cadmin-input-focus-color;
+		outline: 0;
+
+		&::placeholder {
+			color: $cadmin-input-placeholder-focus-color;
+		}
+	}
+
+	// Disabled
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+
+	&:disabled,
+	&.disabled {
+		background-color: $cadmin-input-disabled-bg;
+		border-color: $cadmin-input-disabled-border-color;
+		color: $cadmin-input-disabled-color;
+		cursor: $cadmin-input-disabled-cursor;
+
+		// `opacity: 1;` iOS fix for unreadable disabled content;
+		// see https://github.com/twbs/bootstrap/issues/11655.
+
+		opacity: $cadmin-input-disabled-opacity;
+	}
+
+	// Removes inner shadow on inputs in iOS. Bootstrap 4 uses
+	// `background-clip: padding-box` to remove it but causes 1px clipping issue
+	// in Chrome in connected input-groups when background on input is any other
+	// color than white. This also unstyles the `select.form-control` element.
+
+	&:not([type='range']) {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+
+	// IE10+
+	// `::-ms-clear` disable clear button at the edge of an `<input type="text">`
+	// `::-ms-reveal` disable password reveal button on `<input type="password">`
+
+	&::-ms-clear,
+	&::-ms-reveal {
+		display: none;
+		height: 0;
+		width: 0;
+	}
+
+	.label {
+		@include clay-label-size($cadmin-form-control-label-size);
+	}
+}
+
+// Readonly controls as plain text
+// Apply class to a readonly input to make it appear like regular plain
+// text (without any border, background color, focus indicator)
+
+.form-control-plaintext {
+	background-clip: border-box;
+	background-color: transparent;
+	border-color: transparent;
+	border-style: solid;
+
+	border-bottom-width: $cadmin-input-border-bottom-width;
+	border-left-width: $cadmin-input-border-left-width;
+	border-right-width: $cadmin-input-border-right-width;
+	border-top-width: $cadmin-input-border-top-width;
+	color: $cadmin-input-plaintext-color;
+	display: block;
+	font-size: $cadmin-input-font-size;
+	height: $cadmin-input-height;
+	line-height: $cadmin-input-line-height;
+
+	// match inputs if this class comes on inputs with default margins
+
+	margin-bottom: 0;
+	min-width: 0;
+	padding-bottom: $cadmin-input-padding-y;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: $cadmin-input-padding-y;
+	text-overflow: ellipsis;
+	width: 100%;
+
+	@include clay-scale-component {
+		font-size: $cadmin-input-font-size-mobile;
+		height: $cadmin-input-height-mobile;
+	}
+
+	&.form-control-sm,
+	&.form-control-lg {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.form-control-hidden {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+div {
+	&.form-control {
+		height: auto;
+		min-height: $cadmin-input-height;
+	}
+
+	&.form-control-lg {
+		min-height: $cadmin-input-height-lg;
+	}
+
+	&.form-control-sm {
+		min-height: $cadmin-input-height-sm;
+	}
+}
+
+.form-control-tag-group {
+	@include clay-container($cadmin-form-control-tag-group);
+
+	.autofit-row {
+		@include clay-container($cadmin-form-control-tag-group-autofit-row);
+	}
+
+	.autofit-col {
+		@include clay-container($cadmin-form-control-tag-group-autofit-col);
+
+		.form-control-inset {
+			width: auto;
+		}
+	}
+
+	.input-group-item {
+		@include clay-container(
+			$cadmin-form-control-tag-group-input-group-item
+		);
+	}
+
+	.inline-item {
+		@include clay-container($cadmin-form-control-tag-group-inline-item);
+	}
+
+	.btn {
+		@include clay-button-variant($cadmin-form-control-tag-group-btn);
+	}
+
+	.btn-monospaced {
+		@include clay-button-variant(
+			$cadmin-form-control-tag-group-btn-monospaced
+		);
+	}
+
+	.component-action {
+		@include clay-link($cadmin-form-control-tag-group-component-action);
+	}
+}
+
+.form-control-inset {
+	@include clay-form-control-variant($cadmin-form-control-inset);
+
+	// IE10+
+	// `::-ms-clear` disable clear button at the edge of an `<input type="text">`
+	// `::-ms-reveal` disable password reveal button on `<input type="password">`
+
+	&::-ms-clear,
+	&::-ms-reveal {
+		display: none;
+		height: 0;
+		width: 0;
+	}
+}
+
+// Select
+
+select.form-control {
+	@include clay-select-variant($cadmin-input-select);
+
+	// Unstyle the caret on `<select>`s in IE11.
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	// Remove dotted outline from select box in FF
+
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 $cadmin-input-color;
+	}
+
+	// Suppress the nested default white text on blue background highlight given to
+	// the selected option text when the (still closed) <select> receives focus
+	// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+	// match the appearance of the native widget.
+	// See https://github.com/twbs/bootstrap/issues/19398.
+
+	&:focus::-ms-value {
+		background-color: transparent;
+		color: inherit;
+	}
+}
+
+.form-control-select {
+	@include clay-css($cadmin-form-control-select);
+}
+
+select.form-control[size] {
+	@include clay-select-variant($cadmin-input-select-size);
+}
+
+select.form-control[multiple] {
+	@include clay-select-variant($cadmin-input-select-multiple);
+}
+
+// Textarea
+
+textarea.form-control,
+textarea.form-control-plaintext,
+.form-control.form-control-textarea {
+	height: $cadmin-input-textarea-height;
+	resize: vertical;
+}
+
+// File
+
+.form-control-file {
+	cursor: $cadmin-input-file-cursor;
+	display: block;
+	width: 100%;
+
+	&::-webkit-file-upload-button {
+		cursor: $cadmin-input-file-cursor;
+	}
+}
+
+// Range
+
+.form-control[type='range'] {
+	background-color: transparent;
+	border-color: transparent;
+	padding: 0;
+
+	&:focus {
+		box-shadow: none;
+
+		&::-webkit-slider-thumb {
+			box-shadow: $cadmin-input-focus-box-shadow;
+		}
+	}
+
+	&::-webkit-slider-thumb {
+		border-radius: 100px;
+		transition: $cadmin-input-transition;
+	}
+}
+
+.form-control-range {
+	display: block;
+	width: 100%;
+}
+
+// Checkbox and Radio
+
+.form-check {
+	display: block;
+	padding-left: $cadmin-form-check-input-gutter;
+	position: relative;
+}
+
+.form-check-label {
+	cursor: $cadmin-form-check-label-cursor;
+	display: inline;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.form-check-input {
+	margin-left: math-sign($cadmin-form-check-input-gutter);
+	margin-top: $cadmin-form-check-input-margin-y;
+	position: static;
+
+	// Use [disabled] and :disabled for workaround
+	// https://github.com/twbs/bootstrap/issues/28247
+
+	&[disabled],
+	&:disabled {
+		cursor: $cadmin-form-check-input-disabled-cursor;
+
+		~ .form-check-label,
+		+ .form-check-label-text {
+			color: $cadmin-input-label-disabled-color;
+			cursor: $cadmin-form-check-label-text-disabled-cursor;
+		}
+	}
+}
+
+.form-check-label-text {
+	margin-left: $cadmin-form-check-label-text-margin-left;
+	padding-left: $cadmin-form-check-label-text-padding-left;
+}
+
+.form-check-inline {
+	align-items: center;
+	display: inline-flex;
+
+	// Override base .form-check
+
+	margin-right: $cadmin-form-check-inline-margin-x;
+	padding-left: 0;
+
+	// Undo .form-check-input defaults and add some `margin-right`.
+
+	.form-check-input {
+		margin-left: 0;
+		margin-right: $cadmin-form-check-inline-input-margin-x;
+		margin-top: 0;
+		position: static;
+	}
+}
+
+// Disabled State
+
+fieldset[disabled] label,
+label.disabled {
+	color: $cadmin-input-label-disabled-color;
+	cursor: $cadmin-input-label-disabled-cursor;
+	opacity: $cadmin-input-disabled-opacity;
+}
+
+fieldset[disabled] label {
+	.form-control {
+		font-weight: normal;
+		opacity: 1;
+	}
+}
+
+.form-control {
+	fieldset[disabled] &,
+	&[disabled] {
+		border-color: $cadmin-input-disabled-border-color;
+		color: $cadmin-input-disabled-color;
+		cursor: $cadmin-input-disabled-cursor;
+		opacity: $cadmin-input-disabled-opacity;
+
+		&::placeholder {
+			color: $cadmin-input-placeholder-disabled-color;
+		}
+	}
+}
+
+.form-control[disabled] > option {
+	// Webkit only
+
+	@media (-webkit-min-device-pixel-ratio: 0) {
+		color: $cadmin-input-disabled-color;
+	}
+}
+
+.form-check.disabled .form-check-label {
+	@if not($cadmin-input-label-disabled-color == $cadmin-text-muted) {
+		color: $cadmin-input-label-disabled-color;
+	}
+}
+
+.form-control-file:disabled {
+	cursor: $cadmin-input-disabled-cursor;
+
+	&::-webkit-file-upload-button {
+		cursor: $cadmin-input-disabled-cursor;
+	}
+}
+
+// Readonly State
+
+.form-control[readonly] {
+	@include clay-form-control-variant($cadmin-input-readonly);
+}
+
+.form-control-plaintext[readonly] {
+	@include clay-form-control-variant($cadmin-input-plaintext-readonly);
+}
+
+// Input Sizes
+
+// Bootstrap 4 @extend .form-control-lg; work around
+
+%clay-form-control-lg {
+	@include border-radius($cadmin-input-border-radius-lg);
+
+	font-size: $cadmin-input-font-size-lg;
+	height: $cadmin-input-height-lg;
+	padding-bottom: $cadmin-input-padding-y-lg;
+	padding-left: $cadmin-input-padding-x-lg;
+	padding-right: $cadmin-input-padding-x-lg;
+	padding-top: $cadmin-input-padding-y-lg;
+
+	@include clay-scale-component {
+		height: $cadmin-input-height-lg-mobile;
+	}
+}
+
+.form-control-lg {
+	@extend %clay-form-control-lg;
+}
+
+%clay-select-form-control-lg {
+	height: $cadmin-input-height-lg;
+
+	@include clay-scale-component {
+		height: $cadmin-input-height-lg-mobile;
+	}
+}
+
+%clay-textarea-form-control-lg {
+	height: $cadmin-input-textarea-height-lg;
+}
+
+textarea.form-control-lg,
+.form-control-lg.form-control-textarea {
+	height: $cadmin-input-textarea-height-lg;
+}
+
+// Form control sizing
+// Build on `.form-control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+// Repeated in `_input_group.scss` to avoid Sass extend issues.
+
+.form-control-sm {
+	@include border-radius($cadmin-input-border-radius-sm);
+
+	font-size: $cadmin-input-font-size-sm;
+	height: $cadmin-input-height-sm;
+	line-height: $cadmin-input-line-height-sm;
+	padding: $cadmin-input-padding-y-sm $cadmin-input-padding-x-sm;
+}
+
+.form-control-lg {
+	@include border-radius($cadmin-input-border-radius-lg);
+
+	font-size: $cadmin-input-font-size-lg;
+	height: $cadmin-input-height-lg;
+	line-height: $cadmin-input-line-height-lg;
+	padding: $cadmin-input-padding-y-lg $cadmin-input-padding-x-lg;
+}
+
+// Bootstrap 4 @extend .form-control-sm; work around
+
+%clay-form-control-sm {
+	@include border-radius($cadmin-input-border-radius-sm);
+
+	font-size: $cadmin-input-font-size-sm;
+	height: $cadmin-input-height-sm;
+	padding-bottom: $cadmin-input-padding-y-sm;
+	padding-left: $cadmin-input-padding-x-sm;
+	padding-right: $cadmin-input-padding-x-sm;
+	padding-top: $cadmin-input-padding-y-sm;
+
+	@include clay-scale-component {
+		height: $cadmin-input-height-sm-mobile;
+	}
+}
+
+.form-control-sm {
+	@extend %clay-form-control-sm;
+}
+
+%clay-select-form-control-sm {
+	height: $cadmin-input-height-sm;
+
+	@include clay-scale-component {
+		height: $cadmin-input-height-sm-mobile;
+	}
+}
+
+%clay-textarea-form-control-sm {
+	height: $cadmin-input-textarea-height-sm;
+}
+
+textarea.form-control-sm,
+.form-control-sm.form-control-textarea {
+	height: $cadmin-input-textarea-height-sm;
+}
+
+// Form groups
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form-group {
+	margin-bottom: $cadmin-form-group-margin-bottom;
+}
+
+// Form Group Autofit
+
+.form-group-autofit {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: $cadmin-form-group-autofit-margin-bottom;
+
+	@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
+		flex-direction: row;
+		width: 100%;
+	}
+
+	label {
+		align-self: flex-start;
+	}
+
+	.form-group-item {
+		display: flex;
+		flex-basis: auto;
+		flex-direction: column;
+		flex-grow: 0;
+		flex-shrink: 1;
+		min-width: 25px;
+		position: relative;
+		width: 100%;
+
+		&:not(:last-child) {
+			margin-bottom: $cadmin-form-group-margin-bottom;
+
+			@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
+				margin-bottom: $cadmin-form-group-margin-bottom-mobile;
+			}
+		}
+	}
+
+	> .form-group-item:not(:last-child) {
+		@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
+			margin-bottom: 0;
+			margin-right: $cadmin-grid-gutter-width / 2;
+		}
+	}
+
+	.form-group-item-shrink {
+		flex-shrink: 0;
+		max-width: 100%;
+		width: auto;
+	}
+}
+
+// Form Group Item Label
+
+.form-group-autofit .form-group-item-label:not(:last-child) {
+	@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
+		margin-bottom: 0;
+	}
+}
+
+.form-group-item-label {
+	@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
+		justify-content: center;
+		min-height: $cadmin-input-height;
+
+		> label {
+			margin-bottom: 0;
+			max-width: $cadmin-form-group-item-label-max-width;
+		}
+	}
+}
+
+.form-group-item-label-spacer {
+	@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
+		margin-top: $cadmin-form-group-item-label-spacer;
+	}
+}
+
+// Form Group
+
+.form-group {
+	position: relative;
+
+	@include clay-scale-component {
+		margin-bottom: $cadmin-form-group-margin-bottom-mobile;
+	}
+}
+
+.form-group-sm {
+	margin-bottom: $cadmin-form-group-sm-margin-bottom;
+
+	@include clay-scale-component {
+		margin-bottom: $cadmin-form-group-sm-margin-bottom-mobile;
+	}
+
+	label {
+		margin-bottom: $cadmin-form-group-sm-input-label-margin-bottom;
+	}
+
+	.btn {
+		@extend %clay-btn-sm !optional;
+	}
+
+	.form-control,
+	.form-control-plaintext {
+		@extend %clay-form-control-sm;
+	}
+
+	select.form-control {
+		@extend %clay-select-form-control-sm;
+	}
+
+	select[multiple],
+	.form-control[size] {
+		height: auto;
+	}
+
+	textarea.form-control,
+	.form-control.form-control-textarea {
+		@extend %clay-textarea-form-control-sm;
+	}
+
+	.form-feedback-item ~ .form-feedback-item,
+	.form-feedback-item ~ .form-text,
+	.form-text ~ .form-feedback-item,
+	.form-text ~ .form-text {
+		margin-top: 0;
+	}
+
+	.form-group-item-label {
+		@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
+			min-height: $cadmin-input-height-sm;
+
+			> label {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.form-group-item-label-spacer {
+		@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
+			margin-top: $cadmin-form-group-sm-item-label-spacer;
+		}
+	}
+}

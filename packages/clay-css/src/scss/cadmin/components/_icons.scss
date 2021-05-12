@@ -1,0 +1,88 @@
+.lexicon-icon {
+	display: inline-block;
+	fill: currentColor;
+	height: $cadmin-lexicon-icon-size;
+	margin-top: -3px;
+	vertical-align: middle;
+	width: $cadmin-lexicon-icon-size;
+}
+
+.order-arrow-down-active {
+	.order-arrow-arrow-down {
+		fill: $cadmin-order-arrow-down-active-color;
+	}
+}
+
+.order-arrow-up-active {
+	.order-arrow-arrow-up {
+		fill: $cadmin-order-arrow-up-active-color;
+	}
+}
+
+// Collapse Icon
+
+a.collapse-icon,
+button.collapse-icon {
+	padding-left: $cadmin-collapse-icon-padding-left;
+	padding-right: $cadmin-collapse-icon-padding-right;
+
+	@if ($cadmin-enable-c-inner) {
+		.c-inner {
+			margin-left: math-sign($cadmin-collapse-icon-padding-left);
+			margin-right: math-sign($cadmin-collapse-icon-padding-right);
+		}
+	}
+}
+
+.collapse-icon-closed,
+.collapse-icon-open {
+	.lexicon-icon {
+		display: block;
+	}
+}
+
+.collapse-icon {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		bottom: $cadmin-collapse-icon-position-bottom;
+		height: 1em;
+		left: $cadmin-collapse-icon-position-left;
+		position: absolute;
+		right: $cadmin-collapse-icon-position-right;
+		top: $cadmin-collapse-icon-position-top;
+		width: 1em;
+
+		.lexicon-icon {
+			margin-top: 0;
+		}
+	}
+
+	.collapse-icon-closed {
+		display: none;
+	}
+
+	.collapse-icon-open {
+		display: inline-block;
+	}
+}
+
+.collapsed {
+	.collapse-icon-closed {
+		display: inline-block;
+	}
+
+	.collapse-icon-open {
+		display: none;
+	}
+}
+
+.collapse-icon.collapse-icon-middle {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		margin-top: 0;
+		top: 50%;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}

@@ -1,0 +1,154 @@
+.badge {
+	border-color: $cadmin-badge-border-color;
+	border-style: $cadmin-badge-border-style;
+	border-width: $cadmin-badge-border-width;
+
+	@include border-radius($cadmin-badge-border-radius);
+
+	display: inline-flex;
+	font-size: $cadmin-badge-font-size;
+	font-weight: $cadmin-badge-font-weight;
+	line-height: $cadmin-badge-line-height;
+	margin-bottom: $cadmin-badge-spacer-y;
+	margin-right: $cadmin-badge-spacer-x;
+	margin-top: $cadmin-badge-spacer-y;
+	max-width: 100%;
+	padding: $cadmin-badge-padding-y $cadmin-badge-padding-x;
+	text-align: center;
+
+	@include transition($cadmin-badge-transition);
+
+	white-space: inherit;
+	word-wrap: break-word;
+
+	// Empty badges collapse automatically
+
+	&:empty {
+		display: none;
+	}
+
+	a {
+		color: $cadmin-badge-link-color;
+		text-decoration: $cadmin-badge-link-text-decoration;
+
+		&:hover,
+		&:focus {
+			color: $cadmin-badge-link-hover-color;
+			text-decoration: $cadmin-badge-link-hover-text-decoration;
+		}
+	}
+}
+
+.badge[href] {
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.badge-item {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	justify-content: center;
+	min-height: 0;
+	position: relative;
+	text-align: left;
+
+	a {
+		display: inline-flex;
+	}
+
+	.btn-unstyled {
+		color: inherit;
+		display: inline-flex;
+	}
+
+	.close {
+		@include clay-close($cadmin-badge-close);
+	}
+
+	.lexicon-icon {
+		height: $cadmin-badge-lexicon-icon-height;
+		margin-top: $cadmin-badge-lexicon-icon-margin-top;
+		width: $cadmin-badge-lexicon-icon-width;
+	}
+}
+
+.badge-item-expand {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: $cadmin-badge-item-expand-min-width;
+	word-wrap: break-word;
+
+	a {
+		flex-direction: column;
+	}
+}
+
+.badge-item-before {
+	margin-right: $cadmin-badge-item-spacer-x;
+}
+
+.badge-item-after {
+	margin-left: $cadmin-badge-item-spacer-x;
+}
+
+// Badge C Inner
+
+@if ($cadmin-enable-c-inner) {
+	.badge > .c-inner {
+		margin: -#{$cadmin-badge-padding-y} -#{$cadmin-badge-padding-x};
+		max-width: none;
+	}
+}
+
+// Quick fix for badges in buttons
+
+.btn .badge {
+	margin-right: 0;
+	position: relative;
+	top: -1px;
+}
+
+// Badge Variants
+
+@each $cadmin-color, $cadmin-value in $cadmin-badge-palette {
+	.badge-#{$cadmin-color} {
+		background-color: map-get($cadmin-value, bg);
+		border-color: map-get($cadmin-value, border-color);
+		color: map-get($cadmin-value, color);
+
+		&[href] {
+			&:hover {
+				background-color: map-get($cadmin-value, hover-bg);
+				border-color: map-get($cadmin-value, hover-border-color);
+				color: map-get($cadmin-value, hover-color);
+			}
+
+			&:focus,
+			&.focus {
+				background-color: map-get($cadmin-value, hover-bg);
+				border-color: map-get($cadmin-value, hover-border-color);
+				box-shadow: 0
+					0
+					0
+					$cadmin-badge-focus-width
+					rgba(map-get($cadmin-value, bg), 0.5);
+				color: map-get($cadmin-value, hover-color);
+			}
+		}
+
+		a {
+			color: map-get($cadmin-value, link-color);
+
+			&:hover,
+			&:focus {
+				color: map-get($cadmin-value, link-hover-color);
+			}
+		}
+	}
+}

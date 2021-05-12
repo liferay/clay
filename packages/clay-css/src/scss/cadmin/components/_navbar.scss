@@ -1,0 +1,628 @@
+// Navbar
+
+.navbar {
+	align-items: center;
+	border-width: 0;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: $cadmin-navbar-font-size;
+	justify-content: space-between;
+	padding: $cadmin-navbar-padding-y $cadmin-navbar-padding-x;
+	position: relative;
+
+	%container-flex-properties {
+		align-items: inherit;
+		background-color: inherit;
+		display: inherit;
+		flex-wrap: inherit;
+		justify-content: inherit;
+	}
+
+	.container,
+	.container-fluid {
+		@extend %container-flex-properties;
+	}
+
+	@each $cadmin-breakpoint,
+		$cadmin-container-max-width in $cadmin-container-max-widths
+	{
+		> .container#{breakpoint-infix($cadmin-breakpoint, $cadmin-container-max-widths)} {
+			@extend %container-flex-properties;
+		}
+	}
+}
+
+.navbar-nowrap {
+	flex-wrap: nowrap;
+
+	.navbar-text {
+		min-width: 0;
+		white-space: nowrap;
+	}
+}
+
+.navbar-nav,
+.navbar-form {
+	.dropdown-menu-right {
+		left: auto;
+		right: 0;
+	}
+}
+
+.navbar-nav {
+	display: flex;
+	flex-wrap: inherit;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	.dropdown-menu {
+		float: none;
+	}
+
+	.nav-item,
+	.nav-item .dropdown {
+		align-items: center;
+		display: flex;
+		word-wrap: normal;
+	}
+
+	.nav-item {
+		> .custom-control,
+		> .form-check {
+			margin-bottom: 0;
+			margin-left: $cadmin-navbar-nav-link-padding-x;
+			margin-right: $cadmin-navbar-nav-link-padding-x;
+		}
+	}
+
+	.nav-link {
+		padding-left: $cadmin-navbar-nav-link-padding-x;
+		padding-right: $cadmin-navbar-nav-link-padding-x;
+	}
+}
+
+.navbar-nav-expand {
+	flex-grow: 1;
+	min-width: 0;
+}
+
+.navbar-nav-last {
+	margin-left: auto;
+}
+
+.nav-item-expand {
+	flex-grow: 1;
+	min-width: 0;
+}
+
+.nav-item-shrink {
+	min-width: 0;
+}
+
+.navbar-title {
+	font-size: $cadmin-navbar-title-font-size;
+	font-weight: $cadmin-navbar-title-font-weight;
+	margin-bottom: $cadmin-navbar-title-margin-bottom;
+	text-transform: $cadmin-navbar-title-text-transform;
+}
+
+.navbar-text {
+	display: inline-block;
+	padding-bottom: $cadmin-nav-link-padding-y;
+	padding-left: $cadmin-navbar-nav-link-padding-x;
+	padding-right: $cadmin-navbar-nav-link-padding-x;
+	padding-top: $cadmin-nav-link-padding-y;
+}
+
+.navbar-collapse {
+	align-items: center;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+
+	.container,
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.dropdown-toggle .navbar-text-truncate {
+		max-width: calc(100% - #{$cadmin-navbar-text-truncate-spacer-right});
+	}
+}
+
+.navbar-text-truncate {
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	white-space: nowrap;
+}
+
+// Navbar Toggler
+
+.navbar-toggler-icon {
+	background-size: 100% 100%;
+	background: no-repeat center center;
+	content: '';
+	display: inline-block;
+	height: 1.5em;
+	vertical-align: middle;
+	width: 1.5em;
+}
+
+.navbar-toggler {
+	background-color: transparent;
+	border: $cadmin-border-width solid transparent;
+
+	@include border-radius($cadmin-navbar-toggler-border-radius);
+
+	font-size: $cadmin-navbar-toggler-font-size;
+	line-height: 1;
+	padding: $cadmin-navbar-toggler-padding-y $cadmin-navbar-toggler-padding-x;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus {
+		text-decoration: none;
+		z-index: $cadmin-zindex-navbar-toggler-focus;
+	}
+
+	&:not(:disabled):not(.disabled) {
+		cursor: $cadmin-navbar-toggler-cursor;
+	}
+}
+
+.navbar-toggler-link {
+	align-items: center;
+	display: flex;
+	border-width: 0;
+	line-height: $cadmin-line-height-base;
+	max-width: 100%;
+	padding: $cadmin-navbar-brand-padding-y $cadmin-navbar-nav-link-padding-x;
+	position: relative;
+
+	.lexicon-icon {
+		min-width: 1em;
+		margin-left: 3px;
+		margin-top: 0;
+	}
+}
+
+// Navbar Brand
+
+.navbar-brand {
+	display: inline-block;
+	font-size: $cadmin-navbar-brand-font-size;
+	line-height: inherit;
+	max-width: calc(100% - 72px);
+	padding-bottom: $cadmin-navbar-brand-padding-y;
+	padding-left: $cadmin-navbar-nav-link-padding-x;
+	padding-right: $cadmin-navbar-nav-link-padding-x;
+	padding-top: $cadmin-navbar-brand-padding-y;
+	white-space: nowrap;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+// Navbar Form
+
+.navbar-form {
+	align-items: center;
+	display: flex;
+	padding-left: $cadmin-navbar-nav-link-padding-x;
+	padding-right: $cadmin-navbar-nav-link-padding-x;
+
+	> form {
+		width: 100%;
+	}
+}
+
+.navbar-form-autofit {
+	flex-basis: 100px;
+	flex-grow: 1;
+
+	form {
+		display: flex;
+		width: 100%;
+	}
+}
+
+// Navbar Overlay
+
+.navbar-overlay {
+	background-color: inherit;
+	flex-wrap: inherit;
+}
+
+// Navbar Display Utilities
+
+.navbar-breakpoint-d-block,
+.navbar-breakpoint-d-inline-block,
+.navbar-breakpoint-d-flex {
+	display: none !important;
+}
+
+// Navbar Expand
+
+.navbar-expand {
+	@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
+		$cadmin-next: breakpoint-next(
+			$cadmin-breakpoint,
+			$cadmin-grid-breakpoints
+		);
+		$cadmin-infix: breakpoint-infix($cadmin-next, $cadmin-grid-breakpoints);
+
+		// sm, md, lg, xl, .navbar-expand
+
+		&#{$cadmin-infix} {
+			.nav-item .navbar-text-truncate {
+				max-width: $cadmin-navbar-text-truncate-max-width;
+			}
+
+			// .navbar-expand-sm, md, lg, xl
+
+			@if not($cadmin-infix == '') {
+				@include media-breakpoint-down($cadmin-breakpoint) {
+					&.navbar-collapse-absolute {
+						.navbar-collapse {
+							background-color: inherit;
+							left: 0;
+							padding: 0 $cadmin-navbar-padding-x;
+							position: absolute;
+							right: 0;
+							top: 100%;
+							z-index: $cadmin-zindex-navbar-collapse-absolute;
+
+							.container,
+							.container-fluid {
+								padding-left: $cadmin-grid-gutter-width / 2;
+								padding-right: $cadmin-grid-gutter-width / 2;
+							}
+
+							.navbar-nav,
+							.navbar-form {
+								&:last-child {
+									padding-bottom: $cadmin-navbar-padding-y;
+								}
+							}
+						}
+					}
+
+					.navbar-collapse {
+						.nav-item,
+						.nav-item .dropdown {
+							display: block;
+						}
+
+						.navbar-text-truncate {
+							max-width: 100%;
+						}
+
+						.navbar-nav {
+							flex-direction: column;
+
+							.dropdown-toggle .navbar-text-truncate {
+								max-width: calc(
+									100% - #{$cadmin-navbar-text-truncate-spacer-right}
+								);
+							}
+
+							.dropdown-divider {
+								margin-left: -$cadmin-navbar-padding-x;
+								margin-right: -$cadmin-navbar-padding-x;
+							}
+
+							.dropdown-item {
+								&:hover,
+								&:focus {
+									background-color: transparent;
+								}
+
+								&.active {
+									background-color: transparent;
+								}
+							}
+
+							.dropdown-menu {
+								background-color: transparent;
+								border-width: 0;
+								box-shadow: none;
+								margin: 0;
+								max-height: none;
+								max-width: none;
+								overflow: visible;
+								padding: 0;
+								position: static;
+							}
+						}
+					}
+
+					.show-dropdown-on-collapse {
+						.dropdown-header,
+						.dropdown-item {
+							padding: $cadmin-nav-link-padding-y
+								$cadmin-navbar-nav-link-padding-x;
+						}
+
+						.dropdown-menu {
+							display: block;
+						}
+
+						.dropdown-toggle {
+							display: none;
+						}
+					}
+
+					.navbar-breakpoint-down-d-block {
+						display: block !important;
+					}
+
+					.navbar-breakpoint-down-d-inline-block {
+						display: inline-block !important;
+					}
+
+					.navbar-breakpoint-down-d-flex {
+						display: flex !important;
+					}
+
+					.navbar-breakpoint-down-d-none {
+						display: none !important;
+					}
+				}
+			}
+
+			// .navbar-expand-sm, md, lg, xl, .navbar-expand
+
+			@include media-breakpoint-up($cadmin-next) {
+				@if not($cadmin-infix == '') {
+					.navbar-brand .navbar-text-truncate {
+						max-width: $cadmin-navbar-text-truncate-max-width;
+					}
+
+					.navbar-collapse {
+						display: flex !important;
+						width: auto;
+
+						.dropdown-toggle .navbar-text-truncate {
+							max-width: $cadmin-navbar-text-truncate-max-width -
+								$cadmin-navbar-text-truncate-spacer-right;
+						}
+					}
+
+					.navbar-toggler {
+						display: none;
+					}
+
+					.navbar-breakpoint-d-block {
+						display: block !important;
+					}
+
+					.navbar-breakpoint-d-inline-block {
+						display: inline-block !important;
+					}
+
+					.navbar-breakpoint-d-flex {
+						display: flex !important;
+					}
+
+					.navbar-breakpoint-d-none {
+						display: none !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
+// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
+// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
+
+@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
+	$cadmin-index: index(
+		map-keys($cadmin-grid-breakpoints),
+		$cadmin-breakpoint
+	);
+	$cadmin-length: length(map-keys($cadmin-grid-breakpoints));
+	$cadmin-infix: '.navbar-overlay-#{$cadmin-breakpoint}-down';
+
+	@if ($cadmin-index == $cadmin-length) {
+		$cadmin-infix: '.navbar-overlay-up';
+	}
+
+	#{$cadmin-infix} {
+		@include media-breakpoint-down($cadmin-breakpoint) {
+			@include border-radius($cadmin-navbar-border-radius);
+
+			bottom: 0;
+			display: none;
+			justify-content: space-between;
+			left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			padding-bottom: $cadmin-navbar-padding-y;
+			padding-left: $cadmin-navbar-padding-x;
+			padding-right: $cadmin-navbar-padding-x;
+			padding-top: $cadmin-navbar-padding-y;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: $cadmin-zindex-navbar-overlay;
+
+			&.show {
+				display: flex;
+			}
+		}
+	}
+}
+
+// Navbar Light
+
+.navbar-light {
+	.navbar-brand {
+		color: $cadmin-navbar-light-brand-color;
+
+		&:hover,
+		&:focus {
+			color: $cadmin-navbar-light-brand-hover-color;
+		}
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: $cadmin-navbar-light-color;
+
+			&:hover,
+			&:focus {
+				color: $cadmin-navbar-light-hover-color;
+			}
+
+			&.disabled {
+				color: $cadmin-navbar-light-disabled-color;
+			}
+		}
+
+		.show > .nav-link,
+		.active > .nav-link,
+		.nav-link.show,
+		.nav-link.active {
+			color: $cadmin-navbar-light-active-color;
+		}
+	}
+
+	.navbar-toggler {
+		border-color: $cadmin-navbar-light-toggler-border-color;
+		color: $cadmin-navbar-light-color;
+	}
+
+	.navbar-toggler-icon {
+		background-image: escape-svg($cadmin-navbar-light-toggler-icon-bg);
+	}
+
+	.navbar-text {
+		color: $cadmin-navbar-light-color;
+
+		a {
+			color: $cadmin-navbar-light-active-color;
+
+			&:hover,
+			&:focus {
+				color: $cadmin-navbar-light-active-color;
+			}
+		}
+	}
+}
+
+// Navbar Dark
+
+.navbar-dark {
+	.navbar-brand {
+		color: $cadmin-navbar-dark-brand-color;
+
+		&:hover,
+		&:focus {
+			color: $cadmin-navbar-dark-brand-hover-color;
+		}
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: $cadmin-navbar-dark-color;
+
+			&:hover,
+			&:focus {
+				color: $cadmin-navbar-dark-hover-color;
+			}
+
+			&.disabled {
+				color: $cadmin-navbar-dark-disabled-color;
+			}
+		}
+
+		.show > .nav-link,
+		.active > .nav-link,
+		.nav-link.show,
+		.nav-link.active {
+			color: $cadmin-navbar-dark-active-color;
+		}
+	}
+
+	.navbar-toggler {
+		border-color: $cadmin-navbar-dark-toggler-border-color;
+		color: $cadmin-navbar-dark-color;
+	}
+
+	.navbar-toggler-icon {
+		background-image: escape-svg($cadmin-navbar-dark-toggler-icon-bg);
+	}
+
+	.navbar-text {
+		color: $cadmin-navbar-dark-color;
+
+		a {
+			color: $cadmin-navbar-dark-active-color;
+
+			&:hover,
+			&:focus {
+				color: $cadmin-navbar-dark-active-color;
+			}
+		}
+	}
+}
+
+// Navbar Underline
+
+.navbar-underline {
+	.navbar-toggler-link {
+		&:after {
+			background-color: $cadmin-navbar-underline-active-bg;
+			bottom: -$cadmin-navbar-padding-y;
+			content: '';
+			display: block;
+			height: $cadmin-nav-underline-link-active-highlight-height;
+			left: 0;
+			position: absolute;
+			right: 0;
+			width: auto;
+		}
+	}
+}
+
+.navbar-underline.navbar-expand {
+	@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
+		$cadmin-next: breakpoint-next(
+			$cadmin-breakpoint,
+			$cadmin-grid-breakpoints
+		);
+		$cadmin-infix: breakpoint-infix($cadmin-next, $cadmin-grid-breakpoints);
+
+		// .navbar-expand, sm, md, lg, xl
+
+		&#{$cadmin-infix} {
+			@include media-breakpoint-up($cadmin-next) {
+				.navbar-nav .nav-link {
+					&.active:after {
+						background-color: $cadmin-navbar-underline-active-bg;
+						bottom: -$cadmin-navbar-padding-y;
+						content: '';
+						display: block;
+						height: $cadmin-nav-underline-link-active-highlight-height;
+						left: 0;
+						position: absolute;
+						right: 0;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}

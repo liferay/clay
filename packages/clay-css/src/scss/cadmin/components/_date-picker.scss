@@ -1,0 +1,154 @@
+.date-picker {
+	.input-group-text {
+		@include clay-input-group-text-variant(
+			$cadmin-date-picker-input-group-text
+		);
+	}
+}
+
+// Date Picker Dropdown Menu
+
+.date-picker-dropdown-menu {
+	@include clay-dropdown-menu-variant($cadmin-date-picker-dropdown-menu);
+}
+
+// Date Picker Nav
+
+.date-picker-nav {
+	@include clay-row($cadmin-date-picker-nav-row);
+
+	.nav-btn {
+		@include clay-button-variant($cadmin-date-picker-nav-btn);
+	}
+
+	.nav-btn-monospaced {
+		@include clay-button-variant($cadmin-date-picker-nav-btn-monospaced);
+	}
+
+	select.form-control {
+		@include clay-select-variant($cadmin-date-picker-nav-select);
+	}
+}
+
+.date-picker-nav-item {
+	align-items: center;
+	display: flex;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.date-picker-nav-item-expand {
+	flex-grow: 1;
+}
+
+.date-picker-nav-controls {
+	display: flex;
+	justify-content: flex-end;
+}
+
+// Date Picker Calendar
+
+.date-picker-calendar {
+	@include clay-container($cadmin-date-picker-calendar-container);
+}
+
+.date-picker-calendar-header {
+	@include clay-container($cadmin-date-picker-calendar-header-container);
+}
+
+.date-picker-calendar-body {
+	@include clay-container($cadmin-date-picker-calendar-body-container);
+}
+
+.date-picker-calendar-footer {
+	@include clay-container($cadmin-date-picker-calendar-footer-container);
+}
+
+.date-picker-calendar-item {
+	@include clay-button-variant($cadmin-date-picker-calendar-item);
+}
+
+// Date Picker Days
+
+.date-picker-row {
+	@include clay-row($cadmin-date-picker-row);
+}
+
+.date-picker-col {
+	@include clay-css($cadmin-date-picker-col);
+
+	&.c-selected {
+		$cadmin-_c-selected: setter(
+			map-get($cadmin-date-picker-col, c-selected),
+			()
+		);
+
+		@include clay-css($cadmin-_c-selected);
+
+		&:first-child {
+			$cadmin-_c-selected-first-child: setter(
+				map-get($cadmin-date-picker-col, c-selected-first-child),
+				()
+			);
+
+			@include clay-css($cadmin-_c-selected-first-child);
+		}
+
+		&:last-child {
+			$cadmin-_c-selected-last-child: setter(
+				map-get($cadmin-date-picker-col, c-selected-last-child),
+				()
+			);
+
+			@include clay-css($cadmin-_c-selected-last-child);
+		}
+	}
+
+	&.c-selected-start {
+		$cadmin-_c-selected-start: setter(
+			map-get($cadmin-date-picker-col, c-selected-start),
+			()
+		);
+
+		@include clay-css($cadmin-_c-selected-start);
+	}
+
+	&.c-selected-end {
+		$cadmin-_c-selected-end: setter(
+			map-get($cadmin-date-picker-col, c-selected-end),
+			()
+		);
+
+		@include clay-css($cadmin-_c-selected-end);
+	}
+}
+
+.date-picker-days-row {
+	@include clay-row($cadmin-date-picker-days-row);
+}
+
+.date-picker-day {
+	@include clay-button-variant($cadmin-date-picker-day);
+}
+
+// Date Picker Date
+
+.date-picker-date-row {
+	@include clay-row($cadmin-date-picker-date-row);
+}
+
+.date-picker-date {
+	@include clay-button-variant($cadmin-date-picker-date);
+}
+
+// Previous Month Date
+
+.previous-month-date {
+	@include clay-button-variant($cadmin-date-picker-previous-month-date);
+}
+
+// Next Month Date
+
+.next-month-date {
+	@include clay-button-variant($cadmin-date-picker-next-month-date);
+}

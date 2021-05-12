@@ -1,0 +1,110 @@
+$cadmin-clay-range-disabled-color: $cadmin-gray-500 !default;
+
+$cadmin-clay-range-input-group: () !default;
+$cadmin-clay-range-input-group: map-deep-merge(
+	(
+		align-items: center,
+	),
+	$cadmin-clay-range-input-group
+);
+
+$cadmin-clay-range-input-group-item: () !default;
+$cadmin-clay-range-input-group-item: map-deep-merge(
+	(
+		flex-direction: column,
+	),
+	$cadmin-clay-range-input-group-item
+);
+
+$cadmin-clay-range-input-group-text: () !default;
+$cadmin-clay-range-input-group-text: map-deep-merge(
+	(
+		bg: transparent,
+		border-width: 0,
+		color: $cadmin-gray-500,
+		font-size: 14px,
+		font-weight: $cadmin-font-weight-semi-bold,
+		min-width: 24px,
+		padding-bottom: 0,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: 0,
+	),
+	$cadmin-clay-range-input-group-text
+);
+
+$cadmin-clay-range-title: () !default;
+$cadmin-clay-range-title: map-deep-merge(
+	(
+		display: block,
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: 1,
+		margin-bottom: 8px,
+		text-align: center,
+	),
+	$cadmin-clay-range-title
+);
+
+$cadmin-clay-range-input: () !default;
+$cadmin-clay-range-input: map-deep-merge(
+	(
+		color: $cadmin-gray-500,
+		display: block,
+		padding-bottom: 0.1px,
+		position: relative,
+		vertical-align: middle,
+		width: 100%,
+		thumb-appearance: none,
+		thumb-bg: $cadmin-white,
+		thumb-border-radius: 100px,
+		thumb-border-width: 0,
+		thumb-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3),
+		thumb-height: 24px,
+		thumb-width: 24px,
+		track-appearance: none,
+		track-bg: $cadmin-gray-200,
+		track-border-radius: 100px,
+		track-height: 4px,
+		track-position: absolute,
+		track-top: 50%,
+		track-width: 100%,
+		progress-bg: $cadmin-primary,
+		progress-border-radius: 100px 0 0 100px,
+		progress-position: absolute,
+		progress-top: 50%,
+		progress-width: 50%,
+		tooltip-padding: 8px 12px,
+		tooltip-spacer-y: 4px,
+		tooltip-transition: opacity 0.15s linear,
+		tooltip-visibility: hidden,
+		tooltip-white-space: nowrap,
+		tooltip-arrow-size: 6px,
+		form-control-appearance: none,
+		form-control-bg: transparent,
+		form-control-height: $cadmin-input-height,
+		form-control-position: relative,
+		form-control-z-index: $cadmin-zindex-clay-range-input-form-control,
+		data-label-font-size: 14px,
+		data-label-font-weight: $cadmin-font-weight-semi-bold,
+		data-label-line-height: 1,
+		data-label-margin-top: 40px,
+		data-label-position: absolute,
+		data-label-spacer: 16px,
+		data-label-text-align: center,
+		data-label-top: 0,
+		data-label-width: 24px,
+		data-label-before-content: attr(data-label-min),
+		data-label-after-content: attr(data-label-max),
+		data-label-after-right: 0,
+		hover-cursor: $cadmin-link-cursor,
+		hover-thumb-bg: $cadmin-primary-l3,
+		focus-outline: 0,
+		focus-thumb-box-shadow: $cadmin-component-focus-inset-box-shadow,
+		disabled-color: $cadmin-clay-range-disabled-color,
+		disabled-cursor: $cadmin-disabled-cursor,
+		disabled-thumb-bg: $cadmin-gray-100,
+		disabled-progress-bg: $cadmin-primary-l2,
+		disabled-track-bg: $cadmin-gray-200,
+	),
+	$cadmin-clay-range-input
+);

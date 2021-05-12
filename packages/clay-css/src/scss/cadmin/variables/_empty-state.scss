@@ -1,0 +1,75 @@
+$cadmin-c-empty-state: () !default;
+
+$cadmin-c-empty-state-animation: () !default;
+$cadmin-c-empty-state-animation: map-deep-merge(
+	(
+		align-items: center,
+		display: flex,
+		flex-direction: column,
+		margin: 80px auto 24px,
+		max-width: 340px,
+		text-align: center,
+	),
+	$cadmin-c-empty-state-animation
+);
+
+$cadmin-c-empty-state-image: () !default;
+$cadmin-c-empty-state-image: map-deep-merge(
+	(
+		margin-bottom: -8px,
+		max-width: 250px,
+		width: 100%,
+		word-wrap: break-word,
+	),
+	$cadmin-c-empty-state-image
+);
+
+$cadmin-c-empty-state-aspect-ratio: () !default;
+$cadmin-c-empty-state-aspect-ratio: map-deep-merge(
+	(
+		background-repeat: no-repeat,
+		background-position: center,
+		background-size: 100%,
+		display: block,
+		padding-bottom: 100%,
+		position: relative,
+		width: 100%,
+	),
+	$cadmin-c-empty-state-aspect-ratio
+);
+
+$cadmin-c-empty-state-title: () !default;
+$cadmin-c-empty-state-title: map-deep-merge(
+	(
+		font-size: 20px,
+		font-weight: $cadmin-font-weight-semi-bold,
+		line-height: $cadmin-headings-line-height,
+		margin-bottom: 0,
+		margin-top: 40px,
+		max-width: 100%,
+		word-wrap: break-word,
+	),
+	$cadmin-c-empty-state-title
+);
+
+$cadmin-c-empty-state-text: () !default;
+$cadmin-c-empty-state-text: map-deep-merge(
+	(
+		color: $cadmin-secondary,
+		margin-bottom: 0,
+		margin-top: 8px,
+		max-width: 100%,
+		word-wrap: break-word,
+	),
+	$cadmin-c-empty-state-text
+);
+
+$cadmin-c-empty-state-footer: () !default;
+$cadmin-c-empty-state-footer: map-deep-merge(
+	(
+		margin-top: 16px,
+		max-width: 100%,
+		word-wrap: break-word,
+	),
+	$cadmin-c-empty-state-footer
+);

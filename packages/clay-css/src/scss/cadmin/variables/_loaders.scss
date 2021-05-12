@@ -1,0 +1,23 @@
+$cadmin-loading-icon-font-size: 40px !default; // 40px
+
+$cadmin-loading-icon-font-size-sm: 20px !default; // 20px
+
+// Loading Icon Dotted
+
+$cadmin-loading-animation: () !default;
+$cadmin-loading-animation: map-deep-merge(
+	(
+		animation-name: loading-animation,
+		color: $cadmin-gray-600,
+	),
+	$cadmin-loading-animation
+);
+
+$cadmin-loading-animation-light: () !default;
+$cadmin-loading-animation-light: map-deep-merge(
+	(
+		animation-name: loading-animation-light,
+		color: $cadmin-white,
+	),
+	$cadmin-loading-animation-light
+);

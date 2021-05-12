@@ -1,0 +1,718 @@
+$cadmin-btn-border-width: $cadmin-input-btn-border-width !default;
+$cadmin-btn-border-radius: $cadmin-border-radius !default;
+$cadmin-btn-box-shadow: null !default;
+
+$cadmin-btn-cursor: $cadmin-link-cursor !default;
+$cadmin-btn-font-family: $cadmin-input-btn-font-family !default;
+$cadmin-btn-font-size: $cadmin-input-btn-font-size !default;
+$cadmin-btn-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-btn-line-height: $cadmin-input-btn-line-height !default;
+$cadmin-btn-padding-x: 15px !default; // 15px
+$cadmin-btn-padding-y: 7px !default; // 7px
+$cadmin-btn-transition: color 0.15s ease-in-out,
+	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+	box-shadow 0.15s ease-in-out !default;
+$cadmin-btn-white-space: null !default;
+
+$cadmin-btn-font-size-mobile: null !default;
+$cadmin-btn-padding-x-mobile: null !default;
+$cadmin-btn-padding-y-mobile: null !default;
+
+$cadmin-btn-focus-width: $cadmin-input-btn-focus-width !default;
+$cadmin-btn-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
+
+$cadmin-btn-active-box-shadow: null !default;
+
+$cadmin-btn-disabled-cursor: $cadmin-disabled-cursor !default;
+$cadmin-btn-disabled-opacity: 0.4 !default;
+
+$cadmin-btn-inline-item-font-size: 16px !default; // 16px
+
+$cadmin-btn-section-font-size: 11px !default; // 11px
+$cadmin-btn-section-font-weight: $cadmin-font-weight-normal !default;
+$cadmin-btn-section-line-height: 1 !default;
+
+// Button Lg
+
+$cadmin-btn-border-radius-lg: $cadmin-border-radius !default;
+$cadmin-btn-font-size-lg: $cadmin-font-size-lg !default; // 18px
+$cadmin-btn-line-height-lg: $cadmin-input-btn-line-height-lg !default;
+$cadmin-btn-padding-x-lg: 24px !default; // 24px
+$cadmin-btn-padding-y-lg: 9.5px !default; // 9.5px
+$cadmin-btn-inline-item-font-size-lg: $cadmin-font-size-lg !default; // 18px
+$cadmin-btn-section-font-size-lg: 13px !default; // 13px
+
+$cadmin-btn-font-size-lg-mobile: null !default;
+$cadmin-btn-padding-x-lg-mobile: null !default;
+$cadmin-btn-padding-y-lg-mobile: null !default;
+
+// Button Sm
+
+$cadmin-btn-border-radius-sm: $cadmin-border-radius-sm !default;
+$cadmin-btn-font-size-sm: $cadmin-font-size-sm !default; // 14px
+$cadmin-btn-line-height-sm: 1.15 !default;
+$cadmin-btn-padding-x-sm: 12px !default; // 12px
+$cadmin-btn-padding-y-sm: 7px !default; // 7px
+$cadmin-btn-inline-item-font-size-sm: null !default;
+$cadmin-btn-section-font-size-sm: 9px !default; // 9px
+
+$cadmin-btn-font-size-sm-mobile: null !default;
+$cadmin-btn-padding-x-sm-mobile: null !default;
+$cadmin-btn-padding-y-sm-mobile: null !default;
+
+// Button Monospaced
+
+$cadmin-btn-monospaced-padding-x: 0 !default;
+$cadmin-btn-monospaced-padding-y: 4px !default; // 4px
+$cadmin-btn-monospaced-size: 40px !default; // 40px
+
+$cadmin-btn-monospaced-padding-x-lg: 0 !default;
+$cadmin-btn-monospaced-padding-y-lg: 6px !default; // 6px
+$cadmin-btn-monospaced-size-lg: 48px !default; // 48px
+
+$cadmin-btn-monospaced-padding-x-sm: null !default;
+$cadmin-btn-monospaced-padding-y-sm: 3px !default; // 3px
+$cadmin-btn-monospaced-size-sm: 32px !default; // 32px
+
+$cadmin-btn-monospaced-size-mobile: null !default;
+$cadmin-btn-monospaced-size-lg-mobile: null !default;
+$cadmin-btn-monospaced-size-sm-mobile: null !default;
+
+// Button Block
+
+$cadmin-btn-block-spacing-y: 8px !default;
+
+// Button Group
+
+$cadmin-btn-group-item-margin-right: 16px !default;
+
+// Button Toolbar
+
+$cadmin-btn-toolbar-spacer-x: 8px !default; // 8px
+$cadmin-btn-toolbar-spacer-y: 2px !default; // 2px
+
+// Button Variants
+
+$cadmin-btn-primary: () !default;
+$cadmin-btn-primary: map-deep-merge(
+	(
+		background-color: $cadmin-primary,
+		background-image: clay-enable-gradients($cadmin-primary),
+		border-color: $cadmin-primary,
+		color: color-yiq($cadmin-primary),
+		hover: (
+			background-color: $cadmin-primary-d1,
+			background-image: clay-enable-gradients($cadmin-primary-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-primary, 7.5%)),
+		),
+		focus: (
+			background-color: $cadmin-primary-d1,
+			background-image: clay-enable-gradients($cadmin-primary-d1),
+			border-color: darken($cadmin-primary, 10%),
+			color: color-yiq(darken($cadmin-primary, 7.5%)),
+		),
+		active: (
+			background-color: $cadmin-primary-d2,
+			background-image: clay-enable-gradients(none),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-primary, 10%)),
+		),
+		disabled: (
+			background-color: $cadmin-primary,
+			background-image: clay-enable-gradients($cadmin-primary),
+			border-color: $cadmin-primary,
+			color: color-yiq($cadmin-primary),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$cadmin-btn-primary
+);
+
+$cadmin-btn-secondary: () !default;
+$cadmin-btn-secondary: map-deep-merge(
+	(
+		background-color: $cadmin-white,
+		background-image: clay-enable-gradients($cadmin-white),
+		border-color: $cadmin-secondary-l2,
+		color: $cadmin-secondary,
+		hover: (
+			background-color: $cadmin-gray-100,
+			background-image: clay-enable-gradients($cadmin-gray-100),
+			border-color: $cadmin-secondary-l2,
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			background-color: $cadmin-gray-100,
+			background-image: clay-enable-gradients($cadmin-gray-100),
+			border-color: $cadmin-secondary-l2,
+			color: $cadmin-gray-900,
+		),
+		active: (
+			background-color: $cadmin-gray-200,
+			background-image: clay-enable-gradients(none),
+			border-color: $cadmin-secondary-l2,
+			color: $cadmin-gray-900,
+		),
+		disabled: (
+			background-color: $cadmin-white,
+			background-image: clay-enable-gradients($cadmin-white),
+			border-color: $cadmin-secondary-l2,
+			color: $cadmin-secondary,
+		),
+	),
+	$cadmin-btn-secondary
+);
+
+$cadmin-btn-success: () !default;
+$cadmin-btn-success: map-deep-merge(
+	(
+		background-color: $cadmin-success,
+		background-image: clay-enable-gradients($cadmin-success),
+		border-color: $cadmin-success,
+		color: color-yiq($cadmin-success),
+		hover: (
+			background-color: $cadmin-success-d1,
+			background-image: clay-enable-gradients($cadmin-success-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-success, 7.5%)),
+		),
+		focus: (
+			background-color: $cadmin-success-d1,
+			background-image: clay-enable-gradients($cadmin-success-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-success, 7.5%)),
+		),
+		active: (
+			background-color: $cadmin-success-d2,
+			background-image: clay-enable-gradients(none),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-success, 10%)),
+		),
+		disabled: (
+			background-color: $cadmin-success,
+			background-image: clay-enable-gradients($cadmin-success),
+			border-color: $cadmin-success,
+			color: color-yiq($cadmin-success),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$cadmin-btn-success
+);
+
+$cadmin-btn-info: () !default;
+$cadmin-btn-info: map-deep-merge(
+	(
+		background-color: $cadmin-info,
+		background-image: clay-enable-gradients($cadmin-info),
+		border-color: $cadmin-info,
+		color: color-yiq($cadmin-info),
+		hover: (
+			background-color: $cadmin-info-d1,
+			background-image: clay-enable-gradients($cadmin-info-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-info, 7.5%)),
+		),
+		focus: (
+			background-color: $cadmin-info-d1,
+			background-image: clay-enable-gradients($cadmin-info-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-info, 7.5%)),
+		),
+		active: (
+			background-color: $cadmin-info-d2,
+			background-image: clay-enable-gradients(none),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-info, 10%)),
+		),
+		disabled: (
+			background-color: $cadmin-info,
+			background-image: clay-enable-gradients($cadmin-info),
+			border-color: $cadmin-info,
+			color: color-yiq($cadmin-info),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$cadmin-btn-info
+);
+
+$cadmin-btn-warning: () !default;
+$cadmin-btn-warning: map-deep-merge(
+	(
+		background-color: $cadmin-warning,
+		background-image: clay-enable-gradients($cadmin-warning),
+		border-color: $cadmin-warning,
+		color: color-yiq($cadmin-warning),
+		hover: (
+			background-color: $cadmin-warning-d1,
+			background-image: clay-enable-gradients($cadmin-warning-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-warning, 7.5%)),
+		),
+		focus: (
+			background-color: $cadmin-warning-d1,
+			background-image: clay-enable-gradients($cadmin-warning-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-warning, 7.5%)),
+		),
+		active: (
+			background-color: $cadmin-warning-d2,
+			background-image:
+				clay-enable-gradients(darken($cadmin-warning, 10%)),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-warning, 10%)),
+		),
+		disabled: (
+			background-color: $cadmin-warning,
+			background-image: clay-enable-gradients($cadmin-warning),
+			border-color: $cadmin-warning,
+			color: color-yiq($cadmin-warning),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$cadmin-btn-warning
+);
+
+$cadmin-btn-danger: () !default;
+$cadmin-btn-danger: map-deep-merge(
+	(
+		background-color: $cadmin-danger,
+		background-image: clay-enable-gradients($cadmin-danger),
+		border-color: $cadmin-danger,
+		color: color-yiq($cadmin-danger),
+		hover: (
+			background-color: $cadmin-danger-d1,
+			background-image: clay-enable-gradients($cadmin-danger-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-danger, 7.5%)),
+		),
+		focus: (
+			background-color: $cadmin-danger-d1,
+			background-image: clay-enable-gradients($cadmin-danger-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-danger, 7.5%)),
+		),
+		active: (
+			background-color: $cadmin-danger-d2,
+			background-image: clay-enable-gradients(none),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-danger, 10%)),
+		),
+		disabled: (
+			background-color: $cadmin-danger,
+			background-image: clay-enable-gradients(none),
+			border-color: $cadmin-danger,
+			color: color-yiq($cadmin-danger),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$cadmin-btn-danger
+);
+
+$cadmin-btn-light: () !default;
+$cadmin-btn-light: map-deep-merge(
+	(
+		background-color: $cadmin-light,
+		background-image: clay-enable-gradients($cadmin-light),
+		border-color: $cadmin-light,
+		color: $cadmin-gray-900,
+		hover: (
+			background-color: $cadmin-light-d1,
+			background-image: clay-enable-gradients($cadmin-light-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-light, 7.5%)),
+		),
+		focus: (
+			background-color: $cadmin-light-d1,
+			background-image: clay-enable-gradients($cadmin-light-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-light, 7.5%)),
+		),
+		active: (
+			background-color: $cadmin-light-d2,
+			background-image: clay-enable-gradients(none),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-light, 10%)),
+		),
+		disabled: (
+			background-color: $cadmin-light,
+			background-image: clay-enable-gradients($cadmin-light),
+			border-color: $cadmin-light,
+			color: color-yiq($cadmin-light),
+		),
+	),
+	$cadmin-btn-light
+);
+
+$cadmin-btn-dark: () !default;
+$cadmin-btn-dark: map-deep-merge(
+	(
+		background-color: $cadmin-dark,
+		background-image: clay-enable-gradients($cadmin-dark),
+		border-color: $cadmin-dark,
+		color: color-yiq($cadmin-dark),
+		hover: (
+			background-color: $cadmin-dark-d1,
+			background-image: clay-enable-gradients($cadmin-dark-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-dark, 7.5%)),
+		),
+		focus: (
+			background-color: $cadmin-dark-d1,
+			background-image: clay-enable-gradients($cadmin-dark-d1),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-dark, 7.5%)),
+		),
+		active: (
+			background-color: $cadmin-dark-d2,
+			background-image: clay-enable-gradients(none),
+			border-color: transparent,
+			color: color-yiq(darken($cadmin-dark, 10%)),
+		),
+		disabled: (
+			background-color: $cadmin-dark,
+			background-image: clay-enable-gradients($cadmin-dark),
+			border-color: $cadmin-dark,
+			color: color-yiq($cadmin-dark),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$cadmin-btn-dark
+);
+
+$cadmin-btn-link-disabled-color: $cadmin-link-color !default;
+
+$cadmin-btn-link: () !default;
+$cadmin-btn-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		box-shadow: clay-enable-shadows([none]),
+		color: $cadmin-link-color,
+		font-weight: $cadmin-font-weight-normal,
+		text-decoration: $cadmin-link-decoration,
+		hover: (
+			color: $cadmin-link-hover-color,
+			text-decoration: $cadmin-link-hover-decoration,
+		),
+		focus: (
+			box-shadow: $cadmin-btn-focus-box-shadow,
+			text-decoration: $cadmin-link-decoration,
+		),
+		active: (
+			box-shadow: clay-enable-shadows([none]),
+		),
+		disabled: (
+			box-shadow: none,
+			color: $cadmin-btn-link-disabled-color,
+			text-decoration: none,
+		),
+	),
+	$cadmin-btn-link
+);
+
+$cadmin-btn-palette: () !default;
+$cadmin-btn-palette: map-deep-merge(
+	(
+		primary: $cadmin-btn-primary,
+		secondary: $cadmin-btn-secondary,
+		success: $cadmin-btn-success,
+		info: $cadmin-btn-info,
+		warning: $cadmin-btn-warning,
+		danger: $cadmin-btn-danger,
+		light: $cadmin-btn-light,
+		dark: $cadmin-btn-dark,
+		link: $cadmin-btn-link,
+	),
+	$cadmin-btn-palette
+);
+
+// Button Outline Variants
+
+$cadmin-btn-outline-primary: () !default;
+$cadmin-btn-outline-primary: map-deep-merge(
+	(
+		border-color: $cadmin-primary,
+		color: $cadmin-primary,
+		hover: (
+			background-color: $cadmin-primary-l3,
+			border-color: $cadmin-primary,
+			color: $cadmin-primary,
+		),
+		focus: (
+			background-color: $cadmin-primary-l3,
+			box-shadow: map-get($cadmin-btn-primary, focus-box-shadow),
+			color: $cadmin-primary,
+		),
+		active: (
+			background-color: lighten(desaturate($cadmin-primary, 42.05), 41.76),
+			border-color: $cadmin-primary,
+			color: $cadmin-primary,
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: map-get($cadmin-btn-primary, bg),
+			color: map-get($cadmin-btn-primary, bg),
+		),
+	),
+	$cadmin-btn-outline-primary
+);
+
+$cadmin-btn-outline-secondary: () !default;
+$cadmin-btn-outline-secondary: map-deep-merge(
+	(
+		border-color: $cadmin-secondary-l2,
+		color: $cadmin-secondary,
+		hover: (
+			background-color: rgba($cadmin-gray-900, 0.03),
+			border-color: transparent,
+			color: map-get(map-get($cadmin-btn-secondary, hover), color),
+		),
+		focus: (
+			background-color: rgba($cadmin-gray-900, 0.03),
+			border-color: transparent,
+			box-shadow:
+				map-get(map-get($cadmin-btn-secondary, focus), box-shadow),
+			color: map-get(map-get($cadmin-btn-secondary, focus), color),
+		),
+		active: (
+			background-color: rgba($cadmin-gray-900, 0.06),
+			border-color: transparent,
+			color: map-get(map-get($cadmin-btn-secondary, active), color),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $cadmin-secondary,
+			color: $cadmin-secondary,
+		),
+	),
+	$cadmin-btn-outline-secondary
+);
+
+$cadmin-btn-outline-success: () !default;
+$cadmin-btn-outline-success: map-deep-merge(
+	(
+		border-color: $cadmin-success,
+		color: $cadmin-success,
+		hover: (
+			background-color:
+				map-get(map-get($cadmin-btn-success, hover), background-color),
+			border-color: $cadmin-success,
+			color: color-yiq($cadmin-success),
+		),
+		focus: (
+			background-color:
+				map-get(map-get($cadmin-btn-success, hover), background-color),
+			color: $cadmin-white,
+		),
+		active: (
+			background-color:
+				map-get(map-get($cadmin-btn-success, active), background-color),
+			border-color: $cadmin-success,
+			color: color-yiq($cadmin-success),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: map-get($cadmin-btn-success, background-color),
+			color: map-get($cadmin-btn-success, background-color),
+		),
+	),
+	$cadmin-btn-outline-success
+);
+
+$cadmin-btn-outline-info: () !default;
+$cadmin-btn-outline-info: map-deep-merge(
+	(
+		border-color: $cadmin-info,
+		color: $cadmin-info,
+		hover: (
+			background-color:
+				map-get(map-get($cadmin-btn-info, hover), background-color),
+			border-color: $cadmin-info,
+			color: color-yiq($cadmin-info),
+		),
+		focus: (
+			background-color:
+				map-get(map-get($cadmin-btn-info, hover), background-color),
+			box-shadow: map-get(map-get($cadmin-btn-info, focus), box-shadow),
+			color: $cadmin-white,
+		),
+		active: (
+			background-color:
+				map-get(map-get($cadmin-btn-info, active), background-color),
+			border-color: $cadmin-info,
+			box-shadow: map-get(map-get($cadmin-btn-info, active), box-shadow),
+			color: color-yiq($cadmin-info),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: map-get($cadmin-btn-info, background-color),
+			color: map-get($cadmin-btn-info, background-color),
+		),
+	),
+	$cadmin-btn-outline-info
+);
+
+$cadmin-btn-outline-warning: () !default;
+$cadmin-btn-outline-warning: map-deep-merge(
+	(
+		border-color: $cadmin-warning,
+		color: $cadmin-warning,
+		hover: (
+			background-color:
+				map-get(map-get($cadmin-btn-warning, hover), background-color),
+			border-color: $cadmin-warning,
+			color: color-yiq($cadmin-warning),
+		),
+		focus: (
+			background-color:
+				map-get(map-get($cadmin-btn-warning, hover), background-color),
+			box-shadow: map-get(map-get($cadmin-btn-warning, focus), box-shadow),
+			color: $cadmin-white,
+		),
+		active: (
+			background-color:
+				map-get(map-get($cadmin-btn-warning, active), background-color),
+			border-color: $cadmin-warning,
+			box-shadow:
+				map-get(map-get($cadmin-btn-warning, active), box-shadow),
+			color: color-yiq($cadmin-warning),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: map-get($cadmin-btn-warning, background-color),
+			color: map-get($cadmin-btn-warning, background-color),
+		),
+	),
+	$cadmin-btn-outline-warning
+);
+
+$cadmin-btn-outline-danger: () !default;
+$cadmin-btn-outline-danger: map-deep-merge(
+	(
+		border-color: $cadmin-danger,
+		color: $cadmin-danger,
+		hover: (
+			background-color:
+				map-get(map-get($cadmin-btn-danger, hover), background-color),
+			border-color: $cadmin-danger,
+			color: color-yiq($cadmin-danger),
+		),
+		focus: (
+			background-color:
+				map-get(map-get($cadmin-btn-danger, hover), background-color),
+			box-shadow: map-get(map-get($cadmin-btn-danger, focus), box-shadow),
+			color: $cadmin-white,
+		),
+		active: (
+			background-color:
+				map-get(map-get($cadmin-btn-danger, active), background-color),
+			border-color: $cadmin-danger,
+			color: color-yiq($cadmin-danger),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: map-get($cadmin-btn-danger, background-color),
+			color: map-get($cadmin-btn-danger, background-color),
+		),
+	),
+	$cadmin-btn-outline-danger
+);
+
+$cadmin-btn-outline-light: () !default;
+$cadmin-btn-outline-light: map-deep-merge(
+	(
+		border-color: $cadmin-light,
+		color: $cadmin-light,
+		hover: (
+			background-color:
+				map-get(map-get($cadmin-btn-light, hover), background-color),
+			border-color: $cadmin-light,
+			color: color-yiq($cadmin-light),
+		),
+		focus: (
+			background-color:
+				map-get(map-get($cadmin-btn-light, hover), background-color),
+			box-shadow: map-get(map-get($cadmin-btn-light, focus), box-shadow),
+			color: $cadmin-gray-900,
+		),
+		active: (
+			background-color:
+				map-get(map-get($cadmin-btn-light, active), background-color),
+			border-color: $cadmin-light,
+			box-shadow: map-get(map-get($cadmin-btn-light, active), box-shadow),
+			color: color-yiq($cadmin-light),
+		),
+		active-focus: (
+			box-shadow:
+				clay-enable-shadows(
+					[ $cadmin-btn-active-box-shadow#{','} 0 0 0 $cadmin-btn-focus-width
+						rgba($cadmin-light, 0.5),
+					0 0 0 $cadmin-btn-focus-width rgba($cadmin-light, 0.5) ]
+				),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: map-get($cadmin-btn-light, background-color),
+			color: map-get($cadmin-btn-light, background-color),
+		),
+	),
+	$cadmin-btn-outline-light
+);
+
+$cadmin-btn-outline-dark: () !default;
+$cadmin-btn-outline-dark: map-deep-merge(
+	(
+		border-color: $cadmin-dark,
+		color: $cadmin-dark,
+		hover: (
+			background-color:
+				map-get(map-get($cadmin-btn-dark, hover), background-color),
+			border-color: $cadmin-dark,
+			color: color-yiq($cadmin-dark),
+		),
+		focus: (
+			background-color:
+				map-get(map-get($cadmin-btn-dark, hover), background-color),
+			box-shadow: map-get(map-get($cadmin-btn-dark, focus), box-shadow),
+			color: $cadmin-white,
+		),
+		active: (
+			background-color:
+				map-get(map-get($cadmin-btn-dark, active), background-color),
+			border-color: $cadmin-dark,
+			box-shadow: map-get(map-get($cadmin-btn-dark, active), box-shadow),
+			color: color-yiq($cadmin-dark),
+		),
+		active-focus: (
+			box-shadow:
+				if(
+					$cadmin-enable-shadows and $cadmin-btn-active-box-shadow !=
+						none,
+					$cadmin-btn-active-box-shadow#{','} 0 0 0 $cadmin-btn-focus-width
+						rgba($cadmin-dark, 0.5),
+					0 0 0 $cadmin-btn-focus-width rgba($cadmin-dark, 0.5)
+				),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: map-get($cadmin-btn-dark, background-color),
+			color: map-get($cadmin-btn-dark, background-color),
+		),
+	),
+	$cadmin-btn-outline-dark
+);
+
+$cadmin-btn-outline-palette: () !default;
+$cadmin-btn-outline-palette: map-deep-merge(
+	(
+		primary: $cadmin-btn-outline-primary,
+		secondary: $cadmin-btn-outline-secondary,
+		success: $cadmin-btn-outline-success,
+		info: $cadmin-btn-outline-info,
+		warning: $cadmin-btn-outline-warning,
+		danger: $cadmin-btn-outline-danger,
+		light: $cadmin-btn-outline-light,
+		dark: $cadmin-btn-outline-dark,
+	),
+	$cadmin-btn-outline-palette
+);
