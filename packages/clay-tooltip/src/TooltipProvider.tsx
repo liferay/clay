@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, Keys} from '@clayui/shared';
+import {ClayPortal, Keys, delegate} from '@clayui/shared';
 import domAlign from 'dom-align';
 import React, {useCallback} from 'react';
 import warning from 'warning';
@@ -47,13 +47,29 @@ interface IState {
 	align?: typeof ALIGNMENTS[number];
 	message?: string;
 	show?: boolean;
+	setAsHTML?: boolean;
 }
 
 const initialState: IState = {
 	align: 'top',
 	message: '',
+	setAsHTML: false,
 	show: false,
 };
+
+const TRIGGER_HIDE_EVENTS = [
+	'mouseout',
+	'mouseup',
+	'pointerup',
+	'touchend',
+] as const;
+
+const TRIGGER_SHOW_EVENTS = [
+	'mouseover',
+	'mouseup',
+	'pointerdown',
+	'touchstart',
+] as const;
 
 interface IAction extends IState {
 	type: 'align' | 'hide' | 'show';
@@ -117,18 +133,49 @@ type TContentRenderer = (props: {
 	title: string;
 }) => React.ReactElement | React.ReactNode;
 
-const TooltipProvider: React.FunctionComponent<{
+interface IPropsBase {
+	/**
+	 * Flag to indicate if tooltip should automatically align based on the window
+	 */
 	autoAlign?: boolean;
-	children: React.ReactElement;
+
+	/**
+	 * Custom function for rendering the contents of the tooltip
+	 */
 	contentRenderer?: TContentRenderer;
+
+	/**
+	 * Delay in miliseconds before showing tooltip
+	 */
 	delay?: number;
-}> = ({
+}
+
+interface IPropsWithChildren extends IPropsBase {
+	children: React.ReactElement;
+	scope?: never;
+}
+
+interface IPropsWithScope extends IPropsBase {
+	children?: never;
+
+	/**
+	 * CSS selector to scope provider to. All titles within this scope will be
+	 * rendered in the tooltip. Titles outside of this scope will be styled
+	 * as with the default browser.
+	 */
+	scope: string;
+}
+
+const TooltipProvider: React.FunctionComponent<
+	IPropsWithChildren | IPropsWithScope
+> = ({
 	autoAlign = true,
 	children,
 	contentRenderer = (props) => props.title,
 	delay = 600,
+	scope,
 }) => {
-	const [{align, message = '', show}, dispatch] = React.useReducer(
+	const [{align, message = '', setAsHTML, show}, dispatch] = React.useReducer(
 		reducer,
 		initialState
 	);
@@ -139,65 +186,133 @@ const TooltipProvider: React.FunctionComponent<{
 	const titleNodeRef = React.useRef<HTMLElement | null>(null);
 	const tooltipRef = React.useRef<HTMLElement | null>(null);
 
-	const handleHide = useCallback(({target}: any) => {
-		if (!titleNodeRef.current) {
-			return;
+	const saveTitle = useCallback((element: HTMLElement) => {
+		titleNodeRef.current = element;
+
+		const title = element.getAttribute('title');
+
+		if (title) {
+			element.setAttribute('data-restore-title', title);
+			element.removeAttribute('title');
+		} else if (element.tagName === 'svg') {
+			const titleTag = element.querySelector('title');
+
+			if (titleTag) {
+				element.setAttribute('data-restore-title', titleTag.innerHTML);
+
+				titleTag.remove();
+			}
 		}
+	}, []);
 
-		const dataTitle = titleNodeRef.current.getAttribute('data-title');
+	const restoreTitle = useCallback(() => {
+		const element = titleNodeRef.current;
 
-		if (dataTitle) {
-			document.removeEventListener('keyup', handleEsc, true);
-			target.removeEventListener('click', handleHide);
-			titleNodeRef.current.setAttribute('title', dataTitle);
-			titleNodeRef.current.removeAttribute('data-title');
+		if (element) {
+			const title = element.getAttribute('data-restore-title');
+
+			if (title) {
+				if (element.tagName === 'svg') {
+					const titleTag = document.createElement('title');
+
+					titleTag.innerHTML = title;
+
+					element.appendChild(titleTag);
+				} else {
+					element.setAttribute('title', title);
+				}
+
+				element.removeAttribute('data-restore-title');
+			}
 
 			titleNodeRef.current = null;
+		}
+	}, []);
+
+	const handleHide = useCallback(() => {
+		dispatch({type: 'hide'});
+
+		clearTimeout(timeoutIdRef.current);
+
+		restoreTitle();
+
+		if (targetRef.current) {
+			targetRef.current.removeEventListener('click', handleHide);
+
 			targetRef.current = null;
-
-			dispatch({type: 'hide'});
-			clearTimeout(timeoutIdRef.current);
 		}
 	}, []);
 
-	const handleEsc = useCallback((event: KeyboardEvent) => {
-		if (event.key === Keys.Esc) {
-			event.stopImmediatePropagation();
-			handleHide(event);
-		}
-	}, []);
+	const handleShow = useCallback(({target}: {target: HTMLElement}) => {
+		targetRef.current = target;
 
-	const handleShow = useCallback(({target}: any) => {
-		const hasTitle = target && target.hasAttribute('title');
+		const hasTitle =
+			target &&
+			(target.hasAttribute('title') || target.hasAttribute('data-title'));
 
 		const titleNode = hasTitle
 			? target
-			: closestAncestor(target, '[title]');
+			: closestAncestor(target, '[title], [data-title]');
 
-		const title = titleNode && titleNode.getAttribute('title');
-
-		if (title) {
-			titleNodeRef.current = titleNode;
-			targetRef.current = target;
-
-			document.addEventListener('keyup', handleEsc, true);
+		if (titleNode) {
 			target.addEventListener('click', handleHide);
-			titleNode.setAttribute('data-title', title);
-			titleNode.removeAttribute('title');
+
+			const title =
+				titleNode.getAttribute('title') ||
+				titleNode.getAttribute('data-title') ||
+				'';
+
+			saveTitle(titleNode);
 
 			const customDelay = titleNode.getAttribute('data-tooltip-delay');
-			const newAlign = titleNode.getAttribute('data-tooltip-align');
+			const newAlign = titleNode.getAttribute(
+				'data-tooltip-align'
+			) as typeof align;
+			const setAsHTML = !!titleNode.getAttribute(
+				'data-title-set-as-html'
+			);
 
 			timeoutIdRef.current = setTimeout(
 				() => {
 					dispatch({
 						align: newAlign || align,
 						message: title,
+						setAsHTML,
 						type: 'show',
 					});
 				},
 				customDelay ? Number(customDelay) : delay
 			);
+		}
+	}, []);
+
+	React.useEffect(() => {
+		const handleEsc = (event: KeyboardEvent) => {
+			if (show && event.key === Keys.Esc) {
+				event.stopImmediatePropagation();
+
+				handleHide();
+			}
+		};
+
+		document.addEventListener('keyup', handleEsc, true);
+
+		return () => document.removeEventListener('keyup', handleEsc, true);
+	}, [show]);
+
+	React.useEffect(() => {
+		if (scope) {
+			const disposeShowEvents = TRIGGER_SHOW_EVENTS.map((eventName) => {
+				return delegate(document.body, eventName, scope, handleShow);
+			});
+			const disposeHideEvents = TRIGGER_HIDE_EVENTS.map((eventName) => {
+				return delegate(document.body, eventName, scope, handleHide);
+			});
+
+			return () => {
+				disposeShowEvents.forEach(({dispose}) => dispose());
+				disposeHideEvents.forEach(({dispose}) => dispose());
+			};
 		}
 	}, []);
 
@@ -209,7 +324,7 @@ const TooltipProvider: React.FunctionComponent<{
 			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
 
 			const newAlignmentString = domAlign(
-				(tooltipRef as React.RefObject<HTMLElement>).current!,
+				(tooltipRef as React.RefObject<HTMLDivElement>).current!,
 				titleNodeRef.current,
 				{
 					overflow: {
@@ -232,28 +347,51 @@ const TooltipProvider: React.FunctionComponent<{
 	}, [align, show]);
 
 	warning(
-		children.type !== React.Fragment,
-		'<TooltipProvider />: React Fragment is not allowed as a child to TooltipProvider. Child must be a single HTML element.'
+		!children && !scope,
+		'<TooltipProvider />: You must use at least one of the following props: `children` or `scope`.'
 	);
+
+	warning(
+		children && scope,
+		'<TooltipProvider />: If you want to use `scope`, use <TooltipProvider /> as a singleton and do not pass `children`.'
+	);
+
+	warning(
+		children?.type !== React.Fragment,
+		'<TooltipProvider />: React Fragment is not allowed as a child to TooltipProvider. Child must be a single HTML element that accepts `onMouseOver` and `onMouseOut`.'
+	);
+
+	const titleContent = contentRenderer({
+		targetNode: targetRef.current,
+		title: message,
+	});
 
 	return (
 		<>
 			{show && (
 				<ClayPortal>
 					<ClayTooltip alignPosition={align} ref={tooltipRef} show>
-						{contentRenderer({
-							targetNode: targetRef.current,
-							title: message,
-						})}
+						{setAsHTML && typeof titleContent === 'string' ? (
+							<span
+								dangerouslySetInnerHTML={{
+									__html: titleContent,
+								}}
+							/>
+						) : (
+							titleContent
+						)}
 					</ClayTooltip>
 				</ClayPortal>
 			)}
 
-			{React.cloneElement(children, {
-				...children.props,
-				onMouseOut: handleHide,
-				onMouseOver: handleShow,
-			})}
+			{scope
+				? children
+				: children &&
+				  React.cloneElement(children, {
+						...children.props,
+						onMouseOut: handleHide,
+						onMouseOver: handleShow,
+				  })}
 		</>
 	);
 };
