@@ -1,4 +1,12 @@
-@mixin border-radius($radius: null, $fallback-border-radius: false) {
+@mixin border-radius(
+	$radius:
+		if(
+			variable-exists(border-radius),
+			$border-radius,
+			$cadmin-border-radius
+		),
+	$fallback-border-radius: false
+) {
 	$enable: setter(
 		if(
 			variable-exists(enable-rounded),
@@ -6,15 +14,6 @@
 			$cadmin-enable-rounded
 		),
 		true
-	);
-
-	$radius: setter(
-		$radius,
-		if(
-			variable-exists(border-radius),
-			$border-radius,
-			$cadmin-border-radius
-		)
 	);
 
 	@if ($enable) {
