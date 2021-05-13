@@ -697,6 +697,8 @@ $input-group-inset-item-btn-monospaced: map-deep-merge(
 	(
 		font-size: 1rem,
 		height: 2rem,
+		margin-bottom: math-sign($input-border-bottom-width),
+		margin-top: math-sign($input-border-top-width),
 		padding: 0,
 		width: 2rem,
 	),
