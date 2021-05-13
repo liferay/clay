@@ -7,6 +7,7 @@ import '@clayui/css/lib/css/atlas.css';
 import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 
 import ClayTooltip, {ClayTooltipProvider} from '../src';
 
@@ -72,6 +73,13 @@ storiesOf('Components|ClayTooltip', module)
 						{'Custom Delay'}
 					</button>
 
+					<button
+						data-title="Using data-title"
+						data-tooltip-delay="0"
+					>
+						{'data-title'}
+					</button>
+
 					<div
 						data-tooltip-align="bottom"
 						style={{
@@ -87,6 +95,36 @@ storiesOf('Components|ClayTooltip', module)
 			</ClayTooltipProvider>
 		</div>
 	))
+	.add('ClayTooltipProvider as global w/ scope', () => {
+		return (
+			<div>
+				<ClayTooltipProvider scope=".my-custom-tooltip-scope,.some-other-scope" />
+
+				<div>
+					<button title="browser">{'Browser Default'}</button>
+
+					<div className="my-custom-tooltip-scope">
+						<button title="Clay Style">{'Clay Style'}</button>
+
+						<button
+							data-title-set-as-html
+							title={ReactDOMServer.renderToString(
+								<span style={{color: 'red'}}>
+									{'Custom Styles'}
+								</span>
+							)}
+						>
+							{'Custom Styles'}
+						</button>
+					</div>
+
+					<div className="some-other-scope">
+						<button title="test">{'test'}</button>
+					</div>
+				</div>
+			</div>
+		);
+	})
 	.add('ClayTooltipProvider w/ custom JSX', () => {
 		const ItalicsComponent = (props: any) => <i>{props.title}</i>;
 
