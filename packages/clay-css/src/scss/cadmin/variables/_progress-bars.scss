@@ -32,6 +32,24 @@ $cadmin-progress-group-addon-font-size: 14px !default;
 $cadmin-progress-group-addon-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-progress-group-addon-spacer-x: 16px !default;
 
+$cadmin-progress-group-addon: () !default;
+$cadmin-progress-group-addon: map-deep-merge(
+	(
+		font-size: $cadmin-progress-group-addon-font-size,
+		font-weight: $cadmin-progress-group-addon-font-weight,
+		margin-right: $cadmin-progress-group-addon-spacer-x,
+		min-width: 32px,
+		text-align: center,
+		first-child: (
+			padding-left: 0,
+		),
+		last-child: (
+			padding-right: 0,
+		),
+	),
+	$cadmin-progress-group-addon
+);
+
 $cadmin-progress-group-stacked-progress-margin-bottom: 4px !default;
 $cadmin-progress-group-stacked-progress-margin-top: 4px !default;
 

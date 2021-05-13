@@ -251,6 +251,12 @@
 			@include clay-button-size($cadmin-input-group-lg-inset-item-btn);
 		}
 
+		> .btn-monospaced {
+			@include clay-button-variant(
+				$cadmin-input-group-lg-inset-item-btn-monospaced
+			);
+		}
+
 		> .form-file {
 			height: 75%;
 
@@ -329,6 +335,12 @@
 	> .input-group-inset-item {
 		> .btn {
 			@include clay-button-size($cadmin-input-group-sm-inset-item-btn);
+		}
+
+		> .btn-monospaced {
+			@include clay-button-variant(
+				$cadmin-input-group-sm-inset-item-btn-monospaced
+			);
 		}
 
 		> .form-file {
@@ -462,6 +474,12 @@
 					}
 				}
 			}
+		}
+
+		.btn-monospaced {
+			@include clay-button-variant(
+				$cadmin-input-group-inset-item-btn-monospaced
+			);
 		}
 
 		.form-file {

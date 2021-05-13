@@ -4,22 +4,55 @@ $cadmin-menubar-vertical-expand-md: () !default;
 $cadmin-menubar-vertical-expand-md: map-deep-merge(
 	(
 		max-width: 250px,
-		margin-bottom-mobile: 24px,
-		margin-left-mobile: -
-			(
-				$cadmin-grid-gutter-width / 2,
-			),
-		margin-right-mobile: -
-			(
-				$cadmin-grid-gutter-width / 2,
-			),
-		collapse-z-index-mobile:
-			$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile,
+		mobile: (
+			align-items: center,
+			display: flex,
+			flex-wrap: wrap,
+			justify-content: space-between,
+			margin-bottom: 24px,
+			margin-left: math-sign($cadmin-grid-gutter-width / 2),
+			margin-right: math-sign($cadmin-grid-gutter-width / 2),
+		),
+		collapse: (
+			display: block,
+		),
+		collapse-mobile: (
+			border-color: transparent,
+			border-style: solid,
+			border-width: 1px,
+			display: none,
+			left: -1px,
+			position: absolute,
+			right: -1px,
+			top: 100%,
+			z-index: $cadmin-zindex-menubar-vertical-expand-md-collapse-mobile,
+		),
+		collapse-nav-mobile: (
+			margin-bottom: 8px,
+			margin-top: 8px,
+		),
+		nav-nested-mobile: (
+			margin-bottom: 8px,
+			margin-top: 8px,
+		),
 		nav-nested-margins-item-mobile: (
 			margin-left: 0,
 		),
-		toggler-c-inner: (
-			max-width: none,
+		toggler-mobile: (
+			align-items: center,
+			border-color: transparent,
+			border-style: solid,
+			border-width: 1px,
+			display: flex,
+			height: 32px,
+			padding-left: 8px,
+			padding-right: 8px,
+			c-inner: (
+				max-width: none,
+			),
+			lexicon-icon: (
+				margin-top: 0,
+			),
 		),
 	),
 	$cadmin-menubar-vertical-expand-md
@@ -28,26 +61,42 @@ $cadmin-menubar-vertical-expand-md: map-deep-merge(
 $cadmin-menubar-vertical-transparent-md: () !default;
 $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 	(
-		bg-mobile: $cadmin-white,
-		link-border-radius: 6px,
-		link-border-radius-mobile: 0,
-		link-color: $cadmin-gray-600,
-		link-hover-bg: rgba($cadmin-gray-900, 0.03),
-		link-hover-color: $cadmin-gray-900,
-		link-active-color: $cadmin-gray-900,
-		link-active-font-weight: $cadmin-font-weight-semi-bold,
+		breakpoint-up: md,
+		mobile: (
+			background-color: $cadmin-white,
+		),
 		link: (
-			transition: $cadmin-btn-transition,
-			focus-bg: rgba($cadmin-gray-900, 0.03),
-			focus-color: $cadmin-gray-900,
-			focus-box-shadow:
-				map-get($cadmin-dropdown-item-base, focus-box-shadow),
-			focus-outline: map-get($cadmin-dropdown-item-base, focus-outline),
+			border-radius: 6px,
+			transition: #{color 0.15s ease-in-out,
+			background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out,
+			box-shadow 0.15s ease-in-out},
+			color: $cadmin-gray-600,
+			hover: (
+				background-color: rgba($cadmin-gray-900, 0.03),
+				color: $cadmin-gray-900,
+			),
+			focus: (
+				background-color: rgba($cadmin-gray-900, 0.03),
+				box-shadow:
+					clay-enable-shadows(
+						$cadmin-component-focus-inset-box-shadow
+					),
+				color: $cadmin-gray-900,
+				outline: 0,
+			),
+			active: (
+				color: rgba($cadmin-black, 0.9),
+			),
 			active-class: (
 				background-color: $cadmin-primary-l3,
 				color: $cadmin-primary,
+				font-weight: $cadmin-font-weight-semi-bold,
 			),
-			disabled-box-shadow: none,
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+				color: rgba($cadmin-black, 0.3),
+			),
 			show: (
 				background-color: $cadmin-c-unset,
 				color: $cadmin-gray-900,
@@ -55,19 +104,50 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			),
 		),
 		link-mobile: (
-			transition: none,
-			focus-bg: $cadmin-dropdown-link-hover-bg,
-			focus-border-radius:
-				map-get($cadmin-dropdown-item-base, focus-border-radius),
+			border-radius: clay-enable-rounded(0),
+			color: $cadmin-gray-900,
+			hover: (
+				background-color: $cadmin-gray-100,
+				color: darken($cadmin-gray-900, 5%),
+			),
+			focus: (
+				background-color: lighten($cadmin-component-active-bg, 44.9),
+			),
+			active-class: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-primary,
+				font-weight: $cadmin-font-weight-semi-bold,
+			),
+			disabled: (
+				background-color: transparent,
+				color: $cadmin-gray-600,
+			),
+			show: (
+				background-color: $cadmin-c-unset,
+				color: $cadmin-c-unset,
+				font-weight: $cadmin-c-unset,
+			),
 		),
-		toggler-font-size-mobile: 14px,
-		toggler-font-weight-mobile: $cadmin-font-weight-semi-bold,
+		collapse-mobile: (
+			background-color: $cadmin-white,
+			border-color: $cadmin-gray-300,
+			border-radius: clay-enable-rounded($cadmin-border-radius),
+			box-shadow: clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
+		),
 		toggler-mobile: (
-			border-radius: 6px,
+			color: $cadmin-gray-900,
+			font-size: 14px,
+			font-weight: $cadmin-font-weight-semi-bold,
+			text-decoration: none,
 			transition: box-shadow 0.15s ease-in-out,
-			focus-box-shadow: $cadmin-component-focus-box-shadow,
-			focus-outline: 0,
-			disabled-box-shadow: none,
+			focus: (
+				box-shadow:
+					clay-enable-shadows($cadmin-component-focus-box-shadow),
+				outline: 0,
+			),
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+			),
 		),
 	),
 	$cadmin-menubar-vertical-transparent-md
@@ -136,22 +216,55 @@ $cadmin-menubar-vertical-expand-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
 		max-width: 250px,
-		margin-bottom-mobile: 24px,
-		margin-left-mobile: -
-			(
-				$cadmin-grid-gutter-width / 2,
-			),
-		margin-right-mobile: -
-			(
-				$cadmin-grid-gutter-width / 2,
-			),
-		collapse-z-index-mobile:
-			$cadmin-zindex-menubar-vertical-expand-lg-collapse-mobile,
+		mobile: (
+			align-items: center,
+			display: flex,
+			flex-wrap: wrap,
+			justify-content: space-between,
+			margin-bottom: 24px,
+			margin-left: math-sign($cadmin-grid-gutter-width / 2),
+			margin-right: math-sign($cadmin-grid-gutter-width / 2),
+		),
+		collapse: (
+			display: block,
+		),
+		collapse-mobile: (
+			border-color: transparent,
+			border-style: solid,
+			border-width: 1px,
+			display: none,
+			left: -1px,
+			position: absolute,
+			right: -1px,
+			top: 100%,
+			z-index: $cadmin-zindex-menubar-vertical-expand-md-collapse-mobile,
+		),
+		collapse-nav-mobile: (
+			margin-bottom: 8px,
+			margin-top: 8px,
+		),
+		nav-nested-mobile: (
+			margin-bottom: 8px,
+			margin-top: 8px,
+		),
 		nav-nested-margins-item-mobile: (
 			margin-left: 0,
 		),
-		toggler-c-inner: (
-			max-width: none,
+		toggler-mobile: (
+			align-items: center,
+			border-color: transparent,
+			border-style: solid,
+			border-width: 1px,
+			display: flex,
+			height: 32px,
+			padding-left: 8px,
+			padding-right: 8px,
+			c-inner: (
+				max-width: none,
+			),
+			lexicon-icon: (
+				margin-top: 0,
+			),
 		),
 	),
 	$cadmin-menubar-vertical-expand-lg
@@ -161,26 +274,41 @@ $cadmin-menubar-vertical-transparent-lg: () !default;
 $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 	(
 		breakpoint-up: lg,
-		bg-mobile: $cadmin-white,
-		link-border-radius: 6px,
-		link-border-radius-mobile: 0,
-		link-color: $cadmin-gray-600,
-		link-hover-bg: rgba($cadmin-gray-900, 0.03),
-		link-hover-color: $cadmin-gray-900,
-		link-active-color: $cadmin-gray-900,
-		link-active-font-weight: $cadmin-font-weight-semi-bold,
+		mobile: (
+			background-color: $cadmin-white,
+		),
 		link: (
-			transition: $cadmin-btn-transition,
-			focus-bg: rgba($cadmin-gray-900, 0.03),
-			focus-color: $cadmin-gray-900,
-			focus-box-shadow:
-				map-get($cadmin-dropdown-item-base, focus-box-shadow),
-			focus-outline: map-get($cadmin-dropdown-item-base, focus-outline),
+			border-radius: 6px,
+			transition: #{color 0.15s ease-in-out,
+			background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out,
+			box-shadow 0.15s ease-in-out},
+			color: $cadmin-gray-600,
+			hover: (
+				background-color: rgba($cadmin-gray-900, 0.03),
+				color: $cadmin-gray-900,
+			),
+			focus: (
+				background-color: rgba($cadmin-gray-900, 0.03),
+				box-shadow:
+					clay-enable-shadows(
+						$cadmin-component-focus-inset-box-shadow
+					),
+				color: $cadmin-gray-900,
+				outline: 0,
+			),
+			active: (
+				color: rgba($cadmin-black, 0.9),
+			),
 			active-class: (
 				background-color: $cadmin-primary-l3,
 				color: $cadmin-primary,
+				font-weight: $cadmin-font-weight-semi-bold,
 			),
-			disabled-box-shadow: none,
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+				color: rgba($cadmin-black, 0.3),
+			),
 			show: (
 				background-color: $cadmin-c-unset,
 				color: $cadmin-gray-900,
@@ -188,19 +316,50 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			),
 		),
 		link-mobile: (
-			transition: none,
-			focus-bg: $cadmin-dropdown-link-hover-bg,
-			focus-border-radius:
-				map-get($cadmin-dropdown-item-base, focus-border-radius),
+			border-radius: clay-enable-rounded(0),
+			color: $cadmin-gray-900,
+			hover: (
+				background-color: $cadmin-gray-100,
+				color: darken($cadmin-gray-900, 5%),
+			),
+			focus: (
+				background-color: lighten($cadmin-component-active-bg, 44.9),
+			),
+			active-class: (
+				background-color: $cadmin-primary-l3,
+				color: $cadmin-primary,
+				font-weight: $cadmin-font-weight-semi-bold,
+			),
+			disabled: (
+				background-color: transparent,
+				color: $cadmin-gray-600,
+			),
+			show: (
+				background-color: $cadmin-c-unset,
+				color: $cadmin-c-unset,
+				font-weight: $cadmin-c-unset,
+			),
 		),
-		toggler-font-size-mobile: 14px,
-		toggler-font-weight-mobile: $cadmin-font-weight-semi-bold,
+		collapse-mobile: (
+			background-color: $cadmin-white,
+			border-color: $cadmin-gray-300,
+			border-radius: clay-enable-rounded($cadmin-border-radius),
+			box-shadow: clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
+		),
 		toggler-mobile: (
-			border-radius: 6px,
+			color: $cadmin-gray-900,
+			font-size: 14px,
+			font-weight: $cadmin-font-weight-semi-bold,
+			text-decoration: none,
 			transition: box-shadow 0.15s ease-in-out,
-			focus-box-shadow: $cadmin-component-focus-box-shadow,
-			focus-outline: 0,
-			disabled-box-shadow: none,
+			focus: (
+				box-shadow:
+					clay-enable-shadows($cadmin-component-focus-box-shadow),
+				outline: 0,
+			),
+			disabled: (
+				box-shadow: clay-enable-shadows(none),
+			),
 		),
 	),
 	$cadmin-menubar-vertical-transparent-lg
