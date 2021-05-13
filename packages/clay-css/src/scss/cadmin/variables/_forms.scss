@@ -165,15 +165,17 @@ $cadmin-input-readonly-focus-color: null !default;
 $cadmin-input-readonly: () !default;
 $cadmin-input-readonly: map-deep-merge(
 	(
-		bg: $cadmin-input-readonly-bg,
+		background-color: $cadmin-input-readonly-bg,
 		border-color: $cadmin-input-readonly-border-color,
 		color: $cadmin-input-readonly-color,
 		cursor: $cadmin-input-readonly-cursor,
 		opacity: 1,
-		focus-bg: $cadmin-input-readonly-focus-bg,
-		focus-border-color: $cadmin-input-readonly-focus-border-color,
-		focus-box-shadow: none,
-		focus-color: $cadmin-input-readonly-focus-color,
+		focus: (
+			background-color: $cadmin-input-readonly-focus-bg,
+			border-color: $cadmin-input-readonly-focus-border-color,
+			box-shadow: none,
+			color: $cadmin-input-readonly-focus-color,
+		),
 	),
 	$cadmin-input-readonly
 );
@@ -184,8 +186,10 @@ $cadmin-input-plaintext-readonly: map-deep-merge(
 		border-radius: $cadmin-input-border-radius,
 		outline: 0,
 		transition: $cadmin-input-transition,
-		focus-border-color: $cadmin-input-focus-border-color,
-		focus-box-shadow: none,
+		focus: (
+			border-color: $cadmin-input-focus-border-color,
+			box-shadow: none,
+		),
 	),
 	$cadmin-input-plaintext-readonly
 );
@@ -677,11 +681,13 @@ $cadmin-input-group-inset-item-padding-right: 5px !default;
 $cadmin-input-group-inset-item-btn: () !default;
 $cadmin-input-group-inset-item-btn: map-deep-merge(
 	(
-		display: block,
+		align-items: center,
+		display: flex,
 		height: 75%,
+		justify-content: center,
 		line-height: 1,
-		margin-left: 2px,
-		margin-right: 2px,
+		margin-left: 3px,
+		margin-right: 3px,
 		padding-bottom: 0,
 		padding-left: 8px,
 		padding-right: 8px,
@@ -692,8 +698,24 @@ $cadmin-input-group-inset-item-btn: map-deep-merge(
 			height: 100%,
 			justify-content: center,
 		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$cadmin-input-group-inset-item-btn
+);
+
+$cadmin-input-group-inset-item-btn-monospaced: () !default;
+$cadmin-input-group-inset-item-btn-monospaced: map-deep-merge(
+	(
+		font-size: 16px,
+		height: 32px,
+		margin-bottom: math-sign($cadmin-input-border-bottom-width),
+		margin-top: math-sign($cadmin-input-border-bottom-width),
+		padding: 0,
+		width: 32px,
+	),
+	$cadmin-input-group-inset-item-btn-monospaced
 );
 
 $cadmin-input-group-inset-form-file-btn: () !default;
@@ -746,6 +768,8 @@ $cadmin-input-group-lg-item-btn-monospaced: map-deep-merge(
 );
 
 $cadmin-input-group-lg-inset-item-btn: () !default;
+
+$cadmin-input-group-lg-inset-item-btn-monospaced: () !default;
 
 $cadmin-input-group-lg-inset-item-form-file-btn: () !default;
 $cadmin-input-group-lg-inset-item-form-file-btn: map-deep-merge(
@@ -808,6 +832,17 @@ $cadmin-input-group-sm-inset-item-btn: map-deep-merge(
 		padding-top: 0,
 	),
 	$cadmin-input-group-sm-inset-item-btn
+);
+
+$cadmin-input-group-sm-inset-item-btn-monospaced: () !default;
+$cadmin-input-group-sm-inset-item-btn-monospaced: map-deep-merge(
+	(
+		height: 24px,
+		margin-left: 4px,
+		margin-right: 4px,
+		width: 24px,
+	),
+	$cadmin-input-group-sm-inset-item-btn-monospaced
 );
 
 $cadmin-input-group-sm-inset-item-form-file-btn: () !default;

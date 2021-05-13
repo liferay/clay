@@ -294,6 +294,9 @@ $cadmin-subnav-tbar: map-deep-merge(
 		component-link: $cadmin-subnav-tbar-component-link,
 		component-title: $cadmin-subnav-tbar-component-title,
 		component-text: $cadmin-subnav-tbar-component-text,
+		component-label: (
+			font-weight: $cadmin-font-weight-normal,
+		),
 		link-margin-y: 2px,
 		link-padding-x: 4px,
 		link-padding-y: 1.5px,
