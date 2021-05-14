@@ -12,22 +12,58 @@ const ClayPortalContext = React.createContext<React.RefObject<Element | null> | 
 
 ClayPortalContext.displayName = 'ClayPortalContext';
 
-export const ClayPortal: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement> & {
-		/**
-		 * Ref of element to render portal into.
-		 */
-		containerRef?: React.RefObject<Element>;
+const createElement = (
+	nodeName: string,
+	attributes: Record<string, string>
+) => {
+	const element = document.createElement(nodeName);
 
-		/**
-		 * Ref of element to render nested portals into.
-		 */
-		subPortalRef?: React.RefObject<Element>;
-	}
-> = ({children, containerRef, subPortalRef, ...otherProps}) => {
+	Object.keys(attributes).forEach((key) => {
+		element.setAttribute(
+			key === 'className' ? 'class' : key,
+			attributes[key]
+		);
+	});
+
+	return element;
+};
+
+interface IProps {
+	children: React.ReactElement | Array<React.ReactElement>;
+
+	/**
+	 * Class to add to the root element
+	 */
+	className?: string;
+
+	/**
+	 * Ref of element to render portal into.
+	 */
+	containerRef?: React.RefObject<Element>;
+
+	/**
+	 * Id fof the root element
+	 */
+	id?: string;
+
+	/**
+	 * Ref of element to render nested portals into.
+	 */
+	subPortalRef?: React.RefObject<Element>;
+}
+
+export const ClayPortal: React.FunctionComponent<IProps> = ({
+	children,
+	containerRef,
+	subPortalRef,
+	...otherProps
+}) => {
 	const parentPortalRef = React.useContext(ClayPortalContext);
+
 	const portalRef = React.useRef(
-		typeof document !== 'undefined' ? document.createElement('div') : null
+		typeof document !== 'undefined'
+			? createElement('div', otherProps as Record<string, string>)
+			: null
 	);
 
 	React.useEffect(() => {
@@ -42,13 +78,6 @@ export const ClayPortal: React.FunctionComponent<
 				: closestParent;
 
 		if (elToMountTo && portalRef.current) {
-			if (otherProps?.className) {
-				portalRef.current.classList.add(otherProps.className);
-			}
-			if (otherProps?.id) {
-				portalRef.current.id = otherProps.id;
-			}
-
 			elToMountTo.appendChild(portalRef.current);
 		}
 
