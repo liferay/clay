@@ -26,6 +26,18 @@ mainTabURL: 'docs/components/card.html'
     -   [Active](#css-active)
     -   [Empty](#css-empty)
 -   [Helpers](#css-helpers)
+    -   [Checkbox](#css-checkbox)
+    -   [Radio](#css-radio)
+    -   [Horizontal Card With Autofit](#horizontal-card-with-autofit-col-)
+    -   [Padded Horizontal Cards](#css-padded-horizontal-cards)
+    -   [Truncating Text Inside Card](#css-truncating-text-inside-card)
+    -   [Card Row Content Alignment Helpers](#css-card-row-content-alignment-helpers)
+    -   [Rounded](#css-rounded)
+    -   [Card Page](#css-card-page)
+    -   [Card Page Equal Height](#css-card-page-equal-height)
+    -   [Card Page with Bootstrap's Grid](#css-card-page-with-bootstraps-grid-system)
+    -   [Card Page Item Asset](#css-card-page-item-asset)
+    -   [Card Page Item Directory](#css-card-page-item-directory)
 
 </div>
 </div>
@@ -1287,7 +1299,7 @@ By default, when adding `image-card` class and inside the element that contains 
 
 To make the whole card clickable just wrap the checkbox and card in:
 
-```html
+```html{expanded}
 <div class="form-check form-check-card form-check-top-left">
 	<label class="form-check-label">
 		<input class="form-check-input" type="checkbox" />
@@ -2283,4 +2295,903 @@ Use classes `rounded`, `rounded-circle`, or `rounded-0` on the card to quickly s
 		</div>
 	</div>
 </div>
+```
+
+### Card Page(#css-card-page)
+
+A component to help layout cards in equally spaced columns similar to Bootstrap's grid system. Card Page uses semantic class names for columns, `card-page-item`, which makes it easier to target with CSS. You can define the width of each column at each breakpoint through your own custom modifier class.
+
+The example below adds the custom modifier class `my-custom-grid` to `card-page`. There are custom gutters and column widths set. Column widths are set using `flex-basis` and `max-width`.
+
+```scss{expanded}
+<style>
+.my-custom-grid {
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+.my-custom-grid .card-page-item {
+	flex-basis: 100%;
+	max-width: 100%;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+@media (min-width: 480px) {
+	.my-custom-grid .card-page-item {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.my-custom-grid .card-page-item {
+		flex-basis: 33.33333%;
+		max-width: 33.33333%;
+	}
+}
+
+@media (min-width: 1600px) {
+	.my-custom-grid .card-page-item {
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+}
+</style>
+```
+
+<style>
+.my-custom-grid {
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+.my-custom-grid .card-page-item {
+	flex-basis: 100%;
+	max-width: 100%;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+@media (min-width: 480px) {
+	.my-custom-grid .card-page-item {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.my-custom-grid .card-page-item {
+		flex-basis: 33.33333%;
+		max-width: 33.33333%;
+	}
+}
+
+@media (min-width: 1600px) {
+	.my-custom-grid .card-page-item {
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+}
+</style>
+
+<div class="sheet-example">
+	<ul class="card-page my-custom-grid">
+		<li class="card-page-item">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio card-item-first">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-wiki" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#wiki" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Widget Page</h3>
+					<div class="card-text">Build a page by adding widgets and content.</div>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item">
+			<a class="card card-interactive card-interactive-primary card-type-template template-card" href="#1">
+				<span class="aspect-ratio">
+					<span class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-web-content" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#web-content" />
+						</svg>
+					</span>
+				</span>
+				<span class="card-body">
+					<span class="card-title">Content Page</span>
+					<span class="card-text">This is an example of card-type-template using an anchor tag.</span>
+				</span>
+			</a>
+		</li>
+		<li class="card-page-item">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-page-template" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#page-template" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Blog</h3>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-wiki" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#wiki" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Wiki</h3>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+```html
+<style>
+	.my-custom-grid {
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+
+	.my-custom-grid .card-page-item {
+		flex-basis: 100%;
+		max-width: 100%;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	@media (min-width: 480px) {
+		.my-custom-grid .card-page-item {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.my-custom-grid .card-page-item {
+			flex-basis: 33.33333%;
+			max-width: 33.33333%;
+		}
+	}
+
+	@media (min-width: 1600px) {
+		.my-custom-grid .card-page-item {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+	}
+</style>
+
+<ul class="card-page my-custom-grid">
+	<li class="card-page-item">
+		<div
+			class="card card-interactive card-interactive-primary card-type-template template-card"
+			tabindex="0"
+		>
+			<div class="aspect-ratio card-item-first">
+				<div
+					class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-wiki"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#wiki" />
+					</svg>
+				</div>
+			</div>
+			<div class="card-body">
+				<h3 class="card-title">Widget Page</h3>
+				<div class="card-text">
+					Build a page by adding widgets and content.
+				</div>
+			</div>
+		</div>
+	</li>
+	<li class="card-page-item">
+		<a
+			class="card card-interactive card-interactive-primary card-type-template template-card"
+			href="#1"
+		>
+			<span class="aspect-ratio">
+				<span
+					class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-web-content"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#web-content" />
+					</svg>
+				</span>
+			</span>
+			<span class="card-body">
+				<span class="card-title">Content Page</span>
+				<span class="card-text"
+					>This is an example of card-type-template using an anchor
+					tag.</span
+				>
+			</span>
+		</a>
+	</li>
+	<li class="card-page-item">
+		<div
+			class="card card-interactive card-interactive-primary card-type-template template-card"
+			tabindex="0"
+		>
+			<div class="aspect-ratio">
+				<div
+					class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-page-template"
+						focusable="false"
+						role="presentation"
+					>
+						<use
+							xlink:href="/images/icons/icons.svg#page-template"
+						/>
+					</svg>
+				</div>
+			</div>
+			<div class="card-body">
+				<h3 class="card-title">Blog</h3>
+			</div>
+		</div>
+	</li>
+	<li class="card-page-item">
+		<div
+			class="card card-interactive card-interactive-primary card-type-template template-card"
+			tabindex="0"
+		>
+			<div class="aspect-ratio">
+				<div
+					class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-wiki"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#wiki" />
+					</svg>
+				</div>
+			</div>
+			<div class="card-body">
+				<h3 class="card-title">Wiki</h3>
+			</div>
+		</div>
+	</li>
+</ul>
+```
+
+### Card Page Equal Height(#css-card-page-equal-height)
+
+The modifier class `card-page-equal-height` forces all cards in a row to maintain the same height.
+
+<div class="sheet-example">
+	<ul class="card-page card-page-equal-height my-custom-grid">
+		<li class="card-page-item">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio card-item-first">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-wiki" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#wiki" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Widget Page</h3>
+					<div class="card-text">Build a page by adding widgets and content.</div>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item">
+			<a class="card card-interactive card-interactive-primary card-type-template template-card" href="#1">
+				<span class="aspect-ratio">
+					<span class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-web-content" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#web-content" />
+						</svg>
+					</span>
+				</span>
+				<span class="card-body">
+					<span class="card-title">Content Page</span>
+					<span class="card-text">This is an example of card-type-template using an anchor tag.</span>
+				</span>
+			</a>
+		</li>
+		<li class="card-page-item">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-page-template" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#page-template" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Blog</h3>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-wiki" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#wiki" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Wiki</h3>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+```html
+<ul class="card-page card-page-equal-height my-custom-grid">
+	...
+</ul>
+```
+
+### Card Page with Bootstrap's Grid System(#css-card-page-with-bootstraps-grid-system)
+
+<div class="clay-site-alert alert alert-info">
+	<code>card-page</code> works with Bootstrap's <code>row</code> and <code>col-{breakpoint}-#</code> classes.
+</div>
+
+Card Page is compatible with Bootstrap's Grid System, just add `row` to `card-page` and the column utilities you want on `card-page-item`.
+
+<div class="sheet-example">
+	<ul class="card-page card-page-equal-height row">
+		<li class="card-page-item col-sm-6 col-md-4 col-xl-3">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio card-item-first">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-wiki" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#wiki" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Widget Page</h3>
+					<div class="card-text">Build a page by adding widgets and content.</div>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item col-sm-6 col-md-4 col-xl-3">
+			<a class="card card-interactive card-interactive-primary card-type-template template-card" href="#1">
+				<span class="aspect-ratio">
+					<span class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-web-content" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#web-content" />
+						</svg>
+					</span>
+				</span>
+				<span class="card-body">
+					<span class="card-title">Content Page</span>
+					<span class="card-text">This is an example of card-type-template using an anchor tag.</span>
+				</span>
+			</a>
+		</li>
+		<li class="card-page-item col-sm-6 col-md-4 col-xl-3">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-page-template" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#page-template" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Blog</h3>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item col-sm-6 col-md-4 col-xl-3">
+			<div class="card card-interactive card-interactive-primary card-type-template template-card" tabindex="0">
+				<div class="aspect-ratio">
+					<div class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush">
+						<svg class="lexicon-icon lexicon-icon-wiki" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#wiki" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-body">
+					<h3 class="card-title">Wiki</h3>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+```html
+<ul class="card-page card-page-equal-height row">
+	<li class="card-page-item col-sm-6 col-md-4 col-xl-3">...</li>
+	<li class="card-page-item col-sm-6 col-md-4 col-xl-3">...</li>
+	<li class="card-page-item col-sm-6 col-md-4 col-xl-3">...</li>
+	<li class="card-page-item col-sm-6 col-md-4 col-xl-3">...</li>
+</ul>
+```
+
+### Card Page Item Asset(#css-card-page-item-asset)
+
+A predefined `card-page` column used in Liferay Portal's card view layouts, generally used for vertical cards.
+
+<div class="sheet-section">
+	<ul class="card-page card-page-equal-height">
+		<li class="card-page-item card-page-item-asset">
+			<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+				<div class="card">
+					<div class="aspect-ratio card-item-first">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+								<img alt="thumbnail"class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+								<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+							</label>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="card-row">
+							<div class="autofit-col autofit-col-expand">
+								<section class="autofit-section">
+									<h3 class="card-title" title="thumbnail_coffee.jpg">
+										<span class="text-truncate-inline">
+											<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+										</span>
+									</h3>
+									<p class="card-subtitle" title="Author Action">
+										<span class="text-truncate-inline">
+											<span class="text-truncate">Author Action</span>
+										</span>
+									</p>
+									<div class="card-detail">
+										<span class="label label-success">
+											<span class="label-item label-item-expand">Approved</span>
+										</span>
+									</div>
+								</section>
+							</div>
+							<div class="autofit-col">
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a class="dropdown-item" href="#1">Download</a></li>
+										<li><a class="dropdown-item" href="#1">Edit</a></li>
+										<li><a class="dropdown-item" href="#1">Move</a></li>
+										<li><a class="dropdown-item" href="#1">Checkout</a></li>
+										<li><a class="dropdown-item" href="#1">Permissions</a></li>
+										<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item card-page-item-asset">
+			<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+				<div class="card">
+					<div class="aspect-ratio card-item-first">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+								<img alt="thumbnail"class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+								<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+							</label>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="card-row">
+							<div class="autofit-col autofit-col-expand">
+								<section class="autofit-section">
+									<h3 class="card-title" title="thumbnail_coffee.jpg">
+										<span class="text-truncate-inline">
+											<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+										</span>
+									</h3>
+									<p class="card-subtitle" title="Author Action">
+										<span class="text-truncate-inline">
+											<span class="text-truncate">Author Action</span>
+										</span>
+									</p>
+									<div class="card-detail">
+										<span class="label label-success">
+											<span class="label-item label-item-expand">Approved</span>
+										</span>
+									</div>
+								</section>
+							</div>
+							<div class="autofit-col">
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a class="dropdown-item" href="#1">Download</a></li>
+										<li><a class="dropdown-item" href="#1">Edit</a></li>
+										<li><a class="dropdown-item" href="#1">Move</a></li>
+										<li><a class="dropdown-item" href="#1">Checkout</a></li>
+										<li><a class="dropdown-item" href="#1">Permissions</a></li>
+										<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item card-page-item-asset">
+			<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+				<div class="card">
+					<div class="aspect-ratio card-item-first">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+								<img alt="thumbnail"class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+								<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+							</label>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="card-row">
+							<div class="autofit-col autofit-col-expand">
+								<section class="autofit-section">
+									<h3 class="card-title" title="thumbnail_coffee.jpg">
+										<span class="text-truncate-inline">
+											<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+										</span>
+									</h3>
+									<p class="card-subtitle" title="Author Action">
+										<span class="text-truncate-inline">
+											<span class="text-truncate">Author Action</span>
+										</span>
+									</p>
+									<div class="card-detail">
+										<span class="label label-success">
+											<span class="label-item label-item-expand">Approved</span>
+										</span>
+									</div>
+								</section>
+							</div>
+							<div class="autofit-col">
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a class="dropdown-item" href="#1">Download</a></li>
+										<li><a class="dropdown-item" href="#1">Edit</a></li>
+										<li><a class="dropdown-item" href="#1">Move</a></li>
+										<li><a class="dropdown-item" href="#1">Checkout</a></li>
+										<li><a class="dropdown-item" href="#1">Permissions</a></li>
+										<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item card-page-item-asset">
+			<div class="card-type-asset form-check form-check-card form-check-top-left image-card">
+				<div class="card">
+					<div class="aspect-ratio card-item-first">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-label"></span>
+								<img alt="thumbnail"class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/thumbnail_coffee.jpg">
+								<span class="sticker sticker-bottom-left sticker-danger">JPG</span>
+							</label>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="card-row">
+							<div class="autofit-col autofit-col-expand">
+								<section class="autofit-section">
+									<h3 class="card-title" title="thumbnail_coffee.jpg">
+										<span class="text-truncate-inline">
+											<a class="text-truncate" href="#1">thumbnail_coffee.jpg</a>
+										</span>
+									</h3>
+									<p class="card-subtitle" title="Author Action">
+										<span class="text-truncate-inline">
+											<span class="text-truncate">Author Action</span>
+										</span>
+									</p>
+									<div class="card-detail">
+										<span class="label label-success">
+											<span class="label-item label-item-expand">Approved</span>
+										</span>
+									</div>
+								</section>
+							</div>
+							<div class="autofit-col">
+								<div class="dropdown dropdown-action">
+									<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a class="dropdown-item" href="#1">Download</a></li>
+										<li><a class="dropdown-item" href="#1">Edit</a></li>
+										<li><a class="dropdown-item" href="#1">Move</a></li>
+										<li><a class="dropdown-item" href="#1">Checkout</a></li>
+										<li><a class="dropdown-item" href="#1">Permissions</a></li>
+										<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+```html
+<ul class="card-page card-page-equal-height">
+	<li class="card-page-item card-page-item-asset">...</li>
+	<li class="card-page-item card-page-item-asset">...</li>
+	<li class="card-page-item card-page-item-asset">...</li>
+	<li class="card-page-item card-page-item-asset">...</li>
+</ul>
+```
+
+### Card Page Item Directory(#css-card-page-item-directory)
+
+A predefined `card-page` column used in Liferay Portal's card view layouts, generally used for horizontal cards.
+
+<div class="sheet-section">
+	<ul class="card-page">
+		<li class="card-page-item card-page-item-directory">
+			<div class="card-type-directory form-check form-check-card form-check-middle-left">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-label"></span>
+						<div class="card card-horizontal">
+							<div class="card-body">
+								<div class="card-row">
+									<div class="autofit-col">
+										<span class="sticker">
+											<span class="inline-item">
+												<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#folder" />
+												</svg>
+											</span>
+										</span>
+									</div>
+									<div class="autofit-col autofit-col-expand autofit-col-gutters">
+										<section class="autofit-section">
+											<h3 class="card-title" title="UX Team">
+												<span class="text-truncate-inline">
+													<a class="text-truncate" href="#1">UX Team</a>
+												</span>
+											</h3>
+										</section>
+									</div>
+									<div class="autofit-col">
+										<div class="dropdown dropdown-action">
+											<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												</svg>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a class="dropdown-item" href="#1">Download</a></li>
+												<li><a class="dropdown-item" href="#1">Edit</a></li>
+												<li><a class="dropdown-item" href="#1">Move</a></li>
+												<li><a class="dropdown-item" href="#1">Checkout</a></li>
+												<li><a class="dropdown-item" href="#1">Permissions</a></li>
+												<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item card-page-item-directory">
+			<div class="card-type-directory form-check form-check-card form-check-middle-left">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-label"></span>
+						<div class="card card-horizontal">
+							<div class="card-body">
+								<div class="card-row">
+									<div class="autofit-col">
+										<span class="sticker">
+											<span class="inline-item">
+												<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#folder" />
+												</svg>
+											</span>
+										</span>
+									</div>
+									<div class="autofit-col autofit-col-expand autofit-col-gutters">
+										<section class="autofit-section">
+											<h3 class="card-title" title="Talks">
+												<span class="text-truncate-inline">
+													<span class="text-truncate">Talks</span>
+												</span>
+											</h3>
+										</section>
+									</div>
+									<div class="autofit-col">
+										<div class="dropdown dropdown-action">
+											<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												</svg>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a class="dropdown-item" href="#1">Download</a></li>
+												<li><a class="dropdown-item" href="#1">Edit</a></li>
+												<li><a class="dropdown-item" href="#1">Move</a></li>
+												<li><a class="dropdown-item" href="#1">Checkout</a></li>
+												<li><a class="dropdown-item" href="#1">Permissions</a></li>
+												<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item card-page-item-directory">
+			<div class="card-type-directory form-check form-check-card form-check-middle-left">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-label"></span>
+						<div class="card card-horizontal">
+							<div class="card-body">
+								<div class="card-row">
+									<div class="autofit-col">
+										<span class="sticker">
+											<span class="inline-item">
+												<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#folder" />
+												</svg>
+											</span>
+										</span>
+									</div>
+									<div class="autofit-col autofit-col-expand autofit-col-gutters">
+										<section class="autofit-section">
+											<h3 class="card-title" title="Branding">
+												<span class="text-truncate-inline">
+													<span class="text-truncate">Branding</span>
+												</span>
+											</h3>
+										</section>
+									</div>
+									<div class="autofit-col">
+										<div class="dropdown dropdown-action">
+											<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												</svg>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a class="dropdown-item" href="#1">Download</a></li>
+												<li><a class="dropdown-item" href="#1">Edit</a></li>
+												<li><a class="dropdown-item" href="#1">Move</a></li>
+												<li><a class="dropdown-item" href="#1">Checkout</a></li>
+												<li><a class="dropdown-item" href="#1">Permissions</a></li>
+												<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+		</li>
+		<li class="card-page-item card-page-item-directory">
+			<div class="card-type-directory form-check form-check-card form-check-middle-left">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-label"></span>
+						<div class="card card-horizontal">
+							<div class="card-body">
+								<div class="card-row">
+									<div class="autofit-col">
+										<span class="sticker">
+											<span class="inline-item">
+												<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#folder" />
+												</svg>
+											</span>
+										</span>
+									</div>
+									<div class="autofit-col autofit-col-expand autofit-col-gutters">
+										<section class="autofit-section">
+											<h3 class="card-title" title="Side Projects">
+												<span class="text-truncate-inline">
+													<span class="text-truncate">Side Projects</span>
+												</span>
+											</h3>
+										</section>
+									</div>
+									<div class="autofit-col">
+										<div class="dropdown dropdown-action">
+											<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" role="button">
+												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+												</svg>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a class="dropdown-item" href="#1">Download</a></li>
+												<li><a class="dropdown-item" href="#1">Edit</a></li>
+												<li><a class="dropdown-item" href="#1">Move</a></li>
+												<li><a class="dropdown-item" href="#1">Checkout</a></li>
+												<li><a class="dropdown-item" href="#1">Permissions</a></li>
+												<li><a class="dropdown-item" href="#1">Move to Recycle Bin</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+```html
+<ul class="card-page">
+	<li class="card-page-item card-page-item-directory">...</li>
+	<li class="card-page-item card-page-item-directory">...</li>
+	<li class="card-page-item card-page-item-directory">...</li>
+	<li class="card-page-item card-page-item-directory">...</li>
+</ul>
 ```
