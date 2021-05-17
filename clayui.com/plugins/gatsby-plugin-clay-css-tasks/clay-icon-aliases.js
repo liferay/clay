@@ -547,6 +547,7 @@ const iconsData = {
 	"categories":				'"product", "tag"',
 	"chain-broken":				'"link"',
 	"change":					'"arrows", "reload", "repeat", "update"',
+	"chatbot":					'"chat", "bot"',
 	"check":					'"active", "approve", "boolean", "done", "select", "success"',
 	"check-circle":				'"active", "approve", "boolean", "done", "select", "success"',
 	"check-circle-full":		'"active", "approve", "boolean", "done", "select", "success"',
