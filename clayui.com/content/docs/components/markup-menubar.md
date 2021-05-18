@@ -9,8 +9,9 @@ order: 5
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Menubar Vertical Expand Md(#css-menubar-vertical-expand-md)](#menubar-vertical-expand-mdcss-menubar-vertical-expand-md) - [Menubar Vertical Expand Md with Buttons](#menubar-vertical-expand-md-with-buttons)
--   [Menubar Vertical Expand Lg(#css-menubar-vertical-expand-lg)](#menubar-vertical-expand-lgcss-menubar-vertical-expand-lg)
+-   [Menubar Vertical Expand Md](#css-menubar-vertical-expand-md)
+    -   [Menubar Vertical Expand Md with Buttons](#menubar-vertical-expand-md-with-buttons)
+-   [Menubar Vertical Expand Lg](#css-menubar-vertical-expand-lg)
 
 </div>
 </div>
