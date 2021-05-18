@@ -586,9 +586,9 @@ $cadmin-input-select: map-deep-merge(
 		),
 		disabled: (
 			background-image: $cadmin-input-select-icon-disabled,
-		),
-		disabled-option: (
-			cursor: $cadmin-disabled-cursor,
+			option: (
+				cursor: $cadmin-disabled-cursor,
+			),
 		),
 		option: (
 			cursor: $cadmin-input-select-cursor,
