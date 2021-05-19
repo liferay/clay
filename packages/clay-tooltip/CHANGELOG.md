@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.28.0](https://github.com/liferay/clay/compare/v3.27.0...v3.28.0) (2021-05-19)
+
+### Features
+
+-   **@clayui/tooltip:** Add the new ContainerProps API ([728600c](https://github.com/liferay/clay/commit/728600c))
+-   **@clayui/tooltip:** update logic to handle scoping and a global listener ([1c83d30](https://github.com/liferay/clay/commit/1c83d30))
+
 # [3.27.0](https://github.com/liferay/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
 
 **Note:** Version bump only for package @clayui/tooltip

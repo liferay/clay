@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.28.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.27.0...v3.28.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Alert adds `.cadmin.alert-container` selector ([a104844](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a104844))
+* **@clayui/css:** Cadmin Badges remove unused components `inline-item` and `badge-pill` ([46868c7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/46868c7))
+* **@clayui/css:** Cadmin Button Groups remove unused components `dropdown-toggle-split` and `btn-group-toggle` ([3fef3d5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3fef3d5))
+* **@clayui/css:** Cadmin Cards remove unused components `card-header-tabs`, `card-header-pills`, `card-deck`, `card-group`, `card-columns`, `accordion` ([06bdb00](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/06bdb00))
+* **@clayui/css:** Cadmin Dropdown remove unused component dropdown in navbar ([e062006](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e062006))
+* **@clayui/css:** Cadmin Form Validation remove unused components HTML 5 form validation ([8cb7a19](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/8cb7a19))
+* **@clayui/css:** Cadmin Forms remove unused components `col-form-label`, `col-form-label-lg`, `col-form-label-sm`, `form-row`, `form-inline` ([81e1f4f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/81e1f4f))
+* **@clayui/css:** Cadmin Icons remove unused components `lexicon-icon-sm`, `lexicon-icon-lg`, `lexicon-icon-xl` ([f0ee8fc](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f0ee8fc))
+* **@clayui/css:** Cadmin Input Group remove styles related to `custom-select`, `custom-file` ([cdf23e7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/cdf23e7))
+* **@clayui/css:** Cadmin Labels remove deprecated component `inline-item` ([9ed5291](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9ed5291))
+* **@clayui/css:** Cadmin List Group remove unused component `list-group-horizontal` ([0b7f427](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0b7f427))
+* **@clayui/css:** Cadmin merge Atlas variables with Cadmin base variables, we don't need two themes here ([0eb6d29](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0eb6d29))
+* **@clayui/css:** Cadmin Modals remove unused component `modal-dialog-scrollable` ([130dc5c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/130dc5c))
+* **@clayui/css:** Cadmin move _reboot out of scoping selector, attribution text is causing empty selector to be output ([ad36b85](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ad36b85))
+* **@clayui/css:** Cadmin Navs remove unused component `nav-pills` ([d27a7a1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d27a7a1))
+* **@clayui/css:** Cadmin port changes to Clay CSS that were made before Cadmin got merged: [#3998](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3998), [#4002](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4002), [#4040](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4040), [#4055](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4055), [#4056](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4056), [#4060](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4060) ([240bbc4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/240bbc4)), closes [#4064](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4064)
+* **@clayui/css:** Cadmin re-add widths for menubar and SF. Not sure what happened. ([9142345](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9142345))
+* **@clayui/css:** Cadmin remove unused components `custom-switch`, `custom-select`, `custom-file`, `custom-range` ([fc447e2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/fc447e2))
+* **@clayui/css:** Cadmin removes Atlas variables ([4af356f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4af356f))
+* **@clayui/css:** Cadmin removes components _root, _carousel, _jumbotron, _spinners, _toasts, _media, _application-bar, _drilldown, and _timelines. They are not used for Admin controls. ([9ddeaed](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/9ddeaed))
+* **@clayui/css:** Cadmin removes Sass docs comments ([62e5541](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/62e5541))
+* **@clayui/css:** Cadmin removes variables related to unused components ([7ec35dc](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7ec35dc))
+* **@clayui/css:** Cadmin Side Navigation remove unused component `container-fluid-1280` ([41d8b50](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/41d8b50))
+* **@clayui/css:** Cadmin theme use selector `.cadmin.component` for components that render inside react portals. It's too difficult to put `cadmin` on the parent element. ([640a662](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/640a662))
+* **@clayui/css:** Cadmin update Sass maps that use `clay-select-variant` to use new keys ([c782615](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/c782615))
+* **@clayui/css:** Cadmin Utilities display utilities should also have `.cadmin.d-{display}` ([4bb7a0a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4bb7a0a))
+* **@clayui/css:** Input Groups add `btn-monospaced` support for buttons inside `input-group-inset-item` ([0d31b54](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/0d31b54)), closes [#4049](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4049)
+* **@clayui/css:** Labels convert variables to use new Sass map keys ([dcfc7c3](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/dcfc7c3))
+* **@clayui/css:** Management Bar Search button should be properly aligned in mobile view ([1c3f583](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1c3f583))
+* **@clayui/css:** Mixins `border-radius` shouldn't output the default radius if a null parameter is passed ([42241df](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/42241df)), closes [#4066](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4066)
+* **@clayui/css:** Mixins `clay-label-size` and `clay-label-variant` convert to use new (easier to remember) Sass map keys. The old keys will still work and win over new keys. ([2123fdf](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2123fdf)), closes [#4069](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4069)
+* **@clayui/css:** Mixins `clay-nav-variant` convert to use new (easier to remember) Sass map keys. The old keys will still work and win over new keys. ([3fa114a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3fa114a)), closes [#4071](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4071)
+* **@clayui/css:** Mixins `clay-select-variant` update to use `clay-css` pattern, also deprecated keys should win over new keys ([65ad45e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/65ad45e))
+* **@clayui/css:** Mixins border-radius should use custom value first ([5d30ab2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5d30ab2))
+* **@clayui/css:** Restore default padding-left on ul, ol, dl that are undone by cadmin ([1db5db7](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1db5db7))
+* **@clayui/css:** Subnav Tbar labels should have $font-weight-normal by default ([e1e36a6](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e1e36a6))
+* **@clayui/css:** Toggle Switch should be 48px wide ([6735e54](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6735e54))
+
+
+### Features
+
+* **@clayui/css:** Add `form-extensions` SVG icon ([3061a9a](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3061a9a))
+* **@clayui/css:** Add SVG icons `chatbot` and `signature` ([7966c62](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/7966c62))
+* **@clayui/css:** Cadmin theme convert rem values to px ([2e33149](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2e33149))
+* **@clayui/css:** Created scoped version of Clay CSS for admin style isolation and prefix variables with `$cadmin-` ([f1ae440](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/f1ae440))
+* **@clayui/css:** Functions and Mixins update to accept Clay CSS variables, Cadmin variables, or custom where applicable ([b1eb431](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b1eb431))
+
+
+
+
+
 # [3.27.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.26.0...v3.27.0) (2021-05-05)
 
 

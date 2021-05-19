@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.28.0](https://github.com/liferay/clay/compare/v3.27.0...v3.28.0) (2021-05-19)
+
+### Features
+
+-   **@clayui/popover:** Add the new ContainerProps API ([233a4f6](https://github.com/liferay/clay/commit/233a4f6))
+
 # [3.27.0](https://github.com/liferay/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
 
 ### Features

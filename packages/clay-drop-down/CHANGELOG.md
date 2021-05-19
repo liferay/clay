@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.28.0](https://github.com/liferay/clay/compare/v3.27.0...v3.28.0) (2021-05-19)
+
+### Features
+
+-   **@clayui/drop-down:** Add the new ContainerProps API ([b106420](https://github.com/liferay/clay/commit/b106420))
+-   **@clayui/drop-down:** Add the new ContainerProps API to the interface typing ([31f38a9](https://github.com/liferay/clay/commit/31f38a9))
+
 # [3.27.0](https://github.com/liferay/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
 
 **Note:** Version bump only for package @clayui/drop-down

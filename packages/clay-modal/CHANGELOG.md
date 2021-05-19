@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.28.0](https://github.com/liferay/clay/compare/v3.27.0...v3.28.0) (2021-05-19)
+
+### Features
+
+-   **@clayui/modal:** Add the new ContainerProps API ([3a09e97](https://github.com/liferay/clay/commit/3a09e97))
+-   **@clayui/modal:** do not set a default opener, ClayPortal handles it ([23bcfba](https://github.com/liferay/clay/commit/23bcfba))
+-   **@clayui/modal:** Rename variable name, allow to pass a container reference and add tests ([c85fc25](https://github.com/liferay/clay/commit/c85fc25))
+-   **@clayui/modal:** support custom opener for the modals ([58a5bc5](https://github.com/liferay/clay/commit/58a5bc5))
+
 # [3.27.0](https://github.com/liferay/clay/compare/v3.26.0...v3.27.0) (2021-05-05)
 
 ### Bug Fixes
