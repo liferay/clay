@@ -55,7 +55,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Prop to pass DOM element attributes to <DropDown.Menu />.
 	 */
-	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement>;
+	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement> &
+		Pick<React.ComponentProps<typeof Menu>, 'containerProps'>;
 
 	menuHeight?: React.ComponentProps<typeof Menu>['height'];
 
