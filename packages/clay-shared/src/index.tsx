@@ -4,7 +4,7 @@
  */
 
 export const noop = () => {};
-export {ClayPortal} from './Portal';
+export {ClayPortal, IBaseProps as IPortalBaseProps} from './Portal';
 export {delegate} from './delegate';
 export {FocusScope} from './FocusScope';
 export {getEllipsisItems} from './getEllipsisItems';
