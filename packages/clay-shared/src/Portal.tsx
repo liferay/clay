@@ -26,23 +26,25 @@ const createDivElement = (className?: string, id?: string) => {
 	return element;
 };
 
-interface IProps {
-	children: React.ReactElement | Array<React.ReactElement>;
-
+export interface IBaseProps {
 	/**
 	 * Class to add to the root element
 	 */
 	className?: string;
 
 	/**
-	 * Ref of element to render portal into.
-	 */
-	containerRef?: React.RefObject<Element>;
-
-	/**
 	 * Id fof the root element
 	 */
 	id?: string;
+}
+
+interface IProps extends IBaseProps {
+	children: React.ReactElement | Array<React.ReactElement>;
+
+	/**
+	 * Ref of element to render portal into.
+	 */
+	containerRef?: React.RefObject<Element>;
 
 	/**
 	 * Ref of element to render nested portals into.

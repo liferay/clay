@@ -72,6 +72,14 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Flag for adding ColorPicker in disabled state
 	 */
 	disabled?: boolean;
+
+	/**
+	 * Props to add to the DropDown container.
+	 */
+	dropDownContainerProps?: React.ComponentProps<
+		typeof ClayDropDown.Menu
+	>['containerProps'];
+
 	/**
 	 * The label describing the collection of colors in the menu
 	 */
@@ -92,6 +100,8 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 */
 	onValueChange?: (val: string) => void;
 
+	predefinedColors?: Array<string>;
+
 	/**
 	 * Determines if the hex input should render
 	 */
@@ -102,6 +112,8 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * This defaults to true
 	 */
 	showPalette?: boolean;
+
+	showPredefinedColorsWithCustom?: boolean;
 
 	/**
 	 * Flag to indicate if `input-group-sm` class should
@@ -128,23 +140,21 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Value of the selected color hex
 	 */
 	value?: string;
-
-	showPredefinedColorsWithCustom?: boolean;
-	predefinedColors?: Array<string>;
 }
 
 const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
 	disabled,
-	showPredefinedColorsWithCustom = false,
-	predefinedColors,
+	dropDownContainerProps,
 	label,
 	name,
 	onColorsChange,
 	onValueChange = () => {},
+	predefinedColors,
 	showHex = true,
 	showPalette = true,
+	showPredefinedColorsWithCustom = false,
 	small,
 	spritemap,
 	title,
@@ -234,6 +244,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 						active={active}
 						alignElementRef={triggerElementRef}
 						className="clay-color-dropdown-menu"
+						containerProps={dropDownContainerProps}
 						focusRefOnEsc={splotchRef}
 						onSetActive={setActive}
 						ref={dropdownContainerRef}

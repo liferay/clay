@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, Keys, observeRect} from '@clayui/shared';
+import {ClayPortal, IPortalBaseProps, Keys, observeRect} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
@@ -126,6 +126,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	closeOnClickOutside?: boolean;
 
 	/**
+	 * Props to add to the outer most container.
+	 */
+	containerProps?: IPortalBaseProps;
+
+	/**
 	 * Flag to indicate if menu is displaying a clay-icon on the left.
 	 */
 	hasLeftSymbols?: boolean;
@@ -174,6 +179,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			children,
 			className,
 			closeOnClickOutside = true,
+			containerProps = {},
 			hasLeftSymbols,
 			hasRightSymbols,
 			height,
@@ -287,7 +293,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 		}, []);
 
 		return (
-			<ClayPortal subPortalRef={subPortalRef}>
+			<ClayPortal {...containerProps} subPortalRef={subPortalRef}>
 				<div ref={subPortalRef}>
 					<div
 						{...otherProps}
