@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal} from '@clayui/shared';
+import {ClayPortal, IPortalBaseProps} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 import warning from 'warning';
@@ -35,6 +35,11 @@ interface IProps
 	 * Container element to render modal into.
 	 */
 	containerElementRef?: React.RefObject<Element>;
+
+	/**
+	 * Props to add to the <ClayPortal/>.
+	 */
+	containerProps?: IPortalBaseProps;
 
 	/**
 	 * The size of element modal.
@@ -69,6 +74,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	children,
 	className,
 	containerElementRef,
+	containerProps = {},
 	observer,
 	size,
 	spritemap,
@@ -92,6 +98,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 
 	return (
 		<ClayPortal
+			{...containerProps}
 			containerRef={containerElementRef}
 			subPortalRef={modalElementRef}
 		>
