@@ -604,6 +604,7 @@ const iconsData = {
 	"flag-empty":				'"banner", "report"',
 	"flag-full":				'"banner", "report"',
 	"folder":					'"box", "container", "file"',
+	"form-extensions":			'"form", "extensions"',
 	"format":					'"editor", "paint", "style", "text"',
 	"forms":					'"inputs", "layout", "list", "structure"',
 	"full-size":				'"expand", "fullscreen", "increase"',
