@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, observeRect} from '@clayui/shared';
+import {ClayPortal, IPortalBaseProps, observeRect} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -45,6 +45,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignPosition?: typeof ALIGN_POSITIONS[number];
 
 	/**
+	 * Props to add to the <ClayPortal/>.
+	 */
+	containerProps?: IPortalBaseProps;
+
+	/**
 	 * Flag to indicate if container should not be scrollable
 	 */
 	disableScroll?: boolean;
@@ -78,6 +83,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			alignPosition = 'bottom',
 			children,
 			className,
+			containerProps = {},
 			disableScroll = false,
 			header,
 			onShowChange,
@@ -188,7 +194,9 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 						},
 					})}
 
-					{show && <ClayPortal>{content}</ClayPortal>}
+					{show && (
+						<ClayPortal {...containerProps}>{content}</ClayPortal>
+					)}
 				</>
 			);
 		}
