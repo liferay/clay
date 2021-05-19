@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Portal pass className and id to the root element 1`] = `
+<body>
+  <div />
+  <div
+    class="portalClass"
+    id="portalId"
+  >
+    <div
+      id="portal"
+    />
+  </div>
+</body>
+`;

@@ -139,4 +139,18 @@ describe('Portal', () => {
 				.contains(document.getElementById('portal'))
 		).toBeTruthy();
 	});
+
+	it('pass className and id to the root element', () => {
+		const App = () => {
+			return (
+				<ClayPortal className="portalClass" id="portalId">
+					<div id="portal" />
+				</ClayPortal>
+			);
+		};
+
+		render(<App />);
+
+		expect(document.body).toMatchSnapshot();
+	});
 });

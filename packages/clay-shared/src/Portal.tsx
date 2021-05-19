@@ -12,22 +12,55 @@ const ClayPortalContext = React.createContext<React.RefObject<Element | null> | 
 
 ClayPortalContext.displayName = 'ClayPortalContext';
 
-export const ClayPortal: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement> & {
-		/**
-		 * Ref of element to render portal into.
-		 */
-		containerRef?: React.RefObject<Element>;
+const createDivElement = (className?: string, id?: string) => {
+	const element = document.createElement('div');
 
-		/**
-		 * Ref of element to render nested portals into.
-		 */
-		subPortalRef?: React.RefObject<Element>;
+	if (className) {
+		element.setAttribute('class', className);
 	}
-> = ({children, containerRef, subPortalRef}) => {
+
+	if (id) {
+		element.setAttribute('id', id);
+	}
+
+	return element;
+};
+
+interface IProps {
+	children: React.ReactElement | Array<React.ReactElement>;
+
+	/**
+	 * Class to add to the root element
+	 */
+	className?: string;
+
+	/**
+	 * Ref of element to render portal into.
+	 */
+	containerRef?: React.RefObject<Element>;
+
+	/**
+	 * Id fof the root element
+	 */
+	id?: string;
+
+	/**
+	 * Ref of element to render nested portals into.
+	 */
+	subPortalRef?: React.RefObject<Element>;
+}
+
+export const ClayPortal: React.FunctionComponent<IProps> = ({
+	children,
+	className,
+	containerRef,
+	id,
+	subPortalRef,
+}) => {
 	const parentPortalRef = React.useContext(ClayPortalContext);
+
 	const portalRef = React.useRef(
-		typeof document !== 'undefined' ? document.createElement('div') : null
+		typeof document !== 'undefined' ? createDivElement(className, id) : null
 	);
 
 	React.useEffect(() => {
