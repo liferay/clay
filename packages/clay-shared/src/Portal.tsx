@@ -12,18 +12,16 @@ const ClayPortalContext = React.createContext<React.RefObject<Element | null> | 
 
 ClayPortalContext.displayName = 'ClayPortalContext';
 
-const createElement = (
-	nodeName: string,
-	attributes: Record<string, string>
-) => {
-	const element = document.createElement(nodeName);
+const createDivElement = (className?: string, id?: string) => {
+	const element = document.createElement('div');
 
-	Object.keys(attributes).forEach((key) => {
-		element.setAttribute(
-			key === 'className' ? 'class' : key,
-			attributes[key]
-		);
-	});
+	if (className) {
+		element.setAttribute('class', className);
+	}
+
+	if (id) {
+		element.setAttribute('id', id);
+	}
 
 	return element;
 };
@@ -54,16 +52,15 @@ interface IProps {
 
 export const ClayPortal: React.FunctionComponent<IProps> = ({
 	children,
+	className,
 	containerRef,
+	id,
 	subPortalRef,
-	...otherProps
 }) => {
 	const parentPortalRef = React.useContext(ClayPortalContext);
 
 	const portalRef = React.useRef(
-		typeof document !== 'undefined'
-			? createElement('div', otherProps as Record<string, string>)
-			: null
+		typeof document !== 'undefined' ? createDivElement(className, id) : null
 	);
 
 	React.useEffect(() => {
