@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, Keys, delegate} from '@clayui/shared';
+import {ClayPortal, IPortalBaseProps, Keys, delegate} from '@clayui/shared';
 import domAlign from 'dom-align';
 import React, {useCallback} from 'react';
 import warning from 'warning';
@@ -140,6 +140,11 @@ interface IPropsBase {
 	autoAlign?: boolean;
 
 	/**
+	 * Props to add to the <ClayPortal/>.
+	 */
+	containerProps?: IPortalBaseProps;
+
+	/**
 	 * Custom function for rendering the contents of the tooltip
 	 */
 	contentRenderer?: TContentRenderer;
@@ -171,6 +176,7 @@ const TooltipProvider: React.FunctionComponent<
 > = ({
 	autoAlign = true,
 	children,
+	containerProps = {},
 	contentRenderer = (props) => props.title,
 	delay = 600,
 	scope,
@@ -369,7 +375,7 @@ const TooltipProvider: React.FunctionComponent<
 	return (
 		<>
 			{show && (
-				<ClayPortal>
+				<ClayPortal {...containerProps}>
 					<ClayTooltip alignPosition={align} ref={tooltipRef} show>
 						{setAsHTML && typeof titleContent === 'string' ? (
 							<span
