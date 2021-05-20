@@ -37,34 +37,10 @@
 @mixin clay-aspect-ratio-item-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$bottom: map-get($map, bottom);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$height: map-get($map, height);
-	$left: map-get($map, left);
-	$max-height: map-get($map, max-height);
-	$max-width: map-get($map, max-width);
-	$overflow: map-get($map, overflow);
-	$position: map-get($map, position);
-	$right: map-get($map, right);
-	$top: map-get($map, top);
-	$width: map-get($map, width);
-	$word-wrap: map-get($map, word-wrap);
+	$base: setter($map, ());
 
 	@if ($enabled) {
-		bottom: $bottom;
-		color: $color;
-		display: $display;
-		height: $height;
-		left: $left;
-		max-height: $max-height;
-		max-width: $max-width;
-		overflow: $overflow;
-		position: $position;
-		right: $right;
-		top: $top;
-		width: $width;
-		word-wrap: $word-wrap;
+		@include clay-css($base);
 	}
 }
 
@@ -72,17 +48,11 @@
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// border-color: {Color | String | Null},
-/// border-style: {String | Null},
-/// border-width: {Number | List | Null},
-/// color: {Color | String | Null},
-/// font-size: {Number | String | Null},
 /// horizontal: {Number | Null}, // Sets the `clay-aspect-ratio` `$width` (e.g., 16)
-/// text-align: {String | Null},
 /// vertical: {Number | Null}, // Sets the `clay-aspect-ratio` `$height` (e.g., 9)
-/// lexicon-icon-height: {Number | String | Null},
-/// lexicon-icon-margin-top: {Number | String | Null},
-/// lexicon-icon-width: {Number | String | Null},
+/// lexicon-icon-height: {Number | String | Null}, // deprecated use Sass map `lexicon-icon` instead
+/// lexicon-icon-margin-top: {Number | String | Null}, // deprecated use Sass map `lexicon-icon` instead
+/// lexicon-icon-width: {Number | String | Null}, // deprecated use Sass map `lexicon-icon` instead
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -90,39 +60,54 @@
 @mixin clay-aspect-ratio-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$bg: map-get($map, bg);
-	$bg-image: map-get($map, bg-image);
-	$border-color: map-get($map, border-color);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$color: map-get($map, color);
-	$font-size: map-get($map, font-size);
 	$horizontal: map-get($map, horizontal);
-	$text-align: map-get($map, text-align);
 	$vertical: map-get($map, vertical);
 
-	$lexicon-icon-height: map-get($map, lexicon-icon-height);
-	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
-	$lexicon-icon-width: map-get($map, lexicon-icon-width);
+	$base: setter($map, ());
+	$base: map-merge(
+		$map,
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($base, background-color)),
+			background-image:
+				setter(
+					map-get($map, bg-image),
+					map-get($base, background-image)
+				),
+		)
+	);
+
+	$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+	$lexicon-icon: map-merge(
+		$lexicon-icon,
+		(
+			height:
+				setter(
+					map-get($map, lexicon-icon-height),
+					map-get($lexicon-icon, height)
+				),
+			margin-top:
+				setter(
+					map-get($map, lexicon-icon-margin-top),
+					map-get($lexicon-icon, margin-top)
+				),
+			width:
+				setter(
+					map-get($map, lexicon-icon-width),
+					map-get($lexicon-icon, width)
+				),
+		)
+	);
 
 	@if ($enabled) {
-		background-color: $bg;
-		background-image: $bg-image;
-		border-color: $border-color;
-		border-style: $border-style;
-		border-width: $border-width;
-		color: $color;
-		font-size: $font-size;
-		text-align: $text-align;
+		@include clay-css($base);
 
 		@if ($horizontal and $vertical) {
 			@include clay-aspect-ratio($horizontal, $vertical);
 		}
 
 		.lexicon-icon {
-			height: $lexicon-icon-height;
-			margin-top: $lexicon-icon-margin-top;
-			width: $lexicon-icon-width;
+			@include clay-css($lexicon-icon);
 		}
 	}
 }
