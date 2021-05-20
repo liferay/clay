@@ -58,20 +58,21 @@
 	@return $newMap;
 }
 
-/// A helper function for setting default values in variables inside mixins if no value is declared. If the value of a variable is `clay-unset`, `setter` returns a value of `null` which prevents Sass from outputting the declaration. If the value of a variable is `null`, `setter` returns the default, `$val`.
-/// @param {Any} $var - The Sass variable
-/// @param {Any} $val - The default value to return if `$var` is `null`
+/// A helper function for setting default values in variables inside mixins if no value is declared. If the value of a variable is `clay-unset`, `setter` returns a value of `null` which prevents Sass from outputting the CSS property. If all the values in the arglist `$vars...` is `null`, `setter` returns `null`.
+/// @param {Arglist} $vars - A list of comma-delimited variables (e.g., $var1, $var2, $var3).
 
-@function setter($var, $val: false) {
-	@if ($var == clay-unset) {
-		@return null;
+@function setter($vars...) {
+	@each $var in $vars {
+		@if ($var == clay-unset) {
+			@return null;
+		}
+
+		@if ($var != null) {
+			@return $var;
+		}
 	}
 
-	@if ($var != null) {
-		@return $var;
-	}
-
-	@return $val;
+	@return null;
 }
 
 /// A helper function that returns the opposite of a number, generally used for `null` values so Sass doesn't output a value `-null`. Returns `null` if `$num` is not a number.
