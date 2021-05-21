@@ -36,57 +36,36 @@
 @mixin clay-card-section-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$bg: map-get($map, bg);
-	$border-color: map-get($map, border-color);
-	$border-radius: map-get($map, border-radius);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$display: map-get($map, display);
-	$flex-basis: map-get($map, flex-basis);
-	$flex-direction: map-get($map, flex-direction);
-	$flex-grow: map-get($map, flex-grow);
-	$flex-shrink: map-get($map, flex-shrink);
-	$flex-wrap: map-get($map, flex-wrap);
-	$margin-bottom: map-get($map, margin-bottom);
-	$margin-left: map-get($map, margin-left);
-	$margin-right: map-get($map, margin-right);
-	$margin-top: map-get($map, margin-top);
-	$padding-bottom: map-get($map, padding-bottom);
-	$padding-left: map-get($map, padding-left);
-	$padding-right: map-get($map, padding-right);
-	$padding-top: map-get($map, padding-top);
-	$text-align: map-get($map, text-align);
-	$width: map-get($map, width);
+	$base: map-merge(
+		$map,
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
+	);
 
-	$autofit-col-padding-left: map-get($map, autofit-col-padding-left);
-	$autofit-col-padding-right: map-get($map, autofit-col-padding-right);
+	$autofit-col: setter(map-get($map, autofit-col), ());
+	$autofit-col: map-merge(
+		$autofit-col,
+		(
+			padding-left:
+				setter(
+					map-get($map, autofit-col-padding-left),
+					map-get($autofit-col, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, autofit-col-padding-right),
+					map-get($autofit-col, padding-right)
+				),
+		)
+	);
 
 	@if ($enabled) {
-		background-color: $bg;
-		border-color: $border-color;
-		border-radius: $border-radius;
-		border-style: $border-style;
-		border-width: $border-width;
-		display: $display;
-		flex-basis: $flex-basis;
-		flex-direction: $flex-direction;
-		flex-grow: $flex-grow;
-		flex-shrink: $flex-shrink;
-		flex-wrap: $flex-wrap;
-		margin-bottom: $margin-bottom;
-		margin-left: $margin-left;
-		margin-right: $margin-right;
-		margin-top: $margin-top;
-		padding-bottom: $padding-bottom;
-		padding-left: $padding-left;
-		padding-right: $padding-right;
-		padding-top: $padding-top;
-		text-align: $text-align;
-		width: $width;
+		@include clay-css($base);
 
 		.autofit-col {
-			padding-left: $autofit-col-padding-left;
-			padding-right: $autofit-col-padding-right;
+			@include clay-css($autofit-col);
 		}
 	}
 }
@@ -159,54 +138,144 @@
 @mixin clay-card-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$bg: map-get($map, bg);
-	$border-color: map-get($map, border-color);
-	$border-style: map-get($map, border-style);
-	$border-width: map-get($map, border-width);
-	$box-shadow: map-get($map, box-shadow);
-	$cursor: map-get($map, cursor);
-	$color: map-get($map, color);
-	$display: map-get($map, display);
-	$flex-basis: map-get($map, flex-basis);
-	$flex-direction: map-get($map, flex-direction);
-	$flex-grow: map-get($map, flex-grow);
-	$flex-shrink: map-get($map, flex-shrink);
-	$margin-bottom: map-get($map, margin-bottom);
-	$min-width: map-get($map, min-width);
-	$outline: map-get($map, outline);
-	$position: map-get($map, position);
-	$text-decoration: map-get($map, text-decoration);
-	$transition: map-get($map, transition);
-	$width: map-get($map, width);
-	$word-wrap: map-get($map, word-wrap);
+	$base: map-merge(
+		$map,
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
+	);
 
-	$hover-bg: map-get($map, hover-bg);
-	$hover-border-color: map-get($map, hover-border-color);
-	$hover-box-shadow: map-get($map, hover-box-shadow);
-	$hover-color: map-get($map, hover-color);
-	$hover-text-decoration: map-get($map, hover-text-decoration);
-	$hover-card-title: setter(map-get($map, hover-card-title), ());
-	$hover-card-subtitle: setter(map-get($map, hover-card-subtitle), ());
-	$hover-card-text: setter(map-get($map, hover-card-text), ());
-	$hover-card-link: setter(map-get($map, hover-card-link), ());
+	$hover: setter(map-get($map, hover), ());
+	$hover: map-merge(
+		$hover,
+		(
+			background-color:
+				setter(
+					map-get($map, hover-bg),
+					map-get($hover, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, hover-border-color),
+					map-get($hover, border-color)
+				),
+			box-shadow:
+				setter(
+					map-get($map, hover-box-shadow),
+					map-get($hover, box-shadow)
+				),
+			color: setter(map-get($map, hover-color), map-get($hover, color)),
+			text-decoration:
+				setter(
+					map-get($map, hover-text-decoration),
+					map-get($hover, text-decoration)
+				),
+		)
+	);
 
-	$focus-bg: map-get($map, focus-bg);
-	$focus-border-color: map-get($map, focus-border-color);
-	$focus-box-shadow: map-get($map, focus-box-shadow);
-	$focus-color: map-get($map, focus-color);
-	$focus-text-decoration: map-get($map, focus-text-decoration);
-	$focus-card-title: setter(map-get($map, focus-card-title), ());
-	$focus-card-subtitle: setter(map-get($map, focus-card-subtitle), ());
-	$focus-card-text: setter(map-get($map, focus-card-text), ());
-	$focus-card-link: setter(map-get($map, focus-card-link), ());
+	$old-hover-card-title: setter(map-get($map, hover-card-title), ());
+	$hover-card-title: setter(map-get($hover, card-title), ());
+	$hover-card-title: map-merge($hover-card-title, $old-hover-card-title);
 
-	$active-bg: map-get($map, active-bg);
-	$active-border-color: map-get($map, active-border-color);
-	$active-color: map-get($map, active-color);
-	$active-card-title: setter(map-get($map, active-card-title), ());
-	$active-card-subtitle: setter(map-get($map, active-card-subtitle), ());
-	$active-card-text: setter(map-get($map, active-card-text), ());
-	$active-card-link: setter(map-get($map, active-card-link), ());
+	$old-hover-card-subtitle: setter(map-get($map, hover-card-subtitle), ());
+	$hover-card-subtitle: setter(map-get($hover, card-subtitle), ());
+	$hover-card-subtitle: map-merge(
+		$hover-card-subtitle,
+		$old-hover-card-subtitle
+	);
+
+	$old-hover-card-text: setter(map-get($map, hover-card-text), ());
+	$hover-card-text: setter(map-get($hover, card-text), ());
+	$hover-card-text: map-merge($hover-card-text, $old-hover-card-text);
+
+	$old-hover-card-link: setter(map-get($map, hover-card-link), ());
+	$hover-card-link: setter(map-get($hover, card-link), ());
+	$hover-card-link: map-merge($hover-card-link, $old-hover-card-link);
+
+	$focus: setter(map-get($map, focus), ());
+	$focus: map-merge(
+		$focus,
+		(
+			background-color:
+				setter(
+					map-get($map, focus-bg),
+					map-get($focus, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, focus-border-color),
+					map-get($focus, border-color)
+				),
+			box-shadow:
+				setter(
+					map-get($map, focus-box-shadow),
+					map-get($focus, box-shadow)
+				),
+			color: setter(map-get($map, focus-color), map-get($focus, color)),
+			text-decoration:
+				setter(
+					map-get($map, focus-text-decoration),
+					map-get($focus, text-decoration)
+				),
+		)
+	);
+
+	$old-focus-card-title: setter(map-get($map, focus-card-title), ());
+	$focus-card-title: setter(map-get($focus, card-title), ());
+	$focus-card-title: map-merge($focus-card-title, $old-focus-card-title);
+
+	$old-focus-card-subtitle: setter(map-get($map, focus-card-subtitle), ());
+	$focus-card-subtitle: setter(map-get($focus, card-subtitle), ());
+	$focus-card-subtitle: map-merge(
+		$focus-card-subtitle,
+		$old-focus-card-subtitle
+	);
+
+	$old-focus-card-text: setter(map-get($map, focus-card-text), ());
+	$focus-card-text: setter(map-get($focus, card-text), ());
+	$focus-card-text: map-merge($focus-card-text, $old-focus-card-text);
+
+	$old-focus-card-link: setter(map-get($map, focus-card-link), ());
+	$focus-card-link: setter(map-get($focus, card-link), ());
+	$focus-card-link: map-merge($focus-card-link, $old-focus-card-link);
+
+	$active: setter(map-get($map, active), ());
+	$active: map-merge(
+		$active,
+		(
+			background-color:
+				setter(
+					map-get($map, active-bg),
+					map-get($active, background-color)
+				),
+			border-color:
+				setter(
+					map-get($map, active-border-color),
+					map-get($active, border-color)
+				),
+			color: setter(map-get($map, active-color), map-get($active, color)),
+		)
+	);
+
+	$old-active-card-title: setter(map-get($map, active-card-title), ());
+	$active-card-title: setter(map-get($active, card-title), ());
+	$active-card-title: map-merge($active-card-title, $old-active-card-title);
+
+	$old-active-card-subtitle: setter(map-get($map, active-card-subtitle), ());
+	$active-card-subtitle: setter(map-get($active, card-subtitle), ());
+	$active-card-subtitle: map-merge(
+		$active-card-subtitle,
+		$old-active-card-subtitle
+	);
+
+	$old-active-card-text: setter(map-get($map, active-card-text), ());
+	$active-card-text: setter(map-get($active, card-text), ());
+	$active-card-text: map-merge($active-card-text, $old-active-card-text);
+
+	$old-active-card-link: setter(map-get($map, active-card-link), ());
+	$active-card-link: setter(map-get($active, card-link), ());
+	$active-card-link: map-merge($active-card-link, $old-active-card-link);
 
 	$after-highlight: setter(map-get($map, after-highlight), ());
 
@@ -235,33 +304,10 @@
 	@if ($enabled) {
 		&.card,
 		.card {
-			background-color: $bg;
-			border-color: $border-color;
-			border-style: $border-style;
-			border-width: $border-width;
-			box-shadow: $box-shadow;
-			cursor: $cursor;
-			color: $color;
-			display: $display;
-			flex-basis: $flex-basis;
-			flex-direction: $flex-direction;
-			flex-grow: $flex-grow;
-			flex-shrink: $flex-shrink;
-			margin-bottom: $margin-bottom;
-			min-width: $min-width;
-			outline: $outline;
-			position: $position;
-			text-decoration: $text-decoration;
-			transition: $transition;
-			width: $width;
-			word-wrap: $word-wrap;
+			@include clay-css($base);
 
 			&:hover {
-				background-color: $hover-bg;
-				border-color: $hover-border-color;
-				box-shadow: $hover-box-shadow;
-				color: $hover-color;
-				text-decoration: $hover-text-decoration;
+				@include clay-css($hover);
 
 				.card-title {
 					@include clay-link($hover-card-title);
@@ -281,11 +327,7 @@
 			}
 
 			&:focus {
-				background-color: $focus-bg;
-				border-color: $focus-border-color;
-				box-shadow: $focus-box-shadow;
-				color: $focus-color;
-				text-decoration: $focus-text-decoration;
+				@include clay-css($focus);
 
 				.card-title {
 					@include clay-link($focus-card-title);
@@ -306,9 +348,7 @@
 
 			&:active,
 			&.active {
-				background-color: $active-bg;
-				border-color: $active-border-color;
-				color: $active-color;
+				@include clay-css($active);
 
 				.card-title {
 					@include clay-link($active-card-title);
@@ -407,91 +447,192 @@
 @mixin clay-card-type-asset($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$aspect-ratio-border-color: setter(
-		map-get($map, aspect-ratio-border-color),
-		if(
-			variable-exists(card-border-color),
-			$card-border-color,
-			$cadmin-card-border-color
+	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
+	$aspect-ratio: map-merge(
+		$aspect-ratio,
+		(
+			border-color:
+				setter(
+					map-get($map, aspect-ratio-border-color),
+					map-get($aspect-ratio, border-color),
+					if(
+						variable-exists(card-border-color),
+						$card-border-color,
+						$cadmin-card-border-color
+					)
+				),
+			border-style:
+				setter(
+					map-get($map, aspect-ratio-border-style),
+					map-get($aspect-ratio, border-style),
+					solid
+				),
+			border-width:
+				setter(
+					map-get($map, aspect-ratio-border-bottom-width),
+					map-get($map, aspect-ratio-border-width),
+					map-get($aspect-ratio, border-width),
+					0 0 0.0625rem 0
+				),
+			horizontal:
+				setter(
+					map-get($map, aspect-ratio-horizontal),
+					map-get($aspect-ratio, horizontal),
+					16
+				),
+			vertical:
+				setter(
+					map-get($map, aspect-ratio-vertical),
+					map-get($aspect-ratio, vertical),
+					9
+				),
 		)
 	);
-	$aspect-ratio-border-style: setter(
-		map-get($map, aspect-ratio-border-style),
-		solid
+
+	$aspect-ratio-horizontal: map-get($aspect-ratio, horizontal);
+	$aspect-ratio-vertical: map-get($aspect-ratio, vertical);
+
+	$card-body: setter(map-get($map, card-body), ());
+	$card-body: map-merge(
+		$card-body,
+		(
+			padding-bottom:
+				setter(
+					map-get($map, card-body-padding-bottom),
+					map-get($card-body, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, card-body-padding-left),
+					map-get($card-body, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, card-body-padding-right),
+					map-get($card-body, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, card-body-padding-top),
+					map-get($card-body, padding-top)
+				),
+		)
 	);
 
-	// The Sass map key name `aspect-ratio-border-bottom-width` is deprecated as of v2.5.1 use `aspect-ratio-border-width` instead
-	$aspect-ratio-border-bottom-width: setter(
-		map-get($map, aspect-ratio-border-bottom-width),
-		0 0 0.0625rem 0
-	); // 0 0 1px 0
-
-	$aspect-ratio-border-width: map-get($map, aspect-ratio-border-width);
-	$aspect-ratio-horizontal: setter(
-		map-get($map, aspect-ratio-horizontal),
-		16
-	);
-	$aspect-ratio-vertical: setter(map-get($map, aspect-ratio-vertical), 9);
-
-	$card-body-padding-bottom: map-get($map, card-body-padding-bottom);
-	$card-body-padding-left: map-get($map, card-body-padding-left);
-	$card-body-padding-right: map-get($map, card-body-padding-right);
-	$card-body-padding-top: map-get($map, card-body-padding-top);
-	$card-row-align-items: setter(
-		map-get($map, card-row-align-items),
-		flex-start
+	$card-row: setter(map-get($map, card-row), ());
+	$card-row: map-merge(
+		$card-row,
+		(
+			align-items:
+				setter(
+					map-get($map, card-row-align-items),
+					map-get($card-row, align-items),
+					flex-start
+				),
+		)
 	);
 
-	$checkbox-cursor: setter(
-		map-get($map, checkbox-cursor),
-		if(variable-exists(link-cursor), $link-cursor, $cadmin-link-cursor)
+	$checkbox: setter(map-get($map, checkbox), ());
+	$checkbox: map-merge(
+		$checkbox,
+		(
+			cursor:
+				setter(
+					map-get($map, checkbox-cursor),
+					map-get($checkbox, cursor),
+					if(
+						variable-exists(link-cursor),
+						$link-cursor,
+						$cadmin-link-cursor
+					)
+				),
+		)
 	);
 
-	$asset-icon-color: map-get($map, asset-icon-color);
-	$asset-icon-width: setter(map-get($map, asset-icon-width), 22.225%);
-	$asset-icon-sticker-border-radius: setter(
-		map-get($map, asset-icon-sticker-border-radius),
-		50%
-	);
-	$asset-icon-sticker-font-size: setter(
-		map-get($map, asset-icon-sticker-font-size),
-		2vw
+	$card-type-asset-icon: setter(map-get($map, card-type-asset-icon), ());
+	$card-type-asset-icon: map-merge(
+		$card-type-asset-icon,
+		(
+			color:
+				setter(
+					map-get($map, asset-icon-color),
+					map-get($card-type-asset-icon, color)
+				),
+			width:
+				setter(
+					map-get($map, asset-icon-width),
+					map-get($card-type-asset-icon, width),
+					22.225%
+				),
+		)
 	);
 
-	$dropdown-action-offset-bottom: map-get(
-		$map,
-		dropdown-action-offset-bottom
+	$card-type-asset-icon-sticker: setter(
+		map-get($card-type-asset-icon, sticker),
+		()
 	);
-	$dropdown-action-offset-left: map-get($map, dropdown-action-offset-left);
-	$dropdown-action-offset-right: setter(
-		map-get($map, dropdown-action-offset-right),
-		-0.5rem
-	); // -8px
-	$dropdown-action-offset-top: setter(
-		map-get($map, dropdown-action-offset-top),
-		-0.1875rem
-	); // -3px
+	$card-type-asset-icon-sticker: map-merge(
+		$card-type-asset-icon-sticker,
+		(
+			border-radius:
+				setter(
+					map-get($map, asset-icon-sticker-border-radius),
+					map-get($card-type-asset-icon-sticker, border-radius),
+					50%
+				),
+			font-size:
+				setter(
+					map-get($map, asset-icon-sticker-font-size),
+					map-get($card-type-asset-icon-sticker, font-size),
+					2vw
+				),
+		)
+	);
+
+	$dropdown-action: setter(map-get($map, dropdown-action), ());
+	$dropdown-action: map-merge(
+		$dropdown-action,
+		(
+			margin-bottom:
+				setter(
+					map-get($map, dropdown-action-offset-bottom),
+					map-get($dropdown-action, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, dropdown-action-offset-left),
+					map-get($dropdown-action, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, dropdown-action-offset-right),
+					map-get($dropdown-action, margin-right),
+					-0.5rem
+				),
+			margin-top:
+				setter(
+					map-get($map, dropdown-action-offset-top),
+					map-get($dropdown-action, margin-top),
+					-0.1875rem
+				),
+		)
+	);
 
 	@if ($enabled) {
 		.aspect-ratio {
-			border-color: $aspect-ratio-border-color;
-			border-style: $aspect-ratio-border-style;
-			border-width: $aspect-ratio-border-width;
+			@include clay-css($aspect-ratio);
 
-			@if not $aspect-ratio-border-width {
-				// `$aspect-ratio-border-bottom-width is deprecated as of v2.5.1 use `$aspect-ratio-border-width` instead
-				border-width: $aspect-ratio-border-bottom-width;
+			@if ($aspect-ratio-horizontal and $aspect-ratio-vertical) {
+				@include clay-aspect-ratio(
+					$aspect-ratio-horizontal,
+					$aspect-ratio-vertical
+				);
 			}
-
-			@include clay-aspect-ratio(
-				$aspect-ratio-horizontal,
-				$aspect-ratio-vertical
-			);
 
 			.custom-control label,
 			.form-check-label {
 				bottom: 0;
-				cursor: $checkbox-cursor;
+				cursor: map-get($checkbox, cursor);
 				left: 0;
 				position: absolute;
 				right: 0;
@@ -500,19 +641,15 @@
 		}
 
 		.card-body {
-			padding-bottom: $card-body-padding-bottom;
-			padding-left: $card-body-padding-left;
-			padding-right: $card-body-padding-right;
-			padding-top: $card-body-padding-top;
+			@include clay-css($card-body);
 		}
 
 		.card-row {
-			align-items: $card-row-align-items;
+			@include clay-css($card-row);
 		}
 
 		.card-type-asset-icon {
-			color: $asset-icon-color;
-			width: $asset-icon-width;
+			@include clay-css($card-type-asset-icon);
 
 			.inline-item {
 				bottom: 0;
@@ -528,24 +665,18 @@
 			}
 
 			> .sticker {
-				@include border-radius($asset-icon-sticker-border-radius);
-
-				display: block;
-				font-size: $asset-icon-sticker-font-size;
-				padding-bottom: 100%;
-				width: 100%;
+				@include clay-css($card-type-asset-icon-sticker);
 			}
 
 			.sticker-overlay {
-				@include border-radius($asset-icon-sticker-border-radius);
+				@include border-radius(
+					map-get($card-type-asset-icon-sticker, border-radius)
+				);
 			}
 		}
 
 		.dropdown-action {
-			margin-bottom: $dropdown-action-offset-bottom;
-			margin-left: $dropdown-action-offset-left;
-			margin-right: $dropdown-action-offset-right;
-			margin-top: $dropdown-action-offset-top;
+			@include clay-css($dropdown-action);
 		}
 	}
 }
@@ -570,27 +701,80 @@
 @mixin clay-card-type-asset-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$aspect-ratio-bg: map-get($map, aspect-ratio-bg);
-	$aspect-ratio-checkered-fg: map-get($map, aspect-ratio-checkered-fg);
-	$aspect-ratio-checkered-bg: map-get($map, aspect-ratio-checkered-bg);
+	$base: setter($map, ());
 
-	$asset-icon-color: map-get($map, asset-icon-color);
-	$asset-icon-max-width: map-get($map, asset-icon-max-width);
-	$asset-icon-min-width: map-get($map, asset-icon-min-width);
-	$asset-icon-width: map-get($map, asset-icon-width);
-
-	$asset-icon-lexicon-icon-height: map-get(
-		$map,
-		asset-icon-lexicon-icon-height
+	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
+	$aspect-ratio: map-merge(
+		$aspect-ratio,
+		(
+			background-color:
+				setter(
+					map-get($map, aspect-ratio-bg),
+					map-get($map, aspect-ratio-checkered-bg),
+					map-get($aspect-ratio, background-color)
+				),
+			checkered-foreground-color:
+				setter(
+					map-get($map, aspect-ratio-checkered-fg),
+					map-get($aspect-ratio, checkered-foreground-color)
+				),
+		)
 	);
-	$asset-icon-lexicon-icon-width: map-get(
-		$map,
-		asset-icon-lexicon-icon-width
+
+	$aspect-ratio-checkered-fg: map-get(
+		$aspect-ratio,
+		checkered-foreground-color
+	);
+
+	$asset-icon: setter(map-get($map, asset-icon), ());
+	$asset-icon: map-merge(
+		$asset-icon,
+		(
+			color:
+				setter(
+					map-get($map, asset-icon-color),
+					map-get($asset-icon, color)
+				),
+			max-width:
+				setter(
+					map-get($map, asset-icon-max-width),
+					map-get($asset-icon, max-width)
+				),
+			min-width:
+				setter(
+					map-get($map, asset-icon-min-width),
+					map-get($asset-icon, min-width)
+				),
+			width:
+				setter(
+					map-get($map, asset-icon-width),
+					map-get($asset-icon, width)
+				),
+		)
+	);
+
+	$asset-icon-lexicon-icon: setter(map-get($asset-icon, lexicon-icon), ());
+	$asset-icon-lexicon-icon: map-merge(
+		$asset-icon-lexicon-icon,
+		(
+			height:
+				setter(
+					map-get($map, asset-icon-lexicon-icon-height),
+					map-get($asset-icon-lexicon-icon, height)
+				),
+			width:
+				setter(
+					map-get($map, asset-icon-lexicon-icon-width),
+					map-get($asset-icon-lexicon-icon, width)
+				),
+		)
 	);
 
 	@if ($enabled) {
+		@include clay-css($base);
+
 		.aspect-ratio {
-			background-color: $aspect-ratio-bg;
+			@include clay-css($aspect-ratio);
 
 			@if ($aspect-ratio-checkered-fg) {
 				@include clay-bg-checkered($aspect-ratio-checkered-fg);
@@ -598,14 +782,10 @@
 		}
 
 		.card-type-asset-icon {
-			color: $asset-icon-color;
-			max-width: $asset-icon-max-width;
-			min-width: $asset-icon-min-width;
-			width: $asset-icon-width;
+			@include clay-css($asset-icon);
 
 			.lexicon-icon {
-				height: $asset-icon-lexicon-icon-height;
-				width: $asset-icon-lexicon-icon-width;
+				@include clay-css($asset-icon-lexicon-icon);
 			}
 		}
 	}
@@ -633,50 +813,99 @@
 @mixin clay-card-type-directory($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$card-body-padding-bottom: map-get($map, card-body-padding-bottom);
-	$card-body-padding-left: map-get($map, card-body-padding-left);
-	$card-body-padding-right: map-get($map, card-body-padding-right);
-	$card-body-padding-top: map-get($map, card-body-padding-top);
+	$base: setter($map, ());
 
-	$sticker-font-size: map-get($map, sticker-font-size);
-	$sticker-line-height: map-get($map, sticker-line-height);
+	$card-body: setter(map-get($map, card-body), ());
+	$card-body: map-merge(
+		$card-body,
+		(
+			padding-bottom:
+				setter(
+					map-get($map, card-body-padding-bottom),
+					map-get($card-body, padding-bottom)
+				),
+			padding-left:
+				setter(
+					map-get($map, card-body-padding-left),
+					map-get($card-body, padding-left)
+				),
+			padding-right:
+				setter(
+					map-get($map, card-body-padding-right),
+					map-get($card-body, padding-right)
+				),
+			padding-top:
+				setter(
+					map-get($map, card-body-padding-top),
+					map-get($card-body, padding-top)
+				),
+		)
+	);
+
+	$sticker: setter(map-get($map, sticker), ());
+	$sticker: map-merge(
+		$sticker,
+		(
+			font-size:
+				setter(
+					map-get($map, sticker-font-size),
+					map-get($sticker, font-size)
+				),
+			height:
+				setter(map-get($map, sticker-size), map-get($sticker, height)),
+			line-height:
+				setter(
+					map-get($map, sticker-line-height),
+					map-get($map, sticker-size),
+					map-get($sticker, line-height)
+				),
+			width: setter(map-get($map, sticker-size), map-get($sticker, width)),
+		)
+	);
+
 	$sticker-size: map-get($map, sticker-size);
 
-	$dropdown-action-offset-bottom: map-get(
-		$map,
-		dropdown-action-offset-bottom
+	$dropdown-action: setter(map-get($map, dropdown-action), ());
+	$dropdown-action: map-merge(
+		$dropdown-action,
+		(
+			margin-bottom:
+				setter(
+					map-get($map, dropdown-action-offset-bottom),
+					map-get($dropdown-action, margin-bottom)
+				),
+			margin-left:
+				setter(
+					map-get($map, dropdown-action-offset-left),
+					map-get($dropdown-action, margin-left)
+				),
+			margin-right:
+				setter(
+					map-get($map, dropdown-action-offset-right),
+					map-get($dropdown-action, margin-right),
+					-0.5rem
+				),
+			margin-top:
+				setter(
+					map-get($map, dropdown-action-offset-top),
+					map-get($dropdown-action, margin-top)
+				),
+		)
 	);
-	$dropdown-action-offset-left: map-get($map, dropdown-action-offset-left);
-	$dropdown-action-offset-right: setter(
-		map-get($map, dropdown-action-offset-right),
-		-0.5rem
-	); // -8px
-	$dropdown-action-offset-top: map-get($map, dropdown-action-offset-top);
 
 	@if ($enabled) {
+		@include clay-css($base);
+
 		.card-body {
-			padding-bottom: $card-body-padding-bottom;
-			padding-left: $card-body-padding-left;
-			padding-right: $card-body-padding-right;
-			padding-top: $card-body-padding-top;
+			@include clay-css($card-body);
 		}
 
 		.dropdown-action {
-			margin-bottom: $dropdown-action-offset-bottom;
-			margin-left: $dropdown-action-offset-left;
-			margin-right: $dropdown-action-offset-right;
-			margin-top: $dropdown-action-offset-top;
+			@include clay-css($dropdown-action);
 		}
 
 		.sticker {
-			font-size: $sticker-font-size;
-			height: $sticker-size;
-			line-height: if(
-				$sticker-line-height,
-				$sticker-line-height,
-				$sticker-size
-			);
-			width: $sticker-size;
+			@include clay-css($sticker);
 		}
 	}
 }
