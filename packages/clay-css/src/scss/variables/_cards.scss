@@ -153,7 +153,9 @@ $card-subtitle-link: () !default;
 $card-subtitle-link: map-deep-merge(
 	(
 		color: map-get($card-subtitle, color),
-		hover-color: darken($gray-600, 15%),
+		hover: (
+			color: darken($gray-600, 15%),
+		),
 	),
 	$card-subtitle-link
 );
@@ -164,8 +166,8 @@ $card-link: () !default;
 $card-link: map-deep-merge(
 	(
 		color: $link-color,
-		hover-color: $link-hover-color,
 		hover: (
+			color: $link-hover-color,
 			text-decoration: none,
 		),
 	),
@@ -215,9 +217,15 @@ $card-interactive-after-highlight: map-deep-merge(
 		position: absolute,
 		right: -$card-border-width,
 		transition: height 0.15s ease-out,
-		hover-height: 4px,
-		focus-height: 4px,
-		active-height: 4px,
+		hover: (
+			height: 4px,
+		),
+		focus: (
+			height: 4px,
+		),
+		active: (
+			height: 4px,
+		),
 	),
 	$card-interactive-after-highlight
 );
@@ -236,11 +244,17 @@ $card-interactive: map-deep-merge(
 		cursor: $link-cursor,
 		outline: 0,
 		transition: $btn-transition,
-		hover-bg: $gray-100,
-		hover-text-decoration: none,
-		focus-border-color: lighten($component-active-bg, 25%),
-		focus-box-shadow: $input-btn-focus-box-shadow,
-		active-bg: $gray-200,
+		hover: (
+			background-color: $gray-100,
+			text-decoration: none,
+		),
+		focus: (
+			border-color: lighten($component-active-bg, 25%),
+			box-shadow: $input-btn-focus-box-shadow,
+		),
+		active: (
+			background-color: $gray-200,
+		),
 		after-highlight: $card-interactive-after-highlight,
 		card-body: $card-interactive-card-body,
 	),
@@ -252,9 +266,15 @@ $card-interactive: map-deep-merge(
 $card-interactive-primary-after-highlight: () !default;
 $card-interactive-primary-after-highlight: map-deep-merge(
 	(
-		hover-bg: $component-active-bg,
-		focus-bg: $component-active-bg,
-		active-bg: $component-active-bg,
+		hover: (
+			background-color: $component-active-bg,
+		),
+		focus: (
+			background-color: $component-active-bg,
+		),
+		active: (
+			background-color: $component-active-bg,
+		),
 	),
 	$card-interactive-primary-after-highlight
 );
@@ -262,8 +282,12 @@ $card-interactive-primary-after-highlight: map-deep-merge(
 $card-interactive-primary: () !default;
 $card-interactive-primary: map-deep-merge(
 	(
-		focus-bg: $gray-100,
-		active-bg: $gray-200,
+		focus: (
+			background-color: $gray-100,
+		),
+		active: (
+			background-color: $gray-200,
+		),
 		after-highlight: $card-interactive-primary-after-highlight,
 	),
 	$card-interactive-primary
@@ -275,11 +299,15 @@ $card-interactive-secondary: () !default;
 $card-interactive-secondary: map-deep-merge(
 	(
 		color: $gray-900,
-		hover-color: $gray-900,
-		hover-bg: $white,
-		hover-border-color: lighten($component-active-bg, 25%),
-		hover-box-shadow: $input-btn-focus-box-shadow,
-		active-bg: $white,
+		hover: (
+			background-color: $white,
+			border-color: lighten($component-active-bg, 25%),
+			box-shadow: $input-btn-focus-box-shadow,
+			color: $gray-900,
+		),
+		active: (
+			background-color: $white,
+		),
 	),
 	$card-interactive-secondary
 );
@@ -287,6 +315,18 @@ $card-interactive-secondary: map-deep-merge(
 // Card Type Asset
 
 $card-type-asset: () !default;
+$card-type-asset: map-deep-merge(
+	(
+		card-type-asset-icon: (
+			sticker: (
+				display: block,
+				padding-bottom: 100%,
+				width: 100%,
+			),
+		),
+	),
+	$card-type-asset
+);
 
 // Image Card
 
@@ -297,7 +337,9 @@ $image-card: () !default;
 $file-card: () !default;
 $file-card: map-deep-merge(
 	(
-		asset-icon-color: $gray-600,
+		asset-icon: (
+			color: $gray-600,
+		),
 	),
 	$file-card
 );
@@ -308,8 +350,8 @@ $product-card: () !default;
 $product-card: map-deep-merge(
 	(
 		aspect-ratio: (
-			bg: $white,
-			bg-image: linear-gradient(0deg, #ebebeb, #ebebeb),
+			background-color: $white,
+			background-image: linear-gradient(0deg, #ebebeb, #ebebeb),
 		),
 		card-body: (
 			text-align: center,
@@ -333,11 +375,15 @@ $product-card: map-deep-merge(
 $user-card: () !default;
 $user-card: map-deep-merge(
 	(
-		asset-icon-max-width: 80px,
-		asset-icon-min-width: 48px,
-		asset-icon-width: 30%,
-		asset-icon-lexicon-icon-height: auto,
-		asset-icon-lexicon-icon-width: 50%,
+		asset-icon: (
+			max-width: 80px,
+			min-width: 48px,
+			width: 30%,
+			lexicon-icon: (
+				height: auto,
+				width: 50%,
+			),
+		),
 	),
 	$user-card
 );
@@ -409,7 +455,9 @@ $card-page-item-user: map-deep-merge(
 $card-type-directory: () !default;
 $card-type-directory: map-deep-merge(
 	(
-		sticker-font-size: 1.125rem,
+		sticker: (
+			font-size: 1.125rem,
+		),
 	),
 	$card-type-directory
 );
@@ -418,7 +466,7 @@ $card-type-directory: map-deep-merge(
 
 $card-page-item-directory: () !default;
 $card-page-item-directory: map-deep-merge(
-	($card-page-item-asset),
+	$card-page-item-asset,
 	$card-page-item-directory
 );
 
@@ -434,8 +482,10 @@ $card-type-template-aspect-ratio: map-deep-merge(
 		horizontal: 16,
 		text-align: center,
 		vertical: 9,
-		lexicon-icon-height: auto,
-		lexicon-icon-width: 28%,
+		lexicon-icon: (
+			height: auto,
+			width: 28%,
+		),
 	),
 	$card-type-template-aspect-ratio
 );
@@ -469,7 +519,9 @@ $card-type-template: () !default;
 $card-type-template: map-deep-merge(
 	(
 		color: $gray-900,
-		hover-color: $gray-900,
+		hover: (
+			color: $gray-900,
+		),
 		after-highlight: $card-type-template-after-highlight,
 		aspect-ratio: $card-type-template-aspect-ratio,
 		aspect-ratio-item: $card-type-template-aspect-ratio-item,
@@ -514,8 +566,10 @@ $template-card-horizontal-card-row: map-deep-merge(
 		margin-left: -4px,
 		margin-right: -4px,
 		width: auto,
-		autofit-col-padding-left: 4px,
-		autofit-col-padding-right: 4px,
+		autofit-col: (
+			padding-left: 4px,
+			padding-right: 4px,
+		),
 	),
 	$template-card-horizontal-card-row
 );
@@ -533,7 +587,9 @@ $template-card-horizontal: () !default;
 $template-card-horizontal: map-deep-merge(
 	(
 		color: $gray-600,
-		hover-color: $gray-600,
+		hover: (
+			color: $gray-600,
+		),
 		sticker: $template-card-horizontal-sticker,
 		card-row: $template-card-horizontal-card-row,
 		card-title: $template-card-horizontal-card-title,

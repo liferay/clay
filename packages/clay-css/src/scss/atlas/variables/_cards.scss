@@ -27,7 +27,9 @@ $card-title: map-deep-merge(
 $card-title-link: () !default;
 $card-title-link: map-deep-merge(
 	(
-		hover-color: map-get($card-title, color),
+		hover: (
+			color: map-get($card-title, color),
+		),
 	),
 	$card-title-link
 );
@@ -45,7 +47,9 @@ $card-subtitle: map-deep-merge(
 $card-subtitle-link: () !default;
 $card-subtitle-link: map-deep-merge(
 	(
-		hover-color: $gray-600,
+		hover: (
+			color: $gray-600,
+		),
 	),
 	$card-subtitle-link
 );
@@ -57,8 +61,10 @@ $card-link: map-deep-merge(
 	(
 		color: $gray-600,
 		font-size: 0.875rem,
-		hover-color: $gray-600,
-		hover-text-decoration: underline,
+		hover: (
+			color: $gray-600,
+			text-decoration: underline,
+		),
 	),
 	$card-link
 );
@@ -73,10 +79,17 @@ $form-check-card-checked-box-shadow: 0 0 0 2px
 $card-interactive: () !default;
 $card-interactive: map-deep-merge(
 	(
-		hover-bg: #f7f8f9,
-		focus-border-color: null,
-		focus-box-shadow: 0 0 0 2px #FFF#{','} 0 0 0 4px #719aff,
-		active-bg: #f1f2f5,
+		hover: (
+			background-color: #f7f8f9,
+		),
+		focus: (
+			border-color: null,
+			box-shadow: #{0 0 0 2px #fff,
+			0 0 0 4px #719aff},
+		),
+		active: (
+			background-color: #f1f2f5,
+		),
 	),
 	$card-interactive
 );
@@ -86,10 +99,14 @@ $card-interactive: map-deep-merge(
 $card-interactive-secondary: () !default;
 $card-interactive-secondary: map-deep-merge(
 	(
-		hover-border-color: transparent,
-		hover-box-shadow: 0 0 0 2px #719aff,
-		focus-border-color: transparent,
-		focus-box-shadow: 0 0 0 2px #719aff,
+		hover: (
+			border-color: transparent,
+			box-shadow: 0 0 0 2px #719aff,
+		),
+		focus: (
+			border-color: transparent,
+			box-shadow: 0 0 0 2px #719aff,
+		),
 	),
 	$card-interactive-secondary
 );
@@ -99,8 +116,12 @@ $card-interactive-secondary: map-deep-merge(
 $card-type-asset: () !default;
 $card-type-asset: map-deep-merge(
 	(
-		aspect-ratio-border-color: $gray-300,
-		card-body-padding-top: 0.75rem,
+		aspect-ratio: (
+			border-color: $gray-300,
+		),
+		card-body: (
+			padding-top: 0.75rem,
+		),
 	),
 	$card-type-asset
 );
@@ -108,7 +129,9 @@ $card-type-asset: map-deep-merge(
 $image-card: () !default;
 $image-card: map-deep-merge(
 	(
-		aspect-ratio-checkered-fg: $gray-300,
+		aspect-ratio: (
+			checkered-foreground-color: $gray-300,
+		),
 	),
 	$image-card
 );
@@ -116,7 +139,9 @@ $image-card: map-deep-merge(
 $file-card: () !default;
 $file-card: map-deep-merge(
 	(
-		asset-icon-color: $gray-400,
+		asset-icon: (
+			color: $gray-400,
+		),
 	),
 	$file-card
 );
@@ -136,7 +161,7 @@ $card-type-template-after-highlight: map-deep-merge(
 $card-type-template-aspect-ratio: () !default;
 $card-type-template-aspect-ratio: map-deep-merge(
 	(
-		bg-image: none,
+		background-image: none,
 	),
 	$card-type-template-aspect-ratio
 );
