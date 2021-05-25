@@ -242,4 +242,32 @@ describe('ClayTable', () => {
 		);
 		expect(container).toMatchSnapshot();
 	});
+
+	it('renders with non wrapped cells', () => {
+		const {container} = render(
+			<ClayTable>
+				<ClayTable.Body>
+					<ClayTable.Row divider>
+						<ClayTable.Cell colSpan={8}>{'Recipes'}</ClayTable.Cell>
+					</ClayTable.Row>
+
+					<ClayTable.Row>
+						<ClayTable.Cell expanded headingTitle>
+							{'Hamburger'}
+						</ClayTable.Cell>
+						<ClayTable.Cell />
+						<ClayTable.Cell noWrap>
+							{
+								'Originally from the U.S.A. but available anywhere around the world'
+							}
+						</ClayTable.Cell>
+						<ClayTable.Cell align="right">
+							{'10 min.'}
+						</ClayTable.Cell>
+					</ClayTable.Row>
+				</ClayTable.Body>
+			</ClayTable>
+		);
+		expect(container).toMatchSnapshot();
+	});
 });

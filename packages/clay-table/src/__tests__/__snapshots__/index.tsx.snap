@@ -390,3 +390,54 @@ exports[`ClayTable renders with a headingTitle 1`] = `
   </div>
 </div>
 `;
+
+exports[`ClayTable renders with non wrapped cells 1`] = `
+<div>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+    >
+      <tbody>
+        <tr
+          class="table-divider"
+        >
+          <td
+            class=""
+            colspan="8"
+          >
+            Recipes
+          </td>
+        </tr>
+        <tr
+          class=""
+        >
+          <td
+            class="table-cell-expand"
+          >
+            <p
+              class="table-list-title"
+            >
+              Hamburger
+            </p>
+          </td>
+          <td
+            class=""
+          />
+          <td
+            class="table-cell-ws-nowrap"
+          >
+            Originally from the U.S.A. but available anywhere around the world
+          </td>
+          <td
+            class="text-right"
+          >
+            10 min.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

@@ -50,6 +50,11 @@ export interface ICellProps extends TableCellBaseProps {
 	 */
 	headingTitle?: boolean;
 
+	/*
+	 * Keep cells on one line.
+	 */
+	noWrap?: boolean;
+
 	/**
 	 * Truncates the text inside a Cell. Requires `expanded`
 	 * property value set to true.
@@ -71,6 +76,7 @@ const ClayTableCell = React.forwardRef<
 			expanded,
 			headingCell = false,
 			headingTitle = false,
+			noWrap = false,
 			truncate = false,
 			...otherProps
 		}: ICellProps,
@@ -86,6 +92,7 @@ const ClayTableCell = React.forwardRef<
 					[`table-cell-${cellDelimiter}`]: cellDelimiter,
 					[`table-column-text-${columnTextAlignment}`]: columnTextAlignment,
 					[`text-${align}`]: align,
+					'table-cell-ws-nowrap': noWrap,
 				})}
 				ref={ref}
 			>
