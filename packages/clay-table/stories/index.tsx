@@ -534,4 +534,115 @@ storiesOf('Components|ClayTable', module)
 				</ClayTable.Body>
 			</ClayTable>
 		</form>
+	))
+	.add('with non wrapped cells', () => (
+		<form>
+			<ClayTable
+				bodyVerticalAlignment={select(
+					'body vertical alignment',
+					{bottom: 'bottom', middle: 'middle', top: 'top'},
+					'middle'
+				)}
+				borderedColumns={boolean('bordered columns', false)}
+				borderless={boolean('bordeless', false)}
+				headVerticalAlignment={select(
+					'head vertical alignment',
+					{bottom: 'bottom', middle: 'middle', top: 'top'},
+					'middle'
+				)}
+				headingNoWrap={boolean('heading no wrap', false)}
+				hover={boolean('hover', true)}
+				noWrap={boolean('no wrap', false)}
+				responsive={boolean('responsive', false)}
+				responsiveSize={select(
+					'responsive size',
+					{lg: 'lg', md: 'md', sm: 'sm', xl: 'xl'},
+					'sm'
+				)}
+				striped={boolean('striped', true)}
+				tableVerticalAlignment={select(
+					'table vertical alignment',
+					{bottom: 'bottom', middle: 'middle', top: 'top'},
+					'middle'
+				)}
+			>
+				<ClayTable.Head>
+					<ClayTable.Row>
+						<ClayTable.Cell headingCell />
+						<ClayTable.Cell expanded headingCell headingTitle>
+							<span className="text-truncate">
+								{'Description'}
+							</span>
+						</ClayTable.Cell>
+						<ClayTable.Cell headingCell>
+							<span className="text-truncate">{'Format'}</span>
+						</ClayTable.Cell>
+						<ClayTable.Cell headingCell>
+							<span className="text-truncate">{'Label'}</span>
+						</ClayTable.Cell>
+						<ClayTable.Cell headingCell />
+					</ClayTable.Row>
+				</ClayTable.Head>
+
+				<ClayTable.Body>
+					<ClayTable.Row>
+						<ClayTable.Cell>
+							<ClayCheckboxWithState aria-label="Select first row" />
+						</ClayTable.Cell>
+						<ClayTable.Cell headingTitle noWrap>
+							{
+								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+							}
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<a href="1">{'JPG'}</a>
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<a href="1">{'JPG'}</a>
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<Dropdown />
+						</ClayTable.Cell>
+					</ClayTable.Row>
+					<ClayTable.Row>
+						<ClayTable.Cell>
+							<ClayCheckboxWithState aria-label="Select second row" />
+						</ClayTable.Cell>
+						<ClayTable.Cell headingTitle noWrap>
+							{
+								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+							}
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<a href="2">{'GIF'}</a>
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<a href="2">{'GIF'}</a>
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<Dropdown />
+						</ClayTable.Cell>
+					</ClayTable.Row>
+					<ClayTable.Row>
+						<ClayTable.Cell>
+							<ClayCheckboxWithState aria-label="Select third row" />
+						</ClayTable.Cell>
+						<ClayTable.Cell headingTitle noWrap>
+							{
+								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
+							}
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<a href="3">{'TIFF'}</a>
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<a href="3">{'TIFF'}</a>
+						</ClayTable.Cell>
+						<ClayTable.Cell>
+							<Dropdown />
+						</ClayTable.Cell>
+					</ClayTable.Row>
+				</ClayTable.Body>
+			</ClayTable>
+		</form>
 	));
