@@ -76,8 +76,8 @@ const ClayTableCell = React.forwardRef<
 			expanded,
 			headingCell = false,
 			headingTitle = false,
-			truncate = false,
 			noWrap = false,
+			truncate = false,
 			...otherProps
 		}: ICellProps,
 		ref
