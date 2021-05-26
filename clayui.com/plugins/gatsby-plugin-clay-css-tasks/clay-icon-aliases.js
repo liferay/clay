@@ -522,6 +522,7 @@ const iconsData = {
 	"bell-full":				'"alert", "audio", "music", "notification", "sound"',
 	"bell-off":					'"alert", "audio", "music", "notification", "sound"',
 	"bell-on":					'"alert", "audio", "music", "notification", "sound"',
+	"block":                    '"block", "ignore", "prohibited"',
 	"blogs":					'"journal"',
 	"bold":						'"editor", "style", "texts"',
 	"bolt":						'"bind", "mapping", "thunder", "trigger"',
