@@ -10,11 +10,16 @@ import classNames from 'classnames';
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
 
+import Divider from '../Divider';
+
+type TType = 'divider';
+
 export interface IItem extends React.ComponentProps<typeof LinkOrButton> {
 	child?: string;
-	title: string;
+	title?: string;
 	href?: string;
 	symbol?: string;
+	type?: TType;
 }
 
 export interface IProps {
@@ -88,55 +93,59 @@ const DrilldownMenu: React.FunctionComponent<IProps> = ({
 									onClick,
 									symbol,
 									title,
+									type,
 									...other
 								},
 								j
-							) => (
-								<li key={`${j}-${title}`}>
-									<LinkOrButton
-										{...other}
-										buttonDisplayType="unstyled"
-										className={classNames(
-											'dropdown-item',
-											className
-										)}
-										data-testid={`menu-item-${title}`}
-										onClick={(
-											event: React.SyntheticEvent
-										) => {
-											if (onClick) {
-												onClick(event);
-											}
+							) =>
+								type === 'divider' ? (
+									<Divider key={`${j}-divider`} />
+								) : (
+									<li key={`${j}-${title}`}>
+										<LinkOrButton
+											{...other}
+											buttonDisplayType="unstyled"
+											className={classNames(
+												'dropdown-item',
+												className
+											)}
+											data-testid={`menu-item-${title}`}
+											onClick={(
+												event: React.SyntheticEvent
+											) => {
+												if (onClick) {
+													onClick(event);
+												}
 
-											if (title && child) {
-												onForward(title, child);
-											}
-										}}
-									>
-										{symbol && (
-											<span className="dropdown-item-indicator-start">
-												<ClayIcon
-													spritemap={spritemap}
-													symbol={symbol}
-												/>
+												if (title && child) {
+													onForward(title, child);
+												}
+											}}
+										>
+											{symbol && (
+												<span className="dropdown-item-indicator-start">
+													<ClayIcon
+														spritemap={spritemap}
+														symbol={symbol}
+													/>
+												</span>
+											)}
+
+											<span className="dropdown-item-indicator-text-end">
+												{title}
 											</span>
-										)}
 
-										<span className="dropdown-item-indicator-text-end">
-											{title}
-										</span>
-
-										{child && (
-											<span className="dropdown-item-indicator-end">
-												<ClayIcon
-													spritemap={spritemap}
-													symbol="angle-right"
-												/>
-											</span>
-										)}
-									</LinkOrButton>
-								</li>
-							)
+											{child && (
+												<span className="dropdown-item-indicator-end">
+													<ClayIcon
+														spritemap={spritemap}
+														symbol="angle-right"
+													/>
+												</span>
+											)}
+										</LinkOrButton>
+									</li>
+								)
 						)}
 					</ul>
 				)}
