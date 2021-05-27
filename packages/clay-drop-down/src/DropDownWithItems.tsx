@@ -4,8 +4,12 @@
  */
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
-import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
-import React from 'react';
+import {
+	MouseSafeArea,
+	TInternalStateOnChange,
+	useInternalState,
+} from '@clayui/shared';
+import React, {useContext, useRef, useState} from 'react';
 import warning from 'warning';
 
 import Caption from './Caption';
@@ -16,7 +20,14 @@ import Help from './Help';
 import ClayDropDownMenu from './Menu';
 import Search from './Search';
 
-type TType = 'checkbox' | 'group' | 'item' | 'radio' | 'radiogroup' | 'divider';
+type TType =
+	| 'checkbox'
+	| 'contextual'
+	| 'group'
+	| 'item'
+	| 'radio'
+	| 'radiogroup'
+	| 'divider';
 
 interface IItem {
 	active?: boolean;
@@ -141,7 +152,7 @@ const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 	onChange = () => {},
 	...otherProps
 }) => {
-	const [value, setValue] = React.useState<boolean>(checked);
+	const [value, setValue] = useState<boolean>(checked);
 
 	return (
 		<ClayDropDown.Section>
@@ -162,7 +173,7 @@ const ClayDropDownContext = React.createContext({close: () => {}});
 const Item: React.FunctionComponent<
 	Omit<IItem, 'onChange'> & IInternalItem
 > = ({label, onClick, ...props}) => {
-	const {close} = React.useContext(ClayDropDownContext);
+	const {close} = useContext(ClayDropDownContext);
 
 	return (
 		<ClayDropDown.Item
@@ -191,6 +202,70 @@ const Group: React.FunctionComponent<IItem & IInternalItem> = ({
 	</>
 );
 
+const Contextual: React.FunctionComponent<
+	Omit<IItem, 'onChange'> & IInternalItem
+> = ({items, label, spritemap, ...otherProps}) => {
+	const [visible, setVisible] = useState(false);
+	const {close} = useContext(ClayDropDownContext);
+
+	const triggerElementRef = useRef<HTMLLIElement | null>(null);
+	const menuElementRef = useRef<HTMLDivElement>(null);
+	const timeoutHandleRef = useRef<any>(null);
+
+	return (
+		<ClayDropDown.Item
+			{...otherProps}
+			onClick={() => {
+				setVisible(true);
+
+				clearTimeout(timeoutHandleRef.current);
+				timeoutHandleRef.current = null;
+			}}
+			onMouseEnter={() => {
+				if (!visible) {
+					timeoutHandleRef.current = setTimeout(
+						() => setVisible(true),
+						500
+					);
+				}
+			}}
+			onMouseLeave={() => {
+				setVisible(false);
+
+				clearTimeout(timeoutHandleRef.current);
+				timeoutHandleRef.current = null;
+			}}
+			ref={triggerElementRef}
+			spritemap={spritemap}
+			symbolRight="angle-right"
+		>
+			{label}
+
+			{items && (
+				<ClayDropDown.Menu
+					active={visible}
+					alignElementRef={triggerElementRef}
+					alignmentPosition={8}
+					onSetActive={setVisible}
+					ref={menuElementRef}
+				>
+					{visible && <MouseSafeArea parentRef={menuElementRef} />}
+					<ClayDropDownContext.Provider
+						value={{
+							close: () => {
+								setVisible(false);
+								close();
+							},
+						}}
+					>
+						<DropDownContent items={items} spritemap={spritemap} />
+					</ClayDropDownContext.Provider>
+				</ClayDropDown.Menu>
+			)}
+		</ClayDropDown.Item>
+	);
+};
+
 interface IRadioContext {
 	checked: string;
 	name?: string;
@@ -203,7 +278,7 @@ const Radio: React.FunctionComponent<IItem & IInternalItem> = ({
 	value = '',
 	...otherProps
 }) => {
-	const {checked, name, onChange} = React.useContext(RadioGroupContext);
+	const {checked, name, onChange} = useContext(RadioGroupContext);
 
 	return (
 		<ClayDropDown.Section>
@@ -226,7 +301,7 @@ const RadioGroup: React.FunctionComponent<IItem & IInternalItem> = ({
 	onChange = () => {},
 	spritemap,
 }) => {
-	const [value, setValue] = React.useState('');
+	const [value, setValue] = useState('');
 
 	const params = {
 		checked: value,
@@ -260,6 +335,7 @@ const DividerWithItem = () => <Divider />;
 
 const TYPE_MAP = {
 	checkbox: Checkbox,
+	contextual: Contextual,
 	divider: DividerWithItem,
 	group: Group,
 	item: Item,
