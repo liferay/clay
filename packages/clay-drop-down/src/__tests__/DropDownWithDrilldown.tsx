@@ -47,7 +47,7 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		fireEvent.click(getByTestId('trigger'));
 
-		expect(document).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('renders dividers', () => {
@@ -76,7 +76,7 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		fireEvent.click(getByTestId('trigger'));
 
-		expect(document).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('navigates forwards when clicking through menus', () => {

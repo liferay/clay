@@ -1,47 +1,357 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayDropDownWithDrilldown renders 1`] = `
-Document {
-  "location": Location {
-    "assign": [Function],
-    "hash": "",
-    "host": "localhost",
-    "hostname": "localhost",
-    "href": "http://localhost/",
-    "origin": "http://localhost",
-    "pathname": "/",
-    "port": "",
-    "protocol": "http:",
-    "reload": [Function],
-    "replace": [Function],
-    "search": "",
-    "toString": [Function],
-  },
-  Symbol(SameObject caches): Object {
-    "styleSheets": StyleSheetList {},
-  },
-}
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle"
+        data-testid="trigger"
+        style=""
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu drilldown dropdown-menu-indicator-end show"
+        style="left: -999px; top: -995px;"
+      >
+        <div
+          class="drilldown-inner"
+        >
+          <div
+            class="drilldown-item drilldown-current"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-testid="menu-item-Hash Link"
+                  href="#"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Hash Link
+                  </span>
+                </a>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Alert!"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Alert!
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Subnav"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Subnav
+                  </span>
+                  <span
+                    class="dropdown-item-indicator-end"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="##angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="drilldown-item"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-testid="menu-item-2nd hash link"
+                  href="#"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    2nd hash link
+                  </span>
+                </a>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Subnav"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Subnav
+                  </span>
+                  <span
+                    class="dropdown-item-indicator-end"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="##angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="drilldown-item"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-The"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    The
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-End"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    End
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 `;
 
 exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
-Document {
-  "location": Location {
-    "assign": [Function],
-    "hash": "",
-    "host": "localhost",
-    "hostname": "localhost",
-    "href": "http://localhost/",
-    "origin": "http://localhost",
-    "pathname": "/",
-    "port": "",
-    "protocol": "http:",
-    "reload": [Function],
-    "replace": [Function],
-    "search": "",
-    "toString": [Function],
-  },
-  Symbol(SameObject caches): Object {
-    "styleSheets": StyleSheetList {},
-  },
-}
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle"
+        data-testid="trigger"
+        style=""
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu drilldown dropdown-menu-indicator-end show"
+        style="left: -999px; top: -995px;"
+      >
+        <div
+          class="drilldown-inner"
+        >
+          <div
+            class="drilldown-item drilldown-current"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-testid="menu-item-Hash Link"
+                  href="#"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Hash Link
+                  </span>
+                </a>
+              </li>
+              <li
+                aria-hidden="true"
+                class="dropdown-divider"
+                role="presentation"
+              />
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Alert!"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Alert!
+                  </span>
+                </button>
+              </li>
+              <li
+                aria-hidden="true"
+                class="dropdown-divider"
+                role="presentation"
+              />
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Subnav"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Subnav
+                  </span>
+                  <span
+                    class="dropdown-item-indicator-end"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="##angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="drilldown-item"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-testid="menu-item-2nd hash link"
+                  href="#"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    2nd hash link
+                  </span>
+                </a>
+              </li>
+              <li
+                aria-hidden="true"
+                class="dropdown-divider"
+                role="presentation"
+              />
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Subnav"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Subnav
+                  </span>
+                  <span
+                    class="dropdown-item-indicator-end"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="##angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="drilldown-item"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-The"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    The
+                  </span>
+                </button>
+              </li>
+              <li
+                aria-hidden="true"
+                class="dropdown-divider"
+                role="presentation"
+              />
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-End"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    End
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 `;
