@@ -215,11 +215,13 @@ const Contextual: React.FunctionComponent<
 	return (
 		<ClayDropDown.Item
 			{...otherProps}
-			onClick={() => {
-				setVisible(true);
+			onClick={(event) => {
+				if (event.currentTarget === event.target) {
+					setVisible(true);
 
-				clearTimeout(timeoutHandleRef.current);
-				timeoutHandleRef.current = null;
+					clearTimeout(timeoutHandleRef.current);
+					timeoutHandleRef.current = null;
+				}
 			}}
 			onMouseEnter={() => {
 				if (!visible) {
