@@ -465,4 +465,29 @@ storiesOf('Components|ClayDropDown', module)
 				</ClayButton>
 			</>
 		);
+	})
+	.add('w/ cascading menu', () => {
+		return (
+			<ClayDropDownWithItems
+				items={[
+					{label: 'Folder'},
+					{type: 'divider'},
+					{
+						items: [
+							{label: 'Basic Document'},
+							{label: 'Contract'},
+							{label: 'Marketing Banner'},
+							{label: 'Spreadsheet'},
+							{label: 'Presentation'},
+						],
+						label: 'Document',
+						type: 'contextual',
+					},
+					{label: 'Shortcut'},
+					{label: 'Repository'},
+				]}
+				spritemap={spritemap}
+				trigger={<ClayButton>{'Cascading Menu'}</ClayButton>}
+			/>
+		);
 	});

@@ -123,10 +123,10 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 
 	const handleFocus = (event: FocusEvent) => {
 		if (
-			menuElementRef.current &&
-			!menuElementRef.current.contains(event.target as Node) &&
-			triggerElementRef.current &&
-			!triggerElementRef.current.contains(event.target as Node)
+			!menuElementRef.current?.parentElement?.contains(
+				event.target as Node
+			) &&
+			!triggerElementRef.current?.contains(event.target as Node)
 		) {
 			onActiveChange(false);
 		}

@@ -16,4 +16,6 @@ export {useDebounce} from './useDebounce';
 export {useFocusManagement, FOCUSABLE_ELEMENTS} from './useFocusManagement';
 export {setElementFullHeight} from './setElementFullHeight';
 export {useInternalState} from './useInternalState';
+export {useMousePosition} from './useMousePosition';
+export {MouseSafeArea} from './MouseSafeArea';
 export type {TInternalStateOnChange} from './useInternalState';
