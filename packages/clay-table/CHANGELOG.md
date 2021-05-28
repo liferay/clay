@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
+
+### Bug Fixes
+
+-   **@clayui/table:** Fixes lint error ([9dec4a4](https://github.com/liferay/clay/commit/9dec4a4))
+
+### Features
+
+-   **@clayui/table:** Adds the `noWrap` prop to ClayTable.Cell ([da88293](https://github.com/liferay/clay/commit/da88293))
+
 # [3.1.0](https://github.com/liferay/clay/compare/@clayui/table@3.0.7...@clayui/table@3.1.0) (2020-10-01)
 
 ### Features

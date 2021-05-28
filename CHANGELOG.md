@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
+
+### Bug Fixes
+
+-   **@clayui/css:** Global Functions update `setter` to accept more than 2 variables (e.g., `setter($var1, $var2, $var3, $var4, $var5)`) ([2a923f0](https://github.com/liferay/clay/commit/2a923f0)), closes [#4076](https://github.com/liferay/clay/issues/4076)
+-   **@clayui/css:** Mixins `clay-aspect-ratio-item-variant` and `clay-aspect-ratio-variant` convert to use new (easier to remember) Sass map keys. The old keys will still work and win over new keys. ([d4680a9](https://github.com/liferay/clay/commit/d4680a9)), closes [#4085](https://github.com/liferay/clay/issues/4085)
+-   **@clayui/css:** Mixins Card convert to use new (easier to remember) Sass map keys. The old keys will still work and win over new keys. ([a2e6d34](https://github.com/liferay/clay/commit/a2e6d34)), closes [#4088](https://github.com/liferay/clay/issues/4088)
+-   **@clayui/drop-down:** fixes error when closing the contextual menu ([8bdfa79](https://github.com/liferay/clay/commit/8bdfa79))
+-   **@clayui/drop-down:** stops closing the drop-down when the focus is inside the sub portal ([cc57b72](https://github.com/liferay/clay/commit/cc57b72))
+-   **@clayui/table:** Fixes lint error ([9dec4a4](https://github.com/liferay/clay/commit/9dec4a4))
+
+### Features
+
+-   **@clayui/css:** Adds the `block` SVG icon ([96dabe4](https://github.com/liferay/clay/commit/96dabe4))
+-   **@clayui/drop-down:** add the new contextual type to create a cascading menu ([63960b2](https://github.com/liferay/clay/commit/63960b2))
+-   **@clayui/drop-down:** Make it possible to render dividers ([51a46d5](https://github.com/liferay/clay/commit/51a46d5))
+-   **@clayui/shared:** Add MouseSafeArea to the contextual menu ([7824f16](https://github.com/liferay/clay/commit/7824f16))
+-   **@clayui/table:** Adds the `noWrap` prop to ClayTable.Cell ([da88293](https://github.com/liferay/clay/commit/da88293))
+
 # [3.28.0](https://github.com/liferay/clay/compare/v3.27.0...v3.28.0) (2021-05-19)
 
 ### Bug Fixes

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes error when closing the contextual menu ([8bdfa79](https://github.com/liferay/clay/commit/8bdfa79))
+-   **@clayui/drop-down:** stops closing the drop-down when the focus is inside the sub portal ([cc57b72](https://github.com/liferay/clay/commit/cc57b72))
+
+### Features
+
+-   **@clayui/drop-down:** add the new contextual type to create a cascading menu ([63960b2](https://github.com/liferay/clay/commit/63960b2))
+-   **@clayui/drop-down:** Make it possible to render dividers ([51a46d5](https://github.com/liferay/clay/commit/51a46d5))
+
 # [3.28.0](https://github.com/liferay/clay/compare/v3.27.0...v3.28.0) (2021-05-19)
 
 ### Features

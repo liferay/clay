@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.29.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.28.0...v3.29.0) (2021-05-28)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Global Functions update `setter` to accept more than 2 variables (e.g., `setter($var1, $var2, $var3, $var4, $var5)`) ([2a923f0](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2a923f0)), closes [#4076](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4076)
+* **@clayui/css:** Mixins `clay-aspect-ratio-item-variant` and `clay-aspect-ratio-variant` convert to use new (easier to remember) Sass map keys. The old keys will still work and win over new keys. ([d4680a9](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/d4680a9)), closes [#4085](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4085)
+* **@clayui/css:** Mixins Card convert to use new (easier to remember) Sass map keys. The old keys will still work and win over new keys. ([a2e6d34](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/a2e6d34)), closes [#4088](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4088)
+
+
+### Features
+
+* **@clayui/css:** Adds the `block` SVG icon ([96dabe4](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/96dabe4))
+
+
+
+
+
 # [3.28.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.27.0...v3.28.0) (2021-05-19)
 
 
