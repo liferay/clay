@@ -32,7 +32,7 @@ export const useMousePosition = () => {
 		const handleMousePosition = throttle(
 			(event: MouseEvent) =>
 				setMousePosition([event.clientX, event.clientY]),
-			150
+			200
 		);
 
 		window.addEventListener('mousemove', handleMousePosition);
