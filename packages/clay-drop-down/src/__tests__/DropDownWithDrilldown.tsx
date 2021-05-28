@@ -47,7 +47,36 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		fireEvent.click(getByTestId('trigger'));
 
-		expect(document).toMatchSnapshot();
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('renders dividers', () => {
+		const {getByTestId} = render(
+			<ClayDropDownWithDrilldown
+				initialActiveMenu="x0a3"
+				menus={{
+					x0a3: [
+						{href: '#', title: 'Hash Link'},
+						{type: 'divider'},
+						{onClick: () => alert('test'), title: 'Alert!'},
+						{type: 'divider'},
+						{child: 'x0a4', title: 'Subnav'},
+					],
+					x0a4: [
+						{href: '#', title: '2nd hash link'},
+						{type: 'divider'},
+						{child: 'x0a5', title: 'Subnav'},
+					],
+					x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
+				}}
+				spritemap="#"
+				trigger={<button data-testid="trigger" />}
+			/>
+		);
+
+		fireEvent.click(getByTestId('trigger'));
+
+		expect(document.body).toMatchSnapshot();
 	});
 
 	it('navigates forwards when clicking through menus', () => {

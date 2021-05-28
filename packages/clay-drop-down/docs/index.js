@@ -179,14 +179,16 @@ const dropDownWithDrilldownCode = `const Component = () => {
 			menus={{
 				x0a3: [
 					{href: '#', title: 'Hash Link'},
+					{type: 'divider'},
 					{onClick: () => alert('test'), title: 'Alert!'},
+					{type: 'divider'},
 					{child: 'x0a4', title: 'Subnav'},
 				],
 				x0a4: [
 					{href: '#', title: '2nd hash link'},
 					{child: 'x0a5', title: 'Subnav'},
 				],
-				x0a5: [{title: 'The'}, {title: 'End'}],
+				x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
 			}}
 			spritemap={spritemap}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
