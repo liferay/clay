@@ -17,6 +17,7 @@ import {
 -   [Composing](#composing)
     -   [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
 -   [DropDownWithItems](#dropdownwithitems)
+    -   [Cascading Menu](#cascading-menu)
 -   [DropDownWithDrilldown](#dropdownwithdrilldown)
 -   [Caveats](#caveats)
 
@@ -94,6 +95,32 @@ const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
 Allows you to create a simple DropDown, through its API you are able to create a Menu with groups of checkboxes and radios, links, buttons, search, caption, etc.
 
 <DropDownWithItems />
+
+### Cascading Menu
+
+`DropDownWithItems` allows the possibility to create a contextual menu, the nature of the API allows the creation of more cascade menus but the **Lexicon specification recommends using only one level** and using `DropDownWithDrilldown` component.
+
+To render a cascading menu it is necessary to set the `type` of the item to `contextual` and add to the `items` object that follows the same API as the other items.
+
+```js
+const items = [
+	{label: 'Folder'},
+	{type: 'divider'},
+	{
+		items: [
+			{label: 'Basic Document'},
+			{label: 'Contract'},
+			{label: 'Marketing Banner'},
+			{label: 'Spreadsheet'},
+			{label: 'Presentation'},
+		],
+		label: 'Document',
+		type: 'contextual',
+	},
+	{label: 'Shortcut'},
+	{label: 'Repository'},
+];
+```
 
 ## DropDownWithDrilldown
 
