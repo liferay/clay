@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -11,6 +12,11 @@ import ClayDropDownMenu from './Menu';
 import Drilldown from './drilldown';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to indicate if the menu should be initially active (open).
+	 */
+	active?: boolean;
+
 	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
@@ -54,6 +60,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
 
 	/**
+	 * Callback the will be invoked when the active prop is changed.
+	 */
+	onActiveChange?: TInternalStateOnChange<boolean>;
+
+	/**
 	 * Path to spritemap
 	 */
 	spritemap?: string;
@@ -70,6 +81,7 @@ interface IHistory {
 }
 
 export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
+	active,
 	alignmentPosition,
 	className,
 	containerElement,
@@ -79,19 +91,23 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	menuWidth,
 	menus,
 	offsetFn,
+	onActiveChange,
 	spritemap,
 	trigger,
 }: IProps) => {
-	const [active, setActive] = React.useState(false);
 	const [activeMenu, setActiveMenu] = React.useState(initialActiveMenu);
 	const [direction, setDirection] = React.useState<'prev' | 'next'>();
 	const [history, setHistory] = React.useState<Array<IHistory>>([]);
+	const [internalActive, setInternalActive] = useInternalState({
+		onChange: onActiveChange,
+		value: active,
+	});
 
 	const menuIds = Object.keys(menus);
 
 	return (
 		<ClayDropDown
-			active={active}
+			active={internalActive}
 			alignmentPosition={alignmentPosition}
 			className={className}
 			containerElement={containerElement}
@@ -103,7 +119,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 			menuHeight={menuHeight}
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
-			onActiveChange={setActive}
+			onActiveChange={setInternalActive}
 			trigger={trigger}
 		>
 			<Drilldown.Inner>

@@ -301,6 +301,41 @@ storiesOf('Components|ClayDropDown', module)
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
 		/>
 	))
+	.add('ClayDropDownWithDrillDown/active', () => {
+		const [active, setActive] = React.useState(true);
+
+		const onActiveChange = () => {
+			setActive(!active);
+		};
+
+		return (
+			<ClayDropDownWithDrilldown
+				active={active}
+				initialActiveMenu="x0a3"
+				menus={{
+					x0a3: [
+						{href: '#', title: 'Hash Link'},
+						{onClick: () => alert('test'), title: 'Alert!'},
+						{
+							onClick: () => {
+								onActiveChange();
+							},
+							title: 'Toggle menu',
+						},
+						{child: 'x0a4', title: 'Subnav'},
+					],
+					x0a4: [
+						{href: '#', title: '2nd hash link'},
+						{child: 'x0a5', title: 'Subnav'},
+					],
+					x0a5: [{title: 'The'}, {title: 'End'}],
+				}}
+				onActiveChange={onActiveChange}
+				spritemap={spritemap}
+				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			/>
+		);
+	})
 	.add('ClayDropDownWithItems', () => {
 		const [value, setValue] = React.useState('');
 

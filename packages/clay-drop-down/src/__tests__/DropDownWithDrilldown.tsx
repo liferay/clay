@@ -134,4 +134,52 @@ describe('ClayDropDownWithDrilldown', () => {
 			document.querySelectorAll('.drilldown-item')[0].classList
 		).toContain('drilldown-current');
 	});
+
+	it('renders with the menu initially active', () => {
+		render(
+			<ClayDropDownWithDrilldown
+				active
+				initialActiveMenu="x0a3"
+				menus={{
+					x0a3: [
+						{href: '#', title: 'Hash Link'},
+						{child: 'x0a4', title: 'Subnav'},
+					],
+					x0a4: [{href: '#', title: '2nd hash link'}],
+				}}
+				spritemap="#"
+				trigger={<button data-testid="trigger" />}
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
+	});
+
+	it('the menu can be toggled by clicking in an item', () => {
+		const onActiveChange = jest.fn();
+
+		const {getByTestId} = render(
+			<ClayDropDownWithDrilldown
+				initialActiveMenu="x0a3"
+				menus={{
+					x0a3: [
+						{onClick: onActiveChange, title: 'Toggle'},
+						{child: 'x0a4', title: 'Subnav'},
+					],
+					x0a4: [{href: '#', title: '2nd hash link'}],
+				}}
+				onActiveChange={onActiveChange}
+				spritemap="#"
+				trigger={<button data-testid="trigger" />}
+			/>
+		);
+
+		fireEvent.click(getByTestId('menu-item-Toggle'));
+		fireEvent.click(getByTestId('menu-item-Toggle'));
+		fireEvent.click(getByTestId('menu-item-Toggle'));
+
+		expect(onActiveChange).toHaveBeenCalledTimes(3);
+
+		expect(document.body).toMatchSnapshot();
+	});
 });

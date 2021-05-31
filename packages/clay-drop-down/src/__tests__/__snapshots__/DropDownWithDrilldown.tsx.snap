@@ -355,3 +355,195 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
   </div>
 </body>
 `;
+
+exports[`ClayDropDownWithDrilldown renders with the menu initially active 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle"
+        data-testid="trigger"
+        style=""
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu drilldown dropdown-menu-indicator-end show"
+        style="left: -999px; top: -995px;"
+      >
+        <div
+          class="drilldown-inner"
+        >
+          <div
+            class="drilldown-item drilldown-current"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-testid="menu-item-Hash Link"
+                  href="#"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Hash Link
+                  </span>
+                </a>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Subnav"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Subnav
+                  </span>
+                  <span
+                    class="dropdown-item-indicator-end"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="##angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="drilldown-item"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-testid="menu-item-2nd hash link"
+                  href="#"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    2nd hash link
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an item 1`] = `
+<body>
+  <div>
+    <div
+      class="dropdown"
+    >
+      <button
+        class="dropdown-toggle"
+        data-testid="trigger"
+        style=""
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <div
+        class="dropdown-menu drilldown dropdown-menu-indicator-end"
+        style="left: -999px; top: -995px;"
+      >
+        <div
+          class="drilldown-inner"
+        >
+          <div
+            class="drilldown-item drilldown-current"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Toggle"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Toggle
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item btn btn-unstyled"
+                  data-testid="menu-item-Subnav"
+                  type="button"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    Subnav
+                  </span>
+                  <span
+                    class="dropdown-item-indicator-end"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="##angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="drilldown-item"
+          >
+            <ul
+              class="inline-scroller"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-testid="menu-item-2nd hash link"
+                  href="#"
+                >
+                  <span
+                    class="dropdown-item-indicator-text-end"
+                  >
+                    2nd hash link
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
