@@ -93,6 +93,14 @@ $cadmin-panel-title-small-margin-left: 6px !default; // 6px
 
 $cadmin-panel-group-panel-margin-bottom: -$cadmin-panel-border-bottom-width !default;
 
+$cadmin-panel-group-panel-unstyled: () !default;
+$cadmin-panel-group-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 24px,
+	),
+	$cadmin-panel-group-panel-unstyled
+);
+
 // Panel Group Sm
 
 $cadmin-panel-group-sm: () !default;
@@ -107,6 +115,14 @@ $cadmin-panel-group-sm: map-deep-merge(
 	$cadmin-panel-group-sm
 );
 
+$cadmin-panel-group-sm-panel-unstyled: () !default;
+$cadmin-panel-group-sm-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 16px,
+	),
+	$cadmin-panel-group-sm-panel-unstyled
+);
+
 // Panel Group Flush
 
 $cadmin-panel-group-flush-body-margin-bottom: 24px !default;
@@ -116,6 +132,17 @@ $cadmin-panel-group-flush-collapse-icon-left: null !default;
 $cadmin-panel-group-flush-collapse-icon-right: 0 !default;
 $cadmin-panel-group-flush-collapse-icon-padding-left: null !default;
 $cadmin-panel-group-flush-collapse-icon-padding-right: 24px !default;
+
+$cadmin-panel-group-flush-panel-unstyled: () !default;
+$cadmin-panel-group-flush-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 24px,
+		body: (
+			margin-bottom: 0,
+		),
+	),
+	$cadmin-panel-group-flush-panel-unstyled
+);
 
 // Panel Variants
 
@@ -148,17 +175,30 @@ $cadmin-panel-unstyled-header-link: map-deep-merge(
 $cadmin-panel-unstyled: () !default;
 $cadmin-panel-unstyled: map-deep-merge(
 	(
-		bg: transparent,
+		background-color: transparent,
 		border-radius: 0,
 		border-width: 0,
-		header-border-color: $cadmin-gray-500,
-		header-border-style: solid,
-		header-border-width: 0 0 1px 0,
-		header-margin-bottom: 16px,
-		header-collapsed-border-color: $cadmin-gray-500,
+		margin-bottom: 24px,
+		header: (
+			border-color: $cadmin-gray-500,
+			border-radius: 0,
+			border-style: solid,
+			border-width: 0 0 1px 0,
+			padding-left: 0,
+		),
+		header-collapsed: (
+			border-color: $cadmin-gray-500,
+		),
 		header-link: $cadmin-panel-unstyled-header-link,
-		body-margin-bottom: 16px,
-		body-padding-top: 0,
+		collapse-icon: (
+			right: 0,
+		),
+		body: (
+			padding: 16px 0 0.1px 0,
+		),
+		footer: (
+			padding: 16px 0 0.1px 0,
+		),
 	),
 	$cadmin-panel-unstyled
 );

@@ -152,6 +152,10 @@
 				transparent;
 		}
 	}
+
+	.panel-unstyled {
+		@include clay-panel-variant($cadmin-panel-group-panel-unstyled);
+	}
 }
 
 // Panel Group Fluid
@@ -180,6 +184,10 @@
 				}
 			}
 		}
+	}
+
+	.panel-unstyled {
+		@include clay-panel-variant($cadmin-panel-group-flush-panel-unstyled);
 	}
 }
 
@@ -310,6 +318,10 @@
 .panel-group-sm {
 	.panel {
 		@include clay-panel-variant($cadmin-panel-group-sm);
+	}
+
+	.panel-unstyled {
+		@include clay-panel-variant($cadmin-panel-group-sm-panel-unstyled);
 	}
 }
 

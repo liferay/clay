@@ -97,6 +97,14 @@ $panel-title-small-margin-left: null !default;
 
 $panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
 
+$panel-group-panel-unstyled: () !default;
+$panel-group-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 1.5rem,
+	),
+	$panel-group-panel-unstyled
+);
+
 // Panel Group Sm
 
 $panel-group-sm: () !default;
@@ -111,6 +119,14 @@ $panel-group-sm: map-deep-merge(
 	$panel-group-sm
 );
 
+$panel-group-sm-panel-unstyled: () !default;
+$panel-group-sm-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 1rem,
+	),
+	$panel-group-sm-panel-unstyled
+);
+
 // Panel Group Flush
 
 $panel-group-flush-body-margin-bottom: 1.5rem !default;
@@ -120,6 +136,17 @@ $panel-group-flush-collapse-icon-left: null !default;
 $panel-group-flush-collapse-icon-right: 0 !default;
 $panel-group-flush-collapse-icon-padding-left: null !default;
 $panel-group-flush-collapse-icon-padding-right: 1.5rem !default;
+
+$panel-group-flush-panel-unstyled: () !default;
+$panel-group-flush-panel-unstyled: map-deep-merge(
+	(
+		margin-bottom: 1.5rem,
+		body: (
+			margin-bottom: 0,
+		),
+	),
+	$panel-group-flush-panel-unstyled
+);
 
 // Panel Variants
 
@@ -145,17 +172,30 @@ $panel-unstyled-header-link: () !default;
 $panel-unstyled: () !default;
 $panel-unstyled: map-deep-merge(
 	(
-		bg: transparent,
+		background-color: transparent,
 		border-radius: 0,
 		border-width: 0,
-		header-border-color: $gray-500,
-		header-border-style: solid,
-		header-border-width: 0 0 1px 0,
-		header-margin-bottom: 1rem,
-		header-collapsed-border-color: $gray-500,
+		margin-bottom: 1.5rem,
+		header: (
+			border-color: $gray-500,
+			border-radius: 0,
+			border-style: solid,
+			border-width: 0 0 1px 0,
+			padding-left: 0,
+		),
+		header-collapsed: (
+			border-color: $gray-500,
+		),
 		header-link: $panel-unstyled-header-link,
-		body-margin-bottom: 1rem,
-		body-padding-top: 0,
+		collapse-icon: (
+			right: 0,
+		),
+		body: (
+			padding: 1rem 0 0.1px 0,
+		),
+		footer: (
+			padding: 1rem 0 0.1px 0,
+		),
 	),
 	$panel-unstyled
 );
