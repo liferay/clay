@@ -10,8 +10,10 @@ $panel-header-link: () !default;
 $panel-header-link: map-deep-merge(
 	(
 		transition: box-shadow 0.15s ease-in-out,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$panel-header-link
 );
@@ -44,7 +46,9 @@ $panel-title-small-margin-left: 0.375rem !default; // 6px
 $panel-group-sm: () !default;
 $panel-group-sm: map-deep-merge(
 	(
-		title-font-size: 0.75rem,
+		title: (
+			font-size: 0.75rem,
+		),
 	),
 	$panel-group-sm
 );
@@ -56,10 +60,14 @@ $panel-secondary: map-deep-merge(
 	(
 		border-color: $gray-300,
 		color: $gray-600,
-		header-bg: null,
-		header-border-color: $gray-300,
-		footer-bg: null,
-		footer-border-color: $gray-300,
+		header: (
+			background-color: null,
+			border-color: $gray-300,
+		),
+		footer: (
+			background-color: null,
+			border-color: $gray-300,
+		),
 	),
 	$panel-secondary
 );
@@ -70,7 +78,10 @@ $panel-unstyled-header-link: () !default;
 $panel-unstyled-header-link: map-deep-merge(
 	(
 		border-radius: 1px,
-		focus-box-shadow: 0 0 0 0.25rem $body-bg#{','} 0 0 0 0.375rem $primary-l1,
+		focus: (
+			box-shadow: #{0 0 0 0.25rem $body-bg,
+			0 0 0 0.375rem $primary-l1},
+		),
 	),
 	$panel-unstyled-header-link
 );

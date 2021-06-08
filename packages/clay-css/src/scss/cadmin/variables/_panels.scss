@@ -51,11 +51,15 @@ $cadmin-panel-header-link: map-deep-merge(
 		display: block,
 		text-decoration: $cadmin-panel-header-link-text-decoration,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: inherit,
-		hover-text-decoration: $cadmin-panel-header-link-hover-text-decoration,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
-		focus-z-index: $cadmin-zindex-panel-header-link-focus,
+		hover: (
+			color: inherit,
+			text-decoration: $cadmin-panel-header-link-hover-text-decoration,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+			z-index: $cadmin-zindex-panel-header-link-focus,
+		),
 	),
 	$cadmin-panel-header-link
 );
@@ -107,10 +111,16 @@ $cadmin-panel-group-sm: () !default;
 $cadmin-panel-group-sm: map-deep-merge(
 	(
 		font-size: 14px,
-		header-padding-bottom: 8px,
-		header-padding-top: 8px,
-		title-font-size: 12px,
-		collapse-icon-top: 11px,
+		header: (
+			padding-bottom: 8px,
+			padding-top: 8px,
+		),
+		title: (
+			font-size: 12px,
+		),
+		collapse-icon: (
+			top: 11px,
+		),
 	),
 	$cadmin-panel-group-sm
 );
@@ -153,9 +163,13 @@ $cadmin-panel-secondary: map-deep-merge(
 	(
 		border-color: $cadmin-gray-300,
 		color: $cadmin-gray-600,
-		header-border-color: $cadmin-gray-300,
-		header-link: $cadmin-panel-secondary-header-link,
-		footer-border-color: $cadmin-gray-300,
+		header: (
+			border-color: $cadmin-gray-300,
+			link: $cadmin-panel-secondary-header-link,
+		),
+		footer: (
+			border-color: $cadmin-gray-300,
+		),
 	),
 	$cadmin-panel-secondary
 );
@@ -166,8 +180,10 @@ $cadmin-panel-unstyled-header-link: () !default;
 $cadmin-panel-unstyled-header-link: map-deep-merge(
 	(
 		border-radius: 1px,
-		focus-box-shadow: #{0 0 0 4px $cadmin-body-bg,
-		0 0 0 6px $cadmin-primary-l1},
+		focus: (
+			box-shadow: #{0 0 0 4px $cadmin-body-bg,
+			0 0 0 6px $cadmin-primary-l1},
+		),
 	),
 	$cadmin-panel-unstyled-header-link
 );
@@ -185,11 +201,11 @@ $cadmin-panel-unstyled: map-deep-merge(
 			border-style: solid,
 			border-width: 0 0 1px 0,
 			padding-left: 0,
+			collapsed: (
+				border-color: $cadmin-gray-500,
+			),
+			link: $cadmin-panel-unstyled-header-link,
 		),
-		header-collapsed: (
-			border-color: $cadmin-gray-500,
-		),
-		header-link: $cadmin-panel-unstyled-header-link,
 		collapse-icon: (
 			right: 0,
 		),
