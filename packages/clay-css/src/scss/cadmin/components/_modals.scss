@@ -180,17 +180,15 @@
 }
 
 .modal-body {
-	background-color: $cadmin-modal-body-bg;
-	color: $cadmin-modal-body-color;
-	flex-grow: 1;
-	flex-shrink: 1;
-	padding: $cadmin-modal-inner-padding;
-	position: relative;
+	@include clay-css($cadmin-modal-body);
 
 	&.inline-scroller {
-		-webkit-overflow-scrolling: touch;
-		overflow: auto;
-		padding: $cadmin-modal-inner-padding;
+		$inline-scroller: setter(
+			map-get($cadmin-modal-body, inline-scroller),
+			()
+		);
+
+		@include clay-css($inline-scroller);
 	}
 }
 

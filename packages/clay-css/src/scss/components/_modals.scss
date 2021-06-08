@@ -202,17 +202,12 @@
 }
 
 .modal-body {
-	background-color: $modal-body-bg;
-	color: $modal-body-color;
-	flex-grow: 1;
-	flex-shrink: 1;
-	padding: $modal-inner-padding;
-	position: relative;
+	@include clay-css($modal-body);
 
 	&.inline-scroller {
-		-webkit-overflow-scrolling: touch;
-		overflow: auto;
-		padding: $modal-inner-padding;
+		$inline-scroller: setter(map-get($modal-body, inline-scroller), ());
+
+		@include clay-css($inline-scroller);
 	}
 }
 
