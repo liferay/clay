@@ -139,7 +139,9 @@
 		)
 	);
 
-	$header-collapsed: setter(map-get($map, header-collapsed), ());
+	$old-header-collapsed: setter(map-get($map, header-collapsed), ());
+	$header-collapsed: setter(map-get($header, collapsed), ());
+	$header-collapsed: map-merge($header-collapsed, $old-header-collapsed);
 	$header-collapsed: map-merge(
 		$header-collapsed,
 		(
@@ -151,7 +153,8 @@
 		)
 	);
 
-	$header-c-inner: setter(map-get($map, header-c-inner), ());
+	$old-header-c-inner: setter(map-get($map, header-c-inner), ());
+	$header-c-inner: setter(map-get($header, c-inner), ());
 	$header-c-inner: map-merge(
 		(
 			enabled:
@@ -171,7 +174,9 @@
 		$header-c-inner
 	);
 
-	$header-link: setter(map-get($map, header-link), ());
+	$old-header-link: setter(map-get($map, header-link), ());
+	$header-link: setter(map-get($header, link), ());
+	$header-link: map-deep-merge($header-link, $old-header-link);
 
 	$title: setter(map-get($map, title), ());
 	$title: map-merge(
