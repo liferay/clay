@@ -76,7 +76,9 @@ exports[`ClayVerticalNav renders 1`] = `
               </svg>
             </span>
           </button>
-          <div>
+          <div
+            class=""
+          >
             <ul
               class="nav nav-stacked"
             >
