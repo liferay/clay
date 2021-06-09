@@ -147,6 +147,10 @@
 			border-top: $panel-header-border-bottom-width solid transparent;
 		}
 	}
+
+	.panel-unstyled {
+		@include clay-panel-variant($panel-group-panel-unstyled);
+	}
 }
 
 // Panel Group Fluid
@@ -298,6 +302,10 @@
 		left: $panel-group-flush-collapse-icon-left;
 		right: $panel-group-flush-collapse-icon-right;
 	}
+
+	.panel-unstyled {
+		@include clay-panel-variant($panel-group-flush-panel-unstyled);
+	}
 }
 
 // Panel Group Sizes
@@ -305,6 +313,10 @@
 .panel-group-sm {
 	.panel {
 		@include clay-panel-variant($panel-group-sm);
+	}
+
+	.panel-unstyled {
+		@include clay-panel-variant($panel-group-sm-panel-unstyled);
 	}
 }
 
