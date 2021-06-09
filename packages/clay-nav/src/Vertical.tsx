@@ -32,7 +32,7 @@ interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**
 	 * Value of item.
 	 */
-	label?: string;
+	label?: string | React.ReactNode;
 }
 
 interface IItemWithItems extends IItem {
