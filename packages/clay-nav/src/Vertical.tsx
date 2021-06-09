@@ -132,7 +132,7 @@ function Item({
 
 			{subItems && (
 				<CSSTransition
-					className={!expanded && 'collapse'}
+					className={expanded ? undefined : 'collapse'}
 					classNames={{
 						enter: 'collapsing',
 						enterActive: `show`,
