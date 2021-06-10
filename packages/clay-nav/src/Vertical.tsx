@@ -32,7 +32,7 @@ interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**
 	 * Value of item.
 	 */
-	label?: string;
+	label?: string | React.ReactNode;
 }
 
 interface IItemWithItems extends IItem {
@@ -132,7 +132,7 @@ function Item({
 
 			{subItems && (
 				<CSSTransition
-					className={!expanded && 'collapse'}
+					className={expanded ? undefined : 'collapse'}
 					classNames={{
 						enter: 'collapsing',
 						enterActive: `show`,
