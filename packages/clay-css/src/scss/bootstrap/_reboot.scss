@@ -64,7 +64,7 @@ body {
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
 // and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
 [tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
+  box-shadow: $component-focus-box-shadow;
 }
 
 
