@@ -46,6 +46,25 @@ $cadmin-modal-inner-padding: 24px !default; // 24px
 $cadmin-modal-body-bg: null !default;
 $cadmin-modal-body-color: null !default;
 
+$cadmin-modal-body: () !default;
+$cadmin-modal-body: map-deep-merge(
+	(
+		background-color: $cadmin-modal-body-bg,
+		color: $cadmin-modal-body-color,
+		flex-grow: 1,
+		flex-shrink: 1,
+		padding: $cadmin-modal-inner-padding,
+		position: relative,
+		inline-scroller: (
+			max-height: 320px,
+			-webkit-overflow-scrolling: touch,
+			overflow: auto,
+			padding: $cadmin-modal-inner-padding,
+		),
+	),
+	$cadmin-modal-body
+);
+
 // Modal Footer
 
 $cadmin-modal-footer-margin-between: 8px !default;

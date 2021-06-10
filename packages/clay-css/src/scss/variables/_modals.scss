@@ -46,6 +46,25 @@ $modal-inner-padding: 1rem !default;
 $modal-body-bg: null !default;
 $modal-body-color: null !default;
 
+$modal-body: () !default;
+$modal-body: map-deep-merge(
+	(
+		background-color: $modal-body-bg,
+		color: $modal-body-color,
+		flex-grow: 1,
+		flex-shrink: 1,
+		padding: $modal-inner-padding,
+		position: relative,
+		inline-scroller: (
+			max-height: 320px,
+			-webkit-overflow-scrolling: touch,
+			overflow: auto,
+			padding: $modal-inner-padding,
+		),
+	),
+	$modal-body
+);
+
 // Modal Footer
 
 $modal-footer-margin-between: 0.5rem !default;
