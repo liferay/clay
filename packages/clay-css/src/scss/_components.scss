@@ -2,6 +2,8 @@
 	@import url($font-import-url);
 }
 
+@import "components/_reboot.scss";
+
 @import "components/_grid";
 
 @import "components/_alerts";
