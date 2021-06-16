@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
+
+### Bug Fixes
+
+-   **@clayui/nav:** Adjust condition, to avoid set Boolean values in className property ([e3af0e3](https://github.com/liferay/clay/commit/e3af0e3)), closes [#4120](https://github.com/liferay/clay/issues/4120)
+
+### Features
+
+-   **@clayui/nav:** Add an optional type to Label property in Vertical Component ([fa64c1d](https://github.com/liferay/clay/commit/fa64c1d)), closes [#4121](https://github.com/liferay/clay/issues/4121)
+
 # [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
 
 **Note:** Version bump only for package @clayui/nav

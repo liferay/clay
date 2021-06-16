@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
+
+### Bug Fixes
+
+-   **@clayui/css:** Mixins `clay-panel-variant` updates mixin to use nested maps pattern ([ea0c66a](https://github.com/liferay/clay/commit/ea0c66a))
+-   **@clayui/css:** Modal and Cadmin Modal make `.modal-body.inline-scroller` `max-height: 320px` ([815d6d4](https://github.com/liferay/clay/commit/815d6d4)), closes [#4113](https://github.com/liferay/clay/issues/4113)
+-   **@clayui/css:** Panel adjust spacing for `panel-unstyled` to prevent visual jump on close. ([9dec5b6](https://github.com/liferay/clay/commit/9dec5b6))
+-   **@clayui/css:** Panel and Cadmin Panel update variables that use `clay-panel-variant` mixin to use newest keys, The old keys still work and will win over new keys. ([ea4bffb](https://github.com/liferay/clay/commit/ea4bffb))
+-   **@clayui/css:** Reboot and Cadmin Reboot removes negative tabindex rule that removes default focus outline due to keyboard navigation accessibility issues. `tabindex="-1"` can still be focused programmatically. ([9e52cfb](https://github.com/liferay/clay/commit/9e52cfb)), closes [#4124](https://github.com/liferay/clay/issues/4124)
+-   **@clayui/nav:** Adjust condition, to avoid set Boolean values in className property ([e3af0e3](https://github.com/liferay/clay/commit/e3af0e3)), closes [#4120](https://github.com/liferay/clay/issues/4120)
+
+### Features
+
+-   **@clayui/drop-down:** Allow the menu to be toggled ([8d09d29](https://github.com/liferay/clay/commit/8d09d29)), closes [#4103](https://github.com/liferay/clay/issues/4103)
+-   **@clayui/nav:** Add an optional type to Label property in Vertical Component ([fa64c1d](https://github.com/liferay/clay/commit/fa64c1d)), closes [#4121](https://github.com/liferay/clay/issues/4121)
+
 # [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
 
 ### Bug Fixes
