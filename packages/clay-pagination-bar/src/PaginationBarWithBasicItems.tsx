@@ -99,7 +99,7 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	/**
 	 * Path to spritemap from clay-css.
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * The total number of items in the pagination list.
