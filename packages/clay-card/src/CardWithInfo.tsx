@@ -88,7 +88,7 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Path to clay icon spritemap
 	 */
-	spritemap: string;
+	spritemap?: string;
 
 	/**
 	 * Values used in displaying bottom-left icon
