@@ -21,6 +21,13 @@ const dropDownCode = `const Component = () => {
 			trigger={<button className="btn btn-primary">Click here!</button>}
 			active={active}
 			onActiveChange={setActive}
+			menuElementAttrs={{
+				className: 'my-custom-dropdown-menu',
+				containerProps: {
+					className: 'dropdown-menu-react-portal-div',
+					id: 'dropdownMenuReactPortalDiv',
+				},
+			}}
 		>
 			<ClayDropDown.Help>{'Can I help you?'}</ClayDropDown.Help>
 			<ClayDropDown.ItemList>
