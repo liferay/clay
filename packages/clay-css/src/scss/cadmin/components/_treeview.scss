@@ -86,13 +86,13 @@
 }
 
 .treeview-group {
-	$group: setter(map-get($cadmin-treeview, group), ());
+	$group: setter(map-get($cadmin-treeview, treeview-group), ());
 
 	@include clay-css($group);
 }
 
 .treeview-item {
-	$item: setter(map-get($cadmin-treeview, item), ());
+	$item: setter(map-get($cadmin-treeview, treeview-item), ());
 
 	@include clay-css($item);
 
@@ -169,63 +169,20 @@
 }
 
 .treeview-nested-margins {
-	.treeview-group .treeview-item {
-		margin-left: 24px;
-	}
-}
-
-.treeview-nested {
-	padding-bottom: 4px;
-	padding-top: 4px;
-
-	> .treeview-item > .treeview-link {
-		padding-left: 0;
-
-		> .c-inner {
-			margin-left: 0;
-		}
-	}
+	@include clay-css($cadmin-treeview-nested-margins);
 
 	.treeview-group {
-		> .treeview-item > .treeview-link {
-			padding-left: 24px;
+		$group: setter(
+			map-get($cadmin-treeview-nested-margins, treeview-group),
+			()
+		);
 
-			> .c-inner {
-				margin-left: -24px;
-			}
-		}
-	}
+		@include clay-css($group);
 
-	.treeview-group .treeview-group > .treeview-item > .treeview-link {
-		padding-left: 48px;
+		.treeview-item {
+			$item: setter(map-get($group, treeview-item), ());
 
-		> .c-inner {
-			margin-left: -48px;
-		}
-	}
-
-	.treeview-group
-		.treeview-group
-		.treeview-group
-		> .treeview-item
-		> .treeview-link {
-		padding-left: 72px;
-
-		> .c-inner {
-			margin-left: -72px;
-		}
-	}
-
-	.treeview-group
-		.treeview-group
-		.treeview-group
-		.treeview-group
-		> .treeview-item
-		> .treeview-link {
-		padding-left: 96px;
-
-		> .c-inner {
-			margin-left: -96px;
+			@include clay-css($item);
 		}
 	}
 }
@@ -278,13 +235,13 @@
 	}
 
 	.treeview-group {
-		$group: setter(map-get($cadmin-treeview-light, group), ());
+		$group: setter(map-get($cadmin-treeview-light, treeview-group), ());
 
 		@include clay-css($group);
 	}
 
 	.treeview-item {
-		$item: setter(map-get($cadmin-treeview-light, item), ());
+		$item: setter(map-get($cadmin-treeview-light, treeview-item), ());
 
 		@include clay-css($item);
 
@@ -369,13 +326,13 @@
 	}
 
 	.treeview-group {
-		$group: setter(map-get($cadmin-treeview-dark, group), ());
+		$group: setter(map-get($cadmin-treeview-dark, treeview-group), ());
 
 		@include clay-css($group);
 	}
 
 	.treeview-item {
-		$item: setter(map-get($cadmin-treeview-dark, item), ());
+		$item: setter(map-get($cadmin-treeview-dark, treeview-item), ());
 
 		@include clay-css($item);
 

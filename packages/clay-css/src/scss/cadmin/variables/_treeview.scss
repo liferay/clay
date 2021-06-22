@@ -1,11 +1,12 @@
 $cadmin-treeview: () !default;
 $cadmin-treeview: map-merge(
 	(
-		display: block,
+		display: flex,
+		flex-direction: column,
 		font-size: 14px,
 		list-style: none,
 		margin-bottom: 0,
-		padding-left: 0,
+		padding: 2px 0,
 		btn-monospaced: (
 			font-size: 14px,
 			height: 24px,
@@ -19,23 +20,21 @@ $cadmin-treeview: map-merge(
 			margin-right: 4px,
 			margin-top: 1.5px,
 		),
-		group: (
-			display: block,
+		treeview-group: (
+			display: flex,
+			flex-direction: column,
 			list-style: none,
 			margin-bottom: 0,
 			padding-left: 0,
 		),
-		item: (
-			padding-bottom: 2px,
-			padding-top: 2px,
+		treeview-item: (
 			word-wrap: break-word,
-			last-child: (
-				padding-bottom: 0,
-			),
 		),
 		link: (
 			cursor: pointer,
 			display: block,
+			margin-bottom: 2px,
+			margin-top: 2px,
 			min-width: 100%,
 			padding: 0,
 			position: relative,
@@ -78,6 +77,18 @@ $cadmin-treeview: map-merge(
 		),
 	),
 	$cadmin-treeview
+);
+
+$cadmin-treeview-nested-margins: () !default;
+$cadmin-treeview-nested-margins: map-deep-merge(
+	(
+		treeview-group: (
+			treeview-item: (
+				margin-left: 24px,
+			),
+		),
+	),
+	$cadmin-treeview-nested-margins
 );
 
 $cadmin-treeview-show-component-expander-on-hover: () !default;
