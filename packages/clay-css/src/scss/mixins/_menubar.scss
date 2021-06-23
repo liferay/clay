@@ -533,13 +533,11 @@
 			color:
 				setter(
 					map-get($map, link-color),
-					setter(
-						map-get($link, color),
-						if(
-							variable-exists(navbar-light-color),
-							$navbar-light-color,
-							$cadmin-navbar-light-color
-						)
+					map-get($link, color),
+					if(
+						variable-exists(navbar-light-color),
+						$navbar-light-color,
+						$cadmin-navbar-light-color
 					)
 				),
 			hover: (
@@ -551,13 +549,11 @@
 				color:
 					setter(
 						map-get($map, link-hover-color),
-						setter(
-							map-get($link-hover, color),
-							if(
-								variable-exists(navbar-light-hover-color),
-								$navbar-light-hover-color,
-								$cadmin-navbar-light-hover-color
-							)
+						map-get($link-hover, color),
+						if(
+							variable-exists(navbar-light-hover-color),
+							$navbar-light-hover-color,
+							$cadmin-navbar-light-hover-color
 						)
 					),
 			),
@@ -570,13 +566,11 @@
 				color:
 					setter(
 						map-get($map, link-active-color),
-						setter(
-							map-get($link-active, color),
-							if(
-								variable-exists(navbar-light-active-color),
-								$navbar-light-active-color,
-								$cadmin-navbar-light-active-color
-							)
+						map-get($link-active, color),
+						if(
+							variable-exists(navbar-light-active-color),
+							$navbar-light-active-color,
+							$cadmin-navbar-light-active-color
 						)
 					),
 			),
@@ -596,13 +590,11 @@
 				color:
 					setter(
 						map-get($map, link-disabled-color),
-						setter(
-							map-get($link-disabled, color),
-							if(
-								variable-exists(navbar-light-disabled-color),
-								$navbar-light-disabled-color,
-								$cadmin-navbar-light-disabled-color
-							)
+						map-get($link-disabled, color),
+						if(
+							variable-exists(navbar-light-disabled-color),
+							$navbar-light-disabled-color,
+							$cadmin-navbar-light-disabled-color
 						)
 					),
 			),
@@ -625,38 +617,32 @@
 			color:
 				setter(
 					map-get($map, link-color-mobile),
-					setter(
-						map-get($link-mobile, color),
-						if(
-							variable-exists(dropdown-link-color),
-							$dropdown-link-color,
-							$cadmin-dropdown-link-color
-						)
+					map-get($link-mobile, color),
+					if(
+						variable-exists(dropdown-link-color),
+						$dropdown-link-color,
+						$cadmin-dropdown-link-color
 					)
 				),
 			hover: (
 				background-color:
 					setter(
 						map-get($map, link-hover-bg-mobile),
-						setter(
-							map-get($link-mobile-hover, background-color),
-							if(
-								variable-exists(dropdown-link-hover-bg),
-								$dropdown-link-hover-bg,
-								$cadmin-dropdown-link-hover-bg
-							)
+						map-get($link-mobile-hover, background-color),
+						if(
+							variable-exists(dropdown-link-hover-bg),
+							$dropdown-link-hover-bg,
+							$cadmin-dropdown-link-hover-bg
 						)
 					),
 				color:
 					setter(
 						map-get($map, link-hover-color-mobile),
-						setter(
-							map-get($link-mobile-hover, color),
-							if(
-								variable-exists(dropdown-link-hover-color),
-								$dropdown-link-hover-color,
-								$cadmin-dropdown-link-hover-color
-							)
+						map-get($link-mobile-hover, color),
+						if(
+							variable-exists(dropdown-link-hover-color),
+							$dropdown-link-hover-color,
+							$cadmin-dropdown-link-hover-color
 						)
 					),
 			),
@@ -664,25 +650,21 @@
 				background-color:
 					setter(
 						map-get($map, link-active-bg-mobile),
-						setter(
-							map-get($link-mobile-active, background-color),
-							if(
-								variable-exists(dropdown-link-active-bg),
-								$dropdown-link-active-bg,
-								$cadmin-dropdown-link-active-bg
-							)
+						map-get($link-mobile-active, background-color),
+						if(
+							variable-exists(dropdown-link-active-bg),
+							$dropdown-link-active-bg,
+							$cadmin-dropdown-link-active-bg
 						)
 					),
 				color:
 					setter(
 						map-get($map, link-active-color-mobile),
-						setter(
-							map-get($link-mobile-active, color),
-							if(
-								variable-exists(dropdown-link-active-color),
-								$dropdown-link-active-color,
-								$cadmin-dropdown-link-active-color
-							)
+						map-get($link-mobile-active, color),
+						if(
+							variable-exists(dropdown-link-active-color),
+							$dropdown-link-active-color,
+							$cadmin-dropdown-link-active-color
 						)
 					),
 			),
@@ -690,15 +672,11 @@
 				font-weight:
 					setter(
 						map-get($map, link-active-font-weight-mobile),
-						setter(
-							map-get($link-mobile-active-class, font-weight),
-							if(
-								variable-exists(
-									dropdown-link-active-font-weight
-								),
-								$dropdown-link-active-font-weight,
-								$cadmin-dropdown-link-active-font-weight
-							)
+						map-get($link-mobile-active-class, font-weight),
+						if(
+							variable-exists(dropdown-link-active-font-weight),
+							$dropdown-link-active-font-weight,
+							$cadmin-dropdown-link-active-font-weight
 						)
 					),
 			),
@@ -706,21 +684,17 @@
 				background-color:
 					setter(
 						map-get($map, link-disabled-bg-mobile),
-						setter(
-							map-get($link-mobile-disabled, background-color),
-							transparent
-						)
+						map-get($link-mobile-disabled, background-color),
+						transparent
 					),
 				color:
 					setter(
 						map-get($map, link-disabled-color-mobile),
-						setter(
-							map-get($link-mobile-disabled, color),
-							if(
-								variable-exists(dropdown-link-disabled-color),
-								$dropdown-link-disabled-color,
-								$cadmin-dropdown-link-disabled-color
-							)
+						map-get($link-mobile-disabled, color),
+						if(
+							variable-exists(dropdown-link-disabled-color),
+							$dropdown-link-disabled-color,
+							$cadmin-dropdown-link-disabled-color
 						)
 					),
 			),
@@ -738,37 +712,31 @@
 			background-color:
 				setter(
 					map-get($map, collapse-bg-mobile),
-					setter(
-						map-get($collapse-mobile, background-color),
-						if(
-							variable-exists(dropdown-bg),
-							$dropdown-bg,
-							$cadmin-dropdown-bg
-						)
+					map-get($collapse-mobile, background-color),
+					if(
+						variable-exists(dropdown-bg),
+						$dropdown-bg,
+						$cadmin-dropdown-bg
 					)
 				),
 			border-color:
 				setter(
 					map-get($map, collapse-border-color-mobile),
-					setter(
-						map-get($collapse-mobile, border-color),
-						if(
-							variable-exists(dropdown-border-color),
-							$dropdown-border-color,
-							$cadmin-dropdown-border-color
-						)
+					map-get($collapse-mobile, border-color),
+					if(
+						variable-exists(dropdown-border-color),
+						$dropdown-border-color,
+						$cadmin-dropdown-border-color
 					)
 				),
 			border-radius:
 				setter(
 					map-get($map, collapse-border-radius-mobile),
-					setter(
-						map-get($collapse-mobile, border-radius),
-						if(
-							variable-exists(border-radius),
-							$border-radius,
-							$cadmin-border-radius
-						)
+					map-get($collapse-mobile, border-radius),
+					if(
+						variable-exists(border-radius),
+						$border-radius,
+						$cadmin-border-radius
 					)
 				),
 			border-style:
@@ -779,13 +747,11 @@
 			box-shadow:
 				setter(
 					map-get($map, collapse-box-shadow-mobile),
-					setter(
-						map-get($collapse-mobile, box-shadow),
-						if(
-							variable-exists(dropdown-box-shadow),
-							$dropdown-box-shadow,
-							$cadmin-dropdown-box-shadow
-						)
+					map-get($collapse-mobile, box-shadow),
+					if(
+						variable-exists(dropdown-box-shadow),
+						$dropdown-box-shadow,
+						$cadmin-dropdown-box-shadow
 					)
 				),
 		)

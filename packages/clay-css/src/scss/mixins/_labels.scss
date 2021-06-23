@@ -102,10 +102,8 @@
 			height:
 				setter(
 					map-get($map, lexicon-icon-height),
-					setter(
-						map-get($lexicon-icon, height),
-						map-get($lexicon-icon, width)
-					)
+					map-get($lexicon-icon, height),
+					map-get($lexicon-icon, width)
 				),
 			margin-top:
 				setter(
