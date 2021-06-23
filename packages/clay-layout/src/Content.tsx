@@ -132,7 +132,7 @@ const ContentCol = React.forwardRef<HTMLElement, IContentColProps>(
 				'autofit-col-expand': expand,
 				'autofit-col-gutters': gutters,
 				'autofit-col-shrink': shrink,
-				[`autofit-col-float-${float}`]: float,
+				[`autofit-col-${float}`]: float,
 			})}
 			ref={ref}
 		>
