@@ -27,4 +27,6 @@ const ClayListItemText = React.forwardRef<HTMLParagraphElement, IProps>(
 	)
 );
 
+ClayListItemText.displayName = 'ClayListItemText';
+
 export default ClayListItemText;

@@ -23,6 +23,8 @@ const ClayListQuickActionMenu = React.forwardRef<
 	);
 });
 
+ClayListQuickActionMenu.displayName = 'ClayListQuickActionMenu';
+
 export default Object.assign(ClayListQuickActionMenu, {
 	Item: QuickActionMenuItem,
 });

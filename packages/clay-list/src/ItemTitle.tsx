@@ -31,4 +31,6 @@ const ClayListItemTitle = React.forwardRef<
 	);
 });
 
+ClayListItemTitle.displayName = 'ClayListItemTitle';
+
 export default ClayListItemTitle;
