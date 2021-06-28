@@ -172,42 +172,32 @@
 			background-color:
 				setter(
 					map-get($map, active-class-bg),
-					setter(
-						map-get($active-class, background-color),
-						map-get($active, background-color)
-					)
+					map-get($active-class, background-color),
+					map-get($active, background-color)
 				),
 			border-color:
 				setter(
 					map-get($map, active-class-border-color),
-					setter(
-						map-get($active-class, border-color),
-						map-get($active, border-color)
-					)
+					map-get($active-class, border-color),
+					map-get($active, border-color)
 				),
 			color:
 				setter(
 					map-get($map, active-class-color),
-					setter(
-						map-get($active-class, color),
-						map-get($active, color)
-					)
+					map-get($active-class, color),
+					map-get($active, color)
 				),
 			font-weight:
 				setter(
 					map-get($map, active-class-font-weight),
-					setter(
-						map-get($active-class, font-weight),
-						map-get($active, font-weight)
-					)
+					map-get($active-class, font-weight),
+					map-get($active, font-weight)
 				),
 			z-index:
 				setter(
 					map-get($map, active-class-z-index),
-					setter(
-						map-get($active-class, z-index),
-						map-get($active, z-index)
-					)
+					map-get($active-class, z-index),
+					map-get($active, z-index)
 				),
 		)
 	);
