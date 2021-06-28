@@ -12,23 +12,19 @@ interface IProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	 */
 	subtext?: boolean;
 }
-const ClayListItemText: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	subtext,
-	...otherProps
-}: IProps) => {
-	return (
+const ClayListItemText = React.forwardRef<HTMLParagraphElement, IProps>(
+	({children, className, subtext, ...otherProps}: IProps, ref) => (
 		<p
 			{...otherProps}
 			className={classNames(className, {
 				'list-group-subtext': subtext,
 				'list-group-text': !subtext,
 			})}
+			ref={ref}
 		>
 			{children}
 		</p>
-	);
-};
+	)
+);
 
 export default ClayListItemText;

@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface IItemProps
-	extends React.HTMLAttributes<HTMLAnchorElement | HTMLSpanElement> {
+	extends React.HTMLAttributes<HTMLAnchorElement | HTMLButtonElement> {
 	/**
 	 * Value of path the item should link to.
 	 */
@@ -26,13 +26,10 @@ interface IItemProps
 	symbol: string;
 }
 
-const ClayListQuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
-	className,
-	href,
-	spritemap,
-	symbol,
-	...otherProps
-}: IItemProps) => {
+const ClayListQuickActionMenuItem = React.forwardRef<
+	HTMLAnchorElement & HTMLButtonElement,
+	IItemProps
+>(({className, href, spritemap, symbol, ...otherProps}: IItemProps, ref) => {
 	const ElementTag = href ? ClayLink : 'button';
 
 	return (
@@ -43,11 +40,12 @@ const ClayListQuickActionMenuItem: React.FunctionComponent<IItemProps> = ({
 				className
 			)}
 			href={href}
+			ref={ref}
 			role="button"
 		>
 			<ClayIcon spritemap={spritemap} symbol={symbol} />
 		</ElementTag>
 	);
-};
+});
 
 export default ClayListQuickActionMenuItem;
