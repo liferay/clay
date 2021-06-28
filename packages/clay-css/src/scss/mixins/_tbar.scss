@@ -73,10 +73,8 @@
 			background-color:
 				setter(
 					map-get($map, bg),
-					setter(
-						map-get($map, bg-color),
-						map-get($map, background-color)
-					)
+					map-get($map, bg-color),
+					map-get($map, background-color)
 				),
 			padding-bottom:
 				setter(map-get($map, padding-y), map-get($map, padding-bottom)),
@@ -231,10 +229,8 @@
 			height:
 				setter(
 					map-get($map, btn-monospaced-size),
-					setter(
-						map-get($btn-monospaced, height),
-						map-get($btn, height)
-					)
+					map-get($btn-monospaced, height),
+					map-get($btn, height)
 				),
 			margin-bottom:
 				setter(
@@ -264,10 +260,8 @@
 			width:
 				setter(
 					map-get($map, btn-monospaced-size),
-					setter(
-						map-get($btn-monospaced, width),
-						map-get($btn, height)
-					)
+					map-get($btn-monospaced, width),
+					map-get($btn, height)
 				),
 		)
 	);
