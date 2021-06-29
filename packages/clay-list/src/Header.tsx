@@ -6,18 +6,20 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayListHeader: React.FunctionComponent<React.HTMLAttributes<
-	HTMLLIElement
->> = ({children, className, ...otherProps}) => {
+const ClayListHeader = React.forwardRef<
+	HTMLLIElement,
+	React.HTMLAttributes<HTMLLIElement>
+>(({children, className, ...otherProps}, ref) => {
 	return (
 		<li
 			{...otherProps}
 			className={classNames('list-group-header', className)}
+			ref={ref}
 		>
 			<p className="list-group-header-title">{children}</p>
 		</li>
 	);
-};
+});
 
 ClayListHeader.displayName = 'ClayListHeader';
 

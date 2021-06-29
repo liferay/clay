@@ -7,9 +7,10 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayListItemTitle: React.FunctionComponent<React.BaseHTMLAttributes<
-	HTMLAnchorElement
->> = ({children, className, href, ...otherProps}) => {
+const ClayListItemTitle = React.forwardRef<
+	HTMLDivElement,
+	React.BaseHTMLAttributes<HTMLAnchorElement>
+>(({children, className, href, ...otherProps}, ref) => {
 	const TagName = href ? 'div' : 'p';
 
 	const content = href ? (
@@ -21,10 +22,15 @@ const ClayListItemTitle: React.FunctionComponent<React.BaseHTMLAttributes<
 	);
 
 	return (
-		<TagName className={classNames('list-group-title', className)}>
+		<TagName
+			className={classNames('list-group-title', className)}
+			ref={ref}
+		>
 			{content}
 		</TagName>
 	);
-};
+});
+
+ClayListItemTitle.displayName = 'ClayListItemTitle';
 
 export default ClayListItemTitle;

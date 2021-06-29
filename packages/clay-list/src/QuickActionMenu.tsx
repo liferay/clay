@@ -8,21 +8,23 @@ import React from 'react';
 
 import QuickActionMenuItem from './QuickActionMenuItem';
 
-const ClayListQuickActionMenu: React.FunctionComponent<
+const ClayListQuickActionMenu = React.forwardRef<
+	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
-> & {
-	Item: typeof QuickActionMenuItem;
-} = ({children, className, ...otherProps}) => {
+>(({children, className, ...otherProps}, ref) => {
 	return (
 		<div
 			{...otherProps}
 			className={classNames('quick-action-menu', className)}
+			ref={ref}
 		>
 			{children}
 		</div>
 	);
-};
+});
 
-ClayListQuickActionMenu.Item = QuickActionMenuItem;
+ClayListQuickActionMenu.displayName = 'ClayListQuickActionMenu';
 
-export default ClayListQuickActionMenu;
+export default Object.assign(ClayListQuickActionMenu, {
+	Item: QuickActionMenuItem,
+});
