@@ -8,7 +8,7 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
-interface IItemProps
+export interface IItemProps
 	extends React.HTMLAttributes<HTMLAnchorElement | HTMLButtonElement> {
 	/**
 	 * Value of path the item should link to.
