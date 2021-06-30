@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.31.0](https://github.com/liferay/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
+
+### Bug Fixes
+
+-   **@clayui/card:** spritemap should be optional ([18c11a7](https://github.com/liferay/clay/commit/18c11a7))
+-   **@clayui/css:** Links convert variables to use nested Sass map pattern ([1a9d654](https://github.com/liferay/clay/commit/1a9d654))
+-   **@clayui/css:** Mixin Links don't use nested setters. The setter function takes an Argslist now, we can pass any number of Sass maps with one function call ([dfa1ea2](https://github.com/liferay/clay/commit/dfa1ea2))
+-   **@clayui/css:** Removes nested `setter` functions, only need to call it once. See https://github.com/liferay/clay/issues/4076. ([e2db591](https://github.com/liferay/clay/commit/e2db591))
+-   **@clayui/layout:** ContentCol should use autofit-col-end instead of autofit-col-float-end ([a3811d8](https://github.com/liferay/clay/commit/a3811d8))
+-   **@clayui/list:** fix error when building types ([b20f62c](https://github.com/liferay/clay/commit/b20f62c))
+-   **@clayui/pagination-bar:** spritemap should be optional ([38638e5](https://github.com/liferay/clay/commit/38638e5))
+-   **@clayui/toolbar:** spritemap should be optional ([77a6216](https://github.com/liferay/clay/commit/77a6216))
+
+### Features
+
+-   **@clayui/css:** Add `square-hole-multi` SVG icon ([205046c](https://github.com/liferay/clay/commit/205046c))
+-   **@clayui/css:** SVG Icons adds search-experiences.svg ([39ae51d](https://github.com/liferay/clay/commit/39ae51d))
+-   **@clayui/list:** Add forwardRef to ClayList components ([6dbccf7](https://github.com/liferay/clay/commit/6dbccf7))
+
 # [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
 
 ### Bug Fixes

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.31.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.30.0...v3.31.0) (2021-06-30)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Links convert variables to use nested Sass map pattern ([1a9d654](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1a9d654))
+* **@clayui/css:** Mixin Links don't use nested setters. The setter function takes an Argslist now, we can pass any number of Sass maps with one function call ([dfa1ea2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/dfa1ea2))
+* **@clayui/css:** Removes nested `setter` functions, only need to call it once. See https://github.com/liferay/clay/issues/4076. ([e2db591](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/e2db591))
+
+
+### Features
+
+* **@clayui/css:** Add `square-hole-multi` SVG icon ([205046c](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/205046c))
+* **@clayui/css:** SVG Icons adds search-experiences.svg ([39ae51d](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/39ae51d))
+
+
+
+
+
 # [3.30.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.29.0...v3.30.0) (2021-06-16)
 
 

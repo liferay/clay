@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.31.0](https://github.com/liferay/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
+
+**Note:** Version bump only for package @clayui/management-toolbar
+
 # [3.3.0](https://github.com/liferay/clay/compare/@clayui/management-toolbar@3.2.3...@clayui/management-toolbar@3.3.0) (2021-01-13)
 
 ### Features

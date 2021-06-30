@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.31.0](https://github.com/liferay/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
+
+### Bug Fixes
+
+-   **@clayui/list:** fix error when building types ([b20f62c](https://github.com/liferay/clay/commit/b20f62c))
+
+### Features
+
+-   **@clayui/list:** Add forwardRef to ClayList components ([6dbccf7](https://github.com/liferay/clay/commit/6dbccf7))
+
 # [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
 
 **Note:** Version bump only for package @clayui/list

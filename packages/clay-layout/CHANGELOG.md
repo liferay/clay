@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.31.0](https://github.com/liferay/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
+
+### Bug Fixes
+
+-   **@clayui/layout:** ContentCol should use autofit-col-end instead of autofit-col-float-end ([a3811d8](https://github.com/liferay/clay/commit/a3811d8))
+
 # [3.3.0](https://github.com/liferay/clay/compare/@clayui/layout@3.2.0...@clayui/layout@3.3.0) (2021-01-13)
 
 ### Bug Fixes
