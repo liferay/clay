@@ -10,7 +10,7 @@
 	},
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
-	"ts:main": "src/index.tsx",
+	"ts:main": "src/index.ts",
 	"files": [
 		"lib",
 		"src"
@@ -26,6 +26,8 @@
 		"react"
 	],
 	"dependencies": {
+		"@clayui/button": "^3.6.0",
+		"@clayui/drop-down": "^3.30.0",
 		"@clayui/icon": "^3.1.0",
 		"@clayui/modal": "^3.29.0"
 	},

@@ -17,9 +17,13 @@ interface IProviderProps extends IProviderContext {
 }
 
 interface IProviderContext {
+	/**
+	 * The theme corresponds to a CSS class to scope the application.
+	 */
+	theme?: string;
 }
 
-const Context = React.createContext<IProviderContext | null>(null);
+const Context = React.createContext<IProviderContext>({});
 
 Context.displayName = 'ClayProviderContext';
 
