@@ -27,9 +27,11 @@
 	],
 	"dependencies": {
 		"@clayui/button": "^3.6.0",
-		"@clayui/link": "^3.2.0"
+		"@clayui/link": "^3.2.0",
+		"classnames": "^2.2.6"
 	},
 	"peerDependencies": {
+		"@clayui/core": "^3.0.0",
 		"@clayui/css": "3.x",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1"
