@@ -27,13 +27,13 @@ mainTabURL: 'docs/components/tabs.html'
 <div class="sheet-example">
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a aria-controls="fields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#fields" id="fieldsTab" role="tab">Fields</a>
+            <a aria-controls="fields" aria-selected="true" class="active nav-link" data-toggle="tab" href="#fields" id="fieldsTab" role="tab">Fields</a>
         </li>
         <li class="nav-item">
-            <a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings" id="settingsTab" role="tab">Settings</a>
+            <a aria-controls="settings" aria-selected="false" class="nav-link" data-toggle="tab" href="#settings" id="settingsTab" role="tab">Settings</a>
         </li>
         <li class="nav-item">
-            <a aria-controls="documents" class="disabled nav-link" href="#documents" id="documentsTab" role="tab">Documents</a>
+            <a aria-controls="documents" aria-selected="false" class="disabled nav-link" data-toggle="tab" href="#documents" id="documentsTab" role="tab" tabindex="-1">Documents</a>
         </li>
         <li class="dropdown nav-item">
             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
@@ -43,7 +43,7 @@ mainTabURL: 'docs/components/tabs.html'
                 </svg>
             </a>
             <div class="dropdown-menu dropdown-menu-indicator-end">
-                <a aria-controls="setup" class="dropdown-item" data-toggle="tab" href="#setup" id="setupTab" role="tab">
+                <a aria-controls="setup" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#setup" id="setupTab" role="tab">
                     Setup
                     <span aria-hidden="true" class="dropdown-item-indicator">
                         <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -51,7 +51,7 @@ mainTabURL: 'docs/components/tabs.html'
                         </svg>
                     </span>
                 </a>
-                <a aria-controls="supportedClients" class="dropdown-item" data-toggle="tab" href="#supportedClients" id="supportedClientsTab" role="tab">
+                <a aria-controls="supportedClients" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#supportedClients" id="supportedClientsTab" role="tab">
                     Supported Clients
                     <span aria-hidden="true" class="dropdown-item-indicator">
                         <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -86,7 +86,7 @@ mainTabURL: 'docs/components/tabs.html'
 	<li class="nav-item">
 		<a
 			aria-controls="fields"
-			aria-expanded="true"
+			aria-selected="true"
 			class="active nav-link"
 			data-toggle="tab"
 			href="#fields"
@@ -98,6 +98,7 @@ mainTabURL: 'docs/components/tabs.html'
 	<li class="nav-item">
 		<a
 			aria-controls="settings"
+			aria-selected="false"
 			class="nav-link"
 			data-toggle="tab"
 			href="#settings"
@@ -109,10 +110,13 @@ mainTabURL: 'docs/components/tabs.html'
 	<li class="nav-item">
 		<a
 			aria-controls="documents"
+			aria-selected="false"
 			class="disabled nav-link"
+			data-toggle="tab"
 			href="#documents"
 			id="documentsTab"
 			role="tab"
+			tabindex="-1"
 			>Documents</a
 		>
 	</li>
@@ -137,6 +141,7 @@ mainTabURL: 'docs/components/tabs.html'
 		<div class="dropdown-menu dropdown-menu-indicator-end">
 			<a
 				aria-controls="setup"
+				aria-selected="false"
 				class="dropdown-item"
 				data-toggle="tab"
 				href="#setup"
@@ -156,6 +161,7 @@ mainTabURL: 'docs/components/tabs.html'
 			</a>
 			<a
 				aria-controls="supportedClients"
+				aria-selected="false"
 				class="dropdown-item"
 				data-toggle="tab"
 				href="#supportedClients"
@@ -244,13 +250,13 @@ Use `.nav-underline` instead of `.nav-tabs`.
 <div class="sheet-example">
     <ul class="nav nav-underline" role="tablist">
         <li class="nav-item">
-            <a aria-controls="navUnderlineFields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#navUnderlineFields" id="navUnderlineFieldsTab" role="tab">Fields</a>
+            <a aria-controls="navUnderlineFields" aria-selected="true" class="active nav-link" data-toggle="tab" href="#navUnderlineFields" id="navUnderlineFieldsTab" role="tab">Fields</a>
         </li>
         <li class="nav-item">
-            <a aria-controls="navUnderlineSettings" class="nav-link" data-toggle="tab" href="#navUnderlineSettings" id="navUnderlineSettingsTab" role="tab">Settings</a>
+            <a aria-controls="navUnderlineSettings" aria-selected="false" class="nav-link" data-toggle="tab" href="#navUnderlineSettings" id="navUnderlineSettingsTab" role="tab">Settings</a>
         </li>
         <li class="nav-item">
-            <a aria-controls="navUnderlineDocuments" class="disabled nav-link" href="#navUnderlineDocuments" id="navUnderlineDocumentsTab" role="tab">Documents</a>
+            <a aria-controls="navUnderlineDocuments" aria-selected="false" class="disabled nav-link" data-toggle="tab" href="#navUnderlineDocuments" id="navUnderlineDocumentsTab" role="tab" tabindex="-1">Documents</a>
         </li>
         <li class="dropdown nav-item">
             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
@@ -260,7 +266,7 @@ Use `.nav-underline` instead of `.nav-tabs`.
                 </svg>
             </a>
             <div class="dropdown-menu dropdown-menu-indicator-end">
-                <a aria-controls="navUnderlineSetup" class="dropdown-item" data-toggle="tab" href="#navUnderlineSetup" id="navUnderlineSetupTab" role="tab">
+                <a aria-controls="navUnderlineSetup" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#navUnderlineSetup" id="navUnderlineSetupTab" role="tab">
                     Setup
                     <span aria-hidden="true" class="dropdown-item-indicator">
                         <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -268,7 +274,7 @@ Use `.nav-underline` instead of `.nav-tabs`.
                         </svg>
                     </span>
                 </a>
-                <a aria-controls="navUnderlineSupportedClients" class="dropdown-item" data-toggle="tab" href="#navUnderlineSupportedClients" id="navUnderlineSupportedClientsTab" role="tab">
+                <a aria-controls="navUnderlineSupportedClients" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#navUnderlineSupportedClients" id="navUnderlineSupportedClientsTab" role="tab">
                     Supported Clients
                     <span aria-hidden="true" class="dropdown-item-indicator">
                         <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -304,7 +310,7 @@ Use `.nav-underline` instead of `.nav-tabs`.
 		<li class="nav-item">
 			<a
 				aria-controls="navUnderlineFields"
-				aria-expanded="true"
+				aria-selected="true"
 				class="active nav-link"
 				data-toggle="tab"
 				href="#navUnderlineFields"
@@ -316,6 +322,7 @@ Use `.nav-underline` instead of `.nav-tabs`.
 		<li class="nav-item">
 			<a
 				aria-controls="navUnderlineSettings"
+				aria-selected="false"
 				class="nav-link"
 				data-toggle="tab"
 				href="#navUnderlineSettings"
@@ -327,10 +334,13 @@ Use `.nav-underline` instead of `.nav-tabs`.
 		<li class="nav-item">
 			<a
 				aria-controls="navUnderlineDocuments"
+				aria-selected="false"
 				class="disabled nav-link"
+				data-toggle="tab"
 				href="#navUnderlineDocuments"
 				id="navUnderlineDocumentsTab"
 				role="tab"
+				tabindex="-1"
 				>Documents</a
 			>
 		</li>
@@ -355,6 +365,7 @@ Use `.nav-underline` instead of `.nav-tabs`.
 			<div class="dropdown-menu dropdown-menu-indicator-end">
 				<a
 					aria-controls="navUnderlineSetup"
+					aria-selected="false"
 					class="dropdown-item"
 					data-toggle="tab"
 					href="#navUnderlineSetup"
@@ -374,6 +385,7 @@ Use `.nav-underline` instead of `.nav-tabs`.
 				</a>
 				<a
 					aria-controls="navUnderlineSupportedClients"
+					aria-selected="false"
 					class="dropdown-item"
 					data-toggle="tab"
 					href="#navUnderlineSupportedClients"
@@ -469,13 +481,13 @@ You can use buttons for tab items.
 <div class="sheet-example">
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <button aria-controls="buttonFields" aria-expanded="true" class="active btn btn-unstyled nav-link" data-target="#buttonFields" data-toggle="tab" id="buttonFieldsTab" role="tab" type="button">Fields</button>
+            <button aria-controls="buttonFields" aria-selected="true" class="active btn btn-unstyled nav-link" data-target="#buttonFields" data-toggle="tab" id="buttonFieldsTab" role="tab" type="button">Fields</button>
         </li>
         <li class="nav-item">
-            <button aria-controls="buttonSettings" class="btn btn-unstyled nav-link" data-target="#buttonSettings" data-toggle="tab" id="buttonSettingsTab" role="tab" type="button">Settings</button>
+            <button aria-controls="buttonSettings" aria-selected="false" class="btn btn-unstyled nav-link" data-target="#buttonSettings" data-toggle="tab" id="buttonSettingsTab" role="tab" type="button">Settings</button>
         </li>
         <li class="nav-item">
-            <button aria-controls="buttonDocuments" class="disabled btn btn-unstyled nav-link" data-target="#buttonDocuments" id="buttonDocumentsTab" role="tab" tabindex="-1" type="button">Documents</button>
+            <button aria-controls="buttonDocuments" aria-selected="false" class="disabled btn btn-unstyled nav-link" data-target="#buttonDocuments" data-toggle="tab" id="buttonDocumentsTab" role="tab" tabindex="-1" type="button">Documents</button>
         </li>
         <li class="dropdown nav-item">
             <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled nav-link" data-toggle="dropdown" type="button">
@@ -486,7 +498,7 @@ You can use buttons for tab items.
             </button>
             <ul class="dropdown-menu dropdown-menu-indicator-end">
                 <li>
-                    <button aria-controls="buttonSetup" class="dropdown-item" data-target="#buttonSetup" data-toggle="tab" id="buttonSetupTab" role="tab" type="button">
+                    <button aria-controls="buttonSetup" aria-selected="false" class="dropdown-item" data-target="#buttonSetup" data-toggle="tab" id="buttonSetupTab" role="tab" type="button">
                         Setup
                         <span aria-hidden="true" class="dropdown-item-indicator-end">
                             <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -496,7 +508,7 @@ You can use buttons for tab items.
                     </button>
                 </li>
                 <li>
-                    <button aria-controls="buttonSupportedClients" class="dropdown-item" data-target="#buttonSupportedClients" data-toggle="tab" id="supportedClientsTab" role="tab">
+                    <button aria-controls="buttonSupportedClients" aria-selected="false" class="dropdown-item" data-target="#buttonSupportedClients" data-toggle="tab" id="supportedClientsTab" role="tab">
                         Supported Clients
                         <span aria-hidden="true" class="dropdown-item-indicator-end">
                             <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -532,7 +544,7 @@ You can use buttons for tab items.
 	<li class="nav-item">
 		<button
 			aria-controls="buttonFields"
-			aria-expanded="true"
+			aria-selected="true"
 			class="active btn btn-unstyled nav-link"
 			data-target="#buttonFields"
 			data-toggle="tab"
@@ -546,6 +558,7 @@ You can use buttons for tab items.
 	<li class="nav-item">
 		<button
 			aria-controls="buttonSettings"
+			aria-selected="false"
 			class="btn btn-unstyled nav-link"
 			data-target="#buttonSettings"
 			data-toggle="tab"
@@ -559,8 +572,10 @@ You can use buttons for tab items.
 	<li class="nav-item">
 		<button
 			aria-controls="buttonDocuments"
+			aria-selected="false"
 			class="disabled btn btn-unstyled nav-link"
 			data-target="#buttonDocuments"
+			data-toggle="tab"
 			id="buttonDocumentsTab"
 			role="tab"
 			tabindex="-1"
@@ -590,6 +605,7 @@ You can use buttons for tab items.
 			<li>
 				<button
 					aria-controls="buttonSetup"
+					aria-selected="false"
 					class="dropdown-item"
 					data-target="#buttonSetup"
 					data-toggle="tab"
@@ -615,6 +631,7 @@ You can use buttons for tab items.
 			<li>
 				<button
 					aria-controls="buttonSupportedClients"
+					aria-selected="false"
 					class="dropdown-item"
 					data-target="#buttonSupportedClients"
 					data-toggle="tab"
@@ -707,13 +724,13 @@ You can justify the nav items according the tab content just adding `.nav-justif
 <div class="sheet-example">
     <ul class="nav nav-justified nav-tabs" role="tablist">
         <li class="nav-item">
-            <a aria-controls="navJustifiedFields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#navJustifiedFields" id="navJustifiedFieldsTab" role="tab">Fields</a>
+            <a aria-controls="navJustifiedFields" aria-selected="true" class="active nav-link" data-toggle="tab" href="#navJustifiedFields" id="navJustifiedFieldsTab" role="tab">Fields</a>
         </li>
         <li class="nav-item">
-            <a aria-controls="navJustifiedSettings" class="nav-link" data-toggle="tab" href="#navJustifiedSettings" id="navJustifiedSettingsTab" role="tab">Settings</a>
+            <a aria-controls="navJustifiedSettings" aria-selected="false" class="nav-link" data-toggle="tab" href="#navJustifiedSettings" id="navJustifiedSettingsTab" role="tab">Settings</a>
         </li>
         <li class="nav-item">
-            <a aria-controls="navJustifiedDocuments" class="disabled nav-link" href="#navJustifiedDocuments" id="navJustifiedDocumentsTab" role="tab" tabindex="-1">Documents</a>
+            <a aria-controls="navJustifiedDocuments" aria-selected="false" class="disabled nav-link" data-toggle="tab" href="#navJustifiedDocuments" id="navJustifiedDocumentsTab" role="tab" tabindex="-1">Documents</a>
         </li>
         <li class="dropdown nav-item">
             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
@@ -724,7 +741,7 @@ You can justify the nav items according the tab content just adding `.nav-justif
             </a>
             <ul class="dropdown-menu dropdown-menu-indicator-end">
                 <li>
-                    <a aria-controls="navJustifiedSetup" class="dropdown-item" data-toggle="tab" href="#navJustifiedSetup" id="navJustifiedSetupTab" role="tab">
+                    <a aria-controls="navJustifiedSetup" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#navJustifiedSetup" id="navJustifiedSetupTab" role="tab">
                         Setup
                         <span aria-hidden="true" class="dropdown-item-indicator-end">
                             <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -734,7 +751,7 @@ You can justify the nav items according the tab content just adding `.nav-justif
                     </a>
                 </li>
                 <li>
-                    <a aria-controls="navJustifiedSupportedClients" class="dropdown-item" data-toggle="tab" href="#navJustifiedSupportedClients" id="navJustifiedSupportedClientsTab" role="tab">
+                    <a aria-controls="navJustifiedSupportedClients" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#navJustifiedSupportedClients" id="navJustifiedSupportedClientsTab" role="tab">
                         Supported Clients
                         <span aria-hidden="true" class="dropdown-item-indicator-end">
                             <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -770,7 +787,7 @@ You can justify the nav items according the tab content just adding `.nav-justif
 	<li class="nav-item">
 		<a
 			aria-controls="navJustifiedFields"
-			aria-expanded="true"
+			aria-selected="true"
 			class="active nav-link"
 			data-toggle="tab"
 			href="#navJustifiedFields"
@@ -782,6 +799,7 @@ You can justify the nav items according the tab content just adding `.nav-justif
 	<li class="nav-item">
 		<a
 			aria-controls="navJustifiedSettings"
+			aria-selected="false"
 			class="nav-link"
 			data-toggle="tab"
 			href="#navJustifiedSettings"
@@ -793,7 +811,9 @@ You can justify the nav items according the tab content just adding `.nav-justif
 	<li class="nav-item">
 		<a
 			aria-controls="navJustifiedDocuments"
+			aria-selected="false"
 			class="disabled nav-link"
+			data-toggle="tab"
 			href="#navJustifiedDocuments"
 			id="navJustifiedDocumentsTab"
 			role="tab"
@@ -823,6 +843,7 @@ You can justify the nav items according the tab content just adding `.nav-justif
 			<li>
 				<a
 					aria-controls="navJustifiedSetup"
+					aria-selected="false"
 					class="dropdown-item"
 					data-toggle="tab"
 					href="#navJustifiedSetup"
@@ -847,6 +868,7 @@ You can justify the nav items according the tab content just adding `.nav-justif
 			<li>
 				<a
 					aria-controls="navJustifiedSupportedClients"
+					aria-selected="false"
 					class="dropdown-item"
 					data-toggle="tab"
 					href="#navJustifiedSupportedClients"
@@ -939,13 +961,13 @@ Use bootstrap's grid inside list items in `nav-tabs`.
 <div class="sheet-example">
     <ul class="nav nav-tabs" role="tablist">
         <li class="col-6 col-sm-3 nav-item">
-            <a aria-controls="navTabsGridFields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#navTabsGridFields" id="navTabsGridFieldsTab" role="tab">Fields</a>
+            <a aria-controls="navTabsGridFields" aria-selected="true" class="active nav-link" data-toggle="tab" href="#navTabsGridFields" id="navTabsGridFieldsTab" role="tab">Fields</a>
         </li>
         <li class="col-6 col-sm-3 nav-item">
-            <a aria-controls="navTabsGridSettings" class="nav-link" data-toggle="tab" href="#navTabsGridSettings" id="navTabsGridSettingsTab" role="tab">Settings</a>
+            <a aria-controls="navTabsGridSettings" aria-selected="false" class="nav-link" data-toggle="tab" href="#navTabsGridSettings" id="navTabsGridSettingsTab" role="tab">Settings</a>
         </li>
         <li class="col-6 col-sm-3 nav-item">
-            <a aria-controls="navTabsGridDocuments" class="disabled nav-link" href="#navTabsGridDocuments" id="navTabsGridDocumentsTab" role="tab" tabindex="-1">Documents</a>
+            <a aria-controls="navTabsGridDocuments" aria-selected="false" class="disabled nav-link" data-toggle="tab" href="#navTabsGridDocuments" id="navTabsGridDocumentsTab" role="tab" tabindex="-1">Documents</a>
         </li>
         <li class="col-6 col-sm-3 dropdown nav-item">
             <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
@@ -956,7 +978,7 @@ Use bootstrap's grid inside list items in `nav-tabs`.
             </a>
             <ul class="dropdown-menu dropdown-menu-indicator-end">
                 <li>
-                    <a aria-controls="navTabsGridSetup" class="dropdown-item" data-toggle="tab" href="#navTabsGridSetup" id="navTabsGridSetupTab" role="tab">
+                    <a aria-controls="navTabsGridSetup" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#navTabsGridSetup" id="navTabsGridSetupTab" role="tab">
                         Setup
                         <span aria-hidden="true" class="dropdown-item-indicator-end">
                             <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -966,7 +988,7 @@ Use bootstrap's grid inside list items in `nav-tabs`.
                     </a>
                 </li>
                 <li>
-                    <a aria-controls="navTabsGridSupportedClients" class="dropdown-item" data-toggle="tab" href="#navTabsGridSupportedClients" id="navTabsGridSupportedClientsTab" role="tab">
+                    <a aria-controls="navTabsGridSupportedClients" aria-selected="false" class="dropdown-item" data-toggle="tab" href="#navTabsGridSupportedClients" id="navTabsGridSupportedClientsTab" role="tab">
                         Supported Clients
                         <span aria-hidden="true" class="dropdown-item-indicator-end">
                             <svg class="lexicon-icon lexicon-icon-check" focusable="false" role="presentation">
@@ -1002,7 +1024,7 @@ Use bootstrap's grid inside list items in `nav-tabs`.
 	<li class="col-6 col-sm-3 nav-item">
 		<a
 			aria-controls="navTabsGridFields"
-			aria-expanded="true"
+			aria-selected="true"
 			class="active nav-link"
 			data-toggle="tab"
 			href="#navTabsGridFields"
@@ -1014,6 +1036,7 @@ Use bootstrap's grid inside list items in `nav-tabs`.
 	<li class="col-6 col-sm-3 nav-item">
 		<a
 			aria-controls="navTabsGridSettings"
+			aria-selected="false"
 			class="nav-link"
 			data-toggle="tab"
 			href="#navTabsGridSettings"
@@ -1025,7 +1048,9 @@ Use bootstrap's grid inside list items in `nav-tabs`.
 	<li class="col-6 col-sm-3 nav-item">
 		<a
 			aria-controls="navTabsGridDocuments"
+			aria-selected="false"
 			class="disabled nav-link"
+			data-toggle="tab"
 			href="#navTabsGridDocuments"
 			id="navTabsGridDocumentsTab"
 			role="tab"
@@ -1055,6 +1080,7 @@ Use bootstrap's grid inside list items in `nav-tabs`.
 			<li>
 				<a
 					aria-controls="navTabsGridSetup"
+					aria-selected="false"
 					class="dropdown-item"
 					data-toggle="tab"
 					href="#navTabsGridSetup"
@@ -1079,6 +1105,7 @@ Use bootstrap's grid inside list items in `nav-tabs`.
 			<li>
 				<a
 					aria-controls="navTabsGridSupportedClients"
+					aria-selected="false"
 					class="dropdown-item"
 					data-toggle="tab"
 					href="#navTabsGridSupportedClients"
