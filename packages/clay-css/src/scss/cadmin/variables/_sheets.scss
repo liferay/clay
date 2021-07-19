@@ -51,7 +51,21 @@ $cadmin-sheet-footer-btn-block-sm-down: () !default;
 $cadmin-sheet-footer-btn-block-sm-down: map-deep-merge(
 	(
 		breakpoint-down: sm,
-		btn-margin-bottom-mobile: 16px,
+		mobile: (
+			display: block,
+			btn: (
+				display: block,
+				margin-bottom: 16px,
+				width: 100%,
+			),
+			btn-group: (
+				display: block,
+			),
+			btn-group-item: (
+				display: block,
+				margin-right: 0,
+			),
+		),
 	),
 	$cadmin-sheet-footer-btn-block-sm-down
 );

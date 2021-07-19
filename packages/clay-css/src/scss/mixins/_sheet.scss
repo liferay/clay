@@ -17,25 +17,38 @@
 
 	$breakpoint-down: map-get($map, breakpoint-down);
 
-	$btn-margin-bottom-mobile: map-get($map, btn-margin-bottom-mobile);
+	$mobile: setter(map-get($map, mobile), ());
+
+	$btn-mobile: setter(map-get($mobile, btn), ());
+	$btn-mobile: map-merge(
+		$btn-mobile,
+		(
+			margin-bottom:
+				setter(
+					map-get($map, btn-margin-bottom-mobile),
+					map-get($btn-mobile, margin-bottom)
+				),
+		)
+	);
+
+	$btn-group-mobile: setter(map-get($mobile, btn-group), ());
+
+	$btn-group-item-mobile: setter(map-get($mobile, btn-group-item), ());
 
 	@if ($enabled) {
 		@include media-breakpoint-down($breakpoint-down) {
-			display: block;
+			@include clay-css($mobile);
 
 			.btn {
-				display: block;
-				margin-bottom: $btn-margin-bottom-mobile;
-				width: 100%;
+				@include clay-css($btn-mobile);
 			}
 
 			.btn-group {
-				display: block;
+				@include clay-css($btn-group-mobile);
 			}
 
 			.btn-group-item {
-				display: block;
-				margin-right: 0;
+				@include clay-css($btn-group-item-mobile);
 			}
 		}
 	}
