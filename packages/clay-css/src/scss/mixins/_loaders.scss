@@ -37,18 +37,8 @@
 	$enabled: setter(map-get($map, enabled), true);
 	$mixin-name: 'clay-loading-animation-variant';
 
-	$border-radius: setter(map-get($map, border-radius), 50%);
-	$color: setter(
-		map-get($map, color),
-		if(variable-exists(secondary), $secondary, $cadmin-secondary)
-	);
-	$transform: setter(map-get($map, transform), scale(0.33334));
-
-	$animation: setter(map-get($map, animation), 1.2s ease-out infinite);
-	$animation-name: required(
-		map-get($map, animation-name),
-		'The property `animation-name` in `#{$mixin-name}` is required!'
-	);
+	$after: setter(map-get($map, after), ());
+	$after-color: setter(map-get($map, color), map-get($after, color));
 
 	$ball-0-scale: setter(map-get($map, ball-0-scale), 0em);
 	$ball-1-scale: setter(map-get($map, ball-1-scale), -0.1em);
@@ -66,54 +56,70 @@
 
 	$ball-0-color: setter(
 		map-get($map, ball-0-color),
-		rgba($color, $ball-0-alpha)
+		rgba($after-color, $ball-0-alpha)
 	);
 	$ball-1-color: setter(
 		map-get($map, ball-1-color),
-		rgba($color, $ball-1-alpha)
+		rgba($after-color, $ball-1-alpha)
 	);
 	$ball-2-color: setter(
 		map-get($map, ball-2-color),
-		rgba($color, $ball-2-alpha)
+		rgba($after-color, $ball-2-alpha)
 	);
 	$ball-3-color: setter(
 		map-get($map, ball-3-color),
-		rgba($color, $ball-3-alpha)
+		rgba($after-color, $ball-3-alpha)
 	);
 	$ball-4-color: setter(
 		map-get($map, ball-4-color),
-		rgba($color, $ball-4-alpha)
+		rgba($after-color, $ball-4-alpha)
 	);
 	$ball-5-color: setter(
 		map-get($map, ball-5-color),
-		rgba($color, $ball-5-alpha)
+		rgba($after-color, $ball-5-alpha)
+	);
+
+	$after: map-merge(
+		$after,
+		(
+			animation:
+				setter(map-get($map, animation), map-get($after, animation)),
+			animation-name:
+				required(
+					setter(
+						map-get($map, animation-name),
+						map-get($after, animation-name)
+					),
+					'The property `animation-name` in `#{$mixin-name}` is required!'
+				),
+			border-radius:
+				setter(
+					map-get($map, border-radius),
+					map-get($after, border-radius)
+				),
+			box-shadow:
+				setter(
+					map-get($map, box-shadow),
+					map-get($after, box-shadow),
+					#{0 -1em 0 $ball-0-scale $ball-0-color,
+					1em -0.5em 0 $ball-5-scale $ball-5-color,
+					1em 0.5em 0 $ball-4-scale $ball-4-color,
+					0 1em 0 $ball-3-scale $ball-3-color,
+					-1em 0.5em 0 $ball-2-scale $ball-2-color,
+					-1em -0.5em 0 $ball-1-scale $ball-1-color}
+				),
+			color: $after-color,
+			transform:
+				setter(map-get($map, transform), map-get($after, transform)),
+		)
 	);
 
 	@if ($enabled) {
 		&:after {
-			animation: $animation;
-			animation-name: $animation-name;
-			border-radius: $border-radius;
-			content: '';
-
-			// Box shadow needs this specific order for proper animation
-
-			box-shadow: 0 -1em 0 $ball-0-scale $ball-0-color,
-				1em -0.5em 0 $ball-5-scale $ball-5-color,
-				1em 0.5em 0 $ball-4-scale $ball-4-color,
-				0 1em 0 $ball-3-scale $ball-3-color,
-				-1em 0.5em 0 $ball-2-scale $ball-2-color,
-				-1em -0.5em 0 $ball-1-scale $ball-1-color;
-			display: block;
-			height: 1em;
-			left: 0;
-			position: absolute;
-			top: 0;
-			transform: $transform;
-			width: 1em;
+			@include clay-css($after);
 		}
 
-		@keyframes #{$animation-name} {
+		@keyframes #{map-get($after, animation-name)} {
 			// Box shadows need this specific order for proper animation
 
 			0%,

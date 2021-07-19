@@ -7,8 +7,20 @@ $loading-icon-font-size-sm: 1.25rem !default; // 20px
 $loading-animation: () !default;
 $loading-animation: map-deep-merge(
 	(
-		animation-name: loading-animation,
-		color: $gray-900,
+		after: (
+			animation: 1.2s ease-out infinite,
+			animation-name: loading-animation,
+			border-radius: 50%,
+			color: $gray-900,
+			content: '',
+			display: block,
+			height: 1em,
+			left: 0,
+			position: absolute,
+			top: 0,
+			transform: scale(0.33334),
+			width: 1em,
+		),
 	),
 	$loading-animation
 );
@@ -16,8 +28,10 @@ $loading-animation: map-deep-merge(
 $loading-animation-light: () !default;
 $loading-animation-light: map-deep-merge(
 	(
-		animation-name: loading-animation-light,
-		color: $white,
+		after: (
+			animation-name: loading-animation-light,
+			color: $white,
+		),
 	),
 	$loading-animation-light
 );

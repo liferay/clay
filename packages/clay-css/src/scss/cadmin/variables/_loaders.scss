@@ -7,8 +7,20 @@ $cadmin-loading-icon-font-size-sm: 20px !default; // 20px
 $cadmin-loading-animation: () !default;
 $cadmin-loading-animation: map-deep-merge(
 	(
-		animation-name: loading-animation,
-		color: $cadmin-gray-600,
+		after: (
+			animation: 1.2s ease-out infinite,
+			animation-name: loading-animation,
+			border-radius: 50%,
+			color: $cadmin-gray-600,
+			content: '',
+			display: block,
+			height: 1em,
+			left: 0,
+			position: absolute,
+			top: 0,
+			transform: scale(0.33334),
+			width: 1em,
+		),
 	),
 	$cadmin-loading-animation
 );
@@ -16,8 +28,10 @@ $cadmin-loading-animation: map-deep-merge(
 $cadmin-loading-animation-light: () !default;
 $cadmin-loading-animation-light: map-deep-merge(
 	(
-		animation-name: loading-animation-light,
-		color: $cadmin-white,
+		after: (
+			animation-name: loading-animation-light,
+			color: $cadmin-white,
+		),
 	),
 	$cadmin-loading-animation-light
 );
