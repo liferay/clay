@@ -56,7 +56,21 @@ $sheet-footer-btn-block-sm-down: () !default;
 $sheet-footer-btn-block-sm-down: map-deep-merge(
 	(
 		breakpoint-down: sm,
-		btn-margin-bottom-mobile: 1rem,
+		mobile: (
+			display: block,
+			btn: (
+				display: block,
+				margin-bottom: 1rem,
+				width: 100%,
+			),
+			btn-group: (
+				display: block,
+			),
+			btn-group-item: (
+				display: block,
+				margin-right: 0,
+			),
+		),
 	),
 	$sheet-footer-btn-block-sm-down
 );

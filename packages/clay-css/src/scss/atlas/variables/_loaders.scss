@@ -1,7 +1,9 @@
 $loading-animation: () !default;
 $loading-animation: map-deep-merge(
 	(
-		color: $gray-600,
+		after: (
+			color: $gray-600,
+		),
 	),
 	$loading-animation
 );
