@@ -603,6 +603,32 @@
 // * SPDX-FileCopyrightText: © 2016 Hugo Giraudel <https://hugogiraudel.com/>
 // *
 
+/// A function that fetches deeply nested values from a Sass map.
+/// @author Hugo Giraudel
+/// @link https://css-tricks.com/snippets/sass/deep-getset-maps/
+/// @param {Map} $map - The Sass map to fetch from
+/// @param {Arglist} $keys - The keys to loop through
+
+@function map-deep-get($map, $keys...) {
+	$newMap: $map;
+
+	@each $key in $keys {
+		@if (type-of($newMap) == 'list' and length($newMap) == 0) or
+			(type-of($newMap) == 'null')
+		{
+			$newMap: map-new();
+		}
+
+		@if (type-of($newMap) != map) {
+			@error ('argument `$map: #{$map}` of `map-deep-get($map, $keys)` must be a map');
+		}
+
+		$newMap: map-get($newMap, $key);
+	}
+
+	@return $newMap;
+}
+
 /// A function to replace all instances of a specific character in a string.
 /// @author Hugo Giraudel
 /// @link https://www.sassmeister.com/gist/1b4f2da5527830088e4d

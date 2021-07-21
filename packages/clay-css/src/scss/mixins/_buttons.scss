@@ -178,17 +178,18 @@
 
 	$active-class-after: setter(map-get($map, active-class-after), ());
 
+	$nested-active-focus: setter(map-get($active, focus), ());
 	$active-focus: setter(map-get($map, active-focus), ());
+	$active-focus: map-merge($nested-active-focus, $active-focus);
 	$active-focus: map-merge(
 		$active-focus,
 		(
 			box-shadow:
 				setter(
 					map-get($map, active-focus-box-shadow),
-					setter(
-						map-get($active-focus, box-shadow),
-						map-get($focus, box-shadow)
-					)
+					map-get($active-focus, box-shadow),
+					map-get($nested-active-focus, box-shadow),
+					map-get($focus, box-shadow)
 				),
 		)
 	);
@@ -232,7 +233,9 @@
 		)
 	);
 
+	$nested-disabled-active: setter(map-get($disabled, active), ());
 	$disabled-active: setter(map-get($map, disabled-active), ());
+	$disabled-active: map-merge($nested-disabled-active, $disabled-active);
 
 	$lexicon-icon: setter(map-get($map, lexicon-icon), ());
 	$lexicon-icon: map-merge(
