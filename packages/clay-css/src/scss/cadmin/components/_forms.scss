@@ -178,6 +178,12 @@ label {
 		width: 0;
 	}
 
+	// CKEditor markup work around
+
+	&[contenteditable] p {
+		margin-bottom: 0;
+	}
+
 	.label {
 		@include clay-label-size($cadmin-form-control-label-size);
 	}
@@ -726,6 +732,12 @@ textarea.form-control-sm,
 	.form-control,
 	.form-control-plaintext {
 		@extend %clay-form-control-sm;
+	}
+
+	div.form-control,
+	.form-control[contenteditable] {
+		height: auto;
+		min-height: $cadmin-input-height-sm;
 	}
 
 	select.form-control {
