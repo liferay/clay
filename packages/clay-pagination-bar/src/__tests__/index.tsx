@@ -9,6 +9,21 @@ import React from 'react';
 
 const spritemap = 'path/to/spritemap';
 
+const defaultDeltas = [
+	{
+		label: 10,
+	},
+	{
+		label: 20,
+	},
+	{
+		label: 30,
+	},
+	{
+		label: 50,
+	},
+];
+
 describe('ClayPaginationBar', () => {
 	afterEach(cleanup);
 
@@ -29,6 +44,7 @@ describe('ClayPaginationBar', () => {
 		const {getByTestId} = render(
 			<ClayPaginationBarWithBasicItems
 				activePage={12}
+				deltas={defaultDeltas}
 				onPageChange={changeMock}
 				spritemap={spritemap}
 				totalItems={100}
@@ -50,6 +66,7 @@ describe('ClayPaginationBar', () => {
 		const {getByTestId} = render(
 			<ClayPaginationBarWithBasicItems
 				activePage={12}
+				deltas={defaultDeltas}
 				onDeltaChange={deltaChangeMock}
 				spritemap={spritemap}
 				totalItems={100}
@@ -67,6 +84,7 @@ describe('ClayPaginationBar', () => {
 		const {getByTestId} = render(
 			<ClayPaginationBarWithBasicItems
 				activePage={12}
+				deltas={defaultDeltas}
 				spritemap={spritemap}
 				totalItems={100}
 			/>
@@ -88,6 +106,7 @@ describe('ClayPaginationBar', () => {
 				<ClayPaginationBarWithBasicItems
 					activeDelta={delta}
 					activePage={activePage}
+					deltas={defaultDeltas}
 					onDeltaChange={setDelta}
 					onPageChange={setActivePage}
 					spritemap={spritemap}

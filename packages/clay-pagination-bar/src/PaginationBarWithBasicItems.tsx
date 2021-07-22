@@ -116,7 +116,7 @@ const DEFAULT_LABELS = {
 export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = ({
 	activeDelta,
 	activePage = 1,
-	deltas = defaultDeltas,
+	deltas,
 	disabledPages,
 	ellipsisBuffer,
 	hrefConstructor,
@@ -127,6 +127,13 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 	totalItems,
 	...otherProps
 }: IProps) => {
+	let showDropDown = true;
+
+	if (!deltas) {
+		deltas = defaultDeltas;
+		showDropDown = false;
+	}
+
 	if (!activeDelta) {
 		activeDelta = deltas[0].label;
 	}
@@ -162,22 +169,24 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 
 	return (
 		<PaginationBar {...otherProps}>
-			<PaginationBar.DropDown
-				items={items}
-				trigger={
-					<ClayButton
-						data-testid="selectPaginationBar"
-						displayType="unstyled"
-					>
-						{sub(labels.perPageItems, [activeDelta])}
+			{showDropDown && (
+				<PaginationBar.DropDown
+					items={items}
+					trigger={
+						<ClayButton
+							data-testid="selectPaginationBar"
+							displayType="unstyled"
+						>
+							{sub(labels.perPageItems, [activeDelta])}
 
-						<ClayIcon
-							spritemap={spritemap}
-							symbol="caret-double-l"
-						/>
-					</ClayButton>
-				}
-			/>
+							<ClayIcon
+								spritemap={spritemap}
+								symbol="caret-double-l"
+							/>
+						</ClayButton>
+					}
+				/>
+			)}
 
 			<PaginationBar.Results>
 				{sub(labels.paginationResults, [

@@ -6,26 +6,6 @@ exports[`ClayPaginationBar renders 1`] = `
     class="pagination-bar"
   >
     <div
-      class="dropdown pagination-items-per-page"
-    >
-      <button
-        class="dropdown-toggle btn btn-unstyled"
-        data-testid="selectPaginationBar"
-        style=""
-        type="button"
-      >
-        10 items
-        <svg
-          class="lexicon-icon lexicon-icon-caret-double-l"
-          role="presentation"
-        >
-          <use
-            xlink:href="path/to/spritemap#caret-double-l"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
       class="pagination-results"
     >
       Showing 1 to 10 of 100
