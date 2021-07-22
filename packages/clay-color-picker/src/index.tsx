@@ -197,25 +197,6 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	return (
 		<FocusScope arrowKeysUpDown={false}>
 			<div className="clay-color-picker">
-				{name && (
-					<input
-						name={name}
-						onChange={(e) =>
-							useNative ? onValueChange(e.target.value) : null
-						}
-						ref={valueInputRef}
-						style={{
-							height: 0,
-							margin: 0,
-							padding: 0,
-							visibility: 'hidden',
-							width: 0,
-						}}
-						type={useNative ? 'color' : 'text'}
-						value={value ? `${isHex ? '#' : ''}${value}` : ''}
-					/>
-				)}
-
 				{title && <label>{title}</label>}
 
 				<ClayInput.Group
@@ -224,6 +205,29 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 					small={small}
 				>
 					<ClayInput.GroupItem prepend={showHex} shrink>
+						{name && (
+							<input
+								name={name}
+								onChange={(e) =>
+									useNative
+										? onValueChange(e.target.value)
+										: null
+								}
+								ref={valueInputRef}
+								style={{
+									height: 0,
+									position: 'absolute',
+									visibility: 'hidden',
+									width: 0,
+								}}
+								tabIndex={-1}
+								type={useNative ? 'color' : 'text'}
+								value={
+									value ? `${isHex ? '#' : ''}${value}` : ''
+								}
+							/>
+						)}
+
 						<ClayInput.GroupText>
 							<Splotch
 								aria-label={ariaLabels.selectColor}
