@@ -5,12 +5,6 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
   <div
     class="clay-color-picker"
   >
-    <input
-      name="colorPicker2"
-      style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-      type="text"
-      value="#008000"
-    />
     <label>
       Custom Colors
     </label>
@@ -21,6 +15,13 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
       <div
         class="input-group-item input-group-item-shrink input-group-prepend"
       >
+        <input
+          name="colorPicker2"
+          style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+          tabindex="-1"
+          type="text"
+          value="#008000"
+        />
         <div
           class="input-group-text"
         >
@@ -61,12 +62,6 @@ exports[`Rendering default 1`] = `
     <div
       class="clay-color-picker"
     >
-      <input
-        name="colorPicker1"
-        style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-        type="text"
-        value="#FFF"
-      />
       <label>
         Default
       </label>
@@ -77,6 +72,13 @@ exports[`Rendering default 1`] = `
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
         >
+          <input
+            name="colorPicker1"
+            style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+            tabindex="-1"
+            type="text"
+            value="#FFF"
+          />
           <div
             class="input-group-text"
           >
@@ -438,12 +440,6 @@ exports[`Rendering disabled palette 1`] = `
     <div
       class="clay-color-picker"
     >
-      <input
-        name="colorPicker1"
-        style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-        type="text"
-        value="#FFF"
-      />
       <label>
         Default
       </label>
@@ -454,6 +450,13 @@ exports[`Rendering disabled palette 1`] = `
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
         >
+          <input
+            name="colorPicker1"
+            style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+            tabindex="-1"
+            type="text"
+            value="#FFF"
+          />
           <div
             class="input-group-text"
           >
@@ -815,12 +818,6 @@ exports[`Rendering disabled state 1`] = `
     <div
       class="clay-color-picker"
     >
-      <input
-        name="colorPicker1"
-        style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-        type="text"
-        value="#FFF"
-      />
       <label>
         Default
       </label>
@@ -831,6 +828,13 @@ exports[`Rendering disabled state 1`] = `
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
         >
+          <input
+            name="colorPicker1"
+            style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+            tabindex="-1"
+            type="text"
+            value="#FFF"
+          />
           <div
             class="input-group-text"
           >
@@ -1194,12 +1198,6 @@ exports[`Rendering renders w/ var() 1`] = `
     <div
       class="clay-color-picker"
     >
-      <input
-        name="colorPicker1"
-        style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-        type="text"
-        value="var(--blue)"
-      />
       <label>
         Default
       </label>
@@ -1210,6 +1208,13 @@ exports[`Rendering renders w/ var() 1`] = `
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
         >
+          <input
+            name="colorPicker1"
+            style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+            tabindex="-1"
+            type="text"
+            value="var(--blue)"
+          />
           <div
             class="input-group-text"
           >
@@ -1578,12 +1583,6 @@ exports[`Rendering renders with a hash for the value 1`] = `
     <div
       class="clay-color-picker"
     >
-      <input
-        name="colorPicker1"
-        style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-        type="text"
-        value="#FFF"
-      />
       <label>
         Default
       </label>
@@ -1594,6 +1593,13 @@ exports[`Rendering renders with a hash for the value 1`] = `
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
         >
+          <input
+            name="colorPicker1"
+            style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+            tabindex="-1"
+            type="text"
+            value="#FFF"
+          />
           <div
             class="input-group-text"
           >
@@ -1955,12 +1961,6 @@ exports[`Rendering renders with a named color for the value 1`] = `
     <div
       class="clay-color-picker"
     >
-      <input
-        name="colorPicker1"
-        style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-        type="text"
-        value="red"
-      />
       <label>
         Default
       </label>
@@ -1971,6 +1971,13 @@ exports[`Rendering renders with a named color for the value 1`] = `
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
         >
+          <input
+            name="colorPicker1"
+            style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+            tabindex="-1"
+            type="text"
+            value="red"
+          />
           <div
             class="input-group-text"
           >
@@ -2340,12 +2347,6 @@ exports[`Rendering small color-picker 1`] = `
     <div
       class="clay-color-picker"
     >
-      <input
-        name="colorPicker1"
-        style="height: 0px; margin: 0px; padding: 0px; visibility: hidden; width: 0px;"
-        type="text"
-        value="#FFF"
-      />
       <label>
         Small
       </label>
@@ -2356,6 +2357,13 @@ exports[`Rendering small color-picker 1`] = `
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
         >
+          <input
+            name="colorPicker1"
+            style="height: 0px; position: absolute; visibility: hidden; width: 0px;"
+            tabindex="-1"
+            type="text"
+            value="#FFF"
+          />
           <div
             class="input-group-text"
           >

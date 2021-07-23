@@ -54,7 +54,11 @@ export function isFocusable({
 	}
 
 	if (tagName === 'input') {
-		return type !== 'file' && type !== 'hidden';
+		return (
+			type !== 'file' &&
+			type !== 'hidden' &&
+			(tabIndex != null ? tabIndex >= minTabIndex : true)
+		);
 	}
 
 	return (
