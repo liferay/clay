@@ -119,27 +119,27 @@
 }
 
 .rounded {
-	border-radius: $cadmin-border-radius !important;
+	border-radius: $cadmin-rounded-border-radius !important;
 }
 
 .rounded-top {
-	border-top-left-radius: $cadmin-border-radius !important;
-	border-top-right-radius: $cadmin-border-radius !important;
+	border-top-left-radius: $cadmin-rounded-border-radius !important;
+	border-top-right-radius: $cadmin-rounded-border-radius !important;
 }
 
 .rounded-right {
-	border-bottom-right-radius: $cadmin-border-radius !important;
-	border-top-right-radius: $cadmin-border-radius !important;
+	border-bottom-right-radius: $cadmin-rounded-border-radius !important;
+	border-top-right-radius: $cadmin-rounded-border-radius !important;
 }
 
 .rounded-bottom {
-	border-bottom-left-radius: $cadmin-border-radius !important;
-	border-bottom-right-radius: $cadmin-border-radius !important;
+	border-bottom-left-radius: $cadmin-rounded-border-radius !important;
+	border-bottom-right-radius: $cadmin-rounded-border-radius !important;
 }
 
 .rounded-left {
-	border-bottom-left-radius: $cadmin-border-radius !important;
-	border-top-left-radius: $cadmin-border-radius !important;
+	border-bottom-left-radius: $cadmin-rounded-border-radius !important;
+	border-top-left-radius: $cadmin-rounded-border-radius !important;
 }
 
 .rounded-lg {
@@ -147,7 +147,7 @@
 }
 
 .rounded-circle {
-	border-radius: 50% !important;
+	border-radius: $cadmin-rounded-circle-border-radius !important;
 }
 
 .rounded-pill {
@@ -155,7 +155,7 @@
 }
 
 .rounded-0 {
-	border-radius: 0 !important;
+	border-radius: $cadmin-rounded-0-border-radius !important;
 }
 
 // Clearfix
