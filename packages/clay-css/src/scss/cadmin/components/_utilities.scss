@@ -4,20 +4,6 @@
 	@include clay-bg-checkered($cadmin-bg-checkered-fg);
 }
 
-// Rounded
-
-.rounded {
-	border-radius: $cadmin-rounded-border-radius !important;
-}
-
-.rounded-circle {
-	border-radius: $cadmin-rounded-circle-border-radius !important;
-}
-
-.rounded-0 {
-	border-radius: $cadmin-rounded-0-border-radius !important;
-}
-
 // Close
 
 .close {
