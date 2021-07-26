@@ -118,4 +118,39 @@ const PaginationBarWithBasicItems = () => {
 	);
 };
 
-export {PaginationBar, PaginationBarWithBasicItems};
+const paginationWithBasicItemsWithoutDropDownImportsCode = `import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
+`;
+
+const PaginationBarWithBasicItemsWithoutDropDownCode = `const Component = () => {
+	const [activePage, setActivePage] = useState(1);
+	const [delta, setDelta] = useState(5);
+
+	return (
+		<ClayPaginationBarWithBasicItems
+			activeDelta={delta}
+			activePage={activePage}
+			ellipsisBuffer={3}
+			onDeltaChange={setDelta}
+			onPageChange={setActivePage}
+			showDeltasDropDown={false}
+			spritemap={spritemap}
+			totalItems={21}
+		/>
+	);
+}
+render(<Component />)`;
+
+const PaginationBarWithBasicItemsWithoutDropDown = () => {
+	const scope = {ClayPaginationBarWithBasicItems};
+	const code = PaginationBarWithBasicItemsWithoutDropDownCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={paginationWithBasicItemsWithoutDropDownImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+export {PaginationBar, PaginationBarWithBasicItems, PaginationBarWithBasicItemsWithoutDropDown};
