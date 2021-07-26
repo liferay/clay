@@ -127,3 +127,111 @@ exports[`ClayPaginationBar renders 1`] = `
   </div>
 </div>
 `;
+
+exports[`ClayPaginationBar renders without a DropDown 1`] = `
+<div>
+  <div
+    class="pagination-bar"
+  >
+    <div
+      class="pagination-results"
+    >
+      Showing 1 to 10 of 100
+    </div>
+    <ul
+      class="pagination pagination-root"
+    >
+      <li
+        class="page-item disabled"
+      >
+        <button
+          aria-label="Previous"
+          class="page-link"
+          data-testid="prevArrow"
+          disabled=""
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-angle-left"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#angle-left"
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        class="page-item active"
+      >
+        <button
+          class="page-link"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          class="page-link"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          class="page-link"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="dropdown page-item"
+      >
+        <button
+          class="dropdown-toggle page-link btn btn-unstyled"
+          style=""
+          type="button"
+        >
+          ...
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          class="page-link"
+          type="button"
+        >
+          10
+        </button>
+      </li>
+      <li
+        class="page-item"
+      >
+        <button
+          aria-label="Next"
+          class="page-link"
+          data-testid="nextArrow"
+          type="button"
+        >
+          <svg
+            class="lexicon-icon lexicon-icon-angle-right"
+            role="presentation"
+          >
+            <use
+              xlink:href="path/to/spritemap#angle-right"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

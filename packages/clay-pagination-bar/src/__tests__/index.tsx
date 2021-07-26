@@ -23,6 +23,18 @@ describe('ClayPaginationBar', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders without a DropDown', () => {
+		const {container} = render(
+			<ClayPaginationBarWithBasicItems
+				showDeltasDropDown={false}
+				spritemap={spritemap}
+				totalItems={100}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('calls onPageChange when arrow is clicked', () => {
 		const changeMock = jest.fn();
 

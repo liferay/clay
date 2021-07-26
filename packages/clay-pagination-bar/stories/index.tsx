@@ -81,4 +81,21 @@ storiesOf('Components|ClayPaginationBar', module)
 				totalItems={number('Number of items: ', 21)}
 			/>
 		);
+	})
+	.add('Without DropDown', () => {
+		const [activePage, setActivePage] = React.useState<number>(3);
+		const [delta, setDelta] = React.useState<number>(5);
+
+		return (
+			<ClayPaginationBarWithBasicItems
+				activeDelta={delta}
+				activePage={activePage}
+				ellipsisBuffer={number('Ellipsis Buffer: ', 3)}
+				onDeltaChange={setDelta}
+				onPageChange={setActivePage}
+				showDeltasDropDown={false}
+				spritemap={spritemap}
+				totalItems={number('Number of items: ', 21)}
+			/>
+		);
 	});
