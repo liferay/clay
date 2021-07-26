@@ -153,4 +153,8 @@ const PaginationBarWithBasicItemsWithoutDropDown = () => {
 	);
 };
 
-export {PaginationBar, PaginationBarWithBasicItems, PaginationBarWithBasicItemsWithoutDropDown};
+export {
+	PaginationBar,
+	PaginationBarWithBasicItems,
+	PaginationBarWithBasicItemsWithoutDropDown,
+};
