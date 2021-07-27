@@ -8,6 +8,9 @@ import {ClayModalProvider} from '@clayui/modal';
 import React, {useContext} from 'react';
 
 interface IProviderProps extends IProviderContext {
+	/**
+	 * The content of the Provider.
+	 */
 	children: React.ReactNode;
 
 	/**
