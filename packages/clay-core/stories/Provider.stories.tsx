@@ -8,8 +8,7 @@ const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {storiesOf} from '@storybook/react';
 import React, {useState} from 'react';
 
-import {Provider} from '../';
-import {Button, DropDown, Icon} from '../../';
+import {Button, DropDown, Icon, Provider} from '../src';
 
 storiesOf('Components|Provider', module)
 	.add('spritemap', () => (
