@@ -71,6 +71,8 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 		}
 
 		if (!slug) {
+			// Create a slug for files that are in component packages, README
+			// files or files inside the docs folder.
 			if (sourceInstanceName === 'packages' && title) {
 				const fileName = path.basename(relativePath).split('.')[0];
 
@@ -86,16 +88,24 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 				}
 			}
 
-			if (relativePath.includes('docs')) {
+			// Create the slug for files are inside the content folder that
+			// belong to clayui.com package.
+			if (
+				sourceInstanceName === 'content' &&
+				relativePath.includes('docs')
+			) {
 				if (relativePath.endsWith('.md')) {
 					slug = relativePath.replace('.md', '.html');
 				} else {
 					slug = relativePath.replace('.mdx', '.html');
 				}
+			}
 
-				if (mainTabURL) {
-					slug = generateTabSlug(slug, mainTabURL);
-				}
+			// Create the slug for any file that contains `docs` as part of
+			// the path, it may be inside the clayui.com package or in the
+			// component packages.
+			if (mainTabURL && relativePath.includes('docs')) {
+				slug = generateTabSlug(relativePath, mainTabURL);
 			}
 
 			if (relativePath.includes('blog')) {
