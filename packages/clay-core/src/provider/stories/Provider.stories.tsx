@@ -11,7 +11,7 @@ import React, {useState} from 'react';
 import {Provider} from '../';
 import {Button, DropDown, Icon} from '../../';
 
-storiesOf('Provider', module)
+storiesOf('Components|Provider', module)
 	.add('spritemap', () => (
 		<Provider spritemap={spritemap}>
 			<Icon symbol="books" />
