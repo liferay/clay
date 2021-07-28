@@ -22,7 +22,7 @@ export interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
 	value: string;
 }
 
-const optionsFuzzy = {post: '</strong>', pre: '<strong>'};
+const optionsFuzzy = {post: '|+', pre: '+|'};
 
 const ClayAutocompleteItem = React.forwardRef<HTMLLIElement, IProps>(
 	({innerRef, match = '', value, ...otherProps}: IProps, ref) => {
@@ -30,15 +30,21 @@ const ClayAutocompleteItem = React.forwardRef<HTMLLIElement, IProps>(
 
 		return (
 			<ClayDropDown.Item {...otherProps} innerRef={innerRef} ref={ref}>
-				{match && fuzzyMatch ? (
-					<div
-						dangerouslySetInnerHTML={{
-							__html: fuzzyMatch.rendered,
-						}}
-					/>
-				) : (
-					value
-				)}
+				{match && fuzzyMatch
+					? fuzzyMatch.rendered
+							.split('|')
+							.map((item, index) => {
+								const Text = item.includes('+')
+									? 'span'
+									: 'strong';
+								const value = item.replace(/\+/g, '');
+
+								return value ? (
+									<Text key={index}>{value}</Text>
+								) : null;
+							})
+							.filter(Boolean)
+					: value}
 			</ClayDropDown.Item>
 		);
 	}
