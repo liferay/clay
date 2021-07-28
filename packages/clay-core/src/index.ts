@@ -18,5 +18,4 @@ export {
 	Context as ModalContext,
 	useModal,
 } from '@clayui/modal';
-
-export {Provider, useProvider} from './provider';
+export {Provider, useProvider} from '@clayui/provider';

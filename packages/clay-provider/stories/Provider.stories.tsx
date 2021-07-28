@@ -4,13 +4,16 @@
  */
 
 import '@clayui/css/lib/css/atlas.css';
+import Button from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import DropDown from '@clayui/drop-down';
+import Icon from '@clayui/icon';
 import {storiesOf} from '@storybook/react';
 import React, {useState} from 'react';
 
-import {Button, DropDown, Icon, Provider} from '../src';
+import {Provider} from '../src';
 
-storiesOf('Components|Provider', module)
+storiesOf('Components|ClayProvider', module)
 	.add('spritemap', () => (
 		<Provider spritemap={spritemap}>
 			<Icon symbol="books" />

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useProvider} from '@clayui/core';
+import {useProvider} from '@clayui/provider';
 import classNames from 'classnames';
 import React from 'react';
 import {createPortal} from 'react-dom';
