@@ -79,9 +79,7 @@ $sheet-footer-btn-block-sm-down: map-deep-merge(
 
 /// @deprecated as of 3.x.
 
-$sheet-lg-max-width: ceil(
-	map-get($container-max-widths, lg) * 0.83333
-) !default; // 800px
+$sheet-lg-max-width: 800px !default;
 
 // Sheet Title
 
