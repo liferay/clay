@@ -6,4 +6,4 @@ This package provides Provider a component that is at the root of your app to se
 import {Provider, useProvider} from '@clayui/core';
 ```
 
-- [Documentation](https://clayui.com/docs/components/provider.html)
+-   [Documentation](https://clayui.com/docs/components/provider.html)
