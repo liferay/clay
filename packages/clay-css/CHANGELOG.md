@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.32.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.31.0...v3.32.0) (2021-07-28)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Links adds `component-text` and `component-icon`, generic names for reuse in other components ([ae49f03](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ae49f03))
+* **@clayui/css:** Cadmin Treeview new component ([ea1568e](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/ea1568e))
+* **@clayui/css:** Forms `form-group-sm div.form-control` should be 32px tall and grow to fix content inside, similar to a textarea element ([eb987a1](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/eb987a1)), closes [#4164](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4164)
+* **@clayui/css:** Grid generating `container-max-width-*` classes should work with Custom Properties ([b12dbf5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/b12dbf5))
+* **@clayui/css:** Mixins update `clay-loading-animation-variant` to use `clay-css` pattern ([4280c6f](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/4280c6f)), closes [#3987](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3987)
+* **@clayui/css:** Mixins update `sheet-footer-btn-block` to use `clay-css` pattern ([5523b67](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5523b67)), closes [#3987](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/3987)
+* **@clayui/css:** Sheet `$sheet-lg-max-width` should use fixed number instead of generating based on a `$container-max-widths` value ([5968bd5](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5968bd5))
+* **@clayui/css:** Utilities remove duplicate rounded utilities ([6687624](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/6687624))
+
+
+### Features
+
+* **@clayui/css:** $container-max-widths Sass map should accept CSS Custom Properties ([3a8ffe2](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/3a8ffe2))
+* **@clayui/css:** Buttons use nested property names in variables to stay as close as possible to the way our CSS is written ([89e3360](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/89e3360)), closes [#4176](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4176)
+* **@clayui/css:** Functions adds `map-deep-get` for getting values of deeply nested Sass map items ([2b80302](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2b80302))
+
+
+
+
+
 # [3.31.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.30.0...v3.31.0) (2021-06-30)
 
 
