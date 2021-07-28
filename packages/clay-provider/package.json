@@ -1,7 +1,7 @@
 {
-	"name": "@clayui/shared",
-	"version": "3.29.0",
-	"description": "ClayShared component",
+	"name": "@clayui/provider",
+	"version": "3.0.0",
+	"description": "ClayProvider component in React",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
 	"engines": {
@@ -10,7 +10,7 @@
 	},
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
-	"ts:main": "src/index.tsx",
+	"ts:main": "src/index.ts",
 	"files": [
 		"lib",
 		"src"
@@ -26,15 +26,13 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/button": "^3.6.0",
-		"@clayui/link": "^3.2.0",
-		"classnames": "^2.2.6"
+		"@clayui/icon": "^3.1.0",
+		"@clayui/modal": "^3.29.0"
 	},
 	"peerDependencies": {
-		"@clayui/provider": "^3.0.0",
 		"@clayui/css": "3.x",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0"
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1"
 	},
 	"browserslist": [
 		"extends browserslist-config-clay"

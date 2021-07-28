@@ -1,0 +1,104 @@
+---
+title: 'Provider'
+description: 'Provider component which aggregates the main Clay, Icon, and Modal.'
+packageNpm: '@clayui/core'
+---
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Example](#example)
+-   [Application provider](#application-provider)
+    -   [Theme](#theme)
+    -   [Icon spritemap](#icon-spritemap)
+    -   [Modal](#modal)
+-   [API](#api)
+
+</div>
+</div>
+
+## Example
+
+```js
+import {Provider} from '@clayui/core';
+```
+
+```jsx
+<Provider spritemap={spritemap}>
+	<Icon symbol="books" />
+	<Icon symbol="times" />
+</Provider>
+```
+
+## Application provider
+
+A Provider is a component that be at the root of your application. Provider is used by other Clay components to define `theme` scopes, render icons with `spritemap`, or help handle Modal creation in your application.
+
+### Theme
+
+Themes in Clay is different from patterns that are common in other libraries, Clay's CSS framework is built using Sass and we allow to create themes based on CSS scope, a class is added in Clay components that use `React.Portal` to render elements in the body for example.
+
+```jsx
+<Provider theme="cadmin">Content</Provider>
+```
+
+### Icon spritemap
+
+Icons need the path where to find the icon collection to be rendered. Clay components that use the `Icon` component pass props from `spritemap` to the icon, to avoid passing `spritemap` to all your components at different levels, add the spritemap path in `Provider` to that `Icon` can use and avoid passing the property on all components.
+
+```jsx
+<Provider spritemap={spritemap}>
+	<Icon symbol="books" />
+	<Icon symbol="times" />
+</Provider>
+```
+
+### Modal
+
+By default `Provider` provides the context of [`Modal`](/docs/components/modal.html), manages the state of Modal. Allows you to call a Modal anywhere in your application structure.
+
+```jsx
+import {useContext} from 'react';
+import {Button, ModalContext} from '@clayui/core';
+
+const Back = () => {
+	const [state, dispatch] = useContext(ModalContext);
+
+	return (
+		<Button
+			onClick={() =>
+				dispatch({
+					payload: {
+						body: "Your draft won't be saved.",
+						footer: [
+							,
+							,
+							<Button.Group key={3} spaced>
+								<Button displayType="secondary">Cancel</Button>
+								<Button onClick={state.onClose}>Discard</Button>
+							</Button.Group>,
+						],
+						header: 'Discard draft?',
+						size: 'lg',
+					},
+					type: 1,
+				})
+			}
+		>
+			Back
+		</Button>
+	);
+};
+```
+
+```jsx
+export const App = () => (
+	<Provider>
+		<Back />
+	</Provider>
+);
+```
+
+## API
+
+<div>[APITable "clay-provider/src/Provider.tsx"]</div>
