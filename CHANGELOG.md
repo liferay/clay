@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fixes a potential XSS vulnerability in autocomplete by removing the use of `dangerouslySetInnerHTML` ([675910c](https://github.com/liferay/clay/commit/675910c))
+-   **@clayui/color-picker:** fix error of "hidden" input add extra margin ([f4d8aa0](https://github.com/liferay/clay/commit/f4d8aa0))
+-   **@clayui/css:** Cadmin Links adds `component-text` and `component-icon`, generic names for reuse in other components ([ae49f03](https://github.com/liferay/clay/commit/ae49f03))
+-   **@clayui/css:** Cadmin Treeview new component ([ea1568e](https://github.com/liferay/clay/commit/ea1568e))
+-   **@clayui/css:** Forms `form-group-sm div.form-control` should be 32px tall and grow to fix content inside, similar to a textarea element ([eb987a1](https://github.com/liferay/clay/commit/eb987a1)), closes [#4164](https://github.com/liferay/clay/issues/4164)
+-   **@clayui/css:** Grid generating `container-max-width-*` classes should work with Custom Properties ([b12dbf5](https://github.com/liferay/clay/commit/b12dbf5))
+-   **@clayui/css:** Mixins update `clay-loading-animation-variant` to use `clay-css` pattern ([4280c6f](https://github.com/liferay/clay/commit/4280c6f)), closes [#3987](https://github.com/liferay/clay/issues/3987)
+-   **@clayui/css:** Mixins update `sheet-footer-btn-block` to use `clay-css` pattern ([5523b67](https://github.com/liferay/clay/commit/5523b67)), closes [#3987](https://github.com/liferay/clay/issues/3987)
+-   **@clayui/css:** Sheet `$sheet-lg-max-width` should use fixed number instead of generating based on a `$container-max-widths` value ([5968bd5](https://github.com/liferay/clay/commit/5968bd5))
+-   **@clayui/css:** Utilities remove duplicate rounded utilities ([6687624](https://github.com/liferay/clay/commit/6687624))
+-   **@clayui/shared:** fixes error when getting stuck in an input masked as hidden ([4c0c5cb](https://github.com/liferay/clay/commit/4c0c5cb))
+-   **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78da))
+-   **clayui.com:** fixes error when generating slugs for documents inside packages ([5e00f5a](https://github.com/liferay/clay/commit/5e00f5a))
+
+### Features
+
+-   **@clayui/core:** Add Provider component and the new `@clayui/core` package ([1d4e4b3](https://github.com/liferay/clay/commit/1d4e4b3))
+-   **@clayui/core:** adds `theme` API to Provider ([e7bae7d](https://github.com/liferay/clay/commit/e7bae7d))
+-   **@clayui/css:** \$container-max-widths Sass map should accept CSS Custom Properties ([3a8ffe2](https://github.com/liferay/clay/commit/3a8ffe2))
+-   **@clayui/css:** Buttons use nested property names in variables to stay as close as possible to the way our CSS is written ([89e3360](https://github.com/liferay/clay/commit/89e3360)), closes [#4176](https://github.com/liferay/clay/issues/4176)
+-   **@clayui/css:** Functions adds `map-deep-get` for getting values of deeply nested Sass map items ([2b80302](https://github.com/liferay/clay/commit/2b80302))
+-   **@clayui/pagination-bar:** Add the `showDeltasDropDown` prop ([6c65f43](https://github.com/liferay/clay/commit/6c65f43)), closes [#4175](https://github.com/liferay/clay/issues/4175)
+
 # [3.31.0](https://github.com/liferay/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
 
 ### Bug Fixes
