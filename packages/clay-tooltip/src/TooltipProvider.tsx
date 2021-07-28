@@ -58,6 +58,7 @@ const initialState: IState = {
 };
 
 const TRIGGER_HIDE_EVENTS = [
+	'dragstart',
 	'mouseout',
 	'mouseup',
 	'pointerup',
