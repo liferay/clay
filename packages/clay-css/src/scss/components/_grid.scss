@@ -42,7 +42,10 @@
 			}
 
 			@each $name, $width in $grid-breakpoints {
-				@if ($container-max-width > $width or $breakpoint == $name) {
+				$_container-max-width: clay-get-fallback($container-max-width);
+				$_width: clay-get-fallback($width);
+
+				@if ($_container-max-width > $_width or $breakpoint == $name) {
 					.container#{breakpoint-infix($name, $grid-breakpoints)} {
 						@extend %responsive-container-#{$breakpoint} !optional;
 					}
