@@ -26,22 +26,7 @@ main {
 }
 
 body {
-	// As a best practice, apply a default `background-color`
-
-	background-color: $body-bg;
-	color: $body-color;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	font-weight: $font-weight-base;
-	-moz-osx-font-smoothing: $body-moz-osx-font-smoothing;
-	-webkit-font-smoothing: $body-webkit-font-smoothing;
-	line-height: $line-height-base;
-
-	// Remove the margin in all browsers
-
-	margin: 0;
-	-ms-overflow-style: scrollbar;
-	text-align: $body-text-align;
+	@include clay-css($c-body);
 
 	@include clay-scale-component {
 		font-size: $font-size-base-mobile;
