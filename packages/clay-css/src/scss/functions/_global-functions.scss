@@ -264,31 +264,29 @@
 			str-length($var) - 1
 		);
 
-		$units: (
-			'px': 1px,
-			'cm': 1cm,
-			'mm': 1mm,
-			'%': 1%,
-			'ch': 1ch,
-			'pc': 1pc,
-			'in': 1in,
-			'em': 1em,
-			'rem': 1rem,
-			'pt': 1pt,
-			'ex': 1ex,
-			'vw': 1vw,
-			'vh': 1vh,
-			'vmin': 1vmin,
-			'vmax': 1vmax,
-		);
+		$units: 'px'
+			'cm'
+			'mm'
+			'%'
+			'ch'
+			'pc'
+			'in'
+			'em'
+			'rem'
+			'pt'
+			'ex'
+			'vw'
+			'vh'
+			'vmin'
+			'vmax';
 
-		@each $unit in map-keys($units) {
+		@each $unit in $units {
 			@if (str-index($fallback-value, $unit)) {
 				@return to-number($fallback-value);
 			}
 		}
 
-		@return $fallback-value;
+		@return to-color($fallback-value);
 	}
 
 	@return $var;
