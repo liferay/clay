@@ -19,6 +19,46 @@
 		@include clay-css($custom-control);
 	}
 
+	.component-expander {
+		$component-expander: setter(
+			map-get($cadmin-treeview, component-expander),
+			()
+		);
+
+		@include clay-button-variant($component-expander);
+
+		.lexicon-icon:not(.component-expanded-d-none) {
+			display: none;
+		}
+	}
+
+	.component-action {
+		$component-action: setter(
+			map-get($cadmin-treeview, component-action),
+			()
+		);
+
+		@include clay-button-variant($component-action);
+	}
+
+	.component-icon {
+		$component-icon: setter(map-get($cadmin-treeview, component-icon), ());
+
+		@include clay-css($component-icon);
+
+		.lexicon-icon {
+			$lexicon-icon: setter(map-get($component-icon, lexicon-icon), ());
+
+			@include clay-css($lexicon-icon);
+		}
+	}
+
+	.component-text {
+		$component-text: setter(map-get($cadmin-treeview, component-text), ());
+
+		@include clay-css($component-text);
+	}
+
 	&.show-component-expander-on-hover {
 		@include clay-css($cadmin-treeview-show-component-expander-on-hover);
 
@@ -129,43 +169,6 @@
 			}
 		}
 	}
-}
-
-.component-expander {
-	$component-expander: setter(
-		map-get($cadmin-treeview, component-expander),
-		()
-	);
-
-	@include clay-button-variant($component-expander);
-
-	.lexicon-icon:not(.component-expanded-d-none) {
-		display: none;
-	}
-}
-
-.component-action {
-	$component-action: setter(map-get($cadmin-treeview, component-action), ());
-
-	@include clay-button-variant($component-action);
-}
-
-.component-icon {
-	$component-icon: setter(map-get($cadmin-treeview, component-icon), ());
-
-	@include clay-css($component-icon);
-
-	.lexicon-icon {
-		$lexicon-icon: setter(map-get($component-icon, lexicon-icon), ());
-
-		@include clay-css($lexicon-icon);
-	}
-}
-
-.component-text {
-	$component-text: setter(map-get($cadmin-treeview, component-text), ());
-
-	@include clay-css($component-text);
 }
 
 .treeview-nested-margins {
