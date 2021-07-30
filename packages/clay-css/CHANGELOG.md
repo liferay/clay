@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.32.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.32.0...v3.32.1) (2021-07-30)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Treeview scope `component-action`, `component-expander`, `component-icon`, `component-text` so styles don't bleed into other components ([1ce70bd](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/1ce70bd)), closes [#4198](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4198)
+
+
+
+
+
 # [3.32.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.31.0...v3.32.0) (2021-07-28)
 
 
