@@ -379,6 +379,24 @@ $body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
 $body-webkit-font-smoothing: $webkit-font-smoothing !default;
 $body-text-align: inherit !default;
 
+$c-body: () !default;
+$c-body: map-merge(
+	(
+		background-color: $body-bg,
+		color: $body-color,
+		font-family: $font-family-base,
+		font-size: $font-size-base,
+		-moz-osx-font-smoothing: $body-moz-osx-font-smoothing,
+		-webkit-font-smoothing: $body-webkit-font-smoothing,
+		font-weight: $font-weight-base,
+		line-height: $line-height-base,
+		margin: 0,
+		-ms-overflow-style: scrollbar,
+		text-align: $body-text-align,
+	),
+	$c-body
+);
+
 // Button
 
 $c-button-base: () !default;
