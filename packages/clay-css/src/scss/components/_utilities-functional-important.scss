@@ -24,36 +24,28 @@
 
 // Background
 
-@each $color, $value in $theme-colors {
+@each $color, $value in $bg-theme-colors {
+	$hover: setter(map-get($value, hover), ());
+
 	.bg-#{$color} {
-		background-color: $value !important;
+		@include clay-css(setter($value, ()));
 	}
 
 	a.bg-#{$color},
 	button.bg-#{$color} {
 		&:hover,
 		&:focus {
-			background-color: darken($value, 10%) !important;
+			@include clay-css($hover);
 		}
 	}
 }
 
 @if $enable-gradients {
-	@each $color, $value in $theme-colors {
+	@each $color, $value in $bg-gradient-theme-colors {
 		.bg-gradient-#{$color} {
-			background: $value
-				linear-gradient(180deg, mix($body-bg, $value, 15%), $value)
-				repeat-x !important;
+			@include clay-css(setter($value, ()));
 		}
 	}
-}
-
-.bg-white {
-	background-color: $white !important;
-}
-
-.bg-transparent {
-	background-color: transparent !important;
 }
 
 // Border
@@ -98,9 +90,9 @@
 	border-left: 0 !important;
 }
 
-@each $color, $value in $theme-colors {
+@each $color, $value in $border-theme-colors {
 	.border-#{$color} {
-		border-color: $value !important;
+		@include clay-css(setter($value, ()));
 	}
 }
 
@@ -722,20 +714,17 @@
 	color: $white !important;
 }
 
-@each $color, $value in $theme-colors {
+@each $color, $value in $text-theme-colors {
+	$hover: setter(map-get($value, hover));
+
 	.text-#{$color} {
-		color: $value !important;
+		@include clay-css(setter($value, ()));
 	}
 
-	@if $emphasized-link-hover-darken-percentage != 0 {
-		a.text-#{$color} {
-			&:hover,
-			&:focus {
-				color: darken(
-					$value,
-					$emphasized-link-hover-darken-percentage
-				) !important;
-			}
+	a.text-#{$color} {
+		&:hover,
+		&:focus {
+			@include clay-css($hover);
 		}
 	}
 }

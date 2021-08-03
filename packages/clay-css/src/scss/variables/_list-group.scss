@@ -162,6 +162,119 @@ $list-group-link-color: null !default;
 $list-group-link-hover-color: null !default;
 $list-group-link-active-color: $white !default;
 
+// List Group Item Variants
+
+$list-group-item-theme-colors: () !default;
+$list-group-item-theme-colors: map-deep-merge(
+	(
+		primary: (
+			background-color: theme-color-level(primary, -9),
+			color: theme-color-level(primary, 6),
+			hover: (
+				background-color: darken(theme-color-level(primary, -9), 5%),
+				color: theme-color-level(primary, 6),
+			),
+			active: (
+				background-color: theme-color-level(primary, 6),
+				border-color: theme-color-level(primary, 6),
+				color: $white,
+			),
+		),
+		secondary: (
+			background-color: theme-color-level(secondary, -9),
+			color: theme-color-level(secondary, 6),
+			hover: (
+				background-color: darken(theme-color-level(secondary, -9), 5%),
+				color: theme-color-level(secondary, 6),
+			),
+			active: (
+				background-color: theme-color-level(secondary, 6),
+				border-color: theme-color-level(secondary, 6),
+				color: $white,
+			),
+		),
+		success: (
+			background-color: theme-color-level(success, -9),
+			color: theme-color-level(success, 6),
+			hover: (
+				background-color: darken(theme-color-level(success, -9), 5%),
+				color: theme-color-level(success, 6),
+			),
+			active: (
+				background-color: theme-color-level(success, 6),
+				border-color: theme-color-level(success, 6),
+				color: $white,
+			),
+		),
+		info: (
+			background-color: theme-color-level(info, -9),
+			color: theme-color-level(info, 6),
+			hover: (
+				background-color: darken(theme-color-level(info, -9), 5%),
+				color: theme-color-level(info, 6),
+			),
+			active: (
+				background-color: theme-color-level(info, 6),
+				border-color: theme-color-level(info, 6),
+				color: $white,
+			),
+		),
+		warning: (
+			background-color: theme-color-level(warning, -9),
+			color: theme-color-level(warning, 6),
+			hover: (
+				background-color: darken(theme-color-level(warning, -9), 5%),
+				color: theme-color-level(warning, 6),
+			),
+			active: (
+				background-color: theme-color-level(warning, 6),
+				border-color: theme-color-level(warning, 6),
+				color: $white,
+			),
+		),
+		danger: (
+			background-color: theme-color-level(danger, -9),
+			color: theme-color-level(danger, 6),
+			hover: (
+				background-color: darken(theme-color-level(danger, -9), 5%),
+				color: theme-color-level(danger, 6),
+			),
+			active: (
+				background-color: theme-color-level(danger, 6),
+				border-color: theme-color-level(danger, 6),
+				color: $white,
+			),
+		),
+		light: (
+			background-color: theme-color-level(light, -9),
+			color: theme-color-level(light, 6),
+			hover: (
+				background-color: darken(theme-color-level(light, -9), 5%),
+				color: theme-color-level(light, 6),
+			),
+			active: (
+				background-color: theme-color-level(light, 6),
+				border-color: theme-color-level(light, 6),
+				color: $white,
+			),
+		),
+		dark: (
+			background-color: theme-color-level(dark, -9),
+			color: theme-color-level(dark, 6),
+			hover: (
+				background-color: darken(theme-color-level(dark, -9), 5%),
+				color: theme-color-level(dark, 6),
+			),
+			active: (
+				background-color: theme-color-level(dark, 6),
+				border-color: theme-color-level(dark, 6),
+				color: $white,
+			),
+		),
+	),
+	$list-group-item-theme-colors
+);
+
 // List Group Notification
 
 $list-group-notification-item-border-bottom-color: $list-group-border-color !default;
