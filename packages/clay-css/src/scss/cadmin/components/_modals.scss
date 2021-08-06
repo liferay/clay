@@ -44,6 +44,8 @@
 
 .modal.show,
 &.modal.show {
+	display: block;
+
 	.modal-dialog {
 		transform: $cadmin-modal-show-transform;
 	}
@@ -315,13 +317,16 @@
 
 // Modal Close
 
-.modal .close {
-	&:first-child {
-		margin-left: -$cadmin-modal-close-spacer-x;
-	}
+&.modal,
+.modal {
+	.close {
+		&:first-child {
+			margin-left: -$cadmin-modal-close-spacer-x;
+		}
 
-	&:last-child {
-		margin-right: -$cadmin-modal-close-spacer-x;
+		&:last-child {
+			margin-right: -$cadmin-modal-close-spacer-x;
+		}
 	}
 }
 
@@ -349,6 +354,7 @@
 
 // Modal Full Screen
 
+&.modal-full-screen,
 .modal-full-screen {
 	bottom: $cadmin-modal-full-screen-spacer-y;
 	left: $cadmin-modal-full-screen-spacer-x;
@@ -412,30 +418,35 @@
 
 // Modal Height
 
+&.modal-height-sm,
 .modal-height-sm {
 	.modal-content {
 		height: $cadmin-modal-height-sm;
 	}
 }
 
+&.modal-height-md,
 .modal-height-md {
 	.modal-content {
 		height: $cadmin-modal-height-md;
 	}
 }
 
+&.modal-height-lg,
 .modal-height-lg {
 	.modal-content {
 		height: $cadmin-modal-height-lg;
 	}
 }
 
+&.modal-height-xl,
 .modal-height-xl {
 	.modal-content {
 		height: $cadmin-modal-height-xl;
 	}
 }
 
+&.modal-height-full,
 .modal-height-full {
 	.modal-dialog {
 		height: 100%;
@@ -489,6 +500,7 @@
 // Modal Variants
 
 @each $cadmin-color, $cadmin-value in $cadmin-modal-palette {
+	&.modal-#{$cadmin-color},
 	.modal-#{$cadmin-color} {
 		@include clay-modal-variant($cadmin-value);
 	}
