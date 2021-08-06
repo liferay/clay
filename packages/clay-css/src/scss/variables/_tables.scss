@@ -410,6 +410,79 @@ $table-valign-top-body-cell-padding-top: 1rem !default;
 
 $table-valign-bottom-body-cell-padding-bottom: 1rem !default;
 
+// Table Row Backgrounds
+
+$table-row-theme-colors: () !default;
+$table-row-theme-colors: map-deep-merge(
+	(
+		primary: (
+			background-color: theme-color-level(primary, $table-bg-level),
+			border-color: theme-color-level(primary, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(primary, $table-bg-level), 5%),
+			),
+		),
+		secondary: (
+			background-color: theme-color-level(secondary, $table-bg-level),
+			border-color: theme-color-level(secondary, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(secondary, $table-bg-level), 5%),
+			),
+		),
+		success: (
+			background-color: theme-color-level(success, $table-bg-level),
+			border-color: theme-color-level(success, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(success, $table-bg-level), 5%),
+			),
+		),
+		info: (
+			background-color: theme-color-level(info, $table-bg-level),
+			border-color: theme-color-level(info, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(info, $table-bg-level), 5%),
+			),
+		),
+		warning: (
+			background-color: theme-color-level(warning, $table-bg-level),
+			border-color: theme-color-level(warning, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(warning, $table-bg-level), 5%),
+			),
+		),
+		danger: (
+			background-color: theme-color-level(danger, $table-bg-level),
+			border-color: theme-color-level(danger, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(danger, $table-bg-level), 5%),
+			),
+		),
+		light: (
+			background-color: theme-color-level(light, $table-bg-level),
+			border-color: theme-color-level(light, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(light, $table-bg-level), 5%),
+			),
+		),
+		dark: (
+			background-color: theme-color-level(dark, $table-bg-level),
+			border-color: theme-color-level(dark, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(dark, $table-bg-level), 5%),
+			),
+		),
+	),
+	$table-row-theme-colors
+);
+
 // Table Draggable
 
 $table-drag: () !default;

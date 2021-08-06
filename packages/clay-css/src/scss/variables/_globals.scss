@@ -124,14 +124,14 @@ $dark-l2: lighten($dark, 32.94) !default;
 $theme-colors: () !default;
 $theme-colors: map-merge(
 	(
-		'primary': $primary,
-		'secondary': $secondary,
-		'success': $success,
-		'info': $info,
-		'warning': $warning,
-		'danger': $danger,
-		'light': $light,
-		'dark': $dark,
+		primary: $primary,
+		secondary: $secondary,
+		success: $success,
+		info: $info,
+		warning: $warning,
+		danger: $danger,
+		light: $light,
+		dark: $dark,
 	),
 	$theme-colors
 );
@@ -503,3 +503,213 @@ $input-btn-border-width: $border-width !default;
 
 $print-body-min-width: map-get($grid-breakpoints, 'lg') !default;
 $print-page-size: a3 !default;
+
+$bg-theme-colors: () !default;
+$bg-theme-colors: map-deep-merge(
+	(
+		primary: (
+			background-color: $primary !important,
+			hover: (
+				background-color: darken($primary, 10%) !important,
+			),
+		),
+		secondary: (
+			background-color: $secondary !important,
+			hover: (
+				background-color: darken($secondary, 10%) !important,
+			),
+		),
+		success: (
+			background-color: $success !important,
+			hover: (
+				background-color: darken($success, 10%) !important,
+			),
+		),
+		info: (
+			background-color: $info !important,
+			hover: (
+				background-color: darken($info, 10%) !important,
+			),
+		),
+		warning: (
+			background-color: $warning !important,
+			hover: (
+				background-color: darken($warning, 10%) !important,
+			),
+		),
+		danger: (
+			background-color: $danger !important,
+			hover: (
+				background-color: darken($danger, 10%) !important,
+			),
+		),
+		light: (
+			background-color: $light !important,
+			hover: (
+				background-color: darken($light, 10%) !important,
+			),
+		),
+		dark: (
+			background-color: $dark !important,
+			hover: (
+				background-color: darken($dark, 10%) !important,
+			),
+		),
+		white: (
+			background-color: $white !important,
+		),
+		transparent: (
+			background-color: transparent !important,
+		),
+	),
+	$bg-theme-colors
+);
+
+$bg-gradient-theme-colors: () !default;
+$bg-gradient-theme-colors: map-deep-merge(
+	(
+		primary: (
+			background: $primary
+				linear-gradient(180deg, mix($body-bg, $primary, 15%), $primary)
+				repeat-x !important,
+		),
+		secondary: (
+			background: $secondary
+				linear-gradient(
+					180deg,
+					mix($body-bg, $secondary, 15%),
+					$secondary
+				)
+				repeat-x !important,
+		),
+		success: (
+			background: $success
+				linear-gradient(180deg, mix($body-bg, $success, 15%), $success)
+				repeat-x !important,
+		),
+		info: (
+			background: $info
+				linear-gradient(180deg, mix($body-bg, $info, 15%), $info)
+				repeat-x !important,
+		),
+		warning: (
+			background: $warning
+				linear-gradient(180deg, mix($body-bg, $warning, 15%), $warning)
+				repeat-x !important,
+		),
+		danger: (
+			background: $danger
+				linear-gradient(180deg, mix($body-bg, $danger, 15%), $danger)
+				repeat-x !important,
+		),
+		light: (
+			background: $light
+				linear-gradient(180deg, mix($body-bg, $light, 15%), $light)
+				repeat-x !important,
+		),
+		dark: (
+			background: $dark
+				linear-gradient(180deg, mix($body-bg, $dark, 15%), $dark)
+				repeat-x !important,
+		),
+	),
+	$bg-gradient-theme-colors
+);
+
+$border-theme-colors: () !default;
+$border-theme-colors: map-deep-merge(
+	(
+		primary: (
+			border-color: $primary !important,
+		),
+		secondary: (
+			border-color: $secondary !important,
+		),
+		success: (
+			border-color: $success !important,
+		),
+		info: (
+			border-color: $info !important,
+		),
+		warning: (
+			border-color: $warning !important,
+		),
+		danger: (
+			border-color: $danger !important,
+		),
+		light: (
+			border-color: $light !important,
+		),
+		dark: (
+			border-color: $dark !important,
+		),
+	),
+	$border-theme-colors
+);
+
+$text-theme-colors: () !default;
+$text-theme-colors: map-deep-merge(
+	(
+		primary: (
+			color: $primary !important,
+			hover: (
+				color:
+					darken($primary, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		secondary: (
+			color: $secondary !important,
+			hover: (
+				color:
+					darken($secondary, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		success: (
+			color: $success !important,
+			hover: (
+				color:
+					darken($success, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		info: (
+			color: $info !important,
+			hover: (
+				color: darken($info, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		warning: (
+			color: $warning !important,
+			hover: (
+				color:
+					darken($warning, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		danger: (
+			color: $danger !important,
+			hover: (
+				color: darken($danger, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		light: (
+			color: $light !important,
+			hover: (
+				color: darken($light, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		dark: (
+			color: $dark !important,
+			hover: (
+				color: darken($dark, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+	),
+	$text-theme-colors
+);

@@ -226,12 +226,41 @@ caption {
 
 // Table Row Backgrounds
 
-@each $color, $value in $theme-colors {
-	@include table-row-variant(
-		$color,
-		theme-color-level($color, $table-bg-level),
-		theme-color-level($color, $table-border-level)
-	);
+@each $color, $value in $table-row-theme-colors {
+	.table-#{$color} {
+		&,
+		> th,
+		> td {
+			@include clay-css(setter($value, ()));
+		}
+
+		$border-color: setter(map-get($value, border-color), ());
+
+		th,
+		td,
+		thead th,
+		tbody + tbody {
+			border-color: $border-color;
+		}
+	}
+
+	// Hover states for `.table-hover`
+	// Note: this is not available for cells or rows within `thead` or `tfoot`.
+
+	.table-hover {
+		$hover: setter(map-get($value, hover), ());
+
+		.table-#{$color} {
+			&:hover {
+				@include clay-css($hover);
+
+				> td,
+				> th {
+					background-color: map-get($hover, background-color);
+				}
+			}
+		}
+	}
 }
 
 // Table Active

@@ -409,21 +409,26 @@
 
 // List Group Item Variants
 
-@each $color, $value in $theme-colors {
+@each $color, $value in $list-group-item-theme-colors {
 	.list-group-item-#{$color} {
-		background-color: theme-color-level($color, -9);
-		color: theme-color-level($color, 6);
+		@include clay-css(setter($value, ()));
 
 		&.list-group-item-action {
-			@include hover-focus() {
-				background-color: darken(theme-color-level($color, -9), 5%);
-				color: theme-color-level($color, 6);
+			$active: setter(map-get($value, active), ());
+			$hover: setter(map-get($value, hover), ());
+
+			$focus: setter(map-get($value, focus), $hover);
+
+			&:hover {
+				@include clay-css($hover);
+			}
+
+			&:focus {
+				@include clay-css($focus);
 			}
 
 			&.active {
-				background-color: theme-color-level($color, 6);
-				border-color: theme-color-level($color, 6);
-				color: $white;
+				@include clay-css($active);
 			}
 		}
 	}
