@@ -49,8 +49,7 @@ $form-group-sm-item-label-spacer: 1.5625rem !default; // 25px
 $input-color: $gray-900 !default;
 $input-bg: $gray-200 !default;
 $input-border-color: $gray-300 !default;
-// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
-$input-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-box-shadow: none !default;
 $input-placeholder-color: $gray-600 !default;
 $input-label-color: $gray-900 !default;
 

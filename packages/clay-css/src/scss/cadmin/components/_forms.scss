@@ -121,15 +121,7 @@ label {
 	&.focus {
 		background-color: $cadmin-input-focus-bg;
 		border-color: $cadmin-input-focus-border-color;
-
-		// Avoid using mixin so we can pass custom focus shadow properly
-
-		@if $cadmin-enable-shadows {
-			box-shadow: $cadmin-input-box-shadow, $cadmin-input-focus-box-shadow;
-		} @else {
-			box-shadow: $cadmin-input-focus-box-shadow;
-		}
-
+		box-shadow: $cadmin-input-focus-box-shadow;
 		color: $cadmin-input-focus-color;
 		outline: 0;
 
