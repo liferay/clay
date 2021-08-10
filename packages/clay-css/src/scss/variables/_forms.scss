@@ -596,10 +596,29 @@ $form-control-select: map-deep-merge(
 			(
 				appearance: null,
 				cursor: null,
+				overflow: hidden,
+				text-overflow: ellipsis,
+				white-space: nowrap,
+				hover: (
+					color: inherit,
+					text-decoration: none,
+				),
 			)
 		)
 	),
 	$form-control-select
+);
+
+$form-control-select-sm: () !default;
+$form-control-select-sm: map-deep-merge(
+	(
+		height: $input-height-sm,
+		padding-right: 2em,
+		mobile: (
+			height: $input-height-sm-mobile,
+		),
+	),
+	$form-control-select-sm
 );
 
 // Select Size

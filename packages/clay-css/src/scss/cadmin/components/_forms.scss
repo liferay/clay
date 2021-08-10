@@ -341,6 +341,18 @@ select.form-control {
 
 .form-control-select {
 	@include clay-css($cadmin-form-control-select);
+
+	&:hover {
+		$hover: setter(map-get($cadmin-form-control-select, hover), ());
+
+		@include clay-css($hover);
+	}
+
+	&:focus {
+		$focus: setter(map-get($cadmin-form-control-select, focus), ());
+
+		@include clay-css($focus);
+	}
 }
 
 select.form-control[size] {
@@ -604,11 +616,17 @@ textarea.form-control-lg,
 }
 
 %clay-select-form-control-sm {
-	height: $cadmin-input-height-sm;
+	@include clay-css(setter($cadmin-form-control-select-sm, ()));
 
 	@include clay-scale-component {
-		height: $cadmin-input-height-sm-mobile;
+		$mobile: setter(map-get($cadmin-form-control-select-sm, mobile), ());
+
+		@include clay-css($mobile);
 	}
+}
+
+.form-control-select.form-control-sm {
+	@extend %clay-select-form-control-sm !optional;
 }
 
 %clay-textarea-form-control-sm {
