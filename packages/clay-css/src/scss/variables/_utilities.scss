@@ -269,6 +269,9 @@ $border-theme-colors: map-deep-merge(
 		dark: (
 			border-color: $dark !important,
 		),
+		white: (
+			border-color: $white !important,
+		),
 	),
 	$border-theme-colors
 );
@@ -350,6 +353,18 @@ $text-theme-colors: map-deep-merge(
 				color: darken($dark, $emphasized-link-hover-darken-percentage)
 					!important,
 			),
+		),
+		body: (
+			color: $body-color !important,
+		),
+		muted: (
+			color: $text-muted !important,
+		),
+		black-50: (
+			color: rgba($black, 0.5) !important,
+		),
+		white-50: (
+			color: rgba($white, 0.5) !important,
 		),
 	),
 	$text-theme-colors
