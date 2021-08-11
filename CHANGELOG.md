@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.33.0](https://github.com/liferay/clay/compare/v3.32.1...v3.33.0) (2021-08-11)
+
+### Bug Fixes
+
+-   **@clayui/css:** Cadmin Modal .modal.show should have display: block ([5876b9f](https://github.com/liferay/clay/commit/5876b9f)), closes [#4203](https://github.com/liferay/clay/issues/4203)
+-   **@clayui/css:** Cadmin removes unused variables `$cadmin-body-moz-osx-font-smoothing`, `$cadmin-body-webkit-font-smoothing`, `$cadmin-body-text-align`. We don't provide a CSS reset in Cadmin. ([c3af64e](https://github.com/liferay/clay/commit/c3af64e))
+-   **@clayui/css:** Forms .form-control-select with long text shouldn't break to new line and should have overflow ellipsis, similar behavior to select.form-control ([44804d8](https://github.com/liferay/clay/commit/44804d8)), closes [#4206](https://github.com/liferay/clay/issues/4206)
+-   **@clayui/css:** Forms remove Bootstrap's confusing way of setting an inset box-shadow on an input. This causes flickering on .btn.form-control-select on click. If you want a regular box-shadow and an inset box-shadow on an input define them both inside the \$input-box-shadow variable. Example below: ([83d56d1](https://github.com/liferay/clay/commit/83d56d1)), closes [#4206](https://github.com/liferay/clay/issues/4206)
+-   **@clayui/css:** Functions adds `_type-conversion-functions.scss` for converting colors of type string to type color. Sass doesn't provide a way to do this https://github.com/sass/sass/issues/3006. ([68be792](https://github.com/liferay/clay/commit/68be792)), closes [#4180](https://github.com/liferay/clay/issues/4180)
+-   **@clayui/css:** Global Functions `clay-get-fallback` convert color string to type color ([68fd699](https://github.com/liferay/clay/commit/68fd699))
+-   **@clayui/css:** Removes the use of `$theme-colors` Sass map to generate utility properties (e.g., `bg-primary`, `text-primary`, `list-group-item-primary`, `table-primary`) and allow configuring separately. The new way also supports CSS variables. Adds new maps: ([78fb2d2](https://github.com/liferay/clay/commit/78fb2d2))
+
+### Features
+
+-   **@clayui/css:** Reboot `body` element should use clay-css mixin for generating properties ([c0b456e](https://github.com/liferay/clay/commit/c0b456e)), closes [#4194](https://github.com/liferay/clay/issues/4194)
+-   **@clayui/pagination:** Add the `alignmentPosition` API to PaginationWithBasicItems component ([24ca87c](https://github.com/liferay/clay/commit/24ca87c))
+-   **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557f))
+
 ## [3.32.1](https://github.com/liferay/clay/compare/v3.32.0...v3.32.1) (2021-07-30)
 
 ### Bug Fixes

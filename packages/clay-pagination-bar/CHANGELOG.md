@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.33.0](https://github.com/liferay/clay/compare/v3.32.1...v3.33.0) (2021-08-11)
+
+### Features
+
+-   **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557f))
+
 # [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
 
 ### Features
