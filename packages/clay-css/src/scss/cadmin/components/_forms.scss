@@ -121,15 +121,7 @@ label {
 	&.focus {
 		background-color: $cadmin-input-focus-bg;
 		border-color: $cadmin-input-focus-border-color;
-
-		// Avoid using mixin so we can pass custom focus shadow properly
-
-		@if $cadmin-enable-shadows {
-			box-shadow: $cadmin-input-box-shadow, $cadmin-input-focus-box-shadow;
-		} @else {
-			box-shadow: $cadmin-input-focus-box-shadow;
-		}
-
+		box-shadow: $cadmin-input-focus-box-shadow;
 		color: $cadmin-input-focus-color;
 		outline: 0;
 
@@ -341,6 +333,18 @@ select.form-control {
 
 .form-control-select {
 	@include clay-css($cadmin-form-control-select);
+
+	&:hover {
+		$hover: setter(map-get($cadmin-form-control-select, hover), ());
+
+		@include clay-css($hover);
+	}
+
+	&:focus {
+		$focus: setter(map-get($cadmin-form-control-select, focus), ());
+
+		@include clay-css($focus);
+	}
 }
 
 select.form-control[size] {
@@ -604,11 +608,17 @@ textarea.form-control-lg,
 }
 
 %clay-select-form-control-sm {
-	height: $cadmin-input-height-sm;
+	@include clay-css(setter($cadmin-form-control-select-sm, ()));
 
 	@include clay-scale-component {
-		height: $cadmin-input-height-sm-mobile;
+		$mobile: setter(map-get($cadmin-form-control-select-sm, mobile), ());
+
+		@include clay-css($mobile);
 	}
+}
+
+.form-control-select.form-control-sm {
+	@extend %clay-select-form-control-sm !optional;
 }
 
 %clay-textarea-form-control-sm {
