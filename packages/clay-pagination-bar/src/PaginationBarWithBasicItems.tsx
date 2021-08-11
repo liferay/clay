@@ -52,6 +52,14 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	activePage?: number;
 
 	/**
+	 * Sets the default DropDown position of the component. The component
+	 * receives the Align constant values from the `@clayui/drop-down` package.
+	 */
+	alignmentPosition?: React.ComponentProps<
+		typeof ClayPaginationWithBasicItems
+	>['alignmentPosition'];
+
+	/**
 	 * Possible values of items per page.
 	 */
 	deltas?: Array<IDelta>;
@@ -121,6 +129,7 @@ const DEFAULT_LABELS = {
 export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = ({
 	activeDelta,
 	activePage = 1,
+	alignmentPosition,
 	deltas = defaultDeltas,
 	disabledPages,
 	ellipsisBuffer,
@@ -170,6 +179,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 		<PaginationBar {...otherProps}>
 			{showDeltasDropDown && (
 				<PaginationBar.DropDown
+					alignmentPosition={alignmentPosition}
 					items={items}
 					trigger={
 						<ClayButton
@@ -199,6 +209,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 
 			<ClayPaginationWithBasicItems
 				activePage={activePage}
+				alignmentPosition={alignmentPosition}
 				disabledPages={disabledPages}
 				ellipsisBuffer={ellipsisBuffer}
 				hrefConstructor={hrefConstructor}

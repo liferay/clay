@@ -91,4 +91,14 @@ storiesOf('Components|ClayPagination', module)
 				totalPages={totalPages}
 			/>
 		);
+	})
+	.add('ClayPaginationWithBasicItems w/ alignment DropDown position', () => {
+		const totalPages = number('Number of pages', 5);
+
+		return (
+			<PaginationWithState
+				alignmentPosition={4}
+				totalPages={totalPages}
+			/>
+		);
 	});

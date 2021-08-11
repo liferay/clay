@@ -7,6 +7,7 @@ import ClayIcon from '@clayui/icon';
 import {getEllipsisItems} from '@clayui/shared';
 import React from 'react';
 
+import type {IPaginationEllipsisProps} from './Ellipsis';
 import Pagination from './Pagination';
 
 const ELLIPSIS_BUFFER = 2;
@@ -16,6 +17,12 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	 * The page that is currently active. The first page is `1`.
 	 */
 	activePage: number;
+
+	/**
+	 * Sets the default DropDown position of the component. The component
+	 * receives the Align constant values from the `@clayui/drop-down` package.
+	 */
+	alignmentPosition?: IPaginationEllipsisProps['alignmentPosition'];
 
 	/**
 	 * Labels for the aria attributes
@@ -62,6 +69,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 	(
 		{
 			activePage,
+			alignmentPosition,
 			ariaLabels = {
 				next: 'Next',
 				previous: 'Previous',
@@ -103,6 +111,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 							{
 								EllipsisComponent: Pagination.Ellipsis,
 								ellipsisProps: {
+									alignmentPosition,
 									disabledPages,
 									hrefConstructor,
 									onPageChange,

@@ -8,13 +8,17 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 import React from 'react';
 
 export interface IPaginationEllipsisProps {
-	items?: Array<number>;
+	alignmentPosition?: React.ComponentProps<
+		typeof ClayDropDownWithItems
+	>['alignmentPosition'];
 	disabledPages?: Array<number>;
 	hrefConstructor?: (page?: number) => string;
+	items?: Array<number>;
 	onPageChange?: (page?: number) => void;
 }
 
 const ClayPaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> = ({
+	alignmentPosition,
 	disabledPages = [],
 	hrefConstructor,
 	items = [],
@@ -29,6 +33,7 @@ const ClayPaginationEllipsis: React.FunctionComponent<IPaginationEllipsisProps> 
 
 	return (
 		<ClayDropDownWithItems
+			alignmentPosition={alignmentPosition}
 			className="page-item"
 			containerElement="li"
 			items={pages}
