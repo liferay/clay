@@ -96,10 +96,6 @@
 	}
 }
 
-.border-white {
-	border-color: $white !important;
-}
-
 // Border-radius
 
 .rounded-sm {
@@ -715,7 +711,7 @@
 }
 
 @each $color, $value in $text-theme-colors {
-	$hover: setter(map-get($value, hover));
+	$hover: setter(map-get($value, hover), ());
 
 	.text-#{$color} {
 		@include clay-css(setter($value, ()));
@@ -727,22 +723,6 @@
 			@include clay-css($hover);
 		}
 	}
-}
-
-.text-body {
-	color: $body-color !important;
-}
-
-.text-muted {
-	color: $text-muted !important;
-}
-
-.text-black-50 {
-	color: rgba($black, 0.5) !important;
-}
-
-.text-white-50 {
-	color: rgba($white, 0.5) !important;
 }
 
 // Misc
