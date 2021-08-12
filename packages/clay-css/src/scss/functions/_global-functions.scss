@@ -171,7 +171,7 @@
 		} @else {
 			@return linear-gradient(
 				180deg,
-				mix($body-bg, $gradient, 15%),
+				mix(clay-get-fallback($body-bg), $gradient, 15%),
 				$gradient
 			);
 		}
