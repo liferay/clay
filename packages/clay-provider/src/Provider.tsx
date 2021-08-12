@@ -33,11 +33,14 @@ Context.displayName = 'ClayProviderContext';
 export const Provider = ({
 	children,
 	spritemap,
+	theme,
 	...otherProps
 }: IProviderProps) => (
-	<Context.Provider value={otherProps}>
+	<Context.Provider value={{theme, ...otherProps}}>
 		<ClayIconSpriteContext.Provider value={spritemap}>
-			<ClayModalProvider>{children}</ClayModalProvider>
+			<ClayModalProvider>
+				{theme ? <div className={theme}>{children}</div> : children}
+			</ClayModalProvider>
 		</ClayIconSpriteContext.Provider>
 	</Context.Provider>
 );
