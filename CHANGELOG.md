@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.33.1](https://github.com/liferay/clay/compare/v3.33.0...v3.33.1) (2021-08-12)
+
+### Bug Fixes
+
+-   **@clayui/css:** Globals move `$bg-theme-colors`, `$bg-gradient-theme-colors`, `$border-theme-colors`, `$text-theme-colors` maps to where they are used in Utilities ([07f4c9d](https://github.com/liferay/clay/commit/07f4c9d)), closes [#4214](https://github.com/liferay/clay/issues/4214)
+-   **@clayui/css:** Use fallback value for `$body-bg` when using variable inside a Sass color function. Sass color functions do not accept CSS custom property as a value. ([ae0dff6](https://github.com/liferay/clay/commit/ae0dff6))
+-   **@clayui/css:** Utilities Functional Important generate `.border-white` with `$border-theme-colors` map ([40131be](https://github.com/liferay/clay/commit/40131be)), closes [#4214](https://github.com/liferay/clay/issues/4214)
+
 # [3.33.0](https://github.com/liferay/clay/compare/v3.32.1...v3.33.0) (2021-08-11)
 
 ### Bug Fixes
