@@ -216,17 +216,19 @@
 	}
 }
 
-// Bootstrap 4 Nav Pills
+@if ($enable-bs4-deprecated) {
+	// Bootstrap 4 Nav Pills
 
-.nav-pills {
-	.nav-link {
-		@include border-radius($nav-pills-border-radius);
-	}
+	.nav-pills {
+		.nav-link {
+			@include border-radius($nav-pills-border-radius);
+		}
 
-	.nav-link.active,
-	.show > .nav-link {
-		background-color: $nav-pills-link-active-bg;
-		color: $nav-pills-link-active-color;
+		.nav-link.active,
+		.show > .nav-link {
+			background-color: $nav-pills-link-active-bg;
+			color: $nav-pills-link-active-color;
+		}
 	}
 }
 
