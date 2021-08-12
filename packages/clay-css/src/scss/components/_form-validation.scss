@@ -1,26 +1,28 @@
-// HTML 5 Form Validator
+@if ($enable-bs4-deprecated) {
+	// HTML 5 Form Validator
 
-// Form validation
-//
-// Provide feedback to users when form field values are valid or invalid. Works
-// primarily for client-side validation via scoped `:invalid` and `:valid`
-// pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
-// server side validation.
+	// Form validation
+	//
+	// Provide feedback to users when form field values are valid or invalid. Works
+	// primarily for client-side validation via scoped `:invalid` and `:valid`
+	// pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
+	// server side validation.
 
-@each $state, $data in $form-validation-states {
-	@include form-validation-state(
-		$state,
-		map-get($data, color),
-		map-get($data, icon)
-	);
+	@each $state, $data in $form-validation-states {
+		@include form-validation-state(
+			$state,
+			map-get($data, color),
+			map-get($data, icon)
+		);
+	}
+
+	.invalid-feedback,
+	.valid-feedback {
+		font-weight: $form-feedback-font-weight;
+	}
 }
 
 // Form Feedback
-
-.invalid-feedback,
-.valid-feedback {
-	font-weight: $form-feedback-font-weight;
-}
 
 .form-feedback-group {
 	width: 100%;
@@ -52,33 +54,35 @@
 	word-wrap: break-word;
 }
 
-.was-validated .form-control:valid,
-.was-validated .form-control.is-valid {
-	background-color: $input-success-bg;
-	border-color: $input-success-border-color;
-	box-shadow: $input-success-box-shadow;
-	color: $input-success-color;
+@if ($enable-bs4-deprecated) {
+	.was-validated .form-control:valid,
+	.was-validated .form-control.is-valid {
+		background-color: $input-success-bg;
+		border-color: $input-success-border-color;
+		box-shadow: $input-success-box-shadow;
+		color: $input-success-color;
 
-	&:focus {
-		background-color: $input-success-focus-bg;
-		border-color: $input-success-focus-border-color;
-		box-shadow: $input-success-focus-box-shadow;
-		color: $input-success-focus-color;
+		&:focus {
+			background-color: $input-success-focus-bg;
+			border-color: $input-success-focus-border-color;
+			box-shadow: $input-success-focus-box-shadow;
+			color: $input-success-focus-color;
+		}
 	}
-}
 
-.was-validated .form-control:invalid,
-.was-validated .form-control.is-invalid {
-	background-color: $input-danger-bg;
-	border-color: $input-danger-border-color;
-	box-shadow: $input-danger-box-shadow;
-	color: $input-danger-color;
+	.was-validated .form-control:invalid,
+	.was-validated .form-control.is-invalid {
+		background-color: $input-danger-bg;
+		border-color: $input-danger-border-color;
+		box-shadow: $input-danger-box-shadow;
+		color: $input-danger-color;
 
-	&:focus {
-		background-color: $input-danger-focus-bg;
-		border-color: $input-danger-focus-border-color;
-		box-shadow: $input-danger-focus-box-shadow;
-		color: $input-danger-focus-color;
+		&:focus {
+			background-color: $input-danger-focus-bg;
+			border-color: $input-danger-focus-border-color;
+			box-shadow: $input-danger-focus-box-shadow;
+			color: $input-danger-focus-color;
+		}
 	}
 }
 
