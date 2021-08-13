@@ -131,58 +131,58 @@ $page-header-bg: $gray-200 !default;
 $bg-theme-colors: () !default;
 $bg-theme-colors: map-deep-merge(
 	(
-		primary: (
+		'primary': (
 			background-color: $primary !important,
 			hover: (
 				background-color: darken($primary, 10%) !important,
 			),
 		),
-		secondary: (
+		'secondary': (
 			background-color: $secondary !important,
 			hover: (
 				background-color: darken($secondary, 10%) !important,
 			),
 		),
-		success: (
+		'success': (
 			background-color: $success !important,
 			hover: (
 				background-color: darken($success, 10%) !important,
 			),
 		),
-		info: (
+		'info': (
 			background-color: $info !important,
 			hover: (
 				background-color: darken($info, 10%) !important,
 			),
 		),
-		warning: (
+		'warning': (
 			background-color: $warning !important,
 			hover: (
 				background-color: darken($warning, 10%) !important,
 			),
 		),
-		danger: (
+		'danger': (
 			background-color: $danger !important,
 			hover: (
 				background-color: darken($danger, 10%) !important,
 			),
 		),
-		light: (
+		'light': (
 			background-color: $light !important,
 			hover: (
 				background-color: darken($light, 10%) !important,
 			),
 		),
-		dark: (
+		'dark': (
 			background-color: $dark !important,
 			hover: (
 				background-color: darken($dark, 10%) !important,
 			),
 		),
-		white: (
+		'white': (
 			background-color: $white !important,
 		),
-		transparent: (
+		'transparent': (
 			background-color: transparent !important,
 		),
 	),
@@ -192,7 +192,7 @@ $bg-theme-colors: map-deep-merge(
 $bg-gradient-theme-colors: () !default;
 $bg-gradient-theme-colors: map-deep-merge(
 	(
-		primary: (
+		'primary': (
 			background: $primary
 				linear-gradient(
 					180deg,
@@ -201,7 +201,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
-		secondary: (
+		'secondary': (
 			background: $secondary
 				linear-gradient(
 					180deg,
@@ -210,7 +210,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
-		success: (
+		'success': (
 			background: $success
 				linear-gradient(
 					180deg,
@@ -219,7 +219,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
-		info: (
+		'info': (
 			background: $info
 				linear-gradient(
 					180deg,
@@ -228,7 +228,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
-		warning: (
+		'warning': (
 			background: $warning
 				linear-gradient(
 					180deg,
@@ -237,7 +237,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
-		danger: (
+		'danger': (
 			background: $danger
 				linear-gradient(
 					180deg,
@@ -246,7 +246,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
-		light: (
+		'light': (
 			background: $light
 				linear-gradient(
 					180deg,
@@ -255,7 +255,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 				)
 				repeat-x !important,
 		),
-		dark: (
+		'dark': (
 			background: $dark
 				linear-gradient(
 					180deg,
@@ -273,31 +273,31 @@ $bg-gradient-theme-colors: map-deep-merge(
 $border-theme-colors: () !default;
 $border-theme-colors: map-deep-merge(
 	(
-		primary: (
+		'primary': (
 			border-color: $primary !important,
 		),
-		secondary: (
+		'secondary': (
 			border-color: $secondary !important,
 		),
-		success: (
+		'success': (
 			border-color: $success !important,
 		),
-		info: (
+		'info': (
 			border-color: $info !important,
 		),
-		warning: (
+		'warning': (
 			border-color: $warning !important,
 		),
-		danger: (
+		'danger': (
 			border-color: $danger !important,
 		),
-		light: (
+		'light': (
 			border-color: $light !important,
 		),
-		dark: (
+		'dark': (
 			border-color: $dark !important,
 		),
-		white: (
+		'white': (
 			border-color: $white !important,
 		),
 	),
@@ -322,7 +322,7 @@ $positions: static, relative, absolute, fixed, sticky !default;
 $text-theme-colors: () !default;
 $text-theme-colors: map-deep-merge(
 	(
-		primary: (
+		'primary': (
 			color: $primary !important,
 			hover: (
 				color:
@@ -330,7 +330,7 @@ $text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
-		secondary: (
+		'secondary': (
 			color: $secondary !important,
 			hover: (
 				color:
@@ -338,7 +338,7 @@ $text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
-		success: (
+		'success': (
 			color: $success !important,
 			hover: (
 				color:
@@ -346,14 +346,14 @@ $text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
-		info: (
+		'info': (
 			color: $info !important,
 			hover: (
 				color: darken($info, $emphasized-link-hover-darken-percentage)
 					!important,
 			),
 		),
-		warning: (
+		'warning': (
 			color: $warning !important,
 			hover: (
 				color:
@@ -361,37 +361,37 @@ $text-theme-colors: map-deep-merge(
 					!important,
 			),
 		),
-		danger: (
+		'danger': (
 			color: $danger !important,
 			hover: (
 				color: darken($danger, $emphasized-link-hover-darken-percentage)
 					!important,
 			),
 		),
-		light: (
+		'light': (
 			color: $light !important,
 			hover: (
 				color: darken($light, $emphasized-link-hover-darken-percentage)
 					!important,
 			),
 		),
-		dark: (
+		'dark': (
 			color: $dark !important,
 			hover: (
 				color: darken($dark, $emphasized-link-hover-darken-percentage)
 					!important,
 			),
 		),
-		body: (
+		'body': (
 			color: $body-color !important,
 		),
-		muted: (
+		'muted': (
 			color: $text-muted !important,
 		),
-		black-50: (
+		'black-50': (
 			color: rgba($black, 0.5) !important,
 		),
-		white-50: (
+		'white-50': (
 			color: rgba($white, 0.5) !important,
 		),
 	),

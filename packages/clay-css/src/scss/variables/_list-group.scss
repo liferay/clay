@@ -167,7 +167,7 @@ $list-group-link-active-color: $white !default;
 $list-group-item-theme-colors: () !default;
 $list-group-item-theme-colors: map-deep-merge(
 	(
-		primary: (
+		'primary': (
 			background-color: theme-color-level(primary, -9),
 			color: theme-color-level(primary, 6),
 			hover: (
@@ -180,7 +180,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				color: $white,
 			),
 		),
-		secondary: (
+		'secondary': (
 			background-color: theme-color-level(secondary, -9),
 			color: theme-color-level(secondary, 6),
 			hover: (
@@ -193,7 +193,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				color: $white,
 			),
 		),
-		success: (
+		'success': (
 			background-color: theme-color-level(success, -9),
 			color: theme-color-level(success, 6),
 			hover: (
@@ -206,7 +206,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				color: $white,
 			),
 		),
-		info: (
+		'info': (
 			background-color: theme-color-level(info, -9),
 			color: theme-color-level(info, 6),
 			hover: (
@@ -219,7 +219,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				color: $white,
 			),
 		),
-		warning: (
+		'warning': (
 			background-color: theme-color-level(warning, -9),
 			color: theme-color-level(warning, 6),
 			hover: (
@@ -232,7 +232,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				color: $white,
 			),
 		),
-		danger: (
+		'danger': (
 			background-color: theme-color-level(danger, -9),
 			color: theme-color-level(danger, 6),
 			hover: (
@@ -245,7 +245,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				color: $white,
 			),
 		),
-		light: (
+		'light': (
 			background-color: theme-color-level(light, -9),
 			color: theme-color-level(light, 6),
 			hover: (
@@ -258,7 +258,7 @@ $list-group-item-theme-colors: map-deep-merge(
 				color: $white,
 			),
 		),
-		dark: (
+		'dark': (
 			background-color: theme-color-level(dark, -9),
 			color: theme-color-level(dark, 6),
 			hover: (
