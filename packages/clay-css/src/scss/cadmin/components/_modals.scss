@@ -158,7 +158,8 @@
 	width: 100%;
 }
 
-.modal-header {
+.modal-header,
+&.modal-header {
 	align-items: center;
 	background-color: $cadmin-modal-header-bg;
 	border-color: $cadmin-modal-header-border-color;
@@ -181,7 +182,8 @@
 	}
 }
 
-.modal-body {
+.modal-body,
+&.modal-body {
 	@include clay-css($cadmin-modal-body);
 
 	&.inline-scroller {
@@ -194,11 +196,13 @@
 	}
 }
 
-.modal-body-flush {
+.modal-body-flush,
+&.modal-body-flush {
 	padding: 0;
 }
 
-.modal-footer {
+.modal-footer,
+&.modal-footer {
 	align-items: center;
 	background-color: $cadmin-modal-footer-bg;
 	border-top: $cadmin-modal-footer-border-width solid
@@ -269,7 +273,8 @@
 	margin-left: auto;
 }
 
-.modal-footer {
+.modal-footer,
+&.modal-footer {
 	> .modal-item-last {
 		margin-left: auto;
 	}
@@ -340,7 +345,8 @@
 
 // Modal Iframe
 
-.modal-body-iframe {
+.modal-body-iframe,
+&.modal-body-iframe {
 	height: 160px;
 	padding: 0;
 
