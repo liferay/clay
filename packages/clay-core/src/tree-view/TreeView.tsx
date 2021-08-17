@@ -9,7 +9,8 @@ import React from 'react';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
 import {TreeViewContext} from './context';
-import type {IExpandable, IMultipleSelection} from './useTree';
+import {ItemContextProvider} from './useItem';
+import {IExpandable, IMultipleSelection, useTree} from './useTree';
 
 type ChildrenFunction<T> = (item: T) => React.ReactElement;
 
@@ -20,6 +21,7 @@ interface ITreeViewProps<T>
 	children: React.ReactNode | ChildrenFunction<T>;
 	displayType?: 'light' | 'dark';
 	items?: Array<T>;
+	nestedKey?: string;
 	showExpanderOnHover?: boolean;
 }
 
@@ -31,14 +33,32 @@ export function TreeView<T>(
 	ItemStack: typeof TreeViewItemStack;
 };
 
-export function TreeView<T>({
+export function TreeView<T extends Record<any, any>>({
 	children,
 	className,
 	displayType = 'light',
+	expandedKeys,
 	items,
+	nestedKey,
+	onExpandedChange,
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
+	const state = useTree({
+		expandedKeys,
+		onExpandedChange,
+	});
+
+	const context = {
+		childrenRoot:
+			typeof children === 'function'
+				? (children as ChildrenFunction<Object>)
+				: undefined,
+		nestedKey,
+		showExpanderOnHover,
+		...state,
+	};
+
 	return (
 		<ul
 			{...otherProps}
@@ -48,18 +68,16 @@ export function TreeView<T>({
 			})}
 			role="tree"
 		>
-			<TreeViewContext.Provider value={{showExpanderOnHover}}>
-				{items
-					? items.map((item, index) => {
-							if (typeof children === 'function') {
-								return React.cloneElement(
-									children(item) as React.ReactElement,
-									{key: index}
-								);
-							}
-
-							return null;
-					  })
+			<TreeViewContext.Provider value={context}>
+				{typeof children === 'function' && items
+					? items.map((item, index) => (
+							<ItemContextProvider
+								key={item.id ?? index}
+								value={item}
+							>
+								{children(item)}
+							</ItemContextProvider>
+					  ))
 					: children}
 			</TreeViewContext.Provider>
 		</ul>

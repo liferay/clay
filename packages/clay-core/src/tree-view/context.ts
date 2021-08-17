@@ -6,7 +6,11 @@
 import React, {useContext} from 'react';
 
 export interface ITreeViewContext {
+	childrenRoot?: (item: Object) => React.ReactElement;
+	expandedKeys?: Set<string>;
+	nestedKey?: string;
 	showExpanderOnHover?: boolean;
+	toggle?: (key: string) => void;
 }
 
 export const TreeViewContext = React.createContext<ITreeViewContext>({});

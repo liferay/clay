@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useInternalState} from '@clayui/shared';
+
 export interface IExpandable {
 	/**
 	 * The currently expanded keys in the collection.
@@ -25,4 +27,31 @@ export interface IMultipleSelection {
 	 * Handler that is called when the selection changes.
 	 */
 	onSelectionChange?: (keys: Set<string>) => void;
+}
+
+interface ITreeProps extends IExpandable, IMultipleSelection {}
+
+export function useTree(props: ITreeProps) {
+	const [expandedKeys, setExpandedKeys] = useInternalState<Set<string>>({
+		initialValue: new Set(),
+		onChange: props.onExpandedChange,
+		value: props.expandedKeys,
+	});
+
+	const toggle = (key: string) => {
+		const expanded = new Set(expandedKeys);
+
+		if (expanded.has(key)) {
+			expanded.delete(key);
+		} else {
+			expanded.add(key);
+		}
+
+		setExpandedKeys(expanded);
+	};
+
+	return {
+		expandedKeys,
+		toggle,
+	};
 }

@@ -15,6 +15,13 @@ import React from 'react';
 
 import {TreeView} from '../src/tree-view';
 
+interface IItem {
+	children?: Array<IItem>;
+	name: string;
+	status?: string;
+	type?: string;
+}
+
 storiesOf('Components|ClayTreeView', module)
 	.add('light', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
@@ -86,6 +93,135 @@ storiesOf('Components|ClayTreeView', module)
 			</TreeView>
 		</Provider>
 	))
+	.add('nested', () => {
+		const TYPES_TO_SYMBOLS = {
+			document: 'document-text',
+			pdf: 'document-pdf',
+			success: 'check-circle-full',
+			warning: 'warning-full',
+		} as Record<string, string>;
+
+		const TYPES_TO_COLORS = {
+			document: 'text-primary',
+			pdf: 'text-danger',
+			success: 'text-success',
+			warning: 'text-warning',
+		} as Record<string, string>;
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={[
+						{
+							children: [
+								{
+									children: [
+										{
+											children: [{name: 'Research 1'}],
+											name: 'Research',
+										},
+										{
+											children: [{name: 'News 1'}],
+											name: 'News',
+										},
+									],
+									name: 'Blogs',
+								},
+								{
+									children: [
+										{
+											children: [
+												{
+													name: 'Instructions.pdf',
+													status: 'success',
+													type: 'pdf',
+												},
+											],
+											name: 'PDF',
+										},
+										{
+											children: [
+												{
+													name:
+														'Treeview review.docx',
+													status: 'success',
+													type: 'document',
+												},
+												{
+													name:
+														'Heuristics Evaluation.docx',
+													status: 'success',
+													type: 'document',
+												},
+											],
+											name: 'Word',
+										},
+									],
+									name: 'Documents and Media',
+								},
+							],
+							name: 'Liferay Drive',
+							type: 'cloud',
+						},
+						{
+							children: [
+								{name: 'Blogs'},
+								{name: 'Documents and Media'},
+							],
+							name: 'Repositories',
+							type: 'repository',
+						},
+						{
+							children: [{name: 'PDF'}, {name: 'Word'}],
+							name: 'Documents and Media',
+							status: 'warning',
+						},
+					]}
+					nestedKey="children"
+				>
+					{(item: IItem) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<Icon symbol={item.type ?? 'folder'} />
+								{item.name}
+								{item.status && (
+									<Icon
+										className={TYPES_TO_COLORS[item.status]}
+										symbol={TYPES_TO_SYMBOLS[item.status]}
+									/>
+								)}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{({name, status, type}: IItem) => (
+									<TreeView.Item>
+										{type && (
+											<Icon
+												className={
+													TYPES_TO_COLORS[type]
+												}
+												symbol={TYPES_TO_SYMBOLS[type]}
+											/>
+										)}
+										{name}
+										{status && (
+											<Icon
+												className={
+													TYPES_TO_COLORS[status]
+												}
+												symbol={
+													TYPES_TO_SYMBOLS[status]
+												}
+											/>
+										)}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
 	.add('sticker', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView showExpanderOnHover={false}>

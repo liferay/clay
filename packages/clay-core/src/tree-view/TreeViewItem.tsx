@@ -6,7 +6,11 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import classNames from 'classnames';
 import React, {useContext} from 'react';
+
+import {useTreeViewContext} from './context';
+import {useItem} from './useItem';
 
 type TreeViewItemProps = {
 	children: React.ReactNode;
@@ -16,6 +20,14 @@ const SpacingContext = React.createContext(0);
 
 export function TreeViewItem({children}: TreeViewItemProps) {
 	const spacing = useContext(SpacingContext);
+	const {
+		childrenRoot,
+		expandedKeys,
+		nestedKey,
+		toggle,
+	} = useTreeViewContext();
+
+	const item = useItem();
 
 	const [left, right] = React.Children.toArray(children);
 
@@ -23,13 +35,19 @@ export function TreeViewItem({children}: TreeViewItemProps) {
 		// @ts-ignore
 		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
+	if (!group && nestedKey && item[nestedKey] && childrenRoot) {
+		return childrenRoot(item);
+	}
+
 	return (
 		<SpacingContext.Provider value={spacing + 24}>
 			<li className="treeview-item" role="none">
 				<div
-					aria-expanded="true"
-					className="treeview-link"
-					data-toggle="collapse"
+					aria-expanded={expandedKeys!.has(item.id)}
+					className={classNames('treeview-link', {
+						collapsed: !expandedKeys!.has(item.id),
+					})}
+					onClick={() => toggle!(item.id)}
 					role="treeitem"
 					style={{paddingLeft: `${spacing}px`}}
 					tabIndex={0}
@@ -69,6 +87,10 @@ export function TreeViewItemStack({
 	children,
 	expandable = true,
 }: TreeViewItemStackProps) {
+	const {expandedKeys, toggle} = useTreeViewContext();
+
+	const item = useItem();
+
 	const childrenArray = React.Children.toArray(children);
 
 	return (
@@ -76,11 +98,14 @@ export function TreeViewItemStack({
 			{expandable && (
 				<Layout.ContentCol>
 					<Button
-						aria-expanded="true"
-						className="component-expander"
-						data-toggle="collapse"
+						aria-controls={item.id}
+						aria-expanded={expandedKeys!.has(item.id)}
+						className={classNames('component-expander', {
+							collapsed: !expandedKeys!.has(item.id),
+						})}
 						displayType={null}
 						monospaced
+						onClick={() => toggle!(item.id)}
 					>
 						<span className="c-inner" tabIndex={-2}>
 							<Icon symbol="angle-down" />
