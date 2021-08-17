@@ -25,9 +25,11 @@ export interface IBodyProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 	children,
+	className,
 	iFrameProps = {},
 	scrollable,
 	url,
+	...otherProps
 }: IBodyProps) => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
 
@@ -55,12 +57,13 @@ const ClayModalBody: React.FunctionComponent<IBodyProps> = ({
 
 	return (
 		<div
-			className={classNames('modal-body', {
+			className={classNames('modal-body', className, {
 				'inline-scroller': scrollable,
 				'modal-body-iframe': url,
 			})}
 			ref={elementRef}
 			tabIndex={scrollable ? -1 : undefined}
+			{...otherProps}
 		>
 			{url ? <iframe {...iFrameProps} src={url} title={url} /> : children}
 		</div>
