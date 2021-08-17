@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classNames from 'classnames';
 import React from 'react';
 
-export interface IFooterProps {
+export interface IFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Sets the elements that are positioned `first following
 	 * the LTR direction on the footer.
@@ -26,15 +27,19 @@ export interface IFooterProps {
 }
 
 const ClayModalFooter: React.FunctionComponent<IFooterProps> = ({
+	className,
 	first,
 	last,
 	middle,
-}: IFooterProps) => (
-	<div className="modal-footer">
-		<div className="modal-item-first">{first}</div>
-		<div className="modal-item">{middle}</div>
-		<div className="modal-item-last">{last}</div>
-	</div>
-);
+	...otherProps
+}: IFooterProps) => {
+	return (
+		<div className={classNames('modal-footer', className)} {...otherProps}>
+			<div className="modal-item-first">{first}</div>
+			<div className="modal-item">{middle}</div>
+			<div className="modal-item-last">{last}</div>
+		</div>
+	);
+};
 
 export default ClayModalFooter;
