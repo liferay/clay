@@ -6,21 +6,18 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
 import {TreeViewContext} from './context';
-import {ItemContextProvider} from './useItem';
 import {IExpandable, IMultipleSelection, useTree} from './useTree';
 
-type ChildrenFunction<T> = (item: T) => React.ReactElement;
-
 interface ITreeViewProps<T>
-	extends React.HTMLAttributes<HTMLUListElement>,
+	extends Omit<React.HTMLAttributes<HTMLUListElement>, 'children'>,
 		IMultipleSelection,
-		IExpandable {
-	children: React.ReactNode | ChildrenFunction<T>;
+		IExpandable,
+		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
-	items?: Array<T>;
 	nestedKey?: string;
 	showExpanderOnHover?: boolean;
 }
@@ -33,7 +30,7 @@ export function TreeView<T>(
 	ItemStack: typeof TreeViewItemStack;
 };
 
-export function TreeView<T extends Record<any, any>>({
+export function TreeView<T>({
 	children,
 	className,
 	displayType = 'light',
@@ -69,21 +66,12 @@ export function TreeView<T extends Record<any, any>>({
 			role="tree"
 		>
 			<TreeViewContext.Provider value={context}>
-				{typeof children === 'function' && items
-					? items.map((item, index) => (
-							<ItemContextProvider
-								key={item.id ?? index}
-								value={item}
-							>
-								{children(item)}
-							</ItemContextProvider>
-					  ))
-					: children}
+				<Collection<T> items={items}>{children}</Collection>
 			</TreeViewContext.Provider>
 		</ul>
 	);
 }
 
-TreeView.Item = TreeViewItem;
 TreeView.Group = TreeViewGroup;
+TreeView.Item = TreeViewItem;
 TreeView.ItemStack = TreeViewItemStack;

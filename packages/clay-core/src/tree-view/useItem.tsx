@@ -14,25 +14,16 @@ type Props = {
 
 const ItemContext = React.createContext<Value>({});
 
-// From https://gist.github.com/gordonbrander/2230317
-function getUUID() {
-	const array = window.crypto.getRandomValues(new Uint32Array(8));
-
-	let output = '';
-
-	for (let i = 0; i < array.length; i++) {
-		output += (i < 2 || i > 5 ? '' : '-') + array[i].toString(16).slice(-4);
-	}
-
-	return output;
+function getKey(key: React.Key) {
+	return `${key}`.replace('.$', '');
 }
 
-export function ItemContextProvider({children, value}: Props) {
-	const idRef = useRef(value.id ?? getUUID());
+export function ItemContextProvider({children, value = {}}: Props) {
+	const keyRef = useRef(getKey(value.key));
 
 	const props = {
 		...value,
-		id: idRef.current,
+		key: keyRef.current,
 	};
 
 	return (

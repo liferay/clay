@@ -7,18 +7,12 @@ import {setElementFullHeight} from '@clayui/shared';
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
 
+import {Collection, ICollectionProps} from './Collection';
 import {useTreeViewContext} from './context';
-import {ItemContextProvider, useItem} from './useItem';
-
-type ChildrenFunction<T> = (item: T) => React.ReactElement;
-
-type TreeViewItemProps<T> = {
-	children: React.ReactNode | ChildrenFunction<T>;
-	items?: Array<T>;
-};
+import {useItem} from './useItem';
 
 export function TreeViewGroup<T>(
-	props: TreeViewItemProps<T>
+	props: ICollectionProps<T>
 ): JSX.Element & {
 	displayName: string;
 };
@@ -26,7 +20,7 @@ export function TreeViewGroup<T>(
 export function TreeViewGroup<T extends Record<any, any>>({
 	children,
 	items,
-}: TreeViewItemProps<T>) {
+}: ICollectionProps<T>) {
 	const {expandedKeys} = useTreeViewContext();
 
 	const item = useItem();
@@ -41,8 +35,8 @@ export function TreeViewGroup<T extends Record<any, any>>({
 				exit: 'show',
 				exitActive: 'collapsing',
 			}}
-			id={item.id}
-			in={expandedKeys!.has(item.id)}
+			id={item.key}
+			in={expandedKeys!.has(item.key)}
 			onEnter={(el: HTMLElement) =>
 				el.setAttribute('style', 'height: 0px')
 			}
@@ -54,16 +48,7 @@ export function TreeViewGroup<T extends Record<any, any>>({
 		>
 			<div>
 				<ul className="treeview-group" role="group">
-					{typeof children === 'function' && items
-						? items.map((item, index) => (
-								<ItemContextProvider
-									key={item.id ?? index}
-									value={item}
-								>
-									{children(item)}
-								</ItemContextProvider>
-						  ))
-						: children}
+					<Collection<T> items={items}>{children}</Collection>
 				</ul>
 			</div>
 		</CSSTransition>
