@@ -43,11 +43,13 @@ export function TreeViewItem({children}: TreeViewItemProps) {
 		<SpacingContext.Provider value={spacing + 24}>
 			<li className="treeview-item" role="none">
 				<div
-					aria-expanded={expandedKeys!.has(item.id)}
+					aria-expanded={
+						group ? expandedKeys!.has(item.key) : undefined
+					}
 					className={classNames('treeview-link', {
-						collapsed: !expandedKeys!.has(item.id),
+						collapsed: group && !expandedKeys!.has(item.key),
 					})}
-					onClick={() => toggle!(item.id)}
+					onClick={() => group && toggle!(item.key)}
 					role="treeitem"
 					style={{paddingLeft: `${spacing}px`}}
 					tabIndex={0}
@@ -87,7 +89,7 @@ export function TreeViewItemStack({
 	children,
 	expandable = true,
 }: TreeViewItemStackProps) {
-	const {expandedKeys, toggle} = useTreeViewContext();
+	const {expandedKeys, expanderIcons, toggle} = useTreeViewContext();
 
 	const item = useItem();
 
@@ -98,14 +100,14 @@ export function TreeViewItemStack({
 			{expandable && (
 				<Layout.ContentCol>
 					<Button
-						aria-controls={item.id}
-						aria-expanded={expandedKeys!.has(item.id)}
+						aria-controls={item.key}
+						aria-expanded={expandedKeys!.has(item.key)}
 						className={classNames('component-expander', {
-							collapsed: !expandedKeys!.has(item.id),
+							collapsed: !expandedKeys!.has(item.key),
 						})}
 						displayType={null}
 						monospaced
-						onClick={() => toggle!(item.id)}
+						onClick={() => toggle!(item.key)}
 					>
 						<span className="c-inner" tabIndex={-2}>
 							<Icon symbol="angle-down" />
@@ -120,6 +122,10 @@ export function TreeViewItemStack({
 
 			{React.Children.map(children, (child, index) => {
 				let content = child;
+
+				if (!content) {
+					return null;
+				}
 
 				if (typeof child === 'string') {
 					content = <div className="component-text">{child}</div>;

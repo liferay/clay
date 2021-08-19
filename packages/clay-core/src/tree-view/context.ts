@@ -3,14 +3,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useContext} from 'react';
+import React, {Key, useContext} from 'react';
 
 export interface ITreeViewContext {
 	childrenRoot?: (item: Object) => React.ReactElement;
-	expandedKeys?: Set<string>;
+	expandedKeys?: Set<Key>;
+	expanderIcons?: Icons;
 	nestedKey?: string;
 	showExpanderOnHover?: boolean;
-	toggle?: (key: string) => void;
+	toggle?: (key: Key) => void;
 }
 
 export const TreeViewContext = React.createContext<ITreeViewContext>({});

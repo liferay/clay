@@ -4,41 +4,42 @@
  */
 
 import {useInternalState} from '@clayui/shared';
+import type {Key} from 'react';
 
 export interface IExpandable {
 	/**
 	 * The currently expanded keys in the collection.
 	 */
-	expandedKeys?: Set<string>;
+	expandedKeys?: Set<Key>;
 
 	/**
 	 * Handler that is called when items are expanded or collapsed.
 	 */
-	onExpandedChange?: (keys: Set<string>) => void;
+	onExpandedChange?: (keys: Set<Key>) => void;
 }
 
 export interface IMultipleSelection {
 	/**
 	 * The currently selected keys in the collection.
 	 */
-	selectedKeys?: Set<string>;
+	selectedKeys?: Set<Key>;
 
 	/**
 	 * Handler that is called when the selection changes.
 	 */
-	onSelectionChange?: (keys: Set<string>) => void;
+	onSelectionChange?: (keys: Set<Key>) => void;
 }
 
 interface ITreeProps extends IExpandable, IMultipleSelection {}
 
 export function useTree(props: ITreeProps) {
-	const [expandedKeys, setExpandedKeys] = useInternalState<Set<string>>({
+	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
 		initialValue: new Set(),
 		onChange: props.onExpandedChange,
 		value: props.expandedKeys,
 	});
 
-	const toggle = (key: string) => {
+	const toggle = (key: Key) => {
 		const expanded = new Set(expandedKeys);
 
 		if (expanded.has(key)) {
