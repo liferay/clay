@@ -4,6 +4,7 @@
  */
 
 import {setElementFullHeight} from '@clayui/shared';
+import classNames from 'classnames';
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
 
@@ -27,7 +28,9 @@ export function TreeViewGroup<T extends Record<any, any>>({
 
 	return (
 		<CSSTransition
-			className="collapse"
+			className={classNames('collapse', {
+				show: expandedKeys!.has(item.key),
+			})}
 			classNames={{
 				enter: 'collapsing',
 				enterActive: 'show',
