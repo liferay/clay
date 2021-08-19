@@ -9,7 +9,7 @@ import React from 'react';
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
-import {TreeViewContext} from './context';
+import {Icons, TreeViewContext} from './context';
 import {IExpandable, IMultipleSelection, useTree} from './useTree';
 
 interface ITreeViewProps<T>
@@ -18,6 +18,7 @@ interface ITreeViewProps<T>
 		IExpandable,
 		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
+	expanderIcons?: Icons;
 	nestedKey?: string;
 	showExpanderOnHover?: boolean;
 }
@@ -35,6 +36,7 @@ export function TreeView<T>({
 	className,
 	displayType = 'light',
 	expandedKeys,
+	expanderIcons,
 	items,
 	nestedKey,
 	onExpandedChange,
@@ -51,6 +53,7 @@ export function TreeView<T>({
 			typeof children === 'function'
 				? (children as ChildrenFunction<Object>)
 				: undefined,
+		expanderIcons,
 		nestedKey,
 		showExpanderOnHover,
 		...state,

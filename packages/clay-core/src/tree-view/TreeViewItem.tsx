@@ -110,11 +110,21 @@ export function TreeViewItemStack({
 						onClick={() => toggle!(item.key)}
 					>
 						<span className="c-inner" tabIndex={-2}>
-							<Icon symbol="angle-down" />
-							<Icon
-								className="component-expanded-d-none"
-								symbol="angle-right"
-							/>
+							{expanderIcons?.close ? (
+								expanderIcons.close
+							) : (
+								<Icon symbol="angle-down" />
+							)}
+							{expanderIcons?.open ? (
+								React.cloneElement(expanderIcons.open, {
+									className: 'component-expanded-d-none',
+								})
+							) : (
+								<Icon
+									className="component-expanded-d-none"
+									symbol="angle-right"
+								/>
+							)}
 						</span>
 					</Button>
 				</Layout.ContentCol>

@@ -5,6 +5,11 @@
 
 import React, {Key, useContext} from 'react';
 
+export type Icons = {
+	open: React.ReactElement;
+	close: React.ReactElement;
+};
+
 export interface ITreeViewContext {
 	childrenRoot?: (item: Object) => React.ReactElement;
 	expandedKeys?: Set<Key>;
