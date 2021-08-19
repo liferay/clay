@@ -11,7 +11,7 @@ import Icon from '@clayui/icon';
 import {Provider} from '@clayui/provider';
 import Sticker from '@clayui/sticker';
 import {storiesOf} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {TreeView} from '../src/tree-view';
 
@@ -237,7 +237,7 @@ storiesOf('Components|ClayTreeView', module)
 						{'Juan Hidalgo'}
 					</TreeView.ItemStack>
 					<TreeView.Group>
-						<TreeView.Item>
+						<TreeView.Item key="Victor Valle">
 							<TreeView.ItemStack>
 								<Sticker
 									displayType="primary"
@@ -249,7 +249,7 @@ storiesOf('Components|ClayTreeView', module)
 								{'Victor Valle'}
 							</TreeView.ItemStack>
 							<TreeView.Group>
-								<TreeView.Item>
+								<TreeView.Item key="susana-vázquez">
 									<Sticker
 										displayType="primary"
 										shape="user-icon"
@@ -259,7 +259,7 @@ storiesOf('Components|ClayTreeView', module)
 									</Sticker>
 									{'Susana Vázquez'}
 								</TreeView.Item>
-								<TreeView.Item>
+								<TreeView.Item key="myriam-manso">
 									<Sticker
 										displayType="primary"
 										shape="user-icon"
@@ -271,7 +271,7 @@ storiesOf('Components|ClayTreeView', module)
 								</TreeView.Item>
 							</TreeView.Group>
 						</TreeView.Item>
-						<TreeView.Item>
+						<TreeView.Item key="emily-young">
 							<Sticker
 								displayType="primary"
 								shape="user-icon"
@@ -285,4 +285,125 @@ storiesOf('Components|ClayTreeView', module)
 				</TreeView.Item>
 			</TreeView>
 		</Provider>
-	));
+	))
+	.add('page elements', () => {
+		const TYPES_TO_SYMBOLS = {
+			container: 'container',
+			editable: 'text',
+			'fragment-image': 'picture',
+			'fragment-text': 'h1',
+			paragraph: 'paragraph',
+			row: 'table',
+		} as Record<string, string>;
+
+		const items = [
+			{
+				children: [
+					{
+						children: [
+							{
+								children: [
+									{
+										children: [
+											{
+												children: [
+													{
+														id: 11,
+														name: 'element-text',
+														type: 'editable',
+													},
+												],
+												name: 'Heading',
+												type: 'fragment-text',
+											},
+											{
+												children: [
+													{
+														id: 10,
+														name: 'element-text',
+														type: 'editable',
+													},
+												],
+												name: 'Paragraph',
+												type: 'paragraph',
+											},
+										],
+										id: 5,
+										name: 'Module',
+									},
+									{
+										children: [
+											{
+												children: [
+													{
+														id: 9,
+														name: 'image-squere',
+														type: 'editable',
+													},
+												],
+												id: 6,
+												name: 'Image',
+												type: 'fragment-image',
+											},
+										],
+										id: 4,
+										name: 'Module',
+									},
+								],
+								id: 3,
+								name: 'Grid',
+								type: 'row',
+							},
+						],
+						id: 2,
+						name: 'Container',
+						type: 'container',
+					},
+				],
+				id: 1,
+				name: 'Container',
+				type: 'container',
+			},
+		];
+
+		const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
+			new Set(['1'])
+		);
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					expandedKeys={expandedKeys}
+					expanderIcons={{
+						close: <Icon symbol="hr" />,
+						open: <Icon symbol="plus" />,
+					}}
+					items={items}
+					nestedKey="children"
+					onExpandedChange={(keys) => setExpandedKeys(keys)}
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								{item.type && (
+									<Icon
+										symbol={TYPES_TO_SYMBOLS[item.type]}
+									/>
+								)}
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{({name, type}) => (
+									<TreeView.Item>
+										<Icon symbol={TYPES_TO_SYMBOLS[type]} />
+										{name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	});
