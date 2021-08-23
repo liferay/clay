@@ -153,7 +153,7 @@ $escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23')) !default;
 
 // Settings
 
-$enable-bs4-deprecated: false !default;
+$enable-bs4-deprecated: true !default;
 $enable-scaling-components: false !default;
 $enable-c-inner: true !default;
 $scaling-breakpoint-down: sm !default;
