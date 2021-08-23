@@ -30,14 +30,28 @@ $card-section-header-margin-bottom: 1.5rem !default;
 $card-section-header-padding: 0 ($grid-gutter-width / 2) !default;
 $card-section-header-text-transform: uppercase !default;
 
+/// @deprecated as of v3.x with no replacement
+
 $card-img-overlay-padding: 1.25rem !default;
+
+/// @deprecated as of v3.x with no replacement
 
 $card-group-margin: $grid-gutter-width / 2 !default;
 
+/// @deprecated as of v3.x with no replacement
+
 $card-deck-margin: $card-group-margin !default;
 
+/// @deprecated as of v3.x with no replacement
+
 $card-columns-count: 3 !default;
+
+/// @deprecated as of v3.x with no replacement
+
 $card-columns-gap: 1.25rem !default;
+
+/// @deprecated as of v3.x with no replacement
+
 $card-columns-margin: $card-spacer-y !default;
 
 // Card Aspect Ratio

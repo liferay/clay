@@ -1141,17 +1141,3 @@ caption {
 	max-width: none;
 	width: auto;
 }
-
-// Table Drag
-
-.table-drag {
-	@include clay-table-drag-variant($table-drag);
-}
-
-.table-dragging {
-	@include clay-css($table-dragging);
-}
-
-.table-clone {
-	@include clay-table-clone-variant($table-clone);
-}
