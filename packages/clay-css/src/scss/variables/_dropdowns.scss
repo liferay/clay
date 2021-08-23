@@ -15,6 +15,7 @@ $dropdown-min-height: null !default;
 $dropdown-min-width: 10rem !default;
 $dropdown-padding-y: 0.5rem !default;
 
+$dropdown-font-size-mobile: null !default;
 $dropdown-max-height-mobile: 295px !default;
 $dropdown-max-width-mobile: 230px !default;
 
@@ -26,9 +27,6 @@ $dropdown-divider-margin-y: $spacer / 2 !default;
 $dropdown-full-wide-header-spacer-y: 20px !default;
 
 $dropdown-wide-width: 500px !default;
-
-$dropdown-font-size: null !default;
-$dropdown-font-size-mobile: null !default;
 
 // Dropdown Item
 
