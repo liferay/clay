@@ -177,7 +177,6 @@ label.custom-control-label {
 		@include gradient-bg($custom-control-indicator-checked-bg);
 
 		border-color: $custom-control-indicator-checked-border-color;
-		border-color: $custom-control-indicator-checked-border-color;
 
 		@include box-shadow($custom-control-indicator-checked-box-shadow);
 

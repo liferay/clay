@@ -49,8 +49,6 @@ $custom-control-indicator-checked-active-bg: $custom-control-indicator-active-ch
 $custom-control-indicator-active-checked-border-color: null !default;
 $custom-control-indicator-checked-active-border-color: $custom-control-indicator-active-checked-border-color !default;
 
-$custom-control-indicator-checked-border-color: null !default;
-
 /// @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
 
 $custom-control-indicator-disabled-checked-bg: rgba($primary, 0.5) !default;

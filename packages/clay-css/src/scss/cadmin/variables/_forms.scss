@@ -26,7 +26,6 @@ $cadmin-input-transition: border-color 0.15s ease-in-out,
 
 $cadmin-input-font-size-mobile: 16px !default; // 16px
 $cadmin-input-height-mobile: null !default;
-$cadmin-input-height-inner-mobile: null !default;
 
 // Input Focus
 
@@ -89,12 +88,8 @@ $cadmin-input-line-height-lg: $cadmin-input-btn-line-height-lg !default;
 $cadmin-input-padding-x-lg: $cadmin-input-padding-x !default;
 $cadmin-input-padding-y-lg: $cadmin-input-padding-y !default;
 
-$cadmin-input-height-inner-lg: $cadmin-input-height-lg -
-	$cadmin-input-height-border !default;
-
 $cadmin-input-font-size-lg-mobile: null !default;
 $cadmin-input-height-lg-mobile: null !default;
-$cadmin-input-height-inner-lg-mobile: null !default;
 
 // Input Sm
 
@@ -105,12 +100,8 @@ $cadmin-input-line-height-sm: $cadmin-input-btn-line-height-sm !default;
 $cadmin-input-padding-x-sm: 12px !default; // 12px
 $cadmin-input-padding-y-sm: 4px !default;
 
-$cadmin-input-height-inner-sm: $cadmin-input-height-sm -
-	$cadmin-input-height-border !default;
-
 $cadmin-input-font-size-sm-mobile: null !default;
 $cadmin-input-height-sm-mobile: null !default;
-$cadmin-input-height-inner-sm-mobile: null !default;
 
 // Input Label (<label>)
 

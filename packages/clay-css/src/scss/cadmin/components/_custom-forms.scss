@@ -177,7 +177,6 @@ label.custom-control-label {
 		@include gradient-bg($cadmin-custom-control-indicator-checked-bg);
 
 		border-color: $cadmin-custom-control-indicator-checked-border-color;
-		border-color: $cadmin-custom-control-indicator-checked-border-color;
 
 		@include box-shadow(
 			$cadmin-custom-control-indicator-checked-box-shadow

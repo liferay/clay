@@ -43,8 +43,6 @@ $cadmin-custom-control-indicator-checked-active-bg: $cadmin-custom-control-indic
 $cadmin-custom-control-indicator-active-checked-border-color: $cadmin-custom-control-indicator-checked-active-bg !default;
 $cadmin-custom-control-indicator-checked-active-border-color: $cadmin-custom-control-indicator-active-checked-border-color !default;
 
-$cadmin-custom-control-indicator-checked-border-color: $cadmin-custom-control-indicator-checked-active-bg !default;
-
 // @deprecated as of v2.2.1 use `$cadmin-custom-control-indicator-checked-disabled-bg` instead
 
 $cadmin-custom-control-indicator-disabled-checked-bg: lighten(

@@ -28,9 +28,7 @@ $input-height-border: $input-border-bottom-width + $input-border-top-width !defa
 $input-height: 2.5rem !default; // 40px
 $input-height-inner: $input-height - $input-height-border !default;
 $input-height-lg: 3rem !default; // 48px
-$input-height-inner-lg: $input-height-lg - $input-height-border !default;
 $input-height-sm: 2rem !default; // 32px
-$input-height-inner-sm: $input-height-sm - $input-height-border !default;
 
 $form-feedback-font-size: 0.875rem !default; // 14px
 
