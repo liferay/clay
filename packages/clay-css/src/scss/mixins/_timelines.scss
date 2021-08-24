@@ -2,6 +2,30 @@
 /// @group timelines
 ////
 
+$card-border-width: if(
+	variable-exists(card-border-width),
+	$card-border-width,
+	$cadmin-card-border-width
+);
+
+$timeline-inner-spacing: if(
+	variable-exists(timeline-inner-spacing),
+	$timeline-inner-spacing,
+	$cadmin-timeline-inner-spacing
+);
+
+$timeline-border-width: if(
+	variable-exists(timeline-border-width),
+	$timeline-border-width,
+	$cadmin-timeline-border-width
+);
+
+$timeline-border-modifier: if(
+	variable-exists(timeline-border-modifier),
+	$timeline-border-modifier,
+	$cadmin-timeline-border-modifier
+);
+
 /// A mixin that places the `.timeline-item::before` element on the right side. This mixin is used in `.timeline-right`.
 /// @todo
 /// - Add @link to documentation

@@ -1,0 +1,30 @@
+$cadmin-timeline-border-color: $cadmin-gray-900 !default;
+$cadmin-timeline-border-width: 2px !default;
+
+$cadmin-timeline-border-modifier: ceil($cadmin-timeline-border-width / 2) -
+	$cadmin-panel-border-left-width !default;
+
+$cadmin-timeline-icon-active-bg: $cadmin-component-active-bg !default;
+$cadmin-timeline-icon-active-border-color: $cadmin-timeline-icon-active-bg !default;
+
+$cadmin-timeline-icon-bg: $cadmin-body-bg !default;
+$cadmin-timeline-icon-border-color: $cadmin-gray-600 !default;
+$cadmin-timeline-icon-border-radius: 50% !default;
+$cadmin-timeline-icon-border-width: 2px !default;
+$cadmin-timeline-icon-size: 10px !default;
+
+$cadmin-timeline-increment-bg: $cadmin-body-bg !default;
+
+$cadmin-timeline-item-label-color: $cadmin-body-color !default;
+
+// Sizes
+
+$cadmin-timeline-inner-spacing: 40px !default;
+$cadmin-timeline-outer-spacing: 25px !default;
+
+$cadmin-timeline-item-padding-bottom: 5px !default;
+$cadmin-timeline-item-padding-top: 5px !default;
+
+$cadmin-timeline-inner-spacing-xl: 50px !default;
+$cadmin-timeline-outer-spacing-xl: 25px !default;
+$cadmin-timeline-item-padding-y-xl: 15px !default;
