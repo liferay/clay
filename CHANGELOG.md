@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.34.0](https://github.com/liferay/clay/compare/v3.33.1...v3.34.0) (2021-08-25)
+
+### Bug Fixes
+
+-   **@clayui/css:** Atlas Form readonly input with validation should use the background-color of the base readonly input ([f5580ac](https://github.com/liferay/clay/commit/f5580ac))
+-   **@clayui/css:** Cadmin adds Timelines component, used in Asset Publisher Configuration Modals ([f7b473a](https://github.com/liferay/clay/commit/f7b473a))
+-   **@clayui/css:** Cadmin Modals allow adding cadmin directly to modal-header, modal-body, and modal-footer elements ([038f5be](https://github.com/liferay/clay/commit/038f5be))
+-   **@clayui/css:** Cadmin toggle-switch-check-bar should be 48px wide in larger screens ([5dee0f0](https://github.com/liferay/clay/commit/5dee0f0))
+-   **@clayui/css:** Cards deprecate Bootstrap 4 components `.card-header-tabs`, `.card-header-pills`, `.card-img-*`, `.card-deck`, `.card-group`, `.card-columns`, `.accordion`. Enable them again by setting `$enable-bs4-deprecate: true;`. ([4a05474](https://github.com/liferay/clay/commit/4a05474))
+-   **@clayui/css:** Custom Forms deprecate Bootstrap 4 components `.custom-switch`, `.custom-select`, `.custom-select-lg`, `.custom-select-sm`, `.custom-file`, `.custom-range` ([bc2c5f5](https://github.com/liferay/clay/commit/bc2c5f5))
+-   **@clayui/css:** Custom Forms remove duplicates of custom-control-indicator-checked-border-color and dropdown-font-size ([f0e3212](https://github.com/liferay/clay/commit/f0e3212))
+-   **@clayui/css:** Deprecate Bootstrap 4 component Jumbotron. Enable again by setting `$enable-bs4-deprecate: true;`. ([32d3fd1](https://github.com/liferay/clay/commit/32d3fd1))
+-   **@clayui/css:** Deprecate the Bootstrap 4 Carousel component. Enable them again by setting `$enable-bs4-deprecate: true;`. ([7026c40](https://github.com/liferay/clay/commit/7026c40))
+-   **@clayui/css:** Form deprecate Bootstrap 4 components `.col-form-label`, `.col-form-label-lg`, `.col-form-label-sm`, `.form-row`, `.form-inline`. Enable them again by setting `$enable-bs4-deprecate: true;`. ([08da40a](https://github.com/liferay/clay/commit/08da40a))
+-   **@clayui/css:** Form Validation deprecate Bootstrap 4 HTML5 Form Validation components `.was-validated`, `.invalid-feedback`, `.valid-feedback`, `.#{$state}-feedback`, `.#{$state}-tooltip` ([ed0e374](https://github.com/liferay/clay/commit/ed0e374))
+-   **@clayui/css:** Globals adds `$enable-bs4-deprecated` setting to enable Bootstrap 4 components that we have deprecated ([7e9ac0d](https://github.com/liferay/clay/commit/7e9ac0d))
+-   **@clayui/css:** Globals set `$enable-bs4-deprecated: true !default;`. You can disable the deprecated Bootstrap 4 components by setting `$enable-bs4-deprecated: false !default;`. This will prevent the deprecated component CSS from being output. ([01f3ba6](https://github.com/liferay/clay/commit/01f3ba6))
+-   **@clayui/css:** Mixins Timelines ignore timeline variables and use cadmin variables when compiling Cadmin Timelines ([2eebd4a](https://github.com/liferay/clay/commit/2eebd4a))
+-   **@clayui/css:** Nav deprecate Bootstrap 4 component `.nav-pills`. Enable again by setting `$enable-bs4-deprecate: true;`. ([d2c9027](https://github.com/liferay/clay/commit/d2c9027))
+-   **@clayui/css:** Removes unused variables: ([32b1c4c](https://github.com/liferay/clay/commit/32b1c4c))
+-   **@clayui/css:** Spinners deprecate Bootstrap 4 component. Enable again by setting `$enable-bs4-deprecate: true;`. ([3f8fe71](https://github.com/liferay/clay/commit/3f8fe71))
+-   **@clayui/css:** Table remove unused components `.table-drag`, `.table-dragging`, `.table-clone` and remove maps `$table-drag`, `$table-dragging`, `$table-clone` ([e6adb42](https://github.com/liferay/clay/commit/e6adb42))
+-   **@clayui/css:** Toasts deprecate Bootstrap 4 component. Enable again by setting `$enable-bs4-deprecate: true;`. ([02845eb](https://github.com/liferay/clay/commit/02845eb))
+-   **@clayui/css:** Wrap \*-theme-colors map keys in single quotes. Key names that match CSS colors makes Sass throw this warning without quotes: ([2a1fb6a](https://github.com/liferay/clay/commit/2a1fb6a)), closes [#4219](https://github.com/liferay/clay/issues/4219)
+
+### Features
+
+-   **@clayui/modal:** Allow setting CSS classes and other properties on ClayModal.Footer and ClayModal.Body ([42cee72](https://github.com/liferay/clay/commit/42cee72))
+
 ## [3.33.1](https://github.com/liferay/clay/compare/v3.33.0...v3.33.1) (2021-08-12)
 
 ### Bug Fixes
