@@ -15,7 +15,10 @@ export interface ICollectionProps<T> {
 }
 
 function getKey(index: number, key?: React.Key | null, parentKey?: React.Key) {
-	if (key != null) {
+	if (
+		key != null &&
+		(!String(key).startsWith('.') || String(key).startsWith('.$'))
+	) {
 		return key;
 	}
 
@@ -26,7 +29,7 @@ export function Collection<T extends Record<any, any>>({
 	children,
 	items,
 }: ICollectionProps<T>) {
-	const {parentKey} = useItem();
+	const {key: parentKey} = useItem();
 
 	return (
 		<>
@@ -43,7 +46,7 @@ export function Collection<T extends Record<any, any>>({
 						return (
 							<ItemContextProvider
 								key={key}
-								value={{...item, key, parentKey: key}}
+								value={{...item, key}}
 							>
 								{child}
 							</ItemContextProvider>
@@ -57,10 +60,7 @@ export function Collection<T extends Record<any, any>>({
 						const key = getKey(index, child.key, parentKey);
 
 						return (
-							<ItemContextProvider
-								key={key}
-								value={{key, parentKey: key}}
-							>
+							<ItemContextProvider key={key} value={{key}}>
 								{child}
 							</ItemContextProvider>
 						);

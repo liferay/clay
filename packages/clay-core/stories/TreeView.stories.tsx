@@ -7,6 +7,7 @@ import '@clayui/css/lib/css/atlas.css';
 
 import '@clayui/css/src/scss/cadmin.scss';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import {ClayCheckbox as Checkbox} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {Provider} from '@clayui/provider';
 import Sticker from '@clayui/sticker';
@@ -21,6 +22,68 @@ interface IItem {
 	status?: string;
 	type?: string;
 }
+
+const ITEMS_DRIVE = [
+	{
+		children: [
+			{
+				children: [
+					{
+						children: [{name: 'Research 1'}],
+						name: 'Research',
+					},
+					{
+						children: [{name: 'News 1'}],
+						name: 'News',
+					},
+				],
+				name: 'Blogs',
+			},
+			{
+				children: [
+					{
+						children: [
+							{
+								name: 'Instructions.pdf',
+								status: 'success',
+								type: 'pdf',
+							},
+						],
+						name: 'PDF',
+					},
+					{
+						children: [
+							{
+								name: 'Treeview review.docx',
+								status: 'success',
+								type: 'document',
+							},
+							{
+								name: 'Heuristics Evaluation.docx',
+								status: 'success',
+								type: 'document',
+							},
+						],
+						name: 'Word',
+					},
+				],
+				name: 'Documents and Media',
+			},
+		],
+		name: 'Liferay Drive',
+		type: 'cloud',
+	},
+	{
+		children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+		name: 'Repositories',
+		type: 'repository',
+	},
+	{
+		children: [{name: 'PDF'}, {name: 'Word'}],
+		name: 'Documents and Media',
+		status: 'warning',
+	},
+];
 
 storiesOf('Components|ClayTreeView', module)
 	.add('light', () => (
@@ -110,75 +173,7 @@ storiesOf('Components|ClayTreeView', module)
 
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
-				<TreeView
-					items={[
-						{
-							children: [
-								{
-									children: [
-										{
-											children: [{name: 'Research 1'}],
-											name: 'Research',
-										},
-										{
-											children: [{name: 'News 1'}],
-											name: 'News',
-										},
-									],
-									name: 'Blogs',
-								},
-								{
-									children: [
-										{
-											children: [
-												{
-													name: 'Instructions.pdf',
-													status: 'success',
-													type: 'pdf',
-												},
-											],
-											name: 'PDF',
-										},
-										{
-											children: [
-												{
-													name:
-														'Treeview review.docx',
-													status: 'success',
-													type: 'document',
-												},
-												{
-													name:
-														'Heuristics Evaluation.docx',
-													status: 'success',
-													type: 'document',
-												},
-											],
-											name: 'Word',
-										},
-									],
-									name: 'Documents and Media',
-								},
-							],
-							name: 'Liferay Drive',
-							type: 'cloud',
-						},
-						{
-							children: [
-								{name: 'Blogs'},
-								{name: 'Documents and Media'},
-							],
-							name: 'Repositories',
-							type: 'repository',
-						},
-						{
-							children: [{name: 'PDF'}, {name: 'Word'}],
-							name: 'Documents and Media',
-							status: 'warning',
-						},
-					]}
-					nestedKey="children"
-				>
+				<TreeView items={ITEMS_DRIVE} nestedKey="children">
 					{(item: IItem) => (
 						<TreeView.Item>
 							<TreeView.ItemStack>
@@ -398,6 +393,47 @@ storiesOf('Components|ClayTreeView', module)
 									<TreeView.Item>
 										<Icon symbol={TYPES_TO_SYMBOLS[type]} />
 										{name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('selection', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<OptionalCheckbox />
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
+										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
 									</TreeView.Item>
 								)}
 							</TreeView.Group>

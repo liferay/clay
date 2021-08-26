@@ -6,6 +6,12 @@
 import {useInternalState} from '@clayui/shared';
 import type {Key} from 'react';
 
+import {
+	IMultipleSelection,
+	IMultipleSelectionState,
+	useMultipleSelection,
+} from './useMultipleSelection';
+
 export interface IExpandable {
 	/**
 	 * The currently expanded keys in the collection.
@@ -18,25 +24,24 @@ export interface IExpandable {
 	onExpandedChange?: (keys: Set<Key>) => void;
 }
 
-export interface IMultipleSelection {
-	/**
-	 * The currently selected keys in the collection.
-	 */
-	selectedKeys?: Set<Key>;
+export interface ITreeProps extends IExpandable, IMultipleSelection {}
 
-	/**
-	 * Handler that is called when the selection changes.
-	 */
-	onSelectionChange?: (keys: Set<Key>) => void;
+export interface ITreeState {
+	expandedKeys: Set<Key>;
+	selection: IMultipleSelectionState;
+	toggle: (key: Key) => void;
 }
 
-interface ITreeProps extends IExpandable, IMultipleSelection {}
-
-export function useTree(props: ITreeProps) {
+export function useTree(props: ITreeProps): ITreeState {
 	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
 		initialValue: new Set(),
 		onChange: props.onExpandedChange,
 		value: props.expandedKeys,
+	});
+
+	const selection = useMultipleSelection({
+		onSelectionChange: props.onSelectionChange,
+		selectedKeys: props.selectedKeys,
 	});
 
 	const toggle = (key: Key) => {
@@ -53,6 +58,7 @@ export function useTree(props: ITreeProps) {
 
 	return {
 		expandedKeys,
+		selection,
 		toggle,
 	};
 }

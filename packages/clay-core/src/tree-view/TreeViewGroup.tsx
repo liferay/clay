@@ -29,7 +29,7 @@ export function TreeViewGroup<T extends Record<any, any>>({
 	return (
 		<CSSTransition
 			className={classNames('collapse', {
-				show: expandedKeys!.has(item.key),
+				show: expandedKeys.has(item.key),
 			})}
 			classNames={{
 				enter: 'collapsing',
@@ -39,7 +39,7 @@ export function TreeViewGroup<T extends Record<any, any>>({
 				exitActive: 'collapsing',
 			}}
 			id={item.key}
-			in={expandedKeys!.has(item.key)}
+			in={expandedKeys.has(item.key)}
 			onEnter={(el: HTMLElement) =>
 				el.setAttribute('style', 'height: 0px')
 			}
