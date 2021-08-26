@@ -90,22 +90,23 @@ export function useMultipleSelection(
 
 	const toggleChildrenSelection = (
 		keyMap: LayoutInfo,
-		selecteds: Set<Key>
+		selecteds: Set<Key>,
+		select: boolean
 	) => {
 		if (!keyMap.children.size) {
 			return;
 		}
 
 		keyMap.children.forEach((key) => {
-			if (selecteds.has(key)) {
-				selecteds.delete(key);
-			} else {
+			if (select) {
 				selecteds.add(key);
+			} else {
+				selecteds.delete(key);
 			}
 
 			const childrenKeyMap = layoutKeys.current.get(key) as LayoutInfo;
 
-			toggleChildrenSelection(childrenKeyMap, selecteds);
+			toggleChildrenSelection(childrenKeyMap, selecteds, select);
 		});
 	};
 
@@ -113,13 +114,18 @@ export function useMultipleSelection(
 		const keyMap = layoutKeys.current.get(key) as LayoutInfo;
 		const selecteds = new Set(selectedKeys);
 
+		// Resets the intermediate state because the element will be selected
+		// or otherwise the state must be false because it will be unchecking
+		// all its children.
+		keyMap.intermediate = false;
+
 		if (selecteds.has(key)) {
 			selecteds.delete(key);
 		} else {
 			selecteds.add(key);
 		}
 
-		toggleChildrenSelection(keyMap, selecteds);
+		toggleChildrenSelection(keyMap, selecteds, selecteds.has(key));
 		toggleParentSelection(keyMap, selecteds);
 
 		setSelectionKeys(selecteds);
