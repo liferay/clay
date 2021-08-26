@@ -155,6 +155,22 @@ export function TreeViewItemStack({
 						checked: selection.selectedKeys.has(item.key),
 						indeterminate: selection.isIntermediate(item.key),
 						onChange: () => selection.toggleSelection(item.key),
+						onClick: (
+							event: React.MouseEvent<
+								HTMLInputElement,
+								MouseEvent
+							>
+						) => {
+							event.stopPropagation();
+
+							const {
+								onClick,
+							} = (child as React.ReactElement).props;
+
+							if (onClick) {
+								onClick(event);
+							}
+						},
 					});
 				}
 
