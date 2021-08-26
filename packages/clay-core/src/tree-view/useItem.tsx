@@ -3,23 +3,37 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useContext, useRef} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 
-type Value = Record<string, any>;
+import {useTreeViewContext} from './context';
+
+type Value = {
+	[propName: string]: any;
+	key: React.Key;
+};
 
 type Props = {
 	children: React.ReactNode;
 	value: Value;
 };
 
-const ItemContext = React.createContext<Value>({});
+const ItemContext = React.createContext<Value>({} as Value);
 
 function getKey(key: React.Key) {
 	return `${key}`.replace('.$', '');
 }
 
-export function ItemContextProvider({children, value = {}}: Props) {
+export function ItemContextProvider({children, value}: Props) {
+	const {selection} = useTreeViewContext();
+	const {key: parentKey} = useItem();
+
 	const keyRef = useRef(getKey(value.key));
+
+	useEffect(() => selection.mount(keyRef.current, parentKey), [
+		selection.mount,
+		keyRef,
+		parentKey,
+	]);
 
 	const props = {
 		...value,

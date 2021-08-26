@@ -44,12 +44,12 @@ export function TreeViewItem({children}: TreeViewItemProps) {
 			<li className="treeview-item" role="none">
 				<div
 					aria-expanded={
-						group ? expandedKeys!.has(item.key) : undefined
+						group ? expandedKeys.has(item.key) : undefined
 					}
 					className={classNames('treeview-link', {
-						collapsed: group && !expandedKeys!.has(item.key),
+						collapsed: group && expandedKeys.has(item.key),
 					})}
-					onClick={() => group && toggle!(item.key)}
+					onClick={() => group && toggle(item.key)}
 					role="treeitem"
 					style={{paddingLeft: `${spacing}px`}}
 					tabIndex={0}
@@ -89,7 +89,12 @@ export function TreeViewItemStack({
 	children,
 	expandable = true,
 }: TreeViewItemStackProps) {
-	const {expandedKeys, expanderIcons, toggle} = useTreeViewContext();
+	const {
+		expandedKeys,
+		expanderIcons,
+		selection,
+		toggle,
+	} = useTreeViewContext();
 
 	const item = useItem();
 
@@ -100,14 +105,14 @@ export function TreeViewItemStack({
 			{expandable && (
 				<Layout.ContentCol>
 					<Button
-						aria-controls={item.key}
-						aria-expanded={expandedKeys!.has(item.key)}
+						aria-controls={`${item.key}`}
+						aria-expanded={expandedKeys.has(item.key)}
 						className={classNames('component-expander', {
-							collapsed: !expandedKeys!.has(item.key),
+							collapsed: expandedKeys.has(item.key),
 						})}
 						displayType={null}
 						monospaced
-						onClick={() => toggle!(item.key)}
+						onClick={() => toggle(item.key)}
 					>
 						<span className="c-inner" tabIndex={-2}>
 							{expanderIcons?.close ? (
@@ -143,6 +148,14 @@ export function TreeViewItemStack({
 					// @ts-ignore
 				} else if (child?.type.displayName === 'ClayIcon') {
 					content = <div className="component-icon">{child}</div>;
+
+					// @ts-ignore
+				} else if (child?.type.displayName === 'ClayCheckbox') {
+					content = React.cloneElement(child as React.ReactElement, {
+						checked: selection.selectedKeys.has(item.key),
+						indeterminate: selection.isIntermediate(item.key),
+						onChange: () => selection.toggleSelection(item.key),
+					});
 				}
 
 				return (
