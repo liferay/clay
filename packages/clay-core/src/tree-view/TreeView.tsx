@@ -47,6 +47,8 @@ export function TreeView<T>({
 	const state = useTree({
 		expandedKeys,
 		onExpandedChange,
+		onSelectionChange,
+		selectedKeys,
 	});
 
 	const context = {
@@ -56,8 +58,6 @@ export function TreeView<T>({
 				: undefined,
 		expanderIcons,
 		nestedKey,
-		onSelectionChange,
-		selectedKeys,
 		showExpanderOnHover,
 		...state,
 	};
