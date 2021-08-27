@@ -6,7 +6,7 @@
 import {ClayPortal, IPortalBaseProps, Keys, observeRect} from '@clayui/shared';
 import classNames from 'classnames';
 import domAlign from 'dom-align';
-import React, {useEffect, useLayoutEffect, useRef} from 'react';
+import React, {useEffect, useLayoutEffect, useMemo, useRef} from 'react';
 
 export const Align = {
 	BottomCenter: 4,
@@ -200,6 +200,12 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 	) => {
 		const subPortalRef = useRef<HTMLDivElement | null>(null);
 
+		const rtl = useMemo(() => {
+			return (
+				document.querySelector('html')?.getAttribute('dir') === 'rtl'
+			);
+		}, []);
+
 		useEffect(() => {
 			if (closeOnClickOutside) {
 				const handleClick = (event: MouseEvent) => {
@@ -272,6 +278,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 								adjustY: autoBestAlign,
 							},
 							points,
+							useCssRight: rtl,
 						}
 					);
 				}

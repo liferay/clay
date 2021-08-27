@@ -16,6 +16,7 @@ interface IConfigOptional {
 	offset?: readonly [number, number];
 	targetOffset?: readonly [string, string];
 	overflow?: {adjustX: boolean; adjustY: boolean};
+	useCssRight?: boolean
 }
 
 declare function doAlign(
