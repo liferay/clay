@@ -3,9 +3,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, IPortalBaseProps, observeRect} from '@clayui/shared';
+import {
+	ClayPortal,
+	IPortalBaseProps,
+	doAlign,
+	observeRect,
+} from '@clayui/shared';
 import classNames from 'classnames';
-import domAlign from 'dom-align';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 export const ALIGN_POSITIONS = [
@@ -116,13 +120,12 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					string
 				];
 
-				domAlign(
-					(ref as React.RefObject<HTMLElement>).current!,
-					triggerRef.current as HTMLElement,
-					{
-						points,
-					}
-				);
+				doAlign({
+					points,
+					sourceElement: (ref as React.RefObject<HTMLElement>)
+						.current!,
+					targetElement: triggerRef.current as HTMLElement,
+				});
 			}
 		}, [alignPosition, triggerRef, ref]);
 
