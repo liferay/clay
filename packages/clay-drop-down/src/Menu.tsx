@@ -3,10 +3,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, IPortalBaseProps, Keys, observeRect} from '@clayui/shared';
+import {
+	ClayPortal,
+	IPortalBaseProps,
+	Keys,
+	doAlign,
+	observeRect,
+} from '@clayui/shared';
 import classNames from 'classnames';
-import domAlign from 'dom-align';
-import React, {useEffect, useLayoutEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
 export const Align = {
 	BottomCenter: 4,
@@ -200,12 +205,6 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 	) => {
 		const subPortalRef = useRef<HTMLDivElement | null>(null);
 
-		const rtl = useMemo(() => {
-			return (
-				document.querySelector('html')?.getAttribute('dir') === 'rtl'
-			);
-		}, []);
-
 		useEffect(() => {
 			if (closeOnClickOutside) {
 				const handleClick = (event: MouseEvent) => {
@@ -268,19 +267,17 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 				}
 
 				if ((ref as React.RefObject<HTMLElement>).current) {
-					domAlign(
-						(ref as React.RefObject<HTMLElement>).current!,
-						alignElementRef.current,
-						{
-							offset: offsetFn(points),
-							overflow: {
-								adjustX: autoBestAlign,
-								adjustY: autoBestAlign,
-							},
-							points,
-							useCssRight: rtl,
-						}
-					);
+					doAlign({
+						offset: offsetFn(points),
+						overflow: {
+							adjustX: autoBestAlign,
+							adjustY: autoBestAlign,
+						},
+						points,
+						sourceElement: (ref as React.RefObject<HTMLElement>)
+							.current!,
+						targetElement: alignElementRef.current,
+					});
 				}
 			}
 		};
