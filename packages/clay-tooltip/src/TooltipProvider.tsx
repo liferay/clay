@@ -3,8 +3,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, IPortalBaseProps, Keys, delegate} from '@clayui/shared';
-import domAlign from 'dom-align';
+import {
+	ClayPortal,
+	IPortalBaseProps,
+	Keys,
+	delegate,
+	doAlign,
+} from '@clayui/shared';
 import React, {useCallback} from 'react';
 import warning from 'warning';
 
@@ -330,17 +335,16 @@ const TooltipProvider: React.FunctionComponent<
 		) {
 			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
 
-			const newAlignmentString = domAlign(
-				(tooltipRef as React.RefObject<HTMLDivElement>).current!,
-				titleNodeRef.current,
-				{
-					overflow: {
-						adjustX: autoAlign,
-						adjustY: autoAlign,
-					},
-					points,
-				}
-			).points.join('') as keyof typeof ALIGNMENTS_INVERSE_MAP;
+			const newAlignmentString = doAlign({
+				overflow: {
+					adjustX: autoAlign,
+					adjustY: autoAlign,
+				},
+				points,
+				sourceElement: (tooltipRef as React.RefObject<HTMLDivElement>)
+					.current!,
+				targetElement: titleNodeRef.current,
+			}).points.join('') as keyof typeof ALIGNMENTS_INVERSE_MAP;
 
 			const pointsString = points.join('');
 
