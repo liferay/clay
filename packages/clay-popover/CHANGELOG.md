@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.35.0](https://github.com/liferay/clay/compare/v3.34.0...v3.35.0) (2021-08-30)
+
+### Features
+
+-   **@clayui/popover:** replaces direct use of dom-align with doAlign with RTL support ([b69b98b](https://github.com/liferay/clay/commit/b69b98b))
+
 # [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
 
 **Note:** Version bump only for package @clayui/popover

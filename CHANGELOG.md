@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.35.0](https://github.com/liferay/clay/compare/v3.34.0...v3.35.0) (2021-08-30)
+
+### Bug Fixes
+
+-   **@clayui/dropdown:** Pass useCssRight to domAlign ([34db43e](https://github.com/liferay/clay/commit/34db43e))
+
+### Features
+
+-   **@clayui/drop-down:** replaces direct use of dom-align with doAlign with RTL support ([a311dca](https://github.com/liferay/clay/commit/a311dca))
+-   **@clayui/popover:** replaces direct use of dom-align with doAlign with RTL support ([b69b98b](https://github.com/liferay/clay/commit/b69b98b))
+-   **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54c))
+
 # [3.34.0](https://github.com/liferay/clay/compare/v3.33.1...v3.34.0) (2021-08-25)
 
 ### Bug Fixes
