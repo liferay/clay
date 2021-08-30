@@ -3,11 +3,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import domAlign, {IConfigOptional} from 'dom-align';
+import domAlign from 'dom-align';
 
-type AlignProps<T, K> = Omit<IConfigOptional, 'useCssRight'> & {
+type AlignProps<T, K> = {
+	offset?: readonly [number, number];
+	overflow?: {adjustX: boolean; adjustY: boolean};
+	points?: readonly [string, string];
 	sourceElement: K;
 	targetElement: T;
+	targetOffset?: readonly [string, string];
 };
 
 function isRtl<T extends HTMLElement>(element: T) {
