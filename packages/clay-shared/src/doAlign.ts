@@ -5,13 +5,16 @@
 
 import domAlign from 'dom-align';
 
-type AlignProps<T, K> = {
+type AlignBase = {
 	offset?: readonly [number, number];
 	overflow?: {adjustX: boolean; adjustY: boolean};
 	points?: readonly [string, string];
+	targetOffset?: readonly [string, string];
+};
+
+type AlignProps<T, K> = AlignBase & {
 	sourceElement: K;
 	targetElement: T;
-	targetOffset?: readonly [string, string];
 };
 
 function isRtl<T extends HTMLElement>(element: T) {
@@ -22,7 +25,7 @@ export function doAlign<T extends HTMLElement, K extends HTMLElement>({
 	sourceElement,
 	targetElement,
 	...config
-}: AlignProps<T, K>) {
+}: AlignProps<T, K>): Required<AlignBase> {
 	return domAlign(sourceElement, targetElement, {
 		...config,
 		useCssRight: isRtl(sourceElement),
