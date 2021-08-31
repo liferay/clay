@@ -5,13 +5,15 @@
 
 import React from 'react';
 
+import {useTreeViewContext} from './context';
 import {ItemContextProvider, useItem} from './useItem';
 
 export type ChildrenFunction<T> = (item: T) => React.ReactElement;
 
 export interface ICollectionProps<T> {
 	children: React.ReactNode | ChildrenFunction<T>;
-	items?: Array<T>;
+	items?: Array<T> | Record<string, T>;
+	rootItem?: string;
 }
 
 function getKey(index: number, key?: React.Key | null, parentKey?: React.Key) {
@@ -27,14 +29,27 @@ function getKey(index: number, key?: React.Key | null, parentKey?: React.Key) {
 
 export function Collection<T extends Record<any, any>>({
 	children,
-	items,
+	items: compoundItems,
+	rootItem,
 }: ICollectionProps<T>) {
 	const {key: parentKey} = useItem();
+	const {items: rootItems} = useTreeViewContext();
+
+	const items =
+		typeof compoundItems === 'object' &&
+		!Array.isArray(compoundItems) &&
+		rootItem
+			? [compoundItems[rootItem]]
+			: (compoundItems as Array<T>);
 
 	return (
 		<>
 			{typeof children === 'function' && items
 				? items.map((item, index) => {
+						if (typeof item === 'string') {
+							item = (rootItems as Record<string, T>)[item];
+						}
+
 						const child = children(item);
 
 						const key = getKey(

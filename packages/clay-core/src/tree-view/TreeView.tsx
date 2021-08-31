@@ -40,6 +40,7 @@ export function TreeView<T>({
 	nestedKey,
 	onExpandedChange,
 	onSelectionChange,
+	rootItem,
 	selectedKeys,
 	showExpanderOnHover = true,
 	...otherProps
@@ -57,6 +58,7 @@ export function TreeView<T>({
 				? (children as ChildrenFunction<Object>)
 				: undefined,
 		expanderIcons,
+		items,
 		nestedKey,
 		showExpanderOnHover,
 		...state,
@@ -72,7 +74,9 @@ export function TreeView<T>({
 			role="tree"
 		>
 			<TreeViewContext.Provider value={context}>
-				<Collection<T> items={items}>{children}</Collection>
+				<Collection<T> items={items} rootItem={rootItem}>
+					{children}
+				</Collection>
 			</TreeViewContext.Provider>
 		</ul>
 	);
