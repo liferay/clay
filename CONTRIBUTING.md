@@ -23,6 +23,7 @@ Here's a set of guidelines to contribute to Clay and its packages. Use your comm
 -   [Additional Notes](#additional-notes)
 -   [Issue Labels](#issue-labels)
 -   [Release process](#release-process)
+-   [Testing local changes in liferay-portal](#testing-local-changes-in-liferay-portal)
 
 ## What Should I Know Before I Get Started?
 
@@ -346,4 +347,36 @@ cd {PORTAL_ROOT}/modules
 #     the linked issues. The LPS is typically called "Update Clay Dependencies"
 
 # Lastly, share the release information in our public Slack channel!
+```
+
+## Testing local changes in liferay-portal
+
+When working on an issue, you might want to test your changes before submitting
+a pull request.
+
+To test your changes in a liferay-portal (>= 7.3.x) environment you first need
+to link the desired packages.
+
+```bash
+# Let's assume you have made a change in the clay-button component
+
+# From the root of the clay repository, run
+yarn workspace @clayui/button build
+yarn workspace @clayui/buttom link
+
+# Note that if you have linked this package before, yarn will print a warning
+# but that doesn't mean that this step failed
+
+# Now navigate to the frontend-taglib-clay module
+cd {PORTAL_ROOT}/modules/apps/frontend-taglib/frontend-taglib-clay
+
+# Link the @clayui/button package
+yarn link @clayui/button
+
+# Before deploying you shoud stop tomcat
+
+# Deploy the module
+gradlew deploy -a
+
+# Restart tomcat
 ```
