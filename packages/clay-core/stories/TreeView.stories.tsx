@@ -23,15 +23,6 @@ interface IItem {
 	type?: string;
 }
 
-const TYPES_TO_SYMBOLS = {
-	container: 'container',
-	editable: 'text',
-	'fragment-image': 'picture',
-	'fragment-text': 'h1',
-	paragraph: 'paragraph',
-	row: 'table',
-} as Record<string, string>;
-
 const ITEMS_DRIVE = [
 	{
 		children: [
@@ -291,6 +282,15 @@ storiesOf('Components|ClayTreeView', module)
 		</Provider>
 	))
 	.add('page elements', () => {
+		const TYPES_TO_SYMBOLS = {
+			container: 'container',
+			editable: 'text',
+			'fragment-image': 'picture',
+			'fragment-text': 'h1',
+			paragraph: 'paragraph',
+			row: 'table',
+		} as Record<string, string>;
+
 		const items = [
 			{
 				children: [
@@ -442,56 +442,4 @@ storiesOf('Components|ClayTreeView', module)
 				</TreeView>
 			</Provider>
 		);
-	})
-	.add('flat items', () => (
-		<Provider spritemap={spritemap} theme="cadmin">
-			<TreeView
-				items={{
-					ab7146d1: {
-						children: ['p659d51e', 'q8a7c550'],
-						id: 'ab7146d1',
-						name: 'Grid',
-						type: 'row',
-					},
-					fd5768d1: {
-						children: ['ab7146d1'],
-						id: 'fd5768d1',
-						name: 'Container',
-						type: 'container',
-					},
-					p659d51e: {
-						id: 'p659d51e',
-						name: 'Module',
-					},
-					q8a7c550: {
-						id: 'q8a7c550',
-						name: 'Module',
-					},
-				}}
-				nestedKey="children"
-				rootItem="fd5768d1"
-				showExpanderOnHover={false}
-			>
-				{(item) => (
-					<TreeView.Item>
-						<TreeView.ItemStack>
-							{item.type && (
-								<Icon symbol={TYPES_TO_SYMBOLS[item.type]} />
-							)}
-							{item.name}
-						</TreeView.ItemStack>
-						<TreeView.Group items={item.children}>
-							{(item: any) => (
-								<TreeView.Item>
-									<Icon
-										symbol={TYPES_TO_SYMBOLS[item.type]}
-									/>
-									{item.name}
-								</TreeView.Item>
-							)}
-						</TreeView.Group>
-					</TreeView.Item>
-				)}
-			</TreeView>
-		</Provider>
-	));
+	});

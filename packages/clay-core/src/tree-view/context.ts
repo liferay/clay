@@ -5,7 +5,6 @@
 
 import React, {useContext} from 'react';
 
-import type {ICollectionProps} from './Collection';
 import type {ITreeState} from './useTree';
 
 export type Icons = {
@@ -17,7 +16,6 @@ export interface ITreeViewContext extends ITreeState {
 	childrenRoot?: (item: Object) => React.ReactElement;
 	expanderIcons?: Icons;
 	nestedKey?: string;
-	items?: ICollectionProps<unknown>['items'];
 	showExpanderOnHover?: boolean;
 }
 
