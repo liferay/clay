@@ -14,6 +14,7 @@ type Value = {
 
 type Props = {
 	children: React.ReactNode;
+	dragAndDropEnabled?: boolean;
 	value: Value;
 };
 
@@ -23,7 +24,11 @@ function getKey(key: React.Key) {
 	return `${key}`.replace('.$', '');
 }
 
-export function ItemContextProvider({children, value}: Props) {
+export function ItemContextProvider({
+	children,
+	dragAndDropEnabled = false,
+	value,
+}: Props) {
 	const {selection} = useTreeViewContext();
 	const {key: parentKey} = useItem();
 
@@ -36,6 +41,7 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const props = {
 		...value,
+		dragAndDropEnabled,
 		key: keyRef.current,
 	};
 

@@ -28,6 +28,7 @@ export interface ITreeProps extends IExpandable, IMultipleSelection {}
 
 export interface ITreeState {
 	expandedKeys: Set<Key>;
+	open: (key: Key) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
 }
@@ -56,8 +57,19 @@ export function useTree(props: ITreeProps): ITreeState {
 		setExpandedKeys(expanded);
 	};
 
+	const open = (key: Key) => {
+		const expanded = new Set(expandedKeys);
+
+		if (!expanded.has(key)) {
+			expanded.add(key);
+		}
+
+		setExpandedKeys(expanded);
+	};
+
 	return {
 		expandedKeys,
+		open,
 		selection,
 		toggle,
 	};

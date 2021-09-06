@@ -5,12 +5,43 @@
 
 import classNames from 'classnames';
 import React from 'react';
+import {DndProvider} from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
 import {Icons, TreeViewContext} from './context';
 import {ITreeProps, useTree} from './useTree';
+
+function generateItemIndices<T>(
+	items: Array<T> | Record<string, T> | undefined
+) {
+	if (!items) {
+		return;
+	}
+	if (!Array.isArray(items)) {
+		items = Object.values(items);
+	}
+
+	let index = 0;
+
+	const queue = [...items];
+
+	while (queue.length) {
+		const item: any = queue.shift();
+		item.index = index;
+
+		if (Array.isArray(item.children)) {
+			for (let i = 0; i < item.children.length; i++) {
+				item.children[i].parentIndex = index;
+
+				queue.push(item.children[i]);
+			}
+		}
+		index++;
+	}
+}
 
 interface ITreeViewProps<T>
 	extends Omit<React.HTMLAttributes<HTMLUListElement>, 'children'>,
@@ -44,6 +75,8 @@ export function TreeView<T>({
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
+	generateItemIndices(items);
+
 	const state = useTree({
 		expandedKeys,
 		onExpandedChange,
@@ -71,9 +104,11 @@ export function TreeView<T>({
 			})}
 			role="tree"
 		>
-			<TreeViewContext.Provider value={context}>
-				<Collection<T> items={items}>{children}</Collection>
-			</TreeViewContext.Provider>
+			<DndProvider backend={HTML5Backend}>
+				<TreeViewContext.Provider value={context}>
+					<Collection<T> items={items}>{children}</Collection>
+				</TreeViewContext.Provider>
+			</DndProvider>
 		</ul>
 	);
 }

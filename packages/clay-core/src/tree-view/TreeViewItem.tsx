@@ -8,6 +8,7 @@ import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
+import {useDrag, useDrop} from 'react-dnd';
 
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
@@ -23,7 +24,9 @@ export function TreeViewItem({children}: TreeViewItemProps) {
 	const {
 		childrenRoot,
 		expandedKeys,
+		items,
 		nestedKey,
+		open,
 		toggle,
 	} = useTreeViewContext();
 
@@ -39,9 +42,56 @@ export function TreeViewItem({children}: TreeViewItemProps) {
 		return childrenRoot(item);
 	}
 
+	/* eslint-disable */
+	const ref = React.useRef(null);
+
+	const [, drag] = useDrag({
+		end(dragItem: any) {
+			if (!items || !Array.isArray(items)) {
+				return;
+			}
+			if (dragItem.parentIndex) {
+				const parentItem: any = items?.find(
+					(item: any) => item.index === dragItem.parentIndex
+				);
+				if (parentItem) {
+					const childIndex: number = parentItem.children.findIndex(
+						(item: any) => item.index === dragItem.index
+					);
+					if (childIndex !== -1) {
+						parentItem.children.splice(childIndex, 1);
+						toggle(parentItem.key);
+					}
+				}
+			}
+		},
+		item: {
+			...item,
+			type: 'treeViewItem',
+		},
+	});
+
+	const [, drop] = useDrop({
+		accept: 'treeViewItem',
+		drop(dragItem: any) {
+			if (!Array.isArray(item.children)) {
+				item.children = [];
+			}
+
+			item.children.push(dragItem);
+
+			return dragItem;
+		},
+		hover() {
+			open(item.key);
+		},
+	});
+
+	drag(drop(ref));
+
 	return (
 		<SpacingContext.Provider value={spacing + 24}>
-			<li className="treeview-item" role="none">
+			<li className="treeview-item" ref={ref} role="none">
 				<div
 					aria-expanded={
 						group ? expandedKeys.has(item.key) : undefined
