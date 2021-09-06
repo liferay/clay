@@ -19,8 +19,8 @@ export interface IMultipleSelection {
 }
 
 export interface IMultipleSelectionState {
+	createLayoutItemLazy: (key: Key, parentKey?: Key) => () => void;
 	isIntermediate: (key: Key) => boolean;
-	mount: (key: Key, parentKey?: Key) => () => void;
 	selectedKeys: Set<Key>;
 	toggleSelection: (key: Key) => void;
 }
@@ -136,7 +136,7 @@ export function useMultipleSelection(
 	// stream. This means it is reactive to rendering, if any component of the
 	// structure is removed it will update the layout without going traverse
 	// the structure.
-	const mount = useCallback(
+	const createLayoutItemLazy = useCallback(
 		(key: Key, parentKey?: Key) => {
 			const keyMap = layoutKeys.current.get(key);
 
@@ -214,8 +214,8 @@ export function useMultipleSelection(
 	};
 
 	return {
+		createLayoutItemLazy,
 		isIntermediate,
-		mount,
 		selectedKeys,
 		toggleSelection,
 	};

@@ -29,8 +29,8 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const keyRef = useRef(getKey(value.key));
 
-	useEffect(() => selection.mount(keyRef.current, parentKey), [
-		selection.mount,
+	useEffect(() => selection.createLayoutItemLazy(keyRef.current, parentKey), [
+		selection.createLayoutItemLazy,
 		keyRef,
 		parentKey,
 	]);
