@@ -112,9 +112,32 @@ type Patch = {
 function createImmutableTree<T extends Array<Record<string, any>>>(tree: T) {
 	const patches: Array<Patch> = [];
 
+	function nodeByPath(path: Array<number>): any {
+		const queue = [...path];
+		const rootIndex: number = queue.shift() as number;
+		let item = tree[rootIndex];
+		let parent = tree;
+		let index = rootIndex;
+
+		while (queue.length) {
+			index = queue.shift() as number;
+
+			if (Array.isArray(item.children) && item.children.length) {
+				parent = item.children as T;
+				item = item.children[index];
+			}
+		}
+
+		return {
+			index,
+			item,
+			parent,
+		};
+	}
+
 	function applyPatches(): T {
 		patches.forEach((patch) => {
-			const {op} = patch;
+			const {from, op, path} = patch;
 
 			switch (op) {
 				// Applies the operation on the tree, the move is functionally
@@ -122,6 +145,23 @@ function createImmutableTree<T extends Array<Record<string, any>>>(tree: T) {
 				// immediately followed by the "add" operation at the target
 				// location with the value that was removed.
 				case 'move': {
+					const nodeToRemove = nodeByPath(from);
+					const newChildren = nodeToRemove.parent.filter(
+						(item: any, index: number) =>
+							index !== nodeToRemove.index
+					);
+
+					let oldParentNode = tree[from[0]];
+					for (let i = 1; i < from.length - 2; i++) {
+						oldParentNode = oldParentNode.children[from[i]];
+					}
+					oldParentNode.children = newChildren;
+
+					let destinationNode = tree[path[0]];
+					for (let i = 1; i < path.length; i++) {
+						destinationNode = destinationNode.children[path[i]];
+					}
+					destinationNode.children.push(nodeToRemove.item);
 					break;
 				}
 				default:
