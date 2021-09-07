@@ -326,8 +326,12 @@ input[type='button'] {
 // Button Variants
 
 @each $color, $value in $btn-palette {
-	.btn-#{$color} {
+	%btn-#{$color} {
 		@include clay-button-variant($value);
+	}
+
+	.btn-#{$color} {
+		@extend %btn-#{$color} !optional;
 	}
 
 	%btn-#{$color}-focus {
@@ -341,8 +345,12 @@ input[type='button'] {
 // Button Outline Variants
 
 @each $color, $value in $btn-outline-palette {
-	.btn-outline-#{$color} {
+	%btn-outline-#{$color} {
 		@include clay-button-variant($value);
+	}
+
+	.btn-outline-#{$color} {
+		@extend %btn-outline-#{$color} !optional;
 	}
 
 	%btn-outline-#{$color}-focus {
