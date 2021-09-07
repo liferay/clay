@@ -339,8 +339,7 @@ $custom-select-feedback-icon-position: center right
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-feedback-icon-size: $input-height-inner-half
-	$input-height-inner-half !default;
+$custom-select-feedback-icon-size: 18px 18px !default;
 
 // Custom Select Lg
 
@@ -481,7 +480,7 @@ $custom-file-font-weight: $input-font-weight !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-height-inner: $input-height-inner !default;
+$custom-file-height-inner: 36px !default;
 
 /// @deprecated as of v3.x with no replacement
 
