@@ -147,7 +147,8 @@ function createImmutableTree<T extends Array<Record<string, any>>>(tree: T) {
 				case 'move': {
 					const nodeToRemove = nodeByPath(from);
 					const parentNode = nodeToRemove.parent.filter(
-						(item, index) => index !== nodeToRemove.index
+						(item: any, index: number) =>
+							index !== nodeToRemove.index
 					);
 
 					tree[from[0]] = {
