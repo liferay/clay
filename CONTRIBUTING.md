@@ -222,6 +222,12 @@ git fetch $REMOTE --tags
 # automatically determine what version each package should be updated to
 lerna version --conventional-commits --no-push
 
+# Optionally, you might want to run `yarn checkDeps` to make sure the
+# dependencies are in sync. Before you do that, you'll also want to
+# remove any "old" build files, which can be done with
+# find packages -mindepth 2 -maxdepth 2 -name lib -type d | xargs rm -rf {}
+# yarn checkDeps
+
 # Create draft pull-request against `stable` (not intended to be merged)
 # to the clay repo; this is to see CI green one last time.
 # (Example below uses node-gh CLI tool)
