@@ -245,6 +245,10 @@ $form-control-label-size: map-deep-merge(
 	$form-control-label-size
 );
 
+// Form Control Tag Group
+
+$form-control-inset-margin-y: 0.3125rem !default;
+
 // Form Group
 
 $form-group-item-label-spacer: ($input-label-font-size * $line-height-base) +
