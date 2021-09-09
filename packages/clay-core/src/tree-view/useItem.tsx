@@ -29,11 +29,10 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const keyRef = useRef(getKey(value.key));
 
-	useEffect(() => selection.createLayoutItemLazy(keyRef.current, parentKey), [
-		selection.createLayoutItemLazy,
-		keyRef,
-		parentKey,
-	]);
+	useEffect(
+		() => selection.createPartialLayoutItem(keyRef.current, parentKey),
+		[selection.createPartialLayoutItem, keyRef, parentKey]
+	);
 
 	const props = {
 		...value,
