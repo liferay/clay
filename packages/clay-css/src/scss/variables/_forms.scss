@@ -1,14 +1,12 @@
 $input-bg: $white !default;
-
 $input-border-color: $gray-400 !default;
 $input-border-style: solid !default;
+$input-border-width: 0.0625rem !default;
+
 $input-border-top-width: 0.0625rem !default;
 $input-border-right-width: 0.0625rem !default;
 $input-border-bottom-width: 0.0625rem !default;
 $input-border-left-width: 0.0625rem !default;
-
-$input-border-width: $input-border-top-width $input-border-right-width
-	$input-border-bottom-width $input-border-left-width !default;
 
 $input-border-radius: $border-radius !default;
 $input-box-shadow: inset 0 1px 1px rgba($black, 0.075) !default;
@@ -25,6 +23,10 @@ $input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out 
 $input-font-size-mobile: null !default;
 $input-height-mobile: null !default;
 
+// .form-control::placeholder
+
+$input-placeholder-color: $gray-600 !default;
+
 // Input Focus
 
 $input-focus-bg: $input-bg !default;
@@ -32,6 +34,10 @@ $input-focus-border-color: lighten($component-active-bg, 25%) !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
+
+// .form-control:focus::placeholder
+
+$input-placeholder-focus-color: null !default;
 
 // Input Disabled
 
@@ -41,11 +47,68 @@ $input-disabled-color: null !default;
 $input-disabled-cursor: $disabled-cursor !default;
 $input-disabled-opacity: 1 !default;
 
-// Input Placeholder
+// .form-control:disabled::placeholder
 
-$input-placeholder-color: $gray-600 !default;
-$input-placeholder-focus-color: null !default;
 $input-placeholder-disabled-color: null !default;
+
+$input: () !default;
+$input: map-deep-merge(
+	(
+		background-color: $input-bg,
+		border-color: $input-border-color,
+		border-style: $input-border-style,
+		border-width: $input-border-width,
+		border-bottom-width: $input-border-bottom-width,
+		border-left-width: $input-border-left-width,
+		border-right-width: $input-border-right-width,
+		border-top-width: $input-border-top-width,
+		border-radius: clay-enable-rounded($input-border-radius),
+		box-shadow: clay-enable-shadows([$input-box-shadow]),
+		color: $input-color,
+		display: block,
+		font-family: $input-font-family,
+		font-size: $input-font-size,
+		font-weight: $input-font-weight,
+		height: $input-height,
+		line-height: $input-line-height,
+		min-width: 0,
+		padding-bottom: $input-padding-y,
+		padding-left: $input-padding-x,
+		padding-right: $input-padding-x,
+		padding-top: $input-padding-y,
+		transition: $input-transition,
+		width: 100%,
+		mobile: (
+			font-size: $input-font-size-mobile,
+			height: $input-height-mobile,
+		),
+		placeholder: (
+			color: $input-placeholder-color,
+			opacity: 1,
+		),
+		focus: (
+			background-color: $input-focus-bg,
+			border-color: $input-focus-border-color,
+			box-shadow: $input-focus-box-shadow,
+			color: $input-focus-color,
+			outline: 0,
+			placeholder: (
+				color: $input-placeholder-focus-color,
+			),
+		),
+		disabled: (
+			background-color: $input-disabled-bg,
+			border-color: $input-disabled-border-color,
+			color: $input-disabled-color,
+			cursor: $input-disabled-cursor,
+			opacity: $input-disabled-opacity,
+			placeholder: (
+				color: $input-placeholder-disabled-color,
+			),
+		),
+	),
+	$input
+);
 
 // Form Control Plaintext
 
@@ -67,7 +130,7 @@ $input-height-inner-half: 18px 18px !default;
 
 $input-height-inner-quarter: 9px !default;
 
-// Input Lg
+// Input Lg (.form-control-lg)
 
 $input-border-radius-lg: $border-radius-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
@@ -79,7 +142,7 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-font-size-lg-mobile: null !default;
 $input-height-lg-mobile: null !default;
 
-// Input Sm
+// Input Sm (.form-control-sm)
 
 $input-border-radius-sm: $border-radius-sm !default;
 $input-font-size-sm: $input-btn-font-size-sm !default;
@@ -95,23 +158,84 @@ $input-height-sm-mobile: null !default;
 
 $input-label-color: null !default;
 $input-label-font-size: null !default;
-$input-label-font-size-mobile: null !default;
 $input-label-font-weight: null !default;
 $input-label-margin-bottom: $label-margin-bottom !default;
 
-$input-label-for-cursor: $link-cursor !default;
+$input-label-font-size-mobile: null !default;
 
 $input-label-focus-color: null !default;
 
 $input-label-disabled-color: $gray-600 !default;
 $input-label-disabled-cursor: $disabled-cursor !default;
 
-// Label Reference Mark
+// label[for]
+
+$input-label-for-cursor: $link-cursor !default;
+
+// label .reference-mark
 
 $input-label-reference-mark-color: $warning !default;
 $input-label-reference-mark-font-size: null !default;
 $input-label-reference-mark-spacer: null !default;
 $input-label-reference-mark-vertical-align: null !default;
+
+$input-label: () !default;
+$input-label: map-deep-merge(
+	(
+		color: $input-label-color,
+		font-size: $input-label-font-size,
+		font-weight: $input-label-font-weight,
+		margin-bottom: $input-label-margin-bottom,
+		max-width: 100%,
+		word-wrap: break-word,
+		mobile: (
+			font-size: $input-label-font-size-mobile,
+		),
+		focus: (
+			color: $input-label-focus-color,
+		),
+		for: (
+			cursor: $input-label-for-cursor,
+		),
+		form-text: (
+			margin-bottom: $input-label-margin-bottom,
+			margin-top: 0,
+		),
+		reference-mark: (
+			color: $input-label-reference-mark-color,
+			font-size: $input-label-reference-mark-font-size,
+			margin-left: $input-label-reference-mark-spacer,
+			margin-right: $input-label-reference-mark-spacer,
+			vertical-align: $input-label-reference-mark-vertical-align,
+		),
+	),
+	$input-label
+);
+
+// .form-control-label
+
+$form-control-label: () !default;
+$form-control-label: map-merge(
+	(
+		display: inline,
+		margin-bottom: 0,
+	),
+	$form-control-label
+);
+
+// .form-control-label-text
+
+$form-control-label-text: () !default;
+$form-control-label-text: map-merge(
+	(
+		cursor: $input-label-for-cursor,
+		display: inline-block,
+		margin-bottom: $input-label-margin-bottom,
+		max-width: 100%,
+		word-wrap: break-word,
+	),
+	$form-control-label-text
+);
 
 /// @deprecated after v2.18.0 use the Sass map `$input-readonly` instead
 

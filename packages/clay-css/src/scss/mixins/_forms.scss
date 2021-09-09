@@ -334,7 +334,12 @@
 		)
 	);
 
-	$hover-placeholder: setter(map-get($map, hover-placeholder), ());
+	$old-hover-placeholder: setter(map-get($map, hover-placeholder), ());
+	$hover-placeholder: setter(map-get($hover, placeholder), ());
+	$hover-placeholder: map-deep-merge(
+		$hover-placeholder,
+		$old-hover-placeholder
+	);
 	$hover-placeholder: map-deep-merge(
 		$hover-placeholder,
 		(
@@ -374,7 +379,12 @@
 		)
 	);
 
-	$focus-placeholder: setter(map-get($map, focus-placeholder), ());
+	$old-focus-placeholder: setter(map-get($map, focus-placeholder), ());
+	$focus-placeholder: setter(map-get($focus, placeholder), ());
+	$focus-placeholder: map-deep-merge(
+		$focus-placeholder,
+		$old-focus-placeholder
+	);
 	$focus-placeholder: map-deep-merge(
 		$focus-placeholder,
 		(
@@ -436,7 +446,12 @@
 		)
 	);
 
-	$disabled-placeholder: setter(map-get($map, disabled-placeholder), ());
+	$old-disabled-placeholder: setter(map-get($map, disabled-placeholder), ());
+	$disabled-placeholder: setter(map-get($disabled, placeholder), ());
+	$disabled-placeholder: map-deep-merge(
+		$disabled-placeholder,
+		$old-disabled-placeholder
+	);
 	$disabled-placeholder: map-deep-merge(
 		$disabled-placeholder,
 		(
@@ -452,6 +467,8 @@
 		@include clay-css($base);
 
 		&::placeholder {
+			// opacity: 1, override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+
 			@include clay-css($placeholder);
 		}
 
@@ -493,8 +510,16 @@
 			}
 		}
 
+		// Disabled
+		// HTML5 says that controls under a fieldset > legend:first-child won't be
+		// disabled if the fieldset is disabled. Due to implementation difficulty, we
+		// don't honor that edge case; we style them as disabled anyway.
+
 		&:disabled,
 		&.disabled {
+			// `opacity: 1;` iOS fix for unreadable disabled content;
+			// see https://github.com/twbs/bootstrap/issues/11655.
+
 			@include clay-css($disabled);
 
 			&::placeholder {

@@ -2,14 +2,12 @@ $cadmin-input-bg: $cadmin-gray-200 !default;
 
 $cadmin-input-border-color: $cadmin-gray-300 !default;
 $cadmin-input-border-style: solid !default;
-$cadmin-input-border-top-width: 1px !default;
-$cadmin-input-border-right-width: 1px !default;
-$cadmin-input-border-bottom-width: 1px !default;
-$cadmin-input-border-left-width: 1px !default;
+$cadmin-input-border-width: 1px !default;
 
-$cadmin-input-border-width: $cadmin-input-border-top-width
-	$cadmin-input-border-right-width $cadmin-input-border-bottom-width
-	$cadmin-input-border-left-width !default;
+$cadmin-input-border-top-width: $cadmin-input-border-width !default;
+$cadmin-input-border-right-width: $cadmin-input-border-width !default;
+$cadmin-input-border-bottom-width: $cadmin-input-border-width !default;
+$cadmin-input-border-left-width: $cadmin-input-border-width !default;
 
 $cadmin-input-border-radius: $cadmin-border-radius !default;
 $cadmin-input-box-shadow: null !default;
@@ -51,6 +49,65 @@ $cadmin-input-disabled-opacity: 1 !default;
 $cadmin-input-placeholder-color: $cadmin-gray-600 !default;
 $cadmin-input-placeholder-focus-color: null !default;
 $cadmin-input-placeholder-disabled-color: $cadmin-input-disabled-color !default;
+
+$cadmin-input: () !default;
+$cadmin-input: map-deep-merge(
+	(
+		background-color: $cadmin-input-bg,
+		border-color: $cadmin-input-border-color,
+		border-style: $cadmin-input-border-style,
+		border-width: $cadmin-input-border-width,
+		border-bottom-width: $cadmin-input-border-bottom-width,
+		border-left-width: $cadmin-input-border-left-width,
+		border-right-width: $cadmin-input-border-right-width,
+		border-top-width: $cadmin-input-border-top-width,
+		border-radius: clay-enable-rounded($cadmin-input-border-radius),
+		box-shadow: clay-enable-shadows([$cadmin-input-box-shadow]),
+		color: $cadmin-input-color,
+		display: block,
+		font-family: $cadmin-input-font-family,
+		font-size: $cadmin-input-font-size,
+		font-weight: $cadmin-input-font-weight,
+		height: $cadmin-input-height,
+		line-height: $cadmin-input-line-height,
+		min-width: 0,
+		padding-bottom: $cadmin-input-padding-y,
+		padding-left: $cadmin-input-padding-x,
+		padding-right: $cadmin-input-padding-x,
+		padding-top: $cadmin-input-padding-y,
+		transition: $cadmin-input-transition,
+		width: 100%,
+		mobile: (
+			font-size: $cadmin-input-font-size-mobile,
+			height: $cadmin-input-height-mobile,
+		),
+		placeholder: (
+			color: $cadmin-input-placeholder-color,
+			opacity: 1,
+		),
+		focus: (
+			background-color: $cadmin-input-focus-bg,
+			border-color: $cadmin-input-focus-border-color,
+			box-shadow: $cadmin-input-focus-box-shadow,
+			color: $cadmin-input-focus-color,
+			outline: 0,
+			placeholder: (
+				color: $cadmin-input-placeholder-focus-color,
+			),
+		),
+		disabled: (
+			background-color: $cadmin-input-disabled-bg,
+			border-color: $cadmin-input-disabled-border-color,
+			color: $cadmin-input-disabled-color,
+			cursor: $cadmin-input-disabled-cursor,
+			opacity: $cadmin-input-disabled-opacity,
+			placeholder: (
+				color: $cadmin-input-placeholder-disabled-color,
+			),
+		),
+	),
+	$cadmin-input
+);
 
 // Form Control Plaintext
 
@@ -107,9 +164,10 @@ $cadmin-input-height-sm-mobile: null !default;
 
 $cadmin-input-label-color: $cadmin-gray-900 !default;
 $cadmin-input-label-font-size: 14px !default; // 14px
-$cadmin-input-label-font-size-mobile: null !default;
 $cadmin-input-label-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-input-label-margin-bottom: 4px !default; // 4px
+
+$cadmin-input-label-font-size-mobile: null !default;
 
 $cadmin-input-label-for-cursor: $cadmin-link-cursor !default;
 
@@ -124,6 +182,64 @@ $cadmin-input-label-reference-mark-color: $cadmin-warning !default;
 $cadmin-input-label-reference-mark-font-size: 6px !default;
 $cadmin-input-label-reference-mark-spacer: null !default;
 $cadmin-input-label-reference-mark-vertical-align: null !default;
+
+$cadmin-input-label: () !default;
+$cadmin-input-label: map-deep-merge(
+	(
+		color: $cadmin-input-label-color,
+		font-size: $cadmin-input-label-font-size,
+		font-weight: $cadmin-input-label-font-weight,
+		margin-bottom: $cadmin-input-label-margin-bottom,
+		max-width: 100%,
+		word-wrap: break-word,
+		mobile: (
+			font-size: $cadmin-input-label-font-size-mobile,
+		),
+		focus: (
+			color: $cadmin-input-label-focus-color,
+		),
+		for: (
+			cursor: $cadmin-input-label-for-cursor,
+		),
+		form-text: (
+			margin-bottom: $cadmin-input-label-margin-bottom,
+			margin-top: 0,
+		),
+		reference-mark: (
+			color: $cadmin-input-label-reference-mark-color,
+			font-size: $cadmin-input-label-reference-mark-font-size,
+			margin-left: $cadmin-input-label-reference-mark-spacer,
+			margin-right: $cadmin-input-label-reference-mark-spacer,
+			vertical-align: $cadmin-input-label-reference-mark-vertical-align,
+		),
+	),
+	$cadmin-input-label
+);
+
+// .form-control-label
+
+$cadmin-form-control-label: () !default;
+$cadmin-form-control-label: map-merge(
+	(
+		display: inline,
+		margin-bottom: 0,
+	),
+	$cadmin-form-control-label
+);
+
+// .form-control-label-text
+
+$cadmin-form-control-label-text: () !default;
+$cadmin-form-control-label-text: map-merge(
+	(
+		cursor: map-deep-get($cadmin-input-label, for, cursor),
+		display: inline-block,
+		margin-bottom: map-get($cadmin-input-label, margin-bottom),
+		max-width: 100%,
+		word-wrap: break-word,
+	),
+	$cadmin-form-control-label-text
+);
 
 // @deprecated after v2.18.0 use the Sass map `$cadmin-input-readonly` instead
 
