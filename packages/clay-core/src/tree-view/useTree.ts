@@ -145,23 +145,31 @@ function createImmutableTree<T extends Array<Record<string, any>>>(tree: T) {
 				// immediately followed by the "add" operation at the target
 				// location with the value that was removed.
 				case 'move': {
-					const nodeToRemove = nodeByPath(from);
-					const parentNode = nodeToRemove.parent.filter(
-						(item: any, index: number) =>
-							index !== nodeToRemove.index
-					);
+					// The node was "moved" in the same "root node"
+					if (from[0] === path[0]) {
+						const nodeToMove = nodeByPath(from);
+						const {children} = tree[from[0]];
+						children.splice(nodeToMove.index, 1);
+						children.splice(path[1], 0, nodeToMove.item);
+					} else {
+						const nodeToRemove = nodeByPath(from);
+						const parentNode = nodeToRemove.parent.filter(
+							(item: any, index: number) =>
+								index !== nodeToRemove.index
+						);
 
-					tree[from[0]] = {
-						...tree[from[0]],
-						children: parentNode,
-					};
+						tree[from[0]] = {
+							...tree[from[0]],
+							children: parentNode,
+						};
 
-					const {item} = nodeByPath(path);
+						const {item} = nodeByPath(path);
 
-					tree[path[0]] = {
-						...item,
-						children: [...item.children, nodeToRemove.item],
-					};
+						tree[path[0]] = {
+							...item,
+							children: [...item.children, nodeToRemove.item],
+						};
+					}
 					break;
 				}
 				default:
