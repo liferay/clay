@@ -330,8 +330,12 @@ input[type='button'] {
 // Button Variants
 
 @each $cadmin-color, $cadmin-value in $cadmin-btn-palette {
-	.btn-#{$cadmin-color} {
+	%btn-#{$cadmin-color} {
 		@include clay-button-variant($cadmin-value);
+	}
+
+	.btn-#{$cadmin-color} {
+		@extend %btn-#{$cadmin-color} !optional;
 	}
 
 	%btn-#{$cadmin-color}-focus {
@@ -345,8 +349,12 @@ input[type='button'] {
 // Button Outline Variants
 
 @each $cadmin-color, $cadmin-value in $cadmin-btn-outline-palette {
-	.btn-outline-#{$cadmin-color} {
+	%btn-outline-#{$cadmin-color} {
 		@include clay-button-variant($cadmin-value);
+	}
+
+	.btn-outline-#{$cadmin-color} {
+		@extend %btn-outline-#{$cadmin-color} !optional;
 	}
 
 	%btn-outline-#{$cadmin-color}-focus {
