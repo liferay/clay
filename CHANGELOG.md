@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
+
+### Bug Fixes
+
+-   **@clayui/css:** Forms use fixed value for $input-height-inner, $input-height-inner-half, $input-height-inner-quarter to reduce Sass errors with CSS custom properties in $input-line-height and \$input-padding-y ([2fa8ca3](https://github.com/liferay/clay/commit/2fa8ca3)), closes [#4247](https://github.com/liferay/clay/issues/4247)
+
 ## [3.35.2](https://github.com/liferay/clay/compare/v3.35.1...v3.35.2) (2021-08-30)
 
 ### Bug Fixes

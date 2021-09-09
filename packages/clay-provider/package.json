@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/provider",
-	"version": "3.35.2",
+	"version": "3.35.3",
 	"description": "ClayProvider component in React",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -27,7 +27,7 @@
 	],
 	"dependencies": {
 		"@clayui/icon": "^3.32.0",
-		"@clayui/modal": "^3.35.2"
+		"@clayui/modal": "^3.35.3"
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
