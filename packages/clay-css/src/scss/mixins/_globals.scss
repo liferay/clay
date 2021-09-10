@@ -216,6 +216,10 @@
 				$value: null;
 			}
 
+			@if (starts-with($key, '--')) {
+				#{$key}: $value;
+			}
+
 			@if ($key == 'appearance') {
 				-moz-appearance: $value;
 				-webkit-appearance: $value;
