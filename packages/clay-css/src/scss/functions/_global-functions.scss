@@ -634,6 +634,20 @@
 	@return max($val1, $val2);
 }
 
+/// A function that determines whether the string `$str1` begins with the characters of the specified string `$str2`. This returns `true` if `$str1` begins with `$str2`.
+/// @param {String} $str1 - The string to search.
+/// @param {String} $str2 - The search parameter.
+
+@function starts-with($str1, $str2) {
+	$returnVal: false;
+
+	@if (str-index($str1, $str2) == 1) {
+		$returnVal: true;
+	}
+
+	@return $returnVal;
+}
+
 // * REUSE-Snippet-Begin
 // * SPDX-License-Identifier: MIT
 // * SPDX-FileCopyrightText: © 2016 Hugo Giraudel <https://hugogiraudel.com/>
