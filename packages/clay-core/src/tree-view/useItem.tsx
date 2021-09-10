@@ -5,6 +5,7 @@
 
 import React, {useContext, useEffect, useRef} from 'react';
 import {useDrag, useDrop} from 'react-dnd';
+import {getEmptyImage} from 'react-dnd-html5-backend';
 
 import {useTreeViewContext} from './context';
 
@@ -44,12 +45,16 @@ export function ItemContextProvider({children, value}: Props) {
 		key: keyRef.current,
 	};
 
-	const [, drag] = useDrag({
+	const [, drag, preview] = useDrag({
 		item: {
 			...item,
 			type: 'treeViewItem',
 		},
 	});
+
+	useEffect(() => {
+		preview(getEmptyImage(), {captureDraggingState: true});
+	}, [preview]);
 
 	const [, drop] = useDrop({
 		accept: 'treeViewItem',
