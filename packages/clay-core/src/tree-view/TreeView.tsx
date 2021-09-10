@@ -9,6 +9,7 @@ import {DndProvider} from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
+import DragLayer from './DragLayer';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
 import {Icons, TreeViewContext} from './context';
@@ -79,6 +80,7 @@ export function TreeView<T>({
 			<DndProvider backend={HTML5Backend}>
 				<TreeViewContext.Provider value={context}>
 					<Collection<T> items={items}>{children}</Collection>
+					<DragLayer />
 				</TreeViewContext.Provider>
 			</DndProvider>
 		</ul>
