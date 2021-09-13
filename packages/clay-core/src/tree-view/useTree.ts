@@ -48,7 +48,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	});
 
 	const [items, setItems] = useInternalState({
-		initialValue: [],
+		initialValue: props.items ?? [],
 		onChange: props.onItemsChange,
 		value: props.items,
 	});
