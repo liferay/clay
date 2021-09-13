@@ -4,18 +4,19 @@
  */
 
 import React, {useContext, useEffect, useRef} from 'react';
+import {useDrag, useDrop} from 'react-dnd';
 
 import {useTreeViewContext} from './context';
 
 type Value = {
 	[propName: string]: any;
+	indexes: Array<number>;
 	key: React.Key;
 };
 
 type Props = {
 	children: React.ReactNode;
-	dragAndDropEnabled?: boolean;
-	value: Value;
+	value: Omit<Value, 'indexes'> & {index: number};
 };
 
 const ItemContext = React.createContext<Value>({} as Value);
@@ -24,29 +25,60 @@ function getKey(key: React.Key) {
 	return `${key}`.replace('.$', '');
 }
 
-export function ItemContextProvider({
-	children,
-	dragAndDropEnabled = false,
-	value,
-}: Props) {
-	const {selection} = useTreeViewContext();
-	const {key: parentKey} = useItem();
+export function ItemContextProvider({children, value}: Props) {
+	const {items, open, reorder, selection} = useTreeViewContext();
+	const {indexes: parentIndexes = [], key: parentKey} = useItem();
 
 	const keyRef = useRef(getKey(value.key));
+
+	const childRef = useRef(null);
 
 	useEffect(
 		() => selection.createPartialLayoutItem(keyRef.current, parentKey),
 		[selection.createPartialLayoutItem, keyRef, parentKey]
 	);
 
-	const props = {
+	const item: Value = {
 		...value,
-		dragAndDropEnabled,
+		indexes: [...parentIndexes, value.index],
 		key: keyRef.current,
 	};
 
+	const [, drag] = useDrag({
+		item: {
+			...item,
+			type: 'treeViewItem',
+		},
+	});
+
+	const [, drop] = useDrop({
+		accept: 'treeViewItem',
+		collect: (monitor) => ({
+			canDrop: monitor.canDrop(),
+			overTarget: monitor.isOver({shallow: true}),
+		}),
+		drop(dragItem: unknown, monitor) {
+			if (monitor.didDrop()) {
+				return;
+			}
+
+			reorder((dragItem as Value).indexes, item.indexes);
+		},
+		hover() {
+			open(item.key);
+		},
+	});
+
+	if (items && items.length) {
+		drag(drop(childRef));
+	}
+
 	return (
-		<ItemContext.Provider value={props}>{children}</ItemContext.Provider>
+		<ItemContext.Provider value={item}>
+			{React.cloneElement(children as JSX.Element, {
+				ref: childRef,
+			})}
+		</ItemContext.Provider>
 	);
 }
 

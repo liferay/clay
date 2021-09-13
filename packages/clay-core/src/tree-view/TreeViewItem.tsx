@@ -8,7 +8,6 @@ import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
-import {useDrag, useDrop} from 'react-dnd';
 
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
@@ -19,116 +18,76 @@ type TreeViewItemProps = {
 
 const SpacingContext = React.createContext(0);
 
-export function TreeViewItem({children}: TreeViewItemProps) {
-	const spacing = useContext(SpacingContext);
-	const {
-		childrenRoot,
-		expandedKeys,
-		items,
-		nestedKey,
-		open,
-		toggle,
-	} = useTreeViewContext();
+export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
+	function TreeViewItemInner({children}, ref) {
+		const spacing = useContext(SpacingContext);
+		const {
+			childrenRoot,
+			expandedKeys,
+			nestedKey,
+			toggle,
+		} = useTreeViewContext();
 
-	const item = useItem();
+		const item = useItem();
 
-	const [left, right] = React.Children.toArray(children);
+		const [left, right] = React.Children.toArray(children);
 
-	const group =
-		// @ts-ignore
-		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
+		const group =
+			// @ts-ignore
+			right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
-	if (!group && nestedKey && item[nestedKey] && childrenRoot) {
-		return childrenRoot(item);
-	}
+		if (!group && nestedKey && item[nestedKey] && childrenRoot) {
+			return React.cloneElement(childrenRoot(item), {
+				ref,
+			});
+		}
 
-	/* eslint-disable */
-	const ref = React.useRef(null);
-
-	const [, drag] = useDrag({
-		end(dragItem: any) {
-			if (!items || !Array.isArray(items)) {
-				return;
-			}
-			if (dragItem.parentIndex) {
-				const parentItem: any = items?.find(
-					(item: any) => item.index === dragItem.parentIndex
-				);
-				if (parentItem) {
-					const childIndex: number = parentItem.children.findIndex(
-						(item: any) => item.index === dragItem.index
-					);
-					if (childIndex !== -1) {
-						parentItem.children.splice(childIndex, 1);
-						toggle(parentItem.key);
-					}
-				}
-			}
-		},
-		item: {
-			...item,
-			type: 'treeViewItem',
-		},
-	});
-
-	const [, drop] = useDrop({
-		accept: 'treeViewItem',
-		drop(dragItem: any) {
-			if (!Array.isArray(item.children)) {
-				item.children = [];
-			}
-
-			item.children.push(dragItem);
-
-			return dragItem;
-		},
-		hover() {
-			open(item.key);
-		},
-	});
-
-	drag(drop(ref));
-
-	return (
-		<SpacingContext.Provider value={spacing + 24}>
-			<li className="treeview-item" ref={ref} role="none">
-				<div
-					aria-expanded={
-						group ? expandedKeys.has(item.key) : undefined
-					}
-					className={classNames('treeview-link', {
-						collapsed: group && expandedKeys.has(item.key),
-					})}
-					onClick={() => group && toggle(item.key)}
-					role="treeitem"
-					style={{paddingLeft: `${spacing}px`}}
-					tabIndex={0}
-				>
-					<span
-						className="c-inner"
-						style={{marginLeft: `-${spacing}px`}}
-						tabIndex={-2}
+		return (
+			<SpacingContext.Provider value={spacing + 24}>
+				<li className="treeview-item" role="none">
+					<div
+						aria-expanded={
+							group ? expandedKeys.has(item.key) : undefined
+						}
+						className={classNames('treeview-link', {
+							collapsed: group && expandedKeys.has(item.key),
+						})}
+						onClick={() => group && toggle(item.key)}
+						ref={ref}
+						role="treeitem"
+						style={{paddingLeft: `${spacing}px`}}
+						tabIndex={0}
 					>
-						{typeof left === 'string' ? (
-							<Layout.ContentRow>
-								<Layout.ContentCol expand>
-									<div className="component-text">{left}</div>
-								</Layout.ContentCol>
-							</Layout.ContentRow>
-						) : group ? (
-							left
-						) : (
-							<TreeViewItemStack expandable={false}>
-								{children}
-							</TreeViewItemStack>
-						)}
-					</span>
-				</div>
-				{group}
-			</li>
-		</SpacingContext.Provider>
-	);
-}
+						<span
+							className="c-inner"
+							style={{marginLeft: `-${spacing}px`}}
+							tabIndex={-2}
+						>
+							{typeof left === 'string' ? (
+								<Layout.ContentRow>
+									<Layout.ContentCol expand>
+										<div className="component-text">
+											{left}
+										</div>
+									</Layout.ContentCol>
+								</Layout.ContentRow>
+							) : group ? (
+								left
+							) : (
+								<TreeViewItemStack expandable={false}>
+									{children}
+								</TreeViewItemStack>
+							)}
+						</span>
+					</div>
+					{group}
+				</li>
+			</SpacingContext.Provider>
+		);
+	}
+);
+
+TreeViewItem.displayName = 'ClayTreeViewItem';
 
 type TreeViewItemStackProps = {
 	children: React.ReactNode;

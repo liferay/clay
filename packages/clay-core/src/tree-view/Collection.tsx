@@ -31,8 +31,6 @@ export function Collection<T extends Record<any, any>>({
 }: ICollectionProps<T>) {
 	const {key: parentKey} = useItem();
 
-	const dragAndDropEnabled = typeof children === 'function';
-
 	return (
 		<>
 			{typeof children === 'function' && items
@@ -47,9 +45,8 @@ export function Collection<T extends Record<any, any>>({
 
 						return (
 							<ItemContextProvider
-								dragAndDropEnabled={dragAndDropEnabled}
 								key={key}
-								value={{...item, key}}
+								value={{...item, index, key}}
 							>
 								{child}
 							</ItemContextProvider>
@@ -63,7 +60,7 @@ export function Collection<T extends Record<any, any>>({
 						const key = getKey(index, child.key, parentKey);
 
 						return (
-							<ItemContextProvider key={key} value={{key}}>
+							<ItemContextProvider key={key} value={{index, key}}>
 								{child}
 							</ItemContextProvider>
 						);

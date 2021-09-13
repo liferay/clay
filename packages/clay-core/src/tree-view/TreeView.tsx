@@ -14,38 +14,9 @@ import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
 import {Icons, TreeViewContext} from './context';
 import {ITreeProps, useTree} from './useTree';
 
-function generateItemIndices<T>(
-	items: Array<T> | Record<string, T> | undefined
-) {
-	if (!items) {
-		return;
-	}
-	if (!Array.isArray(items)) {
-		items = Object.values(items);
-	}
-
-	let index = 0;
-
-	const queue = [...items];
-
-	while (queue.length) {
-		const item: any = queue.shift();
-		item.index = index;
-
-		if (Array.isArray(item.children)) {
-			for (let i = 0; i < item.children.length; i++) {
-				item.children[i].parentIndex = index;
-
-				queue.push(item.children[i]);
-			}
-		}
-		index++;
-	}
-}
-
 interface ITreeViewProps<T>
 	extends Omit<React.HTMLAttributes<HTMLUListElement>, 'children'>,
-		ITreeProps,
+		ITreeProps<T>,
 		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
@@ -70,16 +41,17 @@ export function TreeView<T>({
 	items,
 	nestedKey,
 	onExpandedChange,
+	onItemsChange,
 	onSelectionChange,
 	selectedKeys,
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
-	generateItemIndices(items);
-
-	const state = useTree({
+	const state = useTree<T>({
 		expandedKeys,
+		items,
 		onExpandedChange,
+		onItemsChange,
 		onSelectionChange,
 		selectedKeys,
 	});
