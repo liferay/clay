@@ -59,10 +59,6 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	});
 
 	const reorder = (from: Array<number>, path: Array<number>) => {
-		if (!Array.isArray(items)) {
-			return;
-		}
-
 		const tree = createImmutableTree(items);
 
 		tree.produce(from, path);
@@ -83,6 +79,10 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	};
 
 	const open = (key: Key) => {
+		if (expandedKeys.has(key)) {
+			return;
+		}
+
 		const expanded = new Set(expandedKeys);
 
 		if (!expanded.has(key)) {
