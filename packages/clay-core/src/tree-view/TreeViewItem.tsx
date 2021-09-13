@@ -6,7 +6,11 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import classNames from 'classnames';
 import React, {useContext} from 'react';
+
+import {useTreeViewContext} from './context';
+import {useItem} from './useItem';
 
 type TreeViewItemProps = {
 	children: React.ReactNode;
@@ -16,6 +20,14 @@ const SpacingContext = React.createContext(0);
 
 export function TreeViewItem({children}: TreeViewItemProps) {
 	const spacing = useContext(SpacingContext);
+	const {
+		childrenRoot,
+		expandedKeys,
+		nestedKey,
+		toggle,
+	} = useTreeViewContext();
+
+	const item = useItem();
 
 	const [left, right] = React.Children.toArray(children);
 
@@ -23,13 +35,21 @@ export function TreeViewItem({children}: TreeViewItemProps) {
 		// @ts-ignore
 		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
+	if (!group && nestedKey && item[nestedKey] && childrenRoot) {
+		return childrenRoot(item);
+	}
+
 	return (
 		<SpacingContext.Provider value={spacing + 24}>
 			<li className="treeview-item" role="none">
 				<div
-					aria-expanded="true"
-					className="treeview-link"
-					data-toggle="collapse"
+					aria-expanded={
+						group ? expandedKeys.has(item.key) : undefined
+					}
+					className={classNames('treeview-link', {
+						collapsed: group && expandedKeys.has(item.key),
+					})}
+					onClick={() => group && toggle(item.key)}
 					role="treeitem"
 					style={{paddingLeft: `${spacing}px`}}
 					tabIndex={0}
@@ -69,6 +89,15 @@ export function TreeViewItemStack({
 	children,
 	expandable = true,
 }: TreeViewItemStackProps) {
+	const {
+		expandedKeys,
+		expanderIcons,
+		selection,
+		toggle,
+	} = useTreeViewContext();
+
+	const item = useItem();
+
 	const childrenArray = React.Children.toArray(children);
 
 	return (
@@ -76,18 +105,31 @@ export function TreeViewItemStack({
 			{expandable && (
 				<Layout.ContentCol>
 					<Button
-						aria-expanded="true"
-						className="component-expander"
-						data-toggle="collapse"
+						aria-controls={`${item.key}`}
+						aria-expanded={expandedKeys.has(item.key)}
+						className={classNames('component-expander', {
+							collapsed: expandedKeys.has(item.key),
+						})}
 						displayType={null}
 						monospaced
+						onClick={() => toggle(item.key)}
 					>
 						<span className="c-inner" tabIndex={-2}>
-							<Icon symbol="angle-down" />
-							<Icon
-								className="component-expanded-d-none"
-								symbol="angle-right"
-							/>
+							{expanderIcons?.close ? (
+								expanderIcons.close
+							) : (
+								<Icon symbol="angle-down" />
+							)}
+							{expanderIcons?.open ? (
+								React.cloneElement(expanderIcons.open, {
+									className: 'component-expanded-d-none',
+								})
+							) : (
+								<Icon
+									className="component-expanded-d-none"
+									symbol="angle-right"
+								/>
+							)}
 						</span>
 					</Button>
 				</Layout.ContentCol>
@@ -96,12 +138,40 @@ export function TreeViewItemStack({
 			{React.Children.map(children, (child, index) => {
 				let content = child;
 
+				if (!content) {
+					return null;
+				}
+
 				if (typeof child === 'string') {
 					content = <div className="component-text">{child}</div>;
 
 					// @ts-ignore
 				} else if (child?.type.displayName === 'ClayIcon') {
 					content = <div className="component-icon">{child}</div>;
+
+					// @ts-ignore
+				} else if (child?.type.displayName === 'ClayCheckbox') {
+					content = React.cloneElement(child as React.ReactElement, {
+						checked: selection.selectedKeys.has(item.key),
+						indeterminate: selection.isIntermediate(item.key),
+						onChange: () => selection.toggleSelection(item.key),
+						onClick: (
+							event: React.MouseEvent<
+								HTMLInputElement,
+								MouseEvent
+							>
+						) => {
+							event.stopPropagation();
+
+							const {
+								onClick,
+							} = (child as React.ReactElement).props;
+
+							if (onClick) {
+								onClick(event);
+							}
+						},
+					});
 				}
 
 				return (

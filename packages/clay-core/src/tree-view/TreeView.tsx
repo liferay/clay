@@ -6,20 +6,19 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
-import {TreeViewContext} from './context';
-import type {IExpandable, IMultipleSelection} from './useTree';
-
-type ChildrenFunction<T> = (item: T) => React.ReactElement;
+import {Icons, TreeViewContext} from './context';
+import {ITreeProps, useTree} from './useTree';
 
 interface ITreeViewProps<T>
-	extends React.HTMLAttributes<HTMLUListElement>,
-		IMultipleSelection,
-		IExpandable {
-	children: React.ReactNode | ChildrenFunction<T>;
+	extends Omit<React.HTMLAttributes<HTMLUListElement>, 'children'>,
+		ITreeProps,
+		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
-	items?: Array<T>;
+	expanderIcons?: Icons;
+	nestedKey?: string;
 	showExpanderOnHover?: boolean;
 }
 
@@ -35,10 +34,34 @@ export function TreeView<T>({
 	children,
 	className,
 	displayType = 'light',
+	expandedKeys,
+	expanderIcons,
 	items,
+	nestedKey,
+	onExpandedChange,
+	onSelectionChange,
+	selectedKeys,
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
+	const state = useTree({
+		expandedKeys,
+		onExpandedChange,
+		onSelectionChange,
+		selectedKeys,
+	});
+
+	const context = {
+		childrenRoot:
+			typeof children === 'function'
+				? (children as ChildrenFunction<Object>)
+				: undefined,
+		expanderIcons,
+		nestedKey,
+		showExpanderOnHover,
+		...state,
+	};
+
 	return (
 		<ul
 			{...otherProps}
@@ -48,24 +71,13 @@ export function TreeView<T>({
 			})}
 			role="tree"
 		>
-			<TreeViewContext.Provider value={{showExpanderOnHover}}>
-				{items
-					? items.map((item, index) => {
-							if (typeof children === 'function') {
-								return React.cloneElement(
-									children(item) as React.ReactElement,
-									{key: index}
-								);
-							}
-
-							return null;
-					  })
-					: children}
+			<TreeViewContext.Provider value={context}>
+				<Collection<T> items={items}>{children}</Collection>
 			</TreeViewContext.Provider>
 		</ul>
 	);
 }
 
-TreeView.Item = TreeViewItem;
 TreeView.Group = TreeViewGroup;
+TreeView.Item = TreeViewItem;
 TreeView.ItemStack = TreeViewItemStack;
