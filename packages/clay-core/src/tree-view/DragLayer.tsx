@@ -1,3 +1,8 @@
+/**
+ * SPDX-FileCopyrightText: © 2021 Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 import React, {CSSProperties} from 'react';
 import {DragLayerMonitor, XYCoord, useDragLayer} from 'react-dnd';
 
