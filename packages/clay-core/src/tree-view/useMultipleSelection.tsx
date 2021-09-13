@@ -39,7 +39,7 @@ export function useMultipleSelection(
 	const layoutKeys = useRef(new Map<Key, LayoutInfo>());
 
 	const [selectedKeys, setSelectionKeys] = useInternalState<Set<Key>>({
-		initialValue: new Set(),
+		initialValue: props.selectedKeys ?? new Set(),
 		onChange: props.onSelectionChange,
 		value: props.selectedKeys,
 	});

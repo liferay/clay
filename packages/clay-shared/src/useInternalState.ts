@@ -21,7 +21,9 @@ export function useInternalState<TValue>({
 	onChange,
 	value,
 }: IArgs<TValue>) {
-	const [internalValue, setInternalValue] = React.useState(initialValue);
+	const [internalValue, setInternalValue] = React.useState(
+		initialValue ?? value
+	);
 
 	if (typeof value === 'undefined' || typeof onChange === 'undefined') {
 		value = internalValue;

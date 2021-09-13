@@ -79,7 +79,7 @@ export function TreeView<T>({
 		>
 			<DndProvider backend={HTML5Backend}>
 				<TreeViewContext.Provider value={context}>
-					<Collection<T> items={items}>{children}</Collection>
+					<Collection<T> items={state.items}>{children}</Collection>
 					<DragLayer />
 				</TreeViewContext.Provider>
 			</DndProvider>
