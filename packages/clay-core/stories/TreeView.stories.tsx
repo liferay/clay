@@ -139,6 +139,7 @@ storiesOf('Components|ClayTreeView', module)
 						name: 'Documents and Media',
 					},
 				]}
+				nestedKey="children"
 			>
 				{(item) => (
 					<TreeView.Item>
