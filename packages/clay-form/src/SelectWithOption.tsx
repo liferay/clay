@@ -30,7 +30,7 @@ const ClaySelectWithOption: React.FunctionComponent<IProps> = ({
 		{options.map((option, index) => {
 			if (option.type === 'group') {
 				return (
-					<Select.OptGroup label={option.label}>
+					<Select.OptGroup key={index} label={option.label}>
 						{option.options &&
 							option.options.map((item, j) => (
 								<Select.Option {...item} key={j} />
