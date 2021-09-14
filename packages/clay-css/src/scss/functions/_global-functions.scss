@@ -247,7 +247,7 @@
 	);
 
 	@if ($enable-transitions) {
-		@return $transition;
+		@return $transitions;
 	}
 
 	@return null;
