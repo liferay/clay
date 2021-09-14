@@ -29,11 +29,13 @@ export interface ITreeProps<T>
 	extends IExpandable,
 		IMultipleSelection,
 		Pick<ICollectionProps<T>, 'items'> {
+	nestedKey?: string;
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
 }
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	expandedKeys: Set<Key>;
+	nestedKey?: string;
 	open: (key: Key) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
 	selection: IMultipleSelectionState;
@@ -59,7 +61,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	});
 
 	const reorder = (from: Array<number>, path: Array<number>) => {
-		const tree = createImmutableTree(items);
+		const tree = createImmutableTree(items, props.nestedKey!);
 
 		tree.produce(from, path);
 
@@ -109,22 +111,36 @@ type Patch = {
 	path: Array<number>;
 };
 
-function createImmutableTree<T extends Array<Record<string, any>>>(tree: T) {
+export function createImmutableTree<T extends Array<Record<string, any>>>(
+	initialTree: T,
+	nestedKey: string
+) {
 	const patches: Array<Patch> = [];
 
-	function nodeByPath(path: Array<number>): any {
+	let immutableTree = [...initialTree] as T;
+
+	function pointer(tree: T, index: number, item: any) {
+		return [...tree.slice(0, index), item, ...tree.slice(index + 1)] as T;
+	}
+
+	function nodeByPath(path: Array<number>) {
 		const queue = [...path];
 		const rootIndex: number = queue.shift() as number;
-		let item = tree[rootIndex];
-		let parent = tree;
+
+		let item = {...immutableTree[rootIndex]};
+		let parent = null;
 		let index = rootIndex;
+
+		immutableTree = pointer(immutableTree, index, item);
 
 		while (queue.length) {
 			index = queue.shift() as number;
 
-			if (Array.isArray(item.children) && item.children.length) {
-				parent = item.children as T;
-				item = item.children[index];
+			if (Array.isArray(item[nestedKey]) && item[nestedKey].length) {
+				parent = item;
+				item = {...item[nestedKey][index]};
+
+				parent[nestedKey] = pointer(parent[nestedKey], index, item);
 			}
 		}
 
@@ -146,22 +162,31 @@ function createImmutableTree<T extends Array<Record<string, any>>>(tree: T) {
 				// location with the value that was removed.
 				case 'move': {
 					const nodeToRemove = nodeByPath(from);
-					const newChildren = nodeToRemove.parent.filter(
-						(item: any, index: number) =>
-							index !== nodeToRemove.index
-					);
 
-					let oldParentNode = tree[from[0]];
-					for (let i = 1; i < from.length - 2; i++) {
-						oldParentNode = oldParentNode.children[from[i]];
+					if (nodeToRemove.parent) {
+						nodeToRemove.parent[nestedKey] = nodeToRemove.parent[
+							nestedKey
+						].filter(
+							(item: any, index: number) =>
+								index !== nodeToRemove.index
+						);
+					} else {
+						immutableTree = immutableTree.filter(
+							(item: any, index: number) =>
+								index !== nodeToRemove.index
+						) as T;
 					}
-					oldParentNode.children = newChildren;
 
-					let destinationNode = tree[path[0]];
-					for (let i = 1; i < path.length; i++) {
-						destinationNode = destinationNode.children[path[i]];
+					const pathToAdd = nodeByPath(path);
+
+					if (!Array.isArray(pathToAdd.item[nestedKey])) {
+						pathToAdd.item[nestedKey] = [];
 					}
-					destinationNode.children.push(nodeToRemove.item);
+
+					pathToAdd.item[nestedKey] = [
+						...pathToAdd.item[nestedKey],
+						nodeToRemove.item,
+					];
 					break;
 				}
 				default:
@@ -169,7 +194,7 @@ function createImmutableTree<T extends Array<Record<string, any>>>(tree: T) {
 			}
 		});
 
-		return tree;
+		return immutableTree;
 	}
 
 	function produce(from: Array<number>, path: Array<number>) {

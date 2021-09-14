@@ -21,7 +21,6 @@ interface ITreeViewProps<T>
 		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
-	nestedKey?: string;
 	showExpanderOnHover?: boolean;
 }
 
@@ -51,6 +50,7 @@ export function TreeView<T>({
 	const state = useTree<T>({
 		expandedKeys,
 		items,
+		nestedKey,
 		onExpandedChange,
 		onItemsChange,
 		onSelectionChange,
@@ -63,7 +63,6 @@ export function TreeView<T>({
 				? (children as ChildrenFunction<Object>)
 				: undefined,
 		expanderIcons,
-		nestedKey,
 		showExpanderOnHover,
 		...state,
 	};
