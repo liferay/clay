@@ -233,6 +233,8 @@
 		)
 	);
 
+	$disabled-focus: setter(map-get($disabled, focus), ());
+
 	$nested-disabled-active: setter(map-get($disabled, active), ());
 	$disabled-active: setter(map-get($map, disabled-active), ());
 	$disabled-active: map-merge($nested-disabled-active, $disabled-active);
@@ -281,7 +283,9 @@
 		)
 	);
 
+	$btn-section: setter(map-get($map, btn-section), ());
 	$section: setter(map-get($map, section), ());
+	$section: map-merge($btn-section, $section);
 	$section: map-merge(
 		$section,
 		(
@@ -409,6 +413,10 @@
 		&:disabled,
 		&.disabled {
 			@include clay-css($disabled);
+
+			&:focus {
+				@include clay-css($disabled-focus);
+			}
 
 			&:active {
 				@include clay-css($disabled-active);
