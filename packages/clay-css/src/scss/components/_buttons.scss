@@ -1,94 +1,19 @@
 .btn {
-	background-color: transparent;
-	border: $btn-border-width solid transparent;
-
-	@include border-radius($btn-border-radius, 0);
-	@include box-shadow($btn-box-shadow);
-
-	color: $body-color;
-	cursor: $btn-cursor;
-	display: inline-block;
-	font-family: $btn-font-family;
-	font-size: $btn-font-size;
-	font-weight: $btn-font-weight;
-	line-height: $btn-line-height;
-	padding: $btn-padding-y $btn-padding-x;
-	text-align: center;
-	text-transform: none;
-
-	@include transition($btn-transition);
-
-	user-select: none;
-	vertical-align: middle;
-	white-space: $btn-white-space;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-mobile;
-		padding-bottom: $btn-padding-y-mobile;
-		padding-left: $btn-padding-x-mobile;
-		padding-right: $btn-padding-x-mobile;
-		padding-top: $btn-padding-y-mobile;
-	}
-
-	&:hover {
-		color: $body-color;
-		text-decoration: none;
-	}
-
-	&:focus,
-	&.focus {
-		box-shadow: $btn-focus-box-shadow;
-		outline: 0;
-	}
-
-	&:active,
-	&.active {
-		@include box-shadow($btn-active-box-shadow);
-
-		&:focus {
-			@if ($enable-shadows and $btn-active-box-shadow != none) {
-				box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
-			} @else {
-				box-shadow: $btn-focus-box-shadow;
-			}
-		}
-	}
-
-	&.disabled,
-	&:disabled {
-		cursor: $btn-disabled-cursor;
-		opacity: $btn-disabled-opacity;
-
-		&:focus,
-		&:focus:active {
-			box-shadow: none;
-		}
-
-		&:active {
-			pointer-events: none;
-		}
-	}
+	@include clay-button-variant($btn);
 }
 
 fieldset:disabled a.btn {
-	box-shadow: none;
-	cursor: $btn-disabled-cursor;
-	opacity: $btn-disabled-opacity;
+	$btn-disabled: setter(map-get($btn, disabled), ());
+
+	@include clay-css($btn-disabled);
+
+	&:focus {
+		@include clay-css(setter(map-get($btn-disabled, focus), ()));
+	}
 
 	&:active {
-		pointer-events: none;
+		@include clay-css(setter(map-get($btn-disabled, active), ()));
 	}
-}
-
-.btn .inline-item {
-	font-size: $btn-inline-item-font-size;
-}
-
-.btn-section {
-	display: block;
-	font-size: $btn-section-font-size;
-	font-weight: $btn-section-font-weight;
-	line-height: $btn-section-line-height;
 }
 
 // Button Sizes
@@ -260,16 +185,6 @@ input[type='button'] {
 // Button C Inner
 
 @if ($enable-c-inner) {
-	.btn .c-inner {
-		margin: #{math-sign($btn-padding-y)} #{math-sign($btn-padding-x)};
-
-		@include clay-scale-component {
-			margin: #{math-sign($btn-padding-y-mobile)} #{math-sign(
-					$btn-padding-x-mobile
-				)};
-		}
-	}
-
 	.btn-unstyled .c-inner {
 		margin: 0;
 		max-width: none;

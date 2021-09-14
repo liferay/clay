@@ -30,6 +30,79 @@ $btn-section-font-size: 0.6875rem !default; // 11px
 $btn-section-font-weight: $font-weight-normal !default;
 $btn-section-line-height: 1 !default;
 
+$btn: () !default;
+$btn: map-deep-merge(
+	(
+		background-color: transparent,
+		border-color: transparent,
+		border-style: solid,
+		border-width: $btn-border-width,
+		border-radius: clay-enable-rounded($btn-border-radius),
+		box-shadow: clay-enable-shadows([$btn-box-shadow]),
+		color: $body-color,
+		cursor: $btn-cursor,
+		display: inline-block,
+		font-family: $btn-font-family,
+		font-size: $btn-font-size,
+		font-weight: $btn-font-weight,
+		line-height: $btn-line-height,
+		padding-bottom: $btn-padding-y,
+		padding-left: $btn-padding-x,
+		padding-right: $btn-padding-x,
+		padding-top: $btn-padding-y,
+		text-align: center,
+		text-transform: none,
+		transition: clay-enable-transitions($btn-transition),
+		user-select: none,
+		vertical-align: middle,
+		white-space: $btn-white-space,
+		mobile: (
+			font-size: $btn-font-size-mobile,
+			padding-bottom: $btn-padding-y-mobile,
+			padding-left: $btn-padding-x-mobile,
+			padding-right: $btn-padding-x-mobile,
+			padding-top: $btn-padding-y-mobile,
+		),
+		hover: (
+			color: $body-color,
+			text-decoration: none,
+		),
+		focus: (
+			box-shadow: $btn-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			box-shadow: clay-enable-shadows([$btn-active-box-shadow]),
+			focus: (
+				box-shadow: clay-enable-shadows([$btn-focus-box-shadow]),
+			),
+		),
+		active-class: (
+			box-shadow: clay-enable-shadows([$btn-active-box-shadow]),
+		),
+		disabled: (
+			cursor: $btn-disabled-cursor,
+			opacity: $btn-disabled-opacity,
+			focus: (
+				box-shadow: none,
+			),
+			active: (
+				pointer-events: none,
+			),
+		),
+		inline-item: (
+			font-size: $btn-inline-item-font-size,
+		),
+		btn-section: (
+			display: block,
+			font-size: $btn-section-font-size,
+			font-weight: $btn-section-font-weight,
+			line-height: $btn-section-line-height,
+		),
+	),
+	$btn
+);
+
 // Button Lg
 
 $btn-border-radius-lg: $border-radius-lg !default;

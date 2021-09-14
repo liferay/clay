@@ -10,11 +10,37 @@ $btn-focus-box-shadow: $component-focus-box-shadow !default;
 
 $btn-disabled-opacity: 0.4 !default;
 
-$btn-link-disabled-color: $link-color !default;
-
 $btn-active-box-shadow: none !default;
 
 $btn-inline-item-font-size: 1rem !default; // 16px
+
+$btn: () !default;
+$btn: map-deep-merge(
+	(
+		box-shadow: $btn-box-shadow,
+		font-weight: $btn-font-weight,
+		padding-bottom: $btn-padding-y,
+		padding-left: $btn-padding-x,
+		padding-right: $btn-padding-x,
+		padding-top: $btn-padding-y,
+		transition: clay-enable-transitions($btn-transition),
+		focus: (
+			box-shadow: $btn-focus-box-shadow,
+		),
+		active: (
+			box-shadow: $btn-active-box-shadow,
+		),
+		disabled: (
+			opacity: $btn-disabled-opacity,
+		),
+		inline-item: (
+			font-size: $btn-inline-item-font-size,
+		),
+	),
+	$btn
+);
+
+$btn-link-disabled-color: $link-color !default;
 
 // Button Sizes
 
