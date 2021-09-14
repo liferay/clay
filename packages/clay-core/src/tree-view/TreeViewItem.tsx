@@ -14,12 +14,13 @@ import {useItem} from './useItem';
 
 type TreeViewItemProps = {
 	children: React.ReactNode;
+	overTarget?: boolean;
 };
 
 const SpacingContext = React.createContext(0);
 
 export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
-	function TreeViewItemInner({children}, ref) {
+	function TreeViewItemInner({children, overTarget}, ref) {
 		const spacing = useContext(SpacingContext);
 		const {
 			childrenRoot,
@@ -38,6 +39,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 
 		if (!group && nestedKey && item[nestedKey] && childrenRoot) {
 			return React.cloneElement(childrenRoot(item), {
+				overTarget,
 				ref,
 			});
 		}
@@ -55,7 +57,10 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 						onClick={() => group && toggle(item.key)}
 						ref={ref}
 						role="treeitem"
-						style={{paddingLeft: `${spacing}px`}}
+						style={{
+							backgroundColor: overTarget ? 'aliceblue' : '',
+							paddingLeft: `${spacing}px`,
+						}}
 						tabIndex={0}
 					>
 						<span

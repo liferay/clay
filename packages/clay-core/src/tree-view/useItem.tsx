@@ -56,7 +56,7 @@ export function ItemContextProvider({children, value}: Props) {
 		preview(getEmptyImage(), {captureDraggingState: true});
 	}, [preview]);
 
-	const [, drop] = useDrop({
+	const [{overTarget}, drop] = useDrop({
 		accept: 'treeViewItem',
 		collect: (monitor) => ({
 			canDrop: monitor.canDrop(),
@@ -67,7 +67,21 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			reorder((dragItem as Value).indexes, item.indexes);
+			if (!childRef || childRef.current === null) {
+				return;
+			}
+
+			const dropItemBoundingRect = (childRef.current! as HTMLElement).getBoundingClientRect();
+			const dragItemOffset = monitor.getClientOffset();
+			const hoverItemY = dragItemOffset!.y - dropItemBoundingRect!.top;
+
+			const [...indexes] = item.indexes;
+
+			if (hoverItemY < dropItemBoundingRect.height / 2) {
+				indexes.pop();
+			}
+
+			reorder((dragItem as Value).indexes, indexes);
 		},
 		hover() {
 			open(item.key);
@@ -81,6 +95,7 @@ export function ItemContextProvider({children, value}: Props) {
 	return (
 		<ItemContext.Provider value={item}>
 			{React.cloneElement(children as JSX.Element, {
+				overTarget,
 				ref: childRef,
 			})}
 		</ItemContext.Provider>

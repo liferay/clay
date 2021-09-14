@@ -186,6 +186,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 						...pathToAdd.item[nestedKey],
 						nodeToRemove.item,
 					];
+
 					break;
 				}
 				default:

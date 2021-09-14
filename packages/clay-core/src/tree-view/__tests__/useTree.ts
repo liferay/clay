@@ -77,4 +77,50 @@ describe('useTree', () => {
 
 		expect(result).toMatchObject(newTree);
 	});
+
+	it('can move nested items', () => {
+		const tree = [
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Liferay Drive',
+			},
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Repositories',
+			},
+			{
+				children: [{name: 'PDF'}, {name: 'Word'}],
+				name: 'Documents and Media',
+			},
+		];
+
+		const newTree = [
+			{
+				children: [
+					{name: 'Blogs'},
+					{
+						children: [{name: 'PDF'}],
+						name: 'Documents and Media',
+					},
+				],
+				name: 'Liferay Drive',
+			},
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Repositories',
+			},
+			{
+				children: [{name: 'Word'}],
+				name: 'Documents and Media',
+			},
+		];
+
+		const immutableTree = createImmutableTree(tree, 'children');
+
+		immutableTree.produce([2, 0], [0, 1]);
+
+		const result = immutableTree.applyPatches();
+
+		expect(result).toMatchObject(newTree);
+	});
 });
