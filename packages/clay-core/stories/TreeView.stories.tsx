@@ -135,7 +135,12 @@ storiesOf('Components|ClayTreeView', module)
 						name: 'Repositories',
 					},
 					{
-						children: [{name: 'PDF'}, {name: 'Word'}],
+						children: [
+							{name: 'PDF'},
+							{name: 'Word'},
+							{name: 'Google Drive'},
+							{name: 'Figma'},
+						],
 						name: 'Documents and Media',
 					},
 				]}

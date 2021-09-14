@@ -179,14 +179,33 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 					const pathToAdd = nodeByPath(path);
 
-					if (!Array.isArray(pathToAdd.item[nestedKey])) {
-						pathToAdd.item[nestedKey] = [];
+					if (pathToAdd.parent) {
+						if (!Array.isArray(pathToAdd.parent[nestedKey])) {
+							pathToAdd.parent[nestedKey] = [];
+						}
+
+						pathToAdd.parent[nestedKey].splice(pathToAdd.index, 1);
+						pathToAdd.parent[nestedKey].splice(
+							pathToAdd.index,
+							0,
+							nodeToRemove.item
+						);
+						pathToAdd.parent[nestedKey].splice(
+							pathToAdd.index + 1,
+							0,
+							pathToAdd.item
+						);
+					} else {
+						if (!Array.isArray(pathToAdd.item[nestedKey])) {
+							pathToAdd.item[nestedKey] = [];
+						}
+
+						pathToAdd.item[nestedKey] = [
+							...pathToAdd.item[nestedKey],
+							nodeToRemove.item,
+						];
 					}
 
-					pathToAdd.item[nestedKey] = [
-						...pathToAdd.item[nestedKey],
-						nodeToRemove.item,
-					];
 					break;
 				}
 				default:
