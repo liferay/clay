@@ -31,4 +31,50 @@ describe('useTree', () => {
 
 		expect(immutableTree.applyPatches()).not.toMatchObject(tree);
 	});
+
+	it('can move items from the root of the tree', () => {
+		const tree = [
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Liferay Drive',
+			},
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Repositories',
+			},
+			{
+				children: [{name: 'PDF'}, {name: 'Word'}],
+				name: 'Documents and Media',
+			},
+		];
+
+		const newTree = [
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Liferay Drive',
+			},
+			{
+				children: [
+					{name: 'Blogs'},
+					{name: 'Documents and Media'},
+					{name: 'PDF'},
+				],
+				name: 'Repositories',
+			},
+			{
+				children: [{name: 'Word'}],
+				name: 'Documents and Media',
+			},
+		];
+
+		const immutableTree = createImmutableTree(tree, 'children');
+
+		immutableTree.produce([2, 0], [1]);
+
+		const result = immutableTree.applyPatches();
+
+		expect(result.length).toEqual(3);
+
+		expect(result).toMatchObject(newTree);
+	});
 });
