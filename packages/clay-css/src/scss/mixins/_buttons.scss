@@ -372,13 +372,6 @@
 	@if ($enabled) {
 		@include clay-css($base);
 
-		@at-root {
-			a#{&},
-			button#{&} {
-				cursor: map-get($map, cursor);
-			}
-		}
-
 		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($mobile);
