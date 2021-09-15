@@ -63,6 +63,7 @@ export function TreeView<T>({
 				? (children as ChildrenFunction<Object>)
 				: undefined,
 		expanderIcons,
+		nestedKey,
 		showExpanderOnHover,
 		...state,
 	};

@@ -35,7 +35,6 @@ export interface ITreeProps<T>
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	expandedKeys: Set<Key>;
-	nestedKey?: string;
 	open: (key: Key) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
 	selection: IMultipleSelectionState;
