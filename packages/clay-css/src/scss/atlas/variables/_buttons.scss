@@ -42,7 +42,7 @@ $btn: map-deep-merge(
 
 $btn-link-disabled-color: $link-color !default;
 
-// Button Sizes
+// Button Lg
 
 $btn-border-radius-lg: $border-radius !default;
 $btn-font-size-lg: $font-size-lg !default; // 18px
@@ -50,10 +50,41 @@ $btn-padding-x-lg: 1.5rem !default; // 24px
 $btn-padding-y-lg: 0.59375rem !default; // 9.5px
 $btn-inline-item-font-size-lg: $font-size-lg !default; // 18px
 
+$btn-lg: () !default;
+$btn-lg: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($btn-border-radius-lg),
+		font-size: $btn-font-size-lg,
+		padding-bottom: $btn-padding-y-lg,
+		padding-left: $btn-padding-x-lg,
+		padding-right: $btn-padding-x-lg,
+		padding-top: $btn-padding-y-lg,
+		inline-item: (
+			font-size: $btn-inline-item-font-size-lg,
+		),
+	),
+	$btn-lg
+);
+
+// Button Sm
+
 $btn-font-size-sm: $font-size-sm !default; // 14px
 $btn-line-height-sm: 1.15 !default;
 $btn-padding-x-sm: 0.75rem !default; // 12px
 $btn-padding-y-sm: 0.4375rem !default; // 7px
+
+$btn-sm: () !default;
+$btn-sm: map-deep-merge(
+	(
+		font-size: $btn-font-size-sm,
+		line-height: $btn-line-height-sm,
+		padding-bottom: $btn-padding-y-sm,
+		padding-left: $btn-padding-x-sm,
+		padding-right: $btn-padding-x-sm,
+		padding-top: $btn-padding-y-sm,
+	),
+	$btn-sm
+);
 
 // Button Monospaced
 
