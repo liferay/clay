@@ -58,17 +58,7 @@ input[type='button'] {
 // Button Unstyled
 
 %btn-unstyled {
-	background-color: rgba(0, 0, 0, 0.001);
-	border-width: 0;
-	cursor: $btn-cursor;
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: inherit;
-	max-width: 100%;
-	padding: 0;
-	text-align: left;
-	text-transform: inherit;
-	vertical-align: baseline;
+	@include clay-button-variant($btn-unstyled);
 }
 
 .btn-unstyled {
@@ -78,22 +68,7 @@ input[type='button'] {
 // Button Monospaced
 
 .btn-monospaced {
-	height: $btn-monospaced-size;
-	line-height: 1;
-	overflow: hidden;
-	padding-bottom: $btn-monospaced-padding-y;
-	padding-left: $btn-monospaced-padding-x;
-	padding-right: $btn-monospaced-padding-x;
-	padding-top: $btn-monospaced-padding-y;
-	text-align: center;
-	white-space: normal;
-	width: $btn-monospaced-size;
-	word-wrap: break-word;
-
-	@include clay-scale-component {
-		height: $btn-monospaced-size-mobile;
-		width: $btn-monospaced-size-mobile;
-	}
+	@include clay-button-variant($btn-monospaced);
 
 	&.btn .lexicon-icon {
 		margin-top: 0;
@@ -101,17 +76,7 @@ input[type='button'] {
 }
 
 %clay-btn-monospaced-lg {
-	height: $btn-monospaced-size-lg;
-	padding-bottom: $btn-monospaced-padding-y-lg;
-	padding-left: $btn-monospaced-padding-x-lg;
-	padding-right: $btn-monospaced-padding-x-lg;
-	padding-top: $btn-monospaced-padding-y-lg;
-	width: $btn-monospaced-size-lg;
-
-	@include clay-scale-component {
-		height: $btn-monospaced-size-lg-mobile;
-		width: $btn-monospaced-size-lg-mobile;
-	}
+	@include clay-button-variant($btn-monospaced-lg);
 }
 
 .btn-monospaced.btn-lg {
@@ -119,77 +84,11 @@ input[type='button'] {
 }
 
 %clay-btn-monospaced-sm {
-	height: $btn-monospaced-size-sm;
-	padding-bottom: $btn-monospaced-padding-y-sm;
-	padding-left: $btn-monospaced-padding-x-sm;
-	padding-right: $btn-monospaced-padding-x-sm;
-	padding-top: $btn-monospaced-padding-y-sm;
-	width: $btn-monospaced-size-sm;
-
-	@include clay-scale-component {
-		height: $btn-monospaced-size-sm-mobile;
-		width: $btn-monospaced-size-sm-mobile;
-	}
+	@include clay-button-variant($btn-monospaced-sm);
 }
 
 .btn-monospaced.btn-sm {
 	@extend %clay-btn-monospaced-sm !optional;
-}
-
-// Button C Inner
-
-@if ($enable-c-inner) {
-	.btn-unstyled .c-inner {
-		margin: 0;
-		max-width: none;
-	}
-
-	.btn-monospaced .c-inner {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		height: calc(100% + #{$btn-monospaced-padding-y * 2});
-		justify-content: center;
-		margin: #{math-sign($btn-monospaced-padding-y)} 0;
-		padding: 0;
-		width: 100%;
-	}
-
-	.btn-sm {
-		.c-inner {
-			margin: #{math-sign($btn-padding-y-sm)}
-				#{math-sign($btn-padding-x-sm)};
-
-			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-sm-mobile)} #{math-sign(
-						$btn-padding-x-sm-mobile
-					)};
-			}
-		}
-
-		&.btn-monospaced .c-inner {
-			height: calc(100% + #{$btn-monospaced-padding-y-sm * 2});
-			margin: #{math-sign($btn-monospaced-padding-y-sm)} 0;
-		}
-	}
-
-	.btn-lg {
-		.c-inner {
-			margin: #{math-sign($btn-padding-y-lg)}
-				#{math-sign($btn-padding-x-lg)};
-
-			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-lg-mobile)} #{math-sign(
-						$btn-padding-x-lg-mobile
-					)};
-			}
-		}
-
-		&.btn-monospaced .c-inner {
-			height: calc(100% + #{$btn-monospaced-padding-y-lg * 2});
-			margin: #{math-sign($btn-monospaced-padding-y-lg)} 0;
-		}
-	}
 }
 
 // Button Variants
@@ -231,17 +130,7 @@ input[type='button'] {
 }
 
 .btn-outline-borderless {
-	border-color: transparent;
-
-	&:hover,
-	&:focus {
-		border-color: transparent;
-	}
-
-	&:disabled,
-	&.disabled {
-		border-color: transparent;
-	}
+	@include clay-button-variant($btn-outline-borderless);
 }
 
 .btn-outline-borderless:not(:disabled):not(.disabled):active {

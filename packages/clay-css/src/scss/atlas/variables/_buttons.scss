@@ -91,11 +91,48 @@ $btn-sm: map-deep-merge(
 $btn-monospaced-padding-y: 0.25rem !default; // 4px
 $btn-monospaced-size: 2.5rem !default; // 40px
 
+$btn-monospaced: () !default;
+$btn-monospaced: map-deep-merge(
+	(
+		height: $btn-monospaced-size,
+		padding-bottom: $btn-monospaced-padding-y,
+		padding-top: $btn-monospaced-padding-y,
+		width: $btn-monospaced-size,
+	),
+	$btn-monospaced
+);
+
+// Button Monospaced Lg
+
+$btn-monospaced-padding-y-lg: 0.375rem !default; // 6px
+
+$btn-monospaced-lg: () !default;
+$btn-monospaced-lg: map-deep-merge(
+	(
+		padding-bottom: $btn-monospaced-padding-y-lg,
+		padding-top: $btn-monospaced-padding-y-lg,
+	),
+	$btn-monospaced-lg
+);
+
+// Button Monospaced Sm
+
 $btn-monospaced-padding-x-sm: null !default;
 $btn-monospaced-padding-y-sm: 0.1875rem !default; // 3px
 $btn-monospaced-size-sm: 2rem !default; // 32px
 
-$btn-monospaced-padding-y-lg: 0.375rem !default; // 6px
+$btn-monospaced-sm: () !default;
+$btn-monospaced-sm: map-deep-merge(
+	(
+		height: $btn-monospaced-size-sm,
+		padding-bottom: $btn-monospaced-padding-y-sm,
+		padding-left: $btn-monospaced-padding-x-sm,
+		padding-right: $btn-monospaced-padding-x-sm,
+		padding-top: $btn-monospaced-padding-y-sm,
+		width: $btn-monospaced-size-sm,
+	),
+	$btn-monospaced-sm
+);
 
 // Button Group
 

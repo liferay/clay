@@ -191,21 +191,122 @@ $btn-monospaced-padding-x: 0 !default;
 $btn-monospaced-padding-y: 0.1875rem !default; // 3px
 $btn-monospaced-size: 2.375rem !default; // 38px
 
+$btn-monospaced-size-mobile: null !default;
+
+$btn-monospaced: () !default;
+$btn-monospaced: map-deep-merge(
+	(
+		height: $btn-monospaced-size,
+		line-height: 1,
+		overflow: hidden,
+		padding-bottom: $btn-monospaced-padding-y,
+		padding-left: $btn-monospaced-padding-x,
+		padding-right: $btn-monospaced-padding-x,
+		padding-top: $btn-monospaced-padding-y,
+		text-align: center,
+		white-space: normal,
+		width: $btn-monospaced-size,
+		word-wrap: break-word,
+		mobile: (
+			height: $btn-monospaced-size-mobile,
+			width: $btn-monospaced-size-mobile,
+		),
+		c-inner: (
+			align-items: center,
+			display: flex,
+			flex-direction: column,
+			height: calc(100% + #{$btn-monospaced-padding-y * 2}),
+			justify-content: center,
+			padding: 0,
+			width: 100%,
+		),
+	),
+	$btn-monospaced
+);
+
+// Button Monospaced Lg
+
 $btn-monospaced-padding-x-lg: 0 !default;
 $btn-monospaced-padding-y-lg: 0.3125rem !default; // 5px
 $btn-monospaced-size-lg: 3rem !default; // 48px
+
+$btn-monospaced-size-lg-mobile: null !default;
+
+$btn-monospaced-lg: () !default;
+$btn-monospaced-lg: map-deep-merge(
+	(
+		height: $btn-monospaced-size-lg,
+		padding-bottom: $btn-monospaced-padding-y-lg,
+		padding-left: $btn-monospaced-padding-x-lg,
+		padding-right: $btn-monospaced-padding-x-lg,
+		padding-top: $btn-monospaced-padding-y-lg,
+		width: $btn-monospaced-size-lg,
+		mobile: (
+			height: $btn-monospaced-size-lg-mobile,
+			width: $btn-monospaced-size-lg-mobile,
+		),
+		c-inner: (
+			height: calc(100% + #{$btn-monospaced-padding-y-lg * 2}),
+		),
+	),
+	$btn-monospaced-lg
+);
+
+// Button Monospaced Sm
 
 $btn-monospaced-padding-x-sm: 0 !default;
 $btn-monospaced-padding-y-sm: 0.125rem !default; // 2px
 $btn-monospaced-size-sm: 1.9375rem !default; // 31px
 
-$btn-monospaced-size-mobile: null !default;
-$btn-monospaced-size-lg-mobile: null !default;
 $btn-monospaced-size-sm-mobile: null !default;
+
+$btn-monospaced-sm: () !default;
+$btn-monospaced-sm: map-deep-merge(
+	(
+		height: $btn-monospaced-size-sm,
+		padding-bottom: $btn-monospaced-padding-y-sm,
+		padding-left: $btn-monospaced-padding-x-sm,
+		padding-right: $btn-monospaced-padding-x-sm,
+		padding-top: $btn-monospaced-padding-y-sm,
+		width: $btn-monospaced-size-sm,
+		mobile: (
+			height: $btn-monospaced-size-sm-mobile,
+			width: $btn-monospaced-size-sm-mobile,
+		),
+		c-inner: (
+			height: calc(100% + #{$btn-monospaced-padding-y-sm * 2}),
+		),
+	),
+	$btn-monospaced-sm
+);
 
 // Button Block
 
 $btn-block-spacing-y: 0.5rem !default;
+
+// Button Unstyled
+
+$btn-unstyled: () !default;
+$btn-unstyled: map-deep-merge(
+	(
+		background-color: rgba(0, 0, 0, 0.001),
+		border-width: 0,
+		cursor: $btn-cursor,
+		font-size: inherit,
+		font-weight: inherit,
+		line-height: inherit,
+		max-width: 100%,
+		padding: 0,
+		text-align: left,
+		text-transform: inherit,
+		vertical-align: baseline,
+		c-inner: (
+			margin: 0,
+			max-width: none,
+		),
+	),
+	$btn-unstyled
+);
 
 // Button Group
 
@@ -940,6 +1041,23 @@ $btn-outline-dark: map-deep-merge(
 		),
 	),
 	$btn-outline-dark
+);
+
+$btn-outline-borderless: () !default;
+$btn-outline-borderless: map-deep-merge(
+	(
+		border-color: transparent,
+		hover: (
+			border-color: transparent,
+		),
+		focus: (
+			border-color: transparent,
+		),
+		disabled: (
+			border-color: transparent,
+		),
+	),
+	$btn-outline-borderless
 );
 
 $btn-outline-palette: () !default;
