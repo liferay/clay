@@ -32,6 +32,79 @@ $cadmin-btn-section-font-size: 11px !default; // 11px
 $cadmin-btn-section-font-weight: $cadmin-font-weight-normal !default;
 $cadmin-btn-section-line-height: 1 !default;
 
+$cadmin-btn: () !default;
+$cadmin-btn: map-deep-merge(
+	(
+		background-color: transparent,
+		border-color: transparent,
+		border-style: solid,
+		border-width: $cadmin-btn-border-width,
+		border-radius: clay-enable-rounded($cadmin-btn-border-radius),
+		box-shadow: clay-enable-shadows([$cadmin-btn-box-shadow]),
+		color: $cadmin-body-color,
+		cursor: $cadmin-btn-cursor,
+		display: inline-block,
+		font-family: $cadmin-btn-font-family,
+		font-size: $cadmin-btn-font-size,
+		font-weight: $cadmin-btn-font-weight,
+		line-height: $cadmin-btn-line-height,
+		padding-bottom: $cadmin-btn-padding-y,
+		padding-left: $cadmin-btn-padding-x,
+		padding-right: $cadmin-btn-padding-x,
+		padding-top: $cadmin-btn-padding-y,
+		text-align: center,
+		text-transform: none,
+		transition: clay-enable-transitions($cadmin-btn-transition),
+		user-select: none,
+		vertical-align: middle,
+		white-space: $cadmin-btn-white-space,
+		mobile: (
+			font-size: $cadmin-btn-font-size-mobile,
+			padding-bottom: $cadmin-btn-padding-y-mobile,
+			padding-left: $cadmin-btn-padding-x-mobile,
+			padding-right: $cadmin-btn-padding-x-mobile,
+			padding-top: $cadmin-btn-padding-y-mobile,
+		),
+		hover: (
+			color: $cadmin-body-color,
+			text-decoration: none,
+		),
+		focus: (
+			box-shadow: $cadmin-btn-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			box-shadow: clay-enable-shadows([$cadmin-btn-active-box-shadow]),
+			focus: (
+				box-shadow: clay-enable-shadows([$cadmin-btn-focus-box-shadow]),
+			),
+		),
+		active-class: (
+			box-shadow: clay-enable-shadows([$cadmin-btn-active-box-shadow]),
+		),
+		disabled: (
+			cursor: $cadmin-btn-disabled-cursor,
+			opacity: $cadmin-btn-disabled-opacity,
+			focus: (
+				box-shadow: none,
+			),
+			active: (
+				pointer-events: none,
+			),
+		),
+		inline-item: (
+			font-size: $cadmin-btn-inline-item-font-size,
+		),
+		btn-section: (
+			display: block,
+			font-size: $cadmin-btn-section-font-size,
+			font-weight: $cadmin-btn-section-font-weight,
+			line-height: $cadmin-btn-section-line-height,
+		),
+	),
+	$cadmin-btn
+);
+
 // Button Lg
 
 $cadmin-btn-border-radius-lg: $cadmin-border-radius !default;
@@ -45,6 +118,33 @@ $cadmin-btn-section-font-size-lg: 13px !default; // 13px
 $cadmin-btn-font-size-lg-mobile: null !default;
 $cadmin-btn-padding-x-lg-mobile: null !default;
 $cadmin-btn-padding-y-lg-mobile: null !default;
+
+$cadmin-btn-lg: () !default;
+$cadmin-btn-lg: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($cadmin-btn-border-radius-lg),
+		font-size: $cadmin-btn-font-size-lg,
+		line-height: $cadmin-btn-line-height-lg,
+		padding-bottom: $cadmin-btn-padding-y-lg,
+		padding-left: $cadmin-btn-padding-x-lg,
+		padding-right: $cadmin-btn-padding-x-lg,
+		padding-top: $cadmin-btn-padding-y-lg,
+		mobile: (
+			font-size: $cadmin-btn-font-size-lg-mobile,
+			padding-bottom: $cadmin-btn-padding-y-lg-mobile,
+			padding-left: $cadmin-btn-padding-x-lg-mobile,
+			padding-right: $cadmin-btn-padding-x-lg-mobile,
+			padding-top: $cadmin-btn-padding-y-lg-mobile,
+		),
+		inline-item: (
+			font-size: $cadmin-btn-inline-item-font-size-lg,
+		),
+		btn-section: (
+			font-size: $cadmin-btn-section-font-size-lg,
+		),
+	),
+	$cadmin-btn-lg
+);
 
 // Button Sm
 
@@ -60,27 +160,155 @@ $cadmin-btn-font-size-sm-mobile: null !default;
 $cadmin-btn-padding-x-sm-mobile: null !default;
 $cadmin-btn-padding-y-sm-mobile: null !default;
 
+$cadmin-btn-sm: () !default;
+$cadmin-btn-sm: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($cadmin-btn-border-radius-sm),
+		font-size: $cadmin-btn-font-size-sm,
+		line-height: $cadmin-btn-line-height-sm,
+		padding-bottom: $cadmin-btn-padding-y-sm,
+		padding-left: $cadmin-btn-padding-x-sm,
+		padding-right: $cadmin-btn-padding-x-sm,
+		padding-top: $cadmin-btn-padding-y-sm,
+		mobile: (
+			font-size: $cadmin-btn-font-size-sm-mobile,
+			padding-bottom: $cadmin-btn-padding-y-sm-mobile,
+			padding-left: $cadmin-btn-padding-x-sm-mobile,
+			padding-right: $cadmin-btn-padding-x-sm-mobile,
+			padding-top: $cadmin-btn-padding-y-sm-mobile,
+		),
+		inline-item: (
+			font-size: $cadmin-btn-inline-item-font-size-sm,
+		),
+		btn-section: (
+			font-size: $cadmin-btn-section-font-size-sm,
+		),
+	),
+	$cadmin-btn-sm
+);
+
 // Button Monospaced
 
 $cadmin-btn-monospaced-padding-x: 0 !default;
 $cadmin-btn-monospaced-padding-y: 4px !default; // 4px
 $cadmin-btn-monospaced-size: 40px !default; // 40px
 
+$cadmin-btn-monospaced-size-mobile: null !default;
+
+$cadmin-btn-monospaced: () !default;
+$cadmin-btn-monospaced: map-deep-merge(
+	(
+		height: $cadmin-btn-monospaced-size,
+		line-height: 1,
+		overflow: hidden,
+		padding-bottom: $cadmin-btn-monospaced-padding-y,
+		padding-left: $cadmin-btn-monospaced-padding-x,
+		padding-right: $cadmin-btn-monospaced-padding-x,
+		padding-top: $cadmin-btn-monospaced-padding-y,
+		text-align: center,
+		white-space: normal,
+		width: $cadmin-btn-monospaced-size,
+		word-wrap: break-word,
+		mobile: (
+			height: $cadmin-btn-monospaced-size-mobile,
+			width: $cadmin-btn-monospaced-size-mobile,
+		),
+		c-inner: (
+			align-items: center,
+			display: flex,
+			flex-direction: column,
+			height: calc(100% + #{$cadmin-btn-monospaced-padding-y * 2}),
+			justify-content: center,
+			padding: 0,
+			width: 100%,
+		),
+	),
+	$cadmin-btn-monospaced
+);
+
+// Button Monospaced Lg
+
 $cadmin-btn-monospaced-padding-x-lg: 0 !default;
 $cadmin-btn-monospaced-padding-y-lg: 6px !default; // 6px
 $cadmin-btn-monospaced-size-lg: 48px !default; // 48px
+
+$cadmin-btn-monospaced-size-lg-mobile: null !default;
+
+$cadmin-btn-monospaced-lg: () !default;
+$cadmin-btn-monospaced-lg: map-deep-merge(
+	(
+		height: $cadmin-btn-monospaced-size-lg,
+		padding-bottom: $cadmin-btn-monospaced-padding-y-lg,
+		padding-left: $cadmin-btn-monospaced-padding-x-lg,
+		padding-right: $cadmin-btn-monospaced-padding-x-lg,
+		padding-top: $cadmin-btn-monospaced-padding-y-lg,
+		width: $cadmin-btn-monospaced-size-lg,
+		mobile: (
+			height: $cadmin-btn-monospaced-size-lg-mobile,
+			width: $cadmin-btn-monospaced-size-lg-mobile,
+		),
+		c-inner: (
+			height: calc(100% + #{$cadmin-btn-monospaced-padding-y-lg * 2}),
+		),
+	),
+	$cadmin-btn-monospaced-lg
+);
+
+// Button Monospaced Sm
 
 $cadmin-btn-monospaced-padding-x-sm: null !default;
 $cadmin-btn-monospaced-padding-y-sm: 3px !default; // 3px
 $cadmin-btn-monospaced-size-sm: 32px !default; // 32px
 
-$cadmin-btn-monospaced-size-mobile: null !default;
-$cadmin-btn-monospaced-size-lg-mobile: null !default;
 $cadmin-btn-monospaced-size-sm-mobile: null !default;
+
+$cadmin-btn-monospaced-sm: () !default;
+$cadmin-btn-monospaced-sm: map-deep-merge(
+	(
+		height: $cadmin-btn-monospaced-size-sm,
+		padding-bottom: $cadmin-btn-monospaced-padding-y-sm,
+		padding-left: $cadmin-btn-monospaced-padding-x-sm,
+		padding-right: $cadmin-btn-monospaced-padding-x-sm,
+		padding-top: $cadmin-btn-monospaced-padding-y-sm,
+		width: $cadmin-btn-monospaced-size-sm,
+		mobile: (
+			height: $cadmin-btn-monospaced-size-sm-mobile,
+			width: $cadmin-btn-monospaced-size-sm-mobile,
+		),
+		c-inner: (
+			height: calc(100% + #{$cadmin-btn-monospaced-padding-y-sm * 2}),
+		),
+	),
+	$cadmin-btn-monospaced-sm
+);
 
 // Button Block
 
 $cadmin-btn-block-spacing-y: 8px !default;
+
+// Button Unstyled
+
+$cadmin-btn-unstyled: () !default;
+$cadmin-btn-unstyled: map-deep-merge(
+	(
+		background-color: rgba(0, 0, 0, 0.001),
+		border-width: 0,
+		cursor: $cadmin-btn-cursor,
+		font-size: inherit,
+		font-weight: inherit,
+		line-height: inherit,
+		max-width: 100%,
+		padding: 0,
+		text-align: left,
+		text-transform: inherit,
+		vertical-align: baseline,
+		c-inner: (
+			margin: 0,
+			max-width: none,
+		),
+	),
+	$cadmin-btn-unstyled
+);
 
 // Button Group
 
@@ -700,6 +928,23 @@ $cadmin-btn-outline-dark: map-deep-merge(
 		),
 	),
 	$cadmin-btn-outline-dark
+);
+
+$cadmin-btn-outline-borderless: () !default;
+$cadmin-btn-outline-borderless: map-deep-merge(
+	(
+		border-color: transparent,
+		hover: (
+			border-color: transparent,
+		),
+		focus: (
+			border-color: transparent,
+		),
+		disabled: (
+			border-color: transparent,
+		),
+	),
+	$cadmin-btn-outline-borderless
 );
 
 $cadmin-btn-outline-palette: () !default;
