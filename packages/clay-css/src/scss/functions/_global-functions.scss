@@ -246,7 +246,7 @@
 		true
 	);
 
-	@if ($enable-transitions) {
+	@if ($enable) {
 		@return $transitions;
 	}
 
