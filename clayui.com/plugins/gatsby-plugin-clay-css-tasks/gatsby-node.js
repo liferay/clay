@@ -5,6 +5,7 @@
 
 const fs = require('fs');
 const sass = require('node-sass');
+const sassdoc = require('sassdoc');
 const path = require('path');
 
 const aliases = require('./clay-icon-aliases');
@@ -185,12 +186,87 @@ const generateCSSFiles = (pluginOptions) => {
 	);
 };
 
+const generateSassDocs = (pluginOptions) => {
+	const pjson = require(path.join('..', '..', 'package.json'));
+
+	var config = {
+		dest: path.join(pluginOptions.clayuiStatic, 'scss-api'),
+		package: {
+			description: pjson.description,
+			homepage: path.join('..', 'docs', 'get-started', 'index.html'),
+			license: pjson.license,
+			title: 'Clay CSS',
+			version: pjson.version,
+		},
+		// theme: path.join(__dirname, 'sassdoc-theme-clay-css'),
+		groups: {
+			undefined: 'Clay CSS',
+			alerts: 'Alerts',
+			applicationBar: 'Application Bar',
+			aspectRatio: 'Aspect Ratio',
+			badges: 'Badges',
+			breadcrumbs: 'Breadcrumbs',
+			breakpoints: 'Breakpoints',
+			bs4overwrites: 'Bootstrap 4 Overwrites',
+			buttons: 'Buttons',
+			cards: 'Cards',
+			caret: 'Caret',
+			clearfix: 'Clearfix',
+			customForms: 'Custom Forms',
+			drilldown: 'Drilldown',
+			dropdowns: 'Dropdowns',
+			float: 'Float',
+			forms: 'Forms',
+			globals: 'Globals',
+			gradients: 'Gradients',
+			grid: 'Grid',
+			hover: 'Hover',
+			image: 'Image',
+			inputGroups: 'Input Groups',
+			labels: 'Labels',
+			lineClamp: 'Line Clamp',
+			links: 'Links',
+			listGroup: 'List Group',
+			loaders: 'Loaders',
+			managementBar: 'Management Bar',
+			menubar: 'Menubar',
+			modals: 'Modals',
+			multiStepNav: 'Multi Step Nav',
+			nav: 'Nav',
+			navbar: 'Navbar',
+			navigationBar: 'Navigation Bar',
+			pagination: 'Pagination',
+			panels: 'Panels',
+			popovers: 'Popovers',
+			progressBars: 'Progress Bars',
+			quickAction: 'Quick Action',
+			sheet: 'Sheet',
+			sidebar: 'Sidebar',
+			sideNavigation: 'Side Navigation',
+			slideout: 'Slideout',
+			stickers: 'Stickers',
+			tables: 'Tables',
+			tbar: 'Tbar',
+			timelines: 'Timelines',
+			toggleSwitch: 'Toggle Switch',
+			tooltip: 'Tooltip',
+			type: 'Type',
+			utilities: 'Utilities',
+			vendorPrefixes: 'Vendor Prefixes',
+		},
+	};
+
+	sassdoc(path.join(pluginOptions.clayCssSrc, 'scss'), config);
+};
+
 exports.onPostBootstrap = ({reporter}, pluginOptions) => {
 	generateFiles(pluginOptions);
 
 	reporter.info(`Compiling icons.svg finished`);
 
 	generateCSSFiles(pluginOptions);
+
+	generateSassDocs(pluginOptions);
 
 	reporter.info(
 		`Compiling 'atlas.css', 'colors.css', 'base.css', 'cadmin.css' and 'colors-base.css' finished!`
@@ -213,6 +289,8 @@ exports.onCreateDevServer = ({reporter}, pluginOptions) => {
 			dir.match(/styles\/colors/g)
 		) {
 			generateCSSFiles(pluginOptions);
+
+			generateSassDocs(pluginOptions);
 
 			reporter.info(
 				`Compiling 'atlas.css', 'colors.css', 'base.css', 'cadmin.css' and 'colors-base.css' finished!`
