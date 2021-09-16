@@ -5,8 +5,8 @@
 
 const fs = require('fs');
 const sass = require('node-sass');
-const sassdoc = require('sassdoc');
 const path = require('path');
+const sassdoc = require('sassdoc');
 
 const aliases = require('./clay-icon-aliases');
 
@@ -187,20 +187,12 @@ const generateCSSFiles = (pluginOptions) => {
 };
 
 const generateSassDocs = (pluginOptions) => {
-	const pjson = require(path.join('..', '..', 'package.json'));
+	const pjson = require('../../package.json');
 
 	var config = {
 		dest: path.join(pluginOptions.clayuiStatic, 'scss-api'),
-		package: {
-			description: pjson.description,
-			homepage: path.join('..', 'docs', 'get-started', 'index.html'),
-			license: pjson.license,
-			title: 'Clay CSS',
-			version: pjson.version,
-		},
 		// theme: path.join(__dirname, 'sassdoc-theme-clay-css'),
 		groups: {
-			undefined: 'Clay CSS',
 			alerts: 'Alerts',
 			applicationBar: 'Application Bar',
 			aspectRatio: 'Aspect Ratio',
@@ -241,8 +233,8 @@ const generateSassDocs = (pluginOptions) => {
 			progressBars: 'Progress Bars',
 			quickAction: 'Quick Action',
 			sheet: 'Sheet',
-			sidebar: 'Sidebar',
 			sideNavigation: 'Side Navigation',
+			sidebar: 'Sidebar',
 			slideout: 'Slideout',
 			stickers: 'Stickers',
 			tables: 'Tables',
@@ -251,8 +243,16 @@ const generateSassDocs = (pluginOptions) => {
 			toggleSwitch: 'Toggle Switch',
 			tooltip: 'Tooltip',
 			type: 'Type',
+			undefined: 'Clay CSS',
 			utilities: 'Utilities',
 			vendorPrefixes: 'Vendor Prefixes',
+		},
+		package: {
+			description: pjson.description,
+			homepage: path.join('..', 'docs', 'get-started', 'index.html'),
+			license: pjson.license,
+			title: 'Clay CSS',
+			version: pjson.version,
 		},
 	};
 
