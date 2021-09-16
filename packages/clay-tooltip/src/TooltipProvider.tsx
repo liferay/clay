@@ -358,12 +358,13 @@ const TooltipProvider: React.FunctionComponent<
 	}, [align, show]);
 
 	warning(
-		!children && !scope,
+		(typeof children === 'undefined' && typeof scope !== 'undefined') ||
+			(typeof scope === 'undefined' && typeof children !== 'undefined'),
 		'<TooltipProvider />: You must use at least one of the following props: `children` or `scope`.'
 	);
 
 	warning(
-		children && scope,
+		typeof children !== 'undefined' || typeof scope !== 'undefined',
 		'<TooltipProvider />: If you want to use `scope`, use <TooltipProvider /> as a singleton and do not pass `children`.'
 	);
 
