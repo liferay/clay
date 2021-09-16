@@ -32,6 +32,11 @@ function getItemStyles(
 
 	return {
 		WebkitTransform: transform,
+		backgroundColor: 'white',
+		border: '1px solid aliceblue',
+		maxWidth: '140px',
+		padding: '2px',
+		textAlign: 'center',
 		transform,
 	};
 }

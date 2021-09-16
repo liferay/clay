@@ -56,7 +56,7 @@ export function ItemContextProvider({children, value}: Props) {
 		preview(getEmptyImage(), {captureDraggingState: true});
 	}, [preview]);
 
-	const [, drop] = useDrop({
+	const [{overTarget}, drop] = useDrop({
 		accept: 'treeViewItem',
 		collect: (monitor) => ({
 			canDrop: monitor.canDrop(),
@@ -81,6 +81,7 @@ export function ItemContextProvider({children, value}: Props) {
 	return (
 		<ItemContext.Provider value={item}>
 			{React.cloneElement(children as JSX.Element, {
+				overTarget,
 				ref: childRef,
 			})}
 		</ItemContext.Provider>
