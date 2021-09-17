@@ -190,6 +190,12 @@
 	}
 }
 
+.treeview-dragging {
+	$dragging: setter(map-get($cadmin-treeview, treeview-dragging), ());
+
+	@include clay-css($dragging);
+}
+
 // Treeview Variants
 
 .treeview-light {

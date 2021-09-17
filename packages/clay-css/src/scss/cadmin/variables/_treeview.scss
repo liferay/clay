@@ -20,6 +20,18 @@ $cadmin-treeview: map-merge(
 			margin-right: 4px,
 			margin-top: 1.5px,
 		),
+		treeview-dragging: (
+			background-color: $cadmin-white,
+			border-color: $cadmin-primary-l1,
+			border-radius: $cadmin-border-radius-sm,
+			border-style: solid,
+			border-width: 1px,
+			display: inline-block,
+			font-size: 10px,
+			font-weight: $cadmin-font-weight-semi-bold,
+			padding: 4px 12px,
+			text-transform: uppercase,
+		),
 		treeview-group: (
 			display: flex,
 			flex-direction: column,
