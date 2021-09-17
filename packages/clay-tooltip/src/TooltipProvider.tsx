@@ -48,6 +48,12 @@ const ALIGNMENTS_INVERSE_MAP = {
 	trbr: 'bottom-right',
 } as const;
 
+const ALIGNMENTS_FORCE_MAP = {
+	...ALIGNMENTS_INVERSE_MAP,
+	bctc: 'top-left',
+	tcbc: 'bottom-left',
+} as const;
+
 interface IState {
 	align?: typeof ALIGNMENTS[number];
 	message?: string;
@@ -335,22 +341,31 @@ const TooltipProvider: React.FunctionComponent<
 		) {
 			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
 
-			const newAlignmentString = doAlign({
+			const alignment = doAlign({
 				overflow: {
-					adjustX: autoAlign,
+					adjustX: false,
 					adjustY: autoAlign,
 				},
 				points,
 				sourceElement: (tooltipRef as React.RefObject<HTMLDivElement>)
 					.current!,
 				targetElement: titleNodeRef.current,
-			}).points.join('') as keyof typeof ALIGNMENTS_INVERSE_MAP;
+			});
+
+			const alignmentString = alignment.points.join(
+				''
+			) as keyof typeof ALIGNMENTS_INVERSE_MAP;
 
 			const pointsString = points.join('');
 
-			if (pointsString !== newAlignmentString) {
+			if (alignment.overflow.adjustX) {
 				dispatch({
-					align: ALIGNMENTS_INVERSE_MAP[newAlignmentString],
+					align: ALIGNMENTS_FORCE_MAP[alignmentString],
+					type: 'align',
+				});
+			} else if (pointsString !== alignmentString) {
+				dispatch({
+					align: ALIGNMENTS_INVERSE_MAP[alignmentString],
 					type: 'align',
 				});
 			}
@@ -358,12 +373,13 @@ const TooltipProvider: React.FunctionComponent<
 	}, [align, show]);
 
 	warning(
-		!children && !scope,
+		(typeof children === 'undefined' && typeof scope !== 'undefined') ||
+			(typeof scope === 'undefined' && typeof children !== 'undefined'),
 		'<TooltipProvider />: You must use at least one of the following props: `children` or `scope`.'
 	);
 
 	warning(
-		children && scope,
+		typeof children !== 'undefined' || typeof scope !== 'undefined',
 		'<TooltipProvider />: If you want to use `scope`, use <TooltipProvider /> as a singleton and do not pass `children`.'
 	);
 
