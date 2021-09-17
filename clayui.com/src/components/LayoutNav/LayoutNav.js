@@ -77,12 +77,12 @@ export default (location) => {
 						<li className="nav-item">
 							<a
 								className="nav-link"
-								href="/scss-api/index.html"
+								href="/sass-api/index.html"
 								rel="noopener noreferrer"
 								target="_blank"
 							>
 								<span className="c-inner" tabIndex="-1">
-									{'Scss API'}
+									{'Sass API'}
 								</span>
 							</a>
 						</li>

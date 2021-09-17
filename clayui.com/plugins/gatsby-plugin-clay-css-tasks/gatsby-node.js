@@ -190,7 +190,7 @@ const generateSassDocs = (pluginOptions) => {
 	const pjson = require('../../package.json');
 
 	var config = {
-		dest: path.join(pluginOptions.clayuiStatic, 'scss-api'),
+		dest: path.join(pluginOptions.clayuiStatic, 'sass-api'),
 		// theme: path.join(__dirname, 'sassdoc-theme-clay-css'),
 		groups: {
 			alerts: 'Alerts',
