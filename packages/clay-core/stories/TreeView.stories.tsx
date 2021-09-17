@@ -368,7 +368,7 @@ storiesOf('Components|ClayTreeView', module)
 		];
 
 		const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
-			new Set(['1'])
+			new Set(['1', '2', '3', '4', '5'])
 		);
 
 		return (
