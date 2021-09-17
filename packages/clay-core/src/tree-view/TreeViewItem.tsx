@@ -14,13 +14,14 @@ import {useItem} from './useItem';
 
 type TreeViewItemProps = {
 	children: React.ReactNode;
+	isDragging?: boolean;
 	overTarget?: boolean;
 };
 
 const SpacingContext = React.createContext(0);
 
 export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
-	function TreeViewItemInner({children, overTarget}, ref) {
+	function TreeViewItemInner({children, isDragging, overTarget}, ref) {
 		const spacing = useContext(SpacingContext);
 		const {
 			childrenRoot,
@@ -39,6 +40,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 
 		if (!group && nestedKey && item[nestedKey] && childrenRoot) {
 			return React.cloneElement(childrenRoot(item), {
+				isDragging,
 				overTarget,
 				ref,
 			});
@@ -46,19 +48,25 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 
 		return (
 			<SpacingContext.Provider value={spacing + 24}>
-				<li className="treeview-item" role="none">
+				<li
+					className={classNames('treeview-item', {
+						disabled: isDragging,
+					})}
+					role="none"
+				>
 					<div
 						aria-expanded={
 							group ? expandedKeys.has(item.key) : undefined
 						}
 						className={classNames('treeview-link', {
 							collapsed: group && expandedKeys.has(item.key),
+							'treeview-dropping-inside':
+								!isDragging && overTarget,
 						})}
 						onClick={() => group && toggle(item.key)}
 						ref={ref}
 						role="treeitem"
 						style={{
-							backgroundColor: overTarget ? 'aliceblue' : '',
 							paddingLeft: `${spacing}px`,
 						}}
 						tabIndex={0}

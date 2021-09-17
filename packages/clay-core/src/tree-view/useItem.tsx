@@ -45,7 +45,10 @@ export function ItemContextProvider({children, value}: Props) {
 		key: keyRef.current,
 	};
 
-	const [, drag, preview] = useDrag({
+	const [{isDragging}, drag, preview] = useDrag({
+		collect: (monitor) => ({
+			isDragging: monitor.isDragging(),
+		}),
 		item: {
 			...item,
 			type: 'treeViewItem',
@@ -84,6 +87,10 @@ export function ItemContextProvider({children, value}: Props) {
 			reorder((dragItem as Value).indexes, indexes);
 		},
 		hover() {
+			if (isDragging) {
+				return;
+			}
+
 			open(item.key);
 		},
 	});
@@ -95,6 +102,7 @@ export function ItemContextProvider({children, value}: Props) {
 	return (
 		<ItemContext.Provider value={item}>
 			{React.cloneElement(children as JSX.Element, {
+				isDragging,
 				overTarget,
 				ref: childRef,
 			})}
