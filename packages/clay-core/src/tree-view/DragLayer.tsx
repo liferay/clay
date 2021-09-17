@@ -57,7 +57,9 @@ const DragLayer = () => {
 
 	return (
 		<div style={layerStyles}>
-			<div style={getItemStyles(initialOffset, currentOffset)}>
+			<div
+				className="treeview-dragging"
+			>
 				{item.name}
 			</div>
 		</div>
