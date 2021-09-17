@@ -71,18 +71,17 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			const dropItemBoundingRect = childRef.current.getBoundingClientRect();
+			const dropItemBoundingRect = (childRef.current! as HTMLElement).getBoundingClientRect();
 			const dragItemOffset = monitor.getClientOffset();
-			const hoverItemY = dragItemOffset.y - dropItemBoundingRect.top;
+			const hoverItemY = dragItemOffset!.y - dropItemBoundingRect!.top;
 
 			const [...indexes] = item.indexes;
 
-			let desiredIndex: number = -1;
 			if (hoverItemY < dropItemBoundingRect.height / 2) {
-				desiredIndex = indexes.pop();
+				indexes.pop();
 			}
 
-			reorder((dragItem as Value).indexes, indexes, desiredIndex);
+			reorder((dragItem as Value).indexes, indexes);
 		},
 		hover() {
 			open(item.key);
