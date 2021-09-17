@@ -12,6 +12,31 @@ $c-unset: $clay-unset !default;
 
 $clay-unset-placeholder: clay-unset-placeholder !default;
 
+// Settings
+
+$enable-bs4-deprecated: true !default;
+$enable-c-inner: true !default;
+$enable-lexicon-flat-colors: false !default;
+$enable-scaling-components: false !default;
+$scaling-breakpoint-down: sm !default;
+
+$enable-caret: false !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-grid-classes: true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: false !default;
+$enable-validation-icons: true !default;
+$enable-deprecation-messages: true !default;
+
+// Deprecated, no longer affects any compiled CSS
+
+$enable-hover-media-query: false !default;
+
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -150,30 +175,6 @@ $yiq-text-light: $white !default;
 // Characters which are escaped by the escape-svg function
 
 $escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23')) !default;
-
-// Settings
-
-$enable-bs4-deprecated: true !default;
-$enable-scaling-components: false !default;
-$enable-c-inner: true !default;
-$scaling-breakpoint-down: sm !default;
-
-$enable-caret: false !default;
-$enable-rounded: true !default;
-$enable-shadows: false !default;
-$enable-gradients: false !default;
-$enable-transitions: true !default;
-$enable-prefers-reduced-motion-media-query: true !default;
-$enable-grid-classes: true !default;
-$enable-pointer-cursor-for-buttons: true !default;
-$enable-print-styles: true !default;
-$enable-responsive-font-sizes: false !default;
-$enable-validation-icons: true !default;
-$enable-deprecation-messages: true !default;
-
-// Deprecated, no longer affects any compiled CSS
-
-$enable-hover-media-query: false !default;
 
 // Spacers
 
@@ -350,6 +351,7 @@ $font-weight-bold: 700 !default;
 $font-weight-bolder: 900 !default;
 
 $font-weight-base: $font-weight-normal !default;
+
 $line-height-base: 1.5 !default;
 
 $h1-font-size: $font-size-base * 2.5 !default;
