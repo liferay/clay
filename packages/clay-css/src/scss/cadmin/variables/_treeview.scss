@@ -45,12 +45,29 @@ $cadmin-treeview: map-merge(
 		link: (
 			cursor: pointer,
 			display: block,
+			border-color: transparent,
+			border-style: solid,
+			border-width: 1px,
 			margin-bottom: 2px,
 			margin-top: 2px,
 			min-width: 100%,
 			padding: 0,
 			position: relative,
 			user-select: none,
+			dropping: (
+				bottom: (
+					border-bottom-width: 2px,
+					border-bottom-color: $cadmin-primary-l1,
+				),
+				inside: (
+					background-color: $cadmin-primary-l3,
+					border-color: $cadmin-primary-l1,
+				),
+				top: (
+					border-top-color: $cadmin-primary-l1,
+					border-top-width: 2px,
+				),
+			),
 			hover: (
 				text-decoration: none,
 			),
