@@ -190,7 +190,7 @@ $cadmin-btn-sm: map-deep-merge(
 // Button Monospaced
 
 $cadmin-btn-monospaced-padding-x: 0 !default;
-$cadmin-btn-monospaced-padding-y: 4px !default; // 4px
+$cadmin-btn-monospaced-padding-y: 0 !default;
 $cadmin-btn-monospaced-size: 40px !default; // 40px
 
 $cadmin-btn-monospaced-size-mobile: null !default;
@@ -198,7 +198,11 @@ $cadmin-btn-monospaced-size-mobile: null !default;
 $cadmin-btn-monospaced: () !default;
 $cadmin-btn-monospaced: map-deep-merge(
 	(
+		align-items: center,
+		display: inline-flex,
+		flex-direction: column,
 		height: $cadmin-btn-monospaced-size,
+		justify-content: center,
 		line-height: 1,
 		overflow: hidden,
 		padding-bottom: $cadmin-btn-monospaced-padding-y,
@@ -217,7 +221,7 @@ $cadmin-btn-monospaced: map-deep-merge(
 			align-items: center,
 			display: flex,
 			flex-direction: column,
-			height: calc(100% + #{$cadmin-btn-monospaced-padding-y * 2}),
+			height: 100%,
 			justify-content: center,
 			padding: 0,
 			width: 100%,
@@ -228,8 +232,8 @@ $cadmin-btn-monospaced: map-deep-merge(
 
 // Button Monospaced Lg
 
-$cadmin-btn-monospaced-padding-x-lg: 0 !default;
-$cadmin-btn-monospaced-padding-y-lg: 6px !default; // 6px
+$cadmin-btn-monospaced-padding-x-lg: null !default;
+$cadmin-btn-monospaced-padding-y-lg: null !default;
 $cadmin-btn-monospaced-size-lg: 48px !default; // 48px
 
 $cadmin-btn-monospaced-size-lg-mobile: null !default;
@@ -247,9 +251,6 @@ $cadmin-btn-monospaced-lg: map-deep-merge(
 			height: $cadmin-btn-monospaced-size-lg-mobile,
 			width: $cadmin-btn-monospaced-size-lg-mobile,
 		),
-		c-inner: (
-			height: calc(100% + #{$cadmin-btn-monospaced-padding-y-lg * 2}),
-		),
 	),
 	$cadmin-btn-monospaced-lg
 );
@@ -257,7 +258,7 @@ $cadmin-btn-monospaced-lg: map-deep-merge(
 // Button Monospaced Sm
 
 $cadmin-btn-monospaced-padding-x-sm: null !default;
-$cadmin-btn-monospaced-padding-y-sm: 3px !default; // 3px
+$cadmin-btn-monospaced-padding-y-sm: null !default;
 $cadmin-btn-monospaced-size-sm: 32px !default; // 32px
 
 $cadmin-btn-monospaced-size-sm-mobile: null !default;
@@ -274,9 +275,6 @@ $cadmin-btn-monospaced-sm: map-deep-merge(
 		mobile: (
 			height: $cadmin-btn-monospaced-size-sm-mobile,
 			width: $cadmin-btn-monospaced-size-sm-mobile,
-		),
-		c-inner: (
-			height: calc(100% + #{$cadmin-btn-monospaced-padding-y-sm * 2}),
 		),
 	),
 	$cadmin-btn-monospaced-sm
