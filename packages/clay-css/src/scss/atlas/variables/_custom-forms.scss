@@ -1,7 +1,3 @@
-////
-/// @group customForms
-////
-
 $custom-control-indicator-bg: $white !default;
 $custom-control-indicator-border-color: $gray-400 !default;
 $custom-control-indicator-border-style: solid !default;
@@ -76,7 +72,7 @@ $custom-control-description-font-size: $input-label-font-size !default; // 13px
 
 $custom-control-description-font-weight: $font-weight-normal !default;
 
-/// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-disabled-color` instead. This variable is not used in Clay CSS.
+// @deprecated as of v2.19.0 use the Sass map `$custom-control-label-disabled-color` instead. This variable is not used in Clay CSS.
 
 $custom-control-label-disabled-color: $input-label-disabled-color !default;
 
