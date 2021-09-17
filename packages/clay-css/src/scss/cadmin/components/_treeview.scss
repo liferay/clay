@@ -141,12 +141,48 @@
 
 		@include clay-css($last-child);
 	}
+
+	&.disabled {
+		cursor: $cadmin-disabled-cursor;
+		opacity: 0.4;
+
+		.treeview-dropping {
+			&-bottom,
+			&-middle,
+			&-top {
+				border-color: transparent;
+				background-color: transparent;
+			}
+		}
+	}
 }
 
 .treeview-link {
 	$link: setter(map-get($cadmin-treeview, link), ());
 
 	@include clay-link($link);
+
+	&.treeview-dropping {
+		$dropping: setter(map-get($link, dropping), ());
+
+		&-bottom {
+			$dropping-bottom: setter(map-get($dropping, bottom), ());
+
+			@include clay-css($dropping-bottom);
+		}
+
+		&-middle {
+			$dropping-middle: setter(map-get($dropping, middle), ());
+
+			@include clay-css($dropping-middle);
+		}
+
+		&-top {
+			$dropping-top: setter(map-get($dropping, top), ());
+
+			@include clay-css($dropping-top);
+		}
+	}
 
 	&.hover,
 	&:hover,
