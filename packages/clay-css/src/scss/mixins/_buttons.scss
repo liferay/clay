@@ -233,6 +233,8 @@
 		)
 	);
 
+	$disabled-focus: setter(map-get($disabled, focus), ());
+
 	$nested-disabled-active: setter(map-get($disabled, active), ());
 	$disabled-active: setter(map-get($map, disabled-active), ());
 	$disabled-active: map-merge($nested-disabled-active, $disabled-active);
@@ -281,7 +283,9 @@
 		)
 	);
 
+	$btn-section: setter(map-get($map, btn-section), ());
 	$section: setter(map-get($map, section), ());
+	$section: map-merge($btn-section, $section);
 	$section: map-merge(
 		$section,
 		(
@@ -338,6 +342,26 @@
 		)
 	);
 
+	$mobile-c-inner: setter(map-get($mobile, c-inner), ());
+	$mobile-c-inner: map-merge(
+		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
+			margin-bottom: math-sign(map-get($mobile, padding-bottom)),
+			margin-left: math-sign(map-get($mobile, padding-left)),
+			margin-right: math-sign(map-get($mobile, padding-right)),
+			margin-top: math-sign(map-get($mobile, padding-top)),
+		),
+		$mobile-c-inner
+	);
+
 	$unset: setter(
 		if(
 			variable-exists(clay-unset-placeholder),
@@ -372,16 +396,15 @@
 	@if ($enabled) {
 		@include clay-css($base);
 
-		@at-root {
-			a#{&},
-			button#{&} {
-				cursor: map-get($map, cursor);
-			}
-		}
-
 		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($mobile);
+
+				@if (map-get($c-inner, enabled)) {
+					.c-inner {
+						@include clay-css($mobile-c-inner);
+					}
+				}
 			}
 		}
 
@@ -416,6 +439,10 @@
 		&:disabled,
 		&.disabled {
 			@include clay-css($disabled);
+
+			&:focus {
+				@include clay-css($disabled-focus);
+			}
 
 			&:active {
 				@include clay-css($disabled-active);

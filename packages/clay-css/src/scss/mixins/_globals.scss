@@ -237,6 +237,14 @@
 			} @else if ($key == 'overflow-wrap') {
 				overflow-wrap: $value;
 				word-wrap: $value;
+			} @else if ($key == 'transition') {
+				transition: $value;
+
+				@if ($value != 'none' and $value != null) {
+					@media (prefers-reduced-motion: reduce) {
+						transition: none;
+					}
+				}
 			} @else if ($key == 'user-select') {
 				-ms-user-select: $value;
 				-moz-user-select: $value;

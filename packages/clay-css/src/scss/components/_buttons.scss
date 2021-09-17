@@ -1,123 +1,25 @@
 .btn {
-	background-color: transparent;
-	border: $btn-border-width solid transparent;
-
-	@include border-radius($btn-border-radius, 0);
-	@include box-shadow($btn-box-shadow);
-
-	color: $body-color;
-	cursor: $btn-cursor;
-	display: inline-block;
-	font-family: $btn-font-family;
-	font-size: $btn-font-size;
-	font-weight: $btn-font-weight;
-	line-height: $btn-line-height;
-	padding: $btn-padding-y $btn-padding-x;
-	text-align: center;
-	text-transform: none;
-
-	@include transition($btn-transition);
-
-	user-select: none;
-	vertical-align: middle;
-	white-space: $btn-white-space;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-mobile;
-		padding-bottom: $btn-padding-y-mobile;
-		padding-left: $btn-padding-x-mobile;
-		padding-right: $btn-padding-x-mobile;
-		padding-top: $btn-padding-y-mobile;
-	}
-
-	&:hover {
-		color: $body-color;
-		text-decoration: none;
-	}
-
-	&:focus,
-	&.focus {
-		box-shadow: $btn-focus-box-shadow;
-		outline: 0;
-	}
-
-	&:active,
-	&.active {
-		@include box-shadow($btn-active-box-shadow);
-
-		&:focus {
-			@if ($enable-shadows and $btn-active-box-shadow != none) {
-				box-shadow: $btn-focus-box-shadow, $btn-active-box-shadow;
-			} @else {
-				box-shadow: $btn-focus-box-shadow;
-			}
-		}
-	}
-
-	&.disabled,
-	&:disabled {
-		cursor: $btn-disabled-cursor;
-		opacity: $btn-disabled-opacity;
-
-		&:focus,
-		&:focus:active {
-			box-shadow: none;
-		}
-
-		&:active {
-			pointer-events: none;
-		}
-	}
+	@include clay-button-variant($btn);
 }
 
 fieldset:disabled a.btn {
-	box-shadow: none;
-	cursor: $btn-disabled-cursor;
-	opacity: $btn-disabled-opacity;
+	$btn-disabled: setter(map-get($btn, disabled), ());
+
+	@include clay-css($btn-disabled);
+
+	&:focus {
+		@include clay-css(setter(map-get($btn-disabled, focus), ()));
+	}
 
 	&:active {
-		pointer-events: none;
+		@include clay-css(setter(map-get($btn-disabled, active), ()));
 	}
-}
-
-.btn .inline-item {
-	font-size: $btn-inline-item-font-size;
-}
-
-.btn-section {
-	display: block;
-	font-size: $btn-section-font-size;
-	font-weight: $btn-section-font-weight;
-	line-height: $btn-section-line-height;
 }
 
 // Button Sizes
 
 %clay-btn-lg {
-	@include border-radius($btn-border-radius-lg, 0);
-
-	font-size: $btn-font-size-lg;
-	line-height: $btn-line-height-lg;
-	padding-bottom: $btn-padding-y-lg;
-	padding-left: $btn-padding-x-lg;
-	padding-right: $btn-padding-x-lg;
-	padding-top: $btn-padding-y-lg;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-lg-mobile;
-		padding-bottom: $btn-padding-y-lg-mobile;
-		padding-left: $btn-padding-x-lg-mobile;
-		padding-right: $btn-padding-x-lg-mobile;
-		padding-top: $btn-padding-y-lg-mobile;
-	}
-
-	.inline-item {
-		font-size: $btn-inline-item-font-size-lg;
-	}
-
-	.btn-section {
-		font-size: $btn-section-font-size-lg;
-	}
+	@include clay-button-variant($btn-lg);
 }
 
 .btn-lg {
@@ -125,30 +27,7 @@ fieldset:disabled a.btn {
 }
 
 %clay-btn-sm {
-	@include border-radius($btn-border-radius-sm, 0);
-
-	font-size: $btn-font-size-sm;
-	line-height: $btn-line-height-sm;
-	padding-bottom: $btn-padding-y-sm;
-	padding-left: $btn-padding-x-sm;
-	padding-right: $btn-padding-x-sm;
-	padding-top: $btn-padding-y-sm;
-
-	@include clay-scale-component {
-		font-size: $btn-font-size-sm-mobile;
-		padding-bottom: $btn-padding-y-sm-mobile;
-		padding-left: $btn-padding-x-sm-mobile;
-		padding-right: $btn-padding-x-sm-mobile;
-		padding-top: $btn-padding-y-sm-mobile;
-	}
-
-	.inline-item {
-		font-size: $btn-inline-item-font-size-sm;
-	}
-
-	.btn-section {
-		font-size: $btn-section-font-size-sm;
-	}
+	@include clay-button-variant($btn-sm);
 }
 
 .btn-sm {
@@ -179,17 +58,7 @@ input[type='button'] {
 // Button Unstyled
 
 %btn-unstyled {
-	background-color: rgba(0, 0, 0, 0.001);
-	border-width: 0;
-	cursor: $btn-cursor;
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: inherit;
-	max-width: 100%;
-	padding: 0;
-	text-align: left;
-	text-transform: inherit;
-	vertical-align: baseline;
+	@include clay-button-variant($btn-unstyled);
 }
 
 .btn-unstyled {
@@ -199,22 +68,7 @@ input[type='button'] {
 // Button Monospaced
 
 .btn-monospaced {
-	height: $btn-monospaced-size;
-	line-height: 1;
-	overflow: hidden;
-	padding-bottom: $btn-monospaced-padding-y;
-	padding-left: $btn-monospaced-padding-x;
-	padding-right: $btn-monospaced-padding-x;
-	padding-top: $btn-monospaced-padding-y;
-	text-align: center;
-	white-space: normal;
-	width: $btn-monospaced-size;
-	word-wrap: break-word;
-
-	@include clay-scale-component {
-		height: $btn-monospaced-size-mobile;
-		width: $btn-monospaced-size-mobile;
-	}
+	@include clay-button-variant($btn-monospaced);
 
 	&.btn .lexicon-icon {
 		margin-top: 0;
@@ -222,17 +76,7 @@ input[type='button'] {
 }
 
 %clay-btn-monospaced-lg {
-	height: $btn-monospaced-size-lg;
-	padding-bottom: $btn-monospaced-padding-y-lg;
-	padding-left: $btn-monospaced-padding-x-lg;
-	padding-right: $btn-monospaced-padding-x-lg;
-	padding-top: $btn-monospaced-padding-y-lg;
-	width: $btn-monospaced-size-lg;
-
-	@include clay-scale-component {
-		height: $btn-monospaced-size-lg-mobile;
-		width: $btn-monospaced-size-lg-mobile;
-	}
+	@include clay-button-variant($btn-monospaced-lg);
 }
 
 .btn-monospaced.btn-lg {
@@ -240,87 +84,11 @@ input[type='button'] {
 }
 
 %clay-btn-monospaced-sm {
-	height: $btn-monospaced-size-sm;
-	padding-bottom: $btn-monospaced-padding-y-sm;
-	padding-left: $btn-monospaced-padding-x-sm;
-	padding-right: $btn-monospaced-padding-x-sm;
-	padding-top: $btn-monospaced-padding-y-sm;
-	width: $btn-monospaced-size-sm;
-
-	@include clay-scale-component {
-		height: $btn-monospaced-size-sm-mobile;
-		width: $btn-monospaced-size-sm-mobile;
-	}
+	@include clay-button-variant($btn-monospaced-sm);
 }
 
 .btn-monospaced.btn-sm {
 	@extend %clay-btn-monospaced-sm !optional;
-}
-
-// Button C Inner
-
-@if ($enable-c-inner) {
-	.btn .c-inner {
-		margin: #{math-sign($btn-padding-y)} #{math-sign($btn-padding-x)};
-
-		@include clay-scale-component {
-			margin: #{math-sign($btn-padding-y-mobile)} #{math-sign(
-					$btn-padding-x-mobile
-				)};
-		}
-	}
-
-	.btn-unstyled .c-inner {
-		margin: 0;
-		max-width: none;
-	}
-
-	.btn-monospaced .c-inner {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		height: calc(100% + #{$btn-monospaced-padding-y * 2});
-		justify-content: center;
-		margin: #{math-sign($btn-monospaced-padding-y)} 0;
-		padding: 0;
-		width: 100%;
-	}
-
-	.btn-sm {
-		.c-inner {
-			margin: #{math-sign($btn-padding-y-sm)}
-				#{math-sign($btn-padding-x-sm)};
-
-			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-sm-mobile)} #{math-sign(
-						$btn-padding-x-sm-mobile
-					)};
-			}
-		}
-
-		&.btn-monospaced .c-inner {
-			height: calc(100% + #{$btn-monospaced-padding-y-sm * 2});
-			margin: #{math-sign($btn-monospaced-padding-y-sm)} 0;
-		}
-	}
-
-	.btn-lg {
-		.c-inner {
-			margin: #{math-sign($btn-padding-y-lg)}
-				#{math-sign($btn-padding-x-lg)};
-
-			@include clay-scale-component {
-				margin: #{math-sign($btn-padding-y-lg-mobile)} #{math-sign(
-						$btn-padding-x-lg-mobile
-					)};
-			}
-		}
-
-		&.btn-monospaced .c-inner {
-			height: calc(100% + #{$btn-monospaced-padding-y-lg * 2});
-			margin: #{math-sign($btn-monospaced-padding-y-lg)} 0;
-		}
-	}
 }
 
 // Button Variants
@@ -362,17 +130,7 @@ input[type='button'] {
 }
 
 .btn-outline-borderless {
-	border-color: transparent;
-
-	&:hover,
-	&:focus {
-		border-color: transparent;
-	}
-
-	&:disabled,
-	&.disabled {
-		border-color: transparent;
-	}
+	@include clay-button-variant($btn-outline-borderless);
 }
 
 .btn-outline-borderless:not(:disabled):not(.disabled):active {
