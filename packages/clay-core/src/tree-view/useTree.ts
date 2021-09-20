@@ -241,7 +241,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 	function produce(
 		from: Array<number>,
 		path: Array<number>,
-		desiredIndex?: number = -1
+		desiredIndex: number = -1
 	) {
 		patches.push({desiredIndex, from, op: 'move', path});
 	}
