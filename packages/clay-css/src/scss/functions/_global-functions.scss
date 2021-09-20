@@ -759,6 +759,11 @@
 // * SPDX-FileCopyrightText: © 2018 Kevin Weber <https://codepen.io/kevinweber/pen/dXWoRw>
 // *
 
+/// A Bootstrap 4 function that converts ASCII characters in SVG's to URL encoded characters.
+/// @deprecated use clay-svg-url($svg) instead.
+/// @param {String} $string - The SVG to URL encode
+/// @param {Map} $escaped - The characters to escape
+
 @function escape-svg($string, $escaped: null) {
 	@if ($escaped == null) {
 		$escaped: if(
