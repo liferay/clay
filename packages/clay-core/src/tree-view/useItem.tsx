@@ -80,11 +80,13 @@ export function ItemContextProvider({children, value}: Props) {
 
 			const [...indexes] = item.indexes;
 
+			let desiredIndex = -1;
+
 			if (hoverItemY < dropItemBoundingRect.height / 2) {
-				indexes.pop();
+				desiredIndex = indexes.pop() as number;
 			}
 
-			reorder((dragItem as Value).indexes, indexes);
+			reorder((dragItem as Value).indexes, indexes, desiredIndex);
 		},
 		hover() {
 			if (isDragging) {
