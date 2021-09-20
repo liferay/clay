@@ -36,7 +36,11 @@ export interface ITreeProps<T>
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	expandedKeys: Set<Key>;
 	open: (key: Key) => void;
-	reorder: (from: Array<number>, path: Array<number>) => void;
+	reorder: (
+		from: Array<number>,
+		path: Array<number>,
+		desiredIndex: number
+	) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
 }
@@ -59,10 +63,14 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		selectedKeys: props.selectedKeys,
 	});
 
-	const reorder = (from: Array<number>, path: Array<number>) => {
+	const reorder = (
+		from: Array<number>,
+		path: Array<number>,
+		desiredIndex: number
+	) => {
 		const tree = createImmutableTree(items, props.nestedKey!);
 
-		tree.produce(from, path);
+		tree.produce(from, path, desiredIndex);
 
 		setItems(tree.applyPatches());
 	};
@@ -108,6 +116,7 @@ type Patch = {
 	op: 'move';
 	from: Array<number>;
 	path: Array<number>;
+	desiredIndex: number;
 };
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
@@ -152,7 +161,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 	function applyPatches(): T {
 		patches.forEach((patch) => {
-			const {from, op, path} = patch;
+			const {desiredIndex, from, op, path} = patch;
 
 			switch (op) {
 				// Applies the operation on the tree, the move is functionally
@@ -160,6 +169,20 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 				// immediately followed by the "add" operation at the target
 				// location with the value that was removed.
 				case 'move': {
+					if (!path.length) {
+						return;
+					}
+
+					if (from.length === path.length) {
+						const equal = from.every((value, index) => {
+							return path[index] === value;
+						});
+
+						if (equal) {
+							return;
+						}
+					}
+
 					const nodeToRemove = nodeByPath(from);
 
 					if (nodeToRemove.parent) {
@@ -182,6 +205,24 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 						pathToAdd.item[nestedKey] = [];
 					}
 
+					if (desiredIndex !== undefined && desiredIndex !== -1) {
+						const previousItem =
+							pathToAdd.item[nestedKey][desiredIndex!];
+						pathToAdd.item[nestedKey].splice(desiredIndex, 1);
+						pathToAdd.item[nestedKey].splice(
+							desiredIndex,
+							0,
+							nodeToRemove.item
+						);
+						pathToAdd.item[nestedKey].splice(
+							desiredIndex + 1,
+							0,
+							previousItem
+						);
+
+						return;
+					}
+
 					pathToAdd.item[nestedKey] = [
 						...pathToAdd.item[nestedKey],
 						nodeToRemove.item,
@@ -197,8 +238,12 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 		return immutableTree;
 	}
 
-	function produce(from: Array<number>, path: Array<number>) {
-		patches.push({from, op: 'move', path});
+	function produce(
+		from: Array<number>,
+		path: Array<number>,
+		desiredIndex?: number = -1
+	) {
+		patches.push({desiredIndex, from, op: 'move', path});
 	}
 
 	return {
