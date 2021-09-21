@@ -36,11 +36,7 @@ export interface ITreeProps<T>
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	expandedKeys: Set<Key>;
 	open: (key: Key) => void;
-	reorder: (
-		from: Array<number>,
-		path: Array<number>,
-		desiredIndex: number
-	) => void;
+	reorder: (from: Array<number>, path: Array<number>) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
 }
@@ -63,14 +59,10 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		selectedKeys: props.selectedKeys,
 	});
 
-	const reorder = (
-		from: Array<number>,
-		path: Array<number>,
-		desiredIndex: number
-	) => {
+	const reorder = (from: Array<number>, path: Array<number>) => {
 		const tree = createImmutableTree(items, props.nestedKey!);
 
-		tree.produce(from, path, desiredIndex);
+		tree.produce(from, path);
 
 		setItems(tree.applyPatches());
 	};
@@ -88,10 +80,6 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	};
 
 	const open = (key: Key) => {
-		if (expandedKeys.has(key)) {
-			return;
-		}
-
 		const expanded = new Set(expandedKeys);
 
 		if (!expanded.has(key)) {
@@ -116,7 +104,6 @@ type Patch = {
 	op: 'move';
 	from: Array<number>;
 	path: Array<number>;
-	desiredIndex: number;
 };
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
@@ -145,11 +132,44 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 			index = queue.shift() as number;
 
 			if (Array.isArray(item[nestedKey]) && item[nestedKey].length) {
-				parent = item;
-				item = {...item[nestedKey][index]};
+				// This fixes the index when there is a case to move an item
+				// that can be at the same level of the hierarchy inside the
+				// other item at the same level, this causes the array size to
+				// change and the index value to become stale.
+				//
+				// 1. Item A
+				//   1. Item B
+				//   2. Item C
+				//   3. Item D
+				//
+				// Op:
+				// from=[1, 1] path=[1, 3]
+				//
+				// 1. Item A
+				//   ~1. Item B~ <- Remove item to move
+				//   1. Item C
+				//   2. Item D
+				if (index > item[nestedKey].length - 1) {
+					index -= 1;
+				}
 
-				parent[nestedKey] = pointer(parent[nestedKey], index, item);
+				// The Index may still not exist after it's fixed because the
+				// index is to move the item below the last item.
+				if (item[nestedKey][index]) {
+					parent = item;
+					item = {...item[nestedKey][index]};
+
+					parent[nestedKey] = pointer(parent[nestedKey], index, item);
+
+					continue;
+				}
 			}
+
+			if (!item[nestedKey]) {
+				item[nestedKey] = [];
+			}
+
+			parent = item;
 		}
 
 		return {
@@ -161,7 +181,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 	function applyPatches(): T {
 		patches.forEach((patch) => {
-			const {desiredIndex, from, op, path} = patch;
+			const {from, op, path} = patch;
 
 			switch (op) {
 				// Applies the operation on the tree, the move is functionally
@@ -169,20 +189,6 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 				// immediately followed by the "add" operation at the target
 				// location with the value that was removed.
 				case 'move': {
-					if (!path.length) {
-						return;
-					}
-
-					if (from.length === path.length) {
-						const equal = from.every((value, index) => {
-							return path[index] === value;
-						});
-
-						if (equal) {
-							return;
-						}
-					}
-
 					const nodeToRemove = nodeByPath(from);
 
 					if (nodeToRemove.parent) {
@@ -201,32 +207,24 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 					const pathToAdd = nodeByPath(path);
 
-					if (!Array.isArray(pathToAdd.item[nestedKey])) {
-						pathToAdd.item[nestedKey] = [];
+					if (pathToAdd.parent) {
+						pathToAdd.parent[nestedKey] = [
+							...pathToAdd.parent[nestedKey].slice(
+								0,
+								pathToAdd.index
+							),
+							nodeToRemove.item,
+							...pathToAdd.parent[nestedKey].slice(
+								pathToAdd.index
+							),
+						];
+					} else {
+						immutableTree = [
+							...immutableTree.slice(0, pathToAdd.index),
+							nodeToRemove.item,
+							...immutableTree.slice(pathToAdd.index),
+						] as T;
 					}
-
-					if (desiredIndex !== undefined && desiredIndex !== -1) {
-						const previousItem =
-							pathToAdd.item[nestedKey][desiredIndex!];
-						pathToAdd.item[nestedKey].splice(desiredIndex, 1);
-						pathToAdd.item[nestedKey].splice(
-							desiredIndex,
-							0,
-							nodeToRemove.item
-						);
-						pathToAdd.item[nestedKey].splice(
-							desiredIndex + 1,
-							0,
-							previousItem
-						);
-
-						return;
-					}
-
-					pathToAdd.item[nestedKey] = [
-						...pathToAdd.item[nestedKey],
-						nodeToRemove.item,
-					];
 
 					break;
 				}
@@ -238,12 +236,8 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 		return immutableTree;
 	}
 
-	function produce(
-		from: Array<number>,
-		path: Array<number>,
-		desiredIndex: number = -1
-	) {
-		patches.push({desiredIndex, from, op: 'move', path});
+	function produce(from: Array<number>, path: Array<number>) {
+		patches.push({from, op: 'move', path});
 	}
 
 	return {
