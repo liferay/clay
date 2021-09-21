@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useContext, useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import {useDrag, useDrop} from 'react-dnd';
 import {getEmptyImage} from 'react-dnd-html5-backend';
 
@@ -21,6 +21,18 @@ type Props = {
 };
 
 const ItemContext = React.createContext<Value>({} as Value);
+
+const TARGET_POSITION = {
+	BOTTOM: 'bottom',
+	MIDDLE: 'middle',
+	TOP: 'top',
+} as const;
+
+type ValueOf<T> = T[keyof T];
+
+type Position = ValueOf<typeof TARGET_POSITION>;
+
+const DISTANCE = 0.2;
 
 function getKey(key: React.Key) {
 	return `${key}`.replace('.$', '');
@@ -44,6 +56,8 @@ export function ItemContextProvider({children, value}: Props) {
 		indexes: [...parentIndexes, value.index],
 		key: keyRef.current,
 	};
+
+	const [overPosition, setOverPosition] = useState<Position | null>(null);
 
 	const [{isDragging}, drag, preview] = useDrag({
 		collect: (monitor) => ({
@@ -74,26 +88,52 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			const dropItemBoundingRect = (childRef.current! as HTMLElement).getBoundingClientRect();
-			const dragItemOffset = monitor.getClientOffset();
-			const hoverItemY = dragItemOffset!.y - dropItemBoundingRect!.top;
+			let indexes = [...item.indexes];
+			const lastIndex = indexes.pop();
 
-			const [...indexes] = item.indexes;
-
-			let desiredIndex = -1;
-
-			if (hoverItemY < dropItemBoundingRect.height / 2) {
-				desiredIndex = indexes.pop() as number;
+			switch (overPosition) {
+				case TARGET_POSITION.BOTTOM:
+					indexes = [...indexes, lastIndex! + 1];
+					break;
+				case TARGET_POSITION.MIDDLE:
+					indexes = [...indexes, lastIndex!, 0];
+					break;
+				case TARGET_POSITION.TOP:
+					indexes = [...indexes, lastIndex!];
+					break;
+				default:
+					break;
 			}
 
-			reorder((dragItem as Value).indexes, indexes, desiredIndex);
+			reorder((dragItem as Value).indexes, indexes);
 		},
-		hover() {
+		hover(dragItem, monitor) {
 			if (isDragging) {
 				return;
 			}
 
+			if (!monitor.isOver({shallow: true})) {
+				return;
+			}
+
 			open(item.key);
+
+			const dropItemRect = (childRef.current! as HTMLElement).getBoundingClientRect();
+			const clientOffsetY = monitor.getClientOffset()!.y;
+
+			if (
+				clientOffsetY <
+				dropItemRect.height * DISTANCE + dropItemRect.top
+			) {
+				setOverPosition(TARGET_POSITION.TOP);
+			} else if (
+				clientOffsetY >
+				dropItemRect.bottom - dropItemRect.height * DISTANCE
+			) {
+				setOverPosition(TARGET_POSITION.BOTTOM);
+			} else {
+				setOverPosition(TARGET_POSITION.MIDDLE);
+			}
 		},
 	});
 
@@ -105,6 +145,7 @@ export function ItemContextProvider({children, value}: Props) {
 		<ItemContext.Provider value={item}>
 			{React.cloneElement(children as JSX.Element, {
 				isDragging,
+				overPosition,
 				overTarget,
 				ref: childRef,
 			})}

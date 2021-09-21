@@ -15,13 +15,17 @@ import {useItem} from './useItem';
 type TreeViewItemProps = {
 	children: React.ReactNode;
 	isDragging?: boolean;
+	overPosition?: string;
 	overTarget?: boolean;
 };
 
 const SpacingContext = React.createContext(0);
 
 export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
-	function TreeViewItemInner({children, isDragging, overTarget}, ref) {
+	function TreeViewItemInner(
+		{children, isDragging, overPosition, overTarget},
+		ref
+	) {
 		const spacing = useContext(SpacingContext);
 		const {
 			childrenRoot,
@@ -41,6 +45,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 		if (!group && nestedKey && item[nestedKey] && childrenRoot) {
 			return React.cloneElement(childrenRoot(item), {
 				isDragging,
+				overPosition,
 				overTarget,
 				ref,
 			});
@@ -60,8 +65,12 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 						}
 						className={classNames('treeview-link', {
 							collapsed: group && expandedKeys.has(item.key),
-							'treeview-dropping-inside':
-								!isDragging && overTarget,
+							'treeview-dropping-bottom':
+								overTarget && overPosition === 'bottom',
+							'treeview-dropping-middle':
+								overTarget && overPosition === 'middle',
+							'treeview-dropping-top':
+								overTarget && overPosition === 'top',
 						})}
 						onClick={() => group && toggle(item.key)}
 						ref={ref}
