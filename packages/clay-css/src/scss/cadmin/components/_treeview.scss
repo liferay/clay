@@ -148,7 +148,7 @@
 
 		.treeview-dropping {
 			&-bottom,
-			&-inside,
+			&-middle,
 			&-top {
 				border-color: transparent;
 				background-color: transparent;
@@ -171,10 +171,10 @@
 			@include clay-css($dropping-bottom);
 		}
 
-		&-inside {
-			$dropping-inside: setter(map-get($dropping, inside), ());
+		&-middle {
+			$dropping-middle: setter(map-get($dropping, middle), ());
 
-			@include clay-css($dropping-inside);
+			@include clay-css($dropping-middle);
 		}
 
 		&-top {
