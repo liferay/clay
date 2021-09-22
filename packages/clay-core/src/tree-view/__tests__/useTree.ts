@@ -55,9 +55,9 @@ describe('useTree', () => {
 			},
 			{
 				children: [
+					{name: 'PDF'},
 					{name: 'Blogs'},
 					{name: 'Documents and Media'},
-					{name: 'PDF'},
 				],
 				name: 'Repositories',
 			},
@@ -69,7 +69,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([2, 0], [1]);
+		immutableTree.produce([2, 0], [1, 0]);
 
 		const result = immutableTree.applyPatches();
 
@@ -117,7 +117,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([2, 0], [0, 1]);
+		immutableTree.produce([2, 0], [0, 1, 0]);
 
 		const result = immutableTree.applyPatches();
 
