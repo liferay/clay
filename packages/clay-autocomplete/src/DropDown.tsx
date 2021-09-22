@@ -20,6 +20,13 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	active?: boolean;
 
 	/**
+	 * Flag to indicate if clicking outside of the menu should automatically close it.
+	 */
+	closeOnClickOutside?: React.ComponentProps<
+		typeof ClayDropDown.Menu
+	>['closeOnClickOutside'];
+
+	/**
 	 * Callback function for when active state changes.
 	 */
 	onSetActive?: (val: boolean) => void;
@@ -29,6 +36,7 @@ const ClayAutocompleteDropDown: React.FunctionComponent<IProps> = ({
 	active = false,
 	alignElementRef,
 	children,
+	closeOnClickOutside,
 	onSetActive = () => {},
 }: IProps) => {
 	const {containerElementRef} = React.useContext(Context);
@@ -47,6 +55,7 @@ const ClayAutocompleteDropDown: React.FunctionComponent<IProps> = ({
 			alignElementRef={alignElementRef}
 			autoBestAlign={false}
 			className="autocomplete-dropdown-menu"
+			closeOnClickOutside={closeOnClickOutside}
 			onSetActive={onSetActive}
 			ref={menuElementRef}
 			style={{
