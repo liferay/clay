@@ -123,4 +123,72 @@ describe('useTree', () => {
 
 		expect(result).toMatchObject(newTree);
 	});
+
+	it('move item on top of an item', () => {
+		const tree = [
+			{
+				name: 'Foo',
+			},
+			{
+				name: 'Bar',
+			},
+			{
+				name: 'Baz',
+			},
+		];
+
+		const expectedTree = [
+			{
+				name: 'Bar',
+			},
+			{
+				name: 'Foo',
+			},
+			{
+				name: 'Baz',
+			},
+		];
+
+		const immutableTree = createImmutableTree(tree, 'children');
+
+		immutableTree.produce([1], [0]);
+
+		const result = immutableTree.applyPatches();
+
+		expect(result).toMatchObject(expectedTree);
+	});
+
+	it('move item on bottom of an item', () => {
+		const tree = [
+			{
+				name: 'Foo',
+			},
+			{
+				name: 'Bar',
+			},
+			{
+				name: 'Baz',
+			},
+		];
+
+		const expectedTree = [
+			{
+				name: 'Bar',
+			},
+			{
+				name: 'Foo',
+			},
+			{
+				name: 'Baz',
+			},
+		];
+
+		const immutableTree = createImmutableTree(tree, 'children');
+
+		immutableTree.produce([0], [1]);
+
+		const result = immutableTree.applyPatches();
+
+		expect(result).toMatchObject(expectedTree);
+	});
 });
