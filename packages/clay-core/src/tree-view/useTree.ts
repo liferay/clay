@@ -164,20 +164,6 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 				// immediately followed by the "add" operation at the target
 				// location with the value that was removed.
 				case 'move': {
-					if (!path.length) {
-						return;
-					}
-
-					if (from.length === path.length) {
-						const equal = from.every((value, index) => {
-							return path[index] === value;
-						});
-
-						if (equal) {
-							return;
-						}
-					}
-
 					const nodeToRemove = nodeByPath(from);
 
 					if (nodeToRemove.parent) {

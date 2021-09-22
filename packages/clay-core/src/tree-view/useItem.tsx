@@ -38,6 +38,15 @@ function getKey(key: React.Key) {
 	return `${key}`.replace('.$', '');
 }
 
+function isMovingIntoItself(from: Array<number>, path: Array<number>) {
+	const fromClosestPathTree = from.slice(0, path.length);
+
+	return (
+		!fromClosestPathTree.some((loc, index) => loc !== path[index]) &&
+		path.length > from.length
+	);
+}
+
 export function ItemContextProvider({children, value}: Props) {
 	const {items, open, reorder, selection} = useTreeViewContext();
 	const {indexes: parentIndexes = [], key: parentKey} = useItem();
@@ -75,12 +84,22 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const [{overTarget}, drop] = useDrop({
 		accept: 'treeViewItem',
+		canDrop(dragItem: unknown) {
+			return !isMovingIntoItself(
+				(dragItem as Value).indexes,
+				item.indexes
+			);
+		},
 		collect: (monitor) => ({
 			canDrop: monitor.canDrop(),
 			overTarget: monitor.isOver({shallow: true}),
 		}),
 		drop(dragItem: unknown, monitor) {
-			if (monitor.didDrop()) {
+			if (
+				monitor.didDrop() ||
+				!monitor.canDrop() ||
+				(dragItem as Value).key === item.key
+			) {
 				return;
 			}
 
@@ -108,7 +127,7 @@ export function ItemContextProvider({children, value}: Props) {
 			reorder((dragItem as Value).indexes, indexes);
 		},
 		hover(dragItem, monitor) {
-			if (isDragging) {
+			if (!monitor.canDrop() || isDragging) {
 				return;
 			}
 
