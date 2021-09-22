@@ -75,6 +75,18 @@ export default (location) => {
 							</Link>
 						</li>
 						<li className="nav-item">
+							<a
+								className="nav-link"
+								href="/sass-api/index.html"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<span className="c-inner" tabIndex="-1">
+									{'Sass API'}
+								</span>
+							</a>
+						</li>
+						<li className="nav-item">
 							<Link
 								activeStyle={{color: '#b3472d'}}
 								className="nav-link"
