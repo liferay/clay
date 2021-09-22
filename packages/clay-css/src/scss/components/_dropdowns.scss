@@ -7,8 +7,6 @@
 
 .dropdown-toggle {
 	white-space: nowrap;
-
-	@include caret();
 }
 
 .dropdown-header {
@@ -246,10 +244,6 @@
 		margin-top: 0;
 		top: auto;
 	}
-
-	.dropdown-toggle {
-		@include caret(up);
-	}
 }
 
 .dropright {
@@ -260,14 +254,6 @@
 		right: auto;
 		top: 0;
 	}
-
-	.dropdown-toggle {
-		@include caret(right);
-
-		&::after {
-			vertical-align: 0;
-		}
-	}
 }
 
 .dropleft {
@@ -277,14 +263,6 @@
 		margin-top: 0;
 		right: 100%;
 		top: 0;
-	}
-
-	.dropdown-toggle {
-		@include caret(left);
-
-		&::before {
-			vertical-align: 0;
-		}
 	}
 }
 
