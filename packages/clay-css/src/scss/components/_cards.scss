@@ -186,14 +186,14 @@
 @if ($enable-bs4-deprecated) {
 	.card-header-tabs {
 		border-bottom: 0;
-		margin-bottom: -$card-spacer-y;
-		margin-left: -$card-spacer-x / 2;
-		margin-right: -$card-spacer-x / 2;
+		margin-bottom: math-sign($card-spacer-y);
+		margin-left: calc(#{math-sign($card-spacer-x)} / 2);
+		margin-right: calc(#{math-sign($card-spacer-x)} / 2);
 	}
 
 	.card-header-pills {
-		margin-left: -$card-spacer-x / 2;
-		margin-right: -$card-spacer-x / 2;
+		margin-left: calc(#{math-sign($card-spacer-x)} / 2);
+		margin-right: calc(#{math-sign($card-spacer-x)} / 2);
 	}
 }
 
@@ -440,8 +440,8 @@
 		@include media-breakpoint-up(sm) {
 			display: flex;
 			flex-flow: row wrap;
-			margin-left: -$card-deck-margin;
-			margin-right: -$card-deck-margin;
+			margin-left: math-sign($card-deck-margin);
+			margin-right: math-sign($card-deck-margin);
 
 			.card {
 				// Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
@@ -558,7 +558,7 @@
 			> .card-header {
 				@include border-radius(0);
 
-				margin-bottom: -$card-border-width;
+				margin-bottom: math-sign($card-border-width);
 			}
 		}
 	}

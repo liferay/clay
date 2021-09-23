@@ -4,7 +4,8 @@ $dropdown-border-style: solid !default;
 $dropdown-border-width: $border-width !default;
 
 $dropdown-border-radius: $border-radius !default;
-$dropdown-inner-border-radius: $dropdown-border-radius -$dropdown-border-width !default;
+$dropdown-inner-border-radius: $dropdown-border-radius
+	math-sign($dropdown-border-width) !default;
 
 $dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175) !default;
 $dropdown-color: $body-color !default;

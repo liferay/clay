@@ -189,11 +189,11 @@
 		margin-right: 0;
 
 		&:first-child {
-			margin-top: -$dropdown-padding-y;
+			margin-top: math-sign($dropdown-padding-y);
 		}
 
 		&:last-child {
-			margin-bottom: -$dropdown-padding-y;
+			margin-bottom: math-sign($dropdown-padding-y);
 		}
 	}
 

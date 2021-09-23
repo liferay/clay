@@ -50,7 +50,7 @@
 	.autofit-col {
 		border-left: $list-group-border-width solid $list-group-border-color;
 		border-right: $list-group-border-width solid $list-group-border-color;
-		margin-left: -$list-group-border-width;
+		margin-left: math-sign($list-group-border-width);
 		padding: $list-group-item-padding-y $list-group-item-padding-x;
 
 		&:first-child,
@@ -94,7 +94,7 @@
 
 					&.active {
 						border-left-width: $list-group-border-width;
-						margin-left: -$list-group-border-width;
+						margin-left: math-sign($list-group-border-width);
 					}
 				}
 			}
@@ -110,7 +110,7 @@
 	border: $list-group-border-width solid $list-group-border-color;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: -$list-group-border-width;
+	margin-bottom: math-sign($list-group-border-width);
 	padding: $list-group-header-padding-y $list-group-header-padding-x;
 
 	&:first-child {
@@ -240,7 +240,7 @@
 
 		&.active {
 			border-top-width: $list-group-border-width;
-			margin-top: -$list-group-border-width;
+			margin-top: math-sign($list-group-border-width);
 		}
 	}
 }

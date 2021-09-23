@@ -170,7 +170,7 @@
 	background-color: $multi-step-divider-bg;
 	height: $multi-step-divider-height;
 	margin-left: $multi-step-icon-size;
-	margin-top: -$multi-step-divider-height;
+	margin-top: math-sign($multi-step-divider-height);
 	position: relative;
 	top: $multi-step-divider-top;
 }

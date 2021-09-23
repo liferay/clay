@@ -95,7 +95,9 @@ $panel-title-small-margin-left: null !default;
 
 // Panel Group
 
-$panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
+$panel-group-panel-margin-bottom: math-sign(
+	$panel-border-bottom-width
+) !default;
 
 $panel-group-panel-unstyled: () !default;
 $panel-group-panel-unstyled: map-deep-merge(

@@ -24,8 +24,8 @@
 
 	@if ($enable-c-inner) {
 		.c-inner {
-			margin: #{math-sign($panel-header-padding-y)}
-				#{math-sign($panel-header-padding-x)};
+			margin: math-sign($panel-header-padding-y)
+				math-sign($panel-header-padding-x);
 			width: auto;
 		}
 	}
@@ -112,7 +112,7 @@
 		&:not(:first-child) {
 			@include border-radius(0);
 
-			margin-top: -$panel-border-bottom-width;
+			margin-top: math-sign($panel-border-bottom-width);
 
 			.panel-header {
 				@include border-radius(0);
@@ -201,27 +201,27 @@
 	> .panel-group-fluid,
 	> .panel-group-fluid-first,
 	> .panel-group-fluid-last {
-		margin-left: -$card-spacer-x;
-		margin-right: -$card-spacer-x;
+		margin-left: math-sign($card-spacer-x);
+		margin-right: math-sign($card-spacer-x);
 	}
 }
 
 .sheet {
 	> .panel-group-fluid {
-		margin-left: -$sheet-padding-left;
-		margin-right: -$sheet-padding-right;
+		margin-left: math-sign($sheet-padding-left);
+		margin-right: math-sign($sheet-padding-right);
 	}
 
 	> .panel-group-fluid-first {
-		margin-left: -$sheet-padding-left;
-		margin-right: -$sheet-padding-right;
-		margin-top: -$sheet-padding-top;
+		margin-left: math-sign($sheet-padding-left);
+		margin-right: math-sign($sheet-padding-right);
+		margin-top: math-sign($sheet-padding-top);
 	}
 
 	> .panel-group-fluid-last {
-		margin-bottom: -$sheet-padding-bottom;
-		margin-left: -$sheet-padding-left;
-		margin-right: -$sheet-padding-right;
+		margin-bottom: math-sign($sheet-padding-bottom);
+		margin-left: math-sign($sheet-padding-left);
+		margin-right: math-sign($sheet-padding-right);
 	}
 }
 
