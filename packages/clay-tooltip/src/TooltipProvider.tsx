@@ -343,7 +343,7 @@ const TooltipProvider: React.FunctionComponent<
 
 			const alignment = doAlign({
 				overflow: {
-					adjustX: false,
+					adjustX: autoAlign,
 					adjustY: autoAlign,
 				},
 				points,
