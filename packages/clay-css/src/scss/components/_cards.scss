@@ -18,15 +18,13 @@
 	position: relative;
 	word-wrap: break-word;
 
-	@if ($card-border-radius > 0) {
-		.autofit-col {
-			&:first-child {
-				@include border-left-radius($card-inner-border-radius);
-			}
+	.autofit-col {
+		&:first-child {
+			@include border-left-radius($card-inner-border-radius);
+		}
 
-			&:last-child {
-				@include border-right-radius($card-inner-border-radius);
-			}
+		&:last-child {
+			@include border-right-radius($card-inner-border-radius);
 		}
 	}
 
