@@ -518,34 +518,69 @@ $cadmin-form-feedback-warning-color: $cadmin-warning !default;
 
 $cadmin-form-feedback-invalid-color: $cadmin-danger !default;
 
-// Input Variants
+// .has-error .form-control
 
 $cadmin-input-danger-bg: $cadmin-danger-l2 !default;
-$cadmin-input-danger-focus-bg: null !default;
 $cadmin-input-danger-border-color: $cadmin-danger-l1 !default;
-$cadmin-input-danger-focus-border-color: null !default;
 $cadmin-input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
-$cadmin-input-danger-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
 $cadmin-input-danger-color: $cadmin-input-color !default;
+
+$cadmin-input-danger-focus-bg: null !default;
+$cadmin-input-danger-focus-border-color: null !default;
+$cadmin-input-danger-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
 $cadmin-input-danger-focus-color: null !default;
+
+$cadmin-input-danger: () !default;
+$cadmin-input-danger: map-deep-merge(
+	(
+		background-color: $cadmin-input-danger-bg,
+		border-color: $cadmin-input-danger-border-color,
+		box-shadow: $cadmin-input-danger-box-shadow,
+		color: $cadmin-input-danger-color,
+		focus: (
+			background-color: $cadmin-input-danger-focus-bg,
+			border-color: $cadmin-input-danger-focus-border-color,
+			box-shadow: $cadmin-input-danger-focus-box-shadow,
+			color: $cadmin-input-danger-focus-color,
+		),
+	),
+	$cadmin-input-danger
+);
+
+// .has-error .form-control[readonly]
 
 $cadmin-input-danger-readonly: () !default;
 $cadmin-input-danger-readonly: map-deep-merge(
 	(
-		bg: map-get($cadmin-input-readonly, bg),
+		background-color: map-get($cadmin-input-readonly, background-color),
 		border-color: map-get($cadmin-input-readonly, border-color),
-		focus-border-color: $cadmin-input-focus-border-color,
+		focus: (
+			border-color: $cadmin-input-focus-border-color,
+		),
 	),
 	$cadmin-input-danger-readonly
 );
 
 $cadmin-input-danger-checkbox-label-color: $cadmin-danger !default;
 $cadmin-input-danger-label-color: null !default;
+
+// .has-error select.form-control
+
 $cadmin-input-danger-select-icon-color: $cadmin-input-danger-border-color !default;
 $cadmin-input-danger-select-icon: clay-icon(
 	caret-double-l,
 	$cadmin-input-danger-select-icon-color
 ) !default;
+
+$cadmin-input-danger-select: () !default;
+$cadmin-input-danger-select: map-deep-merge(
+	(
+		background-image: $cadmin-input-danger-select-icon,
+	),
+	$cadmin-input-danger-select
+);
+
+// .has-error select.form-control[size]
 
 $cadmin-input-danger-select-size: () !default;
 $cadmin-input-danger-select-size: map-deep-merge(
@@ -555,79 +590,77 @@ $cadmin-input-danger-select-size: map-deep-merge(
 	$cadmin-input-danger-select-size
 );
 
+// .has-error select.form-control[multiple]
+
 $cadmin-input-danger-select-multiple: () !default;
 $cadmin-input-danger-select-multiple: map-deep-merge(
 	$cadmin-input-danger-select-size,
 	$cadmin-input-danger-select-multiple
 );
 
-$cadmin-input-success-bg: $cadmin-success-l2 !default;
-$cadmin-input-success-focus-bg: null !default;
-$cadmin-input-success-border-color: $cadmin-success-l1 !default;
-$cadmin-input-success-focus-border-color: null !default;
-$cadmin-input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
-$cadmin-input-success-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
-$cadmin-input-success-color: $cadmin-input-color !default;
-$cadmin-input-success-focus-color: null !default;
-
-$cadmin-input-success-readonly: () !default;
-$cadmin-input-success-readonly: map-deep-merge(
-	(
-		bg: map-get($cadmin-input-readonly, bg),
-		border-color: map-get($cadmin-input-readonly, border-color),
-		focus-border-color: $cadmin-input-focus-border-color,
-	),
-	$cadmin-input-success-readonly
-);
-
-$cadmin-input-success-checkbox-label-color: $cadmin-success !default;
-$cadmin-input-success-label-color: null !default;
-$cadmin-input-success-select-icon-color: $cadmin-input-success-border-color !default;
-$cadmin-input-success-select-icon: clay-icon(
-	caret-double-l,
-	$cadmin-input-success-select-icon-color
-) !default;
-
-$cadmin-input-success-select-size: () !default;
-$cadmin-input-success-select-size: map-deep-merge(
-	(
-		background-image: none,
-	),
-	$cadmin-input-success-select-size
-);
-
-$cadmin-input-success-select-multiple: () !default;
-$cadmin-input-success-select-multiple: map-deep-merge(
-	$cadmin-input-success-select-size,
-	$cadmin-input-success-select-multiple
-);
+// .has-warning .form-control
 
 $cadmin-input-warning-bg: $cadmin-warning-l2 !default;
-$cadmin-input-warning-focus-bg: null !default;
 $cadmin-input-warning-border-color: $cadmin-warning-l1 !default;
-$cadmin-input-warning-focus-border-color: null !default;
 $cadmin-input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
-$cadmin-input-warning-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
 $cadmin-input-warning-color: $cadmin-input-color !default;
+
+$cadmin-input-warning-focus-bg: null !default;
+$cadmin-input-warning-focus-border-color: null !default;
+$cadmin-input-warning-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
 $cadmin-input-warning-focus-color: null !default;
+
+$cadmin-input-warning: () !default;
+$cadmin-input-warning: map-deep-merge(
+	(
+		background-color: $cadmin-input-warning-bg,
+		border-color: $cadmin-input-warning-border-color,
+		box-shadow: $cadmin-input-warning-box-shadow,
+		color: $cadmin-input-warning-color,
+		focus: (
+			background-color: $cadmin-input-warning-focus-bg,
+			border-color: $cadmin-input-warning-focus-border-color,
+			box-shadow: $cadmin-input-warning-focus-box-shadow,
+			color: $cadmin-input-warning-focus-color,
+		),
+	),
+	$cadmin-input-warning
+);
+
+// .has-warning .form-control[readonly]
 
 $cadmin-input-warning-readonly: () !default;
 $cadmin-input-warning-readonly: map-deep-merge(
 	(
-		bg: map-get($cadmin-input-readonly, bg),
+		background-color: map-get($cadmin-input-readonly, background-color),
 		border-color: map-get($cadmin-input-readonly, border-color),
-		focus-border-color: $cadmin-input-focus-border-color,
+		focus: (
+			border-color: $cadmin-input-focus-border-color,
+		),
 	),
 	$cadmin-input-warning-readonly
 );
 
 $cadmin-input-warning-checkbox-label-color: $cadmin-warning !default;
 $cadmin-input-warning-label-color: null !default;
+
+// .has-warning select.form-control
+
 $cadmin-input-warning-select-icon-color: $cadmin-input-warning-border-color !default;
 $cadmin-input-warning-select-icon: clay-icon(
 	caret-double-l,
 	$cadmin-input-warning-select-icon-color
 ) !default;
+
+$cadmin-input-warning-select: () !default;
+$cadmin-input-warning-select: map-deep-merge(
+	(
+		background-image: $cadmin-input-warning-select-icon,
+	),
+	$cadmin-input-warning-select
+);
+
+// .has-warning select.form-control[size]
 
 $cadmin-input-warning-select-size: () !default;
 $cadmin-input-warning-select-size: map-deep-merge(
@@ -637,10 +670,92 @@ $cadmin-input-warning-select-size: map-deep-merge(
 	$cadmin-input-warning-select-size
 );
 
+// .has-warning select.form-control[multiple]
+
 $cadmin-input-warning-select-multiple: () !default;
 $cadmin-input-warning-select-multiple: map-deep-merge(
 	$cadmin-input-warning-select-size,
 	$cadmin-input-warning-select-multiple
+);
+
+// .has-success .form-control
+
+$cadmin-input-success-bg: $cadmin-success-l2 !default;
+$cadmin-input-success-border-color: $cadmin-success-l1 !default;
+$cadmin-input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$cadmin-input-success-color: $cadmin-input-color !default;
+
+$cadmin-input-success-focus-bg: null !default;
+$cadmin-input-success-focus-border-color: null !default;
+$cadmin-input-success-focus-box-shadow: $cadmin-input-focus-box-shadow !default;
+$cadmin-input-success-focus-color: null !default;
+
+$cadmin-input-success: () !default;
+$cadmin-input-success: map-deep-merge(
+	(
+		background-color: $cadmin-input-success-bg,
+		border-color: $cadmin-input-success-border-color,
+		box-shadow: $cadmin-input-success-box-shadow,
+		color: $cadmin-input-success-color,
+		focus: (
+			background-color: $cadmin-input-success-focus-bg,
+			border-color: $cadmin-input-success-focus-border-color,
+			box-shadow: $cadmin-input-success-focus-box-shadow,
+			color: $cadmin-input-success-focus-color,
+		),
+	),
+	$cadmin-input-success
+);
+
+// .has-success .form-control[readonly]
+
+$cadmin-input-success-readonly: () !default;
+$cadmin-input-success-readonly: map-deep-merge(
+	(
+		background-color: map-get($cadmin-input-readonly, background-color),
+		border-color: map-get($cadmin-input-readonly, border-color),
+		focus: (
+			border-color: $cadmin-input-focus-border-color,
+		),
+	),
+	$cadmin-input-success-readonly
+);
+
+$cadmin-input-success-checkbox-label-color: $cadmin-success !default;
+$cadmin-input-success-label-color: null !default;
+
+// .has-success select.form-control
+
+$cadmin-input-success-select-icon-color: $cadmin-input-success-border-color !default;
+$cadmin-input-success-select-icon: clay-icon(
+	caret-double-l,
+	$cadmin-input-success-select-icon-color
+) !default;
+
+$cadmin-input-success-select: () !default;
+$cadmin-input-success-select: map-deep-merge(
+	(
+		background-image: $cadmin-input-success-select-icon,
+	),
+	$cadmin-input-success-select
+);
+
+// .has-success select.form-control[size]
+
+$cadmin-input-success-select-size: () !default;
+$cadmin-input-success-select-size: map-deep-merge(
+	(
+		background-image: none,
+	),
+	$cadmin-input-success-select-size
+);
+
+// .has-success select.form-control[multiple]
+
+$cadmin-input-success-select-multiple: () !default;
+$cadmin-input-success-select-multiple: map-deep-merge(
+	$cadmin-input-success-select-size,
+	$cadmin-input-success-select-multiple
 );
 
 // Select Element
