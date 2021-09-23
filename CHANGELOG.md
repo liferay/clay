@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.36.0](https://github.com/liferay/clay/compare/v3.35.3...v3.36.0) (2021-09-23)
+
+### Bug Fixes
+
+-   **@clayui/core:** add missing dependencies ([8802933](https://github.com/liferay/clay/commit/8802933))
+-   **@clayui/core:** fixes error of not controlled state for selectedKeys ([f78aad9](https://github.com/liferay/clay/commit/f78aad9))
+-   **@clayui/core:** fixes error of not selecting all children regardless of state ([cdc921d](https://github.com/liferay/clay/commit/cdc921d))
+-   **@clayui/core:** fixes error when expanding Node when selecting in TreeView ([00a9559](https://github.com/liferay/clay/commit/00a9559))
+-   **@clayui/core:** Fixes error when not keeping node expandable when it starts as true ([236039b](https://github.com/liferay/clay/commit/236039b))
+-   **@clayui/css:** Atlas Global Variables define all global variables for easier copy and paste for those extending Clay CSS. This should help reduce undefined variable errors when reusing globals. ([acb598e](https://github.com/liferay/clay/commit/acb598e))
+-   **@clayui/css:** Atlas removes Sassdoc comments. All documentation that gets generated should go in Base ([89dc333](https://github.com/liferay/clay/commit/89dc333)), closes [#4275](https://github.com/liferay/clay/issues/4275)
+-   **@clayui/css:** Base Theme Global variables move settings toward the top of the file. ([b1b309d](https://github.com/liferay/clay/commit/b1b309d))
+-   **@clayui/css:** Buttons and Cadmin Buttons `.btn-monospaced` icons are off center by a pixel, use `display: inline-flex` to center and remove padding. If you need items to display inline in `.btn-monospaced` wrap them in a `span` tag. ([ece0b5b](https://github.com/liferay/clay/commit/ece0b5b))
+-   **@clayui/css:** Buttons create Sass placeholders for Clay CSS btn-\* classes to allow theme devs to [@extend](https://github.com/extend) their button classes from it ([f7e50f0](https://github.com/liferay/clay/commit/f7e50f0)), closes [#4248](https://github.com/liferay/clay/issues/4248)
+-   **@clayui/css:** Global Functions `clay-enable-transitions` should return `$transitions` instead of `$transition` ([ca2d59a](https://github.com/liferay/clay/commit/ca2d59a))
+-   **@clayui/css:** Global Functions `clay-enable-transitions` the variable `$enable-transitions` isn't available in Cadmin, use `$enable` instead ([bd4e1c5](https://github.com/liferay/clay/commit/bd4e1c5))
+-   **@clayui/css:** Mixins `clay-button-variant` adds option to style `:disabled:focus`, mostly for removing focus shadow on disabled `.btn` ([bb942f9](https://github.com/liferay/clay/commit/bb942f9))
+-   **@clayui/css:** Mixins `clay-button-variant` c-inner should work if mobile sizes are enabled ([a0a005c](https://github.com/liferay/clay/commit/a0a005c))
+-   **@clayui/css:** Mixins `clay-button-variant` remove outputting `a.btn, button.btn { cursor: pointer; }` we can pass it in directly to `.btn` ([d5a1942](https://github.com/liferay/clay/commit/d5a1942))
+-   **@clayui/css:** Mixins form-control-variant update hover, focus, disabled to accept nested placeholder maps ([05a85ca](https://github.com/liferay/clay/commit/05a85ca))
+-   **@clayui/drop-down:** fixes the values of the `width` property of the Menu ([f29681e](https://github.com/liferay/clay/commit/f29681e))
+-   **@clayui/tooltip:** forces tooltip to be repositioned when the x-axis is modified ([b62313c](https://github.com/liferay/clay/commit/b62313c))
+-   **@clayui/tooltip:** stop the always showing warnings ([3858bfe](https://github.com/liferay/clay/commit/3858bfe))
+-   **@clyaui/tooltip:** fixes error when not forcing Tooltip repositioning when X axis is modified ([187f1ef](https://github.com/liferay/clay/commit/187f1ef))
+
+### Features
+
+-   **@clayui/autocomplete:** adds `closeOnClickOutside` API support to DropDown ([ece1061](https://github.com/liferay/clay/commit/ece1061))
+-   **@clayui/core:** Add `expanderIcons` API to change icons throughout the structure ([455002c](https://github.com/liferay/clay/commit/455002c))
+-   **@clayui/core:** Add initial sketch of components to TreeView ([234e4f6](https://github.com/liferay/clay/commit/234e4f6))
+-   **@clayui/core:** adds functionality for expandable nodes and nested nodes ([b103398](https://github.com/liferay/clay/commit/b103398))
+-   **@clayui/core:** adds multiple selection implementation for Tree View ([281ec20](https://github.com/liferay/clay/commit/281ec20))
+-   **@clayui/core:** adds support for flat items with dynamic content ([5ef9405](https://github.com/liferay/clay/commit/5ef9405))
+-   **@clayui/css:** Buttons convert `.btn-lg` and `.btn-sm` to use `clay-button-variant` mixin ([f6b3e95](https://github.com/liferay/clay/commit/f6b3e95))
+-   **@clayui/css:** Buttons convert `.btn-unstyled`, `.btn-monospaced`, `.btn-monospaced-lg`, `.btn-monospaced-sm`, `.btn-outline-borderless` to use `clay-button-variant` mixin ([4c16ce5](https://github.com/liferay/clay/commit/4c16ce5))
+-   **@clayui/css:** Buttons convert `.btn` to use `clay-button-variant` mixin ([617befc](https://github.com/liferay/clay/commit/617befc))
+-   **@clayui/css:** Cadmin Buttons convert `.btn`, `.btn-lg`, `.btn-sm`, `.btn-monospaced`, `.btn-monospaced-sm`, `.btn-monospaced-lg`, `.btn-unstyled`, and `.btn-outline-borderless` to use `clay-button-variant` mixin ([8481f19](https://github.com/liferay/clay/commit/8481f19))
+-   **@clayui/css:** Cadmin Forms convert label and .form-control to use clay-css mixin ([4226e59](https://github.com/liferay/clay/commit/4226e59))
+-   **@clayui/css:** Forms convert label and .form-control to use clay-css mixin ([6a8b9f0](https://github.com/liferay/clay/commit/6a8b9f0))
+-   **@clayui/css:** Global Functions adds `starts-with($str1, $str2)`. A function that determines whether the string `$str1` begins with the characters of the specified string `$str2`. ([6ddef3e](https://github.com/liferay/clay/commit/6ddef3e))
+-   **@clayui/css:** Mixins `clay-css` if transition has a value other than `null` or `none`, it should output a prefers-reduced-motion media query ([95b5c08](https://github.com/liferay/clay/commit/95b5c08))
+-   **@clayui/css:** Mixins `clay-css` should output any CSS Custom Properties passed into it. ([a78ddfa](https://github.com/liferay/clay/commit/a78ddfa)), closes [#4252](https://github.com/liferay/clay/issues/4252)
+-   **@clayui/css:** Move .hide from liferay-portal to clay-css ([0e25435](https://github.com/liferay/clay/commit/0e25435))
+
 ## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
 
 ### Bug Fixes

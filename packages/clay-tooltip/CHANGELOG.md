@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.36.0](https://github.com/liferay/clay/compare/v3.35.3...v3.36.0) (2021-09-23)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** forces tooltip to be repositioned when the x-axis is modified ([b62313c](https://github.com/liferay/clay/commit/b62313c))
+-   **@clayui/tooltip:** stop the always showing warnings ([3858bfe](https://github.com/liferay/clay/commit/3858bfe))
+-   **@clyaui/tooltip:** fixes error when not forcing Tooltip repositioning when X axis is modified ([187f1ef](https://github.com/liferay/clay/commit/187f1ef))
+
 ## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
 
 **Note:** Version bump only for package @clayui/tooltip
