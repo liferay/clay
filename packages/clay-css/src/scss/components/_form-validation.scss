@@ -99,17 +99,7 @@
 	}
 
 	.form-control {
-		background-color: $input-danger-bg;
-		border-color: $input-danger-border-color;
-		box-shadow: $input-danger-box-shadow;
-		color: $input-danger-color;
-
-		&:focus {
-			background-color: $input-danger-focus-bg;
-			border-color: $input-danger-focus-border-color;
-			box-shadow: $input-danger-focus-box-shadow;
-			color: $input-danger-focus-color;
-		}
+		@include clay-form-control-variant($input-danger);
 	}
 
 	.form-control[readonly] {
@@ -121,7 +111,7 @@
 	}
 
 	select.form-control {
-		background-image: $input-danger-select-icon;
+		@include clay-select-variant($input-danger-select);
 
 		&[size] {
 			@include clay-select-variant($input-danger-select-size);
@@ -186,17 +176,7 @@
 	}
 
 	.form-control {
-		background-color: $input-warning-bg;
-		border-color: $input-warning-border-color;
-		box-shadow: $input-warning-box-shadow;
-		color: $input-warning-color;
-
-		&:focus {
-			background-color: $input-warning-focus-bg;
-			border-color: $input-warning-focus-border-color;
-			box-shadow: $input-warning-focus-box-shadow;
-			color: $input-warning-focus-color;
-		}
+		@include clay-form-control-variant($input-warning);
 	}
 
 	.form-control[readonly] {
@@ -208,7 +188,7 @@
 	}
 
 	select.form-control {
-		background-image: $input-warning-select-icon;
+		@include clay-select-variant($input-warning-select);
 
 		&[size] {
 			@include clay-select-variant($input-warning-select-size);
@@ -273,17 +253,7 @@
 	}
 
 	.form-control {
-		background-color: $input-success-bg;
-		border-color: $input-success-border-color;
-		box-shadow: $input-success-box-shadow;
-		color: $input-success-color;
-
-		&:focus {
-			background-color: $input-success-focus-bg;
-			border-color: $input-success-focus-border-color;
-			box-shadow: $input-success-focus-box-shadow;
-			color: $input-success-focus-color;
-		}
+		@include clay-form-control-variant($input-success);
 	}
 
 	.form-control[readonly] {
@@ -295,7 +265,7 @@
 	}
 
 	select.form-control {
-		background-image: $input-success-select-icon;
+		@include clay-select-variant($input-success-select);
 
 		&[size] {
 			@include clay-select-variant($input-success-select-size);
