@@ -190,7 +190,7 @@
 
 	.alert-list {
 		.alert-fluid:last-child {
-			margin-bottom: -$cadmin-alert-fluid-border-bottom-width;
+			margin-bottom: math-sign($cadmin-alert-fluid-border-bottom-width);
 		}
 	}
 }

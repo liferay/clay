@@ -52,7 +52,7 @@
 			$cadmin-list-group-border-color;
 		border-right: $cadmin-list-group-border-width solid
 			$cadmin-list-group-border-color;
-		margin-left: -$cadmin-list-group-border-width;
+		margin-left: math-sign($cadmin-list-group-border-width);
 		padding: $cadmin-list-group-item-padding-y
 			$cadmin-list-group-item-padding-x;
 
@@ -74,7 +74,7 @@
 		$cadmin-list-group-border-color;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: -$cadmin-list-group-border-width;
+	margin-bottom: math-sign($cadmin-list-group-border-width);
 	padding: $cadmin-list-group-header-padding-y
 		$cadmin-list-group-header-padding-x;
 
@@ -206,14 +206,14 @@
 
 		&.active {
 			border-top-width: $cadmin-list-group-border-width;
-			margin-top: -$cadmin-list-group-border-width;
+			margin-top: math-sign($cadmin-list-group-border-width);
 		}
 	}
 }
 
 .list-group-item-flex {
 	display: flex;
-	margin-bottom: -$cadmin-list-group-border-width;
+	margin-bottom: math-sign($cadmin-list-group-border-width);
 	padding-left: $cadmin-list-group-item-padding-x / 2;
 	padding-right: $cadmin-list-group-item-padding-x / 2;
 
@@ -420,8 +420,8 @@
 	.quick-action-menu {
 		align-items: $cadmin-list-group-item-flex-align-items;
 		background-color: $cadmin-list-group-bg;
-		margin-bottom: -$cadmin-list-group-item-padding-y;
-		margin-top: -$cadmin-list-group-item-padding-y;
+		margin-bottom: math-sign($cadmin-list-group-item-padding-y);
+		margin-top: math-sign($cadmin-list-group-item-padding-y);
 		padding-bottom: $cadmin-list-group-item-padding-y;
 		padding-top: $cadmin-list-group-item-padding-y;
 	}
@@ -475,10 +475,12 @@
 	}
 
 	.quick-action-menu {
-		margin-bottom: -$cadmin-list-group-item-padding-y +
-			$cadmin-list-group-notification-item-border-bottom-width;
-		margin-top: -$cadmin-list-group-item-padding-y +
-			$cadmin-list-group-notification-item-border-top-width;
+		margin-bottom: calc(
+			#{math-sign($cadmin-list-group-item-padding-y)} + #{$cadmin-list-group-notification-item-border-bottom-width}
+		);
+		margin-top: calc(
+			#{math-sign($cadmin-list-group-item-padding-y)} + #{$cadmin-list-group-notification-item-border-top-width}
+		);
 	}
 
 	.autofit-col .quick-action-item {

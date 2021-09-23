@@ -188,11 +188,11 @@
 		margin-right: 0;
 
 		&:first-child {
-			margin-top: -$cadmin-dropdown-padding-y;
+			margin-top: math-sign($cadmin-dropdown-padding-y);
 		}
 
 		&:last-child {
-			margin-bottom: -$cadmin-dropdown-padding-y;
+			margin-bottom: math-sign($cadmin-dropdown-padding-y);
 		}
 	}
 

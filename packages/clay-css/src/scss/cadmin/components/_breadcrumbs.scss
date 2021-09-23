@@ -62,7 +62,9 @@
 				content: '';
 				height: $cadmin-breadcrumb-divider-svg-icon-height;
 				left: 0;
-				margin-top: -$cadmin-breadcrumb-divider-svg-icon-height / 2;
+				margin-top: calc(
+					#{math-sign($cadmin-breadcrumb-divider-svg-icon-height)} / 2
+				);
 				padding: 0;
 				position: absolute;
 				top: 50%;

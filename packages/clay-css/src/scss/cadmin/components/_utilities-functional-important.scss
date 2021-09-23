@@ -589,27 +589,27 @@
 		@each $cadmin-size, $cadmin-length in $cadmin-spacers {
 			@if $cadmin-size != 0 {
 				.m#{$cadmin-infix}-n#{$cadmin-size} {
-					margin: -$cadmin-length !important;
+					margin: math-sign($cadmin-length) !important;
 				}
 
 				.mt#{$cadmin-infix}-n#{$cadmin-size},
 				.my#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-top: -$cadmin-length !important;
+					margin-top: math-sign($cadmin-length) !important;
 				}
 
 				.mr#{$cadmin-infix}-n#{$cadmin-size},
 				.mx#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-right: -$cadmin-length !important;
+					margin-right: math-sign($cadmin-length) !important;
 				}
 
 				.mb#{$cadmin-infix}-n#{$cadmin-size},
 				.my#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-bottom: -$cadmin-length !important;
+					margin-bottom: math-sign($cadmin-length) !important;
 				}
 
 				.ml#{$cadmin-infix}-n#{$cadmin-size},
 				.mx#{$cadmin-infix}-n#{$cadmin-size} {
-					margin-left: -$cadmin-length !important;
+					margin-left: math-sign($cadmin-length) !important;
 				}
 			}
 		}

@@ -77,7 +77,7 @@
 		content: '';
 		display: block;
 		left: 50%;
-		margin-left: -$cadmin-popover-arrow-width / 2;
+		margin-left: calc(#{math-sign($cadmin-popover-arrow-width)} / 2);
 		position: absolute;
 		top: 0;
 		width: $cadmin-popover-arrow-width;

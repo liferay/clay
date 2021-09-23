@@ -4,7 +4,8 @@ $cadmin-dropdown-border-style: solid !default;
 $cadmin-dropdown-border-width: 0 !default;
 
 $cadmin-dropdown-border-radius: $cadmin-border-radius !default;
-$cadmin-dropdown-inner-border-radius: $cadmin-dropdown-border-radius -$cadmin-dropdown-border-width !default;
+$cadmin-dropdown-inner-border-radius: $cadmin-dropdown-border-radius
+	math-sign($cadmin-dropdown-border-width) !default;
 
 $cadmin-dropdown-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3) !default;
 $cadmin-dropdown-color: $cadmin-body-color !default;

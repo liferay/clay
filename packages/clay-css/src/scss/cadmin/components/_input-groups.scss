@@ -18,7 +18,7 @@
 		position: relative;
 
 		+ .form-control {
-			margin-left: -$cadmin-input-border-width;
+			margin-left: math-sign($cadmin-input-border-width);
 		}
 	}
 
@@ -45,7 +45,7 @@
 	> .btn + .input-group-text,
 	> .input-group-text + .input-group-text,
 	> .input-group-text + .btn {
-		margin-left: -$cadmin-input-border-width;
+		margin-left: math-sign($cadmin-input-border-width);
 	}
 }
 
