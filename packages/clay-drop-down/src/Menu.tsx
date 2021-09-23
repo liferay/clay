@@ -166,9 +166,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	onSetActive: (val: boolean) => void;
 
 	/**
-	 * `dropdown-menu-width-${width}`
+	 * The modifier class `dropdown-menu-width-${width}` makes the menu expand
+	 * the full width of the page.
+	 *
+	 * - sm makes the menu 500px wide.
+	 * - full makes the menu 100% wide.
 	 */
-	width?: 'sm' | 'auto';
+	width?: 'sm' | 'full';
 }
 
 const useIsomorphicLayoutEffect =
