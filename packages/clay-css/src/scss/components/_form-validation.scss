@@ -103,7 +103,7 @@
 	}
 
 	.form-control[readonly] {
-		@include clay-button-variant($input-danger-readonly);
+		@include clay-form-control-variant($input-danger-readonly);
 	}
 
 	.form-feedback-item {
@@ -180,7 +180,7 @@
 	}
 
 	.form-control[readonly] {
-		@include clay-button-variant($input-warning-readonly);
+		@include clay-form-control-variant($input-warning-readonly);
 	}
 
 	.form-feedback-item {
@@ -257,7 +257,7 @@
 	}
 
 	.form-control[readonly] {
-		@include clay-button-variant($input-success-readonly);
+		@include clay-form-control-variant($input-success-readonly);
 	}
 
 	.form-feedback-item {

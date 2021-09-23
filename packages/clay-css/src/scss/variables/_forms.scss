@@ -575,6 +575,8 @@ $input-danger: map-deep-merge(
 	$input-danger
 );
 
+// .has-error .form-control[readonly]
+
 $input-danger-readonly: () !default;
 
 $input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
