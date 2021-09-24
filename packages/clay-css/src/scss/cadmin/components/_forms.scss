@@ -129,6 +129,14 @@ fieldset[disabled] label {
 	}
 }
 
+// This adds disabled styles to div.form-control inside a disabled fielset.
+
+fieldset[disabled] .form-control {
+	$disabled: setter(map-get($cadmin-input, disabled), ());
+
+	@include clay-css($disabled);
+}
+
 // Readonly controls as plain text
 // Apply class to a readonly input to make it appear like regular plain
 // text (without any border, background color, focus indicator)
@@ -410,20 +418,6 @@ textarea.form-control-plaintext,
 }
 
 // Disabled State
-
-.form-control {
-	fieldset[disabled] &,
-	&[disabled] {
-		border-color: $cadmin-input-disabled-border-color;
-		color: $cadmin-input-disabled-color;
-		cursor: $cadmin-input-disabled-cursor;
-		opacity: $cadmin-input-disabled-opacity;
-
-		&::placeholder {
-			color: $cadmin-input-placeholder-disabled-color;
-		}
-	}
-}
 
 .form-control[disabled] > option {
 	// Webkit only
