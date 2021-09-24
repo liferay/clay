@@ -135,16 +135,45 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 		while (queue.length) {
 			index = queue.shift() as number;
 
-			if (Array.isArray(item[nestedKey])) {
-				parent = item;
-				item = {...item[nestedKey][index]};
+			if (Array.isArray(item[nestedKey]) && item[nestedKey].length) {
+				// This fixes the index when there is a case to move an item
+				// that can be at the same level of the hierarchy inside the
+				// other item at the same level, this causes the array size to
+				// change and the index value to become stale.
+				//
+				// 1. Item A
+				//   1. Item B
+				//   2. Item C
+				//   3. Item D
+				//
+				// Op:
+				// from=[1, 1] path=[1, 3]
+				//
+				// 1. Item A
+				//   ~1. Item B~ <- Remove item to move
+				//   1. Item C
+				//   2. Item D
+				if (index > item[nestedKey].length - 1) {
+					index -= 1;
+				}
 
-				parent[nestedKey] = pointer(parent[nestedKey], index, item);
-			} else {
-				item[nestedKey] = [];
+				// The Index may still not exist after it's fixed because the
+				// index is to move the item below the last item.
+				if (item[nestedKey][index]) {
+					parent = item;
+					item = {...item[nestedKey][index]};
 
-				parent = item;
+					parent[nestedKey] = pointer(parent[nestedKey], index, item);
+
+					continue;
+				}
 			}
+
+			if (!item[nestedKey]) {
+				item[nestedKey] = [];
+			}
+
+			parent = item;
 		}
 
 		return {
