@@ -194,6 +194,11 @@ $input-label: map-deep-merge(
 		focus: (
 			color: $input-label-focus-color,
 		),
+		disabled: (
+			color: $input-label-disabled-color,
+			cursor: $input-label-disabled-cursor,
+			opacity: $input-disabled-opacity,
+		),
 		for: (
 			cursor: $input-label-for-cursor,
 		),

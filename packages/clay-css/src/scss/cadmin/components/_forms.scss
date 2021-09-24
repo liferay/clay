@@ -69,6 +69,22 @@ label {
 	@include clay-css($cadmin-form-control-label-text);
 }
 
+// Label Disabled
+
+fieldset[disabled] label,
+label.disabled {
+	$disabled: setter(map-get($cadmin-input-label, disabled), ());
+
+	@include clay-css($disabled);
+}
+
+fieldset[disabled] label {
+	.form-control {
+		font-weight: normal;
+		opacity: 1;
+	}
+}
+
 // Inputs
 
 .form-control {
@@ -111,6 +127,14 @@ label {
 	.label {
 		@include clay-label-size($cadmin-form-control-label-size);
 	}
+}
+
+// This adds disabled styles to div.form-control inside a disabled fielset.
+
+fieldset[disabled] .form-control {
+	$disabled: setter(map-get($cadmin-input, disabled), ());
+
+	@include clay-css($disabled);
 }
 
 // Readonly controls as plain text
@@ -394,34 +418,6 @@ textarea.form-control-plaintext,
 }
 
 // Disabled State
-
-fieldset[disabled] label,
-label.disabled {
-	color: $cadmin-input-label-disabled-color;
-	cursor: $cadmin-input-label-disabled-cursor;
-	opacity: $cadmin-input-disabled-opacity;
-}
-
-fieldset[disabled] label {
-	.form-control {
-		font-weight: normal;
-		opacity: 1;
-	}
-}
-
-.form-control {
-	fieldset[disabled] &,
-	&[disabled] {
-		border-color: $cadmin-input-disabled-border-color;
-		color: $cadmin-input-disabled-color;
-		cursor: $cadmin-input-disabled-cursor;
-		opacity: $cadmin-input-disabled-opacity;
-
-		&::placeholder {
-			color: $cadmin-input-placeholder-disabled-color;
-		}
-	}
-}
 
 .form-control[disabled] > option {
 	// Webkit only
