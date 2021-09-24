@@ -512,6 +512,12 @@ $cadmin-form-text-font-size: 14px !default; // 14px
 $cadmin-form-text-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-form-text-margin-top: 4px !default;
 
+$cadmin-form-feedback-font-size: 0.875rem !default;
+$cadmin-form-feedback-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-form-feedback-margin-top: 0.25rem !default;
+
+$cadmin-form-feedback-indicator-margin-x: 0 !default;
+
 $cadmin-form-feedback-valid-color: $cadmin-success !default;
 
 $cadmin-form-feedback-warning-color: $cadmin-warning !default;

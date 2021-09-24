@@ -1,3 +1,35 @@
+// Form Feedback
+
+.form-feedback-group {
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.form-feedback-item {
+	font-size: $cadmin-form-feedback-font-size;
+	font-weight: $cadmin-form-feedback-font-weight;
+	margin-top: $cadmin-form-feedback-margin-top;
+	word-wrap: break-word;
+}
+
+.form-feedback-indicator {
+	margin-left: $cadmin-form-feedback-indicator-margin-x;
+	margin-right: $cadmin-form-feedback-indicator-margin-x;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.form-text {
+	color: $cadmin-form-text-color;
+	display: block;
+	font-size: $cadmin-form-text-font-size;
+	font-weight: $cadmin-form-text-font-weight;
+	margin-top: $cadmin-form-text-margin-top;
+	word-wrap: break-word;
+}
+
 // Non HTML5 Form Validator
 
 .has-error {
