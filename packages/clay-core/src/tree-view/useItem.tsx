@@ -48,12 +48,20 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 }
 
 export function ItemContextProvider({children, value}: Props) {
-	const {items, open, reorder, selection} = useTreeViewContext();
+	const {
+		expandedKeys,
+		items,
+		open,
+		reorder,
+		selection,
+	} = useTreeViewContext();
 	const {indexes: parentIndexes = [], key: parentKey} = useItem();
 
 	const keyRef = useRef(getKey(value.key));
 
 	const childRef = useRef(null);
+
+	const hoverTimeoutIdRef = useRef<number | null>();
 
 	useEffect(
 		() => selection.createPartialLayoutItem(keyRef.current, parentKey),
@@ -135,7 +143,18 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			open(item.key);
+			if (
+				typeof hoverTimeoutIdRef.current !== 'number' &&
+				!expandedKeys.has(item.key)
+			) {
+				hoverTimeoutIdRef.current = (setTimeout(() => {
+					hoverTimeoutIdRef.current = null;
+
+					if (monitor.isOver({shallow: true})) {
+						open(item.key);
+					}
+				}, 500) as unknown) as number;
+			}
 
 			const dropItemRect = (childRef.current! as HTMLElement).getBoundingClientRect();
 			const clientOffsetY = monitor.getClientOffset()!.y;

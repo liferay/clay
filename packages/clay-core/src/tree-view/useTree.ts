@@ -80,10 +80,6 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	};
 
 	const open = (key: Key) => {
-		if (expandedKeys.has(key)) {
-			return;
-		}
-
 		const expanded = new Set(expandedKeys);
 
 		if (!expanded.has(key)) {
