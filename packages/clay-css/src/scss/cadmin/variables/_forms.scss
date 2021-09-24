@@ -198,6 +198,11 @@ $cadmin-input-label: map-deep-merge(
 		focus: (
 			color: $cadmin-input-label-focus-color,
 		),
+		disabled: (
+			color: $cadmin-input-label-disabled-color,
+			cursor: $cadmin-input-label-disabled-cursor,
+			opacity: $cadmin-input-disabled-opacity,
+		),
 		for: (
 			cursor: $cadmin-input-label-for-cursor,
 		),

@@ -69,6 +69,22 @@ label {
 	@include clay-css($cadmin-form-control-label-text);
 }
 
+// Label Disabled
+
+fieldset[disabled] label,
+label.disabled {
+	$disabled: setter(map-get($cadmin-input-label, disabled), ());
+
+	@include clay-css($disabled);
+}
+
+fieldset[disabled] label {
+	.form-control {
+		font-weight: normal;
+		opacity: 1;
+	}
+}
+
 // Inputs
 
 .form-control {
@@ -394,20 +410,6 @@ textarea.form-control-plaintext,
 }
 
 // Disabled State
-
-fieldset[disabled] label,
-label.disabled {
-	color: $cadmin-input-label-disabled-color;
-	cursor: $cadmin-input-label-disabled-cursor;
-	opacity: $cadmin-input-disabled-opacity;
-}
-
-fieldset[disabled] label {
-	.form-control {
-		font-weight: normal;
-		opacity: 1;
-	}
-}
 
 .form-control {
 	fieldset[disabled] &,
