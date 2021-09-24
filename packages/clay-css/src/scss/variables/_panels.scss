@@ -16,10 +16,8 @@ $panel-margin-bottom: $spacer !default;
 // Panel Header
 
 $panel-header-border-bottom-width: 1px !default;
-$panel-header-offset-border-radius: if(
-	$panel-border-top-width > 0,
-	calc(#{$panel-border-radius} - #{$panel-border-top-width}),
-	$panel-border-radius
+$panel-header-offset-border-radius: calc(
+	#{$panel-border-radius} - #{$panel-border-top-width}
 ) !default;
 $panel-header-font-size: $font-size-base !default;
 $panel-header-line-height: $headings-line-height !default;
@@ -78,10 +76,8 @@ $panel-body-padding-y: 0.75rem !default;
 // Panel Footer
 
 $panel-footer-border-top-width: 1px !default;
-$panel-footer-offset-border-radius: if(
-	$panel-border-bottom-width > 0,
-	calc(#{$panel-border-radius} - #{$panel-border-bottom-width}),
-	$panel-border-radius
+$panel-footer-offset-border-radius: calc(
+	#{$panel-border-radius} - #{$panel-border-bottom-width}
 ) !default;
 $panel-footer-padding-x: $panel-header-padding-x !default;
 $panel-footer-padding-y: $panel-header-padding-y !default;
@@ -99,7 +95,9 @@ $panel-title-small-margin-left: null !default;
 
 // Panel Group
 
-$panel-group-panel-margin-bottom: -$panel-border-bottom-width !default;
+$panel-group-panel-margin-bottom: math-sign(
+	$panel-border-bottom-width
+) !default;
 
 $panel-group-panel-unstyled: () !default;
 $panel-group-panel-unstyled: map-deep-merge(

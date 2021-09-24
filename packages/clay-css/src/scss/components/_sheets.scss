@@ -86,16 +86,16 @@
 	}
 
 	> fieldset {
-		margin-bottom: -$sheet-section-margin-bottom;
+		margin-bottom: math-sign($sheet-section-margin-bottom);
 
 		@include clay-scale-component {
-			margin-bottom: -$sheet-section-margin-bottom-mobile;
+			margin-bottom: math-sign($sheet-section-margin-bottom-mobile);
 		}
 	}
 
 	> .card-page:last-child,
 	.card-page-last {
-		margin-bottom: -$card-margin-bottom;
+		margin-bottom: math-sign($card-margin-bottom);
 	}
 
 	&::after {

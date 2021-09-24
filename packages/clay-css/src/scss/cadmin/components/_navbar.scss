@@ -317,8 +317,12 @@
 							}
 
 							.dropdown-divider {
-								margin-left: -$cadmin-navbar-padding-x;
-								margin-right: -$cadmin-navbar-padding-x;
+								margin-left: math-sign(
+									$cadmin-navbar-padding-x
+								);
+								margin-right: math-sign(
+									$cadmin-navbar-padding-x
+								);
 							}
 
 							.dropdown-item {
@@ -585,7 +589,7 @@
 	.navbar-toggler-link {
 		&:after {
 			background-color: $cadmin-navbar-underline-active-bg;
-			bottom: -$cadmin-navbar-padding-y;
+			bottom: math-sign($cadmin-navbar-padding-y);
 			content: '';
 			display: block;
 			height: $cadmin-nav-underline-link-active-highlight-height;
@@ -612,7 +616,7 @@
 				.navbar-nav .nav-link {
 					&.active:after {
 						background-color: $cadmin-navbar-underline-active-bg;
-						bottom: -$cadmin-navbar-padding-y;
+						bottom: math-sign($cadmin-navbar-padding-y);
 						content: '';
 						display: block;
 						height: $cadmin-nav-underline-link-active-highlight-height;

@@ -7,10 +7,8 @@ $card-body-padding-left: 1rem !default;
 $card-body-padding-right: 1rem !default;
 $card-body-padding-top: 1rem !default;
 
-$card-inner-border-radius: if(
-	$card-border-width > 0,
-	calc(#{$card-border-radius} - #{$card-border-width}),
-	$card-border-radius
+$card-inner-border-radius: calc(
+	#{$card-border-radius} - #{$card-border-width}
 ) !default;
 
 // Card Title

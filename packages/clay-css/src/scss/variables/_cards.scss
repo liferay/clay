@@ -4,7 +4,9 @@ $card-border-style: solid !default;
 $card-border-width: $border-width !default;
 
 $card-border-radius: $border-radius !default;
-$card-inner-border-radius: $card-border-radius - $card-border-width !default;
+$card-inner-border-radius: calc(
+	#{$card-border-radius} - #{$card-border-width}
+) !default;
 
 $card-box-shadow: null !default;
 $card-color: null !default;
@@ -195,20 +197,14 @@ $card-divider-height: 1px !default;
 $card-divider-spacer-x: null !default;
 $card-divider-spacer-y: 10px !default;
 
-$card-rounded-inner-border-radius: if(
-	$card-border-width > 0,
-	calc(#{$rounded-border-radius} - #{$card-border-width}),
-	$rounded-border-radius
+$card-rounded-inner-border-radius: calc(
+	#{$rounded-border-radius} - #{$card-border-width}
 ) !default;
-$card-rounded-0-inner-border-radius: if(
-	$rounded-0-border-radius > $card-border-width,
-	calc(#{$rounded-0-border-radius} - #{$card-border-width}),
-	0
+$card-rounded-0-inner-border-radius: calc(
+	#{$rounded-0-border-radius} - #{$card-border-width}
 ) !default;
-$card-rounded-circle-inner-border-radius: if(
-	$card-border-width > 0,
-	calc(#{$rounded-circle-border-radius} - #{$card-border-width}),
-	$rounded-circle-border-radius
+$card-rounded-circle-inner-border-radius: calc(
+	#{$rounded-circle-border-radius} - #{$card-border-width}
 ) !default;
 
 $checkbox-left-card-padding: 40px !default;
@@ -224,12 +220,12 @@ $card-interactive-after-highlight: () !default;
 $card-interactive-after-highlight: map-deep-merge(
 	(
 		border-radius: 0 0 $card-border-radius $card-border-radius,
-		bottom: -$card-border-width,
+		bottom: math-sign($card-border-width),
 		content: '',
 		height: 0,
-		left: -$card-border-width,
+		left: math-sign($card-border-width),
 		position: absolute,
-		right: -$card-border-width,
+		right: math-sign($card-border-width),
 		transition: height 0.15s ease-out,
 		hover: (
 			height: 4px,

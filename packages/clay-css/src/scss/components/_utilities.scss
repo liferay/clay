@@ -364,27 +364,27 @@
 		@each $size, $length in $spacers {
 			@if $size != 0 {
 				.c-m#{$infix}-n#{$size} {
-					margin: -$length;
+					margin: math-sign($length);
 				}
 
 				.c-mt#{$infix}-n#{$size},
 				.c-my#{$infix}-n#{$size} {
-					margin-top: -$length;
+					margin-top: math-sign($length);
 				}
 
 				.c-mr#{$infix}-n#{$size},
 				.c-mx#{$infix}-n#{$size} {
-					margin-right: -$length;
+					margin-right: math-sign($length);
 				}
 
 				.c-mb#{$infix}-n#{$size},
 				.c-my#{$infix}-n#{$size} {
-					margin-bottom: -$length;
+					margin-bottom: math-sign($length);
 				}
 
 				.c-ml#{$infix}-n#{$size},
 				.c-mx#{$infix}-n#{$size} {
-					margin-left: -$length;
+					margin-left: math-sign($length);
 				}
 			}
 		}

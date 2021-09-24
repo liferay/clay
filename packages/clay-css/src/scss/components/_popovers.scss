@@ -76,7 +76,7 @@
 		content: '';
 		display: block;
 		left: 50%;
-		margin-left: -$popover-arrow-width / 2;
+		margin-left: calc(#{math-sign($popover-arrow-width)} / 2);
 		position: absolute;
 		top: 0;
 		width: $popover-arrow-width;

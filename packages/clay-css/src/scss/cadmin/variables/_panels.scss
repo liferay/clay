@@ -17,10 +17,8 @@ $cadmin-panel-margin-bottom: $cadmin-spacer !default;
 // Panel Header
 
 $cadmin-panel-header-border-bottom-width: 0 !default;
-$cadmin-panel-header-offset-border-radius: if(
-	$cadmin-panel-border-top-width > 0,
-	calc(#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-top-width}),
-	$cadmin-panel-border-radius
+$cadmin-panel-header-offset-border-radius: calc(
+	#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-top-width}
 ) !default;
 $cadmin-panel-header-font-size: 14px !default; // 14px
 $cadmin-panel-header-line-height: $cadmin-headings-line-height !default;
@@ -74,10 +72,8 @@ $cadmin-panel-body-padding-y: 12px !default;
 // Panel Footer
 
 $cadmin-panel-footer-border-top-width: 0 !default;
-$cadmin-panel-footer-offset-border-radius: if(
-	$cadmin-panel-border-bottom-width > 0,
-	calc(#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-bottom-width}),
-	$cadmin-panel-border-radius
+$cadmin-panel-footer-offset-border-radius: calc(
+	#{$cadmin-panel-border-radius} - #{$cadmin-panel-border-bottom-width}
 ) !default;
 $cadmin-panel-footer-padding-x: $cadmin-panel-header-padding-x !default;
 $cadmin-panel-footer-padding-y: $cadmin-panel-header-padding-y !default;
@@ -95,7 +91,9 @@ $cadmin-panel-title-small-margin-left: 6px !default; // 6px
 
 // Panel Group
 
-$cadmin-panel-group-panel-margin-bottom: -$cadmin-panel-border-bottom-width !default;
+$cadmin-panel-group-panel-margin-bottom: math-sign(
+	$cadmin-panel-border-bottom-width
+) !default;
 
 $cadmin-panel-group-panel-unstyled: () !default;
 $cadmin-panel-group-panel-unstyled: map-deep-merge(

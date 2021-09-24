@@ -312,8 +312,8 @@
 							}
 
 							.dropdown-divider {
-								margin-left: -$navbar-padding-x;
-								margin-right: -$navbar-padding-x;
+								margin-left: math-sign($navbar-padding-x);
+								margin-right: math-sign($navbar-padding-x);
 							}
 
 							.dropdown-item {
@@ -577,7 +577,7 @@
 	.navbar-toggler-link {
 		&:after {
 			background-color: $navbar-underline-active-bg;
-			bottom: -$navbar-padding-y;
+			bottom: math-sign($navbar-padding-y);
 			content: '';
 			display: block;
 			height: $nav-underline-link-active-highlight-height;
@@ -601,7 +601,7 @@
 				.navbar-nav .nav-link {
 					&.active:after {
 						background-color: $navbar-underline-active-bg;
-						bottom: -$navbar-padding-y;
+						bottom: math-sign($navbar-padding-y);
 						content: '';
 						display: block;
 						height: $nav-underline-link-active-highlight-height;

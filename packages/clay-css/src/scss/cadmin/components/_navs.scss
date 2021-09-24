@@ -159,7 +159,7 @@
 	font-size: $cadmin-nav-tabs-font-size;
 
 	.nav-item {
-		margin-bottom: -$cadmin-nav-tabs-border-width;
+		margin-bottom: math-sign($cadmin-nav-tabs-border-width);
 	}
 
 	.nav-link {
@@ -173,7 +173,7 @@
 	.dropdown-menu {
 		@include border-top-radius(0);
 
-		margin-top: -$cadmin-nav-tabs-border-width;
+		margin-top: math-sign($cadmin-nav-tabs-border-width);
 	}
 
 	+ .tab-content {

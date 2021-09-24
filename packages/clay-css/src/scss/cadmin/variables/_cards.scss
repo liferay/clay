@@ -4,10 +4,8 @@ $cadmin-card-border-style: solid !default;
 $cadmin-card-border-width: 0 !default;
 
 $cadmin-card-border-radius: $cadmin-border-radius !default;
-$cadmin-card-inner-border-radius: if(
-	$cadmin-card-border-width > 0,
-	calc(#{$cadmin-card-border-radius} - #{$cadmin-card-border-width}),
-	$cadmin-card-border-radius
+$cadmin-card-inner-border-radius: calc(
+	#{$cadmin-card-border-radius} - #{$cadmin-card-border-width}
 ) !default;
 
 $cadmin-card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6) !default;
@@ -178,22 +176,14 @@ $cadmin-card-divider-height: 1px !default;
 $cadmin-card-divider-spacer-x: null !default;
 $cadmin-card-divider-spacer-y: 10px !default;
 
-$cadmin-card-rounded-inner-border-radius: if(
-	$cadmin-card-border-width > 0,
-	calc(#{$cadmin-rounded-border-radius} - #{$cadmin-card-border-width}),
-	$cadmin-rounded-border-radius
+$cadmin-card-rounded-inner-border-radius: calc(
+	#{$cadmin-rounded-border-radius} - #{$cadmin-card-border-width}
 ) !default;
-$cadmin-card-rounded-0-inner-border-radius: if(
-	$cadmin-rounded-0-border-radius > $cadmin-card-border-width,
-	calc(#{$cadmin-rounded-0-border-radius} - #{$cadmin-card-border-width}),
-	0
+$cadmin-card-rounded-0-inner-border-radius: calc(
+	#{$cadmin-rounded-0-border-radius} - #{$cadmin-card-border-width}
 ) !default;
-$cadmin-card-rounded-circle-inner-border-radius: if(
-	$cadmin-card-border-width > 0,
-	calc(
-		#{$cadmin-rounded-circle-border-radius} - #{$cadmin-card-border-width}
-	),
-	$cadmin-rounded-circle-border-radius
+$cadmin-card-rounded-circle-inner-border-radius: calc(
+	#{$cadmin-rounded-circle-border-radius} - #{$cadmin-card-border-width}
 ) !default;
 
 $cadmin-checkbox-left-card-padding: 50px !default;
@@ -210,12 +200,12 @@ $cadmin-card-interactive-after-highlight: () !default;
 $cadmin-card-interactive-after-highlight: map-deep-merge(
 	(
 		border-radius: 0 0 $cadmin-card-border-radius $cadmin-card-border-radius,
-		bottom: -$cadmin-card-border-width,
+		bottom: math-sign($cadmin-card-border-width),
 		content: '',
 		height: 0,
-		left: -$cadmin-card-border-width,
+		left: math-sign($cadmin-card-border-width),
 		position: absolute,
-		right: -$cadmin-card-border-width,
+		right: math-sign($cadmin-card-border-width),
 		transition: height 0.15s ease-out,
 		hover-height: 4px,
 		focus-height: 4px,
