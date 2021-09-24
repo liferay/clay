@@ -172,7 +172,8 @@ $yiq-contrasted-threshold: 150 !default;
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
 
-// Characters which are escaped by the escape-svg function
+/// Characters which are escaped by the `escape-svg` function
+/// @deprecated as of v3.x with no replacement
 
 $escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23')) !default;
 
@@ -244,8 +245,16 @@ $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
 
+/// @deprecated as of v3.x with no replacement, Clay CSS inlines SVG icons for dropdown-toggle carets
+
 $caret-width: 0.3em !default;
+
+/// @deprecated as of v3.x with no replacement, Clay CSS inlines SVG icons for dropdown-toggle carets
+
 $caret-vertical-align: $caret-width * 0.85 !default;
+
+/// @deprecated as of v3.x with no replacement, Clay CSS inlines SVG icons for dropdown-toggle carets
+
 $caret-spacing: $caret-width * 0.85 !default;
 
 $transition-base: all 0.2s ease-in-out !default;
@@ -418,7 +427,8 @@ $link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+/// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+/// @deprecated as of v3.x with no replacement, fixed percentages do not propagate well for all colors; manually define them for each theme color in `$text-theme-colors`.
 
 $emphasized-link-hover-darken-percentage: 15% !default;
 
