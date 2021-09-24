@@ -550,28 +550,61 @@ $form-validation-states: map-merge(
 	$form-validation-states
 );
 
-// Input Variants
+// .has-error .form-control
 
 $input-danger-bg: null !default;
-$input-danger-focus-bg: null !default;
 $input-danger-border-color: $form-feedback-invalid-color !default;
-$input-danger-focus-border-color: null !default;
 $input-danger-box-shadow: null !default;
+$input-danger-color: null !default;
+
+$input-danger-focus-bg: null !default;
+$input-danger-focus-border-color: null !default;
 $input-danger-focus-box-shadow: 0 0 0 $input-focus-width
 	rgba($form-feedback-invalid-color, 0.25) !default;
-$input-danger-color: null !default;
 $input-danger-focus-color: null !default;
+
+$input-danger: () !default;
+$input-danger: map-deep-merge(
+	(
+		background-color: $input-danger-bg,
+		border-color: $input-danger-border-color,
+		box-shadow: $input-danger-box-shadow,
+		color: $input-danger-color,
+		focus: (
+			background-color: $input-danger-focus-bg,
+			border-color: $input-danger-focus-border-color,
+			box-shadow: $input-danger-focus-box-shadow,
+			color: $input-danger-focus-color,
+		),
+	),
+	$input-danger
+);
+
+// .has-error .form-control[readonly]
 
 $input-danger-readonly: () !default;
 
 $input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
 $input-danger-label-color: null !default;
+
+// .has-error select.form-control
+
 $input-danger-select-icon-color: $input-danger-border-color !default;
 $input-danger-select-icon: clay-str-replace(
 	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
 	'#',
 	'%23'
 ) !default;
+
+$input-danger-select: () !default;
+$input-danger-select: map-deep-merge(
+	(
+		background-image: $input-danger-select-icon,
+	),
+	$input-danger-select
+);
+
+// .has-error select.form-control[size]
 
 $input-danger-select-size: () !default;
 $input-danger-select-size: map-deep-merge(
@@ -581,67 +614,69 @@ $input-danger-select-size: map-deep-merge(
 	$input-danger-select-size
 );
 
+// .has-error select.form-control[multiple]
+
 $input-danger-select-multiple: () !default;
 $input-danger-select-multiple: map-deep-merge(
 	$input-danger-select-size,
 	$input-danger-select-multiple
 );
 
-$input-success-bg: null !default;
-$input-success-focus-bg: null !default;
-$input-success-border-color: $form-feedback-valid-color !default;
-$input-success-focus-border-color: null !default;
-$input-success-box-shadow: null !default;
-$input-success-focus-box-shadow: 0 0 0 $input-focus-width
-	rgba($form-feedback-valid-color, 0.25) !default;
-$input-success-color: null !default;
-$input-success-focus-color: null !default;
-
-$input-success-readonly: () !default;
-
-$input-success-checkbox-label-color: $form-feedback-valid-color !default;
-$input-success-label-color: null !default;
-$input-success-select-icon-color: $input-success-border-color !default;
-$input-success-select-icon: clay-str-replace(
-	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
-	'#',
-	'%23'
-) !default;
-
-$input-success-select-size: () !default;
-$input-success-select-size: map-deep-merge(
-	(
-		background-image: none,
-	),
-	$input-success-select-size
-);
-
-$input-success-select-multiple: () !default;
-$input-success-select-multiple: map-deep-merge(
-	$input-success-select-size,
-	$input-success-select-multiple
-);
+// .has-warning .form-control
 
 $input-warning-bg: null !default;
-$input-warning-focus-bg: null !default;
 $input-warning-border-color: $form-feedback-warning-color !default;
-$input-warning-focus-border-color: null !default;
 $input-warning-box-shadow: null !default;
+$input-warning-color: null !default;
+
+$input-warning-focus-bg: null !default;
+$input-warning-focus-border-color: null !default;
 $input-warning-focus-box-shadow: 0 0 0 $input-focus-width
 	rgba($form-feedback-warning-color, 0.25) !default;
-$input-warning-color: null !default;
 $input-warning-focus-color: null !default;
+
+$input-warning: () !default;
+$input-warning: map-deep-merge(
+	(
+		background-color: $input-warning-bg,
+		border-color: $input-warning-border-color,
+		box-shadow: $input-warning-box-shadow,
+		color: $input-warning-color,
+		focus: (
+			background-color: $input-warning-focus-bg,
+			border-color: $input-warning-focus-border-color,
+			box-shadow: $input-warning-focus-box-shadow,
+			color: $input-warning-focus-color,
+		),
+	),
+	$input-warning
+);
+
+// .has-warning .form-control[readonly]
 
 $input-warning-readonly: () !default;
 
 $input-warning-checkbox-label-color: $form-feedback-warning-color !default;
 $input-warning-label-color: null !default;
+
+// .has-warning select.form-control
+
 $input-warning-select-icon-color: $input-warning-border-color !default;
 $input-warning-select-icon: clay-str-replace(
 	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
 	'#',
 	'%23'
 ) !default;
+
+$input-warning-select: () !default;
+$input-warning-select: map-deep-merge(
+	(
+		background-image: $input-warning-select-icon,
+	),
+	$input-warning-select
+);
+
+// .has-warning select.form-control[size]
 
 $input-warning-select-size: () !default;
 $input-warning-select-size: map-deep-merge(
@@ -651,10 +686,84 @@ $input-warning-select-size: map-deep-merge(
 	$input-warning-select-size
 );
 
+// .has-warning select.form-control[multiple]
+
 $input-warning-select-multiple: () !default;
 $input-warning-select-multiple: map-deep-merge(
 	$input-warning-select-size,
 	$input-warning-select-multiple
+);
+
+// .has-success .form-control
+
+$input-success-bg: null !default;
+$input-success-border-color: $form-feedback-valid-color !default;
+$input-success-box-shadow: null !default;
+$input-success-color: null !default;
+
+$input-success-focus-bg: null !default;
+$input-success-focus-border-color: null !default;
+$input-success-focus-box-shadow: 0 0 0 $input-focus-width
+	rgba($form-feedback-valid-color, 0.25) !default;
+$input-success-focus-color: null !default;
+
+$input-success: () !default;
+$input-success: map-deep-merge(
+	(
+		background-color: $input-success-bg,
+		border-color: $input-success-border-color,
+		box-shadow: $input-success-box-shadow,
+		color: $input-success-color,
+		focus: (
+			background-color: $input-success-focus-bg,
+			border-color: $input-success-focus-border-color,
+			box-shadow: $input-success-focus-box-shadow,
+			color: $input-success-focus-color,
+		),
+	),
+	$input-success
+);
+
+// .has-success .form-control[readonly]
+
+$input-success-readonly: () !default;
+
+$input-success-checkbox-label-color: $form-feedback-valid-color !default;
+$input-success-label-color: null !default;
+
+// .has-success select.form-control
+
+$input-success-select-icon-color: $input-success-border-color !default;
+$input-success-select-icon: clay-str-replace(
+	url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"),
+	'#',
+	'%23'
+) !default;
+
+$input-success-select: () !default;
+$input-success-select: map-deep-merge(
+	(
+		background-image: $input-success-select-icon,
+	),
+	$input-success-select
+);
+
+// .has-success select.form-control[size]
+
+$input-success-select-size: () !default;
+$input-success-select-size: map-deep-merge(
+	(
+		background-image: none,
+	),
+	$input-success-select-size
+);
+
+// .has-success select.form-control[multiple]
+
+$input-success-select-multiple: () !default;
+$input-success-select-multiple: map-deep-merge(
+	$input-success-select-size,
+	$input-success-select-multiple
 );
 
 // Select Element

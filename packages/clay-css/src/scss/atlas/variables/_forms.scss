@@ -167,91 +167,185 @@ $form-feedback-font-weight: $font-weight-semi-bold !default;
 
 $form-feedback-indicator-margin-x: 0 !default;
 
-// Input Variants
+// .has-error .form-control
 
 $input-danger-bg: $danger-l2 !default;
 $input-danger-border-color: $danger-l1 !default;
 // Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
 $input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
-$input-danger-focus-box-shadow: $input-focus-box-shadow !default;
 $input-danger-color: $input-color !default;
+
+$input-danger-focus-box-shadow: $input-focus-box-shadow !default;
+
+$input-danger: () !default;
+$input-danger: map-deep-merge(
+	(
+		background-color: $input-danger-bg,
+		border-color: $input-danger-border-color,
+		box-shadow: $input-danger-box-shadow,
+		color: $input-danger-color,
+		focus: (
+			box-shadow: $input-danger-focus-box-shadow,
+		),
+	),
+	$input-danger
+);
+
+// .has-error .form-control[readonly]
 
 $input-danger-readonly: () !default;
 $input-danger-readonly: map-deep-merge(
 	(
-		bg:
+		background-color:
 			setter(
 				map-get($input-readonly, bg),
 				map-get($input-readonly, background-color)
 			),
 		border-color: map-get($input-readonly, border-color),
-		focus-border-color: $input-focus-border-color,
+		focus: (
+			border-color: $input-focus-border-color,
+		),
 	),
 	$input-danger-readonly
 );
 
 $input-danger-checkbox-label-color: $danger !default;
+
+// .has-error select.form-control
+
 $input-danger-select-icon-color: $input-danger-border-color !default;
 $input-danger-select-icon: clay-icon(
 	caret-double-l,
 	$input-danger-select-icon-color
 ) !default;
 
-$input-success-bg: $success-l2 !default;
-$input-success-border-color: $success-l1 !default;
-// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
-$input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
-$input-success-focus-box-shadow: $input-focus-box-shadow !default;
-$input-success-color: $input-color !default;
-
-$input-success-readonly: () !default;
-$input-success-readonly: map-deep-merge(
+$input-danger-select: () !default;
+$input-danger-select: map-deep-merge(
 	(
-		bg:
+		background-image: $input-danger-select-icon,
+	),
+	$input-danger-select
+);
+
+// .has-warning .form-control
+
+$input-warning-bg: $warning-l2 !default;
+$input-warning-border-color: $warning-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-warning-color: $input-color !default;
+
+$input-warning-focus-box-shadow: $input-focus-box-shadow !default;
+
+$input-warning: () !default;
+$input-warning: map-deep-merge(
+	(
+		background-color: $input-warning-bg,
+		border-color: $input-warning-border-color,
+		box-shadow: $input-warning-box-shadow,
+		color: $input-warning-color,
+		focus: (
+			box-shadow: $input-warning-focus-box-shadow,
+		),
+	),
+	$input-warning
+);
+
+// .has-warning .form-control[readonly]
+
+$input-warning-readonly: () !default;
+$input-warning-readonly: map-deep-merge(
+	(
+		background-color:
 			setter(
 				map-get($input-readonly, bg),
 				map-get($input-readonly, background-color)
 			),
 		border-color: map-get($input-readonly, border-color),
-		focus-border-color: $input-focus-border-color,
+		focus: (
+			border-color: $input-focus-border-color,
+		),
+	),
+	$input-warning-readonly
+);
+
+$input-warning-checkbox-label-color: $warning !default;
+
+// .has-warning select.form-control
+
+$input-warning-select-icon-color: $input-warning-border-color !default;
+$input-warning-select-icon: clay-icon(
+	caret-double-l,
+	$input-warning-select-icon-color
+) !default;
+
+$input-warning-select: () !default;
+$input-warning-select: map-deep-merge(
+	(
+		background-image: $input-warning-select-icon,
+	),
+	$input-warning-select
+);
+
+// .has-success .form-control
+
+$input-success-bg: $success-l2 !default;
+$input-success-border-color: $success-l1 !default;
+// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
+$input-success-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-success-color: $input-color !default;
+
+$input-success-focus-box-shadow: $input-focus-box-shadow !default;
+
+$input-success: () !default;
+$input-success: map-deep-merge(
+	(
+		background-color: $input-success-bg,
+		border-color: $input-success-border-color,
+		box-shadow: $input-success-box-shadow,
+		color: $input-success-color,
+		focus: (
+			box-shadow: $input-success-focus-box-shadow,
+		),
+	),
+	$input-success
+);
+
+// .has-success .form-control[readonly]
+
+$input-success-readonly: () !default;
+$input-success-readonly: map-deep-merge(
+	(
+		background-color:
+			setter(
+				map-get($input-readonly, bg),
+				map-get($input-readonly, background-color)
+			),
+		border-color: map-get($input-readonly, border-color),
+		focus: (
+			border-color: $input-focus-border-color,
+		),
 	),
 	$input-success-readonly
 );
 
 $input-success-checkbox-label-color: $success !default;
+
+// .has-success select.form-control
+
 $input-success-select-icon-color: $input-success-border-color !default;
 $input-success-select-icon: clay-icon(
 	caret-double-l,
 	$input-success-select-icon-color
 ) !default;
 
-$input-warning-bg: $warning-l2 !default;
-$input-warning-border-color: $warning-l1 !default;
-// Will need to be revisited if https://github.com/twbs/bootstrap/pull/24821 merge error is fixed
-$input-warning-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
-$input-warning-focus-box-shadow: $input-focus-box-shadow !default;
-
-$input-warning-readonly: () !default;
-$input-warning-readonly: map-deep-merge(
+$input-success-select: () !default;
+$input-success-select: map-deep-merge(
 	(
-		bg:
-			setter(
-				map-get($input-readonly, bg),
-				map-get($input-readonly, background-color)
-			),
-		border-color: map-get($input-readonly, border-color),
-		focus-border-color: $input-focus-border-color,
+		background-image: $input-success-select-icon,
 	),
-	$input-warning-readonly
+	$input-success-select
 );
-
-$input-warning-color: $input-color !default;
-$input-warning-checkbox-label-color: $warning !default;
-$input-warning-select-icon-color: $input-warning-border-color !default;
-$input-warning-select-icon: clay-icon(
-	caret-double-l,
-	$input-warning-select-icon-color
-) !default;
 
 // Select Element
 

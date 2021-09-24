@@ -43,21 +43,11 @@
 	}
 
 	.form-control {
-		background-color: $cadmin-input-danger-bg;
-		border-color: $cadmin-input-danger-border-color;
-		box-shadow: $cadmin-input-danger-box-shadow;
-		color: $cadmin-input-danger-color;
-
-		&:focus {
-			background-color: $cadmin-input-danger-focus-bg;
-			border-color: $cadmin-input-danger-focus-border-color;
-			box-shadow: $cadmin-input-danger-focus-box-shadow;
-			color: $cadmin-input-danger-focus-color;
-		}
+		@include clay-form-control-variant($cadmin-input-danger);
 	}
 
 	.form-control[readonly] {
-		@include clay-button-variant($cadmin-input-danger-readonly);
+		@include clay-form-control-variant($cadmin-input-danger-readonly);
 	}
 
 	.form-feedback-item {
@@ -65,7 +55,7 @@
 	}
 
 	select.form-control {
-		background-image: $cadmin-input-danger-select-icon;
+		@include clay-select-variant($cadmin-input-danger-select);
 
 		&[size] {
 			@include clay-select-variant($cadmin-input-danger-select-size);
@@ -130,21 +120,11 @@
 	}
 
 	.form-control {
-		background-color: $cadmin-input-warning-bg;
-		border-color: $cadmin-input-warning-border-color;
-		box-shadow: $cadmin-input-warning-box-shadow;
-		color: $cadmin-input-warning-color;
-
-		&:focus {
-			background-color: $cadmin-input-warning-focus-bg;
-			border-color: $cadmin-input-warning-focus-border-color;
-			box-shadow: $cadmin-input-warning-focus-box-shadow;
-			color: $cadmin-input-warning-focus-color;
-		}
+		@include clay-form-control-variant($cadmin-input-warning);
 	}
 
 	.form-control[readonly] {
-		@include clay-button-variant($cadmin-input-warning-readonly);
+		@include clay-form-control-variant($cadmin-input-warning-readonly);
 	}
 
 	.form-feedback-item {
@@ -152,7 +132,7 @@
 	}
 
 	select.form-control {
-		background-image: $cadmin-input-warning-select-icon;
+		@include clay-select-variant($cadmin-input-warning-select);
 
 		&[size] {
 			@include clay-select-variant($cadmin-input-warning-select-size);
@@ -217,21 +197,11 @@
 	}
 
 	.form-control {
-		background-color: $cadmin-input-success-bg;
-		border-color: $cadmin-input-success-border-color;
-		box-shadow: $cadmin-input-success-box-shadow;
-		color: $cadmin-input-success-color;
-
-		&:focus {
-			background-color: $cadmin-input-success-focus-bg;
-			border-color: $cadmin-input-success-focus-border-color;
-			box-shadow: $cadmin-input-success-focus-box-shadow;
-			color: $cadmin-input-success-focus-color;
-		}
+		@include clay-form-control-variant($cadmin-input-success);
 	}
 
 	.form-control[readonly] {
-		@include clay-button-variant($cadmin-input-success-readonly);
+		@include clay-form-control-variant($cadmin-input-success-readonly);
 	}
 
 	.form-feedback-item {
@@ -239,7 +209,7 @@
 	}
 
 	select.form-control {
-		background-image: $cadmin-input-success-select-icon;
+		@include clay-select-variant($cadmin-input-success-select);
 
 		&[size] {
 			@include clay-select-variant($cadmin-input-success-select-size);
