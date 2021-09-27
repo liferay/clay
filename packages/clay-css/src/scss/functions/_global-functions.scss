@@ -2,6 +2,7 @@
 /// @group globals
 ////
 
+@import '_color-functions.scss';
 @import '_lx-icons-generated.scss';
 @import '_type-conversion-functions.scss';
 
@@ -176,7 +177,7 @@
 		} @else {
 			@return linear-gradient(
 				180deg,
-				mix(clay-get-fallback($body-bg), $gradient, 15%),
+				clay-mix($body-bg, $gradient, 15%),
 				$gradient
 			);
 		}
@@ -459,9 +460,13 @@
 /// @param {Color} $light[$yiq-text-light] - The color to return if `$color` < `$yiq-contrasted-threshold`
 
 @function color-yiq($color, $dark: null, $light: null, $threshold: null) {
-	$r: red($color);
-	$g: green($color);
-	$b: blue($color);
+	@if (is-css-var($color)) {
+		$color: clay-get-fallback($color);
+	}
+
+	$r: clay-red($color);
+	$g: clay-green($color);
+	$b: clay-blue($color);
 
 	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
@@ -558,7 +563,7 @@
 		$color-interval
 	);
 
-	@return mix($color-base, $color, $level * $color-interval);
+	@return clay-mix($color-base, $color, $level * $color-interval);
 }
 
 /// A Bootstrap 4 function that returns a CSS `calc` addition expression. This is their workaround for returning a valid calc value with `null` variables.
