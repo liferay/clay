@@ -69,13 +69,13 @@
 
 	@at-root a#{&} {
 		&:hover {
-			background-color: darken($bg, 10%);
+			background-color: clay-darken($bg, 10%);
 			color: color-yiq($bg);
 		}
 
 		&:focus,
 		&.focus {
-			background-color: darken($bg, 10%);
+			background-color: clay-darken($bg, 10%);
 			box-shadow: 0 0 0 $badge-focus-width rgba($bg, 0.5);
 			color: color-yiq($bg);
 			outline: 0;

@@ -11,7 +11,7 @@
 	button#{$parent} {
 		&:hover,
 		&:focus {
-			background-color: darken($color, 10%) !important;
+			background-color: clay-darken($color, 10%) !important;
 		}
 	}
 
@@ -26,11 +26,7 @@
 @mixin bg-gradient-variant($parent, $color) {
 	#{$parent} {
 		background: $color
-			linear-gradient(
-				180deg,
-				mix(clay-get-fallback($body-bg), $color, 15%),
-				$color
-			)
+			linear-gradient(180deg, clay-mix($body-bg, $color, 15%), $color)
 			repeat-x !important;
 	}
 }

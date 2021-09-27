@@ -23,7 +23,7 @@
 		&.list-group-item-action {
 			&:hover,
 			&:focus {
-				background-color: darken($background, 5%);
+				background-color: clay-darken($background, 5%);
 				color: $color;
 			}
 

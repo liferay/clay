@@ -11,11 +11,11 @@
 	color: $color;
 
 	hr {
-		border-top-color: darken($border, 5%);
+		border-top-color: clay-darken($border, 5%);
 	}
 
 	.alert-link {
-		color: darken($color, 10%);
+		color: clay-darken($color, 10%);
 	}
 }
 
