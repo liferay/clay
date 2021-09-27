@@ -306,13 +306,17 @@ $alert-primary-link-hover-color: null !default;
 $alert-primary-btn: () !default;
 $alert-primary-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $primary,
 		color: $primary,
-		hover-bg: $primary,
-		hover-color: color-yiq($primary),
-		active-bg: darken($primary, 5%),
-		active-border-color: darken($primary, 5%),
+		hover: (
+			background-color: $primary,
+			color: color-yiq($primary),
+		),
+		active: (
+			background-color: darken($primary, 5%),
+			border-color: darken($primary, 5%),
+		),
 	),
 	$alert-primary-btn
 );
@@ -365,13 +369,17 @@ $alert-secondary-link-hover-color: null !default;
 $alert-secondary-btn: () !default;
 $alert-secondary-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $secondary,
 		color: $secondary,
-		hover-bg: $secondary,
-		hover-color: color-yiq($secondary),
-		active-bg: darken($secondary, 5%),
-		active-border-color: darken($secondary, 5%),
+		hover: (
+			background-color: $secondary,
+			color: color-yiq($secondary),
+		),
+		active: (
+			background-color: darken($secondary, 5%),
+			border-color: darken($secondary, 5%),
+		),
 	),
 	$alert-secondary-btn
 );
@@ -418,13 +426,17 @@ $alert-success-link-hover-color: null !default;
 $alert-success-btn: () !default;
 $alert-success-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $success,
 		color: $success,
-		hover-bg: $success,
-		hover-color: color-yiq($success),
-		active-bg: darken($success, 5%),
-		active-border-color: darken($success, 5%),
+		hover: (
+			background-color: $success,
+			color: color-yiq($success),
+		),
+		active: (
+			background-color: darken($success, 5%),
+			border-color: darken($success, 5%),
+		),
 	),
 	$alert-success-btn
 );
@@ -468,13 +480,17 @@ $alert-info-link-hover-color: null !default;
 $alert-info-btn: () !default;
 $alert-info-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $info,
 		color: $info,
-		hover-bg: $info,
-		hover-color: color-yiq($info),
-		active-bg: darken($info, 5%),
-		active-border-color: darken($info, 5%),
+		hover: (
+			background-color: $info,
+			color: color-yiq($info),
+		),
+		active: (
+			background-color: darken($info, 5%),
+			border-color: darken($info, 5%),
+		),
 	),
 	$alert-info-btn
 );
@@ -521,13 +537,17 @@ $alert-warning-link-hover-color: null !default;
 $alert-warning-btn: () !default;
 $alert-warning-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $warning,
 		color: $warning,
-		hover-bg: $warning,
-		hover-color: color-yiq($warning),
-		active-bg: darken($warning, 5%),
-		active-border-color: darken($warning, 5%),
+		hover: (
+			background-color: $warning,
+			color: color-yiq($warning),
+		),
+		active: (
+			background-color: darken($warning, 5%),
+			border-color: darken($warning, 5%),
+		),
 	),
 	$alert-warning-btn
 );
@@ -574,13 +594,17 @@ $alert-danger-link-hover-color: null !default;
 $alert-danger-btn: () !default;
 $alert-danger-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $danger,
 		color: $danger,
-		hover-bg: $danger,
-		hover-color: color-yiq($danger),
-		active-bg: darken($danger, 5%),
-		active-border-color: darken($danger, 5%),
+		hover: (
+			background-color: $danger,
+			color: color-yiq($danger),
+		),
+		active: (
+			background-color: darken($danger, 5%),
+			border-color: darken($danger, 5%),
+		),
 	),
 	$alert-danger-btn
 );
@@ -627,13 +651,17 @@ $alert-light-link-hover-color: null !default;
 $alert-light-btn: () !default;
 $alert-light-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $secondary,
 		color: $secondary,
-		hover-bg: $secondary,
-		hover-color: color-yiq($secondary),
-		active-bg: darken($secondary, 5%),
-		active-border-color: darken($secondary, 5%),
+		hover: (
+			background-color: $secondary,
+			color: color-yiq($secondary),
+		),
+		active: (
+			background-color: darken($secondary, 5%),
+			border-color: darken($secondary, 5%),
+		),
 	),
 	$alert-light-btn
 );
@@ -677,13 +705,17 @@ $alert-dark-link-hover-color: null !default;
 $alert-dark-btn: () !default;
 $alert-dark-btn: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $dark,
 		color: $dark,
-		hover-bg: $dark,
-		hover-color: color-yiq($dark),
-		active-bg: darken($dark, 5%),
-		active-border-color: darken($dark, 5%),
+		hover: (
+			background-color: $dark,
+			color: color-yiq($dark),
+		),
+		active: (
+			background-color: darken($dark, 5%),
+			border-color: darken($dark, 5%),
+		),
 	),
 	$alert-dark-btn
 );

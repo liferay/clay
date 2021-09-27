@@ -118,7 +118,9 @@ $alert-primary-btn: () !default;
 $alert-primary-btn: map-deep-merge(
 	(
 		border-color: $primary-l1,
-		hover-border-color: $primary,
+		hover: (
+			border-color: $primary,
+		),
 	),
 	$alert-primary-btn
 );
@@ -159,7 +161,9 @@ $alert-secondary-btn: () !default;
 $alert-secondary-btn: map-deep-merge(
 	(
 		border-color: $secondary-l1,
-		hover-border-color: $secondary,
+		hover: (
+			border-color: $secondary,
+		),
 	),
 	$alert-secondary-btn
 );
@@ -200,7 +204,9 @@ $alert-success-btn: () !default;
 $alert-success-btn: map-deep-merge(
 	(
 		border-color: $success-l1,
-		hover-border-color: $success,
+		hover: (
+			border-color: $success,
+		),
 	),
 	$alert-success-btn
 );
@@ -241,7 +247,9 @@ $alert-info-btn: () !default;
 $alert-info-btn: map-deep-merge(
 	(
 		border-color: $info-l1,
-		hover-border-color: $info,
+		hover: (
+			border-color: $info,
+		),
 	),
 	$alert-info-btn
 );
@@ -282,7 +290,9 @@ $alert-warning-btn: () !default;
 $alert-warning-btn: map-deep-merge(
 	(
 		border-color: $warning-l1,
-		hover-border-color: $warning,
+		hover: (
+			border-color: $warning,
+		),
 	),
 	$alert-warning-btn
 );
@@ -323,7 +333,9 @@ $alert-danger-btn: () !default;
 $alert-danger-btn: map-deep-merge(
 	(
 		border-color: $danger-l1,
-		hover-border-color: $danger,
+		hover: (
+			border-color: $danger,
+		),
 	),
 	$alert-danger-btn
 );
@@ -365,11 +377,15 @@ $alert-light-btn: map-deep-merge(
 	(
 		border-color: $dark-l1,
 		color: $dark,
-		hover-bg: $dark,
-		hover-border-color: $dark,
-		hover-color: $white,
-		active-bg: darken($dark, 5%),
-		active-border-color: darken($dark, 5%),
+		hover: (
+			background-color: $dark,
+			border-color: $dark,
+			color: $white,
+		),
+		active: (
+			background-color: darken($dark, 5%),
+			border-color: darken($dark, 5%),
+		),
 	),
 	$alert-light-btn
 );
@@ -410,7 +426,9 @@ $alert-dark-btn: () !default;
 $alert-dark-btn: map-deep-merge(
 	(
 		border-color: $dark-l1,
-		hover-border-color: $dark,
+		hover: (
+			border-color: $dark,
+		),
 	),
 	$alert-dark-btn
 );
