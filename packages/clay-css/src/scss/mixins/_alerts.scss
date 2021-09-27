@@ -1,3 +1,9 @@
+/// This is Bootstrap 4's Alert Variant Mixin.
+/// @deprecated use the mixin `clay-alert-variant` instead
+/// @param {Color} $background
+/// @param {Color} $border
+/// @param {Color} $color
+
 @mixin alert-variant($background, $border, $color) {
 	@include gradient-bg($background);
 
@@ -10,5 +16,122 @@
 
 	.alert-link {
 		color: darken($color, 10%);
+	}
+}
+
+/// A mixin to create alert variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// hr: {Map | Null}, // See mixin `clay-css`
+/// alert-btn: {Map | Null}, // See mixin `clay-button-variant`
+/// btn-group: {Map | Null}, // See mixin `clay-container`
+/// btn-group-item: {Map | Null}, // See mixin `clay-container`
+/// close: {Map | Null}, // See mixin `clay-close`
+/// lead: {Map | Null}, // See mixin `clay-css`
+/// alert-link: {Map | Null}, // See mixin `clay-link`
+/// component-title: {Map | Null}, // See mixin `clay-text-typography`
+/// component-subtitle: {Map | Null}, // See mixin `clay-text-typography`
+
+@mixin clay-alert-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$base: map-merge(
+		$map,
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+		)
+	);
+
+	$hr: setter(map-get($map, hr), ());
+
+	$alert-btn: setter(map-get($map, alert-btn), ());
+
+	$btn-group: setter(map-get($map, btn-group), ());
+
+	$btn-group-item: setter(map-get($map, btn-group-item), ());
+
+	$close: setter(map-get($map, close), ());
+	$close: map-deep-merge(
+		$close,
+		(
+			color: setter(map-get($map, close-color), map-get($close, color)),
+			hover: (
+				color:
+					setter(
+						map-get($map, close-hover-color),
+						map-deep-get($close, hover, color)
+					),
+			),
+		)
+	);
+
+	$lead: setter(map-get($map, lead), ());
+	$lead: map-deep-merge(
+		$lead,
+		(
+			color: setter(map-get($map, lead-color), map-get($lead, color)),
+		)
+	);
+
+	$alert-link: setter(map-get($map, alert-link), ());
+	$alert-link: map-deep-merge(
+		$alert-link,
+		(
+			color:
+				setter(map-get($map, link-color), map-get($alert-link, color)),
+			hover: (
+				color:
+					setter(
+						map-get($map, link-hover-color),
+						map-deep-get($alert-link, hover, color)
+					),
+			),
+		)
+	);
+
+	$component-title: setter(map-get($map, component-title), ());
+
+	$component-subtitle: setter(map-get($map, component-subtitle), ());
+
+	@if ($enabled) {
+		@include clay-css($base);
+
+		hr {
+			@include clay-css($hr);
+		}
+
+		.alert-btn {
+			@include clay-button-variant($alert-btn);
+		}
+
+		.btn-group {
+			@include clay-container($btn-group);
+		}
+
+		.btn-group-item {
+			@include clay-container($btn-group-item);
+		}
+
+		.close {
+			@include clay-close($close);
+		}
+
+		.lead {
+			@include clay-css($lead);
+		}
+
+		.alert-link {
+			@include clay-link($alert-link);
+		}
+
+		.component-title {
+			@include clay-text-typography($component-title);
+		}
+
+		.component-subtitle {
+			@include clay-text-typography($component-subtitle);
+		}
 	}
 }
