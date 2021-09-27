@@ -114,69 +114,96 @@ $cadmin-colors: map-merge(
 );
 
 $cadmin-primary: #0b5fff !default;
-$cadmin-primary-d1: darken($cadmin-primary, 5.1) !default;
-$cadmin-primary-d2: darken($cadmin-primary, 10) !default;
-$cadmin-primary-l1: lighten($cadmin-primary, 22.94) !default;
-$cadmin-primary-l2: lighten($cadmin-primary, 32.94) !default;
-$cadmin-primary-l3: lighten($cadmin-primary, 44.9) !default;
+$cadmin-primary-d1: clay-darken($cadmin-primary, 5.1) !default;
+$cadmin-primary-d2: clay-darken($cadmin-primary, 10) !default;
+$cadmin-primary-l1: clay-lighten($cadmin-primary, 22.94) !default;
+$cadmin-primary-l2: clay-lighten($cadmin-primary, 32.94) !default;
+$cadmin-primary-l3: clay-lighten($cadmin-primary, 44.9) !default;
 
 $cadmin-secondary: #6b6c7e !default;
-$cadmin-secondary-d1: darken(saturate($cadmin-secondary, 4.82), 20) !default;
-$cadmin-secondary-d2: darken(saturate($cadmin-secondary, 5.36), 23.92) !default;
-$cadmin-secondary-l1: lighten(
-	saturate(adjust-hue($cadmin-secondary, -3), 5.39),
+$cadmin-secondary-d1: clay-darken(
+	clay-saturate($cadmin-secondary, 4.82),
+	20
+) !default;
+$cadmin-secondary-d2: clay-darken(
+	clay-saturate($cadmin-secondary, 5.36),
 	23.92
 ) !default;
-$cadmin-secondary-l2: lighten(
-	saturate(adjust-hue($cadmin-secondary, -2), 5.48),
+$cadmin-secondary-l1: clay-lighten(
+	clay-saturate(clay-adjust-hue($cadmin-secondary, -3), 5.39),
+	23.92
+) !default;
+$cadmin-secondary-l2: clay-lighten(
+	clay-saturate(clay-adjust-hue($cadmin-secondary, -2), 5.48),
 	37.06
 ) !default;
-$cadmin-secondary-l3: lighten(
-	saturate(adjust-hue($cadmin-secondary, 3), 6.13),
+$cadmin-secondary-l3: clay-lighten(
+	clay-saturate(clay-adjust-hue($cadmin-secondary, 3), 6.13),
 	46.08
 ) !default;
 
 $cadmin-info: #2e5aac !default;
-$cadmin-info-d1: darken($cadmin-info, 5) !default;
-$cadmin-info-d2: darken($cadmin-info, 10) !default;
-$cadmin-info-l1: lighten(saturate($cadmin-info, 0.59), 28.04) !default;
-$cadmin-info-l2: lighten(desaturate($cadmin-info, 3.25), 52.94) !default;
+$cadmin-info-d1: clay-darken($cadmin-info, 5) !default;
+$cadmin-info-d2: clay-darken($cadmin-info, 10) !default;
+$cadmin-info-l1: clay-lighten(
+	clay-saturate($cadmin-info, 0.59),
+	28.04
+) !default;
+$cadmin-info-l2: clay-lighten(
+	clay-desaturate($cadmin-info, 3.25),
+	52.94
+) !default;
 
 $cadmin-success: #287d3c !default;
-$cadmin-success-d1: darken($cadmin-success, 5) !default;
-$cadmin-success-d2: darken($cadmin-success, 10) !default;
-$cadmin-success-l1: lighten(desaturate($cadmin-success, 0.14), 24.95) !default;
-$cadmin-success-l2: lighten(desaturate($cadmin-success, 1.52), 62.94) !default;
+$cadmin-success-d1: clay-darken($cadmin-success, 5) !default;
+$cadmin-success-d2: clay-darken($cadmin-success, 10) !default;
+$cadmin-success-l1: clay-lighten(
+	clay-desaturate($cadmin-success, 0.14),
+	24.95
+) !default;
+$cadmin-success-l2: clay-lighten(
+	clay-desaturate($cadmin-success, 1.52),
+	62.94
+) !default;
 
 $cadmin-warning: #b95000 !default;
-$cadmin-warning-d1: darken($cadmin-warning, 5.1) !default;
-$cadmin-warning-d2: darken($cadmin-warning, 10) !default;
-$cadmin-warning-l1: lighten($cadmin-warning, 24.9) !default;
-$cadmin-warning-l2: lighten($cadmin-warning, 60) !default;
+$cadmin-warning-d1: clay-darken($cadmin-warning, 5.1) !default;
+$cadmin-warning-d2: clay-darken($cadmin-warning, 10) !default;
+$cadmin-warning-l1: clay-lighten($cadmin-warning, 24.9) !default;
+$cadmin-warning-l2: clay-lighten($cadmin-warning, 60) !default;
 
 $cadmin-danger: #da1414 !default;
-$cadmin-danger-d1: darken($cadmin-danger, 5) !default;
-$cadmin-danger-d2: darken($cadmin-danger, 10) !default;
-$cadmin-danger-l1: lighten(desaturate($cadmin-danger, 0.25), 28.04) !default;
-$cadmin-danger-l2: lighten(saturate($cadmin-danger, 5.04), 50) !default;
+$cadmin-danger-d1: clay-darken($cadmin-danger, 5) !default;
+$cadmin-danger-d2: clay-darken($cadmin-danger, 10) !default;
+$cadmin-danger-l1: clay-lighten(
+	clay-desaturate($cadmin-danger, 0.25),
+	28.04
+) !default;
+$cadmin-danger-l2: clay-lighten(
+	clay-saturate($cadmin-danger, 5.04),
+	50
+) !default;
 
 $cadmin-light: #f1f2f5 !default;
-$cadmin-light-d1: darken($cadmin-light, 5.1) !default;
-$cadmin-light-d2: darken($cadmin-light, 10) !default;
-$cadmin-light-l1: lighten(
-	desaturate(adjust-hue($cadmin-light, -15), 2.38),
+$cadmin-light-d1: clay-darken($cadmin-light, 5.1) !default;
+$cadmin-light-d2: clay-darken($cadmin-light, 10) !default;
+$cadmin-light-l1: clay-lighten(
+	clay-desaturate(clay-adjust-hue($cadmin-light, -15), 2.38),
 	1.96
 ) !default;
-$cadmin-light-l2: lighten(
-	desaturate(adjust-hue($cadmin-light, -225), 16.67),
+$cadmin-light-l2: clay-lighten(
+	clay-desaturate(clay-adjust-hue($cadmin-light, -225), 16.67),
 	4.71
 ) !default;
 
 $cadmin-dark: #272833 !default;
-$cadmin-dark-d1: darken($cadmin-dark, 5.1) !default;
-$cadmin-dark-d2: darken($cadmin-dark, 10) !default;
-$cadmin-dark-l1: lighten(saturate($cadmin-dark, 0.18), 4.12) !default;
-$cadmin-dark-l2: lighten(desaturate($cadmin-dark, 0.36), 8.04) !default;
+$cadmin-dark-d1: clay-darken($cadmin-dark, 5.1) !default;
+$cadmin-dark-d2: clay-darken($cadmin-dark, 10) !default;
+$cadmin-dark-l1: clay-lighten(clay-saturate($cadmin-dark, 0.18), 4.12) !default;
+$cadmin-dark-l2: clay-lighten(
+	clay-desaturate($cadmin-dark, 0.36),
+	8.04
+) !default;
 
 $cadmin-theme-colors: () !default;
 $cadmin-theme-colors: map-merge(

@@ -7,10 +7,10 @@ $cadmin-component-link: map-deep-merge(
 		color: $cadmin-gray-600,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
-			color: darken($cadmin-gray-600, 15%),
+			color: clay-darken($cadmin-gray-600, 15%),
 		),
 		focus: (
-			color: darken($cadmin-gray-600, 15%),
+			color: clay-darken($cadmin-gray-600, 15%),
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
@@ -25,10 +25,10 @@ $cadmin-link-primary: map-deep-merge(
 		color: $cadmin-primary,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
-			color: darken($cadmin-primary, 15%),
+			color: clay-darken($cadmin-primary, 15%),
 		),
 		focus: (
-			color: darken($cadmin-primary, 15%),
+			color: clay-darken($cadmin-primary, 15%),
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
@@ -137,7 +137,8 @@ $cadmin-link-outline-primary: map-deep-merge(
 			outline: 0,
 		),
 		active: (
-			background-color: lighten(desaturate($cadmin-primary, 42.05), 41.76),
+			background-color:
+				clay-lighten(clay-desaturate($cadmin-primary, 42.05), 41.76),
 			color: $cadmin-primary,
 		),
 		disabled: (
@@ -238,10 +239,10 @@ $cadmin-component-title-link: map-deep-merge(
 		color: $cadmin-gray-900,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
-			color: darken($cadmin-gray-900, 15%),
+			color: clay-darken($cadmin-gray-900, 15%),
 		),
 		focus: (
-			color: darken($cadmin-gray-900, 15%),
+			color: clay-darken($cadmin-gray-900, 15%),
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),

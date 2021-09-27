@@ -382,7 +382,7 @@
 
 		&.list-group-item-action {
 			@include hover-focus() {
-				background-color: darken(
+				background-color: clay-darken(
 					theme-color-level($cadmin-color, -9),
 					5%
 				);

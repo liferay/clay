@@ -328,7 +328,7 @@ $alert-primary: map-deep-merge(
 		border-color: $alert-primary-border-color,
 		color: $alert-primary-color,
 		hr: (
-			border-top-color: darken($alert-primary-border-color, 5%),
+			border-top-color: clay-darken($alert-primary-border-color, 5%),
 		),
 		alert-btn: $alert-primary-btn,
 		close: (

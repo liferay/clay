@@ -32,7 +32,10 @@ $cadmin-table-color: $cadmin-body-color !default;
 $cadmin-table-font-size: 14px !default;
 $cadmin-table-margin-bottom: 0 !default;
 
-$cadmin-table-hover-bg: lighten($cadmin-component-active-bg, 44.9) !default;
+$cadmin-table-hover-bg: clay-lighten(
+	$cadmin-component-active-bg,
+	44.9
+) !default;
 $cadmin-table-hover-color: $cadmin-table-color !default;
 
 $cadmin-table-active-bg: $cadmin-table-hover-bg !default;
@@ -253,7 +256,10 @@ $cadmin-table-action-link: map-deep-merge(
 // Table Dark Variant
 
 $cadmin-table-dark-bg: $cadmin-gray-800 !default;
-$cadmin-table-dark-border-color: lighten($cadmin-table-dark-bg, 7.5%) !default;
+$cadmin-table-dark-border-color: clay-lighten(
+	$cadmin-table-dark-bg,
+	7.5%
+) !default;
 $cadmin-table-dark-color: $cadmin-white !default;
 
 $cadmin-table-dark-hover-bg: rgba($cadmin-white, 0.075) !default;

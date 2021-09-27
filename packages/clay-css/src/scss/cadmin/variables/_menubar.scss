@@ -108,10 +108,11 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			color: $cadmin-gray-900,
 			hover: (
 				background-color: $cadmin-gray-100,
-				color: darken($cadmin-gray-900, 5%),
+				color: clay-darken($cadmin-gray-900, 5%),
 			),
 			focus: (
-				background-color: lighten($cadmin-component-active-bg, 44.9),
+				background-color:
+					clay-lighten($cadmin-component-active-bg, 44.9),
 			),
 			active-class: (
 				background-color: $cadmin-primary-l3,
@@ -320,10 +321,11 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			color: $cadmin-gray-900,
 			hover: (
 				background-color: $cadmin-gray-100,
-				color: darken($cadmin-gray-900, 5%),
+				color: clay-darken($cadmin-gray-900, 5%),
 			),
 			focus: (
-				background-color: lighten($cadmin-component-active-bg, 44.9),
+				background-color:
+					clay-lighten($cadmin-component-active-bg, 44.9),
 			),
 			active-class: (
 				background-color: $cadmin-primary-l3,

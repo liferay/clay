@@ -192,7 +192,7 @@
 	color: $cadmin-popover-header-color;
 	background-color: $cadmin-popover-header-bg;
 	border-bottom: $cadmin-popover-border-width solid
-		darken($cadmin-popover-header-bg, 5%);
+		clay-darken($cadmin-popover-header-bg, 5%);
 	@include border-top-radius($cadmin-popover-inner-border-radius);
 }
 
