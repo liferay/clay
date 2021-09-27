@@ -97,54 +97,54 @@ $colors: map-merge(
 );
 
 $primary: $blue !default;
-$primary-d1: darken($primary, 7.5) !default;
-$primary-d2: darken($primary, 10) !default;
-$primary-l1: lighten($primary, 22.94) !default;
-$primary-l2: lighten($primary, 32.94) !default;
-$primary-l3: lighten($primary, 44.9) !default;
+$primary-d1: clay-darken($primary, 7.5) !default;
+$primary-d2: clay-darken($primary, 10) !default;
+$primary-l1: clay-lighten($primary, 22.94) !default;
+$primary-l2: clay-lighten($primary, 32.94) !default;
+$primary-l3: clay-lighten($primary, 44.9) !default;
 
 $secondary: $gray-600 !default;
-$secondary-d1: darken($secondary, 7.5) !default;
-$secondary-d2: darken($secondary, 10) !default;
-$secondary-l1: lighten($secondary, 22.94) !default;
-$secondary-l2: lighten($secondary, 32.94) !default;
-$secondary-l3: lighten($secondary, 44.9) !default;
+$secondary-d1: clay-darken($secondary, 7.5) !default;
+$secondary-d2: clay-darken($secondary, 10) !default;
+$secondary-l1: clay-lighten($secondary, 22.94) !default;
+$secondary-l2: clay-lighten($secondary, 32.94) !default;
+$secondary-l3: clay-lighten($secondary, 44.9) !default;
 
 $info: $cyan !default;
-$info-d1: darken($info, 7.5) !default;
-$info-d2: darken($info, 10) !default;
-$info-l1: lighten($info, 22.94) !default;
-$info-l2: lighten($info, 32.94) !default;
+$info-d1: clay-darken($info, 7.5) !default;
+$info-d2: clay-darken($info, 10) !default;
+$info-l1: clay-lighten($info, 22.94) !default;
+$info-l2: clay-lighten($info, 32.94) !default;
 
 $success: $green !default;
-$success-d1: darken($success, 7.5) !default;
-$success-d2: darken($success, 10) !default;
-$success-l1: lighten($success, 22.94) !default;
-$success-l2: lighten($success, 32.94) !default;
+$success-d1: clay-darken($success, 7.5) !default;
+$success-d2: clay-darken($success, 10) !default;
+$success-l1: clay-lighten($success, 22.94) !default;
+$success-l2: clay-lighten($success, 32.94) !default;
 
 $warning: $yellow !default;
-$warning-d1: darken($warning, 7.5) !default;
-$warning-d2: darken($warning, 10) !default;
-$warning-l1: lighten($warning, 22.94) !default;
-$warning-l2: lighten($warning, 32.94) !default;
+$warning-d1: clay-darken($warning, 7.5) !default;
+$warning-d2: clay-darken($warning, 10) !default;
+$warning-l1: clay-lighten($warning, 22.94) !default;
+$warning-l2: clay-lighten($warning, 32.94) !default;
 
 $danger: $red !default;
-$danger-d1: darken($danger, 7.5) !default;
-$danger-d2: darken($danger, 10) !default;
-$danger-l1: lighten($danger, 22.94) !default;
-$danger-l2: lighten($danger, 32.94) !default;
+$danger-d1: clay-darken($danger, 7.5) !default;
+$danger-d2: clay-darken($danger, 10) !default;
+$danger-l1: clay-lighten($danger, 22.94) !default;
+$danger-l2: clay-lighten($danger, 32.94) !default;
 
 $light: $gray-100 !default;
-$light-d1: darken($light, 7.5) !default;
-$light-d2: darken($light, 10) !default;
-$light-l1: lighten($light, 22.94) !default;
-$light-l2: lighten($light, 32.94) !default;
+$light-d1: clay-darken($light, 7.5) !default;
+$light-d2: clay-darken($light, 10) !default;
+$light-l1: clay-lighten($light, 22.94) !default;
+$light-l2: clay-lighten($light, 32.94) !default;
 
 $dark: $gray-800 !default;
-$dark-d1: darken($dark, 7.5) !default;
-$dark-d2: darken($dark, 10) !default;
-$dark-l1: lighten($dark, 22.94) !default;
-$dark-l2: lighten($dark, 32.94) !default;
+$dark-d1: clay-darken($dark, 7.5) !default;
+$dark-d2: clay-darken($dark, 10) !default;
+$dark-l1: clay-lighten($dark, 22.94) !default;
+$dark-l2: clay-lighten($dark, 32.94) !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -424,7 +424,7 @@ $c-button-base: map-merge(
 
 $link-color: $primary !default;
 $link-decoration: none !default;
-$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-color: clay-darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
 /// Darken percentage for links with `.text-*` class (e.g. `.text-success`)

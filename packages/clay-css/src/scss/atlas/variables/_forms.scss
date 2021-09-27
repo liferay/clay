@@ -21,8 +21,8 @@ $input-placeholder-color: $gray-600 !default;
 
 // Input Focus (.form-control:focus)
 
-$input-focus-bg: lighten($component-active-bg, 44.9) !default;
-$input-focus-border-color: lighten($component-active-bg, 22.94) !default;
+$input-focus-bg: clay-lighten($component-active-bg, 44.9) !default;
+$input-focus-border-color: clay-lighten($component-active-bg, 22.94) !default;
 $input-focus-box-shadow: $component-focus-box-shadow !default;
 
 // Input Disabled (.form-control:disabled)

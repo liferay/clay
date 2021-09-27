@@ -170,7 +170,7 @@ $card-subtitle-link: map-deep-merge(
 	(
 		color: map-get($card-subtitle, color),
 		hover: (
-			color: darken($gray-600, 15%),
+			color: clay-darken($gray-600, 15%),
 		),
 	),
 	$card-subtitle-link
@@ -259,7 +259,7 @@ $card-interactive: map-deep-merge(
 			text-decoration: none,
 		),
 		focus: (
-			border-color: lighten($component-active-bg, 25%),
+			border-color: clay-lighten($component-active-bg, 25%),
 			box-shadow: $input-btn-focus-box-shadow,
 		),
 		active: (
@@ -311,7 +311,7 @@ $card-interactive-secondary: map-deep-merge(
 		color: $gray-900,
 		hover: (
 			background-color: $white,
-			border-color: lighten($component-active-bg, 25%),
+			border-color: clay-lighten($component-active-bg, 25%),
 			box-shadow: $input-btn-focus-box-shadow,
 			color: $gray-900,
 		),

@@ -39,7 +39,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 		),
 		link-mobile: (
 			focus: (
-				background-color: lighten($component-active-bg, 44.9),
+				background-color: clay-lighten($component-active-bg, 44.9),
 			),
 			active: (
 				background-color: $c-unset,
@@ -108,7 +108,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 		),
 		link-mobile: (
 			focus: (
-				background-color: lighten($component-active-bg, 44.9),
+				background-color: clay-lighten($component-active-bg, 44.9),
 			),
 			active: (
 				background-color: $c-unset,

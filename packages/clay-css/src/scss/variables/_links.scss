@@ -9,7 +9,7 @@ $component-link: map-deep-merge(
 	(
 		color: $gray-600,
 		hover: (
-			color: darken($gray-600, 15%),
+			color: clay-darken($gray-600, 15%),
 		),
 	),
 	$component-link
@@ -20,7 +20,7 @@ $link-primary: map-deep-merge(
 	(
 		color: $primary,
 		hover: (
-			color: darken($primary, 15%),
+			color: clay-darken($primary, 15%),
 		),
 	),
 	$link-primary
@@ -31,7 +31,7 @@ $link-secondary: map-deep-merge(
 	(
 		color: $secondary,
 		hover: (
-			color: darken($secondary, 15%),
+			color: clay-darken($secondary, 15%),
 		),
 	),
 	$link-secondary
@@ -211,7 +211,7 @@ $component-title-link: map-deep-merge(
 	(
 		color: $gray-900,
 		hover: (
-			color: darken($gray-900, 15%),
+			color: clay-darken($gray-900, 15%),
 		),
 	),
 	$component-title-link
@@ -233,7 +233,7 @@ $component-subtitle-link: map-deep-merge(
 	(
 		color: $gray-600,
 		hover: (
-			color: darken($gray-600, 15%),
+			color: clay-darken($gray-600, 15%),
 		),
 	),
 	$component-subtitle-link
