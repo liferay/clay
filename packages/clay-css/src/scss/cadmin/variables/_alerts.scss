@@ -311,7 +311,7 @@ $cadmin-alert-feedback: map-deep-merge(
 	$cadmin-alert-feedback
 );
 
-// Alert Variants
+// .alert-primary
 
 $cadmin-alert-primary-bg: $cadmin-primary-l3 !default;
 $cadmin-alert-primary-border-color: $cadmin-primary-l1 !default;
@@ -324,17 +324,49 @@ $cadmin-alert-primary-link-hover-color: null !default;
 $cadmin-alert-primary-btn: () !default;
 $cadmin-alert-primary-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-primary-l1,
 		color: $cadmin-primary,
-		hover-bg: $cadmin-primary,
-		hover-border-color: $cadmin-primary,
-		hover-color: color-yiq($cadmin-primary),
-		active-bg: darken($cadmin-primary, 5%),
-		active-border-color: darken($cadmin-primary, 5%),
+		hover: (
+			background-color: $cadmin-primary,
+			border-color: $cadmin-primary,
+			color: color-yiq($cadmin-primary),
+		),
+		active: (
+			background-color: darken($cadmin-primary, 5%),
+			border-color: darken($cadmin-primary, 5%),
+		),
 	),
 	$cadmin-alert-primary-btn
 );
+
+$cadmin-alert-primary: () !default;
+$cadmin-alert-primary: map-deep-merge(
+	(
+		background-color: $cadmin-alert-primary-bg,
+		border-color: $cadmin-alert-primary-border-color,
+		color: $cadmin-alert-primary-color,
+		close: (
+			color: $cadmin-alert-primary-close-color,
+			hover: (
+				color: $cadmin-alert-primary-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-primary-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-primary-link-color,
+			hover: (
+				color: $cadmin-alert-primary-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-primary-btn,
+	),
+	$cadmin-alert-primary
+);
+
+// .alert-secondary
 
 $cadmin-alert-secondary-bg: $cadmin-secondary-l3 !default;
 $cadmin-alert-secondary-border-color: $cadmin-secondary-l1 !default;
@@ -348,17 +380,49 @@ $cadmin-alert-secondary-link-hover-color: null !default;
 $cadmin-alert-secondary-btn: () !default;
 $cadmin-alert-secondary-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-secondary-l1,
 		color: $cadmin-secondary,
-		hover-bg: $cadmin-secondary,
-		hover-border-color: $cadmin-secondary,
-		hover-color: color-yiq($cadmin-secondary),
-		active-bg: darken($cadmin-secondary, 5%),
-		active-border-color: darken($cadmin-secondary, 5%),
+		hover: (
+			background-color: $cadmin-secondary,
+			border-color: $cadmin-secondary,
+			color: color-yiq($cadmin-secondary),
+		),
+		active: (
+			background-color: darken($cadmin-secondary, 5%),
+			border-color: darken($cadmin-secondary, 5%),
+		),
 	),
 	$cadmin-alert-secondary-btn
 );
+
+$cadmin-alert-secondary: () !default;
+$cadmin-alert-secondary: map-deep-merge(
+	(
+		background-color: $cadmin-alert-secondary-bg,
+		border-color: $cadmin-alert-secondary-border-color,
+		color: $cadmin-alert-secondary-color,
+		close: (
+			color: $cadmin-alert-secondary-close-color,
+			hover: (
+				color: $cadmin-alert-secondary-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-secondary-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-secondary-link-color,
+			hover: (
+				color: $cadmin-alert-secondary-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-secondary-btn,
+	),
+	$cadmin-alert-secondary
+);
+
+// .alert-success
 
 $cadmin-alert-success-bg: $cadmin-success-l2 !default;
 $cadmin-alert-success-border-color: $cadmin-success-l1 !default;
@@ -371,17 +435,49 @@ $cadmin-alert-success-link-hover-color: null !default;
 $cadmin-alert-success-btn: () !default;
 $cadmin-alert-success-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-success-l1,
 		color: $cadmin-success,
-		hover-bg: $cadmin-success,
-		hover-border-color: $cadmin-success,
-		hover-color: color-yiq($cadmin-success),
-		active-bg: darken($cadmin-success, 5%),
-		active-border-color: darken($cadmin-success, 5%),
+		hover: (
+			background-color: $cadmin-success,
+			border-color: $cadmin-success,
+			color: color-yiq($cadmin-success),
+		),
+		active: (
+			background-color: darken($cadmin-success, 5%),
+			border-color: darken($cadmin-success, 5%),
+		),
 	),
 	$cadmin-alert-success-btn
 );
+
+$cadmin-alert-success: () !default;
+$cadmin-alert-success: map-deep-merge(
+	(
+		background-color: $cadmin-alert-success-bg,
+		border-color: $cadmin-alert-success-border-color,
+		color: $cadmin-alert-success-color,
+		close: (
+			color: $cadmin-alert-success-close-color,
+			hover: (
+				color: $cadmin-alert-success-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-success-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-success-link-color,
+			hover: (
+				color: $cadmin-alert-success-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-success-btn,
+	),
+	$cadmin-alert-success
+);
+
+// .alert-info
 
 $cadmin-alert-info-bg: $cadmin-info-l2 !default;
 $cadmin-alert-info-border-color: $cadmin-info-l1 !default;
@@ -395,17 +491,49 @@ $cadmin-alert-info-link-hover-color: null !default;
 $cadmin-alert-info-btn: () !default;
 $cadmin-alert-info-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-info-l1,
 		color: $cadmin-info,
-		hover-bg: $cadmin-info,
-		hover-border-color: $cadmin-info,
-		hover-color: color-yiq($cadmin-info),
-		active-bg: darken($cadmin-info, 5%),
-		active-border-color: darken($cadmin-info, 5%),
+		hover: (
+			background-color: $cadmin-info,
+			border-color: $cadmin-info,
+			color: color-yiq($cadmin-info),
+		),
+		active: (
+			background-color: darken($cadmin-info, 5%),
+			border-color: darken($cadmin-info, 5%),
+		),
 	),
 	$cadmin-alert-info-btn
 );
+
+$cadmin-alert-info: () !default;
+$cadmin-alert-info: map-deep-merge(
+	(
+		background-color: $cadmin-alert-info-bg,
+		border-color: $cadmin-alert-info-border-color,
+		color: $cadmin-alert-info-color,
+		close: (
+			color: $cadmin-alert-info-close-color,
+			hover: (
+				color: $cadmin-alert-info-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-info-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-info-link-color,
+			hover: (
+				color: $cadmin-alert-info-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-info-btn,
+	),
+	$cadmin-alert-info
+);
+
+// .alert-warning
 
 $cadmin-alert-warning-bg: $cadmin-warning-l2 !default;
 $cadmin-alert-warning-border-color: $cadmin-warning-l1 !default;
@@ -418,17 +546,49 @@ $cadmin-alert-warning-link-hover-color: null !default;
 $cadmin-alert-warning-btn: () !default;
 $cadmin-alert-warning-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-warning-l1,
 		color: $cadmin-warning,
-		hover-bg: $cadmin-warning,
-		hover-border-color: $cadmin-warning,
-		hover-color: color-yiq($cadmin-warning),
-		active-bg: darken($cadmin-warning, 5%),
-		active-border-color: darken($cadmin-warning, 5%),
+		hover: (
+			background-color: $cadmin-warning,
+			border-color: $cadmin-warning,
+			color: color-yiq($cadmin-warning),
+		),
+		active: (
+			background-color: darken($cadmin-warning, 5%),
+			border-color: darken($cadmin-warning, 5%),
+		),
 	),
 	$cadmin-alert-warning-btn
 );
+
+$cadmin-alert-warning: () !default;
+$cadmin-alert-warning: map-deep-merge(
+	(
+		background-color: $cadmin-alert-warning-bg,
+		border-color: $cadmin-alert-warning-border-color,
+		color: $cadmin-alert-warning-color,
+		close: (
+			color: $cadmin-alert-warning-close-color,
+			hover: (
+				color: $cadmin-alert-warning-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-warning-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-warning-link-color,
+			hover: (
+				color: $cadmin-alert-warning-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-warning-btn,
+	),
+	$cadmin-alert-warning
+);
+
+// .alert-danger
 
 $cadmin-alert-danger-bg: $cadmin-danger-l2 !default;
 $cadmin-alert-danger-border-color: $cadmin-danger-l1 !default;
@@ -441,17 +601,49 @@ $cadmin-alert-danger-link-hover-color: null !default;
 $cadmin-alert-danger-btn: () !default;
 $cadmin-alert-danger-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-danger-l1,
 		color: $cadmin-danger,
-		hover-bg: $cadmin-danger,
-		hover-border-color: $cadmin-danger,
-		hover-color: color-yiq($cadmin-danger),
-		active-bg: darken($cadmin-danger, 5%),
-		active-border-color: darken($cadmin-danger, 5%),
+		hover: (
+			background-color: $cadmin-danger,
+			border-color: $cadmin-danger,
+			color: color-yiq($cadmin-danger),
+		),
+		active: (
+			background-color: darken($cadmin-danger, 5%),
+			border-color: darken($cadmin-danger, 5%),
+		),
 	),
 	$cadmin-alert-danger-btn
 );
+
+$cadmin-alert-danger: () !default;
+$cadmin-alert-danger: map-deep-merge(
+	(
+		background-color: $cadmin-alert-danger-bg,
+		border-color: $cadmin-alert-danger-border-color,
+		color: $cadmin-alert-danger-color,
+		close: (
+			color: $cadmin-alert-danger-close-color,
+			hover: (
+				color: $cadmin-alert-danger-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-danger-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-danger-link-color,
+			hover: (
+				color: $cadmin-alert-danger-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-danger-btn,
+	),
+	$cadmin-alert-danger
+);
+
+// .alert-light
 
 $cadmin-alert-light-bg: $cadmin-light-l2 !default;
 $cadmin-alert-light-border-color: $cadmin-light-l1 !default;
@@ -465,17 +657,49 @@ $cadmin-alert-light-link-hover-color: null !default;
 $cadmin-alert-light-btn: () !default;
 $cadmin-alert-light-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-dark-l1,
 		color: $cadmin-dark,
-		hover-bg: $cadmin-dark,
-		hover-border-color: $cadmin-dark,
-		hover-color: $cadmin-white,
-		active-bg: darken($cadmin-dark, 5%),
-		active-border-color: darken($cadmin-dark, 5%),
+		hover: (
+			background-color: $cadmin-dark,
+			border-color: $cadmin-dark,
+			color: $cadmin-white,
+		),
+		active: (
+			background-color: darken($cadmin-dark, 5%),
+			border-color: darken($cadmin-dark, 5%),
+		),
 	),
 	$cadmin-alert-light-btn
 );
+
+$cadmin-alert-light: () !default;
+$cadmin-alert-light: map-deep-merge(
+	(
+		background-color: $cadmin-alert-light-bg,
+		border-color: $cadmin-alert-light-border-color,
+		color: $cadmin-alert-light-color,
+		close: (
+			color: $cadmin-alert-light-close-color,
+			hover: (
+				color: $cadmin-alert-light-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-light-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-light-link-color,
+			hover: (
+				color: $cadmin-alert-light-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-light-btn,
+	),
+	$cadmin-alert-light
+);
+
+// .alert-dark
 
 $cadmin-alert-dark-bg: $cadmin-dark-l2 !default;
 $cadmin-alert-dark-border-color: $cadmin-dark-l1 !default;
@@ -489,109 +713,59 @@ $cadmin-alert-dark-link-hover-color: null !default;
 $cadmin-alert-dark-btn: () !default;
 $cadmin-alert-dark-btn: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-dark-l1,
 		color: $cadmin-dark,
-		hover-bg: $cadmin-dark,
-		hover-border-color: $cadmin-dark,
-		hover-color: color-yiq($cadmin-dark),
-		active-bg: darken($cadmin-dark, 5%),
-		active-border-color: darken($cadmin-dark, 5%),
+		hover: (
+			background-color: $cadmin-dark,
+			border-color: $cadmin-dark,
+			color: color-yiq($cadmin-dark),
+		),
+		active: (
+			background-color: darken($cadmin-dark, 5%),
+			border-color: darken($cadmin-dark, 5%),
+		),
 	),
 	$cadmin-alert-dark-btn
+);
+
+$cadmin-alert-dark: () !default;
+$cadmin-alert-dark: map-deep-merge(
+	(
+		background-color: $cadmin-alert-dark-bg,
+		border-color: $cadmin-alert-dark-border-color,
+		color: $cadmin-alert-dark-color,
+		close: (
+			color: $cadmin-alert-dark-close-color,
+			hover: (
+				color: $cadmin-alert-dark-close-hover-color,
+			),
+		),
+		lead: (
+			color: $cadmin-alert-dark-lead-color,
+		),
+		link: (
+			color: $cadmin-alert-dark-link-color,
+			hover: (
+				color: $cadmin-alert-dark-link-hover-color,
+			),
+		),
+		alert-btn: $cadmin-alert-dark-btn,
+	),
+	$cadmin-alert-dark
 );
 
 $cadmin-alert-palette: () !default;
 $cadmin-alert-palette: map-deep-merge(
 	(
-		primary: (
-			bg: $cadmin-alert-primary-bg,
-			border-color: $cadmin-alert-primary-border-color,
-			color: $cadmin-alert-primary-color,
-			close-color: $cadmin-alert-primary-close-color,
-			close-hover-color: $cadmin-alert-primary-close-hover-color,
-			lead-color: $cadmin-alert-primary-lead-color,
-			link-color: $cadmin-alert-primary-link-color,
-			link-hover-color: $cadmin-alert-primary-link-hover-color,
-			alert-btn: $cadmin-alert-primary-btn,
-		),
-		secondary: (
-			bg: $cadmin-alert-secondary-bg,
-			border-color: $cadmin-alert-secondary-border-color,
-			color: $cadmin-alert-secondary-color,
-			close-color: $cadmin-alert-secondary-close-color,
-			close-hover-color: $cadmin-alert-secondary-close-hover-color,
-			lead-color: $cadmin-alert-secondary-lead-color,
-			link-color: $cadmin-alert-secondary-link-color,
-			link-hover-color: $cadmin-alert-secondary-link-hover-color,
-			alert-btn: $cadmin-alert-secondary-btn,
-		),
-		success: (
-			bg: $cadmin-alert-success-bg,
-			border-color: $cadmin-alert-success-border-color,
-			color: $cadmin-alert-success-color,
-			close-color: $cadmin-alert-success-close-color,
-			close-hover-color: $cadmin-alert-success-close-hover-color,
-			lead-color: $cadmin-alert-success-lead-color,
-			link-color: $cadmin-alert-success-link-color,
-			link-hover-color: $cadmin-alert-success-link-hover-color,
-			alert-btn: $cadmin-alert-success-btn,
-		),
-		info: (
-			bg: $cadmin-alert-info-bg,
-			border-color: $cadmin-alert-info-border-color,
-			color: $cadmin-alert-info-color,
-			close-color: $cadmin-alert-info-close-color,
-			close-hover-color: $cadmin-alert-info-close-hover-color,
-			lead-color: $cadmin-alert-info-lead-color,
-			link-color: $cadmin-alert-info-link-color,
-			link-hover-color: $cadmin-alert-info-link-hover-color,
-			alert-btn: $cadmin-alert-info-btn,
-		),
-		warning: (
-			bg: $cadmin-alert-warning-bg,
-			border-color: $cadmin-alert-warning-border-color,
-			color: $cadmin-alert-warning-color,
-			close-color: $cadmin-alert-warning-close-color,
-			close-hover-color: $cadmin-alert-warning-close-hover-color,
-			lead-color: $cadmin-alert-warning-lead-color,
-			link-color: $cadmin-alert-warning-link-color,
-			link-hover-color: $cadmin-alert-warning-link-hover-color,
-			alert-btn: $cadmin-alert-warning-btn,
-		),
-		danger: (
-			bg: $cadmin-alert-danger-bg,
-			border-color: $cadmin-alert-danger-border-color,
-			color: $cadmin-alert-danger-color,
-			close-color: $cadmin-alert-danger-close-color,
-			close-hover-color: $cadmin-alert-danger-close-hover-color,
-			lead-color: $cadmin-alert-danger-lead-color,
-			link-color: $cadmin-alert-danger-link-color,
-			link-hover-color: $cadmin-alert-danger-link-hover-color,
-			alert-btn: $cadmin-alert-danger-btn,
-		),
-		light: (
-			bg: $cadmin-alert-light-bg,
-			border-color: $cadmin-alert-light-border-color,
-			color: $cadmin-alert-light-color,
-			close-color: $cadmin-alert-light-close-color,
-			close-hover-color: $cadmin-alert-light-close-hover-color,
-			lead-color: $cadmin-alert-light-lead-color,
-			link-color: $cadmin-alert-light-link-color,
-			link-hover-color: $cadmin-alert-light-link-hover-color,
-			alert-btn: $cadmin-alert-light-btn,
-		),
-		dark: (
-			bg: $cadmin-alert-dark-bg,
-			border-color: $cadmin-alert-dark-border-color,
-			color: $cadmin-alert-dark-color,
-			close-color: $cadmin-alert-dark-close-color,
-			close-hover-color: $cadmin-alert-dark-close-hover-color,
-			lead-color: $cadmin-alert-dark-lead-color,
-			link-color: $cadmin-alert-dark-link-color,
-			link-hover-color: $cadmin-alert-dark-link-hover-color,
-			alert-btn: $cadmin-alert-dark-btn,
-		),
+		primary: $cadmin-alert-primary,
+		secondary: $cadmin-alert-secondary,
+		success: $cadmin-alert-success,
+		info: $cadmin-alert-info,
+		warning: $cadmin-alert-warning,
+		danger: $cadmin-alert-danger,
+		light: $cadmin-alert-light,
+		dark: $cadmin-alert-dark,
 	),
 	$cadmin-alert-palette
 );

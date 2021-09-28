@@ -240,38 +240,6 @@
 
 @each $cadmin-color, $cadmin-value in $cadmin-alert-palette {
 	.alert-#{$cadmin-color} {
-		background-color: map-get($cadmin-value, bg);
-		border-color: map-get($cadmin-value, border-color);
-		color: map-get($cadmin-value, color);
-
-		hr {
-			border-top-color: darken(map-get($cadmin-value, border-color), 5%);
-		}
-
-		.alert-btn {
-			@include clay-button-variant(map-get($cadmin-value, alert-btn));
-		}
-
-		.close {
-			color: map-get($cadmin-value, close-color);
-
-			&:hover,
-			&:focus {
-				color: map-get($cadmin-value, close-hover-color);
-			}
-		}
-
-		.alert-link {
-			color: map-get($cadmin-value, link-color);
-
-			&:hover,
-			&:focus {
-				color: map-get($cadmin-value, link-hover-color);
-			}
-		}
-
-		.lead {
-			color: map-get($cadmin-value, lead-color);
-		}
+		@include clay-alert-variant($cadmin-value);
 	}
 }
