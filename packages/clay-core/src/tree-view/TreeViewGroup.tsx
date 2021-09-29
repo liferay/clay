@@ -48,6 +48,7 @@ export function TreeViewGroup<T extends Record<any, any>>({
 			onExit={(el) => setElementFullHeight(el)}
 			onExiting={(el) => el.setAttribute('style', 'height: 0px')}
 			timeout={250}
+			unmountOnExit
 		>
 			<div>
 				<ul className="treeview-group" role="group">
