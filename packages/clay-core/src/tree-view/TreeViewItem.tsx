@@ -31,6 +31,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 			childrenRoot,
 			expandedKeys,
 			nestedKey,
+			onLoadMore,
 			toggle,
 		} = useTreeViewContext();
 
@@ -72,7 +73,15 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							'treeview-dropping-top':
 								overTarget && overPosition === 'top',
 						})}
-						onClick={() => group && toggle(item.key)}
+						onClick={() => {
+							if (group) {
+								toggle(item.key);
+							} else {
+								if (onLoadMore) {
+									onLoadMore(item);
+								}
+							}
+						}}
 						ref={ref}
 						role="treeitem"
 						style={{
