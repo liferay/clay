@@ -85,13 +85,13 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 						ref={ref}
 						role="treeitem"
 						style={{
-							paddingLeft: `${spacing}px`,
+							paddingLeft: `${spacing + (group ? 0 : 24)}px`,
 						}}
 						tabIndex={0}
 					>
 						<span
 							className="c-inner"
-							style={{marginLeft: `-${spacing}px`}}
+							style={{marginLeft: `-${spacing + (group ? 0 : 24)}px`}}
 							tabIndex={-2}
 						>
 							{typeof left === 'string' ? (
