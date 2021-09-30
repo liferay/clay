@@ -1,3 +1,6 @@
+### v1.0.33 - September 29, 2021
+* Fixes [#4314](https://github.com/liferay/clay/issues/4314)Accessibility errors using OAW tool, remove IE7 CSS rules starting with * in Alloy Font Awesome
+
 ### v1.0.32 - March 26, 2021
 * Fixes [#4004](https://github.com/liferay/clay/issues/4004)Update Bootstrap from 3.3.5 to 3.4.1
 
