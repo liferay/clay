@@ -35,6 +35,7 @@ export interface ITreeProps<T>
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	expandedKeys: Set<Key>;
+	insert: (path: Array<number>, value: unknown) => void;
 	open: (key: Key) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
 	selection: IMultipleSelectionState;
@@ -62,7 +63,15 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	const reorder = (from: Array<number>, path: Array<number>) => {
 		const tree = createImmutableTree(items, props.nestedKey!);
 
-		tree.produce(from, path);
+		tree.produce({from, op: 'move', path});
+
+		setItems(tree.applyPatches());
+	};
+
+	const insert = (path: Array<number>, value: unknown) => {
+		const tree = createImmutableTree(items, props.nestedKey!);
+
+		tree.produce({op: 'add', path, value});
 
 		setItems(tree.applyPatches());
 	};
@@ -91,6 +100,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	return {
 		expandedKeys,
+		insert,
 		items,
 		open,
 		reorder,
@@ -100,11 +110,20 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 }
 
 // RFC 6902 4.4
-type Patch = {
+type PatchMove = {
 	op: 'move';
 	from: Array<number>;
 	path: Array<number>;
 };
+
+// RFC 6902 4.1
+type PatchAdd = {
+	op: 'add';
+	path: Array<number>;
+	value: unknown;
+};
+
+type Patch = PatchMove | PatchAdd;
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
 	initialTree: T,
@@ -181,14 +200,25 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 	function applyPatches(): T {
 		patches.forEach((patch) => {
-			const {from, op, path} = patch;
+			switch (patch.op) {
+				case 'add': {
+					const {path, value} = patch;
 
-			switch (op) {
+					const node = nodeByPath(path);
+
+					if (node.parent) {
+						node.parent[nestedKey] = value;
+					}
+
+					break;
+				}
 				// Applies the operation on the tree, the move is functionally
 				// identical to a "remove" operation on the `from` location and
 				// immediately followed by the "add" operation at the target
 				// location with the value that was removed.
 				case 'move': {
+					const {from, path} = patch;
+
 					const nodeToRemove = nodeByPath(from);
 
 					if (nodeToRemove.parent) {
@@ -236,8 +266,8 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 		return immutableTree;
 	}
 
-	function produce(from: Array<number>, path: Array<number>) {
-		patches.push({from, op: 'move', path});
+	function produce(patch: Patch) {
+		patches.push(patch);
 	}
 
 	return {

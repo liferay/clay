@@ -27,7 +27,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([0, 1], [0, 0]);
+		immutableTree.produce({from: [0, 1], op: 'move', path: [0, 0]});
 
 		expect(immutableTree.applyPatches()).not.toMatchObject(tree);
 	});
@@ -69,7 +69,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([2, 0], [1, 0]);
+		immutableTree.produce({from: [2, 0], op: 'move', path: [1, 0]});
 
 		const result = immutableTree.applyPatches();
 
@@ -117,7 +117,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([2, 0], [0, 1, 0]);
+		immutableTree.produce({from: [2, 0], op: 'move', path: [0, 1, 0]});
 
 		const result = immutableTree.applyPatches();
 
@@ -151,7 +151,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([1], [0]);
+		immutableTree.produce({from: [1], op: 'move', path: [0]});
 
 		const result = immutableTree.applyPatches();
 
@@ -185,7 +185,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([0], [1]);
+		immutableTree.produce({from: [0], op: 'move', path: [1]});
 
 		const result = immutableTree.applyPatches();
 
@@ -223,7 +223,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([0, 0], [0, 2]);
+		immutableTree.produce({from: [0, 0], op: 'move', path: [0, 2]});
 
 		const result = immutableTree.applyPatches();
 
@@ -263,7 +263,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([0, 1], [0, 0, 0]);
+		immutableTree.produce({from: [0, 1], op: 'move', path: [0, 0, 0]});
 
 		const result = immutableTree.applyPatches();
 
@@ -311,7 +311,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce([0, 0], [0, 1, 0]);
+		immutableTree.produce({from: [0, 0], op: 'move', path: [0, 1, 0]});
 
 		const result = immutableTree.applyPatches();
 
