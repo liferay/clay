@@ -21,7 +21,7 @@ interface ITreeViewProps<T>
 		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
-	onLoadMore?: (item: T) => void;
+	onLoadMore?: (item: T) => Promise<unknown>;
 	showExpanderOnHover?: boolean;
 }
 

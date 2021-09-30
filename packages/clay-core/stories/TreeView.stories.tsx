@@ -87,8 +87,14 @@ const ITEMS_DRIVE = [
 
 let nodeId = 0;
 
+type Node = {
+	children: Array<Node>;
+	id: number;
+	name: string;
+};
+
 const createNode = (depth: number = 0) => {
-	const node = {
+	const node: Node = {
 		children: [],
 		id: nodeId,
 		name: `node-${nodeId}`,
@@ -487,8 +493,57 @@ storiesOf('Components|ClayTreeView', module)
 						<TreeView.Item>
 							<TreeView.ItemStack>{item.name}</TreeView.ItemStack>
 							<TreeView.Group items={item.children}>
-								{(item) => (
+								{(item: typeof rootNode) => (
 									<TreeView.Item>{item.name}</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('async load', () => {
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onLoadMore={async (item) => {
+						// Delay to simulate loading of new data
+						await new Promise((resolve) => {
+							setTimeout(() => resolve(''), 100);
+						});
+
+						return [
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+						];
+					}}
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
 								)}
 							</TreeView.Group>
 						</TreeView.Item>
