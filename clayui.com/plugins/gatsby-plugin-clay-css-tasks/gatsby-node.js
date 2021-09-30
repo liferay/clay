@@ -4,7 +4,7 @@
  */
 
 const fs = require('fs');
-const sass = require('node-sass');
+const sass = require('sass');
 const path = require('path');
 const sassdoc = require('sassdoc');
 

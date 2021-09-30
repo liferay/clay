@@ -54,13 +54,12 @@
 		"gatsby-plugin-mdx": "^1.2.34",
 		"gatsby-plugin-mdx-prismjs": "^1.0.4",
 		"gatsby-plugin-react-helmet": "^3.3.10",
-		"gatsby-plugin-sass": "^2.3.12",
+		"gatsby-plugin-sass": "4.14.0",
 		"gatsby-plugin-typescript": "^2.4.18",
 		"gatsby-react-router-scroll": "3.0.0",
 		"gatsby-remark-prismjs": "^3.2.8",
 		"gatsby-source-filesystem": "^2.3.24",
 		"gatsby-transformer-remark": "^2.8.28",
-		"node-sass": "^4.11.0",
 		"prettier": "^1.16.4",
 		"prismjs": "^1.21.0",
 		"react": "^16.12.0",
@@ -69,6 +68,7 @@
 		"react-helmet": "^5.2.0",
 		"react-live": "^2.0.1",
 		"sassdoc": "^2.7.3",
+		"sass": "^1.42.1",
 		"svg4everybody": "^2.1.9"
 	},
 	"devDependencies": {
