@@ -1,5 +1,5 @@
 /**
-* Lexicon 1.0.32
+* Lexicon 1.0.33
 *
 * Copyright 2021, Liferay, Inc.
 * All rights reserved.
@@ -149,14 +149,8 @@
   vertical-align: -35%;
 }
 
-.icon-stack [class^="icon-"],
-.icon-stack [class*=" icon-"] {
-  *line-height: 2em;
-}
-
 .icon-stack .icon-stack-base {
   font-size: 2em;
-  *line-height: 1em;
 }
 
 /* Animated rotating icon */
@@ -295,7 +289,6 @@ you can use the generic selector below, but it's slower:
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
-  *margin-right: .3em;
   speak: none;
   text-decoration: inherit;
   text-transform: none;
