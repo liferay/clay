@@ -12,17 +12,17 @@ export type Icons = {
 	close: React.ReactElement;
 };
 
-export interface ITreeViewContext extends ITreeState {
+export interface ITreeViewContext<T> extends ITreeState<T> {
 	childrenRoot?: (item: Object) => React.ReactElement;
 	expanderIcons?: Icons;
 	nestedKey?: string;
 	showExpanderOnHover?: boolean;
 }
 
-export const TreeViewContext = React.createContext<ITreeViewContext>(
-	{} as ITreeViewContext
+export const TreeViewContext = React.createContext<ITreeViewContext<any>>(
+	{} as ITreeViewContext<any>
 );
 
-export function useTreeViewContext(): ITreeViewContext {
+export function useTreeViewContext(): ITreeViewContext<unknown> {
 	return useContext(TreeViewContext);
 }

@@ -14,71 +14,102 @@ import {useItem} from './useItem';
 
 type TreeViewItemProps = {
 	children: React.ReactNode;
+	isDragging?: boolean;
+	overPosition?: string;
+	overTarget?: boolean;
 };
 
 const SpacingContext = React.createContext(0);
 
-export function TreeViewItem({children}: TreeViewItemProps) {
-	const spacing = useContext(SpacingContext);
-	const {
-		childrenRoot,
-		expandedKeys,
-		nestedKey,
-		toggle,
-	} = useTreeViewContext();
+export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
+	function TreeViewItemInner(
+		{children, isDragging, overPosition, overTarget},
+		ref
+	) {
+		const spacing = useContext(SpacingContext);
+		const {
+			childrenRoot,
+			expandedKeys,
+			nestedKey,
+			toggle,
+		} = useTreeViewContext();
 
-	const item = useItem();
+		const item = useItem();
 
-	const [left, right] = React.Children.toArray(children);
+		const [left, right] = React.Children.toArray(children);
 
-	const group =
-		// @ts-ignore
-		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
+		const group =
+			// @ts-ignore
+			right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
-	if (!group && nestedKey && item[nestedKey] && childrenRoot) {
-		return childrenRoot(item);
-	}
+		if (!group && nestedKey && item[nestedKey] && childrenRoot) {
+			return React.cloneElement(childrenRoot(item), {
+				isDragging,
+				overPosition,
+				overTarget,
+				ref,
+			});
+		}
 
-	return (
-		<SpacingContext.Provider value={spacing + 24}>
-			<li className="treeview-item" role="none">
-				<div
-					aria-expanded={
-						group ? expandedKeys.has(item.key) : undefined
-					}
-					className={classNames('treeview-link', {
-						collapsed: group && expandedKeys.has(item.key),
+		return (
+			<SpacingContext.Provider value={spacing + 24}>
+				<li
+					className={classNames('treeview-item', {
+						disabled: isDragging,
 					})}
-					onClick={() => group && toggle(item.key)}
-					role="treeitem"
-					style={{paddingLeft: `${spacing}px`}}
-					tabIndex={0}
+					role="none"
 				>
-					<span
-						className="c-inner"
-						style={{marginLeft: `-${spacing}px`}}
-						tabIndex={-2}
+					<div
+						aria-expanded={
+							group ? expandedKeys.has(item.key) : undefined
+						}
+						className={classNames('treeview-link', {
+							collapsed: group && expandedKeys.has(item.key),
+							'treeview-dropping-bottom':
+								overTarget && overPosition === 'bottom',
+							'treeview-dropping-middle':
+								overTarget && overPosition === 'middle',
+							'treeview-dropping-top':
+								overTarget && overPosition === 'top',
+						})}
+						onClick={() => group && toggle(item.key)}
+						ref={ref}
+						role="treeitem"
+						style={{
+							paddingLeft: `${spacing}px`,
+						}}
+						tabIndex={0}
 					>
-						{typeof left === 'string' ? (
-							<Layout.ContentRow>
-								<Layout.ContentCol expand>
-									<div className="component-text">{left}</div>
-								</Layout.ContentCol>
-							</Layout.ContentRow>
-						) : group ? (
-							left
-						) : (
-							<TreeViewItemStack expandable={false}>
-								{children}
-							</TreeViewItemStack>
-						)}
-					</span>
-				</div>
-				{group}
-			</li>
-		</SpacingContext.Provider>
-	);
-}
+						<span
+							className="c-inner"
+							style={{marginLeft: `-${spacing}px`}}
+							tabIndex={-2}
+						>
+							{typeof left === 'string' ? (
+								<Layout.ContentRow>
+									<Layout.ContentCol expand>
+										<div className="component-text">
+											{left}
+										</div>
+									</Layout.ContentCol>
+								</Layout.ContentRow>
+							) : group ? (
+								left
+							) : (
+								<TreeViewItemStack expandable={false}>
+									{children}
+								</TreeViewItemStack>
+							)}
+						</span>
+					</div>
+					{group}
+				</li>
+			</SpacingContext.Provider>
+		);
+	}
+);
+
+TreeViewItem.displayName = 'ClayTreeViewItem';
 
 type TreeViewItemStackProps = {
 	children: React.ReactNode;

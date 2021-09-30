@@ -5,8 +5,11 @@
 
 import classNames from 'classnames';
 import React from 'react';
+import {DndProvider} from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
+import DragLayer from './DragLayer';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
 import {Icons, TreeViewContext} from './context';
@@ -14,11 +17,10 @@ import {ITreeProps, useTree} from './useTree';
 
 interface ITreeViewProps<T>
 	extends Omit<React.HTMLAttributes<HTMLUListElement>, 'children'>,
-		ITreeProps,
+		ITreeProps<T>,
 		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
-	nestedKey?: string;
 	showExpanderOnHover?: boolean;
 }
 
@@ -39,14 +41,18 @@ export function TreeView<T>({
 	items,
 	nestedKey,
 	onExpandedChange,
+	onItemsChange,
 	onSelectionChange,
 	selectedKeys,
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
-	const state = useTree({
+	const state = useTree<T>({
 		expandedKeys,
+		items,
+		nestedKey,
 		onExpandedChange,
+		onItemsChange,
 		onSelectionChange,
 		selectedKeys,
 	});
@@ -71,9 +77,12 @@ export function TreeView<T>({
 			})}
 			role="tree"
 		>
-			<TreeViewContext.Provider value={context}>
-				<Collection<T> items={items}>{children}</Collection>
-			</TreeViewContext.Provider>
+			<DndProvider backend={HTML5Backend}>
+				<TreeViewContext.Provider value={context}>
+					<Collection<T> items={state.items}>{children}</Collection>
+					<DragLayer />
+				</TreeViewContext.Provider>
+			</DndProvider>
 		</ul>
 	);
 }

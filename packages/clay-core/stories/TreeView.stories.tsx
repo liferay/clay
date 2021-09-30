@@ -135,10 +135,16 @@ storiesOf('Components|ClayTreeView', module)
 						name: 'Repositories',
 					},
 					{
-						children: [{name: 'PDF'}, {name: 'Word'}],
+						children: [
+							{name: 'PDF'},
+							{name: 'Word'},
+							{name: 'Google Drive'},
+							{name: 'Figma'},
+						],
 						name: 'Documents and Media',
 					},
 				]}
+				nestedKey="children"
 			>
 				{(item) => (
 					<TreeView.Item>
@@ -308,6 +314,7 @@ storiesOf('Components|ClayTreeView', module)
 														type: 'editable',
 													},
 												],
+												id: 12,
 												name: 'Heading',
 												type: 'fragment-text',
 											},
@@ -319,6 +326,7 @@ storiesOf('Components|ClayTreeView', module)
 														type: 'editable',
 													},
 												],
+												id: 13,
 												name: 'Paragraph',
 												type: 'paragraph',
 											},
@@ -362,7 +370,7 @@ storiesOf('Components|ClayTreeView', module)
 		];
 
 		const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
-			new Set(['1'])
+			new Set(['1', '2', '3', '4', '5'])
 		);
 
 		return (

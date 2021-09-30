@@ -46,7 +46,7 @@ export function Collection<T extends Record<any, any>>({
 						return (
 							<ItemContextProvider
 								key={key}
-								value={{...item, key}}
+								value={{...item, index, key}}
 							>
 								{child}
 							</ItemContextProvider>
@@ -60,7 +60,7 @@ export function Collection<T extends Record<any, any>>({
 						const key = getKey(index, child.key, parentKey);
 
 						return (
-							<ItemContextProvider key={key} value={{key}}>
+							<ItemContextProvider key={key} value={{index, key}}>
 								{child}
 							</ItemContextProvider>
 						);
