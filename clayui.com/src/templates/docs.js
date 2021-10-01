@@ -146,7 +146,7 @@ const Content = ({html, jsx}) =>
 		</MDXProvider>
 	) : null;
 
-export default (props) => {
+export default function Documentation(props) {
 	const {
 		data,
 		location,
