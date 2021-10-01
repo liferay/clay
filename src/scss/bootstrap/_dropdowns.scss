@@ -24,6 +24,7 @@
 
 // Prevent the focus on the dropdown toggle when closing dropdowns
 .dropdown-toggle:focus {
+  @include box-shadow(0 3px 9px rgba(0, 0, 0, .5));
   outline: 0;
 }
 
