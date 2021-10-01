@@ -10,7 +10,7 @@ import Helmet from 'react-helmet';
 import LayoutNav from '../components/LayoutNav';
 import Sidebar from '../components/Sidebar';
 
-export default ({data, location}) => {
+export default function Blog({data, location}) {
 	const {allMarkdownRemark, markdownRemark} = data;
 	const {excerpt, frontmatter, html, timeToRead} = markdownRemark;
 	const title = `${frontmatter.title} - Clay`;
