@@ -3,8 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+const config = require('../.eslintrc');
+
 module.exports = {
+	...config,
 	rules: {
+		...config.rules,
 		'react/display-name': 'off',
 	},
 };
