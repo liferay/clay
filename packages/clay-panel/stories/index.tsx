@@ -27,9 +27,9 @@ storiesOf('Components|ClayPanel', module)
 				) as undefined
 			}
 		>
-			<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
-			<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
-			<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+			<ClayPanel.Header>Header!</ClayPanel.Header>
+			<ClayPanel.Body>Body!</ClayPanel.Body>
+			<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 		</ClayPanel>
 	))
 	.add('collapsable', () => {
@@ -53,16 +53,16 @@ storiesOf('Components|ClayPanel', module)
 					showCollapseIcon={boolean('Show Collapse Icon', true)}
 					spritemap={spritemap}
 				>
-					<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
-					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
-					<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+					<ClayPanel.Header>Header!</ClayPanel.Header>
+					<ClayPanel.Body>Body!</ClayPanel.Body>
+					<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 				</ClayPanel>
 
 				<hr />
-				<h3>{'Controlled Component'}</h3>
+				<h3>Controlled Component</h3>
 
 				<button onClick={() => setExpanded(!expanded)}>
-					{'Toggle Expand'}
+					Toggle Expand
 				</button>
 				<ClayPanel
 					collapsable
@@ -82,9 +82,9 @@ storiesOf('Components|ClayPanel', module)
 					showCollapseIcon={boolean('Show Collapse Icon', true)}
 					spritemap={spritemap}
 				>
-					<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
-					<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
-					<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+					<ClayPanel.Header>Header!</ClayPanel.Header>
+					<ClayPanel.Body>Body!</ClayPanel.Body>
+					<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 				</ClayPanel>
 			</>
 		);
@@ -131,14 +131,14 @@ storiesOf('Components|ClayPanel', module)
 			collapsable
 			displayTitle={
 				<ClayPanel.Title>
-					<h3>{'Rule Name'}</h3>
+					<h3>Rule Name</h3>
 					<span>{'If field '}</span>
-					<ClayLabel displayType="success">{'Country'}</ClayLabel>
-					<ClayLabel>{'Is Equal To'}</ClayLabel>
+					<ClayLabel displayType="success">Country</ClayLabel>
+					<ClayLabel>Is Equal To</ClayLabel>
 					<span>{'value '}</span>
-					<ClayLabel displayType="info">{'Brazil'}</ClayLabel>
+					<ClayLabel displayType="info">Brazil</ClayLabel>
 					<span>{'enable '}</span>
-					<ClayLabel displayType="success">{'State'}</ClayLabel>
+					<ClayLabel displayType="success">State</ClayLabel>
 				</ClayPanel.Title>
 			}
 			displayType={
@@ -154,9 +154,9 @@ storiesOf('Components|ClayPanel', module)
 			showCollapseIcon={boolean('Show Collapse Icon', true)}
 			spritemap={spritemap}
 		>
-			<ClayPanel.Header>{'Header!'}</ClayPanel.Header>
-			<ClayPanel.Body>{'Body!'}</ClayPanel.Body>
-			<ClayPanel.Footer>{'Footer!'}</ClayPanel.Footer>
+			<ClayPanel.Header>Header!</ClayPanel.Header>
+			<ClayPanel.Body>Body!</ClayPanel.Body>
+			<ClayPanel.Footer>Footer!</ClayPanel.Footer>
 		</ClayPanel>
 	))
 	.add('w/ small', () => (

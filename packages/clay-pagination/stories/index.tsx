@@ -28,9 +28,9 @@ const PaginationWithState = (props: any) => {
 storiesOf('Components|ClayPagination', module)
 	.add('default', () => (
 		<ClayPagination>
-			<ClayPagination.Item>{'1'}</ClayPagination.Item>
+			<ClayPagination.Item>1</ClayPagination.Item>
 			<ClayPagination.Ellipsis />
-			<ClayPagination.Item>{'End'}</ClayPagination.Item>
+			<ClayPagination.Item>End</ClayPagination.Item>
 		</ClayPagination>
 	))
 	.add('ClayPaginationWithBasicItems w/ links', () => {

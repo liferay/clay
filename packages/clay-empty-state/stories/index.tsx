@@ -16,12 +16,12 @@ import ClayEmptyState from '../src';
 storiesOf('Components|ClayEmptyState', module)
 	.add('default', () => (
 		<ClayEmptyState>
-			<ClayButton displayType="primary">{'Button'}</ClayButton>
+			<ClayButton displayType="primary">Button</ClayButton>
 		</ClayEmptyState>
 	))
 	.add('empty state', () => (
 		<ClayEmptyState imgSrc={emptyImage}>
-			<ClayButton displayType="secondary">{'Button'}</ClayButton>
+			<ClayButton displayType="secondary">Button</ClayButton>
 		</ClayEmptyState>
 	))
 	.add('search state', () => (

@@ -305,9 +305,8 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 
 											setHexInput(newHexValue);
 
-											const newColor = tinycolor(
-												newHexValue
-											);
+											const newColor =
+												tinycolor(newHexValue);
 
 											if (newColor.isValid()) {
 												setHue(newColor.toHsv().h);
@@ -325,7 +324,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 										before
 										tag="label"
 									>
-										{'#'}
+										#
 									</ClayInput.GroupInsetItem>
 								</ClayInput.GroupItem>
 							</ClayInput.Group>

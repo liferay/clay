@@ -27,7 +27,7 @@ const ChartWithState = () => {
 	return (
 		<div>
 			<button onClick={() => setActive((val) => !val)}>
-				{'Change Data'}
+				Change Data
 			</button>
 
 			<ClayChart
@@ -47,7 +47,7 @@ const GeomapWithRef = () => {
 	return (
 		<div>
 			<button onClick={() => setSize(chartRef.current!.getSize())}>
-				{'Get Size'}
+				Get Size
 			</button>
 			<div>{`Size: ${JSON.stringify(size)}`}</div>
 
@@ -82,7 +82,7 @@ const ChartWithRef = () => {
 					chartRef.current!.hide('data1');
 				}}
 			>
-				{'Hide "data1"'}
+				Hide "data1"
 			</button>
 
 			<ClayChart

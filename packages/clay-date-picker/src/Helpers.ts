@@ -44,7 +44,7 @@ export function addMonths(date: number | Date, months: number) {
 
 export function setDate(
 	date: Date,
-	obj: {
+	options: {
 		date?: number | string;
 		seconds?: number | string;
 		milliseconds?: number | string;
@@ -55,10 +55,10 @@ export function setDate(
 ) {
 	date = clone(date);
 
-	return Object.keys(obj).reduce((acc, key) => {
+	return Object.keys(options).reduce((acc, key) => {
 		const method = `set${key.charAt(0).toUpperCase() + key.slice(1)}`;
 		// @ts-ignore
-		acc[method](obj[key]);
+		acc[method](options[key]);
 
 		return acc;
 	}, date);

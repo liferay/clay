@@ -285,7 +285,7 @@ storiesOf('Components|ClayCard', module)
 								displayType="danger"
 								position="bottom-left"
 							>
-								{'DOC'}
+								DOC
 							</ClaySticker>
 						</ClayCard.AspectRatio>
 						<ClayCard.Body>
@@ -293,14 +293,14 @@ storiesOf('Components|ClayCard', module)
 								<div className="autofit-col autofit-col-expand">
 									<section className="autofit-section">
 										<ClayCard.Description displayType="title">
-											{'deliverable.doc'}
+											deliverable.doc
 										</ClayCard.Description>
 										<ClayCard.Description displayType="subtitle">
-											{'Stevie Ray Vaughn'}
+											Stevie Ray Vaughn
 										</ClayCard.Description>
 										<ClayCard.Caption>
 											<ClayLabel displayType="success">
-												{'Approved'}
+												Approved
 											</ClayLabel>
 										</ClayCard.Caption>
 									</section>
@@ -324,7 +324,7 @@ storiesOf('Components|ClayCard', module)
 									displayType="danger"
 									position="bottom-left"
 								>
-									{'DOC'}
+									DOC
 								</ClaySticker>
 							</ClayCheckboxWithState>
 						</ClayCard.AspectRatio>
@@ -333,14 +333,14 @@ storiesOf('Components|ClayCard', module)
 								<div className="autofit-col autofit-col-expand">
 									<section className="autofit-section">
 										<ClayCard.Description displayType="title">
-											{'deliverable.doc'}
+											deliverable.doc
 										</ClayCard.Description>
 										<ClayCard.Description displayType="subtitle">
-											{'Stevie Ray Vaughn'}
+											Stevie Ray Vaughn
 										</ClayCard.Description>
 										<ClayCard.Caption>
 											<ClayLabel displayType="success">
-												{'Approved'}
+												Approved
 											</ClayLabel>
 										</ClayCard.Caption>
 									</section>
@@ -372,14 +372,14 @@ storiesOf('Components|ClayCard', module)
 							<ClayCard.Row>
 								<div className="autofit-col autofit-col-expand">
 									<ClayCard.Description displayType="title">
-										{'thumbnail_coffee.jpg'}
+										thumbnail_coffee.jpg
 									</ClayCard.Description>
 									<ClayCard.Description displayType="subtitle">
-										{'Author Action'}
+										Author Action
 									</ClayCard.Description>
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
-											{'Approved'}
+											Approved
 										</ClayLabel>
 									</ClayCard.Caption>
 								</div>
@@ -408,14 +408,14 @@ storiesOf('Components|ClayCard', module)
 							<ClayCard.Row>
 								<div className="autofit-col autofit-col-expand">
 									<ClayCard.Description displayType="title">
-										{'thumbnail_coffee.jpg'}
+										thumbnail_coffee.jpg
 									</ClayCard.Description>
 									<ClayCard.Description displayType="subtitle">
-										{'Author Action'}
+										Author Action
 									</ClayCard.Description>
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
-											{'Approved'}
+											Approved
 										</ClayLabel>
 									</ClayCard.Caption>
 								</div>
@@ -443,7 +443,7 @@ storiesOf('Components|ClayCard', module)
 
 							<div className="aspect-ratio-item-bottom-left">
 								<ClayLabel displayType="success">
-									{'Available'}
+									Available
 								</ClayLabel>
 							</div>
 						</ClayCard.AspectRatio>
@@ -455,7 +455,7 @@ storiesOf('Components|ClayCard', module)
 									title="AR385672"
 									truncate
 								>
-									{'AR385672'}
+									AR385672
 								</ClayCard.Description>
 
 								<ClayCard.Description
@@ -463,14 +463,12 @@ storiesOf('Components|ClayCard', module)
 									title="thumbnail_coffee.jpg"
 									truncate
 								>
-									{
-										'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual'
-									}
+									ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
 								</ClayCard.Description>
 
 								<ClayCard.Description displayType="text">
-									<s>{'$99.00'}</s>
-									<span>{'$70.00'}</span>
+									<s>$99.00</s>
+									<span>$70.00</span>
 								</ClayCard.Description>
 							</div>
 
@@ -481,7 +479,7 @@ storiesOf('Components|ClayCard', module)
 											disabled
 											displayType="secondary"
 										>
-											{'-'}
+											-
 										</ClayButton>
 									</ClayInput.GroupItem>
 
@@ -495,7 +493,7 @@ storiesOf('Components|ClayCard', module)
 
 									<ClayInput.GroupItem append shrink>
 										<ClayButton displayType="secondary">
-											{'+'}
+											+
 										</ClayButton>
 									</ClayInput.GroupItem>
 								</ClayInput.Group>
@@ -506,8 +504,7 @@ storiesOf('Components|ClayCard', module)
 								className="c-mb-2"
 								displayType="primary"
 							>
-								{'Add to Order'}
-
+								Add to Order
 								<span className="inline-item inline-item-after">
 									<ClayIcon
 										spritemap={spritemap}
@@ -538,11 +535,10 @@ storiesOf('Components|ClayCard', module)
 													displayType="secondary"
 													small
 												>
-													{'Order by: newest'}
-
+													Order by: newest
 													<ClayIcon
 														spritemap={spritemap}
-														symbol={'caret-bottom'}
+														symbol="caret-bottom"
 													/>
 												</ClayButton>
 											}
@@ -566,8 +562,7 @@ storiesOf('Components|ClayCard', module)
 													},
 													{
 														href: '#1',
-														label:
-															'Move to Recycle Bin',
+														label: 'Move to Recycle Bin',
 													},
 												].map(
 													(

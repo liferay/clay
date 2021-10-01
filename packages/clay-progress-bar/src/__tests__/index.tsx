@@ -27,7 +27,7 @@ describe('ClayProgressBar', () => {
 	it('renders with additional content', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayProgressBar spritemap="path/to/spritemap" value={50}>
-				{'50%'}
+				50%
 			</ClayProgressBar>
 		);
 

@@ -19,7 +19,7 @@ describe('BasicRendering', () => {
 				onValueChange={() => {}}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value={''}
+				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -34,7 +34,7 @@ describe('BasicRendering', () => {
 				onValueChange={() => {}}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value={''}
+				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -52,7 +52,7 @@ describe('BasicRendering', () => {
 				onValueChange={() => {}}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value={''}
+				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -70,7 +70,7 @@ describe('BasicRendering', () => {
 				spritemap={spritemap}
 				time
 				timezone="GMT+01:00"
-				value={''}
+				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -87,7 +87,7 @@ describe('BasicRendering', () => {
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				useNative
-				value={''}
+				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -103,7 +103,7 @@ describe('BasicRendering', () => {
 				onValueChange={() => {}}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value={''}
+				value=""
 				years={{
 					end: 2024,
 					start: 1997,

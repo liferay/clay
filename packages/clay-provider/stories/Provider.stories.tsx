@@ -28,7 +28,7 @@ storiesOf('Components|ClayProvider', module)
 				<DropDown
 					active={active}
 					onActiveChange={setActive}
-					trigger={<Button>{'Click here!'}</Button>}
+					trigger={<Button>Click here!</Button>}
 				>
 					<DropDown.ItemList>
 						<DropDown.Group header="Group #1">

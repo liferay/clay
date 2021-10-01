@@ -114,7 +114,7 @@ describe('IncrementalInteractions', () => {
 					spritemap={spritemap}
 				/>
 
-				<div data-testid="outsideElement">{'OUTSIDE ELEMENT'}</div>
+				<div data-testid="outsideElement">OUTSIDE ELEMENT</div>
 			</>
 		);
 

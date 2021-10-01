@@ -47,7 +47,7 @@ describe('ClayNavigationBar', () => {
 						displayType="unstyled"
 						small
 					>
-						<span className="navbar-text-truncate">{`Item 2`}</span>
+						<span className="navbar-text-truncate">Item 2</span>
 					</ClayButton>
 				</ClayNavigationBar.Item>
 
@@ -57,7 +57,7 @@ describe('ClayNavigationBar', () => {
 						displayType="secondary"
 						href="#3"
 					>
-						<span className="navbar-text-truncate">{`Item 3`}</span>
+						<span className="navbar-text-truncate">Item 3</span>
 					</ClayLink>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
@@ -73,7 +73,7 @@ describe('ClayNavigationBar', () => {
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
-				triggerLabel={`Trigger Label`}
+				triggerLabel="Trigger Label"
 			>
 				<ClayNavigationBar.Item active>
 					<ClayLink
@@ -81,7 +81,7 @@ describe('ClayNavigationBar', () => {
 						displayType="secondary"
 						href="#1"
 					>
-						<span className="navbar-text-truncate">{`Item 1`}</span>
+						<span className="navbar-text-truncate">Item 1</span>
 					</ClayLink>
 				</ClayNavigationBar.Item>
 
@@ -92,7 +92,7 @@ describe('ClayNavigationBar', () => {
 						displayType="unstyled"
 						small
 					>
-						<span className="navbar-text-truncate">{`Item 2`}</span>
+						<span className="navbar-text-truncate">Item 2</span>
 					</ClayButton>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
@@ -122,7 +122,7 @@ describe('ClayNavigationBar', () => {
 			<ClayNavigationBar
 				inverted
 				spritemap={spritemap}
-				triggerLabel={`Trigger Label`}
+				triggerLabel="Trigger Label"
 			>
 				<ClayNavigationBar.Item active>
 					<ClayLink
@@ -130,7 +130,7 @@ describe('ClayNavigationBar', () => {
 						displayType="secondary"
 						href="#1"
 					>
-						<span className="navbar-text-truncate">{`Item 1`}</span>
+						<span className="navbar-text-truncate">Item 1</span>
 					</ClayLink>
 				</ClayNavigationBar.Item>
 
@@ -141,7 +141,7 @@ describe('ClayNavigationBar', () => {
 						displayType="unstyled"
 						small
 					>
-						<span className="navbar-text-truncate">{`Item 2`}</span>
+						<span className="navbar-text-truncate">Item 2</span>
 					</ClayButton>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
@@ -200,7 +200,7 @@ describe('ClayNavigationBar', () => {
 						displayType="unstyled"
 						small
 					>
-						<span className="navbar-text-truncate">{`Item 2`}</span>
+						<span className="navbar-text-truncate">Item 2</span>
 					</ClayButton>
 				</ClayNavigationBar.Item>
 
@@ -210,7 +210,7 @@ describe('ClayNavigationBar', () => {
 						displayType="secondary"
 						href="#3"
 					>
-						<span className="navbar-text-truncate">{`Item 3`}</span>
+						<span className="navbar-text-truncate">Item 3</span>
 					</ClayLink>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
@@ -249,7 +249,7 @@ describe('ClayNavigationBar', () => {
 						displayType="unstyled"
 						small
 					>
-						<span className="navbar-text-truncate">{`Item 2`}</span>
+						<span className="navbar-text-truncate">Item 2</span>
 					</ClayButton>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>

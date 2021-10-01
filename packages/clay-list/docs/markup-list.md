@@ -195,9 +195,7 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -235,9 +233,7 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 					...
 				</a>
 			</div>
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex active">
@@ -255,9 +251,7 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -295,9 +289,7 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 					...
 				</a>
 			</div>
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 </ul>
@@ -440,9 +432,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -503,9 +493,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 			</section>
 		</div>
 		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
@@ -519,9 +507,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -538,9 +524,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 			</section>
 		</div>
 		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 </ul>
@@ -607,9 +591,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 			</div>
 		</div>
 		<div class="autofit-col">
-			<div class="sticker sticker-secondary">
-				...
-			</div>
+			<div class="sticker sticker-secondary">...</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
 			<p class="list-group-title text-truncate">
@@ -618,9 +600,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 		</div>
 		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 </ul>
@@ -719,15 +699,11 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 <ul class="list-group list-group-notification">
 	<li class="list-group-item list-group-item-flex list-group-item-primary">
 		<div class="autofit-col">
-			<div class="custom-control custom-checkbox">
-				...
-			</div>
+			<div class="custom-control custom-checkbox">...</div>
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -739,9 +715,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 			</section>
 		</div>
 		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 	<li class="list-group-item list-group-item-flex">
@@ -755,9 +729,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -769,9 +741,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 			</section>
 		</div>
 		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 </ul>
@@ -859,9 +829,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -888,9 +856,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 			</section>
 		</div>
 		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 </ul>
@@ -1077,9 +1043,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -1241,9 +1205,7 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -1388,9 +1350,7 @@ Use the `.active` class on the same element that you putted `.list-group-item`.
 		</div>
 		<div class="autofit-col">
 			<div class="sticker sticker-secondary">
-				<span class="inline-item">
-					...
-				</span>
+				<span class="inline-item"> ... </span>
 			</div>
 		</div>
 		<div class="autofit-col autofit-col-expand">
@@ -1400,9 +1360,7 @@ Use the `.active` class on the same element that you putted `.list-group-item`.
 			<p class="list-group-subtitle text-truncate">Second Level Text</p>
 		</div>
 		<div class="autofit-col">
-			<div class="dropdown dropdown-action">
-				...
-			</div>
+			<div class="dropdown dropdown-action">...</div>
 		</div>
 	</li>
 </ul>

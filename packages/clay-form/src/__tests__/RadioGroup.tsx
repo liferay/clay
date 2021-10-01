@@ -15,7 +15,7 @@ describe('Rendering', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayRadioGroup
 				onSelectedValueChange={() => {}}
-				selectedValue={'one'}
+				selectedValue="one"
 			>
 				<ClayRadio label="One" value="one" />
 				<ClayRadio label="Two" value="two" />
@@ -36,7 +36,7 @@ describe('Interactions', () => {
 		const {getByLabelText} = render(
 			<ClayRadioGroup
 				onSelectedValueChange={handleSelectedChange}
-				selectedValue={'one'}
+				selectedValue="one"
 			>
 				<ClayRadio label="One" value="one" />
 				<ClayRadio label="Two" value="two" />

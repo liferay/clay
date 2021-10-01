@@ -13,7 +13,7 @@ const spritemap = 'path/to/spritemap';
 describe('Rendering', () => {
 	it('default', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel>{'Default Label'}</ClayLabel>
+			<ClayLabel>Default Label</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('Rendering', () => {
 
 	it('with a different displayType ', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel displayType="success">{'Success Label'}</ClayLabel>
+			<ClayLabel displayType="success">Success Label</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('Rendering', () => {
 
 	it('as a link ', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayLabel href="#/foo/bar">{'Label w/ link'}</ClayLabel>
+			<ClayLabel href="#/foo/bar">Label w/ link</ClayLabel>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe('Rendering', () => {
 				}}
 				spritemap={spritemap}
 			>
-				{'Label Closable'}
+				Label Closable
 			</ClayLabel>
 		);
 
@@ -59,7 +59,7 @@ describe('Rendering', () => {
 				href="#/foo/bar"
 				spritemap={spritemap}
 			>
-				{'Label Closable'}
+				Label Closable
 			</ClayLabel>
 		);
 
@@ -69,8 +69,8 @@ describe('Rendering', () => {
 	it('renders with ItemBefore', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel withClose={false}>
-				<ClayLabel.ItemBefore>{'Content before'}</ClayLabel.ItemBefore>
-				<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
+				<ClayLabel.ItemBefore>Content before</ClayLabel.ItemBefore>
+				<ClayLabel.ItemExpand>Label</ClayLabel.ItemExpand>
 			</ClayLabel>
 		);
 
@@ -80,8 +80,8 @@ describe('Rendering', () => {
 	it('renders with ItemAfter', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLabel withClose={false}>
-				<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
-				<ClayLabel.ItemAfter>{'Content after'}</ClayLabel.ItemAfter>
+				<ClayLabel.ItemExpand>Label</ClayLabel.ItemExpand>
+				<ClayLabel.ItemAfter>Content after</ClayLabel.ItemAfter>
 			</ClayLabel>
 		);
 

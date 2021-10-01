@@ -178,9 +178,9 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			content = (
 				<>
 					{React.cloneElement(trigger, {
-						onClick: (e: any) => {
+						onClick: (event: any) => {
 							if (trigger.props.onClick) {
-								trigger.props.onClick(e);
+								trigger.props.onClick(event);
 							}
 
 							setShow(!show);

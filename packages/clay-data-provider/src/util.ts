@@ -18,9 +18,9 @@ export const timeout = (ms: number, promise: Promise<any>) => {
 				clearTimeout(timeoutId);
 				resolve(res);
 			})
-			.catch((err) => {
+			.catch((error) => {
 				clearTimeout(timeoutId);
-				reject(err);
+				reject(error);
 			});
 	});
 };

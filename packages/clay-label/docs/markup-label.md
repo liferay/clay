@@ -109,14 +109,10 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 
 ```html
 <span class="label label-secondary">
-	<span class="label-item label-item-expand">
-		Normal Label
-	</span>
+	<span class="label-item label-item-expand"> Normal Label </span>
 </span>
 <span class="label label-lg label-success">
-	<span class="label-item label-item-expand">
-		Large Label
-	</span>
+	<span class="label-item label-item-expand"> Large Label </span>
 </span>
 ```
 
@@ -130,9 +126,7 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 
 ```html
 <span class="label label-secondary">
-	<span class="label-item label-item-expand">
-		Simple Label
-	</span>
+	<span class="label-item label-item-expand"> Simple Label </span>
 </span>
 ```
 
@@ -175,23 +169,15 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 ```html
 <span class="label label-dismissible label-secondary">
 	<span class="label-item label-item-before">
-		<span class="sticker">
-			...
-		</span>
+		<span class="sticker"> ... </span>
 	</span>
-	<span class="label-item label-item-before">
-		...
-	</span>
-	<span class="label-item label-item-before">
-		...
-	</span>
+	<span class="label-item label-item-before"> ... </span>
+	<span class="label-item label-item-before"> ... </span>
 	<span class="label-item label-item-expand">
 		<a href="#1">Label Dismissible</a>
 	</span>
 	<span class="label-item label-item-after">
-		<button aria-label="Close" class="close" type="button">
-			...
-		</button>
+		<button aria-label="Close" class="close" type="button">...</button>
 	</span>
 </span>
 ```
@@ -233,23 +219,15 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 ```html
 <span class="label label-dismissible label-lg label-success">
 	<span class="label-item label-item-before">
-		<span class="sticker">
-			...
-		</span>
+		<span class="sticker"> ... </span>
 	</span>
-	<span class="label-item label-item-before">
-		...
-	</span>
-	<span class="label-item label-item-before">
-		...
-	</span>
+	<span class="label-item label-item-before"> ... </span>
+	<span class="label-item label-item-before"> ... </span>
 	<span class="label-item label-item-expand">
 		<a href="#1">Label with Link</a>
 	</span>
 	<span class="label-item label-item-after">
-		<button aria-label="Close" class="close" type="button">
-			...
-		</button>
+		<button aria-label="Close" class="close" type="button">...</button>
 	</span>
 </span>
 ```

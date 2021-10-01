@@ -84,47 +84,45 @@ const ClayMultiSelectWithAutocomplete = (props: any) => {
 	);
 };
 
-const MenuCustom: React.ComponentProps<
-	typeof ClayMultiSelect
->['menuRenderer'] = ({
-	inputValue,
-	locator,
-	onItemClick = () => {},
-	sourceItems,
-}) => (
-	<ClayDropDown.ItemList>
-		{sourceItems
-			.filter(
-				(item) => inputValue && item[locator.label].match(inputValue)
-			)
-			.map((item) => (
-				<ClayDropDown.Item
-					key={item[locator.value]}
-					onClick={() => onItemClick(item)}
-				>
-					<div className="autofit-row autofit-row-center">
-						<div className="autofit-col mr-3">
-							<ClaySticker
-								className="sticker-user-icon"
-								size="lg"
-							>
-								<ClayIcon spritemap={spritemap} symbol="user" />
-							</ClaySticker>
+const MenuCustom: React.ComponentProps<typeof ClayMultiSelect>['menuRenderer'] =
+	({inputValue, locator, onItemClick = () => {}, sourceItems}) => (
+		<ClayDropDown.ItemList>
+			{sourceItems
+				.filter(
+					(item) =>
+						inputValue && item[locator.label].match(inputValue)
+				)
+				.map((item) => (
+					<ClayDropDown.Item
+						key={item[locator.value]}
+						onClick={() => onItemClick(item)}
+					>
+						<div className="autofit-row autofit-row-center">
+							<div className="autofit-col mr-3">
+								<ClaySticker
+									className="sticker-user-icon"
+									size="lg"
+								>
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="user"
+									/>
+								</ClaySticker>
+							</div>
+							<div className="autofit-col">
+								<strong>{item[locator.label]}</strong>
+								<span>{item.email}</span>
+							</div>
 						</div>
-						<div className="autofit-col">
-							<strong>{item[locator.label]}</strong>
-							<span>{item.email}</span>
-						</div>
-					</div>
-				</ClayDropDown.Item>
-			))}
-	</ClayDropDown.ItemList>
-);
+					</ClayDropDown.Item>
+				))}
+		</ClayDropDown.ItemList>
+	);
 
 storiesOf('Components|ClayMultiSelect', module)
 	.add('default', () => (
 		<>
-			<label htmlFor="multiSelect">{'Multi Select'}</label>
+			<label htmlFor="multiSelect">Multi Select</label>
 
 			<ClayMultiSelectWithState
 				disabled={boolean('Disabled all', false)}
@@ -147,7 +145,7 @@ storiesOf('Components|ClayMultiSelect', module)
 
 		return (
 			<>
-				<label htmlFor="multiSelect">{'Multi Select'}</label>
+				<label htmlFor="multiSelect">Multi Select</label>
 
 				<ClayMultiSelect
 					id="multiSelect"
@@ -179,14 +177,14 @@ storiesOf('Components|ClayMultiSelect', module)
 	})
 	.add('w/ sourceItems', () => (
 		<>
-			<label htmlFor="multiSelect">{'Multi Select'}</label>
+			<label htmlFor="multiSelect">Multi Select</label>
 
 			<ClayMultiSelectWithAutocomplete id="multiSelect" />
 		</>
 	))
 	.add('w/ custom menu', () => (
 		<>
-			<label htmlFor="multiSelect">{'Multi Select'}</label>
+			<label htmlFor="multiSelect">Multi Select</label>
 
 			<ClayMultiSelectWithAutocomplete
 				id="multiSelect"
@@ -273,9 +271,7 @@ storiesOf('Components|ClayMultiSelect', module)
 		return (
 			<div className="sheet">
 				<ClayForm.Group className={!isValid ? 'has-error' : ''}>
-					<label htmlFor="multiSelect">
-						{'Composed MultiSelect'}
-					</label>
+					<label htmlFor="multiSelect">Composed MultiSelect</label>
 
 					<ClayInput.Group>
 						<ClayInput.GroupItem>
@@ -296,7 +292,7 @@ storiesOf('Components|ClayMultiSelect', module)
 
 							<ClayForm.FeedbackGroup>
 								<ClayForm.Text>
-									{'Simple help comment..'}
+									Simple help comment..
 								</ClayForm.Text>
 							</ClayForm.FeedbackGroup>
 
@@ -307,8 +303,7 @@ storiesOf('Components|ClayMultiSelect', module)
 											spritemap={spritemap}
 											symbol="info-circle"
 										/>
-
-										{'You made an error'}
+										You made an error
 									</ClayForm.FeedbackItem>
 								</ClayForm.FeedbackGroup>
 							)}
@@ -319,7 +314,7 @@ storiesOf('Components|ClayMultiSelect', module)
 								displayType="secondary"
 								onClick={() => {}}
 							>
-								{'Select'}
+								Select
 							</ClayButton>
 						</ClayInput.GroupItem>
 					</ClayInput.Group>

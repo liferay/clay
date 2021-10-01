@@ -85,9 +85,7 @@ The building block of a card is the `.card-body`. Use it whenever you need a pad
 
 ```html
 <div class="card">
-	<div class="card-body">
-		This is some text within a card body.
-	</div>
+	<div class="card-body">This is some text within a card body.</div>
 </div>
 ```
 
@@ -221,9 +219,7 @@ Add an optional header and/or footer within a card.
 
 ```html
 <div class="card">
-	<div class="card-header">
-		Featured
-	</div>
+	<div class="card-header">Featured</div>
 	<div class="card-body">
 		<h5 class="card-title">Special title treatment</h5>
 		<p class="card-text">
@@ -289,9 +285,7 @@ Use `<div class="card-divider"></div>` to create a horizontal division between c
 <div class="card card-horizontal">
 	<div class="card-row">
 		<div class="autofit-col autofit-col-expand">
-			<section class="autofit-section">
-				autofit-col-expand
-			</section>
+			<section class="autofit-section">autofit-col-expand</section>
 		</div>
 		<div class="autofit-col autofit-col-expand">
 			<section class="autofit-section">
@@ -2146,9 +2140,7 @@ You can also use the Bootstrap 4's helper classes `justify-content-start`, `just
 			<section class="autofit-section">middle</section>
 		</div>
 		<div class="justify-content-end autofit-col autofit-col-expand">
-			<section class="autofit-section">
-				bottom
-			</section>
+			<section class="autofit-section">bottom</section>
 		</div>
 	</div>
 </div>
@@ -2252,14 +2244,10 @@ Use classes `rounded`, `rounded-circle`, or `rounded-0` on the card to quickly s
 <div class="card card-horizontal rounded">
 	<div class="card-row">
 		<div class="autofit-col autofit-col-expand">
-			<section class="autofit-section">
-				autofit-col-expand
-			</section>
+			<section class="autofit-section">autofit-col-expand</section>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<section class="autofit-section">
-				autofit-col-expand
-			</section>
+			<section class="autofit-section">autofit-col-expand</section>
 		</div>
 	</div>
 </div>
@@ -2275,23 +2263,17 @@ Use classes `rounded`, `rounded-circle`, or `rounded-0` on the card to quickly s
 			</section>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<section class="autofit-section">
-				autofit-col-expand
-			</section>
+			<section class="autofit-section">autofit-col-expand</section>
 		</div>
 	</div>
 </div>
 <div class="card card-horizontal rounded-0">
 	<div class="card-row">
 		<div class="autofit-col autofit-col-expand">
-			<section class="autofit-section">
-				autofit-col-expand
-			</section>
+			<section class="autofit-section">autofit-col-expand</section>
 		</div>
 		<div class="autofit-col autofit-col-expand">
-			<section class="autofit-section">
-				autofit-col-expand
-			</section>
+			<section class="autofit-section">autofit-col-expand</section>
 		</div>
 	</div>
 </div>

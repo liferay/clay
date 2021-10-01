@@ -11,7 +11,7 @@ describe('ClayTooltip', () => {
 	afterEach(cleanup);
 
 	it('renders', () => {
-		const {container} = render(<ClayTooltip show>{'Tooltip'}</ClayTooltip>);
+		const {container} = render(<ClayTooltip show>Tooltip</ClayTooltip>);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -26,7 +26,7 @@ describe('ClayTooltip', () => {
 					data-tooltip-align="bottom"
 					title="Bottom"
 				>
-					{'tooltip'}
+					tooltip
 				</button>
 			</ClayTooltipProvider>
 		);

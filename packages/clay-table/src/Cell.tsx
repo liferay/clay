@@ -90,7 +90,8 @@ const ClayTableCell = React.forwardRef<
 				className={classNames(className, {
 					'table-cell-expand': expanded || truncate,
 					[`table-cell-${cellDelimiter}`]: cellDelimiter,
-					[`table-column-text-${columnTextAlignment}`]: columnTextAlignment,
+					[`table-column-text-${columnTextAlignment}`]:
+						columnTextAlignment,
 					[`text-${align}`]: align,
 					'table-cell-ws-nowrap': noWrap,
 				})}

@@ -94,7 +94,7 @@ export default function Blog({data, location}) {
 			</main>
 		</div>
 	);
-};
+}
 
 const addString = (list, string) =>
 	list.push(<span key={`${list.length}-${string}`}>{string}</span>);

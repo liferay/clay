@@ -76,7 +76,7 @@ storiesOf('Components|ClayPopover', module)
 					onClick={() => setShow(!show)}
 					style={{marginRight: 40}}
 				>
-					{'additional trigger'}
+					additional trigger
 				</ClayButton>
 
 				<ClayPopover
@@ -119,7 +119,7 @@ storiesOf('Components|ClayPopover', module)
 						spritemap={spritemap}
 						status="info"
 					>
-						<ClayModal.Header>{'Title'}</ClayModal.Header>
+						<ClayModal.Header>Title</ClayModal.Header>
 						<ClayModal.Body scrollable>
 							<ClayPopover
 								header="Popover"
@@ -156,16 +156,16 @@ storiesOf('Components|ClayPopover', module)
 							first={
 								<ClayButton.Group spaced>
 									<ClayButton displayType="secondary">
-										{'Secondary'}
+										Secondary
 									</ClayButton>
 									<ClayButton displayType="secondary">
-										{'Secondary'}
+										Secondary
 									</ClayButton>
 								</ClayButton.Group>
 							}
 							last={
 								<ClayButton onClick={onClose}>
-									{'Primary'}
+									Primary
 								</ClayButton>
 							}
 						/>
@@ -176,7 +176,7 @@ storiesOf('Components|ClayPopover', module)
 					displayType="primary"
 					onClick={() => setVisible(true)}
 				>
-					{'Open modal'}
+					Open modal
 				</ClayButton>
 			</>
 		);

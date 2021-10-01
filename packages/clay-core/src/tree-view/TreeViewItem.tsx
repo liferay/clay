@@ -27,12 +27,8 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 		ref
 	) {
 		const spacing = useContext(SpacingContext);
-		const {
-			childrenRoot,
-			expandedKeys,
-			nestedKey,
-			toggle,
-		} = useTreeViewContext();
+		const {childrenRoot, expandedKeys, nestedKey, toggle} =
+			useTreeViewContext();
 
 		const item = useItem();
 
@@ -120,12 +116,8 @@ export function TreeViewItemStack({
 	children,
 	expandable = true,
 }: TreeViewItemStackProps) {
-	const {
-		expandedKeys,
-		expanderIcons,
-		selection,
-		toggle,
-	} = useTreeViewContext();
+	const {expandedKeys, expanderIcons, selection, toggle} =
+		useTreeViewContext();
 
 	const item = useItem();
 
@@ -194,9 +186,8 @@ export function TreeViewItemStack({
 						) => {
 							event.stopPropagation();
 
-							const {
-								onClick,
-							} = (child as React.ReactElement).props;
+							const {onClick} = (child as React.ReactElement)
+								.props;
 
 							if (onClick) {
 								onClick(event);

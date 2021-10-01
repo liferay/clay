@@ -50,7 +50,7 @@ describe('ClayCard', () => {
 						<div className="autofit-col autofit-col-expand autofit-col-gutters">
 							<div className="autofit-section">
 								<ClayCard.Description displayType="title">
-									{'Very Large Folder'}
+									Very Large Folder
 								</ClayCard.Description>
 							</div>
 						</div>
@@ -78,7 +78,7 @@ describe('ClayCard', () => {
 							</div>
 							<div className="autofit-col autofit-col-expand autofit-col-gutters">
 								<ClayCard.Description displayType="title">
-									{'Very Large Folder'}
+									Very Large Folder
 								</ClayCard.Description>
 							</div>
 						</ClayCard.Row>
@@ -106,7 +106,7 @@ describe('ClayCard', () => {
 							</div>
 							<div className="autofit-col autofit-col-expand autofit-col-gutters">
 								<ClayCard.Description displayType="title">
-									{'Very Large Folder'}
+									Very Large Folder
 								</ClayCard.Description>
 							</div>
 						</ClayCard.Row>
@@ -139,14 +139,14 @@ describe('ClayCard', () => {
 					<ClayCard.Row>
 						<div className="autofit-col autofit-col-expand">
 							<ClayCard.Description displayType="title">
-								{'thumbnail_coffee.jpg'}
+								thumbnail_coffee.jpg
 							</ClayCard.Description>
 							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
+								Author Action
 							</ClayCard.Description>
 							<ClayCard.Caption>
 								<ClayLabel displayType="success">
-									{'Approved'}
+									Approved
 								</ClayLabel>
 							</ClayCard.Caption>
 						</div>
@@ -186,14 +186,14 @@ describe('ClayCard', () => {
 					<ClayCard.Row>
 						<div className="autofit-col autofit-col-expand">
 							<ClayCard.Description displayType="title">
-								{'thumbnail_coffee.jpg'}
+								thumbnail_coffee.jpg
 							</ClayCard.Description>
 							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
+								Author Action
 							</ClayCard.Description>
 							<ClayCard.Caption>
 								<ClayLabel displayType="success">
-									{'Approved'}
+									Approved
 								</ClayLabel>
 							</ClayCard.Caption>
 						</div>
@@ -216,7 +216,7 @@ describe('ClayCard', () => {
 						/>
 					</div>
 					<ClaySticker displayType="danger" position="bottom-left">
-						{'DOC'}
+						DOC
 					</ClaySticker>
 				</ClayCard.AspectRatio>
 				<ClayCard.Body>
@@ -224,14 +224,14 @@ describe('ClayCard', () => {
 						<div className="autofit-col autofit-col-expand">
 							<section className="autofit-section">
 								<ClayCard.Description displayType="title">
-									{'deliverable.doc'}
+									deliverable.doc
 								</ClayCard.Description>
 								<ClayCard.Description displayType="subtitle">
-									{'Stevie Ray Vaughn'}
+									Stevie Ray Vaughn
 								</ClayCard.Description>
 								<ClayCard.Caption>
 									<ClayLabel displayType="success">
-										{'Approved'}
+										Approved
 									</ClayLabel>
 								</ClayCard.Caption>
 							</section>
@@ -259,7 +259,7 @@ describe('ClayCard', () => {
 							displayType="danger"
 							position="bottom-left"
 						>
-							{'DOC'}
+							DOC
 						</ClaySticker>
 					</ClayCheckboxWithState>
 				</ClayCard.AspectRatio>
@@ -268,14 +268,14 @@ describe('ClayCard', () => {
 						<div className="autofit-col autofit-col-expand">
 							<section className="autofit-section">
 								<ClayCard.Description displayType="title">
-									{'deliverable.doc'}
+									deliverable.doc
 								</ClayCard.Description>
 								<ClayCard.Description displayType="subtitle">
-									{'Stevie Ray Vaughn'}
+									Stevie Ray Vaughn
 								</ClayCard.Description>
 								<ClayCard.Caption>
 									<ClayLabel displayType="success">
-										{'Approved'}
+										Approved
 									</ClayLabel>
 								</ClayCard.Caption>
 							</section>
@@ -301,10 +301,10 @@ describe('ClayCard', () => {
 				</ClayCard.AspectRatio>
 				<ClayCard.Body>
 					<ClayCard.Description displayType="title">
-						{'Widget Page'}
+						Widget Page
 					</ClayCard.Description>
 					<ClayCard.Description displayType="text">
-						{'Build a page by adding widgets and content.'}
+						Build a page by adding widgets and content.
 					</ClayCard.Description>
 				</ClayCard.Body>
 			</ClayCard>
@@ -326,12 +326,11 @@ describe('ClayCard', () => {
 				</ClayCard.AspectRatio>
 				<ClayCard.Body>
 					<ClayCard.Description displayType="title">
-						{'Content Page'}
+						Content Page
 					</ClayCard.Description>
 					<ClayCard.Description displayType="text" truncate={false}>
-						{
-							'This is an example of card-type-template using an anchor tag.'
-						}
+						This is an example of card-type-template using an anchor
+						tag.
 					</ClayCard.Description>
 				</ClayCard.Body>
 			</ClayCard>
@@ -353,7 +352,7 @@ describe('ClayCard', () => {
 				</ClayCard.AspectRatio>
 				<ClayCard.Body>
 					<ClayCard.Description displayType="title">
-						{'Blog'}
+						Blog
 					</ClayCard.Description>
 				</ClayCard.Body>
 			</ClayCard>
@@ -381,7 +380,7 @@ describe('ClayCard', () => {
 									displayType="title"
 									truncate
 								>
-									{'Full Page Application'}
+									Full Page Application
 								</ClayCard.Description>
 							</span>
 						</span>
@@ -415,14 +414,14 @@ describe('ClayCard', () => {
 					<ClayCard.Row>
 						<div className="autofit-col autofit-col-expand">
 							<ClayCard.Description displayType="title">
-								{'Adélaide'}
+								Adélaide
 							</ClayCard.Description>
 							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
+								Author Action
 							</ClayCard.Description>
 							<ClayCard.Caption>
 								<ClayLabel displayType="success">
-									{'Approved'}
+									Approved
 								</ClayLabel>
 							</ClayCard.Caption>
 						</div>
@@ -460,14 +459,14 @@ describe('ClayCard', () => {
 					<ClayCard.Row>
 						<div className="autofit-col autofit-col-expand">
 							<ClayCard.Description displayType="title">
-								{'Adélaide'}
+								Adélaide
 							</ClayCard.Description>
 							<ClayCard.Description displayType="subtitle">
-								{'Author Action'}
+								Author Action
 							</ClayCard.Description>
 							<ClayCard.Caption>
 								<ClayLabel displayType="warning">
-									{'Rejected'}
+									Rejected
 								</ClayLabel>
 							</ClayCard.Caption>
 						</div>
@@ -495,7 +494,7 @@ describe('ClayCard', () => {
 								displayType="danger"
 								position="bottom-left"
 							>
-								{'DOC'}
+								DOC
 							</ClaySticker>
 						</ClayCard.AspectRatio>
 						<ClayCard.Body>
@@ -503,14 +502,14 @@ describe('ClayCard', () => {
 								<div className="autofit-col autofit-col-expand">
 									<section className="autofit-section">
 										<ClayCard.Description displayType="title">
-											{'deliverable.doc'}
+											deliverable.doc
 										</ClayCard.Description>
 										<ClayCard.Description displayType="subtitle">
-											{'Stevie Ray Vaughn'}
+											Stevie Ray Vaughn
 										</ClayCard.Description>
 										<ClayCard.Caption>
 											<ClayLabel displayType="success">
-												{'Approved'}
+												Approved
 											</ClayLabel>
 										</ClayCard.Caption>
 									</section>
@@ -530,7 +529,7 @@ describe('ClayCard', () => {
 								displayType="danger"
 								position="bottom-left"
 							>
-								{'DOC'}
+								DOC
 							</ClaySticker>
 						</ClayCard.AspectRatio>
 						<ClayCard.Body>
@@ -538,14 +537,14 @@ describe('ClayCard', () => {
 								<div className="autofit-col autofit-col-expand">
 									<section className="autofit-section">
 										<ClayCard.Description displayType="title">
-											{'deliverable.doc'}
+											deliverable.doc
 										</ClayCard.Description>
 										<ClayCard.Description displayType="subtitle">
-											{'Stevie Ray Vaughn'}
+											Stevie Ray Vaughn
 										</ClayCard.Description>
 										<ClayCard.Caption>
 											<ClayLabel displayType="success">
-												{'Approved'}
+												Approved
 											</ClayLabel>
 										</ClayCard.Caption>
 									</section>
@@ -575,14 +574,14 @@ describe('ClayCard', () => {
 							<ClayCard.Row>
 								<div className="autofit-col autofit-col-expand">
 									<ClayCard.Description displayType="title">
-										{'Adélaide'}
+										Adélaide
 									</ClayCard.Description>
 									<ClayCard.Description displayType="subtitle">
-										{'Author Action'}
+										Author Action
 									</ClayCard.Description>
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
-											{'Approved'}
+											Approved
 										</ClayLabel>
 									</ClayCard.Caption>
 								</div>
@@ -609,14 +608,14 @@ describe('ClayCard', () => {
 							<ClayCard.Row>
 								<div className="autofit-col autofit-col-expand">
 									<ClayCard.Description displayType="title">
-										{'Adélaide'}
+										Adélaide
 									</ClayCard.Description>
 									<ClayCard.Description displayType="subtitle">
-										{'Author Action'}
+										Author Action
 									</ClayCard.Description>
 									<ClayCard.Caption>
 										<ClayLabel displayType="success">
-											{'Approved'}
+											Approved
 										</ClayLabel>
 									</ClayCard.Caption>
 								</div>

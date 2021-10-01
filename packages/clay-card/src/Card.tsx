@@ -62,7 +62,8 @@ const ClayCard: React.FunctionComponent<IProps> = ({
 						active,
 						card: !selectable,
 						'file-card': isCardType.file,
-						'form-check-card form-check form-check-top-left': selectable,
+						'form-check-card form-check form-check-top-left':
+							selectable,
 						'image-card': isCardType.image,
 						'user-card': isCardType.user,
 					},

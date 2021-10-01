@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-/*global fetchMock*/
+/* global fetchMock*/
 
 import {cleanup, render, wait} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
