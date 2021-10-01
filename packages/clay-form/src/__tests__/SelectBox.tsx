@@ -32,7 +32,7 @@ describe('Rendering', () => {
 				aria-label="Select Box Label"
 				items={options}
 				onSelectChange={() => {}}
-				value={'1'}
+				value="1"
 			/>
 		);
 

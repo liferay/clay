@@ -62,9 +62,9 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 						className="toggle-switch-check"
 						disabled={disabled}
 						id={id}
-						onChange={(e) => {
+						onChange={(event) => {
 							if (onChange) {
-								onChange(e);
+								onChange(event);
 							}
 
 							if (onToggle) {

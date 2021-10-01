@@ -34,7 +34,7 @@ const ModalWithState: React.FunctionComponent<IProps> = ({
 				</ClayModal>
 			)}
 			<Button aria-label="button" onClick={() => setVisible(true)}>
-				{'Foo'}
+				Foo
 			</Button>
 		</>
 	);
@@ -163,7 +163,7 @@ describe('Modal -> IncrementalInteractions', () => {
 	it('close the modal when clicking on the close button of the Header component', () => {
 		const {getByLabelText} = render(
 			<ModalWithState initialVisible>
-				<ClayModal.Header>{'Title'}</ClayModal.Header>
+				<ClayModal.Header>Title</ClayModal.Header>
 			</ModalWithState>
 		);
 
@@ -204,7 +204,7 @@ describe('Modal -> IncrementalInteractions', () => {
 					<ClayModal.Footer
 						last={
 							<Button aria-label="buttonFooter" onClick={onClose}>
-								{'Foo'}
+								Foo
 							</Button>
 						}
 					/>
@@ -266,12 +266,12 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 					onClick={() =>
 						dispatch({
 							payload: {
-								body: <h1>{'Hello world!'}</h1>,
+								body: <h1>Hello world!</h1>,
 								footer: [
 									<></>,
 									<></>,
 									<Button key={3} onClick={state.onClose}>
-										{'Primary'}
+										Primary
 									</Button>,
 								],
 								header: 'Title',
@@ -281,7 +281,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 						})
 					}
 				>
-					{'Open modal'}
+					Open modal
 				</Button>
 			);
 		};
@@ -310,12 +310,12 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 			React.useEffect(() => {
 				dispatch({
 					payload: {
-						body: <h1>{'Hello world!'}</h1>,
+						body: <h1>Hello world!</h1>,
 						footer: [
 							<></>,
 							<></>,
 							<Button key={3} onClick={state.onClose}>
-								{'Primary'}
+								Primary
 							</Button>,
 						],
 						header: 'Title',
@@ -331,7 +331,7 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 					displayType="primary"
 					onClick={() => dispatch({type: 0})}
 				>
-					{'Open modal'}
+					Open modal
 				</Button>
 			);
 		};

@@ -213,9 +213,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			if (closeOnClickOutside) {
 				const handleClick = (event: MouseEvent) => {
 					const nodeRefs = [alignElementRef, subPortalRef];
-					const nodes: Array<Node> = (Array.isArray(nodeRefs)
-						? nodeRefs
-						: [nodeRefs]
+					const nodes: Array<Node> = (
+						Array.isArray(nodeRefs) ? nodeRefs : [nodeRefs]
 					)
 						.filter((ref) => ref.current)
 						.map((ref) => ref.current!);

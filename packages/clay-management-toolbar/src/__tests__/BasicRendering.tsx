@@ -31,15 +31,15 @@ describe('BasicRendering', () => {
 			<ClayManagementToolbar>
 				<ClayManagementToolbar.ItemList>
 					<ClayManagementToolbar.Item>
-						{'Element 1'}
+						Element 1
 					</ClayManagementToolbar.Item>
 					<ClayManagementToolbar.Item>
-						{'Element 2'}
+						Element 2
 					</ClayManagementToolbar.Item>
 				</ClayManagementToolbar.ItemList>
 				<ClayManagementToolbar.ItemList>
 					<ClayManagementToolbar.Item>
-						{'Element 3'}
+						Element 3
 					</ClayManagementToolbar.Item>
 				</ClayManagementToolbar.ItemList>
 			</ClayManagementToolbar>
@@ -59,10 +59,10 @@ describe('BasicRendering', () => {
 			const {container} = render(
 				<ClayResultsBar>
 					<ClayResultsBar.Item>
-						{'2 results for "Red"'}
+						2 results for "Red"
 					</ClayResultsBar.Item>
-					<ClayResultsBar.Item expand>{'Filter'}</ClayResultsBar.Item>
-					<ClayResultsBar.Item>{'Clear'}</ClayResultsBar.Item>
+					<ClayResultsBar.Item expand>Filter</ClayResultsBar.Item>
+					<ClayResultsBar.Item>Clear</ClayResultsBar.Item>
 				</ClayResultsBar>
 			);
 

@@ -46,9 +46,7 @@ export default (props) => {
 					{props.lexiconName}
 				</div>
 				<div className="autofit-row">
-					<div className="autofit-col clay-site-swatch-type">
-						{'Var'}
-					</div>
+					<div className="autofit-col clay-site-swatch-type">Var</div>
 					<div className="autofit-col autofit-col-expand clay-site-swatch-value">
 						<span className="clay-site-swatch-text clay-site-var">
 							{props.varName}
@@ -56,9 +54,7 @@ export default (props) => {
 					</div>
 				</div>
 				<div className="autofit-row">
-					<div className="autofit-col clay-site-swatch-type">
-						{'Hex'}
-					</div>
+					<div className="autofit-col clay-site-swatch-type">Hex</div>
 					<div className="autofit-col autofit-col-expand clay-site-swatch-value">
 						<span className="clay-site-hex clay-site-swatch-text">
 							{hex}
@@ -66,9 +62,7 @@ export default (props) => {
 					</div>
 				</div>
 				<div className="autofit-row">
-					<div className="autofit-col clay-site-swatch-type">
-						{'Rgb'}
-					</div>
+					<div className="autofit-col clay-site-swatch-type">Rgb</div>
 					<div className="autofit-col autofit-col-expand clay-site-swatch-value">
 						<span className="clay-site-rgb clay-site-swatch-text">
 							{rgb}

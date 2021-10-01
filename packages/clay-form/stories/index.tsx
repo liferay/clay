@@ -136,7 +136,7 @@ storiesOf('Components|ClayForm', module).add('Feedback', () => (
 	<div className="sheet">
 		<ClayForm>
 			<ClayForm.Group className="has-error">
-				<label htmlFor="Feedback Input">{'Name'}</label>
+				<label htmlFor="Feedback Input">Name</label>
 				<ClayInput
 					id="Feedback Input"
 					placeholder="Enter some text..."
@@ -149,7 +149,7 @@ storiesOf('Components|ClayForm', module).add('Feedback', () => (
 							spritemap={spritemap}
 							symbol="exclamation-full"
 						/>
-						{'This is a description of the error!'}
+						This is a description of the error!
 					</ClayForm.FeedbackItem>
 				</ClayForm.FeedbackGroup>
 			</ClayForm.Group>
@@ -173,7 +173,7 @@ storiesOf('Components|ClayCheckbox', module)
 			onChange={() => {}}
 		>
 			<span className="badge badge-primary">
-				<span className="badge-item badge-item-expand">{'10'}</span>
+				<span className="badge-item badge-item-expand">10</span>
 			</span>
 		</ClayCheckbox>
 	));
@@ -182,7 +182,7 @@ storiesOf('Components|ClayInput', module)
 	.add('default', () => (
 		<div className="sheet">
 			<ClayForm.Group>
-				<label htmlFor="basicInputText">{'Name'}</label>
+				<label htmlFor="basicInputText">Name</label>
 				<ClayInput
 					disabled={boolean('Disabled ', false)}
 					id="basicInputText"
@@ -206,7 +206,7 @@ storiesOf('Components|ClayInput', module)
 			<ClayForm.Group>
 				<ClayInput.Group>
 					<ClayInput.GroupItem shrink>
-						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+						<ClayInput.GroupText>@</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem>
 						<ClayInput
@@ -227,7 +227,7 @@ storiesOf('Components|ClayInput', module)
 						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem shrink>
-						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+						<ClayInput.GroupText>@</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem>
 						<ClayInput
@@ -237,7 +237,7 @@ storiesOf('Components|ClayInput', module)
 						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem shrink>
-						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
+						<ClayInput.GroupText>.com</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 			</ClayForm.Group>
@@ -248,7 +248,7 @@ storiesOf('Components|ClayInput', module)
 			<ClayForm.Group>
 				<ClayInput.Group>
 					<ClayInput.GroupItem prepend shrink>
-						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+						<ClayInput.GroupText>@</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append>
 						<ClayInput
@@ -269,7 +269,7 @@ storiesOf('Components|ClayInput', module)
 						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem prepend shrink>
-						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+						<ClayInput.GroupText>@</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem prepend>
 						<ClayInput
@@ -279,7 +279,7 @@ storiesOf('Components|ClayInput', module)
 						/>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append shrink>
-						<ClayInput.GroupText>{'.com'}</ClayInput.GroupText>
+						<ClayInput.GroupText>.com</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 			</ClayForm.Group>
@@ -290,7 +290,7 @@ storiesOf('Components|ClayInput', module)
 			<ClayForm.Group>
 				<ClayInput.Group>
 					<ClayInput.GroupItem shrink>
-						<ClayInput.GroupText>{'@'}</ClayInput.GroupText>
+						<ClayInput.GroupText>@</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem prepend>
 						<ClayInput
@@ -301,7 +301,7 @@ storiesOf('Components|ClayInput', module)
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append shrink>
 						<button className="btn btn-secondary" type="submit">
-							{'Submit'}
+							Submit
 						</button>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
@@ -344,7 +344,7 @@ storiesOf('Components|ClaySelect', module)
 	.add('with low-level APIs (composition)', () => (
 		<div className="sheet">
 			<div className="form-group">
-				<label htmlFor="mySelectId">{'Select Label'}</label>
+				<label htmlFor="mySelectId">Select Label</label>
 				<ClaySelect
 					aria-label="Select Label"
 					disabled={boolean('Disabled', false)}
@@ -365,7 +365,7 @@ storiesOf('Components|ClaySelect', module)
 	.add('high-level', () => (
 		<div className="sheet">
 			<div className="form-group">
-				<label htmlFor="mySelectId">{'Select Label'}</label>
+				<label htmlFor="mySelectId">Select Label</label>
 				<ClaySelectWithOption
 					aria-label="Select Label"
 					disabled={boolean('Disabled', false)}
@@ -379,7 +379,7 @@ storiesOf('Components|ClaySelect', module)
 	.add('high-level with groups', () => (
 		<div className="sheet">
 			<div className="form-group">
-				<label htmlFor="mySelectId">{'Dinosaurs'}</label>
+				<label htmlFor="mySelectId">Dinosaurs</label>
 				<ClaySelectWithOption
 					id="mySelectId"
 					options={[

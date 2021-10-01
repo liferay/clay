@@ -40,15 +40,15 @@ storiesOf('Internal Use Only|FocusScope', module).add('default', () => {
 			<div id="test1" />
 			<FocusScope>
 				<div>
-					<button>{'React'}</button>
+					<button>React</button>
 					<ClayPortal>
 						<div style={{border: '1px solid'}}>
-							{'Focuses after React button'}
+							Focuses after React button
 							<ul>
 								<li>
-									<a href="#">{'link 1'}</a>
-									<a href="#">{'link 2'}</a>
-									<a href="#">{'link 3'}</a>
+									<a href="#">link 1</a>
+									<a href="#">link 2</a>
+									<a href="#">link 3</a>
 								</li>
 							</ul>
 						</div>

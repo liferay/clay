@@ -114,9 +114,12 @@ const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
 							'table-list': !borderless,
 							'table-nowrap': noWrap,
 							'table-striped': striped,
-							[`tbody-valign-${bodyVerticalAlignment}`]: bodyVerticalAlignment,
-							[`thead-valign-${headVerticalAlignment}`]: headVerticalAlignment,
-							[`table-valign-${tableVerticalAlignment}`]: tableVerticalAlignment,
+							[`tbody-valign-${bodyVerticalAlignment}`]:
+								bodyVerticalAlignment,
+							[`thead-valign-${headVerticalAlignment}`]:
+								headVerticalAlignment,
+							[`table-valign-${tableVerticalAlignment}`]:
+								tableVerticalAlignment,
 						},
 						className
 					)}

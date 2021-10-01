@@ -141,12 +141,16 @@ function Item({
 						exitActive: 'collapsing',
 					}}
 					in={expanded}
-					onEnter={(el: HTMLElement) =>
-						el.setAttribute('style', `height: 0px`)
+					onEnter={(element: HTMLElement) =>
+						element.setAttribute('style', `height: 0px`)
 					}
-					onEntering={(el: HTMLElement) => setElementFullHeight(el)}
-					onExit={(el) => setElementFullHeight(el)}
-					onExiting={(el) => el.setAttribute('style', `height: 0px`)}
+					onEntering={(element: HTMLElement) =>
+						setElementFullHeight(element)
+					}
+					onExit={(element) => setElementFullHeight(element)}
+					onExiting={(element) =>
+						element.setAttribute('style', `height: 0px`)
+					}
 					timeout={250}
 				>
 					<div>

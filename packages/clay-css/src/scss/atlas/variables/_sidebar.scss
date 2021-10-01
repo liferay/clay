@@ -4,7 +4,7 @@ $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-deep-merge(
 	(
 		// 20px
-			font-size: 1.25rem
+		font-size: 1.25rem
 	),
 	$sidebar-header-component-title
 );

@@ -40,7 +40,7 @@ describe('Portal', () => {
 				<ClayPortal>
 					<div id="portal1" />
 				</ClayPortal>
-				{'Normal Content'}
+				Normal Content
 				<ClayPortal>
 					<div id="portal2" />
 				</ClayPortal>
@@ -93,7 +93,7 @@ describe('Portal', () => {
 			return (
 				<div>
 					<div id="content" ref={contentRef}>
-						{'content'}
+						content
 					</div>
 
 					<ClayPortal containerRef={contentRef}>
@@ -120,7 +120,7 @@ describe('Portal', () => {
 				<ClayPortal subPortalRef={contentRef}>
 					<div>
 						<div id="content" ref={contentRef}>
-							{'content'}
+							content
 						</div>
 					</div>
 

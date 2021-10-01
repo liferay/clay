@@ -47,7 +47,7 @@ describe('Rendering', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayRadioGroup
 				onSelectedValueChange={() => {}}
-				selectedValue={'foo'}
+				selectedValue="foo"
 			>
 				<ClayToggle label="Foo" value="foo" />
 
@@ -88,7 +88,7 @@ describe('Interactions', () => {
 		const {getByTestId} = render(
 			<ClayRadioGroup
 				onSelectedValueChange={handleSelectedChange}
-				selectedValue={'foo'}
+				selectedValue="foo"
 			>
 				<ClayToggle label="Foo" value="foo" />
 

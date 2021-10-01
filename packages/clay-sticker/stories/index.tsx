@@ -18,9 +18,9 @@ storiesOf('Components|ClaySticker', module)
 		<div>
 			<ClaySticker>{text('Content', 'A')}</ClaySticker>
 
-			<ClaySticker displayType="danger">{'B'}</ClaySticker>
+			<ClaySticker displayType="danger">B</ClaySticker>
 
-			<ClaySticker displayType="dark">{'C'}</ClaySticker>
+			<ClaySticker displayType="dark">C</ClaySticker>
 
 			<ClaySticker displayType="info">
 				<ClayIcon spritemap={spritemap} symbol="user" />
@@ -149,7 +149,7 @@ storiesOf('Components|ClaySticker', module)
 							}
 							size="sm"
 						>
-							{'A'}
+							A
 						</ClaySticker>
 					</div>
 				</div>
@@ -159,7 +159,7 @@ storiesOf('Components|ClaySticker', module)
 	.add('outside', () => (
 		<>
 			<ClayButton displayType="primary">
-				{'Button'}
+				Button
 				<ClaySticker
 					displayType="danger"
 					outside={boolean('outside', true)}
@@ -180,7 +180,7 @@ storiesOf('Components|ClaySticker', module)
 						src="https://via.placeholder.com/200"
 					/>
 				</ClaySticker.Overlay>
-				<ClaySticker.Overlay>{'BC'}</ClaySticker.Overlay>
+				<ClaySticker.Overlay>BC</ClaySticker.Overlay>
 			</ClaySticker>
 		</>
 	));

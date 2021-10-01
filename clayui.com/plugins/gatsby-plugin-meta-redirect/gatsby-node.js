@@ -38,7 +38,7 @@ const writeRedirectsFile = async (redirects, folder, pathPrefix) => {
 		if (!fileExists) {
 			try {
 				await ensureDir(path.dirname(FILE_PATH));
-			} catch (err) {
+			} catch (error) {
 				// ignore if the directory already exists;
 			}
 

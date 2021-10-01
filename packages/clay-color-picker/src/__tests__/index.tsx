@@ -220,9 +220,9 @@ describe('Interactions', () => {
 
 			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
 
-			const colorEditorToggle = (document.body as HTMLElement).querySelector(
-				'.clay-color-header button'
-			);
+			const colorEditorToggle = (
+				document.body as HTMLElement
+			).querySelector('.clay-color-header button');
 
 			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
 

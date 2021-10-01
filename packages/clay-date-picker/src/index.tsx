@@ -98,7 +98,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 */
 	placeholder?: string;
 
-	/***
+	/** *
 	 * Flag to indicate the user will use the date-range date-picker
 	 */
 	range?: boolean;

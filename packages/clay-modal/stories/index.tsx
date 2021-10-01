@@ -23,13 +23,9 @@ const Autocomplete = () => {
 	const [value, setValue] = React.useState('');
 	const [active, setActive] = React.useState(!!value);
 
-	const filteredItems = [
-		'one',
-		'two',
-		'three',
-		'four',
-		'five',
-	].filter((item) => item.match(value));
+	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(
+		(item) => item.match(value)
+	);
 
 	return (
 		<ClayAutocomplete>
@@ -74,12 +70,12 @@ const MyApp: React.FunctionComponent<any> = () => {
 			onClick={() =>
 				dispatch({
 					payload: {
-						body: <h1>{'Hello world!'}</h1>,
+						body: <h1>Hello world!</h1>,
 						footer: [
 							<></>,
 							<></>,
 							<ClayButton key={3} onClick={state.onClose}>
-								{'Primary'}
+								Primary
 							</ClayButton>,
 						],
 						header: 'Title',
@@ -89,7 +85,7 @@ const MyApp: React.FunctionComponent<any> = () => {
 				})
 			}
 		>
-			{'Open modal'}
+			Open modal
 		</ClayButton>
 	);
 };
@@ -188,27 +184,40 @@ storiesOf('Components|ClayModal', module)
 							scrollable={boolean('scrollable', false)}
 							url={text('Url', '')}
 						>
-							<h1>{'Hello world!'}</h1>
+							<h1>Hello world!</h1>
 							<div>
-								{
-									'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim eu ante eget lobortis. Praesent a mattis diam, nec auctor nisi. Nam porta lobortis massa hendrerit sagittis. Integer sit amet risus accumsan nunc pretium convallis eget eu tellus. Mauris id massa nec nunc mollis sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sit amet turpis dui. Aliquam et urna id nisl posuere condimentum. Nullam arcu lacus, fermentum sit amet quam sed, consequat semper nisi. Vivamus varius ligula et viverra placerat. Sed eget quam magna. Ut posuere enim porttitor, mollis justo eget, molestie mauris. Duis lobortis purus quis risus sodales dictum ut eu velit.'
-								}
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Curabitur dignissim eu ante
+								eget lobortis. Praesent a mattis diam, nec
+								auctor nisi. Nam porta lobortis massa hendrerit
+								sagittis. Integer sit amet risus accumsan nunc
+								pretium convallis eget eu tellus. Mauris id
+								massa nec nunc mollis sagittis. Class aptent
+								taciti sociosqu ad litora torquent per conubia
+								nostra, per inceptos himenaeos. Nulla sit amet
+								turpis dui. Aliquam et urna id nisl posuere
+								condimentum. Nullam arcu lacus, fermentum sit
+								amet quam sed, consequat semper nisi. Vivamus
+								varius ligula et viverra placerat. Sed eget quam
+								magna. Ut posuere enim porttitor, mollis justo
+								eget, molestie mauris. Duis lobortis purus quis
+								risus sodales dictum ut eu velit.
 							</div>
 						</ClayModal.Body>
 						<ClayModal.Footer
 							first={
 								<ClayButton.Group spaced>
 									<ClayButton displayType="secondary">
-										{'Secondary'}
+										Secondary
 									</ClayButton>
 									<ClayButton displayType="secondary">
-										{'Secondary'}
+										Secondary
 									</ClayButton>
 								</ClayButton.Group>
 							}
 							last={
 								<ClayButton onClick={onClose}>
-									{'Primary'}
+									Primary
 								</ClayButton>
 							}
 						/>
@@ -218,7 +227,7 @@ storiesOf('Components|ClayModal', module)
 					displayType="primary"
 					onClick={() => setVisibleModal(true)}
 				>
-					{'Open modal'}
+					Open modal
 				</ClayButton>
 			</>
 		);
@@ -249,14 +258,14 @@ storiesOf('Components|ClayModal', module)
 													symbol="info-circle"
 												/>
 											</ClayModal.TitleIndicator>
-											{'Modal Title'}
+											Modal Title
 										</ClayModal.Title>
 									</ClayModal.TitleSection>
 								</ClayModal.Item>
 								<ClayModal.Item shrink>
 									<ClayModal.SubtitleSection>
 										<ClayModal.Subtitle>
-											{'Modal Subtitle'}
+											Modal Subtitle
 										</ClayModal.Subtitle>
 									</ClayModal.SubtitleSection>
 								</ClayModal.Item>
@@ -282,7 +291,7 @@ storiesOf('Components|ClayModal', module)
 					displayType="primary"
 					onClick={() => setVisibleModal(true)}
 				>
-					{'Open modal'}
+					Open modal
 				</ClayButton>
 			</>
 		);
@@ -322,9 +331,7 @@ storiesOf('Components|ClayModal', module)
 										items={dropDownItems}
 										spritemap={spritemap}
 										trigger={
-											<ClayButton>
-												{'Click Me'}
-											</ClayButton>
+											<ClayButton>Click Me</ClayButton>
 										}
 									/>
 								</div>
@@ -336,7 +343,7 @@ storiesOf('Components|ClayModal', module)
 					displayType="primary"
 					onClick={() => setVisibleModal(true)}
 				>
-					{'Open modal'}
+					Open modal
 				</ClayButton>
 			</>
 		);

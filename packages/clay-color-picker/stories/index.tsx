@@ -127,7 +127,7 @@ storiesOf('Components|ClayColorPicker', module)
 								spritemap={spritemap}
 								symbol="exclamation-full"
 							/>
-							{'Input must be 6 letters long'}
+							Input must be 6 letters long
 						</ClayForm.FeedbackItem>
 					</ClayForm.FeedbackGroup>
 				)}

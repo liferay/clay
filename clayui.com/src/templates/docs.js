@@ -71,7 +71,7 @@ const PackageInfo = ({fields = {}, frontmatter = {}}) => (
 				target="_blank"
 			>
 				<span className="c-inner" tabIndex="-1">
-					{'View in Lexicon'}
+					View in Lexicon
 				</span>
 			</a>
 		)}
@@ -88,7 +88,7 @@ const PackageInfo = ({fields = {}, frontmatter = {}}) => (
 					target="_blank"
 				>
 					<span className="c-inner" tabIndex="-1">
-						{'CHANGELOG'}
+						CHANGELOG
 					</span>
 				</a>
 
@@ -320,9 +320,9 @@ export default function Documentation(props) {
 											<div className="border-top py-5 row">
 												<div className="col-6">
 													<p className="legal">
-														{
-															'How can this be improved? Create an issue!'
-														}
+														How can this be
+														improved? Create an
+														issue!
 													</p>
 												</div>
 												<div className="col-6 p-md-0">
@@ -363,10 +363,10 @@ export default function Documentation(props) {
 			</ClayLinkContext.Provider>
 		</div>
 	);
-};
+}
 
 export const pageQuery = graphql`
-	query($pathGroup: [String!], $slug: String!, $mainTabURL: String!) {
+	query ($pathGroup: [String!], $slug: String!, $mainTabURL: String!) {
 		pageMdx: mdx(fields: {slug: {eq: $slug}}) {
 			excerpt
 			timeToRead

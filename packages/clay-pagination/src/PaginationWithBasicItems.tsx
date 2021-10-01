@@ -7,8 +7,9 @@ import ClayIcon from '@clayui/icon';
 import {getEllipsisItems} from '@clayui/shared';
 import React from 'react';
 
-import type {IPaginationEllipsisProps} from './Ellipsis';
 import Pagination from './Pagination';
+
+import type {IPaginationEllipsisProps} from './Ellipsis';
 
 const ELLIPSIS_BUFFER = 2;
 

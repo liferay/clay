@@ -157,16 +157,16 @@ class GeomapBase {
 	/**
 	 * Mouse over handler
 	 */
-	_handleMouseOver(feature: object, idx: number, selection: [any]) {
-		const node = selection[idx];
+	_handleMouseOver(feature: object, index: number, selection: [any]) {
+		const node = selection[index];
 		d3.select(node).style('fill', this._color.selected);
 	}
 
 	/**
 	 * Mouse over handler
 	 */
-	_handleMouseOut(feature: object, idx: number, selection: [any]) {
-		const node = selection[idx];
+	_handleMouseOut(feature: object, index: number, selection: [any]) {
+		const node = selection[index];
 
 		d3.select(node).style('fill', this._fillFn.bind(this));
 	}

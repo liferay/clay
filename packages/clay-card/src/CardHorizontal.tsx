@@ -20,9 +20,9 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	selectable?: boolean;
 }
 
-const ClayCardHorizontalBody: React.FunctionComponent<React.HTMLAttributes<
-	HTMLDivElement
->> = ({children, className, ...otherProps}) => (
+const ClayCardHorizontalBody: React.FunctionComponent<
+	React.HTMLAttributes<HTMLDivElement>
+> = ({children, className, ...otherProps}) => (
 	<div
 		className={classNames('card card-horizontal', className)}
 		{...otherProps}
@@ -41,7 +41,8 @@ export const ClayCardHorizontal: React.FunctionComponent<IProps> & {
 				{
 					active,
 					'card card-horizontal': !selectable,
-					'form-check-card form-check form-check-middle-left': selectable,
+					'form-check-card form-check form-check-middle-left':
+						selectable,
 				},
 				'card-type-directory'
 			)}

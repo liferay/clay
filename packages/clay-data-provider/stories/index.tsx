@@ -51,14 +51,14 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 										onClick={() => refetch()}
 										type="button"
 									>
-										{'Refetch'}
+										Refetch
 									</button>
 								</div>
 							</div>
 							<div className="sheet">
 								<div className="form-group">
 									<label htmlFor="searchCharacterInput">
-										{'Search Character'}
+										Search Character
 									</label>
 									<input
 										className="form-control"
@@ -74,12 +74,12 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 								<ul className="list-group">
 									{networkStatus === 1 && (
 										<li className="disabled list-group-item list-group-item-flex">
-											{'Loading...'}
+											Loading...
 										</li>
 									)}
 									{error && (
 										<li className="disabled list-group-item list-group-item-flex">
-											{'Result is not found'}
+											Result is not found
 										</li>
 									)}
 									{!error &&
@@ -92,7 +92,7 @@ const ClayDataProviderWithVariablesAndStorage = () => {
 											>
 												<div className="autofit-col autofit-col-expand">
 													<p className="list-group-title text-truncate">
-														{'Name'}
+														Name
 													</p>
 													<p className="list-group-subtitle text-truncate">
 														{item.name}
@@ -139,7 +139,7 @@ storiesOf('Components|ClayDataProvider', module)
 								onClick={() => props.refetch()}
 								type="button"
 							>
-								{'Refetch'}
+								Refetch
 							</button>
 						</div>
 					</div>
@@ -159,29 +159,23 @@ storiesOf('Components|ClayDataProvider', module)
 						<li className="list-group-item list-group-item-flex">
 							<div className="autofit-col" />
 							<div className="autofit-col">
-								<p className="list-group-title">
-									{'Trade Size'}
-								</p>
+								<p className="list-group-title">Trade Size</p>
 							</div>
 							<div className="autofit-col">
-								<p className="list-group-title">
-									{'Price (USD)'}
-								</p>
+								<p className="list-group-title">Price (USD)</p>
 							</div>
 							<div className="autofit-col">
-								<p className="list-group-title">
-									{'Time (ISO)'}
-								</p>
+								<p className="list-group-title">Time (ISO)</p>
 							</div>
 						</li>
 						{props.networkStatus === 1 && (
 							<li className="disabled list-group-item list-group-item-flex">
-								{'Loading...'}
+								Loading...
 							</li>
 						)}
 						{props.error && (
 							<li className="disabled list-group-item list-group-item-flex">
-								{'Error'}
+								Error
 							</li>
 						)}
 						{props.data &&
@@ -227,7 +221,7 @@ storiesOf('Components|ClayDataProvider', module)
 				<h3>{`Polling  ${poll ? 'enable' : 'disable'}`}</h3>
 				<div className="row">
 					<div className="col-md-5">
-						<p>{'Open your console to see the network tab.'}</p>
+						<p>Open your console to see the network tab.</p>
 					</div>
 				</div>
 				<div className="row">
@@ -236,7 +230,7 @@ storiesOf('Components|ClayDataProvider', module)
 							className="btn btn-primary"
 							onClick={() => setPoll(!poll)}
 						>
-							{'Toggle Poll'}
+							Toggle Poll
 						</button>
 					</div>
 				</div>
@@ -260,10 +254,10 @@ storiesOf('Components|ClayDataProvider', module)
 
 		return (
 			<div className="pb-4 sheet">
-				<h3>{'Custom Fetcher'}</h3>
+				<h3>Custom Fetcher</h3>
 				<div className="row">
 					<div className="col-md-5">
-						<p>{'Open your console to see the network tab.'}</p>
+						<p>Open your console to see the network tab.</p>
 					</div>
 				</div>
 			</div>

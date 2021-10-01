@@ -24,7 +24,7 @@ storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 		>
 			<ClayNavigationBar.Item active={boolean('Active 1: ', true)}>
 				<ClayLink className="nav-link" displayType="secondary" href="#">
-					<span className="navbar-text-truncate">{`Item 1`}</span>
+					<span className="navbar-text-truncate">Item 1</span>
 				</ClayLink>
 			</ClayNavigationBar.Item>
 
@@ -36,13 +36,13 @@ storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 					onClick={() => setTriggerName('Item 2')}
 					small
 				>
-					<span className="navbar-text-truncate">{`Item 2`}</span>
+					<span className="navbar-text-truncate">Item 2</span>
 				</ClayButton>
 			</ClayNavigationBar.Item>
 
 			<ClayNavigationBar.Item active={boolean('Active 3: ', false)}>
 				<a className="link-secondary nav-link" href="#">
-					<span className="navbar-text-truncate">{`Item 3`}</span>
+					<span className="navbar-text-truncate">Item 3</span>
 				</a>
 			</ClayNavigationBar.Item>
 
@@ -52,7 +52,7 @@ storiesOf('Components|ClayNavigationBar', module).add('default', () => {
 					onClick={() => setTriggerName('Item 4')}
 					type="button"
 				>
-					<span className="navbar-text-truncate">{`Item 4`}</span>
+					<span className="navbar-text-truncate">Item 4</span>
 				</button>
 			</ClayNavigationBar.Item>
 		</ClayNavigationBar>

@@ -35,7 +35,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Callback for when checkbox value is changed
 	 */
-	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(

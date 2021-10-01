@@ -18,13 +18,13 @@ const ClayToastDemo = () => {
 	return (
 		<>
 			<div>
-				{'Toast Items'}
+				Toast Items
 				<button
 					onClick={() =>
 						setToastItems([...toastItems, Math.random() * 100])
 					}
 				>
-					{'Add'}
+					Add
 				</button>
 			</div>
 
@@ -39,7 +39,7 @@ const ClayToastDemo = () => {
 							);
 						}}
 						spritemap={spritemap}
-						title={'Hola:'}
+						title="Hola:"
 					>{`My value is ${value}`}</ClayAlert>
 				))}
 			</ClayAlert.ToastContainer>
@@ -53,10 +53,10 @@ const ClayDismissibleDemo = () => {
 	return (
 		<>
 			<div>
-				{'Dismissible Notification'}
+				Dismissible Notification
 				{!showDismisible && (
 					<button onClick={() => setShowDismisible(true)}>
-						{'Show'}
+						Show
 					</button>
 				)}
 			</div>
@@ -65,9 +65,9 @@ const ClayDismissibleDemo = () => {
 				<ClayAlert
 					onClose={() => setShowDismisible(false)}
 					spritemap={spritemap}
-					title={'Info'}
+					title="Info"
 				>
-					{'This alert is dismissable'}
+					This alert is dismissable
 				</ClayAlert>
 			)}
 		</>
@@ -178,11 +178,10 @@ storiesOf('Components|ClayAlert', module)
 			title="With a Button"
 			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
 		>
-			{'This is an alert with a button!'}
-
+			This is an alert with a button!
 			<ClayAlert.Footer>
 				<ClayButton.Group>
-					<ClayButton alert>{'View'}</ClayButton>
+					<ClayButton alert>View</ClayButton>
 				</ClayButton.Group>
 			</ClayAlert.Footer>
 		</ClayAlert>

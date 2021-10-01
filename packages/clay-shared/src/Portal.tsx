@@ -8,9 +8,8 @@ import classNames from 'classnames';
 import React from 'react';
 import {createPortal} from 'react-dom';
 
-const ClayPortalContext = React.createContext<React.RefObject<Element | null> | null>(
-	null
-);
+const ClayPortalContext =
+	React.createContext<React.RefObject<Element | null> | null>(null);
 
 ClayPortalContext.displayName = 'ClayPortalContext';
 
