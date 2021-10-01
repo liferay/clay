@@ -22,7 +22,7 @@ describe('ClayModal custom opener', () => {
 			return (
 				<>
 					<div id="container" ref={containerRef}>
-						{'container'}
+						container
 					</div>
 
 					<ClayModal

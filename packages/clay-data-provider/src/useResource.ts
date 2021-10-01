@@ -65,6 +65,7 @@ const useResource = ({
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
 
 	const handleRefetch = () => {
+		// eslint-disable-next-line @typescript-eslint/no-use-before-define
 		doFetch();
 		dispatchNetworkStatus(NetworkStatus.Refetch);
 	};
@@ -90,7 +91,7 @@ const useResource = ({
 		return value;
 	};
 
-	const handleFetchRetry = (err: any, retryAttempts: number) => {
+	const handleFetchRetry = (error: any, retryAttempts: number) => {
 		const {attempts = 5} = fetchRetry;
 
 		cleanRetry();
@@ -106,11 +107,15 @@ const useResource = ({
 			);
 
 			retryDelayTimeoutId = setTimeout(() => {
+				// eslint-disable-next-line @typescript-eslint/no-use-before-define
 				doFetch(retryAttempts + 1);
 			}, delay);
 		} else {
 			dispatchNetworkStatus(NetworkStatus.Error);
-			warning(false, `DataProvider: Error making the requisition ${err}`);
+			warning(
+				false,
+				`DataProvider: Error making the requisition ${error}`
+			);
 		}
 	};
 
@@ -120,6 +125,7 @@ const useResource = ({
 		cleanPoll();
 
 		pollingTimeoutId = setTimeout(() => {
+			// eslint-disable-next-line @typescript-eslint/no-use-before-define
 			maybeFetch(NetworkStatus.Polling);
 		}, pollIntervalRef.current);
 	};
@@ -208,7 +214,7 @@ const useResource = ({
 
 		timeout(fetchTimeout, promise)
 			.then(fetchOnComplete)
-			.catch((err) => handleFetchRetry(err, retryAttempts));
+			.catch((error) => handleFetchRetry(error, retryAttempts));
 	};
 
 	const maybeFetch = (status: NetworkStatus) => {

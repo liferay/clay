@@ -65,7 +65,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 									>
 										<span className="navbar-breakpoint-down-d-none">
 											<span className="navbar-text-truncate">
-												{'Filter and Order'}
+												Filter and Order
 											</span>
 
 											<ClayIcon
@@ -196,9 +196,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 					<ClayResultsBar.Item>
 						<span className="component-text text-truncate-inline">
 							<span className="text-truncate">
-								{'2 results for "'}
-								<strong>{'Red'}</strong>
-								{'"'}
+								2 results for "<strong>Red</strong>"
 							</span>
 						</span>
 					</ClayResultsBar.Item>
@@ -208,7 +206,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 							displayType="unstyled"
 							spritemap={spritemap}
 						>
-							{'Filter'}
+							Filter
 						</ClayLabel>
 					</ClayResultsBar.Item>
 					<ClayResultsBar.Item>
@@ -216,7 +214,7 @@ storiesOf('Components|ClayManagementToolbar', module).add(
 							className="component-link tbar-link"
 							displayType="link"
 						>
-							{'Clear'}
+							Clear
 						</ClayButton>
 					</ClayResultsBar.Item>
 				</ClayResultsBar>

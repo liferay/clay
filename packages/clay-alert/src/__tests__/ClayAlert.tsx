@@ -58,7 +58,7 @@ describe('ClayAlert', () => {
 	it('renders with a title and a message with markup', () => {
 		const {container} = render(
 			<ClayAlert spritemap="/foo/bar" title="Hello!">
-				<span>{'test'}</span>
+				<span>test</span>
 			</ClayAlert>
 		);
 
@@ -68,11 +68,11 @@ describe('ClayAlert', () => {
 	it('renders with a footer and button', () => {
 		const {container} = render(
 			<ClayAlert spritemap="/foo/bar" title="Hello!">
-				<span>{'test'}</span>
+				<span>test</span>
 
 				<ClayAlert.Footer>
 					<ClayButton.Group>
-						<ClayButton alert>{'View'}</ClayButton>
+						<ClayButton alert>View</ClayButton>
 					</ClayButton.Group>
 				</ClayAlert.Footer>
 			</ClayAlert>

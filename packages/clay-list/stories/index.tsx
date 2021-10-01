@@ -91,28 +91,30 @@ const items = [
 storiesOf('Components|ClayList', module)
 	.add('simple', () => (
 		<ClayList>
-			<ClayList.Header>{'This is a header'}</ClayList.Header>
+			<ClayList.Header>This is a header</ClayList.Header>
 			<ClayList.Item flex>
-				<ClayList.ItemField>{'Item 1'}</ClayList.ItemField>
+				<ClayList.ItemField>Item 1</ClayList.ItemField>
 
-				<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+				<ClayList.ItemField>ItemField</ClayList.ItemField>
 
 				<ClayList.ItemField expand>
-					<ClayList.ItemTitle>{`Item Title and expanded`}</ClayList.ItemTitle>
-					<ClayList.ItemText>{'Item Text'}</ClayList.ItemText>
+					<ClayList.ItemTitle>
+						Item Title and expanded
+					</ClayList.ItemTitle>
+					<ClayList.ItemText>Item Text</ClayList.ItemText>
 				</ClayList.ItemField>
 
-				<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+				<ClayList.ItemField>ItemField</ClayList.ItemField>
 			</ClayList.Item>
 
 			<ClayList.Item flex>
-				<ClayList.ItemField>{'Item 2'}</ClayList.ItemField>
+				<ClayList.ItemField>Item 2</ClayList.ItemField>
 				<ClayList.ItemField expand>
 					<ClayList.ItemTitle>
-						{'Item Title and expanded'}
+						Item Title and expanded
 					</ClayList.ItemTitle>
 					<ClayList.ItemText>
-						{'Hover this item for action menu'}
+						Hover this item for action menu
 					</ClayList.ItemText>
 				</ClayList.ItemField>
 				<ClayList.ItemField>
@@ -132,11 +134,11 @@ storiesOf('Components|ClayList', module)
 				</ClayList.ItemField>
 			</ClayList.Item>
 
-			<ClayList.Header>{'This is another header'}</ClayList.Header>
+			<ClayList.Header>This is another header</ClayList.Header>
 			<ClayList.Item flex>
-				<ClayList.ItemField>{'Item 3'}</ClayList.ItemField>
+				<ClayList.ItemField>Item 3</ClayList.ItemField>
 
-				<ClayList.ItemField>{'ItemField'}</ClayList.ItemField>
+				<ClayList.ItemField>ItemField</ClayList.ItemField>
 			</ClayList.Item>
 		</ClayList>
 	))
@@ -183,7 +185,7 @@ storiesOf('Components|ClayList', module)
 							</ClayList.ItemTitle>
 
 							<ClayList.ItemText>
-								{'This is subtitle information...'}
+								This is subtitle information...
 							</ClayList.ItemText>
 						</ClayList.ItemField>
 

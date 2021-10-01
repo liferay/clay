@@ -30,18 +30,15 @@ storiesOf('Components|ClayToolbar', module)
 					<ClayToolbar.Section>
 						<span className="text-truncate-inline">
 							<span className="text-truncate">
-								{
-									'Item 1 of 3,138,732,873,467,182,321,341,231,234,342,559,827,334,424'
-								}
+								Item 1 of
+								3,138,732,873,467,182,321,341,231,234,342,559,827,334,424
 							</span>
 						</span>
 					</ClayToolbar.Section>
 				</ClayToolbar.Item>
 
 				<ClayToolbar.Item>
-					<ClayToolbar.Link href="#">
-						{'Component Link'}
-					</ClayToolbar.Link>
+					<ClayToolbar.Link href="#">Component Link</ClayToolbar.Link>
 				</ClayToolbar.Item>
 
 				<ClayToolbar.Item>
@@ -78,9 +75,8 @@ storiesOf('Components|ClayToolbar', module)
 					</ClayToolbar.Item>
 
 					<ClayToolbar.Item expand>
-						{
-							'Item 1 of 3,138,732,873,467,182,321,341,231,234,342,559,827,334,424'
-						}
+						Item 1 of
+						3,138,732,873,467,182,321,341,231,234,342,559,827,334,424
 					</ClayToolbar.Item>
 
 					<ClayToolbar.Item>
@@ -115,23 +111,21 @@ storiesOf('Components|ClayToolbar', module)
 									{'25,392 results for '}
 
 									<strong>
-										{
-											'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual'
-										}
+										ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
 									</strong>
 								</span>
 							</span>
 						</ClayToolbar.Section>
 					</ClayToolbar.Item>
 					<ClayToolbar.Item>
-						<ClayToolbar.Link href="#">{'Clear'}</ClayToolbar.Link>
+						<ClayToolbar.Link href="#">Clear</ClayToolbar.Link>
 					</ClayToolbar.Item>
 					<ClayToolbar.Item>
 						<ClayButton
 							className="component-link tbar-link"
 							displayType="unstyled"
 						>
-							{'Clear'}
+							Clear
 						</ClayButton>
 					</ClayToolbar.Item>
 				</ClayToolbar.Nav>
@@ -151,9 +145,7 @@ storiesOf('Components|ClayToolbar', module)
 								{'25,392 results for '}
 
 								<strong>
-									{
-										'"ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"'
-									}
+									"ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
 								</strong>
 							</span>
 						</ClayToolbar.Section>
@@ -167,7 +159,7 @@ storiesOf('Components|ClayToolbar', module)
 								displayType="unstyled"
 								spritemap={spritemap}
 							>
-								{'Category: Productivity'}
+								Category: Productivity
 							</ClayToolbar.Label>
 						</ClayToolbar.Section>
 					</ClayToolbar.Item>
@@ -180,7 +172,7 @@ storiesOf('Components|ClayToolbar', module)
 								displayType="unstyled"
 								spritemap={spritemap}
 							>
-								{'Status: Approved'}
+								Status: Approved
 							</ClayToolbar.Label>
 						</ClayToolbar.Section>
 					</ClayToolbar.Item>
@@ -193,7 +185,7 @@ storiesOf('Components|ClayToolbar', module)
 								displayType="unstyled"
 								spritemap={spritemap}
 							>
-								{'Type: png'}
+								Type: png
 							</ClayToolbar.Label>
 						</ClayToolbar.Section>
 					</ClayToolbar.Item>
@@ -205,7 +197,7 @@ storiesOf('Components|ClayToolbar', module)
 								disabled
 								displayType="unstyled"
 							>
-								{'Clear All'}
+								Clear All
 							</ClayButton>
 						</ClayToolbar.Section>
 					</ClayToolbar.Item>
@@ -219,7 +211,7 @@ storiesOf('Components|ClayToolbar', module)
 				<ClayToolbar.Nav>
 					<ClayToolbar.Item expand>
 						<span className="text-left">
-							{'Workshop_idea_generation.pdf'}
+							Workshop_idea_generation.pdf
 						</span>
 					</ClayToolbar.Item>
 
@@ -249,7 +241,7 @@ storiesOf('Components|ClayToolbar', module)
 
 					<ClayToolbar.Item>
 						<ClayButton displayType="secondary" small>
-							{'Share'}
+							Share
 						</ClayButton>
 					</ClayToolbar.Item>
 
@@ -261,8 +253,7 @@ storiesOf('Components|ClayToolbar', module)
 									symbol="download"
 								/>
 							</span>
-
-							{'Download'}
+							Download
 						</ClayButton>
 					</ClayToolbar.Item>
 

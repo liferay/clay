@@ -43,7 +43,8 @@ const ClayCardAspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 						? containerAspectRatio.replace('/', '-to-')
 						: null
 				}`]: containerAspectRatio,
-				[`aspect-ratio-bg-${backgroundImageAspectRatio}`]: backgroundImageAspectRatio,
+				[`aspect-ratio-bg-${backgroundImageAspectRatio}`]:
+					backgroundImageAspectRatio,
 			})}
 		>
 			{children}

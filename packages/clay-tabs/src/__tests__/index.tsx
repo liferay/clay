@@ -18,30 +18,30 @@ const ClayTabsWithItems = () => {
 					active={activeTabKeyValue == 0}
 					onClick={() => setActiveTabKeyValue(0)}
 				>
-					{'Dummy1'}
+					Dummy1
 				</ClayTabs.Item>
 				<ClayTabs.Item
 					active={activeTabKeyValue == 1}
 					data-testid="tabItem2"
 					onClick={() => setActiveTabKeyValue(1)}
 				>
-					{'Dummy2'}
+					Dummy2
 				</ClayTabs.Item>
 				<ClayTabs.Item
 					active={activeTabKeyValue == 2}
 					onClick={() => setActiveTabKeyValue(2)}
 				>
-					{'Dummy3'}
+					Dummy3
 				</ClayTabs.Item>
 			</ClayTabs>
 			<ClayTabs.Content activeIndex={activeTabKeyValue}>
 				<ClayTabs.TabPane data-testid="tabPane1">
-					{'Tab Content 1'}
+					Tab Content 1
 				</ClayTabs.TabPane>
 				<ClayTabs.TabPane data-testid="tabPane2">
-					{'Tab Content 2'}
+					Tab Content 2
 				</ClayTabs.TabPane>
-				<ClayTabs.TabPane>{'Tab Content 3'}</ClayTabs.TabPane>
+				<ClayTabs.TabPane>Tab Content 3</ClayTabs.TabPane>
 			</ClayTabs.Content>
 		</>
 	);
@@ -79,14 +79,14 @@ describe('ClayTabs', () => {
 			<>
 				<ClayTabs>
 					<ClayTabs.Item active href="https://clay.dev/foo" />
-					{'One'}
+					One
 					<ClayTabs.Item href="https://clay.dev/bar">
-						{'Two'}
+						Two
 					</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeIndex={1}>
-					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
-					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
+					<ClayTabs.TabPane>Content One</ClayTabs.TabPane>
+					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
 		);
@@ -101,14 +101,14 @@ describe('ClayTabs', () => {
 		const {getAllByTestId} = render(
 			<>
 				<ClayTabs>
-					<ClayTabs.Item active>{'One'}</ClayTabs.Item>
-					<ClayTabs.Item>{'Two'}</ClayTabs.Item>
-					<ClayTabs.Item disabled>{'Three'}</ClayTabs.Item>
+					<ClayTabs.Item active>One</ClayTabs.Item>
+					<ClayTabs.Item>Two</ClayTabs.Item>
+					<ClayTabs.Item disabled>Three</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeIndex={1}>
-					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
-					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
-					<ClayTabs.TabPane>{'Content Three'}</ClayTabs.TabPane>
+					<ClayTabs.TabPane>Content One</ClayTabs.TabPane>
+					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
+					<ClayTabs.TabPane>Content Three</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
 		);
@@ -126,13 +126,13 @@ describe('ClayTabs', () => {
 			<>
 				<ClayTabs>
 					<ClayTabs.Item active onClick={onClick}>
-						{'One'}
+						One
 					</ClayTabs.Item>
-					<ClayTabs.Item onClick={onClick}>{'Two'}</ClayTabs.Item>
+					<ClayTabs.Item onClick={onClick}>Two</ClayTabs.Item>
 				</ClayTabs>
 				<ClayTabs.Content activeIndex={1}>
-					<ClayTabs.TabPane>{'Content One'}</ClayTabs.TabPane>
-					<ClayTabs.TabPane>{'Content Two'}</ClayTabs.TabPane>
+					<ClayTabs.TabPane>Content One</ClayTabs.TabPane>
+					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</>
 		);

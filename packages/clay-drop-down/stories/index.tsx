@@ -88,7 +88,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 			menuHeight={select('Height', ['', 'auto'], '')}
 			menuWidth={select('Width', ['', 'sm', 'full'], '')}
 			onActiveChange={(newVal) => setActive(newVal)}
-			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			trigger={<ClayButton>Click Me</ClayButton>}
 		>
 			{children}
 		</ClayDropDown>
@@ -160,7 +160,7 @@ storiesOf('Components|ClayDropDown', module)
 		return (
 			<DropDownWithState>
 				<ClayDropDown.Search
-					formProps={{onSubmit: (e) => e.preventDefault()}}
+					formProps={{onSubmit: (event) => event.preventDefault()}}
 					onChange={(event) => setQuery(event.target.value)}
 					spritemap={spritemap}
 					value={query}
@@ -203,7 +203,7 @@ storiesOf('Components|ClayDropDown', module)
 	))
 	.add('caption and help', () => (
 		<DropDownWithState>
-			<ClayDropDown.Help>{'Can I help you?'}</ClayDropDown.Help>
+			<ClayDropDown.Help>Can I help you?</ClayDropDown.Help>
 
 			<ClayDropDown.ItemList>
 				{[
@@ -217,7 +217,7 @@ storiesOf('Components|ClayDropDown', module)
 				))}
 			</ClayDropDown.ItemList>
 
-			<ClayDropDown.Caption>{'... or maybe not.'}</ClayDropDown.Caption>
+			<ClayDropDown.Caption>... or maybe not.</ClayDropDown.Caption>
 		</DropDownWithState>
 	))
 	.add('items with icons', () => (
@@ -298,7 +298,7 @@ storiesOf('Components|ClayDropDown', module)
 				x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
 			}}
 			spritemap={spritemap}
-			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			trigger={<ClayButton>Click Me</ClayButton>}
 		/>
 	))
 	.add('ClayDropDownWithDrillDown/active', () => {
@@ -332,7 +332,7 @@ storiesOf('Components|ClayDropDown', module)
 				}}
 				onActiveChange={onActiveChange}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 	})
@@ -344,10 +344,8 @@ storiesOf('Components|ClayDropDown', module)
 				caption="Showing 7 of 203 Structures"
 				footerContent={
 					<>
-						<ClayButton displayType="secondary">
-							{'Cancel'}
-						</ClayButton>
-						<ClayButton>{'Done'}</ClayButton>
+						<ClayButton displayType="secondary">Cancel</ClayButton>
+						<ClayButton>Done</ClayButton>
 					</>
 				}
 				helpText="You can customize this menu or see all you have by pressing 'more'."
@@ -355,8 +353,8 @@ storiesOf('Components|ClayDropDown', module)
 				onSearchValueChange={setValue}
 				searchProps={{
 					formProps: {
-						onSubmit: (e) => {
-							e.preventDefault();
+						onSubmit: (event) => {
+							event.preventDefault();
 							alert('Submitted!');
 						},
 					},
@@ -364,7 +362,7 @@ storiesOf('Components|ClayDropDown', module)
 				searchValue={value}
 				searchable={boolean('Searchable', true)}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 	})
@@ -381,9 +379,9 @@ storiesOf('Components|ClayDropDown', module)
 					footerContent={
 						<>
 							<ClayButton displayType="secondary">
-								{'Cancel'}
+								Cancel
 							</ClayButton>
-							<ClayButton>{'Done'}</ClayButton>
+							<ClayButton>Done</ClayButton>
 						</>
 					}
 					helpText="You can customize this menu or see all you have by pressing 'more'."
@@ -392,8 +390,8 @@ storiesOf('Components|ClayDropDown', module)
 					onSearchValueChange={setValue}
 					searchProps={{
 						formProps: {
-							onSubmit: (e) => {
-								e.preventDefault();
+							onSubmit: (event) => {
+								event.preventDefault();
 								alert('Submitted!');
 							},
 						},
@@ -401,14 +399,14 @@ storiesOf('Components|ClayDropDown', module)
 					searchValue={value}
 					searchable={boolean('Searchable', true)}
 					spritemap={spritemap}
-					trigger={<ClayButton>{'Click Me'}</ClayButton>}
+					trigger={<ClayButton>Click Me</ClayButton>}
 				/>
 
 				<button
 					onClick={() => setActive(!active)}
 					style={{float: 'right'}}
 				>
-					{'External Control'}
+					External Control
 				</button>
 			</>
 		);
@@ -431,13 +429,13 @@ storiesOf('Components|ClayDropDown', module)
 						spritemap={spritemap}
 						status="info"
 					>
-						<ClayModal.Header>{'Title'}</ClayModal.Header>
+						<ClayModal.Header>Title</ClayModal.Header>
 						<ClayModal.Body scrollable>
 							<ClayInput
 								onClick={() =>
 									setPanelVisibility(!panelVisibility)
 								}
-								placeholder={'meow'}
+								placeholder="meow"
 								ref={inputRef}
 							/>
 							<ClayDropDown.Menu
@@ -449,7 +447,7 @@ storiesOf('Components|ClayDropDown', module)
 								ref={dropdownMenuRef}
 							>
 								<ClayDropDown.Item>
-									{'my panel item'}
+									my panel item
 								</ClayDropDown.Item>
 							</ClayDropDown.Menu>
 							<img
@@ -477,16 +475,16 @@ storiesOf('Components|ClayDropDown', module)
 							first={
 								<ClayButton.Group spaced>
 									<ClayButton displayType="secondary">
-										{'Secondary'}
+										Secondary
 									</ClayButton>
 									<ClayButton displayType="secondary">
-										{'Secondary'}
+										Secondary
 									</ClayButton>
 								</ClayButton.Group>
 							}
 							last={
 								<ClayButton onClick={onClose}>
-									{'Primary'}
+									Primary
 								</ClayButton>
 							}
 						/>
@@ -496,7 +494,7 @@ storiesOf('Components|ClayDropDown', module)
 					displayType="primary"
 					onClick={() => setVisible(true)}
 				>
-					{'Open modal'}
+					Open modal
 				</ClayButton>
 			</>
 		);
@@ -522,7 +520,7 @@ storiesOf('Components|ClayDropDown', module)
 					{label: 'Repository'},
 				]}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Cascading Menu'}</ClayButton>}
+				trigger={<ClayButton>Cascading Menu</ClayButton>}
 			/>
 		);
 	});

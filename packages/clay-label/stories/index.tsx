@@ -54,7 +54,7 @@ storiesOf('Components|ClayLabel', module)
 			<ClayLabelWithState
 				innerElementProps={{className: 'text-truncate'}}
 			>
-				{'this is a very long bit of text, can you see the end of it?'}
+				this is a very long bit of text, can you see the end of it?
 			</ClayLabelWithState>
 		</div>
 	))
@@ -63,6 +63,6 @@ storiesOf('Components|ClayLabel', module)
 			<ClayLabel.ItemBefore>
 				<ClayIcon spritemap={spritemap} symbol="check" />
 			</ClayLabel.ItemBefore>
-			<ClayLabel.ItemExpand>{'Label'}</ClayLabel.ItemExpand>
+			<ClayLabel.ItemExpand>Label</ClayLabel.ItemExpand>
 		</ClayLabel>
 	));

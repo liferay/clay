@@ -208,9 +208,9 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 						{name && (
 							<input
 								name={name}
-								onChange={(e) =>
+								onChange={(event) =>
 									useNative
-										? onValueChange(e.target.value)
+										? onValueChange(event.target.value)
 										: null
 								}
 								ref={valueInputRef}

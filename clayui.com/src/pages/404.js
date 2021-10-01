@@ -31,15 +31,14 @@ const PageNotFound = () => {
 
 			<div className="container-fluid container-fluid-max-lg d-flex flex-column flex-grow-1 justify-content-center main-content">
 				<h1 className="display-3">
-					{"This isn't the page you're looking for."}
+					This isn't the page you're looking for.
 				</h1>
 
 				<p className="mb-0 py-3">
-					{
-						"Hey there, we couldn't find the page that you were looking for."
-					}
+					Hey there, we couldn't find the page that you were looking
+					for.
 					<br />
-					{"Maybe it's one of these:"}
+					Maybe it's one of these:
 				</p>
 
 				<nav className="list-inline mt-2">
@@ -49,7 +48,7 @@ const PageNotFound = () => {
 					>
 						<ClayIcon spritemap={spritemap} symbol="home" />
 
-						<span className="pl-2">{'Home'}</span>
+						<span className="pl-2">Home</span>
 					</Link>
 
 					<Link
@@ -58,7 +57,7 @@ const PageNotFound = () => {
 					>
 						<ClayIcon spritemap={spritemap} symbol="bolt" />
 
-						<span className="pl-2">{'Get Started'}</span>
+						<span className="pl-2">Get Started</span>
 					</Link>
 
 					<Link
@@ -67,7 +66,7 @@ const PageNotFound = () => {
 					>
 						<ClayIcon spritemap={spritemap} symbol="plus-squares" />
 
-						<span className="pl-2">{'Components'}</span>
+						<span className="pl-2">Components</span>
 					</Link>
 
 					<a
@@ -76,7 +75,7 @@ const PageNotFound = () => {
 					>
 						<div className="githubImage" />
 
-						<span className="pl-2">{'Clay on GitHub'}</span>
+						<span className="pl-2">Clay on GitHub</span>
 					</a>
 				</nav>
 			</div>

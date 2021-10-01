@@ -34,7 +34,7 @@ const LayoutNavHome = () => {
 								/>
 
 								<span className="align-middle font-weight-700 h3 ml-2 sidebar-logo-title">
-									{'Clay'}
+									Clay
 								</span>
 							</span>
 						</div>
@@ -47,7 +47,7 @@ const LayoutNavHome = () => {
 									to="/docs/get-started/index.html"
 								>
 									<span className="c-inner" tabIndex="-1">
-										{'Docs'}
+										Docs
 									</span>
 								</Link>
 							</li>
@@ -59,7 +59,7 @@ const LayoutNavHome = () => {
 									target="_blank"
 								>
 									<span className="c-inner" tabIndex="-1">
-										{'Sass API'}
+										Sass API
 									</span>
 								</a>
 							</li>
@@ -71,7 +71,7 @@ const LayoutNavHome = () => {
 									to="/blog"
 								>
 									<span className="c-inner" tabIndex="-1">
-										{'Blog'}
+										Blog
 									</span>
 								</Link>
 							</li>
@@ -83,7 +83,7 @@ const LayoutNavHome = () => {
 									target="_blank"
 								>
 									<span className="c-inner" tabIndex="-1">
-										{'Storybook'}
+										Storybook
 									</span>
 								</a>
 							</li>
@@ -95,7 +95,7 @@ const LayoutNavHome = () => {
 									target="_blank"
 								>
 									<span className="c-inner" tabIndex="-1">
-										{'Codesandbox'}
+										Codesandbox
 									</span>
 								</a>
 							</li>
@@ -128,7 +128,7 @@ const LayoutNavHome = () => {
 													window.location.reload();
 												}}
 											>
-												{'Reset Settings'}
+												Reset Settings
 											</ClayButton>
 										</>
 									}
@@ -144,10 +144,10 @@ const LayoutNavHome = () => {
 													className="c-inner"
 													tabIndex="-1"
 												>
-													{'Atlas and Base Themes'}
+													Atlas and Base Themes
 												</span>
 											</Link>
-											<span>{'.'}</span>
+											<span>.</span>
 										</>
 									}
 									items={[
@@ -155,13 +155,15 @@ const LayoutNavHome = () => {
 											checked: showAtlas,
 											label: 'Show Atlas',
 											onChange: (checked) => {
-												const clayCSSFile = document.getElementById(
-													'clayCSSFile'
-												);
+												const clayCSSFile =
+													document.getElementById(
+														'clayCSSFile'
+													);
 
-												const clayuiCSSFile = document.getElementById(
-													'clayuiCSSFile'
-												);
+												const clayuiCSSFile =
+													document.getElementById(
+														'clayuiCSSFile'
+													);
 
 												setShowAtlas(checked);
 

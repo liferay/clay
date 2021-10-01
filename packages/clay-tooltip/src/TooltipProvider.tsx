@@ -122,10 +122,10 @@ function matches(
 }
 
 function closestAncestor(node: HTMLElement, s: string) {
-	const el = node;
+	const element = node;
 	let ancestor: HTMLElement | null = node;
 
-	if (!document.documentElement.contains(el)) {
+	if (!document.documentElement.contains(element)) {
 		return null;
 	}
 

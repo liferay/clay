@@ -32,7 +32,7 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 
@@ -62,7 +62,7 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 
@@ -91,7 +91,7 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 
@@ -109,7 +109,7 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 
@@ -119,7 +119,7 @@ describe('ClayDropDownWithItems', () => {
 	it('renders a DropDownWithItems with footer content', () => {
 		render(
 			<ClayDropDownWithItems
-				footerContent={<ClayButton>{'Done'}</ClayButton>}
+				footerContent={<ClayButton>Done</ClayButton>}
 				items={[
 					{
 						href: '#',
@@ -127,7 +127,7 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 
@@ -145,7 +145,7 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 
@@ -165,7 +165,7 @@ describe('ClayDropDownWithItems', () => {
 				searchValue="Search"
 				searchable
 				spritemap={spritemap}
-				trigger={<ClayButton>{'Click Me'}</ClayButton>}
+				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
 		);
 

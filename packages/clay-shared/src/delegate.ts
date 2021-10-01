@@ -11,7 +11,7 @@ function delegate(
 	element: HTMLElement,
 	eventName: keyof GlobalEventHandlersEventMap,
 	selector: string,
-	callback: (e: any) => void
+	callback: (event: any) => void
 ) {
 	const eventHandler = (event: {
 		delegateTarget?: Element;

@@ -60,35 +60,37 @@ export default () => {
 							onSubmit={() => alert(JSON.stringify(formValues))}
 						>
 							<div className="sheet-header">
-								<h2 className="sheet-title">{'Form Input'}</h2>
+								<h2 className="sheet-title">Form Input</h2>
 							</div>
 
 							<ClayPanel.Group>
 								<ClayPanel
-									displayTitle={'Organization Information'}
+									displayTitle="Organization Information"
 									displayType="unstyled"
 									spritemap={spritemap}
 								>
 									<ClayPanel.Body>
 										<ClayForm.Group>
-											<label>{'Name'}</label>
+											<label>Name</label>
 											<ClayInput
-												onChange={(e) =>
+												onChange={(event) =>
 													setFormValues({
 														...formValues,
-														name: e.target.value,
+														name: event.target
+															.value,
 													})
 												}
 												placeholder="Name"
 											/>
 										</ClayForm.Group>
 										<ClayForm.Group>
-											<label>{'Country'}</label>
+											<label>Country</label>
 											<ClayInput
-												onChange={(e) =>
+												onChange={(event) =>
 													setFormValues({
 														...formValues,
-														country: e.target.value,
+														country:
+															event.target.value,
 													})
 												}
 												placeholder="Country"
@@ -96,27 +98,28 @@ export default () => {
 										</ClayForm.Group>
 
 										<ClayForm.Group>
-											<label>{'Date'}</label>
+											<label>Date</label>
 											<ClayDatePickerWithState />
 										</ClayForm.Group>
 
 										<ClayForm.Group>
-											<label>{'State'}</label>
+											<label>State</label>
 											<select
 												className="form-control"
-												onChange={(e) =>
+												onChange={(event) =>
 													setFormValues({
 														...formValues,
-														state: e.target.value,
+														state: event.target
+															.value,
 													})
 												}
 											>
 												<option disabled selected>
-													{'-- select an option --'}
+													-- select an option --
 												</option>
-												<option>{'Happy'}</option>
-												<option>{'Mad'}</option>
-												<option>{'Sad'}</option>
+												<option>Happy</option>
+												<option>Mad</option>
+												<option>Sad</option>
 											</select>
 										</ClayForm.Group>
 									</ClayPanel.Body>
@@ -125,7 +128,7 @@ export default () => {
 								<ClayPanel
 									collapsable
 									defaultExpanded
-									displayTitle={'More Information'}
+									displayTitle="More Information"
 									displayType="unstyled"
 									showCollapseIcon
 									spritemap={spritemap}
@@ -133,14 +136,14 @@ export default () => {
 									<ClayPanel.Body>
 										<ClayForm.Group>
 											<ClayForm.Text>
-												{
-													'You can use this space to provide more information in this form.'
-												}
+												You can use this space to
+												provide more information in this
+												form.
 											</ClayForm.Text>
 										</ClayForm.Group>
 
 										<ClayForm.Group>
-											<label>{'Tags'}</label>
+											<label>Tags</label>
 
 											<ClayInput.Group>
 												<ClayInput.GroupItem>
@@ -166,9 +169,8 @@ export default () => {
 
 													<ClayForm.FeedbackGroup>
 														<ClayForm.Text>
-															{
-																'Use comma to enter tags'
-															}
+															Use comma to enter
+															tags
 														</ClayForm.Text>
 													</ClayForm.FeedbackGroup>
 												</ClayInput.GroupItem>
@@ -182,12 +184,12 @@ export default () => {
 								<ClayButton.Group>
 									<div className="btn-group-item">
 										<ClayButton type="submit">
-											{'Submit'}
+											Submit
 										</ClayButton>
 									</div>
 									<div className="btn-group-item">
 										<ClayButton displayType="secondary">
-											{'Cancel'}
+											Cancel
 										</ClayButton>
 									</div>
 								</ClayButton.Group>
@@ -195,7 +197,7 @@ export default () => {
 						</ClayForm>
 					)}
 
-					{activePage === 1 && <div>{'Some other page...'}</div>}
+					{activePage === 1 && <div>Some other page...</div>}
 				</div>
 			</div>
 		</ClayLayout.ContainerFluid>

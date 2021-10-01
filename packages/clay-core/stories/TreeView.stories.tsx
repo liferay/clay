@@ -120,10 +120,10 @@ storiesOf('Components|ClayTreeView', module)
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<Icon symbol="folder" />
-						{'Root'}
+						Root
 					</TreeView.ItemStack>
 					<TreeView.Group>
-						<TreeView.Item>{'Item'}</TreeView.Item>
+						<TreeView.Item>Item</TreeView.Item>
 					</TreeView.Group>
 				</TreeView.Item>
 			</TreeView>
@@ -135,10 +135,10 @@ storiesOf('Components|ClayTreeView', module)
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<Icon symbol="folder" />
-						{'Root'}
+						Root
 					</TreeView.ItemStack>
 					<TreeView.Group>
-						<TreeView.Item>{'Item'}</TreeView.Item>
+						<TreeView.Item>Item</TreeView.Item>
 					</TreeView.Group>
 				</TreeView.Item>
 			</TreeView>
@@ -261,9 +261,9 @@ storiesOf('Components|ClayTreeView', module)
 							shape="user-icon"
 							size="sm"
 						>
-							{'JH'}
+							JH
 						</Sticker>
-						{'Juan Hidalgo'}
+						Juan Hidalgo
 					</TreeView.ItemStack>
 					<TreeView.Group>
 						<TreeView.Item key="Victor Valle">
@@ -273,9 +273,9 @@ storiesOf('Components|ClayTreeView', module)
 									shape="user-icon"
 									size="sm"
 								>
-									{'VV'}
+									VV
 								</Sticker>
-								{'Victor Valle'}
+								Victor Valle
 							</TreeView.ItemStack>
 							<TreeView.Group>
 								<TreeView.Item key="susana-vázquez">
@@ -284,9 +284,9 @@ storiesOf('Components|ClayTreeView', module)
 										shape="user-icon"
 										size="sm"
 									>
-										{'SV'}
+										SV
 									</Sticker>
-									{'Susana Vázquez'}
+									Susana Vázquez
 								</TreeView.Item>
 								<TreeView.Item key="myriam-manso">
 									<Sticker
@@ -294,9 +294,9 @@ storiesOf('Components|ClayTreeView', module)
 										shape="user-icon"
 										size="sm"
 									>
-										{'MM'}
+										MM
 									</Sticker>
-									{'Myriam Manso'}
+									Myriam Manso
 								</TreeView.Item>
 							</TreeView.Group>
 						</TreeView.Item>
@@ -306,9 +306,9 @@ storiesOf('Components|ClayTreeView', module)
 								shape="user-icon"
 								size="sm"
 							>
-								{'EY'}
+								EY
 							</Sticker>
-							{'Emily Young'}
+							Emily Young
 						</TreeView.Item>
 					</TreeView.Group>
 				</TreeView.Item>

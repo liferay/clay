@@ -14,14 +14,14 @@ import ClayLink, {ClayLinkContext} from '../src';
 storiesOf('Components|ClayLink', module)
 	.add('default', () => (
 		<div>
-			<ClayLink href="#link-styles">{'Default'}</ClayLink>
+			<ClayLink href="#link-styles">Default</ClayLink>
 
 			<ClayLink displayType="secondary" href="#link-styles">
-				{'Secondary'}
+				Secondary
 			</ClayLink>
 
 			<ClayLink aria-label="My Link" href="#link-styles">
-				{'With Aria Label'}
+				With Aria Label
 			</ClayLink>
 
 			<div id="link-styles" />
@@ -30,7 +30,7 @@ storiesOf('Components|ClayLink', module)
 	.add('borderless', () => (
 		<>
 			<ClayLink borderless href="#1">
-				{'Borderless'}
+				Borderless
 			</ClayLink>
 
 			<div id="1" />
@@ -39,16 +39,16 @@ storiesOf('Components|ClayLink', module)
 	.add('outline', () => (
 		<>
 			<ClayLink displayType="primary" href="#1" outline>
-				{'Outline Primary'}
+				Outline Primary
 			</ClayLink>
 			<ClayLink displayType="secondary" href="#1" outline>
-				{'Outline Secondary'}
+				Outline Secondary
 			</ClayLink>
 			<ClayLink borderless displayType="primary" href="#1" outline>
-				{'Outline Borderless Primary'}
+				Outline Borderless Primary
 			</ClayLink>
 			<ClayLink borderless displayType="secondary" href="#1" outline>
-				{'Outline Borderless Secondary'}
+				Outline Borderless Secondary
 			</ClayLink>
 
 			<div id="1" />
@@ -57,10 +57,10 @@ storiesOf('Components|ClayLink', module)
 	.add('displayed as button', () => (
 		<>
 			<ClayLink button displayType="primary" href="#1">
-				{'Primary'}
+				Primary
 			</ClayLink>
 			<ClayLink button displayType="secondary" href="#1">
-				{'Secondary'}
+				Secondary
 			</ClayLink>
 			<ClayLink
 				borderless
@@ -69,7 +69,7 @@ storiesOf('Components|ClayLink', module)
 				href="#1"
 				outline
 			>
-				{'Borderless Secondary'}
+				Borderless Secondary
 			</ClayLink>
 
 			<div id="1" />
@@ -126,9 +126,9 @@ storiesOf('Components|ClayLink', module)
 		}) => (
 			<a
 				{...otherProps}
-				onClick={(e) => {
+				onClick={(event) => {
 					if (!confirm('Proceed with navigation?')) {
-						e.preventDefault();
+						event.preventDefault();
 					}
 				}}
 			>
@@ -138,7 +138,7 @@ storiesOf('Components|ClayLink', module)
 
 		return (
 			<ClayLinkContext.Provider value={ConfirmLink}>
-				<ClayLink href="#1">{'Click to Navigate'}</ClayLink>
+				<ClayLink href="#1">Click to Navigate</ClayLink>
 
 				<div id="1" />
 			</ClayLinkContext.Provider>

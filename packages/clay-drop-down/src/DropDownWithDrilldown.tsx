@@ -129,7 +129,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 							active={activeMenu === menuKey}
 							direction={direction}
 							header={
-								activeMenu === menuKey && history.length
+								activeMenu === menuKey && !!history.length
 									? history.slice(-1)[0].title
 									: undefined
 							}

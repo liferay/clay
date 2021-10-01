@@ -57,15 +57,15 @@ storiesOf('Components|ClayNav', module)
 			<ClayNav>
 				<ClayNav.Item>
 					<ClayNav.Link active href="#">
-						{'Active'}
+						Active
 					</ClayNav.Link>
 				</ClayNav.Item>
 				<ClayNav.Item>
-					<ClayNav.Link href="#">{'Normal'}</ClayNav.Link>
+					<ClayNav.Link href="#">Normal</ClayNav.Link>
 				</ClayNav.Item>
 				<ClayNav.Item>
 					<ClayNav.Link disabled href="#">
-						{'Disabled'}
+						Disabled
 					</ClayNav.Link>
 				</ClayNav.Item>
 			</ClayNav>

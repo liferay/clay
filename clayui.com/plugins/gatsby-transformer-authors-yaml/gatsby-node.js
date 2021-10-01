@@ -9,7 +9,7 @@ const {resolve} = require('path');
 exports.sourceNodes = ({actions}) => {
 	const {createNode} = actions;
 
-	// eslint-disable-next-line liferay/no-dynamic-require
+	// eslint-disable-next-line @liferay/no-dynamic-require
 	const authors = require(resolve(__dirname, '../../content/authors.json'));
 
 	Object.keys(authors).forEach((username) => {

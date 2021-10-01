@@ -70,7 +70,7 @@ export default (location) => {
 								to="/docs/get-started/index.html"
 							>
 								<span className="c-inner" tabIndex="-1">
-									{'Docs'}
+									Docs
 								</span>
 							</Link>
 						</li>
@@ -82,7 +82,7 @@ export default (location) => {
 								target="_blank"
 							>
 								<span className="c-inner" tabIndex="-1">
-									{'Sass API'}
+									Sass API
 								</span>
 							</a>
 						</li>
@@ -94,7 +94,7 @@ export default (location) => {
 								to="/blog"
 							>
 								<span className="c-inner" tabIndex="-1">
-									{'Blog'}
+									Blog
 								</span>
 							</Link>
 						</li>
@@ -106,7 +106,7 @@ export default (location) => {
 								target="_blank"
 							>
 								<span className="c-inner" tabIndex="-1">
-									{'Storybook'}
+									Storybook
 								</span>
 							</a>
 						</li>
@@ -118,7 +118,7 @@ export default (location) => {
 								target="_blank"
 							>
 								<span className="c-inner" tabIndex="-1">
-									{'Codesandbox'}
+									Codesandbox
 								</span>
 							</a>
 						</li>
@@ -152,7 +152,7 @@ export default (location) => {
 												window.location.reload();
 											}}
 										>
-											{'Reset Settings'}
+											Reset Settings
 										</ClayButton>
 									</>
 								}
@@ -166,10 +166,10 @@ export default (location) => {
 												className="c-inner"
 												tabIndex="-1"
 											>
-												{'Atlas and Base Themes'}
+												Atlas and Base Themes
 											</span>
 										</Link>
-										<span>{'.'}</span>
+										<span>.</span>
 									</>
 								}
 								items={[
@@ -177,13 +177,15 @@ export default (location) => {
 										checked: showAtlas,
 										label: 'Show Atlas Theme',
 										onChange: (checked) => {
-											const clayCSSFile = document.getElementById(
-												'clayCSSFile'
-											);
+											const clayCSSFile =
+												document.getElementById(
+													'clayCSSFile'
+												);
 
-											const clayuiCSSFile = document.getElementById(
-												'clayuiCSSFile'
-											);
+											const clayuiCSSFile =
+												document.getElementById(
+													'clayuiCSSFile'
+												);
 
 											setShowAtlas(checked);
 											isColorsLoaded(checked);

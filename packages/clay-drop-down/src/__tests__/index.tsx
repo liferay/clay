@@ -18,7 +18,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 			{...others}
 			active={active}
 			onActiveChange={(val) => setActive(val)}
-			trigger={<button>{'Click Me'}</button>}
+			trigger={<button>Click Me</button>}
 		>
 			{children}
 		</ClayDropDown>
@@ -104,7 +104,7 @@ describe('ClayDropDown', () => {
 					</ClayDropDown.ItemList>
 				</DropDownWithState>
 
-				<div data-testid="OUTSIDE_ELEMENT">{'outside item'}</div>
+				<div data-testid="OUTSIDE_ELEMENT">outside item</div>
 			</div>
 		);
 
@@ -146,7 +146,7 @@ describe('ClayDropDown', () => {
 					</ClayDropDown.ItemList>
 				</DropDownWithState>
 
-				<button data-testid="BUTTON_OUTSIDE">{'outside item'}</button>
+				<button data-testid="BUTTON_OUTSIDE">outside item</button>
 			</div>
 		);
 
@@ -287,7 +287,7 @@ describe('ClayDropDown', () => {
 						onClick: onClickFn,
 					},
 				]}
-				trigger={<button>{'Click Me'}</button>}
+				trigger={<button>Click Me</button>}
 			/>
 		);
 

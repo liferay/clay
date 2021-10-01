@@ -70,7 +70,7 @@ function main() {
 		}, cssData);
 
 		if (CLI_ARGS.includes('--compare')) {
-			// eslint-disable-next-line liferay/no-dynamic-require
+			// eslint-disable-next-line @liferay/no-dynamic-require
 			const prevStats = require(path.join(
 				TEMP_DIR,
 				'/.parcel-ci-build.json'

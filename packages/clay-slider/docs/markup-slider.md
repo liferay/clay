@@ -184,9 +184,8 @@ The attribute `data-toggle="clay-css-range"` is only required if using the JavaS
 
 				var currentVal = e.target.value;
 
-				var title = clayRangeInput.querySelectorAll(
-					'.clay-range-value'
-				);
+				var title =
+					clayRangeInput.querySelectorAll('.clay-range-value');
 
 				for (var i = 0; i < title.length; i++) {
 					title[i].innerHTML = currentVal;

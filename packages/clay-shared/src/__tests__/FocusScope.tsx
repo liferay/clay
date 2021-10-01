@@ -37,12 +37,12 @@ describe('FocusScope', () => {
 		render(
 			<FocusScope>
 				<div id="wrapper">
-					<button id="reactButton">{'React'}</button>
+					<button id="reactButton">React</button>
 					<ClayPortal>
 						<ul>
 							<li>
 								<a href="#" id="linkInPortal">
-									{'link 1'}
+									link 1
 								</a>
 							</li>
 						</ul>

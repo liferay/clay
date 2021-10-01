@@ -70,7 +70,7 @@ storiesOf('Components|ClayTabs', module)
 							}}
 							onClick={() => setActiveIndex(0)}
 						>
-							{'Tab 1'}
+							Tab 1
 						</ClayTabs.Item>
 						<ClayTabs.Item
 							active={activeIndex == 1}
@@ -81,7 +81,7 @@ storiesOf('Components|ClayTabs', module)
 							}}
 							onClick={() => setActiveIndex(1)}
 						>
-							{'Tab 2'}
+							Tab 2
 						</ClayTabs.Item>
 						<ClayTabs.Item
 							active={activeIndex == 2}
@@ -92,7 +92,7 @@ storiesOf('Components|ClayTabs', module)
 							}}
 							onClick={() => setActiveIndex(2)}
 						>
-							{'Tab 3'}
+							Tab 3
 						</ClayTabs.Item>
 						<ClayTabs.Item
 							active={activeIndex == 3}
@@ -103,7 +103,7 @@ storiesOf('Components|ClayTabs', module)
 							}}
 							onClick={() => setActiveIndex(3)}
 						>
-							{'Tab 4'}
+							Tab 4
 						</ClayTabs.Item>
 
 						<DropDownWithState
@@ -119,7 +119,7 @@ storiesOf('Components|ClayTabs', module)
 									}}
 									onClick={() => setActiveIndex(4)}
 								>
-									{'Tab 5'}
+									Tab 5
 									<ClayIcon symbol="caret-bottom" />
 								</ClayTabs.Item>
 							}
@@ -265,19 +265,30 @@ storiesOf('Components|ClayTabs', module)
 
 				<ClayTabs.Content activeIndex={activeIndex} fade>
 					<ClayTabs.TabPane>
-						{
-							'Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds café au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.'
-						}
+						Single origin, extra id beans, eu to go, skinny
+						americano ut aftertaste sugar. At americano, viennese
+						variety iced grounds, grinder froth and pumpkin spice
+						aromatic. Cultivar aged lungo, grounds café au lait,
+						skinny, blue mountain, in variety sugar shop roast.
+						Wings, blue mountain affogato organic cappuccino java
+						plunger pot. Single shot variety pumpkin spice seasonal
+						skinny barista carajillo robust cream.
 					</ClayTabs.TabPane>
 					<ClayTabs.TabPane>
-						{
-							'Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.'
-						}
+						Iced, crema, coffee id kopi-luwak coffee variety. Skinny
+						extraction, id trifecta qui trifecta grinder. Barista
+						robusta arabica breve ut skinny milk beans macchiato
+						carajillo espresso. Cultivar single shot brewed, coffee
+						steamed to go wings to go cortado. Grinder, siphon
+						coffee acerbic espresso cinnamon crema breve.
 					</ClayTabs.TabPane>
 					<ClayTabs.TabPane>
-						{
-							'Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.'
-						}
+						Skinny extraction, id trifecta qui trifecta grinder.
+						Barista robusta arabica breve ut skinny milk beans
+						macchiato carajillo espresso. Cultivar single shot
+						brewed, coffee steamed to go wings to go cortado.
+						Grinder, siphon coffee acerbic espresso cinnamon crema
+						breve.
 					</ClayTabs.TabPane>
 				</ClayTabs.Content>
 			</div>

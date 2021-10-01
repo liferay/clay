@@ -80,17 +80,11 @@ Make content expand to fill remaining space or create equally spaced content wit
 
 ```html
 <div class="autofit-row autofit-padded">
-	<div class="autofit-col">
-		...
-	</div>
+	<div class="autofit-col">...</div>
 	<div class="autofit-col autofit-col-expand">
-		<div class="autofit-section">
-			...
-		</div>
+		<div class="autofit-section">...</div>
 	</div>
-	<div class="autofit-col">
-		...
-	</div>
+	<div class="autofit-col">...</div>
 </div>
 ```
 
@@ -193,23 +187,15 @@ Make content expand to fill remaining space or create equally spaced content wit
 ```html
 <div class="autofit-row autofit-padded">
 	<div class="autofit-col autofit-col-expand">
-		<div class="autofit-section">
-			...
-		</div>
+		<div class="autofit-section">...</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
-		<div class="autofit-section">
-			...
-		</div>
+		<div class="autofit-section">...</div>
 	</div>
 	<div class="autofit-col autofit-col-expand">
-		<div class="autofit-section">
-			...
-		</div>
+		<div class="autofit-section">...</div>
 	</div>
-	<div class="autofit-col">
-		...
-	</div>
+	<div class="autofit-col">...</div>
 </div>
 ```
 
@@ -312,12 +298,8 @@ The modifier `autofit-col-expand` makes the column fill the remaining space.
 <div class="card">
 	<div class="card-body">
 		<div class="autofit-padded-no-gutters-x autofit-row">
-			<div class="autofit-col autofit-col-expand">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col autofit-col-expand">...</div>
+			<div class="autofit-col">...</div>
 		</div>
 	</div>
 </div>
@@ -445,41 +427,23 @@ This pattern provides the benefit of aligning content via flexbox without losing
 		<div
 			class="autofit-float-sm-down autofit-padded-no-gutters-x autofit-row"
 		>
-			<div class="autofit-col autofit-col-expand">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col autofit-col-expand">...</div>
+			<div class="autofit-col">...</div>
 		</div>
 		<div class="autofit-float autofit-padded-no-gutters-x autofit-row">
-			<div class="autofit-col autofit-col-expand">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col autofit-col-expand">...</div>
+			<div class="autofit-col">...</div>
+			<div class="autofit-col">...</div>
 		</div>
 		<div
 			class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
 		>
-			<div class="autofit-col">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col">...</div>
+			<div class="autofit-col">...</div>
 			<div class="autofit-col autofit-col-expand">
-				<div class="autofit-section">
-					...
-				</div>
+				<div class="autofit-section">...</div>
 			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col">...</div>
 		</div>
 	</div>
 </div>
@@ -595,23 +559,13 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 		<div
 			class="autofit-float-end-sm-down autofit-padded-no-gutters-x autofit-row"
 		>
-			<div class="autofit-col autofit-col-expand">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col autofit-col-expand">...</div>
+			<div class="autofit-col">...</div>
 		</div>
 		<div class="autofit-float-end autofit-padded-no-gutters-x autofit-row">
-			<div class="autofit-col autofit-col-expand">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col autofit-col-expand">...</div>
+			<div class="autofit-col">...</div>
+			<div class="autofit-col">...</div>
 		</div>
 		<div
 			class="autofit-float-end autofit-padded-no-gutters-x autofit-row autofit-row-center"
@@ -620,20 +574,12 @@ Aligning items to the left will require nesting `autofit-float autofit-row` insi
 				<div
 					class="autofit-float autofit-padded-no-gutters autofit-row"
 				>
-					<div class="autofit-col">
-						...
-					</div>
-					<div class="autofit-col">
-						...
-					</div>
-					<div class="autofit-col">
-						...
-					</div>
+					<div class="autofit-col">...</div>
+					<div class="autofit-col">...</div>
+					<div class="autofit-col">...</div>
 				</div>
 			</div>
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col">...</div>
 		</div>
 	</div>
 </div>
@@ -721,26 +667,18 @@ Another way to mimic "right floated" elements without using `autofit-float-end` 
 			class="autofit-float autofit-row autofit-row-center autofit-padded-no-gutters-x"
 		>
 			<div class="autofit-col">
-				<div class="autofit-section">
-					...
-				</div>
+				<div class="autofit-section">...</div>
 			</div>
 			<div class="autofit-col">
-				<div class="autofit-section">
-					...
-				</div>
+				<div class="autofit-section">...</div>
 			</div>
 			<div class="autofit-col autofit-col-end">
 				<div class="autofit-row autofit-padded-no-gutters">
 					<div class="autofit-col autofit-col-expand">
-						<div class="autofit-section">
-							...
-						</div>
+						<div class="autofit-section">...</div>
 					</div>
 					<div class="autofit-col autofit-col-expand">
-						<div class="autofit-section">
-							...
-						</div>
+						<div class="autofit-section">...</div>
 					</div>
 				</div>
 			</div>
@@ -748,18 +686,10 @@ Another way to mimic "right floated" elements without using `autofit-float-end` 
 		<div
 			class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
 		>
-			<div class="autofit-col">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
-			<div class="autofit-col">
-				...
-			</div>
-			<div class="autofit-col autofit-col-end">
-				...
-			</div>
+			<div class="autofit-col">...</div>
+			<div class="autofit-col">...</div>
+			<div class="autofit-col">...</div>
+			<div class="autofit-col autofit-col-end">...</div>
 		</div>
 	</div>
 </div>
@@ -925,74 +855,44 @@ Another way to mimic "right floated" elements without using `autofit-float-end` 
 <div class="card">
 	<div class="card-body">
 		<div class="autofit-float autofit-padded-no-gutters-x autofit-row">
-			<div class="autofit-col autofit-col-expand">
-				...
-			</div>
-			<div class="autofit-col autofit-col-end">
-				...
-			</div>
+			<div class="autofit-col autofit-col-expand">...</div>
+			<div class="autofit-col autofit-col-end">...</div>
 		</div>
 		<div class="autofit-padded-no-gutters-x autofit-row">
-			<div class="autofit-col">
-				...
-			</div>
-			<div class="autofit-col autofit-col-expand">
-				...
-			</div>
+			<div class="autofit-col">...</div>
+			<div class="autofit-col autofit-col-expand">...</div>
 		</div>
 		<div class="autofit-padded-no-gutters-x autofit-row">
-			<div class="autofit-col">
-				...
-			</div>
+			<div class="autofit-col">...</div>
 			<div class="autofit-col autofit-col-expand">
 				<div class="autofit-row">
-					<div class="autofit-col autofit-col-expand">
-						...
-					</div>
-					<div class="autofit-col">
-						...
-					</div>
+					<div class="autofit-col autofit-col-expand">...</div>
+					<div class="autofit-col">...</div>
 				</div>
 				...
 				<div
 					class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
 				>
-					<div class="autofit-col">
-						...
-					</div>
-					<div class="autofit-col">
-						...
-					</div>
-					<div class="autofit-col">
-						...
-					</div>
+					<div class="autofit-col">...</div>
+					<div class="autofit-col">...</div>
+					<div class="autofit-col">...</div>
 				</div>
 				<div class="autofit-padded-no-gutters-x autofit-row">
-					<div class="autofit-col">
-						...
-					</div>
+					<div class="autofit-col">...</div>
 					<div class="autofit-col autofit-col-expand">
 						<div class="autofit-row">
 							<div class="autofit-col autofit-col-expand">
 								...
 							</div>
-							<div class="autofit-col">
-								...
-							</div>
+							<div class="autofit-col">...</div>
 						</div>
 						...
 						<div
 							class="autofit-float autofit-padded-no-gutters-x autofit-row autofit-row-center"
 						>
-							<div class="autofit-col">
-								...
-							</div>
-							<div class="autofit-col">
-								...
-							</div>
-							<div class="autofit-col">
-								...
-							</div>
+							<div class="autofit-col">...</div>
+							<div class="autofit-col">...</div>
+							<div class="autofit-col">...</div>
 						</div>
 					</div>
 				</div>

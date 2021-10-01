@@ -61,7 +61,7 @@ export default ({active, data, location}) => (
 								src="/images/clay_logo_w.png"
 							/>
 							<span className="align-middle font-weight-700 h3 ml-2 sidebar-logo-title">
-								{'Clay'}
+								Clay
 							</span>
 						</span>
 					</Link>

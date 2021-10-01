@@ -127,7 +127,7 @@ export default () => {
 													totalItems,
 												])}{' '}
 												<span className="navbar-breakpoint-down-d-none">
-													{'Selected'}
+													Selected
 												</span>
 											</>
 										)}
@@ -145,7 +145,7 @@ export default () => {
 									>
 										<span className="text-truncate-inline">
 											<span className="text-truncate">
-												{'Clear'}
+												Clear
 											</span>
 										</span>
 									</ClayButton>
@@ -165,7 +165,7 @@ export default () => {
 										>
 											<span className="navbar-breakpoint-down-d-none">
 												<span className="navbar-text-truncate">
-													{'Filter and Order'}
+													Filter and Order
 												</span>
 
 												<ClayIcon

@@ -25,9 +25,7 @@ interface ITreeViewProps<T>
 	showExpanderOnHover?: boolean;
 }
 
-export function TreeView<T>(
-	props: ITreeViewProps<T>
-): JSX.Element & {
+export function TreeView<T>(props: ITreeViewProps<T>): JSX.Element & {
 	Item: typeof TreeViewItem;
 	Group: typeof TreeViewGroup;
 	ItemStack: typeof TreeViewItemStack;

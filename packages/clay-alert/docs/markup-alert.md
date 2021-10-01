@@ -182,9 +182,7 @@ This type of alert is specific for toast messages. These type of messages appear
 
 ```html
 <div class="alert alert-dismissible alert-danger" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Error:</strong> This is an error message
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		...
@@ -192,9 +190,7 @@ This type of alert is specific for toast messages. These type of messages appear
 </div>
 
 <div class="alert alert-dismissible alert-info" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Info:</strong> This is an info message.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		...
@@ -202,9 +198,7 @@ This type of alert is specific for toast messages. These type of messages appear
 </div>
 
 <div class="alert alert-dismissible alert-success" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Success:</strong> This is a success message
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		...
@@ -212,9 +206,7 @@ This type of alert is specific for toast messages. These type of messages appear
 </div>
 
 <div class="alert alert-dismissible alert-warning" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Warning:</strong> This is a warning message.
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		...
@@ -263,30 +255,22 @@ Embedded alerts are meant for use in forms. Usually you will only need to use th
 
 ```html
 <div class="alert alert-danger" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Error:</strong>This is an error message
 </div>
 
 <div class="alert alert-success" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Error:</strong>This is a success message
 </div>
 
 <div class="alert alert-info" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Error:</strong>This is an info message
 </div>
 
 <div class="alert alert-warning" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Error:</strong>This is a warning message
 </div>
 ```
@@ -361,9 +345,7 @@ Stripe alerts are always placed below the last navigation element, either the he
 ```html
 <div class="alert alert-danger alert-dismissible alert-fluid" role="alert">
 	<div class="container">
-		<span class="alert-indicator">
-			...
-		</span>
+		<span class="alert-indicator"> ... </span>
 		<strong class="lead">Danger</strong> This is an error message
 		<button
 			aria-label="Close"
@@ -378,9 +360,7 @@ Stripe alerts are always placed below the last navigation element, either the he
 
 <div class="alert alert-dismissible alert-fluid alert-success" role="alert">
 	<div class="container">
-		<span class="alert-indicator">
-			...
-		</span>
+		<span class="alert-indicator"> ... </span>
 		<strong class="lead">Success</strong> This is a success message
 		<button
 			aria-label="Close"
@@ -395,9 +375,7 @@ Stripe alerts are always placed below the last navigation element, either the he
 
 <div class="alert alert-dismissible alert-fluid alert-info" role="alert">
 	<div class="container">
-		<span class="alert-indicator">
-			...
-		</span>
+		<span class="alert-indicator"> ... </span>
 		<strong class="lead">Info</strong> This is an info message
 		<button
 			aria-label="Close"
@@ -412,9 +390,7 @@ Stripe alerts are always placed below the last navigation element, either the he
 
 <div class="alert alert-dismissible alert-fluid alert-warning" role="alert">
 	<div class="container">
-		<span class="alert-indicator">
-			...
-		</span>
+		<span class="alert-indicator"> ... </span>
 		<strong class="lead">Warning</strong> This is a warning message
 		<button
 			aria-label="Close"
@@ -1899,9 +1875,7 @@ These examples are not included in the Lexicon design system but they are built 
 			>
 				<div class="autofit-col">
 					<div class="autofit-section">
-						<span class="alert-indicator">
-							...
-						</span>
+						<span class="alert-indicator"> ... </span>
 						<strong class="lead">1 Files</strong> couldn't upload.
 					</div>
 				</div>
@@ -1936,12 +1910,8 @@ These examples are not included in the Lexicon design system but they are built 
 				</div>
 				<div class="autofit-col autofit-col-expand">
 					<div class="autofit-section">
-						<h4 class="component-title">
-							file-upload.RTF
-						</h4>
-						<span class="alert-indicator">
-							...
-						</span>
+						<h4 class="component-title">file-upload.RTF</h4>
+						<span class="alert-indicator"> ... </span>
 						<strong class="lead">Error:</strong> couldn't upload.
 					</div>
 				</div>
@@ -2060,9 +2030,7 @@ All alerts accept HTML as their content. You can use the following modifiers:
 
 ```html
 <div class="alert alert-warning" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Warning:</strong> This alert is a
 	<a href="#1" class="alert-link">warning message</a>.
 </div>
@@ -2088,9 +2056,7 @@ All alerts accept HTML as their content. You can use the following modifiers:
 
 ```html
 <div class="alert alert-dismissible alert-success" role="alert">
-	<span class="alert-indicator">
-		...
-	</span>
+	<span class="alert-indicator"> ... </span>
 	<strong class="lead">Success:</strong> This is a success closeable alert
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		...
@@ -2104,9 +2070,7 @@ An absolute positioned container for placing alerts on the top right corner rela
 
 ```html
 <div class="alert-container container">
-	<div class="alert-notifications alert-notifications-absolute">
-		...
-	</div>
+	<div class="alert-notifications alert-notifications-absolute">...</div>
 </div>
 ```
 
