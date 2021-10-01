@@ -11,10 +11,12 @@ module.exports = {
 		jest: true,
 		node: true,
 	},
-	extends: 'liferay/react',
+	extends: ['plugin:@liferay/react'],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
+	plugins: ['@liferay', '@typescript-eslint'],
 	rules: {
+		'@liferay/empty-line-between-elements': 'off',
+		'@liferay/no-dynamic-require': 'off',
 		'@typescript-eslint/array-type': ['error', {default: 'generic'}],
 		'@typescript-eslint/naming-convention': [
 			'error',
@@ -43,7 +45,7 @@ module.exports = {
 				allowArrowFunctions: true,
 			},
 		],
-		'react/jsx-no-literals': 'error',
+		'react/no-unescaped-entities': 'off',
 		'react-hooks/exhaustive-deps': 'off',
 		'sort-vars': 'error',
 	},
