@@ -225,6 +225,8 @@ $alert-notification: () !default;
 $alert-notification: map-merge(
 	(
 		box-shadow: $alert-notifications-box-shadow,
+		clear: both,
+		float: left,
 		margin-bottom: $alert-margin-bottom,
 		max-width: $alert-notifications-max-width,
 	),
@@ -288,6 +290,138 @@ $alert-feedback: map-deep-merge(
 		close: (),
 	),
 	$alert-feedback
+);
+
+// .alert-inline.alert
+
+$alert-inline: () !default;
+$alert-inline: map-deep-merge(
+	(
+		display: inline-block,
+		max-width: 100%,
+		width: auto,
+		alert-dismissible: (
+			padding-right: 3.5rem,
+		),
+		alert-dismissible-alert-fluid: (
+			padding-right: 0,
+			container-fluid: (
+				padding-right: 3.5rem,
+			),
+		),
+		alert-autofit-row: (
+			align-items: center,
+			margin-bottom: calc(#{math-sign($alert-padding-y)} - 1px),
+			margin-top: calc(#{math-sign($alert-padding-y)} - 1px),
+			min-height: 3.5rem,
+		),
+		close: (
+			margin-top: math-sign(1rem),
+			top: 50%,
+		),
+	),
+	$alert-inline
+);
+
+// .alert-autofit-stacked.alert
+
+$alert-autofit-stacked: () !default;
+$alert-autofit-stacked: map-deep-merge(
+	(
+		alert-autofit-row: (
+			align-items: flex-start,
+			flex-direction: column,
+			margin-bottom: 0,
+			margin-top: 0,
+			min-height: 0,
+			autofit-col: (
+				width: 100%,
+			),
+			btn-group: (
+				margin-top: 0.875rem,
+			),
+		),
+		close: (
+			margin-top: 0,
+			top: map-get($alert-close, top),
+		),
+	),
+	$alert-autofit-stacked
+);
+
+// .alert-autofit-stacked-sm-down.alert
+
+$alert-autofit-stacked-sm-down: () !default;
+$alert-autofit-stacked-sm-down: map-deep-merge(
+	$alert-autofit-stacked,
+	$alert-autofit-stacked-sm-down
+);
+
+// .alert-autofit-stacked-xs-down.alert
+
+$alert-autofit-stacked-xs-down: () !default;
+$alert-autofit-stacked-xs-down: map-deep-merge(
+	$alert-autofit-stacked,
+	$alert-autofit-stacked-xs-down
+);
+
+// .alert-indicator-start.alert
+
+$alert-indicator-start: () !default;
+$alert-indicator-start: map-deep-merge(
+	(
+		padding-left:
+			calc(
+				#{$alert-indicator-font-size} + #{$alert-padding-x} + #{map-deep-get(
+						$alert-autofit-row,
+						autofit-col,
+						padding-left
+					)}
+			),
+		alert-fluid: (
+			padding-left: 0,
+			container-fluid: (
+				padding-left:
+					calc(
+						#{$alert-indicator-font-size} + #{$alert-padding-x} + #{map-deep-get(
+								$alert-autofit-row,
+								autofit-col,
+								padding-left
+							)}
+					),
+			),
+		),
+		alert-feedback: (
+			padding-left:
+				calc(
+					#{$alert-indicator-font-size} + #{map-deep-get(
+							$alert-autofit-row,
+							autofit-col,
+							padding-left
+						)}
+				),
+		),
+		alert-indicator: (
+			margin-left:
+				calc(
+					-1em - #{map-deep-get(
+							$alert-autofit-row,
+							autofit-col,
+							padding-left
+						)}
+				),
+			position: absolute,
+			lead: (
+				margin-left: 0,
+			),
+		),
+		alert-autofit-row: (
+			alert-indicator-only-child: (
+				margin-right: 0,
+			),
+		),
+	),
+	$alert-indicator-start
 );
 
 // .alert-primary
