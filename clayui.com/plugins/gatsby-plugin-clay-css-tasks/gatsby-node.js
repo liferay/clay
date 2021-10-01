@@ -186,7 +186,7 @@ const generateCSSFiles = (pluginOptions) => {
 	);
 };
 
-const generateSassDocs = (pluginOptions) => {
+const generateSassDocs = async (pluginOptions) => {
 	const pjson = require('../../package.json');
 
 	var config = {
@@ -256,17 +256,17 @@ const generateSassDocs = (pluginOptions) => {
 		},
 	};
 
-	sassdoc(path.join(pluginOptions.clayCssSrc, 'scss'), config);
+	await sassdoc(path.join(pluginOptions.clayCssSrc, 'scss'), config);
 };
 
-exports.onPostBootstrap = ({reporter}, pluginOptions) => {
+exports.onPostBootstrap = async ({reporter}, pluginOptions) => {
 	generateFiles(pluginOptions);
 
 	reporter.info(`Compiling icons.svg finished`);
 
 	generateCSSFiles(pluginOptions);
 
-	generateSassDocs(pluginOptions);
+	await generateSassDocs(pluginOptions);
 
 	reporter.info(
 		`Compiling 'atlas.css', 'colors.css', 'base.css', 'cadmin.css' and 'colors-base.css' finished!`
