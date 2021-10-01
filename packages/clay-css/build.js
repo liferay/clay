@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const process = require('process');
-const util = require('util');
 
 const sass = require('sass');
 
@@ -16,28 +14,28 @@ const ICONS_OUTPUT_FILEPATH = path.join(
 );
 const SASS_SOURCE_DIRECTORY = path.resolve('src/scss');
 
-function copyRecursiveSync(src, dest) {
-	const exists = fs.existsSync(src);
-	const stats = exists && fs.statSync(src);
+function copyRecursiveSync(sourcePath, destinationPath) {
+	const exists = fs.existsSync(sourcePath);
+	const stats = exists && fs.statSync(sourcePath);
 	const isDirectory = exists && stats.isDirectory();
 	if (isDirectory) {
-		if (!fs.existsSync(dest) || !fs.statSync(dest).isDirectory()) {
-			fs.mkdirSync(dest, {recursive: true});
+		if (!fs.existsSync(destinationPath) || !fs.statSync(destinationPath).isDirectory()) {
+			fs.mkdirSync(destinationPath, {recursive: true});
 		}
-		fs.readdirSync(src).forEach((childItemName) => {
+		fs.readdirSync(sourcePath).forEach((childItemName) => {
 			copyRecursiveSync(
-				path.join(src, childItemName),
-				path.join(dest, childItemName)
+				path.join(sourcePath, childItemName),
+				path.join(destinationPath, childItemName)
 			);
 		});
 	} else {
-		fs.copyFileSync(src, dest);
+		fs.copyFileSync(sourcePath, destinationPath);
 	}
 }
 
 function ensureDirectory(directoryPath) {
 	return new Promise((resolve, reject) => {
-		fs.stat(directoryPath, (error, stats) => {
+		fs.stat(directoryPath, (error) => {
 			if (error) {
 				if (error.code === 'ENOENT') {
 					fs.mkdir(directoryPath, {recursive: true}, (error) => {
@@ -60,7 +58,7 @@ function readFile(url) {
 	return new Promise((resolve, reject) => {
 		let buffer = Buffer.from('');
 		fs.createReadStream(url)
-			.on('data', (chunk, enc) => {
+			.on('data', (chunk) => {
 				buffer = Buffer.concat([buffer, chunk]);
 			})
 			.on('close', () => resolve(buffer))
@@ -68,24 +66,9 @@ function readFile(url) {
 	});
 }
 
-function removeDirectorySync(directoryPath) {
-	if (fs.existsSync(directoryPath)) {
-		fs.readdirSync(directoryPath).forEach((file) => {
-			const filePath = path.join(directoryPath, file);
-			if (fs.lstatSync(filePath).isDirectory()) {
-				removeDirectorySync(filePath);
-			} else {
-				fs.unlinkSync(filePath);
-			}
-		});
-		fs.rmdirSync(directoryPath);
-	}
-}
-
 async function build() {
 	await ensureDirectory(OUTPUT_DIRECTORY);
 
-	// Copy source files to "lib" directory
 	copyRecursiveSync(
 		path.resolve('./src/js'),
 		path.join(OUTPUT_DIRECTORY, 'js')
@@ -94,17 +77,14 @@ async function build() {
 		path.resolve('./src/images/icons'),
 		path.join(OUTPUT_DIRECTORY, 'images/icons')
 	);
-	copyRecursiveSync(path.resolve('./src/scss'), CSS_OUTPUT_DIRECTORY);
 	copyRecursiveSync(
 		path.join('..', '..', 'LICENSES'),
 		path.resolve('./LICENSES')
 	);
 
-	// TODO: build:svg:scss-icons
-	// Generates _lx-icons-generated.scss.
-
-	// Compile sass
 	const fileNames = ['atlas.scss', 'bootstrap.scss', 'base.scss'];
+
+	await ensureDirectory(CSS_OUTPUT_DIRECTORY);
 
 	fileNames.forEach((fileName) => {
 		const destinationName = `${path.basename(fileName, '.scss')}.css`;
@@ -114,7 +94,7 @@ async function build() {
 		);
 
 		const results = sass.renderSync({
-			file: path.join(CSS_OUTPUT_DIRECTORY, fileName),
+			file: path.join(SASS_SOURCE_DIRECTORY, fileName),
 			outFile: `./${destinationName}`,
 			sourceMap: true,
 			sourceMapContents: true,
@@ -125,33 +105,11 @@ async function build() {
 		fs.writeFileSync(`${destinationPath}.map`, results.map);
 	});
 
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'atlas'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'bootstrap'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'cadmin'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'components'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'functions'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'mixins'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'mixins'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'site'));
-	removeDirectorySync(path.join(CSS_OUTPUT_DIRECTORY, 'variables'));
-
-	// Remove *.scss files from lib/css
-	fs.readdirSync(CSS_OUTPUT_DIRECTORY).forEach((file) => {
-		const filePath = path.join(CSS_OUTPUT_DIRECTORY, file);
-		if (
-			!fs.lstatSync(filePath).isDirectory() &&
-			path.extname(file) === '.scss'
-		) {
-			fs.unlinkSync(filePath);
-		}
-	});
-
-	// Build icons.svg file
 	await buildIconsSvg();
 }
 
 function transformSvgFiles(files) {
-	return new Promise(async function (resolve, reject) {
+	return new Promise(async (resolve) => {
 		const outputFileContents = [
 			'<?xml version="1.0" encoding="UTF-8"?>',
 			'<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">',
@@ -192,62 +150,30 @@ function transformSvgFiles(files) {
 
 function buildIconsSvg() {
 	return new Promise((resolve, reject) => {
-		fs.readdir(ICONS_DIRECTORY, (error, files) => {
+		fs.readdir(ICONS_DIRECTORY, async (error, files) => {
 			if (error) {
 				reject(error);
 			}
 
-			return ensureDirectory(path.dirname(ICONS_OUTPUT_FILEPATH))
-				.then((directoryPath) => {
-					transformSvgFiles(files).then((data) => {
-						fs.writeFile(ICONS_OUTPUT_FILEPATH, data, (error) => {
-							if (error) {
-								reject(error);
-							}
-							resolve(ICONS_OUTPUT_FILEPATH);
-						});
-					});
-				})
-				.catch((error) => {
-					reject(error);
-				});
+			await ensureDirectory(path.dirname(ICONS_OUTPUT_FILEPATH));
+
+			const svgData = await transformSvgFiles(files);
+
+			try {
+				fs.writeFileSync(ICONS_OUTPUT_FILEPATH, svgData);
+			} catch (error) {
+				reject(error);
+			}
+
+			resolve(ICONS_OUTPUT_FILEPATH);
 		});
 	});
 }
 
-function usage() {
-	console.log('usage: build.js COMMAND');
-	console.log('COMMAND can have one of the following values:');
-	console.log('all:           build everything');
-	console.log('svg:           generate icon svg file');
-}
-
-function main() {
-	const task = process.argv.length < 3 ? 'all' : process.argv[2];
-
-	switch (task) {
-		case 'all':
-			build()
-				.then(() => {
-					console.log('Build successful');
-				})
-				.catch((error) => {
-					console.log('Build error:\n', error);
-				});
-			break;
-		case 'svg':
-			buildIconsSvg()
-				.then((result) => {
-					console.log('Icons SVG file generated');
-				})
-				.catch((error) => {
-					console.log('Build error:\n', error);
-				});
-			break;
-		default:
-			usage();
-			break;
-	}
-}
-
-main();
+build()
+	.then(() => {
+		console.log('Build successful');
+	})
+	.catch((error) => {
+		console.log('Build error:\n', error);
+	});
