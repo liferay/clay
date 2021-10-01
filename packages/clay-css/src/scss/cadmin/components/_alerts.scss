@@ -236,6 +236,253 @@
 	}
 }
 
+// .alert-inline
+
+.alert-inline.alert {
+	@include clay-css($cadmin-alert-inline);
+
+	&.alert-dismissible {
+		$alert-dismissible: setter(
+			map-get($cadmin-alert-inline, alert-dismissible),
+			()
+		);
+
+		@include clay-css($alert-dismissible);
+
+		&.alert-fluid {
+			$alert-dismissible-alert-fluid: setter(
+				map-get($cadmin-alert-inline, alert-dismissible-alert-fluid),
+				()
+			);
+
+			@include clay-css($alert-dismissible-alert-fluid);
+
+			> .container,
+			> .container-fluid {
+				$container-fluid: setter(
+					map-get($alert-dismissible-alert-fluid, container-fluid),
+					()
+				);
+
+				@include clay-css($container-fluid);
+
+				> .alert-autofit-row {
+					$alert-autofit-row: setter(
+						map-get($container-fluid, alert-autofit-row),
+						map-get($cadmin-alert-inline, alert-autofit-row),
+						()
+					);
+
+					@include clay-css($alert-autofit-row);
+				}
+			}
+		}
+	}
+
+	> .alert-autofit-row {
+		$alert-autofit-row: setter(
+			map-get($cadmin-alert-inline, alert-autofit-row),
+			()
+		);
+
+		@include clay-css($alert-autofit-row);
+	}
+
+	.close {
+		$close: setter(map-get($cadmin-alert-inline, close), ());
+
+		@include clay-close($close);
+	}
+}
+
+// Alert Autofit Stacked
+
+.alert-autofit-stacked.alert {
+	@include clay-css($cadmin-alert-autofit-stacked);
+
+	> .alert-autofit-row {
+		$alert-autofit-row: setter(
+			map-get($cadmin-alert-autofit-stacked, alert-autofit-row),
+			()
+		);
+
+		@include clay-css($alert-autofit-row);
+
+		> .autofit-col {
+			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
+
+			@include clay-css($autofit-col);
+		}
+
+		.btn-group {
+			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+
+			@include clay-css($btn-group);
+		}
+	}
+
+	.close {
+		$close: setter(map-get($cadmin-alert-autofit-stacked, close), ());
+
+		@include clay-close($close);
+	}
+}
+
+// Alert Autofit Stacked Sm Down
+
+.alert-autofit-stacked-sm-down.alert {
+	@include clay-css($cadmin-alert-autofit-stacked-sm-down);
+
+	> .alert-autofit-row {
+		$alert-autofit-row: setter(
+			map-get($cadmin-alert-autofit-stacked-sm-down, alert-autofit-row),
+			()
+		);
+
+		@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+			@include clay-css($alert-autofit-row);
+		}
+
+		> .autofit-col {
+			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
+
+			@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+				@include clay-css($autofit-col);
+			}
+		}
+
+		.btn-group {
+			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+
+			@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+				@include clay-css($btn-group);
+			}
+		}
+	}
+
+	.close {
+		$close: setter(
+			map-get($cadmin-alert-autofit-stacked-sm-down, close),
+			()
+		);
+
+		@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
+			@include clay-css($close);
+		}
+	}
+}
+
+// Alert Autofit Stacked Xs Down
+
+.alert-autofit-stacked-xs-down.alert {
+	@include clay-css($cadmin-alert-autofit-stacked-xs-down);
+
+	> .alert-autofit-row {
+		$alert-autofit-row: setter(
+			map-get($cadmin-alert-autofit-stacked-xs-down, alert-autofit-row),
+			()
+		);
+
+		@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
+			@include clay-css($alert-autofit-row);
+		}
+
+		> .autofit-col {
+			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
+
+			@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
+				@include clay-css($autofit-col);
+			}
+		}
+
+		.btn-group {
+			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+
+			@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
+				@include clay-css($btn-group);
+			}
+		}
+	}
+
+	.close {
+		$close: setter(
+			map-get($cadmin-alert-autofit-stacked-xs-down, close),
+			()
+		);
+
+		@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
+			@include clay-css($close);
+		}
+	}
+}
+
+// Alert Indicator Start
+
+.alert-indicator-start.alert {
+	@include clay-css($cadmin-alert-indicator-start);
+
+	&.alert-fluid {
+		$alert-fluid: setter(
+			map-get($cadmin-alert-indicator-start, alert-fluid),
+			()
+		);
+
+		@include clay-css($alert-fluid);
+
+		> .container,
+		> .container-fluid {
+			$container-fluid: setter(
+				map-get($alert-fluid, container-fluid),
+				()
+			);
+
+			@include clay-css($container-fluid);
+		}
+	}
+
+	&.alert-feedback {
+		$alert-feedback: setter(
+			map-get($cadmin-alert-indicator-start, alert-feedback),
+			()
+		);
+
+		@include clay-css($alert-feedback);
+	}
+
+	.alert-indicator {
+		$alert-indicator: setter(
+			map-get($cadmin-alert-indicator-start, alert-indicator),
+			()
+		);
+
+		@include clay-css($alert-indicator);
+
+		+ .lead {
+			$lead: setter(map-get($alert-indicator, lead), ());
+
+			@include clay-css($lead);
+		}
+	}
+
+	.alert-autofit-row {
+		$alert-autofit-row: setter(
+			map-get($cadmin-alert-indicator-start, alert-autofit-row),
+			()
+		);
+
+		@include clay-css($alert-autofit-row);
+
+		.alert-indicator:only-child {
+			$alert-indicator-only-child: setter(
+				map-get($alert-autofit-row, alert-indicator-only-child),
+				()
+			);
+
+			@include clay-css($alert-indicator-only-child);
+		}
+	}
+}
+
 // Alert Variants
 
 @each $cadmin-color, $cadmin-value in $cadmin-alert-palette {
