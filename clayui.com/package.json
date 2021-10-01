@@ -49,33 +49,32 @@
 		"classnames": "^2.2.6",
 		"clipboard": "^2.0.4",
 		"dotenv": "^6.0.0",
-		"gatsby": "^2.24.41",
-		"gatsby-plugin-google-analytics": "^2.3.13",
-		"gatsby-plugin-mdx": "^1.2.34",
+		"gatsby": "^3.14.1",
+		"gatsby-plugin-google-analytics": "^3.14.0",
+		"gatsby-plugin-mdx": "^2.14.0",
 		"gatsby-plugin-mdx-prismjs": "^1.0.4",
-		"gatsby-plugin-react-helmet": "^3.3.10",
-		"gatsby-plugin-sass": "4.14.0",
-		"gatsby-plugin-typescript": "^2.4.18",
-		"gatsby-react-router-scroll": "3.0.0",
-		"gatsby-remark-prismjs": "^3.2.8",
-		"gatsby-source-filesystem": "^2.3.24",
-		"gatsby-transformer-remark": "^2.8.28",
+		"gatsby-plugin-react-helmet": "^4.14.0",
+		"gatsby-plugin-sass": "^4.14.0",
+		"gatsby-plugin-typescript": "^3.14.0",
+		"gatsby-react-router-scroll": "^4.14.0",
+		"gatsby-remark-prismjs": "^5.11.0",
+		"gatsby-source-filesystem": "^3.14.0",
+		"gatsby-transformer-remark": "^4.11.0",
 		"prettier": "^1.16.4",
-		"prismjs": "^1.21.0",
+		"prismjs": "^1.25.0",
 		"react": "^16.12.0",
 		"react-docgen": "file:./react-docgen",
 		"react-dom": "^16.12.0",
-		"react-helmet": "^5.2.0",
+		"react-helmet": "^6.1.0",
 		"react-live": "^2.0.1",
 		"sassdoc": "^2.7.3",
 		"sass": "^1.42.1",
 		"svg4everybody": "^2.1.9"
 	},
 	"devDependencies": {
-		"cpx": "^1.5.0",
-		"strip-loader": "^0.1.2"
+		"cpx": "^1.5.0"
 	},
 	"resolutions": {
-		"gatsby-react-router-scroll": "3.0.0"
+		"gatsby-react-router-scroll": "4.14.0"
 	}
 }

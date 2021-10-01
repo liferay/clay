@@ -12,7 +12,7 @@ import LayoutNavHome from '../components/LayoutNavHome';
 /**
  * @return {React.Component}
  */
-export default () => {
+export default function Home() {
 	const description =
 		'This is Clay. A web implementation of the Lexicon Experience Language; built by Liferay.';
 
