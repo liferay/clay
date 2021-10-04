@@ -168,7 +168,7 @@ class GeomapBase {
 	_handleMouseOut(feature: object, index: number, selection: [any]) {
 		const node = selection[index];
 
-		d3.select(node).style('fill', this._fillFn.bind(this));
+		// d3.select(node).style('fill', this._fillFn.bind(this));
 	}
 
 	/**
@@ -196,7 +196,7 @@ class GeomapBase {
 			.append('path')
 			.attr('d', this.path as any)
 			.attr('vector-effect', 'non-scaling-stroke')
-			.attr('fill', this._fillFn.bind(this))
+			// .attr('fill', this._fillFn.bind(this))
 			.on('click', this._handleClickHandler!)
 			.on(
 				'mouseout',
