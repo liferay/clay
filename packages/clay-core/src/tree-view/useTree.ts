@@ -14,7 +14,6 @@ import {
 
 import type {Key} from 'react';
 
-import type {ICollectionProps} from './Collection';
 
 export interface IExpandable {
 	/**
