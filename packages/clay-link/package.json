@@ -17,7 +17,7 @@
 	],
 	"scripts": {
 		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
-		"build:types": "tsc --project ./tsconfig.declarations.json --skipLibCheck",
+		"build:types": "tsc --project ./tsconfig.declarations.json",
 		"prepublishOnly": "yarn build && yarn build:types",
 		"test": "jest --config ../../jest.config.js"
 	},

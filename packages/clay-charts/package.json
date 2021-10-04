@@ -6,7 +6,7 @@
 	"types": "lib/index.d.ts",
 	"ts:main": "src/index.tsx",
 	"scripts": {
-		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json --skipLibCheck",
+		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"copySvg": "ncp src/svg lib/svg",
 		"prepublishOnly": "yarn sass && yarn build && yarn build:types && yarn copySvg",
