@@ -41,6 +41,20 @@ const ClayCheckboxWithState = () => {
 const moveBoxesOptions = [
 	[
 		{
+			label: 'Reddit',
+			value: 'reddit',
+		},
+		{
+			label: 'Slack',
+			value: 'slack',
+		},
+		{
+			label: 'Twitter',
+			value: 'twitter',
+		},
+	],
+	[
+		{
 			label: 'Discord',
 			value: 'discord',
 		},
@@ -57,20 +71,6 @@ const moveBoxesOptions = [
 			value: 'linkedin',
 		},
 	],
-	[
-		{
-			label: 'Reddit',
-			value: 'reddit',
-		},
-		{
-			label: 'Slack',
-			value: 'slack',
-		},
-		{
-			label: 'Twitter',
-			value: 'twitter',
-		},
-	],
 ];
 
 storiesOf('Components|ClayDualListBox', module).add('default', () => {
@@ -80,8 +80,8 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 
 	const [firstSelectBoxItems, secondSelectBoxItems] = items;
 
-	const leftMaxItems = number('leftMaxItems', 3);
-	const rightMaxItems = number('rightMaxItems', 5);
+	const leftMaxItems = number('leftMaxItems', 5);
+	const rightMaxItems = number('rightMaxItems', 3);
 
 	return (
 		<ClayDualListBox
@@ -96,14 +96,14 @@ storiesOf('Components|ClayDualListBox', module).add('default', () => {
 			items={items}
 			left={{
 				id: 'leftSelectBox',
-				label: 'In Use',
+				label: 'Available',
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
 			onItemsChange={setItems}
 			right={{
 				id: 'rightSelectBox',
-				label: 'Available',
+				label: 'In Use',
 				onSelectChange: setRightSelected,
 				selected: rightSelected,
 			}}
