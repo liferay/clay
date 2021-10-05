@@ -61,8 +61,8 @@ $sticker-warning-color: $warning !default;
 $sticker-danger-bg: $white !default;
 $sticker-danger-color: $danger !default;
 
-$sticker-light-bg: $white !default;
-$sticker-light-color: $dark !default;
+$sticker-light-bg: color-yiq($white) !default;
+$sticker-light-color: $light !default;
 
-$sticker-dark-bg: $dark !default;
-$sticker-dark-color: $white !default;
+$sticker-dark-bg: $white !default;
+$sticker-dark-color: $dark !default;

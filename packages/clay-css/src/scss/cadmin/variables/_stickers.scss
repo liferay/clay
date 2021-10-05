@@ -85,13 +85,13 @@ $cadmin-sticker-danger-bg: $cadmin-white !default;
 $cadmin-sticker-danger-border-color: null !default;
 $cadmin-sticker-danger-color: $cadmin-danger !default;
 
-$cadmin-sticker-light-bg: $cadmin-white !default;
+$cadmin-sticker-light-bg: color-yiq($cadmin-white) !default;
 $cadmin-sticker-light-border-color: null !default;
-$cadmin-sticker-light-color: $cadmin-dark !default;
+$cadmin-sticker-light-color: $cadmin-light !default;
 
-$cadmin-sticker-dark-bg: $cadmin-dark !default;
+$cadmin-sticker-dark-bg: $cadmin-white !default;
 $cadmin-sticker-dark-border-color: null !default;
-$cadmin-sticker-dark-color: $cadmin-white !default;
+$cadmin-sticker-dark-color: $cadmin-dark !default;
 
 $cadmin-sticker-palette: () !default;
 $cadmin-sticker-palette: map-deep-merge(
