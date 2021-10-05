@@ -15,8 +15,6 @@ import type {Key} from 'react';
 
 import type {ICollectionProps} from './Collection';
 
-
-
 export interface IExpandable {
 	/**
 	 * The currently expanded keys in the collection.
