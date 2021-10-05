@@ -1,5 +1,5 @@
 $alert-padding-x: 1rem !default;
-$alert-padding-y: 1.03125rem !default;
+$alert-padding-y: 0.9375rem !default;
 
 // For top only border use: 2px 0 0 0
 $alert-border-width: 0.0625rem !default;
@@ -27,7 +27,7 @@ $alert-close: map-deep-merge(
 	$alert-close
 );
 
-$alert-font-size: 1rem !default; // 14px
+$alert-font-size: 0.875rem !default; // 14px
 
 $alert-lead-font-size: $alert-font-size !default;
 $alert-lead-font-weight: $font-weight-semi-bold !default;
@@ -36,7 +36,7 @@ $alert-link-decoration: underline !default;
 $alert-link-hover-decoration: none !default;
 $alert-link-font-weight: $font-weight-semi-bold !default;
 
-$alert-indicator-font-size: inherit !default;
+$alert-indicator-font-size: 1rem !default;
 
 $alert-title: () !default;
 $alert-title: map-deep-merge(
@@ -70,8 +70,8 @@ $alert-footer: map-deep-merge(
 $alert-fluid-container: () !default;
 $alert-fluid-container: map-merge(
 	(
-		padding-bottom: 1.0625rem,
-		padding-top: 1.0625rem,
+		padding-bottom: 0.96875rem,
+		padding-top: 0.96875rem,
 	),
 	$alert-fluid-container
 );

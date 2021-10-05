@@ -4,7 +4,7 @@ $cadmin-alert-border-width: 1px !default;
 
 $cadmin-alert-margin-bottom: 16px !default;
 $cadmin-alert-padding-x: 16px !default;
-$cadmin-alert-padding-y: 16.5px !default;
+$cadmin-alert-padding-y: 15px !default;
 
 $cadmin-alert-btn: () !default;
 $cadmin-alert-btn: map-deep-merge(
@@ -187,10 +187,10 @@ $cadmin-alert-fluid: map-merge(
 $cadmin-alert-fluid-container: () !default;
 $cadmin-alert-fluid-container: map-merge(
 	(
-		padding-bottom: 17px,
+		padding-bottom: 15.5px,
 		padding-left: $cadmin-alert-padding-x,
 		padding-right: $cadmin-alert-padding-x,
-		padding-top: 17px,
+		padding-top: 15.5px,
 	),
 	$cadmin-alert-fluid-container
 );
