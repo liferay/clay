@@ -332,6 +332,8 @@ $cadmin-alert-inline: map-deep-merge(
 			align-items: center,
 			margin-bottom: calc(#{math-sign($cadmin-alert-padding-y)} - 1px),
 			margin-top: calc(#{math-sign($cadmin-alert-padding-y)} - 1px),
+			padding-bottom: 9px,
+			padding-top: 9px,
 			min-height: 56px,
 		),
 		close: (

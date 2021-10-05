@@ -313,6 +313,8 @@ $alert-inline: map-deep-merge(
 			align-items: center,
 			margin-bottom: calc(#{math-sign($alert-padding-y)} - 1px),
 			margin-top: calc(#{math-sign($alert-padding-y)} - 1px),
+			padding-bottom: 0.5625rem,
+			padding-top: 0.5625rem,
 			min-height: 3.5rem,
 		),
 		close: (
