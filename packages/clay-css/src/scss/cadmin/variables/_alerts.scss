@@ -4,7 +4,7 @@ $cadmin-alert-border-width: 1px !default;
 
 $cadmin-alert-margin-bottom: 16px !default;
 $cadmin-alert-padding-x: 16px !default;
-$cadmin-alert-padding-y: 16.5px !default;
+$cadmin-alert-padding-y: 15px !default;
 
 $cadmin-alert-btn: () !default;
 $cadmin-alert-btn: map-deep-merge(
@@ -124,7 +124,7 @@ $cadmin-alert-link-font-weight: $cadmin-font-weight-semi-bold !default;
 
 $cadmin-alert-link-hover-decoration: none !default;
 
-$cadmin-alert-indicator-font-size: inherit !default;
+$cadmin-alert-indicator-font-size: 16px !default;
 
 $cadmin-alert-title: () !default;
 $cadmin-alert-title: map-deep-merge(
@@ -187,10 +187,10 @@ $cadmin-alert-fluid: map-merge(
 $cadmin-alert-fluid-container: () !default;
 $cadmin-alert-fluid-container: map-merge(
 	(
-		padding-bottom: 17px,
+		padding-bottom: 15.5px,
 		padding-left: $cadmin-alert-padding-x,
 		padding-right: $cadmin-alert-padding-x,
-		padding-top: 17px,
+		padding-top: 15.5px,
 	),
 	$cadmin-alert-fluid-container
 );
@@ -309,6 +309,142 @@ $cadmin-alert-feedback: map-deep-merge(
 		close: (),
 	),
 	$cadmin-alert-feedback
+);
+
+// .alert-inline.alert
+
+$cadmin-alert-inline: () !default;
+$cadmin-alert-inline: map-deep-merge(
+	(
+		display: inline-block,
+		max-width: 100%,
+		width: auto,
+		alert-dismissible: (
+			padding-right: 56px,
+		),
+		alert-dismissible-alert-fluid: (
+			padding-right: 0,
+			container-fluid: (
+				padding-right: 56px,
+			),
+		),
+		alert-autofit-row: (
+			align-items: center,
+			margin-bottom: calc(#{math-sign($cadmin-alert-padding-y)} - 1px),
+			margin-top: calc(#{math-sign($cadmin-alert-padding-y)} - 1px),
+			padding-bottom: 9px,
+			padding-top: 9px,
+			min-height: 56px,
+		),
+		close: (
+			margin-top: math-sign(16px),
+			top: 50%,
+		),
+	),
+	$cadmin-alert-inline
+);
+
+// .alert-autofit-stacked.alert
+
+$cadmin-alert-autofit-stacked: () !default;
+$cadmin-alert-autofit-stacked: map-deep-merge(
+	(
+		alert-autofit-row: (
+			align-items: flex-start,
+			flex-direction: column,
+			margin-bottom: 0,
+			margin-top: 0,
+			min-height: 0,
+			autofit-col: (
+				width: 100%,
+			),
+			btn-group: (
+				margin-top: 14px,
+			),
+		),
+		close: (
+			margin-top: 0,
+			top: map-get($cadmin-alert-close, top),
+		),
+	),
+	$cadmin-alert-autofit-stacked
+);
+
+// .alert-autofit-stacked-sm-down.alert
+
+$cadmin-alert-autofit-stacked-sm-down: () !default;
+$cadmin-alert-autofit-stacked-sm-down: map-deep-merge(
+	$cadmin-alert-autofit-stacked,
+	$cadmin-alert-autofit-stacked-sm-down
+);
+
+// .alert-autofit-stacked-xs-down.alert
+
+$cadmin-alert-autofit-stacked-xs-down: () !default;
+$cadmin-alert-autofit-stacked-xs-down: map-deep-merge(
+	$cadmin-alert-autofit-stacked,
+	$cadmin-alert-autofit-stacked-xs-down
+);
+
+// .alert-indicator-start.alert
+
+$cadmin-alert-indicator-start: () !default;
+$cadmin-alert-indicator-start: map-deep-merge(
+	(
+		padding-left:
+			calc(
+				#{$cadmin-alert-indicator-font-size} + #{$cadmin-alert-padding-x} +
+					#{map-deep-get(
+						$cadmin-alert-autofit-row,
+						autofit-col,
+						padding-left
+					)}
+			),
+		alert-fluid: (
+			padding-left: 0,
+			container-fluid: (
+				padding-left:
+					calc(
+						#{$cadmin-alert-indicator-font-size} + #{$cadmin-alert-padding-x} +
+							#{map-deep-get(
+								$cadmin-alert-autofit-row,
+								autofit-col,
+								padding-left
+							)}
+					),
+			),
+		),
+		alert-feedback: (
+			padding-left:
+				calc(
+					#{$cadmin-alert-indicator-font-size} + #{map-deep-get(
+							$cadmin-alert-autofit-row,
+							autofit-col,
+							padding-left
+						)}
+				),
+		),
+		alert-indicator: (
+			margin-left:
+				calc(
+					-1em - #{map-deep-get(
+							$cadmin-alert-autofit-row,
+							autofit-col,
+							padding-left
+						)}
+				),
+			position: absolute,
+			lead: (
+				margin-left: 0,
+			),
+		),
+		alert-autofit-row: (
+			alert-indicator-only-child: (
+				margin-right: 0,
+			),
+		),
+	),
+	$cadmin-alert-indicator-start
 );
 
 // .alert-primary
