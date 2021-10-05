@@ -20,6 +20,11 @@ $enable-lexicon-flat-colors: false !default;
 $enable-scaling-components: false !default;
 $scaling-breakpoint-down: sm !default;
 
+/// This enables Clay color functions to get the fallback color of a CSS Custom Property, convert it to the correct Sass type color, then process it using the corresponding Sass color function. The Clay color function will return a CSS color value. Set this variable to `false` if you want the Clay color function to return the CSS Custom Property without any modifications.
+/// @link https://github.com/liferay/clay/issues/4306
+
+$enable-clay-color-functions-process-fallback: false !default;
+
 $enable-caret: false !default;
 $enable-rounded: true !default;
 $enable-shadows: false !default;

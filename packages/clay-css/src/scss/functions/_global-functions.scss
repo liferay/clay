@@ -263,7 +263,7 @@
 /// @param {String} $var - The CSS Custom Property to evaluate.
 
 @function clay-get-fallback($var) {
-	@if (type-of($var) == 'string' and str-slice($var, 1, 3) == 'var') {
+	@if (is-css-var($var)) {
 		$fallback-value: str-slice(
 			$var,
 			str-index($var, ',') + 2,
@@ -460,8 +460,8 @@
 /// @param {Color} $light[$yiq-text-light] - The color to return if `$color` < `$yiq-contrasted-threshold`
 
 @function color-yiq($color, $dark: null, $light: null, $threshold: null) {
-	@if (is-css-var($color)) {
-		$color: clay-get-fallback($color);
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
 	}
 
 	$r: clay-red($color);
