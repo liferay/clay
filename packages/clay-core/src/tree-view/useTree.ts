@@ -109,20 +109,27 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	};
 }
 
-// RFC 6902 4.4
+// Operation of `move` value to the same document structure, removing from
+// `from` and then adding to `path`.
+// RFC 6902 (JSON Patch) 4.4
 type PatchMove = {
 	op: 'move';
 	from: Array<number>;
 	path: Array<number>;
 };
 
-// RFC 6902 4.1
+// Operation of `add` value to the document structure.
+// RFC 6902 (JSON Patch) 4.1
 type PatchAdd = {
 	op: 'add';
 	path: Array<number>;
 	value: unknown;
 };
 
+// Patch refers to the implementation of RFC 6902 operations (JSON Patch)
+// https://datatracker.ietf.org/doc/html/rfc6902, we just borrow the document
+// structure to make partial updates to a JSON document.
+// Implementation Detail https://github.com/liferay/clay/pull/4254.
 type Patch = PatchMove | PatchAdd;
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
