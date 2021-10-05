@@ -4,8 +4,8 @@
  */
 
 const fs = require('fs');
-const sass = require('sass');
 const path = require('path');
+const sass = require('sass');
 const sassdoc = require('sassdoc');
 
 const aliases = require('./clay-icon-aliases');
