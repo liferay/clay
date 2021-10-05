@@ -46,45 +46,6 @@ exports[`Rendering renders ClayDualListBox 1`] = `
           <div
             class="clay-reorder-underlay form-control"
           />
-          <div
-            class="clay-reorder-footer"
-          >
-            <div
-              class="reorder-order-buttons btn-group"
-              role="group"
-            >
-              <button
-                aria-label="Reorder Up"
-                class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
-                disabled=""
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-caret-top"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="/path/to/some/resource.svg#caret-top"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Reorder Down"
-                class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
-                disabled=""
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-caret-bottom"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="/path/to/some/resource.svg#caret-bottom"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
       <div
@@ -153,6 +114,45 @@ exports[`Rendering renders ClayDualListBox 1`] = `
           <div
             class="clay-reorder-underlay form-control"
           />
+          <div
+            class="clay-reorder-footer"
+          >
+            <div
+              class="reorder-order-buttons btn-group"
+              role="group"
+            >
+              <button
+                aria-label="Reorder Up"
+                class="reorder-button reorder-button-up btn btn-monospaced btn-sm btn-secondary"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-top"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#caret-top"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Reorder Down"
+                class="reorder-button reorder-button-down btn btn-monospaced btn-sm btn-secondary"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-bottom"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/path/to/some/resource.svg#caret-bottom"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

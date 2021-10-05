@@ -150,9 +150,7 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 						onItemsChange([newLeftItems, rightItems])
 					}
 					onSelectChange={handleLeftSelectedChange}
-					showArrows
 					size={size}
-					spritemap={spritemap}
 					value={leftSelected}
 				/>
 
@@ -206,7 +204,9 @@ const ClayDualListBox: React.FunctionComponent<IProps> = ({
 						onItemsChange([leftItems, newRightItems])
 					}
 					onSelectChange={handleRightSelectedChange}
+					showArrows
 					size={size}
+					spritemap={spritemap}
 					value={rightSelected}
 				/>
 			</div>
