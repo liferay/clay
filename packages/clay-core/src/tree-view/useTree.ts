@@ -5,7 +5,6 @@
 
 import {useInternalState} from '@clayui/shared';
 
-import type {ICollectionProps} from './Collection';
 import {
 	IMultipleSelection,
 	IMultipleSelectionState,
@@ -13,6 +12,9 @@ import {
 } from './useMultipleSelection';
 
 import type {Key} from 'react';
+
+import type {ICollectionProps} from './Collection';
+
 
 
 export interface IExpandable {
