@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [4.0.0](https://github.com/liferay/clay/compare/v3.36.0...v4.0.0) (2021-10-06)
+# [3.37.0](https://github.com/liferay/clay/compare/v3.36.0...v3.37.0) (2021-10-06)
 
 ### Bug Fixes
 
@@ -57,6 +57,8 @@ $sticker-light-color: $white !default;
 $sticker-dark-bg: $dark !default;
 $sticker-dark-color: $white !default;
 ```
+
+See issue https://github.com/liferay/clay/issues/4310 for more context.
 
 # [3.36.0](https://github.com/liferay/clay/compare/v3.35.3...v3.36.0) (2021-09-23)
 
