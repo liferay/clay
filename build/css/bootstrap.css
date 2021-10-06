@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.33
+* Lexicon 1.0.34
 *
 * Copyright 2021, Liferay, Inc.
 * All rights reserved.
@@ -7727,6 +7727,11 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+.dropdown-toggle:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
