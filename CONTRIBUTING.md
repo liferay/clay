@@ -222,6 +222,12 @@ git fetch $REMOTE --tags
 # automatically determine what version each package should be updated to
 lerna version --conventional-commits --no-push
 
+# WARNING: If you see that the previous commands suggests an
+# incorect version, for example a major version change, you
+# should use this command instead:
+# lerna version --no-push
+# and set the version manually.
+
 # Optionally, you might want to run `yarn checkDeps` to make sure the
 # dependencies are in sync. Before you do that, you'll also want to
 # remove any "old" build files, which can be done with
