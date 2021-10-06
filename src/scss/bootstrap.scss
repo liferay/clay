@@ -4,4 +4,10 @@
 
 @import "bootstrap/bootstrap";
 
+// Prevent the focus on the dropdown toggle when closing dropdowns
+
+.dropdown-toggle:focus {
+  @include tab-focus;
+}
+
 // INSERT CUSTOM EXTENSIONS
