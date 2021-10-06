@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/julien/clay/compare/v3.36.0...v4.0.0) (2021-10-06)
+
+### Bug Fixes
+
+-   **clayui.com:** add missing authors ([dc1b787](https://github.com/julien/clay/commit/dc1b787))
+
 # [3.36.0](https://github.com/julien/clay/compare/v3.35.3...v3.36.0) (2021-09-23)
 
 **Note:** Version bump only for package clayui.com

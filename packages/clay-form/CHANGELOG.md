@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/liferay/clay/compare/v3.36.0...v4.0.0) (2021-10-06)
+
+### Bug Fixes
+
+-   **@clayui/form:** change the Dual List Box ordering side following the right side as the default behavior ([d4b9630](https://github.com/liferay/clay/commit/d4b9630))
+
 # [3.36.0](https://github.com/liferay/clay/compare/v3.35.3...v3.36.0) (2021-09-23)
 
 **Note:** Version bump only for package @clayui/form

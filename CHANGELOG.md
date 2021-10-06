@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/liferay/clay/compare/v3.36.0...v4.0.0) (2021-10-06)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix drag layer position ([37a2536](https://github.com/liferay/clay/commit/37a2536))
+-   **@clayui/core:** fix error when moving item up, down and add to children ([f9fbe91](https://github.com/liferay/clay/commit/f9fbe91))
+-   **@clayui/css:** Alert update `$alert-*-btn` variant Sass maps to use newer keys ([ecdd38a](https://github.com/liferay/clay/commit/ecdd38a))
+-   **@clayui/css:** Alerts allow better customization of alert variant components, use `clay-alert-variant` mixin to generate alert variant styles ([9be70d7](https://github.com/liferay/clay/commit/9be70d7))
+-   **@clayui/css:** Alerts and Cadmin Alerts `alert-inline` should have more space between text and top / bottom borders ([29c4764](https://github.com/liferay/clay/commit/29c4764))
+-   **@clayui/css:** Atlas Alert changed back `$alert-font-size` to `0.875rem` and change `$alert-indicator-font-size` to `1rem` ([21d33ed](https://github.com/liferay/clay/commit/21d33ed))
+-   **@clayui/css:** Atlas and Cadmin Stickers swap background and foreground colors for `sticker-light` and `sticker-dark` ([adcd19f](https://github.com/liferay/clay/commit/adcd19f))
+-   **@clayui/css:** Cadmin Alert update `$alert-*-btn` variant Sass maps to use newer keys and update `$cadmin-alert-palette` to use `$alert-*` variant Sass maps ([6a4a100](https://github.com/liferay/clay/commit/6a4a100))
+-   **@clayui/css:** Cadmin Alerts allow better customization of alert variant components, use `clay-alert-variant` mixin to generate alert variant styles ([3410faf](https://github.com/liferay/clay/commit/3410faf))
+-   **@clayui/css:** Cadmin Cards and Panels remove decision making if statements from border-radius and border-width. They were used to save a few bytes of CSS, not worth. ([677e804](https://github.com/liferay/clay/commit/677e804))
+-   **@clayui/css:** Cadmin Form Validation adds missing styles for `.form-feedback-group`, `.form-feedback-item`,`.form-feedback-indicator`, and `.form-text` ([db26016](https://github.com/liferay/clay/commit/db26016)), closes [#4298](https://github.com/liferay/clay/issues/4298)
+-   **@clayui/css:** Cadmin Forms `fieldset[disabled] .form-control` should use values from the `$cadmin-input` Sass map and move rule-set closer to the `.form-control` rule-set ([0504ff2](https://github.com/liferay/clay/commit/0504ff2))
+-   **@clayui/css:** Cadmin Forms `label.disabled` should use properties declared in `$cadmin-input-label` map and move the `label.disabled` rule-set closer to the `label` rule-set ([d00b97b](https://github.com/liferay/clay/commit/d00b97b))
+-   **@clayui/css:** Cards and Panels remove decision making if statements from border-radius and border-width. They were used to save a few bytes of CSS, not worth. ([be44a21](https://github.com/liferay/clay/commit/be44a21))
+-   **@clayui/css:** Carousel, Custom Forms convert variables using Bootstrap's `url("data:image/svg+xml,<svg></svg>")` to use `clay-svg-url` ([c1cd8a2](https://github.com/liferay/clay/commit/c1cd8a2))
+-   **@clayui/css:** Form Validation use `clay-form-control-variant` to style Danger, Warning, Success readonly inputs instead of `clay-button-variant` ([23ed8cb](https://github.com/liferay/clay/commit/23ed8cb))
+-   **@clayui/css:** Forms `fieldset[disabled] .form-control` should use values from the `$input` Sass map and move rule-set closer to the `.form-control` rule-set ([9ffc635](https://github.com/liferay/clay/commit/9ffc635))
+-   **@clayui/css:** Forms `label.disabled` should use properties declared in `$input-label` map and move the `label.disabled` rule-set closer to the `label` rule-set ([0ea7c72](https://github.com/liferay/clay/commit/0ea7c72))
+-   **@clayui/css:** Global Functions `math-sign` should return a negative calc value if a CSS custom property is passed in ([e824c5d](https://github.com/liferay/clay/commit/e824c5d))
+-   **@clayui/css:** Global Functions deprecate Bootstrap's `escape-svg` function ([e8ffa5d](https://github.com/liferay/clay/commit/e8ffa5d))
+-   **@clayui/css:** Global Variables deprecate Bootstrap 4 `$enable-hover-media-query`, `$caret-width`, `$caret-vertical-align`, `$caret-spacing`, `$emphasized-link-hover-darken-percentage` ([54d39f9](https://github.com/liferay/clay/commit/54d39f9))
+-   **@clayui/css:** Global Variables deprecate Bootstrap's `$escaped-characters` variable ([9b93ca0](https://github.com/liferay/clay/commit/9b93ca0))
+-   **@clayui/css:** Inverse Sass variable values should use the `math-sign` function ([835a62a](https://github.com/liferay/clay/commit/835a62a))
+-   **@clayui/css:** Mixins Alerts adds `clay-alert-variant` mixin and deprecate Bootstrap's `alert-variant` mixin ([a3f1722](https://github.com/liferay/clay/commit/a3f1722))
+-   **@clayui/form:** change the Dual List Box ordering side following the right side as the default behavior ([d4b9630](https://github.com/liferay/clay/commit/d4b9630))
+-   **@clayui/shared:** fix error when controlling internal state using external value and internal controller ([d17eba5](https://github.com/liferay/clay/commit/d17eba5))
+-   **clayui.com:** add missing authors ([dc1b787](https://github.com/liferay/clay/commit/dc1b787))
+
+### Features
+
+-   **@clayui/core:** add initial dnd implementation for TreeView ([fe1e286](https://github.com/liferay/clay/commit/fe1e286))
+-   **@clayui/core:** adds the implementation of modifying the Tree by copying the partial structure ([4b67f61](https://github.com/liferay/clay/commit/4b67f61))
+-   **@clayui/core:** implement move functionality for tree ([a0ea6e5](https://github.com/liferay/clay/commit/a0ea6e5))
+-   **@clayui/css:** adds new classes `treeview-dropping-bottom`, `treeview-dropping-inside` and `treeview-dropping-top` ([f0b4c5e](https://github.com/liferay/clay/commit/f0b4c5e))
+-   **@clayui/css:** Alerts adds components `.alert-inline`, `alert-autofit-stacked`, `alert-autofit-stacked-sm-down`, `alert-autofit-stacked-xs-down`, `alert-indicator-start` ([7738e78](https://github.com/liferay/clay/commit/7738e78))
+-   **@clayui/css:** Cadmin Alerts adds components `.alert-inline`, `alert-autofit-stacked`, `alert-autofit-stacked-sm-down`, `alert-autofit-stacked-xs-down`, `alert-indicator-start` ([b60b0c7](https://github.com/liferay/clay/commit/b60b0c7))
+-   **@clayui/css:** Cadmin Form Validation adds `$cadmin-input-danger`, `$cadmin-input-warning`, `$cadmin-input-success`, `$cadmin-input-danger-select`, `$cadmin-input-warning-select`, `$cadmin-input-success-select` Sass maps with `clay-form-control-variant` and `clay-select-variant` for more customization options ([df1e426](https://github.com/liferay/clay/commit/df1e426))
+-   **@clayui/css:** Form Validation adds `$input-danger`, `$input-warning`, `$input-success`, `$input-danger-select`, `$input-warning-select`, `$input-success-select` Sass maps with `clay-form-control-variant` and `clay-select-variant` for more customization options ([c23c8f5](https://github.com/liferay/clay/commit/c23c8f5))
+
+### BREAKING CHANGES
+
+-   **@clayui/css:** `sticker-light` now has a light font color and `sticker-dark` has a dark font color. All instances of `sticker-light` should be updated to use `sticker-dark` and all instances of `sticker-dark` should be updated to use `sticker-light`. If you do not want to make this change in your markup, you can revert back to the original styles with:
+
+```
+$sticker-light-bg: $dark !default;
+$sticker-light-color: $white !default;
+
+$sticker-dark-bg: $dark !default;
+$sticker-dark-color: $white !default;
+```
+
 # [3.36.0](https://github.com/liferay/clay/compare/v3.35.3...v3.36.0) (2021-09-23)
 
 ### Bug Fixes

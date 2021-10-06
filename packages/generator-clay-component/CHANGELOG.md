@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/liferay/clay/compare/v3.36.0...v4.0.0) (2021-10-06)
+
+**Note:** Version bump only for package generator-clay-component
+
 # [3.0.0](https://github.com/liferay/clay/compare/generator-clay-component@3.0.0-alpha.2...generator-clay-component@3.0.0) (2020-04-24)
 
 ### Features
