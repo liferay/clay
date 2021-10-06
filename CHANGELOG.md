@@ -1,3 +1,6 @@
+### v1.0.34 - October 6, 2021
+* Fixes [#4318](https://github.com/liferay/clay/issues/4318)Accessibility change request, bootstrap.css .dropdown-toggle has 'outline: 0;'
+
 ### v1.0.33 - September 29, 2021
 * Fixes [#4314](https://github.com/liferay/clay/issues/4314)Accessibility errors using OAW tool, remove IE7 CSS rules starting with * in Alloy Font Awesome
 
