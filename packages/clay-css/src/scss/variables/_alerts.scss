@@ -6,7 +6,7 @@ $alert-border-style: solid !default;
 $alert-border-width: $border-width !default;
 
 $alert-border-radius: $border-radius !default;
-
+$alert-font-size: null !default;
 $alert-margin-bottom: 1rem !default;
 $alert-padding-x: 1.25rem !default;
 $alert-padding-y: 0.75rem !default;
@@ -115,22 +115,80 @@ $alert-close: map-deep-merge(
 	$alert-close
 );
 
-$alert-font-size: null !default;
-
 $alert-lead-font-size: null !default;
 $alert-lead-font-weight: null !default;
 $alert-lead-spacer-x: 0.3125rem !default;
+
+$alert-title: () !default;
+
+$alert-subtitle: () !default;
+
+$alert: () !default;
+$alert: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: $alert-border-style,
+		border-width: $alert-border-width,
+		border-radius: clay-enable-rounded($alert-border-radius),
+		display: block,
+		font-size: $alert-font-size,
+		margin-bottom: $alert-margin-bottom,
+		padding: $alert-padding-y $alert-padding-x,
+		position: relative,
+		word-wrap: break-word,
+		alert-btn: $alert-btn,
+		btn-group: $alert-btn-group,
+		btn-group-item: $alert-btn-group-item,
+		close: $alert-close,
+		lead: (
+			font-size: $alert-lead-font-size,
+			font-weight: $alert-lead-font-weight,
+			margin-right: $alert-lead-spacer-x,
+		),
+		component-title: $alert-title,
+		component-subtitle: $alert-subtitle,
+	),
+	$alert
+);
+
+// .alert-link
 
 $alert-link-decoration: null !default;
 $alert-link-font-weight: $font-weight-bold !default;
 
 $alert-link-hover-decoration: underline !default;
 
+$alert-link: () !default;
+$alert-link: map-deep-merge(
+	(
+		font-weight: $alert-link-font-weight,
+		text-decoration: $alert-link-decoration,
+		hover: (
+			text-decoration: $alert-link-hover-decoration,
+		),
+		focus: (
+			text-decoration: $alert-link-hover-decoration,
+		),
+	),
+	$alert-link
+);
+
+// .alert-indicator
+
 $alert-indicator-font-size: 1.25rem !default;
 
-$alert-title: () !default;
+$alert-indicator: () !default;
+$alert-indicator: map-deep-merge(
+	(
+		font-size: $alert-indicator-font-size,
+		lead: (
+			margin-left: $alert-lead-spacer-x,
+		),
+	),
+	$alert-indicator
+);
 
-$alert-subtitle: () !default;
+// .alert-footer
 
 $alert-footer: () !default;
 $alert-footer: map-deep-merge(
@@ -146,6 +204,17 @@ $alert-dismissible-padding-bottom: null !default;
 $alert-dismissible-padding-left: null !default;
 $alert-dismissible-padding-right: 2.5rem !default;
 $alert-dismissible-padding-top: null !default;
+
+$alert-dismissible: () !default;
+$alert-dismissible: map-deep-merge(
+	(
+		padding-bottom: $alert-dismissible-padding-bottom,
+		padding-left: $alert-dismissible-padding-left,
+		padding-right: $alert-dismissible-padding-right,
+		padding-top: $alert-dismissible-padding-top,
+	),
+	$alert-dismissible
+);
 
 // Alert Fluid
 
@@ -196,7 +265,17 @@ $alert-fluid-dismissible-container: map-merge(
 	$alert-fluid-dismissible-container
 );
 
-// Alert Notification
+// .alert-fluid .close
+
+$alert-fluid-close: () !default;
+$alert-fluid-close: map-deep-merge(
+	(
+		right: calc(#{$grid-gutter-width / 2} + 0.25rem),
+	),
+	$alert-fluid-close
+);
+
+// .alert-notifications-absolute
 
 $alert-notifications-absolute-bottom: null !default;
 $alert-notifications-absolute-left: null !default;
@@ -208,6 +287,29 @@ $alert-notifications-absolute-left-mobile: 0.5rem !default;
 $alert-notifications-absolute-right-mobile: 0.5rem !default;
 $alert-notifications-absolute-top-mobile: 4.25rem !default;
 
+$alert-notifications-absolute: () !default;
+$alert-notifications-absolute: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		bottom: $alert-notifications-absolute-bottom,
+		height: 0,
+		left: $alert-notifications-absolute-left,
+		position: absolute,
+		right: $alert-notifications-absolute-right,
+		top: $alert-notifications-absolute-top,
+		z-index: $zindex-alert-notifications,
+		mobile: (
+			bottom: $alert-notifications-absolute-bottom-mobile,
+			left: $alert-notifications-absolute-left-mobile,
+			right: $alert-notifications-absolute-right-mobile,
+			top: $alert-notifications-absolute-top-mobile,
+		),
+	),
+	$alert-notifications-absolute
+);
+
+// .alert-notifications-fixed
+
 $alert-notifications-fixed-bottom: 1.25rem !default;
 $alert-notifications-fixed-left: 1.25rem !default;
 $alert-notifications-fixed-right: null !default;
@@ -217,6 +319,28 @@ $alert-notifications-fixed-bottom-mobile: 1rem !default;
 $alert-notifications-fixed-left-mobile: ($grid-gutter-width / 2) !default;
 $alert-notifications-fixed-right-mobile: ($grid-gutter-width / 2) !default;
 $alert-notifications-fixed-top-mobile: null !default;
+
+$alert-notifications-fixed: () !default;
+$alert-notifications-fixed: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		bottom: $alert-notifications-fixed-bottom,
+		left: $alert-notifications-fixed-left,
+		position: fixed,
+		right: $alert-notifications-fixed-right,
+		top: $alert-notifications-fixed-top,
+		z-index: $zindex-alert-notifications,
+		mobile: (
+			bottom: $alert-notifications-fixed-bottom-mobile,
+			left: $alert-notifications-fixed-left-mobile,
+			right: $alert-notifications-fixed-right-mobile,
+			top: $alert-notifications-fixed-top-mobile,
+		),
+	),
+	$alert-notifications-fixed
+);
+
+// .alert-notifications
 
 $alert-notifications-box-shadow: null !default;
 $alert-notifications-max-width: 22.5rem !default;

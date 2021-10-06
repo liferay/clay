@@ -1,46 +1,5 @@
 .alert {
-	border-color: transparent;
-	border-style: $alert-border-style;
-	border-width: $alert-border-width;
-
-	@include border-radius($alert-border-radius);
-
-	display: block;
-	font-size: $alert-font-size;
-	margin-bottom: $alert-margin-bottom;
-	padding: $alert-padding-y $alert-padding-x;
-	position: relative;
-	word-wrap: break-word;
-
-	.alert-btn {
-		@include clay-button-variant($alert-btn);
-	}
-
-	.btn-group {
-		@include clay-container($alert-btn-group);
-	}
-
-	.btn-group-item {
-		@include clay-container($alert-btn-group-item);
-	}
-
-	.close {
-		@include clay-close($alert-close);
-	}
-
-	.lead {
-		font-size: $alert-lead-font-size;
-		font-weight: $alert-lead-font-weight;
-		margin-right: $alert-lead-spacer-x;
-	}
-
-	.component-title {
-		@include clay-text-typography($alert-title);
-	}
-
-	.component-subtitle {
-		@include clay-text-typography($alert-subtitle);
-	}
+	@include clay-alert-variant($alert);
 }
 
 .alert-heading {
@@ -55,30 +14,23 @@
 
 .alert-link,
 .alert-link.btn-unstyled {
-	font-weight: $alert-link-font-weight;
-	text-decoration: $alert-link-decoration;
-
-	&:hover,
-	&:focus {
-		text-decoration: $alert-link-hover-decoration;
-	}
+	@include clay-link($alert-link);
 }
 
 .alert-indicator {
-	font-size: $alert-indicator-font-size;
+	@include clay-css($alert-indicator);
 
 	+ .lead {
-		margin-left: $alert-lead-spacer-x;
+		$lead: setter(map-get($alert-indicator, lead), ());
+
+		@include clay-css($lead);
 	}
 }
 
 // Alert Dismissible
 
 .alert-dismissible {
-	padding-bottom: $alert-dismissible-padding-bottom;
-	padding-left: $alert-dismissible-padding-left;
-	padding-right: $alert-dismissible-padding-right;
-	padding-top: $alert-dismissible-padding-top;
+	@include clay-css($alert-dismissible);
 }
 
 // Alert Fluid
@@ -99,7 +51,7 @@
 	}
 
 	.close {
-		right: calc(#{$grid-gutter-width / 2} + #{$nav-btn-margin-x});
+		@include clay-close($alert-fluid-close);
 	}
 }
 
@@ -130,35 +82,26 @@
 }
 
 .alert-notifications-absolute {
-	bottom: $alert-notifications-absolute-bottom;
-	height: 0;
-	left: $alert-notifications-absolute-left;
-	position: absolute;
-	right: $alert-notifications-absolute-right;
-	top: $alert-notifications-absolute-top;
-	z-index: $zindex-alert-notifications;
+	$breakpoint-down: map-get($alert-notifications-absolute, breakpoint-down);
 
-	@include clay-scale-component {
-		bottom: $alert-notifications-absolute-bottom-mobile;
-		left: $alert-notifications-absolute-left-mobile;
-		right: $alert-notifications-absolute-right-mobile;
-		top: $alert-notifications-absolute-top-mobile;
+	@include clay-css($alert-notifications-absolute);
+
+	@include clay-scale-component(null, $breakpoint-down) {
+		$mobile: setter(map-get($alert-notifications-absolute, mobile), ());
+
+		@include clay-css($mobile);
 	}
 }
 
 .alert-notifications-fixed {
-	bottom: $alert-notifications-fixed-bottom;
-	left: $alert-notifications-fixed-left;
-	position: fixed;
-	right: $alert-notifications-fixed-right;
-	top: $alert-notifications-fixed-top;
-	z-index: $zindex-alert-notifications;
+	$breakpoint-down: map-get($alert-notifications-fixed, breakpoint-down);
 
-	@include clay-scale-component {
-		bottom: $alert-notifications-fixed-bottom-mobile;
-		left: $alert-notifications-fixed-left-mobile;
-		right: $alert-notifications-fixed-right-mobile;
-		top: $alert-notifications-fixed-top-mobile;
+	@include clay-css($alert-notifications-fixed);
+
+	@include clay-scale-component(null, $breakpoint-down) {
+		$mobile: setter(map-get($alert-notifications-fixed, mobile), ());
+
+		@include clay-css($mobile);
 	}
 }
 
