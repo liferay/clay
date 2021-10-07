@@ -111,6 +111,7 @@ $alert-indicator-start: map-deep-merge(
 		),
 		alert-indicator: (
 			margin-left: calc(-1em - 0.5rem),
+			margin-top: 2px,
 		),
 	),
 	$alert-indicator-start

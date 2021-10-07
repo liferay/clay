@@ -408,6 +408,7 @@ $alert-indicator-start: map-deep-merge(
 				),
 		),
 		alert-indicator: (
+			line-height: 1,
 			margin-left:
 				calc(
 					-1em - #{map-deep-get(
@@ -416,6 +417,7 @@ $alert-indicator-start: map-deep-merge(
 							padding-left
 						)}
 				),
+			margin-top: 4px,
 			position: absolute,
 			lead: (
 				margin-left: 0,
