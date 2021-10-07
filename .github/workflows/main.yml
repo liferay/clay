@@ -12,6 +12,10 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
+              with:
+                node-version: '14'
+            - name: Clean yarn cache
+              run: yarn cache clean
             - name: Install Dependencies
               run: yarn install
             - name: Lint
@@ -36,6 +40,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
+              with:
+                node-version: '10'
             - name: Fetch and Diff
               id: diff
               run: |
@@ -50,6 +56,7 @@ jobs:
             - name: Generate Build Info
               if: ${{ steps.diff.outputs.packages }}
               run: |
+                  yarn cache clean
                   yarn install
                   node ./node_modules/.bin/lerna run --ignore \"clayui.com\" build
                   yarn genBuildSize
@@ -64,9 +71,13 @@ jobs:
               with:
                   ref: ${{ github.event.pull_request.head.sha }}
                   clean: false
+            - uses: actions/setup-node@v2
+              with:
+                node-version: '14'
             - name: Generate Bundle Size Table
               if: ${{ steps.diff.outputs.packages }}
               run: |
+                  yarn cache clean
                   yarn install
                   node ./node_modules/.bin/lerna run --ignore \"clayui.com\" build
                   yarn genBuildSize:compare
