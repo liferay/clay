@@ -90,21 +90,6 @@ $alert-notification: map-merge(
 	$alert-notification
 );
 
-// Alert Autofit Row
-
-$alert-autofit-row: () !default;
-$alert-autofit-row: map-deep-merge(
-	(
-		margin-left: -0.25rem,
-		margin-right: -0.25rem,
-		autofit-col: (
-			padding-left: 0.25rem,
-			padding-right: 0.25rem,
-		),
-	),
-	$alert-autofit-row
-);
-
 // .alert-indicator-start.alert
 
 $alert-indicator-start: () !default;

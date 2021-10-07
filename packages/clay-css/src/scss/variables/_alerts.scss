@@ -316,6 +316,9 @@ $alert-inline: map-deep-merge(
 			padding-bottom: 0.5625rem,
 			padding-top: 0.5625rem,
 			min-height: 3.5rem,
+			btn-group: (
+				margin-right: 2rem,
+			),
 		),
 		close: (
 			margin-top: math-sign(1rem),
@@ -340,6 +343,7 @@ $alert-autofit-stacked: map-deep-merge(
 				width: 100%,
 			),
 			btn-group: (
+				margin-right: 0,
 				margin-top: 0.875rem,
 			),
 		),
