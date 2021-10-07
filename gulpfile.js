@@ -104,13 +104,14 @@ gulp.task(
 						if (answers.publish) {
 							var args = [
 								'release:git',
+								'release:build',
 								'release:publish',
 								cb
 							];
 
 							if (answers.packageManagers) {
-								args.splice(2, 0, 'maven-publish');
-								args.splice(3, 0, 'release:npm');
+								args.splice(3, 0, 'maven-publish');
+								args.splice(4, 0, 'release:npm');
 							}
 
 							runSequence.apply(null, args);
