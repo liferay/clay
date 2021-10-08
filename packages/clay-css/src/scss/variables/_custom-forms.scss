@@ -20,7 +20,7 @@ $custom-control-indicator-position-top: 0.25rem !default;
 $custom-control-indicator-focus-border-color: $input-focus-border-color !default;
 $custom-control-indicator-focus-box-shadow: $input-focus-box-shadow !default;
 
-$custom-control-indicator-active-bg: lighten(
+$custom-control-indicator-active-bg: clay-lighten(
 	$component-active-bg,
 	0.35
 ) !default;
@@ -446,7 +446,7 @@ $custom-range-thumb-focus-box-shadow-width: $input-focus-width !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-range-thumb-active-bg: lighten($component-active-bg, 35%) !default;
+$custom-range-thumb-active-bg: clay-lighten($component-active-bg, 35%) !default;
 
 /// @deprecated as of v3.x with no replacement
 

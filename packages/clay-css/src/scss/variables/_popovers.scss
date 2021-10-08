@@ -11,7 +11,7 @@ $popover-max-width: 276px !default;
 
 $popover-inline-scroller-max-height: 14.75rem !default;
 
-$popover-header-bg: darken($popover-bg, 3%) !default;
+$popover-header-bg: clay-darken($popover-bg, 3%) !default;
 $popover-header-border-color: null !default;
 $popover-header-color: $headings-color !default;
 $popover-header-font-size: $font-size-base !default;

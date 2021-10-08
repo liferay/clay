@@ -20,13 +20,9 @@
 		background: $color
 			linear-gradient(
 				180deg,
-				mix(
+				clay-mix(
 					setter(
-						if(
-							variable-exists(body-bg),
-							clay-get-fallback($body-bg),
-							$cadmin-body-bg
-						),
+						if(variable-exists(body-bg), $body-bg, $cadmin-body-bg),
 						#fff
 					),
 					$color,

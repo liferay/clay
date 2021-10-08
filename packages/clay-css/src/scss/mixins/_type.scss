@@ -17,7 +17,7 @@
 		a#{$parent} {
 			&:hover,
 			&:focus {
-				color: darken(
+				color: clay-darken(
 					$color,
 					$emphasized-link-hover-darken-percentage
 				) !important;

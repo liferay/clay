@@ -405,8 +405,8 @@ $alert-light-btn: map-deep-merge(
 			color: $white,
 		),
 		active: (
-			background-color: darken($dark, 5%),
-			border-color: darken($dark, 5%),
+			background-color: clay-darken($dark, 5%),
+			border-color: clay-darken($dark, 5%),
 		),
 	),
 	$alert-light-btn

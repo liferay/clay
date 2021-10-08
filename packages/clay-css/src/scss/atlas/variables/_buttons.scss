@@ -377,7 +377,8 @@ $btn-outline-primary: map-deep-merge(
 			color: $primary,
 		),
 		active: (
-			background-color: lighten(desaturate($primary, 42.05), 41.76),
+			background-color:
+				clay-lighten(clay-desaturate($primary, 42.05), 41.76),
 			color: $primary,
 			box-shadow: map-deep-get($btn-primary, active, box-shadow),
 			focus: (

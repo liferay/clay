@@ -1,0 +1,171 @@
+////
+/// @group colors
+////
+
+/// A function that checks if the user prefers having Sass process CSS Custom Property fallback colors or if they prefer returning the CSS Custom Property as is. It returns `false` if the variables `$enable-clay-color-functions-process-fallback` and `$cadmin-enable-clay-color-functions-process-fallback` do not exist.
+
+@function clay-color-functions-process-fallback() {
+	$enable: if(
+		variable-exists(enable-clay-color-functions-process-fallback),
+		$enable-clay-color-functions-process-fallback,
+		if(
+			variable-exists(
+				cadmin-enable-clay-color-functions-process-fallback
+			),
+			$cadmin-enable-clay-color-functions-process-fallback,
+			false
+		)
+	);
+
+	@return $enable;
+}
+
+/// A function that checks the value of a Sass variable and returns `true` if the value is a CSS Custom Property.
+/// @param {Color | List | Map | Null | Number | String } $var - The variable to check
+
+@function is-css-var($var) {
+	@if (type-of($var) == 'string' and str-slice($var, 1, 3) == 'var') {
+		@return true;
+	}
+
+	@return false;
+}
+
+/// An alias for the Sass `darken` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to darken
+/// @param {Number} $amount - A number between 0% and 100%
+
+@function clay-darken($color, $amount) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+	$amount: clay-get-fallback($amount);
+
+	@return darken($color, $amount);
+}
+
+/// An alias for the Sass `lighten` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to lighten
+/// @param {Number} $amount - A number between 0% and 100%
+
+@function clay-lighten($color, $amount) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+	$amount: clay-get-fallback($amount);
+
+	@return lighten($color, $amount);
+}
+
+/// An alias for the Sass `adjust-hue` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to adjust
+/// @param {Number} $degrees - A number between -360deg and 360deg
+
+@function clay-adjust-hue($color, $degrees) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+	$degrees: clay-get-fallback($degrees);
+
+	@return adjust-hue($color, $degrees);
+}
+
+/// An alias for the Sass `desaturate` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to desaturate
+/// @param {Number} $amount - A number between 0% and 100%
+
+@function clay-desaturate($color, $amount) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+	$amount: clay-get-fallback($amount);
+
+	@return desaturate($color, $amount);
+}
+
+/// An alias for the Sass `saturate` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to saturate
+/// @param {Number} $amount - A number between 0% and 100%
+
+@function clay-saturate($color, $amount) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+	$amount: clay-get-fallback($amount);
+
+	@return saturate($color, $amount);
+}
+
+/// An alias for the Sass `mix` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color1 - The first color to mix
+/// @param {Color} $color2 - The second color to mix
+/// @param {Number} $weight - A number between 0% and 100%
+
+@function clay-mix($color1, $color2, $weight: 50%) {
+	@if (is-css-var($color1) and not clay-color-functions-process-fallback()) {
+		@return $color1;
+	}
+
+	@if (is-css-var($color2) and not clay-color-functions-process-fallback()) {
+		@return $color2;
+	}
+
+	@if (is-css-var($weight) and not clay-color-functions-process-fallback()) {
+		@return $weight;
+	}
+
+	$color1: clay-get-fallback($color1);
+	$color2: clay-get-fallback($color2);
+	$weight: clay-get-fallback($weight);
+
+	@return mix($color1, $color2, $weight);
+}
+
+/// An alias for the Sass `blue` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to get the blue channel from
+
+@function clay-blue($color) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+
+	@return blue($color);
+}
+
+/// An alias for the Sass `green` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to get the green channel from
+
+@function clay-green($color) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+
+	@return green($color);
+}
+
+/// An alias for the Sass `red` function. It converts CSS Custom Properties with a fallback value to the correct type in Sass.
+/// @param {Color} $color - The color to get the red channel from
+
+@function clay-red($color) {
+	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+		@return $color;
+	}
+
+	$color: clay-get-fallback($color);
+
+	@return red($color);
+}

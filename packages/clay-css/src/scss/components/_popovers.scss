@@ -188,7 +188,8 @@
 .popover-header {
 	color: $popover-header-color;
 	background-color: $popover-header-bg;
-	border-bottom: $popover-border-width solid darken($popover-header-bg, 5%);
+	border-bottom: $popover-border-width solid
+		clay-darken($popover-header-bg, 5%);
 	@include border-top-radius($popover-inner-border-radius);
 }
 

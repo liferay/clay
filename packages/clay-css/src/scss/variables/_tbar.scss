@@ -393,7 +393,7 @@ $subnav-tbar-primary-disabled-component-label: map-deep-merge(
 $subnav-tbar-primary-disabled: () !default;
 $subnav-tbar-primary-disabled: map-deep-merge(
 	(
-		bg-color: lighten(desaturate($primary, 27.03), 37.06),
+		bg-color: clay-lighten(clay-desaturate($primary, 27.03), 37.06),
 		color: #6c757d,
 		component-label: $subnav-tbar-primary-disabled-component-label,
 	),

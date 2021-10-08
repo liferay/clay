@@ -68,7 +68,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 		link: (
 			color: $gray-600,
 			hover: (
-				color: darken($gray-600, 15),
+				color: clay-darken($gray-600, 15),
 			),
 			active: (
 				color: rgba($black, 0.9),
@@ -85,7 +85,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			color: $gray-900,
 			hover: (
 				background-color: $gray-100,
-				color: darken($gray-900, 5%),
+				color: clay-darken($gray-900, 5%),
 			),
 			active: (
 				background-color: $component-active-bg,
@@ -235,7 +235,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 		link: (
 			color: $gray-600,
 			hover: (
-				color: darken($gray-600, 15),
+				color: clay-darken($gray-600, 15),
 			),
 			active: (
 				color: rgba($black, 0.9),
@@ -252,7 +252,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			color: $gray-900,
 			hover: (
 				background-color: $gray-100,
-				color: darken($gray-900, 5%),
+				color: clay-darken($gray-900, 5%),
 			),
 			active: (
 				background-color: $component-active-bg,

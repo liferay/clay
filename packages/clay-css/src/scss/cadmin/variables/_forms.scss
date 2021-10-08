@@ -27,8 +27,11 @@ $cadmin-input-height-mobile: null !default;
 
 // Input Focus
 
-$cadmin-input-focus-bg: lighten($cadmin-component-active-bg, 44.9) !default;
-$cadmin-input-focus-border-color: lighten(
+$cadmin-input-focus-bg: clay-lighten(
+	$cadmin-component-active-bg,
+	44.9
+) !default;
+$cadmin-input-focus-border-color: clay-lighten(
 	$cadmin-component-active-bg,
 	22.94
 ) !default;

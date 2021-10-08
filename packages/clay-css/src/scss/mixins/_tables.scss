@@ -32,7 +32,7 @@
 	// Note: this is not available for cells or rows within `thead` or `tfoot`.
 
 	.table-hover {
-		$hover-background: darken($background, 5%);
+		$hover-background: clay-darken($background, 5%);
 
 		.table-#{$state} {
 			@include hover() {

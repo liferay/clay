@@ -395,7 +395,7 @@ $cadmin-subnav-tbar-primary-disabled-component-label: map-deep-merge(
 $cadmin-subnav-tbar-primary-disabled: () !default;
 $cadmin-subnav-tbar-primary-disabled: map-deep-merge(
 	(
-		bg-color: lighten(desaturate($cadmin-primary, 27.03), 37.06),
+		bg-color: clay-lighten(clay-desaturate($cadmin-primary, 27.03), 37.06),
 		color: #8e94aa,
 		component-label: $cadmin-subnav-tbar-primary-disabled-component-label,
 	),

@@ -134,49 +134,49 @@ $bg-theme-colors: map-deep-merge(
 		'primary': (
 			background-color: $primary !important,
 			hover: (
-				background-color: darken($primary, 10%) !important,
+				background-color: clay-darken($primary, 10%) !important,
 			),
 		),
 		'secondary': (
 			background-color: $secondary !important,
 			hover: (
-				background-color: darken($secondary, 10%) !important,
+				background-color: clay-darken($secondary, 10%) !important,
 			),
 		),
 		'success': (
 			background-color: $success !important,
 			hover: (
-				background-color: darken($success, 10%) !important,
+				background-color: clay-darken($success, 10%) !important,
 			),
 		),
 		'info': (
 			background-color: $info !important,
 			hover: (
-				background-color: darken($info, 10%) !important,
+				background-color: clay-darken($info, 10%) !important,
 			),
 		),
 		'warning': (
 			background-color: $warning !important,
 			hover: (
-				background-color: darken($warning, 10%) !important,
+				background-color: clay-darken($warning, 10%) !important,
 			),
 		),
 		'danger': (
 			background-color: $danger !important,
 			hover: (
-				background-color: darken($danger, 10%) !important,
+				background-color: clay-darken($danger, 10%) !important,
 			),
 		),
 		'light': (
 			background-color: $light !important,
 			hover: (
-				background-color: darken($light, 10%) !important,
+				background-color: clay-darken($light, 10%) !important,
 			),
 		),
 		'dark': (
 			background-color: $dark !important,
 			hover: (
-				background-color: darken($dark, 10%) !important,
+				background-color: clay-darken($dark, 10%) !important,
 			),
 		),
 		'white': (
@@ -196,7 +196,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 			background: $primary
 				linear-gradient(
 					180deg,
-					mix(clay-get-fallback($body-bg), $primary, 15%),
+					clay-mix($body-bg, $primary, 15%),
 					$primary
 				)
 				repeat-x !important,
@@ -205,7 +205,7 @@ $bg-gradient-theme-colors: map-deep-merge(
 			background: $secondary
 				linear-gradient(
 					180deg,
-					mix(clay-get-fallback($body-bg), $secondary, 15%),
+					clay-mix($body-bg, $secondary, 15%),
 					$secondary
 				)
 				repeat-x !important,
@@ -214,25 +214,21 @@ $bg-gradient-theme-colors: map-deep-merge(
 			background: $success
 				linear-gradient(
 					180deg,
-					mix(clay-get-fallback($body-bg), $success, 15%),
+					clay-clay-mix($body-bg, $success, 15%),
 					$success
 				)
 				repeat-x !important,
 		),
 		'info': (
 			background: $info
-				linear-gradient(
-					180deg,
-					mix(clay-get-fallback($body-bg), $info, 15%),
-					$info
-				)
+				linear-gradient(180deg, clay-mix($body-bg, $info, 15%), $info)
 				repeat-x !important,
 		),
 		'warning': (
 			background: $warning
 				linear-gradient(
 					180deg,
-					mix(clay-get-fallback($body-bg), $warning, 15%),
+					clay-mix($body-bg, $warning, 15%),
 					$warning
 				)
 				repeat-x !important,
@@ -241,27 +237,19 @@ $bg-gradient-theme-colors: map-deep-merge(
 			background: $danger
 				linear-gradient(
 					180deg,
-					mix(clay-get-fallback($body-bg), $danger, 15%),
+					clay-mix($body-bg, $danger, 15%),
 					$danger
 				)
 				repeat-x !important,
 		),
 		'light': (
 			background: $light
-				linear-gradient(
-					180deg,
-					mix(clay-get-fallback($body-bg), $light, 15%),
-					$light
-				)
+				linear-gradient(180deg, clay-mix($body-bg, $light, 15%), $light)
 				repeat-x !important,
 		),
 		'dark': (
 			background: $dark
-				linear-gradient(
-					180deg,
-					mix(clay-get-fallback($body-bg), $dark, 15%),
-					$dark
-				)
+				linear-gradient(180deg, clay-mix($body-bg, $dark, 15%), $dark)
 				repeat-x !important,
 		),
 	),
@@ -326,7 +314,10 @@ $text-theme-colors: map-deep-merge(
 			color: $primary !important,
 			hover: (
 				color:
-					darken($primary, $emphasized-link-hover-darken-percentage)
+					clay-darken(
+						$primary,
+						$emphasized-link-hover-darken-percentage
+					)
 					!important,
 			),
 		),
@@ -334,7 +325,10 @@ $text-theme-colors: map-deep-merge(
 			color: $secondary !important,
 			hover: (
 				color:
-					darken($secondary, $emphasized-link-hover-darken-percentage)
+					clay-darken(
+						$secondary,
+						$emphasized-link-hover-darken-percentage
+					)
 					!important,
 			),
 		),
@@ -342,14 +336,18 @@ $text-theme-colors: map-deep-merge(
 			color: $success !important,
 			hover: (
 				color:
-					darken($success, $emphasized-link-hover-darken-percentage)
+					clay-darken(
+						$success,
+						$emphasized-link-hover-darken-percentage
+					)
 					!important,
 			),
 		),
 		'info': (
 			color: $info !important,
 			hover: (
-				color: darken($info, $emphasized-link-hover-darken-percentage)
+				color:
+					clay-darken($info, $emphasized-link-hover-darken-percentage)
 					!important,
 			),
 		),
@@ -357,28 +355,40 @@ $text-theme-colors: map-deep-merge(
 			color: $warning !important,
 			hover: (
 				color:
-					darken($warning, $emphasized-link-hover-darken-percentage)
+					clay-darken(
+						$warning,
+						$emphasized-link-hover-darken-percentage
+					)
 					!important,
 			),
 		),
 		'danger': (
 			color: $danger !important,
 			hover: (
-				color: darken($danger, $emphasized-link-hover-darken-percentage)
+				color:
+					clay-darken(
+						$danger,
+						$emphasized-link-hover-darken-percentage
+					)
 					!important,
 			),
 		),
 		'light': (
 			color: $light !important,
 			hover: (
-				color: darken($light, $emphasized-link-hover-darken-percentage)
+				color:
+					clay-darken(
+						$light,
+						$emphasized-link-hover-darken-percentage
+					)
 					!important,
 			),
 		),
 		'dark': (
 			color: $dark !important,
 			hover: (
-				color: darken($dark, $emphasized-link-hover-darken-percentage)
+				color:
+					clay-darken($dark, $emphasized-link-hover-darken-percentage)
 					!important,
 			),
 		),

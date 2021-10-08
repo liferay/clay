@@ -33,7 +33,7 @@
 	button.bg-#{$cadmin-color} {
 		&:hover,
 		&:focus {
-			background-color: darken($cadmin-value, 10%) !important;
+			background-color: clay-darken($cadmin-value, 10%) !important;
 		}
 	}
 }
@@ -44,7 +44,7 @@
 			background: $cadmin-value
 				linear-gradient(
 					180deg,
-					mix($cadmin-body-bg, $cadmin-value, 15%),
+					clay-mix($cadmin-body-bg, $cadmin-value, 15%),
 					$cadmin-value
 				)
 				repeat-x !important;
@@ -763,7 +763,7 @@
 		a.text-#{$cadmin-color} {
 			&:hover,
 			&:focus {
-				color: darken(
+				color: clay-darken(
 					$cadmin-value,
 					$cadmin-emphasized-link-hover-darken-percentage
 				) !important;

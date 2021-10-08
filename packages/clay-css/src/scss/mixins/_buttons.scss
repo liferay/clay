@@ -485,10 +485,10 @@
 @mixin button-variant(
 	$background,
 	$border,
-	$hover-background: darken($background, 7.5%),
-	$hover-border: darken($border, 10%),
-	$active-background: darken($background, 10%),
-	$active-border: darken($border, 12.5%)
+	$hover-background: clay-darken($background, 7.5%),
+	$hover-border: clay-darken($border, 10%),
+	$active-background: clay-darken($background, 10%),
+	$active-border: clay-darken($border, 12.5%)
 ) {
 	@include gradient-bg($background);
 
@@ -517,13 +517,13 @@
 					0
 					0
 					$btn-focus-width
-					rgba(mix(color-yiq($background), $border, 15%), 0.5);
+					rgba(clay-mix(color-yiq($background), $border, 15%), 0.5);
 		} @else {
 			box-shadow: 0
 				0
 				0
 				$btn-focus-width
-				rgba(mix(color-yiq($background), $border, 15%), 0.5);
+				rgba(clay-mix(color-yiq($background), $border, 15%), 0.5);
 		}
 	}
 
@@ -556,13 +556,16 @@
 						0
 						0
 						$btn-focus-width
-						rgba(mix(color-yiq($background), $border, 15%), 0.5);
+						rgba(
+							clay-mix(color-yiq($background), $border, 15%),
+							0.5
+						);
 			} @else {
 				box-shadow: 0
 					0
 					0
 					$btn-focus-width
-					rgba(mix(color-yiq($background), $border, 15%), 0.5);
+					rgba(clay-mix(color-yiq($background), $border, 15%), 0.5);
 			}
 		}
 	}

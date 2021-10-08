@@ -33,7 +33,7 @@ $custom-control-indicator-checked-color: $component-active-color !default;
 
 // @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
 
-$custom-control-indicator-disabled-checked-bg: lighten(
+$custom-control-indicator-disabled-checked-bg: clay-lighten(
 	$component-active-bg,
 	32.94
 ) !default;
