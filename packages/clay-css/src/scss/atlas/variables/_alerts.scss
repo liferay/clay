@@ -1,3 +1,4 @@
+$alert-font-size: 0.875rem !default; // 14px
 $alert-padding-x: 1rem !default;
 $alert-padding-y: 0.9375rem !default;
 
@@ -27,16 +28,8 @@ $alert-close: map-deep-merge(
 	$alert-close
 );
 
-$alert-font-size: 0.875rem !default; // 14px
-
 $alert-lead-font-size: $alert-font-size !default;
 $alert-lead-font-weight: $font-weight-semi-bold !default;
-
-$alert-link-decoration: underline !default;
-$alert-link-hover-decoration: none !default;
-$alert-link-font-weight: $font-weight-semi-bold !default;
-
-$alert-indicator-font-size: 1rem !default;
 
 $alert-title: () !default;
 $alert-title: map-deep-merge(
@@ -56,6 +49,58 @@ $alert-subtitle: map-deep-merge(
 	),
 	$alert-subtitle
 );
+
+$alert: () !default;
+$alert: map-deep-merge(
+	(
+		border-width: $alert-border-width,
+		font-size: $alert-font-size,
+		padding: $alert-padding-y $alert-padding-x,
+		close: $alert-close,
+		lead: (
+			font-size: $alert-lead-font-size,
+			font-weight: $alert-lead-font-weight,
+		),
+		component-title: $alert-title,
+		component-subtitle: $alert-subtitle,
+	),
+	$alert
+);
+
+// .alert-link
+
+$alert-link-decoration: underline !default;
+$alert-link-hover-decoration: none !default;
+$alert-link-font-weight: $font-weight-semi-bold !default;
+
+$alert-link: () !default;
+$alert-link: map-deep-merge(
+	(
+		font-weight: $alert-link-font-weight,
+		text-decoration: $alert-link-decoration,
+		hover: (
+			text-decoration: $alert-link-hover-decoration,
+		),
+		focus: (
+			text-decoration: $alert-link-hover-decoration,
+		),
+	),
+	$alert-link
+);
+
+// .alert-indicator
+
+$alert-indicator-font-size: 1rem !default;
+
+$alert-indicator: () !default;
+$alert-indicator: map-deep-merge(
+	(
+		font-size: $alert-indicator-font-size,
+	),
+	$alert-indicator
+);
+
+// .alert-footer
 
 $alert-footer: () !default;
 $alert-footer: map-deep-merge(
