@@ -85,8 +85,6 @@ module.exports = function(gulp, plugins, _, config) {
 				}
 			);
 
-			license.metadata.version = bumpedVersion;
-
 			return gulp.src([
 				'src/fonts/**/*',
 				'src/images/icons/*',
