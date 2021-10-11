@@ -133,7 +133,7 @@ The scope could be anything specifying place of the commit change. For example `
 
 ### JavaScript Style Guide
 
-All JavaScript must adhere to the [Liferay JavaScript style guide](https://www.npmjs.com/package/eslint-config-liferay).
+All JavaScript must adhere to the [Liferay JavaScript style guide](https://www.npmjs.com/package/@liferay/eslint-plugin).
 
 ### CSS Guidelines
 
