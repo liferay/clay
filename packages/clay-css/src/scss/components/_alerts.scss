@@ -417,7 +417,11 @@
 // Alert Variants
 
 @each $color, $value in $alert-palette {
-	.alert-#{$color} {
+	%alert-#{$color} {
 		@include clay-alert-variant($value);
+	}
+
+	.alert-#{$color} {
+		@extend %alert-#{$color} !optional;
 	}
 }
