@@ -5,7 +5,7 @@
 
 'use strict';
 
-/* eslint-disable liferay/imports-first */
+/* eslint-disable @liferay/imports-first */
 
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
