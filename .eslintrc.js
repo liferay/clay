@@ -11,9 +11,9 @@ module.exports = {
 		jest: true,
 		node: true,
 	},
-	extends: 'liferay/react',
+	extends: ['plugin:@liferay/react'],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
+	plugins: ['@liferay', '@typescript-eslint'],
 	rules: {
 		'@typescript-eslint/array-type': ['error', {default: 'generic'}],
 		'@typescript-eslint/naming-convention': [
