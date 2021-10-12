@@ -102,16 +102,20 @@ $badge-item-spacer-x: 0.5em !default;
 $badge-close: () !default;
 $badge-close: map-deep-merge(
 	(
-		color: inherit,
-		opacity: 1,
-		hover-color: inherit,
-		hover-opacity: 1,
-		focus-opacity: 1,
 		border-radius: 1px,
+		color: inherit,
 		display: inline-flex,
 		font-size: inherit,
 		height: auto,
+		opacity: 1,
 		width: auto,
+		hover: (
+			color: inherit,
+			opacity: 1,
+		),
+		focus: (
+			opacity: 1,
+		),
 	),
 	$badge-close
 );
