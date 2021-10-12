@@ -61,6 +61,186 @@
 	}
 }
 
+@mixin clay-badge-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	$base: map-merge(
+		$map,
+		(
+			background-color:
+				setter(map-get($map, bg), map-get($map, background-color)),
+			padding-bottom:
+				setter(map-get($map, padding-y), map-get($map, padding-bottom)),
+			padding-left:
+				setter(map-get($map, padding-x), map-get($map, padding-left)),
+			padding-right:
+				setter(map-get($map, padding-x), map-get($map, padding-right)),
+			padding-top:
+				setter(map-get($map, padding-y), map-get($map, padding-top)),
+		)
+	);
+
+	$empty: setter(map-get($map, empty), ());
+
+	$href: setter(map-get($map, href), ());
+	$href: map-deep-merge(
+		$href,
+		(
+			hover: (
+				background-color:
+					setter(
+						map-get($map, hover-bg),
+						map-deep-get($href, hover, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, hover-border-color),
+						map-deep-get($href, hover, border-color)
+					),
+				color:
+					setter(
+						map-get($map, hover-color),
+						map-deep-get($href, hover, color)
+					),
+			),
+			focus: (
+				background-color:
+					setter(
+						map-get($map, hover-bg),
+						map-deep-get($href, focus, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, hover-border-color),
+						map-deep-get($href, focus, border-color)
+					),
+				color:
+					setter(
+						map-get($map, hover-color),
+						map-deep-get($href, focus, color)
+					),
+			),
+		)
+	);
+
+	$link: setter(map-get($map, link), ());
+	$link: map-deep-merge(
+		$link,
+		(
+			color: setter(map-get($map, link-color), map-get($link, color)),
+			hover: (
+				color:
+					setter(
+						map-get($map, link-hover-color),
+						map-deep-get($link, hover, color)
+					),
+			),
+			focus: (
+				color:
+					setter(
+						map-get($map, link-hover-color),
+						map-deep-get($link, focus, color)
+					),
+			),
+		)
+	);
+
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-merge(
+		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
+		),
+		$c-inner
+	);
+
+	$badge-item: setter(map-get($map, badge-item), ());
+
+	$badge-item-expand: setter(map-get($map, badge-item-expand), ());
+
+	$badge-item-before: setter(map-get($map, badge-item-before), ());
+
+	$badge-item-after: setter(map-get($map, badge-item-after), ());
+
+	@if ($enabled) {
+		@include clay-css($base);
+
+		// Empty badges collapse automatically
+
+		&:empty {
+			@include clay-css($empty);
+		}
+
+		&[href],
+		&[type] {
+			@include clay-link($href);
+		}
+
+		a {
+			@include clay-link($link);
+		}
+
+		.badge-item {
+			@include clay-css($badge-item);
+
+			a {
+				$link: setter(map-get($badge-item, link), ());
+
+				@include clay-link($link);
+			}
+
+			.btn-unstyled {
+				$btn-unstyled: setter(map-get($badge-item, btn-unstyled), ());
+
+				@include clay-button-variant($btn-unstyled);
+			}
+
+			.close {
+				$close: setter(map-get($badge-item, close), ());
+
+				@include clay-close($close);
+			}
+
+			.lexicon-icon {
+				$lexicon-icon: setter(map-get($badge-item, lexicon-icon), ());
+
+				@include clay-css($lexicon-icon);
+			}
+		}
+
+		.badge-item-expand {
+			@include clay-css($badge-item-expand);
+
+			a {
+				$link: setter(map-get($badge-item-expand, link), ());
+
+				@include clay-link($link);
+			}
+		}
+
+		.badge-item-before {
+			@include clay-css($badge-item-before);
+		}
+
+		.badge-item-after {
+			@include clay-css($badge-item-after);
+		}
+
+		@if (map-get($c-inner, enabled)) {
+			> .c-inner {
+				@include clay-css($c-inner);
+			}
+		}
+	}
+}
+
 /// Bootstrap 4's Badge Variant Mixin
 
 @mixin badge-variant($bg) {
