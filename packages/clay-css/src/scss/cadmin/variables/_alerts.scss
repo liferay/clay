@@ -267,12 +267,12 @@ $cadmin-alert-notification-sm-down: map-merge(
 $cadmin-alert-autofit-row: () !default;
 $cadmin-alert-autofit-row: map-deep-merge(
 	(
-		margin-left: -8px,
-		margin-right: -8px,
+		margin-left: -4px,
+		margin-right: -4px,
 		width: auto,
 		autofit-col: (
-			padding-left: 8px,
-			padding-right: 8px,
+			padding-left: 4px,
+			padding-right: 4px,
 		),
 	),
 	$cadmin-alert-autofit-row
@@ -337,6 +337,7 @@ $cadmin-alert-inline: map-deep-merge(
 			min-height: 56px,
 			btn-group: (
 				margin-right: 32px,
+				margin-left: 12px,
 			),
 		),
 		close: (
@@ -358,10 +359,13 @@ $cadmin-alert-autofit-stacked: map-deep-merge(
 			margin-bottom: 0,
 			margin-top: 0,
 			min-height: 0,
+			padding-bottom: 0,
+			padding-top: 0,
 			autofit-col: (
 				width: 100%,
 			),
 			btn-group: (
+				margin-left: 0,
 				margin-right: 0,
 				margin-top: 14px,
 			),

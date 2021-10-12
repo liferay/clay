@@ -90,6 +90,50 @@ $alert-notification: map-merge(
 	$alert-notification
 );
 
+// .autofit-row.alert-autofit-row
+
+$alert-autofit-row: () !default;
+$alert-autofit-row: map-deep-merge(
+	(
+		margin-left: -0.25rem,
+		margin-right: -0.25rem,
+		width: auto,
+		autofit-col: (
+			padding-left: 0.25rem,
+			padding-right: 0.25rem,
+		),
+	),
+	$alert-autofit-row
+);
+
+// .alert-inline.alert
+
+$alert-inline: () !default;
+$alert-inline: map-deep-merge(
+	(
+		alert-autofit-row: (
+			btn-group: (
+				margin-left: 0.75rem,
+			),
+		),
+	),
+	$alert-inline
+);
+
+// .alert-autofit-stacked.alert
+
+$alert-autofit-stacked: () !default;
+$alert-autofit-stacked: map-deep-merge(
+	(
+		alert-autofit-row: (
+			btn-group: (
+				margin-left: 0,
+			),
+		),
+	),
+	$alert-autofit-stacked
+);
+
 // .alert-indicator-start.alert
 
 $alert-indicator-start: () !default;
