@@ -20,7 +20,7 @@ module.exports = {
 		'clayui.com',
 	],
 	transform: {
-		'.(ts|tsx)': 'ts-jest',
+		'.(ts|tsx)$': 'ts-jest',
 	},
 	transformIgnorePatterns: ['<rootDir>.*(node_modules)(?!.*clay.*).*$'],
 };
