@@ -223,6 +223,15 @@
 					);
 
 					@include clay-css($alert-autofit-row);
+
+					.btn-group {
+						$btn-group: setter(
+							map-get($alert-autofit-row, btn-group),
+							()
+						);
+
+						@include clay-css($btn-group);
+					}
 				}
 			}
 		}
@@ -235,6 +244,12 @@
 		);
 
 		@include clay-css($alert-autofit-row);
+
+		.btn-group {
+			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+
+			@include clay-css($btn-group);
+		}
 	}
 
 	.close {

@@ -367,7 +367,7 @@ $alert-notification-sm-down: map-merge(
 	$alert-notification-sm-down
 );
 
-// Alert Autofit Row
+// .autofit-row.alert-autofit-row
 
 $alert-autofit-row: () !default;
 $alert-autofit-row: map-deep-merge(
@@ -440,6 +440,9 @@ $alert-inline: map-deep-merge(
 			padding-bottom: 0.5625rem,
 			padding-top: 0.5625rem,
 			min-height: 3.5rem,
+			btn-group: (
+				margin-right: 2rem,
+			),
 		),
 		close: (
 			margin-top: math-sign(1rem),
@@ -460,10 +463,13 @@ $alert-autofit-stacked: map-deep-merge(
 			margin-bottom: 0,
 			margin-top: 0,
 			min-height: 0,
+			padding-bottom: 0,
+			padding-top: 0,
 			autofit-col: (
 				width: 100%,
 			),
 			btn-group: (
+				margin-right: 0,
 				margin-top: 0.875rem,
 			),
 		),
@@ -528,6 +534,7 @@ $alert-indicator-start: map-deep-merge(
 				),
 		),
 		alert-indicator: (
+			line-height: 1,
 			margin-left:
 				calc(
 					-1em - #{map-deep-get(
@@ -536,6 +543,7 @@ $alert-indicator-start: map-deep-merge(
 							padding-left
 						)}
 				),
+			margin-top: 4px,
 			position: absolute,
 			lead: (
 				margin-left: 0,
