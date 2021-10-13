@@ -24,6 +24,8 @@ jobs:
               run: yarn format:check
             - name: Verify Dependencies
               run: yarn checkDeps
+            - name: Clear jest cache
+              run: yarn test --clearCache
             - name: Run Jest
               env:
                   CI: true
