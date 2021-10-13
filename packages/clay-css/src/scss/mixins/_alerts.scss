@@ -46,6 +46,10 @@
 
 	$hr: setter(map-get($map, hr), ());
 
+	$alert-indicator: setter(map-get($map, alert-indicator), ());
+
+	$alert-indicator-lead: setter(map-get($alert-indicator, lead), ());
+
 	$alert-btn: setter(map-get($map, alert-btn), ());
 
 	$btn-group: setter(map-get($map, btn-group), ());
@@ -100,6 +104,14 @@
 
 		hr {
 			@include clay-css($hr);
+		}
+
+		.alert-indicator {
+			@include clay-css($alert-indicator);
+
+			+ .lead {
+				@include clay-css($alert-indicator-lead);
+			}
 		}
 
 		.alert-btn {
