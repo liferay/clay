@@ -172,20 +172,81 @@ storiesOf('Components|ClayAlert', module)
 		);
 	})
 	.add('w/ a button', () => (
-		<ClayAlert
-			displayType="info"
-			spritemap={spritemap}
-			title="With a Button"
-			variant={boolean('Stripe Variant', false) ? 'stripe' : undefined}
-		>
-			{'This is an alert with a button!'}
+		<>
+			<ClayAlert displayType="info" spritemap={spritemap} title="Info:">
+				{'This is an alert with a button!'}
 
-			<ClayAlert.Footer>
-				<ClayButton.Group>
-					<ClayButton alert>{'View'}</ClayButton>
-				</ClayButton.Group>
-			</ClayAlert.Footer>
-		</ClayAlert>
+				<ClayAlert.Footer>
+					<ClayButton.Group>
+						<ClayButton alert>{'View'}</ClayButton>
+					</ClayButton.Group>
+				</ClayAlert.Footer>
+			</ClayAlert>
+			<br />
+			<ClayAlert
+				actions={
+					<ClayButton.Group>
+						<ClayButton alert>{'View'}</ClayButton>
+					</ClayButton.Group>
+				}
+				displayType="success"
+				spritemap={spritemap}
+				title="Success:"
+				variant={select(
+					'Success Variant',
+					{
+						inline: 'inline',
+						none: undefined,
+						stripe: 'stripe',
+					},
+					undefined
+				)}
+			>
+				{
+					'File uploaded. Would you like to add categories automatically?'
+				}
+			</ClayAlert>
+		</>
+	))
+	.add('w/ inline', () => (
+		<>
+			<ClayAlert
+				actions={
+					<ClayButton displayType="success" small>
+						{'Add'}
+					</ClayButton>
+				}
+				displayType="success"
+				onClose={() => {}}
+				spritemap={spritemap}
+				title="Success:"
+				variant="inline"
+			>
+				{
+					'File uploaded. Would you like to add categories automatically?'
+				}
+			</ClayAlert>
+			<br />
+			<ClayAlert
+				actions={
+					<ClayButton.Group spaced>
+						<ClayButton displayType="warning" small>
+							{'Replace'}
+						</ClayButton>
+						<ClayButton alert small>
+							{'Keep Both'}
+						</ClayButton>
+					</ClayButton.Group>
+				}
+				displayType="warning"
+				onClose={() => {}}
+				spritemap={spritemap}
+				title="Alert:"
+				variant="inline"
+			>
+				{'A file with this name already exists.'}
+			</ClayAlert>
+		</>
 	))
 	.add('Toast', () => <ClayToastDemo />)
 	.add('Dismissible', () => <ClayDismissibleDemo />);
