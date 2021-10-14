@@ -30,7 +30,9 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 		const {
 			childrenRoot,
 			expandedKeys,
+			insert,
 			nestedKey,
+			onLoadMore,
 			toggle,
 		} = useTreeViewContext();
 
@@ -72,17 +74,30 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							'treeview-dropping-top':
 								overTarget && overPosition === 'top',
 						})}
-						onClick={() => group && toggle(item.key)}
+						onClick={async () => {
+							if (group) {
+								toggle(item.key);
+							} else {
+								if (onLoadMore) {
+									const items = await onLoadMore(item);
+
+									insert([...item.indexes, 0], items);
+									toggle(item.key);
+								}
+							}
+						}}
 						ref={ref}
 						role="treeitem"
 						style={{
-							paddingLeft: `${spacing}px`,
+							paddingLeft: `${spacing + (group ? 0 : 24)}px`,
 						}}
 						tabIndex={0}
 					>
 						<span
 							className="c-inner"
-							style={{marginLeft: `-${spacing}px`}}
+							style={{
+								marginLeft: `-${spacing + (group ? 0 : 24)}px`,
+							}}
 							tabIndex={-2}
 						>
 							{typeof left === 'string' ? (

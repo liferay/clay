@@ -85,6 +85,34 @@ const ITEMS_DRIVE = [
 	},
 ];
 
+let nodeId = 0;
+
+type Node = {
+	children: Array<Node>;
+	id: number;
+	name: string;
+};
+
+const createNode = (depth: number = 0) => {
+	const node: Node = {
+		children: [],
+		id: nodeId,
+		name: `node-${nodeId}`,
+	};
+
+	nodeId += 1;
+
+	if (depth === 5) {
+		return node;
+	}
+
+	for (let i = 0; i < 10; i++) {
+		node.children.push(createNode(depth + 1));
+	}
+
+	return node;
+};
+
 storiesOf('Components|ClayTreeView', module)
 	.add('light', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
@@ -440,6 +468,79 @@ storiesOf('Components|ClayTreeView', module)
 								{(item) => (
 									<TreeView.Item>
 										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('large data', () => {
+		const rootNode = createNode();
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={[rootNode]}
+					nestedKey="children"
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>{item.name}</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item: typeof rootNode) => (
+									<TreeView.Item>{item.name}</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('async load', () => {
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onLoadMore={async (item) => {
+						// Delay to simulate loading of new data
+						await new Promise((resolve) => {
+							setTimeout(() => resolve(''), 100);
+						});
+
+						return [
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+						];
+					}}
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
 										<Icon symbol="folder" />
 										{item.name}
 									</TreeView.Item>

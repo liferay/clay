@@ -21,6 +21,7 @@ interface ITreeViewProps<T>
 		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
+	onLoadMore?: (item: T) => Promise<unknown>;
 	showExpanderOnHover?: boolean;
 }
 
@@ -42,6 +43,7 @@ export function TreeView<T>({
 	nestedKey,
 	onExpandedChange,
 	onItemsChange,
+	onLoadMore,
 	onSelectionChange,
 	selectedKeys,
 	showExpanderOnHover = true,
@@ -64,6 +66,7 @@ export function TreeView<T>({
 				: undefined,
 		expanderIcons,
 		nestedKey,
+		onLoadMore,
 		showExpanderOnHover,
 		...state,
 	};
