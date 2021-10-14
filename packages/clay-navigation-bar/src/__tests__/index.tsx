@@ -7,13 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 import ClayNavigationBar from '..';
 import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
-import {
-	act,
-	cleanup,
-	fireEvent,
-	render,
-	waitForElement,
-} from '@testing-library/react';
+import {act, cleanup, fireEvent, render, waitFor} from '@testing-library/react';
 import React from 'react';
 
 const spritemap = 'node_modules/clay-css/lib/images/icons/icons.svg';
@@ -105,7 +99,7 @@ describe('ClayNavigationBar', () => {
 		let navigationBarDropdown;
 
 		await act(async () => {
-			navigationBarDropdown = await waitForElement(() =>
+			navigationBarDropdown = await waitFor(() =>
 				container.querySelector('.navbar-collapse')
 			);
 		});
@@ -162,7 +156,7 @@ describe('ClayNavigationBar', () => {
 		let navigationBarDropdown;
 
 		await act(async () => {
-			navigationBarDropdown = await waitForElement(() =>
+			navigationBarDropdown = await waitFor(() =>
 				container.querySelector('.navbar-collapse.collapse')
 			);
 		});

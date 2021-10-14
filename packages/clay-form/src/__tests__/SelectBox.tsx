@@ -102,7 +102,7 @@ describe('Interactions', () => {
 		]);
 	});
 
-	it('selects multiple options', () => {
+	xit('selects multiple options', () => {
 		const {container} = render(
 			<ClaySelectBox
 				aria-label="Select Box Label"
