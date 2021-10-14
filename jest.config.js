@@ -16,6 +16,7 @@ module.exports = {
 	testPathIgnorePatterns: [
 		'browserslist-config-clay',
 		'fixtures',
+		'generator-clay-component',
 		'lib',
 		'clayui.com',
 	],
