@@ -5,8 +5,8 @@
 
 import ClayAlert from '..';
 import ClayButton from '@clayui/button';
-import React from 'react';
 import {cleanup, render} from '@testing-library/react';
+import React from 'react';
 
 describe('ClayAlert', () => {
 	afterEach(cleanup);
