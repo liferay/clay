@@ -8,7 +8,16 @@ import React from 'react';
 
 import ButtonGroup from './Group';
 
-export type DisplayType = null | 'primary' | 'secondary' | 'link' | 'unstyled';
+export type DisplayType =
+	| null
+	| 'primary'
+	| 'secondary'
+	| 'link'
+	| 'success'
+	| 'warning'
+	| 'danger'
+	| 'info'
+	| 'unstyled';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
