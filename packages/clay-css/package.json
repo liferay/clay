@@ -22,7 +22,7 @@
 	},
 	"scripts": {
 		"build": "yarn compile",
-		"compile": "node build",
+		"compile": "node ./scripts/build",
 		"link": "npm link",
 		"prepublish": "yarn compile"
 	},
