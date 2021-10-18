@@ -59,6 +59,11 @@ export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
 
 export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
+	 * A React Component to render the alert actions.
+	 */
+	actions?: React.ReactNode;
+
+	/**
 	 * Flag to indicate alert should automatically call `onClose`. It also
 	 * accepts a duration (in ms) which indicates how long to wait. If `true`
 	 * is passed in, the timeout will be 10000ms.
@@ -94,7 +99,7 @@ export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Determines the variant of the alert.
 	 */
-	variant?: 'feedback' | 'stripe';
+	variant?: 'feedback' | 'stripe' | 'inline';
 }
 
 const ICON_MAP = {
@@ -108,6 +113,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	Footer: typeof Footer;
 	ToastContainer: typeof ToastContainer;
 } = ({
+	actions,
 	autoClose,
 	children,
 	className,
@@ -133,6 +139,12 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 
 	const showDismissible = onClose && !hideCloseIcon;
 
+	const AlertIndicator = () => (
+		<span className="alert-indicator">
+			<Icon spritemap={spritemap} symbol={ICON_MAP[displayType]} />
+		</span>
+	);
+
 	return (
 		<div
 			{...otherProps}
@@ -140,6 +152,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 				'alert-dismissible': showDismissible,
 				'alert-feedback': variant === 'feedback',
 				'alert-fluid': variant === 'stripe',
+				'alert-inline': variant === 'inline',
 				[`alert-${displayType}`]: displayType,
 			})}
 			onMouseOut={startAutoCloseTimer}
@@ -148,24 +161,35 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 		>
 			<ConditionalContainer>
 				<ClayLayout.ContentRow className="alert-autofit-row">
-					<ClayLayout.ContentCol>
-						<ClayLayout.ContentSection>
-							<span className="alert-indicator">
-								<Icon
-									spritemap={spritemap}
-									symbol={ICON_MAP[displayType]}
-								/>
-							</span>
-						</ClayLayout.ContentSection>
-					</ClayLayout.ContentCol>
+					{variant !== 'inline' && (
+						<ClayLayout.ContentCol>
+							<ClayLayout.ContentSection>
+								<AlertIndicator />
+							</ClayLayout.ContentSection>
+						</ClayLayout.ContentCol>
+					)}
 
 					<ClayLayout.ContentCol expand>
 						<ClayLayout.ContentSection>
+							{variant === 'inline' && <AlertIndicator />}
+
 							{title && <strong className="lead">{title}</strong>}
 
 							{children}
+
+							{variant !== 'inline' && actions && (
+								<Footer>{actions}</Footer>
+							)}
 						</ClayLayout.ContentSection>
 					</ClayLayout.ContentCol>
+
+					{variant === 'inline' && actions && (
+						<ClayLayout.ContentCol>
+							<ClayLayout.ContentSection>
+								{actions}
+							</ClayLayout.ContentSection>
+						</ClayLayout.ContentCol>
+					)}
 				</ClayLayout.ContentRow>
 
 				{showDismissible && (

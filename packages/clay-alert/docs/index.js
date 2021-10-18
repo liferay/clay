@@ -102,6 +102,39 @@ export const AlertWithButton = () => {
 	);
 };
 
+const AlertInlineCode = `const Component = () => {
+	return (
+		<ClayAlert
+			actions={
+				<ClayButton.Group>
+					<ClayButton alert>{'View'}</ClayButton>
+				</ClayButton.Group>
+			}
+			displayType="info"
+			spritemap={spritemap}
+			title="With a Button"
+			variant="inline"
+		>
+			{'This is an alert with a button!'}
+		</ClayAlert>
+	);
+}
+
+render(<Component />);`;
+
+const alertInlineImportsCode = `import React from 'react';
+import ClayAlert from '@clayui/alert';
+import ClayButton from '@clayui/button';`;
+
+export const InlineAlert = () => {
+	const scope = {ClayAlert, ClayButton};
+	const code = AlertInlineCode;
+
+	return (
+		<Editor code={code} imports={alertInlineImportsCode} scope={scope} />
+	);
+};
+
 const alertToastContainerImportsCode = `
 import ClayAlert from '@clayui/alert';`;
 
