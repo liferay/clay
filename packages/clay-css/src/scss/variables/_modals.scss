@@ -50,9 +50,11 @@ $modal-body: () !default;
 $modal-body: map-deep-merge(
 	(
 		background-color: $modal-body-bg,
+		border-top: $modal-content-border-width solid $border-color,
 		color: $modal-body-color,
 		flex-grow: 1,
 		flex-shrink: 1,
+		margin-top: math-sign($modal-content-border-width),
 		padding: $modal-inner-padding,
 		position: relative,
 		inline-scroller: (
