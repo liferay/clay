@@ -29,10 +29,13 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 		const spacing = useContext(SpacingContext);
 		const {
 			childrenRoot,
+			close,
 			expandedKeys,
 			insert,
 			nestedKey,
 			onLoadMore,
+			open,
+			remove,
 			toggle,
 		} = useTreeViewContext();
 
@@ -84,6 +87,20 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									insert([...item.indexes, 0], items);
 									toggle(item.key);
 								}
+							}
+						}}
+						onKeyDown={(event) => {
+							const {key} = event;
+							if (group) {
+								if (key === 'ArrowLeft') {
+									close(item.key);
+								}
+								if (key === 'ArrowRight') {
+									open(item.key);
+								}
+							}
+							if (key === 'Delete') {
+								remove(item.indexes);
 							}
 						}}
 						ref={ref}

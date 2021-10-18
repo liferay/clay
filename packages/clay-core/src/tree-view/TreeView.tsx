@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 import {DndProvider} from 'react-dnd';
@@ -70,21 +71,25 @@ export function TreeView<T>({
 	};
 
 	return (
-		<ul
-			{...otherProps}
-			className={classNames('treeview', className, {
-				[`treeview-${displayType}`]: displayType,
-				'show-component-expander-on-hover': showExpanderOnHover,
-			})}
-			role="tree"
-		>
-			<DndProvider backend={HTML5Backend}>
-				<TreeViewContext.Provider value={context}>
-					<Collection<T> items={state.items}>{children}</Collection>
-					<DragLayer />
-				</TreeViewContext.Provider>
-			</DndProvider>
-		</ul>
+		<FocusScope>
+			<ul
+				{...otherProps}
+				className={classNames('treeview', className, {
+					[`treeview-${displayType}`]: displayType,
+					'show-component-expander-on-hover': showExpanderOnHover,
+				})}
+				role="tree"
+			>
+				<DndProvider backend={HTML5Backend}>
+					<TreeViewContext.Provider value={context}>
+						<Collection<T> items={state.items}>
+							{children}
+						</Collection>
+						<DragLayer />
+					</TreeViewContext.Provider>
+				</DndProvider>
+			</ul>
+		</FocusScope>
 	);
 }
 

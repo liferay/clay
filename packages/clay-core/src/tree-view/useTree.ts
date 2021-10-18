@@ -36,9 +36,11 @@ export interface ITreeProps<T>
 }
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
+	close: (key: Key) => void;
 	expandedKeys: Set<Key>;
 	insert: (path: Array<number>, value: unknown) => void;
 	open: (key: Key) => void;
+	remove: (path: Array<number>) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
@@ -61,6 +63,24 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
 	});
+
+	const close = (key: Key) => {
+		const expanded = new Set(expandedKeys);
+
+		if (expanded.has(key)) {
+			expanded.delete(key);
+		}
+
+		setExpandedKeys(expanded);
+	};
+
+	const remove = (path: Array<number>) => {
+		const tree = createImmutableTree(items, props.nestedKey!);
+
+		tree.produce({op: 'remove', path});
+
+		setItems(tree.applyPatches());
+	};
 
 	const reorder = (from: Array<number>, path: Array<number>) => {
 		const tree = createImmutableTree(items, props.nestedKey!);
@@ -101,10 +121,12 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	};
 
 	return {
+		close,
 		expandedKeys,
 		insert,
 		items,
 		open,
+		remove,
 		reorder,
 		selection,
 		toggle,
@@ -128,11 +150,18 @@ type PatchAdd = {
 	value: unknown;
 };
 
+// Operation of `remove` value to the document structure.
+// RFC 6902 (JSON Patch) 4.2
+type PatchRemove = {
+	op: 'remove';
+	path: Array<number>;
+};
+
 // Patch refers to the implementation of RFC 6902 operations (JSON Patch)
 // https://datatracker.ietf.org/doc/html/rfc6902, we just borrow the document
 // structure to make partial updates to a JSON document.
 // Implementation Detail https://github.com/liferay/clay/pull/4254.
-type Patch = PatchMove | PatchAdd;
+type Patch = PatchMove | PatchAdd | PatchRemove;
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
 	initialTree: T,
@@ -234,12 +263,12 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 						nodeToRemove.parent[nestedKey] = nodeToRemove.parent[
 							nestedKey
 						].filter(
-							(item: any, index: number) =>
+							(_item: any, index: number) =>
 								index !== nodeToRemove.index
 						);
 					} else {
 						immutableTree = immutableTree.filter(
-							(item: any, index: number) =>
+							(_item: any, index: number) =>
 								index !== nodeToRemove.index
 						) as T;
 					}
@@ -267,6 +296,29 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 					break;
 				}
+
+				case 'remove': {
+					const {path} = patch;
+
+					const nodeToRemove = nodeByPath(path);
+
+					if (nodeToRemove.parent) {
+						nodeToRemove.parent[nestedKey] = nodeToRemove.parent[
+							nestedKey
+						].filter(
+							(_item: any, index: number) =>
+								index !== nodeToRemove.index
+						);
+					} else {
+						immutableTree = immutableTree.filter(
+							(_item: any, index: number) =>
+								index !== nodeToRemove.index
+						) as T;
+					}
+
+					break;
+				}
+
 				default:
 					break;
 			}
