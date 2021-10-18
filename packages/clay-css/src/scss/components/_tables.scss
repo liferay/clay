@@ -228,19 +228,19 @@ caption {
 
 @each $color, $value in $table-row-theme-colors {
 	.table-#{$color} {
+		$table-row: setter($value, ());
+
 		&,
 		> th,
 		> td {
-			@include clay-css(setter($value, ()));
+			@include clay-css($table-row);
 		}
-
-		$border-color: setter(map-get($value, border-color), ());
 
 		th,
 		td,
 		thead th,
 		tbody + tbody {
-			border-color: $border-color;
+			border-color: map-get($table-row, border-color);
 		}
 	}
 
