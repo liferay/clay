@@ -25,7 +25,7 @@ $cadmin-modal-content-inner-border-radius: $cadmin-modal-content-border-radius -
 $cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;
 
-// Modal Header
+// .modal-header
 
 $cadmin-modal-header-bg: null !default;
 $cadmin-modal-header-border-color: $cadmin-gray-300 !default;
@@ -39,6 +39,32 @@ $cadmin-modal-header-padding: 24px !default; // 24px
 
 $cadmin-modal-header-height-mobile: null !default;
 
+$cadmin-modal-header: () !default;
+$cadmin-modal-header: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		align-items: center,
+		background-color: $cadmin-modal-header-bg,
+		border-color: $cadmin-modal-header-border-color,
+		border-style: solid,
+		border-width: 0 0 $cadmin-modal-header-border-width 0,
+		border-top-radius:
+			clay-enable-rounded($cadmin-modal-content-inner-border-radius),
+		color: $cadmin-modal-header-color,
+		display: flex,
+		flex-shrink: 0,
+		height: $cadmin-modal-header-height,
+		justify-content: space-between,
+		padding: $cadmin-modal-header-padding,
+		padding-bottom: 0,
+		padding-top: 0,
+		mobile: (
+			height: $cadmin-modal-header-height-mobile,
+		),
+	),
+	$cadmin-modal-header
+);
+
 // Modal Body
 
 $cadmin-modal-inner-padding: 24px !default; // 24px
@@ -50,9 +76,12 @@ $cadmin-modal-body: () !default;
 $cadmin-modal-body: map-deep-merge(
 	(
 		background-color: $cadmin-modal-body-bg,
+		border-top: $cadmin-modal-content-border-width solid
+			$cadmin-border-color,
 		color: $cadmin-modal-body-color,
 		flex-grow: 1,
 		flex-shrink: 1,
+		margin-top: math-sign($cadmin-modal-content-border-width),
 		padding: $cadmin-modal-inner-padding,
 		position: relative,
 		inline-scroller: (

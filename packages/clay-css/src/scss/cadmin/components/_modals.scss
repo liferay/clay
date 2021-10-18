@@ -160,25 +160,14 @@
 
 .modal-header,
 &.modal-header {
-	align-items: center;
-	background-color: $cadmin-modal-header-bg;
-	border-color: $cadmin-modal-header-border-color;
-	border-style: solid;
-	border-width: 0 0 $cadmin-modal-header-border-width 0;
+	$breakpoint-down: map-get($cadmin-modal-header, breakpoint-down);
 
-	@include border-top-radius($cadmin-modal-content-inner-border-radius);
+	@include clay-css($cadmin-modal-header);
 
-	color: $cadmin-modal-header-color;
-	display: flex;
-	flex-shrink: 0;
-	height: $cadmin-modal-header-height;
-	justify-content: space-between;
-	padding: $cadmin-modal-header-padding;
-	padding-bottom: 0;
-	padding-top: 0;
+	@include clay-scale-component(null, $breakpoint-down) {
+		$mobile: setter(map-get($cadmin-modal-header, mobile), ());
 
-	@include clay-scale-component {
-		height: $cadmin-modal-header-height-mobile;
+		@include clay-css($mobile);
 	}
 }
 

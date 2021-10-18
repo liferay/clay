@@ -39,6 +39,33 @@ $modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default;
 
 $modal-header-height-mobile: null !default;
 
+$modal-header: () !default;
+$modal-header: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		align-items: center,
+		background-color: $modal-header-bg,
+		border-color: $modal-header-border-color,
+		border-style: solid,
+		border-width: 0 0 $modal-header-border-width 0,
+		border-top-radius:
+			clay-enable-rounded($modal-content-inner-border-radius),
+		color: $modal-header-color,
+		display: flex,
+		flex-shrink: 0,
+		height: $modal-header-height,
+		justify-content: space-between,
+		padding: $modal-header-padding,
+		padding-bottom: 0,
+		padding-top: 0,
+		z-index: 1,
+		mobile: (
+			height: $modal-header-height-mobile,
+		),
+	),
+	$modal-header
+);
+
 // Modal Body
 
 $modal-inner-padding: 1rem !default;
@@ -50,9 +77,11 @@ $modal-body: () !default;
 $modal-body: map-deep-merge(
 	(
 		background-color: $modal-body-bg,
+		border-top: $modal-content-border-width solid $border-color,
 		color: $modal-body-color,
 		flex-grow: 1,
 		flex-shrink: 1,
+		margin-top: math-sign($modal-content-border-width),
 		padding: $modal-inner-padding,
 		position: relative,
 		inline-scroller: (

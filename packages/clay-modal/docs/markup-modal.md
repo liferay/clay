@@ -23,6 +23,7 @@ mainTabURL: 'docs/components/modal.html'
         -   [Full Screen](#css-height-full-screen)
 -   [Configurations](#css-configurations)
     -   [Header, Body and Footer](#css-header,-body-and-footer)
+    -   [Header, Nav, Body and Footer](#css-header-nav-body-footer)
     -   [Header and Body](#css-header-and-body)
     -   [Body and Footer](#css-body-and-footer)
 -   [Grid](#css-grid)
@@ -1295,6 +1296,551 @@ A classic modal window is composed of three main parts: header, body, and footer
 							<button class="btn btn-primary" type="button">
 								Primary
 							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+### Header, Nav, Body and Footer(#css-header-nav-body-footer)
+
+Insert a Navigation or Input Group between the Header and Body
+
+<div class="sheet-example">
+	<button class="btn btn-primary" data-target="#clayModalMgmtBar01" data-toggle="modal" type="button">Modal With Management Bar</button>
+	<div aria-labelledby="clayModalMgmtBar01Label" class="fade modal" id="clayModalMgmtBar01" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-item-group">
+						<div class="modal-item">
+							<div class="modal-title-section">
+								<div class="modal-title" id="clayModalMgmtBar01Label">
+									Modal Title
+								</div>
+							</div>
+						</div>
+					</div>
+					<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+						<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#times" />
+						</svg>
+					</button>
+				</div>
+				<nav class="management-bar management-bar-light navbar navbar-expand">
+					<div class="container-fluid container-fluid-max-xl">
+						<div class="navbar-form navbar-form-autofit">
+							<form role="search">
+								<div class="input-group">
+									<div class="input-group-item">
+										<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
+										<span class="input-group-inset-item input-group-inset-item-after">
+											<button class="btn btn-monospaced btn-unstyled" type="submit">
+												<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#search" />
+												</svg>
+											</button>
+											<button class="btn btn-monospaced btn-unstyled d-none" type="button">
+												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#times" />
+												</svg>
+											</button>
+										</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<ul class="navbar-nav">
+							<li class="dropdown nav-item">
+								<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle nav-btn nav-btn-monospaced" data-toggle="dropdown" type="button">
+									<svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
+										<use xlink:href="/images/icons/icons.svg#plus" />
+									</svg>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
+									<li>
+										<a class="active dropdown-item" href="#1">
+											<span class="dropdown-item-indicator-start">
+												<svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#list" />
+												</svg>
+											</span>
+											List View
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#1">
+											<span class="dropdown-item-indicator-start">
+												<svg class="lexicon-icon lexicon-icon-table" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#table" />
+												</svg>
+											</span>
+											Table View
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#1">
+											<span class="dropdown-item-indicator-start">
+												<svg class="lexicon-icon lexicon-icon-cards2" focusable="false" role="presentation">
+													<use xlink:href="/images/icons/icons.svg#cards2" />
+												</svg>
+											</span>
+											Card View
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="modal-body">
+					<h4>Modal Body</h4>
+				</div>
+				<div class="modal-footer">
+					<div class="modal-item-last">
+						<div class="modal-item-last">
+							<div class="btn-group">
+								<div class="btn-group-item">
+									<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+								</div>
+								<div class="btn-group-item">
+									<button class="btn btn-primary" type="button">Primary</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<button
+	class="btn btn-primary"
+	data-target="#clayModalMgmtBar01"
+	data-toggle="modal"
+	type="button"
+>
+	Modal With Management Bar
+</button>
+<div
+	aria-labelledby="clayModalMgmtBar01Label"
+	class="fade modal"
+	id="clayModalMgmtBar01"
+	role="dialog"
+	tabindex="-1"
+>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div
+								class="modal-title"
+								id="clayModalMgmtBar01Label"
+							>
+								Modal Title
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					aria-label="Close"
+					class="close"
+					data-dismiss="modal"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<nav
+				class="management-bar management-bar-light navbar navbar-expand"
+			>
+				<div class="container-fluid container-fluid-max-xl">
+					<div class="navbar-form navbar-form-autofit">
+						<form role="search">
+							<div class="input-group">
+								<div class="input-group-item">
+									<input
+										class="form-control input-group-inset input-group-inset-after"
+										placeholder="Search for..."
+										type="text"
+									/>
+									<span
+										class="input-group-inset-item input-group-inset-item-after"
+									>
+										<button
+											class="btn btn-monospaced btn-unstyled"
+											type="submit"
+										>
+											<svg
+												class="lexicon-icon lexicon-icon-search"
+												focusable="false"
+												role="presentation"
+											>
+												<use
+													xlink:href="/images/icons/icons.svg#search"
+												/>
+											</svg>
+										</button>
+										<button
+											class="btn btn-monospaced btn-unstyled d-none"
+											type="button"
+										>
+											<svg
+												class="lexicon-icon lexicon-icon-times"
+												focusable="false"
+												role="presentation"
+											>
+												<use
+													xlink:href="/images/icons/icons.svg#times"
+												/>
+											</svg>
+										</button>
+									</span>
+								</div>
+							</div>
+						</form>
+					</div>
+					<ul class="navbar-nav">
+						<li class="dropdown nav-item">
+							<button
+								aria-expanded="false"
+								aria-haspopup="true"
+								class="btn btn-primary dropdown-toggle nav-btn nav-btn-monospaced"
+								data-toggle="dropdown"
+								type="button"
+							>
+								<svg
+									class="lexicon-icon lexicon-icon-plus"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#plus"
+									/>
+								</svg>
+							</button>
+							<ul
+								class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start"
+							>
+								<li>
+									<a class="active dropdown-item" href="#1">
+										<span
+											class="dropdown-item-indicator-start"
+										>
+											<svg
+												class="lexicon-icon lexicon-icon-list"
+												focusable="false"
+												role="presentation"
+											>
+												<use
+													xlink:href="/images/icons/icons.svg#list"
+												/>
+											</svg>
+										</span>
+										List View
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1">
+										<span
+											class="dropdown-item-indicator-start"
+										>
+											<svg
+												class="lexicon-icon lexicon-icon-table"
+												focusable="false"
+												role="presentation"
+											>
+												<use
+													xlink:href="/images/icons/icons.svg#table"
+												/>
+											</svg>
+										</span>
+										Table View
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#1">
+										<span
+											class="dropdown-item-indicator-start"
+										>
+											<svg
+												class="lexicon-icon lexicon-icon-cards2"
+												focusable="false"
+												role="presentation"
+											>
+												<use
+													xlink:href="/images/icons/icons.svg#cards2"
+												/>
+											</svg>
+										</span>
+										Card View
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="modal-item-last">
+						<div class="btn-group">
+							<div class="btn-group-item">
+								<button
+									class="btn btn-secondary"
+									data-dismiss="modal"
+									type="button"
+								>
+									Close
+								</button>
+							</div>
+							<div class="btn-group-item">
+								<button class="btn btn-primary" type="button">
+									Primary
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+<div class="sheet-example">
+	<button class="btn btn-primary" data-target="#clayModalInputGroup01" data-toggle="modal" type="button">Modal With Input Group</button>
+	<div aria-labelledby="clayModalInputGroup01Label" class="fade modal" id="clayModalInputGroup01" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-item-group">
+						<div class="modal-item">
+							<div class="modal-title-section">
+								<div class="modal-title" id="clayModalInputGroup01Label">
+									Modal Title
+								</div>
+							</div>
+						</div>
+					</div>
+					<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+						<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#times" />
+						</svg>
+					</button>
+				</div>
+				<div class="align-items-center p-3 input-group">
+					<div class="input-group-item">
+						<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
+						<div class="input-group-inset-item input-group-inset-item-after">
+							<button class="btn btn-unstyled d-md-none" type="button">
+								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
+								<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#search" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="input-group-item input-group-item-shrink">
+						<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced btn-sm dropdown-toggle" data-toggle="dropdown" type="button">
+							<svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation"><use xlink:href="/images/icons/icons.svg#plus" /></svg>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#1">Action</a></li>
+							<li><a class="dropdown-item" href="#1">Another action</a></li>
+							<li><a class="dropdown-item" href="#1">Something else here</a></li>
+							<li class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#1">Separated link</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h4>Modal Body</h4>
+				</div>
+				<div class="modal-footer">
+					<div class="modal-item-last">
+						<div class="modal-item-last">
+							<div class="btn-group">
+								<div class="btn-group-item">
+									<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+								</div>
+								<div class="btn-group-item">
+									<button class="btn btn-primary" type="button">Primary</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<button
+	class="btn btn-primary"
+	data-target="#clayModalInputGroup01"
+	data-toggle="modal"
+	type="button"
+>
+	Modal With Input Group
+</button>
+<div
+	aria-labelledby="clayModalInputGroup01Label"
+	class="fade modal"
+	id="clayModalInputGroup01"
+	role="dialog"
+	tabindex="-1"
+>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-item-group">
+					<div class="modal-item">
+						<div class="modal-title-section">
+							<div
+								class="modal-title"
+								id="clayModalInputGroup01Label"
+							>
+								Modal Title
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					aria-label="Close"
+					class="close"
+					data-dismiss="modal"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use xlink:href="/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+			</div>
+			<div class="align-items-center p-3 input-group">
+				<div class="input-group-item">
+					<input
+						aria-label="Search for"
+						class="form-control input-group-inset input-group-inset-after"
+						placeholder="Search..."
+						type="text"
+					/>
+					<div
+						class="input-group-inset-item input-group-inset-item-after"
+					>
+						<button
+							class="btn btn-unstyled d-md-none"
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-times"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#times"
+								/>
+							</svg>
+						</button>
+						<button
+							class="btn btn-unstyled d-none d-md-inline-block"
+							type="button"
+						>
+							<svg
+								class="lexicon-icon lexicon-icon-search"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#search"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="input-group-item input-group-item-shrink">
+					<button
+						aria-expanded="false"
+						aria-haspopup="true"
+						class="btn btn-primary btn-monospaced btn-sm dropdown-toggle"
+						data-toggle="dropdown"
+						type="button"
+					>
+						<svg
+							class="lexicon-icon lexicon-icon-plus"
+							focusable="false"
+							role="presentation"
+						>
+							<use xlink:href="/images/icons/icons.svg#plus" />
+						</svg>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a class="dropdown-item" href="#1">Action</a></li>
+						<li>
+							<a class="dropdown-item" href="#1"
+								>Another action</a
+							>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#1"
+								>Something else here</a
+							>
+						</li>
+						<li class="dropdown-divider"></li>
+						<li>
+							<a class="dropdown-item" href="#1"
+								>Separated link</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="modal-item-last">
+						<div class="btn-group">
+							<div class="btn-group-item">
+								<button
+									class="btn btn-secondary"
+									data-dismiss="modal"
+									type="button"
+								>
+									Close
+								</button>
+							</div>
+							<div class="btn-group-item">
+								<button class="btn btn-primary" type="button">
+									Primary
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

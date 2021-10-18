@@ -11,8 +11,19 @@ $modal-content-border-color: transparent !default;
 
 $modal-inner-padding: 1.5rem !default; // 24px
 
+// .modal-header
+
 $modal-header-border-color: $gray-300 !default;
 $modal-header-padding: 1.5rem !default; // 24px
+
+$modal-header: () !default;
+$modal-header: map-deep-merge(
+	(
+		border-color: $modal-header-border-color,
+		padding: $modal-header-padding,
+	),
+	$modal-header
+);
 
 $modal-title-font-size: 1.25rem !default; // 20px
 $modal-title-font-weight: $font-weight-bold !default;
