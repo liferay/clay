@@ -123,12 +123,12 @@ describe('ClayAlert', () => {
 	it('renders alert inline with action', () => {
 		const {container} = render(
 			<ClayAlert
-				actions={<ClayButton small>{'Baz'}</ClayButton>}
+				actions={<ClayButton small>Baz</ClayButton>}
 				spritemap="/foo/bar"
 				title="Foo:"
 				variant="inline"
 			>
-				{'Bar!'}
+				Bar!
 			</ClayAlert>
 		);
 
