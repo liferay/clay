@@ -65,16 +65,14 @@
 
 // Sticker Sizes
 
-.sticker-sm {
-	@include clay-sticker-variant($sticker-sm);
-}
+@each $selector, $value in $sticker-sizes {
+	%#{$selector} {
+		@include clay-sticker-variant($value);
+	}
 
-.sticker-lg {
-	@include clay-sticker-variant($sticker-lg);
-}
-
-.sticker-xl {
-	@include clay-sticker-variant($sticker-xl);
+	.#{$selector} {
+		@extend %#{$selector} !optional;
+	}
 }
 
 // Sticker Variants

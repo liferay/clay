@@ -42,6 +42,16 @@ $sticker-xl: map-deep-merge(
 	$sticker-xl
 );
 
+$sticker-sizes: () !default;
+$sticker-sizes: map-deep-merge(
+	(
+		sticker-sm: $sticker-sm,
+		sticker-lg: $sticker-lg,
+		sticker-xl: $sticker-xl,
+	),
+	$sticker-sizes
+);
+
 // Sticker Positions
 
 $sticker-inside-offset: 1rem !default; // 16px
