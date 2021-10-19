@@ -1,3 +1,5 @@
+// .sticker
+
 $sticker-border-color: null !default;
 $sticker-border-radius: $border-radius !default;
 $sticker-border-style: null !default;
@@ -9,31 +11,147 @@ $sticker-size: 2rem !default; // 32px
 
 $sticker-inline-item-font-size: null !default;
 
-// Sticker Sizes
+$sticker: () !default;
+$sticker: map-deep-merge(
+	(
+		align-items: center,
+		border-color: $sticker-border-color,
+		border-radius: clay-enable-rounded($sticker-border-radius),
+		border-style: $sticker-border-style,
+		border-width: $sticker-border-width,
+		color: $sticker-color,
+		height: $sticker-size,
+		line-height: $sticker-size,
+		display: inline-flex,
+		font-size: $sticker-font-size,
+		font-weight: $sticker-font-weight,
+		justify-content: center,
+		position: relative,
+		text-align: center,
+		vertical-align: middle,
+		width: $sticker-size,
+		inline-item: (
+			font-size: $sticker-inline-item-font-size,
+			justify-content: center,
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$sticker
+);
+
+// .sticker-overlay
+
+$sticker-overlay: () !default;
+$sticker-overlay: map-merge(
+	(
+		align-items: center,
+		border-radius: inherit,
+		bottom: 0,
+		display: flex,
+		justify-content: center,
+		left: 0,
+		overflow: hidden,
+		position: absolute,
+		right: 0,
+		top: 0,
+	),
+	$sticker-overlay
+);
+
+// .sticker-sm
 
 $sticker-sm: () !default;
 $sticker-sm: map-deep-merge(
 	(
 		font-size: 0.75rem,
-		size: 1.5rem,
+		height: 1.5rem,
+		line-height: 1.5rem,
+		width: 1.5rem,
+		sticker-outside: (
+			left: -0.75rem,
+			top: -0.75rem,
+			sticker-bottom-left: (
+				bottom: -0.75rem,
+				top: auto,
+			),
+			sticker-bottomr-right: (
+				bottom: -0.75rem,
+				left: auto,
+				right: -0.75rem,
+				top: auto,
+			),
+			sticker-top-right: (
+				left: auto,
+				right: -0.75rem,
+			),
+		),
 	),
 	$sticker-sm
 );
+
+// .sticker-lg
 
 $sticker-lg: () !default;
 $sticker-lg: map-deep-merge(
 	(
 		font-size: 1.125rem,
-		size: 2.5rem,
+		height: 2.5rem,
+		line-height: 2.5rem,
+		width: 2.5rem,
+		sticker-outside: (
+			left: -1.25rem,
+			top: -1.25rem,
+			sticker-bottom-left: (
+				bottom: -1.25rem,
+				top: auto,
+			),
+			sticker-bottomr-right: (
+				bottom: -1.25rem,
+				left: auto,
+				right: -1.25rem,
+				top: auto,
+			),
+			sticker-top-right: (
+				left: auto,
+				right: -1.25rem,
+			),
+		),
 	),
 	$sticker-lg
 );
+
+// .sticker-xl
 
 $sticker-xl: () !default;
 $sticker-xl: map-deep-merge(
 	(
 		font-size: 1.25rem,
-		size: 3rem,
+		height: 3rem,
+		line-height: 3rem,
+		width: 3rem,
+		sticker-outside: (
+			left: -1.5rem,
+			top: -1.5rem,
+			sticker-bottom-left: (
+				bottom: -1.5rem,
+				top: auto,
+			),
+			sticker-bottomr-right: (
+				bottom: -1.5rem,
+				left: auto,
+				right: -1.5rem,
+				top: auto,
+			),
+			sticker-top-right: (
+				left: auto,
+				right: -1.5rem,
+			),
+		),
 	),
 	$sticker-xl
 );
@@ -41,101 +159,250 @@ $sticker-xl: map-deep-merge(
 // Sticker Positions
 
 $sticker-inside-offset: $grid-gutter-width / 2 !default;
+
+// .sticker-bottom-left
+
+$sticker-bottom-left: () !default;
+$sticker-bottom-left: map-merge(
+	(
+		bottom: $sticker-inside-offset,
+		left: $sticker-inside-offset,
+		position: absolute,
+		right: auto,
+		top: auto,
+	),
+	$sticker-bottom-left
+);
+
+// .sticker-bottom-right
+
+$sticker-bottom-right: () !default;
+$sticker-bottom-right: map-merge(
+	(
+		bottom: $sticker-inside-offset,
+		left: auto,
+		position: absolute,
+		right: $sticker-inside-offset,
+		top: auto,
+	),
+	$sticker-bottom-right
+);
+
+// .sticker-top-left
+
+$sticker-top-left: () !default;
+$sticker-top-left: map-merge(
+	(
+		left: $sticker-inside-offset,
+		position: absolute,
+		top: $sticker-inside-offset,
+	),
+	$sticker-top-left
+);
+
+// .sticker-top-right
+
+$sticker-top-right: () !default;
+$sticker-top-right: map-merge(
+	(
+		left: auto,
+		position: absolute,
+		right: $sticker-inside-offset,
+		top: $sticker-inside-offset,
+	),
+	$sticker-top-right
+);
+
+// .sticker-outside
+
 $sticker-outside-offset: -($sticker-size / 2) !default;
 
-// Sticker Circle
+$sticker-outside: () !default;
+$sticker-outside: map-deep-merge(
+	(
+		left: $sticker-outside-offset,
+		top: $sticker-outside-offset,
+		sticker-bottom-left: (
+			bottom: $sticker-outside-offset,
+			top: auto,
+		),
+		sticker-bottom-right: (
+			bottom: $sticker-outside-offset,
+			left: auto,
+			right: $sticker-outside-offset,
+			top: auto,
+		),
+		sticker-top-right: (
+			left: auto,
+			right: $sticker-outside-offset,
+		),
+	),
+	$sticker-outside
+);
+
+// .sticker-circle
 
 $sticker-circle-border-radius: $rounded-circle-border-radius !default;
 
-// Sticker User Icon
+$sticker-circle: () !default;
+$sticker-circle: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($sticker-circle-border-radius),
+	),
+	$sticker-circle
+);
+
+// .sticker-user-icon
 
 $sticker-user-icon: () !default;
 $sticker-user-icon: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-radius: $rounded-circle-border-radius,
 		box-shadow: 0 0 0 1px rgba($black, 0.125),
 	),
 	$sticker-user-icon
 );
 
-// Sticker Variants
+// .sticker-primary
 
 $sticker-primary-bg: $primary !default;
 $sticker-primary-border-color: null !default;
 $sticker-primary-color: color-yiq($sticker-primary-bg) !default;
 
+$sticker-primary: () !default;
+$sticker-primary: map-deep-merge(
+	(
+		background-color: $sticker-primary-bg,
+		border-color: $sticker-primary-border-color,
+		color: $sticker-primary-color,
+	),
+	$sticker-primary
+);
+
+// .sticker-secondary
+
 $sticker-secondary-bg: $secondary !default;
 $sticker-secondary-border-color: null !default;
 $sticker-secondary-color: color-yiq($sticker-secondary-bg) !default;
+
+$sticker-secondary: () !default;
+$sticker-secondary: map-deep-merge(
+	(
+		background-color: $sticker-secondary-bg,
+		border-color: $sticker-secondary-border-color,
+		color: $sticker-secondary-color,
+	),
+	$sticker-secondary
+);
+
+// .sticker-info
 
 $sticker-info-bg: $info !default;
 $sticker-info-border-color: null !default;
 $sticker-info-color: color-yiq($sticker-info-bg) !default;
 
+$sticker-info: () !default;
+$sticker-info: map-deep-merge(
+	(
+		background-color: $sticker-info-bg,
+		border-color: $sticker-info-border-color,
+		color: $sticker-info-color,
+	),
+	$sticker-info
+);
+
+// .sticker-success
+
 $sticker-success-bg: $success !default;
 $sticker-success-border-color: null !default;
 $sticker-success-color: color-yiq($sticker-success-bg) !default;
+
+$sticker-success: () !default;
+$sticker-success: map-deep-merge(
+	(
+		background-color: $sticker-success-bg,
+		border-color: $sticker-success-border-color,
+		color: $sticker-success-color,
+	),
+	$sticker-success
+);
+
+// .sticker-warning
 
 $sticker-warning-bg: $warning !default;
 $sticker-warning-border-color: null !default;
 $sticker-warning-color: color-yiq($sticker-warning-bg) !default;
 
+$sticker-warning: () !default;
+$sticker-warning: map-deep-merge(
+	(
+		background-color: $sticker-warning-bg,
+		border-color: $sticker-warning-border-color,
+		color: $sticker-warning-color,
+	),
+	$sticker-warning
+);
+
+// .sticker-danger
+
 $sticker-danger-bg: $danger !default;
 $sticker-danger-border-color: null !default;
 $sticker-danger-color: color-yiq($sticker-danger-bg) !default;
+
+$sticker-danger: () !default;
+$sticker-danger: map-deep-merge(
+	(
+		background-color: $sticker-danger-bg,
+		border-color: $sticker-danger-border-color,
+		color: $sticker-danger-color,
+	),
+	$sticker-danger
+);
+
+// .sticker-light
 
 $sticker-light-bg: $light !default;
 $sticker-light-border-color: null !default;
 $sticker-light-color: color-yiq($sticker-light-bg) !default;
 
+$sticker-light: () !default;
+$sticker-light: map-deep-merge(
+	(
+		background-color: $sticker-light-bg,
+		border-color: $sticker-light-border-color,
+		color: $sticker-light-color,
+	),
+	$sticker-light
+);
+
+// .sticker-dark
+
 $sticker-dark-bg: $dark !default;
 $sticker-dark-border-color: null !default;
 $sticker-dark-color: color-yiq($sticker-dark-bg) !default;
 
+$sticker-dark: () !default;
+$sticker-dark: map-deep-merge(
+	(
+		background-color: $sticker-dark-bg,
+		border-color: $sticker-dark-border-color,
+		color: $sticker-dark-color,
+	),
+	$sticker-dark
+);
+
 $sticker-palette: () !default;
 $sticker-palette: map-deep-merge(
 	(
-		primary: (
-			bg: $sticker-primary-bg,
-			border-color: $sticker-primary-border-color,
-			color: $sticker-primary-color,
-		),
-		secondary: (
-			bg: $sticker-secondary-bg,
-			border-color: $sticker-secondary-border-color,
-			color: $sticker-secondary-color,
-		),
-		success: (
-			bg: $sticker-success-bg,
-			border-color: $sticker-success-border-color,
-			color: $sticker-success-color,
-		),
-		info: (
-			bg: $sticker-info-bg,
-			border-color: $sticker-info-border-color,
-			color: $sticker-info-color,
-		),
-		warning: (
-			bg: $sticker-warning-bg,
-			border-color: $sticker-warning-border-color,
-			color: $sticker-warning-color,
-		),
-		danger: (
-			bg: $sticker-danger-bg,
-			border-color: $sticker-danger-border-color,
-			color: $sticker-danger-color,
-		),
-		light: (
-			bg: $sticker-light-bg,
-			border-color: $sticker-light-border-color,
-			color: $sticker-light-color,
-		),
-		dark: (
-			bg: $sticker-dark-bg,
-			border-color: $sticker-dark-border-color,
-			color: $sticker-dark-color,
-		),
+		primary: $sticker-primary,
+		secondary: $sticker-secondary,
+		success: $sticker-success,
+		info: $sticker-info,
+		warning: $sticker-warning,
+		danger: $sticker-danger,
+		light: $sticker-light,
+		dark: $sticker-dark,
 	),
 	$sticker-palette
 );

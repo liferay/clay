@@ -1,7 +1,18 @@
+// .sticker
+
 $sticker-font-size: 1rem !default; // 16px
 $sticker-font-weight: $font-weight-bold !default;
 
-// Sticker Sizes
+$sticker: () !default;
+$sticker: map-deep-merge(
+	(
+		font-size: $sticker-font-size,
+		font-weight: $sticker-font-weight,
+	),
+	$sticker
+);
+
+// .sticker-sm
 
 $sticker-sm: () !default;
 $sticker-sm: map-deep-merge(
@@ -11,6 +22,8 @@ $sticker-sm: map-deep-merge(
 	$sticker-sm
 );
 
+// .sticker-lg
+
 $sticker-lg: () !default;
 $sticker-lg: map-deep-merge(
 	(
@@ -18,6 +31,8 @@ $sticker-lg: map-deep-merge(
 	),
 	$sticker-lg
 );
+
+// .sticker-xl
 
 $sticker-xl: () !default;
 $sticker-xl: map-deep-merge(
@@ -31,7 +46,60 @@ $sticker-xl: map-deep-merge(
 
 $sticker-inside-offset: 1rem !default; // 16px
 
-// Sticker User Icon
+// .sticker-bottom-left
+
+$sticker-bottom-left: () !default;
+$sticker-bottom-left: map-merge(
+	(
+		bottom: $sticker-inside-offset,
+		left: $sticker-inside-offset,
+		position: absolute,
+		right: auto,
+		top: auto,
+	),
+	$sticker-bottom-left
+);
+
+// .sticker-bottom-right
+
+$sticker-bottom-right: () !default;
+$sticker-bottom-right: map-merge(
+	(
+		bottom: $sticker-inside-offset,
+		left: auto,
+		position: absolute,
+		right: $sticker-inside-offset,
+		top: auto,
+	),
+	$sticker-bottom-right
+);
+
+// .sticker-top-left
+
+$sticker-top-left: () !default;
+$sticker-top-left: map-merge(
+	(
+		left: $sticker-inside-offset,
+		position: absolute,
+		top: $sticker-inside-offset,
+	),
+	$sticker-top-left
+);
+
+// .sticker-top-right
+
+$sticker-top-right: () !default;
+$sticker-top-right: map-merge(
+	(
+		left: auto,
+		position: absolute,
+		right: $sticker-inside-offset,
+		top: $sticker-inside-offset,
+	),
+	$sticker-top-right
+);
+
+// .sticker-user-icon
 
 $sticker-user-icon: () !default;
 $sticker-user-icon: map-deep-merge(
@@ -41,28 +109,114 @@ $sticker-user-icon: map-deep-merge(
 	$sticker-user-icon
 );
 
-// Sticker Variants
+// .sticker-primary
 
 $sticker-primary-bg: $white !default;
 $sticker-primary-color: $primary !default;
 
+$sticker-primary: () !default;
+$sticker-primary: map-deep-merge(
+	(
+		background-color: $sticker-primary-bg,
+		color: $sticker-primary-color,
+	),
+	$sticker-primary
+);
+
+// .sticker-secondary
+
 $sticker-secondary-bg: $white !default;
 $sticker-secondary-color: $secondary !default;
+
+$sticker-secondary: () !default;
+$sticker-secondary: map-deep-merge(
+	(
+		background-color: $sticker-secondary-bg,
+		color: $sticker-secondary-color,
+	),
+	$sticker-secondary
+);
+
+// .sticker-info
 
 $sticker-info-bg: $white !default;
 $sticker-info-color: $info !default;
 
+$sticker-info: () !default;
+$sticker-info: map-deep-merge(
+	(
+		background-color: $sticker-info-bg,
+		color: $sticker-info-color,
+	),
+	$sticker-info
+);
+
+// .sticker-success
+
 $sticker-success-bg: $white !default;
 $sticker-success-color: $success !default;
+
+$sticker-success: () !default;
+$sticker-success: map-deep-merge(
+	(
+		background-color: $sticker-success-bg,
+		color: $sticker-success-color,
+	),
+	$sticker-success
+);
+
+// .sticker-warning
 
 $sticker-warning-bg: $white !default;
 $sticker-warning-color: $warning !default;
 
+$sticker-warning: () !default;
+$sticker-warning: map-deep-merge(
+	(
+		background-color: $sticker-warning-bg,
+		color: $sticker-warning-color,
+	),
+	$sticker-warning
+);
+
+// .sticker-danger
+
 $sticker-danger-bg: $white !default;
 $sticker-danger-color: $danger !default;
+
+$sticker-danger: () !default;
+$sticker-danger: map-deep-merge(
+	(
+		background-color: $sticker-danger-bg,
+		color: $sticker-danger-color,
+	),
+	$sticker-danger
+);
+
+// .sticker-light
 
 $sticker-light-bg: color-yiq($white) !default;
 $sticker-light-color: $light !default;
 
+$sticker-light: () !default;
+$sticker-light: map-deep-merge(
+	(
+		background-color: $sticker-light-bg,
+		color: $sticker-light-color,
+	),
+	$sticker-light
+);
+
+// .sticker-dark
+
 $sticker-dark-bg: $white !default;
 $sticker-dark-color: $dark !default;
+
+$sticker-dark: () !default;
+$sticker-dark: map-deep-merge(
+	(
+		background-color: $sticker-dark-bg,
+		color: $sticker-dark-color,
+	),
+	$sticker-dark
+);
