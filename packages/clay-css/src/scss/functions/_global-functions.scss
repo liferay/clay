@@ -77,8 +77,7 @@
 @function math-sign($num) {
 	@if (type-of($num) == 'number') {
 		@return -($num);
-	}
-	@elseif (type-of($num) == 'string') {
+	} @else if (type-of($num) == 'string') {
 		@if (starts-with($num, 'var(--')) {
 			@return calc(#{$num} * -1);
 		}
