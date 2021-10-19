@@ -99,7 +99,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									open(item.key);
 								}
 							}
-							if (key === 'Delete') {
+							if (key === 'Backspace' || key === 'Delete') {
 								remove(item.indexes);
 							}
 						}}
