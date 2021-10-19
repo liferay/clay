@@ -1,3 +1,5 @@
+// .sticker
+
 $cadmin-sticker-border-color: null !default;
 $cadmin-sticker-border-radius: $cadmin-border-radius !default;
 $cadmin-sticker-border-style: null !default;
@@ -8,6 +10,58 @@ $cadmin-sticker-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-sticker-size: 32px !default; // 32px
 
 $cadmin-sticker-inline-item-font-size: null !default;
+
+$cadmin-sticker: () !default;
+$cadmin-sticker: map-deep-merge(
+	(
+		align-items: center,
+		border-color: $cadmin-sticker-border-color,
+		border-radius: clay-enable-rounded($cadmin-sticker-border-radius),
+		border-style: $cadmin-sticker-border-style,
+		border-width: $cadmin-sticker-border-width,
+		color: $cadmin-sticker-color,
+		display: inline-flex,
+		font-size: $cadmin-sticker-font-size,
+		font-weight: $cadmin-sticker-font-weight,
+		height: $cadmin-sticker-size,
+		justify-content: center,
+		line-height: $cadmin-sticker-size,
+		position: relative,
+		text-align: center,
+		vertical-align: middle,
+		width: $cadmin-sticker-size,
+		inline-item: (
+			font-size: $cadmin-sticker-inline-item-font-size,
+			justify-content: center,
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$cadmin-sticker
+);
+
+// .sticker-overlay
+
+$cadmin-sticker-overlay: () !default;
+$cadmin-sticker-overlay: map-merge(
+	(
+		align-items: center,
+		border-radius: inherit,
+		bottom: 0,
+		display: flex,
+		justify-content: center,
+		left: 0,
+		overflow: hidden,
+		position: absolute,
+		right: 0,
+		top: 0,
+	),
+	$cadmin-sticker-overlay
+);
 
 // Sticker Sizes
 
@@ -38,104 +92,263 @@ $cadmin-sticker-xl: map-deep-merge(
 	$cadmin-sticker-xl
 );
 
+$cadmin-sticker-sizes: () !default;
+$cadmin-sticker-sizes: map-deep-merge(
+	(
+		sticker-sm: $cadmin-sticker-sm,
+		sticker-lg: $cadmin-sticker-lg,
+		sticker-xl: $cadmin-sticker-xl,
+	),
+	$cadmin-sticker-sizes
+);
+
 // Sticker Positions
 
 $cadmin-sticker-inside-offset: 16px !default; // 16px
+
+// .sticker-bottom-left
+
+$cadmin-sticker-bottom-left: () !default;
+$cadmin-sticker-bottom-left: map-merge(
+	(
+		bottom: $cadmin-sticker-inside-offset,
+		left: $cadmin-sticker-inside-offset,
+		position: absolute,
+		right: auto,
+		top: auto,
+	),
+	$cadmin-sticker-bottom-left
+);
+
+// .sticker-bottom-right
+
+$cadmin-sticker-bottom-right: () !default;
+$cadmin-sticker-bottom-right: map-merge(
+	(
+		bottom: $cadmin-sticker-inside-offset,
+		left: auto,
+		position: absolute,
+		right: $cadmin-sticker-inside-offset,
+		top: auto,
+	),
+	$cadmin-sticker-bottom-right
+);
+
+// .sticker-top-left
+
+$cadmin-sticker-top-left: () !default;
+$cadmin-sticker-top-left: map-merge(
+	(
+		left: $cadmin-sticker-inside-offset,
+		position: absolute,
+		top: $cadmin-sticker-inside-offset,
+	),
+	$cadmin-sticker-top-left
+);
+
+// .sticker-top-right
+
+$cadmin-sticker-top-right: () !default;
+$cadmin-sticker-top-right: map-merge(
+	(
+		left: auto,
+		position: absolute,
+		right: $cadmin-sticker-inside-offset,
+		top: $cadmin-sticker-inside-offset,
+	),
+	$cadmin-sticker-top-right
+);
+
+// .sticker-outside
+
 $cadmin-sticker-outside-offset: -($cadmin-sticker-size / 2) !default;
 
-// Sticker Circle
+$cadmin-sticker-outside: () !default;
+$cadmin-sticker-outside: map-deep-merge(
+	(
+		left: $cadmin-sticker-outside-offset,
+		top: $cadmin-sticker-outside-offset,
+		sticker-bottom-left: (
+			bottom: $cadmin-sticker-outside-offset,
+			top: auto,
+		),
+		sticker-bottom-right: (
+			bottom: $cadmin-sticker-outside-offset,
+			left: auto,
+			right: $cadmin-sticker-outside-offset,
+			top: auto,
+		),
+		sticker-top-right: (
+			left: auto,
+			right: $cadmin-sticker-outside-offset,
+		),
+	),
+	$cadmin-sticker-outside
+);
+
+// .sticker-circle
 
 $cadmin-sticker-circle-border-radius: $cadmin-rounded-circle-border-radius !default;
 
-// Sticker User Icon
+$cadmin-sticker-circle: () !default;
+$cadmin-sticker-circle: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($cadmin-sticker-circle-border-radius),
+	),
+	$cadmin-sticker-circle
+);
+
+// .sticker-user-icon
 
 $cadmin-sticker-user-icon: () !default;
 $cadmin-sticker-user-icon: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-radius: $cadmin-rounded-circle-border-radius,
 		box-shadow: 0 0 0 1px $cadmin-gray-300,
 	),
 	$cadmin-sticker-user-icon
 );
 
-// Sticker Variants
+// .sticker-primary
 
 $cadmin-sticker-primary-bg: $cadmin-white !default;
 $cadmin-sticker-primary-border-color: null !default;
 $cadmin-sticker-primary-color: $cadmin-primary !default;
 
+$cadmin-sticker-primary: () !default;
+$cadmin-sticker-primary: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-primary-bg,
+		border-color: $cadmin-sticker-primary-border-color,
+		color: $cadmin-sticker-primary-color,
+	),
+	$cadmin-sticker-primary
+);
+
+// .sticker-secondary
+
 $cadmin-sticker-secondary-bg: $cadmin-white !default;
 $cadmin-sticker-secondary-border-color: null !default;
 $cadmin-sticker-secondary-color: $cadmin-secondary !default;
+
+$cadmin-sticker-secondary: () !default;
+$cadmin-sticker-secondary: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-secondary-bg,
+		border-color: $cadmin-sticker-secondary-border-color,
+		color: $cadmin-sticker-secondary-color,
+	),
+	$cadmin-sticker-secondary
+);
+
+// .sticker-info
 
 $cadmin-sticker-info-bg: $cadmin-white !default;
 $cadmin-sticker-info-border-color: null !default;
 $cadmin-sticker-info-color: $cadmin-info !default;
 
+$cadmin-sticker-info: () !default;
+$cadmin-sticker-info: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-info-bg,
+		border-color: $cadmin-sticker-info-border-color,
+		color: $cadmin-sticker-info-color,
+	),
+	$cadmin-sticker-info
+);
+
+// .sticker-success
+
 $cadmin-sticker-success-bg: $cadmin-white !default;
 $cadmin-sticker-success-border-color: null !default;
 $cadmin-sticker-success-color: $cadmin-success !default;
+
+$cadmin-sticker-success: () !default;
+$cadmin-sticker-success: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-success-bg,
+		border-color: $cadmin-sticker-success-border-color,
+		color: $cadmin-sticker-success-color,
+	),
+	$cadmin-sticker-success
+);
+
+// .sticker-warning
 
 $cadmin-sticker-warning-bg: $cadmin-white !default;
 $cadmin-sticker-warning-border-color: null !default;
 $cadmin-sticker-warning-color: $cadmin-warning !default;
 
+$cadmin-sticker-warning: () !default;
+$cadmin-sticker-warning: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-warning-bg,
+		border-color: $cadmin-sticker-warning-border-color,
+		color: $cadmin-sticker-warning-color,
+	),
+	$cadmin-sticker-warning
+);
+
+// .sticker-danger
+
 $cadmin-sticker-danger-bg: $cadmin-white !default;
 $cadmin-sticker-danger-border-color: null !default;
 $cadmin-sticker-danger-color: $cadmin-danger !default;
+
+$cadmin-sticker-danger: () !default;
+$cadmin-sticker-danger: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-danger-bg,
+		border-color: $cadmin-sticker-danger-border-color,
+		color: $cadmin-sticker-danger-color,
+	),
+	$cadmin-sticker-danger
+);
+
+// .sticker-light
 
 $cadmin-sticker-light-bg: color-yiq($cadmin-white) !default;
 $cadmin-sticker-light-border-color: null !default;
 $cadmin-sticker-light-color: $cadmin-light !default;
 
+$cadmin-sticker-light: () !default;
+$cadmin-sticker-light: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-light-bg,
+		border-color: $cadmin-sticker-light-border-color,
+		color: $cadmin-sticker-light-color,
+	),
+	$cadmin-sticker-light
+);
+
+// .sticker-dark
+
 $cadmin-sticker-dark-bg: $cadmin-white !default;
 $cadmin-sticker-dark-border-color: null !default;
 $cadmin-sticker-dark-color: $cadmin-dark !default;
 
+$cadmin-sticker-dark: () !default;
+$cadmin-sticker-dark: map-deep-merge(
+	(
+		background-color: $cadmin-sticker-dark-bg,
+		border-color: $cadmin-sticker-dark-border-color,
+		color: $cadmin-sticker-dark-color,
+	),
+	$cadmin-sticker-dark
+);
+
 $cadmin-sticker-palette: () !default;
 $cadmin-sticker-palette: map-deep-merge(
 	(
-		primary: (
-			bg: $cadmin-sticker-primary-bg,
-			border-color: $cadmin-sticker-primary-border-color,
-			color: $cadmin-sticker-primary-color,
-		),
-		secondary: (
-			bg: $cadmin-sticker-secondary-bg,
-			border-color: $cadmin-sticker-secondary-border-color,
-			color: $cadmin-sticker-secondary-color,
-		),
-		success: (
-			bg: $cadmin-sticker-success-bg,
-			border-color: $cadmin-sticker-success-border-color,
-			color: $cadmin-sticker-success-color,
-		),
-		info: (
-			bg: $cadmin-sticker-info-bg,
-			border-color: $cadmin-sticker-info-border-color,
-			color: $cadmin-sticker-info-color,
-		),
-		warning: (
-			bg: $cadmin-sticker-warning-bg,
-			border-color: $cadmin-sticker-warning-border-color,
-			color: $cadmin-sticker-warning-color,
-		),
-		danger: (
-			bg: $cadmin-sticker-danger-bg,
-			border-color: $cadmin-sticker-danger-border-color,
-			color: $cadmin-sticker-danger-color,
-		),
-		light: (
-			bg: $cadmin-sticker-light-bg,
-			border-color: $cadmin-sticker-light-border-color,
-			color: $cadmin-sticker-light-color,
-		),
-		dark: (
-			bg: $cadmin-sticker-dark-bg,
-			border-color: $cadmin-sticker-dark-border-color,
-			color: $cadmin-sticker-dark-color,
-		),
+		primary: $cadmin-sticker-primary,
+		secondary: $cadmin-sticker-secondary,
+		success: $cadmin-sticker-success,
+		info: $cadmin-sticker-info,
+		warning: $cadmin-sticker-warning,
+		danger: $cadmin-sticker-danger,
+		light: $cadmin-sticker-light,
+		dark: $cadmin-sticker-dark,
 	),
 	$cadmin-sticker-palette
 );
