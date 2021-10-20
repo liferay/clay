@@ -34,8 +34,10 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 			insert,
 			nestedKey,
 			onLoadMore,
+			onRenameItem,
 			open,
 			remove,
+			rename,
 			toggle,
 		} = useTreeViewContext();
 
@@ -101,6 +103,9 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							}
 							if (key === 'Backspace' || key === 'Delete') {
 								remove(item.indexes);
+							}
+							if ((key === 'R' || key === 'F2') && onRenameItem) {
+								rename(item.indexes, onRenameItem(item.name));
 							}
 						}}
 						ref={ref}

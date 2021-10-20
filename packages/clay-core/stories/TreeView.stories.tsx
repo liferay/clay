@@ -173,6 +173,9 @@ storiesOf('Components|ClayTreeView', module)
 					},
 				]}
 				nestedKey="children"
+				onRenameItem={(name) => {
+					return `${name}-renamed`;
+				}}
 			>
 				{(item) => (
 					<TreeView.Item>

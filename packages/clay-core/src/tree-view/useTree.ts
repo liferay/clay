@@ -41,6 +41,7 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	insert: (path: Array<number>, value: unknown) => void;
 	open: (key: Key) => void;
 	remove: (path: Array<number>) => void;
+	rename: (path: Array<number>, name: string) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
@@ -78,6 +79,14 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		const tree = createImmutableTree(items, props.nestedKey!);
 
 		tree.produce({op: 'remove', path});
+
+		setItems(tree.applyPatches());
+	};
+
+	const rename = (path: Array<number>, name: string) => {
+		const tree = createImmutableTree(items, props.nestedKey!);
+
+		tree.produce({name, op: 'rename', path});
 
 		setItems(tree.applyPatches());
 	};
@@ -127,6 +136,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		items,
 		open,
 		remove,
+		rename,
 		reorder,
 		selection,
 		toggle,
@@ -157,11 +167,17 @@ type PatchRemove = {
 	path: Array<number>;
 };
 
+type PatchRename = {
+	name: string;
+	op: 'rename';
+	path: Array<number>;
+};
+
 // Patch refers to the implementation of RFC 6902 operations (JSON Patch)
 // https://datatracker.ietf.org/doc/html/rfc6902, we just borrow the document
 // structure to make partial updates to a JSON document.
 // Implementation Detail https://github.com/liferay/clay/pull/4254.
-type Patch = PatchMove | PatchAdd | PatchRemove;
+type Patch = PatchMove | PatchAdd | PatchRemove | PatchRename;
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
 	initialTree: T,
@@ -315,6 +331,15 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 								index !== nodeToRemove.index
 						) as T;
 					}
+
+					break;
+				}
+
+				case 'rename': {
+					const {name, path} = patch;
+
+					const nodeToRename = nodeByPath(path);
+					nodeToRename.item.name = name;
 
 					break;
 				}
