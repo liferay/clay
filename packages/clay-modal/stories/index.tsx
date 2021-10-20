@@ -174,6 +174,69 @@ storiesOf('Components|ClayModal', module)
 					<ClayModal
 						center={boolean('Vertically Center', false)}
 						observer={observer}
+						preventAutoClose={boolean('Prevent AutoClose', false)}
+						size={select('Size', size, 'lg') as Size}
+						spritemap={spritemap}
+						status={select('Status', status, null) as Status}
+					>
+						<ClayModal.Header>
+							{text('Title', 'Title')}
+						</ClayModal.Header>
+						<ClayModal.Body
+							iFrameProps={{
+								'aria-label': 'Hello World',
+							}}
+							scrollable={boolean('scrollable', false)}
+							url={text('Url', '')}
+						>
+							<h1>{'Hello world!'}</h1>
+							<div>
+								{
+									'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim eu ante eget lobortis. Praesent a mattis diam, nec auctor nisi. Nam porta lobortis massa hendrerit sagittis. Integer sit amet risus accumsan nunc pretium convallis eget eu tellus. Mauris id massa nec nunc mollis sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sit amet turpis dui. Aliquam et urna id nisl posuere condimentum. Nullam arcu lacus, fermentum sit amet quam sed, consequat semper nisi. Vivamus varius ligula et viverra placerat. Sed eget quam magna. Ut posuere enim porttitor, mollis justo eget, molestie mauris. Duis lobortis purus quis risus sodales dictum ut eu velit.'
+								}
+							</div>
+						</ClayModal.Body>
+						<ClayModal.Footer
+							first={
+								<ClayButton.Group spaced>
+									<ClayButton displayType="secondary">
+										{'Secondary'}
+									</ClayButton>
+									<ClayButton displayType="secondary">
+										{'Secondary'}
+									</ClayButton>
+								</ClayButton.Group>
+							}
+							last={
+								<ClayButton onClick={onClose}>
+									{'Primary'}
+								</ClayButton>
+							}
+						/>
+					</ClayModal>
+				)}
+				<ClayButton
+					displayType="primary"
+					onClick={() => setVisibleModal(true)}
+				>
+					{'Open modal'}
+				</ClayButton>
+			</>
+		);
+	})
+	.add('w / preventAutoclose', () => {
+		const [visibleModal, setVisibleModal] = React.useState<boolean>(false);
+		const {observer, onClose} = useModal({
+			onClose: () => setVisibleModal(false),
+		});
+
+		return (
+			<>
+				{visibleModal && (
+					<ClayModal
+						center={boolean('Vertically Center', false)}
+						observer={observer}
+						preventAutoClose
 						size={select('Size', size, 'lg') as Size}
 						spritemap={spritemap}
 						status={select('Status', status, null) as Status}
