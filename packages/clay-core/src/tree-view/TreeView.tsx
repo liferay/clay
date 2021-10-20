@@ -23,6 +23,7 @@ interface ITreeViewProps<T>
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
+	onRenameItem?: (name: string) => string;
 	showExpanderOnHover?: boolean;
 }
 
@@ -43,6 +44,7 @@ export function TreeView<T>({
 	onExpandedChange,
 	onItemsChange,
 	onLoadMore,
+	onRenameItem,
 	onSelectionChange,
 	selectedKeys,
 	showExpanderOnHover = true,
@@ -66,6 +68,7 @@ export function TreeView<T>({
 		expanderIcons,
 		nestedKey,
 		onLoadMore,
+		onRenameItem,
 		showExpanderOnHover,
 		...state,
 	};
