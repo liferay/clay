@@ -4,7 +4,7 @@
  */
 
 import ClayModal, {useModal} from '..';
-import {cleanup, render} from '@testing-library/react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 
 const spritemap = 'icons.svg';
@@ -37,5 +37,47 @@ describe('ClayModal custom opener', () => {
 		render(<ModalWithState />);
 
 		expect(document.body).toMatchSnapshot();
+	});
+
+	it('does not close automatically with disableAutoClose', () => {
+		const handleOnClose = jest.fn();
+
+		const ModalWithState = () => {
+			const [visibleModal] = React.useState(true);
+
+			const {observer} = useModal({onClose: handleOnClose});
+
+			return (
+				<>
+					{visibleModal && (
+						<ClayModal
+							disableAutoClose
+							observer={observer}
+							spritemap={spritemap}
+						/>
+					)}
+				</>
+			);
+		};
+
+		const handleKeyDown = jest.fn();
+
+		document.body.addEventListener('keydown', handleKeyDown);
+
+		render(<ModalWithState />);
+
+		fireEvent.keyDown(document.body, {
+			charCode: 0,
+			code: 'Escape',
+			key: 'Escape',
+		});
+
+		expect(document.body).toMatchSnapshot();
+
+		expect(handleKeyDown).toHaveBeenCalled();
+
+		expect(handleOnClose).not.toHaveBeenCalled();
+
+		document.body.removeEventListener('keydown', handleKeyDown);
 	});
 });

@@ -42,6 +42,13 @@ interface IProps
 	containerProps?: IPortalBaseProps;
 
 	/**
+	 * A flag indicating if the modal shouldn't
+	 * be closed when either the ESC key is pressed
+	 * or when clicking outside the modal
+	 */
+	disableAutoClose?: boolean;
+
+	/**
 	 * The size of element modal.
 	 */
 	size?: Size;
@@ -75,6 +82,7 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 	className,
 	containerElementRef,
 	containerProps = {},
+	disableAutoClose = false,
 	observer,
 	size,
 	spritemap,
@@ -87,8 +95,10 @@ const ClayModal: React.FunctionComponent<IProps> = ({
 
 	warning(observer !== undefined, warningMessage);
 
-	useUserInteractions(modalElementRef, modalBodyElementRef, () =>
-		observer.dispatch(ObserverType.Close)
+	useUserInteractions(
+		modalElementRef,
+		modalBodyElementRef,
+		() => !disableAutoClose && observer.dispatch(ObserverType.Close)
 	);
 
 	useEffect(() => observer.dispatch(ObserverType.Open), []);
