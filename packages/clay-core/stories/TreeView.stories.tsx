@@ -173,8 +173,10 @@ storiesOf('Components|ClayTreeView', module)
 					},
 				]}
 				nestedKey="children"
-				onRenameItem={(name) => {
-					return `${name}-renamed`;
+				onRenameItem={(item) => {
+					item.name += `-renamed-${Date.now()}`;
+
+					return item;
 				}}
 			>
 				{(item) => (
