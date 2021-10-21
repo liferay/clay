@@ -132,7 +132,7 @@ async function build() {
 		path.resolve('./LICENSES')
 	);
 
-	const fileNames = ['bootstrap.scss', 'base.scss', 'cadmin.scss'];
+	const fileNames = ['atlas.scss', 'bootstrap.scss', 'base.scss', 'cadmin.scss'];
 
 	await ensureDirectory(CSS_OUTPUT_DIRECTORY);
 
