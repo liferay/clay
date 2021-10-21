@@ -41,8 +41,8 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	insert: (path: Array<number>, value: unknown) => void;
 	open: (key: Key) => void;
 	remove: (path: Array<number>) => void;
-	rename: (path: Array<number>, name: string) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
+	replace: (path: Array<number>, item: T) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
 }
@@ -83,10 +83,10 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		setItems(tree.applyPatches());
 	};
 
-	const rename = (path: Array<number>, name: string) => {
+	const replace = (path: Array<number>, item: any) => {
 		const tree = createImmutableTree(items, props.nestedKey!);
 
-		tree.produce({name, op: 'rename', path});
+		tree.produce({item, op: 'replace', path});
 
 		setItems(tree.applyPatches());
 	};
@@ -136,8 +136,8 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		items,
 		open,
 		remove,
-		rename,
 		reorder,
+		replace,
 		selection,
 		toggle,
 	};
@@ -167,9 +167,11 @@ type PatchRemove = {
 	path: Array<number>;
 };
 
-type PatchRename = {
-	name: string;
-	op: 'rename';
+// Operation of `replace` value to the document structure.
+// RFC 6902 (JSON Patch) 4.3
+type PatchReplace = {
+	item: any;
+	op: 'replace';
 	path: Array<number>;
 };
 
@@ -177,7 +179,7 @@ type PatchRename = {
 // https://datatracker.ietf.org/doc/html/rfc6902, we just borrow the document
 // structure to make partial updates to a JSON document.
 // Implementation Detail https://github.com/liferay/clay/pull/4254.
-type Patch = PatchMove | PatchAdd | PatchRemove | PatchRename;
+type Patch = PatchMove | PatchAdd | PatchRemove | PatchReplace;
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
 	initialTree: T,
@@ -335,11 +337,28 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 					break;
 				}
 
-				case 'rename': {
-					const {name, path} = patch;
+				case 'replace': {
+					const {item, path} = patch;
 
-					const nodeToRename = nodeByPath(path);
-					nodeToRename.item.name = name;
+					const nodeToReplace = nodeByPath(path);
+
+					if (nodeToReplace.parent) {
+						nodeToReplace.parent[nestedKey] = nodeToReplace.parent[
+							nestedKey
+						].filter(
+							(_item: any, index: number) =>
+								index !== nodeToReplace.index
+						);
+
+						nodeToReplace.parent[nestedKey].splice(
+							nodeToReplace.index,
+							0,
+							item
+						);
+					} else {
+						immutableTree.splice(nodeToReplace.index, 1);
+						immutableTree.splice(nodeToReplace.index, 0, item);
+					}
 
 					break;
 				}
