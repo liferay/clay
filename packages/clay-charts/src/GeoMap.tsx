@@ -123,7 +123,7 @@ class GeomapBase {
 	_fillFn(d: any) {
 		const value = d && d.properties ? d.properties[this._color.value] : 0;
 
-		return this.colorScale!(value);
+		return this.colorScale!(value || 0);
 	}
 
 	/**
@@ -157,18 +157,21 @@ class GeomapBase {
 	/**
 	 * Mouse over handler
 	 */
-	_handleMouseOver(feature: object, idx: number, selection: [any]) {
-		const node = selection[idx];
+	_handleMouseOver(_feature: object, index: number, selection: [any]) {
+		const node = selection[index];
 		d3.select(node).style('fill', this._color.selected);
 	}
 
 	/**
 	 * Mouse over handler
 	 */
-	_handleMouseOut(feature: object, idx: number, selection: [any]) {
-		const node = selection[idx];
+	_handleMouseOut(_feature: object, index: number, selection: [any]) {
+		const node = selection[index];
 
-		d3.select(node).style('fill', this._fillFn.bind(this));
+		d3.select(node).style(
+			'fill',
+			(value) => this._fillFn.bind(this)(value) || 0
+		);
 	}
 
 	/**
@@ -196,7 +199,7 @@ class GeomapBase {
 			.append('path')
 			.attr('d', this.path as any)
 			.attr('vector-effect', 'non-scaling-stroke')
-			.attr('fill', this._fillFn.bind(this))
+			.attr('fill', (value) => this._fillFn.bind(this)(value) || 0)
 			.on('click', this._handleClickHandler!)
 			.on(
 				'mouseout',

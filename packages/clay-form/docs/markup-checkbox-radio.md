@@ -104,9 +104,7 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 		value="option1"
 		checked
 	/>
-	<label class="form-check-label" for="exampleRadios1">
-		Default radio
-	</label>
+	<label class="form-check-label" for="exampleRadios1"> Default radio </label>
 </div>
 <div class="form-check">
 	<input

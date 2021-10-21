@@ -26,7 +26,7 @@ describe('ClayEmptyState', () => {
 
 	it('renders with a children content', () => {
 		const {container} = render(
-			<ClayEmptyState>{'My Empty State'}</ClayEmptyState>
+			<ClayEmptyState>My Empty State</ClayEmptyState>
 		);
 
 		expect(container).toMatchSnapshot();
@@ -38,7 +38,7 @@ describe('ClayEmptyState', () => {
 				imgProps={{alt: 'hello world'}}
 				imgSrc="https://via.placeholder.com/256"
 			>
-				{'My Empty State'}
+				My Empty State
 			</ClayEmptyState>
 		);
 

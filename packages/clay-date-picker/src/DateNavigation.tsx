@@ -104,7 +104,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 					<Select
 						disabled={disabled}
 						name="month"
-						onChange={handleFormChange}
+						onChange={() => handleFormChange()}
 						options={memoizedMonths}
 						ref={monthSelectorRef}
 						testId="month-select"
@@ -115,7 +115,7 @@ const ClayDatePickerDateNavigation: React.FunctionComponent<IProps> = ({
 					<Select
 						disabled={disabled}
 						name="year"
-						onChange={handleFormChange}
+						onChange={() => handleFormChange()}
 						options={memoizedYears}
 						ref={yearSelectorRef}
 						testId="year-select"

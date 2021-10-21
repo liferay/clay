@@ -25,8 +25,10 @@ module.exports = {
 		},
 		{
 			options: {
-				includePaths: [clay.includePaths[0]],
-				precision: 8,
+				sassOptions: {
+					includePaths: [clay.includePaths[0]],
+					precision: 8,
+				},
 			},
 			resolve: 'gatsby-plugin-sass',
 		},

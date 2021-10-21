@@ -38,7 +38,7 @@ interface IItem {
 	label?: string;
 	name?: string;
 	onChange?: Function;
-	onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+	onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 	symbolLeft?: string;
 	symbolRight?: string;
 	type?: TType;
@@ -170,26 +170,25 @@ const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 
 const ClayDropDownContext = React.createContext({close: () => {}});
 
-const Item: React.FunctionComponent<
-	Omit<IItem, 'onChange'> & IInternalItem
-> = ({label, onClick, ...props}) => {
-	const {close} = useContext(ClayDropDownContext);
+const Item: React.FunctionComponent<Omit<IItem, 'onChange'> & IInternalItem> =
+	({label, onClick, ...props}) => {
+		const {close} = useContext(ClayDropDownContext);
 
-	return (
-		<ClayDropDown.Item
-			onClick={(e) => {
-				if (onClick) {
-					onClick(e);
-				}
+		return (
+			<ClayDropDown.Item
+				onClick={(event) => {
+					if (onClick) {
+						onClick(event);
+					}
 
-				close();
-			}}
-			{...props}
-		>
-			{label}
-		</ClayDropDown.Item>
-	);
-};
+					close();
+				}}
+				{...props}
+			>
+				{label}
+			</ClayDropDown.Item>
+		);
+	};
 
 const Group: React.FunctionComponent<IItem & IInternalItem> = ({
 	items,

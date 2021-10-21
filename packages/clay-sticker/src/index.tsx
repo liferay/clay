@@ -75,9 +75,9 @@ const Overlay: React.FunctionComponent<
 	</span>
 );
 
-const Image: React.FunctionComponent<React.ImgHTMLAttributes<
-	HTMLImageElement
->> = ({className, ...otherProps}) => (
+const Image: React.FunctionComponent<
+	React.ImgHTMLAttributes<HTMLImageElement>
+> = ({className, ...otherProps}) => (
 	<img className={classNames(className, 'sticker-img')} {...otherProps} />
 );
 

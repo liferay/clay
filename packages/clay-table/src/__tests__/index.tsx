@@ -80,11 +80,11 @@ describe('ClayTable', () => {
 			<ClayTable>
 				<ClayTable.Body>
 					<ClayTable.Row>
-						<ClayTable.Cell>{'One'}</ClayTable.Cell>
+						<ClayTable.Cell>One</ClayTable.Cell>
 						<ClayTable.Cell>
-							<button type="button">{'Two'}</button>
+							<button type="button">Two</button>
 						</ClayTable.Cell>
-						<ClayTable.Cell>{'Three'}</ClayTable.Cell>
+						<ClayTable.Cell>Three</ClayTable.Cell>
 					</ClayTable.Row>
 				</ClayTable.Body>
 			</ClayTable>
@@ -185,7 +185,7 @@ describe('ClayTable', () => {
 				<ClayTable.Head>
 					<ClayTable.Row>
 						<ClayTable.Cell align="center" headingCell>
-							<a href="#1">{`Link`}</a>
+							<a href="#1">Link</a>
 						</ClayTable.Cell>
 					</ClayTable.Row>
 				</ClayTable.Head>
@@ -201,16 +201,16 @@ describe('ClayTable', () => {
 				<ClayTable.Head>
 					<ClayTable.Row>
 						<ClayTable.Cell cellDelimiter="start" headingCell>
-							{'Start'}
+							Start
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell>
-							<button type="button">{'Dummy'}</button>
+							<button type="button">Dummy</button>
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell>
-							<button type="button">{'Dummy'}</button>
+							<button type="button">Dummy</button>
 						</ClayTable.Cell>
 						<ClayTable.Cell cellDelimiter="end" headingCell>
-							{'End'}
+							End
 						</ClayTable.Cell>
 					</ClayTable.Row>
 				</ClayTable.Head>
@@ -224,18 +224,16 @@ describe('ClayTable', () => {
 			<ClayTable>
 				<ClayTable.Body>
 					<ClayTable.Row divider>
-						<ClayTable.Cell colSpan={8}>{'Recipes'}</ClayTable.Cell>
+						<ClayTable.Cell colSpan={8}>Recipes</ClayTable.Cell>
 					</ClayTable.Row>
 
 					<ClayTable.Row>
 						<ClayTable.Cell expanded headingTitle>
-							{'Hamburger'}
+							Hamburger
 						</ClayTable.Cell>
 						<ClayTable.Cell />
-						<ClayTable.Cell>{'U.S.A'}</ClayTable.Cell>
-						<ClayTable.Cell align="right">
-							{'10 min.'}
-						</ClayTable.Cell>
+						<ClayTable.Cell>U.S.A</ClayTable.Cell>
+						<ClayTable.Cell align="right">10 min.</ClayTable.Cell>
 					</ClayTable.Row>
 				</ClayTable.Body>
 			</ClayTable>
@@ -248,22 +246,19 @@ describe('ClayTable', () => {
 			<ClayTable>
 				<ClayTable.Body>
 					<ClayTable.Row divider>
-						<ClayTable.Cell colSpan={8}>{'Recipes'}</ClayTable.Cell>
+						<ClayTable.Cell colSpan={8}>Recipes</ClayTable.Cell>
 					</ClayTable.Row>
 
 					<ClayTable.Row>
 						<ClayTable.Cell expanded headingTitle>
-							{'Hamburger'}
+							Hamburger
 						</ClayTable.Cell>
 						<ClayTable.Cell />
 						<ClayTable.Cell noWrap>
-							{
-								'Originally from the U.S.A. but available anywhere around the world'
-							}
+							Originally from the U.S.A. but available anywhere
+							around the world
 						</ClayTable.Cell>
-						<ClayTable.Cell align="right">
-							{'10 min.'}
-						</ClayTable.Cell>
+						<ClayTable.Cell align="right">10 min.</ClayTable.Cell>
 					</ClayTable.Row>
 				</ClayTable.Body>
 			</ClayTable>

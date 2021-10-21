@@ -28,7 +28,7 @@ const LoadingWithDebounce = ({
 	if (networkStatus === 1 || debouncedLoadingChange) {
 		return (
 			<ClayDropDown.Item className="disabled">
-				{'Loading...'}
+				Loading...
 			</ClayDropDown.Item>
 		);
 	}
@@ -70,13 +70,9 @@ const AutocompleteWithKeyboardFunctionality = () => {
 	const [value, setValue] = React.useState('');
 	const [active, setActive] = React.useState(!!value);
 
-	const filteredItems = [
-		'one',
-		'two',
-		'three',
-		'four',
-		'five',
-	].filter((item) => item.match(value));
+	const filteredItems = ['one', 'two', 'three', 'four', 'five'].filter(
+		(item) => item.match(value)
+	);
 
 	React.useEffect(() => {
 		setActive(!!value);
@@ -147,7 +143,7 @@ const AutocompleteWithAsyncData = () => {
 							<>
 								{(error || (resource && resource.error)) && (
 									<ClayDropDown.Item className="disabled">
-										{'No Results Found'}
+										No Results Found
 									</ClayDropDown.Item>
 								)}
 								{!error &&
@@ -177,7 +173,7 @@ storiesOf('Components|ClayAutocomplete', module)
 			<div className="col-md-5">
 				<div className="sheet">
 					<div className="form-group">
-						<label>{'Numbers (one-five)'}</label>
+						<label>Numbers (one-five)</label>
 						<AutocompleteBasic />
 					</div>
 				</div>
@@ -189,7 +185,7 @@ storiesOf('Components|ClayAutocomplete', module)
 			<div className="col-md-5">
 				<div className="sheet">
 					<div className="form-group">
-						<label>{'Numbers (one-five)'}</label>
+						<label>Numbers (one-five)</label>
 						<AutocompleteWithKeyboardFunctionality />
 					</div>
 				</div>
@@ -201,7 +197,7 @@ storiesOf('Components|ClayAutocomplete', module)
 			<div className="col-md-5">
 				<div className="sheet">
 					<div className="form-group">
-						<label>{'Name'}</label>
+						<label>Name</label>
 						<AutocompleteWithAsyncData />
 					</div>
 				</div>

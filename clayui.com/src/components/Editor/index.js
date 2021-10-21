@@ -26,9 +26,9 @@ function formatCode(code) {
 			parser: 'babel',
 			plugins: [parserBabylon],
 		});
-	} catch (e) {
+	} catch (error) {
 		// eslint-disable-next-line
-		console.log(e, code);
+		console.log(error, code);
 
 		return;
 	}
@@ -94,7 +94,7 @@ const Editor = ({
 				<div style={{padding: '10px'}}>
 					{snippets.length === 1 && collapseCode && (
 						<span className="align-items-center clay-p d-flex mt-0">
-							{'Code Sample (expand to see it)'}
+							Code Sample (expand to see it)
 						</span>
 					)}
 
@@ -172,9 +172,8 @@ const Editor = ({
 													...snippets,
 												];
 
-												newSnippets[
-													index
-												].value = value;
+												newSnippets[index].value =
+													value;
 
 												setSnippets(newSnippets);
 											}}

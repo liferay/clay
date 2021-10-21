@@ -138,8 +138,7 @@ const DEFAULT_CONFIG = {
 
 const ClayTimePicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = {
-		ampm:
-			'Select time of day (AM/PM) using up (PM) and down (AM) arrow keys',
+		ampm: 'Select time of day (AM/PM) using up (PM) and down (AM) arrow keys',
 		clear: 'Delete the entered time',
 		hours: 'Enter the hour in 00:00 format',
 		minutes: 'Enter the minutes in 00:00 format',
@@ -401,7 +400,7 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 									type="text"
 									value={values.hours}
 								/>
-								<span className="clay-time-divider">{':'}</span>
+								<span className="clay-time-divider">:</span>
 								<input
 									aria-label={ariaLabels.minutes}
 									className={classNames(
@@ -488,11 +487,13 @@ const ClayTimePicker: React.FunctionComponent<IProps> = ({
 													? {
 															ampm: DEFAULT_VALUE,
 															hours: DEFAULT_VALUE,
-															minutes: DEFAULT_VALUE,
+															minutes:
+																DEFAULT_VALUE,
 													  }
 													: {
 															hours: DEFAULT_VALUE,
-															minutes: DEFAULT_VALUE,
+															minutes:
+																DEFAULT_VALUE,
 													  }
 											)
 										}

@@ -21,8 +21,8 @@ storiesOf('Components|ClayProgressBar', module).add('default', () => (
 		/>
 		<ClayProgressBar spritemap={spritemap} value={100} />
 		<ClayProgressBar spritemap={spritemap} value={55}>
-			{`55 of 100`}
-			<span className="sr-only">{'items loaded'}</span>
+			55 of 100
+			<span className="sr-only">items loaded</span>
 		</ClayProgressBar>
 	</div>
 ));

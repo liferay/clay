@@ -103,7 +103,7 @@ describe('ClayMultiSelect', () => {
 							onClick={() => onItemClick(item)}
 						>
 							<strong>{item[locator.label]}</strong>
-							<p>{'Name'}</p>
+							<p>Name</p>
 						</ClayDropDown.Item>
 					))}
 			</ClayDropDown.ItemList>
@@ -224,9 +224,9 @@ describe('Interactions', () => {
 			/>
 		);
 
-		const menuStyles = (document.querySelector(
-			'.autocomplete-dropdown-menu'
-		) as HTMLElement).style;
+		const menuStyles = (
+			document.querySelector('.autocomplete-dropdown-menu') as HTMLElement
+		).style;
 
 		expect(menuStyles.left).not.toEqual('');
 		expect(menuStyles.top).not.toEqual('');

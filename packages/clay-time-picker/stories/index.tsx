@@ -25,7 +25,7 @@ const TimePickerWithState = (props: any) => {
 storiesOf('Components|ClayTimePicker', module).add('default', () => (
 	<div className="sheet">
 		<div className="form-group">
-			<label>{'Time Picker'}</label>
+			<label>Time Picker</label>
 			<TimePickerWithState
 				disabled={boolean('Disabled', false)}
 				icon={boolean('Show icon', false)}

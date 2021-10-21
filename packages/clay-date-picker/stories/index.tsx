@@ -16,7 +16,7 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 
 	return (
 		<>
-			<label>{'Date Picker'}</label>
+			<label>Date Picker</label>
 			<ClayDatePicker
 				{...props}
 				ariaLabels={{
@@ -112,9 +112,7 @@ storiesOf('Components|ClayDatePicker', module)
 
 		return (
 			<>
-				<button onClick={() => setExpanded(true)}>
-					{'Open Picker'}
-				</button>
+				<button onClick={() => setExpanded(true)}>Open Picker</button>
 
 				<br />
 				<br />

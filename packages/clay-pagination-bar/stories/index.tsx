@@ -26,8 +26,7 @@ storiesOf('Components|ClayPaginationBar', module)
 				]}
 				trigger={
 					<ClayButton displayType="unstyled">
-						{'10 items per page'}
-
+						10 items per page
 						<ClayIcon
 							spritemap={spritemap}
 							symbol="caret-double-l"
@@ -37,7 +36,7 @@ storiesOf('Components|ClayPaginationBar', module)
 			/>
 
 			<ClayPaginationBar.Results>
-				{'Showing a handful of items...'}
+				Showing a handful of items...
 			</ClayPaginationBar.Results>
 
 			<ClayPaginationWithBasicItems

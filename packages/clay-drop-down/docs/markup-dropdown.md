@@ -837,9 +837,7 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 ```html
 <ul aria-labelledby="theDropdownToggleId" class="dropdown-menu">
 	<li class="dropdown-section form-group">
-		<label for="basicInputTypeText1">
-			Text 1
-		</label>
+		<label for="basicInputTypeText1"> Text 1 </label>
 		<input
 			class="form-control form-control-sm"
 			id="basicInputTypeText1"
@@ -850,9 +848,7 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 	<li class="dropdown-subheader">Form Section</li>
 	<li class="dropdown-section">
 		<div class="form-group">
-			<label for="basicInputTypeText2">
-				Text 2
-			</label>
+			<label for="basicInputTypeText2"> Text 2 </label>
 			<input
 				class="form-control form-control-sm"
 				id="basicInputTypeText2"
@@ -863,9 +859,7 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 	</li>
 	<li class="dropdown-section">
 		<div class="form-group">
-			<label for="basicInputTypeText3">
-				Text 3
-			</label>
+			<label for="basicInputTypeText3"> Text 3 </label>
 			<input
 				class="form-control form-control-sm"
 				id="basicInputTypeText3"
@@ -1310,9 +1304,7 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 <ul aria-labelledby="theDropdownToggleId" class="dropdown-menu show">
 	<li>
 		<a class="active autofit-row dropdown-item" href="#1" tabindex="-1">
-			<span class="autofit-col autofit-col-expand">
-				First Option
-			</span>
+			<span class="autofit-col autofit-col-expand"> First Option </span>
 			<span class="autofit-col">
 				<kbd class="c-kbd c-kbd-inline">
 					<kbd class="c-kbd">⌘</kbd>
@@ -1322,9 +1314,7 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 	</li>
 	<li>
 		<a class="autofit-row disabled dropdown-item" href="#1" tabindex="-1">
-			<span class="autofit-col autofit-col-expand">
-				Second Option
-			</span>
+			<span class="autofit-col autofit-col-expand"> Second Option </span>
 			<span class="autofit-col">
 				<kbd class="c-kbd c-kbd-inline">
 					<kbd class="c-kbd">⌘</kbd><kbd class="c-kbd">K</kbd>
@@ -1352,32 +1342,24 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 	</li>
 	<li>
 		<a class="autofit-row dropdown-item" href="#1">
-			<span class="autofit-col autofit-col-expand">
-				Fourth Option
-			</span>
+			<span class="autofit-col autofit-col-expand"> Fourth Option </span>
 		</a>
 	</li>
 	<li class="dropdown-divider"></li>
 	<li>
 		<a class="autofit-row dropdown-item" href="#1">
-			<span class="autofit-col autofit-col-expand">
-				Fifth Option
-			</span>
+			<span class="autofit-col autofit-col-expand"> Fifth Option </span>
 		</a>
 	</li>
 	<li class="dropdown-divider"></li>
 	<li>
 		<a class="autofit-row dropdown-item" href="#1">
-			<span class="autofit-col autofit-col-expand">
-				Sixth Option
-			</span>
+			<span class="autofit-col autofit-col-expand"> Sixth Option </span>
 		</a>
 	</li>
 	<li>
 		<a class="autofit-row dropdown-item" href="#1">
-			<span class="autofit-col autofit-col-expand">
-				Seventh Option
-			</span>
+			<span class="autofit-col autofit-col-expand"> Seventh Option </span>
 			<span class="autofit-col">
 				<kbd class="c-kbd c-kbd-inline">
 					<kbd class="c-kbd">⌘</kbd><kbd class="c-kbd">P</kbd>
@@ -1388,9 +1370,7 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 	<li class="dropdown-divider"></li>
 	<li>
 		<a class="autofit-row dropdown-item" href="#1">
-			<span class="autofit-col autofit-col-expand">
-				Eighth Option
-			</span>
+			<span class="autofit-col autofit-col-expand"> Eighth Option </span>
 		</a>
 	</li>
 </ul>

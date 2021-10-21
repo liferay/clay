@@ -285,9 +285,7 @@ A table is styled like a list. The active state can be invoked by adding class `
 						...
 					</a>
 				</div>
-				<div class="dropdown dropdown-action">
-					...
-				</div>
+				<div class="dropdown dropdown-action">...</div>
 			</td>
 		</tr>
 		<tr class="table-active">
@@ -303,9 +301,7 @@ A table is styled like a list. The active state can be invoked by adding class `
 					</label>
 				</div>
 			</td>
-			<td>
-				21148
-			</td>
+			<td>21148</td>
 			<td class="table-cell-expand">
 				<div class="table-list-title">
 					<a class="text-truncate-inline" href="#1">
@@ -338,9 +334,7 @@ A table is styled like a list. The active state can be invoked by adding class `
 						...
 					</a>
 				</div>
-				<div class="dropdown dropdown-action">
-					...
-				</div>
+				<div class="dropdown dropdown-action">...</div>
 			</td>
 		</tr>
 	</tbody>

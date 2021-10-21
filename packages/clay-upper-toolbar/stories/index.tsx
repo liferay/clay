@@ -16,7 +16,7 @@ import ClayUpperToolbar from '../src';
 storiesOf('Deprecated|ClayUpperToolbar', module).add('default', () => (
 	<ClayUpperToolbar>
 		<ClayUpperToolbar.Item className="text-left" expand>
-			<label className="component-title">{'Foo Bar'}</label>
+			<label className="component-title">Foo Bar</label>
 
 			<ClayIcon spritemap={spritemap} symbol="lock" />
 		</ClayUpperToolbar.Item>
@@ -47,11 +47,11 @@ storiesOf('Deprecated|ClayUpperToolbar', module).add('default', () => (
 
 		<ClayUpperToolbar.Item>
 			<ClayButton displayType="secondary" onClick={() => {}}>
-				{'Delete'}
+				Delete
 			</ClayButton>
 
 			<ClayButton className="inline-item-after" onClick={() => {}}>
-				{'Edit'}
+				Edit
 			</ClayButton>
 		</ClayUpperToolbar.Item>
 

@@ -126,101 +126,102 @@ const DEFAULT_LABELS = {
 	selectPerPageItems: '{0} items',
 };
 
-export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = ({
-	activeDelta,
-	activePage = 1,
-	alignmentPosition,
-	deltas = defaultDeltas,
-	disabledPages,
-	ellipsisBuffer,
-	hrefConstructor,
-	labels = DEFAULT_LABELS,
-	onDeltaChange,
-	onPageChange,
-	showDeltasDropDown = true,
-	spritemap,
-	totalItems,
-	...otherProps
-}: IProps) => {
-	if (!activeDelta) {
-		activeDelta = deltas[0].label;
-	}
+export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
+	({
+		activeDelta,
+		activePage = 1,
+		alignmentPosition,
+		deltas = defaultDeltas,
+		disabledPages,
+		ellipsisBuffer,
+		hrefConstructor,
+		labels = DEFAULT_LABELS,
+		onDeltaChange,
+		onPageChange,
+		showDeltasDropDown = true,
+		spritemap,
+		totalItems,
+		...otherProps
+	}: IProps) => {
+		if (!activeDelta) {
+			activeDelta = deltas[0].label;
+		}
 
-	const items: Items = deltas.map(({href, label}) => {
-		const item: {
-			href?: string;
-			label?: string;
-			onClick?: () => void;
-		} = {
-			href,
-			label: sub(labels.selectPerPageItems, [String(label)]),
-		};
-
-		if (!href) {
-			item.onClick = () => {
-				if (onDeltaChange) {
-					onDeltaChange(label as number);
-				}
+		const items: Items = deltas.map(({href, label}) => {
+			const item: {
+				href?: string;
+				label?: string;
+				onClick?: () => void;
+			} = {
+				href,
+				label: sub(labels.selectPerPageItems, [String(label)]),
 			};
-		}
 
-		return item;
-	});
+			if (!href) {
+				item.onClick = () => {
+					if (onDeltaChange) {
+						onDeltaChange(label as number);
+					}
+				};
+			}
 
-	const totalPages = Math.ceil(totalItems / activeDelta);
+			return item;
+		});
 
-	React.useEffect(() => {
-		if (onPageChange && activePage > totalPages) {
-			onPageChange(1);
-		}
-	}, [totalPages]);
+		const totalPages = Math.ceil(totalItems / activeDelta);
 
-	return (
-		<PaginationBar {...otherProps}>
-			{showDeltasDropDown && (
-				<PaginationBar.DropDown
+		React.useEffect(() => {
+			if (onPageChange && activePage > totalPages) {
+				onPageChange(1);
+			}
+		}, [totalPages]);
+
+		return (
+			<PaginationBar {...otherProps}>
+				{showDeltasDropDown && (
+					<PaginationBar.DropDown
+						alignmentPosition={alignmentPosition}
+						items={items}
+						trigger={
+							<ClayButton
+								data-testid="selectPaginationBar"
+								displayType="unstyled"
+							>
+								{sub(labels.perPageItems, [activeDelta])}
+
+								<ClayIcon
+									spritemap={spritemap}
+									symbol="caret-double-l"
+								/>
+							</ClayButton>
+						}
+					/>
+				)}
+
+				<PaginationBar.Results>
+					{sub(labels.paginationResults, [
+						(activePage - 1) * activeDelta + 1,
+						activePage * activeDelta < totalItems
+							? activePage * activeDelta
+							: totalItems,
+						totalItems,
+					])}
+				</PaginationBar.Results>
+
+				<ClayPaginationWithBasicItems
+					activePage={activePage}
 					alignmentPosition={alignmentPosition}
-					items={items}
-					trigger={
-						<ClayButton
-							data-testid="selectPaginationBar"
-							displayType="unstyled"
-						>
-							{sub(labels.perPageItems, [activeDelta])}
-
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="caret-double-l"
-							/>
-						</ClayButton>
-					}
+					disabledPages={disabledPages}
+					ellipsisBuffer={ellipsisBuffer}
+					hrefConstructor={hrefConstructor}
+					onPageChange={(page) => {
+						if (page && onPageChange) {
+							onPageChange(page);
+						}
+					}}
+					spritemap={spritemap}
+					totalPages={totalPages}
 				/>
-			)}
-
-			<PaginationBar.Results>
-				{sub(labels.paginationResults, [
-					(activePage - 1) * activeDelta + 1,
-					activePage * activeDelta < totalItems
-						? activePage * activeDelta
-						: totalItems,
-					totalItems,
-				])}
-			</PaginationBar.Results>
-
-			<ClayPaginationWithBasicItems
-				activePage={activePage}
-				alignmentPosition={alignmentPosition}
-				disabledPages={disabledPages}
-				ellipsisBuffer={ellipsisBuffer}
-				hrefConstructor={hrefConstructor}
-				onPageChange={(page) => {
-					if (page && onPageChange) {
-						onPageChange(page);
-					}
-				}}
-				spritemap={spritemap}
-				totalPages={totalPages}
-			/>
-		</PaginationBar>
-	);
-};
+			</PaginationBar>
+		);
+	};

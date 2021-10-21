@@ -164,7 +164,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			menuRenderer: MenuRenderer = MultiSelectMenuRenderer,
 			onBlur = noop,
 			onClearAllButtonClick = () => {
+				// eslint-disable-next-line @typescript-eslint/no-use-before-define
 				onItemsChange([]);
+				// eslint-disable-next-line @typescript-eslint/no-use-before-define
 				onChange('');
 			},
 			onChange = noop,
@@ -324,15 +326,15 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							{...otherProps}
 							className="form-control-inset"
 							disabled={disabled}
-							onBlur={(e) => {
-								onBlur(e);
+							onBlur={(event) => {
+								onBlur(event);
 								setIsFocused(false);
 							}}
 							onChange={(event) =>
 								onChange(event.target.value.replace(',', ''))
 							}
-							onFocus={(e) => {
-								onFocus(e);
+							onFocus={(event) => {
+								onFocus(event);
 								setIsFocused(true);
 							}}
 							onKeyDown={handleKeyDown}

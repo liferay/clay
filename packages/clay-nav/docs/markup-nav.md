@@ -467,9 +467,7 @@ A monospaced button in Nav Item: `btn btn-primary nav-btn nav-btn-monospaced`.
 		<button class="btn btn-primary nav-btn" type="button">Details</button>
 	</li>
 	<li class="nav-item">
-		<button class="btn btn-link nav-btn" type="button">
-			Details
-		</button>
+		<button class="btn btn-link nav-btn" type="button">Details</button>
 	</li>
 	<li class="nav-item">
 		<button

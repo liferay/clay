@@ -171,16 +171,16 @@ const ClayTableWithDraggableRows: React.FunctionComponent = () => {
 			<ClayTable.Head>
 				<ClayTable.Row>
 					<ClayTable.Cell expanded headingCell headingTitle>
-						{'Teams'}
+						Teams
 					</ClayTable.Cell>
 					<ClayTable.Cell headingCell headingTitle>
-						{'Region'}
+						Region
 					</ClayTable.Cell>
 					<ClayTable.Cell headingCell headingTitle>
-						{'Country'}
+						Country
 					</ClayTable.Cell>
 					<ClayTable.Cell headingCell headingTitle>
-						{'Description'}
+						Description
 					</ClayTable.Cell>
 				</ClayTable.Row>
 			</ClayTable.Head>

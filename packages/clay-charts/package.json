@@ -10,7 +10,7 @@
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"copySvg": "ncp src/svg lib/svg",
 		"prepublishOnly": "yarn sass && yarn build && yarn build:types && yarn copySvg",
-		"sass": "node-sass src/scss/main.scss -o lib/css --source-map true",
+		"sass": "sass src/scss/main.scss -o lib/css --source-map true",
 		"test": "jest --config ../../jest.config.js"
 	},
 	"keywords": [

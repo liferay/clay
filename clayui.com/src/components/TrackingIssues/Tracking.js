@@ -18,14 +18,14 @@ const Tracking = ({query}) => {
 			<table className="table table-autofit">
 				<thead>
 					<tr>
-						<th>{'ID'}</th>
+						<th>ID</th>
 						<th className="table-cell-expand table-cell-minw-300">
-							{'Title'}
+							Title
 						</th>
 						<th className="table-cell-expand-small table-cell-ws-nowrap">
-							{'Date'}
+							Date
 						</th>
-						<th className="table-cell-expand-smaller">{'Date'}</th>
+						<th className="table-cell-expand-smaller">Date</th>
 					</tr>
 				</thead>
 				<tbody>

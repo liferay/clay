@@ -33,12 +33,12 @@ export default () => {
 		<div className="row">
 			<LiveProvider code={code} theme={theme}>
 				<div className="col-sm">
-					<h3>{'Editor:'}</h3>
+					<h3>Editor:</h3>
 					<LiveEditor onChange={setCode} style={{minHeight: 600}} />
 				</div>
 
 				<div className="col-sm">
-					<h3>{'Preview:'}</h3>
+					<h3>Preview:</h3>
 					<div
 						style={{
 							border: 'solid #f5f5f8',

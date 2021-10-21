@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-/*global fetchMock*/
+/* global fetchMock*/
 
-import {cleanup, render, wait} from '@testing-library/react';
+import {cleanup, render, waitFor} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import React from 'react';
 
@@ -82,7 +82,7 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
 		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
@@ -97,7 +97,7 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
 		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
 	});
@@ -113,7 +113,7 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetch).toHaveBeenCalled());
+		await waitFor(() => expect(fetch).toHaveBeenCalled());
 
 		expect(fetch).toHaveBeenCalledWith('https://clay.data/', undefined);
 	});
@@ -134,7 +134,7 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetchMock.mock.calls.length).not.toEqual(1));
+		await waitFor(() => expect(fetchMock.mock.calls.length).not.toEqual(1));
 
 		expect(fetchMock.mock.calls.length).toBe(0);
 		expect(container.innerHTML).toMatchSnapshot();
@@ -158,7 +158,7 @@ describe('ClayDataProvider', () => {
 
 		expect(container.innerHTML).toMatchSnapshot();
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
 		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
@@ -203,7 +203,7 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(6), {
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(6), {
 			timeout: 15000,
 		});
 		expect(spy.mock.calls.length).toBe(5);
@@ -242,7 +242,7 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(6), {
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(6), {
 			timeout: 8000,
 		});
 		expect(spy.mock.calls.length).toBe(5);
@@ -287,7 +287,7 @@ describe('ClayDataProvider', () => {
 
 		rerender(<DataProviderTest variables={{name: 'Baz'}} />);
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(2));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
 		await fetchMock.mock.results[1].value;
 
 		expect(fetchMock.mock.calls[0][0]).toEqual(
@@ -310,7 +310,7 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
 		expect(fetchMock.mock.calls[0][0]).toEqual(
 			'https://clay.data/?name=Bar'
@@ -338,7 +338,7 @@ describe('ClayDataProvider', () => {
 		rerender(<DataProviderTest variables={{name: 'Clay'}} />);
 
 		await fetchMock.mock.results[0].value;
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(2));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
 
 		expect(fetchMock.mock.calls[0][0]).toEqual(
 			'https://clay.data/?name=Bar'
@@ -360,13 +360,13 @@ describe('ClayDataProvider', () => {
 			</DataProvider>
 		);
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 		expect(container.innerHTML).toMatchSnapshot();
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(2));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
 		expect(container.innerHTML).toMatchSnapshot();
 
-		await wait(() => expect(fetchMock.mock.calls.length).toEqual(3));
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(3));
 		expect(container.innerHTML).toMatchSnapshot();
 
 		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');

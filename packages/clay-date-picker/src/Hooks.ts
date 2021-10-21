@@ -8,6 +8,9 @@ import {useCallback, useState} from 'react';
 import {IDay, Month, WeekDays, clone, formatDate, setDate} from './Helpers';
 import {FirstDayOfWeek} from './types';
 
+const normalizeTime = (date: Date) =>
+	setDate(date, {hours: 12, milliseconds: 0, minutes: 0, seconds: 0});
+
 /**
  * Handles selected days and stabilize date time when set to avoid problems
  * when the range is used to check intervals.
@@ -82,9 +85,6 @@ export const useCurrentTime = (format: string) => {
 		(hours: number | string, minutes: number | string) => void
 	];
 };
-
-const normalizeTime = (date: Date) =>
-	setDate(date, {hours: 12, milliseconds: 0, minutes: 0, seconds: 0});
 
 function getDaysInMonth(d: Date) {
 	const firstDayOfMonth = new Date(d.getFullYear(), d.getMonth(), 1, 12);

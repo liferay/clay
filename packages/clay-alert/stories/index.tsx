@@ -18,13 +18,13 @@ const ClayToastDemo = () => {
 	return (
 		<>
 			<div>
-				{'Toast Items'}
+				Toast Items
 				<button
 					onClick={() =>
 						setToastItems([...toastItems, Math.random() * 100])
 					}
 				>
-					{'Add'}
+					Add
 				</button>
 			</div>
 
@@ -39,7 +39,7 @@ const ClayToastDemo = () => {
 							);
 						}}
 						spritemap={spritemap}
-						title={'Hola:'}
+						title="Hola:"
 					>{`My value is ${value}`}</ClayAlert>
 				))}
 			</ClayAlert.ToastContainer>
@@ -53,10 +53,10 @@ const ClayDismissibleDemo = () => {
 	return (
 		<>
 			<div>
-				{'Dismissible Notification'}
+				Dismissible Notification
 				{!showDismisible && (
 					<button onClick={() => setShowDismisible(true)}>
-						{'Show'}
+						Show
 					</button>
 				)}
 			</div>
@@ -65,9 +65,9 @@ const ClayDismissibleDemo = () => {
 				<ClayAlert
 					onClose={() => setShowDismisible(false)}
 					spritemap={spritemap}
-					title={'Info'}
+					title="Info"
 				>
-					{'This alert is dismissable'}
+					This alert is dismissable
 				</ClayAlert>
 			)}
 		</>
@@ -174,11 +174,10 @@ storiesOf('Components|ClayAlert', module)
 	.add('w/ a button', () => (
 		<>
 			<ClayAlert displayType="info" spritemap={spritemap} title="Info:">
-				{'This is an alert with a button!'}
-
+				This is an alert with a button!
 				<ClayAlert.Footer>
 					<ClayButton.Group>
-						<ClayButton alert>{'View'}</ClayButton>
+						<ClayButton alert>View</ClayButton>
 					</ClayButton.Group>
 				</ClayAlert.Footer>
 			</ClayAlert>
@@ -186,7 +185,7 @@ storiesOf('Components|ClayAlert', module)
 			<ClayAlert
 				actions={
 					<ClayButton.Group>
-						<ClayButton alert>{'View'}</ClayButton>
+						<ClayButton alert>View</ClayButton>
 					</ClayButton.Group>
 				}
 				displayType="success"
@@ -202,9 +201,7 @@ storiesOf('Components|ClayAlert', module)
 					undefined
 				)}
 			>
-				{
-					'File uploaded. Would you like to add categories automatically?'
-				}
+				File uploaded. Would you like to add categories automatically?
 			</ClayAlert>
 		</>
 	))
@@ -213,7 +210,7 @@ storiesOf('Components|ClayAlert', module)
 			<ClayAlert
 				actions={
 					<ClayButton displayType="success" small>
-						{'Add'}
+						Add
 					</ClayButton>
 				}
 				displayType="success"
@@ -222,19 +219,17 @@ storiesOf('Components|ClayAlert', module)
 				title="Success:"
 				variant="inline"
 			>
-				{
-					'File uploaded. Would you like to add categories automatically?'
-				}
+				File uploaded. Would you like to add categories automatically?
 			</ClayAlert>
 			<br />
 			<ClayAlert
 				actions={
 					<ClayButton.Group spaced>
 						<ClayButton displayType="warning" small>
-							{'Replace'}
+							Replace
 						</ClayButton>
 						<ClayButton alert small>
-							{'Keep Both'}
+							Keep Both
 						</ClayButton>
 					</ClayButton.Group>
 				}
@@ -244,7 +239,7 @@ storiesOf('Components|ClayAlert', module)
 				title="Alert:"
 				variant="inline"
 			>
-				{'A file with this name already exists.'}
+				A file with this name already exists.
 			</ClayAlert>
 		</>
 	))

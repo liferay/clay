@@ -22,9 +22,7 @@ describe('ClayLink', () => {
 	});
 
 	it('renders with a children content', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayLink>{'My Link'}</ClayLink>
-		);
+		const testRenderer = TestRenderer.create(<ClayLink>My Link</ClayLink>);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
@@ -46,7 +44,7 @@ describe('ClayLink', () => {
 				monospaced
 				outline
 			>
-				{'M'}
+				M
 			</ClayLink>
 		);
 
@@ -56,7 +54,7 @@ describe('ClayLink', () => {
 	it('renders outline links', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLink displayType="primary" href="#1" outline>
-				{'Outline'}
+				Outline
 			</ClayLink>
 		);
 
@@ -66,7 +64,7 @@ describe('ClayLink', () => {
 	it('renders borderless links', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLink borderless href="#1">
-				{'Borderless'}
+				Borderless
 			</ClayLink>
 		);
 
@@ -85,7 +83,7 @@ describe('ClayLink', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayLinkContext.Provider value={BoldLink}>
 				<ClayLink displayType="secondary" href="#1">
-					{'I am Bold!'}
+					I am Bold!
 				</ClayLink>
 			</ClayLinkContext.Provider>
 		);

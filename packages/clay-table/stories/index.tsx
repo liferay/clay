@@ -63,42 +63,46 @@ storiesOf('Components|ClayTable', module)
 			<ClayTable.Head>
 				<ClayTable.Row>
 					<ClayTable.Cell expanded headingCell headingTitle>
-						{'Teams'}
+						Teams
 					</ClayTable.Cell>
 					<ClayTable.Cell headingCell headingTitle>
-						{'Region'}
+						Region
 					</ClayTable.Cell>
 					<ClayTable.Cell headingCell headingTitle>
-						{'Country'}
+						Country
 					</ClayTable.Cell>
 					<ClayTable.Cell headingCell headingTitle>
-						{'Description'}
+						Description
 					</ClayTable.Cell>
 				</ClayTable.Row>
 			</ClayTable.Head>
 			<ClayTable.Body>
 				<ClayTable.Row>
-					<ClayTable.Cell headingTitle>
-						{'White and Red'}
-					</ClayTable.Cell>
-					<ClayTable.Cell>{'South America'}</ClayTable.Cell>
-					<ClayTable.Cell>{'Brazil'}</ClayTable.Cell>
+					<ClayTable.Cell headingTitle>White and Red</ClayTable.Cell>
+					<ClayTable.Cell>South America</ClayTable.Cell>
+					<ClayTable.Cell>Brazil</ClayTable.Cell>
 					<ClayTable.Cell truncate>
-						{
-							'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
-						}
+						Homero aeterno conclusionemque est in, scribentur
+						mediocritatem mea ut. Ad voluptua vituperata constituam
+						pro. Mel at constituto efficiantur, in eirmod lobortis
+						mei. Eam vero probo efficiendi ne, molestie pericula nec
+						in, dolore minimum duo et. Mundi epicuri patrioque in
+						vis, virtute legimus oporteat cu eum.
 					</ClayTable.Cell>
 				</ClayTable.Row>
 				<ClayTable.Row>
 					<ClayTable.Cell headingTitle>
-						{'White and Purple'}
+						White and Purple
 					</ClayTable.Cell>
-					<ClayTable.Cell>{'Europe'}</ClayTable.Cell>
-					<ClayTable.Cell>{'Spain'}</ClayTable.Cell>
+					<ClayTable.Cell>Europe</ClayTable.Cell>
+					<ClayTable.Cell>Spain</ClayTable.Cell>
 					<ClayTable.Cell truncate>
-						{
-							'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
-						}
+						Homero aeterno conclusionemque est in, scribentur
+						mediocritatem mea ut. Ad voluptua vituperata constituam
+						pro. Mel at constituto efficiantur, in eirmod lobortis
+						mei. Eam vero probo efficiendi ne, molestie pericula nec
+						in, dolore minimum duo et. Mundi epicuri patrioque in
+						vis, virtute legimus oporteat cu eum.
 					</ClayTable.Cell>
 				</ClayTable.Row>
 			</ClayTable.Body>
@@ -106,7 +110,7 @@ storiesOf('Components|ClayTable', module)
 	))
 	.add('with hover', () => {
 		const DownloadButton = () => (
-			<ClayButton displayType="secondary">{'Download'}</ClayButton>
+			<ClayButton displayType="secondary">Download</ClayButton>
 		);
 
 		const ImageCell = () => (
@@ -125,9 +129,13 @@ storiesOf('Components|ClayTable', module)
 								className="text-truncate"
 								title="Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum."
 							>
-								{
-									'Homero aeterno conclusionemque est in, scribentur mediocritatem mea ut. Ad voluptua vituperata constituam pro. Mel at constituto efficiantur, in eirmod lobortis mei. Eam vero probo efficiendi ne, molestie pericula nec in, dolore minimum duo et. Mundi epicuri patrioque in vis, virtute legimus oporteat cu eum.'
-								}
+								Homero aeterno conclusionemque est in,
+								scribentur mediocritatem mea ut. Ad voluptua
+								vituperata constituam pro. Mel at constituto
+								efficiantur, in eirmod lobortis mei. Eam vero
+								probo efficiendi ne, molestie pericula nec in,
+								dolore minimum duo et. Mundi epicuri patrioque
+								in vis, virtute legimus oporteat cu eum.
 							</span>
 						</span>
 					</div>
@@ -190,7 +198,7 @@ storiesOf('Components|ClayTable', module)
 						<ClayTable.Row>
 							<ClayTable.Cell headingCell>
 								<ClayButton displayType="unstyled">
-									{'Name'}
+									Name
 								</ClayButton>
 								<ClayIcon
 									spritemap={spritemap}
@@ -206,14 +214,12 @@ storiesOf('Components|ClayTable', module)
 					</ClayTable.Head>
 					<ClayTable.Body>
 						<ClayTable.Row divider>
-							<ClayTable.Cell colSpan={8}>
-								{'Folders'}
-							</ClayTable.Cell>
+							<ClayTable.Cell colSpan={8}>Folders</ClayTable.Cell>
 						</ClayTable.Row>
 
 						<ClayTable.Row active>
 							<ClayTable.Cell expanded headingTitle>
-								{'Photos'}
+								Photos
 							</ClayTable.Cell>
 							{rowCellItems.map((child, index) => (
 								<ClayTable.Cell key={index}>
@@ -224,7 +230,7 @@ storiesOf('Components|ClayTable', module)
 
 						<ClayTable.Row>
 							<ClayTable.Cell expanded headingTitle>
-								{'Videos'}
+								Videos
 							</ClayTable.Cell>
 							{rowCellItems.map((child, index) => (
 								<ClayTable.Cell key={index}>
@@ -234,30 +240,28 @@ storiesOf('Components|ClayTable', module)
 						</ClayTable.Row>
 
 						<ClayTable.Row divider>
-							<ClayTable.Cell colSpan={8}>
-								{'Recipes'}
-							</ClayTable.Cell>
+							<ClayTable.Cell colSpan={8}>Recipes</ClayTable.Cell>
 						</ClayTable.Row>
 
 						<ClayTable.Row>
 							<ClayTable.Cell expanded headingTitle>
-								{'Hamburger'}
+								Hamburger
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ImageCell />
 							</ClayTable.Cell>
-							<ClayTable.Cell>{'U.S.A'}</ClayTable.Cell>
+							<ClayTable.Cell>U.S.A</ClayTable.Cell>
 							<ClayTable.Cell align="right">
-								{'10 min.'}
+								10 min.
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ClayLabel displayType="success">
-									{'No Spicy'}
+									No Spicy
 								</ClayLabel>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ClayButton displayType="secondary">
-									{'Download'}
+									Download
 								</ClayButton>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
@@ -273,23 +277,23 @@ storiesOf('Components|ClayTable', module)
 
 						<ClayTable.Row>
 							<ClayTable.Cell expanded headingTitle>
-								{'Ramen'}
+								Ramen
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ImageCell />
 							</ClayTable.Cell>
-							<ClayTable.Cell>{'China'}</ClayTable.Cell>
+							<ClayTable.Cell>China</ClayTable.Cell>
 							<ClayTable.Cell align="right">
-								{'90 min.'}
+								90 min.
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ClayLabel displayType="warning">
-									{'Spicy'}
+									Spicy
 								</ClayLabel>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
 								<ClayButton displayType="secondary">
-									{'Download'}
+									Download
 								</ClayButton>
 							</ClayTable.Cell>
 							<ClayTable.Cell>
@@ -304,14 +308,12 @@ storiesOf('Components|ClayTable', module)
 						</ClayTable.Row>
 
 						<ClayTable.Row divider>
-							<ClayTable.Cell colSpan={8}>
-								{'Chefs'}
-							</ClayTable.Cell>
+							<ClayTable.Cell colSpan={8}>Chefs</ClayTable.Cell>
 						</ClayTable.Row>
 
 						<ClayTable.Row>
 							<ClayTable.Cell expanded headingTitle>
-								{'Ferrán Adriá'}
+								Ferrán Adriá
 							</ClayTable.Cell>
 							{rowCellItems.map((child, index) => (
 								<ClayTable.Cell key={index}>
@@ -394,9 +396,7 @@ storiesOf('Components|ClayTable', module)
 
 					<ClayTable.Body>
 						<ClayTable.Row divider>
-							<ClayTable.Cell colSpan={9}>
-								{'Group 1'}
-							</ClayTable.Cell>
+							<ClayTable.Cell colSpan={9}>Group 1</ClayTable.Cell>
 						</ClayTable.Row>
 						<ClayTable.Row>
 							{rowCellTitles.map((title, index) => (
@@ -459,15 +459,13 @@ storiesOf('Components|ClayTable', module)
 					<ClayTable.Row>
 						<ClayTable.Cell headingCell />
 						<ClayTable.Cell expanded headingCell headingTitle>
-							<span className="text-truncate">
-								{'Description'}
-							</span>
+							<span className="text-truncate">Description</span>
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell>
-							<span className="text-truncate">{'Format'}</span>
+							<span className="text-truncate">Format</span>
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell>
-							<span className="text-truncate">{'Label'}</span>
+							<span className="text-truncate">Label</span>
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell />
 					</ClayTable.Row>
@@ -479,15 +477,14 @@ storiesOf('Components|ClayTable', module)
 							<ClayCheckboxWithState aria-label="Select first row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle truncate>
-							{
-								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-							}
+							Wings eu, pumpkin spice robusta, kopi-luwak mocha
+							caffeine froth grounds.
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="1">{'JPG'}</a>
+							<a href="1">JPG</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="1">{'JPG'}</a>
+							<a href="1">JPG</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<Dropdown />
@@ -498,15 +495,14 @@ storiesOf('Components|ClayTable', module)
 							<ClayCheckboxWithState aria-label="Select second row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle truncate>
-							{
-								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-							}
+							Wings eu, pumpkin spice robusta, kopi-luwak mocha
+							caffeine froth grounds.
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="2">{'GIF'}</a>
+							<a href="2">GIF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="2">{'GIF'}</a>
+							<a href="2">GIF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<Dropdown />
@@ -517,15 +513,14 @@ storiesOf('Components|ClayTable', module)
 							<ClayCheckboxWithState aria-label="Select third row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle truncate>
-							{
-								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-							}
+							Wings eu, pumpkin spice robusta, kopi-luwak mocha
+							caffeine froth grounds.
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="3">{'TIFF'}</a>
+							<a href="3">TIFF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="3">{'TIFF'}</a>
+							<a href="3">TIFF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<Dropdown />
@@ -570,15 +565,13 @@ storiesOf('Components|ClayTable', module)
 					<ClayTable.Row>
 						<ClayTable.Cell headingCell />
 						<ClayTable.Cell expanded headingCell headingTitle>
-							<span className="text-truncate">
-								{'Description'}
-							</span>
+							<span className="text-truncate">Description</span>
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell>
-							<span className="text-truncate">{'Format'}</span>
+							<span className="text-truncate">Format</span>
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell>
-							<span className="text-truncate">{'Label'}</span>
+							<span className="text-truncate">Label</span>
 						</ClayTable.Cell>
 						<ClayTable.Cell headingCell />
 					</ClayTable.Row>
@@ -590,15 +583,14 @@ storiesOf('Components|ClayTable', module)
 							<ClayCheckboxWithState aria-label="Select first row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle noWrap>
-							{
-								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-							}
+							Wings eu, pumpkin spice robusta, kopi-luwak mocha
+							caffeine froth grounds.
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="1">{'JPG'}</a>
+							<a href="1">JPG</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="1">{'JPG'}</a>
+							<a href="1">JPG</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<Dropdown />
@@ -609,15 +601,14 @@ storiesOf('Components|ClayTable', module)
 							<ClayCheckboxWithState aria-label="Select second row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle noWrap>
-							{
-								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-							}
+							Wings eu, pumpkin spice robusta, kopi-luwak mocha
+							caffeine froth grounds.
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="2">{'GIF'}</a>
+							<a href="2">GIF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="2">{'GIF'}</a>
+							<a href="2">GIF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<Dropdown />
@@ -628,15 +619,14 @@ storiesOf('Components|ClayTable', module)
 							<ClayCheckboxWithState aria-label="Select third row" />
 						</ClayTable.Cell>
 						<ClayTable.Cell headingTitle noWrap>
-							{
-								'Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.'
-							}
+							Wings eu, pumpkin spice robusta, kopi-luwak mocha
+							caffeine froth grounds.
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="3">{'TIFF'}</a>
+							<a href="3">TIFF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
-							<a href="3">{'TIFF'}</a>
+							<a href="3">TIFF</a>
 						</ClayTable.Cell>
 						<ClayTable.Cell>
 							<Dropdown />

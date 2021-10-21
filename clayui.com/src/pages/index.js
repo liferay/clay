@@ -12,7 +12,7 @@ import LayoutNavHome from '../components/LayoutNavHome';
 /**
  * @return {React.Component}
  */
-export default () => {
+export default function Home() {
 	const description =
 		'This is Clay. A web implementation of the Lexicon Experience Language; built by Liferay.';
 
@@ -34,14 +34,14 @@ export default () => {
 						rel="noopener noreferrer"
 						target="_blank"
 					>
-						{'v2.clayui.com.'}
+						v2.clayui.com.
 					</a>
 				</div>
 			</div>
 			<LayoutNavHome />
 
 			<Helmet>
-				<title>{'Clay'}</title>
+				<title>Clay</title>
 				<meta content={description} name="description" />
 				<meta content={description} name="og:description" />
 				<meta content={description} name="twitter:description" />
@@ -60,32 +60,31 @@ export default () => {
 											src="/images/home/clay_logo.svg"
 										/>
 										<span className="align-middle text-dark title">
-											{'Clay'}
+											Clay
 										</span>
 									</Link>
 									<h2 className="h2">
-										{
-											'A Web Implementation of Lexicon Experience Language'
-										}
+										A Web Implementation of Lexicon
+										Experience Language
 									</h2>
 									<div>
 										<Link
 											className="btn btn-warning mb-2 mr-3"
 											to="/docs/get-started/index.html"
 										>
-											{'Get Started'}
+											Get Started
 										</Link>
 										<Link
 											className="btn btn-secondary mb-2 mr-3"
 											to="/docs/components/index.html"
 										>
-											{'Components Library'}
+											Components Library
 										</Link>
 										<Link
 											className="btn btn-secondary mb-2"
 											to="/docs/examples.html"
 										>
-											{'Examples'}
+											Examples
 										</Link>
 									</div>
 								</div>
@@ -102,10 +101,10 @@ export default () => {
 									<svg className="lexicon-icon lexicon-icon-megaphone-full">
 										<use xlinkHref="/images/icons/icons.svg#megaphone-full" />
 									</svg>
-									{'Deprecation warnings'}
+									Deprecation warnings
 								</h1>
 								<p className="subtitle-section">
-									<b>{'Deprecation warnings'}</b>
+									<b>Deprecation warnings</b>
 									{' was initially built on top '}
 									<br />
 									{
@@ -122,13 +121,13 @@ export default () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									{'Documentation v2'}
+									Documentation v2
 								</a>
 								<Link
 									className="btn btn-brand-color btn-link"
 									to="/blog/2019/10/25/introducing-clay-v3.html"
 								>
-									{'Read more about warnings'}
+									Read more about warnings
 									<span className="fs-12 inline-item inline-item-after">
 										<svg
 											className="lexicon-icon lexicon-icon-angle-right"
@@ -154,9 +153,9 @@ export default () => {
 									src="/images/react_logo.svg"
 								/>
 								<h1 className="mb-2 title-section">
-									{'Clay Components'}
+									Clay Components
 								</h1>
-								<h2 className="version-section">{'v3.0.0'}</h2>
+								<h2 className="version-section">v3.0.0</h2>
 								<p className="subtitle-section">
 									{
 										'Lexicon follows the approach of Atomic Design and Clay follows '
@@ -174,7 +173,7 @@ export default () => {
 									className="btn btn-borderless btn-warning-borderless mr-3"
 									to="/docs/components/alert.html"
 								>
-									{'Documentation'}
+									Documentation
 								</Link>
 								<a
 									className="btn btn-brand-color btn-link"
@@ -182,7 +181,7 @@ export default () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									{'Storybook'}
+									Storybook
 									<span className="fs-12 inline-item inline-item-after">
 										<svg
 											className="lexicon-icon lexicon-icon-angle-right"
@@ -212,15 +211,16 @@ export default () => {
 								<div className="row">
 									<div className="col-md-12">
 										<h1 className="title-section">
-											{'ClayCSS'}
+											ClayCSS
 										</h1>
 										<p className="subtitle-section">
-											{
-												'Styles can compose a series of variations using our Sass variables and mixins, responsive grid system, and extensive pre-built components.'
-											}
+											Styles can compose a series of
+											variations using our Sass variables
+											and mixins, responsive grid system,
+											and extensive pre-built components.
 										</p>
 										<span className="code-shell">
-											{'yarn add @clay/css'}
+											yarn add @clay/css
 										</span>
 									</div>
 								</div>
@@ -230,7 +230,7 @@ export default () => {
 											className="btn btn-borderless btn-warning-borderless mr-3"
 											to="/docs/components/alert.html"
 										>
-											{'Documentation'}
+											Documentation
 										</Link>
 										<a
 											className="btn btn-brand-color btn-link"
@@ -238,7 +238,7 @@ export default () => {
 											rel="noopener noreferrer"
 											target="_blank"
 										>
-											{'View Documentation v2'}
+											View Documentation v2
 											<span className="fs-12 inline-item inline-item-after">
 												<svg
 													className="lexicon-icon lexicon-icon-angle-right"
@@ -260,7 +260,7 @@ export default () => {
 					<div className="container-fluid container-fluid-max-lg text-center">
 						<div className="row">
 							<div className="col-12">
-								<h2>{'Open Source'}</h2>
+								<h2>Open Source</h2>
 								<p>
 									{'Clay is distributed in a '}
 									<br />
@@ -272,7 +272,7 @@ export default () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									{'Contribute on GitHub'}
+									Contribute on GitHub
 								</a>
 							</div>
 						</div>
@@ -284,16 +284,15 @@ export default () => {
 						<div className="row">
 							<div className="body col-md-9 ml-auto mr-auto">
 								<h2 className="title-section">
-									{'A web implementation of Lexicon'}
+									A web implementation of Lexicon
 								</h2>
 								<p className="pb-5 subtitle-section">
 									{`There's always been a distinction between Lexicon as a design system, and Lexicon as a web implementation. Naming them like this didn't help with the distinction, so `}
 									<b>
-										{
-											'the web implementation of Lexicon is now called Clay'
-										}
+										the web implementation of Lexicon is now
+										called Clay
 									</b>
-									{'.'}
+									.
 								</p>
 							</div>
 						</div>
@@ -309,7 +308,7 @@ export default () => {
 										<p>
 											{'Visit the current Lexicon '}
 											<br />
-											{'Experience Language site'}
+											Experience Language site
 										</p>
 										<a
 											className="mb-3"
@@ -317,7 +316,7 @@ export default () => {
 											rel="noopener noreferrer"
 											target="_blank"
 										>
-											{'Lexicon 2.0'}
+											Lexicon 2.0
 											<span className="fs-12 inline-item inline-item-after">
 												<svg
 													className="lexicon-icon lexicon-icon-angle-right"
@@ -342,7 +341,7 @@ export default () => {
 										<p>
 											{'Visit the previous version of '}
 											<br />
-											{'Clay at Lexicon CSS project site'}
+											Clay at Lexicon CSS project site
 										</p>
 										<a
 											className="mb-3"
@@ -350,7 +349,7 @@ export default () => {
 											rel="noopener noreferrer"
 											target="_blank"
 										>
-											{'Lexicon CSS'}
+											Lexicon CSS
 											<span className="fs-12 inline-item inline-item-after">
 												<svg
 													className="lexicon-icon lexicon-icon-angle-right"
@@ -378,7 +377,7 @@ export default () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									{'Clay Contributors'}
+									Clay Contributors
 								</a>
 							</div>
 
@@ -391,7 +390,7 @@ export default () => {
 										rel="noopener noreferrer"
 										target="_blank"
 									>
-										{'Liferay, Inc.'}
+										Liferay, Inc.
 									</a>
 								</div>
 							</div>
@@ -401,4 +400,4 @@ export default () => {
 			</main>
 		</div>
 	);
-};
+}

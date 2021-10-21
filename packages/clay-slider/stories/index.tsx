@@ -18,7 +18,7 @@ storiesOf('Components|ClaySlider', module)
 		return (
 			<div className="sheet">
 				<div className="form-group">
-					<label htmlFor="slider">{'With Tooltip'}</label>
+					<label htmlFor="slider">With Tooltip</label>
 					<ClaySlider
 						disabled={boolean('Disabled', false)}
 						id="slider"
@@ -87,9 +87,7 @@ storiesOf('Components|ClaySlider', module)
 					/>
 				</div>
 				<div className="form-group">
-					<ClayButton onClick={() => setValue(50)}>
-						{'Reset'}
-					</ClayButton>
+					<ClayButton onClick={() => setValue(50)}>Reset</ClayButton>
 				</div>
 			</div>
 		);

@@ -521,7 +521,7 @@ storiesOf('Demos|Recharts', module)
 				<div className="sheet sheet-lg">
 					<div className="sheet-subtitle">
 						<label htmlFor="mySelectId">
-							{'Select Number of Data Points'}
+							Select Number of Data Points
 						</label>
 
 						<ClayRadioGroup

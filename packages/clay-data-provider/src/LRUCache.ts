@@ -6,8 +6,8 @@
 const DEFAULT_MAX_SIZE = 20;
 
 export class LRUCache<K, V> {
-	private _maxSize: number;
-	private _storage: Map<K, V>;
+	_maxSize: number;
+	_storage: Map<K, V>;
 
 	constructor(maxSize: number = DEFAULT_MAX_SIZE) {
 		if (maxSize <= 0) {

@@ -5,15 +5,13 @@
 
 'use strict';
 
-/* eslint-disable liferay/imports-first */
+const path = require('path');
+
+const redirects = require('../redirects.json');
 
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
-
-const path = require('path');
-
-const redirects = require('../redirects.json');
 
 const {GATSBY_CLAY_NIGHTLY} = process.env;
 
@@ -47,10 +45,16 @@ const getTabs = (permalink, pathGroup) => {
 			name: 'Examples',
 		},
 		...tabs
-			.map(({node: {fields: {slug}}}) => ({
-				href: slug,
-				name: TAB_MAP_NAME[path.basename(slug, '.html')],
-			}))
+			.map(
+				({
+					node: {
+						fields: {slug},
+					},
+				}) => ({
+					href: slug,
+					name: TAB_MAP_NAME[path.basename(slug, '.html')],
+				})
+			)
 			.sort(sortTabs),
 	];
 };
@@ -61,8 +65,12 @@ const createDocs = (actions, edges, mdx, pathGroup) => {
 	const blogTemplate = path.resolve(__dirname, '../src/templates/blog.js');
 
 	edges
-		.filter(({node: {fields: {nightly}}}) =>
-			GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly
+		.filter(
+			({
+				node: {
+					fields: {nightly},
+				},
+			}) => (GATSBY_CLAY_NIGHTLY === 'true' ? true : !nightly)
 		)
 		.forEach(
 			({

@@ -176,15 +176,9 @@ Instead of applying button sizing classes to every button in a group, just add `
 </div>
 
 ```html
-<div class="btn-group btn-group-sm" role="group">
-	...
-</div>
-<div class="btn-group" role="group">
-	...
-</div>
-<div class="btn-group btn-group-lg" role="group">
-	...
-</div>
+<div class="btn-group btn-group-sm" role="group">...</div>
+<div class="btn-group" role="group">...</div>
+<div class="btn-group btn-group-lg" role="group">...</div>
 ```
 
 ## Vertical Variation(#css-vertical-variation)
@@ -233,7 +227,5 @@ Instead of applying button sizing classes to every button in a group, just add `
 </div>
 
 ```html
-<div class="btn-group-vertical" role="group">
-	...
-</div>
+<div class="btn-group-vertical" role="group">...</div>
 ```

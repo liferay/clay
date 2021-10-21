@@ -12,9 +12,7 @@ import {Collection, ICollectionProps} from './Collection';
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
-export function TreeViewGroup<T>(
-	props: ICollectionProps<T>
-): JSX.Element & {
+export function TreeViewGroup<T>(props: ICollectionProps<T>): JSX.Element & {
 	displayName: string;
 };
 
@@ -40,13 +38,17 @@ export function TreeViewGroup<T extends Record<any, any>>({
 			}}
 			id={item.key}
 			in={expandedKeys.has(item.key)}
-			onEnter={(el: HTMLElement) =>
-				el.setAttribute('style', 'height: 0px')
+			onEnter={(element: HTMLElement) =>
+				element.setAttribute('style', 'height: 0px')
 			}
-			onEntered={(el: HTMLElement) => el.removeAttribute('style')}
-			onEntering={(el: HTMLElement) => setElementFullHeight(el)}
-			onExit={(el) => setElementFullHeight(el)}
-			onExiting={(el) => el.setAttribute('style', 'height: 0px')}
+			onEntered={(element: HTMLElement) =>
+				element.removeAttribute('style')
+			}
+			onEntering={(element: HTMLElement) => setElementFullHeight(element)}
+			onExit={(element) => setElementFullHeight(element)}
+			onExiting={(element) =>
+				element.setAttribute('style', 'height: 0px')
+			}
 			timeout={250}
 			unmountOnExit
 		>

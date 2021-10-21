@@ -19,7 +19,7 @@ describe('ClayUpperToolbar', () => {
 		const {container} = render(
 			<ClayUpperToolbar>
 				<ClayUpperToolbar.Item className="text-left" expand>
-					<label className="component-title">{'Foo Bar'}</label>
+					<label className="component-title">Foo Bar</label>
 
 					<ClayIcon spritemap={spritemap} symbol="lock" />
 				</ClayUpperToolbar.Item>
@@ -48,14 +48,14 @@ describe('ClayUpperToolbar', () => {
 
 				<ClayUpperToolbar.Item>
 					<ClayButton displayType="secondary" onClick={() => {}}>
-						{'Delete'}
+						Delete
 					</ClayButton>
 
 					<ClayButton
 						className="inline-item-after"
 						onClick={() => {}}
 					>
-						{'Edit'}
+						Edit
 					</ClayButton>
 				</ClayUpperToolbar.Item>
 
