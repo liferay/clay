@@ -132,7 +132,7 @@ async function build() {
 		path.resolve('./LICENSES')
 	);
 
-	const fileNames = ['atlas.scss', 'bootstrap.scss', 'base.scss'];
+	const fileNames = ['bootstrap.scss', 'base.scss', 'cadmin.scss'];
 
 	await ensureDirectory(CSS_OUTPUT_DIRECTORY);
 
@@ -160,9 +160,11 @@ async function build() {
 
 build()
 	.then(() => {
+		// eslint-disable-next-line no-console
 		console.log('Build successful');
 	})
 	.catch((error) => {
+		// eslint-disable-next-line no-console
 		console.log('Build error:\n', error);
 		process.exit(1);
 	});
