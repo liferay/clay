@@ -51,8 +51,8 @@ describe('ClayModal custom opener', () => {
 				<>
 					{visibleModal && (
 						<ClayModal
+							disableAutoClose
 							observer={observer}
-							preventAutoClose
 							spritemap={spritemap}
 						/>
 					)}

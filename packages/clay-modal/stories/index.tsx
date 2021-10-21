@@ -174,7 +174,6 @@ storiesOf('Components|ClayModal', module)
 					<ClayModal
 						center={boolean('Vertically Center', false)}
 						observer={observer}
-						preventAutoClose={boolean('Prevent AutoClose', false)}
 						size={select('Size', size, 'lg') as Size}
 						spritemap={spritemap}
 						status={select('Status', status, null) as Status}
@@ -235,8 +234,8 @@ storiesOf('Components|ClayModal', module)
 				{visibleModal && (
 					<ClayModal
 						center={boolean('Vertically Center', false)}
+						disableAutoClose
 						observer={observer}
-						preventAutoClose
 						size={select('Size', size, 'lg') as Size}
 						spritemap={spritemap}
 						status={select('Status', status, null) as Status}
