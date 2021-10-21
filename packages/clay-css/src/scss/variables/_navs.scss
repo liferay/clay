@@ -52,7 +52,7 @@ $nav-btn-margin-x: 0.25rem !default; // 4px
 $nav-btn-margin-y: (
 		($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) -
 			$nav-item-monospaced-size
-	) / 2 !default;
+	) * 0.5 !default;
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 
@@ -117,7 +117,7 @@ $nav-link-monospaced: map-deep-merge(
 );
 
 $nav-divider-color: $gray-200 !default;
-$nav-divider-margin-y: $spacer / 2 !default;
+$nav-divider-margin-y: $spacer * 0.5 !default;
 
 $nav-form-padding-bottom: 0 !default;
 $nav-form-padding-left: $nav-link-padding-x !default;
@@ -270,8 +270,8 @@ $nav-underline-link-show: map-deep-merge(
 $nav-underline-link-highlight-content: null !default;
 $nav-underline-link-highlight-height: null !default;
 $nav-underline-link-highlight-bottom: 0 !default;
-$nav-underline-link-highlight-left: $nav-link-padding-x / 2 !default;
-$nav-underline-link-highlight-right: $nav-link-padding-x / 2 !default;
+$nav-underline-link-highlight-left: $nav-link-padding-x * 0.5 !default;
+$nav-underline-link-highlight-right: $nav-link-padding-x * 0.5 !default;
 $nav-underline-link-highlight-top: null !default;
 
 $nav-underline-link-active-highlight: $component-active-bg !default;

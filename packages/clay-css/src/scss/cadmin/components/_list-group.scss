@@ -214,8 +214,8 @@
 .list-group-item-flex {
 	display: flex;
 	margin-bottom: math-sign($cadmin-list-group-border-width);
-	padding-left: $cadmin-list-group-item-padding-x / 2;
-	padding-right: $cadmin-list-group-item-padding-x / 2;
+	padding-left: $cadmin-list-group-item-padding-x * 0.5;
+	padding-right: $cadmin-list-group-item-padding-x * 0.5;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -231,8 +231,8 @@
 
 	.autofit-col {
 		justify-content: $cadmin-list-group-item-flex-align-items;
-		padding-left: $cadmin-list-group-item-padding-x / 2;
-		padding-right: $cadmin-list-group-item-padding-x / 2;
+		padding-left: $cadmin-list-group-item-padding-x * 0.5;
+		padding-right: $cadmin-list-group-item-padding-x * 0.5;
 
 		.custom-control:only-child {
 			margin-bottom: 0;

@@ -4,8 +4,8 @@
 	.container {
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: $grid-gutter-width / 2;
-		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width * 0.5;
+		padding-right: $grid-gutter-width * 0.5;
 		width: 100%;
 
 		@each $breakpoint, $container-max-width in $container-max-widths {
@@ -20,8 +20,8 @@
 	%container-fluid {
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: $grid-gutter-width / 2;
-		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width * 0.5;
+		padding-right: $grid-gutter-width * 0.5;
 		width: 100%;
 	}
 
@@ -61,8 +61,8 @@
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: math-sign($grid-gutter-width / 2);
-		margin-right: math-sign($grid-gutter-width / 2);
+		margin-left: math-sign($grid-gutter-width * 0.5);
+		margin-right: math-sign($grid-gutter-width * 0.5);
 	}
 
 	// Remove the negative margin from default .row, then the horizontal padding
@@ -84,8 +84,8 @@
 
 @if $enable-grid-classes {
 	%grid-column {
-		padding-left: $grid-gutter-width / 2;
-		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width * 0.5;
+		padding-right: $grid-gutter-width * 0.5;
 		position: relative;
 		width: 100%;
 	}
@@ -211,8 +211,8 @@
 
 		.container &,
 		.container-fluid & {
-			margin-left: -($grid-gutter-width / 2);
-			margin-right: -($grid-gutter-width / 2);
+			margin-left: math-sign($grid-gutter-width * 0.5);
+			margin-right: math-sign($grid-gutter-width * 0.5);
 		}
 	}
 

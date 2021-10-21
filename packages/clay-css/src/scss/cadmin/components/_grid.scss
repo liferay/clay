@@ -4,8 +4,8 @@
 	.container {
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: $cadmin-grid-gutter-width / 2;
-		padding-right: $cadmin-grid-gutter-width / 2;
+		padding-left: $cadmin-grid-gutter-width * 0.5;
+		padding-right: $cadmin-grid-gutter-width * 0.5;
 		width: 100%;
 
 		@each $cadmin-breakpoint,
@@ -25,8 +25,8 @@
 	%container-fluid {
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: $cadmin-grid-gutter-width / 2;
-		padding-right: $cadmin-grid-gutter-width / 2;
+		padding-left: $cadmin-grid-gutter-width * 0.5;
+		padding-right: $cadmin-grid-gutter-width * 0.5;
 		width: 100%;
 	}
 
@@ -75,8 +75,8 @@
 	&.row {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: math-sign($cadmin-grid-gutter-width / 2);
-		margin-right: math-sign($cadmin-grid-gutter-width / 2);
+		margin-left: math-sign($cadmin-grid-gutter-width * 0.5);
+		margin-right: math-sign($cadmin-grid-gutter-width * 0.5);
 	}
 
 	// Remove the negative margin from default .row, then the horizontal padding
@@ -98,8 +98,8 @@
 
 @if $cadmin-enable-grid-classes {
 	%grid-column {
-		padding-left: $cadmin-grid-gutter-width / 2;
-		padding-right: $cadmin-grid-gutter-width / 2;
+		padding-left: $cadmin-grid-gutter-width * 0.5;
+		padding-right: $cadmin-grid-gutter-width * 0.5;
 		position: relative;
 		width: 100%;
 	}
@@ -243,8 +243,8 @@
 
 		.container &,
 		.container-fluid & {
-			margin-left: -($cadmin-grid-gutter-width / 2);
-			margin-right: -($cadmin-grid-gutter-width / 2);
+			margin-left: math-sign($cadmin-grid-gutter-width * 0.5);
+			margin-right: math-sign($cadmin-grid-gutter-width * 0.5);
 		}
 	}
 

@@ -125,7 +125,7 @@
 		$str1: '#{$str1}#{$offset} + ';
 	}
 
-	$str2: '(((#{$font-size} * #{$line-height}) - 1em) / 2)';
+	$str2: '(((#{$font-size} * #{$line-height}) - 1em) * 0.5)';
 
 	@return (calc(#{$str1}#{$str2}));
 }

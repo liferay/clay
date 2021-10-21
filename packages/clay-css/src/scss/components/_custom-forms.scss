@@ -662,7 +662,7 @@ label.custom-control-label {
 		&::-ms-track {
 			background-color: transparent;
 			border-color: transparent;
-			border-width: $custom-range-thumb-height / 2;
+			border-width: $custom-range-thumb-height * 0.5;
 
 			@include box-shadow($custom-range-track-box-shadow);
 

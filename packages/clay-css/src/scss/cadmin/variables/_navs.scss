@@ -55,7 +55,7 @@ $cadmin-nav-btn-margin-x: 4px !default; // 4px
 $cadmin-nav-btn-margin-y: (
 		($cadmin-line-height-base * $cadmin-font-size-base) +
 			($cadmin-nav-link-padding-y * 2) - $cadmin-nav-item-monospaced-size
-	) / 2 !default;
+	) * 0.5 !default;
 
 // @deprecated after v3.4.0 use the Sass map `$cadmin-nav-btn` instead
 
@@ -120,7 +120,7 @@ $cadmin-nav-link-monospaced: map-deep-merge(
 );
 
 $cadmin-nav-divider-color: $cadmin-gray-200 !default;
-$cadmin-nav-divider-margin-y: $cadmin-spacer / 2 !default;
+$cadmin-nav-divider-margin-y: $cadmin-spacer * 0.5 !default;
 
 $cadmin-nav-form-padding-bottom: 0 !default;
 $cadmin-nav-form-padding-left: $cadmin-nav-link-padding-x !default;

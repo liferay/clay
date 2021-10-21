@@ -596,13 +596,13 @@ textarea.form-control-sm,
 	.form-row {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: math-sign($form-grid-gutter-width / 2);
-		margin-right: math-sign($form-grid-gutter-width / 2);
+		margin-left: math-sign($form-grid-gutter-width * 0.5);
+		margin-right: math-sign($form-grid-gutter-width * 0.5);
 
 		> .col,
 		> [class*='col-'] {
-			padding-left: $form-grid-gutter-width / 2;
-			padding-right: $form-grid-gutter-width / 2;
+			padding-left: $form-grid-gutter-width * 0.5;
+			padding-right: $form-grid-gutter-width * 0.5;
 		}
 	}
 
@@ -737,7 +737,7 @@ textarea.form-control-sm,
 	> .form-group-item:not(:last-child) {
 		@include media-breakpoint-up(sm) {
 			margin-bottom: 0;
-			margin-right: $grid-gutter-width / 2;
+			margin-right: $grid-gutter-width * 0.5;
 		}
 	}
 

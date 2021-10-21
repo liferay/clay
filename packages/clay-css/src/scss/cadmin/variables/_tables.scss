@@ -53,7 +53,7 @@ $cadmin-table-striped-order: odd !default;
 
 // Table Cell applies to `th` and `td`
 
-$cadmin-table-cell-gutters: $cadmin-grid-gutter-width / 2 !default; // 15px
+$cadmin-table-cell-gutters: $cadmin-grid-gutter-width * 0.5 !default; // 15px
 $cadmin-table-cell-padding: 12px !default;
 $cadmin-table-cell-padding-sm: 4.8px !default;
 

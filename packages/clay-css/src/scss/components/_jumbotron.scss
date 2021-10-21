@@ -6,7 +6,7 @@
 
 		color: $jumbotron-color;
 		margin-bottom: $jumbotron-padding;
-		padding: $jumbotron-padding ($jumbotron-padding / 2);
+		padding: $jumbotron-padding ($jumbotron-padding * 0.5);
 
 		@include media-breakpoint-up(sm) {
 			padding: ($jumbotron-padding * 2) $jumbotron-padding;

@@ -23,7 +23,7 @@ $cadmin-dropdown-max-width-mobile: 230px !default;
 $cadmin-dropdown-spacer: 5px !default; // 5px
 
 $cadmin-dropdown-divider-bg: $cadmin-dropdown-border-color !default;
-$cadmin-dropdown-divider-margin-y: $cadmin-spacer / 2 !default;
+$cadmin-dropdown-divider-margin-y: $cadmin-spacer * 0.5 !default;
 
 $cadmin-dropdown-full-wide-header-spacer-y: 20px !default;
 
@@ -436,6 +436,6 @@ $cadmin-dropdown-action-toggle-disabled-opacity: $cadmin-btn-disabled-opacity !d
 
 $cadmin-dropdown-alert-font-size: null !default;
 $cadmin-dropdown-alert-line-height: normal !default;
-$cadmin-dropdown-alert-margin: ($cadmin-spacer / 2) !default;
+$cadmin-dropdown-alert-margin: $cadmin-spacer * 0.5 !default;
 $cadmin-dropdown-alert-padding-x: $cadmin-dropdown-header-padding-x !default;
 $cadmin-dropdown-alert-padding-y: $cadmin-dropdown-header-padding-y !default;

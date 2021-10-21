@@ -161,7 +161,7 @@ $cadmin-sticker-top-right: map-merge(
 
 // .sticker-outside
 
-$cadmin-sticker-outside-offset: -($cadmin-sticker-size / 2) !default;
+$cadmin-sticker-outside-offset: math-sign($cadmin-sticker-size * 0.5) !default;
 
 $cadmin-sticker-outside: () !default;
 $cadmin-sticker-outside: map-deep-merge(

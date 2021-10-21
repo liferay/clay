@@ -843,7 +843,7 @@
 	$track-width: map-get($map, track-width);
 
 	@if ($track-height and $track-margin-top == null) {
-		$track-margin-top: math-sign($track-height / 2);
+		$track-margin-top: math-sign($track-height * 0.5);
 	}
 
 	$progress-bg: map-get($map, progress-bg);
@@ -859,7 +859,7 @@
 	$progress-width: map-get($map, progress-width);
 
 	@if ($progress-height and $progress-margin-top == null) {
-		$progress-margin-top: math-sign($progress-height / 2);
+		$progress-margin-top: math-sign($progress-height * 0.5);
 	}
 
 	$tooltip-bg: map-get($map, tooltip-bg);
@@ -883,11 +883,11 @@
 	$tooltip-arrow-size: map-get($map, tooltip-arrow-size);
 
 	@if ($tooltip-arrow-size != null) {
-		$tooltip-arrow-offset: $tooltip-arrow-size / 2;
+		$tooltip-arrow-offset: $tooltip-arrow-size * 0.5;
 	}
 
 	@if ($thumb-width and $tooltip-spacer-x == null) {
-		$tooltip-spacer-x: $thumb-width / 2;
+		$tooltip-spacer-x: $thumb-width * 0.5;
 	}
 
 	$form-control-appearance: map-get($map, form-control-appearance);
@@ -1017,9 +1017,9 @@
 		border-width: $thumb-border-width;
 		box-shadow: $thumb-box-shadow;
 		height: $thumb-height;
-		margin-top: math-sign($thumb-height / 2);
+		margin-top: math-sign($thumb-height * 0.5);
 		position: absolute;
-		right: math-sign($thumb-width / 2);
+		right: math-sign($thumb-width * 0.5);
 		top: 50%;
 		visibility: hidden;
 		width: $thumb-width;
@@ -1056,7 +1056,7 @@
 			border-width: $thumb-border-width;
 			box-shadow: $thumb-box-shadow;
 			height: $thumb-height;
-			margin-top: math-sign($thumb-height / 2);
+			margin-top: math-sign($thumb-height * 0.5);
 			position: relative;
 			top: 50%;
 			width: $thumb-width;
@@ -1123,7 +1123,7 @@
 			border-width: $thumb-border-width;
 			box-shadow: $thumb-box-shadow;
 			height: $thumb-height;
-			margin-top: math-sign($thumb-height / 2);
+			margin-top: math-sign($thumb-height * 0.5);
 			position: relative;
 			top: 50%;
 			width: $thumb-width;

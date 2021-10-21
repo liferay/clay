@@ -10,8 +10,8 @@ $cadmin-menubar-vertical-expand-md: map-deep-merge(
 			flex-wrap: wrap,
 			justify-content: space-between,
 			margin-bottom: 24px,
-			margin-left: math-sign($cadmin-grid-gutter-width / 2),
-			margin-right: math-sign($cadmin-grid-gutter-width / 2),
+			margin-left: math-sign($cadmin-grid-gutter-width * 0.5),
+			margin-right: math-sign($cadmin-grid-gutter-width * 0.5),
 		),
 		collapse: (
 			display: block,
@@ -223,8 +223,8 @@ $cadmin-menubar-vertical-expand-lg: map-deep-merge(
 			flex-wrap: wrap,
 			justify-content: space-between,
 			margin-bottom: 24px,
-			margin-left: math-sign($cadmin-grid-gutter-width / 2),
-			margin-right: math-sign($cadmin-grid-gutter-width / 2),
+			margin-left: math-sign($cadmin-grid-gutter-width * 0.5),
+			margin-right: math-sign($cadmin-grid-gutter-width * 0.5),
 		),
 		collapse: (
 			display: block,

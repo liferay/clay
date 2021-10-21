@@ -257,7 +257,7 @@ $alert-fluid-dismissible-container: map-merge(
 		padding-left: $alert-dismissible-padding-left,
 		padding-right:
 			calc(
-				#{$alert-dismissible-padding-right} + #{$grid-gutter-width / 2}
+				#{$alert-dismissible-padding-right} + #{$grid-gutter-width * 0.5}
 			),
 		padding-top: $alert-dismissible-padding-top,
 		position: relative,
@@ -270,7 +270,7 @@ $alert-fluid-dismissible-container: map-merge(
 $alert-fluid-close: () !default;
 $alert-fluid-close: map-deep-merge(
 	(
-		right: calc(#{$grid-gutter-width / 2} + 0.25rem),
+		right: calc(#{$grid-gutter-width * 0.5} + 0.25rem),
 	),
 	$alert-fluid-close
 );
@@ -316,8 +316,8 @@ $alert-notifications-fixed-right: null !default;
 $alert-notifications-fixed-top: null !default;
 
 $alert-notifications-fixed-bottom-mobile: 1rem !default;
-$alert-notifications-fixed-left-mobile: ($grid-gutter-width / 2) !default;
-$alert-notifications-fixed-right-mobile: ($grid-gutter-width / 2) !default;
+$alert-notifications-fixed-left-mobile: $grid-gutter-width * 0.5 !default;
+$alert-notifications-fixed-right-mobile: $grid-gutter-width * 0.5 !default;
 $alert-notifications-fixed-top-mobile: null !default;
 
 $alert-notifications-fixed: () !default;

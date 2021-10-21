@@ -337,10 +337,10 @@ $cadmin-alert-notifications-fixed-top: null !default;
 
 $cadmin-alert-notifications-fixed-bottom-mobile: 16px !default;
 $cadmin-alert-notifications-fixed-left-mobile: (
-	$cadmin-grid-gutter-width / 2
+	$cadmin-grid-gutter-width * 0.5
 ) !default;
 $cadmin-alert-notifications-fixed-right-mobile: (
-	$cadmin-grid-gutter-width / 2
+	$cadmin-grid-gutter-width * 0.5
 ) !default;
 $cadmin-alert-notifications-fixed-top-mobile: null !default;
 
