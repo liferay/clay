@@ -223,7 +223,7 @@ storiesOf('Components|ClayModal', module)
 			</>
 		);
 	})
-	.add('w / preventAutoclose', () => {
+	.add('w / disableAutoClose', () => {
 		const [visibleModal, setVisibleModal] = React.useState<boolean>(false);
 		const {observer, onClose} = useModal({
 			onClose: () => setVisibleModal(false),

@@ -39,7 +39,7 @@ describe('ClayModal custom opener', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
-	it('does not close automatically with preventAutClose', () => {
+	it('does not close automatically with disableAutoClose', () => {
 		const handleOnClose = jest.fn();
 
 		const ModalWithState = () => {
