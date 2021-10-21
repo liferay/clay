@@ -1,6 +1,9 @@
 {
 	"private": true,
 	"repository": "https://github.com/liferay/clay",
+	"engines": {
+		"node": ">=14"
+	},
 	"size-limit": [
 		{
 			"path": "all.js",
