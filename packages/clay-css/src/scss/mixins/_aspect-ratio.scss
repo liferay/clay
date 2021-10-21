@@ -10,7 +10,7 @@
 /// - Add @link to documentation
 
 @mixin clay-aspect-ratio($width: 1, $height: 1) {
-	padding-bottom: percentage($height / $width);
+	padding-bottom: calc(#{$height} / #{$width} * 100%);
 }
 
 /// A mixin that helps style a custom `aspect-ratio-item` component.

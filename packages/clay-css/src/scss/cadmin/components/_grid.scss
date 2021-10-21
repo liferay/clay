@@ -138,8 +138,8 @@
 			@for $cadmin-i from 1 through $cadmin-grid-row-columns {
 				.row-cols#{$cadmin-infix}-#{$cadmin-i} {
 					& > * {
-						flex: 0 0 100% / $cadmin-i;
-						max-width: 100% / $cadmin-i;
+						flex: 0 0 calc(100% / #{$cadmin-i});
+						max-width: calc(100% / #{$cadmin-i});
 					}
 				}
 			}
@@ -152,13 +152,17 @@
 
 			@for $cadmin-i from 1 through $cadmin-grid-columns {
 				.col#{$cadmin-infix}-#{$cadmin-i} {
-					flex: 0 0 percentage($cadmin-i / $cadmin-grid-columns);
+					flex: 0
+						0
+						calc(#{$cadmin-i} / #{$cadmin-grid-columns} * 100%);
 
 					// Add a `max-width` to ensure content within each column does not blow out
 					// the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
 					// do not appear to require this.
 
-					max-width: percentage($cadmin-i / $cadmin-grid-columns);
+					max-width: calc(
+						#{$cadmin-i} / #{$cadmin-grid-columns} * 100%
+					);
 				}
 			}
 
@@ -182,12 +186,8 @@
 
 				@if not($cadmin-infix == '' and $cadmin-i == 0) {
 					.offset#{$cadmin-infix}-#{$cadmin-i} {
-						$cadmin-num: $cadmin-i / $cadmin-grid-columns;
-
-						margin-left: if(
-							$cadmin-num == 0,
-							0,
-							percentage($cadmin-num)
+						margin-left: calc(
+							#{$cadmin-i} / #{$cadmin-grid-columns} * 100%
 						);
 					}
 				}

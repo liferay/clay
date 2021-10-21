@@ -311,8 +311,8 @@
 /// @param {Number} $columns[$grid-columns]
 
 @mixin make-col($size, $columns: $grid-columns) {
-	flex: 0 0 percentage($size / $columns);
-	max-width: percentage($size / $columns);
+	flex: 0 0 calc(#{$size} / #{$columns} * 100%);
+	max-width: calc(#{$size} / #{$columns} * 100%);
 }
 
 /// A Bootstrap 4 mixin that generates styles for `.col-{bp}-auto` classes. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
@@ -332,9 +332,7 @@
 /// @param {Number} $columns[$grid-columns]
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
-	$num: $size / $columns;
-
-	margin-left: if($num == 0, 0, percentage($num));
+	margin-left: calc(#{$size} / #{$columns} * 100%);
 }
 
 /// A Bootstrap 4 mixin that generates styles for `.row-cols-{bp}-*` classes. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
@@ -343,7 +341,7 @@
 
 @mixin row-cols($count) {
 	& > * {
-		flex: 0 0 100% / $count;
-		max-width: 100% / $count;
+		flex: 0 0 calc(100% / #{$count});
+		max-width: calc(100% / #{$count});
 	}
 }
