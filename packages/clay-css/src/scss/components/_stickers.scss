@@ -1,44 +1,5 @@
 .sticker {
-	align-items: center;
-	border-color: $sticker-border-color;
-
-	@include border-radius($sticker-border-radius);
-
-	border-style: $sticker-border-style;
-	border-width: $sticker-border-width;
-	color: $sticker-color;
-
-	@include clay-monospace($sticker-size);
-
-	display: inline-flex;
-	font-size: $sticker-font-size;
-	font-weight: $sticker-font-weight;
-	justify-content: center;
-	position: relative;
-	text-align: center;
-	vertical-align: middle;
-
-	> .inline-item {
-		font-size: $sticker-inline-item-font-size;
-		justify-content: center;
-	}
-
-	> .inline-item .lexicon-icon,
-	.lexicon-icon {
-		margin-top: 0;
-	}
-
-	&.rounded .sticker-overlay {
-		border-radius: $rounded-border-radius;
-	}
-
-	&.rounded-circle .sticker-overlay {
-		border-radius: $rounded-circle-border-radius;
-	}
-
-	&.rounded-0 .sticker-overlay {
-		border-radius: 0;
-	}
+	@include clay-sticker-variant($sticker);
 }
 
 .sticker-img {
@@ -47,70 +8,52 @@
 }
 
 .sticker-overlay {
-	align-items: center;
-
-	@include border-radius($sticker-border-radius);
-
-	bottom: 0;
-	display: flex;
-	justify-content: center;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
+	@include clay-css($sticker-overlay);
 }
 
 // Sticker Positions
 
 .sticker-bottom-left {
-	bottom: $sticker-inside-offset;
-	left: $sticker-inside-offset;
-	position: absolute;
-	right: auto;
-	top: auto;
+	@include clay-css($sticker-bottom-left);
 }
 
 .sticker-bottom-right {
-	bottom: $sticker-inside-offset;
-	left: auto;
-	position: absolute;
-	right: $sticker-inside-offset;
-	top: auto;
+	@include clay-css($sticker-bottom-right);
 }
 
 .sticker-top-left {
-	left: $sticker-inside-offset;
-	position: absolute;
-	top: $sticker-inside-offset;
+	@include clay-css($sticker-top-left);
 }
 
 .sticker-top-right {
-	left: auto;
-	position: absolute;
-	right: $sticker-inside-offset;
-	top: $sticker-inside-offset;
+	@include clay-css($sticker-top-right);
 }
 
 .sticker-outside {
-	left: $sticker-outside-offset;
-	top: $sticker-outside-offset;
+	@include clay-css($sticker-outside);
 
 	&.sticker-bottom-left {
-		bottom: $sticker-outside-offset;
-		top: auto;
+		$bottom-left: setter(
+			map-get($sticker-outside, sticker-bottom-left),
+			()
+		);
+
+		@include clay-css($bottom-left);
 	}
 
 	&.sticker-bottom-right {
-		bottom: $sticker-outside-offset;
-		left: auto;
-		right: $sticker-outside-offset;
-		top: auto;
+		$bottom-right: setter(
+			map-get($sticker-outside, sticker-bottom-right),
+			()
+		);
+
+		@include clay-css($bottom-right);
 	}
 
 	&.sticker-top-right {
-		left: auto;
-		right: $sticker-outside-offset;
+		$top-right: setter(map-get($sticker-outside, sticker-top-right), ());
+
+		@include clay-css($top-right);
 	}
 }
 
@@ -122,31 +65,30 @@
 
 // Sticker Sizes
 
-.sticker-sm {
-	@include clay-sticker-size($sticker-sm);
-}
+@each $selector, $value in $sticker-sizes {
+	%#{$selector} {
+		@include clay-sticker-variant($value);
+	}
 
-.sticker-lg {
-	@include clay-sticker-size($sticker-lg);
-}
-
-.sticker-xl {
-	@include clay-sticker-size($sticker-xl);
+	.#{$selector} {
+		@extend %#{$selector} !optional;
+	}
 }
 
 // Sticker Variants
 
 @each $color, $value in $sticker-palette {
+	%sticker-#{$color} {
+		@include clay-sticker-variant($value);
+	}
+
 	.sticker-#{$color} {
-		background-color: map-get($value, bg);
-		border-color: map-get($value, border-color);
-		color: map-get($value, color);
+		@extend %sticker-#{$color} !optional;
 	}
 }
 
 // Sticker Circle
 
-.sticker-circle,
-.sticker-circle .sticker-overlay {
-	@include border-radius($sticker-circle-border-radius);
+.sticker-circle {
+	@include clay-sticker-variant($sticker-circle);
 }

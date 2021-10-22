@@ -87,7 +87,7 @@
 	}
 
 	.sticker {
-		@include clay-sticker-size($sidebar-list-group-sticker-size);
+		@include clay-sticker-variant($sidebar-list-group-sticker-size);
 	}
 }
 

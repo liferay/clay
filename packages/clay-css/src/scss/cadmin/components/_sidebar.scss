@@ -90,7 +90,7 @@
 	}
 
 	.sticker {
-		@include clay-sticker-size($cadmin-sidebar-list-group-sticker-size);
+		@include clay-sticker-variant($cadmin-sidebar-list-group-sticker-size);
 	}
 }
 
