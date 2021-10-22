@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.38.0](https://github.com/matuzalemsteles/clay/compare/v3.37.0...v3.38.0) (2021-10-22)
+
+### Bug Fixes
+
+-   **@clayui/css:** remove `node-sass` and add new build file ([80f6ec2](https://github.com/matuzalemsteles/clay/commit/80f6ec2457b290865f5cf0c58f3dedb2bf822085))
+
+### Features
+
+-   **clayui.com:** update gatsby and its dependencies to v3.14 ([bf79081](https://github.com/matuzalemsteles/clay/commit/bf79081ef4af91def3982f365f584665e44eddf7))
+
 # [4.0.0](https://github.com/julien/clay/compare/v3.36.0...v4.0.0) (2021-10-06)
 
 ### Bug Fixes

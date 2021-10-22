@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.38.0](https://github.com/liferay/clay/compare/v3.37.0...v3.38.0) (2021-10-22)
+
+### Bug Fixes
+
+-   **@clayui/button:** add missing displayTypes from the Button ([1cb8849](https://github.com/liferay/clay/commit/1cb8849810c5a841025ac6aec15fcc62b053d01b))
+-   **@clayui/core:** fix formatting error ([d79f5a6](https://github.com/liferay/clay/commit/d79f5a6908f8c3ee30b28824f935cadcca7240ed))
+-   **@clayui/core:** fix the indentation of TreeView nodes when the item is a leaf ([6c44389](https://github.com/liferay/clay/commit/6c44389f1352167c091d5efa143770f1b4a4722f))
+-   **@clayui/css:** Alert convert components to use `clay-css` mixin pattern ([adbc3ed](https://github.com/liferay/clay/commit/adbc3ed9abd47e15ad0165411feba034dbbe9214))
+-   **@clayui/css:** Alerts allow customizing `.btn-group` inside `.alert-inline` and increase space between alert-inline buttons and close (48px) ([1fb3075](https://github.com/liferay/clay/commit/1fb3075147ea96012e732a51c825826434e6e350))
+-   **@clayui/css:** Alerts and Cadmin Alerts tweak position of `.alert-inline .alert-indicator` so it's more centered with the text ([6991050](https://github.com/liferay/clay/commit/6991050db719c8a301747b146c3c14575e30d46c))
+-   **@clayui/css:** Atlas / Base variables and components use Clay Color functions instead of Sass color functions for better CSS Custom Property support ([bd72797](https://github.com/liferay/clay/commit/bd72797c6059500587fe2959b3ff44df2a266c76))
+-   **@clayui/css:** Atlas Alerts and Cadmin Alerts spacing between `alert-indicator` and text should be 8px ([abb1ad9](https://github.com/liferay/clay/commit/abb1ad97128b29a1d77fe660323b65803206796c))
+-   **@clayui/css:** Atlas Alerts use `$alert-indicator-font-size` instead of `$alert-font-size` when calculating spacing for the `.alert-indicator` ([10809da](https://github.com/liferay/clay/commit/10809dae86c2e68fb6b7c9fe60209efdc6336916))
+-   **@clayui/css:** Badge updates `$badge-close` Sass map to use newer keys for hover and focus ([485862c](https://github.com/liferay/clay/commit/485862cb62c0d5ba42d1706ef1020bf5fd1f6743))
+-   **@clayui/css:** Border utilities `border-color` is the wrong value. Table Row Variants scoped `$border-color` variable was overwriting global `$border-color` variable ([834209a](https://github.com/liferay/clay/commit/834209a7b0a64805aa134d15127db5a8f3105a68))
+-   **@clayui/css:** Cadmin Alert convert components to use `clay-css` mixin pattern ([915c748](https://github.com/liferay/clay/commit/915c748788d0ff4c6ffbdbc8b75e07a910a4412e))
+-   **@clayui/css:** Cadmin Alerts allow customizing `.btn-group` inside `.alert-inline` and increase space between alert-inline buttons and close (48px) ([f6c7a02](https://github.com/liferay/clay/commit/f6c7a02ff79f351ad98586d3c17f9f903e17b755))
+-   **@clayui/css:** Cadmin Modals `modal-body` should have border-top to create separation when components are inserted between `modal-header` and `modal-body` ([b5b33c0](https://github.com/liferay/clay/commit/b5b33c03918c1ac34556403caa657fcac169208a))
+-   **@clayui/css:** Cadmin variables and components use Clay Color functions instead of Sass color functions for better CSS Custom Property support ([2c77b7b](https://github.com/liferay/clay/commit/2c77b7b7054fd18ebc5ffe01fadf8820cd2242fe))
+-   **@clayui/css:** cleanup build script ([60be3dd](https://github.com/liferay/clay/commit/60be3ddd225dcc76500319555eef938e99835044))
+-   **@clayui/css:** Global Color Functions adds aliases for Sass color functions `clay-darken`, `clay-lighten`, `clay-adjust-hue`, `clay-desaturate`, `clay-saturate`, `clay-mix`, `clay-blue`, `clay-green`, `clay-red`. It converts CSS Custom Property fallback values to the correct type before running them through the Sass functions. ([189e281](https://github.com/liferay/clay/commit/189e281a9a1329ca4efabfa79e8df9c05a5e6eaa))
+-   **@clayui/css:** Global Functions `math-sign` uses deprecated `[@elseif](https://github.com/elseif)` syntax, changed to `[@else](https://github.com/else) if` ([bd22a48](https://github.com/liferay/clay/commit/bd22a48bd54bd6c3bdf25493c81bf47d8fd46bbc)), closes [#4353](https://github.com/liferay/clay/issues/4353)
+-   **@clayui/css:** Global Functions use Clay Color Functions that support CSS Custom Properties with fallback value ([e7b1abf](https://github.com/liferay/clay/commit/e7b1abf2e49b208e3b24667431351a8faf2f15ca))
+-   **@clayui/css:** Mixins use Clay Color Functions instead of Sass color functions ([baaddfc](https://github.com/liferay/clay/commit/baaddfc2e3c253b4bfd256a9b5afbc0e4a08c0ab))
+-   **@clayui/css:** Modals `modal-body` should have border-top to create separation when components are inserted between `modal-header` and `modal-body` ([b3f648e](https://github.com/liferay/clay/commit/b3f648e9f873112bb7525440726304e8503f628d))
+-   **@clayui/css:** Modals `modal-header` increase z-index so it appears on top of `modal-body`. `modal-header` border gets hidden by `modal-body` border due to last commit. ([fd3ae71](https://github.com/liferay/clay/commit/fd3ae71089b7cc18f1381a886cecfceee9deac06))
+-   **@clayui/css:** remove `node-sass` and add new build file ([80f6ec2](https://github.com/liferay/clay/commit/80f6ec2457b290865f5cf0c58f3dedb2bf822085))
+
+### Features
+
+-   **@clayui/alert:** adds inline alert variation and actions API ([d146d49](https://github.com/liferay/clay/commit/d146d49c27ee900f1c73b5eae26aa126125ebede))
+-   **@clayui/core:** adds `onLoadMore` API to TreeView ([ff972d7](https://github.com/liferay/clay/commit/ff972d73ffcddd24b06b51f26e11270044fbdbbd))
+-   **@clayui/core:** implement "load more" to aggregate the state ([1fd9b62](https://github.com/liferay/clay/commit/1fd9b62cbdd504a2ff45f4480920913de9f7cf89))
+-   **@clayui/css:** Alerts and Cadmin Alerts use Sass placeholders for alert variants for cleaner extends ([2c34258](https://github.com/liferay/clay/commit/2c3425892d7a78a345be145160ca4db7ad83eb07))
+-   **@clayui/css:** Badge converts `.badge`, `.badge-pill`, and badge variants to use `clay-badge-variant` mixin ([8c9d4eb](https://github.com/liferay/clay/commit/8c9d4ebc7702573841ffb313d64228a644029a21))
+-   **@clayui/css:** Cadmin Badge converts `.badge` and badge variants to use `clay-badge-variant` mixin ([a2b04b2](https://github.com/liferay/clay/commit/a2b04b2172b789175c1b64909ae6e055e112f462))
+-   **@clayui/css:** Globals and Cadmin Globals adds `$enable-clay-color-functions-process-fallback` and `$cadmin-enable-clay-color-functions-process-fallback` variables. This forces Clay color functions to return the CSS Custom Property instead of processing the fallback color and returning a hex value. ([15a6bc1](https://github.com/liferay/clay/commit/15a6bc180881422a87176a69974213ffb23f8b3e))
+-   **@clayui/css:** Mixins `clay-alert-variant` adds option to configure `.alert-indicator` ([0c9f913](https://github.com/liferay/clay/commit/0c9f913257935962fab0334521d1d871e264259b))
+-   **@clayui/css:** Mixins `clay-alert-variant` adds option to pass in styles to `.alert-indicator + .lead` ([ff5146b](https://github.com/liferay/clay/commit/ff5146b1f2a9bbee249a2ba696a0833c8706eb71))
+-   **@clayui/css:** Mixins adds `clay-badge-variant` ([dc52ed1](https://github.com/liferay/clay/commit/dc52ed18cfa6034b0219cd9f0c2c0ed6932ea18a))
+-   **@clayui/modal:** add the preventAutoClose prop ([af7b12f](https://github.com/liferay/clay/commit/af7b12feb8491f4ffc928526fb8a4c10ec017cbd)), closes [#4355](https://github.com/liferay/clay/issues/4355)
+-   **clayui.com:** update gatsby and its dependencies to v3.14 ([bf79081](https://github.com/liferay/clay/commit/bf79081ef4af91def3982f365f584665e44eddf7))
+
 # [3.37.0](https://github.com/liferay/clay/compare/v3.36.0...v3.37.0) (2021-10-06)
 
 ### Bug Fixes
