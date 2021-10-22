@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.38.0](https://github.com/liferay/clay/compare/v3.37.0...v3.38.0) (2021-10-22)
+
+### Bug Fixes
+
+-   **@clayui/button:** add missing displayTypes from the Button ([1cb8849](https://github.com/liferay/clay/commit/1cb8849810c5a841025ac6aec15fcc62b053d01b))
+
 # [3.37.0](https://github.com/liferay/clay/compare/v3.36.0...v3.37.0) (2021-10-06)
 
 **Note:** Version bump only for package @clayui/button

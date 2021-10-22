@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.38.0](https://github.com/liferay/clay/compare/v3.37.0...v3.38.0) (2021-10-22)
+
+### Features
+
+-   **@clayui/alert:** adds inline alert variation and actions API ([d146d49](https://github.com/liferay/clay/commit/d146d49c27ee900f1c73b5eae26aa126125ebede))
+
 # [3.37.0](https://github.com/liferay/clay/compare/v3.36.0...v3.37.0) (2021-10-06)
 
 **Note:** Version bump only for package @clayui/alert

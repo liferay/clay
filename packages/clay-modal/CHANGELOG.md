@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.38.0](https://github.com/liferay/clay/compare/v3.37.0...v3.38.0) (2021-10-22)
+
+### Features
+
+-   **@clayui/modal:** add the preventAutoClose prop ([af7b12f](https://github.com/liferay/clay/commit/af7b12feb8491f4ffc928526fb8a4c10ec017cbd)), closes [#4355](https://github.com/liferay/clay/issues/4355)
+
 # [3.37.0](https://github.com/liferay/clay/compare/v3.36.0...v3.37.0) (2021-10-06)
 
 **Note:** Version bump only for package @clayui/modal
