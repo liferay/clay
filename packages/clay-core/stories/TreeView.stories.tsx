@@ -174,7 +174,7 @@ storiesOf('Components|ClayTreeView', module)
 				]}
 				nestedKey="children"
 				onRenameItem={(item) => {
-					item.name += `-renamed-${Date.now()}`;
+					item.name += `-${Date.now()}`;
 
 					return item;
 				}}
@@ -212,7 +212,15 @@ storiesOf('Components|ClayTreeView', module)
 
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
-				<TreeView items={ITEMS_DRIVE} nestedKey="children">
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onRenameItem={(item) => {
+						item.name += `-${Date.now()}`;
+
+						return item;
+					}}
+				>
 					{(item: IItem) => (
 						<TreeView.Item>
 							<TreeView.ItemStack>

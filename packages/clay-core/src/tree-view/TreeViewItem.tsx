@@ -105,7 +105,12 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								remove(item.indexes);
 							}
 							if ((key === 'R' || key === 'F2') && onRenameItem) {
-								replace(item.indexes, onRenameItem(item));
+								replace(item.indexes, {
+									...onRenameItem({...item}),
+									index: item.index,
+									indexes: item.indexes,
+									key: item.key,
+								});
 							}
 						}}
 						ref={ref}
