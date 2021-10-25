@@ -23,7 +23,7 @@ interface ITreeViewProps<T>
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
-	onRenameItem?: (item: T) => T;
+	onRenameItem?: (item: T) => Promise<T>;
 	showExpanderOnHover?: boolean;
 }
 
