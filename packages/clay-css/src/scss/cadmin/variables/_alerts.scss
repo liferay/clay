@@ -290,7 +290,7 @@ $cadmin-alert-fluid-dismissible-container: map-merge(
 $cadmin-alert-fluid-close: () !default;
 $cadmin-alert-fluid-close: map-deep-merge(
 	(
-		right: calc(#{$cadmin-grid-gutter-width / 2} + 4px),
+		right: calc(#{$cadmin-grid-gutter-width * 0.5} + 4px),
 	),
 	$cadmin-alert-fluid-close
 );
