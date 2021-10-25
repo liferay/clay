@@ -320,8 +320,8 @@ label.custom-control-label {
 							$font-size-base *
 								$line-height-base -
 								$custom-control-indicator-size
-						) /
-						2,
+						) *
+						0.5,
 					$custom-control-indicator-border-width * 2
 				);
 				width: $custom-switch-indicator-size;
@@ -571,8 +571,8 @@ label.custom-control-label {
 			height: $custom-range-thumb-height;
 			margin-top: (
 					$custom-range-track-height - $custom-range-thumb-height
-				) /
-				2; // Webkit specific
+				) *
+				0.5; // Webkit specific
 
 			@include transition($custom-forms-transition);
 

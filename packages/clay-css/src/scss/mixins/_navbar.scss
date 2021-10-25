@@ -55,8 +55,8 @@
 	$link-margin-x: map-get($map, link-margin-x);
 	$link-margin-y: setter(
 		map-get($map, link-margin-y),
-		(($height - $border-bottom-width - $border-top-width) - $link-height) /
-			2
+		(($height - $border-bottom-width - $border-top-width) - $link-height) *
+			0.5
 	);
 	$link-padding-x: setter(
 		map-get($map, link-padding-x),

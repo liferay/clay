@@ -218,9 +218,10 @@
 
 	.embed-responsive-#{$embed-responsive-aspect-ratio-x}by#{$embed-responsive-aspect-ratio-y} {
 		&::before {
-			padding-top: percentage(
-				$embed-responsive-aspect-ratio-y /
-					$embed-responsive-aspect-ratio-x
+			padding-top: calc(
+				#{$embed-responsive-aspect-ratio-y} /
+					#{$embed-responsive-aspect-ratio-x} *
+					100%
 			);
 		}
 	}

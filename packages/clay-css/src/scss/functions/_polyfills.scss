@@ -1,0 +1,17 @@
+////
+/// @group polyfills
+////
+
+/// A function that uses `/` as a division operation if the function `div()` does not exist. Dart Sass 1.33.0 changed `/` from a division operation to a list separator. Clay CSS will default to to using `/` as a division operation unless `@use 'sass:math' as *;` is declared to load the math module.
+/// @param {Number} $numerator - The number to divide or dividend
+/// @param {Number} $denominator - The number that divides the $numerator or divisor
+
+@function clay-div($numerator, $denominator) {
+	$division-function: if(
+		function-exists(div),
+		div($numerator, $denominator),
+		$numerator / $denominator
+	);
+
+	@return $division-function;
+}
