@@ -174,9 +174,13 @@ storiesOf('Components|ClayTreeView', module)
 				]}
 				nestedKey="children"
 				onRenameItem={(item) => {
-					item.name += `-${Date.now()}`;
+					return new Promise((resolve) => {
+						setTimeout(() => {
+							item.name += `-${Date.now()}`;
 
-					return item;
+							resolve(item);
+						}, 500);
+					});
 				}}
 			>
 				{(item) => (
@@ -216,9 +220,13 @@ storiesOf('Components|ClayTreeView', module)
 					items={ITEMS_DRIVE}
 					nestedKey="children"
 					onRenameItem={(item) => {
-						item.name += `-${Date.now()}`;
+						return new Promise((resolve) => {
+							setTimeout(() => {
+								item.name += `-${Date.now()}`;
 
-						return item;
+								resolve(item);
+							}, 500);
+						});
 					}}
 				>
 					{(item: IItem) => (

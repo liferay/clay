@@ -91,7 +91,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								}
 							}
 						}}
-						onKeyDown={(event) => {
+						onKeyDown={async (event) => {
 							const {key} = event;
 							if (group) {
 								if (key === 'ArrowLeft') {
@@ -105,8 +105,10 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								remove(item.indexes);
 							}
 							if ((key === 'R' || key === 'F2') && onRenameItem) {
+								const newItem = await onRenameItem({...item});
+
 								replace(item.indexes, {
-									...onRenameItem({...item}),
+									...newItem,
 									index: item.index,
 									indexes: item.indexes,
 									key: item.key,
