@@ -101,10 +101,13 @@
 			"clayui.com"
 		],
 		"nohoist": [
-			"gatsby"
+			"gatsby",
+			"**/@storybook/**/webpack",
+			"**/@storybook/**/webpack/**"
 		]
 	},
 	"resolutions": {
+		"@pmmmwh/react-refresh-webpack-plugin": "0.5.1",
 		"@types/react": "16.9.9",
 		"@types/react-dom": "16.9.9",
 		"js-beautify": "1.7.5",
