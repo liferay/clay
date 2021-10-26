@@ -100,6 +100,22 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								}
 								if (key === 'ArrowRight') {
 									open(item.key);
+
+									const {childRef} = item;
+
+									if (childRef.current) {
+										const parentElement =
+											childRef.current.parentElement;
+										// At this point the parentElement only has one child
+										// that's why we're using setTimeout here
+										setTimeout(() => {
+											const group =
+												parentElement.querySelector(
+													'.treeview-group'
+												);
+											group.firstElementChild.firstElementChild.focus();
+										});
+									}
 								}
 								if (key === ' ') {
 									selection.toggleSelection(item.key);
