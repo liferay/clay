@@ -41,6 +41,10 @@ export function isFocusable({
 
 	const minTabIndex = 0;
 
+	if (tabIndex != null && tabIndex < minTabIndex) {
+		return false;
+	}
+
 	if (
 		(tabIndex != null && tabIndex >= minTabIndex) ||
 		contentEditable === true ||
@@ -54,11 +58,7 @@ export function isFocusable({
 	}
 
 	if (tagName === 'input') {
-		return (
-			type !== 'file' &&
-			type !== 'hidden' &&
-			(tabIndex != null ? tabIndex >= minTabIndex : true)
-		);
+		return type !== 'file' && type !== 'hidden';
 	}
 
 	return (
