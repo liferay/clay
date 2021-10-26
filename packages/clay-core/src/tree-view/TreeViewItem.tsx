@@ -38,6 +38,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 			open,
 			remove,
 			replace,
+			selection,
 			toggle,
 		} = useTreeViewContext();
 
@@ -99,6 +100,9 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								}
 								if (key === 'ArrowRight') {
 									open(item.key);
+								}
+								if (key === ' ') {
+									selection.toggleSelection(item.key);
 								}
 							}
 							if (key === 'Backspace' || key === 'Delete') {
