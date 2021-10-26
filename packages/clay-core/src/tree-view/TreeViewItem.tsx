@@ -94,36 +94,44 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 						}}
 						onKeyDown={async (event) => {
 							const {key} = event;
+
 							if (group) {
 								if (key === 'ArrowLeft') {
-									close(item.key);
-								}
-								if (key === 'ArrowRight') {
-									open(item.key);
-
-									const {childRef} = item;
-
-									if (childRef.current) {
-										const parentElement =
-											childRef.current.parentElement;
-										// At this point the parentElement only has one child
-										// that's why we're using setTimeout here
-										setTimeout(() => {
-											const group =
-												parentElement.querySelector(
-													'.treeview-group'
-												);
-											group.firstElementChild.firstElementChild.focus();
-										});
+									if (
+										!close(item.key) &&
+										item.parentItemRef?.current
+									) {
+										item.parentItemRef.current.focus();
 									}
 								}
+
+								if (key === 'ArrowRight') {
+									if (
+										!open(item.key) &&
+										item.itemRef.current
+									) {
+										const group =
+											item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+												'.treeview-group'
+											);
+										const firstItemElement =
+											group?.querySelector<HTMLDivElement>(
+												'.treeview-link'
+											);
+
+										firstItemElement?.focus();
+									}
+								}
+
 								if (key === ' ') {
 									selection.toggleSelection(item.key);
 								}
 							}
+
 							if (key === 'Backspace' || key === 'Delete') {
 								remove(item.indexes);
 							}
+
 							if ((key === 'R' || key === 'F2') && onRenameItem) {
 								const newItem = await onRenameItem({...item});
 
@@ -131,7 +139,9 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									...newItem,
 									index: item.index,
 									indexes: item.indexes,
+									itemRef: item.itemRef,
 									key: item.key,
+									parentItemRef: item.parentItemRef,
 								});
 							}
 						}}
