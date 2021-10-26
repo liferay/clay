@@ -12,7 +12,9 @@ import {useTreeViewContext} from './context';
 type Value = {
 	[propName: string]: any;
 	indexes: Array<number>;
+	itemRef: React.RefObject<HTMLDivElement>;
 	key: React.Key;
+	parentItemRef: React.RefObject<HTMLDivElement>;
 };
 
 type Props = {
@@ -50,11 +52,15 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 export function ItemContextProvider({children, value}: Props) {
 	const {expandedKeys, items, open, reorder, selection} =
 		useTreeViewContext();
-	const {indexes: parentIndexes = [], key: parentKey} = useItem();
+	const {
+		indexes: parentIndexes = [],
+		key: parentKey,
+		itemRef: parentItemRef,
+	} = useItem();
 
 	const keyRef = useRef(getKey(value.key));
 
-	const childRef = useRef(null);
+	const childRef = useRef<HTMLDivElement>(null);
 
 	const hoverTimeoutIdRef = useRef<number | null>();
 
@@ -65,9 +71,10 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const item: Value = {
 		...value,
-		childRef,
 		indexes: [...parentIndexes, value.index],
+		itemRef: childRef,
 		key: keyRef.current,
+		parentItemRef,
 	};
 
 	const [overPosition, setOverPosition] = useState<Position | null>(null);

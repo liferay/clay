@@ -36,10 +36,10 @@ export interface ITreeProps<T>
 }
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
-	close: (key: Key) => void;
+	close: (key: Key) => boolean;
 	expandedKeys: Set<Key>;
 	insert: (path: Array<number>, value: unknown) => void;
-	open: (key: Key) => void;
+	open: (key: Key) => boolean;
 	remove: (path: Array<number>) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
 	replace: (path: Array<number>, item: T) => void;
@@ -70,9 +70,13 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 		if (expanded.has(key)) {
 			expanded.delete(key);
+
+			setExpandedKeys(expanded);
+
+			return true;
 		}
 
-		setExpandedKeys(expanded);
+		return false;
 	};
 
 	const remove = (path: Array<number>) => {
@@ -124,9 +128,13 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 		if (!expanded.has(key)) {
 			expanded.add(key);
+
+			setExpandedKeys(expanded);
+
+			return true;
 		}
 
-		setExpandedKeys(expanded);
+		return false;
 	};
 
 	return {
