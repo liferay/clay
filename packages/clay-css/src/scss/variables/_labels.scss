@@ -2,11 +2,13 @@
 /// @group labels
 ////
 
+// .label
+
+$label-border-color: $gray-900 !default;
+$label-border-radius: $border-radius !default;
+$label-border-style: solid !default;
+$label-border-width: 0.0625rem !default;
 $label-color: null !default;
-
-$label-link-color: inherit !default;
-$label-link-hover-color: inherit !default;
-
 $label-font-size: 75% !default;
 $label-font-weight: $font-weight-bold !default;
 $label-height: null !default;
@@ -17,30 +19,108 @@ $label-spacer-x: 0.25rem !default; // 4px
 $label-spacer-y: 0.125rem !default; // 2px
 $label-text-transform: null !default;
 
-$label-lexicon-icon-height: null !default;
-$label-lexicon-icon-margin-top: 0 !default;
-$label-lexicon-icon-width: null !default;
+// .label .sticker
 
 $label-sticker-border-radius: 100px !default;
 $label-sticker-size: 0.875em !default;
 
-$label-dismissible-text-transform: null !default;
-
-$label-item-spacer-x: 0.5em !default;
-$label-item-spacer-y: null !default;
+// .label[href], .label[type], .label[tabindex='0']
 
 $label-anchor-text-decoration: none !default;
+
 $label-anchor-hover-text-decoration: null !default;
 
+// .label a, .label .btn-unstyled
+
+$label-link-color: inherit !default;
 $label-link-text-decoration: underline !default;
+
+$label-link-hover-color: inherit !default;
 $label-link-hover-text-decoration: none !default;
 
-$label-border-color: $gray-900 !default;
-$label-border-radius: $border-radius !default;
-$label-border-style: solid !default;
-$label-border-width: 0.0625rem !default;
+$label-base: () !default;
 
-// Label Close
+$label: () !default;
+$label: map-deep-merge(
+	(
+		border-color: $label-border-color,
+		border-radius: clay-enable-rounded($label-border-radius),
+		border-style: $label-border-style,
+		border-width: $label-border-width,
+		color: $label-color,
+		display: inline-flex,
+		font-size: $label-font-size,
+		font-weight: $label-font-weight,
+		height: $label-height,
+		line-height: $label-line-height,
+		margin-bottom: $label-spacer-y,
+		margin-right: $label-spacer-x,
+		margin-top: $label-spacer-y,
+		max-width: 100%,
+		padding-bottom: $label-padding-y,
+		padding-left: $label-padding-x,
+		padding-right: $label-padding-x,
+		padding-top: $label-padding-y,
+		text-transform: $label-text-transform,
+		white-space: inherit,
+		word-wrap: break-word,
+		href: (
+			cursor: $link-cursor,
+			text-decoration: $label-anchor-text-decoration,
+			hover: (
+				text-decoration: $label-anchor-hover-text-decoration,
+			),
+			focus: (
+				text-decoration: $label-anchor-hover-text-decoration,
+			),
+		),
+		link: (
+			color: $label-link-color,
+			display: inline-block,
+			text-decoration: $label-link-text-decoration,
+			hover: (
+				color: $label-link-hover-color,
+				text-decoration: $label-link-hover-text-decoration,
+			),
+			focus: (
+				color: $label-link-hover-color,
+				text-decoration: $label-link-hover-text-decoration,
+			),
+		),
+		c-inner: (
+			margin-bottom: math-sign($label-padding-y),
+			margin-left: math-sign($label-padding-x),
+			margin-right: math-sign($label-padding-x),
+			margin-top: math-sign($label-padding-y),
+			max-width: none,
+		),
+		sticker: (
+			border-radius: $label-sticker-border-radius,
+			height: $label-sticker-size,
+			line-height: $label-sticker-size,
+			width: $label-sticker-size,
+		),
+		sticker-overlay: (
+			border-radius: $label-sticker-border-radius,
+		),
+	),
+	$label
+);
+$label: map-deep-merge($label, $label-base);
+
+// .label-dismissible
+
+$label-dismissible-text-transform: null !default;
+
+$label-dismissible: () !default;
+$label-dismissible: map-merge(
+	(
+		text-transform: $label-dismissible-text-transform,
+	),
+	$label-dismissible
+);
+
+// .label-item .close
 
 $label-close: () !default;
 $label-close: map-deep-merge(
@@ -68,7 +148,83 @@ $label-close: map-deep-merge(
 	$label-close
 );
 
-// Label Sizes
+// .label-item
+
+$label-item-spacer-x: 0.5em !default;
+$label-item-spacer-y: null !default;
+
+$label-lexicon-icon-height: null !default;
+$label-lexicon-icon-margin-top: 0 !default;
+$label-lexicon-icon-width: null !default;
+
+$label-item: () !default;
+$label-item: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		flex-shrink: 0,
+		justify-content: center,
+		margin-bottom: $label-item-spacer-y,
+		margin-top: $label-item-spacer-y,
+		min-height: 0,
+		position: relative,
+		link: (
+			display: inline-flex,
+		),
+		btn-unstyled: (
+			color: inherit,
+			display: inline-flex,
+		),
+		close: $label-close,
+		lexicon-icon: (
+			height: $label-lexicon-icon-height,
+			margin-top: $label-lexicon-icon-margin-top,
+			width: $label-lexicon-icon-width,
+		),
+		text-truncate-inline: (
+			display: inline-flex,
+		),
+	),
+	$label-item
+);
+
+// .label-item-expand
+
+$label-item-expand: () !default;
+$label-item-expand: map-deep-merge(
+	(
+		flex-grow: 1,
+		flex-shrink: 1,
+		min-width: 1rem,
+		word-wrap: break-word,
+		link: (
+			flex-direction: column,
+		),
+	),
+	$label-item-expand
+);
+
+// .label-item-before
+
+$label-item-before: () !default;
+$label-item-before: map-merge(
+	(
+		margin-right: $label-item-spacer-x,
+	),
+	$label-item-before
+);
+
+// .label-item-after
+
+$label-item-after: () !default;
+$label-item-after: map-merge(
+	(
+		margin-left: $label-item-spacer-x,
+	),
+	$label-item-after
+);
+
+// .label-lg
 
 $label-lg: () !default;
 $label-lg: map-deep-merge(
@@ -84,9 +240,17 @@ $label-lg: map-deep-merge(
 	$label-lg
 );
 
-// Label Variants
+// Label Sizes
 
-$label-base: () !default;
+$label-sizes: () !default;
+$label-sizes: map-deep-merge(
+	(
+		label-lg: $label-lg,
+	),
+	$label-sizes
+);
+
+// Label Variants
 
 /// @deprecated as of v2.4.1 use the Sass map `$label-primary` instead
 
