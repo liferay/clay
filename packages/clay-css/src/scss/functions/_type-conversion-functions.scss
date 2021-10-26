@@ -88,7 +88,7 @@
 			$result: $result * 10 + map-get($numbers, $character);
 		} @else {
 			$digits: $digits * 10;
-			$result: $result + map-get($numbers, $character) / $digits;
+			$result: $result + clay-div(map-get($numbers, $character), $digits);
 		}
 	}
 
@@ -177,7 +177,8 @@
 			);
 		} @else {
 			@if index('e' '.' ' ' ',' ']' '}', $token) {
-				@return $pointer, if($result != null, $result / $runs, $result);
+				@return $pointer,
+					if($result != null, clay-div($result, $runs), $result);
 			}
 
 			@return throw('Unexpected token `#{$token}`.', $pointer);
@@ -186,7 +187,7 @@
 		$pointer: $pointer + 1;
 	}
 
-	@return $pointer, if($result != null, $result / $runs, $result);
+	@return $pointer, if($result != null, clay-div($result, $runs), $result);
 }
 
 /// Parses a JSON encoded number to find the exponent part
@@ -258,7 +259,7 @@
 		}
 	} @else {
 		@for $i from $n to 0 {
-			$ret: $ret / $x;
+			$ret: clay-div($ret, $x);
 		}
 	}
 

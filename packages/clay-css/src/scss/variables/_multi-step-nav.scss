@@ -31,8 +31,8 @@ $multi-step-icon-focus-text-decoration: $multi-step-icon-hover-text-decoration !
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
 $multi-step-divider-spacer-x: 0 !default;
-$multi-step-divider-top: ($multi-step-divider-height / 2) +
-	($multi-step-icon-size / 2) !default;
+$multi-step-divider-top: ($multi-step-divider-height * 0.5) +
+	($multi-step-icon-size * 0.5) !default;
 
 $multi-step-indicator-width: $multi-step-icon-size +
 	($multi-step-divider-spacer-x * 2) !default;

@@ -50,7 +50,7 @@ $table-striped-order: odd !default;
 
 // Table Cell applies to `th` and `td`
 
-$table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
+$table-cell-gutters: $grid-gutter-width * 0.5 !default; // 15px
 $table-cell-padding: 0.75rem !default;
 $table-cell-padding-sm: 0.3rem !default;
 

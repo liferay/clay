@@ -31,8 +31,8 @@ $cadmin-multi-step-icon-focus-text-decoration: $cadmin-multi-step-icon-hover-tex
 $cadmin-multi-step-divider-bg: $cadmin-gray-200 !default;
 $cadmin-multi-step-divider-height: 4px !default;
 $cadmin-multi-step-divider-spacer-x: 0 !default;
-$cadmin-multi-step-divider-top: ($cadmin-multi-step-divider-height / 2) +
-	($cadmin-multi-step-icon-size / 2) !default;
+$cadmin-multi-step-divider-top: ($cadmin-multi-step-divider-height * 0.5) +
+	($cadmin-multi-step-icon-size * 0.5) !default;
 
 $cadmin-multi-step-indicator-width: $cadmin-multi-step-icon-size +
 	($cadmin-multi-step-divider-spacer-x * 2) !default;

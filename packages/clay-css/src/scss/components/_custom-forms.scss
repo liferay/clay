@@ -176,8 +176,8 @@ label.custom-control-label {
 							$font-size-base *
 								$line-height-base -
 								$custom-control-indicator-size
-						) /
-						2,
+						) *
+						0.5,
 					$custom-control-indicator-border-width * 2
 				);
 				width: $custom-switch-indicator-size;
@@ -427,8 +427,8 @@ label.custom-control-label {
 			height: $custom-range-thumb-height;
 			margin-top: (
 					$custom-range-track-height - $custom-range-thumb-height
-				) /
-				2; // Webkit specific
+				) *
+				0.5; // Webkit specific
 
 			@include transition($custom-forms-transition);
 
@@ -518,7 +518,7 @@ label.custom-control-label {
 		&::-ms-track {
 			background-color: transparent;
 			border-color: transparent;
-			border-width: $custom-range-thumb-height / 2;
+			border-width: $custom-range-thumb-height * 0.5;
 
 			@include box-shadow($custom-range-track-box-shadow);
 

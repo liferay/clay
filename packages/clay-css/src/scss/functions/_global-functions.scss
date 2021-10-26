@@ -2,6 +2,8 @@
 /// @group globals
 ////
 
+@import '_polyfills.scss';
+
 @import '_color-functions.scss';
 @import '_lx-icons-generated.scss';
 @import '_type-conversion-functions.scss';
@@ -125,7 +127,7 @@
 		$str1: '#{$str1}#{$offset} + ';
 	}
 
-	$str2: '(((#{$font-size} * #{$line-height}) - 1em) / 2)';
+	$str2: '(((#{$font-size} * #{$line-height}) - 1em) * 0.5)';
 
 	@return (calc(#{$str1}#{$str2}));
 }
@@ -140,10 +142,10 @@
 @function clay-px-to-rem($number, $add-unit: false, $base: 16) {
 	@if type-of($number) == 'number' {
 		@if unit($number) == 'px' {
-			$number: $number / 1px;
-			$number: $number / $base;
+			$number: clay-div($number, 1px);
+			$number: clay-div($number, $base);
 		} @else if unitless($number) {
-			$number: $number / $base;
+			$number: clay-div($number, $base);
 		} @else {
 			@debug 'Unable to convert: #{$number} should be a `px` value.';
 		}
@@ -467,7 +469,7 @@
 	$g: clay-green($color);
 	$b: clay-blue($color);
 
-	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) * 0.001;
 
 	$dark: setter(
 		$dark,
@@ -739,7 +741,7 @@
 	$index: 0;
 	$slice: 2000;
 
-	$loops: ceil(str-length($svg) / $slice);
+	$loops: ceil(clay-div(str-length($svg), $slice));
 
 	@for $i from 1 through $loops {
 		$chunk: str-slice($svg, $index, $index + $slice - 1);

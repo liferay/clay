@@ -31,7 +31,7 @@
 
 .multi-step-title-center {
 	.multi-step-title {
-		margin-left: $multi-step-icon-size / 2;
+		margin-left: $multi-step-icon-size * 0.5;
 		max-width: $multi-step-title-max-width;
 		overflow: hidden;
 		position: relative;
@@ -339,7 +339,7 @@
 			min-width: $multi-step-icon-size;
 			padding-top: $multi-step-title-font-size +
 				$multi-step-title-margin-bottom +
-				($multi-step-divider-height / 2);
+				($multi-step-divider-height * 0.5);
 		}
 
 		.multi-step-title {

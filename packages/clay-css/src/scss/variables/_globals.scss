@@ -382,7 +382,7 @@ $h4-font-size-mobile: null !default;
 $h5-font-size-mobile: null !default;
 $h6-font-size-mobile: null !default;
 
-$headings-margin-bottom: $spacer / 2 !default;
+$headings-margin-bottom: $spacer * 0.5 !default;
 $headings-font-family: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;

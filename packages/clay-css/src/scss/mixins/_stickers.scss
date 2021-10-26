@@ -8,7 +8,7 @@
 /// @example
 /// font-size: {Number | String | Null},
 /// inline-item-font-size: {Number | String | Null},
-/// outside-offset: {Number | String}, // Default: -(map-get($map, size) / 2)
+/// outside-offset: {Number | String}, // Default: -(map-get($map, size) * 0.5)
 /// size: {Number | String | Null},
 /// @todo
 /// - Add @example
@@ -19,7 +19,7 @@
 	$inline-item-font-size: map-get($map, inline-item-font-size);
 	$outside-offset: setter(
 		map-get($map, outside-offset),
-		-(map-get($map, size) / 2)
+		math-sign(map-get($map, size) * 0.5)
 	);
 	$size: map-get($map, size);
 

@@ -10,8 +10,8 @@ $menubar-vertical-expand-md: map-deep-merge(
 			flex-wrap: wrap,
 			justify-content: space-between,
 			margin-bottom: 1.5rem,
-			margin-left: math-sign($grid-gutter-width / 2),
-			margin-right: math-sign($grid-gutter-width / 2),
+			margin-left: math-sign($grid-gutter-width * 0.5),
+			margin-right: math-sign($grid-gutter-width * 0.5),
 		),
 		collapse: (
 			display: block,
@@ -177,8 +177,8 @@ $menubar-vertical-expand-lg: map-deep-merge(
 			flex-wrap: wrap,
 			justify-content: space-between,
 			margin-bottom: 1.5rem,
-			margin-left: math-sign($grid-gutter-width / 2),
-			margin-right: math-sign($grid-gutter-width / 2),
+			margin-left: math-sign($grid-gutter-width * 0.5),
+			margin-right: math-sign($grid-gutter-width * 0.5),
 		),
 		collapse: (
 			display: block,

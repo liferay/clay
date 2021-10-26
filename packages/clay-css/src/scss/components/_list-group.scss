@@ -248,8 +248,8 @@
 .list-group-item-flex {
 	display: flex;
 	margin-bottom: -$list-group-border-width;
-	padding-left: $list-group-item-padding-x / 2;
-	padding-right: $list-group-item-padding-x / 2;
+	padding-left: $list-group-item-padding-x * 0.5;
+	padding-right: $list-group-item-padding-x * 0.5;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -265,8 +265,8 @@
 
 	.autofit-col {
 		justify-content: $list-group-item-flex-align-items;
-		padding-left: $list-group-item-padding-x / 2;
-		padding-right: $list-group-item-padding-x / 2;
+		padding-left: $list-group-item-padding-x * 0.5;
+		padding-right: $list-group-item-padding-x * 0.5;
 
 		.custom-control:only-child {
 			margin-bottom: 0;

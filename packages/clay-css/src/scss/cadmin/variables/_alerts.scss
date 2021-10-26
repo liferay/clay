@@ -290,7 +290,7 @@ $cadmin-alert-fluid-dismissible-container: map-merge(
 $cadmin-alert-fluid-close: () !default;
 $cadmin-alert-fluid-close: map-deep-merge(
 	(
-		right: calc(#{$cadmin-grid-gutter-width / 2} + 4px),
+		right: calc(#{$cadmin-grid-gutter-width * 0.5} + 4px),
 	),
 	$cadmin-alert-fluid-close
 );
@@ -337,10 +337,10 @@ $cadmin-alert-notifications-fixed-top: null !default;
 
 $cadmin-alert-notifications-fixed-bottom-mobile: 16px !default;
 $cadmin-alert-notifications-fixed-left-mobile: (
-	$cadmin-grid-gutter-width / 2
+	$cadmin-grid-gutter-width * 0.5
 ) !default;
 $cadmin-alert-notifications-fixed-right-mobile: (
-	$cadmin-grid-gutter-width / 2
+	$cadmin-grid-gutter-width * 0.5
 ) !default;
 $cadmin-alert-notifications-fixed-top-mobile: null !default;
 

@@ -70,7 +70,7 @@
 		&::before {
 			border-top-color: $cadmin-tooltip-arrow-color;
 			border-width: $cadmin-tooltip-arrow-height
-				($cadmin-tooltip-arrow-width / 2) 0;
+				($cadmin-tooltip-arrow-width * 0.5) 0;
 			top: 0;
 		}
 	}
@@ -86,8 +86,9 @@
 
 		&::before {
 			border-right-color: $cadmin-tooltip-arrow-color;
-			border-width: ($cadmin-tooltip-arrow-width / 2)
-				$cadmin-tooltip-arrow-height ($cadmin-tooltip-arrow-width / 2) 0;
+			border-width: ($cadmin-tooltip-arrow-width * 0.5)
+				$cadmin-tooltip-arrow-height ($cadmin-tooltip-arrow-width * 0.5)
+				0;
 			right: 0;
 		}
 	}
@@ -101,7 +102,7 @@
 
 		&::before {
 			border-bottom-color: $cadmin-tooltip-arrow-color;
-			border-width: 0 ($cadmin-tooltip-arrow-width / 2)
+			border-width: 0 ($cadmin-tooltip-arrow-width * 0.5)
 				$cadmin-tooltip-arrow-height;
 			bottom: 0;
 		}
@@ -118,8 +119,8 @@
 
 		&::before {
 			border-left-color: $cadmin-tooltip-arrow-color;
-			border-width: ($cadmin-tooltip-arrow-width / 2) 0
-				($cadmin-tooltip-arrow-width / 2) $cadmin-tooltip-arrow-height;
+			border-width: ($cadmin-tooltip-arrow-width * 0.5) 0
+				($cadmin-tooltip-arrow-width * 0.5) $cadmin-tooltip-arrow-height;
 			left: 0;
 		}
 	}
@@ -151,7 +152,7 @@
 .clay-tooltip-top {
 	.arrow {
 		left: 50%;
-		margin-left: -($cadmin-tooltip-arrow-width / 2);
+		margin-left: math-sign($cadmin-tooltip-arrow-width * 0.5);
 	}
 }
 
@@ -172,7 +173,7 @@
 .clay-tooltip-left,
 .clay-tooltip-right {
 	.arrow {
-		margin-top: -($cadmin-tooltip-arrow-width / 2);
+		margin-top: math-sign($cadmin-tooltip-arrow-width * 0.5);
 		top: 50%;
 	}
 }
@@ -203,7 +204,7 @@
 
 		&::before {
 			border-bottom-color: $cadmin-tooltip-arrow-color;
-			border-width: 0 ($cadmin-tooltip-arrow-width / 2)
+			border-width: 0 ($cadmin-tooltip-arrow-width * 0.5)
 				$cadmin-tooltip-arrow-height;
 			bottom: 0;
 		}
@@ -231,8 +232,8 @@
 
 		&::before {
 			border-left-color: $cadmin-tooltip-arrow-color;
-			border-width: ($cadmin-tooltip-arrow-width / 2) 0
-				($cadmin-tooltip-arrow-width / 2) $cadmin-tooltip-arrow-height;
+			border-width: ($cadmin-tooltip-arrow-width * 0.5) 0
+				($cadmin-tooltip-arrow-width * 0.5) $cadmin-tooltip-arrow-height;
 			left: 0;
 		}
 	}
@@ -259,8 +260,9 @@
 
 		&::before {
 			border-right-color: $cadmin-tooltip-arrow-color;
-			border-width: ($cadmin-tooltip-arrow-width / 2)
-				$cadmin-tooltip-arrow-height ($cadmin-tooltip-arrow-width / 2) 0;
+			border-width: ($cadmin-tooltip-arrow-width * 0.5)
+				$cadmin-tooltip-arrow-height ($cadmin-tooltip-arrow-width * 0.5)
+				0;
 			right: 0;
 		}
 	}
@@ -286,7 +288,7 @@
 		&::before {
 			border-top-color: $cadmin-tooltip-arrow-color;
 			border-width: $cadmin-tooltip-arrow-height
-				($cadmin-tooltip-arrow-width / 2) 0;
+				($cadmin-tooltip-arrow-width * 0.5) 0;
 			top: 0;
 		}
 	}

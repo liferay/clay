@@ -457,7 +457,7 @@ $custom-switch-width: $custom-control-indicator-size * 1.75 !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-switch-indicator-border-radius: $custom-control-indicator-size / 2 !default;
+$custom-switch-indicator-border-radius: $custom-control-indicator-size * 0.5 !default;
 
 /// @deprecated as of v3.x with no replacement
 

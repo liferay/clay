@@ -3,7 +3,7 @@ $cadmin-enable-scaling-navbar: $cadmin-enable-scaling-components !default;
 $cadmin-navbar-border-radius: null !default;
 $cadmin-navbar-font-size: 14px !default; // 14px
 $cadmin-navbar-padding-x: $cadmin-spacer !default;
-$cadmin-navbar-padding-y: $cadmin-spacer / 2 !default;
+$cadmin-navbar-padding-y: $cadmin-spacer * 0.5 !default;
 
 $cadmin-navbar-nav-link-padding-x: 8px !default;
 
@@ -27,7 +27,7 @@ $cadmin-navbar-brand-height: $cadmin-navbar-brand-font-size *
 	$cadmin-line-height-base !default;
 $cadmin-navbar-brand-padding-y: (
 		$cadmin-nav-link-height - $cadmin-navbar-brand-height
-	) / 2 !default;
+	) * 0.5 !default;
 
 // Navbar Toggler
 

@@ -56,15 +56,15 @@
 
 		&::before {
 			border-bottom-color: $cadmin-popover-arrow-outer-color;
-			border-width: 0 ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2);
+			border-width: 0 ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5);
 			top: 0;
 		}
 
 		&::after {
 			border-bottom-color: $cadmin-popover-bottom-arrow-color;
-			border-width: 0 ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2);
+			border-width: 0 ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5);
 			top: $cadmin-popover-border-width;
 		}
 	}
@@ -97,15 +97,15 @@
 
 		&::before {
 			border-left-color: $cadmin-popover-arrow-outer-color;
-			border-width: ($cadmin-popover-arrow-width / 2) 0
-				($cadmin-popover-arrow-width / 2) $cadmin-popover-arrow-height;
+			border-width: ($cadmin-popover-arrow-width * 0.5) 0
+				($cadmin-popover-arrow-width * 0.5) $cadmin-popover-arrow-height;
 			right: 0;
 		}
 
 		&::after {
 			border-left-color: $cadmin-popover-left-arrow-color;
-			border-width: ($cadmin-popover-arrow-width / 2) 0
-				($cadmin-popover-arrow-width / 2) $cadmin-popover-arrow-height;
+			border-width: ($cadmin-popover-arrow-width * 0.5) 0
+				($cadmin-popover-arrow-width * 0.5) $cadmin-popover-arrow-height;
 			right: $cadmin-popover-border-width;
 		}
 	}
@@ -124,15 +124,17 @@
 
 		&::before {
 			border-right-color: $cadmin-popover-arrow-outer-color;
-			border-width: ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2) 0;
+			border-width: ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5)
+				0;
 			left: 0;
 		}
 
 		&::after {
 			border-right-color: $cadmin-popover-right-arrow-color;
-			border-width: ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2) 0;
+			border-width: ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5)
+				0;
 			left: $cadmin-popover-border-width;
 		}
 	}
@@ -149,14 +151,14 @@
 		&::before {
 			border-top-color: $cadmin-popover-arrow-outer-color;
 			border-width: $cadmin-popover-arrow-height
-				($cadmin-popover-arrow-width / 2) 0;
+				($cadmin-popover-arrow-width * 0.5) 0;
 			bottom: 0;
 		}
 
 		&::after {
 			border-top-color: $cadmin-popover-top-arrow-color;
 			border-width: $cadmin-popover-arrow-height
-				($cadmin-popover-arrow-width / 2) 0;
+				($cadmin-popover-arrow-width * 0.5) 0;
 			bottom: $cadmin-popover-border-width;
 		}
 	}
@@ -238,14 +240,14 @@
 		&::after {
 			border-top-color: $cadmin-popover-arrow-color;
 			border-width: $cadmin-popover-arrow-height
-				($cadmin-popover-arrow-width / 2) 0;
+				($cadmin-popover-arrow-width * 0.5) 0;
 			bottom: $cadmin-popover-border-width;
 		}
 
 		&::before {
 			border-top-color: $cadmin-popover-arrow-outer-color;
 			border-width: $cadmin-popover-arrow-height
-				($cadmin-popover-arrow-width / 2) 0;
+				($cadmin-popover-arrow-width * 0.5) 0;
 			bottom: 0;
 		}
 	}
@@ -281,15 +283,17 @@
 
 		&::after {
 			border-right-color: $cadmin-popover-arrow-color;
-			border-width: ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2) 0;
+			border-width: ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5)
+				0;
 			left: $cadmin-popover-border-width;
 		}
 
 		&::before {
 			border-right-color: $cadmin-popover-arrow-outer-color;
-			border-width: ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2) 0;
+			border-width: ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5)
+				0;
 			left: 0;
 		}
 	}
@@ -323,15 +327,15 @@
 
 		&:after {
 			border-bottom-color: $cadmin-popover-arrow-color;
-			border-width: 0 ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2);
+			border-width: 0 ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5);
 			top: $cadmin-popover-border-width;
 		}
 
 		&:before {
 			border-bottom-color: $cadmin-popover-arrow-outer-color;
-			border-width: 0 ($cadmin-popover-arrow-width / 2)
-				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width / 2);
+			border-width: 0 ($cadmin-popover-arrow-width * 0.5)
+				$cadmin-popover-arrow-height ($cadmin-popover-arrow-width * 0.5);
 			top: 0;
 		}
 	}
@@ -367,15 +371,15 @@
 
 		&::after {
 			border-left-color: $cadmin-popover-arrow-color;
-			border-width: ($cadmin-popover-arrow-width / 2) 0
-				($cadmin-popover-arrow-width / 2) $cadmin-popover-arrow-height;
+			border-width: ($cadmin-popover-arrow-width * 0.5) 0
+				($cadmin-popover-arrow-width * 0.5) $cadmin-popover-arrow-height;
 			right: $cadmin-popover-border-width;
 		}
 
 		&::before {
 			border-left-color: $cadmin-popover-arrow-outer-color;
-			border-width: ($cadmin-popover-arrow-width / 2) 0
-				($cadmin-popover-arrow-width / 2) $cadmin-popover-arrow-height;
+			border-width: ($cadmin-popover-arrow-width * 0.5) 0
+				($cadmin-popover-arrow-width * 0.5) $cadmin-popover-arrow-height;
 			right: 0;
 		}
 	}
@@ -399,7 +403,7 @@
 .clay-popover-top {
 	.arrow {
 		left: 50%;
-		margin-left: -($cadmin-popover-arrow-width / 2);
+		margin-left: math-sign($cadmin-popover-arrow-width * 0.5);
 	}
 }
 
@@ -422,7 +426,7 @@
 .clay-popover-left,
 .clay-popover-right {
 	.arrow {
-		margin-top: -($cadmin-popover-arrow-height / 2);
+		margin-top: math-sign($cadmin-popover-arrow-height * 0.5);
 		top: 50%;
 	}
 }

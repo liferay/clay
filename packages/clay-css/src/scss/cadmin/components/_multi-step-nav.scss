@@ -32,7 +32,7 @@
 
 .multi-step-title-center {
 	.multi-step-title {
-		margin-left: $cadmin-multi-step-icon-size / 2;
+		margin-left: $cadmin-multi-step-icon-size * 0.5;
 		max-width: $cadmin-multi-step-title-max-width;
 		overflow: hidden;
 		position: relative;
@@ -340,7 +340,7 @@
 			min-width: $cadmin-multi-step-icon-size;
 			padding-top: $cadmin-multi-step-title-font-size +
 				$cadmin-multi-step-title-margin-bottom +
-				($cadmin-multi-step-divider-height / 2);
+				($cadmin-multi-step-divider-height * 0.5);
 		}
 
 		.multi-step-title {

@@ -188,8 +188,8 @@
 	$breakpoints: $grid-breakpoints
 ) {
 	%grid-column {
-		padding-left: $gutter / 2;
-		padding-right: $gutter / 2;
+		padding-left: $gutter * 0.5;
+		padding-right: $gutter * 0.5;
 		position: relative;
 		width: 100%;
 	}
@@ -262,8 +262,8 @@
 @mixin make-container($gutter: $grid-gutter-width) {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $gutter / 2;
-	padding-right: $gutter / 2;
+	padding-left: $gutter * 0.5;
+	padding-right: $gutter * 0.5;
 	width: 100%;
 }
 
@@ -290,8 +290,8 @@
 @mixin make-row($gutter: $grid-gutter-width) {
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -$gutter / 2;
-	margin-right: -$gutter / 2;
+	margin-left: math-sign($gutter * 0.5);
+	margin-right: math-sign($gutter * 0.5);
 }
 
 /// A Bootstrap 4 mixin. This mixin is deprecated, not used in Bootstrap 4.
@@ -299,8 +299,8 @@
 /// @param {Number} $gutter[$grid-gutter-width]
 
 @mixin make-col-ready($gutter: $grid-gutter-width) {
-	padding-left: $gutter / 2;
-	padding-right: $gutter / 2;
+	padding-left: $gutter * 0.5;
+	padding-right: $gutter * 0.5;
 	position: relative;
 	width: 100%;
 }
@@ -311,8 +311,8 @@
 /// @param {Number} $columns[$grid-columns]
 
 @mixin make-col($size, $columns: $grid-columns) {
-	flex: 0 0 percentage($size / $columns);
-	max-width: percentage($size / $columns);
+	flex: 0 0 calc(#{$size} / #{$columns} * 100%);
+	max-width: calc(#{$size} / #{$columns} * 100%);
 }
 
 /// A Bootstrap 4 mixin that generates styles for `.col-{bp}-auto` classes. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
@@ -332,9 +332,7 @@
 /// @param {Number} $columns[$grid-columns]
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
-	$num: $size / $columns;
-
-	margin-left: if($num == 0, 0, percentage($num));
+	margin-left: calc(#{$size} / #{$columns} * 100%);
 }
 
 /// A Bootstrap 4 mixin that generates styles for `.row-cols-{bp}-*` classes. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
@@ -343,7 +341,7 @@
 
 @mixin row-cols($count) {
 	& > * {
-		flex: 0 0 100% / $count;
-		max-width: 100% / $count;
+		flex: 0 0 calc(100% / #{$count});
+		max-width: calc(100% / #{$count});
 	}
 }

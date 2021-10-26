@@ -449,7 +449,7 @@ $cadmin-h4-font-size-mobile: null !default;
 $cadmin-h5-font-size-mobile: null !default;
 $cadmin-h6-font-size-mobile: null !default;
 
-$cadmin-headings-margin-bottom: $cadmin-spacer / 2 !default;
+$cadmin-headings-margin-bottom: $cadmin-spacer * 0.5 !default;
 $cadmin-headings-font-family: null !default;
 $cadmin-headings-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-headings-line-height: 1.2 !default;

@@ -4,8 +4,8 @@
 	.container {
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: $grid-gutter-width / 2;
-		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width * 0.5;
+		padding-right: $grid-gutter-width * 0.5;
 		width: 100%;
 
 		@each $breakpoint, $container-max-width in $container-max-widths {
@@ -20,8 +20,8 @@
 	%container-fluid {
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: $grid-gutter-width / 2;
-		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width * 0.5;
+		padding-right: $grid-gutter-width * 0.5;
 		width: 100%;
 	}
 
@@ -61,8 +61,8 @@
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: math-sign($grid-gutter-width / 2);
-		margin-right: math-sign($grid-gutter-width / 2);
+		margin-left: math-sign($grid-gutter-width * 0.5);
+		margin-right: math-sign($grid-gutter-width * 0.5);
 	}
 
 	// Remove the negative margin from default .row, then the horizontal padding
@@ -84,8 +84,8 @@
 
 @if $enable-grid-classes {
 	%grid-column {
-		padding-left: $grid-gutter-width / 2;
-		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width * 0.5;
+		padding-right: $grid-gutter-width * 0.5;
 		position: relative;
 		width: 100%;
 	}
@@ -118,8 +118,8 @@
 			@for $i from 1 through $grid-row-columns {
 				.row-cols#{$infix}-#{$i} {
 					& > * {
-						flex: 0 0 100% / $i;
-						max-width: 100% / $i;
+						flex: 0 0 calc(100% / #{$i});
+						max-width: calc(100% / #{$i});
 					}
 				}
 			}
@@ -132,13 +132,13 @@
 
 			@for $i from 1 through $grid-columns {
 				.col#{$infix}-#{$i} {
-					flex: 0 0 percentage($i / $grid-columns);
+					flex: 0 0 calc(#{$i} / #{$grid-columns} * 100%);
 
 					// Add a `max-width` to ensure content within each column does not blow out
 					// the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
 					// do not appear to require this.
 
-					max-width: percentage($i / $grid-columns);
+					max-width: calc(#{$i} / #{$grid-columns} * 100%);
 				}
 			}
 
@@ -162,9 +162,7 @@
 
 				@if not($infix == '' and $i == 0) {
 					.offset#{$infix}-#{$i} {
-						$num: $i / $grid-columns;
-
-						margin-left: if($num == 0, 0, percentage($num));
+						margin-left: calc(#{$i} / #{$grid-columns} * 100%);
 					}
 				}
 			}
@@ -211,8 +209,8 @@
 
 		.container &,
 		.container-fluid & {
-			margin-left: -($grid-gutter-width / 2);
-			margin-right: -($grid-gutter-width / 2);
+			margin-left: math-sign($grid-gutter-width * 0.5);
+			margin-right: math-sign($grid-gutter-width * 0.5);
 		}
 	}
 

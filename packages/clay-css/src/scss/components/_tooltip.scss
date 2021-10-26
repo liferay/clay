@@ -69,7 +69,7 @@
 
 		&::before {
 			border-top-color: $tooltip-arrow-color;
-			border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+			border-width: $tooltip-arrow-height ($tooltip-arrow-width * 0.5) 0;
 			top: 0;
 		}
 	}
@@ -85,8 +85,8 @@
 
 		&::before {
 			border-right-color: $tooltip-arrow-color;
-			border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height
-				($tooltip-arrow-width / 2) 0;
+			border-width: ($tooltip-arrow-width * 0.5) $tooltip-arrow-height
+				($tooltip-arrow-width * 0.5) 0;
 			right: 0;
 		}
 	}
@@ -100,7 +100,7 @@
 
 		&::before {
 			border-bottom-color: $tooltip-arrow-color;
-			border-width: 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+			border-width: 0 ($tooltip-arrow-width * 0.5) $tooltip-arrow-height;
 			bottom: 0;
 		}
 	}
@@ -116,8 +116,8 @@
 
 		&::before {
 			border-left-color: $tooltip-arrow-color;
-			border-width: ($tooltip-arrow-width / 2) 0
-				($tooltip-arrow-width / 2) $tooltip-arrow-height;
+			border-width: ($tooltip-arrow-width * 0.5) 0
+				($tooltip-arrow-width * 0.5) $tooltip-arrow-height;
 			left: 0;
 		}
 	}
@@ -149,7 +149,7 @@
 .clay-tooltip-top {
 	.arrow {
 		left: 50%;
-		margin-left: -($tooltip-arrow-width / 2);
+		margin-left: math-sign($tooltip-arrow-width * 0.5);
 	}
 }
 
@@ -170,7 +170,7 @@
 .clay-tooltip-left,
 .clay-tooltip-right {
 	.arrow {
-		margin-top: -($tooltip-arrow-width / 2);
+		margin-top: math-sign($tooltip-arrow-width * 0.5);
 		top: 50%;
 	}
 }
@@ -201,7 +201,7 @@
 
 		&::before {
 			border-bottom-color: $tooltip-arrow-color;
-			border-width: 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+			border-width: 0 ($tooltip-arrow-width * 0.5) $tooltip-arrow-height;
 			bottom: 0;
 		}
 	}
@@ -228,8 +228,8 @@
 
 		&::before {
 			border-left-color: $tooltip-arrow-color;
-			border-width: ($tooltip-arrow-width / 2) 0
-				($tooltip-arrow-width / 2) $tooltip-arrow-height;
+			border-width: ($tooltip-arrow-width * 0.5) 0
+				($tooltip-arrow-width * 0.5) $tooltip-arrow-height;
 			left: 0;
 		}
 	}
@@ -256,8 +256,8 @@
 
 		&::before {
 			border-right-color: $tooltip-arrow-color;
-			border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height
-				($tooltip-arrow-width / 2) 0;
+			border-width: ($tooltip-arrow-width * 0.5) $tooltip-arrow-height
+				($tooltip-arrow-width * 0.5) 0;
 			right: 0;
 		}
 	}
@@ -282,7 +282,7 @@
 
 		&::before {
 			border-top-color: $tooltip-arrow-color;
-			border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+			border-width: $tooltip-arrow-height ($tooltip-arrow-width * 0.5) 0;
 			top: 0;
 		}
 	}
