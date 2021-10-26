@@ -65,6 +65,7 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const item: Value = {
 		...value,
+		childRef,
 		indexes: [...parentIndexes, value.index],
 		key: keyRef.current,
 	};
