@@ -204,6 +204,7 @@ export function TreeViewItemStack({
 						displayType={null}
 						monospaced
 						onClick={() => toggle(item.key)}
+						tabIndex={-1}
 					>
 						<span className="c-inner" tabIndex={-2}>
 							{expanderIcons?.close ? (
