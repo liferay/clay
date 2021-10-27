@@ -37,11 +37,15 @@ $dropdown-item-base: () !default;
 $dropdown-item-base: map-deep-merge(
 	(
 		font-size: inherit,
-		focus-box-shadow: $component-focus-inset-box-shadow,
-		focus-outline: 0,
-		focus-text-decoration: none,
-		active-class-c-kbd-inline: (
-			color: $dropdown-link-active-color,
+		focus: (
+			box-shadow: $component-focus-inset-box-shadow,
+			outline: 0,
+			text-decoration: none,
+		),
+		active-class: (
+			c-kbd-inline: (
+				color: $dropdown-link-active-color,
+			),
 		),
 		disabled: (
 			box-shadow: none,
