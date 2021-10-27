@@ -52,8 +52,10 @@
 	"license": "MIT",
 	"devDependencies": {
 		"bootstrap": "4.4.1",
+		"jsdom": "^18.0.0",
 		"popper.js": "1.16.0",
 		"sass": "^1.42.0",
-		"sassdoc": "^2.5.1"
+		"sassdoc": "^2.5.1",
+		"svgo": "^2.7.0"
 	}
 }
