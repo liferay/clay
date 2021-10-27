@@ -50,6 +50,8 @@ export function TreeView<T>({
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
+	const rootRef = React.useRef(null);
+
 	const state = useTree<T>({
 		expandedKeys,
 		items,
@@ -57,6 +59,7 @@ export function TreeView<T>({
 		onExpandedChange,
 		onItemsChange,
 		onSelectionChange,
+		rootRef,
 		selectedKeys,
 	});
 
@@ -81,6 +84,7 @@ export function TreeView<T>({
 					[`treeview-${displayType}`]: displayType,
 					'show-component-expander-on-hover': showExpanderOnHover,
 				})}
+				ref={rootRef}
 				role="tree"
 			>
 				<DndProvider backend={HTML5Backend}>
