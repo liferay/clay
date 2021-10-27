@@ -145,20 +145,11 @@
 	min-height: $dropdown-min-height;
 	min-width: $dropdown-min-width;
 	overflow: auto;
-
-	// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
-
-	padding: $dropdown-padding-y 0 0;
+	padding: $dropdown-padding-y 0;
 	position: absolute;
 	text-align: left;
 	top: 100%;
 	z-index: $zindex-dropdown;
-
-	&::after {
-		content: '';
-		display: block;
-		padding-top: $dropdown-padding-y;
-	}
 
 	@include media-breakpoint-down(md) {
 		max-height: $dropdown-max-height-mobile;
