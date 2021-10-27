@@ -31,6 +31,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 			childrenRoot,
 			close,
 			expandedKeys,
+			getRootRef,
 			insert,
 			nestedKey,
 			onLoadMore,
@@ -130,6 +131,24 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 
 							if (key === 'Backspace' || key === 'Delete') {
 								remove(item.indexes);
+							}
+
+							if (key === 'End') {
+								const {current} = getRootRef();
+								const lastListElement =
+									current?.lastElementChild as HTMLLinkElement;
+								const linkElement =
+									lastListElement.firstElementChild as HTMLDivElement;
+								linkElement.focus();
+							}
+
+							if (key === 'Home') {
+								const {current} = getRootRef();
+								const firstListElement =
+									current?.firstElementChild as HTMLLinkElement;
+								const linkElement =
+									firstListElement.firstElementChild as HTMLDivElement;
+								linkElement.focus();
 							}
 
 							if ((key === 'R' || key === 'F2') && onRenameItem) {
