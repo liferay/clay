@@ -102,6 +102,7 @@ $cadmin-dropdown-item-base: map-deep-merge(
 		border-width: 0,
 		clear: both,
 		color: $cadmin-dropdown-link-color,
+		cursor: $cadmin-link-cursor,
 		display: block,
 		font-size: inherit,
 		font-weight: $cadmin-font-weight-normal,
@@ -133,9 +134,12 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			color: $cadmin-dropdown-link-active-color,
 			text-decoration: none,
 		),
-		active-class-font-weight: $cadmin-dropdown-link-active-font-weight,
-		active-class-c-kbd-inline: (
-			color: $cadmin-dropdown-link-active-color,
+		active-class: (
+			font-weight: $cadmin-dropdown-link-active-font-weight,
+			pointer-events: none,
+			c-kbd-inline: (
+				color: $cadmin-dropdown-link-active-color,
+			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -144,10 +148,12 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			cursor: $cadmin-dropdown-item-disabled-cursor,
 			opacity: 1,
 			outline: 0,
-		),
-		disabled-active-pointer-events: none,
-		disabled-c-kbd-inline: (
-			color: $cadmin-dropdown-link-disabled-color,
+			active: (
+				pointer-events: none,
+			),
+			c-kbd-inline: (
+				color: $cadmin-dropdown-link-disabled-color,
+			),
 		),
 		c-kbd-inline: (
 			color: $cadmin-gray-500,
@@ -254,69 +260,6 @@ $cadmin-dropdown-item-indicator-text-end: map-deep-merge(
 		),
 	),
 	$cadmin-dropdown-item-indicator-text-end
-);
-
-// Dropdown Item
-
-$cadmin-dropdown-item-base: () !default;
-$cadmin-dropdown-item-base: map-deep-merge(
-	(
-		background-color: transparent,
-		border-radius: 0,
-		border-width: 0,
-		clear: both,
-		color: $cadmin-dropdown-link-color,
-		cursor: $cadmin-link-cursor,
-		display: block,
-		font-weight: $cadmin-font-weight-normal,
-		overflow: hidden,
-		padding-bottom: $cadmin-dropdown-item-padding-y,
-		padding-left: $cadmin-dropdown-item-padding-x,
-		padding-right: $cadmin-dropdown-item-padding-x,
-		padding-top: $cadmin-dropdown-item-padding-y,
-		position: relative,
-		text-align: inherit,
-		transition: none,
-		white-space: normal,
-		width: 100%,
-		word-wrap: break-word,
-		hover: (
-			background-color: $cadmin-dropdown-link-hover-bg,
-			color: $cadmin-dropdown-link-hover-color,
-			text-decoration: none,
-		),
-		focus: (
-			background-color: $cadmin-dropdown-link-hover-bg,
-			color: $cadmin-dropdown-link-hover-color,
-			text-decoration: none,
-		),
-		active: (
-			background-color: $cadmin-dropdown-link-active-bg,
-			color: $cadmin-dropdown-link-active-color,
-			text-decoration: none,
-		),
-		active-class: (
-			font-weight: $cadmin-dropdown-link-active-font-weight,
-			pointer-events: none,
-		),
-		disabled: (
-			background-color: transparent,
-			color: $cadmin-dropdown-link-disabled-color,
-			cursor: $cadmin-dropdown-item-disabled-cursor,
-			opacity: 1,
-			outline: 0,
-		),
-		disabled-active: (
-			pointer-events: none,
-		),
-		disabled-c-kbd-inline: (
-			color: $cadmin-dropdown-link-disabled-color,
-		),
-		c-kbd-inline: (
-			line-height: $cadmin-dropdown-font-size * $cadmin-line-height-base,
-		),
-	),
-	$cadmin-dropdown-item-base
 );
 
 // Dropdown Section
