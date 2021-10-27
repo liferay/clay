@@ -5,12 +5,9 @@ labels: 'type: bug'
 ---
 
 <!--
-
-Before making a bug, have you used the issue search functionality?
-
+Before filling this bug, have you used the issue search functionality?
+Please provide a clear and concise description of what the issue is.
 -->
-
--   [ ] I have searched the [issues](https://github.com/liferay/clay/issues) of this repository and believe that this is not a duplicate.
 
 ## Is there an example you can provide via codesandbox.com?
 

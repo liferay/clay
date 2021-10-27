@@ -5,12 +5,9 @@ labels: 'comp: clayui.com'
 ---
 
 <!--
-
-Before making an issue, have you used the issue search functionality?
-
+Before filling an issue, have you used the issue search functionality?
+Please provide a clear and concise description of what the issue is.
 -->
-
--   [ ] I have searched the [issues](https://github.com/liferay/clay/issues) of this repository and believe that this is not a duplicate.
 
 ## What are the steps to reproduce?
 
