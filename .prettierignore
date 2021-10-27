@@ -1,7 +1,6 @@
 *.d.ts
 .git
 bower_components
-build
 copyright.js
 coverage
 lib
@@ -12,7 +11,7 @@ lib
 node_modules
 package-lock.json
 /packages/clay-css/**/*.md
-/packages/clay-css/**/*.js
+/packages/clay-css/src/js/**/*.js
 /packages/clay-css/sassdoc-theme-clay-css
 /packages/clay-css/src/scss/bootstrap/**/*.scss
 /packages/generator-clay-component/app/templates
