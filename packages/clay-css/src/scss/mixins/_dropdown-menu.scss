@@ -59,14 +59,6 @@
 	@if ($enabled) {
 		@include clay-css($base);
 
-		// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
-
-		padding-bottom: 0;
-
-		&::after {
-			padding-top: map-get($base, padding-bottom);
-		}
-
 		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($mobile);
