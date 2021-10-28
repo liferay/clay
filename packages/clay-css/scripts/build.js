@@ -144,8 +144,7 @@ async function buildScssIcons(filesPath) {
 	const endTag = sourceIconsScss.indexOf(');');
 
 	// Writes the source file header to the stream.
-	// eslint-disable-next-line
-	fileWritable.write(sourceIconsScss.slice(0, startTag) + '$lx-icons: (\n\n');
+	fileWritable.write(`${sourceIconsScss.slice(0, startTag)}$lx-icons: (\n\n`);
 
 	filesPath.sort();
 
