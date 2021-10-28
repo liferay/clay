@@ -7,9 +7,9 @@
 
 const fs = require('fs');
 const {JSDOM} = require('jsdom');
-const {optimize} = require('svgo');
 const path = require('path');
 const sass = require('sass');
+const {optimize} = require('svgo');
 
 const OUTPUT_DIRECTORY = path.resolve('./lib');
 
@@ -89,7 +89,10 @@ async function buildIconsSvg(filesPath) {
 
 	await Promise.all(
 		filesPath.map(async (file) => {
-			const fileName = path.basename(file, '.svg');
+			const fileName = path
+				.basename(file, '.svg')
+				.toLowerCase()
+				.replace(/flags-/g, '');
 
 			const data = await fs.promises.readFile(
 				`${ICONS_DIRECTORY}${path.sep}${file}`,
@@ -141,13 +144,12 @@ async function buildScssIcons(filesPath) {
 	const endTag = sourceIconsScss.indexOf(');');
 
 	// Writes the source file header to the stream.
+	// eslint-disable-next-line
 	fileWritable.write(sourceIconsScss.slice(0, startTag) + '$lx-icons: (\n\n');
 
 	filesPath.sort();
 
 	for (const file of filesPath) {
-		const fileName = path.basename(file, '.svg');
-
 		const data = await fs.promises.readFile(
 			`${ICONS_DIRECTORY}${path.sep}${file}`,
 			'utf8'
