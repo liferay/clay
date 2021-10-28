@@ -33,7 +33,7 @@ export interface ITreeProps<T>
 		Pick<ICollectionProps<T>, 'items'> {
 	nestedKey?: string;
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
-	rootRef: React.RefObject<HTMLUListElement>;
+	rootRef?: React.RefObject<HTMLUListElement>;
 }
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
