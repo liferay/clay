@@ -24,6 +24,7 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
 	onRenameItem?: (item: T) => Promise<T>;
+	rootRef: React.RefObject<HTMLUListElement>;
 	showExpanderOnHover?: boolean;
 }
 
@@ -59,7 +60,6 @@ export function TreeView<T>({
 		onExpandedChange,
 		onItemsChange,
 		onSelectionChange,
-		rootRef,
 		selectedKeys,
 	});
 
@@ -72,6 +72,7 @@ export function TreeView<T>({
 		nestedKey,
 		onLoadMore,
 		onRenameItem,
+		rootRef,
 		showExpanderOnHover,
 		...state,
 	};
