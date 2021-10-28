@@ -39,7 +39,6 @@ export interface ITreeProps<T>
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	close: (key: Key) => boolean;
 	expandedKeys: Set<Key>;
-	getRootRef: () => React.RefObject<HTMLUListElement>;
 	insert: (path: Array<number>, value: unknown) => void;
 	open: (key: Key) => boolean;
 	remove: (path: Array<number>) => void;
@@ -66,10 +65,6 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
 	});
-
-	const getRootRef = () => {
-		return props.rootRef;
-	};
 
 	const close = (key: Key) => {
 		const expanded = new Set(expandedKeys);
@@ -146,7 +141,6 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	return {
 		close,
 		expandedKeys,
-		getRootRef,
 		insert,
 		items,
 		open,
