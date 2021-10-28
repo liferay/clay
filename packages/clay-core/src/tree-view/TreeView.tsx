@@ -24,7 +24,7 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
 	onRenameItem?: (item: T) => Promise<T>;
-	rootRef: React.RefObject<HTMLUListElement>;
+	rootRef?: React.RefObject<HTMLUListElement>;
 	showExpanderOnHover?: boolean;
 }
 
