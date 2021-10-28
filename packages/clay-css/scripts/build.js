@@ -92,7 +92,7 @@ async function buildIconsSvg(filesPath) {
 			const fileName = path
 				.basename(file, '.svg')
 				.toLowerCase()
-				.replace(/flags-/g, '');
+				.replace(REGEX_FLAGS, '');
 
 			const data = await fs.promises.readFile(
 				`${ICONS_DIRECTORY}${path.sep}${file}`,
