@@ -241,40 +241,86 @@
 	}
 }
 
-/// A mixin for creating `.label` color variants.
+/// A mixin for creating `.label` variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// See Mixin `clay-css` for available keys to pass into the base selector
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	disabled: (
+/// 		// .your-variant-name:disabled, .your-variant-name.disabled
+/// 	),
+/// 	href: (
+/// 		// .your-variant-name[href], .your-variant-name[type], .your-variant-name[tabindex='0']
+/// 	),
+/// 	lexicon-icon: (
+/// 		// .your-variant-name .lexicon-icon
+/// 	),
+/// 	label-item: (
+/// 		// .your-variant-name .label-item
+/// 		lexicon-icon: (
+/// 			// This inherits from `lexicon-icon` unless you overwrite or unset it
+/// 			// .your-variant-name .label-item .lexicon-icon
+/// 		),
+/// 	),
+/// 	label-item-before: (
+/// 		// .your-variant-name .label-item-before
+/// 	),
+/// 	label-item-after: (
+/// 		// .your-variant-name .label-item-after
+/// 	),
+/// 	link: (
+/// 		// .your-variant-name a, .your-variant-name .btn-unstyled
+/// 		hover: (),
+/// 		focus: (),
+/// 		active: (),
+/// 		active-class: (),
+/// 		show: (),
+/// 		disabled: (
+/// 			active: (),
+/// 		),
+/// 		c-inner: (),
+/// 		lexicon-icon: (),
+/// 	),
+/// 	close: (
+/// 		hover: (),
+/// 		focus: (),
+/// 		active: (),
+/// 		active-class: (),
+/// 		disabled: (
+/// 			active: (),
+/// 		),
+/// 		c-inner: (),
+/// 		lexicon-icon: (),
+/// 	),
+/// 	sticker: (
+/// 		// .your-variant-name .sticker
+/// 	),
+/// 	sticker-overlay: (
+/// 		// .your-variant-name .sticker-overlay
+/// 	),
+/// 	c-inner: (),
+/// )
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null}, // deprecated after 3.7.0
-/// border-color: {Color | String | List | Null}, // deprecated after 3.7.0
-/// color: {Color | String | Null}, // deprecated after 3.7.0
-/// outline: {Number | String | Null}, // deprecated after 3.7.0
-/// text-decoration: {String | Null}, // deprecated after 3.7.0
-/// transition: {String | List | Null}, // deprecated after 3.7.0
 /// hover-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// hover-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
 /// hover-color: {Color | String | Null}, // deprecated after 3.7.0
 /// hover-text-decoration: {String | Null}, // deprecated after 3.7.0
-/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
 /// focus-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// focus-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
 /// focus-box-shadow: {String | List | Null}, // deprecated after 3.7.0
 /// focus-color: {Color | String | Null}, // deprecated after 3.7.0
 /// focus-outline: {Number | String | Null}, // deprecated after 3.7.0
 /// focus-text-decoration: {String | Null}, // deprecated after 3.7.0
-/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
 /// disabled-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
 /// disabled-box-shadow: {String | List | Null}, // deprecated after 3.7.0
 /// disabled-color: {Color | String | Null}, // deprecated after 3.7.0
-/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
 /// link-color: {Color | String | Null}, // deprecated after 3.7.0
 /// link-text-decoration: {String | Null}, // deprecated after 3.7.0
-/// link: {Map | Null}, // See Mixin `clay-css` for available keys
 /// link-hover-color: {Color | String | Null}, // deprecated after 3.7.0
 /// link-hover-text-decoration: {String | Null}, // deprecated after 3.7.0
-/// link-hover: {Map | Null}, // See Mixin `clay-css` for available keys
-/// close: {Map | Null}, // Pass parameters to `clay-close` mixin
+/// link-hover: {Map | Null}, // deprecated after 3.38.0
 
 @mixin clay-label-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
@@ -285,59 +331,14 @@
 		(
 			background-color:
 				setter(map-get($map, bg), map-get($base, background-color)),
-		)
-	);
-
-	$hover: setter(map-get($map, hover), ());
-	$hover: map-merge(
-		$hover,
-		(
-			background-color:
-				setter(
-					map-get($map, hover-bg),
-					map-get($hover, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, hover-border-color),
-					map-get($hover, border-color)
-				),
-			color: setter(map-get($map, hover-color), map-get($hover, color)),
-			text-decoration:
-				setter(
-					map-get($map, hover-text-decoration),
-					map-get($hover, text-decoration)
-				),
-		)
-	);
-
-	$focus: setter(map-get($map, focus), ());
-	$focus: map-merge(
-		$focus,
-		(
-			background-color:
-				setter(
-					map-get($map, focus-bg),
-					map-get($focus, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, focus-border-color),
-					map-get($focus, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, focus-box-shadow),
-					map-get($focus, box-shadow)
-				),
-			color: setter(map-get($map, focus-color), map-get($focus, color)),
-			outline:
-				setter(map-get($map, focus-outline), map-get($focus, outline)),
-			text-decoration:
-				setter(
-					map-get($map, focus-text-decoration),
-					map-get($focus, text-decoration)
-				),
+			padding-bottom:
+				setter(map-get($map, padding-y), map-get($base, padding-bottom)),
+			padding-left:
+				setter(map-get($map, padding-x), map-get($base, padding-left)),
+			padding-right:
+				setter(map-get($map, padding-x), map-get($base, padding-right)),
+			padding-top:
+				setter(map-get($map, padding-y), map-get($base, padding-top)),
 		)
 	);
 
@@ -365,25 +366,164 @@
 		)
 	);
 
-	$link: setter(map-get($map, link), ());
-
-	$link-hover: setter(map-get($link, hover), ());
-	$link-hover: map-merge(
-		$link-hover,
+	$href: setter(map-get($map, href), ());
+	$href: map-deep-merge(
+		$href,
 		(
-			color:
+			hover: (
+				background-color:
+					setter(
+						map-get($map, hover-bg),
+						map-deep-get($map, hover, background-color),
+						map-deep-get($href, hover, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, hover-border-color),
+						map-deep-get($map, hover, border-color),
+						map-deep-get($href, hover, border-color)
+					),
+				color:
+					setter(
+						map-get($map, hover-color),
+						map-deep-get($map, hover, color),
+						map-deep-get($href, hover, color)
+					),
+				text-decoration:
+					setter(
+						map-get($map, hover-text-decoration),
+						map-deep-get($map, hover, text-decoration),
+						map-deep-get($href, hover, text-decoration)
+					),
+			),
+			focus: (
+				background-color:
+					setter(
+						map-get($map, focus-bg),
+						map-deep-get($map, focus, background-color),
+						map-deep-get($href, focus, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, focus-border-color),
+						map-deep-get($map, focus, border-color),
+						map-deep-get($href, focus, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, focus-box-shadow),
+						map-deep-get($map, focus, box-shadow),
+						map-deep-get($href, focus, box-shadow)
+					),
+				color:
+					setter(
+						map-get($map, focus-color),
+						map-deep-get($map, focus, color),
+						map-deep-get($href, focus, color)
+					),
+				outline:
+					setter(
+						map-get($map, focus-outline),
+						map-deep-get($map, focus, outline),
+						map-deep-get($href, focus, outline)
+					),
+				text-decoration:
+					setter(
+						map-get($map, focus-text-decoration),
+						map-deep-get($map, focus, text-decoration),
+						map-deep-get($href, focus, text-decoration)
+					),
+			),
+		)
+	);
+
+	$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+	$lexicon-icon: map-merge(
+		$lexicon-icon,
+		(
+			height:
 				setter(
-					map-get($map, link-hover-color),
-					map-get($link-hover, color)
+					map-get($map, lexicon-icon-height),
+					map-get($lexicon-icon, height),
+					map-get($lexicon-icon, width)
 				),
-			text-decoration:
+			margin-top:
 				setter(
-					map-get($map, link-hover-text-decoration),
-					map-get($link-hover, text-decoration)
+					map-get($map, lexicon-icon-margin-top),
+					map-get($lexicon-icon, margin-top)
+				),
+			width:
+				setter(
+					map-get($map, lexicon-icon-width),
+					map-get($lexicon-icon, width)
 				),
 		)
 	);
 
+	$label-item: setter(map-get($map, label-item), ());
+	$label-item: map-merge(
+		$label-item,
+		(
+			margin-bottom:
+				setter(
+					map-get($map, item-spacer-y),
+					map-get($label-item, margin-bottom)
+				),
+			margin-top:
+				setter(
+					map-get($map, item-spacer-y),
+					map-get($label-item, margin-top)
+				),
+			lexicon-icon: (
+				height:
+					setter(
+						map-get($map, lexicon-icon-height),
+						map-get($lexicon-icon, height),
+						map-get($lexicon-icon, width),
+						map-deep-get($label-item, lexicon-icon, height),
+						map-deep-get($label-item, lexicon-icon, width)
+					),
+				margin-top:
+					setter(
+						map-get($map, lexicon-icon-margin-top),
+						map-get($lexicon-icon, margin-top),
+						map-deep-get($label-item, lexicon-icon, margin-top)
+					),
+				width:
+					setter(
+						map-get($map, lexicon-icon-width),
+						map-get($lexicon-icon, width),
+						map-deep-get($label-item, lexicon-icon, width)
+					),
+			),
+		)
+	);
+
+	$label-item-before: setter(map-get($map, label-item-before), ());
+	$label-item-before: map-merge(
+		$label-item-before,
+		(
+			margin-right:
+				setter(
+					map-get($map, item-spacer-x),
+					map-get($label-item-before, margin-right)
+				),
+		)
+	);
+
+	$label-item-after: setter(map-get($map, label-item-after), ());
+	$label-item-after: map-merge(
+		$label-item-after,
+		(
+			margin-left:
+				setter(
+					map-get($map, item-spacer-x),
+					map-get($label-item-after, margin-left)
+				),
+		)
+	);
+
+	$link: setter(map-get($map, link), ());
 	$link: map-deep-merge(
 		$link,
 		(
@@ -393,55 +533,149 @@
 					map-get($map, link-text-decoration),
 					map-get($link, text-decoration)
 				),
-			hover: $link-hover,
+			hover: (
+				color:
+					setter(
+						map-get($map, link-hover-color),
+						map-deep-get($link, hover, color)
+					),
+				text-decoration:
+					setter(
+						map-get($map, link-hover-text-decoration),
+						map-deep-get($link, hover, text-decoration)
+					),
+			),
 		)
 	);
 
 	$close: setter(map-get($map, close), ());
 
+	$sticker: setter(map-get($map, sticker), ());
+	$sticker: map-merge(
+		$sticker,
+		(
+			border-radius:
+				setter(
+					map-get($map, sticker-border-radius),
+					map-get($sticker, border-radius)
+				),
+			height:
+				setter(map-get($map, sticker-size), map-get($sticker, height)),
+			line-height:
+				setter(
+					map-get($map, sticker-size),
+					map-get($sticker, line-height)
+				),
+			width: setter(map-get($map, sticker-size), map-get($sticker, width)),
+		)
+	);
+
+	$sticker-overlay: setter(map-get($map, sticker-overlay), ());
+	$sticker-overlay: map-merge(
+		$sticker-overlay,
+		(
+			border-radius:
+				setter(
+					map-get($sticker-overlay, border-radius),
+					map-get($sticker, border-radius)
+				),
+		)
+	);
+
+	$c-inner: setter(map-get($map, c-inner), ());
+	$c-inner: map-deep-merge(
+		$c-inner,
+		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						if(
+							variable-exists(cadmin-enable-c-inner),
+							$cadmin-enable-c-inner,
+							true
+						)
+					)
+				),
+			margin-bottom:
+				setter(
+					map-get($c-inner, margin-bottom),
+					math-sign(map-get($base, padding-bottom))
+				),
+			margin-left:
+				setter(
+					map-get($c-inner, margin-left),
+					math-sign(map-get($base, padding-left))
+				),
+			margin-right:
+				setter(
+					map-get($c-inner, margin-right),
+					math-sign(map-get($base, padding-right))
+				),
+			margin-top:
+				setter(
+					map-get($c-inner, margin-top),
+					math-sign(map-get($base, padding-top))
+				),
+		)
+	);
+
 	@if ($enabled) {
 		@include clay-css($base);
-
-		@at-root {
-			a#{&},
-			button#{&} {
-				&:hover {
-					@include clay-css($hover);
-				}
-
-				&:focus {
-					@include clay-css($focus);
-				}
-			}
-		}
-
-		&[tabindex] {
-			&:hover {
-				@include clay-css($hover);
-			}
-
-			&:focus {
-				@include clay-css($focus);
-			}
-		}
 
 		&:disabled,
 		&.disabled {
 			@include clay-css($disabled);
 		}
 
+		&[href],
+		&[type],
+		&[tabindex='0'] {
+			@include clay-link($href);
+		}
+
+		.lexicon-icon {
+			@include clay-css($lexicon-icon);
+		}
+
+		.label-item {
+			@include clay-css($label-item);
+
+			.lexicon-icon {
+				@include clay-css($lexicon-icon);
+			}
+		}
+
+		.label-item-before {
+			@include clay-css($label-item-before);
+		}
+
+		.label-item-after {
+			@include clay-css($label-item-after);
+		}
+
 		a,
 		.btn-unstyled {
-			@include clay-css($link);
-
-			&:hover,
-			&:focus {
-				@include clay-css($link-hover);
-			}
+			@include clay-link($link);
 		}
 
 		.close {
 			@include clay-close($close);
+		}
+
+		.sticker {
+			@include clay-css($sticker);
+		}
+
+		.sticker-overlay {
+			@include clay-css($sticker-overlay);
+		}
+
+		@if (map-get($c-inner, enabled)) {
+			> .c-inner {
+				@include clay-css($c-inner);
+			}
 		}
 	}
 }
