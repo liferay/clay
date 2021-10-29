@@ -1,26 +1,112 @@
+// .dropdown-menu
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-bg: $white !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-border-color: rgba($black, 0.15) !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-border-style: solid !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-border-width: $border-width !default;
 
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-border-radius: $border-radius !default;
+
+/// @deprecated as of v3.x with no replacement
+
 $dropdown-inner-border-radius: $dropdown-border-radius
 	math-sign($dropdown-border-width) !default;
 
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175) !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-color: $body-color !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-font-size: $font-size-base !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-max-height: 500px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-max-width: 260px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-min-height: null !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-min-width: 10rem !default;
-$dropdown-padding-y: 0.5rem !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
 
 $dropdown-font-size-mobile: null !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-max-height-mobile: 295px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-max-width-mobile: 230px !default;
 
+$dropdown-padding-y: 0.5rem !default;
 $dropdown-spacer: 0.125rem !default;
+
+$dropdown-menu: () !default;
+$dropdown-menu: map-deep-merge(
+	(
+		breakpoint-down: md,
+		background-clip: padding-box,
+		background-color: $dropdown-bg,
+		border-color: $dropdown-border-color,
+		border-radius: clay-enable-rounded($dropdown-border-radius),
+		border-style: $dropdown-border-style,
+		border-width: $dropdown-border-width,
+		box-shadow: clay-enable-shadows($dropdown-box-shadow),
+		color: $dropdown-color,
+		display: none,
+		float: left,
+		font-size: $dropdown-font-size,
+		left: 0,
+		list-style: none,
+		margin: $dropdown-spacer 0 0,
+		max-height: $dropdown-max-height,
+		max-width: $dropdown-max-width,
+		min-height: $dropdown-min-height,
+		min-width: $dropdown-min-width,
+		overflow: auto,
+		padding: $dropdown-padding-y 0,
+		position: absolute,
+		text-align: left,
+		top: 100%,
+		z-index: $zindex-dropdown,
+		mobile: (
+			font-size: $dropdown-font-size-mobile,
+			max-height: $dropdown-max-height-mobile,
+			max-width: $dropdown-max-width-mobile,
+		),
+		show: (
+			display: block,
+		),
+	),
+	$dropdown-menu
+);
 
 $dropdown-divider-bg: $gray-200 !default;
 $dropdown-divider-margin-y: $spacer * 0.5 !default;
