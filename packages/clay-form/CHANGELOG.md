@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.39.0](https://github.com/liferay/clay/compare/v3.38.0...v3.39.0) (2021-10-29)
+
+### Features
+
+-   **@clayui/form:** add the new `sizing` API to Select component ([2c7848d](https://github.com/liferay/clay/commit/2c7848d6729ce26f684010f58c59e1c4d174f7c3))
+
 # [3.38.0](https://github.com/liferay/clay/compare/v3.37.0...v3.38.0) (2021-10-22)
 
 **Note:** Version bump only for package @clayui/form
