@@ -631,7 +631,7 @@
 
 		&[href],
 		&[type],
-		&[tabindex='0'] {
+		&[tabindex] {
 			@include clay-link($href);
 		}
 
