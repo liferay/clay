@@ -94,7 +94,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							}
 						}}
 						onKeyDown={async (event) => {
-							const {key} = event;
+							const {charCode, key} = event;
 
 							if (group) {
 								if (key === 'ArrowLeft') {
@@ -122,10 +122,6 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 
 										firstItemElement?.focus();
 									}
-								}
-
-								if (key === ' ') {
-									selection.toggleSelection(item.key);
 								}
 							}
 
@@ -160,6 +156,10 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									key: item.key,
 									parentItemRef: item.parentItemRef,
 								});
+							}
+
+							if (charCode === 0) {
+								selection.toggleSelection(item.key);
 							}
 						}}
 						ref={ref}
