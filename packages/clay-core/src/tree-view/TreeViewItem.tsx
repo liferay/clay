@@ -135,6 +135,8 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 
 							if (key === Keys.Backspace || key === Keys.Del) {
 								remove(item.indexes);
+
+								item.parentItemRef.current?.focus();
 							}
 
 							if (key === Keys.End) {
@@ -154,7 +156,8 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							}
 
 							if (
-								(key === Keys.R || key === Keys.F2) &&
+								(key.toUpperCase() === Keys.R ||
+									key === Keys.F2) &&
 								onRenameItem
 							) {
 								const newItem = await onRenameItem({...item});
@@ -167,6 +170,8 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									key: item.key,
 									parentItemRef: item.parentItemRef,
 								});
+
+								item.itemRef.current?.focus();
 							}
 
 							if (key === Keys.Spacebar) {
