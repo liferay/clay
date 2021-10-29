@@ -13,6 +13,9 @@ $c-kbd-group: () !default;
 $c-kbd-group: map-deep-merge(
 	(
 		font-size: 0.875rem,
+		c-kbd: (
+			font-size: inherit,
+		),
 	),
 	$c-kbd-group
 );

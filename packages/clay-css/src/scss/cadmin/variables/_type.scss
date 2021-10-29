@@ -13,6 +13,9 @@ $cadmin-c-kbd-group: () !default;
 $cadmin-c-kbd-group: map-deep-merge(
 	(
 		font-size: 14px,
+		c-kbd: (
+			font-size: inherit,
+		),
 	),
 	$cadmin-c-kbd-group
 );
