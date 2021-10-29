@@ -6,6 +6,7 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
@@ -94,10 +95,10 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							}
 						}}
 						onKeyDown={async (event) => {
-							const {charCode, key} = event;
+							const {key} = event;
 
 							if (group) {
-								if (key === 'ArrowLeft') {
+								if (key === Keys.Left) {
 									if (
 										!close(item.key) &&
 										item.parentItemRef?.current
@@ -106,7 +107,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									}
 								}
 
-								if (key === 'ArrowRight') {
+								if (key === Keys.Right) {
 									if (
 										!open(item.key) &&
 										item.itemRef.current
@@ -125,11 +126,11 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								}
 							}
 
-							if (key === 'Backspace' || key === 'Delete') {
+							if (key === Keys.Backspace || key === Keys.Del) {
 								remove(item.indexes);
 							}
 
-							if (key === 'End') {
+							if (key === Keys.End) {
 								const lastListElement = rootRef.current
 									?.lastElementChild as HTMLLinkElement;
 								const linkElement =
@@ -137,7 +138,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								linkElement.focus();
 							}
 
-							if (key === 'Home') {
+							if (key === Keys.Home) {
 								const firstListElement = rootRef.current
 									?.firstElementChild as HTMLLinkElement;
 								const linkElement =
@@ -145,7 +146,10 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								linkElement.focus();
 							}
 
-							if ((key === 'R' || key === 'F2') && onRenameItem) {
+							if (
+								(key === Keys.R || key === Keys.F2) &&
+								onRenameItem
+							) {
 								const newItem = await onRenameItem({...item});
 
 								replace(item.indexes, {
@@ -158,7 +162,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								});
 							}
 
-							if (charCode === 0) {
+							if (key === Keys.Spacebar) {
 								selection.toggleSelection(item.key);
 							}
 						}}
