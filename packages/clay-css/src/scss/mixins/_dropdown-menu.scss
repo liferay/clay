@@ -5,19 +5,28 @@
 /// A mixin to create Dropdown Menu variants. You can base your variant off Bootstrap's `.dropdown-menu` class or create your own base class (e.g., `<div class="dropdown-menu my-custom-dropdown-menu"></div>` or `<div class="my-custom-dropdown-menu"></div>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
-/// See Mixin `clay-css` for available keys to pass into the base selector
-/// mobile: {Map | Null}, // See Mixin `clay-css` for available keys
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
+/// 	breakpoint-down: {String}, // The breakpoint to use in `media-breakpoint-down`
+/// 	mobile: (
+/// 		// .dropdown-menu { @include media-breakpoint-down(breakpoint-down) {} }
+/// 	),
+/// 	before: (
+/// 		// .dropdown-menu::before
+/// 	),
+/// 	after: (
+/// 		// .dropdown-menu::after
+/// 	),
+/// 	show: (
+/// 		// .dropdown-menu.show
+/// 	),
+/// )
 /// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null}, // deprecated after 3.9.0
 /// bg-clip: {String | Null}, // deprecated after 3.9.0
 /// font-size-mobile: {Number | String | Null}, // deprecated after 3.9.0
 /// max-height-mobile: {Number | String | Null}, // deprecated after 3.9.0
 /// max-width-mobile: {Number | String | Null}, // deprecated after 3.9.0
-/// @todo
-/// - Add @example
-/// - Add @link to documentation
 
 @mixin clay-dropdown-menu-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
@@ -63,6 +72,18 @@
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($mobile);
 			}
+		}
+
+		&::before {
+			@include clay-css(setter(map-get($map, before), ()));
+		}
+
+		&::after {
+			@include clay-css(setter(map-get($map, after), ()));
+		}
+
+		&.show {
+			@include clay-css(setter(map-get($map, show), ()));
 		}
 	}
 }
