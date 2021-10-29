@@ -97,32 +97,39 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 						onKeyDown={async (event) => {
 							const {key} = event;
 
-							if (group) {
-								if (key === Keys.Left) {
-									if (
-										!close(item.key) &&
-										item.parentItemRef?.current
-									) {
-										item.parentItemRef.current.focus();
+							if (key === Keys.Left) {
+								if (
+									!close(item.key) &&
+									item.parentItemRef?.current
+								) {
+									item.parentItemRef.current.focus();
+								}
+							}
+
+							if (key === Keys.Right) {
+								if (!group) {
+									if (onLoadMore) {
+										const items = await onLoadMore(item);
+
+										insert([...item.indexes, 0], items);
+									} else {
+										return;
 									}
 								}
 
-								if (key === Keys.Right) {
-									if (
-										!open(item.key) &&
-										item.itemRef.current
-									) {
-										const group =
-											item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
-												'.treeview-group'
-											);
-										const firstItemElement =
-											group?.querySelector<HTMLDivElement>(
-												'.treeview-link'
-											);
+								if (!open(item.key) && item.itemRef.current) {
+									const group =
+										item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+											'.treeview-group'
+										);
+									const firstItemElement =
+										group?.querySelector<HTMLDivElement>(
+											'.treeview-link'
+										);
 
-										firstItemElement?.focus();
-									}
+									firstItemElement?.focus();
+								} else {
+									item.itemRef.current?.focus();
 								}
 							}
 
