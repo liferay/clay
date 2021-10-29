@@ -1,3 +1,5 @@
+// .dropdown-menu
+
 $cadmin-dropdown-bg: $cadmin-white !default;
 $cadmin-dropdown-border-color: $cadmin-gray-300 !default;
 $cadmin-dropdown-border-style: solid !default;
@@ -14,13 +16,50 @@ $cadmin-dropdown-max-height: 500px !default;
 $cadmin-dropdown-max-width: 240px !default;
 $cadmin-dropdown-min-height: 40px !default;
 $cadmin-dropdown-min-width: 240px !default;
-$cadmin-dropdown-padding-y: 6px !default; // 6px
 
 $cadmin-dropdown-font-size-mobile: null !default;
 $cadmin-dropdown-max-height-mobile: 295px !default;
 $cadmin-dropdown-max-width-mobile: 230px !default;
 
+$cadmin-dropdown-padding-y: 6px !default; // 6px
 $cadmin-dropdown-spacer: 5px !default; // 5px
+
+$cadmin-dropdown-menu: () !default;
+$cadmin-dropdown-menu: map-deep-merge(
+	(
+		breakpoint-down: md,
+		background-clip: padding-box,
+		background-color: $cadmin-dropdown-bg,
+		border-color: $cadmin-dropdown-border-color,
+		border-style: $cadmin-dropdown-border-style,
+		border-width: $cadmin-dropdown-border-width,
+		border-radius: clay-enable-rounded($cadmin-dropdown-border-radius),
+		box-shadow: clay-enable-shadows($cadmin-dropdown-box-shadow),
+		color: $cadmin-dropdown-color,
+		display: none,
+		float: left,
+		font-size: $cadmin-dropdown-font-size,
+		left: 0,
+		list-style: none,
+		margin: $cadmin-dropdown-spacer 0 0,
+		max-height: $cadmin-dropdown-max-height,
+		max-width: $cadmin-dropdown-max-width,
+		min-height: $cadmin-dropdown-min-height,
+		min-width: $cadmin-dropdown-min-width,
+		overflow: auto,
+		padding: $cadmin-dropdown-padding-y 0,
+		position: absolute,
+		text-align: left,
+		top: 100%,
+		z-index: $cadmin-zindex-dropdown,
+		mobile: (
+			font-size: $cadmin-dropdown-font-size-mobile,
+			max-height: $cadmin-dropdown-max-height-mobile,
+			max-width: $cadmin-dropdown-max-width-mobile,
+		),
+	),
+	$cadmin-dropdown-menu
+);
 
 $cadmin-dropdown-divider-bg: $cadmin-dropdown-border-color !default;
 $cadmin-dropdown-divider-margin-y: $cadmin-spacer * 0.5 !default;
