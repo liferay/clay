@@ -1,14 +1,55 @@
+// .dropdown-menu
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-bg: $white !default;
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-border-color: $gray-300 !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-border-width: 0 !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3) !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-font-size: 0.875rem !default; // 14px
 
-$dropdown-padding-y: 0.375rem !default; // 6px
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-min-height: 40px !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-min-width: 240px !default;
+
+// @deprecated as of v3.x use map $dropdown-menu instead
+
 $dropdown-max-width: 240px !default;
+
+$dropdown-padding-y: 0.375rem !default; // 6px
 $dropdown-spacer: 0.3125rem !default; // 5px
+
+$dropdown-menu: () !default;
+$dropdown-menu: map-deep-merge(
+	(
+		background-color: $dropdown-bg,
+		border-color: $dropdown-border-color,
+		border-width: $dropdown-border-width,
+		box-shadow: clay-enable-shadows($dropdown-box-shadow),
+		font-size: $dropdown-font-size,
+		margin: $dropdown-spacer 0 0,
+		max-width: $dropdown-max-width,
+		min-height: $dropdown-min-height,
+		min-width: $dropdown-min-width,
+		padding: $dropdown-padding-y 0,
+	),
+	$dropdown-menu
+);
 
 $dropdown-header-color: $gray-900 !default;
 $dropdown-header-font-size: 0.875rem !default; // 14px

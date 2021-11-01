@@ -122,41 +122,7 @@
 
 .dropdown-menu,
 &.dropdown-menu {
-	background-clip: padding-box;
-	background-color: $cadmin-dropdown-bg;
-	border-color: $cadmin-dropdown-border-color;
-	border-style: $cadmin-dropdown-border-style;
-	border-width: $cadmin-dropdown-border-width;
-
-	@include border-radius($cadmin-dropdown-border-radius);
-	@include box-shadow($cadmin-dropdown-box-shadow);
-
-	color: $cadmin-dropdown-color;
-	display: none;
-	float: left;
-	font-size: $cadmin-dropdown-font-size;
-	left: 0;
-	list-style: none;
-	margin: $cadmin-dropdown-spacer 0 0;
-	max-height: $cadmin-dropdown-max-height;
-	max-width: $cadmin-dropdown-max-width;
-	min-height: $cadmin-dropdown-min-height;
-	min-width: $cadmin-dropdown-min-width;
-	overflow: auto;
-	padding: $cadmin-dropdown-padding-y 0;
-	position: absolute;
-	text-align: left;
-	top: 100%;
-	z-index: $cadmin-zindex-dropdown;
-
-	@include media-breakpoint-down(md, $cadmin-grid-breakpoints) {
-		max-height: $cadmin-dropdown-max-height-mobile;
-		max-width: $cadmin-dropdown-max-width-mobile;
-	}
-
-	@include clay-scale-component {
-		font-size: $cadmin-dropdown-font-size-mobile;
-	}
+	@include clay-dropdown-menu-variant($cadmin-dropdown-menu);
 
 	.alert {
 		font-size: $cadmin-dropdown-alert-font-size;

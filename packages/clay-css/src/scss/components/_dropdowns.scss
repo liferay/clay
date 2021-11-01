@@ -124,41 +124,7 @@
 // Dropdown Menu
 
 .dropdown-menu {
-	background-clip: padding-box;
-	background-color: $dropdown-bg;
-	border-color: $dropdown-border-color;
-	border-style: $dropdown-border-style;
-	border-width: $dropdown-border-width;
-
-	@include border-radius($dropdown-border-radius);
-	@include box-shadow($dropdown-box-shadow);
-
-	color: $dropdown-color;
-	display: none;
-	float: left;
-	font-size: $dropdown-font-size;
-	left: 0;
-	list-style: none;
-	margin: $dropdown-spacer 0 0;
-	max-height: $dropdown-max-height;
-	max-width: $dropdown-max-width;
-	min-height: $dropdown-min-height;
-	min-width: $dropdown-min-width;
-	overflow: auto;
-	padding: $dropdown-padding-y 0;
-	position: absolute;
-	text-align: left;
-	top: 100%;
-	z-index: $zindex-dropdown;
-
-	@include media-breakpoint-down(md) {
-		max-height: $dropdown-max-height-mobile;
-		max-width: $dropdown-max-width-mobile;
-	}
-
-	@include clay-scale-component {
-		font-size: $dropdown-font-size-mobile;
-	}
+	@include clay-dropdown-menu-variant($dropdown-menu);
 
 	.alert {
 		font-size: $dropdown-alert-font-size;
@@ -203,10 +169,6 @@
 	> .list-unstyled {
 		margin-bottom: 0;
 	}
-}
-
-.dropdown-menu.show {
-	display: block;
 }
 
 // Dropdown Menu Alignment
