@@ -5,7 +5,7 @@
 
 import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useRef} from 'react';
 import {DndProvider} from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 
@@ -68,11 +68,14 @@ export function TreeView<T>({
 		selectionMode,
 	});
 
+	const childrenRootRef = useRef(
+		typeof children === 'function'
+			? (children as ChildrenFunction<Object>)
+			: null
+	);
+
 	const context = {
-		childrenRoot:
-			typeof children === 'function'
-				? (children as ChildrenFunction<Object>)
-				: undefined,
+		childrenRoot: childrenRootRef,
 		dragAndDrop,
 		expanderIcons,
 		nestedKey,

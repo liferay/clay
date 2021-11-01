@@ -142,49 +142,52 @@ export function useMultipleSelection<T>(
 		[layoutKeys]
 	);
 
-	const toggleParentSelection = (keyMap: LayoutInfo, selecteds: Set<Key>) => {
-		if (!keyMap.parentKey) {
-			return;
-		}
+	const toggleParentSelection = useCallback(
+		(keyMap: LayoutInfo, selecteds: Set<Key>) => {
+			if (!keyMap.parentKey) {
+				return;
+			}
 
-		const parentKeyMap = layoutKeys.current.get(
-			keyMap.parentKey
-		) as LayoutInfo;
+			const parentKeyMap = layoutKeys.current.get(
+				keyMap.parentKey
+			) as LayoutInfo;
 
-		// Instead of doing the whole operation again below, we know that the
-		// element below already has intermediate status and we don't need to
-		// check everything again.
-		if (keyMap.intermediate) {
-			parentKeyMap.intermediate = true;
-			selecteds.delete(keyMap.parentKey);
-		} else {
-			const children = [...parentKeyMap.children];
-
-			// Instead of using every to check if all elements are selected, we
-			// look for any not selected, which means we don't have all the
-			// elements selected and we don't always need to go through the
-			// entire array.
-			const unselected = children.some((key) => !selecteds.has(key));
-
-			if (unselected) {
-				// An element can only be intermediate when there is at least
-				// one element selected in its tree. We don't need to sweep
-				// the tree because we have the recursive effect.
-				if (children.some((key) => selecteds.has(key))) {
-					parentKeyMap.intermediate = true;
-				} else {
-					parentKeyMap.intermediate = false;
-				}
-
+			// Instead of doing the whole operation again below, we know that the
+			// element below already has intermediate status and we don't need to
+			// check everything again.
+			if (keyMap.intermediate) {
+				parentKeyMap.intermediate = true;
 				selecteds.delete(keyMap.parentKey);
 			} else {
-				parentKeyMap.intermediate = false;
-				selecteds.add(keyMap.parentKey);
-			}
-		}
+				const children = [...parentKeyMap.children];
 
-		toggleParentSelection(parentKeyMap, selecteds);
-	};
+				// Instead of using every to check if all elements are selected, we
+				// look for any not selected, which means we don't have all the
+				// elements selected and we don't always need to go through the
+				// entire array.
+				const unselected = children.some((key) => !selecteds.has(key));
+
+				if (unselected) {
+					// An element can only be intermediate when there is at least
+					// one element selected in its tree. We don't need to sweep
+					// the tree because we have the recursive effect.
+					if (children.some((key) => selecteds.has(key))) {
+						parentKeyMap.intermediate = true;
+					} else {
+						parentKeyMap.intermediate = false;
+					}
+
+					selecteds.delete(keyMap.parentKey);
+				} else {
+					parentKeyMap.intermediate = false;
+					selecteds.add(keyMap.parentKey);
+				}
+			}
+
+			toggleParentSelection(parentKeyMap, selecteds);
+		},
+		[layoutKeys]
+	);
 
 	const toggleLazyChildrenSelection = useCallback(
 		(
@@ -216,82 +219,104 @@ export function useMultipleSelection<T>(
 		[props.nestedKey]
 	);
 
-	const toggleChildrenSelection = (
-		keyMap: LayoutInfo,
-		currentKey: React.Key,
-		selecteds: Set<Key>,
-		select: boolean
-	) => {
-		if (keyMap.lazyChild) {
-			const tree = createImmutableTree(
-				props.items ?? [],
-				props.nestedKey!
-			);
+	const toggleChildrenSelection = useCallback(
+		(
+			keyMap: LayoutInfo,
+			currentKey: React.Key,
+			selecteds: Set<Key>,
+			select: boolean
+		) => {
+			if (keyMap.lazyChild) {
+				const tree = createImmutableTree(
+					props.items ?? [],
+					props.nestedKey!
+				);
 
-			const node = tree.nodeByPath(keyMap.loc);
+				const node = tree.nodeByPath(keyMap.loc);
 
-			return toggleLazyChildrenSelection(
-				node.item,
-				currentKey,
-				selecteds,
-				select
-			);
-		}
-
-		if (!keyMap.children.size) {
-			return;
-		}
-
-		keyMap.children.forEach((key) => {
-			if (select) {
-				selecteds.add(key);
-			} else {
-				selecteds.delete(key);
+				return toggleLazyChildrenSelection(
+					node.item,
+					currentKey,
+					selecteds,
+					select
+				);
 			}
 
-			const childrenKeyMap = layoutKeys.current.get(key) as LayoutInfo;
+			if (!keyMap.children.size) {
+				return;
+			}
 
-			toggleChildrenSelection(childrenKeyMap, key, selecteds, select);
-		});
-	};
+			keyMap.children.forEach((key) => {
+				if (select) {
+					selecteds.add(key);
+				} else {
+					selecteds.delete(key);
+				}
 
-	const toggleSelection = (key: Key) => {
-		const keyMap = layoutKeys.current.get(key) as LayoutInfo;
+				const childrenKeyMap = layoutKeys.current.get(
+					key
+				) as LayoutInfo;
 
-		const selecteds = new Set(selectedKeys);
+				toggleChildrenSelection(childrenKeyMap, key, selecteds, select);
+			});
+		},
+		[toggleLazyChildrenSelection, layoutKeys, props.items, props.nestedKey]
+	);
 
-		// Resets the intermediate state because the element will be selected
-		// or otherwise the state must be false because it will be unchecking
-		// all its children.
-		keyMap.intermediate = false;
+	const toggleSelection = useCallback(
+		(key: Key) => {
+			const keyMap = layoutKeys.current.get(key) as LayoutInfo;
 
-		if (selecteds.has(key)) {
-			selecteds.delete(key);
-		} else {
-			selecteds.add(key);
-		}
+			const selecteds = new Set(selectedKeys);
 
-		if (selectionMode === 'multiple') {
-			toggleChildrenSelection(keyMap, key, selecteds, selecteds.has(key));
-		}
-		toggleParentSelection(keyMap, selecteds);
+			// Resets the intermediate state because the element will be selected
+			// or otherwise the state must be false because it will be unchecking
+			// all its children.
+			keyMap.intermediate = false;
 
-		setSelectionKeys(selecteds);
-	};
+			if (selecteds.has(key)) {
+				selecteds.delete(key);
+			} else {
+				selecteds.add(key);
+			}
 
-	const isIntermediate = (key: Key) => {
-		if (selectedKeys.has(key)) {
-			return false;
-		}
+			if (selectionMode === 'multiple') {
+				toggleChildrenSelection(
+					keyMap,
+					key,
+					selecteds,
+					selecteds.has(key)
+				);
+			}
 
-		const keyMap = layoutKeys.current.get(key);
+			toggleParentSelection(keyMap, selecteds);
 
-		if (!keyMap) {
-			return false;
-		}
+			setSelectionKeys(selecteds);
+		},
+		[
+			layoutKeys,
+			selectedKeys,
+			toggleChildrenSelection,
+			toggleParentSelection,
+		]
+	);
 
-		return keyMap.intermediate;
-	};
+	const isIntermediate = useCallback(
+		(key: Key) => {
+			if (selectedKeys.has(key)) {
+				return false;
+			}
+
+			const keyMap = layoutKeys.current.get(key);
+
+			if (!keyMap) {
+				return false;
+			}
+
+			return keyMap.intermediate;
+		},
+		[layoutKeys, selectedKeys]
+	);
 
 	return {
 		createPartialLayoutItem,

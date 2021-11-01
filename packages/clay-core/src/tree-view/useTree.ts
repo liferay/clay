@@ -4,6 +4,7 @@
  */
 
 import {useInternalState} from '@clayui/shared';
+import {useCallback} from 'react';
 
 import {
 	IMultipleSelection,
@@ -70,77 +71,98 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		selectionMode: props.selectionMode,
 	});
 
-	const close = (key: Key) => {
-		const expanded = new Set(expandedKeys);
+	const close = useCallback(
+		(key: Key) => {
+			const expanded = new Set(expandedKeys);
 
-		if (expanded.has(key)) {
-			expanded.delete(key);
+			if (expanded.has(key)) {
+				expanded.delete(key);
+
+				setExpandedKeys(expanded);
+
+				return true;
+			}
+
+			return false;
+		},
+		[expandedKeys]
+	);
+
+	const remove = useCallback(
+		(path: Array<number>) => {
+			const tree = createImmutableTree(items, props.nestedKey!);
+
+			tree.produce({op: 'remove', path});
+
+			setItems(tree.applyPatches());
+		},
+		[items]
+	);
+
+	const replace = useCallback(
+		(path: Array<number>, item: any) => {
+			const tree = createImmutableTree(items, props.nestedKey!);
+
+			tree.produce({item, op: 'replace', path});
+
+			setItems(tree.applyPatches());
+		},
+		[items]
+	);
+
+	const reorder = useCallback(
+		(from: Array<number>, path: Array<number>) => {
+			const tree = createImmutableTree(items, props.nestedKey!);
+
+			tree.produce({from, op: 'move', path});
+
+			setItems(tree.applyPatches());
+		},
+		[items]
+	);
+
+	const insert = useCallback(
+		(path: Array<number>, value: unknown) => {
+			const tree = createImmutableTree(items, props.nestedKey!);
+
+			tree.produce({op: 'add', path, value});
+
+			setItems(tree.applyPatches());
+		},
+		[items]
+	);
+
+	const toggle = useCallback(
+		(key: Key) => {
+			const expanded = new Set(expandedKeys);
+
+			if (expanded.has(key)) {
+				expanded.delete(key);
+			} else {
+				expanded.add(key);
+			}
 
 			setExpandedKeys(expanded);
+		},
+		[expandedKeys]
+	);
 
-			return true;
-		}
+	const open = useCallback(
+		(key: Key) => {
+			const expanded = new Set(expandedKeys);
 
-		return false;
-	};
+			if (!expanded.has(key)) {
+				expanded.add(key);
 
-	const remove = (path: Array<number>) => {
-		const tree = createImmutableTree(items, props.nestedKey!);
+				setExpandedKeys(expanded);
 
-		tree.produce({op: 'remove', path});
+				return true;
+			}
 
-		setItems(tree.applyPatches());
-	};
-
-	const replace = (path: Array<number>, item: any) => {
-		const tree = createImmutableTree(items, props.nestedKey!);
-
-		tree.produce({item, op: 'replace', path});
-
-		setItems(tree.applyPatches());
-	};
-
-	const reorder = (from: Array<number>, path: Array<number>) => {
-		const tree = createImmutableTree(items, props.nestedKey!);
-
-		tree.produce({from, op: 'move', path});
-
-		setItems(tree.applyPatches());
-	};
-
-	const insert = (path: Array<number>, value: unknown) => {
-		const tree = createImmutableTree(items, props.nestedKey!);
-
-		tree.produce({op: 'add', path, value});
-
-		setItems(tree.applyPatches());
-	};
-
-	const toggle = (key: Key) => {
-		const expanded = new Set(expandedKeys);
-
-		if (expanded.has(key)) {
-			expanded.delete(key);
-		} else {
-			expanded.add(key);
-		}
-
-		setExpandedKeys(expanded);
-	};
-
-	const open = (key: Key) => {
-		const expanded = new Set(expandedKeys);
-
-		if (!expanded.has(key)) {
-			expanded.add(key);
-
-			setExpandedKeys(expanded);
-
-			return true;
-		}
-
-		return false;
-	};
+			return false;
+		},
+		[expandedKeys]
+	);
 
 	return {
 		close,

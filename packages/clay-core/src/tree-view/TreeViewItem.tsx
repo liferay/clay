@@ -52,8 +52,8 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 			// @ts-ignore
 			right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
-		if (!group && nestedKey && item[nestedKey] && childrenRoot) {
-			return React.cloneElement(childrenRoot(item), {
+		if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
+			return React.cloneElement(childrenRoot.current(item), {
 				isDragging,
 				overPosition,
 				overTarget,
