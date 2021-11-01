@@ -6,60 +6,35 @@
 }
 
 .dropdown-toggle {
-	white-space: nowrap;
+	@include clay-button-variant($dropdown-toggle);
 
 	@include caret();
 }
 
 .dropdown-header {
-	color: $dropdown-header-color;
-	display: block;
-	font-size: $dropdown-header-font-size;
-	margin-bottom: $dropdown-header-margin-bottom;
-	margin-top: $dropdown-header-margin-top;
-	padding-bottom: $dropdown-header-padding-y;
-	padding-left: $dropdown-header-padding-x;
-	padding-right: $dropdown-header-padding-x;
-	padding-top: $dropdown-header-padding-y;
-	position: relative;
-	text-transform: $dropdown-header-text-transform;
-	word-wrap: break-word;
+	@include clay-css($dropdown-header);
 
-	@include clay-scale-component {
-		font-size: $dropdown-header-font-size-mobile;
+	@include media-breakpoint-down(map-get($dropdown-header, breakpoint-down)) {
+		@include clay-css(setter(map-get($dropdown-header, mobile), ()));
 	}
 
 	&:first-child {
-		margin-top: 0;
+		@include clay-css(setter(map-get($dropdown-header, first-child), ()));
 	}
 }
 
 .dropdown-subheader {
-	color: $dropdown-subheader-color;
-	font-size: $dropdown-subheader-font-size;
-	font-weight: $dropdown-subheader-font-weight;
-	margin-bottom: $dropdown-subheader-margin-bottom;
-	margin-top: $dropdown-subheader-margin-top;
-	padding-bottom: $dropdown-subheader-padding-y;
-	padding-left: $dropdown-subheader-padding-x;
-	padding-right: $dropdown-subheader-padding-x;
-	padding-top: $dropdown-subheader-padding-y;
-	text-transform: $dropdown-subheader-text-transform;
-	white-space: normal;
-	word-wrap: break-word;
+	@include clay-css($dropdown-subheader);
 
 	&:first-child {
-		margin-top: 0;
+		@include clay-css(
+			setter(map-get($dropdown-subheader, first-child), ())
+		);
 	}
 }
 
 .dropdown-caption {
-	color: $dropdown-caption-color;
-	font-size: $dropdown-caption-font-size;
-	font-weight: $dropdown-caption-font-weight;
-	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-	white-space: normal;
-	word-wrap: break-word;
+	@include clay-css($dropdown-caption);
 }
 
 .dropdown-item {
@@ -79,38 +54,50 @@
 // Dropdown Item Text
 
 .dropdown-item-text {
-	color: map-get($dropdown-item-base, color);
-	display: map-get($dropdown-item-base, display);
-	font-weight: map-get($dropdown-item-base, font-weight);
-	padding: map-get($dropdown-item-base, padding);
-	padding-bottom: map-get($dropdown-item-base, padding-bottom);
-	padding-left: map-get($dropdown-item-base, padding-left);
-	padding-right: map-get($dropdown-item-base, padding-right);
-	padding-top: map-get($dropdown-item-base, padding-top);
+	@include clay-css($dropdown-item-text);
 }
 
 .dropdown-section {
-	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+	@include clay-css($dropdown-section);
 
 	.form-group + .form-group {
-		margin-top: $dropdown-item-padding-y * 2;
+		@include clay-css(
+			setter(map-deep-get($dropdown-section, form-group, form-group), ())
+		);
 	}
 
 	.custom-control {
-		@include clay-css($dropdown-section-custom-control);
+		@include clay-css(
+			setter(map-get($dropdown-section, custom-control), ())
+		);
 	}
 
 	.custom-control-label {
-		@include clay-css($dropdown-section-custom-control-label);
+		@include clay-css(
+			setter(map-get($dropdown-section, custom-control-label), ())
+		);
 	}
 
 	.custom-control-label-text {
-		@include clay-css($dropdown-section-custom-control-label-text);
+		@include clay-css(
+			setter(map-get($dropdown-section, custom-control-label-text), ())
+		);
 	}
 
 	&.active {
+		@include clay-css(setter(map-get($dropdown-section, active), ()));
+
 		.custom-control-label {
-			@include clay-css($dropdown-section-active-custom-control-label);
+			@include clay-css(
+				setter(
+					map-deep-get(
+						$dropdown-section,
+						active,
+						custom-control-label
+					),
+					()
+				)
+			);
 		}
 	}
 }
@@ -256,47 +243,18 @@
 // Dropdown Divider
 
 .dropdown-divider {
-	border-top: 1px solid $dropdown-divider-bg;
-	height: 0;
-	margin: $dropdown-divider-margin-y 0;
-	overflow: hidden;
+	@include clay-css($dropdown-divider);
 }
 
 // Dropdown Action
 
 .dropdown-action {
-	display: inline-block;
-	font-size: $dropdown-action-toggle-font-size;
-	vertical-align: middle;
+	@include clay-css($dropdown-action);
 
 	> .dropdown-toggle {
-		align-items: center;
-
-		@include border-radius($dropdown-action-toggle-border-radius);
-
-		cursor: $btn-cursor;
-		display: flex;
-
-		@include clay-monospace($dropdown-action-toggle-size);
-
-		font-size: inherit;
-		font-weight: inherit;
-		justify-content: center;
-		line-height: inherit;
-		padding: 0;
-		text-transform: inherit;
-		vertical-align: baseline;
-
-		&:disabled,
-		&.disabled {
-			cursor: $dropdown-action-toggle-disabled-cursor;
-			opacity: $dropdown-action-toggle-disabled-opacity;
-		}
-
-		.inline-item .lexicon-icon,
-		.lexicon-icon {
-			margin-top: 0;
-		}
+		@include clay-button-variant(
+			setter(map-get($dropdown-action, dropdown-toggle), ())
+		);
 	}
 }
 
@@ -388,111 +346,43 @@
 // Dropdown Menu Positions
 
 .dropdown-menu-top {
-	bottom: 100% !important;
-	left: 0 !important;
-	margin-top: 0;
-	margin-bottom: $dropdown-spacer;
-	right: auto !important;
-	top: auto !important;
-	transform: none !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-top);
 }
 
 .dropdown-menu-top-right {
-	bottom: 100% !important;
-	left: auto !important;
-	margin-top: 0;
-	margin-bottom: $dropdown-spacer;
-	right: 0 !important;
-	top: auto !important;
-	transform: none !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-top-right);
 }
 
 .dropdown-menu-top-center {
-	bottom: 100% !important;
-	left: 50% !important;
-	margin-top: 0;
-	margin-bottom: $dropdown-spacer;
-	right: auto !important;
-	top: auto !important;
-	transform: translateX(-50%) !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-top-center);
 }
 
 .dropdown-menu-center {
-	bottom: auto !important;
-	left: 50% !important;
-	right: auto !important;
-	top: 100% !important;
-	transform: translateX(-50%) !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-center);
 }
 
 .dropdown-menu-left-side {
-	bottom: auto !important;
-	left: auto !important;
-	margin-right: $dropdown-spacer;
-	margin-top: 0;
-	right: 100% !important;
-	top: 0 !important;
-	transform: none !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-left-side);
 }
 
 .dropdown-menu-left-side-bottom {
-	bottom: 0 !important;
-	left: auto !important;
-	margin-right: $dropdown-spacer;
-	margin-top: 0;
-	right: 100% !important;
-	top: auto !important;
-	transform: none !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-left-side-bottom);
 }
 
 .dropdown-menu-left-side-middle {
-	bottom: auto !important;
-	left: auto !important;
-	margin-right: $dropdown-spacer;
-	margin-top: 0;
-	right: 100% !important;
-	top: 50% !important;
-	transform: translate(0, -50%) !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-left-side-middle);
 }
 
 .dropdown-menu-right-side {
-	bottom: auto !important;
-	left: 100% !important;
-	margin-left: $dropdown-spacer;
-	margin-top: 0;
-	right: auto !important;
-	top: 0 !important;
-	transform: none !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-right-side);
 }
 
 .dropdown-menu-right-side-bottom {
-	bottom: 0 !important;
-	left: 100% !important;
-	margin-left: $dropdown-spacer;
-	margin-top: 0;
-	right: auto !important;
-	top: auto !important;
-	transform: none !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-right-side-bottom);
 }
 
 .dropdown-menu-right-side-middle {
-	bottom: auto !important;
-	left: 100% !important;
-	margin-left: $dropdown-spacer;
-	margin-top: 0;
-	right: auto !important;
-	top: 50% !important;
-	transform: translate(0, -50%) !important;
-	will-change: auto !important;
+	@include clay-dropdown-menu-variant($dropdown-menu-right-side-middle);
 }
 
 // Dropdown wide / full
