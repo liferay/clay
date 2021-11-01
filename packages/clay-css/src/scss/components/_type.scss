@@ -202,7 +202,7 @@ strong {
 	@include clay-css($c-kbd-group);
 
 	> .c-kbd {
-		font-size: inherit;
+		@include clay-css(setter(map-get($c-kbd-group, c-kbd), ()));
 	}
 }
 
@@ -265,6 +265,10 @@ strong {
 
 .c-kbd-group-sm {
 	@include clay-css($c-kbd-group-sm);
+
+	> .c-kbd {
+		@include clay-css(setter(map-get($c-kbd-group-sm, c-kbd), ()));
+	}
 }
 
 .c-kbd-sm,
@@ -280,6 +284,10 @@ strong {
 
 .c-kbd-group-lg {
 	@include clay-css($c-kbd-group-lg);
+
+	> .c-kbd {
+		@include clay-css(setter(map-get($c-kbd-group-lg, c-kbd), ()));
+	}
 }
 
 .c-kbd-lg,
