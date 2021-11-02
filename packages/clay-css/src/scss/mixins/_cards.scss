@@ -278,30 +278,6 @@
 	$active-card-link: setter(map-get($active, card-link), ());
 	$active-card-link: map-merge($active-card-link, $old-active-card-link);
 
-	$after-highlight: setter(map-get($map, after-highlight), ());
-
-	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
-
-	$aspect-ratio-item: setter(map-get($map, aspect-ratio-item), ());
-
-	$sticker: setter(map-get($map, sticker), ());
-
-	$card-header: setter(map-get($map, card-header), ());
-
-	$card-body: setter(map-get($map, card-body), ());
-
-	$card-footer: setter(map-get($map, card-footer), ());
-
-	$card-row: setter(map-get($map, card-row), ());
-
-	$card-title: setter(map-get($map, card-title), ());
-
-	$card-subtitle: setter(map-get($map, card-subtitle), ());
-
-	$card-text: setter(map-get($map, card-text), ());
-
-	$card-link: setter(map-get($map, card-link), ());
-
 	@if ($enabled) {
 		@include clay-css($base);
 
@@ -366,18 +342,24 @@
 			}
 		}
 
-		@include clay-after-highlight-variant($after-highlight);
+		@include clay-after-highlight-variant(
+			setter(map-get($map, after-highlight), ())
+		);
 
 		.aspect-ratio {
-			@include clay-aspect-ratio-variant($aspect-ratio);
+			@include clay-aspect-ratio-variant(
+				setter(map-get($map, aspect-ratio), ())
+			);
 		}
 
 		.aspect-ratio-item {
-			@include clay-aspect-ratio-item-variant($aspect-ratio-item);
+			@include clay-aspect-ratio-item-variant(
+				setter(map-get($map, aspect-ratio-item), ())
+			);
 		}
 
 		.sticker {
-			@include clay-sticker-variant($sticker);
+			@include clay-sticker-variant(setter(map-get($map, sticker), ()));
 		}
 
 		.card {
@@ -385,35 +367,43 @@
 		}
 
 		.card-header {
-			@include clay-card-section-variant($card-header);
+			@include clay-card-section-variant(
+				setter(map-get($map, card-header), ())
+			);
 		}
 
 		.card-body {
-			@include clay-card-section-variant($card-body);
+			@include clay-card-section-variant(
+				setter(map-get($map, card-body), ())
+			);
 		}
 
 		.card-footer {
-			@include clay-card-section-variant($card-footer);
+			@include clay-card-section-variant(
+				setter(map-get($map, card-footer), ())
+			);
 		}
 
 		.card-row {
-			@include clay-card-section-variant($card-row);
+			@include clay-card-section-variant(
+				setter(map-get($map, card-row), ())
+			);
 		}
 
 		.card-title {
-			@include clay-link($card-title);
+			@include clay-link(setter(map-get($map, card-title), ()));
 		}
 
 		.card-subtitle {
-			@include clay-link($card-subtitle);
+			@include clay-link(setter(map-get($map, card-subtitle), ()));
 		}
 
 		.card-text {
-			@include clay-link($card-text);
+			@include clay-link(setter(map-get($map, card-text), ()));
 		}
 
 		.card-link {
-			@include clay-link($card-link);
+			@include clay-link(setter(map-get($map, card-link), ()));
 		}
 	}
 }
