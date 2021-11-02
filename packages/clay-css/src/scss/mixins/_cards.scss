@@ -138,6 +138,7 @@
 @mixin clay-card-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
+	$base: setter($map, ());
 	$base: map-merge(
 		$map,
 		(
@@ -302,69 +303,66 @@
 	$card-link: setter(map-get($map, card-link), ());
 
 	@if ($enabled) {
-		&.card,
-		.card {
-			@include clay-css($base);
+		@include clay-css($base);
 
-			&:hover {
-				@include clay-css($hover);
+		&:hover {
+			@include clay-css($hover);
 
-				.card-title {
-					@include clay-link($hover-card-title);
-				}
-
-				.card-subtitle {
-					@include clay-link($hover-card-subtitle);
-				}
-
-				.card-text {
-					@include clay-link($hover-card-text);
-				}
-
-				.card-link {
-					@include clay-link($hover-card-link);
-				}
+			.card-title {
+				@include clay-link($hover-card-title);
 			}
 
-			&:focus {
-				@include clay-css($focus);
-
-				.card-title {
-					@include clay-link($focus-card-title);
-				}
-
-				.card-subtitle {
-					@include clay-link($focus-card-subtitle);
-				}
-
-				.card-text {
-					@include clay-link($focus-card-text);
-				}
-
-				.card-link {
-					@include clay-link($focus-card-link);
-				}
+			.card-subtitle {
+				@include clay-link($hover-card-subtitle);
 			}
 
-			&:active,
-			&.active {
-				@include clay-css($active);
+			.card-text {
+				@include clay-link($hover-card-text);
+			}
 
-				.card-title {
-					@include clay-link($active-card-title);
-				}
+			.card-link {
+				@include clay-link($hover-card-link);
+			}
+		}
 
-				.card-subtitle {
-					@include clay-link($active-card-subtitle);
-				}
+		&:focus {
+			@include clay-css($focus);
 
-				.card-text {
-					@include clay-link($active-card-text);
-				}
+			.card-title {
+				@include clay-link($focus-card-title);
+			}
 
-				.card-link {
-					@include clay-link($active-card-link);
-				}
+			.card-subtitle {
+				@include clay-link($focus-card-subtitle);
+			}
+
+			.card-text {
+				@include clay-link($focus-card-text);
+			}
+
+			.card-link {
+				@include clay-link($focus-card-link);
+			}
+		}
+
+		&:active,
+		&.active {
+			@include clay-css($active);
+
+			.card-title {
+				@include clay-link($active-card-title);
+			}
+
+			.card-subtitle {
+				@include clay-link($active-card-subtitle);
+			}
+
+			.card-text {
+				@include clay-link($active-card-text);
+			}
+
+			.card-link {
+				@include clay-link($active-card-link);
 			}
 		}
 
@@ -380,6 +378,10 @@
 
 		.sticker {
 			@include clay-sticker-variant($sticker);
+		}
+
+		.card {
+			@include clay-css(setter(map-get($map, card), ()));
 		}
 
 		.card-header {
