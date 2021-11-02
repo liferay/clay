@@ -147,6 +147,7 @@ storiesOf('Components|ClayTreeView', module)
 	.add('dynamic', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView
+				dragAndDropEnabled
 				items={[
 					{
 						children: [
@@ -217,6 +218,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
+					dragAndDropEnabled
 					items={ITEMS_DRIVE}
 					nestedKey="children"
 					onRenameItem={(item) => {
@@ -274,7 +276,7 @@ storiesOf('Components|ClayTreeView', module)
 	})
 	.add('sticker', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
-			<TreeView showExpanderOnHover={false}>
+			<TreeView dragAndDropEnabled showExpanderOnHover={false}>
 				<TreeView.Item>
 					<TreeView.ItemStack>
 						<Sticker
@@ -472,6 +474,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
+					dragAndDropEnabled
 					items={ITEMS_DRIVE}
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
