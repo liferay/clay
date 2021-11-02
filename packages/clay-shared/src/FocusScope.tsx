@@ -62,13 +62,12 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 
 	return React.cloneElement(children, {
 		onKeyDown: (event: React.KeyboardEvent) => {
-			onKeyDown(event);
-
 			// If the element already exists a `onKeyDown` event should
 			// invoke it as well.
 			if (children.props.onKeyDown) {
 				children.props.onKeyDown(event);
 			}
+			onKeyDown(event);
 		},
 		ref: (r: HTMLElement) => {
 			if (r) {

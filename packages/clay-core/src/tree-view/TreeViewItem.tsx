@@ -6,6 +6,7 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
@@ -29,10 +30,17 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 		const spacing = useContext(SpacingContext);
 		const {
 			childrenRoot,
+			close,
 			expandedKeys,
 			insert,
 			nestedKey,
 			onLoadMore,
+			onRenameItem,
+			open,
+			remove,
+			replace,
+			rootRef,
+			selection,
 			toggle,
 		} = useTreeViewContext();
 
@@ -84,6 +92,90 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									insert([...item.indexes, 0], items);
 									toggle(item.key);
 								}
+							}
+						}}
+						onKeyDown={async (event) => {
+							const {key} = event;
+
+							if (key === Keys.Left) {
+								if (
+									!close(item.key) &&
+									item.parentItemRef?.current
+								) {
+									item.parentItemRef.current.focus();
+								}
+							}
+
+							if (key === Keys.Right) {
+								if (!group) {
+									if (onLoadMore) {
+										const items = await onLoadMore(item);
+
+										insert([...item.indexes, 0], items);
+									} else {
+										return;
+									}
+								}
+
+								if (!open(item.key) && item.itemRef.current) {
+									const group =
+										item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+											'.treeview-group'
+										);
+									const firstItemElement =
+										group?.querySelector<HTMLDivElement>(
+											'.treeview-link'
+										);
+
+									firstItemElement?.focus();
+								} else {
+									item.itemRef.current?.focus();
+								}
+							}
+
+							if (key === Keys.Backspace || key === Keys.Del) {
+								remove(item.indexes);
+
+								item.parentItemRef.current?.focus();
+							}
+
+							if (key === Keys.End) {
+								const lastListElement = rootRef.current
+									?.lastElementChild as HTMLLinkElement;
+								const linkElement =
+									lastListElement.firstElementChild as HTMLDivElement;
+								linkElement.focus();
+							}
+
+							if (key === Keys.Home) {
+								const firstListElement = rootRef.current
+									?.firstElementChild as HTMLLinkElement;
+								const linkElement =
+									firstListElement.firstElementChild as HTMLDivElement;
+								linkElement.focus();
+							}
+
+							if (
+								(key.toUpperCase() === Keys.R ||
+									key === Keys.F2) &&
+								onRenameItem
+							) {
+								const newItem = await onRenameItem({...item});
+
+								replace(item.indexes, {
+									...newItem,
+									index: item.index,
+									indexes: item.indexes,
+									itemRef: item.itemRef,
+									key: item.key,
+									parentItemRef: item.parentItemRef,
+								});
+
+								item.itemRef.current?.focus();
+							}
+
+							if (key === Keys.Spacebar) {
+								selection.toggleSelection(item.key);
 							}
 						}}
 						ref={ref}
@@ -155,6 +247,7 @@ export function TreeViewItemStack({
 						displayType={null}
 						monospaced
 						onClick={() => toggle(item.key)}
+						tabIndex={-1}
 					>
 						<span className="c-inner" tabIndex={-2}>
 							{expanderIcons?.close ? (

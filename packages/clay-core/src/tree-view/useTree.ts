@@ -33,13 +33,17 @@ export interface ITreeProps<T>
 		Pick<ICollectionProps<T>, 'items'> {
 	nestedKey?: string;
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
+	rootRef?: React.RefObject<HTMLUListElement>;
 }
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
+	close: (key: Key) => boolean;
 	expandedKeys: Set<Key>;
 	insert: (path: Array<number>, value: unknown) => void;
-	open: (key: Key) => void;
+	open: (key: Key) => boolean;
+	remove: (path: Array<number>) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
+	replace: (path: Array<number>, item: T) => void;
 	selection: IMultipleSelectionState;
 	toggle: (key: Key) => void;
 }
@@ -61,6 +65,36 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
 	});
+
+	const close = (key: Key) => {
+		const expanded = new Set(expandedKeys);
+
+		if (expanded.has(key)) {
+			expanded.delete(key);
+
+			setExpandedKeys(expanded);
+
+			return true;
+		}
+
+		return false;
+	};
+
+	const remove = (path: Array<number>) => {
+		const tree = createImmutableTree(items, props.nestedKey!);
+
+		tree.produce({op: 'remove', path});
+
+		setItems(tree.applyPatches());
+	};
+
+	const replace = (path: Array<number>, item: any) => {
+		const tree = createImmutableTree(items, props.nestedKey!);
+
+		tree.produce({item, op: 'replace', path});
+
+		setItems(tree.applyPatches());
+	};
 
 	const reorder = (from: Array<number>, path: Array<number>) => {
 		const tree = createImmutableTree(items, props.nestedKey!);
@@ -95,17 +129,24 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 		if (!expanded.has(key)) {
 			expanded.add(key);
+
+			setExpandedKeys(expanded);
+
+			return true;
 		}
 
-		setExpandedKeys(expanded);
+		return false;
 	};
 
 	return {
+		close,
 		expandedKeys,
 		insert,
 		items,
 		open,
+		remove,
 		reorder,
+		replace,
 		selection,
 		toggle,
 	};
@@ -128,11 +169,26 @@ type PatchAdd = {
 	value: unknown;
 };
 
+// Operation of `remove` value to the document structure.
+// RFC 6902 (JSON Patch) 4.2
+type PatchRemove = {
+	op: 'remove';
+	path: Array<number>;
+};
+
+// Operation of `replace` value to the document structure.
+// RFC 6902 (JSON Patch) 4.3
+type PatchReplace = {
+	item: any;
+	op: 'replace';
+	path: Array<number>;
+};
+
 // Patch refers to the implementation of RFC 6902 operations (JSON Patch)
 // https://datatracker.ietf.org/doc/html/rfc6902, we just borrow the document
 // structure to make partial updates to a JSON document.
 // Implementation Detail https://github.com/liferay/clay/pull/4254.
-type Patch = PatchMove | PatchAdd;
+type Patch = PatchMove | PatchAdd | PatchRemove | PatchReplace;
 
 export function createImmutableTree<T extends Array<Record<string, any>>>(
 	initialTree: T,
@@ -234,12 +290,12 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 						nodeToRemove.parent[nestedKey] = nodeToRemove.parent[
 							nestedKey
 						].filter(
-							(item: any, index: number) =>
+							(_item: any, index: number) =>
 								index !== nodeToRemove.index
 						);
 					} else {
 						immutableTree = immutableTree.filter(
-							(item: any, index: number) =>
+							(_item: any, index: number) =>
 								index !== nodeToRemove.index
 						) as T;
 					}
@@ -267,6 +323,55 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 					break;
 				}
+
+				case 'remove': {
+					const {path} = patch;
+
+					const nodeToRemove = nodeByPath(path);
+
+					if (nodeToRemove.parent) {
+						nodeToRemove.parent[nestedKey] = nodeToRemove.parent[
+							nestedKey
+						].filter(
+							(_item: any, index: number) =>
+								index !== nodeToRemove.index
+						);
+					} else {
+						immutableTree = immutableTree.filter(
+							(_item: any, index: number) =>
+								index !== nodeToRemove.index
+						) as T;
+					}
+
+					break;
+				}
+
+				case 'replace': {
+					const {item, path} = patch;
+
+					const nodeToReplace = nodeByPath(path);
+
+					if (nodeToReplace.parent) {
+						nodeToReplace.parent[nestedKey] = nodeToReplace.parent[
+							nestedKey
+						].filter(
+							(_item: any, index: number) =>
+								index !== nodeToReplace.index
+						);
+
+						nodeToReplace.parent[nestedKey].splice(
+							nodeToReplace.index,
+							0,
+							item
+						);
+					} else {
+						immutableTree.splice(nodeToReplace.index, 1);
+						immutableTree.splice(nodeToReplace.index, 0, item);
+					}
+
+					break;
+				}
+
 				default:
 					break;
 			}

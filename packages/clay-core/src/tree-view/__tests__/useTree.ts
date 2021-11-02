@@ -317,4 +317,158 @@ describe('useTree', () => {
 
 		expect(result).toMatchObject(expectedTree);
 	});
+
+	it('removes a nested item from a tree', () => {
+		const tree = [
+			{
+				children: [
+					{
+						name: 'Bar',
+					},
+					{
+						children: [
+							{
+								name: 'Foo Baz',
+							},
+						],
+						name: 'Baz',
+					},
+				],
+				name: 'Foo',
+			},
+		];
+
+		const expectedTree = [
+			{
+				children: [
+					{
+						name: 'Bar',
+					},
+					{
+						children: [],
+						name: 'Baz',
+					},
+				],
+				name: 'Foo',
+			},
+		];
+
+		const immutableTree = createImmutableTree(tree, 'children');
+
+		immutableTree.produce({op: 'remove', path: [0, 1, 0]});
+
+		const result = immutableTree.applyPatches();
+
+		expect(result).toMatchObject(expectedTree);
+	});
+
+	it('removes an item in the root of a tree', () => {
+		const tree = [
+			{
+				children: [
+					{
+						name: 'Bar',
+					},
+					{
+						children: [
+							{
+								name: 'Foo Baz',
+							},
+						],
+						name: 'Baz',
+					},
+				],
+				name: 'Foo',
+			},
+			{
+				name: 'Foo 2',
+			},
+		];
+
+		const expectedTree = [
+			{
+				children: [
+					{
+						name: 'Bar',
+					},
+					{
+						children: [
+							{
+								name: 'Foo Baz',
+							},
+						],
+						name: 'Baz',
+					},
+				],
+				name: 'Foo',
+			},
+		];
+
+		const immutableTree = createImmutableTree(tree, 'children');
+
+		immutableTree.produce({op: 'remove', path: [1]});
+
+		const result = immutableTree.applyPatches();
+
+		expect(result).toMatchObject(expectedTree);
+	});
+
+	it('renames an item', () => {
+		const tree = [
+			{
+				children: [
+					{
+						name: 'Bar',
+					},
+					{
+						children: [
+							{
+								name: 'Foo Baz',
+							},
+						],
+						name: 'Baz',
+					},
+				],
+				name: 'Foo',
+			},
+			{
+				name: 'Foo 2',
+			},
+		];
+
+		const expectedTree = [
+			{
+				children: [
+					{
+						name: 'Bar',
+					},
+					{
+						children: [
+							{
+								name: 'Foo Baz',
+							},
+						],
+						name: 'Baz',
+					},
+				],
+				name: 'Foo',
+			},
+			{
+				name: 'Foo - renamed',
+			},
+		];
+
+		const immutableTree = createImmutableTree(tree, 'children');
+
+		const item = {
+			...tree[1],
+			name: 'Foo - renamed',
+		};
+
+		immutableTree.produce({item, op: 'replace', path: [1]});
+
+		const result = immutableTree.applyPatches();
+
+		expect(result).toMatchObject(expectedTree);
+	});
 });

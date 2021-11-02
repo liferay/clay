@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 import {DndProvider} from 'react-dnd';
@@ -22,6 +23,8 @@ interface ITreeViewProps<T>
 	displayType?: 'light' | 'dark';
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
+	onRenameItem?: (item: T) => Promise<T>;
+	rootRef?: React.RefObject<HTMLUListElement>;
 	showExpanderOnHover?: boolean;
 }
 
@@ -42,11 +45,14 @@ export function TreeView<T>({
 	onExpandedChange,
 	onItemsChange,
 	onLoadMore,
+	onRenameItem,
 	onSelectionChange,
 	selectedKeys,
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
+	const rootRef = React.useRef(null);
+
 	const state = useTree<T>({
 		expandedKeys,
 		items,
@@ -65,26 +71,33 @@ export function TreeView<T>({
 		expanderIcons,
 		nestedKey,
 		onLoadMore,
+		onRenameItem,
+		rootRef,
 		showExpanderOnHover,
 		...state,
 	};
 
 	return (
-		<ul
-			{...otherProps}
-			className={classNames('treeview', className, {
-				[`treeview-${displayType}`]: displayType,
-				'show-component-expander-on-hover': showExpanderOnHover,
-			})}
-			role="tree"
-		>
-			<DndProvider backend={HTML5Backend}>
-				<TreeViewContext.Provider value={context}>
-					<Collection<T> items={state.items}>{children}</Collection>
-					<DragLayer />
-				</TreeViewContext.Provider>
-			</DndProvider>
-		</ul>
+		<FocusScope>
+			<ul
+				{...otherProps}
+				className={classNames('treeview', className, {
+					[`treeview-${displayType}`]: displayType,
+					'show-component-expander-on-hover': showExpanderOnHover,
+				})}
+				ref={rootRef}
+				role="tree"
+			>
+				<DndProvider backend={HTML5Backend}>
+					<TreeViewContext.Provider value={context}>
+						<Collection<T> items={state.items}>
+							{children}
+						</Collection>
+						<DragLayer />
+					</TreeViewContext.Provider>
+				</DndProvider>
+			</ul>
+		</FocusScope>
 	);
 }
 

@@ -17,6 +17,8 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	expanderIcons?: Icons;
 	nestedKey?: string;
 	onLoadMore?: (item: any) => Promise<unknown>;
+	onRenameItem?: (item: T) => Promise<any>;
+	rootRef: React.RefObject<HTMLUListElement>;
 	showExpanderOnHover?: boolean;
 }
 

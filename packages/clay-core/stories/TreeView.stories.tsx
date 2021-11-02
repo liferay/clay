@@ -173,6 +173,15 @@ storiesOf('Components|ClayTreeView', module)
 					},
 				]}
 				nestedKey="children"
+				onRenameItem={(item) => {
+					return new Promise((resolve) => {
+						setTimeout(() => {
+							item.name += `-${Date.now()}`;
+
+							resolve(item);
+						}, 500);
+					});
+				}}
 			>
 				{(item) => (
 					<TreeView.Item>
@@ -207,7 +216,19 @@ storiesOf('Components|ClayTreeView', module)
 
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
-				<TreeView items={ITEMS_DRIVE} nestedKey="children">
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onRenameItem={(item) => {
+						return new Promise((resolve) => {
+							setTimeout(() => {
+								item.name += `-${Date.now()}`;
+
+								resolve(item);
+							}, 500);
+						});
+					}}
+				>
 					{(item: IItem) => (
 						<TreeView.Item>
 							<TreeView.ItemStack>
