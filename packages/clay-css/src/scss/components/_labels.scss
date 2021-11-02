@@ -1,51 +1,5 @@
 .label {
-	border-color: $label-border-color;
-
-	@include border-radius($label-border-radius);
-
-	border-style: $label-border-style;
-	border-width: $label-border-width;
-	color: $label-color;
-	display: inline-flex;
-	font-size: $label-font-size;
-	font-weight: $label-font-weight;
-	height: $label-height;
-	line-height: $label-line-height;
-	margin-bottom: $label-spacer-y;
-	margin-right: $label-spacer-x;
-	margin-top: $label-spacer-y;
-	max-width: 100%;
-	padding-bottom: $label-padding-y;
-	padding-left: $label-padding-x;
-	padding-right: $label-padding-x;
-	padding-top: $label-padding-y;
-	text-transform: $label-text-transform;
-	white-space: inherit;
-	word-wrap: break-word;
-
-	@include clay-label-variant($label-base);
-
-	a {
-		color: $label-link-color;
-		display: inline-block;
-		text-decoration: $label-link-text-decoration;
-
-		&:hover,
-		&:focus {
-			color: $label-link-hover-color;
-			text-decoration: $label-link-hover-text-decoration;
-		}
-	}
-
-	@if ($enable-c-inner) {
-		> .c-inner {
-			margin-bottom: math-sign($label-padding-y);
-			margin-left: math-sign($label-padding-x);
-			margin-right: math-sign($label-padding-x);
-			margin-top: math-sign($label-padding-y);
-			max-width: none;
-		}
-	}
+	@include clay-label-variant($label);
 
 	// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
 	// pattern instead
@@ -86,100 +40,76 @@
 			width: $label-lexicon-icon-width;
 		}
 	}
-
-	.sticker {
-		border-radius: $label-sticker-border-radius;
-		height: $label-sticker-size;
-		line-height: $label-sticker-size;
-		width: $label-sticker-size;
-	}
-
-	.sticker-overlay {
-		border-radius: $label-sticker-border-radius;
-	}
-}
-
-a.label,
-button.label {
-	text-decoration: $label-anchor-text-decoration;
-
-	&:hover,
-	&:focus {
-		text-decoration: $label-anchor-hover-text-decoration;
-	}
-}
-
-button.label {
-	cursor: $btn-cursor;
 }
 
 .label-dismissible {
-	text-transform: $label-dismissible-text-transform;
+	@include clay-css($label-dismissible);
 }
 
 .label-item {
-	display: flex;
-	flex-direction: column;
-	flex-shrink: 0;
-	justify-content: center;
-	margin-bottom: $label-item-spacer-y;
-	margin-top: $label-item-spacer-y;
-	min-height: 0;
-	position: relative;
+	@include clay-css($label-item);
 
 	a {
-		display: inline-flex;
+		@include clay-link(setter(map-get($label-item, link), ()));
 	}
 
 	.btn-unstyled {
-		color: inherit;
-		display: inline-flex;
+		@include clay-button-variant(
+			setter(map-get($label-item, btn-unstyled), ())
+		);
 	}
 
 	.close {
-		@include clay-close($label-close);
+		@include clay-close(setter(map-get($label-item, close), ()));
 	}
 
 	.lexicon-icon {
-		height: $label-lexicon-icon-height;
-		margin-top: $label-lexicon-icon-margin-top;
-		width: $label-lexicon-icon-width;
+		@include clay-css(setter(map-get($label-item, lexicon-icon), ()));
 	}
 
 	.text-truncate-inline {
-		display: inline-flex;
+		@include clay-css(
+			setter(map-get($label-item, text-truncate-inline), ())
+		);
 	}
 }
 
 .label-item-expand {
-	flex-grow: 1;
-	flex-shrink: 1;
-	min-width: 1rem;
-	word-wrap: break-word;
+	@include clay-css($label-item-expand);
 
 	a {
-		flex-direction: column;
+		@include clay-link(setter(map-get($label-item-expand, link), ()));
 	}
 }
 
 .label-item-before {
-	margin-right: $label-item-spacer-x;
+	@include clay-css($label-item-before);
 }
 
 .label-item-after {
-	margin-left: $label-item-spacer-x;
+	@include clay-css($label-item-after);
 }
 
 // Label Sizes
 
-.label-lg {
-	@include clay-label-size($label-lg);
+@each $selector, $value in $label-sizes {
+	%#{$selector} {
+		@include clay-label-variant($value);
+	}
+
+	.#{$selector} {
+		@extend %#{$selector} !optional;
+	}
 }
 
 // Label Variants
 
 @each $color, $value in $label-palette {
+	%label-#{$color} {
+		@include clay-label-variant($value);
+	}
+
 	.label-#{$color} {
-		@include clay-label-variant(map-get($label-palette, $color));
+		@extend %label-#{$color} !optional;
 	}
 }

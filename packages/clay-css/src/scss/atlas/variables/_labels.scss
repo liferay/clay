@@ -1,3 +1,5 @@
+// .label
+
 $label-border-radius: 0.125rem !default; // 2px
 $label-font-size: 0.625rem !default; // 10px
 $label-font-weight: $font-weight-semi-bold !default;
@@ -5,14 +7,58 @@ $label-padding-x: 0.25rem !default; // 4px
 $label-padding-y: 0.125rem !default; // 2px
 $label-text-transform: uppercase !default;
 
-$label-item-spacer-x: 0.85714em !default;
+// .label[href], .label[type], .label[tabindex='0']
 
 $label-anchor-hover-text-decoration: underline !default;
 
+// .label a, .label .btn-unstyled
+
 $label-link-text-decoration: none !default;
+
 $label-link-hover-text-decoration: underline !default;
 
-// Label Close
+$label-base: () !default;
+
+$label: () !default;
+$label: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($label-border-radius),
+		font-size: $label-font-size,
+		font-weight: $label-font-weight,
+		outline: 0,
+		padding-bottom: $label-padding-y,
+		padding-left: $label-padding-x,
+		padding-right: $label-padding-x,
+		padding-top: $label-padding-y,
+		text-transform: $label-text-transform,
+		transition: box-shadow 0.15s ease-in-out,
+		disabled: (
+			box-shadow: none,
+		),
+		href: (
+			hover: (
+				text-decoration: $label-anchor-hover-text-decoration,
+			),
+			focus: (
+				box-shadow: $btn-focus-box-shadow,
+				text-decoration: $label-anchor-hover-text-decoration,
+			),
+		),
+		link: (
+			text-decoration: $label-link-text-decoration,
+			hover: (
+				text-decoration: $label-link-hover-text-decoration,
+			),
+			focus: (
+				text-decoration: $label-link-hover-text-decoration,
+			),
+		),
+	),
+	$label
+);
+$label: map-deep-merge($label, $label-base);
+
+// .label-item .close
 
 $label-close: () !default;
 $label-close: map-deep-merge(
@@ -24,7 +70,11 @@ $label-close: map-deep-merge(
 	$label-close
 );
 
-// Label Sizes
+// .label-item
+
+$label-item-spacer-x: 0.85714em !default;
+
+// .label-lg
 
 $label-lg: () !default;
 $label-lg: map-deep-merge(
@@ -52,22 +102,17 @@ $label-lg: map-deep-merge(
 	$label-lg
 );
 
-// Label Variants
+// Label Sizes
 
-$label-base: () !default;
-$label-base: map-deep-merge(
+$label-sizes: () !default;
+$label-sizes: map-deep-merge(
 	(
-		outline: 0,
-		transition: box-shadow 0.15s ease-in-out,
-		focus: (
-			box-shadow: $btn-focus-box-shadow,
-		),
-		disabled: (
-			box-shadow: none,
-		),
+		label-lg: $label-lg,
 	),
-	$label-base
+	$label-sizes
 );
+
+// Label Variants
 
 // @deprecated as of v2.4.1 use the Sass map `$label-primary` instead
 
@@ -490,4 +535,27 @@ $label-inverse-dark: map-deep-merge(
 		),
 	),
 	$label-inverse-dark
+);
+
+$label-palette: () !default;
+$label-palette: map-deep-merge(
+	(
+		primary: $label-primary,
+		secondary: $label-secondary,
+		success: $label-success,
+		info: $label-info,
+		warning: $label-warning,
+		danger: $label-danger,
+		dark: $label-dark,
+		light: $label-light,
+		inverse-primary: $label-inverse-primary,
+		inverse-secondary: $label-inverse-secondary,
+		inverse-success: $label-inverse-success,
+		inverse-info: $label-inverse-info,
+		inverse-warning: $label-inverse-warning,
+		inverse-danger: $label-inverse-danger,
+		inverse-light: $label-inverse-light,
+		inverse-dark: $label-inverse-dark,
+	),
+	$label-palette
 );

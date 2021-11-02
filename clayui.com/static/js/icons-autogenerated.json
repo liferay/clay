@@ -656,6 +656,10 @@
         "aliases": [""]
     },
     {
+        "name": "heading",
+        "aliases": ["h", "title", "text", "editor"]
+    },
+    {
         "name": "heart-full",
         "aliases": [""]
     },
@@ -788,6 +792,10 @@
         "aliases": ["effects", "select", "wand"]
     },
     {
+        "name": "maps",
+        "aliases": ["pin", "location", "place"]
+    },
+    {
         "name": "mark-as-answer",
         "aliases": ["lines", "list", "question"]
     },
@@ -874,6 +882,14 @@
     {
         "name": "order-arrow",
         "aliases": [""]
+    },
+    {
+        "name": "order-ascending",
+        "aliases": ["arrows", "filter", "alphabetical", "sort", "list"]
+    },
+    {
+        "name": "order-descending",
+        "aliases": ["arrows", "filter", "alphabetical", "sort", "list"]
     },
     {
         "name": "order-list-down",

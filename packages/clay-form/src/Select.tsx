@@ -16,13 +16,23 @@ const Option: React.FunctionComponent<
 	React.OptionHTMLAttributes<HTMLOptionElement>
 > = ({label, ...otherProps}) => <option {...otherProps}>{label}</option>;
 
-const ClaySelect: React.FunctionComponent<
-	React.SelectHTMLAttributes<HTMLSelectElement>
-> & {
+interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+	/**
+	 * Set the proportional size of the Select component.
+	 */
+	sizing?: 'lg' | 'sm';
+}
+
+const ClaySelect: React.FunctionComponent<IProps> & {
 	OptGroup: typeof OptGroup;
 	Option: typeof Option;
-} = ({children, className, ...otherProps}) => (
-	<select {...otherProps} className={classNames('form-control', className)}>
+} = ({children, className, sizing, ...otherProps}: IProps) => (
+	<select
+		{...otherProps}
+		className={classNames('form-control', className, {
+			[`form-control-${sizing}`]: sizing,
+		})}
+	>
 		{children}
 	</select>
 );

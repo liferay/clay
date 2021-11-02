@@ -6,6 +6,7 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
@@ -94,42 +95,51 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							}
 						}}
 						onKeyDown={async (event) => {
-							const {charCode, key} = event;
+							const {key} = event;
 
-							if (group) {
-								if (key === 'ArrowLeft') {
-									if (
-										!close(item.key) &&
-										item.parentItemRef?.current
-									) {
-										item.parentItemRef.current.focus();
-									}
-								}
-
-								if (key === 'ArrowRight') {
-									if (
-										!open(item.key) &&
-										item.itemRef.current
-									) {
-										const group =
-											item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
-												'.treeview-group'
-											);
-										const firstItemElement =
-											group?.querySelector<HTMLDivElement>(
-												'.treeview-link'
-											);
-
-										firstItemElement?.focus();
-									}
+							if (key === Keys.Left) {
+								if (
+									!close(item.key) &&
+									item.parentItemRef?.current
+								) {
+									item.parentItemRef.current.focus();
 								}
 							}
 
-							if (key === 'Backspace' || key === 'Delete') {
+							if (key === Keys.Right) {
+								if (!group) {
+									if (onLoadMore) {
+										const items = await onLoadMore(item);
+
+										insert([...item.indexes, 0], items);
+									} else {
+										return;
+									}
+								}
+
+								if (!open(item.key) && item.itemRef.current) {
+									const group =
+										item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+											'.treeview-group'
+										);
+									const firstItemElement =
+										group?.querySelector<HTMLDivElement>(
+											'.treeview-link'
+										);
+
+									firstItemElement?.focus();
+								} else {
+									item.itemRef.current?.focus();
+								}
+							}
+
+							if (key === Keys.Backspace || key === Keys.Del) {
 								remove(item.indexes);
+
+								item.parentItemRef.current?.focus();
 							}
 
-							if (key === 'End') {
+							if (key === Keys.End) {
 								const lastListElement = rootRef.current
 									?.lastElementChild as HTMLLinkElement;
 								const linkElement =
@@ -137,7 +147,7 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								linkElement.focus();
 							}
 
-							if (key === 'Home') {
+							if (key === Keys.Home) {
 								const firstListElement = rootRef.current
 									?.firstElementChild as HTMLLinkElement;
 								const linkElement =
@@ -145,7 +155,11 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								linkElement.focus();
 							}
 
-							if ((key === 'R' || key === 'F2') && onRenameItem) {
+							if (
+								(key.toUpperCase() === Keys.R ||
+									key === Keys.F2) &&
+								onRenameItem
+							) {
 								const newItem = await onRenameItem({...item});
 
 								replace(item.indexes, {
@@ -156,9 +170,11 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 									key: item.key,
 									parentItemRef: item.parentItemRef,
 								});
+
+								item.itemRef.current?.focus();
 							}
 
-							if (charCode === 0) {
+							if (key === Keys.Spacebar) {
 								selection.toggleSelection(item.key);
 							}
 						}}

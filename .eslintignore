@@ -1,7 +1,5 @@
 *.d.ts
 bower_components
-build
-clay-css
 copyright.js
 coverage
 lib
@@ -11,5 +9,6 @@ clayui.com/react-docgen
 clayui.com/static
 node_modules
 package-lock.json
+/packages/clay-css/src/js/**/*.js
 packages/generator-clay-component/app/templates
 yarn.lock

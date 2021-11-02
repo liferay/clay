@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.39.0](https://github.com/matuzalemsteles/clay/compare/v3.38.0...v3.39.0) (2021-10-29)
+
+### Bug Fixes
+
+-   fixes error when starting `yarn develop` command of the clayui.com ([fa0d8c0](https://github.com/matuzalemsteles/clay/commit/fa0d8c06498db8d41fc025f6ff6ef912dc97228e))
+
+### Features
+
+-   **clayui.com:** add `heading`, `maps`, `order-ascending`, `order-descending` and `geolocation` SVG icons ([a34f3be](https://github.com/matuzalemsteles/clay/commit/a34f3be7ec089289070b407aab180216843eef69))
+
 # [3.38.0](https://github.com/matuzalemsteles/clay/compare/v3.37.0...v3.38.0) (2021-10-22)
 
 ### Bug Fixes

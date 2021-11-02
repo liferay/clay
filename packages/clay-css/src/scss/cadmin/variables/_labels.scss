@@ -1,8 +1,10 @@
+// .label
+
+$cadmin-label-border-color: $cadmin-gray-900 !default;
+$cadmin-label-border-radius: 2px !default; // 2px
+$cadmin-label-border-style: solid !default;
+$cadmin-label-border-width: 1px !default;
 $cadmin-label-color: null !default;
-
-$cadmin-label-link-color: inherit !default;
-$cadmin-label-link-hover-color: inherit !default;
-
 $cadmin-label-font-size: 10px !default; // 10px
 $cadmin-label-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-label-height: null !default;
@@ -13,30 +15,114 @@ $cadmin-label-spacer-x: 4px !default; // 4px
 $cadmin-label-spacer-y: 2px !default; // 2px
 $cadmin-label-text-transform: uppercase !default;
 
-$cadmin-label-lexicon-icon-height: null !default;
-$cadmin-label-lexicon-icon-margin-top: 0 !default;
-$cadmin-label-lexicon-icon-width: null !default;
+// .label .sticker
 
 $cadmin-label-sticker-border-radius: 100px !default;
 $cadmin-label-sticker-size: 0.875em !default;
 
-$cadmin-label-dismissible-text-transform: null !default;
-
-$cadmin-label-item-spacer-x: 0.85714em !default;
-$cadmin-label-item-spacer-y: null !default;
+// .label[href], .label[type], .label[tabindex='0']
 
 $cadmin-label-anchor-text-decoration: none !default;
+
 $cadmin-label-anchor-hover-text-decoration: underline !default;
 
+// .label a, .label .btn-unstyled
+
+$cadmin-label-link-color: inherit !default;
 $cadmin-label-link-text-decoration: none !default;
+
+$cadmin-label-link-hover-color: inherit !default;
 $cadmin-label-link-hover-text-decoration: underline !default;
 
-$cadmin-label-border-color: $cadmin-gray-900 !default;
-$cadmin-label-border-radius: 2px !default; // 2px
-$cadmin-label-border-style: solid !default;
-$cadmin-label-border-width: 1px !default;
+$cadmin-label-base: () !default;
 
-// Label Close
+$cadmin-label: () !default;
+$cadmin-label: map-deep-merge(
+	(
+		border-color: $cadmin-label-border-color,
+		border-radius: clay-enable-rounded($cadmin-label-border-radius),
+		border-style: $cadmin-label-border-style,
+		border-width: $cadmin-label-border-width,
+		color: $cadmin-label-color,
+		display: inline-flex,
+		font-size: $cadmin-label-font-size,
+		font-weight: $cadmin-label-font-weight,
+		height: $cadmin-label-height,
+		line-height: $cadmin-label-line-height,
+		margin-bottom: $cadmin-label-spacer-y,
+		margin-right: $cadmin-label-spacer-x,
+		margin-top: $cadmin-label-spacer-y,
+		max-width: 100%,
+		outline: 0,
+		padding-bottom: $cadmin-label-padding-y,
+		padding-left: $cadmin-label-padding-x,
+		padding-right: $cadmin-label-padding-x,
+		padding-top: $cadmin-label-padding-y,
+		text-transform: $cadmin-label-text-transform,
+		transition: box-shadow 0.15s ease-in-out,
+		white-space: inherit,
+		word-wrap: break-word,
+		disabled: (
+			box-shadow: none,
+		),
+		href: (
+			cursor: $cadmin-link-cursor,
+			text-decoration: $cadmin-label-anchor-text-decoration,
+			hover: (
+				text-decoration: $cadmin-label-anchor-hover-text-decoration,
+			),
+			focus: (
+				box-shadow: $cadmin-btn-focus-box-shadow,
+				text-decoration: $cadmin-label-anchor-hover-text-decoration,
+			),
+		),
+		link: (
+			color: $cadmin-label-link-color,
+			display: inline-block,
+			text-decoration: $cadmin-label-link-text-decoration,
+			hover: (
+				color: $cadmin-label-link-hover-color,
+				text-decoration: $cadmin-label-link-hover-text-decoration,
+			),
+			focus: (
+				color: $cadmin-label-link-hover-color,
+				text-decoration: $cadmin-label-link-hover-text-decoration,
+			),
+		),
+		sticker: (
+			border-radius: $cadmin-label-sticker-border-radius,
+			height: $cadmin-label-sticker-size,
+			line-height: $cadmin-label-sticker-size,
+			width: $cadmin-label-sticker-size,
+		),
+		sticker-overlay: (
+			border-radius: $cadmin-label-sticker-border-radius,
+		),
+		c-inner: (
+			margin-bottom: math-sign($cadmin-label-padding-y),
+			margin-left: math-sign($cadmin-label-padding-x),
+			margin-right: math-sign($cadmin-label-padding-x),
+			margin-top: math-sign($cadmin-label-padding-y),
+			max-width: none,
+		),
+	),
+	$cadmin-label
+);
+$cadmin-label: map-deep-merge($cadmin-label, $cadmin-label-base);
+
+// .label-dismissible
+
+$cadmin-label-dismissible-text-transform: null !default;
+
+$cadmin-label-dismissible: () !default;
+$cadmin-label-dismissible: map-merge(
+	(
+		text-transform: $cadmin-label-dismissible-text-transform,
+	),
+	$cadmin-label-dismissible
+);
+
+// .label-item .close
 
 $cadmin-label-close: () !default;
 $cadmin-label-close: map-deep-merge(
@@ -63,6 +149,82 @@ $cadmin-label-close: map-deep-merge(
 		),
 	),
 	$cadmin-label-close
+);
+
+// .label-item
+
+$cadmin-label-item-spacer-x: 0.85714em !default;
+$cadmin-label-item-spacer-y: null !default;
+
+$cadmin-label-lexicon-icon-height: null !default;
+$cadmin-label-lexicon-icon-margin-top: 0 !default;
+$cadmin-label-lexicon-icon-width: null !default;
+
+$cadmin-label-item: () !default;
+$cadmin-label-item: map-deep-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		flex-shrink: 0,
+		justify-content: center,
+		margin-bottom: $cadmin-label-item-spacer-y,
+		margin-top: $cadmin-label-item-spacer-y,
+		min-height: 0,
+		position: relative,
+		link: (
+			display: inline-flex,
+		),
+		btn-unstyled: (
+			color: inherit,
+			display: inline-flex,
+		),
+		close: $cadmin-label-close,
+		lexicon-icon: (
+			height: $cadmin-label-lexicon-icon-height,
+			margin-top: $cadmin-label-lexicon-icon-margin-top,
+			width: $cadmin-label-lexicon-icon-width,
+		),
+		text-truncate-inline: (
+			display: inline-flex,
+		),
+	),
+	$cadmin-label-item
+);
+
+// .label-item-expand
+
+$cadmin-label-item-expand: () !default;
+$cadmin-label-item-expand: map-deep-merge(
+	(
+		flex-grow: 1,
+		flex-shrink: 1,
+		min-width: 16px,
+		word-wrap: break-word,
+		link: (
+			flex-direction: column,
+		),
+	),
+	$cadmin-label-item-expand
+);
+
+// .label-item-before
+
+$cadmin-label-item-before: () !default;
+$cadmin-label-item-before: map-merge(
+	(
+		margin-right: $cadmin-label-item-spacer-x,
+	),
+	$cadmin-label-item-before
+);
+
+// .label-item-after
+
+$cadmin-label-item-after: () !default;
+$cadmin-label-item-after: map-merge(
+	(
+		margin-left: $cadmin-label-item-spacer-x,
+	),
+	$cadmin-label-item-after
 );
 
 // Label Sizes
@@ -95,22 +257,15 @@ $cadmin-label-lg: map-deep-merge(
 	$cadmin-label-lg
 );
 
-// Label Variants
-
-$cadmin-label-base: () !default;
-$cadmin-label-base: map-deep-merge(
+$cadmin-label-sizes: () !default;
+$cadmin-label-sizes: map-deep-merge(
 	(
-		outline: 0,
-		transition: box-shadow 0.15s ease-in-out,
-		focus: (
-			box-shadow: $cadmin-btn-focus-box-shadow,
-		),
-		disabled: (
-			box-shadow: none,
-		),
+		label-lg: $cadmin-label-lg,
 	),
-	$cadmin-label-base
+	$cadmin-label-sizes
 );
+
+// Label Variants
 
 // @deprecated as of v2.4.1 use the Sass map `$cadmin-label-primary` instead
 

@@ -59,14 +59,6 @@
 	@if ($enabled) {
 		@include clay-css($base);
 
-		// Firefox clips overflowing content and doesn't respect `padding-bottom` on `.dropdown-menu`
-
-		padding-bottom: 0;
-
-		&::after {
-			padding-top: map-get($base, padding-bottom);
-		}
-
 		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($mobile);
@@ -78,28 +70,58 @@
 /// A mixin to create Dropdown Item variants. You can base your variant off Bootstrap's `.dropdown-item` class or create your own base class (e.g., `<a class="dropdown-item my-custom-dropdown-item" href="/"></a>` or `<a class="my-custom-dropdown-item" href="/"></a>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// See Mixin `clay-css` for available keys to pass into the base selector
-/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
-/// hover-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
-/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
-/// focus-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active-class: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active-class-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
-/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
-/// disabled-c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
-/// disabled-active: {Map | Null}, // See Mixin `clay-css` for available keys
-/// autofit-row: {Map | Null}, // See Mixin `clay-css` for available keys
-/// c-kbd-inline: {Map | Null}, // See Mixin `clay-css` for available keys
-/// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
+/// 	hover: (
+/// 		// .dropdown-item:hover
+/// 		c-kbd-inline: (
+/// 			// .dropdown-item:hover .c-kbd-inline
+/// 		),
+/// 	),
+/// 	focus: (
+/// 		// .dropdown-item:focus
+/// 		c-kbd-inline: (
+/// 			// .dropdown-item:focus .c-kbd-inline
+/// 		),
+/// 	),
+/// 	active: (
+/// 		// .dropdown-item:active
+/// 		c-kbd-inline: (
+/// 			// .dropdown-item:active .c-kbd-inline
+/// 		),
+/// 	),
+/// 	active-class: (
+/// 		// .dropdown-item.active
+/// 		c-kbd-inline: (
+/// 			// .dropdown-item.active .c-kbd-inline
+/// 		),
+/// 	),
+/// 	disabled: (
+/// 		c-kbd-inline: (
+/// 			// .dropdown-item:disabled .c-kbd-inline
+/// 		),
+/// 		active: (
+/// 			// .dropdown-item:disabled:active
+/// 		),
+/// 	),
+/// 	c-inner: (
+/// 		enabled: {Bool}, // Set to false to prevent .c-inner styles from being output. Default: true
+/// 		// .dropdown-item .c-inner
+/// 	),
+/// 	autofit-row: (
+/// 		// .dropdown-item.autofit-row, .dropdown-item .autofit-row
+/// 	),
+/// 	c-kbd-inline: (
+/// 		// .dropdown-item .c-kbd-inline
+/// 	),
+/// )
 /// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null}, // deprecated after 3.9.0
 /// hover-bg: {Color | String | Null}, // deprecated after 3.9.0
 /// hover-color: {Color | String | Null}, // deprecated after 3.9.0
 /// hover-opacity: {Number | String | Null}, // deprecated after 3.9.0
 /// hover-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// hover-c-kbd-inline: {Map},
 /// focus-bg: {Color | String | Null}, // deprecated after 3.9.0
 /// focus-border-radius: {Number | String | List | Null}, // deprecated after 3.9.0
 /// focus-box-shadow: {String | List | Null}, // deprecated after 3.9.0
@@ -107,16 +129,19 @@
 /// focus-opacity: {Number | String | Null}, // deprecated after 3.9.0
 /// focus-outline: {Number | String | Null}, // deprecated after 3.9.0
 /// focus-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// focus-c-kbd-inline: {Map},
 /// active-bg: {Color | String | Null}, // deprecated after 3.9.0
 /// active-border-color: {String | List | Null}, // deprecated after 3.9.0
 /// active-color: {Color | String | Null}, // deprecated after 3.9.0
 /// active-font-weight: {Number | String | Null}, // deprecated after 3.9.0
 /// active-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// active-c-kbd-inline: {Map},
 /// active-class-bg: {Color | String | Null}, // deprecated after 3.9.0
 /// active-class-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
 /// active-class-color: {Color | String | Null}, // deprecated after 3.9.0
 /// active-class-font-weight: {Number | String | Null}, // deprecated after 3.9.0
 /// active-class-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// active-class-c-kbd-inline: {Map},
 /// disabled-bg: {Color | String | Null}, // deprecated after 3.9.0
 /// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
 /// disabled-box-shadow: {String | List | Null}, // deprecated after 3.9.0
@@ -126,10 +151,9 @@
 /// disabled-outline: {Number | String | Null}, // deprecated after 3.9.0
 /// disabled-pointer-events: {String | Null}, // deprecated after 3.9.0
 /// disabled-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// disabled-c-kbd-inline: {Map},
 /// disabled-active-pointer-events: {String | Null}, // deprecated after 3.9.0
-/// @todo
-/// - Add @example
-/// - Add @link to documentation
+/// disabled-active: {Map},
 
 @mixin clay-dropdown-item-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
@@ -162,7 +186,10 @@
 		)
 	);
 
-	$hover-c-kbd-inline: setter(map-get($map, hover-c-kbd-inline), ());
+	$hover-c-kbd-inline: map-merge(
+		setter(map-get($hover, c-kbd-inline), ()),
+		setter(map-get($map, hover-c-kbd-inline), ())
+	);
 
 	$focus: setter(map-get($map, focus), ());
 	$focus: map-merge(
@@ -196,7 +223,10 @@
 		)
 	);
 
-	$focus-c-kbd-inline: setter(map-get($map, focus-c-kbd-inline), ());
+	$focus-c-kbd-inline: map-merge(
+		setter(map-get($focus, c-kbd-inline), ()),
+		setter(map-get($map, focus-c-kbd-inline), ())
+	);
 
 	$active: setter(map-get($map, active), ());
 	$active: map-merge(
@@ -226,7 +256,10 @@
 		)
 	);
 
-	$active-c-kbd-inline: setter(map-get($map, active-c-kbd-inline), ());
+	$active-c-kbd-inline: map-merge(
+		setter(map-get($active, c-kbd-inline), ()),
+		setter(map-get($map, active-c-kbd-inline), ())
+	);
 
 	$active-class: setter(map-get($map, active-class), ());
 	$active-class: map-merge($active, $active-class);
@@ -261,9 +294,9 @@
 		)
 	);
 
-	$active-class-c-kbd-inline: setter(
-		map-get($map, active-class-c-kbd-inline),
-		()
+	$active-class-c-kbd-inline: map-merge(
+		setter(map-get($active-class, c-kbd-inline), ()),
+		setter(map-get($map, active-class-c-kbd-inline), ())
 	);
 
 	$disabled: setter(map-get($map, disabled), ());
@@ -315,9 +348,15 @@
 		)
 	);
 
-	$disabled-c-kbd-inline: setter(map-get($map, disabled-c-kbd-inline), ());
+	$disabled-c-kbd-inline: map-merge(
+		setter(map-get($disabled, c-kbd-inline), ()),
+		setter(map-get($map, disabled-c-kbd-inline), ())
+	);
 
-	$disabled-active: setter(map-get($map, disabled-active), ());
+	$disabled-active: map-merge(
+		setter(map-get($disabled, active), ()),
+		setter(map-get($map, disabled-active), ())
+	);
 	$disabled-active: map-merge(
 		$disabled-active,
 		(

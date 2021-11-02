@@ -89,7 +89,7 @@ $dropdown-inline-scroller-max-height-mobile: none !default;
 
 $dropdown-item-disabled-cursor: $disabled-cursor !default;
 
-// `background-color`, `border-width`, `text-align` for `<button>`s
+// .dropdown-item `background-color`, `border-width`, `text-align` for `<button>`s
 
 $dropdown-item-base: () !default;
 $dropdown-item-base: map-deep-merge(
@@ -99,6 +99,7 @@ $dropdown-item-base: map-deep-merge(
 		border-width: 0,
 		clear: both,
 		color: $dropdown-link-color,
+		cursor: $link-cursor,
 		display: block,
 		font-weight: $font-weight-normal,
 		overflow: hidden,
@@ -112,32 +113,37 @@ $dropdown-item-base: map-deep-merge(
 		white-space: normal,
 		width: 100%,
 		word-wrap: break-word,
-		hover-text-decoration: none,
 		hover: (
 			background-color: $dropdown-link-hover-bg,
 			color: $dropdown-link-hover-color,
+			text-decoration: none,
 		),
 		focus: (
 			background-color: $dropdown-link-hover-bg,
 			color: $dropdown-link-hover-color,
 			text-decoration: none,
 		),
-		active-color: $dropdown-link-active-color,
 		active: (
 			background-color: $dropdown-link-active-bg,
+			color: $dropdown-link-active-color,
 			text-decoration: none,
 		),
-		active-class-font-weight: $dropdown-link-active-font-weight,
-		disabled-color: $dropdown-link-disabled-color,
-		disabled-cursor: $dropdown-item-disabled-cursor,
-		disabled-opacity: 1,
-		disabled-outline: 0,
+		active-class: (
+			font-weight: $dropdown-link-active-font-weight,
+			pointer-events: none,
+		),
 		disabled: (
 			background-color: transparent,
-		),
-		disabled-active-pointer-events: none,
-		disabled-c-kbd-inline: (
 			color: $dropdown-link-disabled-color,
+			cursor: $dropdown-item-disabled-cursor,
+			opacity: 1,
+			outline: 0,
+			active: (
+				pointer-events: none,
+			),
+			c-kbd-inline: (
+				color: $dropdown-link-disabled-color,
+			),
 		),
 		c-kbd-inline: (
 			line-height: $dropdown-font-size * $line-height-base,
@@ -241,69 +247,6 @@ $dropdown-item-indicator-text-end: map-deep-merge(
 		),
 	),
 	$dropdown-item-indicator-text-end
-);
-
-// Dropdown Item
-
-$dropdown-item-base: () !default;
-$dropdown-item-base: map-deep-merge(
-	(
-		background-color: transparent,
-		border-radius: 0,
-		border-width: 0,
-		clear: both,
-		color: $dropdown-link-color,
-		cursor: $link-cursor,
-		display: block,
-		font-weight: $font-weight-normal,
-		overflow: hidden,
-		padding-bottom: $dropdown-item-padding-y,
-		padding-left: $dropdown-item-padding-x,
-		padding-right: $dropdown-item-padding-x,
-		padding-top: $dropdown-item-padding-y,
-		position: relative,
-		text-align: inherit,
-		transition: none,
-		white-space: normal,
-		width: 100%,
-		word-wrap: break-word,
-		hover: (
-			background-color: $dropdown-link-hover-bg,
-			color: $dropdown-link-hover-color,
-			text-decoration: none,
-		),
-		focus: (
-			background-color: $dropdown-link-hover-bg,
-			color: $dropdown-link-hover-color,
-			text-decoration: none,
-		),
-		active: (
-			background-color: $dropdown-link-active-bg,
-			color: $dropdown-link-active-color,
-			text-decoration: none,
-		),
-		active-class: (
-			font-weight: $dropdown-link-active-font-weight,
-			pointer-events: none,
-		),
-		disabled: (
-			background-color: transparent,
-			color: $dropdown-link-disabled-color,
-			cursor: $dropdown-item-disabled-cursor,
-			opacity: 1,
-			outline: 0,
-		),
-		disabled-active: (
-			pointer-events: none,
-		),
-		disabled-c-kbd-inline: (
-			color: $dropdown-link-disabled-color,
-		),
-		c-kbd-inline: (
-			line-height: $dropdown-font-size * $line-height-base,
-		),
-	),
-	$dropdown-item-base
 );
 
 // Dropdown Section
