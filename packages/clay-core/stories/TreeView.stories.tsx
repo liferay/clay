@@ -7,14 +7,15 @@ import '@clayui/css/lib/css/atlas.css';
 
 import '@clayui/css/src/scss/cadmin.scss';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {ClayCheckbox as Checkbox} from '@clayui/form';
+import {ClayCheckbox as Checkbox, ClayInput as Input} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {Provider} from '@clayui/provider';
 import Sticker from '@clayui/sticker';
 import {storiesOf} from '@storybook/react';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import {TreeView} from '../src/tree-view';
+import largeData from './tree-data.mock.json';
 
 interface IItem {
 	children?: Array<IItem>;
@@ -85,6 +86,60 @@ const ITEMS_DRIVE = [
 	},
 ];
 
+const cache = new Map();
+
+// This method is just a simulation of filtering a tree but don't consider
+// using it in production. This is not performative at runtime because it
+// will traverse the entire tree and create a copy.
+function createFilter<T extends Array<any>>(
+	tree: T,
+	nestedKey: string,
+	key: string
+) {
+	function applyFilter(value: string, tree: T) {
+		tree = tree
+			.map((item) => {
+				const immutableItem = {...item};
+
+				if (Array.isArray(immutableItem[nestedKey])) {
+					immutableItem[nestedKey] = applyFilter(
+						value,
+						immutableItem[nestedKey]
+					);
+				}
+
+				if (immutableItem[key].includes(value.toLowerCase())) {
+					return immutableItem;
+				}
+
+				return false;
+			})
+			.filter(Boolean) as T;
+
+		return tree;
+	}
+
+	return {
+		applyFilter: (value: string) => {
+			const result = cache.get(value);
+
+			if (result) {
+				return result;
+			}
+
+			if (cache.size === 20) {
+				cache.clear();
+			}
+
+			const filtered = applyFilter(value, [...tree] as T);
+
+			cache.set(value, filtered);
+
+			return filtered;
+		},
+	};
+}
+
 let nodeId = 0;
 
 type Node = {
@@ -93,7 +148,11 @@ type Node = {
 	name: string;
 };
 
-const createNode = (depth: number = 0) => {
+const createNode = (
+	lenght: number,
+	depth: number,
+	currentDepth: number = 0
+) => {
 	const node: Node = {
 		children: [],
 		id: nodeId,
@@ -102,12 +161,12 @@ const createNode = (depth: number = 0) => {
 
 	nodeId += 1;
 
-	if (depth === 5) {
+	if (currentDepth === depth) {
 		return node;
 	}
 
-	for (let i = 0; i < 10; i++) {
-		node.children.push(createNode(depth + 1));
+	for (let i = 0; i < lenght; i++) {
+		node.children.push(createNode(lenght, depth, currentDepth + 1));
 	}
 
 	return node;
@@ -546,7 +605,7 @@ storiesOf('Components|ClayTreeView', module)
 		);
 	})
 	.add('large data', () => {
-		const rootNode = createNode();
+		const rootNode = createNode(10, 5);
 
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
@@ -609,6 +668,77 @@ storiesOf('Components|ClayTreeView', module)
 									<TreeView.Item>
 										<Icon symbol="folder" />
 										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('performance', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		type Item = {
+			label: string;
+			itemSubtypes: Array<{label: string}>;
+		};
+
+		type Data = Array<Item>;
+
+		const [items, setItems] = useState(largeData as Data);
+
+		const [value, setValue] = useState('');
+
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
+		const itemsFiltered = useMemo<Data>(() => {
+			if (!value) {
+				return items;
+			}
+
+			const filter = createFilter(items, 'itemSubtypes', 'label');
+
+			return filter.applyFilter(value);
+		}, [items, value]);
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<Input
+					onChange={(event) => setValue(event.target.value)}
+					placeholder="Search..."
+					value={value}
+				/>
+				<TreeView<Item>
+					items={itemsFiltered}
+					nestedKey="itemSubtypes"
+					onItemsChange={(data) => setItems(data as Data)}
+					onLoadMore={async () => {
+						const items = (largeData as Data).map((node) => ({
+							label: node.label + Math.random().toFixed(3),
+						}));
+
+						return Promise.resolve([...items]);
+					}}
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<OptionalCheckbox /> {item.label}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.itemSubtypes}>
+								{(item) => (
+									<TreeView.Item>
+										<OptionalCheckbox /> {item.label}
 									</TreeView.Item>
 								)}
 							</TreeView.Group>
