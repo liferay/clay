@@ -304,6 +304,17 @@
 	$aspect-ratio: map-deep-merge(
 		$aspect-ratio,
 		(
+			background-color:
+				setter(
+					map-get($map, aspect-ratio-bg),
+					map-get($map, aspect-ratio-checkered-bg),
+					map-get($aspect-ratio, background-color)
+				),
+			checkered-foreground-color:
+				setter(
+					map-get($map, aspect-ratio-checkered-fg),
+					map-get($aspect-ratio, checkered-foreground-color)
+				),
 			border-color:
 				setter(
 					map-get($map, aspect-ratio-border-color),
@@ -334,6 +345,11 @@
 				label: $aspect-ratio-custom-control-label,
 			),
 		)
+	);
+
+	$aspect-ratio-checkered-fg: map-get(
+		$aspect-ratio,
+		checkered-foreground-color
 	);
 
 	$card-body: setter(map-get($map, card-body), ());
@@ -376,7 +392,37 @@
 	);
 
 	$card-type-asset-icon: setter(map-get($map, card-type-asset-icon), ());
-	$card-type-asset-icon: map-merge(
+
+	$asset-icon: setter(map-get($map, asset-icon), ());
+
+	$asset-icon-lexicon-icon: setter(map-get($asset-icon, lexicon-icon), ());
+
+	$card-type-asset-icon-lexicon-icon: setter(
+		map-get($card-type-asset-icon, lexicon-icon),
+		()
+	);
+	$card-type-asset-icon-lexicon-icon: map-merge(
+		$card-type-asset-icon-lexicon-icon,
+		$asset-icon-lexicon-icon
+	);
+	$card-type-asset-icon-lexicon-icon: map-merge(
+		$card-type-asset-icon-lexicon-icon,
+		(
+			height:
+				setter(
+					map-get($map, asset-icon-lexicon-icon-height),
+					map-get($card-type-asset-icon-lexicon-icon, height)
+				),
+			width:
+				setter(
+					map-get($map, asset-icon-lexicon-icon-width),
+					map-get($card-type-asset-icon-lexicon-icon, width)
+				),
+		)
+	);
+
+	$card-type-asset-icon: map-deep-merge($card-type-asset-icon, $asset-icon);
+	$card-type-asset-icon: map-deep-merge(
 		$card-type-asset-icon,
 		(
 			color:
@@ -384,11 +430,22 @@
 					map-get($map, asset-icon-color),
 					map-get($card-type-asset-icon, color)
 				),
+			max-width:
+				setter(
+					map-get($map, asset-icon-max-width),
+					map-get($card-type-asset-icon, max-width)
+				),
+			min-width:
+				setter(
+					map-get($map, asset-icon-min-width),
+					map-get($card-type-asset-icon, min-width)
+				),
 			width:
 				setter(
 					map-get($map, asset-icon-width),
 					map-get($card-type-asset-icon, width)
 				),
+			lexicon-icon: $card-type-asset-icon-lexicon-icon,
 		)
 	);
 
@@ -542,6 +599,10 @@
 			@include clay-aspect-ratio-variant(
 				setter(map-get($map, aspect-ratio), ())
 			);
+
+			@if ($aspect-ratio-checkered-fg) {
+				@include clay-bg-checkered($aspect-ratio-checkered-fg);
+			}
 
 			.custom-control label,
 			.form-check-label {
