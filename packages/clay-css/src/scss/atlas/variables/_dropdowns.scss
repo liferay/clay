@@ -51,26 +51,42 @@ $dropdown-menu: map-deep-merge(
 	$dropdown-menu
 );
 
-$dropdown-header-color: $gray-900 !default;
-$dropdown-header-font-size: 0.875rem !default; // 14px
-$dropdown-header-margin-top: 0.625rem !default; // 10px
-
-$dropdown-subheader-font-size: 0.75rem !default; // 12px
-$dropdown-subheader-margin-top: 0.625rem !default; // 10px
-
-$dropdown-caption-color: $gray-600 !default;
-
-$dropdown-link-color: $gray-600 !default;
-$dropdown-link-font-weight: $font-weight-normal !default;
-$dropdown-link-hover-color: $gray-900 !default;
-$dropdown-link-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
-$dropdown-link-active-color: $dropdown-link-hover-color !default;
-$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
-$dropdown-link-active-font-weight: $font-weight-semi-bold !default;
-$dropdown-link-disabled-color: $gray-500 !default;
+// .dropdown-item
 
 $dropdown-item-padding-x: 1.25rem !default; // 20px
 $dropdown-item-padding-y: 0.5rem !default; // 8px
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-color: $gray-600 !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-font-weight: $font-weight-normal !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-hover-color: $gray-900 !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-active-color: $dropdown-link-hover-color !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-active-font-weight: $font-weight-semi-bold !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-disabled-color: $gray-500 !default;
 
 // Weird box-shadow inset with border-radius render in IE https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/12515080/
 
@@ -98,6 +114,81 @@ $dropdown-item-base: map-deep-merge(
 	$dropdown-item-base
 );
 
+// .dropdown-header
+
+// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-color: $gray-900 !default;
+
+// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-font-size: 0.875rem !default; // 14px
+
+// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-margin-top: 0.625rem !default; // 10px
+
+$dropdown-header: () !default;
+$dropdown-header: map-deep-merge(
+	(
+		color: $dropdown-header-color,
+		font-size: $dropdown-header-font-size,
+		margin-top: $dropdown-header-margin-top,
+	),
+	$dropdown-header
+);
+
+// .dropdown-subheader
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-font-size: 0.75rem !default; // 12px
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-margin-top: 0.625rem !default; // 10px
+
+$dropdown-subheader: () !default;
+$dropdown-subheader: map-deep-merge(
+	(
+		font-size: $dropdown-subheader-font-size,
+		margin-top: $dropdown-subheader-margin-top,
+	),
+	$dropdown-subheader
+);
+
+// .dropdown-caption
+
+// @deprecated as of v3.x use map $dropdown-caption instead
+
+$dropdown-caption-color: $gray-600 !default;
+
+$dropdown-caption: () !default;
+$dropdown-caption: map-merge(
+	(
+		color: $dropdown-caption-color,
+	),
+	$dropdown-caption
+);
+
+// .dropdown-divider
+
+// @deprecated as of v3.x use map $dropdown-divider instead
+
+$dropdown-divider-bg: $dropdown-border-color !default;
+
+$dropdown-divider: () !default;
+$dropdown-divider: map-merge(
+	(
+		background-color: $dropdown-divider-bg,
+	),
+	$dropdown-divider
+);
+
+// .dropdown-section
+
+// @deprecated as of v3.x use map $dropdown-section instead
+
 $dropdown-section-custom-control-label: () !default;
 $dropdown-section-custom-control-label: map-deep-merge(
 	(
@@ -105,6 +196,8 @@ $dropdown-section-custom-control-label: map-deep-merge(
 	),
 	$dropdown-section-custom-control-label
 );
+
+// @deprecated as of v3.x use map $dropdown-section instead
 
 $dropdown-section-active-custom-control-label: () !default;
 $dropdown-section-active-custom-control-label: map-deep-merge(
@@ -114,6 +207,8 @@ $dropdown-section-active-custom-control-label: map-deep-merge(
 	$dropdown-section-active-custom-control-label
 );
 
+// @deprecated as of v3.x use map $dropdown-section instead
+
 $dropdown-section-custom-control-label-text: () !default;
 $dropdown-section-custom-control-label-text: map-deep-merge(
 	(
@@ -122,7 +217,17 @@ $dropdown-section-custom-control-label-text: map-deep-merge(
 	$dropdown-section-custom-control-label-text
 );
 
-$dropdown-divider-bg: $dropdown-border-color !default;
+$dropdown-section: () !default;
+$dropdown-section: map-deep-merge(
+	(
+		custom-control-label: $dropdown-section-custom-control-label,
+		custom-control-label-text: $dropdown-section-custom-control-label-text,
+		active: (
+			custom-control-label: $dropdown-section-active-custom-control-label,
+		),
+	),
+	$dropdown-section
+);
 
 // Autocomplete Dropdown Menu
 
@@ -136,7 +241,28 @@ $autocomplete-dropdown-menu: map-deep-merge(
 
 // Dropdown Action
 
+// @deprecated as of v3.x use map $dropdown-action instead
+
 $dropdown-action-toggle-font-size: 1rem !default; // 16px
-$dropdown-action-toggle-size: $btn-monospaced-size-sm !default;
+
+/// @deprecated as of v3.x use map $dropdown-action instead
 
 $dropdown-action-toggle-disabled-opacity: $btn-disabled-opacity !default;
+
+$dropdown-action-toggle-size: $btn-monospaced-size-sm !default;
+
+$dropdown-action: () !default;
+$dropdown-action: map-deep-merge(
+	(
+		dropdown-toggle: (
+			font-size: $dropdown-action-toggle-font-size,
+			height: $dropdown-action-toggle-size,
+			line-height: $dropdown-action-toggle-size,
+			width: $dropdown-action-toggle-size,
+			disabled: (
+				opacity: $dropdown-action-toggle-disabled-opacity,
+			),
+		),
+	),
+	$dropdown-action
+);
