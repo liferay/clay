@@ -281,7 +281,8 @@
 	@if ($enabled) {
 		@include clay-css($base);
 
-		&:hover {
+		&:hover,
+		&.hover {
 			@include clay-css($hover);
 
 			.card-title {
@@ -301,7 +302,8 @@
 			}
 		}
 
-		&:focus {
+		&:focus,
+		&.focus {
 			@include clay-css($focus);
 
 			.card-title {
@@ -339,6 +341,35 @@
 
 			.card-link {
 				@include clay-link($active-card-link);
+			}
+		}
+
+		&:disabled,
+		&.disabled {
+			@include clay-css(setter(map-get($map, disabled), ()));
+
+			.card-title {
+				@include clay-link(
+					setter(map-deep-get($map, disabled, card-title), ())
+				);
+			}
+
+			.card-subtitle {
+				@include clay-link(
+					setter(map-deep-get($map, disabled, card-subtitle), ())
+				);
+			}
+
+			.card-text {
+				@include clay-link(
+					setter(map-deep-get($map, disabled, card-text), ())
+				);
+			}
+
+			.card-link {
+				@include clay-link(
+					setter(map-deep-get($map, disabled, card-link), ())
+				);
 			}
 		}
 
