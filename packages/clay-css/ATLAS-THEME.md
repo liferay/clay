@@ -242,6 +242,7 @@ src/scss/mixins/_utilities.scss
 ## Clay CSS Components
 
 ```
+src/scss/components/_reboot.scss
 src/scss/components/_grid.scss
 src/scss/components/_alerts.scss
 src/scss/components/_aspect-ratio.scss
