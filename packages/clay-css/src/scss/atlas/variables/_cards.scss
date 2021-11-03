@@ -1,5 +1,5 @@
 $card-border-radius: $border-radius !default;
-$card-border-width: 0 !default;
+$card-border-width: 0px !default;
 $card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6) !default;
 
 $card-body-padding-bottom: 1rem !default;
@@ -137,7 +137,7 @@ $image-card: map-deep-merge(
 $file-card: () !default;
 $file-card: map-deep-merge(
 	(
-		asset-icon: (
+		card-type-asset-icon: (
 			color: $gray-400,
 		),
 	),
