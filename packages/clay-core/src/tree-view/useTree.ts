@@ -62,6 +62,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	});
 
 	const selection = useMultipleSelection({
+		items: props.items,
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
 	});
@@ -386,6 +387,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 
 	return {
 		applyPatches,
+		nodeByPath,
 		produce,
 	};
 }
