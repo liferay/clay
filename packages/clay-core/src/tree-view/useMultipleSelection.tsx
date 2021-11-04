@@ -32,7 +32,9 @@ export interface IMultipleSelectionState {
 export interface IMultipleSelectionProps<T>
 	extends IMultipleSelection,
 		ITreeProps<T>,
-		Pick<ICollectionProps<T>, 'items'> {}
+		Pick<ICollectionProps<T>, 'items'> {
+	multipleSelection?: boolean;
+}
 
 type LayoutInfo = {
 	children: Set<Key>;
@@ -43,6 +45,8 @@ type LayoutInfo = {
 export function useMultipleSelection<T>(
 	props: IMultipleSelectionProps<T>
 ): IMultipleSelectionState {
+	const multipleSelection = props.multipleSelection;
+
 	const nestedKey = props.nestedKey ?? 'children';
 
 	const tree = createImmutableTree(props.items ?? [], nestedKey);
@@ -227,7 +231,9 @@ export function useMultipleSelection<T>(
 			selecteds.add(key);
 		}
 
-		toggleChildrenSelection(keyMap, selecteds, selecteds.has(key));
+		if (multipleSelection) {
+			toggleChildrenSelection(keyMap, selecteds, selecteds.has(key));
+		}
 		toggleParentSelection(keyMap, selecteds);
 
 		setSelectionKeys(selecteds);
