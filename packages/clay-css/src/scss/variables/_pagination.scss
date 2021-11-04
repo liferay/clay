@@ -88,7 +88,7 @@ $pagination-link: () !default;
 $pagination-link: map-deep-merge(
 	(
 		align-items: center,
-		bg: $pagination-bg,
+		background-color: $pagination-bg,
 		border-radius: $pagination-link-border-radius,
 		border-color: $pagination-border-color,
 		border-style: solid,
@@ -106,7 +106,9 @@ $pagination-link: map-deep-merge(
 		padding-top: $pagination-padding-y,
 		position: relative,
 		transition: $pagination-link-transition,
-		lexicon-icon-margin-top: 0,
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$pagination-link
 );
@@ -114,7 +116,7 @@ $pagination-link: map-deep-merge(
 $pagination-link-hover: () !default;
 $pagination-link-hover: map-deep-merge(
 	(
-		bg: $pagination-hover-bg,
+		background-color: $pagination-hover-bg,
 		border-color: $pagination-hover-border-color,
 		color: $pagination-hover-color,
 		text-decoration: none,
@@ -136,7 +138,7 @@ $pagination-link-focus: map-deep-merge(
 $pagination-link-active: () !default;
 $pagination-link-active: map-deep-merge(
 	(
-		bg: $pagination-active-bg,
+		background-color: $pagination-active-bg,
 		border-color: $pagination-active-border-color,
 		color: $pagination-active-color,
 		cursor: default,
@@ -148,7 +150,7 @@ $pagination-link-active: map-deep-merge(
 $pagination-link-disabled: () !default;
 $pagination-link-disabled: map-deep-merge(
 	(
-		bg: $pagination-disabled-bg,
+		background-color: $pagination-disabled-bg,
 		border-color: $pagination-disabled-border-color,
 		box-shadow: none,
 		color: $pagination-disabled-color,
@@ -221,7 +223,7 @@ $pagination-items-per-page-link: () !default;
 $pagination-items-per-page-link: map-deep-merge(
 	(
 		align-items: center,
-		bg: $pagination-items-per-page-bg,
+		background-color: $pagination-items-per-page-bg,
 		border-color: $pagination-items-per-page-border-color,
 		border-radius: $pagination-items-per-page-border-radius,
 		border-style: solid,
@@ -237,10 +239,10 @@ $pagination-items-per-page-link: map-deep-merge(
 		padding-top: $pagination-padding-y,
 		text-decoration: none,
 		transition: $pagination-items-per-page-transition,
-		lexicon-icon-margin-left:
-			$pagination-items-per-page-lexicon-icon-margin-left,
-		lexicon-icon-margin-top:
-			$pagination-items-per-page-lexicon-icon-margin-top,
+		lexicon-icon: (
+			margin-left: $pagination-items-per-page-lexicon-icon-margin-left,
+			margin-top: $pagination-items-per-page-lexicon-icon-margin-top,
+		),
 	),
 	$pagination-items-per-page-link
 );
@@ -248,7 +250,7 @@ $pagination-items-per-page-link: map-deep-merge(
 $pagination-items-per-page-link-hover: () !default;
 $pagination-items-per-page-link-hover: map-deep-merge(
 	(
-		bg: $pagination-items-per-page-hover-bg,
+		background-color: $pagination-items-per-page-hover-bg,
 		border-color: $pagination-items-per-page-hover-border-color,
 		color: $pagination-items-per-page-hover-color,
 	),
@@ -267,7 +269,7 @@ $pagination-items-per-page-link-focus: map-deep-merge(
 $pagination-items-per-page-link-active: () !default;
 $pagination-items-per-page-link-active: map-deep-merge(
 	(
-		bg: $pagination-active-bg,
+		background-color: $pagination-active-bg,
 		border-color: $pagination-active-border-color,
 		color: $pagination-active-color,
 	),
@@ -277,7 +279,7 @@ $pagination-items-per-page-link-active: map-deep-merge(
 $pagination-items-per-page-link-disabled: () !default;
 $pagination-items-per-page-link-disabled: map-deep-merge(
 	(
-		bg: $pagination-disabled-bg,
+		background-color: $pagination-disabled-bg,
 		border-color: $pagination-disabled-border-color,
 		box-shadow: none,
 		color: $pagination-disabled-color,

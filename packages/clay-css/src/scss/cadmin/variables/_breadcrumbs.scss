@@ -39,12 +39,16 @@ $cadmin-breadcrumb-link: map-deep-merge(
 		text-decoration: $cadmin-breadcrumb-link-text-decoration,
 		text-transform: $cadmin-breadcrumb-text-transform,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $cadmin-breadcrumb-link-hover-color,
-		hover-text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-color: $cadmin-breadcrumb-link-hover-color,
-		focus-outline: 0,
-		focus-text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
+		hover: (
+			color: $cadmin-breadcrumb-link-hover-color,
+			text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			color: $cadmin-breadcrumb-link-hover-color,
+			outline: 0,
+			text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
+		),
 	),
 	$cadmin-breadcrumb-link
 );

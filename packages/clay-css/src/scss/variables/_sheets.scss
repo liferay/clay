@@ -126,8 +126,10 @@ $sheet-subtitle-link: map-deep-merge(
 	(
 		color: $sheet-subtitle-link-color,
 		text-decoration: $sheet-subtitle-link-text-decoration,
-		hover-color: $sheet-subtitle-link-hover-color,
-		hover-text-decoration: $sheet-subtitle-link-hover-text-decoration,
+		hover: (
+			color: $sheet-subtitle-link-hover-color,
+			text-decoration: $sheet-subtitle-link-hover-text-decoration,
+		),
 	),
 	$sheet-subtitle-link
 );

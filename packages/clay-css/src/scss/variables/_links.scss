@@ -94,8 +94,10 @@ $link-outline: map-deep-merge(
 		hover: (
 			text-decoration: none,
 		),
-		disabled-active: (
-			pointer-events: none,
+		disabled: (
+			active: (
+				pointer-events: none,
+			),
 		),
 		lexicon-icon: (
 			margin-top: 0,
@@ -115,15 +117,15 @@ $link-outline-primary: map-deep-merge(
 		),
 		btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.5),
 		btn-focus-outline: 0,
+		active: (
+			background-color: $primary,
+			color: $white,
+		),
 		disabled: (
 			background-color: transparent,
 			color: $primary,
 			cursor: $btn-disabled-cursor,
 			opacity: $btn-disabled-opacity,
-		),
-		active: (
-			background-color: $primary,
-			color: $white,
 		),
 	),
 	$link-outline-primary
@@ -140,15 +142,15 @@ $link-outline-secondary: map-deep-merge(
 		),
 		btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
 		btn-focus-outline: 0,
+		active: (
+			background-color: $secondary,
+			color: $white,
+		),
 		disabled: (
 			background-color: transparent,
 			color: $secondary,
 			cursor: $btn-disabled-cursor,
 			opacity: $btn-disabled-opacity,
-		),
-		active: (
-			background-color: $secondary,
-			color: $white,
 		),
 	),
 	$link-outline-secondary
@@ -273,9 +275,9 @@ $component-action: map-deep-merge(
 			color: $secondary,
 			cursor: $disabled-cursor,
 			opacity: $btn-disabled-opacity,
-		),
-		disabled-active: (
-			pointer-events: none,
+			active: (
+				pointer-events: none,
+			),
 		),
 		lexicon-icon: (
 			margin-top: 0,

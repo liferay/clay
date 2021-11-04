@@ -8,7 +8,9 @@ $nav-link-padding-y: 0.625rem !default; // 10px
 $nav-link: () !default;
 $nav-link: map-deep-merge(
 	(
-		disabled-box-shadow: none,
+		disabled: (
+			box-shadow: none,
+		),
 	),
 	$nav-link
 );
@@ -16,7 +18,9 @@ $nav-link: map-deep-merge(
 $nav-link-btn-unstyled: () !default;
 $nav-link-btn-unstyled: map-deep-merge(
 	(
-		focus-box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem $primary-l1,
+		focus: (
+			box-shadow: 0 0 0 0.125rem $white#{','} 0 0 0 0.25rem $primary-l1,
+		),
 	),
 	$nav-link-btn-unstyled
 );
@@ -46,9 +50,13 @@ $nav-tabs-link: map-deep-merge(
 	(
 		font-weight: $font-weight-semi-bold,
 		transition: box-shadow 0.15s ease-in-out,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
-		disabled-box-shadow: none,
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		disabled: (
+			box-shadow: none,
+		),
 	),
 	$nav-tabs-link
 );
@@ -83,9 +91,13 @@ $nav-underline-link: map-deep-merge(
 		padding-bottom: 0.5625rem,
 		padding-top: 0.5625rem,
 		transition: box-shadow 0.15s ease-in-out,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
-		disabled-box-shadow: none,
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		disabled: (
+			box-shadow: none,
+		),
 	),
 	$nav-underline-link
 );

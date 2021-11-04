@@ -20,11 +20,15 @@ $nav-link: map-deep-merge(
 		),
 		focus: (
 			text-decoration: none,
+			z-index: 1,
 		),
-		focus-z-index: 1,
-		disabled-color: $nav-link-disabled-color,
-		disabled-cursor: $nav-link-disabled-cursor,
-		disabled-active-pointer-events: none,
+		disabled: (
+			color: $nav-link-disabled-color,
+			cursor: $nav-link-disabled-cursor,
+			active: (
+				pointer-events: none,
+			),
+		),
 	),
 	$nav-link
 );
@@ -76,15 +80,21 @@ $nav-btn: map-deep-merge(
 		position: relative,
 		text-align: center,
 		width: auto,
-		focus-z-index: 1,
-		disabled-opacity: 1,
+		focus: (
+			z-index: 1,
+		),
+		disabled: (
+			opacity: 1,
+		),
 		c-inner: (
 			margin-bottom: 0,
 			margin-left: math-sign($nav-btn-padding-x),
 			margin-right: math-sign($nav-btn-padding-x),
 			margin-top: math-sign($btn-border-width),
 		),
-		lexicon-icon-margin-top: 0,
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$nav-btn
 );
@@ -111,7 +121,9 @@ $nav-link-monospaced: map-deep-merge(
 		margin: $nav-btn-margin-y $nav-btn-margin-x,
 		min-width: $nav-item-monospaced-size,
 		padding: 0,
-		lexicon-icon-margin-top: 0,
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$nav-link-monospaced
 );
@@ -198,7 +210,7 @@ $nav-tabs-link-show-border-color: $nav-tabs-link-active-border-color !default;
 $nav-tabs-link-show: () !default;
 $nav-tabs-link-show: map-deep-merge(
 	(
-		bg: $nav-tabs-link-show-bg,
+		background-color: $nav-tabs-link-show-bg,
 		border-color: $nav-tabs-link-show-border-color,
 		color: $nav-tabs-link-show-color,
 	),
@@ -249,10 +261,18 @@ $nav-underline-link: map-deep-merge(
 		padding-left: $nav-underline-link-padding-x,
 		padding-right: $nav-underline-link-padding-x,
 		padding-top: $nav-underline-link-padding-y,
-		hover-color: $nav-underline-link-hover-color,
-		focus-color: $nav-underline-link-hover-color,
-		active-class-color: $nav-underline-link-active-color,
-		disabled-color: $nav-underline-link-disabled-color,
+		hover: (
+			color: $nav-underline-link-hover-color,
+		),
+		focus: (
+			color: $nav-underline-link-hover-color,
+		),
+		active-class: (
+			color: $nav-underline-link-active-color,
+		),
+		disabled: (
+			color: $nav-underline-link-disabled-color,
+		),
 	),
 	$nav-underline-link
 );

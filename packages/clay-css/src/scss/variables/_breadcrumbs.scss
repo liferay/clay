@@ -37,10 +37,14 @@ $breadcrumb-link: map-deep-merge(
 		display: block,
 		text-decoration: $breadcrumb-link-text-decoration,
 		text-transform: $breadcrumb-text-transform,
-		hover-color: $breadcrumb-link-hover-color,
-		hover-text-decoration: $breadcrumb-link-hover-text-decoration,
-		focus-color: $breadcrumb-link-hover-color,
-		focus-text-decoration: $breadcrumb-link-hover-text-decoration,
+		hover: (
+			color: $breadcrumb-link-hover-color,
+			text-decoration: $breadcrumb-link-hover-text-decoration,
+		),
+		focus: (
+			color: $breadcrumb-link-hover-color,
+			text-decoration: $breadcrumb-link-hover-text-decoration,
+		),
 	),
 	$breadcrumb-link
 );
