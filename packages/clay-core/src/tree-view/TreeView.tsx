@@ -21,7 +21,7 @@ interface ITreeViewProps<T>
 		ITreeProps<T>,
 		ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
-	dragAndDropEnabled?: boolean;
+	dragAndDrop?: boolean;
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
 	onRenameItem?: (item: T) => Promise<T>;
@@ -39,7 +39,7 @@ export function TreeView<T>({
 	children,
 	className,
 	displayType = 'light',
-	dragAndDropEnabled = false,
+	dragAndDrop = false,
 	expandedKeys,
 	expanderIcons,
 	items,
@@ -70,7 +70,7 @@ export function TreeView<T>({
 			typeof children === 'function'
 				? (children as ChildrenFunction<Object>)
 				: undefined,
-		dragAndDropEnabled,
+		dragAndDrop,
 		expanderIcons,
 		nestedKey,
 		onLoadMore,
