@@ -5,18 +5,40 @@
 /// A mixin for creating a link component. This generally should be used with the `a` or `button` element.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// See Mixin `clay-css` for available keys to pass into the base selector
-/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
-/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active-class: {Map | Null}, // See Mixin `clay-css` for available keys, inherits:
-/// // background-color, border-color, color, font-weight, z-index from active
-/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
-/// disabled-active: {Map | Null}, // See Mixin `clay-css` for available keys
-/// btn-focus: {Map | Null}, // See Mixin `clay-css` for available keys
-/// lexicon-icon: {Map | Null}, // See Mixin `clay-css` for available keys
-/// c-inner: {Map | Null}, // See Mixin `clay-css` for available keys
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
+/// 	hover: (
+/// 		// .link:hover
+/// 	),
+/// 	focus: (
+/// 		// .link:focus
+/// 	),
+/// 	active: (
+/// 		// .link:active
+/// 	),
+/// 	active-class: (
+/// 		// .link.active
+/// 	),
+/// 	disabled: (
+/// 		// .link:disabled, .link.disabled
+/// 		active: (
+/// 			// .link:disabled:active, // .link.disabled:active
+/// 		),
+/// 	),
+/// 	btn-focus: (
+/// 		// .link[type]:focus
+/// 	),
+/// 	show: (
+/// 		// .link[aria-expanded='true'], .link.show, .show .link
+/// 	),
+/// 	c-inner: (
+/// 		enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
+/// 		// .link > .c-inner
+/// 	),
+/// 	lexicon-icon: (
+/// 		// .link .lexicon-icon
+/// 	),
+/// )
 /// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null}, // deprecated after 3.9.0
 /// hover-bg: {Color | String | Null}, // deprecated after 3.9.0
@@ -39,11 +61,11 @@
 /// active-color: {Color | String | Null}, // deprecated after 3.9.0
 /// active-font-weight: {Number | String | Null}, // deprecated after 3.9.0
 /// active-z-index: {Number | String | Null}, // deprecated after 3.9.0
-/// active-class-bg: {Color | String | Null}, // deprecated after 3.9.0 Default: active-bg
-/// active-class-border-color: {Color | String | List | Null}, // deprecated after 3.9.0 Default: active-border-color
-/// active-class-color: {Color | String | Null}, // deprecated after 3.9.0 Default: active-color
-/// active-class-font-weight: {Number | String | Null}, // deprecated after 3.9.0 Default: active-font-weight
-/// active-class-z-index: {Number | String | Null}, // deprecated after 3.9.0 Default: active-z-index
+/// active-class-bg: {Color | String | Null}, // deprecated after 3.9.0
+/// active-class-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
+/// active-class-color: {Color | String | Null}, // deprecated after 3.9.0
+/// active-class-font-weight: {Number | String | Null}, // deprecated after 3.9.0
+/// active-class-z-index: {Number | String | Null}, // deprecated after 3.9.0
 /// disabled-bg: {Color | String | Null}, // deprecated after 3.9.0
 /// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
 /// disabled-box-shadow: {String | List | Null}, // deprecated after 3.9.0
@@ -52,16 +74,15 @@
 /// disabled-opacity: {Number | String | Null}, // deprecated after 3.9.0
 /// disabled-pointer-events: {String | Null}, // deprecated after 3.9.0
 /// disabled-text-decoration: {String | Null}, // deprecated after 3.9.0
+/// disabled-active: {Map | Null}, // deprecated after 3.39.0
 /// btn-focus-box-shadow: {String | List | Null}, // deprecated after 3.9.0
 /// btn-focus-outline: {Number | String | Null}, // deprecated after 3.9.0
+/// btn-focus: {Map | Null}, // deprecated after 3.39.0
 /// lexicon-icon-font-size: {Number | String | Null}, // deprecated after 3.9.0
 /// lexicon-icon-margin-bottom: {Number | String | Null}, // deprecated after 3.9.0
 /// lexicon-icon-margin-left: {Number | String | Null}, // deprecated after 3.9.0
 /// lexicon-icon-margin-right: {Number | String | Null}, // deprecated after 3.9.0
 /// lexicon-icon-margin-top: {Number | String | Null}, // deprecated after 3.9.0
-/// @todo
-/// - Add @example
-/// - Add @link to documentation
 
 @mixin clay-link($map) {
 	$enabled: setter(map-get($map, enabled), true);
@@ -337,14 +358,6 @@
 			@include clay-css($hover);
 		}
 
-		@at-root {
-			button#{&} {
-				&:focus {
-					@include clay-css($btn-focus);
-				}
-			}
-		}
-
 		&:focus {
 			@include clay-css($focus);
 		}
@@ -357,12 +370,6 @@
 			@include clay-css($active-class);
 		}
 
-		&[aria-expanded='true'],
-		&.show,
-		.show > & {
-			@include clay-css($show);
-		}
-
 		&:disabled,
 		&.disabled {
 			@include clay-css($disabled);
@@ -370,6 +377,18 @@
 			&:active {
 				@include clay-css($disabled-active);
 			}
+		}
+
+		&[type] {
+			&:focus {
+				@include clay-css($btn-focus);
+			}
+		}
+
+		&[aria-expanded='true'],
+		&.show,
+		.show > & {
+			@include clay-css($show);
 		}
 
 		@if (map-get($c-inner, enabled)) {
