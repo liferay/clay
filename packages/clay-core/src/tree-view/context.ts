@@ -14,6 +14,7 @@ export type Icons = {
 
 export interface ITreeViewContext<T> extends ITreeState<T> {
 	childrenRoot?: (item: Object) => React.ReactElement;
+	dragAndDrop?: boolean;
 	expanderIcons?: Icons;
 	nestedKey?: string;
 	onLoadMore?: (item: any) => Promise<unknown>;

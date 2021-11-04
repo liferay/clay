@@ -50,7 +50,7 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 }
 
 export function ItemContextProvider({children, value}: Props) {
-	const {expandedKeys, items, open, reorder, selection} =
+	const {dragAndDrop, expandedKeys, items, open, reorder, selection} =
 		useTreeViewContext();
 	const {
 		indexes: parentIndexes = [],
@@ -80,6 +80,9 @@ export function ItemContextProvider({children, value}: Props) {
 	const [overPosition, setOverPosition] = useState<Position | null>(null);
 
 	const [{isDragging}, drag, preview] = useDrag({
+		canDrag() {
+			return dragAndDrop ?? false;
+		},
 		collect: (monitor) => ({
 			isDragging: monitor.isDragging(),
 		}),
@@ -180,7 +183,7 @@ export function ItemContextProvider({children, value}: Props) {
 		},
 	});
 
-	if (items && items.length) {
+	if (items && items.length && dragAndDrop) {
 		drag(drop(childRef));
 	}
 
