@@ -1,3 +1,63 @@
+// .lexicon-icon
+
+$lexicon-icon-size: 1em !default; // 16px
+
+$lexicon-icon: () !default;
+$lexicon-icon: map-merge(
+	(
+		display: inline-block,
+		fill: currentColor,
+		height: $lexicon-icon-size,
+		margin-top: -3px,
+		vertical-align: middle,
+		width: $lexicon-icon-size,
+	),
+	$lexicon-icon
+);
+
+// .lexicon-icon-sm
+
+$lexicon-icon-sm-font-size: 0.5rem !default; // 8px
+
+$lexicon-icon-sm: () !default;
+$lexicon-icon-sm: map-merge(
+	(
+		font-size: $lexicon-icon-sm-font-size,
+	),
+	$lexicon-icon-sm
+);
+
+// .lexicon-icon-lg
+
+$lexicon-icon-lg-font-size: 2rem !default; // 32px
+
+$lexicon-icon-lg: () !default;
+$lexicon-icon-lg: map-merge(
+	(
+		font-size: $lexicon-icon-lg-font-size,
+	),
+	$lexicon-icon-lg
+);
+
+// .lexicon-icon-xl
+
+$lexicon-icon-xl-font-size: 8rem !default; // 128px
+
+$lexicon-icon-xl: () !default;
+$lexicon-icon-xl: map-merge(
+	(
+		font-size: $lexicon-icon-xl-font-size,
+	),
+	$lexicon-icon-xl
+);
+
+// .order-arrow
+
+$order-arrow-down-active-color: rgba($black, 0.9) !default;
+$order-arrow-up-active-color: $order-arrow-down-active-color !default;
+
+// .collapse-icon[href], .collapse-icon[type]
+
 $collapse-icon-padding-left: null !default;
 $collapse-icon-padding-right: 2.28125rem !default; // 45px
 
@@ -9,12 +69,3 @@ $collapse-icon-position-top: clay-collapse-icon-align(
 	0.0625rem,
 	0.9375em
 ) !default;
-
-$lexicon-icon-size: 1em !default; // 16px
-
-$lexicon-icon-sm-font-size: 0.5rem !default; // 8px
-$lexicon-icon-lg-font-size: 2rem !default; // 32px
-$lexicon-icon-xl-font-size: 8rem !default; // 128px
-
-$order-arrow-down-active-color: rgba($black, 0.9) !default;
-$order-arrow-up-active-color: $order-arrow-down-active-color !default;
