@@ -33,7 +33,7 @@ export interface IMultipleSelectionProps<T>
 	extends IMultipleSelection,
 		ITreeProps<T>,
 		Pick<ICollectionProps<T>, 'items'> {
-	multipleSelection?: boolean;
+	selectionMode?: 'multiple' | 'single';
 }
 
 type LayoutInfo = {
@@ -45,11 +45,9 @@ type LayoutInfo = {
 export function useMultipleSelection<T>(
 	props: IMultipleSelectionProps<T>
 ): IMultipleSelectionState {
-	const multipleSelection = props.multipleSelection;
+	const selectionMode = props.selectionMode;
 
 	const nestedKey = props.nestedKey ?? 'children';
-
-	const tree = createImmutableTree(props.items ?? [], nestedKey);
 
 	const layoutKeys = useRef(new Map<Key, LayoutInfo>());
 
@@ -192,12 +190,7 @@ export function useMultipleSelection<T>(
 			if (childrenKeyMap) {
 				toggleChildrenSelection(childrenKeyMap, selecteds, select);
 			} else {
-				const parentKeyMatch = key.toString().match(/^(\$\.)(\d)/);
-				let parentKey;
-				if (parentKeyMatch && parentKeyMatch.length === 3) {
-					parentKey = `$.${parentKeyMatch[2]}`;
-				}
-				createPartialLayoutItem(key, parentKey);
+				createPartialLayoutItem(key);
 			}
 		});
 	};
@@ -208,7 +201,7 @@ export function useMultipleSelection<T>(
 		if (!keyMap.children.size) {
 			// If the node is collapsed, we'll need to
 			// generate it's "children" keys
-
+			const tree = createImmutableTree(props.items ?? [], nestedKey);
 			const id = key.toString().replace(/\$\./, '');
 			const {item} = tree.nodeByPath([parseInt(id, 10)]);
 			if (item[nestedKey]) {
@@ -231,7 +224,7 @@ export function useMultipleSelection<T>(
 			selecteds.add(key);
 		}
 
-		if (multipleSelection) {
+		if (selectionMode === 'multiple') {
 			toggleChildrenSelection(keyMap, selecteds, selecteds.has(key));
 		}
 		toggleParentSelection(keyMap, selecteds);

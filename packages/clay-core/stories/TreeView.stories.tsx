@@ -517,10 +517,10 @@ storiesOf('Components|ClayTreeView', module)
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
 					items={ITEMS_DRIVE}
-					multipleSelection={false}
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
+					selectionMode="single"
 					showExpanderOnHover={false}
 				>
 					{(item) => (
