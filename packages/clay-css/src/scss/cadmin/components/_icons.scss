@@ -1,10 +1,5 @@
 .lexicon-icon {
-	display: inline-block;
-	fill: currentColor;
-	height: $cadmin-lexicon-icon-size;
-	margin-top: -3px;
-	vertical-align: middle;
-	width: $cadmin-lexicon-icon-size;
+	@include clay-css(setter($cadmin-lexicon-icon, ()));
 }
 
 .order-arrow-down-active {
