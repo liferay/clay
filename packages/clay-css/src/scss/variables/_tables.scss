@@ -170,7 +170,9 @@ $table-title-link: () !default;
 $table-title-link: map-deep-merge(
 	(
 		color: $gray-900,
-		hover-color: $gray-900,
+		hover: (
+			color: $gray-900,
+		),
 	),
 	$table-title-link
 );
@@ -181,7 +183,9 @@ $table-link: () !default;
 $table-link: map-deep-merge(
 	(
 		color: $gray-700,
-		hover-color: clay-darken($gray-700, 15%),
+		hover: (
+			color: clay-darken($gray-700, 15%),
+		),
 	),
 	$table-link
 );
@@ -198,8 +202,12 @@ $table-action-link: map-deep-merge(
 		justify-content: center,
 		vertical-align: middle,
 		width: 2rem,
-		hover-text-decoration: none,
-		lexicon-icon-margin-top: 0,
+		hover: (
+			text-decoration: none,
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$table-action-link
 );
@@ -371,7 +379,9 @@ $table-list-title-link: () !default;
 $table-list-title-link: map-deep-merge(
 	(
 		color: $gray-900,
-		hover-color: $gray-900,
+		hover: (
+			color: $gray-900,
+		),
 	),
 	$table-list-title-link
 );
@@ -382,7 +392,9 @@ $table-list-link: () !default;
 $table-list-link: map-deep-merge(
 	(
 		color: $gray-700,
-		hover-color: clay-darken($gray-700, 15%),
+		hover: (
+			color: clay-darken($gray-700, 15%),
+		),
 	),
 	$table-list-link
 );
@@ -398,8 +410,12 @@ $table-list-action-link: map-deep-merge(
 		justify-content: center,
 		vertical-align: middle,
 		width: 2rem,
-		hover-text-decoration: none,
-		lexicon-icon-margin-top: 0,
+		hover: (
+			text-decoration: none,
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$table-list-action-link
 );

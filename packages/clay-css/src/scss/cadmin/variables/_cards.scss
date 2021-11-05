@@ -126,7 +126,9 @@ $cadmin-card-title-link: () !default;
 $cadmin-card-title-link: map-deep-merge(
 	(
 		color: map-get($cadmin-card-title, color),
-		hover-color: map-get($cadmin-card-title, color),
+		hover: (
+			color: map-get($cadmin-card-title, color),
+		),
 	),
 	$cadmin-card-title-link
 );
@@ -149,7 +151,9 @@ $cadmin-card-subtitle-link: () !default;
 $cadmin-card-subtitle-link: map-deep-merge(
 	(
 		color: map-get($cadmin-card-subtitle, color),
-		hover-color: $cadmin-gray-600,
+		hover: (
+			color: $cadmin-gray-600,
+		),
 	),
 	$cadmin-card-subtitle-link
 );

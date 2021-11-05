@@ -111,8 +111,10 @@ $cadmin-link-outline: map-deep-merge(
 		hover: (
 			text-decoration: none,
 		),
-		disabled-active: (
-			pointer-events: none,
+		disabled: (
+			active: (
+				pointer-events: none,
+			),
 		),
 		lexicon-icon: (
 			margin-top: 0,
@@ -208,8 +210,8 @@ $cadmin-link-monospaced: map-deep-merge(
 		padding-top: 0,
 		vertical-align: middle,
 		width: $cadmin-link-monospaced-size,
-		lexicon: (
-			icon-margin-top: 0,
+		lexicon-icon: (
+			margin-top: 0,
 		),
 	),
 	$cadmin-link-monospaced
@@ -321,9 +323,9 @@ $cadmin-component-action: map-deep-merge(
 			color: $cadmin-secondary,
 			cursor: $cadmin-disabled-cursor,
 			opacity: $cadmin-btn-disabled-opacity,
-		),
-		disabled-active: (
-			pointer-events: none,
+			active: (
+				pointer-events: none,
+			),
 		),
 		btn-focus-box-shadow: map-get($cadmin-btn-secondary, focus-box-shadow),
 		btn-focus-outline: 0,
