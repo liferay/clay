@@ -327,12 +327,50 @@ $card-interactive-secondary: map-deep-merge(
 $card-type-asset: () !default;
 $card-type-asset: map-deep-merge(
 	(
+		aspect-ratio: (
+			border-color: $card-border-color,
+			border-style: solid,
+			border-width: 0 0 0.0625rem 0,
+			horizontal: 16,
+			vertical: 9,
+			custom-control: (
+				label: (
+					bottom: 0,
+					cursor: $link-cursor,
+					left: 0,
+					position: absolute,
+					right: 0,
+					top: 0,
+				),
+			),
+		),
 		card-type-asset-icon: (
+			width: 22.225%,
+			inline-item: (
+				bottom: 0,
+				left: 0,
+				position: absolute,
+				right: 0,
+				top: 0,
+			),
+			lexicon-icon: (
+				height: 100%,
+				width: 100%,
+			),
 			sticker: (
+				border-radius: 50%,
 				display: block,
+				font-size: 2vw,
 				padding-bottom: 100%,
 				width: 100%,
 			),
+		),
+		card-row: (
+			align-items: flex-start,
+		),
+		dropdown-action: (
+			margin-right: -0.5rem,
+			margin-top: -0.1875rem,
 		),
 	),
 	$card-type-asset
@@ -347,7 +385,7 @@ $image-card: () !default;
 $file-card: () !default;
 $file-card: map-deep-merge(
 	(
-		asset-icon: (
+		card-type-asset-icon: (
 			color: $gray-600,
 		),
 	),
@@ -385,7 +423,7 @@ $product-card: map-deep-merge(
 $user-card: () !default;
 $user-card: map-deep-merge(
 	(
-		asset-icon: (
+		card-type-asset-icon: (
 			max-width: 80px,
 			min-width: 48px,
 			width: 30%,
