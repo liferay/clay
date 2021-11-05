@@ -31,10 +31,10 @@ export interface ITreeProps<T>
 	extends IExpandable,
 		IMultipleSelection,
 		Pick<ICollectionProps<T>, 'items'> {
-	multipleSelection?: boolean;
 	nestedKey?: string;
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
 	rootRef?: React.RefObject<HTMLUListElement>;
+	selectionMode?: 'multiple' | 'single';
 }
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
@@ -64,9 +64,9 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	const selection = useMultipleSelection({
 		items: props.items,
-		multipleSelection: props.multipleSelection,
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
+		selectionMode: props.selectionMode,
 	});
 
 	const close = (key: Key) => {

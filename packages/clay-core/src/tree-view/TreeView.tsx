@@ -24,8 +24,8 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
 	onRenameItem?: (item: T) => Promise<T>;
-	multipleSelection?: boolean;
 	rootRef?: React.RefObject<HTMLUListElement>;
+	selectionMode?: 'multiple' | 'single';
 	showExpanderOnHover?: boolean;
 }
 
@@ -42,7 +42,6 @@ export function TreeView<T>({
 	expandedKeys,
 	expanderIcons,
 	items,
-	multipleSelection = true,
 	nestedKey,
 	onExpandedChange,
 	onItemsChange,
@@ -50,6 +49,7 @@ export function TreeView<T>({
 	onRenameItem,
 	onSelectionChange,
 	selectedKeys,
+	selectionMode = 'multiple',
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
@@ -58,12 +58,12 @@ export function TreeView<T>({
 	const state = useTree<T>({
 		expandedKeys,
 		items,
-		multipleSelection,
 		nestedKey,
 		onExpandedChange,
 		onItemsChange,
 		onSelectionChange,
 		selectedKeys,
+		selectionMode,
 	});
 
 	const context = {
