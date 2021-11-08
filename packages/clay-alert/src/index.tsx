@@ -109,6 +109,8 @@ const ICON_MAP = {
 	warning: 'warning-full',
 };
 
+const VARIANTS = ['inline', 'feedback'];
+
 const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	Footer: typeof Footer;
 	ToastContainer: typeof ToastContainer;
@@ -150,7 +152,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 			{...otherProps}
 			className={classNames(className, 'alert', {
 				'alert-dismissible': showDismissible,
-				'alert-feedback': variant === 'feedback',
+				'alert-feedback alert-indicator-start': variant === 'feedback',
 				'alert-fluid': variant === 'stripe',
 				'alert-inline': variant === 'inline',
 				[`alert-${displayType}`]: displayType,
@@ -161,7 +163,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 		>
 			<ConditionalContainer>
 				<ClayLayout.ContentRow className="alert-autofit-row">
-					{variant !== 'inline' && (
+					{!VARIANTS.includes(variant as string) && (
 						<ClayLayout.ContentCol>
 							<ClayLayout.ContentSection>
 								<AlertIndicator />
@@ -171,7 +173,9 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 
 					<ClayLayout.ContentCol expand>
 						<ClayLayout.ContentSection>
-							{variant === 'inline' && <AlertIndicator />}
+							{VARIANTS.includes(variant as string) && (
+								<AlertIndicator />
+							)}
 
 							{title && <strong className="lead">{title}</strong>}
 
