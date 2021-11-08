@@ -35,23 +35,7 @@
 // Alert Fluid
 
 .alert-fluid {
-	@include clay-css($cadmin-alert-fluid);
-
-	&.alert-dismissible {
-		.container,
-		.container-fluid {
-			@include clay-css($cadmin-alert-fluid-dismissible-container);
-		}
-	}
-
-	.container,
-	.container-fluid {
-		@include clay-css($cadmin-alert-fluid-container);
-	}
-
-	.close {
-		@include clay-close($cadmin-alert-fluid-close);
-	}
+	@include clay-alert-variant($cadmin-alert-fluid);
 }
 
 // Alert Notifications
