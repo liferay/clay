@@ -218,26 +218,30 @@ $alert-dismissible: map-deep-merge(
 
 // Alert Fluid
 
+/// @deprecated use the Sass map `$alert-fluid` instead
+
 $alert-fluid-border-bottom-width: 1px !default;
+
+/// @deprecated use the Sass map `$alert-fluid` instead
+
 $alert-fluid-border-left-width: 0 !default;
+
+/// @deprecated use the Sass map `$alert-fluid` instead
+
 $alert-fluid-border-right-width: 0 !default;
+
+/// @deprecated use the Sass map `$alert-fluid` instead
+
 $alert-fluid-border-top-width: 0 !default;
+
+/// @deprecated use the Sass map `$alert-fluid` instead
 
 $alert-fluid-border-width: $alert-fluid-border-top-width
 	$alert-fluid-border-right-width $alert-fluid-border-bottom-width
 	$alert-fluid-border-left-width !default;
 $alert-fluid-margin-bottom: 0 !default;
 
-$alert-fluid: () !default;
-$alert-fluid: map-merge(
-	(
-		border-radius: 0,
-		border-width: $alert-fluid-border-width,
-		margin-bottom: $alert-fluid-margin-bottom,
-		padding: 0,
-	),
-	$alert-fluid
-);
+/// @deprecated use the Sass map `$alert-fluid` instead
 
 $alert-fluid-container: () !default;
 $alert-fluid-container: map-merge(
@@ -249,6 +253,8 @@ $alert-fluid-container: map-merge(
 	),
 	$alert-fluid-container
 );
+
+/// @deprecated use the Sass map `$alert-fluid` instead
 
 $alert-fluid-dismissible-container: () !default;
 $alert-fluid-dismissible-container: map-merge(
@@ -267,12 +273,30 @@ $alert-fluid-dismissible-container: map-merge(
 
 // .alert-fluid .close
 
+/// @deprecated use the Sass map `$alert-fluid` instead
+
 $alert-fluid-close: () !default;
 $alert-fluid-close: map-deep-merge(
 	(
 		right: calc(#{$grid-gutter-width * 0.5} + 0.25rem),
 	),
 	$alert-fluid-close
+);
+
+$alert-fluid: () !default;
+$alert-fluid: map-deep-merge(
+	(
+		border-radius: 0,
+		border-width: $alert-fluid-border-width,
+		margin-bottom: $alert-fluid-margin-bottom,
+		padding: 0,
+		alert-dismissible: (
+			container-fluid: $alert-fluid-dismissible-container,
+		),
+		container-fluid: $alert-fluid-container,
+		close: $alert-fluid-close,
+	),
+	$alert-fluid
 );
 
 // .alert-notifications-absolute

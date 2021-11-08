@@ -20,6 +20,10 @@
 .alert-indicator {
 	@include clay-css($alert-indicator);
 
+	.lexicon-icon {
+		@include clay-css(setter(map-get($alert-indicator, lexicon-icon), ()));
+	}
+
 	+ .lead {
 		$lead: setter(map-get($alert-indicator, lead), ());
 
@@ -36,23 +40,7 @@
 // Alert Fluid
 
 .alert-fluid {
-	@include clay-css($alert-fluid);
-
-	&.alert-dismissible {
-		.container,
-		.container-fluid {
-			@include clay-css($alert-fluid-dismissible-container);
-		}
-	}
-
-	.container,
-	.container-fluid {
-		@include clay-css($alert-fluid-container);
-	}
-
-	.close {
-		@include clay-close($alert-fluid-close);
-	}
+	@include clay-alert-variant($alert-fluid);
 }
 
 // Alert Notifications
