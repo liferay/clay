@@ -547,6 +547,67 @@ textarea.form-control-sm,
 	height: $input-textarea-height-sm;
 }
 
+// Fieldset
+
+.form-fieldset {
+	@include clay-css($form-fieldset);
+
+	&[disabled] {
+		@include clay-css(setter(map-get($form-fieldset, disabled), ()));
+
+		label {
+			@include clay-css(
+				setter(map-deep-get($form-fieldset, disabled, label), ())
+			);
+
+			.form-control {
+				@include clay-css(
+					setter(
+						map-deep-get(
+							$form-fieldset,
+							disabled,
+							label,
+							form-control
+						),
+						()
+					)
+				);
+			}
+		}
+
+		.form-control-label-text {
+			@include clay-css(
+				setter(
+					map-deep-get(
+						$form-fieldset,
+						disabled,
+						form-control-label-text
+					),
+					()
+				)
+			);
+		}
+
+		.form-legend {
+			@include clay-css(
+				setter(map-deep-get($form-fieldset, disabled, form-legend), ())
+			);
+		}
+
+		.form-control {
+			@include clay-css(
+				setter(map-deep-get($form-fieldset, disabled, form-control), ())
+			);
+		}
+	}
+}
+
+// Legend
+
+.form-legend {
+	@include clay-css($form-legend);
+}
+
 // Form groups
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
