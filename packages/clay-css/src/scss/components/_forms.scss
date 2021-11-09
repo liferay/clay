@@ -18,10 +18,6 @@
 	}
 }
 
-fieldset {
-	word-wrap: break-word;
-}
-
 label {
 	@include clay-css($input-label);
 
