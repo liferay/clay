@@ -9,20 +9,80 @@
 /// 	enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
 /// 	hover: (
 /// 		// .link:hover
+/// 		inline-item: (
+/// 			// .link:hover .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .link:hover .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .link:hover .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .link:hover .inline-item-after
+/// 		),
 /// 	),
 /// 	focus: (
 /// 		// .link:focus
+/// 		inline-item: (
+/// 			// .link:focus .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .link:focus .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .link:focus .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .link:focus .inline-item-after
+/// 		),
 /// 	),
 /// 	active: (
 /// 		// .link:active
+/// 		inline-item: (
+/// 			// .link:active .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .link:active .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .link:active .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .link:active .inline-item-after
+/// 		),
 /// 	),
 /// 	active-class: (
 /// 		// .link.active
+/// 		inline-item: (
+/// 			// .link.active .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .link.active .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .link.active .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .link.active .inline-item-after
+/// 		),
 /// 	),
 /// 	disabled: (
 /// 		// .link:disabled, .link.disabled
 /// 		active: (
 /// 			// .link:disabled:active, // .link.disabled:active
+/// 		),
+/// 		inline-item: (
+/// 			// .link:disabled .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .link:disabled .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .link:disabled .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .link:disabled .inline-item-after
 /// 		),
 /// 	),
 /// 	btn-focus: (
@@ -34,6 +94,21 @@
 /// 	c-inner: (
 /// 		enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
 /// 		// .link > .c-inner
+/// 	),
+/// 	inline-item: (
+/// 		// .link .inline-item
+/// 	),
+/// 	inline-item-before: (
+/// 		// .link .inline-item-before
+/// 	),
+/// 	inline-item-middle: (
+/// 		// .link .inline-item-middle
+/// 		inline-item-middle: (
+/// 			// .link .inline-item-middle + .inline-item-middle
+/// 		),
+/// 	),
+/// 	inline-item-after: (
+/// 		// .link .inline-item-after
 /// 	),
 /// 	lexicon-icon: (
 /// 		// .link .lexicon-icon
@@ -356,18 +431,108 @@
 
 		&:hover {
 			@include clay-css($hover);
+
+			.inline-item {
+				@include clay-css(setter(map-get($hover, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($hover, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($hover, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($hover, inline-item-after), ())
+				);
+			}
 		}
 
 		&:focus {
 			@include clay-css($focus);
+
+			.inline-item {
+				@include clay-css(setter(map-get($focus, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($focus, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($focus, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($focus, inline-item-after), ())
+				);
+			}
 		}
 
 		&:active {
 			@include clay-css($active);
+
+			.inline-item {
+				@include clay-css(setter(map-get($active, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($active, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($active, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($active, inline-item-after), ())
+				);
+			}
 		}
 
 		&.active {
 			@include clay-css($active-class);
+
+			.inline-item {
+				@include clay-css(
+					setter(map-get($active-class, inline-item), ())
+				);
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($active-class, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($active-class, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($active-class, inline-item-after), ())
+				);
+			}
 		}
 
 		&:disabled,
@@ -376,6 +541,28 @@
 
 			&:active {
 				@include clay-css($disabled-active);
+			}
+
+			.inline-item {
+				@include clay-css(setter(map-get($disabled, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($disabled, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($disabled, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($disabled, inline-item-after), ())
+				);
 			}
 		}
 
@@ -395,6 +582,35 @@
 			> .c-inner {
 				@include clay-css($c-inner);
 			}
+		}
+
+		.inline-item {
+			@include clay-css(setter(map-get($map, inline-item), ()));
+		}
+
+		.inline-item-before {
+			@include clay-css(setter(map-get($map, inline-item-before), ()));
+		}
+
+		.inline-item-middle {
+			@include clay-css(setter(map-get($map, inline-item-middle), ()));
+
+			+ .inline-item-middle {
+				@include clay-css(
+					setter(
+						map-deep-get(
+							$map,
+							inline-item-middle,
+							inline-item-middle
+						),
+						()
+					)
+				);
+			}
+		}
+
+		.inline-item-after {
+			@include clay-css(setter(map-get($map, inline-item-after), ()));
 		}
 
 		.lexicon-icon {
