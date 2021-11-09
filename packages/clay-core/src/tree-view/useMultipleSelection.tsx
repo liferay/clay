@@ -6,6 +6,7 @@
 import {useInternalState} from '@clayui/shared';
 import {Key, useCallback, useRef} from 'react';
 
+import {getKey} from './Collection';
 import {ITreeProps, createImmutableTree} from './useTree';
 
 import type {ICollectionProps} from './Collection';
@@ -23,7 +24,12 @@ export interface IMultipleSelection {
 }
 
 export interface IMultipleSelectionState {
-	createPartialLayoutItem: (key: Key, parentKey?: Key) => () => void;
+	createPartialLayoutItem: (
+		key: Key,
+		lazy: boolean,
+		loc: Array<number>,
+		parentKey?: Key
+	) => () => void;
 	isIntermediate: (key: Key) => boolean;
 	selectedKeys: Set<Key>;
 	toggleSelection: (key: Key) => void;
@@ -31,7 +37,7 @@ export interface IMultipleSelectionState {
 
 export interface IMultipleSelectionProps<T>
 	extends IMultipleSelection,
-		ITreeProps<T>,
+		Pick<ITreeProps<T>, 'nestedKey'>,
 		Pick<ICollectionProps<T>, 'items'> {
 	selectionMode?: 'multiple' | 'single';
 }
@@ -39,6 +45,13 @@ export interface IMultipleSelectionProps<T>
 type LayoutInfo = {
 	children: Set<Key>;
 	intermediate: boolean;
+
+	/**
+	 * Lazy Child means that the current Node has children but they were not
+	 * created because they are not visible in the DOM.
+	 */
+	lazyChild: boolean;
+	loc: Array<number>;
 	parentKey?: Key;
 };
 
@@ -46,8 +59,6 @@ export function useMultipleSelection<T>(
 	props: IMultipleSelectionProps<T>
 ): IMultipleSelectionState {
 	const selectionMode = props.selectionMode;
-
-	const nestedKey = props.nestedKey ?? 'children';
 
 	const layoutKeys = useRef(new Map<Key, LayoutInfo>());
 
@@ -63,13 +74,15 @@ export function useMultipleSelection<T>(
 	// structure is removed it will update the layout without going traverse
 	// the structure.
 	const createPartialLayoutItem = useCallback(
-		(key: Key, parentKey?: Key) => {
+		(key: Key, lazyChild: boolean, loc: Array<number>, parentKey?: Key) => {
 			const keyMap = layoutKeys.current.get(key);
 
 			if (!keyMap) {
 				layoutKeys.current.set(key, {
 					children: new Set(),
 					intermediate: false,
+					lazyChild,
+					loc,
 					parentKey,
 				});
 			} else if (keyMap.parentKey !== parentKey) {
@@ -86,6 +99,7 @@ export function useMultipleSelection<T>(
 					layoutKeys.current.set(parentKey, {
 						...keyMap,
 						children: new Set([...keyMap.children, key]),
+						lazyChild: false,
 					});
 				} else {
 					// Pre-initializes the parent layout, as this is linked to
@@ -98,6 +112,8 @@ export function useMultipleSelection<T>(
 					layoutKeys.current.set(parentKey, {
 						children: new Set([key]),
 						intermediate: false,
+						lazyChild: false,
+						loc: [],
 						parentKey: undefined,
 					});
 				}
@@ -118,6 +134,7 @@ export function useMultipleSelection<T>(
 					layoutKeys.current.set(parentKey, {
 						...keyMap,
 						children,
+						lazyChild: children.size === 0,
 					});
 				}
 			};
@@ -169,11 +186,58 @@ export function useMultipleSelection<T>(
 		toggleParentSelection(parentKeyMap, selecteds);
 	};
 
+	const toggleLazyChildrenSelection = useCallback(
+		(
+			item: Record<string, any>,
+			currentKey: React.Key,
+			selecteds: Set<Key>,
+			select: boolean
+		) => {
+			const children: Array<Record<string, any>> = item[props.nestedKey!];
+
+			if (!children) {
+				return;
+			}
+
+			children.forEach((item, index) => {
+				// TODO: The `key` property of the component that the developer
+				// can set is not being considered.
+				const key = getKey(index, item.id, currentKey);
+
+				if (select) {
+					selecteds.add(key);
+				} else {
+					selecteds.delete(key);
+				}
+
+				toggleLazyChildrenSelection(item, key, selecteds, select);
+			});
+		},
+		[props.nestedKey]
+	);
+
 	const toggleChildrenSelection = (
 		keyMap: LayoutInfo,
+		currentKey: React.Key,
 		selecteds: Set<Key>,
 		select: boolean
 	) => {
+		if (keyMap.lazyChild) {
+			const tree = createImmutableTree(
+				props.items ?? [],
+				props.nestedKey!
+			);
+
+			const node = tree.nodeByPath(keyMap.loc);
+
+			return toggleLazyChildrenSelection(
+				node.item,
+				currentKey,
+				selecteds,
+				select
+			);
+		}
+
 		if (!keyMap.children.size) {
 			return;
 		}
@@ -187,29 +251,12 @@ export function useMultipleSelection<T>(
 
 			const childrenKeyMap = layoutKeys.current.get(key) as LayoutInfo;
 
-			if (childrenKeyMap) {
-				toggleChildrenSelection(childrenKeyMap, selecteds, select);
-			} else {
-				createPartialLayoutItem(key);
-			}
+			toggleChildrenSelection(childrenKeyMap, key, selecteds, select);
 		});
 	};
 
 	const toggleSelection = (key: Key) => {
 		const keyMap = layoutKeys.current.get(key) as LayoutInfo;
-
-		if (!keyMap.children.size) {
-			// If the node is collapsed, we'll need to
-			// generate it's "children" keys
-			const tree = createImmutableTree(props.items ?? [], nestedKey);
-			const id = key.toString().replace(/\$\./, '');
-			const {item} = tree.nodeByPath([parseInt(id, 10)]);
-			if (item[nestedKey]) {
-				item[nestedKey].forEach((_child: unknown, index: number) => {
-					keyMap.children.add(`${key}.${index}`);
-				});
-			}
-		}
 
 		const selecteds = new Set(selectedKeys);
 
@@ -225,7 +272,7 @@ export function useMultipleSelection<T>(
 		}
 
 		if (selectionMode === 'multiple') {
-			toggleChildrenSelection(keyMap, selecteds, selecteds.has(key));
+			toggleChildrenSelection(keyMap, key, selecteds, selecteds.has(key));
 		}
 		toggleParentSelection(keyMap, selecteds);
 

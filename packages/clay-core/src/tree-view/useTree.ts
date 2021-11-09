@@ -62,8 +62,9 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		value: props.items,
 	});
 
-	const selection = useMultipleSelection({
+	const selection = useMultipleSelection<T>({
 		items: props.items,
+		nestedKey: props.nestedKey,
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
 		selectionMode: props.selectionMode,
