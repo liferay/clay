@@ -13,21 +13,123 @@
 /// A mixin to create button variants, use this instead of `clay-button-size()`. You can base your variant off Bootstrap's `.btn` class or create your own base class (e.g., `<button class="btn my-custom-btn-primary"></button>` or `<button class="my-custom-btn my-custom-btn-primary"></button>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// breakpoint-down: {String, Null}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
-/// See Mixin `clay-css` for available keys to pass into the base selector
-/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
-/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
-/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active-class: {Map | Null}, // See Mixin `clay-css` for available keys
-/// active-focus: {Map | Null}, // See Mixin `clay-css` for available keys
-/// lexicon-icon: {Map | Null}, // See Mixin `clay-css` for available keys
-/// inline-item: {Map | Null}, // See Mixin `clay-css` for available keys
-/// section: {Map | Null}, // See Mixin `clay-css` for available keys
-/// mobile: {Map | Null}, // See Mixin `clay-css` for available keys
-/// loading-animation: {String | Null}, // The placeholder name 'loading-animation' or 'loading-animation-light'
-/// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	breakpoint-down: {String}, // The Bootstrap 4 Breakpoint {xs | sm | md | lg | xl}
+/// 	loading-animation: {String}, // The placeholder name 'loading-animation' or 'loading-animation-light'
+/// 	mobile: (
+/// 		c-inner: (
+/// 		),
+/// 	),
+/// 	hover: (
+/// 		// .btn:hover
+/// 		inline-item: (
+/// 			// .btn:hover .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .btn:hover .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .btn:hover .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .btn:hover .inline-item-after
+/// 		),
+/// 	),
+/// 	focus: (
+/// 		// .btn:focus, .btn.focus
+/// 		inline-item: (
+/// 			// .btn:focus .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .btn:focus .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .btn:focus .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .btn:focus .inline-item-after
+/// 		),
+/// 	),
+/// 	active: (
+/// 		// .btn:active
+/// 		focus: (
+/// 			// .btn:active:focus
+/// 		),
+/// 		inline-item: (
+/// 			// .btn:active .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .btn:active .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .btn:active .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .btn:active .inline-item-after
+/// 		),
+/// 	),
+/// 	active-class: (
+/// 		// .btn.active
+/// 		inline-item: (
+/// 			// .btn.active .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .btn.active .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .btn.active .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .btn.active .inline-item-after
+/// 		),
+/// 	),
+/// 	disabled: (
+/// 		// .btn:disabled, .btn.disabled
+/// 		focus: (
+/// 			// .btn:disabled:focus, .btn.disabled:focus
+/// 		),
+/// 		active: (
+/// 			// .btn:disabled:active, .btn.disabled:active
+/// 		),
+/// 		inline-item: (
+/// 			// .btn:disabled .inline-item, .btn.disabled .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .btn:disabled .inline-item-before, .btn.disabled .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .btn:disabled .inline-item-middle, .btn.disabled .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .btn:disabled .inline-item-after, .btn.disabled .inline-item-after
+/// 		),
+/// 	),
+/// 	c-inner: (
+/// 		// .btn .c-inner
+/// 	),
+/// 	lexicon-icon: (
+/// 		// .btn .lexicon-icon
+/// 	),
+/// 	inline-item: (
+/// 		// .btn .inline-item
+/// 	),
+/// 	inline-item-before: (
+/// 		// .btn .inline-item-before
+/// 	),
+/// 	inline-item-middle: (
+/// 		// .btn .inline-item-middle
+/// 		inline-item-middle: (
+/// 			// .btn .inline-item-middle + .inline-item-middle
+/// 		),
+/// 	),
+/// 	inline-item-after: (
+/// 		// .btn .inline-item-after
+/// 	),
+/// 	btn-section: (
+/// 		// .btn .btn-section
+/// 	),
+/// )
 /// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null}, // deprecated after 3.9.0
 /// hover-bg: {Color | String | Null}, // deprecated after 3.9.0
@@ -57,6 +159,7 @@
 /// active-opacity: {Number | String | Null}, // deprecated after 3.9.0
 /// active-z-index: {Number | String | Null}, // deprecated after 3.9.0
 /// active-focus-box-shadow: {String | List}, // deprecated after 3.9.0, Default: $focus-box-shadow
+/// active-focus: {Map | Null}, // deprecated after 3.39.0
 /// lexicon-icon-font-size: {Number | String | Null}, // deprecated after 3.9.0
 /// lexicon-icon-margin-bottom: {Number | String | Null}, // deprecated after 3.9.0
 /// lexicon-icon-margin-right: {Number | String | Null}, // deprecated after 3.9.0
@@ -66,6 +169,7 @@
 /// section-font-size: {Number | String | Null}, // deprecated after 3.9.0
 /// section-font-weight: {Number | String | Null}, // deprecated after 3.9.0
 /// section-line-height: {Number | String | Null}, // deprecated after 3.9.0
+/// section: {Map | Null}, // deprecated after 3.39.0
 /// font-size-mobile: {Number | String | Null}, // deprecated after 3.9.0
 /// height-mobile: {Number | String | Null}, // deprecated after 3.9.0
 /// padding-bottom-mobile: {Number | String | Null}, // deprecated after 3.9.0
@@ -410,11 +514,55 @@
 
 		&:hover {
 			@include clay-css($hover);
+
+			.inline-item {
+				@include clay-css(setter(map-get($hover, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($hover, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($hover, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($hover, inline-item-after), ())
+				);
+			}
 		}
 
 		&:focus,
 		&.focus {
 			@include clay-css($focus);
+
+			.inline-item {
+				@include clay-css(setter(map-get($focus, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($focus, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($focus, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($focus, inline-item-after), ())
+				);
+			}
 		}
 
 		&:active {
@@ -422,6 +570,28 @@
 
 			&:focus {
 				@include clay-css($active-focus);
+			}
+
+			.inline-item {
+				@include clay-css(setter(map-get($active, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($active, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($active, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($active, inline-item-after), ())
+				);
 			}
 		}
 
@@ -433,6 +603,30 @@
 
 			&::after {
 				@include clay-css($active-class-after);
+			}
+
+			.inline-item {
+				@include clay-css(
+					setter(map-get($active-class, inline-item), ())
+				);
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($active-class, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($active-class, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($active-class, inline-item-after), ())
+				);
 			}
 		}
 
@@ -446,6 +640,28 @@
 
 			&:active {
 				@include clay-css($disabled-active);
+			}
+
+			.inline-item {
+				@include clay-css(setter(map-get($disabled, inline-item), ()));
+			}
+
+			.inline-item-before {
+				@include clay-css(
+					setter(map-get($disabled, inline-item-before), ())
+				);
+			}
+
+			.inline-item-middle {
+				@include clay-css(
+					setter(map-get($disabled, inline-item-middle), ())
+				);
+			}
+
+			.inline-item-after {
+				@include clay-css(
+					setter(map-get($disabled, inline-item-after), ())
+				);
 			}
 		}
 
@@ -461,6 +677,31 @@
 
 		.inline-item {
 			@include clay-css($inline-item);
+		}
+
+		.inline-item-before {
+			@include clay-css(setter(map-get($map, inline-item-before), ()));
+		}
+
+		.inline-item-middle {
+			@include clay-css(setter(map-get($map, inline-item-middle), ()));
+
+			+ .inline-item-middle {
+				@include clay-css(
+					setter(
+						map-deep-get(
+							$map,
+							inline-item-middle,
+							inline-item-middle
+						),
+						()
+					)
+				);
+			}
+		}
+
+		.inline-item-after {
+			@include clay-css(setter(map-get($map, inline-item-after), ()));
 		}
 
 		.btn-section {
