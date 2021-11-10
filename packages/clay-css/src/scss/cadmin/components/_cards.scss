@@ -18,15 +18,13 @@
 	position: relative;
 	word-wrap: break-word;
 
-	@if ($cadmin-card-border-radius > 0) {
-		.autofit-col {
-			&:first-child {
-				@include border-left-radius($cadmin-card-inner-border-radius);
-			}
+	.autofit-col {
+		&:first-child {
+			@include border-left-radius($cadmin-card-inner-border-radius);
+		}
 
-			&:last-child {
-				@include border-right-radius($cadmin-card-inner-border-radius);
-			}
+		&:last-child {
+			@include border-right-radius($cadmin-card-inner-border-radius);
 		}
 	}
 
@@ -643,15 +641,15 @@
 // Card Type Asset
 
 .card-type-asset {
-	@include clay-card-type-asset($cadmin-card-type-asset);
+	@include clay-card-variant($cadmin-card-type-asset);
 }
 
 .image-card {
-	@include clay-card-type-asset-variant($cadmin-image-card);
+	@include clay-card-variant($cadmin-image-card);
 }
 
 .file-card {
-	@include clay-card-type-asset-variant($cadmin-file-card);
+	@include clay-card-variant($cadmin-file-card);
 }
 
 .product-card {
@@ -659,13 +657,13 @@
 }
 
 .user-card {
-	@include clay-card-type-asset-variant($cadmin-user-card);
+	@include clay-card-variant($cadmin-user-card);
 }
 
 // Card Type Directory
 
 .card-type-directory {
-	@include clay-card-type-directory($cadmin-card-type-directory);
+	@include clay-card-variant($cadmin-card-type-directory);
 }
 
 // Card Type Template

@@ -188,7 +188,7 @@
 	);
 
 	$hover: setter(map-get($map, hover), ());
-	$hover: map-merge(
+	$hover: map-deep-merge(
 		$hover,
 		(
 			background-color:
@@ -213,7 +213,7 @@
 	);
 
 	$focus: setter(map-get($map, focus), ());
-	$focus: map-merge(
+	$focus: map-deep-merge(
 		$focus,
 		(
 			background-color:
@@ -244,13 +244,13 @@
 		)
 	);
 
-	$focus-c-kbd-inline: map-merge(
+	$focus-c-kbd-inline: map-deep-merge(
 		setter(map-get($focus, c-kbd-inline), ()),
 		setter(map-get($map, focus-c-kbd-inline), ())
 	);
 
 	$active: setter(map-get($map, active), ());
-	$active: map-merge(
+	$active: map-deep-merge(
 		$active,
 		(
 			background-color:
@@ -283,8 +283,8 @@
 	);
 
 	$active-class: setter(map-get($map, active-class), ());
-	$active-class: map-merge($active, $active-class);
-	$active-class: map-merge(
+	$active-class: map-deep-merge($active, $active-class);
+	$active-class: map-deep-merge(
 		$active-class,
 		(
 			background-color:
@@ -321,7 +321,7 @@
 	);
 
 	$disabled: setter(map-get($map, disabled), ());
-	$disabled: map-merge(
+	$disabled: map-deep-merge(
 		$disabled,
 		(
 			background-color:
@@ -374,11 +374,11 @@
 		setter(map-get($map, disabled-c-kbd-inline), ())
 	);
 
-	$disabled-active: map-merge(
+	$disabled-active: map-deep-merge(
 		setter(map-get($disabled, active), ()),
 		setter(map-get($map, disabled-active), ())
 	);
-	$disabled-active: map-merge(
+	$disabled-active: map-deep-merge(
 		$disabled-active,
 		(
 			pointer-events:
@@ -421,6 +421,14 @@
 		&:hover {
 			@include clay-css($hover);
 
+			&::before {
+				@include clay-css(setter(map-get($hover, before), ()));
+			}
+
+			&::after {
+				@include clay-css(setter(map-get($hover, after), ()));
+			}
+
 			.c-kbd-inline {
 				@include clay-css($hover-c-kbd-inline);
 			}
@@ -429,6 +437,14 @@
 		&:focus {
 			@include clay-css($focus);
 
+			&::before {
+				@include clay-css(setter(map-get($focus, before), ()));
+			}
+
+			&::after {
+				@include clay-css(setter(map-get($focus, after), ()));
+			}
+
 			.c-kbd-inline {
 				@include clay-css($focus-c-kbd-inline);
 			}
@@ -436,6 +452,14 @@
 
 		&:active {
 			@include clay-css($active);
+
+			&::before {
+				@include clay-css(setter(map-get($active, before), ()));
+			}
+
+			&::after {
+				@include clay-css(setter(map-get($active, after), ()));
+			}
 
 			label {
 				color: map-get($active, color);
@@ -457,6 +481,14 @@
 
 		&.active {
 			@include clay-css($active-class);
+
+			&::before {
+				@include clay-css(setter(map-get($active-class, before), ()));
+			}
+
+			&::after {
+				@include clay-css(setter(map-get($active-class, after), ()));
+			}
 
 			label {
 				color: map-get($active-class, color);
@@ -490,6 +522,14 @@
 		&.disabled {
 			@include clay-css($disabled);
 
+			&::before {
+				@include clay-css(setter(map-get($disabled, before), ()));
+			}
+
+			&::after {
+				@include clay-css(setter(map-get($disabled, after), ()));
+			}
+
 			label,
 			.form-check-label {
 				color: map-get($disabled, color);
@@ -501,7 +541,27 @@
 
 			&:active {
 				@include clay-css($disabled-active);
+
+				&::before {
+					@include clay-css(
+						setter(map-get($disabled-active, before), ())
+					);
+				}
+
+				&::after {
+					@include clay-css(
+						setter(map-get($disabled-active, after), ())
+					);
+				}
 			}
+		}
+
+		&::before {
+			@include clay-css(setter(map-get($map, before), ()));
+		}
+
+		&::after {
+			@include clay-css(setter(map-get($map, after), ()));
 		}
 
 		@if (map-get($c-inner, enabled)) {

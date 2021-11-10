@@ -104,14 +104,14 @@ exports[`ClayAlert renders alert inline with action 1`] = `
 exports[`ClayAlert renders as \`feedback\` variant 1`] = `
 <div>
   <div
-    class="alert alert-feedback alert-info"
+    class="alert alert-feedback alert-indicator-start alert-info"
     role="alert"
   >
     <div
       class="alert-autofit-row autofit-row"
     >
       <div
-        class="autofit-col"
+        class="autofit-col autofit-col-expand"
       >
         <div
           class="autofit-section"
@@ -128,14 +128,6 @@ exports[`ClayAlert renders as \`feedback\` variant 1`] = `
               />
             </svg>
           </span>
-        </div>
-      </div>
-      <div
-        class="autofit-col autofit-col-expand"
-      >
-        <div
-          class="autofit-section"
-        >
           <strong
             class="lead"
           >

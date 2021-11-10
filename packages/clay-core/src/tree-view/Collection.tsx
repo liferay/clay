@@ -14,7 +14,11 @@ export interface ICollectionProps<T> {
 	items?: Array<T>;
 }
 
-function getKey(index: number, key?: React.Key | null, parentKey?: React.Key) {
+export function getKey(
+	index: number,
+	key?: React.Key | null,
+	parentKey?: React.Key
+) {
 	if (
 		key != null &&
 		(!String(key).startsWith('.') || String(key).startsWith('.$'))

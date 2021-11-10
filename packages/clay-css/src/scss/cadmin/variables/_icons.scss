@@ -1,3 +1,18 @@
+$cadmin-lexicon-icon-size: 1em !default; // 16px
+
+$cadmin-lexicon-icon: () !default;
+$cadmin-lexicon-icon: map-merge(
+	(
+		display: inline-block,
+		fill: currentColor,
+		height: $cadmin-lexicon-icon-size,
+		margin-top: -3px,
+		vertical-align: middle,
+		width: $cadmin-lexicon-icon-size,
+	),
+	$cadmin-lexicon-icon
+);
+
 $cadmin-collapse-icon-padding-left: null !default;
 $cadmin-collapse-icon-padding-right: 45px !default; // 45px
 
@@ -9,8 +24,6 @@ $cadmin-collapse-icon-position-top: clay-collapse-icon-align(
 	1px,
 	0.9375em
 ) !default;
-
-$cadmin-lexicon-icon-size: 1em !default; // 16px
 
 $cadmin-order-arrow-down-active-color: $cadmin-gray-500 !default;
 $cadmin-order-arrow-up-active-color: $cadmin-order-arrow-down-active-color !default;

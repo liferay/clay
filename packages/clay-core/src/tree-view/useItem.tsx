@@ -50,8 +50,15 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 }
 
 export function ItemContextProvider({children, value}: Props) {
-	const {expandedKeys, items, open, reorder, selection} =
-		useTreeViewContext();
+	const {
+		dragAndDrop,
+		expandedKeys,
+		items,
+		nestedKey,
+		open,
+		reorder,
+		selection,
+	} = useTreeViewContext();
 	const {
 		indexes: parentIndexes = [],
 		key: parentKey,
@@ -64,22 +71,41 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const hoverTimeoutIdRef = useRef<number | null>();
 
-	useEffect(
-		() => selection.createPartialLayoutItem(keyRef.current, parentKey),
-		[selection.createPartialLayoutItem, keyRef, parentKey]
-	);
+	const indexesRef = useRef([...parentIndexes, value.index]);
 
 	const item: Value = {
 		...value,
-		indexes: [...parentIndexes, value.index],
+		indexes: indexesRef.current,
 		itemRef: childRef,
 		key: keyRef.current,
 		parentItemRef,
 	};
 
+	const hasLazyChildren = Boolean(nestedKey && item[nestedKey]?.length);
+
+	useEffect(
+		() =>
+			selection.createPartialLayoutItem(
+				keyRef.current,
+				hasLazyChildren,
+				indexesRef.current,
+				parentKey
+			),
+		[
+			selection.createPartialLayoutItem,
+			hasLazyChildren,
+			indexesRef,
+			keyRef,
+			parentKey,
+		]
+	);
+
 	const [overPosition, setOverPosition] = useState<Position | null>(null);
 
 	const [{isDragging}, drag, preview] = useDrag({
+		canDrag() {
+			return dragAndDrop ?? false;
+		},
 		collect: (monitor) => ({
 			isDragging: monitor.isDragging(),
 		}),
@@ -180,7 +206,7 @@ export function ItemContextProvider({children, value}: Props) {
 		},
 	});
 
-	if (items && items.length) {
+	if (items && items.length && dragAndDrop) {
 		drag(drop(childRef));
 	}
 

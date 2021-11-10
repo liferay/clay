@@ -1,22 +1,17 @@
 .lexicon-icon {
-	display: inline-block;
-	fill: currentColor;
-	height: $lexicon-icon-size;
-	margin-top: -3px;
-	vertical-align: middle;
-	width: $lexicon-icon-size;
+	@include clay-css(setter($lexicon-icon, ()));
 }
 
 .lexicon-icon-sm {
-	font-size: $lexicon-icon-sm-font-size;
+	@include clay-css(setter($lexicon-icon-sm, ()));
 }
 
 .lexicon-icon-lg {
-	font-size: $lexicon-icon-lg-font-size;
+	@include clay-css(setter($lexicon-icon-lg, ()));
 }
 
 .lexicon-icon-xl {
-	font-size: $lexicon-icon-xl-font-size;
+	@include clay-css(setter($lexicon-icon-xl, ()));
 }
 
 .order-arrow-down-active {
