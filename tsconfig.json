@@ -5,6 +5,7 @@
 		"strict": true,
 		"jsx": "react",
 		"target": "es2015",
+		"resolveJsonModule": true,
 		"module": "esnext",
 		"moduleResolution": "node",
 		"removeComments": true,
