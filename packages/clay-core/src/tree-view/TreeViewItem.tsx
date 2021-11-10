@@ -87,10 +87,16 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 								toggle(item.key);
 							} else {
 								if (onLoadMore) {
-									const items = await onLoadMore(item);
+									try {
+										const items = await onLoadMore(item);
 
-									insert([...item.indexes, 0], items);
-									toggle(item.key);
+										if (items) {
+											insert([...item.indexes, 0], items);
+											toggle(item.key);
+										}
+									} catch (error) {
+										console.error(error);
+									}
 								}
 							}
 						}}
@@ -109,9 +115,21 @@ export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
 							if (key === Keys.Right) {
 								if (!group) {
 									if (onLoadMore) {
-										const items = await onLoadMore(item);
+										try {
+											const items = await onLoadMore(
+												item
+											);
 
-										insert([...item.indexes, 0], items);
+											if (!items) {
+												return;
+											}
+
+											insert([...item.indexes, 0], items);
+										} catch (error) {
+											console.error(error);
+
+											return;
+										}
 									} else {
 										return;
 									}
