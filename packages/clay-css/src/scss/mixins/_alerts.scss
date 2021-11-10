@@ -106,8 +106,28 @@
 			@include clay-css($hr);
 		}
 
+		&.alert-dismissible {
+			@include clay-css(setter(map-get($map, alert-dismissible), ()));
+
+			.container,
+			.container-fluid {
+				@include clay-css(
+					setter(
+						map-deep-get($map, alert-dismissible, container-fluid),
+						()
+					)
+				);
+			}
+		}
+
 		.alert-indicator {
 			@include clay-css($alert-indicator);
+
+			.lexicon-icon {
+				@include clay-css(
+					setter(map-get($alert-indicator, lexicon-icon), ())
+				);
+			}
 
 			+ .lead {
 				@include clay-css($alert-indicator-lead);
@@ -128,6 +148,11 @@
 
 		.close {
 			@include clay-close($close);
+		}
+
+		.container,
+		.container-fluid {
+			@include clay-css(setter(map-get($map, container-fluid), ()));
 		}
 
 		.lead {

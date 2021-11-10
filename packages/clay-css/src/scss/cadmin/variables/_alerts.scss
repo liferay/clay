@@ -232,10 +232,23 @@ $cadmin-alert-dismissible: map-deep-merge(
 
 // Alert Fluid
 
+// @deprecated use the Sass map `$alert-fluid` instead
+
 $cadmin-alert-fluid-border-bottom-width: 1px !default;
+
+// @deprecated use the Sass map `$alert-fluid` instead
+
 $cadmin-alert-fluid-border-left-width: 0 !default;
+
+// @deprecated use the Sass map `$alert-fluid` instead
+
 $cadmin-alert-fluid-border-right-width: 0 !default;
+
+// @deprecated use the Sass map `$alert-fluid` instead
+
 $cadmin-alert-fluid-border-top-width: 0 !default;
+
+// @deprecated use the Sass map `$alert-fluid` instead
 
 $cadmin-alert-fluid-border-width: $cadmin-alert-fluid-border-top-width
 	$cadmin-alert-fluid-border-right-width
@@ -243,18 +256,9 @@ $cadmin-alert-fluid-border-width: $cadmin-alert-fluid-border-top-width
 	$cadmin-alert-fluid-border-left-width !default;
 $cadmin-alert-fluid-margin-bottom: 0 !default;
 
-$cadmin-alert-fluid: () !default;
-$cadmin-alert-fluid: map-merge(
-	(
-		border-radius: 0,
-		border-width: $cadmin-alert-fluid-border-width,
-		margin-bottom: $cadmin-alert-fluid-margin-bottom,
-		padding: 0,
-	),
-	$cadmin-alert-fluid
-);
-
 // .alert-fluid .container-fluid
+
+// @deprecated use the Sass map `$alert-fluid` instead
 
 $cadmin-alert-fluid-container: () !default;
 $cadmin-alert-fluid-container: map-merge(
@@ -268,6 +272,8 @@ $cadmin-alert-fluid-container: map-merge(
 );
 
 // .alert-fluid.alert-dismissible .container-fluid
+
+// @deprecated use the Sass map `$alert-fluid` instead
 
 $cadmin-alert-fluid-dismissible-container: () !default;
 $cadmin-alert-fluid-dismissible-container: map-merge(
@@ -287,12 +293,30 @@ $cadmin-alert-fluid-dismissible-container: map-merge(
 
 // .alert-fluid .close
 
+// @deprecated use the Sass map `$alert-fluid` instead
+
 $cadmin-alert-fluid-close: () !default;
 $cadmin-alert-fluid-close: map-deep-merge(
 	(
 		right: calc(#{$cadmin-grid-gutter-width * 0.5} + 4px),
 	),
 	$cadmin-alert-fluid-close
+);
+
+$cadmin-alert-fluid: () !default;
+$cadmin-alert-fluid: map-merge(
+	(
+		border-radius: 0,
+		border-width: $cadmin-alert-fluid-border-width,
+		margin-bottom: $cadmin-alert-fluid-margin-bottom,
+		padding: 0,
+		alert-dismissible: (
+			container-fluid: $cadmin-alert-fluid-dismissible-container,
+		),
+		close: $cadmin-alert-fluid-close,
+		container-fluid: $cadmin-alert-fluid-container,
+	),
+	$cadmin-alert-fluid
 );
 
 // .alert-notifications-absolute

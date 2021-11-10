@@ -112,6 +112,8 @@ $alert-footer: map-deep-merge(
 
 // Alert Fluid
 
+// @deprecated use the Sass map `$alert-fluid` instead
+
 $alert-fluid-container: () !default;
 $alert-fluid-container: map-merge(
 	(
@@ -119,6 +121,14 @@ $alert-fluid-container: map-merge(
 		padding-top: 0.96875rem,
 	),
 	$alert-fluid-container
+);
+
+$alert-fluid: () !default;
+$alert-fluid: map-deep-merge(
+	(
+		container-fluid: $alert-fluid-container,
+	),
+	$alert-fluid
 );
 
 // Alert Notification
