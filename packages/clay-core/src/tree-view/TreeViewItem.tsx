@@ -8,13 +8,14 @@ import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
 export interface ITreeViewItemProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
+	actions?: React.ReactElement;
 	children: React.ReactNode;
 	isDragging?: boolean;
 	overPosition?: string;
@@ -27,7 +28,7 @@ export const TreeViewItem = React.forwardRef<
 	HTMLDivElement,
 	ITreeViewItemProps
 >(function TreeViewItemInner(
-	{children, className, isDragging, overPosition, overTarget, ...otherProps},
+	{actions, children, className, isDragging, overPosition, overTarget, ...otherProps},
 	ref
 ) {
 	const spacing = useContext(SpacingContext);
@@ -49,6 +50,8 @@ export const TreeViewItem = React.forwardRef<
 
 	const item = useItem();
 
+	const [focus, setFocus] = useState(false);
+
 	const [left, right] = React.Children.toArray(children);
 
 	const group =
@@ -57,6 +60,7 @@ export const TreeViewItem = React.forwardRef<
 
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(childrenRoot.current(item), {
+			actions,
 			isDragging,
 			overPosition,
 			overTarget,
@@ -79,13 +83,24 @@ export const TreeViewItem = React.forwardRef<
 					}
 					className={classNames('treeview-link', {
 						collapsed: group && expandedKeys.has(item.key),
+						focus,
 						'treeview-dropping-bottom':
 							overTarget && overPosition === 'bottom',
 						'treeview-dropping-middle':
 							overTarget && overPosition === 'middle',
 						'treeview-dropping-top':
 							overTarget && overPosition === 'top',
+						disabled: isDragging,
 					})}
+					onBlur={({currentTarget, relatedTarget}) => {
+						if (
+							actions &&
+							relatedTarget &&
+							!currentTarget.contains(relatedTarget as Node)
+						) {
+							setFocus(false);
+						}
+					}}
 					onClick={async () => {
 						if (group) {
 							toggle(item.key);
@@ -104,6 +119,7 @@ export const TreeViewItem = React.forwardRef<
 							}
 						}
 					}}
+					onFocus={() => actions && setFocus(true)}
 					onKeyDown={async (event) => {
 						const {key} = event;
 
@@ -204,41 +220,55 @@ export const TreeViewItem = React.forwardRef<
 					}}
 					tabIndex={0}
 				>
-					<span
-						className="c-inner"
-						style={{
-							marginLeft: `-${spacing + (group ? 0 : 24)}px`,
-						}}
-						tabIndex={-2}
-					>
-						{typeof left === 'string' ? (
-							<Layout.ContentRow>
-								<Layout.ContentCol expand>
-									<div className="component-text">{left}</div>
-								</Layout.ContentCol>
-							</Layout.ContentRow>
-						) : group ? (
-							left
-						) : (
-							<TreeViewItemStack expandable={false}>
-								{children}
-							</TreeViewItemStack>
-						)}
-					</span>
-				</div>
-				{group}
-			</li>
-		</SpacingContext.Provider>
-	);
-});
+
+						<span
+							className="c-inner"
+							style={{
+								marginLeft: `-${spacing + (group ? 0 : 24)}px`,
+							}}
+							tabIndex={-2}
+						>
+							{typeof left === 'string' ? (
+								<Layout.ContentRow>
+									<Layout.ContentCol expand>
+										<div className="component-text">
+											{left}
+										</div>
+									</Layout.ContentCol>
+
+									{actions && <Actions>{actions}</Actions>}
+								</Layout.ContentRow>
+							) : group ? (
+								React.cloneElement(left as React.ReactElement, {
+									actions,
+								})
+							) : (
+								<TreeViewItemStack
+									actions={actions}
+									expandable={false}
+								>
+									{children}
+								</TreeViewItemStack>
+							)}
+						</span>
+					</div>
+					{group}
+				</li>
+			</SpacingContext.Provider>
+		);
+	}
+);
 
 TreeViewItem.displayName = 'ClayTreeViewItem';
 
 interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
+	actions?: React.ReactElement;
+	children: React.ReactNode;
 	expandable?: boolean;
 }
 
 export function TreeViewItemStack({
+	actions,
 	children,
 	expandable = true,
 	...otherProps
@@ -332,6 +362,49 @@ export function TreeViewItemStack({
 					</Layout.ContentCol>
 				);
 			})}
+
+			{actions && <Actions>{actions}</Actions>}
 		</Layout.ContentRow>
 	);
 }
+
+TreeViewItemStack.displayName = 'TreeViewItemStack';
+
+type TreeViewItemActionsProps = {
+	children: React.ReactElement;
+};
+
+function Actions({children}: TreeViewItemActionsProps) {
+	const childrenArray = React.Children.toArray(
+		children.type === React.Fragment ? children.props.children : children
+	);
+
+	return (
+		<>
+			{childrenArray.map((child, index) => {
+				if (child.type.displayName === 'ClayButton') {
+					return (
+						<Layout.ContentCol key={index}>
+							{React.cloneElement(child, {
+								children: (
+									<div className="c-inner" tabIndex={-2}>
+										{child.props.children}
+									</div>
+								),
+								className: classNames(
+									'component-action',
+									child.props.className
+								),
+								tabIndex: -1,
+							})}
+						</Layout.ContentCol>
+					);
+				}
+
+				return child;
+			})}
+		</>
+	);
+}
+
+Actions.displayName = 'TreeViewItemActions';

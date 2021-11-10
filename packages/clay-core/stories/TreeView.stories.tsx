@@ -6,7 +6,9 @@
 import '@clayui/css/lib/css/atlas.css';
 
 import '@clayui/css/src/scss/cadmin.scss';
+import Button from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
+import DropDown from '@clayui/drop-down';
 import {ClayCheckbox as Checkbox, ClayInput as Input} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {Provider} from '@clayui/provider';
@@ -203,6 +205,54 @@ storiesOf('Components|ClayTreeView', module)
 			</TreeView>
 		</Provider>
 	))
+	.add('actions', () => {
+		const [active, setActive] = React.useState(false);
+
+		const triggerRef = React.useRef(null);
+		const menuRef = React.useRef(null);
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView>
+					<TreeView.Item
+						actions={
+							<>
+								<Button displayType={null} monospaced>
+									<Icon symbol="times" />
+								</Button>
+								<Button
+									displayType={null}
+									monospaced
+									onClick={() => setActive(!active)}
+									ref={triggerRef}
+								>
+									<Icon symbol="ellipsis-v" />
+								</Button>
+								<DropDown.Menu
+									active={active}
+									alignElementRef={triggerRef}
+									onSetActive={setActive}
+									ref={menuRef}
+								>
+									<DropDown.ItemList>
+										<DropDown.Item>One</DropDown.Item>
+									</DropDown.ItemList>
+								</DropDown.Menu>
+							</>
+						}
+					>
+						<TreeView.ItemStack>
+							<Icon symbol="folder" />
+							Root
+						</TreeView.ItemStack>
+						<TreeView.Group>
+							<TreeView.Item>Item</TreeView.Item>
+						</TreeView.Group>
+					</TreeView.Item>
+				</TreeView>
+			</Provider>
+		);
+	})
 	.add('dynamic', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView
