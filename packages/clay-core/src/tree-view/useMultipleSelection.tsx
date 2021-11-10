@@ -6,6 +6,11 @@
 import {useInternalState} from '@clayui/shared';
 import {Key, useCallback, useRef} from 'react';
 
+import {getKey} from './Collection';
+import {ITreeProps, createImmutableTree} from './useTree';
+
+import type {ICollectionProps} from './Collection';
+
 export interface IMultipleSelection {
 	/**
 	 * Handler that is called when the selection changes.
@@ -19,23 +24,42 @@ export interface IMultipleSelection {
 }
 
 export interface IMultipleSelectionState {
-	createPartialLayoutItem: (key: Key, parentKey?: Key) => () => void;
+	createPartialLayoutItem: (
+		key: Key,
+		lazy: boolean,
+		loc: Array<number>,
+		parentKey?: Key
+	) => () => void;
 	isIntermediate: (key: Key) => boolean;
 	selectedKeys: Set<Key>;
 	toggleSelection: (key: Key) => void;
 }
 
-export interface IMultipleSelectionProps extends IMultipleSelection {}
+export interface IMultipleSelectionProps<T>
+	extends IMultipleSelection,
+		Pick<ITreeProps<T>, 'nestedKey'>,
+		Pick<ICollectionProps<T>, 'items'> {
+	selectionMode?: 'multiple' | 'single';
+}
 
 type LayoutInfo = {
 	children: Set<Key>;
 	intermediate: boolean;
+
+	/**
+	 * Lazy Child means that the current Node has children but they were not
+	 * created because they are not visible in the DOM.
+	 */
+	lazyChild: boolean;
+	loc: Array<number>;
 	parentKey?: Key;
 };
 
-export function useMultipleSelection(
-	props: IMultipleSelectionProps
+export function useMultipleSelection<T>(
+	props: IMultipleSelectionProps<T>
 ): IMultipleSelectionState {
+	const selectionMode = props.selectionMode;
+
 	const layoutKeys = useRef(new Map<Key, LayoutInfo>());
 
 	const [selectedKeys, setSelectionKeys] = useInternalState<Set<Key>>({
@@ -43,6 +67,80 @@ export function useMultipleSelection(
 		onChange: props.onSelectionChange,
 		value: props.selectedKeys,
 	});
+
+	// The Mount will start building the tree in a flat structure using the
+	// component's rendering stream to avoid traversing the tree in a separate
+	// stream. This means it is reactive to rendering, if any component of the
+	// structure is removed it will update the layout without going traverse
+	// the structure.
+	const createPartialLayoutItem = useCallback(
+		(key: Key, lazyChild: boolean, loc: Array<number>, parentKey?: Key) => {
+			const keyMap = layoutKeys.current.get(key);
+
+			if (!keyMap) {
+				layoutKeys.current.set(key, {
+					children: new Set(),
+					intermediate: false,
+					lazyChild,
+					loc,
+					parentKey,
+				});
+			} else if (keyMap.parentKey !== parentKey) {
+				layoutKeys.current.set(key, {
+					...keyMap,
+					parentKey,
+				});
+			}
+
+			if (parentKey) {
+				const keyMap = layoutKeys.current.get(parentKey);
+
+				if (keyMap) {
+					layoutKeys.current.set(parentKey, {
+						...keyMap,
+						children: new Set([...keyMap.children, key]),
+						lazyChild: false,
+					});
+				} else {
+					// Pre-initializes the parent layout, as this is linked to
+					// React rendering, the mount is used inside `useEffect`
+					// this causes callbacks from the last rendering to be
+					// called first than parents, starting from the bottom up.
+					//
+					// We just add an initial value then update the parentKey
+					// when the corresponding one is called.
+					layoutKeys.current.set(parentKey, {
+						children: new Set([key]),
+						intermediate: false,
+						lazyChild: false,
+						loc: [],
+						parentKey: undefined,
+					});
+				}
+			}
+
+			return function unmount() {
+				layoutKeys.current.delete(key);
+
+				if (parentKey && layoutKeys.current.has(parentKey)) {
+					const keyMap = layoutKeys.current.get(
+						parentKey
+					) as LayoutInfo;
+
+					const children = new Set(keyMap.children);
+
+					children.delete(key);
+
+					layoutKeys.current.set(parentKey, {
+						...keyMap,
+						children,
+						lazyChild: children.size === 0,
+					});
+				}
+			};
+		},
+		[layoutKeys]
+	);
 
 	const toggleParentSelection = (keyMap: LayoutInfo, selecteds: Set<Key>) => {
 		if (!keyMap.parentKey) {
@@ -88,11 +186,58 @@ export function useMultipleSelection(
 		toggleParentSelection(parentKeyMap, selecteds);
 	};
 
+	const toggleLazyChildrenSelection = useCallback(
+		(
+			item: Record<string, any>,
+			currentKey: React.Key,
+			selecteds: Set<Key>,
+			select: boolean
+		) => {
+			const children: Array<Record<string, any>> = item[props.nestedKey!];
+
+			if (!children) {
+				return;
+			}
+
+			children.forEach((item, index) => {
+				// TODO: The `key` property of the component that the developer
+				// can set is not being considered.
+				const key = getKey(index, item.id, currentKey);
+
+				if (select) {
+					selecteds.add(key);
+				} else {
+					selecteds.delete(key);
+				}
+
+				toggleLazyChildrenSelection(item, key, selecteds, select);
+			});
+		},
+		[props.nestedKey]
+	);
+
 	const toggleChildrenSelection = (
 		keyMap: LayoutInfo,
+		currentKey: React.Key,
 		selecteds: Set<Key>,
 		select: boolean
 	) => {
+		if (keyMap.lazyChild) {
+			const tree = createImmutableTree(
+				props.items ?? [],
+				props.nestedKey!
+			);
+
+			const node = tree.nodeByPath(keyMap.loc);
+
+			return toggleLazyChildrenSelection(
+				node.item,
+				currentKey,
+				selecteds,
+				select
+			);
+		}
+
 		if (!keyMap.children.size) {
 			return;
 		}
@@ -106,12 +251,13 @@ export function useMultipleSelection(
 
 			const childrenKeyMap = layoutKeys.current.get(key) as LayoutInfo;
 
-			toggleChildrenSelection(childrenKeyMap, selecteds, select);
+			toggleChildrenSelection(childrenKeyMap, key, selecteds, select);
 		});
 	};
 
 	const toggleSelection = (key: Key) => {
 		const keyMap = layoutKeys.current.get(key) as LayoutInfo;
+
 		const selecteds = new Set(selectedKeys);
 
 		// Resets the intermediate state because the element will be selected
@@ -125,79 +271,13 @@ export function useMultipleSelection(
 			selecteds.add(key);
 		}
 
-		toggleChildrenSelection(keyMap, selecteds, selecteds.has(key));
+		if (selectionMode === 'multiple') {
+			toggleChildrenSelection(keyMap, key, selecteds, selecteds.has(key));
+		}
 		toggleParentSelection(keyMap, selecteds);
 
 		setSelectionKeys(selecteds);
 	};
-
-	// The Mount will start building the tree in a flat structure using the
-	// component's rendering stream to avoid traversing the tree in a separate
-	// stream. This means it is reactive to rendering, if any component of the
-	// structure is removed it will update the layout without going traverse
-	// the structure.
-	const createPartialLayoutItem = useCallback(
-		(key: Key, parentKey?: Key) => {
-			const keyMap = layoutKeys.current.get(key);
-
-			if (!keyMap) {
-				layoutKeys.current.set(key, {
-					children: new Set(),
-					intermediate: false,
-					parentKey,
-				});
-			} else if (keyMap.parentKey !== parentKey) {
-				layoutKeys.current.set(key, {
-					...keyMap,
-					parentKey,
-				});
-			}
-
-			if (parentKey) {
-				const keyMap = layoutKeys.current.get(parentKey);
-
-				if (keyMap) {
-					layoutKeys.current.set(parentKey, {
-						...keyMap,
-						children: new Set([...keyMap.children, key]),
-					});
-				} else {
-					// Pre-initializes the parent layout, as this is linked to
-					// React rendering, the mount is used inside `useEffect`
-					// this causes callbacks from the last rendering to be
-					// called first than parents, starting from the bottom up.
-					//
-					// We just add an initial value then update the parentKey
-					// when the corresponding one is called.
-					layoutKeys.current.set(parentKey, {
-						children: new Set([key]),
-						intermediate: false,
-						parentKey: undefined,
-					});
-				}
-			}
-
-			return function unmount() {
-				layoutKeys.current.delete(key);
-
-				if (parentKey && layoutKeys.current.has(parentKey)) {
-					const keyMap = layoutKeys.current.get(
-						parentKey
-					) as LayoutInfo;
-
-					const children = new Set(keyMap.children);
-
-					children.delete(key);
-
-					layoutKeys.current.set(parentKey, {
-						...keyMap,
-						children,
-					});
-				}
-			};
-		},
-		[layoutKeys]
-	);
 
 	const isIntermediate = (key: Key) => {
 		if (selectedKeys.has(key)) {
