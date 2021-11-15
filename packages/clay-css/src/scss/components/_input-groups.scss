@@ -99,6 +99,23 @@
 	> .input-group-text + .btn {
 		margin-left: math-sign($input-border-width);
 	}
+
+	.btn {
+		z-index: 1;
+
+		&:hover {
+			z-index: $zindex-input-group-hover;
+		}
+	}
+
+	.btn,
+	.form-control {
+		position: relative;
+
+		&:focus {
+			z-index: $zindex-input-group-focus;
+		}
+	}
 }
 
 // Input Group
@@ -109,20 +126,6 @@
 	flex-wrap: wrap;
 	position: relative;
 	width: 100%;
-
-	.btn {
-		position: relative;
-		z-index: 1;
-
-		&:hover {
-			z-index: $zindex-input-group-hover;
-		}
-	}
-
-	.btn:focus,
-	.form-control:focus {
-		z-index: $zindex-input-group-focus;
-	}
 
 	.btn-unstyled {
 		color: inherit;
