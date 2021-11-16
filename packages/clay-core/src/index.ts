@@ -19,3 +19,5 @@ export {
 	useModal,
 } from '@clayui/modal';
 export {Provider, useProvider} from '@clayui/provider';
+
+export {TreeView as UNSAFE_TreeView} from './tree-view';
