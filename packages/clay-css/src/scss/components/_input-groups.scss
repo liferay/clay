@@ -1,13 +1,4 @@
 .input-group {
-	.btn:hover {
-		z-index: $zindex-input-group-hover;
-	}
-
-	.btn:focus,
-	.form-control:focus {
-		z-index: $zindex-input-group-focus;
-	}
-
 	.btn-unstyled {
 		color: inherit;
 	}
@@ -92,6 +83,28 @@
 .input-group > .input-group-append {
 	> .form-control {
 		@include border-left-radius(0);
+	}
+}
+
+// Input Group Prepend and Append
+
+.input-group-prepend,
+.input-group-append {
+	.btn {
+		z-index: 1;
+
+		&:hover {
+			z-index: $zindex-input-group-hover;
+		}
+	}
+
+	.btn,
+	.form-control {
+		position: relative;
+
+		&:focus {
+			z-index: $zindex-input-group-focus;
+		}
 	}
 }
 
