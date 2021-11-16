@@ -132,7 +132,7 @@ Use classes `card-item-first` and `card-item-last` on elements that appear at th
         <div class="col-md-4">
             <div class="card card-rounded">
                 <div class="aspect-ratio card-item-first">
-                    <img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+                    <img alt="thumbnail" class="aspect-ratio-item aspect-ratio-item-flush" src="/images/thumbnail_hot_air_ballon.jpg">
                 </div>
                 <div class="card-body" style="text-align:center;">
                     <h3 class="card-title">Joe Bloggs</h3>
