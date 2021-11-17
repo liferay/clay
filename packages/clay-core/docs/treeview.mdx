@@ -1,6 +1,6 @@
 ---
 title: 'TreeView'
-description: 'A tree view is a component-based on nodes that are shown in a hierarchical structure.'
+description: 'A tree view is a component based on nodes that are shown in a hierarchical structure.'
 packageNpm: '@clayui/core'
 ---
 
@@ -39,27 +39,27 @@ import {Example, MultipleSelection} from '$packages/clay-core/docs/treeview';
 
 ## Introduction
 
-The TreeView component is designed to display data using a hierarchical structure. The component was built with the performance in mind, which influences API design and feature implementations.
+The TreeView component is designed to display data using a hierarchical structure. It was built with performance in mind, which influences API design and feature implementations.
 
-This component follows a slightly different thought from our [low-level and high-level philosophy](/docs/get-started/composing.html), we consider this to be a middle-level component that allows you to build the two in one, allowing flexibility and adding features that you wouldn't have in a low-level, it's also easy to move from low-level to high-level quickly and the APIs are more consistent.
+This component follows a slightly different thought from our [low-level and high-level philosophy](/docs/get-started/composing.html), we consider this to be a middle-level component that allows you to build the two in one, allowing flexibility and adding features that you wouldn't have in a low-level. It's also easy to move from low-level to high-level quickly and the APIs are more consistent.
 
 ## Content
 
-As TreeView is middle-level it allows you to build static or dynamic content if you need to consume data from some service.
+As TreeView is middle-level, it allows you to build static or dynamic content if you need to consume data from some service.
 
-It uses a very common technique in React.js components, [Render prop](https://reactjs.org/docs/render-props.html) that whose value of the prop is a function that will receive some data, this is essential for the component to allow it to be data agnostic and we don't need to be rigid as the names the properties to be rendered and avoid creating APIs to change the properties.
+It uses a very common technique in React.js components called [render props](https://reactjs.org/docs/render-props.html) whose value is a function that will receive some data. This is essential for the component to be data agnostic. It allows more flexibility with the names of the properties to be rendered and avoids creating APIs to change those properties.
 
 ```jsx
 <Mouse render={(mouse) => <Cat mouse={mouse} />} />
 ```
 
-Another common cause for this is using `children` as a Render prop which allows you to quickly adapt the static component to dynamic just by changing the syntax.
+Another benefit is using `children` as a render prop which allows you to quickly adapt the static component to dynamic just by changing the syntax.
 
 ```jsx
 <Mouse>{(mouse) => <Cat mouse={mouse} />}</Mouse>
 ```
 
-The main components of the TreeView are `<TreeView.Item />`, `<TreeView.Group />` and `<TreeView.ItemStack />` which abstracts all the necessary markup complexity and allows the granular composition to build different styles of a TreeView, for example, File Explorer, Users, Page Navigation, Page Structure...
+The main components of the TreeView are `<TreeView.Item />`, `<TreeView.Group />` and `<TreeView.ItemStack />` which abstract all the necessary markup complexity and allow the granular composition to build different styles of a TreeView. For example: File Explorer, Users, Page Navigation, or Page Structure.
 
 ### Static
 
@@ -108,7 +108,7 @@ The main components of the TreeView are `<TreeView.Item />`, `<TreeView.Group />
 
 The TreeView and Group components when used with dynamic items are populated from hierarchical data. The component consumes the data using the `items` property.
 
-For the component to be dynamic it is necessary to convert `children` to Render prop, which must be a function that will receive the `item` of the current iterator.
+For the component to be dynamic it is necessary to convert `children` to render prop, which must be a function that will receive the `item` of the current iterator.
 
 ```jsx
 function Example() {
@@ -149,14 +149,14 @@ function Example() {
 
 #### Asynchronous Item
 
-Asynchronous Item loading is quite advantageous to decrease the initial payload and decrease memory space, this is more efficient when a tree is very large.
+When a tree is very large, loading items (nodes) asynchronously is preferred to decrease the initial payload and memory space.
 
-The TreeView doesn't know when an Item is asynchronous so a deduction is made that the developer must deal with on the implementation side to tell whether the Item is asynchronous or not. The `onLoadMore` property is called every time the Item is a leaf of the tree and depending on the method's return it will make some assumptions.
+The TreeView doesn't know when an item is asynchronous, so the developer must specify whether the item is asynchronous or not. The `onLoadMore` property is called every time the item is a leaf node of the tree and depending on the method's return value it will behave differently.
 
--   Returning `void`, `null` or `undefined` the TreeView will do nothing.
--   Returning the `item` will add to the tree.
+-   When returning `void`, `null` or `undefined` the TreeView will do nothing.
+-   When returning the `item` will add to the tree.
 
-Adding a new asynchronous Item to the tree the `onItemsChange` method is respectively called to update the tree with a new value if the `items` is controlled.
+When adding a new asynchronous item to the tree, the `onItemsChange` method is respectively called to update the tree with a new value if the `items` prop is controlled.
 
 <div class="clay-site-alert alert alert-info">
 	<strong class="lead">Warning</strong>
@@ -179,11 +179,11 @@ Adding a new asynchronous Item to the tree the `onItemsChange` method is respect
 
 Item is very flexible and can behave in different ways to simplify usage for different use cases depending on the data.
 
-Item also helps to define the unique `key` of the component across the tree which is also used to tell which items are expanded and selected.
+Item also allows defining the unique `key` of the component across the tree, which is also used to tell which items are expanded and selected.
 
 #### Key
 
-In a dynamic content, if the data has the property `id` it is used as `key`, otherwise, a `key` is generated for each Item at the time of rendering.
+In a dynamic content, if the data has the property `id` it is used as `key`, otherwise, a `key` is generated for each item at the time of rendering.
 
 In static content, it is also possible to define the `key` to be used in the selection and expanding, if not defined it is also generated.
 
@@ -232,9 +232,9 @@ In static content, it is also possible to define the `key` to be used in the sel
 
 ## Expander
 
-The expansion of an Item in the TreeView is internally controlled and it is possible to control the state and set an initial value with the keys of the items that are initially expanded.
+The expansion of an Item in the TreeView is controlled internally. It's also possible to control the state and set an initial value with the keys of the items that are initially expanded.
 
-The TreeView exposes the `expandedKeys` properties and the `onExpandedChange` event to control the state of expanded Items, the `expandedKeys` must be a collection of values using the `Set()` object.
+The TreeView exposes the `expandedKeys` property and the `onExpandedChange` event to control the state of expanded items. The `expandedKeys` property must be a collection of values using the `Set()` object.
 
 ```jsx
 function Example() {
@@ -255,7 +255,7 @@ function Example() {
 
 ### Custom expander
 
-Customizing the expander is possible using the `expanderIcons` property, changing icons has an effect on the entire tree, it is not possible to change exclusively for a single Item.
+Customizing the expander is possible using the `expanderIcons` property. Changing the icons is applied the entire tree, it's not possible to change it exclusively for a single item.
 
 ```jsx
 <TreeView
@@ -270,7 +270,7 @@ Customizing the expander is possible using the `expanderIcons` property, changin
 
 ## Multiple Selection
 
-The multi-selection in TreeView is a composition with the `<Checkbox />` component that must be added explicitly in the Item rendering.
+The multi-selection in TreeView is a achieved by composing with the `<Checkbox />` component that must be added explicitly in the item rendering.
 
 ```jsx
 <TreeView.Item>
@@ -289,9 +289,9 @@ The multi-selection in TreeView is a composition with the `<Checkbox />` compone
 </TreeView.Item>
 ```
 
-It is not necessary to add the `onChange` event or the `checked` property, the TreeView adds the methods to the component under the covers, this allows you to just add the Checkbox in any order you want.
+It isn't necessary to add the `onChange` event or the `checked` property. The TreeView adds the methods to the component under the covers. This allows you to just add the Checkbox in any order you want.
 
-Multi-selection is also controlled in the same way as Expander, it uses the `key` of the item to select the Item, the `selectedKeys` property and the `onSelectionChange` event are used for this purpose.
+Multi-selection is also controlled in the same way as for the expander. It uses the `key` of the item to select it. The `selectedKeys` property and the `onSelectionChange` event are used for this purpose.
 
 ```jsx
 function Example() {
@@ -312,9 +312,9 @@ function Example() {
 
 ### Recursive selection
 
-By default when selecting an Item with nested items, the items are recursively selected.
+By default, when selecting an item with nested items, the item's children are recursively selected.
 
-There are some limitations, for static content the recursive selection only works if the item is expanded, ie visible. For dynamic content, it works independently.
+There are some limitations: for static content the recursive selection only works if the item is expanded, (i.e visible). For dynamic content, it works independently.
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
@@ -325,9 +325,9 @@ There are some limitations, for static content the recursive selection only work
 
 ## Drag and Drop
 
-The Drag and Drop implementation handles items internally and works only for TreeView with dynamic content because it depends on the `items` property and must be enabled using the `dragAndDrop` property.
+The drag and drop implementation handles items internally and works only for TreeView with dynamic content because it depends on the `items` property and must be enabled using the `dragAndDrop` property.
 
-The TreeView handles `items` immutably but follows a partial tree immutability implementation that is more optimized to do at runtime, to access these changes and be able to save in some service, you must control the state using the `items` property and the `onItemsChange` event.
+The TreeView handles `items` immutably but follows a partial tree immutability implementation that is more optimized to do at runtime, To access these changes and be able to save in some service, you must control the state using the `items` property and the `onItemsChange` event.
 
 ```jsx
 function Example() {
@@ -347,7 +347,7 @@ function Example() {
 
 ## Shortcuts
 
-The TreeView implements shortcuts and manages the focus, and some shortcuts and focus trigger some shortcuts like renaming, removing, or asynchronous loading if any.
+The TreeView implements shortcuts and manages the focus. Some shortcuts and focus trigger some actions like renaming, removing or asynchronous loading if any.
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
@@ -358,7 +358,7 @@ The TreeView implements shortcuts and manages the focus, and some shortcuts and 
 
 ### Rename Item
 
-The user can press the shortcut key `R` or `F2` to rename whatever property allows, in that case, feel free to open a Modal or any other experience that allows the user to change something about the Item, for it to work, the `onRenameItem` method must be passed as a property to the component and must be an asynchronous method.
+The user can press the shortcut key `R` or `F2` to rename whatever property. In that case, feel free to open a Modal or any other user interface element that allows the user to change the item. For this to work, the `onRenameItem` method must be passed as a property to the component and must be an asynchronous method.
 
 The `onRenameItem` property receives the `item` object corresponding to the current item that the user wants to rename and the method needs to return a new immutable object with the new data.
 
@@ -375,4 +375,4 @@ The `onRenameItem` property receives the `item` object corresponding to the curr
 
 ### Remove Item
 
-If the user presses the `Backspace` or `Delete` hotkey the TreeView removes the Item from the `items` structure, in which case `onItemsChange` is called with the tree updated.
+If the user presses the `Backspace` or `Delete` key the TreeView removes the item from the `items` structure. In which case `onItemsChange` is called with the tree is updated.
