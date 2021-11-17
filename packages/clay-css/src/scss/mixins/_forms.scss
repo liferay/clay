@@ -724,6 +724,247 @@
 	}
 }
 
+/// A mixin to create Form Validation variants (e.g., `.has-error`).
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	label: (
+/// 		// .has-error label
+/// 	),
+/// 	custom-control-label: (
+/// 		// .has-error .custom-control-label, .has-error .form-check-label
+/// 	),
+/// 	form-control: (
+/// 		// .has-error .form-control
+/// 		readonly: (
+/// 			// .has-error .form-control[readonly]
+/// 		),
+/// 	),
+/// 	form-feedback-item: (
+/// 		// .has-error .form-feedback-item
+/// 	),
+/// 	select: (
+/// 		// N/A
+/// 		form-control: (
+/// 			// .has-error select.form-control
+/// 			multiple: (
+/// 				// .has-error select.form-control[multiple]
+/// 			),
+/// 			size: (
+/// 				// .has-error select.form-control[size]
+/// 			),
+/// 		),
+/// 	),
+/// 	input-group-item: (
+/// 		// .has-error .input-group-item
+/// 		hover: (
+/// 			// .has-error .input-group-item:hover
+/// 			input-group-inset: (
+/// 				// .has-error .input-group-item:hover .input-group-inset
+/// 				input-group-inset-item: (
+/// 					// .has-error .input-group-item:hover .input-group-inset ~ .input-group-inset-item
+/// 				),
+/// 			),
+/// 		),
+/// 		focus: (
+/// 			// .has-error .input-group-item.focus
+/// 			input-group-inset: (
+/// 				// .has-error .input-group-item.focus .input-group-inset
+/// 				input-group-inset-item: (
+/// 					// .has-error .input-group-item.focus .input-group-inset ~ .input-group-inset-item
+/// 				),
+/// 			),
+/// 		),
+/// 		input-group-inset: (
+/// 			// .has-error .input-group-inset
+/// 			input-group-inset-item: (
+/// 				// .has-error .input-group-inset ~ .input-group-inset-item
+/// 			),
+/// 			hover: (
+/// 				// .has-error .input-group-inset:hover
+/// 				input-group-inset-item: (
+/// 					// .has-error .input-group-inset:hover ~ .input-group-inset-item
+/// 				),
+/// 			),
+/// 			focus: (
+/// 				// .has-error .input-group-inset:focus
+/// 				input-group-inset-item: (
+/// 					// .has-error .input-group-inset:focus ~ .input-group-inset-item
+/// 				),
+/// 			),
+/// 		),
+/// 	),
+/// )
+
+@mixin clay-form-validation-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
+
+	@if ($enabled) {
+		@include clay-css($map);
+
+		label {
+			@include clay-css(map-get($map, label));
+		}
+
+		.custom-control-label,
+		.form-check-label {
+			@include clay-css(map-get($map, custom-control-label));
+		}
+
+		.form-control {
+			@include clay-form-control-variant(map-get($map, form-control));
+		}
+
+		.form-control[readonly] {
+			@include clay-form-control-variant(
+				map-deep-get($map, form-control, readonly)
+			);
+		}
+
+		.form-feedback-item {
+			@include clay-css(map-get($map, form-feedback-item));
+		}
+
+		select.form-control {
+			@include clay-select-variant(
+				map-deep-get($map, select, form-control)
+			);
+
+			&[size] {
+				@include clay-select-variant(
+					map-deep-get($map, select, form-control, size)
+				);
+			}
+
+			&[multiple] {
+				@include clay-select-variant(
+					map-deep-get($map, select, form-control, multiple)
+				);
+			}
+		}
+
+		.input-group-item {
+			@include clay-css(map-get($map, input-group-item));
+
+			&:hover {
+				.input-group-inset {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							input-group-item,
+							hover,
+							input-group-inset
+						)
+					);
+
+					~ .input-group-inset-item {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								input-group-item,
+								hover,
+								input-group-inset,
+								input-group-inset-item
+							)
+						);
+					}
+				}
+			}
+
+			&.focus {
+				@include clay-css(map-deep-get($map, input-group-item, focus));
+
+				.input-group-inset {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							input-group-item,
+							focus,
+							input-group-inset
+						)
+					);
+
+					~ .input-group-inset-item {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								input-group-item,
+								focus,
+								input-group-inset,
+								input-group-inset-item
+							)
+						);
+					}
+				}
+			}
+
+			.input-group-inset {
+				@include clay-css(
+					map-deep-get($map, input-group-item, input-group-inset)
+				);
+
+				~ .input-group-inset-item {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							input-group-item,
+							input-group-inset,
+							input-group-inset-item
+						)
+					);
+				}
+
+				&:hover {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							input-group-item,
+							input-group-inset,
+							hover
+						)
+					);
+
+					~ .input-group-inset-item {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								input-group-item,
+								input-group-inset,
+								hover,
+								input-group-inset-item
+							)
+						);
+					}
+				}
+
+				&:focus {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							input-group-item,
+							input-group-inset,
+							focus
+						)
+					);
+
+					~ .input-group-inset-item {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								input-group-item,
+								input-group-inset,
+								focus,
+								input-group-inset-item
+							)
+						);
+					}
+				}
+			}
+		}
+	}
+}
+
 /// A mixin to create Clay Range variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
