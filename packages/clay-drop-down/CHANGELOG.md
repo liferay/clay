@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** Provide a default on submit function to avoid form navigation ([60a37aa](https://github.com/liferay/clay/commit/60a37aad7b58e7525c7fb681bcb01cb0f3106adf))
+
 # [3.39.0](https://github.com/liferay/clay/compare/v3.38.0...v3.39.0) (2021-10-29)
 
 **Note:** Version bump only for package @clayui/drop-down

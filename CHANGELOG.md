@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
+
+### Bug Fixes
+
+-   **@clayui/css:** `atlas-variables.scss` and `base-variables.scss` should be Sass partials. The CSS equivalent shouldn't be created since these files are only meant to be consumed by `.scss` files. ([5aaa87e](https://github.com/liferay/clay/commit/5aaa87ef21345877e8c287698e431832ccf43f94))
+-   **@clayui/css:** C Kbd and Cadmin C Kbd allow passing in properties to `.c-kbd-group > .c-kbd`, `.c-kbd-group-sm > .c-kbd`, and `.c-kbd-group-lg > .c-kbd` from their respective Sass map variables ([5a9ad67](https://github.com/liferay/clay/commit/5a9ad676078dcafc6407e8ac10342b4a69d30873)), closes [#4367](https://github.com/liferay/clay/issues/4367)
+-   **@clayui/css:** Cadmin Cards use the mixin `clay-card-variant` instead of deprecated mixins to generate styles for `.card-type-asset`, `.image-card`, `.user-card `, `.card-type-directory` ([7a8b6f7](https://github.com/liferay/clay/commit/7a8b6f72e9ca88997fd0164739d6f023b7a2eb96))
+-   **@clayui/css:** Cadmin Input Group move `.btn` and `.form-control` z-index styles to `input-group-prepend` and `input-group-append`. Input Groups input disappears when focused inside a modal with iframe. ([07f17ce](https://github.com/liferay/clay/commit/07f17ce8d34747452a999d70de98a801555caff2))
+-   **@clayui/css:** Cards use the mixin `clay-card-variant` instead of deprecated mixins to generate styles for `.card-type-asset`, `.image-card`, `.user-card `, `.card-type-directory` ([e244162](https://github.com/liferay/clay/commit/e24416210197c9ce793996bb68bddfda1880eb1c))
+-   **@clayui/css:** Icons make them more configurable via `$lexicon-icon`, `$lexicon-icon-sm`, `$lexicon-icon-lg`, `$lexicon-icon-xl` Sass maps ([efe1b80](https://github.com/liferay/clay/commit/efe1b80c5e78886f7eb7b0d938ab84a434311c55))
+-   **@clayui/css:** Input Group move `.btn` and `.form-control` z-index styles to `input-group-prepend` and `input-group-append`. Input Groups input disappears when focused inside a modal with iframe. ([64bd8c8](https://github.com/liferay/clay/commit/64bd8c8b6337087191cd715dffcc2295670c3e51))
+-   **@clayui/css:** Labels and Cadmin Labels Sass maps that are used for `clay-label-variant` hover and focus keys should be nested in `href`. The values are output for the selectors `.label[href]`, `.label[type]`, and `.label[tabindex]`. ([c9e6442](https://github.com/liferay/clay/commit/c9e644207d7ab5704b89ac206fa21a3482007664)), closes [#4383](https://github.com/liferay/clay/issues/4383)
+-   **@clayui/css:** Mixins `clay-card-variant` adds option to output styles for: ([c3e4149](https://github.com/liferay/clay/commit/c3e4149de2a22af688f1bc67510873dafb39f6b5))
+-   **@clayui/css:** Mixins `clay-card-variant` adds options to configure `&.hover`, `&.focus`, and `&:disabled, &.disabled` ([16affad](https://github.com/liferay/clay/commit/16affad472d889d5055b2d8b15060e101adc4a00))
+-   **@clayui/css:** Mixins `clay-card-variant` inlines the `setter`'s that aren't providing any mapping from old keys to new keys ([f0627a8](https://github.com/liferay/clay/commit/f0627a8854de1a65b5b794d018ae58b82b07276e))
+-   **@clayui/css:** Mixins `clay-card-variant` moves the selector `&.card, .card` ([b2f0f19](https://github.com/liferay/clay/commit/b2f0f19c2db55c32661684a09cffe3f391825cc5))
+-   **@clayui/css:** Mixins `clay-card-variant` should be able to output selectors for `clay-card-type-asset-variant`, but removes the default values generated in `clay-card-type-asset-variant` so it doesn't pollute the final CSS with unused rule-sets. ([7bb6050](https://github.com/liferay/clay/commit/7bb6050031cbf8579b6d3153523641610d2cdf55))
+-   **@clayui/css:** Mixins `clay-card-variant` should be able to output selectors for `clay-card-type-asset`, but removes the default values generated in `clay-card-type-asset` so it doesn't pollute the final CSS with unused rule-sets. ([0a3bba0](https://github.com/liferay/clay/commit/0a3bba02f9cad24cc6d166e1020f6aa60d57a0a9))
+-   **@clayui/css:** Mixins `clay-css` should generate `will-change` property ([b176c5b](https://github.com/liferay/clay/commit/b176c5b89556d78a1fa65ae280b345e65460bc9a))
+-   **@clayui/css:** Mixins `clay-dropdown-item-variant` adds option to output styles for `::before` and `::after` pseudo elements for default, hover, focus, active, .active, and disabled states ([8369276](https://github.com/liferay/clay/commit/83692765eb66d156b877ca2a803babf6f96e9ec5)), closes [#4403](https://github.com/liferay/clay/issues/4403)
+-   **@clayui/css:** Mixins `clay-label-variant` target [tabindex] instead of [tabindex="0"] so styles still apply when an element is disabled with negative tabindex ([734470e](https://github.com/liferay/clay/commit/734470ebfc567db067560e6fac5bd79835281f55))
+-   **@clayui/css:** Mixins `clay-link` changes `[@at-root](https://github.com/at-root) { button#{&} { :focus {} } }` to `&[type]:focus` this causes issues for compound selectors. It will generate `button.a .compound-selector` instead of `.a button.compound-selector`. This fix targets the `type` attribute which should be on every button element. ([5ca9e6d](https://github.com/liferay/clay/commit/5ca9e6d0a8d0763f6d1d1ae1f66213f769655694))
+-   **@clayui/css:** Update map keys that are used in `clay-link` to use newer property names and nesting ([d6a25df](https://github.com/liferay/clay/commit/d6a25df57c441f28b19185abf9baba0d3d8823b2))
+-   **@clayui/drop-down:** Provide a default on submit function to avoid form navigation ([60a37aa](https://github.com/liferay/clay/commit/60a37aad7b58e7525c7fb681bcb01cb0f3106adf))
+-   **@clayui/provider:** removes dependency from ClayModal to avoid circular dependency issues ([0b8eade](https://github.com/liferay/clay/commit/0b8eade03bc6a12284662cb5e42d7b1fdb87c20f))
+-   **@clayui/shared:** fixes error when considering an element with negative tabIndex ([da143f0](https://github.com/liferay/clay/commit/da143f09b21c889a3f6586af0f1aa20bd944c60b))
+-   **@clayui/shared:** fixes error when considering an element with negative tabIndex ([9e40c0f](https://github.com/liferay/clay/commit/9e40c0f75c41b9f6cd48e9b5e48f5abde75eda07))
+
+### Features
+
+-   **@clayui/core:** add an onRenameItem callback ([779f3da](https://github.com/liferay/clay/commit/779f3da83e889c382e39efabef872fc58f1e210a))
+-   **@clayui/core:** add an onRenameItem callback ([add2796](https://github.com/liferay/clay/commit/add2796b89b1048525515b1ce470d713e34b9b20))
+-   **@clayui/core:** make it possible to enable or disable drag and drop ([5367061](https://github.com/liferay/clay/commit/536706168e53b427d95fce5dacf18467f6f005ab))
+-   **@clayui/css:** Alerts convert `.alert-fluid` to use `clay-alert-variant` mixin ([15f9355](https://github.com/liferay/clay/commit/15f935538eb75324ac455df124dfd5f36f322ad4))
+-   **@clayui/css:** Cadmin Alerts convert `.alert-fluid` to use `clay-alert-variant` mixin ([3f3f34e](https://github.com/liferay/clay/commit/3f3f34e4b27addc567ea1056bb1436b5712190ac))
+-   **@clayui/css:** Cadmin Dropdowns add Sass map `$cadmin-dropdown-menu` and generate styles for `.dropdown-menu` using `clay-dropdown-menu-variant` ([bbc031a](https://github.com/liferay/clay/commit/bbc031a66f82bba331950491dea5fd20fea44db6))
+-   **@clayui/css:** Cadmin Dropdowns convert `.dropdown-toggle`, `.dropdown-subheader`, `.dropdown-caption`, `.dropdown-item-text`, `.dropdown-section`, `.dropdown-divider`, `.dropdown-action`, and dropdown-menu positional utilities to use Sass maps instead of variables ([1f11eba](https://github.com/liferay/clay/commit/1f11ebaf69613410041ea93571a186929dd64419))
+-   **@clayui/css:** Dropdowns add `$dropdown-menu` Sass map and generate properties using it ([a0d2382](https://github.com/liferay/clay/commit/a0d23828be00c2a050407058b3199f75449a6b6c))
+-   **@clayui/css:** Dropdowns convert `.dropdown-toggle`, `.dropdown-subheader`, `.dropdown-caption`, `.dropdown-item-text`, `.dropdown-section`, `.dropdown-divider`, `.dropdown-action`, and dropdown-menu positional utilities to use Sass maps instead of variables ([0cb1ce7](https://github.com/liferay/clay/commit/0cb1ce74bf95697b6448287488675e77e0d5c828))
+-   **@clayui/css:** Forms adds `.form-fieldset` and `.form-legend` to provide alternative fieldset and legend styles without overriding all `fieldset` and `legend` elements ([3fc7449](https://github.com/liferay/clay/commit/3fc7449e2a2ff17aad828c0a5f0d823147739e5b))
+-   **@clayui/css:** Mixins `clay-alert-variant` adds option to pass in styles to `&.alert-dismissible`, `&.alert-dismissible .container-fluid`, `.alert-indicator .lexicon-icon`, and `.container-fluid` ([807c612](https://github.com/liferay/clay/commit/807c612b29d00e1a4307da499ebd63a5b054598f))
+-   **@clayui/css:** Mixins `clay-css` if parameter is not type map don't do anything ([b994e78](https://github.com/liferay/clay/commit/b994e783814b68f98db184b2d42100f37419053e))
+-   **@clayui/css:** Mixins `clay-dropdown-menu-variant` add customizing `&::before`, `&::after`, and `&.show` ([57903de](https://github.com/liferay/clay/commit/57903deedc8f15ef22c6f813ffa697f790e6c0a6))
+-   **@clayui/css:** Mixins `clay-link` and `clay-button-variant` adds option to customize `inline-item`, `inline-item-before`, `inline-item-middle` and `inline-item-after` in default, hover, focus, active, active-class, and disabled states. ([84fb0d0](https://github.com/liferay/clay/commit/84fb0d07ee6cf19cec663d0e7926ff629eec5655)), closes [#4413](https://github.com/liferay/clay/issues/4413)
+-   **@clayui/css:** Reboot put `fieldset` and `legend` styles in Sass maps `$fieldset` and `$legend` ([92e8254](https://github.com/liferay/clay/commit/92e8254a7c0a2a5c88d93e7fb9d6cd209bab5f03))
+
 # [3.39.0](https://github.com/liferay/clay/compare/v3.38.0...v3.39.0) (2021-10-29)
 
 ### Bug Fixes
