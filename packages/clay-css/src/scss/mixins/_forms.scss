@@ -741,8 +741,17 @@
 /// 			// .has-error .form-control[readonly]
 /// 		),
 /// 	),
+/// 	form-feedback-group: (
+/// 		// .has-error .form-feedback-group
+/// 	),
 /// 	form-feedback-item: (
 /// 		// .has-error .form-feedback-item
+/// 	),
+/// 	form-feedback-indicator: (
+/// 		// .has-error .form-feedback-indicator
+/// 	),
+/// 	form-feedback-text: (
+/// 		// .has-error .form-feedback-text
 /// 	),
 /// 	select: (
 /// 		// N/A
@@ -822,8 +831,20 @@
 			);
 		}
 
+		.form-feedback-group {
+			@include clay-css(map-get($map, form-feedback-group));
+		}
+
 		.form-feedback-item {
 			@include clay-css(map-get($map, form-feedback-item));
+		}
+
+		.form-feedback-indicator {
+			@include clay-css(map-get($map, form-feedback-indicator));
+		}
+
+		.form-feedback-text {
+			@include clay-css(map-get($map, form-feedback-text));
 		}
 
 		select.form-control {
