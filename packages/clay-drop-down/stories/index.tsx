@@ -160,7 +160,6 @@ storiesOf('Components|ClayDropDown', module)
 		return (
 			<DropDownWithState>
 				<ClayDropDown.Search
-					formProps={{onSubmit: (event) => event.preventDefault()}}
 					onChange={(event) => setQuery(event.target.value)}
 					spritemap={spritemap}
 					value={query}
