@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.40.1](https://github.com/liferay/clay/compare/v3.40.0...v3.40.1) (2021-11-17)
+
+
+### Bug Fixes
+
+* **@clayui/css:** revert change to rename variable files ([f951d25](https://github.com/liferay/clay/commit/f951d25bc51cc6e7a509d67692a22a3f2b22eaff))
+
+
+
+
+
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
 
