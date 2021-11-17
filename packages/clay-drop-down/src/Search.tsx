@@ -31,17 +31,20 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	value: React.ReactText;
 }
 
+const defaultOnSubmit = (event: React.SyntheticEvent) => event.preventDefault();
+
 const ClayDropDownSearch: React.FunctionComponent<IProps> = ({
 	className,
 	formProps = {},
 	spritemap,
 	...otherProps
 }: IProps) => {
-	const {className: formClassName, ...otherFormProps} = formProps;
+	const {className: formClassName, onSubmit, ...otherFormProps} = formProps;
 
 	return (
 		<form
 			className={classNames(className, formClassName)}
+			onSubmit={onSubmit ? onSubmit : defaultOnSubmit}
 			{...otherFormProps}
 		>
 			<div className="dropdown-section">
