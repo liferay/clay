@@ -90,6 +90,7 @@ export const TreeViewItem = React.forwardRef<
 							overTarget && overPosition === 'middle',
 						'treeview-dropping-top':
 							overTarget && overPosition === 'top',
+
 						disabled: isDragging,
 					})}
 					onBlur={({currentTarget, relatedTarget}) => {
@@ -121,53 +122,52 @@ export const TreeViewItem = React.forwardRef<
 					}}
 					onFocus={() => actions && setFocus(true)}
 					onKeyDown={async (event) => {
-						const {key} = event;
+							const {key} = event;
 
-						if (key === Keys.Left) {
-							if (
-								!close(item.key) &&
-								item.parentItemRef?.current
-							) {
-								item.parentItemRef.current.focus();
-							}
-						}
-
-						if (key === Keys.Right) {
-							if (!group) {
-								if (onLoadMore) {
-									try {
-										const items = await onLoadMore(item);
-
-										if (!items) {
-											return;
-										}
-
-										insert([...item.indexes, 0], items);
-									} catch (error) {
-										console.error(error);
-
-										return;
-									}
-								} else {
-									return;
+							if (key === Keys.Left) {
+								if (
+									!close(item.key) &&
+									item.parentItemRef?.current
+								) {
+									item.parentItemRef.current.focus();
 								}
 							}
 
-							if (!open(item.key) && item.itemRef.current) {
-								const group =
-									item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
-										'.treeview-group'
-									);
-								const firstItemElement =
-									group?.querySelector<HTMLDivElement>(
-										'.treeview-link'
-									);
-
-								firstItemElement?.focus();
-							} else {
-								item.itemRef.current?.focus();
+							if (key === Keys.Right) {
+								if (!group) {
+									if (onLoadMore) {
+										try {
+											const items = await onLoadMore(
+												item
+											);
+											if (!items) {
+												return;
+											}
+											insert([...item.indexes, 0], items);
+										} catch (error) {
+											console.error(error);
+											return;
+										}
+									} else {
+										return;
+									}
+								}
+								if (!open(item.key) && item.itemRef.current) {
+									const group =
+										item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+											'.treeview-group'
+										);
+									const firstItemElement =
+										group?.querySelector<HTMLDivElement>(
+											'.treeview-link'
+										);
+									firstItemElement?.focus();
+								} else {
+									item.itemRef.current?.focus();
+								}
 							}
-						}
+
+
 
 						if (key === Keys.Backspace || key === Keys.Del) {
 							remove(item.indexes);
@@ -395,7 +395,64 @@ function Actions({children}: TreeViewItemActionsProps) {
 									'component-action',
 									child.props.className
 								),
+								onClick: (
+									event: React.MouseEvent<
+										HTMLButtonElement,
+										MouseEvent
+									>
+								) => {
+									event.stopPropagation();
+
+									if (child.props.onClick) {
+										child.props.onClick(event);
+									}
+								},
 								tabIndex: -1,
+							})}
+						</Layout.ContentCol>
+					);
+				} else if (child.type.displayName === 'ClayDropDownWithItems') {
+					return (
+						<Layout.ContentCol key={index}>
+							{React.cloneElement(child, {
+								trigger: React.cloneElement(
+									child.props.trigger,
+									{
+										children: (
+											<div
+												className="c-inner"
+												tabIndex={-2}
+											>
+												{
+													child.props.trigger.props
+														.children
+												}
+											</div>
+										),
+										className: classNames(
+											'component-action',
+											child.props.trigger.props.className
+										),
+										onClick: (
+											event: React.MouseEvent<
+												HTMLButtonElement,
+												MouseEvent
+											>
+										) => {
+											event.stopPropagation();
+
+											if (
+												child.props.trigger.props
+													.onClick
+											) {
+												child.props.trigger.props.onClick(
+													event
+												);
+											}
+										},
+										tabIndex: -1,
+									}
+								),
 							})}
 						</Layout.ContentCol>
 					);
