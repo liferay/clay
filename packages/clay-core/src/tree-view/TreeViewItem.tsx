@@ -13,7 +13,7 @@ import React, {useContext} from 'react';
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
-interface ITreeViewItemProps
+export interface ITreeViewItemProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
 	children: React.ReactNode;
 	isDragging?: boolean;
