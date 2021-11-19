@@ -13,238 +13,236 @@ import React, {useContext} from 'react';
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
-type TreeViewItemProps = {
+export interface ITreeViewItemProps
+	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
 	children: React.ReactNode;
 	isDragging?: boolean;
 	overPosition?: string;
 	overTarget?: boolean;
-};
+}
 
 const SpacingContext = React.createContext(0);
 
-export const TreeViewItem = React.forwardRef<HTMLDivElement, TreeViewItemProps>(
-	function TreeViewItemInner(
-		{children, isDragging, overPosition, overTarget},
-		ref
-	) {
-		const spacing = useContext(SpacingContext);
-		const {
-			childrenRoot,
-			close,
-			expandedKeys,
-			insert,
-			nestedKey,
-			onLoadMore,
-			onRenameItem,
-			open,
-			remove,
-			replace,
-			rootRef,
-			selection,
-			toggle,
-		} = useTreeViewContext();
+export const TreeViewItem = React.forwardRef<
+	HTMLDivElement,
+	ITreeViewItemProps
+>(function TreeViewItemInner(
+	{children, className, isDragging, overPosition, overTarget, ...otherProps},
+	ref
+) {
+	const spacing = useContext(SpacingContext);
+	const {
+		childrenRoot,
+		close,
+		expandedKeys,
+		insert,
+		nestedKey,
+		onLoadMore,
+		onRenameItem,
+		open,
+		remove,
+		replace,
+		rootRef,
+		selection,
+		toggle,
+	} = useTreeViewContext();
 
-		const item = useItem();
+	const item = useItem();
 
-		const [left, right] = React.Children.toArray(children);
+	const [left, right] = React.Children.toArray(children);
 
-		const group =
-			// @ts-ignore
-			right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
+	const group =
+		// @ts-ignore
+		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
-		if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
-			return React.cloneElement(childrenRoot.current(item), {
-				isDragging,
-				overPosition,
-				overTarget,
-				ref,
-			});
-		}
+	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
+		return React.cloneElement(childrenRoot.current(item), {
+			isDragging,
+			overPosition,
+			overTarget,
+			ref,
+		});
+	}
 
-		return (
-			<SpacingContext.Provider value={spacing + 24}>
-				<li
-					className={classNames('treeview-item', {
-						disabled: isDragging,
+	return (
+		<SpacingContext.Provider value={spacing + 24}>
+			<li
+				{...otherProps}
+				className={classNames('treeview-item', className, {
+					disabled: isDragging,
+				})}
+				role="none"
+			>
+				<div
+					aria-expanded={
+						group ? expandedKeys.has(item.key) : undefined
+					}
+					className={classNames('treeview-link', {
+						collapsed: group && expandedKeys.has(item.key),
+						'treeview-dropping-bottom':
+							overTarget && overPosition === 'bottom',
+						'treeview-dropping-middle':
+							overTarget && overPosition === 'middle',
+						'treeview-dropping-top':
+							overTarget && overPosition === 'top',
 					})}
-					role="none"
-				>
-					<div
-						aria-expanded={
-							group ? expandedKeys.has(item.key) : undefined
+					onClick={async () => {
+						if (group) {
+							toggle(item.key);
+						} else {
+							if (onLoadMore) {
+								try {
+									const items = await onLoadMore(item);
+
+									if (items) {
+										insert([...item.indexes, 0], items);
+										toggle(item.key);
+									}
+								} catch (error) {
+									console.error(error);
+								}
+							}
 						}
-						className={classNames('treeview-link', {
-							collapsed: group && expandedKeys.has(item.key),
-							'treeview-dropping-bottom':
-								overTarget && overPosition === 'bottom',
-							'treeview-dropping-middle':
-								overTarget && overPosition === 'middle',
-							'treeview-dropping-top':
-								overTarget && overPosition === 'top',
-						})}
-						onClick={async () => {
-							if (group) {
-								toggle(item.key);
-							} else {
+					}}
+					onKeyDown={async (event) => {
+						const {key} = event;
+
+						if (key === Keys.Left) {
+							if (
+								!close(item.key) &&
+								item.parentItemRef?.current
+							) {
+								item.parentItemRef.current.focus();
+							}
+						}
+
+						if (key === Keys.Right) {
+							if (!group) {
 								if (onLoadMore) {
 									try {
 										const items = await onLoadMore(item);
 
-										if (items) {
-											insert([...item.indexes, 0], items);
-											toggle(item.key);
-										}
-									} catch (error) {
-										console.error(error);
-									}
-								}
-							}
-						}}
-						onKeyDown={async (event) => {
-							const {key} = event;
-
-							if (key === Keys.Left) {
-								if (
-									!close(item.key) &&
-									item.parentItemRef?.current
-								) {
-									item.parentItemRef.current.focus();
-								}
-							}
-
-							if (key === Keys.Right) {
-								if (!group) {
-									if (onLoadMore) {
-										try {
-											const items = await onLoadMore(
-												item
-											);
-
-											if (!items) {
-												return;
-											}
-
-											insert([...item.indexes, 0], items);
-										} catch (error) {
-											console.error(error);
-
+										if (!items) {
 											return;
 										}
-									} else {
+
+										insert([...item.indexes, 0], items);
+									} catch (error) {
+										console.error(error);
+
 										return;
 									}
-								}
-
-								if (!open(item.key) && item.itemRef.current) {
-									const group =
-										item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
-											'.treeview-group'
-										);
-									const firstItemElement =
-										group?.querySelector<HTMLDivElement>(
-											'.treeview-link'
-										);
-
-									firstItemElement?.focus();
 								} else {
-									item.itemRef.current?.focus();
+									return;
 								}
 							}
 
-							if (key === Keys.Backspace || key === Keys.Del) {
-								remove(item.indexes);
+							if (!open(item.key) && item.itemRef.current) {
+								const group =
+									item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+										'.treeview-group'
+									);
+								const firstItemElement =
+									group?.querySelector<HTMLDivElement>(
+										'.treeview-link'
+									);
 
-								item.parentItemRef.current?.focus();
-							}
-
-							if (key === Keys.End) {
-								const lastListElement = rootRef.current
-									?.lastElementChild as HTMLLinkElement;
-								const linkElement =
-									lastListElement.firstElementChild as HTMLDivElement;
-								linkElement.focus();
-							}
-
-							if (key === Keys.Home) {
-								const firstListElement = rootRef.current
-									?.firstElementChild as HTMLLinkElement;
-								const linkElement =
-									firstListElement.firstElementChild as HTMLDivElement;
-								linkElement.focus();
-							}
-
-							if (
-								(key.toUpperCase() === Keys.R ||
-									key === Keys.F2) &&
-								onRenameItem
-							) {
-								const newItem = await onRenameItem({...item});
-
-								replace(item.indexes, {
-									...newItem,
-									index: item.index,
-									indexes: item.indexes,
-									itemRef: item.itemRef,
-									key: item.key,
-									parentItemRef: item.parentItemRef,
-								});
-
+								firstItemElement?.focus();
+							} else {
 								item.itemRef.current?.focus();
 							}
+						}
 
-							if (key === Keys.Spacebar) {
-								selection.toggleSelection(item.key);
-							}
-						}}
-						ref={ref}
-						role="treeitem"
+						if (key === Keys.Backspace || key === Keys.Del) {
+							remove(item.indexes);
+
+							item.parentItemRef.current?.focus();
+						}
+
+						if (key === Keys.End) {
+							const lastListElement = rootRef.current
+								?.lastElementChild as HTMLLinkElement;
+							const linkElement =
+								lastListElement.firstElementChild as HTMLDivElement;
+							linkElement.focus();
+						}
+
+						if (key === Keys.Home) {
+							const firstListElement = rootRef.current
+								?.firstElementChild as HTMLLinkElement;
+							const linkElement =
+								firstListElement.firstElementChild as HTMLDivElement;
+							linkElement.focus();
+						}
+
+						if (
+							(key.toUpperCase() === Keys.R || key === Keys.F2) &&
+							onRenameItem
+						) {
+							const newItem = await onRenameItem({...item});
+
+							replace(item.indexes, {
+								...newItem,
+								index: item.index,
+								indexes: item.indexes,
+								itemRef: item.itemRef,
+								key: item.key,
+								parentItemRef: item.parentItemRef,
+							});
+
+							item.itemRef.current?.focus();
+						}
+
+						if (key === Keys.Spacebar) {
+							selection.toggleSelection(item.key);
+						}
+					}}
+					ref={ref}
+					role="treeitem"
+					style={{
+						paddingLeft: `${spacing + (group ? 0 : 24)}px`,
+					}}
+					tabIndex={0}
+				>
+					<span
+						className="c-inner"
 						style={{
-							paddingLeft: `${spacing + (group ? 0 : 24)}px`,
+							marginLeft: `-${spacing + (group ? 0 : 24)}px`,
 						}}
-						tabIndex={0}
+						tabIndex={-2}
 					>
-						<span
-							className="c-inner"
-							style={{
-								marginLeft: `-${spacing + (group ? 0 : 24)}px`,
-							}}
-							tabIndex={-2}
-						>
-							{typeof left === 'string' ? (
-								<Layout.ContentRow>
-									<Layout.ContentCol expand>
-										<div className="component-text">
-											{left}
-										</div>
-									</Layout.ContentCol>
-								</Layout.ContentRow>
-							) : group ? (
-								left
-							) : (
-								<TreeViewItemStack expandable={false}>
-									{children}
-								</TreeViewItemStack>
-							)}
-						</span>
-					</div>
-					{group}
-				</li>
-			</SpacingContext.Provider>
-		);
-	}
-);
+						{typeof left === 'string' ? (
+							<Layout.ContentRow>
+								<Layout.ContentCol expand>
+									<div className="component-text">{left}</div>
+								</Layout.ContentCol>
+							</Layout.ContentRow>
+						) : group ? (
+							left
+						) : (
+							<TreeViewItemStack expandable={false}>
+								{children}
+							</TreeViewItemStack>
+						)}
+					</span>
+				</div>
+				{group}
+			</li>
+		</SpacingContext.Provider>
+	);
+});
 
 TreeViewItem.displayName = 'ClayTreeViewItem';
 
-type TreeViewItemStackProps = {
-	children: React.ReactNode;
+interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	expandable?: boolean;
-};
+}
 
 export function TreeViewItemStack({
 	children,
 	expandable = true,
-}: TreeViewItemStackProps) {
+	...otherProps
+}: ITreeViewItemStackProps) {
 	const {expandedKeys, expanderIcons, selection, toggle} =
 		useTreeViewContext();
 
@@ -253,7 +251,7 @@ export function TreeViewItemStack({
 	const childrenArray = React.Children.toArray(children);
 
 	return (
-		<Layout.ContentRow>
+		<Layout.ContentRow {...otherProps}>
 			{expandable && (
 				<Layout.ContentCol>
 					<Button

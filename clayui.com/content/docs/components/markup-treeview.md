@@ -2,6 +2,7 @@
 title: 'Treeview'
 description: 'A tree view is a component-based on nodes that are shown in a hierarchical structure.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/tree-view/'
+mainTabURL: 'docs/components/treeview.html'
 ---
 
 <div class="nav-toc-absolute">

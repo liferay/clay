@@ -25,7 +25,6 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 	onLoadMore?: (item: T) => Promise<unknown>;
 	onRenameItem?: (item: T) => Promise<T>;
-	rootRef?: React.RefObject<HTMLUListElement>;
 	selectionMode?: 'multiple' | 'single';
 	showExpanderOnHover?: boolean;
 }
@@ -97,7 +96,7 @@ export function TreeView<T>({
 				ref={rootRef}
 				role="tree"
 			>
-				<DndProvider backend={HTML5Backend}>
+				<DndProvider backend={HTML5Backend} context={window}>
 					<TreeViewContext.Provider value={context}>
 						<Collection<T> items={state.items}>
 							{children}

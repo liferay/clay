@@ -12,21 +12,28 @@ import {Collection, ICollectionProps} from './Collection';
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
-export function TreeViewGroup<T>(props: ICollectionProps<T>): JSX.Element & {
+interface ITreeViewGroupProps<T>
+	extends ICollectionProps<T>,
+		Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {}
+
+export function TreeViewGroup<T>(props: ITreeViewGroupProps<T>): JSX.Element & {
 	displayName: string;
 };
 
 export function TreeViewGroup<T extends Record<any, any>>({
 	children,
+	className,
 	items,
-}: ICollectionProps<T>) {
+	...otherProps
+}: ITreeViewGroupProps<T>) {
 	const {expandedKeys} = useTreeViewContext();
 
 	const item = useItem();
 
 	return (
 		<CSSTransition
-			className={classNames('collapse', {
+			{...otherProps}
+			className={classNames('collapse', className, {
 				show: expandedKeys.has(item.key),
 			})}
 			classNames={{

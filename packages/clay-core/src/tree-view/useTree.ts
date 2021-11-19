@@ -34,7 +34,6 @@ export interface ITreeProps<T>
 		Pick<ICollectionProps<T>, 'items'> {
 	nestedKey?: string;
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
-	rootRef?: React.RefObject<HTMLUListElement>;
 	selectionMode?: 'multiple' | 'single';
 }
 
