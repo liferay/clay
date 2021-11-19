@@ -28,7 +28,15 @@ export const TreeViewItem = React.forwardRef<
 	HTMLDivElement,
 	ITreeViewItemProps
 >(function TreeViewItemInner(
-	{actions, children, className, isDragging, overPosition, overTarget, ...otherProps},
+	{
+		actions,
+		children,
+		className,
+		isDragging,
+		overPosition,
+		overTarget,
+		...otherProps
+	},
 	ref
 ) {
 	const spacing = useContext(SpacingContext);
@@ -83,6 +91,7 @@ export const TreeViewItem = React.forwardRef<
 					}
 					className={classNames('treeview-link', {
 						collapsed: group && expandedKeys.has(item.key),
+						disabled: isDragging,
 						focus,
 						'treeview-dropping-bottom':
 							overTarget && overPosition === 'bottom',
@@ -90,8 +99,6 @@ export const TreeViewItem = React.forwardRef<
 							overTarget && overPosition === 'middle',
 						'treeview-dropping-top':
 							overTarget && overPosition === 'top',
-
-						disabled: isDragging,
 					})}
 					onBlur={({currentTarget, relatedTarget}) => {
 						if (
@@ -122,52 +129,49 @@ export const TreeViewItem = React.forwardRef<
 					}}
 					onFocus={() => actions && setFocus(true)}
 					onKeyDown={async (event) => {
-							const {key} = event;
+						const {key} = event;
 
-							if (key === Keys.Left) {
-								if (
-									!close(item.key) &&
-									item.parentItemRef?.current
-								) {
-									item.parentItemRef.current.focus();
-								}
+						if (key === Keys.Left) {
+							if (
+								!close(item.key) &&
+								item.parentItemRef?.current
+							) {
+								item.parentItemRef.current.focus();
 							}
+						}
 
-							if (key === Keys.Right) {
-								if (!group) {
-									if (onLoadMore) {
-										try {
-											const items = await onLoadMore(
-												item
-											);
-											if (!items) {
-												return;
-											}
-											insert([...item.indexes, 0], items);
-										} catch (error) {
-											console.error(error);
+						if (key === Keys.Right) {
+							if (!group) {
+								if (onLoadMore) {
+									try {
+										const items = await onLoadMore(item);
+										if (!items) {
 											return;
 										}
-									} else {
+										insert([...item.indexes, 0], items);
+									} catch (error) {
+										console.error(error);
+
 										return;
 									}
-								}
-								if (!open(item.key) && item.itemRef.current) {
-									const group =
-										item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
-											'.treeview-group'
-										);
-									const firstItemElement =
-										group?.querySelector<HTMLDivElement>(
-											'.treeview-link'
-										);
-									firstItemElement?.focus();
 								} else {
-									item.itemRef.current?.focus();
+									return;
 								}
 							}
-
-
+							if (!open(item.key) && item.itemRef.current) {
+								const group =
+									item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+										'.treeview-group'
+									);
+								const firstItemElement =
+									group?.querySelector<HTMLDivElement>(
+										'.treeview-link'
+									);
+								firstItemElement?.focus();
+							} else {
+								item.itemRef.current?.focus();
+							}
+						}
 
 						if (key === Keys.Backspace || key === Keys.Del) {
 							remove(item.indexes);
@@ -220,44 +224,40 @@ export const TreeViewItem = React.forwardRef<
 					}}
 					tabIndex={0}
 				>
+					<span
+						className="c-inner"
+						style={{
+							marginLeft: `-${spacing + (group ? 0 : 24)}px`,
+						}}
+						tabIndex={-2}
+					>
+						{typeof left === 'string' ? (
+							<Layout.ContentRow>
+								<Layout.ContentCol expand>
+									<div className="component-text">{left}</div>
+								</Layout.ContentCol>
 
-						<span
-							className="c-inner"
-							style={{
-								marginLeft: `-${spacing + (group ? 0 : 24)}px`,
-							}}
-							tabIndex={-2}
-						>
-							{typeof left === 'string' ? (
-								<Layout.ContentRow>
-									<Layout.ContentCol expand>
-										<div className="component-text">
-											{left}
-										</div>
-									</Layout.ContentCol>
-
-									{actions && <Actions>{actions}</Actions>}
-								</Layout.ContentRow>
-							) : group ? (
-								React.cloneElement(left as React.ReactElement, {
-									actions,
-								})
-							) : (
-								<TreeViewItemStack
-									actions={actions}
-									expandable={false}
-								>
-									{children}
-								</TreeViewItemStack>
-							)}
-						</span>
-					</div>
-					{group}
-				</li>
-			</SpacingContext.Provider>
-		);
-	}
-);
+								{actions && <Actions>{actions}</Actions>}
+							</Layout.ContentRow>
+						) : group ? (
+							React.cloneElement(left as React.ReactElement, {
+								actions,
+							})
+						) : (
+							<TreeViewItemStack
+								actions={actions}
+								expandable={false}
+							>
+								{children}
+							</TreeViewItemStack>
+						)}
+					</span>
+				</div>
+				{group}
+			</li>
+		</SpacingContext.Provider>
+	);
+});
 
 TreeViewItem.displayName = 'ClayTreeViewItem';
 
