@@ -231,10 +231,43 @@ storiesOf('Components|ClayTreeView', module)
 				>
 					<TreeView.ItemStack>
 						<Icon symbol="folder" />
-						Root
+						Folder 1
 					</TreeView.ItemStack>
 					<TreeView.Group>
-						<TreeView.Item>Item</TreeView.Item>
+						<TreeView.Item>Item 1</TreeView.Item>
+						<TreeView.Item>Item 2</TreeView.Item>
+						<TreeView.Item>Item 3</TreeView.Item>
+					</TreeView.Group>
+				</TreeView.Item>
+				<TreeView.Item
+					actions={
+						<>
+							<Button displayType={null} monospaced>
+								<Icon symbol="times" />
+							</Button>
+							<DropDownWithItems
+								items={[
+									{label: 'Four'},
+									{label: 'Five'},
+									{label: 'Six'},
+								]}
+								trigger={
+									<Button displayType={null} monospaced>
+										<Icon symbol="ellipsis-v" />
+									</Button>
+								}
+							/>
+						</>
+					}
+				>
+					<TreeView.ItemStack>
+						<Icon symbol="folder" />
+						Folder 2
+					</TreeView.ItemStack>
+					<TreeView.Group>
+						<TreeView.Item>Item 4</TreeView.Item>
+						<TreeView.Item>Item 5</TreeView.Item>
+						<TreeView.Item>Item 6</TreeView.Item>
 					</TreeView.Group>
 				</TreeView.Item>
 			</TreeView>
