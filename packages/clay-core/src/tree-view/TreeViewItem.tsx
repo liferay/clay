@@ -91,7 +91,6 @@ export const TreeViewItem = React.forwardRef<
 					}
 					className={classNames('treeview-link', {
 						collapsed: group && expandedKeys.has(item.key),
-						disabled: isDragging,
 						focus,
 						'treeview-dropping-bottom':
 							overTarget && overPosition === 'bottom',
