@@ -371,11 +371,43 @@ $input-select-icon-disabled: clay-icon(
 	$input-select-icon-disabled-color
 ) !default;
 
+// select.form-control[size]
+
+// focus.option.checked: Chrome can't style text, we invert colors to make text white
+// option.checked: hack for changing the background-color
+// firefox-only: overwrite some styles for Chrome to make it match Lexicon
+
 $input-select-size: () !default;
 $input-select-size: map-deep-merge(
 	(
+		focus: (
+			option: (
+				checked: (
+					background-image: linear-gradient(#ffa700, #ffa700),
+					color: #fff,
+					filter: invert(100%),
+				),
+			),
+		),
 		option: (
-			padding: 0.25rem 0.5rem,
+			padding: 0.4375rem 0.5rem,
+			checked: (
+				background-image: linear-gradient(#{$gray-300}, #{$gray-300}),
+			),
+		),
+		firefox-only: (
+			focus: (
+				option: (
+					checked: (
+						background-image:
+							linear-gradient(#{$primary-d2}, #{$primary-d2}),
+						filter: invert(0),
+					),
+				),
+			),
+			option: (
+				padding: 0.40625rem 0.5rem,
+			),
 		),
 	),
 	$input-select-size
