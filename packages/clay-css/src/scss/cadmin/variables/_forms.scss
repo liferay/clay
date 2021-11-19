@@ -872,6 +872,9 @@ $cadmin-form-control-select-sm: map-deep-merge(
 
 // scrollbar-width: Future proof https://github.com/w3c/csswg-drafts/issues/1958
 // if/when it gets added
+// focus.option.checked: Chrome can't style text, we invert colors to make text white
+// option.checked: hack for changing the background-color
+// firefox-only: undo some styles for Chrome to make it match Lexicon
 
 $cadmin-input-select-size: () !default;
 $cadmin-input-select-size: map-deep-merge(
@@ -883,9 +886,36 @@ $cadmin-input-select-size: map-deep-merge(
 		scrollbar-width: thin,
 		focus: (
 			background-image: none,
+			option: (
+				checked: (
+					background-image: linear-gradient(#ffa700, #ffa700),
+					filter: invert(100%),
+				),
+			),
 		),
 		option: (
-			padding: 4px 8px,
+			padding: 7px 8px,
+			checked: (
+				background-image:
+					linear-gradient(#{$cadmin-gray-300}, #{$cadmin-gray-300}),
+			),
+		),
+		firefox-only: (
+			focus: (
+				option: (
+					checked: (
+						background-image:
+							linear-gradient(
+								#{$cadmin-primary-d2},
+								#{$cadmin-primary-d2}
+							),
+						filter: invert(0),
+					),
+				),
+			),
+			option: (
+				padding: 0.40625rem 0.5rem,
+			),
 		),
 	),
 	$cadmin-input-select-size
