@@ -11,6 +11,7 @@ There are two types of documents, repository infrastructure documents, release c
 -   [Developing components](developing_components.md)
 -   [How are clayui.com pages created](creating_pages.md)
 -   [Clay CSS Version History](clay_css_version_history.md)
+-   [TreeView Performance Analysis](treeview_performance.md)
 
 ## RFCs
 

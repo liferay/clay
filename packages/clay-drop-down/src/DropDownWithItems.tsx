@@ -469,3 +469,5 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 		</ClayDropDown>
 	);
 };
+
+ClayDropDownWithItems.displayName = 'ClayDropDownWithItems';
