@@ -532,18 +532,62 @@
 /// A mixin to create Select Form Control variants. You can base your variant off Bootstrap's `select.form-control` selector or create your own base class (e.g., `<select class="form-control my-custom-form-control"></select>` or `<select class="my-custom-form-control"></select>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// See Mixin `clay-css` for available keys to pass into the base selector
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// select.form-control
+/// 	hover: (
+/// 		// select.form-control:hover
+/// 		option: (
+/// 			// select.form-control:hover > option
+/// 			checked: (
+/// 				// select.form-control:hover > option:checked
+/// 			),
+/// 		),
+/// 	),
+/// 	focus: (
+/// 		// select.form-control:focus,
+/// 		// select.form-control.focus
+/// 		option: (
+/// 			// select.form-control:focus > option,
+/// 			// select.form-control.focus > option
+/// 			checked: (
+/// 				// select.form-control:focus > option:checked,
+/// 				// select.form-control.focus > option:checked
+/// 			),
+/// 		),
+/// 	),
+/// 	disabled: (
+/// 		// select.form-control:disabled,
+/// 		// select.form-control.disabled
+/// 		option: (
+/// 			// select.form-control:disabled > option,
+/// 			// select.form-control.disabled > option
+/// 			checked: (
+/// 				// select.form-control:disabled > option:checked,
+/// 				// select.form-control.disabled > option:checked
+/// 			),
+/// 		),
+/// 	),
+/// 	option: (
+/// 		// select.form-control option
+/// 		checked: (
+/// 			// select.form-control option:checked
+/// 		),
+/// 	),
+/// 	firefox-only: (
+/// 		// Same selectors as above scoped only for firefox browsers
+/// 	),
+/// )
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// hover-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// hover-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
 /// hover-box-shadow: {String | List | Null}, // deprecated after 3.7.0
 /// hover-color: {Color | String | Null}, // deprecated after 3.7.0
-/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
 /// focus-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// focus-bg-image: {String | List | Null}, // deprecated after 3.7.0
 /// focus-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
 /// focus-box-shadow: {String | List | Null}, // deprecated after 3.7.0
 /// focus-color: {Color | String | Null}, // deprecated after 3.7.0
-/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
 /// disabled-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// disabled-bg-image: {String | List | Null}, // deprecated after 3.7.0
 /// disabled-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
@@ -551,7 +595,6 @@
 /// disabled-color: {Color | String | Null}, // deprecated after 3.7.0
 /// disabled-cursor: {String | Null}, // deprecated after 3.7.0
 /// disabled-opacity: {Number | String | Null}, // deprecated after 3.7.0
-/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
@@ -702,11 +745,27 @@
 
 		&:hover {
 			@include clay-css($hover);
+
+			> option {
+				@include clay-css(map-get($hover, option));
+
+				&:checked {
+					@include clay-css(map-deep-get($hover, option, checked));
+				}
+			}
 		}
 
 		&:focus,
 		&.focus {
 			@include clay-css($focus);
+
+			> option {
+				@include clay-css(map-get($focus, option));
+
+				&:checked {
+					@include clay-css(map-deep-get($focus, option, checked));
+				}
+			}
 		}
 
 		&:disabled,
@@ -715,11 +774,105 @@
 
 			> option {
 				@include clay-css($disabled-option);
+
+				&:checked {
+					@include clay-css(map-get($disabled-option, checked));
+				}
 			}
 		}
 
 		option {
 			@include clay-css($option);
+
+			&:checked {
+				@include clay-css(map-get($option, checked));
+			}
+		}
+
+		@if (map-get($map, firefox-only)) {
+			@-moz-document url-prefix() {
+				@include clay-css(map-get($map, firefox-only));
+
+				&:hover {
+					@include clay-css(map-deep-get($map, firefox-only, hover));
+
+					> option {
+						@include clay-css(
+							map-deep-get($map, firefox-only, hover, option)
+						);
+
+						&:checked {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									firefox-only,
+									hover,
+									option,
+									checked
+								)
+							);
+						}
+					}
+				}
+
+				&:focus,
+				&.focus {
+					@include clay-css(map-deep-get($map, firefox-only, focus));
+
+					> option {
+						@include clay-css(
+							map-deep-get($map, firefox-only, focus, option)
+						);
+
+						&:checked {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									firefox-only,
+									focus,
+									option,
+									checked
+								)
+							);
+						}
+					}
+				}
+
+				&:disabled,
+				&.disabled {
+					@include clay-css(
+						map-deep-get($map, firefox-only, disabled)
+					);
+
+					> option {
+						@include clay-css(
+							map-deep-get($map, firefox-only, disabled, option)
+						);
+
+						&:checked {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									firefox-only,
+									disabled,
+									option,
+									checked
+								)
+							);
+						}
+					}
+				}
+
+				option {
+					@include clay-css(map-deep-get($map, firefox-only, option));
+
+					&:checked {
+						@include clay-css(
+							map-deep-get($map, firefox-only, option, checked)
+						);
+					}
+				}
+			}
 		}
 	}
 }
