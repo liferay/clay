@@ -36,7 +36,7 @@ export const TreeViewItem = React.forwardRef<
 		overPosition,
 		overTarget,
 		...otherProps
-	},
+	}: ITreeViewItemProps,
 	ref
 ) {
 	const spacing = useContext(SpacingContext);
