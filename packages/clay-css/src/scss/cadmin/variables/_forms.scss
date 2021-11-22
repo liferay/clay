@@ -513,18 +513,69 @@ $cadmin-form-check-inline-margin-x: 12px !default;
 
 $cadmin-form-check-inline-input-margin-x: auto !default;
 
-// Form Feedback
+// .form-feedback-group
+
+$cadmin-form-feedback-group: () !default;
+$cadmin-form-feedback-group: map-merge(
+	(
+		width: 100%,
+		word-wrap: break-word,
+	),
+	$cadmin-form-feedback-group
+);
+
+// .form-text
 
 $cadmin-form-text-color: $cadmin-gray-600 !default;
 $cadmin-form-text-font-size: 14px !default; // 14px
 $cadmin-form-text-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-form-text-margin-top: 4px !default;
 
+$cadmin-form-text: () !default;
+$cadmin-form-text: map-merge(
+	(
+		color: $cadmin-form-text-color,
+		display: block,
+		font-size: $cadmin-form-text-font-size,
+		font-weight: $cadmin-form-text-font-weight,
+		margin-top: $cadmin-form-text-margin-top,
+		word-wrap: break-word,
+	),
+	$cadmin-form-text
+);
+
+// .form-feedback-item
+
 $cadmin-form-feedback-font-size: 0.875rem !default;
 $cadmin-form-feedback-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-form-feedback-margin-top: 0.25rem !default;
 
+$cadmin-form-feedback-item: () !default;
+$cadmin-form-feedback-item: map-merge(
+	(
+		font-size: $cadmin-form-feedback-font-size,
+		font-weight: $cadmin-form-feedback-font-weight,
+		margin-top: $cadmin-form-feedback-margin-top,
+		word-wrap: break-word,
+	),
+	$cadmin-form-feedback-item
+);
+
+// .form-feedback-indicator
+
 $cadmin-form-feedback-indicator-margin-x: 0 !default;
+
+$cadmin-form-feedback-indicator: () !default;
+$cadmin-form-feedback-indicator: map-deep-merge(
+	(
+		margin-left: $cadmin-form-feedback-indicator-margin-x,
+		margin-right: $cadmin-form-feedback-indicator-margin-x,
+		first-child: (
+			margin-left: 0,
+		),
+	),
+	$cadmin-form-feedback-indicator
+);
 
 $cadmin-form-feedback-valid-color: $cadmin-success !default;
 
@@ -612,6 +663,96 @@ $cadmin-input-danger-select-multiple: map-deep-merge(
 	$cadmin-input-danger-select-multiple
 );
 
+// .has-error
+
+$cadmin-has-error: () !default;
+$cadmin-has-error: map-deep-merge(
+	(
+		label: (
+			color: $cadmin-input-danger-label-color,
+		),
+		custom-control-label: (
+			color: $cadmin-input-danger-checkbox-label-color,
+		),
+		form-control:
+			map-deep-merge(
+				(
+					readonly: $cadmin-input-danger-readonly,
+				),
+				$cadmin-input-danger
+			),
+		form-feedback-item: (
+			color: $cadmin-form-feedback-invalid-color,
+		),
+		select: (
+			form-control:
+				map-deep-merge(
+					(
+						multiple: $cadmin-input-danger-select-multiple,
+						size: $cadmin-input-danger-select-size,
+					),
+					$cadmin-input-danger-select
+				),
+		),
+		input-group-item: (
+			focus: (
+				box-shadow:
+					setter(
+						$cadmin-input-danger-focus-box-shadow,
+						$cadmin-input-danger-box-shadow
+					),
+				input-group-inset: (
+					background-color:
+						setter(
+							$cadmin-input-danger-focus-bg,
+							$cadmin-input-danger-bg
+						),
+					border-color:
+						setter(
+							$cadmin-input-danger-focus-border-color,
+							$cadmin-input-danger-border-color
+						),
+					input-group-inset-item: (
+						background-color:
+							setter(
+								$cadmin-input-danger-focus-bg,
+								$cadmin-input-danger-bg
+							),
+						border-color:
+							setter(
+								$cadmin-input-danger-focus-border-color,
+								$cadmin-input-danger-border-color
+							),
+					),
+				),
+			),
+			input-group-inset: (
+				input-group-inset-item: (
+					background-color: $cadmin-input-danger-bg,
+					border-color: $cadmin-input-danger-border-color,
+					box-shadow: $cadmin-input-danger-box-shadow,
+				),
+				focus: (
+					box-shadow: none,
+					input-group-inset-item: (
+						background-color:
+							setter(
+								$cadmin-input-danger-focus-bg,
+								$cadmin-input-danger-bg
+							),
+						border-color:
+							setter(
+								$cadmin-input-danger-focus-border-color,
+								$cadmin-input-danger-border-color
+							),
+					),
+				),
+			),
+		),
+	),
+	$cadmin-has-error
+);
+
 // .has-warning .form-control
 
 $cadmin-input-warning-bg: $cadmin-warning-l2 !default;
@@ -692,6 +833,96 @@ $cadmin-input-warning-select-multiple: map-deep-merge(
 	$cadmin-input-warning-select-multiple
 );
 
+// .has-warning
+
+$cadmin-has-warning: () !default;
+$cadmin-has-warning: map-deep-merge(
+	(
+		label: (
+			color: $cadmin-input-warning-label-color,
+		),
+		custom-control-label: (
+			color: $cadmin-input-warning-checkbox-label-color,
+		),
+		form-control:
+			map-deep-merge(
+				(
+					readonly: $cadmin-input-warning-readonly,
+				),
+				$cadmin-input-warning
+			),
+		form-feedback-item: (
+			color: $cadmin-form-feedback-warning-color,
+		),
+		select: (
+			form-control:
+				map-deep-merge(
+					(
+						multiple: $cadmin-input-warning-select-multiple,
+						size: $cadmin-input-warning-select-size,
+					),
+					$cadmin-input-warning-select
+				),
+		),
+		input-group-item: (
+			focus: (
+				box-shadow:
+					setter(
+						$cadmin-input-warning-focus-box-shadow,
+						$cadmin-input-warning-box-shadow
+					),
+				input-group-inset: (
+					background-color:
+						setter(
+							$cadmin-input-warning-focus-bg,
+							$cadmin-input-warning-bg
+						),
+					border-color:
+						setter(
+							$cadmin-input-warning-focus-border-color,
+							$cadmin-input-warning-border-color
+						),
+					input-group-inset-item: (
+						background-color:
+							setter(
+								$cadmin-input-warning-focus-bg,
+								$cadmin-input-warning-bg
+							),
+						border-color:
+							setter(
+								$cadmin-input-warning-focus-border-color,
+								$cadmin-input-warning-border-color
+							),
+					),
+				),
+			),
+			input-group-inset: (
+				input-group-inset-item: (
+					background-color: $cadmin-input-warning-bg,
+					border-color: $cadmin-input-warning-border-color,
+					box-shadow: $cadmin-input-warning-box-shadow,
+				),
+				focus: (
+					box-shadow: none,
+					input-group-inset-item: (
+						background-color:
+							setter(
+								$cadmin-input-warning-focus-bg,
+								$cadmin-input-warning-bg
+							),
+						border-color:
+							setter(
+								$cadmin-input-warning-focus-border-color,
+								$cadmin-input-warning-border-color
+							),
+					),
+				),
+			),
+		),
+	),
+	$cadmin-has-warning
+);
+
 // .has-success .form-control
 
 $cadmin-input-success-bg: $cadmin-success-l2 !default;
@@ -770,6 +1001,96 @@ $cadmin-input-success-select-multiple: () !default;
 $cadmin-input-success-select-multiple: map-deep-merge(
 	$cadmin-input-success-select-size,
 	$cadmin-input-success-select-multiple
+);
+
+// .has-select
+
+$cadmin-has-success: () !default;
+$cadmin-has-success: map-deep-merge(
+	(
+		label: (
+			color: $cadmin-input-success-label-color,
+		),
+		custom-control-label: (
+			color: $cadmin-input-success-checkbox-label-color,
+		),
+		form-control:
+			map-deep-merge(
+				(
+					readonly: $cadmin-input-success-readonly,
+				),
+				$cadmin-input-success
+			),
+		form-feedback-item: (
+			color: $cadmin-form-feedback-valid-color,
+		),
+		select: (
+			form-control:
+				map-deep-merge(
+					(
+						multiple: $cadmin-input-success-select-multiple,
+						size: $cadmin-input-success-select-size,
+					),
+					$cadmin-input-success-select
+				),
+		),
+		input-group-item: (
+			focus: (
+				box-shadow:
+					setter(
+						$cadmin-input-success-focus-box-shadow,
+						$cadmin-input-success-box-shadow
+					),
+				input-group-inset: (
+					background-color:
+						setter(
+							$cadmin-input-success-focus-bg,
+							$cadmin-input-success-bg
+						),
+					border-color:
+						setter(
+							$cadmin-input-success-focus-border-color,
+							$cadmin-input-success-border-color
+						),
+					input-group-inset-item: (
+						background-color:
+							setter(
+								$cadmin-input-success-focus-bg,
+								$cadmin-input-success-bg
+							),
+						border-color:
+							setter(
+								$cadmin-input-success-focus-border-color,
+								$cadmin-input-success-border-color
+							),
+					),
+				),
+			),
+			input-group-inset: (
+				input-group-inset-item: (
+					background-color: $cadmin-input-success-bg,
+					border-color: $cadmin-input-success-border-color,
+					box-shadow: $cadmin-input-success-box-shadow,
+				),
+				focus: (
+					box-shadow: none,
+					input-group-inset-item: (
+						background-color:
+							setter(
+								$cadmin-input-success-focus-bg,
+								$cadmin-input-success-bg
+							),
+						border-color:
+							setter(
+								$cadmin-input-success-focus-border-color,
+								$cadmin-input-success-border-color
+							),
+					),
+				),
+			),
+		),
+	),
+	$cadmin-has-success
 );
 
 // Select Element

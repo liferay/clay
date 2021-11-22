@@ -504,18 +504,69 @@ $form-check-inline-margin-x: 0.75rem !default;
 
 $form-check-inline-input-margin-x: auto !default;
 
-// Form Feedback
+// .form-feedback-group
+
+$form-feedback-group: () !default;
+$form-feedback-group: map-merge(
+	(
+		width: 100%,
+		word-wrap: break-word,
+	),
+	$form-feedback-group
+);
+
+// .form-text
 
 $form-text-color: $gray-600 !default;
 $form-text-font-size: 0.875rem !default; // 14px
 $form-text-font-weight: null !default;
 $form-text-margin-top: 0.25rem !default;
 
+$form-text: () !default;
+$form-text: map-merge(
+	(
+		color: $form-text-color,
+		display: block,
+		font-size: $form-text-font-size,
+		font-weight: $form-text-font-weight,
+		margin-top: $form-text-margin-top,
+		word-wrap: break-word,
+	),
+	$form-text
+);
+
+// .form-feedback-item
+
 $form-feedback-font-size: $small-font-size !default;
 $form-feedback-font-weight: null !default;
 $form-feedback-margin-top: 0.25rem !default;
 
+$form-feedback-item: () !default;
+$form-feedback-item: map-merge(
+	(
+		font-size: $form-feedback-font-size,
+		font-weight: $form-feedback-font-weight,
+		margin-top: $form-feedback-margin-top,
+		word-wrap: break-word,
+	),
+	$form-feedback-item
+);
+
+// .form-feedback-indicator
+
 $form-feedback-indicator-margin-x: 0.125rem !default;
+
+$form-feedback-indicator: () !default;
+$form-feedback-indicator: map-deep-merge(
+	(
+		margin-left: $form-feedback-indicator-margin-x,
+		margin-right: $form-feedback-indicator-margin-x,
+		first-child: (
+			margin-left: 0,
+		),
+	),
+	$form-feedback-indicator
+);
 
 $form-feedback-valid-color: $success !default;
 
@@ -630,6 +681,87 @@ $input-danger-select-multiple: map-deep-merge(
 	$input-danger-select-multiple
 );
 
+// .has-error
+
+$has-error: () !default;
+$has-error: map-deep-merge(
+	(
+		label: (
+			color: $input-danger-label-color,
+		),
+		custom-control-label: (
+			color: $input-danger-checkbox-label-color,
+		),
+		form-control:
+			map-deep-merge(
+				(
+					readonly: $input-danger-readonly,
+				),
+				$input-danger
+			),
+		form-feedback-item: (
+			color: $form-feedback-invalid-color,
+		),
+		select: (
+			form-control:
+				map-deep-merge(
+					(
+						multiple: $input-danger-select-multiple,
+						size: $input-danger-select-size,
+					),
+					$input-danger-select
+				),
+		),
+		input-group-item: (
+			focus: (
+				box-shadow:
+					setter(
+						$input-danger-focus-box-shadow,
+						$input-danger-box-shadow
+					),
+				input-group-inset: (
+					background-color:
+						setter($input-danger-focus-bg, $input-danger-bg),
+					border-color:
+						setter(
+							$input-danger-focus-border-color,
+							$input-danger-border-color
+						),
+					input-group-inset-item: (
+						background-color:
+							setter($input-danger-focus-bg, $input-danger-bg),
+						border-color:
+							setter(
+								$input-danger-focus-border-color,
+								$input-danger-border-color
+							),
+					),
+				),
+			),
+			input-group-inset: (
+				input-group-inset-item: (
+					background-color: $input-danger-bg,
+					border-color: $input-danger-border-color,
+					box-shadow: $input-danger-box-shadow,
+				),
+				focus: (
+					box-shadow: none,
+					input-group-inset-item: (
+						background-color:
+							setter($input-danger-focus-bg, $input-danger-bg),
+						border-color:
+							setter(
+								$input-danger-focus-border-color,
+								$input-danger-border-color
+							),
+					),
+				),
+			),
+		),
+	),
+	$has-error
+);
+
 // .has-warning .form-control
 
 $input-warning-bg: null !default;
@@ -702,6 +834,87 @@ $input-warning-select-multiple: map-deep-merge(
 	$input-warning-select-multiple
 );
 
+// .has-warning
+
+$has-warning: () !default;
+$has-warning: map-deep-merge(
+	(
+		label: (
+			color: $input-warning-label-color,
+		),
+		custom-control-label: (
+			color: $input-warning-checkbox-label-color,
+		),
+		form-control:
+			map-deep-merge(
+				(
+					readonly: $input-warning-readonly,
+				),
+				$input-warning
+			),
+		form-feedback-item: (
+			color: $form-feedback-warning-color,
+		),
+		select: (
+			form-control:
+				map-deep-merge(
+					(
+						multiple: $input-warning-select-multiple,
+						size: $input-warning-select-size,
+					),
+					$input-warning-select
+				),
+		),
+		input-group-item: (
+			focus: (
+				box-shadow:
+					setter(
+						$input-warning-focus-box-shadow,
+						$input-warning-box-shadow
+					),
+				input-group-inset: (
+					background-color:
+						setter($input-warning-focus-bg, $input-warning-bg),
+					border-color:
+						setter(
+							$input-warning-focus-border-color,
+							$input-warning-border-color
+						),
+					input-group-inset-item: (
+						background-color:
+							setter($input-warning-focus-bg, $input-warning-bg),
+						border-color:
+							setter(
+								$input-warning-focus-border-color,
+								$input-warning-border-color
+							),
+					),
+				),
+			),
+			input-group-inset: (
+				input-group-inset-item: (
+					background-color: $input-warning-bg,
+					border-color: $input-warning-border-color,
+					box-shadow: $input-warning-box-shadow,
+				),
+				focus: (
+					box-shadow: none,
+					input-group-inset-item: (
+						background-color:
+							setter($input-warning-focus-bg, $input-warning-bg),
+						border-color:
+							setter(
+								$input-warning-focus-border-color,
+								$input-warning-border-color
+							),
+					),
+				),
+			),
+		),
+	),
+	$has-warning
+);
+
 // .has-success .form-control
 
 $input-success-bg: null !default;
@@ -772,6 +985,87 @@ $input-success-select-multiple: () !default;
 $input-success-select-multiple: map-deep-merge(
 	$input-success-select-size,
 	$input-success-select-multiple
+);
+
+// .has-success
+
+$has-success: () !default;
+$has-success: map-deep-merge(
+	(
+		label: (
+			color: $input-success-label-color,
+		),
+		custom-control-label: (
+			color: $input-success-checkbox-label-color,
+		),
+		form-control:
+			map-deep-merge(
+				(
+					readonly: $input-success-readonly,
+				),
+				$input-success
+			),
+		form-feedback-item: (
+			color: $form-feedback-valid-color,
+		),
+		select: (
+			form-control:
+				map-deep-merge(
+					(
+						multiple: $input-success-select-multiple,
+						size: $input-success-select-size,
+					),
+					$input-success-select
+				),
+		),
+		input-group-item: (
+			focus: (
+				box-shadow:
+					setter(
+						$input-success-focus-box-shadow,
+						$input-success-box-shadow
+					),
+				input-group-inset: (
+					background-color:
+						setter($input-success-focus-bg, $input-success-bg),
+					border-color:
+						setter(
+							$input-success-focus-border-color,
+							$input-success-border-color
+						),
+					input-group-inset-item: (
+						background-color:
+							setter($input-success-focus-bg, $input-success-bg),
+						border-color:
+							setter(
+								$input-success-focus-border-color,
+								$input-success-border-color
+							),
+					),
+				),
+			),
+			input-group-inset: (
+				input-group-inset-item: (
+					background-color: $input-success-bg,
+					border-color: $input-success-border-color,
+					box-shadow: $input-success-box-shadow,
+				),
+				focus: (
+					box-shadow: none,
+					input-group-inset-item: (
+						background-color:
+							setter($input-success-focus-bg, $input-success-bg),
+						border-color:
+							setter(
+								$input-success-focus-border-color,
+								$input-success-border-color
+							),
+					),
+				),
+			),
+		),
+	),
+	$has-success
 );
 
 // Select Element
