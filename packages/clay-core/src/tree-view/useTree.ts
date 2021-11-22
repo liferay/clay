@@ -32,7 +32,14 @@ export interface ITreeProps<T>
 	extends IExpandable,
 		IMultipleSelection,
 		Pick<ICollectionProps<T>, 'items'> {
+	/**
+	 * Flag which key name matches the nested rendering of the tree.
+	 */
 	nestedKey?: string;
+
+	/**
+	 * Callback is called when the property of items is changed.
+	 */
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
 	selectionMode?: 'multiple' | 'single';
 }

@@ -11,6 +11,10 @@ export type ChildrenFunction<T> = (item: T) => React.ReactElement;
 
 export interface ICollectionProps<T> {
 	children: React.ReactNode | ChildrenFunction<T>;
+
+	/**
+	 * Property to inform the dynamic data of the tree.
+	 */
 	items?: Array<T>;
 }
 

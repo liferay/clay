@@ -15,6 +15,9 @@ import {useItem} from './useItem';
 
 export interface ITreeViewItemProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
+	/**
+	 * Property for rendering actions on a Node.
+	 */
 	actions?: React.ReactElement;
 	children: React.ReactNode;
 	isDragging?: boolean;
