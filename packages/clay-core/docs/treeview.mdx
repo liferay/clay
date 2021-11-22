@@ -2,6 +2,7 @@
 title: 'TreeView'
 description: 'A tree view is a component based on nodes that are shown in a hierarchical structure.'
 packageNpm: '@clayui/core'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/tree-view/'
 ---
 
 import {Example, MultipleSelection} from '$packages/clay-core/docs/treeview';
@@ -20,7 +21,7 @@ import {Example, MultipleSelection} from '$packages/clay-core/docs/treeview';
         -   [String](#string)
         -   [Single Level](#single-level)
         -   [Nested](#nested)
-    -   [Actions](#actions)
+        -   [Actions](#actions)
 -   [Expander](#expander)
     -   [Custom expander](#custom-expander)
 -   [Multiple Selection](#multiple-selection)
@@ -226,9 +227,34 @@ In static content, it is also possible to define the `key` to be used in the sel
 </TreeView.Item>
 ```
 
-### Actions
+#### Actions
 
-// TODO
+Actions are added using the `actions` property on each Item's component. The component abstracts some of the complexities of markup and class usage to make composing components easier without having to add explicitly classes, this works great for Clay's `Button` and `DropDownWithItems` components, other components should consider adding the class `component-action` explicitly.
+
+```jsx
+<TreeView>
+	<TreeView.Item
+		actions={
+			<>
+				<Button displayType={null} monospaced>
+					<Icon symbol="times" />
+				</Button>
+				<DropDownWithItems
+					items={[{label: 'One'}, {label: 'Two'}, {label: 'Three'}]}
+					trigger={
+						<Button displayType={null} monospaced>
+							<Icon symbol="ellipsis-v" />
+						</Button>
+					}
+				/>
+			</>
+		}
+	>
+		<Icon symbol="folder" />
+		Folder
+	</TreeView.Item>
+</TreeView>
+```
 
 ## Expander
 
