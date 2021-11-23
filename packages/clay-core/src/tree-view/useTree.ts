@@ -23,7 +23,7 @@ export interface IExpandable {
 	expandedKeys?: Set<Key>;
 
 	/**
-	 * Handler that is called when items are expanded or collapsed.
+	 * A callback that is called when items are expanded or collapsed.
 	 */
 	onExpandedChange?: (keys: Set<Key>) => void;
 }
@@ -32,7 +32,14 @@ export interface ITreeProps<T>
 	extends IExpandable,
 		IMultipleSelection,
 		Pick<ICollectionProps<T>, 'items'> {
+	/**
+	 * Flag to indicate which key name matches the nested rendering of the tree.
+	 */
 	nestedKey?: string;
+
+	/**
+	 * A callback which is called when the property of items is changed.
+	 */
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
 	selectionMode?: 'multiple' | 'single';
 }

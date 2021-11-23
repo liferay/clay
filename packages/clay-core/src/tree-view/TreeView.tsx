@@ -20,12 +20,43 @@ interface ITreeViewProps<T>
 	extends Omit<React.HTMLAttributes<HTMLUListElement>, 'children'>,
 		ITreeProps<T>,
 		ICollectionProps<T> {
+	/**
+	 * Flag to determine which style the TreeView will display.
+	 */
 	displayType?: 'light' | 'dark';
+
+	/**
+	 * Flag to enable Drag and Drop of Nodes over the Tree.
+	 */
 	dragAndDrop?: boolean;
+
+	/**
+	 * Flag to modify Node expansion state icons.
+	 */
 	expanderIcons?: Icons;
+
+	/**
+	 * When a tree is very large, loading items (nodes) asynchronously is preferred to
+	 * decrease the initial payload and memory space. The callback is called every time
+	 * the item is a leaf node of the tree.
+	 */
 	onLoadMore?: (item: T) => Promise<unknown>;
+
+	/**
+	 * Calback is called when the user presses the R or F2 hotkey.
+	 */
 	onRenameItem?: (item: T) => Promise<T>;
+
+	/**
+	 * Flag changes the Node selection behavior when a checkbox is rendered on the Node.
+	 * - multiple: selects child nodes recursively.
+	 * - single: select only node, ignoring children.
+	 */
 	selectionMode?: 'multiple' | 'single';
+
+	/**
+	 * Flag to indicate if the TreeView will show the expander in the hover in the Node.
+	 */
 	showExpanderOnHover?: boolean;
 }
 
