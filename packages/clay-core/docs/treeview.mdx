@@ -230,7 +230,7 @@ In static content, it is also possible to define the `key` to be used in the sel
 
 #### Actions
 
-Actions are added using the `actions` property on each Item's component. The component abstracts some of the complexities of markup and class usage to make composing components easier without having to add explicitly classes, this works great for Clay's `Button` and `DropDownWithItems` components, other components should consider adding the class `component-action` explicitly.
+Actions are added using the `actions` property on each item. The component abstracts some of the complexities of markup and class usage to make composing components easier without having to add explicitly classes. This works great for Clay's `Button` and `DropDownWithItems` components, other components should consider adding the class `component-action` explicitly.
 
 ```jsx
 <TreeView>
@@ -259,7 +259,7 @@ Actions are added using the `actions` property on each Item's component. The com
 
 ## Expander
 
-The expansion of an Item in the TreeView is controlled internally. It's also possible to control the state and set an initial value with the keys of the items that are initially expanded.
+The expansion of an item in the TreeView is controlled internally. It's also possible to control the state and set an initial value with the keys of the items that are initially expanded.
 
 The TreeView exposes the `expandedKeys` property and the `onExpandedChange` event to control the state of expanded items. The `expandedKeys` property must be a collection of values using the `Set()` object.
 
