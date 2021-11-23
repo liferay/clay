@@ -2,20 +2,1082 @@
 /// @group toggleSwitch
 ////
 
-/// A helper function that calculates text-indent of data-label-on and data-label-off in a `.toggle-switch`.
-/// @param {Number} $toggle-switch-width - Width of switch bar
-/// @param {Number} $toggle-switch-padding - Space between button and bar
-/// @param {Number} $label-spacer-x[8px] - Space between toggle-switch-bar and data-label
+/// A mixin to help create `.toggle-switch-bar` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .toggle-switch-bar
+/// 	before: (
+/// 		// .toggle-switch-bar::before
+/// 	),
+/// 	after: (
+/// 		// .toggle-switch-bar::after
+/// 	),
+/// 	toggle-switch-handle: (
+/// 		// .toggle-switch-bar .toggle-switch-handle
+/// 		before: (
+/// 			// .toggle-switch-bar .toggle-switch-handle::before
+/// 		),
+/// 		after: (
+/// 			// .toggle-switch-bar .toggle-switch-handle::after
+/// 		),
+/// 	),
+/// 	toggle-switch-icon: (
+/// 		// .toggle-switch-bar .toggle-switch-icon
+/// 		lexicon-icon: (
+/// 			// .toggle-switch-bar .toggle-switch-icon .lexicon-icon
+/// 		),
+/// 	),
+/// 	toggle-switch-icon-on: (
+/// 		// .toggle-switch-bar .toggle-switch-icon-on
+/// 		lexicon-icon: (
+/// 			// .toggle-switch-bar .toggle-switch-icon-on .lexicon-icon
+/// 		),
+/// 	),
+/// 	toggle-switch-icon-off: (
+/// 		// .toggle-switch-bar .toggle-switch-icon-off
+/// 		lexicon-icon: (
+/// 			// .toggle-switch-bar .toggle-switch-icon-off .lexicon-icon
+/// 		),
+/// 	),
+/// 	button-icon: (
+/// 		// .toggle-switch-bar .button-icon
+/// 		lexicon-icon: (
+/// 			// .toggle-switch-bar .button-icon .lexicon-icon
+/// 		),
+/// 	),
+/// 	button-icon-on: (
+/// 		// .toggle-switch-bar .button-icon-on
+/// 		lexicon-icon: (
+/// 			// .toggle-switch-bar .button-icon-on .lexicon-icon
+/// 		),
+/// 	),
+/// )
 
-@function clay-data-label-text-position(
-	$toggle-switch-width,
-	$toggle-switch-padding,
-	$label-spacer-x: 8px
-) {
-	@if ($toggle-switch-padding < 0) {
-		$toggle-switch-width: $toggle-switch-width +
-			abs($toggle-switch-padding);
+@mixin clay-toggle-switch-bar-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			&::before {
+				@include clay-css(map-get($map, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($map, after));
+			}
+
+			.toggle-switch-handle {
+				@include clay-css(map-get($map, toggle-switch-handle));
+
+				&::before {
+					@include clay-css(
+						map-deep-get($map, toggle-switch-handle, before)
+					);
+				}
+
+				&::after {
+					@include clay-css(
+						map-deep-get($map, toggle-switch-handle, after)
+					);
+				}
+			}
+
+			.toggle-switch-icon {
+				@include clay-css(map-get($map, toggle-switch-icon));
+
+				.lexicon-icon {
+					@include clay-css(
+						map-deep-get($map, toggle-switch-icon, lexicon-icon)
+					);
+				}
+			}
+
+			.toggle-switch-icon-on {
+				@include clay-css(map-get($map, toggle-switch-icon-on));
+
+				.lexicon-icon {
+					@include clay-css(
+						map-deep-get($map, toggle-switch-icon-on, lexicon-icon)
+					);
+				}
+			}
+
+			.toggle-switch-icon-off {
+				@include clay-css(map-get($map, toggle-switch-icon-off));
+
+				.lexicon-icon {
+					@include clay-css(
+						map-deep-get($map, toggle-switch-icon-off, lexicon-icon)
+					);
+				}
+			}
+
+			.button-icon {
+				@include clay-css(map-get($map, button-icon));
+
+				.lexicon-icon {
+					@include clay-css(
+						map-deep-get($map, button-icon, lexicon-icon)
+					);
+				}
+			}
+
+			.button-icon-on {
+				@include clay-css(map-get($map, button-icon-on));
+
+				.lexicon-icon {
+					@include clay-css(
+						map-deep-get($map, button-icon-on, lexicon-icon)
+					);
+				}
+			}
+		}
 	}
+}
 
-	@return $toggle-switch-width + $label-spacer-x;
+/// A mixin to help create `.toggle-switch-check` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	breakpoint-down: {String},
+/// 	// .toggle-switch-check
+/// 	toggle-switch-bar: (
+/// 		// .toggle-switch-check ~ .toggle-switch-bar
+/// 		before: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar::before
+/// 		),
+/// 		after: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar::after
+/// 		),
+/// 		toggle-switch-handle: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-handle
+/// 			before: (
+/// 				// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-handle::before
+/// 			),
+/// 			after: (
+/// 				// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-handle::after
+/// 			),
+/// 		),
+/// 		toggle-switch-icon: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-icon
+/// 			lexicon-icon: (
+/// 				// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-icon .lexicon-icon
+/// 			),
+/// 		),
+/// 		toggle-switch-icon-on: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-icon-on
+/// 			lexicon-icon: (
+/// 				// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-icon-on .lexicon-icon
+/// 			),
+/// 		),
+/// 		toggle-switch-icon-off: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-icon-off
+/// 			lexicon-icon: (
+/// 				// .toggle-switch-check ~ .toggle-switch-bar .toggle-switch-icon-off .lexicon-icon
+/// 			),
+/// 		),
+/// 		button-icon: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar .button-icon
+/// 			lexicon-icon: (
+/// 				// .toggle-switch-check ~ .toggle-switch-bar .button-icon .lexicon-icon
+/// 			),
+/// 		),
+/// 		button-icon-on: (
+/// 			// .toggle-switch-check ~ .toggle-switch-bar .button-icon-on
+/// 			lexicon-icon: (
+/// 				// .toggle-switch-check ~ .toggle-switch-bar .button-icon-on .lexicon-icon
+/// 			),
+/// 		),
+/// 	),
+/// 	hover: (
+/// 		// N/A
+/// 		toggle-switch-bar: (
+/// 			// .toggle-switch-check:hover ~ .toggle-switch-bar
+/// 			before: (),
+/// 			after: (),
+/// 			toggle-switch-handle: (
+/// 				before: (),
+/// 				after: (),
+/// 			),
+/// 			toggle-switch-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-off: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 		),
+/// 	),
+/// 	focus: (
+/// 		// N/A
+/// 		toggle-switch-bar: (
+/// 			// .toggle-switch-check:focus ~ .toggle-switch-bar
+/// 			before: (),
+/// 			after: (),
+/// 			toggle-switch-handle: (
+/// 				before: (),
+/// 				after: (),
+/// 			),
+/// 			toggle-switch-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-off: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 		),
+/// 	),
+/// 	active: (
+/// 		// N/A
+/// 		toggle-switch-bar: (
+/// 			// .toggle-switch-check:active ~ .toggle-switch-bar
+/// 			before: (),
+/// 			after: (),
+/// 			toggle-switch-handle: (
+/// 				before: (),
+/// 				after: (),
+/// 			),
+/// 			toggle-switch-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-off: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 		),
+/// 	),
+/// 	disabled: (
+/// 		// N/A
+/// 		toggle-switch-bar: (
+/// 			// .toggle-switch-check[disabled] ~ .toggle-switch-bar,
+/// 			// .toggle-switch-check:disabled ~ .toggle-switch-bar
+/// 			before: (),
+/// 			after: (),
+/// 			toggle-switch-handle: (
+/// 				before: (),
+/// 				after: (),
+/// 			),
+/// 			toggle-switch-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-off: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 		),
+/// 	),
+/// 	checked: (
+/// 		// N/A
+/// 		toggle-switch-bar: (
+/// 			// .toggle-switch-check:checked ~ .toggle-switch-bar
+/// 			before: (),
+/// 			after: (),
+/// 			toggle-switch-handle: (
+/// 				before: (),
+/// 				after: (),
+/// 			),
+/// 			toggle-switch-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			toggle-switch-icon-off: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 			button-icon-on: (
+/// 				lexicon-icon: (),
+/// 			),
+/// 		),
+/// 		hover: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:checked:hover ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 		focus: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:checked:focus ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 		active: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:checked:active ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 		disabled: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:checked[disabled] ~ .toggle-switch-bar,
+/// 				// .toggle-switch-check:checked:disabled ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 	),
+/// 	indeterminate: (
+/// 		// N/A
+/// 		toggle-switch-bar: (
+/// 			// .toggle-switch-check:indeterminate ~ .toggle-switch-bar
+/// 			before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 		),
+/// 		hover: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:indeterminate:hover ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 		focus: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:indeterminate:focus ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 		active: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:indeterminate:active ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 		disabled: (
+/// 			// N/A
+/// 			toggle-switch-bar: (
+/// 				// .toggle-switch-check:indeterminate[disabled] ~ .toggle-switch-bar,
+/// 				// .toggle-switch-check:indeterminate:disabled ~ .toggle-switch-bar
+/// 				before: (),
+/// 				after: (),
+/// 				toggle-switch-handle: (
+/// 					before: (),
+/// 					after: (),
+/// 				),
+/// 				toggle-switch-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				toggle-switch-icon-off: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 				button-icon-on: (
+/// 					lexicon-icon: (),
+/// 				),
+/// 			),
+/// 		),
+/// 	),
+/// )
+
+@mixin clay-toggle-switch-check-variant($map) {
+	@if (type-of($map) == 'map') {
+		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
+		$enabled: setter(map-get($map, enabled), true);
+
+		@include clay-css($map);
+
+		@if ($enabled) {
+			~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-get($map, toggle-switch-bar)
+				);
+			}
+
+			&:hover ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, hover, toggle-switch-bar)
+				);
+			}
+
+			&:focus ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, focus, toggle-switch-bar)
+				);
+			}
+
+			&:active ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, active, toggle-switch-bar)
+				);
+			}
+
+			&[disabled] ~ .toggle-switch-bar,
+			&:disabled ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, disabled, toggle-switch-bar)
+				);
+			}
+
+			&:checked ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, checked, toggle-switch-bar)
+				);
+			}
+
+			&:checked:hover ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, checked, hover, toggle-switch-bar)
+				);
+			}
+
+			&:checked:focus ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, checked, focus, toggle-switch-bar)
+				);
+			}
+
+			&:checked:active ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, checked, active, toggle-switch-bar)
+				);
+			}
+
+			&:checked[disabled] ~ .toggle-switch-bar,
+			&:checked:disabled ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, checked, disabled, toggle-switch-bar)
+				);
+			}
+
+			&:indeterminate ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, indeterminate, toggle-switch-bar)
+				);
+			}
+
+			&:indeterminate:hover ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, indeterminate, hover, toggle-switch-bar)
+				);
+			}
+
+			&:indeterminate:focus ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, indeterminate, focus, toggle-switch-bar)
+				);
+			}
+
+			&:indeterminate:active ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get($map, indeterminate, active, toggle-switch-bar)
+				);
+			}
+
+			&:indeterminate[disabled] ~ .toggle-switch-bar,
+			&:indeterminate:disabled ~ .toggle-switch-bar {
+				@include clay-toggle-switch-bar-variant(
+					map-deep-get(
+						$map,
+						indeterminate,
+						disabled,
+						toggle-switch-bar
+					)
+				);
+			}
+
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css(map-get($map, mobile));
+
+				~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get($map, mobile, toggle-switch-bar)
+					);
+				}
+
+				&:hover ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get($map, mobile, hover, toggle-switch-bar)
+					);
+				}
+
+				&:focus ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get($map, mobile, focus, toggle-switch-bar)
+					);
+				}
+
+				&:active ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get($map, mobile, active, toggle-switch-bar)
+					);
+				}
+
+				&[disabled] ~ .toggle-switch-bar,
+				&:disabled ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get($map, mobile, disabled, toggle-switch-bar)
+					);
+				}
+
+				&:checked ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get($map, mobile, checked, toggle-switch-bar)
+					);
+				}
+
+				&:checked:hover ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							checked,
+							hover,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:checked:focus ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							checked,
+							focus,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:checked:active ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							checked,
+							active,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:checked[disabled] ~ .toggle-switch-bar,
+				&:checked:disabled ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							checked,
+							disabled,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:indeterminate ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							indeterminate,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:indeterminate:hover ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							indeterminate,
+							hover,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:indeterminate:focus ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							indeterminate,
+							focus,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:indeterminate:active ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							indeterminate,
+							active,
+							toggle-switch-bar
+						)
+					);
+				}
+
+				&:indeterminate[disabled] ~ .toggle-switch-bar,
+				&:indeterminate:disabled ~ .toggle-switch-bar {
+					@include clay-toggle-switch-bar-variant(
+						map-deep-get(
+							$map,
+							mobile,
+							indeterminate,
+							disabled,
+							toggle-switch-bar
+						)
+					);
+				}
+			}
+		}
+	}
+}
+
+/// A mixin to help create `.toggle-switch` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	breakpoint-down: {String},
+/// 	// .toggle-switch
+/// 	toggle-switch-check-bar: (
+/// 		// .toggle-switch .toggle-switch-check-bar
+/// 		before: (
+/// 			// .toggle-switch .toggle-switch-check-bar::before
+/// 		),
+/// 		after: (
+/// 			// .toggle-switch .toggle-switch-check-bar::after
+/// 		),
+/// 	),
+/// 	toggle-switch-check: (
+/// 		// .toggle-switch .toggle-switch-check
+/// 		// See clay-toggle-switch-check-variant
+/// 	),
+/// 	toggle-switch-label: (
+/// 		// .toggle-switch .toggle-switch-label
+/// 	),
+/// 	toggle-switch-text: (
+/// 		// .toggle-switch .toggle-switch-text
+/// 	),
+/// 	toggle-switch-text-left: (
+/// 		// .toggle-switch .toggle-switch-text-left
+/// 	),
+/// 	toggle-switch-text-right: (
+/// 		// .toggle-switch .toggle-switch-text-right
+/// 	),
+/// 	disabled: (
+/// 		// .toggle-switch.disabled
+/// 		toggle-switch-label: (
+/// 			// .toggle-switch.disabled .toggle-switch-label
+/// 		),
+/// 		toggle-switch-text: (
+/// 			// .toggle-switch.disabled .toggle-switch-text
+/// 		),
+/// 		toggle-switch-text-left: (
+/// 			// .toggle-switch.disabled .toggle-switch-text-left
+/// 		),
+/// 		toggle-switch-text-right: (
+/// 			// .toggle-switch.disabled .toggle-switch-text-right
+/// 		),
+/// 	),
+/// 	mobile: (
+/// 		toggle-switch-check-bar: (
+/// 			before: (),
+/// 			after: (),
+/// 		),
+/// 		toggle-switch-check: (),
+/// 		toggle-switch-label: (),
+/// 		toggle-switch-text: (),
+/// 		toggle-switch-text-left: (),
+/// 		toggle-switch-text-right: (),
+/// 		disabled: (
+/// 			toggle-switch-label: (),
+/// 			toggle-switch-text: (),
+/// 			toggle-switch-text-left: (),
+/// 			toggle-switch-text-right: (),
+/// 		),
+/// 	),
+/// )
+
+@mixin clay-toggle-switch-variant($map) {
+	@if (type-of($map) == 'map') {
+		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
+		$enabled: setter(map-get($map, enabled), true);
+
+		@include clay-css($map);
+
+		.toggle-switch-check-bar {
+			@include clay-css(map-get($map, toggle-switch-check-bar));
+
+			&::before {
+				@include clay-css(
+					map-deep-get($map, toggle-switch-check-bar, before)
+				);
+			}
+
+			&::after {
+				@include clay-css(
+					map-deep-get($map, toggle-switch-check-bar, after)
+				);
+			}
+		}
+
+		.toggle-switch-check {
+			@include clay-toggle-switch-check-variant(
+				map-get($map, toggle-switch-check)
+			);
+		}
+
+		.toggle-switch-label {
+			@include clay-css(map-get($map, toggle-switch-label));
+		}
+
+		.toggle-switch-text {
+			@include clay-css(map-get($map, toggle-switch-text));
+		}
+
+		.toggle-switch-text-left {
+			@include clay-css(map-get($map, toggle-switch-text-left));
+		}
+
+		.toggle-switch-text-right {
+			@include clay-css(map-get($map, toggle-switch-text-right));
+		}
+
+		&.disabled {
+			@include clay-css(map-get($map, disabled));
+
+			.toggle-switch-label {
+				@include clay-css(
+					map-deep-get($map, disabled, toggle-switch-label)
+				);
+			}
+
+			.toggle-switch-text {
+				@include clay-css(
+					map-deep-get($map, disabled, toggle-switch-text)
+				);
+			}
+
+			.toggle-switch-text-left {
+				@include clay-css(
+					map-deep-get($map, disabled, toggle-switch-text-left)
+				);
+			}
+
+			.toggle-switch-text-right {
+				@include clay-css(
+					map-deep-get($map, disabled, toggle-switch-text-right)
+				);
+			}
+		}
+
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css(map-get($map, mobile));
+
+			.toggle-switch-check-bar {
+				@include clay-css(
+					map-deep-get($map, mobile, toggle-switch-check-bar)
+				);
+
+				&::before {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							mobile,
+							toggle-switch-check-bar,
+							before
+						)
+					);
+				}
+
+				&::after {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							mobile,
+							toggle-switch-check-bar,
+							after
+						)
+					);
+				}
+			}
+
+			.toggle-switch-check {
+				@include clay-toggle-switch-check-variant(
+					map-deep-get($map, mobile, toggle-switch-check)
+				);
+			}
+
+			.toggle-switch-label {
+				@include clay-css(
+					map-deep-get($map, mobile, toggle-switch-label)
+				);
+			}
+
+			.toggle-switch-text {
+				@include clay-css(
+					map-deep-get($map, mobile, toggle-switch-text)
+				);
+			}
+
+			.toggle-switch-text-left {
+				@include clay-css(
+					map-deep-get($map, mobile, toggle-switch-text-left)
+				);
+			}
+
+			.toggle-switch-text-right {
+				@include clay-css(
+					map-deep-get($map, mobile, toggle-switch-text-right)
+				);
+			}
+
+			&.disabled {
+				@include clay-css(map-deep-get($map, mobile, disabled));
+
+				.toggle-switch-label {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							mobile,
+							disabled,
+							toggle-switch-label
+						)
+					);
+				}
+
+				.toggle-switch-text {
+					@include clay-css(
+						map-deep-get($map, mobile, disabled, toggle-switch-text)
+					);
+				}
+
+				.toggle-switch-text-left {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							mobile,
+							disabled,
+							toggle-switch-text-left
+						)
+					);
+				}
+
+				.toggle-switch-text-right {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							mobile,
+							disabled,
+							toggle-switch-text-right
+						)
+					);
+				}
+			}
+		}
+	}
 }
