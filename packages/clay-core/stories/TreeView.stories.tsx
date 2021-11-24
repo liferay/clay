@@ -707,7 +707,7 @@ storiesOf('Components|ClayTreeView', module)
 					onLoadMore={async (item) => {
 						// Delay to simulate loading of new data
 						await new Promise((resolve) => {
-							setTimeout(() => resolve(''), 100);
+							setTimeout(() => resolve(''), 1000);
 						});
 
 						return [
@@ -725,7 +725,6 @@ storiesOf('Components|ClayTreeView', module)
 							},
 						];
 					}}
-					showExpanderOnHover={false}
 				>
 					{(item) => (
 						<TreeView.Item>

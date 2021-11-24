@@ -6,6 +6,7 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
@@ -59,6 +60,8 @@ export const TreeViewItem = React.forwardRef<
 	const item = useItem();
 
 	const [focus, setFocus] = useState(false);
+
+	const [loading, setLoading] = useState(false);
 
 	const [left, right] = React.Children.toArray(children);
 
@@ -114,7 +117,11 @@ export const TreeViewItem = React.forwardRef<
 						} else {
 							if (onLoadMore) {
 								try {
+									setLoading(true);
+
 									const items = await onLoadMore(item);
+
+									setLoading(false);
 
 									if (items) {
 										insert([...item.indexes, 0], items);
@@ -143,7 +150,12 @@ export const TreeViewItem = React.forwardRef<
 							if (!group) {
 								if (onLoadMore) {
 									try {
+										setLoading(true);
+
 										const items = await onLoadMore(item);
+
+										setLoading(false);
+
 										if (!items) {
 											return;
 										}
@@ -219,14 +231,18 @@ export const TreeViewItem = React.forwardRef<
 					ref={ref}
 					role="treeitem"
 					style={{
-						paddingLeft: `${spacing + (group ? 0 : 24)}px`,
+						paddingLeft: `${
+							spacing + (group || onLoadMore ? 0 : 24)
+						}px`,
 					}}
 					tabIndex={0}
 				>
 					<span
 						className="c-inner"
 						style={{
-							marginLeft: `-${spacing + (group ? 0 : 24)}px`,
+							marginLeft: `-${
+								spacing + (group || onLoadMore ? 0 : 24)
+							}px`,
 						}}
 						tabIndex={-2}
 					>
@@ -245,7 +261,8 @@ export const TreeViewItem = React.forwardRef<
 						) : (
 							<TreeViewItemStack
 								actions={actions}
-								expandable={false}
+								expandable={!!onLoadMore}
+								loading={loading}
 							>
 								{children}
 							</TreeViewItemStack>
@@ -264,12 +281,14 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	actions?: React.ReactElement;
 	children: React.ReactNode;
 	expandable?: boolean;
+	loading?: boolean;
 }
 
 export function TreeViewItemStack({
 	actions,
 	children,
 	expandable = true,
+	loading = false,
 	...otherProps
 }: ITreeViewItemStackProps) {
 	const {expandedKeys, expanderIcons, selection, toggle} =
@@ -295,21 +314,22 @@ export function TreeViewItemStack({
 						tabIndex={-1}
 					>
 						<span className="c-inner" tabIndex={-2}>
-							{expanderIcons?.close ? (
+							{loading && <ClayLoadingIndicator small />}
+							{!loading && expanderIcons?.close ? (
 								expanderIcons.close
 							) : (
 								<Icon symbol="angle-down" />
 							)}
-							{expanderIcons?.open ? (
-								React.cloneElement(expanderIcons.open, {
-									className: 'component-expanded-d-none',
-								})
-							) : (
-								<Icon
-									className="component-expanded-d-none"
-									symbol="angle-right"
-								/>
-							)}
+							{!loading && expanderIcons?.open
+								? React.cloneElement(expanderIcons.open, {
+										className: 'component-expanded-d-none',
+								  })
+								: !loading && (
+										<Icon
+											className="component-expanded-d-none"
+											symbol="angle-right"
+										/>
+								  )}
 						</span>
 					</Button>
 				</Layout.ContentCol>
