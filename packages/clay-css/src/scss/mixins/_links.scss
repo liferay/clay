@@ -372,8 +372,12 @@
 		)
 	);
 
-	$disabled-active: setter(map-get($map, disabled-active), ());
-	$disabled-active: map-merge(
+	$disabled-active: setter(map-get($disabled, active), ());
+	$disabled-active: map-deep-merge(
+		$disabled-active,
+		map-get($map, disabled-active)
+	);
+	$disabled-active: map-deep-merge(
 		$disabled-active,
 		(
 			pointer-events:
