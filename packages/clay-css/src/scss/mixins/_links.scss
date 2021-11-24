@@ -7,6 +7,36 @@
 /// @example
 /// (
 /// 	enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
+/// 	link: (
+/// 		// .link:link
+/// 		inline-item: (
+/// 			// .link:link .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .link:link .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .link:link .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .link:link .inline-item-after
+/// 		),
+/// 	),
+/// 	visited: (
+/// 		// .link:visited
+/// 		inline-item: (
+/// 			// .link:visited .inline-item
+/// 		),
+/// 		inline-item:-before (
+/// 			// .link:visited .inline-item-before
+/// 		),
+/// 		inline-item-middle: (
+/// 			// .link:visited .inline-item-middle
+/// 		),
+/// 		inline-item-after: (
+/// 			// .link:visited .inline-item-after
+/// 		),
+/// 	),
 /// 	hover: (
 /// 		// .link:hover
 /// 		inline-item: (
@@ -429,29 +459,69 @@
 	@if ($enabled) {
 		@include clay-css($base);
 
-		&:hover {
-			@include clay-css($hover);
+		&:link {
+			@include clay-css(map-get($map, link));
 
 			.inline-item {
-				@include clay-css(setter(map-get($hover, inline-item), ()));
+				@include clay-css(map-deep-get($map, link, inline-item));
+			}
+
+			.inline-item-before {
+				@include clay-css(map-deep-get($map, link, inline-item-before));
+			}
+
+			.inline-item-middle {
+				@include clay-css(map-deep-get($map, link, inline-item-middle));
+			}
+
+			.inline-item-after {
+				@include clay-css(map-deep-get($map, link, inline-item-after));
+			}
+		}
+
+		&:visited {
+			@include clay-css(map-get($map, visited));
+
+			.inline-item {
+				@include clay-css(map-deep-get($map, visited, inline-item));
 			}
 
 			.inline-item-before {
 				@include clay-css(
-					setter(map-get($hover, inline-item-before), ())
+					map-deep-get($map, visited, inline-item-before)
 				);
 			}
 
 			.inline-item-middle {
 				@include clay-css(
-					setter(map-get($hover, inline-item-middle), ())
+					map-deep-get($map, visited, inline-item-middle)
 				);
 			}
 
 			.inline-item-after {
 				@include clay-css(
-					setter(map-get($hover, inline-item-after), ())
+					map-deep-get($map, visited, inline-item-after)
 				);
+			}
+		}
+
+		&:hover {
+			@include clay-css($hover);
+
+			.inline-item {
+				@include clay-css(map-get($hover, inline-item));
+			}
+
+			.inline-item-before {
+				@include clay-css(map-get($hover, inline-item-before));
+			}
+
+			.inline-item-middle {
+				@include clay-css(map-get($hover, inline-item-middle));
+			}
+
+			.inline-item-after {
+				@include clay-css(map-get($hover, inline-item-after));
 			}
 		}
 
@@ -459,25 +529,19 @@
 			@include clay-css($focus);
 
 			.inline-item {
-				@include clay-css(setter(map-get($focus, inline-item), ()));
+				@include clay-css(map-get($focus, inline-item));
 			}
 
 			.inline-item-before {
-				@include clay-css(
-					setter(map-get($focus, inline-item-before), ())
-				);
+				@include clay-css(map-get($focus, inline-item-before));
 			}
 
 			.inline-item-middle {
-				@include clay-css(
-					setter(map-get($focus, inline-item-middle), ())
-				);
+				@include clay-css(map-get($focus, inline-item-middle));
 			}
 
 			.inline-item-after {
-				@include clay-css(
-					setter(map-get($focus, inline-item-after), ())
-				);
+				@include clay-css(map-get($focus, inline-item-after));
 			}
 		}
 
@@ -485,25 +549,19 @@
 			@include clay-css($active);
 
 			.inline-item {
-				@include clay-css(setter(map-get($active, inline-item), ()));
+				@include clay-css(map-get($active, inline-item));
 			}
 
 			.inline-item-before {
-				@include clay-css(
-					setter(map-get($active, inline-item-before), ())
-				);
+				@include clay-css(map-get($active, inline-item-before));
 			}
 
 			.inline-item-middle {
-				@include clay-css(
-					setter(map-get($active, inline-item-middle), ())
-				);
+				@include clay-css(map-get($active, inline-item-middle));
 			}
 
 			.inline-item-after {
-				@include clay-css(
-					setter(map-get($active, inline-item-after), ())
-				);
+				@include clay-css(map-get($active, inline-item-after));
 			}
 		}
 
@@ -511,27 +569,19 @@
 			@include clay-css($active-class);
 
 			.inline-item {
-				@include clay-css(
-					setter(map-get($active-class, inline-item), ())
-				);
+				@include clay-css(map-get($active-class, inline-item));
 			}
 
 			.inline-item-before {
-				@include clay-css(
-					setter(map-get($active-class, inline-item-before), ())
-				);
+				@include clay-css(map-get($active-class, inline-item-before));
 			}
 
 			.inline-item-middle {
-				@include clay-css(
-					setter(map-get($active-class, inline-item-middle), ())
-				);
+				@include clay-css(map-get($active-class, inline-item-middle));
 			}
 
 			.inline-item-after {
-				@include clay-css(
-					setter(map-get($active-class, inline-item-after), ())
-				);
+				@include clay-css(map-get($active-class, inline-item-after));
 			}
 		}
 
@@ -544,25 +594,19 @@
 			}
 
 			.inline-item {
-				@include clay-css(setter(map-get($disabled, inline-item), ()));
+				@include clay-css(map-get($disabled, inline-item));
 			}
 
 			.inline-item-before {
-				@include clay-css(
-					setter(map-get($disabled, inline-item-before), ())
-				);
+				@include clay-css(map-get($disabled, inline-item-before));
 			}
 
 			.inline-item-middle {
-				@include clay-css(
-					setter(map-get($disabled, inline-item-middle), ())
-				);
+				@include clay-css(map-get($disabled, inline-item-middle));
 			}
 
 			.inline-item-after {
-				@include clay-css(
-					setter(map-get($disabled, inline-item-after), ())
-				);
+				@include clay-css(map-get($disabled, inline-item-after));
 			}
 		}
 
@@ -585,32 +629,25 @@
 		}
 
 		.inline-item {
-			@include clay-css(setter(map-get($map, inline-item), ()));
+			@include clay-css(map-get($map, inline-item));
 		}
 
 		.inline-item-before {
-			@include clay-css(setter(map-get($map, inline-item-before), ()));
+			@include clay-css(map-get($map, inline-item-before));
 		}
 
 		.inline-item-middle {
-			@include clay-css(setter(map-get($map, inline-item-middle), ()));
+			@include clay-css(map-get($map, inline-item-middle));
 
 			+ .inline-item-middle {
 				@include clay-css(
-					setter(
-						map-deep-get(
-							$map,
-							inline-item-middle,
-							inline-item-middle
-						),
-						()
-					)
+					map-deep-get($map, inline-item-middle, inline-item-middle)
 				);
 			}
 		}
 
 		.inline-item-after {
-			@include clay-css(setter(map-get($map, inline-item-after), ()));
+			@include clay-css(map-get($map, inline-item-after));
 		}
 
 		.lexicon-icon {
