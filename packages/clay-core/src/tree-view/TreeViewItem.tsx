@@ -11,7 +11,7 @@ import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
 
-import {useTreeViewContext} from './context';
+import {Icons, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
 export interface ITreeViewItemProps
@@ -284,6 +284,32 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	loading?: boolean;
 }
 
+type ExpanderProps = {
+	expanderIcons: Icons | undefined;
+};
+
+function Expander({expanderIcons}: ExpanderProps) {
+	return (
+		<>
+			{expanderIcons?.close ? (
+				expanderIcons.close
+			) : (
+				<Icon symbol="angle-down" />
+			)}
+			{expanderIcons?.open ? (
+				React.cloneElement(expanderIcons.open, {
+					className: 'component-expanded-d-none',
+				})
+			) : (
+				<Icon
+					className="component-expanded-d-none"
+					symbol="angle-right"
+				/>
+			)}
+		</>
+	);
+}
+
 export function TreeViewItemStack({
 	actions,
 	children,
@@ -314,22 +340,11 @@ export function TreeViewItemStack({
 						tabIndex={-1}
 					>
 						<span className="c-inner" tabIndex={-2}>
-							{loading && <ClayLoadingIndicator small />}
-							{!loading && expanderIcons?.close ? (
-								expanderIcons.close
+							{loading ? (
+								<ClayLoadingIndicator small />
 							) : (
-								<Icon symbol="angle-down" />
+								<Expander expanderIcons={expanderIcons} />
 							)}
-							{!loading && expanderIcons?.open
-								? React.cloneElement(expanderIcons.open, {
-										className: 'component-expanded-d-none',
-								  })
-								: !loading && (
-										<Icon
-											className="component-expanded-d-none"
-											symbol="angle-right"
-										/>
-								  )}
 						</span>
 					</Button>
 				</Layout.ContentCol>
