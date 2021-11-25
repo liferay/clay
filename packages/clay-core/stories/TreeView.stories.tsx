@@ -632,6 +632,68 @@ storiesOf('Components|ClayTreeView', module)
 			</Provider>
 		);
 	})
+	.add('selection w/async load', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onLoadMore={async (item) => {
+						// Delay to simulate loading of new data
+						await new Promise((resolve) => {
+							setTimeout(() => resolve(''), 1000);
+						});
+
+						return [
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+							{
+								id: Math.random(),
+								name: `${item.name} ${Math.random()}`,
+							},
+						];
+					}}
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<OptionalCheckbox />
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
+										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
 	.add('single selection', () => {
 		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 			new Set()
@@ -707,7 +769,7 @@ storiesOf('Components|ClayTreeView', module)
 					onLoadMore={async (item) => {
 						// Delay to simulate loading of new data
 						await new Promise((resolve) => {
-							setTimeout(() => resolve(''), 100);
+							setTimeout(() => resolve(''), 1000);
 						});
 
 						return [
@@ -725,7 +787,6 @@ storiesOf('Components|ClayTreeView', module)
 							},
 						];
 					}}
-					showExpanderOnHover={false}
 				>
 					{(item) => (
 						<TreeView.Item>
