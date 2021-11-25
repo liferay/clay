@@ -62,7 +62,410 @@ $cadmin-toggle-switch-text-font-size: 12px !default;
 
 $cadmin-toggle-switch-text-disabled-color: $cadmin-input-label-disabled-color !default;
 
-// Simple Toggle Switch
+// .toggle-switch
+
+$cadmin-toggle-switch: () !default;
+$cadmin-toggle-switch: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		cursor: $cadmin-toggle-switch-cursor,
+		display: inline-block,
+		font-weight: $cadmin-toggle-switch-font-weight,
+		max-width: 100%,
+		position: relative,
+		disabled: (
+			cursor: $cadmin-toggle-switch-disabled-cursor,
+			toggle-switch-label: (
+				color: $cadmin-toggle-switch-label-disabled-color,
+				cursor: $cadmin-toggle-switch-disabled-cursor,
+			),
+			toggle-switch-text: (
+				color: $cadmin-toggle-switch-text-disabled-color,
+			),
+		),
+	),
+	$cadmin-toggle-switch
+);
+
+// .toggle-switch-check-bar
+
+$cadmin-toggle-switch-check-bar: () !default;
+$cadmin-toggle-switch-check-bar: map-merge(
+	(
+		display: inline-flex,
+		position: relative,
+	),
+	$cadmin-toggle-switch-check-bar
+);
+
+// .toggle-switch-bar
+
+$cadmin-toggle-switch-bar: () !default;
+$cadmin-toggle-switch-bar: map-deep-merge(
+	(
+		toggle-switch-handle: (
+			display: block,
+			min-width: $cadmin-toggle-switch-bar-width,
+			text-transform: uppercase,
+		),
+		toggle-switch-icon: (
+			font-size: $cadmin-toggle-switch-bar-font-size,
+			lexicon-icon: (
+				margin-top: -0.2em,
+			),
+		),
+		button-icon: (
+			font-size: $cadmin-toggle-switch-button-font-size,
+		),
+	),
+	$cadmin-toggle-switch-bar
+);
+
+// .toggle-switch-check
+
+$cadmin-toggle-switch-check: () !default;
+$cadmin-toggle-switch-check: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		bottom: 0,
+		font-size: 62.5%,
+		height: $cadmin-toggle-switch-bar-height,
+		opacity: 0,
+		position: absolute,
+		width: $cadmin-toggle-switch-bar-width,
+		z-index: 2,
+		toggle-switch-bar: (
+			display: inline-flex,
+			font-size: $cadmin-toggle-switch-bar-font-size,
+			height: $cadmin-toggle-switch-bar-height,
+			line-height: $cadmin-toggle-switch-bar-height,
+			position: relative,
+			text-indent: 0,
+			user-select: none,
+			before: (
+				background-color: $cadmin-toggle-switch-bar-bg,
+				border-color: $cadmin-toggle-switch-bar-border-color,
+				border-radius:
+					clay-enable-rounded($cadmin-toggle-switch-bar-border-radius),
+				border-style: solid,
+				border-width: $cadmin-toggle-switch-bar-border-width,
+				bottom: 0,
+				content: ' ',
+				display: block,
+				left: 0,
+				position: absolute,
+				top: 0,
+				transition: $cadmin-toggle-switch-transition,
+				width: $cadmin-toggle-switch-bar-width,
+			),
+			after: (
+				background-color: $cadmin-toggle-switch-button-bg,
+				border-color: $cadmin-toggle-switch-button-border-color,
+				border-radius:
+					clay-enable-rounded(
+						$cadmin-toggle-switch-button-border-radius
+					),
+				border-style: solid,
+				border-width: $cadmin-toggle-switch-button-border-width,
+				bottom: $cadmin-toggle-switch-bar-padding,
+				content: '',
+				display: block,
+				height: $cadmin-toggle-switch-button-width,
+				left: $cadmin-toggle-switch-bar-padding,
+				position: absolute,
+				top: $cadmin-toggle-switch-bar-padding,
+				transition: $cadmin-toggle-switch-transition,
+				width: $cadmin-toggle-switch-button-width,
+			),
+			toggle-switch-handle: (
+				before: (
+					transition: $cadmin-toggle-switch-transition,
+				),
+				after: (
+					content: attr(data-label-off),
+					margin-left:
+						clay-data-label-text-position(
+							$cadmin-toggle-switch-bar-width,
+							$cadmin-toggle-switch-bar-padding
+						),
+					transition: $cadmin-toggle-switch-transition,
+					white-space: nowrap,
+				),
+			),
+			toggle-switch-icon: (
+				color: $cadmin-toggle-switch-bar-icon-color,
+				left: $cadmin-toggle-switch-bar-padding,
+				line-height: $cadmin-toggle-switch-button-width,
+				position: absolute,
+				text-align: center,
+				text-indent: 0,
+				top: $cadmin-toggle-switch-bar-padding,
+				transition: $cadmin-toggle-switch-transition,
+				width: $cadmin-toggle-switch-button-width,
+				z-index: 1,
+			),
+			toggle-switch-icon-on: (
+				left: $cadmin-toggle-switch-bar-padding,
+				opacity: 0,
+			),
+			toggle-switch-icon-off: (
+				left: $cadmin-toggle-switch-bar-width -
+					$cadmin-toggle-switch-bar-padding -
+					$cadmin-toggle-switch-button-width,
+			),
+			button-icon: (
+				color: $cadmin-toggle-switch-button-icon-color,
+			),
+			button-icon-on: (
+				opacity: 0,
+			),
+		),
+		focus: (
+			toggle-switch-bar: (
+				before: (
+					box-shadow: $cadmin-toggle-switch-bar-focus-box-shadow,
+				),
+			),
+		),
+		disabled: (
+			toggle-switch-bar: (
+				cursor: $cadmin-toggle-switch-disabled-cursor,
+				opacity: $cadmin-toggle-switch-disabled-opacity,
+			),
+		),
+		checked: (
+			toggle-switch-bar: (
+				before: (
+					background-color: $cadmin-toggle-switch-bar-on-bg,
+					border-color: $cadmin-toggle-switch-bar-on-border-color,
+					border-radius:
+						clay-enable-rounded(
+							$cadmin-toggle-switch-bar-border-radius
+						),
+					border-style: solid,
+					border-width: $cadmin-toggle-switch-bar-border-width,
+				),
+				after: (
+					background-color: $cadmin-toggle-switch-button-on-bg,
+					border-color: $cadmin-toggle-switch-button-on-border-color,
+					border-radius:
+						clay-enable-rounded(
+							$cadmin-toggle-switch-button-on-border-radius
+						),
+					border-style: solid,
+					border-width: $cadmin-toggle-switch-button-border-width,
+					left: $cadmin-toggle-switch-bar-width -
+						$cadmin-toggle-switch-bar-padding -
+						$cadmin-toggle-switch-button-width,
+				),
+				toggle-switch-handle: (
+					after: (
+						content: attr(data-label-on),
+					),
+				),
+				toggle-switch-icon: (
+					color: $cadmin-toggle-switch-bar-on-icon-color,
+				),
+				toggle-switch-icon-on: (
+					opacity: 1,
+				),
+				toggle-switch-icon-off: (
+					opacity: 0,
+				),
+				button-icon: (
+					color: $cadmin-toggle-switch-button-on-icon-color,
+					left: $cadmin-toggle-switch-bar-width -
+						$cadmin-toggle-switch-bar-padding -
+						$cadmin-toggle-switch-button-width,
+				),
+				button-icon-on: (
+					opacity: 1,
+				),
+				button-icon-off: (
+					opacity: 0,
+				),
+			),
+		),
+		mobile: (
+			height: $cadmin-toggle-switch-bar-height-mobile,
+			width: $cadmin-toggle-switch-bar-width-mobile,
+			toggle-switch-bar: (
+				height: $cadmin-toggle-switch-bar-height-mobile,
+				line-height: $cadmin-toggle-switch-bar-height-mobile,
+				text-indent: 0,
+				before: (
+					width: $cadmin-toggle-switch-bar-width-mobile,
+				),
+				after: (
+					bottom: $cadmin-toggle-switch-bar-padding-mobile,
+					height: $cadmin-toggle-switch-button-width-mobile,
+					left: $cadmin-toggle-switch-bar-padding-mobile,
+					top: $cadmin-toggle-switch-bar-padding-mobile,
+					width: $cadmin-toggle-switch-button-width-mobile,
+				),
+				toggle-switch-handle: (
+					min-width: $cadmin-toggle-switch-bar-width-mobile,
+					after: (
+						margin-left:
+							clay-data-label-text-position(
+								$cadmin-toggle-switch-bar-width-mobile,
+								$cadmin-toggle-switch-bar-padding-mobile
+							),
+					),
+				),
+				toggle-switch-icon: (
+					font-size: $cadmin-toggle-switch-bar-font-size-mobile,
+					left: $cadmin-toggle-switch-bar-padding-mobile,
+					line-height: $cadmin-toggle-switch-button-width-mobile,
+					top: $cadmin-toggle-switch-bar-padding-mobile,
+					width: $cadmin-toggle-switch-button-width-mobile,
+				),
+				toggle-switch-icon-on: (
+					left: $cadmin-toggle-switch-bar-padding-mobile,
+				),
+				toggle-switch-icon-off: (
+					left: $cadmin-toggle-switch-bar-width-mobile -
+						$cadmin-toggle-switch-bar-padding-mobile -
+						$cadmin-toggle-switch-button-width-mobile,
+				),
+				button-icon: (
+					font-size: $cadmin-toggle-switch-button-font-size-mobile,
+				),
+			),
+			checked: (
+				toggle-switch-bar: (
+					after: (
+						left: $cadmin-toggle-switch-bar-width-mobile -
+							$cadmin-toggle-switch-bar-padding-mobile -
+							$cadmin-toggle-switch-button-width-mobile,
+					),
+					toggle-switch-handle: (
+						after: (
+							margin-left:
+								clay-data-label-text-position(
+									$cadmin-toggle-switch-bar-width-mobile,
+									$cadmin-toggle-switch-bar-padding-mobile
+								),
+						),
+					),
+					button-icon: (
+						left: $cadmin-toggle-switch-bar-width-mobile -
+							$cadmin-toggle-switch-bar-padding-mobile -
+							$cadmin-toggle-switch-button-width-mobile,
+					),
+				),
+			),
+			toggle-switch-text-left: (
+				line-height: $cadmin-toggle-switch-bar-height-mobile,
+			),
+			toggle-switch-text-right: (
+				line-height: $cadmin-toggle-switch-bar-height-mobile,
+			),
+		),
+	),
+	$cadmin-toggle-switch-check
+);
+
+// .toggle-switch-label
+
+$cadmin-toggle-switch-label: () !default;
+$cadmin-toggle-switch-label: map-merge(
+	(
+		display: block,
+		margin-bottom: 2px,
+	),
+	$cadmin-toggle-switch-label
+);
+
+// .toggle-switch-text
+
+$cadmin-toggle-switch-text: () !default;
+$cadmin-toggle-switch-text: map-merge(
+	(
+		display: block,
+		font-size: $cadmin-toggle-switch-text-font-size,
+	),
+	$cadmin-toggle-switch-text
+);
+
+// .toggle-switch-text-left
+
+$cadmin-toggle-switch-text-left: () !default;
+$cadmin-toggle-switch-text-left: map-deep-merge(
+	(
+		display: inline-flex,
+		line-height: $cadmin-toggle-switch-bar-height,
+		margin-right: 8px,
+	),
+	$cadmin-toggle-switch-text-left
+);
+
+// .toggle-switch-text-right
+
+$cadmin-toggle-switch-text-right: () !default;
+$cadmin-toggle-switch-text-right: map-merge(
+	(
+		display: inline-flex,
+		line-height: $cadmin-toggle-switch-bar-height,
+		margin-left: 8px,
+	),
+	$cadmin-toggle-switch-text-right
+);
+
+// .simple-toggle-switch
 
 $cadmin-simple-toggle-switch-label-line-height: 1 !default;
 $cadmin-simple-toggle-switch-label-spacer-x: 8px !default;
+
+$cadmin-simple-toggle-switch: () !default;
+$cadmin-simple-toggle-switch: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		align-items: center,
+		display: inline-flex,
+		toggle-switch-label: (
+			line-height: $cadmin-simple-toggle-switch-label-line-height,
+			margin-bottom: 0,
+			max-width:
+				calc(
+					100% - #{clay-data-label-text-position(
+							$cadmin-toggle-switch-bar-width,
+							$cadmin-toggle-switch-bar-padding
+						)}
+				),
+		),
+		mobile: (
+			toggle-switch-label: (
+				max-width:
+					calc(
+						100% - #{clay-data-label-text-position(
+								$cadmin-toggle-switch-bar-width-mobile,
+								$cadmin-toggle-switch-bar-padding-mobile
+							)}
+					),
+			),
+		),
+	),
+	$cadmin-simple-toggle-switch
+);
+
+// .simple-toggle-switch-reverse
+
+$cadmin-simple-toggle-switch-reverse: () !default;
+$cadmin-simple-toggle-switch-reverse: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		toggle-switch-label: (
+			margin-right: $cadmin-simple-toggle-switch-label-spacer-x,
+		),
+		toggle-switch-check-bar: (
+			order: 5,
+		),
+		toggle-switch-check: (
+			toggle-switch-bar: (
+				order: 5,
+			),
+		),
+	),
+	$cadmin-simple-toggle-switch-reverse
+);

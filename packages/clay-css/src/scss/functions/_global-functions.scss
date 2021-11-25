@@ -8,6 +8,24 @@
 @import '_lx-icons-generated.scss';
 @import '_type-conversion-functions.scss';
 
+/// A helper function that calculates text-indent of data-label-on and data-label-off in a `.toggle-switch`.
+/// @param {Number} $toggle-switch-width - Width of switch bar
+/// @param {Number} $toggle-switch-padding - Space between button and bar
+/// @param {Number} $label-spacer-x[8px] - Space between toggle-switch-bar and data-label
+
+@function clay-data-label-text-position(
+	$toggle-switch-width,
+	$toggle-switch-padding,
+	$label-spacer-x: 8px
+) {
+	@if ($toggle-switch-padding < 0) {
+		$toggle-switch-width: $toggle-switch-width +
+			abs($toggle-switch-padding);
+	}
+
+	@return $toggle-switch-width + $label-spacer-x;
+}
+
 /// A function that returns a new map with all the keys and values including nested keys and values from both `$map1` and `$map2`. If both `$map1` and `$map2` have the same key, `$map2`’s value takes precedence.
 /// @param {Map, Null} $map1[()]
 /// @param {Map, Null} $map2[()]
