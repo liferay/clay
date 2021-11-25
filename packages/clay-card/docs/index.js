@@ -203,7 +203,7 @@ const CardWithInfo = () => {
 	);
 };
 
-const cardWithNavigationImportsCode = `import {ClayCardWithInfo} from '@clayui/card';
+const cardWithNavigationImportsCode = `import {ClayCardWithNavigation} from '@clayui/card';
 import ClayIcon from '@clayui/icon';
 `;
 
