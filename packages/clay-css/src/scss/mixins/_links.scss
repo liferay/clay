@@ -7,8 +7,20 @@
 /// @example
 /// (
 /// 	enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
+/// 	before: (
+/// 		// .link::before
+/// 	),
+/// 	after: (
+/// 		// .link::after
+/// 	),
 /// 	link: (
 /// 		// .link:link
+/// 		before: (
+/// 			// .link:link::before
+/// 		),
+/// 		after: (
+/// 			// .link:link::after
+/// 		),
 /// 		inline-item: (
 /// 			// .link:link .inline-item
 /// 		),
@@ -24,6 +36,12 @@
 /// 	),
 /// 	visited: (
 /// 		// .link:visited
+/// 		before: (
+/// 			// .link:visited::before
+/// 		),
+/// 		after: (
+/// 			// .link:visited::after
+/// 		),
 /// 		inline-item: (
 /// 			// .link:visited .inline-item
 /// 		),
@@ -39,6 +57,12 @@
 /// 	),
 /// 	hover: (
 /// 		// .link:hover
+/// 		before: (
+/// 			// .link:hover::before
+/// 		),
+/// 		after: (
+/// 			// .link:hover::after
+/// 		),
 /// 		inline-item: (
 /// 			// .link:hover .inline-item
 /// 		),
@@ -54,6 +78,12 @@
 /// 	),
 /// 	focus: (
 /// 		// .link:focus
+/// 		before: (
+/// 			// .link:focus::before
+/// 		),
+/// 		after: (
+/// 			// .link:focus::after
+/// 		),
 /// 		inline-item: (
 /// 			// .link:focus .inline-item
 /// 		),
@@ -69,6 +99,12 @@
 /// 	),
 /// 	active: (
 /// 		// .link:active
+/// 		before: (
+/// 			// .link:active::before
+/// 		),
+/// 		after: (
+/// 			// .link:active::after
+/// 		),
 /// 		inline-item: (
 /// 			// .link:active .inline-item
 /// 		),
@@ -84,6 +120,12 @@
 /// 	),
 /// 	active-class: (
 /// 		// .link.active
+/// 		before: (
+/// 			// .link.active::before
+/// 		),
+/// 		after: (
+/// 			// .link.active::after
+/// 		),
 /// 		inline-item: (
 /// 			// .link.active .inline-item
 /// 		),
@@ -99,8 +141,20 @@
 /// 	),
 /// 	disabled: (
 /// 		// .link:disabled, .link.disabled
+/// 		before: (
+/// 			// .link:disabled::before, .link.disabled::before
+/// 		),
+/// 		after: (
+/// 			// .link:disabled::after, .link.disabled::after
+/// 		),
 /// 		active: (
-/// 			// .link:disabled:active, // .link.disabled:active
+/// 			// .link:disabled:active, .link.disabled:active
+/// 			before: (
+/// 				// .link:disabled:active::before, .link.disabled:active::before
+/// 			),
+/// 			after: (
+/// 				// .link:disabled:active::after, .link.disabled:active::after
+/// 			),
 /// 		),
 /// 		inline-item: (
 /// 			// .link:disabled .inline-item
@@ -120,6 +174,12 @@
 /// 	),
 /// 	show: (
 /// 		// .link[aria-expanded='true'], .link.show, .show .link
+/// 		before: (
+/// 			// .link.show::before
+/// 		),
+/// 		after: (
+/// 			// .link.show::after, .link.disabled::after
+/// 		),
 /// 	),
 /// 	c-inner: (
 /// 		enabled: {Bool}, // Set to false to prevent .dropdown-item styles from being output. Default: true
@@ -463,8 +523,24 @@
 	@if ($enabled) {
 		@include clay-css($base);
 
+		&::before {
+			@include clay-css(map-get($map, before));
+		}
+
+		&::after {
+			@include clay-css(map-get($map, after));
+		}
+
 		&:link {
 			@include clay-css(map-get($map, link));
+
+			&::before {
+				@include clay-css(map-deep-get($map, link, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, link, after));
+			}
 
 			.inline-item {
 				@include clay-css(map-deep-get($map, link, inline-item));
@@ -485,6 +561,14 @@
 
 		&:visited {
 			@include clay-css(map-get($map, visited));
+
+			&::before {
+				@include clay-css(map-deep-get($map, visited, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, visited, after));
+			}
 
 			.inline-item {
 				@include clay-css(map-deep-get($map, visited, inline-item));
@@ -512,6 +596,14 @@
 		&:hover {
 			@include clay-css($hover);
 
+			&::before {
+				@include clay-css(map-deep-get($map, hover, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, hover, after));
+			}
+
 			.inline-item {
 				@include clay-css(map-get($hover, inline-item));
 			}
@@ -531,6 +623,14 @@
 
 		&:focus {
 			@include clay-css($focus);
+
+			&::before {
+				@include clay-css(map-deep-get($map, focus, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, focus, after));
+			}
 
 			.inline-item {
 				@include clay-css(map-get($focus, inline-item));
@@ -552,6 +652,14 @@
 		&:active {
 			@include clay-css($active);
 
+			&::before {
+				@include clay-css(map-deep-get($map, active, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, active, after));
+			}
+
 			.inline-item {
 				@include clay-css(map-get($active, inline-item));
 			}
@@ -571,6 +679,14 @@
 
 		&.active {
 			@include clay-css($active-class);
+
+			&::before {
+				@include clay-css(map-deep-get($map, active-class, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, active-class, after));
+			}
 
 			.inline-item {
 				@include clay-css(map-get($active-class, inline-item));
@@ -593,8 +709,28 @@
 		&.disabled {
 			@include clay-css($disabled);
 
+			&::before {
+				@include clay-css(map-deep-get($map, disabled, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, disabled, after));
+			}
+
 			&:active {
 				@include clay-css($disabled-active);
+
+				&::before {
+					@include clay-css(
+						map-deep-get($map, disabled, active, before)
+					);
+				}
+
+				&::after {
+					@include clay-css(
+						map-deep-get($map, disabled, active, after)
+					);
+				}
 			}
 
 			.inline-item {
@@ -624,6 +760,14 @@
 		&.show,
 		.show > & {
 			@include clay-css($show);
+
+			&::before {
+				@include clay-css(map-deep-get($map, show, before));
+			}
+
+			&::after {
+				@include clay-css(map-deep-get($map, show, after));
+			}
 		}
 
 		@if (map-get($c-inner, enabled)) {
