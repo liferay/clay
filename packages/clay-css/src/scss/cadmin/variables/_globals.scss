@@ -568,6 +568,20 @@ $cadmin-link-decoration: none !default;
 $cadmin-link-hover-color: $cadmin-primary-d2 !default;
 $cadmin-link-hover-decoration: underline !default;
 
+$cadmin-link: () !default;
+$cadmin-link: map-deep-merge(
+	(
+		color: $cadmin-link-color,
+		cursor: $cadmin-link-cursor,
+		text-decoration: $cadmin-link-decoration,
+		hover: (
+			color: $cadmin-link-hover-color,
+			text-decoration: $cadmin-link-hover-decoration,
+		),
+	),
+	$cadmin-link
+);
+
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 
 $cadmin-emphasized-link-hover-darken-percentage: 15% !default;

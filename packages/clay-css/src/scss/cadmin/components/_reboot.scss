@@ -173,14 +173,7 @@ html#{$cadmin-selector} {
 		}
 
 		a {
-			color: $cadmin-link-color;
-			cursor: $cadmin-link-cursor;
-			text-decoration: $cadmin-link-decoration;
-
-			&:hover {
-				color: $cadmin-link-hover-color;
-				text-decoration: $cadmin-link-hover-decoration;
-			}
+			@include clay-link($cadmin-link);
 		}
 
 		// Code
