@@ -134,14 +134,7 @@ sup {
 }
 
 a {
-	color: $link-color;
-	cursor: $link-cursor;
-	text-decoration: $link-decoration;
-
-	&:hover {
-		color: $link-hover-color;
-		text-decoration: $link-hover-decoration;
-	}
+	@include clay-link($link);
 }
 
 // Code

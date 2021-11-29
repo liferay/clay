@@ -442,6 +442,19 @@ $link-decoration: none !default;
 $link-hover-color: $primary-d2 !default;
 $link-hover-decoration: underline !default;
 
+$link: () !default;
+$link: map-deep-merge(
+	(
+		color: $link-color,
+		text-decoration: $link-decoration,
+		hover: (
+			color: $link-hover-color,
+			text-decoration: $link-hover-decoration,
+		),
+	),
+	$link
+);
+
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 
 $emphasized-link-hover-darken-percentage: 15% !default;
