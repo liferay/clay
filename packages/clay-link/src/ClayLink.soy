@@ -77,6 +77,7 @@
 			{param imageSrc: $imageSrc /}
 			{param label: $label /}
 			{param spritemap: $spritemap /}
+			{param title: $title /}
 		{/call}
 	</a>
 {/template}
@@ -91,6 +92,7 @@
 	{@param? imageSrc: string}
 	{@param? label: html|string}
 	{@param? spritemap: string}
+	{@param? title: string}
 
 	{if $imageSrc}
 		<img alt="{$imageAlt}" class="img-fluid" src="{$imageSrc}" />
@@ -112,6 +114,10 @@
 				{param spritemap: $spritemap /}
 			{/call}
 		{/if}
+	{/if}
+
+	{if $title}
+		<span class="sr-only">{$title}</span>
 	{/if}
 {/template}
 
