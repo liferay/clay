@@ -1,0 +1,70 @@
+////
+/// @group tooltip
+////
+
+/// A mixin to help create `.tooltip` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .tooltip
+/// 	show: (
+/// 		// .tooltip.show
+/// 	),
+/// 	arrow: (
+/// 		// .tooltip .arrow
+/// 		before: (
+/// 			// .tooltip .arrow::before
+/// 		),
+/// 		after: (
+/// 			// .tooltip .arrow::after
+/// 		),
+/// 	),
+/// 	tooltip-inner: (
+/// 		// .tooltip .tooltip-inner
+/// 	),
+/// )
+
+@mixin clay-tooltip-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			&.show {
+				@include clay-css(map-get($map, show));
+			}
+
+			.arrow {
+				@include clay-css(map-get($map, arrow));
+
+				&::before {
+					@include clay-css(map-deep-get($map, arrow, before));
+				}
+
+				&::after {
+					@include clay-css(map-deep-get($map, arrow, after));
+				}
+			}
+
+			.tooltip-arrow {
+				@include clay-css(map-get($map, tooltip-arrow));
+
+				&::before {
+					@include clay-css(
+						map-deep-get($map, tooltip-arrow, before)
+					);
+				}
+
+				&::after {
+					@include clay-css(map-deep-get($map, tooltip-arrow, after));
+				}
+			}
+
+			.tooltip-inner {
+				@include clay-css(map-get($map, tooltip-inner));
+			}
+		}
+	}
+}
