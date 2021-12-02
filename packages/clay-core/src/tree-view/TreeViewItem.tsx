@@ -371,6 +371,7 @@ export function TreeViewItemStack({
 				} else if (child?.type.displayName === 'ClayCheckbox') {
 					content = React.cloneElement(child as React.ReactElement, {
 						checked: selection.selectedKeys.has(item.key),
+						disabled: loading,
 						indeterminate: selection.isIntermediate(item.key),
 						onChange: () => selection.toggleSelection(item.key),
 						onClick: (
