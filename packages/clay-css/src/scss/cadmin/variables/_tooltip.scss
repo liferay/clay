@@ -20,3 +20,302 @@ $cadmin-form-feedback-tooltip-line-height: $cadmin-line-height-base !default;
 $cadmin-form-feedback-tooltip-opacity: $cadmin-tooltip-opacity !default;
 $cadmin-form-feedback-tooltip-padding-x: $cadmin-tooltip-padding-x !default;
 $cadmin-form-feedback-tooltip-padding-y: $cadmin-tooltip-padding-y !default;
+
+// .tooltip
+
+$cadmin-tooltip: () !default;
+$cadmin-tooltip: map-deep-merge(
+	(
+		display: block,
+		font-family: $cadmin-font-family-base,
+		font-size: $cadmin-tooltip-font-size,
+		font-style: normal,
+		font-weight: $cadmin-font-weight-normal,
+		letter-spacing: normal,
+		line-break: auto,
+		line-height: $cadmin-line-height-base,
+		margin: $cadmin-tooltip-margin,
+		opacity: 0,
+		position: absolute,
+		text-align: left,
+		text-decoration: none,
+		text-shadow: none,
+		text-transform: none,
+		white-space: normal,
+		word-break: normal,
+		word-spacing: normal,
+		word-wrap: break-word,
+		z-index: $cadmin-zindex-tooltip,
+		show: (
+			opacity: $cadmin-tooltip-opacity,
+		),
+		arrow: (
+			display: block,
+			height: $cadmin-tooltip-arrow-height,
+			position: absolute,
+			width: $cadmin-tooltip-arrow-width,
+			before: (
+				border-color: transparent,
+				border-style: solid,
+				content: '',
+				position: absolute,
+			),
+		),
+	),
+	$cadmin-tooltip
+);
+
+// .tooltip-inner
+
+$cadmin-tooltip-inner: () !default;
+$cadmin-tooltip-inner: map-merge(
+	(
+		background-color: $cadmin-tooltip-bg,
+		border-radius: clay-enable-rounded($cadmin-tooltip-border-radius),
+		box-shadow: clay-enable-shadows([$cadmin-tooltip-box-shadow]),
+		color: $cadmin-tooltip-color,
+		max-width: $cadmin-tooltip-max-width,
+		padding: $cadmin-tooltip-padding-y $cadmin-tooltip-padding-x,
+		text-align: center,
+		white-space: pre-line,
+	),
+	$cadmin-tooltip-inner
+);
+
+// .clay-tooltip-bottom, .clay-tooltip-bottom-left, .clay-tooltip-bottom-right
+
+$cadmin-clay-tooltip-bottom: () !default;
+$cadmin-clay-tooltip-bottom: map-deep-merge(
+	(
+		padding-top: $cadmin-tooltip-arrow-height,
+		arrow: (
+			left: 50%,
+			margin-left: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			top: 0,
+			before: (
+				border-bottom-color: $cadmin-tooltip-arrow-color,
+				border-width: 0
+					(
+						$cadmin-tooltip-arrow-width * 0.5,
+					)
+					$cadmin-tooltip-arrow-height,
+				bottom: 0,
+			),
+		),
+		tooltip-arrow: (
+			border-bottom-color: transparent,
+			border-right-color: transparent,
+			left: 50%,
+			top: 0,
+		),
+	),
+	$cadmin-clay-tooltip-bottom
+);
+
+// .clay-tooltip-bottom-left
+
+$cadmin-clay-tooltip-bottom-left: () !default;
+$cadmin-clay-tooltip-bottom-left: map-deep-merge(
+	(
+		arrow: (
+			left: $cadmin-tooltip-arrow-offset,
+			margin-left: 0,
+		),
+	),
+	$cadmin-clay-tooltip-bottom-left
+);
+
+// .clay-tooltip-bottom-right
+
+$cadmin-clay-tooltip-bottom-right: () !default;
+$cadmin-clay-tooltip-bottom-right: map-deep-merge(
+	(
+		arrow: (
+			left: auto,
+			margin-left: 0,
+			right: $cadmin-tooltip-arrow-offset,
+		),
+	),
+	$cadmin-clay-tooltip-bottom-right
+);
+
+// .clay-tooltip-left, .clay-tooltip-left-bottom, .clay-tooltip-left-top
+
+$cadmin-clay-tooltip-left: () !default;
+$cadmin-clay-tooltip-left: map-deep-merge(
+	(
+		padding-right: $cadmin-tooltip-arrow-height,
+		arrow: (
+			height: $cadmin-tooltip-arrow-width,
+			margin-top: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			right: 0,
+			top: 50%,
+			width: $cadmin-tooltip-arrow-height,
+			before: (
+				border-left-color: $cadmin-tooltip-arrow-color,
+				border-width: (
+					$cadmin-tooltip-arrow-width * 0.5,
+				)
+				0
+				(
+					$cadmin-tooltip-arrow-width * 0.5,
+				)
+				$cadmin-tooltip-arrow-height,
+				left: 0,
+			),
+		),
+		tooltip-arrow: (
+			border-bottom-color: transparent,
+			border-left-color: transparent,
+			right: 0,
+			top: 50%,
+		),
+	),
+	$cadmin-clay-tooltip-left
+);
+
+// .clay-tooltip-left-bottom
+
+$cadmin-clay-tooltip-left-bottom: () !default;
+$cadmin-clay-tooltip-left-bottom: map-deep-merge(
+	(
+		arrow: (
+			bottom: $cadmin-tooltip-arrow-offset,
+			margin-top: 0,
+			top: auto,
+		),
+	),
+	$cadmin-clay-tooltip-left-bottom
+);
+
+// .clay-tooltip-left-top
+
+$cadmin-clay-tooltip-left-top: () !default;
+$cadmin-clay-tooltip-left-top: map-deep-merge(
+	(
+		arrow: (
+			margin-top: 0,
+			top: $cadmin-tooltip-arrow-offset,
+		),
+	),
+	$cadmin-clay-tooltip-left-top
+);
+
+// .clay-tooltip-right, .clay-tooltip-right-bottom, .clay-tooltip-right-top
+
+$cadmin-clay-tooltip-right: () !default;
+$cadmin-clay-tooltip-right: map-deep-merge(
+	(
+		padding-left: $cadmin-tooltip-arrow-height,
+		arrow: (
+			height: $cadmin-tooltip-arrow-width,
+			left: 0,
+			margin-top: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			top: 50%,
+			width: $cadmin-tooltip-arrow-height,
+			before: (
+				border-right-color: $cadmin-tooltip-arrow-color,
+				border-width: (
+					$cadmin-tooltip-arrow-width * 0.5,
+				)
+				$cadmin-tooltip-arrow-height
+				(
+					$cadmin-tooltip-arrow-width * 0.5,
+				)
+				0,
+				right: 0,
+			),
+		),
+		tooltip-arrow: (
+			border-right-color: transparent,
+			border-top-color: transparent,
+			left: 0,
+			top: 50%,
+		),
+	),
+	$cadmin-clay-tooltip-right
+);
+
+// .clay-tooltip-right-bottom
+
+$cadmin-clay-tooltip-right-bottom: () !default;
+$cadmin-clay-tooltip-right-bottom: map-deep-merge(
+	(
+		arrow: (
+			bottom: $cadmin-tooltip-arrow-offset,
+			margin-top: 0,
+			top: auto,
+		),
+	),
+	$cadmin-clay-tooltip-right-bottom
+);
+
+// .clay-tooltip-right-top
+
+$cadmin-clay-tooltip-right-top: () !default;
+$cadmin-clay-tooltip-right-top: map-deep-merge(
+	(
+		arrow: (
+			margin-top: 0,
+			top: $cadmin-tooltip-arrow-offset,
+		),
+	),
+	$cadmin-clay-tooltip-right-top
+);
+
+// .clay-tooltip-top, .clay-tooltip-top-left, .clay-tooltip-top-right
+
+$cadmin-tooltip-top: () !default;
+$cadmin-tooltip-top: map-deep-merge(
+	(
+		padding-bottom: $cadmin-tooltip-arrow-height,
+		arrow: (
+			bottom: 0,
+			left: 50%,
+			margin-left: math-sign($cadmin-tooltip-arrow-width * 0.5),
+			before: (
+				border-top-color: $cadmin-tooltip-arrow-color,
+				border-width: $cadmin-tooltip-arrow-height
+					(
+						$cadmin-tooltip-arrow-width * 0.5,
+					)
+					0,
+				top: 0,
+			),
+		),
+		tooltip-arrow: (
+			border-left-color: transparent,
+			border-top-color: transparent,
+			bottom: 0,
+			left: 50%,
+		),
+	),
+	$cadmin-tooltip-top
+);
+
+// .clay-tooltip-top-left
+
+$cadmin-tooltip-top-left: () !default;
+$cadmin-tooltip-top-left: map-deep-merge(
+	(
+		arrow: (
+			left: $cadmin-tooltip-arrow-offset,
+			margin-left: 0,
+		),
+	),
+	$cadmin-tooltip-top-left
+);
+
+// .clay-tooltip-top-right
+
+$cadmin-tooltip-top-right: () !default;
+$cadmin-tooltip-top-right: map-deep-merge(
+	(
+		arrow: (
+			left: auto,
+			margin-left: 0,
+			right: $cadmin-tooltip-arrow-offset,
+		),
+	),
+	$cadmin-tooltip-top-right
+);
