@@ -277,11 +277,6 @@
 		)
 	);
 
-	$active-class: setter(map-get($map, active-class), ());
-	$active-class: map-merge($active, $active-class);
-
-	$active-class-after: setter(map-get($map, active-class-after), ());
-
 	$nested-active-focus: setter(map-get($active, focus), ());
 	$active-focus: setter(map-get($map, active-focus), ());
 	$active-focus: map-merge($nested-active-focus, $active-focus);
@@ -297,6 +292,13 @@
 				),
 		)
 	);
+
+	$active-class: setter(map-get($map, active-class), ());
+	$active-class: map-merge($active, $active-class);
+
+	$active-class-after: setter(map-get($map, active-class-after), ());
+
+	$show: map-deep-merge($active-class, map-get($map, show));
 
 	$disabled: setter(map-get($map, disabled), ());
 	$disabled: map-merge(
@@ -595,10 +597,7 @@
 			}
 		}
 
-		&[aria-expanded='true'],
-		&.active,
-		&.show,
-		.show > &.dropdown-toggle {
+		&.active {
 			@include clay-css($active-class);
 
 			&::after {
@@ -663,6 +662,11 @@
 					setter(map-get($disabled, inline-item-after), ())
 				);
 			}
+		}
+
+		&[aria-expanded='true'],
+		&.show {
+			@include clay-css($show);
 		}
 
 		@if (map-get($c-inner, enabled)) {
