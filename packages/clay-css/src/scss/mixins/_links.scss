@@ -757,8 +757,7 @@
 		}
 
 		&[aria-expanded='true'],
-		&.show,
-		.show > & {
+		&.show {
 			@include clay-css($show);
 
 			&::before {
