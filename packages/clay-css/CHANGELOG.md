@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.41.0](https://github.com/liferay/clay/compare/v3.40.1...v3.41.0) (2021-12-02)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas `select.form-control` size and multiple styles should match Lexicon ([b357b31](https://github.com/liferay/clay/commit/b357b313609b4057bd5c8fc185c40603b1f63314))
+* **@clayui/css:** Cadmin `select.form-control` size and multiple styles should match Lexicon ([7e73f27](https://github.com/liferay/clay/commit/7e73f27ed87b8fc271e5382951b5d965dc9de70f))
+* **@clayui/css:** Mixin `clay-link` nested `disabled:(active: ())` should output styles ([4492f57](https://github.com/liferay/clay/commit/4492f570c898c7d91e47b98d5ce60579d9890683))
+
+
+### Features
+
+* **@clayui/css:** _reboot convert `a` tag to use `clay-link` mixin ([47d6130](https://github.com/liferay/clay/commit/47d61303b92242a2bf9046591bcd5d233439698f))
+* **@clayui/css:** Cadmin _reboot convert `a` tag to use `clay-link` mixin ([45536f4](https://github.com/liferay/clay/commit/45536f479c16d11c83ece58bac213e05af3c862c))
+* **@clayui/css:** Cadmin Form Validation use `clay-form-validation-variant` to generate states ([91bbc2a](https://github.com/liferay/clay/commit/91bbc2a5b66f1f1b037667b22c3783f915c39514))
+* **@clayui/css:** Cadmin Toggle Switch convert to use new mixins ([f95b701](https://github.com/liferay/clay/commit/f95b701d921cc54279777f3cb1a732bf42791178))
+* **@clayui/css:** Form Validation use `clay-form-validation-variant` to generate states ([3efaea8](https://github.com/liferay/clay/commit/3efaea84dcda8cf935762865c351d55b46a73b59))
+* **@clayui/css:** Mixins `clay-css` adds more text decoration properties ([ef06c5b](https://github.com/liferay/clay/commit/ef06c5be63daed03eafb0ec5f558d1e82e85976a)), closes [#4447](https://github.com/liferay/clay/issues/4447)
+* **@clayui/css:** Mixins `clay-link` add option to style ::before and ::after ([330931e](https://github.com/liferay/clay/commit/330931e42081b8fac6d4674620521c7a1f8b9d0d))
+* **@clayui/css:** Mixins `clay-link` adds customization for `:link` and `:visited` ([8a45963](https://github.com/liferay/clay/commit/8a45963a36752f34f9a9ad1b48f1325557d87481))
+* **@clayui/css:** Mixins `clay-select-variant` adds more configuration options ([983de0f](https://github.com/liferay/clay/commit/983de0f0be71f9e696b1458a9126455cebf39e30))
+* **@clayui/css:** Mixins Forms `clay-form-validation-variant` adds more selectors ([99a311b](https://github.com/liferay/clay/commit/99a311bd6da14ba278cc0da0dbcd8d865fe7a08b))
+* **@clayui/css:** Mixins Forms adds `clay-form-validation-variant` ([22e2d02](https://github.com/liferay/clay/commit/22e2d02823344ecd72fefa4b19bbc3e1ec1fe601))
+* **@clayui/css:** Mixins Toggle Switch adds a few variant mixins for generating selectors ([e45125e](https://github.com/liferay/clay/commit/e45125e363646d57f33338a2aae2c060c6763623))
+* **@clayui/css:** Toggle Switch convert to use new mixins ([687a18b](https://github.com/liferay/clay/commit/687a18bdee2a165fcf1bb4b3ad081693a0865553))
+
+
+
+
+
 ## [3.40.1](https://github.com/liferay/clay/compare/v3.40.0...v3.40.1) (2021-11-17)
 
 
