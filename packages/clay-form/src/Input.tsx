@@ -157,9 +157,9 @@ ClayInputGroupInsetItem.displayName = 'ClayInputGroupInsetItem';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
-	 * Input component to render. Can either be a string like 'input' or a component.
+	 * Input component to render. Can either be a string like 'input' or 'textarea' or a component.
 	 */
-	component?: 'input' | React.ForwardRefExoticComponent<any>;
+	component?: 'input' | 'textarea' | React.ForwardRefExoticComponent<any>;
 
 	/**
 	 * Flag to indicate if `input-group-inset-after` class should be applied
