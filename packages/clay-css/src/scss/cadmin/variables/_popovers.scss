@@ -47,3 +47,413 @@ $cadmin-popover-right-top-arrow-color: $cadmin-popover-header-bg !default;
 $cadmin-popover-top-arrow-color: $cadmin-popover-arrow-color !default;
 $cadmin-popover-top-left-arrow-color: null !default;
 $cadmin-popover-top-right-arrow-color: null !default;
+
+// .popover
+
+$cadmin-popover: () !default;
+$cadmin-popover: map-deep-merge(
+	(
+		background-clip: padding-box,
+		background-color: $cadmin-popover-bg,
+		border: $cadmin-popover-border-width solid $cadmin-popover-border-color,
+		border-radius: clay-enable-rounded($cadmin-popover-border-radius),
+		box-shadow: clay-enable-shadows($cadmin-popover-box-shadow),
+		display: block,
+		font-family: $cadmin-font-family-base,
+		font-size: $cadmin-popover-font-size,
+		font-style: normal,
+		font-weight: $cadmin-font-weight-normal,
+		left: 0,
+		letter-spacing: normal,
+		line-break: auto,
+		line-height: $cadmin-line-height-base,
+		max-width: $cadmin-popover-max-width,
+		position: absolute,
+		text-align: left,
+		text-decoration: none,
+		text-shadow: none,
+		text-transform: none,
+		top: 0,
+		white-space: normal,
+		word-break: normal,
+		word-spacing: normal,
+		word-wrap: break-word,
+		z-index: $cadmin-zindex-popover,
+		arrow: (
+			display: block,
+			height: $cadmin-popover-arrow-height,
+			margin: 0 $cadmin-popover-border-radius,
+			position: absolute,
+			width: $cadmin-popover-arrow-width,
+			before: (
+				border-color: transparent,
+				border-style: solid,
+				content: '',
+				display: block,
+				position: absolute,
+			),
+			after: (
+				border-color: transparent,
+				border-style: solid,
+				content: '',
+				display: block,
+				position: absolute,
+			),
+		),
+		inline-scroller: (
+			max-height: $cadmin-popover-inline-scroller-max-height,
+		),
+	),
+	$cadmin-popover
+);
+
+// .popover-header
+
+$cadmin-popover-header: () !default;
+$cadmin-popover-header: map-deep-merge(
+	(
+		color: $cadmin-popover-header-color,
+		background-color: $cadmin-popover-header-bg,
+		border-bottom: $cadmin-popover-border-width solid
+			clay-darken($cadmin-popover-header-bg, 5%),
+		border-color: $cadmin-popover-header-border-color,
+		border-top-left-radius:
+			clay-enable-rounded($cadmin-popover-offset-border-width),
+		border-top-right-radius:
+			clay-enable-rounded($cadmin-popover-offset-border-width),
+		font-size: $cadmin-popover-header-font-size,
+		font-weight: $cadmin-popover-header-font-weight,
+		margin-bottom: $cadmin-popover-header-margin-y,
+		margin-left: $cadmin-popover-header-margin-x,
+		margin-right: $cadmin-popover-header-margin-x,
+		margin-top: $cadmin-popover-header-margin-y,
+		padding: $cadmin-popover-header-padding-y
+			$cadmin-popover-header-padding-x,
+		empty: (
+			display: none,
+		),
+	),
+	$cadmin-popover-header
+);
+
+// .popover-body
+
+$cadmin-popover-body: () !default;
+$cadmin-popover-body: map-merge(
+	(
+		border-bottom-left-radius:
+			clay-enable-rounded($cadmin-popover-offset-border-width),
+		border-bottom-right-radius:
+			clay-enable-rounded($cadmin-popover-offset-border-width),
+		color: $cadmin-popover-body-color,
+		padding: $cadmin-popover-body-padding-y $cadmin-popover-body-padding-x,
+	),
+	$cadmin-popover-body
+);
+
+// .clay-popover-top, .clay-popover-top-left, .clay-popover-top-right
+
+$cadmin-clay-popover-top: () !default;
+$cadmin-clay-popover-top: map-deep-merge(
+	(
+		margin-bottom: $cadmin-popover-arrow-height,
+		arrow: (
+			left: 50%,
+			margin-left: math-sign($cadmin-popover-arrow-width * 0.5),
+			bottom:
+				calc(
+					(
+							#{$cadmin-popover-arrow-height} + #{$cadmin-popover-border-width}
+						) * -1
+				),
+			margin: 0,
+			before: (
+				border-top-color: $cadmin-popover-arrow-outer-color,
+				border-width: $cadmin-popover-arrow-height
+					(
+						$cadmin-popover-arrow-width * 0.5,
+					)
+					0,
+				bottom: 0,
+			),
+			after: (
+				border-top-color: $cadmin-popover-top-arrow-color,
+				border-width: $cadmin-popover-arrow-height
+					(
+						$cadmin-popover-arrow-width * 0.5,
+					)
+					0,
+				bottom: $cadmin-popover-border-width,
+			),
+		),
+	),
+	$cadmin-clay-popover-top
+);
+
+// .clay-popover-top-left
+
+$cadmin-clay-popover-top-left: () !default;
+$cadmin-clay-popover-top-left: map-deep-merge(
+	(
+		arrow: (
+			left: $cadmin-popover-arrow-offset,
+			margin: 0,
+			after: (
+				border-top-color: $cadmin-popover-top-left-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-top-left
+);
+
+// .clay-popover-top-right
+
+$cadmin-clay-popover-top-right: () !default;
+$cadmin-clay-popover-top-right: map-deep-merge(
+	(
+		arrow: (
+			left: auto,
+			margin: 0,
+			right: $cadmin-popover-arrow-offset,
+			after: (
+				border-top-color: $cadmin-popover-top-right-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-top-right
+);
+
+// .clay-popover-right, .clay-popover-right-bottom, .clay-popover-right-top
+
+$cadmin-clay-popover-right: () !default;
+$cadmin-clay-popover-right: map-deep-merge(
+	(
+		margin-left: $cadmin-popover-arrow-height,
+		arrow: (
+			height: $cadmin-popover-arrow-width,
+			left:
+				calc(
+					(
+							#{$cadmin-popover-arrow-height} + #{$cadmin-popover-border-width}
+						) * -1
+				),
+			margin: math-sign($cadmin-popover-arrow-height * 0.5) 0 0,
+			top: 50%,
+			width: $cadmin-popover-arrow-height,
+			before: (
+				border-right-color: $cadmin-popover-arrow-outer-color,
+				border-width: (
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				$cadmin-popover-arrow-height
+				(
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				0,
+				left: 0,
+			),
+			after: (
+				border-right-color: $cadmin-popover-right-arrow-color,
+				border-width: (
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				$cadmin-popover-arrow-height
+				(
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				0,
+				left: $cadmin-popover-border-width,
+			),
+		),
+	),
+	$cadmin-clay-popover-right
+);
+
+// .clay-popover-right-bottom
+
+$cadmin-clay-popover-right-bottom: () !default;
+$cadmin-clay-popover-right-bottom: map-deep-merge(
+	(
+		arrow: (
+			bottom: $cadmin-popover-arrow-offset,
+			margin: 0,
+			top: auto,
+			after: (
+				border-right-color: $cadmin-popover-right-bottom-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-right-bottom
+);
+
+// .clay-popover-right-top
+
+$cadmin-clay-popover-right-top: () !default;
+$cadmin-clay-popover-right-top: map-deep-merge(
+	(
+		arrow: (
+			margin: 0,
+			top: $cadmin-popover-arrow-offset,
+			after: (
+				border-right-color: $cadmin-popover-right-top-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-right-top
+);
+
+// .clay-popover-bottom, .clay-popover-bottom-left, .clay-popover-bottom-right
+
+$cadmin-clay-popover-bottom: () !default;
+$cadmin-clay-popover-bottom: map-deep-merge(
+	(
+		margin-top: $cadmin-popover-arrow-height,
+		arrow: (
+			left: 50%,
+			margin: 0 0 0 math-sign($cadmin-popover-arrow-width * 0.5),
+			top:
+				calc(
+					(
+							#{$cadmin-popover-arrow-height} + #{$cadmin-popover-border-width}
+						) * -1
+				),
+			before: (
+				border-bottom-color: $cadmin-popover-arrow-outer-color,
+				border-width: 0
+					(
+						$cadmin-popover-arrow-width * 0.5,
+					)
+					$cadmin-popover-arrow-height
+					(
+						$cadmin-popover-arrow-width * 0.5,
+					),
+				top: 0,
+			),
+			after: (
+				border-bottom-color: $cadmin-popover-bottom-arrow-color,
+				border-width: 0
+					(
+						$cadmin-popover-arrow-width * 0.5,
+					)
+					$cadmin-popover-arrow-height
+					(
+						$cadmin-popover-arrow-width * 0.5,
+					),
+				top: $cadmin-popover-border-width,
+			),
+		),
+	),
+	$cadmin-clay-popover-bottom
+);
+
+// .clay-popover-bottom-left
+
+$cadmin-clay-popover-bottom-left: () !default;
+$cadmin-clay-popover-bottom-left: map-deep-merge(
+	(
+		arrow: (
+			left: $cadmin-popover-arrow-offset,
+			margin: 0,
+			after: (
+				border-bottom-color: $cadmin-popover-bottom-left-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-bottom-left
+);
+
+// .clay-popover-bottom-right
+
+$cadmin-clay-popover-bottom-right: () !default;
+$cadmin-clay-popover-bottom-right: map-deep-merge(
+	(
+		arrow: (
+			left: auto,
+			margin: 0,
+			right: $cadmin-popover-arrow-offset,
+			after: (
+				border-bottom-color: $cadmin-popover-bottom-right-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-bottom-right
+);
+
+// .clay-popover-left, .clay-popover-left-bottom, .clay-popover-left-top
+
+$cadmin-clay-popover-left: () !default;
+$cadmin-clay-popover-left: map-deep-merge(
+	(
+		margin-right: $cadmin-popover-arrow-height,
+		arrow: (
+			height: $cadmin-popover-arrow-width,
+			margin: math-sign($cadmin-popover-arrow-height * 0.5) 0 0,
+			right:
+				calc(
+					(
+							#{$cadmin-popover-arrow-height} + #{$cadmin-popover-border-width}
+						) * -1
+				),
+			top: 50%,
+			width: $cadmin-popover-arrow-height,
+			before: (
+				border-left-color: $cadmin-popover-arrow-outer-color,
+				border-width: (
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				0
+				(
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				$cadmin-popover-arrow-height,
+				right: 0,
+			),
+			after: (
+				border-left-color: $cadmin-popover-left-arrow-color,
+				border-width: (
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				0
+				(
+					$cadmin-popover-arrow-width * 0.5,
+				)
+				$cadmin-popover-arrow-height,
+				right: $cadmin-popover-border-width,
+			),
+		),
+	),
+	$cadmin-clay-popover-left
+);
+
+// .clay-popover-left-bottom
+
+$cadmin-clay-popover-left-bottom: () !default;
+$cadmin-clay-popover-left-bottom: map-deep-merge(
+	(
+		arrow: (
+			bottom: $cadmin-popover-arrow-offset,
+			margin: 0,
+			top: auto,
+			after: (
+				border-left-color: $cadmin-popover-left-bottom-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-left-bottom
+);
+
+// .clay-popover-left-top
+
+$cadmin-clay-popover-left-top: () !default;
+$cadmin-clay-popover-left-top: map-deep-merge(
+	(
+		arrow: (
+			margin: 0,
+			top: $cadmin-popover-arrow-offset,
+			after: (
+				border-left-color: $cadmin-popover-left-top-arrow-color,
+			),
+		),
+	),
+	$cadmin-clay-popover-left-top
+);
