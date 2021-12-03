@@ -201,6 +201,29 @@ storiesOf('Components|ClayInput', module)
 			</ClayForm.Group>
 		</div>
 	))
+	.add('textarea', () => (
+		<div className="sheet">
+			<ClayForm.Group>
+				<label htmlFor="basicInputText">Name</label>
+				<ClayInput
+					component="textarea"
+					disabled={boolean('Disabled ', false)}
+					id="basicInputText"
+					placeholder="Insert your name here"
+					readOnly={boolean('Read Only ', false)}
+					sizing={select(
+						'Sizing',
+						{
+							lg: 'lg',
+							sm: 'sm',
+						},
+						undefined
+					)}
+					type="text"
+				/>
+			</ClayForm.Group>
+		</div>
+	))
 	.add('group separated', () => (
 		<div className="sheet">
 			<ClayForm.Group>
