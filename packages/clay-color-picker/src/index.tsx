@@ -6,7 +6,12 @@
 import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
-import {FocusScope, sub} from '@clayui/shared';
+import {
+	FocusScope,
+	TInternalStateOnChange,
+	sub,
+	useInternalState,
+} from '@clayui/shared';
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
@@ -56,6 +61,11 @@ const DEFAULT_ARIA_LABELS = {
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
+	 * Flag to indicate if the DropDown container is showing or not
+	 */
+	active?: boolean;
+
+	/**
 	 * Labels for the aria attributes
 	 */
 	ariaLabels?: {
@@ -89,6 +99,11 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * The input attribute for name
 	 */
 	name?: string;
+
+	/**
+	 * Callback function for when active state changes
+	 */
+	onActiveChange?: TInternalStateOnChange<boolean>;
 
 	/**
 	 * Callback for when the list of colors change
@@ -143,12 +158,14 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const ClayColorPicker: React.FunctionComponent<IProps> = ({
+	active,
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
 	disabled,
 	dropDownContainerProps,
 	label,
 	name,
+	onActiveChange,
 	onColorsChange,
 	onValueChange = () => {},
 	predefinedColors,
@@ -192,7 +209,11 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	const valueInputRef = React.useRef<HTMLInputElement>(null);
 	const splotchRef = React.useRef<HTMLButtonElement>(null);
 
-	const [active, setActive] = React.useState(false);
+	const [internalActive, setInternalActive] = useInternalState({
+		initialValue: false,
+		onChange: onActiveChange,
+		value: active,
+	});
 
 	return (
 		<FocusScope arrowKeysUpDown={false}>
@@ -236,7 +257,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								onClick={() =>
 									useNative && valueInputRef.current
 										? valueInputRef.current.click()
-										: setActive((val: boolean) => !val)
+										: setInternalActive(!internalActive)
 								}
 								ref={splotchRef}
 								value={value}
@@ -245,12 +266,12 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 					</ClayInput.GroupItem>
 
 					<ClayDropDown.Menu
-						active={active}
+						active={internalActive}
 						alignElementRef={triggerElementRef}
 						className="clay-color-dropdown-menu"
 						containerProps={dropDownContainerProps}
 						focusRefOnEsc={splotchRef}
-						onSetActive={setActive}
+						onSetActive={setInternalActive}
 						ref={dropdownContainerRef}
 					>
 						{(!onColorsChange ||
@@ -265,7 +286,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								label={label}
 								onChange={(newVal) => {
 									onValueChange(newVal);
-									setActive((val: boolean) => !val);
+									setInternalActive(!internalActive);
 
 									if (splotchRef.current) {
 										splotchRef.current.focus();
