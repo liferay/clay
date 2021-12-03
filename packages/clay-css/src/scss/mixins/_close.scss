@@ -344,7 +344,6 @@
 			@include clay-css($active);
 		}
 
-		.show > &,
 		&.active {
 			@include clay-css($active-class);
 		}
