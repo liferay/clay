@@ -9,11 +9,19 @@ $application-bar-size: map-deep-merge(
 $application-bar-base: () !default;
 $application-bar-base: map-deep-merge(
 	(
-		link-border-radius: $border-radius,
-		link-outline: 0,
-		link-transition: box-shadow 0.15s ease-in-out,
-		link-focus-box-shadow: $btn-focus-box-shadow,
-		link-disabled-box-shadow: none,
+		navbar-nav: (
+			nav-link: (
+				border-radius: $border-radius,
+				outline: 0,
+				transition: box-shadow 0.15s ease-in-out,
+				focus: (
+					box-shadow: $btn-focus-box-shadow,
+				),
+				disabled: (
+					box-shadow: none,
+				),
+			),
+		),
 	),
 	$application-bar-base
 );
@@ -21,13 +29,25 @@ $application-bar-base: map-deep-merge(
 $application-bar-dark: () !default;
 $application-bar-dark: map-deep-merge(
 	(
-		bg: $dark-l1,
-		link-font-weight: $font-weight-semi-bold,
-		link-hover-bg: rgba(255, 255, 255, 0.03),
-		link-focus-bg: rgba(255, 255, 255, 0.03),
-		link-active-bg: rgba(255, 255, 255, 0.06),
-		link-disabled-bg: transparent,
-		link-disabled-opacity: 0.5,
+		background-color: $dark-l1,
+		navbar-nav: (
+			nav-link: (
+				font-weight: $font-weight-semi-bold,
+				hover: (
+					background-color: rgba(255, 255, 255, 0.03),
+				),
+				focus: (
+					background-color: rgba(255, 255, 255, 0.03),
+				),
+				active: (
+					background-color: rgba(255, 255, 255, 0.06),
+				),
+				disabled: (
+					background-color: transparent,
+					opacity: 0.5,
+				),
+			),
+		),
 	),
 	$application-bar-dark
 );

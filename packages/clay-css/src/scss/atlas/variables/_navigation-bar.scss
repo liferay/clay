@@ -15,10 +15,18 @@ $navigation-bar-size: map-deep-merge(
 $navigation-bar-base: () !default;
 $navigation-bar-base: map-deep-merge(
 	(
-		link-border-radius: 0,
-		link-outline: 0,
-		link-focus-box-shadow: $btn-focus-box-shadow,
-		link-disabled-box-shadow: none,
+		navbar-nav: (
+			nav-link: (
+				border-radius: 0,
+				outline: 0,
+				focus: (
+					box-shadow: $btn-focus-box-shadow,
+				),
+				disabled: (
+					box-shadow: none,
+				),
+			),
+		),
 	),
 	$navigation-bar-base
 );
@@ -26,13 +34,23 @@ $navigation-bar-base: map-deep-merge(
 $navigation-bar-light: () !default;
 $navigation-bar-light: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $gray-200,
-		link-font-weight: $font-weight-semi-bold,
-		link-hover-color: $gray-900,
-		link-focus-color: $gray-900,
-		link-disabled-color: $gray-600,
-		link-disabled-opacity: $btn-disabled-opacity,
+		navbar-nav: (
+			nav-link: (
+				font-weight: $font-weight-semi-bold,
+				hover: (
+					color: $gray-900,
+				),
+				focus: (
+					color: $gray-900,
+				),
+				disabled: (
+					color: $gray-600,
+					opacity: $btn-disabled-opacity,
+				),
+			),
+		),
 	),
 	$navigation-bar-light
 );
@@ -40,14 +58,26 @@ $navigation-bar-light: map-deep-merge(
 $navigation-bar-secondary: () !default;
 $navigation-bar-secondary: map-deep-merge(
 	(
-		bg: $secondary-d1,
-		link-color: $secondary-l2,
-		link-font-weight: $font-weight-semi-bold,
-		link-hover-color: $white,
-		link-focus-color: $white,
-		link-active-color: $white,
-		link-disabled-color: $gray-400,
-		link-disabled-opacity: $btn-disabled-opacity,
+		background-color: $secondary-d1,
+		navbar-nav: (
+			nav-link: (
+				color: $secondary-l2,
+				font-weight: $font-weight-semi-bold,
+				hover: (
+					color: $white,
+				),
+				focus: (
+					color: $white,
+				),
+				active: (
+					color: $white,
+				),
+				disabled: (
+					color: $gray-400,
+					opacity: $btn-disabled-opacity,
+				),
+			),
+		),
 	),
 	$navigation-bar-secondary
 );

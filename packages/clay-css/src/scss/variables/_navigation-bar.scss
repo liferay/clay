@@ -21,12 +21,22 @@ $navigation-bar-base: () !default;
 $navigation-bar-light: () !default;
 $navigation-bar-light: map-deep-merge(
 	(
-		bg: $light,
-		link-color: $navbar-light-color,
-		link-hover-color: $navbar-light-hover-color,
-		link-active-color: $navbar-light-active-color,
-		link-disabled-color: $navbar-light-disabled-color,
-		link-disabled-opacity: 1,
+		background-color: $light,
+		navbar-nav: (
+			nav-link: (
+				color: $navbar-light-color,
+				hover: (
+					color: $navbar-light-hover-color,
+				),
+				active: (
+					color: $navbar-light-active-color,
+				),
+				disabled: (
+					color: $navbar-light-disabled-color,
+					opacity: 1,
+				),
+			),
+		),
 	),
 	$navigation-bar-light
 );
@@ -34,15 +44,29 @@ $navigation-bar-light: map-deep-merge(
 $navigation-bar-secondary: () !default;
 $navigation-bar-secondary: map-deep-merge(
 	(
-		bg: $secondary,
+		background-color: $secondary,
 		color: $white,
-		link-color: rgba(255, 255, 255, 0.65),
-		link-hover-color: rgba(255, 255, 255, 0.9),
-		link-active-color: rgba(255, 255, 255, 0.9),
-		link-disabled-color: rgba(255, 255, 255, 0.25),
-		link-disabled-opacity: 1,
-		brand-color: rgba(255, 255, 255, 0.9),
-		brand-hover-color: rgba(255, 255, 255, 0.9),
+		navbar-nav: (
+			nav-link: (
+				color: rgba(255, 255, 255, 0.65),
+				hover: (
+					color: rgba(255, 255, 255, 0.9),
+				),
+				active: (
+					color: rgba(255, 255, 255, 0.9),
+				),
+				disabled: (
+					color: rgba(255, 255, 255, 0.25),
+					opacity: 1,
+				),
+			),
+		),
+		navbar-brand: (
+			color: rgba(255, 255, 255, 0.9),
+			hover: (
+				color: rgba(255, 255, 255, 0.9),
+			),
+		),
 	),
 	$navigation-bar-secondary
 );

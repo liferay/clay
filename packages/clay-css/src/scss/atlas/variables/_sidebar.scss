@@ -73,7 +73,7 @@ $sidebar-light: map-deep-merge(
 $sidebar-light-navigation-bar: () !default;
 $sidebar-light-navigation-bar: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $secondary-l2,
 	),
 	$sidebar-light-navigation-bar
