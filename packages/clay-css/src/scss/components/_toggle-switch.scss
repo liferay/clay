@@ -52,7 +52,7 @@
 
 // Simple Toggle Switch
 
-.simple-toggle-switch {
+.simple-toggle-switch.toggle-switch {
 	@include clay-toggle-switch-variant($simple-toggle-switch);
 
 	// deprecated
@@ -66,6 +66,6 @@
 	}
 }
 
-.simple-toggle-switch-reverse {
+.simple-toggle-switch-reverse.simple-toggle-switch {
 	@include clay-toggle-switch-variant($simple-toggle-switch-reverse);
 }
