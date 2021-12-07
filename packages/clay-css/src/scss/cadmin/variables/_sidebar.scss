@@ -113,12 +113,22 @@ $cadmin-sidebar-light: map-deep-merge(
 $cadmin-sidebar-light-navigation-bar: () !default;
 $cadmin-sidebar-light-navigation-bar: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-secondary-l2,
-		link-color: $cadmin-navbar-light-color,
-		link-hover-color: $cadmin-navbar-light-hover-color,
-		link-active-color: $cadmin-navbar-light-active-color,
-		link-disabled-color: $cadmin-navbar-light-disabled-color,
+		navbar-nav: (
+			nav-link: (
+				color: $cadmin-navbar-light-color,
+				hover: (
+					color: $cadmin-navbar-light-hover-color,
+				),
+				active: (
+					color: $cadmin-navbar-light-active-color,
+				),
+				disabled: (
+					color: $cadmin-navbar-light-disabled-color,
+				),
+			),
+		),
 	),
 	$cadmin-sidebar-light-navigation-bar
 );
