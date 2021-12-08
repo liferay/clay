@@ -917,9 +917,229 @@
 	}
 }
 
-// `clay-navbar-variant` is deprecated as of v2.11.1
-// Creates a Navbar color variant
-// @param $map - Sass map that contain Navbar Variant properties to modify
+@mixin clay-navbar-expand-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			&.navbar-underline {
+				@include clay-css(map-deep-get($map, navbar-underline));
+
+				.navbar-nav {
+					@include clay-css(
+						map-deep-get($map, navbar-underline, navbar-nav)
+					);
+
+					.nav-link,
+					.btn-unstyled {
+						@include clay-link(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-link
+							)
+						);
+					}
+
+					.nav-link-monospaced {
+						@include clay-link(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-link-monospaced
+							)
+						);
+					}
+
+					.nav-btn {
+						@include clay-button-variant(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-btn
+							)
+						);
+					}
+
+					.nav-btn-monospaced {
+						@include clay-button-variant(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-btn-monospaced
+							)
+						);
+					}
+				}
+			}
+
+			&.navbar-collapse-absolute .navbar-collapse {
+				@include clay-css(
+					map-deep-get(
+						$map,
+						navbar-collapse-absolute,
+						navbar-collapse
+					)
+				);
+			}
+
+			.navbar-collapse {
+				@include clay-css(map-deep-get($map, navbar-collapse));
+
+				.navbar-nav {
+					@include clay-css(
+						map-deep-get($map, navbar-collapse, navbar-nav)
+					);
+
+					.dropdown-header {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								navbar-collapse,
+								navbar-nav,
+								dropdown-header
+							)
+						);
+					}
+
+					.dropdown-divider {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								navbar-collapse,
+								navbar-nav,
+								dropdown-divider
+							)
+						);
+					}
+
+					.dropdown-item {
+						@include clay-link(
+							map-deep-get(
+								$map,
+								navbar-collapse,
+								navbar-nav,
+								dropdown-item
+							)
+						);
+					}
+				}
+			}
+
+			.container {
+				@include clay-css(map-deep-get($map, container));
+			}
+
+			.container-fluid {
+				@include clay-css(map-deep-get($map, container-fluid));
+			}
+
+			.navbar-nav {
+				.nav-link,
+				.btn-unstyled {
+					@include clay-link(
+						map-deep-get($map, navbar-nav, nav-link)
+					);
+				}
+
+				.nav-link-monospaced {
+					@include clay-link(
+						map-deep-get($map, navbar-nav, nav-link-monospaced)
+					);
+				}
+
+				.nav-btn {
+					@include clay-button-variant(
+						map-deep-get($map, navbar-nav, nav-btn)
+					);
+				}
+
+				.nav-btn-monospaced {
+					@include clay-button-variant(
+						map-deep-get($map, navbar-nav, nav-btn-monospaced)
+					);
+				}
+
+				.nav-item {
+					> .custom-control {
+						@include clay-custom-control-variant(
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-item,
+								custom-control
+							)
+						);
+					}
+				}
+			}
+
+			.navbar-form {
+				@include clay-css(map-deep-get($map, navbar-form));
+
+				> .container {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container)
+					);
+				}
+
+				> .container-fluid {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container-fluid)
+					);
+				}
+
+				.form-control {
+					@include clay-form-control-variant(
+						map-deep-get($map, navbar-form, form-control)
+					);
+				}
+			}
+
+			.navbar-brand {
+				@include clay-link(map-deep-get($map, navbar-brand));
+			}
+
+			.navbar-title {
+				@include clay-link(map-get($map, navbar-title));
+			}
+
+			.navbar-text {
+				@include clay-link(map-get($map, navbar-text));
+			}
+
+			.navbar-toggler {
+				@include clay-button-variant(
+					map-deep-get($map, navbar-toggler)
+				);
+			}
+
+			.navbar-toggler-link {
+				@include clay-link(map-get($map, navbar-toggler-link));
+			}
+
+			.navbar-overlay {
+				@include clay-css(map-deep-get($map, navbar-overlay));
+			}
+
+			.dropdown-menu {
+				@include clay-dropdown-menu-variant(
+					map-get($map, dropdown-menu)
+				);
+			}
+		}
+	}
+}
+
+/// A mixin to create `.navbar` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
 
 @mixin clay-navbar-variant($map) {
 	@if (type-of($map) == 'map') {
@@ -1197,19 +1417,82 @@
 		@if ($enabled) {
 			@include clay-css($base);
 
+			.container {
+				@include clay-css(map-get($map, container));
+			}
+
+			.container-fluid {
+				@include clay-css(map-get($map, container-fluid));
+			}
+
 			.navbar-nav {
 				.nav-link,
 				.btn-unstyled {
 					@include clay-link($nav-link);
 				}
 
+				.nav-link-monospaced {
+					@include clay-link(
+						map-deep-get($map, navbar-nav, nav-link-monospaced)
+					);
+				}
+
 				.nav-btn {
 					@include clay-button-variant($nav-btn);
+				}
+
+				.nav-btn-monospaced {
+					@include clay-button-variant(
+						map-deep-get($map, navbar-nav, nav-btn-monospaced)
+					);
+				}
+
+				.nav-item {
+					> .custom-control {
+						@include clay-custom-control-variant(
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-item,
+								custom-control
+							)
+						);
+					}
+				}
+			}
+
+			.navbar-form {
+				@include clay-css(map-deep-get($map, navbar-form));
+
+				> .container {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container)
+					);
+				}
+
+				> .container-fluid {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container-fluid)
+					);
+				}
+
+				.form-control {
+					@include clay-form-control-variant(
+						map-deep-get($map, navbar-form, form-control)
+					);
 				}
 			}
 
 			.navbar-brand {
 				@include clay-link($navbar-brand);
+			}
+
+			.navbar-title {
+				@include clay-link(map-get($map, navbar-title));
+			}
+
+			.navbar-text {
+				@include clay-link(map-get($map, navbar-text));
 			}
 
 			.navbar-toggler {
@@ -1222,6 +1505,24 @@
 
 			.navbar-overlay {
 				@include clay-css($navbar-overlay);
+			}
+
+			.dropdown-menu {
+				@include clay-dropdown-menu-variant(
+					map-get($map, dropdown-menu)
+				);
+			}
+
+			&.navbar-underline {
+				.navbar-toggler-link {
+					@include clay-link(
+						map-deep-get(
+							$map,
+							navbar-underline,
+							navbar-toggler-link
+						)
+					);
+				}
 			}
 
 			// only output specific media-breakpoint-down styles
@@ -1238,82 +1539,44 @@
 
 					@if ($breakpoint) {
 						@include media-breakpoint-down($breakpoint) {
-							$is-first-breakpoint: index(
-									$breakpoints,
-									$breakpoint
-										map-get($breakpoints, $breakpoint)
-								)
-								== 1;
+							$breakpoint-position: index(
+								$breakpoints,
+								$breakpoint map-get($breakpoints, $breakpoint)
+							);
 
-							&.navbar-expand#{if($is-first-breakpoint, '', '-' + $breakpoint)} {
-								&.navbar-collapse-absolute .navbar-collapse {
-									@include clay-css(
+							$is-first-breakpoint: $breakpoint-position == 1;
+
+							$is-last-breakpoint: $breakpoint-position ==
+								length($breakpoints);
+
+							@if not($is-last-breakpoint) {
+								$infix: '-' + breakpoint-next($breakpoint);
+
+								&.navbar-expand#{$infix} {
+									@include clay-navbar-expand-variant(
 										map-deep-get(
 											$media-breakpoint-down,
-											$breakpoint,
-											navbar-expand,
-											navbar-collapse-absolute,
-											navbar-collapse
+											'navbar-expand#{$infix}'
 										)
 									);
 								}
 
-								.navbar-collapse {
+								.navbar-overlay-#{$breakpoint}-down {
 									@include clay-css(
 										map-deep-get(
 											$media-breakpoint-down,
-											$breakpoint,
-											navbar-expand,
-											navbar-collapse
+											'navbar-overlay-#{$breakpoint}-down'
 										)
 									);
 
-									.navbar-nav {
+									&.show {
 										@include clay-css(
 											map-deep-get(
 												$media-breakpoint-down,
-												$breakpoint,
-												navbar-expand,
-												navbar-collapse,
-												navbar-nav
+												'navbar-overlay-#{$breakpoint}-down',
+												show
 											)
 										);
-
-										.dropdown-header {
-											@include clay-css(
-												map-deep-get(
-													$media-breakpoint-down,
-													$breakpoint,
-													navbar-expand,
-													navbar-collapse,
-													dropdown-header
-												)
-											);
-										}
-
-										.dropdown-divider {
-											@include clay-css(
-												map-deep-get(
-													$media-breakpoint-down,
-													$breakpoint,
-													navbar-expand,
-													navbar-collapse,
-													dropdown-divider
-												)
-											);
-										}
-
-										.dropdown-item {
-											@include clay-link(
-												map-deep-get(
-													$media-breakpoint-down,
-													$breakpoint,
-													navbar-expand,
-													navbar-collapse,
-													dropdown-item
-												)
-											);
-										}
 									}
 								}
 							}
@@ -1343,11 +1606,16 @@
 								)
 								== 1;
 
-							&.navbar-expand#{if($is-first-breakpoint, '', '-' + $breakpoint)} {
-								&.navbar-underline .navbar-nav {
-									.nav-link.active:after {
-										background-color: $underline-active-bg;
-									}
+							@if not($is-first-breakpoint) {
+								$infix: '-' + $breakpoint;
+
+								&.navbar-expand#{$infix} {
+									@include clay-navbar-expand-variant(
+										map-deep-get(
+											$media-breakpoint-up,
+											'navbar-expand#{$infix}'
+										)
+									);
 								}
 							}
 						}
