@@ -29,61 +29,66 @@
 /// max-width-mobile: {Number | String | Null}, // deprecated after 3.9.0
 
 @mixin clay-dropdown-menu-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$breakpoint-down: map-get($map, breakpoint-down);
+		$breakpoint-down: map-get($map, breakpoint-down);
 
-	$base: map-merge(
-		$map,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($map, background-color)),
-			background-clip:
-				setter(map-get($map, bg-clip), map-get($map, background-clip)),
-		)
-	);
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+				background-clip:
+					setter(
+						map-get($map, bg-clip),
+						map-get($map, background-clip)
+					),
+			)
+		);
 
-	$mobile: setter(map-get($map, mobile), ());
-	$mobile: map-merge(
-		$mobile,
-		(
-			font-size:
-				setter(
-					map-get($map, font-size-mobile),
-					map-get($mobile, font-size)
-				),
-			max-height:
-				setter(
-					map-get($map, max-height-mobile),
-					map-get($mobile, max-height)
-				),
-			max-width:
-				setter(
-					map-get($map, max-width-mobile),
-					map-get($mobile, max-width)
-				),
-		)
-	);
+		$mobile: setter(map-get($map, mobile), ());
+		$mobile: map-merge(
+			$mobile,
+			(
+				font-size:
+					setter(
+						map-get($map, font-size-mobile),
+						map-get($mobile, font-size)
+					),
+				max-height:
+					setter(
+						map-get($map, max-height-mobile),
+						map-get($mobile, max-height)
+					),
+				max-width:
+					setter(
+						map-get($map, max-width-mobile),
+						map-get($mobile, max-width)
+					),
+			)
+		);
 
-	@if ($enabled) {
-		@include clay-css($base);
+		@if ($enabled) {
+			@include clay-css($base);
 
-		@if ($breakpoint-down) {
-			@include media-breakpoint-down($breakpoint-down) {
-				@include clay-css($mobile);
+			@if ($breakpoint-down) {
+				@include media-breakpoint-down($breakpoint-down) {
+					@include clay-css($mobile);
+				}
 			}
-		}
 
-		&::before {
-			@include clay-css(setter(map-get($map, before), ()));
-		}
+			&::before {
+				@include clay-css(setter(map-get($map, before), ()));
+			}
 
-		&::after {
-			@include clay-css(setter(map-get($map, after), ()));
-		}
+			&::after {
+				@include clay-css(setter(map-get($map, after), ()));
+			}
 
-		&.show {
-			@include clay-css(setter(map-get($map, show), ()));
+			&.show {
+				@include clay-css(setter(map-get($map, show), ()));
+			}
 		}
 	}
 }
