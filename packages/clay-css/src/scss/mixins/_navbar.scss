@@ -935,8 +935,6 @@
 			(
 				background-color:
 					setter(map-get($map, bg), map-get($map, background-color)),
-				border-color: setter(map-get($map, border-color), transparent),
-				border-style: setter(map-get($map, border-style), solid),
 			)
 		);
 
