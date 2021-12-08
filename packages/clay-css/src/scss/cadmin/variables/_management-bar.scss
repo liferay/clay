@@ -1,6 +1,8 @@
 $cadmin-management-bar-base: () !default;
 $cadmin-management-bar-base: map-deep-merge(
 	(
+		border-color: transparent,
+		border-style: solid,
 		navbar-nav: (
 			nav-link: (
 				border-radius: $cadmin-border-radius,

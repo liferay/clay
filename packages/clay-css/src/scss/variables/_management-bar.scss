@@ -1,4 +1,11 @@
 $management-bar-base: () !default;
+$management-bar-base: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+	),
+	$management-bar-base
+);
 
 $management-bar-size: () !default;
 $management-bar-size: map-deep-merge(

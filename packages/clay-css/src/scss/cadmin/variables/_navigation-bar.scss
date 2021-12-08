@@ -24,6 +24,8 @@ $cadmin-navigation-bar-size: map-deep-merge(
 $cadmin-navigation-bar-base: () !default;
 $cadmin-navigation-bar-base: map-deep-merge(
 	(
+		border-color: transparent,
+		border-style: solid,
 		navbar-nav: (
 			nav-link: (
 				border-radius: 0,

@@ -17,6 +17,13 @@ $navigation-bar-size: map-deep-merge(
 );
 
 $navigation-bar-base: () !default;
+$navigation-bar-base: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+	),
+	$navigation-bar-base
+);
 
 $navigation-bar-light: () !default;
 $navigation-bar-light: map-deep-merge(
