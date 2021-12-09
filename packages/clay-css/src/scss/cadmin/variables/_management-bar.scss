@@ -16,6 +16,8 @@ $cadmin-management-bar-base: map-deep-merge(
 				),
 			),
 		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$cadmin-management-bar-base
 );
@@ -73,6 +75,8 @@ $cadmin-management-bar-light: map-deep-merge(
 				),
 			),
 		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$cadmin-management-bar-light
 );
@@ -107,6 +111,8 @@ $cadmin-management-bar-primary: map-deep-merge(
 				),
 			),
 		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$cadmin-management-bar-primary
 );
