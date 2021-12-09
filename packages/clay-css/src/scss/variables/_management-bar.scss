@@ -3,6 +3,8 @@ $management-bar-base: map-deep-merge(
 	(
 		border-color: transparent,
 		border-style: solid,
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$management-bar-base
 );
@@ -52,6 +54,8 @@ $management-bar-light: map-deep-merge(
 				),
 			),
 		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$management-bar-light
 );
@@ -77,6 +81,8 @@ $management-bar-primary: map-deep-merge(
 				),
 			),
 		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$management-bar-primary
 );

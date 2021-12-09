@@ -27,6 +27,8 @@ $navigation-bar-base: map-deep-merge(
 				),
 			),
 		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$navigation-bar-base
 );
@@ -48,6 +50,33 @@ $navigation-bar-light: map-deep-merge(
 				disabled: (
 					color: $gray-600,
 					opacity: $btn-disabled-opacity,
+				),
+			),
+		),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					navbar-collapse: (
+						navbar-nav: (
+							dropdown-item: (
+								color: $navbar-light-color,
+								font-weight: $font-weight-semi-bold,
+								hover: (
+									color: $gray-900,
+								),
+								focus: (
+									color: $gray-900,
+								),
+								active: (
+									color: $gray-900,
+								),
+								disabled: (
+									color: $gray-600,
+									opacity: $btn-disabled-opacity,
+								),
+							),
+						),
+					),
 				),
 			),
 		),
@@ -75,6 +104,33 @@ $navigation-bar-secondary: map-deep-merge(
 				disabled: (
 					color: $gray-400,
 					opacity: $btn-disabled-opacity,
+				),
+			),
+		),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					navbar-collapse: (
+						navbar-nav: (
+							dropdown-item: (
+								color: $secondary-l2,
+								font-weight: $font-weight-semi-bold,
+								hover: (
+									color: $white,
+								),
+								focus: (
+									color: $white,
+								),
+								active: (
+									color: $white,
+								),
+								disabled: (
+									color: $gray-400,
+									opacity: $btn-disabled-opacity,
+								),
+							),
+						),
+					),
 				),
 			),
 		),
