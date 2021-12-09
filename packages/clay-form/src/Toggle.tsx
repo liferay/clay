@@ -79,31 +79,33 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 						<span className="toggle-switch-handle">
 							{symbol && (
 								<>
-									<span
-										className={classNames(
-											'button-icon',
-											'button-icon-on',
-											'toggle-switch-icon'
-										)}
-									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol={symbol.on}
-										/>
-									</span>
-
-									<span
-										className={classNames(
-											'button-icon',
-											'button-icon-off',
-											'toggle-switch-icon'
-										)}
-									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol={symbol.off}
-										/>
-									</span>
+									{toggled ? (
+										<span
+											className={classNames(
+												'button-icon',
+												'button-icon-on',
+												'toggle-switch-icon'
+											)}
+										>
+											<ClayIcon
+												spritemap={spritemap}
+												symbol={symbol.on}
+											/>
+										</span>
+									) : (
+										<span
+											className={classNames(
+												'button-icon',
+												'button-icon-off',
+												'toggle-switch-icon'
+											)}
+										>
+											<ClayIcon
+												spritemap={spritemap}
+												symbol={symbol.off}
+											/>
+										</span>
+									)}
 								</>
 							)}
 						</span>
