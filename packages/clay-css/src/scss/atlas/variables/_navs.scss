@@ -1,5 +1,7 @@
 $nav-font-size: 0.875rem !default;
 
+// .nav-link
+
 $nav-link-disabled-color: $gray-500 !default;
 
 $nav-link-padding-x: 1rem !default; // 16px
@@ -14,6 +16,8 @@ $nav-link: map-deep-merge(
 	),
 	$nav-link
 );
+
+// .nav-link.btn-unstyled
 
 $nav-link-btn-unstyled: () !default;
 $nav-link-btn-unstyled: map-deep-merge(
@@ -45,6 +49,11 @@ $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-active-border-color: transparent transparent $body-bg !default;
 $nav-tabs-link-active-color: $gray-900 !default;
 
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
+$nav-tabs-link-show-bg: transparent !default;
+$nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color
+	transparent !default;
+
 $nav-tabs-link: () !default;
 $nav-tabs-link: map-deep-merge(
 	(
@@ -56,23 +65,27 @@ $nav-tabs-link: map-deep-merge(
 		),
 		disabled: (
 			box-shadow: none,
+			active: (
+				box-shadow: none,
+			),
 		),
 	),
 	$nav-tabs-link
 );
-
-// Nav Tabs Link Show
-
-$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
-$nav-tabs-link-show-bg: transparent !default;
-$nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color
-	transparent !default;
 
 // Nav Tabs Tab Pane
 
 $nav-tabs-tab-pane-bg: $white !default;
 $nav-tabs-tab-pane-border-radius: 4px !default;
 $nav-tabs-tab-pane-padding: 2rem !default;
+
+// Nav Underline Link Highlight
+
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+
+$nav-underline-link-active-highlight: $primary-l1 !default;
+$nav-underline-link-active-highlight-height: 0.125rem !default; // 2px
 
 // Nav Underline
 
@@ -101,11 +114,3 @@ $nav-underline-link: map-deep-merge(
 	),
 	$nav-underline-link
 );
-
-// Nav Underline Link Highlight
-
-$nav-underline-link-highlight-left: 0 !default;
-$nav-underline-link-highlight-right: 0 !default;
-
-$nav-underline-link-active-highlight: $primary-l1 !default;
-$nav-underline-link-active-highlight-height: 0.125rem !default; // 2px
