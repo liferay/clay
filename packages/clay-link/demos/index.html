@@ -108,10 +108,24 @@
 		new metal.ClayLink(
 			{
 				ariaLabel: 'My Link',
-				href: '#link-icons',
-				icon: 'add-cell',
+				defaultEventHandler: {
+					handleItemClicked(event) {
+						event.preventDefault();
+
+						var linkElement = event.currentTarget;
+						var href = linkElement.getAttribute('href');
+
+						if (confirm('Are you sure you want to leave this site?')) {
+							location.href = href;
+						}
+					}
+				},
+				href: 'https://liferay.com',
+				icon: 'link',
 				iconAlignment: 'right',
+				label: 'Visit Liferay',
 				spritemap: spritemap,
+				title: 'Visit Liferay\'s website',
 			},
 			'#link-icons'
 		);

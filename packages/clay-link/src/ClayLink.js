@@ -10,7 +10,30 @@ import templates from './ClayLink.soy.js';
  * Implementation of the Metal Clay Link.
  * @extends ClayComponent
  */
-class ClayLink extends ClayComponent {}
+class ClayLink extends ClayComponent {
+	/**
+	 * @inheritDoc
+	 */
+	attached() {
+		this.addListener('click', this._handleClick, true);
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	disposed() {
+		this.removeListener('click', this._handleClick);
+	}
+
+	/**
+	 * Handles click.
+	 * @param {!Event} event
+	 * @protected
+	 */
+	_handleClick(event) {
+		event.preventDefault();
+	}
+}
 
 /**
  * State definition.
