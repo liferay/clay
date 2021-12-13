@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.23.0](https://github.com/liferay/clay/tree/master/packages/clay/compare/v2.22.4...v2.23.0) (2021-12-13)
+
+**Note:** Version bump only for package clay
+
+
+
+
+
 ## [2.22.3](https://github.com/liferay/clay/tree/master/packages/clay/compare/v2.22.2...v2.22.3) (2021-02-18)
 
 **Note:** Version bump only for package clay

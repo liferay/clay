@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.23.0](https://github.com/liferay/clay/tree/master/packages/clay-sticker/compare/v2.22.4...v2.23.0) (2021-12-13)
+
+
+### Bug Fixes
+
+* Add title in a span element, so it can be accessible to screen readers tools ([564bbaf](https://github.com/liferay/clay/tree/master/packages/clay-sticker/commit/564bbaf))
+* Regenerate snapshots and updates tests files ([8aa4aac](https://github.com/liferay/clay/tree/master/packages/clay-sticker/commit/8aa4aac))
+
+
+
+
+
 ## [2.22.2](https://github.com/liferay/clay/tree/master/packages/clay-sticker/compare/v2.22.1...v2.22.2) (2021-02-11)
 
 **Note:** Version bump only for package clay-sticker

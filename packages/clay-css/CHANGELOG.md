@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.23.0](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.22.4...v2.23.0) (2021-12-13)
+
+
+### Bug Fixes
+
+* **clay-css:** `atlas-variables.scss` and `base-variables.scss` should be Sass partials. The CSS equivalent shouldn't be created since these files are only meant to be consumed by `.scss` files. ([5d33765](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/5d33765))
+* **clay-css:** 2.x Input Group move `.btn` and `.form-control` z-index styles to `input-group-prepend` and `input-group-append`. Input Groups input disappears when focused inside a modal with iframe. ([02e5a75](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/02e5a75))
+* **clay-css:** SF import `components/_reboot.scss` in `packages/clay-css/src/scss/_components.scss` ([2770857](https://github.com/liferay/clay/tree/master/packages/clay-css/commit/2770857)), closes [liferay#4124](https://github.com/liferay/clay/tree/master/packages/clay-css/issues/4124)
+
+
+
+
+
 ## [2.22.2](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v2.22.1...v2.22.2) (2021-02-11)
 
 
