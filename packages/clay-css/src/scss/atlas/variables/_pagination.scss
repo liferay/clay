@@ -33,6 +33,8 @@ $pagination-hover-bg: rgba(0, 0, 0, 0.02) !default;
 $pagination-hover-border-color: transparent !default;
 $pagination-hover-color: $gray-900 !default;
 
+$pagination-focus-box-shadow: $component-focus-box-shadow !default;
+
 $pagination-active-bg: rgba(0, 0, 0, 0.04) !default;
 $pagination-active-border-color: transparent !default;
 $pagination-active-color: $pagination-hover-color !default;
