@@ -1,133 +1,49 @@
 .pagination {
-	@include border-radius();
-
-	display: flex;
-	flex-wrap: wrap;
-	font-size: $pagination-font-size;
-	list-style: none;
-	margin-bottom: $pagination-margin-bottom;
-	padding-left: 0;
+	@include clay-pagination-variant($pagination);
 }
 
 .pagination-bar {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-
-	@include clay-scale-component {
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.pagination {
-		@include clay-scale-component {
-			margin-top: $pagination-margin-top-mobile;
-		}
-	}
+	@include clay-pagination-variant($pagination-bar);
 }
 
 // Pagination Link
 
 .page-link {
 	@include clay-link($pagination-link);
-
-	&:hover {
-		@include clay-link($pagination-link-hover);
-	}
-
-	&:focus {
-		@include clay-link($pagination-link-focus);
-	}
-
-	&:active,
-	&.active {
-		@include clay-link($pagination-link-active);
-	}
-
-	&:disabled,
-	&.disabled {
-		@include clay-link($pagination-link-disabled);
-	}
-}
-
-.page-item.active,
-.page-item.show {
-	.page-link {
-		@include clay-link($pagination-link-active);
-	}
-}
-
-.page-item.disabled {
-	.page-link {
-		@include clay-link($pagination-link-disabled);
-	}
 }
 
 // Pagination Item
 
 .page-item {
-	@include clay-container($pagination-item);
+	@include clay-css($pagination-item);
+
+	&.active {
+		.page-link {
+			@include clay-link(map-get($pagination-link, active));
+		}
+	}
+
+	&.disabled {
+		.page-link {
+			@include clay-link(map-get($pagination-link, disabled));
+		}
+	}
 }
 
 .page-item:first-child .page-link,
 .page-link-first {
-	border-radius: $pagination-link-first-border-radius;
+	@include clay-css($pagination-link-first);
 }
 
 .page-item:last-child .page-link,
 .page-link-last {
-	border-radius: $pagination-link-last-border-radius;
+	@include clay-css($pagination-link-last);
 }
 
 // Pagination Items Per Page
 
 .pagination-items-per-page {
-	font-size: $pagination-items-per-page-font-size;
-	margin-bottom: $pagination-margin-bottom;
-
-	> a,
-	> button {
-		@include clay-link($pagination-items-per-page-link);
-
-		&:hover {
-			@include clay-link($pagination-items-per-page-link-hover);
-		}
-
-		&:focus {
-			@include clay-link($pagination-items-per-page-link-focus);
-		}
-
-		&:active,
-		&.active {
-			@include clay-link($pagination-items-per-page-link-active);
-		}
-
-		&:disabled,
-		&.disabled {
-			@include clay-link($pagination-items-per-page-link-disabled);
-		}
-	}
-
-	&.active,
-	&.show {
-		> a,
-		> button {
-			@include clay-link($pagination-items-per-page-link-active);
-		}
-	}
-
-	&.disabled {
-		> a,
-		> button {
-			@include clay-link($pagination-items-per-page-link-disabled);
-		}
-	}
-
-	+ .pagination-results {
-		@include clay-scale-component {
-			margin-left: auto;
-		}
-	}
+	@include clay-pagination-items-per-page-variant($pagination-items-per-page);
 }
 
 .page-item .dropdown-menu,
@@ -137,147 +53,15 @@
 }
 
 .pagination-results {
-	border-color: transparent;
-	border-style: solid;
-	border-width: $pagination-border-width;
-	color: $pagination-results-color;
-	font-size: $pagination-font-size;
-	line-height: $pagination-line-height;
-	margin-bottom: $pagination-margin-bottom;
-	margin-right: auto;
-	max-width: 100%;
-	padding: $pagination-padding-y $pagination-padding-x;
-	word-wrap: break-word;
+	@include clay-css($pagination-results);
 }
 
 // Pagination Sizes
 
 .pagination-sm {
-	.pagination-items-per-page {
-		@include border-radius($pagination-link-border-radius-sm);
-
-		.lexicon-icon {
-			margin-left: $pagination-items-per-page-lexicon-icon-margin-left-sm;
-			margin-right: $pagination-items-per-page-lexicon-icon-margin-top-sm;
-		}
-	}
-
-	.pagination-items-per-page > a,
-	.pagination-items-per-page > .btn-unstyled {
-		font-size: $pagination-font-size-sm;
-		height: $pagination-item-height-sm;
-		line-height: $pagination-line-height-sm;
-		padding: $pagination-padding-y-sm $pagination-padding-x;
-
-		@if ($enable-c-inner) {
-			.c-inner {
-				margin: math-sign($pagination-padding-y-sm)
-					math-sign($pagination-padding-x);
-			}
-		}
-	}
-
-	.pagination-results {
-		font-size: $pagination-font-size-sm;
-		line-height: $pagination-line-height-sm;
-		padding: $pagination-padding-y-sm $pagination-padding-x;
-	}
-
-	.page-link {
-		font-size: $pagination-font-size-sm;
-		height: $pagination-item-height-sm;
-		line-height: $pagination-line-height-sm;
-		padding-bottom: $pagination-padding-y-sm;
-		padding-right: $pagination-padding-x-sm;
-		padding-left: $pagination-padding-x-sm;
-		padding-top: $pagination-padding-y-sm;
-
-		@if ($enable-c-inner) {
-			.c-inner {
-				margin: math-sign($pagination-padding-y-sm)
-					math-sign($pagination-padding-x-sm);
-			}
-		}
-
-		&.btn-unstyled {
-			padding: $pagination-padding-y-sm $pagination-padding-x-sm;
-		}
-	}
-
-	.page-item:first-child .page-link,
-	.page-link-first {
-		border-bottom-left-radius: $pagination-link-border-radius-sm;
-		border-top-left-radius: $pagination-link-border-radius-sm;
-	}
-
-	.page-item:last-child .page-link,
-	.page-link-last {
-		border-bottom-right-radius: $pagination-link-border-radius-sm;
-		border-top-right-radius: $pagination-link-border-radius-sm;
-	}
+	@include clay-pagination-variant($pagination-sm);
 }
 
 .pagination-lg {
-	.pagination-items-per-page {
-		@include border-radius($pagination-link-border-radius-lg);
-
-		.lexicon-icon {
-			margin-left: $pagination-items-per-page-lexicon-icon-margin-left-lg;
-			margin-right: $pagination-items-per-page-lexicon-icon-margin-top-lg;
-		}
-	}
-
-	.pagination-items-per-page > a,
-	.pagination-items-per-page > .btn-unstyled {
-		font-size: $pagination-font-size-lg;
-		height: $pagination-item-height-lg;
-		line-height: $pagination-line-height-lg;
-		padding: $pagination-padding-y-lg $pagination-padding-x;
-
-		@if ($enable-c-inner) {
-			.c-inner {
-				margin: math-sign($pagination-padding-y-lg)
-					math-sign($pagination-padding-x);
-			}
-		}
-	}
-
-	.pagination-results {
-		font-size: $pagination-font-size-lg;
-		line-height: $pagination-line-height-lg;
-		padding: $pagination-padding-y-lg $pagination-padding-x;
-	}
-
-	.page-link {
-		font-size: $pagination-font-size-lg;
-		height: $pagination-item-height-lg;
-		line-height: $pagination-line-height-lg;
-		padding-bottom: $pagination-padding-y-lg;
-		padding-left: $pagination-padding-x-lg;
-		padding-right: $pagination-padding-x-lg;
-		padding-top: $pagination-padding-y-lg;
-
-		@if ($enable-c-inner) {
-			.c-inner {
-				margin: math-sign($pagination-padding-y-lg)
-					math-sign($pagination-padding-x-lg);
-			}
-		}
-
-		&.btn-unstyled {
-			padding: $pagination-padding-y-lg $pagination-padding-x-lg;
-		}
-	}
-
-	.page-item:first-child .page-link,
-	.page-link-first {
-		border-bottom-left-radius: $pagination-link-border-radius-lg;
-		border-top-left-radius: $pagination-link-border-radius-lg;
-	}
-
-	.page-item:last-child .page-link,
-	.page-link-last {
-		border-bottom-right-radius: $pagination-link-border-radius-lg;
-		border-top-right-radius: $pagination-link-border-radius-lg;
-	}
+	@include clay-pagination-variant($pagination-lg);
 }
