@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.1](https://github.com/liferay/clay/compare/v2.23.0...v2.23.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* **clay-link:** listens for the `handleClick` event and removes the preventDefault call by default ([29be437](https://github.com/liferay/clay/commit/29be437))
+
+
+
+
+
 # [2.23.0](https://github.com/liferay/clay/compare/v2.22.4...v2.23.0) (2021-12-13)
 
 
