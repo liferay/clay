@@ -106,8 +106,8 @@
 // Makes .btn narrower
 
 .dropdown-toggle-split {
-	padding-left: $btn-padding-x * 0.75;
-	padding-right: $btn-padding-x * 0.75;
+	padding-left: calc(#{$btn-padding-x} * 0.75);
+	padding-right: calc(#{$btn-padding-x} * 0.75);
 
 	@if ($enable-caret) {
 		&::after,
@@ -123,13 +123,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-	padding-right: $btn-padding-x-sm * 0.75;
-	padding-left: $btn-padding-x-sm * 0.75;
+	padding-right: calc(#{$btn-padding-x-sm} * 0.75);
+	padding-left: calc(#{$btn-padding-x-sm} * 0.75);
 }
 
 .btn-lg + .dropdown-toggle-split {
-	padding-right: $btn-padding-x-lg * 0.75;
-	padding-left: $btn-padding-x-lg * 0.75;
+	padding-right: calc(#{$btn-padding-x-lg} * 0.75);
+	padding-left: calc(#{$btn-padding-x-lg} * 0.75);
 }
 
 // Button Group Vertical
