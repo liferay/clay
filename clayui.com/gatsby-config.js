@@ -93,9 +93,9 @@ module.exports = {
 		},
 		{
 			options: {
-				trackingId: 'UA-37033501-10',
+				trackingIds: ['UA-790163-35'],
 			},
-			resolve: 'gatsby-plugin-google-analytics',
+			resolve: 'gatsby-plugin-google-gtag',
 		},
 		'gatsby-plugin-react-helmet',
 	],
