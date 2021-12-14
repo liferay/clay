@@ -10,8 +10,9 @@
 
 .multi-step-indicator-label-bottom {
 	.multi-step-item {
-		padding-bottom: $multi-step-indicator-label-font-size *
-			$line-height-base;
+		padding-bottom: calc(
+			#{$multi-step-indicator-label-font-size} * #{$line-height-base}
+		);
 	}
 
 	.multi-step-indicator-label {
@@ -21,17 +22,19 @@
 
 .multi-step-indicator-label-top {
 	.multi-step-item {
-		padding-top: $multi-step-indicator-label-font-size * $line-height-base;
+		padding-top: calc(
+			#{$multi-step-indicator-label-font-size} * #{$line-height-base}
+		);
 	}
 
 	.multi-step-indicator-label {
-		bottom: $multi-step-icon-size + $multi-step-divider-height;
+		bottom: calc(#{$multi-step-icon-size} + #{$multi-step-divider-height});
 	}
 }
 
 .multi-step-title-center {
 	.multi-step-title {
-		margin-left: $multi-step-icon-size * 0.5;
+		margin-left: calc(#{$multi-step-icon-size} * 0.5);
 		max-width: $multi-step-title-max-width;
 		overflow: hidden;
 		position: relative;
@@ -337,9 +340,10 @@
 		.multi-step-item {
 			margin-bottom: 0;
 			min-width: $multi-step-icon-size;
-			padding-top: $multi-step-title-font-size +
-				$multi-step-title-margin-bottom +
-				($multi-step-divider-height * 0.5);
+			padding-top: calc(
+				#{$multi-step-title-font-size} + #{$multi-step-title-margin-bottom} +
+					(#{$multi-step-divider-height} * 0.5)
+			);
 		}
 
 		.multi-step-title {
