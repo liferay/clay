@@ -26,13 +26,15 @@ class ClayLink extends ClayComponent {
 	}
 
 	/**
-	 * Handles click.
+	 * HandleClick is a void callback which is just a workaround so we can
+	 * explicitly add a click listener to force invoke the
+	 * `defaultEventHandler` method, this is for when only the
+	 * `defaultEventHandler` method is set on the component property and when
+	 * the `events` property and the native Metal.js `on` method is not used.
 	 * @param {!Event} event
 	 * @protected
 	 */
-	_handleClick(event) {
-		event.preventDefault();
-	}
+	_handleClick() {}
 }
 
 /**
