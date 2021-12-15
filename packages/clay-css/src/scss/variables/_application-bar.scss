@@ -21,13 +21,25 @@ $application-bar-base: () !default;
 $application-bar-dark: () !default;
 $application-bar-dark: map-deep-merge(
 	(
-		bg: $dark,
+		background-color: $dark,
 		color: $navbar-dark-color,
-		link-color: $navbar-dark-color,
-		link-hover-color: $navbar-dark-hover-color,
-		link-active-color: $navbar-dark-active-color,
-		link-disabled-color: $navbar-dark-disabled-color,
-		link-disabled-opacity: 1,
+		navbar-nav: (
+			nav-link: (
+				color: $navbar-dark-color,
+				hover: (
+					color: $navbar-dark-hover-color,
+				),
+				active: (
+					color: $navbar-dark-active-color,
+				),
+				disabled: (
+					color: $navbar-dark-disabled-color,
+					opacity: 1,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$application-bar-dark
 );

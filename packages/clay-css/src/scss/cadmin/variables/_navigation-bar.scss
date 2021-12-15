@@ -24,10 +24,22 @@ $cadmin-navigation-bar-size: map-deep-merge(
 $cadmin-navigation-bar-base: () !default;
 $cadmin-navigation-bar-base: map-deep-merge(
 	(
-		link-border-radius: 0,
-		link-outline: 0,
-		link-focus-box-shadow: $cadmin-btn-focus-box-shadow,
-		link-disabled-box-shadow: none,
+		border-color: transparent,
+		border-style: solid,
+		navbar-nav: (
+			nav-link: (
+				border-radius: 0,
+				outline: 0,
+				focus: (
+					box-shadow: $cadmin-btn-focus-box-shadow,
+				),
+				disabled: (
+					box-shadow: none,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$cadmin-navigation-bar-base
 );
@@ -35,15 +47,55 @@ $cadmin-navigation-bar-base: map-deep-merge(
 $cadmin-navigation-bar-light: () !default;
 $cadmin-navigation-bar-light: map-deep-merge(
 	(
-		bg: $cadmin-white,
+		background-color: $cadmin-white,
 		border-color: $cadmin-gray-200,
-		link-color: $cadmin-navbar-light-color,
-		link-font-weight: $cadmin-font-weight-semi-bold,
-		link-hover-color: $cadmin-gray-900,
-		link-focus-color: $cadmin-gray-900,
-		link-active-color: $cadmin-navbar-light-active-color,
-		link-disabled-color: $cadmin-gray-600,
-		link-disabled-opacity: $cadmin-btn-disabled-opacity,
+		navbar-nav: (
+			nav-link: (
+				color: $cadmin-navbar-light-color,
+				font-weight: $cadmin-font-weight-semi-bold,
+				hover: (
+					color: $cadmin-gray-900,
+				),
+				focus: (
+					color: $cadmin-gray-900,
+				),
+				active: (
+					color: $cadmin-navbar-light-active-color,
+				),
+				disabled: (
+					color: $cadmin-gray-600,
+					opacity: $cadmin-btn-disabled-opacity,
+				),
+			),
+		),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					navbar-collapse: (
+						navbar-nav: (
+							dropdown-item: (
+								color: $cadmin-navbar-light-color,
+								font-weight: $cadmin-font-weight-semi-bold,
+								hover: (
+									color: $cadmin-gray-900,
+								),
+								focus: (
+									color: $cadmin-gray-900,
+								),
+								active: (
+									color: $cadmin-navbar-light-active-color,
+								),
+								disabled: (
+									color: $cadmin-gray-600,
+									opacity: $cadmin-btn-disabled-opacity,
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		media-breakpoint-up: (),
 	),
 	$cadmin-navigation-bar-light
 );
@@ -51,17 +103,61 @@ $cadmin-navigation-bar-light: map-deep-merge(
 $cadmin-navigation-bar-secondary: () !default;
 $cadmin-navigation-bar-secondary: map-deep-merge(
 	(
-		bg: $cadmin-secondary-d1,
+		background-color: $cadmin-secondary-d1,
 		color: $cadmin-white,
-		link-color: $cadmin-secondary-l2,
-		link-font-weight: $cadmin-font-weight-semi-bold,
-		link-hover-color: $cadmin-white,
-		link-focus-color: $cadmin-white,
-		link-active-color: $cadmin-white,
-		link-disabled-color: $cadmin-gray-400,
-		link-disabled-opacity: $cadmin-btn-disabled-opacity,
-		brand-color: rgba(255, 255, 255, 0.9),
-		brand-hover-color: rgba(255, 255, 255, 0.9),
+		navbar-nav: (
+			nav-link: (
+				color: $cadmin-secondary-l2,
+				font-weight: $cadmin-font-weight-semi-bold,
+				hover: (
+					color: $cadmin-white,
+				),
+				focus: (
+					color: $cadmin-white,
+				),
+				active: (
+					color: $cadmin-white,
+				),
+				disabled: (
+					color: $cadmin-gray-400,
+					opacity: $cadmin-btn-disabled-opacity,
+				),
+			),
+		),
+		navbar-brand: (
+			color: rgba(255, 255, 255, 0.9),
+			hover: (
+				color: rgba(255, 255, 255, 0.9),
+			),
+		),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					navbar-collapse: (
+						navbar-nav: (
+							dropdown-item: (
+								color: $cadmin-secondary-l2,
+								font-weight: $cadmin-font-weight-semi-bold,
+								hover: (
+									color: $cadmin-white,
+								),
+								focus: (
+									color: $cadmin-white,
+								),
+								active: (
+									color: $cadmin-white,
+								),
+								disabled: (
+									color: $cadmin-gray-400,
+									opacity: $cadmin-btn-disabled-opacity,
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		media-breakpoint-up: (),
 	),
 	$cadmin-navigation-bar-secondary
 );

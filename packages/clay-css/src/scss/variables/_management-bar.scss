@@ -1,4 +1,13 @@
 $management-bar-base: () !default;
+$management-bar-base: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$management-bar-base
+);
 
 $management-bar-size: () !default;
 $management-bar-size: map-deep-merge(
@@ -29,12 +38,24 @@ $management-bar-size: map-deep-merge(
 $management-bar-light: () !default;
 $management-bar-light: map-deep-merge(
 	(
-		bg: $light,
-		link-color: $navbar-light-color,
-		link-hover-color: $navbar-light-hover-color,
-		link-active-color: $navbar-light-active-color,
-		link-disabled-color: $navbar-light-disabled-color,
-		link-disabled-opacity: 1,
+		background-color: $light,
+		navbar-nav: (
+			nav-link: (
+				color: $navbar-light-color,
+				hover: (
+					color: $navbar-light-hover-color,
+				),
+				active: (
+					color: $navbar-light-active-color,
+				),
+				disabled: (
+					color: $navbar-light-disabled-color,
+					opacity: 1,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$management-bar-light
 );
@@ -42,14 +63,26 @@ $management-bar-light: map-deep-merge(
 $management-bar-primary: () !default;
 $management-bar-primary: map-deep-merge(
 	(
-		bg: $primary-l3,
+		background-color: $primary-l3,
 		border-color: $primary,
 		color: $navbar-light-color,
-		link-color: $navbar-light-color,
-		link-hover-color: $navbar-light-hover-color,
-		link-active-color: $navbar-light-active-color,
-		link-disabled-color: $navbar-light-disabled-color,
-		link-disabled-opacity: 1,
+		navbar-nav: (
+			nav-link: (
+				color: $navbar-light-color,
+				hover: (
+					color: $navbar-light-hover-color,
+				),
+				active: (
+					color: $navbar-light-active-color,
+				),
+				disabled: (
+					disabled-color: $navbar-light-disabled-color,
+					disabled-opacity: 1,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$management-bar-primary
 );

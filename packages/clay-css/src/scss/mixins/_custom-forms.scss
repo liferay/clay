@@ -616,53 +616,65 @@
 /// );
 
 @mixin clay-custom-control-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	@include clay-css(setter($map, ()));
+		@include clay-css(setter($map, ()));
 
-	@if ($enabled) {
-		label {
-			@include clay-css(setter(map-deep-get($map, label), ()));
-		}
-
-		.custom-control-label {
-			@include clay-css(
-				setter(map-deep-get($map, custom-control-label), ())
-			);
-
-			&::before {
-				@include clay-css(
-					setter(map-deep-get($map, custom-control-label, before), ())
-				);
+		@if ($enabled) {
+			label {
+				@include clay-css(setter(map-deep-get($map, label), ()));
 			}
 
-			&::after {
+			.custom-control-label {
 				@include clay-css(
-					setter(map-deep-get($map, custom-control-label, after), ())
+					setter(map-deep-get($map, custom-control-label), ())
+				);
+
+				&::before {
+					@include clay-css(
+						setter(
+							map-deep-get($map, custom-control-label, before),
+							()
+						)
+					);
+				}
+
+				&::after {
+					@include clay-css(
+						setter(
+							map-deep-get($map, custom-control-label, after),
+							()
+						)
+					);
+				}
+			}
+
+			.custom-control-label-text {
+				@include clay-css(
+					setter(map-deep-get($map, custom-control-label-text), ())
+				);
+
+				small,
+				.small {
+					@include clay-css(
+						setter(
+							map-deep-get(
+								$map,
+								custom-control-label-text,
+								small
+							),
+							()
+						)
+					);
+				}
+			}
+
+			.custom-control-input {
+				@include clay-custom-control-input-variant(
+					setter(map-deep-get($map, custom-control-input), ())
 				);
 			}
-		}
-
-		.custom-control-label-text {
-			@include clay-css(
-				setter(map-deep-get($map, custom-control-label-text), ())
-			);
-
-			small,
-			.small {
-				@include clay-css(
-					setter(
-						map-deep-get($map, custom-control-label-text, small),
-						()
-					)
-				);
-			}
-		}
-
-		.custom-control-input {
-			@include clay-custom-control-input-variant(
-				setter(map-deep-get($map, custom-control-input), ())
-			);
 		}
 	}
 }

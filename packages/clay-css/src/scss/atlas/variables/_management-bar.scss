@@ -1,11 +1,19 @@
 $management-bar-base: () !default;
 $management-bar-base: map-deep-merge(
 	(
-		link-border-radius: $border-radius,
-		link-outline: 0,
-		link-transition: box-shadow 0.15s ease-in-out,
-		link-focus-box-shadow: $btn-focus-box-shadow,
-		link-disabled-box-shadow: none,
+		navbar-nav: (
+			nav-link: (
+				border-radius: $border-radius,
+				outline: 0,
+				transition: box-shadow 0.15s ease-in-out,
+				focus: (
+					box-shadow: $btn-focus-box-shadow,
+				),
+				disabled: (
+					box-shadow: none,
+				),
+			),
+		),
 	),
 	$management-bar-base
 );
@@ -13,14 +21,26 @@ $management-bar-base: map-deep-merge(
 $management-bar-light: () !default;
 $management-bar-light: map-deep-merge(
 	(
-		bg: $white,
-		link-font-weight: $font-weight-semi-bold,
-		link-hover-color: $gray-900,
-		link-hover-bg: rgba($gray-900, 0.03),
-		link-focus-color: $gray-900,
-		link-focus-bg: rgba($gray-900, 0.03),
-		link-active-bg: rgba($gray-900, 0.06),
-		link-disabled-bg: transparent,
+		background-color: $white,
+		navbar-nav: (
+			nav-link: (
+				font-weight: $font-weight-semi-bold,
+				hover: (
+					background-color: rgba($gray-900, 0.03),
+					color: $gray-900,
+				),
+				focus: (
+					background-color: rgba($gray-900, 0.03),
+					color: $gray-900,
+				),
+				active: (
+					background-color: rgba($gray-900, 0.06),
+				),
+				disabled: (
+					background-color: transparent,
+				),
+			),
+		),
 	),
 	$management-bar-light
 );
@@ -28,14 +48,26 @@ $management-bar-light: map-deep-merge(
 $management-bar-primary: () !default;
 $management-bar-primary: map-deep-merge(
 	(
-		link-border-radius: $border-radius,
-		link-font-weight: $font-weight-semi-bold,
-		link-hover-color: $gray-900,
-		link-hover-bg: rgba($gray-900, 0.03),
-		link-focus-color: $gray-900,
-		link-focus-bg: rgba($gray-900, 0.03),
-		link-active-bg: rgba($gray-900, 0.06),
-		link-disabled-bg: transparent,
+		navbar-nav: (
+			nav-link: (
+				border-radius: $border-radius,
+				font-weight: $font-weight-semi-bold,
+				hover: (
+					background-color: rgba($gray-900, 0.03),
+					color: $gray-900,
+				),
+				focus: (
+					background-color: rgba($gray-900, 0.03),
+					color: $gray-900,
+				),
+				active: (
+					background-color: rgba($gray-900, 0.06),
+				),
+				disabled: (
+					background-color: transparent,
+				),
+			),
+		),
 	),
 	$management-bar-primary
 );

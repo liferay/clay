@@ -17,16 +17,59 @@ $navigation-bar-size: map-deep-merge(
 );
 
 $navigation-bar-base: () !default;
+$navigation-bar-base: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$navigation-bar-base
+);
 
 $navigation-bar-light: () !default;
 $navigation-bar-light: map-deep-merge(
 	(
-		bg: $light,
-		link-color: $navbar-light-color,
-		link-hover-color: $navbar-light-hover-color,
-		link-active-color: $navbar-light-active-color,
-		link-disabled-color: $navbar-light-disabled-color,
-		link-disabled-opacity: 1,
+		background-color: $light,
+		navbar-nav: (
+			nav-link: (
+				color: $navbar-light-color,
+				hover: (
+					color: $navbar-light-hover-color,
+				),
+				active: (
+					color: $navbar-light-active-color,
+				),
+				disabled: (
+					color: $navbar-light-disabled-color,
+					opacity: 1,
+				),
+			),
+		),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					navbar-collapse: (
+						navbar-nav: (
+							dropdown-item: (
+								color: $navbar-light-color,
+								hover: (
+									color: $navbar-light-hover-color,
+								),
+								active: (
+									color: $navbar-light-active-color,
+								),
+								disabled: (
+									color: $navbar-light-disabled-color,
+									opacity: 1,
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		media-breakpoint-up: (),
 	),
 	$navigation-bar-light
 );
@@ -34,15 +77,53 @@ $navigation-bar-light: map-deep-merge(
 $navigation-bar-secondary: () !default;
 $navigation-bar-secondary: map-deep-merge(
 	(
-		bg: $secondary,
+		background-color: $secondary,
 		color: $white,
-		link-color: rgba(255, 255, 255, 0.65),
-		link-hover-color: rgba(255, 255, 255, 0.9),
-		link-active-color: rgba(255, 255, 255, 0.9),
-		link-disabled-color: rgba(255, 255, 255, 0.25),
-		link-disabled-opacity: 1,
-		brand-color: rgba(255, 255, 255, 0.9),
-		brand-hover-color: rgba(255, 255, 255, 0.9),
+		navbar-nav: (
+			nav-link: (
+				color: rgba(255, 255, 255, 0.65),
+				hover: (
+					color: rgba(255, 255, 255, 0.9),
+				),
+				active: (
+					color: rgba(255, 255, 255, 0.9),
+				),
+				disabled: (
+					color: rgba(255, 255, 255, 0.25),
+					opacity: 1,
+				),
+			),
+		),
+		navbar-brand: (
+			color: rgba(255, 255, 255, 0.9),
+			hover: (
+				color: rgba(255, 255, 255, 0.9),
+			),
+		),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					navbar-collapse: (
+						navbar-nav: (
+							dropdown-item: (
+								color: rgba(255, 255, 255, 0.65),
+								hover: (
+									color: rgba(255, 255, 255, 0.9),
+								),
+								active: (
+									color: rgba(255, 255, 255, 0.9),
+								),
+								disabled: (
+									color: rgba(255, 255, 255, 0.25),
+									opacity: 1,
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+		media-breakpoint-up: (),
 	),
 	$navigation-bar-secondary
 );

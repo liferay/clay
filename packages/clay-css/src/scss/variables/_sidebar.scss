@@ -103,12 +103,24 @@ $sidebar-light: map-deep-merge(
 $sidebar-light-navigation-bar: () !default;
 $sidebar-light-navigation-bar: map-deep-merge(
 	(
-		bg: $light,
+		background-color: $light,
 		border-color: $gray-300,
-		link-color: $navbar-light-color,
-		link-hover-color: $navbar-light-hover-color,
-		link-active-color: $navbar-light-active-color,
-		link-disabled-color: $navbar-light-disabled-color,
+		navbar-nav: (
+			nav-link: (
+				color: $navbar-light-color,
+				hover: (
+					color: $navbar-light-hover-color,
+				),
+				active: (
+					color: $navbar-light-active-color,
+				),
+				disabled: (
+					color: $navbar-light-disabled-color,
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$sidebar-light-navigation-bar
 );

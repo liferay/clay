@@ -250,280 +250,299 @@
 /// - Add @link to documentation
 
 @mixin clay-form-control-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$base: setter($map, ());
-	$base: map-merge(
-		$map,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($map, background-color)),
-			background-clip:
-				setter(map-get($map, bg-clip), map-get($map, background-clip)),
-			background-image:
-				setter(map-get($map, bg-image), map-get($map, background-image)),
-			background-position:
-				setter(
-					map-get($map, bg-position),
-					map-get($map, background-position)
-				),
-			background-repeat:
-				setter(
-					map-get($map, bg-repeat),
-					map-get($map, background-repeat)
-				),
-			background-size:
-				setter(map-get($map, bg-size), map-get($map, background-size)),
-		)
-	);
+		$base: setter($map, ());
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+				background-clip:
+					setter(
+						map-get($map, bg-clip),
+						map-get($map, background-clip)
+					),
+				background-image:
+					setter(
+						map-get($map, bg-image),
+						map-get($map, background-image)
+					),
+				background-position:
+					setter(
+						map-get($map, bg-position),
+						map-get($map, background-position)
+					),
+				background-repeat:
+					setter(
+						map-get($map, bg-repeat),
+						map-get($map, background-repeat)
+					),
+				background-size:
+					setter(
+						map-get($map, bg-size),
+						map-get($map, background-size)
+					),
+			)
+		);
 
-	$placeholder: setter(map-get($map, placeholder), ());
-	$placeholder: map-deep-merge(
-		$placeholder,
-		(
-			color:
-				setter(
-					map-get($map, placeholder-color),
-					map-get($placeholder, color)
-				),
-			opacity:
-				setter(
-					map-get($map, placeholder-opacity),
-					map-get($placeholder, opacity)
-				),
-		)
-	);
+		$placeholder: setter(map-get($map, placeholder), ());
+		$placeholder: map-deep-merge(
+			$placeholder,
+			(
+				color:
+					setter(
+						map-get($map, placeholder-color),
+						map-get($placeholder, color)
+					),
+				opacity:
+					setter(
+						map-get($map, placeholder-opacity),
+						map-get($placeholder, opacity)
+					),
+			)
+		);
 
-	$selection: setter(map-get($map, selection), ());
-	$selection: map-deep-merge(
-		$selection,
-		(
-			background-color:
-				setter(
-					map-get($map, selection-bg),
-					map-get($selection, background-color)
-				),
-			color:
-				setter(
-					map-get($map, selection-color),
-					map-get($selection, color)
-				),
-		)
-	);
+		$selection: setter(map-get($map, selection), ());
+		$selection: map-deep-merge(
+			$selection,
+			(
+				background-color:
+					setter(
+						map-get($map, selection-bg),
+						map-get($selection, background-color)
+					),
+				color:
+					setter(
+						map-get($map, selection-color),
+						map-get($selection, color)
+					),
+			)
+		);
 
-	$hover: setter(map-get($map, hover), ());
-	$hover: map-deep-merge(
-		$hover,
-		(
-			background-color:
-				setter(
-					map-get($map, hover-bg),
-					map-get($hover, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, hover-border-color),
-					map-get($hover, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, hover-box-shadow),
-					map-get($hover, box-shadow)
-				),
-			color: setter(map-get($map, hover-color), map-get($hover, color)),
-		)
-	);
+		$hover: setter(map-get($map, hover), ());
+		$hover: map-deep-merge(
+			$hover,
+			(
+				background-color:
+					setter(
+						map-get($map, hover-bg),
+						map-get($hover, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, hover-border-color),
+						map-get($hover, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, hover-box-shadow),
+						map-get($hover, box-shadow)
+					),
+				color:
+					setter(map-get($map, hover-color), map-get($hover, color)),
+			)
+		);
 
-	$old-hover-placeholder: setter(map-get($map, hover-placeholder), ());
-	$hover-placeholder: setter(map-get($hover, placeholder), ());
-	$hover-placeholder: map-deep-merge(
-		$hover-placeholder,
-		$old-hover-placeholder
-	);
-	$hover-placeholder: map-deep-merge(
-		$hover-placeholder,
-		(
-			color:
-				setter(
-					map-get($map, hover-placeholder-color),
-					map-get($hover-placeholder, color)
-				),
-		)
-	);
+		$old-hover-placeholder: setter(map-get($map, hover-placeholder), ());
+		$hover-placeholder: setter(map-get($hover, placeholder), ());
+		$hover-placeholder: map-deep-merge(
+			$hover-placeholder,
+			$old-hover-placeholder
+		);
+		$hover-placeholder: map-deep-merge(
+			$hover-placeholder,
+			(
+				color:
+					setter(
+						map-get($map, hover-placeholder-color),
+						map-get($hover-placeholder, color)
+					),
+			)
+		);
 
-	$focus: setter(map-get($map, focus), ());
-	$focus: map-deep-merge(
-		$focus,
-		(
-			background-color:
-				setter(
-					map-get($map, focus-bg),
-					map-get($focus, background-color)
-				),
-			background-image:
-				setter(
-					map-get($map, focus-bg-image),
-					map-get($focus, background-image)
-				),
-			border-color:
-				setter(
-					map-get($map, focus-border-color),
-					map-get($focus, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, focus-box-shadow),
-					map-get($focus, box-shadow)
-				),
-			color: setter(map-get($map, focus-color), map-get($focus, color)),
-		)
-	);
+		$focus: setter(map-get($map, focus), ());
+		$focus: map-deep-merge(
+			$focus,
+			(
+				background-color:
+					setter(
+						map-get($map, focus-bg),
+						map-get($focus, background-color)
+					),
+				background-image:
+					setter(
+						map-get($map, focus-bg-image),
+						map-get($focus, background-image)
+					),
+				border-color:
+					setter(
+						map-get($map, focus-border-color),
+						map-get($focus, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, focus-box-shadow),
+						map-get($focus, box-shadow)
+					),
+				color:
+					setter(map-get($map, focus-color), map-get($focus, color)),
+			)
+		);
 
-	$old-focus-placeholder: setter(map-get($map, focus-placeholder), ());
-	$focus-placeholder: setter(map-get($focus, placeholder), ());
-	$focus-placeholder: map-deep-merge(
-		$focus-placeholder,
-		$old-focus-placeholder
-	);
-	$focus-placeholder: map-deep-merge(
-		$focus-placeholder,
-		(
-			color:
-				setter(
-					map-get($map, focus-placeholder-color),
-					map-get($focus-placeholder, color)
-				),
-		)
-	);
+		$old-focus-placeholder: setter(map-get($map, focus-placeholder), ());
+		$focus-placeholder: setter(map-get($focus, placeholder), ());
+		$focus-placeholder: map-deep-merge(
+			$focus-placeholder,
+			$old-focus-placeholder
+		);
+		$focus-placeholder: map-deep-merge(
+			$focus-placeholder,
+			(
+				color:
+					setter(
+						map-get($map, focus-placeholder-color),
+						map-get($focus-placeholder, color)
+					),
+			)
+		);
 
-	// deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
+		// deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
 
-	$readonly-bg: map-get($map, readonly-bg);
-	$readonly-bg-image: map-get($map, readonly-bg-image);
-	$readonly-border-color: map-get($map, readonly-border-color);
-	$readonly-box-shadow: map-get($map, readonly-box-shadow);
-	$readonly-color: map-get($map, readonly-color);
-	$readonly-cursor: map-get($map, readonly-cursor);
-	$readonly-opacity: map-get($map, readonly-opacity);
-	$readonly-placeholder-color: map-get($map, readonly-placeholder-color);
+		$readonly-bg: map-get($map, readonly-bg);
+		$readonly-bg-image: map-get($map, readonly-bg-image);
+		$readonly-border-color: map-get($map, readonly-border-color);
+		$readonly-box-shadow: map-get($map, readonly-box-shadow);
+		$readonly-color: map-get($map, readonly-color);
+		$readonly-cursor: map-get($map, readonly-cursor);
+		$readonly-opacity: map-get($map, readonly-opacity);
+		$readonly-placeholder-color: map-get($map, readonly-placeholder-color);
 
-	$disabled: setter(map-get($map, disabled), ());
-	$disabled: map-deep-merge(
-		$disabled,
-		(
-			background-color:
-				setter(
-					map-get($map, disabled-bg),
-					map-get($disabled, background-color)
-				),
-			background-image:
-				setter(
-					map-get($map, disabled-bg-image),
-					map-get($disabled, background-image)
-				),
-			border-color:
-				setter(
-					map-get($map, disabled-border-color),
-					map-get($disabled, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, disabled-box-shadow),
-					map-get($disabled, box-shadow)
-				),
-			color:
-				setter(map-get($map, disabled-color), map-get($disabled, color)),
-			cursor:
-				setter(
-					map-get($map, disabled-cursor),
-					map-get($disabled, cursor)
-				),
-			opacity:
-				setter(
-					map-get($map, disabled-opacity),
-					map-get($disabled, opacity)
-				),
-		)
-	);
+		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-deep-merge(
+			$disabled,
+			(
+				background-color:
+					setter(
+						map-get($map, disabled-bg),
+						map-get($disabled, background-color)
+					),
+				background-image:
+					setter(
+						map-get($map, disabled-bg-image),
+						map-get($disabled, background-image)
+					),
+				border-color:
+					setter(
+						map-get($map, disabled-border-color),
+						map-get($disabled, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, disabled-box-shadow),
+						map-get($disabled, box-shadow)
+					),
+				color:
+					setter(
+						map-get($map, disabled-color),
+						map-get($disabled, color)
+					),
+				cursor:
+					setter(
+						map-get($map, disabled-cursor),
+						map-get($disabled, cursor)
+					),
+				opacity:
+					setter(
+						map-get($map, disabled-opacity),
+						map-get($disabled, opacity)
+					),
+			)
+		);
 
-	$old-disabled-placeholder: setter(map-get($map, disabled-placeholder), ());
-	$disabled-placeholder: setter(map-get($disabled, placeholder), ());
-	$disabled-placeholder: map-deep-merge(
-		$disabled-placeholder,
-		$old-disabled-placeholder
-	);
-	$disabled-placeholder: map-deep-merge(
-		$disabled-placeholder,
-		(
-			color:
-				setter(
-					map-get($map, disabled-placeholder-color),
-					map-get($disabled-placeholder, color)
-				),
-		)
-	);
+		$old-disabled-placeholder: setter(
+			map-get($map, disabled-placeholder),
+			()
+		);
+		$disabled-placeholder: setter(map-get($disabled, placeholder), ());
+		$disabled-placeholder: map-deep-merge(
+			$disabled-placeholder,
+			$old-disabled-placeholder
+		);
+		$disabled-placeholder: map-deep-merge(
+			$disabled-placeholder,
+			(
+				color:
+					setter(
+						map-get($map, disabled-placeholder-color),
+						map-get($disabled-placeholder, color)
+					),
+			)
+		);
 
-	@if ($enabled) {
-		@include clay-css($base);
-
-		&::placeholder {
-			// opacity: 1, override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-
-			@include clay-css($placeholder);
-		}
-
-		&::-moz-selection,
-		&::selection {
-			@include clay-css($selection);
-		}
-
-		&:hover {
-			@include clay-css($hover);
+		@if ($enabled) {
+			@include clay-css($base);
 
 			&::placeholder {
-				@include clay-css($hover-placeholder);
+				// opacity: 1, override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+
+				@include clay-css($placeholder);
 			}
-		}
 
-		&:focus,
-		&.focus {
-			@include clay-css($focus);
-
-			&::placeholder {
-				@include clay-css($focus-placeholder);
+			&::-moz-selection,
+			&::selection {
+				@include clay-css($selection);
 			}
-		}
 
-		// @deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
+			&:hover {
+				@include clay-css($hover);
 
-		&[readonly] {
-			background-color: $readonly-bg;
-			background-image: $readonly-bg-image;
-			border-color: $readonly-border-color;
-			box-shadow: $readonly-box-shadow;
-			color: $readonly-color;
-			cursor: $readonly-cursor;
-			opacity: $readonly-opacity;
-
-			&::placeholder {
-				color: $readonly-placeholder-color;
+				&::placeholder {
+					@include clay-css($hover-placeholder);
+				}
 			}
-		}
 
-		// Disabled
-		// HTML5 says that controls under a fieldset > legend:first-child won't be
-		// disabled if the fieldset is disabled. Due to implementation difficulty, we
-		// don't honor that edge case; we style them as disabled anyway.
+			&:focus,
+			&.focus {
+				@include clay-css($focus);
 
-		&:disabled,
-		&.disabled {
-			// `opacity: 1;` iOS fix for unreadable disabled content;
-			// see https://github.com/twbs/bootstrap/issues/11655.
+				&::placeholder {
+					@include clay-css($focus-placeholder);
+				}
+			}
 
-			@include clay-css($disabled);
+			// @deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
 
-			&::placeholder {
-				@include clay-css($disabled-placeholder);
+			&[readonly] {
+				background-color: $readonly-bg;
+				background-image: $readonly-bg-image;
+				border-color: $readonly-border-color;
+				box-shadow: $readonly-box-shadow;
+				color: $readonly-color;
+				cursor: $readonly-cursor;
+				opacity: $readonly-opacity;
+
+				&::placeholder {
+					color: $readonly-placeholder-color;
+				}
+			}
+
+			// Disabled
+			// HTML5 says that controls under a fieldset > legend:first-child won't be
+			// disabled if the fieldset is disabled. Due to implementation difficulty, we
+			// don't honor that edge case; we style them as disabled anyway.
+
+			&:disabled,
+			&.disabled {
+				// `opacity: 1;` iOS fix for unreadable disabled content;
+				// see https://github.com/twbs/bootstrap/issues/11655.
+
+				@include clay-css($disabled);
+
+				&::placeholder {
+					@include clay-css($disabled-placeholder);
+				}
 			}
 		}
 	}

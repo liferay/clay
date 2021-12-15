@@ -917,194 +917,813 @@
 	}
 }
 
-// `clay-navbar-variant` is deprecated as of v2.11.1
-// Creates a Navbar color variant
-// @param $map - Sass map that contain Navbar Variant properties to modify
+@mixin clay-navbar-expand-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-@mixin clay-navbar-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
-	$breakpoints: if(
-		variable-exists(grid-breakpoints),
-		$grid-breakpoints,
-		$cadmin-grid-breakpoints
-	);
+		@if ($enabled) {
+			@include clay-css($map);
 
-	$bg: map-get($map, bg);
-	$border-color: setter(map-get($map, border-color), transparent);
-	$border-style: setter(map-get($map, border-style), solid);
-	$color: map-get($map, color);
-	$link-border-radius: map-get($map, link-border-radius);
-	$link-bg: map-get($map, link-bg);
-	$link-color: map-get($map, link-color);
-	$link-font-weight: map-get($map, link-font-weight);
-	$link-outline: map-get($map, link-outline);
-	$link-transition: map-get($map, link-transition);
-	$link-hover-bg: map-get($map, link-hover-bg);
-	$link-hover-color: map-get($map, link-hover-color);
-	$link-focus-bg: map-get($map, link-focus-bg);
-	$link-focus-box-shadow: map-get($map, link-focus-box-shadow);
-	$link-focus-color: map-get($map, link-focus-color);
-	$link-active-bg: map-get($map, link-active-bg);
-	$link-active-color: map-get($map, link-active-color);
-	$link-disabled-bg: map-get($map, link-disabled-bg);
-	$link-disabled-box-shadow: map-get($map, link-disabled-box-shadow);
-	$link-disabled-color: map-get($map, link-disabled-color);
-	$link-disabled-opacity: map-get($map, link-disabled-opacity);
-	$link-disabled-pointer-events: map-get($map, link-disabled-pointer-events);
-	$btn-font-weight: setter(map-get($map, btn-font-weight), $link-font-weight);
-	$brand-color: map-get($map, brand-color);
-	$brand-hover-color: map-get($map, brand-hover-color);
-	$brand-bg: map-get($map, brand-bg);
-	$brand-hover-bg: map-get($map, brand-hover-bg);
-	$toggler-color: setter(map-get($map, toggler-color), $link-color);
-	$toggler-font-weight: setter(
-		map-get($map, toggler-font-weight),
-		$link-font-weight
-	);
-	$underline-active-bg: map-get($map, underline-active-bg);
+			&.navbar-underline {
+				@include clay-css(map-deep-get($map, navbar-underline));
 
-	@if ($enabled) {
-		background-color: $bg;
-		border-color: $border-color;
-		border-style: $border-style;
-		color: $color;
+				.navbar-nav {
+					@include clay-css(
+						map-deep-get($map, navbar-underline, navbar-nav)
+					);
 
-		.nav-link,
-		.navbar-nav .btn-unstyled {
-			background-color: $link-bg;
-
-			@include border-radius($link-border-radius);
-
-			color: $link-color;
-			font-weight: $link-font-weight;
-			outline: $link-outline;
-			transition: $link-transition;
-
-			&:hover {
-				background-color: $link-hover-bg;
-				color: $link-hover-color;
-			}
-
-			&:focus {
-				background-color: $link-focus-bg;
-				box-shadow: $link-focus-box-shadow;
-				color: $link-focus-color;
-			}
-
-			&.active,
-			&[aria-expanded='true'] {
-				background-color: $link-active-bg;
-				color: $link-active-color;
-			}
-
-			&.disabled,
-			&:disabled {
-				background-color: $link-disabled-bg;
-				box-shadow: $link-disabled-box-shadow;
-				color: $link-disabled-color;
-				opacity: $link-disabled-opacity;
-				pointer-events: $link-disabled-pointer-events;
-			}
-		}
-
-		.nav-btn {
-			font-weight: $btn-font-weight;
-		}
-
-		.navbar-brand {
-			background-color: $brand-bg;
-
-			@include border-radius($link-border-radius);
-
-			color: $brand-color;
-			outline: $link-outline;
-			transition: $link-transition;
-
-			&:hover {
-				background-color: $brand-bg;
-				color: $brand-hover-color;
-			}
-
-			&:focus {
-				box-shadow: $link-focus-box-shadow;
-				color: $link-focus-color;
-			}
-		}
-
-		.navbar-toggler {
-			color: $toggler-color;
-			font-weight: $toggler-font-weight;
-			outline: $link-outline;
-			transition: $link-transition;
-
-			&:focus {
-				box-shadow: $link-focus-box-shadow;
-				color: $link-focus-color;
-			}
-		}
-
-		.navbar-toggler-link {
-			&[aria-expanded='true'] {
-				color: $link-active-color;
-			}
-		}
-
-		.navbar-overlay {
-			background-color: $bg;
-		}
-
-		&.navbar-expand {
-			@each $breakpoint in map-keys($breakpoints) {
-				$next: breakpoint-next($breakpoint, $breakpoints);
-				$infix: breakpoint-infix($next, $breakpoints);
-
-				&#{$infix} {
-					// .navbar-expand, sm, md, lg, xl
-					@if not($infix == '') {
-						// .navbar-expand-sm, md, lg, xl
-						@include media-breakpoint-down($breakpoint) {
-							&.navbar-collapse-absolute .navbar-collapse {
-								background-color: $bg;
-								border-color: $border-color;
-							}
-
-							.navbar-collapse .navbar-nav {
-								.dropdown-header,
-								.dropdown-item {
-									color: $link-color;
-									font-weight: $link-font-weight;
-								}
-
-								.dropdown-divider {
-									border-color: $link-color;
-								}
-
-								.dropdown-item {
-									&:hover {
-										color: $link-hover-color;
-									}
-
-									&.active {
-										color: $link-active-color;
-									}
-
-									&.disabled {
-										color: $link-disabled-color;
-									}
-								}
-							}
-						}
+					.nav-link,
+					.btn-unstyled {
+						@include clay-link(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-link
+							)
+						);
 					}
 
-					@include media-breakpoint-up($next) {
-						&.navbar-underline .navbar-nav .nav-link.active:after {
-							background-color: $underline-active-bg;
+					.nav-link-monospaced {
+						@include clay-link(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-link-monospaced
+							)
+						);
+					}
+
+					.nav-btn {
+						@include clay-button-variant(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-btn
+							)
+						);
+					}
+
+					.nav-btn-monospaced {
+						@include clay-button-variant(
+							map-deep-get(
+								$map,
+								navbar-underline,
+								navbar-nav,
+								nav-btn-monospaced
+							)
+						);
+					}
+				}
+			}
+
+			&.navbar-collapse-absolute .navbar-collapse {
+				@include clay-css(
+					map-deep-get(
+						$map,
+						navbar-collapse-absolute,
+						navbar-collapse
+					)
+				);
+			}
+
+			.navbar-collapse {
+				@include clay-css(map-deep-get($map, navbar-collapse));
+
+				.navbar-nav {
+					@include clay-css(
+						map-deep-get($map, navbar-collapse, navbar-nav)
+					);
+
+					.dropdown-header {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								navbar-collapse,
+								navbar-nav,
+								dropdown-header
+							)
+						);
+					}
+
+					.dropdown-divider {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								navbar-collapse,
+								navbar-nav,
+								dropdown-divider
+							)
+						);
+					}
+
+					.dropdown-item {
+						@include clay-link(
+							map-deep-get(
+								$map,
+								navbar-collapse,
+								navbar-nav,
+								dropdown-item
+							)
+						);
+					}
+				}
+			}
+
+			.container {
+				@include clay-css(map-deep-get($map, container));
+			}
+
+			.container-fluid {
+				@include clay-css(map-deep-get($map, container-fluid));
+			}
+
+			.navbar-nav {
+				.nav-link,
+				.btn-unstyled {
+					@include clay-link(
+						map-deep-get($map, navbar-nav, nav-link)
+					);
+				}
+
+				.nav-link-monospaced {
+					@include clay-link(
+						map-deep-get($map, navbar-nav, nav-link-monospaced)
+					);
+				}
+
+				.nav-btn {
+					@include clay-button-variant(
+						map-deep-get($map, navbar-nav, nav-btn)
+					);
+				}
+
+				.nav-btn-monospaced {
+					@include clay-button-variant(
+						map-deep-get($map, navbar-nav, nav-btn-monospaced)
+					);
+				}
+
+				.nav-item {
+					> .custom-control {
+						@include clay-custom-control-variant(
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-item,
+								custom-control
+							)
+						);
+					}
+				}
+			}
+
+			.navbar-form {
+				@include clay-css(map-deep-get($map, navbar-form));
+
+				> .container {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container)
+					);
+				}
+
+				> .container-fluid {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container-fluid)
+					);
+				}
+
+				.form-control {
+					@include clay-form-control-variant(
+						map-deep-get($map, navbar-form, form-control)
+					);
+				}
+			}
+
+			.navbar-brand {
+				@include clay-link(map-deep-get($map, navbar-brand));
+			}
+
+			.navbar-title {
+				@include clay-link(map-get($map, navbar-title));
+			}
+
+			.navbar-text {
+				@include clay-link(map-get($map, navbar-text));
+			}
+
+			.navbar-toggler {
+				@include clay-button-variant(
+					map-deep-get($map, navbar-toggler)
+				);
+			}
+
+			.navbar-toggler-link {
+				@include clay-link(map-get($map, navbar-toggler-link));
+			}
+
+			.navbar-overlay {
+				@include clay-css(map-deep-get($map, navbar-overlay));
+			}
+
+			.dropdown-menu {
+				@include clay-dropdown-menu-variant(
+					map-get($map, dropdown-menu)
+				);
+			}
+		}
+	}
+}
+
+/// A mixin to create `.navbar` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+
+@mixin clay-navbar-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+		$breakpoints: if(
+			variable-exists(grid-breakpoints),
+			$grid-breakpoints,
+			$cadmin-grid-breakpoints
+		);
+
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+			)
+		);
+
+		$nav-link: map-deep-merge(
+			map-deep-get($map, navbar-nav, nav-link),
+			(
+				background-color:
+					setter(
+						map-deep-get($map, link-bg),
+						map-deep-get(
+							$map,
+							navbar-nav,
+							nav-link,
+							background-color
+						)
+					),
+				border-radius:
+					setter(
+						map-deep-get($map, link-border-radius),
+						map-deep-get($map, navbar-nav, nav-link, border-radius)
+					),
+				color:
+					setter(
+						map-deep-get($map, link-color),
+						map-deep-get($map, navbar-nav, nav-link, color)
+					),
+				font-weight:
+					setter(
+						map-deep-get($map, link-font-weight),
+						map-deep-get($map, navbar-nav, nav-link, font-weight)
+					),
+				outline:
+					setter(
+						map-deep-get($map, link-outline),
+						map-deep-get($map, navbar-nav, nav-link, outline)
+					),
+				transition:
+					setter(
+						map-deep-get($map, link-transition),
+						map-deep-get($map, navbar-nav, nav-link, transition)
+					),
+				hover: (
+					background-color:
+						setter(
+							map-deep-get($map, link-hover-bg),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								hover,
+								background-color
+							)
+						),
+					color:
+						setter(
+							map-deep-get($map, link-hover-color),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								hover,
+								color
+							)
+						),
+				),
+				focus: (
+					background-color:
+						setter(
+							map-deep-get($map, link-focus-bg),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								focus,
+								background-color
+							)
+						),
+					box-shadow:
+						setter(
+							map-deep-get($map, link-focus-box-shadow),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								focus,
+								box-shadow
+							)
+						),
+					color:
+						setter(
+							map-deep-get($map, link-focus-color),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								focus-color
+							)
+						),
+				),
+				active: (
+					background-color:
+						setter(
+							map-deep-get($map, link-active-bg),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								active,
+								background-color
+							)
+						),
+					color:
+						setter(
+							map-deep-get($map, link-active-color),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								active,
+								color
+							)
+						),
+				),
+				disabled: (
+					background-color:
+						setter(
+							map-deep-get($map, link-disabled-bg),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								disabled,
+								background-color
+							)
+						),
+					box-shadow:
+						setter(
+							map-deep-get($map, link-disabled-box-shadow),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								disabled,
+								box-shadow
+							)
+						),
+					color:
+						setter(
+							map-deep-get($map, link-disabled-color),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								disabled,
+								color
+							)
+						),
+					opacity:
+						setter(
+							map-deep-get($map, link-disabled-opacity),
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-link,
+								disabled,
+								opacity
+							)
+						),
+					pointer-events: (
+						map-deep-get($map, link-disabled-pointer-events),
+						map-deep-get(
+							$map,
+							navbar-nav,
+							nav-link,
+							disabled,
+							pointer-events
+						),
+					),
+				),
+			)
+		);
+
+		$nav-btn: map-deep-merge(
+			map-deep-get($map, navbar-nav, nav-btn),
+			(
+				font-weight:
+					setter(
+						map-deep-get($map, btn-font-weight),
+						map-deep-get($map, navbar-nav, nav-btn, font-weight),
+						map-deep-get($nav-link, font-weight)
+					),
+			)
+		);
+
+		$navbar-brand: map-deep-merge($nav-link, map-get($map, navbar-brand));
+		$navbar-brand: map-deep-merge(
+			$navbar-brand,
+			(
+				background-color:
+					setter(
+						map-deep-get($map, brand-bg),
+						map-deep-get($map, navbar-brand, background-color)
+					),
+				color:
+					setter(
+						map-deep-get($map, brand-color),
+						map-deep-get($map, navbar-brand, color)
+					),
+				hover: (
+					background-color:
+						setter(
+							map-deep-get($map, brand-hover-bg),
+							map-deep-get(
+								$map,
+								navbar-brand,
+								hover,
+								background-color
+							)
+						),
+					color:
+						setter(
+							map-deep-get($map, brand-hover-color),
+							map-deep-get($map, navbar-brand, hover, color)
+						),
+				),
+			)
+		);
+
+		$navbar-toggler: map-deep-merge(
+			map-get($map, navbar-toggler),
+			(
+				color:
+					setter(
+						map-deep-get($map, toggler-color),
+						map-deep-get($map, navbar-toggler, color),
+						map-get($nav-link, color)
+					),
+				font-weight:
+					setter(
+						map-deep-get($map, toggler-font-weight),
+						map-deep-get($map, navbar-toggler, font-weight),
+						map-get($nav-link, font-weight)
+					),
+			)
+		);
+
+		$navbar-overlay: map-deep-merge(
+			map-get($map, navbar-overlay),
+			(
+				background-color:
+					setter(
+						map-deep-get($map, navbar-overlay, background-color),
+						map-deep-get($map, background-color)
+					),
+			)
+		);
+
+		$underline-active-bg: map-get($map, underline-active-bg);
+
+		@if ($enabled) {
+			@include clay-css($base);
+
+			.container {
+				@include clay-css(map-get($map, container));
+			}
+
+			.container-fluid {
+				@include clay-css(map-get($map, container-fluid));
+			}
+
+			.navbar-nav {
+				.nav-link,
+				.btn-unstyled {
+					@include clay-link($nav-link);
+				}
+
+				.nav-link-monospaced {
+					@include clay-link(
+						map-deep-get($map, navbar-nav, nav-link-monospaced)
+					);
+				}
+
+				.nav-btn {
+					@include clay-button-variant($nav-btn);
+				}
+
+				.nav-btn-monospaced {
+					@include clay-button-variant(
+						map-deep-get($map, navbar-nav, nav-btn-monospaced)
+					);
+				}
+
+				.nav-item {
+					> .custom-control {
+						@include clay-custom-control-variant(
+							map-deep-get(
+								$map,
+								navbar-nav,
+								nav-item,
+								custom-control
+							)
+						);
+					}
+				}
+			}
+
+			.navbar-form {
+				@include clay-css(map-deep-get($map, navbar-form));
+
+				> .container {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container)
+					);
+				}
+
+				> .container-fluid {
+					@include clay-css(
+						map-deep-get($map, navbar-form, container-fluid)
+					);
+				}
+
+				.form-control {
+					@include clay-form-control-variant(
+						map-deep-get($map, navbar-form, form-control)
+					);
+				}
+			}
+
+			.navbar-brand {
+				@include clay-link($navbar-brand);
+			}
+
+			.navbar-title {
+				@include clay-link(map-get($map, navbar-title));
+			}
+
+			.navbar-text {
+				@include clay-link(map-get($map, navbar-text));
+			}
+
+			.navbar-toggler {
+				@include clay-button-variant($navbar-toggler);
+			}
+
+			.navbar-toggler-link {
+				@include clay-link(map-get($map, navbar-toggler-link));
+			}
+
+			.navbar-overlay {
+				@include clay-css($navbar-overlay);
+			}
+
+			.dropdown-menu {
+				@include clay-dropdown-menu-variant(
+					map-get($map, dropdown-menu)
+				);
+			}
+
+			&.navbar-underline {
+				.navbar-toggler-link {
+					@include clay-link(
+						map-deep-get(
+							$map,
+							navbar-underline,
+							navbar-toggler-link
+						)
+					);
+				}
+			}
+
+			// only output specific media-breakpoint-down styles
+
+			@if (map-get($map, media-breakpoint-down)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-down))
+				{
+					$media-breakpoint-down: map-deep-get(
+						$map,
+						media-breakpoint-down,
+						$breakpoint
+					);
+
+					@if ($breakpoint) {
+						@include media-breakpoint-down($breakpoint) {
+							$breakpoint-position: index(
+								$breakpoints,
+								$breakpoint map-get($breakpoints, $breakpoint)
+							);
+
+							$is-first-breakpoint: $breakpoint-position == 1;
+
+							$is-last-breakpoint: $breakpoint-position ==
+								length($breakpoints);
+
+							@if not($is-last-breakpoint) {
+								$infix: '-' + breakpoint-next($breakpoint);
+
+								&.navbar-expand#{$infix} {
+									@include clay-navbar-expand-variant(
+										map-deep-get(
+											$media-breakpoint-down,
+											'navbar-expand#{$infix}'
+										)
+									);
+								}
+
+								.navbar-overlay-#{$breakpoint}-down {
+									@include clay-css(
+										map-deep-get(
+											$media-breakpoint-down,
+											'navbar-overlay-#{$breakpoint}-down'
+										)
+									);
+
+									&.show {
+										@include clay-css(
+											map-deep-get(
+												$media-breakpoint-down,
+												'navbar-overlay-#{$breakpoint}-down',
+												show
+											)
+										);
+									}
+								}
+							}
 						}
 					}
 				}
 			}
-		}
 
-		@content;
+			// only output specific media-breakpoint-up styles
+
+			@if (map-get($map, media-breakpoint-up)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-up))
+				{
+					$media-breakpoint-up: map-deep-get(
+						$map,
+						media-breakpoint-up,
+						$breakpoint
+					);
+
+					@if ($breakpoint) {
+						@include media-breakpoint-up($breakpoint) {
+							$is-first-breakpoint: index(
+									$breakpoints,
+									$breakpoint
+										map-get($breakpoints, $breakpoint)
+								)
+								== 1;
+
+							@if not($is-first-breakpoint) {
+								$infix: '-' + $breakpoint;
+
+								&.navbar-expand#{$infix} {
+									@include clay-navbar-expand-variant(
+										map-deep-get(
+											$media-breakpoint-up,
+											'navbar-expand#{$infix}'
+										)
+									);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// if media-breakpoint-down doesn't exist output styles .navbar-expand-{sm|md|lg|xl|??}
+			// deprecated use `media-breakpoint-down` key instead
+
+			@if not(map-get($map, media-breakpoint-down)) {
+				&.navbar-expand {
+					@each $breakpoint in map-keys($breakpoints) {
+						$next: breakpoint-next($breakpoint, $breakpoints);
+						$infix: breakpoint-infix($next, $breakpoints);
+
+						&#{$infix} {
+							// .navbar-expand, sm, md, lg, xl
+							@if not($infix == '') {
+								// .navbar-expand-sm, md, lg, xl
+								@include media-breakpoint-down($breakpoint) {
+									&.navbar-collapse-absolute {
+										.navbar-collapse {
+											background-color: map-get(
+												$base,
+												background-color
+											);
+											border-color: map-get(
+												$base,
+												border-color
+											);
+										}
+									}
+
+									.navbar-collapse .navbar-nav {
+										.dropdown-header,
+										.dropdown-item {
+											color: map-get($nav-link, color);
+											font-weight: map-get(
+												$nav-link,
+												font-weight
+											);
+										}
+
+										.dropdown-divider {
+											border-color: map-get(
+												$nav-link,
+												color
+											);
+										}
+
+										.dropdown-item {
+											&:hover {
+												color: map-deep-get(
+													$nav-link,
+													hover,
+													color
+												);
+											}
+
+											&.active {
+												color: map-deep-get(
+													$nav-link,
+													active-class,
+													color
+												);
+											}
+
+											&.disabled {
+												color: map-deep-get(
+													$nav-link,
+													disabled,
+													color
+												);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// if media-breakpoint-up doesn't exist output styles .navbar-expand through .navbar-expand-{sm|md|lg|xl|??}
+			// deprecated use `media-breakpoint-up` key instead
+
+			@if not(map-get($map, media-breakpoint-up)) {
+				&.navbar-expand {
+					@each $breakpoint in map-keys($breakpoints) {
+						$next: breakpoint-next($breakpoint, $breakpoints);
+						$infix: breakpoint-infix($next, $breakpoints);
+
+						&#{$infix} {
+							// .navbar-expand, sm, md, lg, xl
+							@include media-breakpoint-up($next) {
+								&.navbar-underline .navbar-nav {
+									.nav-link.active:after {
+										background-color: $underline-active-bg;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			@content;
+		}
 	}
 }
