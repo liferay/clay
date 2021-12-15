@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
+
+### Bug Fixes
+
+-   **@clayui/form:** add missing "textarea" type to Input's component prop ([b0a3b89](https://github.com/liferay/clay/commit/b0a3b8915d9a5a04838d684b41b9a3a53d9fdc05)), closes [#4477](https://github.com/liferay/clay/issues/4477)
+
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
 **Note:** Version bump only for package @clayui/form

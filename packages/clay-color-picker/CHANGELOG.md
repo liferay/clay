@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** Add active and onActiveChange props ([4c7c683](https://github.com/liferay/clay/commit/4c7c68365b609ba11220f4ca65ed41459e878701))
+
 # [3.41.0](https://github.com/liferay/clay/compare/v3.40.1...v3.41.0) (2021-12-02)
 
 **Note:** Version bump only for package @clayui/color-picker

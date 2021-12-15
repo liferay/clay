@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Pagination focus shadow should match Lexicon's ([1f677e2](https://github.com/liferay/clay/commit/1f677e2566162aa7f6618dcdd03cf2beea98e8e3))
+* **@clayui/css:** Button Group `.dropdown-toggle-split` should use calc to calculate padding ([8d88a2d](https://github.com/liferay/clay/commit/8d88a2d913cbb4b71cfd1db2121c69b91ce51291)), closes [#4499](https://github.com/liferay/clay/issues/4499)
+* **@clayui/css:** Cadmin convert maps being passed into `clay-navbar-variant` to use new keys ([8aa1044](https://github.com/liferay/clay/commit/8aa104429e988dfd26d4a8c982e9612d5ec775e5))
+* **@clayui/css:** Cadmin Navbar Component Variants only output media query (md) styles used in DXP ([2477c7e](https://github.com/liferay/clay/commit/2477c7e2f00d7312b09f34b7285794e45063740f))
+* **@clayui/css:** Cadmin Pagination update map keys to use newer keys ([9beabca](https://github.com/liferay/clay/commit/9beabcaf3b80c66f0d733b3e5e521baef5029022))
+* **@clayui/css:** Convert maps being passed into `clay-navbar-variant` to use new keys ([4f4ba86](https://github.com/liferay/clay/commit/4f4ba86b9e52832f3f0fc7bae03e52373ea01b3d))
+* **@clayui/css:** Declares `border-color` and `border-style` for Management Bar and Navigation Bar base ([e67c284](https://github.com/liferay/clay/commit/e67c284da1be8c973f8dd61dc2d5aeb3c5b882b9))
+* **@clayui/css:** Mixin `clay-button-variant` unbundles `.show` from `.active` ([73227a0](https://github.com/liferay/clay/commit/73227a04e1eede6c8a6af36ec35674366480e98a))
+* **@clayui/css:** Mixin `clay-toggle-switch-bar-variant` adds `.button-icon-off` selector ([6d3e8fe](https://github.com/liferay/clay/commit/6d3e8fe316745272674df665e62ff64d7836bdee)), closes [#4486](https://github.com/liferay/clay/issues/4486)
+* **@clayui/css:** Mixins _links.scss check if parameter is type map before processing ([385fd6b](https://github.com/liferay/clay/commit/385fd6bc8c31a2f781b547ad5f46baf138654093))
+* **@clayui/css:** Mixins `clay-link` and `clay-close` Removes the `.show > &` selector ([9b523cf](https://github.com/liferay/clay/commit/9b523cfb010eda51b87dcdaf2ca79547cf4b2d03))
+* **@clayui/css:** Mixins `clay-navbar-variant` convert to `clay-css` mixin pattern ([59b722b](https://github.com/liferay/clay/commit/59b722b264ed286457a9cbb7570e859f900b632d))
+* **@clayui/css:** Mixins `clay-navbar-variant` don't output properties if param is empty map ([e6230e7](https://github.com/liferay/clay/commit/e6230e7fefd6925b3f1a1006c347ee193fbdadd6))
+* **@clayui/css:** Mixins check if parameter is map to avoid must be a map error ([a128597](https://github.com/liferay/clay/commit/a12859733069ae5be9acac6a1a21db1aaf0b374c))
+* **@clayui/css:** Multi Step Nav use calc to calculate sizing for CSS variable compatibility ([96dde7e](https://github.com/liferay/clay/commit/96dde7efd773d8ea06455bb59fa71ee66eebe8d4)), closes [#4498](https://github.com/liferay/clay/issues/4498)
+* **@clayui/css:** Navbar Component Variants only output media query (md) styles used in DXP ([7435d7d](https://github.com/liferay/clay/commit/7435d7d9df9de832fbf0ec7d671d2c5336a2665b))
+* **@clayui/css:** replace filter icon ([8231dae](https://github.com/liferay/clay/commit/8231daec61ec59df1ca25f3fcd56320ef582d214)), closes [#4490](https://github.com/liferay/clay/issues/4490)
+* **@clayui/css:** Toggle Switch increase specificity of `simple-toggle-switch` ([8f86cd6](https://github.com/liferay/clay/commit/8f86cd662d2d25be6166edaebccf14f4841d2b7b)), closes [#4484](https://github.com/liferay/clay/issues/4484)
+
+
+### Features
+
+* **@clayui/css:** Cadmin Pagination convert to use clay mixins ([56947b5](https://github.com/liferay/clay/commit/56947b5d3c224de94a6c0a58141bc6f584e73837))
+* **@clayui/css:** Cadmin Popovers generate styles using `clay-css` mixin ([d40ef1f](https://github.com/liferay/clay/commit/d40ef1f149d4c3cfdcc17f193f6ecebbd56ecd99))
+* **@clayui/css:** Cadmin Tooltip generate styles using `clay-tooltip-variant` mixin ([df4011e](https://github.com/liferay/clay/commit/df4011e986ab82722d1bf660d4f285bfa8beee7c))
+* **@clayui/css:** Mixins `clay-button-variant` adds option to style `::before` and `::after` ([4003b59](https://github.com/liferay/clay/commit/4003b5921848105c32e1fdb379b3caee388cd070))
+* **@clayui/css:** Mixins `clay-navbar-variant` should be able to output `clay-navbar-size` selectors ([ffaee2a](https://github.com/liferay/clay/commit/ffaee2ad2dca18b042faedbaffb88bd93b138d2a))
+* **@clayui/css:** Mixins adds `clay-pagination-items-per-page-variant` and `clay-pagination-variant` ([84fff62](https://github.com/liferay/clay/commit/84fff623bf2e8d58d370a9dfdbf9e4c0a101af82))
+* **@clayui/css:** Mixins adds `clay-popover-variant` ([9dc84b1](https://github.com/liferay/clay/commit/9dc84b1ec6b10d81b12cdcd7960915441b0b37ae))
+* **@clayui/css:** Mixins adds `clay-tooltip-variant` ([5bb6319](https://github.com/liferay/clay/commit/5bb631962c8217d4d208f0371991a2e64a9e5953))
+* **@clayui/css:** Pagination convert to use clay mixins ([188ed54](https://github.com/liferay/clay/commit/188ed5460ac9279a34835729a7224b0ebe819faf))
+* **@clayui/css:** Popovers generate styles using `clay-css` mixin ([6a5c2f6](https://github.com/liferay/clay/commit/6a5c2f6f8b30e9f9a69bcd278a4cd1f39cd6c0cb))
+* **@clayui/css:** Tooltip generate styles using `clay-tooltip-variant` mixin ([20f89e5](https://github.com/liferay/clay/commit/20f89e5030bad35296064e04fd6d4cedcbb97573))
+
+
+### BREAKING CHANGES
+
+* **@clayui/css:** We previously output `navbar-expand-{sm|md|lg|xl}` for the variants of:
+
+    - Application Bar
+    - Management Bar
+    - Navigation Bar
+    - Sidebar Navigation Bar
+
+We only output those that are needed namely, `navbar-expand-md`. If you relied upon other breakpoints you will need to declare them in the respective Sass map or set:
+
+```
+$application-bar-base: (
+	media-breakpoint-down: $c-unset,
+	media-breakpoint-up: $c-unset,
+);
+```
+
+to revert back to the old way.
+* **@clayui/css:** The mixin `clay-navbar-variant` output `border-color: transparent` and `border-style: solid` by default. This has been removed to reduce unnecessary CSS. You will need to declare them in your Sass map if you relied upon it.
+
+
+
+
+
 # [3.41.0](https://github.com/liferay/clay/compare/v3.40.1...v3.41.0) (2021-12-02)
 
 
