@@ -180,7 +180,6 @@ $dropdown-item-base: map-deep-merge(
 		position: relative,
 		text-align: inherit,
 		transition: none,
-		white-space: normal,
 		width: 100%,
 		word-wrap: break-word,
 		hover: (
@@ -760,9 +759,6 @@ $dropdown-menu-width-shrink: map-deep-merge(
 	(
 		min-width: 0,
 		white-space: nowrap,
-		dropdown-item: (
-			white-space: inherit,
-		),
 	),
 	$dropdown-menu-width-shrink
 );

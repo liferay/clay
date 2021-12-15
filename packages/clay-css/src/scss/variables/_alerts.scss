@@ -135,6 +135,7 @@ $alert: map-deep-merge(
 		margin-bottom: $alert-margin-bottom,
 		padding: $alert-padding-y $alert-padding-x,
 		position: relative,
+		white-space: normal,
 		word-wrap: break-word,
 		alert-btn: $alert-btn,
 		btn-group: $alert-btn-group,
