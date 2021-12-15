@@ -35,3 +35,425 @@
 		}
 	}
 }
+
+/// A mixin to help create `.pagination-items-per-page` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .pagination-items-per-page
+/// 	link: (
+/// 		// .pagination-items-per-page > a, .pagination-items-per-page > button
+/// 		hover: (
+/// 			// .pagination-items-per-page > a:hover, .pagination-items-per-page > button:hover
+/// 		),
+/// 		focus: (
+/// 			// .pagination-items-per-page > a:focus, .pagination-items-per-page > a.focus,
+/// 			// .pagination-items-per-page > button:focus, .pagination-items-per-page > button.focus
+/// 		),
+/// 		active: (
+/// 			// .pagination-items-per-page > a:active, .pagination-items-per-page > a.active,
+/// 			// .pagination-items-per-page > button:active, .pagination-items-per-page > button.active,
+/// 			// .pagination-items-per-page.active > a, .pagination-items-per-page.active > button
+/// 		),
+/// 		show: (
+/// 			// .pagination-items-per-page > a[aria-expanded='true'],
+/// 			// .pagination-items-per-page > a.show,
+/// 			// .pagination-items-per-page > button[aria-expanded='true'],
+/// 			// .pagination-items-per-page > button.show
+/// 		),
+/// 		disabled: (
+/// 			// .pagination-items-per-page > a:disabled, .pagination-items-per-page > a.disabled,
+/// 			// .pagination-items-per-page > button:disabled, .pagination-items-per-page > button.disabled,
+/// 			// .pagination-items-per-page.disabled > a, .pagination-items-per-page.disabled > button
+/// 		),
+/// 	),
+/// 	dropdown-menu: (
+/// 		// .pagination-items-per-page .dropdown-menu
+/// 		// See `clay-dropdown-menu-variant`
+/// 	),
+/// 	lexicon-icon: (
+/// 		// .pagination-items-per-page .lexicon-icon
+/// 	),
+/// 	pagination-results: (
+/// 		// .pagination-items-per-page + .pagination-results
+/// 	),
+/// 	media-breakpoint-down: (
+/// 		xs: (
+/// 			// @include media-breakpoint-down(xs) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 		sm: (
+/// 			// @include media-breakpoint-down(sm) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 		md: (
+/// 			// @include media-breakpoint-down(md) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 		lg: (
+/// 			// @include media-breakpoint-down(lg) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 	),
+/// )
+
+@mixin clay-pagination-items-per-page-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			> a,
+			> button {
+				@include clay-link(setter(map-deep-get($map, link), ()));
+			}
+
+			&.active {
+				> a,
+				> button {
+					@include clay-link(
+						setter(map-deep-get($map, link, active-class), ())
+					);
+				}
+			}
+
+			&.disabled {
+				> a,
+				> button {
+					@include clay-link(
+						setter(map-deep-get($map, link, disabled), ())
+					);
+				}
+			}
+
+			.dropdown-menu {
+				@include clay-dropdown-menu-variant(
+					setter(map-deep-get($map, dropdown-menu), ())
+				);
+			}
+
+			.lexicon-icon {
+				@include clay-css(map-deep-get($map, lexicon-icon));
+			}
+
+			+ .pagination-results {
+				@include clay-css(map-deep-get($map, pagination-results));
+			}
+
+			@if (map-get($map, media-breakpoint-down)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-down))
+				{
+					$media-breakpoint-down: map-deep-get(
+						$map,
+						media-breakpoint-down,
+						$breakpoint
+					);
+
+					@include media-breakpoint-down($breakpoint) {
+						@include clay-css($media-breakpoint-down);
+
+						> a,
+						> button {
+							@include clay-link(
+								setter(
+									map-deep-get($media-breakpoint-down, link),
+									()
+								)
+							);
+						}
+
+						&.active {
+							> a,
+							> button {
+								@include clay-link(
+									setter(
+										map-deep-get(
+											$media-breakpoint-down,
+											link,
+											active-class
+										),
+										()
+									)
+								);
+							}
+						}
+
+						&.disabled {
+							> a,
+							> button {
+								@include clay-link(
+									setter(
+										map-deep-get(
+											$media-breakpoint-down,
+											link,
+											disabled
+										),
+										()
+									)
+								);
+							}
+						}
+
+						.dropdown-menu {
+							@include clay-dropdown-menu-variant(
+								setter(
+									map-deep-get(
+										$media-breakpoint-down,
+										dropdown-menu
+									),
+									()
+								)
+							);
+						}
+
+						.lexicon-icon {
+							@include clay-css(
+								map-deep-get(
+									$media-breakpoint-down,
+									lexicon-icon
+								)
+							);
+						}
+
+						+ .pagination-results {
+							@include clay-css(
+								map-deep-get(
+									$media-breakpoint-down,
+									pagination-results
+								)
+							);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/// A mixin to help create `.pagination` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .pagination
+/// 	page-item: (
+/// 		// .pagination .page-item
+/// 	),
+/// 	page-link: (
+/// 		// .pagination .page-link
+/// 		hover: (
+/// 			// .pagination .page-link:hover
+/// 		),
+/// 		focus: (
+/// 			// .pagination .page-link:focus, .pagination .page-link.focus
+/// 		),
+/// 		active: (
+/// 			// .pagination .page-link:active, .pagination .page-item.active .page-link
+/// 		),
+/// 		show: (
+/// 			// .pagination .page-link[aria-expanded='true'], .pagination .page-link.show
+/// 		),
+/// 		disabled: (
+/// 			// .pagination .page-link:disabled, .pagination .page-link.disabled,
+/// 			// .pagination .page-item.disabled .page-link
+/// 		),
+/// 	),
+/// 	page-link-first: (
+/// 		// .pagination .page-item:first-child .page-link, .page-link-first
+/// 	),
+/// 	page-link-last: (
+/// 		// .pagination .page-item:last-child .page-link, .page-link-last
+/// 	),
+/// 	pagination: (
+/// 		// Used for .pagination-bar
+/// 		// .pagination-bar .pagination
+/// 		// See `clay-pagination-variant`
+/// 	),
+/// 	pagination-items-per-page: (
+/// 		// Used for .pagination-bar
+/// 		// .pagination-bar .pagination-items-per-page
+/// 		// See `clay-pagination-items-per-page-variant`
+/// 	),
+/// 	media-breakpoint-down: (
+/// 		xs: (
+/// 			// @include media-breakpoint-down(xs) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 		sm: (
+/// 			// @include media-breakpoint-down(sm) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 		md: (
+/// 			// @include media-breakpoint-down(md) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 		lg: (
+/// 			// @include media-breakpoint-down(lg) {
+/// 			//     See above.
+/// 			// }
+/// 		),
+/// 	),
+/// )
+
+@mixin clay-pagination-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			.page-item {
+				@include clay-css(map-get($map, page-item));
+			}
+
+			.page-link {
+				@include clay-link(setter(map-get($map, page-link), ()));
+			}
+
+			.page-item:first-child .page-link,
+			.page-link-first {
+				@include clay-css(map-get($map, page-link-first));
+			}
+
+			.page-item:last-child .page-link,
+			.page-link-last {
+				@include clay-css(map-get($map, page-link-last));
+			}
+
+			.page-item {
+				&.active {
+					.page-link {
+						@include clay-link(
+							setter(
+								map-deep-get($map, page-link, active-class),
+								()
+							)
+						);
+					}
+				}
+
+				&.disabled {
+					.page-link {
+						@include clay-link(
+							setter(map-deep-get($map, page-link, disabled), ())
+						);
+					}
+				}
+			}
+
+			.pagination {
+				@include clay-pagination-variant(
+					map-deep-get($map, pagination)
+				);
+			}
+
+			.pagination-items-per-page {
+				@include clay-pagination-items-per-page-variant(
+					map-deep-get($map, pagination-items-per-page)
+				);
+			}
+
+			@if (map-get($map, media-breakpoint-down)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-down))
+				{
+					$media-breakpoint-down: map-deep-get(
+						$map,
+						media-breakpoint-down,
+						$breakpoint
+					);
+
+					@include media-breakpoint-down($breakpoint) {
+						@include clay-css($media-breakpoint-down);
+
+						.page-item {
+							@include clay-css(
+								map-deep-get($media-breakpoint-down, page-item)
+							);
+						}
+
+						.page-link {
+							@include clay-link(
+								setter(
+									map-get($media-breakpoint-down, page-link),
+									()
+								)
+							);
+						}
+
+						.page-item:first-child .page-link,
+						.page-link-first {
+							@include clay-css(
+								map-get($media-breakpoint-down, page-link-first)
+							);
+						}
+
+						.page-item:last-child .page-link,
+						.page-link-last {
+							@include clay-css(
+								map-get($media-breakpoint-down, page-link-last)
+							);
+						}
+
+						.page-item {
+							&.active {
+								.page-link {
+									@include clay-link(
+										setter(
+											map-deep-get(
+												$media-breakpoint-down,
+												page-link,
+												active
+											),
+											()
+										)
+									);
+								}
+							}
+
+							&.disabled {
+								.page-link {
+									@include clay-link(
+										setter(
+											map-deep-get(
+												$media-breakpoint-down,
+												page-link,
+												disabled
+											),
+											()
+										)
+									);
+								}
+							}
+						}
+
+						.pagination {
+							@include clay-pagination-variant(
+								map-deep-get($media-breakpoint-down, pagination)
+							);
+						}
+
+						.pagination-items-per-page {
+							@include clay-pagination-items-per-page-variant(
+								map-deep-get(
+									$media-breakpoint-down,
+									pagination-items-per-page
+								)
+							);
+						}
+					}
+				}
+			}
+		}
+	}
+}

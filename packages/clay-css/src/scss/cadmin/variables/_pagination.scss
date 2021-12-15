@@ -11,7 +11,7 @@ $cadmin-pagination-hover-bg: rgba(0, 0, 0, 0.02) !default;
 $cadmin-pagination-hover-border-color: transparent !default;
 $cadmin-pagination-hover-color: $cadmin-gray-900 !default;
 
-$cadmin-pagination-focus-box-shadow: $cadmin-input-btn-focus-box-shadow !default;
+$cadmin-pagination-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 $cadmin-pagination-focus-outline: 0 !default;
 
 $cadmin-pagination-active-bg: rgba(0, 0, 0, 0.04) !default;
@@ -78,13 +78,65 @@ $cadmin-pagination-disabled-opacity: 0.5 !default;
 
 $cadmin-pagination-disabled-pointer-events: auto !default;
 
-// Pagination Link
+// .page-link
+
+$cadmin-pagination-link-hover: () !default;
+$cadmin-pagination-link-hover: map-deep-merge(
+	(
+		background-color: $cadmin-pagination-hover-bg,
+		border-color: $cadmin-pagination-hover-border-color,
+		color: $cadmin-pagination-hover-color,
+		text-decoration: none,
+		z-index: 2,
+	),
+	$cadmin-pagination-link-hover
+);
+
+$cadmin-pagination-link-focus: () !default;
+$cadmin-pagination-link-focus: map-deep-merge(
+	(
+		background-color: $cadmin-pagination-hover-bg,
+		border-color: $cadmin-pagination-hover-border-color,
+		box-shadow: $cadmin-pagination-focus-box-shadow,
+		color: $cadmin-pagination-hover-color,
+		outline: $cadmin-pagination-focus-outline,
+		z-index: $cadmin-zindex-pagination-link-focus,
+	),
+	$cadmin-pagination-link-focus
+);
+
+$cadmin-pagination-link-active: () !default;
+$cadmin-pagination-link-active: map-deep-merge(
+	(
+		background-color: $cadmin-pagination-active-bg,
+		border-color: $cadmin-pagination-active-border-color,
+		color: $cadmin-pagination-active-color,
+		cursor: default,
+		z-index: $cadmin-zindex-pagination-link-active,
+	),
+	$cadmin-pagination-link-active
+);
+
+$cadmin-pagination-link-disabled: () !default;
+$cadmin-pagination-link-disabled: map-deep-merge(
+	(
+		background-color: $cadmin-pagination-disabled-bg,
+		border-color: $cadmin-pagination-disabled-border-color,
+		box-shadow: none,
+		color: $cadmin-pagination-disabled-color,
+		cursor: $cadmin-pagination-disabled-cursor,
+		opacity: $cadmin-pagination-disabled-opacity,
+		pointer-events: $cadmin-pagination-disabled-pointer-events,
+		z-index: $cadmin-zindex-pagination-link-disabled,
+	),
+	$cadmin-pagination-link-disabled
+);
 
 $cadmin-pagination-link: () !default;
 $cadmin-pagination-link: map-deep-merge(
 	(
 		align-items: center,
-		bg: $cadmin-pagination-bg,
+		background-color: $cadmin-pagination-bg,
 		border-radius: $cadmin-pagination-link-border-radius,
 		border-color: $cadmin-pagination-border-color,
 		border-style: solid,
@@ -102,61 +154,74 @@ $cadmin-pagination-link: map-deep-merge(
 		padding-top: $cadmin-pagination-padding-y,
 		position: relative,
 		transition: $cadmin-pagination-link-transition,
-		lexicon-icon-margin-top: 0,
+		hover: $cadmin-pagination-link-hover,
+		focus: $cadmin-pagination-link-focus,
+		active: $cadmin-pagination-link-active,
+		disabled: $cadmin-pagination-link-disabled,
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$cadmin-pagination-link
 );
 
-$cadmin-pagination-link-hover: () !default;
-$cadmin-pagination-link-hover: map-deep-merge(
+// .page-item:first-child .page-link, .page-link-first
+
+$cadmin-pagination-link-first: () !default;
+$cadmin-pagination-link-first: map-merge(
 	(
-		bg: $cadmin-pagination-hover-bg,
-		border-color: $cadmin-pagination-hover-border-color,
-		color: $cadmin-pagination-hover-color,
-		text-decoration: none,
-		z-index: 2,
+		border-radius:
+			clay-enable-rounded($cadmin-pagination-link-first-border-radius),
 	),
-	$cadmin-pagination-link-hover
+	$cadmin-pagination-link-first
 );
 
-$cadmin-pagination-link-focus: () !default;
-$cadmin-pagination-link-focus: map-deep-merge(
+// .page-item:last-child .page-link, .page-link-last
+
+$cadmin-pagination-link-last: () !default;
+$cadmin-pagination-link-last: map-deep-merge(
 	(
-		bg: $cadmin-pagination-hover-bg,
-		border-color: $cadmin-pagination-hover-border-color,
-		box-shadow: $cadmin-pagination-focus-box-shadow,
-		color: $cadmin-pagination-hover-color,
-		outline: $cadmin-pagination-focus-outline,
-		z-index: $cadmin-zindex-pagination-link-focus,
+		border-radius:
+			clay-enable-rounded($cadmin-pagination-link-last-border-radius),
 	),
-	$cadmin-pagination-link-focus
+	$cadmin-pagination-link-last
 );
 
-$cadmin-pagination-link-active: () !default;
-$cadmin-pagination-link-active: map-deep-merge(
+// .pagination
+
+$cadmin-pagination: () !default;
+$cadmin-pagination: map-deep-merge(
 	(
-		bg: $cadmin-pagination-active-bg,
-		border-color: $cadmin-pagination-active-border-color,
-		color: $cadmin-pagination-active-color,
-		cursor: default,
-		z-index: $cadmin-zindex-pagination-link-active,
+		border-radius: clay-enable-rounded($cadmin-border-radius),
+		display: flex,
+		flex-wrap: wrap,
+		font-size: $cadmin-pagination-font-size,
+		list-style: none,
+		margin-bottom: $cadmin-pagination-margin-bottom,
+		padding-left: 0,
 	),
-	$cadmin-pagination-link-active
+	$cadmin-pagination
 );
 
-$cadmin-pagination-link-disabled: () !default;
-$cadmin-pagination-link-disabled: map-deep-merge(
+// .pagination-bar
+
+$cadmin-pagination-bar: () !default;
+$cadmin-pagination-bar: map-deep-merge(
 	(
-		bg: $cadmin-pagination-disabled-bg,
-		border-color: $cadmin-pagination-disabled-border-color,
-		box-shadow: none,
-		color: $cadmin-pagination-disabled-color,
-		cursor: $cadmin-pagination-disabled-cursor,
-		opacity: $cadmin-pagination-disabled-opacity,
-		pointer-events: $cadmin-pagination-disabled-pointer-events,
-		z-index: $cadmin-zindex-pagination-link-disabled,
+		align-items: center,
+		display: flex,
+		flex-wrap: wrap,
+		media-breakpoint-down: (
+			sm: (
+				flex-direction: column,
+				justify-content: center,
+				pagination: (
+					margin-top: $cadmin-pagination-margin-top-mobile,
+				),
+			),
+		),
 	),
-	$cadmin-pagination-link-disabled
+	$cadmin-pagination-bar
 );
 
 // Pagination Dropdown Menu
@@ -216,11 +281,57 @@ $cadmin-pagination-items-per-page-lexicon-icon-margin-top: 2px !default; // 2px
 
 // Pagination Items Per Page Link
 
+$cadmin-pagination-items-per-page-link-hover: () !default;
+$cadmin-pagination-items-per-page-link-hover: map-deep-merge(
+	(
+		background-color: $cadmin-pagination-items-per-page-hover-bg,
+		border-color: $cadmin-pagination-items-per-page-hover-border-color,
+		color: $cadmin-pagination-items-per-page-hover-color,
+	),
+	$cadmin-pagination-items-per-page-link-hover
+);
+
+$cadmin-pagination-items-per-page-link-focus: () !default;
+$cadmin-pagination-items-per-page-link-focus: map-deep-merge(
+	(
+		background-color: map-get($cadmin-pagination-link-focus, bg),
+		border-color: map-get($cadmin-pagination-link-focus, border-color),
+		box-shadow: $cadmin-pagination-items-per-page-focus-box-shadow,
+		color: map-get($cadmin-pagination-link-focus, color),
+		outline: $cadmin-pagination-items-per-page-focus-outline,
+	),
+	$cadmin-pagination-items-per-page-link-focus
+);
+
+$cadmin-pagination-items-per-page-link-active: () !default;
+$cadmin-pagination-items-per-page-link-active: map-deep-merge(
+	(
+		background-color: $cadmin-pagination-active-bg,
+		border-color: $cadmin-pagination-active-border-color,
+		color: $cadmin-pagination-active-color,
+	),
+	$cadmin-pagination-items-per-page-link-active
+);
+
+$cadmin-pagination-items-per-page-link-disabled: () !default;
+$cadmin-pagination-items-per-page-link-disabled: map-deep-merge(
+	(
+		background-color: $cadmin-pagination-disabled-bg,
+		border-color: $cadmin-pagination-disabled-border-color,
+		box-shadow: none,
+		color: $cadmin-pagination-disabled-color,
+		cursor: $cadmin-pagination-disabled-cursor,
+		opacity: $cadmin-pagination-disabled-opacity,
+		pointer-events: $cadmin-pagination-disabled-pointer-events,
+	),
+	$cadmin-pagination-items-per-page-link-disabled
+);
+
 $cadmin-pagination-items-per-page-link: () !default;
 $cadmin-pagination-items-per-page-link: map-deep-merge(
 	(
 		align-items: center,
-		bg: $cadmin-pagination-items-per-page-bg,
+		background-color: $cadmin-pagination-items-per-page-bg,
 		border-color: $cadmin-pagination-items-per-page-border-color,
 		border-radius: $cadmin-pagination-items-per-page-border-radius,
 		border-style: solid,
@@ -236,65 +347,62 @@ $cadmin-pagination-items-per-page-link: map-deep-merge(
 		padding-top: $cadmin-pagination-padding-y,
 		text-decoration: none,
 		transition: $cadmin-pagination-items-per-page-transition,
-		lexicon-icon-margin-left:
-			$cadmin-pagination-items-per-page-lexicon-icon-margin-left,
-		lexicon-icon-margin-top:
-			$cadmin-pagination-items-per-page-lexicon-icon-margin-top,
+		hover: $cadmin-pagination-items-per-page-link-hover,
+		focus: $cadmin-pagination-items-per-page-link-focus,
+		active: $cadmin-pagination-items-per-page-link-active,
+		disabled: $cadmin-pagination-items-per-page-link-disabled,
+		lexicon-icon: (
+			margin-left:
+				$cadmin-pagination-items-per-page-lexicon-icon-margin-left,
+			margin-top:
+				$cadmin-pagination-items-per-page-lexicon-icon-margin-top,
+		),
 	),
 	$cadmin-pagination-items-per-page-link
 );
 
-$cadmin-pagination-items-per-page-link-hover: () !default;
-$cadmin-pagination-items-per-page-link-hover: map-deep-merge(
+// .pagination-items-per-page
+
+$cadmin-pagination-items-per-page: () !default;
+$cadmin-pagination-items-per-page: map-deep-merge(
 	(
-		bg: $cadmin-pagination-items-per-page-hover-bg,
-		border-color: $cadmin-pagination-items-per-page-hover-border-color,
-		color: $cadmin-pagination-items-per-page-hover-color,
+		font-size: $cadmin-pagination-items-per-page-font-size,
+		margin-bottom: $cadmin-pagination-margin-bottom,
+		link: $cadmin-pagination-items-per-page-link,
+		media-breakpoint-down: (
+			sm: (
+				pagination-results: (
+					margin-left: auto,
+				),
+			),
+		),
 	),
-	$cadmin-pagination-items-per-page-link-hover
+	$cadmin-pagination-items-per-page
 );
 
-$cadmin-pagination-items-per-page-link-focus: () !default;
-$cadmin-pagination-items-per-page-link-focus: map-deep-merge(
-	(
-		bg: map-get($cadmin-pagination-link-focus, bg),
-		border-color: map-get($cadmin-pagination-link-focus, border-color),
-		box-shadow: $cadmin-pagination-items-per-page-focus-box-shadow,
-		color: map-get($cadmin-pagination-link-focus, color),
-		outline: $cadmin-pagination-items-per-page-focus-outline,
-	),
-	$cadmin-pagination-items-per-page-link-focus
-);
-
-$cadmin-pagination-items-per-page-link-active: () !default;
-$cadmin-pagination-items-per-page-link-active: map-deep-merge(
-	(
-		bg: $cadmin-pagination-active-bg,
-		border-color: $cadmin-pagination-active-border-color,
-		color: $cadmin-pagination-active-color,
-	),
-	$cadmin-pagination-items-per-page-link-active
-);
-
-$cadmin-pagination-items-per-page-link-disabled: () !default;
-$cadmin-pagination-items-per-page-link-disabled: map-deep-merge(
-	(
-		bg: $cadmin-pagination-disabled-bg,
-		border-color: $cadmin-pagination-disabled-border-color,
-		box-shadow: none,
-		color: $cadmin-pagination-disabled-color,
-		cursor: $cadmin-pagination-disabled-cursor,
-		opacity: $cadmin-pagination-disabled-opacity,
-		pointer-events: $cadmin-pagination-disabled-pointer-events,
-	),
-	$cadmin-pagination-items-per-page-link-disabled
-);
-
-// Pagination Results
+// .pagination-results
 
 $cadmin-pagination-results-color: $cadmin-pagination-color !default;
 
-// Pagination Sm
+$cadmin-pagination-results: () !default;
+$cadmin-pagination-results: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+		border-width: $cadmin-pagination-border-width,
+		color: $cadmin-pagination-results-color,
+		font-size: $cadmin-pagination-font-size,
+		line-height: $cadmin-pagination-line-height,
+		margin-bottom: $cadmin-pagination-margin-bottom,
+		margin-right: auto,
+		max-width: 100%,
+		padding: $cadmin-pagination-padding-y $cadmin-pagination-padding-x,
+		word-wrap: break-word,
+	),
+	$cadmin-pagination-results
+);
+
+// .pagination-sm
 
 $cadmin-pagination-font-size-sm: 12px !default; // 12px
 $cadmin-pagination-line-height-sm: 1 !default;
@@ -308,7 +416,56 @@ $cadmin-pagination-link-border-radius-sm: 5px !default;
 $cadmin-pagination-items-per-page-lexicon-icon-margin-left-sm: null !default;
 $cadmin-pagination-items-per-page-lexicon-icon-margin-top-sm: null !default;
 
-// Pagination Lg
+$cadmin-pagination-sm: () !default;
+$cadmin-pagination-sm: map-deep-merge(
+	(
+		page-link: (
+			font-size: $cadmin-pagination-font-size-sm,
+			height: $cadmin-pagination-item-height-sm,
+			line-height: $cadmin-pagination-line-height-sm,
+			padding-bottom: $cadmin-pagination-padding-y-sm,
+			padding-right: $cadmin-pagination-padding-x-sm,
+			padding-left: $cadmin-pagination-padding-x-sm,
+			padding-top: $cadmin-pagination-padding-y-sm,
+		),
+		page-link-first: (
+			border-bottom-left-radius: $cadmin-pagination-link-border-radius-sm,
+			border-top-left-radius: $cadmin-pagination-link-border-radius-sm,
+		),
+		page-link-last: (
+			border-bottom-right-radius: $cadmin-pagination-link-border-radius-sm,
+			border-top-right-radius: $cadmin-pagination-link-border-radius-sm,
+		),
+		pagination-items-per-page: (
+			border-radius:
+				clay-enable-rounded($cadmin-pagination-link-border-radius-sm),
+			link: (
+				font-size: $cadmin-pagination-font-size-sm,
+				height: $cadmin-pagination-item-height-sm,
+				line-height: $cadmin-pagination-line-height-sm,
+				padding-bottom: $cadmin-pagination-padding-y-sm,
+				padding-left: $cadmin-pagination-padding-x,
+				padding-right: $cadmin-pagination-padding-x,
+				padding-top: $cadmin-pagination-padding-y-sm,
+			),
+			lexicon-icon: (
+				margin-left:
+					$cadmin-pagination-items-per-page-lexicon-icon-margin-left-sm,
+				margin-right:
+					$cadmin-pagination-items-per-page-lexicon-icon-margin-top-sm,
+			),
+			pagination-results: (
+				font-size: $cadmin-pagination-font-size-sm,
+				line-height: $cadmin-pagination-line-height-sm,
+				padding: $cadmin-pagination-padding-y-sm
+					$cadmin-pagination-padding-x,
+			),
+		),
+	),
+	$cadmin-pagination-sm
+);
+
+// .pagination-lg
 
 $cadmin-pagination-font-size-lg: 18px !default; // 18px
 $cadmin-pagination-line-height-lg: 1 !default;
@@ -321,3 +478,52 @@ $cadmin-pagination-link-border-radius-lg: 5px !default; // 5px
 
 $cadmin-pagination-items-per-page-lexicon-icon-margin-left-lg: null !default;
 $cadmin-pagination-items-per-page-lexicon-icon-margin-top-lg: null !default;
+
+$cadmin-pagination-lg: () !default;
+$cadmin-pagination-lg: map-deep-merge(
+	(
+		page-link: (
+			font-size: $cadmin-pagination-font-size-lg,
+			height: $cadmin-pagination-item-height-lg,
+			line-height: $cadmin-pagination-line-height-lg,
+			padding-bottom: $cadmin-pagination-padding-y-lg,
+			padding-left: $cadmin-pagination-padding-x-lg,
+			padding-right: $cadmin-pagination-padding-x-lg,
+			padding-top: $cadmin-pagination-padding-y-lg,
+		),
+		page-link-first: (
+			border-bottom-left-radius: $cadmin-pagination-link-border-radius-lg,
+			border-top-left-radius: $cadmin-pagination-link-border-radius-lg,
+		),
+		page-link-last: (
+			border-bottom-right-radius: $cadmin-pagination-link-border-radius-lg,
+			border-top-right-radius: $cadmin-pagination-link-border-radius-lg,
+		),
+		pagination-items-per-page: (
+			border-radius:
+				clay-enable-rounded($cadmin-pagination-link-border-radius-lg),
+			link: (
+				font-size: $cadmin-pagination-font-size-lg,
+				height: $cadmin-pagination-item-height-lg,
+				line-height: $cadmin-pagination-line-height-lg,
+				padding-bottom: $cadmin-pagination-padding-y-lg,
+				padding-left: $cadmin-pagination-padding-x,
+				padding-right: $cadmin-pagination-padding-x,
+				padding-top: $cadmin-pagination-padding-y-lg,
+			),
+			lexicon-icon: (
+				margin-left:
+					$cadmin-pagination-items-per-page-lexicon-icon-margin-left-lg,
+				margin-right:
+					$cadmin-pagination-items-per-page-lexicon-icon-margin-top-lg,
+			),
+			pagination-results: (
+				font-size: $cadmin-pagination-font-size-lg,
+				line-height: $cadmin-pagination-line-height-lg,
+				padding: $cadmin-pagination-padding-y-lg
+					$cadmin-pagination-padding-x,
+			),
+		),
+	),
+	$cadmin-pagination-lg
+);
