@@ -14,6 +14,7 @@ mainTabURL: 'docs/components/drop-down.html'
     -   [Full](#css-full)
     -   [Width Full](#css-width-full)
     -   [Width Sm](#css-width-sm)
+    -   [Width Shrink](#css-width-shrink)
     -   [Height Auto](#css-height-auto)
 -   [Content Types](#css-content-types)
     -   [Dividers](#css-dividers)
@@ -434,12 +435,55 @@ The modifier class `dropdown-menu-width-full` on `dropdown-menu` makes the menu 
 
 The modifier class `dropdown-menu-width-sm` on `dropdown-menu` makes the menu 500px wide. The `dropdown-menu` becomes 100% wide at screen sizes 767px and below. This should be used with the Clay Drop Down plugin which renders the `dropdown-menu` as a direct child of the `body` element.
 
+<div class="sheet-example">
+	<div class="clay-site-dropdown-menu-container">
+		<ul aria-labelledby="dropdownMenuWide1" class="dropdown-menu dropdown-menu-width-sm show" style="position:static;">
+			<li class="dropdown-header">Dropdown Header</li>
+			<li><a class="dropdown-item" href="#1">Action</a></li>
+			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+			<li class="dropdown-divider"></li>
+			<li><a class="dropdown-item" href="#1">Scope</a></li>
+		</ul>
+	</div>
+</div>
+
 ```html
 <ul
 	aria-labelledby="theDropdownToggleId"
 	class="dropdown-menu dropdown-menu-width-sm"
 >
 	<li class="dropdown-header">Dropdown Header</li>
+	<li><a class="dropdown-item" href="#1">Action</a></li>
+	<li>
+		<a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a>
+	</li>
+	<li class="dropdown-divider"></li>
+	<li><a class="dropdown-item" href="#1">Scope</a></li>
+</ul>
+```
+
+### Dropdown Menu Width Shrink(#css-width-shrink)
+
+The modifier class `dropdown-menu-width-shrink` on `dropdown-menu` makes the menu only be as wide as the text inside and maxes out at 240px wide. This forces `dropdown-item` text to be on one line.
+
+<div class="sheet-example">
+	<div class="clay-site-dropdown-menu-container">
+		<ul aria-labelledby="dropdownMenuWide1" class="dropdown-menu dropdown-menu-width-shrink show" style="position:static;">
+			<li class="dropdown-header">Header</li>
+			<li><a class="dropdown-item" href="#1">Action</a></li>
+			<li><a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a></li>
+			<li class="dropdown-divider"></li>
+			<li><a class="dropdown-item" href="#1">Scope</a></li>
+		</ul>
+	</div>
+</div>
+
+```html
+<ul
+	aria-labelledby="dropdownMenuWide1"
+	class="dropdown-menu dropdown-menu-width-shrink"
+>
+	<li class="dropdown-header">Header</li>
 	<li><a class="dropdown-item" href="#1">Action</a></li>
 	<li>
 		<a class="disabled dropdown-item" href="#1" tabindex="-1">Disabled</a>

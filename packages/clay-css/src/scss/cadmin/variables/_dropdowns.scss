@@ -118,7 +118,6 @@ $cadmin-dropdown-item-base: map-deep-merge(
 		position: relative,
 		text-align: inherit,
 		transition: none,
-		white-space: normal,
 		width: 100%,
 		word-wrap: break-word,
 		hover: (
@@ -162,6 +161,23 @@ $cadmin-dropdown-item-base: map-deep-merge(
 		c-kbd-inline: (
 			color: $cadmin-gray-500,
 			line-height: $cadmin-dropdown-font-size * $cadmin-line-height-base,
+		),
+		'&.autofit-row': (
+			padding-left: 1rem,
+			padding-right: 1rem,
+			autofit-col: (
+				padding-left: 0.25rem,
+				padding-right: 0.25rem,
+			),
+		),
+		autofit-row: (
+			margin-left: 0.25rem,
+			margin-right: 0.25rem,
+			width: auto,
+			autofit-col: (
+				padding-left: 0.25rem,
+				padding-right: 0.25rem,
+			),
 		),
 	),
 	$cadmin-dropdown-item-base
@@ -637,7 +653,18 @@ $cadmin-dropdown-full-wide-header-spacer-y: 20px !default;
 
 $cadmin-dropdown-wide-width: 500px !default;
 
-// Dropdown Menu Width
+// .dropdown-menu-width-shrink
+
+$cadmin-dropdown-menu-width-shrink: () !default;
+$cadmin-dropdown-menu-width-shrink: map-deep-merge(
+	(
+		min-width: 0,
+		white-space: nowrap,
+	),
+	$cadmin-dropdown-menu-width-shrink
+);
+
+// .dropdown-menu-width-full
 
 $cadmin-dropdown-menu-width-full: () !default;
 $cadmin-dropdown-menu-width-full: map-merge(
@@ -650,6 +677,8 @@ $cadmin-dropdown-menu-width-full: map-merge(
 	),
 	$cadmin-dropdown-menu-width-full
 );
+
+// .dropdown-menu-width-sm
 
 $cadmin-dropdown-menu-width-sm: () !default;
 $cadmin-dropdown-menu-width-sm: map-merge(

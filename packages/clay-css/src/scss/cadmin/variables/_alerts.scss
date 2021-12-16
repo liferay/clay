@@ -149,6 +149,7 @@ $cadmin-alert: map-deep-merge(
 		margin-bottom: $cadmin-alert-margin-bottom,
 		padding: $cadmin-alert-padding-y $cadmin-alert-padding-x,
 		position: relative,
+		white-space: normal,
 		word-wrap: break-word,
 		alert-btn: $cadmin-alert-btn,
 		btn-group: $cadmin-alert-btn-group,

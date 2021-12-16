@@ -410,6 +410,10 @@
 
 // Dropdown Menu Width
 
+.dropdown-menu-width-shrink {
+	@include clay-dropdown-menu-variant($cadmin-dropdown-menu-width-shrink);
+}
+
 .dropdown-menu-width-full {
 	@include clay-css($cadmin-dropdown-menu-width-full);
 }

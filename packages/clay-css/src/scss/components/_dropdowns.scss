@@ -424,6 +424,10 @@
 
 // Dropdown Menu Width
 
+.dropdown-menu-width-shrink {
+	@include clay-dropdown-menu-variant($dropdown-menu-width-shrink);
+}
+
 .dropdown-menu-width-full {
 	@include clay-css($dropdown-menu-width-full);
 }
