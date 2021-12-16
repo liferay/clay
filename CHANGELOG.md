@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.2](https://github.com/matuzalemsteles/clay/compare/v2.23.1...v2.23.2) (2021-12-16)
+
+
+### Bug Fixes
+
+* **clay-css): Revert "fix(clay-css:** `atlas-variables.scss` and `base-variables.scss` should be Sass partials. The CSS equivalent shouldn't be created since these files are only meant to be consumed by `.scss` files." ([c3e951f](https://github.com/matuzalemsteles/clay/commit/c3e951f75ed2435355757eddb684f89d62c8d6e4))
+
+
+
+
+
 ## [2.23.1](https://github.com/liferay/clay/compare/v2.23.0...v2.23.1) (2021-12-14)
 
 

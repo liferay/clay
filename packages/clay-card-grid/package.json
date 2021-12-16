@@ -1,6 +1,6 @@
 {
   "name": "clay-card-grid",
-  "version": "2.23.1",
+  "version": "2.23.2",
   "description": "Metal ClayCardGrid component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-card-grid",
@@ -28,8 +28,8 @@
     "metal"
   ],
   "dependencies": {
-    "clay-card": "^2.23.1",
-    "clay-component": "^2.23.0",
+    "clay-card": "^2.23.2",
+    "clay-component": "^2.23.2",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
@@ -43,7 +43,7 @@
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
     "browserslist-config-clay": "^2.16.2",
-    "clay-css": "^2.23.0",
+    "clay-css": "^2.23.2",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^4.3.2",
     "webpack": "^3.0.0",

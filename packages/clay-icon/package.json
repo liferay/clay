@@ -1,6 +1,6 @@
 {
   "name": "clay-icon",
-  "version": "2.23.0",
+  "version": "2.23.2",
   "description": "Clay Icon Component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/liferay/clay/tree/master/packages/clay-icon",
@@ -28,7 +28,7 @@
     "metal"
   ],
   "dependencies": {
-    "clay-component": "^2.23.0",
+    "clay-component": "^2.23.2",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",
     "metal-state": "^2.16.0",
@@ -41,7 +41,7 @@
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-env": "^1.6.0",
     "browserslist-config-clay": "^2.16.2",
-    "clay-css": "^2.23.0",
+    "clay-css": "^2.23.2",
     "metal-dom": "^2.13.2",
     "metal-tools-soy": "^4.3.2",
     "webpack": "^3.0.0",
