@@ -8,17 +8,10 @@ import React from 'react';
 
 import Context from './Context';
 
-type BackgroundImageAspectRatioType = 'contain' | 'cover' | 'center';
-
 type ContainerAspectRatioType = '1/1' | '3/2' | '4/3' | '8/5' | '16/9';
 
 interface ICardAspectRatioProps
 	extends React.HTMLAttributes<HTMLDivElement | HTMLSpanElement> {
-	/**
-	 * Aspect ratio to be applied on the background image of the card.
-	 */
-	backgroundImageAspectRatio?: BackgroundImageAspectRatioType;
-
 	/**
 	 * Contrains an image for a given Aspect Ratio.
 	 */
@@ -26,7 +19,6 @@ interface ICardAspectRatioProps
 }
 
 const ClayCardAspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
-	backgroundImageAspectRatio,
 	children,
 	className,
 	containerAspectRatio,
@@ -43,8 +35,6 @@ const ClayCardAspectRatio: React.FunctionComponent<ICardAspectRatioProps> = ({
 						? containerAspectRatio.replace('/', '-to-')
 						: null
 				}`]: containerAspectRatio,
-				[`aspect-ratio-bg-${backgroundImageAspectRatio}`]:
-					backgroundImageAspectRatio,
 			})}
 		>
 			{children}
