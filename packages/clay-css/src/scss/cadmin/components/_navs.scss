@@ -127,7 +127,9 @@
 // Nav Tabs
 
 .nav-tabs {
-	@include clay-nav-variant($cadmin-nav-tabs) .dropdown-menu {
+	@include clay-nav-variant($cadmin-nav-tabs);
+
+	.dropdown-menu {
 		@include border-top-radius(0);
 
 		margin-top: math-sign($cadmin-nav-tabs-border-width);

@@ -94,12 +94,11 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
-		$base: setter($map, ());
 		$base: map-merge(
-			$base,
+			$map,
 			(
 				background-color:
-					setter(map-get($map, bg), map-get($base, background-color)),
+					setter(map-get($map, bg), map-get($map, background-color)),
 			)
 		);
 
@@ -221,21 +220,15 @@
 			}
 
 			.nav-link-monospaced {
-				@include clay-link(
-					setter(map-get($map, nav-link-monospaced), ())
-				);
+				@include clay-link(map-get($map, nav-link-monospaced));
 			}
 
 			.nav-btn {
-				@include clay-button-variant(
-					setter(map-get($map, nav-btn), ())
-				);
+				@include clay-button-variant(map-get($map, nav-btn));
 			}
 
 			.nav-btn-monospaced {
-				@include clay-button-variant(
-					setter(map-get($map, nav-btn-monospaced), ())
-				);
+				@include clay-button-variant(map-get($map, nav-btn-monospaced));
 			}
 
 			.nav-item {
