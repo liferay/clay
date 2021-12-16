@@ -170,9 +170,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * the full width of the page.
 	 *
 	 * - sm makes the menu 500px wide.
+	 * - shrink makes the menu auto-adjust to text and max 240px wide.
 	 * - full makes the menu 100% wide.
 	 */
-	width?: 'sm' | 'full';
+	width?: 'sm' | 'shrink' | 'full';
 }
 
 const useIsomorphicLayoutEffect =
