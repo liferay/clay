@@ -1,10 +1,5 @@
 .nav {
-	display: flex;
-	flex-wrap: wrap;
-	font-size: $nav-font-size;
-	list-style: none;
-	margin-bottom: 0;
-	padding-left: 0;
+	@include clay-css($nav);
 }
 
 // Nav Link
@@ -23,16 +18,17 @@
 	@include clay-button-variant($nav-btn);
 
 	&.btn-link {
-		margin-left: 0;
-		margin-right: 0;
+		@include clay-button-variant(map-get($nav-btn, btn-link));
 	}
 }
 
-// Nav Item Monospaced
+// Nav Btn Monospaced
 
 .nav-btn-monospaced {
 	@include clay-button-variant($nav-btn-monospaced);
 }
+
+// Nav Link Monospaced
 
 .nav-link-monospaced {
 	@include clay-link($nav-link-monospaced);
@@ -41,7 +37,7 @@
 // Nav Item
 
 .nav-item {
-	word-wrap: break-word;
+	@include clay-css($nav-item);
 }
 
 .nav-item[class*='col-'] {
@@ -50,12 +46,24 @@
 	text-align: center;
 }
 
-.nav-text-truncate {
-	display: inline-block;
-	margin-bottom: -6px;
-	max-width: 100%;
+// Nav Divider
 
-	@include text-truncate;
+.nav-divider {
+	@include clay-css($nav-divider);
+
+	&::before {
+		@include clay-css(map-get($nav-divider, before));
+	}
+
+	&::before {
+		@include clay-css(map-get($nav-divider, after));
+	}
+}
+
+// Nav Text Truncate
+
+.nav-text-truncate {
+	@include clay-css($nav-text-truncate);
 }
 
 .dropdown-toggle .nav-text-truncate {
@@ -64,73 +72,32 @@
 
 // Nav Form
 
-.nav-form {
-	padding-bottom: $nav-stacked-nav-form-padding-bottom;
-	padding-left: $nav-stacked-nav-form-padding-left;
-	padding-right: $nav-stacked-nav-form-padding-right;
-	padding-top: $nav-stacked-nav-form-padding-top;
+.nav .nav-form {
+	@include clay-css(map-get($nav, nav-form));
 }
 
-.nav .nav-form {
-	padding-bottom: $nav-form-padding-bottom;
-	padding-left: $nav-form-padding-left;
-	padding-right: $nav-form-padding-right;
-	padding-top: $nav-form-padding-top;
+// Nav Fill
+
+.nav-fill {
+	@include clay-nav-variant($nav-fill);
 }
 
 // Nav Justified
 
-.nav-fill {
-	.nav-item {
-		flex: 1 1 auto;
-		text-align: center;
-	}
-}
-
 .nav-justified {
-	.nav-item {
-		flex-basis: 0;
-		flex-grow: 1;
-		text-align: center;
-	}
-
-	button.nav-link {
-		text-align: center;
-		width: 100%;
-	}
+	@include clay-nav-variant($nav-justified);
 }
 
 // Nav Stacked
 
 .nav-stacked {
-	display: block;
-
-	.nav-form {
-		padding-bottom: $nav-stacked-nav-form-padding-bottom;
-		padding-left: $nav-stacked-nav-form-padding-left;
-		padding-right: $nav-stacked-nav-form-padding-right;
-		padding-top: $nav-stacked-nav-form-padding-top;
-	}
+	@include clay-nav-variant($nav-stacked);
 }
 
 // Nav Unstyled
 
 .nav-unstyled {
-	flex-wrap: nowrap;
-
-	.nav-btn {
-		margin: 0 4px;
-		padding: 0 4px;
-	}
-
-	.nav-link {
-		line-height: $nav-item-monospaced-size;
-		padding: 0 4px;
-	}
-
-	.nav-link-monospaced {
-		margin: 0 4px;
-	}
+	@include clay-nav-variant($nav-unstyled);
 }
 
 // Nav Nested
@@ -154,20 +121,7 @@
 // Nav Tabs
 
 .nav-tabs {
-	border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-	font-size: $nav-tabs-font-size;
-
-	.nav-item {
-		margin-bottom: math-sign($nav-tabs-border-width);
-	}
-
-	.nav-link {
-		@include clay-link($nav-tabs-link);
-	}
-
-	.nav-item.show .nav-link {
-		@include clay-link($nav-tabs-link-show);
-	}
+	@include clay-nav-variant($nav-tabs);
 
 	.dropdown-menu {
 		@include border-top-radius(0);
@@ -248,54 +202,5 @@
 }
 
 .nav-underline {
-	font-size: $nav-underline-font-size;
-
-	.nav-link {
-		@include clay-link($nav-underline-link);
-	}
-
-	.nav-item.show .nav-link {
-		@include clay-link($nav-underline-link-show);
-	}
-
-	.nav-link::after {
-		bottom: $nav-underline-link-highlight-bottom;
-		content: $nav-underline-link-highlight-content;
-		display: block;
-		height: $nav-underline-link-highlight-height;
-		position: absolute;
-		left: $nav-underline-link-highlight-left;
-		right: $nav-underline-link-highlight-right;
-		top: $nav-underline-link-highlight-top;
-		width: auto;
-	}
-
-	.nav-item .nav-link.active:after {
-		background-color: $nav-underline-link-active-highlight;
-	}
-
-	.nav-link.active,
-	.nav-item.show .nav-link {
-		&:after {
-			@if not(
-				$nav-underline-link-active-content ==
-					$nav-underline-link-highlight-content
-			)
-			{
-				content: $nav-underline-link-active-content;
-			}
-
-			@if not(
-				$nav-underline-link-active-highlight-height ==
-					$nav-underline-link-highlight-height
-			)
-			{
-				height: $nav-underline-link-active-highlight-height;
-			}
-		}
-	}
-
-	.nav-item .nav-link.disabled:after {
-		background-color: $nav-underline-link-disabled-highlight;
-	}
+	@include clay-nav-variant($nav-underline);
 }

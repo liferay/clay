@@ -29,164 +29,235 @@
 /// A mixin to create a `.nav` color variant.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// // `bg` is deprecated use `background-color` instead
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .nav
+/// 	nav-link: (
+/// 		// .nav .nav-link
+/// 		// See clay-link for additional selectors
+/// 	),
+/// 	nav-link-monospaced: (
+/// 		// .nav .nav-link-monospaced
+/// 		// See clay-link for additional selectors
+/// 	),
+/// 	nav-btn: (
+/// 		// .nav .nav-btn
+/// 		// See clay-button-variant for additional selectors
+/// 	),
+/// 	nav-btn-monospaced: (
+/// 		// .nav .nav-btn-monospaced
+/// 		// See clay-button-variant for additional selectors
+/// 	),
+/// 	nav-item: (
+/// 		// .nav .nav-item
+/// 		before: (
+/// 			// .nav .nav-item::before
+/// 		),
+/// 		after: (
+/// 			// .nav .nav-item::after
+/// 		),
+/// 	),
+/// 	nav-divider: (
+/// 		// .nav .nav-divider
+/// 		before: (
+/// 			// .nav .nav-divider::before
+/// 		),
+/// 		after: (
+/// 			// .nav .nav-divider::after
+/// 		),
+/// 	),
+/// 	nav-form: (
+/// 		// .nav .nav-form
+/// 	),
+/// )
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null},
-/// // `link-bg` is deprecated use Sass map `nav-link` instead
 /// link-bg: {Color | String | Null},
-/// // `link-border-radius` is deprecated use Sass map `nav-link` instead
 /// link-border-radius: {Number | String | List | Null},
-/// // `link-color` is deprecated use Sass map `nav-link` instead
 /// link-color: {Color | String | Null},
-/// // `link-font-weight` is deprecated use Sass map `nav-link` instead
 /// link-font-weight: {Number | String | Null},
-/// // `link-hover-bg` is deprecated use Sass map `nav-link: ( hover: () )` instead
 /// link-hover-bg: {Color | String | Null},
-/// // `link-hover-color` is deprecated use Sass map `nav-link: ( hover: () )` instead
 /// link-hover-color: {Color | String | Null},
-/// // `link-focus-bg` is deprecated use Sass map `nav-link: ( focus: () )` instead
 /// link-focus-bg: {Color | String | Null},
-/// // `link-focus-color` is deprecated use Sass map `nav-link: ( focus: () )` instead
 /// link-focus-color: {Color | String | Null},
-/// // `link-disabled-bg` is deprecated use Sass map `nav-link: ( disabled: () )` instead
 /// link-disabled-bg: {Color | String}, // Default: transparent
-/// // `link-disabled-color` is deprecated use Sass map `nav-link: ( disabled: () )` instead
 /// link-disabled-color: {Color | String}, // Default: $nav-link-disabled-color
-/// // `link-disabled-opacity` is deprecated use Sass map `nav-link: ( disabled: () )` instead
 /// link-disabled-opacity: {Number | String | Null},
-/// // `link-active-bg` is deprecated use Sass map `nav-link: ( active-class: () )` instead
 /// link-active-bg: {Color | String | Null},
-/// // `link-active-color` is deprecated use Sass map `nav-link: ( active-class: () )` instead
 /// link-active-color: {Color | String | Null},
-/// // `link-active-font-weight` is deprecated use Sass map `nav-link: ( active-class: () )` instead
 /// link-active-font-weight: {Number | String | Null},
 /// @todo
 /// - Add @example
 /// - Add @link to documentation
 
 @mixin clay-nav-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$base: setter($map, ());
-	$base: map-merge(
-		$base,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($base, background-color)),
-		)
-	);
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+			)
+		);
 
-	$nav-link: setter(map-get($map, nav-link), ());
+		$nav-link: setter(map-get($map, nav-link), ());
 
-	$nav-link-hover: setter(map-get($nav-link, hover), ());
-	$nav-link-hover: map-merge(
-		$nav-link-hover,
-		(
-			background-color:
-				setter(
-					map-get($map, link-hover-bg),
-					map-get($nav-link-hover, background-color)
-				),
-			color:
-				setter(
-					map-get($map, link-hover-color),
-					map-get($nav-link-hover, color)
-				),
-		)
-	);
+		$nav-link-hover: setter(map-get($nav-link, hover), ());
+		$nav-link-hover: map-merge(
+			$nav-link-hover,
+			(
+				background-color:
+					setter(
+						map-get($map, link-hover-bg),
+						map-get($nav-link-hover, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-hover-color),
+						map-get($nav-link-hover, color)
+					),
+			)
+		);
 
-	$nav-link-focus: setter(map-get($nav-link, focus), ());
-	$nav-link-focus: map-merge(
-		$nav-link-focus,
-		(
-			background-color:
-				setter(
-					map-get($map, link-focus-bg),
-					map-get($nav-link-focus, background-color)
-				),
-			color:
-				setter(
-					map-get($map, link-focus-color),
-					map-get($nav-link-focus, color)
-				),
-		)
-	);
+		$nav-link-focus: setter(map-get($nav-link, focus), ());
+		$nav-link-focus: map-merge(
+			$nav-link-focus,
+			(
+				background-color:
+					setter(
+						map-get($map, link-focus-bg),
+						map-get($nav-link-focus, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-focus-color),
+						map-get($nav-link-focus, color)
+					),
+			)
+		);
 
-	$nav-link-active-class: setter(map-get($nav-link, active-class), ());
-	$nav-link-active-class: map-merge(
-		$nav-link-active-class,
-		(
-			background-color:
-				setter(
-					map-get($map, link-active-bg),
-					map-get($nav-link-active-class, background-color)
-				),
-			color:
-				setter(
-					map-get($map, link-active-color),
-					map-get($nav-link-active-class, color)
-				),
-			font-weight:
-				setter(
-					map-get($map, link-active-font-weight),
-					map-get($nav-link-active-class, font-weight)
-				),
-		)
-	);
+		$nav-link-active-class: setter(map-get($nav-link, active-class), ());
+		$nav-link-active-class: map-merge(
+			$nav-link-active-class,
+			(
+				background-color:
+					setter(
+						map-get($map, link-active-bg),
+						map-get($nav-link-active-class, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-active-color),
+						map-get($nav-link-active-class, color)
+					),
+				font-weight:
+					setter(
+						map-get($map, link-active-font-weight),
+						map-get($nav-link-active-class, font-weight)
+					),
+			)
+		);
 
-	$nav-link-disabled: setter(map-get($nav-link, disabled), ());
-	$nav-link-disabled: map-merge(
-		$nav-link-disabled,
-		(
-			background-color:
-				setter(
-					map-get($map, link-disabled-bg),
-					map-get($nav-link-disabled, background-color)
-				),
-			color:
-				setter(
-					map-get($map, link-disabled-color),
-					map-get($nav-link-disabled, color)
-				),
-			opacity:
-				setter(
-					map-get($map, link-disabled-opacity),
-					map-get($nav-link-disabled, opacity)
-				),
-		)
-	);
+		$nav-link-disabled: setter(map-get($nav-link, disabled), ());
+		$nav-link-disabled: map-merge(
+			$nav-link-disabled,
+			(
+				background-color:
+					setter(
+						map-get($map, link-disabled-bg),
+						map-get($nav-link-disabled, background-color)
+					),
+				color:
+					setter(
+						map-get($map, link-disabled-color),
+						map-get($nav-link-disabled, color)
+					),
+				opacity:
+					setter(
+						map-get($map, link-disabled-opacity),
+						map-get($nav-link-disabled, opacity)
+					),
+			)
+		);
 
-	$nav-link: map-deep-merge(
-		$nav-link,
-		(
-			background-color:
-				setter(
-					map-get($map, link-bg),
-					map-get($nav-link, background-color)
-				),
-			border-radius:
-				setter(
-					map-get($map, link-border-radius),
-					map-get($nav-link, border-radius)
-				),
-			color: setter(map-get($map, link-color), map-get($nav-link, color)),
-			font-weight:
-				setter(
-					map-get($map, link-font-weight),
-					map-get($nav-link, font-weight)
-				),
-			hover: $nav-link-hover,
-			focus: $nav-link-focus,
-			active-class: $nav-link-active-class,
-			disabled: $nav-link-disabled,
-		)
-	);
+		$nav-link: map-deep-merge(
+			$nav-link,
+			(
+				background-color:
+					setter(
+						map-get($map, link-bg),
+						map-get($nav-link, background-color)
+					),
+				border-radius:
+					setter(
+						map-get($map, link-border-radius),
+						map-get($nav-link, border-radius)
+					),
+				color:
+					setter(
+						map-get($map, link-color),
+						map-get($nav-link, color)
+					),
+				font-weight:
+					setter(
+						map-get($map, link-font-weight),
+						map-get($nav-link, font-weight)
+					),
+				hover: $nav-link-hover,
+				focus: $nav-link-focus,
+				active-class: $nav-link-active-class,
+				disabled: $nav-link-disabled,
+			)
+		);
 
-	@if ($enabled) {
-		@include clay-css($base);
+		@if ($enabled) {
+			@include clay-css($base);
 
-		.nav-btn.btn-unstyled,
-		.nav-link {
-			@include clay-link($nav-link);
+			.nav-link {
+				@include clay-link($nav-link);
+			}
+
+			.nav-link-monospaced {
+				@include clay-link(map-get($map, nav-link-monospaced));
+			}
+
+			.nav-btn {
+				@include clay-button-variant(map-get($map, nav-btn));
+			}
+
+			.nav-btn-monospaced {
+				@include clay-button-variant(map-get($map, nav-btn-monospaced));
+			}
+
+			.nav-item {
+				@include clay-css(map-get($map, nav-item));
+
+				&::before {
+					@include clay-css(map-deep-get($map, nav-item, before));
+				}
+
+				&::before {
+					@include clay-css(map-deep-get($map, nav-item, after));
+				}
+			}
+
+			.nav-divider {
+				@include clay-css(map-get($map, nav-divider));
+
+				&::before {
+					@include clay-css(map-deep-get($map, nav-divider, before));
+				}
+
+				&::after {
+					@include clay-css(map-deep-get($map, nav-divider, after));
+				}
+			}
+
+			.nav-form {
+				@include clay-css(map-get($map, nav-form));
+			}
 		}
 	}
 }
