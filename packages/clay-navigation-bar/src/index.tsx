@@ -48,9 +48,10 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 }: IProps) => {
 	const [expanded, setExpanded] = React.useState(false);
 
-	const activeElementsCount = children.filter(
+	const activeElementsCount = React.Children.map(
+		children,
 		(child) => child.props.active
-	).length;
+	).filter(Boolean).length;
 
 	warning(
 		activeElementsCount <= 1,
