@@ -8,6 +8,8 @@ import {useCallback, useState} from 'react';
 import {IDay, Month, WeekDays, clone, formatDate, setDate} from './Helpers';
 import {FirstDayOfWeek} from './types';
 
+import type {Input} from '@clayui/time-picker';
+
 const normalizeTime = (date: Date) =>
 	setDate(date, {hours: 12, milliseconds: 0, minutes: 0, seconds: 0});
 
@@ -64,7 +66,11 @@ export const useCurrentTime = (format: string) => {
 	);
 
 	const setCurrentTime = useCallback(
-		(hours: number | string, minutes: number | string) => {
+		(
+			hours: number | string,
+			minutes: number | string,
+			ampm?: Input['ampm']
+		) => {
 			const date = setDate(new Date(), {hours, minutes});
 
 			if (typeof hours !== 'string') {
@@ -75,15 +81,12 @@ export const useCurrentTime = (format: string) => {
 				minutes = formatDate(date, 'mm');
 			}
 
-			set(`${hours}:${minutes}`);
+			set(ampm ? `${hours}:${minutes} ${ampm}` : `${hours}:${minutes}`);
 		},
 		[]
 	);
 
-	return [currentTime, setCurrentTime] as [
-		string,
-		(hours: number | string, minutes: number | string) => void
-	];
+	return [currentTime, setCurrentTime] as const;
 };
 
 function getDaysInMonth(d: Date) {
