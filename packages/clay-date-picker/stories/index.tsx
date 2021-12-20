@@ -67,10 +67,11 @@ storiesOf('Components|ClayDatePicker', module)
 	))
 	.add('time', () => (
 		<ClayDatePickerWithState
-			placeholder="YYYY-MM-DD HH:mm"
+			placeholder="YYYY-MM-DD --:-- --"
 			spritemap={spritemap}
 			time
 			timezone="GMT+01:00"
+			use12Hours={boolean('12 Hours', false)}
 			years={{
 				end: 2024,
 				start: 1997,

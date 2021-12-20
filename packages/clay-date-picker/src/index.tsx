@@ -25,6 +25,8 @@ import Weekday from './Weekday';
 import WeekdayHeader from './WeekdayHeader';
 import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
+import type {Input} from '@clayui/time-picker';
+
 interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Labels for the aria attributes
@@ -119,6 +121,11 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	timezone?: string;
 
 	/**
+	 * Flag to indicate if 12-hour use, when true, should show am/pm input.
+	 */
+	use12Hours?: boolean;
+
+	/**
 	 * Flag to indicate whether to use native date picker
 	 */
 	useNative?: boolean;
@@ -160,6 +167,8 @@ const DEFAULT_DATE_TIME = {
 const NEW_DATE = new Date();
 
 const TIME_FORMAT = 'HH:mm';
+
+const TIME_FORMAT_12H = 'hh:mm aa';
 
 /**
  * ClayDatePicker component.
@@ -207,6 +216,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			spritemap,
 			time = false,
 			timezone,
+			use12Hours = false,
 			useNative = false,
 			value,
 			weekdaysShort = ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
@@ -334,7 +344,9 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 			const {value} = event.target;
 
-			const format = time ? `${dateFormat} ${TIME_FORMAT}` : dateFormat;
+			const format = time
+				? `${dateFormat} ${use12Hours ? TIME_FORMAT_12H : TIME_FORMAT}`
+				: dateFormat;
 
 			const [startDate, endDate] = fromStringToRange(
 				value,
@@ -358,7 +370,8 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				if (time) {
 					setCurrentTime(
 						startDate.getHours(),
-						startDate.getMinutes()
+						startDate.getMinutes(),
+						formatDate(startDate, 'a') as Input['ampm']
 					);
 				}
 			}
@@ -386,8 +399,14 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				dateFormatted = fromRangeToString(newDaysSelected, dateFormat);
 			} else if (time) {
 				dateFormatted = formatDate(
-					parseDate(currentTime, TIME_FORMAT, NEW_DATE),
-					`${dateFormat} ${TIME_FORMAT}`
+					parseDate(
+						currentTime,
+						use12Hours ? TIME_FORMAT_12H : TIME_FORMAT,
+						NEW_DATE
+					),
+					`${dateFormat} ${
+						use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
+					}`
 				);
 			} else {
 				dateFormatted = formatDate(NEW_DATE, dateFormat);
@@ -399,23 +418,28 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 
 		const handleTimeChange = (
 			hours: number | string,
-			minutes: number | string
+			minutes: number | string,
+			ampm?: Input['ampm']
 		) => {
 			const [day] = daysSelected;
 
 			if (value) {
-				onValueChange(
+				let date =
 					typeof hours === 'string' && typeof minutes === 'string'
 						? `${formatDate(day, dateFormat)} ${hours}:${minutes}`
 						: formatDate(
 								setDate(day, {hours, minutes}),
 								`${dateFormat} ${TIME_FORMAT}`
-						  ),
-					'time'
-				);
+						  );
+
+				if (use12Hours) {
+					date += ` ${ampm}`;
+				}
+
+				onValueChange(date, 'time');
 			}
 
-			setCurrentTime(hours, minutes);
+			setCurrentTime(hours, minutes, use12Hours ? ampm : undefined);
 		};
 
 		/**
@@ -541,6 +565,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 												onTimeChange={handleTimeChange}
 												spritemap={spritemap}
 												timezone={timezone}
+												use12Hours={use12Hours}
 											/>
 										)}
 										{!time &&
