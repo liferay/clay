@@ -24,6 +24,29 @@ Each step can have two different states: `active` or `complete` defined by props
 
 <MultiStepNav />
 
+## Indicator position
+
+Some use cases don't need the title or subtitle to add context to the steps, in those cases you might just want the label to be rendered to the `top` of the indicator, so it can truncate the text if it is long.
+
+```jsx
+<ClayMultiStepNav indicatorLabel="top">
+	<ClayMultiStepNav.Item
+		active={active}
+		complete={complete}
+		expand={i + 1 !== steps.length}
+		key={i}
+	>
+		<ClayMultiStepNav.Divider />
+		<ClayMultiStepNav.Indicator
+			complete={complete}
+			label={1 + i}
+			onClick={onClick}
+			subTitle={label}
+		/>
+	</ClayMultiStepNav.Item>
+</ClayMultiStepNav>
+```
+
 ## Collapsable Steps
 
 Using `ClayMultiStepNavWithBasicItems` in combination with `maxStepsShown` prop you can collapse the steps that don't fit into a dropdown to ensure good user experience.

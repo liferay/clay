@@ -3,7 +3,7 @@
 exports[`ClayMultiStepNav activates step on click 1`] = `
 <div>
   <ol
-    class="multi-step-nav multi-step-indicator-label-bottom multi-step-nav-collapse-sm"
+    class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-bottom"
   >
     <li
       class="multi-step-item complete multi-step-item-expand"
@@ -134,7 +134,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
 exports[`ClayMultiStepNav renders 1`] = `
 <div>
   <ol
-    class="multi-step-nav multi-step-indicator-label-bottom multi-step-nav-collapse-sm"
+    class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-bottom"
   >
     <li
       class="multi-step-item complete multi-step-item-expand"
@@ -258,7 +258,7 @@ exports[`ClayMultiStepNav renders 1`] = `
 exports[`ClayMultiStepNavWithBasicItems renders 1`] = `
 <div>
   <ol
-    class="multi-step-nav multi-step-indicator-label-bottom multi-step-nav-collapse-sm"
+    class="multi-step-nav multi-step-nav-collapse-sm multi-step-indicator-label-bottom"
   >
     <li
       class="multi-step-item active multi-step-item-expand"
