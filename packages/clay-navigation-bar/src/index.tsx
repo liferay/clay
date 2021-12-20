@@ -18,7 +18,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */
-	children: Array<React.ReactElement<React.ComponentProps<typeof Item>>>;
+	children:
+		| Array<React.ReactElement<React.ComponentProps<typeof Item>>>
+		| React.ReactElement<React.ComponentProps<typeof Item>>;
 
 	/**
 	 * Determines the style of the Navigation Bar
@@ -48,9 +50,10 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 }: IProps) => {
 	const [expanded, setExpanded] = React.useState(false);
 
-	const activeElementsCount = children.filter(
+	const activeElementsCount = React.Children.map(
+		children,
 		(child) => child.props.active
-	).length;
+	).filter(Boolean).length;
 
 	warning(
 		activeElementsCount <= 1,

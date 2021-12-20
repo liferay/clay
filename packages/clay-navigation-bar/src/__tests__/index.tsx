@@ -256,4 +256,28 @@ describe('ClayNavigationBar', () => {
 		expect(container).toMatchSnapshot();
 		jest.resetAllMocks();
 	});
+
+	it('renders with a single item', () => {
+		const label = 'Item 1';
+
+		const {container} = render(
+			<ClayNavigationBar
+				inverted
+				spritemap={spritemap}
+				triggerLabel={label}
+			>
+				<ClayNavigationBar.Item active>
+					<ClayLink
+						className="nav-link"
+						displayType="secondary"
+						href="#1"
+					>
+						<span className="navbar-text-truncate">{label}</span>
+					</ClayLink>
+				</ClayNavigationBar.Item>
+			</ClayNavigationBar>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
 });
