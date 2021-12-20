@@ -283,8 +283,8 @@ $cadmin-alert-fluid-dismissible-container: map-merge(
 		padding-left: $cadmin-alert-dismissible-padding-left,
 		padding-right:
 			calc(
-				#{$cadmin-alert-dismissible-padding-right} + #{$cadmin-grid-gutter-width /
-					2}
+				#{$cadmin-alert-dismissible-padding-right} + #{$cadmin-grid-gutter-width} *
+					0.5
 			),
 		padding-top: $cadmin-alert-dismissible-padding-top,
 		position: relative,

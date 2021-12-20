@@ -246,9 +246,10 @@
 
 	.embed-responsive-#{$cadmin-embed-responsive-aspect-ratio-x}by#{$cadmin-embed-responsive-aspect-ratio-y} {
 		&::before {
-			padding-top: percentage(
-				$cadmin-embed-responsive-aspect-ratio-y /
-					$cadmin-embed-responsive-aspect-ratio-x
+			padding-top: calc(
+				#{$cadmin-embed-responsive-aspect-ratio-y} /
+					#{$cadmin-embed-responsive-aspect-ratio-x} *
+					100%
 			);
 		}
 	}
