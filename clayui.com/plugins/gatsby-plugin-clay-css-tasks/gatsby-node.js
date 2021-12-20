@@ -132,17 +132,20 @@ const generateCSSFiles = (pluginOptions) => {
 	const clayuiSrcDir = path.join(pluginOptions.clayuiSrc, 'styles');
 
 	const atlas = compileSass({
-		file: path.join(scssDir, 'atlas.scss'),
+		file: path.join(clayuiSrcDir, 'dart-sass-atlas.scss'),
+		includePaths: [scssDir],
 		outFile: path.join(cssDir, 'atlas.css'),
 	});
 
 	const base = compileSass({
-		file: path.join(scssDir, 'base.scss'),
+		file: path.join(clayuiSrcDir, 'dart-sass-base.scss'),
+		includePaths: [scssDir],
 		outFile: path.join(cssDir, 'base.css'),
 	});
 
 	const cadmin = compileSass({
-		file: path.join(scssDir, 'cadmin.scss'),
+		file: path.join(clayuiSrcDir, 'dart-sass-cadmin.scss'),
+		includePaths: [scssDir],
 		outFile: path.join(cssDir, 'cadmin.css'),
 	});
 
