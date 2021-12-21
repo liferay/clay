@@ -18,20 +18,26 @@ fieldset:disabled a.btn {
 
 // Button Sizes
 
-%clay-btn-lg {
-	@include clay-button-variant($btn-lg);
-}
+@each $size, $value in $btn-sizes {
+	$placeholder: if(
+		starts-with($size, 'btn-'),
+		'%clay-#{$size}',
+		'%#{str-slice($size, 2)}'
+	);
 
-.btn-lg {
-	@extend %clay-btn-lg !optional;
-}
+	$selector: if(
+		starts-with($size, 'btn-'),
+		clay-str-replace($size, 'btn-', '.btn-'),
+		$size
+	);
 
-%clay-btn-sm {
-	@include clay-button-variant($btn-sm);
-}
+	#{$placeholder} {
+		@include clay-button-variant($value);
+	}
 
-.btn-sm {
-	@extend %clay-btn-sm !optional;
+	#{$selector} {
+		@extend #{$placeholder} !optional;
+	}
 }
 
 // Button Block
@@ -67,28 +73,30 @@ input[type='button'] {
 
 // Button Monospaced
 
-.btn-monospaced {
-	@include clay-button-variant($btn-monospaced);
+@each $size, $value in $btn-monospaced-sizes {
+	$placeholder: if(
+		starts-with($size, 'btn-monospaced'),
+		'%clay-#{$size}',
+		'%#{str-slice($size, 2)}'
+	);
 
-	&.btn .lexicon-icon {
-		margin-top: 0;
+	$selector: if(
+		starts-with($size, 'btn-monospaced-'),
+		clay-str-replace($size, 'btn-monospaced', '.btn-monospaced.btn'),
+		if(
+			$size == 'btn-monospaced',
+			clay-str-replace($size, 'btn-monospaced', '.btn-monospaced'),
+			$size
+		)
+	);
+
+	#{$placeholder} {
+		@include clay-button-variant($value);
 	}
-}
 
-%clay-btn-monospaced-lg {
-	@include clay-button-variant($btn-monospaced-lg);
-}
-
-.btn-monospaced.btn-lg {
-	@extend %clay-btn-monospaced-lg !optional;
-}
-
-%clay-btn-monospaced-sm {
-	@include clay-button-variant($btn-monospaced-sm);
-}
-
-.btn-monospaced.btn-sm {
-	@extend %clay-btn-monospaced-sm !optional;
+	#{$selector} {
+		@extend #{$placeholder} !optional;
+	}
 }
 
 // Button Variants
