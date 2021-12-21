@@ -448,11 +448,6 @@ $btn-outline-info: map-deep-merge(
 				box-shadow: map-deep-get($btn-info, active, focus, box-shadow),
 			),
 		),
-		disabled: (
-			background-color: transparent,
-			border-color: map-get($btn-info, background-color),
-			color: map-get($btn-info, background-color),
-		),
 	),
 	$btn-outline-info
 );
@@ -469,11 +464,6 @@ $btn-outline-success: map-deep-merge(
 				map-deep-get($btn-success, hover, background-color),
 			box-shadow: map-deep-get($btn-success, focus, box-shadow),
 			color: $white,
-		),
-		disabled: (
-			background-color: transparent,
-			border-color: map-get($btn-success, background-color),
-			color: map-get($btn-success, background-color),
 		),
 		active: (
 			background-color:
@@ -510,11 +500,6 @@ $btn-outline-warning: map-deep-merge(
 					map-deep-get($btn-warning, active, focus, box-shadow),
 			),
 		),
-		disabled: (
-			background-color: transparent,
-			border-color: map-get($btn-warning, background-color),
-			color: map-get($btn-warning, background-color),
-		),
 	),
 	$btn-outline-warning
 );
@@ -531,16 +516,12 @@ $btn-outline-danger: map-deep-merge(
 			color: $white,
 		),
 		active: (
-			background-color: map-get($btn-danger, active-bg),
+			background-color:
+				map-deep-get($btn-danger, active, background-color),
 			box-shadow: map-deep-get($btn-danger, active, box-shadow),
 			focus: (
 				box-shadow: map-deep-get($btn-danger, active, focus, box-shadow),
 			),
-		),
-		disabled: (
-			background-color: transparent,
-			border-color: map-get($btn-danger, background-color),
-			color: map-get($btn-danger, background-color),
 		),
 	),
 	$btn-outline-danger
@@ -564,11 +545,6 @@ $btn-outline-light: map-deep-merge(
 				box-shadow: map-deep-get($btn-light, active, focus, box-shadow),
 			),
 		),
-		disabled: (
-			background-color: transparent,
-			border-color: map-get($btn-light, background-color),
-			color: map-get($btn-light, background-color),
-		),
 	),
 	$btn-outline-light
 );
@@ -590,11 +566,6 @@ $btn-outline-dark: map-deep-merge(
 			focus: (
 				box-shadow: map-deep-get($btn-dark, active, focus, box-shadow),
 			),
-		),
-		disabled: (
-			background-color: transparent,
-			border-color: map-get($btn-dark, background-color),
-			color: map-get($btn-dark, background-color),
 		),
 	),
 	$btn-outline-dark
