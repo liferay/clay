@@ -98,22 +98,416 @@
 	}
 }
 
-/// A mixin for customizing or creating variants of `input-group-text`.
-/// @deprecated use `clay-container` instead
+/// A mixin to create `input-group-item` variants
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// See Mixin `clay-css` for available keys to pass into the base selector
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .input-group-text
+/// 	label: (
+/// 		// .input-group-text label
+/// 	),
+/// 	custom-control: (
+/// 		// .input-group-text .custom-control
+/// 		//     @include clay-custom-control-variant();
+/// 	),
+/// 	form-check: (
+/// 		// .input-group-text .form-check
+/// 		input: (
+/// 			// .input-group-text .form-check input[type='radio'],
+/// 			// .input-group-text .form-check input[type='checkbox']
+/// 		),
+/// 	),
+/// 	lexicon-icon: (
+/// 		// .input-group-text .lexicon-icon
+/// 	),
+/// 	media-breakpoint-down: (
+/// 		xs: (
+/// 			// @include media-breakpoint-down(xs) {
+/// 			//      @include clay-input-group-text-variant();
+/// 			// }
+/// 		),
+/// 		sm: (
+/// 			// @include media-breakpoint-down(sm) {
+/// 			//      @include clay-input-group-text-variant();
+/// 			// }
+/// 		),
+/// 		md: (
+/// 			// @include media-breakpoint-down(md) {
+/// 			//      @include clay-input-group-text-variant();
+/// 			// }
+/// 		),
+/// 		lg: (
+/// 			// @include media-breakpoint-down(lg) {
+/// 			//      @include clay-input-group-text-variant();
+/// 			// }
+/// 		),
+/// 	),
+/// )
 /// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null}, // deprecated after 3.9.0
 
 @mixin clay-input-group-text-variant($map) {
-	$base: map-merge(
-		$map,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($map, background-color)),
-		)
-	);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	@include clay-css($base);
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+			)
+		);
+
+		@if ($enabled) {
+			@include clay-css($base);
+
+			label {
+				@include clay-css(map-deep-get($map, label));
+			}
+
+			.custom-control {
+				@include clay-custom-control-variant(
+					map-deep-get($map, custom-control)
+				);
+			}
+
+			.form-check {
+				@include clay-css(map-deep-get($map, form-check));
+
+				input[type='radio'],
+				input[type='checkbox'] {
+					@include clay-css(map-deep-get($map, form-check, input));
+				}
+			}
+
+			.lexicon-icon {
+				@include clay-css(map-deep-get($map, lexicon-icon));
+			}
+
+			@if (map-get($map, media-breakpoint-down)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-down))
+				{
+					$media-breakpoint-down: map-deep-get(
+						$map,
+						media-breakpoint-down,
+						$breakpoint
+					);
+
+					@if ($breakpoint) {
+						@include media-breakpoint-down($breakpoint) {
+							@include clay-input-group-text-variant(
+								$media-breakpoint-down
+							);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/// A mixin to create `input-group-item` variants
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .input-group-item
+/// 	focus: (
+/// 		// .input-group-item.focus
+/// 		//     @include clay-input-group-item-variant();
+/// 	),
+/// 	first-child: (
+/// 		// .input-group-item:first-child
+/// 	),
+/// 	input-group-prepend: (
+/// 		// .input-group-item.input-group-prepend
+/// 	),
+/// 	input-group-append: (
+/// 		// .input-group-item.input-group-append
+/// 	),
+/// 	btn: (
+/// 		// .input-group-item > .btn
+/// 		//     @include clay-button-variant();
+/// 	),
+/// 	btn-monospaced: (
+/// 		// .input-group-item > .btn-monospaced
+/// 		//     @include clay-button-variant();
+/// 	),
+/// 	dropdown: (
+/// 		// .input-group-item > .dropdown
+/// 	),
+/// 	form-control: (
+/// 		// .input-group-item > .form-control
+/// 		//     @include clay-form-control-variant();
+/// 		label: (
+/// 			// .input-group-item > .form-control .label
+/// 			//     @include clay-label-variant();
+/// 		),
+/// 	),
+/// 	form-file: (
+/// 		// .input-group-item > .form-file
+/// 		btn: (
+/// 			// .input-group-item > .form-file .btn
+/// 			//     @include clay-button-variant();
+/// 		),
+/// 	),
+/// 	textarea: (
+/// 		// .input-group-item > textarea.form-control,
+/// 		// .input-group-item > .form-control-textarea
+/// 		//     @include clay-form-control-variant();
+/// 	),
+/// 	form-control-plaintext: (
+/// 		// .input-group-item > .form-control-plaintext
+/// 		//     @include clay-form-control-variant();
+/// 	),
+/// 	input-group-text: (
+/// 		// .input-group-item > .input-group-text
+/// 		//     @include clay-input-group-text-variant();
+/// 	),
+/// 	input-group-inset-item: (
+/// 		// .input-group-item > .input-group-inset-item
+/// 		btn: (
+/// 			// .input-group-item > .input-group-inset-item > .btn
+/// 			//     @include clay-button-variant();
+/// 		),
+/// 		btn-monospaced: (
+/// 			// .input-group-item > .input-group-inset-item > .btn-monospaced
+/// 			//     @include clay-button-variant();
+/// 		),
+/// 		form-file: (
+/// 			// .input-group-item > .input-group-inset-item > .form-file
+/// 			btn: (
+/// 				// .input-group-item > .input-group-inset-item > .form-file .btn
+/// 				//     @include clay-button-variant();
+/// 			),
+/// 		),
+/// 	),
+/// 	form-control-inset: (
+/// 		// .input-group-item .form-control-inset
+/// 	),
+/// )
+
+@mixin clay-input-group-item-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			&.focus {
+				@include clay-input-group-item-variant(
+					map-deep-get($map, focus)
+				);
+			}
+
+			&:first-child {
+				@include clay-css(map-deep-get($map, first-child));
+			}
+
+			&.input-group-prepend {
+				@include clay-css(map-deep-get($map, input-group-prepend));
+			}
+
+			&.input-group-append {
+				@include clay-css(map-deep-get($map, input-group-append));
+			}
+
+			> .btn {
+				@include clay-button-variant(map-deep-get($map, btn));
+			}
+
+			> .btn-monospaced {
+				@include clay-button-variant(
+					map-deep-get($map, btn-monospaced)
+				);
+			}
+
+			> .dropdown {
+				@include clay-css(map-deep-get($map, dropdown));
+			}
+
+			> .form-control {
+				@include clay-form-control-variant(
+					map-deep-get($map, form-control)
+				);
+
+				.label {
+					@include clay-label-variant(
+						map-deep-get($map, form-control, label)
+					);
+				}
+			}
+
+			> .form-file {
+				@include clay-css(map-deep-get($map, form-file));
+
+				.btn {
+					@include clay-button-variant(
+						map-deep-get($map, form-file, btn)
+					);
+				}
+			}
+
+			> textarea.form-control,
+			> .form-control-textarea {
+				@include clay-form-control-variant(
+					map-deep-get($map, textarea)
+				);
+			}
+
+			> .form-control-plaintext {
+				@include clay-form-control-variant(
+					map-deep-get($map, form-control-plaintext)
+				);
+			}
+
+			> .input-group-text {
+				@include clay-input-group-text-variant(
+					map-deep-get($map, input-group-text)
+				);
+			}
+
+			> .input-group-inset-item {
+				@include clay-css(map-deep-get($map, input-group-inset-item));
+
+				> .btn {
+					@include clay-button-variant(
+						map-deep-get($map, input-group-inset-item, btn)
+					);
+				}
+
+				> .btn-monospaced {
+					@include clay-button-variant(
+						map-deep-get(
+							$map,
+							input-group-inset-item,
+							btn-monospaced
+						)
+					);
+				}
+
+				> .form-file {
+					@include clay-css(map-deep-get($map, form-file));
+
+					.btn {
+						@include clay-button-variant(
+							map-deep-get($map, form-file, btn)
+						);
+					}
+				}
+			}
+
+			.form-control-inset {
+				@include clay-form-control-variant(
+					map-deep-get($map, form-control-inset)
+				);
+			}
+		}
+	}
+}
+
+/// A mixin to create `input-group` variants
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .input-group
+/// 	input-group-item: (
+/// 		// .input-group > .input-group-item
+/// 		//     @include clay-input-group-item-variant();
+/// 	),
+/// 	input-group-item-shrink: (
+/// 		// .input-group > .input-group-item-shrink
+/// 		//     @include clay-input-group-item-variant();
+/// 	),
+/// 	btn-primary: (
+/// 		// .input-group .btn-primary
+/// 		//     @include clay-button-variant();
+/// 	),
+/// 	btn-secondary: (
+/// 		// .input-group .btn-secondary
+/// 		//     @include clay-button-variant();
+/// 	),
+/// 	btn-unstyled: (
+/// 		// .input-group .btn-unstyled
+/// 		//     @include clay-button-variant();
+/// 	),
+/// 	media-breakpoint-down: (
+/// 		xs: (
+/// 			// @include media-breakpoint-down(xs) {
+/// 			//     @include clay-input-group-variant();
+/// 			// }
+/// 		),
+/// 		sm: (
+/// 			// @include media-breakpoint-down(sm) {
+/// 			//     @include clay-input-group-variant();
+/// 			// }
+/// 		),
+/// 		md: (
+/// 			// @include media-breakpoint-down(md) {
+/// 			//     @include clay-input-group-variant();
+/// 			// }
+/// 		),
+/// 		lg: (
+/// 			// @include media-breakpoint-down(lg) {
+/// 			//     @include clay-input-group-variant();
+/// 			// }
+/// 		),
+/// 	),
+/// )
+
+@mixin clay-input-group-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			> .input-group-item {
+				@include clay-input-group-item-variant(
+					map-deep-get($map, input-group-item)
+				);
+			}
+
+			> .input-group-item-shrink {
+				@include clay-input-group-item-variant(
+					map-deep-get($map, input-group-item-shrink)
+				);
+			}
+
+			.btn-primary {
+				@include clay-button-variant(map-deep-get($map, btn-primary));
+			}
+
+			.btn-secondary {
+				@include clay-button-variant(map-deep-get($map, btn-secondary));
+			}
+
+			.btn-unstyled {
+				@include clay-button-variant(map-deep-get($map, btn-unstyled));
+			}
+
+			@if (map-get($map, media-breakpoint-down)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-down))
+				{
+					$media-breakpoint-down: map-deep-get(
+						$map,
+						media-breakpoint-down,
+						$breakpoint
+					);
+
+					@if ($breakpoint) {
+						@include media-breakpoint-down($breakpoint) {
+							@include clay-input-group-variant(
+								$media-breakpoint-down
+							);
+						}
+					}
+				}
+			}
+		}
+	}
 }
