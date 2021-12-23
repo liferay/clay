@@ -694,6 +694,93 @@ storiesOf('Components|ClayTreeView', module)
 			</Provider>
 		);
 	})
+	.add('expand on check', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					dragAndDrop
+					expandOnCheck
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<OptionalCheckbox />
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
+										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('expand on check w/single selection', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					dragAndDrop
+					expandOnCheck
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					selectionMode="single"
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<OptionalCheckbox />
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
+										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
 	.add('single selection', () => {
 		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 			new Set()
