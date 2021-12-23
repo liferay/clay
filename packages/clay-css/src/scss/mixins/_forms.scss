@@ -205,26 +205,65 @@
 /// A mixin to create Form Control variants. You can base your variant off Bootstrap's `.form-control` class or create your own base class (e.g., `<input class="form-control my-custom-form-control" type="text" />` or `<input class="my-custom-form-control" type="text" />`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// See Mixin `clay-css` for available keys to pass into the base selector
-/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .form-control
+/// 	placeholder: (
+/// 		// .form-control::placeholder
+/// 	),
+/// 	selection: (
+/// 		// .form-control::-moz-selection, .form-control::selection
+/// 	),
+/// 	input-group-inset-item: (
+/// 		// .form-control ~ .input-group-inset-item
+/// 	),
+/// 	hover: (
+/// 		// .form-control:hover
+/// 		placeholder: (
+/// 			// .form-control:hover::placeholder
+/// 		),
+/// 		input-group-inset-item: (
+/// 			// .form-control:hover ~ .input-group-inset-item
+/// 		),
+/// 	),
+/// 	focus: (
+/// 		// .form-control:focus, .form-control.focus
+/// 		placeholder: (
+/// 			// .form-control:focus::placeholder,
+/// 			// .form-control.focus::placeholder
+/// 		),
+/// 		input-group-inset-item: (
+/// 			// .form-control:focus ~ .input-group-inset-item,
+/// 			// .form-control.focus ~ .input-group-inset-item
+/// 		),
+/// 	),
+/// 	disabled: (
+/// 		// .form-control:disabled, .form-control.disabled
+/// 		placeholder: (
+/// 			// .form-control:disabled::placeholder,
+/// 			// .form-control.disabled::placeholder
+/// 		),
+/// 		input-group-inset-item: (
+/// 			// .form-control:disabled ~ .input-group-inset-item,
+/// 			// .form-control.disabled ~ .input-group-inset-item
+/// 		),
+/// 	),
+/// )
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
 /// placeholder-opacity: {Number | String | Null}, // deprecated after 3.7.0
-/// placeholder: {Map | Null}, // See Mixin `clay-css` for available keys
 /// selection-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// selection-color: {Color | String | Null}, // deprecated after 3.7.0
-/// selection: {Map | Null}, // See Mixin `clay-css` for available keys
 /// hover-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// hover-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
 /// hover-box-shadow: {String | List | Null}, // deprecated after 3.7.0
 /// hover-color: {Color | String | Null}, // deprecated after 3.7.0
 /// hover-placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
-/// hover: {Map | Null}, // See Mixin `clay-css` for available keys
 /// focus-bg: {Color | String | Null}, // deprecated after 3.7.0
 /// focus-bg-image: {String | List | Null}, // deprecated after 3.7.0
 /// focus-border-color: {Color | String | List | Null}, // deprecated after 3.7.0
 /// focus-box-shadow: {String | List | Null}, // deprecated after 3.7.0
 /// focus-color: {Color | String | Null}, // deprecated after 3.7.0
-/// focus: {Map | Null}, // See Mixin `clay-css` for available keys
 /// focus-placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
 /// focus-placeholder: {Map | Null}, // See Mixin `clay-css` for available keys
 /// readonly-bg: {Color | String | Null}, // deprecated after v2.18.0
@@ -242,12 +281,8 @@
 /// disabled-color: {Color | String | Null}, // deprecated after 3.7.0
 /// disabled-cursor: {String | Null}, // deprecated after 3.7.0
 /// disabled-opacity: {Number | String | Null}, // deprecated after 3.7.0
-/// disabled: {Map | Null}, // See Mixin `clay-css` for available keys
 /// disabled-placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
 /// disabled-placeholder: {Map | Null}, // See Mixin `clay-css` for available keys
-/// @todo
-/// - Add @example
-/// - Add @link to documentation
 
 @mixin clay-form-control-variant($map) {
 	@if (type-of($map) == 'map') {
@@ -495,11 +530,21 @@
 				@include clay-css($selection);
 			}
 
+			~ .input-group-inset-item {
+				@include clay-css(map-deep-get($map, input-group-inset-item));
+			}
+
 			&:hover {
 				@include clay-css($hover);
 
 				&::placeholder {
 					@include clay-css($hover-placeholder);
+				}
+
+				~ .input-group-inset-item {
+					@include clay-css(
+						map-deep-get($map, hover, input-group-inset-item)
+					);
 				}
 			}
 
@@ -509,6 +554,12 @@
 
 				&::placeholder {
 					@include clay-css($focus-placeholder);
+				}
+
+				~ .input-group-inset-item {
+					@include clay-css(
+						map-deep-get($map, focus, input-group-inset-item)
+					);
 				}
 			}
 
@@ -542,6 +593,12 @@
 
 				&::placeholder {
 					@include clay-css($disabled-placeholder);
+				}
+
+				~ .input-group-inset-item {
+					@include clay-css(
+						map-deep-get($map, disabled, input-group-inset-item)
+					);
 				}
 			}
 		}
