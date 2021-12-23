@@ -320,8 +320,14 @@ export function TreeViewItemStack({
 	loading = false,
 	...otherProps
 }: ITreeViewItemStackProps) {
-	const {expandedKeys, expanderIcons, selection, toggle} =
-		useTreeViewContext();
+	const {
+		expandOnCheck,
+		expandedKeys,
+		expanderIcons,
+		open,
+		selection,
+		toggle,
+	} = useTreeViewContext();
 
 	const item = useItem();
 
@@ -373,7 +379,13 @@ export function TreeViewItemStack({
 						checked: selection.selectedKeys.has(item.key),
 						disabled: loading,
 						indeterminate: selection.isIntermediate(item.key),
-						onChange: () => selection.toggleSelection(item.key),
+						onChange: () => {
+							selection.toggleSelection(item.key);
+
+							if (expandOnCheck) {
+								open(item.key);
+							}
+						},
 						onClick: (
 							event: React.MouseEvent<
 								HTMLInputElement,

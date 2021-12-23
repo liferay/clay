@@ -31,6 +31,11 @@ interface ITreeViewProps<T>
 	dragAndDrop?: boolean;
 
 	/**
+	 * Flag to expand child nodes when a parent node is checked.
+	 */
+	expandOnCheck?: boolean;
+
+	/**
 	 * Flag to modify Node expansion state icons.
 	 */
 	expanderIcons?: Icons;
@@ -71,6 +76,7 @@ export function TreeView<T>({
 	className,
 	displayType = 'light',
 	dragAndDrop = false,
+	expandOnCheck = false,
 	expandedKeys,
 	expanderIcons,
 	items,
@@ -107,6 +113,7 @@ export function TreeView<T>({
 	const context = {
 		childrenRoot: childrenRootRef,
 		dragAndDrop,
+		expandOnCheck,
 		expanderIcons,
 		nestedKey,
 		onLoadMore,
