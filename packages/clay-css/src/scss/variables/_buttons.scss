@@ -185,7 +185,18 @@ $btn-sm: map-deep-merge(
 	$btn-sm
 );
 
-// Button Monospaced
+// Button Sizes
+
+$btn-sizes: () !default;
+$btn-sizes: map-deep-merge(
+	(
+		btn-lg: $btn-lg,
+		btn-sm: $btn-sm,
+	),
+	$btn-sizes
+);
+
+// .btn-monospaced
 
 $btn-monospaced-padding-x: 0 !default;
 $btn-monospaced-padding-y: 0 !default;
@@ -228,7 +239,7 @@ $btn-monospaced: map-deep-merge(
 	$btn-monospaced
 );
 
-// Button Monospaced Lg
+// .btn-monospaced.btn-lg
 
 $btn-monospaced-padding-x-lg: null !default;
 $btn-monospaced-padding-y-lg: null !default;
@@ -253,7 +264,7 @@ $btn-monospaced-lg: map-deep-merge(
 	$btn-monospaced-lg
 );
 
-// Button Monospaced Sm
+// .btn-monospaced.btn-sm
 
 $btn-monospaced-padding-x-sm: null !default;
 $btn-monospaced-padding-y-sm: null !default;
@@ -276,6 +287,18 @@ $btn-monospaced-sm: map-deep-merge(
 		),
 	),
 	$btn-monospaced-sm
+);
+
+// Button Monospaced Sizes
+
+$btn-monospaced-sizes: () !default;
+$btn-monospaced-sizes: map-deep-merge(
+	(
+		btn-monospaced: $btn-monospaced,
+		btn-monospaced-lg: $btn-monospaced-lg,
+		btn-monospaced-sm: $btn-monospaced-sm,
+	),
+	$btn-monospaced-sizes
 );
 
 // Button Block
