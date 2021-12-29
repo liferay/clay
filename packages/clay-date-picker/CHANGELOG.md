@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.43.0](https://github.com/liferay/clay/compare/v3.42.0...v3.43.0) (2021-12-29)
+
+### Features
+
+-   **@clayui/date-picker:** adds 12-hour time support ([43863ce](https://github.com/liferay/clay/commit/43863ce20d92ea7dffce06f1071192a68e7eae80))
+
 # [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
 
 **Note:** Version bump only for package @clayui/date-picker

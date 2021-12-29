@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.43.0](https://github.com/liferay/clay/compare/v3.42.0...v3.43.0) (2021-12-29)
+
+### Bug Fixes
+
+-   **@clayui/navigation-bar:** fix error when rendering only one Item ([b3917bb](https://github.com/liferay/clay/commit/b3917bb980ac672ba2a4505d4c249c43102a06fa))
+-   **@clayui/navigation-bar:** let children be an array or a single child ([5ed78ae](https://github.com/liferay/clay/commit/5ed78ae68f3baa98cbb8b3ccfba19be0f037ebe4))
+
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
 **Note:** Version bump only for package @clayui/navigation-bar

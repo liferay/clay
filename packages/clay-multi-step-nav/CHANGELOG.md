@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.43.0](https://github.com/liferay/clay/compare/v3.42.0...v3.43.0) (2021-12-29)
+
+### Features
+
+-   **@clayui/multi-step-nav:** add the new `indicatorLabel` API to indicate the position of the indicator label ([bb43ff8](https://github.com/liferay/clay/commit/bb43ff8d538e96e9ac5d6b635ef937abc112657a))
+
 # [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
 
 **Note:** Version bump only for package @clayui/multi-step-nav

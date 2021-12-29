@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.43.0](https://github.com/liferay/clay/compare/v3.42.0...v3.43.0) (2021-12-29)
+
+### Bug Fixes
+
+-   **@clayui/card:** remove unnecessary backgroundImageAspectRatio property ([720a38d](https://github.com/liferay/clay/commit/720a38deafe081bb629c2072f810a0a4ed9579cf))
+
 # [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
 
 **Note:** Version bump only for package @clayui/card

@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.43.0](https://github.com/liferay/clay/compare/v3.42.0...v3.43.0) (2021-12-29)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Alerts set `white-space: normal` ([2cc5b51](https://github.com/liferay/clay/commit/2cc5b51cb5d7d599a31422ba3fbabefa1961409f))
+* **@clayui/css:** Atlas Buttons some disabled button-outline variants have white text on hover ([fb9c4fe](https://github.com/liferay/clay/commit/fb9c4fe90eeac731040b17b67a495db5d6126604))
+* **@clayui/css:** Cadmin Alerts set `white-space: normal` ([bca3c47](https://github.com/liferay/clay/commit/bca3c4756fe955f64ebd782e148e576fc2b3feaf))
+* **@clayui/css:** Cadmin convert a few places where we are still using slash as division ([beaf881](https://github.com/liferay/clay/commit/beaf88176faa61d255bc3b5f85f241289c13b2d3))
+* **@clayui/css:** Mixin `clay-label-variant` check if parameter is map to avoid not a map error ([2153059](https://github.com/liferay/clay/commit/2153059fd85641fc8a68b522a9f4c6c2a8101833))
+* **@clayui/css:** Mixins `clay-dropdown-item-variant` split up `&.autofit-row` and `.autofit-row` ([a314710](https://github.com/liferay/clay/commit/a314710648299206b6b1b36d55a83eb673dcfa51))
+* **@clayui/css:** Mixins `clay-dropdown-menu-variant` allow customizing `.dropdown-item` ([45cb0e5](https://github.com/liferay/clay/commit/45cb0e55ded31ef6bac7051daafb2195acbffd7d))
+* **@clayui/css:** Mixins `clay-nav-variant` don't set to empty map ([22f183d](https://github.com/liferay/clay/commit/22f183db56be3806fc7e8aaeae0fa1ff81bbcac4))
+
+
+### Features
+
+* **@clayui/css::** Mixin update `clay-nav-variant` to output selectors related to nav ([743d75a](https://github.com/liferay/clay/commit/743d75a87ba9c4bfc9d00e5d7f4ee13d5da73700))
+* **@clayui/css:** Buttons allow a variety of button variants via `$btn-palette` / `$btn-outline-palette` ([3d46a41](https://github.com/liferay/clay/commit/3d46a41cdff663ff044c722f8a14c94ddeaff307))
+* **@clayui/css:** Buttons allow setting a variety of button sizes via `$btn-sizes` and `$btn-monospaced-sizes` ([a29764a](https://github.com/liferay/clay/commit/a29764a1e9bfe71636fae0c6741f8ec1500466ed))
+* **@clayui/css:** Cadmin Dropdown adds `dropdown-menu-width-shrink` ([1d86dfa](https://github.com/liferay/clay/commit/1d86dfa0a4ae2259d0df3913e642c4c42c394a04))
+* **@clayui/css:** Cadmin Input Group convert to Clay mixin pattern ([4d1592b](https://github.com/liferay/clay/commit/4d1592b4c4e953b337ee20f95bb51f7079f1b668))
+* **@clayui/css:** Cadmin Nav convert to using `clay-css` mixin pattern ([d79e115](https://github.com/liferay/clay/commit/d79e115b3f9042349934142d5a1861ea10898d3b))
+* **@clayui/css:** Dropdown adds `dropdown-menu-width-shrink` ([b5f9a8d](https://github.com/liferay/clay/commit/b5f9a8d6e6cd7a40967eebbdaf3c68180fb8c290))
+* **@clayui/css:** Input Group convert to Clay mixin pattern ([98d8319](https://github.com/liferay/clay/commit/98d8319d37d79a48de79ecae5db65484e84ab8f6))
+* **@clayui/css:** Mixin `clay-form-control-variant` adds `input-group-inset-item` ([391e5d9](https://github.com/liferay/clay/commit/391e5d99a9787d6c458582eefefdf3245a454ad5))
+* **@clayui/css:** Mixin adds `clay-input-group-variant`, `clay-input-group-item-variant` ([6e02e60](https://github.com/liferay/clay/commit/6e02e60f30ccc4a1dad82e9679030167746bdb8b))
+* **@clayui/css:** Nav convert to using `clay-css` mixin pattern ([03881e7](https://github.com/liferay/clay/commit/03881e76636698adfb9807bd896bbaf26263f1ab))
+
+
+
+
+
 # [3.42.0](https://github.com/liferay/clay/compare/v3.41.0...v3.42.0) (2021-12-15)
 
 
