@@ -151,10 +151,52 @@ $cadmin-nav-item: map-deep-merge(
 
 // .nav-divider
 
-$cadmin-nav-divider-color: $cadmin-gray-200 !default;
+$cadmin-nav-divider-color: $cadmin-gray-600 !default;
 $cadmin-nav-divider-margin-y: $cadmin-spacer * 0.5 !default;
 
 $cadmin-nav-divider: () !default;
+$cadmin-nav-divider: map-deep-merge(
+	(
+		margin-left: 8px,
+		padding-left: 8px,
+		position: relative,
+		before: (
+			background-color: $cadmin-nav-divider-color,
+			content: '',
+			display: block,
+			height: 16px,
+			left: 0,
+			margin-top: -8px,
+			position: absolute,
+			top: 50%,
+			width: 1px,
+			z-index: 2,
+		),
+	),
+	$cadmin-nav-divider
+);
+
+$cadmin-nav-divider-end: () !default;
+$cadmin-nav-divider-end: map-deep-merge(
+	(
+		margin-right: 8px,
+		padding-right: 8px,
+		position: relative,
+		after: (
+			background-color: $cadmin-nav-divider-color,
+			content: '',
+			display: block,
+			height: 16px,
+			margin-top: -8px,
+			position: absolute,
+			right: 0,
+			top: 50%,
+			width: 1px,
+			z-index: 2,
+		),
+	),
+	$cadmin-nav-divider-end
+);
 
 // .nav-text-truncate
 

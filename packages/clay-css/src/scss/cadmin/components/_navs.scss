@@ -58,6 +58,18 @@
 	}
 }
 
+.nav-divider-end {
+	@include clay-css($cadmin-nav-divider-end);
+
+	&::before {
+		@include clay-css(map-get($cadmin-nav-divider-end, before));
+	}
+
+	&::after {
+		@include clay-css(map-get($cadmin-nav-divider-end, after));
+	}
+}
+
 .nav-text-truncate {
 	@include clay-css($cadmin-nav-text-truncate);
 }
