@@ -109,6 +109,8 @@
 }
 
 %clay-input-group-sm {
+	@include clay-input-group-variant($cadmin-input-group-sm);
+
 	&.clay-color {
 		> .input-group-item > .input-group-text {
 			@extend %clay-color-sm-input-group-text !optional;
