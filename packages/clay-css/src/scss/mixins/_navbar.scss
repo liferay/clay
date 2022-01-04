@@ -1459,6 +1459,38 @@
 						);
 					}
 				}
+
+				.nav-divider {
+					@include clay-css(map-deep-get($map, nav-divider));
+
+					&::before {
+						@include clay-css(
+							map-deep-get($map, nav-divider, before)
+						);
+					}
+
+					&::after {
+						@include clay-css(
+							map-deep-get($map, nav-divider, after)
+						);
+					}
+				}
+
+				.nav-divider-end {
+					@include clay-css(map-deep-get($map, nav-divider-end));
+
+					&::before {
+						@include clay-css(
+							map-deep-get($map, nav-divider-end, before)
+						);
+					}
+
+					&::after {
+						@include clay-css(
+							map-deep-get($map, nav-divider-end, after)
+						);
+					}
+				}
 			}
 
 			.navbar-form {
