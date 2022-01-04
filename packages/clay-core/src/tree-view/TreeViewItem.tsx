@@ -114,30 +114,29 @@ export const TreeViewItem = React.forwardRef<
 							setFocus(false);
 						}
 					}}
-					onClick={async () => {
+					onClick={() => {
 						if (group) {
 							toggle(item.key);
 						} else {
 							if (onLoadMore) {
-								try {
-									setLoading(true);
+								setLoading(true);
+								onLoadMore(item)
+									.then((items) => {
+										setLoading(false);
 
-									const items = await onLoadMore(item);
-
-									setLoading(false);
-
-									if (items) {
-										insert([...item.indexes, 0], items);
-										toggle(item.key);
-									}
-								} catch (error) {
-									console.error(error);
-								}
+										if (items) {
+											insert([...item.indexes, 0], items);
+											toggle(item.key);
+										}
+									})
+									.catch((error) => {
+										console.error(error);
+									});
 							}
 						}
 					}}
 					onFocus={() => actions && setFocus(true)}
-					onKeyDown={async (event) => {
+					onKeyDown={(event) => {
 						const {key} = event;
 
 						if (key === Keys.Left) {
@@ -152,22 +151,20 @@ export const TreeViewItem = React.forwardRef<
 						if (key === Keys.Right) {
 							if (!group) {
 								if (onLoadMore) {
-									try {
-										setLoading(true);
+									setLoading(true);
+									onLoadMore(item)
+										.then((items) => {
+											setLoading(false);
 
-										const items = await onLoadMore(item);
+											if (!items) {
+												return;
+											}
 
-										setLoading(false);
-
-										if (!items) {
-											return;
-										}
-										insert([...item.indexes, 0], items);
-									} catch (error) {
-										console.error(error);
-
-										return;
-									}
+											insert([...item.indexes, 0], items);
+										})
+										.catch((error) => {
+											console.error(error);
+										});
 								} else {
 									return;
 								}
@@ -213,18 +210,22 @@ export const TreeViewItem = React.forwardRef<
 							(key.toUpperCase() === Keys.R || key === Keys.F2) &&
 							onRenameItem
 						) {
-							const newItem = await onRenameItem({...item});
+							onRenameItem({...item})
+								.then((newItem) => {
+									replace(item.indexes, {
+										...newItem,
+										index: item.index,
+										indexes: item.indexes,
+										itemRef: item.itemRef,
+										key: item.key,
+										parentItemRef: item.parentItemRef,
+									});
 
-							replace(item.indexes, {
-								...newItem,
-								index: item.index,
-								indexes: item.indexes,
-								itemRef: item.itemRef,
-								key: item.key,
-								parentItemRef: item.parentItemRef,
-							});
-
-							item.itemRef.current?.focus();
+									item.itemRef.current?.focus();
+								})
+								.catch((error) => {
+									console.error(error);
+								});
 						}
 
 						if (key === Keys.Spacebar) {
