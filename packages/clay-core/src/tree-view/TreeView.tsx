@@ -7,7 +7,7 @@ import {FocusScope} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useRef} from 'react';
 import {DndProvider} from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
+import {HTML5Backend} from 'react-dnd-html5-backend';
 
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import DragLayer from './DragLayer';
