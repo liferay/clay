@@ -6,6 +6,8 @@ mainTabURL: 'docs/components/nav.html'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Nav](#css-nav)
+-   [Nav Divider](#css-nav-divider)
 -   [Nav Stacked](#css-nav-stacked)
 -   [Nav Nested](#css-nav-nested)
 -   [Nav Nested Margins](#css-nav-nested-margins)
@@ -14,6 +16,8 @@ mainTabURL: 'docs/components/nav.html'
 
 </div>
 </div>
+
+### Nav(#css-nav)
 
 <div class="clay-site-alert alert alert-warning">This is a component. Navigations share general markup and styles from the .nav class, therefore the components Nav Tabs, Nav Underline, Menubar, Navbar, Application Bar, Management Bar, and Navigation Bar all use <code class="gatsby-code-text">.nav</code> as its base.</div>
 
@@ -38,6 +42,19 @@ mainTabURL: 'docs/components/nav.html'
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 ```
+
+### Nav Divider(#css-nav-divider)
+
+Add the class `nav-divider` on `nav-item` to show a border at the start. The class `nav-divider-end` should be used on `nav-item` to show a border at the end.
+
+<div class="sheet-example">
+    <ul class="nav">
+        <li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+        <li class="nav-item nav-divider nav-divider-end"><a class="nav-link" href="#1">Categorization</a></li>
+        <li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+    </ul>
+</div>
 
 ### Nav Stacked(#css-nav-stacked)
 

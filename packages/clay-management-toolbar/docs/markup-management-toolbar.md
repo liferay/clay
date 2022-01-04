@@ -193,7 +193,7 @@ mainTabURL: 'docs/components/management-toolbar.html'
 <div class="sheet-example">
     <nav class="management-bar management-bar-primary navbar navbar-expand-md">
         <div class="container-fluid container-fluid-max-xl">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav navbar-expand">
                 <li class="nav-item">
                     <div class="custom-control custom-checkbox">
                         <label>
@@ -202,81 +202,40 @@ mainTabURL: 'docs/components/management-toolbar.html'
                         </label>
                     </div>
                 </li>
-                <li class="dropdown nav-item">
-                    <a aria-expanded="false" aria-haspopup="true"
-                        class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1"
-                        role="button">
-                        <span class="navbar-text-truncate">Filter and Order</span>
-                        <svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#caret-bottom"></use>
-                        </svg>
-                    </a>
-                    <a aria-expanded="false" aria-haspopup="true"
-                        class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown"
-                        href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-filter" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#filter"></use>
-                        </svg>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#1" role="button">Filter Action 1</a></li>
-                        <li><a class="dropdown-item" href="#1" role="button">Filter Action 2</a></li>
-                        <li><a class="dropdown-item" href="#1" role="button">Filter Action 3</a></li>
-                    </ul>
+                <li class="nav-item nav-item-shrink">
+                    <span class="navbar-text">
+                        3 of 7
+                        <span class="navbar-breakpoint-down-d-none">items selected</span>
+                    </span>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-monospaced" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-order-list-up" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#order-list-up"></use>
-                        </svg>
-                    </a>
+                <li class="nav-item nav-item-shrink">
+                    <button class="btn btn-link nav-btn" type="button">
+                        <span class="text-truncate-inline">
+                            <span class="text-truncate">Select All</span>
+                        </span>
+                    </button>
                 </li>
             </ul>
-            <div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-                <div class="container-fluid container-fluid-max-xl">
-                    <form role="search">
-                        <div class="input-group">
-                            <div class="input-group-item">
-                                <input class="form-control input-group-inset input-group-inset-after"
-                                    placeholder="Search for..." type="text">
-                                <span class="input-group-inset-item input-group-inset-item-after">
-                                    <button class="btn btn-monospaced btn-unstyled" type="submit">
-                                        <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-                                            <use href="/images/icons/icons.svg#search"></use>
-                                        </svg>
-                                    </button>
-                                    <button class="btn btn-monospaced btn-unstyled d-none" type="button">
-                                        <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
-                                            <use href="/images/icons/icons.svg#times"></use>
-                                        </svg>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
             <ul class="navbar-nav">
-                <li class="nav-item navbar-breakpoint-d-none">
+                <li class="nav-item">
                     <a class="nav-link nav-link-monospaced" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#search"></use>
+                        <svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#trash"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-monospaced" href="#uniqueSidenavCollapseId2" id="uniqueSidenavToggler2"
-                        role="button">
-                        <svg class="lexicon-icon lexicon-icon-circle-open" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#circle-open"></use>
+                    <a class="nav-link nav-link-monospaced" href="#1" role="button">
+                        <svg class="lexicon-icon lexicon-icon-paste" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#paste"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="dropdown nav-item">
                     <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced"
                         data-toggle="dropdown" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-list" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#list"></use>
+                        <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#ellipsis-v"></use>
                         </svg>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start">
@@ -312,26 +271,12 @@ mainTabURL: 'docs/components/management-toolbar.html'
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
-                        <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#plus"></use>
+                <li class="nav-item nav-divider">
+                    <a class="nav-link nav-link-monospaced" href="#1">
+                        <svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
+                            <use href="/images/icons/icons.svg#info-circle-open"></use>
                         </svg>
                     </a>
-                </li>
-                <li class="dropdown nav-item">
-                    <a aria-expanded="false" aria-haspopup="true"
-                        class="btn btn-primary dropdown-toggle nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none"
-                        data-toggle="dropdown" href="#1" role="button">
-                        <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
-                            <use href="/images/icons/icons.svg#plus"></use>
-                        </svg>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a class="active dropdown-item" href="#1">Option 1</a></li>
-                        <li><a class="dropdown-item" href="#1">Option 2</a></li>
-                        <li><a class="dropdown-item" href="#1">Option 3</a></li>
-                    </ul>
                 </li>
             </ul>
         </div>
