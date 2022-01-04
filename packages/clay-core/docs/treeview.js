@@ -4,7 +4,7 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
-import {Provider, UNSAFE_TreeView as TreeView} from '@clayui/core';
+import {Provider, TreeView} from '@clayui/core';
 import {ClayCheckbox as Checkbox} from '@clayui/form';
 import Icon from '@clayui/icon';
 import React from 'react';
