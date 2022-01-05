@@ -49,6 +49,12 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignPosition?: typeof ALIGN_POSITIONS[number];
 
 	/**
+	 * Flag to indicate if the popover should be closed when
+	 * clicking outside, only works if used with trigger
+	 */
+	closeOnClickOutside?: boolean;
+
+	/**
 	 * Props to add to the <ClayPortal/>.
 	 */
 	containerProps?: IPortalBaseProps;
@@ -87,6 +93,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			alignPosition = 'bottom',
 			children,
 			className,
+			closeOnClickOutside = false,
 			containerProps = {},
 			disableScroll = false,
 			header,
@@ -147,6 +154,39 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		}, [disableScroll, popoverScrollerRef, show]);
 
+		useEffect(() => {
+			if (closeOnClickOutside && trigger) {
+				const handleClick = (event: MouseEvent) => {
+					const nodeRefs = [
+						popoverRef,
+						popoverScrollerRef,
+						triggerRef,
+					];
+
+					const nodes: Array<Node> = (
+						Array.isArray(nodeRefs) ? nodeRefs : [nodeRefs]
+					)
+						.filter((ref) => ref.current)
+						.map((ref) => ref.current!);
+
+					if (
+						event.target instanceof Node &&
+						!nodes.find((element) =>
+							element.contains(event.target as Node)
+						)
+					) {
+						setShow(false);
+					}
+				};
+
+				window.addEventListener('mousedown', handleClick);
+
+				return () => {
+					window.removeEventListener('mousedown', handleClick);
+				};
+			}
+		}, [closeOnClickOutside, trigger]);
+
 		let content = (
 			<div
 				className={classNames(
@@ -182,7 +222,6 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 							if (trigger.props.onClick) {
 								trigger.props.onClick(event);
 							}
-
 							setShow(!show);
 						},
 						ref: (node: HTMLButtonElement) => {
