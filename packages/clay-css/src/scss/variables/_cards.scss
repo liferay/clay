@@ -238,6 +238,7 @@ $form-check-card: map-deep-merge(
 		form-check-input: (
 			margin-left: 0,
 			margin-top: 0,
+			opacity: 0,
 			position: absolute,
 			z-index: 1,
 		),
@@ -257,6 +258,7 @@ $form-check-card: map-deep-merge(
 				padding-left: 0,
 			),
 			custom-control-label: (
+				opacity: 0,
 				position: absolute,
 				z-index: 1,
 				before: (
@@ -308,6 +310,7 @@ $form-check-bottom-left: map-deep-merge(
 		form-check-input: (
 			bottom: $checkbox-position,
 			left: $checkbox-position,
+			opacity: 1,
 			top: auto,
 			transform: none,
 		),
@@ -321,6 +324,7 @@ $form-check-bottom-left: map-deep-merge(
 			custom-control-label: (
 				bottom: $checkbox-position,
 				left: $checkbox-position,
+				opacity: 1,
 				top: auto,
 				transform: none,
 			),
@@ -337,6 +341,7 @@ $form-check-bottom-right: map-deep-merge(
 		form-check-input: (
 			bottom: $checkbox-position,
 			left: auto,
+			opacity: 1,
 			right: $checkbox-position,
 			top: auto,
 			transform: none,
@@ -352,6 +357,7 @@ $form-check-bottom-right: map-deep-merge(
 			custom-control-label: (
 				bottom: $checkbox-position,
 				left: auto,
+				opacity: 1,
 				right: $checkbox-position,
 				top: auto,
 				transform: none,
@@ -369,6 +375,7 @@ $form-check-middle-left: map-deep-merge(
 		form-check-input: (
 			left: $checkbox-position,
 			margin-top: 0,
+			opacity: 1,
 			top: 50%,
 			transform: translateY(-50%),
 		),
@@ -382,6 +389,7 @@ $form-check-middle-left: map-deep-merge(
 			custom-control-label: (
 				left: $checkbox-position,
 				margin-top: 0,
+				opacity: 1,
 				top: 50%,
 				transform: translateY(-50%),
 			),
@@ -398,6 +406,7 @@ $form-check-middle-right: map-deep-merge(
 		form-check-input: (
 			left: auto,
 			margin-top: 0,
+			opacity: 1,
 			right: $checkbox-position,
 			top: 50%,
 			transform: translateY(-50%),
@@ -413,6 +422,7 @@ $form-check-middle-right: map-deep-merge(
 			custom-control-label: (
 				left: auto,
 				margin-top: 0,
+				opacity: 1,
 				right: $checkbox-position,
 				top: 50%,
 				transform: translateY(-50%),
@@ -429,6 +439,7 @@ $form-check-top-right: map-deep-merge(
 	(
 		form-check-input: (
 			left: auto,
+			opacity: 1,
 			right: $checkbox-position,
 			top: $checkbox-position,
 			transform: none,
@@ -442,6 +453,7 @@ $form-check-top-right: map-deep-merge(
 			),
 			custom-control-label: (
 				left: auto,
+				opacity: 1,
 				right: $checkbox-position,
 				top: $checkbox-position,
 				transform: none,
@@ -458,6 +470,7 @@ $form-check-top-left: map-deep-merge(
 	(
 		form-check-input: (
 			left: $checkbox-position,
+			opacity: 1,
 			top: $checkbox-position,
 			transform: none,
 		),
@@ -469,6 +482,7 @@ $form-check-top-left: map-deep-merge(
 			),
 			custom-control-label: (
 				left: $checkbox-position,
+				opacity: 1,
 				top: $checkbox-position,
 				transform: none,
 			),
