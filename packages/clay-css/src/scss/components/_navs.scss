@@ -55,8 +55,20 @@
 		@include clay-css(map-get($nav-divider, before));
 	}
 
-	&::before {
+	&::after {
 		@include clay-css(map-get($nav-divider, after));
+	}
+}
+
+.nav-divider-end {
+	@include clay-css($nav-divider-end);
+
+	&::before {
+		@include clay-css(map-get($nav-divider-end, before));
+	}
+
+	&::after {
+		@include clay-css(map-get($nav-divider-end, after));
 	}
 }
 

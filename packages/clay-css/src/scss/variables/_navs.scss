@@ -154,10 +154,52 @@ $nav-item: map-deep-merge(
 
 // .nav-divider
 
-$nav-divider-color: $gray-200 !default;
+$nav-divider-color: $gray-600 !default;
 $nav-divider-margin-y: $spacer * 0.5 !default;
 
 $nav-divider: () !default;
+$nav-divider: map-deep-merge(
+	(
+		margin-left: 0.5rem,
+		padding-left: 0.5rem,
+		position: relative,
+		before: (
+			background-color: $nav-divider-color,
+			content: '',
+			display: block,
+			height: 1rem,
+			left: 0,
+			margin-top: -0.5rem,
+			position: absolute,
+			top: 50%,
+			width: 1px,
+			z-index: 2,
+		),
+	),
+	$nav-divider
+);
+
+$nav-divider-end: () !default;
+$nav-divider-end: map-deep-merge(
+	(
+		margin-right: 0.5rem,
+		padding-right: 0.5rem,
+		position: relative,
+		after: (
+			background-color: $nav-divider-color,
+			content: '',
+			display: block,
+			height: 1rem,
+			margin-top: -0.5rem,
+			position: absolute,
+			right: 0,
+			top: 50%,
+			width: 1px,
+			z-index: 2,
+		),
+	),
+	$nav-divider-end
+);
 
 // .nav-text-truncate
 
