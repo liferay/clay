@@ -44,6 +44,10 @@ storiesOf('Components|ClayPopover', module)
 							'right'
 						) as 'right'
 					}
+					closeOnClickOutside={boolean(
+						'Close on click outside',
+						true
+					)}
 					disableScroll={boolean('Disable Scroll', false)}
 					header="Popover"
 					trigger={
@@ -80,6 +84,10 @@ storiesOf('Components|ClayPopover', module)
 				</ClayButton>
 
 				<ClayPopover
+					closeOnClickOutside={boolean(
+						'Close on click outside',
+						true
+					)}
 					header="Popover"
 					onShowChange={setShow}
 					show={show}
