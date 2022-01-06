@@ -26,6 +26,7 @@ mainTabURL: 'docs/components/drop-down.html'
         -   [Start](#css-start)
         -   [End](#css-end)
         -   [Start and End](#css-start-and-end)
+    -   [Autofit](#css-autofit)
     -   [Keyboard Shortcuts](#css-keyboard-shortcuts)
     -   [Scrolling Content](#css-scrolling-content)
 -   [Actions](#css-actions)
@@ -1246,6 +1247,200 @@ The modifier class `dropdown-menu-height-auto` on `dropdown-menu` removes the `m
 	<li><a class="active dropdown-item" href="#1">Dinner Preference</a></li>
 	<li><a class="dropdown-item" href="#1">Submit Payment</a></li>
 	<li class="dropdown-caption">Dropdown Caption</li>
+</ul>
+```
+
+### Autofit(#css-autofit)
+
+Make content expand to fill remaining space in a `dropdown-item` or create equally spaced content with a nested `.autofit-row`, `.autofit-col`, `.autofit-col-shrink`, and `.autofit-col-expand`.
+
+<div class="sheet-example">
+	<div class="clay-site-dropdown-menu-container">
+		<ul aria-labelled-by="theDropdownToggleId" class="dropdown-menu show">
+			<li>
+				<a class="autofit-row dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						<span class="autofit-section">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-en-us" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#en-us"></use>
+								</svg>
+							</span>
+							en-US
+						</span>
+					</span>
+					<span class="autofit-col">
+						<span class="label label-info">
+							<span class="label-item label-item-expand">Default</span>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="autofit-row disabled dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						<span class="autofit-section">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-en-gb" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#en-gb"></use>
+								</svg>
+							</span>
+							en-GB
+						</span>
+					</span>
+					<span class="autofit-col">
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Translated</span>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="active autofit-row dropdown-item" href="#1" tabindex="-1">
+					<span class="autofit-col autofit-col-expand">
+						<span class="autofit-section">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-es-es" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#es-es"></use>
+								</svg>
+							</span>
+							es-ES
+						</span>
+					</span>
+					<span class="autofit-col">
+						<span class="label label-success">
+							<span class="label-item label-item-expand">Translated</span>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a class="autofit-row dropdown-item" href="#1">
+					<span class="autofit-col autofit-col-expand">
+						<span class="autofit-section">
+							<span class="inline-item inline-item-before">
+								<svg class="lexicon-icon lexicon-icon-fr-fr" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#fr-fr"></use>
+								</svg>
+							</span>
+							fr-FR
+						</span>
+					</span>
+					<span class="autofit-col">
+						<span class="label label-warning">
+							<span class="label-item label-item-expand">Not Translated</span>
+						</span>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+```html
+<ul aria-labelled-by="theDropdownToggleId" class="dropdown-menu show">
+	<li>
+		<a class="autofit-row dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				<span class="autofit-section">
+					<span class="inline-item inline-item-before">
+						<svg
+							class="lexicon-icon lexicon-icon-en-us"
+							focusable="false"
+							role="presentation"
+						>
+							<use
+								xlink:href="/images/icons/icons.svg#en-us"
+							></use>
+						</svg>
+					</span>
+					en-US
+				</span>
+			</span>
+			<span class="autofit-col">
+				<span class="label label-info">
+					<span class="label-item label-item-expand">Default</span>
+				</span>
+			</span>
+		</a>
+	</li>
+	<li>
+		<a class="autofit-row disabled dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				<span class="autofit-section">
+					<span class="inline-item inline-item-before">
+						<svg
+							class="lexicon-icon lexicon-icon-en-gb"
+							focusable="false"
+							role="presentation"
+						>
+							<use
+								xlink:href="/images/icons/icons.svg#en-gb"
+							></use>
+						</svg>
+					</span>
+					en-GB
+				</span>
+			</span>
+			<span class="autofit-col">
+				<span class="label label-success">
+					<span class="label-item label-item-expand">Translated</span>
+				</span>
+			</span>
+		</a>
+	</li>
+	<li>
+		<a class="active autofit-row dropdown-item" href="#1" tabindex="-1">
+			<span class="autofit-col autofit-col-expand">
+				<span class="autofit-section">
+					<span class="inline-item inline-item-before">
+						<svg
+							class="lexicon-icon lexicon-icon-es-es"
+							focusable="false"
+							role="presentation"
+						>
+							<use
+								xlink:href="/images/icons/icons.svg#es-es"
+							></use>
+						</svg>
+					</span>
+					es-ES
+				</span>
+			</span>
+			<span class="autofit-col">
+				<span class="label label-success">
+					<span class="label-item label-item-expand">Translated</span>
+				</span>
+			</span>
+		</a>
+	</li>
+	<li>
+		<a class="autofit-row dropdown-item" href="#1">
+			<span class="autofit-col autofit-col-expand">
+				<span class="autofit-section">
+					<span class="inline-item inline-item-before">
+						<svg
+							class="lexicon-icon lexicon-icon-fr-fr"
+							focusable="false"
+							role="presentation"
+						>
+							<use
+								xlink:href="/images/icons/icons.svg#fr-fr"
+							></use>
+						</svg>
+					</span>
+					fr-FR
+				</span>
+			</span>
+			<span class="autofit-col">
+				<span class="label label-warning">
+					<span class="label-item label-item-expand"
+						>Not Translated</span
+					>
+				</span>
+			</span>
+		</a>
+	</li>
 </ul>
 ```
 
