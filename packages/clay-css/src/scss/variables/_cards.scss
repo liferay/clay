@@ -207,12 +207,275 @@ $card-rounded-circle-inner-border-radius: calc(
 	#{$rounded-circle-border-radius} - #{$card-border-width}
 ) !default;
 
+// .form-check-card
+
+$form-check-card-checked-box-shadow: $input-btn-focus-box-shadow !default;
+
+$form-check-card: () !default;
+$form-check-card: map-deep-merge(
+	(
+		margin-bottom: $card-margin-bottom,
+		margin-top: 0,
+		padding-left: 0,
+		hover: (
+			card: (
+				box-shadow: $form-check-card-checked-box-shadow,
+			),
+		),
+		active: (
+			card: (
+				box-shadow: $form-check-card-checked-box-shadow,
+			),
+		),
+		checked: (
+			card: (
+				box-shadow: $form-check-card-checked-box-shadow,
+			),
+		),
+		card: (
+			margin-bottom: 0,
+		),
+		form-check-input: (
+			margin-left: 0,
+			margin-top: 0,
+			position: absolute,
+			z-index: 1,
+		),
+		form-check-label: (
+			color: $body-color,
+			display: inline,
+			font-weight: $font-weight-normal,
+			padding-left: 0,
+			position: static,
+		),
+		custom-control: (
+			display: inline,
+			margin-right: 0,
+			position: static,
+			label: (
+				font-weight: $font-weight-normal,
+				padding-left: 0,
+			),
+			custom-control-label: (
+				position: absolute,
+				z-index: 1,
+				before: (
+					top: 0,
+				),
+				after: (
+					top: 0,
+				),
+			),
+			custom-control-input: (
+				z-index: 2,
+				hover: (
+					card: (
+						box-shadow: $form-check-card-checked-box-shadow,
+					),
+				),
+				checked: (
+					card: (
+						box-shadow: $form-check-card-checked-box-shadow,
+					),
+				),
+			),
+		),
+	),
+	$form-check-card
+);
+
+// .form-check-bottom-left .card-horizontal > .card-body,
+// .form-check-middle-left .card-horizontal > .card-body,
+// .form-check-top-left .card-horizontal > .card-body
+
 $checkbox-left-card-padding: 40px !default;
+
+// .form-check-bottom-right .card-horizontal > .card-body,
+// .form-check-middle-right .card-horizontal > .card-body,
+// .form-check-top-right .card-horizontal > .card-body
+
 $checkbox-right-card-padding: $checkbox-left-card-padding !default;
+
+// Form Check Positions
 
 $checkbox-position: 1rem !default;
 
-$form-check-card-checked-box-shadow: $input-btn-focus-box-shadow !default;
+// .form-check-bottom-left
+
+$form-check-bottom-left: () !default;
+$form-check-bottom-left: map-deep-merge(
+	(
+		form-check-input: (
+			bottom: $checkbox-position,
+			left: $checkbox-position,
+			top: auto,
+			transform: none,
+		),
+		custom-control: (
+			custom-control-input: (
+				bottom: $checkbox-position,
+				left: $checkbox-position,
+				top: auto,
+				transform: none,
+			),
+			custom-control-label: (
+				bottom: $checkbox-position,
+				left: $checkbox-position,
+				top: auto,
+				transform: none,
+			),
+		),
+	),
+	$form-check-bottom-left
+);
+
+// .form-check-bottom-right
+
+$form-check-bottom-right: () !default;
+$form-check-bottom-right: map-deep-merge(
+	(
+		form-check-input: (
+			bottom: $checkbox-position,
+			left: auto,
+			right: $checkbox-position,
+			top: auto,
+			transform: none,
+		),
+		custom-control: (
+			custom-control-input: (
+				bottom: $checkbox-position,
+				left: auto,
+				right: $checkbox-position,
+				top: auto,
+				transform: none,
+			),
+			custom-control-label: (
+				bottom: $checkbox-position,
+				left: auto,
+				right: $checkbox-position,
+				top: auto,
+				transform: none,
+			),
+		),
+	),
+	$form-check-bottom-right
+);
+
+// .form-check-middle-left
+
+$form-check-middle-left: () !default;
+$form-check-middle-left: map-deep-merge(
+	(
+		form-check-input: (
+			left: $checkbox-position,
+			margin-top: 0,
+			top: 50%,
+			transform: translateY(-50%),
+		),
+		custom-control: (
+			custom-control-input: (
+				left: $checkbox-position,
+				margin-top: 0,
+				top: 50%,
+				transform: translateY(-50%),
+			),
+			custom-control-label: (
+				left: $checkbox-position,
+				margin-top: 0,
+				top: 50%,
+				transform: translateY(-50%),
+			),
+		),
+	),
+	$form-check-middle-left
+);
+
+// .form-check-middle-right
+
+$form-check-middle-right: () !default;
+$form-check-middle-right: map-deep-merge(
+	(
+		form-check-input: (
+			left: auto,
+			margin-top: 0,
+			right: $checkbox-position,
+			top: 50%,
+			transform: translateY(-50%),
+		),
+		custom-control: (
+			custom-control-input: (
+				left: auto,
+				margin-top: 0,
+				right: $checkbox-position,
+				top: 50%,
+				transform: translateY(-50%),
+			),
+			custom-control-label: (
+				left: auto,
+				margin-top: 0,
+				right: $checkbox-position,
+				top: 50%,
+				transform: translateY(-50%),
+			),
+		),
+	),
+	$form-check-middle-right
+);
+
+// .form-check-top-right
+
+$form-check-top-right: () !default;
+$form-check-top-right: map-deep-merge(
+	(
+		form-check-input: (
+			left: auto,
+			right: $checkbox-position,
+			top: $checkbox-position,
+			transform: none,
+		),
+		custom-control: (
+			custom-control-input: (
+				left: auto,
+				right: $checkbox-position,
+				top: $checkbox-position,
+				transform: none,
+			),
+			custom-control-label: (
+				left: auto,
+				right: $checkbox-position,
+				top: $checkbox-position,
+				transform: none,
+			),
+		),
+	),
+	$form-check-top-right
+);
+
+// .form-check-top-left
+
+$form-check-top-left: () !default;
+$form-check-top-left: map-deep-merge(
+	(
+		form-check-input: (
+			left: $checkbox-position,
+			top: $checkbox-position,
+			transform: none,
+		),
+		custom-control: (
+			custom-control-input: (
+				left: $checkbox-position,
+				top: $checkbox-position,
+				transform: none,
+			),
+			custom-control-label: (
+				left: $checkbox-position,
+				top: $checkbox-position,
+				transform: none,
+			),
+		),
+	),
+	$form-check-top-left
+);
 
 // Card Interactive
 
