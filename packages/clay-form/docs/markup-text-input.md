@@ -13,7 +13,6 @@ mainTabURL: 'docs/components/input.html'
 -   [Readonly](#css-readonly)
 -   [Sizes](#css-sizes)
 -   [Textarea](#css-textarea)
--   [Select Menu](#css-select-menu)
 -   [Validations](#css-validations)
     -   [Success](#css-success)
     -   [Warning](#css-warning)
@@ -168,68 +167,6 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 		id="basicInputTypeTextarea"
 		placeholder="Placeholder"
 	></textarea>
-</div>
-```
-
-## Select Menu(#css-select-menu)
-
-<div class="sheet-example">
-	<div class="form-group">
-		<select class="form-control" id="regularSelectElement">
-			<option>Sample 1</option>
-			<option>Sample 2</option>
-			<option>Sample 3</option>
-			<option>Sample 4</option>
-		</select>
-	</div>
-</div>
-
-```html
-<div class="form-group">
-	<select class="form-control" id="regularSelectElement">
-		<option>Sample 1</option>
-		<option>Sample 2</option>
-		<option>Sample 3</option>
-		<option>Sample 4</option>
-	</select>
-</div>
-```
-
-<div class="sheet-example">
-	<div class="form-group">
-		<label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
-		<select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
-			<option>Sample 1</option>
-			<option>Sample 2</option>
-			<option>Sample 3</option>
-			<option>Sample 4</option>
-			<option>Sample 5</option>
-			<option>Sample 6</option>
-			<option>Sample 7</option>
-			<option>Sample 8</option>
-		</select>
-	</div>
-</div>
-
-```html
-<div class="form-group">
-	<label for="multipleSelectOptionsSelectElement"
-		>Select Element with Multiple Select Options</label
-	>
-	<select
-		class="form-control"
-		id="multipleSelectOptionsSelectElement"
-		multiple
-	>
-		<option>Sample 1</option>
-		<option>Sample 2</option>
-		<option>Sample 3</option>
-		<option>Sample 4</option>
-		<option>Sample 5</option>
-		<option>Sample 6</option>
-		<option>Sample 7</option>
-		<option>Sample 8</option>
-	</select>
 </div>
 ```
 
