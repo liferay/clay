@@ -18,14 +18,14 @@ mainTabURL: 'docs/components/input.html'
     -   [Warning](#css-warning)
     -   [Error](#css-error)
 -   [Groups](#css-markup-groups)
--   [Example](#css-markup-groups-example)
--   [Sizes](#css-markup-groups-sizes)
--   [Checkboxes and Radios](#css-checkboxes-and-radios)
--   [Button Addons](#css-button-addons)
--   [Multiple Addons](#css-multiple-addons)
--   [Separated Addons](#css-separated-addons)
--   [Mixed Addons](#css-mixed-addons)
--   [Inset](#css-inset)
+    -   [Example](#css-markup-groups-example)
+    -   [Sizes](#css-markup-groups-sizes)
+    -   [Checkboxes and Radios](#css-checkboxes-and-radios)
+    -   [Button Addons](#css-button-addons)
+    -   [Multiple Addons](#css-multiple-addons)
+    -   [Separated Addons](#css-separated-addons)
+    -   [Mixed Addons](#css-mixed-addons)
+    -   [Inset](#css-inset)
 
 </div>
 </div>
