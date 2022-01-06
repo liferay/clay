@@ -1409,3 +1409,124 @@
 		}
 	}
 }
+
+/// A mixin to help create `form-check-card` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .form-check-card
+/// 	hover: (
+/// 		// .form-check-card:hover
+/// 		card: (
+/// 			// .form-check-card:hover .card
+/// 			//     @include clay-card-variant();
+/// 		),
+/// 	),
+/// 	focus: (
+/// 		// .form-check-card.focus
+/// 		card: (
+/// 			// .form-check-card.focus .card
+/// 			//     @include clay-card-variant();
+/// 		),
+/// 	),
+/// 	active: (
+/// 		// .form-check-card.active
+/// 		card: (
+/// 			// .form-check-card.active .card
+/// 			//     @include clay-card-variant();
+/// 		),
+/// 	),
+/// 	checked: (
+/// 		// .form-check-card.checked
+/// 		card: (
+/// 			// .form-check-card.checked .card
+/// 			//     @include clay-card-variant();
+/// 		),
+/// 	),
+/// 	indeterminate: (
+/// 		// .form-check-card.indeterminate
+/// 		card: (
+/// 			// .form-check-card.indeterminate .card
+/// 			//     @include clay-card-variant();
+/// 		),
+/// 	),
+/// 	card: (
+/// 		// .form-check-card .card
+/// 		//     @include clay-card-variant();
+/// 	),
+/// 	form-check-input: (
+/// 		// .form-check-card .form-check-input
+/// 	),
+/// 	form-check-label: (
+/// 		// .form-check-card .form-check-label
+/// 	),
+/// 	custom-control: (
+/// 		// .form-check-card .custom-control
+/// 		//     @include clay-custom-control-variant();
+/// 	),
+/// )
+
+@mixin clay-form-check-card-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			&:hover {
+				.card {
+					@include clay-card-variant(map-deep-get($map, hover, card));
+				}
+			}
+
+			&.focus {
+				.card {
+					@include clay-card-variant(map-deep-get($map, focus, card));
+				}
+			}
+
+			&.active {
+				.card {
+					@include clay-card-variant(
+						map-deep-get($map, active, card)
+					);
+				}
+			}
+
+			&.checked {
+				.card {
+					@include clay-card-variant(
+						map-deep-get($map, checked, card)
+					);
+				}
+			}
+
+			&.indeterminate {
+				.card {
+					@include clay-card-variant(
+						map-deep-get($map, indeterminate, card)
+					);
+				}
+			}
+
+			.card {
+				@include clay-card-variant(map-get($map, card));
+			}
+
+			.form-check-input {
+				@include clay-css(map-get($map, form-check-input));
+			}
+
+			.form-check-label {
+				@include clay-css(map-get($map, form-check-label));
+			}
+
+			.custom-control {
+				@include clay-custom-control-variant(
+					map-get($map, custom-control)
+				);
+			}
+		}
+	}
+}
