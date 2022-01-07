@@ -567,75 +567,18 @@
 // Checkbox and Radio Cards
 
 .form-check-card {
-	margin-bottom: $card-margin-bottom;
-	margin-top: 0;
-	padding-left: 0;
+	@include clay-form-check-card-variant($form-check-card);
 
-	.card {
-		margin-bottom: 0;
-	}
-
-	.custom-control {
-		display: inline;
-		margin-right: 0;
-		position: static;
-
-		> label {
-			font-weight: $font-weight-normal;
-			padding-left: 0;
-		}
-	}
-
-	.custom-control-input {
-		z-index: 2;
-	}
-
-	.custom-control-label {
-		position: absolute;
-		z-index: 1;
-
-		&::before,
-		&::after {
-			top: 0;
-		}
-	}
-
-	.form-check-input {
-		margin-left: 0;
-		margin-top: 0;
-		position: absolute;
-		z-index: 1;
-	}
-
-	.form-check-label {
-		color: $body-color;
-		display: inline;
-		font-weight: $font-weight-normal;
-		padding-left: 0;
-		position: static;
-	}
-
-	&.active .card,
-	.custom-control-input:checked ~ .card,
 	.form-check-input:checked ~ .card {
-		box-shadow: $form-check-card-checked-box-shadow;
-	}
-}
-
-.form-check-card {
-	&:hover {
-		.card {
-			box-shadow: $form-check-card-checked-box-shadow;
-		}
-	}
-}
-
-.custom-control-input,
-.form-check-input {
-	&:hover {
-		~ .card {
-			box-shadow: $form-check-card-checked-box-shadow;
-		}
+		@include clay-card-variant(
+			map-deep-get(
+				$form-check-card,
+				custom-control,
+				custom-control-input,
+				checked,
+				card
+			)
+		);
 	}
 }
 
@@ -660,70 +603,27 @@
 }
 
 .form-check-bottom-left {
-	.custom-control-input,
-	.custom-control-label,
-	.form-check-input {
-		bottom: $checkbox-position;
-		left: $checkbox-position;
-		top: auto;
-		transform: none;
-	}
+	@include clay-form-check-card-variant($form-check-bottom-left);
 }
 
 .form-check-bottom-right {
-	.custom-control-input,
-	.custom-control-label,
-	.form-check-input {
-		bottom: $checkbox-position;
-		left: auto;
-		right: $checkbox-position;
-		top: auto;
-		transform: none;
-	}
+	@include clay-form-check-card-variant($form-check-bottom-right);
 }
 
 .form-check-middle-left {
-	.custom-control-input,
-	.custom-control-label,
-	.form-check-input {
-		left: $checkbox-position;
-		margin-top: 0;
-		top: 50%;
-		transform: translateY(-50%);
-	}
+	@include clay-form-check-card-variant($form-check-middle-left);
 }
 
 .form-check-middle-right {
-	.custom-control-input,
-	.custom-control-label,
-	.form-check-input {
-		left: auto;
-		margin-top: 0;
-		right: $checkbox-position;
-		top: 50%;
-		transform: translateY(-50%);
-	}
+	@include clay-form-check-card-variant($form-check-middle-right);
 }
 
 .form-check-top-left {
-	.custom-control-input,
-	.custom-control-label,
-	.form-check-input {
-		left: $checkbox-position;
-		top: $checkbox-position;
-		transform: none;
-	}
+	@include clay-form-check-card-variant($form-check-top-left);
 }
 
 .form-check-top-right {
-	.custom-control-input,
-	.custom-control-label,
-	.form-check-input {
-		left: auto;
-		right: $checkbox-position;
-		top: $checkbox-position;
-		transform: none;
-	}
+	@include clay-form-check-card-variant($form-check-top-right);
 }
 
 // Card Page
