@@ -268,11 +268,6 @@ $form-check-card: map-deep-merge(
 			),
 			custom-control-input: (
 				z-index: 2,
-				hover: (
-					card: (
-						box-shadow: $form-check-card-checked-box-shadow,
-					),
-				),
 				checked: (
 					card: (
 						box-shadow: $form-check-card-checked-box-shadow,
