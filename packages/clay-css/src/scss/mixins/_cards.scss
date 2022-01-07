@@ -275,7 +275,6 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
-		$base: setter($map, ());
 		$base: map-merge(
 			$map,
 			(
@@ -770,6 +769,12 @@
 				setter(map-get($map, after-highlight), ())
 			);
 
+			&.form-check-card {
+				@include clay-form-check-card-variant(
+					map-get($map, form-check-card)
+				);
+			}
+
 			.aspect-ratio {
 				@include clay-aspect-ratio-variant(
 					setter(map-get($map, aspect-ratio), ())
@@ -900,6 +905,62 @@
 							map-get(
 								$card-type-asset-icon-sticker,
 								sticker-overlay
+							)
+						);
+					}
+				}
+			}
+
+			.form-check-input {
+				&:hover {
+					~ .card {
+						@include clay-card-variant(
+							map-deep-get($map, custom-control, hover, card)
+						);
+					}
+				}
+
+				&:focus {
+					~ .card {
+						@include clay-card-variant(
+							map-deep-get($map, custom-control, focus, card)
+						);
+					}
+				}
+
+				&:active {
+					~ .card {
+						@include clay-card-variant(
+							map-deep-get($map, custom-control, active, card)
+						);
+					}
+				}
+
+				&[disabled],
+				&:disabled {
+					~ .card {
+						@include clay-card-variant(
+							map-deep-get($map, custom-control, disabled, card)
+						);
+					}
+				}
+
+				&:checked {
+					~ .card {
+						@include clay-card-variant(
+							map-deep-get($map, custom-control, checked, card)
+						);
+					}
+				}
+
+				&:indeterminate {
+					~ .card {
+						@include clay-card-variant(
+							map-deep-get(
+								$map,
+								custom-control,
+								indeterminate,
+								card
 							)
 						);
 					}
