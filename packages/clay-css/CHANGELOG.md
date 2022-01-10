@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.44.0](https://github.com/liferay/clay/compare/v3.43.1...v3.44.0) (2022-01-10)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Input Groups `input-group-sm` missing mixin declaration ([d7027be](https://github.com/liferay/clay/commit/d7027be048b1cbc21795bf961ea4e53ac2395f53)), closes [#4537](https://github.com/liferay/clay/issues/4537)
+* **@clayui/css:** Cards `form-check-card` remove duplicate hover state style ([17ea640](https://github.com/liferay/clay/commit/17ea640507edd0789366d418c730a6f8c5e7f02d))
+* **@clayui/css:** Mixins Cards check if parameter is map to avoid must be a map error ([2174587](https://github.com/liferay/clay/commit/21745877e04375b22bcccc069c9e9825b05fe9ed))
+* **@clayui/css:** Mixins Custom Forms remove `setter()`, no longer needed ([4cb30ce](https://github.com/liferay/clay/commit/4cb30ce52bcc3e04daa6be32056bb4dc89100059))
+
+
+### Features
+
+* **@clayui/css:** Cadmin Nav adds `nav-divider` and `nav-divider-end` ([66ba6ce](https://github.com/liferay/clay/commit/66ba6ced48e5e30b6635eb0c19c7d7c631166a63))
+* **@clayui/css:** Cards `form-check-card` checkbox/radio input should be hidden unless position utilities are used ([3120797](https://github.com/liferay/clay/commit/31207976cd1bffb0c4b2309d47a2121232902f38)), closes [#4544](https://github.com/liferay/clay/issues/4544)
+* **@clayui/css:** Cards `form-check-card` convert to Clay mixin pattern ([5b4424b](https://github.com/liferay/clay/commit/5b4424b38eb9f5e6e18ecfb7eb4e1231eb26ba78))
+* **@clayui/css:** Mixin `clay-card-variant` make `form-check-card` and `form-check-input` customizable ([c6a3a6f](https://github.com/liferay/clay/commit/c6a3a6f2c8b00c930b4a0c0b3ab5990cc743933d))
+* **@clayui/css:** Mixins `clay-custom-control-input-variant` add option to customize card ([87682d2](https://github.com/liferay/clay/commit/87682d2c9f2392896f27bbd1a36433e9c96918a3))
+* **@clayui/css:** Mixins `clay-navbar-variant` adds option to customize `nav-divider` and `nav-divider-end` ([e58c23e](https://github.com/liferay/clay/commit/e58c23e8465daf1b46235d3e7e228658b13326e9))
+* **@clayui/css:** Mixins Card adds `clay-form-check-card-variant` ([a834502](https://github.com/liferay/clay/commit/a8345029dac2ffdcdf9e59ea77d22224aa27f5dc))
+* **@clayui/css:** Nav adds `nav-divider` and `nav-divider-end` ([600a379](https://github.com/liferay/clay/commit/600a379eebea42761ff36ae1e0b52f804465b854))
+* **@clayui/css:** SVG Icons adds date-time ([4bf8d4c](https://github.com/liferay/clay/commit/4bf8d4cf7125f99b7948728cb873ed565115b30b))
+
+
+
+
+
 # [3.43.0](https://github.com/liferay/clay/compare/v3.42.0...v3.43.0) (2021-12-29)
 
 

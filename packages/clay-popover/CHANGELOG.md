@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.44.0](https://github.com/liferay/clay/compare/v3.43.1...v3.44.0) (2022-01-10)
+
+### Features
+
+-   **@clayui/popover:** add a closeOnClickOutside prop ([bd722a9](https://github.com/liferay/clay/commit/bd722a997961b7b18b1d0c9929c016cd0606e4e4)), closes [#4536](https://github.com/liferay/clay/issues/4536)
+
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
 **Note:** Version bump only for package @clayui/popover
