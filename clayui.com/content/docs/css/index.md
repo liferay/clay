@@ -59,7 +59,7 @@ You can switch between Base and Atlas Theme at any time by creating a file `clay
 
 ## Customizing Clay CSS(#css-customizing-clay-css)
 
-Liferay Portal provides a placeholder file `_clay_variables.scss` and imports it at the top of `base.scss` and `atlas.scss`. This file should contain all your Clay CSS Variable overwrites. You can change the primary color to red by creating a new file named `your-theme/src/css/_clay_variables.scss` and adding the line `$primary: red;`. Clay CSS has thousands of customization options that gives you full control over the styles of each component.
+Liferay Portal provides a placeholder file `_clay_variables.scss` and imports it at the top of `base.scss` and `atlas.scss`. This file should contain all your Clay CSS Sass Variable overwrites. You can change the primary color to red by creating a new file named `your-theme/src/css/_clay_variables.scss` and adding the line `$primary: red;`. Clay CSS has thousands of customization options that gives you full control over the styles of each component.
 
 ## Adding CSS Rulesets to Clay CSS(#css-adding-css-rulesets-to-clay-css)
 
