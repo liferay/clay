@@ -769,6 +769,14 @@
 				setter(map-get($map, after-highlight), ())
 			);
 
+			&::before {
+				@include clay-css(map-get($map, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($map, after));
+			}
+
 			&.form-check-card {
 				@include clay-form-check-card-variant(
 					map-get($map, form-check-card)
