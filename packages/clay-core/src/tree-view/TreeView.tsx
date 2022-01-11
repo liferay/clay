@@ -134,7 +134,7 @@ export function TreeView<T>({
 				ref={rootRef}
 				role="tree"
 			>
-				<DndProvider backend={HTML5Backend} context={window}>
+				<DndProvider backend={HTML5Backend}>
 					<TreeViewContext.Provider value={context}>
 						<Collection<T> items={state.items}>
 							{children}
