@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.44.1](https://github.com/liferay/clay/compare/v3.44.0...v3.44.1) (2022-01-11)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Mixins `clay-card-variant` allow styling before and after psuedo elements ([69f1d38](https://github.com/liferay/clay/commit/69f1d38a8d626c11e68bc82569698e7caa9e164b)), closes [#4554](https://github.com/liferay/clay/issues/4554)
+
+
+
+
+
 # [3.44.0](https://github.com/liferay/clay/compare/v3.43.1...v3.44.0) (2022-01-10)
 
 
