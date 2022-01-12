@@ -371,25 +371,30 @@ When working on an issue, you might want to test your changes before submitting
 a pull request.
 
 To test your changes in a liferay-portal (>= 7.3.x) environment you first need
-to link the desired packages.
+to add the desired packages.
 
 ```bash
 # Let's assume you have made a change in the clay-button component
 
 # From the root of the clay repository, run
 yarn workspace @clayui/button build
-yarn workspace @clayui/buttom link
 
-# Note that if you have linked this package before, yarn will print a warning
-# but that doesn't mean that this step failed
-
-# Now navigate to the frontend-taglib-clay module
+# Now navigate to the OSGI module where the component is used,
+# in this case it's in the "frontend-taglib-clay" module:
 cd {PORTAL_ROOT}/modules/apps/frontend-taglib/frontend-taglib-clay
 
 # Link the @clayui/button package
-yarn link @clayui/button
+yarn add file:PATH_TO_THE_PACKAGE
 
-# Before deploying you shoud stop tomcat
+# Where PATH_TO_THE_PACKAGE is the absolute path of the package
+# on your system, for example
+# yarn add file:/home/me/clay/packages/clay-button
+
+# Make sure you delete the "build" and "classes" directory
+rm -rf build classes
+
+# If you are in the "frontend-taglib-clay" module make sure you stop tomcat
+# before deploying the module
 
 # Deploy the module
 gradlew deploy -a
