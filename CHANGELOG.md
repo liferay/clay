@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.44.2](https://github.com/liferay/clay/compare/v3.44.1...v3.44.2) (2022-01-12)
+
+### Bug Fixes
+
+-   **@clayui/css:** Cadmin Nav adds `background-color` to `.active` pseudo element ([865b037](https://github.com/liferay/clay/commit/865b037338d3f10c28823c076aa3f93a525dbf5e)), closes [#4562](https://github.com/liferay/clay/issues/4562)
+-   **@clayui/css:** Mixins `clay-button-variant` removes unnecessary `setter()`'s ([3709d7f](https://github.com/liferay/clay/commit/3709d7fae89656e9fa3db2acc3ba0b539cbb8c2b)), closes [#4550](https://github.com/liferay/clay/issues/4550)
+
 ## [3.44.1](https://github.com/liferay/clay/compare/v3.44.0...v3.44.1) (2022-01-11)
 
 ### Bug Fixes
