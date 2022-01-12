@@ -136,6 +136,7 @@ $cadmin-custom-control-label: map-deep-merge(
 			top: $cadmin-custom-control-indicator-position-top,
 			transition: clay-enable-transitions($cadmin-custom-forms-transition),
 			width: $cadmin-custom-control-indicator-size,
+			z-index: 0,
 		),
 		after: (
 			background: no-repeat 50% / #{$cadmin-custom-control-indicator-bg-size},
@@ -146,6 +147,7 @@ $cadmin-custom-control-label: map-deep-merge(
 			position: absolute,
 			top: $cadmin-custom-control-indicator-position-top,
 			width: $cadmin-custom-control-indicator-size,
+			z-index: 0,
 		),
 	),
 	$cadmin-custom-control-label
@@ -216,6 +218,7 @@ $cadmin-custom-control: map-deep-merge(
 			display: inline,
 			font-size: $cadmin-font-size-base,
 			margin-bottom: 0,
+			position: static,
 		),
 	),
 	$cadmin-custom-control

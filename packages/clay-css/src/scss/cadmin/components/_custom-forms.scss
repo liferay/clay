@@ -108,11 +108,15 @@ label.custom-control-label {
 .custom-control-label::before {
 	$before: setter(map-get($cadmin-custom-control-label, before), ());
 
+	@extend %cadmin-pseudo-reset !optional;
+
 	@include clay-css($before);
 }
 
 .custom-control-label::after {
 	$after: setter(map-get($cadmin-custom-control-label, after), ());
+
+	@extend %cadmin-pseudo-reset !optional;
 
 	@include clay-css($after);
 }
