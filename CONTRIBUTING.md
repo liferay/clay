@@ -401,3 +401,33 @@ gradlew deploy -a
 
 # Restart tomcat
 ```
+
+One you have tested your changes, you'll probably want to "roll back" to
+use the package from npm (and not the one you changed for testing purposes).
+
+In order to do so, checkout your changes
+
+```bash
+# Make sure you are in the directory where you made the previous changes,
+# and have a look at what changed with
+
+git status
+
+# At that point, you should decide what to "undo" with git checkout
+# For example
+git checkout .
+
+# The changes to the "global" yarn.lock file, will also need to be "undone"
+git checkout ../../../yarn.lock
+
+# Note that the relative path to the yarn.lock might be different
+
+# Remove the "build" and "classes" directories
+rm -rf build classes
+
+# If you see a "node_modules" directory in your module, you can safely delete it too
+rm -rf node_modules
+
+# Re deploy your module
+gradlew deploy -a
+```
