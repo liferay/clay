@@ -322,6 +322,10 @@ cd {PORTAL_ROOT}/modules/apps/frontend-taglib/frontend-taglib-clay
 # have been properly updated in the package.json.
 ncu '/@clayui/' -u
 
+# If you don't want to install `npm-check-updates` as a global package,
+# you can also use this command
+# npx npm-check-updates '/@clayui/' -u
+
 # Run source formatter
 #
 # Often this will also update other files other than `package.json`
