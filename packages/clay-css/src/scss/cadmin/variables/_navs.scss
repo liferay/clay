@@ -473,6 +473,7 @@ $cadmin-nav-underline-link: map-deep-merge(
 		active-class: (
 			color: $cadmin-nav-underline-link-active-color,
 			after: (
+				background-color: $cadmin-nav-underline-link-active-highlight,
 				content: $cadmin-nav-underline-link-active-content,
 				height: $cadmin-nav-underline-link-active-highlight-height,
 			),
