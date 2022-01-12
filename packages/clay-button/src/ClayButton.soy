@@ -91,7 +91,6 @@
 			{param iconAlignment: $iconAlignment ?: 'left' /}
 			{param label: $label /}
 			{param spritemap: $spritemap /}
-			{param title: $title /}
 		{/call}
 	</button>
 {/template}
@@ -104,11 +103,6 @@
 	{@param? iconAlignment: string}
 	{@param? label: html|string}
 	{@param? spritemap: string}
-	{@param? title: string}
-
-	{if $title}
-		<span class="sr-only">{$title}</span>
-	{/if}
 
 	{let $iconContent kind="html"}
 		{if $icon and $spritemap}
