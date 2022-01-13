@@ -6,6 +6,14 @@
 
 .nav-link {
 	@include clay-link($cadmin-nav-link);
+
+	&::before {
+		@extend %cadmin-pseudo-reset !optional;
+	}
+
+	&::after {
+		@extend %cadmin-pseudo-reset !optional;
+	}
 }
 
 .nav-link.btn-unstyled {
