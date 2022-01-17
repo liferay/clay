@@ -187,6 +187,20 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		}, [closeOnClickOutside, trigger]);
 
+		useEffect(() => {
+			const handleKeyDown = (event: KeyboardEvent) => {
+				if (event.key === 'Escape') {
+					setShow(false);
+				}
+			};
+
+			window.addEventListener('keydown', handleKeyDown);
+
+			return () => {
+				window.removeEventListener('keydown', handleKeyDown);
+			};
+		}, []);
+
 		let content = (
 			<div
 				className={classNames(
