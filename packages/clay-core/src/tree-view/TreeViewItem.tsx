@@ -325,6 +325,7 @@ export function TreeViewItemStack({
 		expandOnCheck,
 		expandedKeys,
 		expanderIcons,
+		nestedKey,
 		open,
 		selection,
 		toggle,
@@ -333,6 +334,10 @@ export function TreeViewItemStack({
 	const item = useItem();
 
 	const childrenArray = React.Children.toArray(children);
+
+	const nestedChildren = nestedKey && (item[nestedKey] as Array<any>);
+
+	const hasChildren = nestedChildren && nestedChildren.length > 0;
 
 	return (
 		<Layout.ContentRow {...otherProps}>
@@ -353,7 +358,9 @@ export function TreeViewItemStack({
 							{loading ? (
 								<ClayLoadingIndicator small />
 							) : (
-								<Expander expanderIcons={expanderIcons} />
+								hasChildren && (
+									<Expander expanderIcons={expanderIcons} />
+								)
 							)}
 						</span>
 					</Button>

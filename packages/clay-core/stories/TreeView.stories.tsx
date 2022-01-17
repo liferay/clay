@@ -301,6 +301,10 @@ storiesOf('Components|ClayTreeView', module)
 						],
 						name: 'Documents and Media',
 					},
+					{
+						children: [],
+						name: "I don't have children",
+					},
 				]}
 				nestedKey="children"
 				onRenameItem={(item) => {
