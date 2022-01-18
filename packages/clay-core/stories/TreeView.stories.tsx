@@ -349,7 +349,6 @@ storiesOf('Components|ClayTreeView', module)
 				<TreeView
 					dragAndDrop
 					items={ITEMS_DRIVE}
-					nestedKey="children"
 					onRenameItem={(item) => {
 						return new Promise((resolve) => {
 							setTimeout(() => {

@@ -80,7 +80,7 @@ export function TreeView<T>({
 	expandedKeys,
 	expanderIcons,
 	items,
-	nestedKey,
+	nestedKey = 'children',
 	onExpandedChange,
 	onItemsChange,
 	onLoadMore,
