@@ -303,7 +303,7 @@ storiesOf('Components|ClayTreeView', module)
 					},
 					{
 						children: [],
-						name: "I don't have children",
+						name: 'Empty directory',
 					},
 				]}
 				nestedKey="children"

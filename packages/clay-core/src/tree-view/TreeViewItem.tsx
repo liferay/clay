@@ -335,7 +335,8 @@ export function TreeViewItemStack({
 
 	const childrenArray = React.Children.toArray(children);
 
-	const nestedChildren = nestedKey && (item[nestedKey] as Array<any>);
+	const nestedChildren =
+		nestedKey && (item[nestedKey] as Array<Record<string, any>>);
 
 	const hasChildren = nestedChildren && nestedChildren.length > 0;
 
