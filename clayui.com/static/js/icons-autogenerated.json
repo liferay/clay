@@ -376,6 +376,10 @@
         "aliases": ["duplicate", "paste"]
     },
     {
+        "name": "corner-radius",
+        "aliases": ["border radius", "smooth corners", "rounded corners"]
+    },
+    {
         "name": "credit-card",
         "aliases": [""]
     },
@@ -606,6 +610,14 @@
     {
         "name": "folder",
         "aliases": ["box", "container", "file"]
+    },
+    {
+        "name": "font-family",
+        "aliases": ["text", "editor", "style"]
+    },
+    {
+        "name": "font-size",
+        "aliases": ["text", "editor", "size", "style"]
     },
     {
         "name": "form-extensions",
@@ -1118,6 +1130,10 @@
     {
         "name": "separator",
         "aliases": ["divider", "group", "line"]
+    },
+    {
+        "name": "shadow",
+        "aliases": ["effect", "light"]
     },
     {
         "name": "share-alt",
