@@ -333,6 +333,44 @@ storiesOf('Components|ClayTreeView', module)
 			</TreeView>
 		</Provider>
 	))
+	.add('w/styling', () => (
+		<Provider spritemap={spritemap} theme="cadmin">
+			<TreeView
+				expanderButtonClasses="expander-css-class-1"
+				items={[
+					{
+						children: [
+							{name: 'Blogs'},
+							{name: 'Documents and Media'},
+						],
+						name: 'Liferay Drive',
+					},
+					{
+						children: [{name: 'PDF'}, {name: 'Word'}],
+						name: 'Documents and Media',
+					},
+				]}
+				nestedKey="children"
+				showExpanderOnHover={false}
+			>
+				{(item) => (
+					<TreeView.Item className="parent-list-item">
+						<TreeView.ItemStack>
+							<Icon symbol="folder" />
+							{item.name}
+						</TreeView.ItemStack>
+						<TreeView.Group items={item.children}>
+							{(item) => (
+								<TreeView.Item className="nested-list-item">
+									{item.name}
+								</TreeView.Item>
+							)}
+						</TreeView.Group>
+					</TreeView.Item>
+				)}
+			</TreeView>
+		</Provider>
+	))
 	.add('nested', () => {
 		const TYPES_TO_SYMBOLS = {
 			document: 'document-text',
