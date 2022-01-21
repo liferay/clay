@@ -1,0 +1,215 @@
+$treeview: () !default;
+$treeview: map-merge(
+	(
+		display: flex,
+		flex-direction: column,
+		font-size: 14px,
+		list-style: none,
+		margin-bottom: 0,
+		padding: 2px 0,
+		btn-monospaced: (
+			font-size: 14px,
+			height: 24px,
+			width: 24px,
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+			),
+		),
+		custom-control: (
+			margin-left: 4px,
+			margin-right: 4px,
+			margin-top: 1.5px,
+		),
+		treeview-dragging: (
+			background-color: $white,
+			border-color: $primary-l1,
+			border-radius: $border-radius-sm,
+			border-style: solid,
+			border-width: 1px,
+			display: inline-block,
+			font-size: 10px,
+			font-weight: $font-weight-semi-bold,
+			padding: 4px 12px,
+			text-transform: uppercase,
+		),
+		treeview-group: (
+			display: flex,
+			flex-direction: column,
+			list-style: none,
+			margin-bottom: 0,
+			padding-left: 0,
+		),
+		treeview-item: (
+			word-wrap: break-word,
+		),
+		link: (
+			cursor: pointer,
+			display: block,
+			border-color: transparent,
+			border-style: solid,
+			border-width: 1px,
+			margin-bottom: 2px,
+			margin-top: 2px,
+			min-width: 100%,
+			padding: 0,
+			position: relative,
+			user-select: none,
+			treeview-dropping-bottom: (
+				border-bottom-width: 2px,
+				border-bottom-color: $primary-l1,
+			),
+			treeview-dropping-middle: (
+				background-color: $primary-l3,
+				border-color: $primary-l1,
+			),
+			treeview-dropping-top: (
+				border-top-color: $primary-l1,
+				border-top-width: 2px,
+			),
+			hover: (
+				text-decoration: none,
+			),
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+				outline: 0,
+			),
+		),
+		component-action: (
+			display: none,
+			margin-left: 2px,
+			margin-right: 2px,
+			hover: (
+				background-color: transparent,
+				color: $secondary,
+			),
+			focus: (
+				color: $secondary,
+			),
+			active: (
+				background-color: transparent,
+			),
+		),
+		component-icon: (
+			display: inline,
+			height: auto,
+			margin-left: 4px,
+			margin-right: 4px,
+			width: auto,
+		),
+		component-text: (
+			padding-bottom: 1.5px,
+			padding-left: 4px,
+			padding-top: 1.5px,
+			user-select: auto,
+		),
+	),
+	$treeview
+);
+
+$treeview-nested-margins: () !default;
+$treeview-nested-margins: map-deep-merge(
+	(
+		treeview-group: (
+			treeview-item: (
+				margin-left: 24px,
+			),
+		),
+	),
+	$treeview-nested-margins
+);
+
+$treeview-show-component-expander-on-hover: () !default;
+$treeview-show-component-expander-on-hover: map-deep-merge(
+	(
+		hover: (
+			component-expander: (
+				opacity: 1,
+				transition: opacity ease-in-out 600ms,
+			),
+		),
+		component-expander: (
+			opacity: 0,
+			transition: opacity ease-in-out 450ms,
+		),
+		treeview-link: (
+			focus: (
+				component-expander: (
+					opacity: 1,
+					transition: none,
+				),
+			),
+		),
+	),
+	$treeview-show-component-expander-on-hover
+);
+
+// Variants
+
+$treeview-light: () !default;
+$treeview-light: map-deep-merge(
+	(
+		component-expander: (
+			color: $secondary,
+			hover: (
+				color: $primary,
+			),
+			btn-secondary: (
+				background-color: $white,
+			),
+		),
+		link: (
+			color: $gray-600,
+			hover: (
+				background-color: $gray-100,
+				color: $gray-900,
+			),
+			active: (
+				background-color: $gray-200,
+				color: $gray-900,
+			),
+			active-class: (
+				background-color: $gray-200,
+				color: $gray-900,
+			),
+			show: (
+				background-color: null,
+				color: null,
+			),
+		),
+	),
+	$treeview-light
+);
+
+$treeview-dark: () !default;
+$treeview-dark: map-deep-merge(
+	(
+		component-expander: (
+			color: $secondary-l1,
+			hover: (
+				color: $primary-l1,
+			),
+		),
+		link: (
+			color: $secondary-l1,
+			hover: (
+				background-color: rgba($white, 0.04),
+			),
+			active-class: (
+				background-color: rgba($white, 0.06),
+				color: $white,
+			),
+			disabled: (
+				background-color: transparent,
+				color: rgba($secondary-l1, 0.04),
+			),
+			show: (
+				background-color: null,
+				color: null,
+			),
+		),
+		component-action: (
+			color: $secondary-l1,
+		),
+	),
+	$treeview-dark
+);
