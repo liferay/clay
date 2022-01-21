@@ -285,3 +285,20 @@ $component-action: map-deep-merge(
 	),
 	$component-action
 );
+
+$component-text: () !default;
+
+$component-icon: () !default;
+$component-icon: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		height: 32px,
+		justify-content: center,
+		width: 32px,
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$component-icon
+);
