@@ -334,6 +334,69 @@ storiesOf('Components|ClayTreeView', module)
 			</TreeView>
 		</Provider>
 	))
+	.add('dynamic w/onItemClick callback', () => (
+		<Provider spritemap={spritemap} theme="cadmin">
+			<TreeView
+				dragAndDrop
+				items={[
+					{
+						children: [
+							{name: 'Blogs'},
+							{name: 'Documents and Media'},
+						],
+						name: 'Liferay Drive',
+					},
+					{
+						children: [
+							{name: 'Blogs'},
+							{name: 'Documents and Media'},
+						],
+						name: 'Repositories',
+					},
+					{
+						children: [
+							{name: 'PDF'},
+							{name: 'Word'},
+							{name: 'Google Drive'},
+							{name: 'Figma'},
+						],
+						name: 'Documents and Media',
+					},
+					{
+						children: [],
+						name: 'Empty directory',
+					},
+				]}
+				nestedKey="children"
+				onItemClick={(item) => {
+					alert(`You selected: ${item.name}`);
+				}}
+				onRenameItem={(item) => {
+					return new Promise((resolve) => {
+						setTimeout(() => {
+							item.name += `-${Date.now()}`;
+
+							resolve(item);
+						}, 500);
+					});
+				}}
+			>
+				{(item) => (
+					<TreeView.Item>
+						<TreeView.ItemStack>
+							<Icon symbol="folder" />
+							{item.name}
+						</TreeView.ItemStack>
+						<TreeView.Group items={item.children}>
+							{(item) => (
+								<TreeView.Item>{item.name}</TreeView.Item>
+							)}
+						</TreeView.Group>
+					</TreeView.Item>
+				)}
+			</TreeView>
+		</Provider>
+	))
 	.add('w/styling', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView

@@ -46,6 +46,12 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 
 	/**
+	 * Optional callback which will be invoked if present
+	 * when clicking on a node.
+	 */
+	onItemClick?: (item: T) => void;
+
+	/**
 	 * When a tree is very large, loading items (nodes) asynchronously is preferred to
 	 * decrease the initial payload and memory space. The callback is called every time
 	 * the item is a leaf node of the tree.
@@ -88,6 +94,7 @@ export function TreeView<T>({
 	items,
 	nestedKey = 'children',
 	onExpandedChange,
+	onItemClick,
 	onItemsChange,
 	onLoadMore,
 	onRenameItem,
@@ -123,6 +130,7 @@ export function TreeView<T>({
 		expanderButtonClasses,
 		expanderIcons,
 		nestedKey,
+		onItemClick,
 		onLoadMore,
 		onRenameItem,
 		rootRef,

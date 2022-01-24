@@ -50,6 +50,7 @@ export const TreeViewItem = React.forwardRef<
 		expandedKeys,
 		insert,
 		nestedKey,
+		onItemClick,
 		onLoadMore,
 		onRenameItem,
 		open,
@@ -253,7 +254,26 @@ export const TreeViewItem = React.forwardRef<
 						{typeof left === 'string' ? (
 							<Layout.ContentRow>
 								<Layout.ContentCol expand>
-									<div className="component-text">{left}</div>
+									<div
+										className="component-text"
+										onClick={(event) => {
+											event.stopPropagation();
+
+											const {
+												_indexes,
+												_itemRef,
+												_key,
+												_parentItemRef,
+												...rest
+											} = item;
+
+											if (onItemClick) {
+												onItemClick(rest);
+											}
+										}}
+									>
+										{left} blandndnd
+									</div>
 								</Layout.ContentCol>
 
 								{actions && <Actions>{actions}</Actions>}
@@ -327,6 +347,7 @@ export function TreeViewItemStack({
 		expanderButtonClasses,
 		expanderIcons,
 		nestedKey,
+		onItemClick,
 		open,
 		selection,
 		toggle,
@@ -383,7 +404,31 @@ export function TreeViewItemStack({
 				}
 
 				if (typeof child === 'string') {
-					content = <div className="component-text">{child}</div>;
+					content = React.cloneElement(
+						<div className="component-text">{child}</div>,
+						{
+							onClick: (
+								event: React.MouseEvent<
+									HTMLDivElement,
+									MouseEvent
+								>
+							) => {
+								event.stopPropagation();
+
+								const {
+									_indexes,
+									_itemRef,
+									_key,
+									_parentItemRef,
+									...rest
+								} = item;
+
+								if (onItemClick) {
+									onItemClick(rest);
+								}
+							},
+						}
+					);
 
 					// @ts-ignore
 				} else if (child?.type.displayName === 'ClayIcon') {

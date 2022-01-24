@@ -20,6 +20,7 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	expanderButtonClasses?: Array<string> | string;
 	expanderIcons?: Icons;
 	nestedKey?: string;
+	onItemClick?: (item: T) => void;
 	onLoadMore?: (item: any) => Promise<unknown>;
 	onRenameItem?: (item: T) => Promise<any>;
 	rootRef: React.RefObject<HTMLUListElement>;
