@@ -65,3 +65,15 @@ button.link-outline {
 .component-action {
 	@include clay-link($component-action);
 }
+
+.component-text {
+	@include clay-css($component-text);
+}
+
+.component-icon {
+	@include clay-css($component-icon);
+
+	.lexicon-icon {
+		@include clay-css(map-get($component-icon, lexicon-icon));
+	}
+}

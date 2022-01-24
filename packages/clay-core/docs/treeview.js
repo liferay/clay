@@ -90,7 +90,7 @@ const exampleCode = `const FileExplorer = () => {
 	};
 	
 	return (
-		<Provider spritemap={spritemap} theme="cadmin">
+		<Provider spritemap={spritemap}>
 			<TreeView
 				dragAndDrop
 				items={items}
@@ -152,7 +152,7 @@ const multipleSelectionImports = `import {Provider, TreeView} from '@clayui/core
 import {ClayCheckbox as Checkbox} from '@clayui/form';`;
 
 const multipleSelectionCode = `const MultipleSelection = () => (
-	<Provider spritemap={spritemap} theme="cadmin">
+	<Provider spritemap={spritemap}>
 		<TreeView>
 			<TreeView.Item>
 				<TreeView.ItemStack>

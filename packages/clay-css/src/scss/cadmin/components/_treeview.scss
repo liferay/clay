@@ -2,30 +2,21 @@
 	@include clay-css($cadmin-treeview);
 
 	.btn {
-		$btn: setter(map-get($cadmin-treeview, btn), ());
-
-		@include clay-button-variant($btn);
+		@include clay-button-variant(map-get($cadmin-treeview, btn));
 	}
 
 	.btn-monospaced {
-		$btn-monospaced: setter(map-get($cadmin-treeview, btn-monospaced), ());
-
-		@include clay-button-variant($btn-monospaced);
+		@include clay-button-variant(map-get($cadmin-treeview, btn-monospaced));
 	}
 
 	.custom-control {
-		$custom-control: setter(map-get($cadmin-treeview, custom-control), ());
-
-		@include clay-css($custom-control);
+		@include clay-css(map-get($cadmin-treeview, custom-control));
 	}
 
 	.component-expander {
-		$component-expander: setter(
-			map-get($cadmin-treeview, component-expander),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview, component-expander)
 		);
-
-		@include clay-button-variant($component-expander);
 
 		.lexicon-icon:not(.component-expanded-d-none) {
 			display: none;
@@ -33,30 +24,23 @@
 	}
 
 	.component-action {
-		$component-action: setter(
-			map-get($cadmin-treeview, component-action),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview, component-action)
 		);
-
-		@include clay-button-variant($component-action);
 	}
 
 	.component-icon {
-		$component-icon: setter(map-get($cadmin-treeview, component-icon), ());
-
-		@include clay-css($component-icon);
+		@include clay-css(map-get($cadmin-treeview, component-icon));
 
 		.lexicon-icon {
-			$lexicon-icon: setter(map-get($component-icon, lexicon-icon), ());
-
-			@include clay-css($lexicon-icon);
+			@include clay-css(
+				map-deep-get($cadmin-treeview, component-icon, lexicon-icon)
+			);
 		}
 	}
 
 	.component-text {
-		$component-text: setter(map-get($cadmin-treeview, component-text), ());
-
-		@include clay-css($component-text);
+		@include clay-css(map-get($cadmin-treeview, component-text));
 	}
 
 	&.show-component-expander-on-hover {
@@ -64,82 +48,77 @@
 
 		&:hover,
 		&.hover {
-			$hover: setter(
+			@include clay-css(
 				map-get(
 					$cadmin-treeview-show-component-expander-on-hover,
 					hover
-				),
-				()
+				)
 			);
 
-			@include clay-css($hover);
-
 			.component-expander {
-				$component-expander: setter(
-					map-get($hover, component-expander),
-					()
+				@include clay-css(
+					map-deep-get(
+						$cadmin-treeview-show-component-expander-on-hover,
+						hover,
+						component-expander
+					)
 				);
-
-				@include clay-css($component-expander);
 			}
 		}
 
 		.treeview-link {
-			$treeview-link: setter(
+			@include clay-css(
 				map-get(
 					$cadmin-treeview-show-component-expander-on-hover,
 					treeview-link
-				),
-				()
+				)
 			);
-
-			@include clay-css($treeview-link);
 
 			&:focus,
 			&.focus {
-				$focus: setter(map-get($treeview-link, focus), ());
-
-				@include clay-css($focus);
+				@include clay-css(
+					map-deep-get(
+						$cadmin-treeview-show-component-expander-on-hover,
+						treeview-link,
+						focus
+					)
+				);
 
 				.component-expander {
-					$component-expander: setter(
-						map-get($focus, component-expander)
+					@include clay-css(
+						map-deep-get(
+							$cadmin-treeview-show-component-expander-on-hover,
+							treeview-link,
+							focus,
+							component-expander
+						)
 					);
-
-					@include clay-css($component-expander);
 				}
 			}
 		}
 
 		.component-expander {
-			$component-expander: setter(
+			@include clay-css(
 				map-get(
 					$cadmin-treeview-show-component-expander-on-hover,
 					component-expander
-				),
-				()
+				)
 			);
-
-			@include clay-css($component-expander);
 		}
 	}
 }
 
 .treeview-group {
-	$group: setter(map-get($cadmin-treeview, treeview-group), ());
-
-	@include clay-css($group);
+	@include clay-css(map-get($cadmin-treeview, treeview-group));
 }
 
 .treeview-item {
-	$item: setter(map-get($cadmin-treeview, treeview-item), ());
-
-	@include clay-css($item);
+	@include clay-css(map-get($cadmin-treeview, treeview-item));
 
 	&:last-child {
-		$last-child: setter(map-get($item, last-child), ());
-
-		@include clay-css($last-child);
+		@include clay-css(
+			map-deep-get($cadmin-treeview, treeview-item, last-child)
+		);
 	}
 
 	&.disabled {
@@ -158,30 +137,24 @@
 }
 
 .treeview-link {
-	$link: setter(map-get($cadmin-treeview, link), ());
+	@include clay-link(map-get($cadmin-treeview, link));
 
-	@include clay-link($link);
+	&.treeview-dropping-bottom {
+		@include clay-css(
+			map-deep-get($cadmin-treeview, link, treeview-dropping-bottom)
+		);
+	}
 
-	&.treeview-dropping {
-		$dropping: setter(map-get($link, dropping), ());
+	&.treeview-dropping-middle {
+		@include clay-css(
+			map-deep-get($cadmin-treeview, link, treeview-dropping-middle)
+		);
+	}
 
-		&-bottom {
-			$dropping-bottom: setter(map-get($dropping, bottom), ());
-
-			@include clay-css($dropping-bottom);
-		}
-
-		&-middle {
-			$dropping-middle: setter(map-get($dropping, middle), ());
-
-			@include clay-css($dropping-middle);
-		}
-
-		&-top {
-			$dropping-top: setter(map-get($dropping, top), ());
-
-			@include clay-css($dropping-top);
-		}
+	&.treeview-dropping-top {
+		@include clay-css(
+			map-deep-get($cadmin-treeview, link, treeview-dropping-top)
+		);
 	}
 
 	&.hover,
@@ -211,25 +184,24 @@
 	@include clay-css($cadmin-treeview-nested-margins);
 
 	.treeview-group {
-		$group: setter(
-			map-get($cadmin-treeview-nested-margins, treeview-group),
-			()
+		@include clay-css(
+			map-get($cadmin-treeview-nested-margins, treeview-group)
 		);
 
-		@include clay-css($group);
-
 		.treeview-item {
-			$item: setter(map-get($group, treeview-item), ());
-
-			@include clay-css($item);
+			@include clay-css(
+				map-deep-get(
+					$cadmin-treeview-nested-margins,
+					treeview-group,
+					treeview-item
+				)
+			);
 		}
 	}
 }
 
 .treeview-dragging {
-	$dragging: setter(map-get($cadmin-treeview, treeview-dragging), ());
-
-	@include clay-css($dragging);
+	@include clay-css(map-get($cadmin-treeview, treeview-dragging));
 }
 
 // Treeview Variants
@@ -238,90 +210,65 @@
 	@include clay-css($cadmin-treeview-light);
 
 	.btn {
-		$btn: setter(map-get($cadmin-treeview-light, btn), ());
-
-		@include clay-button-variant($btn);
+		@include clay-button-variant(map-get($cadmin-treeview-light, btn));
 	}
 
 	.btn-monospaced {
-		$btn-monospaced: setter(
-			map-get($cadmin-treeview-light, btn-monospaced),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview-light, btn-monospaced)
 		);
-
-		@include clay-button-variant($btn-monospaced);
 	}
 
 	.component-expander {
-		$component-expander: setter(
-			map-get($cadmin-treeview-light, component-expander),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview-light, component-expander)
 		);
 
-		@include clay-button-variant($component-expander);
-
 		&.btn-secondary {
-			$btn-secondary: setter(
-				map-get($component-expander, btn-secondary),
-				()
+			@include clay-button-variant(
+				map-deep-get(
+					$cadmin-treeview-light,
+					component-expander,
+					btn-secondary
+				)
 			);
-
-			@include clay-button-variant($btn-secondary);
 		}
 	}
 
 	.custom-control {
-		$custom-control: setter(
-			map-get($cadmin-treeview-light, custom-control),
-			()
-		);
-
-		@include clay-css($custom-control);
+		@include clay-css(map-get($cadmin-treeview-light, custom-control));
 	}
 
 	.treeview-group {
-		$group: setter(map-get($cadmin-treeview-light, treeview-group), ());
-
-		@include clay-css($group);
+		@include clay-css(map-get($cadmin-treeview-light, treeview-group));
 	}
 
 	.treeview-item {
-		$item: setter(map-get($cadmin-treeview-light, treeview-item), ());
-
-		@include clay-css($item);
+		@include clay-css(map-get($cadmin-treeview-light, treeview-item));
 
 		&:last-child {
-			$last-child: setter(map-get($item, last-child), ());
-
-			@include clay-css($last-child);
+			@include clay-css(
+				map-deep-get($cadmin-treeview-light, treeview-item, last-child)
+			);
 		}
 	}
 
 	.treeview-link {
-		$link: setter(map-get($cadmin-treeview-light, link), ());
-
-		@include clay-link($link);
+		@include clay-link(map-get($cadmin-treeview-light, link));
 	}
 
 	.component-action {
-		$component-action: setter(
-			map-get($cadmin-treeview-light, component-action),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview-light, component-action)
 		);
-
-		@include clay-button-variant($component-action);
 	}
 
 	.component-icon {
-		$component: setter(map-get($cadmin-treeview-light, component), ());
-
-		@include clay-css($component);
+		@include clay-css(map-get($cadmin-treeview-light, component));
 	}
 
 	.component-text {
-		$component: setter(map-get($cadmin-treeview-light, component), ());
-
-		@include clay-css($component);
+		@include clay-css(map-get($cadmin-treeview-light, component));
 	}
 }
 
@@ -329,95 +276,64 @@
 	@include clay-css($cadmin-treeview-dark);
 
 	.btn {
-		$btn: setter(map-get($cadmin-treeview-dark, btn), ());
-
-		@include clay-button-variant($btn);
+		@include clay-button-variant(map-get($cadmin-treeview-dark, btn));
 	}
 
 	.btn-monospaced {
-		$btn-monospaced: setter(
-			map-get($cadmin-treeview-dark, btn-monospaced),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview-dark, btn-monospaced)
 		);
-
-		@include clay-button-variant($btn-monospaced);
 	}
 
 	.component-expander {
-		$component-expander: setter(
-			map-get($cadmin-treeview-dark, component-expander),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview-dark, component-expander)
 		);
 
-		@include clay-button-variant($component-expander);
-
 		&.btn-secondary {
-			$btn-secondary: setter(
-				map-get($component-expander, btn-secondary),
-				()
+			@include clay-button-variant(
+				map-deep-get(
+					$cadmin-treeview-dark,
+					component-expander,
+					btn-secondary
+				)
 			);
-
-			@include clay-button-variant($btn-secondary);
 		}
 	}
 
 	.custom-control {
-		$custom-control: setter(
-			map-get($cadmin-treeview-dark, custom-control),
-			()
-		);
-
-		@include clay-css($custom-control);
+		@include clay-css(map-get($cadmin-treeview-dark, custom-control));
 	}
 
 	.treeview-group {
-		$group: setter(map-get($cadmin-treeview-dark, treeview-group), ());
-
-		@include clay-css($group);
+		@include clay-css(map-get($cadmin-treeview-dark, treeview-group));
 	}
 
 	.treeview-item {
-		$item: setter(map-get($cadmin-treeview-dark, treeview-item), ());
-
-		@include clay-css($item);
+		@include clay-css(map-get($cadmin-treeview-dark, treeview-item));
 
 		&:last-child {
-			$last-child: setter(map-get($item, last-child), ());
-
-			@include clay-css($last-child);
+			@include clay-css(
+				map-deep-get($cadmin-treeview-dark, treeview-item, last-child)
+			);
 		}
 	}
 
 	.treeview-link {
-		$link: setter(map-get($cadmin-treeview-dark, link), ());
-
-		@include clay-link($link);
+		@include clay-link(map-get($cadmin-treeview-dark, link));
 	}
 
 	.component-action {
-		$component-action: setter(
-			map-get($cadmin-treeview-dark, component-action),
-			()
+		@include clay-button-variant(
+			map-get($cadmin-treeview-dark, component-action)
 		);
-
-		@include clay-button-variant($component-action);
 	}
 
 	.component-icon {
-		$component-icon: setter(
-			map-get($cadmin-treeview-dark, component-icon),
-			()
-		);
-
-		@include clay-css($component-icon);
+		@include clay-css(map-get($cadmin-treeview-dark, component-icon));
 	}
 
 	.component-text {
-		$component-text: setter(
-			map-get($cadmin-treeview-dark, component-text),
-			()
-		);
-
-		@include clay-css($component-text);
+		@include clay-css(map-get($cadmin-treeview-dark, component-text));
 	}
 }

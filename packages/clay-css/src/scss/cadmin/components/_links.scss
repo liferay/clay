@@ -74,11 +74,6 @@ button.link-outline {
 	@include clay-css($cadmin-component-icon);
 
 	.lexicon-icon {
-		$lexicon-icon: setter(
-			map-get($cadmin-component-icon, lexicon-icon),
-			()
-		);
-
-		@include clay-css($lexicon-icon);
+		@include clay-css(map-get($cadmin-component-icon, lexicon-icon));
 	}
 }
