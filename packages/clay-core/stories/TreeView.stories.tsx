@@ -6,6 +6,7 @@
 import '@clayui/css/lib/css/atlas.css';
 
 import '@clayui/css/src/scss/cadmin.scss';
+import ClayAlert from '@clayui/alert';
 import Button from '@clayui/button';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayDropDownWithItems as DropDownWithItems} from '@clayui/drop-down';
@@ -933,6 +934,57 @@ storiesOf('Components|ClayTreeView', module)
 						</TreeView.Item>
 					)}
 				</TreeView>
+			</Provider>
+		);
+	})
+	.add('async load /w error handling', () => {
+		const [renderToast, setRenderToast] = React.useState(false);
+
+		const onLoadMore = () => {
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+					reject(new Error('Could not load more items'));
+				}, 1000);
+			}).catch(() => {
+				setRenderToast(true);
+			});
+		};
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onLoadMore={onLoadMore}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+				{renderToast && (
+					<ClayAlert.ToastContainer>
+						<ClayAlert
+							autoClose={1000}
+							displayType="danger"
+							title="Error:"
+						>
+							Couldn't load more items
+						</ClayAlert>
+					</ClayAlert.ToastContainer>
+				)}
 			</Provider>
 		);
 	})
