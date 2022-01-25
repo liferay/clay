@@ -55,16 +55,14 @@ $treeview: map-merge(
 			position: relative,
 			user-select: none,
 			treeview-dropping-bottom: (
-				border-bottom-width: 2px,
-				border-bottom-color: $primary-l1,
+				box-shadow: 0 2px 0 0 $primary-l1,
 			),
 			treeview-dropping-middle: (
 				background-color: $primary-l3,
 				border-color: $primary-l1,
 			),
 			treeview-dropping-top: (
-				border-top-color: $primary-l1,
-				border-top-width: 2px,
+				box-shadow: 0 -2px 0 0 $primary-l1,
 			),
 			hover: (
 				text-decoration: none,
