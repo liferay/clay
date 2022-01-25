@@ -140,19 +140,19 @@
 	@include clay-link(map-get($cadmin-treeview, link));
 
 	&.treeview-dropping-bottom {
-		@include clay-css(
+		@include clay-link(
 			map-deep-get($cadmin-treeview, link, treeview-dropping-bottom)
 		);
 	}
 
 	&.treeview-dropping-middle {
-		@include clay-css(
+		@include clay-link(
 			map-deep-get($cadmin-treeview, link, treeview-dropping-middle)
 		);
 	}
 
 	&.treeview-dropping-top {
-		@include clay-css(
+		@include clay-link(
 			map-deep-get($cadmin-treeview, link, treeview-dropping-top)
 		);
 	}
