@@ -131,19 +131,21 @@
 	@include clay-link(map-get($treeview, link));
 
 	&.treeview-dropping-bottom {
-		@include clay-css(
+		@include clay-link(
 			map-deep-get($treeview, link, treeview-dropping-bottom)
 		);
 	}
 
 	&.treeview-dropping-middle {
-		@include clay-css(
+		@include clay-link(
 			map-deep-get($treeview, link, treeview-dropping-middle)
 		);
 	}
 
 	&.treeview-dropping-top {
-		@include clay-css(map-deep-get($treeview, link, treeview-dropping-top));
+		@include clay-link(
+			map-deep-get($treeview, link, treeview-dropping-top)
+		);
 	}
 
 	&.hover,

@@ -55,16 +55,14 @@ $cadmin-treeview: map-merge(
 			position: relative,
 			user-select: none,
 			treeview-dropping-bottom: (
-				border-bottom-width: 2px,
-				border-bottom-color: $cadmin-primary-l1,
+				box-shadow: 0 2px 0 0 $cadmin-primary-l1,
 			),
 			treeview-dropping-middle: (
 				background-color: $cadmin-primary-l3,
 				border-color: $cadmin-primary-l1,
 			),
 			treeview-dropping-top: (
-				border-top-color: $cadmin-primary-l1,
-				border-top-width: 2px,
+				box-shadow: 0 -2px 0 0 $cadmin-primary-l1,
 			),
 			hover: (
 				text-decoration: none,
