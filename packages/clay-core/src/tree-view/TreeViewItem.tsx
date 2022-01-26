@@ -37,6 +37,7 @@ export const TreeViewItem = React.forwardRef<
 		children,
 		className,
 		isDragging,
+		onClick,
 		overPosition,
 		overTarget,
 		...otherProps
@@ -99,6 +100,7 @@ export const TreeViewItem = React.forwardRef<
 		<SpacingContext.Provider value={spacing + 24}>
 			<li
 				{...otherProps}
+				onClick={group ? onClick : undefined}
 				className={classNames('treeview-item', className, {
 					'treeview-item-dragging': isDragging,
 				})}
@@ -127,7 +129,30 @@ export const TreeViewItem = React.forwardRef<
 							setFocus(false);
 						}
 					}}
-					onClick={() => {
+					onClick={(event) => {
+						if (
+							typeof left !== 'string' &&
+							group &&
+							(left as React.ReactElement)?.props.onClick
+						) {
+							(left as React.ReactElement).props.onClick(event);
+						}
+
+						if (!group && onClick) {
+							(
+								onClick as unknown as (
+									event: React.MouseEvent<
+										HTMLDivElement,
+										MouseEvent
+									>
+								) => void
+							)(event);
+						}
+
+						if (event.defaultPrevented) {
+							return;
+						}
+
 						if (group) {
 							toggle(item.key);
 						} else {
@@ -274,6 +299,7 @@ export const TreeViewItem = React.forwardRef<
 						) : group ? (
 							React.cloneElement(left as React.ReactElement, {
 								actions,
+								onClick: undefined,
 							})
 						) : (
 							<TreeViewItemStack
