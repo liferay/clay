@@ -37,7 +37,7 @@ type Position = ValueOf<typeof TARGET_POSITION>;
 const DISTANCE = 0.2;
 
 function getKey(key: React.Key) {
-	return `${key}`.replace('.$', '');
+	return typeof key === 'string' ? `${key}`.replace('.$', '') : key;
 }
 
 function isMovingIntoItself(from: Array<number>, path: Array<number>) {
