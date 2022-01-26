@@ -324,7 +324,7 @@ export function TreeViewItemStack({
 	const {
 		expandOnCheck,
 		expandedKeys,
-		expanderButtonClasses,
+		expanderClassName,
 		expanderIcons,
 		nestedKey,
 		open,
@@ -341,12 +341,6 @@ export function TreeViewItemStack({
 
 	const hasChildren = nestedChildren && nestedChildren.length > 0;
 
-	const cssClasses = ['component-expander'];
-
-	Array.isArray(expanderButtonClasses)
-		? expanderButtonClasses.forEach((c) => cssClasses.push(c))
-		: cssClasses.push(expanderButtonClasses!);
-
 	return (
 		<Layout.ContentRow {...otherProps}>
 			{expandable && (
@@ -354,9 +348,13 @@ export function TreeViewItemStack({
 					<Button
 						aria-controls={`${item.key}`}
 						aria-expanded={expandedKeys.has(item.key)}
-						className={classNames(cssClasses, {
-							collapsed: expandedKeys.has(item.key),
-						})}
+						className={classNames(
+							'component-expander',
+							expanderClassName,
+							{
+								collapsed: expandedKeys.has(item.key),
+							}
+						)}
 						displayType={null}
 						monospaced
 						onClick={() => toggle(item.key)}

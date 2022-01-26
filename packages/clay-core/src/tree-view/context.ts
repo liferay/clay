@@ -17,7 +17,7 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	childrenRoot: React.MutableRefObject<ChildrenFunction<Object> | null>;
 	dragAndDrop?: boolean;
 	expandOnCheck?: boolean;
-	expanderButtonClasses?: Array<string> | string;
+	expanderClassName?: string;
 	expanderIcons?: Icons;
 	nestedKey?: string;
 	onLoadMore?: (item: any) => Promise<unknown>;

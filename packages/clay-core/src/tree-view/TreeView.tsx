@@ -38,7 +38,7 @@ interface ITreeViewProps<T>
 	/**
 	 * Extra classes passed to the expander button.
 	 */
-	expanderButtonClasses?: Array<string> | string;
+	expanderClassName?: string;
 
 	/*
 	 * Flag to modify Node expansion state icons.
@@ -83,7 +83,7 @@ export function TreeView<T>({
 	dragAndDrop = false,
 	expandOnCheck = false,
 	expandedKeys,
-	expanderButtonClasses,
+	expanderClassName,
 	expanderIcons,
 	items,
 	nestedKey = 'children',
@@ -120,7 +120,7 @@ export function TreeView<T>({
 		childrenRoot: childrenRootRef,
 		dragAndDrop,
 		expandOnCheck,
-		expanderButtonClasses,
+		expanderClassName,
 		expanderIcons,
 		nestedKey,
 		onLoadMore,
