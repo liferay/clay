@@ -337,7 +337,7 @@ storiesOf('Components|ClayTreeView', module)
 	.add('w/styling', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView
-				expanderButtonClasses="expander-css-class-1"
+				expanderClassName="expander-css-class-1"
 				items={[
 					{
 						children: [
