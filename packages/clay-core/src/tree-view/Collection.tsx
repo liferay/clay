@@ -3,11 +3,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {Key, useCallback} from 'react';
 
 import {ItemContextProvider, useItem} from './useItem';
+import {useTreeViewContext} from './context';
 
-export type ChildrenFunction<T> = (item: T) => React.ReactElement;
+export type Selection = {
+	toggle: (key: Key) => void;
+	has: (key: Key) => boolean;
+};
+
+export type ChildrenFunction<T> = (
+	item: T,
+	selection: Selection
+) => React.ReactElement;
 
 export interface ICollectionProps<T> {
 	children: React.ReactNode | ChildrenFunction<T>;
@@ -37,13 +46,24 @@ export function Collection<T extends Record<any, any>>({
 	children,
 	items,
 }: ICollectionProps<T>) {
+	const {selection} = useTreeViewContext();
 	const {key: parentKey} = useItem();
+
+	const hasKey = useCallback(
+		(key: Key) => {
+			return selection.selectedKeys.has(String(key));
+		},
+		[selection.selectedKeys]
+	);
 
 	return (
 		<>
 			{typeof children === 'function' && items
 				? items.map((item, index) => {
-						const child = children(item);
+						const child = children(item, {
+							has: hasKey,
+							toggle: selection.toggleSelection,
+						});
 
 						const key = getKey(
 							index,

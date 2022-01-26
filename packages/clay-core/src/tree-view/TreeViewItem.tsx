@@ -9,7 +9,7 @@ import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useState} from 'react';
+import React, {useContext, useCallback, useState, Key} from 'react';
 
 import {Icons, useTreeViewContext} from './context';
 import {useItem} from './useItem';
@@ -72,14 +72,27 @@ export const TreeViewItem = React.forwardRef<
 		// @ts-ignore
 		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
+	const hasKey = useCallback(
+		(key: Key) => {
+			return selection.selectedKeys.has(String(key));
+		},
+		[selection.selectedKeys]
+	);
+
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
-		return React.cloneElement(childrenRoot.current(item), {
-			actions,
-			isDragging,
-			overPosition,
-			overTarget,
-			ref,
-		});
+		return React.cloneElement(
+			childrenRoot.current(item, {
+				has: hasKey,
+				toggle: selection.toggleSelection,
+			}),
+			{
+				actions,
+				isDragging,
+				overPosition,
+				overTarget,
+				ref,
+			}
+		);
 	}
 
 	return (
