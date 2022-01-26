@@ -34,7 +34,7 @@
 		"lint": "eslint \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"site": "cd next.clayui.com && yarn build && yarn serve",
 		"sizeLimit": "size-limit",
-		"storybook:build": "NODE_OPTIONS=--max_old_space_size=4096 build-storybook -c .storybook -o .storybook-static",
+		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
 		"test": "jest",
 		"version": "prettier --write -- \"**/CHANGELOG.md\" \"lerna.json\" && git add -- \"packages/clay-css/src/scss/_license-text.scss\""

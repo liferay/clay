@@ -42,6 +42,14 @@ module.exports = {
 			})
 		);
 
+		config.optimization = {
+			splitChunks: {
+				chunks: 'all',
+				minSize: 30 * 1024,
+				maxSize: 1024 * 1024,
+			},
+		};
+
 		return config;
 	},
 };
