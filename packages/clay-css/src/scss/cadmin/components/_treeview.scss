@@ -120,20 +120,6 @@
 			map-deep-get($cadmin-treeview, treeview-item, last-child)
 		);
 	}
-
-	&.disabled {
-		cursor: $cadmin-disabled-cursor;
-		opacity: 0.4;
-
-		.treeview-dropping {
-			&-bottom,
-			&-middle,
-			&-top {
-				border-color: transparent;
-				background-color: transparent;
-			}
-		}
-	}
 }
 
 .treeview-link {
@@ -197,6 +183,20 @@
 				)
 			);
 		}
+	}
+}
+
+.treeview-item-dragging {
+	@include clay-css(map-get($cadmin-treeview, treeview-item-dragging));
+
+	.treeview-link {
+		@include clay-link(
+			map-deep-get(
+				$cadmin-treeview,
+				treeview-item-dragging,
+				treeview-link
+			)
+		);
 	}
 }
 

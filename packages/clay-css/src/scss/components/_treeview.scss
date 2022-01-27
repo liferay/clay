@@ -111,20 +111,6 @@
 	&:last-child {
 		@include clay-css(map-deep-get($treeview, treeview-item, last-child));
 	}
-
-	&.disabled {
-		cursor: $disabled-cursor;
-		opacity: 0.4;
-
-		.treeview-dropping {
-			&-bottom,
-			&-middle,
-			&-top {
-				border-color: transparent;
-				background-color: transparent;
-			}
-		}
-	}
 }
 
 .treeview-link {
@@ -186,6 +172,16 @@
 				)
 			);
 		}
+	}
+}
+
+.treeview-item-dragging {
+	@include clay-css(map-get($treeview, treeview-item-dragging));
+
+	.treeview-link {
+		@include clay-link(
+			map-deep-get($treeview, treeview-item-dragging, treeview-link)
+		);
 	}
 }
 

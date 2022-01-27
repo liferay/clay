@@ -42,6 +42,15 @@ $treeview: map-merge(
 		treeview-item: (
 			word-wrap: break-word,
 		),
+		treeview-item-dragging: (
+			cursor: $disabled-cursor,
+			opacity: 0.4,
+			treeview-link: (
+				background-color: transparent,
+				border-color: transparent,
+				box-shadow: none,
+			),
+		),
 		link: (
 			cursor: pointer,
 			display: block,
