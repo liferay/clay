@@ -411,7 +411,7 @@ export function TreeViewItemStack({
 							{loading ? (
 								<ClayLoadingIndicator small />
 							) : (
-								hasChildren && (
+								(hasChildren || !nestedChildren) && (
 									<Expander expanderIcons={expanderIcons} />
 								)
 							)}
