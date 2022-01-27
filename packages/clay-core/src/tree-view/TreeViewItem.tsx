@@ -58,6 +58,7 @@ export const TreeViewItem = React.forwardRef<
 		replace,
 		rootRef,
 		selection,
+		selectionMode,
 		toggle,
 	} = useTreeViewContext();
 
@@ -111,6 +112,9 @@ export const TreeViewItem = React.forwardRef<
 						group ? expandedKeys.has(item.key) : undefined
 					}
 					className={classNames('treeview-link', {
+						active:
+							selectionMode === 'single' &&
+							selection.selectedKeys.has(item.key),
 						collapsed: group && expandedKeys.has(item.key),
 						focus,
 						'treeview-dropping-bottom':
@@ -151,6 +155,10 @@ export const TreeViewItem = React.forwardRef<
 
 						if (event.defaultPrevented) {
 							return;
+						}
+
+						if (selectionMode === 'single') {
+							selection.toggleSelection(item.key);
 						}
 
 						if (group) {

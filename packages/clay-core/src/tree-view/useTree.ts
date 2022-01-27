@@ -41,7 +41,7 @@ export interface ITreeProps<T>
 	 * A callback which is called when the property of items is changed.
 	 */
 	onItemsChange?: (items: ICollectionProps<T>['items']) => void;
-	selectionMode?: 'multiple' | 'single';
+	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 }
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
