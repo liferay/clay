@@ -87,7 +87,7 @@ export const TreeViewItem = React.forwardRef<
 			<li
 				{...otherProps}
 				className={classNames('treeview-item', className, {
-					disabled: isDragging,
+					'treeview-item-dragging': isDragging,
 				})}
 				role="none"
 			>
