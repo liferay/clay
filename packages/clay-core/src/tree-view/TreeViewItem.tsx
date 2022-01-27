@@ -11,6 +11,7 @@ import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {Key, useCallback, useContext, useState} from 'react';
 
+import {removeItemInternalProps} from './Collection';
 import {Icons, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
@@ -81,7 +82,7 @@ export const TreeViewItem = React.forwardRef<
 
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
-			childrenRoot.current(item, {
+			childrenRoot.current(removeItemInternalProps(item), {
 				has: hasKey,
 				toggle: selection.toggleSelection,
 			}),

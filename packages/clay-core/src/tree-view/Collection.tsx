@@ -14,7 +14,7 @@ export type Selection = {
 };
 
 export type ChildrenFunction<T> = (
-	item: T,
+	item: Omit<T, 'indexes' | 'itemRef' | 'key' | 'parentItemRef'>,
 	selection: Selection
 ) => React.ReactElement;
 
@@ -42,6 +42,13 @@ export function getKey(
 	return parentKey ? `${parentKey}.${index}` : `$.${index}`;
 }
 
+export function removeItemInternalProps<T extends Record<any, any>>(props: T) {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const {indexes, itemRef, key, parentItemRef, ...item} = props;
+
+	return item;
+}
+
 export function Collection<T extends Record<any, any>>({
 	children,
 	items,
@@ -60,7 +67,7 @@ export function Collection<T extends Record<any, any>>({
 		<>
 			{typeof children === 'function' && items
 				? items.map((item, index) => {
-						const child = children(item, {
+						const child = children(removeItemInternalProps(item), {
 							has: hasKey,
 							toggle: selection.toggleSelection,
 						});
