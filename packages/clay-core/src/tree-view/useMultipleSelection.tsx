@@ -297,7 +297,7 @@ export function useMultipleSelection<T>(
 					setSelectionKeys(selecteds);
 					break;
 				}
-				case 'single': {
+				default: {
 					if (selectedKeys.has(key)) {
 						setSelectionKeys(new Set<Key>());
 					} else {

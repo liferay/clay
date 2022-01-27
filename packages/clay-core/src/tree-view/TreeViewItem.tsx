@@ -9,7 +9,7 @@ import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useCallback, useState, Key} from 'react';
+import React, {Key, useCallback, useContext, useState} from 'react';
 
 import {Icons, useTreeViewContext} from './context';
 import {useItem} from './useItem';
@@ -101,10 +101,10 @@ export const TreeViewItem = React.forwardRef<
 		<SpacingContext.Provider value={spacing + 24}>
 			<li
 				{...otherProps}
-				onClick={group ? onClick : undefined}
 				className={classNames('treeview-item', className, {
 					'treeview-item-dragging': isDragging,
 				})}
+				onClick={group ? onClick : undefined}
 				role="none"
 			>
 				<div

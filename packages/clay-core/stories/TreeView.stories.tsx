@@ -14,7 +14,7 @@ import {ClayCheckbox as Checkbox, ClayInput as Input} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {Provider} from '@clayui/provider';
 import Sticker from '@clayui/sticker';
-import {boolean, select} from '@storybook/addon-knobs';
+import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React, {useMemo, useState} from 'react';
 
@@ -826,8 +826,8 @@ storiesOf('Components|ClayTreeView', module)
 						select(
 							'Selection mode',
 							{
-								'multiple-recursive': 'multiple-recursive',
 								multiple: 'multiple',
+								'multiple-recursive': 'multiple-recursive',
 								single: 'single',
 							},
 							'multiple-recursive'

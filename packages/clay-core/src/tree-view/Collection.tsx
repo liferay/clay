@@ -5,8 +5,8 @@
 
 import React, {Key, useCallback} from 'react';
 
-import {ItemContextProvider, useItem} from './useItem';
 import {useTreeViewContext} from './context';
+import {ItemContextProvider, useItem} from './useItem';
 
 export type Selection = {
 	toggle: (key: Key) => void;
