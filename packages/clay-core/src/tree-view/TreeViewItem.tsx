@@ -35,9 +35,7 @@ export const TreeViewItem = React.forwardRef<
 	{
 		actions,
 		children,
-		className,
 		isDragging,
-		onClick,
 		overPosition,
 		overTarget,
 		...otherProps
@@ -97,33 +95,54 @@ export const TreeViewItem = React.forwardRef<
 		);
 	}
 
+	const hasItemStack =
+		typeof left !== 'string' && group && React.isValidElement(left);
+
+	const itemStackProps = hasItemStack
+		? (left as React.ReactElement).props
+		: {};
+
+	// The ownership of TreeView properties changes according to the component
+	// declaration that helps in inferring the visual intuition of which
+	// component is Node.
+	const propsOwnership = group ? 'item' : 'node';
+
+	const itemProps = propsOwnership === 'item' ? otherProps : {};
+	const nodeProps = propsOwnership === 'node' ? otherProps : {};
+
 	return (
 		<SpacingContext.Provider value={spacing + 24}>
 			<li
-				{...otherProps}
-				className={classNames('treeview-item', className, {
+				{...itemProps}
+				className={classNames('treeview-item', itemProps.className, {
 					'treeview-item-dragging': isDragging,
 				})}
-				onClick={group ? onClick : undefined}
 				role="none"
 			>
 				<div
+					{...itemStackProps}
+					{...nodeProps}
 					aria-expanded={
 						group ? expandedKeys.has(item.key) : undefined
 					}
-					className={classNames('treeview-link', {
-						active:
-							selectionMode === 'single' &&
-							selection.selectedKeys.has(item.key),
-						collapsed: group && expandedKeys.has(item.key),
-						focus,
-						'treeview-dropping-bottom':
-							overTarget && overPosition === 'bottom',
-						'treeview-dropping-middle':
-							overTarget && overPosition === 'middle',
-						'treeview-dropping-top':
-							overTarget && overPosition === 'top',
-					})}
+					className={classNames(
+						'treeview-link',
+						itemStackProps.className,
+						nodeProps.className,
+						{
+							active:
+								selectionMode === 'single' &&
+								selection.selectedKeys.has(item.key),
+							collapsed: group && expandedKeys.has(item.key),
+							focus,
+							'treeview-dropping-bottom':
+								overTarget && overPosition === 'bottom',
+							'treeview-dropping-middle':
+								overTarget && overPosition === 'middle',
+							'treeview-dropping-top':
+								overTarget && overPosition === 'top',
+						}
+					)}
 					onBlur={({currentTarget, relatedTarget}) => {
 						if (
 							actions &&
@@ -134,17 +153,13 @@ export const TreeViewItem = React.forwardRef<
 						}
 					}}
 					onClick={(event) => {
-						if (
-							typeof left !== 'string' &&
-							group &&
-							(left as React.ReactElement)?.props.onClick
-						) {
-							(left as React.ReactElement).props.onClick(event);
+						if (hasItemStack && itemStackProps.onClick) {
+							itemStackProps.onClick(event);
 						}
 
-						if (!group && onClick) {
+						if (nodeProps.onClick) {
 							(
-								onClick as unknown as (
+								nodeProps.onClick as unknown as (
 									event: React.MouseEvent<
 										HTMLDivElement,
 										MouseEvent
@@ -281,6 +296,8 @@ export const TreeViewItem = React.forwardRef<
 					ref={ref}
 					role="treeitem"
 					style={{
+						...(itemStackProps?.style ?? {}),
+						...(nodeProps?.style ?? {}),
 						paddingLeft: `${
 							spacing + (group || onLoadMore ? 0 : 24)
 						}px`,
