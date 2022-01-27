@@ -76,7 +76,7 @@ export const TreeViewItem = React.forwardRef<
 
 	const hasKey = useCallback(
 		(key: Key) => {
-			return selection.selectedKeys.has(String(key));
+			return selection.selectedKeys.has(key);
 		},
 		[selection.selectedKeys]
 	);
