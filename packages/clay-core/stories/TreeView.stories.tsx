@@ -892,6 +892,85 @@ storiesOf('Components|ClayTreeView', module)
 			</Provider>
 		);
 	})
+	.add('manually trigger single selection', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		const [selected, setSelected] = useState({});
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<p>Selected items: {Array.from(selectedKeys).join(', ')}</p>
+				<pre
+					style={{
+						backgroundColor: '#f7f8f9',
+						border: '1px solid #e7e7ed',
+						color: '#393a4a',
+						height: '60px',
+						overflowY: 'auto',
+						padding: '10px',
+					}}
+				>
+					{JSON.stringify(selected)}
+				</pre>
+
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					selectionMode="single"
+					showExpanderOnHover={false}
+				>
+					{(item, selection) => (
+						<TreeView.Item>
+							<TreeView.ItemStack
+								onClick={() => {
+									if (!selection.has(item.id)) {
+										setSelected(item);
+									}
+
+									selection.toggle(item.id);
+								}}
+								style={{
+									backgroundColor: selection.has(item.id)
+										? '#ffb46e'
+										: '',
+								}}
+							>
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item
+										onClick={() => {
+											if (!selection.has(item.id)) {
+												setSelected(item);
+											}
+
+											selection.toggle(item.id);
+										}}
+										style={{
+											backgroundColor: selection.has(
+												item.id
+											)
+												? '#ffb46e'
+												: '',
+										}}
+									>
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
 	.add('large data', () => {
 		const rootNode = createNode(10, 5);
 
