@@ -123,23 +123,31 @@
 }
 
 .treeview-link {
-	@include clay-link(map-get($cadmin-treeview, link));
+	@include clay-link(map-get($cadmin-treeview, treeview-link));
 
 	&.treeview-dropping-bottom {
 		@include clay-link(
-			map-deep-get($cadmin-treeview, link, treeview-dropping-bottom)
+			map-deep-get(
+				$cadmin-treeview,
+				treeview-link,
+				treeview-dropping-bottom
+			)
 		);
 	}
 
 	&.treeview-dropping-middle {
 		@include clay-link(
-			map-deep-get($cadmin-treeview, link, treeview-dropping-middle)
+			map-deep-get(
+				$cadmin-treeview,
+				treeview-link,
+				treeview-dropping-middle
+			)
 		);
 	}
 
 	&.treeview-dropping-top {
 		@include clay-link(
-			map-deep-get($cadmin-treeview, link, treeview-dropping-top)
+			map-deep-get($cadmin-treeview, treeview-link, treeview-dropping-top)
 		);
 	}
 
@@ -254,7 +262,7 @@
 	}
 
 	.treeview-link {
-		@include clay-link(map-get($cadmin-treeview-light, link));
+		@include clay-link(map-get($cadmin-treeview-light, treeview-link));
 	}
 
 	.component-action {
@@ -320,7 +328,7 @@
 	}
 
 	.treeview-link {
-		@include clay-link(map-get($cadmin-treeview-dark, link));
+		@include clay-link(map-get($cadmin-treeview-dark, treeview-link));
 	}
 
 	.component-action {

@@ -51,7 +51,7 @@ $cadmin-treeview: map-merge(
 				box-shadow: none,
 			),
 		),
-		link: (
+		treeview-link: (
 			cursor: pointer,
 			display: block,
 			border-color: transparent,
@@ -164,7 +164,7 @@ $cadmin-treeview-light: map-deep-merge(
 				background-color: $cadmin-white,
 			),
 		),
-		link: (
+		treeview-link: (
 			color: $cadmin-gray-600,
 			hover: (
 				background-color: $cadmin-gray-100,
@@ -196,7 +196,7 @@ $cadmin-treeview-dark: map-deep-merge(
 				color: $cadmin-primary-l1,
 			),
 		),
-		link: (
+		treeview-link: (
 			color: $cadmin-secondary-l1,
 			hover: (
 				background-color: rgba($cadmin-white, 0.04),
