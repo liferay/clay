@@ -118,7 +118,7 @@ fieldset[disabled] label {
 	}
 
 	.label {
-		@include clay-label-size($form-control-label-size);
+		@include clay-label-variant($form-control-label-size);
 	}
 }
 
