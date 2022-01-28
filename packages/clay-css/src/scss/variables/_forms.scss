@@ -323,7 +323,7 @@ $form-control-label-size: map-deep-merge(
 
 $form-control-tag-group-padding-y: (
 		$input-height - $input-border-bottom-width - $input-border-top-width -
-			map-get($form-control-label-size, height) -
+			map-get($form-control-label-size, min-height) -
 			(map-get($form-control-label-size, margin-bottom)) -
 			(map-get($form-control-label-size, margin-top))
 	) * 0.5 !default;

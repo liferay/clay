@@ -341,7 +341,7 @@ $cadmin-form-control-label-size: map-deep-merge(
 $cadmin-form-control-tag-group-padding-y: (
 		$cadmin-input-height - $cadmin-input-border-bottom-width -
 			$cadmin-input-border-top-width -
-			map-get($cadmin-form-control-label-size, height) -
+			map-get($cadmin-form-control-label-size, min-height) -
 			(map-get($cadmin-form-control-label-size, margin-bottom)) -
 			(map-get($cadmin-form-control-label-size, margin-top))
 	) * 0.5 !default;

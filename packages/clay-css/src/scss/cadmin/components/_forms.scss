@@ -125,7 +125,7 @@ fieldset[disabled] label {
 	}
 
 	.label {
-		@include clay-label-size($cadmin-form-control-label-size);
+		@include clay-label-variant($cadmin-form-control-label-size);
 	}
 }
 
