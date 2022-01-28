@@ -120,40 +120,34 @@
 			map-deep-get($cadmin-treeview, treeview-item, last-child)
 		);
 	}
-
-	&.disabled {
-		cursor: $cadmin-disabled-cursor;
-		opacity: 0.4;
-
-		.treeview-dropping {
-			&-bottom,
-			&-middle,
-			&-top {
-				border-color: transparent;
-				background-color: transparent;
-			}
-		}
-	}
 }
 
 .treeview-link {
-	@include clay-link(map-get($cadmin-treeview, link));
+	@include clay-link(map-get($cadmin-treeview, treeview-link));
 
 	&.treeview-dropping-bottom {
 		@include clay-link(
-			map-deep-get($cadmin-treeview, link, treeview-dropping-bottom)
+			map-deep-get(
+				$cadmin-treeview,
+				treeview-link,
+				treeview-dropping-bottom
+			)
 		);
 	}
 
 	&.treeview-dropping-middle {
 		@include clay-link(
-			map-deep-get($cadmin-treeview, link, treeview-dropping-middle)
+			map-deep-get(
+				$cadmin-treeview,
+				treeview-link,
+				treeview-dropping-middle
+			)
 		);
 	}
 
 	&.treeview-dropping-top {
 		@include clay-link(
-			map-deep-get($cadmin-treeview, link, treeview-dropping-top)
+			map-deep-get($cadmin-treeview, treeview-link, treeview-dropping-top)
 		);
 	}
 
@@ -197,6 +191,20 @@
 				)
 			);
 		}
+	}
+}
+
+.treeview-item-dragging {
+	@include clay-css(map-get($cadmin-treeview, treeview-item-dragging));
+
+	.treeview-link {
+		@include clay-link(
+			map-deep-get(
+				$cadmin-treeview,
+				treeview-item-dragging,
+				treeview-link
+			)
+		);
 	}
 }
 
@@ -254,7 +262,7 @@
 	}
 
 	.treeview-link {
-		@include clay-link(map-get($cadmin-treeview-light, link));
+		@include clay-link(map-get($cadmin-treeview-light, treeview-link));
 	}
 
 	.component-action {
@@ -320,7 +328,7 @@
 	}
 
 	.treeview-link {
-		@include clay-link(map-get($cadmin-treeview-dark, link));
+		@include clay-link(map-get($cadmin-treeview-dark, treeview-link));
 	}
 
 	.component-action {

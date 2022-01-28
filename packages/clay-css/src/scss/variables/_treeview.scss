@@ -42,7 +42,16 @@ $treeview: map-merge(
 		treeview-item: (
 			word-wrap: break-word,
 		),
-		link: (
+		treeview-item-dragging: (
+			cursor: $disabled-cursor,
+			opacity: 0.4,
+			treeview-link: (
+				background-color: transparent,
+				border-color: transparent,
+				box-shadow: none,
+			),
+		),
+		treeview-link: (
 			cursor: pointer,
 			display: block,
 			border-color: transparent,
@@ -155,7 +164,7 @@ $treeview-light: map-deep-merge(
 				background-color: $white,
 			),
 		),
-		link: (
+		treeview-link: (
 			color: $gray-600,
 			hover: (
 				background-color: $gray-100,
@@ -187,7 +196,7 @@ $treeview-dark: map-deep-merge(
 				color: $primary-l1,
 			),
 		),
-		link: (
+		treeview-link: (
 			color: $secondary-l1,
 			hover: (
 				background-color: rgba($white, 0.04),

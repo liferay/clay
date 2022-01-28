@@ -42,7 +42,16 @@ $cadmin-treeview: map-merge(
 		treeview-item: (
 			word-wrap: break-word,
 		),
-		link: (
+		treeview-item-dragging: (
+			cursor: $cadmin-disabled-cursor,
+			opacity: 0.4,
+			treeview-link: (
+				background-color: transparent,
+				border-color: transparent,
+				box-shadow: none,
+			),
+		),
+		treeview-link: (
 			cursor: pointer,
 			display: block,
 			border-color: transparent,
@@ -155,7 +164,7 @@ $cadmin-treeview-light: map-deep-merge(
 				background-color: $cadmin-white,
 			),
 		),
-		link: (
+		treeview-link: (
 			color: $cadmin-gray-600,
 			hover: (
 				background-color: $cadmin-gray-100,
@@ -187,7 +196,7 @@ $cadmin-treeview-dark: map-deep-merge(
 				color: $cadmin-primary-l1,
 			),
 		),
-		link: (
+		treeview-link: (
 			color: $cadmin-secondary-l1,
 			hover: (
 				background-color: rgba($cadmin-white, 0.04),
