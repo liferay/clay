@@ -370,24 +370,45 @@ cd {PORTAL_ROOT}/modules
 When working on an issue, you might want to test your changes before submitting
 a pull request.
 
-To test your changes in a liferay-portal (>= 7.3.x) environment you first need
-to link the desired packages.
+To test your changes in a liferay-portal (>= 7.3.x) environment you'll first need
+to install the [verdaccio](https://verdaccio.org/) npm package. **Warning** Please
+note that we don't maintain this tool and won't provide support for it. For usage
+instructions, doubts or any issues that you have, please consult the [project's page](https://github.com/verdaccio/verdaccio)
+on GitHub.
 
 ```bash
-# Let's assume you have made a change in the clay-button component
+# First install the verdaccio package globally
+npm i -g verdaccio
 
-# From the root of the clay repository, run
-yarn workspace @clayui/button build
-yarn workspace @clayui/buttom link
+# Alternatively, if you are using yarn, you can issue this command
+# yarn global add verdaccio
 
-# Note that if you have linked this package before, yarn will print a warning
-# but that doesn't mean that this step failed
+# Once installed, you'll need to run verdaccio locally
+verdaccio
+
+# In order to publish packages, you'll need to create a user and log in
+npm adduser --registry http://localhost:4873
+
+# Let's assume you have made a change in the clay-button component,
+# in order to test those changes, you'll need to publish the package locally.
+
+# Please note that publishing an "existing version" of a module will fail;
+# in order to fix that, you'll need to change the "version" field in the
+# package.json file of the module you want to publish.
+# One you are sure that the version you are going to publish is not
+# published on npmjs.com, you can publish the package locally
+
+cd packages/clay-button
+npm publish --registry http://localhost:4873
+
+# If you are using yarn, you can issue this command instead
+# YARN_REGISTRY=http://localhost:4873 yarn publish
 
 # Now navigate to the frontend-taglib-clay module
 cd {PORTAL_ROOT}/modules/apps/frontend-taglib/frontend-taglib-clay
 
-# Link the @clayui/button package
-yarn link @clayui/button
+# Install the @clayui/button package from your local registry
+YARN_REGISTRY=http://localhost:4873 yarn add @clayui/button
 
 # Before deploying you shoud stop tomcat
 
