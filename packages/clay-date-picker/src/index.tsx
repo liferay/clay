@@ -423,6 +423,14 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		) => {
 			const [day] = daysSelected;
 
+			if (hours === '--' && typeof minutes === 'number') {
+				hours = 0;
+			}
+
+			if (minutes === '--' && typeof hours === 'number') {
+				minutes = 0;
+			}
+
 			if (value) {
 				let date =
 					typeof hours === 'string' && typeof minutes === 'string'
