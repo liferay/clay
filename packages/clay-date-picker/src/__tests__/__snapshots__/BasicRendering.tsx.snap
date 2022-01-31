@@ -2153,7 +2153,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                           maxlength="2"
                           readonly=""
                           type="text"
-                          value="00"
+                          value="--"
                         />
                         <span
                           class="clay-time-divider"
@@ -2167,7 +2167,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                           maxlength="2"
                           readonly=""
                           type="text"
-                          value="00"
+                          value="--"
                         />
                       </div>
                       <div
