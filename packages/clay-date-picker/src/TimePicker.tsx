@@ -6,6 +6,8 @@
 import ClayTimePicker, {Input} from '@clayui/time-picker';
 import React from 'react';
 
+import {formatDate, setDate} from './Helpers';
+
 interface IProps {
 	currentTime: string;
 	disabled?: boolean;
@@ -66,10 +68,13 @@ const ClayDatePickerTimePicker: React.FunctionComponent<IProps> = ({
 		setValues((prevValues) => ({
 			...prevValues,
 			ampm: ampm as Input['ampm'],
-			hours: String(hours),
+			hours:
+				use12Hours && hours !== DEFAULT_VALUE
+					? formatDate(setDate(new Date(), {hours}), 'hh')
+					: String(hours),
 			minutes: String(minutes),
 		}));
-	}, [currentTime]);
+	}, [currentTime, use12Hours]);
 
 	return (
 		<div className="time-picker">
