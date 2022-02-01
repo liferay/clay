@@ -176,6 +176,35 @@
 	}
 }
 
+/// A mixin that generates media-breakpoint-{up|down} styles from a Sass map.
+/// @param {Map} $map - A map of `key: value` pairs that is passed to the `clay-css` mixin
+
+@mixin clay-generate-media-breakpoints($map) {
+	@if (map-get($map, media-breakpoint-up)) {
+		$media-breakpoint-up: map-get($map, media-breakpoint-up);
+
+		@each $breakpoint in map-keys($media-breakpoint-up) {
+			$breakpoint-up: map-get($map, $breakpoint);
+
+			@include media-breakpoint-up($breakpoint) {
+				@include clay-css($breakpoint-up);
+			}
+		}
+	}
+
+	@if (map-get($map, media-breakpoint-down)) {
+		$media-breakpoint-down: map-get($map, media-breakpoint-down);
+
+		@each $breakpoint in map-keys($map) {
+			$breakpoint-down: map-get($map, $breakpoint);
+
+			@include media-breakpoint-down($breakpoint) {
+				@include clay-css($breakpoint-down);
+			}
+		}
+	}
+}
+
 /// A Bootstrap 4 mixin that generates the correct number of grid classes given any value of `$grid-columns`. This mixin is deprecated. This has been inlined into `components/_grid.scss`.
 /// @deprecated
 /// @param {Number} $columns[$grid-columns]
