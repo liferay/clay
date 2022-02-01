@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
+
+### Features
+
+-   **@clayui/popover:** close the popover when the ESC key is pressed ([c49cf89](https://github.com/liferay/clay/commit/c49cf893e11e5a19954f93541c2817f45ec8f93b)), closes [#4567](https://github.com/liferay/clay/issues/4567)
+
 # [3.44.0](https://github.com/liferay/clay/compare/v3.43.1...v3.44.0) (2022-01-10)
 
 ### Features

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** fix time picker default value ([770639f](https://github.com/liferay/clay/commit/770639f1e37486c2844cc3b95e05f36659de3ebf))
+-   **@clayui/date-picker:** fixes error when not formatting time in 12hours when passing to time picker ([2090eb4](https://github.com/liferay/clay/commit/2090eb495f20841259d4ad55381480237eb2b931))
+
 # [3.43.0](https://github.com/liferay/clay/compare/v3.42.0...v3.43.0) (2021-12-29)
 
 ### Features

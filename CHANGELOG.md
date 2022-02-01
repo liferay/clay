@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
+
+### Bug Fixes
+
+-   **@clayui/core:** add a default value to nestedKey ([075221d](https://github.com/liferay/clay/commit/075221ddc826f98a8de8999dc90708cb2d637f72)), closes [#4584](https://github.com/liferay/clay/issues/4584)
+-   **@clayui/core:** Change .treeview-item.disabled to .treeview-item-dragging ([b87b6b8](https://github.com/liferay/clay/commit/b87b6b8d80f53ba91681a6d3e64afc8ed9c287a7))
+-   **@clayui/core:** hide expander icon on nodes that don't have chidren ([d705fc6](https://github.com/liferay/clay/commit/d705fc6d93ef50a44a70672bfc1e9b284041c903)), closes [#4581](https://github.com/liferay/clay/issues/4581)
+-   **@clayui/css:** Cadmin Links removes unnecessary `setter()` from `.component-icon` ([130e708](https://github.com/liferay/clay/commit/130e70801b306488d49aba033ee7267052dae4b1))
+-   **@clayui/css:** Cadmin reset `nav-link` pseudo elements ([7038224](https://github.com/liferay/clay/commit/70382242428a0634fa24f4afa2639d2d3fbf8e1d))
+-   **@clayui/css:** Cadmin reset Custom Checkbox and Radio pseudo elements ([dbbbb02](https://github.com/liferay/clay/commit/dbbbb024dbd38807631041d0b48a74efe74a657b))
+-   **@clayui/css:** Cadmin Treeview removes `setter()`, no longer necessary ([1d4d4a9](https://github.com/liferay/clay/commit/1d4d4a94ee76c14877a36ad72a1085d6de04f205))
+-   **@clayui/css:** Cadmin Treeview use `box-shadow` instead of border to indicate drop zone ([58ca599](https://github.com/liferay/clay/commit/58ca5999ca573288dd42e7d1350d9ae42f4f6fd2))
+-   **@clayui/css:** Forms `label` inside `form-control` should use `min-height` ([108d442](https://github.com/liferay/clay/commit/108d442ea15cd98ade17df20b44583dc41dc9543))
+-   **@clayui/css:** Forms use mixin `clay-label-variant` instead of deprecated `clay-label-size` ([a0c15fc](https://github.com/liferay/clay/commit/a0c15fc5fc69bf58fa067956e0db760a2952e6f0))
+-   **@clayui/css:** Treeview renames the key `link` to `treeview-link` ([8378346](https://github.com/liferay/clay/commit/8378346bb63c341cb7558fd69b6a3c68567d35cc))
+-   **@clayui/css:** Treeview replaces `.treeview-item.disabled` with `.treeview-item-dragging` ([a9f88d0](https://github.com/liferay/clay/commit/a9f88d0253a222d3bc79ea077375e22e1919df3a))
+-   **@clayui/css:** Treeview use `box-shadow` instead of border to indicate drop zone ([fb93ca7](https://github.com/liferay/clay/commit/fb93ca7d369f41633d9c2f6d40e684a7e16dcb88))
+-   **@clayui/date-picker:** fix time picker default value ([770639f](https://github.com/liferay/clay/commit/770639f1e37486c2844cc3b95e05f36659de3ebf))
+-   **@clayui/date-picker:** fixes error when not formatting time in 12hours when passing to time picker ([2090eb4](https://github.com/liferay/clay/commit/2090eb495f20841259d4ad55381480237eb2b931))
+-   **@clayui/shared:** fix focus control collision when having FocusScope nested ([58bd27f](https://github.com/liferay/clay/commit/58bd27fc24d6754c9662b12332e01e2b209a9e84))
+
+### Features
+
+-   **@clayui/core:** allow passing extra css classes to expander button ([91d40a2](https://github.com/liferay/clay/commit/91d40a27059cc1a5a6206fef7f96cb5eb5c30e51)), closes [#4589](https://github.com/liferay/clay/issues/4589)
+-   **@clayui/css:** Adds treeview component ([776f4bb](https://github.com/liferay/clay/commit/776f4bbb7ecc5ef8d19e44fc315d07b4ff203efc))
+-   **@clayui/css:** Links adds `component-text` and `component-icon` ([5188985](https://github.com/liferay/clay/commit/51889857b1b8ee4b920dcf8b8de779832dba2875))
+-   **@clayui/popover:** close the popover when the ESC key is pressed ([c49cf89](https://github.com/liferay/clay/commit/c49cf893e11e5a19954f93541c2817f45ec8f93b)), closes [#4567](https://github.com/liferay/clay/issues/4567)
+-   add plain/common API for button links ([7148450](https://github.com/liferay/clay/commit/7148450cae6b2d90e6052ececc84743daa8077c0))
+
 ## [3.44.2](https://github.com/liferay/clay/compare/v3.44.1...v3.44.2) (2022-01-12)
 
 ### Bug Fixes

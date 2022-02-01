@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Links removes unnecessary `setter()` from `.component-icon` ([130e708](https://github.com/liferay/clay/commit/130e70801b306488d49aba033ee7267052dae4b1))
+* **@clayui/css:** Cadmin reset `nav-link` pseudo elements ([7038224](https://github.com/liferay/clay/commit/70382242428a0634fa24f4afa2639d2d3fbf8e1d))
+* **@clayui/css:** Cadmin reset Custom Checkbox and Radio pseudo elements ([dbbbb02](https://github.com/liferay/clay/commit/dbbbb024dbd38807631041d0b48a74efe74a657b))
+* **@clayui/css:** Cadmin Treeview removes `setter()`, no longer necessary ([1d4d4a9](https://github.com/liferay/clay/commit/1d4d4a94ee76c14877a36ad72a1085d6de04f205))
+* **@clayui/css:** Cadmin Treeview use `box-shadow` instead of border to indicate drop zone ([58ca599](https://github.com/liferay/clay/commit/58ca5999ca573288dd42e7d1350d9ae42f4f6fd2))
+* **@clayui/css:** Forms `label` inside `form-control` should use `min-height` ([108d442](https://github.com/liferay/clay/commit/108d442ea15cd98ade17df20b44583dc41dc9543))
+* **@clayui/css:** Forms use mixin `clay-label-variant` instead of deprecated `clay-label-size` ([a0c15fc](https://github.com/liferay/clay/commit/a0c15fc5fc69bf58fa067956e0db760a2952e6f0))
+* **@clayui/css:** Treeview renames the key `link` to `treeview-link` ([8378346](https://github.com/liferay/clay/commit/8378346bb63c341cb7558fd69b6a3c68567d35cc))
+* **@clayui/css:** Treeview replaces `.treeview-item.disabled` with `.treeview-item-dragging` ([a9f88d0](https://github.com/liferay/clay/commit/a9f88d0253a222d3bc79ea077375e22e1919df3a))
+* **@clayui/css:** Treeview use `box-shadow` instead of border to indicate drop zone ([fb93ca7](https://github.com/liferay/clay/commit/fb93ca7d369f41633d9c2f6d40e684a7e16dcb88))
+
+
+### Features
+
+* **@clayui/css:** Adds treeview component ([776f4bb](https://github.com/liferay/clay/commit/776f4bbb7ecc5ef8d19e44fc315d07b4ff203efc))
+* **@clayui/css:** Links adds `component-text` and `component-icon` ([5188985](https://github.com/liferay/clay/commit/51889857b1b8ee4b920dcf8b8de779832dba2875))
+
+
+
+
+
 ## [3.44.2](https://github.com/liferay/clay/compare/v3.44.1...v3.44.2) (2022-01-12)
 
 
