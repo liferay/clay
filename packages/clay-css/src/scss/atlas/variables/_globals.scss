@@ -463,16 +463,29 @@ $emphasized-link-hover-darken-percentage: 15% !default;
 
 $paragraph-margin-bottom: 1rem !default;
 
-$display1-size: 6rem !default;
-$display2-size: 5.5rem !default;
-$display3-size: 4.5rem !default;
-$display4-size: 3.5rem !default;
+// Display
 
-$display1-weight: 300 !default;
-$display2-weight: 300 !default;
-$display3-weight: 300 !default;
-$display4-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
+
+// .display-1
+
+$display1-size: 6rem !default;
+$display1-weight: 300 !default;
+
+// .display-2
+
+$display2-size: 5.5rem !default;
+$display2-weight: 300 !default;
+
+// .display-3
+
+$display3-size: 4.5rem !default;
+$display3-weight: 300 !default;
+
+// .display-4
+
+$display4-size: 3.5rem !default;
+$display4-weight: 300 !default;
 
 $lead-font-size: $font-size-base * 1.25 !default;
 $lead-font-weight: 300 !default;

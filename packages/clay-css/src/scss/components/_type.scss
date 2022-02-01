@@ -81,27 +81,27 @@ h6,
 // Type display classes
 
 .display-1 {
-	font-size: $display1-size;
-	font-weight: $display1-weight;
-	line-height: $display-line-height;
+	@include clay-css($display-1);
+
+	@include clay-generate-media-breakpoints($display-1);
 }
 
 .display-2 {
-	font-size: $display2-size;
-	font-weight: $display2-weight;
-	line-height: $display-line-height;
+	@include clay-css($display-2);
+
+	@include clay-generate-media-breakpoints($display-2);
 }
 
 .display-3 {
-	font-size: $display3-size;
-	font-weight: $display3-weight;
-	line-height: $display-line-height;
+	@include clay-css($display-3);
+
+	@include clay-generate-media-breakpoints($display-3);
 }
 
 .display-4 {
-	font-size: $display4-size;
-	font-weight: $display4-weight;
-	line-height: $display-line-height;
+	@include clay-css($display-4);
+
+	@include clay-generate-media-breakpoints($display-4);
 }
 
 // Horizontal rules
