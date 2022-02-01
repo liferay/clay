@@ -10,6 +10,11 @@ import ClayLinkContext from './Context';
 
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**
+	 * Renders the button as a block element.
+	 */
+	block?: boolean;
+
+	/**
 	 * Flag to indicate if link should be borderless.
 	 */
 	borderless?: boolean;
@@ -39,11 +44,17 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	 * Flag to indicate if link need have an outline.
 	 */
 	outline?: boolean;
+
+	/**
+	 * Indicates button should be a small variant.
+	 */
+	small?: boolean;
 }
 
 const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 	(
 		{
+			block,
 			borderless,
 			button,
 			children,
@@ -52,6 +63,7 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 			monospaced,
 			outline,
 			rel,
+			small,
 			target,
 			...otherProps
 		}: IProps,
@@ -66,10 +78,10 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 
 			classes = {
 				btn: !!button,
-				'btn-block': button.block,
-				'btn-monospaced': button.monospaced,
+				'btn-block': button.block || block,
+				'btn-monospaced': button.monospaced || monospaced,
 				'btn-outline-borderless': borderless,
-				'btn-sm': button.small,
+				'btn-sm': button.small || small,
 				[`btn-${displayType}`]: displayType && !outline && !borderless,
 				[`btn-outline-${displayType}`]:
 					displayType && (outline || borderless),
