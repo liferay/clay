@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useContext} from 'react';
 
 import {Keys} from './Keys';
 import {useFocusManagement} from './useFocusManagement';
@@ -27,6 +27,13 @@ interface IProps {
 }
 
 /**
+ * The context helps to identify if the FocusScope is being declared nested, to
+ * avoid focus being controlled by more than one focus manager, we stop event
+ * propagation to prevent the parent focus generator from doing anything.
+ */
+const FocusConflictContext = React.createContext<boolean>(false);
+
+/**
  * FocusScope is a component only for controlling focus and listening
  * for children's key down events, since the component handles the `onKeyDown`
  * event.
@@ -38,6 +45,8 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 }) => {
 	const elRef = React.useRef<null | HTMLElement>(null);
 	const focusManager = useFocusManagement(elRef);
+
+	const hasParentFocus = useContext(FocusConflictContext);
 
 	const onKeyDown = (event: React.KeyboardEvent<any>) => {
 		const {key, shiftKey} = event;
@@ -60,25 +69,33 @@ export const FocusScope: React.FunctionComponent<IProps> = ({
 		}
 	};
 
-	return React.cloneElement(children, {
-		onKeyDown: (event: React.KeyboardEvent) => {
-			// If the element already exists a `onKeyDown` event should
-			// invoke it as well.
-			if (children.props.onKeyDown) {
-				children.props.onKeyDown(event);
-			}
-			onKeyDown(event);
-		},
-		ref: (r: HTMLElement) => {
-			if (r) {
-				elRef.current = r;
-				const {ref} = children;
-				if (ref) {
-					if (typeof ref === 'object') {
-						ref.current = r;
+	return (
+		<FocusConflictContext.Provider value>
+			{React.cloneElement(children, {
+				onKeyDown: (event: React.KeyboardEvent) => {
+					if (hasParentFocus) {
+						event.stopPropagation();
 					}
-				}
-			}
-		},
-	});
+
+					// If the element already exists a `onKeyDown` event should
+					// invoke it as well.
+					if (children.props.onKeyDown) {
+						children.props.onKeyDown(event);
+					}
+					onKeyDown(event);
+				},
+				ref: (r: HTMLElement) => {
+					if (r) {
+						elRef.current = r;
+						const {ref} = children;
+						if (ref) {
+							if (typeof ref === 'object') {
+								ref.current = r;
+							}
+						}
+					}
+				},
+			})}
+		</FocusConflictContext.Provider>
+	);
 };
