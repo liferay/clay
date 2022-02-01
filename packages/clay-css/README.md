@@ -1,89 +1,43 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-### Jump to Section
+## Jump to Section
 
 - [About](#about)
-- [Building](#building)
-    - [Clone the repo](#clone-the-repo)
-    - [Install Node.js and NPM](#install-nodejs-and-npm)
-    - [Install the NPM modules](#install-the-npm-modules)
-    - [Modify files in src/](#modify-files-in-src)
-    - [Build the static files](#build-the-static-files)
-    - [View the files](#view-the-files)
-    - [File Heading Options](#file-heading-options)
-    - [Available Build Tasks](#available-build-tasks)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [Adding New SVG Icons](#adding-new-svg-icons)
 
 ## About
+
 Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) as a foundation.
 
 You can view the various components on [the Clay site](http://clayui.com).
 
-<!-- TODO: provide link to Lexicon site for documentation on design patterns -->
+## Adding New SVG Icons
 
-## Building
-If you would like to contribute, or make changes on your system you need to do the following:
+1) The copyright license should be added at the top of the new SVG icon file using the format:
 
-### Clone the repo
-Clone the repo to your computer
+```
+<!--
+* SPDX-FileCopyrightText: © 2022 Liferay, Inc. <https://liferay.com>
+* SPDX-FileCopyrightText: © 2022 Contributors to the project Clay <https://github.com/liferay/clay/graphs/contributors>
+*
+* SPDX-License-Identifier: BSD-3-Clause
+-->
+```
 
-### Install Node.js (v4.6.0 LTS) and NPM
-If you don't already have it installed. You can find more info here: http://nodejs.org/
-Node and NPM come bundled together, so you only need to install one package.
+See https://liferay.dev/blogs/-/blogs/how-and-why-to-properly-write-copyright-statements-in-your-code#tldr for more details.
 
-### Install the NPM modules
-Run `npm install` inside of the `packages/clay-css` directory
+2) The `<svg></svg>` element should only have the attributes `xmlns` and `viewBox`.
 
-### Modify files in src/
-The files are generated from the `src/` directory, however, most of the files you'd be interested in changing are in `src/content/`. Files can be either HTML (`.html`) or Markdown (`.md`).
-Every file in `src/content/` has a heading at the top in YAML format that looks something like:
+3) Remove any `fill` and `id` attributes from the SVG elements.
 
+4) Remove any `<style></style>` tags and the classes / ids that are referenced by it.
 
-    ---
-    title: Title of the Page
-    ---
+5) The class `lexicon-icon-body` is deprecated and is no longer being included in newer icons. This class allowed the background color of an icon to be modified using the property `fill`. We shouldn't use this class.
 
-This section has a couple of options that can be leveraged for different purposes. Those will be covered below.
+6) The class `lexicon-icon-outline` is a marker on each SVG element (e.g., `path`, `circle`, `rect`). It provides another class to use as a selector to apply CSS changes to an icon. This class should be included on all SVG elements.
 
-### Build the static files
-Run `gulp build` to generate the static files.
+7) Run `yarn compile` and include the auto generated file `src/scss/functions/_lx-icons-generated.scss` in your commit.
 
-### View the files
-The generated files are placed into the `build/` directory.
-Sass files in the `.scss` format are generated to CSS, Markdown files with the extension of `.md` are generated to HTML, and HTML files have one bit of processing applied, which is that HTML inside of triple ticks is escaped, like so:
+8) In the file, `clay/clayui.com/plugins/gatsby-plugin-clay-css-tasks/clay-icon-aliases.js`, find `iconsData` and add the icon aliases if needed.
 
-    ```
-	<div>Foo</div>
-    ```
+9) In the `clayui.com` directory run `yarn develop` and check to see if the icon shows up in the icon section.
 
-### File Heading Options
-There are a couple of properties you can add to the headings of files, only one of which is required:
-
-`title:`: **(Required)** This is used for the title of the page in the heading and in the navigation sidebar
-
-`navIndex:`:  The navigation is sorted alphabetically by default, but if you pass a `navIndex:` property, it will manually sort the item into that position.
-The property is any number, with `0` as the first position, but you can also pass in a keyword of `last` to force an item to the end.
-
-`section:`: If you want to group multiple files into sections, in each of those files, pass the same title to the `section:` property. That title will be used for the section heading, and the files will be sorted in there. The `navIndex:` property works inside of sections as well.
-
-### Available Build Tasks
-You can pass these options when running `gulp`.
-
-`build`: This is the default task, so running just `gulp` will fire off the build task.
-This will generate all of the HTML/CSS/etc into the `build/` directory.
-
-`watch`: Because running a script after every change can get tedious, run `gulp watch` to rebuild the files automatically as you change files.
-
-`serve`: Starts a local server on port 3000 and also runs the watch task.
-
-### Updating Bootstrap Version and Dependencies
-Bootstrap can be updated or downgraded by using the command:
-
-`npm install --save-dev --save-exact bootstrap@the_version`
-
-Popper.js can be updated or downgraded by using:
-
-`npm install --save-dev --save-exact popper.js@the_version`
-
-Then run `gulp build` or `gulp-serve` to compile Clay CSS with the new version
+10) Include the files `static/images/icons/icons.svg`, `static/js/icons-autogenerated.json`, and `static/js/flags-autogenerated.json` to the commit. Some of these files might not show up in git's "Changes not staged for commit:" if aliases or flags have not been added.
