@@ -60,10 +60,8 @@ export const useWeeks = (
 /**
  * Sets the current time
  */
-export const useCurrentTime = (format: string) => {
-	const [currentTime, set] = useState<string>(() =>
-		formatDate(setDate(new Date(), {hours: 0, minutes: 0}), format)
-	);
+export const useCurrentTime = () => {
+	const [currentTime, set] = useState<string>('--:--');
 
 	const setCurrentTime = useCallback(
 		(

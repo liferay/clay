@@ -247,7 +247,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		/**
 		 * Indicates the time selected by the user.
 		 */
-		const [currentTime, setCurrentTime] = useCurrentTime(TIME_FORMAT);
+		const [currentTime, setCurrentTime] = useCurrentTime();
 
 		/**
 		 * An array of the weeks and days list for the current month
@@ -422,6 +422,14 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			ampm?: Input['ampm']
 		) => {
 			const [day] = daysSelected;
+
+			if (hours === '--' && typeof minutes === 'number') {
+				hours = 0;
+			}
+
+			if (minutes === '--' && typeof hours === 'number') {
+				minutes = 0;
+			}
 
 			if (value) {
 				let date =
