@@ -158,44 +158,31 @@
 	@extend %aspect-ratio-item-center-middle;
 }
 
-// 3 to 2
+// aspect-ratio-#-to-#
 
-%aspect-ratio-3-to-2 {
-	@include clay-aspect-ratio(3, 2);
-}
+@each $selector, $value in $aspect-ratio-sizes {
+	$selector: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
 
-.aspect-ratio-3-to-2 {
-	@extend %aspect-ratio-3-to-2;
-}
+	$placeholder: str-insert(
+		str-slice($selector, 2, str-length($selector)),
+		'%',
+		1
+	);
 
-// 4 to 3
+	#{$placeholder} {
+		@include clay-aspect-ratio(
+			map-get($value, width),
+			map-get($value, height)
+		);
+	}
 
-%aspect-ratio-4-to-3 {
-	@include clay-aspect-ratio(4, 3);
-}
-
-.aspect-ratio-4-to-3 {
-	@extend %aspect-ratio-4-to-3;
-}
-
-// 8 to 5
-
-%aspect-ratio-8-to-5 {
-	@include clay-aspect-ratio(8, 5);
-}
-
-.aspect-ratio-8-to-5 {
-	@extend %aspect-ratio-8-to-5;
-}
-
-// 16 to 9
-
-%aspect-ratio-16-to-9 {
-	@include clay-aspect-ratio(16, 9);
-}
-
-.aspect-ratio-16-to-9 {
-	@extend %aspect-ratio-16-to-9;
+	#{$selector} {
+		@extend #{$placeholder} !optional;
+	}
 }
 
 // Bg Contain
