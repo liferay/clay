@@ -266,7 +266,18 @@ export function useMultipleSelection<T>(
 	const toggleSelection = useCallback(
 		(key: Key) => {
 			switch (selectionMode) {
-				case 'multiple':
+				case 'multiple': {
+					const selecteds = new Set(selectedKeys);
+
+					if (selecteds.has(key)) {
+						selecteds.delete(key);
+					} else {
+						selecteds.add(key);
+					}
+
+					setSelectionKeys(selecteds);
+					break;
+				}
 				case 'multiple-recursive': {
 					const selecteds = new Set(selectedKeys);
 
@@ -283,14 +294,12 @@ export function useMultipleSelection<T>(
 						selecteds.add(key);
 					}
 
-					if (selectionMode === 'multiple-recursive') {
-						toggleChildrenSelection(
-							keyMap,
-							key,
-							selecteds,
-							selecteds.has(key)
-						);
-					}
+					toggleChildrenSelection(
+						keyMap,
+						key,
+						selecteds,
+						selecteds.has(key)
+					);
 
 					toggleParentSelection(keyMap, selecteds);
 
