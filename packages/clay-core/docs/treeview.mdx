@@ -25,8 +25,11 @@ import {Example, MultipleSelection} from '$packages/clay-core/docs/treeview';
         -   [Actions](#actions)
 -   [Expander](#expander)
     -   [Custom expander](#custom-expander)
--   [Multiple Selection](#multiple-selection)
-    -   [Recursive selection](#recursive-selection)
+-   [Selection](#selection)
+    -   [Single Selection](#single-selection)
+    -   [Multiple Selection](#multiple-selection)
+    -   [Recursive Multiple Selection](#recursive-multiple-selection)
+    -   [Manual Selection](#manual-selection)
 -   [Drag and Drop](#drag-and-drop)
 -   [Shortcuts](#shortcuts)
     -   [Rename Item](#rename-item)
@@ -295,7 +298,23 @@ Customizing the expander is possible using the `expanderIcons` property. Changin
 </TreeView>
 ```
 
-## Multiple Selection
+## Selection
+
+The selection allows the user to select one or more items in the TreeView, there are three main interactions that can be configured and are defined using the `selectionMode` prop.
+
+-   `single` select only one item.
+-   `multiple` select multiple items.
+-   `multiple-recursive` selects multiple items and the item's children recursively. When all children are selected, the parent will be marked as selected, otherwise it will be marked as intermediate.
+
+The selection can be configured and composed in different ways depending on each use case. Setting the selectionMode and using a `<Checkbox />` in the item will respect the configuration of the selection. It is also possible to configure the selection manually to customize what will trigger the selection or modify the look of the selected state. For more information check the [manual selection](#manual-selection) section.
+
+### Single Selection
+
+The single selection state works independently of adding the `<Checkbox />` and this state is set by default.
+
+<Example selectionMode="single" />
+
+### Multiple Selection
 
 The multi-selection in TreeView is a achieved by composing with the `<Checkbox />` component that must be added explicitly in the item rendering.
 
@@ -330,6 +349,7 @@ function Example() {
 		<TreeView
 			onSelectionChange={setSelectionChange}
 			selectedKeys={selectedKeys}
+			selectionMode="multiple"
 		>
 			{...}
 		</TreeView>
@@ -337,9 +357,9 @@ function Example() {
 }
 ```
 
-### Recursive selection
+### Recursive Multiple Selection
 
-By default, when selecting an item with nested items, the item's children are recursively selected.
+By default, when selecting an item with nested items, its children are recursively selected.
 
 There are some limitations: for static content the recursive selection only works if the item is expanded, (i.e visible). For dynamic content, it works independently.
 
@@ -349,6 +369,47 @@ There are some limitations: for static content the recursive selection only work
 </div>
 
 <MultipleSelection />
+
+### Manual Selection
+
+Manual selection is the possibility to trigger the selection without using the `<Checkbox />` or visually changing the state of the selection types, such as the single selection state.
+
+The `selection` method is available via render props when the content is dynamic, it exposes two main methods, `toggle` and `has` that allow you to customize who will trigger and check if the item is selected.
+
+```js
+<TreeView>
+	{(item, selection) => (
+		<TreeView.Item
+			onClick={() => selection.toggle(item.id)}
+			style={{
+				backgroundColor: selection.has(item.id) ? 'aliceblue' : '',
+			}}
+		>
+			Drive
+		</TreeView.Item>
+	)}
+</TreeView>
+```
+
+The default behavior of clicking the item is to expand and load the item asynchronously if this is not needed when the user selects an item you can prevent this default behavior in the same way you would prevent the default behavior of the browser.
+
+```js
+<TreeView>
+	{(item) => (
+		<TreeView.Item
+			onClick={(event) => {
+				event.preventDefault();
+
+				// You can do anything after that, for example in a Modal,
+				// close and select.
+				onClose(item);
+			}}
+		>
+			Drive
+		</TreeView.Item>
+	)}
+</TreeView>
+```
 
 ## Drag and Drop
 
