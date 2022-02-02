@@ -590,16 +590,69 @@ $cadmin-emphasized-link-hover-darken-percentage: 15% !default;
 
 $cadmin-paragraph-margin-bottom: 16px !default;
 
-$cadmin-display1-size: 96px !default;
-$cadmin-display2-size: 88px !default;
-$cadmin-display3-size: 72px !default;
-$cadmin-display4-size: 56px !default;
+// Display
 
-$cadmin-display1-weight: 300 !default;
-$cadmin-display2-weight: 300 !default;
-$cadmin-display3-weight: 300 !default;
-$cadmin-display4-weight: 300 !default;
 $cadmin-display-line-height: $cadmin-headings-line-height !default;
+
+// .display-1
+
+$cadmin-display1-size: 96px !default;
+$cadmin-display1-weight: 300 !default;
+
+$cadmin-display-1: () !default;
+$cadmin-display-1: map-deep-merge(
+	(
+		font-size: $cadmin-display1-size,
+		font-weight: $cadmin-display1-weight,
+		line-height: $cadmin-display-line-height,
+	),
+	$cadmin-display-1
+);
+
+// .display-2
+
+$cadmin-display2-size: 88px !default;
+$cadmin-display2-weight: 300 !default;
+
+$cadmin-display-2: () !default;
+$cadmin-display-2: map-deep-merge(
+	(
+		font-size: $cadmin-display2-size,
+		font-weight: $cadmin-display2-weight,
+		line-height: $cadmin-display-line-height,
+	),
+	$cadmin-display-2
+);
+
+// .display-3
+
+$cadmin-display3-size: 72px !default;
+$cadmin-display3-weight: 300 !default;
+
+$cadmin-display-3: () !default;
+$cadmin-display-3: map-deep-merge(
+	(
+		font-size: $cadmin-display3-size,
+		font-weight: $cadmin-display3-weight,
+		line-height: $cadmin-display-line-height,
+	),
+	$cadmin-display-3
+);
+
+// .display-4
+
+$cadmin-display4-size: 56px !default;
+$cadmin-display4-weight: 300 !default;
+
+$cadmin-display-4: () !default;
+$cadmin-display-4: map-deep-merge(
+	(
+		font-size: $cadmin-display4-size,
+		font-weight: $cadmin-display4-weight,
+		line-height: $cadmin-display-line-height,
+	),
+	$cadmin-display-4
+);
 
 $cadmin-lead-font-size: $cadmin-font-size-base * 1.25 !default;
 $cadmin-lead-font-weight: 300 !default;

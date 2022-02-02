@@ -82,27 +82,27 @@ h6,
 // Type display classes
 
 .display-1 {
-	font-size: $cadmin-display1-size;
-	font-weight: $cadmin-display1-weight;
-	line-height: $cadmin-display-line-height;
+	@include clay-css($cadmin-display-1);
+
+	@include clay-generate-media-breakpoints($cadmin-display-1);
 }
 
 .display-2 {
-	font-size: $cadmin-display2-size;
-	font-weight: $cadmin-display2-weight;
-	line-height: $cadmin-display-line-height;
+	@include clay-css($cadmin-display-2);
+
+	@include clay-generate-media-breakpoints($cadmin-display-2);
 }
 
 .display-3 {
-	font-size: $cadmin-display3-size;
-	font-weight: $cadmin-display3-weight;
-	line-height: $cadmin-display-line-height;
+	@include clay-css($cadmin-display-3);
+
+	@include clay-generate-media-breakpoints($cadmin-display-3);
 }
 
 .display-4 {
-	font-size: $cadmin-display4-size;
-	font-weight: $cadmin-display4-weight;
-	line-height: $cadmin-display-line-height;
+	@include clay-css($cadmin-display-4);
+
+	@include clay-generate-media-breakpoints($cadmin-display-4);
 }
 
 // Horizontal rules
