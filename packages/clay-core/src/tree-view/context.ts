@@ -23,6 +23,7 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	onLoadMore?: (item: any) => Promise<unknown>;
 	onRenameItem?: (item: T) => Promise<any>;
 	rootRef: React.RefObject<HTMLUListElement>;
+	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 	showExpanderOnHover?: boolean;
 }
 

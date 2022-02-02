@@ -14,6 +14,7 @@ import {ClayCheckbox as Checkbox, ClayInput as Input} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {Provider} from '@clayui/provider';
 import Sticker from '@clayui/sticker';
+import {select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React, {useMemo, useState} from 'react';
 
@@ -33,14 +34,17 @@ const ITEMS_DRIVE = [
 			{
 				children: [
 					{
-						children: [{name: 'Research 1'}],
+						children: [{id: 17, name: 'Research 1'}],
+						id: 3,
 						name: 'Research',
 					},
 					{
-						children: [{name: 'News 1'}],
+						children: [{id: 16, name: 'News 1'}],
+						id: 4,
 						name: 'News',
 					},
 				],
+				id: 2,
 				name: 'Blogs',
 			},
 			{
@@ -48,42 +52,57 @@ const ITEMS_DRIVE = [
 					{
 						children: [
 							{
+								id: 16,
 								name: 'Instructions.pdf',
 								status: 'success',
 								type: 'pdf',
 							},
 						],
+						id: 15,
 						name: 'PDF',
 					},
 					{
 						children: [
 							{
+								id: 6,
 								name: 'Treeview review.docx',
 								status: 'success',
 								type: 'document',
 							},
 							{
+								id: 7,
 								name: 'Heuristics Evaluation.docx',
 								status: 'success',
 								type: 'document',
 							},
 						],
+						id: 8,
 						name: 'Word',
 					},
 				],
+				id: 5,
 				name: 'Documents and Media',
 			},
 		],
+		id: 1,
 		name: 'Liferay Drive',
 		type: 'cloud',
 	},
 	{
-		children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+		children: [
+			{id: 10, name: 'Blogs'},
+			{id: 11, name: 'Documents and Media'},
+		],
+		id: 9,
 		name: 'Repositories',
 		type: 'repository',
 	},
 	{
-		children: [{name: 'PDF'}, {name: 'Word'}],
+		children: [
+			{id: 13, name: 'PDF'},
+			{id: 14, name: 'Word'},
+		],
+		id: 12,
 		name: 'Documents and Media',
 		status: 'warning',
 	},
@@ -606,6 +625,7 @@ storiesOf('Components|ClayTreeView', module)
 					items={items}
 					nestedKey="children"
 					onExpandedChange={(keys) => setExpandedKeys(keys)}
+					selectionMode={null}
 					showExpanderOnHover={false}
 				>
 					{(item) => (
@@ -632,7 +652,7 @@ storiesOf('Components|ClayTreeView', module)
 			</Provider>
 		);
 	})
-	.add('selection', () => {
+	.add('multiple-selection', () => {
 		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 			new Set()
 		);
@@ -650,6 +670,7 @@ storiesOf('Components|ClayTreeView', module)
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
+					selectionMode="multiple-recursive"
 					showExpanderOnHover={false}
 				>
 					{(item) => (
@@ -674,7 +695,7 @@ storiesOf('Components|ClayTreeView', module)
 			</Provider>
 		);
 	})
-	.add('selection w/async load', () => {
+	.add('multiple-selection w/async load', () => {
 		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
 			new Set()
 		);
@@ -712,6 +733,7 @@ storiesOf('Components|ClayTreeView', module)
 					}}
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
+					selectionMode="multiple-recursive"
 					showExpanderOnHover={false}
 				>
 					{(item) => (
@@ -727,6 +749,51 @@ storiesOf('Components|ClayTreeView', module)
 										<OptionalCheckbox />
 										<Icon symbol="folder" />
 										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('manually trigger multiple-selection', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		return (
+			<Provider spritemap={spritemap}>
+				<p>Selected items: {Array.from(selectedKeys).join(', ')}</p>
+
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					selectionMode="multiple-recursive"
+					showExpanderOnHover={false}
+				>
+					{(item, selection) => (
+						<TreeView.Item>
+							<TreeView.ItemStack
+								onClick={() => selection.toggle(item.id)}
+							>
+								<Icon symbol="folder" />
+								{item.name}
+								{item.id}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item
+										onClick={() =>
+											selection.toggle(item.id)
+										}
+									>
+										<Icon symbol="folder" />
+										{item.name}
+										{item.id}
 									</TreeView.Item>
 								)}
 							</TreeView.Group>
@@ -755,50 +822,17 @@ storiesOf('Components|ClayTreeView', module)
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
-					showExpanderOnHover={false}
-				>
-					{(item) => (
-						<TreeView.Item>
-							<TreeView.ItemStack>
-								<OptionalCheckbox />
-								<Icon symbol="folder" />
-								{item.name}
-							</TreeView.ItemStack>
-							<TreeView.Group items={item.children}>
-								{(item) => (
-									<TreeView.Item>
-										<OptionalCheckbox />
-										<Icon symbol="folder" />
-										{item.name}
-									</TreeView.Item>
-								)}
-							</TreeView.Group>
-						</TreeView.Item>
-					)}
-				</TreeView>
-			</Provider>
-		);
-	})
-	.add('expand on check w/single selection', () => {
-		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
-			new Set()
-		);
-
-		// Just to avoid TypeScript error with required props
-		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
-
-		OptionalCheckbox.displayName = 'ClayCheckbox';
-
-		return (
-			<Provider spritemap={spritemap} theme="cadmin">
-				<TreeView
-					dragAndDrop
-					expandOnCheck
-					items={ITEMS_DRIVE}
-					nestedKey="children"
-					onSelectionChange={(keys) => setSelectionChange(keys)}
-					selectedKeys={selectedKeys}
-					selectionMode="single"
+					selectionMode={
+						select(
+							'Selection mode',
+							{
+								multiple: 'multiple',
+								'multiple-recursive': 'multiple-recursive',
+								single: 'single',
+							},
+							'multiple-recursive'
+						) as 'multiple-recursive'
+					}
 					showExpanderOnHover={false}
 				>
 					{(item) => (
@@ -828,11 +862,6 @@ storiesOf('Components|ClayTreeView', module)
 			new Set()
 		);
 
-		// Just to avoid TypeScript error with required props
-		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
-
-		OptionalCheckbox.displayName = 'ClayCheckbox';
-
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
@@ -846,14 +875,91 @@ storiesOf('Components|ClayTreeView', module)
 					{(item) => (
 						<TreeView.Item>
 							<TreeView.ItemStack>
-								<OptionalCheckbox />
 								<Icon symbol="folder" />
 								{item.name}
 							</TreeView.ItemStack>
 							<TreeView.Group items={item.children}>
 								{(item) => (
 									<TreeView.Item>
-										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('manually trigger single selection', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set()
+		);
+
+		const [selected, setSelected] = useState({});
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<p>Selected items: {Array.from(selectedKeys).join(', ')}</p>
+				<pre
+					style={{
+						backgroundColor: '#f7f8f9',
+						border: '1px solid #e7e7ed',
+						color: '#393a4a',
+						height: '60px',
+						overflowY: 'auto',
+						padding: '10px',
+					}}
+				>
+					{JSON.stringify(selected)}
+				</pre>
+
+				<TreeView
+					items={ITEMS_DRIVE}
+					nestedKey="children"
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					selectionMode="single"
+					showExpanderOnHover={false}
+				>
+					{(item, selection) => (
+						<TreeView.Item>
+							<TreeView.ItemStack
+								onClick={() => {
+									if (!selection.has(item.id)) {
+										setSelected(item);
+									}
+
+									selection.toggle(item.id);
+								}}
+								style={{
+									backgroundColor: selection.has(item.id)
+										? '#ffb46e'
+										: '',
+								}}
+							>
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item
+										onClick={() => {
+											if (!selection.has(item.id)) {
+												setSelected(item);
+											}
+
+											selection.toggle(item.id);
+										}}
+										style={{
+											backgroundColor: selection.has(
+												item.id
+											)
+												? '#ffb46e'
+												: '',
+										}}
+									>
 										<Icon symbol="folder" />
 										{item.name}
 									</TreeView.Item>
@@ -1039,6 +1145,7 @@ storiesOf('Components|ClayTreeView', module)
 					}}
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
+					selectionMode="multiple-recursive"
 					showExpanderOnHover={false}
 				>
 					{(item) => (

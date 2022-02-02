@@ -59,10 +59,11 @@ interface ITreeViewProps<T>
 
 	/**
 	 * Flag changes the Node selection behavior when a checkbox is rendered on the Node.
-	 * - multiple: selects child nodes recursively.
-	 * - single: select only node, ignoring children.
+	 * - single: select only node.
+	 * - multiple: select multiple nodes.
+	 * - multiple-recursive: selects multiple nodes and recursively.
 	 */
-	selectionMode?: 'multiple' | 'single';
+	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 
 	/**
 	 * Flag to indicate if the TreeView will show the expander in the hover in the Node.
@@ -93,7 +94,7 @@ export function TreeView<T>({
 	onRenameItem,
 	onSelectionChange,
 	selectedKeys,
-	selectionMode = 'multiple',
+	selectionMode = 'single',
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
@@ -126,6 +127,7 @@ export function TreeView<T>({
 		onLoadMore,
 		onRenameItem,
 		rootRef,
+		selectionMode,
 		showExpanderOnHover,
 		...state,
 	};

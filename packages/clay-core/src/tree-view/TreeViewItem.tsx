@@ -9,8 +9,9 @@ import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useState} from 'react';
+import React, {Key, useCallback, useContext, useState} from 'react';
 
+import {removeItemInternalProps} from './Collection';
 import {Icons, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
@@ -35,7 +36,6 @@ export const TreeViewItem = React.forwardRef<
 	{
 		actions,
 		children,
-		className,
 		isDragging,
 		overPosition,
 		overTarget,
@@ -57,6 +57,7 @@ export const TreeViewItem = React.forwardRef<
 		replace,
 		rootRef,
 		selection,
+		selectionMode,
 		toggle,
 	} = useTreeViewContext();
 
@@ -72,39 +73,77 @@ export const TreeViewItem = React.forwardRef<
 		// @ts-ignore
 		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
+	const hasKey = useCallback(
+		(key: Key) => {
+			return selection.selectedKeys.has(key);
+		},
+		[selection.selectedKeys]
+	);
+
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
-		return React.cloneElement(childrenRoot.current(item), {
-			actions,
-			isDragging,
-			overPosition,
-			overTarget,
-			ref,
-		});
+		return React.cloneElement(
+			childrenRoot.current(removeItemInternalProps(item), {
+				has: hasKey,
+				toggle: selection.toggleSelection,
+			}),
+			{
+				actions,
+				isDragging,
+				overPosition,
+				overTarget,
+				ref,
+			}
+		);
 	}
+
+	const hasItemStack =
+		typeof left !== 'string' && group && React.isValidElement(left);
+
+	const itemStackProps = hasItemStack
+		? (left as React.ReactElement).props
+		: {};
+
+	// The ownership of TreeView properties changes according to the component
+	// declaration that helps in inferring the visual intuition of which
+	// component is Node.
+	const propsOwnership = group ? 'item' : 'node';
+
+	const itemProps = propsOwnership === 'item' ? otherProps : {};
+	const nodeProps = propsOwnership === 'node' ? otherProps : {};
 
 	return (
 		<SpacingContext.Provider value={spacing + 24}>
 			<li
-				{...otherProps}
-				className={classNames('treeview-item', className, {
+				{...itemProps}
+				className={classNames('treeview-item', itemProps.className, {
 					'treeview-item-dragging': isDragging,
 				})}
 				role="none"
 			>
 				<div
+					{...itemStackProps}
+					{...nodeProps}
 					aria-expanded={
 						group ? expandedKeys.has(item.key) : undefined
 					}
-					className={classNames('treeview-link', {
-						collapsed: group && expandedKeys.has(item.key),
-						focus,
-						'treeview-dropping-bottom':
-							overTarget && overPosition === 'bottom',
-						'treeview-dropping-middle':
-							overTarget && overPosition === 'middle',
-						'treeview-dropping-top':
-							overTarget && overPosition === 'top',
-					})}
+					className={classNames(
+						'treeview-link',
+						itemStackProps.className,
+						nodeProps.className,
+						{
+							active:
+								selectionMode === 'single' &&
+								selection.selectedKeys.has(item.key),
+							collapsed: group && expandedKeys.has(item.key),
+							focus,
+							'treeview-dropping-bottom':
+								overTarget && overPosition === 'bottom',
+							'treeview-dropping-middle':
+								overTarget && overPosition === 'middle',
+							'treeview-dropping-top':
+								overTarget && overPosition === 'top',
+						}
+					)}
 					onBlur={({currentTarget, relatedTarget}) => {
 						if (
 							actions &&
@@ -114,7 +153,30 @@ export const TreeViewItem = React.forwardRef<
 							setFocus(false);
 						}
 					}}
-					onClick={() => {
+					onClick={(event) => {
+						if (hasItemStack && itemStackProps.onClick) {
+							itemStackProps.onClick(event);
+						}
+
+						if (nodeProps.onClick) {
+							(
+								nodeProps.onClick as unknown as (
+									event: React.MouseEvent<
+										HTMLDivElement,
+										MouseEvent
+									>
+								) => void
+							)(event);
+						}
+
+						if (event.defaultPrevented) {
+							return;
+						}
+
+						if (selectionMode === 'single') {
+							selection.toggleSelection(item.key);
+						}
+
 						if (group) {
 							toggle(item.key);
 						} else {
@@ -235,6 +297,8 @@ export const TreeViewItem = React.forwardRef<
 					ref={ref}
 					role="treeitem"
 					style={{
+						...(itemStackProps?.style ?? {}),
+						...(nodeProps?.style ?? {}),
 						paddingLeft: `${
 							spacing + (group || onLoadMore ? 0 : 24)
 						}px`,
@@ -261,6 +325,7 @@ export const TreeViewItem = React.forwardRef<
 						) : group ? (
 							React.cloneElement(left as React.ReactElement, {
 								actions,
+								onClick: undefined,
 							})
 						) : (
 							<TreeViewItemStack
@@ -357,14 +422,18 @@ export function TreeViewItemStack({
 						)}
 						displayType={null}
 						monospaced
-						onClick={() => toggle(item.key)}
+						onClick={(event) => {
+							event.stopPropagation();
+
+							toggle(item.key);
+						}}
 						tabIndex={-1}
 					>
 						<span className="c-inner" tabIndex={-2}>
 							{loading ? (
 								<ClayLoadingIndicator small />
 							) : (
-								hasChildren && (
+								(hasChildren || !nestedChildren) && (
 									<Expander expanderIcons={expanderIcons} />
 								)
 							)}
@@ -380,7 +449,7 @@ export function TreeViewItemStack({
 					return null;
 				}
 
-				if (typeof child === 'string') {
+				if (typeof child === 'string' || typeof child === 'number') {
 					content = <div className="component-text">{child}</div>;
 
 					// @ts-ignore

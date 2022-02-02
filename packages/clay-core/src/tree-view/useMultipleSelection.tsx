@@ -39,7 +39,7 @@ export interface IMultipleSelectionProps<T>
 	extends IMultipleSelection,
 		Pick<ITreeProps<T>, 'nestedKey'>,
 		Pick<ICollectionProps<T>, 'items'> {
-	selectionMode?: 'multiple' | 'single';
+	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 }
 
 type LayoutInfo = {
@@ -265,37 +265,52 @@ export function useMultipleSelection<T>(
 
 	const toggleSelection = useCallback(
 		(key: Key) => {
-			const keyMap = layoutKeys.current.get(key) as LayoutInfo;
+			switch (selectionMode) {
+				case 'multiple':
+				case 'multiple-recursive': {
+					const selecteds = new Set(selectedKeys);
 
-			const selecteds = new Set(selectedKeys);
+					const keyMap = layoutKeys.current.get(key) as LayoutInfo;
 
-			// Resets the intermediate state because the element will be selected
-			// or otherwise the state must be false because it will be unchecking
-			// all its children.
-			keyMap.intermediate = false;
+					// Resets the intermediate state because the element will be selected
+					// or otherwise the state must be false because it will be unchecking
+					// all its children.
+					keyMap.intermediate = false;
 
-			if (selecteds.has(key)) {
-				selecteds.delete(key);
-			} else {
-				selecteds.add(key);
+					if (selecteds.has(key)) {
+						selecteds.delete(key);
+					} else {
+						selecteds.add(key);
+					}
+
+					if (selectionMode === 'multiple-recursive') {
+						toggleChildrenSelection(
+							keyMap,
+							key,
+							selecteds,
+							selecteds.has(key)
+						);
+					}
+
+					toggleParentSelection(keyMap, selecteds);
+
+					setSelectionKeys(selecteds);
+					break;
+				}
+				default: {
+					if (selectedKeys.has(key)) {
+						setSelectionKeys(new Set<Key>());
+					} else {
+						setSelectionKeys(new Set<Key>([key]));
+					}
+					break;
+				}
 			}
-
-			if (selectionMode === 'multiple') {
-				toggleChildrenSelection(
-					keyMap,
-					key,
-					selecteds,
-					selecteds.has(key)
-				);
-			}
-
-			toggleParentSelection(keyMap, selecteds);
-
-			setSelectionKeys(selecteds);
 		},
 		[
 			layoutKeys,
 			selectedKeys,
+			selectionMode,
 			toggleChildrenSelection,
 			toggleParentSelection,
 		]
