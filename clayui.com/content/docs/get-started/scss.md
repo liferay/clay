@@ -1,6 +1,6 @@
 ---
 title: 'SCSS'
-order: 2
+order: 7
 description: 'Clay CSS Framework provides some utilities for you to work with SCSS(https://sass-lang.com) and reuse it in your classes.'
 ---
 
