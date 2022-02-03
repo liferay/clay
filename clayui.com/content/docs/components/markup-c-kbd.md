@@ -1,6 +1,7 @@
 ---
 title: 'C Kbd'
-order: 4
+description: 'A visual pattern used to allow users to learn how to access actions via keyboard.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/keys/'
 ---
 
 <div class="nav-toc-absolute">

@@ -1,7 +1,7 @@
 ---
 title: 'Typography'
 description: 'A basic reference for the definition of the visual identity and the organization of the content.'
-order: 3
+lexiconDefinition: 'https://liferay.design/lexicon/foundations/typography/'
 ---
 
 <div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon">Lexicon</a> <a href="https://liferay.design/lexicon/foundations/typography/">Typography Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
