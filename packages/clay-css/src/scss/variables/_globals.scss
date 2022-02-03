@@ -454,16 +454,69 @@ $emphasized-link-hover-darken-percentage: 15% !default;
 
 $paragraph-margin-bottom: 1rem !default;
 
-$display1-size: 6rem !default;
-$display2-size: 5.5rem !default;
-$display3-size: 4.5rem !default;
-$display4-size: 3.5rem !default;
+// Display
 
-$display1-weight: 300 !default;
-$display2-weight: 300 !default;
-$display3-weight: 300 !default;
-$display4-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
+
+// .display-1
+
+$display1-size: 6rem !default;
+$display1-weight: 300 !default;
+
+$display-1: () !default;
+$display-1: map-deep-merge(
+	(
+		font-size: $display1-size,
+		font-weight: $display1-weight,
+		line-height: $display-line-height,
+	),
+	$display-1
+);
+
+// .display-2
+
+$display2-size: 5.5rem !default;
+$display2-weight: 300 !default;
+
+$display-2: () !default;
+$display-2: map-deep-merge(
+	(
+		font-size: $display2-size,
+		font-weight: $display2-weight,
+		line-height: $display-line-height,
+	),
+	$display-2
+);
+
+// .display-3
+
+$display3-size: 4.5rem !default;
+$display3-weight: 300 !default;
+
+$display-3: () !default;
+$display-3: map-deep-merge(
+	(
+		font-size: $display3-size,
+		font-weight: $display3-weight,
+		line-height: $display-line-height,
+	),
+	$display-3
+);
+
+// .display-4
+
+$display4-size: 3.5rem !default;
+$display4-weight: 300 !default;
+
+$display-4: () !default;
+$display-4: map-deep-merge(
+	(
+		font-size: $display4-size,
+		font-weight: $display4-weight,
+		line-height: $display-line-height,
+	),
+	$display-4
+);
 
 $lead-font-size: $font-size-base * 1.25 !default;
 $lead-font-weight: 300 !default;

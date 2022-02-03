@@ -50,7 +50,23 @@ order: 3
 
 ## Display(#css-display)
 
-Larger heading styles to make content stand out.
+Larger heading styles to make content stand out. Responsive styles are not included by default. You can set them through the `$display-*` map or write your own media queries.
+
+```scss{expanded}
+$display-1: (
+    media-breakpoint-down: (
+        md: (
+            font-size: 4.5rem,
+        ),
+        sm: (
+            font-size: 3.75rem,
+        ),
+        xs: (
+            font-size: 2.5rem,
+        ),
+    ),
+);
+```
 
 <div class="sheet-example">
 	<div class="display-1">Display 1</div>
