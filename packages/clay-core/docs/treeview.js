@@ -12,7 +12,7 @@ import React from 'react';
 const exampleImports = `import {Provider, TreeView} from '@clayui/core';
 import Icon from '@clayui/icon';`;
 
-const exampleCode = `const FileExplorer = () => {
+const exampleCode = `const FileExplorer = ({selectionMode}) => {
 	const items = [
 		{
 			children: [
@@ -88,13 +88,14 @@ const exampleCode = `const FileExplorer = () => {
 		success: 'text-success',
 		warning: 'text-warning',
 	};
-	
+
 	return (
 		<Provider spritemap={spritemap}>
 			<TreeView
 				dragAndDrop
 				items={items}
 				nestedKey="children"
+				selectionMode={selectionMode}
 			>
 				{(item) => (
 					<TreeView.Item>
@@ -153,7 +154,7 @@ import {ClayCheckbox as Checkbox} from '@clayui/form';`;
 
 const multipleSelectionCode = `const MultipleSelection = () => (
 	<Provider spritemap={spritemap}>
-		<TreeView>
+		<TreeView selectionMode="multiple-recursive">
 			<TreeView.Item>
 				<TreeView.ItemStack>
 					<Checkbox />
