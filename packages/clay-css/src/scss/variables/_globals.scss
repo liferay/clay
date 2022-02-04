@@ -368,25 +368,133 @@ $font-weight-base: $font-weight-normal !default;
 
 $line-height-base: 1.5 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+// h1, .h1
 
+$h1-font-size: $font-size-base * 2.5 !default;
 $h1-font-size-mobile: null !default;
+
+$h1: () !default;
+$h1: map-deep-merge(
+	(
+		font-size: $h1-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h1-font-size-mobile,
+			),
+		),
+	),
+	$h1
+);
+
+// h2, .h2
+
+$h2-font-size: $font-size-base * 2 !default;
 $h2-font-size-mobile: null !default;
+
+$h2: () !default;
+$h2: map-deep-merge(
+	(
+		font-size: $h2-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h2-font-size-mobile,
+			),
+		),
+	),
+	$h2
+);
+
+// h3, .h3
+
+$h3-font-size: $font-size-base * 1.75 !default;
 $h3-font-size-mobile: null !default;
+
+$h3: () !default;
+$h3: map-deep-merge(
+	(
+		font-size: $h3-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h3-font-size-mobile,
+			),
+		),
+	),
+	$h3
+);
+
+// h4, .h4
+
+$h4-font-size: $font-size-base * 1.5 !default;
 $h4-font-size-mobile: null !default;
+
+$h4: () !default;
+$h4: map-deep-merge(
+	(
+		font-size: $h4-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h4-font-size-mobile,
+			),
+		),
+	),
+	$h4
+);
+
+// h5, .h5
+
+$h5-font-size: $font-size-base * 1.25 !default;
 $h5-font-size-mobile: null !default;
+
+$h5: () !default;
+$h5: map-deep-merge(
+	(
+		font-size: $h5-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h5-font-size-mobile,
+			),
+		),
+	),
+	$h5
+);
+
+// h6, .h6
+
+$h6-font-size: $font-size-base !default;
 $h6-font-size-mobile: null !default;
+
+$h6: () !default;
+$h6: map-deep-merge(
+	(
+		font-size: $h6-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $h6-font-size-mobile,
+			),
+		),
+	),
+	$h6
+);
+
+// Headings h1-h6
 
 $headings-margin-bottom: $spacer * 0.5 !default;
 $headings-font-family: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
+
+$headings: () !default;
+$headings: map-deep-merge(
+	(
+		color: $headings-color,
+		font-family: $headings-font-family,
+		font-weight: $headings-font-weight,
+		line-height: $headings-line-height,
+		margin-bottom: $headings-margin-bottom,
+	),
+	$headings
+);
 
 // Body
 
