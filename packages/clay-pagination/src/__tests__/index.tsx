@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import '@testing-library/jest-dom/extend-expect';
 import {ClayPaginationWithBasicItems} from '..';
 import {cleanup, fireEvent, getByText, render} from '@testing-library/react';
 import React from 'react';
@@ -74,6 +75,21 @@ describe('ClayPagination', () => {
 		fireEvent.click(getByText('25'), {});
 
 		expect(changeMock).toHaveBeenLastCalledWith(25);
+	});
+
+	it('disable ellipsis when disableEllipsis prop is passed', () => {
+		const {getAllByText} = render(
+			<ClayPaginationWithBasicItems
+				activePage={12}
+				disableEllipsis
+				spritemap={spritemap}
+				totalPages={25}
+			/>
+		);
+
+		getAllByText('...').forEach((ellipsisButton) =>
+			expect(ellipsisButton).toBeDisabled()
+		);
 	});
 
 	it('shows dropdown when ellipsis is clicked', () => {

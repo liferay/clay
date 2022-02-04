@@ -40,6 +40,11 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	ellipsisBuffer?: number;
 
 	/**
+	 * Flag to disable ellipsis button
+	 */
+	disableEllipsis?: boolean;
+
+	/**
 	 * The page numbers that should be disabled. For example, `[2,5,6]`.
 	 */
 	disabledPages?: Array<number>;
@@ -75,6 +80,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 				next: 'Next',
 				previous: 'Previous',
 			},
+			disableEllipsis = false,
 			disabledPages = [],
 			ellipsisBuffer = ELLIPSIS_BUFFER,
 			hrefConstructor,
@@ -113,6 +119,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 								EllipsisComponent: Pagination.Ellipsis,
 								ellipsisProps: {
 									alignmentPosition,
+									disabled: disableEllipsis,
 									disabledPages,
 									hrefConstructor,
 									onPageChange,
