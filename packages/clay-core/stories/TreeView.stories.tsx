@@ -670,7 +670,16 @@ storiesOf('Components|ClayTreeView', module)
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
-					selectionMode="multiple-recursive"
+					selectionMode={
+						select(
+							'Selection mode',
+							{
+								multiple: 'multiple',
+								'multiple-recursive': 'multiple-recursive',
+							},
+							'multiple-recursive'
+						) as 'multiple-recursive'
+					}
 					showExpanderOnHover={false}
 				>
 					{(item) => (
@@ -733,7 +742,16 @@ storiesOf('Components|ClayTreeView', module)
 					}}
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
-					selectionMode="multiple-recursive"
+					selectionMode={
+						select(
+							'Selection mode',
+							{
+								multiple: 'multiple',
+								'multiple-recursive': 'multiple-recursive',
+							},
+							'multiple-recursive'
+						) as 'multiple-recursive'
+					}
 					showExpanderOnHover={false}
 				>
 					{(item) => (
@@ -772,7 +790,16 @@ storiesOf('Components|ClayTreeView', module)
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
-					selectionMode="multiple-recursive"
+					selectionMode={
+						select(
+							'Selection mode',
+							{
+								multiple: 'multiple',
+								'multiple-recursive': 'multiple-recursive',
+							},
+							'multiple-recursive'
+						) as 'multiple-recursive'
+					}
 					showExpanderOnHover={false}
 				>
 					{(item, selection) => (

@@ -31,6 +31,13 @@ interface ITreeViewProps<T>
 	dragAndDrop?: boolean;
 
 	/**
+	 * Optional drag and drop context: this is to avoid
+	 * errors when using various drag and drop contexts
+	 * on the same page.
+	 */
+	dragAndDropContext?: Window & typeof globalThis;
+
+	/**
 	 * Flag to expand child nodes when a parent node is checked.
 	 */
 	expandOnCheck?: boolean;
@@ -82,6 +89,7 @@ export function TreeView<T>({
 	className,
 	displayType = 'light',
 	dragAndDrop = false,
+	dragAndDropContext = window,
 	expandOnCheck = false,
 	expandedKeys,
 	expanderClassName,
@@ -143,7 +151,10 @@ export function TreeView<T>({
 				ref={rootRef}
 				role="tree"
 			>
-				<DndProvider backend={HTML5Backend}>
+				<DndProvider
+					backend={HTML5Backend}
+					context={dragAndDropContext}
+				>
 					<TreeViewContext.Provider value={context}>
 						<Collection<T> items={state.items}>
 							{children}
