@@ -30,6 +30,30 @@ order: 3
 
 ## Headings(#css-headings)
 
+Responsive styles are not included by default. You can set them through the `$h#` maps or write your own media queries.
+
+```scss{expanded}
+$h1: (
+	font-size: 1.625rem,
+	media-breakpoint-up: (
+		lg: (
+			font-size: 2rem,
+		),
+		xl: (
+			font-size: 4rem,
+		),
+	),
+	media-breakpoint-down: (
+		sm: (
+			font-size: 1rem,
+		),
+		xs: (
+			font-size: 0.875rem,
+		),
+	),
+);
+```
+
 <div class="sheet-example">
     <h1>h1 Article Heading <small>Sub text</small></h1>
     <h2>h2 Article Heading <small>Sub text</small></h2>
