@@ -435,25 +435,134 @@ $cadmin-font-weight-bolder: 900 !default;
 $cadmin-font-weight-base: $cadmin-font-weight-normal !default;
 $cadmin-line-height-base: 1.5 !default;
 
-$cadmin-h1-font-size: 26px !default; // 26px
-$cadmin-h2-font-size: 22px !default; // 22px
-$cadmin-h3-font-size: 19px !default; // 19px
-$cadmin-h4-font-size: 16px !default; // 16px
-$cadmin-h5-font-size: 14px !default; // 14px
-$cadmin-h6-font-size: 13px !default; // 13px
+// h1, .h1
 
+$cadmin-h1-font-size: 26px !default; // 26px
 $cadmin-h1-font-size-mobile: null !default;
+
+$cadmin-h1: () !default;
+$cadmin-h1: map-deep-merge(
+	(
+		font-size: $cadmin-h1-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $cadmin-h1-font-size-mobile,
+			),
+		),
+	),
+	$cadmin-h1
+);
+
+// h2, .h2
+
+$cadmin-h2-font-size: 22px !default; // 22px
 $cadmin-h2-font-size-mobile: null !default;
+
+$cadmin-h2: () !default;
+$cadmin-h2: map-deep-merge(
+	(
+		font-size: $cadmin-h2-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $cadmin-h2-font-size-mobile,
+			),
+		),
+	),
+	$cadmin-h2
+);
+
+// h3, .h3
+
+$cadmin-h3-font-size: 19px !default; // 19px
 $cadmin-h3-font-size-mobile: null !default;
+
+$cadmin-h3: () !default;
+$cadmin-h3: map-deep-merge(
+	(
+		font-size: $cadmin-h3-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $cadmin-h3-font-size-mobile,
+			),
+		),
+	),
+	$cadmin-h3
+);
+
+// h4, .h4
+
+$cadmin-h4-font-size: 16px !default; // 16px
 $cadmin-h4-font-size-mobile: null !default;
+
+$cadmin-h4: () !default;
+$cadmin-h4: map-deep-merge(
+	(
+		font-size: $cadmin-h4-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $cadmin-h4-font-size-mobile,
+			),
+		),
+	),
+	$cadmin-h4
+);
+
+// h5, .h5
+
+$cadmin-h5-font-size: 14px !default; // 14px
 $cadmin-h5-font-size-mobile: null !default;
+
+$cadmin-h5: () !default;
+$cadmin-h5: map-deep-merge(
+	(
+		font-size: $cadmin-h5-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $cadmin-h5-font-size-mobile,
+			),
+		),
+	),
+	$cadmin-h5
+);
+
+// h6, .h6
+
+$cadmin-h6-font-size: 13px !default; // 13px
 $cadmin-h6-font-size-mobile: null !default;
+
+$cadmin-h6: () !default;
+$cadmin-h6: map-deep-merge(
+	(
+		font-size: $cadmin-h6-font-size,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $cadmin-h6-font-size-mobile,
+			),
+		),
+	),
+	$cadmin-h6
+);
+
+// Headings h1-h6
 
 $cadmin-headings-margin-bottom: $cadmin-spacer * 0.5 !default;
 $cadmin-headings-font-family: null !default;
 $cadmin-headings-font-weight: $cadmin-font-weight-bold !default;
 $cadmin-headings-line-height: 1.2 !default;
 $cadmin-headings-color: null !default;
+
+$cadmin-headings: () !default;
+$cadmin-headings: map-deep-merge(
+	(
+		color: $cadmin-headings-color,
+		font-family: $cadmin-headings-font-family,
+		font-weight: $cadmin-headings-font-weight,
+		line-height: $cadmin-headings-line-height,
+		margin-bottom: $cadmin-headings-margin-bottom,
+		margin-top: 0,
+	),
+	$cadmin-headings
+);
 
 // This is similar to the html and body tag allows you to isolate all styles inside it.
 
