@@ -92,6 +92,9 @@ $btn: map-deep-merge(
 		),
 		inline-item: (
 			font-size: $btn-inline-item-font-size,
+			lexicon-icon: (
+				margin-top: 0,
+			),
 		),
 		btn-section: (
 			display: block,
@@ -225,6 +228,9 @@ $btn-monospaced: map-deep-merge(
 		mobile: (
 			height: $btn-monospaced-size-mobile,
 			width: $btn-monospaced-size-mobile,
+		),
+		lexicon-icon: (
+			margin-top: 0,
 		),
 		c-inner: (
 			align-items: center,
