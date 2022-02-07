@@ -344,35 +344,68 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 			const {value} = event.target;
 
-			const format = time
-				? `${dateFormat} ${use12Hours ? TIME_FORMAT_12H : TIME_FORMAT}`
-				: dateFormat;
+			if (!value) {
+				const newDaysSelected: [Date, Date] = [NEW_DATE, NEW_DATE];
+				let dateFormatted;
 
-			const [startDate, endDate] = fromStringToRange(
-				value,
-				format,
-				NEW_DATE
-			);
+				changeMonth(NEW_DATE);
 
-			const yearFrom = startDate.getFullYear();
-			const yearTo = endDate.getFullYear();
-
-			if (
-				isValid(startDate) &&
-				isValid(endDate) &&
-				isYearWithinYears(yearFrom, years) &&
-				isYearWithinYears(yearTo, years)
-			) {
-				changeMonth(startDate);
-
-				setDaysSelected([startDate, endDate]);
-
-				if (time) {
-					setCurrentTime(
-						startDate.getHours(),
-						startDate.getMinutes(),
-						formatDate(startDate, 'a') as Input['ampm']
+				if (range) {
+					dateFormatted = fromRangeToString(
+						newDaysSelected,
+						dateFormat
 					);
+				} else if (time) {
+					dateFormatted = formatDate(
+						parseDate(
+							currentTime,
+							use12Hours ? TIME_FORMAT_12H : TIME_FORMAT,
+							NEW_DATE
+						),
+						`${dateFormat} ${
+							use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
+						}`
+					);
+				} else {
+					dateFormatted = formatDate(NEW_DATE, dateFormat);
+				}
+
+				setDaysSelected(newDaysSelected);
+
+				onValueChange(dateFormatted, 'time');
+			} else {
+				const format = time
+					? `${dateFormat} ${
+							use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
+					  }`
+					: dateFormat;
+
+				const [startDate, endDate] = fromStringToRange(
+					value,
+					format,
+					NEW_DATE
+				);
+
+				const yearFrom = startDate.getFullYear();
+				const yearTo = endDate.getFullYear();
+
+				if (
+					isValid(startDate) &&
+					isValid(endDate) &&
+					isYearWithinYears(yearFrom, years) &&
+					isYearWithinYears(yearTo, years)
+				) {
+					changeMonth(startDate);
+
+					setDaysSelected([startDate, endDate]);
+
+					if (time) {
+						setCurrentTime(
+							startDate.getHours(),
+							startDate.getMinutes(),
+							formatDate(startDate, 'a') as Input['ampm']
+						);
+					}
 				}
 			}
 
