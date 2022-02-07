@@ -844,6 +844,10 @@
 
 			.inline-item {
 				@include clay-css($inline-item);
+
+				.lexicon-icon {
+					@include clay-css(map-get($inline-item, lexicon-icon));
+				}
 			}
 
 			.inline-item-before {
