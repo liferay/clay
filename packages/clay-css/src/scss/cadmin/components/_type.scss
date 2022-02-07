@@ -12,66 +12,51 @@ h6,
 .h4,
 .h5,
 .h6 {
-	color: $cadmin-headings-color;
-	font-family: $cadmin-headings-font-family;
-	font-weight: $cadmin-headings-font-weight;
-	line-height: $cadmin-headings-line-height;
-	margin-bottom: $cadmin-headings-margin-bottom;
-	margin-top: 0;
+	@include clay-css($cadmin-headings);
+
+	@include clay-generate-media-breakpoints($cadmin-headings);
 }
 
 h1,
 .h1 {
-	font-size: $cadmin-h1-font-size;
+	@include clay-css($cadmin-h1);
 
-	@include clay-scale-component {
-		font-size: $cadmin-h1-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($cadmin-h1);
 }
 
 h2,
 .h2 {
-	font-size: $cadmin-h2-font-size;
+	@include clay-css($cadmin-h2);
 
-	@include clay-scale-component {
-		font-size: $cadmin-h2-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($cadmin-h2);
 }
 
 h3,
 .h3 {
-	font-size: $cadmin-h3-font-size;
+	@include clay-css($cadmin-h3);
 
-	@include clay-scale-component {
-		font-size: $cadmin-h3-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($cadmin-h3);
 }
 
 h4,
 .h4 {
-	font-size: $cadmin-h4-font-size;
+	@include clay-css($cadmin-h4);
 
-	@include clay-scale-component {
-		font-size: $cadmin-h4-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($cadmin-h4);
 }
 
 h5,
 .h5 {
-	font-size: $cadmin-h5-font-size;
+	@include clay-css($cadmin-h5);
 
-	@include clay-scale-component {
-		font-size: $cadmin-h5-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($cadmin-h5);
 }
 
 h6,
 .h6 {
-	font-size: $cadmin-h6-font-size;
+	@include clay-css($cadmin-h6);
 
-	@include clay-scale-component {
-		font-size: $cadmin-h6-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($cadmin-h6);
 }
 
 .lead {

@@ -12,65 +12,51 @@ h6,
 .h4,
 .h5,
 .h6 {
-	color: $headings-color;
-	font-family: $headings-font-family;
-	font-weight: $headings-font-weight;
-	line-height: $headings-line-height;
-	margin-bottom: $headings-margin-bottom;
+	@include clay-css($headings);
+
+	@include clay-generate-media-breakpoints($headings);
 }
 
 h1,
 .h1 {
-	font-size: $h1-font-size;
+	@include clay-css($h1);
 
-	@include clay-scale-component {
-		font-size: $h1-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($h1);
 }
 
 h2,
 .h2 {
-	font-size: $h2-font-size;
+	@include clay-css($h2);
 
-	@include clay-scale-component {
-		font-size: $h2-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($h2);
 }
 
 h3,
 .h3 {
-	font-size: $h3-font-size;
+	@include clay-css($h3);
 
-	@include clay-scale-component {
-		font-size: $h3-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($h3);
 }
 
 h4,
 .h4 {
-	font-size: $h4-font-size;
+	@include clay-css($h4);
 
-	@include clay-scale-component {
-		font-size: $h4-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($h4);
 }
 
 h5,
 .h5 {
-	font-size: $h5-font-size;
+	@include clay-css($h5);
 
-	@include clay-scale-component {
-		font-size: $h5-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($h5);
 }
 
 h6,
 .h6 {
-	font-size: $h6-font-size;
+	@include clay-css($h6);
 
-	@include clay-scale-component {
-		font-size: $h6-font-size-mobile;
-	}
+	@include clay-generate-media-breakpoints($h6);
 }
 
 .lead {
