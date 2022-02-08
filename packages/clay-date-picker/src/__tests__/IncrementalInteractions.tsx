@@ -214,7 +214,7 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(dotButtonEl);
 
-		const currentDate = new Date();
+		const currentDate = new Date(2019, 3, 18);
 
 		expect(input.value).toBe(formatDate(currentDate, 'yyyy-MM-dd'));
 
