@@ -82,6 +82,9 @@ $btn-sm: map-deep-merge(
 		padding-left: $btn-padding-x-sm,
 		padding-right: $btn-padding-x-sm,
 		padding-top: $btn-padding-y-sm,
+		lexicon-icon: (
+			font-size: 1rem,
+		),
 	),
 	$btn-sm
 );
