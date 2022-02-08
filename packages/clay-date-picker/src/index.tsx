@@ -383,7 +383,9 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 						setCurrentTime(
 							startDate.getHours(),
 							startDate.getMinutes(),
-							formatDate(startDate, 'a') as Input['ampm']
+							use12Hours
+								? (formatDate(startDate, 'a') as Input['ampm'])
+								: undefined
 						);
 					}
 				}
