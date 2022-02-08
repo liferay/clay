@@ -346,33 +346,23 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 
 			if (!value) {
 				const newDaysSelected: [Date, Date] = [NEW_DATE, NEW_DATE];
-				let dateFormatted;
 
-				changeMonth(NEW_DATE);
+				const initialTime = {
+					hours: 0,
+					minutes: 0,
+				};
 
-				if (range) {
-					dateFormatted = fromRangeToString(
-						newDaysSelected,
-						dateFormat
-					);
-				} else if (time) {
-					dateFormatted = formatDate(
-						parseDate(
-							currentTime,
-							use12Hours ? TIME_FORMAT_12H : TIME_FORMAT,
-							NEW_DATE
-						),
-						`${dateFormat} ${
-							use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
-						}`
-					);
-				} else {
-					dateFormatted = formatDate(NEW_DATE, dateFormat);
-				}
+				changeMonth(initialMonth);
 
 				setDaysSelected(newDaysSelected);
 
-				onValueChange(dateFormatted, 'time');
+				if (time) {
+					setCurrentTime(
+						initialTime.hours,
+						initialTime.minutes,
+						undefined
+					);
+				}
 			} else {
 				const format = time
 					? `${dateFormat} ${
