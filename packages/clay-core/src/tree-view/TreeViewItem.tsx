@@ -462,7 +462,20 @@ export function TreeViewItemStack({
 						checked: selection.selectedKeys.has(item.key),
 						disabled: loading,
 						indeterminate: selection.isIntermediate(item.key),
-						onChange: () => {
+						onChange: (
+							event: React.ChangeEvent<HTMLInputElement>
+						) => {
+							const {onChange} = (child as React.ReactElement)
+								.props;
+
+							if (onChange) {
+								onChange(event);
+							}
+
+							if (event.defaultPrevented) {
+								return;
+							}
+
 							selection.toggleSelection(item.key);
 
 							if (expandOnCheck) {
