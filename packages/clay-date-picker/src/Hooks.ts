@@ -60,7 +60,7 @@ export const useWeeks = (
 /**
  * Sets the current time
  */
-export const useCurrentTime = () => {
+export const useCurrentTime = (use12Hours: boolean) => {
 	const [currentTime, set] = useState<string>('--:--');
 
 	const setCurrentTime = useCallback(
@@ -73,6 +73,10 @@ export const useCurrentTime = () => {
 
 			if (typeof hours !== 'string') {
 				hours = formatDate(date, 'HH');
+
+				if (use12Hours) {
+					hours = formatDate(setDate(new Date(), {hours}), 'hh');
+				}
 			}
 
 			if (typeof minutes !== 'string') {

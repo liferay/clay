@@ -419,6 +419,69 @@ describe('IncrementalInteractions', () => {
 			expect(hoursEl.value).toBe('01');
 			expect(minutesEl.value).toBe('20');
 		});
+
+		it('value added in the input with 12 hours must be reflected in the time picker', () => {
+			const {getByLabelText, getByTestId} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+					time
+					use12Hours
+				/>
+			);
+
+			const input: any = getByLabelText(ariaLabels.input);
+			const hoursEl = getByTestId('hours') as HTMLInputElement;
+			const minutesEl = getByTestId('minutes') as HTMLInputElement;
+			const ampmEl = getByTestId('ampm') as HTMLInputElement;
+
+			fireEvent.change(input, {
+				target: {
+					value: '2019-04-18 10:20 PM',
+				},
+			});
+
+			expect(hoursEl.value).toBe('10');
+			expect(minutesEl.value).toBe('20');
+			expect(ampmEl.value).toBe('PM');
+		});
+
+		it('change date with time 12 hours must be persisted am/pm', () => {
+			const {getByLabelText, getByTestId} = render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+					time
+					use12Hours
+				/>
+			);
+
+			const input: any = getByLabelText(ariaLabels.input);
+			const dayNumber = getByLabelText(
+				new Date('2019 05 01').toDateString()
+			);
+			const hoursEl = getByTestId('hours') as HTMLInputElement;
+			const minutesEl = getByTestId('minutes') as HTMLInputElement;
+			const ampmEl = getByTestId('ampm') as HTMLInputElement;
+
+			fireEvent.change(input, {
+				target: {
+					value: '2019-04-18 10:20 PM',
+				},
+			});
+
+			fireEvent.click(dayNumber);
+
+			expect(input.value).toBe('2019-05-01 10:20 PM');
+
+			expect(hoursEl.value).toBe('10');
+			expect(minutesEl.value).toBe('20');
+			expect(ampmEl.value).toBe('PM');
+		});
 	});
 
 	describe('Range', () => {
