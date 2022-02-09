@@ -345,23 +345,12 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			const {value} = event.target;
 
 			if (!value) {
-				const newDaysSelected: [Date, Date] = [NEW_DATE, NEW_DATE];
-
-				const initialTime = {
-					hours: 0,
-					minutes: 0,
-				};
-
 				changeMonth(initialMonth);
 
-				setDaysSelected(newDaysSelected);
+				setDaysSelected([initialMonth, initialMonth]);
 
 				if (time) {
-					setCurrentTime(
-						initialTime.hours,
-						initialTime.minutes,
-						undefined
-					);
+					setCurrentTime(0, 0, undefined);
 				}
 			} else {
 				const format = time
