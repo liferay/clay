@@ -1,0 +1,211 @@
+---
+title: 'Text'
+lexiconDefinition: 'https://liferay.design/lexicon/foundations/typography/'
+---
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Sizes](#css-text-sizes)
+-   [Weights](#css-text-weights)
+-   [Styles](#css-text-styles)
+
+</div>
+</div>
+
+## Sizes(#css-text-sizes)
+
+Utility classes for changing the `font-size` of text.
+
+<div class="sheet-example">
+	<table class="table table-autofit">
+		<thead>
+			<th class="table-cell-ws-nowrap">Utility</th>
+			<th>Rem</th>
+			<th>Px</th>
+			<th class="table-cell-expand">Example</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-11</td>
+				<td>2.5rem</td>
+				<td>40px</td>
+				<td class="table-cell-expand"><span class="text-11">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-10</td>
+				<td>2.25rem</td>
+				<td>36px</td>
+				<td class="table-cell-expand"><span class="text-10">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-9</td>
+				<td>2rem</td>
+				<td>32px</td>
+				<td class="table-cell-expand"><span class="text-9">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-8</td>
+				<td>1.75rem</td>
+				<td>28px</td>
+				<td class="table-cell-expand"><span class="text-8">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-7</td>
+				<td>1.5rem</td>
+				<td>24px</td>
+				<td class="table-cell-expand"><span class="text-7">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-6</td>
+				<td>1.25rem</td>
+				<td>20px</td>
+				<td class="table-cell-expand"><span class="text-6">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-5</td>
+				<td>1.125rem</td>
+				<td>18px</td>
+				<td class="table-cell-expand"><span class="text-5">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-4</td>
+				<td>1rem</td>
+				<td>16px</td>
+				<td class="table-cell-expand"><span class="text-4">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-3</td>
+				<td>0.875rem</td>
+				<td>14px</td>
+				<td class="table-cell-expand"><span class="text-3">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-2</td>
+				<td>0.75rem</td>
+				<td>12px</td>
+				<td class="table-cell-expand"><span class="text-2">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-1</td>
+				<td>0.625rem</td>
+				<td>10px</td>
+				<td class="table-cell-expand"><span class="text-1">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+```html
+<span class="text-11">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-10">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-9">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-8">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-7">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-6">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-5">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-4">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-3">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-2">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-1">The quick brown fox jumped over the lazy dog.</span>
+```
+
+## Weights(#css-text-weights)
+
+Utility classes for changing the `font-weight` of text.
+
+<div class="sheet-example">
+	<table class="table table-autofit">
+		<thead>
+			<th class="table-cell-ws-nowrap">Utility</th>
+			<th>Value</th>
+			<th class="table-cell-expand">Example</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-weight-lighter</td>
+				<td>lighter</td>
+				<td class="table-cell-expand"><span class="text-weight-lighter">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-weight-light</td>
+				<td>300</td>
+				<td class="table-cell-expand"><span class="text-weight-light">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-weight-normal</td>
+				<td>400</td>
+				<td class="table-cell-expand"><span class="text-weight-normal">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-weight-semi-bold</td>
+				<td>500</td>
+				<td class="table-cell-expand"><span class="text-weight-semi-bold">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-weight-bold</td>
+				<td>700</td>
+				<td class="table-cell-expand"><span class="text-weight-bold">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-weight-bolder</td>
+				<td>900</td>
+				<td class="table-cell-expand"><span class="text-weight-bolder">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+```html
+<span class="text-weight-lighter"
+	>The quick brown fox jumped over the lazy dog.</span
+>
+<span class="text-weight-light"
+	>The quick brown fox jumped over the lazy dog.</span
+>
+<span class="text-weight-normal"
+	>The quick brown fox jumped over the lazy dog.</span
+>
+<span class="text-weight-semi-bold"
+	>The quick brown fox jumped over the lazy dog.</span
+>
+<span class="text-weight-bold"
+	>The quick brown fox jumped over the lazy dog.</span
+>
+<span class="text-weight-bolder"
+	>The quick brown fox jumped over the lazy dog.</span
+>
+```
+
+## Styles(#css-text-styles)
+
+Utility classes for changing the `font-style` of text.
+
+<div class="sheet-example">
+	<table class="table table-autofit">
+		<thead>
+			<th class="table-cell-ws-nowrap">Utility</th>
+			<th class="table-cell-minw-200">Value</th>
+			<th class="table-cell-expand">Example</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-italic</td>
+				<td class="table-cell-minw-200">italic</td>
+				<td class="table-cell-expand"><span class="text-italic">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+			<tr>
+				<td class="table-cell-ws-nowrap">text-monospace</td>
+				<td class="table-cell-minw-200">SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace</td>
+				<td class="table-cell-expand"><span class="text-monospace">The quick brown fox jumped over the lazy dog.</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+```html
+<span class="text-italic">The quick brown fox jumped over the lazy dog.</span>
+<span class="text-monospace"
+	>The quick brown fox jumped over the lazy dog.</span
+>
+```

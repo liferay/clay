@@ -305,6 +305,48 @@ $overflows: auto, hidden !default;
 
 $positions: static, relative, absolute, fixed, sticky !default;
 
+// Font Sizes
+
+$font-sizes: () !default;
+$font-sizes: map-deep-merge(
+	(
+		text-1: (
+			font-size: 0.625rem,
+		),
+		text-2: (
+			font-size: 0.75rem,
+		),
+		text-3: (
+			font-size: 0.875rem,
+		),
+		text-4: (
+			font-size: 1rem,
+		),
+		text-5: (
+			font-size: 1.125rem,
+		),
+		text-6: (
+			font-size: 1.25rem,
+		),
+		text-7: (
+			font-size: 1.5rem,
+		),
+		text-8: (
+			font-size: 1.75rem,
+		),
+		text-9: (
+			font-size: 2rem,
+		),
+		text-10: (
+			font-size: 2.25rem,
+		),
+		text-11: (
+			font-size: 2.5rem,
+		),
+	),
+	$font-sizes
+);
+
 // Text
 
 $text-theme-colors: () !default;
