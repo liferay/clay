@@ -23,6 +23,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	imgSrc?: string;
 
 	/**
+	 * Indicates empty state should be a small variant.
+	 */
+	small?: boolean;
+
+	/**
 	 * Title of the message highlighting the description
 	 */
 	title?: string;
@@ -34,6 +39,7 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 	description = 'Sorry, there are no results found',
 	imgProps,
 	imgSrc,
+	small,
 	title = 'No results found',
 	...otherProps
 }: IProps) => {
@@ -42,15 +48,26 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 	return (
 		<div
 			className={classNames(className, 'c-empty-state', {
-				'c-empty-state-animation': hasImg,
+				'c-empty-state-animation': hasImg && !small,
+				'c-empty-state-animation-sm': hasImg && small,
 			})}
 			{...otherProps}
 		>
 			{hasImg && (
-				<div className="c-empty-state-image">
+				<div
+					className={classNames(
+						className,
+						{
+							'c-empty-state-image': !small,
+						},
+						{
+							'c-empty-state-image-sm': small,
+						}
+					)}
+				>
 					<div className="c-empty-state-aspect-ratio">
 						<img
-							alt="empty-state-image"
+							alt="c-empty-state-image"
 							className={classNames(
 								'aspect-ratio-item aspect-ratio-item-fluid',
 								imgProps && imgProps.className
@@ -62,15 +79,51 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 				</div>
 			)}
 
-			<div className="c-empty-state-title">
+			<div
+				className={classNames(
+					className,
+					{
+						'c-empty-state-title': !small,
+					},
+					{
+						'c-empty-state-title-sm': small,
+					}
+				)}
+			>
 				<span className="text-truncate-inline">
 					<span className="text-truncate">{title}</span>
 				</span>
 			</div>
 
-			<div className="c-empty-state-text">{description}</div>
+			<div
+				className={classNames(
+					className,
+					{
+						'c-empty-state-text': !small,
+					},
+					{
+						'c-empty-state-text-sm': small,
+					}
+				)}
+			>
+				{description}
+			</div>
 
-			{children && <div className="c-empty-state-footer">{children}</div>}
+			{children && (
+				<div
+					className={classNames(
+						className,
+						{
+							'c-empty-state-footer': !small,
+						},
+						{
+							'c-empty-state-footer-sm': small,
+						}
+					)}
+				>
+					{children}
+				</div>
+			)}
 		</div>
 	);
 };

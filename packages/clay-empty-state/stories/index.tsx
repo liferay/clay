@@ -8,6 +8,7 @@ import ClayButton from '@clayui/button';
 const emptyImage = require('@clayui/css/src/images/images/empty_state.gif');
 const searchImage = require('@clayui/css/src/images/images/search_state.gif');
 const successImage = require('@clayui/css/src/images/images/success_state.gif');
+import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
@@ -20,7 +21,7 @@ storiesOf('Components|ClayEmptyState', module)
 		</ClayEmptyState>
 	))
 	.add('empty state', () => (
-		<ClayEmptyState imgSrc={emptyImage}>
+		<ClayEmptyState imgSrc={emptyImage} small={boolean('Small', false)}>
 			<ClayButton displayType="secondary">Button</ClayButton>
 		</ClayEmptyState>
 	))
