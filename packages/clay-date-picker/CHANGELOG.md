@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** Adding some changes related to time reset and refactoring code ([dd4d2e8](https://github.com/liferay/clay/commit/dd4d2e835ec5ff5ca8068ddc04255ac1712e8d48))
+-   **@clayui/date-picker:** fix bug when not changing time to current time when clicking on dot button ([5daa1f1](https://github.com/liferay/clay/commit/5daa1f10a12a426caea6c6ffffa6e6e719d8859e))
+-   **@clayui/date-picker:** fix error in always adding ampm when user is typing ([d5502e4](https://github.com/liferay/clay/commit/d5502e4cff31c1db56981d33dafdf794e8a4029d))
+-   **@clayui/date-picker:** fix error when formatting time using 12 hours ([8061529](https://github.com/liferay/clay/commit/8061529170f421cf30d2133a1b8570deaf178a5a))
+-   **@clayui/date-picker:** Removing initialized variables ([997e10f](https://github.com/liferay/clay/commit/997e10f0743e06b95ed360d47614e35c15c9b655))
+-   **@clayui/date-picker:** Reset actual date when input string is empty ([94de1ae](https://github.com/liferay/clay/commit/94de1ae27a83e328a173481b3c1a3705b9fb0e93))
+
 # [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
 
 ### Bug Fixes

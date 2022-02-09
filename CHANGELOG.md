@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fixes error when not syncing the field state with the editor when there are no palettes ([097b76a](https://github.com/liferay/clay/commit/097b76a4379c2d59e14a89d5067725af762d1962))
+-   **@clayui/core:** fix error when selecting parent nodes and controlling intermediate state in multiple selection ([2174128](https://github.com/liferay/clay/commit/2174128202457d54be34ee99d3ffd65281e40ed2))
+-   **@clayui/css:** Buttons fix alignment of icons in flex items ([72993f2](https://github.com/liferay/clay/commit/72993f20c77b33e7985464fc4b710a9afc4d3c03))
+-   **@clayui/css:** Mixins `clay-button-variant` customize `.btn .inline-item .lexicon-icon` ([baf9e10](https://github.com/liferay/clay/commit/baf9e1026efc7eb1c422b19c75a359c09669b21c))
+-   **@clayui/date-picker:** Adding some changes related to time reset and refactoring code ([dd4d2e8](https://github.com/liferay/clay/commit/dd4d2e835ec5ff5ca8068ddc04255ac1712e8d48))
+-   **@clayui/date-picker:** fix bug when not changing time to current time when clicking on dot button ([5daa1f1](https://github.com/liferay/clay/commit/5daa1f10a12a426caea6c6ffffa6e6e719d8859e))
+-   **@clayui/date-picker:** fix error in always adding ampm when user is typing ([d5502e4](https://github.com/liferay/clay/commit/d5502e4cff31c1db56981d33dafdf794e8a4029d))
+-   **@clayui/date-picker:** fix error when formatting time using 12 hours ([8061529](https://github.com/liferay/clay/commit/8061529170f421cf30d2133a1b8570deaf178a5a))
+-   **@clayui/date-picker:** Removing initialized variables ([997e10f](https://github.com/liferay/clay/commit/997e10f0743e06b95ed360d47614e35c15c9b655))
+-   **@clayui/date-picker:** Reset actual date when input string is empty ([94de1ae](https://github.com/liferay/clay/commit/94de1ae27a83e328a173481b3c1a3705b9fb0e93))
+-   **@clayui/multi-select:** fix error when adding labels with whitespace ([1a8a166](https://github.com/liferay/clay/commit/1a8a1664be7541e1ca2173334db83e07562996bd))
+
+### Features
+
+-   **@clayui/core:** allow configuring the drag and drop context ([59f9f58](https://github.com/liferay/clay/commit/59f9f583a589dfb1494eb82ad2ca0e0fa7e2ed1d))
+-   **@clayui/css:** Aspect Ratio adds `aspect-ratio-8-to-3` (37.5%) ([7b7f9c2](https://github.com/liferay/clay/commit/7b7f9c2f7b49ed1a72cdf41b2d160e69a14ab83b))
+-   **@clayui/css:** Cadmin Aspect Ratio adds `aspect-ratio-8-to-3` (37.5%) ([5705ad5](https://github.com/liferay/clay/commit/5705ad5a16f6185ce9573000fe7cb741e01e7a35))
+-   **@clayui/css:** Cadmin Type convert `.display-*` components to `clay-css` mixin pattern ([3de7a63](https://github.com/liferay/clay/commit/3de7a6345835e43050cde76ed0b8eeb4b04c4a71))
+-   **@clayui/css:** Cadmin Type convert h1-h6 to clay-css mixin pattern ([332f1fa](https://github.com/liferay/clay/commit/332f1faedf9ab5f1ca4337fd7a15be2ad44a5bf1))
+-   **@clayui/css:** Cadmin Utilities adds `text-1` through `text-11` for font-sizes ([80e1097](https://github.com/liferay/clay/commit/80e109719293f27d12eb6d5ece2a28a7eaf99993))
+-   **@clayui/css:** Mixins Grid adds `clay-generate-media-breakpoints` ([c18ebd2](https://github.com/liferay/clay/commit/c18ebd2c78bbce463687edb03c0d4f651b0e03d6))
+-   **@clayui/css:** SVG Icons adds export ([0e67571](https://github.com/liferay/clay/commit/0e67571dd6af05cc9fa2fd703e041b6606ec0a1f))
+-   **@clayui/css:** Type convert `.display-*` components to `clay-css` mixin pattern ([e201fcc](https://github.com/liferay/clay/commit/e201fcc2ebec60880190d5f288a1c6e16d554e33))
+-   **@clayui/css:** Type convert h1-h6 to clay-css mixin pattern ([19dcfc3](https://github.com/liferay/clay/commit/19dcfc3e1c73c2d61c49d361f18310b79970da1d))
+-   **@clayui/css:** Utilities adds `text-1` through `text-11` for font-sizes ([4ce046c](https://github.com/liferay/clay/commit/4ce046c7c3b2b06523105afce664a563f69bc069))
+-   **clay-pagination:** allow disabling ellipsis button in pagination ([4e4e84c](https://github.com/liferay/clay/commit/4e4e84c73120ff110acd777a409d8d370361f909))
+
 ## [3.45.1](https://github.com/liferay/clay/compare/v3.45.0...v3.45.1) (2022-02-02)
 
 ### Bug Fixes

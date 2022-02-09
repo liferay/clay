@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fixes error when not syncing the field state with the editor when there are no palettes ([097b76a](https://github.com/liferay/clay/commit/097b76a4379c2d59e14a89d5067725af762d1962))
+
 # [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
 
 **Note:** Version bump only for package @clayui/color-picker

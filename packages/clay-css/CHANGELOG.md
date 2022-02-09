@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Buttons fix alignment of icons in flex items ([72993f2](https://github.com/liferay/clay/commit/72993f20c77b33e7985464fc4b710a9afc4d3c03))
+* **@clayui/css:** Mixins `clay-button-variant` customize `.btn .inline-item .lexicon-icon` ([baf9e10](https://github.com/liferay/clay/commit/baf9e1026efc7eb1c422b19c75a359c09669b21c))
+
+
+### Features
+
+* **@clayui/css:** Aspect Ratio adds `aspect-ratio-8-to-3` (37.5%) ([7b7f9c2](https://github.com/liferay/clay/commit/7b7f9c2f7b49ed1a72cdf41b2d160e69a14ab83b))
+* **@clayui/css:** Cadmin Aspect Ratio adds `aspect-ratio-8-to-3` (37.5%) ([5705ad5](https://github.com/liferay/clay/commit/5705ad5a16f6185ce9573000fe7cb741e01e7a35))
+* **@clayui/css:** Cadmin Type convert `.display-*` components to `clay-css` mixin pattern ([3de7a63](https://github.com/liferay/clay/commit/3de7a6345835e43050cde76ed0b8eeb4b04c4a71))
+* **@clayui/css:** Cadmin Type convert h1-h6 to clay-css mixin pattern ([332f1fa](https://github.com/liferay/clay/commit/332f1faedf9ab5f1ca4337fd7a15be2ad44a5bf1))
+* **@clayui/css:** Cadmin Utilities adds `text-1` through `text-11` for font-sizes ([80e1097](https://github.com/liferay/clay/commit/80e109719293f27d12eb6d5ece2a28a7eaf99993))
+* **@clayui/css:** Mixins Grid adds `clay-generate-media-breakpoints` ([c18ebd2](https://github.com/liferay/clay/commit/c18ebd2c78bbce463687edb03c0d4f651b0e03d6))
+* **@clayui/css:** SVG Icons adds export ([0e67571](https://github.com/liferay/clay/commit/0e67571dd6af05cc9fa2fd703e041b6606ec0a1f))
+* **@clayui/css:** Type convert `.display-*` components to `clay-css` mixin pattern ([e201fcc](https://github.com/liferay/clay/commit/e201fcc2ebec60880190d5f288a1c6e16d554e33))
+* **@clayui/css:** Type convert h1-h6 to clay-css mixin pattern ([19dcfc3](https://github.com/liferay/clay/commit/19dcfc3e1c73c2d61c49d361f18310b79970da1d))
+* **@clayui/css:** Utilities adds `text-1` through `text-11` for font-sizes ([4ce046c](https://github.com/liferay/clay/commit/4ce046c7c3b2b06523105afce664a563f69bc069))
+
+
+
+
+
 # [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
 
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fix error when adding labels with whitespace ([1a8a166](https://github.com/liferay/clay/commit/1a8a1664be7541e1ca2173334db83e07562996bd))
+
 # [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
 
 **Note:** Version bump only for package @clayui/multi-select
