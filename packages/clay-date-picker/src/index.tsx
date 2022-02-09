@@ -345,35 +345,47 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 			const {value} = event.target;
 
-			const format = time
-				? `${dateFormat} ${use12Hours ? TIME_FORMAT_12H : TIME_FORMAT}`
-				: dateFormat;
+			if (!value) {
+				changeMonth(initialMonth);
 
-			const [startDate, endDate] = fromStringToRange(
-				value,
-				format,
-				NEW_DATE
-			);
-
-			const yearFrom = startDate.getFullYear();
-			const yearTo = endDate.getFullYear();
-
-			if (
-				isValid(startDate) &&
-				isValid(endDate) &&
-				isYearWithinYears(yearFrom, years) &&
-				isYearWithinYears(yearTo, years)
-			) {
-				changeMonth(startDate);
-
-				setDaysSelected([startDate, endDate]);
+				setDaysSelected([initialMonth, initialMonth]);
 
 				if (time) {
-					setCurrentTime(
-						startDate.getHours(),
-						startDate.getMinutes(),
-						formatDate(startDate, 'a') as Input['ampm']
-					);
+					setCurrentTime('--', '--', undefined);
+				}
+			} else {
+				const format = time
+					? `${dateFormat} ${
+							use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
+					  }`
+					: dateFormat;
+
+				const [startDate, endDate] = fromStringToRange(
+					value,
+					format,
+					NEW_DATE
+				);
+
+				const yearFrom = startDate.getFullYear();
+				const yearTo = endDate.getFullYear();
+
+				if (
+					isValid(startDate) &&
+					isValid(endDate) &&
+					isYearWithinYears(yearFrom, years) &&
+					isYearWithinYears(yearTo, years)
+				) {
+					changeMonth(startDate);
+
+					setDaysSelected([startDate, endDate]);
+
+					if (time) {
+						setCurrentTime(
+							startDate.getHours(),
+							startDate.getMinutes(),
+							formatDate(startDate, 'a') as Input['ampm']
+						);
+					}
 				}
 			}
 
