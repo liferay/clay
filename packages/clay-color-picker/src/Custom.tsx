@@ -125,6 +125,8 @@ interface IProps {
 	editorActive?: boolean;
 
 	onEditorActiveChange?: TInternalStateOnChange<boolean>;
+
+	value?: string;
 }
 
 /**
@@ -139,6 +141,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	onEditorActiveChange,
 	showPalette,
 	spritemap,
+	value,
 }) => {
 	const inputRef = React.useRef(null);
 	const [activeSplotchIndex, setActiveSplotchIndex] = React.useState(0);
@@ -148,7 +151,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 		value: editorActive,
 	});
 
-	const color = tinycolor(colors[activeSplotchIndex]);
+	const color = tinycolor(showPalette ? colors[activeSplotchIndex] : value);
 
 	const [hue, setHue] = React.useState(color.toHsv().h);
 	const [hexInputVal, setHexInput] = useHexInput(color.toHex());
@@ -181,8 +184,12 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	React.useEffect(() => {
 		if (inputRef.current !== document.activeElement) {
 			setHexInput(color.toHex());
+
+			if (!showPalette) {
+				setHue(color.toHsv().h);
+			}
 		}
-	}, [color]);
+	}, [color, showPalette]);
 
 	return (
 		<>

@@ -313,6 +313,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								onEditorActiveChange={setCustomEditorActive}
 								showPalette={showPalette}
 								spritemap={spritemap}
+								value={value}
 							/>
 						)}
 					</ClayDropDown.Menu>
