@@ -68,7 +68,8 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	initialExpanded?: boolean;
 
 	/**
-	 * The month to display in the calendar on the first render.
+	 * The start date to be displayed on the calendar as "Today". Used to mark
+	 * the start date of the day and when resetting.
 	 */
 	initialMonth?: Date;
 
@@ -386,30 +387,30 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		const handleDotClicked = () => {
 			const [, endDate] = daysSelected;
 
-			changeMonth(NEW_DATE);
+			changeMonth(initialMonth);
 
 			const newDaysSelected: [Date, Date] =
-				range && endDate < NEW_DATE
-					? [endDate, NEW_DATE]
-					: [NEW_DATE, endDate];
+				range && endDate < initialMonth
+					? [endDate, initialMonth]
+					: [initialMonth, endDate];
 
 			let dateFormatted;
 
 			if (range) {
 				dateFormatted = fromRangeToString(newDaysSelected, dateFormat);
 			} else if (time) {
-				dateFormatted = formatDate(
-					parseDate(
-						currentTime,
-						use12Hours ? TIME_FORMAT_12H : TIME_FORMAT,
-						NEW_DATE
-					),
-					`${dateFormat} ${
-						use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
-					}`
-				);
+				dateFormatted = `${formatDate(
+					initialMonth,
+					dateFormat
+				)} ${setCurrentTime(
+					initialMonth.getHours(),
+					initialMonth.getMinutes(),
+					use12Hours
+						? (formatDate(initialMonth, 'a') as Input['ampm'])
+						: undefined
+				)}`;
 			} else {
-				dateFormatted = formatDate(NEW_DATE, dateFormat);
+				dateFormatted = formatDate(initialMonth, dateFormat);
 			}
 
 			setDaysSelected(newDaysSelected);

@@ -79,7 +79,13 @@ export const useCurrentTime = () => {
 				minutes = formatDate(date, 'mm');
 			}
 
-			set(ampm ? `${hours}:${minutes} ${ampm}` : `${hours}:${minutes}`);
+			const value = ampm
+				? `${hours}:${minutes} ${ampm}`
+				: `${hours}:${minutes}`;
+
+			set(value);
+
+			return value;
 		},
 		[]
 	);
