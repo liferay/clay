@@ -350,7 +350,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				setDaysSelected([initialMonth, initialMonth]);
 
 				if (time) {
-					setCurrentTime(0, 0, undefined);
+					setCurrentTime('--', '--', undefined);
 				}
 			} else {
 				const format = time
