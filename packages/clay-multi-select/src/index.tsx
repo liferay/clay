@@ -222,7 +222,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 				event.preventDefault();
 			}
 
-			if (inputValue && DELIMITER_KEYS.includes(key)) {
+			if (inputValue.trim() && DELIMITER_KEYS.includes(key)) {
 				event.preventDefault();
 
 				setNewValue(getNewItem(inputValue));
