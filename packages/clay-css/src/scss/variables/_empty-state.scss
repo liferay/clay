@@ -39,7 +39,7 @@ $c-empty-state-image: map-deep-merge(
 
 $c-empty-state-image-sm: () !default;
 $c-empty-state-image-sm: map-deep-merge(
-	(	
+	(
 		height: 120px,
 		margin-bottom: 32px,
 		max-width: 120px,
@@ -79,7 +79,7 @@ $c-empty-state-title: map-deep-merge(
 
 $c-empty-state-title-sm: () !default;
 $c-empty-state-title-sm: map-deep-merge(
-	(	
+	(
 		font-size: 16px,
 		font-weight: $font-weight-semi-bold,
 		height: 24px,
@@ -126,7 +126,7 @@ $c-empty-state-footer: map-deep-merge(
 
 $c-empty-state-footer-sm: () !default;
 $c-empty-state-footer-sm: map-deep-merge(
-	(	
+	(
 		margin-top: 16px,
 		max-height: 32px,
 		max-width: 268px,
