@@ -203,9 +203,10 @@
 			background-color: white;
 			margin-bottom: 0;
 			max-height: calc(100vh - 84px);
+			min-width: 280px;
 			overflow-y: auto;
 			top: 84px;
-			width: 280px;
+			width: 100%;
 			z-index: 1;
 		}
 	}
