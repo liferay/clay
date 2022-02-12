@@ -11,7 +11,7 @@ export type TInternalStateOnChange<T> =
 	| React.Dispatch<React.SetStateAction<T>>;
 
 interface IArgs<T> {
-	initialValue?: T;
+	initialValue?: T | (() => T);
 	onChange?: TInternalStateOnChange<T>;
 	value?: T;
 }
