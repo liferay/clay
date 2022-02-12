@@ -52,7 +52,7 @@ const ITEMS_DRIVE = [
 					{
 						children: [
 							{
-								id: 16,
+								id: 18,
 								name: 'Instructions.pdf',
 								status: 'success',
 								type: 'pdf',
@@ -643,6 +643,55 @@ storiesOf('Components|ClayTreeView', module)
 									<TreeView.Item>
 										<Icon symbol={TYPES_TO_SYMBOLS[type]} />
 										{name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('pre-selected items', () => {
+		const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+			new Set([3, 15, 17, 18])
+		);
+
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					items={ITEMS_DRIVE}
+					onSelectionChange={(keys) => setSelectionChange(keys)}
+					selectedKeys={selectedKeys}
+					selectionHydrationMode={select(
+						'Selection hydration mode',
+						{
+							'hydrate-first': 'hydrate-first',
+							'render-first': 'render-first',
+						},
+						'hydrate-first'
+					)}
+					selectionMode="multiple-recursive"
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<OptionalCheckbox />
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>
+										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
 									</TreeView.Item>
 								)}
 							</TreeView.Group>
