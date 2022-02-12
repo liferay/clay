@@ -4,7 +4,7 @@
  */
 
 import {useInternalState} from '@clayui/shared';
-import {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 
 import {
 	IMultipleSelection,
@@ -26,6 +26,32 @@ export interface IExpandable {
 	 * A callback that is called when items are expanded or collapsed.
 	 */
 	onExpandedChange?: (keys: Set<Key>) => void;
+
+	/**
+	 * Flag to indicate the hydration phase to expand the selected items. When
+	 * `selectionMode` is `multiple-recursive` it also revalidates the
+	 * intermediate state of the items.
+	 *
+	 * It supports two rendering phases, render-first and hydrate after or
+	 * hydrate before rendering, both have trade-offs that depend on the number
+	 * of items being rendered.
+	 *
+	 * Both cases traverse the tree looking for the selected items to know which
+	 * items should be expanded and which should be in the intermediate state,
+	 * this is done only the first time the component is rendered and if it has
+	 * selected items. This operation can degrade the performance of the
+	 * component depending on the number of items, choose the best option for
+	 * your use case.
+	 *
+	 * - `render-first` will render first and then hydrate. It doesn't block the
+	 * initial rendering but after rendering it is possible to see the items
+	 * being expanded.
+	 *
+	 * - `hydrate-first` will hydrate first and then render. This blocks
+	 * rendering first until it traverses the tree, when rendered the items
+	 * are already expanded.
+	 */
+	selectionHydrationMode?: 'render-first' | 'hydrate-first';
 }
 
 export interface ITreeProps<T>
@@ -57,12 +83,6 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 }
 
 export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
-	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
-		initialValue: props.expandedKeys ?? new Set(),
-		onChange: props.onExpandedChange,
-		value: props.expandedKeys,
-	});
-
 	const [items, setItems] = useInternalState({
 		initialValue: props.items ?? [],
 		onChange: props.onItemsChange,
@@ -70,12 +90,98 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	});
 
 	const selection = useMultipleSelection<T>({
-		items: props.items,
+		items,
 		nestedKey: props.nestedKey,
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
 		selectionMode: props.selectionMode,
 	});
+
+	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
+		initialValue: () => {
+			const {
+				expandedKeys,
+				items,
+				nestedKey,
+				selectedKeys,
+				selectionHydrationMode,
+				selectionMode,
+			} = props;
+
+			if (
+				selectionHydrationMode === 'hydrate-first' &&
+				items &&
+				selectedKeys?.size
+			) {
+				const expand = expandSelectedItems(
+					items,
+					nestedKey as string,
+
+					// TODO try to make it configurable or be able to infer the name of
+					// the property from the key passed in the React rendering.
+					'id',
+					selectedKeys
+				);
+
+				if (selectionMode === 'multiple-recursive') {
+					selection.replaceIntermediateKeys(
+						expand.filter((key) => !selectedKeys.has(key))
+					);
+				}
+
+				return new Set(
+					expandedKeys
+						? Array.from(expandedKeys).concat(expand)
+						: expand
+				);
+			}
+
+			return expandedKeys ?? new Set();
+		},
+		onChange: props.onExpandedChange,
+		value: props.expandedKeys,
+	});
+
+	useEffect(() => {
+		const {
+			expandedKeys,
+			items,
+			nestedKey,
+			selectedKeys,
+			selectionHydrationMode,
+			selectionMode,
+		} = props;
+
+		if (
+			selectionHydrationMode === 'render-first' &&
+			items &&
+			selectedKeys?.size
+		) {
+			const expand = expandSelectedItems(
+				items,
+				nestedKey as string,
+
+				// TODO try to make it configurable or be able to infer the name of
+				// the property from the key passed in the React rendering.
+				'id',
+				selectedKeys
+			);
+
+			if (selectionMode === 'multiple-recursive') {
+				selection.replaceIntermediateKeys(
+					expand.filter((key) => !selectedKeys.has(key))
+				);
+			}
+
+			setExpandedKeys(
+				new Set(
+					expandedKeys
+						? Array.from(expandedKeys).concat(expand)
+						: expand
+				)
+			);
+		}
+	}, []);
 
 	const close = useCallback(
 		(key: Key) => {
@@ -182,6 +288,67 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		selection,
 		toggle,
 	};
+}
+
+function expandSelectedItems<T extends Array<Record<string, any>>>(
+	items: T,
+	nestedKey: string,
+	key: string,
+	selectedKeys: Set<Key>
+) {
+	const expand: Array<React.Key> = [];
+
+	let currentSelected = 0;
+
+	visit(
+		nestedKey as string,
+		key,
+		(item: Record<string, any>, path: Array<React.Key>) => {
+			if (selectedKeys.has(item.id)) {
+				currentSelected++;
+
+				expand.push(...path);
+			}
+
+			return selectedKeys.size === currentSelected;
+		}
+	).iter(items);
+
+	return expand;
+}
+
+function visit<T extends Array<Record<string, any>>>(
+	nestedKey: string,
+	key: string,
+	callback: Function
+) {
+	let hasContinue = false;
+
+	function iter(items: T, currentPath: Array<React.Key> = []) {
+		if (hasContinue) {
+			return;
+		}
+
+		const queue = [...items] as T;
+
+		while (queue.length) {
+			const item = queue.shift() as Record<string, any>;
+
+			const path = currentPath.concat(item[key]);
+
+			hasContinue = callback(item, path);
+
+			if (hasContinue) {
+				break;
+			}
+
+			if (item[nestedKey]) {
+				iter(item[nestedKey], path);
+			}
+		}
+	}
+
+	return {iter};
 }
 
 // Operation of `move` value to the same document structure, removing from
