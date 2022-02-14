@@ -34,6 +34,8 @@ import {Example, MultipleSelection} from '$packages/clay-core/docs/treeview';
 -   [Shortcuts](#shortcuts)
     -   [Rename Item](#rename-item)
     -   [Remove Item](#remove-item)
+-   [Performance](#performance)
+    -   [Selection hydration](#selection-hydration)
 
 </div>
 </div>
@@ -308,6 +310,33 @@ The selection allows the user to select one or more items in the TreeView, there
 
 The selection can be configured and composed in different ways depending on each use case. Setting the selectionMode and using a `<Checkbox />` in the item will respect the configuration of the selection. It is also possible to configure the selection manually to customize what will trigger the selection or modify the look of the selected state. For more information check the [manual selection](#manual-selection) section.
 
+Selection can be controlled and uncontrolled, this means you can keep the state of `selectedKeys` at the implementation level or let the TreeView keep the state controlled internally.
+
+```jsx
+const [selectedKeys, setSelectionChange] = useState(new Set());
+
+return (
+	<TreeView
+		onSelectionChange={(keys) => setSelectionChange(keys)}
+		selectedKeys={selectedKeys}
+	>
+		...
+	</TreeView>
+);
+```
+
+Rendering the TreeView with some pre-selected items will cause the parent items of the selected items to be expanded so that the selected item is visible on the first render. In recursive multiple selection, the state of the parents of the selected items is marked as intermediate if they are valid.
+
+<div class="clay-site-alert alert alert-info">
+	<strong class="lead">Info</strong>
+	Expanding selected items in the first render implies performance degradation
+	if the TreeView has too many items and too many items selected but there are
+	some possibilities to work around depending on the use case, read the <a href="#selection-hydration">
+		Selection hydration
+	</a> section for more information to mitigate this when viewing a noticeable
+	slowdown on the first render.
+</div>
+
 ### Single Selection
 
 The single selection state works independently of adding the `<Checkbox />` and this state is set by default.
@@ -464,3 +493,32 @@ The `onRenameItem` property receives the `item` object corresponding to the curr
 ### Remove Item
 
 If the user presses the `Backspace` or `Delete` key the TreeView removes the item from the `items` structure. In which case `onItemsChange` is called with the tree is updated.
+
+## Performance
+
+The TreeView component was designed with performance in mind, so many of the APIs and behavior were designed aligned with that in mind. The component handles a lot of OOTB stuff without the developer having to worry about making implementation adjustments but in some scenarios, it may be necessary for the developer to follow some good practices to avoid performance degradation.
+
+This section helps with some good practices that help TreeView remain responsive.
+
+### Selection hydration
+
+Selection hydration is the ability for the TreeView to expand the parent items of the selected items when the component performs the first rendering.
+
+The possibility of doing this implies some performance problems because the component will only have the visibility of `selectedKeys` and the `items` itself, to take care of expanding the items the component will traverse the tree in search of the selected items and the path to the item and then expand.
+
+This can lead to a performance problem on the first render if you have too many items and too many items selected because the component will traverse the tree, there is a possibility to mitigate this on the first render by setting the `selectionHydrationMode` flag.
+
+It supports two rendering phases, render-first and hydrate after or hydrate before rendering, both have trade-offs that depend on the number of items being rendered.
+
+Both cases traverse the tree looking for the selected items to know which items should be expanded and which should be in the intermediate state, this is done only the first time the component is rendered and if it has selected items.
+
+-   `render-first` will render first and then hydrate. It doesn't block the initial rendering but after rendering it is possible to see the items being expanded.
+-   `hydrate-first` will hydrate first and then render. This blocks rendering first until it traverses the tree, when rendered the items are already expanded.
+
+<div class="clay-site-alert alert alert-info">
+	<strong class="lead">Info</strong>
+	The tree traversal implementation internally has some performance optimizations,
+	depending on the number of selected items the TreeView stops traversing the tree
+	when it finds all the selected items, in most scenarios the TreeView will almost
+	never traverse the entire tree.
+</div>
