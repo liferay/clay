@@ -353,6 +353,71 @@ storiesOf('Components|ClayTreeView', module)
 			</TreeView>
 		</Provider>
 	))
+	.add('w/o onItemsChange', () => {
+		const [items, setItems] = React.useState([
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Liferay Drive',
+			},
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Repositories',
+			},
+			{
+				children: [
+					{name: 'PDF'},
+					{name: 'Word'},
+					{name: 'Google Drive'},
+					{name: 'Figma'},
+				],
+				name: 'Documents and Media',
+			},
+			{
+				children: [],
+				name: 'Empty directory',
+			},
+		]);
+
+		React.useEffect(() => {
+			setTimeout(() => {
+				setItems([
+					{
+						children: [
+							{
+								name: 'Blogs',
+							},
+							{name: 'Documents and Media'},
+						],
+						name: 'Repositories',
+					},
+					{
+						children: [],
+						name: 'Empty directory',
+					},
+				]);
+			}, 1000);
+		}, []);
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView dragAndDrop items={items} nestedKey="children">
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack>
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item) => (
+									<TreeView.Item>{item.name}</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
 	.add('w/styling', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView

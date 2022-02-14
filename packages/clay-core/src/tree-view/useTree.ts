@@ -56,6 +56,8 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	toggle: (key: Key) => void;
 }
 
+function noop() {}
+
 export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
 		initialValue: props.expandedKeys ?? new Set(),
@@ -65,7 +67,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	const [items, setItems] = useInternalState({
 		initialValue: props.items ?? [],
-		onChange: props.onItemsChange,
+		onChange: props.onItemsChange ?? noop,
 		value: props.items,
 	});
 
