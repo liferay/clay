@@ -870,10 +870,30 @@
 			$link: setter(map-get($map, link), ());
 			$link: map-merge($link, $clay-link);
 
+			$href: setter(map-get($map, href), ());
+			$href: map-deep-merge($href, $link);
+
 			@include clay-css($map);
 
-			a {
-				@include clay-link($link);
+			&::before {
+				@include clay-css(map-get($map, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($map, after));
+			}
+
+			&:first-child {
+				@include clay-css(map-get($map, first-child));
+			}
+
+			&:last-child {
+				@include clay-css(map-get($map, last-child));
+			}
+
+			&[href],
+			[href] {
+				@include clay-link($href);
 			}
 		}
 	}
