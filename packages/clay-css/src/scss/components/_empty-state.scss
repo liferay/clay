@@ -2,21 +2,18 @@
 	@include clay-css($c-empty-state);
 }
 
+.c-empty-state-sm {
+	@include clay-css($c-empty-state-sm);
+}
+
 .c-empty-state-animation {
 	@include clay-css($c-empty-state-animation);
 }
 
-.c-empty-state-animation-sm {
-	@include clay-css($c-empty-state-animation-sm);
-}
 // C Empty State Image
 
 .c-empty-state-image {
 	@include clay-css($c-empty-state-image);
-}
-
-.c-empty-state-image-sm {
-	@include clay-css($c-empty-state-image-sm);
 }
 
 .c-empty-state-aspect-ratio {
@@ -29,18 +26,10 @@
 	@include clay-css($c-empty-state-title);
 }
 
-.c-empty-state-title-sm {
-	@include clay-css($c-empty-state-title-sm);
-}
-
 // C Empty State Text
 
 .c-empty-state-text {
 	@include clay-css($c-empty-state-text);
-}
-
-.c-empty-state-text-sm {
-	@include clay-css($c-empty-state-text-sm);
 }
 
 // C Empty State Footer
@@ -49,6 +38,28 @@
 	@include clay-css($c-empty-state-footer);
 }
 
-.c-empty-state-footer-sm {
-	@include clay-css($c-empty-state-footer-sm);
+// C Empty State Small
+
+.c-empty-state-sm {
+	@include clay-css($c-empty-state-sm);
+
+	&.c-empty-state-animation {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-animation));
+	}
+
+	.c-empty-state-image {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-image));
+	}
+
+	.c-empty-state-title {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-title));
+	}
+
+	.c-empty-state-text {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-text));
+	}
+
+	.c-empty-state-footer {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-footer));
+	}
 }

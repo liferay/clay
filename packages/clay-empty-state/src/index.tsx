@@ -48,18 +48,13 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 	return (
 		<div
 			className={classNames(className, 'c-empty-state', {
-				'c-empty-state-animation': hasImg && !small,
-				'c-empty-state-animation-sm': hasImg && small,
+				'c-empty-state-animation': hasImg,
+				'c-empty-state-sm': small,
 			})}
 			{...otherProps}
 		>
 			{hasImg && (
-				<div
-					className={classNames(className, {
-						'c-empty-state-image': !small,
-						'c-empty-state-image-sm': small,
-					})}
-				>
+				<div className="c-empty-state-image">
 					<div className="c-empty-state-aspect-ratio">
 						<img
 							alt="c-empty-state-image"
@@ -74,36 +69,15 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 				</div>
 			)}
 
-			<div
-				className={classNames(className, {
-					'c-empty-state-title': !small,
-					'c-empty-state-title-sm': small,
-				})}
-			>
+			<div className="c-empty-state-title">
 				<span className="text-truncate-inline">
 					<span className="text-truncate">{title}</span>
 				</span>
 			</div>
 
-			<div
-				className={classNames(className, {
-					'c-empty-state-text': !small,
-					'c-empty-state-text-sm': small,
-				})}
-			>
-				{description}
-			</div>
+			<div className="c-empty-state-text">{description}</div>
 
-			{children && (
-				<div
-					className={classNames(className, {
-						'c-empty-state-footer': !small,
-						'c-empty-state-footer-sm': small,
-					})}
-				>
-					{children}
-				</div>
-			)}
+			{children && <div className="c-empty-state-footer">{children}</div>}
 		</div>
 	);
 };
