@@ -1192,4 +1192,64 @@ storiesOf('Components|ClayTreeView', module)
 				</TreeView>
 			</Provider>
 		);
+	})
+	.add('no scrolling', () => {
+		const [items, _setItems] = React.useState([
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Liferay Drive',
+			},
+			{
+				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				name: 'Repositories',
+			},
+			{
+				children: [
+					{name: 'PDF'},
+					{name: 'Word'},
+					{name: 'Google Drive'},
+					{name: 'Figma'},
+				],
+				name: 'Documents and Media',
+			},
+			{
+				children: [{name: 'One'}, {name: 'Two'}, {name: 'Three'}],
+				name: 'Another directory',
+			},
+			{
+				children: [{name: 'Four'}, {name: 'Five'}, {name: 'Six'}],
+				name: 'Last directory',
+			},
+		]);
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<div
+					style={{
+						background: 'hotpink',
+						height: '150px',
+						overflow: 'auto',
+					}}
+				>
+					<TreeView dragAndDrop items={items} nestedKey="children">
+						{(item) => (
+							<TreeView.Item>
+								<TreeView.ItemStack>
+									<Checkbox />
+									{item.name}
+								</TreeView.ItemStack>
+								<TreeView.Group items={item.children}>
+									{(item) => (
+										<TreeView.Item>
+											<Checkbox />
+											{item.name}
+										</TreeView.Item>
+									)}
+								</TreeView.Group>
+							</TreeView.Item>
+						)}
+					</TreeView>
+				</div>
+			</Provider>
+		);
 	});

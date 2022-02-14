@@ -199,6 +199,8 @@ export const TreeViewItem = React.forwardRef<
 					}}
 					onFocus={() => actions && setFocus(true)}
 					onKeyDown={(event) => {
+						event.preventDefault();
+
 						const {key} = event;
 
 						if (key === Keys.Left) {
