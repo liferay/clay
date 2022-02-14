@@ -389,6 +389,7 @@ export function TreeViewItemStack({
 	...otherProps
 }: ITreeViewItemStackProps) {
 	const {
+		childrenRoot,
 		expandOnCheck,
 		expandedKeys,
 		expanderClassName,
@@ -435,7 +436,7 @@ export function TreeViewItemStack({
 							{loading ? (
 								<ClayLoadingIndicator small />
 							) : (
-								(hasChildren || !nestedChildren) && (
+								(hasChildren || !childrenRoot.current) && (
 									<Expander expanderIcons={expanderIcons} />
 								)
 							)}
