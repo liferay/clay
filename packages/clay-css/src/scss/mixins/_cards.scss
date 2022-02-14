@@ -5,33 +5,30 @@
 /// A mixin that styles a Card Section (e.g., `.card-header`, `.card-body`, `.card-footer` or `.card-row`). This mixin is used by `clay-card-variant`.
 /// @param {Map} $map - A map of key-value pairs. The keys are defined in the mixin. Example below:
 /// @example
-/// enabled: {Bool},  // Set to false to prevent mixin styles from being output. Default: true
-/// bg: {Color | String | Null},
-/// border-color: {Color | String | List | Null},
-/// border-radius: {Number | String | List | Null},
-/// border-style: {String | List | Null},
-/// border-width: {Number | String | List | Null},
-/// display: {String | Null},
-/// flex-basis: {Number | String | Null},
-/// flex-direction: {String | Null},
-/// flex-grow: {Number | String | Null},
-/// flex-shrink: {Number | String | Null},
-/// flex-wrap: {String | Null},
-/// margin-bottom: {Number | String | Null},
-/// margin-left: {Number | String | Null},
-/// margin-right: {Number | String | Null},
-/// margin-top: {Number | String | Null},
-/// padding-bottom: {Number | String | Null},
-/// padding-left: {Number | String | Null},
-/// padding-right: {Number | String | Null},
-/// padding-top: {Number | String | Null},
-/// text-align: {String | Null},
-/// width: {Number | String | Null},
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .card-section
+/// 	before: (
+/// 		// .card-section::before
+/// 	),
+/// 	after: (
+/// 		// .card-section::after
+/// 	),
+/// 	first-child: (
+/// 		// .card-section:first-child
+/// 	),
+/// 	last-child: (
+/// 		// .card-section:last-child
+/// 	),
+/// 	autofit-col: (
+/// 		// .card-section .autofit-col
+/// 	),
+/// 
+/// )
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
+/// bg: {Color | String | Null}, // deprecated after 3.9.0
 /// autofit-col-padding-left: {Number | String | Null},
 /// autofit-col-padding-right: {Number | String | Null},
-/// @todo
-/// - Add @example
-/// - Add @link to documentation
 
 @mixin clay-card-section-variant($map) {
 	@if (type-of($map) == 'map') {
@@ -64,6 +61,22 @@
 
 		@if ($enabled) {
 			@include clay-css($base);
+
+			&::before {
+				@include clay-css(map-get($map, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($map, after));
+			}
+
+			&:first-child {
+				@include clay-css(map-get($map, first-child));
+			}
+
+			&:last-child {
+				@include clay-css(map-get($map, last-child));
+			}
 
 			.autofit-col {
 				@include clay-css($autofit-col);
@@ -186,6 +199,15 @@
 /// 	),
 /// 	aspect-ratio-item-bottom-left: (
 /// 		// .card .aspect-ratio-item-bottom-left
+/// 	),
+/// 	hr: (
+/// 		// .card > hr
+/// 		before: (
+/// 			// .card > hr::before
+/// 		),
+/// 		after: (
+/// 			// .card > hr::after
+/// 		),
 /// 	),
 /// 	sticker: (
 /// 		// .card .sticker
@@ -842,6 +864,18 @@
 
 			.aspect-ratio-item-bottom-left {
 				@include clay-css(map-get($map, aspect-ratio-item-bottom-left));
+			}
+
+			> hr {
+				@include clay-css(map-get($map, hr));
+
+				&::before {
+					@include clay-css(map-deep-get($map, hr, before));
+				}
+
+				&::after {
+					@include clay-css(map-deep-get($map, hr, after));
+				}
 			}
 
 			.sticker {
