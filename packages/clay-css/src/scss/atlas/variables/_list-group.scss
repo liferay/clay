@@ -32,9 +32,13 @@ $list-group-title-link: map-deep-merge(
 		border-radius: 1px,
 		display: inline-block,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$list-group-title-link
 );
@@ -58,9 +62,13 @@ $list-group-subtitle-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$list-group-subtitle-link
 );
@@ -74,9 +82,13 @@ $list-group-text-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$list-group-text-link
 );
@@ -98,9 +110,13 @@ $list-group-subtext-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$list-group-subtext-link
 );

@@ -362,10 +362,6 @@ caption {
 	@include clay-text-typography($table-title);
 }
 
-.table-title a {
-	@include clay-link($table-title-link);
-}
-
 // Table Link
 
 .table-link {
@@ -661,10 +657,6 @@ caption {
 
 .table-list-title {
 	@include clay-text-typography($table-list-title);
-}
-
-.table-list-title a {
-	@include clay-link($table-list-title-link);
 }
 
 // Table List Link

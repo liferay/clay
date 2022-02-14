@@ -177,6 +177,13 @@ $table-title-link: map-deep-merge(
 	$table-title-link
 );
 
+$table-title: map-deep-merge(
+	$table-title,
+	(
+		href: $table-title-link,
+	)
+);
+
 // Table Link
 
 $table-link: () !default;
@@ -384,6 +391,13 @@ $table-list-title-link: map-deep-merge(
 		),
 	),
 	$table-list-title-link
+);
+
+$table-list-title: map-deep-merge(
+	$table-list-title,
+	(
+		href: $table-list-title-link,
+	)
 );
 
 // Table List Link

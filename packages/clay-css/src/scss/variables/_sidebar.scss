@@ -3,21 +3,21 @@ $sidebar-padding-left: 1rem !default; // 16px
 $sidebar-padding-right: 1rem !default; // 16px
 $sidebar-padding-top: 1rem !default; // 16px
 
-// Sidebar Header Title
+// .sidebar-header .component-title
 
 $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-deep-merge(
 	(
 		font-size: 1.5rem,
 		font-weight: $font-weight-semi-bold,
-		clay-link: (
+		href: (
 			color: $gray-900,
 		),
 	),
 	$sidebar-header-component-title
 );
 
-// Sidebar Header Subtitle
+// .sidebar-header .component-subtitle
 
 $sidebar-header-component-subtitle: () !default;
 $sidebar-header-component-subtitle: map-deep-merge(
