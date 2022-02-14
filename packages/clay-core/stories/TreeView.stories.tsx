@@ -1194,6 +1194,11 @@ storiesOf('Components|ClayTreeView', module)
 		);
 	})
 	.add('no scrolling', () => {
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
 		const [items, _setItems] = React.useState([
 			{
 				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
@@ -1235,13 +1240,13 @@ storiesOf('Components|ClayTreeView', module)
 						{(item) => (
 							<TreeView.Item>
 								<TreeView.ItemStack>
-									<Checkbox />
+									<OptionalCheckbox />
 									{item.name}
 								</TreeView.ItemStack>
 								<TreeView.Group items={item.children}>
 									{(item) => (
 										<TreeView.Item>
-											<Checkbox />
+											<OptionalCheckbox />
 											{item.name}
 										</TreeView.Item>
 									)}
