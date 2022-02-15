@@ -19,10 +19,33 @@ $cadmin-card-spacer-y: 12px !default;
 $cadmin-card-cap-bg: rgba($cadmin-black, 0.03) !default;
 $cadmin-card-cap-color: null !default;
 
+// .card-body
+
 $cadmin-card-body-padding-bottom: 16px !default;
 $cadmin-card-body-padding-left: 16px !default;
 $cadmin-card-body-padding-right: 16px !default;
 $cadmin-card-body-padding-top: 16px !default;
+
+// `flex` enable `flex-grow: 1` for decks and groups so that card blocks take up
+// as much space as possible, ensuring footers are aligned to the bottom.
+// `min-height` workaround for the image size bug in IE
+// See: https://github.com/twbs/bootstrap/pull/28855
+
+$cadmin-card-body: () !default;
+$cadmin-card-body: map-deep-merge(
+	(
+		color: $cadmin-card-color,
+		flex: 1 1 auto,
+		min-height: 1px,
+		padding-bottom: $cadmin-card-body-padding-bottom,
+		padding-left: $cadmin-card-body-padding-left,
+		padding-right: $cadmin-card-body-padding-right,
+		padding-top: $cadmin-card-body-padding-top,
+	),
+	$cadmin-card-body
+);
+
+// .card-section-header
 
 $cadmin-card-section-header-color: $cadmin-gray-600 !default;
 $cadmin-card-section-header-font-size: 12px !default;
@@ -31,6 +54,22 @@ $cadmin-card-section-header-line-height: 2.5 !default;
 $cadmin-card-section-header-margin-bottom: 24px !default;
 $cadmin-card-section-header-padding: 0 ($cadmin-grid-gutter-width * 0.5) !default;
 $cadmin-card-section-header-text-transform: uppercase !default;
+
+$cadmin-card-section-header: () !default;
+$cadmin-card-section-header: map-deep-merge(
+	(
+		color: $cadmin-card-section-header-color,
+		font-size: $cadmin-card-section-header-font-size,
+		font-weight: $cadmin-card-section-header-font-weight,
+		line-height: $cadmin-card-section-header-line-height,
+		margin-bottom: $cadmin-card-section-header-margin-bottom,
+		padding: $cadmin-card-section-header-padding,
+		text-transform: $cadmin-card-section-header-text-transform,
+	),
+	$cadmin-card-section-header
+);
+
+// .card-img-overlay
 
 $cadmin-card-img-overlay-padding: 20px !default;
 
@@ -106,6 +145,47 @@ $cadmin-card-aspect-ratio-item-bottom-left: map-deep-merge(
 		left: 16px,
 	),
 	$cadmin-card-aspect-ratio-item-bottom-left
+);
+
+// .card
+
+// `min-width`, see https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+
+$card: () !default;
+$card: map-deep-merge(
+	(
+		background-color: $cadmin-card-bg,
+		border-color: $cadmin-card-border-color,
+		border-radius: clay-enable-rounded($cadmin-card-border-radius),
+		border-style: $cadmin-card-border-style,
+		border-width: $cadmin-card-border-width,
+		box-shadow: clay-enable-shadows($cadmin-card-box-shadow),
+		display: block,
+		height: $cadmin-card-height,
+		margin-bottom: $cadmin-card-margin-bottom,
+		min-width: 0,
+		position: relative,
+		word-wrap: break-word,
+		aspect-ratio: (
+			label: $cadmin-card-aspect-ratio-label,
+		),
+		aspect-ratio-item-top-left: $cadmin-card-aspect-ratio-item-top-left,
+		aspect-ratio-item-top-center: $cadmin-card-aspect-ratio-item-top-center,
+		aspect-ratio-item-top-right: $cadmin-card-aspect-ratio-item-top-right,
+		aspect-ratio-item-right-middle:
+			$cadmin-card-aspect-ratio-item-right-middle,
+		aspect-ratio-item-bottom-right:
+			$cadmin-card-aspect-ratio-item-bottom-right,
+		aspect-ratio-item-bottom-center:
+			$cadmin-card-aspect-ratio-item-bottom-center,
+		aspect-ratio-item-bottom-left:
+			$cadmin-card-aspect-ratio-item-bottom-left,
+		hr: (
+			margin-left: 0,
+			margin-right: 0,
+		),
+	),
+	$card
 );
 
 // Card Title
@@ -187,12 +267,81 @@ $cadmin-card-link: map-deep-merge(
 	$cadmin-card-link
 );
 
-// Card Divider
+// .card-text
+
+$cadmin-card-text: () !default;
+$cadmin-card-text: map-deep-merge(
+	(
+		last-child: (
+			margin-bottom: 0,
+		),
+	),
+	$cadmin-card-text
+);
+
+// .card-divider
 
 $cadmin-card-divider-bg: $cadmin-card-border-color !default;
 $cadmin-card-divider-height: 1px !default;
 $cadmin-card-divider-spacer-x: null !default;
 $cadmin-card-divider-spacer-y: 10px !default;
+
+$cadmin-card-divider: () !default;
+$cadmin-card-divider: map-deep-merge(
+	(
+		background-color: $cadmin-card-divider-bg,
+		height: $cadmin-card-divider-height,
+		margin-bottom: $cadmin-card-divider-spacer-y,
+		margin-left: $cadmin-card-divider-spacer-x,
+		margin-right: $cadmin-card-divider-spacer-x,
+		margin-top: $cadmin-card-divider-spacer-y,
+	),
+	$cadmin-card-divider
+);
+
+// .card-header
+
+// `margin-bottom` removes the default margin-bottom of <hN> (h1 - h6)
+
+$cadmin-card-header: () !default;
+$cadmin-card-header: map-deep-merge(
+	(
+		background-color: $cadmin-card-cap-bg,
+		border-bottom: $cadmin-card-border-width solid $cadmin-card-border-color,
+		color: $cadmin-card-cap-color,
+		margin-bottom: 0,
+		padding: $cadmin-card-spacer-y $cadmin-card-spacer-x,
+		first-child: (
+			border-radius:
+				clay-enable-rounded(
+					$cadmin-card-inner-border-radius
+						$cadmin-card-inner-border-radius 0 0
+				),
+		),
+	),
+	$cadmin-card-header
+);
+
+// .card-footer
+
+$cadmin-card-footer: () !default;
+$cadmin-card-footer: map-deep-merge(
+	(
+		background-color: $cadmin-card-cap-bg,
+		border-top: $cadmin-card-border-width solid $cadmin-card-border-color,
+		padding: $cadmin-card-spacer-y $cadmin-card-spacer-x,
+		last-child: (
+			border-radius:
+				clay-enable-rounded(
+					0 0 $cadmin-card-inner-border-radius
+						$cadmin-card-inner-border-radius
+				),
+		),
+	),
+	$cadmin-card-footer
+);
+
+// .rounded-*
 
 $cadmin-card-rounded-inner-border-radius: calc(
 	#{$cadmin-rounded-border-radius} - #{$cadmin-card-border-width}

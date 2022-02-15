@@ -1,22 +1,6 @@
 .card,
 .card-horizontal {
-	background-color: $cadmin-card-bg;
-	border-color: $cadmin-card-border-color;
-	border-style: $cadmin-card-border-style;
-	border-width: $cadmin-card-border-width;
-
-	@include border-radius($cadmin-card-border-radius);
-	@include box-shadow($cadmin-card-box-shadow);
-
-	display: block;
-	height: $cadmin-card-height;
-	margin-bottom: $cadmin-card-margin-bottom;
-
-	// See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-
-	min-width: 0;
-	position: relative;
-	word-wrap: break-word;
+	@include clay-card-variant($card);
 
 	.autofit-col {
 		&:first-child {
@@ -26,45 +10,6 @@
 		&:last-child {
 			@include border-right-radius($cadmin-card-inner-border-radius);
 		}
-	}
-
-	.aspect-ratio {
-		.label {
-			@include clay-css($cadmin-card-aspect-ratio-label);
-		}
-	}
-
-	.aspect-ratio-item-top-left {
-		@include clay-css($cadmin-card-aspect-ratio-item-top-left);
-	}
-
-	.aspect-ratio-item-top-center {
-		@include clay-css($cadmin-card-aspect-ratio-item-top-center);
-	}
-
-	.aspect-ratio-item-top-right {
-		@include clay-css($cadmin-card-aspect-ratio-item-top-right);
-	}
-
-	.aspect-ratio-item-right-middle {
-		@include clay-css($cadmin-card-aspect-ratio-item-right-middle);
-	}
-
-	.aspect-ratio-item-bottom-right {
-		@include clay-css($cadmin-card-aspect-ratio-item-bottom-right);
-	}
-
-	.aspect-ratio-item-bottom-center {
-		@include clay-css($cadmin-card-aspect-ratio-item-bottom-center);
-	}
-
-	.aspect-ratio-item-bottom-left {
-		@include clay-css($cadmin-card-aspect-ratio-item-bottom-left);
-	}
-
-	> hr {
-		margin-left: 0;
-		margin-right: 0;
 	}
 
 	> .list-group:first-child {
@@ -81,32 +26,11 @@
 }
 
 .card-body {
-	color: $cadmin-card-color;
-
-	// Enable `flex-grow: 1` for decks and groups so that card blocks take up
-	// as much space as possible, ensuring footers are aligned to the bottom.
-
-	flex: 1 1 auto;
-
-	// Workaround for the image size bug in IE
-	// See: https://github.com/twbs/bootstrap/pull/28855
-
-	min-height: 1px;
-
-	padding-bottom: $cadmin-card-body-padding-bottom;
-	padding-left: $cadmin-card-body-padding-left;
-	padding-right: $cadmin-card-body-padding-right;
-	padding-top: $cadmin-card-body-padding-top;
+	@include clay-css($cadmin-card-body);
 }
 
 .card-section-header {
-	color: $cadmin-card-section-header-color;
-	font-size: $cadmin-card-section-header-font-size;
-	font-weight: $cadmin-card-section-header-font-weight;
-	line-height: $cadmin-card-section-header-line-height;
-	margin-bottom: $cadmin-card-section-header-margin-bottom;
-	padding: $cadmin-card-section-header-padding;
-	text-transform: $cadmin-card-section-header-text-transform;
+	@include clay-css($cadmin-card-section-header);
 }
 
 // Card Title
@@ -123,8 +47,8 @@
 
 // Card Text
 
-.card-text:last-child {
-	margin-bottom: 0;
+.card-text {
+	@include clay-text-typography($cadmin-card-text);
 }
 
 // Card Link
@@ -141,33 +65,16 @@
 	}
 }
 
+// Card Divider
+
 .card-divider {
-	background-color: $cadmin-card-divider-bg;
-	height: $cadmin-card-divider-height;
-	margin-bottom: $cadmin-card-divider-spacer-y;
-	margin-left: $cadmin-card-divider-spacer-x;
-	margin-right: $cadmin-card-divider-spacer-x;
-	margin-top: $cadmin-card-divider-spacer-y;
+	@include clay-css($cadmin-card-divider);
 }
 
 // Card Header
 
 .card-header {
-	background-color: $cadmin-card-cap-bg;
-	border-bottom: $cadmin-card-border-width solid $cadmin-card-border-color;
-	color: $cadmin-card-cap-color;
-
-	// Removes the default margin-bottom of <hN> (h1 - h6)
-
-	margin-bottom: 0;
-	padding: $cadmin-card-spacer-y $cadmin-card-spacer-x;
-
-	&:first-child {
-		@include border-radius(
-			$cadmin-card-inner-border-radius $cadmin-card-inner-border-radius 0
-				0
-		);
-	}
+	@include clay-card-section-variant($cadmin-card-header);
 
 	+ .list-group {
 		.list-group-item:first-child {
@@ -179,16 +86,7 @@
 // Card Footer
 
 .card-footer {
-	background-color: $cadmin-card-cap-bg;
-	border-top: $cadmin-card-border-width solid $cadmin-card-border-color;
-	padding: $cadmin-card-spacer-y $cadmin-card-spacer-x;
-
-	&:last-child {
-		@include border-radius(
-			0 0 $cadmin-card-inner-border-radius
-				$cadmin-card-inner-border-radius
-		);
-	}
+	@include clay-card-section-variant($cadmin-card-footer);
 }
 
 // Card Img
