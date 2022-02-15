@@ -89,7 +89,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 				default: 'Default',
 				openLocalizations: 'Open Localizations',
 				translated: 'Translated',
-				untranslated: 'Unstranslated',
+				untranslated: 'Untranslated',
 			},
 			helpText,
 			id,
