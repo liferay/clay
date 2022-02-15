@@ -31,6 +31,7 @@ export interface IMultipleSelectionState {
 		parentKey?: Key
 	) => () => void;
 	isIntermediate: (key: Key) => boolean;
+	replaceIntermediateKeys: (keys: Array<Key>) => void;
 	selectedKeys: Set<Key>;
 	toggleSelection: (key: Key) => void;
 }
@@ -44,7 +45,6 @@ export interface IMultipleSelectionProps<T>
 
 type LayoutInfo = {
 	children: Set<Key>;
-	intermediate: boolean;
 
 	/**
 	 * Lazy Child means that the current Node has children but they were not
@@ -61,6 +61,8 @@ export function useMultipleSelection<T>(
 	const selectionMode = props.selectionMode;
 
 	const layoutKeys = useRef(new Map<Key, LayoutInfo>());
+
+	const intermediateKeys = useRef(new Set<Key>());
 
 	const [selectedKeys, setSelectionKeys] = useInternalState<Set<Key>>({
 		initialValue: props.selectedKeys ?? new Set(),
@@ -80,7 +82,6 @@ export function useMultipleSelection<T>(
 			if (!keyMap) {
 				layoutKeys.current.set(key, {
 					children: new Set(),
-					intermediate: false,
 					lazyChild,
 					loc,
 					parentKey,
@@ -111,7 +112,6 @@ export function useMultipleSelection<T>(
 					// when the corresponding one is called.
 					layoutKeys.current.set(parentKey, {
 						children: new Set([key]),
-						intermediate: false,
 						lazyChild: false,
 						loc: [],
 						parentKey: undefined,
@@ -143,7 +143,7 @@ export function useMultipleSelection<T>(
 	);
 
 	const toggleParentSelection = useCallback(
-		(keyMap: LayoutInfo, selecteds: Set<Key>) => {
+		(hasIntermediate: boolean, keyMap: LayoutInfo, selecteds: Set<Key>) => {
 			if (!keyMap.parentKey) {
 				return;
 			}
@@ -155,8 +155,8 @@ export function useMultipleSelection<T>(
 			// Instead of doing the whole operation again below, we know that the
 			// element below already has intermediate status and we don't need to
 			// check everything again.
-			if (keyMap.intermediate) {
-				parentKeyMap.intermediate = true;
+			if (hasIntermediate) {
+				intermediateKeys.current.add(keyMap.parentKey);
 				selecteds.delete(keyMap.parentKey);
 			} else {
 				const children = [...parentKeyMap.children];
@@ -172,27 +172,31 @@ export function useMultipleSelection<T>(
 					// one element selected in its tree. We don't need to sweep
 					// the tree because we have the recursive effect.
 					if (children.some((key) => selecteds.has(key))) {
-						parentKeyMap.intermediate = true;
+						intermediateKeys.current.add(keyMap.parentKey);
 					} else {
-						parentKeyMap.intermediate = false;
+						intermediateKeys.current.delete(keyMap.parentKey);
 					}
 
 					selecteds.delete(keyMap.parentKey);
 				} else {
-					parentKeyMap.intermediate = false;
+					intermediateKeys.current.delete(keyMap.parentKey);
 					selecteds.add(keyMap.parentKey);
 				}
 			}
 
-			toggleParentSelection(parentKeyMap, selecteds);
+			toggleParentSelection(
+				intermediateKeys.current.has(keyMap.parentKey),
+				parentKeyMap,
+				selecteds
+			);
 		},
-		[layoutKeys]
+		[layoutKeys, intermediateKeys]
 	);
 
 	const toggleLazyChildrenSelection = useCallback(
 		(
 			item: Record<string, any>,
-			currentKey: React.Key,
+			currentKey: Key,
 			selecteds: Set<Key>,
 			select: boolean
 		) => {
@@ -222,7 +226,7 @@ export function useMultipleSelection<T>(
 	const toggleChildrenSelection = useCallback(
 		(
 			keyMap: LayoutInfo,
-			currentKey: React.Key,
+			currentKey: Key,
 			selecteds: Set<Key>,
 			select: boolean
 		) => {
@@ -286,7 +290,7 @@ export function useMultipleSelection<T>(
 					// Resets the intermediate state because the element will be selected
 					// or otherwise the state must be false because it will be unchecking
 					// all its children.
-					keyMap.intermediate = false;
+					intermediateKeys.current.delete(key);
 
 					if (selecteds.has(key)) {
 						selecteds.delete(key);
@@ -301,7 +305,7 @@ export function useMultipleSelection<T>(
 						selecteds.has(key)
 					);
 
-					toggleParentSelection(keyMap, selecteds);
+					toggleParentSelection(false, keyMap, selecteds);
 
 					setSelectionKeys(selecteds);
 					break;
@@ -318,6 +322,7 @@ export function useMultipleSelection<T>(
 		},
 		[
 			layoutKeys,
+			intermediateKeys,
 			selectedKeys,
 			selectionMode,
 			toggleChildrenSelection,
@@ -326,25 +331,21 @@ export function useMultipleSelection<T>(
 	);
 
 	const isIntermediate = useCallback(
-		(key: Key) => {
-			if (selectedKeys.has(key)) {
-				return false;
-			}
+		(key: Key) => intermediateKeys.current.has(key),
+		[intermediateKeys]
+	);
 
-			const keyMap = layoutKeys.current.get(key);
-
-			if (!keyMap) {
-				return false;
-			}
-
-			return keyMap.intermediate;
+	const replaceIntermediateKeys = useCallback(
+		(keys: Array<Key>) => {
+			intermediateKeys.current = new Set(keys);
 		},
-		[layoutKeys, selectedKeys]
+		[intermediateKeys]
 	);
 
 	return {
 		createPartialLayoutItem,
 		isIntermediate,
+		replaceIntermediateKeys,
 		selectedKeys,
 		toggleSelection,
 	};

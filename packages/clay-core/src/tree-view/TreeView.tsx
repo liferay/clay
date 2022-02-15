@@ -90,10 +90,10 @@ export function TreeView<T>({
 	displayType = 'light',
 	dragAndDrop = false,
 	dragAndDropContext = window,
-	expandOnCheck = false,
 	expandedKeys,
 	expanderClassName,
 	expanderIcons,
+	expandOnCheck = false,
 	items,
 	nestedKey = 'children',
 	onExpandedChange,
@@ -102,6 +102,7 @@ export function TreeView<T>({
 	onRenameItem,
 	onSelectionChange,
 	selectedKeys,
+	selectionHydrationMode = 'hydrate-first',
 	selectionMode = 'single',
 	showExpanderOnHover = true,
 	...otherProps
@@ -116,6 +117,7 @@ export function TreeView<T>({
 		onItemsChange,
 		onSelectionChange,
 		selectedKeys,
+		selectionHydrationMode,
 		selectionMode,
 	});
 
