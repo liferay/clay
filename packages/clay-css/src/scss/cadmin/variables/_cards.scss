@@ -133,6 +133,13 @@ $cadmin-card-title-link: map-deep-merge(
 	$cadmin-card-title-link
 );
 
+$cadmin-card-title: map-deep-merge(
+	$cadmin-card-title,
+	(
+		href: $cadmin-card-title-link,
+	)
+);
+
 // Card Subtitle
 
 $cadmin-card-subtitle: () !default;
@@ -156,6 +163,13 @@ $cadmin-card-subtitle-link: map-deep-merge(
 		),
 	),
 	$cadmin-card-subtitle-link
+);
+
+$cadmin-card-subtitle: map-deep-merge(
+	$cadmin-card-subtitle,
+	(
+		href: $cadmin-card-subtitle-link,
+	)
 );
 
 // Card Link

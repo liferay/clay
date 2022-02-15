@@ -48,18 +48,10 @@ button.link-outline {
 
 .component-title {
 	@include clay-text-typography($cadmin-component-title);
-
-	a {
-		@include clay-link($cadmin-component-title-link);
-	}
 }
 
 .component-subtitle {
 	@include clay-text-typography($cadmin-component-subtitle);
-
-	a {
-		@include clay-link($cadmin-component-subtitle-link);
-	}
 }
 
 .component-action {

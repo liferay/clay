@@ -115,18 +115,10 @@
 	@include clay-text-typography($cadmin-card-title);
 }
 
-.card-title a {
-	@include clay-link($cadmin-card-title-link);
-}
-
 // Card Subtitle
 
 .card-subtitle {
 	@include clay-text-typography($cadmin-card-subtitle);
-}
-
-.card-subtitle a {
-	@include clay-link($cadmin-card-subtitle-link);
 }
 
 // Card Text

@@ -252,6 +252,13 @@ $cadmin-component-title-link: map-deep-merge(
 	$cadmin-component-title-link
 );
 
+$cadmin-component-title: map-deep-merge(
+	$cadmin-component-title,
+	(
+		href: $cadmin-component-title-link,
+	)
+);
+
 // Component Subtitle
 
 $cadmin-component-subtitle: () !default;
@@ -281,6 +288,13 @@ $cadmin-component-subtitle-link: map-deep-merge(
 		),
 	),
 	$cadmin-component-subtitle-link
+);
+
+$cadmin-component-subtitle: map-deep-merge(
+	$cadmin-component-subtitle,
+	(
+		href: $cadmin-component-subtitle-link,
+	)
 );
 
 // Component Action
