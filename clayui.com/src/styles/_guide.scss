@@ -169,6 +169,7 @@
 	.nav-toc-absolute {
 		@media (min-width: $screen-lg) {
 			height: 100%;
+			max-width: 280px;
 			position: absolute;
 			right: -295px;
 			top: 0;
@@ -203,7 +204,6 @@
 			background-color: white;
 			margin-bottom: 0;
 			max-height: calc(100vh - 84px);
-			max-width: 280px;
 			min-width: 280px;
 			overflow-y: auto;
 			top: 84px;
