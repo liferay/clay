@@ -10,6 +10,7 @@ import {storiesOf} from '@storybook/react';
 import React from 'react';
 
 import ClayDatePicker, {FirstDayOfWeek} from '../src';
+import {parseDate} from '../src/Helpers';
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 	const [value, setValue] = React.useState<string | Date>('');
@@ -157,4 +158,63 @@ storiesOf('Components|ClayDatePicker', module)
 				start: 1997,
 			}}
 		/>
-	));
+	))
+	.add('dynamic years', () => {
+		const [value, setValue] = React.useState<string>('');
+
+		const initialMonthRef = React.useRef(new Date());
+
+		const [years, setYears] = React.useState(() => {
+			const year = initialMonthRef.current.getFullYear();
+
+			return {
+				end: year + 10,
+				start: year - 10,
+			};
+		});
+
+		return (
+			<ClayDatePicker
+				ariaLabels={{
+					buttonChooseDate: `Choose Date, selected date is ${
+						value.toLocaleString() ?? value
+					}`,
+					buttonDot: 'Go to today',
+					buttonNextMonth: 'Next month',
+					buttonPreviousMonth: 'Previous month',
+					input: value.toLocaleString(),
+				}}
+				onNavigation={(date: Date) => {
+					const year = date.getFullYear();
+
+					setYears({
+						end: year + 10,
+						start: year - 10,
+					});
+				}}
+				onValueChange={(value) => {
+					if (value) {
+						const year = parseDate(
+							value,
+							'yyyy-MM-dd',
+							initialMonthRef.current
+						).getFullYear();
+
+						if (typeof year === 'number' && year > 1000) {
+							setYears({
+								end: year + 10,
+								start: year - 10,
+							});
+						}
+					}
+
+					setValue(value);
+				}}
+				placeholder="YYYY-MM-DD"
+				spritemap={spritemap}
+				value={value}
+				years={years}
+				yearsCheck={false}
+			/>
+		);
+	});

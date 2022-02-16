@@ -148,6 +148,12 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	years?: IYears;
 
 	/**
+	 * Flag to indicate whether the DatePicker should validate if the year
+	 * is included in the range of years. Disable only if your range is dynamic.
+	 */
+	yearsCheck?: boolean;
+
+	/**
 	 * Determines if menu is expanded or not
 	 */
 	expanded?: boolean;
@@ -225,6 +231,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				end: NEW_DATE.getFullYear(),
 				start: NEW_DATE.getFullYear(),
 			},
+			yearsCheck = true,
 			...otherProps
 		}: IProps,
 		ref
@@ -369,12 +376,12 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				const yearFrom = startDate.getFullYear();
 				const yearTo = endDate.getFullYear();
 
-				if (
-					isValid(startDate) &&
-					isValid(endDate) &&
-					isYearWithinYears(yearFrom, years) &&
-					isYearWithinYears(yearTo, years)
-				) {
+				const isValidYear = yearsCheck
+					? isYearWithinYears(yearFrom, years) &&
+					  isYearWithinYears(yearTo, years)
+					: true;
+
+				if (isValid(startDate) && isValid(endDate) && isValidYear) {
 					changeMonth(startDate);
 
 					setDaysSelected([startDate, endDate]);
