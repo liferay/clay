@@ -148,9 +148,8 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	years?: IYears;
 
 	/**
-	 * Flag to indicate whether the DatePicker should validate whether the year
-	 * entered in the input is included in the range of years. Disable only
-	 * if your range is dynamic.
+	 * Flag to indicate whether the DatePicker should validate if the year
+	 * is included in the range of years. Disable only if your range is dynamic.
 	 */
 	yearsCheck?: boolean;
 
