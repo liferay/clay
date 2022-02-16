@@ -1,112 +1,50 @@
 .card,
 .card-horizontal {
-	background-color: $card-bg;
-	border-color: $card-border-color;
-	border-style: $card-border-style;
-	border-width: $card-border-width;
-
-	@include border-radius($card-border-radius);
-	@include box-shadow($card-box-shadow);
-
-	display: block;
-	height: $card-height;
-	margin-bottom: $card-margin-bottom;
-
-	// See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-
-	min-width: 0;
-	position: relative;
-	word-wrap: break-word;
+	@include clay-card-variant($card);
 
 	.autofit-col {
 		&:first-child {
-			@include border-left-radius($card-inner-border-radius);
+			border-bottom-left-radius: clay-enable-rounded(
+				$card-inner-border-radius
+			);
+			border-top-left-radius: clay-enable-rounded(
+				$card-inner-border-radius
+			);
 		}
 
 		&:last-child {
-			@include border-right-radius($card-inner-border-radius);
+			border-bottom-right-radius: clay-enable-rounded(
+				$card-inner-border-radius
+			);
+			border-top-right-radius: clay-enable-rounded(
+				$card-inner-border-radius
+			);
 		}
-	}
-
-	.aspect-ratio {
-		.label {
-			@include clay-css($card-aspect-ratio-label);
-		}
-	}
-
-	.aspect-ratio-item-top-left {
-		@include clay-css($card-aspect-ratio-item-top-left);
-	}
-
-	.aspect-ratio-item-top-center {
-		@include clay-css($card-aspect-ratio-item-top-center);
-	}
-
-	.aspect-ratio-item-top-right {
-		@include clay-css($card-aspect-ratio-item-top-right);
-	}
-
-	.aspect-ratio-item-right-middle {
-		@include clay-css($card-aspect-ratio-item-right-middle);
-	}
-
-	.aspect-ratio-item-bottom-right {
-		@include clay-css($card-aspect-ratio-item-bottom-right);
-	}
-
-	.aspect-ratio-item-bottom-center {
-		@include clay-css($card-aspect-ratio-item-bottom-center);
-	}
-
-	.aspect-ratio-item-bottom-left {
-		@include clay-css($card-aspect-ratio-item-bottom-left);
-	}
-
-	> hr {
-		margin-left: 0;
-		margin-right: 0;
 	}
 
 	> .list-group:first-child {
 		.list-group-item:first-child {
-			@include border-top-radius($card-border-radius);
+			border-top-left-radius: clay-enable-rounded($card-border-radius);
+			border-top-right-radius: clay-enable-rounded($card-border-radius);
 		}
 	}
 
 	> .list-group:last-child {
 		.list-group-item:last-child {
-			@include border-bottom-radius($card-border-radius);
+			border-bottom-left-radius: clay-enable-rounded($card-border-radius);
+			border-bottom-right-radius: clay-enable-rounded(
+				$card-border-radius
+			);
 		}
 	}
 }
 
 .card-body {
-	color: $card-color;
-
-	// Enable `flex-grow: 1` for decks and groups so that card blocks take up
-	// as much space as possible, ensuring footers are aligned to the bottom.
-
-	flex: 1 1 auto;
-
-	// Workaround for the image size bug in IE
-	// See: https://github.com/twbs/bootstrap/pull/28855
-
-	min-height: 1px;
-
-	padding-bottom: $card-body-padding-bottom;
-	padding-left: $card-body-padding-left;
-	padding-right: $card-body-padding-right;
-	padding-top: $card-body-padding-top;
+	@include clay-css($card-body);
 }
 
 .card-section-header {
-	color: $card-section-header-color;
-	font-size: $card-section-header-font-size;
-	font-weight: $card-section-header-font-weight;
-	line-height: $card-section-header-line-height;
-	margin-bottom: $card-section-header-margin-bottom;
-	padding: $card-section-header-padding;
-	text-transform: $card-section-header-text-transform;
+	@include clay-css($card-section-header);
 }
 
 // Card Title
@@ -115,24 +53,16 @@
 	@include clay-text-typography($card-title);
 }
 
-.card-title a {
-	@include clay-link($card-title-link);
-}
-
 // Card Subtitle
 
 .card-subtitle {
 	@include clay-text-typography($card-subtitle);
 }
 
-.card-subtitle a {
-	@include clay-link($card-subtitle-link);
-}
-
 // Card Text
 
-.card-text:last-child {
-	margin-bottom: 0;
+.card-text {
+	@include clay-text-typography($card-text);
 }
 
 // Card Link
@@ -149,32 +79,16 @@
 	}
 }
 
+// Card Divider
+
 .card-divider {
-	background-color: $card-divider-bg;
-	height: $card-divider-height;
-	margin-bottom: $card-divider-spacer-y;
-	margin-left: $card-divider-spacer-x;
-	margin-right: $card-divider-spacer-x;
-	margin-top: $card-divider-spacer-y;
+	@include clay-css($card-divider);
 }
 
 // Card Header
 
 .card-header {
-	background-color: $card-cap-bg;
-	border-bottom: $card-border-width solid $card-border-color;
-	color: $card-cap-color;
-
-	// Removes the default margin-bottom of <hN> (h1 - h6)
-
-	margin-bottom: 0;
-	padding: $card-spacer-y $card-spacer-x;
-
-	&:first-child {
-		@include border-radius(
-			$card-inner-border-radius $card-inner-border-radius 0 0
-		);
-	}
+	@include clay-card-section-variant($card-header);
 
 	+ .list-group {
 		.list-group-item:first-child {
@@ -200,15 +114,7 @@
 // Card Footer
 
 .card-footer {
-	background-color: $card-cap-bg;
-	border-top: $card-border-width solid $card-border-color;
-	padding: $card-spacer-y $card-spacer-x;
-
-	&:last-child {
-		@include border-radius(
-			0 0 $card-inner-border-radius $card-inner-border-radius
-		);
-	}
+	@include clay-card-section-variant($card-footer);
 }
 
 @if ($enable-bs4-deprecated) {

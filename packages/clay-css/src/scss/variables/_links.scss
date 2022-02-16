@@ -183,7 +183,7 @@ $link-monospaced: map-deep-merge(
 	$link-monospaced
 );
 
-// Component Title
+// .component-title
 
 $component-title: () !default;
 $component-title: map-deep-merge(
@@ -219,7 +219,14 @@ $component-title-link: map-deep-merge(
 	$component-title-link
 );
 
-// Component Subtitle
+$component-title: map-deep-merge(
+	$component-title,
+	(
+		href: $component-title-link,
+	)
+);
+
+// .component-subtitle
 
 $component-subtitle: () !default;
 $component-subtitle: map-deep-merge(
@@ -241,7 +248,14 @@ $component-subtitle-link: map-deep-merge(
 	$component-subtitle-link
 );
 
-// Component Action
+$component-subtitle: map-deep-merge(
+	$component-subtitle,
+	(
+		href: $component-subtitle-link,
+	)
+);
+
+// .component-action
 
 $component-action: () !default;
 $component-action: map-deep-merge(
@@ -286,7 +300,11 @@ $component-action: map-deep-merge(
 	$component-action
 );
 
+// .component-text
+
 $component-text: () !default;
+
+// .component-icon
 
 $component-icon: () !default;
 $component-icon: map-deep-merge(

@@ -19,10 +19,34 @@ $card-spacer-y: 0.75rem !default;
 $card-cap-bg: rgba($black, 0.03) !default;
 $card-cap-color: null !default;
 
+// .card-body
+
 $card-body-padding-bottom: $card-spacer-x !default;
 $card-body-padding-left: $card-spacer-x !default;
 $card-body-padding-right: $card-spacer-x !default;
 $card-body-padding-top: $card-spacer-x !default;
+
+// Enable `flex-grow: 1` for decks and groups so that card blocks take up
+// as much space as possible, ensuring footers are aligned to the bottom.
+
+// `min-height` workaround for the image size bug in IE
+// See: https://github.com/twbs/bootstrap/pull/28855
+
+$card-body: () !default;
+$card-body: map-deep-merge(
+	(
+		color: $card-color,
+		flex: 1 1 auto,
+		min-height: 1px,
+		padding-bottom: $card-body-padding-bottom,
+		padding-left: $card-body-padding-left,
+		padding-right: $card-body-padding-right,
+		padding-top: $card-body-padding-top,
+	),
+	$card-body
+);
+
+// .card-section-header
 
 $card-section-header-color: $gray-600 !default;
 $card-section-header-font-size: 0.75rem !default;
@@ -31,6 +55,20 @@ $card-section-header-line-height: 2.5 !default;
 $card-section-header-margin-bottom: 1.5rem !default;
 $card-section-header-padding: 0 ($grid-gutter-width * 0.5) !default;
 $card-section-header-text-transform: uppercase !default;
+
+$card-section-header: () !default;
+$card-section-header: map-deep-merge(
+	(
+		color: $card-section-header-color,
+		font-size: $card-section-header-font-size,
+		font-weight: $card-section-header-font-weight,
+		line-height: $card-section-header-line-height,
+		margin-bottom: $card-section-header-margin-bottom,
+		padding: $card-section-header-padding,
+		text-transform: $card-section-header-text-transform,
+	),
+	$card-section-header
+);
 
 /// @deprecated as of v3.x with no replacement
 
@@ -130,7 +168,42 @@ $card-aspect-ratio-item-bottom-left: map-deep-merge(
 	$card-aspect-ratio-item-bottom-left
 );
 
-// Card Title
+// min-width, see https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+
+$card: () !default;
+$card: map-deep-merge(
+	(
+		background-color: $card-bg,
+		border-color: $card-border-color,
+		border-radius: clay-enable-rounded($card-border-radius),
+		border-style: $card-border-style,
+		border-width: $card-border-width,
+		box-shadow: clay-enable-shadows($card-box-shadow),
+		display: block,
+		height: $card-height,
+		margin-bottom: $card-margin-bottom,
+		min-width: 0,
+		position: relative,
+		word-wrap: break-word,
+		aspect-ratio: (
+			label: $card-aspect-ratio-label,
+		),
+		aspect-ratio-item-top-left: $card-aspect-ratio-item-top-left,
+		aspect-ratio-item-top-center: $card-aspect-ratio-item-top-center,
+		aspect-ratio-item-top-right: $card-aspect-ratio-item-top-right,
+		aspect-ratio-item-right-middle: $card-aspect-ratio-item-right-middle,
+		aspect-ratio-item-bottom-right: $card-aspect-ratio-item-bottom-right,
+		aspect-ratio-item-bottom-center: $card-aspect-ratio-item-bottom-center,
+		aspect-ratio-item-bottom-left: $card-aspect-ratio-item-bottom-left,
+		hr: (
+			margin-left: 0,
+			margin-right: 0,
+		),
+	),
+	$card
+);
+
+// .card-title
 
 $card-title: () !default;
 $card-title: map-deep-merge(
@@ -151,7 +224,14 @@ $card-title-link: map-deep-merge(
 	$card-title-link
 );
 
-// Card Subtitle
+$card-title: map-deep-merge(
+	$card-title,
+	(
+		href: $card-title-link,
+	)
+);
+
+// .card-subtitle
 
 $card-subtitle: () !default;
 $card-subtitle: map-deep-merge(
@@ -176,7 +256,26 @@ $card-subtitle-link: map-deep-merge(
 	$card-subtitle-link
 );
 
-// Card Link
+$card-subtitle: map-deep-merge(
+	$card-subtitle,
+	(
+		href: $card-subtitle-link,
+	)
+);
+
+// .card-text
+
+$card-text: () !default;
+$card-text: map-deep-merge(
+	(
+		last-child: (
+			margin-bottom: 0,
+		),
+	),
+	$card-text
+);
+
+// .card-link
 
 $card-link: () !default;
 $card-link: map-deep-merge(
@@ -190,12 +289,67 @@ $card-link: map-deep-merge(
 	$card-link
 );
 
-// Card Divider
+// .card-divider
 
 $card-divider-bg: $card-border-color !default;
 $card-divider-height: 1px !default;
 $card-divider-spacer-x: null !default;
 $card-divider-spacer-y: 10px !default;
+
+$card-divider: () !default;
+$card-divider: map-merge(
+	(
+		background-color: $card-divider-bg,
+		height: $card-divider-height,
+		margin-bottom: $card-divider-spacer-y,
+		margin-left: $card-divider-spacer-x,
+		margin-right: $card-divider-spacer-x,
+		margin-top: $card-divider-spacer-y,
+	),
+	$card-divider
+);
+
+// .card-header
+
+// `margin-bottom`, removes the default margin-bottom of <hN> (h1 - h6)
+
+$card-header: () !default;
+$card-header: map-deep-merge(
+	(
+		background-color: $card-cap-bg,
+		border-bottom: $card-border-width solid $card-border-color,
+		color: $card-cap-color,
+		margin-bottom: 0,
+		padding: $card-spacer-y $card-spacer-x,
+		first-child: (
+			border-radius:
+				clay-enable-rounded(
+					$card-inner-border-radius $card-inner-border-radius 0 0
+				),
+		),
+	),
+	$card-header
+);
+
+// .card-footer
+
+$card-footer: () !default;
+$card-footer: map-deep-merge(
+	(
+		background-color: $card-cap-bg,
+		border-top: $card-border-width solid $card-border-color,
+		padding: $card-spacer-y $card-spacer-x,
+		last-child: (
+			border-radius:
+				clay-enable-rounded(
+					0 0 $card-inner-border-radius $card-inner-border-radius
+				),
+		),
+	),
+	$card-footer
+);
+
+// .card.rounded-*
 
 $card-rounded-inner-border-radius: calc(
 	#{$rounded-border-radius} - #{$card-border-width}
