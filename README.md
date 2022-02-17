@@ -1,28 +1,36 @@
-# 🏺 [Clay](https://clayui.com/) &middot; [![Build Status](https://travis-ci.org/liferay/clay.svg?branch=master)](https://travis-ci.org/liferay/clay) [![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
+<div align="center">
+    <div>
+        <img src="https://github.com/liferay/clay/blob/6ae276a67e7e2c9954d72dcae15266b2458f58f9/clayui.com/static/images/clay_logo_w.png?raw=true"> 
+    </div>
+    <div>
+        <h1>
+            <a href="https://clayui.com/">
+                Clay
+            </a>
+        </h1>
+    </div>
 
-Clay is Liferay's web implementation of [Lexicon Experience Language](https://liferay.design/lexicon). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
+[![Build Status](https://travis-ci.org/liferay/clay.svg?branch=master)](https://travis-ci.org/liferay/clay) [![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
 
-**🚨This Branch contains the version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/2.x)**
+</div>
 
-## Packages
+Clay is Liferay's web implementation of the [Lexicon Experience Language](https://liferay.design/lexicon). Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.
 
-Clay repository follows the monorepo approach, all the major components that are the pillars of Clay are here in this repository.
+**🚨 This Branch contains the version of Clay v3, if you are looking for the components in Metal.js visit the [2.x branch](https://github.com/liferay/clay/tree/2.x)**.
 
-### [Clay Css](./packages/clay-css)
+## Contents
 
-The pillar to give colors and structure to Clay, where is the css and examples of HTML markups of the components.
-
-### [Clay Components](./packages)
-
-All components that follow clay-css marking and Lexicon use cases, developed on [React.js](http://reactjs.org)
-
-### [Clayui.com](./clayui.com)
-
-Contains the source code and documentation powering [clayui.com](https://clayui.com/).
+-   [Browser support](#browser-support)
+-   [Packages](#packages)
+-   [Documentation](#documentation)
+-   [Migration Guides](#migration-guides)
+-   [Setup](#setup)
+-   [clayui.com](#clayuicom)
+-   [Contributing](#contributing)
+-   [License](#license)
 
 ## Browser support
 
-![Internet Explorer 11](https://img.shields.io/badge/IE-11-green.svg?style=flat)
 ![Google Chrome Last 2](https://img.shields.io/badge/Chrome-Last_2-green.svg?style=flat)
 ![Microsoft Edge Latest](https://img.shields.io/badge/Edge-Latest-green.svg?style=flat)
 ![Mozilla Firefox Last 2 and 52](https://img.shields.io/badge/Firefox-Last_2%20and_v52-green.svg?style=flat)
@@ -31,118 +39,114 @@ Contains the source code and documentation powering [clayui.com](https://clayui.
 ![Chrome Android](https://img.shields.io/badge/Chrome_Android-Latest-green.svg?style=flat)
 ![Safari iOS Latest](https://img.shields.io/badge/Safari_iOS-Latest-green.svg?style=flat)
 
+## Packages
+
+Clay repository follows the monorepo approach, all the major components that are the pillars of Clay are here in this repository.
+
+-   **[Clay CSS](./packages/clay-css)**: The pillar to give colors and structure to Clay, where is the css and examples of HTML markups of the components.
+
+-   **[Clay React Components](./packages)**: A set of components that use `clay-css` and Lexicon guidelines, developed with [React.js](http://reactjs.org)
+
+-   **[clayui.com](./clayui.com)**: The source code for our documentation site.
+
 ## Documentation
 
-You can find the Clay documentation on the [site](https://clayui.com/docs).
+You can find the Clay documentation on the [site](https://clayui.com/docs). Here are some useful links:
 
 -   [Getting Started](https://clayui.com/docs/get-started/index.html)
 -   [Components](https://clayui.com/docs/components/index.html)
 -   [CSS Framework](https://clayui.com/docs/css/index.html)
 -   [Blog](https://clayui.com/blog/2019/10/25/introducing-clay-v3.html)
 
-You can improve by sending pull requests to this repository.
-
-## Installation
-
-Clay is available as the `clay` package in npm for components and for css like `clay-css`. It is also available on a [CDN](https://cdn.jsdelivr.net/npm/clay/lib/js/clay.js) for components and for css, [check](https://cdn.jsdelivr.net/npm/clay/lib/css/atlas.css). But if you just want the separate components, it's also available in the npm as [clay-](https://www.npmjs.com/search?q=clay-).
-
-See the [Getting Started](https://clayui.com/docs/get-started/index.html) guide for more information.
-
 ## Migration Guides
 
-Do you already have the Clay v2 components implemented in your project? These handy guides will help you perform the migration from [Clay v2](https://v2.clayui.com) to [v3](https://clayui.com).
+Do you already have the Clay v2 components implemented in your project? These guides will help you perform the migration from [Clay v2](https://v2.clayui.com) to [v3](https://clayui.com).
 
 -   [Migrate the Clay components from v2 to v3](https://clayui.com/docs/get-started/migrate-the-clay-components-from-v2-to-v3.html)
 
-## Contributing
+## Setup
 
-Feel free to open up problems or send pull requests. We will always be looking at these problems and we will be responding whenever possible.
+To contribute to this project, here are the required steps to setup everything:
 
-> Before opening a issue make sure it exists.
-
-See the [contribution guide](/CONTRIBUTING.md) for more details.
-
-### Setup
-
-#### Packages
-
-1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
-
-2. Install global dependencies:
+1. Clone this repository:
 
 ```
-[sudo] npm install -g yarn
+git clone https://github.com/liferay/clay.git
 ```
 
-3. Install project dependencies:
+2. Download and install the latest lts version of [Node.js](https://nodejs.org/) for your operating system.
+
+3. Install the required global dependencies:
+
+```
+npm install -g yarn
+```
+
+4. Install the project's dependencies:
 
 ```
 yarn
 ```
 
-4. Install dependencies for each package and link them together:
+4. Install the dependencies for each package and link them together:
 
 ```
 yarn lerna
 ```
 
-5. Build all packages
+5. Build all packages:
 
 ```
 yarn build
 ```
 
-6. Start storybook server
+6. Compile all `clay-css` files and start the storybook server:
 
 ```
 yarn workspace @clayui/css run build && yarn storybook
 ```
 
-7. Run tests:
+> Additionally, you can run the tests for all packages with the following command:
 
 ```
 yarn test
 ```
 
-8. Update snapshots:
+## clayui.com
 
-```
-yarn run jest --u
-```
+To contribute to the documentation, you can run the site locally to test your changes:
 
-#### clayui.com
-
-To contribute to the documentation and the site in general, you can try to run locally to test your changes:
-
-1. Move to the site folder
+1. Navigate to the site's directory:
 
 ```
 cd clayui.com
 ```
 
-2. Install dependencies:
+2. Install the dependencies:
 
 ```
 yarn
 ```
 
-3. Run in development environment
+3. Run the site in a development environment:
 
 ```
 yarn develop
 ```
 
-Run clayui.com on Local LAN
-
-```
-yarn develop -H 0.0.0.0
-```
-
-If you want to test in a production environment so that you do not take risks of inconsistencies, in the root folder:
+> If you want to test in a production environment so that you do not take risks of inconsistencies, issue the following command in the root directory:
 
 ```
 yarn site
 ```
+
+## Contributing
+
+Feel free to create issues or submit pull requests. Clay is actively maintained and your contributions are always welcome.
+
+> Before opening a issue make sure it exists.
+
+See the [contribution guide](/CONTRIBUTING.md) for more details.
 
 ## License
 
