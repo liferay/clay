@@ -25,6 +25,7 @@ Clay is Liferay's web implementation of the [Lexicon Experience Language](https:
 -   [Documentation](#documentation)
 -   [Migration Guides](#migration-guides)
 -   [Setup](#setup)
+-   [clayui.com](#clayuicom)
 -   [Contributing](#contributing)
 -   [License](#license)
 
