@@ -60,6 +60,7 @@ describe('ClayLocalizedInput', () => {
 		const {container} = render(
 			<ClayLocalizedInput
 				id="locale1"
+				label="Check for translations"
 				locales={locales}
 				onSelectedLocaleChange={() => {}}
 				onTranslationsChange={() => {}}

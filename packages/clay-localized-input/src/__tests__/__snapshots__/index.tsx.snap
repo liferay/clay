@@ -5,11 +5,6 @@ exports[`ClayLocalizedInput renders 1`] = `
   <div
     class="form-group"
   >
-    <label
-      for="locale1"
-    >
-      Check for translations
-    </label>
     <div
       class="input-group"
     >
@@ -56,11 +51,6 @@ exports[`ClayLocalizedInput renders 1`] = `
           </button>
         </div>
       </div>
-    </div>
-    <div
-      class="form-text"
-    >
-      Apple
     </div>
   </div>
 </div>

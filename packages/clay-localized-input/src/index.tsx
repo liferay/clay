@@ -93,13 +93,13 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 			},
 			helpText,
 			id,
-			label = 'Check for translations',
+			label,
 			locales,
 			onSelectedLocaleChange,
 			onTranslationsChange,
 			placeholder = 'Text to translate...',
 			prependContent,
-			resultFormatter = (val) => val,
+			resultFormatter,
 			selectedLocale,
 			spritemap,
 			translations,
@@ -226,9 +226,11 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 
-				<ClayForm.Text>
-					{resultFormatter(translations[defaultLanguage.label])}
-				</ClayForm.Text>
+				{resultFormatter && (
+					<ClayForm.Text>
+						{resultFormatter(translations[defaultLanguage.label])}
+					</ClayForm.Text>
+				)}
 			</ClayForm.Group>
 		);
 	}
