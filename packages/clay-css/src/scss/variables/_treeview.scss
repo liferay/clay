@@ -52,6 +52,7 @@ $treeview: map-merge(
 			),
 		),
 		treeview-link: (
+			background-color: transparent,
 			cursor: pointer,
 			display: block,
 			border-color: transparent,
@@ -62,6 +63,7 @@ $treeview: map-merge(
 			min-width: 100%,
 			padding: 0,
 			position: relative,
+			text-align: left,
 			user-select: none,
 			treeview-dropping-bottom: (
 				box-shadow: 0 2px 0 0 $primary-l1,
@@ -79,6 +81,9 @@ $treeview: map-merge(
 			focus: (
 				box-shadow: $component-focus-inset-box-shadow,
 				outline: 0,
+			),
+			disabled: (
+				cursor: $disabled-cursor,
 			),
 		),
 		component-action: (
@@ -160,6 +165,10 @@ $treeview-light: map-deep-merge(
 			hover: (
 				color: $primary,
 			),
+			disabled: (
+				color: $secondary,
+				opacity: 0.5,
+			),
 			btn-secondary: (
 				background-color: $white,
 			),
@@ -178,6 +187,10 @@ $treeview-light: map-deep-merge(
 				background-color: $gray-200,
 				color: $gray-900,
 			),
+			disabled: (
+				background-color: transparent,
+				color: rgba($gray-600, 0.5),
+			),
 			show: (
 				background-color: null,
 				color: null,
@@ -195,6 +208,10 @@ $treeview-dark: map-deep-merge(
 			hover: (
 				color: $primary-l1,
 			),
+			disabled: (
+				color: $secondary-l1,
+				opacity: 0.5,
+			),
 		),
 		treeview-link: (
 			color: $secondary-l1,
@@ -207,7 +224,7 @@ $treeview-dark: map-deep-merge(
 			),
 			disabled: (
 				background-color: transparent,
-				color: rgba($secondary-l1, 0.04),
+				color: rgba($secondary-l1, 0.5),
 			),
 			show: (
 				background-color: null,
@@ -216,6 +233,9 @@ $treeview-dark: map-deep-merge(
 		),
 		component-action: (
 			color: $secondary-l1,
+			disabled: (
+				color: $secondary-l1,
+			),
 		),
 	),
 	$treeview-dark
