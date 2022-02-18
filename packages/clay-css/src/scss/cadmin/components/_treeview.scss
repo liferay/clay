@@ -156,7 +156,14 @@
 	&.focus,
 	&:focus {
 		.component-action {
-			display: block;
+			display: flex;
+		}
+	}
+
+	&:disabled,
+	&.disabled {
+		.component-action {
+			display: none;
 		}
 	}
 
@@ -263,6 +270,31 @@
 
 	.treeview-link {
 		@include clay-link(map-get($cadmin-treeview-light, treeview-link));
+
+		&:disabled,
+		&.disabled {
+			.component-expander {
+				@include clay-css(
+					map-deep-get(
+						$cadmin-treeview-light,
+						treeview-link,
+						disabled,
+						component-expander
+					)
+				);
+			}
+
+			.component-action {
+				@include clay-css(
+					map-deep-get(
+						$cadmin-treeview-light,
+						treeview-link,
+						disabled,
+						component-action
+					)
+				);
+			}
+		}
 	}
 
 	.component-action {
@@ -329,6 +361,31 @@
 
 	.treeview-link {
 		@include clay-link(map-get($cadmin-treeview-dark, treeview-link));
+
+		&:disabled,
+		&.disabled {
+			.component-expander {
+				@include clay-css(
+					map-deep-get(
+						$cadmin-treeview-dark,
+						treeview-link,
+						disabled,
+						component-expander
+					)
+				);
+			}
+
+			.component-action {
+				@include clay-css(
+					map-deep-get(
+						$cadmin-treeview-dark,
+						treeview-link,
+						disabled,
+						component-action
+					)
+				);
+			}
+		}
 	}
 
 	.component-action {
