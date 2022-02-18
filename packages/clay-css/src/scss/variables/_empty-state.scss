@@ -73,3 +73,26 @@ $c-empty-state-footer: map-deep-merge(
 	),
 	$c-empty-state-footer
 );
+
+// .c-empty-state-sm
+
+$c-empty-state-sm: () !default;
+$c-empty-state-sm: map-deep-merge(
+	(
+		c-empty-state-animation: (
+			margin: 2.5rem auto 2rem,
+			max-width: 268px,
+		),
+		c-empty-state-image: (
+			max-width: 120px,
+		),
+		c-empty-state-title: (
+			font-size: 1rem,
+			line-height: 1.5,
+		),
+		c-empty-state-text: (
+			font-size: 0.875rem,
+		),
+	),
+	$c-empty-state-sm
+);

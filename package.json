@@ -22,7 +22,7 @@
 		"coverage": "jest --coverage",
 		"format": "prettier --write \"**/*.{js,ts,tsx,md,mdx,json,scss}\"",
 		"format:all": "yarn lint:fix && yarn format",
-		"format:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" \"*.md\" \"**/*.md\" \"**/*.mdx\" \"*.json\" \"**/*.json\" | xargs -0 prettier --write --",
+		"format:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" \"*.md\" \"**/*.md\" \"**/*.mdx\" \"*.json\" \"**/*.json\" \"**/*.scss\" | xargs -0 prettier --write --",
 		"format:check": "prettier --list-different -- \"**/*.{js,ts,tsx,md,mdx,json,scss}\"",
 		"genBuildSize:compare": "NODE_ENV=production node scripts/check-size/index.js --compare",
 		"genBuildSize": "NODE_ENV=production node scripts/check-size/index.js",

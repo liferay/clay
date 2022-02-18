@@ -2,6 +2,10 @@
 	@include clay-css($c-empty-state);
 }
 
+.c-empty-state-sm {
+	@include clay-css($c-empty-state-sm);
+}
+
 .c-empty-state-animation {
 	@include clay-css($c-empty-state-animation);
 }
@@ -32,4 +36,30 @@
 
 .c-empty-state-footer {
 	@include clay-css($c-empty-state-footer);
+}
+
+// C Empty State Small
+
+.c-empty-state-sm {
+	@include clay-css($c-empty-state-sm);
+
+	&.c-empty-state-animation {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-animation));
+	}
+
+	.c-empty-state-image {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-image));
+	}
+
+	.c-empty-state-title {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-title));
+	}
+
+	.c-empty-state-text {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-text));
+	}
+
+	.c-empty-state-footer {
+		@include clay-css(map-get($c-empty-state-sm, c-empty-state-footer));
+	}
 }

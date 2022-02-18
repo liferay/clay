@@ -23,6 +23,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	imgSrc?: string;
 
 	/**
+	 * Indicates empty state should be a small variant.
+	 */
+	small?: boolean;
+
+	/**
 	 * Title of the message highlighting the description
 	 */
 	title?: string;
@@ -34,6 +39,7 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 	description = 'Sorry, there are no results found',
 	imgProps,
 	imgSrc,
+	small,
 	title = 'No results found',
 	...otherProps
 }: IProps) => {
@@ -43,6 +49,7 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 		<div
 			className={classNames(className, 'c-empty-state', {
 				'c-empty-state-animation': hasImg,
+				'c-empty-state-sm': small,
 			})}
 			{...otherProps}
 		>
@@ -50,7 +57,7 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 				<div className="c-empty-state-image">
 					<div className="c-empty-state-aspect-ratio">
 						<img
-							alt="empty-state-image"
+							alt="c-empty-state-image"
 							className={classNames(
 								'aspect-ratio-item aspect-ratio-item-fluid',
 								imgProps && imgProps.className
