@@ -12,8 +12,8 @@ mainTabURL: 'docs/components/treeview.html'
 
     -   [Group](#css-treeview-group)
     -   [Item](#css-treeview-item)
-    -   [Item](#css-treeview-item-disabled)
     -   [Link](#css-treeview-link)
+    -   [Link Disabled](#css-treeview-link-disabled)
     -   [Component Expander](#css-treeview-component-expander)
     -   [Component Action](#css-treeview-component-action)
     -   [Dragging](#css-treeview-dragging)
@@ -1777,28 +1777,6 @@ The class `treeview-item` must be applied to all `li` elements. This class helps
 </ul>
 ```
 
-### Treeview Item Disabled(#css-treeview-item-disabled)
-
-The modifier class `disabled` on `treeview-item` items nested inside when dragging an item.
-
-```html
-<ul class="treeview treeview-light treeview-nested" role="tree">
-	<li class="disabled treeview-item" role="none">
-		<div
-			aria-controls="treeviewExpanderCollapse01"
-			aria-expanded="false"
-			class="treeview-link"
-			data-target="#treeviewExpanderCollapse01"
-			data-toggle="collapse"
-			role="treeitem"
-			tabindex="0"
-		>
-			...
-		</div>
-	</li>
-</ul>
-```
-
 ### Treeview Link(#css-treeview-link)
 
 This is the container for all nodes inside `treeview`. If there are auxiliary controls inside the `treeview-link` (e.g., `a` or `button`) it is recommended to use a `div` element with the `tabindex` attribute.
@@ -1819,6 +1797,213 @@ This is the container for all nodes inside `treeview`. If there are auxiliary co
 		</div>
 	</li>
 </ul>
+```
+
+### Treeview Link Disabled(#css-treeview-link-disabled)
+
+The modifier class `disabled` adds disabled styles to `treeview-link`. The class does not add disabled styles to form elements, links, or buttons inside. Those must be disabled individually.
+
+<div class="row">
+	<div class="col-md-4">
+		<ul class="treeview treeview-light treeview-nested" role="tree">
+			<li class="treeview-item" role="none">
+				<div aria-controls="treeviewItemDisabledCollapse02" aria-expanded="true" class="treeview-link disabled hover" data-target="#treeviewItemDisabledCollapse02" data-toggle="collapse" role="treeitem" tabindex="-1">
+					<span class="c-inner" tabindex="-2">
+						<span class="autofit-row">
+							<span class="autofit-col">
+								<button aria-controls="treeviewItemDisabledCollapse02" aria-expanded="true" class="btn btn-monospaced component-expander" data-target="#treeviewItemDisabledCollapse02" data-toggle="collapse" type="button">
+									<span class="c-inner" tabindex="-2">
+										<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#angle-down" />
+										</svg>
+										<svg class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#angle-right" />
+										</svg>
+									</span>
+								</button>
+							</span>
+							<span class="autofit-col">
+								<span class="custom-control custom-checkbox">
+									<label>
+										<input class="custom-control-input" disabled tabindex="-1" type="checkbox">
+										<span class="custom-control-label"></span>
+									</label>
+								</span>
+							</span>
+							<span class="autofit-col">
+								<span class="component-icon">
+									<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+										<use xlink:href="/images/icons/icons.svg#folder" />
+									</svg>
+								</span>
+							</span>
+							<span class="autofit-col autofit-col-expand">
+								<span class="component-text">
+									<span class="text-truncate-inline" title="Liferay Drive"><span class="text-truncate">Liferay Drive</span></span>
+								</span>
+							</span>
+							<span class="autofit-col">
+								<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+									<span class="c-inner" tabindex="-2">
+										<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#times-circle-full" />
+										</svg>
+									</span>
+								</button>
+							</span>
+							<span class="autofit-col">
+								<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+									<span class="c-inner" tabindex="-2">
+										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
+								</button>
+							</span>
+						</span>
+					</span>
+				</div>
+				<div class="collapse show" id="treeviewItemDisabledCollapse02">
+					<ul class="treeview-group" role="group">
+						<li class="treeview-item" role="none">
+							<a class="treeview-link disabled" href="#1" role="treeitem" tabindex="-1" style="padding-left:24px;">
+								<span class="c-inner" tabindex="-2" style="margin-left:-24px;"><span class="component-text">Anchor 1</span></span>
+							</a>
+						</li>
+						<li class="treeview-item" role="none">
+							<a class="treeview-link disabled" href="#1" role="treeitem" tabindex="-1" style="padding-left:24px;">
+								<span class="c-inner" tabindex="-2" style="margin-left:-24px;"><span class="component-text">Anchor 2</span></span>
+							</a>
+						</li>
+						<li class="treeview-item" role="none">
+							<a class="treeview-link disabled" href="#1" role="treeitem" tabindex="-1" style="padding-left:24px;">
+								<span class="c-inner" tabindex="-2" style="margin-left:-24px;"><span class="component-text">Anchor 3</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<div class="bg-dark">
+			<ul class="treeview treeview-dark treeview-nested" role="tree">
+				<li class="treeview-item" role="none">
+					<div aria-controls="treeviewItemDisabledDarkCollapse01" aria-expanded="true" class="treeview-link disabled hover" data-target="#treeviewItemDisabledDarkCollapse01" data-toggle="collapse" role="treeitem" tabindex="-1">
+						<span class="c-inner" tabindex="-2">
+							<span class="autofit-row">
+								<span class="autofit-col">
+									<button aria-controls="treeviewItemDisabledDarkCollapse01" aria-expanded="true" class="btn btn-monospaced component-expander" data-target="#treeviewItemDisabledDarkCollapse01" data-toggle="collapse" type="button">
+										<span class="c-inner" tabindex="-2">
+											<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+												<use xlink:href="/images/icons/icons.svg#angle-down" />
+											</svg>
+											<svg class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none" focusable="false" role="presentation">
+												<use xlink:href="/images/icons/icons.svg#angle-right" />
+											</svg>
+										</span>
+									</button>
+								</span>
+								<span class="autofit-col">
+									<span class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" disabled tabindex="-1" type="checkbox">
+											<span class="custom-control-label"></span>
+										</label>
+									</span>
+								</span>
+								<span class="autofit-col">
+									<span class="component-icon">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#folder" />
+										</svg>
+									</span>
+								</span>
+								<span class="autofit-col autofit-col-expand">
+									<span class="component-text">
+										<span class="text-truncate-inline" title="Liferay Drive"><span class="text-truncate">Liferay Drive</span></span>
+									</span>
+								</span>
+								<span class="autofit-col">
+									<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+										<span class="c-inner" tabindex="-2">
+											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
+												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
+											</svg>
+										</span>
+									</button>
+								</span>
+								<span class="autofit-col">
+									<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+										<span class="c-inner" tabindex="-2">
+											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</span>
+									</button>
+								</span>
+							</span>
+						</span>
+					</div>
+					<div class="collapse show" id="treeviewItemDisabledDarkCollapse01">
+						<ul class="treeview-group" role="group">
+							<li class="treeview-item" role="none">
+								<button class="treeview-link" disabled role="treeitem" tabindex="-1" type="button" style="padding-left:24px;">
+									<span class="c-inner" tabindex="-2" style="margin-left:-24px;"><span class="component-text">Button 1</span></span>
+								</button>
+							</li>
+							<li class="treeview-item" role="none">
+								<button class="treeview-link" disabled role="treeitem" tabindex="-1"  type="button" style="padding-left:24px;">
+									<span class="c-inner" tabindex="-2" style="margin-left:-24px;"><span class="component-text">Button 2</span></span>
+								</button>
+							</li>
+							<li class="treeview-item" role="none">
+								<button class="treeview-link" disabled role="treeitem" tabindex="-1"  type="button" style="padding-left:24px;">
+									<span class="c-inner" tabindex="-2" style="margin-left:-24px;"><span class="component-text">Button 3</span></span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+```html
+<ul class="treeview treeview-light treeview-nested" role="tree">
+	<li class="treeview-item" role="none">
+		<div
+			aria-controls="treeviewItemDisabledCollapse02"
+			aria-expanded="true"
+			class="treeview-link disabled hover"
+			data-target="#treeviewItemDisabledCollapse02"
+			data-toggle="collapse"
+			role="treeitem"
+			tabindex="-1"
+		>
+			...
+		</div>
+	</li>
+</ul>
+
+<div class="bg-dark">
+	<ul class="treeview treeview-dark treeview-nested" role="tree">
+		<li class="treeview-item" role="none">
+			<div
+				aria-controls="treeviewItemDisabledDarkCollapse01"
+				aria-expanded="true"
+				class="treeview-link disabled hover"
+				data-target="#treeviewItemDisabledDarkCollapse01"
+				data-toggle="collapse"
+				role="treeitem"
+				tabindex="-1"
+			>
+				...
+			</div>
+		</li>
+	</ul>
+</div>
 ```
 
 ### Component Expander(#css-treeview-component-expander)
