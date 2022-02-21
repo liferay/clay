@@ -113,7 +113,7 @@ export function useMultipleSelection<T>(
 					layoutKeys.current.set(parentKey, {
 						children: new Set([key]),
 						lazyChild: false,
-						loc: [],
+						loc: loc.slice(0, -1),
 						parentKey: undefined,
 					});
 				}
