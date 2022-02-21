@@ -55,6 +55,57 @@ type LayoutInfo = {
 	parentKey?: Key;
 };
 
+/**
+ * The selection hook implementation handles the responsibility of optimizing
+ * the tree selection in more complex scenarios like multiple recursive
+ * selection, recursively selecting in two directions from the point where the
+ * item is in the tree.
+ *
+ * Root
+ * ├─ Item 0
+ * ├─ Item 1
+ * │  ├─ Item 2 <- Select this item.
+ * │  │  ├─ Item 3
+ * │  │  ├─ Item 4
+ * │  ├─ Item 5
+ *
+ * Selecting the item must recursively navigate up and down from the item's
+ * point in the tree to the end at each end, the selection rules are different
+ * when navigating up and down.
+ *
+ * {
+ *  'Item 1': {
+ *    children: ['Item 2', 'Item 5'],
+ *    parentKey: 'Root'
+ *  }
+ * }
+ *
+ * Navigation in the tree is supported by a hashmap structure with linked list
+ * that avoids the operation of traversing the tree in search of all parent and
+ * childs items. Navigation done this way lets you go from 1 to 1.
+ *
+ * Assembling the `layoutKeys` structure is also optimized to avoid traversing
+ * the entire tree and blocking rendering until the operation is finished,
+ * instead, the hook embodies the concept of building the structure in
+ * React flow, i.e. when the item component is rendered, the record is added
+ * to `layoutKeys` and and keeping the structure up to date is free because the
+ * method is called on component mount and unmount. The trade-off is that we
+ * don't get the complete mirror of the tree in the hashmap but only what is
+ * rendered, this decreases the amount of data when there is a big tree but we
+ * have problems recursively selecting to down.
+ *
+ * Root [0]
+ * ├─ Item 0 [0, 0]
+ * ├─ Item 1 [0, 1]
+ * │  ├─ Item 2 [0, 1, 0]
+ * │  │  ├─ Item 3 [0, 1, 0, 0]
+ * │  │  ├─ Item 4 [0, 1, 0, 1]
+ * │  ├─ Item 5 [0, 1, 1]
+ *
+ * The implementation solves this with a fallback approach of identifying if
+ * the item has unrendered children and using the tree to navigate but using
+ * the item path to avoid traversing the entire tree.
+ */
 export function useMultipleSelection<T>(
 	props: IMultipleSelectionProps<T>
 ): IMultipleSelectionState {
@@ -70,11 +121,20 @@ export function useMultipleSelection<T>(
 		value: props.selectedKeys,
 	});
 
-	// The Mount will start building the tree in a flat structure using the
-	// component's rendering stream to avoid traversing the tree in a separate
-	// stream. This means it is reactive to rendering, if any component of the
-	// structure is removed it will update the layout without going traverse
-	// the structure.
+	/**
+	 * The method creates the mirror of the tree in a hashmap structure with a
+	 * linked list using `parentKey` and `children`. Adding data to the structure
+	 * is reactive to item component rendering and disassembly. Only the rendered
+	 * items are in the structure, if a component is moved, removed, or added the
+	 * structure is updated automatically.
+	 *
+	 * useEffect(() => createPartialLayoutItem(...), []);
+	 *
+	 * The design of this method is to be coupled to `useEffect` which has the
+	 * mount and unmount behavior, also handles lifecycle and call order,
+	 * `useEffect` in nested components are called bottom-up instead of top-down
+	 * as in rendering.
+	 */
 	const createPartialLayoutItem = useCallback(
 		(key: Key, lazyChild: boolean, loc: Array<number>, parentKey?: Key) => {
 			const keyMap = layoutKeys.current.get(key);
@@ -152,24 +212,32 @@ export function useMultipleSelection<T>(
 				keyMap.parentKey
 			) as LayoutInfo;
 
-			// Instead of doing the whole operation again below, we know that the
-			// element below already has intermediate status and we don't need to
-			// check everything again.
+			// Root
+			// ├─ Item 0
+			// ├─ Item 1 <- Current recursion flow
+			// │  ├─ (Intermediate) Item 2
+			// │  │  ├─ (Checked) Item 3 <- Start
+			// │  │  ├─ Item 4
+			//
+			// As the method works recursively from the item's point in the tree
+			// to up, if the item's parent was already marked as intermediate, from
+			// here we start to mark all the parents as intermediate to avoid
+			// unnecessary operations.
 			if (hasIntermediate) {
 				intermediateKeys.current.add(keyMap.parentKey);
 				selecteds.delete(keyMap.parentKey);
 			} else {
 				const children = [...parentKeyMap.children];
 
-				// Instead of using every to check if all elements are selected, we
-				// look for any not selected, which means we don't have all the
-				// elements selected and we don't always need to go through the
+				// Instead of using `every` method to check if all items are
+				// selected, we look for any not selected, which means we don't have
+				// all the items selected and we don't always need to go through the
 				// entire array.
 				const unselected = children.some((key) => !selecteds.has(key));
 
 				if (unselected) {
-					// An element can only be intermediate when there is at least
-					// one element selected in its tree. We don't need to sweep
+					// An item can only be intermediate when there is at least
+					// one item selected in its tree. We don't need to sweep
 					// the tree because we have the recursive effect.
 					if (children.some((key) => selecteds.has(key))) {
 						intermediateKeys.current.add(keyMap.parentKey);
@@ -223,6 +291,12 @@ export function useMultipleSelection<T>(
 		[props.nestedKey]
 	);
 
+	/**
+	 * The recursive selection of children of an item is done using the
+	 * `layoutKeys` structure which is the representation of the items rendered
+	 * in the DOM, when the child is not rendered in the DOM the method uses the
+	 * fallback of the tree to continue the recursion from where it left off.
+	 */
 	const toggleChildrenSelection = useCallback(
 		(
 			keyMap: LayoutInfo,
