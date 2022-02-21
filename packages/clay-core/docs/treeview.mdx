@@ -23,8 +23,10 @@ import {Example, MultipleSelection} from '$packages/clay-core/docs/treeview';
         -   [Single Level](#single-level)
         -   [Nested](#nested)
         -   [Actions](#actions)
+        -   [Disabled](#item-disabled)
 -   [Expander](#expander)
     -   [Custom expander](#custom-expander)
+    -   [Disabled](#expander-disabled)
 -   [Selection](#selection)
     -   [Single Selection](#single-selection)
     -   [Multiple Selection](#multiple-selection)
@@ -262,6 +264,27 @@ Actions are added using the `actions` property on each item. The component abstr
 </TreeView>
 ```
 
+#### Disabled(#item-disabled)
+
+The item can be disabled by setting the `disabled` prop in `<TreeView.ItemStack />` and `<TreeView.Item />`. By default, the Expander and Checkbox are also disabled OOTB, any other clickable elements other than these need to be set to disable in the composition.
+
+```jsx
+<TreeView.Item>
+	<TreeView.ItemStack disabled={true}>
+		<Checkbox />
+		<Icon symbol="folder" />
+		Drive
+	</TreeView.ItemStack>
+	<TreeView.Group>
+		<TreeView.Item disabled={true}>
+			<Checkbox />
+			<Icon symbol="folder" />
+			Documents
+		</TreeView.Item>
+	</TreeView.Group>
+</TreeView.Item>
+```
+
 ## Expander
 
 The expansion of an item in the TreeView is controlled internally. It's also possible to control the state and set an initial value with the keys of the items that are initially expanded.
@@ -299,6 +322,29 @@ Customizing the expander is possible using the `expanderIcons` property. Changin
 	{...}
 </TreeView>
 ```
+
+### Disabled(#expander-disabled)
+
+The Expander is disabled when the item is also disabled but you can optionally control the state of the expander.
+
+```jsx
+<TreeView.Item>
+	<TreeView.ItemStack disabled={true} expanderDisabled={false}>
+		<Checkbox />
+		<Icon symbol="folder" />
+		Drive
+	</TreeView.ItemStack>
+	<TreeView.Group>
+		<TreeView.Item disabled={true}>
+			<Checkbox />
+			<Icon symbol="folder" />
+			Documents
+		</TreeView.Item>
+	</TreeView.Group>
+</TreeView.Item>
+```
+
+The `expanderDisabled` property is only available in the `<TreeView.ItemStack />` component where the expander is visible when it has children.
 
 ## Selection
 
