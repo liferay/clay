@@ -648,9 +648,24 @@ $custom-file-border-radius:         $input-border-radius !default;
 $custom-file-box-shadow:            $input-box-shadow !default;
 $custom-file-button-color:          $custom-file-color !default;
 $custom-file-button-bg:             $input-group-addon-bg !default;
-$custom-file-text: (
-  en: "Browse"
-) !default;
+
+// See See https://issues.liferay.com/browse/LPS-147457 and https://github.com/sass/sass/issues/1395
+
+$custom-file-text: () !default;
+$custom-file-text: map-merge(
+  (
+    en: unquote("'\\FEFF Browse'")
+  ),
+  $custom-file-text
+);
+
+// See https://issues.liferay.com/browse/LPS-147457 and https://github.com/sass/sass/issues/1395
+
+$custom-file-text-data-browse: unquote("'\\FEFF' attr(data-browse)") !default;
+
+// See https://issues.liferay.com/browse/LPS-147457 and https://github.com/sass/sass/issues/1395
+
+$custom-file-label-after-content: unquote("'\\FEFF Browse'") !default;
 
 
 // Form validation
