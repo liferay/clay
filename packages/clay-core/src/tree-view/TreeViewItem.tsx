@@ -21,9 +21,27 @@ export interface ITreeViewItemProps
 	 * Property for rendering actions on a Node.
 	 */
 	actions?: React.ReactElement;
+
 	children: React.ReactNode;
+
+	/**
+	 * Flag indicating that the component is disabled.
+	 */
+	disabled?: boolean;
+
+	/**
+	 * Internal property.
+	 */
 	isDragging?: boolean;
+
+	/**
+	 * Internal property.
+	 */
 	overPosition?: string;
+
+	/**
+	 * Internal property.
+	 */
 	overTarget?: boolean;
 }
 
@@ -135,6 +153,8 @@ export const TreeViewItem = React.forwardRef<
 								selectionMode === 'single' &&
 								selection.selectedKeys.has(item.key),
 							collapsed: group && expandedKeys.has(item.key),
+							disabled:
+								itemStackProps.disabled || nodeProps.disabled,
 							focus,
 							'treeview-dropping-bottom':
 								overTarget && overPosition === 'bottom',
@@ -144,6 +164,7 @@ export const TreeViewItem = React.forwardRef<
 								overTarget && overPosition === 'top',
 						}
 					)}
+					disabled={itemStackProps.disabled || nodeProps.disabled}
 					onBlur={({currentTarget, relatedTarget}) => {
 						if (
 							actions &&
@@ -154,6 +175,10 @@ export const TreeViewItem = React.forwardRef<
 						}
 					}}
 					onClick={(event) => {
+						if (itemStackProps.disabled || nodeProps.disabled) {
+							return;
+						}
+
 						if (hasItemStack && itemStackProps.onClick) {
 							itemStackProps.onClick(event);
 						}
@@ -201,6 +226,10 @@ export const TreeViewItem = React.forwardRef<
 					onKeyDown={(event) => {
 						event.preventDefault();
 
+						if (itemStackProps.disabled || nodeProps.disabled) {
+							return;
+						}
+
 						const {key} = event;
 
 						if (key === Keys.Left) {
@@ -240,7 +269,7 @@ export const TreeViewItem = React.forwardRef<
 									);
 								const firstItemElement =
 									group?.querySelector<HTMLDivElement>(
-										'.treeview-link'
+										'.treeview-link:not(.disabled)'
 									);
 								firstItemElement?.focus();
 							} else {
@@ -305,7 +334,9 @@ export const TreeViewItem = React.forwardRef<
 							spacing + (group || onLoadMore ? 0 : 24)
 						}px`,
 					}}
-					tabIndex={0}
+					tabIndex={
+						itemStackProps.disabled || nodeProps.disabled ? -1 : 0
+					}
 				>
 					<span
 						className="c-inner"
@@ -332,6 +363,7 @@ export const TreeViewItem = React.forwardRef<
 						) : (
 							<TreeViewItemStack
 								actions={actions}
+								disabled={nodeProps.disabled}
 								expandable={!!onLoadMore}
 								loading={loading}
 							>
@@ -351,6 +383,18 @@ TreeViewItem.displayName = 'ClayTreeViewItem';
 interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	actions?: React.ReactElement;
 	children: React.ReactNode;
+
+	/**
+	 * Flag indicating that the component is disabled.
+	 */
+	disabled?: boolean;
+
+	/**
+	 * Flag indicating if Expander is disabled, by default it has the
+	 * value of the disabled prop.
+	 */
+	expanderDisabled?: boolean;
+
 	expandable?: boolean;
 	loading?: boolean;
 }
@@ -384,7 +428,9 @@ function Expander({expanderIcons}: ExpanderProps) {
 export function TreeViewItemStack({
 	actions,
 	children,
+	disabled,
 	expandable = true,
+	expanderDisabled,
 	loading = false,
 	...otherProps
 }: ITreeViewItemStackProps) {
@@ -423,6 +469,11 @@ export function TreeViewItemStack({
 								collapsed: expandedKeys.has(item.key),
 							}
 						)}
+						disabled={
+							typeof expanderDisabled === 'undefined'
+								? disabled
+								: expanderDisabled
+						}
 						displayType={null}
 						monospaced
 						onClick={(event) => {
@@ -463,7 +514,7 @@ export function TreeViewItemStack({
 				} else if (child?.type.displayName === 'ClayCheckbox') {
 					content = React.cloneElement(child as React.ReactElement, {
 						checked: selection.selectedKeys.has(item.key),
-						disabled: loading,
+						disabled: loading || disabled,
 						indeterminate: selection.isIntermediate(item.key),
 						onChange: (
 							event: React.ChangeEvent<HTMLInputElement>

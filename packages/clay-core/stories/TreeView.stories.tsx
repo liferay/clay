@@ -76,6 +76,7 @@ const ITEMS_DRIVE = [
 								type: 'document',
 							},
 						],
+						disabled: true,
 						id: 8,
 						name: 'Word',
 					},
@@ -84,13 +85,14 @@ const ITEMS_DRIVE = [
 				name: 'Documents and Media',
 			},
 		],
+		disabled: true,
 		id: 1,
 		name: 'Liferay Drive',
 		type: 'cloud',
 	},
 	{
 		children: [
-			{id: 10, name: 'Blogs'},
+			{disabled: true, id: 10, name: 'Blogs'},
 			{id: 11, name: 'Documents and Media'},
 		],
 		id: 9,
@@ -689,6 +691,42 @@ storiesOf('Components|ClayTreeView', module)
 							<TreeView.Group items={item.children}>
 								{(item) => (
 									<TreeView.Item>
+										<OptionalCheckbox />
+										<Icon symbol="folder" />
+										{item.name}
+									</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+	})
+	.add('disabled', () => {
+		// Just to avoid TypeScript error with required props
+		const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+		OptionalCheckbox.displayName = 'ClayCheckbox';
+
+		return (
+			<Provider spritemap={spritemap} theme="cadmin">
+				<TreeView
+					dragAndDrop
+					items={ITEMS_DRIVE}
+					selectionMode="multiple-recursive"
+					showExpanderOnHover={false}
+				>
+					{(item) => (
+						<TreeView.Item>
+							<TreeView.ItemStack disabled={item.disabled}>
+								<OptionalCheckbox />
+								<Icon symbol="folder" />
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								{(item: any) => (
+									<TreeView.Item disabled={item.disabled}>
 										<OptionalCheckbox />
 										<Icon symbol="folder" />
 										{item.name}

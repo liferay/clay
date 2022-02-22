@@ -6,35 +6,38 @@
 import React from 'react';
 
 const getId = (children) => {
-	return (
-		typeof children === 'string' &&
-		children.toLowerCase().split(' ').join('-')
-	);
+	if (typeof children !== 'string') {
+		return;
+	}
+
+	if (children.match(/\(#/)) {
+		return children.match(/\(#(.*?)\)$/)[1];
+	}
+
+	return children.toLowerCase().split(' ').join('-');
 };
 
-export const H1 = (props) => (
-	<h1 className="clay-h1" id={getId(props.children)}>
-		{props.children}
-	</h1>
+const getChildren = (children) => {
+	if (typeof children !== 'string' || !children.match(/\(#/)) {
+		return children;
+	}
+
+	return children.match(/(.*?)\(#/)[1];
+};
+
+const Heading = ({as: As = 'h1', children}) => (
+	<As className={`clay-${As}`} id={getId(children)}>
+		{getChildren(children)}
+	</As>
 );
 
-export const H2 = (props) => (
-	<h2 className="clay-h2" id={getId(props.children)}>
-		{props.children}
-	</h2>
-);
+export const H1 = (props) => <Heading as="h1" {...props} />;
 
-export const H3 = (props) => (
-	<h3 className="clay-h3" id={getId(props.children)}>
-		{props.children}
-	</h3>
-);
+export const H2 = (props) => <Heading as="h2" {...props} />;
 
-export const H4 = (props) => (
-	<h4 className="clay-h4" id={getId(props.children)}>
-		{props.children}
-	</h4>
-);
+export const H3 = (props) => <Heading as="h3" {...props} />;
+
+export const H4 = (props) => <Heading as="h4" {...props} />;
 
 export const P = (props) => (
 	<p className={props.className ? props.className : 'clay-p'}>
