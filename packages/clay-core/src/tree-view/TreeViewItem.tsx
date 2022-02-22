@@ -25,7 +25,7 @@ export interface ITreeViewItemProps
 	children: React.ReactNode;
 
 	/**
-	 * Flag indicates that the component is disabled.
+	 * Flag indicating that the component is disabled.
 	 */
 	disabled?: boolean;
 
@@ -385,13 +385,13 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 
 	/**
-	 * Flag indicates that the component is disabled.
+	 * Flag indicating that the component is disabled.
 	 */
 	disabled?: boolean;
 
 	/**
-	 * Flag indicates if Expander is disabled, by default it follows the
-	 * behavior of the disabled prop.
+	 * Flag indicating if Expander is disabled, by default it has the
+	 * value of the disabled prop.
 	 */
 	expanderDisabled?: boolean;
 
