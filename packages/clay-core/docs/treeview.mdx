@@ -266,7 +266,7 @@ Actions are added using the `actions` property on each item. The component abstr
 
 #### Disabled(#item-disabled)
 
-The item can be disabled by setting the `disabled` prop in `<TreeView.ItemStack />` and `<TreeView.Item />`. By default, the Expander and Checkbox are also disabled OOTB, any other clickable elements other than these need to be set to disable in the composition.
+An item can be disabled by setting the `disabled` prop in the `<TreeView.ItemStack />` and `<TreeView.Item />` components. By default, the `Expander` and `Checkbox` are also disabled, and any other clickable elements other than these need to be set to disabled in the composition.
 
 ```jsx
 <TreeView.Item>
@@ -289,7 +289,7 @@ The item can be disabled by setting the `disabled` prop in `<TreeView.ItemStack 
 
 The expansion of an item in the TreeView is controlled internally. It's also possible to control the state and set an initial value with the keys of the items that are initially expanded.
 
-The TreeView exposes the `expandedKeys` property and the `onExpandedChange` event to control the state of expanded items. The `expandedKeys` property must be a collection of values using the `Set()` object.
+The TreeView exposes the `expandedKeys` property and the `onExpandedChange` callback to control the state of expanded items. The `expandedKeys` property must be a collection of values using ia `Set()`.
 
 ```jsx
 function Example() {
@@ -310,7 +310,7 @@ function Example() {
 
 ### Custom expander
 
-Customizing the expander is possible using the `expanderIcons` property. Changing the icons is applied the entire tree, it's not possible to change it exclusively for a single item.
+Customizing the expander is possible using the `expanderIcons` property. Changing the icons is applied the entire tree, and it's not possible to change them exclusively for a single item.
 
 ```jsx
 <TreeView
@@ -325,7 +325,7 @@ Customizing the expander is possible using the `expanderIcons` property. Changin
 
 ### Disabled(#expander-disabled)
 
-The Expander is disabled when the item is also disabled but you can optionally control the state of the expander.
+The `Expander` is automatically disabled when the item is disabled but you can optionally control its state.
 
 ```jsx
 <TreeView.Item>
@@ -344,7 +344,7 @@ The Expander is disabled when the item is also disabled but you can optionally c
 </TreeView.Item>
 ```
 
-The `expanderDisabled` property is only available in the `<TreeView.ItemStack />` component where the expander is visible when it has children.
+The `expanderDisabled` property is only available in the `<TreeView.ItemStack />` component where the `Expander` is visible and has children.
 
 ## Selection
 
