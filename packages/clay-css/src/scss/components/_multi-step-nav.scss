@@ -62,7 +62,9 @@
 			@if ($multi-step-icon-active-bg-image) {
 				&[data-multi-step-icon] {
 					&:before {
-						content: normal;
+						// https://issues.liferay.com/browse/LPS-147457
+
+						content: none;
 					}
 				}
 			}
@@ -100,7 +102,9 @@
 
 				&[data-multi-step-icon] {
 					&:before {
-						content: normal;
+						// https://issues.liferay.com/browse/LPS-147457
+
+						content: none;
 					}
 				}
 
@@ -135,7 +139,9 @@
 			@if ($multi-step-icon-disabled-bg-image) {
 				&[data-multi-step-icon] {
 					&:before {
-						content: normal;
+						// https://issues.liferay.com/browse/LPS-147457
+
+						content: none;
 					}
 				}
 			}
@@ -244,8 +250,8 @@
 		text-decoration: $multi-step-icon-focus-text-decoration;
 	}
 
-	&[data-multi-step-icon]:before {
-		content: attr(data-multi-step-icon);
+	&[data-multi-step-icon]::before {
+		content: $data-multi-step-icon-before-content;
 		height: $multi-step-icon-size;
 		line-height: $multi-step-icon-size;
 		text-align: center;
