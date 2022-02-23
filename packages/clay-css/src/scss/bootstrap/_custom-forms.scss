@@ -332,7 +332,7 @@
   }
 
   ~ .custom-file-label[data-browse]::after {
-    content: attr(data-browse);
+    content: $custom-file-text-data-browse;
   }
 }
 
@@ -364,7 +364,7 @@
     padding: $custom-file-padding-y $custom-file-padding-x;
     line-height: $custom-file-line-height;
     color: $custom-file-button-color;
-    content: "Browse";
+    content: $custom-file-label-after-content;
     @include gradient-bg($custom-file-button-bg);
     border-left: inherit;
     @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);

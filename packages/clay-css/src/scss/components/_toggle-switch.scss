@@ -121,7 +121,7 @@ label.toggle-switch {
 		-ms-user-select: none;
 		user-select: none;
 
-		&:after {
+		&::after {
 			background-color: $toggle-switch-button-bg;
 			border-color: $toggle-switch-button-border-color;
 
@@ -140,7 +140,7 @@ label.toggle-switch {
 			width: $toggle-switch-button-width;
 		}
 
-		&:before {
+		&::before {
 			background-color: $toggle-switch-bar-bg;
 			border-color: $toggle-switch-bar-border-color;
 
@@ -159,14 +159,14 @@ label.toggle-switch {
 		}
 
 		.toggle-switch-handle {
-			&:after {
-				content: attr(data-label-off);
+			&::after {
+				content: $toggle-switch-handle-after-content;
 				margin-left: clay-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding);
 				transition: $toggle-switch-transition;
 				white-space: nowrap;
 			}
 
-			&:before {
+			&::before {
 				transition: $toggle-switch-transition;
 			}
 		}
@@ -203,7 +203,7 @@ label.toggle-switch {
 	}
 
 	&:checked ~ .toggle-switch-bar {
-		&:after {
+		&::after {
 			background-color: $toggle-switch-button-on-bg;
 			border-color: $toggle-switch-button-on-border-color;
 
@@ -214,7 +214,7 @@ label.toggle-switch {
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
 		}
 
-		&:before {
+		&::before {
 			background-color: $toggle-switch-bar-on-bg;
 			border-color: $toggle-switch-bar-on-border-color;
 
@@ -224,8 +224,8 @@ label.toggle-switch {
 			border-width: $toggle-switch-bar-border-width;
 		}
 
-		.toggle-switch-handle:after {
-			content: attr(data-label-on);
+		.toggle-switch-handle::after {
+			content: $toggle-switch-handle-on-after-content;
 		}
 
 		.toggle-switch-icon {
@@ -256,7 +256,7 @@ label.toggle-switch {
 		}
 	}
 
-	&:focus ~ .toggle-switch-bar:before {
+	&:focus ~ .toggle-switch-bar::before {
 		box-shadow: $toggle-switch-bar-focus-box-shadow;
 	}
 }
@@ -304,7 +304,7 @@ label.toggle-switch {
 			line-height: $toggle-switch-bar-height-mobile;
 			text-indent: 0;
 
-			&:after {
+			&::after {
 				bottom: $toggle-switch-bar-padding-mobile;
 				height: $toggle-switch-button-width-mobile;
 				left: $toggle-switch-bar-padding-mobile;
@@ -312,11 +312,11 @@ label.toggle-switch {
 				width: $toggle-switch-button-width-mobile;
 			}
 
-			&:before {
+			&::before {
 				width: $toggle-switch-bar-width-mobile;
 			}
 
-			.toggle-switch-handle:after {
+			.toggle-switch-handle::after {
 				margin-left: clay-data-label-text-position($toggle-switch-bar-width-mobile, $toggle-switch-bar-padding-mobile);
 			}
 
@@ -337,11 +337,11 @@ label.toggle-switch {
 		}
 
 		&:checked ~ .toggle-switch-bar {
-			&:after {
+			&::after {
 				left: $toggle-switch-bar-width-mobile - $toggle-switch-bar-padding-mobile - $toggle-switch-button-width-mobile;
 			}
 
-			.toggle-switch-handle:after {
+			.toggle-switch-handle::after {
 				margin-left: clay-data-label-text-position($toggle-switch-bar-width-mobile, $toggle-switch-bar-padding-mobile);
 			}
 
