@@ -28,6 +28,12 @@ $multi-step-icon-focus-color: $multi-step-icon-hover-color !default;
 $multi-step-icon-focus-outline: 0 !default;
 $multi-step-icon-focus-text-decoration: $multi-step-icon-hover-text-decoration !default;
 
+// See https://issues.liferay.com/browse/LPS-147457.
+
+$data-multi-step-icon-before-content: unquote(
+	"'\\FEFF' attr(data-multi-step-icon)"
+) !default;
+
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
 $multi-step-divider-spacer-x: 0 !default;

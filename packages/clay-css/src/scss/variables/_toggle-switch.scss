@@ -34,6 +34,12 @@ $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default;
 $toggle-switch-button-font-size-mobile: $toggle-switch-button-font-size !default; // null
 $toggle-switch-button-icon-color: $input-color !default;
 
+// See https://issues.liferay.com/browse/LPS-147457.
+
+$toggle-switch-handle-after-content: unquote(
+	"'\\FEFF' attr(data-label-off)"
+) !default;
+
 // Toggle Switch On
 
 $toggle-switch-bar-on-bg: $component-active-bg !default;
@@ -44,6 +50,12 @@ $toggle-switch-button-on-bg: $white !default;
 $toggle-switch-button-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-button-on-border-radius: 0 3px 3px 0 !default;
 $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
+
+// See https://issues.liferay.com/browse/LPS-147457.
+
+$toggle-switch-handle-on-after-content: unquote(
+	"'\\FEFF' attr(data-label-on)"
+) !default;
 
 // Toggle Switch Disabled
 
@@ -179,7 +191,7 @@ $toggle-switch-check: map-deep-merge(
 						clay-enable-transitions($toggle-switch-transition),
 				),
 				after: (
-					content: attr(data-label-off),
+					content: $toggle-switch-handle-after-content,
 					margin-left:
 						clay-data-label-text-position(
 							$toggle-switch-bar-width,
@@ -253,7 +265,7 @@ $toggle-switch-check: map-deep-merge(
 				),
 				toggle-switch-handle: (
 					after: (
-						content: attr(data-label-on),
+						content: $toggle-switch-handle-on-after-content,
 					),
 				),
 				toggle-switch-icon: (

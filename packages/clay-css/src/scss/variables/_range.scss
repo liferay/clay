@@ -45,6 +45,8 @@ $clay-range-title: map-deep-merge(
 	$clay-range-title
 );
 
+// `data-label-before-content` and `data-label-after-content`, see https://issues.liferay.com/browse/LPS-147457
+
 $clay-range-input: () !default;
 $clay-range-input: map-deep-merge(
 	(
@@ -92,8 +94,8 @@ $clay-range-input: map-deep-merge(
 		data-label-text-align: center,
 		data-label-top: 0,
 		data-label-width: 1.5rem,
-		data-label-before-content: attr(data-label-min),
-		data-label-after-content: attr(data-label-max),
+		data-label-before-content: unquote("'\\FEFF' attr(data-label-min)"),
+		data-label-after-content: unquote("'\\FEFF' attr(data-label-max)"),
 		data-label-after-right: 0,
 		hover-cursor: $link-cursor,
 		focus-outline: 0,

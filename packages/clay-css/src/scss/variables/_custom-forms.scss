@@ -761,8 +761,23 @@ $custom-file-button-bg: $input-group-addon-bg !default;
 
 $custom-file-button-color: $custom-file-color !default;
 
-/// @deprecated as of v3.x with no replacement
+// .custom-file-label::after
 
-$custom-file-text: (
-	en: 'Browse',
-) !default;
+/// @deprecated as of v3.x with no replacement. See https://issues.liferay.com/browse/LPS-147457 and https://github.com/sass/sass/issues/1395
+
+$custom-file-label-after-content: unquote("'\\FEFF Browse'") !default;
+
+$custom-file-text: () !default;
+
+/// @deprecated as of v3.x with no replacement. See https://issues.liferay.com/browse/LPS-147457 and https://github.com/sass/sass/issues/1395
+
+$custom-file-text: map-deep-merge(
+	(
+		en: unquote("'\\FEFF Browse'"),
+	),
+	$custom-file-text
+);
+
+/// @deprecated as of v3.x with no replacement. See https://issues.liferay.com/browse/LPS-147457.
+
+$custom-file-text-data-browse: unquote("'\\FEFF' attr(data-browse)") !default;
