@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
+
+### Bug Fixes
+
+-   **@clayui/localized-input:** fix typo ([7c2957f](https://github.com/liferay/clay/commit/7c2957f7e4d5272ab17cb99808df7e9fe8226790))
+
 # [3.45.0](https://github.com/liferay/clay/compare/v3.44.2...v3.45.0) (2022-02-01)
 
 **Note:** Version bump only for package @clayui/localized-input

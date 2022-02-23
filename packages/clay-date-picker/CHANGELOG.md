@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
+
+### Features
+
+-   **@clayui/date-picker:** adds a new `yearsCheck` prop to be able to disable the check if the year is within the years range ([c8b26e9](https://github.com/liferay/clay/commit/c8b26e9cd7eeea86af92f6690404b8ef9159e2f4))
+
 # [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
 
 ### Bug Fixes

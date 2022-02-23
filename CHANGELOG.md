@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
+
+### Bug Fixes
+
+-   **@clayui/core:** avoid scrolling when selecting a node ([e1c7091](https://github.com/liferay/clay/commit/e1c7091e21cf965d2f7b637f9f55e6279cb891b6)), closes [#4663](https://github.com/liferay/clay/issues/4663)
+-   **@clayui/core:** fix error when not updating parent's loc ([3ace427](https://github.com/liferay/clay/commit/3ace427f6107efac0652049bbab38cb6354fda4b))
+-   **@clayui/core:** fix error when showing expander when `nestedKey` does not exist in the item ([cd4a4d2](https://github.com/liferay/clay/commit/cd4a4d2772fb43010fb8954973b66e0dfa4fa839))
+-   **@clayui/core:** fixes error when having condition in the children of TreeView.Item and TreeView.ItemStack the last element is positioned to the right ([0e121d3](https://github.com/liferay/clay/commit/0e121d36dc407c3f328f252db8385cf17ced244a))
+-   **@clayui/core:** fixes the error of not revalidating the intermediate state of the selected item's parents in the first render and expands the items ([379ca72](https://github.com/liferay/clay/commit/379ca72b5d773e1882898c0560efbb342c7348e4))
+-   **@clayui/css:** Cadmin Treeview adds disabled styles to `treeview-link` ([d9a3dc3](https://github.com/liferay/clay/commit/d9a3dc30dec94276087f2468e96782e0ec9ad36e))
+-   **@clayui/css:** fix formatting ([07f3b6b](https://github.com/liferay/clay/commit/07f3b6b1abc9515a256bfff58df006098a9737f4))
+-   **@clayui/css:** Treeview adds disabled styles to `treeview-link` ([ca11c9a](https://github.com/liferay/clay/commit/ca11c9ac2e0a96e6598ad32f65587a1a6300ec22))
+-   **@clayui/empty-state:** Update classNames from two objects into one ([f090ab4](https://github.com/liferay/clay/commit/f090ab44f7ea466285bf76463f1c58a6ec48d743))
+-   **@clayui/empty-state:** Update SCSS variables of small empty-state ([8f64846](https://github.com/liferay/clay/commit/8f64846a6a455b790d08f00e8b29383567a7d967))
+-   **@clayui/localized-input:** fix typo ([7c2957f](https://github.com/liferay/clay/commit/7c2957f7e4d5272ab17cb99808df7e9fe8226790))
+-   **clayui.com:** nav-toc is too wide, overlays examples ([b4bd694](https://github.com/liferay/clay/commit/b4bd694bd84fbc701b00258464d608e86104a404))
+-   **clayui.com:** nav-toc-absolute is too wide, overlays examples ([817f63c](https://github.com/liferay/clay/commit/817f63c681e150ea325705359d2f2b679385537e))
+-   make format:changed check for scss files ([6588e27](https://github.com/liferay/clay/commit/6588e27f703773af63bb8992b1bc53bcb5649fc6))
+
+### Features
+
+-   **@clayui/core:** add API to disable item and expander disable optionally ([4cc104d](https://github.com/liferay/clay/commit/4cc104d9d7978764060c407a0e311a626cb2415d))
+-   **@clayui/css:** Cadmin Cards convert base classes to Clay mixin pattern ([00a8de7](https://github.com/liferay/clay/commit/00a8de75759b98292d43dd27af78444be4a3b557))
+-   **@clayui/css:** Cadmin update `clay-text-typography` maps to use the `href` key ([13240cf](https://github.com/liferay/clay/commit/13240cfdcb7915cf617dc30536480b04438f1d56))
+-   **@clayui/css:** Cards convert base classes to Clay mixin pattern ([6f65e74](https://github.com/liferay/clay/commit/6f65e746ebfe37d6b12526e6c5c42bd336714ed0))
+-   **@clayui/css:** Mixin Links `clay-text-typography` use `href` for styling links ([1a428df](https://github.com/liferay/clay/commit/1a428dfe5a0a4317fdde4166ef2ceee5645afefb))
+-   **@clayui/css:** Mixins adds more options to `clay-card-variant` and `clay-card-section-variant` ([545830d](https://github.com/liferay/clay/commit/545830d674d3c50b140db8b40c5a983e8af46660))
+-   **@clayui/css:** Update `clay-text-typography` maps to use the `href` key ([9c99628](https://github.com/liferay/clay/commit/9c996280fbafafead92f0c02024df44e81a56a87))
+-   **@clayui/date-picker:** adds a new `yearsCheck` prop to be able to disable the check if the year is within the years range ([c8b26e9](https://github.com/liferay/clay/commit/c8b26e9cd7eeea86af92f6690404b8ef9159e2f4))
+-   **clayui/empty-state:** Include Small property in empty state component ([a073233](https://github.com/liferay/clay/commit/a0732338454dfeccab4a0961392d218a2109891f))
+
 # [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
 
 ### Bug Fixes

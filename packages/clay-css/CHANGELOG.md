@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Treeview adds disabled styles to `treeview-link` ([d9a3dc3](https://github.com/liferay/clay/commit/d9a3dc30dec94276087f2468e96782e0ec9ad36e))
+* **@clayui/css:** fix formatting ([07f3b6b](https://github.com/liferay/clay/commit/07f3b6b1abc9515a256bfff58df006098a9737f4))
+* **@clayui/css:** Treeview adds disabled styles to `treeview-link` ([ca11c9a](https://github.com/liferay/clay/commit/ca11c9ac2e0a96e6598ad32f65587a1a6300ec22))
+* **@clayui/empty-state:** Update SCSS variables of small empty-state ([8f64846](https://github.com/liferay/clay/commit/8f64846a6a455b790d08f00e8b29383567a7d967))
+
+
+### Features
+
+* **@clayui/css:** Cadmin Cards convert base classes to Clay mixin pattern ([00a8de7](https://github.com/liferay/clay/commit/00a8de75759b98292d43dd27af78444be4a3b557))
+* **@clayui/css:** Cadmin update `clay-text-typography` maps to use the `href` key ([13240cf](https://github.com/liferay/clay/commit/13240cfdcb7915cf617dc30536480b04438f1d56))
+* **@clayui/css:** Cards convert base classes to Clay mixin pattern ([6f65e74](https://github.com/liferay/clay/commit/6f65e746ebfe37d6b12526e6c5c42bd336714ed0))
+* **@clayui/css:** Mixin Links `clay-text-typography` use `href` for styling links ([1a428df](https://github.com/liferay/clay/commit/1a428dfe5a0a4317fdde4166ef2ceee5645afefb))
+* **@clayui/css:** Mixins adds more options to `clay-card-variant` and `clay-card-section-variant` ([545830d](https://github.com/liferay/clay/commit/545830d674d3c50b140db8b40c5a983e8af46660))
+* **@clayui/css:** Update `clay-text-typography` maps to use the `href` key ([9c99628](https://github.com/liferay/clay/commit/9c996280fbafafead92f0c02024df44e81a56a87))
+* **clayui/empty-state:** Include Small property in empty state component ([a073233](https://github.com/liferay/clay/commit/a0732338454dfeccab4a0961392d218a2109891f))
+
+
+
+
+
 # [3.46.0](https://github.com/liferay/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
 
 

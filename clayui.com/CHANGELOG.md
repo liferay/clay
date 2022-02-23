@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.47.0](https://github.com/julien/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
+
+### Bug Fixes
+
+-   **clayui.com:** nav-toc is too wide, overlays examples ([b4bd694](https://github.com/julien/clay/commit/b4bd694bd84fbc701b00258464d608e86104a404))
+-   **clayui.com:** nav-toc-absolute is too wide, overlays examples ([817f63c](https://github.com/julien/clay/commit/817f63c681e150ea325705359d2f2b679385537e))
+
 # [3.46.0](https://github.com/matuzalemsteles/clay/compare/v3.45.1...v3.46.0) (2022-02-09)
 
 **Note:** Version bump only for package clayui.com
