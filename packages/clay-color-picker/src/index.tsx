@@ -179,9 +179,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	value = 'FFFFFF',
 	...otherProps
 }: IProps) => {
-	const [customEditorActive, setCustomEditorActive] = React.useState(
-		!showPalette
-	);
+	const [customEditorActive, setCustomEditorActive] = React.useState(false);
 	const isHex = tinycolor(value).getFormat() === 'hex';
 
 	if (isHex && value.indexOf('#') === 0) {
@@ -214,6 +212,12 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 		onChange: onActiveChange,
 		value: active,
 	});
+
+	React.useEffect(() => {
+		if (!internalActive) {
+			setCustomEditorActive(false);
+		}
+	}, [internalActive]);
 
 	return (
 		<FocusScope arrowKeysUpDown={false}>
@@ -254,11 +258,23 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								aria-label={ariaLabels.selectColor}
 								className="dropdown-toggle"
 								disabled={disabled}
-								onClick={() =>
-									useNative && valueInputRef.current
-										? valueInputRef.current.click()
-										: setInternalActive(!internalActive)
-								}
+								onClick={() => {
+									{
+										if (
+											useNative &&
+											valueInputRef.current
+										) {
+											valueInputRef.current.click();
+										} else {
+											setInternalActive(!internalActive);
+											if (!showPalette) {
+												setCustomEditorActive(
+													!customEditorActive
+												);
+											}
+										}
+									}
+								}}
 								ref={splotchRef}
 								value={value}
 							/>
@@ -329,10 +345,12 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								insetBefore
 								onChange={(event) => {
 									onValueChange(event.target.value);
+									setCustomEditorActive(false);
+									setInternalActive(false);
 								}}
 								ref={inputRef}
 								type="text"
-								value={value}
+								value={value.toUpperCase().substring(0, 6)}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
