@@ -1,0 +1,74 @@
+name: Clay Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install Dependencies
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Format
+        run: yarn format:check
+      - name: Verify Dependencies
+        run: yarn checkDeps
+      - name: Run Jest
+        env:
+            BROWSERSLIST_CONFIG: './packages/browserslist-config-clay/config'
+            BROWSERSLIST_DISABLE_CACHE: 1
+            CI: true
+        run: yarn test
+
+  version:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          lerna version --conventional-commits --no-push --yes
+      - run: git push origin master --follow-tags
+
+  publish:
+    needs: version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@clayui'
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - run: git push origin master:stable
+      - run: lerna publish from-package --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
