@@ -67,7 +67,7 @@ input.toggle-switch {
 
 		.toggle-switch-handle {
 			&:after {
-				content: attr(data-label-off);
+				content: unquote("'\\FEFF' attr(data-label-off)");
 				margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
 				transition: $toggle-switch-transition;
 				white-space: nowrap;
@@ -128,7 +128,7 @@ input.toggle-switch {
 		}
 
 		.toggle-switch-handle:after {
-			content: attr(data-label-on);
+			content: unquote("'\\FEFF' attr(data-label-on)");
 		}
 
 		.toggle-switch-icon {

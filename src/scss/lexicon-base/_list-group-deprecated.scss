@@ -41,7 +41,7 @@
 		vertical-align: middle;
 
 		@media (min-width: $grid-float-breakpoint) {
-			content: normal;
+			content: none;
 		}
 	}
 
@@ -272,7 +272,7 @@
 				vertical-align: middle;
 
 				@media (min-width: $grid-float-breakpoint) {
-					content: normal;
+					content: none;
 				}
 			}
 
