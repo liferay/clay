@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.4](https://github.com/matuzalemsteles/clay/compare/v2.23.3...v2.23.4) (2022-02-24)
+
+
+### Bug Fixes
+
+* **clay-css:** Updates `content` property values to conform to what is allowed by OAW Tracker ([a0d6adf](https://github.com/matuzalemsteles/clay/commit/a0d6adf)), closes [#4683](https://github.com/matuzalemsteles/clay/issues/4683)
+
+
+
+
+
 ## [2.23.2](https://github.com/matuzalemsteles/clay/compare/v2.23.1...v2.23.2) (2021-12-16)
 
 
