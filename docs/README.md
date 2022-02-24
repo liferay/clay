@@ -13,6 +13,7 @@ There are two types of documents, repository infrastructure documents, release c
 -   [Clay CSS Version History](clay_css_version_history.md)
 -   [TreeView Performance Analysis](treeview_performance.md)
 -   [Netlify deploy process](netlify_deploy.md)
+-   [Tests coverage](tests.md)
 
 ## RFCs
 
