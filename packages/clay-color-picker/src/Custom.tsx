@@ -166,7 +166,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	];
 
 	const setNewColor = (colorValue: tinycolor.Instance, setInput = true) => {
-		const hexString = colorValue.toHex();
+		const hexString = colorValue.toHex().toUpperCase();
 
 		const newColors = [...colors];
 
@@ -184,12 +184,12 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	React.useEffect(() => {
 		if (inputRef.current !== document.activeElement) {
 			if (color.isValid()) {
-				setHue(color.toHsv().h);
-
-				if (!colors.includes(color.toHex())) {
-					setNewColor(color);
-				} else {
+				if (!colors.includes(color.toHex().toUpperCase())) {
+					setHue(color.toHsv().h);
 					setHexInput(color.toHex());
+					if (colors[activeSplotchIndex] === 'FFFFFF') {
+						setNewColor(color);
+					}
 				}
 			}
 		}
@@ -323,7 +323,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 
 											if (newColor.isValid()) {
 												setHue(newColor.toHsv().h);
-												setNewColor(newColor, false);
+												onChange(newColor.toHex());
 											}
 										}}
 										ref={inputRef}

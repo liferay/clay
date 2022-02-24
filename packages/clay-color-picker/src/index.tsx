@@ -350,7 +350,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								}}
 								ref={inputRef}
 								type="text"
-								value={value.toUpperCase().substring(0, 6)}
+								value={value.toUpperCase()}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
