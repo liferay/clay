@@ -31,7 +31,7 @@ const ClayPaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
 				type={!href ? 'button' : undefined}
 				{...otherProps}
 				className="page-link"
-				disabled={disabled}
+				disabled={disabled || active}
 				href={href}
 			>
 				{children}
