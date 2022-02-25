@@ -1,3 +1,6 @@
+### v1.0.35 - February 25, 2022
+* Fixes [#4683](https://github.com/liferay/clay/issues/4683)Updates `content` property values to conform to what is allowed by OAW Tracker
+
 ### v1.0.34 - October 6, 2021
 * Fixes [#4318](https://github.com/liferay/clay/issues/4318)Accessibility change request, bootstrap.css .dropdown-toggle has 'outline: 0;'
 
