@@ -32,7 +32,7 @@
 		"lint:fix": "eslint --fix \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"lint:quiet": "eslint --quiet \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"lint": "eslint \".*.js\" \"**/*.{js,ts,tsx}\"",
-		"site": "cd next.clayui.com && yarn build && yarn serve",
+		"site": "cd clayui.com && yarn build && yarn serve",
 		"sizeLimit": "size-limit",
 		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
