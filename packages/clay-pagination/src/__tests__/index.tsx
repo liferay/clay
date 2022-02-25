@@ -92,6 +92,26 @@ describe('ClayPagination', () => {
 		);
 	});
 
+	it('render pagination with links and active item without link', () => {
+		const {getByText} = render(
+			<ClayPaginationWithBasicItems
+				activePage={12}
+				ellipsisBuffer={2}
+				hrefConstructor={(page) => `/#${page}`}
+				spritemap={spritemap}
+				totalPages={25}
+			/>
+		);
+
+		const currentActivePage = getByText('12');
+
+		expect(
+			(currentActivePage.parentElement as HTMLElement).classList
+		).toContain('active');
+		expect(currentActivePage.getAttribute('href')).toBe(null);
+		expect(currentActivePage.getAttribute('aria-current')).toBe('page');
+	});
+
 	it('shows dropdown when ellipsis is clicked', () => {
 		const {getAllByText} = render(
 			<ClayPaginationWithBasicItems
