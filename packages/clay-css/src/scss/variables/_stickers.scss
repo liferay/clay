@@ -79,7 +79,7 @@ $sticker-sm: map-deep-merge(
 				bottom: -0.75rem,
 				top: auto,
 			),
-			sticker-bottomr-right: (
+			sticker-bottom-right: (
 				bottom: -0.75rem,
 				left: auto,
 				right: -0.75rem,
@@ -110,7 +110,7 @@ $sticker-lg: map-deep-merge(
 				bottom: -1.25rem,
 				top: auto,
 			),
-			sticker-bottomr-right: (
+			sticker-bottom-right: (
 				bottom: -1.25rem,
 				left: auto,
 				right: -1.25rem,
@@ -141,7 +141,7 @@ $sticker-xl: map-deep-merge(
 				bottom: -1.5rem,
 				top: auto,
 			),
-			sticker-bottomr-right: (
+			sticker-bottom-right: (
 				bottom: -1.5rem,
 				left: auto,
 				right: -1.5rem,
