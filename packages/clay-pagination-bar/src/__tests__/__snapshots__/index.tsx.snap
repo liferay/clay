@@ -58,6 +58,7 @@ exports[`ClayPaginationBar renders 1`] = `
       >
         <button
           class="page-link"
+          disabled=""
           type="button"
         >
           1
@@ -166,6 +167,7 @@ exports[`ClayPaginationBar renders without a DropDown 1`] = `
       >
         <button
           class="page-link"
+          disabled=""
           type="button"
         >
           1
