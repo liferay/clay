@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.34
+* Lexicon 1.0.35
 *
-* Copyright 2021, Liferay, Inc.
+* Copyright 2022, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -3687,20 +3687,20 @@ fieldset[disabled] a.btn {
 
 .btn-default:focus, .btn-default.focus {
   color: #333;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 
 .btn-default:hover {
   color: #333;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   border-color: #adadad;
 }
 
 .btn-default:active, .btn-default.active,
 .open > .btn-default.dropdown-toggle {
   color: #333;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   background-image: none;
   border-color: #adadad;
 }
@@ -5170,7 +5170,7 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #5e5d5d;
+  color: #5e5e5e;
   background-color: transparent;
 }
 
@@ -8639,7 +8639,7 @@ a .icon-monospaced,
 
 .help-icon-default {
   background-color: #eeeeee;
-  color: #807f7f;
+  color: gray;
 }
 
 .help-icon-default:focus, .help-icon-default:hover {
@@ -10338,7 +10338,7 @@ button.list-group-heading {
 .management-bar-default .btn-default:focus, .management-bar-default .btn-default:hover,
 .management-bar-default .nav > li > .btn-default:focus,
 .management-bar-default .nav > li > .btn-default:hover {
-  background-color: #dfdede;
+  background-color: #dfdfdf;
   border-color: #c9c9c9;
   color: #777;
 }
@@ -10346,7 +10346,7 @@ button.list-group-heading {
 .management-bar-default .btn-default:active, .management-bar-default .btn-default.active,
 .management-bar-default .nav > li > .btn-default:active,
 .management-bar-default .nav > li > .btn-default.active {
-  background-color: #dfdede;
+  background-color: #dfdfdf;
   border-color: #c9c9c9;
   color: #777;
 }
@@ -11686,7 +11686,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar:before {
 }
 
 input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
-  content: attr(data-label-off);
+  content: '\FEFF' attr(data-label-off);
   margin-left: 56px;
   transition: all 100ms ease-in;
   white-space: nowrap;
@@ -11744,7 +11744,7 @@ input.toggle-switch:checked ~ .toggle-switch-bar:before {
 }
 
 input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-handle:after {
-  content: attr(data-label-on);
+  content: '\FEFF' attr(data-label-on);
 }
 
 input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon {
@@ -11848,7 +11848,7 @@ body {
 
 a.bg-default:hover,
 a.bg-default:focus {
-  background-color: #5e5d5d;
+  background-color: #5e5e5e;
 }
 
 a.text-muted:hover, a.text-muted:focus {
@@ -11861,7 +11861,7 @@ a.text-muted:hover, a.text-muted:focus {
 
 a.text-default:hover,
 a.text-default:focus {
-  color: #1a1919;
+  color: #1a1a1a;
 }
 
 mark,
@@ -13468,7 +13468,7 @@ button.modal-primary-action-button {
 
 @media (min-width: 768px) {
   .detailed-list-view > .active .detailed-list-view-icon:after {
-    content: normal;
+    content: none;
   }
 }
 
@@ -13738,7 +13738,7 @@ button.modal-primary-action-button {
 
 @media (min-width: 768px) {
   .list-group-card-checkbox-hidden-xs .checkbox input[type="checkbox"]:checked + .card .list-group-card-icon:after {
-    content: normal;
+    content: none;
   }
 }
 

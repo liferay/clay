@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.34
+* Lexicon 1.0.35
 *
-* Copyright 2021, Liferay, Inc.
+* Copyright 2022, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -3687,20 +3687,20 @@ fieldset[disabled] a.btn {
 
 .btn-default:focus, .btn-default.focus {
   color: #869CAD;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   border-color: #495c6b;
 }
 
 .btn-default:hover {
   color: #869CAD;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   border-color: #637e93;
 }
 
 .btn-default:active, .btn-default.active,
 .open > .btn-default.dropdown-toggle {
   color: #869CAD;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   background-image: none;
   border-color: #637e93;
 }
@@ -13079,7 +13079,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar:before {
 }
 
 input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
-  content: attr(data-label-off);
+  content: '\FEFF' attr(data-label-off);
   margin-left: 50px;
   transition: all 100ms ease-in;
   white-space: nowrap;
@@ -13137,7 +13137,7 @@ input.toggle-switch:checked ~ .toggle-switch-bar:before {
 }
 
 input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-handle:after {
-  content: attr(data-label-on);
+  content: '\FEFF' attr(data-label-on);
 }
 
 input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon {
@@ -15275,7 +15275,7 @@ button.modal-primary-action-button {
 
 @media (min-width: 768px) {
   .detailed-list-view > .active .detailed-list-view-icon:after {
-    content: normal;
+    content: none;
   }
 }
 
@@ -15573,7 +15573,7 @@ button.modal-primary-action-button {
 
 @media (min-width: 768px) {
   .list-group-card-checkbox-hidden-xs .checkbox input[type="checkbox"]:checked + .card .list-group-card-icon:after {
-    content: normal;
+    content: none;
   }
 }
 

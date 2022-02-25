@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.34
+* Lexicon 1.0.35
 *
-* Copyright 2021, Liferay, Inc.
+* Copyright 2022, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -3687,20 +3687,20 @@ fieldset[disabled] a.btn {
 
 .btn-default:focus, .btn-default.focus {
   color: #333;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 
 .btn-default:hover {
   color: #333;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   border-color: #adadad;
 }
 
 .btn-default:active, .btn-default.active,
 .open > .btn-default.dropdown-toggle {
   color: #333;
-  background-color: #e6e5e5;
+  background-color: #e6e6e6;
   background-image: none;
   border-color: #adadad;
 }
@@ -5170,7 +5170,7 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #5e5d5d;
+  color: #5e5e5e;
   background-color: transparent;
 }
 
