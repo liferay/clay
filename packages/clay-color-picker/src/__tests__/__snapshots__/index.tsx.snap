@@ -1233,7 +1233,7 @@ exports[`Rendering renders w/ var() 1`] = `
             aria-label="Color selection is var(--blue)"
             class="form-control input-group-inset input-group-inset-before"
             type="text"
-            value="VAR(--BLUE)"
+            value="var(--blue)"
           />
           <label
             class="input-group-inset-item input-group-inset-item-before"
@@ -1997,7 +1997,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
             aria-label="Color selection is red"
             class="form-control input-group-inset input-group-inset-before"
             type="text"
-            value="RED"
+            value="red"
           />
           <label
             class="input-group-inset-item input-group-inset-item-before"

@@ -345,12 +345,12 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								insetBefore
 								onChange={(event) => {
 									onValueChange(event.target.value);
-									setCustomEditorActive(false);
-									setInternalActive(false);
+									// setCustomEditorActive(false);
+									// setInternalActive(false);
 								}}
 								ref={inputRef}
 								type="text"
-								value={value.toUpperCase()}
+								value={value}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
