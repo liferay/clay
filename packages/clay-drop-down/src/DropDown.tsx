@@ -115,6 +115,8 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	const triggerElementRef = React.useRef<HTMLButtonElement | null>(null);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
+	const [initialized, setInitialized] = React.useState(false);
+
 	const handleKeyUp = (event: React.KeyboardEvent<HTMLElement>) => {
 		if (event.key === Keys.Esc) {
 			onActiveChange(!active);
@@ -152,7 +154,13 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 						'dropdown-toggle',
 						trigger.props.className
 					),
-					onClick: () => onActiveChange(!active),
+					onClick: () => {
+						if (!initialized) {
+							setInitialized(true);
+						}
+
+						onActiveChange(!active);
+					},
 					ref: (node: HTMLButtonElement) => {
 						if (node) {
 							triggerElementRef.current = node;
@@ -165,22 +173,24 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 					},
 				})}
 
-				<Menu
-					{...menuElementAttrs}
-					active={active}
-					alignElementRef={triggerElementRef}
-					alignmentPosition={alignmentPosition}
-					closeOnClickOutside={closeOnClickOutside}
-					hasLeftSymbols={hasLeftSymbols}
-					hasRightSymbols={hasRightSymbols}
-					height={menuHeight}
-					offsetFn={offsetFn}
-					onSetActive={onActiveChange}
-					ref={menuElementRef}
-					width={menuWidth}
-				>
-					{children}
-				</Menu>
+				{initialized && (
+					<Menu
+						{...menuElementAttrs}
+						active={active}
+						alignElementRef={triggerElementRef}
+						alignmentPosition={alignmentPosition}
+						closeOnClickOutside={closeOnClickOutside}
+						hasLeftSymbols={hasLeftSymbols}
+						hasRightSymbols={hasRightSymbols}
+						height={menuHeight}
+						offsetFn={offsetFn}
+						onSetActive={onActiveChange}
+						ref={menuElementRef}
+						width={menuWidth}
+					>
+						{children}
+					</Menu>
+				)}
 			</ContainerElement>
 		</FocusScope>
 	);
