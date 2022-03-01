@@ -1,3 +1,7 @@
+////
+/// @group Alerts
+////
+
 /// This is Bootstrap 4's Alert Variant Mixin.
 /// @deprecated use the mixin `clay-alert-variant` instead
 /// @param {Color} $background
@@ -22,153 +26,216 @@
 /// A mixin to create alert variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
-/// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
-/// hr: {Map | Null}, // See mixin `clay-css`
-/// alert-btn: {Map | Null}, // See mixin `clay-button-variant`
-/// btn-group: {Map | Null}, // See mixin `clay-container`
-/// btn-group-item: {Map | Null}, // See mixin `clay-container`
-/// close: {Map | Null}, // See mixin `clay-close`
-/// lead: {Map | Null}, // See mixin `clay-css`
-/// alert-link: {Map | Null}, // See mixin `clay-link`
-/// component-title: {Map | Null}, // See mixin `clay-text-typography`
-/// component-subtitle: {Map | Null}, // See mixin `clay-text-typography`
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .alert
+/// 	first-child: (
+/// 		// .alert:first-child
+/// 	),
+/// 	last-child: (
+/// 		// .alert:last-child
+/// 	),
+/// 	hr: (
+/// 		// .alert hr
+/// 	),
+/// 	alert-dismissible: (
+/// 		// .alert.alert-dismissible
+/// 		container-fluid: (
+/// 			// .alert.alert-dismissible .container, .alert.alert-dismissible .container-fluid
+/// 		),
+/// 	),
+/// 	alert-indicator: (
+/// 		// .alert .alert-indicator
+/// 		lexicon-icon: (
+/// 			// .alert .alert-indicator .lexicon-icon
+/// 		),
+/// 		lead: (
+/// 			// .alert .alert-indicator + .lead
+/// 		),
+/// 	),
+/// 	alert-btn: (
+/// 		// .alert .alert-btn
+/// 	),
+/// 	btn-group: (
+/// 		// .alert .btn-group
+/// 	),
+/// 	btn-group-item: (
+/// 		// .alert .btn-group-item
+/// 	),
+/// 	close: (
+/// 		// .alert .close
+/// 	),
+/// 	container-fluid: (
+/// 		// .alert .container, .alert .container-fluid
+/// 	),
+/// 	lead: (
+/// 		// .alert .lead
+/// 	),
+/// 	alert-link: (
+/// 		// .alert .alert-link
+/// 	),
+/// 	component-title: (
+/// 		// .alert .component-title
+/// 	),
+/// 	component-subtitle: (
+/// 		// .alert .component-subtitle
+/// 	),
+/// )
 
 @mixin clay-alert-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$base: map-merge(
-		$map,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($map, background-color)),
-		)
-	);
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+			)
+		);
 
-	$hr: setter(map-get($map, hr), ());
+		$hr: setter(map-get($map, hr), ());
 
-	$alert-indicator: setter(map-get($map, alert-indicator), ());
+		$alert-indicator: setter(map-get($map, alert-indicator), ());
 
-	$alert-indicator-lead: setter(map-get($alert-indicator, lead), ());
+		$alert-indicator-lead: setter(map-get($alert-indicator, lead), ());
 
-	$alert-btn: setter(map-get($map, alert-btn), ());
+		$alert-btn: setter(map-get($map, alert-btn), ());
 
-	$btn-group: setter(map-get($map, btn-group), ());
+		$btn-group: setter(map-get($map, btn-group), ());
 
-	$btn-group-item: setter(map-get($map, btn-group-item), ());
+		$btn-group-item: setter(map-get($map, btn-group-item), ());
 
-	$close: setter(map-get($map, close), ());
-	$close: map-deep-merge(
-		$close,
-		(
-			color: setter(map-get($map, close-color), map-get($close, color)),
-			hover: (
+		$close: setter(map-get($map, close), ());
+		$close: map-deep-merge(
+			$close,
+			(
+				color:
+					setter(map-get($map, close-color), map-get($close, color)),
+				hover: (
+					color:
+						setter(
+							map-get($map, close-hover-color),
+							map-deep-get($close, hover, color)
+						),
+				),
+			)
+		);
+
+		$lead: setter(map-get($map, lead), ());
+		$lead: map-deep-merge(
+			$lead,
+			(
+				color: setter(map-get($map, lead-color), map-get($lead, color)),
+			)
+		);
+
+		$alert-link: setter(map-get($map, alert-link), ());
+		$alert-link: map-deep-merge(
+			$alert-link,
+			(
 				color:
 					setter(
-						map-get($map, close-hover-color),
-						map-deep-get($close, hover, color)
+						map-get($map, link-color),
+						map-get($alert-link, color)
 					),
-			),
-		)
-	);
+				hover: (
+					color:
+						setter(
+							map-get($map, link-hover-color),
+							map-deep-get($alert-link, hover, color)
+						),
+				),
+			)
+		);
 
-	$lead: setter(map-get($map, lead), ());
-	$lead: map-deep-merge(
-		$lead,
-		(
-			color: setter(map-get($map, lead-color), map-get($lead, color)),
-		)
-	);
+		$component-title: setter(map-get($map, component-title), ());
 
-	$alert-link: setter(map-get($map, alert-link), ());
-	$alert-link: map-deep-merge(
-		$alert-link,
-		(
-			color:
-				setter(map-get($map, link-color), map-get($alert-link, color)),
-			hover: (
-				color:
-					setter(
-						map-get($map, link-hover-color),
-						map-deep-get($alert-link, hover, color)
-					),
-			),
-		)
-	);
+		$component-subtitle: setter(map-get($map, component-subtitle), ());
 
-	$component-title: setter(map-get($map, component-title), ());
+		@if ($enabled) {
+			@include clay-css($base);
 
-	$component-subtitle: setter(map-get($map, component-subtitle), ());
+			&:first-child {
+				@include clay-css(map-get($map, first-child));
+			}
 
-	@if ($enabled) {
-		@include clay-css($base);
+			&:last-child {
+				@include clay-css(map-get($map, last-child));
+			}
 
-		hr {
-			@include clay-css($hr);
-		}
+			hr {
+				@include clay-css($hr);
+			}
 
-		&.alert-dismissible {
-			@include clay-css(setter(map-get($map, alert-dismissible), ()));
+			&.alert-dismissible {
+				@include clay-css(setter(map-get($map, alert-dismissible), ()));
+
+				.container,
+				.container-fluid {
+					@include clay-css(
+						setter(
+							map-deep-get(
+								$map,
+								alert-dismissible,
+								container-fluid
+							),
+							()
+						)
+					);
+				}
+			}
+
+			.alert-indicator {
+				@include clay-css($alert-indicator);
+
+				.lexicon-icon {
+					@include clay-css(
+						setter(map-get($alert-indicator, lexicon-icon), ())
+					);
+				}
+
+				+ .lead {
+					@include clay-css($alert-indicator-lead);
+				}
+			}
+
+			.alert-btn {
+				@include clay-button-variant($alert-btn);
+			}
+
+			.btn-group {
+				@include clay-container($btn-group);
+			}
+
+			.btn-group-item {
+				@include clay-container($btn-group-item);
+			}
+
+			.close {
+				@include clay-close($close);
+			}
 
 			.container,
 			.container-fluid {
-				@include clay-css(
-					setter(
-						map-deep-get($map, alert-dismissible, container-fluid),
-						()
-					)
-				);
-			}
-		}
-
-		.alert-indicator {
-			@include clay-css($alert-indicator);
-
-			.lexicon-icon {
-				@include clay-css(
-					setter(map-get($alert-indicator, lexicon-icon), ())
-				);
+				@include clay-css(setter(map-get($map, container-fluid), ()));
 			}
 
-			+ .lead {
-				@include clay-css($alert-indicator-lead);
+			.lead {
+				@include clay-css($lead);
 			}
-		}
 
-		.alert-btn {
-			@include clay-button-variant($alert-btn);
-		}
+			.alert-link {
+				@include clay-link($alert-link);
+			}
 
-		.btn-group {
-			@include clay-container($btn-group);
-		}
+			.component-title {
+				@include clay-text-typography($component-title);
+			}
 
-		.btn-group-item {
-			@include clay-container($btn-group-item);
-		}
-
-		.close {
-			@include clay-close($close);
-		}
-
-		.container,
-		.container-fluid {
-			@include clay-css(setter(map-get($map, container-fluid), ()));
-		}
-
-		.lead {
-			@include clay-css($lead);
-		}
-
-		.alert-link {
-			@include clay-link($alert-link);
-		}
-
-		.component-title {
-			@include clay-text-typography($component-title);
-		}
-
-		.component-subtitle {
-			@include clay-text-typography($component-subtitle);
+			.component-subtitle {
+				@include clay-text-typography($component-subtitle);
+			}
 		}
 	}
 }
