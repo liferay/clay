@@ -14,6 +14,17 @@ import Hue from './Hue';
 import Splotch from './Splotch';
 import {useHexInput} from './hooks';
 
+function findColor(colors: Array<string>, color: tinycolor.Instance): boolean {
+	for (let i = 0; i < colors.length; i++) {
+		const currentColor = tinycolor(colors[i]);
+		if (tinycolor.equals(currentColor, color)) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
 interface IRGBInputProps {
 	/**
 	 * Callback function for when the input value is changed
@@ -93,7 +104,9 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 
 interface IProps {
 	/**
-	 * List of hex's that will display as a color splotch
+	 * List of colors that will display as a color splotch
+	 * these can be either hex values, color names or
+	 * css variables.
 	 */
 	colors: Array<string>;
 
@@ -129,26 +142,7 @@ interface IProps {
 	value?: string;
 }
 
-function findColor(colors: Array<string>, color: tinycolor.Instance): boolean {
-	const colorInput = color.getOriginalInput();
-	const colorHex = color.toHex();
-	const colorName = color.toName();
-
-	for (let i = 0; i < colors.length; i++) {
-		if (
-			colors[i].toLowerCase() === colorInput ||
-			colors[i].toUpperCase() === colorInput ||
-			colors[i].toLowerCase() === colorHex.toLowerCase() ||
-			colors[i].toUpperCase() === colorHex.toUpperCase() ||
-			colors[i].toLowerCase() === colorName.toString().toLowerCase() ||
-			colors[i].toUpperCase() === colorName.toString().toUpperCase()
-		) {
-			return true;
-		}
-	}
-
-	return false;
-}
+const DEFAULT_SPLOTCH_COLOR = 'FFFFFF';
 
 /**
  * Renders the custom color picker
@@ -210,15 +204,12 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	};
 
 	React.useEffect(() => {
-		if (inputRef.current !== document.activeElement) {
-			if (color.isValid()) {
-				if (!findColor(colors, color)) {
-					setHue(color.toHsv().h);
-					setHexInput(color.toHex());
-					if (colors[activeSplotchIndex] === 'FFFFFF') {
-						setNewColor(color);
-					}
-				}
+		if (editorActive && color.isValid() && !findColor(colors, color)) {
+			setHue(color.toHsv().h);
+			setHexInput(color.toHex());
+
+			if (colors[activeSplotchIndex] === DEFAULT_SPLOTCH_COLOR) {
+				setNewColor(color);
 			}
 		}
 	}, [color, editorActive]);
@@ -250,34 +241,42 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 
 			{showPalette && (
 				<div className="clay-color-swatch">
-					{colors.map((hex, i) => (
-						<div className="clay-color-swatch-item" key={i}>
+					{colors.map((hex, index) => (
+						<div className="clay-color-swatch-item" key={index}>
 							<Splotch
-								active={i === activeSplotchIndex}
+								active={index === activeSplotchIndex}
 								onClick={() => {
-									if (hex === 'FFFFFF') {
+									const newColor = tinycolor(hex);
+
+									if (activeSplotchIndex !== index) {
+										setActiveSplotchIndex(index);
+									}
+
+									if (hex === DEFAULT_SPLOTCH_COLOR) {
 										setInternalEditorActive(true);
-										setActiveSplotchIndex(i);
 
 										if (
 											previousColor !==
-												tinycolor('FFFFFF') &&
+												tinycolor(
+													DEFAULT_SPLOTCH_COLOR
+												) &&
 											!findColor(colors, color)
 										) {
-											setNewColor(color, true, i);
+											setNewColor(color, true, index);
 											setHue(color.toHsv().h);
 											onChange(color.toHex());
 										}
-									} else {
-										setActiveSplotchIndex(i);
-
-										setPrevousColor(tinycolor(hex));
-
-										setHue(tinycolor(hex).toHsv().h);
-
-										setHexInput(hex);
-
-										onChange(hex);
+									} else if (
+										!tinycolor.equals(
+											previousColor,
+											newColor
+										)
+									) {
+										const hexString = newColor.toHex();
+										setPrevousColor(newColor);
+										setHue(newColor.toHsv().h);
+										setHexInput(hexString);
+										onChange(hexString);
 									}
 								}}
 								value={hex}
