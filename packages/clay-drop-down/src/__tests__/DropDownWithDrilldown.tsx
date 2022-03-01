@@ -174,6 +174,7 @@ describe('ClayDropDownWithDrilldown', () => {
 			/>
 		);
 
+		fireEvent.click(getByTestId('trigger'));
 		fireEvent.click(getByTestId('menu-item-Toggle'));
 		fireEvent.click(getByTestId('menu-item-Toggle'));
 		fireEvent.click(getByTestId('menu-item-Toggle'));

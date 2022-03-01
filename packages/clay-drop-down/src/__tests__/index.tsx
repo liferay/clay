@@ -7,6 +7,8 @@ import ClayDropDown, {ClayDropDownWithItems} from '..';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 
+import '@testing-library/jest-dom/extend-expect';
+
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
 	...others
@@ -49,9 +51,9 @@ describe('ClayDropDown', () => {
 			</DropDownWithState>
 		);
 
-		expect(document.body.querySelector('.dropdown-menu')).not.toContain(
-			'show'
-		);
+		expect(
+			document.body.querySelector('.dropdown-menu')
+		).not.toBeInTheDocument();
 	});
 
 	it('renders dropdown menu when clicked', () => {
