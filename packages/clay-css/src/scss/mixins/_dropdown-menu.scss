@@ -20,6 +20,15 @@
 /// 	show: (
 /// 		// .dropdown-menu.show
 /// 	),
+/// 	dropdown-item: (
+/// 		// .dropdown-menu .dropdown-item
+/// 	),
+/// 	alert: (
+/// 		// .dropdown-menu .alert
+/// 	),
+/// 	alert-fluid: (
+/// 		// .dropdown-menu .alert-fluid
+/// 	),
 /// )
 /// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null}, // deprecated after 3.9.0
@@ -94,6 +103,14 @@
 				@include clay-dropdown-item-variant(
 					map-deep-get($map, dropdown-item)
 				);
+			}
+
+			.alert {
+				@include clay-alert-variant(map-get($map, alert));
+			}
+
+			.alert-fluid {
+				@include clay-alert-variant(map-get($map, alert-fluid));
 			}
 		}
 	}
