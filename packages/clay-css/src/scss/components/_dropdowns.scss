@@ -113,34 +113,6 @@
 .dropdown-menu {
 	@include clay-dropdown-menu-variant($dropdown-menu);
 
-	.alert {
-		font-size: $dropdown-alert-font-size;
-		line-height: $dropdown-alert-line-height;
-		margin: $dropdown-alert-margin;
-		padding: $dropdown-alert-padding-y $dropdown-alert-padding-x;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	.alert-fluid {
-		margin-left: 0;
-		margin-right: 0;
-
-		&:first-child {
-			margin-top: math-sign($dropdown-padding-y);
-		}
-
-		&:last-child {
-			margin-bottom: math-sign($dropdown-padding-y);
-		}
-	}
-
 	.form-group {
 		margin-bottom: 0;
 	}
