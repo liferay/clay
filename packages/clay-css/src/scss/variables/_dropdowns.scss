@@ -888,3 +888,48 @@ $dropdown-alert-line-height: normal !default;
 $dropdown-alert-margin: $spacer * 0.5 !default;
 $dropdown-alert-padding-x: $dropdown-header-padding-x !default;
 $dropdown-alert-padding-y: $dropdown-header-padding-y !default;
+
+$dropdown-menu-alert: () !default;
+$dropdown-menu-alert: map-deep-merge(
+	(
+		font-size: $dropdown-alert-font-size,
+		line-height: $dropdown-alert-line-height,
+		margin: $dropdown-alert-margin,
+		padding: $dropdown-alert-padding-y $dropdown-alert-padding-x,
+		first-child: (
+			margin-top: 0,
+		),
+		last-child: (
+			margin-bottom: 0,
+		),
+	),
+	$dropdown-menu-alert
+);
+
+$dropdown-menu-alert-fluid: () !default;
+$dropdown-menu-alert-fluid: map-deep-merge(
+	(
+		margin-left: 0,
+		margin-right: 0,
+		first-child: (
+			margin-top: math-sign($dropdown-padding-y),
+		),
+		last-child: (
+			margin-bottom: math-sign($dropdown-padding-y),
+		),
+	),
+	$dropdown-menu-alert-fluid
+);
+
+$dropdown-menu: map-deep-merge(
+	(
+		alert:
+			map-deep-merge($dropdown-menu-alert, map-get($dropdown-menu, alert)),
+		alert-fluid:
+			map-deep-merge(
+				$dropdown-menu-alert-fluid,
+				map-get($dropdown-menu, alert-fluid)
+			),
+	),
+	$dropdown-menu
+);
