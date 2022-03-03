@@ -304,7 +304,7 @@ function expandSelectedItems<T extends Array<Record<string, any>>>(
 		nestedKey as string,
 		key,
 		(item: Record<string, any>, path: Array<React.Key>) => {
-			if (selectedKeys.has(item.id)) {
+			if (selectedKeys.has(item[key])) {
 				currentSelected++;
 
 				expand.push(...path);
