@@ -184,7 +184,7 @@
 		$media-breakpoint-up: map-get($map, media-breakpoint-up);
 
 		@each $breakpoint in map-keys($media-breakpoint-up) {
-			$breakpoint-up: map-get($map, $breakpoint);
+			$breakpoint-up: map-get($media-breakpoint-up, $breakpoint);
 
 			@include media-breakpoint-up($breakpoint) {
 				@include clay-css($breakpoint-up);
@@ -195,8 +195,8 @@
 	@if (map-get($map, media-breakpoint-down)) {
 		$media-breakpoint-down: map-get($map, media-breakpoint-down);
 
-		@each $breakpoint in map-keys($map) {
-			$breakpoint-down: map-get($map, $breakpoint);
+		@each $breakpoint in map-keys($media-breakpoint-down) {
+			$breakpoint-down: map-get($media-breakpoint-down, $breakpoint);
 
 			@include media-breakpoint-down($breakpoint) {
 				@include clay-css($breakpoint-down);
