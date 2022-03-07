@@ -318,20 +318,21 @@ $cadmin-form-control-label-size: () !default;
 $cadmin-form-control-label-size: map-deep-merge(
 	(
 		border-width: 1px,
-		font-size: map-get($cadmin-label-lg, font-size),
+		font-size: 12px,
 		height: auto,
 		margin-bottom: 5px,
 		margin-right: 10px,
 		margin-top: 5px,
 		min-height: 24px,
-		padding-x: map-get($cadmin-label-lg, padding-x),
-		padding-y: map-get($cadmin-label-lg, padding-y),
+		padding-bottom: 5px,
+		padding-left: 8px,
+		padding-right: 8px,
+		padding-top: 5px,
 		text-transform: none,
-		item-spacer-y: map-get($cadmin-label-lg, item-spacer-y),
-		lexicon-icon-height: map-get($cadmin-label-lg, lexicon-icon-height),
-		lexicon-icon-width: map-get($cadmin-label-lg, lexicon-icon-width),
-		sticker-size: map-get($cadmin-label-lg, sticker-size),
-		close: map-get($cadmin-label-lg, close),
+		label-item: (
+			margin-bottom: -1px,
+			margin-top: -1px,
+		),
 	),
 	$cadmin-form-control-label-size
 );
