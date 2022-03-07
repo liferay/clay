@@ -12,7 +12,6 @@ import tinycolor from 'tinycolor2';
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';
 import Splotch from './Splotch';
-import {useHexInput} from './hooks';
 
 function findColor(colors: Array<string>, color: tinycolor.Instance): boolean {
 	for (let i = 0; i < colors.length; i++) {
@@ -170,7 +169,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	const [previousColor, setPrevousColor] = React.useState(color);
 
 	const [hue, setHue] = React.useState(color.toHsv().h);
-	const [hexInputVal, setHexInput] = useHexInput(color.toHex());
+	const [hexInputVal, setHexInputValue] = React.useState(color.toHex());
 
 	const {b, g, r} = color.toRgb();
 	const {s, v} = color.toHsv();
@@ -199,14 +198,14 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 		onChange(hexString);
 
 		if (setInput) {
-			setHexInput(hexString);
+			setHexInputValue(hexString);
 		}
 	};
 
 	React.useEffect(() => {
 		if (editorActive && color.isValid() && !findColor(colors, color)) {
 			setHue(color.toHsv().h);
-			setHexInput(color.toHex());
+			setHexInputValue(color.toHex());
 
 			if (colors[activeSplotchIndex] === DEFAULT_SPLOTCH_COLOR) {
 				setNewColor(color);
@@ -254,6 +253,8 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 
 									if (hex === DEFAULT_SPLOTCH_COLOR) {
 										setInternalEditorActive(true);
+										setHexInputValue(hex);
+										onChange(hex);
 
 										if (
 											previousColor !==
@@ -264,7 +265,6 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 										) {
 											setNewColor(color, true, index);
 											setHue(color.toHsv().h);
-											onChange(color.toHex());
 										}
 									} else if (
 										!tinycolor.equals(
@@ -274,9 +274,12 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 									) {
 										const hexString = newColor.toHex();
 										setPrevousColor(newColor);
-										setHue(newColor.toHsv().h);
-										setHexInput(hexString);
-										onChange(hexString);
+
+										if (newColor.isValid()) {
+											setHue(newColor.toHsv().h);
+											setHexInputValue(hexString);
+											onChange(hexString);
+										}
 									}
 								}}
 								value={hex}
@@ -347,22 +350,23 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 											);
 
 											if (newColor.isValid()) {
-												setHexInput(newColor.toHex());
+												setHexInputValue(
+													newColor.toHex()
+												);
 											} else {
-												setHexInput(color.toHex());
+												setHexInputValue(color.toHex());
 											}
 										}}
 										onChange={(event) => {
 											const newHexValue =
 												event.target.value;
 
-											setHexInput(newHexValue);
-
 											const newColor =
 												tinycolor(newHexValue);
 
 											if (newColor.isValid()) {
 												setHue(newColor.toHsv().h);
+												setHexInputValue(newHexValue);
 												onChange(newColor.toHex());
 											}
 										}}

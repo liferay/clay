@@ -34,23 +34,3 @@ export function usePointerPosition(containerRef: React.RefObject<any>) {
 
 	return {...xy, onPointerMove, setXY};
 }
-
-/**
- * Regex to only handle values of A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9
- */
-const HEX_REGEX = /^[a-fA-F0-9]+$/;
-
-/**
- * Hook for updating input value
- */
-export function useHexInput(hex: string): [string, (val: string) => void] {
-	const [inputValue, setInputValue] = React.useState(hex);
-
-	const handleNewInputValue = (value: string) => {
-		const match = value.match(HEX_REGEX);
-
-		setInputValue(match ? match[0] : '');
-	};
-
-	return [inputValue, handleNewInputValue];
-}
