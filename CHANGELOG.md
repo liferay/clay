@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.48.0](https://github.com/liferay/clay/compare/v3.47.0...v3.48.0) (2022-03-07)
+
+### Bug Fixes
+
+-   **@clayui/css:** Stickers fix typo `sticker-bottomr-right` to `sticker-bottom-right` ([93177c7](https://github.com/liferay/clay/commit/93177c76387bda84bc0be6a9e77fe55334449574)), closes [#4703](https://github.com/liferay/clay/issues/4703)
+-   **@clayui/css:** Updates `content` property values to conform to what is allowed by OAW Tracker ([9028d38](https://github.com/liferay/clay/commit/9028d38f42a322cca91bc2c9e5f7c8bc0364d34b))
+-   **@clayui/pagination:** fix accessibility error for pagination with links when item is active ([93d57b8](https://github.com/liferay/clay/commit/93d57b8b414a9fa0bd4b03d4008fbe3573bc088c))
+-   **@clayui/pagination:** LPS-148048 Disable the button to the current page to avoid accesibility issues ([83b6cea](https://github.com/liferay/clay/commit/83b6cea7c9fa1c998cb18b24dbbed3d253653192))
+-   **@clayui/pagination:** LPS-148048 Fix path in the package.json file ([7995449](https://github.com/liferay/clay/commit/7995449139d3ba94c31d9294fee4f1714f559e4c))
+-   **@clayui/pagination:** LPS-148048 regen snapshots ([4367010](https://github.com/liferay/clay/commit/4367010721180d2a9b5afaa44d88ad72947ebf5f))
+-   **@clayui/pagination:** LPS-148048 regen snapshots ([22fbec0](https://github.com/liferay/clay/commit/22fbec060301019639f204c82c3ca06d0a19e349))
+
+### Features
+
+-   **@clayui/css:** Adds placeholder comments that can be replaced with Sass [@use](https://github.com/use) rules ([58c014b](https://github.com/liferay/clay/commit/58c014ba593958714b480553fcc19c4fe300e42f)), closes [#4713](https://github.com/liferay/clay/issues/4713)
+-   **@clayui/css:** Dropdown provide more customization for `.dropdown-menu .alert` ([2640ef8](https://github.com/liferay/clay/commit/2640ef8c7b598e152e12738169b0a11728f00781))
+-   **@clayui/css:** Mixins `clay-alert-variant` adds customization for `:first-child` and `:last-child` ([d8d8b6a](https://github.com/liferay/clay/commit/d8d8b6a5157f8e2f467c0467e8aae9a49834a7c4))
+-   **@clayui/css:** Mixins `clay-dropdown-menu-variant` adds customization for `.alert` and `.alert-fluid` ([e5ce8cc](https://github.com/liferay/clay/commit/e5ce8ccfd4055c9db97654aea35adec252316961))
+-   **@clayui/drop-down:** Render Menu only after trigger is clicked the first time ([1d90d45](https://github.com/liferay/clay/commit/1d90d454d9b2d242dd2d491e4525e815553e9fa3))
+-   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+
 # [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
 
 ### Bug Fixes

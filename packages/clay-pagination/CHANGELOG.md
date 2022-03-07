@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.48.0](https://github.com/liferay/clay/compare/v3.47.0...v3.48.0) (2022-03-07)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** fix accessibility error for pagination with links when item is active ([93d57b8](https://github.com/liferay/clay/commit/93d57b8b414a9fa0bd4b03d4008fbe3573bc088c))
+-   **@clayui/pagination:** LPS-148048 Disable the button to the current page to avoid accesibility issues ([83b6cea](https://github.com/liferay/clay/commit/83b6cea7c9fa1c998cb18b24dbbed3d253653192))
+-   **@clayui/pagination:** LPS-148048 regen snapshots ([22fbec0](https://github.com/liferay/clay/commit/22fbec060301019639f204c82c3ca06d0a19e349))
+
+### Features
+
+-   **@clayui/drop-down:** Update tests ([ab564dd](https://github.com/liferay/clay/commit/ab564ddb95de1e01cb690cd458e5ac3aad634946))
+
 # [3.47.0](https://github.com/liferay/clay/compare/v3.46.0...v3.47.0) (2022-02-23)
 
 **Note:** Version bump only for package @clayui/pagination
