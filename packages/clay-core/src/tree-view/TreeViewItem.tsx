@@ -347,7 +347,7 @@ export const TreeViewItem = React.forwardRef<
 						}}
 						tabIndex={-2}
 					>
-						{typeof left === 'string' ? (
+						{typeof left === 'string' && !right ? (
 							<Layout.ContentRow>
 								<Layout.ContentCol expand>
 									<div className="component-text">{left}</div>
