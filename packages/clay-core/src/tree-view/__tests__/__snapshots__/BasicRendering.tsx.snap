@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreeView basic rendering render dynamic content 1`] = `
+<div>
+  <ul
+    class="treeview treeview-light show-component-expander-on-hover"
+    role="tree"
+  >
+    <li
+      class="treeview-item"
+      role="none"
+    >
+      <div
+        aria-expanded="false"
+        class="treeview-link"
+        role="treeitem"
+        style="padding-left: 0px;"
+        tabindex="0"
+      >
+        <span
+          class="c-inner"
+          style="margin-left: -0px;"
+          tabindex="-2"
+        >
+          <div
+            class="autofit-row"
+          >
+            <div
+              class="autofit-col"
+            >
+              <button
+                aria-controls="Root"
+                aria-expanded="false"
+                class="component-expander btn btn-monospaced"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="c-inner"
+                  tabindex="-2"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-down"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-down"
+                    />
+                  </svg>
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-right"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div
+              class="autofit-col autofit-col-expand"
+            >
+              <div
+                class="component-text"
+              >
+                Root
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`TreeView basic rendering render nested dynamic content 1`] = `
+<div>
+  <ul
+    class="treeview treeview-light show-component-expander-on-hover"
+    role="tree"
+  >
+    <li
+      class="treeview-item"
+      role="none"
+    >
+      <div
+        aria-expanded="false"
+        class="treeview-link"
+        role="treeitem"
+        style="padding-left: 0px;"
+        tabindex="0"
+      >
+        <span
+          class="c-inner"
+          style="margin-left: -0px;"
+          tabindex="-2"
+        >
+          <div
+            class="autofit-row"
+          >
+            <div
+              class="autofit-col"
+            >
+              <button
+                aria-controls="Foo"
+                aria-expanded="false"
+                class="component-expander btn btn-monospaced"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="c-inner"
+                  tabindex="-2"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-down"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-down"
+                    />
+                  </svg>
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-right"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div
+              class="autofit-col autofit-col-expand"
+            >
+              <div
+                class="component-text"
+              >
+                Foo
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`TreeView basic rendering render static content 1`] = `
+<div>
+  <ul
+    class="treeview treeview-light show-component-expander-on-hover"
+    role="tree"
+  >
+    <li
+      class="treeview-item"
+      role="none"
+    >
+      <div
+        aria-expanded="false"
+        class="treeview-link"
+        role="treeitem"
+        style="padding-left: 0px;"
+        tabindex="0"
+      >
+        <span
+          class="c-inner"
+          style="margin-left: -0px;"
+          tabindex="-2"
+        >
+          <div
+            class="autofit-row"
+          >
+            <div
+              class="autofit-col"
+            >
+              <button
+                aria-controls="$.0"
+                aria-expanded="false"
+                class="component-expander btn btn-monospaced"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="c-inner"
+                  tabindex="-2"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-down"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-down"
+                    />
+                  </svg>
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-right"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div
+              class="autofit-col autofit-col-expand"
+            >
+              <div
+                class="component-text"
+              >
+                Root
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`TreeView basic rendering render with actions 1`] = `
+<div>
+  <ul
+    class="treeview treeview-light show-component-expander-on-hover"
+    role="tree"
+  >
+    <li
+      class="treeview-item"
+      role="none"
+    >
+      <div
+        class="treeview-link"
+        role="treeitem"
+        style="padding-left: 24px;"
+        tabindex="0"
+      >
+        <span
+          class="c-inner"
+          style="margin-left: -24px;"
+          tabindex="-2"
+        >
+          <div
+            class="autofit-row"
+          >
+            <div
+              class="autofit-col autofit-col-expand"
+            >
+              <div
+                class="component-text"
+              >
+                Root
+              </div>
+            </div>
+            <div
+              class="autofit-col"
+            >
+              <button
+                class="component-action btn btn-monospaced"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="c-inner"
+                  tabindex="-2"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#times"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div
+              class="autofit-col"
+            >
+              <div
+                class="dropdown"
+              >
+                <button
+                  class="dropdown-toggle component-action btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <div
+                    class="c-inner"
+                    tabindex="-2"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-ellipsis-v"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#ellipsis-v"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`TreeView basic rendering render with checkbox 1`] = `
+<div>
+  <ul
+    class="treeview treeview-light show-component-expander-on-hover"
+    role="tree"
+  >
+    <li
+      class="treeview-item"
+      role="none"
+    >
+      <div
+        aria-expanded="false"
+        class="treeview-link"
+        role="treeitem"
+        style="padding-left: 0px;"
+        tabindex="0"
+      >
+        <span
+          class="c-inner"
+          style="margin-left: -0px;"
+          tabindex="-2"
+        >
+          <div
+            class="autofit-row"
+          >
+            <div
+              class="autofit-col"
+            >
+              <button
+                aria-controls="$.0"
+                aria-expanded="false"
+                class="component-expander btn btn-monospaced"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="c-inner"
+                  tabindex="-2"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-down"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-down"
+                    />
+                  </svg>
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-right"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div
+              class="autofit-col"
+            >
+              <div
+                class="custom-control custom-checkbox"
+              >
+                <label>
+                  <input
+                    class="custom-control-input"
+                    type="checkbox"
+                  />
+                  <span
+                    class="custom-control-label"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="autofit-col autofit-col-expand"
+            >
+              <div
+                class="component-text"
+              >
+                Root
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

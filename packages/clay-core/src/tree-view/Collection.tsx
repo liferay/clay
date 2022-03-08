@@ -87,7 +87,7 @@ export function Collection<T extends Record<any, any>>({
 							</ItemContextProvider>
 						);
 				  })
-				: React.Children.toArray(children).map((child, index) => {
+				: React.Children.map(children, (child, index) => {
 						if (!React.isValidElement(child)) {
 							return null;
 						}
