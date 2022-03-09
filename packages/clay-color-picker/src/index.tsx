@@ -345,8 +345,6 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								insetBefore
 								onChange={(event) => {
 									onValueChange(event.target.value);
-									// setCustomEditorActive(false);
-									// setInternalActive(false);
 								}}
 								ref={inputRef}
 								type="text"
