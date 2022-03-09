@@ -7,7 +7,7 @@ import domAlign from 'dom-align';
 
 type AlignBase = {
 	offset?: readonly [number, number];
-	overflow?: {adjustX: boolean; adjustY: boolean};
+	overflow?: {adjustX: boolean; adjustY: boolean; alwaysByViewport?: boolean};
 	points?: readonly [string, string];
 	targetOffset?: readonly [string, string];
 };
