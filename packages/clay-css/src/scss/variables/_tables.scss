@@ -246,6 +246,12 @@ $table-list-border-y-width: 0.0625rem !default;
 
 $table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
 
+@function table-border-radius() {
+	@return calc(
+		#{$table-list-border-radius} - min(#{$table-list-border-x-width}, #{$table-list-border-y-width})
+	);
+}
+
 $table-list-border-radius: $border-radius !default;
 $table-list-color: null !default;
 $table-list-font-size: null !default;
