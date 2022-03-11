@@ -32,6 +32,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	>['containerElement'];
 
 	/**
+	 * Property to set the initial value of `active`.
+	 */
+	defaultActive?: boolean;
+
+	/**
 	 * The unique identifier of the menu that should be active on mount.
 	 */
 	initialActiveMenu: string;
@@ -85,6 +90,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	alignmentPosition,
 	className,
 	containerElement,
+	defaultActive,
 	initialActiveMenu,
 	menuElementAttrs,
 	menuHeight,
@@ -98,7 +104,12 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	const [activeMenu, setActiveMenu] = React.useState(initialActiveMenu);
 	const [direction, setDirection] = React.useState<'prev' | 'next'>();
 	const [history, setHistory] = React.useState<Array<IHistory>>([]);
+
 	const [internalActive, setInternalActive] = useInternalState({
+		defaultName: 'defaultActive',
+		handleName: 'onActiveChange',
+		initialValue: defaultActive,
+		name: 'active',
 		onChange: onActiveChange,
 		value: active,
 	});
