@@ -87,6 +87,9 @@ export function TreeView<T>(props: ITreeViewProps<T>): JSX.Element & {
 export function TreeView<T>({
 	children,
 	className,
+	defaultExpandedKeys,
+	defaultItems,
+	defaultSelectedKeys,
 	displayType = 'light',
 	dragAndDrop = false,
 	dragAndDropContext = window,
@@ -110,6 +113,9 @@ export function TreeView<T>({
 	const rootRef = React.useRef(null);
 
 	const state = useTree<T>({
+		defaultExpandedKeys,
+		defaultItems,
+		defaultSelectedKeys,
 		expandedKeys,
 		items,
 		nestedKey,

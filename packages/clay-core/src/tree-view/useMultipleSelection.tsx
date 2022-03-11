@@ -13,6 +13,11 @@ import type {ICollectionProps} from './Collection';
 
 export interface IMultipleSelection {
 	/**
+	 * Property to set the initial value of `selectedKeys`.
+	 */
+	defaultSelectedKeys?: Set<Key>;
+
+	/**
 	 * Handler that is called when the selection changes.
 	 */
 	onSelectionChange?: (keys: Set<Key>) => void;
@@ -116,7 +121,10 @@ export function useMultipleSelection<T>(
 	const intermediateKeys = useRef(new Set<Key>());
 
 	const [selectedKeys, setSelectionKeys] = useInternalState<Set<Key>>({
-		initialValue: props.selectedKeys ?? new Set(),
+		defaultName: 'defaultSelectedKeys',
+		handleName: 'onSelectionChange',
+		initialValue: props.defaultSelectedKeys ?? new Set(),
+		name: 'selectedKeys',
 		onChange: props.onSelectionChange,
 		value: props.selectedKeys,
 	});

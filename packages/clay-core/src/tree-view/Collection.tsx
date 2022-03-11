@@ -22,6 +22,11 @@ export interface ICollectionProps<T> {
 	children: React.ReactNode | ChildrenFunction<T>;
 
 	/**
+	 * Property to set the initial value of `items`.
+	 */
+	defaultItems?: Array<T>;
+
+	/**
 	 * Property to inform the dynamic data of the tree.
 	 */
 	items?: Array<T>;
