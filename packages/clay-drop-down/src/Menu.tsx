@@ -99,6 +99,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignElementRef: React.RefObject<HTMLElement>;
 
 	/**
+	 * Flag to align the DropDown menu within the viewport.
+	 */
+	alignmentByViewport?: boolean;
+
+	/**
 	 * Flag to suggest or not the best region to align menu element.
 	 */
 	autoBestAlign?: boolean;
@@ -184,6 +189,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 		{
 			active,
 			alignElementRef,
+			alignmentByViewport = false,
 			alignmentPosition = Align.BottomLeft,
 			autoBestAlign = true,
 			children,
@@ -276,6 +282,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 						overflow: {
 							adjustX: autoBestAlign,
 							adjustY: autoBestAlign,
+							alwaysByViewport: alignmentByViewport,
 						},
 						points,
 						sourceElement: (ref as React.RefObject<HTMLElement>)

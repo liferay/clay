@@ -29,6 +29,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	active: boolean;
 
 	/**
+	 * Flag to align the DropDown menu within the viewport.
+	 */
+	alignmentByViewport?: React.ComponentProps<
+		typeof Menu
+	>['alignmentByViewport'];
+
+	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
 	alignmentPosition?: React.ComponentProps<typeof Menu>['alignmentPosition'];
@@ -97,6 +104,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	Section: typeof Section;
 } = ({
 	active = false,
+	alignmentByViewport,
 	alignmentPosition,
 	children,
 	className,
@@ -178,6 +186,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 						{...menuElementAttrs}
 						active={active}
 						alignElementRef={triggerElementRef}
+						alignmentByViewport={alignmentByViewport}
 						alignmentPosition={alignmentPosition}
 						closeOnClickOutside={closeOnClickOutside}
 						hasLeftSymbols={hasLeftSymbols}

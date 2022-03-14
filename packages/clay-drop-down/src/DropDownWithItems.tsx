@@ -61,6 +61,13 @@ export interface IProps extends IDropDownContentProps {
 	active?: React.ComponentProps<typeof ClayDropDown>['active'];
 
 	/**
+	 * Flag to align the DropDown menu within the viewport.
+	 */
+	alignmentByViewport?: React.ComponentProps<
+		typeof ClayDropDownMenu
+	>['alignmentByViewport'];
+
+	/**
 	 * Default position of menu element. Values come from `./Menu`.
 	 */
 	alignmentPosition?: React.ComponentProps<
@@ -383,6 +390,7 @@ const findNested = <
 
 export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	active,
+	alignmentByViewport,
 	alignmentPosition,
 	caption,
 	className,
@@ -427,6 +435,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	return (
 		<ClayDropDown
 			active={internalActive}
+			alignmentByViewport={alignmentByViewport}
 			alignmentPosition={alignmentPosition}
 			className={className}
 			closeOnClickOutside={closeOnClickOutside}
