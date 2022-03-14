@@ -115,6 +115,8 @@ const RGBInput: React.FunctionComponent<IRGBInputProps> = ({
 };
 
 interface IProps {
+	active?: boolean;
+
 	/**
 	 * List of colors that will display as a color splotch
 	 * these can be either hex values, color names or
@@ -160,6 +162,7 @@ const DEFAULT_SPLOTCH_COLOR = 'FFFFFF';
  * Renders the custom color picker
  */
 const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
+	active,
 	colors,
 	editorActive,
 	label,
@@ -247,19 +250,22 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 			setHue(color.toHsv().h);
 			setHexInputValue(color.toHex());
 
-			const index = colors.indexOf(value as string);
-
-			if (index !== -1) {
-				setColors(
-					value!.includes('var(') ? value! : color.toHex(),
-					index
+			if (!active) {
+				const colorIndex = findColorIndex(
+					colors,
+					value!.includes('var(')
+						? getCSSVariableColor(value!)
+						: tinycolor(value)
 				);
-				setActiveSplotchIndex(index);
+
+				if (colorIndex === -1) {
+					setActiveSplotchIndex(undefined);
+				}
 			} else {
-				setActiveSplotchIndex(undefined);
+				setColors(color.toHex());
 			}
 		}
-	}, [value, color]);
+	}, [active, value, color]);
 
 	return (
 		<div ref={customMenuRef}>
@@ -297,11 +303,16 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 										setActiveSplotchIndex(index);
 									}
 
+									// The hexadecimal color `#FFFFFF` is treated as an empty
+									// slot so when the user enters a color that doesn't exist in
+									// the custom, clicking on an empty slot will replace that
+									// slot with the new color if don't have an active slot
+									// being edited.
 									if (hex === DEFAULT_SPLOTCH_COLOR) {
-										const newColor = tinycolor(hex);
-
 										setInternalEditorActive(true);
 
+										// Replaces the slot color with the color entered in the
+										// input if it does not have an active slot being edited.
 										if (
 											previousColorRef.current !==
 												tinycolor(
@@ -315,14 +326,9 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 											setColors(color.toHex(), index);
 											setHexInputValue(color.toHex());
 											setHue(color.toHsv().h);
-										} else if (
-											findColorIndex(colors, newColor) ===
-												-1 ||
-											tinycolor.equals(
-												newColor,
-												tinycolor(DEFAULT_SPLOTCH_COLOR)
-											)
-										) {
+										} else {
+											const newColor = tinycolor(hex);
+
 											setNewColor(newColor, true, index);
 											setHue(newColor.toHsv().h);
 										}
@@ -425,8 +431,10 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 											if (newColor.isValid()) {
 												setHue(newColor.toHsv().h);
 
-												const hasColor =
-													colors.indexOf(newHexValue);
+												const hasColor = findColorIndex(
+													colors,
+													newColor
+												);
 
 												setNewColor(
 													newColor,

@@ -313,6 +313,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 						{onColorsChange && (
 							<Custom
+								active={internalActive}
 								colors={
 									colors
 										? colors
