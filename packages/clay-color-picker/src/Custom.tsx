@@ -195,7 +195,7 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 		[value]
 	);
 
-	const [previousColor, setPrevousColor] = React.useState(color);
+	const previousColorRef = React.useRef(color);
 
 	const [hue, setHue] = React.useState(color.toHsv().h);
 	const [hexInputVal, setHexInputValue] = React.useState(color.toHex());
@@ -294,10 +294,9 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 
 									if (hex === DEFAULT_SPLOTCH_COLOR) {
 										setInternalEditorActive(true);
-										setHexInputValue(hex);
 
 										if (
-											previousColor !==
+											previousColorRef.current !==
 												tinycolor(
 													DEFAULT_SPLOTCH_COLOR
 												) &&
@@ -305,13 +304,18 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 										) {
 											setNewColor(color, true, index);
 											setHue(color.toHsv().h);
+										} else {
+											const newColor = tinycolor(hex);
+
+											setNewColor(newColor, true, index);
+											setHue(newColor.toHsv().h);
 										}
 									} else {
 										const newColor = hex!.includes('var(')
 											? getCSSVariableColor(hex!)
 											: tinycolor(hex);
 
-										setPrevousColor(newColor);
+										previousColorRef.current = newColor;
 
 										setHue(newColor.toHsv().h);
 										setHexInputValue(newColor.toHex());
