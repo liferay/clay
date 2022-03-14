@@ -146,7 +146,10 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	const inputRef = React.useRef(null);
 	const [activeSplotchIndex, setActiveSplotchIndex] = React.useState(0);
 	const [internalEditorActive, setInternalEditorActive] = useInternalState({
+		defaultName: '',
+		handleName: 'onEditorActiveChange',
 		initialValue: !showPalette,
+		name: 'editorActive',
 		onChange: onEditorActiveChange,
 		value: editorActive,
 	});

@@ -86,6 +86,11 @@ export interface IProps extends IDropDownContentProps {
 	>['containerElement'];
 
 	/**
+	 * Property to set the initial value of `active`.
+	 */
+	defaultActive?: boolean;
+
+	/**
 	 * Add an action button or any other element you want to be fixed position to the
 	 * footer from the DropDown.
 	 */
@@ -383,6 +388,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	className,
 	closeOnClickOutside,
 	containerElement,
+	defaultActive,
 	footerContent,
 	helpText,
 	items,
@@ -399,7 +405,10 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	trigger,
 }: IProps) => {
 	const [internalActive, setInternalActive] = useInternalState({
-		initialValue: false,
+		defaultName: 'defaultActive',
+		handleName: 'onActiveChange',
+		initialValue: defaultActive,
+		name: 'active',
 		onChange: onActiveChange,
 		value: active,
 	});

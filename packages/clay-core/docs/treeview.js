@@ -92,8 +92,8 @@ const exampleCode = `const FileExplorer = ({selectionMode}) => {
 	return (
 		<Provider spritemap={spritemap}>
 			<TreeView
+				defaultItems={items}
 				dragAndDrop
-				items={items}
 				nestedKey="children"
 				selectionMode={selectionMode}
 			>

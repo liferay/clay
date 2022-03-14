@@ -79,6 +79,11 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	colors?: Array<string>;
 
 	/**
+	 * Property to set the initial value of `active`.
+	 */
+	defaultActive?: boolean;
+
+	/**
 	 * Flag for adding ColorPicker in disabled state
 	 */
 	disabled?: boolean;
@@ -161,6 +166,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	active,
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
+	defaultActive = false,
 	disabled,
 	dropDownContainerProps,
 	label,
@@ -210,7 +216,10 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	const splotchRef = React.useRef<HTMLButtonElement>(null);
 
 	const [internalActive, setInternalActive] = useInternalState({
-		initialValue: false,
+		defaultName: 'defaultActive',
+		handleName: 'onActiveChange',
+		initialValue: defaultActive,
+		name: 'active',
 		onChange: onActiveChange,
 		value: active,
 	});

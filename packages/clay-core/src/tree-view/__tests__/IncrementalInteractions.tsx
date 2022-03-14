@@ -90,7 +90,7 @@ describe('TreeView incremental interactions', () => {
 			it('select only one item using single selection', () => {
 				const {container} = render(
 					<Provider spritemap={spritemap}>
-						<TreeView expandedKeys={new Set(['Root'])}>
+						<TreeView defaultExpandedKeys={new Set(['Root'])}>
 							<TreeView.Item key="Root">
 								<TreeView.ItemStack>
 									<OptionalCheckbox />
@@ -126,7 +126,7 @@ describe('TreeView incremental interactions', () => {
 				const {container} = render(
 					<Provider spritemap={spritemap}>
 						<TreeView
-							expandedKeys={new Set(['Root'])}
+							defaultExpandedKeys={new Set(['Root'])}
 							selectionMode="multiple"
 						>
 							<TreeView.Item key="Root">
@@ -161,7 +161,7 @@ describe('TreeView incremental interactions', () => {
 				const {container} = render(
 					<Provider spritemap={spritemap}>
 						<TreeView
-							items={[
+							defaultItems={[
 								{
 									children: [{id: 2, name: 'Item'}],
 									id: 1,
@@ -246,8 +246,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -291,8 +291,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole, getByTestId} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -354,8 +354,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole, getByTestId} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -429,8 +429,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole, getByTestId} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -503,7 +503,7 @@ describe('TreeView incremental interactions', () => {
 			const {container, getByRole} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						items={[
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -542,8 +542,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -582,7 +582,7 @@ describe('TreeView incremental interactions', () => {
 			const {container, getByRole} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						items={[
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -627,8 +627,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [
 									{
@@ -671,7 +671,7 @@ describe('TreeView incremental interactions', () => {
 			const {container, getByRole} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						items={[
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -719,8 +719,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [
 									{id: 2, name: 'Bar'},
@@ -772,8 +772,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole, getByText} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -822,8 +822,8 @@ describe('TreeView incremental interactions', () => {
 			const {getAllByRole, getByText} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,
@@ -872,8 +872,8 @@ describe('TreeView incremental interactions', () => {
 			const {container, getAllByRole, getByText} = render(
 				<Provider spritemap={spritemap}>
 					<TreeView
-						expandedKeys={new Set([1])}
-						items={[
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
 							{
 								children: [{id: 2, name: 'Item'}],
 								id: 1,

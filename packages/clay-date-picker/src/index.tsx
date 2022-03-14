@@ -267,7 +267,10 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 * if component is not controlled by props.
 		 */
 		const [expandedValue, setExpandedValue] = useInternalState({
+			defaultName: 'initialExpanded',
+			handleName: 'onExpandedChange',
 			initialValue: initialExpanded,
+			name: 'expanded',
 			onChange: onExpandedChange,
 			value: expanded,
 		});

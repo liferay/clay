@@ -18,6 +18,11 @@ import type {ICollectionProps} from './Collection';
 
 export interface IExpandable {
 	/**
+	 * Property to set the initial value of `expandedKeys`.
+	 */
+	defaultExpandedKeys?: Set<Key>;
+
+	/**
 	 * The currently expanded keys in the collection.
 	 */
 	expandedKeys?: Set<Key>;
@@ -57,7 +62,7 @@ export interface IExpandable {
 export interface ITreeProps<T>
 	extends IExpandable,
 		IMultipleSelection,
-		Pick<ICollectionProps<T>, 'items'> {
+		Pick<ICollectionProps<T>, 'items' | 'defaultItems'> {
 	/**
 	 * Flag to indicate which key name matches the nested rendering of the tree.
 	 */
@@ -84,12 +89,16 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 
 export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	const [items, setItems] = useInternalState({
-		initialValue: props.items ?? [],
+		defaultName: 'defaultItems',
+		handleName: 'onItemsChange',
+		initialValue: props.defaultItems ?? [],
+		name: 'items',
 		onChange: props.onItemsChange,
 		value: props.items,
 	});
 
 	const selection = useMultipleSelection<T>({
+		defaultSelectedKeys: props.defaultSelectedKeys,
 		items,
 		nestedKey: props.nestedKey,
 		onSelectionChange: props.onSelectionChange,
@@ -98,12 +107,12 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	});
 
 	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
+		defaultName: 'defaultExpandedKeys',
+		handleName: 'onExpandedChange',
 		initialValue: () => {
 			const {
-				expandedKeys,
-				items,
+				defaultExpandedKeys,
 				nestedKey,
-				selectedKeys,
 				selectionHydrationMode,
 				selectionMode,
 			} = props;
@@ -111,7 +120,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 			if (
 				selectionHydrationMode === 'hydrate-first' &&
 				items &&
-				selectedKeys?.size
+				selection.selectedKeys.size
 			) {
 				const expand = expandSelectedItems(
 					items,
@@ -120,34 +129,33 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 					// TODO try to make it configurable or be able to infer the name of
 					// the property from the key passed in the React rendering.
 					'id',
-					selectedKeys
+					selection.selectedKeys
 				);
 
 				if (selectionMode === 'multiple-recursive') {
 					selection.replaceIntermediateKeys(
-						expand.filter((key) => !selectedKeys.has(key))
+						expand.filter((key) => !selection.selectedKeys.has(key))
 					);
 				}
 
 				return new Set(
-					expandedKeys
-						? Array.from(expandedKeys).concat(expand)
+					defaultExpandedKeys
+						? Array.from(defaultExpandedKeys).concat(expand)
 						: expand
 				);
 			}
 
-			return expandedKeys ?? new Set();
+			return defaultExpandedKeys ?? new Set();
 		},
+		name: 'expandedKeys',
 		onChange: props.onExpandedChange,
 		value: props.expandedKeys,
 	});
 
 	useEffect(() => {
 		const {
-			expandedKeys,
-			items,
+			defaultExpandedKeys,
 			nestedKey,
-			selectedKeys,
 			selectionHydrationMode,
 			selectionMode,
 		} = props;
@@ -155,7 +163,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		if (
 			selectionHydrationMode === 'render-first' &&
 			items &&
-			selectedKeys?.size
+			selection.selectedKeys.size
 		) {
 			const expand = expandSelectedItems(
 				items,
@@ -164,19 +172,19 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 				// TODO try to make it configurable or be able to infer the name of
 				// the property from the key passed in the React rendering.
 				'id',
-				selectedKeys
+				selection.selectedKeys
 			);
 
 			if (selectionMode === 'multiple-recursive') {
 				selection.replaceIntermediateKeys(
-					expand.filter((key) => !selectedKeys.has(key))
+					expand.filter((key) => !selection.selectedKeys.has(key))
 				);
 			}
 
 			setExpandedKeys(
 				new Set(
-					expandedKeys
-						? Array.from(expandedKeys).concat(expand)
+					defaultExpandedKeys
+						? Array.from(defaultExpandedKeys).concat(expand)
 						: expand
 				)
 			);

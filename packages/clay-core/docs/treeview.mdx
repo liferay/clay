@@ -135,7 +135,7 @@ function Example() {
 	];
 
 	return (
-		<TreeView items={items} nestedKey="children">
+		<TreeView defaultItems={items} nestedKey="children">
 			{(item) => (
 				<TreeView.Item key={item.name}>
 					{item.name}

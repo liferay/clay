@@ -298,8 +298,7 @@ storiesOf('Components|ClayTreeView', module)
 	.add('dynamic', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView
-				dragAndDrop
-				items={[
+				defaultItems={[
 					{
 						children: [
 							{name: 'Blogs'},
@@ -328,6 +327,7 @@ storiesOf('Components|ClayTreeView', module)
 						name: 'Empty directory',
 					},
 				]}
+				dragAndDrop
 				nestedKey="children"
 				onRenameItem={(item) => {
 					return new Promise((resolve) => {
@@ -358,8 +358,7 @@ storiesOf('Components|ClayTreeView', module)
 	.add('w/styling', () => (
 		<Provider spritemap={spritemap} theme="cadmin">
 			<TreeView
-				expanderClassName="expander-css-class-1"
-				items={[
+				defaultItems={[
 					{
 						children: [
 							{name: 'Blogs'},
@@ -372,6 +371,7 @@ storiesOf('Components|ClayTreeView', module)
 						name: 'Documents and Media',
 					},
 				]}
+				expanderClassName="expander-css-class-1"
 				nestedKey="children"
 				showExpanderOnHover={false}
 			>
@@ -411,8 +411,8 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
+					defaultItems={ITEMS_DRIVE}
 					dragAndDrop
-					items={ITEMS_DRIVE}
 					onRenameItem={(item) => {
 						return new Promise((resolve) => {
 							setTimeout(() => {
@@ -619,12 +619,12 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
+					defaultItems={items}
 					expandedKeys={expandedKeys}
 					expanderIcons={{
 						close: <Icon symbol="hr" />,
 						open: <Icon symbol="plus" />,
 					}}
-					items={items}
 					nestedKey="children"
 					onExpandedChange={(keys) => setExpandedKeys(keys)}
 					selectionMode={null}
@@ -667,7 +667,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
-					items={ITEMS_DRIVE}
+					defaultItems={ITEMS_DRIVE}
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
 					selectionHydrationMode={select(
@@ -712,8 +712,8 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
+					defaultItems={ITEMS_DRIVE}
 					dragAndDrop
-					items={ITEMS_DRIVE}
 					selectionMode="multiple-recursive"
 					showExpanderOnHover={false}
 				>
@@ -752,8 +752,8 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
+					defaultItems={ITEMS_DRIVE}
 					dragAndDrop
-					items={ITEMS_DRIVE}
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
@@ -804,7 +804,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
-					items={ITEMS_DRIVE}
+					defaultItems={ITEMS_DRIVE}
 					nestedKey="children"
 					onLoadMore={async (item) => {
 						// Delay to simulate loading of new data
@@ -873,7 +873,7 @@ storiesOf('Components|ClayTreeView', module)
 				<p>Selected items: {Array.from(selectedKeys).join(', ')}</p>
 
 				<TreeView
-					items={ITEMS_DRIVE}
+					defaultItems={ITEMS_DRIVE}
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
@@ -930,9 +930,9 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
+					defaultItems={ITEMS_DRIVE}
 					dragAndDrop
 					expandOnCheck
-					items={ITEMS_DRIVE}
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
@@ -979,7 +979,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
-					items={ITEMS_DRIVE}
+					defaultItems={ITEMS_DRIVE}
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
@@ -1030,7 +1030,7 @@ storiesOf('Components|ClayTreeView', module)
 				</pre>
 
 				<TreeView
-					items={ITEMS_DRIVE}
+					defaultItems={ITEMS_DRIVE}
 					nestedKey="children"
 					onSelectionChange={(keys) => setSelectionChange(keys)}
 					selectedKeys={selectedKeys}
@@ -1091,7 +1091,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
-					items={[rootNode]}
+					defaultItems={[rootNode]}
 					nestedKey="children"
 					showExpanderOnHover={false}
 				>
@@ -1113,7 +1113,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
-					items={ITEMS_DRIVE}
+					defaultItems={ITEMS_DRIVE}
 					nestedKey="children"
 					onLoadMore={async (item) => {
 						// Delay to simulate loading of new data
@@ -1173,7 +1173,7 @@ storiesOf('Components|ClayTreeView', module)
 		return (
 			<Provider spritemap={spritemap} theme="cadmin">
 				<TreeView
-					items={ITEMS_DRIVE}
+					defaultItems={ITEMS_DRIVE}
 					nestedKey="children"
 					onLoadMore={onLoadMore}
 				>
@@ -1323,7 +1323,11 @@ storiesOf('Components|ClayTreeView', module)
 						overflow: 'auto',
 					}}
 				>
-					<TreeView dragAndDrop items={items} nestedKey="children">
+					<TreeView
+						defaultItems={items}
+						dragAndDrop
+						nestedKey="children"
+					>
 						{(item) => (
 							<TreeView.Item>
 								<TreeView.ItemStack>

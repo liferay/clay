@@ -88,7 +88,10 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 	...otherProps
 }: IProps) => {
 	const [internalExpanded, setInternalExpanded] = useInternalState({
+		defaultName: 'defaultExpanded',
+		handleName: 'onExpandedChange',
 		initialValue: defaultExpanded,
+		name: 'expanded',
 		onChange: onExpandedChange,
 		value: expanded,
 	});

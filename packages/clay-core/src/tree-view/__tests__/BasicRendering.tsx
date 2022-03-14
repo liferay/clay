@@ -41,7 +41,7 @@ describe('TreeView basic rendering', () => {
 		const {container} = render(
 			<Provider spritemap={spritemap}>
 				<TreeView
-					items={[
+					defaultItems={[
 						{
 							children: [{name: 'Item'}],
 							name: 'Root',
@@ -71,7 +71,7 @@ describe('TreeView basic rendering', () => {
 		const {container} = render(
 			<Provider spritemap={spritemap}>
 				<TreeView
-					items={[
+					defaultItems={[
 						{
 							children: [
 								{
@@ -275,7 +275,7 @@ describe('TreeView basic rendering', () => {
 	it('render with pre-selected items', () => {
 		const {container} = render(
 			<Provider spritemap={spritemap}>
-				<TreeView selectedKeys={new Set(['Root', 'Item'])}>
+				<TreeView defaultSelectedKeys={new Set(['Root', 'Item'])}>
 					<TreeView.Item key="Root">
 						<TreeView.ItemStack>
 							<OptionalCheckbox />
@@ -303,14 +303,14 @@ describe('TreeView basic rendering', () => {
 		const {container} = render(
 			<Provider spritemap={spritemap}>
 				<TreeView
-					items={[
+					defaultItems={[
 						{
 							children: [{id: 2, name: 'Item'}],
 							id: 1,
 							name: 'Root',
 						},
 					]}
-					selectedKeys={new Set([1, 2])}
+					defaultSelectedKeys={new Set([1, 2])}
 				>
 					{(item) => (
 						<TreeView.Item>
@@ -342,7 +342,7 @@ describe('TreeView basic rendering', () => {
 	it('render with pre-expanded items', () => {
 		const {container} = render(
 			<Provider spritemap={spritemap}>
-				<TreeView expandedKeys={new Set(['Root', 'Item'])}>
+				<TreeView defaultExpandedKeys={new Set(['Root', 'Item'])}>
 					<TreeView.Item key="Root">
 						<TreeView.ItemStack>Root</TreeView.ItemStack>
 						<TreeView.Group>
