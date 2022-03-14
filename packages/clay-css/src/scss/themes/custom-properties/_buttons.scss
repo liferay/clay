@@ -1,0 +1,1537 @@
+$btn-border-width: $input-btn-border-width !default;
+$btn-border-radius: $border-radius !default;
+$btn-box-shadow: none !default;
+$btn-cursor: $link-cursor !default;
+$btn-font-family: inherit !default;
+$btn-font-size: $input-btn-font-size !default;
+$btn-font-weight: $font-weight-semi-bold !default;
+$btn-line-height: $input-btn-line-height !default;
+$btn-padding-x: 0.9375rem !default; // 15px
+$btn-padding-y: 0.4375rem !default; // 7px
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-white-space: null !default;
+
+$btn-font-size-mobile: null !default;
+$btn-padding-x-mobile: null !default;
+$btn-padding-y-mobile: null !default;
+
+$btn-focus-width: $input-btn-focus-width !default;
+$btn-focus-box-shadow: $component-focus-box-shadow !default;
+
+$btn-active-box-shadow: none !default;
+
+$btn-disabled-cursor: $disabled-cursor !default;
+$btn-disabled-opacity: 0.4 !default;
+
+$btn-inline-item-font-size: 1rem !default; // 16px
+
+$btn-section-font-size: 0.6875rem !default; // 11px
+$btn-section-font-weight: $font-weight-normal !default;
+$btn-section-line-height: 1 !default;
+
+$clay-root: clay-map-merge(
+	(
+		--btn-border-width: $btn-border-width,
+		--btn-border-radius: $btn-border-radius,
+		--btn-box-shadow: $btn-box-shadow,
+		--btn-color: $body-color,
+		--btn-font-family: $btn-font-family,
+		--btn-font-size: $btn-font-size,
+		--btn-font-weight: $btn-font-weight,
+		--btn-line-height: $btn-line-height,
+		--btn-padding-bottom: $btn-padding-y,
+		--btn-padding-left: $btn-padding-x,
+		--btn-padding-right: $btn-padding-x,
+		--btn-padding-top: $btn-padding-y,
+		--btn-transition: $btn-transition,
+		--btn-focus-box-shadow: $btn-focus-box-shadow,
+		--btn-disabled-opacity: $btn-disabled-opacity,
+		--btn-inline-item-font-size: $btn-inline-item-font-size,
+		--btn-btn-section-font-size: $btn-section-font-size,
+		--btn-btn-section-font-weight: $btn-section-font-weight,
+		--btn-btn-section-line-height: $btn-section-line-height,
+	),
+	$clay-root
+);
+
+$btn: () !default;
+$btn: map-deep-merge(
+	(
+		background-color: var(--btn-background-color),
+		border-color: var(--btn-border-color, transparent),
+		border-style: var(--btn-border-style, solid),
+		border-width: var(--btn-border-width),
+		border-radius: clay-enable-rounded(var(--btn-border-radius)),
+		box-shadow: var(--btn-box-shadow),
+		color: var(--btn-color),
+		cursor: $btn-cursor,
+		display: inline-block,
+		font-family: var(--btn-font-family),
+		font-size: var(--btn-font-size),
+		font-weight: var(--btn-font-weight),
+		line-height: var(--btn-line-height),
+		padding-bottom: var(--btn-padding-bottom),
+		padding-left: var(--btn-padding-left),
+		padding-right: var(--btn-padding-right),
+		padding-top: var(--btn-padding-top),
+		text-align: center,
+		text-transform: none,
+		transition: clay-enable-transitions(var(--btn-transition)),
+		user-select: var(--btn-user-select, none),
+		vertical-align: var(--btn-vertical-align, middle),
+		white-space: $btn-white-space,
+		mobile: (
+			font-size: $btn-font-size-mobile,
+			padding-bottom: $btn-padding-y-mobile,
+			padding-left: $btn-padding-x-mobile,
+			padding-right: $btn-padding-x-mobile,
+			padding-top: $btn-padding-y-mobile,
+		),
+		hover: (
+			color: var(--btn-hover-color, var(--btn-color)),
+			text-decoration: none,
+		),
+		focus: (
+			box-shadow: var(--btn-focus-box-shadow),
+			outline: 0,
+		),
+		active: (
+			box-shadow: $btn-active-box-shadow,
+			focus: (
+				box-shadow: var(--btn-focus-box-shadow),
+			),
+		),
+		active-class: (
+			box-shadow: $btn-active-box-shadow,
+		),
+		disabled: (
+			cursor: $btn-disabled-cursor,
+			opacity: var(--btn-disabled-opacity),
+			focus: (
+				box-shadow: none,
+			),
+			active: (
+				pointer-events: none,
+			),
+		),
+		inline-item: (
+			font-size: var(--btn-inline-item-font-size),
+			lexicon-icon: (
+				margin-top: 0,
+			),
+		),
+		btn-section: (
+			display: block,
+			font-size: var(--btn-btn-section-font-size),
+			font-weight: var(--btn-btn-section-font-weight),
+			line-height: var(--btn-btn-section-line-height),
+		),
+	),
+	$btn
+);
+
+// Button Lg
+
+$btn-border-radius-lg: $border-radius !default;
+$btn-font-size-lg: $font-size-lg !default; // 18px
+$btn-line-height-lg: $input-btn-line-height-lg !default;
+$btn-padding-x-lg: 1.5rem !default; // 24px
+$btn-padding-y-lg: 0.59375rem !default; // 9.5px
+$btn-inline-item-font-size-lg: $font-size-lg !default; // 18px
+$btn-section-font-size-lg: 0.8125rem !default; // 13px
+
+$btn-font-size-lg-mobile: null !default;
+$btn-padding-x-lg-mobile: null !default;
+$btn-padding-y-lg-mobile: null !default;
+
+$clay-root: clay-map-merge(
+	(
+		--btn-lg-border-radius: $btn-border-radius-lg,
+		--btn-lg-font-size: $btn-font-size-lg,
+		--btn-lg-line-height: $btn-line-height-lg,
+		--btn-lg-padding-bottom: $btn-padding-y-lg,
+		--btn-lg-padding-left: $btn-padding-x-lg,
+		--btn-lg-padding-right: $btn-padding-x-lg,
+		--btn-lg-padding-top: $btn-padding-y-lg,
+		--btn-lg-btn-section-font-size: $btn-section-font-size-lg,
+	),
+	$clay-root
+);
+
+$btn-lg: () !default;
+$btn-lg: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded(var(--btn-lg-border-radius)),
+		font-size: var(--btn-lg-font-size),
+		line-height: var(--btn-lg-line-height),
+		padding-bottom: var(--btn-lg-padding-bottom),
+		padding-left: var(--btn-lg-padding-left),
+		padding-right: var(--btn-lg-padding-right),
+		padding-top: var(--btn-lg-padding-top),
+		mobile: (
+			font-size: $btn-font-size-lg-mobile,
+			padding-bottom: $btn-padding-y-lg-mobile,
+			padding-left: $btn-padding-x-lg-mobile,
+			padding-right: $btn-padding-x-lg-mobile,
+			padding-top: $btn-padding-y-lg-mobile,
+		),
+		inline-item: (
+			font-size: var(--btn-lg-inline-item-font-size),
+		),
+		btn-section: (
+			font-size: var(--btn-lg-btn-section-font-size),
+		),
+	),
+	$btn-lg
+);
+
+// Button Sm
+
+$btn-border-radius-sm: $border-radius-sm !default;
+$btn-font-size-sm: $font-size-sm !default; // 14px
+$btn-line-height-sm: 1.15 !default;
+$btn-padding-x-sm: 0.75rem !default; // 12px
+$btn-padding-y-sm: 0.4375rem !default; // 7px
+$btn-inline-item-font-size-sm: null !default;
+$btn-section-font-size-sm: 0.5625rem !default; // 9px
+
+$btn-font-size-sm-mobile: null !default;
+$btn-padding-x-sm-mobile: null !default;
+$btn-padding-y-sm-mobile: null !default;
+
+$clay-root: clay-map-merge(
+	(
+		--btn-sm-border-radius: $btn-border-radius-sm,
+		--btn-sm-font-size: $btn-font-size-sm,
+		--btn-sm-line-height: $btn-line-height-sm,
+		--btn-sm-padding-bottom: $btn-padding-y-sm,
+		--btn-sm-padding-left: $btn-padding-x-sm,
+		--btn-sm-padding-right: $btn-padding-x-sm,
+		--btn-sm-padding-top: $btn-padding-y-sm,
+		--btn-sm-btn-section-font-size: $btn-section-font-size-sm,
+		--btn-sm-lexicon-icon-font-size: 1rem,
+	),
+	$clay-root
+);
+
+$btn-sm: () !default;
+$btn-sm: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded(var(--btn-sm-border-radius)),
+		font-size: var(--btn-sm-font-size),
+		line-height: var(--btn-sm-line-height),
+		padding-bottom: var(--btn-sm-padding-bottom),
+		padding-left: var(--btn-sm-padding-left),
+		padding-right: var(--btn-sm-padding-right),
+		padding-top: var(--btn-sm-padding-top),
+		mobile: (
+			font-size: $btn-font-size-sm-mobile,
+			padding-bottom: $btn-padding-y-sm-mobile,
+			padding-left: $btn-padding-x-sm-mobile,
+			padding-right: $btn-padding-x-sm-mobile,
+			padding-top: $btn-padding-y-sm-mobile,
+		),
+		inline-item: (
+			font-size: var(--btn-sm-inline-item-font-size),
+		),
+		btn-section: (
+			font-size: var(--btn-sm-btn-section-font-size),
+		),
+		lexicon-icon: (
+			font-size: var(--btn-sm-lexicon-icon-font-size),
+		),
+	),
+	$btn-sm
+);
+
+// Button Sizes
+
+$btn-sizes: () !default;
+$btn-sizes: map-deep-merge(
+	(
+		btn-lg: $btn-lg,
+		btn-sm: $btn-sm,
+	),
+	$btn-sizes
+);
+
+// .btn-monospaced
+
+$btn-monospaced-padding-x: 0 !default;
+$btn-monospaced-padding-y: 0 !default;
+$btn-monospaced-size: 2.5rem !default; // 40px
+
+$btn-monospaced-size-mobile: null !default;
+
+$clay-root: clay-map-merge(
+	(
+		--btn-monospaced-height: $btn-monospaced-size,
+		--btn-monospaced-line-height: 1,
+		--btn-monospaced-padding-bottom: $btn-monospaced-padding-y,
+		--btn-monospaced-padding-left: $btn-monospaced-padding-x,
+		--btn-monospaced-padding-right: $btn-monospaced-padding-x,
+		--btn-monospaced-padding-top: $btn-monospaced-padding-y,
+		--btn-monospaced-width: $btn-monospaced-size,
+	),
+	$clay-root
+);
+
+$btn-monospaced: () !default;
+$btn-monospaced: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		flex-direction: column,
+		height: var(--btn-monospaced-height, $btn-monospaced-size),
+		justify-content: center,
+		line-height: var(--btn-monospaced-line-height, 1),
+		overflow: hidden,
+		padding-bottom:
+			var(--btn-monospaced-padding-bottom, $btn-monospaced-padding-y),
+		padding-left:
+			var(--btn-monospaced-padding-left, $btn-monospaced-padding-x),
+		padding-right:
+			var(--btn-monospaced-padding-right, $btn-monospaced-padding-x),
+		padding-top:
+			var(--btn-monospaced-padding-top, $btn-monospaced-padding-y),
+		text-align: center,
+		white-space: normal,
+		width: var(--btn-monospaced-width, $btn-monospaced-size),
+		word-wrap: break-word,
+		mobile: (
+			height: $btn-monospaced-size-mobile,
+			width: $btn-monospaced-size-mobile,
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+		c-inner: (
+			align-items: center,
+			display: flex,
+			flex-direction: column,
+			height: 100%,
+			justify-content: center,
+			padding: 0,
+			width: 100%,
+		),
+	),
+	$btn-monospaced
+);
+
+// .btn-monospaced.btn-lg
+
+$btn-monospaced-padding-x-lg: 0 !default;
+$btn-monospaced-padding-y-lg: 0 !default;
+$btn-monospaced-size-lg: 3rem !default; // 48px
+
+$btn-monospaced-size-lg-mobile: null !default;
+
+$clay-root: clay-map-merge(
+	(
+		--btn-monospaced-lg-height: $btn-monospaced-size-lg,
+		--btn-monospaced-lg-padding-bottom: $btn-monospaced-padding-y-lg,
+		--btn-monospaced-lg-padding-left: $btn-monospaced-padding-x-lg,
+		--btn-monospaced-lg-padding-right: $btn-monospaced-padding-x-lg,
+		--btn-monospaced-lg-padding-top: $btn-monospaced-padding-y-lg,
+		--btn-monospaced-lg-width: $btn-monospaced-size-lg,
+	),
+	$clay-root
+);
+
+$btn-monospaced-lg: () !default;
+$btn-monospaced-lg: map-deep-merge(
+	(
+		height: var(--btn-monospaced-lg-height),
+		padding-bottom: var(--btn-monospaced-lg-padding-bottom),
+		padding-left: var(--btn-monospaced-lg-padding-left),
+		padding-right: var(--btn-monospaced-lg-padding-right),
+		padding-top: var(--btn-monospaced-lg-padding-top),
+		width: var(--btn-monospaced-lg-width),
+		mobile: (
+			height: $btn-monospaced-size-lg-mobile,
+			width: $btn-monospaced-size-lg-mobile,
+		),
+	),
+	$btn-monospaced-lg
+);
+
+// .btn-monospaced.btn-sm
+
+$btn-monospaced-padding-x-sm: 0 !default;
+$btn-monospaced-padding-y-sm: 0 !default;
+$btn-monospaced-size-sm: 2rem !default; // 32px
+
+$btn-monospaced-size-sm-mobile: null !default;
+
+$clay-root: clay-map-merge(
+	(
+		--btn-monospaced-sm-height: $btn-monospaced-size-sm,
+		--btn-monospaced-sm-padding-bottom: $btn-monospaced-padding-y-sm,
+		--btn-monospaced-sm-padding-left: $btn-monospaced-padding-x-sm,
+		--btn-monospaced-sm-padding-right: $btn-monospaced-padding-x-sm,
+		--btn-monospaced-sm-padding-top: $btn-monospaced-padding-y-sm,
+		--btn-monospaced-sm-width: $btn-monospaced-size-sm,
+	),
+	$clay-root
+);
+
+$btn-monospaced-sm: () !default;
+$btn-monospaced-sm: map-deep-merge(
+	(
+		height: var(--btn-monospaced-sm-height),
+		padding-bottom: var(--btn-monospaced-sm-padding-bottom),
+		padding-left: var(--btn-monospaced-sm-padding-left),
+		padding-right: var(--btn-monospaced-sm-padding-right),
+		padding-top: var(--btn-monospaced-sm-padding-top),
+		width: var(--btn-monospaced-sm-width),
+		mobile: (
+			height: $btn-monospaced-size-sm-mobile,
+			width: $btn-monospaced-size-sm-mobile,
+		),
+	),
+	$btn-monospaced-sm
+);
+
+// Button Monospaced Sizes
+
+$btn-monospaced-sizes: () !default;
+$btn-monospaced-sizes: map-deep-merge(
+	(
+		btn-monospaced: $btn-monospaced,
+		btn-monospaced-lg: $btn-monospaced-lg,
+		btn-monospaced-sm: $btn-monospaced-sm,
+	),
+	$btn-monospaced-sizes
+);
+
+// Button Block
+
+$btn-block-spacing-y: 0.5rem !default;
+
+// Button Unstyled
+
+$btn-unstyled: () !default;
+$btn-unstyled: map-deep-merge(
+	(
+		background-color: rgba(0, 0, 0, 0.001),
+		border-width: 0,
+		cursor: $btn-cursor,
+		font-size: inherit,
+		font-weight: inherit,
+		line-height: inherit,
+		max-width: 100%,
+		padding: 0,
+		text-align: left,
+		text-transform: inherit,
+		vertical-align: baseline,
+		c-inner: (
+			margin: 0,
+			max-width: none,
+		),
+	),
+	$btn-unstyled
+);
+
+// Button Group
+
+$btn-group-item-margin-right: 1rem !default;
+
+// Button Toolbar
+
+$btn-toolbar-spacer-x: 0.5rem !default; // 8px
+$btn-toolbar-spacer-y: 0.125rem !default; // 2px
+
+// Button Variants
+
+$btn-primary: () !default;
+$btn-primary: map-deep-merge(
+	(
+		background-color: var(--btn-primary-background-color, var(--primary)),
+		background-image: var(--btn-primary-background-image),
+		border-color: var(--btn-primary-border-color, transparent),
+		box-shadow: var(--btn-primary-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-primary-color, var(--white)),
+		hover: (
+			background-color:
+				var(--btn-primary-hover-background-color, var(--primary-d1)),
+			background-image: var(--btn-primary-hover-background-image),
+			border-color: var(--btn-primary-hover-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-primary-hover-box-shadow, var(--btn-box-shadow)
+				),
+			color: var(--btn-primary-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-primary-focus-background-color, var(--primary-d1)
+				),
+			background-image:
+				var(--btn-primary-focus-background-image, var(--btn-primary-hover-background-image)),
+			border-color:
+				var(
+					--btn-primary-focus-border-color, transparent
+				),
+			box-shadow:
+				var(--btn-primary-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color:
+				var(--btn-primary-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(--btn-primary-active-background-color, var(--primary-d2)),
+			background-image:
+				var(--btn-primary-active-background-image),
+			border-color: var(--btn-primary-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-primary-active-box-shadow, var(--btn-box-shadow)
+				),
+			color: var(--btn-primary-active-color, var(--white)),
+			focus: (
+				box-shadow: var(--btn-primary-active-focus-box-shadow),
+			),
+		),
+		disabled: (
+			background-color:
+				var(
+					--btn-primary-disabled-background-color, var(--primary)
+				),
+			background-image:
+				var(--btn-primary-disabled-background-image),
+			border-color:
+				var(
+					--btn-primary-disabled-border-color, transparent
+				),
+			box-shadow:
+				var(
+					--btn-primary-disabled-box-shadow, var(--btn-box-shadow)
+				),
+			color: var(--btn-primary-disabled-color, var(--white)),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-primary
+);
+
+$btn-secondary: () !default;
+$btn-secondary: map-deep-merge(
+	(
+		background-color: var(--btn-secondary-background-color, var(--white)),
+		background-image: var(--btn-secondary-background-image),
+		border-color: var(--btn-secondary-border-color, var(--secondary-l2)),
+		box-shadow: var(--btn-secondary-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-secondary-color, var(--secondary)),
+		hover: (
+			background-color:
+				var(--btn-secondary-hover-background-color, var(--gray-100)),
+			background-image: var(--btn-secondary-hover-background-image),
+			border-color:
+				var(--btn-secondary-hover-border-color, var(--secondary-l2)),
+			box-shadow:
+				var(
+					--btn-secondary-hover-box-shadow,
+					var(--btn-secondary-box-shadow)
+				),
+			color: var(--btn-secondary-hover-color, var(--gray-900)),
+		),
+		focus: (
+			background-color:
+				var(--btn-secondary-focus-background-color, var(--gray-100)),
+			background-image: var(--btn-secondary-focus-background-image),
+			border-color:
+				var(--btn-secondary-focus-border-color, var(--secondary-l2)),
+			box-shadow:
+				var(
+					--btn-secondary-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-secondary-focus-color, var(--gray-900)),
+		),
+		active: (
+			background-color:
+				var(--btn-secondary-active-background-color, var(--gray-200)),
+			background-image: var(--btn-secondary-active-background-image),
+			box-shadow:
+				var(
+					--btn-secondary-active-box-shadow,
+					var(--btn-secondary-box-shadow)
+				),
+			border-color:
+				var(--btn-secondary-active-border-color, var(--secondary-l2)),
+			color: var(--btn-secondary-active-color, var(--gray-900)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(
+					--btn-secondary-disabled-background-color,
+					var(--white)
+				),
+			background-image:
+				var(
+					--btn-secondary-disabled-background-image,
+					var(--btn-secondary-background-image)
+				),
+			border-color:
+				var(
+					--btn-secondary-disabled-border-color,
+					var(--secondary-l2)
+				),
+			box-shadow:
+				var(
+					--btn-secondary-disabled-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color:
+				var(--btn-secondary-disabled-color, var(--secondary)),
+		),
+		loading-animation: null,
+	),
+	$btn-secondary
+);
+
+$btn-success: () !default;
+$btn-success: map-deep-merge(
+	(
+		background-color: var(--btn-success-background-color, var(--success)),
+		background-image: var(--btn-success-background-image),
+		border-color: var(--btn-success-border-color, transparent),
+		box-shadow: var(--btn-success-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-success-color, var(--white)),
+		hover: (
+			background-color:
+				var(--btn-success-hover-background-color, var(--success-d1)),
+			background-image:
+				var(
+					--btn-success-hover-background-image,
+					var(--btn-success-background-image)
+				),
+			border-color: var(--btn-success-hover-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-success-hover-box-shadow,
+					var(--btn-success-box-shadow)
+				),
+			color: var(--btn-success-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(--btn-success-focus-background-color, var(--success-d1)),
+			background-image:
+				var(
+					--btn-success-focus-background-image,
+					var(--btn-success-hover-background-image)
+				),
+			border-color: var(--btn-success-focus-border-color, transparent),
+			box-shadow:
+				var(--btn-success-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color: var(--btn-success-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(--btn-success-active-background-color, var(--success-d2)),
+			background-image:
+				var(
+					--btn-success-active-background-image,
+					var(--btn-success-focus-background-image)
+				),
+			border-color: var(--btn-success-active-border-color, transparent),
+			color: var(--btn-success-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(
+					--btn-success-disabled-background-color, var(--success)
+				),
+			background-image: var(--btn-success-disabled-background-image),
+			border-color:
+				var(
+					--btn-success-disabled-border-color,
+					transparent
+				),
+			box-shadow:
+				var(
+					--btn-success-disabled-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-success-disabled-color, var(--white)),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-success
+);
+
+$btn-info: () !default;
+$btn-info: map-deep-merge(
+	(
+		background-color: var(--btn-info-background-color, var(--info)),
+		background-image: var(--btn-info-background-image),
+		border-color: var(--btn-info-border-color, transparent),
+		box-shadow: var(--btn-info-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-info-color, var(--white)),
+		hover: (
+			background-color: var(--btn-info-hover-background-color, var(--info-d1)),
+			background-image: var(--btn-info-hover-background-image),
+			border-color: var(--btn-info-hover-border-color, transparent),
+			box-shadow: var(--btn-info-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-info-hover-color, $white),
+		),
+		focus: (
+			background-color: var(--btn-info-focus-background-color, var(--info-d1)),
+			background-image: var(--btn-info-focus-background-image),
+			border-color: var(--btn-info-focus-border-color, transparent),
+			box-shadow: var(--btn-info-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color: var(--btn-info-focus-color, var(--white)),
+		),
+		active: (
+			background-color: var(--btn-info-active-background-color, var(--info-d2)),
+			background-image: var(--btn-info-active-background-image),
+			border-color: var(--btn-info-active-border-color, transparent),
+			box-shadow: var(--btn-info-active-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-info-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color: var(--btn-info-disabled-background-color, var(--info)),
+			background-image: var(--btn-info-disabled-background-image),
+			border-color: var(--btn-info-disabled-border-color, transparent),
+			box-shadow: var(--btn-info-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-info-disabled-color, var(--white)),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-info
+);
+
+$btn-warning: () !default;
+$btn-warning: map-deep-merge(
+	(
+		background-color: var(--btn-warning-background-color, var(--warning)),
+		background-image: var(--btn-warning-background-image),
+		border-color: var(--btn-warning-border-color, transparent),
+		box-shadow: var(--btn-warning-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-warning-color, var(--white)),
+		hover: (
+			background-color:
+				var(--btn-warning-hover-background-color, var(--warning-d1)),
+			background-image: var(--btn-warning-hover-background-image),
+			border-color: var(--btn-warning-hover-border-color, transparent),
+			box-shadow: var(--btn-warning-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-warning-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(--btn-warning-focus-background-color, var(--warning-d1)),
+			background-image: var(--btn-warning-focus-background-image),
+			border-color: var(--btn-warning-focus-border-color, transparent),
+			box-shadow:
+				var(--btn-warning-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color: var(--btn-warning-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(--btn-warning-active-background-color, var(--warning-d2)),
+			background-image: var(--btn-warning-active-background-image),
+			border-color: var(--btn-warning-active-border-color, transparent),
+			box-shadow: var(--btn-warning-active-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-warning-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-warning-disabled-background-color, var(--warning)),
+			background-image: var(--btn-warning-disabled-background-image),
+			border-color: var(--btn-warning-disabled-border-color, transparent),
+			box-shadow: var(--btn-warning-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-warning-disabled-color, var(--white)),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-warning
+);
+
+$btn-danger: () !default;
+$btn-danger: map-deep-merge(
+	(
+		background-color: var(--btn-danger-background-color, var(--danger)),
+		background-image: var(--btn-danger-background-image),
+		border-color: var(--btn-danger-border-color, transparent),
+		box-shadow: var(--btn-danger-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-danger-color, var(--white)),
+		hover: (
+			background-color:
+				var(--btn-danger-hover-background-color, var(--danger-d1)),
+			background-image: var(--btn-danger-hover-background-image),
+			border-color: var(--btn-danger-hover-border-color, transparent),
+			box-shadow: var(--btn-danger-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-danger-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(--btn-danger-focus-background-color, var(--danger-d1)),
+			background-image: var(--btn-danger-focus-background-image),
+			border-color: var(--btn-danger-focus-border-color, transparent),
+			box-shadow:
+				var(--btn-danger-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color: var(--btn-danger-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(--btn-danger-active-background-color, var(--danger-d2)),
+			background-image: var(--btn-danger-active-background-image),
+			border-color: var(--btn-danger-active-border-color, transparent),
+			box-shadow: var(--btn-danger-active-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-danger-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-danger-disabled-background-color, var(--danger)),
+			background-image: var(--btn-danger-disabled-background-image),
+			border-color: var(--btn-danger-disabled-border-color, transparent),
+			box-shadow: var(--btn-danger-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-danger-disabled-color, var(--white)),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-danger
+);
+
+$btn-light: () !default;
+$btn-light: map-deep-merge(
+	(
+		background-color: var(--btn-light-background-color, var(--light)),
+		background-image: var(--btn-light-background-image),
+		border-color: var(--btn-light-border-color, transparent),
+		box-shadow: var(--btn-light-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-light-color, var(--gray-900)),
+		hover: (
+			background-color: var(--btn-light-hover-background-color, var(--light-d1)),
+			background-image: var(--btn-light-hover-background-image),
+			border-color: var(--btn-light-hover-border-color, transparent),
+			box-shadow: var(--btn-light-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-light-hover-color, var(--gray-900)),
+		),
+		focus: (
+			background-color: var(--btn-light-focus-background-color, var(--light-d1)),
+			background-image: var(--btn-light-focus-background-image),
+			border-color: var(--btn-light-focus-border-color, transparent),
+			box-shadow: var(--btn-light-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color: var(--btn-light-focus-color, var(--gray-900)),
+		),
+		active: (
+			background-color:
+				var(--btn-light-active-background-color, var(--light-d2)),
+			background-image: var(--btn-light-active-background-image),
+			border-color: var(--btn-light-active-border-color, transparent),
+			box-shadow: var(--btn-light-active-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-light-active-color, var(--gray-900)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color: var(--btn-light-disabled-background-color, var(--light)),
+			background-image: var(--btn-light-disabled-background-image),
+			border-color: var(--btn-light-disabled-border-color, transparent),
+			box-shadow: var(--btn-light-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-light-disabled-color, var(--gray-900)),
+		),
+	),
+	$btn-light
+);
+
+$btn-dark: () !default;
+$btn-dark: map-deep-merge(
+	(
+		background-color: var(--btn-dark-background-color, var(--dark)),
+		background-image: var(--btn-dark-background-image),
+		border-color: var(--btn-dark-border-color, transparent),
+		box-shadow: var(--btn-dark-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-dark-color, var(--white)),
+		hover: (
+			background-color: var(--btn-dark-hover-background-color, var(--dark-d1)),
+			background-image: var(--btn-dark-hover-background-image),
+			border-color: var(--btn-dark-hover-border-color, transparent),
+			box-shadow: var(--btn-dark-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-dark-hover-color, var(--white)),
+		),
+		focus: (
+			background-color: var(--btn-dark-focus-background-color, var(--dark-d1)),
+			background-image: var(--btn-dark-focus-background-image),
+			border-color: var(--btn-dark-focus-border-color, transparent),
+			box-shadow: var(--btn-dark-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color: var(--btn-dark-focus-color, var(--white)),
+		),
+		active: (
+			background-color: var(--btn-active-background-color, var(--dark-d2)),
+			background-image: var(--btn-dark-active-background-image),
+			border-color: var(--btn-active-border-color, transparent),
+			box-shadow: var(--btn-dark-active-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color: var(--btn-dark-disabled-background-color, var(--dark)),
+			background-image: var(--btn-dark-disabled-background-image),
+			border-color: var(--btn-dark-disabled-border-color, transparent),
+			box-shadow: var(--btn-dark-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-dark-disabled-color, var(--white)),
+		),
+		loading-animation: 'loading-animation-light',
+	),
+	$btn-dark
+);
+
+$btn-link-disabled-color: $link-color !default;
+
+$btn-link: () !default;
+$btn-link: map-deep-merge(
+	(
+		background-color: var(--btn-link-background-color),
+		background-image: var(--btn-link-background-image),
+		border-radius: var(--btn-link-border-radius, 1px),
+		box-shadow: var(--btn-link-box-shadow),
+		color: var(--btn-link-color, var(--link-color)),
+		font-weight: var(--btn-link-font-weight, var(--font-weight-normal)),
+		text-decoration: var(--btn-link-text-decoration, var(--link-text-decoration)),
+		hover: (
+			background-color: var(--btn-link-hover-background-color),
+			background-image: var(--btn-link-hover-background-image),
+			box-shadow: var(--btn-link-hover-box-shadow, var(--btn-link-box-shadow)),
+			color: var(--btn-link-hover-color, var(--link-hover-color)),
+			text-decoration:
+				var(--btn-link-hover-text-decoration, var(--link-hover-text-decoration)),
+		),
+		focus: (
+			background-color: var(--btn-link-focus-background-color),
+			background-image: var(--btn-link-focus-background-image),
+			box-shadow: var(--btn-link-focus-box-shadow, var(--btn-focus-box-shadow)),
+			color: var(--btn-link-focus-color, var(--link-hover-color)),
+			text-decoration:
+				var(--btn-link-focus-text-decoration, var(--link-text-decoration)),
+		),
+		active: (
+			background-color: var(--btn-link-active-background-color),
+			background-image: var(--btn-link-active-background-image),
+			box-shadow: var(--btn-link-active-box-shadow, var(--btn-link-box-shadow)),
+			color: var(--btn-link-active-color, var(--link-hover-color)),
+			text-decoration: var(--btn-link-active-text-decoration, var(--link-hover-text-decoration)),
+		),
+		disabled: (
+			background-color: var(--btn-link-disabled-color),
+			background-image: var(--btn-link-disabled-background-image),
+			box-shadow: var(--btn-link-disabled-box-shadow, var(--btn-link-box-shadow)),
+			color: var(--btn-link-disabled-color, var(--link-color)),
+			text-decoration: var(--btn-link-disabled-text-decoration, var(--link-text-decoration)),
+		),
+	),
+	$btn-link
+);
+
+$btn-palette: () !default;
+$btn-palette: map-deep-merge(
+	(
+		primary: $btn-primary,
+		secondary: $btn-secondary,
+		success: $btn-success,
+		info: $btn-info,
+		warning: $btn-warning,
+		danger: $btn-danger,
+		light: $btn-light,
+		dark: $btn-dark,
+		link: $btn-link,
+	),
+	$btn-palette
+);
+
+// Button Outline Variants
+
+$btn-outline-primary: () !default;
+$btn-outline-primary: map-deep-merge(
+	(
+		background-color: var(--btn-outline-primary-background-color),
+		background-image: var(--btn-outline-primary-background-image),
+		border-color: var(--btn-outline-primary-border-color, var(--primary)),
+		box-shadow: var(--btn-outline-primary-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-primary-color, var(--primary)),
+		hover: (
+			background-color:
+				var(--btn-outline-primary-hover-background-color, var(--primary-l3)),
+			background-image: var(--btn-outline-primary-hover-background-image),
+			border-color:
+				var(--btn-outline-primary-hover-border-color, var(--primary)),
+			box-shadow: var(--btn-outline-primary-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-primary-hover-color, var(--primary)),
+		),
+		focus: (
+			background-color:
+				var(--btn-outline-primary-focus-background-color, var(--primary-l3)),
+			background-image: var(--btn-outline-primary-focus-background-image),
+			border-color: var(--btn-outline-primary-focus-border-color),
+			box-shadow:
+				var(
+					--btn-outline-primary-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-outline-primary-focus-color, var(--primary)),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-primary-active-background-color,
+					clay-lighten(clay-desaturate($primary, 42.05), 41.76)
+				),
+			background-image: var(--btn-outline-primary-active-background-image),
+			border-color:
+				var(--btn-outline-primary-active-border-color, var(--primary)),
+			box-shadow:
+				var(
+					--btn-outline-primary-active-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-outline-primary-active-color, var(--primary)),
+			focus: (
+				box-shadow: $c-unset
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-primary-disabled-background-color),
+			background-image:
+				var(--btn-outline-primary-disabled-background-image),
+			border-color:
+				var(
+					--btn-outline-primary-disabled-border-color,
+					var(--primary)
+				),
+			box-shadow: var(--btn-outline-primary-disabled-box-shadow, var(--btn-box-shadow)),
+			color:
+				var(--btn-outline-primary-disabled-color, var(--primary)),
+		),
+	),
+	$btn-outline-primary
+);
+
+$btn-outline-secondary: () !default;
+$btn-outline-secondary: map-deep-merge(
+	(
+		background-color: var(--btn-outline-secondary-background-color),
+		background-image: var(--btn-outline-secondary-background-image),
+		border-color: var(--btn-outline-secondary-border-color, var(--secondary-l2)),
+		box-shadow: var(--btn-outline-secondary-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-secondary-color, var(--secondary)),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-secondary-hover-background-color,
+					rgba(var(--gray-900-rgb), 0.03)
+				),
+			background-image:
+				var(--btn-outline-secondary-hover-background-image),
+			border-color:
+				var(--btn-outline-secondary-hover-border-color, transparent),
+			box-shadow: var(--btn-outline-secondary-hover-box-shadow, var(--btn-box-shadow)),
+			color:
+				var(
+					--btn-outline-secondary-hover-color,
+					var(--gray-900)
+				),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-outline-secondary-focus-background-color,
+					rgba(var(--gray-900-rgb), 0.03)
+				),
+			background-image:
+				var(--btn-outline-secondary-focus-background-image),
+			border-color:
+				var(--btn-outline-secondary-focus-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-secondary-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color:
+				var(
+					--btn-outline-secondary-focus-color,
+					var(--gray-900)
+				),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-secondary-active-background-color,
+					rgba(var(--gray-900-rgb), 0.06)
+				),
+			background-image:
+				var(--btn-outline-secondary-active-background-image),
+			border-color:
+				var(--btn-outline-secondary-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-secondary-active-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color:
+				var(
+					--btn-outline-secondary-active-color,
+					var(--gray-900)
+				),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-secondary-disabled-background-color),
+			background-image:
+				var(--btn-outline-secondary-disabled-background-image),
+			border-color:
+				var(--btn-outline-secondary-disabled-border-color, var(--secondary)),
+			box-shadow: var(--btn-outline-secondary-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-secondary-disabled-color, var(--secondary)),
+		),
+	),
+	$btn-outline-secondary
+);
+
+$btn-outline-success: () !default;
+$btn-outline-success: map-deep-merge(
+	(
+		background-color: var(--btn-outline-success-background-color),
+		background-image: var(--btn-outline-success-background-image),
+		border-color: var(--btn-outline-success-border-color, var(--success)),
+		box-shadow: var(--btn-outline-success-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-success-color, var(--success)),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-success-hover-background-color,
+					var(--success-d1)
+				),
+			background-image: var(--btn-outline-success-hover-background-image),
+			border-color:
+				var(--btn-outline-success-hover-border-color, var(--success)),
+			box-shadow: var(--btn-outline-success-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-success-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-outline-success-focus-background-color,
+					var(--success-d1)
+				),
+			background-image: var(--btn-outline-success-focus-background-image),
+			border-color: var(--btn-outline-success-focus-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-success-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-outline-success-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-success-active-background-color,
+					var(--success-d2)
+				),
+			background-image: var(--btn-outline-success-active-background-image),
+			border-color:
+				var(--btn-outline-success-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-success-active-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-outline-success-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-success-disabled-background-color),
+			background-image:
+				var(--btn-outline-success-disabled-background-image),
+			border-color: var(--btn-outline-success-disabled-border-color, var(--success)),
+			box-shadow: var(--btn-outline-success-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-success-disabled-color, var(--success)),
+		),
+	),
+	$btn-outline-success
+);
+
+$btn-outline-info: () !default;
+$btn-outline-info: map-deep-merge(
+	(
+		background-color: var(--btn-outline-info-background-color),
+		background-image: var(--btn-outline-info-background-image),
+		border-color: var(--btn-outline-info-border-color, var(--info)),
+		box-shadow: var(--btn-outline-info-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-info-color, var(--info)),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-info-hover-background-color,
+					var(--info-d1)
+				),
+			background-image: var(--btn-outline-info-hover-background-image),
+			border-color: var(--btn-outline-info-hover-border-color, transparent),
+			box-shadow: var(--btn-outline-info-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-info-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-outline-info-focus-background-color,
+					var(--info-d1)
+				),
+			background-image: var(--btn-outline-info-focus-background-image),
+			border-color: var(--btn-outline-info-focus-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-info-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-outline-info-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-info-active-background-color,
+					var(--info-d2)
+				),
+			background-image: var(--btn-outline-info-active-background-image),
+			border-color: var(--btn-outline-info-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-info-active-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-outline-info-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-info-disabled-background-color),
+			background-image: var(--btn-outline-info-disabled-background-image),
+			border-color: var(--btn-outline-info-disabled-border-color, var(--info)),
+			box-shadow: var(--btn-outline-info-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-info-disabled-color, var(--info)),
+		),
+	),
+	$btn-outline-info
+);
+
+$btn-outline-warning: () !default;
+$btn-outline-warning: map-deep-merge(
+	(
+		background-color: var(--btn-outline-warning-background-color),
+		background-image: var(--btn-outline-warning-background-image),
+		border-color: var(--btn-outline-warning, var(--warning)),
+		box-shadow: var(--btn-outline-warning-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-warning, var(--warning)),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-warning-hover-background-color,
+					var(--warning-d1)
+				),
+			background-image: var(--btn-outline-warning-hover-background-image),
+			border-color:
+				var(--btn-outline-warning-hover-border-color, transparent),
+			box-shadow: var(--btn-outline-warning-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-warning-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-outline-warning-focus-background-color,
+					var(--warning-d1)
+				),
+			background-image: var(--btn-outline-warning-focus-background-image),
+			border-color: var(--btn-outline-warning-focus-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-warning-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-outline-warning-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-warning-active-background-color,
+					var(--warning-d2)
+				),
+			background-image: var(--btn-outline-warning-active-background-image),
+			border-color:
+				var(--btn-outline-warning-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-warning-active-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-outline-warning-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-warning-disabled-background-color),
+			background-image:
+				var(--btn-outline-warning-disabled-background-image),
+			border-color: var(--btn-outline-warning-disabled-border-color, var(--warning)),
+			box-shadow: var(--btn-outline-warning-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-warning-disabled-color, var(--warning)),
+		),
+	),
+	$btn-outline-warning
+);
+
+$btn-outline-danger: () !default;
+$btn-outline-danger: map-deep-merge(
+	(
+		background-color: var(--btn-outline-danger-background-color),
+		background-image: var(--btn-outline-danger-background-image),
+		border-color: var(--btn-outline-danger-border-color, var(--danger)),
+		box-shadow: var(--btn-outline-danger-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-danger-color, var(--danger)),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-danger-hover-background-color,
+					var(--danger-d1)
+				),
+			background-image: var(--btn-outline-danger-hover-background-image),
+			border-color: var(--btn-outline-danger-hover-border-color, transparent),
+			box-shadow: var(--btn-outline-danger-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-danger-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-outline-danger-focus-background-color,
+					var(--danger-d1)
+				),
+			background-image: var(--btn-outline-danger-focus-background-image),
+			border-color: var(--btn-outline-danger-focus-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-danger-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-outline-danger-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-danger-active-background-color,
+					var(--danger-d2)
+				),
+			background-image: var(--btn-outline-danger-active-background-image),
+			border-color: var(--btn-outline-danger-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-danger-active-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-outline-danger-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-danger-disabled-background-color),
+			background-image:
+				var(--btn-outline-danger-disabled-background-image),
+			border-color: var(--btn-outline-danger-disabled-border-color, var(--danger)),
+			box-shadow: var(--btn-outline-danger-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-danger-disabled-color, var(--danger)),
+		),
+	),
+	$btn-outline-danger
+);
+
+$btn-outline-light: () !default;
+$btn-outline-light: map-deep-merge(
+	(
+		background-color: var(--btn-outline-light-background-color),
+		background-image: var(--btn-outline-light-background-image),
+		border-color: var(--btn-outline-light-border-color, var(--light)),
+		box-shadow: var(--btn-outline-light-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-light-color, var(--light)),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-light-hover-background-color,
+					var(--light-d1)
+				),
+			background-image: var(--btn-outline-light-hover-background-image),
+			border-color: var(--btn-outline-light-hover-border-color, transparent),
+			box-shadow: var(--btn-outline-light-hover-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-light-hover-color, var(--gray-900)),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-outline-light-focus-background-color,
+					var(--light-d1)
+				),
+			background-image: var(--btn-outline-light-focus-background-image),
+			border-color: var(--btn-outline-light-focus-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-light-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-outline-light-focus-color, var(--gray-900)),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-light-active-background-color,
+					var(--light-d2)
+				),
+			background-image: var(--btn-outline-light-active-background-image),
+			border-color: var(--btn-outline-light-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-light-active-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-outline-light-active-color, var(--gray-900)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-light-disabled-background-color),
+			background-image: var(--btn-outline-light-disabled-background-image),
+			border-color: var(--btn-outline-light-disabled-border-color, var(--light)),
+			box-shadow: var(--btn-outline-light-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-light-disabled-color, var(--light)),
+		),
+	),
+	$btn-outline-light
+);
+
+$btn-outline-dark: () !default;
+$btn-outline-dark: map-deep-merge(
+	(
+		background-color: var(--btn-outline-dark-background-color),
+		background-image: var(--btn-outline-dark-background-image),
+		border-color: var(--btn-outline-dark-border-color, var(--dark)),
+		box-shadow: var(--btn-outline-dark-box-shadow, var(--btn-box-shadow)),
+		color: var(--btn-outline-dark-color, var(--dark)),
+		hover: (
+			background-color:
+				var(
+					--btn-outline-dark-hover-background-color,
+					var(--dark-d1)
+				),
+			background-image: var(--btn-outline-dark-hover-background-image),
+			border-color: var(--btn-outline-dark-hover-border-color, transparent),
+			box-shadow: var(--btn-outline-dark-hover-box-shadow),
+			color: var(--btn-outline-dark-hover-color, var(--white)),
+		),
+		focus: (
+			background-color:
+				var(
+					--btn-outline-dark-focus-background-color,
+					var(--dark-d1)
+				),
+			background-image: var(--btn-outline-dark-focus-background-image),
+			border-color: var(--btn-outline-dark-focus-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-dark-focus-box-shadow,
+					var(--btn-focus-box-shadow)
+				),
+			color: var(--btn-outline-dark-focus-color, var(--white)),
+		),
+		active: (
+			background-color:
+				var(
+					--btn-outline-dark-active-background-color,
+					var(--dark-d2)
+				),
+			background-image: var(--btn-outline-dark-active-background-image),
+			border-color: var(--btn-outline-dark-active-border-color, transparent),
+			box-shadow:
+				var(
+					--btn-outline-dark-active-box-shadow,
+					var(--btn-box-shadow)
+				),
+			color: var(--btn-outline-dark-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		disabled: (
+			background-color:
+				var(--btn-outline-dark-disabled-background-color),
+			background-image: var(--btn-outline-dark-disabled-background-image),
+			border-color: var(--btn-outline-dark-disabled-border-color, var(--dark)),
+			box-shadow: var(--btn-outline-dark-disabled-box-shadow, var(--btn-box-shadow)),
+			color: var(--btn-outline-dark-disabled-color, var(--dark)),
+		),
+	),
+	$btn-outline-dark
+);
+
+$btn-outline-borderless: () !default;
+$btn-outline-borderless: map-deep-merge(
+	(
+		border-color: transparent,
+		hover: (
+			border-color: transparent,
+		),
+		focus: (
+			border-color: transparent,
+		),
+		disabled: (
+			border-color: transparent,
+		),
+	),
+	$btn-outline-borderless
+);
+
+$btn-outline-palette: () !default;
+$btn-outline-palette: map-deep-merge(
+	(
+		primary: $btn-outline-primary,
+		secondary: $btn-outline-secondary,
+		success: $btn-outline-success,
+		info: $btn-outline-info,
+		warning: $btn-outline-warning,
+		danger: $btn-outline-danger,
+		light: $btn-outline-light,
+		dark: $btn-outline-dark,
+	),
+	$btn-outline-palette
+);

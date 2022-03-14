@@ -1,0 +1,673 @@
+$list-group-bg: $white !default;
+$list-group-border-color: var(--list-group-color, $gray-300) !default;
+$list-group-border-width: $border-width !default;
+
+$list-group-border-radius: var(
+	--list-group-border-radius,
+	$border-radius
+) !default;
+
+$list-group-box-shadow: var(--list-group-box-shadow) !default;
+$list-group-color: var(--list-group-color, $gray-600) !default;
+$list-group-font-size: var(--list-group-font-size, 0.875rem) !default; // 14px
+$list-group-margin-bottom: var(--list-group-margin-bottom, 1.5rem) !default;
+$list-group-margin-top: var(--list-group-margin-top) !default;
+
+// List Group Item Action
+
+$list-group-action-color: var(--list-group-action-color, $gray-700) !default;
+
+$list-group-hover-bg: var(
+	--list-group-hover-bg,
+	clay-lighten($component-active-bg, 44.9)
+) !default;
+
+$list-group-action-hover-color: var(
+	--list-group-action-hover-color,
+	$list-group-action-color
+) !default;
+
+$list-group-action-active-bg: var(
+	--list-group-action-active-bg,
+	$gray-200
+) !default;
+$list-group-action-active-color: var(
+	--list-group-action-active-color,
+	$body-color
+) !default;
+
+// List Group Item
+
+$list-group-item-padding-x: 1rem !default; // 16px
+$list-group-item-padding-y: 1rem !default; // 16px
+
+// Use values flex-start, flex-end, or center
+
+$list-group-item-flex-align-items: var(
+	--list-group-item-flex-align-items,
+	flex-start
+) !default;
+
+$list-group-item-flex-checkbox-offset-top: var(
+	--list-group-item-flex-checkbox-offset-top,
+	0.1875rem
+) !default;
+$list-group-item-flex-offset-top: 0.0625rem !default;
+$list-group-item-flex-list-group-title-offset-top: -0.25rem !default;
+
+$list-group-active-bg: var(
+	--list-group-active-background-color,
+	$list-group-hover-bg
+) !default;
+$list-group-active-border-color: var(
+	--list-group-active-border-color,
+	$list-group-border-color
+) !default;
+$list-group-active-color: var(--list-group-active-color, $gray-900) !default;
+
+$list-group-disabled-bg: var(
+	--list-group-disabled-background-color,
+	$list-group-bg
+) !default;
+$list-group-disabled-color: var(
+	--list-group-disabled-color,
+	$gray-600
+) !default;
+
+// List Group Header
+
+$list-group-header-bg: var(
+	--list-group-header-background-color,
+	$gray-100
+) !default;
+$list-group-header-padding-x: var(
+	--list-group-header-padding-x,
+	$list-group-item-padding-x
+) !default;
+$list-group-header-padding-y: var(
+	--list-group-header-padding-y,
+	0.5rem
+) !default; // 8px
+
+// .list-group-header-title
+
+$list-group-header-title: () !default;
+$list-group-header-title: map-deep-merge(
+	(
+		color: var(--list-group-header-title-color, $gray-600),
+		font-size: var(--list-group-header-title-font-size, 0.75rem),
+		font-weight:
+			var(--list-group-header-title-font-weight, $font-weight-semi-bold),
+		line-height:
+			var(--list-group-header-title-line-height, $headings-line-height),
+		margin-bottom: var(--list-group-header-title-margin-bottom, 0),
+		text-transform: var(--list-group-header-title-text-transform, uppercase),
+	),
+	$list-group-header-title
+);
+
+// .list-group-title
+
+$list-group-title-link: () !default;
+$list-group-title-link: map-deep-merge(
+	(
+		border-radius: var(--list-group-title-href-border-radius, 1px),
+		color: var(--list-group-title-href-color, $gray-900),
+		display: var(--list-group-title-href-display, inline-block),
+		max-width: var(--list-group-title-href-max-width, 100%),
+		transition:
+			var(
+				--list-group-title-href-transition,
+				box-shadow 0.15s ease-in-out
+			),
+		hover: (
+			color: var(--list-group-title-href-hover-color, $gray-900),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--list-group-title-href-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--list-group-title-href-focus-outline, 0),
+		),
+	),
+	$list-group-title-link
+);
+
+$list-group-title: () !default;
+$list-group-title: map-deep-merge(
+	(
+		color: var(--list-group-title-color, $gray-900),
+		font-size: var(--list-group-title-font-size, 0.875rem),
+		font-weight: var(--list-group-title-font-weight, $font-weight-semi-bold),
+		line-height: var(--list-group-title-line-height, 1.45),
+		margin-bottom: var(--list-group-title-margin-bottom, 0),
+		margin-top:
+			var(
+				--list-group-title-margin-top,
+				$list-group-item-flex-list-group-title-offset-top
+			),
+		href: $list-group-title-link,
+	),
+	$list-group-title
+);
+
+$list-group-title-active-color: var(
+	--list-group-title-active-color,
+	$list-group-active-color
+) !default;
+
+// .list-group-subtitle
+
+$list-group-subtitle-link: () !default;
+$list-group-subtitle-link: map-deep-merge(
+	(
+		border-radius: var(--list-group-subtitle-href-border-radius, 1px),
+		color: var(--list-group-subtitle-href-color, $gray-600),
+		display: var(--list-group-subtitle-href-display, inline-block),
+		max-width: var(--list-group-subtitle-href-max-width, 100%),
+		transition:
+			var(
+				--list-group-subtitle-href-transition,
+				box-shadow 0.15s ease-in-out
+			),
+		hover: (
+			color: var(--list-group-subtitle-href-hover-color, $gray-900),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--list-group-subtitle-href-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--list-group-subtitle-href-focus-outline, 0),
+		),
+	),
+	$list-group-subtitle-link
+);
+
+$list-group-subtitle: () !default;
+$list-group-subtitle: map-deep-merge(
+	(
+		color: var(--list-group-subtitle-color, $gray-600),
+		margin-bottom: var(--list-group-subtitle-margin-bottom, 0),
+		href: $list-group-subtitle-link,
+	),
+	$list-group-subtitle
+);
+
+// .list-group-text
+
+$list-group-text-link: () !default;
+$list-group-text-link: map-deep-merge(
+	(
+		border-radius: var(--list-group-text-href-border-radius, 1px),
+		color: var(--list-group-text-href-color, $gray-900),
+		display: var(--list-group-text-href-display, inline-block),
+		max-width: var(--list-group-text-href-max-width, 100%),
+		transition:
+			var(--list-group-text-href-transition, box-shadow 0.15s ease-in-out),
+		hover: (
+			color: var(--list-group-text-href-hover-color, $gray-900),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--list-group-text-href-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--list-group-text-href-focus-outline, 0),
+		),
+	),
+	$list-group-text-link
+);
+
+$list-group-text: () !default;
+$list-group-text: map-deep-merge(
+	(
+		color: var(--list-group-text-color, $gray-900),
+		line-height: var(--list-group-text-line-height, 1.45),
+		margin-bottom: var(--list-group-text-margin-bottom, 0),
+		href: $list-group-text-link,
+	),
+	$list-group-text
+);
+
+$list-group-text-active-color: var(
+	--list-group-text-active-color,
+	$list-group-active-color
+) !default;
+
+// .list-group-subtext
+
+$list-group-subtext-link: () !default;
+$list-group-subtext-link: map-deep-merge(
+	(
+		border-radius: var(--list-group-subtext-href-border-radius, 1px),
+		color: var(--list-group-subtext-href-color, $gray-600),
+		display: var(--list-group-subtext-href-display, inline-block),
+		max-width: var(--list-group-subtext-href-max-width, 100%),
+		transition:
+			var(
+				--list-group-subtext-href-transition,
+				box-shadow 0.15s ease-in-out
+			),
+		hover: (
+			color: var(--list-group-subtext-href-hover-color, $gray-900),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--list-group-subtext-href-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--list-group-subtext-href-focus-outline, 0),
+		),
+	),
+	$list-group-subtext-link
+);
+
+$list-group-subtext: () !default;
+$list-group-subtext: map-deep-merge(
+	(
+		color: var(--list-group-subtext-color, $gray-600),
+		line-height: var(--list-group-subtext-line-height, 1.45),
+		margin-bottom: var(--list-group-subtext-margin-bottom, 0),
+		href: $list-group-subtext-link,
+	),
+	$list-group-subtext
+);
+
+$list-group-subtext-active-color: var(
+	--list-group-subtext-active-color,
+	$gray-600
+) !default;
+
+// List Group Detail
+
+$list-group-detail-margin-bottom: var(
+	--list-group-detail-margin-bottom
+) !default;
+$list-group-detail-margin-top: var(--list-group-detail-margin-top) !default;
+
+$list-group-link-color: var(--list-group-link-color, $gray-900) !default;
+$list-group-link-hover-color: var(
+	--list-group-link-hover-color,
+	$list-group-link-color
+) !default;
+$list-group-link-active-color: var(
+	--list-group-link-active-color,
+	$list-group-link-color
+) !default;
+
+// List Group Item Variants
+
+$list-group-item-theme-colors: () !default;
+$list-group-item-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			background-color:
+				var(
+					--list-group-item-primary-background-color,
+					theme-color-level(primary, -9)
+				),
+			color:
+				var(
+					--list-group-item-primary-color,
+					theme-color-level(primary, 6)
+				),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-primary-hover-background-color,
+						clay-darken(theme-color-level(primary, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-primary-hover-color,
+						theme-color-level(primary, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-primary-active-background-color,
+						theme-color-level(primary, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-primary-active-border-color,
+						theme-color-level(primary, 6)
+					),
+				color: var(--list-group-item-primary-active-color, $white),
+			),
+		),
+		'secondary': (
+			background-color:
+				var(
+					--list-group-item-secondary-background-color,
+					theme-color-level(secondary, -9)
+				),
+			color:
+				var(
+					--list-group-item-secondary-color,
+					theme-color-level(secondary, 6)
+				),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-secondary-hover-background-color,
+						clay-darken(theme-color-level(secondary, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-secondary-hover-color,
+						theme-color-level(secondary, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-secondary-active-background-color,
+						theme-color-level(secondary, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-secondary-active-border-color,
+						theme-color-level(secondary, 6)
+					),
+				color: var(--list-group-item-secondary-active-color, $white),
+			),
+		),
+		'success': (
+			background-color:
+				var(
+					--list-group-item-success-background-color,
+					theme-color-level(success, -9)
+				),
+			color:
+				var(
+					--list-group-item-success-color,
+					theme-color-level(success, 6)
+				),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-success-hover-background-color,
+						clay-darken(theme-color-level(success, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-success-hover-color,
+						theme-color-level(success, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-success-active-background-color,
+						theme-color-level(success, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-success-active-border-color,
+						theme-color-level(success, 6)
+					),
+				color: var(--list-group-item-success-active-color, $white),
+			),
+		),
+		'info': (
+			background-color:
+				var(
+					--list-group-item-info-background-color,
+					theme-color-level(info, -9)
+				),
+			color: var(--list-group-item-info-color, theme-color-level(info, 6)),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-info-hover-background-color,
+						clay-darken(theme-color-level(info, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-info-hover-color,
+						theme-color-level(info, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-info-active-background-color,
+						theme-color-level(info, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-info-active-border-color,
+						theme-color-level(info, 6)
+					),
+				color: var(--list-group-item-info-active-color, $white),
+			),
+		),
+		'warning': (
+			background-color:
+				var(
+					--list-group-item-warning-background-color,
+					theme-color-level(warning, -9)
+				),
+			color:
+				var(
+					--list-group-item-warning-color,
+					theme-color-level(warning, 6)
+				),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-warning-hover-background-color,
+						clay-darken(theme-color-level(warning, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-warning-hover-color,
+						theme-color-level(warning, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-warning-active-background-color,
+						theme-color-level(warning, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-warning-active-border-color,
+						theme-color-level(warning, 6)
+					),
+				color: var(--list-group-item-warning-active-color, $white),
+			),
+		),
+		'danger': (
+			background-color:
+				var(
+					--list-group-item-danger-background-color,
+					theme-color-level(danger, -9)
+				),
+			color:
+				var(
+					--list-group-item-danger-color,
+					theme-color-level(danger, 6)
+				),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-danger-hover-background-color,
+						clay-darken(theme-color-level(danger, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-danger-hover-color,
+						theme-color-level(danger, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-danger-active-background-color,
+						theme-color-level(danger, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-danger-active-border-color,
+						theme-color-level(danger, 6)
+					),
+				color: var(--list-group-item-danger-active-color, $white),
+			),
+		),
+		'light': (
+			background-color:
+				var(
+					--list-group-item-light-background-color,
+					theme-color-level(light, -9)
+				),
+			color:
+				var(--list-group-item-light-color, theme-color-level(light, 6)),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-light-hover-background-color,
+						clay-darken(theme-color-level(light, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-light-hover-color,
+						theme-color-level(light, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-light-active-background-color,
+						theme-color-level(light, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-light-active-border-color,
+						theme-color-level(light, 6)
+					),
+				color: var(--list-group-item-light-active-color, $white),
+			),
+		),
+		'dark': (
+			background-color:
+				var(
+					--list-group-item-dark-background-color,
+					theme-color-level(dark, -9)
+				),
+			color: var(--list-group-item-dark-color, theme-color-level(dark, 6)),
+			hover: (
+				background-color:
+					var(
+						--list-group-item-dark-hover-background-color,
+						clay-darken(theme-color-level(dark, -9), 5%)
+					),
+				color:
+					var(
+						--list-group-item-dark-hover-color,
+						theme-color-level(dark, 6)
+					),
+			),
+			active: (
+				background-color:
+					var(
+						--list-group-item-dark-active-background-color,
+						theme-color-level(dark, 6)
+					),
+				border-color:
+					var(
+						--list-group-item-dark-active-border-color,
+						theme-color-level(dark, 6)
+					),
+				color: var(--list-group-item-dark-active-color, $white),
+			),
+		),
+	),
+	$list-group-item-theme-colors
+);
+
+// List Group Notification
+
+$list-group-notification-item-border-bottom-color: $list-group-border-color !default;
+$list-group-notification-item-border-left-color: $list-group-border-color !default;
+$list-group-notification-item-border-right-color: $list-group-border-color !default;
+$list-group-notification-item-border-top-color: $list-group-border-color !default;
+
+$list-group-notification-item-active-border-bottom-color: $list-group-active-border-color !default;
+$list-group-notification-item-active-border-left-color: $list-group-active-border-color !default;
+$list-group-notification-item-active-border-right-color: $list-group-active-border-color !default;
+$list-group-notification-item-active-border-top-color: $list-group-active-border-color !default;
+
+$list-group-notification-item-border-bottom-width: 0.0625rem !default;
+$list-group-notification-item-border-left-width: 0.0625rem !default;
+$list-group-notification-item-border-right-width: 0.0625rem !default;
+$list-group-notification-item-border-top-width: 0.0625rem !default;
+
+$list-group-notification-item: () !default;
+
+$list-group-notification-item-primary: () !default;
+$list-group-notification-item-primary: map-deep-merge(
+	(
+		border-left-color:
+			var(
+				--list-group-notification-item-primary-border-left-color,
+				clay-lighten($component-active-bg, 22.94)
+			),
+		border-left-width:
+			var(
+				--list-group-notification-item-primary-border-left-width,
+				0.5rem
+			),
+		border-bottom-left-radius:
+			var(
+				--list-group-notification-item-primary-border-bottom-left-radius,
+				0
+			),
+		border-top-left-radius:
+			var(
+				--list-group-notification-item-primary-border-top-left-radius,
+				0
+			),
+		active-border-left-color:
+			var(
+				--list-group-notification-item-primary-active-border-left-color,
+				clay-lighten($component-active-bg, 22.94)
+			),
+	),
+	$list-group-notification-item-primary
+);
+
+// List Group Sm
+
+$list-group-sm-item: () !default;
+$list-group-sm-item: map-deep-merge(
+	(
+		padding-bottom: var(--list-group-sm-item-padding-bottom, 0.40625rem),
+		padding-top: var(--list-group-sm-item-padding-top, 0.40625rem),
+	),
+	$list-group-sm-item
+);
+
+$list-group-sm-quick-action-menu: () !default;
+$list-group-sm-quick-action-menu: map-deep-merge(
+	(
+		margin-bottom:
+			var(--list-group-sm-quick-action-menu-margin-bottom, -0.40625rem),
+		margin-top:
+			var(--list-group-sm-quick-action-menu-margin-top, -0.40625rem),
+		padding-bottom:
+			var(--list-group-sm-quick-action-menu-padding-bottom, 0.40625rem),
+		padding-top:
+			var(--list-group-sm-quick-action-menu-padding-top, 0.40625rem),
+	),
+	$list-group-sm-quick-action-menu
+);

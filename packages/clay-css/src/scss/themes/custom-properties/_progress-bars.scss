@@ -1,0 +1,150 @@
+$progress-bg: var(--progress-background-color, $gray-200) !default;
+$progress-border-radius: var(--progress-border-radius, 100px) !default;
+$progress-box-shadow: var(--progress-box-shadow, none) !default;
+$progress-font-size: var(--progress-font-size, 0.5625rem) !default;
+$progress-height: var(--progress-height, 0.5rem) !default;
+$progress-min-width: var(--progress-min-width, 6.25rem) !default;
+
+$progress-bar-animation-timing: var(
+	--progress-bar-animation-timing,
+	1s linear infinite
+) !default;
+$progress-bar-bg: var(--progress-bar-background-color, $primary) !default;
+$progress-bar-box-shadow: var(--progress-bar-box-shadow, none) !default;
+$progress-bar-color: var(--progress-bar-color, $white) !default;
+$progress-bar-transition: var(
+	--progress-bar-transition,
+	width 0.6s ease
+) !default;
+
+// Progress Sizes
+
+$progress-border-radius-lg: var(--progress-lg-border-radius, 100px) !default;
+$progress-font-size-lg: var(--progress-lg-font-size, $font-size-lg) !default;
+$progress-height-lg: var(
+	--progress-lg-height,
+	calc(#{$progress-height} * 2)
+) !default;
+
+// Progress Group
+
+$progress-group-subtitle: () !default;
+$progress-group-subtitle: map-deep-merge(
+	(
+		font-size: var(--progress-group-subtitle-font-size, 0.75rem),
+		font-weight:
+			var(--progress-group-subtitle-font-weight, $font-weight-normal),
+	),
+	$progress-group-subtitle
+);
+
+$progress-group-addon-font-size: 0.875rem !default;
+$progress-group-addon-font-weight: $font-weight-semi-bold !default;
+$progress-group-addon-spacer-x: 0.25rem !default;
+
+$progress-group-addon: () !default;
+$progress-group-addon: map-deep-merge(
+	(
+		font-size:
+			var(
+				--progress-group-addon-font-size,
+				$progress-group-addon-font-size
+			),
+		font-weight:
+			var(
+				--progress-group-addon-font-weight,
+				$progress-group-addon-font-weight
+			),
+		margin-right:
+			var(
+				--progress-group-addon-margin-right,
+				$progress-group-addon-spacer-x
+			),
+		min-width: var(--progress-group-addon-min-width, 2rem),
+		text-align: var(--progress-group-addon-text-align, center),
+		first-child: (
+			padding-left:
+				var(--progress-group-addon-first-child-padding-left, 0),
+		),
+		last-child: (
+			padding-right:
+				var(--progress-group-addon-last-child-padding-right, 0),
+		),
+	),
+	$progress-group-addon
+);
+
+$progress-group-stacked-progress-margin-bottom: var(
+	--progress-group-stacked-progress-margin-bottom,
+	0.25rem
+) !default;
+$progress-group-stacked-progress-margin-top: var(
+	--progress-group-stacked-progress-margin-top,
+	0.25rem
+) !default;
+
+// Progress Variants
+
+$progress-group-feedback-color: var(
+	--progress-group-feedback-color,
+	$primary
+) !default;
+
+$progress-bar-danger-bg: var(
+	--progress-bar-danger-background-color,
+	$danger
+) !default;
+$progress-group-feedback-danger-color: var(
+	--progress-group-feedback-danger-color,
+	$progress-bar-danger-bg
+) !default;
+
+$progress-bar-info-bg: var(
+	--progress-bar-info-background-color,
+	$info
+) !default;
+$progress-group-feedback-info-color: var(
+	--progress-group-feedback-info-color,
+	$progress-bar-info-bg
+) !default;
+
+$progress-bar-success-bg: var(
+	--progress-bar-success-background-color,
+	$success
+) !default;
+$progress-group-feedback-success-color: var(
+	--progress-group-feedback-success-color,
+	$progress-bar-success-bg
+) !default;
+
+$progress-bar-warning-bg: var(
+	--progress-bar-warning-background-color,
+	$warning
+) !default;
+$progress-group-feedback-warning-color: var(
+	--progress-group-feedback-warning-color,
+	$progress-bar-warning-bg
+) !default;
+
+$progress-palette: () !default;
+$progress-palette: map-deep-merge(
+	(
+		success: (
+			bar-bg: $progress-bar-success-bg,
+			group-feedback-color: $progress-group-feedback-success-color,
+		),
+		info: (
+			bar-bg: $progress-bar-info-bg,
+			group-feedback-color: $progress-group-feedback-info-color,
+		),
+		warning: (
+			bar-bg: $progress-bar-warning-bg,
+			group-feedback-color: $progress-group-feedback-warning-color,
+		),
+		danger: (
+			bar-bg: $progress-bar-danger-bg,
+			group-feedback-color: $progress-group-feedback-danger-color,
+		),
+	),
+	$progress-palette
+);

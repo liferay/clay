@@ -1,0 +1,88 @@
+$clay-reorder: () !default;
+$clay-reorder: map-deep-merge(
+	(
+		padding: var(--clay-reorder-padding, 2px),
+		position: var(--clay-reorder-position, relative),
+		z-index: var(--clay-reorder-z-index, 0),
+	),
+	$clay-reorder
+);
+
+$clay-reorder-input-inset: () !default;
+$clay-reorder-input-inset: map-deep-merge(
+	(
+		margin-bottom: var(--clay-reorder-input-inset-margin-bottom, 0),
+		margin-top: var(--clay-reorder-input-inset-margin-top, 0),
+		overflow: var(--clay-reorder-input-inset-overflow, auto),
+		padding-bottom:
+			var(--clay-reorder-input-inset-padding-bottom, $input-padding-y),
+		padding-top:
+			var(--clay-reorder-input-inset-padding-top, $input-padding-y),
+		width: var(--clay-reorder-input-inset-width, 100%),
+		focus: (
+			background-color: var(--clay-reorder-input-inset-focus, transparent),
+			box-shadow: var(--clay-reorder-input-inset-focus, none),
+		),
+	),
+	$clay-reorder-input-inset
+);
+
+$clay-reorder-underlay: () !default;
+$clay-reorder-underlay: map-deep-merge(
+	(
+		bottom: var(--clay-reorder-underlay-bottom, 0),
+		left: var(--clay-reorder-underlay-left, 0),
+		position: var(--clay-reorder-underlay-position, absolute),
+		right: var(--clay-reorder-underlay-right, 0),
+		top: var(--clay-reorder-underlay-top, 0),
+		z-index: var(--clay-reorder-underlay-z-index, -1),
+	),
+	$clay-reorder-underlay
+);
+
+$clay-reorder-underlay-focus: () !default;
+$clay-reorder-underlay-focus: map-deep-merge(
+	(
+		background-color:
+			var(--clay-roder-underlay-focus-background-color, $input-focus-bg),
+		border-color:
+			var(
+				--clay-roder-underlay-focus-border-color,
+				$input-focus-border-color
+			),
+		box-shadow: var(--clay-roder-underlay-focus-box-shadow),
+	),
+	$clay-reorder-underlay-focus
+);
+
+$clay-reorder-footer: () !default;
+$clay-reorder-footer: map-deep-merge(
+	(
+		padding: var(--clay-roder-footer-padding, 0.5rem),
+	),
+	$clay-reorder-footer
+);
+
+$clay-reorder-footer-invisible: () !default;
+$clay-reorder-footer-invisible: map-deep-merge(
+	(
+		visibility: var(--clay-reorder-footer-invisible-visibility, hidden),
+	),
+	$clay-reorder-footer-invisible
+);
+
+$clay-reorder-footer-center: () !default;
+$clay-reorder-footer-center: map-deep-merge(
+	(
+		text-align: var(--clay-reorder-footer-center-text-align, center),
+	),
+	$clay-reorder-footer-center
+);
+
+$clay-reorder-footer-end: () !default;
+$clay-reorder-footer-end: map-deep-merge(
+	(
+		text-align: var(--clay-reorder-footer-end-text-align, right),
+	),
+	$clay-reorder-footer-end
+);

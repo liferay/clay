@@ -1,0 +1,1192 @@
+// .dropdown-toggle
+
+$dropdown-toggle: () !default;
+$dropdown-toggle: map-deep-merge(
+	(
+		white-space: var(--dropdown-toggle-white-space, nowrap),
+	),
+	$dropdown-toggle
+);
+
+// .dropdown-menu
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-bg: $white !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-color: $gray-300 !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-style: solid !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-width: 0 !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-border-radius: $border-radius !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$dropdown-inner-border-radius: $dropdown-border-radius
+	math-sign($dropdown-border-width) !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3) !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-color: $body-color !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-font-size: 0.875rem !default; // 14px
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-height: 500px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-width: 240px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-min-height: 40px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-min-width: 240px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-font-size-mobile: null !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-height-mobile: 295px !default;
+
+/// @deprecated as of v3.x use map $dropdown-menu instead
+
+$dropdown-max-width-mobile: 230px !default;
+
+$dropdown-padding-y: 0.375rem !default; // 6px
+$dropdown-spacer: 0.3125rem !default; // 5px
+
+$dropdown-menu: () !default;
+$dropdown-menu: map-deep-merge(
+	(
+		breakpoint-down: md,
+		background-clip: var(--dropdown-menu-background-clip, padding-box),
+		background-color: var(--dropdown-menu-background-color, $dropdown-bg),
+		border-color: var(--dropdown-menu-border-color, $dropdown-border-color),
+		border-radius:
+			var(
+				--dropdown-menu-border-radius,
+				clay-enable-rounded($dropdown-border-radius)
+			),
+		border-style: var(--dropdown-menu-border-style, $dropdown-border-style),
+		border-width: var(--dropdown-menu-border-width, $dropdown-border-width),
+		box-shadow:
+			var(
+				--dropdown-menu-box-shadow,
+				clay-enable-shadows($dropdown-box-shadow)
+			),
+		color: var(--dropdown-menu-color, $dropdown-color),
+		display: var(--dropdown-menu-display, none),
+		float: var(--dropdown-menu-float, left),
+		font-size: var(--dropdown-menu-font-size, $dropdown-font-size),
+		left: var(--dropdown-menu-left, 0),
+		list-style: var(--dropdown-menu-list-style, none),
+		margin: var(--dropdown-menu-margin, $dropdown-spacer 0 0),
+		max-height: var(--dropdown-menu-max-height, $dropdown-max-height),
+		max-width: var(--dropdown-menu-max-width, $dropdown-max-width),
+		min-height: var(--dropdown-menu-min-height, $dropdown-min-height),
+		min-width: var(--dropdown-menu-min-width, $dropdown-min-width),
+		overflow: var(--dropdown-menu-overflow, auto),
+		padding: var(--dropdown-menu-padding, $dropdown-padding-y 0),
+		position: var(--dropdown-menu-position, absolute),
+		text-align: var(--dropdown-menu-text-align, left),
+		top: var(--dropdown-menu-top, 100%),
+		z-index: $zindex-dropdown,
+		mobile: (
+			font-size: var(--dropdown-menu-mobile-font-size),
+			max-height:
+				var(
+					--dropdown-menu-mobile-max-height,
+					$dropdown-max-height-mobile
+				),
+			max-width:
+				var(
+					--dropdown-menu-mobile-max-width,
+					$dropdown-max-width-mobile
+				),
+		),
+		show: (
+			display: var(--dropdown-menu-show-display, block),
+		),
+	),
+	$dropdown-menu
+);
+
+// .dropdown-item
+
+$dropdown-item-padding-x: 1.25rem !default; // 20px
+$dropdown-item-padding-y: 0.5rem !default; // 8px
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-item-disabled-cursor: $disabled-cursor !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-color: $gray-600 !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-font-weight: $font-weight-normal !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-hover-color: $gray-900 !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-active-color: $dropdown-link-hover-color !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-active-font-weight: $font-weight-semi-bold !default;
+
+/// @deprecated as of v3.x use map $dropdown-item instead
+
+$dropdown-link-disabled-color: $gray-500 !default;
+
+// .dropdown-item `background-color`, `border-width`, `text-align` for `<button>`s
+
+$dropdown-item-base: () !default;
+$dropdown-item-base: map-deep-merge(
+	(
+		background-color: var(--dropdown-item-background-color, transparent),
+		border-radius: var(--dropdown-item-border-radius, 0),
+		border-width: var(--dropdown-item-border-width, 0),
+		clear: var(--dropdown-item-clear, both),
+		color: var(--dropdown-item-color, $dropdown-link-color),
+		cursor: var(--dropdown-item-cursor, $link-cursor),
+		display: var(--dropdown-item-display, block),
+		font-size: var(--dropdown-item-font-size, inherit),
+		font-weight: var(--dropdown-item-font-weight, $font-weight-normal),
+		overflow: var(--dropdown-item-overflow, hidden),
+		padding-bottom:
+			var(--dropdown-item-padding-bottom, $dropdown-item-padding-y),
+		padding-left:
+			var(--dropdown-item-padding-left, $dropdown-item-padding-x),
+		padding-right:
+			var(--dropdown-item-padding-right, $dropdown-item-padding-x),
+		padding-top: var(--dropdown-item-padding-top, $dropdown-item-padding-y),
+		position: var(--dropdown-item-position, relative),
+		text-align: var(--dropdown-item-text-align, inherit),
+		transition: var(--dropdown-item-transition, none),
+		width: var(--dropdown-item-width, 100%),
+		word-wrap: var(--dropdown-item-word-wrap, break-word),
+		hover: (
+			background-color:
+				var(
+					--dropdown-item-hover-background-color,
+					$dropdown-link-hover-bg
+				),
+			color: var(--dropdown-item-hover-color, $dropdown-link-hover-color),
+			text-decoration: var(--dropdown-item-hover-text-decoration, none),
+		),
+		focus: (
+			background-color:
+				var(
+					--dropdown-item-focus-background-color,
+					$dropdown-link-hover-bg
+				),
+			box-shadow:
+				var(
+					--dropdown-item-focus-box-shadow,
+					$component-focus-inset-box-shadow
+				),
+			color: var(--dropdown-item-focus-color, $dropdown-link-hover-color),
+			outline: var(--dropdown-item-focus-outline, 0),
+			text-decoration: var(--dropdown-item-focus-text-decoration, none),
+		),
+		active: (
+			background-color:
+				var(
+					--dropdown-item-active-background-color,
+					$dropdown-link-active-bg
+				),
+			color:
+				var(--dropdown-item-active-color, $dropdown-link-active-color),
+			text-decoration: var(--dropdown-item-active-text-decoration, none),
+		),
+		active-class: (
+			font-weight:
+				var(
+					--dropdown-item-active-class-font-weight,
+					$dropdown-link-active-font-weight
+				),
+			pointer-events:
+				var(--dropdown-item-active-class-pointer-events, none),
+			c-kbd-inline: (
+				color:
+					var(
+						--dropdown-item-active-class-c-kbd-inline-color,
+						$dropdown-link-active-color
+					),
+			),
+		),
+		disabled: (
+			background-color:
+				var(--dropdown-item-disabled-background-color, transparent),
+			box-shadow: var(--dropdown-item-disabled-box-shadow, none),
+			color:
+				var(
+					--dropdown-item-disabled-color,
+					$dropdown-link-disabled-color
+				),
+			cursor:
+				var(
+					--dropdown-item-disabled-cursor,
+					$dropdown-item-disabled-cursor
+				),
+			opacity: var(--dropdown-item-disabled-opacity, 1),
+			outline: var(--dropdown-item-disabled-outline, 0),
+			active: (
+				pointer-events:
+					var(--dropdown-item-disabled-active-pointer-events, none),
+			),
+			c-kbd-inline: (
+				color:
+					var(
+						--dropdown-item-disabled-c-kbd-inline-color,
+						$dropdown-link-disabled-color
+					),
+			),
+		),
+		c-kbd-inline: (
+			color: var(--dropdown-item-c-kbd-inline-color, $gray-500),
+			line-height:
+				var(
+					--dropdown-item-c-kbd-inline-line-height,
+					$dropdown-font-size * $line-height-base
+				),
+		),
+		'&.autofit-row': (
+			padding-left: 1rem,
+			padding-right: 1rem,
+			autofit-col: (
+				padding-left: 0.25rem,
+				padding-right: 0.25rem,
+			),
+		),
+		autofit-row: (
+			margin-left: var(--dropdown-item-autofit-row-margin-left, 0.25rem),
+			margin-right: var(--dropdown-item-autofit-row-margin-right, 0.25rem),
+			width: var(--dropdown-item-autofit-row-width, auto),
+			autofit-col: (
+				padding-left:
+					var(
+						--dropdown-item-autofit-row-autofit-col-padding-left,
+						0.25rem
+					),
+				padding-right:
+					var(
+						--dropdown-item-autofit-row-autofit-col-padding-right,
+						0.25rem
+					),
+			),
+		),
+	),
+	$dropdown-item-base
+);
+
+// .dropdown-item-text
+
+$dropdown-item-text: () !default;
+$dropdown-item-text: map-merge(
+	(
+		color:
+			var(--dropdown-item-text-color, map-get($dropdown-item-base, color)),
+		display:
+			var(
+				--dropdown-item-text-display,
+				map-get($dropdown-item-base, display)
+			),
+		font-weight:
+			var(
+				--dropdown-item-text-font-weight,
+				map-get($dropdown-item-base, font-weight)
+			),
+		padding:
+			var(
+				--dropdown-item-text-padding,
+				map-get($dropdown-item-base, padding)
+			),
+		padding-bottom:
+			var(
+				--dropdown-item-text-padding-bottom,
+				map-get($dropdown-item-base, padding-bottom)
+			),
+		padding-left:
+			var(
+				--dropdown-item-text-padding-left,
+				map-get($dropdown-item-base, padding-left)
+			),
+		padding-right:
+			var(
+				--dropdown-item-text-padding-right,
+				map-get($dropdown-item-base, padding-right)
+			),
+		padding-top:
+			var(
+				--dropdown-item-text-padding-top,
+				map-get($dropdown-item-base, padding-top)
+			),
+	),
+	$dropdown-item-text
+);
+
+// .dropdown-header
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-color: $gray-900 !default;
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-font-size: 0.875rem !default; // 14px
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-margin-bottom: null !default;
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-margin-top: 0.625rem !default; // 10px
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-padding-x: $dropdown-item-padding-x !default;
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-padding-y: $dropdown-padding-y !default;
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-text-transform: null !default;
+
+/// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-font-size-mobile: null !default;
+
+$dropdown-header: () !default;
+$dropdown-header: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		color: var(--dropdown-header-color, $dropdown-header-color),
+		display: var(--dropdown-header-display, block),
+		font-size: var(--dropdown-header-font-size, $dropdown-header-font-size),
+		margin-bottom: var(--dropdown-header-margin-bottom),
+		margin-top:
+			var(--dropdown-header-margin-top, $dropdown-header-margin-top),
+		padding-bottom:
+			var(--dropdown-header-padding-bottom, $dropdown-header-padding-y),
+		padding-left:
+			var(--dropdown-header-padding-left, $dropdown-header-padding-x),
+		padding-right:
+			var(--dropdown-header-padding-right, $dropdown-header-padding-x),
+		padding-top:
+			var(--dropdown-header-padding-top, $dropdown-header-padding-y),
+		position: var(--dropdown-header-position, relative),
+		text-transform:
+			var(
+				--dropdown-header-text-transform,
+				var(--dropdown-header-text-transform)
+			),
+		word-wrap: var(--dropdown-header-word-wrap, break-word),
+		mobile: (
+			font-size: var(--dropdown-header-mobile-font-size),
+		),
+		first-child: (
+			margin-top: var(--dropdown-header-first-child-margin-top, 0),
+		),
+	),
+	$dropdown-header
+);
+
+// .dropdown-subheader
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-color: $dropdown-header-color !default;
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-font-size: 0.75rem !default; // 12px
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-font-weight: $font-weight-semi-bold !default;
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-margin-bottom: null !default;
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-margin-top: 0.625rem !default; // 10px
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-padding-x: $dropdown-header-padding-x !default;
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-padding-y: $dropdown-header-padding-y !default;
+
+/// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-text-transform: uppercase !default;
+
+$dropdown-subheader: () !default;
+$dropdown-subheader: map-deep-merge(
+	(
+		color: var(--dropdown-subheader-color, $dropdown-subheader-color),
+		font-size:
+			var(--dropdown-subheader-font-size, $dropdown-subheader-font-size),
+		font-weight:
+			var(
+				--dropdown-subheader-font-weight,
+				$dropdown-subheader-font-weight
+			),
+		margin-bottom: var(--dropdown-subheader-margin-bottom),
+		margin-top:
+			var(--dropdown-subheader-margin-top, $dropdown-subheader-margin-top),
+		padding-bottom:
+			var(
+				--dropdown-subheader-padding-bottom,
+				$dropdown-subheader-padding-y
+			),
+		padding-left:
+			var(
+				--dropdown-subheader-padding-left,
+				$dropdown-subheader-padding-x
+			),
+		padding-right:
+			var(
+				--dropdown-subheader-padding-right,
+				$dropdown-subheader-padding-x
+			),
+		padding-top:
+			var(--dropdown-subheader-padding-top, $dropdown-subheader-padding-y),
+		text-transform:
+			var(
+				--dropdown-subheader-text-transform,
+				$dropdown-subheader-text-transform
+			),
+		white-space: var(--dropdown-subheader-white-space, normal),
+		word-wrap: var(--dropdown-subheader-word-wrap, break-word),
+		first-child: (
+			margin-top: var(--dropdown-subheader-first-child-margin-top, 0),
+		),
+	),
+	$dropdown-subheader
+);
+
+// .dropdown-caption
+
+/// @deprecated as of v3.x use map $dropdown-caption instead
+
+$dropdown-caption-color: $gray-600 !default;
+
+/// @deprecated as of v3.x use map $dropdown-caption instead
+
+$dropdown-caption-font-size: 0.875rem !default; // 14px
+
+/// @deprecated as of v3.x use map $dropdown-caption instead
+
+$dropdown-caption-font-weight: null !default;
+
+$dropdown-caption: () !default;
+$dropdown-caption: map-merge(
+	(
+		color: var(--dropdown-caption-color, $dropdown-caption-color),
+		font-size:
+			var(--dropdown-caption-font-size, $dropdown-caption-font-size),
+		font-weight: var(--dropdown-caption-font-weight),
+		padding:
+			var(
+				--dropdown-caption-padding,
+				$dropdown-item-padding-y $dropdown-item-padding-x
+			),
+		white-space: var(--dropdown-caption-white-space, normal),
+		word-wrap: var(--dropdown-caption-word-wrap, break-word),
+	),
+	$dropdown-caption
+);
+
+// .dropdown-divider
+
+/// @deprecated as of v3.x use map $dropdown-divider instead
+
+$dropdown-divider-bg: $dropdown-border-color !default;
+
+/// @deprecated as of v3.x use map $dropdown-divider instead
+
+$dropdown-divider-margin-y: $spacer * 0.5 !default;
+
+$dropdown-divider: () !default;
+$dropdown-divider: map-merge(
+	(
+		background-color:
+			var(--dropdown-divider-background-color, $dropdown-divider-bg),
+		border-top:
+			var(--dropdown-divider-border-top, 1px solid $dropdown-divider-bg),
+		height: var(--dropdown-divider-height, 0),
+		margin: var(--dropdown-divider-margin, $dropdown-divider-margin-y 0),
+		overflow: var(--dropdown-divider-overflow, hidden),
+	),
+	$dropdown-divider
+);
+
+// .dropdown-section
+
+/// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-custom-control: () !default;
+$dropdown-section-custom-control: map-deep-merge(
+	(
+		margin-bottom: var(--dropdown-section-custom-control-margin-bottom, 0),
+	),
+	$dropdown-section-custom-control
+);
+
+/// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-custom-control-label: () !default;
+$dropdown-section-custom-control-label: map-deep-merge(
+	(
+		color: var(--dropdown-section-custom-control-label-color, $secondary),
+	),
+	$dropdown-section-custom-control-label
+);
+
+/// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-custom-control-label-text: () !default;
+$dropdown-section-custom-control-label-text: map-deep-merge(
+	(
+		padding-left:
+			var(--dropdown-section-custom-control-label-text-padding-left, 1rem),
+	),
+	$dropdown-section-custom-control-label-text
+);
+
+/// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-active-custom-control-label: () !default;
+$dropdown-section-active-custom-control-label: map-deep-merge(
+	(
+		color:
+			var(--dropdown-section-active-custom-control-label-color, $gray-900),
+	),
+	$dropdown-section-active-custom-control-label
+);
+
+$dropdown-section: () !default;
+$dropdown-section: map-deep-merge(
+	(
+		padding:
+			var(
+				--dropdown-section-padding,
+				$dropdown-item-padding-y $dropdown-item-padding-x
+			),
+		form-group: (
+			form-group: (
+				margin-top:
+					var(
+						--dropdown-section-form-group-form-group-margin-top,
+						$dropdown-item-padding-y * 2
+					),
+			),
+		),
+		custom-control: $dropdown-section-custom-control,
+		custom-control-label: $dropdown-section-custom-control-label,
+		custom-control-label-text: $dropdown-section-custom-control-label-text,
+		active: (
+			custom-control-label: $dropdown-section-active-custom-control-label,
+		),
+	),
+	$dropdown-section
+);
+
+// .dropdown-footer
+
+$dropdown-footer: () !default;
+$dropdown-footer: map-merge(
+	(
+		box-shadow:
+			var(
+				--dropdown-footer-box-shadow,
+				-1px -2px 3px -3px rgba(0, 0, 0, 0.5)
+			),
+		padding:
+			var(--dropdown-footer-padding, 0.5rem $dropdown-item-padding-x 0),
+		position: var(--dropdown-footer-position, relative),
+	),
+	$dropdown-footer
+);
+
+// Dropdown Inline Scroller
+
+$dropdown-inline-scroller-max-height: 200px !default;
+$dropdown-inline-scroller-max-height-mobile: none !default;
+
+// Dropdown Item Indicator
+
+$dropdown-item-indicator-size: 1rem !default;
+$dropdown-item-indicator-spacer-x: 1rem !default;
+
+$dropdown-item-indicator-start: () !default;
+$dropdown-item-indicator-start: map-deep-merge(
+	(
+		align-items: var(--dropdown-item-indicator-start-align-items, center),
+		color: var(--dropdown-item-indicator-start-color, inherit),
+		display: var(--dropdown-item-indicator-start-display, inline-flex),
+		height:
+			var(
+				--dropdown-item-indicator-start-height,
+				$dropdown-item-indicator-size
+			),
+		justify-content:
+			var(--dropdown-item-indicator-start-justify-content, center),
+		left:
+			var(--dropdown-item-indicator-start-left, $dropdown-item-padding-x),
+		position: var(--dropdown-item-indicator-start-position, absolute),
+		right: var(--dropdown-item-indicator-start-right, auto),
+		top:
+			var(
+				--dropdown-item-indicator-start-top,
+				calc(
+					#{$dropdown-item-padding-y} - ((
+									#{$dropdown-item-indicator-size} - (1em * #{$line-height-base})
+								) / 2)
+				)
+			),
+		width:
+			var(
+				--dropdown-item-indicator-start-width,
+				$dropdown-item-indicator-size
+			),
+		lexicon-icon: (
+			margin-top: var(--dropdown-item-indicator-start-lexicon-icon, 0),
+		),
+	),
+	$dropdown-item-indicator-start
+);
+
+$dropdown-item-indicator-text-start: () !default;
+$dropdown-item-indicator-text-start: map-deep-merge(
+	(
+		color: var(--dropdown-item-indicator-text-start-color, inherit),
+		display: var(--dropdown-item-indicator-text-start-display, block),
+		padding-left:
+			var(
+				--dropdown-item-indicator-text-start-padding-left,
+				$dropdown-item-indicator-size +
+					$dropdown-item-indicator-spacer-x
+			),
+		text-decoration:
+			var(--dropdown-item-indicator-text-start-text-decoration, inherit),
+		width: var(--dropdown-item-indicator-text-start-width, 100%),
+		hover: (
+			color:
+				var(--dropdown-item-indicator-text-start-hover-color, inherit),
+			text-decoration:
+				var(
+					--dropdown-item-indicator-text-start-hover-text-decoration,
+					inherit
+				),
+		),
+		focus: (
+			color:
+				var(--dropdown-item-indicator-text-start-focus-color, inherit),
+			text-decoration:
+				var(
+					--dropdown-item-indicator-text-start-focus-text-decoration,
+					inherit
+				),
+		),
+	),
+	$dropdown-item-indicator-text-start
+);
+
+$dropdown-item-indicator-end: () !default;
+$dropdown-item-indicator-end: map-deep-merge(
+	(
+		align-items: var(--dropdown-item-indicator-end-align-items, center),
+		color: var(--dropdown-item-indicator-end-color, inherit),
+		display: var(--dropdown-item-indicator-end-display, inline-flex),
+		height:
+			var(
+				--dropdown-item-indicator-end-height,
+				$dropdown-item-indicator-size
+			),
+		justify-content:
+			var(--dropdown-item-indicator-end-justify-content, center),
+		left: var(--dropdown-item-indicator-end-left, auto),
+		position: var(--dropdown-item-indicator-end-position, absolute),
+		right:
+			var(--dropdown-item-indicator-end-right, $dropdown-item-padding-x),
+		top:
+			var(
+				--dropdown-item-indicator-end-top,
+				calc(
+					#{$dropdown-item-padding-y} - ((
+									#{$dropdown-item-indicator-size} - (1em * #{$line-height-base})
+								) / 2)
+				)
+			),
+		width:
+			var(
+				--dropdown-item-indicator-end-width,
+				$dropdown-item-indicator-size
+			),
+		lexicon-icon: (
+			margin-top:
+				var(--dropdown-item-indicator-end-lexicon-icon-margin-top, 0),
+		),
+	),
+	$dropdown-item-indicator-end
+);
+
+$dropdown-item-indicator-text-end: () !default;
+$dropdown-item-indicator-text-end: map-deep-merge(
+	(
+		color: var(--dropdown-item-indicator-text-end-color, inherit),
+		display: var(--dropdown-item-indicator-text-end-display, block),
+		padding-right:
+			var(
+				--dropdown-item-indicator-text-end-padding-right,
+				$dropdown-item-indicator-size +
+					$dropdown-item-indicator-spacer-x
+			),
+		text-decoration:
+			var(--dropdown-item-indicator-text-end-text-decoration, inherit),
+		width: var(--dropdown-item-indicator-text-end-width, 100%),
+		hover: (
+			color: var(--dropdown-item-indicator-text-end-hover-color, inherit),
+			text-decoration:
+				var(
+					--dropdown-item-indicator-text-end-hover-text-decoration,
+					inherit
+				),
+		),
+		focus: (
+			color: var(--dropdown-item-indicator-text-end-focus-color, inherit),
+			text-decoration:
+				var(
+					--dropdown-item-indicator-text-end-focus-text-decoration,
+					inherit
+				),
+		),
+	),
+	$dropdown-item-indicator-text-end
+);
+
+// .dropdown-menu-top
+
+$dropdown-menu-top: () !default;
+$dropdown-menu-top: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-top-bottom, 100% !important),
+		left: var(--dropdown-menu-top-left, 0 !important),
+		margin-top: var(--dropdown-menu-top-margin-top, 0),
+		margin-bottom: var(--dropdown-menu-top-margin-bottom, $dropdown-spacer),
+		right: var(--dropdown-menu-top-right, auto !important),
+		top: var(--dropdown-menu-top-top, auto !important),
+		transform: var(--dropdown-menu-top-transform, none !important),
+		will-change: var(--dropdown-menu-top-will-change, auto !important),
+	),
+	$dropdown-menu-top
+);
+
+// .dropdown-menu-top-right
+
+$dropdown-menu-top-right: () !default;
+$dropdown-menu-top-right: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-top-right-bottom, 100% !important),
+		left: var(--dropdown-menu-top-right-left, auto !important),
+		margin-top: var(--dropdown-menu-top-right-margin-top, 0),
+		margin-bottom:
+			var(--dropdown-menu-top-right-margin-bottom, $dropdown-spacer),
+		right: var(--dropdown-menu-top-right-right, 0 !important),
+		top: var(--dropdown-menu-top-right-top, auto !important),
+		transform: var(--dropdown-menu-top-right-transform, none !important),
+		will-change: var(--dropdown-menu-top-right-will-change, auto !important),
+	),
+	$dropdown-menu-top-right
+);
+
+// .dropdown-menu-top-center
+
+$dropdown-menu-top-center: () !default;
+$dropdown-menu-top-center: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-top-center-bottom, 100% !important),
+		left: var(--dropdown-menu-top-center-left, 50% !important),
+		margin-top: var(--dropdown-menu-top-center-margin-top, 0),
+		margin-bottom:
+			var(--dropdown-menu-top-center-margin-bottom, $dropdown-spacer),
+		right: var(--dropdown-menu-top-center-right, auto !important),
+		top: var(--dropdown-menu-top-center-top, auto !important),
+		transform:
+			var(
+				--dropdown-menu-top-center-transform,
+				translateX(-50%) !important
+			),
+		will-change:
+			var(--dropdown-menu-top-center-will-change, auto !important),
+	),
+	$dropdown-menu-top-center
+);
+
+// .dropdown-menu-center
+
+$dropdown-menu-center: () !default;
+$dropdown-menu-center: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-center-bottom, auto !important),
+		left: var(--dropdown-menu-center-left, 50% !important),
+		right: var(--dropdown-menu-center-right, auto !important),
+		top: var(--dropdown-menu-center-top, 100% !important),
+		transform:
+			var(--dropdown-menu-center-transform, translateX(-50%) !important),
+		will-change: var(--dropdown-menu-center-will-change, auto !important),
+	),
+	$dropdown-menu-center
+);
+
+// .dropdown-menu-left-side
+
+$dropdown-menu-left-side: () !default;
+$dropdown-menu-left-side: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-left-side-bottom, auto !important),
+		left: var(--dropdown-menu-left-side-left, auto !important),
+		margin-right:
+			var(--dropdown-menu-left-side-margin-right, $dropdown-spacer),
+		margin-top: var(--dropdown-menu-left-side-margin-top, 0),
+		right: var(--dropdown-menu-left-side-right, 100% !important),
+		top: var(--dropdown-menu-left-side-top, 0 !important),
+		transform: var(--dropdown-menu-left-side-transform, none !important),
+		will-change: var(--dropdown-menu-left-side-will-change, auto !important),
+	),
+	$dropdown-menu-left-side
+);
+
+// .dropdown-menu-left-side-bottom
+
+$dropdown-menu-left-side-bottom: () !default;
+$dropdown-menu-left-side-bottom: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-left-side-bottom-bottom, 0 !important),
+		left: var(--dropdown-menu-left-side-bottom-left, auto !important),
+		margin-right:
+			var(--dropdown-menu-left-side-bottom-margin-right, $dropdown-spacer),
+		margin-top: var(--dropdown-menu-left-side-bottom-margin-top, 0),
+		right: var(--dropdown-menu-left-side-bottom-right, 100% !important),
+		top: var(--dropdown-menu-left-side-bottom-top, auto !important),
+		transform:
+			var(--dropdown-menu-left-side-bottom-transform, none !important),
+		will-change:
+			var(--dropdown-menu-left-side-bottom-will-change, auto !important),
+	),
+	$dropdown-menu-left-side-bottom
+);
+
+// .dropdown-menu-left-side-middle
+
+$dropdown-menu-left-side-middle: () !default;
+$dropdown-menu-left-side-middle: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-left-side-middle-bottom, auto !important),
+		left: var(--dropdown-menu-left-side-middle-left, auto !important),
+		margin-right:
+			var(--dropdown-menu-left-side-middle-margin-right, $dropdown-spacer),
+		margin-top: var(--dropdown-menu-left-side-middle-margin-top, 0),
+		right: var(--dropdown-menu-left-side-middle-right, 100% !important),
+		top: var(--dropdown-menu-left-side-middle-top, 50% !important),
+		transform:
+			var(
+				--dropdown-menu-left-side-middle-transform,
+				translate(0, -50%) !important
+			),
+		will-change:
+			var(--dropdown-menu-left-side-middle-will-change, auto !important),
+	),
+	$dropdown-menu-left-side-middle
+);
+
+// .dropdown-menu-right-side
+
+$dropdown-menu-right-side: () !default;
+$dropdown-menu-right-side: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-right-side-bottom, auto !important),
+		left: var(--dropdown-menu-right-side-left, 100% !important),
+		margin-left:
+			var(--dropdown-menu-right-side-margin-left, $dropdown-spacer),
+		margin-top: var(--dropdown-menu-right-side-margin-top, 0),
+		right: var(--dropdown-menu-right-side-right, auto !important),
+		top: var(--dropdown-menu-right-side-top, 0 !important),
+		transform: var(--dropdown-menu-right-side-transform, none !important),
+		will-change:
+			var(--dropdown-menu-right-side-will-change, auto !important),
+	),
+	$dropdown-menu-right-side
+);
+
+// .dropdown-menu-right-side-bottom
+
+$dropdown-menu-right-side-bottom: () !default;
+$dropdown-menu-right-side-bottom: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-right-side-bottom-bottom, 0 !important),
+		left: var(--dropdown-menu-right-side-bottom-left, 100% !important),
+		margin-left:
+			var(--dropdown-menu-right-side-bottom-margin-left, $dropdown-spacer),
+		margin-top: var(--dropdown-menu-right-side-bottom-margin-top, 0),
+		right: var(--dropdown-menu-right-side-bottom-right, auto !important),
+		top: var(--dropdown-menu-right-side-bottom-top, auto !important),
+		transform:
+			var(--dropdown-menu-right-side-bottom-transform, none !important),
+		will-change:
+			var(--dropdown-menu-right-side-bottom-will-change, auto !important),
+	),
+	$dropdown-menu-right-side-bottom
+);
+
+// .dropdown-menu-right-side-middle
+
+$dropdown-menu-right-side-middle: () !default;
+$dropdown-menu-right-side-middle: map-deep-merge(
+	(
+		bottom: var(--dropdown-menu-right-side-middle-bottom, auto !important),
+		left: var(--dropdown-menu-right-side-middle-left, 100% !important),
+		margin-left:
+			var(--dropdown-menu-right-side-middle-margin-left, $dropdown-spacer),
+		margin-top: var(--dropdown-menu-right-side-middle-margin-top, 0),
+		right: var(--dropdown-menu-right-side-middle-right, auto !important),
+		top: var(--dropdown-menu-right-side-middle-top, 50% !important),
+		transform:
+			var(
+				--dropdown-menu-right-side-middle-transform,
+				translate(0, -50%) !important
+			),
+		will-change:
+			var(--dropdown-menu-right-side-middle-will-change, auto !important),
+	),
+	$dropdown-menu-right-side-middle
+);
+
+// .dropdown-full, .dropdown-wide
+
+$dropdown-full-wide-header-spacer-y: 20px !default;
+
+// .dropdown-wide
+
+$dropdown-wide-width: 500px !default;
+
+// .dropdown-menu-width-shrink
+
+$dropdown-menu-width-shrink: () !default;
+$dropdown-menu-width-shrink: map-deep-merge(
+	(
+		min-width: var(--dropdown-menu-width-shrink-min-width, 0),
+		white-space: var(--dropdown-menu-width-shrink-white-space, nowrap),
+	),
+	$dropdown-menu-width-shrink
+);
+
+// .dropdown-menu-width-full
+
+$dropdown-menu-width-full: () !default;
+$dropdown-menu-width-full: map-merge(
+	(
+		left: var(--dropdown-menu-width-full, 12px !important),
+		right: var(--dropdown-menu-width-full, 12px !important),
+		max-width: var(--dropdown-menu-width-full, none),
+		min-width: var(--dropdown-menu-width-full, 0),
+		width: var(--dropdown-menu-width-full, calc(100% - 24px)),
+	),
+	$dropdown-menu-width-full
+);
+
+// .dropdown-menu-width-sm
+
+$dropdown-menu-width-sm: () !default;
+$dropdown-menu-width-sm: map-merge(
+	(
+		max-width: var(--dropdown-menu-width-sm-max-width, none),
+		min-width: var(--dropdown-menu-width-sm-min-width, 0),
+		width: var(--dropdown-menu-width-sm-width, 500px),
+	),
+	$dropdown-menu-width-sm
+);
+
+$dropdown-menu-width-sm-sm-down: () !default;
+$dropdown-menu-width-sm-sm-down: map-merge(
+	(
+		left: var(--dropdown-menu-width-sm-sm-down-left, 12px !important),
+		right: var(--dropdown-menu-width-sm-sm-down-right, 12px !important),
+		width: var(--dropdown-menu-width-sm-sm-down-width, calc(100% - 24px)),
+	),
+	$dropdown-menu-width-sm-sm-down
+);
+
+// Dropdown Menu Height
+
+$dropdown-menu-height-auto: () !default;
+$dropdown-menu-height-auto: map-merge(
+	(
+		height: var(--dropdown-menu-height-auto-height, auto),
+		max-height: var(--dropdown-menu-height-auto-max-height, none),
+		min-height: var(--dropdown-menu-height-auto-min-height, 0),
+	),
+	$dropdown-menu-height-auto
+);
+
+// Autocomplete Dropdown Menu
+
+$autocomplete-dropdown-menu: () !default;
+$autocomplete-dropdown-menu: map-deep-merge(
+	(
+		max-height: var(--autocomplete-dropdown-menu-max-height, 10rem),
+		max-width: var(--autocomplete-dropdown-menu-max-width, none),
+		width: var(--autocomplete-dropdown-menu-width, 100%),
+	),
+	$autocomplete-dropdown-menu
+);
+
+// .dropdown-action
+
+/// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-border-radius: $border-radius !default;
+
+/// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-font-size: 1rem !default; // 16px
+
+/// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-disabled-cursor: $disabled-cursor !default;
+
+/// @deprecated as of v3.x use map $dropdown-action instead
+
+$dropdown-action-toggle-disabled-opacity: $btn-disabled-opacity !default;
+
+$dropdown-action-toggle-size: $btn-monospaced-size-sm !default;
+
+$dropdown-action: () !default;
+$dropdown-action: map-deep-merge(
+	(
+		display: var(--dropdown-action-display, inline-block),
+		font-size:
+			var(--dropdown-action-font-size, $dropdown-action-toggle-font-size),
+		vertical-align: var(--dropdown-action-vertical-align, middle),
+		dropdown-toggle: (
+			align-items:
+				var(--dropdown-action-dropdown-toggle-align-items, center),
+			border-radius:
+				var(
+					--dropdown-action-dropdown-toggle-border-radius,
+					clay-enable-rounded($dropdown-action-toggle-border-radius)
+				),
+			cursor: var(--dropdown-action-dropdown-toggle-cursor, $btn-cursor),
+			display: var(--dropdown-action-dropdown-toggle-display, flex),
+			font-size:
+				var(
+					--dropdown-action-dropdown-toggle-font-size,
+					$dropdown-action-toggle-font-size
+				),
+			font-weight:
+				var(--dropdown-action-dropdown-toggle-font-weight, inherit),
+			height:
+				var(
+					--dropdown-action-dropdown-toggle-height,
+					$dropdown-action-toggle-size
+				),
+			justify-content:
+				var(--dropdown-action-dropdown-toggle-justify-content, center),
+			line-height:
+				var(
+					--dropdown-action-dropdown-toggle-line-height,
+					$dropdown-action-toggle-size
+				),
+			padding: var(--dropdown-action-dropdown-toggle-padding, 0),
+			text-transform:
+				var(--dropdown-action-dropdown-toggle-text-transform, inherit),
+			vertical-align:
+				var(--dropdown-action-dropdown-toggle-vertical-align, baseline),
+			width:
+				var(
+					--dropdown-action-dropdown-toggle-width,
+					$dropdown-action-toggle-size
+				),
+			disabled: (
+				cursor:
+					var(
+						--dropdown-action-dropdown-toggle-disabled-cursor,
+						$dropdown-action-toggle-disabled-cursor
+					),
+				opacity:
+					var(
+						--dropdown-action-dropdown-toggle-disabled-opacity,
+						$dropdown-action-toggle-disabled-opacity
+					),
+			),
+			lexicon-icon: (
+				margin-top: var(--dropdown-action-lexicon-icon-margin-top, 0),
+			),
+			inline-item: (
+				lexicon-icon: (
+					margin-top:
+						var(
+							--dropdown-action-inline-item-lexicon-icon-margin-top,
+							0
+						),
+				),
+			),
+		),
+	),
+	$dropdown-action
+);
+
+// Alert inside Dropdowns
+
+$dropdown-alert-font-size: null !default;
+$dropdown-alert-line-height: normal !default;
+$dropdown-alert-margin: $spacer * 0.5 !default;
+$dropdown-alert-padding-x: $dropdown-header-padding-x !default;
+$dropdown-alert-padding-y: $dropdown-header-padding-y !default;

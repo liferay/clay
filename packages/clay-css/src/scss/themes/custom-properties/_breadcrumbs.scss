@@ -1,0 +1,98 @@
+$breadcrumb-bg: var(--breadcrumb-background-color, transparent) !default;
+$breadcrumb-border-radius: var(
+	--breadcrumb-border-radius,
+	$border-radius
+) !default;
+$breadcrumb-font-size: var(--breadcrumb-font-size, 0.875rem) !default; // 14px
+$breadcrumb-font-weight: var(--breadcrumb-font-weight) !default;
+$breadcrumb-margin-bottom: var(--breadcrumb-margin-bottom, 0) !default;
+$breadcrumb-padding-x: var(--breadcrumb-padding-x, 0.125rem) !default; // 2px
+$breadcrumb-padding-y: var(--breadcrumb-padding-y, 0.59375rem) !default;
+$breadcrumb-text-transform: var(--breadcrumb-text-transform) !default;
+
+// Breadcrumb Item
+
+$breadcrumb-item-padding: var(--breadcrumb-item-padding, 0.5rem) !default;
+
+$breadcrumb-active-color: var(
+	--breadcrumb-item-active-color,
+	$gray-900
+) !default;
+$breadcrumb-active-font-weight: var(
+	--breadcrumb-item-active-font-weight,
+	$font-weight-semi-bold
+) !default;
+
+// Breadcrumb Text Truncate
+
+$breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default;
+$breadcrumb-text-truncate-max-width: var(
+	--breadcrumb-text-truncate-max-width,
+	18.75rem - $breadcrumb-text-truncate-icon-spacer-x
+) !default;
+$breadcrumb-text-truncate-max-width-mobile: var(
+	--breadcrumb-text-truncate-mobile-max-width,
+	9.375rem - $breadcrumb-text-truncate-icon-spacer-x
+) !default;
+
+// Breadcrumb Link
+
+$breadcrumb-link-color: $gray-600 !default;
+$breadcrumb-link-text-decoration: $link-decoration !default;
+
+$breadcrumb-link-hover-color: $breadcrumb-link-color !default;
+$breadcrumb-link-hover-text-decoration: $link-hover-decoration !default;
+
+$breadcrumb-link: () !default;
+$breadcrumb-link: map-deep-merge(
+	(
+		border-radius: var(--breadcrumb-link-border-radius, 1px),
+		color: var(--breadcrumb-link-color, $breadcrumb-link-color),
+		display: var(--breadcrumb-link-display, block),
+		text-decoration:
+			var(
+				--breadcrumb-link-text-decoration,
+				$breadcrumb-link-text-decoration
+			),
+		text-transform:
+			var(--breadcrumb-link-text-transform, $breadcrumb-text-transform),
+		transition:
+			var(--breadcrumb-link-transition, box-shadow 0.15s ease-in-out),
+		hover: (
+			color:
+				var(--breadcrumb-link-hover-color, $breadcrumb-link-hover-color),
+			text-decoration:
+				var(
+					--breadcrumb-link-hover-text-decoration,
+					$breadcrumb-link-hover-text-decoration
+				),
+		),
+		focus: (
+			box-shadow:
+				var(--breadcrumb-link-focus, $component-focus-box-shadow),
+			color: var(--breadcrumb-link-focus, $breadcrumb-link-hover-color),
+			outline: var(--breadcrumb-link-focus, 0),
+			text-decoration:
+				var(
+					--breadcrumb-link-focus,
+					$breadcrumb-link-hover-text-decoration
+				),
+		),
+	),
+	$breadcrumb-link
+);
+
+// Breadcrumb Divider
+
+$breadcrumb-divider: quote('/') !default;
+
+$breadcrumb-divider-color: $breadcrumb-link-color !default;
+$breadcrumb-divider-font-family: null !default;
+$breadcrumb-divider-font-weight: null !default;
+
+$breadcrumb-divider-svg-icon: clay-icon(
+	angle-right,
+	$breadcrumb-divider-color
+) !default;
+$breadcrumb-divider-svg-icon-height: 0.6em !default;
+$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;

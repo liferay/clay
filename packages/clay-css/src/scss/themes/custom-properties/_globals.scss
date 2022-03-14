@@ -1,0 +1,902 @@
+// The keyword `clay-unset` allows unsetting a css value so it doesn't get output in the final css file.
+
+$clay-unset: clay-unset !default;
+
+// An alias for `$clay-unset`
+
+$c-unset: $clay-unset !default;
+
+$clay-unset-placeholder: clay-unset-placeholder !default;
+
+// Settings
+
+$atlas-theme: true !default;
+
+$enable-bs4-deprecated: true !default;
+$enable-lexicon-flat-colors: true !default;
+$enable-scaling-components: true !default;
+$enable-c-inner: true !default;
+$scaling-breakpoint-down: sm !default;
+
+// This enables Clay color functions to get the fallback color of a CSS Custom Property, convert it to the correct Sass type color, then process it using the corresponding Sass color function. The Clay color function will return a CSS color value. Set this variable to `false` if you want the Clay color function to return the CSS Custom Property without any modifications.
+
+$enable-clay-color-functions-process-fallback: true !default;
+
+$enable-caret: false !default;
+$enable-deprecation-messages: true !default;
+$enable-gradients: false !default;
+$enable-grid-classes: true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: false !default;
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-transitions: true !default;
+$enable-validation-icons: true !default;
+
+// Deprecated, no longer affects any compiled CSS
+
+$enable-hover-media-query: false !default;
+
+// Clay Root
+
+$clay-root: () !default;
+
+// Theme Base Colors
+
+$white: #fff !default;
+$gray-100: #f7f8f9 !default;
+$gray-200: #f1f2f5 !default;
+$gray-300: #e7e7ed !default;
+$gray-400: #cdced9 !default;
+$gray-500: #a7a9bc !default;
+$gray-600: #6b6c7e !default;
+$gray-700: #495057 !default;
+$gray-800: #393a4a !default;
+$gray-900: #272833 !default;
+$black: #000 !default;
+
+$clay-root: clay-map-merge(
+	(
+		--white: $white,
+		--gray-100: $gray-100,
+		--gray-200: $gray-200,
+		--gray-300: $gray-300,
+		--gray-400: $gray-400,
+		--gray-500: $gray-500,
+		--gray-600: $gray-600,
+		--gray-700: $gray-700,
+		--gray-800: $gray-800,
+		--gray-900: $gray-900,
+		--black: $black,
+		--white-rgb: #{clay-red($white), clay-green($white), clay-blue($white)},
+		--gray-100-rgb: #{clay-red($gray-100), clay-green($gray-100), clay-blue($gray-100)},
+		--gray-200-rgb: #{clay-red($gray-200), clay-green($gray-200), clay-blue($gray-200)},
+		--gray-300-rgb: #{clay-red($gray-300), clay-green($gray-300), clay-blue($gray-300)},
+		--gray-400-rgb: #{clay-red($gray-400), clay-green($gray-400), clay-blue($gray-400)},
+		--gray-500-rgb: #{clay-red($gray-500), clay-green($gray-500), clay-blue($gray-500)},
+		--gray-600-rgb: #{clay-red($gray-600), clay-green($gray-600), clay-blue($gray-600)},
+		--gray-700-rgb: #{clay-red($gray-700), clay-green($gray-700), clay-blue($gray-700)},
+		--gray-800-rgb: #{clay-red($gray-800), clay-green($gray-800), clay-blue($gray-800)},
+		--gray-900-rgb: #{clay-red($gray-900), clay-green($gray-900), clay-blue($gray-900)},
+		--black-rgb: #{clay-red($black), clay-green($black), clay-blue($black)},
+	),
+	$clay-root
+);
+
+$grays: () !default;
+$grays: map-merge(
+	(
+		'100': $gray-100,
+		'200': $gray-200,
+		'300': $gray-300,
+		'400': $gray-400,
+		'500': $gray-500,
+		'600': $gray-600,
+		'700': $gray-700,
+		'800': $gray-800,
+		'900': $gray-900,
+	),
+	$grays
+);
+
+$blue: if($enable-lexicon-flat-colors, #4b9fff, #0b5fff) !default;
+$indigo: if($enable-lexicon-flat-colors, #7785ff, #6610f2) !default;
+$purple: if($enable-lexicon-flat-colors, #af78ff, #6f42c1) !default;
+$pink: if($enable-lexicon-flat-colors, #ff73c3, #e83e8c) !default;
+$red: if($enable-lexicon-flat-colors, #ff5f5f, #da1414) !default;
+$orange: if($enable-lexicon-flat-colors, #ffb46e, #b95000) !default;
+$yellow: if($enable-lexicon-flat-colors, #ffd76e, #ffc107) !default;
+$green: if($enable-lexicon-flat-colors, #9be169, #287d3d) !default;
+$teal: if($enable-lexicon-flat-colors, #50d2a0, #20c997) !default;
+$cyan: if($enable-lexicon-flat-colors, #5fc8ff, #17a2b8) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--blue: $blue,
+		--indigo: $indigo,
+		--purple: $purple,
+		--pink: $pink,
+		--red: $red,
+		--orange: $orange,
+		--yellow: $yellow,
+		--green: $green,
+		--teal: $teal,
+		--cyan: $cyan,
+		--blue-rgb: #{clay-red($blue), clay-green($blue), clay-blue($blue)},
+		--indigo-rgb: #{clay-red($indigo), clay-green($indigo), clay-blue($indigo)},
+		--purple-rgb: #{clay-red($purple), clay-green($purple), clay-blue($purple)},
+		--pink-rgb: #{clay-red($pink), clay-green($pink), clay-blue($pink)},
+		--red-rgb: #{clay-red($red), clay-green($red), clay-blue($red)},
+		--orange-rgb: #{clay-red($orange), clay-green($orange), clay-blue($orange)},
+		--yellow-rgb: #{clay-red($yellow), clay-green($yellow), clay-blue($yellow)},
+		--green-rgb: #{clay-red($green), clay-green($green), clay-blue($green)},
+		--teal-rgb: #{clay-red($teal), clay-green($teal), clay-blue($teal)},
+		--cyan-rgb: #{clay-red($cyan), clay-green($cyan), clay-blue($cyan)},
+	),
+	$clay-root
+);
+
+$colors: () !default;
+$colors: map-merge(
+	(
+		'blue': $blue,
+		'indigo': $indigo,
+		'purple': $purple,
+		'pink': $pink,
+		'red': $red,
+		'orange': $orange,
+		'yellow': $yellow,
+		'green': $green,
+		'teal': $teal,
+		'cyan': $cyan,
+		'white': $white,
+		'gray': $gray-600,
+		'gray-dark': $gray-800,
+	),
+	$colors
+);
+
+$primary: #0b5fff !default;
+$primary-d1: clay-darken(#0b5fff, 5.1) !default;
+$primary-d2: clay-darken(#0b5fff, 10) !default;
+$primary-l1: clay-lighten(#0b5fff, 22.94) !default;
+$primary-l2: clay-lighten(#0b5fff, 32.94) !default;
+$primary-l3: clay-lighten(#0b5fff, 44.9) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--primary: $primary,
+		--primary-d1: $primary-d1,
+		--primary-d2: $primary-d2,
+		--primary-l1: $primary-l1,
+		--primary-l2: $primary-l2,
+		--primary-l3: $primary-l3,
+		--primary-rgb: #{clay-red($primary), clay-green($primary), clay-blue($primary)},
+		--primary-d1-rgb: #{clay-red($primary-d1), clay-green($primary-d1), clay-blue($primary-d1)},
+		--primary-d2-rgb: #{clay-red($primary-d2), clay-green($primary-d2), clay-blue($primary-d2)},
+		--primary-l1-rgb: #{clay-red($primary-l1), clay-green($primary-l1), clay-blue($primary-l1)},
+		--primary-l2-rgb: #{clay-red($primary-l2), clay-green($primary-l2), clay-blue($primary-l2)},
+		--primary-l3-rgb: #{clay-red($primary-l3), clay-green($primary-l3), clay-blue($primary-l3)},
+	),
+	$clay-root
+);
+
+$secondary: #6b6c7e !default;
+$secondary-d1: clay-darken(clay-saturate(#6b6c7e, 4.82), 20) !default;
+$secondary-d2: clay-darken(clay-saturate(#6b6c7e, 5.36), 23.92) !default;
+$secondary-l1: clay-lighten(
+	clay-saturate(clay-adjust-hue(#6b6c7e, -3), 5.39),
+	23.92
+) !default;
+$secondary-l2: clay-lighten(
+	clay-saturate(clay-adjust-hue(#6b6c7e, -2), 5.48),
+	37.06
+) !default;
+$secondary-l3: clay-lighten(
+	clay-saturate(clay-adjust-hue(#6b6c7e, 3), 6.13),
+	46.08
+) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--secondary: $secondary,
+		--secondary-d1: $secondary-d1,
+		--secondary-d2: $secondary-d2,
+		--secondary-l1: $secondary-l1,
+		--secondary-l2: $secondary-l2,
+		--secondary-l3: $secondary-l3,
+		--secondary-rgb: #{clay-red($secondary), clay-green($secondary), clay-blue($secondary)},
+		--secondary-d1-rgb: #{clay-red($secondary-d1), clay-green($secondary-d1), clay-blue($secondary-d1)},
+		--secondary-d2-rgb: #{clay-red($secondary-d2), clay-green($secondary-d2), clay-blue($secondary-d2)},
+		--secondary-l1-rgb: #{clay-red($secondary-l1), clay-green($secondary-l1), clay-blue($secondary-l1)},
+		--secondary-l2-rgb: #{clay-red($secondary-l2), clay-green($secondary-l2), clay-blue($secondary-l2)},
+		--secondary-l3-rgb: #{clay-red($secondary-l3), clay-green($secondary-l3), clay-blue($secondary-l3)},
+	),
+	$clay-root
+);
+
+$info: #2e5aac !default;
+$info-d1: clay-darken(#2e5aac, 5) !default;
+$info-d2: clay-darken(#2e5aac, 10) !default;
+$info-l1: clay-lighten(clay-saturate(#2e5aac, 0.59), 28.04) !default;
+$info-l2: clay-lighten(clay-desaturate(#2e5aac, 3.25), 52.94) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--info: $info,
+		--info-d1: $info-d1,
+		--info-d2: $info-d2,
+		--info-l1: $info-l1,
+		--info-l2: $info-l2,
+		--info-rgb: #{clay-red($info), clay-green($info), clay-blue($info)},
+		--info-d1-rgb: #{clay-red($info-d1), clay-green($info-d1), clay-blue($info-d1)},
+		--info-d2-rgb: #{clay-red($info-d2), clay-green($info-d2), clay-blue($info-d2)},
+		--info-l1-rgb: #{clay-red($info-l1), clay-green($info-l1), clay-blue($info-l1)},
+		--info-l2-rgb: #{clay-red($info-l2), clay-green($info-l2), clay-blue($info-l2)},
+	),
+	$clay-root
+);
+
+$success: #287d3c !default;
+$success-d1: clay-darken(#287d3c, 5) !default;
+$success-d2: clay-darken(#287d3c, 10) !default;
+$success-l1: clay-lighten(clay-desaturate(#287d3c, 0.14), 24.95) !default;
+$success-l2: clay-lighten(clay-desaturate(#287d3c, 1.52), 62.94) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--success: $success,
+		--success-d1: $success-d1,
+		--success-d2: $success-d2,
+		--success-l1: $success-l1,
+		--success-l2: $success-l2,
+		--success-rgb: #{clay-red($success), clay-green($success), clay-blue($success)},
+		--success-d1-rgb: #{clay-red($success-d1), clay-green($success-d1), clay-blue($success-d1)},
+		--success-d2-rgb: #{clay-red($success-d2), clay-green($success-d2), clay-blue($success-d2)},
+		--success-l1-rgb: #{clay-red($success-l1), clay-green($success-l1), clay-blue($success-l1)},
+		--success-l2-rgb: #{clay-red($success-l2), clay-green($success-l2), clay-blue($success-l2)},
+	),
+	$clay-root
+);
+
+$warning: #b95000 !default;
+$warning-d1: clay-darken(#b95000, 5.1) !default;
+$warning-d2: clay-darken(#b95000, 10) !default;
+$warning-l1: clay-lighten(#b95000, 24.9) !default;
+$warning-l2: clay-lighten(#b95000, 60) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--warning: $warning,
+		--warning-d1: $warning-d1,
+		--warning-d2: $warning-d2,
+		--warning-l1: $warning-l1,
+		--warning-l2: $warning-l2,
+		--warning-rgb: #{clay-red($warning), clay-green($warning), clay-blue($warning)},
+		--warning-d1-rgb: #{clay-red($warning-d1), clay-green($warning-d1), clay-blue($warning-d1)},
+		--warning-d2-rgb: #{clay-red($warning-d2), clay-green($warning-d2), clay-blue($warning-d2)},
+		--warning-l1-rgb: #{clay-red($warning-l1), clay-green($warning-l1), clay-blue($warning-l1)},
+		--warning-l2-rgb: #{clay-red($warning-l2), clay-green($warning-l2), clay-blue($warning-l2)},
+	),
+	$clay-root
+);
+
+$danger: #da1414 !default;
+$danger-d1: clay-darken(#da1414, 5) !default;
+$danger-d2: clay-darken(#da1414, 10) !default;
+$danger-l1: clay-lighten(clay-desaturate(#da1414, 0.25), 28.04) !default;
+$danger-l2: clay-lighten(clay-saturate(#da1414, 5.04), 50) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--danger: $danger,
+		--danger-d1: $danger-d1,
+		--danger-d2: $danger-d2,
+		--danger-l1: $danger-l1,
+		--danger-l2: $danger-l2,
+		--danger-rgb: #{clay-red($danger), clay-green($danger), clay-blue($danger)},
+		--danger-d1-rgb: #{clay-red($danger-d1), clay-green($danger-d1), clay-blue($danger-d1)},
+		--danger-d2-rgb: #{clay-red($danger-d2), clay-green($danger-d2), clay-blue($danger-d2)},
+		--danger-l1-rgb: #{clay-red($danger-l1), clay-green($danger-l1), clay-blue($danger-l1)},
+		--danger-l2-rgb: #{clay-red($danger-l2), clay-green($danger-l2), clay-blue($danger-l2)},
+	),
+	$clay-root
+);
+
+$light: #f1f2f5 !default;
+$light-d1: clay-darken(#f1f2f5, 5.1) !default;
+$light-d2: clay-darken(#f1f2f5, 10) !default;
+$light-l1: clay-lighten(
+	clay-desaturate(clay-adjust-hue(#f1f2f5, -15), 2.38),
+	1.96
+) !default;
+$light-l2: clay-lighten(
+	clay-desaturate(clay-adjust-hue(#f1f2f5, -225), 16.67),
+	4.71
+) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--light: $light,
+		--light-d1: $light-d1,
+		--light-d2: $light-d2,
+		--light-l1: $light-l1,
+		--light-l2: $light-l2,
+		--light-rgb: #{clay-red($light), clay-green($light), clay-blue($light)},
+		--light-d1-rgb: #{clay-red($light-d1), clay-green($light-d1), clay-blue($light-d1)},
+		--light-d2-rgb: #{clay-red($light-d2), clay-green($light-d2), clay-blue($light-d2)},
+		--light-l1-rgb: #{clay-red($light-l1), clay-green($light-l1), clay-blue($light-l1)},
+		--light-l2-rgb: #{clay-red($light-l2), clay-green($light-l2), clay-blue($light-l2)},
+	),
+	$clay-root
+);
+
+$dark: #272833 !default;
+$dark-d1: clay-darken(#272833, 5.1) !default;
+$dark-d2: clay-darken(#272833, 10) !default;
+$dark-l1: clay-lighten(clay-saturate(#272833, 0.18), 4.12) !default;
+$dark-l2: clay-lighten(clay-desaturate(#272833, 0.36), 8.04) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--dark: $dark,
+		--dark-d1: $dark-d1,
+		--dark-d2: $dark-d2,
+		--dark-l1: $dark-l1,
+		--dark-l2: $dark-l2,
+		--dark-rgb: #{clay-red($dark), clay-green($dark), clay-blue($dark)},
+		--dark-d1-rgb: #{clay-red($dark-d1), clay-green($dark-d1), clay-blue($dark-d1)},
+		--dark-d2-rgb: #{clay-red($dark-d2), clay-green($dark-d2), clay-blue($dark-d2)},
+		--dark-l1-rgb: #{clay-red($dark-l1), clay-green($dark-l1), clay-blue($dark-l1)},
+		--dark-l2-rgb: #{clay-red($dark-l2), clay-green($dark-l2), clay-blue($dark-l2)},
+	),
+	$clay-root
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+	(
+		'primary': $primary,
+		'secondary': $secondary,
+		'success': $success,
+		'info': $info,
+		'warning': $warning,
+		'danger': $danger,
+		'light': $light,
+		'dark': $dark,
+	),
+	$theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+
+$theme-color-interval: 8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+
+$yiq-contrasted-threshold: 150 !default;
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
+
+// Characters which are escaped by the escape-svg function
+
+$escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23')) !default;
+
+// Spacers
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-deep-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.25,
+		),
+		2: (
+			$spacer * 0.5,
+		),
+		3: (
+			$spacer * 1,
+		),
+		4: (
+			$spacer * 1.5,
+		),
+		5: (
+			$spacer * 3,
+		),
+		6: (
+			$spacer * 4.5,
+		),
+		7: (
+			$spacer * 6,
+		),
+		8: (
+			$spacer * 7.5,
+		),
+		9: (
+			$spacer * 9,
+		),
+		10: (
+			$spacer * 10,
+		),
+	),
+	$spacers
+);
+
+$clay-root: clay-map-merge(
+	(
+		--spacer-0: map-get($spacers, 0),
+		--spacer-1: map-get($spacers, 1),
+		--spacer-2: map-get($spacers, 2),
+		--spacer-3: map-get($spacers, 3),
+		--spacer-4: map-get($spacers, 4),
+		--spacer-5: map-get($spacers, 5),
+		--spacer-6: map-get($spacers, 6),
+		--spacer-7: map-get($spacers, 7),
+		--spacer-8: map-get($spacers, 8),
+		--spacer-9: map-get($spacers, 9),
+		--spacer-10: map-get($spacers, 10),
+	),
+	$clay-root
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+
+$sizes: () !default;
+$sizes: map-merge(
+	(
+		25: 25%,
+		50: 50%,
+		75: 75%,
+		100: 100%,
+		auto: auto,
+	),
+	$sizes
+);
+
+// Reusable Values
+
+$line-height-lg: 1.5 !default;
+$line-height-sm: 1.5 !default;
+
+$border-color: $gray-300 !default;
+$border-width: 0.0625rem !default;
+
+$border-radius: 0.25rem !default; // 4px
+$border-radius-lg: 0.375rem !default; // 6px
+$border-radius-sm: 0.1875rem !default; // 3px
+
+$rounded-border-radius: $border-radius !default;
+$rounded-circle-border-radius: 5000px !default;
+$rounded-0-border-radius: 0 !default;
+$rounded-pill: 50rem !default;
+
+$clay-root: clay-map-merge(
+	(
+		--border-radius: $border-radius,
+		--border-radius-lg: $border-radius-lg,
+		--border-radius-sm: $border-radius-sm,
+		--rounded-circle-border-radius: $rounded-circle-border-radius,
+		--rounded-pill-border-radius: $rounded-pill,
+	),
+	$clay-root
+);
+
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+
+$caret-width: 0.3em !default;
+$caret-vertical-align: $caret-width * 0.85 !default;
+$caret-spacing: $caret-width * 0.85 !default;
+
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fade: opacity 0.15s linear !default;
+$transition-collapse: height 0.35s ease !default;
+
+$embed-responsive-aspect-ratios: () !default;
+$embed-responsive-aspect-ratios: join(
+	((21 9), (16 9), (4 3), (1 1)),
+	$embed-responsive-aspect-ratios
+);
+
+$component-focus-box-shadow: #{0 0 0 0.125rem $white, 0 0 0 0.25rem $primary-l1} !default;
+$component-focus-inset-box-shadow: #{inset 0 0 0 0.125rem $primary-l1,
+	inset 0 0 0 0.25rem $white} !default;
+
+$clay-root: clay-map-merge(
+	(
+		--component-focus-box-shadow: $component-focus-box-shadow,
+		--component-inset-box-shadow: $component-focus-inset-box-shadow,
+	),
+	$clay-root
+);
+
+$component-active-color: #fff !default;
+$component-active-bg: #0b5fff !default;
+
+$clay-root: clay-map-merge((
+	--component-active-background-color: var(--primary),
+	--component-active-color: var(--white),
+	--component-active-background-color-rgb: #{clay-red($primary), clay-green($primary), clay-blue($primary)},
+	--component-active-color-rgb: #{clay-red($white), clay-green($white), clay-blue($white)},
+),$clay-root);
+
+// Cursors
+
+$link-cursor: pointer !default;
+$disabled-cursor: not-allowed !default;
+
+// Grid
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1280px,
+) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--breakpoint-xs: map-get($grid-breakpoints, xs),
+		--breakpoint-sm: map-get($grid-breakpoints, sm),
+		--breakpoint-md: map-get($grid-breakpoints, md),
+		--breakpoint-lg: map-get($grid-breakpoints, lg),
+		--breakpoint-xl: map-get($grid-breakpoints, xl),
+	),
+	$clay-root
+);
+
+// Grid columns
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 24px !default;
+$grid-row-columns: 6 !default;
+
+// Containers
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1248px,
+) !default;
+
+$container-form-lg: () !default;
+$container-form-lg: map-deep-merge(
+	(
+		breakpoint-up: lg,
+		padding-bottom: 3rem,
+		padding-top: 3rem,
+		padding-bottom-mobile: 1rem,
+		padding-top-mobile: 1rem,
+	),
+	$container-form-lg
+);
+
+$container-view: () !default;
+$container-view: map-deep-merge(
+	(
+		padding-bottom: 1.5rem,
+		padding-top: 1.5rem,
+	),
+	$container-view
+);
+
+// Fonts
+
+$moz-osx-font-smoothing: grayscale !default;
+$webkit-font-smoothing: antialiased !default;
+
+$font-import-url: null !default;
+
+$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
+	'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial,
+	sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+	'Liberation Mono', 'Courier New', monospace !default;
+
+$clay-root: clay-map-merge(
+	(
+		--font-family-sans-serif: $font-family-sans-serif,
+		--font-family-serif: $font-family-serif,
+		--font-family-monospace: $font-family-monospace,
+	),
+	$clay-root
+);
+
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 1rem !default; // 16px
+$font-size-lg: 1.125rem !default; // 18px
+$font-size-sm: 0.875rem !default; // 14px
+
+$font-size-base-mobile: $font-size-base !default;
+$font-size-lg-mobile: $font-size-lg !default;
+
+$font-weight-lighter: var(--font-weight-lighter) !default;
+$font-weight-light: var(--font-weight-light) !default;
+$font-weight-normal: var(--font-weight-normal) !default;
+$font-weight-semi-bold: var(--font-weight-semi-bold) !default;
+$font-weight-bold: var(--font-weight-bold) !default;
+$font-weight-bolder: var(--font-weight-bolder) !default;
+
+$clay-root: clay-map-merge(
+	(
+		--font-weight-lighter: lighter,
+		--font-weight-light: 300,
+		--font-weight-normal: 400,
+		--font-weight-semi-bold: 600,
+		--font-weight-bold: 700,
+		--font-weight-bolder: 900,
+	),
+	$clay-root
+);
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+
+// h1, .h1
+
+$h1-font-size: 1.625rem !default; // 26px
+$h1-font-size-mobile: null !default;
+
+// h2, .h2
+
+$h2-font-size: 1.375rem !default; // 22px
+$h2-font-size-mobile: null !default;
+
+// h3, .h3
+
+$h3-font-size: 1.1875rem !default; // 19px
+$h3-font-size-mobile: null !default;
+
+// h4, .h4
+
+$h4-font-size: 1rem !default; // 16px
+$h4-font-size-mobile: null !default;
+
+// h5, .h5
+
+$h5-font-size: 0.875rem !default; // 14px
+$h5-font-size-mobile: null !default;
+
+// h6, .h6
+
+$h6-font-size: 0.8125rem !default; // 13px
+$h6-font-size-mobile: null !default;
+
+// Headings h1-h6
+
+$headings-margin-bottom: $spacer * 0.5 !default;
+$headings-font-family: var(--headings-font-family) !default;
+$headings-font-weight: var(--headings-font-weight, $font-weight-bold) !default;
+$headings-line-height: var(--headings-line-height, 1.2) !default;
+$headings-color: var(--headings-color) !default;
+
+// Body
+
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+$body-moz-osx-font-smoothing: $moz-osx-font-smoothing !default;
+$body-webkit-font-smoothing: $webkit-font-smoothing !default;
+$body-text-align: inherit !default;
+
+$c-body: () !default;
+$c-body: map-merge(
+	(
+		background-color: var(--body-bg, $body-bg),
+		color: var(--body-color, $body-color),
+		font-family: var(--body-font-family, $font-family-base),
+		font-size: var(--body-font-size, $font-size-base),
+		-moz-osx-font-smoothing: $body-moz-osx-font-smoothing,
+		-webkit-font-smoothing: $body-webkit-font-smoothing,
+		font-weight: var(--body-font-weight, $font-weight-base),
+		line-height: var(--body-line-height, $line-height-base),
+		margin: var(--body-margin, 0),
+		-ms-overflow-style: scrollbar,
+		text-align: var(--body-text-align, $body-text-align),
+	),
+	$c-body
+);
+
+// Button
+
+$c-button-base: () !default;
+$c-button-base: map-merge(
+	(
+		cursor: $link-cursor,
+		-webkit-appearance: button,
+	),
+	$c-button-base
+);
+
+// Link
+
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-color: $primary-d2 !default;
+$link-hover-decoration: underline !default;
+
+$clay-root: clay-map-merge((
+	--link-color: var(--primary),
+	--link-text-decoration: none,
+	--link-hover-color: var(--primary-d2),
+	--link-hover-text-decoration: underline,
+),$clay-root);
+
+$link: () !default;
+$link: map-deep-merge(
+	(
+		color: var(--link-color),
+		text-decoration: var(--link-text-decoration),
+		hover: (
+			color: var(--link-hover-color),
+			text-decoration:
+				var(--link-hover-text-decoration),
+		),
+	),
+	$link
+);
+
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+// Paragraph
+
+$paragraph-margin-bottom: var(--paragraph-margin-bottom, 1rem) !default;
+
+// Display
+
+$display-line-height: var(
+	--display-line-height,
+	$headings-line-height
+) !default;
+
+// .display-1
+
+$display1-size: 6rem !default;
+$display1-weight: 300 !default;
+
+$display-1: () !default;
+$display-1: map-deep-merge(
+	(
+		font-size: var(--display-1-font-size, $display1-size),
+		font-weight: var(--display-1-font-weight, $display1-weight),
+		line-height: var(--display-1-line-height, $display-line-height),
+	),
+	$display-1
+);
+
+// .display-2
+
+$display2-size: 5.5rem !default;
+$display2-weight: 300 !default;
+
+$display-2: () !default;
+$display-2: map-deep-merge(
+	(
+		font-size: var(--display-2-font-size, $display2-size),
+		font-weight: var(--display-2-font-weight, $display2-weight),
+		line-height: var(--display-2-line-height, $display-line-height),
+	),
+	$display-2
+);
+
+// .display-3
+
+$display3-size: 4.5rem !default;
+$display3-weight: 300 !default;
+
+$display-3: () !default;
+$display-3: map-deep-merge(
+	(
+		font-size: var(--display-3-font-size, $display3-size),
+		font-weight: var(--display-3-font-weight, $display3-weight),
+		line-height: var(--display-3-line-height, $display-line-height),
+	),
+	$display-3
+);
+
+// .display-4
+
+$display4-size: 3.5rem !default;
+$display4-weight: 300 !default;
+
+$display-4: () !default;
+$display-4: map-deep-merge(
+	(
+		font-size: var(--display-4-font-size, $display4-size),
+		font-weight: var(--display-4-font-weight, $display4-weight),
+		line-height: var(--display-4-line-height, $display-line-height),
+	),
+	$display-4
+);
+
+$lead-font-size: var(--lead-font-size, $font-size-base * 1.25) !default;
+$lead-font-weight: var(--lead-font-weight, 300) !default;
+
+$small-font-size: var(--small-font-size, 80%) !default;
+
+$text-muted: var(--text-muted, $gray-500) !default;
+
+$blockquote-small-color: var(--blockquote-small-color, $gray-600) !default;
+$blockquote-small-font-size: var(
+	--blockquote-small-font-size,
+	$small-font-size
+) !default;
+
+$blockquote-font-size: var(
+	--blockquote-font-size,
+	$font-size-base * 1.25
+) !default;
+
+$hr-border-color: var(--hr-border-color, rgba($black, 0.1)) !default;
+$hr-border-width: var(--hr-border-width, $border-width) !default;
+$hr-margin-y: var(--hr-margin-y, $spacer) !default;
+
+$mark-bg: var(--mark-background-color, #fcf8e3) !default;
+$mark-padding: var(--mark-padding, 0.2em) !default;
+
+$dt-font-weight: var(--dt-font-weight, $font-weight-bold) !default;
+
+$code-color: var(--code-color, $pink) !default;
+$code-font-size: var(--code-font-size, 87.5%) !default;
+
+$kbd-bg: var(--kbd-background-color, $gray-900) !default;
+$kbd-color: var(--kbd-color, $white) !default;
+$kbd-font-size: var(--kbd-font-size, $code-font-size) !default;
+$kbd-padding-x: var(--kbd-padding-x, 0.4rem) !default;
+$kbd-padding-y: var(--kbd-padding-y, 0.2rem) !default;
+$kbd-box-shadow: var(
+	--kbd-box-shadow,
+	inset 0 -0.1rem 0 rgba($black, 0.25)
+) !default;
+
+$nested-kbd-font-weight: var(
+	--nested-kbd-font-weight,
+	$font-weight-bold
+) !default;
+
+$pre-color: var(--pre-color, $gray-900) !default;
+$pre-scrollable-max-height: 340px !default;
+
+$list-inline-padding: 0.5rem !default;
+
+// Buttons + Forms
+
+$label-margin-bottom: 0.5rem !default;
+
+$input-btn-font-family: null !default;
+$input-btn-font-size: $font-size-base !default;
+$input-btn-line-height: $line-height-base !default;
+$input-btn-padding-x: 0.75rem !default;
+$input-btn-padding-y: 0.375rem !default;
+
+$input-btn-focus-width: 0.2rem !default;
+
+$input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$input-btn-font-size-sm: $font-size-sm !default;
+$input-btn-line-height-sm: $line-height-sm !default;
+$input-btn-padding-x-sm: 0.5rem !default;
+$input-btn-padding-y-sm: 0.25rem !default;
+
+$input-btn-font-size-lg: $font-size-lg !default;
+$input-btn-line-height-lg: $line-height-lg !default;
+$input-btn-padding-x-lg: 1rem !default;
+$input-btn-padding-y-lg: 0.5rem !default;
+
+$input-btn-border-width: $border-width !default;
+
+// Print
+
+$print-body-min-width: map-get($grid-breakpoints, 'lg') !default;
+$print-page-size: a3 !default;

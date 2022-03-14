@@ -1,0 +1,769 @@
+// <table> element
+
+$c-table-base: () !default;
+$c-table-base: map-merge(
+	(
+		border-collapse: collapse,
+	),
+	$c-table-base
+);
+
+// <th> element
+
+$c-th-base: () !default;
+$c-th-base: map-merge(
+	(
+		height: var(--table-th-height, 20px),
+		text-align: var(--table-th-text-align, left),
+	),
+	$c-th-base
+);
+
+// Table Responsive
+
+$table-responsive-margin-bottom: var(
+	--table-responsive-margin-bottom,
+	1.5rem
+) !default;
+
+// Table
+
+$table-bg: var(--table-background-color, $white) !default;
+$table-border-color: var(--table-border-color, $gray-300) !default;
+$table-border-width: $border-width !default;
+$table-color: var(--table-color, $body-color) !default;
+$table-font-size: var(--table-font-size, 0.875rem) !default;
+$table-margin-bottom: var(--table-margin-bottom, 0) !default;
+
+$table-hover-bg: var(
+	--table-hover-background-color,
+	clay-lighten($component-active-bg, 44.9)
+) !default;
+$table-hover-color: var(--table-hover-color, $table-color) !default;
+
+$table-active-bg: $table-hover-bg !default;
+
+$table-disabled-bg: var(--table-disabled-background-color, $white) !default;
+$table-disabled-color: var(--table-disabled-color, $gray-500) !default;
+$table-disabled-cursor: $disabled-cursor !default;
+$table-disabled-pointer-events: none !default;
+
+// Table Striped
+
+$table-accent-bg: var(--table-accent-background-color, $gray-100) !default;
+
+$table-striped-order: var(--table-striped-order, odd) !default;
+
+// Table Cell applies to `th` and `td`
+
+$table-cell-gutters: var(
+	--table-cell-gutters,
+	$grid-gutter-width * 0.5
+) !default; // 15px
+$table-cell-padding: var(--table-cell-padding, 0.75rem) !default;
+$table-cell-padding-sm: var(--table-cell-padding-sm, 0.3rem) !default;
+
+$table-cell-expand-min-width: var(
+	--table-cell-expand-min-width,
+	12.5rem
+) !default; // 200px
+
+$table-cell-expand-small-max-width: var(
+	--table-cell-expand-small-max-width,
+	12.5rem
+) !default; // 200px
+$table-cell-expand-small-width: var(
+	--table-cell-expand-small-width,
+	25%
+) !default;
+
+$table-cell-expand-smaller-max-width: var(
+	--table-cell-expand-smaller-max-width,
+	12.5rem
+) !default; // 200px
+$table-cell-expand-smaller-width: var(
+	--table-cell-expand-smaller-width,
+	15%
+) !default;
+
+$table-cell-expand-smallest-max-width: var(
+	--table-cell-expand-smallest-max-width,
+	12.5rem
+) !default; // 200px
+$table-cell-expand-smallest-width: var(
+	--table-cell-expand-smallest-width,
+	10%
+) !default;
+
+// TH
+
+$table-head-bg: var(--table-head-background-color, $white) !default;
+$table-head-border-bottom-width: var(
+	--table-head-border-bottom-width,
+	1px
+) !default;
+$table-head-border-top-width: var(--table-head-border-top-width, 0) !default;
+$table-head-color: var(--table-head-color, $gray-600) !default;
+$table-head-font-size: var(--table-head-font-size, 0.875rem) !default;
+$table-head-font-weight: var(
+	--table-head-font-weight,
+	$font-weight-semi-bold
+) !default;
+$table-head-height: var(--table-head-height, 36px) !default;
+
+$c-table-thead: () !default;
+$c-table-thead: map-merge(
+	(
+		background-color: $table-head-bg,
+	),
+	$c-table-thead
+);
+
+$table-head-link: () !default;
+$table-head-link: map-deep-merge(
+	(
+		border-radius: var(--table-head-link-border-radius, 1px),
+		color: var(--table-head-link-color, $gray-600),
+		transition:
+			var(--table-head-link-transition, box-shadow 0.15s ease-in-out),
+		hover: (
+			color: var(--table-head-link-hover-color, $gray-900),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--table-head-link-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--table-head-link-focus-outline, 0),
+		),
+	),
+	$table-head-link
+);
+
+$table-head-title-inline-item-spacer-x: var(
+	--table-head-title-inline-item-spacer-x,
+	0.25rem
+) !default; // 4px
+$table-head-title-text-truncate-max-width: var(
+	--table-head-title-text-truncate-max-width,
+	calc(100% - 1em - #{$table-head-title-inline-item-spacer-x})
+) !default;
+
+// Table Body
+
+$c-table-tbody: () !default;
+$c-table-tbody: map-merge(
+	(
+		background-color: var(--table-tbody-background-color, $white),
+	),
+	$c-table-tbody
+);
+
+// TD
+
+$table-data-border-bottom-width: $table-border-width !default;
+$table-data-border-left-width: 0 !default;
+$table-data-border-right-width: 0 !default;
+$table-data-border-top-width: $table-border-width !default;
+
+$table-data-border-color: $table-border-color !default;
+$table-data-border-style: solid !default;
+$table-data-vertical-align: middle !default;
+
+// Table Divider
+
+$table-divider-bg: $gray-100 !default;
+$table-divider-color: $gray-600 !default;
+$table-divider-font-weight: null !default;
+$table-divider-font-size: 0.75rem !default; // 12px
+$table-divider-font-weight: $font-weight-semi-bold !default;
+$table-divider-padding: 0.4375rem 0.75rem !default;
+$table-divider-text-transform: uppercase !default;
+
+$table-quick-action-menu-align-items: flex-start !default;
+$table-quick-action-menu-bg: if(
+	$table-bg == transparent,
+	$body-bg,
+	$table-bg
+) !default;
+$table-quick-action-menu-accent-bg: $table-accent-bg !default;
+$table-quick-action-menu-accent-active-bg: $table-hover-bg !default;
+$table-quick-action-menu-active-bg: $gray-200 !default;
+$table-quick-action-menu-hover-bg: $table-hover-bg !default;
+
+$table-cell-expand-smaller-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smaller-width: 15% !default;
+
+$table-cell-expand-smallest-max-width: 12.5rem !default; // 200px
+$table-cell-expand-smallest-width: 10% !default;
+
+// Table Footer
+
+$c-table-tfoot: () !default;
+$c-table-tfoot: map-merge(
+	(
+		background-color: $table-bg,
+	),
+	$c-table-tfoot
+);
+
+// Table Caption
+
+$table-caption-color: $gray-900 !default;
+
+$c-table-caption: () !default;
+$c-table-caption: map-merge(
+	(
+		caption-side: top,
+		padding-left: $table-cell-padding,
+		padding-right: $table-cell-padding,
+	),
+	$c-table-caption
+);
+
+// Table Img
+
+$table-img-max-height: 100px !default;
+
+// Table Title
+
+$table-title: () !default;
+$table-title: map-deep-merge(
+	(
+		font-size: $font-size-base,
+		font-weight: $font-weight-semi-bold,
+		line-height: $line-height-base,
+		margin-bottom: 0,
+	),
+	$table-title
+);
+
+$table-title-link: () !default;
+$table-title-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+	),
+	$table-title-link
+);
+
+$table-title: map-deep-merge(
+	$table-title,
+	(
+		color: $gray-900,
+		font-size: 0.875rem,
+		href: $table-title-link,
+	)
+);
+
+// Table Link
+
+$table-link: () !default;
+$table-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $gray-900,
+		display: inline-block,
+		max-width: 100%,
+		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+	),
+	$table-link
+);
+
+// Table Action Link
+
+$table-action-link: () !default;
+$table-action-link: map-deep-merge(
+	(
+		align-items: center,
+		border-radius: $btn-border-radius,
+		color: $gray-600,
+		display: inline-flex,
+		font-size: 1rem,
+		height: 2rem,
+		justify-content: center,
+		transition: $btn-transition,
+		vertical-align: middle,
+		width: 2rem,
+		hover: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $gray-900,
+			text-decoration: none,
+		),
+		focus: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $gray-900,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			background-color: rgba(0, 0, 0, 0.04),
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$table-action-link
+);
+
+// Table Dark Variant
+
+$table-dark-bg: $gray-800 !default;
+$table-dark-border-color: clay-lighten($table-dark-bg, 7.5%) !default;
+$table-dark-color: $white !default;
+
+$table-dark-hover-bg: rgba($white, 0.075) !default;
+$table-dark-hover-color: $table-dark-color !default;
+
+$table-dark-accent-bg: rgba($white, 0.05) !default;
+
+// Table Bordered
+
+$table-bordered-border-width: $table-border-width !default;
+
+$table-bg-level: -9 !default;
+$table-border-level: -6 !default;
+
+// Table List
+
+$table-list-bg: var(--table-list-background-color, $white) !default;
+$table-list-border-color: var(--table-list-border-color, $gray-300) !default;
+$table-list-border-x-width: var(
+	--table-list-border-x-width,
+	0.0625rem
+) !default;
+$table-list-border-y-width: var(
+	--table-list-border-y-width,
+	0.0625rem
+) !default;
+
+$table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
+
+$table-list-border-radius: $border-radius !default;
+$table-list-color: $body-color !default;
+$table-list-font-size: 0.875rem !default;
+$table-list-margin-bottom: $table-list-border-y-width !default;
+$table-list-margin-top: 0 !default;
+
+$c-table-list: () !default;
+$c-table-list: map-merge(
+	(
+		border-collapse: var(--table-list-border-collapse, separate),
+		border-color: $table-list-border-color,
+		border-style: var(--table-list-border-style, solid),
+		border-width: $table-list-border-width,
+		border-radius:
+			var(
+				--table-list-border-radius,
+				clay-enable-rounded($table-list-border-radius)
+			),
+		color: var(--table-list-color, $table-list-color),
+		font-size: var(--table-list-font-size, $table-list-font-size),
+		margin-bottom:
+			var(--table-list-margin-bottom, $table-list-margin-bottom),
+		margin-top: var(--table-list-margin-top, $table-list-margin-top),
+	),
+	$c-table-list
+);
+
+// .table-list.table-striped
+
+$table-list-accent-bg: var(
+	--table-list-accent-background-color,
+	$gray-100
+) !default;
+
+// .table-list.table-hover tbody tr:hover
+
+$table-list-hover-bg: var(
+	--table-list-hover-background-color,
+	$table-hover-bg
+) !default;
+
+// .table-list.table-active
+
+$table-list-active-bg: var(
+	--table-list-active-background-color,
+	$table-list-hover-bg
+) !default;
+
+// .table-list .table-disabled
+
+$table-list-disabled-bg: var(
+	--table-list-disabled-background-color,
+	$white
+) !default;
+$table-list-disabled-color: var(
+	--table-list-disabled-color,
+	$gray-500
+) !default;
+$table-list-disabled-cursor: var(
+	--table-list-disabled-cursor,
+	$disabled-cursor
+) !default;
+$table-list-disabled-pointer-events: var(
+	--table-list-disabled-pointer-events,
+	none
+) !default;
+
+// .table-list {thead,tbody,tfoot} {th,td}
+
+$c-table-list-cell: () !default;
+$c-table-list-cell: map-merge(
+	(
+		border-color:
+			var(--table-list-cell-border-color, $table-list-border-color),
+		border-style: var(--table-list-cell-border-style, solid),
+		border-width:
+			var(
+				--table-list-cell-border-width,
+				$table-list-border-y-width 0 0 0
+			),
+	),
+	$c-table-list-cell
+);
+
+// .table-list thead {th,td}
+
+$table-list-head-bg: var(--table-list-head-background-color, $white) !default;
+$table-list-head-font-size: var(--table-list-head-font-size, inherit) !default;
+$table-list-head-font-weight: var(
+	--table-list-head-font-weight,
+	$font-weight-bold
+) !default;
+$table-list-head-height: var(--table-list-head-height, 36px) !default;
+$table-list-head-vertical-alignment: var(
+	--table-list-head-vertical-align,
+	bottom
+) !default;
+
+// .table-list thead th a
+
+$table-list-head-link: () !default;
+$table-list-head-link: map-deep-merge(
+	(
+		color: var(--table-list-head-link-color, $gray-600),
+		font-size: var(--table-list-head-link-font-size, 0.875rem),
+		font-weight:
+			var(--table-list-head-link-font-weight, $font-weight-semi-bold),
+		text-decoration: var(--table-list-head-link-text-decoration, none),
+		hover: (
+			color: var(--table-list-head-link-hover-color, $gray-900),
+			text-decoration:
+				var(--table-list-head-link-hover-text-decoration, underline),
+		),
+	),
+	$table-list-head-link
+);
+
+// Table List Thead
+
+$c-table-list-thead: () !default;
+$c-table-list-thead: map-merge(
+	(
+		background-color:
+			var(--table-list-thead-background-color, $table-list-head-bg),
+		color: var(--table-list-thead-color),
+	),
+	$c-table-list-thead
+);
+
+// Table List Tbody
+
+$c-table-list-tbody: () !default;
+$c-table-list-tbody: map-merge(
+	(
+		background-color:
+			var(--table-list-tbody-background-color, $table-list-bg),
+	),
+	$c-table-list-tbody
+);
+
+// Table List Tfoot
+
+$c-table-list-tfoot: () !default;
+$c-table-list-tfoot: map-merge(
+	(
+		background-color:
+			var(--table-list-tfoot-background-color, $table-list-bg),
+	),
+	$c-table-list-tfoot
+);
+
+// .table-list.table-bordered {thead,tbody,tfoot} {th,td}
+
+$c-table-list-bordered-cell: () !default;
+$c-table-list-bordered-cell: map-merge(
+	(
+		border-left-width:
+			var(
+				--table-list-bordered-cell-border-left-width,
+				$table-list-border-x-width
+			),
+	),
+	$c-table-list-bordered-cell
+);
+
+// .table-list caption
+
+$c-table-list-caption: () !default;
+
+// .table-list .table-divider
+
+$table-list-divider-padding-x: var(
+	--table-list-divider-padding-x,
+	0.75rem
+) !default; // 12px
+$table-list-divider-padding-y: var(
+	--table-list-divider-padding-y,
+	0.4375rem
+) !default; // 7px
+
+// .table-list .quick-action-menu
+
+$table-list-quick-action-menu-align-items: var(
+	--table-list-quick-action-menu-align-items,
+	center
+) !default;
+$table-list-quick-action-menu-bg: var(
+	--table-list-quick-action-menu-background-color,
+	$table-list-bg
+) !default;
+$table-list-quick-action-menu-accent-bg: var(
+	--table-list-quick-action-menu-accent-background-color,
+	$table-list-accent-bg
+) !default;
+$table-list-quick-action-menu-accent-active-bg: var(
+	--table-list-quick-action-menu-accent-active-background-color,
+	$table-list-active-bg
+) !default;
+$table-list-quick-action-menu-active-bg: var(
+	--table-list-quick-action-menu-active-background-color,
+	$table-list-active-bg
+) !default;
+$table-list-quick-action-menu-hover-bg: var(
+	--table-list-quick-action-menu-hover-background-color,
+	$table-list-hover-bg
+) !default;
+
+// Table List Title
+
+$table-list-title: () !default;
+$table-list-title: map-deep-merge(
+	(
+		color: var(--table-list-title-color, $gray-900),
+		font-size: var(--table-list-title-font-size, 0.875rem),
+		font-weight: var(--table-list-title-font-weight, $font-weight-semi-bold),
+		line-height: var(--table-list-title-line-height, 1.45),
+		margin-bottom: var(--table-list-title-margin-bottom, 0),
+	),
+	$table-list-title
+);
+
+$table-list-title-link: () !default;
+$table-list-title-link: map-deep-merge(
+	(
+		border-radius: var(--table-list-title-href-border-radius, 1px),
+		color: var(--table-list-title-href-color, $gray-900),
+		display: var(--table-list-title-href-display, inline-block),
+		max-width: var(--table-list-title-href-max-width, 100%),
+		transition:
+			var(
+				--table-list-title-href-transition,
+				box-shadow 0.15s ease-in-out
+			),
+		hover: (
+			color: var(--table-list-title-href-hover-color, $gray-900),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--table-list-title-href-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--table-list-title-href-focus-outline, 0),
+		),
+	),
+	$table-list-title-link
+);
+
+$table-list-title: map-deep-merge(
+	$table-list-title,
+	(
+		href: $table-list-title-link,
+	)
+);
+
+// Table List Link
+
+$table-list-link: () !default;
+$table-list-link: map-deep-merge(
+	(
+		border-radius: var(--table-list-link-border-radius, 1px),
+		color: var(--table-list-link-color, $gray-900),
+		display: var(--table-list-link-display, inline-block),
+		max-width: var(--table-list-link-max-width, 100%),
+		transition:
+			var(--table-list-link-transition, box-shadow 0.15s ease-in-out),
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+	),
+	$table-list-link
+);
+
+// Table List Action Link
+
+$table-list-action-link: () !default;
+$table-list-action-link: map-deep-merge(
+	(
+		align-items: var(--table-list-action-link-align-items, center),
+		color: var(--table-list-action-link-color, $gray-600),
+		display: var(--table-list-action-link-display, inline-flex),
+		font-size: var(--table-list-action-link-font-size, 1rem),
+		height: var(--table-list-action-link-height, 2rem),
+		justify-content: var(--table-list-action-link-justify-content, center),
+		transition: var(--table-list-action-link-transition, $btn-transition),
+		vertical-align: var(--table-list-action-link-vertical-align, middle),
+		width: var(--table-list-action-link-width, 2rem),
+		hover: (
+			background-color:
+				var(
+					--table-list-action-link-hover-background-color,
+					rgba(0, 0, 0, 0.02)
+				),
+			color: var(--table-list-action-link-hover-color, $gray-900),
+			text-decoration:
+				var(--table-list-action-link-hover-text-decoration, none),
+		),
+		focus: (
+			background-color:
+				var(
+					--table-list-action-link-focus-background-color,
+					rgba(0, 0, 0, 0.02)
+				),
+			color: var(--table-list-action-link-focus-color, $gray-900),
+			box-shadow:
+				var(
+					--table-list-action-link-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--table-list-action-link-focus-outline, 0),
+		),
+		active: (
+			background-color:
+				var(
+					--table-list-action-link-active-background-color,
+					rgba(0, 0, 0, 0.04)
+				),
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
+	),
+	$table-list-action-link
+);
+
+// Table Valign
+
+$table-valign-top-body-cell-padding-top: 1rem !default;
+
+$table-valign-bottom-body-cell-padding-bottom: 1rem !default;
+
+// Table Row Backgrounds
+
+$table-row-theme-colors: () !default;
+$table-row-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			background-color: theme-color-level(primary, $table-bg-level),
+			border-color: theme-color-level(primary, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(theme-color-level(primary, $table-bg-level), 5%),
+			),
+		),
+		'secondary': (
+			background-color: theme-color-level(secondary, $table-bg-level),
+			border-color: theme-color-level(secondary, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(
+						theme-color-level(secondary, $table-bg-level),
+						5%
+					),
+			),
+		),
+		'success': (
+			background-color: theme-color-level(success, $table-bg-level),
+			border-color: theme-color-level(success, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(theme-color-level(success, $table-bg-level), 5%),
+			),
+		),
+		'info': (
+			background-color: theme-color-level(info, $table-bg-level),
+			border-color: theme-color-level(info, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(theme-color-level(info, $table-bg-level), 5%),
+			),
+		),
+		'warning': (
+			background-color: theme-color-level(warning, $table-bg-level),
+			border-color: theme-color-level(warning, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(theme-color-level(warning, $table-bg-level), 5%),
+			),
+		),
+		'danger': (
+			background-color: theme-color-level(danger, $table-bg-level),
+			border-color: theme-color-level(danger, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(theme-color-level(danger, $table-bg-level), 5%),
+			),
+		),
+		'light': (
+			background-color: theme-color-level(light, $table-bg-level),
+			border-color: theme-color-level(light, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(theme-color-level(light, $table-bg-level), 5%),
+			),
+		),
+		'dark': (
+			background-color: theme-color-level(dark, $table-bg-level),
+			border-color: theme-color-level(dark, $table-border-level),
+			hover: (
+				background-color:
+					clay-darken(theme-color-level(dark, $table-bg-level), 5%),
+			),
+		),
+	),
+	$table-row-theme-colors
+);

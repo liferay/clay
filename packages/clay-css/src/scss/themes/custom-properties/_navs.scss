@@ -1,0 +1,748 @@
+$nav-font-size: 0.875rem !default;
+
+// .nav-link
+
+$nav-link-padding-x: 1rem !default; // 16px
+$nav-link-padding-y: 0.625rem !default; // 10px
+
+$nav-link-disabled-color: $gray-500 !default;
+$nav-link-disabled-cursor: $disabled-cursor !default;
+
+$nav-link: () !default;
+$nav-link: map-deep-merge(
+	(
+		display: var(--nav-link-display, block),
+		padding-bottom: var(--nav-link-padding-bottom, $nav-link-padding-y),
+		padding-left: var(--nav-link-padding-left, $nav-link-padding-x),
+		padding-right: var(--nav-link-padding-right, $nav-link-padding-x),
+		padding-top: var(--nav-link-padding-top, $nav-link-padding-y),
+		position: var(--nav-link-position, relative),
+		hover: (
+			text-decoration: var(--nav-link-hover-text-decoration, none),
+		),
+		focus: (
+			text-decoration: var(--nav-link-focus-text-decoration, none),
+			z-index: var(--nav-link-focus-z-index, 1),
+		),
+		disabled: (
+			box-shadow: var(--nav-link-disabled-box-shadow, none),
+			color: var(--nav-link-disabled-color, $nav-link-disabled-color),
+			cursor: var(--nav-link-disabled-cursor, $nav-link-disabled-cursor),
+			active: (
+				pointer-events:
+					var(--nav-link-disabled-active-pointer-events, none),
+			),
+		),
+	),
+	$nav-link
+);
+
+// .nav-link.btn-unstyled
+
+$nav-link-btn-unstyled: () !default;
+$nav-link-btn-unstyled: map-deep-merge(
+	(
+		width: var(--nav-link-btn-unstyled-width, 100%),
+		disabled-opacity: var(--nav-link-btn-unstyled-disabled-opacity, 1),
+		focus: (
+			box-shadow:
+				var(
+					--nav-link-btn-unstyled-focus-box-shadow,
+					#{0 0 0 0.125rem $white,
+					0 0 0 0.25rem $primary-l1}
+				),
+		),
+		c-inner: (
+			width: var(--nav-link-btn-unstyled-c-inner-width, auto),
+		),
+	),
+	$nav-link-btn-unstyled
+);
+
+$nav-item-monospaced-size: 2rem !default; // 32px
+
+// .nav-btn
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-margin-x: 0.25rem !default; // 4px
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-margin-y: (
+		($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) -
+			$nav-item-monospaced-size
+	) * 0.5 !default;
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-padding-x: $btn-padding-x-sm !default;
+
+/// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
+
+$nav-btn-padding-y: 0 !default;
+
+$nav-btn: () !default;
+$nav-btn: map-deep-merge(
+	(
+		align-items: var(--nav-btn-align-items, center),
+		display: var(--nav-btn-display, flex),
+		height: var(--nav-btn-height, $nav-item-monospaced-size),
+		justify-content: var(--nav-btn-justify-content, center),
+		line-height: var(--nav-btn-line-height, $line-height-base),
+		margin: var(--nav-btn-margin, $nav-btn-margin-y $nav-btn-margin-x),
+		min-width: var(--nav-btn-min-width, $nav-item-monospaced-size),
+		padding: var(--nav-btn-padding, $nav-btn-padding-y $nav-btn-padding-x),
+		position: var(--nav-btn-position, relative),
+		text-align: var(--nav-btn-text-align, center),
+		width: var(--nav-btn-width, auto),
+		focus: (
+			z-index: var(--nav-btn-focus-z-index, 1),
+		),
+		disabled: (
+			opacity: var(--nav-btn-disabled-opacity, 1),
+		),
+		c-inner: (
+			margin-bottom: var(--nav-btn-c-inner-margin-bottom, 0),
+			margin-left:
+				var(
+					--nav-btn-c-inner-margin-left,
+					math-sign($nav-btn-padding-x)
+				),
+			margin-right:
+				var(
+					--nav-btn-c-inner-margin-right,
+					math-sign($nav-btn-padding-x)
+				),
+			margin-top:
+				var(--nav-btn-c-inner-margin-top, math-sign($btn-border-width)),
+		),
+		btn-link: (
+			margin-left: var(--nav-btn-btn-link-margin-left, 0),
+			margin-right: var(--nav-btn-btn-link-margin-right, 0),
+		),
+		lexicon-icon: (
+			margin-top: var(--nav-btn-lexicon-icon-margin-top, 0),
+		),
+	),
+	$nav-btn
+);
+
+// .nav-btn-monospaced
+
+$nav-btn-monospaced: () !default;
+$nav-btn-monospaced: map-deep-merge(
+	(
+		padding: var(--nav-btn-monospaced-padding, 0),
+		c-inner: (
+			margin-left:
+				var(
+					--nav-btn-monospaced-c-inner-margin-left,
+					math-sign($btn-border-width)
+				),
+			margin-right:
+				var(
+					--nav-btn-monospaced-c-inner-margin-right,
+					math-sign($btn-border-width)
+				),
+		),
+	),
+	$nav-btn-monospaced
+);
+
+// .nav-link-monospaced
+
+$nav-link-monospaced: () !default;
+$nav-link-monospaced: map-deep-merge(
+	(
+		align-items: var(--nav-link-monospaced-align-items, center),
+		display: var(--nav-link-monospaced-display, flex),
+		height: var(--nav-link-monospaced-height, $nav-item-monospaced-size),
+		justify-content: var(--nav-link-monospaced-justify-content, center),
+		margin:
+			var(
+				--nav-link-monospaced-margin,
+				$nav-btn-margin-y $nav-btn-margin-x
+			),
+		min-width:
+			var(--nav-link-monospaced-min-width, $nav-item-monospaced-size),
+		padding: var(--nav-link-monospaced-padding, 0),
+		lexicon-icon: (
+			margin-top: var(--nav-link-monospaced-lexicon-icon-margin-top, 0),
+		),
+	),
+	$nav-link-monospaced
+);
+
+// .nav-item
+
+$nav-item: () !default;
+$nav-item: map-deep-merge(
+	(
+		word-wrap: var(--nav-item-word-wrap, break-word),
+	),
+	$nav-item
+);
+
+// .nav-divider
+
+$nav-divider-color: $gray-600 !default;
+$nav-divider-margin-y: $spacer * 0.5 !default;
+
+$nav-divider: () !default;
+$nav-divider: map-deep-merge(
+	(
+		margin-left: var(--nav-divider-margin-left, 0.5rem),
+		padding-left: var(--nav-divider-padding-left, 0.5rem),
+		position: var(--nav-divider-position, relative),
+		before: (
+			background-color:
+				var(--nav-divider-before-background-color, $nav-divider-color),
+			content: var(--nav-divider-before-content, ''),
+			display: var(--nav-divider-before-display, block),
+			height: var(--nav-divider-before-height, 1rem),
+			left: var(--nav-divider-before-left, 0),
+			margin-top: var(--nav-divider-before-margin-top, -0.5rem),
+			position: var(--nav-divider-before-position, absolute),
+			top: var(--nav-divider-before-top, 50%),
+			width: var(--nav-divider-before-width, 1px),
+			z-index: var(--nav-divider-before-z-index, 2),
+		),
+	),
+	$nav-divider
+);
+
+$nav-divider-end: () !default;
+$nav-divider-end: map-deep-merge(
+	(
+		margin-right: var(--nav-divider-end-margin-right, 0.5rem),
+		padding-right: var(--nav-divider-end-padding-right, 0.5rem),
+		position: var(--nav-divider-end-position, relative),
+		after: (
+			background-color:
+				var(
+					--nav-divider-end-after-background-color,
+					$nav-divider-color
+				),
+			content: var(--nav-divider-end-after-content, ''),
+			display: var(--nav-divider-end-after-display, block),
+			height: var(--nav-divider-end-after-height, 1rem),
+			margin-top: var(--nav-divider-end-after-margin-top, -0.5rem),
+			position: var(--nav-divider-end-after-position, absolute),
+			right: var(--nav-divider-end-after-right, 0),
+			top: var(--nav-divider-end-after-top, 50%),
+			width: var(--nav-divider-end-after-width, 1px),
+			z-index: var(--nav-divider-end-after-z-index, 2),
+		),
+	),
+	$nav-divider-end
+);
+
+// .nav-text-truncate
+
+$nav-text-truncate: () !default;
+$nav-text-truncate: map-merge(
+	(
+		display: var(--nav-text-truncate-display, inline-block),
+		margin-bottom: var(--nav-text-truncate-margin-bottom, -6px),
+		max-width: var(--nav-text-truncate-max-width, 100%),
+		overflow: var(--nav-text-truncate-overflow, hidden),
+		text-overflow: var(--nav-text-truncate-text-overflow, ellipsis),
+		white-space: var(--nav-text-truncate-white-space, nowrap),
+	),
+	$nav-text-truncate
+);
+
+// .nav .nav-form
+
+$nav-form-padding-bottom: 0 !default;
+$nav-form-padding-left: $nav-link-padding-x !default;
+$nav-form-padding-right: $nav-link-padding-x !default;
+$nav-form-padding-top: 0 !default;
+
+// .nav
+
+$nav: () !default;
+$nav: map-deep-merge(
+	(
+		display: var(--nav-display, flex),
+		flex-wrap: var(--nav-flex-wrap, wrap),
+		font-size: var(--nav-font-size, $nav-font-size),
+		list-style: var(--nav-list-style, none),
+		margin-bottom: var(--nav-margin-bottom, 0),
+		padding-left: var(--nav-padding-left, 0),
+		nav-form: (
+			padding-bottom:
+				var(--nav-nav-form-padding-bottom, $nav-form-padding-bottom),
+			padding-left:
+				var(--nav-nav-form-padding-left, $nav-form-padding-left),
+			padding-right:
+				var(--nav-nav-form-padding-right, $nav-form-padding-right),
+			padding-top: var(--nav-nav-form-padding-top, $nav-form-padding-top),
+		),
+	),
+	$nav
+);
+
+// .nav-fill
+
+$nav-fill: () !default;
+$nav-fill: map-deep-merge(
+	(
+		nav-item: (
+			flex: var(--nav-fill-nav-item-flex, 1 1 auto),
+			text-align: var(--nav-fill-nav-item-text-align, center),
+		),
+	),
+	$nav-fill
+);
+
+// .nav-justified
+
+$nav-justified: () !default;
+$nav-justified: map-deep-merge(
+	(
+		nav-item: (
+			flex-basis: var(--nav-justified-nav-item-flex-basis, 0),
+			flex-grow: var(--nav-justified-nav-item-flex-grow, 1),
+			text-align: var(--nav-justified-nav-item-text-align, center),
+		),
+		nav-link: (
+			text-align: var(--nav-justified-nav-link-text-align, center),
+			width: var(--nav-justified-nav-link-width, 100%),
+		),
+	),
+	$nav-justified
+);
+
+// .nav-stacked
+
+$nav-stacked-nav-form-padding-bottom: $nav-link-padding-y !default;
+$nav-stacked-nav-form-padding-left: 0.5rem !default;
+$nav-stacked-nav-form-padding-right: 0.5rem !default;
+$nav-stacked-nav-form-padding-top: $nav-link-padding-y !default;
+
+$nav-stacked: () !default;
+$nav-stacked: map-deep-merge(
+	(
+		display: var(--nav-stacked-display, block),
+		nav-form: (
+			padding-bottom:
+				var(
+					--nav-stacked-nav-form-padding-bottom,
+					$nav-stacked-nav-form-padding-bottom
+				),
+			padding-left:
+				var(
+					--nav-stacked-nav-form-padding-left,
+					$nav-stacked-nav-form-padding-left
+				),
+			padding-right:
+				var(
+					--nav-stacked-nav-form-padding-right,
+					$nav-stacked-nav-form-padding-right
+				),
+			padding-top:
+				var(
+					--nav-stacked-nav-form-padding-top,
+					$nav-stacked-nav-form-padding-top
+				),
+		),
+	),
+	$nav-stacked
+);
+
+// .nav-unstyled
+
+$nav-unstyled: () !default;
+$nav-unstyled: map-deep-merge(
+	(
+		flex-wrap: var(--nav-unstyled-flex-wrap, nowrap),
+		nav-link: (
+			line-height:
+				var(
+					--nav-unstyled-nav-link-line-height,
+					$nav-item-monospaced-size
+				),
+			padding-bottom: var(--nav-unstyled-nav-link-padding-bottom, 0),
+			padding-left: var(--nav-unstyled-nav-link-padding-left, 4px),
+			padding-right: var(--nav-unstyled-nav-link-padding-right, 4px),
+			padding-top: var(--nav-unstyled-nav-link-padding-top, 0),
+		),
+		nav-link-monospaced: (
+			margin: var(--nav-unstyled-nav-link-monospaced-margin, 0 4px),
+		),
+		nav-btn: (
+			margin: var(--nav-unstyled-nav-btn-margin, 0 4px),
+			padding-bottom: var(--nav-unstyled-nav-btn-padding-bottom, 0),
+			padding-left: var(--nav-unstyled-nav-btn-padding-left, 4px),
+			padding-right: var(--nav-unstyled-nav-btn-padding-right, 4px),
+			padding-top: var(--nav-unstyled-nav-btn-padding-top, 0),
+		),
+	),
+	$nav-unstyled
+);
+
+// Nav Nested
+
+$nav-nested-margins-spacer-x: var(
+	--nav-nested-margins-spacer-x,
+	$nav-link-padding-x
+) !default;
+$nav-nested-spacer-x: 1rem !default; // 16px
+
+// Nav Tabs
+
+$nav-tabs-font-size: 0.875rem !default; // 14px
+
+// Nav Tabs Link
+
+$nav-tabs-border-color: transparent !default;
+$nav-tabs-border-width: $border-width !default;
+$nav-tabs-border-radius: $border-radius $border-radius 0 0 !default;
+
+$nav-tabs-link-color: $gray-600 !default;
+$nav-tabs-link-padding-x: 1rem !default;
+$nav-tabs-link-padding-y: 0.28125rem !default; // 4.5px
+
+$nav-tabs-link-hover-border-color: transparent !default;
+
+$nav-tabs-link-active-bg: $white !default;
+$nav-tabs-link-active-border-color: transparent transparent $body-bg !default;
+$nav-tabs-link-active-color: $gray-900 !default;
+
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
+$nav-tabs-link-show-bg: transparent !default;
+$nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color
+	transparent !default;
+
+// .nav-tabs .nav-link[aria-expanded="true"]
+
+$nav-tabs-link-show: () !default;
+$nav-tabs-link-show: map-deep-merge(
+	(
+		background-color:
+			var(--nav-tabs-link-show-background-color, $nav-tabs-link-show-bg),
+		border-color:
+			var(
+				--nav-tabs-link-show-border-color,
+				$nav-tabs-link-show-border-color
+			),
+		color: var(--nav-tabs-link-show-color, $nav-tabs-link-show-color),
+	),
+	$nav-tabs-link-show
+);
+
+$nav-tabs-link: () !default;
+$nav-tabs-link: map-deep-merge(
+	(
+		border-color: var(--nav-tabs-link-border-color, transparent),
+		border-style: var(--nav-tabs-link-border-style, solid),
+		border-width: var(--nav-tabs-link-border-width, $nav-tabs-border-width),
+		border-radius:
+			var(--nav-tabs-link-border-radius, $nav-tabs-border-radius),
+		color: var(--nav-tabs-link-color, $nav-tabs-link-color),
+		font-weight: var(--nav-tabs-link-font-weight, $font-weight-semi-bold),
+		padding-bottom:
+			var(--nav-tabs-link-padding-bottom, $nav-tabs-link-padding-y),
+		padding-left:
+			var(--nav-tabs-link-padding-left, $nav-tabs-link-padding-x),
+		padding-right:
+			var(--nav-tabs-link-padding-right, $nav-tabs-link-padding-x),
+		padding-top: var(--nav-tabs-link-padding-top, $nav-tabs-link-padding-y),
+		transition:
+			var(--nav-tabs-link-transition, box-shadow 0.15s ease-in-out),
+		white-space: var(--nav-tabs-link-white-space, nowrap),
+		hover: (
+			border-color:
+				var(
+					--nav-tabs-link-hover-border-color,
+					$nav-tabs-link-hover-border-color
+				),
+			box-shadow:
+				var(
+					--nav-tabs-link-hover-box-shadow,
+					$component-focus-box-shadow
+				),
+			outline: var(--nav-tabs-link-hover-outline, 0),
+		),
+		focus: (
+			border-color:
+				var(
+					--nav-tabs-link-focus-border-color,
+					$nav-tabs-link-hover-border-color
+				),
+		),
+		active: (
+			background-color:
+				var(
+					--nav-tabs-link-active-background-color,
+					$nav-tabs-link-active-bg
+				),
+			border-color:
+				var(
+					--nav-tabs-link-active-border-color,
+					$nav-tabs-link-active-border-color
+				),
+			color:
+				var(--nav-tabs-link-active-color, $nav-tabs-link-active-color),
+		),
+		show: $nav-tabs-link-show,
+		disabled: (
+			background-color:
+				var(--nav-tabs-link-disabled-background-color, transparent),
+			border-color:
+				var(--nav-tabs-link-disabled-border-color, transparent),
+			box-shadow: var(--nav-tabs-link-disabled-box-shadow, none),
+			color: var(--nav-tabs-link-disabled-color, $nav-link-disabled-color),
+			active: (
+				box-shadow:
+					var(--nav-tabs-link-disabled-active-box-shadow, none),
+			),
+		),
+	),
+	$nav-tabs-link
+);
+
+// .nav-tabs
+
+$nav-tabs: () !default;
+$nav-tabs: map-deep-merge(
+	(
+		border-bottom:
+			var(
+				--nav-tabs-border-bottom,
+				$nav-tabs-border-width solid $nav-tabs-border-color
+			),
+		font-size: var(--nav-tabs-font-size, $nav-tabs-font-size),
+		nav-item: (
+			margin-bottom:
+				var(
+					--nav-tabs-nav-item-margin-bottom,
+					math-sign($nav-tabs-border-width)
+				),
+		),
+		nav-link: $nav-tabs-link,
+	),
+	$nav-tabs
+);
+
+// Nav Tabs Tab Pane
+
+$nav-tabs-tab-pane-bg: var(
+	--nav-tabs-tab-pane-background-color,
+	$white
+) !default;
+$nav-tabs-tab-pane-border-radius: var(
+	--nav-tabs-tab-pane-border-radius,
+	4px
+) !default;
+$nav-tabs-tab-pane-padding: var(--nav-tabs-tab-pane-padding, 2rem) !default;
+
+// Nav Pills
+
+/// @deprecated as of v3.x with no replacement
+
+$nav-pills-border-radius: $border-radius !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$nav-pills-link-active-bg: $component-active-bg !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$nav-pills-link-active-color: $component-active-color !default;
+
+// Nav Underline Link Highlight
+
+$nav-underline-link-highlight-content: null !default;
+$nav-underline-link-highlight-height: null !default;
+$nav-underline-link-highlight-bottom: 0 !default;
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+$nav-underline-link-highlight-top: null !default;
+
+$nav-underline-link-active-highlight: $primary-l1 !default;
+$nav-underline-link-active-content: '' !default;
+$nav-underline-link-active-highlight-height: 0.125rem !default; // 2px
+
+$nav-underline-link-disabled-highlight: null !default;
+
+// .nav-underline
+
+$nav-underline-font-size: 0.875rem !default;
+
+$nav-underline-link-highlight-palette: null !default;
+
+$nav-underline-link-color: $gray-600 !default;
+$nav-underline-link-padding-x: 1rem !default;
+$nav-underline-link-padding-y: 0.5625rem !default;
+
+$nav-underline-link-hover-color: null !default;
+
+$nav-underline-link-active-color: $gray-900 !default;
+
+$nav-underline-link-disabled-color: $nav-link-disabled-color !default;
+
+// .nav-underline .nav-link[aria-expanded='true']
+
+$nav-underline-link-show: () !default;
+$nav-underline-link-show: map-deep-merge(
+	(
+		color:
+			var(
+				--nav-underline-link-show-color,
+				$nav-underline-link-active-color
+			),
+		after: (
+			content:
+				var(
+					--nav-underline-link-show-after-content,
+					$nav-underline-link-active-content
+				),
+			height:
+				var(
+					--nav-underline-link-show-after-height,
+					$nav-underline-link-active-highlight-height
+				),
+		),
+	),
+	$nav-underline-link-show
+);
+
+$nav-underline-link: () !default;
+$nav-underline-link: map-deep-merge(
+	(
+		border-radius: var(--nav-underline-link-border-radius, 1px),
+		color: var(--nav-underline-link-color, $nav-underline-link-color),
+		font-weight:
+			var(--nav-underline-link-font-weight, $font-weight-semi-bold),
+		line-height: var(--nav-underline-link-line-height, 1),
+		padding-bottom:
+			var(
+				--nav-underline-link-padding-bottom,
+				$nav-underline-link-padding-y
+			),
+		padding-left:
+			var(
+				--nav-underline-link-padding-left,
+				$nav-underline-link-padding-x
+			),
+		padding-right:
+			var(
+				--nav-underline-link-padding-right,
+				$nav-underline-link-padding-x
+			),
+		padding-top:
+			var(--nav-underline-link-padding-top, $nav-underline-link-padding-y),
+		transition:
+			var(--nav-underline-link-transition, box-shadow 0.15s ease-in-out),
+		after: (
+			bottom:
+				var(
+					--nav-underline-link-after-bottom,
+					$nav-underline-link-highlight-bottom
+				),
+			content:
+				var(
+					--nav-underline-link-after-content,
+					$nav-underline-link-highlight-content
+				),
+			display: var(--nav-underline-link-after-display, block),
+			height:
+				var(
+					--nav-underline-link-after-height,
+					$nav-underline-link-highlight-height
+				),
+			position: var(--nav-underline-link-after-position, absolute),
+			left:
+				var(
+					--nav-underline-link-after-left,
+					$nav-underline-link-highlight-left
+				),
+			right:
+				var(
+					--nav-underline-link-after-right,
+					$nav-underline-link-highlight-right
+				),
+			top:
+				var(
+					--nav-underline-link-after-top,
+					$nav-underline-link-highlight-top
+				),
+			width: var(--nav-underline-link-after-width, auto),
+		),
+		hover: (
+			color:
+				var(
+					--nav-underline-link-hover-color,
+					$nav-underline-link-hover-color
+				),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--nav-underline-link-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			color:
+				var(
+					--nav-underline-link-focus-color,
+					$nav-underline-link-hover-color
+				),
+			outline: var(--nav-underline-link-focus-outline, 0),
+		),
+		active-class: (
+			color:
+				var(
+					--nav-underline-link-active-class-color,
+					$nav-underline-link-active-color
+				),
+			after: (
+				background-color:
+					var(
+						--nav-underline-link-active-class-after-background-color,
+						$nav-underline-link-active-highlight
+					),
+				content:
+					var(
+						--nav-underline-link-active-class-after-content,
+						$nav-underline-link-active-content
+					),
+				height:
+					var(
+						--nav-underline-link-active-class-after-height,
+						$nav-underline-link-active-highlight-height
+					),
+			),
+		),
+		show: $nav-underline-link-show,
+		disabled: (
+			box-shadow: var(--nav-underline-link-disabled-box-shadow, none),
+			color:
+				var(
+					--nav-underline-link-disabled-color,
+					$nav-underline-link-disabled-color
+				),
+			after: (
+				background-color:
+					var(
+						--nav-underline-link-disabled-after-background-color,
+						$nav-underline-link-disabled-highlight
+					),
+			),
+		),
+	),
+	$nav-underline-link
+);
+
+// .nav-underline
+
+$nav-underline: () !default;
+$nav-underline: map-deep-merge(
+	(
+		font-size: var(--nav-underline-font-size, $nav-underline-font-size),
+		nav-link: $nav-underline-link,
+	),
+	$nav-underline
+);

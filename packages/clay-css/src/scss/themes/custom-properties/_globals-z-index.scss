@@ -1,0 +1,43 @@
+$zindex-dropdown: var(--z-index-dropdown, 1000) !default;
+$zindex-sticky: var(--z-index-sticky, 1020) !default;
+$zindex-fixed: var(--z-index-fixed, 1030) !default;
+$zindex-modal-backdrop: var(--z-index-modal-backdrop, 1040) !default;
+$zindex-modal: var(--z-index-modal, 1050) !default;
+$zindex-popover: var(--z-index-popover, 1060) !default;
+$zindex-tooltip: var(--z-index-tooltip, 1070) !default;
+
+$zindex-alert-notifications: var(--z-index-alert-notifications, 5000) !default;
+$zindex-clay-range-input-form-control: var(
+	--z-index-clay-range-input-form-control,
+	1
+) !default;
+$zindex-input-group-hover: var(--z-index-input-group-hover, 3) !default;
+$zindex-input-group-focus: var(--z-index-input-group-focus, 4) !default;
+$zindex-navbar-collapse-absolute: var(
+	--z-index-navbar-collapse-absolute,
+	500
+) !default;
+$zindex-navbar-overlay: var(--z-index-navbar-overlay, 450) !default;
+$zindex-navbar-toggler-focus: var(--z-index-navbar-toggler-focus, 525) !default;
+$zindex-menubar-vertical-expand-md-collapse-mobile: var(
+	--z-index-menubar-vertical-expand-md-collapse-mobile,
+	499
+) !default;
+$zindex-menubar-vertical-expand-lg-collapse-mobile: var(
+	--z-index-menubar-vertical-expand-lg-collapse-mobile,
+	499
+) !default;
+$zindex-pagination-link-focus: var(--z-index-pagination-link-focus, 4) !default;
+$zindex-pagination-link-active: var(
+	--z-index-pagination-link-active,
+	3
+) !default;
+$zindex-pagination-link-disabled: var(
+	--z-index-pagination-link-disabled,
+	0
+) !default;
+$zindex-panel-header-link-focus: var(
+	--z-index-panel-header-link-focus,
+	1
+) !default;
+$zindex-sidenav: var(--z-index-sidenav, 1035) !default;

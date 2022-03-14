@@ -1,0 +1,735 @@
+// .badge
+
+$badge-border-color: transparent !default;
+$badge-border-radius: 10rem !default;
+$badge-border-style: solid !default;
+$badge-border-width: 1px !default;
+$badge-font-size: 0.625rem !default; // 10px
+$badge-font-weight: $font-weight-semi-bold !default;
+$badge-line-height: 1.1 !default;
+$badge-padding-x: 0.25rem !default; // 4px
+$badge-padding-y: 0.09375rem !default; // 1.5px
+$badge-transition: $btn-transition !default;
+
+$badge-spacer-x: 0.25rem !default; // 4px
+$badge-spacer-y: 0.125rem !default; // 2px
+
+$badge-focus-width: $input-btn-focus-width !default;
+
+// .badge a
+
+$badge-link-color: $white !default;
+$badge-link-hover-color: null !default;
+$badge-link-text-decoration: underline !default;
+$badge-link-hover-text-decoration: none !default;
+
+$badge: () !default;
+$badge: map-deep-merge(
+	(
+		border-color: var(--badge-border-color, $badge-border-color),
+		border-radius: var(--badge-border-radius, $badge-border-radius),
+		border-style: var(--badge-border-style, $badge-border-style),
+		border-width: var(--badge-border-width, $badge-border-width),
+		display: var(--badge-display, inline-flex),
+		font-size: var(--badge-font-size, $badge-font-size),
+		font-weight: var(--badge-font-weight, $badge-font-weight),
+		line-height: var(--badge-line-height, $badge-line-height),
+		margin-bottom: var(--badge-margin-bottom, $badge-spacer-y),
+		margin-right: var(--badge-margin-right, $badge-spacer-x),
+		margin-top: var(--badge-margin-top, $badge-spacer-y),
+		max-width: var(--badge-max-width, 100%),
+		padding-bottom: var(--badge-padding-bottom, $badge-padding-y),
+		padding-left: var(--badge-padding-left, $badge-padding-x),
+		padding-right: var(--badge-padding-right, $badge-padding-x),
+		padding-top: var(--badge-padding-top, $badge-padding-y),
+		text-align: var(--badge-text-align, center),
+		transition: var(--badge-transition, $badge-transition),
+		white-space: var(--badge-white-space, inherit),
+		word-wrap: var(--badge-word-wrap, break-word),
+		empty: (
+			display: var(--badge-empty-display, none),
+		),
+		href: (
+			hover: (
+				text-decoration: var(--badge-href-hover-text-decoration, none),
+			),
+			focus: (
+				box-shadow:
+					var(
+						--badge-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+				outline: var(--badge-href-focus-outline, 0),
+			),
+		),
+		link: (
+			color: var(--badge-link-color, $badge-link-color),
+			text-decoration:
+				var(--badge-link-text-decoration, $badge-link-text-decoration),
+			hover: (
+				color: $badge-link-hover-color,
+				text-decoration:
+					var(
+						--badge-link-hover-text-decoration,
+						$badge-link-hover-text-decoration
+					),
+			),
+			focus: (
+				color: $badge-link-hover-color,
+				text-decoration:
+					var(
+						--badge-link-focus-text-decoration,
+						$badge-link-hover-text-decoration
+					),
+			),
+		),
+		c-inner: (
+			margin-bottom:
+				var(--badge-c-inner-margin-bottom, math-sign($badge-padding-y)),
+			margin-left:
+				var(--badge-c-inner-margin-left, math-sign($badge-padding-x)),
+			margin-right:
+				var(--badge-c-inner-margin-right, math-sign($badge-padding-x)),
+			margin-top:
+				var(--badge-c-inner-margin-top, math-sign($badge-padding-y)),
+			max-width: var(--badge-c-inner-max-width, none),
+		),
+	),
+	$badge
+);
+
+// .badge-item .lexicon-icon
+
+$badge-lexicon-icon-height: 0.875em !default;
+$badge-lexicon-icon-margin-top: 0 !default;
+$badge-lexicon-icon-width: 0.875em !default;
+
+// .badge-item-expand
+
+$badge-item-expand-min-width: 0.375rem !default;
+
+// .badge-item-before, .badge-item-after
+
+$badge-item-spacer-x: 0.85714em !default;
+
+// .badge-close
+
+$badge-close: () !default;
+$badge-close: map-deep-merge(
+	(
+		border-radius: var(--badge-close-border-radius, 1px),
+		color: var(--badge-close-color, inherit),
+		display: var(--badge-close-display, inline-flex),
+		font-size: var(--badge-close-font-size, inherit),
+		height: var(--badge-close-height, auto),
+		opacity: var(--badge-close-opacity, 1),
+		width: var(--badge-close-width, auto),
+		hover: (
+			color: var(--badge-close-hover-color, inherit),
+			opacity: var(--badge-close-hover-opacity, 1),
+		),
+		focus: (
+			opacity: var(--badge-close-focus-opacity, 1),
+		),
+	),
+	$badge-close
+);
+
+// .badge-pill
+
+$badge-pill-border-radius: $border-radius !default;
+$badge-pill-padding-x: 0.25rem !default; // 4px
+
+$badge-pill: () !default;
+$badge-pill: map-deep-merge(
+	(
+		border-radius:
+			var(
+				--badge-pill-border-radius,
+				clay-enable-rounded($badge-pill-border-radius)
+			),
+		padding-left: var(--badge-pill-padding-left, $badge-pill-padding-x),
+		padding-right: var(--badge-pill-padding-right, $badge-pill-padding-x),
+	),
+	$badge-pill
+);
+
+// .badge-primary
+
+$badge-primary-bg: $primary !default;
+$badge-primary-border-color: transparent !default;
+$badge-primary-color: $white !default;
+$badge-primary-hover-bg: $badge-primary-bg !default;
+$badge-primary-hover-border-color: transparent !default;
+$badge-primary-hover-color: $badge-primary-color !default;
+$badge-primary-link-color: null !default;
+$badge-primary-link-hover-color: null !default;
+
+$badge-primary: () !default;
+$badge-primary: map-deep-merge(
+	(
+		background-color:
+			var(--badge-primary-background-color, $badge-primary-bg),
+		border-color:
+			var(--badge-primary-border-color, $badge-primary-border-color),
+		color: var(--badge-primary-color, $badge-primary-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-primary-href-hover-background-color,
+						$badge-primary-hover-bg
+					),
+				border-color:
+					var(
+						--badge-primary-href-hover-border-color,
+						$badge-primary-hover-border-color
+					),
+				color:
+					var(
+						--badge-primary-href-hover-color,
+						$badge-primary-hover-color
+					),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-primary-href-focus-background-color,
+						$badge-primary-hover-bg
+					),
+				border-color:
+					var(
+						--badge-primary-href-focus-border-color,
+						$badge-primary-hover-border-color
+					),
+				box-shadow:
+					var(
+						--badge-primary-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+				color:
+					var(
+						--badge-primary-href-focus-color,
+						$badge-primary-hover-color
+					),
+			),
+		),
+		link: (
+			color: $badge-primary-link-color,
+			hover: (
+				color: $badge-primary-link-hover-color,
+			),
+			focus: (
+				color: $badge-primary-link-hover-color,
+			),
+		),
+	),
+	$badge-primary
+);
+
+// .badge-secondary
+
+$badge-secondary-bg: $secondary-l3 !default;
+$badge-secondary-border-color: transparent !default;
+$badge-secondary-color: $gray-900 !default;
+$badge-secondary-hover-bg: $badge-secondary-bg !default;
+$badge-secondary-hover-border-color: transparent !default;
+$badge-secondary-hover-color: $badge-secondary-color !default;
+$badge-secondary-link-color: $badge-secondary-color !default;
+$badge-secondary-link-hover-color: null !default;
+
+$badge-secondary: () !default;
+$badge-secondary: map-deep-merge(
+	(
+		background-color:
+			var(--badge-secondary-background-color, $badge-secondary-bg),
+		border-color:
+			var(--badge-secondary-border-color, $badge-secondary-border-color),
+		color: var(--badge-secondary-color, $badge-secondary-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-secondary-href-hover-background-color,
+						$badge-secondary-hover-bg
+					),
+				border-color:
+					var(
+						--badge-secondary-href-hover-border-color,
+						$badge-secondary-hover-border-color
+					),
+				color:
+					var(
+						--badge-secondary-href-hover-color,
+						$badge-secondary-hover-color
+					),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-secondary-href-focus-background-color,
+						$badge-secondary-hover-bg
+					),
+				border-color:
+					var(
+						--badge-secondary-href-focus-border-color,
+						$badge-secondary-hover-border-color
+					),
+				color:
+					var(
+						--badge-secondary-href-focus-color,
+						$badge-secondary-hover-color
+					),
+				box-shadow:
+					var(
+						--badge-secondary-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+			),
+		),
+		link: (
+			color:
+				var(--badge-secondary-link-color, $badge-secondary-link-color),
+			hover: (
+				color: $badge-secondary-link-hover-color,
+			),
+			focus: (
+				color: $badge-secondary-link-hover-color,
+			),
+		),
+	),
+	$badge-secondary
+);
+
+// .badge-success
+
+$badge-success-bg: $success !default;
+$badge-success-border-color: transparent !default;
+$badge-success-color: $white !default;
+$badge-success-hover-bg: $badge-success-bg !default;
+$badge-success-hover-border-color: transparent !default;
+$badge-success-hover-color: $badge-success-color !default;
+$badge-success-link-color: null !default;
+$badge-success-link-hover-color: null !default;
+
+$badge-success: () !default;
+$badge-success: map-deep-merge(
+	(
+		background-color:
+			var(--badge-success-background-color, $badge-success-bg),
+		border-color:
+			var(--badge-success-border-color, $badge-success-border-color),
+		color: var(--badge-success-color, $badge-success-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-success-href-hover-background-color,
+						$badge-success-hover-bg
+					),
+				border-color:
+					var(
+						--badge-success-href-hover-border-color,
+						$badge-success-hover-border-color
+					),
+				color:
+					var(
+						--badge-success-href-hover-color,
+						$badge-success-hover-color
+					),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-success-href-focus-background-color,
+						$badge-success-hover-bg
+					),
+				border-color:
+					var(
+						--badge-success-href-focus-border-color,
+						$badge-success-hover-border-color
+					),
+				color:
+					var(
+						--badge-success-href-focus-color,
+						$badge-success-hover-color
+					),
+				box-shadow:
+					var(
+						--badge-success-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+			),
+		),
+		link: (
+			color: $badge-success-link-color,
+			hover: (
+				color: $badge-success-link-hover-color,
+			),
+			focus: (
+				color: $badge-success-link-hover-color,
+			),
+		),
+	),
+	$badge-success
+);
+
+// .badge-info
+
+$badge-info-bg: $info !default;
+$badge-info-border-color: transparent !default;
+$badge-info-color: $white !default;
+$badge-info-hover-bg: $badge-info-bg !default;
+$badge-info-hover-border-color: transparent !default;
+$badge-info-hover-color: $badge-info-color !default;
+$badge-info-link-color: null !default;
+$badge-info-link-hover-color: null !default;
+
+$badge-info: () !default;
+$badge-info: map-deep-merge(
+	(
+		background-color: var(--badge-info-background-color, $badge-info-bg),
+		border-color: var(--badge-info-border-color, $badge-info-border-color),
+		color: var(--badge-info-color, $badge-info-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-info-href-background-color,
+						$badge-info-hover-bg
+					),
+				border-color:
+					var(
+						--badge-info-href-border-color,
+						$badge-info-hover-border-color
+					),
+				color: var(--badge-info-href-color, $badge-info-hover-color),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-info-href-focus-background-color,
+						$badge-info-hover-bg
+					),
+				border-color:
+					var(
+						--badge-info-href-focus-border-color,
+						$badge-info-hover-border-color
+					),
+				color:
+					var(--badge-info-href-focus-color, $badge-info-hover-color),
+				box-shadow:
+					var(
+						--badge-info-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+			),
+		),
+		link: (
+			color: $badge-info-link-color,
+			hover: (
+				color: $badge-info-link-hover-color,
+			),
+			focus: (
+				color: $badge-info-link-hover-color,
+			),
+		),
+	),
+	$badge-info
+);
+
+// .badge-warning
+
+$badge-warning-bg: $warning !default;
+$badge-warning-border-color: transparent !default;
+$badge-warning-color: $white !default;
+$badge-warning-hover-bg: $badge-warning-bg !default;
+$badge-warning-hover-border-color: transparent !default;
+$badge-warning-hover-color: $badge-warning-color !default;
+$badge-warning-link-color: null !default;
+$badge-warning-link-hover-color: null !default;
+
+$badge-warning: () !default;
+$badge-warning: map-deep-merge(
+	(
+		background-color:
+			var(--badge-warning-background-color, $badge-warning-bg),
+		border-color:
+			var(--badge-warning-border-color, $badge-warning-border-color),
+		color: var(--badge-warning-color, $badge-warning-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-warning-href-hover-background-color,
+						$badge-warning-hover-bg
+					),
+				border-color:
+					var(
+						--badge-warning-href-hover-border-color,
+						$badge-warning-hover-border-color
+					),
+				color:
+					var(
+						--badge-warning-href-hover-color,
+						$badge-warning-hover-color
+					),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-warning-href-focus-background-color,
+						$badge-warning-hover-bg
+					),
+				border-color:
+					var(
+						--badge-warning-href-focus-border-color,
+						$badge-warning-hover-border-color
+					),
+				color:
+					var(
+						--badge-warning-href-focus-color,
+						$badge-warning-hover-color
+					),
+				box-shadow:
+					var(
+						--badge-warning-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+			),
+		),
+		link: (
+			color: $badge-warning-link-color,
+			hover: (
+				color: $badge-warning-link-hover-color,
+			),
+			focus: (
+				color: $badge-warning-link-hover-color,
+			),
+		),
+	),
+	$badge-warning
+);
+
+// .badge-danger
+
+$badge-danger-bg: $danger !default;
+$badge-danger-border-color: transparent !default;
+$badge-danger-color: $white !default;
+$badge-danger-hover-bg: $badge-danger-bg !default;
+$badge-danger-hover-border-color: transparent !default;
+$badge-danger-hover-color: $badge-danger-color !default;
+$badge-danger-link-color: null !default;
+$badge-danger-link-hover-color: null !default;
+
+$badge-danger: () !default;
+$badge-danger: map-deep-merge(
+	(
+		background-color: var(--badge-danger-background-color, $badge-danger-bg),
+		border-color:
+			var(--badge-danger-border-color, $badge-danger-border-color),
+		color: var(--badge-danger-color, $badge-danger-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-danger-href-hover-background-color,
+						$badge-danger-hover-bg
+					),
+				border-color:
+					var(
+						--badge-danger-href-hover-border-color,
+						$badge-danger-hover-border-color
+					),
+				color:
+					var(
+						--badge-danger-href-hover-color,
+						$badge-danger-hover-color
+					),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-danger-href-focus-background-color,
+						$badge-danger-hover-bg
+					),
+				border-color:
+					var(
+						--badge-danger-href-focus-border-color,
+						$badge-danger-hover-border-color
+					),
+				color:
+					var(
+						--badge-danger-href-focus-color,
+						$badge-danger-hover-color
+					),
+				box-shadow:
+					var(
+						--badge-danger-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+			),
+		),
+		link: (
+			color: $badge-danger-link-color,
+			hover: (
+				color: $badge-danger-link-hover-color,
+			),
+			focus: (
+				color: $badge-danger-link-hover-color,
+			),
+		),
+	),
+	$badge-danger
+);
+
+// .badge-light
+
+$badge-light-bg: $light !default;
+$badge-light-border-color: transparent !default;
+$badge-light-color: $gray-900 !default;
+$badge-light-hover-bg: $badge-light-bg !default;
+$badge-light-hover-border-color: transparent !default;
+$badge-light-hover-color: $badge-light-color !default;
+$badge-light-link-color: $badge-light-color !default;
+$badge-light-link-hover-color: null !default;
+
+$badge-light: () !default;
+$badge-light: map-deep-merge(
+	(
+		background-color: var(--badge-light-background-color, $badge-light-bg),
+		border-color: var(--badge-light-border-color, $badge-light-border-color),
+		color: var(--badge-light-color, $badge-light-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-light-href-hover-background-color,
+						$badge-light-hover-bg
+					),
+				border-color:
+					var(
+						--badge-light-href-hover-border-color,
+						$badge-light-hover-border-color
+					),
+				color:
+					var(
+						--badge-light-href-hover-color,
+						$badge-light-hover-color
+					),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-light-href-focus-background-color,
+						$badge-light-hover-bg
+					),
+				border-color:
+					var(
+						--badge-light-href-focus-border-color,
+						$badge-light-hover-border-color
+					),
+				color:
+					var(
+						--badge-light-href-focus-color,
+						$badge-light-hover-color
+					),
+				box-shadow:
+					var(
+						--badge-light-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+			),
+		),
+		link: (
+			color: $badge-light-link-color,
+			hover: (
+				color: $badge-light-link-hover-color,
+			),
+			focus: (
+				color: $badge-light-link-hover-color,
+			),
+		),
+	),
+	$badge-light
+);
+
+// .badge-dark
+
+$badge-dark-bg: $dark !default;
+$badge-dark-border-color: transparent !default;
+$badge-dark-color: $white !default;
+$badge-dark-hover-bg: $badge-dark-bg !default;
+$badge-dark-hover-border-color: transparent !default;
+$badge-dark-hover-color: $badge-dark-color !default;
+$badge-dark-link-color: null !default;
+$badge-dark-link-hover-color: null !default;
+
+$badge-dark: () !default;
+$badge-dark: map-deep-merge(
+	(
+		background-color: var(--badge-dark-background-color, $badge-dark-bg),
+		border-color: var(--badge-dark-border-color, $badge-dark-border-color),
+		color: var(--badge-dark-color, $badge-dark-color),
+		href: (
+			hover: (
+				background-color:
+					var(
+						--badge-dark-href-hover-background-color,
+						$badge-dark-hover-bg
+					),
+				border-color:
+					var(
+						--badge-dark-href-hover-border-color,
+						$badge-dark-hover-border-color
+					),
+				color:
+					var(--badge-dark-href-hover-color, $badge-dark-hover-color),
+			),
+			focus: (
+				background-color:
+					var(
+						--badge-dark-href-focus-background-color,
+						$badge-dark-hover-bg
+					),
+				border-color:
+					var(
+						--badge-dark-href-focus-border-color,
+						$badge-dark-hover-border-color
+					),
+				color:
+					var(--badge-dark-href-focus-color, $badge-dark-hover-color),
+				box-shadow:
+					var(
+						--badge-dark-href-focus-box-shadow,
+						$component-focus-box-shadow
+					),
+			),
+		),
+		link: (
+			color: $badge-dark-link-color,
+			hover: (
+				color: $badge-dark-link-hover-color,
+			),
+			focus: (
+				color: $badge-dark-link-hover-color,
+			),
+		),
+	),
+	$badge-dark
+);
+
+$badge-palette: () !default;
+$badge-palette: map-deep-merge(
+	(
+		primary: $badge-primary,
+		secondary: $badge-secondary,
+		success: $badge-success,
+		info: $badge-info,
+		warning: $badge-warning,
+		danger: $badge-danger,
+		light: $badge-light,
+		dark: $badge-dark,
+	),
+	$badge-palette
+);

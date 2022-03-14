@@ -1,0 +1,136 @@
+$enable-scaling-navbar: $enable-scaling-components !default;
+
+$navbar-border-radius: var(--navbar-border-radius, 0) !default;
+$navbar-font-size: 0.875rem !default; // 14px
+$navbar-padding-x: var(--navbar-padding-x, $spacer) !default;
+$navbar-padding-y: var(--navbar-padding-y, $spacer * 0.5) !default;
+
+$navbar-nav-link-padding-x: var(--navbar-nav-link-padding-x, 0.5rem) !default;
+
+$navbar-title-font-size: var(
+	--navbar-title-font-size,
+	1.25rem
+) !default; // 20px
+$navbar-title-font-weight: var(
+	--navbar-title-font-weight,
+	$font-weight-semi-bold
+) !default;
+$navbar-title-margin-bottom: var(--navbar-title-margin-bottom, 0) !default;
+$navbar-title-text-transform: var(--navbar-title-text-transform) !default;
+
+$navbar-text-truncate-spacer-right: var(
+	--navbar-text-truncate-spacer-right,
+	1.5625rem
+) !default; // 25px
+$navbar-text-truncate-max-width: var(
+	--navbar-text-truncate-max-width,
+	12.5rem
+) !default; // 200px
+
+// Navbar Brand
+
+$navbar-brand-font-size: $font-size-lg !default;
+
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+
+$nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
+$navbar-brand-height: clay-get-fallback($navbar-brand-font-size) *
+	$line-height-base !default;
+$navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) * 0.5 !default;
+
+// Navbar Toggler
+
+$navbar-toggler-border-radius: var(
+	--navbar-toggler-border-radius,
+	$border-radius
+) !default;
+$navbar-toggler-cursor: var(--navbar-toggler-cursor, pointer) !default;
+$navbar-toggler-font-size: var(
+	--navbar-toggler-font-size,
+	$font-size-lg
+) !default;
+$navbar-toggler-padding-x: var(--navbar-toggler-padding-x, 0.75rem) !default;
+$navbar-toggler-padding-y: var(--navbar-toggler-padding-y, 0.25rem) !default;
+
+// Navbar Underline
+
+$navbar-underline-active-bg: var(
+	--navbar-underline-active-background-color,
+	clay-lighten($component-active-bg, 22.94)
+) !default;
+
+// Navbar Dark
+
+$navbar-dark-color: var(--navbar-dark-color, $white) !default;
+
+$navbar-dark-hover-color: var(
+	--navbar-dark-hover-color,
+	$navbar-dark-color
+) !default;
+
+$navbar-dark-active-color: var(
+	--navbar-dark-active-color,
+	$navbar-dark-color
+) !default;
+
+$navbar-dark-disabled-color: var(
+	--navbar-dark-disabled-color,
+	$nav-link-disabled-color
+) !default;
+
+$navbar-dark-brand-color: var(
+	--navbar-dark-brand-color,
+	$navbar-dark-active-color
+) !default;
+
+$navbar-dark-brand-hover-color: var(
+	--navbar-dark-brand-hover-color,
+	$navbar-dark-active-color
+) !default;
+
+$navbar-dark-toggler-border-color: var(
+	--navbar-dark-toggler-border-color,
+	rgba($white, 0.1)
+) !default;
+$navbar-dark-toggler-icon-bg: var(
+	--navbar-dark-toggler-icon-background-image,
+	url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+) !default;
+
+// Navbar Light
+
+$navbar-light-color: var(--navbar-light-color, $gray-600) !default;
+
+$navbar-light-hover-color: var(
+	--navbar-light-hover-color,
+	$navbar-light-color
+) !default;
+
+$navbar-light-active-color: var(
+	--navbar-light-active-color,
+	$gray-900
+) !default;
+
+$navbar-light-disabled-color: var(
+	--navbar-light-disabled-color,
+	$nav-link-disabled-color
+) !default;
+
+$navbar-light-brand-color: var(
+	--navbar-light-brand-color,
+	$navbar-light-active-color
+) !default;
+
+$navbar-light-brand-hover-color: var(
+	--navbar-light-brand-hover-color,
+	$navbar-light-active-color
+) !default;
+
+$navbar-light-toggler-border-color: var(
+	--navbar-light-toggler-border-color,
+	rgba($black, 0.1)
+) !default;
+$navbar-light-toggler-icon-bg: var(
+	--navbar-light-toggler-icon-background-image,
+	url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+) !default;

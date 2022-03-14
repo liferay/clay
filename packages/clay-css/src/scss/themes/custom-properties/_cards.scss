@@ -1,0 +1,1591 @@
+$card-bg: $white !default;
+$card-border-color: rgba($black, 0.125) !default;
+$card-border-style: solid !default;
+$card-border-width: 0px !default;
+
+$card-border-radius: $border-radius !default;
+$card-inner-border-radius: calc(
+	#{$card-border-radius} - #{$card-border-width}
+) !default;
+
+$card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6) !default;
+$card-color: null !default;
+$card-height: null !default;
+$card-margin-bottom: 1.5rem !default;
+
+$card-spacer-x: 1.25rem !default;
+$card-spacer-y: 0.75rem !default;
+
+$card-cap-bg: rgba($black, 0.03) !default;
+$card-cap-color: null !default;
+
+// .card-body
+
+$card-body-padding-bottom: 1rem !default;
+$card-body-padding-left: 1rem !default;
+$card-body-padding-right: 1rem !default;
+$card-body-padding-top: 1rem !default;
+
+// Enable `flex-grow: 1` for decks and groups so that card blocks take up
+// as much space as possible, ensuring footers are aligned to the bottom.
+
+// `min-height` workaround for the image size bug in IE
+// See: https://github.com/twbs/bootstrap/pull/28855
+
+$card-body: () !default;
+$card-body: map-deep-merge(
+	(
+		color: var(--card-body-color),
+		flex: var(--card-body-flex, 1 1 auto),
+		min-height: var(--card-body-min-height, 1px),
+		padding-bottom:
+			var(--card-body-padding-bottom, $card-body-padding-bottom),
+		padding-left: var(--card-body-padding-left, $card-body-padding-left),
+		padding-right: var(--card-body-padding-right, $card-body-padding-right),
+		padding-top: var(--card-body-padding-top, $card-body-padding-top),
+	),
+	$card-body
+);
+
+// .card-section-header
+
+$card-section-header-color: $gray-600 !default;
+$card-section-header-font-size: 0.75rem !default;
+$card-section-header-font-weight: $font-weight-semi-bold !default;
+$card-section-header-line-height: 2.5 !default;
+$card-section-header-margin-bottom: 1.5rem !default;
+$card-section-header-padding: 0 ($grid-gutter-width * 0.5) !default;
+$card-section-header-text-transform: uppercase !default;
+
+$card-section-header: () !default;
+$card-section-header: map-deep-merge(
+	(
+		color: var(--card-section-header-color, $card-section-header-color),
+		font-size:
+			var(--card-section-header-font-size, $card-section-header-font-size),
+		font-weight:
+			var(
+				--card-section-header-font-weight,
+				$card-section-header-font-weight
+			),
+		line-height:
+			var(
+				--card-section-header-line-height,
+				$card-section-header-line-height
+			),
+		margin-bottom:
+			var(
+				--card-section-header-margin-bottom,
+				$card-section-header-margin-bottom
+			),
+		padding:
+			var(--card-section-header-padding, $card-section-header-padding),
+		text-transform:
+			var(
+				--card-section-header-text-transform,
+				$card-section-header-text-transform
+			),
+	),
+	$card-section-header
+);
+
+/// @deprecated as of v3.x with no replacement
+
+$card-img-overlay-padding: 1.25rem !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$card-group-margin: $grid-gutter-width * 0.5 !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$card-deck-margin: $card-group-margin !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$card-columns-count: 3 !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$card-columns-gap: 1.25rem !default;
+
+/// @deprecated as of v3.x with no replacement
+
+$card-columns-margin: $card-spacer-y !default;
+
+// Card Aspect Ratio
+
+$card-aspect-ratio-label: () !default;
+$card-aspect-ratio-label: map-deep-merge(
+	(
+		display: var(--card-aspect-ratio-label-display, block),
+		margin-bottom: var(--card-aspect-ratio-label-margin-bottom, 0.5rem),
+		margin-left: var(--card-aspect-ratio-label-margin-left, 0),
+		margin-right: var(--card-aspect-ratio-label-margin-right, 0),
+		margin-top: var(--card-aspect-ratio-label-margin-top, 0.5rem),
+	),
+	$card-aspect-ratio-label
+);
+
+$card-aspect-ratio-item-top-left: () !default;
+$card-aspect-ratio-item-top-left: map-deep-merge(
+	(
+		left: var(--card-aspect-ratio-item-top-left-left, 1rem),
+		top: var(--card-aspect-ratio-item-top-left-top, 1rem),
+	),
+	$card-aspect-ratio-item-top-left
+);
+
+$card-aspect-ratio-item-top-center: () !default;
+$card-aspect-ratio-item-top-center: map-deep-merge(
+	(
+		top: var(--card-aspect-ratio-item-top-center-top, 1rem),
+	),
+	$card-aspect-ratio-item-top-center
+);
+
+$card-aspect-ratio-item-top-right: () !default;
+$card-aspect-ratio-item-top-right: map-deep-merge(
+	(
+		right: var(--card-aspect-ratio-item-top-right-right, 1rem),
+		top: var(--card-aspect-ratio-item-top-right-top, 1rem),
+	),
+	$card-aspect-ratio-item-top-right
+);
+
+$card-aspect-ratio-item-right-middle: () !default;
+$card-aspect-ratio-item-right-middle: map-deep-merge(
+	(
+		right: var(--card-aspect-ratio-item-right-middle-right, 1rem),
+	),
+	$card-aspect-ratio-item-right-middle
+);
+
+$card-aspect-ratio-item-bottom-right: () !default;
+$card-aspect-ratio-item-bottom-right: map-deep-merge(
+	(
+		bottom: var(--card-aspect-ratio-item-bottom-right-bottom, 1rem),
+		right: var(--card-aspect-ratio-item-bottom-right-right, 1rem),
+	),
+	$card-aspect-ratio-item-bottom-right
+);
+
+$card-aspect-ratio-item-bottom-center: () !default;
+$card-aspect-ratio-item-bottom-center: map-deep-merge(
+	(
+		bottom: var(--card-aspect-ratio-item-bottom-center-bottom, 1rem),
+	),
+	$card-aspect-ratio-item-bottom-center
+);
+
+$card-aspect-ratio-item-bottom-left: () !default;
+$card-aspect-ratio-item-bottom-left: map-deep-merge(
+	(
+		bottom: var(--card-aspect-ratio-item-bottom-left-bottom, 1rem),
+		left: var(--card-aspect-ratio-item-bottom-left-left, 1rem),
+	),
+	$card-aspect-ratio-item-bottom-left
+);
+
+// min-width, see https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+
+$card: () !default;
+$card: map-deep-merge(
+	(
+		background-color: var(--card-background-color, $card-bg),
+		border-color: var(--card-border-color, $card-border-color),
+		border-radius:
+			var(--card-border-radius, clay-enable-rounded($card-border-radius)),
+		border-style: var(--card-border-style, $card-border-style),
+		border-width: var(--card-border-width, $card-border-width),
+		box-shadow:
+			var(--card-box-shadow, clay-enable-shadows($card-box-shadow)),
+		display: var(--card-display, block),
+		height: var(--card-height, $card-height),
+		margin-bottom: var(--card-margin-bottom, $card-margin-bottom),
+		min-width: var(--card-min-width, 0),
+		position: var(--card-position, relative),
+		word-wrap: var(--card-word-wrap, break-word),
+		aspect-ratio: (
+			label: $card-aspect-ratio-label,
+		),
+		aspect-ratio-item-top-left: $card-aspect-ratio-item-top-left,
+		aspect-ratio-item-top-center: $card-aspect-ratio-item-top-center,
+		aspect-ratio-item-top-right: $card-aspect-ratio-item-top-right,
+		aspect-ratio-item-right-middle: $card-aspect-ratio-item-right-middle,
+		aspect-ratio-item-bottom-right: $card-aspect-ratio-item-bottom-right,
+		aspect-ratio-item-bottom-center: $card-aspect-ratio-item-bottom-center,
+		aspect-ratio-item-bottom-left: $card-aspect-ratio-item-bottom-left,
+		hr: (
+			margin-left: var(--card-hr-margin-left, 0),
+			margin-right: var(--card-hr-margin-right, 0),
+		),
+	),
+	$card
+);
+
+// .card-title
+
+$card-title: () !default;
+$card-title: map-deep-merge(
+	(
+		color: var(--card-title-color, $gray-900),
+		font-size: var(--card-title-font-size, 0.875rem),
+		font-weight: var(--card-title-font-weight, $font-weight-semi-bold),
+		line-height: var(--card-title-line-height, $line-height-base),
+		margin-bottom: var(--card-title-margin-bottom, 0),
+	),
+	$card-title
+);
+
+$card-title-link: () !default;
+$card-title-link: map-deep-merge(
+	(
+		color: var(--card-title-href-color, map-get($card-title, color)),
+		hover: (
+			color:
+				var(--card-title-href-hover-color, map-get($card-title, color)),
+		),
+	),
+	$card-title-link
+);
+
+$card-title: map-deep-merge(
+	$card-title,
+	(
+		href: $card-title-link,
+	)
+);
+
+// .card-subtitle
+
+$card-subtitle: () !default;
+$card-subtitle: map-deep-merge(
+	(
+		color: var(--card-subtitle-color, $gray-600),
+		font-size: var(--card-subtitle-font-size, 0.875rem),
+		font-weight: var(--card-subtitle-font-weight, $font-weight-normal),
+		margin-bottom: var(--card-subtitle-margin-bottom, 0),
+		margin-top: var(--card-subtitle-margin-top, 0),
+	),
+	$card-subtitle
+);
+
+$card-subtitle-link: () !default;
+$card-subtitle-link: map-deep-merge(
+	(
+		color: var(--card-subtitle-href-color, map-get($card-subtitle, color)),
+		hover: (
+			color: var(--card-subtitle-href-hover-color, $gray-600),
+		),
+	),
+	$card-subtitle-link
+);
+
+$card-subtitle: map-deep-merge(
+	$card-subtitle,
+	(
+		href: $card-subtitle-link,
+	)
+);
+
+// .card-text
+
+$card-text: () !default;
+$card-text: map-deep-merge(
+	(
+		last-child: (
+			margin-bottom: var(--card-text-last-child-margin-bottom, 0),
+		),
+	),
+	$card-text
+);
+
+// .card-link
+
+$card-link: () !default;
+$card-link: map-deep-merge(
+	(
+		color: var(--card-link-color, $gray-600),
+		font-size: var(--card-link-font-size, 0.875rem),
+		hover: (
+			color: var(--card-link-hover-color, $gray-600),
+			text-decoration: var(--card-link-hover-text-decoration, underline),
+		),
+	),
+	$card-link
+);
+
+// .card-divider
+
+$card-divider-bg: $card-border-color !default;
+$card-divider-height: 1px !default;
+$card-divider-spacer-x: null !default;
+$card-divider-spacer-y: 10px !default;
+
+$card-divider: () !default;
+$card-divider: map-merge(
+	(
+		background-color: var(--card-divider-background-color, $card-divider-bg),
+		height: var(--card-divider-height, $card-divider-height),
+		margin-bottom: var(--card-divider-margin-bottom, $card-divider-spacer-y),
+		margin-left: var(--card-divider-margin-left, $card-divider-spacer-x),
+		margin-right: var(--card-divider-margin-right, $card-divider-spacer-x),
+		margin-top: var(--card-divider-margin-top, $card-divider-spacer-y),
+	),
+	$card-divider
+);
+
+// .card-header
+
+// `margin-bottom`, removes the default margin-bottom of <hN> (h1 - h6)
+
+$card-header: () !default;
+$card-header: map-deep-merge(
+	(
+		background-color: var(--card-header-background-color, $card-cap-bg),
+		border-bottom:
+			var(
+				--card-header-border-bottom,
+				$card-border-width solid $card-border-color
+			),
+		color: var(--card-header-color, $card-cap-color),
+		margin-bottom: var(--card-header-margin-bottom, 0),
+		padding: var(--card-header-padding, $card-spacer-y $card-spacer-x),
+		first-child: (
+			border-radius:
+				var(
+					--card-header-first-child-border-radius,
+					clay-enable-rounded(
+						$card-inner-border-radius $card-inner-border-radius 0 0
+					)
+				),
+		),
+	),
+	$card-header
+);
+
+// .card-footer
+
+$card-footer: () !default;
+$card-footer: map-deep-merge(
+	(
+		background-color: var(--card-footer-background-color, $card-cap-bg),
+		border-top:
+			var(
+				--card-footer-border-top,
+				$card-border-width solid $card-border-color
+			),
+		padding: var(--card-footer-padding, $card-spacer-y $card-spacer-x),
+		last-child: (
+			border-radius:
+				var(
+					--card-footer-last-child-border-radius,
+					clay-enable-rounded(
+						0 0 $card-inner-border-radius $card-inner-border-radius
+					)
+				),
+		),
+	),
+	$card-footer
+);
+
+// .card.rounded-*
+
+$card-rounded-inner-border-radius: calc(
+	#{$rounded-border-radius} - #{$card-border-width}
+) !default;
+$card-rounded-0-inner-border-radius: calc(
+	#{$rounded-0-border-radius} - #{$card-border-width}
+) !default;
+$card-rounded-circle-inner-border-radius: calc(
+	#{$rounded-circle-border-radius} - #{$card-border-width}
+) !default;
+
+// .form-check-card
+
+$form-check-card-checked-box-shadow: 0 0 0 2px
+	clay-lighten($component-active-bg, 22.94) !default;
+
+$form-check-card: () !default;
+$form-check-card: map-deep-merge(
+	(
+		margin-bottom: var(--form-check-card-margin-bottom, $card-margin-bottom),
+		margin-top: var(--form-check-card-margin-top, 0),
+		padding-left: var(--form-check-card-padding-left, 0),
+		hover: (
+			card: (
+				box-shadow:
+					var(
+						--form-check-card-hover-card-box-shadow,
+						$form-check-card-checked-box-shadow
+					),
+			),
+		),
+		active: (
+			card: (
+				box-shadow:
+					var(
+						--form-check-card-active-card-box-shadow,
+						$form-check-card-checked-box-shadow
+					),
+			),
+		),
+		checked: (
+			card: (
+				box-shadow:
+					var(
+						--form-check-card-checked-card-box-shadow,
+						$form-check-card-checked-box-shadow
+					),
+			),
+		),
+		card: (
+			margin-bottom: var(--form-check-card-card-margin-bottom, 0),
+		),
+		form-check-input: (
+			margin-left: var(--form-check-card-form-check-input-margin-left, 0),
+			margin-top: var(--form-check-card-form-check-input-margin-top, 0),
+			opacity: var(--form-check-card-form-check-input-opacity, 0),
+			position: var(--form-check-card-form-check-input-position, absolute),
+			z-index: var(--form-check-card-form-check-input-z-index, 1),
+		),
+		form-check-label: (
+			color: var(--form-check-card-form-check-label-color, $body-color),
+			display: var(--form-check-card-form-check-label-display, inline),
+			font-weight:
+				var(
+					--form-check-card-form-check-label-font-weight,
+					$font-weight-normal
+				),
+			padding-left:
+				var(--form-check-card-form-check-label-padding-left, 0),
+			position: var(--form-check-card-form-check-label-position, static),
+		),
+		custom-control: (
+			display: var(--form-check-card-custom-control-display, inline),
+			margin-right: var(--form-check-card-custom-control-margin-right, 0),
+			position: var(--form-check-card-custom-control-position, static),
+			label: (
+				font-weight:
+					var(
+						--form-check-card-custom-control-label-font-weight,
+						$font-weight-normal
+					),
+				padding-left:
+					var(--form-check-card-custom-control-label-padding-left, 0),
+			),
+			custom-control-label: (
+				opacity:
+					var(
+						--form-check-card-custom-control-custom-control-label-opacity,
+						0
+					),
+				position:
+					var(
+						--form-check-card-custom-control-custom-control-label-position,
+						absolute
+					),
+				z-index:
+					var(
+						--form-check-card-custom-control-custom-control-label-z-index,
+						1
+					),
+				before: (
+					top:
+						var(
+							--form-check-card-custom-control-custom-control-label-before-top,
+							0
+						),
+				),
+				after: (
+					top:
+						var(
+							--form-check-card-custom-control-custom-control-label-after-top,
+							0
+						),
+				),
+			),
+			custom-control-input: (
+				z-index:
+					var(
+						--form-check-card-custom-control-custom-control-input-z-index,
+						2
+					),
+				checked: (
+					card: (
+						box-shadow:
+							var(
+								--form-check-card-custom-control-custom-control-input-checked-card-box-shadow,
+								$form-check-card-checked-box-shadow
+							),
+					),
+				),
+			),
+		),
+	),
+	$form-check-card
+);
+
+// .form-check-bottom-left .card-horizontal > .card-body,
+// .form-check-middle-left .card-horizontal > .card-body,
+// .form-check-top-left .card-horizontal > .card-body
+
+$checkbox-left-card-padding: 50px !default;
+
+// .form-check-bottom-right .card-horizontal > .card-body,
+// .form-check-middle-right .card-horizontal > .card-body,
+// .form-check-top-right .card-horizontal > .card-body
+
+$checkbox-right-card-padding: $checkbox-left-card-padding !default;
+
+// Form Check Positions
+
+$checkbox-position: 1rem !default;
+
+// .form-check-bottom-left
+
+$form-check-bottom-left: () !default;
+$form-check-bottom-left: map-deep-merge(
+	(
+		form-check-input: (
+			bottom: var(--form-check-bottom-left-bottom, $checkbox-position),
+			left: var(--form-check-bottom-left-left, $checkbox-position),
+			opacity: var(--form-check-bottom-left-opacity, 1),
+			top: var(--form-check-bottom-left-top, auto),
+			transform: var(--form-check-bottom-left-transform, none),
+		),
+		custom-control: (
+			custom-control-input: (
+				bottom:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-input-bottom,
+						$checkbox-position
+					),
+				left:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-input-left,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-input-top,
+						auto
+					),
+				transform:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-input-transform,
+						none
+					),
+			),
+			custom-control-label: (
+				bottom:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-label-bottom,
+						$checkbox-position
+					),
+				left:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-label-left,
+						$checkbox-position
+					),
+				opacity:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-label-opacity,
+						1
+					),
+				top:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-label-top,
+						auto
+					),
+				transform:
+					var(
+						--form-check-bottom-left-custom-control-custom-control-label-transform,
+						none
+					),
+			),
+		),
+	),
+	$form-check-bottom-left
+);
+
+// .form-check-bottom-right
+
+$form-check-bottom-right: () !default;
+$form-check-bottom-right: map-deep-merge(
+	(
+		form-check-input: (
+			bottom: var(--form-check-bottom-right-bottom, $checkbox-position),
+			left: var(--form-check-bottom-right-left, auto),
+			opacity: var(--form-check-bottom-right-opacity, 1),
+			right: var(--form-check-bottom-right-right, $checkbox-position),
+			top: var(--form-check-bottom-right-top, auto),
+			transform: var(--form-check-bottom-right-transform, none),
+		),
+		custom-control: (
+			custom-control-input: (
+				bottom:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-input-bottom,
+						$checkbox-position
+					),
+				left:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-input-left,
+						auto
+					),
+				right:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-input-right,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-input-top,
+						auto
+					),
+				transform:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-input-transform,
+						none
+					),
+			),
+			custom-control-label: (
+				bottom:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-label-bottom,
+						$checkbox-position
+					),
+				left:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-label-left,
+						auto
+					),
+				opacity:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-label-opacity,
+						1
+					),
+				right:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-label-right,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-label-top,
+						auto
+					),
+				transform:
+					var(
+						--form-check-bottom-right-custom-control-custom-control-label-transform,
+						none
+					),
+			),
+		),
+	),
+	$form-check-bottom-right
+);
+
+// .form-check-middle-left
+
+$form-check-middle-left: () !default;
+$form-check-middle-left: map-deep-merge(
+	(
+		form-check-input: (
+			left: var(--form-check-middle-left-left, $checkbox-position),
+			margin-top: var(--form-check-middle-left-margin-top, 0),
+			opacity: var(--form-check-middle-left-opacity, 1),
+			top: var(--form-check-middle-left-top, 50%),
+			transform: var(--form-check-middle-left-transform, translateY(-50%)),
+		),
+		custom-control: (
+			custom-control-input: (
+				left:
+					var(
+						--form-check-middle-left-custom-control-custom-control-input-left,
+						$checkbox-position
+					),
+				margin-top:
+					var(
+						--form-check-middle-left-custom-control-custom-control-input-margin-top,
+						0
+					),
+				top:
+					var(
+						--form-check-middle-left-custom-control-custom-control-input-top,
+						50%
+					),
+				transform:
+					var(
+						--form-check-middle-left-custom-control-custom-control-input-transform,
+						translateY(-50%)
+					),
+			),
+			custom-control-label: (
+				left:
+					var(
+						--form-check-middle-left-custom-control-custom-control-label-left,
+						$checkbox-position
+					),
+				margin-top:
+					var(
+						--form-check-middle-left-custom-control-custom-control-label-margin-top,
+						0
+					),
+				opacity:
+					var(
+						--form-check-middle-left-custom-control-custom-control-label-opacity,
+						1
+					),
+				top:
+					var(
+						--form-check-middle-left-custom-control-custom-control-label-top,
+						50%
+					),
+				transform:
+					var(
+						--form-check-middle-left-custom-control-custom-control-label-transform,
+						translateY(-50%)
+					),
+			),
+		),
+	),
+	$form-check-middle-left
+);
+
+// .form-check-middle-right
+
+$form-check-middle-right: () !default;
+$form-check-middle-right: map-deep-merge(
+	(
+		form-check-input: (
+			left: var(--form-check-middle-right-form-check-input-left, auto),
+			margin-top:
+				var(--form-check-middle-right-form-check-input-margin-top, 0),
+			opacity: var(--form-check-middle-right-form-check-input-opacity, 1),
+			right:
+				var(
+					--form-check-middle-right-form-check-input-right,
+					$checkbox-position
+				),
+			top: var(--form-check-middle-right-form-check-input-top, 50%),
+			transform:
+				var(
+					--form-check-middle-right-form-check-input-transform,
+					translateY(-50%)
+				),
+		),
+		custom-control: (
+			custom-control-input: (
+				left:
+					var(
+						--form-check-middle-right-custom-control-custom-control-input-left,
+						auto
+					),
+				margin-top:
+					var(
+						--form-check-middle-right-custom-control-custom-control-input-margin-top,
+						0
+					),
+				right:
+					var(
+						--form-check-middle-right-custom-control-custom-control-input-right,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-middle-right-custom-control-custom-control-input-top,
+						50%
+					),
+				transform:
+					var(
+						--form-check-middle-right-custom-control-custom-control-input-transform,
+						translateY(-50%)
+					),
+			),
+			custom-control-label: (
+				left:
+					var(
+						--form-check-middle-right-custom-control-custom-control-label-left,
+						auto
+					),
+				margin-top:
+					var(
+						--form-check-middle-right-custom-control-custom-control-label-margin-top,
+						0
+					),
+				opacity:
+					var(
+						--form-check-middle-right-custom-control-custom-control-label-opacity,
+						1
+					),
+				right:
+					var(
+						--form-check-middle-right-custom-control-custom-control-label-right,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-middle-right-custom-control-custom-control-label-top,
+						50%
+					),
+				transform:
+					var(
+						--form-check-middle-right-custom-control-custom-control-label-transform,
+						translateY(-50%)
+					),
+			),
+		),
+	),
+	$form-check-middle-right
+);
+
+// .form-check-top-right
+
+$form-check-top-right: () !default;
+$form-check-top-right: map-deep-merge(
+	(
+		form-check-input: (
+			left: var(--form-check-top-right-form-check-input-left, auto),
+			opacity: var(--form-check-top-right-form-check-input-opacity, 1),
+			right:
+				var(
+					--form-check-top-right-form-check-input-right,
+					$checkbox-position
+				),
+			top:
+				var(
+					--form-check-top-right-form-check-input-top,
+					$checkbox-position
+				),
+			transform:
+				var(--form-check-top-right-form-check-input-transform, none),
+		),
+		custom-control: (
+			custom-control-input: (
+				left:
+					var(
+						--form-check-top-right-custom-control-custom-control-input-left,
+						auto
+					),
+				right:
+					var(
+						--form-check-top-right-custom-control-custom-control-input-right,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-top-right-custom-control-custom-control-input-top,
+						$checkbox-position
+					),
+				transform:
+					var(
+						--form-check-top-right-custom-control-custom-control-input-transform,
+						none
+					),
+			),
+			custom-control-label: (
+				left:
+					var(
+						--form-check-top-right-custom-control-custom-control-label-left,
+						auto
+					),
+				opacity:
+					var(
+						--form-check-top-right-custom-control-custom-control-label-opacity,
+						1
+					),
+				right:
+					var(
+						--form-check-top-right-custom-control-custom-control-label-right,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-top-right-custom-control-custom-control-label-top,
+						$checkbox-position
+					),
+				transform:
+					var(
+						--form-check-top-right-custom-control-custom-control-label-transform,
+						none
+					),
+			),
+		),
+	),
+	$form-check-top-right
+);
+
+// .form-check-top-left
+
+$form-check-top-left: () !default;
+$form-check-top-left: map-deep-merge(
+	(
+		form-check-input: (
+			left: var(--form-check-top-left-left, $checkbox-position),
+			opacity: var(--form-check-top-left-opacity, 1),
+			top: var(--form-check-top-left-top, $checkbox-position),
+			transform: var(--form-check-top-left-transform, none),
+		),
+		custom-control: (
+			custom-control-input: (
+				left:
+					var(
+						--form-check-top-left-custom-control-custom-control-input-left,
+						$checkbox-position
+					),
+				top:
+					var(
+						--form-check-top-left-custom-control-custom-control-input-top,
+						$checkbox-position
+					),
+				transform:
+					var(
+						--form-check-top-left-custom-control-custom-control-input-transform,
+						none
+					),
+			),
+			custom-control-label: (
+				left:
+					var(
+						--form-check-top-left-custom-control-custom-control-label-left,
+						$checkbox-position
+					),
+				opacity:
+					var(
+						--form-check-top-left-custom-control-custom-control-label-opacity,
+						1
+					),
+				top:
+					var(
+						--form-check-top-left-custom-control-custom-control-label-top,
+						$checkbox-position
+					),
+				transform:
+					var(
+						--form-check-top-left-custom-control-custom-control-label-transform,
+						none
+					),
+			),
+		),
+	),
+	$form-check-top-left
+);
+
+// Card Interactive
+
+$card-interactive-after-highlight: () !default;
+$card-interactive-after-highlight: map-deep-merge(
+	(
+		border-radius:
+			var(
+				--card-interactive-after-highlight-border-radius,
+				0 0 $card-border-radius $card-border-radius
+			),
+		bottom:
+			var(
+				--card-interactive-after-highlight-bottom,
+				math-sign($card-border-width)
+			),
+		content: var(--card-interactive-after-highlight-content, ''),
+		height: var(--card-interactive-after-highlight-height, 0),
+		left:
+			var(
+				--card-interactive-after-highlight-left,
+				math-sign($card-border-width)
+			),
+		position: var(--card-interactive-after-highlight-position, absolute),
+		right:
+			var(
+				--card-interactive-after-highlight-right,
+				math-sign($card-border-width)
+			),
+		transition:
+			var(
+				--card-interactive-after-highlight-transition,
+				height 0.15s ease-out
+			),
+		hover: (
+			height: var(--card-interactive-after-highlight-hover-height, 4px),
+		),
+		focus: (
+			height: var(--card-interactive-after-highlight-focus-height, 4px),
+		),
+		active: (
+			height: var(--card-interactive-after-highlight-active-height, 4px),
+		),
+	),
+	$card-interactive-after-highlight
+);
+
+$card-interactive-card-body: () !default;
+$card-interactive-card-body: map-deep-merge(
+	(
+		display: var(--card-interactive-card-body-display, block),
+	),
+	$card-interactive-card-body
+);
+
+$card-interactive: () !default;
+$card-interactive: map-deep-merge(
+	(
+		cursor: var(--card-interactive-cursor, $link-cursor),
+		outline: var(--card-interactive-outline, 0),
+		transition: var(--card-interactive-transition, $btn-transition),
+		hover: (
+			background-color:
+				var(--card-interactive-hover-background-color, #f7f8f9),
+			text-decoration: var(--card-interactive-hover-text-decoration, none),
+		),
+		focus: (
+			border-color: var(--card-interactive-focus-border-color, $c-unset),
+			box-shadow:
+				var(
+					--card-interactive-focus-box-shadow,
+					#{0 0 0 2px #fff,
+					0 0 0 4px #719aff}
+				),
+		),
+		active: (
+			background-color:
+				var(--card-interactive-active-background-color, #f1f2f5),
+		),
+		after-highlight: $card-interactive-after-highlight,
+		card-body: $card-interactive-card-body,
+	),
+	$card-interactive
+);
+
+// Card Interactive Primary
+
+$card-interactive-primary-after-highlight: () !default;
+$card-interactive-primary-after-highlight: map-deep-merge(
+	(
+		hover: (
+			background-color:
+				var(
+					--card-interactive-primary-after-highlight-hover-background-color,
+					$component-active-bg
+				),
+		),
+		focus: (
+			background-color:
+				var(
+					--card-interactive-primary-after-highlight-focus-background-color,
+					$component-active-bg
+				),
+		),
+		active: (
+			background-color:
+				var(
+					--card-interactive-primary-after-highlight-active-background-color,
+					$component-active-bg
+				),
+		),
+	),
+	$card-interactive-primary-after-highlight
+);
+
+$card-interactive-primary: () !default;
+$card-interactive-primary: map-deep-merge(
+	(
+		focus: (
+			background-color:
+				var(
+					--card-interactive-primary-focus-background-color,
+					$gray-100
+				),
+		),
+		active: (
+			background-color:
+				var(
+					--card-interactive-primary-active-background-color,
+					$gray-200
+				),
+		),
+		after-highlight: $card-interactive-primary-after-highlight,
+	),
+	$card-interactive-primary
+);
+
+// Card Interactive Secondary
+
+$card-interactive-secondary: () !default;
+$card-interactive-secondary: map-deep-merge(
+	(
+		color: var(--card-interactive-secondary-color, $gray-900),
+		hover: (
+			background-color:
+				var(--card-interactive-secondary-hover-background-color, $white),
+			border-color:
+				var(
+					--card-interactive-secondary-hover-border-color,
+					transparent
+				),
+			box-shadow:
+				var(
+					--card-interactive-secondary-hover-box-shadow,
+					0 0 0 2px #719aff
+				),
+			color: var(--card-interactive-secondary-hover-color, $gray-900),
+		),
+		focus: (
+			border-color:
+				var(
+					--card-interactive-secondary-focus-border-color,
+					transparent
+				),
+			box-shadow:
+				var(
+					--card-interactive-secondary-focus-box-shadow,
+					0 0 0 2px #719aff
+				),
+		),
+		active: (
+			background-color:
+				var(
+					--card-interactive-secondary-active-background-color,
+					$white
+				),
+		),
+	),
+	$card-interactive-secondary
+);
+
+// Card Type Asset
+
+$card-type-asset: () !default;
+$card-type-asset: map-deep-merge(
+	(
+		aspect-ratio: (
+			border-color: var(--card-type-asset-border-color, $gray-300),
+			border-style: var(--card-type-asset-border-style, solid),
+			border-width: var(--card-type-asset-border-width, 0 0 0.0625rem 0),
+			horizontal: var(--card-type-asset-horizontal, 16),
+			vertical: var(--card-type-asset-vertical, 9),
+			custom-control: (
+				label: (
+					bottom:
+						var(--card-type-asset-custom-control-label-bottom, 0),
+					cursor:
+						var(
+							--card-type-asset-custom-control-label-cursor,
+							$link-cursor
+						),
+					left: var(--card-type-asset-custom-control-label-left, 0),
+					position:
+						var(
+							--card-type-asset-custom-control-label-position,
+							absolute
+						),
+					right: var(--card-type-asset-custom-control-label-right, 0),
+					top: var(--card-type-asset-custom-control-label-top, 0),
+				),
+			),
+		),
+		card-body: (
+			padding-top: var(--card-type-asset-card-body-padding-top, 0.75rem),
+		),
+		card-type-asset-icon: (
+			width: var(--card-type-asset-card-type-asset-icon-width, 22.225%),
+			inline-item: (
+				bottom:
+					var(
+						--card-type-asset-card-type-asset-icon-inline-item-bottom,
+						0
+					),
+				left:
+					var(
+						--card-type-asset-card-type-asset-icon-inline-item-left,
+						0
+					),
+				position:
+					var(
+						--card-type-asset-card-type-asset-icon-inline-item-position,
+						absolute
+					),
+				right:
+					var(
+						--card-type-asset-card-type-asset-icon-inline-item-right,
+						0
+					),
+				top:
+					var(
+						--card-type-asset-card-type-asset-icon-inline-item-top,
+						0
+					),
+			),
+			lexicon-icon: (
+				height:
+					var(
+						--card-type-asset-card-type-asset-icon-lexicon-icon-height,
+						100%
+					),
+				width:
+					var(
+						--card-type-asset-card-type-asset-icon-lexicon-icon-width,
+						100%
+					),
+			),
+			sticker: (
+				border-radius:
+					var(
+						--card-type-asset-card-type-asset-icoj-sticker-border-radius,
+						50%
+					),
+				display:
+					var(
+						--card-type-asset-card-type-asset-icoj-sticker-display,
+						block
+					),
+				font-size:
+					var(
+						--card-type-asset-card-type-asset-icoj-sticker-font-size,
+						2vw
+					),
+				padding-bottom:
+					var(
+						--card-type-asset-card-type-asset-icoj-sticker-padding-bottom,
+						100%
+					),
+				width:
+					var(
+						--card-type-asset-card-type-asset-icoj-sticker-width,
+						100%
+					),
+			),
+		),
+		card-row: (
+			align-items: var(--card-type-asset-card-row-align-items, flex-start),
+		),
+		dropdown-action: (
+			margin-right: var(--card-type-asset-dropdown-action, -0.5rem),
+			margin-top: var(--card-type-asset-dropdown-action, -0.1875rem),
+		),
+	),
+	$card-type-asset
+);
+
+// Image Card
+
+$image-card: () !default;
+$image-card: map-deep-merge(
+	(
+		aspect-ratio: (
+			checkered-foreground-color:
+				var(
+					--image-card-aspect-ratio-checkered-foreground-color,
+					$gray-300
+				),
+		),
+	),
+	$image-card
+);
+
+// File Card
+
+$file-card: () !default;
+$file-card: map-deep-merge(
+	(
+		card-type-asset-icon: (
+			color: var(--file-card-card-type-asset-icon-color, $gray-400),
+		),
+	),
+	$file-card
+);
+
+// Product Card
+
+$product-card: () !default;
+$product-card: map-deep-merge(
+	(
+		aspect-ratio: (
+			background-color:
+				var(--product-card-aspect-ratio-background-color, $white),
+			background-image:
+				var(
+					--product-card-aspect-ratio-background-image,
+					linear-gradient(0deg, #ebebeb, #ebebeb)
+				),
+		),
+		card-body: (
+			text-align: var(--product-card-card-body-text-align, center),
+		),
+		card-title: (
+			font-size: var(--product-card-card-title-font-size, 1rem),
+		),
+		card-subtitle: (
+			font-size: var(--product-card-card-subtitle-font-size, 0.75rem),
+		),
+		card-text: (
+			font-size: var(--product-card-card-text-font-size, 1.125rem),
+			font-weight:
+				var(
+					--product-card-card-text-font-weight,
+					$font-weight-semi-bold
+				),
+		),
+	),
+	$product-card
+);
+
+// User Card
+
+$user-card: () !default;
+$user-card: map-deep-merge(
+	(
+		card-type-asset-icon: (
+			max-width: var(--user-card-card-type-asset-icon-max-width, 80px),
+			min-width: var(--user-card-card-type-asset-icon-min-width, 48px),
+			width: var(--user-card-card-type-asset-icon-width, 30%),
+			lexicon-icon: (
+				height:
+					var(
+						--user-card-card-type-asset-icon-lexicon-icon-height,
+						auto
+					),
+				width:
+					var(
+						--user-card-card-type-asset-icon-lexicon-icon-width,
+						50%
+					),
+			),
+		),
+	),
+	$user-card
+);
+
+// Card Page Item Asset
+
+// base: min-width 0, sm min-width: 576px, md: min-width: 768px,
+// lg: min-width: 992px
+
+$card-page-item-asset: () !default;
+$card-page-item-asset: map-deep-merge(
+	(
+		base: (
+			breakpoint: 0,
+			min-width: 193px,
+			padding-left: $grid-gutter-width * 0.5,
+			padding-right: $grid-gutter-width * 0.5,
+		),
+		sm: (
+			breakpoint: map-get($grid-breakpoints, sm),
+			flex-basis: 50%,
+			max-width: 50%,
+		),
+		md: (
+			breakpoint: map-get($grid-breakpoints, md),
+			flex-basis: 33.3333%,
+			max-width: 33.3333%,
+		),
+		lg: (
+			breakpoint: map-get($grid-breakpoints, lg),
+			flex-basis: 25%,
+			max-width: 25%,
+		),
+	),
+	$card-page-item-asset
+);
+
+// Card Page Item User
+
+// base: min-width 0, sm min-width: 576px, lg: min-width: 992px
+
+$card-page-item-user: () !default;
+$card-page-item-user: map-deep-merge(
+	(
+		base: (
+			breakpoint: 0,
+			flex-basis: 50%,
+			max-width: 50%,
+			padding-left: $grid-gutter-width * 0.5,
+			padding-right: $grid-gutter-width * 0.5,
+		),
+		sm: (
+			breakpoint: map-get($grid-breakpoints, sm),
+			flex-basis: 33.33333%,
+			max-width: 33.33333%,
+			min-width: 200px,
+		),
+		lg: (
+			breakpoint: map-get($grid-breakpoints, lg),
+			flex-basis: 20%,
+			max-width: 20%,
+		),
+	),
+	$card-page-item-user
+);
+
+// Card Type Directory
+
+$card-type-directory: () !default;
+$card-type-directory: map-deep-merge(
+	(
+		sticker: (
+			font-size: var(--card-type-directory-sticker-font-size, 1.125rem),
+		),
+	),
+	$card-type-directory
+);
+
+// Card Page Item Directory
+
+$card-page-item-directory: () !default;
+$card-page-item-directory: map-deep-merge(
+	$card-page-item-asset,
+	$card-page-item-directory
+);
+
+// Card Type Template
+
+$card-type-template-after-highlight: () !default;
+$card-type-template-after-highlight: map-deep-merge(
+	(
+		bottom: var(--card-type-template-after-highlight-bottom, -1px),
+		left: var(--card-type-template-after-highlight-left, -1px),
+		right: var(--card-type-template-after-highlight-right, -1px),
+	),
+	$card-type-template-after-highlight
+);
+
+$card-type-template-aspect-ratio: () !default;
+$card-type-template-aspect-ratio: map-deep-merge(
+	(
+		background-image:
+			var(--card-type-template-aspect-ratio-background-image, none),
+		border-width: var(--card-type-template-aspect-ratio-border-width, 0),
+		color: var(--card-type-template-aspect-ratio-color, $gray-600),
+		horizontal: var(--card-type-template-aspect-ratio-horizontal, 16),
+		text-align: var(--card-type-template-aspect-ratio-text-align, center),
+		vertical: var(--card-type-template-aspect-ratio-vertical, 9),
+		lexicon-icon: (
+			height: auto,
+			width: 28%,
+		),
+	),
+	$card-type-template-aspect-ratio
+);
+
+$card-type-template-aspect-ratio-item: () !default;
+$card-type-template-aspect-ratio-item: map-deep-merge(
+	(
+		color: var(--card-type-template-aspect-ratio-item-color, $gray-600),
+		width: var(--card-type-template-aspect-ratio-item-width, 100.6%),
+	),
+	$card-type-template-aspect-ratio-item
+);
+
+$card-type-template-card-title: () !default;
+$card-type-template-card-title: map-deep-merge(
+	(
+		display: var(--card-type-template-card-title-display, block),
+		margin-bottom:
+			var(--card-type-template-card-title-margin-bottom, 0.5rem),
+	),
+	$card-type-template-card-title
+);
+
+$card-type-template-card-text: () !default;
+$card-type-template-card-text: map-deep-merge(
+	(
+		display: var(--card-type-template-card-text-display, block),
+	),
+	$card-type-template-card-text
+);
+
+$card-type-template: () !default;
+$card-type-template: map-deep-merge(
+	(
+		border-width: var(--card-type-template-border-width, 1px),
+		box-shadow: var(--card-type-template-box-shadow, none),
+		color: var(--card-type-template-color, $gray-900),
+		hover: (
+			color: var(--card-type-template-hover-color, $gray-900),
+		),
+		after-highlight: $card-type-template-after-highlight,
+		aspect-ratio: $card-type-template-aspect-ratio,
+		aspect-ratio-item: $card-type-template-aspect-ratio-item,
+		card-title: $card-type-template-card-title,
+		card-text: $card-type-template-card-text,
+	),
+	$card-type-template
+);
+
+// Template Card
+
+$template-card-body: () !default;
+$template-card-body: map-deep-merge(
+	(
+		padding-top: var(--template-card-body-padding-top, 0),
+		text-align: var(--template-card-body-text-align, center),
+	),
+	$template-card-body
+);
+
+$template-card: () !default;
+$template-card: map-deep-merge(
+	(
+		card-body: $template-card-body,
+	),
+	$template-card
+);
+
+// Template Card Horizontal
+
+$template-card-horizontal-sticker: () !default;
+$template-card-horizontal-sticker: map-deep-merge(
+	(
+		font-size: var(--template-card-horizontal-sticker-font-size, 1.25rem),
+	),
+	$template-card-horizontal-sticker
+);
+
+$template-card-horizontal-card-row: () !default;
+$template-card-horizontal-card-row: map-deep-merge(
+	(
+		margin-left: var(--template-card-horizontal-card-row-margin-left, -4px),
+		margin-right:
+			var(--template-card-horizontal-card-row-margin-right, -4px),
+		width: var(--template-card-horizontal-card-row-width, auto),
+		autofit-col: (
+			padding-left:
+				var(
+					--template-card-horizontal-card-row-autofit-col-padding-left,
+					4px
+				),
+			padding-right:
+				var(
+					--template-card-horizontal-card-row-autofit-col-padding-right,
+					4px
+				),
+		),
+	),
+	$template-card-horizontal-card-row
+);
+
+$template-card-horizontal-card-title: () !default;
+$template-card-horizontal-card-title: map-deep-merge(
+	(
+		color: var(--template-card-horizontal-card-title-color, inherit),
+		margin-bottom:
+			var(--template-card-horizontal-card-title-margin-bottom, 0),
+	),
+	$template-card-horizontal-card-title
+);
+
+$template-card-horizontal: () !default;
+$template-card-horizontal: map-deep-merge(
+	(
+		color: var(--template-card-horizontal-color, $gray-600),
+		hover: (
+			color: var(--template-card-horizontal-hover-color, $gray-600),
+		),
+		sticker: $template-card-horizontal-sticker,
+		card-row: $template-card-horizontal-card-row,
+		card-title: $template-card-horizontal-card-title,
+	),
+	$template-card-horizontal
+);

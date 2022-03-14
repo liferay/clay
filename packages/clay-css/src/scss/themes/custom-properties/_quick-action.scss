@@ -1,0 +1,38 @@
+$quick-action-font-size: var(--quick-action-font-size, 1rem) !default; // 16px
+$quick-action-padding-x: var(--quick-action-padding-x) !default;
+$quick-action-padding-y: var(--quick-action-padding-y) !default;
+
+$quick-action-item-margin-x: var(
+	--quick-action-item-margin-x,
+	0.5rem
+) !default; // 8px
+$quick-action-item-margin-y: var(--quick-action-item-margin-y) !default;
+$quick-action-item-padding-x: var(
+	--quick-action-item-padding-x
+) !default; // 8px
+$quick-action-item-padding-y: var(
+	--quick-action-item-padding-y
+) !default; // 8px
+
+$quick-action-item-min-height: var(
+	--quick-action-item-min-height,
+	2rem
+) !default; // 32px
+$quick-action-item-min-width: var(
+	--quick-action-item-min-width,
+	2rem
+) !default; // 32px
+
+$quick-action-item-border-radius: var(
+	--quick-action-item-border-radius,
+	$border-radius
+) !default;
+
+$quick-action-item-disabled-cursor: var(
+	--quick-action-item-disabled-cursor,
+	$disabled-cursor
+) !default;
+$quick-action-item-disabled-opacity: var(
+	--quick-action-item-disabled-opacity,
+	$btn-disabled-opacity
+) !default;

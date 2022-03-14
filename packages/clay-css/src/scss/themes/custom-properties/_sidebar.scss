@@ -1,0 +1,280 @@
+$sidebar-padding-bottom: var(--sidebar-padding-bottom, 1rem) !default; // 16px
+$sidebar-padding-left: var(--sidebar-padding-left, 1rem) !default; // 16px
+$sidebar-padding-right: var(--sidebar-padding-right, 1rem) !default; // 16px
+$sidebar-padding-top: var(--sidebar-padding-top, 1rem) !default; // 16px
+
+// .sidebar-header .component-title
+
+$sidebar-header-component-title: () !default;
+$sidebar-header-component-title: map-deep-merge(
+	(
+		font-size: var(--sidebar-header-component-title-font-size, 1.25rem),
+		font-weight:
+			var(
+				--sidebar-header-component-title-font-weight,
+				$font-weight-semi-bold
+			),
+		href: (
+			color: var(--sidebar-header-component-title-href-color, $gray-900),
+		),
+	),
+	$sidebar-header-component-title
+);
+
+// .sidebar-header .component-subtitle
+
+$sidebar-header-component-subtitle: () !default;
+$sidebar-header-component-subtitle: map-deep-merge(
+	(
+		font-size: var(--sidebar-header-component-subtitle-font-size, 0.75rem),
+		font-weight:
+			var(
+				--sidebar-header-component-subtitle-font-weight,
+				$font-weight-normal
+			),
+		margin-bottom: var(--sidebar-header-component-subtitle-margin-bottom, 0),
+	),
+	$sidebar-header-component-subtitle
+);
+
+// Sidebar DT
+
+$sidebar-dt: () !default;
+$sidebar-dt: map-deep-merge(
+	(
+		font-size: var(--sidebar-dt-font-size, 0.75rem),
+		font-weight: var(--sidebar-dt-font-weight, $font-weight-semi-bold),
+		margin-bottom: var(--sidebar-dt-margin-bottom, 0.25rem),
+		text-transform: var(--sidebar-dt-text-transform, uppercase),
+	),
+	$sidebar-dt
+);
+
+// Sidebar DD
+
+$sidebar-dd: () !default;
+$sidebar-dd: map-deep-merge(
+	(
+		font-size: var(--sidebar-dd-font-size, 0.875rem),
+		margin-bottom: var(--sidebar-dd-margin-bottom, 0.75rem),
+	),
+	$sidebar-dd
+);
+
+// Sidebar Panel
+
+$sidebar-panel-margin-bottom: var(
+	--sidebar-panel-margin-bottom,
+	1rem
+) !default; // 16px
+
+// Sidebar List Group
+
+$sidebar-list-group-bg: var(
+	--sidebar-list-group-background-color,
+	transparent
+) !default;
+$sidebar-list-group-border-color: var(
+	--sidebar-list-group-border-color,
+	$gray-300
+) !default;
+$sidebar-list-group-font-size: var(
+	--sidebar-list-group-font-size,
+	0.875rem
+) !default; // 14px
+$sidebar-list-group-type: list-group-flush !default;
+
+$sidebar-list-group-item-padding: var(
+	--sidebar-list-group-item-padding,
+	0
+) !default;
+
+$sidebar-list-group-autofit-col-padding-x: var(
+	--sidebar-list-group-autofit-col-padding-x,
+	0.5rem
+) !default; // 8px
+$sidebar-list-group-autofit-col-padding-y: var(
+	--sidebar-list-group-autofit-col-padding-y,
+	1rem
+) !default; // 16px
+
+$sidebar-list-group-sticker-size: () !default;
+$sidebar-list-group-sticker-size: map-deep-merge(
+	$sticker-sm,
+	$sidebar-list-group-sticker-size
+);
+
+// Sidebar Light
+
+$sidebar-light: () !default;
+$sidebar-light: map-deep-merge(
+	(
+		bg: var(--sidebar-light-background-color, $white),
+		border-color: var(--sidebar-light-border-color, $gray-300),
+		border-left-width: var(--sidebar-light-border-left-width, 0),
+		box-shadow:
+			var(
+				--sidebar-light-box-shadow,
+				-0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1)
+			),
+		color: var(--sidebar-light-color, $gray-900),
+		dt: (
+			color: var(--sidebar-light-dt-color, $gray-600),
+		),
+		dd: (
+			clay-link: (
+				color: var(--sidebar-light-dd-href-color, $gray-900),
+			),
+		),
+		panel-bg: var(--sidebar-light-panel-background-color, $gray-200),
+		panel-unstyled: (
+			header-link: (
+				focus-box-shadow:
+					var(
+						--sidebar-light-panel-unstyled-panel-header-link,
+						#{0 0 0 0.25rem $white,
+						0 0 0 0.375rem $primary-l1}
+					),
+			),
+		),
+		sidebar-list-group-title: (
+			font-size:
+				var(--sidebar-light-sidebar-list-group-title-font-size, 1rem),
+			clay-link: (
+				color:
+					var(
+						--sidebar-light-sidebar-list-group-title-href-color,
+						$gray-900
+					),
+			),
+		),
+	),
+	$sidebar-light
+);
+
+$sidebar-light-navigation-bar: () !default;
+$sidebar-light-navigation-bar: map-deep-merge(
+	(
+		background-color:
+			var(--sidebar-light-navigation-bar-background-color, $white),
+		border-color:
+			var(--sidebar-light-navigation-bar-border-color, $secondary-l2),
+		navbar-nav: (
+			nav-link: (
+				color:
+					var(
+						--sidebar-light-navigation-bar-navbar-nav-nav-link-color,
+						$navbar-light-color
+					),
+				hover: (
+					color:
+						var(
+							--sidebar-light-navigation-bar-navbar-nav-nav-link-hover-color,
+							$navbar-light-hover-color
+						),
+				),
+				active: (
+					color:
+						var(
+							--sidebar-light-navigation-bar-navbar-nav-nav-link-active-color,
+							$navbar-light-active-color
+						),
+				),
+				disabled: (
+					color:
+						var(
+							--sidebar-light-navigation-bar-navbar-nav-nav-link-disabled-color,
+							$navbar-light-disabled-color
+						),
+				),
+			),
+		),
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
+	),
+	$sidebar-light-navigation-bar
+);
+
+// Sidebar Dark
+
+$sidebar-dark: () !default;
+$sidebar-dark: map-deep-merge(
+	(
+		bg: var(--sidebar-dark-background-color, $dark),
+		color: var(--sidebar-dark-color, $white),
+		component-header-title: (
+			color:
+				var(
+					--sidebar-dark-sidebar-header-component-title-color,
+					inherit
+				),
+			clay-link: (
+				color:
+					var(
+						--sidebar-dark-sidebar-header-component-title-href-color,
+						inherit
+					),
+			),
+		),
+		component-header-subtitle: (
+			color:
+				var(
+					--sidebar-dark-sidebar-header-component-subtitle-color,
+					inherit
+				),
+			clay-link: (
+				color:
+					var(
+						--sidebar-dark-sidebar-header-component-subtitle-href-color,
+						inherit
+					),
+			),
+		),
+		close: (
+			color: var(--sidebar-dark-close-color, $secondary-l1),
+			hover-color: var(--sidebar-dark-close-hover-color, $white),
+		),
+		nav-nested-link: (
+			border-radius:
+				var(
+					--sidebar-dark-nav-nested-nav-link-border-radius,
+					$border-radius
+				),
+			color: var(--sidebar-dark-nav-nested-nav-link-color, $secondary-l1),
+			transition:
+				var(
+					--sidebar-dark-nav-nested-nav-link-transition,
+					box-shadow 0.15s ease-in-out
+				),
+			hover-color:
+				var(--sidebar-dark-nav-nested-nav-link-hover-color, $white),
+			focus-box-shadow:
+				var(
+					--sidebar-dark-nav-nested-nav-link-focus-box-shadow,
+					$component-focus-box-shadow
+				),
+			focus-outline:
+				var(--sidebar-dark-nav-nested-nav-link-focus-outline, 0),
+			active-color:
+				var(--sidebar-dark-nav-nested-nav-link-active-color, $white),
+			disabled-box-shadow:
+				var(
+					--sidebar-dark-nav-nested-nav-link-disabled-box-shadow,
+					none
+				),
+			disabled-color:
+				var(
+					--sidebar-dark-nav-nested-nav-link-disabled-color,
+					$secondary-l1
+				),
+			disabled-opacity:
+				var(--sidebar-dark-nav-nested-nav-link-disabled-opacity, 0.65),
+			disabled-active-pointer-events:
+				var(
+					--sidebar-dark-nav-nested-nav-link-disabled-active-pointer-events,
+					none
+				),
+		),
+	),
+	$sidebar-dark
+);

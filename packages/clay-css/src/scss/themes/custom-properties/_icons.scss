@@ -1,0 +1,82 @@
+// .lexicon-icon
+
+$lexicon-icon-size: 1em !default; // 16px
+
+$lexicon-icon: () !default;
+$lexicon-icon: map-merge(
+	(
+		display: var(--lexicon-icon-display, inline-block),
+		fill: var(--lexicon-icon-fill, currentColor),
+		height: var(--lexicon-icon-height, $lexicon-icon-size),
+		margin-top: var(--lexicon-icon-margin-top, -3px),
+		vertical-align: var(--lexicon-icon-vertical-align, middle),
+		width: var(--lexicon-icon-width, $lexicon-icon-size),
+	),
+	$lexicon-icon
+);
+
+// .lexicon-icon-sm
+
+$lexicon-icon-sm-font-size: 0.5rem !default; // 8px
+
+$lexicon-icon-sm: () !default;
+$lexicon-icon-sm: map-merge(
+	(
+		font-size: var(--lexicon-icon-sm-font-size, $lexicon-icon-sm-font-size),
+	),
+	$lexicon-icon-sm
+);
+
+// .lexicon-icon-lg
+
+$lexicon-icon-lg-font-size: 2rem !default; // 32px
+
+$lexicon-icon-lg: () !default;
+$lexicon-icon-lg: map-merge(
+	(
+		font-size: var(--lexicon-icon-lg-font-size, $lexicon-icon-lg-font-size),
+	),
+	$lexicon-icon-lg
+);
+
+// .lexicon-icon-xl
+
+$lexicon-icon-xl-font-size: 8rem !default; // 128px
+
+$lexicon-icon-xl: () !default;
+$lexicon-icon-xl: map-merge(
+	(
+		font-size: var(--lexicon-icon-xl-font-size, $lexicon-icon-xl-font-size),
+	),
+	$lexicon-icon-xl
+);
+
+// .order-arrow
+
+$order-arrow-down-active-color: var(
+	--order-arrow-down-active-color,
+	$gray-500
+) !default;
+$order-arrow-up-active-color: var(
+	--order-arrow-up-active-color,
+	$order-arrow-down-active-color
+) !default;
+
+// .collapse-icon[href], .collapse-icon[type]
+
+$collapse-icon-padding-left: var(--collapse-icon-padding-left, 0) !default;
+$collapse-icon-padding-right: var(
+	--collapse-icon-padding-right,
+	2.28125rem
+) !default; // 45px
+
+$collapse-icon-position-bottom: var(--collapse-icon-bottom, auto) !default;
+$collapse-icon-position-left: var(--collapse-icon-left, auto) !default;
+$collapse-icon-position-right: var(
+	--collapse-icon-right,
+	0.9375rem
+) !default; // 15px
+$collapse-icon-position-top: var(
+	--collapse-icon-top,
+	clay-collapse-icon-align($nav-link-padding-y, 0.0625rem, 0.9375em)
+) !default;

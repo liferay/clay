@@ -1,0 +1,551 @@
+$toggle-switch-cursor: $link-cursor !default;
+$toggle-switch-font-weight: $input-label-font-weight !default;
+$toggle-switch-transition: background-color 100ms ease-in,
+	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
+	color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
+
+// must all be same units--start
+$toggle-switch-bar-padding: 4px !default; // space between button and bar, can be negative value
+$toggle-switch-button-width: 16px !default; // 24px
+$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) +
+	$toggle-switch-button-width !default;
+$toggle-switch-bar-width: 50px !default; // width of switch bar
+
+$toggle-switch-bar-padding-mobile: 4px !default;
+$toggle-switch-button-width-mobile: 16px !default; // 16px
+$toggle-switch-bar-height-mobile: ($toggle-switch-bar-padding-mobile * 2) +
+	$toggle-switch-button-width-mobile !default;
+$toggle-switch-bar-width-mobile: $toggle-switch-bar-width !default;
+// must all be same units--end
+
+$toggle-switch-bar-bg: $gray-500 !default;
+$toggle-switch-bar-border-color: transparent !default;
+$toggle-switch-bar-border-radius: 20px !default;
+$toggle-switch-bar-border-width: 1px !default;
+$toggle-switch-bar-font-size: 0.625rem !default;
+
+$toggle-switch-bar-focus-box-shadow: $component-focus-box-shadow !default;
+
+$toggle-switch-bar-font-size-mobile: 0.625rem !default;
+
+$toggle-switch-bar-icon-color: $white !default;
+
+$toggle-switch-button-bg: $white !default;
+$toggle-switch-button-border-color: transparent !default;
+$toggle-switch-button-border-radius: 50% !default;
+$toggle-switch-button-border-width: 1px !default;
+$toggle-switch-button-font-size: $toggle-switch-bar-font-size !default; // 12px
+
+$toggle-switch-button-font-size-mobile: $toggle-switch-bar-font-size-mobile !default; // 10px
+
+$toggle-switch-button-icon-color: $gray-900 !default;
+
+// See https://issues.liferay.com/browse/LPS-147457.
+
+$toggle-switch-handle-after-content: unquote(
+	"'\\FEFF' attr(data-label-off)"
+) !default;
+
+// Toggle Switch On
+
+$toggle-switch-bar-on-bg: $component-active-bg !default;
+$toggle-switch-bar-on-border-color: transparent !default;
+
+$toggle-switch-bar-on-icon-color: $white !default;
+
+$toggle-switch-button-on-bg: $white !default;
+$toggle-switch-button-on-border-color: transparent !default;
+$toggle-switch-button-on-border-radius: $toggle-switch-button-border-radius !default;
+
+$toggle-switch-button-on-icon-color: $primary !default;
+
+// See https://issues.liferay.com/browse/LPS-147457.
+
+$toggle-switch-handle-on-after-content: unquote(
+	"'\\FEFF' attr(data-label-on)"
+) !default;
+
+// Toggle Switch Disabled
+
+$toggle-switch-disabled-cursor: $disabled-cursor !default;
+$toggle-switch-disabled-opacity: 0.4 !default;
+
+// Toggle Switch Label
+
+$toggle-switch-label-disabled-color: $input-label-disabled-color !default;
+
+// Toggle Switch Text
+
+$toggle-switch-text-font-size: 0.75rem !default;
+
+$toggle-switch-text-disabled-color: $input-label-disabled-color !default;
+
+// .toggle-switch
+
+$toggle-switch: () !default;
+$toggle-switch: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		cursor: $toggle-switch-cursor,
+		display: inline-block,
+		font-weight: var(--toggle-switch-font-weight),
+		max-width: 100%,
+		position: relative,
+		disabled: (
+			cursor: $toggle-switch-disabled-cursor,
+			toggle-switch-label: (
+				color: $toggle-switch-label-disabled-color,
+				cursor: $toggle-switch-disabled-cursor,
+			),
+			toggle-switch-text: (
+				color: $toggle-switch-text-disabled-color,
+			),
+		),
+	),
+	$toggle-switch
+);
+
+// .toggle-switch-check-bar
+
+$toggle-switch-check-bar: () !default;
+$toggle-switch-check-bar: map-merge(
+	(
+		display: inline-flex,
+		position: relative,
+	),
+	$toggle-switch-check-bar
+);
+
+// .toggle-switch-bar
+
+$toggle-switch-bar: () !default;
+$toggle-switch-bar: map-deep-merge(
+	(
+		toggle-switch-handle: (
+			display: block,
+			min-width: var(--toggle-switch-width),
+			text-transform: uppercase,
+		),
+		toggle-switch-icon: (
+			font-size: var(--toggle-switch-font-size),
+			lexicon-icon: (
+				margin-top: -0.2em,
+			),
+		),
+		button-icon: (
+			font-size: $toggle-switch-button-font-size,
+		),
+	),
+	$toggle-switch-bar
+);
+
+// .toggle-switch-check
+
+$toggle-switch-check: () !default;
+$toggle-switch-check: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		bottom: 0,
+		font-size: 62.5%,
+		height: var(--toggle-switch-height),
+		opacity: 0,
+		position: absolute,
+		width: var(--toggle-switch-width),
+		z-index: 2,
+		toggle-switch-bar: (
+			display: inline-flex,
+			font-size: var(--toggle-switch-font-size),
+			height: var(--toggle-switch-height),
+			line-height: var(--toggle-switch-height),
+			position: relative,
+			text-indent: 0,
+			user-select: none,
+			before: (
+				background-color: var(--toggle-switch-background-color),
+				border-color: var(--toggle-switch-border-color),
+				border-radius:
+					clay-enable-rounded(var(--toggle-switch-border-radius)),
+				border-style: solid,
+				border-width: var(--toggle-switch-border-width),
+				bottom: 0,
+				content: ' ',
+				display: block,
+				left: 0,
+				position: absolute,
+				top: 0,
+				transition: var(--toggle-switch-transition),
+				width: var(--toggle-switch-width),
+			),
+			after: (
+				background-color: var(--toggle-switch-button-background-color),
+				border-color: var(--toggle-switch-button-border-color),
+				border-radius:
+					clay-enable-rounded(
+						var(--toggle-switch-button-border-radius)
+					),
+				border-style: solid,
+				border-width: var(--toggle-switch-button-border-width),
+				bottom: var(--toggle-switch-button-bottom),
+				content: '',
+				display: block,
+				height: var(--toggle-switch-button-height),
+				left: var(--toggle-switch-button-left),
+				position: absolute,
+				top: var(--toggle-switch-button-top),
+				transition: var(--toggle-switch-transition),
+				width: var(--toggle-switch-button-width),
+			),
+			toggle-switch-handle: (
+				before: (
+					transition:
+						clay-enable-transitions(var(--toggle-switch-transition)),
+				),
+				after: (
+					content: $toggle-switch-handle-after-content,
+					margin-left: calc(var(--toggle-switch-width) + 8px),
+					transition: var(--toggle-switch-transition),
+					white-space: nowrap,
+				),
+			),
+			toggle-switch-icon: (
+				color: var(--toggle-switch-icon-color),
+				left: var(--toggle-switch-button-left),
+				line-height: var(--toggle-switch-button-height),
+				position: absolute,
+				text-align: center,
+				text-indent: 0,
+				top: var(--toggle-switch-button-top),
+				transition: var(--toggle-switch-transition),
+				width: var(--toggle-switch-button-width),
+				z-index: 1,
+			),
+			toggle-switch-icon-on: (
+				left: var(--toggle-switch-button-left),
+				opacity: 0,
+			),
+			toggle-switch-icon-off: (
+				left:
+					calc(
+						var(--toggle-switch-width) -
+							var(--toggle-switch-button-left) -
+							var(--toggle-switch-button-width)
+					),
+			),
+			button-icon: (
+				color: $toggle-switch-button-icon-color,
+			),
+			button-icon-on: (
+				opacity: 0,
+			),
+		),
+		focus: (
+			toggle-switch-bar: (
+				before: (
+					box-shadow: var(--toggle-switch-focus-box-shadow),
+				),
+			),
+		),
+		disabled: (
+			toggle-switch-bar: (
+				cursor: $toggle-switch-disabled-cursor,
+				opacity: var(--toggle-switch-disabled-opacity),
+			),
+		),
+		checked: (
+			toggle-switch-bar: (
+				before: (
+					background-color:
+						var(--toggle-switch-checked-background-color),
+					border-color: var(--toggle-switch-checked-border-color),
+					border-radius:
+						clay-enable-rounded(var(--toggle-switch-border-radius)),
+					border-style: solid,
+					border-width: var(--toggle-switch-border-width),
+				),
+				after: (
+					background-color:
+						var(--toggle-switch-checked-button-background-color),
+					border-color:
+						var(--toggle-switch-checked-button-border-color),
+					border-radius:
+						clay-enable-rounded(
+							var(--toggle-switch-button-border-radius)
+						),
+					border-style: solid,
+					border-width: var(--toggle-switch-button-border-width),
+					left:
+						calc(
+							var(--toggle-switch-width) -
+								var(--toggle-switch-button-left) -
+								var(--toggle-switch-button-width)
+						),
+				),
+				toggle-switch-handle: (
+					after: (
+						content: $toggle-switch-handle-on-after-content,
+					),
+				),
+				toggle-switch-icon: (
+					color: var(--toggle-switch-checked-icon-color),
+				),
+				toggle-switch-icon-on: (
+					opacity: 1,
+				),
+				toggle-switch-icon-off: (
+					opacity: 0,
+				),
+				button-icon: (
+					color: var(--toggle-switch-checked-button-icon-color),
+					left:
+						calc(
+							var(--toggle-switch-width) -
+								var(--toggle-switch-button-left) -
+								var(--toggle-switch-button-width)
+						),
+				),
+				button-icon-on: (
+					opacity: 1,
+				),
+				button-icon-off: (
+					opacity: 0,
+				),
+			),
+		),
+		mobile: (
+			height: var(--toggle-switch-sm-down-height),
+			width: var(--toggle-switch-sm-down-width),
+			toggle-switch-bar: (
+				height: var(--toggle-switch-sm-down-height),
+				line-height: var(--toggle-switch-sm-down-height),
+				text-indent: 0,
+				before: (
+					width: var(-toggle-switch-sm-down-width),
+				),
+				after: (
+					bottom: var(--toggle-switch-sm-down-button-bottom),
+					height: var(--toggle-switch-sm-down-button-height),
+					left: var(--toggle-switch-sm-down-button-left),
+					top: var(--toggle-switch-sm-down-button-top),
+					width: var(--toggle-switch-sm-down-button-width),
+				),
+				toggle-switch-handle: (
+					min-width: var(-toggle-switch-sm-down-width),
+					after: (
+						margin-left:
+							calc(
+								var(-toggle-switch-sm-down-width) -
+									var(--toggle-switch-sm-down-button-left)
+							),
+					),
+				),
+				toggle-switch-icon: (
+					font-size: var(--toggle-switch-sm-down-font-size),
+					left: var(--toggle-switch-sm-down-button-left),
+					line-height: var(--toggle-switch-sm-down-button-height),
+					top: var(--toggle-switch-sm-down-button-top),
+					width: var(--toggle-switch-sm-down-button-width),
+				),
+				toggle-switch-icon-on: (
+					left: var(--toggle-switch-sm-down-button-left),
+				),
+				toggle-switch-icon-off: (
+					left:
+						calc(
+							var(-toggle-switch-sm-down-width) -
+								var(--toggle-switch-sm-down-button-left) -
+								var(--toggle-switch-sm-down-button-width)
+						),
+				),
+				button-icon: (
+					font-size: var(--toggle-switch-sm-down-button-font-size),
+				),
+			),
+			checked: (
+				toggle-switch-bar: (
+					after: (
+						left:
+							calc(
+								var(-toggle-switch-sm-down-width) -
+									var(--toggle-switch-sm-down-button-left) -
+									var(--toggle-switch-sm-down-button-width)
+							),
+					),
+					toggle-switch-handle: (
+						after: (
+							margin-left:
+								calc(
+									var(-toggle-switch-sm-down-width) -
+										var(--toggle-switch-sm-down-button-left)
+								),
+						),
+					),
+					button-icon: (
+						left:
+							calc(
+								var(-toggle-switch-sm-down-width) -
+									var(--toggle-switch-sm-down-button-left) -
+									var(--toggle-switch-sm-down-button-width)
+							),
+					),
+				),
+			),
+		),
+	),
+	$toggle-switch-check
+);
+
+// .toggle-switch-label
+
+$toggle-switch-label: () !default;
+$toggle-switch-label: map-merge(
+	(
+		display: block,
+		margin-bottom: 2px,
+	),
+	$toggle-switch-label
+);
+
+// .toggle-switch-text
+
+$toggle-switch-text: () !default;
+$toggle-switch-text: map-merge(
+	(
+		display: block,
+		font-size: $toggle-switch-text-font-size,
+	),
+	$toggle-switch-text
+);
+
+// .toggle-switch-text-left
+
+$toggle-switch-text-left: () !default;
+$toggle-switch-text-left: map-merge(
+	(
+		breakpoint-down: sm,
+		display: inline-flex,
+		line-height: var(--toggle-switch-height),
+		margin-right: 8px,
+		mobile: (
+			line-height: var(--toggle-switch-sm-down-height),
+		),
+	),
+	$toggle-switch-text-left
+);
+
+// .toggle-switch-text-right
+
+$toggle-switch-text-right: () !default;
+$toggle-switch-text-right: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		display: inline-flex,
+		line-height: var(--toggle-switch-height),
+		margin-left: 8px,
+		mobile: (
+			line-height: var(--toggle-switch-sm-down-height),
+		),
+	),
+	$toggle-switch-text-right
+);
+
+// .simple-toggle-switch
+
+$simple-toggle-switch-label-line-height: 1 !default;
+$simple-toggle-switch-label-spacer-x: 0.5rem !default;
+
+$simple-toggle-switch: () !default;
+$simple-toggle-switch: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		align-items: center,
+		display: inline-flex,
+		toggle-switch-label: (
+			line-height: $simple-toggle-switch-label-line-height,
+			margin-bottom: 0,
+			max-width:
+				calc(
+					100% - var(--toggle-switch-width) -
+						var(--toggle-switch-button-left)
+				),
+		),
+		mobile: (
+			toggle-switch-label: (
+				max-width:
+					calc(
+						100% - var(-toggle-switch-sm-down-width) -
+							var(--toggle-switch-sm-down-button-left)
+					),
+			),
+		),
+	),
+	$simple-toggle-switch
+);
+
+// .simple-toggle-switch-reverse
+
+$simple-toggle-switch-reverse: () !default;
+$simple-toggle-switch-reverse: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		toggle-switch-check-bar: (
+			order: 5,
+		),
+		toggle-switch-check: (
+			toggle-switch-bar: (
+				order: 5,
+			),
+		),
+		toggle-switch-label: (
+			margin-right: $simple-toggle-switch-label-spacer-x,
+		),
+	),
+	$simple-toggle-switch-reverse
+);
+
+$clay-root: clay-map-merge(
+	(
+		--toggle-switch-background-color: $toggle-switch-bar-bg,
+		--toggle-switch-border-color: $toggle-switch-bar-border-color,
+		--toggle-switch-border-radius: $toggle-switch-bar-border-radius,
+		--toggle-switch-border-width: $toggle-switch-bar-border-width,
+		--toggle-switch-font-size: $toggle-switch-bar-font-size,
+		--toggle-switch-font-weight: $toggle-switch-font-weight,
+		--toggle-switch-height: $toggle-switch-bar-height,
+		--toggle-switch-transition: $toggle-switch-transition,
+		--toggle-switch-width: $toggle-switch-bar-width,
+		--toggle-switch-focus-box-shadow: $toggle-switch-bar-focus-box-shadow,
+		--toggle-switch-icon-color: $toggle-switch-bar-icon-color,
+		--toggle-switch-disabled-opacity: $toggle-switch-disabled-opacity,
+		--toggle-switch-button-background-color: $toggle-switch-button-bg,
+		--toggle-switch-button-border-color: $toggle-switch-button-border-color,
+		--toggle-switch-button-border-radius:
+			$toggle-switch-button-border-radius,
+		--toggle-switch-button-border-width: $toggle-switch-button-border-width,
+		--toggle-switch-button-height: $toggle-switch-button-width,
+		--toggle-switch-button-bottom: $toggle-switch-bar-padding,
+		--toggle-switch-button-left: $toggle-switch-bar-padding,
+		--toggle-switch-button-top: $toggle-switch-bar-padding,
+		--toggle-switch-button-width: $toggle-switch-button-width,
+		--toggle-switch-checked-background-color: $toggle-switch-bar-on-bg,
+		--toggle-switch-checked-border-color: $toggle-switch-bar-on-border-color,
+		--toggle-switch-checked-icon-color: $toggle-switch-bar-on-icon-color,
+		--toggle-switch-checked-button-background-color:
+			$toggle-switch-button-on-bg,
+		--toggle-switch-checked-button-border-color:
+			$toggle-switch-button-on-border-color,
+		--toggle-switch-checked-button-icon-color:
+			$toggle-switch-button-on-icon-color,
+		--toggle-switch-sm-down-font-size: $toggle-switch-bar-font-size-mobile,
+		--toggle-switch-sm-down-height: $toggle-switch-bar-height-mobile,
+		--toggle-switch-sm-down-width: $toggle-switch-bar-width-mobile,
+		--toggle-switch-sm-down-button-bottom: $toggle-switch-bar-padding-mobile,
+		--toggle-switch-sm-down-button-font-size:
+			$toggle-switch-button-font-size-mobile,
+		--toggle-switch-sm-down-button-height:
+			$toggle-switch-button-width-mobile,
+		--toggle-switch-sm-down-button-left: $toggle-switch-bar-padding-mobile,
+		--toggle-switch-sm-down-button-top: $toggle-switch-bar-padding-mobile,
+		--toggle-switch-sm-down-button-width: $toggle-switch-button-width-mobile,
+	),
+	$clay-root
+);

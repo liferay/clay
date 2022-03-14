@@ -1,0 +1,239 @@
+$multi-step-nav-margin-bottom: var(
+	--multi-step-nav-margin-bottom,
+	15px
+) !default;
+$multi-step-nav-padding-x: var(--multi-step-nav-padding-x, 15px) !default;
+$multi-step-nav-padding-y: var(--multi-step-nav-padding-y, 0) !default;
+
+$multi-step-icon-bg: var(
+	--multi-step-icon-background-color,
+	$gray-200
+) !default;
+$multi-step-icon-border-color: var(
+	--multi-step-icon-border-color,
+	transparent
+) !default;
+$multi-step-icon-border-style: var(
+	--multi-step-icon-border-style,
+	solid
+) !default;
+$multi-step-icon-border-width: var(--multi-step-icon-border-width, 0) !default;
+$multi-step-icon-color: var(--multi-step-icon-color, $gray-600) !default;
+$multi-step-icon-cursor: var(--multi-step-icon-cursor, $link-cursor) !default;
+$multi-step-icon-border-radius: var(
+	--multi-step-icon-border-radius,
+	100px
+) !default;
+$multi-step-icon-font-size: var(--multi-step-icon-font-size, 0.875rem) !default;
+$multi-step-icon-font-weight: var(
+	--multi-step-icon-font-weight,
+	$font-weight-semi-bold
+) !default;
+$multi-step-icon-padding-bottom: var(
+	--multi-step-icon-padding-bottom,
+	0
+) !default;
+$multi-step-icon-padding-left: var(--multi-step-icon-padding-left, 0) !default;
+$multi-step-icon-padding-right: var(
+	--multi-step-icon-padding-right,
+	0
+) !default;
+$multi-step-icon-padding-top: var(--multi-step-icon-padding-top, 0) !default;
+$multi-step-icon-size: var(--multi-step-icon-size, 2rem) !default;
+$multi-step-icon-transition: var(
+	--multi-step-icon-transition,
+	box-shadow 0.15s ease-in-out
+) !default;
+
+$multi-step-icon-hover-bg: var(
+	--multi-step-icon-hover-background-color,
+	$multi-step-icon-bg
+) !default;
+$multi-step-icon-hover-color: var(
+	--multi-step-icon-hover-color,
+	$multi-step-icon-color
+) !default;
+$multi-step-icon-hover-text-decoration: var(
+	--multi-step-icon-hover-text-decoration,
+	none
+) !default;
+
+$multi-step-icon-focus-bg: var(
+	--multi-step-icon-focus-background-color,
+	$multi-step-icon-hover-bg
+) !default;
+$multi-step-icon-focus-box-shadow: var(
+	--multi-step-icon-focus-box-shadow,
+	$btn-focus-box-shadow
+) !default;
+$multi-step-icon-focus-color: var(
+	--multi-step-icon-focus-color,
+	$multi-step-icon-hover-color
+) !default;
+$multi-step-icon-focus-outline: var(
+	--multi-step-icon-focus-outline,
+	0
+) !default;
+$multi-step-icon-focus-text-decoration: var(
+	--multi-step-icon-focus-text-decoration,
+	$multi-step-icon-hover-text-decoration
+) !default;
+
+// See https://issues.liferay.com/browse/LPS-147457.
+
+$data-multi-step-icon-before-content: var(
+	--multi-step-icon-before-content,
+	unquote("'\\FEFF' attr(data-multi-step-icon)")
+) !default;
+
+$multi-step-divider-bg: var(
+	--multi-step-divider-background-color,
+	$gray-200
+) !default;
+$multi-step-divider-height: var(--multi-step-divider-height, 0.25rem) !default;
+$multi-step-divider-spacer-x: var(--multi-step-divider-spacer-x, 0) !default;
+$multi-step-divider-top: var(
+	--multi-step-divider-top,
+	calc(
+		(#{$multi-step-divider-height} * 0.5) + (#{$multi-step-icon-size} * 0.5)
+	)
+) !default;
+
+$multi-step-indicator-width: var(--multi-step-indicator-width, 2rem) !default;
+
+$multi-step-indicator-label-color: var(
+	--multi-step-indicator-label-color,
+	$gray-600
+) !default;
+$multi-step-title-font-size: var(
+	--multi-step-title-font-size,
+	0.875rem
+) !default;
+$multi-step-indicator-label-font-weight: var(
+	--multi-step-indicator-label-font-weight,
+	$font-weight-semi-bold
+) !default;
+$multi-step-indicator-label-max-width: var(
+	--multi-step-indicator-label-max-width,
+	100px
+) !default;
+
+$multi-step-title-color: var(--multi-step-title-color, $gray-600) !default;
+$multi-step-title-font-size: var(
+	--multi-step-title-font-size,
+	$font-size-base
+) !default;
+$multi-step-title-font-weight: var(
+	--multi-step-title-font-weight,
+	$font-weight-semi-bold
+) !default;
+$multi-step-title-margin-bottom: var(
+	--multi-step-title-margin-bottom,
+	0.625rem
+) !default; // 10px
+$multi-step-title-max-width: var(--multi-step-title-max-width, 100px) !default;
+
+$multi-step-item-margin-bottom: var(
+	--multi-step-item-margin-bottom,
+	10px
+) !default;
+$multi-step-item-width: var(--multi-step-item-width, 75px) !default;
+$multi-step-item-fixed-width: var(
+	--multi-step-item-fixed-width,
+	150px
+) !default;
+
+$multi-step-icon-complete-color: var(
+	--multi-step-icon-complete-color,
+	$white
+) !default;
+$multi-step-icon-complete-bg: var(
+	--multi-step-icon-complete-background-color,
+	$gray-600
+) !default;
+$multi-step-icon-complete-bg-image: var(
+	--multi-step-icon-complete-background-image,
+	clay-icon(check, $multi-step-icon-complete-color)
+) !default;
+$multi-step-icon-complete-bg-position: var(
+	--multi-step-icon-complete-background-position,
+	center
+) !default;
+$multi-step-icon-complete-bg-size: var(
+	--multi-step-icon-complete-background-size,
+	$multi-step-icon-font-size
+) !default;
+$multi-step-divider-complete-bg: var(
+	--multi-step-divider-complete-background-color,
+	$multi-step-icon-complete-bg
+) !default;
+$multi-step-dropdown-indicator-complete-icon: var(
+	--multi-step-dropdown-indicator-complete-icon,
+	clay-icon(check, $dropdown-link-active-color)
+) !default;
+$multi-step-dropdown-indicator-complete-width: var(
+	--multi-step-dropdown-indicator-complete-width,
+	0.875rem
+) !default;
+
+$multi-step-icon-active-color: var(
+	--multi-step-icon-active-color,
+	$component-active-color
+) !default;
+$multi-step-icon-active-bg: var(
+	--multi-step-icon-active-background-color,
+	$component-active-bg
+) !default;
+$multi-step-icon-active-bg-image: null !default;
+$multi-step-icon-active-bg-position: var(
+	--multi-step-icon-active-background-position,
+	center
+) !default;
+$multi-step-icon-active-bg-size: var(
+	--multi-step-icon-active-background-size,
+	$multi-step-icon-font-size
+) !default;
+$multi-step-divider-active-bg: var(
+	--multi-step-divider-active-background-color,
+	$multi-step-divider-bg
+) !default;
+
+$multi-step-icon-disabled-bg: var(
+	--multi-step-icon-disabled-background-color,
+	$multi-step-icon-bg
+) !default;
+$multi-step-icon-disabled-bg-image: null !default;
+$multi-step-icon-disabled-bg-position: var(
+	--multi-step-icon-disabled-background-position
+) !default;
+$multi-step-icon-disabled-bg-size: var(
+	--multi-step-icon-disabled-background-size
+) !default;
+$multi-step-icon-disabled-color: var(
+	--multi-step-icon-disabled-color,
+	$gray-500
+) !default;
+$multi-step-icon-disabled-cursor: var(
+	--multi-step-icon-disabled-cursor,
+	$disabled-cursor
+) !default;
+$multi-step-icon-disabled-opacity: var(
+	--multi-step-icon-disabled-opacity,
+	1
+) !default;
+$multi-step-icon-disabled-focus-box-shadow: var(
+	--multi-step-icon-disabled-focus-box-shadow,
+	none
+) !default;
+$multi-step-divider-disabled-bg: var(
+	--multi-step-divider-disabled-background-color,
+	$multi-step-icon-disabled-bg
+) !default;
+$multi-step-title-disabled-color: var(
+	--multi-step-title-disabled-color,
+	$multi-step-icon-disabled-color
+) !default;
+$multi-step-indicator-label-disabled-color: var(
+	--multi-step-indicator-label-disabled-color,
+	$multi-step-title-disabled-color
+) !default;

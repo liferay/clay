@@ -1,0 +1,383 @@
+$sheet-bg: var(--sheet-bg, $white) !default;
+$sheet-border-color: var(--sheet-border-color, $gray-300) !default;
+$sheet-border-style: var(--sheet-border-style, solid) !default;
+$sheet-border-width: var(--sheet-border-width, 0.0625rem) !default;
+
+$sheet-border-radius: var(--sheet-border-radius, $border-radius) !default;
+
+$sheet-padding-bottom: var(--sheet-padding-bottom, 0.0625rem) !default;
+$sheet-padding-left: var(--sheet-padding-left, 1.5rem) !default;
+$sheet-padding-right: var(--sheet-padding-right, 1.5rem) !default;
+$sheet-padding-top: var(--sheet-padding-top, 1.5rem) !default;
+
+$sheet-padding-bottom-mobile: null !default;
+$sheet-padding-left-mobile: var(--sheet-mobile-padding-left, 1rem) !default;
+$sheet-padding-right-mobile: var(--sheet-mobile-padding-right, 1rem) !default;
+$sheet-padding-top-mobile: var(--sheet-mobile-padding-top, 1rem) !default;
+
+$sheet-plus-sheet: () !default;
+$sheet-plus-sheet: map-merge(
+	(
+		margin-top: var(--sheet-plus-sheet-margin-top, 3rem),
+	),
+	$sheet-plus-sheet
+);
+
+// Sheet Header
+
+$sheet-header-margin-bottom: var(--sheet-header-margin-bottom, 3rem) !default;
+$sheet-header-margin-bottom-mobile: var(
+	--sheet-header-mobile-margin-bottom,
+	2rem
+) !default;
+
+// Sheet Section
+
+$sheet-section-margin-bottom: var(--sheet-section-margin-bottom, 3rem) !default;
+$sheet-section-margin-bottom-mobile: var(
+	--sheet-section-mobile-margin-bottom,
+	2rem
+) !default;
+
+$sheet-panel-group-margin-bottom: var(
+	--sheet-panel-group-margin-bottom,
+	1.5rem
+) !default;
+$sheet-panel-group-margin-bottom-mobile: var(
+	--sheet-panel-group-mobile-margin-bottom,
+	1rem
+) !default;
+
+// Sheet Footer
+
+$sheet-footer-margin-bottom: var(--sheet-footer-margin-bottom, 1.5rem) !default;
+$sheet-footer-margin-left: null !default;
+$sheet-footer-margin-right: null !default;
+$sheet-footer-margin-top: var(--sheet-footer-margin-top, 1.5rem) !default;
+
+$sheet-footer-margin-bottom-mobile: var(
+	--sheet-footer-mobile-margin-bottom,
+	1rem
+) !default;
+$sheet-footer-margin-left-mobile: null !default;
+$sheet-footer-margin-right-mobile: null !default;
+$sheet-footer-margin-top-mobile: var(
+	--sheet-footer-mobile-margin-top,
+	1rem
+) !default;
+
+$sheet-footer-btn-block-sm-down: () !default;
+$sheet-footer-btn-block-sm-down: map-deep-merge(
+	(
+		breakpoint-down: sm,
+		mobile: (
+			display: block,
+			btn: (
+				display: block,
+				margin-bottom: 1rem,
+				width: 100%,
+			),
+			btn-group: (
+				display: block,
+			),
+			btn-group-item: (
+				display: block,
+				margin-right: 0,
+			),
+		),
+	),
+	$sheet-footer-btn-block-sm-down
+);
+
+// Sheet Sizes
+
+/// @deprecated as of 3.x.
+
+$sheet-lg-max-width: var(--sheet-lg-max-width, 800px) !default;
+
+// Sheet Title
+
+$sheet-title-color: var(--sheet-title-color, $body-color) !default;
+$sheet-title-font-size: var(--sheet-title-font-size, 1.25rem) !default;
+$sheet-title-font-weight: var(
+	--sheet-title-font-weight,
+	$font-weight-bold
+) !default;
+$sheet-title-line-height: var(
+	--sheet-title-line-height,
+	$headings-line-height
+) !default;
+$sheet-title-margin-bottom: var(--sheet-title-margin-bottom, 1.5rem) !default;
+
+$sheet-title-autofit-padded-no-gutters-ext: 'autofit-padded-no-gutters-sm' !default;
+
+$sheet-title-font-size-mobile: var(
+	--sheet-title-mobile-font-size,
+	1.25rem
+) !default;
+$sheet-title-margin-bottom-mobile: var(
+	--sheet-title-mobile-margin-bottom,
+	1rem
+) !default;
+
+// Sheet Subtitle
+
+$sheet-subtitle-border-color: var(
+	--sheet-subtitle-border-color,
+	$gray-500
+) !default;
+$sheet-subtitle-border-style: var(
+	--sheet-subtitle-border-style,
+	solid
+) !default;
+$sheet-subtitle-border-width: var(
+	--sheet-subtitle-border-width,
+	0 0 1px 0
+) !default;
+$sheet-subtitle-color: var(--sheet-subtitle-color, $body-color) !default;
+$sheet-subtitle-font-size: var(--sheet-subtitle-font-size, 0.875rem) !default;
+$sheet-subtitle-font-weight: var(
+	--sheet-subtitle-font-weight,
+	$font-weight-semi-bold
+) !default;
+$sheet-subtitle-line-height: var(
+	--sheet-subtitle-line-height,
+	$headings-line-height
+) !default;
+$sheet-subtitle-margin-bottom: var(
+	--sheet-subtitle-margin-bottom,
+	1.5rem
+) !default;
+$sheet-subtitle-padding-x: null !default;
+$sheet-subtitle-padding-y: var(--sheet-subtitle-padding-y, 0.5rem) !default;
+$sheet-subtitle-text-transform: var(
+	--sheet-subtitle-text-transform,
+	uppercase
+) !default;
+
+$sheet-subtitle-font-size-mobile: null !default;
+$sheet-subtitle-margin-bottom-mobile: var(
+	--sheet-subtitle-mobile-margin-bottom,
+	1rem
+) !default;
+
+$sheet-subtitle-heading-text-margin-bottom: var(
+	--sheet-subtitle-heading-text-margin-bottom,
+	0
+) !default;
+$sheet-subtitle-heading-text-margin-top: var(
+	--sheet-subtitle-heading-text-margin-top,
+	auto
+) !default;
+
+// Sheet Subtitle as Panel Header
+
+$sheet-subtitle-link-color: $sheet-subtitle-color !default;
+$sheet-subtitle-link-text-decoration: null !default;
+$sheet-subtitle-link-hover-color: null !default;
+$sheet-subtitle-link-hover-text-decoration: none !default;
+
+$sheet-subtitle-link: () !default;
+$sheet-subtitle-link: map-deep-merge(
+	(
+		border-radius: var(--sheet-subtitle-href-border-radius, 1px),
+		color: var(--sheet-subtitle-href-color, $sheet-subtitle-link-color),
+		text-decoration:
+			var(
+				--sheet-subtitle-href-text-decoration,
+				$sheet-subtitle-link-text-decoration
+			),
+		transition:
+			var(--sheet-subtitle-href-transition, box-shadow 0.15s ease-in-out),
+		hover: (
+			color:
+				var(
+					--sheet-subtitle-href-hover-color,
+					$sheet-subtitle-link-hover-color
+				),
+			text-decoration:
+				var(
+					--sheet-subtitle-href-hover-text-decoration,
+					$sheet-subtitle-link-hover-text-decoration
+				),
+		),
+		focus: (
+			box-shadow:
+				var(
+					--sheet-subtitle-href-focus-box-shadow,
+					#{0 0 0 0.25rem $white,
+					0 0 0 0.375rem $primary-l1}
+				),
+			outline: var(--sheet-subtitle-href-focus-outline, 0),
+		),
+	),
+	$sheet-subtitle-link
+);
+
+$sheet-subtitle-collapse-icon-font-size: var(
+	--sheet-subtitle-collapse-icon-font-size,
+	0.75rem
+) !default;
+$sheet-subtitle-collapse-icon-bottom: null !default;
+$sheet-subtitle-collapse-icon-left: null !default;
+$sheet-subtitle-collapse-icon-right: null !default;
+$sheet-subtitle-collapse-icon-top: var(
+	--sheet-subtitle-collapse-icon-top,
+	clay-collapse-icon-align(
+		$sheet-subtitle-padding-y,
+		0,
+		1em,
+		$sheet-subtitle-line-height
+	)
+) !default;
+
+$sheet-subtitle-collapse-icon-padding-left: null !default;
+$sheet-subtitle-collapse-icon-padding-right: null !default;
+
+// Sheet Tertiary Title
+
+$sheet-tertiary-title-color: var(
+	--sheet-tertiary-title-color,
+	$sheet-subtitle-color
+) !default;
+$sheet-tertiary-title-font-size: var(
+	--sheet-tertiary-title-font-size,
+	$sheet-subtitle-font-size
+) !default;
+$sheet-tertiary-title-font-weight: var(
+	--sheet-tertiary-title-font-weight,
+	$sheet-subtitle-font-weight
+) !default;
+$sheet-tertiary-title-line-height: var(
+	--sheet-tertiary-title-line-height,
+	$sheet-subtitle-line-height
+) !default;
+$sheet-tertiary-title-margin-bottom: var(
+	--sheet-tertiary-title-margin-bottom,
+	$sheet-subtitle-margin-bottom
+) !default;
+$sheet-tertiary-title-padding-x: var(
+	--sheet-tertiary-title-padding-x,
+	$sheet-subtitle-padding-x
+) !default;
+$sheet-tertiary-title-padding-y: var(
+	--sheet-tertiary-title-padding-y,
+	$sheet-subtitle-padding-y
+) !default;
+$sheet-tertiary-title-text-transform: var(
+	--sheet-tertiary-title-text-transform,
+	$sheet-subtitle-text-transform
+) !default;
+
+$sheet-tertiary-title-font-size-mobile: null !default;
+$sheet-tertiary-title-margin-bottom-mobile: var(
+	--sheet-tertiary-title-mobile-margin-bottom,
+	0.5rem
+) !default;
+
+// Sheet Text
+
+$sheet-text-color: var(--sheet-text-color, $gray-600) !default;
+$sheet-text-font-size: null !default;
+$sheet-text-font-weight: null !default;
+$sheet-text-margin-bottom: var(--sheet-text-margin-bottom, 1.5rem) !default;
+
+$sheet-text-font-size-mobile: null !default;
+$sheet-text-margin-bottom-mobile: var(
+	--sheet-text-mobile-margin-bottom,
+	1rem
+) !default;
+
+// Sheet Multiple Form Variant
+
+$sheet-multiple-form: () !default;
+
+$sheet-multiple-form-sheet-header: () !default;
+$sheet-multiple-form-sheet-header: map-merge(
+	(
+		border-color:
+			var(--sheet-multiple-form-sheet-header-border-color, $gray-300),
+		border-style:
+			var(--sheet-multiple-form-sheet-header-border-style, solid),
+		border-width:
+			var(--sheet-multiple-form-sheet-header-border-width, 0 0 1px),
+		margin:
+			var(
+				--sheet-multiple-form-sheet-header-margin,
+				-1.5rem -1.5rem 1.5rem
+			),
+		padding: var(--sheet-multiple-form-sheet-header-padding, 1rem 1.5rem),
+	),
+	$sheet-multiple-form-sheet-header
+);
+
+$sheet-multiple-form-sheet-header-mobile: () !default;
+$sheet-multiple-form-sheet-header-mobile: map-merge(
+	(
+		margin:
+			var(
+				--sheet-multiple-form-sheet-header-mobile-margin,
+				-1rem -1rem 1rem
+			),
+		padding: var(--sheet-multiple-form-sheet-header-mobile-padding, 1rem),
+	),
+	$sheet-multiple-form-sheet-header-mobile
+);
+
+$sheet-multiple-form-sheet-title: () !default;
+$sheet-multiple-form-sheet-title: map-merge(
+	(
+		margin-bottom: var(--sheet-multiple-form-sheet-title-margin-bottom, 0),
+	),
+	$sheet-multiple-form-sheet-title
+);
+
+// Sheet Dataset Content Variant
+
+$sheet-dataset-content: () !default;
+
+$sheet-dataset-content-sheet-header: () !default;
+$sheet-dataset-content-sheet-header: map-merge(
+	(
+		border-width: var(--sheet-dataset-content-sheet-header-border-width, 0),
+		margin:
+			var(
+				--sheet-dataset-content-sheet-header-margin,
+				-1.5rem -1.5rem 1.5rem
+			),
+		padding: var(--sheet-dataset-content-sheet-header-padding, 1rem 1.5rem),
+	),
+	$sheet-dataset-content-sheet-header
+);
+
+$sheet-dataset-content-sheet-header-mobile: () !default;
+$sheet-dataset-content-sheet-header-mobile: map-merge(
+	(
+		margin:
+			var(
+				--sheet-dataset-content-sheet-header-mobile-margin,
+				-1rem -1rem 1rem
+			),
+		padding: var(--sheet-dataset-content-sheet-header-mobile-padding, 1rem),
+	),
+	$sheet-dataset-content-sheet-header-mobile
+);
+
+$sheet-dataset-content-sheet-title: () !default;
+$sheet-dataset-content-sheet-title: map-merge(
+	(
+		margin-bottom: var(--sheet-dataset-content-sheet-title-margin-bottom, 0),
+	),
+	$sheet-dataset-content-sheet-title
+);
+
+// Sheet in Card Page
+
+$card-page-item-sheet: () !default;
+$card-page-item-sheet: map-merge(
+	(
+		margin-bottom:
+			var(--card-page-item-sheet-margin-bottom, $grid-gutter-width),
+	),
+	$card-page-item-sheet
+);

@@ -1,0 +1,444 @@
+$bg-checkered-fg: $gray-300 !default;
+$inline-scroller-max-height: 125px !default;
+
+// Autofit Row
+
+$autofit-col-expand-min-width: 3.125rem !default; // 50px
+
+$autofit-padded-col-padding-x: 0.5rem !default; // 8px
+$autofit-padded-col-padding-y: 0.25rem !default; // 4px
+
+$clay-root: clay-map-merge((
+	--autofit-padded-no-gutters-sm-spacer: 0.25rem,
+), $clay-root);
+
+$autofit-padded-no-gutters-sm: () !default;
+$autofit-padded-no-gutters-sm: map-merge(
+	(
+		margin: calc(var(--autofit-padded-no-gutters-sm-spacer) * -1),
+		width: auto,
+		autofit-col: (
+			padding: var(--autofit-padded-no-gutters-sm-spacer),
+		),
+	),
+	$autofit-padded-no-gutters-sm
+);
+
+// Close
+
+$close-color: $gray-900 !default;
+$close-font-size: $font-size-base * 1.5 !default;
+$close-font-weight: $font-weight-bold !default;
+$close-text-shadow: $c-unset !default;
+
+$close: () !default;
+$close: map-deep-merge(
+	(
+		align-items: center,
+		appearance: none,
+		background-color: var(--close-background-color),
+		border-color: var(--close-border-color, transparent),
+		border-radius: clay-enable-rounded(var(--close-border-radius, var(--border-radius-sm))),
+		border-width: var(--close-border-width),
+		color: var(--close-color, var(--gray-900)),
+		cursor: $link-cursor,
+		display: inline-flex,
+		font-size: var(--close-font-size, 1rem),
+		font-weight: var(--close-font-weight, var(--font-weight-bold)),
+		height: var(--close-height, 2rem),
+		justify-content: center,
+		line-height: var(--close-line-height, 1),
+		opacity: var(--close-opacity),
+		padding: var(--close-padding),
+		text-align: center,
+		text-shadow: $close-text-shadow,
+		transition: var(--close-transition, #{color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out}),
+		width: var(--close-width, 2rem),
+		hover: (
+			background-color: var(--close-hover-background-color),
+			border-color: var(--close-hover-border-color, transparent),
+			color: var(--close-hover-color, var(--gray-900)),
+			opacity: var(--close-hover-opacity),
+			text-decoration: none,
+		),
+		focus: (
+			background-color: var(--close-focus-background-color),
+			border-color: var(--close-focus-border-color, transparent),
+			box-shadow: var(--close-focus-box-shadow, var(--component-focus-box-shadow)),
+			color: var(--close-focus-color, var(--gray-900)),
+			opacity: var(--close-focus-opacity),
+			outline: 0,
+		),
+		disabled: (
+			background-color: var(--close-disabled-background-color),
+			border-color: var(--close-disabled-border-color, transparent),
+			box-shadow: var(--close-disabled-box-shadow),
+			color: var(--close-disabled-color, var(--gray-600)),
+			cursor: $disabled-cursor,
+			opacity: var(--close-disabled-opacity, 0.4),
+			outline: 0,
+		),
+		disabled-active: (
+			pointer-events: none,
+		),
+		btn-focus-box-shadow: $c-unset,
+		btn-focus-outline: $c-unset,
+		lexicon-icon-margin-top: 0,
+	),
+	$close
+);
+
+// C Focus Inset
+
+$c-focus-inset-focus: () !default;
+$c-focus-inset-focus: map-deep-merge(
+	(
+		box-shadow: $component-focus-inset-box-shadow,
+		border-color: $primary-l1,
+		outline: 0,
+	),
+	$c-focus-inset-focus
+);
+
+// C Inner
+
+$c-inner: () !default;
+$c-inner: map-deep-merge(
+	(
+		align-items: inherit,
+		display: inherit,
+		flex-direction: inherit,
+		height: inherit,
+		justify-content: inherit,
+		line-height: inherit,
+		max-width: inherit,
+		min-width: inherit,
+		outline: 0,
+		overflow: inherit,
+		padding-bottom: inherit,
+		padding-left: inherit,
+		padding-right: inherit,
+		padding-top: inherit,
+		text-overflow: inherit,
+		width: inherit,
+	),
+	$c-inner
+);
+
+// Heading
+
+$heading-spacer-x: 1rem !default; // 16px
+
+$heading-text-margin-bottom: auto !default;
+$heading-text-margin-top: auto !default;
+
+// Inline Item
+
+$inline-item-lexicon-icon-margin-top: -0.1em !default;
+$inline-item-spacer-x: 0.5rem !default; // 8px
+
+$inline-item-loading-animation-font-size: 1.25em !default;
+
+$page-header-bg: $white !default;
+
+// Background
+
+$bg-theme-colors: () !default;
+$bg-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			background-color: var(--bg-primary-background-color, var(--primary)) !important,
+			hover: (
+				background-color: var(--bg-primary-hover-background-color, var(--primary-d2)) !important,
+			),
+		),
+		'secondary': (
+			background-color: var(--bg-secondary-background-color, var(--secondary)) !important,
+			hover: (
+				background-color: var(--bg-secondary-hover-background-color, var(--secondary-d2)) !important,
+			),
+		),
+		'success': (
+			background-color: var(--bg-success-background-color, var(--success)) !important,
+			hover: (
+				background-color: var(--bg-success-hover-background-color, var(--success-d2)) !important,
+			),
+		),
+		'info': (
+			background-color: var(--bg-info-background-color, var(--info)) !important,
+			hover: (
+				background-color: var(--bg-info-hover-background-color, var(--info-d2)) !important,
+			),
+		),
+		'warning': (
+			background-color: var(--bg-warning-background-color, var(--warning)) !important,
+			hover: (
+				background-color: var(--bg-warning-hover-background-color, var(--warning-d2)) !important,
+			),
+		),
+		'danger': (
+			background-color: var(--bg-danger-background-color, var(--danger)) !important,
+			hover: (
+				background-color: var(--bg-danger-hover-background-color, var(--danger-d2)) !important,
+			),
+		),
+		'light': (
+			background-color: var(--bg-light-background-color, var(--light)) !important,
+			hover: (
+				background-color: var(--bg-light-hover-background-color, var(--light-d2)) !important,
+			),
+		),
+		'dark': (
+			background-color: var(--bg-dark-background-color, var(--dark)) !important,
+			hover: (
+				background-color: var(--bg-dark-hover-background-color, var(--dark-d2)) !important,
+			),
+		),
+		'white': (
+			background-color: var(--bg-white-background-color, var(--white)) !important,
+		),
+		'transparent': (
+			background-color: transparent !important,
+		),
+	),
+	$bg-theme-colors
+);
+
+$bg-gradient-theme-colors: () !default;
+$bg-gradient-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			background: $primary
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $primary, 15%),
+					$primary
+				)
+				repeat-x !important,
+		),
+		'secondary': (
+			background: $secondary
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $secondary, 15%),
+					$secondary
+				)
+				repeat-x !important,
+		),
+		'success': (
+			background: $success
+				linear-gradient(
+					180deg,
+					clay-clay-mix($body-bg, $success, 15%),
+					$success
+				)
+				repeat-x !important,
+		),
+		'info': (
+			background: $info
+				linear-gradient(180deg, clay-mix($body-bg, $info, 15%), $info)
+				repeat-x !important,
+		),
+		'warning': (
+			background: $warning
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $warning, 15%),
+					$warning
+				)
+				repeat-x !important,
+		),
+		'danger': (
+			background: $danger
+				linear-gradient(
+					180deg,
+					clay-mix($body-bg, $danger, 15%),
+					$danger
+				)
+				repeat-x !important,
+		),
+		'light': (
+			background: $light
+				linear-gradient(180deg, clay-mix($body-bg, $light, 15%), $light)
+				repeat-x !important,
+		),
+		'dark': (
+			background: $dark
+				linear-gradient(180deg, clay-mix($body-bg, $dark, 15%), $dark)
+				repeat-x !important,
+		),
+	),
+	$bg-gradient-theme-colors
+);
+
+// Border
+
+$border-theme-colors: () !default;
+$border-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			border-color: var(--bg-primary-border-color, var(--primary)) !important,
+		),
+		'secondary': (
+			border-color: var(--bg-secondary-border-color, var(--secondary)) !important,
+		),
+		'success': (
+			border-color: var(--bg-success-border-color, var(--success)) !important,
+		),
+		'info': (
+			border-color: var(--bg-info-border-color, var(--info)) !important,
+		),
+		'warning': (
+			border-color: var(--bg-warning-border-color, var(--warning)) !important,
+		),
+		'danger': (
+			border-color: var(--bg-danger-border-color, var(--danger)) !important,
+		),
+		'light': (
+			border-color: var(--bg-light-border-color, var(--light)) !important,
+		),
+		'dark': (
+			border-color: var(--bg-dark-border-color, var(--dark)) !important,
+		),
+		'white': (
+			border-color: var(--bg-white-border-color, var(--white)) !important,
+		),
+	),
+	$border-theme-colors
+);
+
+// Display
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex,
+	inline-flex !default;
+
+// Overflow
+
+$overflows: auto, hidden !default;
+
+// Position
+
+$positions: static, relative, absolute, fixed, sticky !default;
+
+// Font Sizes
+
+$font-sizes: () !default;
+$font-sizes: map-deep-merge(
+	(
+		text-1: (
+			font-size: var(--text-1-font-size, 0.625rem),
+			line-height: var(--text-1-line-height),
+		),
+		text-2: (
+			font-size: var(--text-2-font-size, 0.75rem),
+			line-height: var(--text-2-line-height),
+		),
+		text-3: (
+			font-size: var(--text-3-font-size, 0.875rem),
+			line-height: var(--text-3-line-height),
+		),
+		text-4: (
+			font-size: var(--text-4-font-size, 1rem),
+			line-height: var(--text-4-line-height),
+		),
+		text-5: (
+			font-size: var(--text-5-font-size, 1.125rem),
+			line-height: var(--text-5-line-height),
+		),
+		text-6: (
+			font-size: var(--text-6-font-size, 1.25rem),
+			line-height: var(--text-6-line-height),
+		),
+		text-7: (
+			font-size: var(--text-7-font-size, 1.5rem),
+			line-height: var(--text-7-line-height),
+		),
+		text-8: (
+			font-size: var(--text-8-font-size, 1.75rem),
+			line-height: var(--text-8-line-height),
+		),
+		text-9: (
+			font-size: var(--text-9-font-size, 2rem),
+			line-height: var(--text-9-line-height),
+		),
+		text-10: (
+			font-size: var(--text-10-font-size, 2.25rem),
+			line-height: var(--text-10-line-height),
+		),
+		text-11: (
+			font-size: var(--text-11-font-size, 2.5rem),
+			line-height: var(--text-11-line-height),
+		),
+	),
+	$font-sizes
+);
+
+// Text
+
+$text-theme-colors: () !default;
+$text-theme-colors: map-deep-merge(
+	(
+		'primary': (
+			color: var(--text-primary-color, var(--primary)) !important,
+			hover: (
+				color: var(--text-primary-hover-color, var(--primary-d2)) !important,
+			),
+		),
+		'secondary': (
+			color: var(--text-secondary-color, var(--secondary)) !important,
+			hover: (
+				color: var(--text-secondary-hover-color, var(--secondary-d2)) !important,
+			),
+		),
+		'success': (
+			color: var(--text-success-color, var(--success)) !important,
+			hover: (
+				color: var(--text-success-hover-color, var(--success-d2)) !important,
+			),
+		),
+		'info': (
+			color: var(--text-info-color, var(--info)) !important,
+			hover: (
+				color: var(--text-info-hover-color, var(--info-d2)) !important,
+			),
+		),
+		'warning': (
+			color: var(--text-warning-color, var(--warning)) !important,
+			hover: (
+				color: var(--text-warning-hover-color, var(--warning-d2)) !important,
+			),
+		),
+		'danger': (
+			color: var(--text-danger-color, var(--danger)) !important,
+			hover: (
+				color: var(--text-danger-hover-color, var(--danger-d2)) !important,
+			),
+		),
+		'light': (
+			color: var(--text-light-color, var(--light)) !important,
+			hover: (
+				color: var(--text-light-hover-color, var(--light-d2)) !important,
+			),
+		),
+		'dark': (
+			color: var(--text-dark-color, var(--dark)) !important,
+			hover: (
+				color: var(--text-dark-hover-color, var(--dark-d2)) !important,
+			),
+		),
+		'body': (
+			color: var(--body-color, var(--gray-900)) !important,
+		),
+		'muted': (
+			color: var(--text-muted-color, var(--gray-500)) !important,
+		),
+		'black-50': (
+			color: var(--text-black-50-color, rgba(var(--black-rgb), 0.5)) !important,
+		),
+		'white-50': (
+			color: var(--text-white-50-color, rgba(var(--white-rgb), 0.5)) !important,
+		),
+	),
+	$text-theme-colors
+);

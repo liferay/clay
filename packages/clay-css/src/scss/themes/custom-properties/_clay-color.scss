@@ -1,0 +1,432 @@
+// Clay Color Input Group Text (.clay-color > .input-group-item > .input-group-text)
+
+$clay-color-input-group-text: () !default;
+$clay-color-input-group-text: map-deep-merge(
+	(
+		bg: var(--clay-color-input-group-text-background-color, $white),
+		border-color:
+			var(--clay-color-input-group-text-border-color, $input-border-color),
+		padding-left: var(--clay-color-input-group-text-padding-left, 0),
+		padding-right: var(--clay-color-input-group-text-padding-right, 0),
+	),
+	$clay-color-input-group-text
+);
+
+// Clay Color Input Group Input (.clay-color > .input-group-item > .form-control)
+
+$clay-color-input-group-input: () !default;
+
+// Clay Color Input Group Inset Item Before (.clay-color > .input-group-item > .input-group-inset-item-before)
+
+$clay-color-input-group-inset-item-before: () !default;
+$clay-color-input-group-inset-item-before: map-deep-merge(
+	(
+		color: var(--clay-color-input-group-inset-item-before, $gray-600),
+		font-size: var(--clay-color-input-group-inset-item-before, inherit),
+		padding-left:
+			var(--clay-color-input-group-inset-item-before, $input-padding-x),
+		padding-right: var(--clay-color-input-group-inset-item-before, 0.5rem),
+	),
+	$clay-color-input-group-inset-item-before
+);
+
+// Dropdown Menu
+
+$clay-color-dropdown-menu: () !default;
+$clay-color-dropdown-menu: map-deep-merge(
+	(
+		max-height: var(--clay-color-dropdown-menu-max-height, 400px),
+		max-width: var(--clay-color-dropdown-menu-max-width, none),
+		padding-bottom: var(--clay-color-dropdown-menu-padding-bottom, 0),
+		padding-left: var(--clay-color-dropdown-menu-padding-left, 1rem),
+		padding-right: var(--clay-color-dropdown-menu-padding-right, 1rem),
+		padding-top: var(--clay-color-dropdown-menu-padding-top, 1rem),
+		width: var(--clay-color-dropdown-menu-width, 272px),
+	),
+	$clay-color-dropdown-menu
+);
+
+// Dropdown Menu Form Group
+
+$clay-color-dropdown-menu-form-group: () !default;
+$clay-color-dropdown-menu-form-group: map-deep-merge(
+	(
+		margin-bottom:
+			var(--clay-color-dropdown-menu-form-group-margin-bottom, 1rem),
+	),
+	$clay-color-dropdown-menu-form-group
+);
+
+// Dropdown Menu Input (.clay-color-dropdown-menu .form-control)
+
+$clay-color-dropdown-menu-input: () !default;
+$clay-color-dropdown-menu-input: map-deep-merge(
+	(
+		font-size: var(--clay-color-dropdown-menu-input-font-size, 0.875rem),
+		height: var(--clay-color-dropdown-menu-input-height, 2rem),
+		padding-bottom:
+			var(--clay-color-dropdown-menu-input-padding-bottom, 0.25rem),
+		padding-left:
+			var(--clay-color-dropdown-menu-input-padding-left, 0.75rem),
+		padding-right:
+			var(--clay-color-dropdown-menu-input-padding-right, 0.75rem),
+		padding-top: var(--clay-color-dropdown-menu-input-padding-top, 0.25rem),
+	),
+	$clay-color-dropdown-menu-input
+);
+
+// Dropdown Menu Input Group Inset Item Before
+
+$clay-color-dropdown-menu-input-group-inset-item-before: () !default;
+$clay-color-dropdown-menu-input-group-inset-item-before: map-deep-merge(
+	(
+		color:
+			var(
+				--clay-color-dropdown-menu-input-group-inset-item-before-color,
+				$gray-600
+			),
+		font-size:
+			var(
+				--clay-color-dropdown-menu-input-group-inset-item-before-font-size,
+				0.875rem
+			),
+		padding-left:
+			var(
+				--clay-color-dropdown-menu-input-group-inset-item-before-padding-left,
+				$input-padding-x-sm
+			),
+		padding-right:
+			var(
+				--clay-color-dropdown-menu-input-group-inset-item-before-padding-right,
+				0.5rem
+			),
+	),
+	$clay-color-dropdown-menu-input-group-inset-item-before
+);
+
+// Dropdown Menu Close
+
+$clay-color-dropdown-menu-close: () !default;
+$clay-color-dropdown-menu-close: map-deep-merge(
+	(
+		color: var(--clay-color-dropdown-menu-close-color, $gray-600),
+		font-size: var(--clay-color-dropdown-menu-close-font-size, 1rem),
+		opacity: var(--clay-color-dropdown-menu-close-opacity, 1),
+		hover-bg:
+			var(
+				--clay-color-dropdown-menu-close-hover-background-color,
+				rgba($gray-900, 0.03)
+			),
+		focus-bg:
+			var(
+				--clay-color-dropdown-menu-close-focus-background-color,
+				rgba($gray-900, 0.03)
+			),
+		active-bg:
+			var(
+				--clay-color-dropdown-menu-close-active-background-color,
+				rgba($gray-900, 0.06)
+			),
+		disabled-bg:
+			var(
+				--clay-color-dropdown-menu-close-disabled-background-color,
+				transparent
+			),
+	),
+	$clay-color-dropdown-menu-close
+);
+
+// Dropdown Menu Component Action
+
+$clay-color-dropdown-menu-component-action: () !default;
+$clay-color-dropdown-menu-component-action: map-deep-merge(
+	(
+		hover-bg:
+			var(
+				--clay-color-dropdown-menu-component-action-hover-background-color
+			),
+		hover-color:
+			var(--clay-color-dropdown-menu-component-action-hover-color),
+		focus-box-shadow:
+			var(--clay-color-dropdown-menu-component-action-focus-box-shadow),
+		focus-color:
+			var(--clay-color-dropdown-menu-component-action-focus-color),
+	),
+	$clay-color-dropdown-menu-component-action
+);
+
+// Clay Color Swatch
+
+$clay-color-swatch: () !default;
+$clay-color-swatch: map-deep-merge(
+	(
+		display: var(--clay-color-swatch-display, flex),
+		flex-wrap: var(--clay-color-swatch-flex-wrap, wrap),
+		margin-left: var(--clay-color-swatch-margin-left, -0.5rem),
+		margin-right: var(--clay-color-swatch-margin-right, -0.5rem),
+		margin-top: var(--clay-color-swatch-margin-top, 0.5rem),
+	),
+	$clay-color-swatch
+);
+
+$clay-color-swatch-item: () !default;
+$clay-color-swatch-item: map-deep-merge(
+	(
+		display: var(--clay-color-swatch-item-display, flex),
+		flex-wrap: var(--clay-color-swatch-item-flex-wrap, wrap),
+		justify-content: var(--clay-color-swatch-item-justify-content, center),
+		padding-bottom: var(--clay-color-swatch-item-padding-bottom, 1rem),
+		width: var(--clay-color-swatch-item-width, 16.66667%),
+	),
+	$clay-color-swatch-item
+);
+
+// Clay Color Btn
+
+$clay-color-btn: () !default;
+$clay-color-btn: map-deep-merge(
+	(
+		border-radius: var(--clay-color-btn-border-radius, 2px),
+		height: var(--clay-color-btn-height, 1.5rem),
+		padding-bottom: var(--clay-color-btn-padding-bottom, 0),
+		padding-left: var(--clay-color-btn-padding-left, 0),
+		padding-right: var(--clay-color-btn-padding-right, 0),
+		padding-top: var(--clay-color-btn-padding-top, 0),
+		width: var(--clay-color-btn-width, 1.5rem),
+		active: (
+			box-shadow:
+				var(
+					--clay-color-btn-active-box-shadow,
+					$component-focus-box-shadow
+				),
+		),
+	),
+	$clay-color-btn
+);
+
+$clay-color-btn-bordered: () !default;
+$clay-color-btn-bordered: map-deep-merge(
+	(
+		border-color: var(--clay-color-btn-bordered-border-color, $gray-300),
+	),
+	$clay-color-btn-bordered
+);
+
+// Clay Color Pointer
+
+$clay-color-pointer: () !default;
+$clay-color-pointer: map-deep-merge(
+	(
+		bg: var(--clay-color-pointer-background-color, transparent),
+		border-radius: var(--clay-color-pointer-border-radius, 100px),
+		border-color: var(--clay-color-pointer-border-color, $white),
+		border-style: var(--clay-color-pointer-border-style, solid),
+		border-width: var(--clay-color-pointer-border-width, 2px),
+		height: var(--clay-color-pointer-height, 0.875rem),
+		padding-bottom: var(--clay-color-pointer-padding-bottom, 0),
+		padding-left: var(--clay-color-pointer-padding-left, 0),
+		padding-right: var(--clay-color-pointer-padding-right, 0),
+		padding-top: var(--clay-color-pointer-padding-top, 0),
+		position: var(--clay-color-pointer-position, absolute),
+		transition:
+			var(--clay-color-pointer-transition, box-shadow 0.15s ease-in-out),
+		width: var(--clay-color-pointer-width, 0.875rem),
+		focus-box-shadow:
+			var(
+				--clay-color-pointer-focus-box-shadow,
+				0 0 0 0.125rem $primary-l1
+			),
+		focus-outline: var(--clay-color-pointer-focus-outline, 0),
+	),
+	$clay-color-pointer
+);
+
+// Clay Color Header
+
+$clay-color-header: () !default;
+$clay-color-header: map-deep-merge(
+	(
+		display: var(--clay-color-header-display, flex),
+		justify-content: var(--clay-color-header-justify-content, space-between),
+		margin-bottom: var(--clay-color-header-margin-bottom, 1rem),
+		margin-right: var(--clay-color-header-margin-right, -0.25rem),
+	),
+	$clay-color-header
+);
+
+// Clay Color Header Component Title
+
+$clay-color-header-component-title: () !default;
+$clay-color-header-component-title: map-deep-merge(
+	(
+		color: var(--clay-color-header-component-title-color, $gray-600),
+		display: var(--clay-color-header-component-title-display, inline-block),
+		font-size: var(--clay-color-header-component-title-font-size, 0.875rem),
+		font-weight:
+			var(
+				--clay-color-header-component-title-font-weight,
+				$font-weight-semi-bold
+			),
+		max-width:
+			var(
+				--clay-color-header-component-title-max-width,
+				calc(100% - 2rem)
+			),
+	),
+	$clay-color-header-component-title
+);
+
+// Clay Color Footer
+
+$clay-color-footer: () !default;
+$clay-color-footer: map-deep-merge(
+	(
+		margin-bottom: var(--clay-color-footer-margin-bottom, 1rem),
+	),
+	$clay-color-footer
+);
+
+// Clay Color Map
+
+$clay-color-map-group: () !default;
+$clay-color-map-group: map-deep-merge(
+	(
+		display: var(--clay-color-map-group-display, flex),
+		margin-top: var(--clay-color-map-group-margin-top, 0.5rem),
+	),
+	$clay-color-map-group
+);
+
+$clay-color-map: () !default;
+$clay-color-map: map-deep-merge(
+	(
+		flex-shrink: var(--clay-color-map-flex-shrink, 0),
+		height: var(--clay-color-map-height, 128px),
+		margin-bottom: var(--clay-color-map-margin-bottom, 1rem),
+		margin-right: var(--clay-color-map-margin-right, 1rem),
+		position: var(--clay-color-map-position, relative),
+		touch-action: var(--clay-color-map-touch-action, none),
+		user-select: var(--clay-color-map-user-select, none),
+		width: var(--clay-color-map-width, 144px),
+	),
+	$clay-color-map
+);
+
+$clay-color-map-hsb: () !default;
+
+// Clay Color Map Pointer
+
+$clay-color-map-pointer: () !default;
+
+// Clay Color Map Values
+
+$clay-color-map-values: () !default;
+$clay-color-map-values: map-deep-merge(
+	(
+		flex-grow: var(--clay-color-map-values-flex-grow, 1),
+		flex-shrink: var(--clay-color-map-values-flex-shrink, 1),
+		width: var(--clay-color-map-values-width, 1%),
+	),
+	$clay-color-map-values
+);
+
+$clay-color-map-values-form-group: () !default;
+
+// Clay Color Map Values (.clay-color-map-values .form-control)
+
+$clay-color-map-values-input: () !default;
+$clay-color-map-values-input: map-deep-merge(
+	(
+		padding-left: var(--clay-color-map-values-input-padding-left, 0),
+		padding-right: var(--clay-color-map-values-input-padding-right, 10%),
+		text-align: var(--clay-color-map-values-input-text-align, right),
+	),
+	$clay-color-map-values-input
+);
+
+// Clay Color Map Values Input Group Inset Item Before (.clay-color-map-values .input-group-inset-item-before)
+
+$clay-color-map-values-input-group-inset-item-before: () !default;
+$clay-color-map-values-input-group-inset-item-before: map-deep-merge(
+	(
+		font-weight:
+			var(
+				--clay-color-map-values-input-group-inset-item-before-font-weight,
+				$font-weight-semi-bold
+			),
+		padding-left:
+			var(
+				--clay-color-map-values-input-group-inset-item-before-padding-left,
+				10%
+			),
+		padding-right:
+			var(
+				--clay-color-map-values-input-group-inset-item-before-padding-right,
+				0
+			),
+		min-width:
+			var(
+				--clay-color-map-values-input-group-inset-item-before-min-width,
+				1.125rem
+			),
+	),
+	$clay-color-map-values-input-group-inset-item-before
+);
+
+// Clay Color Range
+
+$clay-color-range: () !default;
+$clay-color-range: map-deep-merge(
+	(
+		border-radius: var(--clay-color-range-border-radius, 100px),
+		height: var(--clay-color-range-height, 0.5rem),
+		margin-bottom: var(--clay-color-range-margin-bottom, 1.25rem),
+		margin-top: var(--clay-color-range-margin-top, 0.25rem),
+		position: var(--clay-color-range-position, relative),
+		touch-action: var(--clay-color-range-touch-action, none),
+		user-select: var(--clay-color-range-user-select, none),
+	),
+	$clay-color-range
+);
+
+$clay-color-range-pointer: () !default;
+$clay-color-range-pointer: map-deep-merge(
+	(
+		margin-top: var(--clay-color-range-pointer-margin-top, -7px),
+		top: var(--clay-color-range-pointer-top, 50%),
+	),
+	$clay-color-range-pointer
+);
+
+// Clay Color Sm
+
+$clay-color-sm-input-group-inset-item-before: () !default;
+$clay-color-sm-input-group-inset-item-before: map-merge(
+	(
+		padding-left:
+			var(
+				--clay-color-sm-input-group-inset-item-before-padding-left,
+				$input-padding-x-sm
+			),
+	),
+	$clay-color-sm-input-group-inset-item-before
+);
+
+$clay-color-sm-input-group-text: () !default;
+$clay-color-sm-input-group-text: map-merge(
+	(
+		padding: var(--clay-color-sm-input-group-text-padding, 0),
+	),
+	$clay-color-sm-input-group-text
+);
+
+$clay-color-sm-clay-color-btn: () !default;
+$clay-color-sm-clay-color-btn: map-deep-merge(
+	(
+		border-radius: var(--clay-color-sm-clay-color-btn-border-radius, 2px),
+		height: var(--clay-color-sm-clay-color-btn-height, 1.25rem),
+		padding: var(--clay-color-sm-clay-color-btn-padding, 0),
+		width: var(--clay-color-sm-clay-color-btn-width, 1.25rem),
+	),
+	$clay-color-sm-clay-color-btn
+);
