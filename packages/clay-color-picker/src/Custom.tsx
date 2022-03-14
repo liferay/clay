@@ -13,16 +13,15 @@ import GradientSelector from './GradientSelector';
 import Hue from './Hue';
 import Splotch from './Splotch';
 
-function findColor(colors: Array<string>, color: tinycolor.Instance): boolean {
-	for (let i = 0; i < colors.length; i++) {
-		const currentColor = tinycolor(colors[i]);
-		if (tinycolor.equals(currentColor, color)) {
-			return true;
-		}
-	}
-
-	return false;
-}
+const findColorIndex = (colors: Array<string>, color: tinycolor.Instance) =>
+	colors.findIndex((currentColor) =>
+		tinycolor.equals(
+			currentColor.includes('var(')
+				? getCSSVariableColor(currentColor)
+				: tinycolor(currentColor),
+			color
+		)
+	);
 
 function getCSSVariableColor(value: string) {
 	const element = document.createElement('div');
@@ -222,11 +221,17 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 	const setNewColor = (
 		colorValue: tinycolor.Instance,
 		setInput = true,
-		index?: number
+		index?: number,
+		hasActive = true
 	) => {
 		const hexString = colorValue.toHex();
 
-		setColors(hexString, index);
+		if (hasActive) {
+			setColors(hexString, index);
+		} else {
+			setActiveSplotchIndex(undefined);
+		}
+
 		onChange(hexString);
 
 		if (setInput) {
@@ -293,6 +298,8 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 									}
 
 									if (hex === DEFAULT_SPLOTCH_COLOR) {
+										const newColor = tinycolor(hex);
+
 										setInternalEditorActive(true);
 
 										if (
@@ -300,13 +307,22 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 												tinycolor(
 													DEFAULT_SPLOTCH_COLOR
 												) &&
-											!findColor(colors, color)
+											findColorIndex(colors, color) ===
+												-1 &&
+											typeof activeSplotchIndex ===
+												'undefined'
 										) {
-											setNewColor(color, true, index);
+											setColors(color.toHex(), index);
+											setHexInputValue(color.toHex());
 											setHue(color.toHsv().h);
-										} else {
-											const newColor = tinycolor(hex);
-
+										} else if (
+											findColorIndex(colors, newColor) ===
+												-1 ||
+											tinycolor.equals(
+												newColor,
+												tinycolor(DEFAULT_SPLOTCH_COLOR)
+											)
+										) {
 											setNewColor(newColor, true, index);
 											setHue(newColor.toHsv().h);
 										}
@@ -408,7 +424,16 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 
 											if (newColor.isValid()) {
 												setHue(newColor.toHsv().h);
-												setNewColor(newColor, false);
+
+												const hasColor =
+													colors.indexOf(newHexValue);
+
+												setNewColor(
+													newColor,
+													false,
+													activeSplotchIndex,
+													hasColor === -1
+												);
 											}
 										}}
 										ref={inputRef}
