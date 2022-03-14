@@ -125,6 +125,13 @@ export interface IProps extends IDropDownContentProps {
 	onSearchValueChange?: (newValue: string) => void;
 
 	/**
+	 * Flag indicating if the menu should be rendered lazily
+	 */
+	renderMenuOnClick?: React.ComponentProps<
+		typeof ClayDropDown
+	>['renderMenuOnClick'];
+
+	/**
 	 * Flag to show search at the top of the DropDown.
 	 */
 	searchable?: boolean;
@@ -392,6 +399,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	offsetFn,
 	onActiveChange,
 	onSearchValueChange = () => {},
+	renderMenuOnClick,
 	searchable,
 	searchProps,
 	searchValue = '',
@@ -429,6 +437,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
 			onActiveChange={setInternalActive}
+			renderMenuOnClick={renderMenuOnClick}
 			trigger={trigger}
 		>
 			<ClayDropDownContext.Provider
