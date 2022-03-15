@@ -33,7 +33,6 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 		'blue',
 		'black',
 		'var(--blue)',
-		'inherit',
 	]);
 
 	const [color, setColor] = React.useState(customColors[0]);

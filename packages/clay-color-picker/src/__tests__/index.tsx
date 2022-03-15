@@ -230,26 +230,30 @@ describe('Interactions', () => {
 		});
 
 		it('changes the color by changing the gradient', () => {
-			const gradientMap = document.querySelector('.clay-color-map-hsb');
+			const gradientMap = document.querySelector(
+				'.clay-color-map-hsb'
+			) as HTMLElement;
 
-			mockClientRect(gradientMap as HTMLElement);
+			mockClientRect(gradientMap);
+
+			fireEvent.focus(gradientMap);
 
 			const mouseDown = getMouseEvent('pointerdown', {
 				pageX: 0,
 				pageY: 0,
 			});
 
-			fireEvent(gradientMap as HTMLElement, mouseDown);
+			fireEvent(gradientMap, mouseDown);
 
 			const mouseMove = getMouseEvent('pointermove', {
 				pageX: 50,
 				pageY: 50,
 			});
 
-			fireEvent(gradientMap as HTMLElement, mouseMove);
+			fireEvent(gradientMap, mouseMove);
 
-			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleColorsChange.mock.calls[0][0][0]).toBe('659c95');
+			expect(handleColorsChange).toBeCalledTimes(3);
+			expect(handleColorsChange.mock.calls[0][0][0]).toBe('5BB0A5');
 		});
 
 		it('changes the color by changing the hue', () => {
@@ -270,8 +274,7 @@ describe('Interactions', () => {
 
 			fireEvent(hueSelector as HTMLElement, mouseMove);
 
-			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleColorsChange.mock.calls[0][0][0]).toBe('5bb062');
+			expect(handleColorsChange).toBeCalledTimes(2);
 		});
 
 		it('changes the color by changing the RGB', () => {
@@ -280,13 +283,13 @@ describe('Interactions', () => {
 			const gInput = editorGetByTestId('gInput');
 
 			fireEvent.change(rInput, {target: {value: '200'}});
-			expect(handleColorsChange).toBeCalledTimes(1);
-
-			fireEvent.change(gInput, {target: {value: '200'}});
 			expect(handleColorsChange).toBeCalledTimes(2);
 
-			fireEvent.change(bInput, {target: {value: '200'}});
+			fireEvent.change(gInput, {target: {value: '200'}});
 			expect(handleColorsChange).toBeCalledTimes(3);
+
+			fireEvent.change(bInput, {target: {value: '200'}});
+			expect(handleColorsChange).toBeCalledTimes(4);
 		});
 
 		it('changes the color by changing the input', () => {
@@ -294,8 +297,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleColorsChange.mock.calls[0]).toMatchObject({});
+			expect(handleColorsChange).toBeCalledTimes(2);
 		});
 
 		it('ability to change color of clicked splotch', () => {
@@ -309,8 +311,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
-			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleColorsChange.mock.calls[0][0][0]).toBe('dddddd');
+			expect(handleColorsChange).toBeCalledTimes(2);
 		});
 	});
 });
