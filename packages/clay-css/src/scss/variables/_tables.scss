@@ -241,22 +241,17 @@ $table-border-level: -6 !default;
 
 $table-list-bg: $white !default;
 $table-list-border-color: $table-border-color !default;
+$table-list-color: null !default;
+$table-list-font-size: null !default;
+$table-list-margin-top: null !default;
+
 $table-list-border-x-width: 0.0625rem !default;
 $table-list-border-y-width: 0.0625rem !default;
 
 $table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
-
-@function table-border-radius() {
-	@return calc(
-		#{$table-list-border-radius} - min(#{$table-list-border-x-width}, #{$table-list-border-y-width})
-	);
-}
+$table-list-margin-bottom: $table-list-border-y-width !default;
 
 $table-list-border-radius: $border-radius !default;
-$table-list-color: null !default;
-$table-list-font-size: null !default;
-$table-list-margin-bottom: $table-list-border-y-width !default;
-$table-list-margin-top: null !default;
 
 $c-table-list: () !default;
 $c-table-list: map-merge(
@@ -322,7 +317,19 @@ $table-list-head-link: () !default;
 $c-table-list-thead: () !default;
 $c-table-list-thead: map-merge(
 	(
-		background-color: $table-list-head-bg,
+		background-color: $white,
+		border-top-left-radius:
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			),
+		border-top-right-radius:
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			),
 	),
 	$c-table-list-thead
 );
@@ -333,6 +340,18 @@ $c-table-list-tbody: () !default;
 $c-table-list-tbody: map-merge(
 	(
 		background-color: $white,
+		border-bottom-left-radius:
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			),
+		border-bottom-right-radius:
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			),
 	),
 	$c-table-list-tbody
 );

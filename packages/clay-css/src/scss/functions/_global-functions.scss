@@ -822,3 +822,13 @@
 
 	@return clay-svg-url(map-get($lx-icons, $name));
 }
+
+@function clay-border-radius-inner(
+	$border-radius,
+	$border-width-x,
+	$border-width-y
+) {
+	@return calc(
+		#{$border-radius} - min(#{$border-width-x}, #{$border-width-y})
+	);
+}

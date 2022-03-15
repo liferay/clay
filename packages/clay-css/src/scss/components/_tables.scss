@@ -37,8 +37,20 @@ caption {
 	thead {
 		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
 
-		border-top-left-radius: clay-enable-rounded(table-border-radius());
-		border-top-right-radius: clay-enable-rounded(table-border-radius());
+		border-top-left-radius: clay-enable-rounded(
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			)
+		);
+		border-top-right-radius: clay-enable-rounded(
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			)
+		);
 
 		@include clay-css($c-table-thead);
 
@@ -99,8 +111,20 @@ caption {
 	tbody {
 		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
 
-		border-bottom-left-radius: clay-enable-rounded(table-border-radius());
-		border-bottom-right-radius: clay-enable-rounded(table-border-radius());
+		border-bottom-left-radius: clay-enable-rounded(
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			)
+		);
+		border-bottom-right-radius: clay-enable-rounded(
+			clay-border-radius-inner(
+				$table-list-border-radius,
+				$table-list-border-x-width,
+				$table-list-border-y-width
+			)
+		);
 
 		@include clay-css($c-table-tbody);
 
@@ -430,7 +454,11 @@ caption {
 			td:first-child,
 			.table-cell-start {
 				border-top-left-radius: clay-enable-rounded(
-					table-border-radius()
+					clay-border-radius-inner(
+						$table-list-border-radius,
+						$table-list-border-x-width,
+						$table-list-border-y-width
+					)
 				);
 			}
 
@@ -438,7 +466,11 @@ caption {
 			td:last-child,
 			.table-cell-start {
 				border-top-right-radius: clay-enable-rounded(
-					table-border-radius()
+					clay-border-radius-inner(
+						$table-list-border-radius,
+						$table-list-border-x-width,
+						$table-list-border-y-width
+					)
 				);
 			}
 		}
@@ -462,7 +494,11 @@ caption {
 				td:first-child,
 				.table-cell-start {
 					border-bottom-left-radius: clay-enable-rounded(
-						table-border-radius()
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-x-width,
+							$table-list-border-y-width
+						)
 					);
 				}
 
@@ -470,7 +506,11 @@ caption {
 				td:last-child,
 				.table-cell-end {
 					border-bottom-right-radius: clay-enable-rounded(
-						table-border-radius()
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-x-width,
+							$table-list-border-y-width
+						)
 					);
 				}
 			}
