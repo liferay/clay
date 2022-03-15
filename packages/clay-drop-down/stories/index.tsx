@@ -88,6 +88,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 			menuHeight={select('Height', ['', 'auto'], '')}
 			menuWidth={select('Width', ['', 'sm', 'full'], '')}
 			onActiveChange={(newVal) => setActive(newVal)}
+			renderMenuOnClick={boolean('Render Menu On Click', true)}
 			trigger={<ClayButton>Click Me</ClayButton>}
 		>
 			{children}
@@ -296,6 +297,7 @@ storiesOf('Components|ClayDropDown', module)
 				],
 				x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
 			}}
+			renderMenuOnClick={boolean('Render Menu On Click', true)}
 			spritemap={spritemap}
 			trigger={<ClayButton>Click Me</ClayButton>}
 		/>
@@ -350,6 +352,7 @@ storiesOf('Components|ClayDropDown', module)
 				helpText="You can customize this menu or see all you have by pressing 'more'."
 				items={ITEMS}
 				onSearchValueChange={setValue}
+				renderMenuOnClick={boolean('Render Menu On Click', true)}
 				searchProps={{
 					formProps: {
 						onSubmit: (event) => {

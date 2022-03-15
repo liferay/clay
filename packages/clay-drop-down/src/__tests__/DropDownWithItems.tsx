@@ -31,6 +31,7 @@ describe('ClayDropDownWithItems', () => {
 						label: 'linkable',
 					},
 				]}
+				renderMenuOnClick
 				spritemap={spritemap}
 				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
@@ -61,6 +62,7 @@ describe('ClayDropDownWithItems', () => {
 						type: 'radiogroup' as const,
 					},
 				]}
+				renderMenuOnClick
 				spritemap={spritemap}
 				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
@@ -90,6 +92,7 @@ describe('ClayDropDownWithItems', () => {
 						type: 'group' as const,
 					},
 				]}
+				renderMenuOnClick
 				spritemap={spritemap}
 				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
@@ -108,6 +111,7 @@ describe('ClayDropDownWithItems', () => {
 						label: 'linkable',
 					},
 				]}
+				renderMenuOnClick
 				spritemap={spritemap}
 				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
@@ -126,6 +130,7 @@ describe('ClayDropDownWithItems', () => {
 						label: 'linkable',
 					},
 				]}
+				renderMenuOnClick
 				spritemap={spritemap}
 				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
@@ -144,6 +149,7 @@ describe('ClayDropDownWithItems', () => {
 						label: 'linkable',
 					},
 				]}
+				renderMenuOnClick
 				spritemap={spritemap}
 				trigger={<ClayButton>Click Me</ClayButton>}
 			/>
@@ -162,6 +168,7 @@ describe('ClayDropDownWithItems', () => {
 					},
 				]}
 				onSearchValueChange={() => {}}
+				renderMenuOnClick
 				searchValue="Search"
 				searchable
 				spritemap={spritemap}

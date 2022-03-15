@@ -40,6 +40,7 @@ describe('ClayDropDownWithDrilldown', () => {
 					],
 					x0a5: [{title: 'The'}, {title: 'End'}],
 				}}
+				renderMenuOnClick
 				spritemap="#"
 				trigger={<button data-testid="trigger" />}
 			/>
@@ -69,6 +70,7 @@ describe('ClayDropDownWithDrilldown', () => {
 					],
 					x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
 				}}
+				renderMenuOnClick
 				spritemap="#"
 				trigger={<button data-testid="trigger" />}
 			/>
@@ -90,6 +92,7 @@ describe('ClayDropDownWithDrilldown', () => {
 					],
 					x0a4: [{href: '#', title: '2nd hash link'}],
 				}}
+				renderMenuOnClick
 				spritemap="#"
 				trigger={<button data-testid="trigger" />}
 			/>
@@ -117,6 +120,7 @@ describe('ClayDropDownWithDrilldown', () => {
 					],
 					x0a4: [{href: '#', title: '2nd hash link'}],
 				}}
+				renderMenuOnClick
 				spritemap="#"
 				trigger={<button data-testid="trigger" />}
 			/>
@@ -147,6 +151,7 @@ describe('ClayDropDownWithDrilldown', () => {
 					],
 					x0a4: [{href: '#', title: '2nd hash link'}],
 				}}
+				renderMenuOnClick
 				spritemap="#"
 				trigger={<button data-testid="trigger" />}
 			/>
@@ -169,6 +174,7 @@ describe('ClayDropDownWithDrilldown', () => {
 					x0a4: [{href: '#', title: '2nd hash link'}],
 				}}
 				onActiveChange={onActiveChange}
+				renderMenuOnClick
 				spritemap="#"
 				trigger={<button data-testid="trigger" />}
 			/>

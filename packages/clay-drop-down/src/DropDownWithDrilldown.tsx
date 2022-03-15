@@ -82,6 +82,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 
 	/**
+	 * Flag indicating if the menu should be rendered lazily
+	 */
+	renderMenuOnClick?: React.ComponentProps<
+		typeof ClayDropDown
+	>['renderMenuOnClick'];
+
+	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
 	trigger: React.ReactElement;
@@ -106,6 +113,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	menus,
 	offsetFn,
 	onActiveChange,
+	renderMenuOnClick,
 	spritemap,
 	trigger,
 }: IProps) => {
@@ -140,6 +148,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
 			onActiveChange={setInternalActive}
+			renderMenuOnClick={renderMenuOnClick}
 			trigger={trigger}
 		>
 			<Drilldown.Inner>

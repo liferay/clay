@@ -84,6 +84,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	offsetFn?: React.ComponentProps<typeof Menu>['offsetFn'];
 
 	/**
+	 * Flag indicating if the menu should be rendered lazily
+	 */
+	renderMenuOnClick?: boolean;
+
+	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
 	trigger: React.ReactElement & {
@@ -117,13 +122,14 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	menuWidth,
 	offsetFn,
 	onActiveChange,
+	renderMenuOnClick = false,
 	trigger,
 	...otherProps
 }: IProps) => {
 	const triggerElementRef = React.useRef<HTMLButtonElement | null>(null);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
-	const [initialized, setInitialized] = React.useState(false);
+	const [initialized, setInitialized] = React.useState(!renderMenuOnClick);
 
 	const handleKeyUp = (event: React.KeyboardEvent<HTMLElement>) => {
 		if (event.key === Keys.Esc) {
