@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Forms .form-control-tag-group .label (Multiselect) remove references to deprecated keys ([39b360f](https://github.com/liferay/clay/commit/39b360f122ab0fb9a95435fac436b57b1ca6d85a)), closes [#4712](https://github.com/liferay/clay/issues/4712)
+
+
+
+
+
 # [3.48.0](https://github.com/liferay/clay/compare/v3.47.0...v3.48.0) (2022-03-07)
 
 

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** Changes to improve inconsistent behavior in some scenarios ([85adf72](https://github.com/liferay/clay/commit/85adf727784d0e5a986cabd3124df77489a2b627))
+-   **@clayui/color-picker:** Current colour persist and Hue component synchronization ([07c2552](https://github.com/liferay/clay/commit/07c255200ae0213935f78af651ce5d85df030b55))
+-   **@clayui/color-picker:** fixes error of adding repeated colors in custom ([e3fb905](https://github.com/liferay/clay/commit/e3fb905ead79c1217cb7d6eb0ed89ce9df725cf9))
+-   **@clayui/color-picker:** fixes error when clicking on a white custom splotch does not update editor and input ([b5e0189](https://github.com/liferay/clay/commit/b5e0189115c2f9b98cbdbb444e5e4fcc8eaa4ef0))
+-   **@clayui/color-picker:** Hue behaviour solved and workflow changes ([46821d7](https://github.com/liferay/clay/commit/46821d7e9fc76283e26fbbd4a7e8f08590b7efad))
+-   **@clayui/color-picker:** Removing costumize hook ([20fd191](https://github.com/liferay/clay/commit/20fd1919d9acdea016bad5e56878ad3589aa111d))
+-   **@clayui/core:** fix error when not rendering component after string with TreeView.Item ([1d275a8](https://github.com/liferay/clay/commit/1d275a8c948dfcfab9206a03b59c6c9d948ce29f))
+-   **@clayui/css:** Forms .form-control-tag-group .label (Multiselect) remove references to deprecated keys ([39b360f](https://github.com/liferay/clay/commit/39b360f122ab0fb9a95435fac436b57b1ca6d85a)), closes [#4712](https://github.com/liferay/clay/issues/4712)
+
+### Features
+
+-   **@clayui/core:** adds new properties to set the initial value of properties that can be controlled ([bdfb6b0](https://github.com/liferay/clay/commit/bdfb6b063cc4cd00365609d2f7ce0f525ac16045))
+-   **@clayui/drop-down:** add new prop to align Menu in viewport ([1c4f19b](https://github.com/liferay/clay/commit/1c4f19b25c34f6ffb9c2c7b9a99732e2a82d5eb5))
+-   **@clayui/drop-down:** make it possible to render the menu lazily ([1e4e565](https://github.com/liferay/clay/commit/1e4e5655503645358245a200e72c8ca711f72956))
+
 # [3.48.0](https://github.com/liferay/clay/compare/v3.47.0...v3.48.0) (2022-03-07)
 
 ### Bug Fixes
