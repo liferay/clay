@@ -241,17 +241,16 @@ $table-border-level: -6 !default;
 
 $table-list-bg: $white !default;
 $table-list-border-color: $table-border-color !default;
-$table-list-color: null !default;
-$table-list-font-size: null !default;
-$table-list-margin-top: null !default;
+$table-list-border-radius: $border-radius !default;
 
 $table-list-border-x-width: 0.0625rem !default;
 $table-list-border-y-width: 0.0625rem !default;
 
 $table-list-border-width: $table-list-border-y-width $table-list-border-x-width !default;
+$table-list-color: null !default;
+$table-list-font-size: null !default;
 $table-list-margin-bottom: $table-list-border-y-width !default;
-
-$table-list-border-radius: $border-radius !default;
+$table-list-margin-top: null !default;
 
 $c-table-list: () !default;
 $c-table-list: map-merge(
@@ -265,6 +264,46 @@ $c-table-list: map-merge(
 		font-size: $table-list-font-size,
 		margin-bottom: $table-list-margin-bottom,
 		margin-top: $table-list-margin-top,
+		table-row-start: (
+			table-cell-start: (
+				border-top-left-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+			table-cell-end: (
+				border-top-right-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+		),
+		table-row-end: (
+			table-cell-start: (
+				border-bottom-left-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+			table-cell-end: (
+				border-bottom-right-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+		),
 	),
 	$c-table-list
 );
@@ -321,13 +360,11 @@ $c-table-list-thead: map-merge(
 		border-top-left-radius:
 			clay-border-radius-inner(
 				$table-list-border-radius,
-				$table-list-border-x-width,
 				$table-list-border-y-width
 			),
 		border-top-right-radius:
 			clay-border-radius-inner(
 				$table-list-border-radius,
-				$table-list-border-x-width,
 				$table-list-border-y-width
 			),
 	),
@@ -343,13 +380,11 @@ $c-table-list-tbody: map-merge(
 		border-bottom-left-radius:
 			clay-border-radius-inner(
 				$table-list-border-radius,
-				$table-list-border-x-width,
 				$table-list-border-y-width
 			),
 		border-bottom-right-radius:
 			clay-border-radius-inner(
 				$table-list-border-radius,
-				$table-list-border-x-width,
 				$table-list-border-y-width
 			),
 	),

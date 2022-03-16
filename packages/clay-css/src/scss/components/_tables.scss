@@ -37,21 +37,6 @@ caption {
 	thead {
 		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
 
-		border-top-left-radius: clay-enable-rounded(
-			clay-border-radius-inner(
-				$table-list-border-radius,
-				$table-list-border-x-width,
-				$table-list-border-y-width
-			)
-		);
-		border-top-right-radius: clay-enable-rounded(
-			clay-border-radius-inner(
-				$table-list-border-radius,
-				$table-list-border-x-width,
-				$table-list-border-y-width
-			)
-		);
-
 		@include clay-css($c-table-thead);
 
 		td,
@@ -110,21 +95,6 @@ caption {
 
 	tbody {
 		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		border-bottom-left-radius: clay-enable-rounded(
-			clay-border-radius-inner(
-				$table-list-border-radius,
-				$table-list-border-x-width,
-				$table-list-border-y-width
-			)
-		);
-		border-bottom-right-radius: clay-enable-rounded(
-			clay-border-radius-inner(
-				$table-list-border-radius,
-				$table-list-border-x-width,
-				$table-list-border-y-width
-			)
-		);
 
 		@include clay-css($c-table-tbody);
 
@@ -453,24 +423,20 @@ caption {
 			th:first-child,
 			td:first-child,
 			.table-cell-start {
-				border-top-left-radius: clay-enable-rounded(
-					clay-border-radius-inner(
-						$table-list-border-radius,
-						$table-list-border-x-width,
-						$table-list-border-y-width
+				@include clay-css(
+					map-deep-get(
+						$c-table-list,
+						table-row-start,
+						table-cell-start
 					)
 				);
 			}
 
 			th:last-child,
 			td:last-child,
-			.table-cell-start {
-				border-top-right-radius: clay-enable-rounded(
-					clay-border-radius-inner(
-						$table-list-border-radius,
-						$table-list-border-x-width,
-						$table-list-border-y-width
-					)
+			.table-cell-end {
+				@include clay-css(
+					map-deep-get($c-table-list, table-row-start, table-cell-end)
 				);
 			}
 		}
@@ -493,11 +459,11 @@ caption {
 				th:first-child,
 				td:first-child,
 				.table-cell-start {
-					border-bottom-left-radius: clay-enable-rounded(
-						clay-border-radius-inner(
-							$table-list-border-radius,
-							$table-list-border-x-width,
-							$table-list-border-y-width
+					@include clay-css(
+						map-deep-get(
+							$c-table-list,
+							table-row-end,
+							table-cell-start
 						)
 					);
 				}
@@ -505,11 +471,11 @@ caption {
 				th:last-child,
 				td:last-child,
 				.table-cell-end {
-					border-bottom-right-radius: clay-enable-rounded(
-						clay-border-radius-inner(
-							$table-list-border-radius,
-							$table-list-border-x-width,
-							$table-list-border-y-width
+					@include clay-css(
+						map-deep-get(
+							$c-table-list,
+							table-row-end,
+							table-cell-end
 						)
 					);
 				}
@@ -566,28 +532,28 @@ caption {
 
 	.table-row-start {
 		.table-cell-start {
-			border-top-left-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-start, table-cell-start)
 			);
 		}
 
 		.table-cell-end {
-			border-top-right-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-start, table-cell-end)
 			);
 		}
 	}
 
 	.table-row-end {
 		.table-cell-start {
-			border-bottom-left-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-end, table-cell-start)
 			);
 		}
 
 		.table-cell-end {
-			border-bottom-right-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-end, table-cell-end)
 			);
 		}
 	}
