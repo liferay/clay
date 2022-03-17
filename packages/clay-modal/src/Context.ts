@@ -8,6 +8,8 @@ import React from 'react';
 import {Status} from './types';
 
 export interface IContext {
+	ariaLabelledby?: string;
+
 	/**
 	 * Callback called to close the modal.
 	 */

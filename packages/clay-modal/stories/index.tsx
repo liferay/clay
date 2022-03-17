@@ -31,6 +31,7 @@ const Autocomplete = () => {
 		<ClayAutocomplete>
 			<ClayAutocomplete.Input
 				aria-label="Numbers: Enter a number from One to Five"
+				autoFocus
 				onBlur={() => {
 					setActive(false);
 				}}
@@ -259,7 +260,7 @@ storiesOf('Components|ClayModal', module)
 							scrollable={boolean('scrollable', false)}
 							url={text('Url', '')}
 						>
-							<h1>Hello world!</h1>
+							<h2>Hello world!</h2>
 							<div>
 								Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit. Curabitur dignissim eu ante
