@@ -7,13 +7,16 @@ exports[`ClayModal custom opener does not close automatically with disableAutoCl
   <div />
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade"
     />
     <div
       class="fade modal d-block"
     >
       <div
+        aria-labelledby="clay-modal-label-2"
         class="modal-dialog"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -36,13 +39,16 @@ exports[`ClayModal custom opener renders inside a container element 1`] = `
       container
       <div>
         <div
+          aria-hidden="true"
           class="modal-backdrop fade"
         />
         <div
           class="fade modal d-block"
         >
           <div
+            aria-labelledby="clay-modal-label-1"
             class="modal-dialog"
+            role="dialog"
             tabindex="-1"
           >
             <div
