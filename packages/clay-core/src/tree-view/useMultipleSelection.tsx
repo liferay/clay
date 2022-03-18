@@ -245,9 +245,15 @@ export function useMultipleSelection<T>(
 
 				if (unselected) {
 					// An item can only be intermediate when there is at least
-					// one item selected in its tree. We don't need to sweep
-					// the tree because we have the recursive effect.
-					if (children.some((key) => selecteds.has(key))) {
+					// one selected or intermediate item in its tree. We don't need
+					// to sweep the tree because we have the recursive effect.
+					if (
+						children.some(
+							(key) =>
+								selecteds.has(key) ||
+								intermediateKeys.current.has(key)
+						)
+					) {
 						intermediateKeys.current.add(keyMap.parentKey);
 					} else {
 						intermediateKeys.current.delete(keyMap.parentKey);
