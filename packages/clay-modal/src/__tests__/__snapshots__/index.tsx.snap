@@ -6,13 +6,16 @@ exports[`ClayModal renders 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-1"
         class="modal-dialog"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -23,6 +26,7 @@ exports[`ClayModal renders 1`] = `
           >
             <div
               class="modal-title"
+              id="clay-modal-label-1"
             >
               Foo
             </div>
@@ -82,13 +86,16 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-3"
         class="modal-dialog"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -108,6 +115,7 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
                 >
                   <div
                     class="modal-title"
+                    id="clay-modal-label-3"
                   >
                     Modal Title
                   </div>
@@ -142,13 +150,16 @@ exports[`ClayModal renders a body component with url 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-7"
         class="modal-dialog"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -176,13 +187,16 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-8"
         class="modal-dialog"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -236,13 +250,16 @@ exports[`ClayModal renders with Header 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-2"
         class="modal-dialog"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -253,6 +270,7 @@ exports[`ClayModal renders with Header 1`] = `
           >
             <div
               class="modal-title"
+              id="clay-modal-label-2"
             >
               Foo
             </div>
@@ -285,13 +303,16 @@ exports[`ClayModal renders with center 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-6"
         class="modal-dialog modal-dialog-centered"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -310,13 +331,16 @@ exports[`ClayModal renders with size 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-4"
         class="modal-dialog modal-lg"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -335,13 +359,16 @@ exports[`ClayModal renders with status 1`] = `
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-5"
         class="modal-dialog modal-success"
+        role="dialog"
         tabindex="-1"
       >
         <div

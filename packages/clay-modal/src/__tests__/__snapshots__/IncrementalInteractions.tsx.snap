@@ -22,13 +22,16 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
 >
   <div>
     <div
+      aria-hidden="true"
       class="modal-backdrop fade show"
     />
     <div
       class="fade modal d-block show"
     >
       <div
+        aria-labelledby="clay-modal-label-7"
         class="modal-dialog modal-lg"
+        role="dialog"
         tabindex="-1"
       >
         <div
@@ -39,6 +42,7 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
           >
             <div
               class="modal-title"
+              id="clay-modal-label-7"
             >
               Title
             </div>

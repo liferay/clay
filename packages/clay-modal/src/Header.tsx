@@ -54,11 +54,19 @@ export const TitleSection: React.FunctionComponent<
 
 export const Title: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => (
-	<div className={classNames('modal-title', className)} {...otherProps}>
-		{children}
-	</div>
-);
+> = ({children, className, ...otherProps}) => {
+	const {ariaLabelledby} = React.useContext(Context);
+
+	return (
+		<div
+			className={classNames('modal-title', className)}
+			{...otherProps}
+			id={ariaLabelledby}
+		>
+			{children}
+		</div>
+	);
+};
 
 export const TitleIndicator: React.FunctionComponent<
 	React.HTMLAttributes<HTMLDivElement>
