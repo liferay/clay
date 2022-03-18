@@ -3,6 +3,8 @@
 Popovers contain helpful information such as an explanation of a context.
 
 -   [Documentation](https://clayui.com/docs/components/popover.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

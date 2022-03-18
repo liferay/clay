@@ -3,6 +3,8 @@
 Tabs organize similar content together into individual sections in the same page.
 
 -   [Documentation](https://clayui.com/docs/components/tabs.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

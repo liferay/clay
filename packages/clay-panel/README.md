@@ -3,6 +3,8 @@
 Toggle content visibility using Panel.
 
 -   [Documentation](https://clayui.com/docs/components/panel.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

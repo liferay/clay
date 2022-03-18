@@ -3,6 +3,8 @@
 Lists are a visual representation of a dataset, based on groups of related content, that is organized vertically.
 
 -   [Documentation](https://clayui.com/docs/components/list.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

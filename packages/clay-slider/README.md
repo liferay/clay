@@ -3,6 +3,8 @@
 A Slider allows the user to select values in a linear range of values.
 
 -   [Documentation](https://clayui.com/docs/components/slider.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

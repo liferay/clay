@@ -3,6 +3,8 @@
 Multi select is the field type that allows writing text to create “tags” that are represented in the shape of labels.
 
 -   [Documentation](https://clayui.com/docs/components/multi-select.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

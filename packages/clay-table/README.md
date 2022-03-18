@@ -3,6 +3,8 @@
 A table is a specific pattern for comparing datasets in a very direct and analytical way.
 
 -   [Documentation](https://clayui.com/docs/components/table.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

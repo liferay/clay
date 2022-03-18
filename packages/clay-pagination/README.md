@@ -3,6 +3,8 @@
 Pagination provides horizontal navigation between chunks(pages) of a dataset.
 
 -   [Documentation](https://clayui.com/docs/components/pagination.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

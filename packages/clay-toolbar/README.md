@@ -3,6 +3,8 @@
 A toolbar is a set of actions related to a specific context that are grouped into a horizontal bar.
 
 -   [Documentation](https://clayui.com/docs/components/toolbar.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

@@ -3,6 +3,8 @@
 Time pickers let users select a time for a form.
 
 -   [Documentation](https://clayui.com/docs/components/time-picker.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

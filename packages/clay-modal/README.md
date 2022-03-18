@@ -3,6 +3,8 @@
 A modal is a secondary window that communicates or provides an action inside the same process.
 
 -   [Documentation](https://clayui.com/docs/components/modal.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

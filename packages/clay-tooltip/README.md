@@ -3,6 +3,8 @@
 Tooltips are brief pieces of information that appear on hover state over an element to clarify its meaning or use for the user.
 
 -   [Documentation](https://clayui.com/docs/components/tooltip.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

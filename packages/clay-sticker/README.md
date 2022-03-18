@@ -3,6 +3,8 @@
 Stickers are a visual way to quickly identify content in a different way than badges and labels.
 
 -   [Documentation](https://clayui.com/docs/components/sticker.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

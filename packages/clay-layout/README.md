@@ -3,6 +3,8 @@
 A set of utilities for layouting out a page or content on a page
 
 -   [Documentation](https://clayui.com/docs/components/layout.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

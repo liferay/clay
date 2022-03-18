@@ -10,6 +10,8 @@ Forms obtain user data and transmit it to the system to either store the data, p
 -   [Select documentation](https://clayui.com/docs/components/select.html)
 -   [Select Box documentation](https://clayui.com/docs/components/select-box.html)
 -   [Toggle Switch documentation](https://clayui.com/docs/components/toggle-switch.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 

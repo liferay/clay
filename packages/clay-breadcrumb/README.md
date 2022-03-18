@@ -3,6 +3,8 @@
 Breadcrumb is a secondary navigation pattern that identifies the page position inside a hierarchy.
 
 -   [Documentation](https://clayui.com/docs/components/breadcrumb.html)
+-   [Changelog](./CHANGELOG.md)
+-   [Breaking change schedule](./BREAKING.md)
 
 ## Install
 
