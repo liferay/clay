@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.50.0](https://github.com/liferay/clay/compare/v3.49.0...v3.50.0) (2022-03-21)
+
+### Features
+
+-   **@clayui/color-picker:** add color validation in input ([203649f](https://github.com/liferay/clay/commit/203649fb258f26b70650f58c7853ac8835687c03))
+
 # [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
 
 ### Bug Fixes

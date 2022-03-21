@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.50.0](https://github.com/liferay/clay/compare/v3.49.0...v3.50.0) (2022-03-21)
+
+### Features
+
+-   **@clayui/modal:** improves ClayModal component accessibility ([60b24fc](https://github.com/liferay/clay/commit/60b24fc4ba8dc748474a67323e625bbaa6aab867))
+
 # [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
 
 **Note:** Version bump only for package @clayui/modal

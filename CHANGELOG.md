@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.50.0](https://github.com/liferay/clay/compare/v3.49.0...v3.50.0) (2022-03-21)
+
+### Bug Fixes
+
+-   **@clayui.com:** add a sass function to fix table border-radius issue ([8fe4b05](https://github.com/liferay/clay/commit/8fe4b05ca7e86bbc07215cb0cfde5d56af9e690e))
+-   **@clayui.com:** requested chages for PR ([ad5f1c2](https://github.com/liferay/clay/commit/ad5f1c286ecb8f6ad9dcea1bfc1f3d1311d035d2))
+-   **@clayui/core:** fixes error when removing parent's intermediate state when item's sibling is intermediate ([782ea42](https://github.com/liferay/clay/commit/782ea426feae8a4e89c24585c16146f4f14a5efa))
+-   **@clayui/css:** Functions `clay-border-radius-inner` simplification and error checking ([9c1d5f4](https://github.com/liferay/clay/commit/9c1d5f41100e9afdfddfe60c93c42b5e327355cb))
+-   **@clayui/css:** Table List move inner border-radius styles to Sass variables ([47922c7](https://github.com/liferay/clay/commit/47922c791f82d51e94c639aef7f362877eb1c182))
+
+### Features
+
+-   **@clayui/color-picker:** add color validation in input ([203649f](https://github.com/liferay/clay/commit/203649fb258f26b70650f58c7853ac8835687c03))
+-   **@clayui/modal:** improves ClayModal component accessibility ([60b24fc](https://github.com/liferay/clay/commit/60b24fc4ba8dc748474a67323e625bbaa6aab867))
+
 # [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
 
 ### Bug Fixes
