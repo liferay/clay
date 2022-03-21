@@ -87,6 +87,77 @@ describe('TreeView incremental interactions', () => {
 
 	describe('selection', () => {
 		describe('checkbox', () => {
+			it("uncheck the checkbox when a sibling item is indeterminate preserve the parent's indeterminate state", () => {
+				const {container} = render(
+					<Provider spritemap={spritemap}>
+						<TreeView
+							defaultItems={[
+								{
+									children: [
+										{id: 2, name: 'Item 0'},
+										{
+											children: [
+												{id: 4, name: 'Item 2'},
+												{id: 5, name: 'Item 3'},
+											],
+											id: 3,
+											name: 'Item 1',
+										},
+									],
+									id: 1,
+									name: 'Root',
+								},
+							]}
+							defaultSelectedKeys={new Set([2, 4])}
+							selectionMode="multiple-recursive"
+						>
+							{(item) => (
+								<TreeView.Item>
+									<TreeView.ItemStack>
+										<OptionalCheckbox />
+										{item.name}
+									</TreeView.ItemStack>
+									<TreeView.Group items={item.children}>
+										{(item) => (
+											<TreeView.Item>
+												<OptionalCheckbox />
+												{item.name}
+											</TreeView.Item>
+										)}
+									</TreeView.Group>
+								</TreeView.Item>
+							)}
+						</TreeView>
+					</Provider>
+				);
+
+				const checkboxsChecked =
+					container.querySelectorAll<HTMLInputElement>(
+						'input.custom-control-input[type=checkbox]:checked'
+					);
+
+				const checkboxsIndeterminate =
+					container.querySelectorAll<HTMLInputElement>(
+						'input.custom-control-input[type=checkbox]:indeterminate'
+					);
+
+				expect(checkboxsChecked.length).toBe(2);
+				expect(checkboxsIndeterminate.length).toBe(2);
+
+				const [, item0] = container.querySelectorAll<HTMLInputElement>(
+					'input.custom-control-input[type=checkbox]'
+				);
+
+				fireEvent.click(item0);
+
+				expect(item0.checked).toBeFalsy();
+				expect(
+					container.querySelectorAll<HTMLInputElement>(
+						'input.custom-control-input[type=checkbox]:indeterminate'
+					).length
+				).toBe(2);
+			});
+
 			it('select only one item using single selection', () => {
 				const {container} = render(
 					<Provider spritemap={spritemap}>
