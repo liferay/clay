@@ -353,6 +353,23 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								])}
 								disabled={disabled}
 								insetBefore
+								onBlur={(event) => {
+									const value = event.target.value;
+
+									const newColor = tinycolor(value);
+
+									if (newColor.isValid()) {
+										if (newColor.getFormat() === 'hex') {
+											onValueChange(newColor.toHex());
+										} else if (
+											newColor.toString() !== value
+										) {
+											onValueChange(newColor.toString());
+										}
+									} else if (!value.includes('var(')) {
+										onValueChange('');
+									}
+								}}
 								onChange={(event) => {
 									onValueChange(event.target.value);
 								}}
