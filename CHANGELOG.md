@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.24.0](https://github.com/matuzalemsteles/clay/compare/v2.23.4...v2.24.0) (2022-03-21)
+
+
+### Features
+
+* **clay-modal:** improves ClayModal accessibility ([57e37de](https://github.com/matuzalemsteles/clay/commit/57e37de798756d9813049ce13a4c56b389d407bc))
+
+
+
+
+
 ## [2.23.4](https://github.com/matuzalemsteles/clay/compare/v2.23.3...v2.23.4) (2022-02-24)
 
 
