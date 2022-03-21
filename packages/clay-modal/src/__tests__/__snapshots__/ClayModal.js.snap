@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayModal should render a modal opened 1`] = `
-<div class="fade modal d-block show" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-17" aria-modal="true" class="fade modal d-block show" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-17">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -21,11 +21,11 @@ exports[`ClayModal should render a modal opened 1`] = `
 `;
 
 exports[`ClayModal should render a modal opened using the method show 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-18" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-18">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -41,11 +41,11 @@ exports[`ClayModal should render a modal opened using the method show 1`] = `
 `;
 
 exports[`ClayModal should render a modal opened using the method show 2`] = `
-<div class="fade modal d-block show" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-18" aria-modal="true" class="fade modal d-block show" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-18">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -61,7 +61,7 @@ exports[`ClayModal should render a modal opened using the method show 2`] = `
 `;
 
 exports[`ClayModal should render a modal with body 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-6" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">My body</div>
@@ -71,7 +71,7 @@ exports[`ClayModal should render a modal with body 1`] = `
 `;
 
 exports[`ClayModal should render a modal with classes 1`] = `
-<div class="fade modal my-custom-class" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-2" aria-modal="true" class="fade modal my-custom-class" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content"></div>
   </div>
@@ -79,7 +79,7 @@ exports[`ClayModal should render a modal with classes 1`] = `
 `;
 
 exports[`ClayModal should render a modal with footer buttons 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-7" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-footer">
@@ -103,7 +103,7 @@ exports[`ClayModal should render a modal with footer buttons 1`] = `
 `;
 
 exports[`ClayModal should render a modal with footer buttons aligned to left and right 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-8" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-footer">
@@ -134,7 +134,7 @@ exports[`ClayModal should render a modal with footer buttons aligned to left and
 `;
 
 exports[`ClayModal should render a modal with id 1`] = `
-<div class="fade modal" id="myId" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-3" aria-modal="true" class="fade modal" id="myId" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content"></div>
   </div>
@@ -142,7 +142,7 @@ exports[`ClayModal should render a modal with id 1`] = `
 `;
 
 exports[`ClayModal should render a modal with iframe as body 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-9" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body modal-body-iframe">
@@ -154,11 +154,11 @@ exports[`ClayModal should render a modal with iframe as body 1`] = `
 `;
 
 exports[`ClayModal should render a modal with size \`full-screen\` 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-16" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-full-screen">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-16">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -174,11 +174,11 @@ exports[`ClayModal should render a modal with size \`full-screen\` 1`] = `
 `;
 
 exports[`ClayModal should render a modal with size \`large\` 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-15" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-15">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -194,11 +194,11 @@ exports[`ClayModal should render a modal with size \`large\` 1`] = `
 `;
 
 exports[`ClayModal should render a modal with size \`small\` 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-14" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-14">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -214,7 +214,7 @@ exports[`ClayModal should render a modal with size \`small\` 1`] = `
 `;
 
 exports[`ClayModal should render a modal with status \`danger\` and title 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-10" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-danger">
     <div class="modal-content">
       <div class="modal-header">
@@ -223,7 +223,7 @@ exports[`ClayModal should render a modal with status \`danger\` and title 1`] = 
             <use xlink:href="icons.svg#exclamation-full"></use>
           </svg>
         </span>
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-10">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -236,7 +236,7 @@ exports[`ClayModal should render a modal with status \`danger\` and title 1`] = 
 `;
 
 exports[`ClayModal should render a modal with status \`info\` and title 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-11" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-info">
     <div class="modal-content">
       <div class="modal-header">
@@ -245,7 +245,7 @@ exports[`ClayModal should render a modal with status \`info\` and title 1`] = `
             <use xlink:href="icons.svg#info-circle"></use>
           </svg>
         </span>
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-11">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -258,7 +258,7 @@ exports[`ClayModal should render a modal with status \`info\` and title 1`] = `
 `;
 
 exports[`ClayModal should render a modal with status \`success\` and title 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-12" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-success">
     <div class="modal-content">
       <div class="modal-header">
@@ -267,7 +267,7 @@ exports[`ClayModal should render a modal with status \`success\` and title 1`] =
             <use xlink:href="icons.svg#check-circle"></use>
           </svg>
         </span>
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-12">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -280,7 +280,7 @@ exports[`ClayModal should render a modal with status \`success\` and title 1`] =
 `;
 
 exports[`ClayModal should render a modal with status \`warning\` and title 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-13" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog modal-warning">
     <div class="modal-content">
       <div class="modal-header">
@@ -289,7 +289,7 @@ exports[`ClayModal should render a modal with status \`warning\` and title 1`] =
             <use xlink:href="icons.svg#question-circle-full"></use>
           </svg>
         </span>
-        <div class="modal-title">My Title</div>
+        <div class="modal-title" id="clayv2-modal-label-13">My Title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -302,11 +302,11 @@ exports[`ClayModal should render a modal with status \`warning\` and title 1`] =
 `;
 
 exports[`ClayModal should render a modal with title 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-4" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My title</div>
+        <div class="modal-title" id="clayv2-modal-label-4">My title</div>
       </div>
     </div>
   </div>
@@ -314,11 +314,11 @@ exports[`ClayModal should render a modal with title 1`] = `
 `;
 
 exports[`ClayModal should render a modal with title and header closing button 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-5" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">My title</div>
+        <div class="modal-title" id="clayv2-modal-label-5">My title</div>
         <button class="btn close btn-unstyled" aria-label="close" type="button">
           <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
             <use xlink:href="icons.svg#times"></use>
@@ -331,7 +331,7 @@ exports[`ClayModal should render a modal with title and header closing button 1`
 `;
 
 exports[`ClayModal should render the default markup 1`] = `
-<div class="fade modal" role="dialog" tabindex="-1">
+<div aria-labelledby="clayv2-modal-label-1" aria-modal="true" class="fade modal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content"></div>
   </div>
