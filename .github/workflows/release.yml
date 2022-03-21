@@ -35,6 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+            fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
@@ -69,6 +71,6 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
       - run: git push origin master:stable
-      - run: lerna publish from-package --yes
+      - run: lerna publish from-git --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
