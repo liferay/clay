@@ -23,6 +23,24 @@ const mockClientRect = (element: HTMLElement) => {
 	});
 };
 
+const ClayColorPickerWithState = (
+	props: React.ComponentProps<typeof ClayColorPicker>
+) => {
+	const [value, setValue] = React.useState('');
+
+	return (
+		<ClayColorPicker
+			label="Default Colors"
+			name="colorPicker1"
+			onValueChange={setValue}
+			spritemap="/test/path"
+			title="Default"
+			value={value}
+			{...props}
+		/>
+	);
+};
+
 describe('Rendering', () => {
 	afterEach(cleanup);
 
@@ -137,6 +155,49 @@ describe('Rendering', () => {
 
 describe('Interactions', () => {
 	afterEach(cleanup);
+
+	it('typing in the input the color in hex fixes it to the correct value', () => {
+		const {getByLabelText} = render(<ClayColorPickerWithState />);
+
+		const input = getByLabelText(/Color selection is/) as HTMLInputElement;
+
+		fireEvent.change(input, {target: {value: 'fff'}});
+		fireEvent.blur(input);
+
+		expect(input.value).toBe('ffffff');
+	});
+
+	it('typing an invalid color in the input sets the input to an empty value', () => {
+		const {getByLabelText} = render(<ClayColorPickerWithState />);
+
+		const input = getByLabelText(/Color selection is/) as HTMLInputElement;
+
+		fireEvent.change(input, {target: {value: 'ff'}});
+		fireEvent.blur(input);
+
+		expect(input.value).toBe('');
+
+		fireEvent.change(input, {target: {value: 'redd'}});
+		fireEvent.blur(input);
+
+		expect(input.value).toBe('');
+
+		fireEvent.change(input, {target: {value: 'var'}});
+		fireEvent.blur(input);
+
+		expect(input.value).toBe('');
+	});
+
+	it('accept value with colors using CSS variable', () => {
+		const {getByLabelText} = render(<ClayColorPickerWithState />);
+
+		const input = getByLabelText(/Color selection is/) as HTMLInputElement;
+
+		fireEvent.change(input, {target: {value: 'var(--red)'}});
+		fireEvent.blur(input);
+
+		expect(input.value).toBe('var(--red)');
+	});
 
 	it('opens color picker drop down when clicked', () => {
 		const {container} = render(
