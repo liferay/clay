@@ -423,16 +423,20 @@ caption {
 			th:first-child,
 			td:first-child,
 			.table-cell-start {
-				border-top-left-radius: clay-enable-rounded(
-					$table-list-border-radius
+				@include clay-css(
+					map-deep-get(
+						$c-table-list,
+						table-row-start,
+						table-cell-start
+					)
 				);
 			}
 
 			th:last-child,
 			td:last-child,
-			.table-cell-start {
-				border-top-right-radius: clay-enable-rounded(
-					$table-list-border-radius
+			.table-cell-end {
+				@include clay-css(
+					map-deep-get($c-table-list, table-row-start, table-cell-end)
 				);
 			}
 		}
@@ -455,16 +459,24 @@ caption {
 				th:first-child,
 				td:first-child,
 				.table-cell-start {
-					border-bottom-left-radius: clay-enable-rounded(
-						$table-list-border-radius
+					@include clay-css(
+						map-deep-get(
+							$c-table-list,
+							table-row-end,
+							table-cell-start
+						)
 					);
 				}
 
 				th:last-child,
 				td:last-child,
 				.table-cell-end {
-					border-bottom-right-radius: clay-enable-rounded(
-						$table-list-border-radius
+					@include clay-css(
+						map-deep-get(
+							$c-table-list,
+							table-row-end,
+							table-cell-end
+						)
 					);
 				}
 			}
@@ -520,28 +532,28 @@ caption {
 
 	.table-row-start {
 		.table-cell-start {
-			border-top-left-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-start, table-cell-start)
 			);
 		}
 
 		.table-cell-end {
-			border-top-right-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-start, table-cell-end)
 			);
 		}
 	}
 
 	.table-row-end {
 		.table-cell-start {
-			border-bottom-left-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-end, table-cell-start)
 			);
 		}
 
 		.table-cell-end {
-			border-bottom-right-radius: clay-enable-rounded(
-				$table-list-border-radius
+			@include clay-css(
+				map-deep-get($c-table-list, table-row-end, table-cell-end)
 			);
 		}
 	}

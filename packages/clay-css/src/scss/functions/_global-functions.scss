@@ -822,3 +822,21 @@
 
 	@return clay-svg-url(map-get($lx-icons, $name));
 }
+
+/// A function that returns the inner border radius based on the outer border radius minus the border width.
+/// @param {Number | String} $radius - The outer border-radius
+/// @param {Number | String} $width - The outer border-width
+
+@function clay-border-radius-inner(
+	$radius: $border-radius,
+	$width: $border-width
+) {
+	@if not(type-of($radius) == 'number' or type-of($radius) == 'string') {
+		@error 'The parameter `$radius` in the function `clay-border-radius-inner` cannot be a `#{type-of($radius)}`. It must be a number or a string.';
+	} @else if not (type-of($width) == 'number' or type-of($width) == 'string')
+	{
+		@error 'The parameter `$width` in the function `clay-border-radius-inner` cannot be a `#{type-of($width)}`. It must be a number or a string.';
+	}
+
+	@return calc(#{$radius} - #{$width});
+}
