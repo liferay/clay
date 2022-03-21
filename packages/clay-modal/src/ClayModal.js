@@ -26,6 +26,8 @@ const FOCUSABLE_ELEMENTS = [
 	'textarea:not([disabled]):not([aria-hidden])',
 ];
 
+let counter = 0;
+
 /**
  * Metal ClayModal component.
  * @extends ClayComponent
@@ -83,6 +85,7 @@ class ClayModal extends ClayComponent {
 			dom.enterDocument(this._overlayElement);
 			this._overlayElement.offsetHeight;
 			dom.addClasses(this._overlayElement, 'show');
+			this.element.focus();
 		} else {
 			dom.exitDocument(this._overlayElement);
 		}
@@ -246,6 +249,18 @@ class ClayModal extends ClayComponent {
  * @type {!Object}
  */
 ClayModal.STATE = {
+	/**
+	 * The attribute identifies the title that labels the Modal.
+	 * @instance
+	 * @memberof ClayModal
+	 * @type {string}
+	 */
+	ariaLabelledby: Config.setter(value => {
+		counter++;
+
+		return value ? value : 'clayv2-modal-label-' + counter;
+	}),
+
 	/**
 	 * Body of the modal.
 	 * @default undefined
