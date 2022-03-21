@@ -33,7 +33,6 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         </li>
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="reverse-sort-direction" type="button">
-            <span class="sr-only">reverse-sort-direction</span>
             <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
             </svg>
@@ -73,7 +72,6 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         </li>
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="info-circle-open" title="info" type="button">
-            <span class="sr-only">info</span>
             <svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle-open"></use>
             </svg>
@@ -90,7 +88,6 @@ exports[`ClayManagementToolbar should render a disabled management toolbar 1`] =
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -194,7 +191,6 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         </li>
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="reverse-sort-direction" type="button">
-            <span class="sr-only">reverse-sort-direction</span>
             <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
             </svg>
@@ -234,7 +230,6 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         </li>
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="info-circle-open" title="info" type="button">
-            <span class="sr-only">info</span>
             <svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle-open"></use>
             </svg>
@@ -251,7 +246,6 @@ exports[`ClayManagementToolbar should render a disabled management toolbar with 
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -625,7 +619,6 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav">
         <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="0">
           <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="edit" disabled="disabled" title="Edit" type="button">
-            <span class="sr-only">Edit</span>
             <svg class="lexicon-icon lexicon-icon-edit" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#edit"></use>
             </svg>
@@ -633,7 +626,6 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
         </li>
         <li class="nav-item navbar-breakpoint-down-d-none" data-quick-action-index="1">
           <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="trash" disabled="disabled" title="Delete" type="button">
-            <span class="sr-only">Delete</span>
             <svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#trash"></use>
             </svg>
@@ -714,7 +706,6 @@ exports[`ClayManagementToolbar should render a management toolbar in active stat
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="info-circle-open" title="info" type="button">
-            <span class="sr-only">info</span>
             <svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle-open"></use>
             </svg>
@@ -905,7 +896,6 @@ exports[`ClayManagementToolbar should render a management toolbar with advanced 
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -927,7 +917,6 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced order-arrow-up-active btn-unstyled" aria-label="order-arrow" title="reverse-sort-direction" type="button">
-            <span class="sr-only">reverse-sort-direction</span>
             <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
             </svg>
@@ -967,7 +956,6 @@ exports[`ClayManagementToolbar should render a management toolbar with ascending
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1003,7 +991,6 @@ exports[`ClayManagementToolbar should render a management toolbar with classes 1
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1039,7 +1026,6 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1240,7 +1226,6 @@ exports[`ClayManagementToolbar should render a management toolbar with creation 
         </li>
         <li class="nav-item">
           <a aria-label="Add Content 1" class="btn btn-primary nav-btn nav-btn-monospaced" href="#1" title="Add Content 1">
-            <span class="sr-only">Add Content 1</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1419,7 +1404,6 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced order-arrow-down-active btn-unstyled" aria-label="order-arrow" title="reverse-sort-direction" type="button">
-            <span class="sr-only">reverse-sort-direction</span>
             <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
             </svg>
@@ -1459,7 +1443,6 @@ exports[`ClayManagementToolbar should render a management toolbar with descendin
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1526,7 +1509,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1603,7 +1585,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1701,7 +1682,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1785,7 +1765,6 @@ exports[`ClayManagementToolbar should render a management toolbar with filters d
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1867,7 +1846,6 @@ exports[`ClayManagementToolbar should render a management toolbar with id 1`] = 
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1903,7 +1881,6 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-link nav-link-monospaced btn-unstyled" aria-label="info-circle-open" title="info" type="button">
-            <span class="sr-only">info</span>
             <svg class="lexicon-icon lexicon-icon-info-circle-open" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#info-circle-open"></use>
             </svg>
@@ -1911,7 +1888,6 @@ exports[`ClayManagementToolbar should render a management toolbar with info butt
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -1970,7 +1946,6 @@ exports[`ClayManagementToolbar should render a management toolbar with links as 
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2018,7 +1993,6 @@ exports[`ClayManagementToolbar should render a management toolbar with no search
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2079,7 +2053,6 @@ exports[`ClayManagementToolbar should render a management toolbar with results b
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2158,7 +2131,6 @@ exports[`ClayManagementToolbar should render a management toolbar with results b
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2237,7 +2209,6 @@ exports[`ClayManagementToolbar should render a management toolbar with results b
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2346,7 +2317,6 @@ exports[`ClayManagementToolbar should render a management toolbar with search ac
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2382,7 +2352,6 @@ exports[`ClayManagementToolbar should render a management toolbar with search an
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2418,7 +2387,6 @@ exports[`ClayManagementToolbar should render a management toolbar with search fo
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2454,7 +2422,6 @@ exports[`ClayManagementToolbar should render a management toolbar with search in
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2515,7 +2482,6 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2546,7 +2512,6 @@ exports[`ClayManagementToolbar should render a management toolbar with selection
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2565,7 +2530,6 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class=" nav-link nav-link-monospaced order-arrow-down-active" href="#sorting" title="reverse-sort-direction">
-            <span class="sr-only">reverse-sort-direction</span>
             <svg class="lexicon-icon lexicon-icon-order-arrow" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#order-arrow"></use>
             </svg>
@@ -2605,7 +2569,6 @@ exports[`ClayManagementToolbar should render a management toolbar with sorting h
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2664,7 +2627,6 @@ exports[`ClayManagementToolbar should render a management toolbar with view type
         </li>
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
@@ -2755,7 +2717,6 @@ exports[`ClayManagementToolbar should render the default markup 1`] = `
       <ul class="navbar-nav">
         <li class="nav-item">
           <button class="btn nav-btn nav-btn-monospaced btn-primary" aria-label="plus" title="new" type="button">
-            <span class="sr-only">new</span>
             <svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
               <use xlink:href="../node_modules/clay-css/lib/images/icons/icons.svg#plus"></use>
             </svg>
