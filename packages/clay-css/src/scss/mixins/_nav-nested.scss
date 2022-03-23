@@ -20,11 +20,11 @@
 	@for $i from (1) through $nest-level {
 		#{$nav-class} > li {
 			> a {
-				padding-left: $indent * ($i + 1);
+				padding-left: calc(#{$indent} * #{$i + 1});
 			}
 
 			> .nav-equal-height-heading {
-				padding-left: $indent * $i;
+				padding-left: calc(#{$indent} * #{$i});
 			}
 		}
 
