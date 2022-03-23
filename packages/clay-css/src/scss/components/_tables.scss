@@ -394,12 +394,6 @@ caption {
 
 				overflow-x: auto;
 				width: 100%;
-
-				// Prevent double border on horizontal scroll due to use of `display: block;`
-
-				> .table-bordered {
-					border-width: 0;
-				}
 			}
 		}
 	}
