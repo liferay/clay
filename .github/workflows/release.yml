@@ -50,6 +50,14 @@ jobs:
           git config user.email github-actions@github.com
           lerna version --conventional-commits --no-push --yes
       - run: git push origin master --follow-tags
+      - name: Get SHA
+        id: sha
+        run: |
+          sha_new=$(git rev-parse HEAD)
+          echo $sha_new
+          echo "::set-output name=SHA::$sha_new"
+      - run:
+          echo ${{ steps.sha.outputs.SHA }}
 
   publish:
     needs: version
@@ -57,6 +65,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          ref: ${{ needs.version.outputs.new_sha }}
           fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
