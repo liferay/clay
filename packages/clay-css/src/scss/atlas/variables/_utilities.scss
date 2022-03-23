@@ -21,14 +21,18 @@ $close: map-deep-merge(
 	(
 		color: $gray-900,
 		opacity: 1,
-		hover-color: $gray-900,
-		hover-opacity: 1,
-		focus-box-shadow: $btn-focus-box-shadow,
-		focus-opacity: 1,
-		focus-outline: 0,
-		disabled-color: $gray-600,
-		disabled-opacity: $btn-disabled-opacity,
-		btn-focus-box-shadow: $btn-focus-box-shadow,
+		hover: (
+			color: $gray-900,
+			opacity: 1,
+			outline: 0,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+		),
+		disabled: (
+			color: $gray-600,
+			opacity: 0.65,
+		),
 	),
 	$close
 );

@@ -33,7 +33,7 @@ $close: map-deep-merge(
 		align-items: center,
 		appearance: none,
 		background-color: transparent,
-		border-radius: $btn-border-radius-sm,
+		border-radius: $border-radius-sm,
 		border-width: 0,
 		color: $close-color,
 		cursor: $link-cursor,
@@ -47,7 +47,10 @@ $close: map-deep-merge(
 		padding: 0,
 		text-align: center,
 		text-shadow: $close-text-shadow,
-		transition: $btn-transition,
+		transition: #{color 0.15s ease-in-out,
+		background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out,
+		box-shadow 0.15s ease-in-out},
 		width: 2rem,
 		hover: (
 			color: $close-color,
@@ -55,6 +58,8 @@ $close: map-deep-merge(
 			text-decoration: none,
 		),
 		focus: (
+			box-shadow: $input-btn-focus-box-shadow,
+			outline: 0,
 			opacity: 0.75,
 		),
 		disabled: (
@@ -62,13 +67,13 @@ $close: map-deep-merge(
 			cursor: $disabled-cursor,
 			opacity: 0.25,
 			outline: 0,
+			active: (
+				pointer-events: none,
+			),
 		),
-		disabled-active: (
-			pointer-events: none,
+		lexicon-icon: (
+			margin-top: 0,
 		),
-		btn-focus-box-shadow: $input-btn-focus-box-shadow,
-		btn-focus-outline: 0,
-		lexicon-icon-margin-top: 0,
 	),
 	$close
 );
