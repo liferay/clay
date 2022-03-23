@@ -1,7 +1,7 @@
 /**
-* Clay 2.12.1
+* Clay 2.23.4
 *
-* Copyright 2019, Liferay, Inc.
+* Copyright 2022, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
