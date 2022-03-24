@@ -350,6 +350,35 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 
 $font-family-base: $font-family-sans-serif !default;
 
+$font-scale: () !default;
+$font-scale: map-merge(
+	(
+		1: 0.625rem,
+		1-sm-down: null,
+		2: 0.75rem,
+		2-sm-down: null,
+		3: 0.875rem,
+		3-sm-down: null,
+		4: 1rem,
+		4-sm-down: null,
+		5: 1.125rem,
+		5-sm-down: null,
+		6: 1.25rem,
+		6-sm-down: null,
+		7: 1.5rem,
+		7-sm-down: null,
+		8: 1.75rem,
+		8-sm-down: null,
+		9: 2rem,
+		9-sm-down: null,
+		10: 2.25rem,
+		10-sm-down: null,
+		11: 2.5rem,
+		11-sm-down: null,
+	),
+	$font-scale
+);
+
 $font-size-base: 1rem !default;
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
