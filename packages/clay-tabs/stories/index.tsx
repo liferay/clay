@@ -7,11 +7,11 @@ import '@clayui/css/lib/css/atlas.css';
 const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayDropDown, {Align} from '@clayui/drop-down';
 import ClayIcon, {ClayIconSpriteContext} from '@clayui/icon';
-import {boolean} from '@storybook/addon-knobs';
+import {boolean, select} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import React from 'react';
 
-import ClayTabs from '../src';
+import ClayTabs, {DisplayType} from '../src';
 
 const DropDownWithState: React.FunctionComponent<any> = ({
 	children,
@@ -58,8 +58,18 @@ storiesOf('Components|ClayTabs', module)
 			return (
 				<ClayIconSpriteContext.Provider value={spritemap}>
 					<ClayTabs
+						displayType={
+							select(
+								'Display Type',
+								{
+									none: null,
+									tabs: 'tabs',
+									underline: 'underline',
+								},
+								'underline'
+							) as DisplayType
+						}
 						justified={boolean('Justified', false)}
-						modern={boolean('Modern', true)}
 					>
 						<ClayTabs.Item
 							active={activeIndex == 0}
@@ -251,7 +261,7 @@ storiesOf('Components|ClayTabs', module)
 
 		return (
 			<div style={{padding: 50}}>
-				<ClayTabs modern={false}>
+				<ClayTabs displayType={null}>
 					{['Tab 1', 'Tab 2', 'Tab 3'].map((item, index) => (
 						<ClayTabs.Item
 							active={activeIndex === index}
