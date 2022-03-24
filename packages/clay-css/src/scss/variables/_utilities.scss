@@ -316,37 +316,37 @@ $font-sizes: () !default;
 $font-sizes: map-deep-merge(
 	(
 		text-1: (
-			font-size: 0.625rem,
+			font-size: map-get($font-scale, 1),
 		),
 		text-2: (
-			font-size: 0.75rem,
+			font-size: map-get($font-scale, 2),
 		),
 		text-3: (
-			font-size: 0.875rem,
+			font-size: map-get($font-scale, 3),
 		),
 		text-4: (
-			font-size: 1rem,
+			font-size: map-get($font-scale, 4),
 		),
 		text-5: (
-			font-size: 1.125rem,
+			font-size: map-get($font-scale, 5),
 		),
 		text-6: (
-			font-size: 1.25rem,
+			font-size: map-get($font-scale, 6),
 		),
 		text-7: (
-			font-size: 1.5rem,
+			font-size: map-get($font-scale, 7),
 		),
 		text-8: (
-			font-size: 1.75rem,
+			font-size: map-get($font-scale, 8),
 		),
 		text-9: (
-			font-size: 2rem,
+			font-size: map-get($font-scale, 9),
 		),
 		text-10: (
-			font-size: 2.25rem,
+			font-size: map-get($font-scale, 10),
 		),
 		text-11: (
-			font-size: 2.5rem,
+			font-size: map-get($font-scale, 11),
 		),
 	),
 	$font-sizes
