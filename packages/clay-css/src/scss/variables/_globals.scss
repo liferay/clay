@@ -380,8 +380,8 @@ $font-scale: map-merge(
 );
 
 $font-size-base: 1rem !default;
-$font-size-lg: $font-size-base * 1.25 !default;
-$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: 1.25rem !default;
+$font-size-sm: 0.875rem !default;
 
 $font-size-base-mobile: $font-size-base !default;
 $font-size-lg-mobile: $font-size-lg !default;
@@ -399,7 +399,7 @@ $line-height-base: 1.5 !default;
 
 // h1, .h1
 
-$h1-font-size: $font-size-base * 2.5 !default;
+$h1-font-size: calc(#{$font-size-base} * 2.5) !default;
 $h1-font-size-mobile: null !default;
 
 $h1: () !default;
@@ -417,7 +417,7 @@ $h1: map-deep-merge(
 
 // h2, .h2
 
-$h2-font-size: $font-size-base * 2 !default;
+$h2-font-size: calc(#{$font-size-base} * 2) !default;
 $h2-font-size-mobile: null !default;
 
 $h2: () !default;
@@ -435,7 +435,7 @@ $h2: map-deep-merge(
 
 // h3, .h3
 
-$h3-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: calc(#{$font-size-base} * 1.75) !default;
 $h3-font-size-mobile: null !default;
 
 $h3: () !default;
@@ -453,7 +453,7 @@ $h3: map-deep-merge(
 
 // h4, .h4
 
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: calc(#{$font-size-base} * 1.5) !default;
 $h4-font-size-mobile: null !default;
 
 $h4: () !default;
@@ -471,7 +471,7 @@ $h4: map-deep-merge(
 
 // h5, .h5
 
-$h5-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: calc(#{$font-size-base} * 1.25) !default;
 $h5-font-size-mobile: null !default;
 
 $h5: () !default;
@@ -655,7 +655,7 @@ $display-4: map-deep-merge(
 	$display-4
 );
 
-$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-size: calc(#{$font-size-base} * 1.25) !default;
 $lead-font-weight: 300 !default;
 
 $small-font-size: 80% !default;
@@ -664,7 +664,7 @@ $text-muted: $gray-600 !default;
 
 $blockquote-small-color: $gray-600 !default;
 $blockquote-small-font-size: $small-font-size !default;
-$blockquote-font-size: $font-size-base * 1.25 !default;
+$blockquote-font-size: calc(#{$font-size-base} * 1.25) !default;
 
 $hr-border-color: rgba($black, 0.1) !default;
 $hr-border-width: $border-width !default;

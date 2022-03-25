@@ -215,7 +215,7 @@ $dropdown-item-base: map-deep-merge(
 			),
 		),
 		c-kbd-inline: (
-			line-height: $dropdown-font-size * $line-height-base,
+			line-height: calc(#{$dropdown-font-size} * #{$line-height-base}),
 		),
 		'&.autofit-row': (
 			padding-left: 1rem,

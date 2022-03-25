@@ -23,7 +23,7 @@ $autofit-padded-no-gutters-sm: map-merge(
 // Close
 
 $close-color: $black !default;
-$close-font-size: $font-size-base * 1.5 !default;
+$close-font-size: calc(#{$font-size-base} * 1.5) !default;
 $close-font-weight: $font-weight-bold !default;
 $close-text-shadow: 0 1px 0 $white !default;
 
