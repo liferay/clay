@@ -10,11 +10,11 @@ import Content from './Content';
 import Item from './Item';
 import TabPane from './TabPane';
 
-export type DisplayType = null | 'tabs' | 'underline';
+export type DisplayType = null | 'basic' | 'underline';
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
-	 * Determines how to is displayed.
+	 * Determines how tab is displayed.
 	 */
 	displayType?: DisplayType;
 
@@ -22,6 +22,11 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	 * Justify the nav items according the tab content.
 	 */
 	justified?: boolean;
+
+	/**
+	 * Applies a modern style to the tab.
+	 */
+	modern?: boolean;
 }
 
 const ClayTabs: React.FunctionComponent<IProps> & {
@@ -29,17 +34,29 @@ const ClayTabs: React.FunctionComponent<IProps> & {
 	TabPane: typeof TabPane;
 	TabPanel: typeof TabPane;
 	Item: typeof Item;
-} = ({children, className, displayType, justified, ...otherProps}: IProps) => {
-	const defaultValue = displayType === null;
-
+} = ({
+	children,
+	className,
+	displayType,
+	justified,
+	modern = true,
+	...otherProps
+}: IProps) => {
 	return (
 		<ul
 			className={classNames(
 				'nav',
-				{
-					[`nav-${displayType}`]: !defaultValue,
-					'nav-justified': justified,
-				},
+				{'nav-justified': justified},
+				!displayType
+					? {
+							'nav-tabs': !modern,
+							'nav-underline': modern,
+					  }
+					: {
+							'nav-tabs': displayType === 'basic',
+							'nav-underline': displayType === 'underline',
+					  },
+
 				className
 			)}
 			role="tablist"

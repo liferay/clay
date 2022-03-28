@@ -62,14 +62,15 @@ storiesOf('Components|ClayTabs', module)
 							select(
 								'Display Type',
 								{
+									basic: 'basic',
 									none: null,
-									tabs: 'tabs',
 									underline: 'underline',
 								},
 								'underline'
 							) as DisplayType
 						}
 						justified={boolean('Justified', false)}
+						modern={boolean('Modern', true)}
 					>
 						<ClayTabs.Item
 							active={activeIndex == 0}
@@ -261,7 +262,7 @@ storiesOf('Components|ClayTabs', module)
 
 		return (
 			<div style={{padding: 50}}>
-				<ClayTabs displayType={null}>
+				<ClayTabs modern={false}>
 					{['Tab 1', 'Tab 2', 'Tab 3'].map((item, index) => (
 						<ClayTabs.Item
 							active={activeIndex === index}

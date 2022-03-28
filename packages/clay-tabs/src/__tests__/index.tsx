@@ -13,7 +13,7 @@ const ClayTabsWithItems = () => {
 
 	return (
 		<>
-			<ClayTabs displayType="underline">
+			<ClayTabs>
 				<ClayTabs.Item
 					active={activeTabKeyValue == 0}
 					onClick={() => setActiveTabKeyValue(0)}
@@ -51,7 +51,7 @@ describe('ClayTabs', () => {
 	afterEach(cleanup);
 
 	it('renders', () => {
-		const {container} = render(<ClayTabs displayType="underline" />);
+		const {container} = render(<ClayTabs />);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -63,7 +63,7 @@ describe('ClayTabs', () => {
 	});
 
 	it('renders with modern style', () => {
-		const {container} = render(<ClayTabs displayType="underline" />);
+		const {container} = render(<ClayTabs modern />);
 
 		expect(container.querySelector('.nav.nav-underline')).toBeTruthy();
 	});
