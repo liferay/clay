@@ -28,6 +28,10 @@ Describe your solution to the problem. Take examples and describe how they work.
 
 Describe the solution design in enough detail for someone familiar with Clay to understand and for someone familiar with the implementation to be able to implement it. If a new API is involved, show the full API and its documentation comments detailing what it does.
 
+## Effect on API resilience
+
+API resiliency describes the changes that can be made to a public API without breaking it. Does this proposal introduce features that would become part of a public API? If so, what kinds of changes can be made without breaking the API? Can this feature be added/removed without breaking the API?
+
 ## Alternatives considered
 
 Describe alternative approaches to addressing the same problem, and why you chose this approach instead.
