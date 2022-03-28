@@ -188,6 +188,10 @@
         "aliases": ["bind", "mapping", "thunder", "trigger"]
     },
     {
+        "name": "book",
+        "aliases": ["library", "pages"]
+    },
+    {
         "name": "bookmarks",
         "aliases": ["clip", "holder", "marker", "tag"]
     },
@@ -344,6 +348,10 @@
         "aliases": ["change", "settings"]
     },
     {
+        "name": "coin",
+        "aliases": ["cash", "circle", "dollar", "money"]
+    },
+    {
         "name": "color-picker",
         "aliases": ["bucket", "can", "drop", "hue", "paint"]
     },
@@ -370,6 +378,10 @@
     {
         "name": "control-panel",
         "aliases": ["change", "effects", "settings"]
+    },
+    {
+        "name": "cookie",
+        "aliases": ["biscuit", "browser", "history"]
     },
     {
         "name": "copy",
@@ -498,6 +510,10 @@
     {
         "name": "documents-and-media",
         "aliases": ["audio", "file", "music", "video"]
+    },
+    {
+        "name": "dollar-symbol",
+        "aliases": ["cash", "currency", "money", "price"]
     },
     {
         "name": "download",
@@ -642,6 +658,14 @@
     {
         "name": "geolocation",
         "aliases": ["pin", "place"]
+    },
+    {
+        "name": "globe-lines",
+        "aliases": ["country", "earth", "location", "web", "world"]
+    },
+    {
+        "name": "globe-pin",
+        "aliases": ["earth", "location", "region", "web", "world"]
     },
     {
         "name": "globe",
@@ -872,6 +896,10 @@
         "aliases": ["social"]
     },
     {
+        "name": "nodes",
+        "aliases": ["channel", "commerce" ,"marketing", "sales", "user"]
+    },
+    {
         "name": "number",
         "aliases": ["counter", "order", "sequence"]
     },
@@ -910,6 +938,22 @@
     {
         "name": "order-descending",
         "aliases": ["arrows", "filter", "alphabetical", "sort", "list"]
+    },
+    {
+        "name": "order-form-cog",
+        "aliases": ["commerce", "configuration", "settings"]
+    },
+    {
+        "name": "order-form-pencil",
+        "aliases": ["commerce", "details"]
+    },
+    {
+        "name": "order-form-tag",
+        "aliases": ["commerce", "type"]
+    },
+    {
+        "name": "order-form",
+        "aliases": ["commerce", "list", "shop"]
     },
     {
         "name": "order-list-down",
@@ -968,6 +1012,14 @@
         "aliases": ["draft", "edit", "write"]
     },
     {
+        "name": "percentage-banner",
+        "aliases": ["discount", "flag", "label", "standard", "tag"]
+    },
+    {
+        "name": "percentage-symbol",
+        "aliases": ["%", "discount"]
+    },
+    {
         "name": "phone",
         "aliases": ["call", "contact"]
     },
@@ -1002,6 +1054,10 @@
     {
         "name": "polls",
         "aliases": ["bars", "results", "statistics"]
+    },
+    {
+        "name": "price-tag",
+        "aliases": ["cash", "discount", "dollar", "money", "offer"]
     },
     {
         "name": "print",
@@ -1102,6 +1158,10 @@
     {
         "name": "rss",
         "aliases": ["notification", "updates"]
+    },
+    {
+        "name": "ruler",
+        "aliases": ["measure", "size"]
     },
     {
         "name": "rules",
@@ -1238,6 +1298,14 @@
     {
         "name": "square",
         "aliases": ["task", "workflow"]
+    },
+    {
+        "name": "squares-clock",
+        "aliases": ["availability", "boxes", "hour", "inventory", "time"]
+    },
+    {
+        "name": "squares",
+        "aliases": ["boxes", "inventory"]
     },
     {
         "name": "staging",
@@ -1450,6 +1518,10 @@
     {
         "name": "vocabulary",
         "aliases": ["abc", "editor", "order", "text"]
+    },
+    {
+        "name": "warehouse",
+        "aliases": ["boxes", "deposit", "house", "inventory", "stock"]
     },
     {
         "name": "warning-full",
