@@ -20,10 +20,15 @@ $navbar-text-truncate-max-width: 12.5rem !default; // 200px
 $navbar-brand-font-size: $font-size-lg !default;
 
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+// This is a string so we don't get nested calcs in `$navbar-brand-height` and `$navbar-brand-padding-y`
 
-$nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
-$navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) * 0.5 !default;
+$nav-link-height: '#{$font-size-base} * #{$line-height-base} + #{$nav-link-padding-y} * 2' !default;
+$navbar-brand-height: calc(
+	#{$navbar-brand-font-size} * #{$line-height-base}
+) !default;
+$navbar-brand-padding-y: calc(
+	(#{$nav-link-height} - #{$navbar-brand-height}) * 0.5
+) !default;
 
 // Navbar Toggler
 

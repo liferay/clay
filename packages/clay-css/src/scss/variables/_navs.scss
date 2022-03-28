@@ -59,10 +59,12 @@ $nav-btn-margin-x: 0.25rem !default; // 4px
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 
-$nav-btn-margin-y: (
-		($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) -
-			$nav-item-monospaced-size
-	) * 0.5 !default;
+$nav-btn-margin-y: calc(
+	(
+			(#{$line-height-base} * #{$font-size-base}) +
+				(#{$nav-link-padding-y} * 2) - #{$nav-item-monospaced-size}
+		) * 0.5
+) !default;
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 

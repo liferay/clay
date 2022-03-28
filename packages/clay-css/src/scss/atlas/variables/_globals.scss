@@ -358,9 +358,27 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 
 $font-family-base: $font-family-sans-serif !default;
 
-$font-size-base: 1rem !default; // 16px
-$font-size-lg: 1.125rem !default; // 18px
-$font-size-sm: 0.875rem !default; // 14px
+$font-scale: () !default;
+$font-scale: map-merge(
+	(
+		1: 0.625rem,
+		2: 0.75rem,
+		3: 0.875rem,
+		4: 1rem,
+		5: 1.125rem,
+		6: 1.25rem,
+		7: 1.5rem,
+		8: 1.75rem,
+		9: 2rem,
+		10: 2.25rem,
+		11: 2.5rem,
+	),
+	$font-scale
+);
+
+$font-size-base: map-get($font-scale, 4) !default; // 16px
+$font-size-lg: map-get($font-scale, 5) !default; // 18px
+$font-size-sm: map-get($font-scale, 3) !default; // 14px
 
 $font-size-base-mobile: $font-size-base !default;
 $font-size-lg-mobile: $font-size-lg !default;
@@ -503,7 +521,7 @@ $display3-weight: 300 !default;
 $display4-size: 3.5rem !default;
 $display4-weight: 300 !default;
 
-$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-size: calc(#{$font-size-base} * 1.25) !default;
 $lead-font-weight: 300 !default;
 
 $small-font-size: 80% !default;
@@ -512,7 +530,7 @@ $text-muted: $gray-500 !default;
 
 $blockquote-small-color: $gray-600 !default;
 $blockquote-small-font-size: $small-font-size !default;
-$blockquote-font-size: $font-size-base * 1.25 !default;
+$blockquote-font-size: calc(#{$font-size-base} * 1.25) !default;
 
 $hr-border-color: rgba($black, 0.1) !default;
 $hr-border-width: $border-width !default;

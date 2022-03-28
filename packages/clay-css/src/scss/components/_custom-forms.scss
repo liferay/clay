@@ -171,14 +171,16 @@ label.custom-control-label {
 					$custom-forms-transition
 				);
 
-				top: add(
+				top: calc(
 					(
-							$font-size-base *
-								$line-height-base -
-								$custom-control-indicator-size
-						) *
-						0.5,
-					$custom-control-indicator-border-width * 2
+							(
+									#{$font-size-base} *
+										#{$line-height-base} -
+										#{$custom-control-indicator-size}
+								) *
+								0.5
+						) +
+						(#{$custom-control-indicator-border-width} * 2)
 				);
 				width: $custom-switch-indicator-size;
 			}
