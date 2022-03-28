@@ -33,6 +33,8 @@ jobs:
   version:
     needs: test
     runs-on: ubuntu-latest
+    outputs:
+      new_sha: ${{ steps.sha.outputs.SHA }}
     steps:
       - uses: actions/checkout@v2
         with:
