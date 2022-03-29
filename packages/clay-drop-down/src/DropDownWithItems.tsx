@@ -162,6 +162,29 @@ export interface IProps extends IDropDownContentProps {
 	searchValue?: string;
 }
 
+const findNested = <
+	T extends {items?: Array<T>; [key: string]: any},
+	K extends keyof T
+>(
+	items: Array<T>,
+	key: K
+): T | undefined =>
+	items.find((item) => {
+		if (item[key]) {
+			return true;
+		}
+
+		// Ignore the search if the nested items are part of a contextual submenu
+		// because it will be in another menu and the current menu does not need
+		// to know the information of what exists inside the contextual one, like
+		// knowing if there is an icon.
+		if (item.items && item.type !== 'contextual') {
+			return findNested(item.items, key);
+		}
+
+		return false;
+	});
+
 interface IInternalItem {
 	spritemap?: string;
 }
@@ -230,6 +253,15 @@ const Contextual: React.FunctionComponent<
 	const menuElementRef = useRef<HTMLDivElement>(null);
 	const timeoutHandleRef = useRef<any>(null);
 
+	const hasRightSymbols = React.useMemo(
+		() => items && !!findNested(items, 'symbolRight'),
+		[items]
+	);
+	const hasLeftSymbols = React.useMemo(
+		() => items && !!findNested(items, 'symbolLeft'),
+		[items]
+	);
+
 	return (
 		<ClayDropDown.Item
 			{...otherProps}
@@ -266,6 +298,8 @@ const Contextual: React.FunctionComponent<
 					active={visible}
 					alignElementRef={triggerElementRef}
 					alignmentPosition={8}
+					hasLeftSymbols={hasLeftSymbols}
+					hasRightSymbols={hasRightSymbols}
 					onSetActive={setVisible}
 					ref={menuElementRef}
 				>
@@ -375,25 +409,6 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 		})}
 	</ClayDropDown.ItemList>
 );
-
-const findNested = <
-	T extends {items?: Array<T>; [key: string]: any},
-	K extends keyof T
->(
-	items: Array<T>,
-	key: K
-): T | undefined =>
-	items.find((item) => {
-		if (item[key]) {
-			return true;
-		}
-
-		if (item.items) {
-			return findNested(item.items, key);
-		}
-
-		return false;
-	});
 
 export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	active,
