@@ -91,6 +91,27 @@ const MyApp: React.FunctionComponent<any> = () => {
 	);
 };
 
+const MyAppWithoutFooterAndHeader: React.FunctionComponent<any> = () => {
+	const [, dispatch] = React.useContext(Context);
+
+	return (
+		<ClayButton
+			displayType="primary"
+			onClick={() =>
+				dispatch({
+					payload: {
+						body: <h1>Hello world!</h1>,
+						size: 'lg',
+					},
+					type: 1,
+				})
+			}
+		>
+			Open modal without Footer and Header
+		</ClayButton>
+	);
+};
+
 const size = {
 	'full-screen': 'full-screen',
 	lg: 'lg',
@@ -427,5 +448,7 @@ storiesOf('Components|ClayModal', module)
 	.add('w/ Provider', () => (
 		<ClayModalProvider spritemap={spritemap}>
 			<MyApp />
+
+			<MyAppWithoutFooterAndHeader />
 		</ClayModalProvider>
 	));
