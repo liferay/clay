@@ -24,6 +24,12 @@ describe('ClayEmptyState', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('when passing `title` property with null, it will not render title section', () => {
+		const {queryByText} = render(<ClayEmptyState title={null} />);
+
+		expect(queryByText('No results found')).toBeNull();
+	});
+
 	it('renders with a children content', () => {
 		const {container} = render(
 			<ClayEmptyState>My Empty State</ClayEmptyState>

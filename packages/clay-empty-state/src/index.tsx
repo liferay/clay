@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	/**
 	 * Message the user will see describing what they can do when on this screen
 	 */
@@ -30,7 +30,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Title of the message highlighting the description
 	 */
-	title?: string;
+	title?: string | null;
 }
 
 const ClayEmptyState: React.FunctionComponent<IProps> = ({
@@ -69,11 +69,13 @@ const ClayEmptyState: React.FunctionComponent<IProps> = ({
 				</div>
 			)}
 
-			<div className="c-empty-state-title">
-				<span className="text-truncate-inline">
-					<span className="text-truncate">{title}</span>
-				</span>
-			</div>
+			{title && (
+				<div className="c-empty-state-title">
+					<span className="text-truncate-inline">
+						<span className="text-truncate">{title}</span>
+					</span>
+				</div>
+			)}
 
 			<div className="c-empty-state-text">{description}</div>
 

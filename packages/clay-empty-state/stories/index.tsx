@@ -20,6 +20,11 @@ storiesOf('Components|ClayEmptyState', module)
 			<ClayButton displayType="primary">Button</ClayButton>
 		</ClayEmptyState>
 	))
+	.add('no title', () => (
+		<ClayEmptyState title={null}>
+			<ClayButton displayType="primary">Button</ClayButton>
+		</ClayEmptyState>
+	))
 	.add('empty state', () => (
 		<ClayEmptyState imgSrc={emptyImage} small={boolean('Small', false)}>
 			<ClayButton displayType="secondary">Button</ClayButton>
