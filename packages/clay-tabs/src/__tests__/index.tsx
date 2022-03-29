@@ -62,10 +62,28 @@ describe('ClayTabs', () => {
 		expect(container.querySelector('.nav.nav-justified')).toBeTruthy();
 	});
 
+	it('renders with displayType prop nav items', () => {
+		const {container} = render(<ClayTabs displayType="underline" />);
+
+		expect(container.querySelector('.nav.nav-underline')).toBeTruthy();
+	});
+
 	it('renders with modern style', () => {
 		const {container} = render(<ClayTabs modern />);
 
 		expect(container.querySelector('.nav.nav-underline')).toBeTruthy();
+	});
+
+	it('renders with modern style and displayType prop as null', () => {
+		const {container} = render(<ClayTabs displayType={null} modern />);
+
+		expect(container.querySelector('.nav.nav-underline')).toBeTruthy();
+	});
+
+	it('renders with tab style using displayType prop and overrides modern prop', () => {
+		const {container} = render(<ClayTabs displayType="basic" modern />);
+
+		expect(container.querySelector('.nav.nav-tabs')).toBeTruthy();
 	});
 
 	it('renders with items', () => {
