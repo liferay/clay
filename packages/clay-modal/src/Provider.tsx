@@ -38,7 +38,7 @@ type TState = {
 	 * - middle
 	 * - last
 	 */
-	footer: Array<React.ReactElement | undefined>;
+	footer?: Array<React.ReactElement | undefined>;
 
 	/**
 	 * Renders an element in the modal header.
@@ -99,7 +99,7 @@ const ClayModalProvider: React.FunctionComponent<IProps> = ({
 	const {observer, onClose} = useModal({
 		onClose: () => dispatch({type: Action.Close}),
 	});
-	const {body, center, footer, header, size, status, url} = otherState;
+	const {body, center, footer = [], header, size, status, url} = otherState;
 	const [first, middle, last] = footer;
 	const state = {
 		...otherState,
@@ -116,13 +116,15 @@ const ClayModalProvider: React.FunctionComponent<IProps> = ({
 					spritemap={spritemap}
 					status={status}
 				>
-					<ClayModal.Header>{header}</ClayModal.Header>
+					{header && <ClayModal.Header>{header}</ClayModal.Header>}
 					<ClayModal.Body url={url}>{body}</ClayModal.Body>
-					<ClayModal.Footer
-						first={first}
-						last={last}
-						middle={middle}
-					/>
+					{!!footer.length && (
+						<ClayModal.Footer
+							first={first}
+							last={last}
+							middle={middle}
+						/>
+					)}
 				</ClayModal>
 			)}
 			<Context.Provider value={[state, dispatch]}>

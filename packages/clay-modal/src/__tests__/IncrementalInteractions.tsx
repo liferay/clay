@@ -255,6 +255,47 @@ describe('ModalProvider -> IncrementalInteractions', () => {
 		jest.useRealTimers();
 	});
 
+	it('will not render modal title and footer when not providing it', () => {
+		const ModalWithProvider = () => {
+			const [, dispatch] = React.useContext(Context);
+
+			return (
+				<Button
+					data-testid="button"
+					displayType="primary"
+					onClick={() =>
+						dispatch({
+							payload: {
+								body: <h1>Hello world!</h1>,
+								size: 'lg',
+							},
+							type: 1,
+						})
+					}
+				>
+					Open modal
+				</Button>
+			);
+		};
+
+		const {getByTestId} = render(
+			<ClayModalProvider spritemap={spritemap}>
+				<ModalWithProvider />
+			</ClayModalProvider>
+		);
+
+		const button = getByTestId('button');
+
+		fireEvent.click(button, {});
+
+		act(() => {
+			jest.runAllTimers();
+		});
+
+		expect(document.querySelector('modal-header')).toBeNull();
+		expect(document.querySelector('modal-footer')).toBeNull();
+	});
+
 	it('renders a modal when dispatching Open by provider', () => {
 		const ModalWithProvider = () => {
 			const [state, dispatch] = React.useContext(Context);
