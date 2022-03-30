@@ -509,7 +509,11 @@ storiesOf('Components|ClayDropDown', module)
 					{type: 'divider'},
 					{
 						items: [
-							{label: 'Basic Document'},
+							{
+								label: 'Basic Document',
+								symbolLeft: 'document',
+								symbolRight: 'check',
+							},
 							{label: 'Contract'},
 							{label: 'Marketing Banner'},
 							{label: 'Spreadsheet'},
