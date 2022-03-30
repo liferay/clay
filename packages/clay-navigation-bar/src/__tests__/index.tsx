@@ -25,34 +25,35 @@ describe('ClayNavigationBar', () => {
 				triggerLabel={label}
 			>
 				<ClayNavigationBar.Item active>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#1"
-					>
-						<span className="navbar-text-truncate">{label}</span>
-					</ClayLink>
+					<ClayLink href="#1">{label}</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item>
-					<ClayButton
-						block
-						className="nav-link"
-						displayType="unstyled"
-						small
-					>
-						<span className="navbar-text-truncate">Item 2</span>
-					</ClayButton>
+					<ClayButton>Item 2</ClayButton>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#3"
-					>
-						<span className="navbar-text-truncate">Item 3</span>
-					</ClayLink>
+					<ClayLink href="#3">Item 3</ClayLink>
+				</ClayNavigationBar.Item>
+			</ClayNavigationBar>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders a custom item', () => {
+		const label = 'Item 1';
+
+		const {container} = render(
+			<ClayNavigationBar
+				inverted
+				spritemap={spritemap}
+				triggerLabel={label}
+			>
+				<ClayNavigationBar.Item active>
+					<a className="my-custom-class" href="#1">
+						{label}
+					</a>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
@@ -70,24 +71,11 @@ describe('ClayNavigationBar', () => {
 				triggerLabel="Trigger Label"
 			>
 				<ClayNavigationBar.Item active>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#1"
-					>
-						<span className="navbar-text-truncate">Item 1</span>
-					</ClayLink>
+					<ClayLink href="#1">Item 1</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item>
-					<ClayButton
-						block
-						className="nav-link"
-						displayType="unstyled"
-						small
-					>
-						<span className="navbar-text-truncate">Item 2</span>
-					</ClayButton>
+					<ClayButton>Item 2</ClayButton>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
@@ -119,24 +107,11 @@ describe('ClayNavigationBar', () => {
 				triggerLabel="Trigger Label"
 			>
 				<ClayNavigationBar.Item active>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#1"
-					>
-						<span className="navbar-text-truncate">Item 1</span>
-					</ClayLink>
+					<ClayLink href="#1">Item 1</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item>
-					<ClayButton
-						block
-						className="nav-link"
-						displayType="unstyled"
-						small
-					>
-						<span className="navbar-text-truncate">Item 2</span>
-					</ClayButton>
+					<ClayButton>Item 2</ClayButton>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
@@ -178,34 +153,15 @@ describe('ClayNavigationBar', () => {
 				triggerLabel={label}
 			>
 				<ClayNavigationBar.Item>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#1"
-					>
-						<span className="navbar-text-truncate">{label}</span>
-					</ClayLink>
+					<ClayLink href="#1">{label}</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active>
-					<ClayButton
-						block
-						className="nav-link"
-						displayType="unstyled"
-						small
-					>
-						<span className="navbar-text-truncate">Item 2</span>
-					</ClayButton>
+					<ClayButton>Item 2</ClayButton>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#3"
-					>
-						<span className="navbar-text-truncate">Item 3</span>
-					</ClayLink>
+					<ClayLink href="#3">Item 3</ClayLink>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
@@ -227,24 +183,11 @@ describe('ClayNavigationBar', () => {
 				triggerLabel={label}
 			>
 				<ClayNavigationBar.Item active>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#1"
-					>
-						<span className="navbar-text-truncate">{label}</span>
-					</ClayLink>
+					<ClayLink href="#1">{label}</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active>
-					<ClayButton
-						block
-						className="nav-link"
-						displayType="unstyled"
-						small
-					>
-						<span className="navbar-text-truncate">Item 2</span>
-					</ClayButton>
+					<ClayButton>Item 2</ClayButton>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
@@ -267,13 +210,7 @@ describe('ClayNavigationBar', () => {
 				triggerLabel={label}
 			>
 				<ClayNavigationBar.Item active>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#1"
-					>
-						<span className="navbar-text-truncate">{label}</span>
-					</ClayLink>
+					<ClayLink href="#1">{label}</ClayLink>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
