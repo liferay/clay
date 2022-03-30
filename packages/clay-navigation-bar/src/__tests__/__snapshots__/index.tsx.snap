@@ -9,7 +9,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
     class="container-fluid container-fluid-max-xl"
   >
     <ul
-      class="navbar-nav"
+      class="navbar-nav text-truncate"
     >
       <li
         class="nav-item"
@@ -79,7 +79,7 @@ exports[`ClayNavigationBar renders 1`] = `
           class="container-fluid container-fluid-max-xl"
         >
           <ul
-            class="navbar-nav"
+            class="navbar-nav text-truncate"
           >
             <li
               class="nav-item"
@@ -140,7 +140,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
     class="container-fluid container-fluid-max-xl"
   >
     <ul
-      class="navbar-nav"
+      class="navbar-nav text-truncate"
     >
       <li
         class="nav-item"
@@ -210,7 +210,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
           class="container-fluid container-fluid-max-xl"
         >
           <ul
-            class="navbar-nav"
+            class="navbar-nav text-truncate"
           >
             <li
               class="nav-item"
@@ -297,7 +297,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
           class="container-fluid container-fluid-max-xl"
         >
           <ul
-            class="navbar-nav"
+            class="navbar-nav text-truncate"
           >
             <li
               class="nav-item"
@@ -356,7 +356,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
           class="container-fluid container-fluid-max-xl"
         >
           <ul
-            class="navbar-nav"
+            class="navbar-nav text-truncate"
           >
             <li
               class="nav-item"

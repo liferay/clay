@@ -121,7 +121,9 @@ const ClayNavigationBar: React.FunctionComponent<IProps> & {
 				>
 					<div>
 						<ClayLayout.ContainerFluid>
-							<ul className="navbar-nav">{children}</ul>
+							<ul className="navbar-nav text-truncate">
+								{children}
+							</ul>
 						</ClayLayout.ContainerFluid>
 					</div>
 				</CSSTransition>
