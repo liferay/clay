@@ -41,6 +41,29 @@ const ClayColorPickerWithState = (
 	);
 };
 
+const ClayColorPickerWithCustomColors = (props: any) => {
+	const [customColors, setCustoms] = React.useState([
+		'008000',
+		'00FFFF',
+		'0000FF',
+		'blue',
+		'black',
+		'var(--blue)',
+	]);
+
+	const [color, setColor] = React.useState();
+
+	return (
+		<ClayColorPickerWithState
+			{...props}
+			colors={customColors}
+			onColorsChange={setCustoms}
+			onValueChange={setColor}
+			value={color}
+		/>
+	);
+};
+
 describe('Rendering', () => {
 	afterEach(cleanup);
 
@@ -373,6 +396,86 @@ describe('Interactions', () => {
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
 			expect(handleColorsChange).toBeCalledTimes(2);
+
+			expect(document.body).toMatchSnapshot();
+		});
+	});
+
+	describe('color editor changing color value', () => {
+		let editorGetByLabelText: any;
+		let editorGetByTitle: any;
+
+		afterEach(cleanup);
+
+		beforeEach(() => {
+			const {getByLabelText, getByTitle} = render(
+				<ClayColorPickerWithCustomColors />
+			);
+
+			editorGetByLabelText = getByLabelText;
+			editorGetByTitle = getByTitle;
+		});
+
+		it('does not update when a sploch is not clicked', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const colorEditorToggle = (
+				document.body as HTMLElement
+			).querySelector('.clay-color-header button');
+
+			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
+
+			expect(document.body).toMatchSnapshot();
+		});
+
+		it('updates when a sploch is clicked with value of FFFFFF', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const blankSplotch = (
+				document.body as HTMLButtonElement
+			).querySelector('button[title="FFFFFF"]');
+
+			fireEvent.click(blankSplotch as HTMLButtonElement, {});
+
+			expect(document.body).toMatchSnapshot();
+		});
+
+		it('does not update when sploch clicked has not value of FFFFFF', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const blankSplotch = editorGetByTitle(
+				'008000'
+			) as HTMLButtonElement;
+
+			fireEvent.click(blankSplotch as HTMLButtonElement, {});
+
+			expect(document.body).toMatchSnapshot();
+
+			expect(input.value).toBe('008000');
 		});
 	});
 });
