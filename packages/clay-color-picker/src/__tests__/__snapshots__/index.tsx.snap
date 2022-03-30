@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Interactions color editor changing color value does not update when sploch is not clicked 1`] = `
+exports[`Interactions color editor changing color value does not update when a sploch is not clicked 1`] = `
 <body>
   <div>
     <div
@@ -341,7 +341,7 @@ exports[`Interactions color editor changing color value does not update when spl
 </body>
 `;
 
-exports[`Interactions color editor changing color value does not updates when sploch clicked has not value of FFFFFF 1`] = `
+exports[`Interactions color editor changing color value does not update when sploch clicked has not value of FFFFFF 1`] = `
 <body>
   <div>
     <div
@@ -553,7 +553,7 @@ exports[`Interactions color editor changing color value does not updates when sp
 </body>
 `;
 
-exports[`Interactions color editor changing color value updates when sploch is clicked with value of FFFFFF 1`] = `
+exports[`Interactions color editor changing color value updates when a sploch is clicked with value of FFFFFF 1`] = `
 <body>
   <div>
     <div
