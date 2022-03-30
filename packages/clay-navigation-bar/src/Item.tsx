@@ -43,11 +43,14 @@ const ClayNavigationBarIcon: React.FunctionComponent<IItemProps> = ({
 								</span>
 							),
 							className: classNames(
-								child.props.className,
+								'nav-link',
+								child.props.className?.replace('nav-link', ''),
 								{
 									active,
 								}
 							),
+							// @ts-ignore
+							displayType: 'unstyled',
 							key: index,
 						});
 					}

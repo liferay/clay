@@ -24,43 +24,21 @@ storiesOf('Components|ClayNavigationBar', module)
 				triggerLabel={text('triggerLabel: ', triggerName)}
 			>
 				<ClayNavigationBar.Item active={boolean('Active 1: ', true)}>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#"
-					>
-						Item 1
-					</ClayLink>
+					<ClayLink href="#">Item 1</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active={boolean('Active 2: ', false)}>
-					<ClayButton
-						block
-						className="nav-link"
-						displayType="unstyled"
-						onClick={() => setTriggerName('Item 2')}
-						small
-					>
+					<ClayButton onClick={() => setTriggerName('Item 2')}>
 						Item 2
 					</ClayButton>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active={boolean('Active 3: ', false)}>
-					<ClayLink
-						displayType="secondary"
-						href="#"
-					>
-						Item 3
-					</ClayLink>
+					<ClayLink href="#">Item 3</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active={boolean('Active 4: ', false)}>
-					<ClayButton
-						block
-						displayType="unstyled"
-						onClick={() => setTriggerName('Item 4')}
-						small
-					>
+					<ClayButton onClick={() => setTriggerName('Item 4')}>
 						Item 4
 					</ClayButton>
 				</ClayNavigationBar.Item>
@@ -77,13 +55,7 @@ storiesOf('Components|ClayNavigationBar', module)
 				triggerLabel={text('triggerLabel: ', triggerName)}
 			>
 				<ClayNavigationBar.Item active={boolean('Active 1: ', true)}>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#"
-					>
-						Item 1
-					</ClayLink>
+					<ClayLink href="#">Item 1</ClayLink>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
