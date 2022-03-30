@@ -28,14 +28,38 @@ const ClayNavigationBarIcon: React.FunctionComponent<IItemProps> = ({
 		<li {...otherProps} className={classNames('nav-item', className)}>
 			{React.Children.map(
 				children,
-				(child: React.ReactElement<IItemProps>, index) =>
-					React.cloneElement(child, {
+				(child: React.ReactElement<IItemProps>, index) => {
+					if (
+						// @ts-ignore
+						child?.type.displayName === 'ClayLink' ||
+						// @ts-ignore
+						child?.type.displayName === 'ClayButton'
+					) {
+						return React.cloneElement(child, {
+							...child.props,
+							children: (
+								<span className="navbar-text-truncate">
+									{child.props.children}
+								</span>
+							),
+							className: classNames(
+								child.props.className,
+								{
+									active,
+								}
+							),
+							key: index,
+						});
+					}
+
+					return React.cloneElement(child, {
 						...child.props,
 						className: classNames(child.props.className, {
 							active,
 						}),
 						key: index,
-					})
+					});
+				}
 			)}
 		</li>
 	);
