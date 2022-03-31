@@ -4,29 +4,47 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
+import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
 import ClayNavigationBar from '@clayui/navigation-bar';
-import React from 'react';
+import React, {useState} from 'react';
 
-const navigationBarImportsCode = `import ClayLink from '@clayui/link';
-import ClayNavigationBar from '@clayui/navigation-bar';`;
+const navigationBarImportsCode = `import ClayButton from '@clayui/button';
+import ClayLink from '@clayui/link';
+import ClayNavigationBar from '@clayui/navigation-bar';
+import React, {useState} from 'react';`;
 
 const NavigationBarCode = `const Component = () => {
+	const [active, setActive] = useState('Item 1');
 
 	return (
-		<ClayNavigationBar triggerLabel="Item 1" spritemap={spritemap}>
-			<ClayNavigationBar.Item active>
-				<ClayLink className="nav-link" displayType="unstyled">
+		<ClayNavigationBar triggerLabel={active} spritemap={spritemap}>
+			<ClayNavigationBar.Item active={active === 'Item 1'}>
+				<ClayLink
+					href="#"
+					onClick={(event) => {
+						event.preventDefault();
+						setActive('Item 1');
+					}}
+				>
 					Item 1
 				</ClayLink>
 			</ClayNavigationBar.Item>
-			<ClayNavigationBar.Item>
-				<ClayLink className="nav-link" displayType="unstyled">
+			<ClayNavigationBar.Item active={active === 'Item 2'}>
+				<ClayButton
+					onClick={() => setActive('Item 2')}
+				>
 					Item 2
-				</ClayLink>
+				</ClayButton>
 			</ClayNavigationBar.Item>
-			<ClayNavigationBar.Item>
-				<ClayLink className="nav-link" displayType="unstyled">
+			<ClayNavigationBar.Item active={active === 'Item 3'}>
+				<ClayLink
+					href="#"
+					onClick={(event) => {
+						event.preventDefault();
+						setActive('Item 3');
+					}}
+				>
 					Item 3
 				</ClayLink>
 			</ClayNavigationBar.Item>
@@ -37,13 +55,23 @@ const NavigationBarCode = `const Component = () => {
 render(<Component />);`;
 
 const NavigationBar = () => {
-	const scope = {ClayLink, ClayNavigationBar};
+	const scope = {ClayButton, ClayLink, ClayNavigationBar, useState};
 
-	const code = NavigationBarCode;
+	const codeSnippets = [
+		{
+			imports: navigationBarImportsCode,
+			name: 'React',
+			value: NavigationBarCode,
+		},
+		{
+			disabled: true,
+			imports: navigationBarJSPImportsCode,
+			name: 'JSP',
+			value: NavigationBarJSPCode,
+		},
+	];
 
-	return (
-		<Editor code={code} imports={navigationBarImportsCode} scope={scope} />
-	);
+	return <Editor code={codeSnippets} scope={scope} />;
 };
 
 const navigationBarWithStyledItemImportsCode = `import ClayNavigationBar from '@clayui/navigation-bar';`;
@@ -58,13 +86,13 @@ const NavigationBarWithStyledItemCode = `const Component = () => {
 	return (
 		<ClayNavigationBar triggerLabel="Item 1" spritemap={spritemap}>
 			<ClayNavigationBar.Item active>
-					<button className="btn btn-unstyled btn-block btn-sm" style={btnStyle} type="button">Item 1</button>
+					<button className="btn btn-unstyled" style={btnStyle} type="button">Item 1</button>
 			</ClayNavigationBar.Item>
 			<ClayNavigationBar.Item>
-					<button className="btn btn-unstyled btn-block btn-sm" style={btnStyle} type="button">Item 2</button>
+					<button className="btn btn-unstyled" style={btnStyle} type="button">Item 2</button>
 			</ClayNavigationBar.Item>
 			<ClayNavigationBar.Item>
-					<button className="btn btn-unstyled btn-block btn-sm" style={btnStyle} type="button">Item 3</button>
+					<button className="btn btn-unstyled" style={btnStyle} type="button">Item 3</button>
 			</ClayNavigationBar.Item>
 		</ClayNavigationBar>
 	);
@@ -102,21 +130,13 @@ const NavigationBarJSPCode = `<clay:navigation-bar
 const NavigationBarWithStyledItem = () => {
 	const scope = {ClayNavigationBar};
 
-	const codeSnippets = [
-		{
-			imports: navigationBarWithStyledItemImportsCode,
-			name: 'React',
-			value: NavigationBarWithStyledItemCode,
-		},
-		{
-			disabled: true,
-			imports: navigationBarJSPImportsCode,
-			name: 'JSP',
-			value: NavigationBarJSPCode,
-		},
-	];
-
-	return <Editor code={codeSnippets} scope={scope} />;
+	return (
+		<Editor
+			code={NavigationBarWithStyledItemCode}
+			imports={navigationBarWithStyledItemImportsCode}
+			scope={scope}
+		/>
+	);
 };
 
 export {NavigationBar, NavigationBarWithStyledItem};

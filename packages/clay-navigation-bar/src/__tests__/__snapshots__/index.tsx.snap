@@ -15,7 +15,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
         class="nav-item"
       >
         <a
-          class="nav-link active link-secondary"
+          class="nav-link active link-unstyled"
           href="#1"
         >
           <span
@@ -29,7 +29,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
         class="nav-item"
       >
         <button
-          class="nav-link btn btn-block btn-sm btn-unstyled"
+          class="nav-link btn btn-unstyled"
           type="button"
         >
           <span
@@ -85,7 +85,7 @@ exports[`ClayNavigationBar renders 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link active link-secondary"
+                class="nav-link active link-unstyled"
                 href="#1"
               >
                 <span
@@ -99,7 +99,7 @@ exports[`ClayNavigationBar renders 1`] = `
               class="nav-item"
             >
               <button
-                class="nav-link btn btn-block btn-sm btn-unstyled"
+                class="nav-link btn btn-unstyled"
                 type="button"
               >
                 <span
@@ -113,7 +113,7 @@ exports[`ClayNavigationBar renders 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link link-secondary"
+                class="nav-link link-unstyled"
                 href="#3"
               >
                 <span
@@ -121,6 +121,61 @@ exports[`ClayNavigationBar renders 1`] = `
                 >
                   Item 3
                 </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`ClayNavigationBar renders a custom item 1`] = `
+<div>
+  <nav
+    class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
+  >
+    <div
+      class="container-fluid container-fluid-max-xl"
+    >
+      <button
+        aria-expanded="false"
+        class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
+        data-testid="navbarToggler"
+        type="button"
+      >
+        <span
+          class="navbar-text-truncate"
+        >
+          Item 1
+        </span>
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom"
+          role="presentation"
+        >
+          <use
+            xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+          />
+        </svg>
+      </button>
+      <div
+        class="navbar-collapse collapse"
+      >
+        <div
+          class="container-fluid container-fluid-max-xl"
+        >
+          <ul
+            class="navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                class="my-custom-class active"
+                href="#1"
+              >
+                Item 1
               </a>
             </li>
           </ul>
@@ -146,7 +201,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
         class="nav-item"
       >
         <a
-          class="nav-link active link-secondary"
+          class="nav-link active link-unstyled"
           href="#1"
         >
           <span
@@ -160,7 +215,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
         class="nav-item"
       >
         <button
-          class="nav-link btn btn-block btn-sm btn-unstyled"
+          class="nav-link btn btn-unstyled"
           type="button"
         >
           <span
@@ -216,7 +271,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
               class="nav-item"
             >
               <a
-                class="nav-link link-secondary"
+                class="nav-link link-unstyled"
                 href="#1"
               >
                 <span
@@ -230,7 +285,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
               class="nav-item"
             >
               <button
-                class="nav-link active btn btn-block btn-sm btn-unstyled"
+                class="nav-link active btn btn-unstyled"
                 type="button"
               >
                 <span
@@ -244,7 +299,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
               class="nav-item"
             >
               <a
-                class="nav-link link-secondary"
+                class="nav-link link-unstyled"
                 href="#3"
               >
                 <span
@@ -303,7 +358,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link active link-secondary"
+                class="nav-link active link-unstyled"
                 href="#1"
               >
                 <span
@@ -362,7 +417,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
               class="nav-item"
             >
               <a
-                class="nav-link active link-secondary"
+                class="nav-link active link-unstyled"
                 href="#1"
               >
                 <span
@@ -376,7 +431,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
               class="nav-item"
             >
               <button
-                class="nav-link active btn btn-block btn-sm btn-unstyled"
+                class="nav-link active btn btn-unstyled"
                 type="button"
               >
                 <span

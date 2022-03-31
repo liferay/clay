@@ -24,41 +24,23 @@ storiesOf('Components|ClayNavigationBar', module)
 				triggerLabel={text('triggerLabel: ', triggerName)}
 			>
 				<ClayNavigationBar.Item active={boolean('Active 1: ', true)}>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#"
-					>
-						<span className="navbar-text-truncate">Item 1</span>
-					</ClayLink>
+					<ClayLink href="#">Item 1</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active={boolean('Active 2: ', false)}>
-					<ClayButton
-						block
-						className="nav-link"
-						displayType="unstyled"
-						onClick={() => setTriggerName('Item 2')}
-						small
-					>
-						<span className="navbar-text-truncate">Item 2</span>
+					<ClayButton onClick={() => setTriggerName('Item 2')}>
+						Item 2
 					</ClayButton>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active={boolean('Active 3: ', false)}>
-					<a className="link-secondary nav-link" href="#">
-						<span className="navbar-text-truncate">Item 3</span>
-					</a>
+					<ClayLink href="#">Item 3</ClayLink>
 				</ClayNavigationBar.Item>
 
 				<ClayNavigationBar.Item active={boolean('Active 4: ', false)}>
-					<button
-						className="btn btn-block btn-sm btn-unstyled nav-link"
-						onClick={() => setTriggerName('Item 4')}
-						type="button"
-					>
-						<span className="navbar-text-truncate">Item 4</span>
-					</button>
+					<ClayButton onClick={() => setTriggerName('Item 4')}>
+						Item 4
+					</ClayButton>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
@@ -73,13 +55,7 @@ storiesOf('Components|ClayNavigationBar', module)
 				triggerLabel={text('triggerLabel: ', triggerName)}
 			>
 				<ClayNavigationBar.Item active={boolean('Active 1: ', true)}>
-					<ClayLink
-						className="nav-link"
-						displayType="secondary"
-						href="#"
-					>
-						<span className="navbar-text-truncate">Item 1</span>
-					</ClayLink>
+					<ClayLink href="#">Item 1</ClayLink>
 				</ClayNavigationBar.Item>
 			</ClayNavigationBar>
 		);
