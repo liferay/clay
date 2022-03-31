@@ -41,6 +41,29 @@ const ClayColorPickerWithState = (
 	);
 };
 
+const ClayColorPickerWithCustomColors = (props: any) => {
+	const [customColors, setCustoms] = React.useState([
+		'008000',
+		'00FFFF',
+		'0000FF',
+		'blue',
+		'black',
+		'var(--blue)',
+	]);
+
+	const [color, setColor] = React.useState();
+
+	return (
+		<ClayColorPickerWithState
+			{...props}
+			colors={customColors}
+			onColorsChange={setCustoms}
+			onValueChange={setColor}
+			value={color}
+		/>
+	);
+};
+
 describe('Rendering', () => {
 	afterEach(cleanup);
 
@@ -373,6 +396,216 @@ describe('Interactions', () => {
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
 			expect(handleColorsChange).toBeCalledTimes(2);
+
+			expect(document.body).toMatchSnapshot();
+		});
+	});
+
+	describe('color editor changing color value', () => {
+		let editorGetByLabelText: any;
+		let editorGetByTitle: any;
+		let editorGetByTestId: any;
+
+		afterEach(cleanup);
+
+		beforeEach(() => {
+			const {getByLabelText, getByTestId, getByTitle} = render(
+				<ClayColorPickerWithCustomColors />
+			);
+
+			editorGetByLabelText = getByLabelText;
+			editorGetByTestId = getByTestId;
+			editorGetByTitle = getByTitle;
+		});
+
+		it('does not update when a sploch is not clicked', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const colorEditorToggle = (
+				document.body as HTMLElement
+			).querySelector('.clay-color-header button');
+
+			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
+
+			expect(input.value).toBe('DFCAFF');
+
+			expect(
+				document.body.querySelectorAll('button[title="dfcaff"]').length
+			).toBe(0);
+
+			expect(editorGetByTestId('rInput').value).toBe('223');
+			expect(editorGetByTestId('bInput').value).toBe('255');
+			expect(editorGetByTestId('gInput').value).toBe('202');
+
+			expect(editorGetByTestId('customHexInput').value).toBe('DFCAFF');
+		});
+
+		it('updates when a sploch is clicked with value of FFFFFF', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const blankSplotch = (
+				document.body as HTMLButtonElement
+			).querySelector('button[title="FFFFFF"]');
+
+			fireEvent.click(blankSplotch as HTMLButtonElement, {});
+
+			expect(input.value).toBe('DFCAFF');
+
+			expect(
+				document.body.querySelectorAll('button[title="dfcaff"]').length
+			).toBe(1);
+
+			expect(editorGetByTestId('rInput').value).toBe('223');
+			expect(editorGetByTestId('bInput').value).toBe('255');
+			expect(editorGetByTestId('gInput').value).toBe('202');
+
+			expect(editorGetByTestId('customHexInput').value).toBe('DFCAFF');
+		});
+
+		it('does not update when sploch clicked has not value of FFFFFF', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const colorSplotch = editorGetByTitle(
+				'008000'
+			) as HTMLButtonElement;
+
+			fireEvent.click(colorSplotch as HTMLButtonElement, {});
+
+			const colorEditorToggle = (
+				document.body as HTMLElement
+			).querySelector('.clay-color-header button');
+
+			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
+
+			expect(input.value).toBe('008000');
+
+			expect(
+				document.body.querySelectorAll('button[title="dfcaff"]').length
+			).toBe(0);
+
+			expect(editorGetByTestId('rInput').value).toBe('0');
+			expect(editorGetByTestId('bInput').value).toBe('0');
+			expect(editorGetByTestId('gInput').value).toBe('128');
+
+			expect(editorGetByTestId('customHexInput').value).toBe('008000');
+		});
+
+		it('only updates the inputs and the color editor components', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const colorEditorToggle = (
+				document.body as HTMLElement
+			).querySelector('.clay-color-header button');
+
+			fireEvent.click(colorEditorToggle as HTMLButtonElement, {});
+
+			const rInput = editorGetByTestId('rInput');
+			const bInput = editorGetByTestId('bInput');
+			const gInput = editorGetByTestId('gInput');
+
+			fireEvent.change(rInput, {target: {value: '200'}});
+
+			fireEvent.change(gInput, {target: {value: '200'}});
+
+			fireEvent.change(bInput, {target: {value: '200'}});
+
+			expect(input.value).toBe('c8c8c8');
+
+			expect(
+				document.body.querySelector(
+					'.clay-color-header button[title="c8c8c8"]'
+				)
+			).toBeNull();
+
+			expect(editorGetByTestId('customHexInput').value).toBe('C8C8C8');
+		});
+
+		it('can duplicate colors', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const blankSplotch = (
+				document.body as HTMLButtonElement
+			).querySelector('button[title="FFFFFF"]');
+
+			fireEvent.click(blankSplotch as HTMLButtonElement, {});
+
+			expect(input.value).toBe('DFCAFF');
+
+			const greenSplotch = (
+				document.body as HTMLButtonElement
+			).querySelector('button[title="008000"]');
+
+			fireEvent.click(greenSplotch as HTMLButtonElement, {});
+
+			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+
+			const purpleSplotchs = (
+				document.body as HTMLButtonElement
+			).querySelectorAll('button[title="dfcaff"]');
+
+			expect(purpleSplotchs.length).toBe(2);
+		});
+
+		it('named colors are displayed in HEX in the custom hex input', () => {
+			const input = editorGetByLabelText(
+				/Color selection is/
+			) as HTMLInputElement;
+
+			fireEvent.change(input, {target: {value: 'red'}});
+
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
+			const blankSplotch = (
+				document.body as HTMLButtonElement
+			).querySelector('button[title="FFFFFF"]');
+
+			fireEvent.click(blankSplotch as HTMLButtonElement, {});
+
+			expect(input.value).toBe('red');
+
+			expect(editorGetByTestId('customHexInput').value).toBe('FF0000');
 		});
 	});
 });
