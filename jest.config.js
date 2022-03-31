@@ -44,10 +44,10 @@ module.exports = {
 			statements: 95,
 		},
 		'./packages/clay-color-picker/src/': {
-			branches: 67,
-			functions: 80,
-			lines: 80,
-			statements: 84,
+			branches: 74,
+			functions: 87,
+			lines: 90,
+			statements: 91,
 		},
 		'./packages/clay-core/src/tree-view/': {
 			branches: 69,
