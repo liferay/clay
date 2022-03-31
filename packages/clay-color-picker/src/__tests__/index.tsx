@@ -521,6 +521,10 @@ describe('Interactions', () => {
 
 			fireEvent.change(input, {target: {value: 'DFCAFF'}});
 
+			const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
+
 			const colorEditorToggle = (
 				document.body as HTMLElement
 			).querySelector('.clay-color-header button');
@@ -538,6 +542,12 @@ describe('Interactions', () => {
 			fireEvent.change(bInput, {target: {value: '200'}});
 
 			expect(input.value).toBe('c8c8c8');
+
+			expect(
+				document.body.querySelector(
+					'.clay-color-header button[title="c8c8c8"]'
+				)
+			).toBeNull();
 
 			expect(editorGetByTestId('customHexInput').value).toBe('C8C8C8');
 		});
@@ -576,7 +586,7 @@ describe('Interactions', () => {
 			expect(purpleSplotchs.length).toBe(2);
 		});
 
-		it('CSS values are displayed in HEX in the custom hex input', () => {
+		it('named colors are displayed in HEX in the custom hex input', () => {
 			const input = editorGetByLabelText(
 				/Color selection is/
 			) as HTMLInputElement;
