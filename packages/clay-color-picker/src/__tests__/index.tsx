@@ -32,7 +32,7 @@ const ClayColorPickerWithState = (
 		<ClayColorPicker
 			label="Default Colors"
 			name="colorPicker1"
-			onValueChange={setValue}
+			onChange={setValue}
 			spritemap="/test/path"
 			title="Default"
 			value={value}
@@ -51,14 +51,14 @@ const ClayColorPickerWithCustomColors = (props: any) => {
 		'var(--blue)',
 	]);
 
-	const [color, setColor] = React.useState();
+	const [color, setColor] = React.useState('');
 
 	return (
 		<ClayColorPickerWithState
 			{...props}
 			colors={customColors}
+			onChange={setColor}
 			onColorsChange={setCustoms}
-			onValueChange={setColor}
 			value={color}
 		/>
 	);
@@ -70,12 +70,11 @@ describe('Rendering', () => {
 	it('default', () => {
 		render(
 			<ClayColorPicker
+				defaultValue="FFF"
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
 				spritemap="/test/path"
 				title="Default"
-				value="FFF"
 			/>
 		);
 
@@ -85,12 +84,11 @@ describe('Rendering', () => {
 	it('renders w/ var()', () => {
 		render(
 			<ClayColorPicker
+				defaultValue="var(--blue)"
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
 				spritemap="/test/path"
 				title="Default"
-				value="var(--blue)"
 			/>
 		);
 
@@ -100,12 +98,11 @@ describe('Rendering', () => {
 	it('renders with a hash for the value', () => {
 		render(
 			<ClayColorPicker
+				defaultValue="#FFF"
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
 				spritemap="/test/path"
 				title="Default"
-				value="#FFF"
 			/>
 		);
 
@@ -115,12 +112,11 @@ describe('Rendering', () => {
 	it('renders with a named color for the value', () => {
 		render(
 			<ClayColorPicker
+				defaultValue="red"
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
 				spritemap="/test/path"
 				title="Default"
-				value="red"
 			/>
 		);
 
@@ -130,13 +126,12 @@ describe('Rendering', () => {
 	it('small color-picker', () => {
 		render(
 			<ClayColorPicker
+				defaultValue="FFF"
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
 				small
 				spritemap="/test/path"
 				title="Small"
-				value="FFF"
 			/>
 		);
 
@@ -146,13 +141,12 @@ describe('Rendering', () => {
 	it('disabled state', () => {
 		render(
 			<ClayColorPicker
+				defaultValue="FFF"
 				disabled
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
 				spritemap="/test/path"
 				title="Default"
-				value="FFF"
 			/>
 		);
 
@@ -162,13 +156,12 @@ describe('Rendering', () => {
 	it('disabled palette', () => {
 		render(
 			<ClayColorPicker
+				defaultValue="FFF"
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
 				showPalette={false}
 				spritemap="/test/path"
 				title="Default"
-				value="FFF"
 			/>
 		);
 
@@ -227,7 +220,7 @@ describe('Interactions', () => {
 			<ClayColorPicker
 				label="Default Colors"
 				name="colorPicker1"
-				onValueChange={() => {}}
+				onChange={() => {}}
 				spritemap="/test/path"
 				title="Default"
 				value="FFF"
@@ -249,8 +242,8 @@ describe('Interactions', () => {
 				colors={['000000', '00FFFF', '0000FF']}
 				label="Custom Colors"
 				name="colorPicker2"
+				onChange={() => {}}
 				onColorsChange={() => {}}
-				onValueChange={() => {}}
 				spritemap="/test/path"
 				title="Custom Colors"
 				value="008000"
@@ -293,10 +286,11 @@ describe('Interactions', () => {
 					colors={['5BB0A5', '00FFFF', '0000FF']}
 					label="Custom Colors"
 					name="colorPicker2"
+					onChange={handleValueChange}
 					onColorsChange={handleColorsChange}
-					onValueChange={handleValueChange}
 					spritemap="/test/path"
 					title="Custom Colors"
+					value="FFFFFF"
 				/>
 			);
 

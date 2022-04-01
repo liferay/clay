@@ -8,7 +8,7 @@ import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import {
 	FocusScope,
-	TInternalStateOnChange,
+	InternalDispatch,
 	sub,
 	useInternalState,
 } from '@clayui/shared';
@@ -59,9 +59,11 @@ const DEFAULT_ARIA_LABELS = {
 	selectionIs: 'Color selection is {0}',
 };
 
-interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IProps
+	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
 	/**
-	 * Flag to indicate if the DropDown container is showing or not
+	 * Property to define whether the DropDown menu is expanded or not
+	 * (controlled).
 	 */
 	active?: boolean;
 
@@ -79,9 +81,14 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	colors?: Array<string>;
 
 	/**
-	 * Property to set the initial value of `active`.
+	 * Property to set the default value of `active` (uncontrolled).
 	 */
 	defaultActive?: boolean;
+
+	/**
+	 * Property to set the default value (uncontrolled).
+	 */
+	defaultValue?: string;
 
 	/**
 	 * Flag for adding ColorPicker in disabled state
@@ -106,9 +113,14 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	name?: string;
 
 	/**
-	 * Callback function for when active state changes
+	 * Callback function for when active state changes (controlled).
 	 */
-	onActiveChange?: TInternalStateOnChange<boolean>;
+	onActiveChange?: InternalDispatch<boolean>;
+
+	/**
+	 * Callback that is called when the value changes (controlled).
+	 */
+	onChange?: InternalDispatch<string>;
 
 	/**
 	 * Callback for when the list of colors change
@@ -117,6 +129,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 	/**
 	 * Callback for when the selected color changes
+	 * @deprecated since v3.51.0 - use `onChange` instead.
 	 */
 	onValueChange?: (val: string) => void;
 
@@ -157,7 +170,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	useNative?: boolean;
 
 	/**
-	 * Value of the selected color hex
+	 * The value property sets the current value (controlled).
 	 */
 	value?: string;
 }
@@ -167,13 +180,15 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,
 	defaultActive = false,
+	defaultValue = 'FFFFFF',
 	disabled,
 	dropDownContainerProps,
 	label,
 	name,
 	onActiveChange,
+	onChange,
 	onColorsChange,
-	onValueChange = () => {},
+	onValueChange,
 	predefinedColors,
 	showHex = true,
 	showPalette = true,
@@ -182,15 +197,23 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 	spritemap,
 	title,
 	useNative = false,
-	value = 'FFFFFF',
+	value,
 	...otherProps
 }: IProps) => {
-	const [customEditorActive, setCustomEditorActive] = React.useState(false);
-	const isHex = tinycolor(value).getFormat() === 'hex';
+	const [internalValue, setValue] = useInternalState({
+		defaultName: 'defaultValue',
+		defaultValue: defaultValue
+			? normalizeValueHex(defaultValue)
+			: undefined,
+		handleName: 'onChange',
+		name: 'value',
+		onChange: onChange ?? onValueChange,
+		value,
+	});
 
-	if (isHex && value.indexOf('#') === 0) {
-		value = value.slice(1);
-	}
+	const [customEditorActive, setCustomEditorActive] = React.useState(false);
+
+	const isHex = tinycolor(internalValue).getFormat() === 'hex';
 
 	const inputColorTypeSupport = React.useMemo(() => {
 		if (typeof document !== 'undefined') {
@@ -215,8 +238,8 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 	const [internalActive, setInternalActive] = useInternalState({
 		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
 		handleName: 'onActiveChange',
-		initialValue: defaultActive,
 		name: 'active',
 		onChange: onActiveChange,
 		value: active,
@@ -244,7 +267,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								name={name}
 								onChange={(event) =>
 									useNative
-										? onValueChange(event.target.value)
+										? setValue(event.target.value)
 										: null
 								}
 								ref={valueInputRef}
@@ -257,7 +280,9 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								tabIndex={-1}
 								type={useNative ? 'color' : 'text'}
 								value={
-									value ? `${isHex ? '#' : ''}${value}` : ''
+									internalValue
+										? `${isHex ? '#' : ''}${internalValue}`
+										: ''
 								}
 							/>
 						)}
@@ -285,7 +310,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 									}
 								}}
 								ref={splotchRef}
-								value={value}
+								value={internalValue}
 							/>
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
@@ -310,7 +335,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								}
 								label={label}
 								onChange={(newVal) => {
-									onValueChange(newVal);
+									setValue(newVal);
 									setInternalActive(!internalActive);
 
 									if (splotchRef.current) {
@@ -333,13 +358,13 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								editorActive={customEditorActive}
 								label={label}
 								onChange={(newVal) => {
-									onValueChange(newVal);
+									setValue(newVal);
 								}}
 								onColorsChange={onColorsChange}
 								onEditorActiveChange={setCustomEditorActive}
 								showPalette={showPalette}
 								spritemap={spritemap}
-								value={value}
+								value={internalValue}
 							/>
 						)}
 					</ClayDropDown.Menu>
@@ -349,7 +374,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 							<ClayInput
 								{...otherProps}
 								aria-label={sub(ariaLabels.selectionIs, [
-									value,
+									internalValue,
 								])}
 								disabled={disabled}
 								insetBefore
@@ -360,22 +385,24 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 									if (newColor.isValid()) {
 										if (newColor.getFormat() === 'hex') {
-											onValueChange(newColor.toHex());
+											setValue(newColor.toHex());
 										} else if (
 											newColor.toString() !== value
 										) {
-											onValueChange(newColor.toString());
+											setValue(newColor.toString());
 										}
 									} else if (!value.includes('var(')) {
-										onValueChange('');
+										setValue('');
 									}
 								}}
 								onChange={(event) => {
-									onValueChange(event.target.value);
+									setValue(
+										normalizeValueHex(event.target.value)
+									);
 								}}
 								ref={inputRef}
 								type="text"
-								value={value}
+								value={internalValue}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
@@ -396,5 +423,15 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 		</FocusScope>
 	);
 };
+
+function normalizeValueHex(value: string) {
+	const isHex = tinycolor(value).getFormat() === 'hex';
+
+	if (isHex && value.indexOf('#') === 0) {
+		value = value.slice(1);
+	}
+
+	return value;
+}
 
 export default ClayColorPicker;

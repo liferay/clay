@@ -54,8 +54,8 @@ export const CustomColors = (args: any) => {
 			disabled={args.disabled}
 			label={args.label}
 			name="colorPicker2"
+			onChange={setColor}
 			onColorsChange={setCustoms}
-			onValueChange={setColor}
 			showHex={args.showHex}
 			title={args.title}
 			value={color}
@@ -88,8 +88,8 @@ export const CustomAndPredefinedColors = (args: any) => {
 			disabled={args.disabled}
 			label={args.label}
 			name="colorPicker2"
+			onChange={setColor}
 			onColorsChange={setCustoms}
-			onValueChange={setColor}
 			showHex
 			showPredefinedColorsWithCustom
 			title={args.title}
@@ -122,8 +122,8 @@ export const CustomPalette = (args: any) => {
 			disabled={args.disabled}
 			label={args.label}
 			name="colorPicker2"
+			onChange={setColor}
 			onColorsChange={setCustoms}
-			onValueChange={setColor}
 			showHex={args.showHex}
 			showPalette={false}
 			title={args.title}
@@ -169,7 +169,7 @@ export const Small = (args: any) => {
 		<ClayColorPicker
 			disabled={args.disabled}
 			label={args.label}
-			onValueChange={setColor}
+			onChange={setColor}
 			showHex={args.showHex}
 			small
 			title={args.title}
@@ -192,7 +192,7 @@ export const Validation = () => {
 
 	return (
 		<ClayForm.Group className={!valid ? 'has-error' : ''}>
-			<ClayColorPicker onValueChange={setColor} value={color} />
+			<ClayColorPicker onChange={setColor} value={color} />
 
 			{!valid && (
 				<ClayForm.FeedbackGroup>
