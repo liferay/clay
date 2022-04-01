@@ -19,17 +19,17 @@ const ariaLabels = {
 };
 
 const DatePickerWithState = ({
-	initialMonth = new Date(2019, 3, 18),
+	defaultMonth = new Date(2019, 3, 18),
 	years = {end: 2019, start: 2019},
 	...props
 }: any) => {
-	const [value, setValue] = React.useState();
+	const [value, setValue] = React.useState('');
 
 	return (
 		<ClayDatePicker
 			{...props}
-			initialMonth={initialMonth}
-			onValueChange={setValue}
+			defaultMonth={defaultMonth}
+			onChange={setValue}
 			value={value}
 			years={years}
 		/>
@@ -49,7 +49,7 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -90,7 +90,7 @@ describe('IncrementalInteractions', () => {
 		const {getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -109,7 +109,7 @@ describe('IncrementalInteractions', () => {
 			<>
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>
@@ -130,7 +130,7 @@ describe('IncrementalInteractions', () => {
 		const {getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -152,7 +152,7 @@ describe('IncrementalInteractions', () => {
 		const {getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				years={{
@@ -178,7 +178,7 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -203,7 +203,7 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -226,7 +226,7 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -249,8 +249,8 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
-				initialMonth={new Date(2019, 0, 18)}
+				defaultExpanded
+				defaultMonth={new Date(2019, 0, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				years={{
@@ -279,8 +279,8 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
-				initialMonth={new Date(2019, 11, 18)}
+				defaultExpanded
+				defaultMonth={new Date(2019, 11, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				years={{
@@ -307,7 +307,7 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -330,7 +330,7 @@ describe('IncrementalInteractions', () => {
 		const {getByLabelText, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
-				initialExpanded
+				defaultExpanded
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 			/>
@@ -354,7 +354,7 @@ describe('IncrementalInteractions', () => {
 			const {getByLabelText, getByTestId} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 					time
@@ -373,7 +373,7 @@ describe('IncrementalInteractions', () => {
 			const {getByLabelText, getByTestId} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 					time
@@ -399,7 +399,7 @@ describe('IncrementalInteractions', () => {
 			const {getByLabelText, getByTestId} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 					time
@@ -424,7 +424,7 @@ describe('IncrementalInteractions', () => {
 			const {getByLabelText, getByTestId} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 					time
@@ -452,7 +452,7 @@ describe('IncrementalInteractions', () => {
 			const {getByLabelText, getByTestId} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 					time
@@ -489,7 +489,7 @@ describe('IncrementalInteractions', () => {
 			const {getByLabelText} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					range
 					spritemap={spritemap}
@@ -513,7 +513,7 @@ describe('IncrementalInteractions', () => {
 			const {getByLabelText} = render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					range
 					spritemap={spritemap}
@@ -539,7 +539,7 @@ describe('IncrementalInteractions', () => {
 				const {getByLabelText} = render(
 					<DatePickerWithState
 						ariaLabels={ariaLabels}
-						initialExpanded
+						defaultExpanded
 						placeholder="YYYY-MM-DD"
 						range
 						spritemap={spritemap}

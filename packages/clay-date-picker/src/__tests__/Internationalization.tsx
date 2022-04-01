@@ -20,17 +20,17 @@ const ariaLabels = {
 };
 
 const DatePickerWithState = ({
-	initialMonth = new Date(2019, 3, 18),
+	defaultMonth = new Date(2019, 3, 18),
 	years = {end: 2019, start: 2019},
 	...props
 }: any) => {
-	const [value, setValue] = React.useState();
+	const [value, setValue] = React.useState('');
 
 	return (
 		<ClayDatePicker
 			{...props}
-			initialMonth={initialMonth}
-			onValueChange={setValue}
+			defaultMonth={defaultMonth}
+			onChange={setValue}
 			value={value}
 			years={years}
 		/>
@@ -45,8 +45,8 @@ describe('Internationalization', () => {
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				dateFormat="DD.MM.YYYY"
+				defaultExpanded
 				firstDayOfWeek={FirstDayOfWeek.Monday}
-				initialExpanded
 				months={[
 					'Январь',
 					'Февраль',
@@ -80,8 +80,8 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
+					defaultExpanded
 					firstDayOfWeek={FirstDayOfWeek.Sunday}
-					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>
@@ -94,7 +94,7 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
-					initialExpanded
+					defaultExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>
@@ -107,8 +107,8 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
+					defaultExpanded
 					firstDayOfWeek={FirstDayOfWeek.Tuesday}
-					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>
@@ -121,8 +121,8 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
+					defaultExpanded
 					firstDayOfWeek={FirstDayOfWeek.Wednesday}
-					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>
@@ -135,8 +135,8 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
+					defaultExpanded
 					firstDayOfWeek={FirstDayOfWeek.Thursday}
-					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>
@@ -149,8 +149,8 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
+					defaultExpanded
 					firstDayOfWeek={FirstDayOfWeek.Friday}
-					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>
@@ -163,8 +163,8 @@ describe('Internationalization', () => {
 			render(
 				<DatePickerWithState
 					ariaLabels={ariaLabels}
+					defaultExpanded
 					firstDayOfWeek={FirstDayOfWeek.Saturday}
-					initialExpanded
 					placeholder="YYYY-MM-DD"
 					spritemap={spritemap}
 				/>

@@ -15,11 +15,9 @@ describe('BasicRendering', () => {
 	it('renders by default', () => {
 		render(
 			<ClayDatePicker
-				initialMonth={new Date(2019, 3, 18)}
-				onValueChange={() => {}}
+				defaultMonth={new Date(2019, 3, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -27,14 +25,12 @@ describe('BasicRendering', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
-	it('renders the date picker with the selected day using the initialMonth', () => {
+	it('renders the date picker with the selected day using the defaultMonth', () => {
 		const {getByLabelText} = render(
 			<ClayDatePicker
-				initialMonth={new Date(2019, 3, 18)}
-				onValueChange={() => {}}
+				defaultMonth={new Date(2019, 3, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -47,12 +43,10 @@ describe('BasicRendering', () => {
 	it('renders date picker with dropdown open', () => {
 		render(
 			<ClayDatePicker
-				initialExpanded
-				initialMonth={new Date(2019, 3, 18)}
-				onValueChange={() => {}}
+				defaultExpanded
+				defaultMonth={new Date(2019, 3, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -63,14 +57,12 @@ describe('BasicRendering', () => {
 	it('renders date picker with time', () => {
 		render(
 			<ClayDatePicker
-				initialExpanded
-				initialMonth={new Date(2019, 3, 18)}
-				onValueChange={() => {}}
+				defaultExpanded
+				defaultMonth={new Date(2019, 3, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				time
 				timezone="GMT+01:00"
-				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -81,13 +73,11 @@ describe('BasicRendering', () => {
 	it('renders date picker with native picker', () => {
 		render(
 			<ClayDatePicker
-				initialExpanded
-				initialMonth={new Date(2019, 3, 18)}
-				onValueChange={() => {}}
+				defaultExpanded
+				defaultMonth={new Date(2019, 3, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
 				useNative
-				value=""
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -98,12 +88,10 @@ describe('BasicRendering', () => {
 	it('renders the date picker with years range', () => {
 		render(
 			<ClayDatePicker
-				initialExpanded
-				initialMonth={new Date(2019, 3, 18)}
-				onValueChange={() => {}}
+				defaultExpanded
+				defaultMonth={new Date(2019, 3, 18)}
 				placeholder="YYYY-MM-DD"
 				spritemap={spritemap}
-				value=""
 				years={{
 					end: 2024,
 					start: 1997,
