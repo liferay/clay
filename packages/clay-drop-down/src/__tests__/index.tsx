@@ -19,7 +19,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 		<ClayDropDown
 			{...others}
 			active={active}
-			onActiveChange={(val) => setActive(val)}
+			onActiveChange={setActive}
 			renderMenuOnClick
 			trigger={<button>Click Me</button>}
 		>

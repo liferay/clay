@@ -66,23 +66,6 @@ const ITEMS = [
 	},
 ];
 
-const DropDownWithState = ({children, ...others}: any) => {
-	const [active, setActive] = useState(false);
-
-	return (
-		<ClayDropDown
-			{...others}
-			active={active}
-			alignmentPosition={Align.BottomLeft}
-			onActiveChange={(newVal) => setActive(newVal)}
-			renderMenuOnClick
-			trigger={<ClayButton>Click Me</ClayButton>}
-		>
-			{children}
-		</ClayDropDown>
-	);
-};
-
 export default {
 	argTypes: {
 		alignmentPosition: {
@@ -101,34 +84,28 @@ export default {
 	title: 'Design System/Components/DropDown',
 };
 
-export const Default = (args: any) => {
-	const [active, setActive] = useState(false);
-
-	return (
-		<ClayDropDown
-			active={active}
-			alignmentPosition={args.alignmentPosition}
-			menuHeight={args.height}
-			menuWidth={args.width}
-			onActiveChange={(newVal) => setActive(newVal)}
-			renderMenuOnClick={args.renderMenuOnClick}
-			trigger={<ClayButton>Click Me</ClayButton>}
-		>
-			<ClayDropDown.ItemList>
-				{[
-					{href: '#one', label: 'one'},
-					{href: '#two', label: 'two'},
-					{disabled: true, href: '#three', label: 'three'},
-					{href: '#four', label: 'four'},
-				].map(({href, label, ...otherProps}, i) => (
-					<ClayDropDown.Item href={href} key={i} {...otherProps}>
-						{label}
-					</ClayDropDown.Item>
-				))}
-			</ClayDropDown.ItemList>
-		</ClayDropDown>
-	);
-};
+export const Default = (args: any) => (
+	<ClayDropDown
+		alignmentPosition={args.alignmentPosition}
+		menuHeight={args.height}
+		menuWidth={args.width}
+		renderMenuOnClick={args.renderMenuOnClick}
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
+		<ClayDropDown.ItemList>
+			{[
+				{href: '#one', label: 'one'},
+				{href: '#two', label: 'two'},
+				{disabled: true, href: '#three', label: 'three'},
+				{href: '#four', label: 'four'},
+			].map(({href, label, ...otherProps}, i) => (
+				<ClayDropDown.Item href={href} key={i} {...otherProps}>
+					{label}
+				</ClayDropDown.Item>
+			))}
+		</ClayDropDown.ItemList>
+	</ClayDropDown>
+);
 
 Default.args = {
 	alignmentPosition: 5,
@@ -138,7 +115,11 @@ Default.args = {
 };
 
 export const Groups = () => (
-	<DropDownWithState>
+	<ClayDropDown
+		alignmentPosition={Align.BottomLeft}
+		renderMenuOnClick
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Group header="Group #1">
 				{[
@@ -164,11 +145,15 @@ export const Groups = () => (
 				))}
 			</ClayDropDown.Group>
 		</ClayDropDown.ItemList>
-	</DropDownWithState>
+	</ClayDropDown>
 );
 
 export const Checkbox = () => (
-	<DropDownWithState>
+	<ClayDropDown
+		alignmentPosition={Align.BottomLeft}
+		renderMenuOnClick
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Section>
 				<ClayCheckbox
@@ -178,14 +163,18 @@ export const Checkbox = () => (
 				/>
 			</ClayDropDown.Section>
 		</ClayDropDown.ItemList>
-	</DropDownWithState>
+	</ClayDropDown>
 );
 
 export const Search = () => {
 	const [query, setQuery] = useState('');
 
 	return (
-		<DropDownWithState>
+		<ClayDropDown
+			alignmentPosition={Align.BottomLeft}
+			renderMenuOnClick
+			trigger={<ClayButton>Click Me</ClayButton>}
+		>
 			<ClayDropDown.Search
 				onChange={(event) => setQuery(event.target.value)}
 				value={query}
@@ -205,12 +194,16 @@ export const Search = () => {
 						</ClayDropDown.Item>
 					))}
 			</ClayDropDown.ItemList>
-		</DropDownWithState>
+		</ClayDropDown>
 	);
 };
 
 export const Radio = () => (
-	<DropDownWithState>
+	<ClayDropDown
+		alignmentPosition={Align.BottomLeft}
+		renderMenuOnClick
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Group header="Order">
 				<ClayDropDown.Section>
@@ -221,11 +214,15 @@ export const Radio = () => (
 				</ClayDropDown.Section>
 			</ClayDropDown.Group>
 		</ClayDropDown.ItemList>
-	</DropDownWithState>
+	</ClayDropDown>
 );
 
 export const CaptionAndHelp = () => (
-	<DropDownWithState>
+	<ClayDropDown
+		alignmentPosition={Align.BottomLeft}
+		renderMenuOnClick
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
 		<ClayDropDown.Help>Can I help you?</ClayDropDown.Help>
 
 		<ClayDropDown.ItemList>
@@ -241,11 +238,17 @@ export const CaptionAndHelp = () => (
 		</ClayDropDown.ItemList>
 
 		<ClayDropDown.Caption>... or maybe not.</ClayDropDown.Caption>
-	</DropDownWithState>
+	</ClayDropDown>
 );
 
 export const ItemsWithIcons = () => (
-	<DropDownWithState hasLeftSymbols hasRightSymbols>
+	<ClayDropDown
+		alignmentPosition={Align.BottomLeft}
+		hasLeftSymbols
+		hasRightSymbols
+		renderMenuOnClick
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
 		<ClayDropDown.ItemList>
 			{[
 				{label: 'Left', left: 'trash'},
@@ -261,11 +264,16 @@ export const ItemsWithIcons = () => (
 				</ClayDropDown.Item>
 			))}
 		</ClayDropDown.ItemList>
-	</DropDownWithState>
+	</ClayDropDown>
 );
 
 export const CustomOffset = () => (
-	<DropDownWithState offsetFn={() => [20, 20]}>
+	<ClayDropDown
+		alignmentPosition={Align.BottomLeft}
+		offsetFn={() => [20, 20]}
+		renderMenuOnClick
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
 		<ClayDropDown.ItemList>
 			{[
 				{href: '#one', label: 'one'},
@@ -278,7 +286,7 @@ export const CustomOffset = () => (
 				</ClayDropDown.Item>
 			))}
 		</ClayDropDown.ItemList>
-	</DropDownWithState>
+	</ClayDropDown>
 );
 
 export const AlignmentPositions = () => (

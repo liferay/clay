@@ -5,8 +5,8 @@
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import {
+	InternalDispatch,
 	MouseSafeArea,
-	TInternalStateOnChange,
 	useInternalState,
 } from '@clayui/shared';
 import React, {useContext, useRef, useState} from 'react';
@@ -58,7 +58,10 @@ interface IDropDownContentProps {
 }
 
 export interface IProps extends IDropDownContentProps {
-	active?: React.ComponentProps<typeof ClayDropDown>['active'];
+	/**
+	 * Flag to indicate if the DropDown menu is active or not (controlled).
+	 */
+	active?: boolean;
 
 	/**
 	 * Flag to align the DropDown menu within the viewport.
@@ -93,7 +96,7 @@ export interface IProps extends IDropDownContentProps {
 	>['containerElement'];
 
 	/**
-	 * Property to set the initial value of `active`.
+	 * Property to set the initial value of `active` (uncontrolled).
 	 */
 	defaultActive?: boolean;
 
@@ -129,7 +132,10 @@ export interface IProps extends IDropDownContentProps {
 	 */
 	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
 
-	onActiveChange?: TInternalStateOnChange<boolean>;
+	/**
+	 * Callback for when the active state changes (controlled).
+	 */
+	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
 	 * Callback will always be called when the user is interacting with search.
@@ -418,7 +424,7 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 	className,
 	closeOnClickOutside,
 	containerElement,
-	defaultActive,
+	defaultActive = false,
 	footerContent,
 	helpText,
 	items,
@@ -437,8 +443,8 @@ export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
 }: IProps) => {
 	const [internalActive, setInternalActive] = useInternalState({
 		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
 		handleName: 'onActiveChange',
-		initialValue: defaultActive,
 		name: 'active',
 		onChange: onActiveChange,
 		value: active,
