@@ -40,6 +40,19 @@ const ModalWithState: React.FunctionComponent<IProps> = ({
 	);
 };
 
+const ModalWithHookState = () => {
+	const {observer, onOpenChange, open} = useModal();
+
+	return (
+		<>
+			{open && <ClayModal observer={observer} spritemap={spritemap} />}
+			<Button aria-label="button" onClick={() => onOpenChange(true)}>
+				Foo
+			</Button>
+		</>
+	);
+};
+
 describe('Modal -> IncrementalInteractions', () => {
 	afterEach(() => {
 		jest.clearAllTimers();
@@ -62,6 +75,22 @@ describe('Modal -> IncrementalInteractions', () => {
 
 	it('open the modal', () => {
 		const {container, getByLabelText} = render(<ModalWithState />);
+
+		expect(document.body.classList).not.toContain('modal-open');
+
+		fireEvent.click(getByLabelText('button'), {});
+
+		expect(document.body.classList).toContain('modal-open');
+		expect(
+			container.querySelector('.modal-backdrop.fade.show')
+		).toBeDefined();
+		expect(
+			container.querySelector('.fade.modal.d-block.show')
+		).toBeDefined();
+	});
+
+	it('open the modal with useModal state', () => {
+		const {container, getByLabelText} = render(<ModalWithHookState />);
 
 		expect(document.body.classList).not.toContain('modal-open');
 
