@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
+
+### Features
+
+-   **@clayui/color-picker:** Add more test cases in color-picker ([89e5ef6](https://github.com/liferay/clay/commit/89e5ef6b4d91f43d6cbd072daaa37e1f6b0c9fb9))
+-   **@clayui/color-picker:** Adding more test cases and change snapshots by expect functions ([6ef292c](https://github.com/liferay/clay/commit/6ef292c48e6da6f8606db4616f1ff5f8d01bd871))
+-   **@clayui/color-picker:** Update snapshots ([e71da9d](https://github.com/liferay/clay/commit/e71da9d9304684b73e24fe5b9dff3e4380cbfdc3))
+-   **@clayui/color-picker:** Updates in test case title and not expecting splotch clicked ([6b5ff9f](https://github.com/liferay/clay/commit/6b5ff9f27b9472cae7f0fb76a15accb363b65117))
+
 # [3.50.0](https://github.com/liferay/clay/compare/v3.49.0...v3.50.0) (2022-03-21)
 
 ### Features

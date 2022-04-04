@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
+
+### Bug Fixes
+
+-   **@clayui/navigation-bar:** add truncate text OOTB to ClayNavigationBar.Item ([b8a53a2](https://github.com/liferay/clay/commit/b8a53a20d81e10fa065997d740fc000f58334a0c))
+-   **@clayui/navigator-bar:** Long text in Item is truncated ([587171d](https://github.com/liferay/clay/commit/587171d48bcfff641135176a2fae493c695d95b6))
+
+### Features
+
+-   **@clayui/navigation-bar:** add the `nav-link` class by default for Clay components ([c6cff02](https://github.com/liferay/clay/commit/c6cff020911b8080112f0b97199b353f996836f7))
+
 # [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
 
 **Note:** Version bump only for package @clayui/navigation-bar

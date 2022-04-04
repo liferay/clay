@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
+
+### Bug Fixes
+
+-   **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
+-   **@clayui/drop-down:** fix contextual menu error not rendering icons without spaces ([a115add](https://github.com/liferay/clay/commit/a115add1d60ff61012013932cbff42af31aff70e))
+-   **@clayui/navigation-bar:** add truncate text OOTB to ClayNavigationBar.Item ([b8a53a2](https://github.com/liferay/clay/commit/b8a53a20d81e10fa065997d740fc000f58334a0c))
+-   **@clayui/navigator-bar:** Long text in Item is truncated ([587171d](https://github.com/liferay/clay/commit/587171d48bcfff641135176a2fae493c695d95b6))
+-   **@clayui/shared:** fix error when controlling focus in React 17.x ([76f5f0d](https://github.com/liferay/clay/commit/76f5f0d964231d8442c780b44f6a320b50b9948b))
+
+### Features
+
+-   **@clay/empty-state:** Enable users to not render title related markup on empty-state ([608378b](https://github.com/liferay/clay/commit/608378b15985f273845d0fee7a91e486b4c78666))
+-   **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
+-   **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
+-   **@clayui/color-picker:** Add more test cases in color-picker ([89e5ef6](https://github.com/liferay/clay/commit/89e5ef6b4d91f43d6cbd072daaa37e1f6b0c9fb9))
+-   **@clayui/color-picker:** Adding more test cases and change snapshots by expect functions ([6ef292c](https://github.com/liferay/clay/commit/6ef292c48e6da6f8606db4616f1ff5f8d01bd871))
+-   **@clayui/color-picker:** Update snapshots ([e71da9d](https://github.com/liferay/clay/commit/e71da9d9304684b73e24fe5b9dff3e4380cbfdc3))
+-   **@clayui/color-picker:** Updates in test case title and not expecting splotch clicked ([6b5ff9f](https://github.com/liferay/clay/commit/6b5ff9f27b9472cae7f0fb76a15accb363b65117))
+-   **@clayui/modal:** When using ClayModalProvider, `footer`,`header` properties now are optional ([4bcbac2](https://github.com/liferay/clay/commit/4bcbac2d42be1c3d58876bbf65cd2e6d86c1b6fc))
+-   **@clayui/navigation-bar:** add the `nav-link` class by default for Clay components ([c6cff02](https://github.com/liferay/clay/commit/c6cff020911b8080112f0b97199b353f996836f7))
+
 # [3.51.0](https://github.com/liferay/clay/compare/v3.50.0...v3.51.0) (2022-03-28)
 
 ### Bug Fixes

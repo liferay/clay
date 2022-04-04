@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
+
+### Bug Fixes
+
+-   **@clayui/clay-tabs:** Insert displayType for nav-tabs and nav-underline classes ([10ddb29](https://github.com/liferay/clay/commit/10ddb29a88884e05d4d4f71caec111a58c809bb7))
+
+### Features
+
+-   **@clayui/clay-tabs:** Adding additional new tests ([d74322c](https://github.com/liferay/clay/commit/d74322c4820ef1f0bbb9c0c64263f82c39d70576))
+-   **@clayui/clay-tabs:** Remain modern prop and overrides displayType. Update in BREAKING.md ([cb9eb31](https://github.com/liferay/clay/commit/cb9eb31d3da70de3ccdb653a9e574da497d6ee84))
+
 # [3.49.0](https://github.com/liferay/clay/compare/v3.48.0...v3.49.0) (2022-03-15)
 
 **Note:** Version bump only for package @clayui/tabs
