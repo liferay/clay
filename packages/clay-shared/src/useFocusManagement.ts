@@ -135,7 +135,9 @@ const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
 	}
 
 	const internalKey = Object.keys(scope.current).find(
-		(key) => key.indexOf('__reactInternalInstance') === 0
+		(key) =>
+			key.indexOf('__reactInternalInstance') === 0 ||
+			key.indexOf('__reactFiber') === 0
 	);
 
 	if (internalKey) {
