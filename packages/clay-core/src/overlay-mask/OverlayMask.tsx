@@ -3,7 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
+import {
+	TInternalStateOnChange,
+	observeRect,
+	useInternalState,
+} from '@clayui/shared';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 type Bounds = {
@@ -124,15 +128,6 @@ export function OverlayMask<T>({
 	const childrenRef = useRef<HTMLElement | null>(null);
 
 	useIsomorphicLayoutEffect(() => {
-		if (childrenRef.current) {
-			const {height, width, x, y} =
-				childrenRef.current.getBoundingClientRect();
-
-			setBounds({height, width, x, y});
-		}
-	}, [visible]);
-
-	useIsomorphicLayoutEffect(() => {
 		if (containerRef.current) {
 			const {height, width, x, y} =
 				containerRef.current.getBoundingClientRect();
@@ -140,6 +135,23 @@ export function OverlayMask<T>({
 			setContainerBounds({height, width, x, y});
 		}
 	}, [visible]);
+
+	useIsomorphicLayoutEffect(() => {
+		if (childrenRef.current) {
+			const updater = () => {
+				if (!childrenRef.current) {
+					return;
+				}
+
+				const {height, width, x, y} =
+					childrenRef.current.getBoundingClientRect();
+
+				setBounds({height, width, x, y});
+			};
+
+			return observeRect(childrenRef.current, updater);
+		}
+	}, [setBounds]);
 
 	return (
 		<>
@@ -168,9 +180,10 @@ export function OverlayMask<T>({
 					style={{
 						bottom: 0,
 						left: 0,
-						position: 'absolute',
+						position: 'fixed',
 						right: 0,
 						top: 0,
+						zIndex: 1040,
 					}}
 				>
 					<svg

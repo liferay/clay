@@ -20,7 +20,7 @@ exports[`OverlayMask basic rendering render highlight for component via render p
     Button
   </button>
   <div
-    style="bottom: 0px; left: 0px; position: absolute; right: 0px; top: 0px;"
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
   >
     <svg
       height="0"
@@ -69,7 +69,7 @@ exports[`OverlayMask basic rendering render highlight for component with a custo
     Button
   </button>
   <div
-    style="bottom: 0px; left: 0px; position: absolute; right: 0px; top: 0px;"
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
   >
     <svg
       height="0"
@@ -118,7 +118,7 @@ exports[`OverlayMask basic rendering render highlight for the component 1`] = `
     Button
   </button>
   <div
-    style="bottom: 0px; left: 0px; position: absolute; right: 0px; top: 0px;"
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
   >
     <svg
       height="0"
@@ -161,7 +161,7 @@ exports[`OverlayMask basic rendering render highlight for the component 1`] = `
 exports[`OverlayMask basic rendering render highlight to a specific area 1`] = `
 <div>
   <div
-    style="bottom: 0px; left: 0px; position: absolute; right: 0px; top: 0px;"
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
   >
     <svg
       height="0"
