@@ -76,8 +76,8 @@ $management-bar-primary: map-deep-merge(
 					color: $navbar-light-active-color,
 				),
 				disabled: (
-					disabled-color: $navbar-light-disabled-color,
-					disabled-opacity: 1,
+					color: $navbar-light-disabled-color,
+					opacity: 1,
 				),
 			),
 		),
