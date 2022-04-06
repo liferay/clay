@@ -1,0 +1,89 @@
+---
+title: 'OverlayMask'
+description: 'OverlayMask create a highlight area on some DOM element with overlay.'
+packageNpm: '@clayui/core'
+packageStatus: 'Beta'
+---
+
+import {OverlayMaskExample} from '$packages/clay-core/docs/overlay-mask';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Example](#example)
+-   [Introduction](#introduction)
+-   [Area highlight](#area-highlight)
+    -   [React component](#react-component)
+    -   [Non-React component](#non-react-component)
+
+</div>
+</div>
+
+## Example
+
+<OverlayMaskExample />
+
+## Introduction
+
+Create a highlight area for some element in the DOM. The component can place the highlight automatically when passing a component with [`forwardRef`](https://reactjs.org/docs/react-api.html#reactforwardref) support as `children`, it is also possible to set the highlighted area if there is no `children` component.
+
+## Area highlight
+
+## React component
+
+There are two different ways to create the highlighted area for a component, this allows the component to determine the highlight area and keep updating when there is scroll on the page. The first, set the component as the component's `children`.
+
+```jsx
+<OverlayMask>
+	<ClayButton>Button</ClayButton>
+</OverlayMask>
+```
+
+Another option is for cases where it is not possible to define the component as the only child of the `<OverlayMask />`, define the children as a function and the `ref` object is passed via render props to add to the element that should get the highlight.
+
+```jsx
+<OverlayMask>
+	{(ref) => (
+		<>
+			<ClayButton>Button A</ClayButton>
+			<ClayButton ref={ref}>Button B</ClayButton>
+		</>
+	)}
+</OverlayMask>
+```
+
+## Non-React component
+
+The component can be controlled ie define a highlight area for a non-React element that is not managed by React, the difference is that you need to keep the area (bounds) updated if the page exists scroll.
+
+```jsx
+const logo = document.body.querySelector('.logo');
+const {height, width, x, y} = logo.getBoundingClientRect();
+
+<OverlayMask
+  defaultBounds={{
+    height,
+    width,
+    x,
+    y,
+  }}
+  visible
+/>
+
+// or
+
+const [bounds, setBounds] = useState({
+	height: 0,
+	width: 0,
+	x: 0,
+	y: 0,
+});
+
+useEffect(() => {...}, []);
+
+<OverlayMask
+  bounds={bounds}
+  onBoundsChange={setBounds}
+  visible
+/>
+```
