@@ -104,7 +104,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * React element that the popover will align to when clicked.
 	 */
-	trigger?: React.ReactElement & React.RefAttributes<HTMLButtonElement>;
+	trigger?: React.ReactElement &
+		Omit<React.RefAttributes<HTMLButtonElement>, 'key'>;
 
 	/**
 	 * Content to display in the header of the popover.
