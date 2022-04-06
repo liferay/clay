@@ -49,6 +49,12 @@ module.exports = {
 			lines: 90,
 			statements: 91,
 		},
+		'./packages/clay-core/src/overlay-mask/': {
+			branches: 82,
+			functions: 100,
+			lines: 94,
+			statements: 94,
+		},
 		'./packages/clay-core/src/tree-view/': {
 			branches: 69,
 			functions: 73,
