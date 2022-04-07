@@ -138,6 +138,10 @@
 .popover-header {
 	@include clay-css($popover-header);
 
+	&.popover-header-borderless {
+		@include clay-css(map-get($popover-header, borderless));
+	}
+
 	&::before {
 		@include clay-css(map-get($popover-header, before));
 	}

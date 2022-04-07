@@ -143,6 +143,10 @@
 .popover-header {
 	@include clay-css($cadmin-popover-header);
 
+	&.popover-header-borderless {
+		@include clay-css(map-get($cadmin-popover-header, borderless));
+	}
+
 	&::before {
 		@include clay-css(map-get($cadmin-popover-header, before));
 	}

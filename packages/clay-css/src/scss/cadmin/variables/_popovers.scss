@@ -9,6 +9,7 @@ $cadmin-popover-inner-border-radius: $cadmin-popover-border-radius -
 $cadmin-popover-box-shadow: 0 1px 15px -2px rgba(0, 0, 0, 0.2) !default;
 $cadmin-popover-font-size: $cadmin-font-size-sm !default;
 $cadmin-popover-max-width: 232px !default; // 232px
+$cadmin-popover-width-wider: 421px !default;
 
 $cadmin-popover-inline-scroller-max-height: 238px !default; // 238px
 
@@ -100,6 +101,9 @@ $cadmin-popover: map-deep-merge(
 				position: absolute,
 			),
 		),
+		wider: (
+			max-width: $cadmin-popover-width-wider,
+		),
 		inline-scroller: (
 			max-height: $cadmin-popover-inline-scroller-max-height,
 		),
@@ -129,6 +133,10 @@ $cadmin-popover-header: map-deep-merge(
 		margin-top: $cadmin-popover-header-margin-y,
 		padding: $cadmin-popover-header-padding-y
 			$cadmin-popover-header-padding-x,
+		borderless: (
+			border: none,
+			padding: 0.75rem 0 0,
+		),
 		empty: (
 			display: none,
 		),
