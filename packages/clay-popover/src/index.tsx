@@ -94,7 +94,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Callback for setting the offset of the popover from the trigger.
 	 */
-	offset?: (points: Point) => [number, number];
+	onOffset?: (points: Point) => [number, number];
 
 	/**
 	 * Callback for when the `show` prop changes.
@@ -123,7 +123,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			containerProps = {},
 			disableScroll = false,
 			header,
-			offset = (points) =>
+			onOffset = (points) =>
 				OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
 					number,
 					number
@@ -157,7 +157,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				const points = ALIGNMENTS_MAP[alignPosition];
 
 				doAlign({
-					offset: offset(points),
+					offset: onOffset(points),
 					points,
 					sourceElement: (ref as React.RefObject<HTMLElement>)
 						.current!,
