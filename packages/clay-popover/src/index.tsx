@@ -49,6 +49,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignPosition?: typeof ALIGN_POSITIONS[number];
 
 	/**
+	 * Defines whether the popover header should be borderless.
+	 */
+	borderless?: boolean;
+
+	/**
 	 * Flag to indicate if the popover should be closed when
 	 * clicking outside, only works if used with trigger
 	 */
@@ -85,12 +90,18 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Content to display in the header of the popover.
 	 */
 	header?: React.ReactNode;
+
+	/**
+	 * Defines whether the popover should be wider.
+	 */
+	wider?: boolean;
 }
 
 const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
 			alignPosition = 'bottom',
+			borderless = false,
 			children,
 			className,
 			closeOnClickOutside = false,
@@ -100,6 +111,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			onShowChange,
 			show: externalShow = false,
 			trigger,
+			wider = false,
 			...otherProps
 		}: IProps,
 		ref
@@ -207,7 +219,10 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					className,
 					'popover',
 					`clay-popover-${alignPosition}`,
-					{show}
+					{
+						'popover-width-wider': wider,
+						show,
+					}
 				)}
 				ref={ref as React.RefObject<HTMLDivElement>}
 				{...otherProps}
@@ -221,7 +236,15 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					ref={popoverScrollerRef}
 					tabIndex={!disableScroll ? -1 : undefined}
 				>
-					{header && <div className="popover-header">{header}</div>}
+					{header && (
+						<div
+							className={classNames('popover-header', {
+								'popover-header-borderless': borderless,
+							})}
+						>
+							{header}
+						</div>
+					)}
 
 					<div className="popover-body">{children}</div>
 				</div>
