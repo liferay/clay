@@ -17,9 +17,10 @@ type Bounds = {
 	y: number;
 };
 
-const M = (x: number, y: number) => `M ${x} ${y}`;
-const L = (x: number, y: number) => `L ${x} ${y}`;
-const arc = (toX: number, toY: number) => `A 0,0 0 0 0 ${toX},${toY}`;
+const MoveTo = (x: number, y: number) => `M ${x} ${y}`;
+const LineTo = (x: number, y: number) => `L ${x} ${y}`;
+const EllipticalArcCurve = (toX: number, toY: number) =>
+	`A 0,0 0 0 0 ${toX},${toY}`;
 
 const createClipPath = (
 	bounds: Bounds,
@@ -39,20 +40,20 @@ const createClipPath = (
 	const endY = startY + bounds.height + padding * 2;
 
 	return [
-		M(parentBounds.startX, parentBounds.startY),
-		L(parentBounds.startX, parentBounds.endY),
-		L(parentBounds.endX, parentBounds.endY),
-		L(parentBounds.endX, parentBounds.startY),
+		MoveTo(parentBounds.startX, parentBounds.startY),
+		LineTo(parentBounds.startX, parentBounds.endY),
+		LineTo(parentBounds.endX, parentBounds.endY),
+		LineTo(parentBounds.endX, parentBounds.startY),
 		'z',
-		M(startX, startY),
-		L(startX, endY),
-		arc(startX, endY),
-		L(endX, endY),
-		arc(endX, endY),
-		L(endX, startY),
-		arc(endX, startY),
-		L(startX, startY),
-		arc(startX, startY),
+		MoveTo(startX, startY),
+		LineTo(startX, endY),
+		EllipticalArcCurve(startX, endY),
+		LineTo(endX, endY),
+		EllipticalArcCurve(endX, endY),
+		LineTo(endX, startY),
+		EllipticalArcCurve(endX, startY),
+		LineTo(startX, startY),
+		EllipticalArcCurve(startX, startY),
 	].join(' ');
 };
 
