@@ -277,7 +277,6 @@ describe('FocusScope', () => {
 							{[
 								{href: '#one', label: 'one'},
 								{href: '#two', label: 'two'},
-								{href: '#three', label: 'three'},
 							].map((item, i) => (
 								<ClayDropDown.Item
 									href={item.href}
@@ -298,15 +297,31 @@ describe('FocusScope', () => {
 				'button1'
 			) as HTMLElement;
 
-			dropdownButton.click();
+			fireEvent.click(dropdownButton);
+
+			const itemOne = (document.body as HTMLElement).querySelector(
+				'a[href="#one"]'
+			);
 
 			userEvent.tab();
 
 			expect(dropdownButton).toHaveFocus();
 
+			const itemTwo = (document.body as HTMLElement).querySelector(
+				'a[href="#two"]'
+			);
+
 			userEvent.tab();
 
 			expect(htmlButton1).toHaveFocus();
+
+			userEvent.tab();
+
+			expect(itemOne).toHaveFocus();
+
+			userEvent.tab();
+
+			expect(itemTwo).toHaveFocus();
 		});
 
 		it('interacts without React.Portal', () => {
@@ -342,7 +357,29 @@ describe('FocusScope', () => {
 				'button1'
 			) as HTMLElement;
 
-			dropdownButton.click();
+			dropdownButton.focus();
+
+			fireEvent.click(dropdownButton);
+
+			const itemOne = (document.body as HTMLElement).querySelector(
+				'a[href="#one"]'
+			);
+
+			userEvent.tab();
+
+			expect(itemOne).toHaveFocus();
+
+			const itemTwo = (document.body as HTMLElement).querySelector(
+				'a[href="#two"]'
+			);
+
+			userEvent.tab();
+
+			expect(itemTwo).toHaveFocus();
+
+			userEvent.tab();
+
+			expect(document.body).toHaveFocus();
 
 			userEvent.tab();
 
