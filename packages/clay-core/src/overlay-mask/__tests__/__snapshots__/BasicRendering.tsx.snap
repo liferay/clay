@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OverlayMask basic rendering don't render highlighting for component when not visible 1`] = `
+<div>
+  <button
+    class="btn btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`OverlayMask basic rendering render highlight for component via render props 1`] = `
+<div>
+  <button
+    class="btn btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+  <div
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
+  >
+    <svg
+      height="0"
+      width="0"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <defs>
+          <clippath
+            id="overlayMask"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M 0 0 L 0 0 L 0 0 L 0 0 z M -10 -10 L -10 10 A 0,0 0 0 0 -10,10 L 10 10 A 0,0 0 0 0 10,10 L 10 -10 A 0,0 0 0 0 10,-10 L -10 -10 A 0,0 0 0 0 -10,-10"
+            />
+          </clippath>
+        </defs>
+        <rect
+          clip-path="url(#overlayMask)"
+          fill="#393a4a"
+          fill-opacity="0.8"
+          height="100%"
+          width="100%"
+          x="0"
+          y="0"
+        >
+          <animate
+            attributeName="opacity"
+            dur="0.3s"
+            repeatCount="1"
+            values="0;1"
+          />
+        </rect>
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`OverlayMask basic rendering render highlight for component with a custom padding 1`] = `
+<div>
+  <button
+    class="btn btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+  <div
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
+  >
+    <svg
+      height="0"
+      width="0"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <defs>
+          <clippath
+            id="overlayMask"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M 0 0 L 0 0 L 0 0 L 0 0 z M -50 -50 L -50 50 A 0,0 0 0 0 -50,50 L 50 50 A 0,0 0 0 0 50,50 L 50 -50 A 0,0 0 0 0 50,-50 L -50 -50 A 0,0 0 0 0 -50,-50"
+            />
+          </clippath>
+        </defs>
+        <rect
+          clip-path="url(#overlayMask)"
+          fill="#393a4a"
+          fill-opacity="0.8"
+          height="100%"
+          width="100%"
+          x="0"
+          y="0"
+        >
+          <animate
+            attributeName="opacity"
+            dur="0.3s"
+            repeatCount="1"
+            values="0;1"
+          />
+        </rect>
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`OverlayMask basic rendering render highlight for the component 1`] = `
+<div>
+  <button
+    class="btn btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+  <div
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
+  >
+    <svg
+      height="0"
+      width="0"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <defs>
+          <clippath
+            id="overlayMask"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M 0 0 L 0 0 L 0 0 L 0 0 z M -10 -10 L -10 10 A 0,0 0 0 0 -10,10 L 10 10 A 0,0 0 0 0 10,10 L 10 -10 A 0,0 0 0 0 10,-10 L -10 -10 A 0,0 0 0 0 -10,-10"
+            />
+          </clippath>
+        </defs>
+        <rect
+          clip-path="url(#overlayMask)"
+          fill="#393a4a"
+          fill-opacity="0.8"
+          height="100%"
+          width="100%"
+          x="0"
+          y="0"
+        >
+          <animate
+            attributeName="opacity"
+            dur="0.3s"
+            repeatCount="1"
+            values="0;1"
+          />
+        </rect>
+      </g>
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`OverlayMask basic rendering render highlight to a specific area 1`] = `
+<div>
+  <div
+    style="bottom: 0px; left: 0px; position: fixed; right: 0px; top: 0px; z-index: 1040;"
+  >
+    <svg
+      height="0"
+      width="0"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <defs>
+          <clippath
+            id="overlayMask"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M 0 0 L 0 0 L 0 0 L 0 0 z M 40 40 L 40 160 A 0,0 0 0 0 40,160 L 160 160 A 0,0 0 0 0 160,160 L 160 40 A 0,0 0 0 0 160,40 L 40 40 A 0,0 0 0 0 40,40"
+            />
+          </clippath>
+        </defs>
+        <rect
+          clip-path="url(#overlayMask)"
+          fill="#393a4a"
+          fill-opacity="0.8"
+          height="100%"
+          width="100%"
+          x="0"
+          y="0"
+        >
+          <animate
+            attributeName="opacity"
+            dur="0.3s"
+            repeatCount="1"
+            values="0;1"
+          />
+        </rect>
+      </g>
+    </svg>
+  </div>
+</div>
+`;

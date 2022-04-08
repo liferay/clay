@@ -42,6 +42,28 @@ const ALIGNMENTS_MAP = {
 	'top-right': ['br', 'tr'],
 } as const;
 
+type Point = typeof ALIGNMENTS_MAP[keyof typeof ALIGNMENTS_MAP];
+
+const BOTTOM_OFFSET = [0, 4] as const;
+const LEFT_OFFSET = [-4, 0] as const;
+const RIGHT_OFFSET = [4, 0] as const;
+const TOP_OFFSET = [0, -4] as const;
+
+const OFFSET_MAP = {
+	bctc: TOP_OFFSET,
+	blbr: RIGHT_OFFSET,
+	bltl: TOP_OFFSET,
+	brbl: LEFT_OFFSET,
+	brtr: TOP_OFFSET,
+	clcr: RIGHT_OFFSET,
+	crcl: LEFT_OFFSET,
+	tcbc: BOTTOM_OFFSET,
+	tlbl: BOTTOM_OFFSET,
+	tltr: RIGHT_OFFSET,
+	trbr: BOTTOM_OFFSET,
+	trtl: LEFT_OFFSET,
+};
+
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Position in which the tooltip will be aligned to the element.
@@ -70,6 +92,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	show?: boolean;
 
 	/**
+	 * Callback for setting the offset of the popover from the trigger.
+	 */
+	onOffset?: (points: Point) => [number, number];
+
+	/**
 	 * Callback for when the `show` prop changes.
 	 */
 	onShowChange?: (val: boolean) => void;
@@ -77,9 +104,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * React element that the popover will align to when clicked.
 	 */
-	trigger?: React.ReactElement & {
-		ref?: (node: HTMLButtonElement | null) => void;
-	};
+	trigger?: React.ReactElement &
+		Omit<React.RefAttributes<HTMLButtonElement>, 'key'>;
 
 	/**
 	 * Content to display in the header of the popover.
@@ -97,6 +123,11 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			containerProps = {},
 			disableScroll = false,
 			header,
+			onOffset = (points) =>
+				OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
+					number,
+					number
+				],
 			onShowChange,
 			show: externalShow = false,
 			trigger,
@@ -114,7 +145,8 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			ref = popoverRef as React.Ref<HTMLDivElement>;
 		}
 
-		const show = externalShow ? externalShow : internalShow;
+		const show =
+			typeof externalShow === 'boolean' ? externalShow : internalShow;
 		const setShow = onShowChange ? onShowChange : internalSetShow;
 
 		const align = useCallback(() => {
@@ -122,12 +154,10 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				(ref as React.RefObject<HTMLElement>).current &&
 				triggerRef.current
 			) {
-				const points = ALIGNMENTS_MAP[alignPosition] as [
-					string,
-					string
-				];
+				const points = ALIGNMENTS_MAP[alignPosition];
 
 				doAlign({
+					offset: onOffset(points),
 					points,
 					sourceElement: (ref as React.RefObject<HTMLElement>)
 						.current!,
@@ -245,6 +275,10 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 								const {ref} = trigger;
 								if (typeof ref === 'function') {
 									ref(node);
+								} else if (ref) {
+									(
+										ref as React.MutableRefObject<HTMLButtonElement>
+									).current = node;
 								}
 							}
 						},
