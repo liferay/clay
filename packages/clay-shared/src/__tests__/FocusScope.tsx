@@ -3,31 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayDropDown from '@clayui/drop-down';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import '@testing-library/jest-dom/extend-expect';
 import {ClayPortal, FocusScope} from '..';
-
-const DropDownWithState: React.FunctionComponent<any> = ({
-	children,
-	...others
-}) => {
-	const [active, setActive] = React.useState(false);
-
-	return (
-		<ClayDropDown
-			{...others}
-			active={active}
-			onActiveChange={(val) => setActive(val)}
-			trigger={<button>Click Me</button>}
-		>
-			{children}
-		</ClayDropDown>
-	);
-};
 
 describe('FocusScope', () => {
 	afterEach(() => {
@@ -252,7 +233,7 @@ describe('FocusScope', () => {
 			document.body.innerHTML = '';
 		});
 
-		it('interacts with React.Portal', () => {
+		it('interacts with React.Portal', async () => {
 			const {getByText} = render(
 				<FocusScope>
 					<div>
@@ -264,50 +245,36 @@ describe('FocusScope', () => {
 							</div>
 						</ClayPortal>
 
-						<DropDownWithState>
-							<ClayDropDown.ItemList>
-								{[
-									{href: '#one', label: 'one'},
-									{href: '#two', label: 'two'},
-								].map((item, i) => (
-									<ClayDropDown.Item
-										href={item.href}
-										key={i}
-										spritemap="/foo/bar"
-									>
-										{item.label}
-									</ClayDropDown.Item>
-								))}
-							</ClayDropDown.ItemList>
-						</DropDownWithState>
+						<ClayPortal>
+							<FocusScope>
+								<div id="content">
+									<button>one</button>
+									<button>two</button>
+								</div>
+							</FocusScope>
+						</ClayPortal>
 					</div>
 				</FocusScope>
 			);
 
 			const button1El = getByText('Button 1');
 			const button2El = getByText('Button 2');
-			const clickMeEl = getByText('Click Me');
 
-			userEvent.tab();
+			await userEvent.tab();
 
 			expect(button1El).toHaveFocus();
 
-			userEvent.tab();
+			await userEvent.tab();
 
 			expect(button2El).toHaveFocus();
 
-			userEvent.tab();
-			fireEvent.click(clickMeEl);
-
-			expect(clickMeEl).toHaveFocus();
-
-			userEvent.tab();
+			await userEvent.tab();
 
 			const oneEl = getByText('one');
 
 			expect(oneEl).toHaveFocus();
 
-			userEvent.tab();
+			await userEvent.tab();
 
 			const twoEl = getByText('two');
 
@@ -322,37 +289,23 @@ describe('FocusScope', () => {
 							<button>Button 1</button>
 						</div>
 
-						<DropDownWithState>
-							<ClayDropDown.ItemList>
-								{[
-									{href: '#one', label: 'one'},
-									{href: '#two', label: 'two'},
-								].map((item, i) => (
-									<ClayDropDown.Item
-										href={item.href}
-										key={i}
-										spritemap="/foo/bar"
-									>
-										{item.label}
-									</ClayDropDown.Item>
-								))}
-							</ClayDropDown.ItemList>
-						</DropDownWithState>
+						<ClayPortal>
+							<FocusScope>
+								<div id="content">
+									<button>one</button>
+									<button>two</button>
+								</div>
+							</FocusScope>
+						</ClayPortal>
 					</div>
 				</FocusScope>
 			);
 
 			const button1El = getByText('Button 1');
-			const clickMeEl = getByText('Click Me');
 
 			userEvent.tab();
 
 			expect(button1El).toHaveFocus();
-
-			userEvent.tab();
-			fireEvent.click(clickMeEl);
-
-			expect(clickMeEl).toHaveFocus();
 
 			userEvent.tab();
 
