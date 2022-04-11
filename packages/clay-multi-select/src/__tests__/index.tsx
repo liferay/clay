@@ -368,10 +368,10 @@ describe('Interactions', () => {
 					inputValue={value}
 					isLoading={isLoading}
 					items={selectedItems}
-					onChange={(newInputVal) => {
-						setValue(newInputVal);
+					onChange={(value: string) => {
+						setValue(value);
 
-						asyncData(newInputVal);
+						asyncData(value);
 					}}
 					onItemsChange={setSelectedItems}
 					sourceItems={items}

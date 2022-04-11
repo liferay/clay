@@ -27,11 +27,11 @@ const multiSelectCode = `const Component = () => {
 	return (
 		<ClayMultiSelect
 			inputName="myInput"
-			inputValue={value}
 			items={items}
 			onChange={setValue}
 			onItemsChange={setItems}
 			spritemap={spritemap}
+			value={value}
 		/>
 	);
 }
@@ -87,12 +87,12 @@ const multiSelectWithAutocompleteCode = `const Component = (props) => {
 		<ClayMultiSelect
 			{...props}
 			inputName="myInput"
-			inputValue={value}
 			items={items}
 			onChange={setValue}
 			onItemsChange={setItems}
 			sourceItems={sourceItems}
 			spritemap={spritemap}
+			value={value}
 		/>
 	);
 }
@@ -152,12 +152,12 @@ const multiSelectWithSelectButtonCode = `const Component = () => {
 				<ClayInput.GroupItem>
 					<ClayMultiSelect
 						inputName="myInput"
-						inputValue={value}
 						items={items}
 						onChange={setValue}
 						onItemsChange={setItems}
 						sourceItems={sourceItems}
 						spritemap={spritemap}
+						value={value}
 					/>
 				</ClayInput.GroupItem>
 				<ClayInput.GroupItem shrink>
@@ -228,12 +228,12 @@ const multiSelectWithValidationCode = `const Component = () => {
 				<ClayInput.GroupItem>
 					<ClayMultiSelect
 						inputName="myInput"
-						inputValue={value}
 						items={items}
 						onChange={setValue}
 						onItemsChange={setItems}
 						sourceItems={sourceItems}
 						spritemap={spritemap}
+						value={value}
 					/>
 
 					<ClayForm.FeedbackGroup>
@@ -338,13 +338,13 @@ const Component = () => {
 	return (
 		<ClayMultiSelect
 			inputName="myInput"
-			inputValue={value}
 			items={items}
 			menuRenderer={MenuCustom}
 			onChange={setValue}
 			onItemsChange={setItems}
 			sourceItems={sourceItems}
 			spritemap={spritemap}
+			value={value}
 		/>
 	);
 }
