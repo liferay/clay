@@ -80,6 +80,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	onShowChange?: (val: boolean) => void;
 
 	/**
+	 * Sets the size of the popover.
+	 */
+	size?: 'lg';
+
+	/**
 	 * React element that the popover will align to when clicked.
 	 */
 	trigger?: React.ReactElement & {
@@ -90,11 +95,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Content to display in the header of the popover.
 	 */
 	header?: React.ReactNode;
-
-	/**
-	 * Defines whether the popover should be wider.
-	 */
-	wider?: boolean;
 }
 
 const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
@@ -110,8 +110,8 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			header,
 			onShowChange,
 			show: externalShow = false,
+			size,
 			trigger,
-			wider = false,
 			...otherProps
 		}: IProps,
 		ref
@@ -220,7 +220,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					'popover',
 					`clay-popover-${alignPosition}`,
 					{
-						'popover-width-wider': wider,
+						'popover-width-lg': size === 'lg',
 						show,
 					}
 				)}

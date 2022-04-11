@@ -35,8 +35,8 @@
 /// 	inline-scroller: (
 /// 		// .popover .inline-scroller
 /// 	),
-/// 	wider: (
-/// 		// .popover.popover-width-wider
+/// 	width-lg: (
+/// 		// .popover.popover-width-lg
 /// 	),
 /// )
 
@@ -89,7 +89,7 @@
 				@include clay-css(map-get($map, inline-scroller));
 			}
 
-			&.popover-width-wider {
+			&.popover-width-lg {
 				@include clay-css(map-get($map, wider));
 			}
 		}

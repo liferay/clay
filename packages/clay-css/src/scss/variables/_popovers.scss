@@ -8,7 +8,7 @@ $popover-inner-border-radius: $popover-border-radius - $popover-border-width !de
 $popover-box-shadow: 0 0.25rem 0.5rem rgba($black, 0.2) !default;
 $popover-font-size: $font-size-sm !default;
 $popover-max-width: 276px !default;
-$popover-width-wider: 421px !default;
+$popover-width-lg: 421px !default;
 
 $popover-inline-scroller-max-height: 14.75rem !default;
 
@@ -100,8 +100,8 @@ $popover: map-deep-merge(
 				position: absolute,
 			),
 		),
-		wider: (
-			max-width: $popover-width-wider,
+		width-lg: (
+			max-width: $popover-width-lg,
 		),
 		inline-scroller: (
 			max-height: $popover-inline-scroller-max-height,
