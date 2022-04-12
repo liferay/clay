@@ -64,307 +64,333 @@
 /// - Add @link to documentation
 
 @mixin clay-close($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$base: map-merge(
-		$map,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($map, background-color)),
-		)
-	);
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+			)
+		);
 
-	$hover: setter(map-get($map, hover), ());
-	$hover: map-merge(
-		$hover,
-		(
-			background-color:
-				setter(
-					map-get($map, hover-bg),
-					map-get($hover, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, hover-border-color),
-					map-get($hover, border-color)
-				),
-			color: setter(map-get($map, hover-color), map-get($hover, color)),
-			opacity:
-				setter(map-get($map, hover-opacity), map-get($hover, opacity)),
-			text-decoration:
-				setter(
-					map-get($map, hover-text-decoration),
-					map-get($hover, text-decoration)
-				),
-		)
-	);
-
-	$focus: setter(map-get($map, focus), ());
-	$focus: map-merge(
-		$focus,
-		(
-			background-color:
-				setter(
-					map-get($map, focus-bg),
-					map-get($focus, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, focus-border-color),
-					map-get($focus, border-color)
-				),
-			border-radius:
-				setter(
-					map-get($map, focus-border-radius),
-					map-get($focus, border-radius)
-				),
-			box-shadow:
-				setter(
-					map-get($map, focus-box-shadow),
-					map-get($focus, box-shadow)
-				),
-			color: setter(map-get($map, focus-color), map-get($focus, color)),
-			opacity:
-				setter(map-get($map, focus-opacity), map-get($focus, opacity)),
-			outline:
-				setter(map-get($map, focus-outline), map-get($focus, outline)),
-			text-decoration:
-				setter(
-					map-get($map, focus-text-decoration),
-					map-get($focus, text-decoration)
-				),
-			z-index:
-				setter(map-get($map, focus-z-index), map-get($focus, z-index)),
-		)
-	);
-
-	$active: setter(map-get($map, active), ());
-	$active: map-merge(
-		$active,
-		(
-			background-color:
-				setter(
-					map-get($map, active-bg),
-					map-get($active, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, active-border-color),
-					map-get($active, border-color)
-				),
-			color: setter(map-get($map, active-color), map-get($active, color)),
-			font-weight:
-				setter(
-					map-get($map, active-font-weight),
-					map-get($active, font-weight)
-				),
-			z-index:
-				setter(map-get($map, active-z-index), map-get($active, z-index)),
-		)
-	);
-
-	$active-class: setter(map-get($map, active-class), ());
-	$active-class: map-merge(
-		$active-class,
-		(
-			background-color:
-				setter(
-					map-get($map, active-class-bg),
-					map-get($active-class, background-color),
-					map-get($active, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, active-class-border-color),
-					map-get($active-class, border-color),
-					map-get($active, border-color)
-				),
-			color:
-				setter(
-					map-get($map, active-class-color),
-					map-get($active-class, color),
-					map-get($active, color)
-				),
-			font-weight:
-				setter(
-					map-get($map, active-class-font-weight),
-					map-get($active-class, font-weight),
-					map-get($active, font-weight)
-				),
-			z-index:
-				setter(
-					map-get($map, active-class-z-index),
-					map-get($active-class, z-index),
-					map-get($active, z-index)
-				),
-		)
-	);
-
-	$disabled: setter(map-get($map, disabled), ());
-	$disabled: map-merge(
-		$disabled,
-		(
-			background-color:
-				setter(
-					map-get($map, disabled-bg),
-					map-get($disabled, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, disabled-border-color),
-					map-get($disabled, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, disabled-box-shadow),
-					map-get($disabled, box-shadow)
-				),
-			color:
-				setter(map-get($map, disabled-color), map-get($disabled, color)),
-			cursor:
-				setter(
-					map-get($map, disabled-cursor),
-					map-get($disabled, cursor)
-				),
-			opacity:
-				setter(
-					map-get($map, disabled-opacity),
-					map-get($disabled, opacity)
-				),
-			pointer-events:
-				setter(
-					map-get($map, disabled-pointer-events),
-					map-get($disabled, pointer-events)
-				),
-			text-decoration:
-				setter(
-					map-get($map, disabled-text-decoration),
-					map-get($disabled, text-decoration)
-				),
-		)
-	);
-
-	$disabled-active: setter(map-get($map, disabled-active), ());
-	$disabled-active: map-merge(
-		(
-			pointer-events: map-get($map, disabled-active-pointer-events),
-		),
-		$disabled-active
-	);
-
-	$btn-focus: setter(map-get($map, btn-focus), ());
-	$btn-focus: map-merge(
-		$btn-focus,
-		(
-			box-shadow:
-				setter(
-					map-get($map, btn-focus-box-shadow),
-					map-get($btn-focus, box-shadow)
-				),
-			outline:
-				setter(
-					map-get($map, btn-focus-outline),
-					map-get($btn-focus, outline)
-				),
-		)
-	);
-
-	$lexicon-icon: setter(map-get($map, lexicon-icon), ());
-	$lexicon-icon: map-merge(
-		$lexicon-icon,
-		(
-			font-size:
-				setter(
-					map-get($map, lexicon-icon-font-size),
-					map-get($lexicon-icon, font-size)
-				),
-			margin-bottom:
-				setter(
-					map-get($map, lexicon-icon-margin-bottom),
-					map-get($lexicon-icon, margin-bottom)
-				),
-			margin-left:
-				setter(
-					map-get($map, lexicon-icon-margin-left),
-					map-get($lexicon-icon, margin-left)
-				),
-			margin-right:
-				setter(
-					map-get($map, lexicon-icon-margin-right),
-					map-get($lexicon-icon, margin-right)
-				),
-			margin-top:
-				setter(
-					map-get($map, lexicon-icon-margin-top),
-					map-get($lexicon-icon, margin-top)
-				),
-		)
-	);
-
-	$c-inner: setter(map-get($map, c-inner), ());
-	$c-inner: map-merge(
-		(
-			enabled:
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
+		$hover: setter(map-get($map, hover), ());
+		$hover: map-merge(
+			$hover,
+			(
+				background-color:
+					setter(
+						map-get($map, hover-bg),
+						map-get($hover, background-color)
 					),
-					true
-				),
-			margin-bottom: math-sign(map-get($map, padding-bottom)),
-			margin-left: math-sign(map-get($map, padding-left)),
-			margin-right: math-sign(map-get($map, padding-right)),
-			margin-top: math-sign(map-get($map, padding-top)),
-		),
-		$c-inner
-	);
+				border-color:
+					setter(
+						map-get($map, hover-border-color),
+						map-get($hover, border-color)
+					),
+				color:
+					setter(map-get($map, hover-color), map-get($hover, color)),
+				opacity:
+					setter(
+						map-get($map, hover-opacity),
+						map-get($hover, opacity)
+					),
+				text-decoration:
+					setter(
+						map-get($map, hover-text-decoration),
+						map-get($hover, text-decoration)
+					),
+			)
+		);
 
-	@if ($enabled) {
-		@include clay-css($base);
+		$focus: setter(map-get($map, focus), ());
+		$focus: map-merge(
+			$focus,
+			(
+				background-color:
+					setter(
+						map-get($map, focus-bg),
+						map-get($focus, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, focus-border-color),
+						map-get($focus, border-color)
+					),
+				border-radius:
+					setter(
+						map-get($map, focus-border-radius),
+						map-get($focus, border-radius)
+					),
+				box-shadow:
+					setter(
+						map-get($map, focus-box-shadow),
+						map-get($focus, box-shadow)
+					),
+				color:
+					setter(map-get($map, focus-color), map-get($focus, color)),
+				opacity:
+					setter(
+						map-get($map, focus-opacity),
+						map-get($focus, opacity)
+					),
+				outline:
+					setter(
+						map-get($map, focus-outline),
+						map-get($focus, outline)
+					),
+				text-decoration:
+					setter(
+						map-get($map, focus-text-decoration),
+						map-get($focus, text-decoration)
+					),
+				z-index:
+					setter(
+						map-get($map, focus-z-index),
+						map-get($focus, z-index)
+					),
+			)
+		);
 
-		&:hover {
-			@include clay-css($hover);
-		}
+		$active: setter(map-get($map, active), ());
+		$active: map-merge(
+			$active,
+			(
+				background-color:
+					setter(
+						map-get($map, active-bg),
+						map-get($active, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, active-border-color),
+						map-get($active, border-color)
+					),
+				color:
+					setter(
+						map-get($map, active-color),
+						map-get($active, color)
+					),
+				font-weight:
+					setter(
+						map-get($map, active-font-weight),
+						map-get($active, font-weight)
+					),
+				z-index:
+					setter(
+						map-get($map, active-z-index),
+						map-get($active, z-index)
+					),
+			)
+		);
 
-		@at-root {
-			button#{&} {
-				&:focus {
-					@include clay-css($btn-focus);
+		$active-class: setter(map-get($map, active-class), ());
+		$active-class: map-merge(
+			$active-class,
+			(
+				background-color:
+					setter(
+						map-get($map, active-class-bg),
+						map-get($active-class, background-color),
+						map-get($active, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, active-class-border-color),
+						map-get($active-class, border-color),
+						map-get($active, border-color)
+					),
+				color:
+					setter(
+						map-get($map, active-class-color),
+						map-get($active-class, color),
+						map-get($active, color)
+					),
+				font-weight:
+					setter(
+						map-get($map, active-class-font-weight),
+						map-get($active-class, font-weight),
+						map-get($active, font-weight)
+					),
+				z-index:
+					setter(
+						map-get($map, active-class-z-index),
+						map-get($active-class, z-index),
+						map-get($active, z-index)
+					),
+			)
+		);
+
+		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-merge(
+			$disabled,
+			(
+				background-color:
+					setter(
+						map-get($map, disabled-bg),
+						map-get($disabled, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, disabled-border-color),
+						map-get($disabled, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, disabled-box-shadow),
+						map-get($disabled, box-shadow)
+					),
+				color:
+					setter(
+						map-get($map, disabled-color),
+						map-get($disabled, color)
+					),
+				cursor:
+					setter(
+						map-get($map, disabled-cursor),
+						map-get($disabled, cursor)
+					),
+				opacity:
+					setter(
+						map-get($map, disabled-opacity),
+						map-get($disabled, opacity)
+					),
+				pointer-events:
+					setter(
+						map-get($map, disabled-pointer-events),
+						map-get($disabled, pointer-events)
+					),
+				text-decoration:
+					setter(
+						map-get($map, disabled-text-decoration),
+						map-get($disabled, text-decoration)
+					),
+			)
+		);
+
+		$disabled-active: setter(map-get($map, disabled-active), ());
+		$disabled-active: map-merge(
+			(
+				pointer-events: map-get($map, disabled-active-pointer-events),
+			),
+			$disabled-active
+		);
+
+		$btn-focus: setter(map-get($map, btn-focus), ());
+		$btn-focus: map-merge(
+			$btn-focus,
+			(
+				box-shadow:
+					setter(
+						map-get($map, btn-focus-box-shadow),
+						map-get($btn-focus, box-shadow)
+					),
+				outline:
+					setter(
+						map-get($map, btn-focus-outline),
+						map-get($btn-focus, outline)
+					),
+			)
+		);
+
+		$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+		$lexicon-icon: map-merge(
+			$lexicon-icon,
+			(
+				font-size:
+					setter(
+						map-get($map, lexicon-icon-font-size),
+						map-get($lexicon-icon, font-size)
+					),
+				margin-bottom:
+					setter(
+						map-get($map, lexicon-icon-margin-bottom),
+						map-get($lexicon-icon, margin-bottom)
+					),
+				margin-left:
+					setter(
+						map-get($map, lexicon-icon-margin-left),
+						map-get($lexicon-icon, margin-left)
+					),
+				margin-right:
+					setter(
+						map-get($map, lexicon-icon-margin-right),
+						map-get($lexicon-icon, margin-right)
+					),
+				margin-top:
+					setter(
+						map-get($map, lexicon-icon-margin-top),
+						map-get($lexicon-icon, margin-top)
+					),
+			)
+		);
+
+		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-merge(
+			(
+				enabled:
+					setter(
+						if(
+							variable-exists(enable-c-inner),
+							$enable-c-inner,
+							$cadmin-enable-c-inner
+						),
+						true
+					),
+				margin-bottom: math-sign(map-get($map, padding-bottom)),
+				margin-left: math-sign(map-get($map, padding-left)),
+				margin-right: math-sign(map-get($map, padding-right)),
+				margin-top: math-sign(map-get($map, padding-top)),
+			),
+			$c-inner
+		);
+
+		@if ($enabled) {
+			@include clay-css($base);
+
+			&:hover {
+				@include clay-css($hover);
+			}
+
+			@at-root {
+				button#{&} {
+					&:focus {
+						@include clay-css($btn-focus);
+					}
 				}
 			}
-		}
 
-		&:focus {
-			@include clay-css($focus);
-		}
-
-		&:active {
-			@include clay-css($active);
-		}
-
-		&.active {
-			@include clay-css($active-class);
-		}
-
-		&:disabled,
-		&.disabled {
-			@include clay-css($disabled);
+			&:focus {
+				@include clay-css($focus);
+			}
 
 			&:active {
-				@include clay-css($disabled-active);
+				@include clay-css($active);
 			}
-		}
 
-		@if (map-get($c-inner, enabled)) {
-			.c-inner {
-				@include clay-css($c-inner);
+			&.active {
+				@include clay-css($active-class);
 			}
-		}
 
-		.lexicon-icon {
-			@include clay-css($lexicon-icon);
+			&:disabled,
+			&.disabled {
+				@include clay-css($disabled);
+
+				&:active {
+					@include clay-css($disabled-active);
+				}
+			}
+
+			@if (map-get($c-inner, enabled)) {
+				.c-inner {
+					@include clay-css($c-inner);
+				}
+			}
+
+			.lexicon-icon {
+				@include clay-css($lexicon-icon);
+			}
 		}
 	}
 }

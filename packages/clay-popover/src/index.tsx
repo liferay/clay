@@ -87,6 +87,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	disableScroll?: boolean;
 
 	/**
+	 * Appends the type to `popover-`
+	 */
+	displayType?: string;
+
+	/**
 	 * Flag to indicate if tooltip is displayed.
 	 */
 	show?: boolean;
@@ -100,6 +105,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Callback for when the `show` prop changes.
 	 */
 	onShowChange?: (val: boolean) => void;
+
+	/**
+	 * Sets the size of the popover.
+	 */
+	size?: 'lg';
 
 	/**
 	 * React element that the popover will align to when clicked.
@@ -122,6 +132,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			closeOnClickOutside = false,
 			containerProps = {},
 			disableScroll = false,
+			displayType,
 			header,
 			onOffset = (points) =>
 				OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
@@ -130,6 +141,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				],
 			onShowChange,
 			show: externalShow = false,
+			size,
 			trigger,
 			...otherProps
 		}: IProps,
@@ -237,7 +249,11 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					className,
 					'popover',
 					`clay-popover-${alignPosition}`,
-					{show}
+					{
+						[`popover-${displayType}`]: displayType,
+						'popover-width-lg': size === 'lg',
+						show,
+					}
 				)}
 				ref={ref as React.RefObject<HTMLDivElement>}
 				{...otherProps}

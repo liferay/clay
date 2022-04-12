@@ -107,6 +107,27 @@ $cadmin-popover: map-deep-merge(
 	$cadmin-popover
 );
 
+// Popovers
+
+$cadmin-popovers: () !default;
+$cadmin-popovers: map-deep-merge(
+	(
+		popover: $cadmin-popover,
+		popover-secondary: (
+			box-shadow: 0 8px 16px 0 rgba($cadmin-primary, 0.16),
+			popover-header: (
+				background-color: transparent,
+				border-color: transparent,
+				padding-bottom: 0,
+			),
+			close: (
+				color: $cadmin-gray-600,
+			),
+		),
+	),
+	$cadmin-popovers
+);
+
 // .popover-header
 
 $cadmin-popover-header: () !default;
@@ -136,6 +157,16 @@ $cadmin-popover-header: map-deep-merge(
 	$cadmin-popover-header
 );
 
+// Popover Headers
+
+$cadmin-popover-headers: () !default;
+$cadmin-popover-headers: map-deep-merge(
+	(
+		popover-header: $cadmin-popover-header,
+	),
+	$cadmin-popover-headers
+);
+
 // .popover-body
 
 $cadmin-popover-body: () !default;
@@ -149,6 +180,28 @@ $cadmin-popover-body: map-merge(
 		padding: $cadmin-popover-body-padding-y $cadmin-popover-body-padding-x,
 	),
 	$cadmin-popover-body
+);
+
+// Popover Bodies
+
+$cadmin-popover-bodies: () !default;
+$cadmin-popover-bodies: map-deep-merge(
+	(
+		popover-body: $cadmin-popover-body,
+	),
+	$cadmin-popover-bodies
+);
+
+// Popover Widths
+
+$cadmin-popover-widths: () !default;
+$cadmin-popover-widths: map-deep-merge(
+	(
+		popover-width-lg: (
+			max-width: 421px,
+		),
+	),
+	$cadmin-popover-widths
 );
 
 // .clay-popover-top, .clay-popover-top-left, .clay-popover-top-right

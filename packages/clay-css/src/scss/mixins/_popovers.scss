@@ -2,6 +2,52 @@
 /// @group popovers
 ////
 
+/// A mixin to help create `.popover-header` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .popover-header
+/// 	before: (
+/// 		// .popover-header::before
+/// 	),
+/// 	after: (
+/// 		// .popover-header::after
+/// 	),
+/// 	empty: (
+/// 		// .popover-header:empty
+/// 	),
+/// 	close: (
+/// 		// .popover-header .close
+/// 	),
+/// )
+
+@mixin clay-popover-header-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			&::before {
+				@include clay-css(map-get($map, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($map, after));
+			}
+
+			&:empty {
+				@include clay-css(map-get($map, empty));
+			}
+
+			.close {
+				@include clay-close(map-get($map, close));
+			}
+		}
+	}
+}
+
 /// A mixin to help create `.popover` variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
@@ -35,6 +81,9 @@
 /// 	inline-scroller: (
 /// 		// .popover .inline-scroller
 /// 	),
+/// 	close: (
+/// 		// .popover .close
+/// 	),
 /// )
 
 @mixin clay-popover-variant($map) {
@@ -57,25 +106,9 @@
 			}
 
 			.popover-header {
-				@include clay-css(map-get($map, popover-header));
-
-				&::before {
-					@include clay-css(
-						map-deep-get($map, popover-header, before)
-					);
-				}
-
-				&::after {
-					@include clay-css(
-						map-deep-get($map, popover-header, after)
-					);
-				}
-
-				&:empty {
-					@include clay-css(
-						map-deep-get($map, popover-header, empty)
-					);
-				}
+				@include clay-popover-header-variant(
+					map-get($map, popover-header)
+				);
 			}
 
 			.popover-body {
@@ -84,6 +117,10 @@
 
 			.inline-scroller {
 				@include clay-css(map-get($map, inline-scroller));
+			}
+
+			.close {
+				@include clay-close(map-get($map, close));
 			}
 		}
 	}

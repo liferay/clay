@@ -20,17 +20,16 @@ storiesOf('Components|ClayPopover', module)
 				select('Align Position', ALIGN_POSITIONS, 'bottom') as 'bottom'
 			}
 			disableScroll={boolean('Disable Scroll', false)}
+			displayType={select<'secondary' | undefined>(
+				'Display type',
+				['secondary'],
+				undefined
+			)}
 			header="Popover"
+			size={select<'lg' | undefined>('Size', ['lg'], undefined)}
 		>
-			{`Viennese flavour cup eu, percolator froth ristretto mazagran
-				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-				spoon acerbic to go macchiato strong. Viennese flavour cup eu, percolator froth ristretto mazagran
-				caffeine. White roast seasonal, mocha trifecta, dripper caffeine
-				spoon acerbic to go macchiato strong.`}
+			Viennese flavour cup eu, percolator froth ristretto mazagran
+			caffeine.
 		</ClayPopover>
 	))
 	.add('popover w/ trigger', () => {
