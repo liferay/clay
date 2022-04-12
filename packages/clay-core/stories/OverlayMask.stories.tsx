@@ -70,6 +70,7 @@ storiesOf('Components|OverlayMask', module)
 							<ClayPopover
 								alignPosition="right-top"
 								closeOnClickOutside
+								displayType="secondary"
 								header={
 									<ClayLayout.ContentRow
 										noGutters
@@ -83,6 +84,7 @@ storiesOf('Components|OverlayMask', module)
 										<ClayLayout.ContentCol>
 											<ClayButtonWithIcon
 												aria-label="close"
+												className="close"
 												displayType="unstyled"
 												onClick={() =>
 													setVisible(false)
@@ -95,7 +97,7 @@ storiesOf('Components|OverlayMask', module)
 								}
 								onShowChange={setVisible}
 								show={visible}
-								style={{maxWidth: '26rem'}}
+								size="lg"
 								trigger={
 									<ClayButton ref={ref}>Logo</ClayButton>
 								}
