@@ -49,11 +49,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	alignPosition?: typeof ALIGN_POSITIONS[number];
 
 	/**
-	 * Defines whether the popover header should be borderless.
-	 */
-	borderless?: boolean;
-
-	/**
 	 * Flag to indicate if the popover should be closed when
 	 * clicking outside, only works if used with trigger
 	 */
@@ -68,6 +63,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Flag to indicate if container should not be scrollable
 	 */
 	disableScroll?: boolean;
+
+	/**
+	 * Appends the type to `popover-`
+	 */
+	displayType?: string;
 
 	/**
 	 * Flag to indicate if tooltip is displayed.
@@ -101,12 +101,12 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
 			alignPosition = 'bottom',
-			borderless = false,
 			children,
 			className,
 			closeOnClickOutside = false,
 			containerProps = {},
 			disableScroll = false,
+			displayType,
 			header,
 			onShowChange,
 			show: externalShow = false,
@@ -220,6 +220,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					'popover',
 					`clay-popover-${alignPosition}`,
 					{
+						[`popover-${displayType}`]: displayType,
 						'popover-width-lg': size === 'lg',
 						show,
 					}
@@ -238,9 +239,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				>
 					{header && (
 						<div
-							className={classNames('popover-header', {
-								'popover-header-borderless': borderless,
-							})}
+							className={classNames('popover-header')}
 						>
 							{header}
 						</div>
