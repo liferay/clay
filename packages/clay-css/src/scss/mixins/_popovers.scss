@@ -2,6 +2,26 @@
 /// @group popovers
 ////
 
+/// A mixin to help create `.popover-header` variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .popover-header
+/// 	before: (
+/// 		// .popover-header::before
+/// 	),
+/// 	after: (
+/// 		// .popover-header::after
+/// 	),
+/// 	empty: (
+/// 		// .popover-header:empty
+/// 	),
+/// 	close: (
+/// 		// .popover-header .close
+/// 	),
+/// )
+
 @mixin clay-popover-header-variant($map) {
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
