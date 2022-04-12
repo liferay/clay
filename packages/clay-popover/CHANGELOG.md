@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.53.0](https://github.com/liferay/clay/compare/v3.52.0...v3.53.0) (2022-04-12)
+
+### Features
+
+-   **@clayui/popover:** adds `offset` prop and improves trigger reference support ([48ef287](https://github.com/liferay/clay/commit/48ef2878157568a650e88e474c9c4fe6f4cd0615))
+-   **@clayui/popover:** Adds displayType ([bdb1d70](https://github.com/liferay/clay/commit/bdb1d70324983a85ad3cef6841338d08b6fa73bd))
+-   **@clayui/popover:** adds new properties to borderless and wider ([1293041](https://github.com/liferay/clay/commit/1293041b9bfa449b68ae40aec13c5cba8927280b))
+-   **@clayui/popover:** replace `wider` prop with `size` and change css class name ([4d4b5fb](https://github.com/liferay/clay/commit/4d4b5fbaac38aa63669876b087d3c2cb6d7f99de))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 **Note:** Version bump only for package @clayui/popover

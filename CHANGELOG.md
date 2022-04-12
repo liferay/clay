@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.53.0](https://github.com/liferay/clay/compare/v3.52.0...v3.53.0) (2022-04-12)
+
+### Bug Fixes
+
+-   **@clayui/css:** Forms input sizes should be generated using the Clay Mixin pattern ([ad9792e](https://github.com/liferay/clay/commit/ad9792e58400b9e2da87f7aa48cfb39f2a1e5256))
+-   **@clayui/css:** Management Bar Primary we are passing unsupported property names in the disabled state ([73bff8c](https://github.com/liferay/clay/commit/73bff8cae8b63b82be1af107dc7d3dd1e310def3)), closes [#4792](https://github.com/liferay/clay/issues/4792)
+-   **@clayui/css:** Mixins `clay-generate-media-breakpoints` not outputting media queries ([2e415b9](https://github.com/liferay/clay/commit/2e415b995b122ec7753a61328254ca7226a799f7))
+-   **@clayui/css:** Mixins clay-close should check if parameter is a map ([01c437d](https://github.com/liferay/clay/commit/01c437de6695b2e38bcaedfac6bf2bf9261ebc7b))
+-   **@clayui/css:** Popovers adds popover-secondary ([2358ddf](https://github.com/liferay/clay/commit/2358ddf61a3bbf335b30413606be820a50d78fec))
+
+### Features
+
+-   **@clayui/clay-shared:** Add more test cases to FocusScope ([c81a6c1](https://github.com/liferay/clay/commit/c81a6c16d49f7164648e0db589a37406a2b0e30a))
+-   **@clayui/clay-shared:** Update ClayPortal test cases interacting with Dropdown ([1c0415a](https://github.com/liferay/clay/commit/1c0415aaad17b8e4057e0ef5d22e25017c47a265))
+-   **@clayui/core:** adds the new OverlayMask component ([a9b40cb](https://github.com/liferay/clay/commit/a9b40cb11862669d63b6fc724e0b210215d2bec7))
+-   **@clayui/css:** Add new `opacity`, `border-width` and `border-style` icons ([a22c388](https://github.com/liferay/clay/commit/a22c3884172a63e711602a483437abccce2425ba))
+-   **@clayui/css:** adds new classes to remove header border and wider for popover ([576789b](https://github.com/liferay/clay/commit/576789b0888155f3f3eb44892a8f79321dc7da86))
+-   **@clayui/css:** Cadmin Popover adds popover-secondary ([0e42484](https://github.com/liferay/clay/commit/0e424848a0649f417c4f412aaff0519d9b9376a9))
+-   **@clayui/css:** generate `_lx-icons-generated.scss` file ([cf346da](https://github.com/liferay/clay/commit/cf346da4557f2806e7f5c7b5ed5ee45771989b5c))
+-   **@clayui/css:** Mixins `clay-form-control-variant` should generate media query styles ([4bb42f7](https://github.com/liferay/clay/commit/4bb42f7f943ed25e291125e7dcd8945259c87078))
+-   **@clayui/popover:** adds `offset` prop and improves trigger reference support ([48ef287](https://github.com/liferay/clay/commit/48ef2878157568a650e88e474c9c4fe6f4cd0615))
+-   **@clayui/popover:** Adds displayType ([bdb1d70](https://github.com/liferay/clay/commit/bdb1d70324983a85ad3cef6841338d08b6fa73bd))
+-   **@clayui/popover:** adds new properties to borderless and wider ([1293041](https://github.com/liferay/clay/commit/1293041b9bfa449b68ae40aec13c5cba8927280b))
+-   **@clayui/popover:** replace `wider` prop with `size` and change css class name ([4d4b5fb](https://github.com/liferay/clay/commit/4d4b5fbaac38aa63669876b087d3c2cb6d7f99de))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 ### Bug Fixes
