@@ -142,6 +142,27 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-font-size-lg-mobile: null !default;
 $input-height-lg-mobile: null !default;
 
+$input-lg: () !default;
+$input-lg: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($input-border-radius-lg),
+		font-size: $input-font-size-lg,
+		height: $input-height-lg,
+		line-height: $input-line-height-lg,
+		padding-bottom: $input-padding-y-lg,
+		padding-left: $input-padding-x-lg,
+		padding-right: $input-padding-x-lg,
+		padding-top: $input-padding-y-lg,
+		media-breakpoint-down: (
+			sm: (
+				font-size: $input-font-size-lg-mobile,
+				height: $input-height-lg-mobile,
+			),
+		),
+	),
+	$input-lg
+);
+
 // Input Sm (.form-control-sm)
 
 $input-border-radius-sm: $border-radius-sm !default;
@@ -153,6 +174,26 @@ $input-padding-y-sm: $input-btn-padding-y-sm !default;
 
 $input-font-size-sm-mobile: null !default;
 $input-height-sm-mobile: null !default;
+
+$input-sm: () !default;
+$input-sm: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($input-border-radius-sm),
+		font-size: $input-font-size-sm,
+		height: $input-height-sm,
+		line-height: $input-line-height-sm,
+		padding-bottom: $input-padding-y-sm,
+		padding-left: $input-padding-x-sm,
+		padding-right: $input-padding-x-sm,
+		padding-top: $input-padding-y-sm,
+		media-breakpoint-down: (
+			sm: (
+				height: $input-height-sm-mobile,
+			),
+		),
+	),
+	$input-sm
+);
 
 // Input Label (<label>)
 
@@ -300,9 +341,42 @@ $input-plaintext-readonly: map-deep-merge(
 	$input-plaintext-readonly
 );
 
+// textarea.form-control, textarea.form-control-plaintext, .form-control.form-control-textarea
+
 $input-textarea-height: 150px !default;
+
+$input-textarea: () !default;
+$input-textarea: map-merge(
+	(
+		height: $input-textarea-height,
+		resize: vertical,
+	),
+	$input-textarea
+);
+
+// textarea.form-control-lg, .form-control-lg.form-control-textarea
+
 $input-textarea-height-lg: 190px !default;
+
+$input-textarea-lg: () !default;
+$input-textarea-lg: map-deep-merge(
+	(
+		height: $input-textarea-height-lg,
+	),
+	$input-textarea-lg
+);
+
+// textarea.form-control-sm, .form-control-sm.form-control-textarea
+
 $input-textarea-height-sm: 120px !default;
+
+$input-textarea-sm: () !default;
+$input-textarea-sm: map-deep-merge(
+	(
+		height: $input-textarea-height-sm,
+	),
+	$input-textarea-sm
+);
 
 // Form Control Label (Labels inside Form Control Tag Group)
 

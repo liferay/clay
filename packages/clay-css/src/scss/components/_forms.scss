@@ -305,8 +305,7 @@ select.form-control[multiple] {
 textarea.form-control,
 textarea.form-control-plaintext,
 .form-control.form-control-textarea {
-	height: $input-textarea-height;
-	resize: vertical;
+	@include clay-form-control-variant($input-textarea);
 }
 
 // File
@@ -445,23 +444,14 @@ textarea.form-control-plaintext,
 // Bootstrap 4 @extend .form-control-lg; work around
 
 %clay-form-control-lg {
-	@include border-radius($input-border-radius-lg);
-
-	font-size: $input-font-size-lg;
-	height: $input-height-lg;
-	padding-bottom: $input-padding-y-lg;
-	padding-left: $input-padding-x-lg;
-	padding-right: $input-padding-x-lg;
-	padding-top: $input-padding-y-lg;
-
-	@include clay-scale-component {
-		height: $input-height-lg-mobile;
-	}
+	@include clay-form-control-variant($input-lg);
 }
 
 .form-control-lg {
 	@extend %clay-form-control-lg;
 }
+
+// Select Lg
 
 %clay-select-form-control-lg {
 	height: $input-height-lg;
@@ -471,66 +461,34 @@ textarea.form-control-plaintext,
 	}
 }
 
+// Textarea Lg
+
 %clay-textarea-form-control-lg {
-	height: $input-textarea-height-lg;
+	@include clay-form-control-variant($input-textarea-lg);
 }
 
 textarea.form-control-lg,
 .form-control-lg.form-control-textarea {
-	height: $input-textarea-height-lg;
-}
-
-// Form control sizing
-// Build on `.form-control` with modifier classes to decrease or increase the
-// height and font-size of form controls.
-// Repeated in `_input_group.scss` to avoid Sass extend issues.
-
-.form-control-sm {
-	@include border-radius($input-border-radius-sm);
-
-	font-size: $input-font-size-sm;
-	height: $input-height-sm;
-	line-height: $input-line-height-sm;
-	padding: $input-padding-y-sm $input-padding-x-sm;
-}
-
-.form-control-lg {
-	@include border-radius($input-border-radius-lg);
-
-	font-size: $input-font-size-lg;
-	height: $input-height-lg;
-	line-height: $input-line-height-lg;
-	padding: $input-padding-y-lg $input-padding-x-lg;
+	@extend %clay-textarea-form-control-lg !optional;
 }
 
 // Bootstrap 4 @extend .form-control-sm; work around
 
 %clay-form-control-sm {
-	@include border-radius($input-border-radius-sm);
-
-	font-size: $input-font-size-sm;
-	height: $input-height-sm;
-	padding-bottom: $input-padding-y-sm;
-	padding-left: $input-padding-x-sm;
-	padding-right: $input-padding-x-sm;
-	padding-top: $input-padding-y-sm;
-
-	@include clay-scale-component {
-		height: $input-height-sm-mobile;
-	}
+	@include clay-form-control-variant($input-sm);
 }
 
 .form-control-sm {
-	@extend %clay-form-control-sm;
+	@extend %clay-form-control-sm !optional;
 }
 
+// Select Sm
+
 %clay-select-form-control-sm {
-	@include clay-css(setter($form-control-select-sm, ()));
+	@include clay-form-control-variant($form-control-select-sm);
 
 	@include clay-scale-component {
-		$mobile: setter(map-get($form-control-select-sm, mobile));
-
-		@include clay-css($mobile);
+		@include clay-css(map-get($form-control-select-sm, mobile));
 	}
 }
 
@@ -538,13 +496,15 @@ textarea.form-control-lg,
 	@extend %clay-select-form-control-sm !optional;
 }
 
+// Textarea Sm
+
 %clay-textarea-form-control-sm {
-	height: $input-textarea-height-sm;
+	@include clay-form-control-variant($input-textarea-sm);
 }
 
 textarea.form-control-sm,
 .form-control-sm.form-control-textarea {
-	height: $input-textarea-height-sm;
+	@extend %clay-textarea-form-control-sm !optional;
 }
 
 // Fieldset
