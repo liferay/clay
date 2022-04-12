@@ -237,13 +237,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					ref={popoverScrollerRef}
 					tabIndex={!disableScroll ? -1 : undefined}
 				>
-					{header && (
-						<div
-							className={classNames('popover-header')}
-						>
-							{header}
-						</div>
-					)}
+					{header && <div className="popover-header">{header}</div>}
 
 					<div className="popover-body">{children}</div>
 				</div>
