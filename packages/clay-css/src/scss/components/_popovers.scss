@@ -1,5 +1,15 @@
-.popover {
-	@include clay-popover-variant($popover);
+// Popovers
+
+@each $selector, $value in $popovers {
+	$selector: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-popover-variant($value);
+	}
 }
 
 %bs-popover-bottom {
@@ -135,28 +145,46 @@
 	@extend %bs-popover-top !optional;
 }
 
-.popover-header {
-	@include clay-css($popover-header);
+// Popover Headers
 
-	&.popover-header-borderless {
-		@include clay-css(map-get($popover-header, borderless));
-	}
+@each $selector, $value in $popover-headers {
+	$selector: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
 
-	&::before {
-		@include clay-css(map-get($popover-header, before));
-	}
-
-	&::after {
-		@include clay-css(map-get($popover-header, after));
-	}
-
-	&:empty {
-		@include clay-css(map-get($popover-header, empty));
+	#{$selector} {
+		@include clay-popover-header-variant($value);
 	}
 }
 
-.popover-body {
-	@include clay-css($popover-body);
+// Popover Bodies
+
+@each $selector, $value in $popover-bodies {
+	$selector: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-popover-header-variant($value);
+	}
+}
+
+// Popover Widths
+
+@each $selector, $value in $popover-widths {
+	$selector: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-popover-variant($value);
+	}
 }
 
 // Top
