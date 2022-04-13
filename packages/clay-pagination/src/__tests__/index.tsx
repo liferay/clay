@@ -16,7 +16,7 @@ describe('ClayPagination', () => {
 	it('renders', () => {
 		const {container} = render(
 			<ClayPaginationWithBasicItems
-				activePage={12}
+				defaultActive={12}
 				size="lg"
 				spritemap={spritemap}
 				totalPages={25}
@@ -29,7 +29,7 @@ describe('ClayPagination', () => {
 	it('renders with only one page', () => {
 		const {container} = render(
 			<ClayPaginationWithBasicItems
-				activePage={1}
+				defaultActive={1}
 				ellipsisBuffer={1}
 				spritemap={spritemap}
 				totalPages={1}
@@ -77,10 +77,27 @@ describe('ClayPagination', () => {
 		expect(changeMock).toHaveBeenLastCalledWith(25);
 	});
 
+	it('calls onPageChange when individual page is (using new properties)', () => {
+		const changeMock = jest.fn();
+
+		const {getByText} = render(
+			<ClayPaginationWithBasicItems
+				active={12}
+				onActiveChange={changeMock}
+				spritemap={spritemap}
+				totalPages={25}
+			/>
+		);
+
+		fireEvent.click(getByText('25'), {});
+
+		expect(changeMock).toHaveBeenLastCalledWith(25);
+	});
+
 	it('disable ellipsis when disableEllipsis prop is passed', () => {
 		const {getAllByText} = render(
 			<ClayPaginationWithBasicItems
-				activePage={12}
+				defaultActive={12}
 				disableEllipsis
 				spritemap={spritemap}
 				totalPages={25}
@@ -95,7 +112,7 @@ describe('ClayPagination', () => {
 	it('render pagination with links and active item without link', () => {
 		const {getByText} = render(
 			<ClayPaginationWithBasicItems
-				activePage={12}
+				defaultActive={12}
 				ellipsisBuffer={2}
 				hrefConstructor={(page) => `/#${page}`}
 				spritemap={spritemap}
@@ -115,7 +132,7 @@ describe('ClayPagination', () => {
 	it('shows dropdown when ellipsis is clicked', () => {
 		const {getAllByText} = render(
 			<ClayPaginationWithBasicItems
-				activePage={12}
+				defaultActive={12}
 				spritemap={spritemap}
 				totalPages={25}
 			/>
