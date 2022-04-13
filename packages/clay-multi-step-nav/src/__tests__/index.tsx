@@ -148,6 +148,40 @@ describe('ClayMultiStepNavWithBasicItems', () => {
 		expect(getByText('2').parentNode!.parentNode!).toHaveClass('active');
 	});
 
+	it('click on step change active state (using new properties)', () => {
+		const MultiStepNavWithBasicItems = () => {
+			const [active, setActive] = React.useState(0);
+
+			return (
+				<ClayMultiStepNavWithBasicItems
+					active={active}
+					onActiveChange={setActive}
+					spritemap={spritemap}
+					steps={[
+						{
+							subTitle: 'SubOne',
+							title: 'One',
+						},
+						{
+							subTitle: 'SubTwo',
+							title: 'Two',
+						},
+					]}
+				/>
+			);
+		};
+
+		const {getByText} = render(<MultiStepNavWithBasicItems />);
+
+		expect(getByText('2').parentNode!.parentNode!).not.toHaveClass(
+			'active'
+		);
+
+		fireEvent.click(getByText('2'));
+
+		expect(getByText('2').parentNode!.parentNode!).toHaveClass('active');
+	});
+
 	it('clicking on dropdown item activates that step', () => {
 		const {getByText} = render(
 			<ClayMultiStepNavWithBasicItemsWithState

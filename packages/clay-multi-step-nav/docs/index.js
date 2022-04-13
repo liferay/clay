@@ -120,9 +120,9 @@ const multiStepNavWithBasicItemsCode = `const Component = (props) => {
 
 	return (
 		<ClayMultiStepNavWithBasicItems
-			activeIndex={active}
+			active={active}
 			maxStepsShown={2}
-			onIndexChange={setActive}
+			onActiveChange={setActive}
 			spritemap={spritemap}
 			steps={steps}
 		/>
