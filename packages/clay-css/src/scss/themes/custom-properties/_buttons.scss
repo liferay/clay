@@ -19,7 +19,7 @@ $btn-padding-y-mobile: null !default;
 $btn-focus-width: $input-btn-focus-width !default;
 $btn-focus-box-shadow: $component-focus-box-shadow !default;
 
-$btn-active-box-shadow: none !default;
+$btn-active-box-shadow: $c-unset !default;
 
 $btn-disabled-cursor: $disabled-cursor !default;
 $btn-disabled-opacity: 0.4 !default;
@@ -30,56 +30,35 @@ $btn-section-font-size: 0.6875rem !default; // 11px
 $btn-section-font-weight: $font-weight-normal !default;
 $btn-section-line-height: 1 !default;
 
-$clay-root: clay-map-merge(
-	(
-		--btn-border-width: $btn-border-width,
-		--btn-border-radius: $btn-border-radius,
-		--btn-box-shadow: $btn-box-shadow,
-		--btn-color: $body-color,
-		--btn-font-family: $btn-font-family,
-		--btn-font-size: $btn-font-size,
-		--btn-font-weight: $btn-font-weight,
-		--btn-line-height: $btn-line-height,
-		--btn-padding-bottom: $btn-padding-y,
-		--btn-padding-left: $btn-padding-x,
-		--btn-padding-right: $btn-padding-x,
-		--btn-padding-top: $btn-padding-y,
-		--btn-transition: $btn-transition,
-		--btn-focus-box-shadow: $btn-focus-box-shadow,
-		--btn-disabled-opacity: $btn-disabled-opacity,
-		--btn-inline-item-font-size: $btn-inline-item-font-size,
-		--btn-btn-section-font-size: $btn-section-font-size,
-		--btn-btn-section-font-weight: $btn-section-font-weight,
-		--btn-btn-section-line-height: $btn-section-line-height,
-	),
-	$clay-root
-);
+$clay-root: map-merge((
+	--btn-focus-box-shadow: $btn-focus-box-shadow,
+), $clay-root);
 
 $btn: () !default;
 $btn: map-deep-merge(
 	(
-		background-color: var(--btn-background-color),
-		border-color: var(--btn-border-color, transparent),
-		border-style: var(--btn-border-style, solid),
-		border-width: var(--btn-border-width),
-		border-radius: clay-enable-rounded(var(--btn-border-radius)),
-		box-shadow: var(--btn-box-shadow),
-		color: var(--btn-color),
+		background-color: transparent,
+		border-color: transparent,
+		border-style: solid,
+		border-width: var(--btn-border-width, $btn-border-width),
+		border-radius: clay-enable-rounded(var(--btn-border-radius, $btn-border-radius)),
+		box-shadow: var(--btn-box-shadow, $btn-box-shadow),
+		color: var(--btn-color, $body-color),
 		cursor: $btn-cursor,
 		display: inline-block,
-		font-family: var(--btn-font-family),
-		font-size: var(--btn-font-size),
-		font-weight: var(--btn-font-weight),
-		line-height: var(--btn-line-height),
-		padding-bottom: var(--btn-padding-bottom),
-		padding-left: var(--btn-padding-left),
-		padding-right: var(--btn-padding-right),
-		padding-top: var(--btn-padding-top),
+		font-family: var(--btn-font-family, $btn-font-family),
+		font-size: var(--btn-font-size, $btn-font-size),
+		font-weight: var(--btn-font-weight, $btn-font-weight),
+		line-height: var(--btn-line-height, $btn-line-height),
+		padding-bottom: var(--btn-padding-y, $btn-padding-y),
+		padding-left: var(--btn-padding-x, $btn-padding-x),
+		padding-right: var(--btn-padding-x, $btn-padding-x),
+		padding-top: var(--btn-padding-y, $btn-padding-y),
 		text-align: center,
 		text-transform: none,
-		transition: clay-enable-transitions(var(--btn-transition)),
-		user-select: var(--btn-user-select, none),
-		vertical-align: var(--btn-vertical-align, middle),
+		transition: clay-enable-transitions(var(--btn-transition, $btn-transition)),
+		user-select: none,
+		vertical-align: middle,
 		white-space: $btn-white-space,
 		mobile: (
 			font-size: $btn-font-size-mobile,
@@ -89,7 +68,7 @@ $btn: map-deep-merge(
 			padding-top: $btn-padding-y-mobile,
 		),
 		hover: (
-			color: var(--btn-hover-color, var(--btn-color)),
+			color: $c-unset,
 			text-decoration: none,
 		),
 		focus: (
@@ -104,10 +83,13 @@ $btn: map-deep-merge(
 		),
 		active-class: (
 			box-shadow: $btn-active-box-shadow,
+			focus: (
+				box-shadow: var(--btn-focus-box-shadow),
+			),
 		),
 		disabled: (
 			cursor: $btn-disabled-cursor,
-			opacity: var(--btn-disabled-opacity),
+			opacity: var(--btn-disabled-opacity, $btn-disabled-opacity),
 			focus: (
 				box-shadow: none,
 			),
@@ -116,16 +98,16 @@ $btn: map-deep-merge(
 			),
 		),
 		inline-item: (
-			font-size: var(--btn-inline-item-font-size),
+			font-size: $btn-inline-item-font-size,
 			lexicon-icon: (
 				margin-top: 0,
 			),
 		),
 		btn-section: (
 			display: block,
-			font-size: var(--btn-btn-section-font-size),
-			font-weight: var(--btn-btn-section-font-weight),
-			line-height: var(--btn-btn-section-line-height),
+			font-size: $btn-section-font-size,
+			font-weight: $btn-section-font-weight,
+			line-height: $btn-section-line-height,
 		),
 	),
 	$btn
@@ -145,30 +127,16 @@ $btn-font-size-lg-mobile: null !default;
 $btn-padding-x-lg-mobile: null !default;
 $btn-padding-y-lg-mobile: null !default;
 
-$clay-root: clay-map-merge(
-	(
-		--btn-lg-border-radius: $btn-border-radius-lg,
-		--btn-lg-font-size: $btn-font-size-lg,
-		--btn-lg-line-height: $btn-line-height-lg,
-		--btn-lg-padding-bottom: $btn-padding-y-lg,
-		--btn-lg-padding-left: $btn-padding-x-lg,
-		--btn-lg-padding-right: $btn-padding-x-lg,
-		--btn-lg-padding-top: $btn-padding-y-lg,
-		--btn-lg-btn-section-font-size: $btn-section-font-size-lg,
-	),
-	$clay-root
-);
-
 $btn-lg: () !default;
 $btn-lg: map-deep-merge(
 	(
-		border-radius: clay-enable-rounded(var(--btn-lg-border-radius)),
-		font-size: var(--btn-lg-font-size),
-		line-height: var(--btn-lg-line-height),
-		padding-bottom: var(--btn-lg-padding-bottom),
-		padding-left: var(--btn-lg-padding-left),
-		padding-right: var(--btn-lg-padding-right),
-		padding-top: var(--btn-lg-padding-top),
+		border-radius: clay-enable-rounded(var(--btn-lg-border-radius, $btn-border-radius-lg)),
+		font-size: var(--btn-lg-font-size, $btn-font-size-lg),
+		line-height: var(--btn-lg-line-height, $btn-line-height-lg),
+		padding-bottom: var(--btn-lg-padding-y, $btn-padding-y-lg),
+		padding-left: var(--btn-lg-padding-x, $btn-padding-x-lg),
+		padding-right: var(--btn-lg-padding-x, $btn-padding-x-lg),
+		padding-top: var(--btn-lg-padding-y, $btn-padding-y-lg),
 		mobile: (
 			font-size: $btn-font-size-lg-mobile,
 			padding-bottom: $btn-padding-y-lg-mobile,
@@ -177,10 +145,10 @@ $btn-lg: map-deep-merge(
 			padding-top: $btn-padding-y-lg-mobile,
 		),
 		inline-item: (
-			font-size: var(--btn-lg-inline-item-font-size),
+			font-size: $c-unset,
 		),
 		btn-section: (
-			font-size: var(--btn-lg-btn-section-font-size),
+			font-size: $btn-section-font-size-lg,
 		),
 	),
 	$btn-lg
@@ -200,31 +168,16 @@ $btn-font-size-sm-mobile: null !default;
 $btn-padding-x-sm-mobile: null !default;
 $btn-padding-y-sm-mobile: null !default;
 
-$clay-root: clay-map-merge(
-	(
-		--btn-sm-border-radius: $btn-border-radius-sm,
-		--btn-sm-font-size: $btn-font-size-sm,
-		--btn-sm-line-height: $btn-line-height-sm,
-		--btn-sm-padding-bottom: $btn-padding-y-sm,
-		--btn-sm-padding-left: $btn-padding-x-sm,
-		--btn-sm-padding-right: $btn-padding-x-sm,
-		--btn-sm-padding-top: $btn-padding-y-sm,
-		--btn-sm-btn-section-font-size: $btn-section-font-size-sm,
-		--btn-sm-lexicon-icon-font-size: 1rem,
-	),
-	$clay-root
-);
-
 $btn-sm: () !default;
 $btn-sm: map-deep-merge(
 	(
-		border-radius: clay-enable-rounded(var(--btn-sm-border-radius)),
-		font-size: var(--btn-sm-font-size),
-		line-height: var(--btn-sm-line-height),
-		padding-bottom: var(--btn-sm-padding-bottom),
-		padding-left: var(--btn-sm-padding-left),
-		padding-right: var(--btn-sm-padding-right),
-		padding-top: var(--btn-sm-padding-top),
+		border-radius: clay-enable-rounded(var(--btn-sm-border-radius, $btn-border-radius-sm)),
+		font-size: var(--btn-sm-font-size, $btn-font-size-sm),
+		line-height: var(--btn-sm-line-height, $btn-line-height-sm),
+		padding-bottom: var(--btn-sm-padding-y, $btn-padding-y-sm),
+		padding-left: var(--btn-sm-padding-x, $btn-padding-x-sm),
+		padding-right: var(--btn-sm-padding-x, $btn-padding-x-sm),
+		padding-top: var(--btn-sm-padding-y, $btn-padding-y-sm),
 		mobile: (
 			font-size: $btn-font-size-sm-mobile,
 			padding-bottom: $btn-padding-y-sm-mobile,
@@ -233,13 +186,13 @@ $btn-sm: map-deep-merge(
 			padding-top: $btn-padding-y-sm-mobile,
 		),
 		inline-item: (
-			font-size: var(--btn-sm-inline-item-font-size),
+			font-size: $c-unset,
 		),
 		btn-section: (
-			font-size: var(--btn-sm-btn-section-font-size),
+			font-size: $btn-section-font-size-sm,
 		),
 		lexicon-icon: (
-			font-size: var(--btn-sm-lexicon-icon-font-size),
+			font-size: 1rem,
 		),
 	),
 	$btn-sm
@@ -264,40 +217,23 @@ $btn-monospaced-size: 2.5rem !default; // 40px
 
 $btn-monospaced-size-mobile: null !default;
 
-$clay-root: clay-map-merge(
-	(
-		--btn-monospaced-height: $btn-monospaced-size,
-		--btn-monospaced-line-height: 1,
-		--btn-monospaced-padding-bottom: $btn-monospaced-padding-y,
-		--btn-monospaced-padding-left: $btn-monospaced-padding-x,
-		--btn-monospaced-padding-right: $btn-monospaced-padding-x,
-		--btn-monospaced-padding-top: $btn-monospaced-padding-y,
-		--btn-monospaced-width: $btn-monospaced-size,
-	),
-	$clay-root
-);
-
 $btn-monospaced: () !default;
 $btn-monospaced: map-deep-merge(
 	(
 		align-items: center,
 		display: inline-flex,
 		flex-direction: column,
-		height: var(--btn-monospaced-height, $btn-monospaced-size),
+		height: var(--btn-monospaced-size, $btn-monospaced-size),
 		justify-content: center,
 		line-height: var(--btn-monospaced-line-height, 1),
 		overflow: hidden,
-		padding-bottom:
-			var(--btn-monospaced-padding-bottom, $btn-monospaced-padding-y),
-		padding-left:
-			var(--btn-monospaced-padding-left, $btn-monospaced-padding-x),
-		padding-right:
-			var(--btn-monospaced-padding-right, $btn-monospaced-padding-x),
-		padding-top:
-			var(--btn-monospaced-padding-top, $btn-monospaced-padding-y),
+		padding-bottom: $btn-monospaced-padding-y,
+		padding-left: $btn-monospaced-padding-x,
+		padding-right: $btn-monospaced-padding-x,
+		padding-top: $btn-monospaced-padding-y,
 		text-align: center,
 		white-space: normal,
-		width: var(--btn-monospaced-width, $btn-monospaced-size),
+		width: var(--btn-monospaced-size, $btn-monospaced-size),
 		word-wrap: break-word,
 		mobile: (
 			height: $btn-monospaced-size-mobile,
@@ -327,27 +263,16 @@ $btn-monospaced-size-lg: 3rem !default; // 48px
 
 $btn-monospaced-size-lg-mobile: null !default;
 
-$clay-root: clay-map-merge(
-	(
-		--btn-monospaced-lg-height: $btn-monospaced-size-lg,
-		--btn-monospaced-lg-padding-bottom: $btn-monospaced-padding-y-lg,
-		--btn-monospaced-lg-padding-left: $btn-monospaced-padding-x-lg,
-		--btn-monospaced-lg-padding-right: $btn-monospaced-padding-x-lg,
-		--btn-monospaced-lg-padding-top: $btn-monospaced-padding-y-lg,
-		--btn-monospaced-lg-width: $btn-monospaced-size-lg,
-	),
-	$clay-root
-);
-
 $btn-monospaced-lg: () !default;
 $btn-monospaced-lg: map-deep-merge(
 	(
-		height: var(--btn-monospaced-lg-height),
-		padding-bottom: var(--btn-monospaced-lg-padding-bottom),
-		padding-left: var(--btn-monospaced-lg-padding-left),
-		padding-right: var(--btn-monospaced-lg-padding-right),
-		padding-top: var(--btn-monospaced-lg-padding-top),
-		width: var(--btn-monospaced-lg-width),
+		height: var(--btn-monospaced-lg-size, $btn-monospaced-size-lg),
+		line-height: var(--btn-monospaced-lg-line-height, 1),
+		padding-bottom: $btn-monospaced-padding-y-lg,
+		padding-left: $btn-monospaced-padding-x-lg,
+		padding-right: $btn-monospaced-padding-x-lg,
+		padding-top: $btn-monospaced-padding-y-lg,
+		width: var(--btn-monospaced-lg-size, $btn-monospaced-size-lg),
 		mobile: (
 			height: $btn-monospaced-size-lg-mobile,
 			width: $btn-monospaced-size-lg-mobile,
@@ -364,27 +289,16 @@ $btn-monospaced-size-sm: 2rem !default; // 32px
 
 $btn-monospaced-size-sm-mobile: null !default;
 
-$clay-root: clay-map-merge(
-	(
-		--btn-monospaced-sm-height: $btn-monospaced-size-sm,
-		--btn-monospaced-sm-padding-bottom: $btn-monospaced-padding-y-sm,
-		--btn-monospaced-sm-padding-left: $btn-monospaced-padding-x-sm,
-		--btn-monospaced-sm-padding-right: $btn-monospaced-padding-x-sm,
-		--btn-monospaced-sm-padding-top: $btn-monospaced-padding-y-sm,
-		--btn-monospaced-sm-width: $btn-monospaced-size-sm,
-	),
-	$clay-root
-);
-
 $btn-monospaced-sm: () !default;
 $btn-monospaced-sm: map-deep-merge(
 	(
-		height: var(--btn-monospaced-sm-height),
-		padding-bottom: var(--btn-monospaced-sm-padding-bottom),
-		padding-left: var(--btn-monospaced-sm-padding-left),
-		padding-right: var(--btn-monospaced-sm-padding-right),
-		padding-top: var(--btn-monospaced-sm-padding-top),
-		width: var(--btn-monospaced-sm-width),
+		height: var(--btn-monospaced-sm-size, $btn-monospaced-size-sm),
+		line-height: var(--btn-monospaced-sm-line-height, 1),
+		padding-bottom: $btn-monospaced-padding-y-sm,
+		padding-left: $btn-monospaced-padding-x-sm,
+		padding-right: $btn-monospaced-padding-x-sm,
+		padding-top: $btn-monospaced-padding-y-sm,
+		width: var(--btn-monospaced-sm-size, $btn-monospaced-size-sm),
 		mobile: (
 			height: $btn-monospaced-size-sm-mobile,
 			width: $btn-monospaced-size-sm-mobile,
@@ -415,6 +329,7 @@ $btn-unstyled: () !default;
 $btn-unstyled: map-deep-merge(
 	(
 		background-color: rgba(0, 0, 0, 0.001),
+		box-shadow: none,
 		border-width: 0,
 		cursor: $btn-cursor,
 		font-size: inherit,
@@ -453,63 +368,70 @@ $btn-primary: map-deep-merge(
 		box-shadow: var(--btn-primary-box-shadow, var(--btn-box-shadow)),
 		color: var(--btn-primary-color, var(--white)),
 		hover: (
-			background-color:
-				var(--btn-primary-hover-background-color, var(--primary-d1)),
-			background-image: var(--btn-primary-hover-background-image),
-			border-color: var(--btn-primary-hover-border-color, transparent),
+			background-color: var(--btn-primary-hover-background-color, var(--btn-primary-background-color, var(--primary-d1))),
+			background-image: var(--btn-primary-hover-background-image, var(--btn-primary-background-image)),
+			border-color: var(--btn-primary-hover-border-color, var(--btn-primary-border-color, transparent)),
 			box-shadow:
 				var(
-					--btn-primary-hover-box-shadow, var(--btn-box-shadow)
+					--btn-primary-hover-box-shadow, var(--btn-primary-box-shadow, var(--btn-box-shadow))
 				),
-			color: var(--btn-primary-hover-color, var(--white)),
+			color: var(--btn-primary-hover-color, var(--btn-primary-color, var(--white))),
 		),
 		focus: (
 			background-color:
 				var(
-					--btn-primary-focus-background-color, var(--primary-d1)
+					--btn-primary-focus-background-color, var(--btn-primary-hover-background-color, var(--btn-primary-background-color, var(--primary-d1)))
 				),
 			background-image:
-				var(--btn-primary-focus-background-image, var(--btn-primary-hover-background-image)),
+				var(--btn-primary-focus-background-image, var(--btn-primary-hover-background-image, var(--btn-primary-background-image))),
 			border-color:
 				var(
-					--btn-primary-focus-border-color, transparent
+					--btn-primary-focus-border-color, var(--btn-primary-hover-border-color, var(--btn-primary-border-color, transparent))
 				),
 			box-shadow:
 				var(--btn-primary-focus-box-shadow, var(--btn-focus-box-shadow)),
 			color:
-				var(--btn-primary-focus-color, var(--white)),
+				var(--btn-primary-focus-color, var(--btn-primary-hover-color, var(--btn-primary-color, var(--white)))),
 		),
 		active: (
 			background-color:
-				var(--btn-primary-active-background-color, var(--primary-d2)),
+				var(--btn-primary-active-background-color, var(--btn-primary-focus-background-color, var(--btn-primary-hover-background-color, var(--btn-primary-background-color, var(--primary-d2))))),
 			background-image:
-				var(--btn-primary-active-background-image),
-			border-color: var(--btn-primary-active-border-color, transparent),
+				var(--btn-primary-active-background-image, var(--btn-primary-focus-background-image, var(--btn-primary-hover-background-image, var(--btn-primary-background-image)))),
+			border-color: var(--btn-primary-active-border-color, var(--btn-primary-focus-border-color, var(--btn-primary-hover-border-color, var(--btn-primary-border-color, transparent)))),
 			box-shadow:
 				var(
-					--btn-primary-active-box-shadow, var(--btn-box-shadow)
+					--btn-primary-active-box-shadow, var(--btn-primary-hover-box-shadow, var(--btn-primary-box-shadow, var(--btn-box-shadow)))
 				),
-			color: var(--btn-primary-active-color, var(--white)),
+			color: var(--btn-primary-active-color, var(--btn-primary-focus-color, var(--btn-primary-hover-color, var(--btn-primary-color, var(--white))))),
 			focus: (
-				box-shadow: var(--btn-primary-active-focus-box-shadow),
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
 			),
 		),
 		disabled: (
 			background-color:
 				var(
-					--btn-primary-disabled-background-color, var(--primary)
+					--btn-primary-disabled-background-color, var(--btn-primary-background-color, var(--primary))
 				),
 			background-image:
-				var(--btn-primary-disabled-background-image),
+				var(--btn-primary-disabled-background-image, var(--btn-primary-background-image)),
 			border-color:
 				var(
-					--btn-primary-disabled-border-color, transparent
+					--btn-primary-disabled-border-color, var(--btn-primary-border-color, transparent)
 				),
 			box-shadow:
 				var(
-					--btn-primary-disabled-box-shadow, var(--btn-box-shadow)
+					--btn-primary-disabled-box-shadow, var(--btn-primary-box-shadow, var(--btn-box-shadow))
 				),
-			color: var(--btn-primary-disabled-color, var(--white)),
+			color: var(--btn-primary-disabled-color, var(--btn-primary-color, var(--white))),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -526,42 +448,44 @@ $btn-secondary: map-deep-merge(
 		color: var(--btn-secondary-color, var(--secondary)),
 		hover: (
 			background-color:
-				var(--btn-secondary-hover-background-color, var(--gray-100)),
-			background-image: var(--btn-secondary-hover-background-image),
+				var(--btn-secondary-hover-background-color, var(--btn-secondary-background-color, var(--gray-100))),
+			background-image: var(--btn-secondary-hover-background-image, var(--btn-secondary-background-image)),
 			border-color:
-				var(--btn-secondary-hover-border-color, var(--secondary-l2)),
+				var(--btn-secondary-hover-border-color, var(--btn-secondary-border-color, var(--secondary-l2))),
 			box-shadow:
-				var(
-					--btn-secondary-hover-box-shadow,
-					var(--btn-secondary-box-shadow)
-				),
-			color: var(--btn-secondary-hover-color, var(--gray-900)),
+				var(--btn-secondary-hover-box-shadow, var(--btn-secondary-box-shadow, var(--btn-box-shadow))),
+			color: var(--btn-secondary-hover-color, var(--btn-secondary-color, var(--gray-900))),
 		),
 		focus: (
 			background-color:
-				var(--btn-secondary-focus-background-color, var(--gray-100)),
-			background-image: var(--btn-secondary-focus-background-image),
+				var(--btn-secondary-focus-background-color, var(--btn-secondary-hover-background-color, var(--btn-secondary-background-color, var(--white)))),
+			background-image: var(--btn-secondary-focus-background-image, var(--btn-secondary-hover-background-image, var(--btn-secondary-background-image))),
 			border-color:
-				var(--btn-secondary-focus-border-color, var(--secondary-l2)),
+				var(--btn-secondary-focus-border-color, var(--btn-secondary-hover-border-color, var(--btn-secondary-border-color, var(--secondary-l2)))),
 			box-shadow:
 				var(
 					--btn-secondary-focus-box-shadow,
 					var(--btn-focus-box-shadow)
 				),
-			color: var(--btn-secondary-focus-color, var(--gray-900)),
+			color: var(--btn-secondary-focus-color, var(--btn-secondary-hover-color, var(--btn-secondary-color, var(--gray-900)))),
 		),
 		active: (
 			background-color:
-				var(--btn-secondary-active-background-color, var(--gray-200)),
-			background-image: var(--btn-secondary-active-background-image),
+				var(--btn-secondary-active-background-color, var(--btn-secondary-focus-background-color, var(--btn-secondary-hover-background-color, var(--btn-secondary-background-color, var(--gray-200))))),
+			background-image: var(--btn-secondary-active-background-image, var(--btn-secondary-focus-background-image, var(--btn-secondary-hover-background-image, var(--btn-secondary-background-image)))),
 			box-shadow:
 				var(
 					--btn-secondary-active-box-shadow,
-					var(--btn-secondary-box-shadow)
+					var(--btn-secondary-hover-box-shadow, var(--btn-secondary-box-shadow, var(--btn-box-shadow)))
 				),
 			border-color:
-				var(--btn-secondary-active-border-color, var(--secondary-l2)),
-			color: var(--btn-secondary-active-color, var(--gray-900)),
+				var(--btn-secondary-active-border-color, var(--btn-secondary-focus-color, var(--btn-secondary-hover-border-color, var(--btn-secondary-border-color, var(--secondary-l2))))),
+			color: var(--btn-secondary-active-color, var(--btn-secondary-focus-color, var(--btn-secondary-hover-color, var(--btn-secondary-color, var(--gray-900))))),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
 			focus: (
 				box-shadow: $c-unset,
 			),
@@ -570,7 +494,7 @@ $btn-secondary: map-deep-merge(
 			background-color:
 				var(
 					--btn-secondary-disabled-background-color,
-					var(--white)
+					var(--btn-secondary-background-color, var(--white))
 				),
 			background-image:
 				var(
@@ -580,15 +504,18 @@ $btn-secondary: map-deep-merge(
 			border-color:
 				var(
 					--btn-secondary-disabled-border-color,
-					var(--secondary-l2)
+					var(--btn-secondary-border-color, var(--secondary-l2))
 				),
 			box-shadow:
 				var(
 					--btn-secondary-disabled-box-shadow,
-					var(--btn-box-shadow)
+					var(--btn-secondary-box-shadow, var(--btn-box-shadow))
 				),
 			color:
-				var(--btn-secondary-disabled-color, var(--secondary)),
+				var(--btn-secondary-disabled-color, var(--btn-secondary-color, var(--secondary))),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		loading-animation: null,
 	),
@@ -605,43 +532,37 @@ $btn-success: map-deep-merge(
 		color: var(--btn-success-color, var(--white)),
 		hover: (
 			background-color:
-				var(--btn-success-hover-background-color, var(--success-d1)),
-			background-image:
-				var(
-					--btn-success-hover-background-image,
-					var(--btn-success-background-image)
-				),
-			border-color: var(--btn-success-hover-border-color, transparent),
+				var(--btn-success-hover-background-color, var(--btn-success-background-color, var(--success-d1))),
+			background-image: var(--btn-success-hover-background-image, var(--btn-success-background-image)),
+			border-color: var(--btn-success-hover-border-color, var(--btn-success-border-color, transparent)),
 			box-shadow:
-				var(
-					--btn-success-hover-box-shadow,
-					var(--btn-success-box-shadow)
-				),
-			color: var(--btn-success-hover-color, var(--white)),
+				var(--btn-success-hover-box-shadow, var(--btn-success-box-shadow, var(--btn-box-shadow))),
+			color: var(--btn-success-hover-color, var(--btn-success-color, var(--white))),
 		),
 		focus: (
 			background-color:
-				var(--btn-success-focus-background-color, var(--success-d1)),
+				var(--btn-success-focus-background-color, var(--btn-success-hover-background-color, var(--btn-success-background-color, var(--success-d1)))),
 			background-image:
 				var(
 					--btn-success-focus-background-image,
-					var(--btn-success-hover-background-image)
+					var(--btn-success-hover-background-image, var(--btn-success-background-image))
 				),
-			border-color: var(--btn-success-focus-border-color, transparent),
+			border-color: var(--btn-success-focus-border-color, var(--btn-success-hover-border-color, var(--btn-success-border-color, transparent))),
 			box-shadow:
 				var(--btn-success-focus-box-shadow, var(--btn-focus-box-shadow)),
-			color: var(--btn-success-focus-color, var(--white)),
+			color: var(--btn-success-focus-color, var(--btn-success-hover-color, var(--btn-success-color, var(--white)))),
 		),
 		active: (
-			background-color:
-				var(--btn-success-active-background-color, var(--success-d2)),
-			background-image:
-				var(
-					--btn-success-active-background-image,
-					var(--btn-success-focus-background-image)
-				),
-			border-color: var(--btn-success-active-border-color, transparent),
-			color: var(--btn-success-active-color, var(--white)),
+			background-color: var(--btn-success-active-background-color, var(--btn-success-focus-background-color, var(--btn-success-hover-background-color, var(--btn-success-background-color, var(--success-d2))))),
+			background-image: var(--btn-success-active-background-image, var(--btn-success-focus-background-image, var(--btn-success-hover-background-image, var(--btn-success-background-image)))),
+			border-color: var(--btn-success-active-border-color, var(--btn-success-focus-border-color, var(--btn-success-hover-border-color, var(--btn-success-border-color, transparent)))),
+			box-shadow: var(--btn-success-active-box-shadow, var(--btn-success-hover-box-shadow, var(--btn-success-box-shadow, var(--btn-box-shadow)))),
+			color: var(--btn-success-active-color, var(--btn-success-focus-color, var(--btn-success-hover-color, var(--btn-success-color, var(--white))))),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
 			focus: (
 				box-shadow: $c-unset,
 			),
@@ -649,25 +570,32 @@ $btn-success: map-deep-merge(
 		disabled: (
 			background-color:
 				var(
-					--btn-success-disabled-background-color, var(--success)
+					--btn-success-disabled-background-color, var(--btn-success-background-color, var(--success))
 				),
-			background-image: var(--btn-success-disabled-background-image),
+			background-image: var(--btn-success-disabled-background-image, var(--btn-success-background-image)),
 			border-color:
 				var(
 					--btn-success-disabled-border-color,
-					transparent
+					var(--btn-success-border-color, transparent)
 				),
 			box-shadow:
 				var(
 					--btn-success-disabled-box-shadow,
-					var(--btn-box-shadow)
+					var(--btn-success-box-shadow, var(--btn-box-shadow))
 				),
-			color: var(--btn-success-disabled-color, var(--white)),
+			color: var(--btn-success-disabled-color, var(--btn-success-color, var(--white))),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-success
 );
+
+$clay-root: map-merge((
+	--btn-info-active-background-color: var(--info-d2),
+),$clay-root);
 
 $btn-info: () !default;
 $btn-info: map-deep-merge(
@@ -678,35 +606,43 @@ $btn-info: map-deep-merge(
 		box-shadow: var(--btn-info-box-shadow, var(--btn-box-shadow)),
 		color: var(--btn-info-color, var(--white)),
 		hover: (
-			background-color: var(--btn-info-hover-background-color, var(--info-d1)),
-			background-image: var(--btn-info-hover-background-image),
-			border-color: var(--btn-info-hover-border-color, transparent),
-			box-shadow: var(--btn-info-hover-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-info-hover-color, $white),
+			background-color: var(--btn-info-hover-background-color, var(--btn-info-background-color, var(--info-d1))),
+			background-image: var(--btn-info-hover-background-image, var(--btn-info-background-image)),
+			border-color: var(--btn-info-hover-border-color, var(--btn-info-border-color, transparent)),
+			box-shadow: var(--btn-info-hover-box-shadow, var(--btn-info-box-shadow, var(--btn-box-shadow))),
+			color: var(--btn-info-hover-color, var(--btn-info-color, var(--white))),
 		),
 		focus: (
-			background-color: var(--btn-info-focus-background-color, var(--info-d1)),
-			background-image: var(--btn-info-focus-background-image),
-			border-color: var(--btn-info-focus-border-color, transparent),
+			background-color: var(--btn-info-focus-background-color, var(--btn-info-hover-background-color, var(--btn-info-background-color, var(--info-d1)))),
+			background-image: var(--btn-info-focus-background-image, var(--btn-info-hover-background-image, var(--btn-info-background-image))),
+			border-color: var(--btn-info-focus-border-color, var(--btn-info-hover-border-color, var(--btn-info-border-color, transparent))),
 			box-shadow: var(--btn-info-focus-box-shadow, var(--btn-focus-box-shadow)),
-			color: var(--btn-info-focus-color, var(--white)),
+			color: var(--btn-info-focus-color, var(--btn-info-hover-color, var(--btn-info-color, var(--white)))),
 		),
 		active: (
-			background-color: var(--btn-info-active-background-color, var(--info-d2)),
-			background-image: var(--btn-info-active-background-image),
-			border-color: var(--btn-info-active-border-color, transparent),
-			box-shadow: var(--btn-info-active-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-info-active-color, var(--white)),
+			background-color: var(--btn-info-active-background-color, var(--btn-info-focus-background-color, var(--btn-info-hover-background-color, var(--btn-info-background-color, var(--info-d2))))),
+			background-image: var(--btn-info-active-background-image, var(--btn-info-focus-background-image, var(--btn-info-hover-background-image, var(--btn-info-background-image)))),
+			border-color: var(--btn-info-active-border-color, var(--btn-info-focus-border-color, var(--btn-info-hover-border-color, var(--btn-info-border-color, transparent)))),
+			box-shadow: var(--btn-info-active-box-shadow, var(--btn-info-hover-box-shadow, var(--btn-info-box-shadow, var(--btn-box-shadow)))),
+			color: var(--btn-info-active-color, var(--btn-info-focus-color, var(--btn-info-hover-color, var(--btn-info-color, var(--white))))),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
 			focus: (
 				box-shadow: $c-unset,
 			),
 		),
 		disabled: (
-			background-color: var(--btn-info-disabled-background-color, var(--info)),
-			background-image: var(--btn-info-disabled-background-image),
-			border-color: var(--btn-info-disabled-border-color, transparent),
-			box-shadow: var(--btn-info-disabled-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-info-disabled-color, var(--white)),
+			background-color: var(--btn-info-disabled-background-color, var(--btn-info-background-color, var(--info))),
+			background-image: var(--btn-info-disabled-background-image, var(--btn-info-background-image)),
+			border-color: var(--btn-info-disabled-border-color, var(--btn-info-border-color, transparent)),
+			box-shadow: var(--btn-info-disabled-box-shadow, var(--btn-info-box-shadow, var(--btn-box-shadow))),
+			color: var(--btn-info-disabled-color, var(--btn-info-color, var(--white))),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -724,15 +660,15 @@ $btn-warning: map-deep-merge(
 		hover: (
 			background-color:
 				var(--btn-warning-hover-background-color, var(--warning-d1)),
-			background-image: var(--btn-warning-hover-background-image),
+			background-image: var(--btn-warning-hover-background-image, var(--btn-warning-background-image)),
 			border-color: var(--btn-warning-hover-border-color, transparent),
-			box-shadow: var(--btn-warning-hover-box-shadow, var(--btn-box-shadow)),
+			box-shadow: var(--btn-warning-hover-box-shadow, var(--btn-warning-box-shadow, var(--btn-box-shadow))),
 			color: var(--btn-warning-hover-color, var(--white)),
 		),
 		focus: (
 			background-color:
 				var(--btn-warning-focus-background-color, var(--warning-d1)),
-			background-image: var(--btn-warning-focus-background-image),
+			background-image: var(--btn-warning-focus-background-image, var(--btn-warning-hover-background-image, var(--btn-warning-background-image))),
 			border-color: var(--btn-warning-focus-border-color, transparent),
 			box-shadow:
 				var(--btn-warning-focus-box-shadow, var(--btn-focus-box-shadow)),
@@ -741,158 +677,210 @@ $btn-warning: map-deep-merge(
 		active: (
 			background-color:
 				var(--btn-warning-active-background-color, var(--warning-d2)),
-			background-image: var(--btn-warning-active-background-image),
+			background-image: var(--btn-warning-active-background-image, var(--btn-warning-focus-background-image, var(--btn-warning-hover-background-image, var(--btn-warning-background-image)))),
 			border-color: var(--btn-warning-active-border-color, transparent),
-			box-shadow: var(--btn-warning-active-box-shadow, var(--btn-box-shadow)),
+			box-shadow: var(--btn-warning-active-box-shadow, var(--btn-warning-hover-box-shadow, var(--btn-warning-box-shadow, var(--btn-box-shadow)))),
 			color: var(--btn-warning-active-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
 			focus: (
 				box-shadow: $c-unset,
 			),
 		),
 		disabled: (
 			background-color:
-				var(--btn-warning-disabled-background-color, var(--warning)),
-			background-image: var(--btn-warning-disabled-background-image),
+				var(--btn-warning-disabled-background-color, var(--btn-warning-background-color, var(--warning))),
+			background-image: var(--btn-warning-disabled-background-image, var(--btn-warning-background-image)),
 			border-color: var(--btn-warning-disabled-border-color, transparent),
 			box-shadow: var(--btn-warning-disabled-box-shadow, var(--btn-box-shadow)),
 			color: var(--btn-warning-disabled-color, var(--white)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-warning
 );
 
+$clay-root: map-merge((
+	--btn-danger-background-color: var(--danger),
+	--btn-danger-border-color: transparent,
+	--btn-danger-color: var(--white),
+	--btn-danger-hover-background-color: var(--danger-d1),
+),$clay-root);
+
 $btn-danger: () !default;
 $btn-danger: map-deep-merge(
 	(
-		background-color: var(--btn-danger-background-color, var(--danger)),
+		background-color: var(--btn-danger-background-color),
 		background-image: var(--btn-danger-background-image),
-		border-color: var(--btn-danger-border-color, transparent),
+		border-color: var(--btn-danger-border-color),
 		box-shadow: var(--btn-danger-box-shadow, var(--btn-box-shadow)),
-		color: var(--btn-danger-color, var(--white)),
+		color: var(--btn-danger-color),
 		hover: (
 			background-color:
-				var(--btn-danger-hover-background-color, var(--danger-d1)),
+				var(--btn-danger-hover-background-color),
 			background-image: var(--btn-danger-hover-background-image),
-			border-color: var(--btn-danger-hover-border-color, transparent),
+			border-color: var(--btn-danger-hover-border-color, var(--btn-danger-border-color)),
 			box-shadow: var(--btn-danger-hover-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-danger-hover-color, var(--white)),
+			color: var(--btn-danger-hover-color, var(--btn-danger-color)),
 		),
 		focus: (
 			background-color:
-				var(--btn-danger-focus-background-color, var(--danger-d1)),
-			background-image: var(--btn-danger-focus-background-image),
-			border-color: var(--btn-danger-focus-border-color, transparent),
+				var(--btn-danger-focus-background-color, var(--btn-danger-hover-background-color)),
+			background-image: var(--btn-danger-focus-background-image, var(--btn-danger-hover-background-image)),
+			border-color: var(--btn-danger-focus-border-color, var(--btn-danger-border-color)),
 			box-shadow:
 				var(--btn-danger-focus-box-shadow, var(--btn-focus-box-shadow)),
-			color: var(--btn-danger-focus-color, var(--white)),
+			color: var(--btn-danger-focus-color, var(--btn-danger-color)),
 		),
 		active: (
 			background-color:
 				var(--btn-danger-active-background-color, var(--danger-d2)),
 			background-image: var(--btn-danger-active-background-image),
-			border-color: var(--btn-danger-active-border-color, transparent),
+			border-color: var(--btn-danger-active-border-color, var(--btn-danger-border-color)),
 			box-shadow: var(--btn-danger-active-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-danger-active-color, var(--white)),
+			color: var(--btn-danger-active-color, var(--btn-danger-color)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
 			focus: (
 				box-shadow: $c-unset,
 			),
 		),
 		disabled: (
 			background-color:
-				var(--btn-danger-disabled-background-color, var(--danger)),
-			background-image: var(--btn-danger-disabled-background-image),
-			border-color: var(--btn-danger-disabled-border-color, transparent),
+				var(--btn-danger-disabled-background-color, var(--btn-danger-background-color)),
+			background-image: var(--btn-danger-disabled-background-image, var(--btn-danger-background-image)),
+			border-color: var(--btn-danger-disabled-border-color, var(--btn-danger-border-color)),
 			box-shadow: var(--btn-danger-disabled-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-danger-disabled-color, var(--white)),
+			color: var(--btn-danger-disabled-color, var(--btn-danger-color)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		loading-animation: 'loading-animation-light',
 	),
 	$btn-danger
 );
 
+$clay-root: map-merge((
+	--btn-light-background-color: var(--light),
+	--btn-light-border-color: transparent,
+	--btn-light-color: var(--gray-900),
+),$clay-root);
+
 $btn-light: () !default;
 $btn-light: map-deep-merge(
 	(
-		background-color: var(--btn-light-background-color, var(--light)),
+		background-color: var(--btn-light-background-color),
 		background-image: var(--btn-light-background-image),
-		border-color: var(--btn-light-border-color, transparent),
+		border-color: var(--btn-light-border-color),
 		box-shadow: var(--btn-light-box-shadow, var(--btn-box-shadow)),
-		color: var(--btn-light-color, var(--gray-900)),
+		color: var(--btn-light-color),
 		hover: (
-			background-color: var(--btn-light-hover-background-color, var(--light-d1)),
+			background-color: var(--btn-light-hover-background-color),
 			background-image: var(--btn-light-hover-background-image),
-			border-color: var(--btn-light-hover-border-color, transparent),
+			border-color: var(--btn-light-hover-border-color, var(--btn-light-border-color)),
 			box-shadow: var(--btn-light-hover-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-light-hover-color, var(--gray-900)),
+			color: var(--btn-light-hover-color, var(--btn-light-color)),
 		),
 		focus: (
-			background-color: var(--btn-light-focus-background-color, var(--light-d1)),
-			background-image: var(--btn-light-focus-background-image),
-			border-color: var(--btn-light-focus-border-color, transparent),
+			background-color: var(--btn-light-focus-background-color, var(--btn-light-hover-background-color)),
+			background-image: var(--btn-light-focus-background-image, var(--btn-light-hover-background-image)),
+			border-color: var(--btn-light-focus-border-color, var(--btn-light-border-color)),
 			box-shadow: var(--btn-light-focus-box-shadow, var(--btn-focus-box-shadow)),
-			color: var(--btn-light-focus-color, var(--gray-900)),
+			color: var(--btn-light-focus-color, var(--btn-light-color)),
 		),
 		active: (
 			background-color:
 				var(--btn-light-active-background-color, var(--light-d2)),
 			background-image: var(--btn-light-active-background-image),
-			border-color: var(--btn-light-active-border-color, transparent),
+			border-color: var(--btn-light-active-border-color, var(--btn-light-border-color)),
 			box-shadow: var(--btn-light-active-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-light-active-color, var(--gray-900)),
+			color: var(--btn-light-active-color, var(--btn-light-color)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
 			focus: (
 				box-shadow: $c-unset,
 			),
 		),
 		disabled: (
-			background-color: var(--btn-light-disabled-background-color, var(--light)),
-			background-image: var(--btn-light-disabled-background-image),
-			border-color: var(--btn-light-disabled-border-color, transparent),
+			background-color: var(--btn-light-disabled-background-color, var(--btn-light-background-color)),
+			background-image: var(--btn-light-disabled-background-image, var(--btn-light-background-image)),
+			border-color: var(--btn-light-disabled-border-color, var(--btn-light-border-color)),
 			box-shadow: var(--btn-light-disabled-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-light-disabled-color, var(--gray-900)),
+			color: var(--btn-light-disabled-color, var(--btn-light-color)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-light
 );
 
+$clay-root: map-merge((
+	--btn-dark-background-color: var(--dark),
+	--btn-dark-border-color: transparent,
+	--btn-dark-color: var(--white),
+	--btn-dark-hover-background-color: var(--dark-d1),
+),$clay-root);
+
 $btn-dark: () !default;
 $btn-dark: map-deep-merge(
 	(
-		background-color: var(--btn-dark-background-color, var(--dark)),
+		background-color: var(--btn-dark-background-color),
 		background-image: var(--btn-dark-background-image),
-		border-color: var(--btn-dark-border-color, transparent),
+		border-color: var(--btn-dark-border-color),
 		box-shadow: var(--btn-dark-box-shadow, var(--btn-box-shadow)),
-		color: var(--btn-dark-color, var(--white)),
+		color: var(--btn-dark-color),
 		hover: (
-			background-color: var(--btn-dark-hover-background-color, var(--dark-d1)),
+			background-color: var(--btn-dark-hover-background-color),
 			background-image: var(--btn-dark-hover-background-image),
-			border-color: var(--btn-dark-hover-border-color, transparent),
+			border-color: var(--btn-dark-hover-border-color, var(--btn-dark-border-color)),
 			box-shadow: var(--btn-dark-hover-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-dark-hover-color, var(--white)),
+			color: var(--btn-dark-hover-color, var(--btn-dark-color)),
 		),
 		focus: (
-			background-color: var(--btn-dark-focus-background-color, var(--dark-d1)),
-			background-image: var(--btn-dark-focus-background-image),
-			border-color: var(--btn-dark-focus-border-color, transparent),
+			background-color: var(--btn-dark-focus-background-color, var(--btn-dark-hover-background-color)),
+			background-image: var(--btn-dark-focus-background-image, var(--btn-dark-hover-background-image)),
+			border-color: var(--btn-dark-focus-border-color, var(--btn-dark-border-color)),
 			box-shadow: var(--btn-dark-focus-box-shadow, var(--btn-focus-box-shadow)),
-			color: var(--btn-dark-focus-color, var(--white)),
+			color: var(--btn-dark-focus-color, var(--btn-dark-color)),
 		),
 		active: (
-			background-color: var(--btn-active-background-color, var(--dark-d2)),
+			background-color: var(--btn-dark-active-background-color, var(--dark-d2)),
 			background-image: var(--btn-dark-active-background-image),
-			border-color: var(--btn-active-border-color, transparent),
+			border-color: var(--btn-active-border-color, var(--btn-dark-border-color)),
 			box-shadow: var(--btn-dark-active-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-active-color, var(--white)),
+			color: var(--btn-active-color, var(--btn-dark-color)),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
 			focus: (
 				box-shadow: $c-unset,
 			),
 		),
 		disabled: (
-			background-color: var(--btn-dark-disabled-background-color, var(--dark)),
-			background-image: var(--btn-dark-disabled-background-image),
-			border-color: var(--btn-dark-disabled-border-color, transparent),
+			background-color: var(--btn-dark-disabled-background-color, var(--btn-dark-background-color)),
+			background-image: var(--btn-dark-disabled-background-image, var(--btn-dark-background-image)),
+			border-color: var(--btn-dark-disabled-border-color, var(--btn-dark-border-color)),
 			box-shadow: var(--btn-dark-disabled-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-dark-disabled-color, var(--white)),
+			color: var(--btn-dark-disabled-color, var(--btn-dark-color)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		loading-animation: 'loading-animation-light',
 	),
@@ -901,45 +889,61 @@ $btn-dark: map-deep-merge(
 
 $btn-link-disabled-color: $link-color !default;
 
+$clay-root: map-merge((
+	--btn-link-color: var(--link-color),
+	--btn-link-text-decoration: var(--link-text-decoration),
+	--btn-link-hover-color: var(--link-hover-color),
+	--btn-link-hover-text-decoration: var(--link-hover-text-decoration),
+),$clay-root);
+
 $btn-link: () !default;
 $btn-link: map-deep-merge(
 	(
 		background-color: var(--btn-link-background-color),
 		background-image: var(--btn-link-background-image),
-		border-radius: var(--btn-link-border-radius, 1px),
 		box-shadow: var(--btn-link-box-shadow),
-		color: var(--btn-link-color, var(--link-color)),
+		color: var(--btn-link-color),
 		font-weight: var(--btn-link-font-weight, var(--font-weight-normal)),
-		text-decoration: var(--btn-link-text-decoration, var(--link-text-decoration)),
+		text-decoration: var(--btn-link-text-decoration),
 		hover: (
 			background-color: var(--btn-link-hover-background-color),
 			background-image: var(--btn-link-hover-background-image),
 			box-shadow: var(--btn-link-hover-box-shadow, var(--btn-link-box-shadow)),
-			color: var(--btn-link-hover-color, var(--link-hover-color)),
-			text-decoration:
-				var(--btn-link-hover-text-decoration, var(--link-hover-text-decoration)),
+			color: var(--btn-link-hover-color),
+			text-decoration: var(--btn-link-hover-text-decoration),
 		),
 		focus: (
-			background-color: var(--btn-link-focus-background-color),
-			background-image: var(--btn-link-focus-background-image),
+			background-color: var(--btn-link-focus-background-color, var(--btn-link-hover-background-color)),
+			background-image: var(--btn-link-focus-background-image, var(--btn-link-hover-background-image)),
 			box-shadow: var(--btn-link-focus-box-shadow, var(--btn-focus-box-shadow)),
-			color: var(--btn-link-focus-color, var(--link-hover-color)),
+			color: var(--btn-link-focus-color, var(--btn-link-hover-color)),
 			text-decoration:
-				var(--btn-link-focus-text-decoration, var(--link-text-decoration)),
+				var(--btn-link-focus-text-decoration, var(--btn-link-hover-text-decoration)),
 		),
 		active: (
 			background-color: var(--btn-link-active-background-color),
 			background-image: var(--btn-link-active-background-image),
 			box-shadow: var(--btn-link-active-box-shadow, var(--btn-link-box-shadow)),
-			color: var(--btn-link-active-color, var(--link-hover-color)),
-			text-decoration: var(--btn-link-active-text-decoration, var(--link-hover-text-decoration)),
+			color: var(--btn-link-active-color, var(--btn-link-color)),
+			text-decoration: var(--btn-link-active-text-decoration),
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 		disabled: (
-			background-color: var(--btn-link-disabled-color),
-			background-image: var(--btn-link-disabled-background-image),
+			background-color: var(--btn-link-disabled-background-color, var(--btn-link-background-color)),
+			background-image: var(--btn-link-disabled-background-image, var(--btn-link-background-image)),
 			box-shadow: var(--btn-link-disabled-box-shadow, var(--btn-link-box-shadow)),
-			color: var(--btn-link-disabled-color, var(--link-color)),
-			text-decoration: var(--btn-link-disabled-text-decoration, var(--link-text-decoration)),
+			color: var(--btn-link-disabled-color, var(--btn-link-color)),
+			text-decoration: var(--btn-link-disabled-text-decoration, var(--btn-link-text-decoration)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-link
@@ -972,58 +976,61 @@ $btn-outline-primary: map-deep-merge(
 		box-shadow: var(--btn-outline-primary-box-shadow, var(--btn-box-shadow)),
 		color: var(--btn-outline-primary-color, var(--primary)),
 		hover: (
-			background-color:
-				var(--btn-outline-primary-hover-background-color, var(--primary-l3)),
-			background-image: var(--btn-outline-primary-hover-background-image),
+			background-color: var(--btn-outline-primary-hover-background-color, var(--btn-outline-primary-background-color, var(--primary-l3))),
+			background-image: var(--btn-outline-primary-hover-background-image, var(--btn-outline-primary-background-image)),
 			border-color:
-				var(--btn-outline-primary-hover-border-color, var(--primary)),
-			box-shadow: var(--btn-outline-primary-hover-box-shadow, var(--btn-box-shadow)),
-			color: var(--btn-outline-primary-hover-color, var(--primary)),
+				var(--btn-outline-primary-hover-border-color, var(--btn-outline-primary-border-color, var(--primary))),
+			box-shadow: var(--btn-outline-primary-hover-box-shadow, var(--btn-outline-primary-box-shadow, var(--btn-box-shadow))),
+			color: var(--btn-outline-primary-hover-color, var(--btn-outline-primary-color, var(--primary))),
 		),
 		focus: (
 			background-color:
-				var(--btn-outline-primary-focus-background-color, var(--primary-l3)),
-			background-image: var(--btn-outline-primary-focus-background-image),
-			border-color: var(--btn-outline-primary-focus-border-color),
+				var(--btn-outline-primary-focus-background-color, var(--btn-outline-primary-hover-background-color, var(--btn-outline-primary-background-color, var(--primary-l3)))),
+			background-image: var(--btn-outline-primary-focus-background-image, var(--btn-outline-primary-hover-background-image, var(--btn-outline-primary-background-image))),
+			border-color: var(--btn-outline-primary-focus-border-color, var(--btn-outline-primary-hover-border-color, var(--btn-outline-primary-border-color, var(--primary)))),
 			box-shadow:
 				var(
 					--btn-outline-primary-focus-box-shadow,
 					var(--btn-focus-box-shadow)
 				),
-			color: var(--btn-outline-primary-focus-color, var(--primary)),
+			color: var(--btn-outline-primary-focus-color, var(--btn-outline-primary-hover-color, var(--btn-outline-primary-color, var(--primary)))),
 		),
 		active: (
-			background-color:
-				var(
-					--btn-outline-primary-active-background-color,
-					clay-lighten(clay-desaturate($primary, 42.05), 41.76)
-				),
-			background-image: var(--btn-outline-primary-active-background-image),
+			background-color: var(--btn-outline-primary-active-background-color, var(--btn-outline-primary-focus-background-color, var(--btn-outline-primary-hover-background-color, var(--btn-outline-primary-background-color, clay-lighten(clay-desaturate($primary, 42.05), 41.76))))),
+			background-image: var(--btn-outline-primary-active-background-image, var(--btn-primary-outline-focus-background-image, var(--btn-outline-primary-hover-background-image, var(--btn-outline-primary-background-image)))),
 			border-color:
-				var(--btn-outline-primary-active-border-color, var(--primary)),
+				var(--btn-outline-primary-active-border-color, var(--btn-outline-primary-focus-border-color, var(--btn-outline-primary-hover-border-color, var(--btn-outline-primary-border-color, var(--primary))))),
 			box-shadow:
 				var(
 					--btn-outline-primary-active-box-shadow,
-					var(--btn-box-shadow)
+					var(--btn-outline-primary-hover-box-shadow, var(--btn-outline-primary-box-shadow, var(--btn-box-shadow)))
 				),
-			color: var(--btn-outline-primary-active-color, var(--primary)),
+			color: var(--btn-outline-primary-active-color, var(--btn-outline-primary-focus-color, var(--btn-outline-primary-hover-color, var(--btn-outline-primary-color, var(--primary))))),
 			focus: (
 				box-shadow: $c-unset
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
-				var(--btn-outline-primary-disabled-background-color),
+				var(--btn-outline-primary-disabled-background-color, var(--btn-outline-primary-background-color)),
 			background-image:
-				var(--btn-outline-primary-disabled-background-image),
+				var(--btn-outline-primary-disabled-background-image, var(--btn-outline-primary-background-image)),
 			border-color:
 				var(
 					--btn-outline-primary-disabled-border-color,
-					var(--primary)
+					var(--btn-outline-primary-border-color)
 				),
-			box-shadow: var(--btn-outline-primary-disabled-box-shadow, var(--btn-box-shadow)),
+			box-shadow: var(--btn-outline-primary-disabled-box-shadow, var(--btn-outline-primary-box-shadow, var(--btn-box-shadow))),
 			color:
-				var(--btn-outline-primary-disabled-color, var(--primary)),
+				var(--btn-outline-primary-disabled-color, var(--btn-outline-primary-color)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-primary
@@ -1039,15 +1046,12 @@ $btn-outline-secondary: map-deep-merge(
 		color: var(--btn-outline-secondary-color, var(--secondary)),
 		hover: (
 			background-color:
-				var(
-					--btn-outline-secondary-hover-background-color,
-					rgba(var(--gray-900-rgb), 0.03)
-				),
+				var(--btn-outline-secondary-hover-background-color, var(--btn-outline-secondary-background-color, rgba(var(--gray-900-rgb), 0.03))),
 			background-image:
-				var(--btn-outline-secondary-hover-background-image),
+				var(--btn-outline-secondary-hover-background-image, var(--btn-outline-secondary-background-image)),
 			border-color:
-				var(--btn-outline-secondary-hover-border-color, transparent),
-			box-shadow: var(--btn-outline-secondary-hover-box-shadow, var(--btn-box-shadow)),
+				var(--btn-outline-secondary-hover-border-color, var(--btn-outline-secondary-border-color, transparent)),
+			box-shadow: var(--btn-outline-secondary-hover-box-shadow, var(--btn-outline-secondary-box-shadow, var(--btn-box-shadow))),
 			color:
 				var(
 					--btn-outline-secondary-hover-color,
@@ -1058,12 +1062,12 @@ $btn-outline-secondary: map-deep-merge(
 			background-color:
 				var(
 					--btn-outline-secondary-focus-background-color,
-					rgba(var(--gray-900-rgb), 0.03)
+					var(--btn-outline-secondary-hover-background-color, var(--btn-outline-secondary-background-color, rgba(var(--gray-900-rgb), 0.03)))
 				),
 			background-image:
-				var(--btn-outline-secondary-focus-background-image),
+				var(--btn-outline-secondary-focus-background-image, var(--btn-outline-secondary-hover-background-image, var(--btn-outline-secondary-background-image))),
 			border-color:
-				var(--btn-outline-secondary-focus-border-color, transparent),
+				var(--btn-outline-secondary-focus-border-color, var(--btn-outline-secondary-hover-border-color, var(--btn-outline-secondary-border-color, transparent))),
 			box-shadow:
 				var(
 					--btn-outline-secondary-focus-box-shadow,
@@ -1079,16 +1083,16 @@ $btn-outline-secondary: map-deep-merge(
 			background-color:
 				var(
 					--btn-outline-secondary-active-background-color,
-					rgba(var(--gray-900-rgb), 0.06)
+					var(--btn-outline-secondary-focus-background-color, var(--btn-outline-secondary-hover-background-color, var(--btn-outline-secondary-background-color, rgba(var(--gray-900-rgb), 0.06))))
 				),
 			background-image:
-				var(--btn-outline-secondary-active-background-image),
+				var(--btn-outline-secondary-active-background-image, var(--btn-outline-secondary-focus-background-image, var(--btn-outline-secondary-hover-background-image, var(--btn-outline-secondary-background-image)))),
 			border-color:
-				var(--btn-outline-secondary-active-border-color, transparent),
+				var(--btn-outline-secondary-active-border-color, var(--btn-outline-secondary-focus-border-color, var(--btn-outline-secondary-hover-border-color, var(--btn-outline-secondary-border-color, transparent)))),
 			box-shadow:
 				var(
 					--btn-outline-secondary-active-box-shadow,
-					var(--btn-focus-box-shadow)
+					var(--btn-outline-secondary-hover-box-shadow, var(--btn-outline-secondary-box-shadow, var(--btn-box-shadow)))
 				),
 			color:
 				var(
@@ -1099,15 +1103,23 @@ $btn-outline-secondary: map-deep-merge(
 				box-shadow: $c-unset,
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
-				var(--btn-outline-secondary-disabled-background-color),
+				var(--btn-outline-secondary-disabled-background-color, var(--btn-outline-secondary-background-color)),
 			background-image:
-				var(--btn-outline-secondary-disabled-background-image),
+				var(--btn-outline-secondary-disabled-background-image, var(--btn-outline-secondary-background-image)),
 			border-color:
-				var(--btn-outline-secondary-disabled-border-color, var(--secondary)),
-			box-shadow: var(--btn-outline-secondary-disabled-box-shadow, var(--btn-box-shadow)),
+				var(--btn-outline-secondary-disabled-border-color, var(--btn-outline-secondary-border-color, var(--secondary))),
+			box-shadow: var(--btn-outline-secondary-disabled-box-shadow, var(--btn-outline-secondary-box-shadow, var(--btn-box-shadow))),
 			color: var(--btn-outline-secondary-disabled-color, var(--secondary)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-secondary
@@ -1167,6 +1179,11 @@ $btn-outline-success: map-deep-merge(
 				box-shadow: $c-unset,
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
 				var(--btn-outline-success-disabled-background-color),
@@ -1175,6 +1192,9 @@ $btn-outline-success: map-deep-merge(
 			border-color: var(--btn-outline-success-disabled-border-color, var(--success)),
 			box-shadow: var(--btn-outline-success-disabled-box-shadow, var(--btn-box-shadow)),
 			color: var(--btn-outline-success-disabled-color, var(--success)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-success
@@ -1232,6 +1252,11 @@ $btn-outline-info: map-deep-merge(
 				box-shadow: $c-unset,
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
 				var(--btn-outline-info-disabled-background-color),
@@ -1239,6 +1264,9 @@ $btn-outline-info: map-deep-merge(
 			border-color: var(--btn-outline-info-disabled-border-color, var(--info)),
 			box-shadow: var(--btn-outline-info-disabled-box-shadow, var(--btn-box-shadow)),
 			color: var(--btn-outline-info-disabled-color, var(--info)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-info
@@ -1298,6 +1326,11 @@ $btn-outline-warning: map-deep-merge(
 				box-shadow: $c-unset,
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
 				var(--btn-outline-warning-disabled-background-color),
@@ -1306,6 +1339,9 @@ $btn-outline-warning: map-deep-merge(
 			border-color: var(--btn-outline-warning-disabled-border-color, var(--warning)),
 			box-shadow: var(--btn-outline-warning-disabled-box-shadow, var(--btn-box-shadow)),
 			color: var(--btn-outline-warning-disabled-color, var(--warning)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-warning
@@ -1363,6 +1399,11 @@ $btn-outline-danger: map-deep-merge(
 				box-shadow: $c-unset,
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
 				var(--btn-outline-danger-disabled-background-color),
@@ -1371,6 +1412,9 @@ $btn-outline-danger: map-deep-merge(
 			border-color: var(--btn-outline-danger-disabled-border-color, var(--danger)),
 			box-shadow: var(--btn-outline-danger-disabled-box-shadow, var(--btn-box-shadow)),
 			color: var(--btn-outline-danger-disabled-color, var(--danger)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-danger
@@ -1428,6 +1472,11 @@ $btn-outline-light: map-deep-merge(
 				box-shadow: $c-unset,
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
 				var(--btn-outline-light-disabled-background-color),
@@ -1435,6 +1484,9 @@ $btn-outline-light: map-deep-merge(
 			border-color: var(--btn-outline-light-disabled-border-color, var(--light)),
 			box-shadow: var(--btn-outline-light-disabled-box-shadow, var(--btn-box-shadow)),
 			color: var(--btn-outline-light-disabled-color, var(--light)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-light
@@ -1492,6 +1544,11 @@ $btn-outline-dark: map-deep-merge(
 				box-shadow: $c-unset,
 			),
 		),
+		active-class: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+		),
 		disabled: (
 			background-color:
 				var(--btn-outline-dark-disabled-background-color),
@@ -1499,6 +1556,9 @@ $btn-outline-dark: map-deep-merge(
 			border-color: var(--btn-outline-dark-disabled-border-color, var(--dark)),
 			box-shadow: var(--btn-outline-dark-disabled-box-shadow, var(--btn-box-shadow)),
 			color: var(--btn-outline-dark-disabled-color, var(--dark)),
+			focus: (
+				box-shadow: $c-unset,
+			),
 		),
 	),
 	$btn-outline-dark
