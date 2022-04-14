@@ -200,6 +200,14 @@
         "aliases": [""]
     },
     {
+        "name": "border-style",
+        "aliases": ["line", "stroke", "dashed", "solid"]
+    },
+    {
+        "name": "border-width",
+        "aliases": ["line", "stroke", "weight", "thickness"]
+    },
+    {
         "name": "box-container",
         "aliases": ["chest", "collection", "package"]
     },
@@ -906,6 +914,10 @@
     {
         "name": "oauth",
         "aliases": [""]
+    },
+    {
+        "name": "opacity",
+        "aliases": ["transparent", "checker", "opaque"]
     },
     {
         "name": "open-id",
