@@ -3,16 +3,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-/* eslint-disable no-sparse-arrays */
-
-import '@clayui/css/lib/css/atlas.css';
-import {storiesOf} from '@storybook/react';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {ClayPortal, FocusScope} from '../src';
 
-storiesOf('Internal Use Only|FocusScope', module).add('default', () => {
-	React.useEffect(() => {
+export default {
+	component: FocusScope,
+	title: 'Design System/Internal Use Only/FocusScope',
+};
+
+export const Default = () => {
+	useEffect(() => {
 		const node1 = document && document.getElementById('test1');
 		const node2 = document && document.getElementById('test2');
 
@@ -58,4 +59,4 @@ storiesOf('Internal Use Only|FocusScope', module).add('default', () => {
 			<div id="test2" />
 		</>
 	);
-});
+};
