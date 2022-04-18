@@ -3,14 +3,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import '@clayui/css/lib/css/atlas.css';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
-import {storiesOf} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
 
 import ClayLocalizedInput from '../src';
 
-storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
+export default {
+	component: ClayLocalizedInput,
+	title: 'Design System/Components/LocalizedInput',
+};
+
+export const Default = () => {
 	const locales = [
 		{
 			label: 'en-US',
@@ -30,16 +32,14 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 		},
 	];
 
-	const [selectedLocale, setSelectedLocale] = React.useState(locales[0]);
-	const [translations, setTranslations] = React.useState<any>({
+	const [selectedLocale, setSelectedLocale] = useState(locales[0]);
+	const [translations, setTranslations] = useState<any>({
 		'en-US': 'Apple',
 		'es-ES': 'Manzana',
 	});
 
-	const [selectedLocaleURL, setSelectedLocaleURL] = React.useState(
-		locales[0]
-	);
-	const [translationsURL, setTranslationsURL] = React.useState<any>({
+	const [selectedLocaleURL, setSelectedLocaleURL] = useState(locales[0]);
+	const [translationsURL, setTranslationsURL] = useState<any>({
 		'en-US': 'Apple',
 		'es-ES': 'Manzana',
 	});
@@ -54,7 +54,6 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 				onSelectedLocaleChange={setSelectedLocale}
 				onTranslationsChange={setTranslations}
 				selectedLocale={selectedLocale}
-				spritemap={spritemap}
 				translations={translations}
 			/>
 
@@ -69,9 +68,8 @@ storiesOf('Components|ClayLocalizedInput', module).add('default', () => {
 				prependContent={prepend}
 				resultFormatter={(val) => `https://liferay.com${prepend}${val}`}
 				selectedLocale={selectedLocaleURL}
-				spritemap={spritemap}
 				translations={translationsURL}
 			/>
 		</div>
 	);
-});
+};
