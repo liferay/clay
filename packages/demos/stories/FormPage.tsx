@@ -4,33 +4,31 @@
  */
 
 import ClayButton from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import ClayDatePicker from '@clayui/date-picker';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayLayout from '@clayui/layout';
 import ClayMultiSelect from '@clayui/multi-select';
 import {ClayVerticalNav} from '@clayui/nav';
 import ClayPanel from '@clayui/panel';
-import React from 'react';
+import React, {useState} from 'react';
 
 const ClayDatePickerWithState = (props: {[key: string]: any}) => {
-	const [value, setValue] = React.useState<string | Date>('');
+	const [value, setValue] = useState<string | Date>('');
 
 	return (
 		<ClayDatePicker
 			{...props}
 			onValueChange={setValue}
-			spritemap={spritemap}
 			value={value as string}
 		/>
 	);
 };
 
-export default () => {
-	const [formValues, setFormValues] = React.useState<any>({});
-	const [activePage, setActivePage] = React.useState(0);
-	const [value, setValue] = React.useState('');
-	const [selectedItems, setSelectedItems] = React.useState<any>([]);
+export default function DemoFormPage() {
+	const [formValues, setFormValues] = useState<any>({});
+	const [activePage, setActivePage] = useState(0);
+	const [value, setValue] = useState('');
+	const [selectedItems, setSelectedItems] = useState<any>([]);
 
 	return (
 		<ClayLayout.ContainerFluid>
@@ -49,7 +47,6 @@ export default () => {
 								onClick: () => setActivePage(1),
 							},
 						]}
-						spritemap={spritemap}
 					/>
 				</div>
 
@@ -67,7 +64,6 @@ export default () => {
 								<ClayPanel
 									displayTitle="Organization Information"
 									displayType="unstyled"
-									spritemap={spritemap}
 								>
 									<ClayPanel.Body>
 										<ClayForm.Group>
@@ -131,7 +127,6 @@ export default () => {
 									displayTitle="More Information"
 									displayType="unstyled"
 									showCollapseIcon
-									spritemap={spritemap}
 								>
 									<ClayPanel.Body>
 										<ClayForm.Group>
@@ -164,7 +159,6 @@ export default () => {
 															);
 														}}
 														placeholder="Tags..."
-														spritemap={spritemap}
 													/>
 
 													<ClayForm.FeedbackGroup>
@@ -202,4 +196,4 @@ export default () => {
 			</div>
 		</ClayLayout.ContainerFluid>
 	);
-};
+}

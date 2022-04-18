@@ -5,14 +5,13 @@
 
 import {ClayButtonWithIcon} from '@clayui/button';
 import ClayCard, {ClayCardWithInfo} from '@clayui/card';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayInput} from '@clayui/form';
 import ClayLayout from '@clayui/layout';
 import ClayManagementToolbar from '@clayui/management-toolbar';
-import React from 'react';
+import React, {useState} from 'react';
 
-export default function DemosPage() {
-	const [value, setValue] = React.useState('');
+export function DemoFilesPage() {
+	const [value, setValue] = useState('');
 
 	const dogNames: Array<[string, number]> = [
 		['Bailey', 1],
@@ -47,7 +46,6 @@ export default function DemosPage() {
 							<ClayInput.GroupInsetItem after tag="span">
 								<ClayButtonWithIcon
 									displayType="unstyled"
-									spritemap={spritemap}
 									symbol="search"
 									type="submit"
 								/>
@@ -71,7 +69,6 @@ export default function DemosPage() {
 									src: `https://placedog.net/640/480?id=${doggoId}`,
 								}}
 								key={doggoId}
-								spritemap={spritemap}
 								title={`${doggoName}.jpg`}
 							/>
 						))}
