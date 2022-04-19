@@ -56,12 +56,33 @@ describe('ClayPaginationBar', () => {
 		expect(changeMock).toHaveBeenLastCalledWith(13);
 	});
 
+	it('calls onActiveChange when arrow is clicked', () => {
+		const changeMock = jest.fn();
+
+		const {getByTestId} = render(
+			<ClayPaginationBarWithBasicItems
+				active={12}
+				onActiveChange={changeMock}
+				spritemap={spritemap}
+				totalItems={100}
+			/>
+		);
+
+		fireEvent.click(getByTestId('prevArrow'), {});
+
+		expect(changeMock).toHaveBeenLastCalledWith(11);
+
+		fireEvent.click(getByTestId('nextArrow'), {});
+
+		expect(changeMock).toHaveBeenLastCalledWith(13);
+	});
+
 	it('calls onDeltaChange when select is expanded', () => {
 		const deltaChangeMock = jest.fn();
 
 		const {getByTestId} = render(
 			<ClayPaginationBarWithBasicItems
-				activePage={12}
+				defaultActive={12}
 				onDeltaChange={deltaChangeMock}
 				spritemap={spritemap}
 				totalItems={100}
@@ -78,7 +99,7 @@ describe('ClayPaginationBar', () => {
 	it('shows dropdown when pagination dropdown is clicked', () => {
 		const {getByTestId} = render(
 			<ClayPaginationBarWithBasicItems
-				activePage={12}
+				defaultActive={12}
 				spritemap={spritemap}
 				totalItems={100}
 			/>
