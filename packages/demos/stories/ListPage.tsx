@@ -4,7 +4,6 @@
  */
 
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox, ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
@@ -13,16 +12,16 @@ import ClayManagementToolbar from '@clayui/management-toolbar';
 import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
 import {sub} from '@clayui/shared';
 import {ClayTooltipProvider} from '@clayui/tooltip';
-import React from 'react';
+import React, {useState} from 'react';
 
-export default () => {
-	const [selectedMap, setSelectedMap] = React.useState({});
-	const [searchMobile, setSearchMobile] = React.useState<boolean>(false);
-	const [checked, setChecked] = React.useState<boolean>(false);
-	const [sortAsc, setSortAsc] = React.useState<boolean>(true);
-	const [value, setValue] = React.useState<string>('');
-	const [activePage, setActivePage] = React.useState<number>(1);
-	const [delta, setDelta] = React.useState<number>(10);
+export default function ListPage() {
+	const [selectedMap, setSelectedMap] = useState({});
+	const [searchMobile, setSearchMobile] = useState<boolean>(false);
+	const [checked, setChecked] = useState<boolean>(false);
+	const [sortAsc, setSortAsc] = useState<boolean>(true);
+	const [value, setValue] = useState<string>('');
+	const [activePage, setActivePage] = useState<number>(1);
+	const [delta, setDelta] = useState<number>(10);
 
 	const filterItems = [
 		{label: 'Filter Action 1', onClick: () => alert('Filter clicked')},
@@ -157,7 +156,6 @@ export default () => {
 							<>
 								<ClayDropDownWithItems
 									items={filterItems}
-									spritemap={spritemap}
 									trigger={
 										<ClayButton
 											className="nav-link"
@@ -170,15 +168,11 @@ export default () => {
 
 												<ClayIcon
 													className="inline-item inline-item-after"
-													spritemap={spritemap}
 													symbol="caret-bottom"
 												/>
 											</span>
 											<span className="navbar-breakpoint-d-none">
-												<ClayIcon
-													spritemap={spritemap}
-													symbol="filter"
-												/>
+												<ClayIcon symbol="filter" />
 											</span>
 										</ClayButton>
 									}
@@ -191,7 +185,6 @@ export default () => {
 										onClick={() => setSortAsc(!sortAsc)}
 									>
 										<ClayIcon
-											spritemap={spritemap}
 											symbol={
 												sortAsc
 													? 'order-list-up'
@@ -231,12 +224,10 @@ export default () => {
 												onClick={() =>
 													setSearchMobile(false)
 												}
-												spritemap={spritemap}
 												symbol="times"
 											/>
 											<ClayButtonWithIcon
 												displayType="unstyled"
-												spritemap={spritemap}
 												symbol="search"
 												type="submit"
 											/>
@@ -252,10 +243,7 @@ export default () => {
 										displayType="unstyled"
 										onClick={() => setSearchMobile(true)}
 									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol="search"
-										/>
+										<ClayIcon symbol="search" />
 									</ClayButton>
 								</ClayManagementToolbar.Item>
 
@@ -265,26 +253,19 @@ export default () => {
 										displayType="unstyled"
 										onClick={() => {}}
 									>
-										<ClayIcon
-											spritemap={spritemap}
-											symbol="info-circle-open"
-										/>
+										<ClayIcon symbol="info-circle-open" />
 									</ClayButton>
 								</ClayManagementToolbar.Item>
 
 								<ClayManagementToolbar.Item>
 									<ClayDropDownWithItems
 										items={viewTypes}
-										spritemap={spritemap}
 										trigger={
 											<ClayButton
 												className="nav-link nav-link-monospaced"
 												displayType="unstyled"
 											>
-												<ClayIcon
-													spritemap={spritemap}
-													symbol="list"
-												/>
+												<ClayIcon symbol="list" />
 											</ClayButton>
 										}
 									/>
@@ -294,7 +275,6 @@ export default () => {
 									<ClayButtonWithIcon
 										className="nav-btn nav-btn-monospaced"
 										data-tooltip-align="bottom"
-										spritemap={spritemap}
 										symbol="plus"
 										title="Add New Item"
 									/>
@@ -315,7 +295,6 @@ export default () => {
 						]}
 						onSelectedItemsChange={setSelectedMap}
 						selectedItemsMap={selectedMap}
-						spritemap={spritemap}
 					/>
 
 					<ClayPaginationBarWithBasicItems
@@ -323,11 +302,10 @@ export default () => {
 						activePage={activePage}
 						onDeltaChange={setDelta}
 						onPageChange={setActivePage}
-						spritemap={spritemap}
 						totalItems={totalItems}
 					/>
 				</div>
 			</div>
 		</ClayTooltipProvider>
 	);
-};
+}

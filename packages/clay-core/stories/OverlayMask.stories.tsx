@@ -3,16 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import '@clayui/css/lib/css/atlas.css';
 import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
-const spritemap = require('@clayui/css/lib/images/icons/icons.svg');
 import {ClayCheckbox} from '@clayui/form';
 import ClayLayout from '@clayui/layout';
 import ClayPopover from '@clayui/popover';
-import {storiesOf} from '@storybook/react';
 import React, {useState} from 'react';
 
-import {Provider} from '../src';
 import {OverlayMask} from '../src/overlay-mask';
 
 type Props = {
@@ -49,98 +45,85 @@ const Dot = ({onClick}: Props) => (
 	</div>
 );
 
-storiesOf('Components|OverlayMask', module)
-	.add('default', () => (
+export default {
+	component: OverlayMask,
+	title: 'Design System/Components/OverlayMask',
+};
+
+export const Default = () => (
+	<OverlayMask visible>
+		<ClayButton>Button</ClayButton>
+	</OverlayMask>
+);
+
+export const WithPopover = () => {
+	const [visible, setVisible] = useState(false);
+
+	return (
 		<div style={{marginLeft: '200px', marginTop: '200px'}}>
-			<OverlayMask visible>
-				<ClayButton>Button</ClayButton>
+			{!visible && <Dot onClick={() => setVisible(true)} />}
+
+			<OverlayMask<HTMLButtonElement> visible={visible}>
+				{(ref) => (
+					<ClayPopover
+						alignPosition="right-top"
+						closeOnClickOutside
+						displayType="secondary"
+						header={
+							<ClayLayout.ContentRow
+								noGutters
+								verticalAlign="center"
+							>
+								<ClayLayout.ContentCol expand>
+									<span>Step 1 of 3: Customize logo</span>
+								</ClayLayout.ContentCol>
+								<ClayLayout.ContentCol>
+									<ClayButtonWithIcon
+										aria-label="close"
+										className="close"
+										displayType="unstyled"
+										onClick={() => setVisible(false)}
+										small
+										symbol="times"
+									/>
+								</ClayLayout.ContentCol>
+							</ClayLayout.ContentRow>
+						}
+						onShowChange={setVisible}
+						show={visible}
+						size="lg"
+						trigger={<ClayButton ref={ref}>Logo</ClayButton>}
+					>
+						<p>
+							Place your name and logo using this widget and make
+							then a link the Homepage.
+						</p>
+
+						<ClayLayout.ContentRow noGutters verticalAlign="center">
+							<ClayLayout.ContentCol expand>
+								<ClayCheckbox
+									checked={false}
+									label="Don't show this again"
+									onChange={() => {}}
+								/>
+							</ClayLayout.ContentCol>
+							<ClayLayout.ContentCol>
+								<ClayButton.Group spaced>
+									<ClayButton displayType="secondary" small>
+										Previous
+									</ClayButton>
+									<ClayButton
+										onClick={() => setVisible(false)}
+										small
+									>
+										Got it
+									</ClayButton>
+								</ClayButton.Group>
+							</ClayLayout.ContentCol>
+						</ClayLayout.ContentRow>
+					</ClayPopover>
+				)}
 			</OverlayMask>
 		</div>
-	))
-	.add('with popover', () => {
-		const [visible, setVisible] = useState(false);
-
-		return (
-			<Provider spritemap={spritemap}>
-				<div style={{marginLeft: '200px', marginTop: '200px'}}>
-					{!visible && <Dot onClick={() => setVisible(true)} />}
-
-					<OverlayMask<HTMLButtonElement> visible={visible}>
-						{(ref) => (
-							<ClayPopover
-								alignPosition="right-top"
-								closeOnClickOutside
-								displayType="secondary"
-								header={
-									<ClayLayout.ContentRow
-										noGutters
-										verticalAlign="center"
-									>
-										<ClayLayout.ContentCol expand>
-											<span>
-												Step 1 of 3: Customize logo
-											</span>
-										</ClayLayout.ContentCol>
-										<ClayLayout.ContentCol>
-											<ClayButtonWithIcon
-												aria-label="close"
-												className="close"
-												displayType="unstyled"
-												onClick={() =>
-													setVisible(false)
-												}
-												small
-												symbol="times"
-											/>
-										</ClayLayout.ContentCol>
-									</ClayLayout.ContentRow>
-								}
-								onShowChange={setVisible}
-								show={visible}
-								size="lg"
-								trigger={
-									<ClayButton ref={ref}>Logo</ClayButton>
-								}
-							>
-								<p>
-									Place your name and logo using this widget
-									and make then a link the Homepage.
-								</p>
-
-								<ClayLayout.ContentRow
-									noGutters
-									verticalAlign="center"
-								>
-									<ClayLayout.ContentCol expand>
-										<ClayCheckbox
-											checked={false}
-											label="Don't show this again"
-											onChange={() => {}}
-										/>
-									</ClayLayout.ContentCol>
-									<ClayLayout.ContentCol>
-										<ClayButton.Group spaced>
-											<ClayButton
-												displayType="secondary"
-												small
-											>
-												Previous
-											</ClayButton>
-											<ClayButton
-												onClick={() =>
-													setVisible(false)
-												}
-												small
-											>
-												Got it
-											</ClayButton>
-										</ClayButton.Group>
-									</ClayLayout.ContentCol>
-								</ClayLayout.ContentRow>
-							</ClayPopover>
-						)}
-					</OverlayMask>
-				</div>
-			</Provider>
-		);
-	});
+	);
+};
