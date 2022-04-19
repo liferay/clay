@@ -10,7 +10,7 @@
 
 In Clay we have some components like `<ClayEmptyState />`, `<ClayMultiStepNavWithState />`, `<ClayColorPicker />`... which have props named like DOM attributes (eg. `title`, `value`...)
 
-This document describes the implementation proposal to avoid naming some props like DOM attributes. 
+This document describes the implementation proposal to avoid naming some props like DOM attributes.
 
 ## Motivation
 
@@ -22,7 +22,7 @@ To be more specific, this mechanism should be a tool that checks if the prop nam
 
 ## Proposed solution
 
-The decision going forward is to set a new `eslint` rules called [`react/forbid-component-props`](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md). This rule will be applied to Clay components and not DOM nodes. The main goal of this rule is to prevent prop names that has a lot of complexity. Beside it will check all JSX elements and will verify that no forbidden props are used on Clay components. This solution will be the best one because there is not any particular `eslint` rule that can avoid props naming all the DOM attributes without specified them by default. 
+The decision going forward is to set a new `eslint` rules called [`react/forbid-component-props`](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md). This rule will be applied to Clay components and not DOM nodes. The main goal of this rule is to prevent prop names that has a lot of complexity. Beside it will check all JSX elements and will verify that no forbidden props are used on Clay components. This solution will be the best one because there is not any particular `eslint` rule that can avoid props naming all the DOM attributes without specified them by default.
 
 The structure of this rules is the following one:
 
@@ -66,6 +66,7 @@ In the simple way, you can determine only the chosen DOM attribute names in a st
 	},
 ],
 ```
+
 Once you insert this example in `.eslintrc.js` file and save it, then go to the console and execute the following command:
 
 ```
@@ -92,6 +93,7 @@ In the complete way, you can determine only the chosen DOM attributes in an obje
 	},
 ],
 ```
+
 Once you insert this example in `.eslintrc.js` file and save it, then go to the console and execute the following command:
 
 ```
