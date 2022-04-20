@@ -6,13 +6,7 @@
 import classNames from 'classnames';
 import React, {ElementType} from 'react';
 
-export type HeadingLevel =
-	| 1
-	| 2
-	| 3
-	| 4
-	| 5
-	| 6;
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 export type WeightFont =
 	| 'lighter'
@@ -22,7 +16,7 @@ export type WeightFont =
 	| 'bold'
 	| 'bolder';
 
-interface IBaseProps extends React.BaseHTMLAttributes<HTMLSpanElement> {
+interface IBaseProps extends React.BaseHTMLAttributes<HTMLHeadingElement> {
 	/**
 	 * Number to set the heading level.
 	 */
@@ -34,11 +28,8 @@ interface IBaseProps extends React.BaseHTMLAttributes<HTMLSpanElement> {
 	weight?: WeightFont;
 }
 
-const Heading = React.forwardRef<HTMLSpanElement, IBaseProps>(
-	(
-		{children, className, level, weight, ...otherProps},
-		ref
-	) => {
+const Heading = React.forwardRef<HTMLHeadingElement, IBaseProps>(
+	({children, className, level, weight, ...otherProps}, ref) => {
 		const HeadingTag = `h${level}` as ElementType;
 
 		return (
