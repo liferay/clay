@@ -38,7 +38,7 @@ This rule has two arguments:
 -   The `enabled` parameter determines the type of message that must be displayed once the rule is applied. Normally, it is set as `"error"` message.
 -   The `forbid` parameter is an string or object array where you have to specify the prop names that you want to avoid. Besides, you can also customize the array specifying the property name, an optional custom message, and a component whitelist:
 
-```
+```json
 {
   "propName": "someProp",
   "allowedFor": [SomeComponent, AnotherComponent],
@@ -59,7 +59,7 @@ In order to set this `eslint` rule in the `.eslintrc.js` file, we have to follow
 
 In the simple way, you can determine only the chosen DOM attribute names in a string array like the following example:
 
-```
+```json
 'react/forbid-component-props': [
 	'error', {
 		forbid: ['length', 'title', 'value'],
@@ -69,7 +69,7 @@ In the simple way, you can determine only the chosen DOM attribute names in a st
 
 Once you insert this example in `.eslintrc.js` file and save it, then go to the console and execute the following command:
 
-```
+```shell
 yarn lint
 ```
 
@@ -79,19 +79,24 @@ It will show you all the files where Clay components have got prop names like DO
 
 In the complete way, you can determine only the chosen DOM attributes in an objects array like the following example:
 
-```
-'react/forbid-component-props': [
-	'error', {
-		forbid: [{
-			message: "In this file includes title prop",
-			propName: "title",
-    	},
-    	{
-			message: "In this file includes value prop",
-			propName: "value",
-    	}],
-	},
-],
+```json
+{
+	"react/forbid-component-props": [
+		"error",
+		{
+			"forbid": [
+				{
+					"message": "In this file includes title prop",
+					"propName": "title"
+				},
+				{
+					"message": "In this file includes value prop",
+					"propName": "value"
+				}
+			]
+		}
+	]
+}
 ```
 
 Once you insert this example in `.eslintrc.js` file and save it, then go to the console and execute the following command:
