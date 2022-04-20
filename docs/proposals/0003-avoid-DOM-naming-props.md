@@ -8,7 +8,7 @@
 
 ## Introduction
 
-In Clay we have some components like `<ClayEmptyState />`, `<ClayMultiStepNavWithState />`, `<ClayColorPicker />`... which have props named like DOM attributes (eg. `title`, `value`...)
+In Clay we have some components like `<ClayEmptyState />`, `<ClayMultiStepNavWithState />`, `<ClayColorPicker />`... which have props named like DOM attributes (eg. `title`, `value`, `length`, `size`...)
 
 This document describes the implementation proposal to avoid naming some props like DOM attributes.
 
@@ -83,13 +83,13 @@ In the complete way, you can determine only the chosen DOM attributes in an obje
 'react/forbid-component-props': [
 	'error', {
 		forbid: [{
-        message: "In this file includes title prop",
-        propName: "title",
-    },
-    {
-        message: "In this file includes value prop",
-        propName: "value",
-        }],
+			message: "In this file includes title prop",
+			propName: "title",
+    	},
+    	{
+			message: "In this file includes value prop",
+			propName: "value",
+    	}],
 	},
 ],
 ```
@@ -104,11 +104,13 @@ It will show you all the files where Clay components have got prop names like DO
 
 ## Effect on API resilience
 
-This proposal will not change the behavior of the existing APIs because it is an improvent to mantain the consistency between Clay components DOM nodes.
+This proposal will not change the behavior of the existing APIs because it is an improvent to maintain the consistency between Clay components DOM nodes. The main drawback of this proposal is the to replace those prop names to similar ones (eg. `size` into `scale`). There will be some exceptions in order to take into account like `value` or even `title` which are properties that describes the components and cannot be called by any other property name. To clarify this proposal, it is important that when a property name is changed, we have to that in all components with the same value to maintain the consistency and homogeneity.
+
+At the moment, it is not necessary to deprecate these properties and rename the required ones as it is a proposal that has a small fix priority. However, it could be convenient to work on for clay v4.
 
 ## Alternatives considered
 
-This solution is the most completed one, but it is not the perfect one. At the moment, there is a huge list of `eslint` rules that are used in this project to mantain the consistency and establish good practices.
+This solution is the most completed one, but it is not the perfect one. At the moment, there is a huge list of `eslint` rules that are used in this project to maintain the consistency and establish good practices.
 
 ## Consequences
 
