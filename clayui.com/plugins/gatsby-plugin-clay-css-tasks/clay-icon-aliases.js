@@ -575,6 +575,7 @@ const iconsData = {
 	"date":                     '"agenda", "calendar", "day", "picker", "time"',
 	"decimal":                  '"0", "number", "zero"',
 	"desktop":                  '"deprecated"',
+	"diagonal-line":            '"line", "diagonal", "slash", "null", "empty"',
 	"diagram":                  '"map", "schema", "structure"',
 	"diamond":                  '"condition", "if", "gateway", "gem", "workflow"',
 	"diary":                    '"agenda", "book", "library"',
