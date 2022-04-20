@@ -27,7 +27,7 @@ describe('ClayDropDownWithDrilldown', () => {
 	it('renders', () => {
 		const {getByTestId} = render(
 			<ClayDropDownWithDrilldown
-				initialActiveMenu="x0a3"
+				defaultActiveMenu="x0a3"
 				menus={{
 					x0a3: [
 						{href: '#', title: 'Hash Link'},

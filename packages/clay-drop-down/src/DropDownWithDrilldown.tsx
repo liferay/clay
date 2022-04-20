@@ -52,7 +52,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * The unique identifier of the menu that should be active on mount.
 	 * @deprecated since v3.51.0 - use `defaultActiveMenu` instead.
 	 */
-	initialActiveMenu: string;
+	initialActiveMenu?: string;
 
 	/**
 	 * Prop to pass DOM element attributes to <DropDown.Menu />.

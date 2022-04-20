@@ -168,7 +168,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Callback function for when active state changes.
 	 */
-	onSetActive: (val: boolean) => void;
+	onActiveChange?: (value: boolean) => void;
+
+	/**
+	 * Callback function for when active state changes.
+	 * @deprecated since v3.52.0 - use `onActiveChange` instead.
+	 */
+	onSetActive?: (value: boolean) => void;
 
 	/**
 	 * The modifier class `dropdown-menu-width-${width}` makes the menu expand
@@ -205,6 +211,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 					number,
 					number
 				],
+			onActiveChange,
 			onSetActive,
 			width,
 			...otherProps
@@ -214,6 +221,8 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 		// See https://github.com/microsoft/TypeScript/issues/30748#issuecomment-480197036
 		ref
 	) => {
+		const setActive = onActiveChange ?? onSetActive;
+
 		const subPortalRef = useRef<HTMLDivElement | null>(null);
 
 		useEffect(() => {
@@ -232,7 +241,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 							element.contains(event.target as Node)
 						)
 					) {
-						onSetActive(false);
+						setActive!(false);
 					}
 				};
 
@@ -253,7 +262,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 						focusRefOnEsc.current.focus();
 					}
 
-					onSetActive(false);
+					setActive!(false);
 				}
 			};
 
