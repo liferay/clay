@@ -6,11 +6,13 @@
 import {
 	ClayPortal,
 	IPortalBaseProps,
+	InternalDispatch,
 	doAlign,
 	observeRect,
+	useInternalState,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 export const ALIGN_POSITIONS = [
 	'top',
@@ -82,6 +84,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	containerProps?: IPortalBaseProps;
 
 	/**
+	 * Sets the default value of show (uncontrolled).
+	 */
+	defaultShow?: boolean;
+
+	/**
 	 * Flag to indicate if container should not be scrollable
 	 */
 	disableScroll?: boolean;
@@ -92,7 +99,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	displayType?: string;
 
 	/**
-	 * Flag to indicate if tooltip is displayed.
+	 * Flag to indicate if tooltip is displayed (controlled).
 	 */
 	show?: boolean;
 
@@ -102,9 +109,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	onOffset?: (points: Point) => [number, number];
 
 	/**
-	 * Callback for when the `show` prop changes.
+	 * Callback for when the `show` prop changes (controlled).
 	 */
-	onShowChange?: (val: boolean) => void;
+	onShowChange?: InternalDispatch<boolean>;
 
 	/**
 	 * Sets the size of the popover.
@@ -131,6 +138,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			className,
 			closeOnClickOutside = false,
 			containerProps = {},
+			defaultShow = false,
 			disableScroll = false,
 			displayType,
 			header,
@@ -140,14 +148,21 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					number
 				],
 			onShowChange,
-			show: externalShow = false,
+			show,
 			size,
 			trigger,
 			...otherProps
 		}: IProps,
 		ref
 	) => {
-		const [internalShow, internalSetShow] = useState(externalShow);
+		const [internalShow, setShow] = useInternalState({
+			defaultName: 'defaultShow',
+			defaultValue: defaultShow,
+			handleName: 'onShowChange',
+			name: 'show',
+			onChange: onShowChange,
+			value: show,
+		});
 
 		const triggerRef = useRef<HTMLElement | null>(null);
 		const popoverRef = useRef<HTMLElement | null>(null);
@@ -156,10 +171,6 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		if (!ref) {
 			ref = popoverRef as React.Ref<HTMLDivElement>;
 		}
-
-		const show =
-			typeof externalShow === 'boolean' ? externalShow : internalShow;
-		const setShow = onShowChange ? onShowChange : internalSetShow;
 
 		const align = useCallback(() => {
 			if (
@@ -182,7 +193,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			if (trigger) {
 				align();
 			}
-		}, [align, show]);
+		}, [align, internalShow]);
 
 		useEffect(() => {
 			if (trigger && triggerRef.current) {
@@ -191,10 +202,10 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		}, [align]);
 
 		useEffect(() => {
-			if (!disableScroll && popoverScrollerRef.current && show) {
+			if (!disableScroll && popoverScrollerRef.current && internalShow) {
 				popoverScrollerRef.current.focus();
 			}
-		}, [disableScroll, popoverScrollerRef, show]);
+		}, [disableScroll, popoverScrollerRef, internalShow]);
 
 		useEffect(() => {
 			if (closeOnClickOutside && trigger) {
@@ -252,7 +263,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 					{
 						[`popover-${displayType}`]: displayType,
 						'popover-width-lg': size === 'lg',
-						show,
+						show: internalShow,
 					}
 				)}
 				ref={ref as React.RefObject<HTMLDivElement>}
@@ -282,7 +293,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 							if (trigger.props.onClick) {
 								trigger.props.onClick(event);
 							}
-							setShow(!show);
+							setShow(!internalShow);
 						},
 						ref: (node: HTMLButtonElement) => {
 							if (node) {
@@ -300,7 +311,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 						},
 					})}
 
-					{show && (
+					{internalShow && (
 						<ClayPortal {...containerProps}>{content}</ClayPortal>
 					)}
 				</>

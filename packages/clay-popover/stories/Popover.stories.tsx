@@ -118,14 +118,11 @@ export const ManualShow = () => {
 };
 
 export const RecalculatePosition = () => {
-	const [visible, setVisible] = useState(false);
-	const {observer, onClose} = useModal({
-		onClose: () => setVisible(false),
-	});
+	const {observer, onOpenChange, open} = useModal();
 
 	return (
 		<>
-			{visible && (
+			{open && (
 				<ClayModal observer={observer} size="lg" status="info">
 					<ClayModal.Header>Title</ClayModal.Header>
 					<ClayModal.Body scrollable>
@@ -171,13 +168,18 @@ export const RecalculatePosition = () => {
 							</ClayButton.Group>
 						}
 						last={
-							<ClayButton onClick={onClose}>Primary</ClayButton>
+							<ClayButton onClick={() => onOpenChange(false)}>
+								Primary
+							</ClayButton>
 						}
 					/>
 				</ClayModal>
 			)}
 
-			<ClayButton displayType="primary" onClick={() => setVisible(true)}>
+			<ClayButton
+				displayType="primary"
+				onClick={() => onOpenChange(true)}
+			>
 				Open modal
 			</ClayButton>
 		</>
