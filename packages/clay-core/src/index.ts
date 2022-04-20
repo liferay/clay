@@ -22,3 +22,4 @@ export {Provider, useProvider} from '@clayui/provider';
 
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
+export {Heading} from './typography';
