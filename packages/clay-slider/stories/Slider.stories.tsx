@@ -19,27 +19,21 @@ export default {
 	title: 'Design System/Components/Slider',
 };
 
-export const Default = (args: any) => {
-	const [value, setValue] = useState<number>(10);
-
-	return (
-		<div className="sheet">
-			<div className="form-group">
-				<label htmlFor="slider">With Tooltip</label>
-				<ClaySlider
-					disabled={args.disabled}
-					id="slider"
-					max={args.max}
-					min={args.min}
-					onValueChange={setValue}
-					step={args.step}
-					tooltipPosition={args.tooltipPosition}
-					value={value}
-				/>
-			</div>
+export const Default = (args: any) => (
+	<div className="sheet">
+		<div className="form-group">
+			<label htmlFor="slider">With Tooltip</label>
+			<ClaySlider
+				disabled={args.disabled}
+				id="slider"
+				max={args.max}
+				min={args.min}
+				step={args.step}
+				tooltipPosition={args.tooltipPosition}
+			/>
 		</div>
-	);
-};
+	</div>
+);
 
 Default.args = {
 	disabled: false,
@@ -50,7 +44,7 @@ Default.args = {
 };
 
 export const MultipleSliders = () => {
-	const [value, setValue] = React.useState<number>(10);
+	const [value, setValue] = useState<number>(10);
 
 	return (
 		<div className="sheet">
@@ -60,7 +54,7 @@ export const MultipleSliders = () => {
 					id={`sliderOne${value}`}
 					max={10}
 					min={0}
-					onValueChange={setValue}
+					onChange={setValue}
 					step={1}
 					tooltipPosition="top"
 					value={value}
@@ -74,7 +68,7 @@ export const MultipleSliders = () => {
 					id={`sliderTwo${value}`}
 					max={100}
 					min={0}
-					onValueChange={(n) => setValue(100 - n)}
+					onChange={(n) => setValue(100 - n)}
 					step={1}
 					tooltipPosition="top"
 					value={100 - value}

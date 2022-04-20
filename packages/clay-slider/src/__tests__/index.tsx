@@ -12,7 +12,7 @@ describe('ClaySlider', () => {
 
 	it('renders', () => {
 		const {container} = render(
-			<ClaySlider onValueChange={() => {}} value={10} />
+			<ClaySlider onChange={() => {}} value={10} />
 		);
 
 		expect(container).toMatchSnapshot();
@@ -20,7 +20,7 @@ describe('ClaySlider', () => {
 
 	it('renders a Slider disabled', () => {
 		const {container} = render(
-			<ClaySlider disabled onValueChange={() => {}} value={10} />
+			<ClaySlider disabled onChange={() => {}} value={10} />
 		);
 
 		const input = container.querySelector(
@@ -34,11 +34,7 @@ describe('ClaySlider', () => {
 
 	it('renders a Slider with the tooltip position bottom', () => {
 		const {container} = render(
-			<ClaySlider
-				onValueChange={() => {}}
-				tooltipPosition="bottom"
-				value={10}
-			/>
+			<ClaySlider defaultValue={10} tooltipPosition="bottom" />
 		);
 
 		expect(
