@@ -27,11 +27,14 @@ describe('Rendering', () => {
 describe('Interactions', () => {
 	afterEach(cleanup);
 
-	it('selecting a radio element should fire the onChange prop with the new value', () => {
+	it('selecting a radio element should fire the onSelectedValueChange prop with the new value', () => {
 		const handleSelectedChange = jest.fn();
 
 		const {getByLabelText} = render(
-			<ClayRadioGroup onChange={handleSelectedChange} value="one">
+			<ClayRadioGroup
+				onSelectedValueChange={handleSelectedChange}
+				selectedValue="one"
+			>
 				<ClayRadio label="One" value="one" />
 				<ClayRadio label="Two" value="two" />
 				<ClayRadio label="Three" value="three" />
@@ -44,6 +47,25 @@ describe('Interactions', () => {
 
 		expect(handleSelectedChange).toHaveBeenCalledTimes(1);
 		expect(handleSelectedChange).toHaveBeenCalledWith('three');
+	});
+
+	it('selecting a radio element should fire the onChange prop with the new value', () => {
+		const onChange = jest.fn();
+
+		const {getByLabelText} = render(
+			<ClayRadioGroup onChange={onChange} value="one">
+				<ClayRadio label="One" value="one" />
+				<ClayRadio label="Two" value="two" />
+				<ClayRadio label="Three" value="three" />
+			</ClayRadioGroup>
+		);
+
+		const radioThree = getByLabelText('Three');
+
+		fireEvent.click(radioThree as HTMLButtonElement, {});
+
+		expect(onChange).toHaveBeenCalledTimes(1);
+		expect(onChange).toHaveBeenCalledWith('three');
 	});
 
 	it('select a radio element with the uncontrolled component', () => {

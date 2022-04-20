@@ -10,13 +10,10 @@ import React from 'react';
 const radioGroupImportsCode = `import {ClayRadio, ClayRadioGroup} from '@clayui/form';`;
 
 const radioGroupCode = `const Component = () => {
-	const [value, setValue] = useState('one');
-
 	return (
 		<ClayRadioGroup
+			defaultValue="one"
 			inline
-			onSelectedValueChange={val => setValue(val)}
-			selectedValue={value}
 		>
 			<ClayRadio label="One" value="one" />
 			<ClayRadio label="Two" value="two" />
