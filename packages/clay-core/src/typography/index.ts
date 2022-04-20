@@ -3,4 +3,5 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export * from './Heading';
+export {Heading} from './Heading';
+export {Text} from './Text';

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders as h1 with normal style 1`] = `
+<body>
+  <div>
+    <h1
+      class="font-weight-normal"
+    >
+      This is a Heading
+    </h1>
+  </div>
+</body>
+`;
+
+exports[`Heading renders as h3 with semi-bold style 1`] = `
+<body>
+  <div>
+    <h3
+      class="font-weight-semi-bold"
+    >
+      This is a Heading
+    </h3>
+  </div>
+</body>
+`;

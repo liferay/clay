@@ -28,7 +28,7 @@ interface IBaseProps extends React.BaseHTMLAttributes<HTMLHeadingElement> {
 	weight?: WeightFont;
 }
 
-const Heading = React.forwardRef<HTMLHeadingElement, IBaseProps>(
+export const Heading = React.forwardRef<HTMLHeadingElement, IBaseProps>(
 	({children, className, level, weight, ...otherProps}, ref) => {
 		const HeadingTag = `h${level}` as ElementType;
 
@@ -47,5 +47,3 @@ const Heading = React.forwardRef<HTMLHeadingElement, IBaseProps>(
 );
 
 Heading.displayName = 'Heading';
-
-export {Heading};
