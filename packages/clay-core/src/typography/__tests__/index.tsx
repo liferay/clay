@@ -38,7 +38,7 @@ describe('Text', () => {
 
 	it('renders with normal style', () => {
 		render(
-			<Text level={1} weight="normal">
+			<Text size={1} weight="normal">
 				Single origin, extra id beans, eu to go, skinny americano ut
 				aftertas te sugar. At americano, viennese variety iced grounds,
 				grinder froth and pumpkin spice aromatic. Cultivar aged lungo,
@@ -55,7 +55,7 @@ describe('Text', () => {
 
 	it('renders with italic and semi-bold style', () => {
 		render(
-			<Text italic level={3} weight="semi-bold">
+			<Text italic size={1} weight="semi-bold">
 				Single origin, extra id beans, eu to go, skinny americano ut
 				aftertas te sugar. At americano, viennese variety iced grounds,
 				grinder froth and pumpkin spice aromatic. Cultivar aged lungo,

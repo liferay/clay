@@ -3,21 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
- import classNames from 'classnames';
- import React from 'react';
+import classNames from 'classnames';
+import React from 'react';
 
- export type TextLevel =
-	| 1
-	| 2
-	| 3
-	| 4
-	| 5
-	| 6
-    | 7
-    | 8
-	| 9
-	| 10
-	| 11;
+export type TextSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
+
+export type DisplayType = 'paragraph' | 'span';
 
 export type WeightFont =
 	| 'lighter'
@@ -27,64 +18,77 @@ export type WeightFont =
 	| 'bold'
 	| 'bolder';
 
-export type DisplayType =
-	|  null
+export type ColorType =
+	| null
 	| 'primary'
 	| 'secondary'
 	| 'muted'
 	| 'success'
 	| 'warning'
 	| 'danger'
-	| 'info'
+	| 'info';
 
+interface IBaseProps extends React.HTMLAttributes<HTMLElement> {
+	/**
+	 * Determine the way in which a text is displayed.
+	 */
 
-interface IBaseProps extends React.BaseHTMLAttributes<HTMLSpanElement> {
-    /**
-     * Determine the color text.
-     */
-     
-    displayType?: DisplayType;
+	as?: DisplayType;
+	/**
+	 * Determine the color text.
+	 */
 
-    /**
-     * Set the text in italic style.
-     */
-    italic?: boolean;
+	displayType?: ColorType;
 
-    /**
-     * Number to set the heading level.
-     */
-    level?: TextLevel;
+	/**
+	 * Set the text in italic style.
+	 */
+	italic?: boolean;
 
-    /**
-     * Set the text in truncate style.
-     */
-    truncate?: boolean;
+	/**
+	 * Number to set the text size.
+	 */
+	size?: TextSize;
 
-    /**
-     * Determines the weight of the font.
-     */
-    weight?: WeightFont;
-     
+	/**
+	 * Set the text in truncate style.
+	 */
+	truncate?: boolean;
+
+	/**
+	 * Determines the weight of the font.
+	 */
+	weight?: WeightFont;
 }
 
-export const Text = React.forwardRef<HTMLSpanElement, IBaseProps>(
-    ({children, className, displayType, italic, level, truncate, weight, ...otherProps}, ref) => {
-
-        return (
-            <span className={classNames(className, [`text-${level}`], {
-                [`text-${displayType}`]: displayType,
-                ['font-italic']: italic,
-                ['text-truncate']: truncate,
-                [`font-weight-${weight}`]: weight,
-            
-            })}
-            ref={ref}
+export const Text = React.forwardRef<HTMLElement, IBaseProps>(
+	(
+		{
+			// as,
+			children,
+			className,
+			displayType,
+			italic,
+			size = 4,
+			truncate,
+			weight,
+			...otherProps
+		},
+		ref
+	) => (
+		<span
+			className={classNames(className, [`text-${size}`], {
+				[`text-${displayType}`]: displayType,
+				['font-italic']: italic,
+				['text-truncate']: truncate,
+				[`font-weight-${weight}`]: weight,
+			})}
+			ref={ref}
 			{...otherProps}
-            >
-                {children}
-            </span>
-        );
-    }
+		>
+			{children}
+		</span>
+	)
 );
 
 Text.displayName = 'Text';
