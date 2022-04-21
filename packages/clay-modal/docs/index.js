@@ -14,14 +14,11 @@ import ClayModal, {useModal} from '@clayui/modal';
 `;
 
 const modalCode = `const Component = () => {
-	const [visible, setVisible] = useState(false);
-	const {observer, onClose} = useModal({
-		onClose: () => setVisible(false),
-	});
+	const {observer, onOpenChange, open} = useModal();
 
 	return (
 		<>
-			{visible && (
+			{open && (
 				<ClayModal
 					observer={observer}
 					size="lg"
@@ -44,12 +41,12 @@ const modalCode = `const Component = () => {
 							</ClayButton.Group>
 						}
 						last={
-							<ClayButton onClick={onClose}>{'Primary'}</ClayButton>
+							<ClayButton onClick={() => onOpenChange(false)}>{'Primary'}</ClayButton>
 						}
 					/>
 				</ClayModal>
 			)}
-			<ClayButton displayType="primary" onClick={() => setVisible(true)}>
+			<ClayButton onClick={() => onOpenChange(true)}>
 				{'Open modal'}
 			</ClayButton>
 		</>
