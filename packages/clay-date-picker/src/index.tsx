@@ -215,7 +215,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			},
 			dateFormat = 'yyyy-MM-dd',
 			defaultExpanded,
-			defaultMonth = NEW_DATE,
+			defaultMonth,
 			defaultValue,
 			disabled,
 			expanded,

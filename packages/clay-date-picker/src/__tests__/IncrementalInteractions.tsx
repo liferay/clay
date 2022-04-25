@@ -568,4 +568,110 @@ describe('IncrementalInteractions', () => {
 			}
 		);
 	});
+
+	describe('Backward compatibility', () => {
+		it('define the initial state of expanded', () => {
+			render(
+				<DatePickerWithState
+					ariaLabels={ariaLabels}
+					initialExpanded
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+				/>
+			);
+
+			expect(
+				(
+					document.body.querySelector(
+						'.dropdown-menu'
+					) as HTMLDivElement
+				).classList
+			).toContain('show');
+		});
+
+		it('define the initial state of month', () => {
+			const DatePickerWithOldProp = ({
+				initialMonth = new Date(2019, 3, 18),
+				years = {end: 2019, start: 2019},
+				...props
+			}: any) => {
+				const [value, setValue] = React.useState('');
+
+				return (
+					<ClayDatePicker
+						{...props}
+						initialMonth={initialMonth}
+						onValueChange={setValue}
+						value={value}
+						years={years}
+					/>
+				);
+			};
+
+			const {getByTestId} = render(
+				<DatePickerWithOldProp
+					ariaLabels={ariaLabels}
+					defaultExpanded
+					initialMonth={new Date(2019, 0, 18)}
+					placeholder="YYYY-MM-DD"
+					spritemap={spritemap}
+					years={{
+						end: 2020,
+						start: 2017,
+					}}
+				/>
+			);
+
+			const monthSelect: any = getByTestId('month-select');
+			const yearSelect: any = getByTestId('year-select');
+			const daySelected = document.querySelector(
+				'[aria-label="Fri Jan 18 2019"]'
+			) as HTMLDivElement;
+
+			expect(yearSelect.value).toBe('2019');
+			expect(monthSelect.value).toBe('0');
+			expect(daySelected.innerHTML).toBe('18');
+		});
+	});
+
+	it('clicking the dot button should select the current date using the deprecated properties', () => {
+		const DatePickerWithOldProp = ({
+			defaultMonth = new Date(2019, 3, 18),
+			years = {end: 2019, start: 2019},
+			...props
+		}: any) => {
+			const [value, setValue] = React.useState('');
+
+			return (
+				<ClayDatePicker
+					{...props}
+					defaultMonth={defaultMonth}
+					onValueChange={setValue}
+					value={value}
+					years={years}
+				/>
+			);
+		};
+
+		const {getByLabelText} = render(
+			<DatePickerWithOldProp
+				ariaLabels={ariaLabels}
+				defaultExpanded
+				placeholder="YYYY-MM-DD"
+				spritemap={spritemap}
+			/>
+		);
+
+		const input: any = getByLabelText(ariaLabels.input);
+		const dotButtonEl = getByLabelText(ariaLabels.buttonDot);
+
+		fireEvent.click(dotButtonEl);
+
+		const currentDate = new Date(2019, 3, 18);
+
+		expect(input.value).toBe(formatDate(currentDate, 'yyyy-MM-dd'));
+
+		const dayNumber = getByLabelText(currentDate.toDateString());
+		expect(dayNumber.classList).toContain('active');
+	});
 });
