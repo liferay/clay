@@ -4,11 +4,11 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {ElementType} from 'react';
 
 export type TextSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 
-export type DisplayType = 'paragraph' | 'span';
+export type DisplayType = 'p' | 'span';
 
 export type WeightFont =
 	| 'lighter'
@@ -28,12 +28,13 @@ export type ColorType =
 	| 'danger'
 	| 'info';
 
-interface IBaseProps extends React.HTMLAttributes<HTMLElement> {
+type Props = {
 	/**
 	 * Determine the way in which a text is displayed.
 	 */
 
 	as?: DisplayType;
+
 	/**
 	 * Determine the color text.
 	 */
@@ -59,36 +60,31 @@ interface IBaseProps extends React.HTMLAttributes<HTMLElement> {
 	 * Determines the weight of the font.
 	 */
 	weight?: WeightFont;
-}
+};
 
-export const Text = React.forwardRef<HTMLElement, IBaseProps>(
-	(
-		{
-			// as,
-			children,
-			className,
-			displayType,
-			italic,
-			size = 4,
-			truncate,
-			weight,
-			...otherProps
-		},
-		ref
-	) => (
-		<span
-			className={classNames(className, [`text-${size}`], {
+export const Text: React.FC<Props> = ({
+	as = 'span',
+	children,
+	displayType,
+	italic,
+	size = 4,
+	truncate,
+	weight,
+}) => {
+	const TextTag = as as ElementType;
+
+	return (
+		<TextTag
+			className={classNames([`text-${size}`], {
 				[`text-${displayType}`]: displayType,
 				['font-italic']: italic,
 				['text-truncate']: truncate,
 				[`font-weight-${weight}`]: weight,
 			})}
-			ref={ref}
-			{...otherProps}
 		>
 			{children}
-		</span>
-	)
-);
+		</TextTag>
+	);
+};
 
 Text.displayName = 'Text';

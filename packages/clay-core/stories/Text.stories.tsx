@@ -9,6 +9,10 @@ import {Text} from '../src/typography';
 
 export default {
 	argTypes: {
+		as: {
+			control: {type: 'select'},
+			options: ['p', 'span'],
+		},
 		color: {
 			control: {type: 'select'},
 			options: [
@@ -46,6 +50,7 @@ export default {
 export const TextTypography = (args: any) => {
 	return (
 		<Text
+			as={args.as}
 			displayType={args.color}
 			italic={args.italic}
 			size={args.size}
@@ -64,6 +69,7 @@ export const TextTypography = (args: any) => {
 };
 
 TextTypography.args = {
+	as: 'span',
 	italic: false,
 	truncate: false,
 };

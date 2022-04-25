@@ -16,7 +16,7 @@ export type WeightFont =
 	| 'bold'
 	| 'bolder';
 
-interface IBaseProps extends React.BaseHTMLAttributes<HTMLHeadingElement> {
+type Props = {
 	/**
 	 * Number to set the heading level.
 	 */
@@ -26,20 +26,16 @@ interface IBaseProps extends React.BaseHTMLAttributes<HTMLHeadingElement> {
 	 * Determines the weight of the font.
 	 */
 	weight?: WeightFont;
-}
+};
 
-export const Heading = React.forwardRef<HTMLHeadingElement, IBaseProps>(
-	({children, className, level = 1, weight, ...otherProps}, ref) => (
-		<h1
-			className={classNames(className, [`text-${11 - level}`], {
-				[`font-weight-${weight}`]: weight,
-			})}
-			ref={ref}
-			{...otherProps}
-		>
-			{children}
-		</h1>
-	)
+export const Heading: React.FC<Props> = ({children, level = 1, weight = 'bold'}) => (
+	<h1
+		className={classNames([`text-${11 - level}`], {
+			[`font-weight-${weight}`]: weight,
+		})}
+	>
+		{children}
+	</h1>
 );
 
 Heading.displayName = 'Heading';
