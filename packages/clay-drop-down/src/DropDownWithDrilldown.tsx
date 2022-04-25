@@ -100,10 +100,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	trigger: React.ReactElement;
 }
 
-interface IHistory {
+type History = {
 	id: string;
 	title: string;
-}
+};
 
 export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	active,
@@ -128,7 +128,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 		defaultActiveMenu ?? initialActiveMenu
 	);
 	const [direction, setDirection] = React.useState<'prev' | 'next'>();
-	const [history, setHistory] = React.useState<Array<IHistory>>([]);
+	const [history, setHistory] = React.useState<Array<History>>([]);
 
 	const menuIds = Object.keys(menus);
 
@@ -179,7 +179,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 							onForward={(title, childId) => {
 								setHistory([
 									...history,
-									{id: activeMenu, title},
+									{id: activeMenu, title} as History,
 								]);
 
 								setDirection('next');
