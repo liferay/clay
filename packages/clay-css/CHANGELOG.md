@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.54.0](https://github.com/liferay/clay/compare/v3.53.0...v3.54.0) (2022-04-25)
+
+
+### Features
+
+* **@clayui/css:** Add new `diagonal-line` icon ([50f896f](https://github.com/liferay/clay/commit/50f896f10c05a696b6cf53e083d0b017b29dad68))
+* **@clayui/css:** regen `_lx-icons-generated.scss` file ([4444838](https://github.com/liferay/clay/commit/444483860914d22d03e9c6eb01518f3f409fba7e))
+
+
+
+
+
 # [3.53.0](https://github.com/liferay/clay/compare/v3.52.0...v3.53.0) (2022-04-12)
 
 
