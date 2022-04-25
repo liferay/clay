@@ -3,11 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {
-	TInternalStateOnChange,
-	observeRect,
-	useInternalState,
-} from '@clayui/shared';
+import {InternalDispatch, observeRect, useInternalState} from '@clayui/shared';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 type Bounds = {
@@ -91,7 +87,7 @@ type Props<T> = {
 	/**
 	 * Callback is called when the bounds changes (controlled).
 	 */
-	onBoundsChange?: TInternalStateOnChange<Bounds>;
+	onBoundsChange?: InternalDispatch<Bounds>;
 };
 
 const initialBounds = {
@@ -115,8 +111,8 @@ export function OverlayMask<T>({
 }: Props<T>) {
 	const [internalBounds, setBounds] = useInternalState({
 		defaultName: 'defaultBounds',
+		defaultValue: defaultBounds,
 		handleName: 'onBoundsChange',
-		initialValue: defaultBounds,
 		name: 'bounds',
 		onChange: onBoundsChange,
 		value: bounds,
