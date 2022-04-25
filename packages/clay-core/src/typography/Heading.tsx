@@ -28,7 +28,11 @@ type Props = {
 	weight?: WeightFont;
 };
 
-export const Heading: React.FC<Props> = ({children, level = 1, weight = 'bold'}) => (
+export const Heading: React.FC<Props> = ({
+	children,
+	level = 1,
+	weight = 'bold',
+}) => (
 	<h1
 		className={classNames([`text-${11 - level}`], {
 			[`font-weight-${weight}`]: weight,
