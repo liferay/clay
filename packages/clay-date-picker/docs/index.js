@@ -17,7 +17,7 @@ const DatePickerWithState = () => {
 
 	return (
 		<ClayDatePicker
-			onValueChange={setValue}
+			onChange={setValue}
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
 			value={value}
@@ -66,7 +66,7 @@ const DatePickerLocale = () => {
 				'Ноябрь',
 				'Декабрь',
 			]}
-			onValueChange={setValue}
+			onChange={setValue}
 			placeholder="DD.MM.YYYY"
 			spritemap={spritemap}
 			value={value}
@@ -101,11 +101,11 @@ const DatePickerCustomFooter = () => {
 
 	return (
 		<ClayDatePicker
-			onValueChange={setValue}
+			footerElement={() => <span>Footer Content</span>}
+			onChange={setValue}
 			placeholder="YYYY-MM-DD"
 			spritemap={spritemap}
 			value={value}
-			footerElement={() => <span>Footer Content</span>}
 			years={{
 				end: 2024,
 				start: 2008,
@@ -136,12 +136,12 @@ const DatePickerWithTime = () => {
 
 	return (
 		<ClayDatePicker
-			onValueChange={setValue}
+			onChange={setValue}
 			placeholder="YYYY-MM-DD HH:mm"
 			spritemap={spritemap}
-			value={value}
 			time
 			timezone="GMT+01:00"
+			value={value}
 			years={{
 				end: 2024,
 				start: 2008,
@@ -172,7 +172,7 @@ const DatePickerWithRange = () => {
 
 	return (
 		<ClayDatePicker
-			onValueChange={setValue}
+			onChange={setValue}
 			placeholder="YYYY-MM-DD - YYYY-MM-DD"
 			range
 			spritemap={spritemap}
