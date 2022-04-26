@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Heading renders as h1 with normal style 1`] = `
+exports[`Heading renders as h1 without style defined 1`] = `
 <body>
   <div>
     <h1
-      class="text-10 font-weight-normal"
+      class="text-10 font-weight-bold"
     >
       This is a Heading
     </h1>
@@ -20,6 +20,18 @@ exports[`Heading renders as h3 with semi-bold style 1`] = `
     >
       This is a Heading
     </h1>
+  </div>
+</body>
+`;
+
+exports[`Text renders as paragraph 1`] = `
+<body>
+  <div>
+    <p
+      class="text-4"
+    >
+      Single origin, extra id beans, eu to go, skinny americano ut aftertas te sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds café au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+    </p>
   </div>
 </body>
 `;
@@ -41,6 +53,42 @@ exports[`Text renders with normal style 1`] = `
   <div>
     <span
       class="text-1 font-weight-normal"
+    >
+      Single origin, extra id beans, eu to go, skinny americano ut aftertas te sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds café au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Text renders with size 2, info color and lighter style 1`] = `
+<body>
+  <div>
+    <span
+      class="text-2 text-info font-weight-lighter"
+    >
+      Single origin, extra id beans, eu to go, skinny americano ut aftertas te sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds café au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Text renders with size 2, truncate and light style 1`] = `
+<body>
+  <div>
+    <span
+      class="text-2 text-truncate font-weight-light"
+    >
+      Single origin, extra id beans, eu to go, skinny americano ut aftertas te sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds café au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Text renders without style defined 1`] = `
+<body>
+  <div>
+    <span
+      class="text-4"
     >
       Single origin, extra id beans, eu to go, skinny americano ut aftertas te sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds café au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
     </span>

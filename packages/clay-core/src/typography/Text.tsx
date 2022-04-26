@@ -32,14 +32,17 @@ type Props = {
 	/**
 	 * Determine the way in which a text is displayed.
 	 */
-
 	as?: DisplayType;
+
+	/**
+	 * Sets the element that will receive the highlight.
+	 */
+	children?: React.ReactNode;
 
 	/**
 	 * Determine the color text.
 	 */
-
-	displayType?: ColorType;
+	color?: ColorType;
 
 	/**
 	 * Set the text in italic style.
@@ -62,21 +65,21 @@ type Props = {
 	weight?: WeightFont;
 };
 
-export const Text: React.FC<Props> = ({
+export const Text = ({
 	as = 'span',
 	children,
-	displayType,
+	color,
 	italic,
 	size = 4,
 	truncate,
 	weight,
-}) => {
+}: Props) => {
 	const TextTag = as as ElementType;
 
 	return (
 		<TextTag
 			className={classNames([`text-${size}`], {
-				[`text-${displayType}`]: displayType,
+				[`text-${color}`]: color,
 				['font-italic']: italic,
 				['text-truncate']: truncate,
 				[`font-weight-${weight}`]: weight,

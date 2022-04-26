@@ -18,6 +18,11 @@ export type WeightFont =
 
 type Props = {
 	/**
+	 * Sets the element that will receive the highlight.
+	 */
+	children?: React.ReactNode;
+
+	/**
 	 * Number to set the heading level.
 	 */
 	level?: HeadingLevel;
@@ -28,11 +33,7 @@ type Props = {
 	weight?: WeightFont;
 };
 
-export const Heading: React.FC<Props> = ({
-	children,
-	level = 1,
-	weight = 'bold',
-}) => (
+export const Heading = ({children, level = 1, weight = 'bold'}: Props) => (
 	<h1
 		className={classNames([`text-${11 - level}`], {
 			[`font-weight-${weight}`]: weight,

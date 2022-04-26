@@ -51,7 +51,7 @@ export const TextTypography = (args: any) => {
 	return (
 		<Text
 			as={args.as}
-			displayType={args.color}
+			color={args.color}
 			italic={args.italic}
 			size={args.size}
 			truncate={args.truncate}
