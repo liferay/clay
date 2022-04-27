@@ -68,7 +68,7 @@ $table-cell-expand-smallest-width: 10% !default;
 // TH
 
 $table-head-bg: $white !default;
-$table-head-border-bottom-width: 2 * $table-border-width !default;
+$table-head-border-bottom-width: calc(2 * #{$table-border-width}) !default;
 $table-head-border-top-width: 0px !default;
 $table-head-color: $gray-700 !default;
 $table-head-font-size: null !default;
