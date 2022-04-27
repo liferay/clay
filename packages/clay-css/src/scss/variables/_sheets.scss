@@ -212,7 +212,7 @@ $sheet-dataset-content: () !default;
 $sheet-dataset-content-sheet-header: () !default;
 $sheet-dataset-content-sheet-header: map-merge(
 	(
-		border-width: 0,
+		border-width: 0px,
 		margin: -1.5rem -1.5rem 1.5rem,
 		padding: 1rem 1.5rem,
 	),

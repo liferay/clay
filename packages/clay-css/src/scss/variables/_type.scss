@@ -52,7 +52,7 @@ $c-kbd: map-deep-merge(
 $c-kbd-c-kbd: () !default;
 $c-kbd-c-kbd: map-merge(
 	(
-		border-width: 0,
+		border-width: 0px,
 		font-size: inherit,
 		font-weight: inherit,
 		height: auto,
@@ -74,7 +74,7 @@ $c-kbd-monospaced: map-deep-merge(
 $c-kbd-inline: () !default;
 $c-kbd-inline: map-deep-merge(
 	(
-		border-width: 0,
+		border-width: 0px,
 		font-weight: $font-weight-light,
 		height: auto,
 		line-height: inherit,

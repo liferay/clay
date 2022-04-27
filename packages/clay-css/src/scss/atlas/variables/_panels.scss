@@ -1,6 +1,6 @@
 // Panel Header
 
-$panel-header-border-bottom-width: 0 !default;
+$panel-header-border-bottom-width: 0px !default;
 $panel-header-font-size: 0.875rem !default; // 14px
 $panel-header-link-hover-text-decoration: none !default;
 
@@ -29,7 +29,7 @@ $panel-header-collapsed-link: map-deep-merge(
 
 // Panel Footer
 
-$panel-footer-border-top-width: 0 !default;
+$panel-footer-border-top-width: 0px !default;
 
 // Panel Title
 
