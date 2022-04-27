@@ -405,7 +405,7 @@ $dropdown-divider-bg: $gray-200 !default;
 
 /// @deprecated as of v3.x use map $dropdown-divider instead
 
-$dropdown-divider-margin-y: $spacer * 0.5 !default;
+$dropdown-divider-margin-y: 0.5rem !default;
 
 $dropdown-divider: () !default;
 $dropdown-divider: map-merge(
@@ -884,7 +884,7 @@ $dropdown-action: map-deep-merge(
 
 $dropdown-alert-font-size: null !default;
 $dropdown-alert-line-height: normal !default;
-$dropdown-alert-margin: $spacer * 0.5 !default;
+$dropdown-alert-margin: 0.5rem !default;
 $dropdown-alert-padding-x: $dropdown-header-padding-x !default;
 $dropdown-alert-padding-y: $dropdown-header-padding-y !default;
 

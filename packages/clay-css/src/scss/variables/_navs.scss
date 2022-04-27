@@ -157,7 +157,7 @@ $nav-item: map-deep-merge(
 // .nav-divider
 
 $nav-divider-color: $gray-600 !default;
-$nav-divider-margin-y: $spacer * 0.5 !default;
+$nav-divider-margin-y: 0.5rem !default;
 
 $nav-divider: () !default;
 $nav-divider: map-deep-merge(
