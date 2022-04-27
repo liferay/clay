@@ -8,8 +8,6 @@ import React, {ElementType} from 'react';
 
 export type TextSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 
-export type DisplayType = 'p' | 'span';
-
 export type WeightFont =
 	| 'lighter'
 	| 'light'
@@ -32,7 +30,7 @@ type Props = {
 	/**
 	 * Determine the way in which a text is displayed.
 	 */
-	as?: DisplayType;
+	as?: 'p' | 'span';
 
 	/**
 	 * Sets the element that will receive the highlight.
