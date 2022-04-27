@@ -264,7 +264,7 @@ $component-action: map-deep-merge(
 		background-color: transparent,
 		border-color: transparent,
 		border-radius: $border-radius,
-		border-width: 0,
+		border-width: 0px,
 		color: $secondary,
 		display: inline-flex,
 		height: map-get($link-monospaced, height),

@@ -185,12 +185,12 @@ $panel-unstyled: () !default;
 $panel-unstyled: map-deep-merge(
 	(
 		background-color: transparent,
-		border-radius: 0,
-		border-width: 0,
+		border-radius: 0px,
+		border-width: 0px,
 		margin-bottom: 1.5rem,
 		header: (
 			border-color: $gray-500,
-			border-radius: 0,
+			border-radius: 0px,
 			border-style: solid,
 			border-width: 0 0 1px 0,
 			padding-left: 0,

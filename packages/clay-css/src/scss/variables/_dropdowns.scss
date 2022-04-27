@@ -165,8 +165,8 @@ $dropdown-item-base: () !default;
 $dropdown-item-base: map-deep-merge(
 	(
 		background-color: transparent,
-		border-radius: 0,
-		border-width: 0,
+		border-radius: 0px,
+		border-width: 0px,
 		clear: both,
 		color: $dropdown-link-color,
 		cursor: $link-cursor,

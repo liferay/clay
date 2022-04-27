@@ -69,7 +69,7 @@ $table-cell-expand-smallest-width: 10% !default;
 
 $table-head-bg: $white !default;
 $table-head-border-bottom-width: 2 * $table-border-width !default;
-$table-head-border-top-width: 0 !default;
+$table-head-border-top-width: 0px !default;
 $table-head-color: $gray-700 !default;
 $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
@@ -97,8 +97,8 @@ $c-table-tbody: () !default;
 // TD
 
 $table-data-border-bottom-width: $table-border-width !default;
-$table-data-border-left-width: 0 !default;
-$table-data-border-right-width: 0 !default;
+$table-data-border-left-width: 0px !default;
+$table-data-border-right-width: 0px !default;
 $table-data-border-top-width: $table-border-width !default;
 
 $table-data-border-color: $table-border-color !default;
