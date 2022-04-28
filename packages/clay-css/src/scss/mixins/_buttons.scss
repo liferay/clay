@@ -735,6 +735,10 @@
 					@include clay-css($active-class-after);
 				}
 
+				&:focus {
+					@include clay-css(map-deep-get($map, active-class, focus));
+				}
+
 				.inline-item {
 					@include clay-css(map-get($active-class, inline-item));
 				}
