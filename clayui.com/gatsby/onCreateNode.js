@@ -41,6 +41,7 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			path: permalink,
 			redirect,
 			redirectFrom,
+			storybookPath,
 			title,
 			version,
 		} = node.frontmatter;
@@ -185,6 +186,12 @@ module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 			name: 'packageNpm',
 			node,
 			value: packageNpm || '',
+		});
+
+		createNodeField({
+			name: 'storybookPath',
+			node,
+			value: storybookPath || '',
 		});
 
 		createNodeField({
