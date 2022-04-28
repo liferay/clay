@@ -35,6 +35,18 @@ const mapStatus = {
 	stable: 'success',
 };
 
+const getStorybookUrl = (packageNpm, path) => {
+	const url = 'https://storybook.clayui.com/?path=/story/';
+
+	if (path) {
+		return url + path;
+	}
+
+	return `${url}design-system-components-${packageNpm
+		.replace('@clayui/', '')
+		.replace('-', '')}`;
+};
+
 const PackageInfo = ({fields = {}, frontmatter = {}}) => (
 	<p className="clay-site-label">
 		{fields.packageStatus && (
@@ -94,9 +106,10 @@ const PackageInfo = ({fields = {}, frontmatter = {}}) => (
 
 				<a
 					className="align-middle d-inline-block link-primary"
-					href={`https://storybook.clayui.com/?path=/story/components-${frontmatter.packageNpm
-						.replace('@clayui/', 'clay')
-						.replace('-', '')}`}
+					href={getStorybookUrl(
+						frontmatter.packageNpm,
+						frontmatter.storybookPath
+					)}
 					rel="noopener noreferrer"
 					target="_blank"
 				>
@@ -376,6 +389,7 @@ export const pageQuery = graphql`
 				navigationParent
 				lexiconDefinition
 				packageNpm
+				storybookPath
 				title
 			}
 			fields {
