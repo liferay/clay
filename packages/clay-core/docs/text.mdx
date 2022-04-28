@@ -1,0 +1,77 @@
+---
+title: 'Text'
+description: 'Text represent a single text line without semantic meaning.'
+packageNpm: '@clayui/core'
+packageStatus: 'Beta'
+---
+
+import {TextColorFont, TextItalicFont, TextMonospaceFont,TextSize, TextTruncateFont, TextWeight} from '$packages/clay-core/docs/text';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Introduction](#introduction)
+-   [Size](#size)
+-   [As API](#as-api)
+-   [Font Styles](#font-styles)
+    -   [Italic](#italic)
+    -   [Truncate](#truncate)
+    -   [Monospace](#monospace)
+-   [Color](#color)
+-   [Font Weights](#font-weights)
+
+</div>
+</div>
+
+## Introduction
+
+Text is a component that represents a single text line without semantic meaning like a [Button](/docs/components/button.html). Text can also provide its styles using its props like [`italic`](#italic), [`truncate`](#truncate), [`monospace`](#monospace), [`color`](#color), [`weight`](#font-weights) and [`size`](#size).
+
+## Size
+
+The same way as [Heading](/docs/components/heading.html), Text provides its own font size level from 1 to 11 just indicating it in the property `size`. The default font size is 4.
+
+<TextSize />
+
+## As API
+
+The HTML tag of this component can be chosen to ensure that the semantics of the text are representative. Text provides a property that allows to display the component depending on the user election. It can be displayed as `p` or `span` tag providing a block element or a inline one.
+
+```jsx
+<Text as="p">
+    Text using paragraph
+</Text>
+<Text as="span">
+    Text using span
+</Text>
+```
+## Font Styles
+### Italic
+
+Likewise, Text provides a new property that allows you change the font weight of text in `italic` form.
+
+<TextItalicFont />
+
+### Truncate
+
+If you want to shortening Text content because it doesn't fit the layout correctly, you can use `truncate` property.
+
+< TextTruncateFont/>
+
+### Monospace
+
+Text provides a property which sets a font whose letters and characters each occupy the same amount of horizontal space, which is `monospace`. 
+
+<TextMonospaceFont />
+
+## Color
+
+Text has the ability to apply different `color` fonts giving emphasis to the text, you can check [here](/docs/css/content/typography.html#css-contextual-texts). Notice that is not recommended on light backgrounds due to contrast issues around light text.
+
+<TextColorFont/>
+
+## Font Weights
+
+As well as [Heading](/docs/components/heading.html), Text provides its own font weight styles from `bolder` to `lighter` just indicating it in the property `weight`. The default font weight is `normal`.
+
+<TextWeight />

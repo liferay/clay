@@ -1,0 +1,34 @@
+---
+title: 'Heading'
+description: 'Heading creates a title or subject of an article or another piece of written work.'
+packageNpm: '@clayui/core'
+packageStatus: 'Beta'
+---
+
+import {HeadingLevel, HeadingWeight} from '$packages/clay-core/docs/heading';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Introduction](#introduction)
+-   [Level](#level)
+-   [Font Weights](#font-weights)
+
+</div>
+</div>
+
+## Introduction
+
+Heading is a component that creates a title or a subject of an article or a pice of work. This a proposal created using the `h1` tag which you can modify the `weight` and the `level` of the component.
+
+## Level
+
+By default, the semantic of the heading level is level 1 in which the component will render as an `h1` element. However, if you need to change the semantic of the level, you just provide it using the `level` property from 1 to 6.
+
+<HeadingLevel />
+
+## Font Weights
+
+In the same way, Heading component provides some styles depending on the `weight`. You can check them [here](/docs/css/utilities/markup-text.html#css-text-weights).
+
+<HeadingWeight />
