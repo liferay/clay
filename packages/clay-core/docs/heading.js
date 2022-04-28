@@ -41,7 +41,13 @@ render(<Component />)`;
 export const HeadingLevel = () => {
 	const scope = {Heading};
 
-	return <Editor code={exampleLevelCode} imports={exampleImports} scope={scope} />;
+	return (
+		<Editor
+			code={exampleLevelCode}
+			imports={exampleImports}
+			scope={scope}
+		/>
+	);
 };
 
 const exampleWeightCode = `const Component = () => {
@@ -71,11 +77,15 @@ const exampleWeightCode = `const Component = () => {
   };
   
   render(<Component />)`;
-  
+
 export const HeadingWeight = () => {
-    const scope = {Heading};
+	const scope = {Heading};
 
-    return <Editor code={exampleWeightCode} imports={exampleImports} scope={scope} />;
+	return (
+		<Editor
+			code={exampleWeightCode}
+			imports={exampleImports}
+			scope={scope}
+		/>
+	);
 };
-
-

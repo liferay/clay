@@ -16,6 +16,7 @@ const exampleImports = `import {Text} from '@clayui/core';
 import React from 'react';`;
 
 const exampleSizeCode = `const Component = () => {
+    
 
 return (
     <>  
@@ -81,12 +82,13 @@ return (
 render(<Component />)`;
 
 export const TextSize = () => {
-    const scope = {Text};
+	const scope = {Text};
 
-    return <Editor code={exampleSizeCode} imports={exampleImports} scope={scope} />;
+	return (
+		<Editor code={exampleSizeCode} imports={exampleImports} scope={scope} />
+	);
 };
- 
- 
+
 const exampleItalicCode = `const Component = () => {
 
     return (
@@ -105,11 +107,17 @@ const exampleItalicCode = `const Component = () => {
     };
     
     render(<Component />)`;
-    
-export const TextItalicFont = () => {
-    const scope = {Text};
 
-    return <Editor code={exampleItalicCode} imports={exampleImports} scope={scope} />;
+export const TextItalicFont = () => {
+	const scope = {Text};
+
+	return (
+		<Editor
+			code={exampleItalicCode}
+			imports={exampleImports}
+			scope={scope}
+		/>
+	);
 };
 
 const exampleTruncateCode = `const Component = () => {
@@ -130,11 +138,17 @@ const exampleTruncateCode = `const Component = () => {
     };
     
     render(<Component />)`;
-    
-export const TextTruncateFont = () => {
-    const scope = {Text};
 
-    return <Editor code={exampleTruncateCode} imports={exampleImports} scope={scope} />;
+export const TextTruncateFont = () => {
+	const scope = {Text};
+
+	return (
+		<Editor
+			code={exampleTruncateCode}
+			imports={exampleImports}
+			scope={scope}
+		/>
+	);
 };
 
 const exampleColorCode = `const Component = () => {
@@ -167,11 +181,17 @@ const exampleColorCode = `const Component = () => {
     };
     
     render(<Component />)`;
-    
-export const TextColorFont = () => {
-    const scope = {Text};
 
-    return <Editor code={exampleColorCode} imports={exampleImports} scope={scope} />;
+export const TextColorFont = () => {
+	const scope = {Text};
+
+	return (
+		<Editor
+			code={exampleColorCode}
+			imports={exampleImports}
+			scope={scope}
+		/>
+	);
 };
 
 const exampleMonospaceCode = `const Component = () => {
@@ -192,11 +212,17 @@ const exampleMonospaceCode = `const Component = () => {
     };
     
     render(<Component />)`;
-    
-export const TextMonospaceFont = () => {
-    const scope = {Text};
 
-    return <Editor code={exampleMonospaceCode} imports={exampleImports} scope={scope} />;
+export const TextMonospaceFont = () => {
+	const scope = {Text};
+
+	return (
+		<Editor
+			code={exampleMonospaceCode}
+			imports={exampleImports}
+			scope={scope}
+		/>
+	);
 };
 
 const exampleWeightCode = `const Component = () => {
@@ -226,9 +252,15 @@ const exampleWeightCode = `const Component = () => {
   };
   
   render(<Component />)`;
-  
-export const TextWeight = () => {
-    const scope = {Text};
 
-    return <Editor code={exampleWeightCode} imports={exampleImports} scope={scope} />;
+export const TextWeight = () => {
+	const scope = {Text};
+
+	return (
+		<Editor
+			code={exampleWeightCode}
+			imports={exampleImports}
+			scope={scope}
+		/>
+	);
 };
