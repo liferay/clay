@@ -10,7 +10,7 @@ $btn-focus-box-shadow: $component-focus-box-shadow !default;
 
 $btn-disabled-opacity: 0.4 !default;
 
-$btn-active-box-shadow: none !default;
+$btn-active-box-shadow: $c-unset !default;
 
 $btn-inline-item-font-size: 1rem !default; // 16px
 

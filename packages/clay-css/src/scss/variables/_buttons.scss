@@ -849,9 +849,6 @@ $btn-link: map-deep-merge(
 			box-shadow: $btn-focus-box-shadow,
 			text-decoration: $link-decoration,
 		),
-		active: (
-			box-shadow: clay-enable-shadows(none),
-		),
 		disabled: (
 			box-shadow: none,
 			color: $btn-link-disabled-color,
