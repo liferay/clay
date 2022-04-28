@@ -107,7 +107,7 @@ caption {
 	}
 
 	tbody + tbody {
-		border-top: (2 * $table-border-width) solid $table-border-color;
+		border-top: calc(2 * #{$table-border-width}) solid $table-border-color;
 	}
 
 	tfoot {
@@ -170,7 +170,7 @@ caption {
 	thead {
 		td,
 		th {
-			border-bottom-width: 2 * $table-border-width;
+			border-bottom-width: calc(2 * #{$table-border-width});
 
 			@if (
 				$table-head-border-top-width ==
