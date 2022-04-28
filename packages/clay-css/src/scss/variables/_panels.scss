@@ -47,7 +47,8 @@ $panel-header-link: map-deep-merge(
 		color: inherit,
 		display: block,
 		text-decoration: $panel-header-link-text-decoration,
-		transition: border-color 0.1s ease#{','} border-radius 0.5s ease,
+		transition: #{border-color 0.1s ease,
+		border-radius 0.5s ease},
 		hover: (
 			color: inherit,
 			text-decoration: $panel-header-link-hover-text-decoration,
