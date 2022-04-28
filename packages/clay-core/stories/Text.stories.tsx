@@ -53,6 +53,7 @@ export const TextTypography = (args: any) => {
 			as={args.as}
 			color={args.color}
 			italic={args.italic}
+			monospace={args.monospace}
 			size={args.size}
 			truncate={args.truncate}
 			weight={args.weight}
@@ -71,5 +72,6 @@ export const TextTypography = (args: any) => {
 TextTypography.args = {
 	as: 'span',
 	italic: false,
+	monospace: false,
 	truncate: false,
 };

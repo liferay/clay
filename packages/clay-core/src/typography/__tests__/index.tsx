@@ -125,6 +125,25 @@ describe('Text', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
+	it('renders with size 2, monospace and bolder style', () => {
+		render(
+			<Text monospace size={2} weight="bolder">
+				Single origin, extra id beans, eu to go, skinny americano ut
+				aftertas te sugar. At americano, viennese variety iced grounds,
+				grinder froth and pumpkin spice aromatic. Cultivar aged lungo,
+				grounds café au lait, skinny, blue mountain, in variety sugar
+				shop roast. Wings, blue mountain affogato organic cappuccino
+				java plunger pot. Single shot variety pumpkin spice seasonal
+				skinny barista carajillo robust cream.
+			</Text>
+		);
+
+		expect(
+			document.querySelector('.text-2.text-monospace.font-weight-bolder')
+		).toBeTruthy();
+		expect(document.body).toMatchSnapshot();
+	});
+
 	it('renders with size 2, info color and lighter style', () => {
 		render(
 			<Text color="info" size={2} weight="lighter">

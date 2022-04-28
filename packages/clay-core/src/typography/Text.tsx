@@ -48,6 +48,11 @@ type Props = {
 	italic?: boolean;
 
 	/**
+	 * Set the text in monospace style.
+	 */
+	monospace?: boolean;
+
+	/**
 	 * Number to set the text size.
 	 */
 	size?: TextSize;
@@ -68,6 +73,7 @@ export const Text = ({
 	children,
 	color,
 	italic,
+	monospace,
 	size = 4,
 	truncate,
 	weight,
@@ -79,6 +85,7 @@ export const Text = ({
 			className={classNames([`text-${size}`], {
 				[`text-${color}`]: color,
 				['font-italic']: italic,
+				['text-monospace']: monospace,
 				['text-truncate']: truncate,
 				[`font-weight-${weight}`]: weight,
 			})}
