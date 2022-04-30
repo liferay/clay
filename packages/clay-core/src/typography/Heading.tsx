@@ -33,14 +33,18 @@ type Props = {
 	weight?: WeightFont;
 };
 
-export const Heading = ({children, level = 1, weight = 'bold'}: Props) => (
-	<h1
-		className={classNames([`text-${11 - level}`], {
-			[`font-weight-${weight}`]: weight,
-		})}
-	>
-		{children}
-	</h1>
-);
+export const Heading = ({children, level = 1, weight = 'bold'}: Props) => {
+	const HeadingTag = `h${level}` as React.ElementType;
+
+	return (
+		<HeadingTag
+			className={classNames([`text-${11 - level}`], {
+				[`font-weight-${weight}`]: weight,
+			})}
+		>
+			{children}
+		</HeadingTag>
+	);
+};
 
 Heading.displayName = 'Heading';

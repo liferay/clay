@@ -15,11 +15,11 @@ exports[`Heading renders as h1 without style defined 1`] = `
 exports[`Heading renders as h3 with semi-bold style 1`] = `
 <body>
   <div>
-    <h1
+    <h3
       class="text-8 font-weight-semi-bold"
     >
       This is a Heading
-    </h1>
+    </h3>
   </div>
 </body>
 `;
