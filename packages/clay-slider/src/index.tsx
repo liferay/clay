@@ -3,10 +3,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {InternalDispatch, useInternalState} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IProps
+	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+	/**
+	 * Property to set the default value (uncontrolled).
+	 */
+	defaultValue?: number;
+
 	/**
 	 * Flag that will disable component features.
 	 */
@@ -23,9 +30,15 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	min?: number;
 
 	/**
-	 * Callback will always be called when the slider value changes.
+	 * Callback will always be called when the slider value changes (controlled).
 	 */
-	onValueChange: (value: number) => void;
+	onChange?: InternalDispatch<number>;
+
+	/**
+	 * Callback will always be called when the slider value changes.
+	 * @deprecated since v3.40.0 - use `onChange` instead.
+	 */
+	onValueChange?: InternalDispatch<number>;
 
 	/**
 	 * Flag to show tooltip or not.
@@ -43,9 +56,9 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	tooltipPosition?: 'top' | 'bottom';
 
 	/**
-	 * Set the current value of the slider.
+	 * Set the current value of the slider (controlled).
 	 */
-	value: number;
+	value?: number;
 }
 
 const calcProgressWidth = (
@@ -80,9 +93,11 @@ const useIsomorphicLayoutEffect =
 
 const ClaySlider: React.FunctionComponent<IProps> = ({
 	className,
+	defaultValue,
 	disabled,
 	max = 100,
 	min = 0,
+	onChange,
 	onValueChange,
 	showTooltip = true,
 	step = 1,
@@ -90,6 +105,15 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 	value,
 	...otherProps
 }: IProps) => {
+	const [internalValue, setValue] = useInternalState({
+		defaultName: 'defaultValue',
+		defaultValue,
+		handleName: 'onChange',
+		name: 'value',
+		onChange: onChange ?? onValueChange,
+		value,
+	});
+
 	const [offsetWidth, setOffsetWidth] = React.useState<number>(0);
 	const sliderRef = React.useRef<HTMLInputElement | null>(null);
 	const thumbRef = React.useRef<HTMLDivElement | null>(null);
@@ -102,14 +126,14 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 				calcProgressWidth(
 					sliderRef.current,
 					thumbWidth,
-					value,
+					internalValue,
 					min,
 					max,
 					step
 				)
 			);
 		}
-	}, [value]);
+	}, [internalValue]);
 
 	return (
 		<div className={classNames('clay-range', className, {disabled})}>
@@ -120,13 +144,11 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 					disabled={disabled}
 					max={max}
 					min={min}
-					onChange={(event) =>
-						onValueChange(Number(event.target.value))
-					}
+					onChange={(event) => setValue(Number(event.target.value))}
 					ref={sliderRef}
 					step={step}
 					type="range"
-					value={value}
+					value={internalValue}
 				/>
 				<div className="clay-range-track" />
 				<div
@@ -145,7 +167,7 @@ const ClaySlider: React.FunctionComponent<IProps> = ({
 								<div className="tooltip-arrow" />
 								<div className="tooltip-inner">
 									<div className="clay-range-value">
-										{value}
+										{internalValue}
 									</div>
 								</div>
 							</div>

@@ -80,7 +80,7 @@ const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
 				alignElementRef={triggerElementRef}
 				hasLeftSymbols={hasLeftSymbols}
 				hasRightSymbols={hasRightSymbols}
-				onSetActive={() => setExpand(!expand)}
+				onActiveChange={() => setExpand(!expand)}
 				ref={menuElementRef}
 			>
 				{children}

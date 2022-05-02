@@ -90,8 +90,8 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	const [items, setItems] = useInternalState({
 		defaultName: 'defaultItems',
+		defaultValue: props.defaultItems ?? [],
 		handleName: 'onItemsChange',
-		initialValue: props.defaultItems ?? [],
 		name: 'items',
 		onChange: props.onItemsChange,
 		value: props.items,
@@ -108,8 +108,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
 		defaultName: 'defaultExpandedKeys',
-		handleName: 'onExpandedChange',
-		initialValue: () => {
+		defaultValue: () => {
 			const {
 				defaultExpandedKeys,
 				nestedKey,
@@ -147,6 +146,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 			return defaultExpandedKeys ?? new Set();
 		},
+		handleName: 'onExpandedChange',
 		name: 'expandedKeys',
 		onChange: props.onExpandedChange,
 		value: props.expandedKeys,

@@ -79,8 +79,6 @@ export const Default = () => {
 };
 
 export const MultiStepNavWithBasicItems = (args: any) => {
-	const [active, setActive] = useState(0);
-
 	const steps = [
 		{
 			subTitle: 'SubOne',
@@ -123,9 +121,7 @@ export const MultiStepNavWithBasicItems = (args: any) => {
 	return (
 		<div className="sheet">
 			<ClayMultiStepNavWithBasicItems
-				activeIndex={active}
 				maxStepsShown={args.maxStepsShown}
-				onIndexChange={setActive}
 				steps={steps}
 			/>
 		</div>

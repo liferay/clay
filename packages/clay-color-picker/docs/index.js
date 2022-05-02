@@ -19,8 +19,8 @@ const colorPickerCode = `const Component = () => {
 			colors={customColors}
 			label="Custom Colors"
 			name="colorPicker2"
+			onChange={setColor}
 			onColorsChange={setCustoms}
-			onValueChange={setColor}
 			showHex={true}
 			spritemap={spritemap}
 			title="Custom Colors"

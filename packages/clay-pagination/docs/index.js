@@ -36,9 +36,9 @@ const PaginationWithBasicItemsCode = `const Component = () => {
 
 	return (
 		<ClayPaginationWithBasicItems
-			activePage={active}
+			active={active}
 			ellipsisBuffer={2}
-			onPageChange={setActive}
+			onActiveChange={setActive}
 			spritemap={spritemap}
 			totalPages={25}
 		/>

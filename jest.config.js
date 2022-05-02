@@ -130,14 +130,14 @@ module.exports = {
 		'./packages/clay-modal/src/': {
 			branches: 55,
 			functions: 81,
-			lines: 86,
-			statements: 86,
+			lines: 85,
+			statements: 85,
 		},
 		'./packages/clay-multi-select/src/': {
 			branches: 85,
 			functions: 80,
-			lines: 88,
-			statements: 87,
+			lines: 87,
+			statements: 86,
 		},
 		'./packages/clay-multi-step-nav/src/': {
 			branches: 94,

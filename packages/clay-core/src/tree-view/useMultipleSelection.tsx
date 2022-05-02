@@ -122,8 +122,8 @@ export function useMultipleSelection<T>(
 
 	const [selectedKeys, setSelectionKeys] = useInternalState<Set<Key>>({
 		defaultName: 'defaultSelectedKeys',
+		defaultValue: props.defaultSelectedKeys ?? new Set(),
 		handleName: 'onSelectionChange',
-		initialValue: props.defaultSelectedKeys ?? new Set(),
 		name: 'selectedKeys',
 		onChange: props.onSelectionChange,
 		value: props.selectedKeys,

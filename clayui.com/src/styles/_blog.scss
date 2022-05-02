@@ -1,7 +1,13 @@
 .blog {
+	header {
+		padding: 20px 0;
+	}
+
 	.blog-title {
-		line-height: 1.2 !important;
 		font-weight: 700 !important;
+		line-height: 1.2 !important;
+		margin-bottom: 15px !important;
+		margin-top: 0 !important;
 
 		@media (max-width: $grid-float-breakpoint - 1) {
 			margin-top: 30px !important;
@@ -14,6 +20,14 @@
 
 	article {
 		margin-bottom: 100px;
+
+		ul {
+			padding-left: 18px;
+		}
+
+		p {
+			color: #000000 !important;
+		}
 	}
 
 	.clay-site-container {

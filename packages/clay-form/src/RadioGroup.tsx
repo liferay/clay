@@ -3,19 +3,26 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {InternalDispatch, useInternalState} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
 import {IRadioProps} from './Radio';
 import {IToggleProps} from './Toggle';
 
-interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+interface IGroupProps
+	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
 	/**
 	 * Takes either Radio or Toggle as a child.
 	 */
 	children: Array<
 		React.ReactElement<IRadioProps> | React.ReactElement<IToggleProps>
 	>;
+
+	/**
+	 * Property to set the default value (uncontrolled).
+	 */
+	defaultValue?: React.ReactText;
 
 	/**
 	 * Flag to indicate if radio elements should display inline.
@@ -28,26 +35,50 @@ interface IGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	name?: string;
 
 	/**
-	 * Callback function for whenever a radio element is selected.
+	 * Callback function for whenever a radio element is selected (controlled).
 	 */
-	onSelectedValueChange: (val: React.ReactText) => void;
+	onChange?: InternalDispatch<React.ReactText>;
+
+	/**
+	 * Callback function for whenever a radio element is selected.
+	 * @deprecated since v3.51.0 - use `onChange` instead.
+	 */
+	onSelectedValueChange?: InternalDispatch<React.ReactText>;
 
 	/**
 	 * The value that corresponds to the selected radio element. Leave
 	 * undefined if no option is selected.
+	 * @deprecated since v3.51.0 - use `value` instead.
 	 */
 	selectedValue?: React.ReactText;
+
+	/**
+	 * The value property sets the current value (controlled).
+	 */
+	value?: React.ReactText;
 }
 
 const ClayRadioGroup: React.FunctionComponent<IGroupProps> = ({
 	children,
 	className,
+	defaultValue,
 	inline,
 	name,
+	onChange,
 	onSelectedValueChange,
 	selectedValue,
+	value,
 	...otherProps
 }: IGroupProps) => {
+	const [internalValue, setValue] = useInternalState({
+		defaultName: 'defaultValue',
+		defaultValue,
+		handleName: 'onChange',
+		name: 'value',
+		onChange: onChange ?? onSelectedValueChange,
+		value: value ?? selectedValue,
+	});
+
 	return (
 		<div {...otherProps} className={classNames(className)}>
 			{React.Children.map(
@@ -55,12 +86,11 @@ const ClayRadioGroup: React.FunctionComponent<IGroupProps> = ({
 				(child: React.ReactElement<IToggleProps | IRadioProps>, i) => {
 					return React.cloneElement(child, {
 						...child.props,
-						checked: selectedValue === child.props.value,
+						checked: internalValue === child.props.value,
 						inline,
 						key: i,
 						name,
-						onChange: () =>
-							onSelectedValueChange(child.props.value!),
+						onChange: () => setValue(child.props.value!),
 						type: 'radio',
 					});
 				}

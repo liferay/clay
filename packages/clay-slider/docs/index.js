@@ -10,17 +10,14 @@ import React from 'react';
 const sliderImportsCode = `import ClaySlider from '@clayui/slider';`;
 
 const SliderCode = `const Component = () => {
-	const [value, setValue] = useState(10);
-
 	return (
 		<div className="form-group">
 			<label htmlFor="slider">{'With Tooltip'}</label>
 			<ClaySlider
+				defaultValue={10}
 				id="slider"
-				onValueChange={setValue}
-				value={value}
 			/>
-        </div>
+    </div>
 	);
 }
 
@@ -35,18 +32,15 @@ export const Slider = () => {
 };
 
 const DecadeSliderCode = `const Component = () => {
-	const [decade, setDecade] = useState(10);
-
 	return (
 		<div className="form-group">
 			<label htmlFor="decadeSlider">{'Decades'}</label>
 
 			<ClaySlider
+				defaultValue={10}
 				id="decadeSlider"
 				max={2020}
-				onValueChange={setDecade}
 				step={10}
-				value={decade}
 			/>
 		</div>
 	);

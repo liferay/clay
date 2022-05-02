@@ -44,8 +44,7 @@ const PaginationBarCode = `const Component = () => {
 			</ClayPaginationBar.Results>
 
 			<ClayPaginationWithBasicItems
-				activePage={1}
-				onPageChange={() => {}}
+				defaultActive={1}
 				spritemap={spritemap}
 				totalPages={10}
 			/>
@@ -70,7 +69,6 @@ const paginationWithBasicItemsImportsCode = `import {ClayPaginationBarWithBasicI
 `;
 
 const PaginationBarWithBasicItemsCode = `const Component = () => {
-	const [activePage, setActivePage] = useState(1);
 	const [delta, setDelta] = useState(5);
 
 	const deltas = [
@@ -92,12 +90,11 @@ const PaginationBarWithBasicItemsCode = `const Component = () => {
 
 	return (
 		<ClayPaginationBarWithBasicItems
+			defaultActive={1}
 			activeDelta={delta}
-			activePage={activePage}
 			deltas={deltas}
 			ellipsisBuffer={3}
 			onDeltaChange={setDelta}
-			onPageChange={setActivePage}
 			spritemap={spritemap}
 			totalItems={21}
 		/>
@@ -122,16 +119,14 @@ const paginationWithBasicItemsWithoutDropDownImportsCode = `import {ClayPaginati
 `;
 
 const PaginationBarWithBasicItemsWithoutDropDownCode = `const Component = () => {
-	const [activePage, setActivePage] = useState(1);
 	const [delta, setDelta] = useState(5);
 
 	return (
 		<ClayPaginationBarWithBasicItems
 			activeDelta={delta}
-			activePage={activePage}
+			defaultActive={1}
 			ellipsisBuffer={3}
 			onDeltaChange={setDelta}
-			onPageChange={setActivePage}
 			showDeltasDropDown={false}
 			spritemap={spritemap}
 			totalItems={21}

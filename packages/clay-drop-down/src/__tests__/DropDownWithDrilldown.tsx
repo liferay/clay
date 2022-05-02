@@ -27,7 +27,7 @@ describe('ClayDropDownWithDrilldown', () => {
 	it('renders', () => {
 		const {getByTestId} = render(
 			<ClayDropDownWithDrilldown
-				initialActiveMenu="x0a3"
+				defaultActiveMenu="x0a3"
 				menus={{
 					x0a3: [
 						{href: '#', title: 'Hash Link'},
@@ -142,7 +142,7 @@ describe('ClayDropDownWithDrilldown', () => {
 	it('renders with the menu initially active', () => {
 		render(
 			<ClayDropDownWithDrilldown
-				active
+				defaultActive
 				initialActiveMenu="x0a3"
 				menus={{
 					x0a3: [
@@ -165,6 +165,7 @@ describe('ClayDropDownWithDrilldown', () => {
 
 		const {getByTestId} = render(
 			<ClayDropDownWithDrilldown
+				active={false}
 				initialActiveMenu="x0a3"
 				menus={{
 					x0a3: [
@@ -185,7 +186,7 @@ describe('ClayDropDownWithDrilldown', () => {
 		fireEvent.click(getByTestId('menu-item-Toggle'));
 		fireEvent.click(getByTestId('menu-item-Toggle'));
 
-		expect(onActiveChange).toHaveBeenCalledTimes(3);
+		expect(onActiveChange).toHaveBeenCalledTimes(4);
 
 		expect(document.body).toMatchSnapshot();
 	});

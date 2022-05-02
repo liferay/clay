@@ -50,18 +50,17 @@ const ClayMultiSelectWithAutocomplete = (props: any) => {
 	return (
 		<ClayMultiSelect
 			inputName="myInput"
-			inputValue={value}
 			items={items}
 			onChange={setValue}
 			onItemsChange={setItems}
 			sourceItems={itemLabelFilter(sourceItems, value)}
+			value={value}
 			{...props}
 		/>
 	);
 };
 
 export const Default = (args: any) => {
-	const [value, setValue] = useState('');
 	const [items, setItems] = useState([
 		{
 			label: 'one',
@@ -78,11 +77,9 @@ export const Default = (args: any) => {
 				disabledClearAll={args.disabledClearAll}
 				id="multiSelect"
 				inputName="myInput"
-				inputValue={value}
 				isValid={args.isValid}
 				items={items}
-				onChange={setValue}
-				onItemsChange={(val) => setItems(val as any)}
+				onItemsChange={setItems}
 			/>
 		</>
 	);
@@ -95,7 +92,6 @@ Default.args = {
 };
 
 export const ComparingItems = () => {
-	const [value, setValue] = useState('');
 	const [items, setItems] = useState<
 		React.ComponentProps<typeof ClayMultiSelect>['items']
 	>([
@@ -112,9 +108,7 @@ export const ComparingItems = () => {
 			<ClayMultiSelect
 				id="multiSelect"
 				inputName="myInput"
-				inputValue={value}
 				items={items}
-				onChange={setValue}
 				onItemsChange={(itemsChanged) => {
 					const removedItems = items.filter(
 						(value) => !itemsChanged.includes(value)
@@ -152,11 +146,11 @@ export const SourceItems = () => {
 
 			<ClayMultiSelect
 				inputName="myInput"
-				inputValue={value}
 				items={items}
 				onChange={setValue}
 				onItemsChange={(val) => setItems(val as any)}
 				sourceItems={itemLabelFilter(sourceItems, value)}
+				value={value}
 			/>
 		</>
 	);
@@ -195,7 +189,6 @@ const MenuCustom: React.ComponentProps<typeof ClayMultiSelect>['menuRenderer'] =
 	);
 
 export const CustomMenu = () => {
-	const [value, setValue] = React.useState('');
 	const [items, setItems] = React.useState([
 		{
 			email: 'one@example.com',
@@ -211,10 +204,8 @@ export const CustomMenu = () => {
 			<ClayMultiSelectWithAutocomplete
 				id="multiSelect"
 				inputName="myInput"
-				inputValue={value}
 				items={items}
 				menuRenderer={MenuCustom}
-				onChange={setValue}
 				onItemsChange={setItems}
 				sourceItems={[
 					{
@@ -239,11 +230,11 @@ export const CustomFilter = () => {
 
 	return (
 		<ClayMultiSelect
-			inputValue={value}
 			items={items}
 			onChange={setValue}
 			onItemsChange={setItems}
 			sourceItems={sourceItems.filter((item) => item.label.match(value))}
+			value={value}
 		/>
 	);
 };
@@ -271,7 +262,6 @@ export const Async = () => {
 
 	return (
 		<ClayMultiSelect
-			inputValue={value}
 			isLoading={isLoading}
 			items={items}
 			onChange={(newInputVal) => {
@@ -281,6 +271,7 @@ export const Async = () => {
 			}}
 			onItemsChange={setItems}
 			sourceItems={dropdownItems}
+			value={value}
 		/>
 	);
 };

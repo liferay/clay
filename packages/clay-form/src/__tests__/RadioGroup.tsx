@@ -13,10 +13,7 @@ import ClayRadioGroup from '../RadioGroup';
 describe('Rendering', () => {
 	it('default', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayRadioGroup
-				onSelectedValueChange={() => {}}
-				selectedValue="one"
-			>
+			<ClayRadioGroup defaultValue="one">
 				<ClayRadio label="One" value="one" />
 				<ClayRadio label="Two" value="two" />
 				<ClayRadio label="Three" value="three" />
@@ -50,5 +47,44 @@ describe('Interactions', () => {
 
 		expect(handleSelectedChange).toHaveBeenCalledTimes(1);
 		expect(handleSelectedChange).toHaveBeenCalledWith('three');
+	});
+
+	it('selecting a radio element should fire the onChange prop with the new value', () => {
+		const onChange = jest.fn();
+
+		const {getByLabelText} = render(
+			<ClayRadioGroup onChange={onChange} value="one">
+				<ClayRadio label="One" value="one" />
+				<ClayRadio label="Two" value="two" />
+				<ClayRadio label="Three" value="three" />
+			</ClayRadioGroup>
+		);
+
+		const radioThree = getByLabelText('Three');
+
+		fireEvent.click(radioThree as HTMLButtonElement, {});
+
+		expect(onChange).toHaveBeenCalledTimes(1);
+		expect(onChange).toHaveBeenCalledWith('three');
+	});
+
+	it('select a radio element with the uncontrolled component', () => {
+		const {getByLabelText} = render(
+			<ClayRadioGroup defaultValue="one">
+				<ClayRadio label="One" value="one" />
+				<ClayRadio label="Two" value="two" />
+				<ClayRadio label="Three" value="three" />
+			</ClayRadioGroup>
+		);
+
+		const radioOne = getByLabelText('One') as HTMLInputElement;
+
+		expect(radioOne.checked).toBe(true);
+
+		const radioThree = getByLabelText('Three') as HTMLInputElement;
+
+		fireEvent.click(radioThree as HTMLButtonElement, {});
+
+		expect(radioThree.checked).toBe(true);
 	});
 });

@@ -7,11 +7,7 @@ import Button from '@clayui/button';
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import {
-	FocusScope,
-	TInternalStateOnChange,
-	useInternalState,
-} from '@clayui/shared';
+import {FocusScope, InternalDispatch, useInternalState} from '@clayui/shared';
 import React from 'react';
 
 import DateNavigation from './DateNavigation';
@@ -27,7 +23,8 @@ import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
 
 import type {Input} from '@clayui/time-picker';
 
-interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+interface IProps
+	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
 	/**
 	 * Labels for the aria attributes
 	 */
@@ -40,9 +37,30 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	dateFormat?: string;
 
 	/**
+	 * Property to set if expanded by default (uncontrolled).
+	 */
+	defaultExpanded?: boolean;
+
+	/**
+	 * The start date to be displayed on the calendar as "Today". Used to mark
+	 * the start date of the day and when resetting.
+	 */
+	defaultMonth?: Date;
+
+	/**
+	 * Property to set the default value (uncontrolled).
+	 */
+	defaultValue?: string;
+
+	/**
 	 * Flag to disable the component, buttons, open the datepicker, etc...
 	 */
 	disabled?: boolean;
+
+	/**
+	 * Determines if menu is expanded or not (controlled).
+	 */
+	expanded?: boolean;
 
 	/**
 	 * Set the first day of the week, starting from
@@ -64,12 +82,14 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Flag to indicate if date is initially expanded when
 	 * `expand` and `onExpandChange` are not being used.
+	 * @deprecated since v3.51.0 - use `defaultExpanded` instead.
 	 */
 	initialExpanded?: boolean;
 
 	/**
 	 * The start date to be displayed on the calendar as "Today". Used to mark
 	 * the start date of the day and when resetting.
+	 * @deprecated since v3.51.0 - use `defaultMonth` instead.
 	 */
 	initialMonth?: Date;
 
@@ -84,6 +104,16 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	months?: Array<string>;
 
 	/**
+	 * Callback that is called when the value changes (controlled).
+	 */
+	onChange?: InternalDispatch<string>;
+
+	/**
+	 * Callback for when dropdown changes its expanded state (controlled).
+	 */
+	onExpandedChange?: InternalDispatch<boolean>;
+
+	/**
 	 * Called when the user is browsing the date picker, changing the
 	 * month, year and navigating with arrows.
 	 */
@@ -93,8 +123,9 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Called when the input change.
 	 *
 	 * Second argument gives the type that caused the value change
+	 * @deprecated since v3.51.0 - use `onChange` instead.
 	 */
-	onValueChange: (value: string, type?: 'click' | 'input' | 'time') => void;
+	onValueChange?: (value: string, type?: 'click' | 'input' | 'time') => void;
 
 	/**
 	 * Describe a brief tip to help users interact.
@@ -132,9 +163,9 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	useNative?: boolean;
 
 	/**
-	 * Set the value of the input.
+	 * The value property sets the current value (controlled).
 	 */
-	value: string;
+	value?: string;
 
 	/**
 	 * Short names of days of the week to use in the header
@@ -152,16 +183,6 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * is included in the range of years. Disable only if your range is dynamic.
 	 */
 	yearsCheck?: boolean;
-
-	/**
-	 * Determines if menu is expanded or not
-	 */
-	expanded?: boolean;
-
-	/**
-	 * Callback for when dropdown changes its active state
-	 */
-	onExpandedChange?: TInternalStateOnChange<boolean>;
 }
 
 const DEFAULT_DATE_TIME = {
@@ -193,6 +214,9 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				buttonPreviousMonth: 'Select the previous month',
 			},
 			dateFormat = 'yyyy-MM-dd',
+			defaultExpanded,
+			defaultMonth,
+			defaultValue,
 			disabled,
 			expanded,
 			firstDayOfWeek = FirstDayOfWeek.Sunday,
@@ -215,9 +239,10 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				'November',
 				'December',
 			],
+			onChange,
 			onExpandedChange,
 			onNavigation = () => {},
-			onValueChange = () => {},
+			onValueChange,
 			placeholder,
 			range,
 			spritemap,
@@ -236,6 +261,10 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		}: IProps,
 		ref
 	) => {
+		// For backward compatibility `defaultMonth` is just an alias for
+		// `initialMonth`.
+		initialMonth = defaultMonth ?? initialMonth;
+
 		/**
 		 * Indicates the current month rendered on the screen.
 		 */
@@ -262,14 +291,26 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const [weeks, setWeeks] = useWeeks(currentMonth, firstDayOfWeek);
 
+		const [internalValue, setValue] = useInternalState({
+			defaultName: 'defaultValue',
+			defaultValue,
+			handleName: 'onChange',
+			name: 'value',
+			onChange: onChange ?? onValueChange,
+			value,
+		});
+
 		/**
 		 * Flag to indicate if date is expanded. Uses an internal state value
 		 * if component is not controlled by props.
 		 */
 		const [expandedValue, setExpandedValue] = useInternalState({
-			defaultName: 'initialExpanded',
+			defaultName: 'defaultExpanded',
+			defaultValue:
+				defaultExpanded === undefined
+					? initialExpanded
+					: defaultExpanded,
 			handleName: 'onExpandedChange',
-			initialValue: initialExpanded,
 			name: 'expanded',
 			onChange: onExpandedChange,
 			value: expanded,
@@ -344,12 +385,12 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			}
 
 			setDaysSelected(newDaysSelected);
-			onValueChange(daysSelectedToString, 'click');
+			setValue(daysSelectedToString);
 		};
 
 		/**
 		 * Control the value of the input propagating with the call
-		 * of `onValueChange` but does not change what the user types,
+		 * of `onChange` but does not change what the user types,
 		 * if a date is valid the month of the Date Picker is changed.
 		 */
 		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -401,7 +442,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				}
 			}
 
-			onValueChange(value, 'input');
+			setValue(value);
 		};
 
 		/**
@@ -438,7 +479,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			}
 
 			setDaysSelected(newDaysSelected);
-			onValueChange(dateFormatted);
+			setValue(dateFormatted);
 		};
 
 		const handleTimeChange = (
@@ -456,7 +497,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 				minutes = 0;
 			}
 
-			if (value) {
+			if (internalValue) {
 				let date =
 					typeof hours === 'string' && typeof minutes === 'string'
 						? `${formatDate(day, dateFormat)} ${hours}:${minutes}`
@@ -469,7 +510,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 					date += ` ${ampm}`;
 				}
 
-				onValueChange(date, 'time');
+				setValue(date);
 			}
 
 			setCurrentTime(hours, minutes, use12Hours ? ampm : undefined);
@@ -518,7 +559,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 								placeholder={placeholder}
 								ref={ref}
 								useNative={useNative}
-								value={value}
+								value={internalValue}
 							/>
 							{!useNative && (
 								<ClayInput.GroupInsetItem after>

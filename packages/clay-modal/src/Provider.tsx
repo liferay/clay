@@ -10,8 +10,8 @@ import {Size, Status} from './types';
 import {useModal} from './useModal';
 
 enum Action {
-	Close = 0,
-	Open = 1,
+	Close = 'CLOSE',
+	Open = 'OPEN',
 }
 
 interface IProps {
@@ -61,7 +61,9 @@ type TState = {
 	url?: string;
 };
 
-type TAction = {type: Action.Open; payload: TState} | {type: Action.Close};
+type TAction =
+	| {type: Action.Open | 1; payload: TState}
+	| {type: Action.Close | 0};
 
 type TProvider = [TState & {onClose: () => void}, React.Dispatch<TAction>];
 
@@ -77,8 +79,10 @@ const reducer = (
 	action: TAction
 ): TState & {visible: boolean} => {
 	switch (action.type) {
+		case 1:
 		case Action.Open:
 			return {...action.payload, visible: true};
+		case 0:
 		case Action.Close:
 			return initialState;
 		default:

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useState} from 'react';
+import React from 'react';
 
 import ClayTimePicker from '../src';
 
@@ -12,29 +12,20 @@ export default {
 	title: 'Design System/Components/TimePicker',
 };
 
-export const Default = (args: any) => {
-	const [state, setState] = useState({
-		hours: '--',
-		minutes: '--',
-	});
-
-	return (
-		<div className="sheet">
-			<div className="form-group">
-				<label>Time Picker</label>
-				<ClayTimePicker
-					disabled={args.disabled}
-					icon={args.showIcon}
-					name={args.name}
-					onInputChange={setState}
-					timezone={args.timezone}
-					use12Hours={args.use12Hours}
-					values={state}
-				/>
-			</div>
+export const Default = (args: any) => (
+	<div className="sheet">
+		<div className="form-group">
+			<label>Time Picker</label>
+			<ClayTimePicker
+				disabled={args.disabled}
+				icon={args.showIcon}
+				name={args.name}
+				timezone={args.timezone}
+				use12Hours={args.use12Hours}
+			/>
 		</div>
-	);
-};
+	</div>
+);
 
 Default.args = {
 	disabled: false,

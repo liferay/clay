@@ -14,13 +14,9 @@ import React from 'react';
 const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';`;
 
 const dropDownCode = `const Component = () => {
-	const [active, setActive] = useState(false);
-
 	return (
 		<ClayDropDown
 			trigger={<button className="btn btn-primary">Click here!</button>}
-			active={active}
-			onActiveChange={setActive}
 			menuElementAttrs={{
 				className: 'my-custom-dropdown-menu',
 				containerProps: {
@@ -90,57 +86,57 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';`;
 
 const dropDownWithItemsCode = `const Component = () => {
 	const [value, setValue] = useState();
-    const items = [
-      {
-        label: 'clickable',
-        onClick: () => {
-          alert('you clicked!');
-        },
-      },
-      {
-        type: 'divider',
-      },
-      {
-        items: [
-          {
-            label: 'one',
-            type: 'radio',
-            value: 'one',
-          },
-          {
-            label: 'two',
-            type: 'radio',
-            value: 'two',
-          },
-        ],
-        label: 'radio',
-        name: 'radio',
-        onChange: (value) => alert('New Radio checked'),
-        type: 'radiogroup',
-      },
-      {
-        items: [
-          {
-            checked: true,
-            label: 'checkbox',
-            onChange: () => alert('checkbox changed'),
-            type: 'checkbox',
-          },
-          {
-            checked: true,
-            label: 'checkbox 1',
-            onChange: () => alert('checkbox changed'),
-            type: 'checkbox',
-          },
-        ],
-        label: 'checkbox',
-        type: 'group',
-      },
-      {
-        href: '#',
-        label: 'linkable',
-      },
-    ];
+	const items = [
+		{
+			label: 'clickable',
+			onClick: () => {
+				alert('you clicked!');
+			},
+		},
+		{
+			type: 'divider',
+		},
+		{
+			items: [
+				{
+					label: 'one',
+					type: 'radio',
+					value: 'one',
+				},
+				{
+					label: 'two',
+					type: 'radio',
+					value: 'two',
+				},
+			],
+			label: 'radio',
+			name: 'radio',
+			onChange: (value) => alert('New Radio checked'),
+			type: 'radiogroup',
+		},
+		{
+			items: [
+				{
+					checked: true,
+					label: 'checkbox',
+					onChange: () => alert('checkbox changed'),
+					type: 'checkbox',
+				},
+				{
+					checked: true,
+					label: 'checkbox 1',
+					onChange: () => alert('checkbox changed'),
+					type: 'checkbox',
+				},
+			],
+			label: 'checkbox',
+			type: 'group',
+		},
+		{
+			href: '#',
+			label: 'linkable',
+		},
+	];
 
 	return (
 		<ClayDropDownWithItems
@@ -182,7 +178,7 @@ import {ClayDropDownWithDrilldown} from '@clayui/drop-down';`;
 const dropDownWithDrilldownCode = `const Component = () => {
 	return (
 		<ClayDropDownWithDrilldown
-			initialActiveMenu="x0a3"
+			defaultActiveMenu="x0a3"
 			menus={{
 				x0a3: [
 					{href: '#', title: 'Hash Link'},

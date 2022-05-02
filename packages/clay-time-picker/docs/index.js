@@ -18,11 +18,11 @@ const timePickerCode = `const Component = () => {
 
 	return (
 		<ClayTimePicker
+			onChange={setState}
 			spritemap={spritemap}
-			onInputChange={setState}
-			values={state}
 			timezone="GMT+01:00"
 			use12Hours
+			value={state}
 		/>
 	);
 }

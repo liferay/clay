@@ -29,7 +29,7 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 					buttonPreviousMonth: 'Previous month',
 					input: value.toLocaleString(),
 				}}
-				onValueChange={setValue}
+				onChange={setValue}
 				value={value}
 			/>
 		</>
@@ -116,14 +116,8 @@ export const CustomExpand = () => {
 
 			<ClayDatePicker
 				expanded={expanded}
+				onChange={setValue}
 				onExpandedChange={setExpanded}
-				onValueChange={(val, type) => {
-					setValue(val);
-
-					if (type === 'click') {
-						setExpanded(false);
-					}
-				}}
 				placeholder="YYYY-MM-DD"
 				value={value}
 				years={{
@@ -176,15 +170,7 @@ export const DynamicYears = () => {
 				buttonPreviousMonth: 'Previous month',
 				input: value.toLocaleString(),
 			}}
-			onNavigation={(date: Date) => {
-				const year = date.getFullYear();
-
-				setYears({
-					end: year + 10,
-					start: year - 10,
-				});
-			}}
-			onValueChange={(value) => {
+			onChange={(value) => {
 				if (value) {
 					const year = parseDate(
 						value,
@@ -201,6 +187,14 @@ export const DynamicYears = () => {
 				}
 
 				setValue(value);
+			}}
+			onNavigation={(date: Date) => {
+				const year = date.getFullYear();
+
+				setYears({
+					end: year + 10,
+					start: year - 10,
+				});
 			}}
 			placeholder="YYYY-MM-DD"
 			value={value}

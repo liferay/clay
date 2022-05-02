@@ -5,7 +5,7 @@
 
 import ClayForm, {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
+import {InternalDispatch, useInternalState} from '@clayui/shared';
 import React from 'react';
 import tinycolor from 'tinycolor2';
 
@@ -151,7 +151,7 @@ interface IProps {
 
 	editorActive?: boolean;
 
-	onEditorActiveChange?: TInternalStateOnChange<boolean>;
+	onEditorActiveChange?: InternalDispatch<boolean>;
 
 	value?: string;
 }
@@ -185,8 +185,8 @@ const ClayColorPickerCustom: React.FunctionComponent<IProps> = ({
 
 	const [internalEditorActive, setInternalEditorActive] = useInternalState({
 		defaultName: '',
+		defaultValue: !showPalette,
 		handleName: 'onEditorActiveChange',
-		initialValue: !showPalette,
 		name: 'editorActive',
 		onChange: onEditorActiveChange,
 		value: editorActive,

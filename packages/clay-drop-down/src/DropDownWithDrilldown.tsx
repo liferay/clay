@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {TInternalStateOnChange, useInternalState} from '@clayui/shared';
+import {InternalDispatch} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -13,7 +13,7 @@ import Drilldown from './drilldown';
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
-	 * Flag to indicate if the menu should be initially active (open).
+	 * Flag to indicate if the menu should be initially open (controlled).
 	 */
 	active?: boolean;
 
@@ -39,14 +39,20 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	>['containerElement'];
 
 	/**
-	 * Property to set the initial value of `active`.
+	 * Property to set the initial value of `active` (uncontrolled).
 	 */
 	defaultActive?: boolean;
 
 	/**
 	 * The unique identifier of the menu that should be active on mount.
 	 */
-	initialActiveMenu: string;
+	defaultActiveMenu?: string;
+
+	/**
+	 * The unique identifier of the menu that should be active on mount.
+	 * @deprecated since v3.51.0 - use `defaultActiveMenu` instead.
+	 */
+	initialActiveMenu?: string;
 
 	/**
 	 * Prop to pass DOM element attributes to <DropDown.Menu />.
@@ -72,9 +78,9 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];
 
 	/**
-	 * Callback the will be invoked when the active prop is changed.
+	 * Callback the will be invoked when the active prop is changed (controlled).
 	 */
-	onActiveChange?: TInternalStateOnChange<boolean>;
+	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
 	 * Path to spritemap
@@ -94,10 +100,10 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	trigger: React.ReactElement;
 }
 
-interface IHistory {
+type History = {
 	id: string;
 	title: string;
-}
+};
 
 export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	active,
@@ -106,6 +112,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	className,
 	containerElement,
 	defaultActive,
+	defaultActiveMenu,
 	initialActiveMenu,
 	menuElementAttrs,
 	menuHeight,
@@ -117,28 +124,22 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 	spritemap,
 	trigger,
 }: IProps) => {
-	const [activeMenu, setActiveMenu] = React.useState(initialActiveMenu);
+	const [activeMenu, setActiveMenu] = React.useState(
+		defaultActiveMenu ?? initialActiveMenu
+	);
 	const [direction, setDirection] = React.useState<'prev' | 'next'>();
-	const [history, setHistory] = React.useState<Array<IHistory>>([]);
-
-	const [internalActive, setInternalActive] = useInternalState({
-		defaultName: 'defaultActive',
-		handleName: 'onActiveChange',
-		initialValue: defaultActive,
-		name: 'active',
-		onChange: onActiveChange,
-		value: active,
-	});
+	const [history, setHistory] = React.useState<Array<History>>([]);
 
 	const menuIds = Object.keys(menus);
 
 	return (
 		<ClayDropDown
-			active={internalActive}
+			active={active}
 			alignmentByViewport={alignmentByViewport}
 			alignmentPosition={alignmentPosition}
 			className={className}
 			containerElement={containerElement}
+			defaultActive={defaultActive}
 			hasRightSymbols
 			menuElementAttrs={{
 				...menuElementAttrs,
@@ -147,7 +148,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 			menuHeight={menuHeight}
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
-			onActiveChange={setInternalActive}
+			onActiveChange={onActiveChange}
 			renderMenuOnClick={renderMenuOnClick}
 			trigger={trigger}
 		>
@@ -178,7 +179,7 @@ export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
 							onForward={(title, childId) => {
 								setHistory([
 									...history,
-									{id: activeMenu, title},
+									{id: activeMenu, title} as History,
 								]);
 
 								setDirection('next');

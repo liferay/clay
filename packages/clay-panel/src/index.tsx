@@ -6,7 +6,7 @@
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {
-	TInternalStateOnChange,
+	InternalDispatch,
 	setElementFullHeight,
 	useInternalState,
 } from '@clayui/shared';
@@ -32,7 +32,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	collapseClassNames?: string;
 
 	/**
-	 * Flag to indicate the initial value of expanded.
+	 * Flag to indicate the initial value of expanded (uncontrolled).
 	 */
 	defaultExpanded?: boolean;
 
@@ -47,14 +47,14 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	displayType?: 'unstyled' | 'secondary';
 
 	/**
-	 * Determines if menu is expanded or not
+	 * Determines if menu is expanded or not (controlled).
 	 */
 	expanded?: boolean;
 
 	/**
-	 * Callback for when dropdown changes its active state
+	 * Callback for when dropdown changes its active state (controlled).
 	 */
-	onExpandedChange?: TInternalStateOnChange<boolean>;
+	onExpandedChange?: InternalDispatch<boolean>;
 
 	/**
 	 * Flag to toggle collapse icon visibility when `collapsable` is true.
@@ -89,8 +89,8 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 }: IProps) => {
 	const [internalExpanded, setInternalExpanded] = useInternalState({
 		defaultName: 'defaultExpanded',
+		defaultValue: defaultExpanded,
 		handleName: 'onExpandedChange',
-		initialValue: defaultExpanded,
 		name: 'expanded',
 		onChange: onExpandedChange,
 		value: expanded,

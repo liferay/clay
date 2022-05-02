@@ -43,9 +43,9 @@ export default function Blog({data, location}) {
 						<div className="col-xl sidebar-offset">
 							<LayoutNav pathname={location.pathname} />
 							<div className="clay-blog-content">
-								<header>
-									<div className="clay-site-container container-fluid">
-										<h1 className="blog-title">
+								<div className="clay-site-container container-fluid">
+									<header>
+										<h1 className="blog-title text-10">
 											{frontmatter.title}
 										</h1>
 										<span className="blog-date">
@@ -72,20 +72,12 @@ export default function Blog({data, location}) {
 												)
 											)}
 										</span>
-									</div>
-								</header>
-								<div className="clay-site-container container-fluid">
-									<div className="row">
-										<div className="col-md-12">
-											<article>
-												<div
-													dangerouslySetInnerHTML={{
-														__html: html,
-													}}
-												/>
-											</article>
-										</div>
-									</div>
+									</header>
+									<article
+										dangerouslySetInnerHTML={{
+											__html: html,
+										}}
+									/>
 								</div>
 							</div>
 						</div>

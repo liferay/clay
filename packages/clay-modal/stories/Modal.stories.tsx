@@ -27,14 +27,11 @@ export default {
 };
 
 export const Default = (args: any) => {
-	const [visibleModal, setVisibleModal] = useState<boolean>(false);
-	const {observer, onClose} = useModal({
-		onClose: () => setVisibleModal(false),
-	});
+	const {observer, onOpenChange, open} = useModal();
 
 	return (
 		<>
-			{visibleModal && (
+			{open && (
 				<ClayModal
 					center={args.center}
 					disableAutoClose={args.autoClose}
@@ -81,14 +78,16 @@ export const Default = (args: any) => {
 							</ClayButton.Group>
 						}
 						last={
-							<ClayButton onClick={onClose}>Primary</ClayButton>
+							<ClayButton onClick={() => onOpenChange(false)}>
+								Primary
+							</ClayButton>
 						}
 					/>
 				</ClayModal>
 			)}
 			<ClayButton
 				displayType="primary"
-				onClick={() => setVisibleModal(true)}
+				onClick={() => onOpenChange(true)}
 			>
 				Open modal
 			</ClayButton>
@@ -107,14 +106,11 @@ Default.args = {
 };
 
 export const CustomHeader = () => {
-	const [visibleModal, setVisibleModal] = useState<boolean>(false);
-	const {observer, onClose} = useModal({
-		onClose: () => setVisibleModal(false),
-	});
+	const {observer, onOpenChange, open} = useModal();
 
 	return (
 		<>
-			{visibleModal && (
+			{open && (
 				<ClayModal observer={observer} size="lg">
 					<ClayModal.Header withTitle={false}>
 						<ClayModal.ItemGroup>
@@ -141,7 +137,7 @@ export const CustomHeader = () => {
 							aria-label="close"
 							className="close"
 							displayType="unstyled"
-							onClick={onClose}
+							onClick={() => onOpenChange(false)}
 						>
 							<ClayIcon symbol="times" />
 						</ClayButton>
@@ -152,7 +148,7 @@ export const CustomHeader = () => {
 
 			<ClayButton
 				displayType="primary"
-				onClick={() => setVisibleModal(true)}
+				onClick={() => onOpenChange(true)}
 			>
 				Open modal
 			</ClayButton>
@@ -257,14 +253,11 @@ const Autocomplete = () => {
 };
 
 export const AutocompleteAndDropDown = () => {
-	const [visibleModal, setVisibleModal] = useState<boolean>(false);
-	const {observer} = useModal({
-		onClose: () => setVisibleModal(false),
-	});
+	const {observer, onOpenChange, open} = useModal();
 
 	return (
 		<>
-			{visibleModal && (
+			{open && (
 				<ClayModal observer={observer} size="lg">
 					<ClayModal.Header>Title</ClayModal.Header>
 					<ClayModal.Body
@@ -288,7 +281,7 @@ export const AutocompleteAndDropDown = () => {
 			)}
 			<ClayButton
 				displayType="primary"
-				onClick={() => setVisibleModal(true)}
+				onClick={() => onOpenChange(true)}
 			>
 				Open modal
 			</ClayButton>

@@ -45,7 +45,6 @@ export const Default = () => (
 );
 
 export const WithItems = (args: any) => {
-	const [activePage, setActivePage] = useState<number>(1);
 	const [delta, setDelta] = useState<number>(5);
 
 	const deltas = [
@@ -68,11 +67,9 @@ export const WithItems = (args: any) => {
 	return (
 		<ClayPaginationBarWithBasicItems
 			activeDelta={delta}
-			activePage={activePage}
 			deltas={deltas}
 			ellipsisBuffer={args.ellipsisBuffer}
 			onDeltaChange={setDelta}
-			onPageChange={setActivePage}
 			totalItems={args.totalItems}
 		/>
 	);
@@ -84,16 +81,14 @@ WithItems.args = {
 };
 
 export const WithoutDropdown = () => {
-	const [activePage, setActivePage] = useState<number>(3);
 	const [delta, setDelta] = useState<number>(5);
 
 	return (
 		<ClayPaginationBarWithBasicItems
 			activeDelta={delta}
-			activePage={activePage}
+			defaultActive={3}
 			ellipsisBuffer={3}
 			onDeltaChange={setDelta}
-			onPageChange={setActivePage}
 			showDeltasDropDown={false}
 			totalItems={21}
 		/>

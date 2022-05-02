@@ -6,7 +6,7 @@
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
-import {sub} from '@clayui/shared';
+import {InternalDispatch, sub, useInternalState} from '@clayui/shared';
 import React from 'react';
 
 import PaginationBar from './PaginationBar';
@@ -42,12 +42,18 @@ interface IDelta {
 
 interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	/**
+	 * Sets the currently active page (controlled).
+	 */
+	active?: number;
+
+	/**
 	 * The value of delta that is currently selected
 	 */
 	activeDelta?: number;
 
 	/**
 	 * Initialize the page that is currently active. The first page is `1`.
+	 * @deprecated since v3.52.0 - use `active` instead.
 	 */
 	activePage?: number;
 
@@ -63,6 +69,11 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	 * Possible values of items per page.
 	 */
 	deltas?: Array<IDelta>;
+
+	/**
+	 * Sets the default active page (uncontrolled).
+	 */
+	defaultActive?: number;
 
 	/**
 	 * The page numbers that should be disabled. For example, `[2,5,6]`.
@@ -93,6 +104,12 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	};
 
 	/**
+	 * Callback called when the state of the active page changes (controlled).
+	 * This is only used if an href is not provided.
+	 */
+	onActiveChange?: InternalDispatch<number>;
+
+	/**
 	 * Callback for when the number of elements per page changes. This is only used if
 	 * an href is not provided.
 	 */
@@ -101,6 +118,7 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	/**
 	 * Callback for when the active page changes. This is only used if
 	 * an href is not provided.
+	 * @deprecated since v3.52.0 - use `onActiveChange` instead.
 	 */
 	onPageChange?: (page: number) => void;
 
@@ -128,14 +146,17 @@ const DEFAULT_LABELS = {
 
 export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
 	({
+		active,
 		activeDelta,
-		activePage = 1,
+		activePage,
 		alignmentPosition,
+		defaultActive = 1,
 		deltas = defaultDeltas,
 		disabledPages,
 		ellipsisBuffer,
 		hrefConstructor,
 		labels = DEFAULT_LABELS,
+		onActiveChange,
 		onDeltaChange,
 		onPageChange,
 		showDeltasDropDown = true,
@@ -143,6 +164,15 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
 		totalItems,
 		...otherProps
 	}: IProps) => {
+		const [internalActive, setActive] = useInternalState({
+			defaultName: 'defaultActive',
+			defaultValue: defaultActive,
+			handleName: 'onActiveChange',
+			name: 'value',
+			onChange: onActiveChange ?? onPageChange,
+			value: typeof active === 'undefined' ? activePage : active,
+		});
+
 		if (!activeDelta) {
 			activeDelta = deltas[0].label;
 		}
@@ -171,8 +201,8 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
 		const totalPages = Math.ceil(totalItems / activeDelta);
 
 		React.useEffect(() => {
-			if (onPageChange && activePage > totalPages) {
-				onPageChange(1);
+			if (internalActive > totalPages) {
+				setActive(1);
 			}
 		}, [totalPages]);
 
@@ -200,25 +230,21 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
 
 				<PaginationBar.Results>
 					{sub(labels.paginationResults, [
-						(activePage - 1) * activeDelta + 1,
-						activePage * activeDelta < totalItems
-							? activePage * activeDelta
+						(internalActive - 1) * activeDelta + 1,
+						internalActive * activeDelta < totalItems
+							? internalActive * activeDelta
 							: totalItems,
 						totalItems,
 					])}
 				</PaginationBar.Results>
 
 				<ClayPaginationWithBasicItems
-					activePage={activePage}
+					active={internalActive}
 					alignmentPosition={alignmentPosition}
 					disabledPages={disabledPages}
 					ellipsisBuffer={ellipsisBuffer}
 					hrefConstructor={hrefConstructor}
-					onPageChange={(page) => {
-						if (page && onPageChange) {
-							onPageChange(page);
-						}
-					}}
+					onActiveChange={setActive}
 					spritemap={spritemap}
 					totalPages={totalPages}
 				/>

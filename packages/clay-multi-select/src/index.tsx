@@ -9,7 +9,14 @@ import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import ClayLabel from '@clayui/label';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
-import {FocusScope, Keys, noop, sub} from '@clayui/shared';
+import {
+	FocusScope,
+	InternalDispatch,
+	Keys,
+	noop,
+	sub,
+	useInternalState,
+} from '@clayui/shared';
 import classNames from 'classnames';
 import fuzzy from 'fuzzy';
 import React, {useEffect} from 'react';
@@ -36,15 +43,26 @@ type Locator = {
 };
 
 interface IMenuRendererProps {
+	/**
+	 * Value of input
+	 * * @deprecated since v3.49.0 - use `value` instead.
+	 */
 	inputValue: string;
+
 	locator: Locator;
 	onItemClick?: (item: Item) => void;
 	sourceItems: Array<Item>;
+
+	/**
+	 * The value property sets the current value (controlled).
+	 */
+	value: string;
 }
 
 type MenuRenderer = React.FunctionComponent<IMenuRendererProps>;
 
-export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface IProps
+	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
 	/**
 	 * Title for the `Clear All` button.
 	 */
@@ -54,6 +72,16 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Aria label for the Close button of the labels.
 	 */
 	closeButtonAriaLabel?: string;
+
+	/**
+	 * Property to set the default value (uncontrolled).
+	 */
+	defaultValue?: string;
+
+	/**
+	 * Set the default value of label items (uncontrolled).
+	 */
+	defaultItems?: Array<Item>;
 
 	/**
 	 * Adds a component to replace the default component that renders
@@ -78,8 +106,9 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 
 	/**
 	 * Value of input
+	 * * @deprecated since v3.49.0 - use `value` instead.
 	 */
-	inputValue: string;
+	inputValue?: string;
 
 	/**
 	 * Flag to indicate if loading icon should be rendered
@@ -92,7 +121,7 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	isValid?: boolean;
 
 	/**
-	 * Values that display as label items
+	 * Values that display as label items (controlled).
 	 */
 	items: Array<Item>;
 
@@ -107,14 +136,14 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	onClearAllButtonClick?: () => void;
 
 	/**
-	 * Callback for when the input value changes
+	 * Callback for when the input value changes (controlled).
 	 */
-	onChange: (val: any) => void;
+	onChange?: InternalDispatch<string>;
 
 	/**
-	 * Callback for when items are added or removed
+	 * Callback for when items are added or removed (controlled).
 	 */
-	onItemsChange: (val: Array<Item>) => void;
+	onItemsChange: InternalDispatch<Array<Item>>;
 
 	/**
 	 * List of pre-populated items that will show up in a dropdown menu
@@ -125,19 +154,24 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	 * Path to spritemap for clay icons
 	 */
 	spritemap?: string;
+
+	/**
+	 * The value property sets the current value (controlled).
+	 */
+	value?: string;
 }
 
 const MultiSelectMenuRenderer: MenuRenderer = ({
-	inputValue,
 	locator,
 	onItemClick = () => {},
 	sourceItems,
+	value,
 }) => (
 	<ClayDropDown.ItemList>
 		{sourceItems.map((item) => (
 			<ClayAutocomplete.Item
 				key={item[locator.value]}
-				match={inputValue}
+				match={value}
 				onClick={() => onItemClick(item)}
 				value={item[locator.label]}
 			/>
@@ -150,30 +184,28 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		{
 			clearAllTitle = 'Clear All',
 			closeButtonAriaLabel = 'Remove {0}',
+			defaultItems = [],
+			defaultValue = '',
 			disabled,
 			disabledClearAll,
 			inputName,
-			inputValue = '',
+			inputValue,
 			isLoading = false,
 			isValid = true,
-			items = [],
+			items,
 			locator = {
 				label: 'label',
 				value: 'value',
 			},
 			menuRenderer: MenuRenderer = MultiSelectMenuRenderer,
 			onBlur = noop,
-			onClearAllButtonClick = () => {
-				// eslint-disable-next-line @typescript-eslint/no-use-before-define
-				onItemsChange([]);
-				// eslint-disable-next-line @typescript-eslint/no-use-before-define
-				onChange('');
-			},
-			onChange = noop,
+			onClearAllButtonClick,
+			onChange,
 			onFocus = noop,
-			onItemsChange = noop,
+			onItemsChange,
 			onKeyDown = noop,
 			onPaste = noop,
+			value,
 			sourceItems = [],
 			spritemap,
 			...otherProps
@@ -186,16 +218,34 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const [active, setActive] = React.useState(false);
 		const [isFocused, setIsFocused] = React.useState(false);
 
+		const [internalItems, setItems] = useInternalState({
+			defaultName: 'defaultItems',
+			defaultValue: defaultItems,
+			handleName: 'onItemsChange',
+			name: 'items',
+			onChange: onItemsChange,
+			value: items,
+		});
+
+		const [internalValue, setValue] = useInternalState({
+			defaultName: 'defaultValue',
+			defaultValue,
+			handleName: 'onChange',
+			name: 'value',
+			onChange,
+			value: value ?? inputValue,
+		});
+
 		useEffect(() => {
 			if (isFocused) {
-				setActive(!!inputValue && sourceItems.length !== 0);
+				setActive(!!internalValue && sourceItems.length !== 0);
 			}
-		}, [inputValue, isFocused, sourceItems]);
+		}, [internalValue, isFocused, sourceItems]);
 
 		const setNewValue = (newVal: Item) => {
-			onItemsChange([...items, newVal]);
+			setItems([...internalItems, newVal]);
 
-			onChange('');
+			setValue('');
 		};
 
 		const getSourceItemByLabel = (label: string) => {
@@ -218,16 +268,16 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 			const {key} = event;
 
-			if (key === Keys.Backspace && !inputValue) {
+			if (key === Keys.Backspace && !internalValue) {
 				event.preventDefault();
 			}
 
-			if (inputValue.trim() && DELIMITER_KEYS.includes(key)) {
+			if (internalValue.trim() && DELIMITER_KEYS.includes(key)) {
 				event.preventDefault();
 
-				setNewValue(getNewItem(inputValue));
+				setNewValue(getNewItem(internalValue));
 			} else if (
-				!inputValue &&
+				!internalValue &&
 				key === Keys.Backspace &&
 				inputRef.current &&
 				lastItemRef.current
@@ -250,7 +300,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			if (pastedItems.length > 0) {
 				event.preventDefault();
 
-				onItemsChange([...items, ...pastedItems]);
+				setItems([...internalItems, ...pastedItems]);
 			}
 		};
 
@@ -269,11 +319,11 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					ref={containerRef}
 				>
 					<ClayInput.GroupItem>
-						{items.map((item, i) => {
+						{internalItems.map((item, i) => {
 							const removeItem = () =>
-								onItemsChange([
-									...items.slice(0, i),
-									...items.slice(i + 1),
+								setItems([
+									...internalItems.slice(0, i),
+									...internalItems.slice(i + 1),
 								]);
 
 							return (
@@ -292,7 +342,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 												removeItem();
 											},
 											ref: (ref) => {
-												if (i === items.length - 1) {
+												if (
+													i ===
+													internalItems.length - 1
+												) {
 													lastItemRef.current = ref;
 												}
 											},
@@ -331,7 +384,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								setIsFocused(false);
 							}}
 							onChange={(event) =>
-								onChange(event.target.value.replace(',', ''))
+								setValue(event.target.value.replace(',', ''))
 							}
 							onFocus={(event) => {
 								onFocus(event);
@@ -341,7 +394,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							onPaste={handlePaste}
 							ref={inputRef}
 							type="text"
-							value={inputValue}
+							value={internalValue}
 						/>
 					</ClayInput.GroupItem>
 
@@ -353,14 +406,19 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 					{!disabled &&
 						!disabledClearAll &&
-						(inputValue || items.length > 0) && (
+						(internalValue || internalItems.length > 0) && (
 							<ClayInput.GroupItem shrink>
 								<ClayButtonWithIcon
 									borderless
 									className="component-action"
 									displayType="secondary"
 									onClick={() => {
-										onClearAllButtonClick();
+										if (onClearAllButtonClick) {
+											onClearAllButtonClick();
+										} else {
+											setItems([]);
+											setValue('');
+										}
 
 										if (inputRef.current) {
 											inputRef.current.focus();
@@ -381,7 +439,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							onSetActive={setActive}
 						>
 							<MenuRenderer
-								inputValue={inputValue}
+								inputValue={internalValue}
 								locator={locator}
 								onItemClick={(item) => {
 									setNewValue(item);
@@ -391,6 +449,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 									}
 								}}
 								sourceItems={sourceItems}
+								value={internalValue}
 							/>
 						</ClayAutocomplete.DropDown>
 					)}
@@ -408,8 +467,8 @@ ClayMultiSelect.displayName = 'ClayMultiSelect';
  */
 export const itemLabelFilter = (
 	items: Array<Item>,
-	inputValue: string,
+	value: string,
 	locator = 'label'
-) => items.filter((item) => fuzzy.match(inputValue, item[locator]));
+) => items.filter((item) => fuzzy.match(value, item[locator]));
 
 export default ClayMultiSelect;

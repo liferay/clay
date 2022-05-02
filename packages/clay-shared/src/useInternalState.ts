@@ -3,34 +3,32 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as React from 'react';
+import {useState} from 'react';
 import warning from 'warning';
 
-export type TInternalStateOnChange<T> =
-	| ((val: T) => void)
-	| ((val?: T) => void)
-	| React.Dispatch<React.SetStateAction<T>>;
+export type InternalDispatch<Value> =
+	| ((value: Value) => void)
+	| ((value?: Value) => void)
+	| React.Dispatch<React.SetStateAction<Value>>;
 
-interface IArgs<T> {
+type Props<Value> = {
 	defaultName: string;
 	handleName: string;
-	initialValue?: T | (() => T);
 	name: string;
-	onChange?: TInternalStateOnChange<T>;
-	value?: T;
-}
+	defaultValue?: Value | (() => Value);
+	onChange?: InternalDispatch<Value>;
+	value?: Value;
+};
 
-export function useInternalState<TValue>({
+export function useInternalState<Value>({
 	defaultName,
+	defaultValue,
 	handleName,
-	initialValue,
 	name,
 	onChange,
 	value,
-}: IArgs<TValue>) {
-	const [internalValue, setInternalValue] = React.useState(
-		initialValue ?? value
-	);
+}: Props<Value>) {
+	const [internalValue, setInternalValue] = useState(defaultValue ?? value);
 
 	warning(
 		!(typeof value === 'undefined' && typeof onChange !== 'undefined'),
@@ -47,5 +45,5 @@ export function useInternalState<TValue>({
 		onChange = setInternalValue;
 	}
 
-	return [value, onChange] as [TValue, TInternalStateOnChange<TValue>];
+	return [value, onChange] as [Value, InternalDispatch<Value>];
 }
