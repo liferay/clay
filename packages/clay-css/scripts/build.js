@@ -230,6 +230,28 @@ async function buildScssIcons(filesPath) {
 }
 
 async function build() {
+	const licenseText = path.join('.', 'src', 'scss', '_license-text.scss');
+
+	fs.readFile(licenseText, 'utf8', (error, data) => {
+		if (error) {
+			return console.error(error);
+		}
+
+		var result = data.replace(
+			/\*\s+Clay\s(.+)\n/g,
+			`* Clay ${
+				JSON.parse(fs.readFileSync(path.join('.', 'package.json')))
+					.version
+			}\n`
+		);
+
+		fs.writeFile(licenseText, result, 'utf8', (error) => {
+			if (error) {
+				return console.error(error);
+			}
+		});
+	});
+
 	await ensureDirectory(OUTPUT_DIRECTORY);
 
 	copyRecursiveSync(
