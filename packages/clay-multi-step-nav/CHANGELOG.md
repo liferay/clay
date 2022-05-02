@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/multi-step-nav:** adds controlled component standardization and deprecates properties with inconsistent naming ([da60dad](https://github.com/liferay/clay/commit/da60dad783d11d6abd8f8ed38d1a1bd44e9832e0))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 **Note:** Version bump only for package @clayui/multi-step-nav

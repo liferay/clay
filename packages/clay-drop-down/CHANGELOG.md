@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/drop-down:** standardize the controlled and uncontrolled component behavior to `active` prop ([49afcdb](https://github.com/liferay/clay/commit/49afcdb4534db2d14bb993cf5a75b9c36381981e))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 ### Bug Fixes

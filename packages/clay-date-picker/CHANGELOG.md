@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/date-picker:** standardize the controlled and uncontrolled component behavior to `value` prop ([4183972](https://github.com/liferay/clay/commit/41839726ad26e0abb8c681f3d2e8af0d090afbf3))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 **Note:** Version bump only for package @clayui/date-picker

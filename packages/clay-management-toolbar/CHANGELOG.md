@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/management-toolbar:** Deprecate ClayManagementToolbar ([744b46e](https://github.com/liferay/clay/commit/744b46e54c322fae32d00f2b1cd4762a25e4e5c9))
+
 # [3.40.0](https://github.com/liferay/clay/compare/v3.39.0...v3.40.0) (2021-11-17)
 
 **Note:** Version bump only for package @clayui/management-toolbar

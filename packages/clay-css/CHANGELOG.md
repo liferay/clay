@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Adds unit values to border-radius and border-width 0 values ([c39cb2e](https://github.com/liferay/clay/commit/c39cb2e0666457f57e181bb9567c309847e75503))
+* **@clayui/css:** Atlas .btn.active:focus should have outline ([0162df4](https://github.com/liferay/clay/commit/0162df4ec3c7b81247065ec8e160cfee316b0d92))
+* **@clayui/css:** Atlas remove extra `$code-color` variable ([5b4d621](https://github.com/liferay/clay/commit/5b4d62118038ea4ff38c65485eb9207353581f6e))
+* **@clayui/css:** Mixins clay-button-variant should be able to style .active:focus ([9862e79](https://github.com/liferay/clay/commit/9862e79a76ae7fe558b2b857c03cd680d074b35f))
+* **@clayui/css:** Replace `$spacer * 0.5` with fixed values, it plays better with calc() ([121abde](https://github.com/liferay/clay/commit/121abdeef5784d4ebab2d7aa0bffb7f17b4f7ec0))
+* **@clayui/css:** Source format the way we write multiple box-shadows ([61f8f02](https://github.com/liferay/clay/commit/61f8f02f73144b3accc2759c4578ae7a4e5e495d))
+* **@clayui/css:** Tables use calc() to make fatter border widths in thead and tbody ([e9cc407](https://github.com/liferay/clay/commit/e9cc4077f62b371bb0a6cb83314898442910d735))
+
+
+
+
+
 # [3.54.0](https://github.com/liferay/clay/compare/v3.53.0...v3.54.0) (2022-04-25)
 
 

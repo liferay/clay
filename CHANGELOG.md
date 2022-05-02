@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Bug Fixes
+
+-   **@clayui/core:** the Heading tag follows the level definition ([956bc0b](https://github.com/liferay/clay/commit/956bc0b11f24ce55ef9f34b82dc395e4a4f40e20))
+-   **@clayui/css:** Adds unit values to border-radius and border-width 0 values ([c39cb2e](https://github.com/liferay/clay/commit/c39cb2e0666457f57e181bb9567c309847e75503))
+-   **@clayui/css:** Atlas .btn.active:focus should have outline ([0162df4](https://github.com/liferay/clay/commit/0162df4ec3c7b81247065ec8e160cfee316b0d92))
+-   **@clayui/css:** Atlas remove extra `$code-color` variable ([5b4d621](https://github.com/liferay/clay/commit/5b4d62118038ea4ff38c65485eb9207353581f6e))
+-   **@clayui/css:** Mixins clay-button-variant should be able to style .active:focus ([9862e79](https://github.com/liferay/clay/commit/9862e79a76ae7fe558b2b857c03cd680d074b35f))
+-   **@clayui/css:** Replace `$spacer * 0.5` with fixed values, it plays better with calc() ([121abde](https://github.com/liferay/clay/commit/121abdeef5784d4ebab2d7aa0bffb7f17b4f7ec0))
+-   **@clayui/css:** Source format the way we write multiple box-shadows ([61f8f02](https://github.com/liferay/clay/commit/61f8f02f73144b3accc2759c4578ae7a4e5e495d))
+-   **@clayui/css:** Tables use calc() to make fatter border widths in thead and tbody ([e9cc407](https://github.com/liferay/clay/commit/e9cc4077f62b371bb0a6cb83314898442910d735))
+-   **clayui/chore:** Update index.ts to export both components ([a823b41](https://github.com/liferay/clay/commit/a823b411525547fc81f2d1f22650607e4afc58b5))
+-   **clayui/chore:** Update stories in Heading and Text ([c870a2c](https://github.com/liferay/clay/commit/c870a2c111ce58b1c3e63517ddb82ac8f8c13d03))
+-   **clayui/core:** Change export type to inline one ([01e0e35](https://github.com/liferay/clay/commit/01e0e35a402e3c81e0919e8807aa45939a308dfc))
+-   **clayui/core:** SF ([5065c80](https://github.com/liferay/clay/commit/5065c80485c350d577dd212916c007acd8461f6f))
+-   **clayui/core:** SF ([1602a02](https://github.com/liferay/clay/commit/1602a02fafa983c717ded5213b9b32c2fb9a0fb5))
+-   **clayui/core:** Some code refactor. Pending some changes ([d1eed16](https://github.com/liferay/clay/commit/d1eed16a3d9717a921665ed3bcc247970a45585f))
+
+### Features
+
+-   **@clayui/color-picker:** standardize the controlled and uncontrolled component behavior to `value` prop ([7a435c5](https://github.com/liferay/clay/commit/7a435c5b980976537201ba45ddf8ff034184aad3))
+-   **@clayui/core:** Adding Text component and Heading test cases ([c3a542c](https://github.com/liferay/clay/commit/c3a542c0472680d7d70ec120b53e305df185097c))
+-   **@clayui/core:** Adding Text test cases ([0598b77](https://github.com/liferay/clay/commit/0598b771a652e86156e0a0abd404750e08a59bde))
+-   **@clayui/date-picker:** standardize the controlled and uncontrolled component behavior to `value` prop ([4183972](https://github.com/liferay/clay/commit/41839726ad26e0abb8c681f3d2e8af0d090afbf3))
+-   **@clayui/drop-down:** standardize the controlled and uncontrolled component behavior to `active` prop ([49afcdb](https://github.com/liferay/clay/commit/49afcdb4534db2d14bb993cf5a75b9c36381981e))
+-   **@clayui/form:** standardize the controlled and uncontrolled ClayRadioGroup component behavior to `value` prop ([478c5ae](https://github.com/liferay/clay/commit/478c5ae598b864a90e127c61373511993d9fc1e5))
+-   **@clayui/management-toolbar:** Deprecate ClayManagementToolbar ([744b46e](https://github.com/liferay/clay/commit/744b46e54c322fae32d00f2b1cd4762a25e4e5c9))
+-   **@clayui/modal:** add the state of open and close in `useModal` hook to be controlled ([c62ac62](https://github.com/liferay/clay/commit/c62ac62508d67c482a1c14a17471d87cf8453f45))
+-   **@clayui/modal:** change ModalProvider actions to be readable ([671b011](https://github.com/liferay/clay/commit/671b0119680abfe7bbf46a2e58c9d7a92f4c436c))
+-   **@clayui/multi-select:** standardize the controlled and uncontrolled MultiSelect component behavior to `value` and `items` prop ([a6bc5cd](https://github.com/liferay/clay/commit/a6bc5cd5830757eaeb2ab44cec5c7e1cad2e5a3b))
+-   **@clayui/multi-step-nav:** adds controlled component standardization and deprecates properties with inconsistent naming ([da60dad](https://github.com/liferay/clay/commit/da60dad783d11d6abd8f8ed38d1a1bd44e9832e0))
+-   **@clayui/pagination-bar:** standardizes properties for the controlled and uncontrolled component ([bd25cf6](https://github.com/liferay/clay/commit/bd25cf6a28eff89ddf203140af7b59af506ca6e0))
+-   **@clayui/pagination:** standardizes properties for the controlled and uncontrolled component ([16ef746](https://github.com/liferay/clay/commit/16ef7469ef26c4286bcfcb69eea01c671bb71dcb))
+-   **@clayui/popover:** standardizes properties for the controlled and uncontrolled component ([e27a654](https://github.com/liferay/clay/commit/e27a6541f1e6d9fe832db3a9a561a531aa06a35d))
+-   **@clayui/slider:** standardizes properties for the controlled and uncontrolled component ([6c1cae3](https://github.com/liferay/clay/commit/6c1cae3f2cf2192fbd5d1a20e0c76c8c7081fe8e))
+-   **@clayui/time-picker:** standardizes properties for the controlled and uncontrolled component ([882ab9d](https://github.com/liferay/clay/commit/882ab9d2fb709fc997d0c364a5651d5aa7029fe9))
+-   Adding font-style monospace property ([43f16e2](https://github.com/liferay/clay/commit/43f16e2fbed04afef1be8598bee0772a5ce886b3))
+-   **clayui/core:** Adding Heading and Text documentation ([0292834](https://github.com/liferay/clay/commit/02928348f0b1c657b773c2eb33ba9fc67d24fb83))
+-   **clayui/core:** Delete React.FC. Adding tests related to truncate, color and default props ([d81e5db](https://github.com/liferay/clay/commit/d81e5db193e0d7514b33648ba6036efe39811560))
+-   **clayui/core:** New Text API to determine the test tag. Coding refactor and update interface to type props ([05589b9](https://github.com/liferay/clay/commit/05589b97ab1c7ac0c525e60173198c2114aca702))
+
 # [3.54.0](https://github.com/liferay/clay/compare/v3.53.0...v3.54.0) (2022-04-25)
 
 ### Features

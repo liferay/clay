@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/modal:** add the state of open and close in `useModal` hook to be controlled ([c62ac62](https://github.com/liferay/clay/commit/c62ac62508d67c482a1c14a17471d87cf8453f45))
+-   **@clayui/modal:** change ModalProvider actions to be readable ([671b011](https://github.com/liferay/clay/commit/671b0119680abfe7bbf46a2e58c9d7a92f4c436c))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 ### Features

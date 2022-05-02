@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/popover:** standardizes properties for the controlled and uncontrolled component ([e27a654](https://github.com/liferay/clay/commit/e27a6541f1e6d9fe832db3a9a561a531aa06a35d))
+
 # [3.53.0](https://github.com/liferay/clay/compare/v3.52.0...v3.53.0) (2022-04-12)
 
 ### Features

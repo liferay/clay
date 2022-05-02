@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/pagination-bar:** standardizes properties for the controlled and uncontrolled component ([bd25cf6](https://github.com/liferay/clay/commit/bd25cf6a28eff89ddf203140af7b59af506ca6e0))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 **Note:** Version bump only for package @clayui/pagination-bar

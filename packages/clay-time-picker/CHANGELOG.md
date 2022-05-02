@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
+
+### Features
+
+-   **@clayui/time-picker:** standardizes properties for the controlled and uncontrolled component ([882ab9d](https://github.com/liferay/clay/commit/882ab9d2fb709fc997d0c364a5651d5aa7029fe9))
+
 # [3.52.0](https://github.com/liferay/clay/compare/v3.51.0...v3.52.0) (2022-04-04)
 
 **Note:** Version bump only for package @clayui/time-picker
