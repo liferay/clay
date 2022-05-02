@@ -1,6 +1,6 @@
 :root {
-	@if (variable-exists(clay-root)) {
-		@include clay-css($clay-root);
+	@if (variable-exists(c-root)) {
+		@include clay-css($c-root);
 	} @else {
 		// Custom variable values only support SassScript inside `#{}`
 

@@ -44,7 +44,7 @@ $enable-hover-media-query: false !default;
 
 /// This map outputs custom properties in the `:root` selector, use the Sass `map-merge` function to add additional custom properties to `:root`.
 
-$clay-root: () !default;
+$c-root: () !default;
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
