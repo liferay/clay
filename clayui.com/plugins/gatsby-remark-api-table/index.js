@@ -12,6 +12,15 @@ const generateTr = (item, key) => `<tr id="api-${key}">
 	<td>
 		<div class="table-title">
 			${key}
+			${
+				item.description?.includes('@deprecated')
+					? `
+				<span class="badge badge-danger badge-pill">
+					<span class="badge-item badge-item-expand">Deprecated</span>
+				</span>
+			`
+					: ''
+			}
 		</div>
 	</td>
 	<td class="table-cell-expand table-cell-minw-150">{${
