@@ -127,21 +127,136 @@ Related:
 
 ## Detailed design
 
-![Collection component](https://user-images.githubusercontent.com/13750819/166341856-7c55ab6e-5c82-4071-b9cb-35e720bdd008.png)
+![Collection component](https://user-images.githubusercontent.com/13750819/166605103-fed4553d-0f85-4f27-8fc6-fe87c3044582.png)
 
-Describe the solution design in enough detail for someone familiar with Clay to understand and for someone familiar with the implementation to be able to implement it. If a new API is involved, show the full API and its documentation comments detailing what it does.
+The component's internal implementation must allow for two levels of composition that are principal and essential for Collection, static and dynamic content. The API between dynamic and static content is syntactically close together to avoid a big rewrite when moving from static to dynamic.
 
--   Static data
--   Dynamic data
--   Async loading
-    -   ErrorBoundary
-    -   Suspense
--   Data agnostic
--   Virtualization for large collections
+```jsx
+// Static content
+<Collection>
+  <Item />
+  <Item />
+  <Item />
+</Collection>
+
+// Dynamic content
+<Collection<Items> items={items}>
+  {(item) => <Item />}
+</Collection>
+```
+
+This example above is just a demonstration of the syntax of both possibilities but the developer will not use this component exactly this is what we will implement in the components that need Collection. For example, DropDown:
+
+```tsx
+// (!) Approximate behavior
+
+type Props<Items> = {
+  children: React.ReactNode | ChildrenFunction<Items>;
+  items?: Array<T>;
+  trigger: React.ReactElement;
+};
+
+function DropDown<Items>({trigger, items, children}: Props<Items>) {
+  return (
+    <Root>
+      {trigger}
+      <Menu>
+        <Collection<Items> items={items}>
+          {children}
+        </Collection>
+      </Menu>
+    </Root>
+  );
+}
+
+// (!) Approximate usage example
+/// Static content
+<DropDown>
+  <Item />
+  <Item />
+  <Item />
+</DropDown>
+
+/// Dynamic content
+<DropDown<Items> items={items}>
+  {(item) => <Item />}
+</DropDown>
+```
+
+Dynamic collections offer more features, such as optimizing rendering and implementing list virtualization, and both allow them to be data agnostic without defining a fixed data structure to render some element. This allows us and developers to compose with different hierarchies, e.g. groups or trees like TreeView, and have rich renderings with different markup styles.
+
+### Static collection
+
+Static collections are like the hardcoded list, usually used for elements like a Menu that are not configurable or dynamic or data coming from the user.
+
+```jsx
+<DropDown trigger={<Button>View</Button>}>
+	<Item>List</Item>
+	<Item>Table</Item>
+	<Item>Card</Item>
+</DropDown>
+```
+
+### Dynamic collection
+
+Unlike static collections, dynamic collections are data rendered in the list using a JSX-based interface where the amount of data is unknown and may change during the component's lifecycle.
+
+The `items` property is reactive, this can change according to the implementation and criteria of the component, for example `<TreeView />` data can be modified with user interaction, such as moving, deleting, or renaming the item, in this case, the items property follows [RFC 0002 Controlled and uncontrolled components](./0002-controlled-and-uncontrolled.md).
+
+```tsx
+<DropDown<Items> items={items}>{(item) => <Item>{item.name}</Item>}</DropDown>
+```
+
+#### Virtualization
+
+List virtualization is extremely important to prevent React.js don't lose performance with a large list of data being rendered. The implementation is to render only the visible elements in the viewport or the container where the element is being rendered.
+
+The virtualization implementations normally adjust with the size of the container, we can also provide if the container does not define any size automatically render only the elements considering the viewport.
+
+Virtualization also needs to consider that items can have dynamic sizes, virtualization must be offered in an OOTB way so that it is not necessary to configure any properties, obligatorily also all items being added in the Collection content must accept [`ref`](https://reactjs.org/docs/forwarding-refs.htm) so that it can calculate the element and auto-adjust.
+
+```tsx
+const Item = React.forwardRef(({children}, ref) => (
+	<div ref={ref}>{children}</div>
+));
+
+<DropDown<Items> items={items}>
+	{(item) => <Item key={item.name}>{item.name}</Item>}
+</DropDown>;
+```
+
+#### Unique keys
+
+For a list being rendered in React.js it is necessary that a [`key`](https://reactjs.org/docs/lists-and-keys.html#keys) with a unique id be provided so that it can update the correct element that has been updated. To keep the syntax synthetically close to the static collection, by default if the `key` property is not defined the implementation uses the `id` or `key` of the data if it exists, otherwise, no value should be used and the developer has to define the key property in the component.
+
+```tsx
+// When there is an `id` or `key` property in the data it is
+// not necessary to define the property.
+const items = [
+	{id: 1, name: 'Item 1'},
+	{id: 2, name: 'Item 2'},
+	{id: 3, name: 'Item 3'},
+];
+
+<DropDown<Items> items={items}>{(item) => <Item>{item.name}</Item>}</DropDown>;
+
+// If the key is not defined.
+const items = [{name: 'Item 1'}, {name: 'Item 2'}, {name: 'Item 3'}];
+
+<DropDown<Items> items={items}>
+	{(item) => <Item key={item.name}>{item.name}</Item>}
+</DropDown>;
+```
+
+### Asynchronous loading
+
+#### `ErrorBoundary`
+
+#### `Suspense`
 
 ## Alternatives considered
 
-Describe alternative approaches to addressing the same problem, and why you chose this approach instead.
+### Why not array map?
 
 ## Adoption strategy
 
