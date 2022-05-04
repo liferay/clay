@@ -14,8 +14,8 @@
 	"files": ["lib", "src"],
 	"scripts": {
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
-		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
-		"prepublishOnly": "yarn build && yarn build:types",
+		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
+		"prepublishOnly": "yarn build && yarn buildTypes",
 		"test": "jest --config ../../jest.config.js"
 	},
 	"keywords": ["clay", "react"],

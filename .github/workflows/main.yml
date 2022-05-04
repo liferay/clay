@@ -62,7 +62,7 @@ jobs:
               run: |
                   yarn cache clean
                   yarn install
-                  node ./node_modules/.bin/lerna run --ignore \"clayui.com\" build
+                  yarn build
                   yarn genBuildSize
             - name: Clean directory
               if: ${{ steps.diff.outputs.packages }}
@@ -83,7 +83,7 @@ jobs:
               run: |
                   yarn cache clean
                   yarn install
-                  node ./node_modules/.bin/lerna run --ignore \"clayui.com\" build
+                  yarn build
                   yarn genBuildSize:compare
             - name: Generate Total Size
               if: ${{ steps.diff.outputs.packages }}

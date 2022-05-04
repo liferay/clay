@@ -6,10 +6,10 @@
 	"types": "lib/index.d.ts",
 	"ts:main": "src/index.tsx",
 	"scripts": {
-		"build:types": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
+		"buildTypes": "cross-env NODE_ENV=production tsc --project ./tsconfig.declarations.json",
 		"build": "cross-env NODE_ENV=production babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"copySvg": "ncp src/svg lib/svg",
-		"prepublishOnly": "yarn sass && yarn build && yarn build:types && yarn copySvg",
+		"prepublishOnly": "yarn sass && yarn build && yarn buildTypes && yarn copySvg",
 		"sass": "sass src/scss/main.scss lib/css/main.css --source-map",
 		"test": "jest --config ../../jest.config.js"
 	},

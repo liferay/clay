@@ -15,9 +15,10 @@
 		}
 	],
 	"scripts": {
-		"build:csb": "lerna run --no-bail --ignore \"clayui.com\" build && lerna run --no-bail --ignore \"clayui.com\" build:types",
-		"build": "lerna run build && lerna run build:types",
-		"checkDeps": "lerna run --ignore \"clayui.com\" build && node scripts/check-deps/check-dependencies.js",
+		"build:csb": "yarn build && yarn buildTypes",
+		"build": "turbo run build --filter=@clayui/*",
+		"buildTypes": "turbo run buildTypes --filter=@clayui/*",
+		"checkDeps": "turbo run build --filter=@clayui/* && node scripts/check-deps/check-dependencies.js",
 		"ci": "yarn lint && yarn format:check && yarn test && yarn checkDeps",
 		"coverage": "jest --coverage",
 		"format": "prettier --write \"**/*.{js,ts,tsx,md,mdx,json,scss}\"",
@@ -97,6 +98,7 @@
 		"source-map-loader": "^0.2.4",
 		"style-loader": "^0.23.1",
 		"ts-jest": "^26.0.0",
+		"turbo": "^1.2.6",
 		"typescript": "^3.9.5",
 		"webpack": "^5.72.0"
 	},

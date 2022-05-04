@@ -1,0 +1,12 @@
+{
+	"pipeline": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["lib/**"]
+		},
+		"buildTypes": {
+			"dependsOn": ["^buildTypes"],
+			"outputs": ["lib/**/*.d.ts"]
+		}
+	}
+}
