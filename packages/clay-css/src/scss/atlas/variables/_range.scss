@@ -12,12 +12,30 @@ $clay-range-input: () !default;
 $clay-range-input: map-deep-merge(
 	(
 		color: $gray-500,
-		thumb-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3),
-		track-bg: $gray-200,
-		tooltip-padding: 0.5rem 0.75rem,
-		hover-thumb-bg: $primary-l3,
-		focus-thumb-box-shadow: $component-focus-inset-box-shadow,
-		disabled-thumb-bg: $gray-100,
+		clay-range-thumb: (
+			box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.3),
+		),
+		clay-range-track: (
+			background-color: $gray-200,
+		),
+		tooltip-inner: (
+			padding: 0.5rem 0.75rem,
+		),
+		hover: (
+			clay-range-thumb: (
+				background-color: $primary-l3,
+			),
+		),
+		focus: (
+			clay-range-thumb: (
+				box-shadow: $component-focus-inset-box-shadow,
+			),
+		),
+		disabled: (
+			clay-range-thumb: (
+				background-color: $gray-100,
+			),
+		),
 	),
 	$clay-range-input
 );
