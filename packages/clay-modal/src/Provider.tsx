@@ -16,6 +16,7 @@ enum Action {
 
 interface IProps {
 	children: React.ReactNode;
+
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 */
