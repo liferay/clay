@@ -29,14 +29,17 @@ Collection component consistent for all components lessens this learning curve a
 
 This solution proposes to create a component that handles the rendering of the `<Collection /` collection, in order to be an internal component and not a public one. The purpose of this component is to have a unique API that allows rendering dynamic and static content both of which can be done using composition, ensuring data is agnostic, scrolling virtualization, loading asynchronous data with [`useResource`](https://clayui.com/docs/components/data-provider.html) support, and adding accessibility features such as navigation via keyboard.
 
-```tsx
+```typescript
 type Props<Items> = {
 	children: ChildrenFunction<Items> | React.ReactNode;
 	items?: Array<Items>;
 };
+```
 
-// Intern use
-<Collection<Items> items={items}>{children}</Collection>;
+```tsx
+// (!) Approximate internal use
+
+<Collection<Items> items={items}>{children}</Collection>
 ```
 
 The component must be markup independent to allow adapting to the markups of each component. We also ensure that the behavior is consistent as well as APIs and composition.
@@ -46,10 +49,14 @@ The collection implementation will help improve the implementation of low-level 
 ```jsx
 const items = [{label: 'Item'}];
 
-<DropDownWithItems
-	items={items}
-	trigger={<ClayButton>{'Click Me'}</ClayButton>}
-/>;
+function Example() {
+	return (
+		<DropDownWithItems
+			items={items}
+			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+		/>
+	);
+}
 ```
 
 As [described in the motivation we have some problems with this design](#motivation). On the other hand, components in composition naturally ask you to be more declarative or write more lines of code if you think this might be something negative, for example, in the case above with the following composition.
@@ -151,36 +158,38 @@ This example above is just a demonstration of the syntax of both possibilities b
 // (!) Approximate behavior
 
 type Props<Items> = {
-  children: React.ReactNode | ChildrenFunction<Items>;
-  items?: Array<T>;
-  trigger: React.ReactElement;
+	children: React.ReactNode | ChildrenFunction<Items>;
+	items?: Array<T>;
+	trigger: React.ReactElement;
 };
 
 function DropDown<Items>({trigger, items, children}: Props<Items>) {
-  return (
-    <Root>
-      {trigger}
-      <Menu>
-        <Collection<Items> items={items}>
-          {children}
-        </Collection>
-      </Menu>
-    </Root>
-  );
+	return (
+		<Root>
+			{trigger}
+			<Menu>
+				<Collection<Items> items={items}>{children}</Collection>
+			</Menu>
+		</Root>
+	);
 }
 
 // (!) Approximate usage example
 /// Static content
-<DropDown>
-  <Item />
-  <Item />
-  <Item />
-</DropDown>
+function Example() {
+	return (
+		<DropDown>
+			<Item />
+			<Item />
+			<Item />
+		</DropDown>
+	);
+}
 
 /// Dynamic content
-<DropDown<Items> items={items}>
-  {(item) => <Item />}
-</DropDown>
+function Example() {
+	return <DropDown<Items> items={items}>{(item) => <Item />}</DropDown>;
+}
 ```
 
 Dynamic collections offer more features, such as optimizing rendering and implementing list virtualization, and both allow them to be data agnostic without defining a fixed data structure to render some element. This allows us and developers to compose with different hierarchies, e.g. groups or trees like TreeView, and have rich renderings with different markup styles.
@@ -220,9 +229,13 @@ const Item = React.forwardRef(({children}, ref) => (
 	<div ref={ref}>{children}</div>
 ));
 
-<DropDown<Items> items={items}>
-	{(item) => <Item key={item.name}>{item.name}</Item>}
-</DropDown>;
+function Example() {
+	return (
+		<DropDown<Items> items={items}>
+			{(item) => <Item key={item.name}>{item.name}</Item>}
+		</DropDown>
+	);
+}
 ```
 
 #### Unique keys
@@ -238,21 +251,97 @@ const items = [
 	{id: 3, name: 'Item 3'},
 ];
 
-<DropDown<Items> items={items}>{(item) => <Item>{item.name}</Item>}</DropDown>;
+function Example() {
+	return (
+		<DropDown<Items> items={items}>
+			{(item) => <Item>{item.name}</Item>}
+		</DropDown>
+	);
+}
 
 // If the key is not defined.
 const items = [{name: 'Item 1'}, {name: 'Item 2'}, {name: 'Item 3'}];
 
-<DropDown<Items> items={items}>
-	{(item) => <Item key={item.name}>{item.name}</Item>}
-</DropDown>;
+function Example() {
+	return (
+		<DropDown<Items> items={items}>
+			{(item) => <Item key={item.name}>{item.name}</Item>}
+		</DropDown>
+	);
+}
 ```
 
 ### Asynchronous loading
 
+The ability to load data asynchronously is not a responsibility of the `<Collection />` component, as is dealing with network exceptions and loading, instead, this proposal encourages the use of native React APIs which deal much better with these situations and allows for better UI responsiveness.
+
+To allow the scenarios below, [`useResource`](https://clayui.com/docs/components/data-provider.html) needs to create an integration with [`Suspense`](https://reactjs.org/docs/react-api.html#reactsuspense) and [`ErrorBoundary`](https://reactjs.org/docs/error-boundaries.html) to allow dealing with the two-state scenarios of a component, error, and loading.
+
 #### `ErrorBoundary`
 
+[Error boundaries](https://reactjs.org/docs/error-boundaries.html) are an essential and fundamental part of React.js's ability for part of the application to recover without breaking the entire application. Catch javascript errors anywhere in their child component tree, and display a UI as a fallback.
+
+The collection does not handle this implementation internally, this should be a composition of the components to allow more flexibility in choosing where to catch the error and which element to render.
+
+As a recommendation, there are two ways to integrate the `<ErrorBoundary />` implementation, first this is an example of a component called `<FileExplorer />` using the `<TreeView />` component and the folders are the nodes of the tree. As there can be thousands of data, asynchronous loading here is desired to avoid taking up too much memory space and passing unnecessary information over the network, clicking on the folder should load the files inside that folder.
+
+```jsx
+// (!) Error boundary located
+
+const FileExplorer = () => {
+  const resource = useResource({
+    link: 'https://api.example.com/v1/files/tree',
+    cursor: (data) => data.next,
+  });
+
+  return (
+    <TreeView
+      items={resource.data}
+      onLoadMore={resource.loadMore}
+    >
+      {(item) => (
+        <ErrorBoundary
+          exceptionElement={<ItemException />}
+        >
+          <TreeView.Item>
+            {...}
+          </TreeView.Item>
+        </ErrorBoundary>
+      )}
+    </TreeView>
+  )
+};
+```
+
+In this scenario we don't want the tree view of the file explorer to break the whole component because the connection to the server was interrupted for some reason, this throws a network exception in the JavaScript call and we need to catch this error and handle it. So we add an `<ErrorBoundary />` to the item to add a fallback in the UI, we can add a button for the user to try again for example.
+
+The initial rendering must also be considered, so it is recommended to add an `<ErrorBoundary />` to catch the network error for example in the root of the component.
+
+```jsx
+// (!) Top-level Error Boundary
+
+<ErrorBoundary exceptionElement={<FileExplorerException />}>
+	<FileExplorer />
+</ErrorBoundary>
+```
+
+In this scenario, it is possible to catch the exception and render a UI as a fallback. Who takes care of this integration and launching the exceptions is the [`useResource`](https://clayui.com/docs/components/data-provider.html) itself, as well as launching the exception at the item level, that is, when the `loadMore` method is called, the exception must be launched where the method is being used to allow the `<ErrorBoundary />` to be able to catch the item-level exception.
+
 #### `Suspense`
+
+[`Suspense`](https://reactjs.org/docs/react-api.html#reactsuspense) is one of the very important features for asynchronous invocation of resources, it allows you to add a fallback to the UI when a request is in progress and if there are many nested requests React can parallelize the calls. Advised to read more about this in the React docs as well as combine using `startTransition` and `useTransition` APIs.
+
+> Integration with Suspense must be done by [`useResource`](https://clayui.com/docs/components/data-provider.html)!
+
+```jsx
+<ErrorBoundary exceptionElement={<FileExplorerException />}>
+	<Suspense fallback={<FileExplorerSkeleton />}>
+		<FileExplorer />
+	</Suspense>
+</ErrorBoundary>
+```
+
+Adding `Suspense` in this example above causes a fallback in the UI to be rendered on the first render when the request is made, it would also be feasible to add a `Suspense` located in the item together with the `ErrorBoundary` for cases where the node request can be slow, this triggers a fallback in the UI just for the item instead of triggering for the entire component.
 
 ## Alternatives considered
 
