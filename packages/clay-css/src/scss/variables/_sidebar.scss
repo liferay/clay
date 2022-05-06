@@ -10,6 +10,7 @@ $sidebar-header-component-title: map-deep-merge(
 	(
 		font-size: 1.5rem,
 		font-weight: $font-weight-semi-bold,
+		overflow-wrap: break-word,
 		href: (
 			color: $gray-900,
 		),
@@ -25,6 +26,7 @@ $sidebar-header-component-subtitle: map-deep-merge(
 		font-size: 1.125rem,
 		font-weight: $font-weight-semi-bold,
 		margin-bottom: 0,
+		overflow-wrap: break-word,
 	),
 	$sidebar-header-component-subtitle
 );
