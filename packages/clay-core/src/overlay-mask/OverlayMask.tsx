@@ -53,6 +53,66 @@ const createClipPath = (
 	].join(' ');
 };
 
+const initialBounds = {
+	height: 0,
+	width: 0,
+	x: 0,
+	y: 0,
+};
+
+const useIsomorphicLayoutEffect =
+	typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
+type ContainerProps = {
+	children: (bounds: Bounds) => React.ReactNode;
+};
+
+function SVG({children}: ContainerProps) {
+	const containerRef = useRef<HTMLDivElement | null>(null);
+
+	const [containerBounds, setContainerBounds] =
+		useState<Bounds>(initialBounds);
+
+	useIsomorphicLayoutEffect(() => {
+		if (containerRef.current) {
+			const updater = (rect: DOMRect | undefined) => {
+				if (!containerRef.current) {
+					return;
+				}
+
+				const {height, width, x, y} =
+					rect ?? containerRef.current!.getBoundingClientRect();
+
+				setContainerBounds({height, width, x, y});
+			};
+
+			return observeRect(containerRef.current, updater);
+		}
+	}, [setContainerBounds]);
+
+	return (
+		<div
+			ref={containerRef}
+			style={{
+				bottom: 0,
+				left: 0,
+				position: 'fixed',
+				right: 0,
+				top: 0,
+				zIndex: 1040,
+			}}
+		>
+			<svg
+				height={containerBounds.height}
+				width={containerBounds.width}
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				{children(containerBounds)}
+			</svg>
+		</div>
+	);
+}
+
 type Props<T> = {
 	/**
 	 * Sets the current value of bounds to define the highlight area (controlled).
@@ -90,16 +150,6 @@ type Props<T> = {
 	onBoundsChange?: InternalDispatch<Bounds>;
 };
 
-const initialBounds = {
-	height: 0,
-	width: 0,
-	x: 0,
-	y: 0,
-};
-
-const useIsomorphicLayoutEffect =
-	typeof window === 'undefined' ? useEffect : useLayoutEffect;
-
 export function OverlayMask<T>({
 	defaultBounds = initialBounds,
 	bounds,
@@ -118,20 +168,7 @@ export function OverlayMask<T>({
 		value: bounds,
 	});
 
-	const [containerBounds, setContainerBounds] =
-		useState<Bounds>(defaultBounds);
-
-	const containerRef = useRef<HTMLDivElement | null>(null);
 	const childrenRef = useRef<HTMLElement | null>(null);
-
-	useIsomorphicLayoutEffect(() => {
-		if (containerRef.current) {
-			const {height, width, x, y} =
-				containerRef.current.getBoundingClientRect();
-
-			setContainerBounds({height, width, x, y});
-		}
-	}, [visible]);
 
 	useIsomorphicLayoutEffect(() => {
 		if (childrenRef.current) {
@@ -172,22 +209,8 @@ export function OverlayMask<T>({
 			{typeof children === 'function' && children(childrenRef)}
 
 			{visible && (
-				<div
-					ref={containerRef}
-					style={{
-						bottom: 0,
-						left: 0,
-						position: 'fixed',
-						right: 0,
-						top: 0,
-						zIndex: 1040,
-					}}
-				>
-					<svg
-						height={containerBounds.height}
-						width={containerBounds.width}
-						xmlns="http://www.w3.org/2000/svg"
-					>
+				<SVG>
+					{(containerBounds) => (
 						<g>
 							<defs>
 								<clipPath id="overlayMask">
@@ -220,8 +243,8 @@ export function OverlayMask<T>({
 								/>
 							</rect>
 						</g>
-					</svg>
-				</div>
+					)}
+				</SVG>
 			)}
 		</>
 	);
