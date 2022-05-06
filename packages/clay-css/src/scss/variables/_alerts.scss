@@ -410,8 +410,16 @@ $alert-autofit-row: map-deep-merge(
 
 // Alert Color Levels
 
+/// @deprecated as of v3.x with no replacement, this color modifier is too specific to support a variety of colors
+
 $alert-bg-level: -10 !default;
+
+/// @deprecated as of v3.x with no replacement, this color modifier is too specific to support a variety of colors
+
 $alert-border-level: -9 !default;
+
+/// @deprecated as of v3.x with no replacement, this color modifier is too specific to support a variety of colors
+
 $alert-color-level: 6 !default;
 
 // Alert Feedback
