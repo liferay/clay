@@ -477,9 +477,16 @@
 /// @param {Color} $color - The color to convert
 /// @param {Color} $dark[$yiq-text-dark] - The color to return if `$color` >= `$yiq-contrasted-threshold`
 /// @param {Color} $light[$yiq-text-light] - The color to return if `$color` < `$yiq-contrasted-threshold`
+/// @param {Bool} $fallback[$enable-clay-color-functions-process-fallback] - Force Sass to process the CSS Custom Property fallback colors
 
-@function color-yiq($color, $dark: null, $light: null, $threshold: null) {
-	@if (is-css-var($color) and not clay-color-functions-process-fallback()) {
+@function color-yiq(
+	$color,
+	$dark: null,
+	$light: null,
+	$threshold: null,
+	$fallback: clay-color-functions-process-fallback()
+) {
+	@if (is-css-var($color) and not $fallback) {
 		@return $color;
 	}
 
