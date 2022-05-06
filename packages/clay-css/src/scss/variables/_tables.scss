@@ -234,7 +234,12 @@ $table-dark-accent-bg: rgba($white, 0.05) !default;
 
 $table-bordered-border-width: $table-border-width !default;
 
+/// @deprecated as of v3.x with no replacement, this color modifier is too specific to support a variety of colors
+
 $table-bg-level: -9 !default;
+
+/// @deprecated as of v3.x with no replacement, this color modifier is too specific to support a variety of colors
+
 $table-border-level: -6 !default;
 
 // Table List
