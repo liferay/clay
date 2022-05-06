@@ -1,3 +1,5 @@
+// .breadcrumb
+
 $breadcrumb-bg: $gray-200 !default;
 $breadcrumb-border-radius: $border-radius !default;
 $breadcrumb-font-size: null !default;
@@ -7,12 +9,86 @@ $breadcrumb-padding-x: 1rem !default;
 $breadcrumb-padding-y: 0.75rem !default;
 $breadcrumb-text-transform: null !default;
 
+$breadcrumb: () !default;
+$breadcrumb: map-merge(
+	(
+		background-color: $breadcrumb-bg,
+		border-radius: clay-enable-rounded($breadcrumb-border-radius),
+		display: flex,
+		flex-wrap: wrap,
+		font-size: $breadcrumb-font-size,
+		list-style: none,
+		margin-bottom: $breadcrumb-margin-bottom,
+		padding: $breadcrumb-padding-y $breadcrumb-padding-x,
+	),
+	$breadcrumb
+);
+
+// .breadcrumb-item + .breadcrumb-item::before
+
+$breadcrumb-divider: quote('/') !default;
+
+$breadcrumb-divider-color: $gray-600 !default;
+$breadcrumb-divider-font-family: null !default;
+$breadcrumb-divider-font-weight: null !default;
+
+$breadcrumb-divider-svg-icon: clay-icon(
+	angle-right,
+	$breadcrumb-divider-color
+) !default;
+$breadcrumb-divider-svg-icon-height: 0.75em !default;
+$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
+
 // Breadcrumb Item
 
 $breadcrumb-item-padding: 0.5rem !default;
 
 $breadcrumb-active-color: $gray-600 !default;
 $breadcrumb-active-font-weight: null !default;
+
+$breadcrumb-item: () !default;
+$breadcrumb-item: map-merge(
+	(
+		font-size: $breadcrumb-font-size,
+		font-weight: $breadcrumb-font-weight,
+		margin-right: 0.5em,
+		position: relative,
+		active: (
+			color: $breadcrumb-active-color,
+			font-weight: $breadcrumb-active-font-weight,
+		),
+		breadcrumb-item: (
+			padding-left: 1em,
+			before: (
+				color: $breadcrumb-divider-color,
+				display: block,
+				float: left,
+				background-image: $breadcrumb-divider-svg-icon,
+				background-repeat: no-repeat,
+				background-size: 100%,
+				content: '',
+				height: $breadcrumb-divider-svg-icon-height,
+				left: 0,
+				margin-top:
+					calc(#{math-sign($breadcrumb-divider-svg-icon-height)} / 2),
+				padding: 0,
+				position: absolute,
+				top: 50%,
+				width: $breadcrumb-divider-svg-icon-width,
+			),
+		),
+		dropdown-toggle: (
+			text-decoration: none,
+			hover: (
+				text-decoration: none,
+			),
+			focus: (
+				text-decoration: none,
+			),
+		),
+	),
+	$breadcrumb-item
+);
 
 // Breadcrumb Text Truncate
 
@@ -21,6 +97,20 @@ $breadcrumb-text-truncate-max-width: 18.75rem -
 	$breadcrumb-text-truncate-icon-spacer-x !default;
 $breadcrumb-text-truncate-max-width-mobile: 9.375rem -
 	$breadcrumb-text-truncate-icon-spacer-x !default;
+
+$breadcrumb-text-truncate: () !default;
+$breadcrumb-text-truncate: map-merge(
+	(
+		display: inline-block,
+		max-width: $breadcrumb-text-truncate-max-width,
+		overflow: hidden,
+		text-decoration: inherit,
+		text-overflow: ellipsis,
+		vertical-align: bottom,
+		white-space: nowrap,
+	),
+	$breadcrumb-text-truncate
+);
 
 // Breadcrumb Link
 
@@ -48,18 +138,3 @@ $breadcrumb-link: map-deep-merge(
 	),
 	$breadcrumb-link
 );
-
-// Breadcrumb Divider
-
-$breadcrumb-divider: quote('/') !default;
-
-$breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-divider-font-family: null !default;
-$breadcrumb-divider-font-weight: null !default;
-
-$breadcrumb-divider-svg-icon: clay-icon(
-	angle-right,
-	$breadcrumb-divider-color
-) !default;
-$breadcrumb-divider-svg-icon-height: 0.75em !default;
-$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
