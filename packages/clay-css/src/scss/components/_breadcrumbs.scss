@@ -1,81 +1,30 @@
 .breadcrumb {
-	background-color: $breadcrumb-bg;
-
-	@include border-radius($breadcrumb-border-radius);
-
-	display: flex;
-	flex-wrap: wrap;
-	font-size: $breadcrumb-font-size;
-	list-style: none;
-	margin-bottom: $breadcrumb-margin-bottom;
-	padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+	@include clay-css($breadcrumb);
 }
 
 .breadcrumb-link {
 	@include clay-link($breadcrumb-link);
-
-	> .breadcrumb-text-truncate {
-		text-decoration: $breadcrumb-link-text-decoration;
-
-		&:hover,
-		&:focus {
-			text-decoration: $breadcrumb-link-hover-text-decoration;
-		}
-	}
 }
 
 .breadcrumb-item {
-	font-size: $breadcrumb-font-size;
-	font-weight: $breadcrumb-font-weight;
-
-	@if ($breadcrumb-divider-svg-icon) {
-		margin-right: 0.5em;
-		position: relative;
-	}
+	@include clay-css($breadcrumb-item);
 
 	&.active,
 	.active {
-		color: $breadcrumb-active-color;
-		font-weight: $breadcrumb-active-font-weight;
+		@include clay-css(map-get($breadcrumb-item, active));
 	}
 
 	> span {
-		text-transform: $breadcrumb-text-transform;
+		text-transform: inherit;
 	}
 
 	+ .breadcrumb-item {
-		padding-left: if(
-			$breadcrumb-divider-svg-icon,
-			1em,
-			$breadcrumb-item-padding
-		);
+		@include clay-css(map-get($breadcrumb-item, breadcrumb-item));
 
 		&::before {
-			color: $breadcrumb-divider-color;
-			display: block;
-			float: left;
-
-			@if ($breadcrumb-divider-svg-icon) {
-				background-image: $breadcrumb-divider-svg-icon;
-				background-repeat: no-repeat;
-				background-size: 100%;
-				content: '';
-				height: $breadcrumb-divider-svg-icon-height;
-				left: 0;
-				margin-top: calc(
-					#{math-sign($breadcrumb-divider-svg-icon-height)} / 2
-				);
-				padding: 0;
-				position: absolute;
-				top: 50%;
-				width: $breadcrumb-divider-svg-icon-width;
-			} @else {
-				content: escape-svg($breadcrumb-divider);
-				font-family: $breadcrumb-divider-font-family;
-				font-weight: $breadcrumb-divider-font-weight;
-				padding-left: 0.4em;
-				padding-right: 0.4em;
-			}
+			@include clay-css(
+				map-deep-get($breadcrumb-item, breadcrumb-item, before)
+			);
 		}
 	}
 
@@ -95,22 +44,14 @@
 	}
 
 	.dropdown-toggle {
-		text-decoration: none;
-
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
+		@include clay-button-variant(
+			map-get($breadcrumb-item, dropdown-toggle)
+		);
 	}
 }
 
 .breadcrumb-text-truncate {
-	display: inline-block;
-	max-width: $breadcrumb-text-truncate-max-width;
-
-	@include text-truncate;
-
-	vertical-align: bottom;
+	@include clay-css($breadcrumb-text-truncate);
 
 	@include clay-scale-component {
 		max-width: $breadcrumb-text-truncate-max-width-mobile;
