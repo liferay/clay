@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
+
+### Features
+
+-   **@clayui/modal:** Add a children property to IProps as a ReactNode to avoid warning error ([f8f56c9](https://github.com/liferay/clay/commit/f8f56c92a5e5bac86421a06b15cc1815b0161aab)), closes [#4843](https://github.com/liferay/clay/issues/4843)
+
 # [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
 
 ### Features

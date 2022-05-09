@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
+
+### Features
+
+-   **clayui.com:** add deprecated prop badge to doc ([0d55bdf](https://github.com/liferay/clay/commit/0d55bdfc4f56d584d2838645476e604d520889d6))
+
 # [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
 
 **Note:** Version bump only for package clayui.com

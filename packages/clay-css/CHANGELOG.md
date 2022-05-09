@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
+
+
+### Bug Fixes
+
+* **@clayui/css:** _license-text.scss should update when running yarn compile ([42cddec](https://github.com/liferay/clay/commit/42cddec935b1cc2cb438eba3bc4a21e372c07748))
+* **@clayui/css:** Alerts deprecate `$alert-*-level` variables ([4e04372](https://github.com/liferay/clay/commit/4e043721de6b311f07c1ebd0d4226d2fbc473be6))
+* **@clayui/css:** Breadcrumbs convert to Clay mixin pattern ([dc309fb](https://github.com/liferay/clay/commit/dc309fb031409b0dfc7fe810ef25ac2a20b3c149))
+* **@clayui/css:** Cadmin breadcrumbs convert to Clay mixin pattern ([9c5b555](https://github.com/liferay/clay/commit/9c5b55507433ea6f66e2f102157b8de739366461))
+* **@clayui/css:** Functions add the parameter $fallback to clay color functions ([73260e9](https://github.com/liferay/clay/commit/73260e9e4c2882e4431a31ad9fe5b27425e11ae2))
+* **@clayui/css:** Range `clay-range-input` convert to use newer keys ([0666c44](https://github.com/liferay/clay/commit/0666c441d2f9bfb8afaba1d72156341d8ca6ea7b))
+* **@clayui/css:** Sidebar long text with no white space should break to new line in component-title and subtitle ([795684e](https://github.com/liferay/clay/commit/795684ea703a1c246d23f9f6ec4a8c1a6dc142ba))
+* **@clayui/css:** Tables deprecate `$table-*-level` variables ([b64bdb5](https://github.com/liferay/clay/commit/b64bdb52a0d2748084298e3018c930a0c71388fc))
+
+
+### Features
+
+* **@clayui/css:** Mixins clay-range-input-variant updates ([2de97c4](https://github.com/liferay/clay/commit/2de97c45b13ed8b9462126ec4ba788535c430052))
+
+
+
+
+
 # [3.55.0](https://github.com/liferay/clay/compare/v3.54.0...v3.55.0) (2022-05-02)
 
 
