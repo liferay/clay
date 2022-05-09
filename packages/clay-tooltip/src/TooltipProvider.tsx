@@ -290,6 +290,8 @@ const TooltipProvider: React.FunctionComponent<
 				'data-title-set-as-html'
 			);
 
+			clearTimeout(timeoutIdRef.current);
+
 			timeoutIdRef.current = setTimeout(
 				() => {
 					dispatch({
