@@ -343,16 +343,46 @@ In this scenario, it is possible to catch the exception and render a UI as a fal
 
 Adding `Suspense` in this example above causes a fallback in the UI to be rendered on the first render when the request is made, it would also be feasible to add a `Suspense` located in the item together with the `ErrorBoundary` for cases where the node request can be slow, this triggers a fallback in the UI just for the item instead of triggering for the entire component.
 
+## Effect on API resilience
+
+Introducing this "syntax" to existing components has some side effects, not-for-all. First, because not all of our components faithfully follow the implementation of [RFC 0001 Component offerings](./0001-component-offerings.md) such as Breadcrumb, MultiSelect, and other components that don't exist a low-level implementation and its component default is delivered as a high-level, implementing this new definition in these components would cause a breaking change, we would be able to maintain backward compatibility but this causes some negative effects that we might not want to risk.
+
+For the low-level components that have this implementation we were able to add a new feature and new APIs, this will not cause breaking change because these components essentially don't have these features and are simpler.
+
+### Backward compatibility
+
+Creating backward compatibility for components that by default are high-level is possible by keeping the current API consistent and the "syntax" implementation via `children` but some features may not be possible as data agnostic.
+
+A side effect is that maintaining backward compatibility for these components is that by default the use of collection will be optional, so it will only be used when it is necessary to modify the rendering, ideally, we want the collection to be explicit because that is the benefit of being data agnostic and components will not be opinionated to data.
+
+### Data provider
+
+The implementation also affects the `useResource` hook to allow loading data on demand like load more for TreeView, infinite list, or pagination for example. The current APIs will have no effect so just add new APIs like `cursor` for that purpose.
+
+The behavior change may be necessary, to integrate with Suspense and ErrorBoundary it is necessary to change the internal implementation, the use of network status for example changes here because when causing a network error `useResource` needs to throw an exception at render time for this to be caught by ErrorBoundary. Integrate with Suspense it is necessary to throw an exception with the promise so that React knows when to retrieve the component.
+
+These behavior changes affect the current implementation a lot but we can add this as an optional way over a new property because this new behavior needs developers to learn and study more about these new React components and paradigms.
+
 ## Alternatives considered
 
 ### Why not array map?
 
+The first thought on this is, why not use array map? we can't optimize without knowing the "data", we need to know the amount of data to decide when to optimize, we can optimize on two levels storing the rendering in memory and using virtualization which is one of the main resources for collection. Implementing virtualization with array map would make things more verbose and we wouldn't be able to make this OOTB which is one of the main goals also without the developer having to declare an extra hook for example to handle the virtualization calculations and having to use the output to use in the map array.
+
+We were able to impose standards that are very common in the community, with the use of [render props](https://reactjs.org/docs/render-props.html), synthetically the use of function replaces the map array and allows us to create internal optimizations while still keeping the component being data-agnostic and avoiding problems like drilling props.
+
 ## Adoption strategy
 
-If we implement this proposal, how will existing Clay developers adopt it? Is this a significant change? Can we write a codemod? Should we coordinate with other projects?
+This implementation can be implemented gradually, first, we can implement it for all components that have their low-level component implementation, and for the next major version, we add the implementation for the components that have their default high-level component.
+
+For developers to adopt, we need to communicate and make this behavior and use of all components explicit, this proposal is part of the foundation of the components that need collection. Writing an initial blog about the adoption of this proposal is an initial step toward making developers aware of how they can benefit from the improvements to their applications.
+
+It's not very interesting to create codemods or coordinate with teams, this is something that developers need to learn how to implement and how to use the new features of React, this also brings paradigm changes that React bring about fetching data as early as possible when as opposed to fetching data when rendering which mainly impacts rendering time which directly reflects on [Web Vitals LCP and FID metrics](https://web.dev/vitals/).
 
 ## How we teach this
 
-What names and terminology work best for these concepts and why? How is this idea best presented?
+No new terminology here, this proposal uses known patterns in the community like [render props](https://reactjs.org/docs/render-props.html), the rest of the proposal is just encouraging the standard of React features and encouraging them to be used.
 
-When this proposal is accepted would it mean that Clay's documentation should be reorganized or changed?
+For the Clay side, we need to create documents and guides that help developers understand these new patterns and especially how to use [`ErrorBoundary`](https://reactjs.org/docs/error-boundaries.html) and [`Suspense`](https://reactjs.org/docs/react-api.html#reactsuspense) in their applications to optimize and create good patterns.
+
+We should consider updating the docs of the components that adopt the collection to add the examples already using these new behaviors to encourage developers to use them.
