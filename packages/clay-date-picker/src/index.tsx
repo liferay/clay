@@ -467,8 +467,6 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 					NEW_DATE
 				);
 
-				console.log(startDate);
-
 				const yearFrom = startDate.getFullYear();
 				const yearTo = endDate.getFullYear();
 

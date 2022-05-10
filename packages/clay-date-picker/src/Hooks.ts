@@ -74,9 +74,7 @@ export const useCurrentTime = (
 				hours = formatDate(date, 'HH');
 
 				if (use12Hours) {
-					console.log(hours);
 					hours = formatDate(setDate(new Date(), {hours}), 'hh');
-					console.log(hours);
 				}
 			}
 
