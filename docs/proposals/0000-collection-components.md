@@ -371,6 +371,41 @@ The first thought on this is, why not use array map? we can't optimize without k
 
 We were able to impose standards that are very common in the community, with the use of [render props](https://reactjs.org/docs/render-props.html), synthetically the use of function replaces the map array and allows us to create internal optimizations while still keeping the component being data-agnostic and avoiding problems like drilling props.
 
+### Why not custom props?
+
+One option to render a custom component to replace an internal component would be to use a custom render, also very common for some use cases. Usually this option is more common for scenarios where `children` is already used for another purpose, for example:
+
+```jsx
+<Suspense fallback={...}>
+	<Component>
+		{...}
+	</Component>
+</Suspense>
+
+<Route element={<Root />}>
+	<Route
+		{...}
+	/>
+</Route>
+```
+
+To illustrate an example of what this API would look like for some of the components, it would look something like this for DropDown.
+
+```jsx
+<DropDown
+	customMenu={...}
+	customItem={...}
+/>
+```
+
+The downside of going with this implementation is that it would create more APIs for the components and it wouldn't be something consistent for all components, the synthetic approximation between low-level and high-level components is far, the composition would still not be something granular as the possibilities that composition via `children` allows us to do.
+
+For other scenarios as shown in the examples above, it makes a lot of sense because the responsibilities of these components are simple and concise to their goals, unlike our collection components which the vast majority can allow different variations and different ways of composing the UI.
+
+### Schema for data agnostic
+
+Creating a schema API is an alternative for the component to be data agnostic but to implement this at the component level would be complex of use that the component would have compared to a composition strategy, using schema would be not to go with composition this can do sense in other implementations but for UI we would be increasing the learning curve and doing something unusual to circumvent the common that would be simpler.
+
 ## Adoption strategy
 
 This implementation can be implemented gradually, first, we can implement it for all components that have their low-level component implementation, and for the next major version, we add the implementation for the components that have their default high-level component.
