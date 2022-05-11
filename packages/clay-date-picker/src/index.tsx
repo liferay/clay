@@ -284,23 +284,17 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		 */
 		const [daysSelected, setDaysSelected] = useDaysSelected(() => {
 			if (internalValue) {
-				const [startDate, endDate] = fromStringToRange(
-					internalValue,
-					time
-						? `${dateFormat} ${
-								use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
-						  }`
-						: dateFormat,
-					NEW_DATE
-				);
+				const days = hasDaysSelected({
+					checkRangeYears: yearsCheck,
+					dateFormat,
+					is12Hours: use12Hours,
+					isTime: time,
+					value: internalValue,
+					years,
+				});
 
-				const isValidYear = yearsCheck
-					? isYearWithinYears(startDate.getFullYear(), years) &&
-					  isYearWithinYears(endDate.getFullYear(), years)
-					: true;
-
-				if (isValid(startDate) && isValid(endDate) && isValidYear) {
-					return [normalizeTime(startDate), normalizeTime(endDate)];
+				if (days) {
+					return [normalizeTime(days[0]), normalizeTime(days[1])];
 				}
 			}
 
@@ -457,25 +451,18 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 					setCurrentTime('--', '--', undefined);
 				}
 			} else {
-				const [startDate, endDate] = fromStringToRange(
+				const days = hasDaysSelected({
+					checkRangeYears: yearsCheck,
+					dateFormat,
+					is12Hours: use12Hours,
+					isTime: time,
 					value,
-					time
-						? `${dateFormat} ${
-								use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
-						  }`
-						: dateFormat,
-					NEW_DATE
-				);
+					years,
+				});
 
-				const yearFrom = startDate.getFullYear();
-				const yearTo = endDate.getFullYear();
+				if (days) {
+					const [startDate, endDate] = days;
 
-				const isValidYear = yearsCheck
-					? isYearWithinYears(yearFrom, years) &&
-					  isYearWithinYears(yearTo, years)
-					: true;
-
-				if (isValid(startDate) && isValid(endDate) && isValidYear) {
 					changeMonth(startDate);
 
 					setDaysSelected([startDate, endDate]);
@@ -729,6 +716,41 @@ function fromStringToRange(
 			? parseDate(endDateString, dateFormat, referenceDate)
 			: startDate,
 	];
+}
+
+type Options = {
+	checkRangeYears: boolean;
+	dateFormat: string;
+	is12Hours: boolean;
+	isTime: boolean;
+	value: string;
+	years: IYears;
+};
+
+function hasDaysSelected({
+	checkRangeYears,
+	dateFormat,
+	is12Hours,
+	isTime,
+	value,
+	years,
+}: Options) {
+	const [startDate, endDate] = fromStringToRange(
+		value,
+		isTime
+			? `${dateFormat} ${is12Hours ? TIME_FORMAT_12H : TIME_FORMAT}`
+			: dateFormat,
+		NEW_DATE
+	);
+
+	const isValidYear = checkRangeYears
+		? isYearWithinYears(startDate.getFullYear(), years) &&
+		  isYearWithinYears(endDate.getFullYear(), years)
+		: true;
+
+	if (isValid(startDate) && isValid(endDate) && isValidYear) {
+		return [startDate, endDate];
+	}
 }
 
 function fromRangeToString(range: [Date, Date], dateFormat: string) {
