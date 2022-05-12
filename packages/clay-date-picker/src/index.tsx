@@ -8,7 +8,7 @@ import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {FocusScope, InternalDispatch, useInternalState} from '@clayui/shared';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
@@ -125,7 +125,7 @@ interface IProps
 	 * Second argument gives the type that caused the value change
 	 * @deprecated since v3.51.0 - use `onChange` instead.
 	 */
-	onValueChange?: (value: string, type?: 'click' | 'input' | 'time') => void;
+	onValueChange?: InternalDispatch<string>;
 
 	/**
 	 * Describe a brief tip to help users interact.
@@ -198,6 +198,9 @@ const TIME_FORMAT = 'HH:mm';
 
 const TIME_FORMAT_12H = 'hh:mm aa';
 
+const normalizeTime = (date: Date) =>
+	setDate(date, {hours: 12, milliseconds: 0, minutes: 0, seconds: 0});
+
 /**
  * ClayDatePicker component.
  */
@@ -265,32 +268,6 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		// `initialMonth`.
 		initialMonth = defaultMonth ?? initialMonth;
 
-		/**
-		 * Indicates the current month rendered on the screen.
-		 */
-		const [currentMonth, setCurrentMonth] = React.useState(() =>
-			// Normalize the date to always set noon to avoid time zone problems
-			// and to the 1st of the month.
-			setDate(initialMonth, {date: 1, ...DEFAULT_DATE_TIME})
-		);
-
-		/**
-		 * DaysSelected is a tuple that represents [startDate, endDate]
-		 * in the cases where We have a date range and when `range` property
-		 * is disabled we will just use the first element of the tuple(startDate)
-		 */
-		const [daysSelected, setDaysSelected] = useDaysSelected(initialMonth);
-
-		/**
-		 * Indicates the time selected by the user.
-		 */
-		const [currentTime, setCurrentTime] = useCurrentTime(use12Hours);
-
-		/**
-		 * An array of the weeks and days list for the current month
-		 */
-		const [weeks, setWeeks] = useWeeks(currentMonth, firstDayOfWeek);
-
 		const [internalValue, setValue] = useInternalState({
 			defaultName: 'defaultValue',
 			defaultValue,
@@ -299,6 +276,75 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			onChange: onChange ?? onValueChange,
 			value,
 		});
+
+		/**
+		 * DaysSelected is a tuple that represents [startDate, endDate]
+		 * in the cases where We have a date range and when `range` property
+		 * is disabled we will just use the first element of the tuple(startDate)
+		 */
+		const [daysSelected, setDaysSelected] = useDaysSelected(() => {
+			if (internalValue) {
+				const days = hasDaysSelected({
+					checkRangeYears: yearsCheck,
+					dateFormat,
+					is12Hours: use12Hours,
+					isTime: time,
+					value: internalValue,
+					years,
+				});
+
+				if (days) {
+					return [normalizeTime(days[0]), normalizeTime(days[1])];
+				}
+			}
+
+			const date = normalizeTime(initialMonth);
+
+			return [date, date] as const;
+		});
+
+		/**
+		 * Indicates the current month rendered on the screen.
+		 */
+		const [currentMonth, setCurrentMonth] = useState(() =>
+			// Normalize the date to always set noon to avoid time zone problems
+			// and to the 1st of the month.
+			setDate(daysSelected[0], {date: 1, ...DEFAULT_DATE_TIME})
+		);
+
+		/**
+		 * Indicates the time selected by the user.
+		 */
+		const [currentTime, setCurrentTime] = useCurrentTime(() => {
+			if (time && internalValue) {
+				const [startDate] = fromStringToRange(
+					internalValue,
+					`${dateFormat} ${
+						use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
+					}`,
+					NEW_DATE
+				);
+
+				if (startDate.toString() !== 'Invalid Date') {
+					const hours = use12Hours
+						? formatDate(startDate, 'HH')
+						: formatDate(startDate, 'hh');
+
+					const minutes = formatDate(startDate, 'mm');
+
+					return use12Hours
+						? `${hours}:${minutes} ${formatDate(startDate, 'a')}`
+						: `${hours}:${minutes}`;
+				}
+			}
+
+			return '--:--';
+		}, use12Hours);
+
+		/**
+		 * An array of the weeks and days list for the current month
+		 */
+		const [weeks, setWeeks] = useWeeks(currentMonth, firstDayOfWeek);
 
 		/**
 		 * Flag to indicate if date is expanded. Uses an internal state value
@@ -319,12 +365,12 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		/**
 		 * Create a ref to store the datepicker DOM element
 		 */
-		const dropdownContainerRef = React.useRef<HTMLDivElement | null>(null);
+		const dropdownContainerRef = useRef<HTMLDivElement | null>(null);
 
 		/**
 		 * Create a ref to store the datepicker DOM element
 		 */
-		const triggerElementRef = React.useRef<HTMLDivElement | null>(null);
+		const triggerElementRef = useRef<HTMLDivElement | null>(null);
 
 		/**
 		 * Handles the change of the current month of the Date Picker
@@ -405,27 +451,18 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 					setCurrentTime('--', '--', undefined);
 				}
 			} else {
-				const format = time
-					? `${dateFormat} ${
-							use12Hours ? TIME_FORMAT_12H : TIME_FORMAT
-					  }`
-					: dateFormat;
-
-				const [startDate, endDate] = fromStringToRange(
+				const days = hasDaysSelected({
+					checkRangeYears: yearsCheck,
+					dateFormat,
+					is12Hours: use12Hours,
+					isTime: time,
 					value,
-					format,
-					NEW_DATE
-				);
+					years,
+				});
 
-				const yearFrom = startDate.getFullYear();
-				const yearTo = endDate.getFullYear();
+				if (days) {
+					const [startDate, endDate] = days;
 
-				const isValidYear = yearsCheck
-					? isYearWithinYears(yearFrom, years) &&
-					  isYearWithinYears(yearTo, years)
-					: true;
-
-				if (isValid(startDate) && isValid(endDate) && isValidYear) {
 					changeMonth(startDate);
 
 					setDaysSelected([startDate, endDate]);
@@ -537,7 +574,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			}
 		};
 
-		React.useEffect(() => {
+		useEffect(() => {
 			document.addEventListener('focus', handleFocus, true);
 
 			return () => {
@@ -679,6 +716,41 @@ function fromStringToRange(
 			? parseDate(endDateString, dateFormat, referenceDate)
 			: startDate,
 	];
+}
+
+type Options = {
+	checkRangeYears: boolean;
+	dateFormat: string;
+	is12Hours: boolean;
+	isTime: boolean;
+	value: string;
+	years: IYears;
+};
+
+function hasDaysSelected({
+	checkRangeYears,
+	dateFormat,
+	is12Hours,
+	isTime,
+	value,
+	years,
+}: Options) {
+	const [startDate, endDate] = fromStringToRange(
+		value,
+		isTime
+			? `${dateFormat} ${is12Hours ? TIME_FORMAT_12H : TIME_FORMAT}`
+			: dateFormat,
+		NEW_DATE
+	);
+
+	const isValidYear = checkRangeYears
+		? isYearWithinYears(startDate.getFullYear(), years) &&
+		  isYearWithinYears(endDate.getFullYear(), years)
+		: true;
+
+	if (isValid(startDate) && isValid(endDate) && isValidYear) {
+		return [startDate, endDate];
+	}
 }
 
 function fromRangeToString(range: [Date, Date], dateFormat: string) {

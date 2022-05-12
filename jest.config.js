@@ -68,10 +68,10 @@ module.exports = {
 			statements: 96,
 		},
 		'./packages/clay-date-picker/src/': {
-			branches: 72,
-			functions: 92,
-			lines: 94,
-			statements: 94,
+			branches: 76,
+			functions: 94,
+			lines: 95,
+			statements: 95,
 		},
 		'./packages/clay-drop-down/src/': {
 			branches: 70,

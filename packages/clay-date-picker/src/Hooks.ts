@@ -17,12 +17,8 @@ const normalizeTime = (date: Date) =>
  * Handles selected days and stabilize date time when set to avoid problems
  * when the range is used to check intervals.
  */
-export const useDaysSelected = (initialMonth: Date) => {
-	const [daysSelected, set] = useState(() => {
-		const date = normalizeTime(initialMonth);
-
-		return [date, date] as const;
-	});
+export const useDaysSelected = (defaultDays: () => readonly [Date, Date]) => {
+	const [daysSelected, set] = useState(defaultDays);
 
 	const setDaysSelected = useCallback(([start, end]: [Date, Date]) => {
 		// Preserves the reference of dates
@@ -60,8 +56,11 @@ export const useWeeks = (
 /**
  * Sets the current time
  */
-export const useCurrentTime = (use12Hours: boolean) => {
-	const [currentTime, set] = useState<string>('--:--');
+export const useCurrentTime = (
+	defaultTime: () => string,
+	use12Hours: boolean
+) => {
+	const [currentTime, set] = useState<string>(defaultTime);
 
 	const setCurrentTime = useCallback(
 		(
