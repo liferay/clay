@@ -8,7 +8,7 @@ $treeview: map-merge(
 		margin-bottom: 0,
 		padding: 2px 0,
 		btn-monospaced: (
-			font-size: 14px,
+			font-size: inherit,
 			height: 24px,
 			width: 24px,
 			focus: (
@@ -86,8 +86,12 @@ $treeview: map-merge(
 				cursor: $disabled-cursor,
 			),
 		),
+		component-expander: (
+			font-size: 10px,
+		),
 		component-action: (
 			display: none,
+			font-size: 16px,
 			margin-left: 2px,
 			margin-right: 2px,
 			hover: (
@@ -102,11 +106,15 @@ $treeview: map-merge(
 			),
 		),
 		component-icon: (
-			display: inline,
+			display: inline-block,
+			font-size: 16px,
 			height: auto,
-			margin-left: 4px,
-			margin-right: 4px,
+			margin: auto 4px,
+			vertical-align: middle,
 			width: auto,
+			lexicon-icon: (
+				display: block,
+			),
 		),
 		component-text: (
 			padding-bottom: 1.5px,
