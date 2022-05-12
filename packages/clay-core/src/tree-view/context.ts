@@ -16,6 +16,7 @@ export type Icons = {
 export interface ITreeViewContext<T> extends ITreeState<T> {
 	childrenRoot: React.MutableRefObject<ChildrenFunction<Object> | null>;
 	dragAndDrop?: boolean;
+	expandDoubleClick?: boolean;
 	expandOnCheck?: boolean;
 	expanderClassName?: string;
 	expanderIcons?: Icons;

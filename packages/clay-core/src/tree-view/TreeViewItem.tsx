@@ -65,6 +65,7 @@ export const TreeViewItem = React.forwardRef<
 	const {
 		childrenRoot,
 		close,
+		expandDoubleClick,
 		expandedKeys,
 		insert,
 		nestedKey,
@@ -202,7 +203,7 @@ export const TreeViewItem = React.forwardRef<
 							selection.toggleSelection(item.key);
 						}
 
-						if (group) {
+						if (group && !expandDoubleClick) {
 							toggle(item.key);
 						} else {
 							if (onLoadMore) {
@@ -220,6 +221,38 @@ export const TreeViewItem = React.forwardRef<
 										console.error(error);
 									});
 							}
+						}
+					}}
+					onDoubleClick={(event) => {
+						if (!expandDoubleClick) {
+							return;
+						}
+
+						if (itemStackProps.disabled || nodeProps.disabled) {
+							return;
+						}
+
+						if (hasItemStack && itemStackProps.onDoubleClick) {
+							itemStackProps.onDoubleClick(event);
+						}
+
+						if (nodeProps.onDoubleClick) {
+							(
+								nodeProps.onDoubleClick as unknown as (
+									event: React.MouseEvent<
+										HTMLDivElement,
+										MouseEvent
+									>
+								) => void
+							)(event);
+						}
+
+						if (event.defaultPrevented) {
+							return;
+						}
+
+						if (group) {
+							toggle(item.key);
 						}
 					}}
 					onFocus={() => actions && setFocus(true)}
