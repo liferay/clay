@@ -65,6 +65,7 @@ export const TreeViewItem = React.forwardRef<
 	const {
 		childrenRoot,
 		close,
+		expandDoubleClick,
 		expandedKeys,
 		insert,
 		nestedKey,
@@ -195,6 +196,14 @@ export const TreeViewItem = React.forwardRef<
 						}
 
 						if (event.defaultPrevented) {
+							return;
+						}
+
+						// event.detail it has no type but is an existing property of the
+						// element to know how many clicks were triggered.
+						// https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
+						// @ts-ignore
+						if (expandDoubleClick && event.detail !== 2) {
 							return;
 						}
 

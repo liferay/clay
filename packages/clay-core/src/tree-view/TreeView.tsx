@@ -38,6 +38,11 @@ interface ITreeViewProps<T>
 	dragAndDropContext?: Window & typeof globalThis;
 
 	/**
+	 * Flag to expand the node's children when double-clicking the node.
+	 */
+	expandDoubleClick?: boolean;
+
+	/**
 	 * Flag to expand child nodes when a parent node is checked.
 	 */
 	expandOnCheck?: boolean;
@@ -93,6 +98,7 @@ export function TreeView<T>({
 	displayType = 'light',
 	dragAndDrop = false,
 	dragAndDropContext = window,
+	expandDoubleClick = false,
 	expandedKeys,
 	expanderClassName,
 	expanderIcons,
@@ -136,6 +142,7 @@ export function TreeView<T>({
 	const context = {
 		childrenRoot: childrenRootRef,
 		dragAndDrop,
+		expandDoubleClick,
 		expandOnCheck,
 		expanderClassName,
 		expanderIcons,
