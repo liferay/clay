@@ -83,6 +83,9 @@ const DATA = [
 ];
 
 export default {
+	parameters: {
+		chromatic: {disableSnapshot: true},
+	},
 	title: 'Demos/Recharts',
 };
 

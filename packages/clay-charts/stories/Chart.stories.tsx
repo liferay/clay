@@ -20,6 +20,9 @@ const COLUMNS_2 = [
 ];
 
 export default {
+	parameters: {
+		chromatic: {disableSnapshot: true},
+	},
 	title: 'Design System/Charts/React Billboard',
 };
 

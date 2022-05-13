@@ -9,6 +9,9 @@ import {ClayPortal, FocusScope} from '../src';
 
 export default {
 	component: FocusScope,
+	parameters: {
+		chromatic: {disableSnapshot: false},
+	},
 	title: 'Design System/Internal Use Only/FocusScope',
 };
 
