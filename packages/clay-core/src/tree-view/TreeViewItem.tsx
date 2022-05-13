@@ -199,11 +199,19 @@ export const TreeViewItem = React.forwardRef<
 							return;
 						}
 
+						// event.detail it has no type but is an existing property of the
+						// element to know how many clicks were triggered.
+						// https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
+						// @ts-ignore
+						if (expandDoubleClick && event.detail !== 2) {
+							return;
+						}
+
 						if (selectionMode === 'single') {
 							selection.toggleSelection(item.key);
 						}
 
-						if (group && !expandDoubleClick) {
+						if (group) {
 							toggle(item.key);
 						} else {
 							if (onLoadMore) {
@@ -221,38 +229,6 @@ export const TreeViewItem = React.forwardRef<
 										console.error(error);
 									});
 							}
-						}
-					}}
-					onDoubleClick={(event) => {
-						if (!expandDoubleClick) {
-							return;
-						}
-
-						if (itemStackProps.disabled || nodeProps.disabled) {
-							return;
-						}
-
-						if (hasItemStack && itemStackProps.onDoubleClick) {
-							itemStackProps.onDoubleClick(event);
-						}
-
-						if (nodeProps.onDoubleClick) {
-							(
-								nodeProps.onDoubleClick as unknown as (
-									event: React.MouseEvent<
-										HTMLDivElement,
-										MouseEvent
-									>
-								) => void
-							)(event);
-						}
-
-						if (event.defaultPrevented) {
-							return;
-						}
-
-						if (group) {
-							toggle(item.key);
 						}
 					}}
 					onFocus={() => actions && setFocus(true)}
