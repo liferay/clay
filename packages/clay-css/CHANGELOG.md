@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.57.0](https://github.com/liferay/clay/compare/v3.56.0...v3.57.0) (2022-05-16)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Treeview and Cadmin Treeview update font size of icons ([1f3d599](https://github.com/liferay/clay/commit/1f3d5997fc83b9a3fe3838241f7e24c7ffecf0b9))
+* **@clayui/multi-step-nav:** fix color of steps according to lexicon ([c674346](https://github.com/liferay/clay/commit/c67434603abbb3ecdc64527270a223ff495c97d1))
+
+
+### Features
+
+* **@clayui/css:** add new `ca-ES-valencia` icon ([74c98d4](https://github.com/liferay/clay/commit/74c98d42f6783bb9e6724bbc2f8f46a37293cdd8))
+
+
+
+
+
 # [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
 
 

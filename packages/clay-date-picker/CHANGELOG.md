@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.57.0](https://github.com/liferay/clay/compare/v3.56.0...v3.57.0) (2022-05-16)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** fix date picker error not starting with default values using controlled or uncontrolled ([434fb7b](https://github.com/liferay/clay/commit/434fb7b379a7bbad95284f891b893e2c5b12b956))
+
 # [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
 
 **Note:** Version bump only for package @clayui/date-picker
