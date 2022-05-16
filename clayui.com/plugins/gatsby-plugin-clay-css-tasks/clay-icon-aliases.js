@@ -61,6 +61,7 @@ const flagsData = {
 	"ca":                           '"ca", "Catalan"',
 	"ca-ad":                        '"ca-ad", "Catalan", "Andorra"',
 	"ca-es":                        '"ca-es", "Catalan", "Spain"',
+	"ca-es-valencia":               '"ca-es-valencia", "Catalan", "Valencia"',
 	"cs":                           '"cs", "Czech"',
 	"cs-cz":                        '"cs-cz", "Czech", "Czech Republic"',
 	"cs-sk":                        '"cs-sk", "Czech", "Slovak Republic"',
