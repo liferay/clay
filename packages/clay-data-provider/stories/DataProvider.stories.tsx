@@ -9,6 +9,9 @@ import ClayDataProvider, {useResource} from '../src';
 import {FetchPolicy} from '../src/types';
 
 export default {
+	parameters: {
+		chromatic: {disableSnapshot: true},
+	},
 	title: 'Design System/Components/DataProvider',
 };
 

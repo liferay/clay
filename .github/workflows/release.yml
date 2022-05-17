@@ -29,6 +29,10 @@ jobs:
             BROWSERSLIST_DISABLE_CACHE: 1
             CI: true
         run: yarn test
+      - name: UI Tests
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        run: yarn chromatic
 
   version:
     needs: test

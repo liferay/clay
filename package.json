@@ -38,7 +38,8 @@
 		"storybook:build": "NODE_OPTIONS=--max_old_space_size=8192 build-storybook -c .storybook -o .storybook-static",
 		"storybook": "start-storybook -p 8888",
 		"test": "jest",
-		"version": "prettier --write -- \"**/CHANGELOG.md\" \"lerna.json\" && git add -- \"packages/clay-css/src/scss/_license-text.scss\""
+		"version": "prettier --write -- \"**/CHANGELOG.md\" \"lerna.json\" && git add -- \"packages/clay-css/src/scss/_license-text.scss\"",
+		"chromatic": "chromatic --exit-zero-on-changes --build-script-name=storybook:build"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.15.7",
@@ -78,6 +79,7 @@
 		"babel-plugin-dev-expression": "^0.2.2",
 		"babel-plugin-react-remove-properties": "^0.3.0",
 		"babel-plugin-transform-inline-environment-variables": "^0.4.3",
+		"chromatic": "^6.5.4",
 		"coveralls": "^3.1.1",
 		"cross-env": "^7.0.3",
 		"css-loader": "^2.1.1",

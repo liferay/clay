@@ -29,7 +29,11 @@ export const Title = () => (
 );
 
 export const EmptyState = (args: any) => (
-	<ClayEmptyState imgSrc={emptyImage} small={args.small}>
+	<ClayEmptyState
+		imgProps={{className: 'chromatic-ignore'}}
+		imgSrc={emptyImage}
+		small={args.small}
+	>
 		<ClayButton displayType="secondary">Button</ClayButton>
 	</ClayEmptyState>
 );
@@ -41,6 +45,7 @@ EmptyState.args = {
 export const SearchState = () => (
 	<ClayEmptyState
 		description="This is a description of what the button will allow you to do"
+		imgProps={{className: 'chromatic-ignore'}}
 		imgSrc={searchImage}
 		title="No content yet"
 	/>
@@ -49,6 +54,7 @@ export const SearchState = () => (
 export const SuccessState = () => (
 	<ClayEmptyState
 		description="You don't have more notifications to review"
+		imgProps={{className: 'chromatic-ignore'}}
 		imgSrc={successImage}
 		title="Hurray"
 	/>
@@ -57,7 +63,11 @@ export const SuccessState = () => (
 export const WithImage = () => (
 	<ClayEmptyState
 		description="You don't have more notifications to review"
-		imgProps={{alt: 'test test', title: 'hello world'}}
+		imgProps={{
+			alt: 'test test',
+			className: 'chromatic-ignore',
+			title: 'hello world',
+		}}
 		imgSrc={successImage}
 		title="Hurray"
 	/>
