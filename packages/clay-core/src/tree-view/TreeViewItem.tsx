@@ -233,11 +233,32 @@ export const TreeViewItem = React.forwardRef<
 					}}
 					onFocus={() => actions && setFocus(true)}
 					onKeyDown={(event) => {
-						event.preventDefault();
-
 						if (itemStackProps.disabled || nodeProps.disabled) {
 							return;
 						}
+
+						if (hasItemStack && itemStackProps.onKeyDown) {
+							itemStackProps.onKeyDown(event);
+						}
+
+						if (nodeProps.onKeyDown) {
+							(
+								nodeProps.onKeyDown as unknown as (
+									event: React.KeyboardEvent<HTMLDivElement>
+								) => void
+							)(event);
+						}
+
+						if (event.defaultPrevented) {
+							return;
+						}
+
+						// We call `preventDefault` after checking if it was ignored
+						// because the behavior is different when the developer sets
+						// `onKeyDown` it can ignore the default behavior of the browser
+						// and the default behavior of the TreeView when this is not done
+						// by default we ignore the default browser behavior by default.
+						event.preventDefault();
 
 						const {key} = event;
 
