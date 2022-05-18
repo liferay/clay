@@ -28,123 +28,7 @@ caption {
 }
 
 .table {
-	border-spacing: 0;
-	color: $table-color;
-	font-size: $table-font-size;
-	margin-bottom: $table-margin-bottom;
-	width: 100%;
-
-	thead {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($c-table-thead);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: $table-head-bg;
-			border-bottom: $table-head-border-bottom-width solid
-				$table-border-color;
-			border-top-width: $table-head-border-top-width;
-			vertical-align: bottom;
-		}
-
-		th a {
-			@include clay-link($table-head-link);
-		}
-	}
-
-	th {
-		background-clip: padding-box;
-		border-top: $table-border-width solid $table-border-color;
-		color: $table-head-color;
-		font-size: $table-head-font-size;
-		font-weight: $table-head-font-weight;
-		height: $table-head-height;
-		padding: $table-cell-padding;
-		position: relative;
-		vertical-align: top;
-	}
-
-	td {
-		background-clip: padding-box;
-		border-bottom-width: $table-data-border-bottom-width;
-		border-left-width: $table-data-border-left-width;
-		border-right-width: $table-data-border-right-width;
-		border-top-width: $table-data-border-top-width;
-
-		border-color: $table-data-border-color;
-		border-style: $table-data-border-style;
-		padding: $table-cell-padding;
-		position: relative;
-		vertical-align: $table-data-vertical-align;
-	}
-
-	td:first-child,
-	th:first-child,
-	.table-cell-start {
-		padding-left: $table-cell-gutters;
-	}
-
-	td:last-child,
-	th:last-child,
-	.table-cell-end {
-		padding-right: $table-cell-gutters;
-	}
-
-	tbody {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($c-table-tbody);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: map-get($c-table-tbody, background-color);
-		}
-	}
-
-	tbody + tbody {
-		border-top: calc(2 * #{$table-border-width}) solid $table-border-color;
-	}
-
-	tfoot {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($c-table-tfoot);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: map-get($c-table-tfoot, background-color);
-		}
-	}
-
-	caption {
-		@include clay-css($c-table-caption);
-	}
-
-	.autofit-col {
-		justify-content: center;
-		padding-left: $table-cell-padding;
-		padding-right: $table-cell-padding;
-
-		&:first-child {
-			padding-left: 0;
-		}
-
-		&:last-child {
-			padding-right: 0;
-		}
-	}
-
-	.custom-control,
-	.form-check {
-		margin-bottom: 0;
-	}
+	@include clay-table-variant($c-table);
 }
 
 // Table Caption
@@ -156,37 +40,13 @@ caption {
 // Table Sm
 
 .table-sm {
-	th,
-	td {
-		padding: $table-cell-padding-sm;
-	}
+	@include clay-table-variant($c-table-sm);
 }
 
 // Table Bordered
 
 .table-bordered {
-	border: $table-border-width solid $table-border-color;
-
-	thead {
-		td,
-		th {
-			border-bottom-width: calc(2 * #{$table-border-width});
-
-			@if (
-				$table-head-border-top-width ==
-					0 and
-					$table-head-border-top-width
-			) {
-				border-top-width: $table-border-width;
-			}
-		}
-	}
-
-	td,
-	th {
-		border: $table-border-width solid $table-border-color;
-		border-width: $table-bordered-border-width;
-	}
+	@include clay-table-variant($c-table-bordered);
 }
 
 .table-borderless {
@@ -212,16 +72,7 @@ caption {
 // Table Hover
 
 .table-hover {
-	tbody tr {
-		&:hover {
-			&,
-			td,
-			th {
-				color: $table-hover-color;
-				background-color: $table-hover-bg;
-			}
-		}
-	}
+	@include clay-table-variant($c-table-hover);
 }
 
 // Table Row Backgrounds
@@ -263,39 +114,7 @@ caption {
 	}
 }
 
-// Table Active
-
-@include table-row-variant(active, $table-active-bg);
-
 // Table Disabled
-
-.table-disabled {
-	color: $table-disabled-color;
-
-	> td,
-	> th {
-		background-color: $table-disabled-bg;
-		cursor: $table-disabled-cursor;
-
-		a {
-			color: $table-disabled-color;
-			pointer-events: $table-disabled-pointer-events;
-		}
-	}
-
-	.table-title,
-	.table-list-title {
-		color: $table-disabled-color;
-	}
-}
-
-.table-hover .table-disabled:hover {
-	&,
-	> td,
-	> th {
-		background-color: $table-disabled-bg;
-	}
-}
 
 .table-striped {
 	tbody .table-disabled:nth-of-type(#{$table-striped-order}) {
@@ -402,173 +221,13 @@ caption {
 // Table List Skin
 
 .table-list {
-	@include clay-css($c-table-list);
-
-	thead:first-child,
-	tbody:first-child,
-	tfoot:first-child,
-	caption:first-child + thead {
-		tr:first-child {
-			th,
-			td {
-				border-top-width: 0;
-			}
-
-			th:first-child,
-			td:first-child,
-			.table-cell-start {
-				@include clay-css(
-					map-deep-get(
-						$c-table-list,
-						table-row-start,
-						table-cell-start
-					)
-				);
-			}
-
-			th:last-child,
-			td:last-child,
-			.table-cell-end {
-				@include clay-css(
-					map-deep-get($c-table-list, table-row-start, table-cell-end)
-				);
-			}
-		}
-	}
-
-	caption {
-		@include clay-css($c-table-list-caption);
-	}
-
-	thead,
-	tbody,
-	tfoot {
-		td,
-		th {
-			@include clay-css($c-table-list-cell);
-		}
-
-		&:last-child {
-			tr:last-child {
-				th:first-child,
-				td:first-child,
-				.table-cell-start {
-					@include clay-css(
-						map-deep-get(
-							$c-table-list,
-							table-row-end,
-							table-cell-start
-						)
-					);
-				}
-
-				th:last-child,
-				td:last-child,
-				.table-cell-end {
-					@include clay-css(
-						map-deep-get(
-							$c-table-list,
-							table-row-end,
-							table-cell-end
-						)
-					);
-				}
-			}
-		}
-	}
-
-	thead {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($c-table-list-thead);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: $table-list-head-bg;
-			font-size: $table-list-head-font-size;
-			font-weight: $table-list-head-font-weight;
-			height: $table-list-head-height;
-			vertical-align: $table-list-head-vertical-alignment;
-		}
-
-		th a {
-			@include clay-link($table-list-head-link);
-		}
-	}
-
-	tbody {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($c-table-list-tbody);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: map-get($c-table-list-tbody, background-color);
-			vertical-align: middle;
-		}
-	}
-
-	tfoot {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($c-table-list-tfoot);
-
-		td,
-		th {
-			background-color: map-get($c-table-list-tfoot, background-color);
-			vertical-align: middle;
-		}
-	}
-
-	.table-row-start {
-		.table-cell-start {
-			@include clay-css(
-				map-deep-get($c-table-list, table-row-start, table-cell-start)
-			);
-		}
-
-		.table-cell-end {
-			@include clay-css(
-				map-deep-get($c-table-list, table-row-start, table-cell-end)
-			);
-		}
-	}
-
-	.table-row-end {
-		.table-cell-start {
-			@include clay-css(
-				map-deep-get($c-table-list, table-row-end, table-cell-start)
-			);
-		}
-
-		.table-cell-end {
-			@include clay-css(
-				map-deep-get($c-table-list, table-row-end, table-cell-end)
-			);
-		}
-	}
+	@include clay-table-variant($c-table-list);
 }
 
 // Table List Bordered
 
-.table-list.table-bordered {
-	thead,
-	tbody,
-	tfoot {
-		th,
-		td {
-			@include clay-css($c-table-list-bordered-cell);
-		}
-	}
-
-	th:first-child,
-	td:first-child {
-		border-left-width: 0;
-	}
+.table.table-list.table-bordered {
+	@include clay-table-variant($c-table-list-table-bordered);
 }
 
 // Table List Striped
@@ -585,68 +244,7 @@ caption {
 // Table List Hover
 
 .table-list.table-hover {
-	tbody tr {
-		&:hover {
-			&,
-			td,
-			th {
-				background-color: $table-list-hover-bg;
-			}
-		}
-	}
-}
-
-// Table List Active
-
-.table-list.table-hover {
-	.table-active {
-		&:hover {
-			&,
-			> th,
-			> td {
-				background-color: $table-list-active-bg;
-			}
-		}
-	}
-}
-
-.table-list .table-active {
-	&,
-	> th,
-	> td {
-		background-color: $table-list-active-bg;
-	}
-}
-
-// Table List Disabled
-
-.table-list .table-disabled {
-	background-color: $table-list-disabled-bg;
-	color: $table-list-disabled-color;
-
-	> td,
-	> th {
-		background-color: $table-list-disabled-bg;
-		cursor: $table-list-disabled-cursor;
-
-		a {
-			color: $table-list-disabled-color;
-			pointer-events: $table-list-disabled-pointer-events;
-		}
-	}
-
-	.table-title,
-	.table-list-title {
-		color: $table-list-disabled-color;
-	}
-}
-
-.table-list.table-hover .table-disabled:hover {
-	&,
-	> td,
-	> th {
-		background-color: $table-list-disabled-bg;
-	}
+	@include clay-table-variant($c-table-list-table-hover);
 }
 
 .table-list.table-striped {
@@ -713,28 +311,6 @@ caption {
 	td,
 	th {
 		white-space: nowrap;
-	}
-}
-
-.table .table-divider {
-	td,
-	th {
-		background-color: $table-divider-bg;
-		color: $table-divider-color;
-		font-size: $table-divider-font-size;
-		font-weight: $table-divider-font-weight;
-		padding: $table-divider-padding;
-		text-transform: $table-divider-text-transform;
-	}
-}
-
-.table-list .table-divider {
-	td,
-	th {
-		padding-bottom: $table-list-divider-padding-y;
-		padding-left: $table-list-divider-padding-x;
-		padding-right: $table-list-divider-padding-x;
-		padding-top: $table-list-divider-padding-y;
 	}
 }
 
@@ -886,15 +462,6 @@ caption {
 	}
 }
 
-.table {
-	.quick-action-menu {
-		align-items: $table-quick-action-menu-align-items;
-		background-color: $table-quick-action-menu-bg;
-		padding-bottom: $table-cell-padding;
-		padding-top: $table-cell-padding;
-	}
-}
-
 .table-striped {
 	tbody tr:nth-of-type(#{$table-striped-order}) {
 		.quick-action-menu {
@@ -909,39 +476,6 @@ caption {
 	}
 }
 
-.table-hover {
-	tbody tr {
-		&:hover {
-			.quick-action-menu {
-				background-color: $table-quick-action-menu-hover-bg;
-			}
-		}
-	}
-
-	tbody .table-active {
-		&:hover {
-			.quick-action-menu {
-				background-color: $table-quick-action-menu-active-bg;
-			}
-		}
-	}
-}
-
-.table-active {
-	.quick-action-menu {
-		background-color: $table-quick-action-menu-active-bg;
-	}
-}
-
-.table-list {
-	.quick-action-menu {
-		align-items: $table-list-quick-action-menu-align-items;
-		background-color: $table-list-quick-action-menu-bg;
-		bottom: 0;
-		top: 0;
-	}
-}
-
 .table-list.table-striped {
 	tbody tr:nth-of-type(#{$table-striped-order}) {
 		.quick-action-menu {
@@ -953,30 +487,6 @@ caption {
 		.quick-action-menu {
 			background-color: $table-list-quick-action-menu-accent-active-bg;
 		}
-	}
-}
-
-.table-list.table-hover {
-	tbody tr {
-		&:hover {
-			.quick-action-menu {
-				background-color: $table-list-quick-action-menu-hover-bg;
-			}
-		}
-	}
-
-	tbody .table-active {
-		&:hover {
-			.quick-action-menu {
-				background-color: $table-list-quick-action-menu-active-bg;
-			}
-		}
-	}
-}
-
-.table-list .table-active {
-	.quick-action-menu {
-		background-color: $table-list-quick-action-menu-active-bg;
 	}
 }
 
