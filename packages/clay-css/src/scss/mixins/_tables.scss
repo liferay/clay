@@ -47,6 +47,339 @@
 	}
 }
 
+/// A mixin to help create table variants.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+
+@mixin clay-table-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			thead {
+				@include clay-css(map-get($map, thead));
+
+				th,
+				td {
+					@include clay-css(map-deep-get($map, thead, table-cell));
+				}
+
+				th {
+					@include clay-css(map-deep-get($map, thead, th));
+
+					[href] {
+						@include clay-link(map-deep-get($map, thead, th, href));
+					}
+				}
+			}
+
+			th,
+			td {
+				@include clay-css(map-get($map, table-cell));
+
+				[href] {
+					@include clay-link(map-deep-get($map, table-cell, href));
+				}
+			}
+
+			th:first-child,
+			td:first-child,
+			.table-column-start {
+				@include clay-css(map-get($map, table-column-start));
+			}
+
+			th:last-child,
+			td:last-child,
+			.table-column-end {
+				@include clay-css(map-get($map, table-column-end));
+			}
+
+			th {
+				@include clay-css(map-get($map, th));
+			}
+
+			td {
+				@include clay-css(map-get($map, td));
+			}
+
+			thead:first-child,
+			tbody:first-child,
+			tfoot:first-child,
+			caption:first-child + thead {
+				tr:first-child {
+					@include clay-css(map-get($map, table-row-start));
+
+					th,
+					td {
+						@include clay-css(
+							map-deep-get($map, table-row-start, table-cell)
+						);
+
+						&:first-child {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									table-row-start,
+									table-cell-start
+								)
+							);
+						}
+
+						&:last-child {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									table-row-start,
+									table-cell-end
+								)
+							);
+						}
+					}
+				}
+			}
+
+			.table-row-start {
+				@include clay-css(map-get($map, table-row-start));
+
+				.table-cell-start {
+					@include clay-css(
+						map-deep-get($map, table-row-start, table-cell-start)
+					);
+				}
+
+				.table-cell-end {
+					@include clay-css(
+						map-deep-get($map, table-row-start, table-cell-end)
+					);
+				}
+			}
+
+			thead:last-child,
+			tbody:last-child,
+			tfoot:last-child {
+				tr:last-child {
+					@include clay-css(map-get($map, table-row-end));
+
+					th,
+					td {
+						&:first-child {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									table-row-end,
+									table-cell-start
+								)
+							);
+						}
+
+						&:last-child {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									table-row-end,
+									table-cell-end
+								)
+							);
+						}
+					}
+				}
+			}
+
+			.table-row-end {
+				@include clay-css(map-get($map, table-row-end));
+
+				.table-cell-start {
+					@include clay-css(
+						map-deep-get($map, table-row-end, table-cell-start)
+					);
+				}
+
+				.table-cell-end {
+					@include clay-css(
+						map-deep-get($map, table-row-end, table-cell-end)
+					);
+				}
+			}
+
+			tbody {
+				@include clay-css(map-get($map, tbody));
+
+				tr {
+					@include clay-css(map-deep-get($map, tbody, tr));
+
+					&:hover {
+						@include clay-css(map-deep-get($map, tbody, tr, hover));
+
+						th,
+						td {
+							@include clay-css(
+								map-deep-get($map, tbody, tr, hover, table-cell)
+							);
+						}
+
+						.quick-action-menu {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									tbody,
+									tr,
+									hover,
+									quick-action-menu
+								)
+							);
+						}
+					}
+				}
+
+				th,
+				td {
+					@include clay-css(map-deep-get($map, tbody, table-cell));
+				}
+
+				+ tbody {
+					@include clay-css(map-deep-get($map, tbody, tbody));
+				}
+			}
+
+			tfoot {
+				@include clay-css(map-get($map, tfoot));
+
+				th,
+				td {
+					@include clay-css(map-deep-get($map, tfoot, table-cell));
+				}
+			}
+
+			caption {
+				@include clay-css(map-get($map, caption));
+			}
+
+			.table-divider {
+				th,
+				td {
+					@include clay-css(
+						map-deep-get($map, table-divider, table-cell)
+					);
+				}
+			}
+
+			.table-active {
+				@include clay-css(map-get($map, table-active));
+
+				&:hover {
+					@include clay-css(map-deep-get($map, table-active, hover));
+
+					th,
+					td {
+						@include clay-css(
+							map-deep-get($map, table-active, hover, table-cell)
+						);
+					}
+
+					.quick-action-menu {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								table-active,
+								hover,
+								quick-action-menu
+							)
+						);
+					}
+				}
+
+				th,
+				td {
+					@include clay-css(
+						map-deep-get($map, table-active, table-cell)
+					);
+				}
+
+				.quick-action-menu {
+					@include clay-css(
+						map-deep-get($map, table-active, quick-action-menu)
+					);
+				}
+			}
+
+			.table-disabled {
+				@include clay-css(map-get($map, table-disabled));
+
+				&:hover {
+					@include clay-css(
+						map-deep-get($map, table-disabled, hover)
+					);
+
+					th,
+					td {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								table-disabled,
+								hover,
+								table-cell
+							)
+						);
+					}
+				}
+
+				th,
+				td {
+					@include clay-css(
+						map-deep-get($map, table-disabled, table-cell)
+					);
+
+					[href] {
+						@include clay-link(
+							map-deep-get($map, table-disabled, table-cell, href)
+						);
+					}
+				}
+
+				.table-title {
+					@include clay-text-typography(
+						map-deep-get($map, table-disabled, table-title)
+					);
+				}
+
+				.table-list-title {
+					@include clay-text-typography(
+						map-deep-get($map, table-disabled, table-list-title)
+					);
+				}
+			}
+
+			.autofit-col {
+				@include clay-css(map-get($map, autofit-col));
+
+				&:first-child {
+					@include clay-css(
+						map-deep-get($map, autofit-col, first-child)
+					);
+				}
+
+				&:last-child {
+					@include clay-css(
+						map-deep-get($map, autofit-col, last-child)
+					);
+				}
+			}
+
+			.custom-control,
+			.form-check {
+				@include clay-custom-control-variant(
+					map-get($map, custom-control)
+				);
+			}
+
+			.quick-action-menu {
+				@include clay-css(map-get($map, quick-action-menu));
+			}
+		}
+	}
+}
+
 /// A mixin to help create table-drag variants.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
