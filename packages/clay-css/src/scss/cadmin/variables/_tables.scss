@@ -92,9 +92,13 @@ $cadmin-table-head-link: map-deep-merge(
 		border-radius: 1px,
 		color: $cadmin-gray-600,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $cadmin-gray-900,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$cadmin-table-head-link
 );
@@ -201,9 +205,13 @@ $cadmin-table-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $cadmin-gray-900,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$cadmin-table-title-link
 );
@@ -218,9 +226,13 @@ $cadmin-table-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $cadmin-gray-900,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$cadmin-table-link
 );
@@ -240,15 +252,23 @@ $cadmin-table-action-link: map-deep-merge(
 		transition: $cadmin-btn-transition,
 		vertical-align: middle,
 		width: 32px,
-		hover-bg: rgba(0, 0, 0, 0.02),
-		hover-color: $cadmin-gray-900,
-		hover-text-decoration: none,
-		focus-bg: rgba(0, 0, 0, 0.02),
-		focus-color: $cadmin-gray-900,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
-		active-bg: rgba(0, 0, 0, 0.04),
-		lexicon-icon-margin-top: 0,
+		hover: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $cadmin-gray-900,
+			text-decoration: none,
+		),
+		focus: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $cadmin-gray-900,
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			background-color: rgba(0, 0, 0, 0.04),
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$cadmin-table-action-link
 );
@@ -429,9 +449,13 @@ $cadmin-table-list-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $cadmin-gray-900,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$cadmin-table-list-title-link
 );
@@ -446,9 +470,13 @@ $cadmin-table-list-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $cadmin-gray-900,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$cadmin-table-list-link
 );
@@ -467,15 +495,23 @@ $cadmin-table-list-action-link: map-deep-merge(
 		transition: $cadmin-btn-transition,
 		vertical-align: middle,
 		width: 32px,
-		hover-bg: rgba(0, 0, 0, 0.02),
-		hover-color: $cadmin-gray-900,
-		hover-text-decoration: none,
-		focus-bg: rgba(0, 0, 0, 0.02),
-		focus-color: $cadmin-gray-900,
-		focus-box-shadow: $cadmin-component-focus-box-shadow,
-		focus-outline: 0,
-		active-bg: rgba(0, 0, 0, 0.04),
-		lexicon-icon-margin-top: 0,
+		hover: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $cadmin-gray-900,
+			text-decoration: none,
+		),
+		focus: (
+			background-color: rgba(0, 0, 0, 0.02),
+			box-shadow: $cadmin-component-focus-box-shadow,
+			color: $cadmin-gray-900,
+			outline: 0,
+		),
+		active: (
+			background-color: rgba(0, 0, 0, 0.04),
+		),
+		lexicon-icon: (
+			margin-top: 0,
+		),
 	),
 	$cadmin-table-list-action-link
 );
