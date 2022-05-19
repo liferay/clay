@@ -40,10 +40,17 @@ export function useInternalState<Value>({
 		`You provided a '${name}' prop for a component without a handler '${handleName}'. This will render the component with an internal state, if the component is to be uncontrolled, use '${defaultName}'. Otherwise, set the '${handleName}' handler.`
 	);
 
-	if (typeof value === 'undefined' || typeof onChange === 'undefined') {
+	const isUncontrolled =
+		typeof value === 'undefined' || typeof onChange === 'undefined';
+
+	if (isUncontrolled) {
 		value = internalValue;
 		onChange = setInternalValue;
 	}
 
-	return [value, onChange] as [Value, InternalDispatch<Value>];
+	return [value, onChange, isUncontrolled] as [
+		Value,
+		InternalDispatch<Value>,
+		boolean
+	];
 }

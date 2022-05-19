@@ -4,7 +4,7 @@
  */
 
 import {useInternalState} from '@clayui/shared';
-import {Key, useCallback, useRef} from 'react';
+import {Key, useCallback, useMemo, useRef} from 'react';
 
 import {getKey} from './Collection';
 import {ITreeProps, createImmutableTree} from './useTree';
@@ -120,7 +120,9 @@ export function useMultipleSelection<T>(
 
 	const intermediateKeys = useRef(new Set<Key>());
 
-	const [selectedKeys, setSelectionKeys] = useInternalState<Set<Key>>({
+	const [selectedKeys, setSelectionKeys, isUncontrolled] = useInternalState<
+		Set<Key>
+	>({
 		defaultName: 'defaultSelectedKeys',
 		defaultValue: props.defaultSelectedKeys ?? new Set(),
 		handleName: 'onSelectionChange',
@@ -128,6 +130,44 @@ export function useMultipleSelection<T>(
 		onChange: props.onSelectionChange,
 		value: props.selectedKeys,
 	});
+
+	/**
+	 * We are using `useMemo` to do intermediate state revalidation in the
+	 * render cycle instead of in the `useEffect` which happens after rendering.
+	 */
+	useMemo(() => {
+		if (props.selectionMode === 'multiple-recursive' && !isUncontrolled) {
+			const intermediates = Array.from(intermediateKeys.current);
+
+			intermediateKeys.current = new Set(
+				intermediates.filter((key) => {
+					const keyMap = layoutKeys.current.get(key) as LayoutInfo;
+
+					const children = [...keyMap.children];
+
+					const unselected = children.some(
+						(key) => !selectedKeys.has(key)
+					);
+
+					if (unselected) {
+						if (
+							children.some(
+								(key) =>
+									selectedKeys.has(key) ||
+									intermediateKeys.current.has(key)
+							)
+						) {
+							return true;
+						} else {
+							return false;
+						}
+					} else {
+						return false;
+					}
+				})
+			);
+		}
+	}, [selectedKeys]);
 
 	/**
 	 * The method creates the mirror of the tree in a hashmap structure with a
