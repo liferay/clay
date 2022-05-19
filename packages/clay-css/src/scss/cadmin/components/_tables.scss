@@ -28,124 +28,7 @@ caption {
 }
 
 .table {
-	border-spacing: 0;
-	color: $cadmin-table-color;
-	font-size: $cadmin-table-font-size;
-	margin-bottom: $cadmin-table-margin-bottom;
-	width: 100%;
-
-	thead {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($cadmin-c-table-thead);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: $cadmin-table-head-bg;
-			border-bottom: $cadmin-table-head-border-bottom-width solid
-				$cadmin-table-border-color;
-			border-top-width: $cadmin-table-head-border-top-width;
-			vertical-align: bottom;
-		}
-
-		th a {
-			@include clay-link($cadmin-table-head-link);
-		}
-	}
-
-	th {
-		background-clip: padding-box;
-		border-top: $cadmin-table-border-width solid $cadmin-table-border-color;
-		color: $cadmin-table-head-color;
-		font-size: $cadmin-table-head-font-size;
-		font-weight: $cadmin-table-head-font-weight;
-		height: $cadmin-table-head-height;
-		padding: $cadmin-table-cell-padding;
-		position: relative;
-		vertical-align: top;
-	}
-
-	td {
-		background-clip: padding-box;
-		border-bottom-width: $cadmin-table-data-border-bottom-width;
-		border-left-width: $cadmin-table-data-border-left-width;
-		border-right-width: $cadmin-table-data-border-right-width;
-		border-top-width: $cadmin-table-data-border-top-width;
-
-		border-color: $cadmin-table-data-border-color;
-		border-style: $cadmin-table-data-border-style;
-		padding: $cadmin-table-cell-padding;
-		position: relative;
-		vertical-align: $cadmin-table-data-vertical-align;
-	}
-
-	td:first-child,
-	th:first-child,
-	.table-cell-start {
-		padding-left: $cadmin-table-cell-gutters;
-	}
-
-	td:last-child,
-	th:last-child,
-	.table-cell-end {
-		padding-right: $cadmin-table-cell-gutters;
-	}
-
-	tbody {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($cadmin-c-table-tbody);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: map-get($cadmin-c-table-tbody, background-color);
-		}
-	}
-
-	tbody + tbody {
-		border-top: (2 * $cadmin-table-border-width) solid
-			$cadmin-table-border-color;
-	}
-
-	tfoot {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($cadmin-c-table-tfoot);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: map-get($cadmin-c-table-tfoot, background-color);
-		}
-	}
-
-	caption {
-		@include clay-css($cadmin-c-table-caption);
-	}
-
-	.autofit-col {
-		justify-content: center;
-		padding-left: $cadmin-table-cell-padding;
-		padding-right: $cadmin-table-cell-padding;
-
-		&:first-child {
-			padding-left: 0;
-		}
-
-		&:last-child {
-			padding-right: 0;
-		}
-	}
-
-	.custom-control,
-	.form-check {
-		margin-bottom: 0;
-	}
+	@include clay-table-variant($cadmin-c-table);
 }
 
 // Table Caption
@@ -157,37 +40,13 @@ caption {
 // Table Sm
 
 .table-sm {
-	th,
-	td {
-		padding: $cadmin-table-cell-padding-sm;
-	}
+	@include clay-table-variant($cadmin-c-table-sm);
 }
 
 // Table Bordered
 
 .table-bordered {
-	border: $cadmin-table-border-width solid $cadmin-table-border-color;
-
-	thead {
-		td,
-		th {
-			border-bottom-width: 2 * $cadmin-table-border-width;
-
-			@if (
-				$cadmin-table-head-border-top-width ==
-					0 and
-					$cadmin-table-head-border-top-width
-			) {
-				border-top-width: $cadmin-table-border-width;
-			}
-		}
-	}
-
-	td,
-	th {
-		border: $cadmin-table-border-width solid $cadmin-table-border-color;
-		border-width: $cadmin-table-bordered-border-width;
-	}
+	@include clay-table-variant($cadmin-c-table-bordered);
 }
 
 .table-borderless {
@@ -213,16 +72,7 @@ caption {
 // Table Hover
 
 .table-hover {
-	tbody tr {
-		&:hover {
-			&,
-			td,
-			th {
-				color: $cadmin-table-hover-color;
-				background-color: $cadmin-table-hover-bg;
-			}
-		}
-	}
+	@include clay-table-variant($cadmin-c-table-hover);
 }
 
 // Table Row Backgrounds
@@ -233,40 +83,6 @@ caption {
 		theme-color-level($cadmin-color, $cadmin-table-bg-level),
 		theme-color-level($cadmin-color, $cadmin-table-border-level)
 	);
-}
-
-// Table Active
-
-@include table-row-variant(active, $cadmin-table-active-bg);
-
-// Table Disabled
-
-.table-disabled {
-	color: $cadmin-table-disabled-color;
-
-	> td,
-	> th {
-		background-color: $cadmin-table-disabled-bg;
-		cursor: $cadmin-table-disabled-cursor;
-
-		a {
-			color: $cadmin-table-disabled-color;
-			pointer-events: $cadmin-table-disabled-pointer-events;
-		}
-	}
-
-	.table-title,
-	.table-list-title {
-		color: $cadmin-table-disabled-color;
-	}
-}
-
-.table-hover .table-disabled:hover {
-	&,
-	> td,
-	> th {
-		background-color: $cadmin-table-disabled-bg;
-	}
 }
 
 .table-striped {
@@ -373,181 +189,21 @@ caption {
 
 				overflow-x: auto;
 				width: 100%;
-
-				// Prevent double border on horizontal scroll due to use of `display: block;`
-
-				> .table-bordered {
-					border-width: 0;
-				}
 			}
 		}
 	}
 }
 
-// Table List Skin
+// Table List
 
 .table-list {
-	@include clay-css($cadmin-c-table-list);
-
-	thead:first-child,
-	tbody:first-child,
-	tfoot:first-child,
-	caption:first-child + thead {
-		tr:first-child {
-			th,
-			td {
-				border-top-width: 0;
-			}
-
-			th:first-child,
-			td:first-child,
-			.table-cell-start {
-				border-top-left-radius: clay-enable-rounded(
-					$cadmin-table-list-border-radius
-				);
-			}
-
-			th:last-child,
-			td:last-child,
-			.table-cell-start {
-				border-top-right-radius: clay-enable-rounded(
-					$cadmin-table-list-border-radius
-				);
-			}
-		}
-	}
-
-	caption {
-		@include clay-css($cadmin-c-table-list-caption);
-	}
-
-	thead,
-	tbody,
-	tfoot {
-		td,
-		th {
-			@include clay-css($cadmin-c-table-list-cell);
-		}
-
-		&:last-child {
-			tr:last-child {
-				th:first-child,
-				td:first-child,
-				.table-cell-start {
-					border-bottom-left-radius: clay-enable-rounded(
-						$cadmin-table-list-border-radius
-					);
-				}
-
-				th:last-child,
-				td:last-child,
-				.table-cell-end {
-					border-bottom-right-radius: clay-enable-rounded(
-						$cadmin-table-list-border-radius
-					);
-				}
-			}
-		}
-	}
-
-	thead {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($cadmin-c-table-list-thead);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: $cadmin-table-list-head-bg;
-			font-size: $cadmin-table-list-head-font-size;
-			font-weight: $cadmin-table-list-head-font-weight;
-			height: $cadmin-table-list-head-height;
-			vertical-align: $cadmin-table-list-head-vertical-alignment;
-		}
-
-		th a {
-			@include clay-link($cadmin-table-list-head-link);
-		}
-	}
-
-	tbody {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($cadmin-c-table-list-tbody);
-
-		td,
-		th {
-			// Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
-			background-color: map-get(
-				$cadmin-c-table-list-tbody,
-				background-color
-			);
-			vertical-align: middle;
-		}
-	}
-
-	tfoot {
-		// Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-
-		@include clay-css($cadmin-c-table-list-tfoot);
-
-		td,
-		th {
-			background-color: map-get(
-				$cadmin-c-table-list-tfoot,
-				background-color
-			);
-			vertical-align: middle;
-		}
-	}
-
-	.table-row-start {
-		.table-cell-start {
-			border-top-left-radius: clay-enable-rounded(
-				$cadmin-table-list-border-radius
-			);
-		}
-
-		.table-cell-end {
-			border-top-right-radius: clay-enable-rounded(
-				$cadmin-table-list-border-radius
-			);
-		}
-	}
-
-	.table-row-end {
-		.table-cell-start {
-			border-bottom-left-radius: clay-enable-rounded(
-				$cadmin-table-list-border-radius
-			);
-		}
-
-		.table-cell-end {
-			border-bottom-right-radius: clay-enable-rounded(
-				$cadmin-table-list-border-radius
-			);
-		}
-	}
+	@include clay-table-variant($cadmin-c-table-list);
 }
 
 // Table List Bordered
 
-.table-list.table-bordered {
-	thead,
-	tbody,
-	tfoot {
-		th,
-		td {
-			@include clay-css($cadmin-c-table-list-bordered-cell);
-		}
-	}
-
-	th:first-child,
-	td:first-child {
-		border-left-width: 0;
-	}
+.table.table-list.table-bordered {
+	@include clay-table-variant($cadmin-c-table-list-table-bordered);
 }
 
 // Table List Striped
@@ -564,69 +220,10 @@ caption {
 // Table List Hover
 
 .table-list.table-hover {
-	tbody tr {
-		&:hover {
-			&,
-			td,
-			th {
-				background-color: $cadmin-table-list-hover-bg;
-			}
-		}
-	}
-}
-
-// Table List Active
-
-.table-list.table-hover {
-	.table-active {
-		&:hover {
-			&,
-			> th,
-			> td {
-				background-color: $cadmin-table-list-active-bg;
-			}
-		}
-	}
-}
-
-.table-list .table-active {
-	&,
-	> th,
-	> td {
-		background-color: $cadmin-table-list-active-bg;
-	}
+	@include clay-table-variant($cadmin-c-table-list-table-hover);
 }
 
 // Table List Disabled
-
-.table-list .table-disabled {
-	background-color: $cadmin-table-list-disabled-bg;
-	color: $cadmin-table-list-disabled-color;
-
-	> td,
-	> th {
-		background-color: $cadmin-table-list-disabled-bg;
-		cursor: $cadmin-table-list-disabled-cursor;
-
-		a {
-			color: $cadmin-table-list-disabled-color;
-			pointer-events: $cadmin-table-list-disabled-pointer-events;
-		}
-	}
-
-	.table-title,
-	.table-list-title {
-		color: $cadmin-table-list-disabled-color;
-	}
-}
-
-.table-list.table-hover .table-disabled:hover {
-	&,
-	> td,
-	> th {
-		background-color: $cadmin-table-list-disabled-bg;
-	}
-}
 
 .table-list.table-striped {
 	tbody .table-disabled:nth-of-type(#{$cadmin-table-striped-order}) {
@@ -696,28 +293,6 @@ caption {
 	td,
 	th {
 		white-space: nowrap;
-	}
-}
-
-.table .table-divider {
-	td,
-	th {
-		background-color: $cadmin-table-divider-bg;
-		color: $cadmin-table-divider-color;
-		font-size: $cadmin-table-divider-font-size;
-		font-weight: $cadmin-table-divider-font-weight;
-		padding: $cadmin-table-divider-padding;
-		text-transform: $cadmin-table-divider-text-transform;
-	}
-}
-
-.table-list .table-divider {
-	td,
-	th {
-		padding-bottom: $cadmin-table-list-divider-padding-y;
-		padding-left: $cadmin-table-list-divider-padding-x;
-		padding-right: $cadmin-table-list-divider-padding-x;
-		padding-top: $cadmin-table-list-divider-padding-y;
 	}
 }
 
@@ -869,15 +444,6 @@ caption {
 	}
 }
 
-.table {
-	.quick-action-menu {
-		align-items: $cadmin-table-quick-action-menu-align-items;
-		background-color: $cadmin-table-quick-action-menu-bg;
-		padding-bottom: $cadmin-table-cell-padding;
-		padding-top: $cadmin-table-cell-padding;
-	}
-}
-
 .table-striped {
 	tbody tr:nth-of-type(#{$cadmin-table-striped-order}) {
 		.quick-action-menu {
@@ -892,39 +458,6 @@ caption {
 	}
 }
 
-.table-hover {
-	tbody tr {
-		&:hover {
-			.quick-action-menu {
-				background-color: $cadmin-table-quick-action-menu-hover-bg;
-			}
-		}
-	}
-
-	tbody .table-active {
-		&:hover {
-			.quick-action-menu {
-				background-color: $cadmin-table-quick-action-menu-active-bg;
-			}
-		}
-	}
-}
-
-.table-active {
-	.quick-action-menu {
-		background-color: $cadmin-table-quick-action-menu-active-bg;
-	}
-}
-
-.table-list {
-	.quick-action-menu {
-		align-items: $cadmin-table-list-quick-action-menu-align-items;
-		background-color: $cadmin-table-list-quick-action-menu-bg;
-		bottom: 0;
-		top: 0;
-	}
-}
-
 .table-list.table-striped {
 	tbody tr:nth-of-type(#{$cadmin-table-striped-order}) {
 		.quick-action-menu {
@@ -936,30 +469,6 @@ caption {
 		.quick-action-menu {
 			background-color: $cadmin-table-list-quick-action-menu-accent-active-bg;
 		}
-	}
-}
-
-.table-list.table-hover {
-	tbody tr {
-		&:hover {
-			.quick-action-menu {
-				background-color: $cadmin-table-list-quick-action-menu-hover-bg;
-			}
-		}
-	}
-
-	tbody .table-active {
-		&:hover {
-			.quick-action-menu {
-				background-color: $cadmin-table-list-quick-action-menu-active-bg;
-			}
-		}
-	}
-}
-
-.table-list .table-active {
-	.quick-action-menu {
-		background-color: $cadmin-table-list-quick-action-menu-active-bg;
 	}
 }
 
