@@ -405,6 +405,26 @@ $c-table-hover: map-deep-merge(
 	$c-table-hover
 );
 
+// .table-bordered
+
+$table-bordered-border-width: $table-border-width !default;
+
+$c-table-bordered: () !default;
+$c-table-bordered: map-deep-merge(
+	(
+		border: $table-border-width solid $table-border-color,
+		thead: (
+			table-cell: (
+				border-bottom-width: calc(2 * #{$table-border-width}),
+			),
+		),
+		table-cell: (
+			border: $table-border-width solid $table-border-color,
+		),
+	),
+	$c-table-bordered
+);
+
 // .table-sm
 
 $c-table-sm: () !default;
@@ -427,26 +447,6 @@ $table-dark-hover-bg: rgba($white, 0.075) !default;
 $table-dark-hover-color: $table-dark-color !default;
 
 $table-dark-accent-bg: rgba($white, 0.05) !default;
-
-// .table-bordered
-
-$table-bordered-border-width: $table-border-width !default;
-
-$c-table-bordered: () !default;
-$c-table-bordered: map-deep-merge(
-	(
-		border: $table-border-width solid $table-border-color,
-		thead: (
-			table-cell: (
-				border-bottom-width: calc(2 * #{$table-border-width}),
-			),
-		),
-		table-cell: (
-			border: $table-border-width solid $table-border-color,
-		),
-	),
-	$c-table-bordered
-);
 
 /// @deprecated as of v3.x with no replacement, this color modifier is too specific to support a variety of colors
 
@@ -574,24 +574,6 @@ $c-table-list-bordered-cell: map-merge(
 	$c-table-list-bordered-cell
 );
 
-// .table.table-list.table-bordered
-
-$c-table-list-table-bordered: () !default;
-$c-table-list-table-bordered: map-deep-merge(
-	(
-		thead: (
-			table-cell: (
-				border-bottom-width: 0,
-			),
-		),
-		table-cell: $c-table-list-bordered-cell,
-		table-column-start: (
-			border-left-width: 0,
-		),
-	),
-	$c-table-list-table-bordered
-);
-
 // .table-list caption
 
 $c-table-list-caption: () !default;
@@ -685,9 +667,9 @@ $c-table-list: map-merge(
 	(
 		border-collapse: separate,
 		border-color: $table-list-border-color,
+		border-radius: clay-enable-rounded($table-list-border-radius),
 		border-style: solid,
 		border-width: $table-list-border-y-width $table-list-border-x-width,
-		border-radius: clay-enable-rounded($table-list-border-radius),
 		color: $table-list-color,
 		font-size: $table-list-font-size,
 		margin-bottom: $table-list-margin-bottom,
@@ -698,6 +680,7 @@ $c-table-list: map-merge(
 				(
 					table-cell: (
 						background-color: $table-list-head-bg,
+						border-bottom-width: 0,
 						font-size: $table-list-head-font-size,
 						font-weight: $table-list-head-font-weight,
 						height: $table-list-head-height,
@@ -858,6 +841,24 @@ $c-table-list-table-hover: map-deep-merge(
 		),
 	),
 	$c-table-list-table-hover
+);
+
+// .table.table-list.table-bordered
+
+$c-table-list-table-bordered: () !default;
+$c-table-list-table-bordered: map-deep-merge(
+	(
+		thead: (
+			table-cell: (
+				border-bottom-width: 0,
+			),
+		),
+		table-cell: $c-table-list-bordered-cell,
+		table-column-start: (
+			border-left-width: 0,
+		),
+	),
+	$c-table-list-table-bordered
 );
 
 // Table Valign
