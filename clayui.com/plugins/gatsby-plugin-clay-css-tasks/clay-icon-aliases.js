@@ -614,6 +614,8 @@ const iconsData = {
 	"flag-empty":               '"banner", "report"',
 	"flag-full":                '"banner", "report"',
 	"folder":                   '"box", "container", "file"',
+	"folder-lock":              '"closed", "locked", "permissions", "private"',
+	"folder-lock-line":         '"closed", "locked", "permissions", "private"',
 	"font-family":              '"text", "editor", "style"',
 	"font-size":                '"text", "editor", "size", "style"',
 	"form-extensions":          '"form", "extensions"',

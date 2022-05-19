@@ -640,6 +640,14 @@
         "aliases": ["banner", "report"]
     },
     {
+        "name": "folder-lock-line",
+        "aliases": ["closed", "locked", "permissions", "private"]
+    },
+    {
+        "name": "folder-lock",
+        "aliases": ["closed", "locked", "permissions", "private"]
+    },
+    {
         "name": "folder",
         "aliases": ["box", "container", "file"]
     },
