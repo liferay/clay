@@ -32,6 +32,8 @@ $table-color: $body-color !default;
 $table-font-size: null !default;
 $table-margin-bottom: 0 !default;
 
+// .table-hover
+
 $table-hover-bg: #ececec !default;
 $table-hover-color: $table-color !default;
 
@@ -74,6 +76,8 @@ $table-head-color: $gray-700 !default;
 $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
+
+// table-cell: Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
 
 $c-table-thead: () !default;
 $c-table-thead: map-merge(
@@ -219,6 +223,220 @@ $table-action-link: map-deep-merge(
 	$table-action-link
 );
 
+// .table
+
+// thead, tbody, tfoot Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+// thead table-cell, tbody table-cell, tfoot table-cell: Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
+
+$c-table: () !default;
+$c-table: map-deep-merge(
+	(
+		border-spacing: 0,
+		color: $table-color,
+		font-size: $table-font-size,
+		margin-bottom: $table-margin-bottom,
+		width: 100%,
+		thead:
+			map-deep-merge(
+				$c-table-thead,
+				(
+					table-cell: (
+						background-color: $table-head-bg,
+						border-bottom: $table-head-border-bottom-width solid
+							$table-border-color,
+						border-top-width: $table-head-border-top-width,
+						vertical-align: bottom,
+					),
+					th: (
+						href: $table-head-link,
+					),
+				)
+			),
+		table-column-start: (
+			padding-left: $table-cell-gutters,
+		),
+		table-column-end: (
+			padding-right: $table-cell-gutters,
+		),
+		th: (
+			background-clip: padding-box,
+			border-top: $table-border-width solid $table-border-color,
+			color: $table-head-color,
+			font-size: $table-head-font-size,
+			font-weight: $table-head-font-weight,
+			height: $table-head-height,
+			padding: $table-cell-padding,
+			position: relative,
+			vertical-align: top,
+		),
+		td: (
+			background-clip: padding-box,
+			border-bottom-width: $table-data-border-bottom-width,
+			border-color: $table-data-border-color,
+			border-left-width: $table-data-border-left-width,
+			border-right-width: $table-data-border-right-width,
+			border-style: $table-data-border-style,
+			border-top-width: $table-data-border-top-width,
+			padding: $table-cell-padding,
+			position: relative,
+			vertical-align: $table-data-vertical-align,
+		),
+		tbody:
+			map-deep-merge(
+				$c-table-tbody,
+				(
+					table-cell: (
+						background-color:
+							map-get($c-table-tbody, background-color),
+					),
+					tbody: (
+						border-top: calc(2 * #{$table-border-width}) solid
+							$table-border-color,
+					),
+				)
+			),
+		tfoot:
+			map-deep-merge(
+				$c-table-tfoot,
+				(
+					table-cell: (
+						background-color:
+							map-get($c-table-tfoot, background-color),
+					),
+				)
+			),
+		caption: $c-table-caption,
+		table-divider: (
+			table-cell: (
+				background-color: $table-divider-bg,
+				color: $table-divider-color,
+				font-size: $table-divider-font-size,
+				font-weight: $table-divider-font-weight,
+				padding: $table-divider-padding,
+				text-transform: $table-divider-text-transform,
+			),
+		),
+		table-active: (
+			background-color: $table-active-bg,
+			table-cell: (
+				background-color: $table-active-bg,
+			),
+			quick-action-menu: (
+				background-color: $table-quick-action-menu-active-bg,
+			),
+		),
+		table-disabled: (
+			color: $table-disabled-color,
+			table-cell: (
+				background-color: $table-disabled-bg,
+				cursor: $table-disabled-cursor,
+				href: (
+					color: $table-disabled-color,
+					pointer-events: $table-disabled-pointer-events,
+				),
+			),
+			table-title: (
+				color: $table-disabled-color,
+			),
+			table-list-title: (
+				color: $table-disabled-color,
+			),
+		),
+		autofit-col: (
+			justify-content: center,
+			padding-left: $table-cell-padding,
+			padding-right: $table-cell-padding,
+			first-child: (
+				padding-left: 0,
+			),
+			last-child: (
+				padding-right: 0,
+			),
+		),
+		custom-control: (
+			margin-bottom: 0,
+		),
+		quick-action-menu: (
+			align-items: $table-quick-action-menu-align-items,
+			background-color: $table-quick-action-menu-bg,
+			padding-bottom: $table-cell-padding,
+			padding-top: $table-cell-padding,
+		),
+	),
+	$c-table
+);
+
+// .table-hover
+
+$c-table-hover: () !default;
+$c-table-hover: map-deep-merge(
+	(
+		tbody: (
+			tr: (
+				hover: (
+					background-color: $table-hover-bg,
+					color: $table-hover-color,
+					table-cell: (
+						background-color: $table-hover-bg,
+						color: $table-hover-color,
+					),
+					quick-action-menu: (
+						background-color: $table-quick-action-menu-hover-bg,
+					),
+				),
+			),
+		),
+		table-active: (
+			hover: (
+				quick-action-menu: (
+					background-color: $table-quick-action-menu-active-bg,
+				),
+			),
+		),
+		table-disabled: (
+			hover: (
+				background-color: $table-disabled-bg,
+				table-cell: (
+					background-color: $table-disabled-bg,
+				),
+			),
+		),
+	),
+	$c-table-hover
+);
+
+// .table-bordered
+
+$table-bordered-border-width: $table-border-width !default;
+
+$c-table-bordered: () !default;
+$c-table-bordered: map-deep-merge(
+	(
+		border: $table-border-width solid $table-border-color,
+		thead: (
+			table-cell: (
+				border-bottom-width: calc(2 * #{$table-border-width}),
+			),
+		),
+		table-cell: (
+			border: $table-border-width solid $table-border-color,
+		),
+	),
+	$c-table-bordered
+);
+
+// .table-sm
+
+$c-table-sm: () !default;
+$c-table-sm: map-deep-merge(
+	(
+		table-cell: (
+			padding: $table-cell-padding-sm,
+		),
+	),
+	$c-table-sm
+);
+
 // Table Dark Variant
 
 $table-dark-bg: $gray-800 !default;
@@ -229,10 +447,6 @@ $table-dark-hover-bg: rgba($white, 0.075) !default;
 $table-dark-hover-color: $table-dark-color !default;
 
 $table-dark-accent-bg: rgba($white, 0.05) !default;
-
-// Table Bordered
-
-$table-bordered-border-width: $table-border-width !default;
 
 /// @deprecated as of v3.x with no replacement, this color modifier is too specific to support a variety of colors
 
@@ -256,62 +470,6 @@ $table-list-color: null !default;
 $table-list-font-size: null !default;
 $table-list-margin-bottom: $table-list-border-y-width !default;
 $table-list-margin-top: null !default;
-
-$c-table-list: () !default;
-$c-table-list: map-merge(
-	(
-		border-collapse: separate,
-		border-color: $table-list-border-color,
-		border-style: solid,
-		border-width: $table-list-border-y-width $table-list-border-x-width,
-		border-radius: clay-enable-rounded($table-list-border-radius),
-		color: $table-list-color,
-		font-size: $table-list-font-size,
-		margin-bottom: $table-list-margin-bottom,
-		margin-top: $table-list-margin-top,
-		table-row-start: (
-			table-cell-start: (
-				border-top-left-radius:
-					clay-enable-rounded(
-						clay-border-radius-inner(
-							$table-list-border-radius,
-							$table-list-border-y-width
-						)
-					),
-			),
-			table-cell-end: (
-				border-top-right-radius:
-					clay-enable-rounded(
-						clay-border-radius-inner(
-							$table-list-border-radius,
-							$table-list-border-y-width
-						)
-					),
-			),
-		),
-		table-row-end: (
-			table-cell-start: (
-				border-bottom-left-radius:
-					clay-enable-rounded(
-						clay-border-radius-inner(
-							$table-list-border-radius,
-							$table-list-border-y-width
-						)
-					),
-			),
-			table-cell-end: (
-				border-bottom-right-radius:
-					clay-enable-rounded(
-						clay-border-radius-inner(
-							$table-list-border-radius,
-							$table-list-border-y-width
-						)
-					),
-			),
-		),
-	),
-	$c-table-list
-);
 
 // .table-list.table-striped
 
@@ -406,7 +564,7 @@ $c-table-list-tfoot: map-merge(
 	$c-table-list-tfoot
 );
 
-// .table-list.table-bordered {thead,tbody,tfoot} {th,td}
+// .table.table-list.table-bordered th, .table.table-list.table-bordered td
 
 $c-table-list-bordered-cell: () !default;
 $c-table-list-bordered-cell: map-merge(
@@ -497,6 +655,210 @@ $table-list-action-link: map-deep-merge(
 		),
 	),
 	$table-list-action-link
+);
+
+// .table-list
+
+// thead, tbody, tfoot: Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
+// thead table-cell, tbody table-cell, tfoot table-cell: Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
+
+$c-table-list: () !default;
+$c-table-list: map-merge(
+	(
+		border-collapse: separate,
+		border-color: $table-list-border-color,
+		border-radius: clay-enable-rounded($table-list-border-radius),
+		border-style: solid,
+		border-width: $table-list-border-y-width $table-list-border-x-width,
+		color: $table-list-color,
+		font-size: $table-list-font-size,
+		margin-bottom: $table-list-margin-bottom,
+		margin-top: $table-list-margin-top,
+		thead:
+			map-deep-merge(
+				$c-table-list-thead,
+				(
+					table-cell: (
+						background-color: $table-list-head-bg,
+						border-bottom-width: 0,
+						font-size: $table-list-head-font-size,
+						font-weight: $table-list-head-font-weight,
+						height: $table-list-head-height,
+						vertical-align: $table-list-head-vertical-alignment,
+						href: $table-list-head-link,
+					),
+				)
+			),
+		table-cell: $c-table-list-cell,
+		tbody:
+			map-deep-merge(
+				$c-table-list-tbody,
+				(
+					table-cell: (
+						background-color:
+							map-get($c-table-list-tbody, background-color),
+						vertical-align: middle,
+					),
+				)
+			),
+		tfoot:
+			map-deep-merge(
+				$c-table-list-tfoot,
+				(
+					table-cell: (
+						background-color:
+							map-get($c-table-list-tfoot, background-color),
+						vertical-align: middle,
+					),
+				)
+			),
+		caption: $c-table-list-caption,
+		table-divider: (
+			table-cell: (
+				padding-bottom: $table-list-divider-padding-y,
+				padding-left: $table-list-divider-padding-x,
+				padding-right: $table-list-divider-padding-x,
+				padding-top: $table-list-divider-padding-y,
+			),
+		),
+		table-active: (
+			background-color: $table-list-active-bg,
+			table-cell: (
+				background-color: $table-list-active-bg,
+			),
+			quick-action-menu: (
+				background-color: $table-list-quick-action-menu-active-bg,
+			),
+		),
+		table-disabled: (
+			background-color: $table-list-disabled-bg,
+			color: $table-list-disabled-color,
+			table-cell: (
+				background-color: $table-list-disabled-bg,
+				color: $table-list-disabled-color,
+				href: (
+					color: $table-list-disabled-color,
+					pointer-events: $table-list-disabled-pointer-events,
+				),
+			),
+			table-title: (
+				color: $table-list-disabled-color,
+			),
+			table-list-title: (
+				color: $table-list-disabled-color,
+			),
+		),
+		table-row-start: (
+			table-cell: (
+				border-top-width: 0,
+			),
+			table-cell-start: (
+				border-top-left-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+			table-cell-end: (
+				border-top-right-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+		),
+		table-row-end: (
+			table-cell-start: (
+				border-bottom-left-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+			table-cell-end: (
+				border-bottom-right-radius:
+					clay-enable-rounded(
+						clay-border-radius-inner(
+							$table-list-border-radius,
+							$table-list-border-y-width
+						)
+					),
+			),
+		),
+		quick-action-menu: (
+			align-items: $table-list-quick-action-menu-align-items,
+			background-color: $table-list-quick-action-menu-bg,
+			bottom: 0,
+			top: 0,
+		),
+	),
+	$c-table-list
+);
+
+// .table-list.table-hover
+
+$c-table-list-table-hover: () !default;
+$c-table-list-table-hover: map-deep-merge(
+	(
+		tbody: (
+			tr: (
+				hover: (
+					background-color: $table-list-hover-bg,
+					table-cell: (
+						background-color: $table-list-hover-bg,
+					),
+					quick-action-menu: (
+						background-color: $table-list-quick-action-menu-hover-bg,
+					),
+				),
+			),
+		),
+		table-active: (
+			hover: (
+				background-color: $table-list-active-bg,
+				table-cell: (
+					background-color: $table-list-active-bg,
+				),
+				quick-action-menu: (
+					background-color: $table-list-quick-action-menu-hover-bg,
+				),
+			),
+		),
+		table-disabled: (
+			background-color: $table-list-disabled-bg,
+			hover: (
+				background-color: $table-list-disabled-bg,
+				table-cell: (
+					background-color: $table-list-disabled-bg,
+				),
+			),
+		),
+	),
+	$c-table-list-table-hover
+);
+
+// .table.table-list.table-bordered
+
+$c-table-list-table-bordered: () !default;
+$c-table-list-table-bordered: map-deep-merge(
+	(
+		thead: (
+			table-cell: (
+				border-bottom-width: 0,
+			),
+		),
+		table-cell: $c-table-list-bordered-cell,
+		table-column-start: (
+			border-left-width: 0,
+		),
+	),
+	$c-table-list-table-bordered
 );
 
 // Table Valign
