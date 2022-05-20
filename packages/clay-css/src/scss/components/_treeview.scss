@@ -162,22 +162,6 @@
 		);
 	}
 
-	&.hover,
-	&:hover,
-	&.focus,
-	&:focus {
-		.component-action {
-			display: flex;
-		}
-	}
-
-	&:disabled,
-	&.disabled {
-		.component-action {
-			display: none;
-		}
-	}
-
 	&.show,
 	&[aria-expanded='true'] {
 		.component-expander {
