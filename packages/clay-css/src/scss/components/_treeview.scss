@@ -99,6 +99,34 @@
 			);
 		}
 	}
+
+	.quick-action-item {
+		@include clay-css(map-get($treeview, quick-action-item));
+	}
+
+	&.show-quick-actions-on-hover {
+		.treeview-link {
+			&:not(:hover):not(:focus):not(.focus) {
+				.quick-action-item {
+					display: none;
+				}
+			}
+
+			&:disabled,
+			&.disabled {
+				.quick-action-item {
+					display: none;
+				}
+			}
+
+			.quick-action-item {
+				&:disabled,
+				&.disabled {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .treeview-group {
