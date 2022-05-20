@@ -71,6 +71,7 @@ export const TreeViewItem = React.forwardRef<
 		nestedKey,
 		onLoadMore,
 		onRenameItem,
+		onSelect,
 		open,
 		remove,
 		replace,
@@ -209,6 +210,10 @@ export const TreeViewItem = React.forwardRef<
 
 						if (selectionMode === 'single') {
 							selection.toggleSelection(item.key);
+
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
+							}
 						}
 
 						if (group) {
@@ -233,11 +238,32 @@ export const TreeViewItem = React.forwardRef<
 					}}
 					onFocus={() => actions && setFocus(true)}
 					onKeyDown={(event) => {
-						event.preventDefault();
-
 						if (itemStackProps.disabled || nodeProps.disabled) {
 							return;
 						}
+
+						if (hasItemStack && itemStackProps.onKeyDown) {
+							itemStackProps.onKeyDown(event);
+						}
+
+						if (nodeProps.onKeyDown) {
+							(
+								nodeProps.onKeyDown as unknown as (
+									event: React.KeyboardEvent<HTMLDivElement>
+								) => void
+							)(event);
+						}
+
+						if (event.defaultPrevented) {
+							return;
+						}
+
+						// We call `preventDefault` after checking if it was ignored
+						// because the behavior is different when the developer sets
+						// `onKeyDown` it can ignore the default behavior of the browser
+						// and the default behavior of the TreeView when this is not done
+						// by default we ignore the default browser behavior by default.
+						event.preventDefault();
 
 						const {key} = event;
 
@@ -332,6 +358,10 @@ export const TreeViewItem = React.forwardRef<
 
 						if (key === Keys.Spacebar) {
 							selection.toggleSelection(item.key);
+
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
+							}
 						}
 					}}
 					ref={ref}
@@ -450,6 +480,7 @@ export function TreeViewItemStack({
 		expanderClassName,
 		expanderIcons,
 		nestedKey,
+		onSelect,
 		open,
 		selection,
 		toggle,
@@ -540,6 +571,10 @@ export function TreeViewItemStack({
 							}
 
 							selection.toggleSelection(item.key);
+
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
+							}
 
 							if (expandOnCheck) {
 								open(item.key);

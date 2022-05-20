@@ -22,6 +22,7 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	expanderIcons?: Icons;
 	nestedKey?: string;
 	onLoadMore?: (item: any) => Promise<unknown>;
+	onSelect?: (item: T) => void;
 	onRenameItem?: (item: T) => Promise<any>;
 	rootRef: React.RefObject<HTMLUListElement>;
 	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
