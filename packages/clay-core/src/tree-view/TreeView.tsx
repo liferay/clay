@@ -17,7 +17,10 @@ import {Icons, TreeViewContext} from './context';
 import {ITreeProps, useTree} from './useTree';
 
 interface ITreeViewProps<T>
-	extends Omit<React.HTMLAttributes<HTMLUListElement>, 'children'>,
+	extends Omit<
+			React.HTMLAttributes<HTMLUListElement>,
+			'children' | 'onSelect'
+		>,
 		ITreeProps<T>,
 		ICollectionProps<T> {
 	/**
@@ -65,6 +68,13 @@ interface ITreeViewProps<T>
 	onLoadMore?: (item: T) => Promise<unknown>;
 
 	/**
+	 * Callback called whenever an item is selected. Similar to the `onSelectionChange`
+	 * callback but instead of passing the selected keys it is called with the current
+	 * item being selected.
+	 */
+	onSelect?: (item: T) => void;
+
+	/**
 	 * Calback is called when the user presses the R or F2 hotkey.
 	 */
 	onRenameItem?: (item: T) => Promise<T>;
@@ -109,6 +119,7 @@ export function TreeView<T>({
 	onItemsChange,
 	onLoadMore,
 	onRenameItem,
+	onSelect,
 	onSelectionChange,
 	selectedKeys,
 	selectionHydrationMode = 'hydrate-first',
@@ -149,6 +160,7 @@ export function TreeView<T>({
 		nestedKey,
 		onLoadMore,
 		onRenameItem,
+		onSelect,
 		rootRef,
 		selectionMode,
 		showExpanderOnHover,

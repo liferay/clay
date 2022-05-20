@@ -71,6 +71,7 @@ export const TreeViewItem = React.forwardRef<
 		nestedKey,
 		onLoadMore,
 		onRenameItem,
+		onSelect,
 		open,
 		remove,
 		replace,
@@ -209,6 +210,10 @@ export const TreeViewItem = React.forwardRef<
 
 						if (selectionMode === 'single') {
 							selection.toggleSelection(item.key);
+
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
+							}
 						}
 
 						if (group) {
@@ -353,6 +358,10 @@ export const TreeViewItem = React.forwardRef<
 
 						if (key === Keys.Spacebar) {
 							selection.toggleSelection(item.key);
+
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
+							}
 						}
 					}}
 					ref={ref}
@@ -471,6 +480,7 @@ export function TreeViewItemStack({
 		expanderClassName,
 		expanderIcons,
 		nestedKey,
+		onSelect,
 		open,
 		selection,
 		toggle,
@@ -561,6 +571,10 @@ export function TreeViewItemStack({
 							}
 
 							selection.toggleSelection(item.key);
+
+							if (onSelect) {
+								onSelect(removeItemInternalProps(item));
+							}
 
 							if (expandOnCheck) {
 								open(item.key);
