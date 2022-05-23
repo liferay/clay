@@ -3,7 +3,7 @@
 exports[`TreeView basic rendering render dynamic content 1`] = `
 <div>
   <ul
-    class="treeview treeview-light show-component-expander-on-hover"
+    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
   >
     <li
@@ -78,7 +78,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
 exports[`TreeView basic rendering render nested dynamic content 1`] = `
 <div>
   <ul
-    class="treeview treeview-light show-component-expander-on-hover"
+    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
   >
     <li
@@ -153,7 +153,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
 exports[`TreeView basic rendering render static content 1`] = `
 <div>
   <ul
-    class="treeview treeview-light show-component-expander-on-hover"
+    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
   >
     <li
@@ -228,7 +228,7 @@ exports[`TreeView basic rendering render static content 1`] = `
 exports[`TreeView basic rendering render with actions 1`] = `
 <div>
   <ul
-    class="treeview treeview-light show-component-expander-on-hover"
+    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
   >
     <li
@@ -262,7 +262,7 @@ exports[`TreeView basic rendering render with actions 1`] = `
               class="autofit-col"
             >
               <button
-                class="component-action btn btn-monospaced"
+                class="component-action quick-action-item btn btn-monospaced"
                 tabindex="-1"
                 type="button"
               >
@@ -288,7 +288,7 @@ exports[`TreeView basic rendering render with actions 1`] = `
                 class="dropdown"
               >
                 <button
-                  class="dropdown-toggle component-action btn btn-monospaced"
+                  class="dropdown-toggle component-action quick-action-item btn btn-monospaced"
                   style=""
                   tabindex="-1"
                   type="button"
@@ -320,7 +320,7 @@ exports[`TreeView basic rendering render with actions 1`] = `
 exports[`TreeView basic rendering render with checkbox 1`] = `
 <div>
   <ul
-    class="treeview treeview-light show-component-expander-on-hover"
+    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
   >
     <li
@@ -412,7 +412,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
 exports[`TreeView basic rendering render with text 1`] = `
 <div>
   <ul
-    class="treeview treeview-light show-component-expander-on-hover"
+    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
   >
     <li
