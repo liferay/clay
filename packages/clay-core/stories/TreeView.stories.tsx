@@ -4,6 +4,7 @@
  */
 
 import ClayAlert from '@clayui/alert';
+import Badge from '@clayui/badge';
 import Button from '@clayui/button';
 import {ClayDropDownWithItems as DropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox as Checkbox, ClayInput as Input} from '@clayui/form';
@@ -1195,5 +1196,279 @@ export const PerformanceTest = () => {
 				)}
 			</TreeView>
 		</>
+	);
+};
+
+export const DemoCategoriesSingle = () => {
+	return (
+		<TreeView
+			defaultItems={[
+				{
+					name: 'Animals',
+					vocabulary: true,
+				},
+				{
+					name: 'Vegetables',
+					vocabulary: true,
+				},
+				{
+					children: [
+						{
+							children: [
+								{
+									name: 'Metals',
+								},
+								{
+									name: 'Semimetals',
+								},
+								{
+									name: 'Nonmetals',
+								},
+							],
+							name: 'Native Elements',
+						},
+						{
+							name: 'Sulfides',
+						},
+						{
+							name: 'Silicates',
+						},
+					],
+					name: 'Minerals',
+					vocabulary: true,
+				},
+				{
+					name: 'Plants',
+					vocabulary: true,
+				},
+			]}
+			showExpanderOnHover={false}
+		>
+			{(item) => (
+				<TreeView.Item>
+					<TreeView.ItemStack>
+						<Icon
+							symbol={
+								item.vocabulary ? 'vocabulary' : 'categories'
+							}
+						/>
+						{item.name}
+					</TreeView.ItemStack>
+					<TreeView.Group items={item.children}>
+						{(item) => (
+							<TreeView.Item>
+								<Icon symbol="categories" />
+								{item.name}
+							</TreeView.Item>
+						)}
+					</TreeView.Group>
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
+};
+
+export const DemoCategoriesMultiple = () => {
+	// Just to avoid TypeScript error with required props
+	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+	OptionalCheckbox.displayName = 'ClayCheckbox';
+
+	return (
+		<TreeView
+			defaultItems={[
+				{
+					children: [
+						{
+							id: 16,
+							name: 'Dog',
+						},
+						{
+							id: 17,
+							name: 'Cat',
+						},
+					],
+					id: 1,
+					name: 'Animals',
+					vocabulary: true,
+				},
+				{
+					children: [
+						{
+							id: 14,
+							name: 'Arrowroot',
+						},
+						{
+							id: 15,
+							name: 'Arugula',
+						},
+					],
+					id: 2,
+					name: 'Vegetables',
+					vocabulary: true,
+				},
+				{
+					children: [
+						{
+							children: [
+								{
+									id: 8,
+									name: 'Metals',
+								},
+								{
+									id: 9,
+									name: 'Semimetals',
+								},
+								{
+									id: 10,
+									name: 'Nonmetals',
+								},
+							],
+							id: 5,
+							name: 'Native Elements',
+						},
+						{
+							id: 6,
+							name: 'Sulfides',
+						},
+						{
+							id: 7,
+							name: 'Silicates',
+						},
+					],
+					id: 3,
+					name: 'Minerals',
+					vocabulary: true,
+				},
+				{
+					children: [
+						{
+							id: 11,
+							name: 'Bamboo',
+						},
+						{
+							id: 12,
+							name: 'Cactus',
+						},
+						{
+							id: 13,
+							name: 'Eucalyptus',
+						},
+					],
+					id: 4,
+					name: 'Plants',
+					vocabulary: true,
+				},
+			]}
+			expandDoubleClick
+			selectionMode="multiple-recursive"
+			showExpanderOnHover={false}
+		>
+			{(item, selection) => (
+				<TreeView.Item>
+					<TreeView.ItemStack>
+						{!item.vocabulary && <OptionalCheckbox />}
+						<Icon
+							symbol={
+								item.vocabulary ? 'vocabulary' : 'categories'
+							}
+						/>
+						{item.name}
+						{item.vocabulary && (
+							<div className="pl-4">
+								<Button
+									className="quick-action-item"
+									displayType="secondary"
+									onClick={(event) => {
+										event.stopPropagation();
+
+										selection.toggle(item.id);
+									}}
+									small
+								>
+									{selection.has(item.id)
+										? 'Uncheck child nodes'
+										: 'Check child nodes'}
+								</Button>
+							</div>
+						)}
+					</TreeView.ItemStack>
+					<TreeView.Group items={item.children}>
+						{(item) => (
+							<TreeView.Item>
+								<OptionalCheckbox />
+								<Icon symbol="categories" />
+								{item.name}
+							</TreeView.Item>
+						)}
+					</TreeView.Group>
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
+};
+
+export const DemoDocumentsMultiple = () => {
+	// Just to avoid TypeScript error with required props
+	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+	OptionalCheckbox.displayName = 'ClayCheckbox';
+
+	const MAPPING_ICON = {
+		article: 'web-content',
+		documents: 'documents-and-media',
+	};
+
+	return (
+		<TreeView
+			defaultItems={[
+				{
+					children: [
+						{id: 2, name: 'Basic Web Content'},
+						{id: 3, name: 'New'},
+						{id: 4, name: 'Article'},
+					],
+					id: 1,
+					name: 'Web Content Article',
+					type: 'article',
+				},
+				{
+					children: [
+						{id: 5, name: 'Basic Documents'},
+						{name: 'External Video Shortcut'},
+					],
+					id: 6,
+					name: 'Documents',
+					type: 'documents',
+				},
+			]}
+			defaultSelectedKeys={new Set([1, 2, 3, 4, 5])}
+			expandDoubleClick
+			selectionMode="multiple-recursive"
+			showExpanderOnHover={false}
+		>
+			{(item) => (
+				<TreeView.Item>
+					<TreeView.ItemStack>
+						<OptionalCheckbox />
+						{MAPPING_ICON[item.type] && (
+							<Icon symbol={MAPPING_ICON[item.type]} />
+						)}
+						{item.name}
+						<div className="pl-2">
+							<Badge label={item.children.length} />
+						</div>
+					</TreeView.ItemStack>
+					<TreeView.Group items={item.children}>
+						{(item) => (
+							<TreeView.Item>
+								<OptionalCheckbox />
+								{item.name}
+							</TreeView.Item>
+						)}
+					</TreeView.Group>
+				</TreeView.Item>
+			)}
+		</TreeView>
 	);
 };
