@@ -171,10 +171,14 @@ export function TreeView<T>({
 		<FocusScope>
 			<ul
 				{...otherProps}
-				className={classNames('treeview', className, {
-					[`treeview-${displayType}`]: displayType,
-					'show-component-expander-on-hover': showExpanderOnHover,
-				})}
+				className={classNames(
+					'treeview show-quick-actions-on-hover',
+					className,
+					{
+						[`treeview-${displayType}`]: displayType,
+						'show-component-expander-on-hover': showExpanderOnHover,
+					}
+				)}
 				ref={rootRef}
 				role="tree"
 			>
