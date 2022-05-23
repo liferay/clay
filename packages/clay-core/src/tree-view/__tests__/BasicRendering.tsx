@@ -8,7 +8,7 @@ import {ClayCheckbox as Checkbox} from '@clayui/form';
 import {cleanup, render} from '@testing-library/react';
 import React from 'react';
 
-import {Button, Icon, Provider, TreeView} from '../..';
+import {Button, Icon, Provider, Text, TreeView} from '../..';
 
 const spritemap = 'icons.svg';
 
@@ -262,6 +262,33 @@ describe('TreeView basic rendering', () => {
 							<TreeView.Item>
 								<OptionalCheckbox />
 								Item
+							</TreeView.Item>
+						</TreeView.Group>
+					</TreeView.Item>
+				</TreeView>
+			</Provider>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('render with text', () => {
+		const {container} = render(
+			<Provider spritemap={spritemap}>
+				<TreeView>
+					<TreeView.Item>
+						<TreeView.ItemStack>
+							<OptionalCheckbox />
+							<Text size={3} truncate>
+								Root
+							</Text>
+						</TreeView.ItemStack>
+						<TreeView.Group>
+							<TreeView.Item>
+								<OptionalCheckbox />
+								<Text size={3} truncate>
+									Text
+								</Text>
 							</TreeView.Item>
 						</TreeView.Group>
 					</TreeView.Item>
