@@ -543,7 +543,12 @@ export function TreeViewItemStack({
 					return null;
 				}
 
-				if (typeof child === 'string' || typeof child === 'number') {
+				if (
+					typeof child === 'string' ||
+					typeof child === 'number' ||
+					// @ts-ignore
+					child?.type.displayName === 'Text'
+				) {
 					content = <div className="component-text">{child}</div>;
 
 					// @ts-ignore
