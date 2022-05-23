@@ -117,22 +117,24 @@ $cadmin-treeview: map-merge(
 			display: inline-block,
 			font-size: 16px,
 			height: auto,
-			margin: 0.28em 4px 0,
+			margin: 4px,
 			width: auto,
 			lexicon-icon: (
 				display: block,
 			),
 		),
 		component-text: (
-			padding-bottom: 1.5px,
+			line-height: 24px,
 			padding-left: 4px,
-			padding-top: 1.5px,
 			user-select: auto,
 		),
 		quick-action-item: (
 			margin: 0 2px,
 			min-height: 0,
 			min-width: 0,
+		),
+		autofit-row: (
+			align-items: center,
 		),
 	),
 	$cadmin-treeview

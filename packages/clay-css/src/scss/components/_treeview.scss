@@ -37,6 +37,23 @@
 
 	.component-text {
 		@include clay-css(map-get($treeview, component-text));
+
+		> .autofit-row {
+			@include clay-css(
+				map-deep-get($treeview, component-text, autofit-row)
+			);
+
+			> .autofit-col {
+				@include clay-css(
+					map-deep-get(
+						$treeview,
+						component-text,
+						autofit-row,
+						autofit-col
+					)
+				);
+			}
+		}
 	}
 
 	&.show-component-expander-on-hover {
@@ -102,6 +119,10 @@
 
 	.quick-action-item {
 		@include clay-css(map-get($treeview, quick-action-item));
+	}
+
+	.autofit-row {
+		@include clay-css(map-get($treeview, autofit-row));
 	}
 
 	&.show-quick-actions-on-hover {
@@ -172,6 +193,17 @@
 			.lexicon-icon:not(.component-expanded-d-none) {
 				display: inline-block;
 			}
+		}
+	}
+
+	> .autofit-row,
+	.c-inner > .autofit-row {
+		@include clay-css(map-deep-get($treeview, treeview-link, autofit-row));
+
+		> .autofit-col {
+			@include clay-css(
+				map-deep-get($treeview, treeview-link, autofit-row, autofit-col)
+			);
 		}
 	}
 }
