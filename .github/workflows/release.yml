@@ -5,6 +5,7 @@ on:
 
 jobs:
   test:
+    name: Unit tests and lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,12 +30,9 @@ jobs:
             BROWSERSLIST_DISABLE_CACHE: 1
             CI: true
         run: yarn test
-      - name: UI Tests
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: yarn chromatic
 
   uiTest:
+    name: Visual Testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -46,12 +44,15 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn install
+      - name: Build
+        run: yarn build
       - name: UI Tests
         env:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         run: yarn chromatic
 
   version:
+    name: Cut version
     needs: [test, uiTest]
     runs-on: ubuntu-latest
     outputs:
@@ -83,6 +84,7 @@ jobs:
           echo ${{ steps.sha.outputs.SHA }}
 
   publish:
+    name: Publish
     needs: version
     runs-on: ubuntu-latest
     env:
