@@ -34,8 +34,25 @@ jobs:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         run: yarn chromatic
 
+  uiTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install Dependencies
+        run: yarn install
+      - name: UI Tests
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        run: yarn chromatic
+
   version:
-    needs: test
+    needs: [test, uiTest]
     runs-on: ubuntu-latest
     outputs:
       new_sha: ${{ steps.sha.outputs.SHA }}
