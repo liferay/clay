@@ -639,7 +639,7 @@ function Actions({children}: TreeViewItemActionsProps) {
 									</div>
 								),
 								className: classNames(
-									'component-action',
+									'component-action quick-action-item',
 									child.props.className
 								),
 								onClick: (
@@ -677,7 +677,7 @@ function Actions({children}: TreeViewItemActionsProps) {
 											</div>
 										),
 										className: classNames(
-											'component-action',
+											'component-action quick-action-item',
 											child.props.trigger.props.className
 										),
 										onClick: (

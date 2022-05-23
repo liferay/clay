@@ -23,6 +23,7 @@ mainTabURL: 'docs/components/treeview.html'
 
 -   [Variations](#css-variations)
     -   [Expander on Hover](#css-treeview-expander-on-hover)
+    -   [Quick Actions on Hover](#css-treeview-show-quick-actions-on-hover)
     -   [Light](#css-treeview-light)
     -   [Dark](#css-treeview-dark)
 
@@ -70,24 +71,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							<span class="text-truncate-inline" title="Liferay Drive"><span class="text-truncate">Liferay Drive</span></span>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -121,24 +104,6 @@ The treeview provides a way to display information in a hierarchical structure b
 										<span class="text-truncate-inline" title="Liferay Drive (ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)"><span class="text-truncate">Liferay Drive (ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)</span></span>
 									</span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -151,24 +116,6 @@ The treeview provides a way to display information in a hierarchical structure b
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline" title="Details"><span class="text-truncate">Details</span></span></span>
 											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -179,24 +126,6 @@ The treeview provides a way to display information in a hierarchical structure b
 										<span class="autofit-row">
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline" title="Categorization"><span class="text-truncate">Categorization</span></span></span>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -209,24 +138,6 @@ The treeview provides a way to display information in a hierarchical structure b
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span></span>
 											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -237,24 +148,6 @@ The treeview provides a way to display information in a hierarchical structure b
 										<span class="autofit-row">
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline" title="Site Template"><span class="text-truncate">Site Template</span></span></span>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -294,24 +187,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							<span class="text-truncate-inline" title="Repositories"><span class="text-truncate">Repositories</span></span>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -324,24 +199,6 @@ The treeview provides a way to display information in a hierarchical structure b
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" title="Site Map"><span class="text-truncate">Sitemap</span></span></span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -352,24 +209,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							<span class="autofit-row">
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" title="Robots"><span class="text-truncate">Robots</span></span></span>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -406,24 +245,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							<span class="text-truncate-inline" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -436,24 +257,6 @@ The treeview provides a way to display information in a hierarchical structure b
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" title="Default User Associations"><span class="text-truncate">Default User Associations</span></span></span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -464,24 +267,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							<span class="autofit-row">
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" title="Staging"><span class="text-truncate">Staging</span></span></span>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -494,24 +279,6 @@ The treeview provides a way to display information in a hierarchical structure b
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" title="Analytics"><span class="text-truncate">Analytics</span></span></span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -522,24 +289,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							<span class="autofit-row">
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" title="Maps"><span class="text-truncate">Maps</span></span></span>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -620,44 +369,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-times-circle-full"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#times-circle-full"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-ellipsis-v"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#ellipsis-v"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -737,44 +448,6 @@ The treeview provides a way to display information in a hierarchical structure b
 										>
 									</span>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -807,50 +480,6 @@ The treeview provides a way to display information in a hierarchical structure b
 													></span
 												>
 											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -881,50 +510,6 @@ The treeview provides a way to display information in a hierarchical structure b
 														></span
 													></span
 												>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -958,50 +543,6 @@ The treeview provides a way to display information in a hierarchical structure b
 													></span
 												>
 											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -1032,50 +573,6 @@ The treeview provides a way to display information in a hierarchical structure b
 														></span
 													></span
 												>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -1155,44 +652,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-times-circle-full"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#times-circle-full"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-ellipsis-v"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#ellipsis-v"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -1222,44 +681,6 @@ The treeview provides a way to display information in a hierarchical structure b
 										></span
 									>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -1287,44 +708,6 @@ The treeview provides a way to display information in a hierarchical structure b
 											></span
 										></span
 									>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -1401,44 +784,6 @@ The treeview provides a way to display information in a hierarchical structure b
 							>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-times-circle-full"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#times-circle-full"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-ellipsis-v"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#ellipsis-v"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -1468,44 +813,6 @@ The treeview provides a way to display information in a hierarchical structure b
 										></span
 									>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -1533,44 +840,6 @@ The treeview provides a way to display information in a hierarchical structure b
 											></span
 										></span
 									>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -1600,44 +869,6 @@ The treeview provides a way to display information in a hierarchical structure b
 										></span
 									>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -1665,44 +896,6 @@ The treeview provides a way to display information in a hierarchical structure b
 											></span
 										></span
 									>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -1805,7 +998,7 @@ The modifier class `disabled` adds disabled styles to `treeview-link`. The class
 
 <div class="row">
 	<div class="col-md-4">
-		<ul class="treeview treeview-light treeview-nested" role="tree">
+		<ul class="treeview treeview-light treeview-nested show-quick-actions-on-hover" role="tree">
 			<li class="treeview-item" role="none">
 				<div aria-controls="treeviewItemDisabledCollapse02" aria-expanded="true" class="treeview-link disabled hover" data-target="#treeviewItemDisabledCollapse02" data-toggle="collapse" role="treeitem" tabindex="-1">
 					<span class="c-inner" tabindex="-2">
@@ -1843,7 +1036,7 @@ The modifier class `disabled` adds disabled styles to `treeview-link`. The class
 								</span>
 							</span>
 							<span class="autofit-col">
-								<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+								<button class="btn btn-monospaced component-action quick-action-item" disabled tabindex="-1" type="button">
 									<span class="c-inner" tabindex="-2">
 										<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 											<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -1852,7 +1045,7 @@ The modifier class `disabled` adds disabled styles to `treeview-link`. The class
 								</button>
 							</span>
 							<span class="autofit-col">
-								<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+								<button class="btn btn-monospaced component-action quick-action-item" disabled tabindex="-1" type="button">
 									<span class="c-inner" tabindex="-2">
 										<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 											<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -1887,7 +1080,7 @@ The modifier class `disabled` adds disabled styles to `treeview-link`. The class
 	</div>
 	<div class="col-md-4">
 		<div class="bg-dark">
-			<ul class="treeview treeview-dark treeview-nested" role="tree">
+			<ul class="treeview treeview-dark treeview-nested show-quick-actions-on-hover" role="tree">
 				<li class="treeview-item" role="none">
 					<div aria-controls="treeviewItemDisabledDarkCollapse01" aria-expanded="true" class="treeview-link disabled hover" data-target="#treeviewItemDisabledDarkCollapse01" data-toggle="collapse" role="treeitem" tabindex="-1">
 						<span class="c-inner" tabindex="-2">
@@ -1925,7 +1118,7 @@ The modifier class `disabled` adds disabled styles to `treeview-link`. The class
 									</span>
 								</span>
 								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" disabled tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -1934,7 +1127,7 @@ The modifier class `disabled` adds disabled styles to `treeview-link`. The class
 									</button>
 								</span>
 								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" disabled tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" disabled tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -2078,7 +1271,7 @@ The expander is used to expand or collapse the nodes and serves as an indicator 
 
 ### Component Action(#css-treeview-component-action)
 
-The action button(s) are used to supply additional features to a tree node, such as removal or a dropdown. The buttons must have the class `component-action`. They are displayed when hovering or focusing a tree node.
+The action button(s) are monospaced buttons used to supply additional features to a tree node, such as removal or a dropdown.
 
 <ul class="treeview treeview-light treeview-nested" role="tree">
 	<li class="treeview-item" role="none">
@@ -2166,7 +1359,7 @@ The modifier class `treeview-dragging` displays an indicator showing the item be
 
 The modifier class `treeview-dropping-bottom` adds a visual indicator to the bottom of `treeview-link` to show where a dragged `treeview-link` will be inserted.
 
-<ul class="treeview treeview-light treeview-nested" role="tree">
+<ul class="treeview treeview-light treeview-nested show-quick-actions-on-hover" role="tree">
 	<li class="treeview-item" role="none">
 		<div aria-controls="treeviewDroppoingBottomCollapse01" aria-expanded="true" class="treeview-dropping-bottom treeview-link" data-target="#treeviewDroppoingBottomCollapse01" data-toggle="collapse" role="treeitem" tabindex="0">
 			<span class="c-inner" tabindex="-2">
@@ -2196,7 +1389,7 @@ The modifier class `treeview-dropping-bottom` adds a visual indicator to the bot
 						</span>
 					</span>
 					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -2205,7 +1398,7 @@ The modifier class `treeview-dropping-bottom` adds a visual indicator to the bot
 						</button>
 					</span>
 					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -2229,7 +1422,10 @@ The modifier class `treeview-dropping-bottom` adds a visual indicator to the bot
 </ul>
 
 ```html
-<ul class="treeview treeview-light treeview-nested" role="tree">
+<ul
+	class="treeview treeview-light treeview-nested show-quick-actions-on-hover"
+	role="tree"
+>
 	<li class="treeview-item" role="none">
 		<div
 			aria-controls="treeviewDroppoingBottomCollapse01"
@@ -2240,7 +1436,104 @@ The modifier class `treeview-dropping-bottom` adds a visual indicator to the bot
 			role="treeitem"
 			tabindex="0"
 		>
-			...
+			<span class="c-inner" tabindex="-2">
+				<span class="autofit-row">
+					<span class="autofit-col">
+						<button
+							aria-controls="treeviewDroppoingBottomCollapse01"
+							aria-expanded="true"
+							class="btn btn-monospaced component-expander"
+							data-target="#treeviewDroppoingBottomCollapse01"
+							data-toggle="collapse"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-angle-down"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-down"
+									/>
+								</svg>
+								<svg
+									class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-right"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+					<span class="autofit-col">
+						<span class="component-icon">
+							<svg
+								class="lexicon-icon lexicon-icon-folder"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#folder"
+								/>
+							</svg>
+						</span>
+					</span>
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span
+								class="text-truncate-inline"
+								title="Liferay Drive"
+								><span class="text-truncate"
+									>Liferay Drive</span
+								></span
+							>
+						</span>
+					</span>
+					<span class="autofit-col">
+						<button
+							class="btn btn-monospaced component-action quick-action-item"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-times-circle-full"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#times-circle-full"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+					<span class="autofit-col">
+						<button
+							class="btn btn-monospaced component-action quick-action-item"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-ellipsis-v"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#ellipsis-v"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+				</span>
+			</span>
 		</div>
 		<div class="collapse show" id="treeviewDroppoingBottomCollapse01">
 			<ul class="treeview-group" role="group">
@@ -2269,7 +1562,7 @@ The modifier class `treeview-dropping-bottom` adds a visual indicator to the bot
 
 The modifier class `treeview-dropping-top` adds a visual indicator to the bottom of `treeview-link` to show where a dragged `treeview-link` will be inserted.
 
-<ul class="treeview treeview-light treeview-nested" role="tree">
+<ul class="treeview treeview-light treeview-nested show-quick-actions-on-hover" role="tree">
 	<li class="treeview-item" role="none">
 		<div aria-controls="treeviewDroppingTopCollapse01" aria-expanded="true" class="treeview-dropping-top treeview-link" data-target="#treeviewDroppingTopCollapse01" data-toggle="collapse" role="treeitem" tabindex="0">
 			<span class="c-inner" tabindex="-2">
@@ -2299,7 +1592,7 @@ The modifier class `treeview-dropping-top` adds a visual indicator to the bottom
 						</span>
 					</span>
 					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -2308,7 +1601,7 @@ The modifier class `treeview-dropping-top` adds a visual indicator to the bottom
 						</button>
 					</span>
 					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -2332,7 +1625,10 @@ The modifier class `treeview-dropping-top` adds a visual indicator to the bottom
 </ul>
 
 ```html
-<ul class="treeview treeview-light treeview-nested" role="tree">
+<ul
+	class="treeview treeview-light treeview-nested show-quick-actions-on-hover"
+	role="tree"
+>
 	<li class="treeview-item" role="none">
 		<div
 			aria-controls="treeviewDroppingTopCollapse01"
@@ -2343,7 +1639,104 @@ The modifier class `treeview-dropping-top` adds a visual indicator to the bottom
 			role="treeitem"
 			tabindex="0"
 		>
-			...
+			<span class="c-inner" tabindex="-2">
+				<span class="autofit-row">
+					<span class="autofit-col">
+						<button
+							aria-controls="treeviewDroppingTopCollapse01"
+							aria-expanded="true"
+							class="btn btn-monospaced component-expander"
+							data-target="#treeviewDroppingTopCollapse01"
+							data-toggle="collapse"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-angle-down"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-down"
+									/>
+								</svg>
+								<svg
+									class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-right"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+					<span class="autofit-col">
+						<span class="component-icon">
+							<svg
+								class="lexicon-icon lexicon-icon-folder"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#folder"
+								/>
+							</svg>
+						</span>
+					</span>
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span
+								class="text-truncate-inline"
+								title="Liferay Drive"
+								><span class="text-truncate"
+									>Liferay Drive</span
+								></span
+							>
+						</span>
+					</span>
+					<span class="autofit-col">
+						<button
+							class="btn btn-monospaced component-action quick-action-item"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-times-circle-full"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#times-circle-full"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+					<span class="autofit-col">
+						<button
+							class="btn btn-monospaced component-action quick-action-item"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-ellipsis-v"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#ellipsis-v"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+				</span>
+			</span>
 		</div>
 		<div class="collapse show" id="treeviewDroppingTopCollapse01">
 			<ul class="treeview-group" role="group">
@@ -2372,7 +1765,7 @@ The modifier class `treeview-dropping-top` adds a visual indicator to the bottom
 
 The modifier class `treeview-dropping-middle` adds a visual indicator around the `treeview-link` to show where a dragged `treeview-link` will be nested.
 
-<ul class="treeview treeview-light treeview-nested" role="tree">
+<ul class="treeview treeview-light treeview-nested show-quick-actions-on-hover" role="tree">
 	<li class="treeview-item" role="none">
 		<div aria-controls="treeviewDroppingMiddleCollapse01" aria-expanded="true" class="treeview-dropping-middle treeview-link" data-target="#treeviewDroppingMiddleCollapse01" data-toggle="collapse" role="treeitem" tabindex="0">
 			<span class="c-inner" tabindex="-2">
@@ -2402,7 +1795,7 @@ The modifier class `treeview-dropping-middle` adds a visual indicator around the
 						</span>
 					</span>
 					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -2411,7 +1804,7 @@ The modifier class `treeview-dropping-middle` adds a visual indicator around the
 						</button>
 					</span>
 					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -2435,7 +1828,10 @@ The modifier class `treeview-dropping-middle` adds a visual indicator around the
 </ul>
 
 ```html
-<ul class="treeview treeview-light treeview-nested" role="tree">
+<ul
+	class="treeview treeview-light treeview-nested show-quick-actions-on-hover"
+	role="tree"
+>
 	<li class="treeview-item" role="none">
 		<div
 			aria-controls="treeviewDroppingMiddleCollapse01"
@@ -2446,7 +1842,104 @@ The modifier class `treeview-dropping-middle` adds a visual indicator around the
 			role="treeitem"
 			tabindex="0"
 		>
-			...
+			<span class="c-inner" tabindex="-2">
+				<span class="autofit-row">
+					<span class="autofit-col">
+						<button
+							aria-controls="treeviewDroppingMiddleCollapse01"
+							aria-expanded="true"
+							class="btn btn-monospaced component-expander"
+							data-target="#treeviewDroppingMiddleCollapse01"
+							data-toggle="collapse"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-angle-down"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-down"
+									/>
+								</svg>
+								<svg
+									class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-right"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+					<span class="autofit-col">
+						<span class="component-icon">
+							<svg
+								class="lexicon-icon lexicon-icon-folder"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#folder"
+								/>
+							</svg>
+						</span>
+					</span>
+					<span class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span
+								class="text-truncate-inline"
+								title="Liferay Drive"
+								><span class="text-truncate"
+									>Liferay Drive</span
+								></span
+							>
+						</span>
+					</span>
+					<span class="autofit-col">
+						<button
+							class="btn btn-monospaced component-action quick-action-item"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-times-circle-full"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#times-circle-full"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+					<span class="autofit-col">
+						<button
+							class="btn btn-monospaced component-action quick-action-item"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-ellipsis-v"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#ellipsis-v"
+									/>
+								</svg>
+							</span>
+						</button>
+					</span>
+				</span>
+			</span>
 		</div>
 		<div class="collapse show" id="treeviewDroppingMiddleCollapse01">
 			<ul class="treeview-group" role="group">
@@ -2506,24 +1999,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							<span class="text-truncate-inline" data-toggle="tooltip" title="Liferay Drive"><span class="text-truncate">Liferay Drive</span></span>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -2557,33 +2032,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										<span class="text-truncate-inline" data-toggle="tooltip" title="Liferay Drive (ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)"><span class="text-truncate">Liferay Drive (ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)</span></span>
 									</span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-info-circle" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#info-circle" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -2596,24 +2044,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline"><span class="text-truncate" data-toggle="tooltip" title="Details">Details</span></span></span>
 											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -2624,24 +2054,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										<span class="autofit-row">
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Categorization"><span class="text-truncate">Categorization</span></span></span>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -2654,24 +2066,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span></span>
 											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -2682,24 +2076,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										<span class="autofit-row">
 											<span class="autofit-col autofit-col-expand">
 												<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Site Template"><span class="text-truncate">Site Template</span></span></span>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-													<span class="c-inner" tabindex="-2">
-														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -2739,24 +2115,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							<span class="text-truncate-inline" data-toggle="tooltip" title="Repositories"><span class="text-truncate">Repositories</span></span>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -2769,24 +2127,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Sitemap"><span class="text-truncate">Sitemap</span></span></span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -2797,24 +2137,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							<span class="autofit-row">
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Robots"><span class="text-truncate">Robots</span></span></span>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -2851,24 +2173,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							<span class="text-truncate-inline" data-toggle="tooltip" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-							<span class="c-inner" tabindex="-2">
-								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -2881,24 +2185,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Default User Associations"><span class="text-truncate">Default User Associations</span></span></span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -2909,24 +2195,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							<span class="autofit-row">
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Staging"><span class="text-truncate">Staging</span></span></span>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -2939,24 +2207,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Analytics"><span class="text-truncate">Analytics</span></span></span>
 								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -2967,24 +2217,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							<span class="autofit-row">
 								<span class="autofit-col autofit-col-expand">
 									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Maps"><span class="text-truncate">Maps</span></span></span>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
-										<span class="c-inner" tabindex="-2">
-											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
-												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -3069,44 +2301,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-times-circle-full"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#times-circle-full"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-ellipsis-v"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#ellipsis-v"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -3187,63 +2381,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										>
 									</span>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-info-circle"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#info-circle"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -3277,50 +2414,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 													></span
 												>
 											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -3352,50 +2445,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 														></span
 													></span
 												>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -3430,50 +2479,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 													></span
 												>
 											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
 										</span>
 									</span>
 								</div>
@@ -3505,50 +2510,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 														></span
 													></span
 												>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-times-circle-full"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#times-circle-full"
-															/>
-														</svg>
-													</span>
-												</button>
-											</span>
-											<span class="autofit-col">
-												<button
-													class="btn btn-monospaced component-action"
-													tabindex="-1"
-													type="button"
-												>
-													<span
-														class="c-inner"
-														tabindex="-2"
-													>
-														<svg
-															class="lexicon-icon lexicon-icon-ellipsis-v"
-															focusable="false"
-															role="presentation"
-														>
-															<use
-																xlink:href="/images/icons/icons.svg#ellipsis-v"
-															/>
-														</svg>
-													</span>
-												</button>
 											</span>
 										</span>
 									</span>
@@ -3629,44 +2590,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-times-circle-full"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#times-circle-full"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-ellipsis-v"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#ellipsis-v"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -3697,44 +2620,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										></span
 									>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -3763,44 +2648,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 											></span
 										></span
 									>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -3878,44 +2725,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 							>
 						</span>
 					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-times-circle-full"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#times-circle-full"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
-					<span class="autofit-col">
-						<button
-							class="btn btn-monospaced component-action"
-							tabindex="-1"
-							type="button"
-						>
-							<span class="c-inner" tabindex="-2">
-								<svg
-									class="lexicon-icon lexicon-icon-ellipsis-v"
-									focusable="false"
-									role="presentation"
-								>
-									<use
-										xlink:href="/images/icons/icons.svg#ellipsis-v"
-									/>
-								</svg>
-							</span>
-						</button>
-					</span>
 				</span>
 			</span>
 		</div>
@@ -3946,44 +2755,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										></span
 									>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -4012,44 +2783,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 											></span
 										></span
 									>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
 								</span>
 							</span>
 						</span>
@@ -4080,44 +2813,6 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										></span
 									>
 								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
-								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
-									</button>
-								</span>
 							</span>
 						</span>
 					</div>
@@ -4147,46 +2842,1293 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 										></span
 									>
 								</span>
+							</span>
+						</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+</ul>
+```
+
+### Show Quick Actions on Hover(#css-treeview-show-quick-actions-on-hover)
+
+The class `show-quick-actions-on-hover` on `treeview` will hide all `quick-action-item`'s except when `treeview-link` is hovered or focused.
+
+<ul class="treeview treeview-nested treeview-light show-quick-actions-on-hover" role="tree">
+	<li class="treeview-item" role="none">
+		<div aria-controls="treeviewCollapseCheckboxHoverBtn01" aria-expanded="true" class="treeview-link show" data-target="#treeviewCollapseCheckboxHoverBtn01" data-toggle="collapse" role="treeitem" tabindex="0">
+			<div class="c-inner" tabindex="-2">
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<button aria-controls="treeviewCollapseCheckboxHoverBtn01" aria-expanded="true" class="btn btn-monospaced component-expander show" data-target="#treeviewCollapseCheckboxHoverBtn01" data-toggle="collapse" tabindex="-1" type="button">
+							<span class="c-inner" tabindex="-2">
+								<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#angle-down" />
+								</svg>
+								<svg class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#angle-right" />
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" tabindex="-1" type="checkbox" />
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="component-icon">
+							<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+								<use xlink:href="/images/icons/icons.svg#folder" />
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span class="autofit-row">
+								<span class="autofit-col autofit-col-shrink">
+									<span class="text-truncate-inline" title="Liferay Drive"><span class="text-truncate">Liferay Drive</span></span>
+								</span>
 								<span class="autofit-col">
-									<button
-										class="btn btn-monospaced component-action"
-										tabindex="-1"
-										type="button"
-									>
+									<button class="btn btn-secondary quick-action-item ml-4" tabindex="-1" type="button"><span class="c-inner" tabindex="-2">Check child nodes</span></button>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collapse show" id="treeviewCollapseCheckboxHoverBtn01">
+			<ul class="treeview-group" role="group">
+				<li class="treeview-item" role="none">
+					<div aria-controls="treeviewCollapseCheckboxHoverBtn02" aria-expanded="false" class="collapsed treeview-link" data-target="#treeviewCollapseCheckboxHoverBtn02" data-toggle="collapse" role="treeitem" tabindex="-1" style="padding-left:24px;">
+						<div class="c-inner" tabindex="-2" style="margin-left:-24px;">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<button aria-controls="treeviewCollapseCheckboxHoverBtn02" aria-expanded="false" class="btn btn-monospaced component-expander" data-target="#treeviewCollapseCheckboxHoverBtn02" data-toggle="collapse" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-times-circle-full"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#times-circle-full"
-												/>
+											<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+												<use xlink:href="/images/icons/icons.svg#angle-down" />
+											</svg>
+											<svg class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none" focusable="false" role="presentation">
+												<use xlink:href="/images/icons/icons.svg#angle-right" />
 											</svg>
 										</span>
 									</button>
+								</div>
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" tabindex="-1" type="checkbox" />
+											<span class="custom-control-label"></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col">
+									<div class="component-icon">
+										<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+											<use xlink:href="/images/icons/icons.svg#folder" />
+										</svg>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text">
+										<span class="autofit-row">
+											<span class="autofit-col autofit-col-shrink">
+												<span class="text-truncate-inline" title="Liferay Drive (ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)"><span class="text-truncate">Liferay Drive (ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)</span></span>
+											</span>
+											<span class="autofit-col">
+												<button class="btn btn-secondary quick-action-item ml-4" tabindex="-1" type="button"><span class="c-inner" tabindex="-2">Check child nodes</span></button>
+											</span>
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="collapse" id="treeviewCollapseCheckboxHoverBtn02">
+						<ul class="treeview-group" role="group">
+							<li class="treeview-item" role="none">
+								<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:48px;">
+									<div class="c-inner" tabindex="-2" style="margin-left:-48px;">
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div class="custom-control custom-checkbox">
+													<label>
+														<input class="custom-control-input" tabindex="-1" type="checkbox" />
+														<span class="custom-control-label"></span>
+													</label>
+												</div>
+											</div>
+											<div class="autofit-col autofit-col-expand">
+												<span class="component-text"><span class="text-truncate-inline"><span class="text-truncate" title="Details">Details</span></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="treeview-item" role="none">
+								<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:48px;">
+									<div class="c-inner" tabindex="-2" style="margin-left:-48px;">
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div class="custom-control custom-checkbox">
+													<label>
+														<input class="custom-control-input" tabindex="-1" type="checkbox" />
+														<span class="custom-control-label"></span>
+													</label>
+												</div>
+											</div>
+											<div class="autofit-col autofit-col-expand">
+												<span class="component-text"><span class="text-truncate-inline" title="Categorization"><span class="text-truncate">Categorization</span></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="treeview-item" role="none">
+								<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:48px;">
+									<div class="c-inner" tabindex="-2" style="margin-left:-48px;">
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div class="custom-control custom-checkbox">
+													<label>
+														<input class="custom-control-input" tabindex="-1" type="checkbox" />
+														<span class="custom-control-label"></span>
+													</label>
+												</div>
+											</div>
+											<div class="autofit-col autofit-col-expand">
+												<span class="component-text"><span class="text-truncate-inline" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="treeview-item" role="none">
+								<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:48px;">
+									<div class="c-inner" tabindex="-2" style="margin-left:-48px;">
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div class="custom-control custom-checkbox">
+													<label>
+														<input class="custom-control-input" tabindex="-1" type="checkbox" />
+														<span class="custom-control-label"></span>
+													</label>
+												</div>
+											</div>
+											<div class="autofit-col autofit-col-expand">
+												<span class="component-text"><span class="text-truncate-inline" title="Site Template"><span class="text-truncate">Site Template</span></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="treeview-item" role="none">
+		<div aria-controls="treeviewCollapseCheckboxHoverBtn03" aria-expanded="false" class="collapsed treeview-link" data-target="#treeviewCollapseCheckboxHoverBtn03" data-toggle="collapse" role="treeitem" tabindex="-1">
+			<div class="c-inner" tabindex="-2">
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<button aria-controls="treeviewCollapseCheckboxHoverBtn03" aria-expanded="false" class="btn btn-monospaced component-expander" data-target="#treeviewCollapseCheckboxHoverBtn03" data-toggle="collapse" tabindex="-1" type="button">
+							<span class="c-inner" tabindex="-2">
+								<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#angle-down" />
+								</svg>
+								<svg class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#angle-right" />
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" tabindex="-1" type="checkbox" />
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="component-icon">
+							<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+								<use xlink:href="/images/icons/icons.svg#folder" />
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span class="autofit-row">
+								<span class="autofit-col autofit-col-shrink">
+									<span class="text-truncate-inline" data-toggle="tooltip" title="Repositories"><span class="text-truncate">Repositories</span></span>
+								</span>
+								<span class="autofit-col">
+									<button class="btn btn-secondary quick-action-item ml-4" tabindex="-1" type="button"><span class="c-inner" tabindex="-2">Check child nodes</span></button>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collapse" id="treeviewCollapseCheckboxHoverBtn03">
+			<ul class="treeview-group" role="group">
+				<li class="treeview-item" role="none">
+					<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:24px;">
+						<div class="c-inner" tabindex="-2" style="margin-left:-24px;">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" tabindex="-1" type="checkbox" />
+											<span class="custom-control-label"></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Sitemap"><span class="text-truncate">Sitemap</span></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:24px;">
+						<div class="c-inner" tabindex="-2" style="margin-left:-24px;">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" tabindex="-1" type="checkbox" />
+											<span class="custom-control-label"></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Robots"><span class="text-truncate">Robots</span></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="treeview-item" role="none">
+		<div aria-controls="treeviewCollapseCheckboxHoverBtn04" aria-expanded="false" class="collapsed treeview-link" data-target="#treeviewCollapseCheckboxHoverBtn04" data-toggle="collapse" role="treeitem" tabindex="-1">
+			<div class="c-inner" tabindex="-2">
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<button aria-controls="treeviewCollapseCheckboxHoverBtn04" aria-expanded="false" class="btn btn-monospaced component-expander" data-target="#treeviewCollapseCheckboxHoverBtn04" data-toggle="collapse" tabindex="-1" type="button">
+							<span class="c-inner" tabindex="-2">
+								<svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#angle-down" />
+								</svg>
+								<svg class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none" focusable="false" role="presentation">
+									<use xlink:href="/images/icons/icons.svg#angle-right" />
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" tabindex="-1" type="checkbox" />
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="component-icon">
+							<svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+								<use xlink:href="/images/icons/icons.svg#folder" />
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span class="autofit-row">
+								<span class="autofit-col autofit-col-shrink">
+									<span class="text-truncate-inline" data-toggle="tooltip" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span>
+								</span>
+								<span class="autofit-col">
+									<button class="btn btn-secondary quick-action-item ml-4" tabindex="-1" type="button"><span class="c-inner" tabindex="-2">Check child nodes</span></button>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collapse" id="treeviewCollapseCheckboxHoverBtn04">
+			<ul class="treeview-group" role="group">
+				<li class="treeview-item" role="none">
+					<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:24px;">
+						<div class="c-inner" tabindex="-2" style="margin-left:-24px;">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" tabindex="-1" type="checkbox" />
+											<span class="custom-control-label"></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Default User Associations"><span class="text-truncate">Default User Associations</span></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:24px;">
+						<div class="c-inner" tabindex="-2" style="margin-left:-24px;">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" tabindex="-1" type="checkbox" />
+											<span class="custom-control-label"></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Staging"><span class="text-truncate">Staging</span></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:24px;">
+						<div class="c-inner" tabindex="-2" style="margin-left:-24px;">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" tabindex="-1" type="checkbox" />
+											<span class="custom-control-label"></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Analytics"><span class="text-truncate">Analytics</span></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div class="treeview-link" role="treeitem" tabindex="-1" style="padding-left:24px;">
+						<div class="c-inner" tabindex="-2" style="margin-left:-24px;">
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input class="custom-control-input" tabindex="-1" type="checkbox" />
+											<span class="custom-control-label"></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"><span class="text-truncate-inline" data-toggle="tooltip" title="Maps"><span class="text-truncate">Maps</span></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+</ul>
+
+```html
+<ul
+	class="treeview treeview-nested treeview-light show-quick-actions-on-hover"
+	role="tree"
+>
+	<li class="treeview-item" role="none">
+		<div
+			aria-controls="treeviewCollapseCheckboxHoverBtn01"
+			aria-expanded="true"
+			class="treeview-link show"
+			data-target="#treeviewCollapseCheckboxHoverBtn01"
+			data-toggle="collapse"
+			role="treeitem"
+			tabindex="0"
+		>
+			<div class="c-inner" tabindex="-2">
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<button
+							aria-controls="treeviewCollapseCheckboxHoverBtn01"
+							aria-expanded="true"
+							class="btn btn-monospaced component-expander show"
+							data-target="#treeviewCollapseCheckboxHoverBtn01"
+							data-toggle="collapse"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-angle-down"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-down"
+									/>
+								</svg>
+								<svg
+									class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-right"
+									/>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input
+									class="custom-control-input"
+									tabindex="-1"
+									type="checkbox"
+								/>
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="component-icon">
+							<svg
+								class="lexicon-icon lexicon-icon-folder"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#folder"
+								/>
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span class="autofit-row">
+								<span class="autofit-col autofit-col-shrink">
+									<span
+										class="text-truncate-inline"
+										title="Liferay Drive"
+										><span class="text-truncate"
+											>Liferay Drive</span
+										></span
+									>
 								</span>
 								<span class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-secondary quick-action-item ml-4"
 										tabindex="-1"
 										type="button"
 									>
-										<span class="c-inner" tabindex="-2">
-											<svg
-												class="lexicon-icon lexicon-icon-ellipsis-v"
-												focusable="false"
-												role="presentation"
-											>
-												<use
-													xlink:href="/images/icons/icons.svg#ellipsis-v"
-												/>
-											</svg>
-										</span>
+										<span class="c-inner" tabindex="-2"
+											>Check child nodes</span
+										>
 									</button>
 								</span>
 							</span>
 						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collapse show" id="treeviewCollapseCheckboxHoverBtn01">
+			<ul class="treeview-group" role="group">
+				<li class="treeview-item" role="none">
+					<div
+						aria-controls="treeviewCollapseCheckboxHoverBtn02"
+						aria-expanded="false"
+						class="collapsed treeview-link"
+						data-target="#treeviewCollapseCheckboxHoverBtn02"
+						data-toggle="collapse"
+						role="treeitem"
+						tabindex="-1"
+						style="padding-left:24px;"
+					>
+						<div
+							class="c-inner"
+							tabindex="-2"
+							style="margin-left:-24px;"
+						>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<button
+										aria-controls="treeviewCollapseCheckboxHoverBtn02"
+										aria-expanded="false"
+										class="btn btn-monospaced component-expander"
+										data-target="#treeviewCollapseCheckboxHoverBtn02"
+										data-toggle="collapse"
+										tabindex="-1"
+										type="button"
+									>
+										<span class="c-inner" tabindex="-2">
+											<svg
+												class="lexicon-icon lexicon-icon-angle-down"
+												focusable="false"
+												role="presentation"
+											>
+												<use
+													xlink:href="/images/icons/icons.svg#angle-down"
+												/>
+											</svg>
+											<svg
+												class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+												focusable="false"
+												role="presentation"
+											>
+												<use
+													xlink:href="/images/icons/icons.svg#angle-right"
+												/>
+											</svg>
+										</span>
+									</button>
+								</div>
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input
+												class="custom-control-input"
+												tabindex="-1"
+												type="checkbox"
+											/>
+											<span
+												class="custom-control-label"
+											></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col">
+									<div class="component-icon">
+										<svg
+											class="lexicon-icon lexicon-icon-folder"
+											focusable="false"
+											role="presentation"
+										>
+											<use
+												xlink:href="/images/icons/icons.svg#folder"
+											/>
+										</svg>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text">
+										<span class="autofit-row">
+											<span
+												class="autofit-col autofit-col-shrink"
+											>
+												<span
+													class="text-truncate-inline"
+													title="Liferay Drive (ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)"
+													><span class="text-truncate"
+														>Liferay Drive
+														(ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual)</span
+													></span
+												>
+											</span>
+											<span class="autofit-col">
+												<button
+													class="btn btn-secondary quick-action-item ml-4"
+													tabindex="-1"
+													type="button"
+												>
+													<span
+														class="c-inner"
+														tabindex="-2"
+														>Check child nodes</span
+													>
+												</button>
+											</span>
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="collapse"
+						id="treeviewCollapseCheckboxHoverBtn02"
+					>
+						<ul class="treeview-group" role="group">
+							<li class="treeview-item" role="none">
+								<div
+									class="treeview-link"
+									role="treeitem"
+									tabindex="-1"
+									style="padding-left:48px;"
+								>
+									<div
+										class="c-inner"
+										tabindex="-2"
+										style="margin-left:-48px;"
+									>
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div
+													class="custom-control custom-checkbox"
+												>
+													<label>
+														<input
+															class="custom-control-input"
+															tabindex="-1"
+															type="checkbox"
+														/>
+														<span
+															class="custom-control-label"
+														></span>
+													</label>
+												</div>
+											</div>
+											<div
+												class="autofit-col autofit-col-expand"
+											>
+												<span class="component-text"
+													><span
+														class="text-truncate-inline"
+														><span
+															class="text-truncate"
+															title="Details"
+															>Details</span
+														></span
+													></span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="treeview-item" role="none">
+								<div
+									class="treeview-link"
+									role="treeitem"
+									tabindex="-1"
+									style="padding-left:48px;"
+								>
+									<div
+										class="c-inner"
+										tabindex="-2"
+										style="margin-left:-48px;"
+									>
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div
+													class="custom-control custom-checkbox"
+												>
+													<label>
+														<input
+															class="custom-control-input"
+															tabindex="-1"
+															type="checkbox"
+														/>
+														<span
+															class="custom-control-label"
+														></span>
+													</label>
+												</div>
+											</div>
+											<div
+												class="autofit-col autofit-col-expand"
+											>
+												<span class="component-text"
+													><span
+														class="text-truncate-inline"
+														title="Categorization"
+														><span
+															class="text-truncate"
+															>Categorization</span
+														></span
+													></span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="treeview-item" role="none">
+								<div
+									class="treeview-link"
+									role="treeitem"
+									tabindex="-1"
+									style="padding-left:48px;"
+								>
+									<div
+										class="c-inner"
+										tabindex="-2"
+										style="margin-left:-48px;"
+									>
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div
+													class="custom-control custom-checkbox"
+												>
+													<label>
+														<input
+															class="custom-control-input"
+															tabindex="-1"
+															type="checkbox"
+														/>
+														<span
+															class="custom-control-label"
+														></span>
+													</label>
+												</div>
+											</div>
+											<div
+												class="autofit-col autofit-col-expand"
+											>
+												<span class="component-text"
+													><span
+														class="text-truncate-inline"
+														title="Documents and Media"
+														><span
+															class="text-truncate"
+															>Documents and
+															Media</span
+														></span
+													></span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="treeview-item" role="none">
+								<div
+									class="treeview-link"
+									role="treeitem"
+									tabindex="-1"
+									style="padding-left:48px;"
+								>
+									<div
+										class="c-inner"
+										tabindex="-2"
+										style="margin-left:-48px;"
+									>
+										<div class="autofit-row">
+											<div class="autofit-col">
+												<div
+													class="custom-control custom-checkbox"
+												>
+													<label>
+														<input
+															class="custom-control-input"
+															tabindex="-1"
+															type="checkbox"
+														/>
+														<span
+															class="custom-control-label"
+														></span>
+													</label>
+												</div>
+											</div>
+											<div
+												class="autofit-col autofit-col-expand"
+											>
+												<span class="component-text"
+													><span
+														class="text-truncate-inline"
+														title="Site Template"
+														><span
+															class="text-truncate"
+															>Site Template</span
+														></span
+													></span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="treeview-item" role="none">
+		<div
+			aria-controls="treeviewCollapseCheckboxHoverBtn03"
+			aria-expanded="false"
+			class="collapsed treeview-link"
+			data-target="#treeviewCollapseCheckboxHoverBtn03"
+			data-toggle="collapse"
+			role="treeitem"
+			tabindex="-1"
+		>
+			<div class="c-inner" tabindex="-2">
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<button
+							aria-controls="treeviewCollapseCheckboxHoverBtn03"
+							aria-expanded="false"
+							class="btn btn-monospaced component-expander"
+							data-target="#treeviewCollapseCheckboxHoverBtn03"
+							data-toggle="collapse"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-angle-down"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-down"
+									/>
+								</svg>
+								<svg
+									class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-right"
+									/>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input
+									class="custom-control-input"
+									tabindex="-1"
+									type="checkbox"
+								/>
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="component-icon">
+							<svg
+								class="lexicon-icon lexicon-icon-folder"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#folder"
+								/>
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span class="autofit-row">
+								<span class="autofit-col autofit-col-shrink">
+									<span
+										class="text-truncate-inline"
+										data-toggle="tooltip"
+										title="Repositories"
+										><span class="text-truncate"
+											>Repositories</span
+										></span
+									>
+								</span>
+								<span class="autofit-col">
+									<button
+										class="btn btn-secondary quick-action-item ml-4"
+										tabindex="-1"
+										type="button"
+									>
+										<span class="c-inner" tabindex="-2"
+											>Check child nodes</span
+										>
+									</button>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collapse" id="treeviewCollapseCheckboxHoverBtn03">
+			<ul class="treeview-group" role="group">
+				<li class="treeview-item" role="none">
+					<div
+						class="treeview-link"
+						role="treeitem"
+						tabindex="-1"
+						style="padding-left:24px;"
+					>
+						<div
+							class="c-inner"
+							tabindex="-2"
+							style="margin-left:-24px;"
+						>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input
+												class="custom-control-input"
+												tabindex="-1"
+												type="checkbox"
+											/>
+											<span
+												class="custom-control-label"
+											></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"
+										><span
+											class="text-truncate-inline"
+											data-toggle="tooltip"
+											title="Sitemap"
+											><span class="text-truncate"
+												>Sitemap</span
+											></span
+										></span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div
+						class="treeview-link"
+						role="treeitem"
+						tabindex="-1"
+						style="padding-left:24px;"
+					>
+						<div
+							class="c-inner"
+							tabindex="-2"
+							style="margin-left:-24px;"
+						>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input
+												class="custom-control-input"
+												tabindex="-1"
+												type="checkbox"
+											/>
+											<span
+												class="custom-control-label"
+											></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"
+										><span
+											class="text-truncate-inline"
+											data-toggle="tooltip"
+											title="Robots"
+											><span class="text-truncate"
+												>Robots</span
+											></span
+										></span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="treeview-item" role="none">
+		<div
+			aria-controls="treeviewCollapseCheckboxHoverBtn04"
+			aria-expanded="false"
+			class="collapsed treeview-link"
+			data-target="#treeviewCollapseCheckboxHoverBtn04"
+			data-toggle="collapse"
+			role="treeitem"
+			tabindex="-1"
+		>
+			<div class="c-inner" tabindex="-2">
+				<div class="autofit-row">
+					<div class="autofit-col">
+						<button
+							aria-controls="treeviewCollapseCheckboxHoverBtn04"
+							aria-expanded="false"
+							class="btn btn-monospaced component-expander"
+							data-target="#treeviewCollapseCheckboxHoverBtn04"
+							data-toggle="collapse"
+							tabindex="-1"
+							type="button"
+						>
+							<span class="c-inner" tabindex="-2">
+								<svg
+									class="lexicon-icon lexicon-icon-angle-down"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-down"
+									/>
+								</svg>
+								<svg
+									class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+									focusable="false"
+									role="presentation"
+								>
+									<use
+										xlink:href="/images/icons/icons.svg#angle-right"
+									/>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="autofit-col">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input
+									class="custom-control-input"
+									tabindex="-1"
+									type="checkbox"
+								/>
+								<span class="custom-control-label"></span>
+							</label>
+						</div>
+					</div>
+					<div class="autofit-col">
+						<div class="component-icon">
+							<svg
+								class="lexicon-icon lexicon-icon-folder"
+								focusable="false"
+								role="presentation"
+							>
+								<use
+									xlink:href="/images/icons/icons.svg#folder"
+								/>
+							</svg>
+						</div>
+					</div>
+					<div class="autofit-col autofit-col-expand">
+						<span class="component-text">
+							<span class="autofit-row">
+								<span class="autofit-col autofit-col-shrink">
+									<span
+										class="text-truncate-inline"
+										data-toggle="tooltip"
+										title="Documents and Media"
+										><span class="text-truncate"
+											>Documents and Media</span
+										></span
+									>
+								</span>
+								<span class="autofit-col">
+									<button
+										class="btn btn-secondary quick-action-item ml-4"
+										tabindex="-1"
+										type="button"
+									>
+										<span class="c-inner" tabindex="-2"
+											>Check child nodes</span
+										>
+									</button>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collapse" id="treeviewCollapseCheckboxHoverBtn04">
+			<ul class="treeview-group" role="group">
+				<li class="treeview-item" role="none">
+					<div
+						class="treeview-link"
+						role="treeitem"
+						tabindex="-1"
+						style="padding-left:24px;"
+					>
+						<div
+							class="c-inner"
+							tabindex="-2"
+							style="margin-left:-24px;"
+						>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input
+												class="custom-control-input"
+												tabindex="-1"
+												type="checkbox"
+											/>
+											<span
+												class="custom-control-label"
+											></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"
+										><span
+											class="text-truncate-inline"
+											data-toggle="tooltip"
+											title="Default User Associations"
+											><span class="text-truncate"
+												>Default User Associations</span
+											></span
+										></span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div
+						class="treeview-link"
+						role="treeitem"
+						tabindex="-1"
+						style="padding-left:24px;"
+					>
+						<div
+							class="c-inner"
+							tabindex="-2"
+							style="margin-left:-24px;"
+						>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input
+												class="custom-control-input"
+												tabindex="-1"
+												type="checkbox"
+											/>
+											<span
+												class="custom-control-label"
+											></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"
+										><span
+											class="text-truncate-inline"
+											data-toggle="tooltip"
+											title="Staging"
+											><span class="text-truncate"
+												>Staging</span
+											></span
+										></span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div
+						class="treeview-link"
+						role="treeitem"
+						tabindex="-1"
+						style="padding-left:24px;"
+					>
+						<div
+							class="c-inner"
+							tabindex="-2"
+							style="margin-left:-24px;"
+						>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input
+												class="custom-control-input"
+												tabindex="-1"
+												type="checkbox"
+											/>
+											<span
+												class="custom-control-label"
+											></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"
+										><span
+											class="text-truncate-inline"
+											data-toggle="tooltip"
+											title="Analytics"
+											><span class="text-truncate"
+												>Analytics</span
+											></span
+										></span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="treeview-item" role="none">
+					<div
+						class="treeview-link"
+						role="treeitem"
+						tabindex="-1"
+						style="padding-left:24px;"
+					>
+						<div
+							class="c-inner"
+							tabindex="-2"
+							style="margin-left:-24px;"
+						>
+							<div class="autofit-row">
+								<div class="autofit-col">
+									<div class="custom-control custom-checkbox">
+										<label>
+											<input
+												class="custom-control-input"
+												tabindex="-1"
+												type="checkbox"
+											/>
+											<span
+												class="custom-control-label"
+											></span>
+										</label>
+									</div>
+								</div>
+								<div class="autofit-col autofit-col-expand">
+									<span class="component-text"
+										><span
+											class="text-truncate-inline"
+											data-toggle="tooltip"
+											title="Maps"
+											><span class="text-truncate"
+												>Maps</span
+											></span
+										></span
+									>
+								</div>
+							</div>
+						</div>
 					</div>
 				</li>
 			</ul>
@@ -4199,7 +4141,7 @@ The class `show-component-expander-on-hover` displays the `component-expander` w
 
 A `treeview` variation for light colored backgrounds.
 
-<ul class="treeview treeview-nested treeview-light" role="tree">
+<ul class="treeview treeview-nested treeview-light show-quick-actions-on-hover" role="tree">
 	<li class="treeview-item" role="none">
 		<div aria-controls="treeviewLightCollapseCheckbox01" aria-expanded="true" class="treeview-link" data-target="#treeviewLightCollapseCheckbox01" data-toggle="collapse" role="treeitem" tabindex="0">
 			<div class="c-inner" tabindex="-2">
@@ -4237,7 +4179,7 @@ A `treeview` variation for light colored backgrounds.
 						</span>
 					</div>
 					<div class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4246,7 +4188,7 @@ A `treeview` variation for light colored backgrounds.
 						</button>
 					</div>
 					<div class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4296,7 +4238,7 @@ A `treeview` variation for light colored backgrounds.
 									</span>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4305,7 +4247,7 @@ A `treeview` variation for light colored backgrounds.
 									</button>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4334,7 +4276,7 @@ A `treeview` variation for light colored backgrounds.
 												<span class="component-text"><span class="text-truncate-inline"><span class="text-truncate" title="Details">Details</span></span></span>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4343,7 +4285,7 @@ A `treeview` variation for light colored backgrounds.
 												</button>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4371,7 +4313,7 @@ A `treeview` variation for light colored backgrounds.
 												<span class="component-text"><span class="text-truncate-inline" title="Categorization"><span class="text-truncate">Categorization</span></span></span>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4380,7 +4322,7 @@ A `treeview` variation for light colored backgrounds.
 												</button>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4408,7 +4350,7 @@ A `treeview` variation for light colored backgrounds.
 												<span class="component-text"><span class="text-truncate-inline" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span></span>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4417,7 +4359,7 @@ A `treeview` variation for light colored backgrounds.
 												</button>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4445,7 +4387,7 @@ A `treeview` variation for light colored backgrounds.
 												<span class="component-text"><span class="text-truncate-inline" title="Site Template"><span class="text-truncate">Site Template</span></span></span>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4454,7 +4396,7 @@ A `treeview` variation for light colored backgrounds.
 												</button>
 											</div>
 											<div class="autofit-col">
-												<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+												<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 													<span class="c-inner" tabindex="-2">
 														<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 															<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4509,7 +4451,7 @@ A `treeview` variation for light colored backgrounds.
 						</span>
 					</div>
 					<div class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4518,7 +4460,7 @@ A `treeview` variation for light colored backgrounds.
 						</button>
 					</div>
 					<div class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4547,7 +4489,7 @@ A `treeview` variation for light colored backgrounds.
 									<span class="component-text"><span class="text-truncate-inline" title="Sitemap"><span class="text-truncate">Sitemap</span></span></span>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4556,7 +4498,7 @@ A `treeview` variation for light colored backgrounds.
 									</button>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4584,7 +4526,7 @@ A `treeview` variation for light colored backgrounds.
 									<span class="component-text"><span class="text-truncate-inline" title="Robots"><span class="text-truncate">Robots</span></span></span>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4593,7 +4535,7 @@ A `treeview` variation for light colored backgrounds.
 									</button>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4645,7 +4587,7 @@ A `treeview` variation for light colored backgrounds.
 						</span>
 					</div>
 					<div class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4654,7 +4596,7 @@ A `treeview` variation for light colored backgrounds.
 						</button>
 					</div>
 					<div class="autofit-col">
-						<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+						<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 							<span class="c-inner" tabindex="-2">
 								<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4683,7 +4625,7 @@ A `treeview` variation for light colored backgrounds.
 									<span class="component-text"><span class="text-truncate-inline" title="Default User Associations"><span class="text-truncate">Default User Associations</span></span></span>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4692,7 +4634,7 @@ A `treeview` variation for light colored backgrounds.
 									</button>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4720,7 +4662,7 @@ A `treeview` variation for light colored backgrounds.
 									<span class="component-text"><span class="text-truncate-inline" title="Staging"><span class="text-truncate">Staging</span></span></span>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4729,7 +4671,7 @@ A `treeview` variation for light colored backgrounds.
 									</button>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4757,7 +4699,7 @@ A `treeview` variation for light colored backgrounds.
 									<span class="component-text"><span class="text-truncate-inline" title="Analytics"><span class="text-truncate">Analytics</span></span></span>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4766,7 +4708,7 @@ A `treeview` variation for light colored backgrounds.
 									</button>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4794,7 +4736,7 @@ A `treeview` variation for light colored backgrounds.
 									<span class="component-text"><span class="text-truncate-inline" title="Maps"><span class="text-truncate">Maps</span></span></span>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -4803,7 +4745,7 @@ A `treeview` variation for light colored backgrounds.
 									</button>
 								</div>
 								<div class="autofit-col">
-									<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+									<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 										<span class="c-inner" tabindex="-2">
 											<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 												<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -4821,7 +4763,10 @@ A `treeview` variation for light colored backgrounds.
 </ul>
 
 ```html
-<ul class="treeview treeview-nested treeview-light" role="tree">
+<ul
+	class="treeview treeview-nested treeview-light show-quick-actions-on-hover"
+	role="tree"
+>
 	<li class="treeview-item" role="none">
 		<div
 			aria-controls="treeviewLightCollapseCheckbox01"
@@ -4904,7 +4849,7 @@ A `treeview` variation for light colored backgrounds.
 					</div>
 					<div class="autofit-col">
 						<button
-							class="btn btn-monospaced component-action"
+							class="btn btn-monospaced component-action quick-action-item"
 							tabindex="-1"
 							type="button"
 						>
@@ -4923,7 +4868,7 @@ A `treeview` variation for light colored backgrounds.
 					</div>
 					<div class="autofit-col">
 						<button
-							class="btn btn-monospaced component-action"
+							class="btn btn-monospaced component-action quick-action-item"
 							tabindex="-1"
 							type="button"
 						>
@@ -5035,7 +4980,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5054,7 +4999,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5121,7 +5066,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5143,7 +5088,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5212,7 +5157,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5234,7 +5179,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5304,7 +5249,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5326,7 +5271,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5395,7 +5340,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5417,7 +5362,7 @@ A `treeview` variation for light colored backgrounds.
 											</div>
 											<div class="autofit-col">
 												<button
-													class="btn btn-monospaced component-action"
+													class="btn btn-monospaced component-action quick-action-item"
 													tabindex="-1"
 													type="button"
 												>
@@ -5529,7 +5474,7 @@ A `treeview` variation for light colored backgrounds.
 					</div>
 					<div class="autofit-col">
 						<button
-							class="btn btn-monospaced component-action"
+							class="btn btn-monospaced component-action quick-action-item"
 							tabindex="-1"
 							type="button"
 						>
@@ -5548,7 +5493,7 @@ A `treeview` variation for light colored backgrounds.
 					</div>
 					<div class="autofit-col">
 						<button
-							class="btn btn-monospaced component-action"
+							class="btn btn-monospaced component-action quick-action-item"
 							tabindex="-1"
 							type="button"
 						>
@@ -5610,7 +5555,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5629,7 +5574,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5690,7 +5635,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5709,7 +5654,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5815,7 +5760,7 @@ A `treeview` variation for light colored backgrounds.
 					</div>
 					<div class="autofit-col">
 						<button
-							class="btn btn-monospaced component-action"
+							class="btn btn-monospaced component-action quick-action-item"
 							tabindex="-1"
 							type="button"
 						>
@@ -5834,7 +5779,7 @@ A `treeview` variation for light colored backgrounds.
 					</div>
 					<div class="autofit-col">
 						<button
-							class="btn btn-monospaced component-action"
+							class="btn btn-monospaced component-action quick-action-item"
 							tabindex="-1"
 							type="button"
 						>
@@ -5896,7 +5841,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5915,7 +5860,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5976,7 +5921,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -5995,7 +5940,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -6056,7 +6001,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -6075,7 +6020,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -6136,7 +6081,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -6155,7 +6100,7 @@ A `treeview` variation for light colored backgrounds.
 								</div>
 								<div class="autofit-col">
 									<button
-										class="btn btn-monospaced component-action"
+										class="btn btn-monospaced component-action quick-action-item"
 										tabindex="-1"
 										type="button"
 									>
@@ -6187,7 +6132,7 @@ A `treeview` variation for light colored backgrounds.
 A `treeview` variation for dark colored backgrounds.
 
 <div class="bg-dark">
-	<ul class="treeview treeview-dark treeview-nested" role="tree">
+	<ul class="treeview treeview-dark treeview-nested show-quick-actions-on-hover" role="tree">
 		<li class="treeview-item" role="none">
 			<div aria-controls="treeviewDarkCollapseCheckbox01" aria-expanded="true" class="treeview-link" data-target="#treeviewDarkCollapseCheckbox01" data-toggle="collapse" role="treeitem" tabindex="0">
 				<div class="c-inner" tabindex="-2">
@@ -6225,7 +6170,7 @@ A `treeview` variation for dark colored backgrounds.
 							</span>
 						</div>
 						<div class="autofit-col">
-							<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+							<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 								<span class="c-inner" tabindex="-2">
 									<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 										<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6234,7 +6179,7 @@ A `treeview` variation for dark colored backgrounds.
 							</button>
 						</div>
 						<div class="autofit-col">
-							<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+							<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 								<span class="c-inner" tabindex="-2">
 									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6284,7 +6229,7 @@ A `treeview` variation for dark colored backgrounds.
 										</span>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6293,7 +6238,7 @@ A `treeview` variation for dark colored backgrounds.
 										</button>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6322,7 +6267,7 @@ A `treeview` variation for dark colored backgrounds.
 													<span class="component-text"><span class="text-truncate-inline"><span class="text-truncate" title="Details">Details</span></span></span>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6331,7 +6276,7 @@ A `treeview` variation for dark colored backgrounds.
 													</button>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6359,7 +6304,7 @@ A `treeview` variation for dark colored backgrounds.
 													<span class="component-text"><span class="text-truncate-inline" title="Categorization"><span class="text-truncate">Categorization</span></span></span>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6368,7 +6313,7 @@ A `treeview` variation for dark colored backgrounds.
 													</button>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6396,7 +6341,7 @@ A `treeview` variation for dark colored backgrounds.
 													<span class="component-text"><span class="text-truncate-inline" title="Documents and Media"><span class="text-truncate">Documents and Media</span></span></span>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6405,7 +6350,7 @@ A `treeview` variation for dark colored backgrounds.
 													</button>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6433,7 +6378,7 @@ A `treeview` variation for dark colored backgrounds.
 													<span class="component-text"><span class="text-truncate-inline" title="Site Template"><span class="text-truncate">Site Template</span></span></span>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6442,7 +6387,7 @@ A `treeview` variation for dark colored backgrounds.
 													</button>
 												</div>
 												<div class="autofit-col">
-													<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+													<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 														<span class="c-inner" tabindex="-2">
 															<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 																<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6497,7 +6442,7 @@ A `treeview` variation for dark colored backgrounds.
 							</span>
 						</div>
 						<div class="autofit-col">
-							<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+							<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 								<span class="c-inner" tabindex="-2">
 									<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 										<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6506,7 +6451,7 @@ A `treeview` variation for dark colored backgrounds.
 							</button>
 						</div>
 						<div class="autofit-col">
-							<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+							<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 								<span class="c-inner" tabindex="-2">
 									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6535,7 +6480,7 @@ A `treeview` variation for dark colored backgrounds.
 										<span class="component-text"><span class="text-truncate-inline" title="Sitemap"><span class="text-truncate">Sitemap</span></span></span>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6544,7 +6489,7 @@ A `treeview` variation for dark colored backgrounds.
 										</button>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6572,7 +6517,7 @@ A `treeview` variation for dark colored backgrounds.
 										<span class="component-text"><span class="text-truncate-inline" title="Robots"><span class="text-truncate">Robots</span></span></span>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6581,7 +6526,7 @@ A `treeview` variation for dark colored backgrounds.
 										</button>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6633,7 +6578,7 @@ A `treeview` variation for dark colored backgrounds.
 							</span>
 						</div>
 						<div class="autofit-col">
-							<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+							<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 								<span class="c-inner" tabindex="-2">
 									<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 										<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6642,7 +6587,7 @@ A `treeview` variation for dark colored backgrounds.
 							</button>
 						</div>
 						<div class="autofit-col">
-							<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+							<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 								<span class="c-inner" tabindex="-2">
 									<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 										<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6671,7 +6616,7 @@ A `treeview` variation for dark colored backgrounds.
 										<span class="component-text"><span class="text-truncate-inline" title="Default User Associations"><span class="text-truncate">Default User Associations</span></span></span>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6680,7 +6625,7 @@ A `treeview` variation for dark colored backgrounds.
 										</button>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6708,7 +6653,7 @@ A `treeview` variation for dark colored backgrounds.
 										<span class="component-text"><span class="text-truncate-inline" title="Staging"><span class="text-truncate">Staging</span></span></span>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6717,7 +6662,7 @@ A `treeview` variation for dark colored backgrounds.
 										</button>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6745,7 +6690,7 @@ A `treeview` variation for dark colored backgrounds.
 										<span class="component-text"><span class="text-truncate-inline" title="Analytics"><span class="text-truncate">Analytics</span></span></span>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6754,7 +6699,7 @@ A `treeview` variation for dark colored backgrounds.
 										</button>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6782,7 +6727,7 @@ A `treeview` variation for dark colored backgrounds.
 										<span class="component-text"><span class="text-truncate-inline" title="Maps"><span class="text-truncate">Maps</span></span></span>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-times-circle-full" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times-circle-full" />
@@ -6791,7 +6736,7 @@ A `treeview` variation for dark colored backgrounds.
 										</button>
 									</div>
 									<div class="autofit-col">
-										<button class="btn btn-monospaced component-action" tabindex="-1" type="button">
+										<button class="btn btn-monospaced component-action quick-action-item" tabindex="-1" type="button">
 											<span class="c-inner" tabindex="-2">
 												<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#ellipsis-v" />
@@ -6811,7 +6756,10 @@ A `treeview` variation for dark colored backgrounds.
 
 ```html
 <div class="bg-dark">
-	<ul class="treeview treeview-dark treeview-nested" role="tree">
+	<ul
+		class="treeview treeview-dark treeview-nested show-quick-actions-on-hover"
+		role="tree"
+	>
 		<li class="treeview-item" role="none">
 			<div
 				aria-controls="treeviewDarkCollapseCheckbox01"
@@ -6894,7 +6842,7 @@ A `treeview` variation for dark colored backgrounds.
 						</div>
 						<div class="autofit-col">
 							<button
-								class="btn btn-monospaced component-action"
+								class="btn btn-monospaced component-action quick-action-item"
 								tabindex="-1"
 								type="button"
 							>
@@ -6913,7 +6861,7 @@ A `treeview` variation for dark colored backgrounds.
 						</div>
 						<div class="autofit-col">
 							<button
-								class="btn btn-monospaced component-action"
+								class="btn btn-monospaced component-action quick-action-item"
 								tabindex="-1"
 								type="button"
 							>
@@ -7027,7 +6975,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7046,7 +6994,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7116,7 +7064,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7138,7 +7086,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7207,7 +7155,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7229,7 +7177,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7299,7 +7247,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7321,7 +7269,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7391,7 +7339,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7413,7 +7361,7 @@ A `treeview` variation for dark colored backgrounds.
 												</div>
 												<div class="autofit-col">
 													<button
-														class="btn btn-monospaced component-action"
+														class="btn btn-monospaced component-action quick-action-item"
 														tabindex="-1"
 														type="button"
 													>
@@ -7525,7 +7473,7 @@ A `treeview` variation for dark colored backgrounds.
 						</div>
 						<div class="autofit-col">
 							<button
-								class="btn btn-monospaced component-action"
+								class="btn btn-monospaced component-action quick-action-item"
 								tabindex="-1"
 								type="button"
 							>
@@ -7544,7 +7492,7 @@ A `treeview` variation for dark colored backgrounds.
 						</div>
 						<div class="autofit-col">
 							<button
-								class="btn btn-monospaced component-action"
+								class="btn btn-monospaced component-action quick-action-item"
 								tabindex="-1"
 								type="button"
 							>
@@ -7608,7 +7556,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7627,7 +7575,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7690,7 +7638,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7709,7 +7657,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7815,7 +7763,7 @@ A `treeview` variation for dark colored backgrounds.
 						</div>
 						<div class="autofit-col">
 							<button
-								class="btn btn-monospaced component-action"
+								class="btn btn-monospaced component-action quick-action-item"
 								tabindex="-1"
 								type="button"
 							>
@@ -7834,7 +7782,7 @@ A `treeview` variation for dark colored backgrounds.
 						</div>
 						<div class="autofit-col">
 							<button
-								class="btn btn-monospaced component-action"
+								class="btn btn-monospaced component-action quick-action-item"
 								tabindex="-1"
 								type="button"
 							>
@@ -7899,7 +7847,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7918,7 +7866,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -7981,7 +7929,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -8000,7 +7948,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -8063,7 +8011,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -8082,7 +8030,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -8145,7 +8093,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>
@@ -8164,7 +8112,7 @@ A `treeview` variation for dark colored backgrounds.
 									</div>
 									<div class="autofit-col">
 										<button
-											class="btn btn-monospaced component-action"
+											class="btn btn-monospaced component-action quick-action-item"
 											tabindex="-1"
 											type="button"
 										>

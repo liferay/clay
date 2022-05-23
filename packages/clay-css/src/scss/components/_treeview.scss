@@ -37,6 +37,23 @@
 
 	.component-text {
 		@include clay-css(map-get($treeview, component-text));
+
+		> .autofit-row {
+			@include clay-css(
+				map-deep-get($treeview, component-text, autofit-row)
+			);
+
+			> .autofit-col {
+				@include clay-css(
+					map-deep-get(
+						$treeview,
+						component-text,
+						autofit-row,
+						autofit-col
+					)
+				);
+			}
+		}
 	}
 
 	&.show-component-expander-on-hover {
@@ -99,6 +116,38 @@
 			);
 		}
 	}
+
+	.quick-action-item {
+		@include clay-css(map-get($treeview, quick-action-item));
+	}
+
+	.autofit-row {
+		@include clay-css(map-get($treeview, autofit-row));
+	}
+
+	&.show-quick-actions-on-hover {
+		.treeview-link {
+			&:not(:hover):not(:focus):not(.focus) {
+				.quick-action-item {
+					display: none;
+				}
+			}
+
+			&:disabled,
+			&.disabled {
+				.quick-action-item {
+					display: none;
+				}
+			}
+
+			.quick-action-item {
+				&:disabled,
+				&.disabled {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .treeview-group {
@@ -134,22 +183,6 @@
 		);
 	}
 
-	&.hover,
-	&:hover,
-	&.focus,
-	&:focus {
-		.component-action {
-			display: flex;
-		}
-	}
-
-	&:disabled,
-	&.disabled {
-		.component-action {
-			display: none;
-		}
-	}
-
 	&.show,
 	&[aria-expanded='true'] {
 		.component-expander {
@@ -160,6 +193,17 @@
 			.lexicon-icon:not(.component-expanded-d-none) {
 				display: inline-block;
 			}
+		}
+	}
+
+	> .autofit-row,
+	.c-inner > .autofit-row {
+		@include clay-css(map-deep-get($treeview, treeview-link, autofit-row));
+
+		> .autofit-col {
+			@include clay-css(
+				map-deep-get($treeview, treeview-link, autofit-row, autofit-col)
+			);
 		}
 	}
 }
