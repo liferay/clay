@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.58.0](https://github.com/liferay/clay/compare/v3.57.0...v3.58.0) (2022-05-23)
+
+### Bug Fixes
+
+-   **@clayui/core:** revalidate the state of intermediate for recursive multiple selection when the state is controlled ([172f849](https://github.com/liferay/clay/commit/172f849fcae41ce05e1c6254267f78f070966e85))
+
+### Features
+
+-   **@clayui/core:** adds new `onSelect` API to TreeView ([aca1322](https://github.com/liferay/clay/commit/aca132291f4ead5bded706e9585af4197c0b5e42))
+-   **@clayui/core:** adds OOTB support for Text component in TreeView.Item/ItemStack ([cf32759](https://github.com/liferay/clay/commit/cf327597e8e3afbe6f78390008ea9aa6b25612ff))
+-   **@clayui/core:** calls onKeyDown on Item and ItemStack if defined ([e5dfbf1](https://github.com/liferay/clay/commit/e5dfbf15024c6a8c85be78ac4d9a00ae8be56d06))
+
 # [3.57.0](https://github.com/liferay/clay/compare/v3.56.0...v3.57.0) (2022-05-16)
 
 ### Features

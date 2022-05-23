@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.58.0](https://github.com/liferay/clay/compare/v3.57.0...v3.58.0) (2022-05-23)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin tables should use clay mixin pattern ([619bd1c](https://github.com/liferay/clay/commit/619bd1c0b8b3594db36c7ff06a717bfff1084682))
+* **@clayui/css:** Cadmin tables use newer keys in maps ([ab387d3](https://github.com/liferay/clay/commit/ab387d318dfe01a0b6675e719a1bde1cff0e91e9))
+* **@clayui/css:** Cadmin Treeview `btn` should be 24px tall and adds `show-quick-actions-on-hover` ([e31e0b6](https://github.com/liferay/clay/commit/e31e0b61dd68758a57064ca9cbfb8b3ce2d15ae9))
+* **@clayui/css:** Tables group table maps better and fix double border on table-list ([833bcb4](https://github.com/liferay/clay/commit/833bcb41d12b5788ca9d4968fe5c1ddb83baa563))
+* **@clayui/css:** Tables should use clay mixin pattern ([28281e3](https://github.com/liferay/clay/commit/28281e32a4743b882def29aa7b0521af96c9502f))
+* **@clayui/css:** Treeview `btn` should be 24px tall and adds show-quick-actions-on-hover ([65b41b6](https://github.com/liferay/clay/commit/65b41b61f4de8b6160cca1818d6f5130867c59f6))
+* **@clayui/css:** Treeview and Cadmin Treeview vertically center items in treeview-link ([2cc9aa2](https://github.com/liferay/clay/commit/2cc9aa28b6619821797631abd849d0dc5c90cde5))
+* **@clayui/css:** Treeview removes component-action show on hover in favor of show-quick-actions-on-hover ([ed87780](https://github.com/liferay/clay/commit/ed8778029ff3af6ab86aea9deb553ec30cdf4f51))
+
+
+### Features
+
+* **@clayui/css:** Adds icons folder-lock and folder-lock-line ([d010847](https://github.com/liferay/clay/commit/d010847247fdf45c58ebd8989bcd66f7e1c870d7))
+* **@clayui/css:** Mixins add clay-table-variant ([653f985](https://github.com/liferay/clay/commit/653f985057131baff5c8dc2fd84f78f1e6b4d1aa))
+
+
+
+
+
 # [3.57.0](https://github.com/liferay/clay/compare/v3.56.0...v3.57.0) (2022-05-16)
 
 
