@@ -76,6 +76,11 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	defaultActive?: number;
 
 	/**
+	 * Flag to disable ellipsis button
+	 */
+	disableEllipsis?: boolean;
+
+	/**
 	 * The page numbers that should be disabled. For example, `[2,5,6]`.
 	 */
 	disabledPages?: Array<number>;
@@ -153,6 +158,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
 		defaultActive = 1,
 		deltas = defaultDeltas,
 		disabledPages,
+		disableEllipsis = false,
 		ellipsisBuffer,
 		hrefConstructor,
 		labels = DEFAULT_LABELS,
@@ -241,6 +247,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
 				<ClayPaginationWithBasicItems
 					active={internalActive}
 					alignmentPosition={alignmentPosition}
+					disableEllipsis={disableEllipsis}
 					disabledPages={disabledPages}
 					ellipsisBuffer={ellipsisBuffer}
 					hrefConstructor={hrefConstructor}
