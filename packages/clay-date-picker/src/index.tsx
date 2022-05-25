@@ -8,7 +8,7 @@ import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
 import {FocusScope, InternalDispatch, useInternalState} from '@clayui/shared';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import DateNavigation from './DateNavigation';
 import DayNumber from './DayNumber';
@@ -268,7 +268,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 		// `initialMonth`.
 		initialMonth = defaultMonth ?? initialMonth;
 
-		const [internalValue, setValue] = useInternalState({
+		const [internalValue, setValue, isUncontrolled] = useInternalState({
 			defaultName: 'defaultValue',
 			defaultValue,
 			handleName: 'onChange',
@@ -434,14 +434,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 			setValue(daysSelectedToString);
 		};
 
-		/**
-		 * Control the value of the input propagating with the call
-		 * of `onChange` but does not change what the user types,
-		 * if a date is valid the month of the Date Picker is changed.
-		 */
-		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-			const {value} = event.target;
-
+		const updateDate = useCallback((value: string) => {
 			if (!value) {
 				changeMonth(initialMonth);
 
@@ -478,9 +471,25 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 					}
 				}
 			}
+		}, []);
 
+		/**
+		 * Control the value of the input propagating with the call
+		 * of `onChange` but does not change what the user types,
+		 * if a date is valid the month of the Date Picker is changed.
+		 */
+		const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+			const {value} = event.target;
+
+			updateDate(value);
 			setValue(value);
 		};
+
+		useEffect(() => {
+			if (!isUncontrolled) {
+				updateDate(internalValue);
+			}
+		}, [isUncontrolled, internalValue]);
 
 		/**
 		 * Changes selected date to the current date. The same happens when there
