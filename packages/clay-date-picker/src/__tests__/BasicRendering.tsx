@@ -114,6 +114,7 @@ describe('BasicRendering', () => {
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				defaultValue="2019-04-10"
+				spritemap={spritemap}
 				years={{end: 2019, start: 2019}}
 			/>
 		);
@@ -141,6 +142,7 @@ describe('BasicRendering', () => {
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				onChange={() => {}}
+				spritemap={spritemap}
 				value="2019-04-10"
 				years={{end: 2019, start: 2019}}
 			/>
@@ -170,6 +172,7 @@ describe('BasicRendering', () => {
 				defaultMonth={new Date(2019, 3, 18)}
 				onChange={() => {}}
 				range
+				spritemap={spritemap}
 				value="2019-04-10 - 2019-04-15"
 				years={{end: 2019, start: 2019}}
 			/>
@@ -230,6 +233,7 @@ describe('BasicRendering', () => {
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				onChange={() => {}}
+				spritemap={spritemap}
 				time
 				value="2019-04-10 05:00"
 				years={{end: 2019, start: 2019}}
@@ -265,6 +269,7 @@ describe('BasicRendering', () => {
 				}}
 				defaultMonth={new Date(2019, 3, 18)}
 				defaultValue="2019-04-10 05:00"
+				spritemap={spritemap}
 				time
 				years={{end: 2019, start: 2019}}
 			/>

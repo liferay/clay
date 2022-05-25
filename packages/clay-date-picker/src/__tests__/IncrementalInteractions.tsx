@@ -345,8 +345,10 @@ describe('IncrementalInteractions', () => {
 
 		expect(input.value).toBe('2019-05-01');
 		expect(yearSelect.value).toBe('2019');
-		expect(monthSelect.value).toBe('3');
-		expect(dayNumber.classList).toContain('active');
+		expect(monthSelect.value).toBe('4');
+		expect(
+			getByLabelText(new Date('2019 05 01').toDateString()).classList
+		).toContain('active');
 	});
 
 	describe('TimePicker', () => {
@@ -673,5 +675,56 @@ describe('IncrementalInteractions', () => {
 
 		const dayNumber = getByLabelText(currentDate.toDateString());
 		expect(dayNumber.classList).toContain('active');
+	});
+
+	it('updates date state when resetting input value using the controlled mode', () => {
+		function DatePickerControlled() {
+			const [value, setValue] = React.useState('2019-04-10 - 2019-04-15');
+
+			return (
+				<>
+					<button
+						aria-label="reset"
+						onClick={() => setValue('')}
+						type="button"
+					>
+						RESET
+					</button>
+					<ClayDatePicker
+						ariaLabels={ariaLabels}
+						defaultExpanded
+						defaultMonth={new Date(2019, 3, 18)}
+						onChange={setValue}
+						placeholder="YYYY-MM-DD"
+						range
+						spritemap={spritemap}
+						value={value}
+						years={{end: 2019, start: 2019}}
+					/>
+				</>
+			);
+		}
+
+		const {getByLabelText} = render(<DatePickerControlled />);
+
+		const resetButton = getByLabelText('reset');
+		const dayNumber = getByLabelText(new Date('2019 04 10').toDateString());
+		const endDate = getByLabelText(new Date('2019 04 15').toDateString());
+
+		expect(dayNumber.classList).toContain('active');
+		expect(endDate.classList).toContain('active');
+
+		fireEvent.click(resetButton);
+
+		const input: any = getByLabelText(ariaLabels.input);
+
+		const defaultDate = getByLabelText(
+			new Date('2019 04 18').toDateString()
+		);
+
+		expect(input.value).toBe('');
+		expect(defaultDate.classList).toContain('active');
+		expect(dayNumber.classList).not.toContain('active');
+		expect(endDate.classList).not.toContain('active');
 	});
 });
