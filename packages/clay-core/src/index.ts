@@ -20,6 +20,7 @@ export {
 } from '@clayui/modal';
 export {Provider, useProvider} from '@clayui/provider';
 
+export {Heading, Text} from './typography';
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
-export {Heading, Text} from './typography';
+export {VerticalBar} from './vertical-bar';

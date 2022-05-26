@@ -35,7 +35,9 @@ export function Collection<T extends Record<any, any>>({
 		<>
 			{typeof children === 'function' && items
 				? items.map((item, index) => {
-						const child = children(item);
+						const child: React.ReactElement<{
+							keyValue?: React.Key;
+						}> = children(item);
 
 						const key = getKey(index, item.id ?? child.key);
 
@@ -50,9 +52,12 @@ export function Collection<T extends Record<any, any>>({
 
 						const key = getKey(index, child.key);
 
-						return React.cloneElement(child, {
-							keyValue: key,
-						});
+						return React.cloneElement(
+							child as React.ReactElement<{keyValue?: React.Key}>,
+							{
+								keyValue: key,
+							}
+						);
 				  })}
 		</>
 	);
