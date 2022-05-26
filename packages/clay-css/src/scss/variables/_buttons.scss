@@ -403,7 +403,6 @@ $btn-primary: map-deep-merge(
 			border-color: $primary,
 			color: color-yiq($primary),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$btn-primary
 );
@@ -480,7 +479,6 @@ $btn-secondary: map-deep-merge(
 			border-color: $secondary,
 			color: color-yiq($secondary),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$btn-secondary
 );
@@ -541,7 +539,6 @@ $btn-success: map-deep-merge(
 			border-color: $success,
 			color: color-yiq($success),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$btn-success
 );
@@ -596,7 +593,6 @@ $btn-info: map-deep-merge(
 			border-color: $info,
 			color: color-yiq($info),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$btn-info
 );
@@ -717,7 +713,6 @@ $btn-danger: map-deep-merge(
 			border-color: $danger,
 			color: color-yiq($danger),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$btn-danger
 );
@@ -826,7 +821,6 @@ $btn-dark: map-deep-merge(
 			border-color: $dark,
 			color: color-yiq($dark),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$btn-dark
 );

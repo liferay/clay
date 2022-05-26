@@ -184,7 +184,6 @@ $btn-secondary: map-deep-merge(
 			border-color: $secondary-l2,
 			color: $secondary,
 		),
-		loading-animation: null,
 	),
 	$btn-secondary
 );
@@ -272,7 +271,6 @@ $btn-warning: map-deep-merge(
 		disabled: (
 			background-color: $warning,
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$btn-warning
 );
