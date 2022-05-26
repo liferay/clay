@@ -3,6 +3,7 @@
 ////
 
 /// A mixin for creating and customizing the Clay CSS Loading Indicator.
+/// @deprecated The dotted spinner was replaced by the circular spinner with gradient.
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
 /// enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
@@ -83,24 +84,24 @@
 		$after,
 		(
 			animation:
-				setter(map-get($map, animation), map-get($after, animation)),
+				setter(map-get($after, animation), map-get($map, animation)),
 			animation-name:
 				required(
 					setter(
-						map-get($map, animation-name),
-						map-get($after, animation-name)
+						map-get($after, animation-name),
+						map-get($map, animation-name)
 					),
 					'The property `animation-name` in `#{$mixin-name}` is required!'
 				),
 			border-radius:
 				setter(
-					map-get($map, border-radius),
-					map-get($after, border-radius)
+					map-get($after, border-radius),
+					map-get($map, border-radius)
 				),
 			box-shadow:
 				setter(
-					map-get($map, box-shadow),
 					map-get($after, box-shadow),
+					map-get($map, box-shadow),
 					#{0 -1em 0 $ball-0-scale $ball-0-color,
 					1em -0.5em 0 $ball-5-scale $ball-5-color,
 					1em 0.5em 0 $ball-4-scale $ball-4-color,
@@ -110,12 +111,14 @@
 				),
 			color: $after-color,
 			transform:
-				setter(map-get($map, transform), map-get($after, transform)),
+				setter(map-get($after, transform), map-get($map, transform)),
 		)
 	);
 
 	@if ($enabled) {
-		&:after {
+		@include clay-css($map);
+
+		&::after {
 			@include clay-css($after);
 		}
 
@@ -170,6 +173,43 @@
 					0 1em 0 $ball-2-scale $ball-2-color,
 					-1em 0.5em 0 $ball-1-scale $ball-1-color,
 					-1em -0.5em 0 $ball-0-scale $ball-0-color;
+			}
+		}
+	}
+}
+
+/// A mixin for creating and customizing the Clay CSS Spinners.
+/// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
+/// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	mixin-name: {String}, // Accepts the string 'clay-loading-animation-variant' to revert to the old mixin
+/// 	// .loading-animation
+/// 	before: (
+/// 		// .loading-animation::before
+/// 	),
+/// 	after: (
+/// 		// .loading-animation::after
+/// 	),
+/// )
+
+@mixin clay-spinner-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		$mixin-name: map-get($map, mixin-name);
+
+		@if ($mixin-name == 'clay-loading-animation-variant') {
+			@include clay-loading-animation-variant($map);
+		} @else if ($enabled) {
+			@include clay-css($map);
+
+			&::before {
+				@include clay-css(map-get($map, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($map, after));
 			}
 		}
 	}
