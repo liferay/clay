@@ -33,7 +33,7 @@ type Props = {
 	as?: 'p' | 'span';
 
 	/**
-	 * Sets the element that will receive the highlight.
+	 * Text content.
 	 */
 	children?: React.ReactNode;
 

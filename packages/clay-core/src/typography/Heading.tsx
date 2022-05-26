@@ -18,7 +18,7 @@ export type WeightFont =
 
 type Props = {
 	/**
-	 * Sets the element that will receive the highlight.
+	 * Heading content.
 	 */
 	children?: React.ReactNode;
 
