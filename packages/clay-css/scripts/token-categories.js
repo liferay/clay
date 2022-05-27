@@ -1,14 +1,14 @@
 module.exports = {
-	'grays': {
+	grays: {
 		regex: /--((white)|(black)|(gray))/gm,
 	},
-	'colors': {
+	colors: {
 		regex: /--((blue)|(indigo)|(purple)|(pink)|(red)|(orange)|(yellow)|(green)|(teal)|(cyan))/gm,
 	},
-	'globals': {
+	globals: {
 		regex: /--((border-radius)|(rounded)|(component)|(font-family)|(font-weight))/gm,
 	},
-	'layout': {
+	layout: {
 		regex: /--((spacer)|(border-radius)|(rounded)|(breakpoint))/gm,
 	},
 	'primary-colors': {
@@ -35,10 +35,10 @@ module.exports = {
 	'dark-colors': {
 		regex: /--dark/gm,
 	},
-	'link': {
+	link: {
 		regex: /--link/gm,
 	},
-	'btn': {
+	btn: {
 		regex: /--(?!btn-primary|btn-secondary|btn-success|btn-info|btn-warning|btn-danger|btn-light|btn-dark|btn-link|btn-outline|btn-sm|btn-lg|btn-monospaced)btn/gm,
 	},
 	'btn-lg': {
@@ -83,13 +83,13 @@ module.exports = {
 	'btn-link': {
 		regex: /--btn-link/gm,
 	},
-	'alert': {
+	alert: {
 		regex: /--alert/gm,
 	},
 	'form-control': {
-		regex:/--input/gm,
+		regex: /--input/gm,
 	},
-	'table': {
+	table: {
 		regex: /--(?!table-list|table-cell)table/gm,
 	},
 	'table-cell': {

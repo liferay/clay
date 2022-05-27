@@ -18,7 +18,8 @@ const REGEX_CSSVAR_AND_VALUE = /\s\s--(.+?)(?=;\n)/g;
 const REGEX_CSSVAR_AND_VALUE_NAME = /--(.+?)(?=:)/g;
 const REGEX_CSSVAR_AND_VALUE_VALUE = /\s(?!-)(?!\s)(.+?)$/gm;
 
-const REGEX_CSSVAR_WITH_FALLBACK = /var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?)calc(.+?)(?=;)|var\(--(.+?)\)/gm;
+const REGEX_CSSVAR_WITH_FALLBACK =
+	/var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?),\s*var\(--(\)|(.+?)\))(\)|(.+?)\))|var\(--(.+?)calc(.+?)(?=;)|var\(--(.+?)\)/gm;
 const REGEX_CSSVAR_WITH_FALLBACK_NAME = /^var\(--(.+?)((?=,)|(?=\)))/gm;
 const REGEX_CSSVAR_WITH_FALLBACK_VALUE = /,(.+?)$/gm;
 
@@ -32,7 +33,9 @@ const valArray = [];
 
 for (let i = 0; i < cssvarAndValue.length; i++) {
 	const property = cssvarAndValue[i].match(REGEX_CSSVAR_AND_VALUE_NAME)[0];
-	const value = cssvarAndValue[i].match(REGEX_CSSVAR_AND_VALUE_VALUE)[0].trim();
+	const value = cssvarAndValue[i]
+		.match(REGEX_CSSVAR_AND_VALUE_VALUE)[0]
+		.trim();
 
 	propArray.push(property);
 	valArray.push(value);
@@ -43,7 +46,11 @@ for (let i = 0; i < cssvarAndValue.length; i++) {
 for (let i = 0; i < cssvarWithFallback.length; i++) {
 	// Removes `var(` from property name
 
-	const property = [cssvarWithFallback[i].match(REGEX_CSSVAR_WITH_FALLBACK_NAME)[0].replace('var(', '')];
+	const property = [
+		cssvarWithFallback[i]
+			.match(REGEX_CSSVAR_WITH_FALLBACK_NAME)[0]
+			.replace('var(', ''),
+	];
 
 	let value = '';
 
@@ -54,13 +61,17 @@ for (let i = 0; i < cssvarWithFallback.length; i++) {
 	if (cssvarWithFallback[i].match(REGEX_CSSVAR_WITH_FALLBACK_VALUE)) {
 		// Removes `, ` from fallback value
 
-		const stripCommaSpace = cssvarWithFallback[i].match(REGEX_CSSVAR_WITH_FALLBACK_VALUE)[0].replace(/^,\s/gm, '')
+		const stripCommaSpace = cssvarWithFallback[i]
+			.match(REGEX_CSSVAR_WITH_FALLBACK_VALUE)[0]
+			.replace(/^,\s/gm, '');
 
 		// one:   ^(.+?)(\(|(.+?)\()(\)|(.+?)\))
 		// two:   ^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))
 		// three: ^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))
 		// four: ^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))
-		value = stripCommaSpace.match(/^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))|^(.+?)(\(|(.+?)\()(\)|(.+?)\))|(.+\b)/gm);
+		value = stripCommaSpace.match(
+			/^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))(\)|(.+?)\))|^(.+?)(\(|(.+?)\()(\(|(.+?)\()(\)|(.+?)\))(\)|(.+?)\))|^(.+?)(\(|(.+?)\()(\)|(.+?)\))|(.+\b)/gm
+		);
 
 		// The fallback value is invalid e.g., `var(--the-variable, );` or ""
 
@@ -73,7 +84,7 @@ for (let i = 0; i < cssvarWithFallback.length; i++) {
 }
 
 let uniqueValArray = [];
-let uniquePropArray = propArray.filter(function(item, pos, self) {
+let uniquePropArray = propArray.filter(function (item, pos, self) {
 	if (self.indexOf(item) === pos) {
 		uniqueValArray.push(valArray[pos]);
 
@@ -82,7 +93,6 @@ let uniquePropArray = propArray.filter(function(item, pos, self) {
 
 	return false;
 });
-
 
 let frontendToken = {
 	frontendTokenCategories: [],
@@ -109,13 +119,13 @@ for (const cat in tokenCategories) {
 					label: '',
 					mappings: [
 						{
-							type: "cssVariable",
+							type: 'cssVariable',
 							value: '',
 						},
 					],
 					name: '',
 					type: 'String',
-				}
+				},
 			],
 		};
 
@@ -125,7 +135,11 @@ for (const cat in tokenCategories) {
 
 			let frontendTokens = feTokenSetsObj.frontendTokens[0];
 
-			if (property.match(/--(?!(.+?)rgb)(primary|secondary|success|info|warning|danger|dark|light|white|gray|black|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan|(.+?)-color$)/gm)) {
+			if (
+				property.match(
+					/--(?!(.+?)rgb)(primary|secondary|success|info|warning|danger|dark|light|white|gray|black|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan|(.+?)-color$)/gm
+				)
+			) {
 				// frontendTokens.editorType = 'ColorPicker';
 			}
 
@@ -145,4 +159,7 @@ for (const cat in tokenCategories) {
 	tokenCategoriesIndex++;
 }
 
-fs.writeFileSync(path.join('frontend-token-definition.json'), JSON.stringify(frontendToken, null, 2));
+fs.writeFileSync(
+	path.join('frontend-token-definition.json'),
+	JSON.stringify(frontendToken, null, 2)
+);
