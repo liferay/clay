@@ -8,9 +8,12 @@ $autofit-col-expand-min-width: 3.125rem !default; // 50px
 $autofit-padded-col-padding-x: 0.5rem !default; // 8px
 $autofit-padded-col-padding-y: 0.25rem !default; // 4px
 
-$clay-root: clay-map-merge((
-	--autofit-padded-no-gutters-sm-spacer: 0.25rem,
-), $clay-root);
+$clay-root: clay-map-merge(
+	(
+		--autofit-padded-no-gutters-sm-spacer: 0.25rem,
+	),
+	$clay-root
+);
 
 $autofit-padded-no-gutters-sm: () !default;
 $autofit-padded-no-gutters-sm: map-merge(
@@ -38,7 +41,10 @@ $close: map-deep-merge(
 		appearance: none,
 		background-color: var(--close-background-color),
 		border-color: var(--close-border-color, transparent),
-		border-radius: clay-enable-rounded(var(--close-border-radius, var(--border-radius-sm))),
+		border-radius:
+			clay-enable-rounded(
+				var(--close-border-radius, var(--border-radius-sm))
+			),
 		border-width: var(--close-border-width),
 		color: var(--close-color, var(--gray-900)),
 		cursor: $link-cursor,
@@ -52,8 +58,14 @@ $close: map-deep-merge(
 		padding: var(--close-padding),
 		text-align: center,
 		text-shadow: $close-text-shadow,
-		transition: var(--close-transition, #{color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-			border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out}),
+		transition:
+			var(
+				--close-transition,
+				#{color 0.15s ease-in-out,
+				background-color 0.15s ease-in-out,
+				border-color 0.15s ease-in-out,
+				box-shadow 0.15s ease-in-out}
+			),
 		width: var(--close-width, 2rem),
 		hover: (
 			background-color: var(--close-hover-background-color),
@@ -65,7 +77,8 @@ $close: map-deep-merge(
 		focus: (
 			background-color: var(--close-focus-background-color),
 			border-color: var(--close-focus-border-color, transparent),
-			box-shadow: var(--close-focus-box-shadow, var(--component-focus-box-shadow)),
+			box-shadow:
+				var(--close-focus-box-shadow, var(--component-focus-box-shadow)),
 			color: var(--close-focus-color, var(--gray-900)),
 			opacity: var(--close-focus-opacity),
 			outline: 0,
@@ -148,55 +161,84 @@ $bg-theme-colors: () !default;
 $bg-theme-colors: map-deep-merge(
 	(
 		'primary': (
-			background-color: var(--bg-primary-background-color, var(--primary)) !important,
+			background-color: var(--bg-primary-background-color, var(--primary))
+				!important,
 			hover: (
-				background-color: var(--bg-primary-hover-background-color, var(--primary-d2)) !important,
+				background-color:
+					var(--bg-primary-hover-background-color, var(--primary-d2))
+					!important,
 			),
 		),
 		'secondary': (
-			background-color: var(--bg-secondary-background-color, var(--secondary)) !important,
+			background-color:
+				var(--bg-secondary-background-color, var(--secondary))
+				!important,
 			hover: (
-				background-color: var(--bg-secondary-hover-background-color, var(--secondary-d2)) !important,
+				background-color:
+					var(
+						--bg-secondary-hover-background-color,
+						var(--secondary-d2)
+					)
+					!important,
 			),
 		),
 		'success': (
-			background-color: var(--bg-success-background-color, var(--success)) !important,
+			background-color: var(--bg-success-background-color, var(--success))
+				!important,
 			hover: (
-				background-color: var(--bg-success-hover-background-color, var(--success-d2)) !important,
+				background-color:
+					var(--bg-success-hover-background-color, var(--success-d2))
+					!important,
 			),
 		),
 		'info': (
-			background-color: var(--bg-info-background-color, var(--info)) !important,
+			background-color: var(--bg-info-background-color, var(--info))
+				!important,
 			hover: (
-				background-color: var(--bg-info-hover-background-color, var(--info-d2)) !important,
+				background-color:
+					var(--bg-info-hover-background-color, var(--info-d2))
+					!important,
 			),
 		),
 		'warning': (
-			background-color: var(--bg-warning-background-color, var(--warning)) !important,
+			background-color: var(--bg-warning-background-color, var(--warning))
+				!important,
 			hover: (
-				background-color: var(--bg-warning-hover-background-color, var(--warning-d2)) !important,
+				background-color:
+					var(--bg-warning-hover-background-color, var(--warning-d2))
+					!important,
 			),
 		),
 		'danger': (
-			background-color: var(--bg-danger-background-color, var(--danger)) !important,
+			background-color: var(--bg-danger-background-color, var(--danger))
+				!important,
 			hover: (
-				background-color: var(--bg-danger-hover-background-color, var(--danger-d2)) !important,
+				background-color:
+					var(--bg-danger-hover-background-color, var(--danger-d2))
+					!important,
 			),
 		),
 		'light': (
-			background-color: var(--bg-light-background-color, var(--light)) !important,
+			background-color: var(--bg-light-background-color, var(--light))
+				!important,
 			hover: (
-				background-color: var(--bg-light-hover-background-color, var(--light-d2)) !important,
+				background-color:
+					var(--bg-light-hover-background-color, var(--light-d2))
+					!important,
 			),
 		),
 		'dark': (
-			background-color: var(--bg-dark-background-color, var(--dark)) !important,
+			background-color: var(--bg-dark-background-color, var(--dark))
+				!important,
 			hover: (
-				background-color: var(--bg-dark-hover-background-color, var(--dark-d2)) !important,
+				background-color:
+					var(--bg-dark-hover-background-color, var(--dark-d2))
+					!important,
 			),
 		),
 		'white': (
-			background-color: var(--bg-white-background-color, var(--white)) !important,
+			background-color: var(--bg-white-background-color, var(--white))
+				!important,
 		),
 		'transparent': (
 			background-color: transparent !important,
@@ -278,22 +320,27 @@ $border-theme-colors: () !default;
 $border-theme-colors: map-deep-merge(
 	(
 		'primary': (
-			border-color: var(--bg-primary-border-color, var(--primary)) !important,
+			border-color: var(--bg-primary-border-color, var(--primary))
+				!important,
 		),
 		'secondary': (
-			border-color: var(--bg-secondary-border-color, var(--secondary)) !important,
+			border-color: var(--bg-secondary-border-color, var(--secondary))
+				!important,
 		),
 		'success': (
-			border-color: var(--bg-success-border-color, var(--success)) !important,
+			border-color: var(--bg-success-border-color, var(--success))
+				!important,
 		),
 		'info': (
 			border-color: var(--bg-info-border-color, var(--info)) !important,
 		),
 		'warning': (
-			border-color: var(--bg-warning-border-color, var(--warning)) !important,
+			border-color: var(--bg-warning-border-color, var(--warning))
+				!important,
 		),
 		'danger': (
-			border-color: var(--bg-danger-border-color, var(--danger)) !important,
+			border-color: var(--bg-danger-border-color, var(--danger))
+				!important,
 		),
 		'light': (
 			border-color: var(--bg-light-border-color, var(--light)) !important,
@@ -382,19 +429,22 @@ $text-theme-colors: map-deep-merge(
 		'primary': (
 			color: var(--text-primary-color, var(--primary)) !important,
 			hover: (
-				color: var(--text-primary-hover-color, var(--primary-d2)) !important,
+				color: var(--text-primary-hover-color, var(--primary-d2))
+					!important,
 			),
 		),
 		'secondary': (
 			color: var(--text-secondary-color, var(--secondary)) !important,
 			hover: (
-				color: var(--text-secondary-hover-color, var(--secondary-d2)) !important,
+				color: var(--text-secondary-hover-color, var(--secondary-d2))
+					!important,
 			),
 		),
 		'success': (
 			color: var(--text-success-color, var(--success)) !important,
 			hover: (
-				color: var(--text-success-hover-color, var(--success-d2)) !important,
+				color: var(--text-success-hover-color, var(--success-d2))
+					!important,
 			),
 		),
 		'info': (
@@ -406,13 +456,15 @@ $text-theme-colors: map-deep-merge(
 		'warning': (
 			color: var(--text-warning-color, var(--warning)) !important,
 			hover: (
-				color: var(--text-warning-hover-color, var(--warning-d2)) !important,
+				color: var(--text-warning-hover-color, var(--warning-d2))
+					!important,
 			),
 		),
 		'danger': (
 			color: var(--text-danger-color, var(--danger)) !important,
 			hover: (
-				color: var(--text-danger-hover-color, var(--danger-d2)) !important,
+				color: var(--text-danger-hover-color, var(--danger-d2))
+					!important,
 			),
 		),
 		'light': (
@@ -434,10 +486,12 @@ $text-theme-colors: map-deep-merge(
 			color: var(--text-muted-color, var(--gray-500)) !important,
 		),
 		'black-50': (
-			color: var(--text-black-50-color, rgba(var(--black-rgb), 0.5)) !important,
+			color: var(--text-black-50-color, rgba(var(--black-rgb), 0.5))
+				!important,
 		),
 		'white-50': (
-			color: var(--text-white-50-color, rgba(var(--white-rgb), 0.5)) !important,
+			color: var(--text-white-50-color, rgba(var(--white-rgb), 0.5))
+				!important,
 		),
 	),
 	$text-theme-colors

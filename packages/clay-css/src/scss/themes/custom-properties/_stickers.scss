@@ -4,7 +4,7 @@ $sticker-border-color: transparent !default;
 $sticker-border-radius: $border-radius !default;
 $sticker-border-style: solid !default;
 $sticker-border-width: 0 !default;
-$sticker-color: $label-color !default;
+$sticker-color: null !default;
 $sticker-font-size: 1rem !default; // 16px
 $sticker-font-weight: $font-weight-bold !default;
 $sticker-size: 2rem !default; // 32px
@@ -14,40 +14,39 @@ $sticker-inline-item-font-size: $sticker-font-size !default;
 $sticker: () !default;
 $sticker: map-deep-merge(
 	(
-		align-items: var(--sticker-align-items, center),
-		border-color: var(--sticker-border-color, $sticker-border-color),
+		align-items: center,
+		border-color: transparent,
 		border-radius:
 			var(
 				--sticker-border-radius,
 				clay-enable-rounded($sticker-border-radius)
 			),
-		border-style: var(--sticker-border-style, $sticker-border-style),
+		border-style: solid,
 		border-width: var(--sticker-border-width, $sticker-border-width),
-		color: var(--sticker-color, $sticker-color),
-		height: var(--sticker-height, $sticker-size),
-		line-height: var(--sticker-line-height, $sticker-size),
-		display: var(--sticker-display, inline-flex),
+		color: $sticker-color,
+		height: var(--sticker-size, $sticker-size),
+		line-height: var(--sticker-size, $sticker-size),
+		display: inline-flex,
 		font-size: var(--sticker-font-size, $sticker-font-size),
 		font-weight: var(--sticker-font-weight, $sticker-font-weight),
-		justify-content: var(--sticker-justify-content, center),
-		position: var(--sticker-position, relative),
-		text-align: var(--sticker-text-align, center),
-		vertical-align: var(--sticker-vertical-align, middle),
-		width: var(--sticker-width, $sticker-size),
+		justify-content: center,
+		position: relative,
+		text-align: center,
+		vertical-align: middle,
+		width: var(--sticker-size, $sticker-size),
 		inline-item: (
 			font-size:
 				var(
 					--sticker-inline-item-font-size,
 					$sticker-inline-item-font-size
 				),
-			justify-content: var(--sticker-inline-item-justify-content, center),
+			justify-content: center,
 			lexicon-icon: (
-				margin-top:
-					var(--sticker-inline-item-lexicon-icon-margin-top, 0),
+				margin-top: 0,
 			),
 		),
 		lexicon-icon: (
-			margin-top: var(--sticker-lexicon-icon-margin-top, 0),
+			margin-top: 0,
 		),
 	),
 	$sticker
@@ -58,16 +57,16 @@ $sticker: map-deep-merge(
 $sticker-overlay: () !default;
 $sticker-overlay: map-merge(
 	(
-		align-items: var(--sticker-overlay-align-items, center),
-		border-radius: var(--sticker-overlay-border-radius, inherit),
-		bottom: var(--sticker-overlay-bottom, 0),
-		display: var(--sticker-overlay-display, flex),
-		justify-content: var(--sticker-overlay-justify-content, center),
-		left: var(--sticker-overlay-left, 0),
-		overflow: var(--sticker-overlay-overflow, hidden),
-		position: var(--sticker-overlay-position, absolute),
-		right: var(--sticker-overlay-right, 0),
-		top: var(--sticker-overlay-top, 0),
+		align-items: center,
+		border-radius: inherit,
+		bottom: 0,
+		display: flex,
+		justify-content: center,
+		left: 0,
+		overflow: hidden,
+		position: absolute,
+		right: 0,
+		top: 0,
 	),
 	$sticker-overlay
 );
@@ -78,9 +77,9 @@ $sticker-sm: () !default;
 $sticker-sm: map-deep-merge(
 	(
 		font-size: var(--sticker-sm-font-size, 0.75rem),
-		height: var(--sticker-sm-height, 1.5rem),
-		line-height: var(--sticker-sm-line-height, 1.5rem),
-		width: var(--sticker-sm-width, 1.5rem),
+		height: var(--sticker-sm-size, 1.5rem),
+		line-height: var(--sticker-sm-size, 1.5rem),
+		width: var(--sticker-sm-size, 1.5rem),
 		inline-item: (
 			font-size: var(--sticker-inline-item-font-size, inherit),
 		),
@@ -144,9 +143,9 @@ $sticker-lg: () !default;
 $sticker-lg: map-deep-merge(
 	(
 		font-size: var(--sticker-lg-font-size, 1.125rem),
-		height: var(--sticker-lg-height, 2.5rem),
-		line-height: var(--sticker-lg-line-height, 2.5rem),
-		width: var(--sticker-lg-width, 2.5rem),
+		height: var(--sticker-lg-size, 2.5rem),
+		line-height: var(--sticker-lg-size, 2.5rem),
+		width: var(--sticker-lg-size, 2.5rem),
 		sticker-outside: (
 			left: var(--sticker-lg-sticker-outside-left, -1.25rem),
 			top: var(--sticker-lg-sticker-outside-top, -1.25rem),
@@ -207,9 +206,9 @@ $sticker-xl: () !default;
 $sticker-xl: map-deep-merge(
 	(
 		font-size: var(--sticker-xl-font-size, 1.25rem),
-		height: var(--sticker-xl-height, 3rem),
-		line-height: var(--sticker-xl-line-height, 3rem),
-		width: var(--sticker-xl-width, 3rem),
+		height: var(--sticker-xl-size, 3rem),
+		line-height: var(--sticker-xl-size, 3rem),
+		width: var(--sticker-xl-size, 3rem),
 		sticker-outside: (
 			left: var(--sticker-xl-sticker-outside-left, -1.5rem),
 			top: var(--sticker-xl-sticker-outside-top, -1.5rem),
@@ -285,9 +284,9 @@ $sticker-bottom-left: map-merge(
 	(
 		bottom: var(--sticker-bottom-left-bottom, $sticker-inside-offset),
 		left: var(--sticker-bottom-left-left, $sticker-inside-offset),
-		position: var(--sticker-bottom-left-position, absolute),
-		right: var(--sticker-bottom-left-right, auto),
-		top: var(--sticker-bottom-left-top, auto),
+		position: absolute,
+		right: auto,
+		top: auto,
 	),
 	$sticker-bottom-left
 );
@@ -298,10 +297,10 @@ $sticker-bottom-right: () !default;
 $sticker-bottom-right: map-merge(
 	(
 		bottom: var(--sticker-bottom-right-bottom, $sticker-inside-offset),
-		left: var(--sticker-bottom-right-left, auto),
-		position: var(--sticker-bottom-right-position, absolute),
+		left: auto,
+		position: absolute,
 		right: var(--sticker-bottom-right-right, $sticker-inside-offset),
-		top: var(--sticker-bottom-right-top, auto),
+		top: auto,
 	),
 	$sticker-bottom-right
 );
@@ -312,7 +311,7 @@ $sticker-top-left: () !default;
 $sticker-top-left: map-merge(
 	(
 		left: var(--sticker-top-left-left, $sticker-inside-offset),
-		position: var(--sticker-top-left-position, absolute),
+		position: absolute,
 		top: var(--sticker-top-left-top, $sticker-inside-offset),
 	),
 	$sticker-top-left
@@ -323,8 +322,8 @@ $sticker-top-left: map-merge(
 $sticker-top-right: () !default;
 $sticker-top-right: map-merge(
 	(
-		left: var(--sticker-top-right-left, auto),
-		position: var(--sticker-top-right-position, absolute),
+		left: auto,
+		position: absolute,
 		right: var(--sticker-top-right-right, $sticker-inside-offset),
 		top: var(--sticker-top-right-top, $sticker-inside-offset),
 	),
@@ -346,7 +345,7 @@ $sticker-outside: map-deep-merge(
 					--sticker-outside-sticker-bottom-left,
 					$sticker-outside-offset
 				),
-			top: var(--sticker-outside-sticker-bottom-left, auto),
+			top: auto,
 		),
 		sticker-bottom-right: (
 			bottom:
@@ -354,16 +353,16 @@ $sticker-outside: map-deep-merge(
 					--sticker-outside-sticker-bottom-right-bottom,
 					$sticker-outside-offset
 				),
-			left: var(--sticker-outside-sticker-bottom-right-left, auto),
+			left: auto,
 			right:
 				var(
 					--sticker-outside-sticker-bottom-right-right,
 					$sticker-outside-offset
 				),
-			top: var(--sticker-outside-sticker-bottom-right-top, auto),
+			top: auto,
 		),
 		sticker-top-right: (
-			left: var(--sticker-outside-sticker-top-right-left, auto),
+			left: auto,
 			right:
 				var(
 					--sticker-outside-sticker-top-right-right,
@@ -395,14 +394,18 @@ $sticker-circle: map-deep-merge(
 $sticker-user-icon: () !default;
 $sticker-user-icon: map-deep-merge(
 	(
-		background-color: var(--sticker-user-icon-background-color, $white),
+		background-color:
+			var(--sticker-user-icon-background-color, var(--white)),
 		border-radius:
 			var(
 				--sticker-user-icon-border-radius,
 				$rounded-circle-border-radius
 			),
 		box-shadow:
-			var(--sticker-user-icon-box-shadow, 0 0 0 1px rgba($black, 0.125)),
+			var(
+				--sticker-user-icon-box-shadow,
+				0 0 0 1px rgba(var(--black-rgb), 0.125)
+			),
 	),
 	$sticker-user-icon
 );
@@ -417,10 +420,9 @@ $sticker-primary: () !default;
 $sticker-primary: map-deep-merge(
 	(
 		background-color:
-			var(--sticker-primary-background-color, $sticker-primary-bg),
-		border-color:
-			var(--sticker-primary-border-color, $sticker-primary-border-color),
-		color: var(--sticker-primary-color, $sticker-primary-color),
+			var(--sticker-primary-background-color, var(--primary)),
+		border-color: var(--sticker-primary-border-color, transparent),
+		color: var(--sticker-primary-color, var(--white)),
 	),
 	$sticker-primary
 );
@@ -435,13 +437,9 @@ $sticker-secondary: () !default;
 $sticker-secondary: map-deep-merge(
 	(
 		background-color:
-			var(--sticker-secondary-background-color, $sticker-secondary-bg),
-		border-color:
-			var(
-				--sticker-secondary-border-color,
-				$sticker-secondary-border-color
-			),
-		color: var(--sticker-secondary-color, $sticker-secondary-color),
+			var(--sticker-secondary-background-color, var(--secondary)),
+		border-color: var(--sticker-secondary-border-color, transparent),
+		color: var(--sticker-secondary-color, var(--white)),
 	),
 	$sticker-secondary
 );
@@ -455,10 +453,9 @@ $sticker-info-color: color-yiq($sticker-info-bg) !default;
 $sticker-info: () !default;
 $sticker-info: map-deep-merge(
 	(
-		background-color: var(--sticker-info-background-color, $sticker-info-bg),
-		border-color:
-			var(--sticker-info-border-color, $sticker-info-border-color),
-		color: var(--sticker-info-color, $sticker-info-color),
+		background-color: var(--sticker-info-background-color, var(--info)),
+		border-color: var(--sticker-info-border-color, transparent),
+		color: var(--sticker-info-color, var(--white)),
 	),
 	$sticker-info
 );
@@ -473,10 +470,9 @@ $sticker-success: () !default;
 $sticker-success: map-deep-merge(
 	(
 		background-color:
-			var(--sticker-success-background-color, $sticker-success-bg),
-		border-color:
-			var(--sticker-success-border-color, $sticker-success-border-color),
-		color: var(--sticker-success-color, $sticker-success-color),
+			var(--sticker-success-background-color, var(--success)),
+		border-color: var(--sticker-success-border-color, transparent),
+		color: var(--sticker-success-color, var(--white)),
 	),
 	$sticker-success
 );
@@ -491,10 +487,9 @@ $sticker-warning: () !default;
 $sticker-warning: map-deep-merge(
 	(
 		background-color:
-			var(--sticker-warning-background-color, $sticker-warning-bg),
-		border-color:
-			var(--sticker-warning-border-color, $sticker-warning-border-color),
-		color: var(--sticker-warning-color, $sticker-warning-color),
+			var(--sticker-warning-background-color, var(--warning)),
+		border-color: var(--sticker-warning-border-color, transparent),
+		color: var(--sticker-warning-color, var(--white)),
 	),
 	$sticker-warning
 );
@@ -508,11 +503,9 @@ $sticker-danger-color: color-yiq($sticker-danger-bg) !default;
 $sticker-danger: () !default;
 $sticker-danger: map-deep-merge(
 	(
-		background-color:
-			var(--sticker-danger-background-color, $sticker-danger-bg),
-		border-color:
-			var(--sticker-danger-border-color, $sticker-danger-border-color),
-		color: var(--sticker-danger-color, $sticker-danger-color),
+		background-color: var(--sticker-danger-background-color, var(--danger)),
+		border-color: var(--sticker-danger-border-color, transparent),
+		color: var(--sticker-danger-color, var(--white)),
 	),
 	$sticker-danger
 );
@@ -526,11 +519,9 @@ $sticker-light-color: color-yiq($sticker-light-bg) !default;
 $sticker-light: () !default;
 $sticker-light: map-deep-merge(
 	(
-		background-color:
-			var(--sticker-light-background-color, $sticker-light-bg),
-		border-color:
-			var(--sticker-light-border-color, $sticker-light-border-color),
-		color: var(--sticker-light-color, $sticker-light-color),
+		background-color: var(--sticker-light-background-color, var(--light)),
+		border-color: var(--sticker-light-border-color, transparent),
+		color: var(--sticker-light-color, var(--gray-900)),
 	),
 	$sticker-light
 );
@@ -544,10 +535,9 @@ $sticker-dark-color: color-yiq($sticker-dark-bg) !default;
 $sticker-dark: () !default;
 $sticker-dark: map-deep-merge(
 	(
-		background-color: var(--sticker-dark-background-color, $sticker-dark-bg),
-		border-color:
-			var(--sticker-dark-border-color, $sticker-dark-border-color),
-		color: var(--sticker-dark-color, $sticker-dark-color),
+		background-color: var(--sticker-dark-background-color, var(--dark)),
+		border-color: var(--sticker-dark-border-color, transparent),
+		color: var(--sticker-dark-color, var(--white)),
 	),
 	$sticker-dark
 );

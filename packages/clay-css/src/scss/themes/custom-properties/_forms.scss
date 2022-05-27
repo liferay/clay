@@ -1,5 +1,5 @@
-$input-bg: $gray-200 !default;
-$input-border-color: $gray-300 !default;
+$input-bg: var(--gray-200) !default;
+$input-border-color: var(--gray-300) !default;
 $input-border-style: solid !default;
 $input-border-width: 0.0625rem !default; // 1px
 
@@ -8,14 +8,14 @@ $input-border-left-width: $input-border-width !default; // 1px
 $input-border-right-width: $input-border-width !default; // 1px
 $input-border-top-width: $input-border-width !default; // 1px
 
-$input-border-radius: $border-radius !default;
+$input-border-radius: var(--border-radius) !default;
 $input-box-shadow: none !default;
-$input-color: $gray-900 !default;
-$input-font-family: $input-btn-font-family !default;
-$input-font-size: $input-btn-font-size !default;
-$input-font-weight: $font-weight-base !default;
+$input-color: var(--gray-900) !default;
+$input-font-family: var(--input-font-family) !default;
+$input-font-size: 1rem !default;
+$input-font-weight: var(--font-weight-normal) !default;
 $input-height: 2.5rem !default; // 40px
-$input-line-height: $input-btn-line-height !default;
+$input-line-height: $line-height-base !default;
 $input-padding-x: 1rem !default; // 16px
 $input-padding-y: 0.4375rem !default; // 7px
 $input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
@@ -25,15 +25,15 @@ $input-height-mobile: null !default;
 
 // .form-control::placeholder
 
-$input-placeholder-color: $gray-600 !default;
+$input-placeholder-color: var(--gray-600) !default;
 
 // Input Focus
 
-$input-focus-bg: clay-lighten($component-active-bg, 44.9) !default;
-$input-focus-border-color: clay-lighten($component-active-bg, 22.94) !default;
+$input-focus-bg: var(--primary-l3) !default;
+$input-focus-border-color: var(--primary-l1) !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
-$input-focus-box-shadow: $component-focus-box-shadow !default;
+$input-focus-box-shadow: var(--component-focus-box-shadow) !default;
 
 // .form-control:focus::placeholder
 
@@ -43,7 +43,7 @@ $input-placeholder-focus-color: null !default;
 
 $input-disabled-bg: $input-bg !default;
 $input-disabled-border-color: $input-bg !default;
-$input-disabled-color: $gray-500 !default;
+$input-disabled-color: var(--gray-500) !default;
 $input-disabled-cursor: $disabled-cursor !default;
 $input-disabled-opacity: 1 !default;
 
@@ -51,20 +51,28 @@ $input-disabled-opacity: 1 !default;
 
 $input-placeholder-disabled-color: $input-disabled-color !default;
 
+$clay-root: map-merge(
+	(
+		--input-border-width: $input-border-width,
+	),
+	$clay-root
+);
+
 $input: () !default;
 $input: map-deep-merge(
 	(
 		background-color: var(--input-background-color, $input-bg),
 		border-color: var(--input-border-color, $input-border-color),
-		border-style: var(--input-border-style, $input-border-style),
-		border-width: var(--input-border-width, $input-border-width),
+		border-style: solid,
+		border-width: var(--input-border-width),
 		border-bottom-width:
-			var(--input-border-bottom-width, $input-border-bottom-width),
+			var(--input-border-bottom-width, var(--input-border-width)),
 		border-left-width:
-			var(--input-border-left-width, $input-border-left-width),
+			var(--input-border-left-width, var(--input-border-width)),
 		border-right-width:
-			var(--input-border-right-width, $input-border-right-width),
-		border-top-width: var(--input-border-top-width, $input-border-top-width),
+			var(--input-border-right-width, var(--input-border-width)),
+		border-top-width:
+			var(--input-border-top-width, var(--input-border-width)),
 		border-radius:
 			var(
 				--input-border-radius,
@@ -72,26 +80,26 @@ $input: map-deep-merge(
 			),
 		box-shadow: var(--input-box-shadow, $input-box-shadow),
 		color: var(--input-color, $input-color),
-		display: var(--input-display, block),
-		font-family: var(--input-font-family, $input-font-family),
+		display: block,
+		font-family: $input-font-family,
 		font-size: var(--input-font-size, $input-font-size),
 		font-weight: var(--input-font-weight, $input-font-weight),
 		height: var(--input-height, $input-height),
 		line-height: var(--input-line-height, $input-line-height),
-		min-width: var(--input-min-width, 0),
-		padding-bottom: var(--input-padding-bottom, $input-padding-y),
-		padding-left: var(--input-padding-left, $input-padding-x),
-		padding-right: var(--input-padding-right, $input-padding-x),
-		padding-top: var(--input-padding-top, $input-padding-y),
+		min-width: 0,
+		padding-bottom: var(--input-padding-y, $input-padding-y),
+		padding-left: var(--input-padding-x, $input-padding-x),
+		padding-right: var(--input-padding-x, $input-padding-x),
+		padding-top: var(--input-padding-y, $input-padding-y),
 		transition: var(--input-transition, $input-transition),
-		width: var(--input-width, 100%),
+		width: 100%,
 		mobile: (
 			font-size: var(--input-mobile-font-size, $input-font-size-mobile),
 			height: var(--input-mobile-height),
 		),
 		placeholder: (
 			color: var(--input-placeholder-color, $input-placeholder-color),
-			opacity: var(--input-placeholder-opacity, 1),
+			opacity: 1,
 		),
 		focus: (
 			background-color:
@@ -100,23 +108,18 @@ $input: map-deep-merge(
 				var(--input-focus-border-color, $input-focus-border-color),
 			box-shadow: var(--input-focus-box-shadow, $input-focus-box-shadow),
 			color: var(--input-focus-color, $input-focus-color),
-			outline: var(--input-focus-outline, 0),
+			outline: 0,
 			placeholder: (
-				color:
-					var(
-						--input-focus-placeholder-color,
-						$input-placeholder-focus-color
-					),
+				color: var(--input-focus-placeholder-color),
 			),
 		),
 		disabled: (
-			background-color:
-				var(--input-disabled-background-color, $input-disabled-bg),
+			background-color: var(--input-disabled-background-color, $input-bg),
 			border-color:
 				var(--input-disabled-border-color, $input-disabled-border-color),
 			color: var(--input-disabled-color, $input-disabled-color),
-			cursor: var(--input-disabled-cursor, $input-disabled-cursor),
-			opacity: var(--input-disabled-opacity, $input-disabled-opacity),
+			cursor: $disabled-cursor,
+			opacity: 1,
 			placeholder: (
 				color:
 					var(
@@ -131,7 +134,7 @@ $input: map-deep-merge(
 
 // Form Control Plaintext
 
-$input-plaintext-color: var(--input-plaintext-color, $body-color) !default;
+$input-plaintext-color: var(--input-plaintext-color, var(--gray-900)) !default;
 
 /// @deprecated with no replacement
 
@@ -151,10 +154,7 @@ $input-height-inner-quarter: 9px !default;
 
 // Input Lg (.form-control-lg)
 
-$input-border-radius-lg: var(
-	--input-lg-border-radius,
-	$border-radius-lg
-) !default;
+$input-border-radius-lg: var(--border-radius-lg) !default;
 $input-font-size-lg: var(
 	--input-lg-font-size,
 	$input-btn-font-size-lg
@@ -169,6 +169,28 @@ $input-padding-y-lg: var(--input-lg-padding-y, $input-padding-y) !default;
 
 $input-font-size-lg-mobile: var(--input-lg-mobile-font-size) !default;
 $input-height-lg-mobile: var(--input-lg-mobile-height) !default;
+
+$input-lg: () !default;
+$input-lg: map-deep-merge(
+	(
+		border-radius: var(--input-lg-border-radius, $input-border-radius-lg),
+		font-size: var(--input-lg-font-size, var(--font-size-lg)),
+		height: var(--input-lg-height, 3rem),
+		line-height: var(--input-lg-line-height, 1.5),
+		padding-bottom:
+			var(--input-lg-padding-y, map-get($input, padding-bottom)),
+		padding-left: var(--input-lg-padding-x, map-get($input, padding-left)),
+		padding-right: var(--input-lg-padding-x, map-get($input, padding-right)),
+		padding-top: var(--input-lg-padding-y, map-get($input, padding-top)),
+		media-breakpoint-down: (
+			sm: (
+				font-size: $c-unset,
+				height: $c-unset,
+			),
+		),
+	),
+	$input-lg
+);
 
 // Input Sm (.form-control-sm)
 
@@ -188,18 +210,38 @@ $input-padding-y-sm: var(--input-sm-padding-y, 0.25rem) !default;
 $input-font-size-sm-mobile: var(--input-sm-mobile-font-size) !default;
 $input-height-sm-mobile: var(--input-sm-mobile-height) !default;
 
+$input-sm: () !default;
+$input-sm: map-deep-merge(
+	(
+		border-radius: var(--input-sm-border-radius, var(--border-radius)),
+		font-size: var(--input-sm-font-size, var(--font-size-sm)),
+		height: var(--input-sm-height, 2rem),
+		line-height: var(--input-sm-line-height, 1.5),
+		padding-bottom: var(--input-sm-padding-y, 0.25rem),
+		padding-left: var(--input-sm-padding-x, 0.75rem),
+		padding-right: var(--input-sm-padding-x, 0.75rem),
+		padding-top: var(--input-sm-padding-y, 0.25rem),
+		media-breakpoint-down: (
+			sm: (
+				height: $c-unset,
+			),
+		),
+	),
+	$input-sm
+);
+
 // Input Label (<label>)
 
-$input-label-color: $gray-900 !default;
+$input-label-color: var(--gray-900) !default;
 $input-label-font-size: 0.875rem !default; // 14px;
-$input-label-font-weight: $font-weight-semi-bold !default;
+$input-label-font-weight: var(--font-weight-semi-bold) !default;
 $input-label-margin-bottom: 0.25rem !default; // 4px
 
 $input-label-font-size-mobile: null !default;
 
 $input-label-focus-color: null !default;
 
-$input-label-disabled-color: $gray-500 !default;
+$input-label-disabled-color: var(--gray-500) !default;
 $input-label-disabled-cursor: $disabled-cursor !default;
 
 // label[for]
@@ -208,7 +250,7 @@ $input-label-for-cursor: $link-cursor !default;
 
 // label .reference-mark
 
-$input-label-reference-mark-color: $warning !default;
+$input-label-reference-mark-color: var(--warning) !default;
 $input-label-reference-mark-font-size: 6px !default;
 $input-label-reference-mark-spacer: null !default;
 $input-label-reference-mark-vertical-align: null !default;
@@ -217,51 +259,53 @@ $input-label: () !default;
 $input-label: map-deep-merge(
 	(
 		color: var(--input-label-color, $input-label-color),
-		font-size: var(--input-label-font-size, $input-label-font-size),
-		font-weight: var(--input-label-font-weight, $input-label-font-weight),
-		margin-bottom:
-			var(--input-label-margin-bottom, $input-label-margin-bottom),
-		max-width: var(--input-label-max-width, 100%),
-		word-wrap: var(--input-label-word-wrap, break-word),
+		font-size: var(--input-label-font-size, 0.875rem),
+		font-weight:
+			var(--input-label-font-weight, var(--font-weight-semi-bold)),
+		margin-bottom: var(--input-label-margin-bottom, 0.25rem),
+		max-width: 100,
+		word-wrap: break-word,
 		mobile: (
-			font-size: var(--input-label-mobile-font-size),
+			font-size: $c-unset,
 		),
 		focus: (
-			color: var(--input-label-focus-color),
+			color:
+				var(
+					--input-label-focus-color,
+					var(--input-label-color, var(--gray-900))
+				),
 		),
 		disabled: (
 			color:
-				var(--input-label-disabled-color, $input-label-disabled-color),
-			cursor:
-				var(--input-label-disabled-cursor, $input-label-disabled-cursor),
+				var(
+					--input-label-disabled-color,
+					var(--input-label-color, var(--gray-500))
+				),
+			cursor: $disabled-cursor,
 			opacity:
-				var(--input-label-disabled-opacity, $input-disabled-opacity),
+				var(
+					--input-label-disabled-opacity,
+					map-deep-get($input, disabled, opacity)
+				),
 		),
 		for: (
-			cursor: var(--input-label-for-cursor, $input-label-for-cursor),
+			cursor: $link-cursor,
 		),
 		form-text: (
 			margin-bottom:
 				var(
 					--input-label-form-text-margin-bottom,
-					$input-label-margin-bottom
+					var(--input-label-margin-bottom, 0.25rem)
 				),
 			margin-top: var(--input-label-form-text-margin-top, 0),
 		),
 		reference-mark: (
-			color:
-				var(
-					--input-label-reference-mark-color,
-					$input-label-reference-mark-color
-				),
-			font-size:
-				var(
-					--input-label-reference-mark-font-size,
-					$input-label-reference-mark-font-size
-				),
+			color: var(--input-label-reference-mark-color, var(--warning)),
+			font-size: var(--input-label-reference-mark-font-size, 6px),
 			margin-left: var(--input-label-reference-mark-margin-left),
 			margin-right: var(--input-label-reference-mark-margin-right),
-			vertical-align: var(--input-label-reference-mark-vertical-align),
+			vertical-align:
+				var(--input-label-reference-mark-vertical-align, super),
 		),
 	),
 	$input-label
@@ -272,8 +316,8 @@ $input-label: map-deep-merge(
 $form-control-label: () !default;
 $form-control-label: map-merge(
 	(
-		display: var(--form-control-label-display, inline),
-		margin-bottom: var(--form-control-label-margin-bottom, 0),
+		display: inline,
+		margin-bottom: 0,
 	),
 	$form-control-label
 );
@@ -283,15 +327,15 @@ $form-control-label: map-merge(
 $form-control-label-text: () !default;
 $form-control-label-text: map-merge(
 	(
-		cursor: var(--form-control-label-text-cursor, $input-label-for-cursor),
-		display: var(--form-control-label-text-display, inline-block),
+		cursor: $link-cursor,
+		display: inline-box,
 		margin-bottom:
 			var(
 				--form-control-label-text-margin-bottom,
-				$input-label-margin-bottom
+				map-get($input-label, margin-bottom)
 			),
-		max-width: var(--form-control-label-text-max-width, 100%),
-		word-wrap: var(--form-control-label-text-word-wrap, break-word),
+		max-width: 100%,
+		word-wrap: break-word,
 	),
 	$form-control-label-text
 );
@@ -327,22 +371,29 @@ $input-readonly-focus-color: null !default;
 $input-readonly: () !default;
 $input-readonly: map-deep-merge(
 	(
-		background-color:
-			var(--input-readonly-background-color, $input-readonly-bg),
-		border-color: var(--input-readonly-border-color, $input-border-color),
-		color: var(--input-readonly-color, $input-color),
-		cursor: var(--input-readonly-cursor, text),
-		opacity: var(--input-readonly-opacity, 1),
+		background-color: var(--input-readonly-background-color, var(--white)),
+		border-color:
+			var(--input-readonly-border-color, map-get($input, border-color)),
+		color: var(--input-readonly-color, map-get($input, color)),
+		cursor: text,
+		opacity: 1,
 		focus: (
-			background-color: var(--input-readonly-focus-background-color),
+			background-color:
+				var(
+					--input-readonly-focus-background-color,
+					var(--input-readonly-background-color, var(--white))
+				),
 			border-color:
 				var(
 					--input-readonly-focus-border-color,
-					$input-focus-border-color
+					map-deep-get($input, focus, border-color)
 				),
 			box-shadow: var(--input-readonly-focus-box-shadow, none),
 			color:
-				var(--input-readonly-focus-color, $input-readonly-focus-color),
+				var(
+					--input-readonly-focus-color,
+					map-deep-get($input, focus, color)
+				),
 		),
 	),
 	$input-readonly
@@ -352,15 +403,21 @@ $input-plaintext-readonly: () !default;
 $input-plaintext-readonly: map-deep-merge(
 	(
 		border-radius:
-			var(--input-plaintext-readonly-border-radius, $input-border-radius),
-		outline: var(--input-plaintext-readonly-outline, 0),
+			var(
+				--input-plaintext-readonly-border-radius,
+				map-get($input, border-radius)
+			),
+		outline: 0,
 		transition:
-			var(--input-plaintext-readonly-transition, $input-transition),
+			var(
+				--input-plaintext-readonly-transition,
+				map-get($input, transition)
+			),
 		focus: (
 			border-color:
 				var(
 					--input-plaintext-readonly-focus-border-color,
-					$input-focus-border-color
+					map-deep-get($input, focus, border-color)
 				),
 			box-shadow: var(--input-plaintext-readonly-focus-box-shadow, none),
 		),
@@ -368,9 +425,42 @@ $input-plaintext-readonly: map-deep-merge(
 	$input-plaintext-readonly
 );
 
+// textarea.form-control, textarea.form-control-plaintext, .form-control.form-control-textarea
+
 $input-textarea-height: var(--input-textarea-height, 100px) !default;
+
+$input-textarea: () !default;
+$input-textarea: map-merge(
+	(
+		height: var(--input-textarea-height, 100px),
+		resize: var(--input-textarea-resize, vertical),
+	),
+	$input-textarea
+);
+
+// textarea.form-control-lg, .form-control-lg.form-control-textarea
+
 $input-textarea-height-lg: var(--input-textarea-lg-height, 120px) !default;
+
+$input-textarea-lg: () !default;
+$input-textarea-lg: map-deep-merge(
+	(
+		height: var(--input-textarea-lg-height, 120px),
+	),
+	$input-textarea-lg
+);
+
+// textarea.form-control-sm, .form-control-sm.form-control-textarea
+
 $input-textarea-height-sm: var(--input-textarea-sm-height, 80px) !default;
+
+$input-textarea-sm: () !default;
+$input-textarea-sm: map-deep-merge(
+	(
+		height: var(--input-textarea-sm-height, 80px),
+	),
+	$input-textarea-sm
+);
 
 // Form Control Label (Labels inside Form Control Tag Group)
 
@@ -399,26 +489,31 @@ $form-control-label-size: map-deep-merge(
 				map-get($label-lg, padding-top)
 			),
 		text-transform: var(--form-control-label-size-text-transform, none),
-		item-spacer-y:
-			var(
-				--form-control-label-size-item-spacer-y,
-				map-get($label-lg, item-spacer-y)
-			),
-		lexicon-icon-height:
-			var(
-				--form-control-label-size-lexicon-icon-height,
-				map-deep-get($label-lg, lexicon-icon, height)
-			),
-		lexicon-icon-width:
-			var(
-				--form-control-label-size-lexicon-icon-width,
-				map-deep-get($label-lg, lexicon-icon, width)
-			),
-		sticker-size:
-			var(
-				--form-control-label-size-sticker-size,
-				map-get($label-lg, sticker-size)
-			),
+		label-item: (
+			margin-bottom: map-deep-get($label-lg, label-item, margin-bottom),
+			margin-top: map-deep-get($label-lg, label-item, margin-bottom),
+		),
+		lexicon-icon: (
+			height: map-deep-get($label-lg, lexicon-icon, height),
+			width: map-deep-get($label-lg, lexicon-icon, width),
+		),
+		sticker: (
+			height:
+				var(
+					--form-control-label-size-sticker-size,
+					map-deep-get($label-lg, sticker, height)
+				),
+			line-height:
+				var(
+					--form-control-label-size-sticker-size,
+					map-deep-get($label-lg, sticker, line-height)
+				),
+			width:
+				var(
+					--form-control-label-size-sticker-size,
+					map-deep-get($label-lg, sticker, width)
+				),
+		),
 		close: map-get($label-lg, close),
 	),
 	$form-control-label-size
@@ -442,48 +537,28 @@ $form-control-inset-margin-y: 0.3125rem !default;
 $form-control-inset: () !default;
 $form-control-inset: map-deep-merge(
 	(
-		background-color:
-			var(--form-control-inset-background-color, transparent),
-		border-width: var(--form-control-inset-border-width, 0),
-		color: var(--form-control-inset-color, $input-color),
-		flex-grow: var(--form-control-inset-flex-grow, 1),
+		background-color: transparent,
+		border-width: 0,
+		color: inherit,
+		flex-grow: 1,
 		margin-bottom:
-			var(
-				--form-control-inset-margin-bottom,
-				$form-control-inset-margin-y
-			),
+			var(--form-control-inset-margin-y, $form-control-inset-margin-y),
 		margin-top:
-			var(--form-control-inset-margin-top, $form-control-inset-margin-y),
+			var(--form-control-inset-margin-y, $form-control-inset-margin-y),
 		min-height:
 			var(--form-control-inset-min-height, $form-control-inset-min-height),
-		padding: var(--form-control-inset-padding, 0),
-		width: var(--form-control-inset-width, 50px),
+		padding: 0,
+		width: 50px,
 		focus: (
-			outline: var(--form-control-inset-focus-outline, 0),
+			outline: 0,
 		),
 		disabled: (
-			background-color:
-				var(
-					--form-control-inset-disabled-background-color,
-					$input-disabled-bg
-				),
-			border-color:
-				var(
-					--form-control-inset-disabled-border-color,
-					$input-disabled-border-color
-				),
+			background-color: transparent,
+			border-color: transparent,
 			color:
 				var(--form-control-inset-disabled-color, $input-disabled-color),
-			cursor:
-				var(
-					--form-control-inset-disabled-cursor,
-					$input-disabled-cursor
-				),
-			opacity:
-				var(
-					--form-control-inset-disabled-opacity,
-					$input-disabled-opacity
-				),
+			cursor: $disabled-cursor,
+			opacity: var(--form-control-inset-disabled-opacity, 1),
 		),
 	),
 	$form-control-inset
@@ -492,20 +567,20 @@ $form-control-inset: map-deep-merge(
 $form-control-tag-group: () !default;
 $form-control-tag-group: map-deep-merge(
 	(
-		align-items: var(--form-control-tag-group-align-items, center),
-		color: var(--form-control-tag-group-color, $secondary),
-		display: var(--form-control-tag-group-display, flex),
-		flex-wrap: var(--form-control-tag-group-flex-wrap, wrap),
-		height: var(--form-control-tag-group-height, auto),
+		align-items: center,
+		color: $c-unset,
+		display: flex,
+		flex-wrap: wrap,
+		height: auto,
 		padding-bottom:
 			var(
-				--form-control-tag-group-padding-bottom,
+				--form-control-tag-group-padding-y,
 				$form-control-tag-group-padding-y
 			),
-		padding-right: var(--form-control-tag-group-padding-right, 0.5rem),
+		padding-right: $c-unset,
 		padding-top:
 			var(
-				--form-control-tag-group-padding-top,
+				--form-control-tag-group-padding-y,
 				$form-control-tag-group-padding-y
 			),
 	),
@@ -515,14 +590,12 @@ $form-control-tag-group: map-deep-merge(
 $form-control-tag-group-autofit-row: () !default;
 $form-control-tag-group-autofit-row: map-deep-merge(
 	(
-		align-items:
-			var(--form-control-tag-group-autofit-row-align-items, center),
-		flex-grow: var(--form-control-tag-group-autofit-row-flex-grow, 1),
-		margin-left:
-			var(--form-control-tag-group-autofit-row-margin-left, -0.5rem),
+		align-items: center,
+		flex-grow: 1,
+		margin-left: var(--form-control-tag-group-autofit-row-margin-x, -0.5rem),
 		margin-right:
-			var(--form-control-tag-group-autofit-row-margin-right, -0.5rem),
-		width: var(--form-control-tag-group-autofit-row-width, auto),
+			var(--form-control-tag-group-autofit-row-margin-x, -0.5rem),
+		width: auto,
 	),
 	$form-control-tag-group-autofit-row
 );
@@ -532,12 +605,12 @@ $form-control-tag-group-autofit-col: map-deep-merge(
 	(
 		padding-left:
 			var(
-				--form-control-tag-group-autofit-row-autofit-col-padding-left,
+				--form-control-tag-group-autofit-row-autofit-col-padding-x,
 				0.5rem
 			),
 		padding-right:
 			var(
-				--form-control-tag-group-autofit-row-autofit-col-padding-right,
+				--form-control-tag-group-autofit-row-autofit-col-padding-x,
 				0.5rem
 			),
 	),
@@ -675,17 +748,17 @@ $form-check-inline-input-margin-x: auto !default;
 $form-feedback-group: () !default;
 $form-feedback-group: map-merge(
 	(
-		width: var(--form-feedback-group-width, 100%),
-		word-wrap: var(--form-feedback-group-word-wrap, break-word),
+		width: 100%,
+		word-wrap: break-word,
 	),
 	$form-feedback-group
 );
 
 // .form-text
 
-$form-text-color: $gray-600 !default;
+$form-text-color: var(--gray-600) !default;
 $form-text-font-size: 0.875rem !default; // 14px
-$form-text-font-weight: $font-weight-semi-bold !default;
+$form-text-font-weight: var(--font-weight-semi-bold) !default;
 $form-text-margin-top: 0.25rem !default;
 
 $form-text: () !default;
@@ -696,7 +769,7 @@ $form-text: map-merge(
 		font-size: var(--form-text-font-size, $form-text-font-size),
 		font-weight: var(--form-text-font-weight, $form-text-font-weight),
 		margin-top: var(--form-text-margin-top, $form-text-margin-top),
-		word-wrap: var(--form-text-word-wrap, break-word),
+		word-wrap: break-word,
 	),
 	$form-text
 );
@@ -704,7 +777,7 @@ $form-text: map-merge(
 // .form-feedback-item
 
 $form-feedback-font-size: 0.875rem !default; // 14px
-$form-feedback-font-weight: $font-weight-semi-bold !default;
+$form-feedback-font-weight: var(--font-weight-semi-bold) !default;
 $form-feedback-margin-top: 0.25rem !default;
 
 $form-feedback-item: () !default;
@@ -715,7 +788,7 @@ $form-feedback-item: map-merge(
 			var(--form-feedback-item-font-weight, $form-feedback-font-weight),
 		margin-top:
 			var(--form-feedback-item-margin-top, $form-feedback-margin-top),
-		word-wrap: var(--form-feedback-item-word-wrap, break-word),
+		word-wrap: break-word,
 	),
 	$form-feedback-item
 );
@@ -729,17 +802,16 @@ $form-feedback-indicator: map-deep-merge(
 	(
 		margin-left:
 			var(
-				--form-feedback-indicator-margin-left,
+				--form-feedback-indicator-margin-x,
 				$form-feedback-indicator-margin-x
 			),
 		margin-right:
 			var(
-				--form-feedback-indicator-margin-right,
+				--form-feedback-indicator-margin-rx,
 				$form-feedback-indicator-margin-x
 			),
 		first-child: (
-			margin-left:
-				var(--form-feedback-indicator-first-child-margin-left, 0),
+			margin-left: 0,
 		),
 	),
 	$form-feedback-indicator
@@ -788,9 +860,9 @@ $form-validation-states: map-merge(
 
 // .has-error .form-control
 
-$input-danger-bg: $danger-l2 !default;
-$input-danger-border-color: $danger-l1 !default;
-$input-danger-box-shadow: 0 0 rgba(0, 0, 0, 0) !default;
+$input-danger-bg: var(--danger-l2) !default;
+$input-danger-border-color: var(--danger-l1) !default;
+$input-danger-box-shadow: none !default;
 $input-danger-color: $input-color !default;
 
 $input-danger-focus-bg: $input-danger-bg !default;
@@ -857,7 +929,7 @@ $input-danger-readonly: map-deep-merge(
 	$input-danger-readonly
 );
 
-$input-danger-checkbox-label-color: $danger !default;
+$input-danger-checkbox-label-color: var(--danger) !default;
 $input-danger-label-color: $input-label-color !default;
 
 // .has-error select.form-control

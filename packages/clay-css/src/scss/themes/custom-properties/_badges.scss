@@ -23,76 +23,73 @@ $badge-link-hover-color: null !default;
 $badge-link-text-decoration: underline !default;
 $badge-link-hover-text-decoration: none !default;
 
+$clay-root: map-merge(
+	(
+		--badge-padding-x: 0.25rem,
+		--badge-padding-y: 0.09375rem,
+	),
+	$clay-root
+);
+
 $badge: () !default;
 $badge: map-deep-merge(
 	(
 		border-color: var(--badge-border-color, $badge-border-color),
 		border-radius: var(--badge-border-radius, $badge-border-radius),
-		border-style: var(--badge-border-style, $badge-border-style),
+		border-style: $badge-border-style,
 		border-width: var(--badge-border-width, $badge-border-width),
-		display: var(--badge-display, inline-flex),
+		display: inline-flex,
 		font-size: var(--badge-font-size, $badge-font-size),
-		font-weight: var(--badge-font-weight, $badge-font-weight),
+		font-weight: var(--badge-font-weight, var(--font-weight-semi-bold)),
 		line-height: var(--badge-line-height, $badge-line-height),
-		margin-bottom: var(--badge-margin-bottom, $badge-spacer-y),
-		margin-right: var(--badge-margin-right, $badge-spacer-x),
-		margin-top: var(--badge-margin-top, $badge-spacer-y),
-		max-width: var(--badge-max-width, 100%),
-		padding-bottom: var(--badge-padding-bottom, $badge-padding-y),
-		padding-left: var(--badge-padding-left, $badge-padding-x),
-		padding-right: var(--badge-padding-right, $badge-padding-x),
-		padding-top: var(--badge-padding-top, $badge-padding-y),
-		text-align: var(--badge-text-align, center),
-		transition: var(--badge-transition, $badge-transition),
-		white-space: var(--badge-white-space, inherit),
-		word-wrap: var(--badge-word-wrap, break-word),
+		margin-bottom: var(--badge-margin-y, $badge-spacer-y),
+		margin-right: var(--badge-margin-x, $badge-spacer-x),
+		margin-top: var(--badge-margin-y, $badge-spacer-y),
+		max-width: 100%,
+		padding-bottom: var(--badge-padding-y),
+		padding-left: var(--badge-padding-x),
+		padding-right: var(--badge-padding-x),
+		padding-top: var(--badge-padding-y),
+		text-align: center,
+		transition:
+			clay-enable-transitions(
+				var(--badge-transition, var(--btn-transition))
+			),
+		white-space: inherit,
+		word-wrap: break-word,
 		empty: (
-			display: var(--badge-empty-display, none),
+			height: var(--badge-empty-size, 8px),
+			padding: 0,
+			vertical-align: middle,
+			width: var(--badge-empty-size, 8px),
 		),
 		href: (
 			hover: (
-				text-decoration: var(--badge-href-hover-text-decoration, none),
+				text-decoration: none,
 			),
 			focus: (
-				box-shadow:
-					var(
-						--badge-href-focus-box-shadow,
-						$component-focus-box-shadow
-					),
-				outline: var(--badge-href-focus-outline, 0),
+				box-shadow: var(--component-focus-box-shadow),
+				outline: 0,
 			),
 		),
 		link: (
-			color: var(--badge-link-color, $badge-link-color),
-			text-decoration:
-				var(--badge-link-text-decoration, $badge-link-text-decoration),
+			color: inherit,
+			text-decoration: var(--badge-link-text-decoration, underline),
 			hover: (
-				color: $badge-link-hover-color,
-				text-decoration:
-					var(
-						--badge-link-hover-text-decoration,
-						$badge-link-hover-text-decoration
-					),
+				color: $c-unset,
+				text-decoration: var(--badge-link-hover-text-decoration, none),
 			),
 			focus: (
-				color: $badge-link-hover-color,
-				text-decoration:
-					var(
-						--badge-link-focus-text-decoration,
-						$badge-link-hover-text-decoration
-					),
+				color: $c-unset,
+				text-decoration: var(--badge-link-focus-text-decoration, none),
 			),
 		),
 		c-inner: (
-			margin-bottom:
-				var(--badge-c-inner-margin-bottom, math-sign($badge-padding-y)),
-			margin-left:
-				var(--badge-c-inner-margin-left, math-sign($badge-padding-x)),
-			margin-right:
-				var(--badge-c-inner-margin-right, math-sign($badge-padding-x)),
-			margin-top:
-				var(--badge-c-inner-margin-top, math-sign($badge-padding-y)),
-			max-width: var(--badge-c-inner-max-width, none),
+			margin-bottom: calc(var(--badge-padding-y) * -1),
+			margin-left: calc(var(--badge-padding-x) * -1),
+			margin-right: calc(var(--badge-padding-x) * -1),
+			margin-top: calc(var(--badge-padding-y) * -1),
+			max-width: none,
 		),
 	),
 	$badge
@@ -117,19 +114,24 @@ $badge-item-spacer-x: 0.85714em !default;
 $badge-close: () !default;
 $badge-close: map-deep-merge(
 	(
-		border-radius: var(--badge-close-border-radius, 1px),
-		color: var(--badge-close-color, inherit),
-		display: var(--badge-close-display, inline-flex),
-		font-size: var(--badge-close-font-size, inherit),
-		height: var(--badge-close-height, auto),
-		opacity: var(--badge-close-opacity, 1),
-		width: var(--badge-close-width, auto),
+		border-radius: $c-unset,
+		color: inherit,
+		display: $c-unset,
+		font-size: inherit,
+		height: auto,
+		opacity: $c-unset,
+		width: auto,
 		hover: (
-			color: var(--badge-close-hover-color, inherit),
-			opacity: var(--badge-close-hover-opacity, 1),
+			color: inherit,
+			opacity: $c-unset,
 		),
 		focus: (
-			opacity: var(--badge-close-focus-opacity, 1),
+			color: inherit,
+			opacity: $c-unset,
+		),
+		disabled: (
+			color: inherit,
+			opacity: var(--badge-close-disabled-opacity, 0.4),
 		),
 	),
 	$badge-close
@@ -143,13 +145,9 @@ $badge-pill-padding-x: 0.25rem !default; // 4px
 $badge-pill: () !default;
 $badge-pill: map-deep-merge(
 	(
-		border-radius:
-			var(
-				--badge-pill-border-radius,
-				clay-enable-rounded($badge-pill-border-radius)
-			),
-		padding-left: var(--badge-pill-padding-left, $badge-pill-padding-x),
-		padding-right: var(--badge-pill-padding-right, $badge-pill-padding-x),
+		border-radius: clay-enable-rounded($badge-pill-border-radius),
+		padding-left: $badge-pill-padding-x,
+		padding-right: $badge-pill-padding-x,
 	),
 	$badge-pill
 );
@@ -168,59 +166,65 @@ $badge-primary-link-hover-color: null !default;
 $badge-primary: () !default;
 $badge-primary: map-deep-merge(
 	(
-		background-color:
-			var(--badge-primary-background-color, $badge-primary-bg),
-		border-color:
-			var(--badge-primary-border-color, $badge-primary-border-color),
-		color: var(--badge-primary-color, $badge-primary-color),
+		background-color: var(--badge-primary-background-color, var(--primary)),
+		background-image: var(--badge-primary-background-image),
+		border-color: var(--badge-primary-border-color, transparent),
+		color: var(--badge-primary-color, var(--white)),
 		href: (
+			color: var(--badge-primary-color, var(--white)),
 			hover: (
 				background-color:
 					var(
-						--badge-primary-href-hover-background-color,
-						$badge-primary-hover-bg
+						--badge-primary-hover-background-color,
+						var(--badge-primary-background-color, var(--primary-d1))
+					),
+				background-image:
+					var(
+						--badge-primary-hover-background-image,
+						var(--badge-primary-background-image)
 					),
 				border-color:
 					var(
-						--badge-primary-href-hover-border-color,
-						$badge-primary-hover-border-color
+						--badge-primary-hover-border-color,
+						var(--badge-primary-border-color, transparent)
 					),
 				color:
 					var(
-						--badge-primary-href-hover-color,
-						$badge-primary-hover-color
+						--badge-primary-hover-color,
+						var(--badge-primary-color, var(--white))
 					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-primary-href-focus-background-color,
-						$badge-primary-hover-bg
+						--badge-primary-focus-background-color,
+						var(--badge-primary-background-color, var(--primary))
+					),
+				background-image:
+					var(
+						--badge-primary-focus-background-image,
+						var(--badge-primary-background-image)
 					),
 				border-color:
 					var(
-						--badge-primary-href-focus-border-color,
-						$badge-primary-hover-border-color
+						--badge-primary-focus-background-color,
+						var(--badge-primary-border-color, transparent)
 					),
-				box-shadow:
-					var(
-						--badge-primary-href-focus-box-shadow,
-						$component-focus-box-shadow
-					),
+				box-shadow: $c-unset,
 				color:
 					var(
-						--badge-primary-href-focus-color,
-						$badge-primary-hover-color
+						--badge-primary-focus-color,
+						var(--badge-primary-color, var(--white))
 					),
 			),
 		),
 		link: (
-			color: $badge-primary-link-color,
+			color: $c-unset,
 			hover: (
-				color: $badge-primary-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-primary-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),
@@ -242,59 +246,71 @@ $badge-secondary: () !default;
 $badge-secondary: map-deep-merge(
 	(
 		background-color:
-			var(--badge-secondary-background-color, $badge-secondary-bg),
-		border-color:
-			var(--badge-secondary-border-color, $badge-secondary-border-color),
-		color: var(--badge-secondary-color, $badge-secondary-color),
+			var(--badge-secondary-background-color, var(--secondary-l3)),
+		background-image: var(--badge-secondary-background-image),
+		border-color: var(--badge-secondary-border-color, transparent),
+		color: var(--badge-secondary-color, var(--gray-900)),
 		href: (
+			color: var(--badge-secondary-color, var(--gray-900)),
 			hover: (
 				background-color:
 					var(
-						--badge-secondary-href-hover-background-color,
-						$badge-secondary-hover-bg
+						--badge-secondary-hover-background-color,
+						var(
+							--badge-secondary-background-color,
+							var(--secondary-l2)
+						)
+					),
+				background-image:
+					var(
+						--badge-secondary-hover-background-image,
+						var(--badge-secondary-background-image)
 					),
 				border-color:
 					var(
-						--badge-secondary-href-hover-border-color,
-						$badge-secondary-hover-border-color
+						--badge-secondary-hover-border-color,
+						var(--badge-secondary-border-color, transparent)
 					),
 				color:
 					var(
-						--badge-secondary-href-hover-color,
-						$badge-secondary-hover-color
+						--badge-secondary-hover-color,
+						var(--badge-secondary-color, var(--gray-900))
 					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-secondary-href-focus-background-color,
-						$badge-secondary-hover-bg
+						--badge-secondary-focus-background-color,
+						var(
+							--badge-secondary-background-color,
+							var(--secondary-l3)
+						)
+					),
+				background-image:
+					var(
+						--badge-secondary-focus-background-image,
+						var(--badge-secondary-background-image)
 					),
 				border-color:
 					var(
-						--badge-secondary-href-focus-border-color,
-						$badge-secondary-hover-border-color
+						--badge-secondary-focus-border-color,
+						var(--badge-secondary-border-color, transparent)
 					),
+				box-shadow: $c-unset,
 				color:
 					var(
-						--badge-secondary-href-focus-color,
-						$badge-secondary-hover-color
-					),
-				box-shadow:
-					var(
-						--badge-secondary-href-focus-box-shadow,
-						$component-focus-box-shadow
+						--badge-secondary-focus-color,
+						var(--badge-secondary-color, var(--gray-900))
 					),
 			),
 		),
 		link: (
-			color:
-				var(--badge-secondary-link-color, $badge-secondary-link-color),
+			color: $c-unset,
 			hover: (
-				color: $badge-secondary-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-secondary-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),
@@ -315,59 +331,65 @@ $badge-success-link-hover-color: null !default;
 $badge-success: () !default;
 $badge-success: map-deep-merge(
 	(
-		background-color:
-			var(--badge-success-background-color, $badge-success-bg),
-		border-color:
-			var(--badge-success-border-color, $badge-success-border-color),
-		color: var(--badge-success-color, $badge-success-color),
+		background-color: var(--badge-success-background-color, var(--success)),
+		background-image: var(--badge-success-background-image),
+		border-color: var(--badge-success-border-color, transparent),
+		color: var(--badge-success-color, var(--white)),
 		href: (
+			color: var(--badge-success-color, var(--white)),
 			hover: (
 				background-color:
 					var(
-						--badge-success-href-hover-background-color,
-						$badge-success-hover-bg
+						--badge-success-hover-background-color,
+						var(--badge-success-background-color, var(--success-d1))
+					),
+				background-image:
+					var(
+						--badge-success-hover-background-image,
+						var(--badge-success-background-image)
 					),
 				border-color:
 					var(
-						--badge-success-href-hover-border-color,
-						$badge-success-hover-border-color
+						--badge-success-hover-border-color,
+						var(--badge-success-border-color, transparent)
 					),
 				color:
 					var(
-						--badge-success-href-hover-color,
-						$badge-success-hover-color
+						--badge-success-hover-color,
+						var(--badge-success-color, var(--white))
 					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-success-href-focus-background-color,
-						$badge-success-hover-bg
+						--badge-success-focus-background-color,
+						var(--badge-success-background-color, var(--success))
+					),
+				background-image:
+					var(
+						--badge-success-focus-background-image,
+						var(--badge-success-background-image)
 					),
 				border-color:
 					var(
-						--badge-success-href-focus-border-color,
-						$badge-success-hover-border-color
+						--badge-success-focus-border-color,
+						var(--badge-success-border-color, transparent)
 					),
+				box-shadow: $c-unset,
 				color:
 					var(
-						--badge-success-href-focus-color,
-						$badge-success-hover-color
-					),
-				box-shadow:
-					var(
-						--badge-success-href-focus-box-shadow,
-						$component-focus-box-shadow
+						--badge-success-focus-color,
+						var(--badge-success-color, var(--white))
 					),
 			),
 		),
 		link: (
-			color: $badge-success-link-color,
+			color: $c-unset,
 			hover: (
-				color: $badge-success-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-success-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),
@@ -388,50 +410,65 @@ $badge-info-link-hover-color: null !default;
 $badge-info: () !default;
 $badge-info: map-deep-merge(
 	(
-		background-color: var(--badge-info-background-color, $badge-info-bg),
-		border-color: var(--badge-info-border-color, $badge-info-border-color),
-		color: var(--badge-info-color, $badge-info-color),
+		background-color: var(--badge-info-background-color, var(--info)),
+		background-image: var(--badge-info-background-image),
+		border-color: var(--badge-info-border-color, transparent),
+		color: var(--badge-info-color, var(--white)),
 		href: (
+			color: var(--badge-info-color, var(--white)),
 			hover: (
 				background-color:
 					var(
-						--badge-info-href-background-color,
-						$badge-info-hover-bg
+						--badge-info-hover-background-color,
+						var(--badge-info-background-color, var(--info-d1))
+					),
+				background-image:
+					var(
+						--badge-info-hover-background-image,
+						var(--badge-info-background-image)
 					),
 				border-color:
 					var(
-						--badge-info-href-border-color,
-						$badge-info-hover-border-color
+						--badge-info-hover-border-color,
+						var(--badge-info-border-color, transparent)
 					),
-				color: var(--badge-info-href-color, $badge-info-hover-color),
+				color:
+					var(
+						--badge-info-hover-color,
+						var(--badge-info-color, var(--white))
+					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-info-href-focus-background-color,
-						$badge-info-hover-bg
+						--badge-info-focus-background-color,
+						var(--badge-info-background-color, var(--info))
+					),
+				background-image:
+					var(
+						--badge-info-focus-background-image,
+						var(--badge-info-background-image)
 					),
 				border-color:
 					var(
-						--badge-info-href-focus-border-color,
-						$badge-info-hover-border-color
+						--badge-info-focus-border-color,
+						var(--badge-info-border-color, transparent)
 					),
+				box-shadow: $c-unset,
 				color:
-					var(--badge-info-href-focus-color, $badge-info-hover-color),
-				box-shadow:
 					var(
-						--badge-info-href-focus-box-shadow,
-						$component-focus-box-shadow
+						--badge-info-focus-color,
+						var(--badge-info-color, var(--white))
 					),
 			),
 		),
 		link: (
-			color: $badge-info-link-color,
+			color: $c-unset,
 			hover: (
-				color: $badge-info-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-info-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),
@@ -452,59 +489,65 @@ $badge-warning-link-hover-color: null !default;
 $badge-warning: () !default;
 $badge-warning: map-deep-merge(
 	(
-		background-color:
-			var(--badge-warning-background-color, $badge-warning-bg),
-		border-color:
-			var(--badge-warning-border-color, $badge-warning-border-color),
-		color: var(--badge-warning-color, $badge-warning-color),
+		background-color: var(--badge-warning-background-color, var(--warning)),
+		background-image: var(--badge-warning-background-image),
+		border-color: var(--badge-warning-border-color, transparent),
+		color: var(--badge-warning-color, var(--white)),
 		href: (
+			color: var(--badge-warning-color, var(--white)),
 			hover: (
 				background-color:
 					var(
-						--badge-warning-href-hover-background-color,
-						$badge-warning-hover-bg
+						--badge-warning-hover-background-color,
+						var(--badge-warning-background-color, var(--warning-d1))
+					),
+				background-image:
+					var(
+						--badge-warning-hover-background-image,
+						var(--badge-warning-background-image)
 					),
 				border-color:
 					var(
-						--badge-warning-href-hover-border-color,
-						$badge-warning-hover-border-color
+						--badge-warning-hover-border-color,
+						var(--badge-warning-border-color, transparent)
 					),
 				color:
 					var(
-						--badge-warning-href-hover-color,
-						$badge-warning-hover-color
+						--badge-warning-hover-color,
+						var(--badge-warning-color, var(--white))
 					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-warning-href-focus-background-color,
-						$badge-warning-hover-bg
+						--badge-warning-focus-background-color,
+						var(--badge-warning-background-color, var(--warning))
+					),
+				background-image:
+					var(
+						--badge-warning-focus-background-image,
+						var(--badge-warning-background-image)
 					),
 				border-color:
 					var(
-						--badge-warning-href-focus-border-color,
-						$badge-warning-hover-border-color
+						--badge-warning-focus-border-color,
+						var(--badge-warning-border-color, transparent)
 					),
+				box-shadow: $c-unset,
 				color:
 					var(
-						--badge-warning-href-focus-color,
-						$badge-warning-hover-color
-					),
-				box-shadow:
-					var(
-						--badge-warning-href-focus-box-shadow,
-						$component-focus-box-shadow
+						--badge-warning-focus-color,
+						var(--badge-warning-color, var(--white))
 					),
 			),
 		),
 		link: (
-			color: $badge-warning-link-color,
+			color: $c-unset,
 			hover: (
-				color: $badge-warning-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-warning-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),
@@ -525,58 +568,65 @@ $badge-danger-link-hover-color: null !default;
 $badge-danger: () !default;
 $badge-danger: map-deep-merge(
 	(
-		background-color: var(--badge-danger-background-color, $badge-danger-bg),
-		border-color:
-			var(--badge-danger-border-color, $badge-danger-border-color),
-		color: var(--badge-danger-color, $badge-danger-color),
+		background-color: var(--badge-danger-background-color, var(--danger)),
+		background-image: var(--badge-danger-background-image),
+		border-color: var(--badge-danger-border-color, transparent),
+		color: var(--badge-danger-color, var(--white)),
 		href: (
+			color: var(--badge-danger-color, var(--white)),
 			hover: (
 				background-color:
 					var(
-						--badge-danger-href-hover-background-color,
-						$badge-danger-hover-bg
+						--badge-danger-hover-background-color,
+						var(--badge-danger-background-color, var(--danger-d1))
+					),
+				background-image:
+					var(
+						--badge-danger-hover-background-image,
+						var(--badge-danger-background-image)
 					),
 				border-color:
 					var(
-						--badge-danger-href-hover-border-color,
-						$badge-danger-hover-border-color
+						--badge-danger-hover-border-color,
+						var(--badge-danger-border-color, transparent)
 					),
 				color:
 					var(
-						--badge-danger-href-hover-color,
-						$badge-danger-hover-color
+						--badge-danger-hover-color,
+						var(--badge-danger-color, var(--white))
 					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-danger-href-focus-background-color,
-						$badge-danger-hover-bg
+						--badge-danger-focus-background-color,
+						var(--badge-danger-background-color, var(--danger))
+					),
+				background-image:
+					var(
+						--badge-danger-focus-background-image,
+						var(--badge-danger-background-image)
 					),
 				border-color:
 					var(
-						--badge-danger-href-focus-border-color,
-						$badge-danger-hover-border-color
+						--badge-danger-focus-border-color,
+						var(--badge-danger-border-color, transparent)
 					),
+				box-shadow: $c-unset,
 				color:
 					var(
-						--badge-danger-href-focus-color,
-						$badge-danger-hover-color
-					),
-				box-shadow:
-					var(
-						--badge-danger-href-focus-box-shadow,
-						$component-focus-box-shadow
+						--badge-danger-focus-color,
+						var(--badge-danger-color, var(--white))
 					),
 			),
 		),
 		link: (
-			color: $badge-danger-link-color,
+			color: $c-unset,
 			hover: (
-				color: $badge-danger-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-danger-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),
@@ -597,57 +647,65 @@ $badge-light-link-hover-color: null !default;
 $badge-light: () !default;
 $badge-light: map-deep-merge(
 	(
-		background-color: var(--badge-light-background-color, $badge-light-bg),
-		border-color: var(--badge-light-border-color, $badge-light-border-color),
-		color: var(--badge-light-color, $badge-light-color),
+		background-color: var(--badge-light-background-color, var(--light)),
+		background-image: var(--badge-light-background-image),
+		border-color: var(--badge-light-border-color, transparent),
+		color: var(--badge-light-color, var(--gray-900)),
 		href: (
+			color: var(--badge-light-color, var(--gray-900)),
 			hover: (
 				background-color:
 					var(
-						--badge-light-href-hover-background-color,
-						$badge-light-hover-bg
+						--badge-light-hover-background-color,
+						var(--badge-light-background-color, var(--light-d1))
+					),
+				background-image:
+					var(
+						--badge-light-hover-background-image,
+						var(--badge-light-background-image)
 					),
 				border-color:
 					var(
-						--badge-light-href-hover-border-color,
-						$badge-light-hover-border-color
+						--badge-light-hover-border-color,
+						var(--badge-light-border-color, transparent)
 					),
 				color:
 					var(
-						--badge-light-href-hover-color,
-						$badge-light-hover-color
+						--badge-light-hover-color,
+						var(--badge-light-color, var(--gray-900))
 					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-light-href-focus-background-color,
-						$badge-light-hover-bg
+						--badge-light-focus-background-color,
+						var(--badge-light-background-color, var(--light))
+					),
+				background-image:
+					var(
+						--badge-light-focus-background-image,
+						var(--badge-light-background-image)
 					),
 				border-color:
 					var(
-						--badge-light-href-focus-border-color,
-						$badge-light-hover-border-color
+						--badge-light-focus-border-color,
+						var(--badge-light-border-color, transparent)
 					),
+				box-shadow: $c-unset,
 				color:
 					var(
-						--badge-light-href-focus-color,
-						$badge-light-hover-color
-					),
-				box-shadow:
-					var(
-						--badge-light-href-focus-box-shadow,
-						$component-focus-box-shadow
+						--badge-light-focus-color,
+						var(--badge-light-color, var(--gray-900))
 					),
 			),
 		),
 		link: (
-			color: $badge-light-link-color,
+			color: $c-unset,
 			hover: (
-				color: $badge-light-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-light-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),
@@ -668,51 +726,65 @@ $badge-dark-link-hover-color: null !default;
 $badge-dark: () !default;
 $badge-dark: map-deep-merge(
 	(
-		background-color: var(--badge-dark-background-color, $badge-dark-bg),
-		border-color: var(--badge-dark-border-color, $badge-dark-border-color),
-		color: var(--badge-dark-color, $badge-dark-color),
+		background-color: var(--badge-dark-background-color, var(--dark)),
+		background-image: var(--badge-dark-background-image),
+		border-color: var(--badge-dark-border-color, transparent),
+		color: var(--badge-dark-color, var(--white)),
 		href: (
+			color: var(--badge-dark-color, var(--white)),
 			hover: (
 				background-color:
 					var(
-						--badge-dark-href-hover-background-color,
-						$badge-dark-hover-bg
+						--badge-dark-hover-background-color,
+						var(--badge-dark-background-color, var(--dark-l2))
+					),
+				background-image:
+					var(
+						--badge-dark-hover-background-image,
+						var(--badge-dark-background-image)
 					),
 				border-color:
 					var(
-						--badge-dark-href-hover-border-color,
-						$badge-dark-hover-border-color
+						--badge-dark-hover-border-color,
+						var(--badge-dark-border-color, transparent)
 					),
 				color:
-					var(--badge-dark-href-hover-color, $badge-dark-hover-color),
+					var(
+						--badge-dark-hover-color,
+						var(--badge-dark-color, var(--white))
+					),
 			),
 			focus: (
 				background-color:
 					var(
-						--badge-dark-href-focus-background-color,
-						$badge-dark-hover-bg
+						--badge-dark-focus-background-color,
+						var(--badge-dark-background-color, var(--dark))
+					),
+				background-image:
+					var(
+						--badge-dark-focus-background-image,
+						var(--badge-dark-background-image)
 					),
 				border-color:
 					var(
-						--badge-dark-href-focus-border-color,
-						$badge-dark-hover-border-color
+						--badge-dark-focus-border-color,
+						var(--badge-dark-border-color, transparent)
 					),
+				box-shadow: $c-unset,
 				color:
-					var(--badge-dark-href-focus-color, $badge-dark-hover-color),
-				box-shadow:
 					var(
-						--badge-dark-href-focus-box-shadow,
-						$component-focus-box-shadow
+						--badge-dark-focus-color,
+						var(--badge-dark-color, var(--white))
 					),
 			),
 		),
 		link: (
-			color: $badge-dark-link-color,
+			color: $c-unset,
 			hover: (
-				color: $badge-dark-link-hover-color,
+				color: $c-unset,
 			),
 			focus: (
-				color: $badge-dark-link-hover-color,
+				color: $c-unset,
 			),
 		),
 	),

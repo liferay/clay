@@ -70,17 +70,61 @@ $clay-root: clay-map-merge(
 		--gray-800: $gray-800,
 		--gray-900: $gray-900,
 		--black: $black,
-		--white-rgb: #{clay-red($white), clay-green($white), clay-blue($white)},
-		--gray-100-rgb: #{clay-red($gray-100), clay-green($gray-100), clay-blue($gray-100)},
-		--gray-200-rgb: #{clay-red($gray-200), clay-green($gray-200), clay-blue($gray-200)},
-		--gray-300-rgb: #{clay-red($gray-300), clay-green($gray-300), clay-blue($gray-300)},
-		--gray-400-rgb: #{clay-red($gray-400), clay-green($gray-400), clay-blue($gray-400)},
-		--gray-500-rgb: #{clay-red($gray-500), clay-green($gray-500), clay-blue($gray-500)},
-		--gray-600-rgb: #{clay-red($gray-600), clay-green($gray-600), clay-blue($gray-600)},
-		--gray-700-rgb: #{clay-red($gray-700), clay-green($gray-700), clay-blue($gray-700)},
-		--gray-800-rgb: #{clay-red($gray-800), clay-green($gray-800), clay-blue($gray-800)},
-		--gray-900-rgb: #{clay-red($gray-900), clay-green($gray-900), clay-blue($gray-900)},
-		--black-rgb: #{clay-red($black), clay-green($black), clay-blue($black)},
+		--white-rgb: #{clay-red($white),
+		clay-green(
+			$white,
+		),
+		clay-blue($white)},
+		--gray-100-rgb: #{clay-red($gray-100),
+		clay-green(
+			$gray-100,
+		),
+		clay-blue($gray-100)},
+		--gray-200-rgb: #{clay-red($gray-200),
+		clay-green(
+			$gray-200,
+		),
+		clay-blue($gray-200)},
+		--gray-300-rgb: #{clay-red($gray-300),
+		clay-green(
+			$gray-300,
+		),
+		clay-blue($gray-300)},
+		--gray-400-rgb: #{clay-red($gray-400),
+		clay-green(
+			$gray-400,
+		),
+		clay-blue($gray-400)},
+		--gray-500-rgb: #{clay-red($gray-500),
+		clay-green(
+			$gray-500,
+		),
+		clay-blue($gray-500)},
+		--gray-600-rgb: #{clay-red($gray-600),
+		clay-green(
+			$gray-600,
+		),
+		clay-blue($gray-600)},
+		--gray-700-rgb: #{clay-red($gray-700),
+		clay-green(
+			$gray-700,
+		),
+		clay-blue($gray-700)},
+		--gray-800-rgb: #{clay-red($gray-800),
+		clay-green(
+			$gray-800,
+		),
+		clay-blue($gray-800)},
+		--gray-900-rgb: #{clay-red($gray-900),
+		clay-green(
+			$gray-900,
+		),
+		clay-blue($gray-900)},
+		--black-rgb: #{clay-red($black),
+		clay-green(
+			$black,
+		),
+		clay-blue($black)},
 	),
 	$clay-root
 );
@@ -124,16 +168,56 @@ $clay-root: clay-map-merge(
 		--green: $green,
 		--teal: $teal,
 		--cyan: $cyan,
-		--blue-rgb: #{clay-red($blue), clay-green($blue), clay-blue($blue)},
-		--indigo-rgb: #{clay-red($indigo), clay-green($indigo), clay-blue($indigo)},
-		--purple-rgb: #{clay-red($purple), clay-green($purple), clay-blue($purple)},
-		--pink-rgb: #{clay-red($pink), clay-green($pink), clay-blue($pink)},
-		--red-rgb: #{clay-red($red), clay-green($red), clay-blue($red)},
-		--orange-rgb: #{clay-red($orange), clay-green($orange), clay-blue($orange)},
-		--yellow-rgb: #{clay-red($yellow), clay-green($yellow), clay-blue($yellow)},
-		--green-rgb: #{clay-red($green), clay-green($green), clay-blue($green)},
-		--teal-rgb: #{clay-red($teal), clay-green($teal), clay-blue($teal)},
-		--cyan-rgb: #{clay-red($cyan), clay-green($cyan), clay-blue($cyan)},
+		--blue-rgb: #{clay-red($blue),
+		clay-green(
+			$blue,
+		),
+		clay-blue($blue)},
+		--indigo-rgb: #{clay-red($indigo),
+		clay-green(
+			$indigo,
+		),
+		clay-blue($indigo)},
+		--purple-rgb: #{clay-red($purple),
+		clay-green(
+			$purple,
+		),
+		clay-blue($purple)},
+		--pink-rgb: #{clay-red($pink),
+		clay-green(
+			$pink,
+		),
+		clay-blue($pink)},
+		--red-rgb: #{clay-red($red),
+		clay-green(
+			$red,
+		),
+		clay-blue($red)},
+		--orange-rgb: #{clay-red($orange),
+		clay-green(
+			$orange,
+		),
+		clay-blue($orange)},
+		--yellow-rgb: #{clay-red($yellow),
+		clay-green(
+			$yellow,
+		),
+		clay-blue($yellow)},
+		--green-rgb: #{clay-red($green),
+		clay-green(
+			$green,
+		),
+		clay-blue($green)},
+		--teal-rgb: #{clay-red($teal),
+		clay-green(
+			$teal,
+		),
+		clay-blue($teal)},
+		--cyan-rgb: #{clay-red($cyan),
+		clay-green(
+			$cyan,
+		),
+		clay-blue($cyan)},
 	),
 	$clay-root
 );
@@ -173,12 +257,36 @@ $clay-root: clay-map-merge(
 		--primary-l1: $primary-l1,
 		--primary-l2: $primary-l2,
 		--primary-l3: $primary-l3,
-		--primary-rgb: #{clay-red($primary), clay-green($primary), clay-blue($primary)},
-		--primary-d1-rgb: #{clay-red($primary-d1), clay-green($primary-d1), clay-blue($primary-d1)},
-		--primary-d2-rgb: #{clay-red($primary-d2), clay-green($primary-d2), clay-blue($primary-d2)},
-		--primary-l1-rgb: #{clay-red($primary-l1), clay-green($primary-l1), clay-blue($primary-l1)},
-		--primary-l2-rgb: #{clay-red($primary-l2), clay-green($primary-l2), clay-blue($primary-l2)},
-		--primary-l3-rgb: #{clay-red($primary-l3), clay-green($primary-l3), clay-blue($primary-l3)},
+		--primary-rgb: #{clay-red($primary),
+		clay-green(
+			$primary,
+		),
+		clay-blue($primary)},
+		--primary-d1-rgb: #{clay-red($primary-d1),
+		clay-green(
+			$primary-d1,
+		),
+		clay-blue($primary-d1)},
+		--primary-d2-rgb: #{clay-red($primary-d2),
+		clay-green(
+			$primary-d2,
+		),
+		clay-blue($primary-d2)},
+		--primary-l1-rgb: #{clay-red($primary-l1),
+		clay-green(
+			$primary-l1,
+		),
+		clay-blue($primary-l1)},
+		--primary-l2-rgb: #{clay-red($primary-l2),
+		clay-green(
+			$primary-l2,
+		),
+		clay-blue($primary-l2)},
+		--primary-l3-rgb: #{clay-red($primary-l3),
+		clay-green(
+			$primary-l3,
+		),
+		clay-blue($primary-l3)},
 	),
 	$clay-root
 );
@@ -207,12 +315,36 @@ $clay-root: clay-map-merge(
 		--secondary-l1: $secondary-l1,
 		--secondary-l2: $secondary-l2,
 		--secondary-l3: $secondary-l3,
-		--secondary-rgb: #{clay-red($secondary), clay-green($secondary), clay-blue($secondary)},
-		--secondary-d1-rgb: #{clay-red($secondary-d1), clay-green($secondary-d1), clay-blue($secondary-d1)},
-		--secondary-d2-rgb: #{clay-red($secondary-d2), clay-green($secondary-d2), clay-blue($secondary-d2)},
-		--secondary-l1-rgb: #{clay-red($secondary-l1), clay-green($secondary-l1), clay-blue($secondary-l1)},
-		--secondary-l2-rgb: #{clay-red($secondary-l2), clay-green($secondary-l2), clay-blue($secondary-l2)},
-		--secondary-l3-rgb: #{clay-red($secondary-l3), clay-green($secondary-l3), clay-blue($secondary-l3)},
+		--secondary-rgb: #{clay-red($secondary),
+		clay-green(
+			$secondary,
+		),
+		clay-blue($secondary)},
+		--secondary-d1-rgb: #{clay-red($secondary-d1),
+		clay-green(
+			$secondary-d1,
+		),
+		clay-blue($secondary-d1)},
+		--secondary-d2-rgb: #{clay-red($secondary-d2),
+		clay-green(
+			$secondary-d2,
+		),
+		clay-blue($secondary-d2)},
+		--secondary-l1-rgb: #{clay-red($secondary-l1),
+		clay-green(
+			$secondary-l1,
+		),
+		clay-blue($secondary-l1)},
+		--secondary-l2-rgb: #{clay-red($secondary-l2),
+		clay-green(
+			$secondary-l2,
+		),
+		clay-blue($secondary-l2)},
+		--secondary-l3-rgb: #{clay-red($secondary-l3),
+		clay-green(
+			$secondary-l3,
+		),
+		clay-blue($secondary-l3)},
 	),
 	$clay-root
 );
@@ -230,11 +362,31 @@ $clay-root: clay-map-merge(
 		--info-d2: $info-d2,
 		--info-l1: $info-l1,
 		--info-l2: $info-l2,
-		--info-rgb: #{clay-red($info), clay-green($info), clay-blue($info)},
-		--info-d1-rgb: #{clay-red($info-d1), clay-green($info-d1), clay-blue($info-d1)},
-		--info-d2-rgb: #{clay-red($info-d2), clay-green($info-d2), clay-blue($info-d2)},
-		--info-l1-rgb: #{clay-red($info-l1), clay-green($info-l1), clay-blue($info-l1)},
-		--info-l2-rgb: #{clay-red($info-l2), clay-green($info-l2), clay-blue($info-l2)},
+		--info-rgb: #{clay-red($info),
+		clay-green(
+			$info,
+		),
+		clay-blue($info)},
+		--info-d1-rgb: #{clay-red($info-d1),
+		clay-green(
+			$info-d1,
+		),
+		clay-blue($info-d1)},
+		--info-d2-rgb: #{clay-red($info-d2),
+		clay-green(
+			$info-d2,
+		),
+		clay-blue($info-d2)},
+		--info-l1-rgb: #{clay-red($info-l1),
+		clay-green(
+			$info-l1,
+		),
+		clay-blue($info-l1)},
+		--info-l2-rgb: #{clay-red($info-l2),
+		clay-green(
+			$info-l2,
+		),
+		clay-blue($info-l2)},
 	),
 	$clay-root
 );
@@ -252,11 +404,31 @@ $clay-root: clay-map-merge(
 		--success-d2: $success-d2,
 		--success-l1: $success-l1,
 		--success-l2: $success-l2,
-		--success-rgb: #{clay-red($success), clay-green($success), clay-blue($success)},
-		--success-d1-rgb: #{clay-red($success-d1), clay-green($success-d1), clay-blue($success-d1)},
-		--success-d2-rgb: #{clay-red($success-d2), clay-green($success-d2), clay-blue($success-d2)},
-		--success-l1-rgb: #{clay-red($success-l1), clay-green($success-l1), clay-blue($success-l1)},
-		--success-l2-rgb: #{clay-red($success-l2), clay-green($success-l2), clay-blue($success-l2)},
+		--success-rgb: #{clay-red($success),
+		clay-green(
+			$success,
+		),
+		clay-blue($success)},
+		--success-d1-rgb: #{clay-red($success-d1),
+		clay-green(
+			$success-d1,
+		),
+		clay-blue($success-d1)},
+		--success-d2-rgb: #{clay-red($success-d2),
+		clay-green(
+			$success-d2,
+		),
+		clay-blue($success-d2)},
+		--success-l1-rgb: #{clay-red($success-l1),
+		clay-green(
+			$success-l1,
+		),
+		clay-blue($success-l1)},
+		--success-l2-rgb: #{clay-red($success-l2),
+		clay-green(
+			$success-l2,
+		),
+		clay-blue($success-l2)},
 	),
 	$clay-root
 );
@@ -274,11 +446,31 @@ $clay-root: clay-map-merge(
 		--warning-d2: $warning-d2,
 		--warning-l1: $warning-l1,
 		--warning-l2: $warning-l2,
-		--warning-rgb: #{clay-red($warning), clay-green($warning), clay-blue($warning)},
-		--warning-d1-rgb: #{clay-red($warning-d1), clay-green($warning-d1), clay-blue($warning-d1)},
-		--warning-d2-rgb: #{clay-red($warning-d2), clay-green($warning-d2), clay-blue($warning-d2)},
-		--warning-l1-rgb: #{clay-red($warning-l1), clay-green($warning-l1), clay-blue($warning-l1)},
-		--warning-l2-rgb: #{clay-red($warning-l2), clay-green($warning-l2), clay-blue($warning-l2)},
+		--warning-rgb: #{clay-red($warning),
+		clay-green(
+			$warning,
+		),
+		clay-blue($warning)},
+		--warning-d1-rgb: #{clay-red($warning-d1),
+		clay-green(
+			$warning-d1,
+		),
+		clay-blue($warning-d1)},
+		--warning-d2-rgb: #{clay-red($warning-d2),
+		clay-green(
+			$warning-d2,
+		),
+		clay-blue($warning-d2)},
+		--warning-l1-rgb: #{clay-red($warning-l1),
+		clay-green(
+			$warning-l1,
+		),
+		clay-blue($warning-l1)},
+		--warning-l2-rgb: #{clay-red($warning-l2),
+		clay-green(
+			$warning-l2,
+		),
+		clay-blue($warning-l2)},
 	),
 	$clay-root
 );
@@ -296,11 +488,31 @@ $clay-root: clay-map-merge(
 		--danger-d2: $danger-d2,
 		--danger-l1: $danger-l1,
 		--danger-l2: $danger-l2,
-		--danger-rgb: #{clay-red($danger), clay-green($danger), clay-blue($danger)},
-		--danger-d1-rgb: #{clay-red($danger-d1), clay-green($danger-d1), clay-blue($danger-d1)},
-		--danger-d2-rgb: #{clay-red($danger-d2), clay-green($danger-d2), clay-blue($danger-d2)},
-		--danger-l1-rgb: #{clay-red($danger-l1), clay-green($danger-l1), clay-blue($danger-l1)},
-		--danger-l2-rgb: #{clay-red($danger-l2), clay-green($danger-l2), clay-blue($danger-l2)},
+		--danger-rgb: #{clay-red($danger),
+		clay-green(
+			$danger,
+		),
+		clay-blue($danger)},
+		--danger-d1-rgb: #{clay-red($danger-d1),
+		clay-green(
+			$danger-d1,
+		),
+		clay-blue($danger-d1)},
+		--danger-d2-rgb: #{clay-red($danger-d2),
+		clay-green(
+			$danger-d2,
+		),
+		clay-blue($danger-d2)},
+		--danger-l1-rgb: #{clay-red($danger-l1),
+		clay-green(
+			$danger-l1,
+		),
+		clay-blue($danger-l1)},
+		--danger-l2-rgb: #{clay-red($danger-l2),
+		clay-green(
+			$danger-l2,
+		),
+		clay-blue($danger-l2)},
 	),
 	$clay-root
 );
@@ -324,11 +536,31 @@ $clay-root: clay-map-merge(
 		--light-d2: $light-d2,
 		--light-l1: $light-l1,
 		--light-l2: $light-l2,
-		--light-rgb: #{clay-red($light), clay-green($light), clay-blue($light)},
-		--light-d1-rgb: #{clay-red($light-d1), clay-green($light-d1), clay-blue($light-d1)},
-		--light-d2-rgb: #{clay-red($light-d2), clay-green($light-d2), clay-blue($light-d2)},
-		--light-l1-rgb: #{clay-red($light-l1), clay-green($light-l1), clay-blue($light-l1)},
-		--light-l2-rgb: #{clay-red($light-l2), clay-green($light-l2), clay-blue($light-l2)},
+		--light-rgb: #{clay-red($light),
+		clay-green(
+			$light,
+		),
+		clay-blue($light)},
+		--light-d1-rgb: #{clay-red($light-d1),
+		clay-green(
+			$light-d1,
+		),
+		clay-blue($light-d1)},
+		--light-d2-rgb: #{clay-red($light-d2),
+		clay-green(
+			$light-d2,
+		),
+		clay-blue($light-d2)},
+		--light-l1-rgb: #{clay-red($light-l1),
+		clay-green(
+			$light-l1,
+		),
+		clay-blue($light-l1)},
+		--light-l2-rgb: #{clay-red($light-l2),
+		clay-green(
+			$light-l2,
+		),
+		clay-blue($light-l2)},
 	),
 	$clay-root
 );
@@ -346,11 +578,31 @@ $clay-root: clay-map-merge(
 		--dark-d2: $dark-d2,
 		--dark-l1: $dark-l1,
 		--dark-l2: $dark-l2,
-		--dark-rgb: #{clay-red($dark), clay-green($dark), clay-blue($dark)},
-		--dark-d1-rgb: #{clay-red($dark-d1), clay-green($dark-d1), clay-blue($dark-d1)},
-		--dark-d2-rgb: #{clay-red($dark-d2), clay-green($dark-d2), clay-blue($dark-d2)},
-		--dark-l1-rgb: #{clay-red($dark-l1), clay-green($dark-l1), clay-blue($dark-l1)},
-		--dark-l2-rgb: #{clay-red($dark-l2), clay-green($dark-l2), clay-blue($dark-l2)},
+		--dark-rgb: #{clay-red($dark),
+		clay-green(
+			$dark,
+		),
+		clay-blue($dark)},
+		--dark-d1-rgb: #{clay-red($dark-d1),
+		clay-green(
+			$dark-d1,
+		),
+		clay-blue($dark-d1)},
+		--dark-d2-rgb: #{clay-red($dark-d2),
+		clay-green(
+			$dark-d2,
+		),
+		clay-blue($dark-d2)},
+		--dark-l1-rgb: #{clay-red($dark-l1),
+		clay-green(
+			$dark-l1,
+		),
+		clay-blue($dark-l1)},
+		--dark-l2-rgb: #{clay-red($dark-l2),
+		clay-green(
+			$dark-l2,
+		),
+		clay-blue($dark-l2)},
 	),
 	$clay-root
 );
@@ -517,12 +769,23 @@ $clay-root: clay-map-merge(
 $component-active-color: #fff !default;
 $component-active-bg: #0b5fff !default;
 
-$clay-root: clay-map-merge((
-	--component-active-background-color: var(--primary),
-	--component-active-color: var(--white),
-	--component-active-background-color-rgb: #{clay-red($primary), clay-green($primary), clay-blue($primary)},
-	--component-active-color-rgb: #{clay-red($white), clay-green($white), clay-blue($white)},
-),$clay-root);
+$clay-root: clay-map-merge(
+	(
+		--component-active-background-color: var(--primary),
+		--component-active-color: var(--white),
+		--component-active-background-color-rgb: #{clay-red($primary),
+		clay-green(
+			$primary,
+		),
+		clay-blue($primary)},
+		--component-active-color-rgb: #{clay-red($white),
+		clay-green(
+			$white,
+		),
+		clay-blue($white)},
+	),
+	$clay-root
+);
 
 // Cursors
 
@@ -723,12 +986,15 @@ $link-decoration: none !default;
 $link-hover-color: $primary-d2 !default;
 $link-hover-decoration: underline !default;
 
-$clay-root: clay-map-merge((
-	--link-color: var(--primary),
-	--link-text-decoration: none,
-	--link-hover-color: var(--primary-d2),
-	--link-hover-text-decoration: underline,
-),$clay-root);
+$clay-root: clay-map-merge(
+	(
+		--link-color: var(--primary),
+		--link-text-decoration: none,
+		--link-hover-color: var(--primary-d2),
+		--link-hover-text-decoration: underline,
+	),
+	$clay-root
+);
 
 $link: () !default;
 $link: map-deep-merge(
@@ -737,8 +1003,7 @@ $link: map-deep-merge(
 		text-decoration: var(--link-text-decoration),
 		hover: (
 			color: var(--link-hover-color),
-			text-decoration:
-				var(--link-hover-text-decoration),
+			text-decoration: var(--link-hover-text-decoration),
 		),
 	),
 	$link

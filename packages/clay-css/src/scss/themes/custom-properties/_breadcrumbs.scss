@@ -16,24 +16,20 @@ $breadcrumb-item-padding: var(--breadcrumb-item-padding, 0.5rem) !default;
 
 $breadcrumb-active-color: var(
 	--breadcrumb-item-active-color,
-	$gray-900
+	var(--gray-900)
 ) !default;
 $breadcrumb-active-font-weight: var(
 	--breadcrumb-item-active-font-weight,
-	$font-weight-semi-bold
+	var(--font-weight-semi-bold)
 ) !default;
 
 // Breadcrumb Text Truncate
 
 $breadcrumb-text-truncate-icon-spacer-x: 0.875rem !default;
-$breadcrumb-text-truncate-max-width: var(
-	--breadcrumb-text-truncate-max-width,
-	18.75rem - $breadcrumb-text-truncate-icon-spacer-x
-) !default;
-$breadcrumb-text-truncate-max-width-mobile: var(
-	--breadcrumb-text-truncate-mobile-max-width,
-	9.375rem - $breadcrumb-text-truncate-icon-spacer-x
-) !default;
+$breadcrumb-text-truncate-max-width: 18.75rem -
+	$breadcrumb-text-truncate-icon-spacer-x !default;
+$breadcrumb-text-truncate-max-width-mobile: 9.375rem -
+	$breadcrumb-text-truncate-icon-spacer-x !default;
 
 // Breadcrumb Link
 
@@ -47,36 +43,34 @@ $breadcrumb-link: () !default;
 $breadcrumb-link: map-deep-merge(
 	(
 		border-radius: var(--breadcrumb-link-border-radius, 1px),
-		color: var(--breadcrumb-link-color, $breadcrumb-link-color),
-		display: var(--breadcrumb-link-display, block),
+		color: var(--breadcrumb-link-color, var(--gray-600)),
+		display: block,
 		text-decoration:
-			var(
-				--breadcrumb-link-text-decoration,
-				$breadcrumb-link-text-decoration
-			),
-		text-transform:
-			var(--breadcrumb-link-text-transform, $breadcrumb-text-transform),
+			var(--breadcrumb-link-text-decoration, var(--link-text-decoration)),
+		text-transform: $c-unset,
 		transition:
 			var(--breadcrumb-link-transition, box-shadow 0.15s ease-in-out),
 		hover: (
 			color:
-				var(--breadcrumb-link-hover-color, $breadcrumb-link-hover-color),
+				var(
+					--breadcrumb-link-hover-color,
+					var(--breadcrumb-link-color, var(--gray-600))
+				),
 			text-decoration:
 				var(
 					--breadcrumb-link-hover-text-decoration,
-					$breadcrumb-link-hover-text-decoration
+					var(--link-hover-text-decoration)
 				),
 		),
 		focus: (
-			box-shadow:
-				var(--breadcrumb-link-focus, $component-focus-box-shadow),
-			color: var(--breadcrumb-link-focus, $breadcrumb-link-hover-color),
-			outline: var(--breadcrumb-link-focus, 0),
-			text-decoration:
+			box-shadow: var(--component-focus-box-shadow),
+			color:
 				var(
 					--breadcrumb-link-focus,
-					$breadcrumb-link-hover-text-decoration
+					var(--breadcrumb-link-color, var(--gray-600))
 				),
+			outline: 0,
+			text-decoration: var(--breadcrumb-link-focus-text-decoration, none),
 		),
 	),
 	$breadcrumb-link
@@ -90,9 +84,15 @@ $breadcrumb-divider-color: $breadcrumb-link-color !default;
 $breadcrumb-divider-font-family: null !default;
 $breadcrumb-divider-font-weight: null !default;
 
-$breadcrumb-divider-svg-icon: clay-icon(
-	angle-right,
-	$breadcrumb-divider-color
+$breadcrumb-divider-svg-icon: var(
+	--breadcrumb-divider-svg-icon,
+	clay-icon(angle-right, $breadcrumb-divider-color)
 ) !default;
-$breadcrumb-divider-svg-icon-height: 0.6em !default;
-$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
+$breadcrumb-divider-svg-icon-height: var(
+	--breadcrumb-divider-svg-icon-height,
+	0.6em
+) !default;
+$breadcrumb-divider-svg-icon-width: var(
+	--breadcrumb-divider-svg-icon-width,
+	0.6em
+) !default;
