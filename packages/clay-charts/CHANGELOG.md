@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.1](https://github.com/liferay/clay/compare/v2.24.0...v2.24.1) (2022-05-30)
+
+**Note:** Version bump only for package clay-charts
+
+
+
+
+
 ## [2.23.4](https://github.com/liferay/clay/compare/v2.23.3...v2.23.4) (2022-02-24)
 
 **Note:** Version bump only for package clay-charts

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.1](https://github.com/liferay/clay/compare/v2.24.0...v2.24.1) (2022-05-30)
+
+
+### Bug Fixes
+
+* **clay-css:** Adds Valencian flag (ca-ES-VALENCIA) ([b4a38be](https://github.com/liferay/clay/commit/b4a38be10c62b4c62fad1f75a028bfc98629983f))
+
+
+
+
+
 ## [2.23.4](https://github.com/liferay/clay/compare/v2.23.3...v2.23.4) (2022-02-24)
 
 

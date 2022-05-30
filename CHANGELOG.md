@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.1](https://github.com/matuzalemsteles/clay/compare/v2.24.0...v2.24.1) (2022-05-30)
+
+
+### Bug Fixes
+
+* **clay-css:** Adds Valencian flag (ca-ES-VALENCIA) ([b4a38be](https://github.com/matuzalemsteles/clay/commit/b4a38be10c62b4c62fad1f75a028bfc98629983f))
+
+
+
+
+
 # [2.24.0](https://github.com/matuzalemsteles/clay/compare/v2.23.4...v2.24.0) (2022-03-21)
 
 
