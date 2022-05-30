@@ -1,5 +1,5 @@
 /**
-* Clay 2.23.4
+* Clay 2.24.1
 *
 * Copyright 2022, Liferay, Inc.
 * All rights reserved.
