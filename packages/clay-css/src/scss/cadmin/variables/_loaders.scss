@@ -1,37 +1,145 @@
+// Loading Animation
+
+/// @deprecated as of v3.x with no replacement
+
 $cadmin-loading-icon-font-size: 40px !default; // 40px
 
-$cadmin-loading-icon-font-size-sm: 20px !default; // 20px
+/// @deprecated as of v3.x with no replacement
 
-// Loading Icon Dotted
+$cadmin-loading-icon-font-size-sm: 16px !default; // 16px
+
+// Loading Animation
 
 $cadmin-loading-animation: () !default;
 $cadmin-loading-animation: map-deep-merge(
 	(
-		after: (
-			animation: 1.2s ease-out infinite,
-			animation-name: loading-animation,
+		animation: cadmin-loading-animation-circle 1s linear infinite,
+		display: block,
+		height: 1em,
+		margin-left: auto,
+		margin-right: auto,
+		position: relative,
+		text-align: left,
+		vertical-align: middle,
+		width: 1em,
+		before: (
 			border-radius: 50%,
-			color: $cadmin-gray-600,
+			box-shadow: -0.03125em -0.375em 0 0 currentColor,
+			content: '',
+			height: 0.25em,
+			left: 50%,
+			position: absolute,
+			top: 50%,
+			transform: translate(-50%, -50%),
+			width: 0.25em,
+		),
+		after: (
+			background-color: currentColor,
+			border-radius: 50%,
 			content: '',
 			display: block,
 			height: 1em,
-			left: 0,
-			position: absolute,
-			top: 0,
-			transform: scale(0.33334),
+			-webkit-mask: #{conic-gradient(transparent 10%, #000),
+			linear-gradient(#000 0 0) content-box},
+			-webkit-mask-composite: source-out,
+			mask-composite: subtract,
+			padding: 0.25em,
 			width: 1em,
 		),
 	),
 	$cadmin-loading-animation
 );
 
+// .loading-animation-squares
+
+$cadmin-loading-animation-squares: () !default;
+$cadmin-loading-animation-squares: map-deep-merge(
+	(
+		display: block,
+		height: 1em,
+		margin-left: auto,
+		margin-right: auto,
+		position: relative,
+		text-align: left,
+		vertical-align: middle,
+		width: 1em,
+		before: (
+			animation: cadmin-loading-animation-squares-box-1 2.4s ease-in-out
+				infinite,
+			background-color: currentColor,
+			border-radius: 0.2em,
+			content: '',
+			display: block,
+			font-size: 0.3125em,
+			height: 1em,
+			left: 0,
+			opacity: 0.4,
+			position: absolute,
+			top: 0,
+			transform: scale(1),
+			width: 1em,
+		),
+		after: (
+			animation: cadmin-loading-animation-squares-box-2 2.4s ease-in-out
+				infinite,
+			background-color: currentColor,
+			border-radius: 0.2em,
+			content: '',
+			display: block,
+			font-size: 0.3125em,
+			height: 1em,
+			left: calc(100% - 1.5em),
+			opacity: 1,
+			position: absolute,
+			top: calc(100% - 1.5em),
+			transform: scale(2),
+			width: 1em,
+		),
+	),
+	$cadmin-loading-animation-squares
+);
+
+// Loading Animation Sizes
+
+$cadmin-loading-animation-sizes: () !default;
+$cadmin-loading-animation-sizes: map-deep-merge(
+	(
+		loading-animation-xs: (
+			font-size: 10px,
+		),
+		loading-animation-sm: (
+			font-size: $cadmin-loading-icon-font-size-sm,
+		),
+		loading-animation-md: (
+			font-size: 32px,
+		),
+		loading-animation-lg: (
+			font-size: 64px,
+		),
+	),
+	$cadmin-loading-animation-sizes
+);
+
+// Loading Animation Variants
+
 $cadmin-loading-animation-light: () !default;
 $cadmin-loading-animation-light: map-deep-merge(
 	(
-		after: (
-			animation-name: loading-animation-light,
-			color: $cadmin-white,
-		),
+		color: $cadmin-white,
 	),
 	$cadmin-loading-animation-light
+);
+
+$cadmin-loading-animation-palette: () !default;
+$cadmin-loading-animation-palette: map-deep-merge(
+	(
+		loading-animation-primary: (
+			color: $cadmin-primary,
+		),
+		loading-animation-secondary: (
+			color: $cadmin-secondary,
+		),
+		loading-animation-light: $cadmin-loading-animation-light,
+	),
+	$cadmin-loading-animation-palette
 );
