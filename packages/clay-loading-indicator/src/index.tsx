@@ -6,7 +6,26 @@
 import classNames from 'classnames';
 import React from 'react';
 
+type DisplayType = null | 'primary' | 'secondary' | 'light';
+type Shape = null | 'circle' | 'squares';
+type Size = null | 'xs' | 'sm' | 'md' | 'lg';
+
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Determines the color of the visual indicator.
+	 */
+	displayType?: DisplayType;
+
+	/**
+	 * Determines the style of the visual indicator.
+	 */
+	shape?: Shape;
+
+	/**
+	 * Determines the size of the visual indicator.
+	 */
+	size?: Size;
+
 	/**
 	 * Flag to indicate the 'light' variant
 	 */
@@ -19,14 +38,31 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const ClayLoadingIndicator = React.forwardRef<HTMLSpanElement, IProps>(
-	({className, light, small, ...otherProps}: IProps, ref) => {
+	(
+		{
+			className,
+			displayType,
+			light,
+			shape,
+			size,
+			small,
+			...otherProps
+		}: IProps,
+		ref
+	) => {
 		return (
 			<span
 				aria-hidden="true"
 				{...otherProps}
-				className={classNames(className, 'loading-animation', {
+				className={classNames(className, {
+					'loading-animation':
+						[null, undefined, '', 'circle'].indexOf(shape) > -1,
+					[`loading-animation-${shape}`]:
+						shape && ['', 'circle'].indexOf(shape) === -1,
 					'loading-animation-light': light,
+					[`loading-animation-${displayType}`]: displayType && !light,
 					'loading-animation-sm': small,
+					[`loading-animation-${size}`]: size,
 				})}
 				ref={ref}
 			/>
