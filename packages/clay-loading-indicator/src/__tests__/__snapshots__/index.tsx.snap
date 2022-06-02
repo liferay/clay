@@ -7,6 +7,48 @@ exports[`ClayLoadingIndicator renders 1`] = `
 />
 `;
 
+exports[`ClayLoadingIndicator renders as the circle shape 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the deprecated light variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-light"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the deprecated small and the deprecated light variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-light loading-animation-sm"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the deprecated small variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-sm"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the extra small variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-xs"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the large variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-lg"
+/>
+`;
+
 exports[`ClayLoadingIndicator renders as the light variant 1`] = `
 <span
   aria-hidden="true"
@@ -14,10 +56,24 @@ exports[`ClayLoadingIndicator renders as the light variant 1`] = `
 />
 `;
 
-exports[`ClayLoadingIndicator renders as the small and light variant 1`] = `
+exports[`ClayLoadingIndicator renders as the medium variant 1`] = `
 <span
   aria-hidden="true"
-  className="loading-animation loading-animation-light loading-animation-sm"
+  className="loading-animation loading-animation-md"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the primary variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-primary"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the secondary variant 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation loading-animation-secondary"
 />
 `;
 
@@ -25,5 +81,12 @@ exports[`ClayLoadingIndicator renders as the small variant 1`] = `
 <span
   aria-hidden="true"
   className="loading-animation loading-animation-sm"
+/>
+`;
+
+exports[`ClayLoadingIndicator renders as the squares shape 1`] = `
+<span
+  aria-hidden="true"
+  className="loading-animation-squares"
 />
 `;
