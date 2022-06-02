@@ -15,6 +15,12 @@ import {VerticalBarContext} from './context';
 
 type Props = {
 	/**
+	 * Flag to position the component using absolute rather than a
+	 * fixed position.
+	 */
+	absolute?: boolean;
+
+	/**
 	 * The VerticalBar content.
 	 */
 	children: React.ReactNode;
@@ -53,6 +59,7 @@ export function VerticalBar(props: Props): JSX.Element & {
 };
 
 export function VerticalBar({
+	absolute = false,
 	active = null,
 	children,
 	className,
@@ -71,14 +78,12 @@ export function VerticalBar({
 
 	return (
 		<div
-			className={classNames(
-				'c-slideout c-slideout-fixed c-slideout-shown',
-				className,
-				{
-					'c-slideout-end': position === 'right',
-					'c-slideout-start': position === 'left',
-				}
-			)}
+			className={classNames('c-slideout c-slideout-shown', className, {
+				'c-slideout-absolute': absolute,
+				'c-slideout-end': position === 'right',
+				'c-slideout-fixed': !absolute,
+				'c-slideout-start': position === 'left',
+			})}
 		>
 			<VerticalBarContext.Provider
 				value={{
