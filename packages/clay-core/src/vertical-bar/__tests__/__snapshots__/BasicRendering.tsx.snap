@@ -3,7 +3,7 @@
 exports[`VerticalBar basic rendering render component in left position 1`] = `
 <div>
   <div
-    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-start"
+    class="c-slideout c-slideout-shown c-slideout-fixed c-slideout-start"
   >
     <nav
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
@@ -54,7 +54,7 @@ exports[`VerticalBar basic rendering render component in left position 1`] = `
 exports[`VerticalBar basic rendering render dark theme 1`] = `
 <div>
   <div
-    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
   >
     <nav
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
@@ -105,7 +105,7 @@ exports[`VerticalBar basic rendering render dark theme 1`] = `
 exports[`VerticalBar basic rendering render dynamic content 1`] = `
 <div>
   <div
-    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
   >
     <nav
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
@@ -173,7 +173,7 @@ exports[`VerticalBar basic rendering render dynamic content 1`] = `
 exports[`VerticalBar basic rendering render light theme 1`] = `
 <div>
   <div
-    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
   >
     <nav
       class="tbar tbar-stacked c-slideout-show tbar-light"
@@ -224,7 +224,7 @@ exports[`VerticalBar basic rendering render light theme 1`] = `
 exports[`VerticalBar basic rendering render static content 1`] = `
 <div>
   <div
-    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
   >
     <nav
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
@@ -275,7 +275,7 @@ exports[`VerticalBar basic rendering render static content 1`] = `
 exports[`VerticalBar basic rendering renders the component with the active panel 1`] = `
 <div>
   <div
-    class="c-slideout c-slideout-fixed c-slideout-shown c-slideout-end"
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
   >
     <div
       class="sidebar c-slideout-show sidebar-light"
