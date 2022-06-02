@@ -50,7 +50,9 @@ export function Item({children, divider = false, keyValue}: Props) {
 						return;
 					}
 
-					onActivePanel(keyValue === activePanel ? null : keyValue!);
+					onActivePanel(
+						keyValue === activePanel ? undefined : keyValue!
+					);
 				},
 			})}
 		</li>

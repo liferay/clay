@@ -38,7 +38,7 @@ export function Panel({children, keyValue}: Props) {
 
 	const isFirst = useIsFirstRender();
 
-	const previousActivePanelRef = useRef<React.Key | null>(null);
+	const previousActivePanelRef = useRef<React.Key | undefined>(undefined);
 
 	useEffect(() => {
 		previousActivePanelRef.current = activePanel;
@@ -59,10 +59,10 @@ export function Panel({children, keyValue}: Props) {
 			}}
 			in={activePanel === keyValue}
 			timeout={
-				(activePanel !== null &&
-					previousActivePanelRef.current === null) ||
-				(activePanel === null &&
-					previousActivePanelRef.current !== null)
+				(activePanel !== undefined &&
+					previousActivePanelRef.current === undefined) ||
+				(activePanel === undefined &&
+					previousActivePanelRef.current !== undefined)
 					? {enter: 300, exit: 200}
 					: 0
 			}

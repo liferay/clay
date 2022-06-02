@@ -38,17 +38,17 @@ type Props = {
 	/**
 	 * Sets the current active panel (controlled).
 	 */
-	active?: React.Key | null;
+	active?: React.Key | undefined;
 
 	/**
 	 * Sets the default active panel (uncontrolled).
 	 */
-	defaultActive?: React.Key | null;
+	defaultActive?: React.Key | undefined;
 
 	/**
 	 * Callback is called when the active state changes (controlled).
 	 */
-	onActiveChange?: InternalDispatch<React.Key | null>;
+	onActiveChange?: InternalDispatch<React.Key | undefined>;
 };
 
 export function VerticalBar(props: Props): JSX.Element & {
@@ -60,14 +60,16 @@ export function VerticalBar(props: Props): JSX.Element & {
 
 export function VerticalBar({
 	absolute = false,
-	active = null,
+	active,
 	children,
 	className,
-	defaultActive = null,
+	defaultActive,
 	onActiveChange,
 	position = 'right',
 }: Props) {
-	const [activePanel, setActivePanel] = useInternalState({
+	const [activePanel, setActivePanel] = useInternalState<
+		React.Key | undefined
+	>({
 		defaultName: 'defaultItems',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

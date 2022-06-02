@@ -5,11 +5,12 @@
 
 import {createContext} from 'react';
 
+import type {InternalDispatch} from '@clayui/shared';
 import type {Key} from 'react';
 
 type Context = {
-	activePanel: Key | null;
-	onActivePanel: (key: Key | null) => void;
+	activePanel: Key | undefined;
+	onActivePanel: InternalDispatch<React.Key | undefined>;
 };
 
 export const VerticalBarContext = createContext<Context>({} as Context);
