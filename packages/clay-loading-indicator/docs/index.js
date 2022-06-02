@@ -12,9 +12,9 @@ const loadingIndicatorImportsCode = `import ClayLoadingIndicator from '@clayui/l
 
 const LoadingIndicatorCode = `const Component = () => {
 	return (
-        <>
-            <ClayLoadingIndicator />
-        </>
+		<>
+			<ClayLoadingIndicator />
+		</>
 	);
 }
 
@@ -33,14 +33,86 @@ export const LoadingIndicator = () => {
 	);
 };
 
+const loadingIndicatorSquaresImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+`;
+
+const LoadingIndicatorSquaresCode = `const Component = () => {
+	return (
+		<ClayLoadingIndicator shape="squares" />
+	);
+}
+
+render(<Component />)`;
+
+export const LoadingIndicatorSquares = () => {
+	const scope = {ClayLoadingIndicator};
+	const code = LoadingIndicatorSquaresCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorSquaresImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+const loadingIndicatorPrimaryImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+`;
+
+const LoadingIndicatorPrimaryCode = `const Component = () => {
+	return (
+		<ClayLoadingIndicator displayType="primary" />
+	);
+}
+
+render(<Component />)`;
+
+export const LoadingIndicatorPrimary = () => {
+	const scope = {ClayLoadingIndicator};
+	const code = LoadingIndicatorPrimaryCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorPrimaryImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+const loadingIndicatorSecondaryImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+`;
+
+const LoadingIndicatorSecondaryCode = `const Component = () => {
+	return (
+		<ClayLoadingIndicator displayType="secondary" />
+	);
+}
+
+render(<Component />)`;
+
+export const LoadingIndicatorSecondary = () => {
+	const scope = {ClayLoadingIndicator};
+	const code = LoadingIndicatorSecondaryCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorSecondaryImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
 const loadingIndicatorLightImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
 `;
 
 const LoadingIndicatorLightCode = `const Component = () => {
 	return (
-        <div className="bg-dark">
-            <ClayLoadingIndicator light />
-        </div>
+		<div className="bg-dark">
+			<ClayLoadingIndicator displayType="light" />
+		</div>
 	);
 }
 
@@ -59,12 +131,36 @@ export const LoadingIndicatorLight = () => {
 	);
 };
 
+const loadingIndicatorExtraSmallImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+`;
+
+const LoadingIndicatorExtraSmallCode = `const Component = () => {
+	return (
+		<ClayLoadingIndicator size="xs" />
+	);
+}
+
+render(<Component />)`;
+
+export const LoadingIndicatorExtraSmall = () => {
+	const scope = {ClayLoadingIndicator};
+	const code = LoadingIndicatorExtraSmallCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorExtraSmallImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
 const loadingIndicatorSmallImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
 `;
 
 const LoadingIndicatorSmallCode = `const Component = () => {
 	return (
-        <ClayLoadingIndicator small />
+		<ClayLoadingIndicator size="sm" />
 	);
 }
 
@@ -78,6 +174,54 @@ export const LoadingIndicatorSmall = () => {
 		<Editor
 			code={code}
 			imports={loadingIndicatorSmallImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+const loadingIndicatorMediumImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+`;
+
+const LoadingIndicatorMediumCode = `const Component = () => {
+	return (
+		<ClayLoadingIndicator size="md" />
+	);
+}
+
+render(<Component />)`;
+
+export const LoadingIndicatorMedium = () => {
+	const scope = {ClayLoadingIndicator};
+	const code = LoadingIndicatorMediumCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorMediumImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+const loadingIndicatorLargeImportsCode = `import ClayLoadingIndicator from '@clayui/loading-indicator';
+`;
+
+const LoadingIndicatorLargeCode = `const Component = () => {
+	return (
+		<ClayLoadingIndicator size="lg" />
+	);
+}
+
+render(<Component />)`;
+
+export const LoadingIndicatorLarge = () => {
+	const scope = {ClayLoadingIndicator};
+	const code = LoadingIndicatorLargeCode;
+
+	return (
+		<Editor
+			code={code}
+			imports={loadingIndicatorLargeImportsCode}
 			scope={scope}
 		/>
 	);
