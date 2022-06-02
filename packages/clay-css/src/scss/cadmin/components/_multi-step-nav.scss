@@ -60,7 +60,7 @@
 			@if ($cadmin-multi-step-icon-active-bg-image) {
 				&[data-multi-step-icon] {
 					&:before {
-						content: normal;
+						content: none;
 					}
 				}
 			}
@@ -98,7 +98,7 @@
 
 				&[data-multi-step-icon] {
 					&:before {
-						content: normal;
+						content: none;
 					}
 				}
 
@@ -133,7 +133,7 @@
 			@if ($cadmin-multi-step-icon-disabled-bg-image) {
 				&[data-multi-step-icon] {
 					&:before {
-						content: normal;
+						content: none;
 					}
 				}
 			}

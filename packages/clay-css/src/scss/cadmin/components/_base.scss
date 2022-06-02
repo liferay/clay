@@ -15,7 +15,7 @@
 %cadmin-pseudo-reset {
 	&::before,
 	&::after {
-		content: normal;
+		content: none;
 		display: inline;
 
 		@extend %cadmin-reset !optional;
