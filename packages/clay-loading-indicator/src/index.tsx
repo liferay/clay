@@ -28,11 +28,13 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 
 	/**
 	 * Flag to indicate the 'light' variant
+	 * @deprecated since v3.59.0 - use `displayType` instead.
 	 */
 	light?: boolean;
 
 	/**
 	 * Flag to indicate the small size
+	 * @deprecated since v3.59.0 - use `size` instead.
 	 */
 	small?: boolean;
 }
