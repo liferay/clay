@@ -350,7 +350,6 @@ $cadmin-btn-primary: map-deep-merge(
 			border-color: $cadmin-primary,
 			color: color-yiq($cadmin-primary),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$cadmin-btn-primary
 );
@@ -421,7 +420,6 @@ $cadmin-btn-success: map-deep-merge(
 			border-color: $cadmin-success,
 			color: color-yiq($cadmin-success),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$cadmin-btn-success
 );
@@ -457,7 +455,6 @@ $cadmin-btn-info: map-deep-merge(
 			border-color: $cadmin-info,
 			color: color-yiq($cadmin-info),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$cadmin-btn-info
 );
@@ -494,7 +491,6 @@ $cadmin-btn-warning: map-deep-merge(
 			border-color: $cadmin-warning,
 			color: color-yiq($cadmin-warning),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$cadmin-btn-warning
 );
@@ -530,7 +526,6 @@ $cadmin-btn-danger: map-deep-merge(
 			border-color: $cadmin-danger,
 			color: color-yiq($cadmin-danger),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$cadmin-btn-danger
 );
@@ -601,7 +596,6 @@ $cadmin-btn-dark: map-deep-merge(
 			border-color: $cadmin-dark,
 			color: color-yiq($cadmin-dark),
 		),
-		loading-animation: 'loading-animation-light',
 	),
 	$cadmin-btn-dark
 );

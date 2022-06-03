@@ -125,7 +125,28 @@ $cadmin-heading-text-margin-top: auto !default;
 $cadmin-inline-item-lexicon-icon-margin-top: -0.1em !default;
 $cadmin-inline-item-spacer-x: 8px !default; // 8px
 
-$cadmin-inline-item-loading-animation-font-size: 1.25em !default;
+$cadmin-inline-item-loading-animation-font-size: null !default;
+
+$cadmin-inline-item: () !default;
+$cadmin-inline-item: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		vertical-align: middle,
+		inline-item: (
+			display: inline,
+		),
+		lexicon-icon: (
+			margin-top: $cadmin-inline-item-lexicon-icon-margin-top,
+		),
+		loading-animation: (
+			font-size: $cadmin-inline-item-loading-animation-font-size,
+		),
+	),
+	$cadmin-inline-item
+);
+
+// Page Header
 
 $cadmin-page-header-bg: $cadmin-white !default;
 

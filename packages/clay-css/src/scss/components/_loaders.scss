@@ -1,35 +1,115 @@
-.loading-animation {
-	display: block;
-	font-size: $loading-icon-font-size;
-	height: 1em;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	text-align: left;
-	vertical-align: middle;
-	width: 1em;
+// Loading Animation Circle
+
+@keyframes loading-animation-circle {
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
-// Loading Icon Dotted
+// Loading Animation
 
 %loading-animation {
-	@include clay-loading-animation-variant($loading-animation);
-}
-
-%loading-animation-light {
-	@include clay-loading-animation-variant($loading-animation-light);
+	@include clay-spinner-variant($loading-animation);
 }
 
 .loading-animation {
 	@extend %loading-animation !optional;
 }
 
-.loading-animation-light {
-	@extend %loading-animation-light !optional;
+// Loading Animation Squares
+
+@keyframes loading-animation-squares-box-1 {
+	0% {
+		left: 0;
+		opacity: 0.4;
+		top: 0;
+		transform: scale(1);
+	}
+	25% {
+		left: calc(100% - 1em);
+		opacity: 0.4;
+		top: 0;
+		transform: scale(1);
+	}
+	50% {
+		left: calc(100% - 1.5em);
+		opacity: 1;
+		top: calc(100% - 1.5em);
+		transform: scale(2);
+	}
+	75% {
+		left: calc(1em / 2);
+		opacity: 1;
+		top: calc(100% - 1.5em);
+		transform: scale(2);
+	}
 }
 
-// Loading Icon Sizes
+@keyframes loading-animation-squares-box-2 {
+	0% {
+		left: calc(100% - 1.5em);
+		opacity: 1;
+		top: calc(100% - 1.5em);
+		transform: scale(2);
+	}
+	25% {
+		left: calc(1em / 2);
+		opacity: 1;
+		top: calc(100% - 1.5em);
+		transform: scale(2);
+	}
+	50% {
+		left: 0;
+		opacity: 0.4;
+		top: 0;
+		transform: scale(1);
+	}
+	75% {
+		left: calc(100% - 1em);
+		opacity: 0.4;
+		top: 0;
+		transform: scale(1);
+	}
+}
 
-.loading-animation.loading-animation-sm {
-	font-size: $loading-icon-font-size-sm;
+.loading-animation-squares {
+	@include clay-spinner-variant($loading-animation-squares);
+}
+
+// Loading Animation Sizes
+
+@each $selector, $value in $loading-animation-sizes {
+	$_selector: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
+
+	#{$_selector} {
+		@include clay-spinner-variant($value);
+	}
+}
+
+// Loading Animation Variants
+
+@each $selector, $value in $loading-animation-palette {
+	$placeholder: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		'%#{str-slice($selector, 2)}',
+		'%#{$selector}'
+	);
+
+	$_selector: if(
+		starts-with($selector, '.') or starts-with($selector, '#'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
+
+	#{$placeholder} {
+		@include clay-spinner-variant($value);
+	}
+
+	#{$_selector} {
+		@extend #{$placeholder} !optional;
+	}
 }

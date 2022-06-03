@@ -127,7 +127,28 @@ $heading-text-margin-top: auto !default;
 $inline-item-lexicon-icon-margin-top: -0.1em !default;
 $inline-item-spacer-x: 0.5rem !default; // 8px
 
-$inline-item-loading-animation-font-size: 1.25em !default;
+$inline-item-loading-animation-font-size: null !default;
+
+$inline-item: () !default;
+$inline-item: map-deep-merge(
+	(
+		align-items: center,
+		display: inline-flex,
+		vertical-align: middle,
+		inline-item: (
+			display: inline,
+		),
+		lexicon-icon: (
+			margin-top: $inline-item-lexicon-icon-margin-top,
+		),
+		loading-animation: (
+			font-size: $inline-item-loading-animation-font-size,
+		),
+	),
+	$inline-item
+);
+
+// Page Header
 
 $page-header-bg: $gray-200 !default;
 

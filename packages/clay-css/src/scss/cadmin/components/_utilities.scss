@@ -285,20 +285,18 @@
 // Inline Item
 
 .inline-item {
-	align-items: center;
-	display: inline-flex;
-	vertical-align: middle;
+	@include clay-css($cadmin-inline-item);
 
 	.inline-item {
-		display: inline;
+		@include clay-css(map-get($cadmin-inline-item, inline-item));
 	}
 
 	.lexicon-icon {
-		margin-top: $cadmin-inline-item-lexicon-icon-margin-top;
+		@include clay-css(map-get($cadmin-inline-item, lexicon-icon));
 	}
 
 	.loading-animation {
-		font-size: $cadmin-inline-item-loading-animation-font-size;
+		@include clay-css(map-get($cadmin-inline-item, loading-animation));
 	}
 }
 
