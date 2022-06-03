@@ -17,6 +17,7 @@ import {VerticalBarExample} from '$packages/clay-core/docs/vertical-bar';
     -   [Static](#static)
     -   [Dynamic](#dynamic)
 -   [Position](#position)
+-   [Load lazy panel](#load-lazy-panel)
 
 </div>
 </div>
@@ -173,4 +174,69 @@ Positioning the VerticalBar on the right or left side is possible by setting the
 	<VerticalBar.Bar></VerticalBar.Bar>
 	<VerticalBar.Content></VerticalBar.Content>
 </VerticalBar>
+```
+
+## Load lazy panel
+
+The possibility of lazy loading the panel content is a strategy to reduce the application's bundle and load it only when it is used. Implementing in the Vertical Bar is also simple using the React.js support components, with `<Suspense />` and `React.lazy`.
+
+```jsx
+const TagPanel = React.lazy(() => import('./TagPanel'));
+const MessagePanel = React.lazy(() => import('./MessagePanel'));
+
+export const LoadLazyPanel = () => {
+	const items = [
+		{
+			icon: 'tag',
+			panel: TagPanel,
+			title: 'Tag',
+		},
+		{
+			divider: true,
+			icon: 'message',
+			panel: MessagePanel,
+			title: 'Message',
+		},
+	];
+
+	return (
+		<VerticalBar>
+			<VerticalBar.Content displayType="light" items={items}>
+				{({panel: PanelLazy, title}) => (
+					<VerticalBar.Panel key={title}>
+						<Suspense fallback={<div>Loading...</div>}>
+							<PanelLazy />
+						</Suspense>
+					</VerticalBar.Panel>
+				)}
+			</VerticalBar.Content>
+
+			<VerticalBar.Bar displayType="light" items={items}>
+				{(item) => (
+					<VerticalBar.Item divider={item.divider} key={item.title}>
+						<Button displayType={null}>
+							<Icon symbol={item.icon} />
+						</Button>
+					</VerticalBar.Item>
+				)}
+			</VerticalBar.Bar>
+		</VerticalBar>
+	);
+};
+```
+
+You can also use the `<ErrorBoundary />` above the `<Suspense />` to capture error and render some screen as a fallback, for example, if it was a network error, render a fallback with a retry reload button to fetch component again.
+
+```jsx
+<VerticalBar.Content displayType="light" items={items}>
+	{({panel: PanelLazy, title}) => (
+		<VerticalBar.Panel key={title}>
+			<ErrorBoundary>
+				<Suspense fallback={<div>Loading...</div>}>
+					<PanelLazy />
+				</Suspense>
+			</ErrorBoundary>
+		</VerticalBar.Panel>
+	)}
+</VerticalBar.Content>
 ```

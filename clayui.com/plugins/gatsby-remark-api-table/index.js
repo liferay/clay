@@ -110,7 +110,7 @@ module.exports = ({markdownAST}) => {
 							.map((key) => {
 								const prop = component.props[key];
 
-								if (prop.description.includes('@ignore')) {
+								if (prop.description?.includes('@ignore')) {
 									return null;
 								}
 
