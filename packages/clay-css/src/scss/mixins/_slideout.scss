@@ -18,51 +18,43 @@
 
 @mixin clay-slideout-variant($map) {
 	@if (setter(map-get($map, enabled), true)) {
-		@include clay-css(setter($map, ()));
+		@include clay-css($map);
 
 		&.c-slideout-shown {
-			@include clay-css(setter(map-get($map, c-slideout-shown), ()));
+			@include clay-css(map-get($map, c-slideout-shown));
 		}
 
 		&.c-slideout-tbar-shown {
-			@include clay-css(setter(map-get($map, c-slideout-tbar-shown), ()));
+			@include clay-css(map-get($map, c-slideout-tbar-shown));
 		}
 
 		&.c-slideout-tbar-shown .sidebar {
-			@include clay-css(
-				setter(map-get($map, c-slideout-tbar-shown-sidebar), ())
-			);
+			@include clay-css(map-get($map, c-slideout-tbar-shown-sidebar));
 		}
 
 		.sidebar {
-			@include clay-css(setter(map-get($map, sidebar), ()));
+			@include clay-css(map-get($map, sidebar));
 		}
 
 		.sidebar.c-slideout-show {
-			@include clay-css(
-				setter(map-get($map, sidebar-c-slideout-show), ())
-			);
+			@include clay-css(map-get($map, sidebar-c-slideout-show));
 		}
 
 		.sidebar.c-slideout-transition {
-			@include clay-css(
-				setter(map-get($map, sidebar-c-slideout-transition), ())
-			);
+			@include clay-css(map-get($map, sidebar-c-slideout-transition));
 		}
 
 		.tbar-stacked {
-			@include clay-css(setter(map-get($map, tbar-stacked), ()));
+			@include clay-css(map-get($map, tbar-stacked));
 		}
 
 		.tbar-stacked.c-slideout-show {
-			@include clay-css(
-				setter(map-get($map, tbar-stacked-c-slideout-show), ())
-			);
+			@include clay-css(map-get($map, tbar-stacked-c-slideout-show));
 		}
 
 		.tbar-stacked.c-slideout-transition {
 			@include clay-css(
-				setter(map-get($map, tbar-stacked-c-slideout-transition), ())
+				map-get($map, tbar-stacked-c-slideout-transition)
 			);
 		}
 	}

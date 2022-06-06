@@ -74,10 +74,10 @@ $c-slideout: map-deep-merge(
 			z-index: 1,
 		),
 		tbar-stacked-c-slideout-show: (
-			display: block,
+			display: flex,
 		),
 		tbar-stacked-c-slideout-transition: (
-			display: block,
+			display: flex,
 		),
 	),
 	$c-slideout
