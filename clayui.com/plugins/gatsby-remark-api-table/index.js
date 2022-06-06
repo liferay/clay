@@ -106,7 +106,17 @@ module.exports = ({markdownAST}) => {
 							</tr>
 						</thead>
 						<tbody>
-						${propsKeys.map((key) => generateTr(component.props[key], key)).join('')}
+						${propsKeys
+							.map((key) => {
+								const prop = component.props[key];
+
+								if (prop.description?.includes('@ignore')) {
+									return null;
+								}
+
+								return generateTr(prop, key);
+							})
+							.join('')}
 						</tbody>
 						</table>
 						</div>`

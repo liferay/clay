@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VerticalBar basic rendering render component in left position 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-shown c-slideout-fixed c-slideout-start"
+  >
+    <nav
+      class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
+    >
+      <ul
+        class="tbar-nav"
+      >
+        <li
+          class="tbar-item tbar-divider-after"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-tag"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#tag"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-message"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#message"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`VerticalBar basic rendering render dark theme 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
+  >
+    <nav
+      class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
+    >
+      <ul
+        class="tbar-nav"
+      >
+        <li
+          class="tbar-item tbar-divider-after"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-tag"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#tag"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-message"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#message"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`VerticalBar basic rendering render dynamic content 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
+  >
+    <nav
+      class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
+    >
+      <ul
+        class="tbar-nav"
+      >
+        <li
+          class="tbar-item"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-tag"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#tag"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="tbar-item tbar-divider-after"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-message"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#message"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-effects"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#effects"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`VerticalBar basic rendering render light theme 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
+  >
+    <nav
+      class="tbar tbar-stacked c-slideout-show tbar-light"
+    >
+      <ul
+        class="tbar-nav"
+      >
+        <li
+          class="tbar-item tbar-divider-after"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-tag"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#tag"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-message"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#message"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`VerticalBar basic rendering render static content 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
+  >
+    <nav
+      class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
+    >
+      <ul
+        class="tbar-nav"
+      >
+        <li
+          class="tbar-item tbar-divider-after"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-tag"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#tag"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-message"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#message"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`VerticalBar basic rendering renders the component with the active panel 1`] = `
+<div>
+  <div
+    class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
+  >
+    <div
+      class="sidebar c-slideout-show sidebar-light"
+    >
+      Tag
+    </div>
+    <nav
+      class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
+    >
+      <ul
+        class="tbar-nav"
+      >
+        <li
+          class="tbar-item tbar-divider-after"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced active btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-tag"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#tag"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="tbar-item"
+        >
+          <button
+            class="tbar-btn tbar-btn-monospaced btn"
+            type="button"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-message"
+              role="presentation"
+            >
+              <use
+                xlink:href="icons.svg#message"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
