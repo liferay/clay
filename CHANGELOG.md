@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.60.0](https://github.com/liferay/clay/compare/v3.59.0...v3.60.0) (2022-06-06)
+
+### Bug Fixes
+
+-   **@clayui/css:** Buttons removes extensions `loading-animation` variants ([c9d73ed](https://github.com/liferay/clay/commit/c9d73edd317bd317e175ea63fb3f229b7c1b10bd))
+-   **@clayui/css:** c-slideout should use display: flex on tbar-stacked for show/transition ([0a95c59](https://github.com/liferay/clay/commit/0a95c592cbaaf604221a804d585507c33909045a))
+-   **@clayui/css:** Cadmin Buttons removes extensions `loading-animation` variants ([ed9e0dd](https://github.com/liferay/clay/commit/ed9e0dd84d14f5e7a4f308458bdc1be4284a25c4))
+-   **@clayui/css:** Cadmin Utilities unset `font-size` on `.inline-item .loading-animation` ([57b4602](https://github.com/liferay/clay/commit/57b4602eb8e901e2292f34438900eb63f6a4c114))
+-   **@clayui/css:** Mixins clay-slideout-variant remove setter functions ([e21665d](https://github.com/liferay/clay/commit/e21665de62a7efa1649fcfdd988472d2b7047935))
+-   **@clayui/css:** Updates content property values to conform to what is allowed by OAW Tracker ([77dd43a](https://github.com/liferay/clay/commit/77dd43a3ae68233914d406c5613da64cd6e1f77b))
+-   **@clayui/css:** Utilities unset `font-size` on `.inline-item .loading-animation` ([f1106e3](https://github.com/liferay/clay/commit/f1106e376a0287572b41439187e1f304b9f9a4e5))
+-   **@clayui/loading-indicator:** Deprecate small and light attributes ([4011083](https://github.com/liferay/clay/commit/40110837162ccc2e1da760e762e17cb3c2fa2f15))
+-   storybook LoadingIndicator adds displayType, shape, and size ([6a98f20](https://github.com/liferay/clay/commit/6a98f201da7e9bce4932e2eec5f3be22f3f39755))
+
+### Features
+
+-   **@clayui/core:** adds the implementation of the Vertical Bar component ([23a1637](https://github.com/liferay/clay/commit/23a1637e8ebac46d9815d334bae1296736979542))
+-   **@clayui/css:** Cadmin Loaders updates dotted styles to be circle thing with gradient and add `loading-animation-squares` ([82f7a0f](https://github.com/liferay/clay/commit/82f7a0fe9e467074a1d8aad446cc20c8d20ad539))
+-   **@clayui/css:** Global `clay-css` mixin accept more properties ([e1e8dc8](https://github.com/liferay/clay/commit/e1e8dc8d68a4dd3118b099914f6e82f4eef2e698))
+-   **@clayui/css:** Loaders updates dotted styles to be circle thing with gradient and add `loading-animation-squares` ([aae79ad](https://github.com/liferay/clay/commit/aae79adaabf68938c83c9ef3e170232ab49478f1))
+-   **@clayui/css:** Mixins Loaders adds `clay-spinner-variant` ([1865a1d](https://github.com/liferay/clay/commit/1865a1d818f6b3e182037d21c363c27691dc390b))
+-   **@clayui/loading-indicator:** Adds more attributes ([0b7627a](https://github.com/liferay/clay/commit/0b7627a4cd1d887b3bc2b1c12dcd0b63795e2f62))
+
+### BREAKING CHANGES
+
+-   **@clayui/css:** `loading-animation` received a breaking style update. See https://clayui.com/docs/components/loading-indicator/markup.html on how to revert back to the dotted style.
+-   **@clayui/css:** `loading-animation` received a breaking style update. See https://clayui.com/docs/components/loading-indicator/markup.html on how to revert back to the dotted style.
+
 # [3.59.0](https://github.com/liferay/clay/compare/v3.58.1...v3.59.0) (2022-05-30)
 
 ### Bug Fixes

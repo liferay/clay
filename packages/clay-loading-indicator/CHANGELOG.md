@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.60.0](https://github.com/liferay/clay/compare/v3.59.0...v3.60.0) (2022-06-06)
+
+### Bug Fixes
+
+-   **@clayui/loading-indicator:** Deprecate small and light attributes ([4011083](https://github.com/liferay/clay/commit/40110837162ccc2e1da760e762e17cb3c2fa2f15))
+-   storybook LoadingIndicator adds displayType, shape, and size ([6a98f20](https://github.com/liferay/clay/commit/6a98f201da7e9bce4932e2eec5f3be22f3f39755))
+
+### Features
+
+-   **@clayui/loading-indicator:** Adds more attributes ([0b7627a](https://github.com/liferay/clay/commit/0b7627a4cd1d887b3bc2b1c12dcd0b63795e2f62))
+
 # [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
 
 **Note:** Version bump only for package @clayui/loading-indicator
