@@ -20,19 +20,31 @@ type Props = {
 	divider?: boolean;
 
 	/**
+	 * Flag to expand the item, the next one will be aligned at the bottom of
+	 * the bar.
+	 */
+	expand?: boolean;
+
+	/**
 	 * Internal property.
 	 * @ignore
 	 */
 	keyValue?: React.Key;
 };
 
-export function Item({children, divider = false, keyValue}: Props) {
+export function Item({
+	children,
+	divider = false,
+	expand = false,
+	keyValue,
+}: Props) {
 	const {activePanel, onActivePanel} = useContext(VerticalBarContext);
 
 	return (
 		<li
 			className={classNames('tbar-item', {
 				'tbar-divider-after': divider,
+				'tbar-item-expand': expand,
 			})}
 		>
 			{React.cloneElement(children, {
