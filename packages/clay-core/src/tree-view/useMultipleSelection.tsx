@@ -415,16 +415,15 @@ export function useMultipleSelection<T>(
 
 					const keyMap = layoutKeys.current.get(key) as LayoutInfo;
 
-					// Resets the intermediate state because the element will be selected
-					// or otherwise the state must be false because it will be unchecking
-					// all its children.
-					intermediateKeys.current.delete(key);
-
 					if (selecteds.has(key)) {
 						selecteds.delete(key);
-					} else {
+					} else if (!intermediateKeys.current.has(key)) {
 						selecteds.add(key);
 					}
+
+					// Resets the intermediate state because its selected state
+					// will change.
+					intermediateKeys.current.delete(key);
 
 					toggleChildrenSelection(
 						keyMap,
