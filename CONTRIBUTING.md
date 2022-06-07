@@ -9,20 +9,29 @@ Here's a set of guidelines to contribute to Clay and its packages. Use your comm
 #### Table of Contents
 
 -   [What Should I Know Before I Get Started?](#what-should-i-know-before-i-get-started)
--   [Clay and Packages](#clay-and-packages)
+    -   [Clay and Packages](#clay-and-packages)
 -   [How Can I Contribute?](#how-can-i-contribute?)
--   [Reporting Bugs](#reporting-bugs)
--   [Your First Pull Request](#your-first-pull-request)
--   [Proposing a Change](#proposing-a-change)
--   [Sending a Pull Request](#sending-a-pull-request)
+    -   [Reporting Bugs](#reporting-bugs)
+        -   [Before Submitting a Bug Report](#before-submitting-a-bug-report)
+        -   [How Do I Submit a Good Bug Report?](#how-do-i-submit-a-good-bug-report)
+    -   [Your First Pull Request](#your-first-pull-request)
+    -   [Proposing a Change](#proposing-a-change)
+        -   [Before Submitting a Suggestion for Improvement](#before-submitting-a-suggestion-for-improvement)
+        -   [How Do I Submit a Suggestion for Improvement?](#how-do-i-submit-a-suggestion-for-improvement)
+    -   [Sending a Pull Request](#sending-a-pull-request)
+        -   [Before Sending a Pull Request](#before-sending-a-pull-request)
 -   [Style Guides](#style-guides)
--   [Git Commit Messages](#git-commit-messages)
--   [JavaScript Style Guide](#javascript-style-guide)
--   [CSS Guidelines](#css-guidelines)
--   [Documentation Style Guide](#documentation-style-guide)
+    -   [Git Commit Messages](#git-commit-messages)
+    -   [JavaScript Style Guide](#javascript-style-guide)
+    -   [CSS Guidelines](#css-guidelines)
+    -   [Documentation Style Guide](#documentation-style-guide)
 -   [Additional Notes](#additional-notes)
--   [Issue Labels](#issue-labels)
+    -   [Issue Labels](#issue-labels)
 -   [Release process](#release-process)
+    -   [Automated release](#automated-release)
+    -   [Manual release](#manual-release)
+        -   [Releasing individual packages](#releasing-individual-packages)
+        -   [Updating release in liferay-portal](#testing-local-changes-in-liferay-portal)
 -   [Testing local changes in liferay-portal](#testing-local-changes-in-liferay-portal)
 
 ## What Should I Know Before I Get Started?
@@ -204,6 +213,23 @@ You may want to use [Github search](https://help.github.com/articles/searching-i
 
 ## Release process
 
+The Clay release process is done every week, initially every Monday we are cutting a new version. The release is done in two steps, cutting a new version and publishing to NPM, and updating the packages in [liferay-portal](https://github.com/liferay/liferay-portal).
+
+Making a new release, it is recommended to follow the automated step instead of following the manual step.
+
+### Automated release
+
+The automated release is done through Github Actions, the action must be manually triggered to run the tests, visual tests with chromatic, cut the version and publish the packages.
+
+![](https://user-images.githubusercontent.com/13750819/172487793-a99ac4a9-9561-488e-a7dc-67245a0ed43c.png)
+
+1. Go to link https://github.com/liferay/clay/actions/workflows/release.yml
+2. Run the workflow
+
+> Sets the encoded version via input is optional. Just define if necessary.
+
+### Manual release
+
 To publish a new version for all packages that have updated, follow these steps:
 
 ```bash
@@ -253,7 +279,7 @@ lerna publish from-package
 
 > NOTE: Publishing new packages automatically with Lerna is sometimes a problem, if you have problems try to publish the package separately manually.
 
-### Releasing individual packages
+#### Releasing individual packages
 
 In a rare case you may want to release only one specific package. Follow these steps:
 
@@ -307,7 +333,7 @@ Common Issues
 -   You must have "publish" access for @clayui packages on NPM
 -   Wrong node version. ([yarn build doesn't work on node v12](https://github.com/liferay/clay/issues/2053))
 
-## Updating release in [liferay-portal](https://github.com/liferay/liferay-portal)
+#### Updating release in [liferay-portal](https://github.com/liferay/liferay-portal)
 
 ```bash
 # Navigate
