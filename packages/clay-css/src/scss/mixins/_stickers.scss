@@ -113,176 +113,185 @@
 /// - Add @link to documentation
 
 @mixin clay-sticker-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$base: map-merge(
-		$map,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($map, background-color)),
-			height: setter(map-get($map, size), map-get($map, height)),
-			line-height: setter(map-get($map, size), map-get($map, line-height)),
-			width: setter(map-get($map, size), map-get($map, width)),
-		)
-	);
-
-	$inline-item: setter(map-get($map, inline-item), ());
-	$inline-item: map-merge(
-		$inline-item,
-		(
-			font-size:
-				setter(
-					map-get($map, inline-item-font-size),
-					map-get($inline-item, font-size)
-				),
-		)
-	);
-
-	$outside-offset: setter(
-		map-get($map, outside-offset),
-		if(
-			map-get($map, size),
-			calc(#{math-sign(map-get($map, size))} / 2),
-			null
-		)
-	);
-
-	$sticker-outside: setter(map-get($map, sticker-outside), ());
-
-	$sticker-outside-bottom-left: setter(
-		map-get($sticker-outside, sticker-bottom-left),
-		()
-	);
-	$sticker-outside-bottom-left: map-merge(
-		$sticker-outside-bottom-left,
-		setter(map-get($map, sticker-outside-bottom-left), ())
-	);
-
-	$sticker-outside-bottom-right: setter(
-		map-get($sticker-outside, sticker-bottom-right),
-		()
-	);
-	$sticker-outside-bottom-right: map-merge(
-		$sticker-outside-bottom-right,
-		setter(map-get($map, sticker-outside-bottom-right), ())
-	);
-
-	$sticker-outside-top-right: setter(
-		map-get($sticker-outside, sticker-top-right),
-		()
-	);
-	$sticker-outside-top-right: map-merge(
-		$sticker-outside-top-right,
-		setter(map-get($map, sticker-outside-top-right), ())
-	);
-
-	@if ($outside-offset) {
-		$sticker-outside: map-merge(
-			$sticker-outside,
+		$base: map-merge(
+			$map,
 			(
-				left: $outside-offset,
-				top: $outside-offset,
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+				height: setter(map-get($map, size), map-get($map, height)),
+				line-height:
+					setter(map-get($map, size), map-get($map, line-height)),
+				width: setter(map-get($map, size), map-get($map, width)),
 			)
 		);
 
+		$inline-item: setter(map-get($map, inline-item), ());
+		$inline-item: map-merge(
+			$inline-item,
+			(
+				font-size:
+					setter(
+						map-get($map, inline-item-font-size),
+						map-get($inline-item, font-size)
+					),
+			)
+		);
+
+		$outside-offset: setter(
+			map-get($map, outside-offset),
+			if(
+				map-get($map, size),
+				calc(#{math-sign(map-get($map, size))} / 2),
+				null
+			)
+		);
+
+		$sticker-outside: setter(map-get($map, sticker-outside), ());
+
+		$sticker-outside-bottom-left: setter(
+			map-get($sticker-outside, sticker-bottom-left),
+			()
+		);
 		$sticker-outside-bottom-left: map-merge(
 			$sticker-outside-bottom-left,
-			(
-				bottom: $outside-offset,
-				top: auto,
-			)
+			setter(map-get($map, sticker-outside-bottom-left), ())
 		);
 
+		$sticker-outside-bottom-right: setter(
+			map-get($sticker-outside, sticker-bottom-right),
+			()
+		);
 		$sticker-outside-bottom-right: map-merge(
 			$sticker-outside-bottom-right,
-			(
-				bottom: $outside-offset,
-				left: auto,
-				right: $outside-offset,
-				top: auto,
-			)
+			setter(map-get($map, sticker-outside-bottom-right), ())
 		);
 
+		$sticker-outside-top-right: setter(
+			map-get($sticker-outside, sticker-top-right),
+			()
+		);
 		$sticker-outside-top-right: map-merge(
 			$sticker-outside-top-right,
-			(
-				left: auto,
-				right: $outside-offset,
-			)
+			setter(map-get($map, sticker-outside-top-right), ())
 		);
-	}
 
-	@if ($enabled) {
-		@include clay-css($base);
+		@if ($outside-offset) {
+			$sticker-outside: map-merge(
+				$sticker-outside,
+				(
+					left: $outside-offset,
+					top: $outside-offset,
+				)
+			);
 
-		> .inline-item {
-			@include clay-css($inline-item);
+			$sticker-outside-bottom-left: map-merge(
+				$sticker-outside-bottom-left,
+				(
+					bottom: $outside-offset,
+					top: auto,
+				)
+			);
+
+			$sticker-outside-bottom-right: map-merge(
+				$sticker-outside-bottom-right,
+				(
+					bottom: $outside-offset,
+					left: auto,
+					right: $outside-offset,
+					top: auto,
+				)
+			);
+
+			$sticker-outside-top-right: map-merge(
+				$sticker-outside-top-right,
+				(
+					left: auto,
+					right: $outside-offset,
+				)
+			);
+		}
+
+		@if ($enabled) {
+			@include clay-css($base);
+
+			> .inline-item {
+				@include clay-css($inline-item);
+
+				.lexicon-icon {
+					@include clay-css(
+						setter(
+							map-deep-get($map, inline-item, lexicon-icon),
+							()
+						)
+					);
+				}
+			}
 
 			.lexicon-icon {
-				@include clay-css(
-					setter(map-deep-get($map, inline-item, lexicon-icon), ())
-				);
+				@include clay-css(setter(map-get($map, lexicon-icon), ()));
 			}
-		}
 
-		.lexicon-icon {
-			@include clay-css(setter(map-get($map, lexicon-icon), ()));
-		}
-
-		.sticker-img {
-			@include clay-css(setter(map-get($map, sticker-img), ()));
-		}
-
-		.sticker-overlay {
-			@include clay-css(setter(map-get($map, sticker-overlay), ()));
-		}
-
-		&.rounded {
-			@include clay-css(setter(map-get($map, rounded), ()));
+			.sticker-img {
+				@include clay-css(setter(map-get($map, sticker-img), ()));
+			}
 
 			.sticker-overlay {
-				@include clay-css(
-					setter(map-deep-get($map, rounded, sticker-overlay), ())
-				);
-			}
-		}
-
-		&.rounded-circle {
-			@include clay-css(setter(map-get($map, rounded-circle), ()));
-
-			.sticker-overlay {
-				@include clay-css(
-					setter(
-						map-deep-get($map, rounded-circle, sticker-overlay),
-						()
-					)
-				);
-			}
-		}
-
-		&.rounded-0 {
-			@include clay-css(setter(map-get($map, rounded-0), ()));
-
-			.sticker-overlay {
-				@include clay-css(
-					setter(map-deep-get($map, rounded-0, sticker-overlay), ())
-				);
-			}
-		}
-
-		&.sticker-outside {
-			@include clay-css($sticker-outside);
-
-			&.sticker-bottom-left {
-				@include clay-css($sticker-outside-bottom-left);
+				@include clay-css(setter(map-get($map, sticker-overlay), ()));
 			}
 
-			&.sticker-bottom-right {
-				@include clay-css($sticker-outside-bottom-right);
+			&.rounded {
+				@include clay-css(setter(map-get($map, rounded), ()));
+
+				.sticker-overlay {
+					@include clay-css(
+						setter(map-deep-get($map, rounded, sticker-overlay), ())
+					);
+				}
 			}
 
-			&.sticker-top-right {
-				@include clay-css($sticker-outside-top-right);
+			&.rounded-circle {
+				@include clay-css(setter(map-get($map, rounded-circle), ()));
+
+				.sticker-overlay {
+					@include clay-css(
+						setter(
+							map-deep-get($map, rounded-circle, sticker-overlay),
+							()
+						)
+					);
+				}
+			}
+
+			&.rounded-0 {
+				@include clay-css(setter(map-get($map, rounded-0), ()));
+
+				.sticker-overlay {
+					@include clay-css(
+						setter(
+							map-deep-get($map, rounded-0, sticker-overlay),
+							()
+						)
+					);
+				}
+			}
+
+			&.sticker-outside {
+				@include clay-css($sticker-outside);
+
+				&.sticker-bottom-left {
+					@include clay-css($sticker-outside-bottom-left);
+				}
+
+				&.sticker-bottom-right {
+					@include clay-css($sticker-outside-bottom-right);
+				}
+
+				&.sticker-top-right {
+					@include clay-css($sticker-outside-top-right);
+				}
 			}
 		}
 	}
