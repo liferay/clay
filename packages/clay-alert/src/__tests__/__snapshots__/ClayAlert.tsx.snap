@@ -1,5 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayAlert render toast alert with stacked action 1`] = `
+<div>
+  <div
+    class="alert alert-info"
+    role="alert"
+  >
+    <div
+      class="alert-autofit-row autofit-row"
+    >
+      <div
+        class="autofit-col"
+      >
+        <div
+          class="autofit-section"
+        >
+          <span
+            class="alert-indicator"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-info-circle"
+              role="presentation"
+            >
+              <use
+                xlink:href="/foo/bar#info-circle"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="autofit-col autofit-col-expand"
+      >
+        <div
+          class="autofit-section"
+        >
+          <strong
+            class="lead"
+          >
+            Foo:
+          </strong>
+          Bar!
+          <div
+            class="alert-footer"
+          >
+            <button
+              class="btn alert-btn btn-sm btn-primary"
+              type="button"
+            >
+              Baz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayAlert renders 1`] = `
 <div>
   <div
