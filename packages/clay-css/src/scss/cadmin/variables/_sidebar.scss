@@ -77,39 +77,6 @@ $cadmin-sidebar-list-group-sticker-size: map-deep-merge(
 
 // Sidebar Light
 
-$cadmin-sidebar-light: () !default;
-$cadmin-sidebar-light: map-deep-merge(
-	(
-		bg: $cadmin-white,
-		border-color: $cadmin-gray-300,
-		border-left-width: 0,
-		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
-		color: $cadmin-gray-900,
-		dt: (
-			color: $cadmin-gray-600,
-		),
-		dd: (
-			clay-link: (
-				color: $cadmin-gray-900,
-			),
-		),
-		panel-bg: $cadmin-gray-200,
-		panel-unstyled: (
-			header-link: (
-				focus-box-shadow: #{0 0 0 4px $cadmin-white,
-				0 0 0 6px $cadmin-primary-l1},
-			),
-		),
-		sidebar-list-group-title: (
-			font-size: 16px,
-			clay-link: (
-				color: $cadmin-gray-900,
-			),
-		),
-	),
-	$cadmin-sidebar-light
-);
-
 $cadmin-sidebar-light-navigation-bar: () !default;
 $cadmin-sidebar-light-navigation-bar: map-deep-merge(
 	(
@@ -135,42 +102,158 @@ $cadmin-sidebar-light-navigation-bar: map-deep-merge(
 	$cadmin-sidebar-light-navigation-bar
 );
 
+$cadmin-sidebar-light: () !default;
+$cadmin-sidebar-light: map-deep-merge(
+	(
+		background-color: $cadmin-white,
+		border-color: $cadmin-gray-300,
+		border-left-width: 0,
+		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
+		color: $cadmin-gray-900,
+		sidebar-dt: (
+			color: $cadmin-gray-600,
+		),
+		sidebar-dd: (
+			href: (
+				color: $cadmin-gray-900,
+			),
+		),
+		sidebar-panel: (
+			background-color: $cadmin-gray-200,
+		),
+		panel-unstyled: (
+			header: (
+				link: (
+					focus: (
+						box-shadow: #{0 0 0 4px $cadmin-white,
+						0 0 0 6px $cadmin-primary-l1},
+					),
+				),
+			),
+		),
+		sidebar-list-group: (
+			component-title: (
+				font-size: 16px,
+				href: (
+					color: $cadmin-gray-900,
+				),
+			),
+		),
+		component-navigation-bar: $cadmin-sidebar-light-navigation-bar,
+	),
+	$cadmin-sidebar-light
+);
+
 // Sidebar Dark
 
 $cadmin-sidebar-dark: () !default;
 $cadmin-sidebar-dark: map-deep-merge(
 	(
-		bg: $cadmin-dark,
+		background-color: $cadmin-dark,
 		color: $cadmin-white,
-		component-header-title: (
-			color: inherit,
-			clay-link: (
+		sidebar-header: (
+			component-title: (
 				color: inherit,
+				href: (
+					color: inherit,
+				),
 			),
-		),
-		component-header-subtitle: (
-			color: inherit,
-			clay-link: (
+			component-subtitle: (
 				color: inherit,
+				href: (
+					color: inherit,
+				),
 			),
 		),
 		close: (
 			color: $cadmin-secondary-l1,
-			hover-color: $cadmin-white,
+			hover: (
+				color: $cadmin-white,
+			),
 		),
-		nav-nested-link: (
-			border-radius: $cadmin-border-radius,
-			color: $cadmin-secondary-l1,
-			transition: box-shadow 0.15s ease-in-out,
-			hover-color: $cadmin-white,
-			focus-box-shadow: $cadmin-component-focus-box-shadow,
-			focus-outline: 0,
-			active-color: $cadmin-white,
-			disabled-box-shadow: none,
-			disabled-color: $cadmin-secondary-l1,
-			disabled-opacity: 0.65,
-			disabled-active-pointer-events: none,
+		nav-nested: (
+			nav-link: (
+				border-radius: $cadmin-border-radius,
+				color: $cadmin-secondary-l1,
+				transition: box-shadow 0.15s ease-in-out,
+				hover: (
+					color: $cadmin-white,
+				),
+				focus: (
+					box-shadow: $cadmin-component-focus-box-shadow,
+					outline: 0,
+				),
+				active: (
+					color: $cadmin-white,
+				),
+				disabled: (
+					box-shadow: none,
+					color: $cadmin-secondary-l1,
+					opacity: 0.65,
+					active: (
+						pointer-events: none,
+					),
+				),
+			),
 		),
 	),
 	$cadmin-sidebar-dark
+);
+
+$cadmin-sidebar-palette: () !default;
+$cadmin-sidebar-palette: map-deep-merge(
+	(
+		sidebar-light: $cadmin-sidebar-light,
+		sidebar-dark: $cadmin-sidebar-dark,
+		sidebar-dark-l2: (
+			background-color: $cadmin-dark-l2,
+			color: $cadmin-white,
+			sidebar-header: (
+				component-title: (
+					color: inherit,
+					href: (
+						color: inherit,
+					),
+				),
+				component-subtitle: (
+					color: inherit,
+					href: (
+						color: inherit,
+					),
+				),
+			),
+			close: (
+				color: $cadmin-secondary-l1,
+				hover: (
+					color: $cadmin-white,
+				),
+			),
+			nav-nested: (
+				nav-link: (
+					border-radius: $cadmin-border-radius,
+					color: $cadmin-secondary-l1,
+					transition: box-shadow 0.15s ease-in-out,
+					hover: (
+						color: $cadmin-white,
+					),
+					focus: (
+						box-shadow: $cadmin-component-focus-box-shadow,
+						outline: 0,
+					),
+					active: (
+						color: $cadmin-white,
+					),
+					disabled: (
+						box-shadow: none,
+						color: $cadmin-secondary-l1,
+						opacity: 0.65,
+						active: (
+							pointer-events: none,
+						),
+					),
+				),
+			),
+		),
+	),
+	$cadmin-sidebar-palette
 );

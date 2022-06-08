@@ -46,31 +46,6 @@ $sidebar-list-group-border-color: $secondary-l2 !default;
 
 // Sidebar Light
 
-$sidebar-light: () !default;
-$sidebar-light: map-deep-merge(
-	(
-		bg: $white,
-		border-left-width: 0px,
-		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
-		panel-bg: $gray-200,
-		dt: (
-			color: $gray-600,
-		),
-		dd: (
-			clay-link: (
-				color: $gray-900,
-			),
-		),
-		panel-unstyled: (
-			header-link: (
-				focus-box-shadow: #{0 0 0 0.25rem $white,
-				0 0 0 0.375rem $primary-l1},
-			),
-		),
-	),
-	$sidebar-light
-);
-
 $sidebar-light-navigation-bar: () !default;
 $sidebar-light-navigation-bar: map-deep-merge(
 	(
@@ -78,4 +53,36 @@ $sidebar-light-navigation-bar: map-deep-merge(
 		border-color: $secondary-l2,
 	),
 	$sidebar-light-navigation-bar
+);
+
+$sidebar-light: () !default;
+$sidebar-light: map-deep-merge(
+	(
+		background-color: $white,
+		border-left-width: 0px,
+		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+		sidebar-panel: (
+			background-color: $gray-200,
+		),
+		sidebar-dt: (
+			color: $gray-600,
+		),
+		sidebar-dd: (
+			href: (
+				color: $gray-900,
+			),
+		),
+		panel-unstyled: (
+			header: (
+				link: (
+					focus: (
+						box-shadow: #{0 0 0 0.25rem $white,
+						0 0 0 0.375rem $primary-l1},
+					),
+				),
+			),
+		),
+		component-navigation-bar: $sidebar-light-navigation-bar,
+	),
+	$sidebar-light
 );

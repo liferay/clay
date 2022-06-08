@@ -5,14 +5,78 @@
 /// A mixin to create Sidebar color variants (e.g., `<div class="sidebar my-custom-sidebar-variant"></div>`).
 /// @param {Map} $map - A map of `key: value` pairs. The keys and value types are listed below:
 /// @example
+/// (
+/// 	enabled: {Bool}, // Set to false to prevent mixin styles from being output. Default: true
+/// 	// .sidebar
+/// 	component-link: (
+/// 		// .sidebar .component-link
+/// 	),
+/// 	close: (
+/// 		// .sidebar .close
+/// 	),
+/// 	sidebar-header: (
+/// 		// .sidebar .sidebar-header
+/// 		component-title: (
+/// 			// .sidebar .sidebar-header .component-title
+/// 		),
+/// 		component-subtitle: (
+/// 			// .sidebar .sidebar-header .component-subtitle
+/// 		),
+/// 	),
+/// 	sidebar-body: (
+/// 		// .sidebar .sidebar-body
+/// 	),
+/// 	sidebar-footer: (
+/// 		// .sidebar .sidebar-footer
+/// 	),
+/// 	nav-nested: (
+/// 		// .sidebar .nav-nested
+/// 		nav-link: (
+/// 			// .sidebar .nav-nested .nav-link
+/// 		),
+/// 	),
+/// 	sidebar-list-group: (
+/// 		// .sidebar .sidebar-list-group
+/// 		list-group-item: (
+/// 			// .sidebar .sidebar-list-group .list-group-item
+/// 		),
+/// 		list-group-title: (
+/// 			// .sidebar .sidebar-list-group .list-group-title
+/// 		),
+/// 		list-group-subtitle: (
+/// 			// .sidebar .sidebar-list-group .list-group-subtitle
+/// 		),
+/// 		list-group-text: (
+/// 			// .sidebar .sidebar-list-group .list-group-text
+/// 		),
+/// 		list-group-subtext: (
+/// 			// .sidebar .sidebar-list-group .list-group-subtext
+/// 		),
+/// 		sticker: (
+/// 			// .sidebar .sidebar-list-group .sticker
+/// 		),
+/// 		sticker-secondary: (
+/// 			// .sidebar .sidebar-list-group .sticker-secondary
+/// 		),
+/// 	),
+/// 	sidebar-panel: (
+/// 		// .sidebar .sidebar-panel
+/// 	),
+/// 	sidebar-dt: (
+/// 		// .sidebar .sidebar-dt
+/// 	),
+/// 	sidebar-dd: (
+/// 		// .sidebar .sidebar-dd
+/// 	),
+/// 	panel-unstyled: (
+/// 		// .sidebar .panel-unstyled
+/// 	),
+/// 	component-navigation-bar: (
+/// 		// .sidebar .component-navigation-bar
+/// 	),
+/// )
+/// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// bg: {Color | String | Null},
-/// border-color: {Color | String | List | Null},
-/// border-bottom-width: {Number | String}, // Default: 0
-/// border-left-width: {Number | String}, // Default: 0
-/// border-right-width: {Number | String}, // Default: 0
-/// border-top-width: {Number | String}, // Default: 0
-/// box-shadow: {String | List | Null},
-/// color: {Color | String | Null},
 /// panel-bg: {Color | String | Null},
 /// component-header-title: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
 /// component-header-subtitle: {Map | Null}, // Pass parameters to `clay-text-typography` mixin
@@ -31,184 +95,228 @@
 /// - Add @link to documentation
 
 @mixin clay-sidebar-variant($map) {
-	$bg: map-get($map, bg);
-	$border-color: map-get($map, border-color);
-	$border-bottom-width: setter(map-get($map, border-bottom-width), 0);
-	$border-left-width: setter(map-get($map, border-left-width), 0);
-	$border-right-width: setter(map-get($map, border-right-width), 0);
-	$border-top-width: setter(map-get($map, border-top-width), 0);
-	$box-shadow: map-get($map, box-shadow);
-	$color: map-get($map, color);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$sidebar: map-merge(
-		(
-			background-color: $bg,
-			border-color: $border-color,
-			border-bottom-width: $border-bottom-width,
-			border-left-width: $border-left-width,
-			border-right-width: $border-right-width,
-			border-top-width: $border-top-width,
-			box-shadow: $box-shadow,
-			color: $color,
-		),
-		$map
-	);
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+			)
+		);
 
-	$panel-bg: map-get($map, panel-bg);
+		$panel: map-merge(
+			setter(map-get($map, sidebar-panel), ()),
+			setter(map-get($map, panel), ())
+		);
 
-	$panel: map-deep-merge(
-		(
-			background-color: $panel-bg,
-		),
-		map-get($map, panel)
-	);
+		$panel: map-merge(
+			$panel,
+			(
+				background-color:
+					setter(
+						map-get($map, panel-bg),
+						map-deep-get($map, sidebar-panel, background-color)
+					),
+			)
+		);
 
-	$header: map-deep-merge((), map-get($map, header));
+		$header: map-merge(
+			setter(map-get($map, sidebar-header), ()),
+			setter(map-get($map, header), ())
+		);
 
-	$body: map-deep-merge((), map-get($map, body));
+		$header-component-title: map-merge(
+			setter(map-get($header, component-title), ()),
+			setter(map-get($map, component-header-title), ())
+		);
 
-	$footer: map-deep-merge((), map-get($map, footer));
+		$header-component-subtitle: map-merge(
+			setter(map-get($header, component-subtitle), ()),
+			setter(map-get($map, component-header-subtitle), ())
+		);
 
-	$component-header-title: setter(map-get($map, component-header-title), ());
-	$component-header-subtitle: setter(
-		map-get($map, component-header-subtitle),
-		()
-	);
-	$component-link: setter(map-get($map, component-link), ());
+		$body: map-merge(
+			setter(map-get($map, sidebar-body), ()),
+			setter(map-get($map, body), ())
+		);
 
-	$close: map-deep-merge((), map-get($map, close));
+		$footer: map-merge(
+			setter(map-get($map, sidebar-footer), ()),
+			setter(map-get($map, footer), ())
+		);
 
-	$nav-nested: map-deep-merge((), map-get($map, nav-nested));
+		$dt: map-merge(
+			setter(map-get($map, sidebar-dt), ()),
+			setter(map-get($map, dt), ())
+		);
+		$dd: map-merge(
+			setter(map-get($map, sidebar-dd), ()),
+			setter(map-get($map, dd), ())
+		);
 
-	$nav-nested-link: map-deep-merge((), map-get($map, nav-nested-link));
+		$nav-nested: setter(map-get($map, nav-nested), ());
 
-	$dt: setter(map-get($map, dt), ());
-	$dd: setter(map-get($map, dd), ());
+		$nav-nested-nav-link: map-merge(
+			setter(map-get($nav-nested, nav-link), ()),
+			setter(map-get($map, nav-nested-link), ())
+		);
 
-	$sidebar-list-group-item-bg: map-get($map, sidebar-list-group-item-bg);
-	$sidebar-list-group-item-border-color: map-get(
-		$map,
-		sidebar-list-group-item-border-color
-	);
+		$sidebar-list-group: setter(map-get($map, sidebar-list-group), ());
 
-	$sidebar-list-group-item: map-deep-merge(
-		(
-			background-color: $sidebar-list-group-item-bg,
-			border-color: $sidebar-list-group-item-border-color,
-		),
-		map-get($map, sidebar-list-group-item)
-	);
+		$sidebar-list-group-item: setter(
+			map-get($sidebar-list-group, list-group-item),
+			()
+		);
+		$sidebar-list-group-item: map-merge(
+			$sidebar-list-group-item,
+			(
+				background-color:
+					setter(
+						map-get($map, sidebar-list-group-item-bg),
+						map-deep-get(
+							$sidebar-list-group,
+							list-group-item,
+							background-color
+						)
+					),
+				border-color:
+					setter(
+						map-get($map, sidebar-list-group-item-border-color),
+						map-deep-get(
+							$sidebar-list-group,
+							list-group-item,
+							border-color
+						)
+					),
+			)
+		);
 
-	$sidebar-list-group-title: setter(
-		map-get($map, sidebar-list-group-title),
-		()
-	);
-	$sidebar-list-group-subtitle: setter(
-		map-get($map, sidebar-list-group-subtitle),
-		()
-	);
-	$sidebar-list-group-text: setter(
-		map-get($map, sidebar-list-group-text),
-		()
-	);
-	$sidebar-list-group-subtext: setter(
-		map-get($map, sidebar-list-group-subtext),
-		()
-	);
+		$sidebar-list-group-title: map-merge(
+			setter(map-get($sidebar-list-group, list-group-title), ()),
+			setter(map-get($map, sidebar-list-group-title), ())
+		);
 
-	$sidebar-list-group-sticker: map-deep-merge(
-		(),
-		map-get($map, sidebar-list-group-sticker)
-	);
+		$sidebar-list-group-subtitle: map-merge(
+			setter(map-get($sidebar-list-group, list-group-subtitle), ()),
+			setter(map-get($map, sidebar-list-group-subtitle), ())
+		);
 
-	$sidebar-list-group-sticker-secondary: map-deep-merge(
-		(),
-		map-get($map, sidebar-list-group-sticker-secondary)
-	);
+		$sidebar-list-group-text: map-merge(
+			setter(map-get($sidebar-list-group, list-group-text), ()),
+			setter(map-get($map, sidebar-list-group-text), ())
+		);
 
-	$panel-unstyled: setter(map-get($map, panel-unstyled), ());
+		$sidebar-list-group-subtext: map-merge(
+			setter(map-get($sidebar-list-group, list-group-subtext), ()),
+			setter(map-get($map, sidebar-list-group-subtext), ())
+		);
 
-	@include clay-css($sidebar);
+		$sidebar-list-group-sticker: map-deep-merge(
+			map-get($sidebar-list-group, sticker),
+			map-get($map, sidebar-list-group-sticker)
+		);
 
-	.component-link {
-		@include clay-text-typography($component-link);
-	}
+		$sidebar-list-group-sticker-secondary: map-deep-merge(
+			map-get($sidebar-list-group, sticker-secondary),
+			map-get($map, sidebar-list-group-sticker-secondary)
+		);
 
-	.close {
-		@include clay-close($close);
-	}
+		@if ($enabled) {
+			@include clay-css($base);
 
-	.sidebar-header {
-		@include clay-css($header);
+			.component-link {
+				@include clay-text-typography(map-get($map, component-link));
+			}
 
-		.component-title {
-			@include clay-text-typography($component-header-title);
+			.close {
+				@include clay-close(map-get($map, close));
+			}
+
+			.sidebar-header {
+				@include clay-css($header);
+
+				.component-title {
+					@include clay-text-typography($header-component-title);
+				}
+
+				.component-subtitle {
+					@include clay-text-typography($header-component-subtitle);
+				}
+			}
+
+			.sidebar-body {
+				@include clay-css($body);
+			}
+
+			.sidebar-footer {
+				@include clay-css($footer);
+			}
+
+			.nav-nested {
+				@include clay-css($nav-nested);
+
+				.nav-link {
+					@include clay-link($nav-nested-nav-link);
+				}
+			}
+
+			.sidebar-list-group {
+				@include clay-css($sidebar-list-group);
+
+				.list-group-item {
+					@include clay-css($sidebar-list-group-item);
+				}
+
+				.list-group-title {
+					@include clay-text-typography($sidebar-list-group-title);
+				}
+
+				.list-group-subtitle {
+					@include clay-text-typography($sidebar-list-group-subtitle);
+				}
+
+				.list-group-text {
+					@include clay-text-typography($sidebar-list-group-text);
+				}
+
+				.list-group-subtext {
+					@include clay-text-typography($sidebar-list-group-subtext);
+				}
+
+				.sticker {
+					@include clay-sticker-variant($sidebar-list-group-sticker);
+				}
+
+				.sticker-secondary {
+					@include clay-sticker-variant(
+						$sidebar-list-group-sticker-secondary
+					);
+				}
+			}
+
+			.sidebar-panel {
+				@include clay-css($panel);
+			}
+
+			.sidebar-dt {
+				@include clay-text-typography($dt);
+			}
+
+			.sidebar-dd {
+				@include clay-text-typography($dd);
+			}
+
+			.panel-unstyled {
+				@include clay-panel-variant(map-get($map, panel-unstyled));
+			}
+
+			.component-navigation-bar {
+				@include clay-navbar-variant(
+					map-get($map, component-navigation-bar)
+				);
+			}
 		}
-
-		.component-subtitle {
-			@include clay-text-typography($component-header-subtitle);
-		}
-	}
-
-	.sidebar-body {
-		@include clay-css($body);
-	}
-
-	.sidebar-footer {
-		@include clay-css($footer);
-	}
-
-	.nav-nested {
-		@include clay-css($nav-nested);
-
-		.nav-link {
-			@include clay-link($nav-nested-link);
-		}
-	}
-
-	.sidebar-list-group {
-		.list-group-item {
-			@include clay-css($sidebar-list-group-item);
-		}
-
-		.list-group-title {
-			@include clay-text-typography($sidebar-list-group-title);
-		}
-
-		.list-group-subtitle {
-			@include clay-text-typography($sidebar-list-group-subtitle);
-		}
-
-		.list-group-text {
-			@include clay-text-typography($sidebar-list-group-text);
-		}
-
-		.list-group-subtext {
-			@include clay-text-typography($sidebar-list-group-subtext);
-		}
-
-		.sticker {
-			@include clay-css($sidebar-list-group-sticker);
-		}
-
-		.sticker-secondary {
-			@include clay-css($sidebar-list-group-sticker-secondary);
-		}
-	}
-
-	.sidebar-panel {
-		@include clay-css($panel);
-	}
-
-	.sidebar-dt {
-		@include clay-text-typography($dt);
-	}
-
-	.sidebar-dd {
-		@include clay-text-typography($dd);
-	}
-
-	.panel-unstyled {
-		@include clay-panel-variant($panel-unstyled);
 	}
 }

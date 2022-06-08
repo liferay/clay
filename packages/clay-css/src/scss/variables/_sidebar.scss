@@ -79,29 +79,6 @@ $sidebar-list-group-sticker-size: map-deep-merge(
 
 // Sidebar Light
 
-$sidebar-light: () !default;
-$sidebar-light: map-deep-merge(
-	(
-		bg: $light,
-		border-color: $gray-300,
-		border-left-width: 1px,
-		color: $gray-900,
-		dd: (
-			clay-link: (
-				color: $gray-900,
-			),
-		),
-		panel-bg: $gray-200,
-		sidebar-list-group-title: (
-			font-size: 1rem,
-			clay-link: (
-				color: $gray-900,
-			),
-		),
-	),
-	$sidebar-light
-);
-
 $sidebar-light-navigation-bar: () !default;
 $sidebar-light-navigation-bar: map-deep-merge(
 	(
@@ -127,42 +104,144 @@ $sidebar-light-navigation-bar: map-deep-merge(
 	$sidebar-light-navigation-bar
 );
 
+$sidebar-light: () !default;
+$sidebar-light: map-deep-merge(
+	(
+		background-color: $light,
+		border-color: $gray-300,
+		border-left-width: 1px,
+		color: $gray-900,
+		sidebar-dd: (
+			href: (
+				color: $gray-900,
+			),
+		),
+		sidebar-panel: (
+			background-color: $gray-200,
+		),
+		sidebar-list-group: (
+			list-group-title: (
+				font-size: 1rem,
+				href: (
+					color: $gray-900,
+				),
+			),
+		),
+		component-navigation-bar: $sidebar-light-navigation-bar,
+	),
+	$sidebar-light
+);
+
 // Sidebar Dark
 
 $sidebar-dark: () !default;
 $sidebar-dark: map-deep-merge(
 	(
-		bg: $dark,
+		background-color: $dark,
 		color: $white,
-		component-header-title: (
-			color: inherit,
-			clay-link: (
+		sidebar-header: (
+			component-title: (
 				color: inherit,
+				href: (
+					color: inherit,
+				),
 			),
-		),
-		component-header-subtitle: (
-			color: inherit,
-			clay-link: (
+			component-subtitle: (
 				color: inherit,
+				href: (
+					color: inherit,
+				),
 			),
 		),
 		close: (
 			color: $secondary-l1,
-			hover-color: $white,
+			hover: (
+				color: $white,
+			),
 		),
-		nav-nested-link: (
-			border-radius: $border-radius,
-			color: $secondary-l1,
-			transition: box-shadow 0.15s ease-in-out,
-			hover-color: $white,
-			focus-box-shadow: $component-focus-box-shadow,
-			focus-outline: 0,
-			active-color: $white,
-			disabled-box-shadow: none,
-			disabled-color: $secondary-l1,
-			disabled-opacity: 0.65,
-			disabled-active-pointer-events: none,
+		nav-nested: (
+			nav-link: (
+				border-radius: $border-radius,
+				color: $secondary-l1,
+				transition: box-shadow 0.15s ease-in-out,
+				hover: (
+					color: $white,
+				),
+				focus: (
+					box-shadow: $component-focus-box-shadow,
+					outline: 0,
+				),
+				active: (
+					color: $white,
+				),
+				disabled: (
+					box-shadow: none,
+					color: $secondary-l1,
+					opacity: 0.65,
+					active: (
+						pointer-events: none,
+					),
+				),
+			),
 		),
 	),
 	$sidebar-dark
+);
+
+$sidebar-palette: () !default;
+$sidebar-palette: map-deep-merge(
+	(
+		sidebar-light: $sidebar-light,
+		sidebar-dark: $sidebar-dark,
+		sidebar-dark-l2: (
+			background-color: $dark-l2,
+			color: $white,
+			sidebar-header: (
+				component-title: (
+					color: inherit,
+					href: (
+						color: inherit,
+					),
+				),
+				component-subtitle: (
+					color: inherit,
+					href: (
+						color: inherit,
+					),
+				),
+			),
+			close: (
+				color: $secondary-l1,
+				hover: (
+					color: $white,
+				),
+			),
+			nav-nested: (
+				nav-link: (
+					border-radius: $border-radius,
+					color: $secondary-l1,
+					transition: box-shadow 0.15s ease-in-out,
+					hover: (
+						color: $white,
+					),
+					focus: (
+						box-shadow: $component-focus-box-shadow,
+						outline: 0,
+					),
+					active: (
+						color: $white,
+					),
+					disabled: (
+						box-shadow: none,
+						color: $secondary-l1,
+						opacity: 0.65,
+						active: (
+							pointer-events: none,
+						),
+					),
+				),
+			),
+		),
+	),
+	$sidebar-palette
 );
