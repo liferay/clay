@@ -134,4 +134,22 @@ describe('ClayAlert', () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it('render toast alert with stacked action', () => {
+		const {container} = render(
+			<ClayAlert
+				actions={
+					<ClayButton alert small>
+						Baz
+					</ClayButton>
+				}
+				spritemap="/foo/bar"
+				title="Foo:"
+			>
+				Bar!
+			</ClayAlert>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
 });
