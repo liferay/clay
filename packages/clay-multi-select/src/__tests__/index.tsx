@@ -130,6 +130,20 @@ describe('ClayMultiSelect', () => {
 
 		expect(document.body).toMatchSnapshot();
 	});
+
+	it("don't show a placeholder when you have items", () => {
+		const onItemsChangeFn = jest.fn();
+
+		const {container} = render(
+			<ClayMultiSelectWithState
+				items={items}
+				onItemsChange={onItemsChangeFn}
+				spritemap="/foo/bar"
+			/>
+		);
+
+		expect(container.querySelector('input')!.placeholder).toBe('');
+	});
 });
 
 describe('Interactions', () => {

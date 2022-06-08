@@ -199,15 +199,16 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			},
 			menuRenderer: MenuRenderer = MultiSelectMenuRenderer,
 			onBlur = noop,
-			onClearAllButtonClick,
 			onChange,
+			onClearAllButtonClick,
 			onFocus = noop,
 			onItemsChange,
 			onKeyDown = noop,
 			onPaste = noop,
-			value,
+			placeholder,
 			sourceItems = [],
 			spritemap,
+			value,
 			...otherProps
 		}: IProps,
 		ref
@@ -392,6 +393,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							}}
 							onKeyDown={handleKeyDown}
 							onPaste={handlePaste}
+							placeholder={
+								internalItems.length ? undefined : placeholder
+							}
 							ref={inputRef}
 							type="text"
 							value={internalValue}
