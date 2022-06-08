@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import ClayButton from '@clayui/button';
 import React from 'react';
 
 import ClayAlert from '../src';
@@ -30,6 +31,72 @@ export const Default = (args: any) => (
 	>
 		{args.content}
 	</ClayAlert>
+);
+
+export const Feedback = () => (
+	<>
+		<ClayAlert displayType="warning" variant="feedback">
+			Data is temporarily unavailable
+		</ClayAlert>
+		<ClayAlert displayType="danger" variant="feedback">
+			Error loading data
+		</ClayAlert>
+		<ClayAlert displayType="info" variant="feedback">
+			News on the{' '}
+			<a className="alert-link" href="#">
+				blog
+			</a>
+		</ClayAlert>
+		<ClayAlert displayType="success" variant="feedback">
+			Data is saved
+		</ClayAlert>
+	</>
+);
+
+export const Toast = () => (
+	<ClayAlert.ToastContainer>
+		<ClayAlert
+			actions={
+				<ClayButton alert displayType="warning" small>
+					Refresh
+				</ClayButton>
+			}
+			displayType="warning"
+			onClose={() => {}}
+			title="Warning"
+		>
+			Data is temporarily unavailable
+		</ClayAlert>
+		<ClayAlert
+			actions={
+				<ClayButton alert displayType="danger" small>
+					Retry
+				</ClayButton>
+			}
+			displayType="danger"
+			onClose={() => {}}
+			title="Error"
+			variant="inline"
+		>
+			Error loading data
+		</ClayAlert>
+		<ClayAlert displayType="info" onClose={() => {}}>
+			News on the{' '}
+			<a className="alert-link" href="#">
+				blog
+			</a>
+		</ClayAlert>
+		<ClayAlert displayType="success" onClose={() => {}} title="Success">
+			Data is saved
+		</ClayAlert>
+		<ClayAlert displayType="success" onClose={() => {}} title="Success">
+			Strong kopi-luwak half and half single origin single shot, half and
+			half instant latte brewed latte. At, decaffeinated, blue mountain
+			viennese barista, spoon carajillo shop viennese dark. And ristretto
+			caffeine, plunger pot black, café au lait galão flavour foam strong.
+			Macchiato roast, breve fair trade seasonal et cultivar.
+		</ClayAlert>
+	</ClayAlert.ToastContainer>
 );
 
 Default.args = {
