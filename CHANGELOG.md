@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.60.1](https://github.com/liferay/clay/compare/v3.60.0...v3.60.1) (2022-06-08)
+
+### Bug Fixes
+
+-   **@clayui/css:** Loading Animation move animation to pseudo elements ([e9fb6a7](https://github.com/liferay/clay/commit/e9fb6a7f5932b36f0c836a64c748d8ce88a0ee1d))
+
 # [3.60.0](https://github.com/liferay/clay/compare/v3.59.0...v3.60.0) (2022-06-06)
 
 ### Bug Fixes
