@@ -48,7 +48,7 @@ export function Panel({children, keyValue}: Props) {
 		<CSSTransition
 			className={classNames('sidebar', {
 				'c-slideout-show': activePanel === keyValue && isFirst,
-				'sidebar-dark': displayType === 'dark',
+				'sidebar-dark-l2': displayType === 'dark',
 				'sidebar-light': displayType === 'light',
 			})}
 			classNames={{
