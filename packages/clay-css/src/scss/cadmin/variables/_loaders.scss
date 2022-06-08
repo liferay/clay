@@ -13,7 +13,6 @@ $cadmin-loading-icon-font-size-sm: 16px !default; // 16px
 $cadmin-loading-animation: () !default;
 $cadmin-loading-animation: map-deep-merge(
 	(
-		animation: cadmin-loading-animation-circle 1s linear infinite,
 		display: block,
 		height: 1em,
 		margin-left: auto,
@@ -23,17 +22,20 @@ $cadmin-loading-animation: map-deep-merge(
 		vertical-align: middle,
 		width: 1em,
 		before: (
+			animation: cadmin-loading-animation-circle 1s linear infinite,
 			border-radius: 50%,
 			box-shadow: -0.03125em -0.375em 0 0 currentColor,
 			content: '',
 			height: 0.25em,
 			left: 50%,
+			margin-left: -0.125em,
+			margin-top: -0.125em,
 			position: absolute,
 			top: 50%,
-			transform: translate(-50%, -50%),
 			width: 0.25em,
 		),
 		after: (
+			animation: cadmin-loading-animation-circle 1s linear infinite,
 			background-color: currentColor,
 			border-radius: 50%,
 			content: '',
