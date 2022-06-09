@@ -60,6 +60,8 @@
 	z-index: $cadmin-zindex-sidenav;
 }
 
+.sidenav-end,
+&.sidenav-end,
 .sidenav-right,
 &.sidenav-right {
 	> .sidenav-content {
@@ -127,6 +129,7 @@
 		width: $cadmin-sidenav-width;
 	}
 
+	&.sidenav-end,
 	&.sidenav-right {
 		left: auto;
 		right: 0;

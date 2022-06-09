@@ -63,6 +63,7 @@
 	z-index: $zindex-sidenav;
 }
 
+.sidenav-end,
 .sidenav-right {
 	> .sidenav-content {
 		left: auto;
@@ -125,6 +126,7 @@
 		width: $sidenav-width;
 	}
 
+	&.sidenav-end,
 	&.sidenav-right {
 		left: auto;
 		right: 0;
