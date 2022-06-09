@@ -106,6 +106,28 @@
 	@return null;
 }
 
+/// A function that returns the direct parent selector (e.g., clay-parent('#wrapper .container .row')) will return `.row`.
+/// @param {String} $selector - The full selector
+
+@function clay-parent($selector) {
+	$selector-list: simple-selectors(clay-str-replace('#{$selector}', ' ', ''));
+
+	@return nth($selector-list, length($selector-list));
+}
+
+/// A function that inserts a CSS selector at a specific place (e.g., clay-insert-at('.container', '#content ', '#wrapper .container .row')) will return `#wrapper #content .container .row`.
+/// @param {String} $location - The string to target
+/// @param {String} $insert - The string to insert before the location
+/// @param {String} $selector - The full selector
+
+@function clay-insert-before($location, $insert, $selector: &) {
+	@return clay-str-replace(
+		'#{$selector}',
+		'#{$location}',
+		'#{$insert}#{$location}'
+	);
+}
+
 /// A helper function for displaying warning messages for required variables.
 /// @param {Any} $var - The variable to check
 /// @param {String} $msg['This value is required!'] - The error message to display
