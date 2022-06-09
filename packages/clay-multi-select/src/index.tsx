@@ -213,7 +213,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const defaultRef = React.useRef<HTMLDivElement>(null);
+		const containerRef = React.useRef<HTMLDivElement>(null);
 		const inputRef = React.useRef<HTMLInputElement | null>(null);
 		const lastItemRef = React.useRef<HTMLSpanElement | null>(null);
 		const [active, setActive] = React.useState(false);
@@ -305,8 +305,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		};
 
-		const containerRef =
-			(ref as React.RefObject<HTMLDivElement>) || defaultRef;
+		const inputElementRef =
+			(ref as React.RefObject<HTMLInputElement>) || inputRef;
 
 		return (
 			<FocusScope arrowKeysUpDown={false}>
@@ -337,8 +337,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 											),
 											disabled,
 											onClick: () => {
-												if (inputRef.current) {
-													inputRef.current.focus();
+												if (inputElementRef.current) {
+													inputElementRef.current.focus();
 												}
 												removeItem();
 											},
@@ -355,8 +355,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 											if (key !== Keys.Backspace) {
 												return;
 											}
-											if (inputRef.current) {
-												inputRef.current.focus();
+											if (inputElementRef.current) {
+												inputElementRef.current.focus();
 											}
 											removeItem();
 										}}
@@ -396,7 +396,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							placeholder={
 								internalItems.length ? undefined : placeholder
 							}
-							ref={inputRef}
+							ref={inputElementRef}
 							type="text"
 							value={internalValue}
 						/>
@@ -424,8 +424,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 											setValue('');
 										}
 
-										if (inputRef.current) {
-											inputRef.current.focus();
+										if (inputElementRef.current) {
+											inputElementRef.current.focus();
 										}
 									}}
 									outline
