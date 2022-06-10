@@ -47,7 +47,7 @@ module.exports = {
 			branches: 74,
 			functions: 87,
 			lines: 90,
-			statements: 91,
+			statements: 90,
 		},
 		'./packages/clay-core/src/overlay-mask/': {
 			branches: 73,
