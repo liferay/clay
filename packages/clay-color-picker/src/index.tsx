@@ -381,6 +381,14 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								onBlur={(event) => {
 									const value = event.target.value;
 
+									if (otherProps.onBlur) {
+										otherProps.onBlur(event);
+									}
+
+									if (event.defaultPrevented) {
+										return;
+									}
+
 									const newColor = tinycolor(value);
 
 									if (newColor.isValid()) {
