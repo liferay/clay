@@ -246,36 +246,16 @@ $cadmin-spacers: () !default;
 $cadmin-spacers: map-deep-merge(
 	(
 		0: 0,
-		1: (
-			$cadmin-spacer * 0.25,
-		),
-		2: (
-			$cadmin-spacer * 0.5,
-		),
-		3: (
-			$cadmin-spacer * 1,
-		),
-		4: (
-			$cadmin-spacer * 1.5,
-		),
-		5: (
-			$cadmin-spacer * 3,
-		),
-		6: (
-			$cadmin-spacer * 4.5,
-		),
-		7: (
-			$cadmin-spacer * 6,
-		),
-		8: (
-			$cadmin-spacer * 7.5,
-		),
-		9: (
-			$cadmin-spacer * 9,
-		),
-		10: (
-			$cadmin-spacer * 10,
-		),
+		1: $cadmin-spacer * 0.25,
+		2: $cadmin-spacer * 0.5,
+		3: $cadmin-spacer * 1,
+		4: $cadmin-spacer * 1.5,
+		5: $cadmin-spacer * 3,
+		6: $cadmin-spacer * 4.5,
+		7: $cadmin-spacer * 6,
+		8: $cadmin-spacer * 7.5,
+		9: $cadmin-spacer * 9,
+		10: $cadmin-spacer * 10,
 	),
 	$cadmin-spacers
 );
