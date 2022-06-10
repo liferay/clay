@@ -84,7 +84,7 @@ export function VerticalBar({
 				'c-slideout-absolute': absolute,
 				'c-slideout-end': position === 'right',
 				'c-slideout-fixed': !absolute,
-				'c-slideout-start': position === 'left',
+				'c-slideout-start sidenav-start': position === 'left',
 			})}
 		>
 			<VerticalBarContext.Provider

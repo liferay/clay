@@ -14,6 +14,12 @@
 /// 	close: (
 /// 		// .sidebar .close
 /// 	),
+/// 	sidenav-start: (
+/// 		// .sidenav-start .sidebar, .sidenav-left .sidebar
+/// 	),
+/// 	sidenav-end: (
+/// 		// .sidenav-end .sidebar, .sidenav-right .sidebar
+/// 	),
 /// 	sidebar-header: (
 /// 		// .sidebar .sidebar-header
 /// 		component-title: (
@@ -225,6 +231,18 @@
 
 		@if ($enabled) {
 			@include clay-css($base);
+
+			@at-root {
+				#{clay-insert-before(clay-parent(&), '.sidenav-start ')},
+				#{clay-insert-before(clay-parent(&), '.sidenav-left ')} {
+					@include clay-css(map-get($map, sidenav-start));
+				}
+
+				#{clay-insert-before(clay-parent(&), '.sidenav-end ')},
+				#{clay-insert-before(clay-parent(&), '.sidenav-right ')} {
+					@include clay-css(map-get($map, sidenav-right));
+				}
+			}
 
 			.component-link {
 				@include clay-text-typography(map-get($map, component-link));

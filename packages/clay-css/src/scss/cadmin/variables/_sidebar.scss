@@ -110,6 +110,9 @@ $cadmin-sidebar-light: map-deep-merge(
 		border-left-width: 0,
 		box-shadow: -4px 0 8px -4px rgba(0, 0, 0, 0.1),
 		color: $cadmin-gray-900,
+		sidenav-start: (
+			box-shadow: 4px 0 8px -4px rgba(0, 0, 0, 0.1),
+		),
 		sidebar-dt: (
 			color: $cadmin-gray-600,
 		),
