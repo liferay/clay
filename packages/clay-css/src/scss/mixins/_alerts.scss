@@ -80,6 +80,18 @@
 /// 	component-subtitle: (
 /// 		// .alert .component-subtitle
 /// 	),
+/// 	custom-selectors: (
+/// 		// add custom selectors here, see examples below
+/// 		btn-primary: (
+/// 			// .alert .btn-primary
+/// 		),
+/// 		btn-secondary: (
+/// 			// .alert .btn-secondary
+/// 		),
+/// 		'#custom-alert-btn': (
+/// 			// .alert #custom-alert-btn
+/// 		),
+/// 	),
 /// )
 
 @mixin clay-alert-variant($map) {
@@ -235,6 +247,20 @@
 
 			.component-subtitle {
 				@include clay-text-typography($component-subtitle);
+			}
+
+			@each $key, $properties in map-get($map, custom-selectors) {
+				@if ($key) {
+					$selector: if(
+						starts-with($key, '.') or starts-with($key, '#'),
+						$key,
+						str-insert($key, '.', 1)
+					);
+
+					#{$selector} {
+						@include clay-button-variant($properties);
+					}
+				}
 			}
 		}
 	}
