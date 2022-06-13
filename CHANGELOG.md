@@ -1,3 +1,6 @@
+### v1.0.36 - June 13, 2022
+* [#4683](https://github.com/liferay/clay/issues/4683)Updates content property values to conform to what is allowed by OAW Tracker
+
 ### v1.0.35 - February 25, 2022
 * Fixes [#4683](https://github.com/liferay/clay/issues/4683)Updates `content` property values to conform to what is allowed by OAW Tracker
 
