@@ -1,5 +1,5 @@
 /**
-* Lexicon 1.0.35
+* Lexicon 1.0.36
 *
 * Copyright 2022, Liferay, Inc.
 * All rights reserved.
@@ -266,7 +266,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'fontawesome-alloy';
-  content: attr(data-icon);
+  content: '\FEFF' attr(data-icon);
   speak: none;
   font-weight: normal;
   font-variant: normal;
