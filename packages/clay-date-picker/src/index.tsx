@@ -633,7 +633,7 @@ const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
 							alignElementRef={triggerElementRef}
 							className="date-picker-dropdown-menu"
 							data-testid="dropdown"
-							onSetActive={setExpandedValue}
+							onActiveChange={setExpandedValue}
 							ref={dropdownContainerRef}
 						>
 							<div

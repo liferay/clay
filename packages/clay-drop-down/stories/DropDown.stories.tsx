@@ -473,7 +473,7 @@ export const InModal = () => {
 						<ClayDropDown.Menu
 							active={panelVisibility}
 							alignElementRef={inputRef}
-							onSetActive={() =>
+							onActiveChange={() =>
 								setPanelVisibility(!panelVisibility)
 							}
 							ref={dropdownMenuRef}
