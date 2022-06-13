@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.61.0](https://github.com/liferay/clay/compare/v3.60.1...v3.61.0) (2022-06-13)
+
+### Bug Fixes
+
+-   **@clayui/color-picker:** fix error when `onBlur` method is declared but not called ([fd72c5b](https://github.com/liferay/clay/commit/fd72c5b7de270f725f9493ecb7e2ccb4ccd49473))
+
 # [3.58.0](https://github.com/liferay/clay/compare/v3.57.0...v3.58.0) (2022-05-23)
 
 **Note:** Version bump only for package @clayui/color-picker

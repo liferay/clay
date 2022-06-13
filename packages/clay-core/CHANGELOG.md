@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.61.0](https://github.com/liferay/clay/compare/v3.60.1...v3.61.0) (2022-06-13)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes error when there is no box-shadow in the panel when position the VerticalBar on the left side ([9121847](https://github.com/liferay/clay/commit/91218470d9b1600953c06b68e390af71f3dacfe5))
+
 # [3.60.0](https://github.com/liferay/clay/compare/v3.59.0...v3.60.0) (2022-06-06)
 
 ### Features

@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.61.0](https://github.com/liferay/clay/compare/v3.60.1...v3.61.0) (2022-06-13)
+
+
+### Bug Fixes
+
+* **@clayui/css:** .sidebar-light box shadows should be positioned correctly ([d41e77a](https://github.com/liferay/clay/commit/d41e77a33022a521e0917bc93a9244908909efe9))
+* **@clayui/css:** Cadmin Sidebar adds sidebar-dark-l2 variant ([c79e226](https://github.com/liferay/clay/commit/c79e226b8718825e5a7be676c9672cd51bac0a55))
+* **@clayui/css:** fix error of loading indicator create scroll when the parent is over cadmin ([9d562fe](https://github.com/liferay/clay/commit/9d562fe88aaaaecca10ec84a949304247ea18d84))
+* **@clayui/css:** Global Variables remove math function parenthesis from $spacers ([d2ea301](https://github.com/liferay/clay/commit/d2ea3015ea536b4f67529d4d0268c5562d1ae6c0))
+* **@clayui/css:** Mixins clay-sidebar-variant updates ([eb714f3](https://github.com/liferay/clay/commit/eb714f3e1d77fb2558b7500008008cc87bdac7c5))
+* **@clayui/css:** Mixins clay-sticker-variant and clay-panel-variant check if parameter is type map ([a694e0c](https://github.com/liferay/clay/commit/a694e0cacab8ee0cf08591d373e466234ddfed5c))
+* **@clayui/css:** Sidebar adds sidebar-dark-l2 variant ([f559946](https://github.com/liferay/clay/commit/f559946895322b70d7959868ebd21bafca697a40))
+
+
+### Features
+
+* **@clayui/css:** Global Functions `math-sign` adds warning message if type isn't supported ([5ce2840](https://github.com/liferay/clay/commit/5ce284068ae212360f7d0551409b55372e6d4aab))
+* **@clayui/css:** Global Functions adds `clay-parent()` and `clay-insert-before()` ([23a767d](https://github.com/liferay/clay/commit/23a767d983004a4cb126ecd7cf6684ce1408c377))
+* **@clayui/css:** Mixins clay-alert-variant adds custom-selector key ([da99c94](https://github.com/liferay/clay/commit/da99c943f153f249a51507f6e225f0cda85a76c4))
+* **@clayui/css:** Mixins clay-sidebar-variant adds option to customize sidenav-end and sidenav-start ([d6c7939](https://github.com/liferay/clay/commit/d6c79398f173451285b2750e0ea8a6d7eb7b2762))
+
+
+
+
+
 ## [3.60.1](https://github.com/liferay/clay/compare/v3.60.0...v3.60.1) (2022-06-08)
 
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.61.0](https://github.com/liferay/clay/compare/v3.60.1...v3.61.0) (2022-06-13)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fix error when showing placeholder when it has items ([d8f7020](https://github.com/liferay/clay/commit/d8f7020663555c6d222889b3959aa6ba33c90a5f))
+
 # [3.60.0](https://github.com/liferay/clay/compare/v3.59.0...v3.60.0) (2022-06-06)
 
 **Note:** Version bump only for package @clayui/multi-select
