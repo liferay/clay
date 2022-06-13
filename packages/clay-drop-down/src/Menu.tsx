@@ -236,6 +236,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 						.map((ref) => ref.current!);
 
 					if (
+						active &&
 						event.target instanceof Node &&
 						!nodes.find((element) =>
 							element.contains(event.target as Node)
@@ -251,7 +252,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 					window.removeEventListener('mousedown', handleClick);
 				};
 			}
-		}, [closeOnClickOutside]);
+		}, [active, closeOnClickOutside]);
 
 		useEffect(() => {
 			const handleEsc = (event: KeyboardEvent) => {

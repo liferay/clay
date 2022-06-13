@@ -56,7 +56,7 @@ const ClayAutocompleteDropDown: React.FunctionComponent<IProps> = ({
 			autoBestAlign={false}
 			className="autocomplete-dropdown-menu"
 			closeOnClickOutside={closeOnClickOutside}
-			onSetActive={onSetActive}
+			onActiveChange={onSetActive}
 			ref={menuElementRef}
 			style={{
 				maxWidth: 'none',

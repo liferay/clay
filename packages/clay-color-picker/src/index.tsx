@@ -321,7 +321,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 						className="clay-color-dropdown-menu"
 						containerProps={dropDownContainerProps}
 						focusRefOnEsc={splotchRef}
-						onSetActive={setInternalActive}
+						onActiveChange={setInternalActive}
 						ref={dropdownContainerRef}
 					>
 						{(!onColorsChange ||

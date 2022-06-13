@@ -306,7 +306,7 @@ const Contextual: React.FunctionComponent<
 					alignmentPosition={8}
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
-					onSetActive={setVisible}
+					onActiveChange={setVisible}
 					ref={menuElementRef}
 				>
 					{visible && <MouseSafeArea parentRef={menuElementRef} />}
