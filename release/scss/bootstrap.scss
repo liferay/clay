@@ -1,0 +1,20 @@
+/**
+* Lexicon 1.0.35
+*
+* Copyright 2022, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// INSERT CUSTOM VARS
+
+@import "lexicon-base/variables/bs3-variable-overwrites";
+
+@import "bootstrap/bootstrap";
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+
+.dropdown-toggle:focus {
+  @include tab-focus;
+}
+
+// INSERT CUSTOM EXTENSIONS
