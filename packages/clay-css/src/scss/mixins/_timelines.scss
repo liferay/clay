@@ -5,25 +5,41 @@
 $card-border-width: if(
 	variable-exists(card-border-width),
 	$card-border-width,
-	$cadmin-card-border-width
+	if(
+		variable-exists(cadmin-card-border-width),
+		$cadmin-card-border-width,
+		0px
+	)
 );
 
 $timeline-inner-spacing: if(
 	variable-exists(timeline-inner-spacing),
 	$timeline-inner-spacing,
-	$cadmin-timeline-inner-spacing
+	if(
+		variable-exists(cadmin-timeline-inner-spacing),
+		$cadmin-timeline-inner-spacing,
+		0px
+	)
 );
 
 $timeline-border-width: if(
 	variable-exists(timeline-border-width),
 	$timeline-border-width,
-	$cadmin-timeline-border-width
+	if(
+		variable-exists(cadmin-timeline-border-width),
+		$cadmin-timeline-border-width,
+		1px
+	)
 );
 
 $timeline-border-modifier: if(
 	variable-exists(timeline-border-modifier),
 	$timeline-border-modifier,
-	$cadmin-timeline-border-modifier
+	if(
+		variable-exists(cadmin-timeline-border-modifier),
+		$cadmin-timeline-border-modifier,
+		0px
+	)
 );
 
 /// A mixin that places the `.timeline-item::before` element on the right side. This mixin is used in `.timeline-right`.

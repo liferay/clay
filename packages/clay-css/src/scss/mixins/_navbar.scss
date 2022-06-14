@@ -4,10 +4,27 @@
 
 @mixin clay-navbar-size($map) {
 	$enabled: setter(map-get($map, enabled), true);
+
+	$enable-c-inner: if(
+		variable-exists(enable-c-inner),
+		$enable-c-inner,
+		if(variable-exists(cadmin-enable-c-inner), $cadmin-enable-c-inner, true)
+	);
+
 	$breakpoints: if(
 		variable-exists(grid-breakpoints),
 		$grid-breakpoints,
-		$cadmin-grid-breakpoints
+		if(
+			variable-exists(cadmin-grid-breakpoints),
+			$cadmin-grid-breakpoints,
+			(
+				xs: 0,
+				sm: 576px,
+				md: 768px,
+				lg: 992px,
+				xl: 1280px,
+			)
+		)
 	);
 
 	$_line-height-base: if(
@@ -92,7 +109,11 @@
 		if(
 			variable-exists(navbar-nav-link-padding-x),
 			$navbar-nav-link-padding-x,
-			$cadmin-navbar-nav-link-padding-x
+			if(
+				variable-exists(cadmin-navbar-nav-link-padding-x),
+				$cadmin-navbar-nav-link-padding-x,
+				null
+			)
 		)
 	);
 	$link-padding-y: setter(
@@ -119,7 +140,13 @@
 							if(
 								variable-exists(nav-item-monospaced-size),
 								$nav-item-monospaced-size,
-								$cadmin-nav-item-monospaced-size
+								if(
+									variable-exists(
+										cadmin-nav-item-monospaced-size
+									),
+									$cadmin-nav-item-monospaced-size,
+									2rem
+								)
 							)
 						)}
 				) * 0.5
@@ -133,7 +160,11 @@
 		if(
 			variable-exists(navbar-brand-font-size),
 			$navbar-brand-font-size,
-			$cadmin-navbar-brand-font-size
+			if(
+				variable-exists(cadmin-navbar-brand-font-size),
+				$cadmin-navbar-brand-font-size,
+				1rem
+			)
 		)
 	);
 	$brand-max-width: map-get($map, brand-max-width);
@@ -220,7 +251,13 @@
 							if(
 								variable-exists(nav-item-monospaced-size),
 								$nav-item-monospaced-size,
-								$cadmin-nav-item-monospaced-size
+								if(
+									variable-exists(
+										cadmin-nav-item-monospaced-size
+									),
+									$cadmin-nav-item-monospaced-size,
+									2rem
+								)
 							)
 						)}
 				) * 0.5
@@ -240,7 +277,11 @@
 		if(
 			variable-exists(font-size-lg-mobile),
 			$font-size-lg-mobile,
-			$cadmin-font-size-lg-mobile
+			if(
+				variable-exists(cadmin-font-size-lg-mobile),
+				$cadmin-font-size-lg-mobile,
+				null
+			)
 		)
 	);
 	$brand-margin-right-mobile: setter(
@@ -276,7 +317,11 @@
 		if(
 			variable-exists(navbar-toggler-font-size),
 			$navbar-toggler-font-size,
-			$cadmin-navbar-toggler-font-size
+			if(
+				variable-exists(cadmin-navbar-toggler-font-size),
+				$cadmin-navbar-toggler-font-size,
+				null
+			)
 		)
 	);
 	$toggler-height: setter(
@@ -293,7 +338,11 @@
 		if(
 			variable-exists(navbar-toggler-padding-x),
 			$navbar-toggler-padding-x,
-			$cadmin-navbar-toggler-padding-x
+			if(
+				variable-exists(cadmin-navbar-toggler-padding-x),
+				$cadmin-navbar-toggler-padding-x,
+				null
+			)
 		)
 	);
 	$toggler-padding-y: setter(
@@ -301,7 +350,11 @@
 		if(
 			variable-exists(navbar-toggler-padding-y),
 			$navbar-toggler-padding-y,
-			$cadmin-navbar-toggler-padding-y
+			if(
+				variable-exists(cadmin-navbar-toggler-padding-y),
+				$cadmin-navbar-toggler-padding-y,
+				null
+			)
 		)
 	);
 
@@ -354,7 +407,11 @@
 			if(
 				variable-exists(navbar-border-radius),
 				$navbar-border-radius,
-				$cadmin-navbar-border-radius
+				if(
+					variable-exists(cadmin-navbar-border-radius),
+					$cadmin-navbar-border-radius,
+					null
+				)
 			)
 		);
 
@@ -387,16 +444,7 @@
 			padding-right: $toggler-padding-x;
 			padding-top: $toggler-padding-y;
 
-			@if (
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
-				)
-			) {
+			@if ($enable-c-inner) {
 				.c-inner {
 					margin-bottom: math-sign($toggler-padding-y);
 					margin-left: math-sign($toggler-padding-x);
@@ -419,16 +467,7 @@
 			padding-right: $toggler-link-padding-x;
 			padding-top: $toggler-link-padding-y;
 
-			@if (
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
-				)
-			) {
+			@if ($enable-c-inner) {
 				.c-inner {
 					margin-bottom: math-sign($toggler-link-padding-y);
 					margin-left: math-sign($toggler-link-padding-x);
@@ -447,16 +486,7 @@
 			padding-right: $brand-padding-x-mobile;
 			padding-top: $brand-padding-y-mobile;
 
-			@if (
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
-				)
-			) {
+			@if ($enable-c-inner) {
 				.c-inner {
 					margin-bottom: math-sign($brand-padding-y-mobile);
 					margin-left: math-sign($brand-padding-x-mobile);
@@ -487,16 +517,7 @@
 				padding-top: $btn-padding-y-mobile;
 				min-width: $btn-monospaced-size-mobile;
 
-				@if (
-					setter(
-						if(
-							variable-exists(enable-c-inner),
-							$enable-c-inner,
-							$cadmin-enable-c-inner
-						),
-						true
-					)
-				) {
+				@if ($enable-c-inner) {
 					.c-inner {
 						margin-bottom: math-sign($btn-padding-y-mobile);
 						margin-left: math-sign($btn-padding-x-mobile);
@@ -510,16 +531,7 @@
 				font-size: $btn-monospaced-font-size-mobile;
 				padding: 0;
 
-				@if (
-					setter(
-						if(
-							variable-exists(enable-c-inner),
-							$enable-c-inner,
-							$cadmin-enable-c-inner
-						),
-						true
-					)
-				) {
+				@if ($enable-c-inner) {
 					.c-inner {
 						margin: 0;
 					}
@@ -545,16 +557,7 @@
 				padding-right: $link-padding-x-mobile;
 				padding-top: $link-padding-y-mobile;
 
-				@if (
-					setter(
-						if(
-							variable-exists(enable-c-inner),
-							$enable-c-inner,
-							$cadmin-enable-c-inner
-						),
-						true
-					)
-				) {
+				@if ($enable-c-inner) {
 					.c-inner {
 						margin-bottom: math-sign($link-padding-y-mobile);
 						margin-left: math-sign($link-padding-x-mobile);
@@ -572,16 +575,7 @@
 				margin-top: $btn-margin-y-mobile;
 				padding: 0;
 
-				@if (
-					setter(
-						if(
-							variable-exists(enable-c-inner),
-							$enable-c-inner,
-							$cadmin-enable-c-inner
-						),
-						true
-					)
-				) {
+				@if ($enable-c-inner) {
 					.c-inner {
 						margin: 0;
 					}
@@ -679,16 +673,7 @@
 								padding-right: $brand-padding-x;
 								padding-top: $brand-padding-y;
 
-								@if (
-									setter(
-										if(
-											variable-exists(enable-c-inner),
-											$enable-c-inner,
-											$cadmin-enable-c-inner
-										),
-										true
-									)
-								) {
+								@if ($enable-c-inner) {
 									.c-inner {
 										margin-bottom: math-sign(
 											$brand-padding-y
@@ -741,16 +726,7 @@
 								padding-top: $btn-padding-y;
 								min-width: $btn-monospaced-size;
 
-								@if (
-									setter(
-										if(
-											variable-exists(enable-c-inner),
-											$enable-c-inner,
-											$cadmin-enable-c-inner
-										),
-										true
-									)
-								) {
+								@if ($enable-c-inner) {
 									.c-inner {
 										margin-bottom: math-sign(
 											$btn-padding-y
@@ -768,16 +744,7 @@
 								font-size: $btn-monospaced-font-size;
 								padding: 0;
 
-								@if (
-									setter(
-										if(
-											variable-exists(enable-c-inner),
-											$enable-c-inner,
-											$cadmin-enable-c-inner
-										),
-										true
-									)
-								) {
+								@if ($enable-c-inner) {
 									.c-inner {
 										margin: 0;
 									}
@@ -807,16 +774,7 @@
 								padding-right: $link-padding-x;
 								padding-top: $link-padding-y;
 
-								@if (
-									setter(
-										if(
-											variable-exists(enable-c-inner),
-											$enable-c-inner,
-											$cadmin-enable-c-inner
-										),
-										true
-									)
-								) {
+								@if ($enable-c-inner) {
 									.c-inner {
 										margin-bottom: math-sign(
 											$link-padding-y
@@ -840,16 +798,7 @@
 								margin-top: $btn-margin-y;
 								padding: 0;
 
-								@if (
-									setter(
-										if(
-											variable-exists(enable-c-inner),
-											$enable-c-inner,
-											$cadmin-enable-c-inner
-										),
-										true
-									)
-								) {
+								@if ($enable-c-inner) {
 									.c-inner {
 										margin: 0;
 									}
@@ -880,7 +829,11 @@
 						if(
 							variable-exists(navbar-border-radius),
 							$navbar-border-radius,
-							$cadmin-navbar-border-radius
+							if(
+								variable-exists(cadmin-navbar-border-radius),
+								$cadmin-navbar-border-radius,
+								null
+							)
 						)
 					);
 
@@ -1160,7 +1113,17 @@
 		$breakpoints: if(
 			variable-exists(grid-breakpoints),
 			$grid-breakpoints,
-			$cadmin-grid-breakpoints
+			if(
+				variable-exists(cadmin-grid-breakpoints),
+				$cadmin-grid-breakpoints,
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
+			)
 		);
 
 		$base: map-merge(

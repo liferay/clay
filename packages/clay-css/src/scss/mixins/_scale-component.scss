@@ -11,7 +11,11 @@
 		if(
 			variable-exists(scaling-breakpoint-down),
 			$scaling-breakpoint-down,
-			$cadmin-scaling-breakpoint-down
+			if(
+				variable-exists(cadmin-scaling-breakpoint-down),
+				$cadmin-scaling-breakpoint-down,
+				sm
+			)
 		)
 	);
 
@@ -20,7 +24,11 @@
 		if(
 			variable-exists(enable-scaling-components),
 			$enable-scaling-components,
-			$cadmin-enable-scaling-components
+			if(
+				variable-exists(cadmin-enable-scaling-components),
+				$cadmin-enable-scaling-components,
+				true
+			)
 		)
 	);
 

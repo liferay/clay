@@ -708,7 +708,12 @@
 					if(
 						variable-exists(input-color),
 						$input-color,
-						$cadmin-input-color
+						if
+							(
+								variable-exists(cadmin-input-color),
+								$cadmin-input-color,
+								null
+							)
 					)
 				),
 		)

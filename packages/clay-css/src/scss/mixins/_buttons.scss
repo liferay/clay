@@ -553,13 +553,16 @@
 		$mobile-c-inner: map-merge(
 			(
 				enabled:
-					setter(
-						if(
-							variable-exists(enable-c-inner),
-							$enable-c-inner,
-							$cadmin-enable-c-inner
-						),
-						true
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+							if
+							(
+								variable-exists(cadmin-enable-c-inner),
+								$cadmin-enable-c-inner,
+								true
+							)
 					),
 				margin-bottom: math-sign(map-get($mobile, padding-bottom)),
 				margin-left: math-sign(map-get($mobile, padding-left)),
@@ -569,13 +572,14 @@
 			$mobile-c-inner
 		);
 
-		$unset: setter(
+		$unset: if(
+			variable-exists(clay-unset-placeholder),
+			$clay-unset-placeholder,
 			if(
-				variable-exists(clay-unset-placeholder),
-				$clay-unset-placeholder,
-				$cadmin-clay-unset-placeholder
-			),
-			clay-unset-placeholder
+				variable-exists(cadmin-clay-unset-placeholer),
+				$cadmin-clay-unset-placeholer,
+				clay-unset-placeholder
+			)
 		);
 
 		$loading-animation: setter(map-get($map, loading-animation), $unset);
@@ -584,13 +588,15 @@
 		$c-inner: map-merge(
 			(
 				enabled:
-					setter(
-						if(
-							variable-exists(enable-c-inner),
-							$enable-c-inner,
-							$cadmin-enable-c-inner
-						),
-						true
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						if
+							(
+								variable-exists(cadmin-enable-c-inner),
+								$cadmin-enable-c-inner,
+								true
+							)
 					),
 				margin-bottom: math-sign(map-get($map, padding-bottom)),
 				margin-left: math-sign(map-get($map, padding-left)),
