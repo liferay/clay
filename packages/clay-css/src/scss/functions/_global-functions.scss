@@ -396,7 +396,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -430,7 +436,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -460,7 +472,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -487,7 +505,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -512,7 +536,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
