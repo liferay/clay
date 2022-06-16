@@ -248,6 +248,15 @@
 /// 			// .form-control.disabled ~ .input-group-inset-item
 /// 		),
 /// 	),
+/// 	inline-item: (
+///			// .form-control .inline-item
+/// 	),
+/// 	label: (
+/// 		// .form-control .label
+/// 	),
+/// 	form-control-inset: (
+///			// .form-control .form-control-inset
+/// 	),
 /// )
 /// -=-=-=-=-=- Deprecated -=-=-=-=-=-
 /// placeholder-color: {Color | String | Null}, // deprecated after 3.7.0
@@ -600,6 +609,20 @@
 						map-deep-get($map, disabled, input-group-inset-item)
 					);
 				}
+			}
+
+			.inline-item {
+				@include clay-css(map-get($map, inline-item));
+			}
+
+			.label {
+				@include clay-css(map-get($map, label));
+			}
+
+			.form-control-inset {
+				@include clay-form-control-variant(
+					map-get($map, form-control-inset)
+				);
 			}
 
 			@include clay-generate-media-breakpoints($map);
