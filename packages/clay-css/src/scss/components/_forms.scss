@@ -507,6 +507,16 @@ textarea.form-control-sm,
 	@extend %clay-textarea-form-control-sm !optional;
 }
 
+// .form-control-tag-group-sm
+
+%clay-form-control-tag-group-sm {
+	@include clay-form-control-variant($form-control-tag-group-sm);
+}
+
+.form-control-tag-group-sm.form-control {
+	@extend %clay-form-control-tag-group-sm;
+}
+
 // Fieldset
 
 .form-fieldset {
