@@ -243,6 +243,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		}, [internalValue, isFocused, sourceItems]);
 
+		const inputElementRef =
+			(ref as React.RefObject<HTMLInputElement>) || inputRef;
+
 		const setNewValue = (newVal: Item) => {
 			setItems([...internalItems, newVal]);
 
@@ -280,10 +283,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			} else if (
 				!internalValue &&
 				key === Keys.Backspace &&
-				inputRef.current &&
+				inputElementRef.current &&
 				lastItemRef.current
 			) {
-				inputRef.current.blur();
+				inputElementRef.current.blur();
 				lastItemRef.current.focus();
 			}
 		};
@@ -304,9 +307,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 				setItems([...internalItems, ...pastedItems]);
 			}
 		};
-
-		const inputElementRef =
-			(ref as React.RefObject<HTMLInputElement>) || inputRef;
 
 		return (
 			<FocusScope arrowKeysUpDown={false}>
@@ -448,8 +448,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								onItemClick={(item) => {
 									setNewValue(item);
 
-									if (inputRef.current) {
-										inputRef.current.focus();
+									if (inputElementRef.current) {
+										inputElementRef.current.focus();
 									}
 								}}
 								sourceItems={sourceItems}
