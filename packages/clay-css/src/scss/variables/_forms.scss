@@ -525,6 +525,37 @@ $form-control-tag-group-component-action: map-deep-merge(
 	$form-control-tag-group-component-action
 );
 
+// .form-control-tag-group-sm.form-control
+
+$form-control-tag-group-sm: () !default;
+$form-control-tag-group-sm: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($input-border-radius-sm),
+		font-size: $input-font-size-sm,
+		height: auto,
+		line-height: $input-line-height-sm,
+		min-height: $input-height-sm,
+		padding-bottom: 0,
+		padding-left: 0.25rem,
+		padding-right: 0.25rem,
+		padding-top: 0,
+		inline-item: (
+			margin-bottom: 0,
+			margin-top: 0,
+		),
+		label: (
+			margin-bottom: 0.1875rem,
+			margin-right: 0.25rem,
+			margin-top: 0.1875rem,
+		),
+		form-control-inset: (
+			margin-bottom: 0.125rem,
+			margin-top: 0.1875rem,
+		),
+	),
+	$form-control-tag-group-sm
+);
+
 // Form Grid
 
 /// @deprecated as of v3.x with no replacement
@@ -1730,25 +1761,6 @@ $input-group-sm: map-deep-merge(
 		input-group-item: (
 			btn: $input-group-sm-item-btn,
 			btn-monospaced: $input-group-sm-item-btn-monospaced,
-			form-control: (
-				border-radius: clay-enable-rounded($input-border-radius-sm),
-				font-size: $input-font-size-sm,
-				height: auto,
-				line-height: $input-line-height-sm,
-				min-height: $input-height-sm,
-				padding-bottom: 0,
-				padding-left: $input-padding-x-sm,
-				padding-right: $input-padding-x-sm,
-				padding-top: 0,
-				label: (
-					margin-bottom: 0.1875rem,
-					margin-top: 0.1875rem,
-				),
-			),
-			form-control-inset: (
-				margin-bottom: 0.125rem,
-				margin-top: 0.1875rem,
-			),
 			form-file: (
 				btn: (
 					border-radius: clay-enable-rounded($input-border-radius-sm),

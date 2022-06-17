@@ -332,12 +332,6 @@
 				@include clay-form-control-variant(
 					map-deep-get($map, form-control)
 				);
-
-				.label {
-					@include clay-label-variant(
-						map-deep-get($map, form-control, label)
-					);
-				}
 			}
 
 			> .form-file {

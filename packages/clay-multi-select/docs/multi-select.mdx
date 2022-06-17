@@ -11,6 +11,8 @@ import {
 	MultiSelectInputWithCustomAutocomplete,
 	MultiSelectInputWithSelectButton,
 	MultiSelectInputWithValidation,
+	MultiSelectSmallInput,
+	MultiSelectSmallInputWithSelectButton,
 } from '$packages/clay-multi-select/docs/index';
 
 <div class="nav-toc-absolute">
@@ -21,6 +23,8 @@ import {
     -   [Select Button](#select-button)
     -   [Validation](#validation)
 -   [Custom Autocomplete](#custom-autocomplete)
+-   [Sizes](#clay-multi-select-sizes)
+    -   [Small](#clay-multi-select-small)
 
 </div>
 </div>
@@ -56,3 +60,17 @@ An input needs validation so you can add some composition props with `<ClayInput
 To customize Autocomplete content to stylize to your needs and also have filter control, you can use the `menuRenderer` API.
 
 <MultiSelectInputWithCustomAutocomplete />
+
+## Sizes(#clay-multi-select-sizes)
+
+The `size` property on `ClayMultiSelect` only modifies the size of the input.
+
+### Small(#clay-multi-select-small)
+
+Render a smaller `ClayMultiSelect` input by setting the `size` property to `sm`.
+
+<MultiSelectSmallInput />
+
+`ClayMultiSelect`'s with the Select Button should use the modifier class `input-group-sm` on `input-group` or `form-group-sm` on `form-group`.
+
+<MultiSelectSmallInputWithSelectButton />

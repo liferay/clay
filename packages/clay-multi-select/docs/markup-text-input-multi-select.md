@@ -12,6 +12,8 @@ mainTabURL: 'docs/components/multi-select.html'
 -   [Labels](#css-labels)
 -   [Loading](#css-loading)
 -   [Contenteditable Elements](#css-contenteditable-elements)
+-   [Sizes](#css-clay-multi-select-sizes)
+    -   [Small](#css-clay-multi-select-small)
 
 </div>
 </div>
@@ -701,6 +703,212 @@ mainTabURL: 'docs/components/multi-select.html'
 		</div>
 		<div class="input-group-item input-group-item-shrink">
 			<button class="btn btn-secondary" type="submit">Select</button>
+		</div>
+	</div>
+</div>
+```
+
+## Sizes(#css-clay-multi-select-sizes)
+
+### Small(#css-clay-multi-select-small)
+
+The modifier class `form-control-tag-group-sm` on `form-control-tag-group` will render a smaller version of Clay Multi Select.
+
+<div class="sheet-example">
+	<div class="form-group">
+		<div class="dropdown">
+			<div class="form-control form-control-tag-group form-control-tag-group-sm">
+				<span class="autofit-row">
+					<span class="autofit-col autofit-col-expand">
+						<input class="form-control-inset" type="text" value="some value">
+					</span>
+				</span>
+			</div>
+			<ul class="autocomplete-dropdown-menu dropdown-menu show">
+				<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+				<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+			</ul>
+		</div>
+		<div class="form-feedback-group">
+			<div class="form-text">You can use a comma to enter tags.</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="form-group">
+	<div class="dropdown">
+		<div
+			class="form-control form-control-tag-group form-control-tag-group-sm"
+		>
+			<span class="autofit-row">
+				<span class="autofit-col autofit-col-expand">
+					<input
+						class="form-control-inset"
+						type="text"
+						value="some value"
+					/>
+				</span>
+			</span>
+		</div>
+		<ul class="autocomplete-dropdown-menu dropdown-menu show">
+			<li>
+				<a class="dropdown-item" href="#1"
+					><strong>some value</strong></a
+				>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#1"
+					><strong>some value</strong> meal</a
+				>
+			</li>
+		</ul>
+	</div>
+	<div class="form-feedback-group">
+		<div class="form-text">You can use a comma to enter tags.</div>
+	</div>
+</div>
+```
+
+For variations with buttons, the modifier classes `input-group-sm` or `form-group-sm` can be added to `input-group` or `form-group`, respectively.
+
+<div class="sheet-example">
+	<div class="form-group">
+		<label for="tagsField3">Tags with input-group-sm</label>
+		<div class="input-group input-group-stacked-sm-down input-group-sm">
+			<div class="input-group-item">
+				<div class="dropdown">
+					<div class="form-control form-control-tag-group">
+						<span class="autofit-row">
+							<span class="autofit-col autofit-col-expand">
+								<input class="form-control-inset" id="tagsField3" type="text" value="some value">
+							</span>
+						</span>
+					</div>
+					<ul class="autocomplete-dropdown-menu dropdown-menu">
+						<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+						<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+					</ul>
+				</div>
+				<div class="form-feedback-group">
+					<div class="form-text">You can use a comma to enter tags.</div>
+				</div>
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<button class="btn btn-secondary" type="button">Select</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="form-group">
+	<label for="tagsField3">Tags with input-group-sm</label>
+	<div class="input-group input-group-stacked-sm-down input-group-sm">
+		<div class="input-group-item">
+			<div class="dropdown">
+				<div class="form-control form-control-tag-group">
+					<span class="autofit-row">
+						<span class="autofit-col autofit-col-expand">
+							<input
+								class="form-control-inset"
+								id="tagsField3"
+								type="text"
+								value="some value"
+							/>
+						</span>
+					</span>
+				</div>
+				<ul class="autocomplete-dropdown-menu dropdown-menu">
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong></a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong> meal</a
+						>
+					</li>
+				</ul>
+			</div>
+			<div class="form-feedback-group">
+				<div class="form-text">You can use a comma to enter tags.</div>
+			</div>
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<button class="btn btn-secondary" type="button">Select</button>
+		</div>
+	</div>
+</div>
+```
+
+<div class="sheet-example">
+	<div class="form-group-sm">
+		<label for="tagsField4">Tags with form-group-sm</label>
+		<div class="input-group input-group-stacked-sm-down input-group-sm">
+			<div class="input-group-item">
+				<div class="dropdown">
+					<div class="form-control form-control-tag-group">
+						<span class="autofit-row">
+							<span class="autofit-col autofit-col-expand">
+								<input class="form-control-inset" id="tagsField4" type="text" value="some value">
+							</span>
+						</span>
+					</div>
+					<ul class="autocomplete-dropdown-menu dropdown-menu">
+						<li><a class="dropdown-item" href="#1"><strong>some value</strong></a></li>
+						<li><a class="dropdown-item" href="#1"><strong>some value</strong> meal</a></li>
+					</ul>
+				</div>
+				<div class="form-feedback-group">
+					<div class="form-text">You can use a comma to enter tags.</div>
+				</div>
+			</div>
+			<div class="input-group-item input-group-item-shrink">
+				<button class="btn btn-secondary" type="button">Select</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="form-group-sm">
+	<label for="tagsField4">Tags with form-group-sm</label>
+	<div class="input-group input-group-stacked-sm-down input-group-sm">
+		<div class="input-group-item">
+			<div class="dropdown">
+				<div class="form-control form-control-tag-group">
+					<span class="autofit-row">
+						<span class="autofit-col autofit-col-expand">
+							<input
+								class="form-control-inset"
+								id="tagsField4"
+								type="text"
+								value="some value"
+							/>
+						</span>
+					</span>
+				</div>
+				<ul class="autocomplete-dropdown-menu dropdown-menu">
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong></a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#1"
+							><strong>some value</strong> meal</a
+						>
+					</li>
+				</ul>
+			</div>
+			<div class="form-feedback-group">
+				<div class="form-text">You can use a comma to enter tags.</div>
+			</div>
+		</div>
+		<div class="input-group-item input-group-item-shrink">
+			<button class="btn btn-secondary" type="button">Select</button>
 		</div>
 	</div>
 </div>
