@@ -13,6 +13,12 @@ import React, {useRef, useState} from 'react';
 import ClayMultiSelect, {itemLabelFilter} from '../src';
 
 export default {
+	argTypes: {
+		size: {
+			control: {type: 'select'},
+			options: [null, 'sm'],
+		},
+	},
 	component: ClayMultiSelect,
 	title: 'Design System/Components/MultiSelect',
 };
@@ -80,6 +86,7 @@ export const Default = (args: any) => {
 				isValid={args.isValid}
 				items={items}
 				onItemsChange={setItems}
+				size={args.size}
 			/>
 		</>
 	);
@@ -89,6 +96,7 @@ Default.args = {
 	disabled: false,
 	disabledClearAll: false,
 	isValid: false,
+	size: null,
 };
 
 export const ComparingItems = () => {
