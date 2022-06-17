@@ -476,6 +476,37 @@ $cadmin-form-control-tag-group-component-action: map-deep-merge(
 	$cadmin-form-control-tag-group-component-action
 );
 
+// .form-control-tag-group-sm.form-control
+
+$cadmin-form-control-tag-group-sm: () !default;
+$cadmin-form-control-tag-group-sm: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($cadmin-input-border-radius-sm),
+		font-size: $cadmin-input-font-size-sm,
+		height: auto,
+		line-height: $cadmin-input-line-height-sm,
+		min-height: $cadmin-input-height-sm,
+		padding-bottom: 0,
+		padding-left: 0.25rem,
+		padding-right: 0.25rem,
+		padding-top: 0,
+		inline-item: (
+			margin-bottom: 0,
+			margin-top: 0,
+		),
+		label: (
+			margin-bottom: 0.1875rem,
+			margin-right: 0.25rem,
+			margin-top: 0.1875rem,
+		),
+		form-control-inset: (
+			margin-bottom: 0.125rem,
+			margin-top: 0.1875rem,
+		),
+	),
+	$cadmin-form-control-tag-group-sm
+);
+
 // Form Group
 
 $cadmin-form-group-margin-bottom: 24px !default; // 24px
@@ -1697,25 +1728,6 @@ $cadmin-input-group-sm: map-deep-merge(
 		input-group-item: (
 			btn: $cadmin-input-group-sm-item-btn,
 			btn-monospaced: $cadmin-input-group-sm-item-btn-monospaced,
-			form-control: (
-				border-radius:
-					clay-enable-rounded($cadmin-input-border-radius-sm),
-				font-size: $cadmin-input-font-size-sm,
-				height: $cadmin-input-height-sm,
-				line-height: $cadmin-input-line-height-sm,
-				padding-bottom: $cadmin-input-padding-y-sm,
-				padding-left: $cadmin-input-padding-x-sm,
-				padding-right: $cadmin-input-padding-x-sm,
-				padding-top: $cadmin-input-padding-y-sm,
-				label: (
-					margin-bottom: 0.1875rem,
-					margin-top: 0.1875rem,
-				),
-			),
-			form-control-inset: (
-				margin-bottom: 0.125rem,
-				margin-top: 0.1875rem,
-			),
 			form-file: (
 				btn: (
 					border-radius:

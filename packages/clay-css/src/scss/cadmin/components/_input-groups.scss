@@ -124,6 +124,15 @@
 			@extend %clay-color-sm-input-group-inset-item-before !optional;
 		}
 	}
+
+	.form-control {
+		@extend %clay-form-control-sm !optional;
+	}
+
+	.form-control-tag-group,
+	&.form-control-tag-group {
+		@extend %clay-form-control-tag-group-sm !optional;
+	}
 }
 
 .input-group-sm {

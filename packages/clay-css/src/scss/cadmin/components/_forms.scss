@@ -558,6 +558,16 @@ textarea.form-control-sm,
 	height: $cadmin-input-textarea-height-sm;
 }
 
+// .form-control-tag-group-sm
+
+%clay-form-control-tag-group-sm {
+	@include clay-form-control-variant($cadmin-form-control-tag-group-sm);
+}
+
+.form-control-tag-group-sm.form-control {
+	@extend %clay-form-control-tag-group-sm;
+}
+
 // Form groups
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
