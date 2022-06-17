@@ -42,6 +42,8 @@ type Locator = {
 	value: string;
 };
 
+type Size = null | 'sm';
+
 interface IMenuRendererProps {
 	/**
 	 * Value of input
@@ -146,6 +148,11 @@ export interface IProps
 	onItemsChange: InternalDispatch<Array<Item>>;
 
 	/**
+	 * Determines the size of the Multi Select component.
+	 */
+	size?: Size;
+
+	/**
 	 * List of pre-populated items that will show up in a dropdown menu
 	 */
 	sourceItems?: Array<Item>;
@@ -206,6 +213,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			onKeyDown = noop,
 			onPaste = noop,
 			placeholder,
+			size,
 			sourceItems = [],
 			spritemap,
 			value,
@@ -315,6 +323,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 						'form-control form-control-tag-group input-group',
 						{
 							focus: isFocused && isValid,
+							[`form-control-tag-group-${size}`]: size,
 						}
 					)}
 					ref={containerRef}
