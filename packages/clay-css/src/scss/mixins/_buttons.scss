@@ -572,17 +572,10 @@
 			$mobile-c-inner
 		);
 
-		$unset: if(
-			variable-exists(clay-unset-placeholder),
-			$clay-unset-placeholder,
-			if(
-				variable-exists(cadmin-clay-unset-placeholer),
-				$cadmin-clay-unset-placeholer,
-				clay-unset-placeholder
-			)
+		$loading-animation: setter(
+			map-get($map, loading-animation),
+			clay-unset-placeholder
 		);
-
-		$loading-animation: setter(map-get($map, loading-animation), $unset);
 
 		$c-inner: setter(map-get($map, c-inner), ());
 		$c-inner: map-merge(
