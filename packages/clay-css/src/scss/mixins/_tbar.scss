@@ -67,6 +67,17 @@
 /// - Add @link to documentation
 
 @mixin clay-tbar-variant($map) {
+	$enable-c-inner: if(
+		variable-exists(enable-c-inner),
+		$enable-c-inner,
+		if
+			(
+				variable-exists(cadmin-enable-c-inner),
+				$cadmin-enable-c-inner,
+				true
+			)
+	);
+
 	$base: map-merge(
 		$map,
 		(
@@ -190,15 +201,7 @@
 	$btn-c-inner: setter(map-get($map, btn-c-inner), ());
 	$btn-c-inner: map-merge(
 		(
-			enabled:
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
-				),
+			enabled: $enable-c-inner,
 			margin-bottom: math-sign(map-get($btn, padding-bottom)),
 			margin-left: math-sign(map-get($btn, padding-left)),
 			margin-right: math-sign(map-get($btn, padding-right)),
@@ -269,15 +272,7 @@
 	$btn-monospaced-c-inner: setter(map-get($map, btn-monospaced-c-inner), ());
 	$btn-monospaced-c-inner: map-merge(
 		(
-			enabled:
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
-				),
+			enabled: $enable-c-inner,
 			margin: math-sign(map-get($btn-monospaced, padding)),
 		),
 		$btn-monospaced-c-inner
@@ -330,15 +325,7 @@
 	$link-c-inner: setter(map-get($map, link-c-inner), ());
 	$link-c-inner: map-merge(
 		(
-			enabled:
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
-				),
+			enabled: $enable-c-inner,
 			margin-bottom: math-sign(map-get($link, padding-bottom)),
 			margin-left: math-sign(map-get($link, padding-left)),
 			margin-right: math-sign(map-get($link, padding-right)),
@@ -410,15 +397,7 @@
 	);
 	$link-monospaced-c-inner: map-merge(
 		(
-			enabled:
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
-				),
+			enabled: $enable-c-inner,
 			margin: math-sign(map-get($link-monospaced, padding)),
 		),
 		$link-monospaced-c-inner

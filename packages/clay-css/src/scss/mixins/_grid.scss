@@ -117,13 +117,15 @@
 	$custom-grid-props: map-merge(
 		(
 			enabled:
-				setter(
-					if(
-						variable-exists(enable-grid-classes),
-						$enable-grid-classes,
-						$cadmin-enable-grid-classes
-					),
-					true
+				if(
+					variable-exists(enable-grid-classes),
+					$enable-grid-classes,
+					if
+						(
+							variable-exists(cadmin-enable-grid-classes),
+							$cadmin-enable-grid-classes,
+							true
+						)
 				),
 		),
 		$map

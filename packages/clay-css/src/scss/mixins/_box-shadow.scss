@@ -6,13 +6,15 @@
 /// @param {Arglist} $shadow
 
 @mixin box-shadow($shadow...) {
-	$enable: setter(
-		if(
-			variable-exists(enable-shadows),
-			$enable-shadows,
-			$cadmin-enable-shadows
-		),
-		true
+	$enable: if(
+		variable-exists(enable-shadows),
+		$enable-shadows,
+		if
+			(
+				variable-exists(cadmin-enable-shadows),
+				$cadmin-enable-shadows,
+				true
+			)
 	);
 
 	@if ($enable) {

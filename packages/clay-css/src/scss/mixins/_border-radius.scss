@@ -3,17 +3,24 @@
 		if(
 			variable-exists(border-radius),
 			$border-radius,
-			$cadmin-border-radius
+			if
+				(
+					variable-exists(cadmin-border-radius),
+					$cadmin-border-radius,
+					0.25rem
+				)
 		),
 	$fallback-border-radius: false
 ) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {
@@ -24,13 +31,15 @@
 }
 
 @mixin border-top-radius($radius) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {
@@ -40,13 +49,15 @@
 }
 
 @mixin border-right-radius($radius) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {
@@ -56,13 +67,15 @@
 }
 
 @mixin border-bottom-radius($radius) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {
@@ -72,13 +85,15 @@
 }
 
 @mixin border-left-radius($radius) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {
@@ -88,13 +103,15 @@
 }
 
 @mixin border-top-left-radius($radius) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {
@@ -118,13 +135,15 @@
 }
 
 @mixin border-bottom-right-radius($radius) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {
@@ -133,13 +152,15 @@
 }
 
 @mixin border-bottom-left-radius($radius) {
-	$enable: setter(
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			$cadmin-enable-rounded
-		),
-		true
+	$enable: if(
+		variable-exists(enable-rounded),
+		$enable-rounded,
+		if
+			(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 	);
 
 	@if ($enable) {

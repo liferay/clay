@@ -95,20 +95,11 @@
 /// @param {Any} $num - The variable
 
 @function math-sign($num) {
-	@if not(type-of($num) == 'number') and not
-		(type-of($num) == 'string') and not
-		($num == null)
-	{
-		@warn 'The value `#{$num}` is of type `#{type-of($num)}`. It must be a `number`, `string`, or `null`. This function has returned a value of `null`.';
-	}
-
 	@if (type-of($num) == 'number') {
 		@return -($num);
 	} @else if (type-of($num) == 'string') {
 		@if (starts-with($num, 'var(--')) {
 			@return calc(#{$num} * -1);
-		} @else {
-			@return $num;
 		}
 	}
 
@@ -396,7 +387,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -430,7 +427,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -460,7 +463,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -487,7 +496,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);
@@ -512,7 +527,13 @@
 			if(
 				variable-exists(cadmin-grid-breakpoints),
 				$cadmin-grid-breakpoints,
-				()
+				(
+					xs: 0,
+					sm: 576px,
+					md: 768px,
+					lg: 992px,
+					xl: 1280px,
+				)
 			)
 		)
 	);

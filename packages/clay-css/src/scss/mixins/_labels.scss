@@ -40,7 +40,12 @@
 					if(
 						variable-exists(label-border-width),
 						$label-border-width,
-						$cadmin-label-border-width
+						if
+							(
+								variable-exists(cadmin-label-border-width),
+								$cadmin-label-border-width,
+								null
+							)
 					)
 				),
 			padding-bottom:
@@ -157,13 +162,15 @@
 		$c-inner,
 		(
 			enabled:
-				setter(
-					if(
-						variable-exists(enable-c-inner),
-						$enable-c-inner,
-						$cadmin-enable-c-inner
-					),
-					true
+				if(
+					variable-exists(enable-c-inner),
+					$enable-c-inner,
+					if
+						(
+							variable-exists(cadmin-enable-c-inner),
+							$cadmin-enable-c-inner,
+							true
+						)
 				),
 			margin-bottom:
 				setter(
