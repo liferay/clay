@@ -330,7 +330,7 @@ describe('Interactions', () => {
 
 			fireEvent(gradientMap, mouseMove);
 
-			expect(handleColorsChange).toBeCalledTimes(3);
+			expect(handleColorsChange).toBeCalledTimes(2);
 			expect(handleColorsChange.mock.calls[0][0][0]).toBe('5BB0A5');
 		});
 
@@ -352,7 +352,7 @@ describe('Interactions', () => {
 
 			fireEvent(hueSelector as HTMLElement, mouseMove);
 
-			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleColorsChange).toBeCalledTimes(1);
 		});
 
 		it('changes the color by changing the RGB', () => {
@@ -361,13 +361,13 @@ describe('Interactions', () => {
 			const gInput = editorGetByTestId('gInput');
 
 			fireEvent.change(rInput, {target: {value: '200'}});
-			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleColorsChange).toBeCalledTimes(1);
 
 			fireEvent.change(gInput, {target: {value: '200'}});
-			expect(handleColorsChange).toBeCalledTimes(3);
+			expect(handleColorsChange).toBeCalledTimes(2);
 
 			fireEvent.change(bInput, {target: {value: '200'}});
-			expect(handleColorsChange).toBeCalledTimes(4);
+			expect(handleColorsChange).toBeCalledTimes(3);
 		});
 
 		it('changes the color by changing the input', () => {
@@ -375,7 +375,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
-			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleColorsChange).toBeCalledTimes(1);
 		});
 
 		it('ability to change color of clicked splotch', () => {
@@ -389,7 +389,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(hexInput, {target: {value: 'DDDDDD'}});
 
-			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleColorsChange).toBeCalledTimes(1);
 
 			expect(document.body).toMatchSnapshot();
 		});
@@ -552,6 +552,7 @@ describe('Interactions', () => {
 			) as HTMLInputElement;
 
 			fireEvent.change(input, {target: {value: 'DFCAFF'}});
+			fireEvent.blur(input, {target: {value: 'DFCAFF'}});
 
 			const dropdownToggle = document.querySelector('.dropdown-toggle');
 
@@ -563,7 +564,7 @@ describe('Interactions', () => {
 
 			fireEvent.click(blankSplotch as HTMLButtonElement, {});
 
-			expect(input.value).toBe('DFCAFF');
+			expect(input.value).toBe('dfcaff');
 
 			const greenSplotch = (
 				document.body as HTMLButtonElement
