@@ -14,8 +14,6 @@ var config = {
 	SRC_GLOB: 'src/**/*'
 };
 
-var bootstrapPath = path.dirname(require.resolve('bootstrap/package.json'));
-
 var license = require('./tasks/copyright_banner');
 var tasks = require('require-dir')('./tasks');
 
@@ -45,9 +43,6 @@ gulp.task(
 		runSequence(
 			'compile:clean',
 			'compile:files',
-			'compile:bootstrap:js',
-			'compile:bootstrap:scss',
-			'compile:popper',
 			'build:svg:scss-icons',
 			'compile:prep-scss',
 			'compile:css',
@@ -57,27 +52,6 @@ gulp.task(
 				cb(err);
 			}
 		);
-	}
-);
-
-gulp.task(
-	'compile:bootstrap:js',
-	function() {
-		var src = [
-			path.join(bootstrapPath, 'dist/js/bootstrap.js'),
-			path.join(bootstrapPath, 'dist/js/bootstrap.js.map')
-		];
-
-		return gulp.src(src)
-			.pipe(gulp.dest('./src/js'));
-	}
-);
-
-gulp.task(
-	'compile:bootstrap:scss',
-	function() {
-		return gulp.src(path.join(bootstrapPath, 'scss/**/*'))
-			.pipe(gulp.dest('./src/scss/bootstrap'));
 	}
 );
 
@@ -155,21 +129,6 @@ gulp.task(
 		}, function(err) {
 			cb(err);
 		});
-	}
-);
-
-gulp.task(
-	'compile:popper',
-	function() {
-		var popperPath = path.dirname(require.resolve('popper.js/package.json'));
-
-		var src = [
-			path.join(popperPath, 'dist/umd/popper.js'),
-			path.join(popperPath, 'dist/umd/popper.js.map')
-		];
-
-		return gulp.src(src)
-			.pipe(gulp.dest('./src/js'));
 	}
 );
 
