@@ -176,10 +176,11 @@ strong {
 // Reference Mark
 
 .reference-mark {
-	display: inline-block;
-	font-size: $reference-mark-font-size;
-	position: relative;
-	vertical-align: $reference-mark-vertical-align;
+	@include clay-css($reference-mark);
+
+	&.lexicon-icon {
+		@include clay-css(map-get($reference-mark, lexicon-icon));
+	}
 }
 
 // Kbd
