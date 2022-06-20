@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.62.0](https://github.com/liferay/clay/compare/v3.61.0...v3.62.0) (2022-06-20)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** Adds small example to storybook ([8bdf156](https://github.com/liferay/clay/commit/8bdf1562cc0d4b25625fc11f720b6c46cbf74c70))
+-   **@clayui/multi-select:** fix error when you have a ref declared it is not possible to delete the label by pressing backspace ([685588c](https://github.com/liferay/clay/commit/685588cfabaa3f07503ac123bf8333bc23254c3c))
+
 # [3.61.0](https://github.com/liferay/clay/compare/v3.60.1...v3.61.0) (2022-06-13)
 
 ### Bug Fixes

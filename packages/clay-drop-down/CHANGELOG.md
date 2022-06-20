@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.62.0](https://github.com/liferay/clay/compare/v3.61.0...v3.62.0) (2022-06-20)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix bug of calling setActive method when the menu is invisible ([1e3efcf](https://github.com/liferay/clay/commit/1e3efcfcd126f44c0f98547fe9416801d9da5641))
+
 # [3.58.0](https://github.com/liferay/clay/compare/v3.57.0...v3.58.0) (2022-05-23)
 
 **Note:** Version bump only for package @clayui/drop-down

@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.62.0](https://github.com/liferay/clay/compare/v3.61.0...v3.62.0) (2022-06-20)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Clay Multi Select should have small size ([e256838](https://github.com/liferay/clay/commit/e256838046b41f885ab0b7f70afd4b58582d8314))
+* **@clayui/css:** Cadmin Reference Mark vertical alignment when it is used directly on the icon ([f530f47](https://github.com/liferay/clay/commit/f530f478133ac9548e94ebcf499ec4dc064bd202))
+* **@clayui/css:** Clay Multi Select should have small size ([818621f](https://github.com/liferay/clay/commit/818621fa0a5abf68abfcc2af8b07bd4b9d6eec04))
+* **@clayui/css:** Global Functions add fallback value for $cadmin variables ([a12777a](https://github.com/liferay/clay/commit/a12777a399d619cd205a7f73caabe02eec70798b)), closes [#4925](https://github.com/liferay/clay/issues/4925)
+* **@clayui/css:** Mixins `clay-button-variant` directly use `clay-unset-placeholder` to clear `[@extend](https://github.com/extend)` ([dcd3999](https://github.com/liferay/clay/commit/dcd39997a5f63ba476d0a66e9089c447e546a35e))
+* **@clayui/css:** Reference Mark vertical alignment when it is used directly on the icon ([e014a8c](https://github.com/liferay/clay/commit/e014a8c6e49fcb90916a3b3a412e30ae02636054))
+
+
+### Features
+
+* **@clayui/css:** Global Functions provide default grid breakpoints map for breakpoint functions ([66ad9e1](https://github.com/liferay/clay/commit/66ad9e19d9b966c0058385e76b2b61f64e025af0))
+* **@clayui/css:** Mixins clay-form-control-variant adds more configuration items ([6689c99](https://github.com/liferay/clay/commit/6689c996609585c6ae2e93791cfbbee5edbf4a37))
+* **@clayui/css:** Mixins clay-input-group-item-variant moved .label to clay-form-control-variant ([2a22cf3](https://github.com/liferay/clay/commit/2a22cf3ee22b6c1ef0bc6684f731c3ace5090ef8))
+* **@clayui/css:** Mixins provide a default value if cadmin variables don't exist ([11e026b](https://github.com/liferay/clay/commit/11e026bf34ad9db4a166a7b2fd7ae671c285afc3))
+
+
+### Reverts
+
+* Revert "feat(@clayui/css): Global Functions `math-sign` adds warning message if type isn't supported" ([8026ce5](https://github.com/liferay/clay/commit/8026ce5940aca8fe3d71b859a0d3e84b8b2841f7))
+
+
+
+
+
 # [3.61.0](https://github.com/liferay/clay/compare/v3.60.1...v3.61.0) (2022-06-13)
 
 

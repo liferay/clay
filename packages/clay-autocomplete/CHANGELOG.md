@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.62.0](https://github.com/liferay/clay/compare/v3.61.0...v3.62.0) (2022-06-20)
+
+### Features
+
+-   **@clayui/autocomplete:** Support menu alignment by Viewport ([1409c4b](https://github.com/liferay/clay/commit/1409c4b8d22073e642e12f951ebdcb76c9474669))
+
 # [3.60.0](https://github.com/liferay/clay/compare/v3.59.0...v3.60.0) (2022-06-06)
 
 **Note:** Version bump only for package @clayui/autocomplete
