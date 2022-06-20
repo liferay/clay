@@ -12,12 +12,14 @@ import {
 	sub,
 	useInternalState,
 } from '@clayui/shared';
-import React from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import tinycolor from 'tinycolor2';
 
 import Basic from './Basic';
 import Custom from './Custom';
+import {Editor, useEditor} from './Editor';
 import Splotch from './Splotch';
+import {findColorIndex, getCSSVariableColor} from './util';
 
 const DEFAULT_COLORS = [
 	'000000',
@@ -211,11 +213,25 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 		value,
 	});
 
-	const [customEditorActive, setCustomEditorActive] = React.useState(false);
+	const color = useMemo(
+		() =>
+			internalValue!.includes('var(')
+				? getCSSVariableColor(internalValue!)
+				: tinycolor(internalValue),
+		[internalValue]
+	);
+
+	const customColors = colors
+		? colors.concat(BLANK_COLORS).slice(0, 12)
+		: BLANK_COLORS;
+
+	const [state, dispatch] = useEditor(internalValue, color, customColors);
+
+	const [customEditorActive, setCustomEditorActive] = useState(!showPalette);
 
 	const isHex = tinycolor(internalValue).getFormat() === 'hex';
 
-	const inputColorTypeSupport = React.useMemo(() => {
+	const inputColorTypeSupport = useMemo(() => {
 		if (typeof document !== 'undefined') {
 			var input = document.createElement('input');
 			input.setAttribute('type', 'color');
@@ -230,11 +246,11 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 		useNative = false;
 	}
 
-	const triggerElementRef = React.useRef<HTMLDivElement>(null);
-	const dropdownContainerRef = React.useRef<HTMLDivElement>(null);
-	const inputRef = React.useRef<HTMLInputElement>(null);
-	const valueInputRef = React.useRef<HTMLInputElement>(null);
-	const splotchRef = React.useRef<HTMLButtonElement>(null);
+	const triggerElementRef = useRef<HTMLDivElement>(null);
+	const dropdownContainerRef = useRef<HTMLDivElement>(null);
+	const inputRef = useRef<HTMLInputElement>(null);
+	const valueInputRef = useRef<HTMLInputElement>(null);
+	const splotchRef = useRef<HTMLButtonElement>(null);
 
 	const [internalActive, setInternalActive] = useInternalState({
 		defaultName: 'defaultActive',
@@ -245,7 +261,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 		value: active,
 	});
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (!internalActive) {
 			setCustomEditorActive(false);
 		}
@@ -347,24 +363,67 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 						{onColorsChange && (
 							<Custom
-								active={internalActive}
-								colors={
-									colors
-										? colors
-												.concat(BLANK_COLORS)
-												.slice(0, 12)
-										: BLANK_COLORS
-								}
+								color={color}
+								colors={customColors}
 								editorActive={customEditorActive}
 								label={label}
-								onChange={(newVal) => {
-									setValue(newVal);
+								onChange={(color, hex) => {
+									dispatch({
+										hex: color.toHex(),
+										hue: color.toHsv().h,
+									});
+									setValue(hex);
 								}}
-								onColorsChange={onColorsChange}
+								onColorsChange={(hex, index) => {
+									const newColors = [...customColors];
+
+									newColors[index] = hex;
+
+									onColorsChange(newColors);
+								}}
 								onEditorActiveChange={setCustomEditorActive}
+								onSplotchChange={(splotch) =>
+									dispatch({splotch})
+								}
 								showPalette={showPalette}
+								splotch={state.splotch}
 								spritemap={spritemap}
-								value={internalValue}
+							/>
+						)}
+
+						{onColorsChange && customEditorActive && (
+							<Editor
+								color={color}
+								colors={customColors}
+								hex={state.hex}
+								hue={state.hue}
+								onChange={(color, active) => {
+									const hex = color.toHex();
+
+									if (active) {
+										const newColors = [...customColors];
+
+										newColors[state.splotch!] = hex;
+
+										onColorsChange(newColors);
+									} else {
+										dispatch({splotch: undefined});
+									}
+
+									setValue(hex);
+								}}
+								onColorChange={(color) => {
+									const hex = color.toHex();
+									const newColors = [...customColors];
+
+									newColors[state.splotch!] = hex;
+
+									onColorsChange(newColors);
+									setValue(hex);
+									dispatch({hex});
+								}}
+								onHexChange={(hex) => dispatch({hex})}
+								onHueChange={(hue) => dispatch({hue})}
 							/>
 						)}
 					</ClayDropDown.Menu>
@@ -379,7 +438,7 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 								disabled={disabled}
 								insetBefore
 								onBlur={(event) => {
-									const value = event.target.value;
+									let value = event.target.value;
 
 									if (otherProps.onBlur) {
 										otherProps.onBlur(event);
@@ -393,20 +452,75 @@ const ClayColorPicker: React.FunctionComponent<IProps> = ({
 
 									if (newColor.isValid()) {
 										if (newColor.getFormat() === 'hex') {
-											setValue(newColor.toHex());
+											value = newColor.toHex();
 										} else if (
 											newColor.toString() !== value
 										) {
-											setValue(newColor.toString());
+											value = newColor.toString();
 										}
 									} else if (!value.includes('var(')) {
-										setValue('');
+										value = '';
 									}
+
+									if (onColorsChange && !internalActive) {
+										const index = customColors.findIndex(
+											(color) =>
+												color.toUpperCase() ===
+												value.toUpperCase()
+										);
+
+										dispatch({
+											splotch:
+												index !== -1
+													? index
+													: undefined,
+										});
+									}
+
+									setValue(value);
 								}}
 								onChange={(event) => {
-									setValue(
-										normalizeValueHex(event.target.value)
+									const value = normalizeValueHex(
+										event.target.value
 									);
+									const color = value.includes('var(')
+										? getCSSVariableColor(value)
+										: tinycolor(value);
+
+									if (
+										onColorsChange &&
+										(color.isValid() ||
+											value.includes('var('))
+									) {
+										dispatch({
+											hex: color.toHex(),
+											hue: color.toHsv().h,
+										});
+
+										if (internalActive) {
+											const newColors = [...customColors];
+
+											newColors[state.splotch!] =
+												color.toHex();
+
+											onColorsChange(newColors);
+										} else {
+											const colorIndex = findColorIndex(
+												customColors,
+												value!.includes('var(')
+													? getCSSVariableColor(
+															value!
+													  )
+													: tinycolor(value)
+											);
+
+											if (colorIndex === -1) {
+												dispatch({splotch: undefined});
+											}
+										}
+									}
+
+									setValue(value);
 								}}
 								ref={inputRef}
 								type="text"

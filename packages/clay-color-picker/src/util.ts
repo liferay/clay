@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import tinycolor from 'tinycolor2';
+
 /**
  * Utility function for getting x & y coordinates for gradient
  */
@@ -51,4 +53,31 @@ export function xToSaturation(x: number, node: HTMLElement) {
  */
 export function yToVisibility(y: number, node: HTMLElement) {
 	return Math.round(-((y * 100) / node.getBoundingClientRect().height) + 100);
+}
+
+export const findColorIndex = (
+	colors: Array<string>,
+	color: tinycolor.Instance
+) =>
+	colors.findIndex((currentColor) =>
+		tinycolor.equals(
+			currentColor.includes('var(')
+				? getCSSVariableColor(currentColor)
+				: tinycolor(currentColor),
+			color
+		)
+	);
+
+export function getCSSVariableColor(value: string) {
+	const element = document.createElement('div');
+
+	element.setAttribute('style', `background: ${value};`);
+
+	document.body.appendChild(element);
+
+	const color = tinycolor(getComputedStyle(element).backgroundColor);
+
+	document.body.removeChild(element);
+
+	return color;
 }
