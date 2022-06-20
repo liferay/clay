@@ -176,10 +176,11 @@ strong {
 // Reference Mark
 
 .reference-mark {
-	display: inline-block;
-	font-size: $cadmin-reference-mark-font-size;
-	position: relative;
-	vertical-align: $cadmin-reference-mark-vertical-align;
+	@include clay-css($cadmin-reference-mark);
+
+	&.lexicon-icon {
+		@include clay-css(map-get($cadmin-reference-mark, lexicon-icon));
+	}
 }
 
 // Kbd

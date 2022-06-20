@@ -5,6 +5,20 @@ $cadmin-strong-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-reference-mark-font-size: 12px !default;
 $cadmin-reference-mark-vertical-align: super !default;
 
+$cadmin-reference-mark: () !default;
+$cadmin-reference-mark: map-deep-merge(
+	(
+		display: inline-block,
+		font-size: $cadmin-reference-mark-font-size,
+		position: relative,
+		vertical-align: $cadmin-reference-mark-vertical-align,
+		lexicon-icon: (
+			vertical-align: $cadmin-reference-mark-vertical-align,
+		),
+	),
+	$cadmin-reference-mark
+);
+
 $cadmin-mark-color: null !default;
 
 // C Kbd
