@@ -3,24 +3,18 @@
 		if(
 			variable-exists(border-radius),
 			$border-radius,
-			if
-				(
-					variable-exists(cadmin-border-radius),
-					$cadmin-border-radius,
-					0.25rem
-				)
+			if(
+				variable-exists(cadmin-border-radius),
+				$cadmin-border-radius,
+				0.25rem
+			)
 		),
 	$fallback-border-radius: false
 ) {
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {
@@ -34,12 +28,7 @@
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {
@@ -52,12 +41,7 @@
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {
@@ -70,12 +54,7 @@
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {
@@ -88,12 +67,7 @@
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {
@@ -106,12 +80,7 @@
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {
@@ -138,12 +107,7 @@
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {
@@ -155,12 +119,7 @@
 	$enable: if(
 		variable-exists(enable-rounded),
 		$enable-rounded,
-		if
-			(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
+		if(variable-exists(cadmin-enable-rounded), $cadmin-enable-rounded, true)
 	);
 
 	@if ($enable) {

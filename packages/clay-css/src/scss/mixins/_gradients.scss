@@ -11,12 +11,11 @@
 		if(
 			variable-exists(enable-gradients),
 			$enable-gradients,
-			if
-				(
-					variable-exists(cadmin-enable-gradients),
-					$cadmin-enable-gradients,
-					false
-				)
+			if(
+				variable-exists(cadmin-enable-gradients),
+				$cadmin-enable-gradients,
+				false
+			)
 		)
 	) {
 		background: $color
@@ -26,12 +25,11 @@
 					if(
 						variable-exists(body-bg),
 						$body-bg,
-						if
-							(
-								variable-exists(cadmin-body-bg),
-								$cadmin-body-bg,
-								#fff
-							)
+						if(
+							variable-exists(cadmin-body-bg),
+							$cadmin-body-bg,
+							#fff
+						)
 					),
 					$color,
 					15%

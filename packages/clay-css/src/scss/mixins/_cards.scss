@@ -1059,12 +1059,11 @@
 					if(
 						variable-exists(card-border-color),
 						$card-border-color,
-						if
-							(
-								variable-exists(cadmin-card-border-color),
-								$cadmin-card-border-color,
-								null
-							)
+						if(
+							variable-exists(cadmin-card-border-color),
+							$cadmin-card-border-color,
+							null
+						)
 					)
 				),
 			border-style:
@@ -1149,12 +1148,11 @@
 					if(
 						variable-exists(link-cursor),
 						$link-cursor,
-						if
-							(
-								variable-exists(cadmin-link-cursor),
-								$cadmin-link-cursor,
-								null
-							)
+						if(
+							variable-exists(cadmin-link-cursor),
+							$cadmin-link-cursor,
+							null
+						)
 					)
 				),
 		)

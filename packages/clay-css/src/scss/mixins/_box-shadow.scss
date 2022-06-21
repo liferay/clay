@@ -9,12 +9,7 @@
 	$enable: if(
 		variable-exists(enable-shadows),
 		$enable-shadows,
-		if
-			(
-				variable-exists(cadmin-enable-shadows),
-				$cadmin-enable-shadows,
-				true
-			)
+		if(variable-exists(cadmin-enable-shadows), $cadmin-enable-shadows, true)
 	);
 
 	@if ($enable) {
