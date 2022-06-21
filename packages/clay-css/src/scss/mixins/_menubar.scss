@@ -291,12 +291,11 @@
 				if(
 					variable-exists(enable-c-inner),
 					$enable-c-inner,
-					if
-						(
-							variable-exists(cadmin-enable-c-inner),
-							$cadmin-enable-c-inner,
-							true
-						)
+					if(
+						variable-exists(cadmin-enable-c-inner),
+						$cadmin-enable-c-inner,
+						true
+					)
 				),
 			margin-bottom:
 				setter(
@@ -539,12 +538,11 @@
 					if(
 						variable-exists(navbar-light-color),
 						$navbar-light-color,
-						if
-							(
-								variable-exists(cadmin-navbar-light-color),
-								$cadmin-navbar-light-color,
-								null
-							)
+						if(
+							variable-exists(cadmin-navbar-light-color),
+							$cadmin-navbar-light-color,
+							null
+						)
 					)
 				),
 			hover: (
@@ -560,14 +558,13 @@
 						if(
 							variable-exists(navbar-light-hover-color),
 							$navbar-light-hover-color,
-							if
-								(
-									variable-exists(
-										cadmin-navbar-light-hover-color
-									),
-									$cadmin-navbar-light-hover-color,
-									null
-								)
+							if(
+								variable-exists(
+									cadmin-navbar-light-hover-color
+								),
+								$cadmin-navbar-light-hover-color,
+								null
+							)
 						)
 					),
 			),
@@ -584,14 +581,13 @@
 						if(
 							variable-exists(navbar-light-active-color),
 							$navbar-light-active-color,
-							if
-								(
-									variable-exists(
-										cadmin-navbar-light-active-color
-									),
-									$cadmin-navbar-light-active-color,
-									null
-								)
+							if(
+								variable-exists(
+									cadmin-navbar-light-active-color
+								),
+								$cadmin-navbar-light-active-color,
+								null
+							)
 						)
 					),
 			),
@@ -615,14 +611,13 @@
 						if(
 							variable-exists(navbar-light-disabled-color),
 							$navbar-light-disabled-color,
-							if
-								(
-									variable-exists(
-										cadmin-navbar-light-disabled-color
-									),
-									$cadmin-navbar-light-disabled-color,
-									null
-								)
+							if(
+								variable-exists(
+									cadmin-navbar-light-disabled-color
+								),
+								$cadmin-navbar-light-disabled-color,
+								null
+							)
 						)
 					),
 			),
@@ -649,12 +644,11 @@
 					if(
 						variable-exists(dropdown-link-color),
 						$dropdown-link-color,
-						if
-							(
-								variable-exists(cadmin-dropdown-link-color),
-								$cadmin-dropdown-link-color,
-								null
-							)
+						if(
+							variable-exists(cadmin-dropdown-link-color),
+							$cadmin-dropdown-link-color,
+							null
+						)
 					)
 				),
 			hover: (
@@ -665,14 +659,11 @@
 						if(
 							variable-exists(dropdown-link-hover-bg),
 							$dropdown-link-hover-bg,
-							if
-								(
-									variable-exists(
-										cadmin-dropdown-link-hover-bg
-									),
-									$cadmin-dropdown-link-hover-bg,
-									null
-								)
+							if(
+								variable-exists(cadmin-dropdown-link-hover-bg),
+								$cadmin-dropdown-link-hover-bg,
+								null
+							)
 						)
 					),
 				color:
@@ -682,14 +673,13 @@
 						if(
 							variable-exists(dropdown-link-hover-color),
 							$dropdown-link-hover-color,
-							if
-								(
-									variable-exists(
-										cadmin-dropdown-link-hover-color
-									),
-									$cadmin-dropdown-link-hover-color,
-									null
-								)
+							if(
+								variable-exists(
+									cadmin-dropdown-link-hover-color
+								),
+								$cadmin-dropdown-link-hover-color,
+								null
+							)
 						)
 					),
 			),
@@ -701,14 +691,11 @@
 						if(
 							variable-exists(dropdown-link-active-bg),
 							$dropdown-link-active-bg,
-							if
-								(
-									variable-exists(
-										cadmin-dropdown-link-active-bg
-									),
-									$cadmin-dropdown-link-active-bg,
-									null
-								)
+							if(
+								variable-exists(cadmin-dropdown-link-active-bg),
+								$cadmin-dropdown-link-active-bg,
+								null
+							)
 						)
 					),
 				color:
@@ -718,14 +705,13 @@
 						if(
 							variable-exists(dropdown-link-active-color),
 							$dropdown-link-active-color,
-							if
-								(
-									variable-exists(
-										cadmin-dropdown-link-active-color
-									),
-									$cadmin-dropdown-link-active-color,
-									null
-								)
+							if(
+								variable-exists(
+									cadmin-dropdown-link-active-color
+								),
+								$cadmin-dropdown-link-active-color,
+								null
+							)
 						)
 					),
 			),
@@ -737,14 +723,13 @@
 						if(
 							variable-exists(dropdown-link-active-font-weight),
 							$dropdown-link-active-font-weight,
-							if
-								(
-									variable-exists(
-										cadmin-dropdown-link-active-font-weight
-									),
-									$cadmin-dropdown-link-active-font-weight,
-									null
-								)
+							if(
+								variable-exists(
+									cadmin-dropdown-link-active-font-weight
+								),
+								$cadmin-dropdown-link-active-font-weight,
+								null
+							)
 						)
 					),
 			),
@@ -762,14 +747,13 @@
 						if(
 							variable-exists(dropdown-link-disabled-color),
 							$dropdown-link-disabled-color,
-							if
-								(
-									variable-exists(
-										cadmin-dropdown-link-disabled-color
-									),
-									$cadmin-dropdown-link-disabled-color,
-									null
-								)
+							if(
+								variable-exists(
+									cadmin-dropdown-link-disabled-color
+								),
+								$cadmin-dropdown-link-disabled-color,
+								null
+							)
 						)
 					),
 			),
@@ -791,12 +775,11 @@
 					if(
 						variable-exists(dropdown-bg),
 						$dropdown-bg,
-						if
-							(
-								variable-exists(cadmin-dropdown-bg),
-								$cadmin-dropdown-bg,
-								null
-							)
+						if(
+							variable-exists(cadmin-dropdown-bg),
+							$cadmin-dropdown-bg,
+							null
+						)
 					)
 				),
 			border-color:
@@ -806,12 +789,11 @@
 					if(
 						variable-exists(dropdown-border-color),
 						$dropdown-border-color,
-						if
-							(
-								variable-exists(cadmin-dropdown-border-color),
-								$cadmin-dropdown-border-color,
-								null
-							)
+						if(
+							variable-exists(cadmin-dropdown-border-color),
+							$cadmin-dropdown-border-color,
+							null
+						)
 					)
 				),
 			border-radius:
@@ -821,12 +803,11 @@
 					if(
 						variable-exists(border-radius),
 						$border-radius,
-						if
-							(
-								variable-exists(cadmin-border-radius),
-								$cadmin-border-radius,
-								null
-							)
+						if(
+							variable-exists(cadmin-border-radius),
+							$cadmin-border-radius,
+							null
+						)
 					)
 				),
 			border-style:
@@ -841,12 +822,11 @@
 					if(
 						variable-exists(dropdown-box-shadow),
 						$dropdown-box-shadow,
-						if
-							(
-								variable-exists(cadmin-dropdown-box-shadow),
-								$cadmin-dropdown-box-shadow,
-								null
-							)
+						if(
+							variable-exists(cadmin-dropdown-box-shadow),
+							$cadmin-dropdown-box-shadow,
+							null
+						)
 					)
 				),
 		)

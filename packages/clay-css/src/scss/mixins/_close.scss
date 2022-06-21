@@ -333,12 +333,11 @@
 					if(
 						variable-exists(enable-c-inner),
 						$enable-c-inner,
-						if
-							(
-								variable-exists(cadmin-enable-c-inner),
-								$cadmin-enable-c-inner,
-								true
-							)
+						if(
+							variable-exists(cadmin-enable-c-inner),
+							$cadmin-enable-c-inner,
+							true
+						)
 					),
 				margin-bottom: math-sign(map-get($map, padding-bottom)),
 				margin-left: math-sign(map-get($map, padding-left)),

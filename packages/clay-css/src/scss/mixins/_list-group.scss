@@ -68,12 +68,11 @@
 		if(
 			variable-exists(list-group-bg),
 			$list-group-bg,
-			if
-				(
-					variable-exists(cadmin-list-group-bg),
-					$cadmin-list-group-bg,
-					null
-				)
+			if(
+				variable-exists(cadmin-list-group-bg),
+				$cadmin-list-group-bg,
+				null
+			)
 		)
 	);
 	$border-bottom-color: setter(
@@ -81,14 +80,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-bottom-color),
 			$list-group-notification-item-border-bottom-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-bottom-color
-					),
-					$cadmin-list-group-notification-item-border-bottom-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-bottom-color
+				),
+				$cadmin-list-group-notification-item-border-bottom-color,
+				null
+			)
 		)
 	);
 	$border-left-color: setter(
@@ -96,14 +94,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-left-color),
 			$list-group-notification-item-border-left-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-left-color
-					),
-					$cadmin-list-group-notification-item-border-left-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-left-color
+				),
+				$cadmin-list-group-notification-item-border-left-color,
+				null
+			)
 		)
 	);
 	$border-right-color: setter(
@@ -111,14 +108,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-right-color),
 			$list-group-notification-item-border-right-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-right-color
-					),
-					$cadmin-list-group-notification-item-border-right-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-right-color
+				),
+				$cadmin-list-group-notification-item-border-right-color,
+				null
+			)
 		)
 	);
 	$border-top-color: setter(
@@ -126,14 +122,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-top-color),
 			$list-group-notification-item-border-top-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-top-color
-					),
-					$cadmin-list-group-notification-item-border-top-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-top-color
+				),
+				$cadmin-list-group-notification-item-border-top-color,
+				null
+			)
 		)
 	);
 
@@ -142,14 +137,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-bottom-width),
 			$list-group-notification-item-border-bottom-width,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-bottom-width
-					),
-					$cadmin-list-group-notification-item-border-bottom-width,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-bottom-width
+				),
+				$cadmin-list-group-notification-item-border-bottom-width,
+				null
+			)
 		)
 	);
 	$border-left-width: setter(
@@ -157,14 +151,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-left-width),
 			$list-group-notification-item-border-left-width,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-left-width
-					),
-					$cadmin-list-group-notification-item-border-left-width,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-left-width
+				),
+				$cadmin-list-group-notification-item-border-left-width,
+				null
+			)
 		)
 	);
 	$border-right-width: setter(
@@ -172,14 +165,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-right-width),
 			$list-group-notification-item-border-right-width,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-right-width
-					),
-					$cadmin-list-group-notification-item-border-right-width,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-right-width
+				),
+				$cadmin-list-group-notification-item-border-right-width,
+				null
+			)
 		)
 	);
 	$border-top-width: setter(
@@ -187,14 +179,13 @@
 		if(
 			variable-exists(list-group-notification-item-border-top-width),
 			$list-group-notification-item-border-top-width,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-border-top-width
-					),
-					$cadmin-list-group-notification-item-border-top-width,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-border-top-width
+				),
+				$cadmin-list-group-notification-item-border-top-width,
+				null
+			)
 		)
 	);
 
@@ -210,12 +201,11 @@
 		if(
 			variable-exists(list-group-active-bg),
 			$list-group-active-bg,
-			if
-				(
-					variable-exists(cadmin-list-group-active-bg),
-					$cadmin-list-group-active-bg,
-					null
-				)
+			if(
+				variable-exists(cadmin-list-group-active-bg),
+				$cadmin-list-group-active-bg,
+				null
+			)
 		)
 	);
 	$active-border-bottom-color: setter(
@@ -225,14 +215,13 @@
 				list-group-notification-item-active-border-bottom-color
 			),
 			$list-group-notification-item-active-border-bottom-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-active-border-bottom-color
-					),
-					$cadmin-list-group-notification-item-active-border-bottom-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-active-border-bottom-color
+				),
+				$cadmin-list-group-notification-item-active-border-bottom-color,
+				null
+			)
 		)
 	);
 	$active-border-left-color: setter(
@@ -242,14 +231,13 @@
 				list-group-notification-item-active-border-left-color
 			),
 			$list-group-notification-item-active-border-left-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-active-border-left-color
-					),
-					$cadmin-list-group-notification-item-active-border-left-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-active-border-left-color
+				),
+				$cadmin-list-group-notification-item-active-border-left-color,
+				null
+			)
 		)
 	);
 	$active-border-right-color: setter(
@@ -259,14 +247,13 @@
 				list-group-notification-item-active-border-right-color
 			),
 			$list-group-notification-item-active-border-right-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-active-border-right-color
-					),
-					$cadmin-list-group-notification-item-active-border-right-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-active-border-right-color
+				),
+				$cadmin-list-group-notification-item-active-border-right-color,
+				null
+			)
 		)
 	);
 	$active-border-top-color: setter(
@@ -276,14 +263,13 @@
 				list-group-notification-item-active-border-top-color
 			),
 			$list-group-notification-item-active-border-top-color,
-			if
-				(
-					variable-exists(
-						cadmin-list-group-notification-item-active-border-top-color
-					),
-					$cadmin-list-group-notification-item-active-border-top-color,
-					null
-				)
+			if(
+				variable-exists(
+					cadmin-list-group-notification-item-active-border-top-color
+				),
+				$cadmin-list-group-notification-item-active-border-top-color,
+				null
+			)
 		)
 	);
 
@@ -305,12 +291,11 @@
 		if(
 			variable-exists(enable-rounded),
 			$enable-rounded,
-			if
-				(
-					variable-exists(cadmin-enable-rounded),
-					$cadmin-enable-rounded,
-					true
-				)
+			if(
+				variable-exists(cadmin-enable-rounded),
+				$cadmin-enable-rounded,
+				true
+			)
 		)
 	) {
 		border-bottom-left-radius: $border-bottom-left-radius;
