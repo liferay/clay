@@ -13,7 +13,7 @@ const loadingIndicatorImportsCode = `import ClayLoadingIndicator from '@clayui/l
 const LoadingIndicatorCode = `const Component = () => {
 	return (
 		<>
-			<ClayLoadingIndicator />
+			<ClayLoadingIndicator displayType="secondary" size="sm" />
 		</>
 	);
 }
@@ -38,7 +38,7 @@ const loadingIndicatorSquaresImportsCode = `import ClayLoadingIndicator from '@c
 
 const LoadingIndicatorSquaresCode = `const Component = () => {
 	return (
-		<ClayLoadingIndicator shape="squares" />
+		<ClayLoadingIndicator displayType="primary" shape="squares" size="md" />
 	);
 }
 
@@ -62,7 +62,7 @@ const loadingIndicatorPrimaryImportsCode = `import ClayLoadingIndicator from '@c
 
 const LoadingIndicatorPrimaryCode = `const Component = () => {
 	return (
-		<ClayLoadingIndicator displayType="primary" />
+		<ClayLoadingIndicator displayType="primary" shape="squares" size="lg" />
 	);
 }
 
@@ -86,7 +86,7 @@ const loadingIndicatorSecondaryImportsCode = `import ClayLoadingIndicator from '
 
 const LoadingIndicatorSecondaryCode = `const Component = () => {
 	return (
-		<ClayLoadingIndicator displayType="secondary" />
+		<ClayLoadingIndicator displayType="secondary" size="sm" />
 	);
 }
 
@@ -111,7 +111,7 @@ const loadingIndicatorLightImportsCode = `import ClayLoadingIndicator from '@cla
 const LoadingIndicatorLightCode = `const Component = () => {
 	return (
 		<div className="bg-dark">
-			<ClayLoadingIndicator displayType="light" />
+			<ClayLoadingIndicator displayType="light" shape="squares" size="md" />
 		</div>
 	);
 }
@@ -136,7 +136,7 @@ const loadingIndicatorExtraSmallImportsCode = `import ClayLoadingIndicator from 
 
 const LoadingIndicatorExtraSmallCode = `const Component = () => {
 	return (
-		<ClayLoadingIndicator size="xs" />
+		<ClayLoadingIndicator displayType="secondary" size="xs" />
 	);
 }
 
@@ -160,7 +160,7 @@ const loadingIndicatorSmallImportsCode = `import ClayLoadingIndicator from '@cla
 
 const LoadingIndicatorSmallCode = `const Component = () => {
 	return (
-		<ClayLoadingIndicator size="sm" />
+		<ClayLoadingIndicator displayType="secondary" size="sm" />
 	);
 }
 
@@ -184,7 +184,7 @@ const loadingIndicatorMediumImportsCode = `import ClayLoadingIndicator from '@cl
 
 const LoadingIndicatorMediumCode = `const Component = () => {
 	return (
-		<ClayLoadingIndicator size="md" />
+		<ClayLoadingIndicator displayType="primary" shape="squares" size="md" />
 	);
 }
 
@@ -208,7 +208,7 @@ const loadingIndicatorLargeImportsCode = `import ClayLoadingIndicator from '@cla
 
 const LoadingIndicatorLargeCode = `const Component = () => {
 	return (
-		<ClayLoadingIndicator size="lg" />
+		<ClayLoadingIndicator displayType="primary" shape="squares" size="lg" />
 	);
 }
 

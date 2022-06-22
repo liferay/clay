@@ -39,13 +39,14 @@ mainTabURL: 'docs/components/loading-indicator.html'
 The `loading-animation` indicator is to be used with small components such as badges, buttons, inputs, tables rows, etc. This component takes on the `currentColor` and `font-size`.
 
 <div class="sheet-example">
-	<div class="text-11 text-danger">
-		<span aria-hidden="true" class="loading-animation"></span>
-	</div>
+	<span aria-hidden="true" class="loading-animation loading-animation-secondary loading-animation-sm"></span>
 </div>
 
 ```html
-<span aria-hidden="true" class="loading-animation"></span>
+<span
+	aria-hidden="true"
+	class="loading-animation loading-animation-secondary loading-animation-sm"
+></span>
 ```
 
 ## Loading Animation Squares(#css-loading-animation-squares)
@@ -53,13 +54,14 @@ The `loading-animation` indicator is to be used with small components such as ba
 The `loading-animation-squares` indicator uses 2 square shapes taken from the Liferay logo. It helps us include some details from the brand in our product interfaces. Use this indicator only for bigger components such as cards, modals, sidebars, dashboards, etc. This component takes on the `currentColor` and the current `font-size`.
 
 <div class="sheet-example">
-	<div class="text-11 text-danger">
-		<span aria-hidden="true" class="loading-animation-squares"></span>
-	</div>
+	<span aria-hidden="true" class="loading-animation-squares loading-animation-lg loading-animation-primary"></span>
 </div>
 
 ```html
-<span aria-hidden="true" class="loading-animation-squares"></span>
+<span
+	aria-hidden="true"
+	class="loading-animation-squares loading-animation-lg loading-animation-primary"
+></span>
 ```
 
 ## Sizes(#css-loading-animation-sizes)
@@ -71,21 +73,13 @@ The Loading Animation components ship with four sizes. The Sass map, `$loading-a
 The modifier class `loading-animation-xs` forces the loading animation indicator size to be 10px.
 
 <div class="sheet-example">
-	<div class="row">
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation loading-animation-xs"></span>
-		</div>
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation-squares loading-animation-xs"></span>
-		</div>
-	</div>
+	<span aria-hidden="true" class="loading-animation loading-animation-secondary loading-animation-xs"></span>
 </div>
 
 ```html
-<span aria-hidden="true" class="loading-animation loading-animation-xs"></span>
 <span
 	aria-hidden="true"
-	class="loading-animation-squares loading-animation-xs"
+	class="loading-animation loading-animation-secondary loading-animation-xs"
 ></span>
 ```
 
@@ -94,21 +88,13 @@ The modifier class `loading-animation-xs` forces the loading animation indicator
 The modifier class `loading-animation-sm` forces the Loading Animation indicator size to be 16px.
 
 <div class="sheet-example">
-	<div class="row">
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation loading-animation-sm"></span>
-		</div>
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation-squares loading-animation-sm"></span>
-		</div>
-	</div>
+	<span aria-hidden="true" class="loading-animation loading-animation-secondary loading-animation-sm"></span>
 </div>
 
 ```html
-<span aria-hidden="true" class="loading-animation loading-animation-sm"></span>
 <span
 	aria-hidden="true"
-	class="loading-animation-squares loading-animation-sm"
+	class="loading-animation loading-animation-secondary loading-animation-sm"
 ></span>
 ```
 
@@ -117,21 +103,13 @@ The modifier class `loading-animation-sm` forces the Loading Animation indicator
 The modifier class `loading-animation-md` forces the Loading Animation indicator size to be 32px.
 
 <div class="sheet-example">
-	<div class="row">
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation loading-animation-md"></span>
-		</div>
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation-squares loading-animation-md"></span>
-		</div>
-	</div>
+	<span aria-hidden="true" class="loading-animation-squares loading-animation-primary loading-animation-md"></span>
 </div>
 
 ```html
-<span aria-hidden="true" class="loading-animation loading-animation-md"></span>
 <span
 	aria-hidden="true"
-	class="loading-animation-squares loading-animation-md"
+	class="loading-animation-squares loading-animation-primary loading-animation-md"
 ></span>
 ```
 
@@ -140,21 +118,13 @@ The modifier class `loading-animation-md` forces the Loading Animation indicator
 The modifier class `loading-animation-lg` forces the Loading Animation indicator size to be 64px.
 
 <div class="sheet-example">
-	<div class="row">
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation loading-animation-lg"></span>
-		</div>
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation-squares loading-animation-lg"></span>
-		</div>
-	</div>
+	<span aria-hidden="true" class="loading-animation-squares loading-animation-primary loading-animation-lg"></span>
 </div>
 
 ```html
-<span aria-hidden="true" class="loading-animation loading-animation-lg"></span>
 <span
 	aria-hidden="true"
-	class="loading-animation-squares loading-animation-lg"
+	class="loading-animation-squares loading-animation-primary loading-animation-lg"
 ></span>
 ```
 
@@ -167,21 +137,10 @@ The Loading Animation component has three variants, primary, secondary, and ligh
 The modifier class `loading-animation-primary` forces the Loading Animation indicator color to be `$primary`.
 
 <div class="sheet-example">
-	<div class="row">
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation loading-animation-md loading-animation-primary"></span>
-		</div>
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation-squares loading-animation-md loading-animation-primary"></span>
-		</div>
-	</div>
+	<span aria-hidden="true" class="loading-animation-squares loading-animation-md loading-animation-primary"></span>
 </div>
 
 ```html
-<span
-	aria-hidden="true"
-	class="loading-animation loading-animation-md loading-animation-primary"
-></span>
 <span
 	aria-hidden="true"
 	class="loading-animation-squares loading-animation-md loading-animation-primary"
@@ -193,24 +152,13 @@ The modifier class `loading-animation-primary` forces the Loading Animation indi
 The modifier class `loading-animation-secondary` forces the Loading Animation indicator color to be `$secondary`.
 
 <div class="sheet-example">
-	<div class="row">
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation loading-animation-md loading-animation-secondary"></span>
-		</div>
-		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation-squares loading-animation-md loading-animation-secondary"></span>
-		</div>
-	</div>
+	<span aria-hidden="true" class="loading-animation loading-animation-sm loading-animation-secondary"></span>
 </div>
 
 ```html
 <span
 	aria-hidden="true"
-	class="loading-animation loading-animation-md loading-animation-secondary"
-></span>
-<span
-	aria-hidden="true"
-	class="loading-animation-squares loading-animation-md loading-animation-secondary"
+	class="loading-animation loading-animation-sm loading-animation-secondary"
 ></span>
 ```
 
@@ -221,7 +169,7 @@ The modifier class `loading-animation-light` forces the Loading Animation indica
 <div class="sheet-example">
 	<div class="row bg-dark py-3">
 		<div class="col-md-3">
-			<span aria-hidden="true" class="loading-animation loading-animation-md loading-animation-light"></span>
+			<span aria-hidden="true" class="loading-animation loading-animation-sm loading-animation-light"></span>
 		</div>
 		<div class="col-md-3">
 			<span aria-hidden="true" class="loading-animation-squares loading-animation-md loading-animation-light"></span>
@@ -232,7 +180,7 @@ The modifier class `loading-animation-light` forces the Loading Animation indica
 ```html
 <span
 	aria-hidden="true"
-	class="loading-animation loading-animation-md loading-animation-light"
+	class="loading-animation loading-animation-sm loading-animation-light"
 ></span>
 <span
 	aria-hidden="true"
@@ -354,27 +302,27 @@ Copy and paste the code below into your `_clay_variables.scss` file.
 
 ```scss{expanded}
 $btn-primary: (
-	loading-animation: 'loading-animation.loading-animation-light',
+	loading-animation: 'loading-animation-light',
 ) !default;
 
 $btn-success: (
-	loading-animation: 'loading-animation.loading-animation-light',
+	loading-animation: 'loading-animation-light',
 ) !default;
 
 $btn-info: (
-	loading-animation: 'loading-animation.loading-animation-light',
+	loading-animation: 'loading-animation-light',
 ) !default;
 
 $btn-warning: (
-	loading-animation: 'loading-animation.loading-animation-light',
+	loading-animation: 'loading-animation-light',
 ) !default;
 
 $btn-danger: (
-	loading-animation: 'loading-animation.loading-animation-light',
+	loading-animation: 'loading-animation-light',
 ) !default;
 
 $btn-dark: (
-	loading-animation: 'loading-animation.loading-animation-light',
+	loading-animation: 'loading-animation-light',
 ) !default;
 
 $loading-icon-font-size: 2.5rem !default;
@@ -430,6 +378,19 @@ $loading-animation-sizes: (
 $loading-animation-palette: () !default;
 $loading-animation-palette: map-deep-merge(
 	(
+		'%loading-animation-light': (
+			mixin-name: 'clay-loading-animation-variant',
+			ball-0-color: rgba(#fff, 1),
+			ball-1-color: rgba(#fff, 0.8),
+			ball-2-color: rgba(#fff, 0.6),
+			ball-3-color: rgba(#fff, 0.4),
+			ball-4-color: rgba(#fff, 0.2),
+			ball-5-color: rgba(#fff, 0.1),
+			after: (
+				animation-name: loading-animation-light,
+				color: #fff,
+			),
+		),
 		'.loading-animation.loading-animation-light': (
 			mixin-name: 'clay-loading-animation-variant',
 			ball-0-color: rgba(#fff, 1),

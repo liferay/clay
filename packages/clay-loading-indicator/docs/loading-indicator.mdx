@@ -44,11 +44,23 @@ The loading indicator takes on the `currentColor` and `font-size` by default.
 
 The circle indicator is the default shape of the loading indicator. It should be used with small components such as badges, buttons, inputs, tables rows, etc.
 
+<div class="clay-site-alert alert alert-info">
+	It should be used with <code>size</code> <code>xs</code> and <code>sm</code>
+	. The <code>displayType</code> should be <code>secondary</code> or{' '}
+	<code>light</code>.
+</div>
+
 <LoadingIndicator />
 
 ### Squares
 
 The squares indicator uses 2 square shapes taken from the Liferay logo. It helps us include some details from the brand in our product interfaces. It should be used only for bigger components such as cards, modals, sidebars, dashboards, etc. Enable the squares indicator by setting the property [shape](#api-shape) to `squares`.
+
+<div class="clay-site-alert alert alert-info">
+	It should be used with <code>size</code> <code>md</code> and <code>lg</code>
+	. The <code>displayType</code> should be <code>primary</code> or{' '}
+	<code>light</code>.
+</div>
 
 <LoadingIndicatorSquares />
 
@@ -58,19 +70,19 @@ The loading indicator uses the `currentColor` by default. You can force the stat
 
 ### Primary
 
-Fix the color of the loading indicator to be blue by setting the [displayType](#api-displayType) to `primary`.
+Fix the color of the loading indicator to be the primary color by setting the [displayType](#api-displayType) to `primary`.
 
 <LoadingIndicatorPrimary />
 
 ### Secondary
 
-Fix the color of the loading indicator to be gray by setting the [displayType](#api-displayType) to `secondary`.
+Fix the color of the loading indicator to be the secondary color by setting the [displayType](#api-displayType) to `secondary`.
 
 <LoadingIndicatorSecondary />
 
 ### Light
 
-Fix the color of the loading indicator to be white by setting the [displayType](#api-displayType) to `light`. It allows the indicator to be more accessible in some cases.
+Fix the color of the loading indicator to be the light color by setting the [displayType](#api-displayType) to `light`. It allows the indicator to be more accessible in some cases.
 
 <LoadingIndicatorLight />
 
