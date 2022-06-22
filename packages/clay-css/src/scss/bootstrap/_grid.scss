@@ -16,6 +16,7 @@
 
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
+    $index-breakpoint: index($container-max-widths, $breakpoint $container-max-width);
     .container-#{$breakpoint} {
       @extend .container-fluid;
     }
@@ -26,7 +27,8 @@
       }
 
       @each $name, $width in $grid-breakpoints {
-        @if ($container-max-width > $width or $breakpoint == $name) {
+        $index-name: index($grid-breakpoints, $name $width);
+        @if ($index-name <= $index-breakpoint and ($breakpoint == $name or not comparable($container-max-width, $width) or $container-max-width > $width)) {
           .container#{breakpoint-infix($name, $grid-breakpoints)} {
             @extend %responsive-container-#{$breakpoint};
           }
