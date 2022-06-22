@@ -80,7 +80,9 @@
 
 @each $selector, $value in $loading-animation-sizes {
 	$_selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);
@@ -93,23 +95,15 @@
 // Loading Animation Variants
 
 @each $selector, $value in $loading-animation-palette {
-	$placeholder: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
-		'%#{str-slice($selector, 2)}',
-		'%#{$selector}'
-	);
-
 	$_selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);
 
-	#{$placeholder} {
-		@include clay-spinner-variant($value);
-	}
-
 	#{$_selector} {
-		@extend #{$placeholder} !optional;
+		@include clay-spinner-variant($value);
 	}
 }
