@@ -349,6 +349,30 @@ $cadmin-grid-row-columns: 6 !default;
 
 // Containers
 
+$cadmin-clay-container: () !default;
+$cadmin-clay-container: map-merge(
+	(
+		margin-left: auto,
+		margin-right: auto,
+		padding-left: $cadmin-grid-gutter-width * 0.5,
+		padding-right: $cadmin-grid-gutter-width * 0.5,
+		width: 100%,
+	),
+	$cadmin-clay-container
+);
+
+$cadmin-clay-container-fluid: () !default;
+$cadmin-clay-container-fluid: map-merge(
+	(
+		margin-left: auto,
+		margin-right: auto,
+		padding-left: $cadmin-grid-gutter-width * 0.5,
+		padding-right: $cadmin-grid-gutter-width * 0.5,
+		width: 100%,
+	),
+	$cadmin-clay-container-fluid
+);
+
 $cadmin-container-max-widths: (
 	sm: 540px,
 	md: 720px,

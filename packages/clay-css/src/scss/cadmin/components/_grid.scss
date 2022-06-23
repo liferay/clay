@@ -2,11 +2,7 @@
 	// Single container class with breakpoint max-widths
 
 	.container {
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: $cadmin-grid-gutter-width * 0.5;
-		padding-right: $cadmin-grid-gutter-width * 0.5;
-		width: 100%;
+		@include clay-css($cadmin-clay-container);
 
 		@each $cadmin-breakpoint,
 			$cadmin-container-max-width in $cadmin-container-max-widths
@@ -23,11 +19,7 @@
 	// 100% wide container at all breakpoints
 
 	%container-fluid {
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: $cadmin-grid-gutter-width * 0.5;
-		padding-right: $cadmin-grid-gutter-width * 0.5;
-		width: 100%;
+		@include clay-css($cadmin-clay-container-fluid);
 	}
 
 	.container-fluid {
@@ -52,12 +44,17 @@
 			}
 
 			@each $cadmin-name, $cadmin-width in $cadmin-grid-breakpoints {
-				@if (
-					$cadmin-container-max-width >
-						$cadmin-width or
-						$cadmin-breakpoint ==
-						$cadmin-name
-				) {
+				$container-max-width-pos: index(
+					$cadmin-grid-breakpoints,
+					$cadmin-breakpoint
+						map-get($cadmin-grid-breakpoints, $cadmin-breakpoint)
+				);
+				$grid-breakpoint-pos: index(
+					$cadmin-grid-breakpoints,
+					$cadmin-name $cadmin-width
+				);
+
+				@if ($container-max-width-pos >= $grid-breakpoint-pos) {
 					.container#{breakpoint-infix($cadmin-name, $cadmin-grid-breakpoints)} {
 						@extend %responsive-container-#{$cadmin-breakpoint}
 								!optional;
