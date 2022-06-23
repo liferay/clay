@@ -206,110 +206,22 @@ exports[`Interactions color editor interactions ability to change color of click
               />
             </div>
           </div>
+        </div>
+        <div
+          class="clay-color-map-group"
+        >
           <div
-            class="clay-color-map-group"
-          >
-            <div
-              class="clay-color-map clay-color-map-hsb"
-              style="background-color: rgb(255, 0, 0);"
-            >
-              <button
-                class="clay-color-map-pointer clay-color-pointer"
-                style="background: rgb(255, 255, 255); left: -7px; top: -7px;"
-                type="button"
-              />
-            </div>
-            <div
-              class="clay-color-map-values"
-            >
-              <div
-                class="form-group"
-              >
-                <div
-                  class="input-group"
-                >
-                  <div
-                    class="input-group-item"
-                  >
-                    <input
-                      class="form-control input-group-inset input-group-inset-before"
-                      data-testid="rInput"
-                      max="255"
-                      min="0"
-                      type="number"
-                      value="255"
-                    />
-                    <label
-                      class="input-group-inset-item input-group-inset-item-before"
-                    >
-                      R
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="form-group"
-              >
-                <div
-                  class="input-group"
-                >
-                  <div
-                    class="input-group-item"
-                  >
-                    <input
-                      class="form-control input-group-inset input-group-inset-before"
-                      data-testid="gInput"
-                      max="255"
-                      min="0"
-                      type="number"
-                      value="255"
-                    />
-                    <label
-                      class="input-group-inset-item input-group-inset-item-before"
-                    >
-                      G
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="form-group"
-              >
-                <div
-                  class="input-group"
-                >
-                  <div
-                    class="input-group-item"
-                  >
-                    <input
-                      class="form-control input-group-inset input-group-inset-before"
-                      data-testid="bInput"
-                      max="255"
-                      min="0"
-                      type="number"
-                      value="255"
-                    />
-                    <label
-                      class="input-group-inset-item input-group-inset-item-before"
-                    >
-                      B
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="clay-color-range clay-color-range-hue"
+            class="clay-color-map clay-color-map-hsb"
+            style="background-color: rgb(255, 0, 0);"
           >
             <button
-              class="clay-color-pointer clay-color-range-pointer"
-              style="background: rgb(255, 0, 0); left: -7px;"
+              class="clay-color-map-pointer clay-color-pointer"
+              style="background: rgb(255, 255, 255); left: -7px; top: -7px;"
               type="button"
             />
           </div>
           <div
-            class="clay-color-footer"
+            class="clay-color-map-values"
           >
             <div
               class="form-group"
@@ -322,16 +234,104 @@ exports[`Interactions color editor interactions ability to change color of click
                 >
                   <input
                     class="form-control input-group-inset input-group-inset-before"
-                    data-testid="customHexInput"
-                    type="text"
-                    value="DDDDDD"
+                    data-testid="rInput"
+                    max="255"
+                    min="0"
+                    type="number"
+                    value="255"
                   />
                   <label
                     class="input-group-inset-item input-group-inset-item-before"
                   >
-                    #
+                    R
                   </label>
                 </div>
+              </div>
+            </div>
+            <div
+              class="form-group"
+            >
+              <div
+                class="input-group"
+              >
+                <div
+                  class="input-group-item"
+                >
+                  <input
+                    class="form-control input-group-inset input-group-inset-before"
+                    data-testid="gInput"
+                    max="255"
+                    min="0"
+                    type="number"
+                    value="255"
+                  />
+                  <label
+                    class="input-group-inset-item input-group-inset-item-before"
+                  >
+                    G
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="form-group"
+            >
+              <div
+                class="input-group"
+              >
+                <div
+                  class="input-group-item"
+                >
+                  <input
+                    class="form-control input-group-inset input-group-inset-before"
+                    data-testid="bInput"
+                    max="255"
+                    min="0"
+                    type="number"
+                    value="255"
+                  />
+                  <label
+                    class="input-group-inset-item input-group-inset-item-before"
+                  >
+                    B
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="clay-color-range clay-color-range-hue"
+        >
+          <button
+            class="clay-color-pointer clay-color-range-pointer"
+            style="background: rgb(255, 0, 0); left: -7px;"
+            type="button"
+          />
+        </div>
+        <div
+          class="clay-color-footer"
+        >
+          <div
+            class="form-group"
+          >
+            <div
+              class="input-group"
+            >
+              <div
+                class="input-group-item"
+              >
+                <input
+                  class="form-control input-group-inset input-group-inset-before"
+                  data-testid="customHexInput"
+                  type="text"
+                  value="DDDDDD"
+                />
+                <label
+                  class="input-group-inset-item input-group-inset-item-before"
+                >
+                  #
+                </label>
               </div>
             </div>
           </div>
