@@ -290,6 +290,30 @@ $grid-row-columns: 6 !default;
 
 // Containers
 
+$clay-container: () !default;
+$clay-container: map-merge(
+	(
+		margin-left: auto,
+		margin-right: auto,
+		padding-left: calc(#{$grid-gutter-width} * 0.5),
+		padding-right: calc(#{$grid-gutter-width} * 0.5),
+		width: 100%,
+	),
+	$clay-container
+);
+
+$clay-container-fluid: () !default;
+$clay-container-fluid: map-merge(
+	(
+		margin-left: auto,
+		margin-right: auto,
+		padding-left: calc(#{$grid-gutter-width} * 0.5),
+		padding-right: calc(#{$grid-gutter-width} * 0.5),
+		width: 100%,
+	),
+	$clay-container-fluid
+);
+
 $container-max-widths: (
 	sm: 540px,
 	md: 720px,
