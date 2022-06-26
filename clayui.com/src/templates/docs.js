@@ -416,6 +416,7 @@ export const pageQuery = graphql`
 				disableTOC
 				lexiconDefinition
 				packageNpm
+				storybookPath
 				title
 			}
 			fields {
