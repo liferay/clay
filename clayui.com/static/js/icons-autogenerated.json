@@ -916,8 +916,12 @@
         "aliases": ["social"]
     },
     {
+        "name": "no-bot",
+        "aliases": ["captcha", "robot", "test"]
+    },
+    {
         "name": "nodes",
-        "aliases": ["channel", "commerce" ,"marketing", "sales", "user"]
+        "aliases": ["channel", "commerce", "marketing", "sales", "user"]
     },
     {
         "name": "number",
