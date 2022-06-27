@@ -18,10 +18,18 @@ import {useItem} from './useItem';
 export interface ITreeViewItemProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
 	/**
+	 * Flag to set the node to the active state.
+	 */
+	active?: boolean;
+
+	/**
 	 * Property for rendering actions on a Node.
 	 */
 	actions?: React.ReactElement;
 
+	/**
+	 * Item content.
+	 */
 	children: React.ReactNode;
 
 	/**
@@ -30,17 +38,17 @@ export interface ITreeViewItemProps
 	disabled?: boolean;
 
 	/**
-	 * Internal property.
+	 * @ignore
 	 */
 	isDragging?: boolean;
 
 	/**
-	 * Internal property.
+	 * @ignore
 	 */
 	overPosition?: string;
 
 	/**
-	 * Internal property.
+	 * @ignore
 	 */
 	overTarget?: boolean;
 }
@@ -52,6 +60,7 @@ export const TreeViewItem = React.forwardRef<
 	ITreeViewItemProps
 >(function TreeViewItemInner(
 	{
+		active,
 		actions,
 		children,
 		isDragging,
@@ -152,8 +161,9 @@ export const TreeViewItem = React.forwardRef<
 						nodeProps.className,
 						{
 							active:
-								selectionMode === 'single' &&
-								selection.selectedKeys.has(item.key),
+								(selectionMode === 'single' &&
+									selection.selectedKeys.has(item.key)) ||
+								active,
 							collapsed: group && expandedKeys.has(item.key),
 							disabled:
 								itemStackProps.disabled || nodeProps.disabled,
