@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.63.0](https://github.com/liferay/clay/compare/v3.62.0...v3.63.0) (2022-06-27)
+
+### Bug Fixes
+
+-   **@clayui/css:** fix syntax error in conditional declaration ([3d19936](https://github.com/liferay/clay/commit/3d199365de3eed8decf2b48301abbde89dc308a9))
+-   **@clayui/css:** Grid compare the breakpoint positions instead of the `$cadmin-container-max-widths` values ([1e0782c](https://github.com/liferay/clay/commit/1e0782c475aea4b837d1dea952fcb1026889934b))
+-   **@clayui/css:** Grid compare the breakpoint positions instead of the `$container-max-widths` values ([89aaeee](https://github.com/liferay/clay/commit/89aaeee54c42b2a4a4236cafa3fa83e47941b164))
+-   **@clayui/css:** Loaders and Cadmin Loaders don't generate placeholders for `$loading-animation-palette` ([d762f00](https://github.com/liferay/clay/commit/d762f0064fb46b7b43b0adc308b92002ddf470f4))
+
+### Features
+
+-   **@clayui/css:** SVG Icons adds no-bot.svg ([94b69f0](https://github.com/liferay/clay/commit/94b69f0d46c330a2a078bdb17e04020fcab3d737))
+
 # [3.62.0](https://github.com/liferay/clay/compare/v3.61.0...v3.62.0) (2022-06-20)
 
 ### Bug Fixes
