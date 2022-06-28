@@ -9,10 +9,10 @@ import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {Key, useCallback, useContext, useState} from 'react';
+import React, {useContext, useState} from 'react';
 
 import {removeItemInternalProps} from './Collection';
-import {Icons, useTreeViewContext} from './context';
+import {Icons, useAPI, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
 export interface ITreeViewItemProps
@@ -60,8 +60,8 @@ export const TreeViewItem = React.forwardRef<
 	ITreeViewItemProps
 >(function TreeViewItemInner(
 	{
-		active,
 		actions,
+		active,
 		children,
 		isDragging,
 		overPosition,
@@ -96,25 +96,17 @@ export const TreeViewItem = React.forwardRef<
 
 	const [loading, setLoading] = useState(false);
 
+	const api = useAPI();
+
 	const [left, right] = React.Children.toArray(children);
 
 	const group =
 		// @ts-ignore
 		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
-	const hasKey = useCallback(
-		(key: Key) => {
-			return selection.selectedKeys.has(key);
-		},
-		[selection.selectedKeys]
-	);
-
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
-			childrenRoot.current(removeItemInternalProps(item), {
-				has: hasKey,
-				toggle: selection.toggleSelection,
-			}),
+			childrenRoot.current(removeItemInternalProps(item), ...api),
 			{
 				actions,
 				isDragging,
