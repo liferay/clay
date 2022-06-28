@@ -360,8 +360,9 @@ const RadioGroup: React.FunctionComponent<IItem & IInternalItem> = ({
 	name,
 	onChange = () => {},
 	spritemap,
+	value: defaultValue = '',
 }) => {
-	const [value, setValue] = useState('');
+	const [value, setValue] = useState(defaultValue);
 
 	const params = {
 		checked: value,
