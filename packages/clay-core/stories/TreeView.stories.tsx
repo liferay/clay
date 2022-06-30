@@ -10,7 +10,7 @@ import {ClayDropDownWithItems as DropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox as Checkbox, ClayInput as Input} from '@clayui/form';
 import Icon from '@clayui/icon';
 import Sticker from '@clayui/sticker';
-import React, {useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import {TreeView} from '../src/tree-view';
 import largeData from './tree-data.mock.json';
@@ -1200,16 +1200,50 @@ export const PerformanceTest = () => {
 };
 
 export const DemoCategoriesSingle = () => {
+	const clickTimerRef = useRef<any>();
+
+	const onCategoryClick = useCallback(
+		(
+			detail: number,
+			item: any,
+			leaf: boolean,
+			selection: any,
+			expand: any
+		) => {
+			switch (detail) {
+				case 1:
+					clickTimerRef.current = setTimeout(() => {
+						if (!selection.has(item.id)) {
+							selection.toggle(item.id);
+						}
+					}, 200);
+					break;
+				case 2:
+					if (!selection.has(item.id)) {
+						selection.toggle(item.id);
+					}
+					if (!leaf) {
+						expand.toggle(item.id);
+					}
+				default:
+					break;
+			}
+		},
+		[]
+	);
+
 	return (
 		<TreeView
 			defaultItems={[
 				{
 					name: 'Animals',
 					vocabulary: true,
+					id: 0,
 				},
 				{
 					name: 'Vegetables',
 					vocabulary: true,
+					id: 1,
 				},
 				{
 					children: [
@@ -1217,36 +1251,77 @@ export const DemoCategoriesSingle = () => {
 							children: [
 								{
 									name: 'Metals',
+									id: 7,
 								},
 								{
 									name: 'Semimetals',
+									id: 8,
 								},
 								{
 									name: 'Nonmetals',
+									id: 9,
 								},
 							],
 							name: 'Native Elements',
+							id: 4,
 						},
 						{
 							name: 'Sulfides',
+							id: 5,
 						},
 						{
 							name: 'Silicates',
+							id: 6,
 						},
 					],
 					name: 'Minerals',
 					vocabulary: true,
+					id: 2,
 				},
 				{
 					name: 'Plants',
 					vocabulary: true,
+					id: 3,
 				},
 			]}
 			showExpanderOnHover={false}
 		>
-			{(item) => (
+			{(item, selection, expand) => (
 				<TreeView.Item>
-					<TreeView.ItemStack>
+					<TreeView.ItemStack
+						onClick={(event) => {
+							clearTimeout(clickTimerRef.current);
+
+							event.preventDefault();
+
+							if (item.vocabulary) {
+								// @ts-ignore
+								switch (event.detail) {
+									case 1:
+										clickTimerRef.current = setTimeout(
+											() => {
+												expand.toggle(item.id);
+											},
+											200
+										);
+										break;
+									case 2:
+										expand.toggle(item.id);
+									default:
+										break;
+								}
+							} else {
+								onCategoryClick(
+									// @ts-ignore
+									event.detail,
+									item,
+									false,
+									selection,
+									expand
+								);
+							}
+						}}
+					>
 						<Icon
 							symbol={
 								item.vocabulary ? 'vocabulary' : 'categories'
@@ -1256,7 +1331,20 @@ export const DemoCategoriesSingle = () => {
 					</TreeView.ItemStack>
 					<TreeView.Group items={item.children}>
 						{(item) => (
-							<TreeView.Item>
+							<TreeView.Item
+								onClick={(event) => {
+									clearTimeout(clickTimerRef.current);
+									event.preventDefault();
+									onCategoryClick(
+										// @ts-ignore
+										event.detail,
+										item,
+										false,
+										selection,
+										expand
+									);
+								}}
+							>
 								<Icon symbol="categories" />
 								{item.name}
 							</TreeView.Item>
@@ -1360,13 +1448,22 @@ export const DemoCategoriesMultiple = () => {
 					vocabulary: true,
 				},
 			]}
-			expandDoubleClick
 			selectionMode="multiple-recursive"
 			showExpanderOnHover={false}
 		>
-			{(item, selection) => (
+			{(item, selection, expand) => (
 				<TreeView.Item>
-					<TreeView.ItemStack>
+					<TreeView.ItemStack
+						onClick={(event) => {
+							event.preventDefault();
+
+							if (item.vocabulary) {
+								expand.toggle(item.id);
+							} else {
+								selection.toggle(item.id);
+							}
+						}}
+					>
 						{!item.vocabulary && <OptionalCheckbox />}
 						<Icon
 							symbol={
@@ -1395,7 +1492,9 @@ export const DemoCategoriesMultiple = () => {
 					</TreeView.ItemStack>
 					<TreeView.Group items={item.children}>
 						{(item) => (
-							<TreeView.Item>
+							<TreeView.Item
+								onClick={() => selection.toggle(item.id)}
+							>
 								<OptionalCheckbox />
 								<Icon symbol="categories" />
 								{item.name}
