@@ -385,4 +385,27 @@ describe('TreeView basic rendering', () => {
 		).toBeTruthy();
 		expect(container.querySelector('.collapse.show')).toBeTruthy();
 	});
+
+	it('render with item active', () => {
+		const {container} = render(
+			<Provider spritemap={spritemap}>
+				<TreeView>
+					<TreeView.Item>
+						<TreeView.ItemStack active>
+							<OptionalCheckbox />
+							Root
+						</TreeView.ItemStack>
+						<TreeView.Group>
+							<TreeView.Item active>
+								<OptionalCheckbox />
+								Text
+							</TreeView.Item>
+						</TreeView.Group>
+					</TreeView.Item>
+				</TreeView>
+			</Provider>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
 });

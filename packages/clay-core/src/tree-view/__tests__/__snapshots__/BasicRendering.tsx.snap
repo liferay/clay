@@ -409,6 +409,98 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
 </div>
 `;
 
+exports[`TreeView basic rendering render with item active 1`] = `
+<div>
+  <ul
+    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+    role="tree"
+  >
+    <li
+      class="treeview-item"
+      role="none"
+    >
+      <div
+        aria-expanded="false"
+        class="treeview-link active"
+        role="treeitem"
+        style="padding-left: 0px;"
+        tabindex="0"
+      >
+        <span
+          class="c-inner"
+          style="margin-left: -0px;"
+          tabindex="-2"
+        >
+          <div
+            class="autofit-row"
+          >
+            <div
+              class="autofit-col"
+            >
+              <button
+                aria-controls="$.0"
+                aria-expanded="false"
+                class="component-expander btn btn-monospaced"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="c-inner"
+                  tabindex="-2"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-down"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-down"
+                    />
+                  </svg>
+                  <svg
+                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="icons.svg#angle-right"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div
+              class="autofit-col"
+            >
+              <div
+                class="custom-control custom-checkbox"
+              >
+                <label>
+                  <input
+                    class="custom-control-input"
+                    type="checkbox"
+                  />
+                  <span
+                    class="custom-control-label"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="autofit-col autofit-col-expand"
+            >
+              <div
+                class="component-text"
+              >
+                Root
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`TreeView basic rendering render with text 1`] = `
 <div>
   <ul

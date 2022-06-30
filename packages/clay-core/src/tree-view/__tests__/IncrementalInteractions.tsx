@@ -85,6 +85,64 @@ describe('TreeView incremental interactions', () => {
 		expect(container.querySelector('.collapse')).toBeFalsy();
 	});
 
+	it('expand the item using the api', () => {
+		const {container, debug} = render(
+			<Provider spritemap={spritemap}>
+				<TreeView
+					defaultItems={[
+						{
+							children: [
+								{id: 2, name: 'Item 0'},
+								{
+									children: [
+										{id: 4, name: 'Item 2'},
+										{id: 5, name: 'Item 3'},
+									],
+									id: 3,
+									name: 'Item 1',
+								},
+							],
+							id: 1,
+							name: 'Root',
+						},
+					]}
+				>
+					{(item, selection, expand) => (
+						<TreeView.Item>
+							<TreeView.ItemStack
+								onClick={(event) => {
+									event.preventDefault();
+
+									// @ts-ignore
+									if (event.detail === 2) {
+										expand.toggle(item.id);
+									}
+								}}
+							>
+								{item.name}
+							</TreeView.ItemStack>
+							<TreeView.Group items={item.children}>
+								\
+								{(item) => (
+									<TreeView.Item>{item.name}</TreeView.Item>
+								)}
+							</TreeView.Group>
+						</TreeView.Item>
+					)}
+				</TreeView>
+			</Provider>
+		);
+
+		const linkItem = container.querySelector(
+			'.treeview-link'
+		) as HTMLDivElement;
+
+		fireEvent.click(linkItem, {detail: 2});
+
+		expect(linkItem.getAttribute('aria-expanded')).toBe('true');
+		expect(container.querySelector('.collapse.show')).toBeTruthy();
+	});
+
 	describe('selection', () => {
 		describe('checkbox', () => {
 			it("uncheck the checkbox when a sibling item is indeterminate preserve the parent's indeterminate state", () => {
