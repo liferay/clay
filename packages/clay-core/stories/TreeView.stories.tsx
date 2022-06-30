@@ -1225,6 +1225,7 @@ export const DemoCategoriesSingle = () => {
 					if (!leaf) {
 						expand.toggle(item.id);
 					}
+					break;
 				default:
 					break;
 			}
@@ -1236,52 +1237,52 @@ export const DemoCategoriesSingle = () => {
 		<TreeView
 			defaultItems={[
 				{
+					id: 0,
 					name: 'Animals',
 					vocabulary: true,
-					id: 0,
 				},
 				{
+					id: 1,
 					name: 'Vegetables',
 					vocabulary: true,
-					id: 1,
 				},
 				{
 					children: [
 						{
 							children: [
 								{
-									name: 'Metals',
 									id: 7,
+									name: 'Metals',
 								},
 								{
-									name: 'Semimetals',
 									id: 8,
+									name: 'Semimetals',
 								},
 								{
-									name: 'Nonmetals',
 									id: 9,
+									name: 'Nonmetals',
 								},
 							],
-							name: 'Native Elements',
 							id: 4,
+							name: 'Native Elements',
 						},
 						{
-							name: 'Sulfides',
 							id: 5,
+							name: 'Sulfides',
 						},
 						{
-							name: 'Silicates',
 							id: 6,
+							name: 'Silicates',
 						},
 					],
+					id: 2,
 					name: 'Minerals',
 					vocabulary: true,
-					id: 2,
 				},
 				{
+					id: 3,
 					name: 'Plants',
 					vocabulary: true,
-					id: 3,
 				},
 			]}
 			showExpanderOnHover={false}
@@ -1307,6 +1308,7 @@ export const DemoCategoriesSingle = () => {
 										break;
 									case 2:
 										expand.toggle(item.id);
+										break;
 									default:
 										break;
 								}

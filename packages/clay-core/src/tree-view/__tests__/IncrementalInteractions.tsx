@@ -86,7 +86,7 @@ describe('TreeView incremental interactions', () => {
 	});
 
 	it('expand the item using the api', () => {
-		const {container, debug} = render(
+		const {container} = render(
 			<Provider spritemap={spritemap}>
 				<TreeView
 					defaultItems={[
