@@ -61,7 +61,6 @@ export const TreeViewItem = React.forwardRef<
 >(function TreeViewItemInner(
 	{
 		actions,
-		active,
 		children,
 		isDragging,
 		overPosition,
@@ -155,7 +154,8 @@ export const TreeViewItem = React.forwardRef<
 							active:
 								(selectionMode === 'single' &&
 									selection.selectedKeys.has(item.key)) ||
-								active,
+								itemStackProps.active ||
+								nodeProps.active,
 							collapsed: group && expandedKeys.has(item.key),
 							disabled:
 								itemStackProps.disabled || nodeProps.disabled,
@@ -422,6 +422,11 @@ export const TreeViewItem = React.forwardRef<
 TreeViewItem.displayName = 'ClayTreeViewItem';
 
 interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to set the node to the active state.
+	 */
+	active?: boolean;
+
 	actions?: React.ReactElement;
 	children: React.ReactNode;
 
