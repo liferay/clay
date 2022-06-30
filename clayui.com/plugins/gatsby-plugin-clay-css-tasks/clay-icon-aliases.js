@@ -633,6 +633,7 @@ const iconsData = {
 	"heading":                  '"h", "title", "text", "editor"',
 	"heart":                    '"emotion", "like", "love"',
 	"hidden":                   '"eye", "hide", "see", "show", "view"',
+	"hierarchy":                '"browse", "layers", "elements", "rectangles", "list", "order", "sequence"',
 	"home":                     '"house"',
 	"horizontal-scroll":        '"arrows", "expand"',
 	"hr":                       '"line", "minus", "rectangle"',
