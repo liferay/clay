@@ -427,7 +427,14 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	active?: boolean;
 
+	/**
+	 * @ignore
+	 */
 	actions?: React.ReactElement;
+
+	/**
+	 * Item content.
+	 */
 	children: React.ReactNode;
 
 	/**
@@ -441,7 +448,14 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	expanderDisabled?: boolean;
 
+	/**
+	 * @ignore
+	 */
 	expandable?: boolean;
+
+	/**
+	 * @ignore
+	 */
 	loading?: boolean;
 }
 
