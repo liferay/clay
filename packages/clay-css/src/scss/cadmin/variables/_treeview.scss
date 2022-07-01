@@ -197,6 +197,12 @@ $cadmin-treeview-light: map-deep-merge(
 		),
 		treeview-link: (
 			color: $cadmin-gray-600,
+			treeview-no-hover: (
+				hover: (
+					background-color: transparent,
+					color: $cadmin-gray-600,
+				),
+			),
 			hover: (
 				background-color: $cadmin-gray-100,
 				color: $cadmin-gray-900,
@@ -233,6 +239,12 @@ $cadmin-treeview-dark: map-deep-merge(
 		),
 		treeview-link: (
 			color: $cadmin-secondary-l1,
+			treeview-no-hover: (
+				hover: (
+					background-color: transparent,
+					color: $cadmin-secondary-l1,
+				),
+			),
 			hover: (
 				background-color: rgba($cadmin-white, 0.04),
 			),
