@@ -310,6 +310,12 @@
 				);
 			}
 		}
+
+		&.treeview-no-hover {
+			@include clay-link(
+				map-deep-get($treeview-light, treeview-link, treeview-no-hover)
+			);
+		}
 	}
 
 	.component-action {
@@ -394,6 +400,12 @@
 					)
 				);
 			}
+		}
+
+		&.treeview-no-hover {
+			@include clay-link(
+				map-deep-get($treeview-dark, treeview-link, treeview-no-hover)
+			);
 		}
 	}
 
