@@ -413,6 +413,7 @@ $form-control-inset: map-deep-merge(
 		color: $input-color,
 		flex-grow: 1,
 		margin-bottom: $form-control-inset-margin-y,
+		margin-left: 0.25rem,
 		margin-top: $form-control-inset-margin-y,
 		min-height: $form-control-inset-min-height,
 		padding: 0,
@@ -440,6 +441,7 @@ $form-control-tag-group: map-deep-merge(
 		flex-wrap: wrap,
 		height: auto,
 		padding-bottom: $form-control-tag-group-padding-y,
+		padding-left: 0.5rem,
 		padding-right: 0.5rem,
 		padding-top: $form-control-tag-group-padding-y,
 	),
@@ -550,6 +552,7 @@ $form-control-tag-group-sm: map-deep-merge(
 		),
 		form-control-inset: (
 			margin-bottom: 0.125rem,
+			margin-left: 0.25rem,
 			margin-top: 0.1875rem,
 		),
 	),

@@ -157,6 +157,28 @@ $input-plaintext-readonly: map-deep-merge(
 	$input-plaintext-readonly
 );
 
+// Form Control Tag Group
+
+$form-control-inset: () !default;
+$form-control-inset: map-deep-merge(
+	(
+		margin-left: 0.5rem,
+	),
+	$form-control-inset
+);
+
+// .form-control-tag-group-sm.form-control
+
+$form-control-tag-group-sm: () !default;
+$form-control-tag-group-sm: map-deep-merge(
+	(
+		form-control-inset: (
+			margin-left: 0.5rem,
+		),
+	),
+	$form-control-tag-group-sm
+);
+
 // Form Feedback
 
 $form-text-color: $gray-600 !default;
