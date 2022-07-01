@@ -364,6 +364,7 @@ $cadmin-form-control-inset: map-deep-merge(
 		color: $cadmin-input-color,
 		flex-grow: 1,
 		margin-bottom: $cadmin-form-control-inset-margin-y,
+		margin-left: 8px,
 		margin-top: $cadmin-form-control-inset-margin-y,
 		min-height: $cadmin-form-control-inset-min-height,
 		padding: 0,
@@ -391,6 +392,7 @@ $cadmin-form-control-tag-group: map-deep-merge(
 		flex-wrap: wrap,
 		height: auto,
 		padding-bottom: $cadmin-form-control-tag-group-padding-y,
+		padding-left: 8px,
 		padding-right: 8px,
 		padding-top: $cadmin-form-control-tag-group-padding-y,
 	),
@@ -487,21 +489,22 @@ $cadmin-form-control-tag-group-sm: map-deep-merge(
 		line-height: $cadmin-input-line-height-sm,
 		min-height: $cadmin-input-height-sm,
 		padding-bottom: 0,
-		padding-left: 0.25rem,
-		padding-right: 0.25rem,
+		padding-left: 4px,
+		padding-right: 4px,
 		padding-top: 0,
 		inline-item: (
 			margin-bottom: 0,
 			margin-top: 0,
 		),
 		label: (
-			margin-bottom: 0.1875rem,
-			margin-right: 0.25rem,
-			margin-top: 0.1875rem,
+			margin-bottom: 3px,
+			margin-right: 4px,
+			margin-top: 3px,
 		),
 		form-control-inset: (
-			margin-bottom: 0.125rem,
-			margin-top: 0.1875rem,
+			margin-bottom: 2px,
+			margin-left: 8px,
+			margin-top: 3px,
 		),
 	),
 	$cadmin-form-control-tag-group-sm
@@ -579,9 +582,9 @@ $cadmin-form-text: map-merge(
 
 // .form-feedback-item
 
-$cadmin-form-feedback-font-size: 0.875rem !default;
+$cadmin-form-feedback-font-size: 14px !default;
 $cadmin-form-feedback-font-weight: $cadmin-font-weight-semi-bold !default;
-$cadmin-form-feedback-margin-top: 0.25rem !default;
+$cadmin-form-feedback-margin-top: 4px !default;
 
 $cadmin-form-feedback-item: () !default;
 $cadmin-form-feedback-item: map-merge(
@@ -1268,7 +1271,7 @@ $cadmin-input-select-size: map-deep-merge(
 				),
 			),
 			option: (
-				padding: 0.40625rem 0.5rem,
+				padding: 6.5px 8px,
 			),
 		),
 	),
