@@ -55,7 +55,7 @@ interface ITreeViewProps<T>
 	 */
 	expanderClassName?: string;
 
-	/*
+	/**
 	 * Flag to modify Node expansion state icons.
 	 */
 	expanderIcons?: Icons;

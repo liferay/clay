@@ -9,19 +9,27 @@ import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {Key, useCallback, useContext, useState} from 'react';
+import React, {useContext, useState} from 'react';
 
 import {removeItemInternalProps} from './Collection';
-import {Icons, useTreeViewContext} from './context';
+import {Icons, useAPI, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
 export interface ITreeViewItemProps
 	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'children'> {
 	/**
+	 * Flag to set the node to the active state.
+	 */
+	active?: boolean;
+
+	/**
 	 * Property for rendering actions on a Node.
 	 */
 	actions?: React.ReactElement;
 
+	/**
+	 * Item content.
+	 */
 	children: React.ReactNode;
 
 	/**
@@ -30,17 +38,17 @@ export interface ITreeViewItemProps
 	disabled?: boolean;
 
 	/**
-	 * Internal property.
+	 * @ignore
 	 */
 	isDragging?: boolean;
 
 	/**
-	 * Internal property.
+	 * @ignore
 	 */
 	overPosition?: string;
 
 	/**
-	 * Internal property.
+	 * @ignore
 	 */
 	overTarget?: boolean;
 }
@@ -87,25 +95,17 @@ export const TreeViewItem = React.forwardRef<
 
 	const [loading, setLoading] = useState(false);
 
+	const api = useAPI();
+
 	const [left, right] = React.Children.toArray(children);
 
 	const group =
 		// @ts-ignore
 		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
 
-	const hasKey = useCallback(
-		(key: Key) => {
-			return selection.selectedKeys.has(key);
-		},
-		[selection.selectedKeys]
-	);
-
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
-			childrenRoot.current(removeItemInternalProps(item), {
-				has: hasKey,
-				toggle: selection.toggleSelection,
-			}),
+			childrenRoot.current(removeItemInternalProps(item), ...api),
 			{
 				actions,
 				isDragging,
@@ -152,8 +152,10 @@ export const TreeViewItem = React.forwardRef<
 						nodeProps.className,
 						{
 							active:
-								selectionMode === 'single' &&
-								selection.selectedKeys.has(item.key),
+								(selectionMode === 'single' &&
+									selection.selectedKeys.has(item.key)) ||
+								itemStackProps.active ||
+								nodeProps.active,
 							collapsed: group && expandedKeys.has(item.key),
 							disabled:
 								itemStackProps.disabled || nodeProps.disabled,
@@ -420,7 +422,19 @@ export const TreeViewItem = React.forwardRef<
 TreeViewItem.displayName = 'ClayTreeViewItem';
 
 interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
+	/**
+	 * Flag to set the node to the active state.
+	 */
+	active?: boolean;
+
+	/**
+	 * @ignore
+	 */
 	actions?: React.ReactElement;
+
+	/**
+	 * Item content.
+	 */
 	children: React.ReactNode;
 
 	/**
@@ -434,7 +448,14 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 */
 	expanderDisabled?: boolean;
 
+	/**
+	 * @ignore
+	 */
 	expandable?: boolean;
+
+	/**
+	 * @ignore
+	 */
 	loading?: boolean;
 }
 
