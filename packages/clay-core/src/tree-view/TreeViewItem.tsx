@@ -43,6 +43,11 @@ export interface ITreeViewItemProps
 	isDragging?: boolean;
 
 	/**
+	 * Flag to remove the visual of the hover over the item.
+	 */
+	noHover?: boolean;
+
+	/**
 	 * @ignore
 	 */
 	overPosition?: string;
@@ -166,6 +171,8 @@ export const TreeViewItem = React.forwardRef<
 								overTarget && overPosition === 'middle',
 							'treeview-dropping-top':
 								overTarget && overPosition === 'top',
+							'treeview-no-hover':
+								itemStackProps.noHover || nodeProps.noHover,
 						}
 					)}
 					disabled={itemStackProps.disabled || nodeProps.disabled}
@@ -452,6 +459,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * @ignore
 	 */
 	expandable?: boolean;
+
+	/**
+	 * Flag to remove the visual of the hover over the item.
+	 */
+	noHover?: boolean;
 
 	/**
 	 * @ignore
