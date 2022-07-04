@@ -76,7 +76,7 @@ module.exports = {
 		'./packages/clay-drop-down/src/': {
 			branches: 70,
 			functions: 57,
-			lines: 81,
+			lines: 80,
 			statements: 78,
 		},
 		'./packages/clay-empty-state/src/': {
@@ -88,7 +88,7 @@ module.exports = {
 		'./packages/clay-form/src/': {
 			branches: 62,
 			functions: 70,
-			lines: 86,
+			lines: 85,
 			statements: 85,
 		},
 		'./packages/clay-icon/src/': {
@@ -148,8 +148,8 @@ module.exports = {
 		'./packages/clay-nav/src/': {
 			branches: 92,
 			functions: 80,
-			lines: 94,
-			statements: 94,
+			lines: 93,
+			statements: 93,
 		},
 		'./packages/clay-navigation-bar/src/': {
 			branches: 50,
@@ -215,7 +215,7 @@ module.exports = {
 			branches: 84,
 			functions: 66,
 			lines: 94,
-			statements: 91,
+			statements: 90,
 		},
 		'./packages/clay-time-picker/src/': {
 			branches: 85,
