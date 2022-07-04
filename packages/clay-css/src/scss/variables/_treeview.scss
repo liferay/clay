@@ -198,6 +198,12 @@ $treeview-light: map-deep-merge(
 		),
 		treeview-link: (
 			color: $gray-600,
+			treeview-no-hover: (
+				hover: (
+					background-color: transparent,
+					color: $secondary,
+				),
+			),
 			hover: (
 				background-color: $gray-100,
 				color: $gray-900,
@@ -238,6 +244,12 @@ $treeview-dark: map-deep-merge(
 		),
 		treeview-link: (
 			color: $secondary-l1,
+			treeview-no-hover: (
+				hover: (
+					background-color: transparent,
+					color: $secondary-l1,
+				),
+			),
 			hover: (
 				background-color: rgba($white, 0.04),
 			),
