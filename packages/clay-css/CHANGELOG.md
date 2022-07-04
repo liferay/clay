@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Multi Select form text should have the same spacing as it's form-control counter part ([3728ff9](https://github.com/liferay/clay/commit/3728ff95bc491254a0b81751e2e388b15b5576a7))
+* **@clayui/css:** Multi Select form text should have the same spacing as it's form-control counter part ([80d1ebd](https://github.com/liferay/clay/commit/80d1ebd438a216130c951b92be23504f054cd112))
+
+
+### Features
+
+* **@clayui/css:** (cadmin) add support class to remove hover from treeview link ([53bd134](https://github.com/liferay/clay/commit/53bd1347b7b5b89f9934875487fdfcc511c995f7))
+* **@clayui/css:** add new `hierarchy` icon ([b66c092](https://github.com/liferay/clay/commit/b66c092665ae6d06bb4f59e2bbf8526c74847b80))
+* **@clayui/css:** add support class to remove hover from treeview link ([a41c831](https://github.com/liferay/clay/commit/a41c83122690a1fb229fb3e89f8e65c9d89498b5))
+
+
+
+
+
 # [3.63.0](https://github.com/liferay/clay/compare/v3.62.0...v3.63.0) (2022-06-27)
 
 

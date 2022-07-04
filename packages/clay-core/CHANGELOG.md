@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
+
+### Features
+
+-   **@clayui/core:** add new `noHover` property to remove item hover ([cf52960](https://github.com/liferay/clay/commit/cf52960b79272fa90702854d05e0f3eb48c87494))
+-   **@clayui/core:** adds new `active` property to TreeView.Item ([9c3cc1c](https://github.com/liferay/clay/commit/9c3cc1ceb7b874f963f23eab0cb621ffa87265bd))
+-   **@clayui/core:** adds new API to control node expand state in TreeView ([216fc36](https://github.com/liferay/clay/commit/216fc36524b2d01bd61d4a3a7e7e9c34ad094ffc))
+
 # [3.62.0](https://github.com/liferay/clay/compare/v3.61.0...v3.62.0) (2022-06-20)
 
 **Note:** Version bump only for package @clayui/core

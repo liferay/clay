@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
+
+### Bug Fixes
+
+-   **@clayui/css:** Cadmin Multi Select form text should have the same spacing as it's form-control counter part ([3728ff9](https://github.com/liferay/clay/commit/3728ff95bc491254a0b81751e2e388b15b5576a7))
+-   **@clayui/css:** Multi Select form text should have the same spacing as it's form-control counter part ([80d1ebd](https://github.com/liferay/clay/commit/80d1ebd438a216130c951b92be23504f054cd112))
+
+### Features
+
+-   **@clayui/core:** add new `noHover` property to remove item hover ([cf52960](https://github.com/liferay/clay/commit/cf52960b79272fa90702854d05e0f3eb48c87494))
+-   **@clayui/core:** adds new `active` property to TreeView.Item ([9c3cc1c](https://github.com/liferay/clay/commit/9c3cc1ceb7b874f963f23eab0cb621ffa87265bd))
+-   **@clayui/core:** adds new API to control node expand state in TreeView ([216fc36](https://github.com/liferay/clay/commit/216fc36524b2d01bd61d4a3a7e7e9c34ad094ffc))
+-   **@clayui/css:** (cadmin) add support class to remove hover from treeview link ([53bd134](https://github.com/liferay/clay/commit/53bd1347b7b5b89f9934875487fdfcc511c995f7))
+-   **@clayui/css:** add new `hierarchy` icon ([b66c092](https://github.com/liferay/clay/commit/b66c092665ae6d06bb4f59e2bbf8526c74847b80))
+-   **@clayui/css:** add support class to remove hover from treeview link ([a41c831](https://github.com/liferay/clay/commit/a41c83122690a1fb229fb3e89f8e65c9d89498b5))
+-   **@clayui/drop-down:** Allow setting a default selected value for the radiogroup ([f159071](https://github.com/liferay/clay/commit/f159071adaf2b092152f6c35392dae9387be5797))
+
 # [3.63.0](https://github.com/liferay/clay/compare/v3.62.0...v3.63.0) (2022-06-27)
 
 ### Bug Fixes

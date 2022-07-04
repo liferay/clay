@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
+
+### Features
+
+-   **@clayui/drop-down:** Allow setting a default selected value for the radiogroup ([f159071](https://github.com/liferay/clay/commit/f159071adaf2b092152f6c35392dae9387be5797))
+
 # [3.62.0](https://github.com/liferay/clay/compare/v3.61.0...v3.62.0) (2022-06-20)
 
 ### Bug Fixes
