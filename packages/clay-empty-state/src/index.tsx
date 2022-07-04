@@ -33,7 +33,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	title?: string | null;
 }
 
-const ClayEmptyState: React.FunctionComponent<IProps> = ({
+const ClayEmptyState = ({
 	children,
 	className,
 	description = 'Sorry, there are no results found',

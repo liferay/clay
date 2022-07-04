@@ -9,9 +9,10 @@ import React from 'react';
 
 import Context from './Context';
 
-const LoadingIndicatorMarkup: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, ...otherProps}) => (
+const LoadingIndicatorMarkup = ({
+	children,
+	...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) => (
 	<ClayInput.GroupInsetItem {...otherProps} after>
 		<span className="inline-item inline-item-middle">{children}</span>
 	</ClayInput.GroupInsetItem>
@@ -24,7 +25,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	component?: React.ComponentType<any>;
 }
 
-const ClayAutocompleteLoadingIndicator: React.FunctionComponent<IProps> = ({
+const ClayAutocompleteLoadingIndicator = ({
 	className,
 	component: Component = LoadingIndicatorMarkup,
 	...otherProps

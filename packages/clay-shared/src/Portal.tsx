@@ -53,13 +53,13 @@ interface IProps extends IBaseProps {
 	subPortalRef?: React.RefObject<Element>;
 }
 
-export const ClayPortal: React.FunctionComponent<IProps> = ({
+export const ClayPortal = ({
 	children,
 	className,
 	containerRef,
 	id,
 	subPortalRef,
-}) => {
+}: IProps) => {
 	const {theme} = useProvider();
 
 	const parentPortalRef = React.useContext(ClayPortalContext);

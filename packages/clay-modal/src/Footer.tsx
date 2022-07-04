@@ -26,7 +26,7 @@ export interface IFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 	middle?: React.ReactElement;
 }
 
-const ClayModalFooter: React.FunctionComponent<IFooterProps> = ({
+const ClayModalFooter = ({
 	className,
 	first,
 	last,

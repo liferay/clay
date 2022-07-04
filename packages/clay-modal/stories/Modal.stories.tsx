@@ -289,7 +289,7 @@ export const AutocompleteAndDropDown = () => {
 	);
 };
 
-const MyApp: React.FunctionComponent<any> = () => {
+const MyApp = () => {
 	const [state, dispatch] = useContext(Context);
 
 	return (
@@ -318,7 +318,7 @@ const MyApp: React.FunctionComponent<any> = () => {
 	);
 };
 
-const MyAppWithoutFooterAndHeader: React.FunctionComponent<any> = () => {
+const MyAppWithoutFooterAndHeader = () => {
 	const [, dispatch] = useContext(Context);
 
 	return (

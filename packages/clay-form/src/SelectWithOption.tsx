@@ -22,10 +22,7 @@ interface IProps extends React.ComponentProps<typeof Select> {
 	>;
 }
 
-const ClaySelectWithOption: React.FunctionComponent<IProps> = ({
-	options = [],
-	...otherProps
-}: IProps) => (
+const ClaySelectWithOption = ({options = [], ...otherProps}: IProps) => (
 	<Select {...otherProps}>
 		{options.map((option, index) => {
 			if (option.type === 'group') {

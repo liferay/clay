@@ -94,10 +94,7 @@ const reducer = (
 
 const Context = React.createContext<TProvider>([initialState, () => {}]);
 
-const ClayModalProvider: React.FunctionComponent<IProps> = ({
-	children,
-	spritemap,
-}) => {
+const ClayModalProvider = ({children, spritemap}: IProps) => {
 	const [{visible, ...otherState}, dispatch] = React.useReducer(
 		reducer,
 		initialState

@@ -104,13 +104,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 }
 
-const ListItem: React.FunctionComponent<
-	IListItem & {
-		selected?: boolean;
-		onSelectChange?: any;
-		spritemap?: string;
-	}
-> = ({
+const ListItem = ({
 	description,
 	dropDownTriggerProps,
 	dropdownActions,
@@ -121,6 +115,10 @@ const ListItem: React.FunctionComponent<
 	selected = false,
 	spritemap,
 	title,
+}: IListItem & {
+	selected?: boolean;
+	onSelectChange?: any;
+	spritemap?: string;
 }) => {
 	return (
 		<ClayList.Item active={selected} flex>
@@ -195,7 +193,7 @@ const ListItem: React.FunctionComponent<
 	);
 };
 
-export const ClayListWithItems: React.FunctionComponent<IProps> = ({
+export const ClayListWithItems = ({
 	className,
 	itemIdentifier = 'id',
 	items = [],

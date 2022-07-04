@@ -8,7 +8,7 @@ import React from 'react';
 import {usePointerPosition} from './hooks';
 import {hueToX, xToHue} from './util';
 
-interface IProps {
+type Props = {
 	/**
 	 * Callback function for when the hue value changes
 	 */
@@ -18,7 +18,7 @@ interface IProps {
 	 * The value of the Hue of the color
 	 */
 	value: number;
-}
+};
 
 const useIsomorphicLayoutEffect =
 	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
@@ -26,10 +26,7 @@ const useIsomorphicLayoutEffect =
 /**
  * Renders Hue component
  */
-const ClayColorPickerHue: React.FunctionComponent<IProps> = ({
-	value = 0,
-	onChange = () => {},
-}) => {
+const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 	const containerRef = React.useRef<HTMLDivElement>(null);
 	const selectorActive = React.useRef<boolean>(false);
 

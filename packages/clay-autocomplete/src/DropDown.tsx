@@ -37,7 +37,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	onSetActive?: (val: boolean) => void;
 }
 
-const ClayAutocompleteDropDown: React.FunctionComponent<IProps> = ({
+const ClayAutocompleteDropDown = ({
 	active = false,
 	alignElementRef,
 	alignmentByViewport,

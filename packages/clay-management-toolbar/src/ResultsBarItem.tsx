@@ -13,7 +13,7 @@ interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	expand?: boolean;
 }
 
-const ResultsBarItem: React.FunctionComponent<IProps> = ({
+const ResultsBarItem = ({
 	children,
 	className,
 	expand = false,

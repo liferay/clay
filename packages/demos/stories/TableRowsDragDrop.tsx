@@ -79,11 +79,11 @@ interface IDragItem {
 	type: string;
 }
 
-const DraggableTableRow: React.FunctionComponent<IDraggableTableRowProps> = ({
+const DraggableTableRow = ({
 	content,
 	index,
 	onMove,
-}) => {
+}: IDraggableTableRowProps) => {
 	const ref = React.useRef<HTMLTableRowElement>(null);
 
 	const [, drop] = useDrop({

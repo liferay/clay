@@ -14,12 +14,7 @@ export interface IProps extends React.ComponentProps<typeof ClayLink> {
 	disabled?: boolean;
 }
 
-const Link: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	disabled,
-	...otherProps
-}: IProps) => (
+const Link = ({children, className, disabled, ...otherProps}: IProps) => (
 	<ClayLink
 		className={classNames(className, 'component-link tbar-link', {
 			disabled,

@@ -9,21 +9,21 @@ import React from 'react';
 
 import {IDay, setDate} from './Helpers';
 
-interface IProps {
+type Props = {
 	day: IDay;
 	daysSelected: readonly [Date, Date];
 	disabled?: boolean;
 	range?: boolean;
 	onClick: (date: Date) => void;
-}
+};
 
-const ClayDatePickerDayNumber: React.FunctionComponent<IProps> = ({
+const ClayDatePickerDayNumber = ({
 	day,
 	daysSelected,
 	disabled,
 	onClick,
 	range,
-}) => {
+}: Props) => {
 	const {date, nextMonth, previousMonth} = day;
 	const [startDate, endDate] = daysSelected;
 

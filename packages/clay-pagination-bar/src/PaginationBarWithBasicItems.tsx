@@ -149,112 +149,111 @@ const DEFAULT_LABELS = {
 	selectPerPageItems: '{0} items',
 };
 
-export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> =
-	({
-		active,
-		activeDelta,
-		activePage,
-		alignmentPosition,
-		defaultActive = 1,
-		deltas = defaultDeltas,
-		disabledPages,
-		disableEllipsis = false,
-		ellipsisBuffer,
-		hrefConstructor,
-		labels = DEFAULT_LABELS,
-		onActiveChange,
-		onDeltaChange,
-		onPageChange,
-		showDeltasDropDown = true,
-		spritemap,
-		totalItems,
-		...otherProps
-	}: IProps) => {
-		const [internalActive, setActive] = useInternalState({
-			defaultName: 'defaultActive',
-			defaultValue: defaultActive,
-			handleName: 'onActiveChange',
-			name: 'value',
-			onChange: onActiveChange ?? onPageChange,
-			value: typeof active === 'undefined' ? activePage : active,
-		});
+export const ClayPaginationBarWithBasicItems = ({
+	active,
+	activeDelta,
+	activePage,
+	alignmentPosition,
+	defaultActive = 1,
+	deltas = defaultDeltas,
+	disabledPages,
+	disableEllipsis = false,
+	ellipsisBuffer,
+	hrefConstructor,
+	labels = DEFAULT_LABELS,
+	onActiveChange,
+	onDeltaChange,
+	onPageChange,
+	showDeltasDropDown = true,
+	spritemap,
+	totalItems,
+	...otherProps
+}: IProps) => {
+	const [internalActive, setActive] = useInternalState({
+		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
+		handleName: 'onActiveChange',
+		name: 'value',
+		onChange: onActiveChange ?? onPageChange,
+		value: typeof active === 'undefined' ? activePage : active,
+	});
 
-		if (!activeDelta) {
-			activeDelta = deltas[0].label;
+	if (!activeDelta) {
+		activeDelta = deltas[0].label;
+	}
+
+	const items: Items = deltas.map(({href, label}) => {
+		const item: {
+			href?: string;
+			label?: string;
+			onClick?: () => void;
+		} = {
+			href,
+			label: sub(labels.selectPerPageItems, [String(label)]),
+		};
+
+		if (!href) {
+			item.onClick = () => {
+				if (onDeltaChange) {
+					onDeltaChange(label as number);
+				}
+			};
 		}
 
-		const items: Items = deltas.map(({href, label}) => {
-			const item: {
-				href?: string;
-				label?: string;
-				onClick?: () => void;
-			} = {
-				href,
-				label: sub(labels.selectPerPageItems, [String(label)]),
-			};
+		return item;
+	});
 
-			if (!href) {
-				item.onClick = () => {
-					if (onDeltaChange) {
-						onDeltaChange(label as number);
-					}
-				};
-			}
+	const totalPages = Math.ceil(totalItems / activeDelta);
 
-			return item;
-		});
+	React.useEffect(() => {
+		if (internalActive > totalPages) {
+			setActive(1);
+		}
+	}, [totalPages]);
 
-		const totalPages = Math.ceil(totalItems / activeDelta);
-
-		React.useEffect(() => {
-			if (internalActive > totalPages) {
-				setActive(1);
-			}
-		}, [totalPages]);
-
-		return (
-			<PaginationBar {...otherProps}>
-				{showDeltasDropDown && (
-					<PaginationBar.DropDown
-						alignmentPosition={alignmentPosition}
-						items={items}
-						trigger={
-							<ClayButton
-								data-testid="selectPaginationBar"
-								displayType="unstyled"
-							>
-								{sub(labels.perPageItems, [activeDelta])}
-
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="caret-double-l"
-								/>
-							</ClayButton>
-						}
-					/>
-				)}
-
-				<PaginationBar.Results>
-					{sub(labels.paginationResults, [
-						(internalActive - 1) * activeDelta + 1,
-						internalActive * activeDelta < totalItems
-							? internalActive * activeDelta
-							: totalItems,
-						totalItems,
-					])}
-				</PaginationBar.Results>
-
-				<ClayPaginationWithBasicItems
-					active={internalActive}
+	return (
+		<PaginationBar {...otherProps}>
+			{showDeltasDropDown && (
+				<PaginationBar.DropDown
 					alignmentPosition={alignmentPosition}
-					disableEllipsis={disableEllipsis}
-					disabledPages={disabledPages}
-					ellipsisBuffer={ellipsisBuffer}
-					hrefConstructor={hrefConstructor}
-					onActiveChange={setActive}
-					spritemap={spritemap}
-					totalPages={totalPages}
+					items={items}
+					trigger={
+						<ClayButton
+							data-testid="selectPaginationBar"
+							displayType="unstyled"
+						>
+							{sub(labels.perPageItems, [activeDelta])}
+
+							<ClayIcon
+								spritemap={spritemap}
+								symbol="caret-double-l"
+							/>
+						</ClayButton>
+					}
 				/>
-			</PaginationBar>
-		);
-	};
+			)}
+
+			<PaginationBar.Results>
+				{sub(labels.paginationResults, [
+					(internalActive - 1) * activeDelta + 1,
+					internalActive * activeDelta < totalItems
+						? internalActive * activeDelta
+						: totalItems,
+					totalItems,
+				])}
+			</PaginationBar.Results>
+
+			<ClayPaginationWithBasicItems
+				active={internalActive}
+				alignmentPosition={alignmentPosition}
+				disableEllipsis={disableEllipsis}
+				disabledPages={disabledPages}
+				ellipsisBuffer={ellipsisBuffer}
+				hrefConstructor={hrefConstructor}
+				onActiveChange={setActive}
+				spritemap={spritemap}
+				totalPages={totalPages}
+			/>
+		</PaginationBar>
+	);
+};

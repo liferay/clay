@@ -43,7 +43,7 @@ interface IState {
 	networkStatus?: NetworkStatus;
 }
 
-const ClayDataProvider: React.FunctionComponent<IProps> = ({
+const ClayDataProvider = ({
 	children,
 	notifyOnNetworkStatusChange = false,
 	...otherProps

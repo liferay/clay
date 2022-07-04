@@ -6,9 +6,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayAlertFooter: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const ClayAlertFooter = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) => {
 	return (
 		<div className={classNames(className, 'alert-footer')} {...otherProps}>
 			{children}

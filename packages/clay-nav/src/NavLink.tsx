@@ -35,7 +35,7 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	spritemap?: string;
 }
 
-export const NavLink: React.FunctionComponent<IProps> = ({
+export const NavLink = ({
 	active,
 	children,
 	className,

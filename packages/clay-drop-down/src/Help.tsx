@@ -6,9 +6,11 @@
 import classnames from 'classnames';
 import React from 'react';
 
-const ClayDropDownHelp: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const ClayDropDownHelp = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) => {
 	return (
 		<div
 			{...otherProps}

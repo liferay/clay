@@ -29,19 +29,21 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	modern?: boolean;
 }
 
-const ClayTabs: React.FunctionComponent<IProps> & {
+function ClayTabs(props: IProps): JSX.Element & {
 	Content: typeof Content;
 	TabPane: typeof TabPane;
 	TabPanel: typeof TabPane;
 	Item: typeof Item;
-} = ({
+};
+
+function ClayTabs({
 	children,
 	className,
 	displayType,
 	justified,
 	modern = true,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	return (
 		<ul
 			className={classNames(
@@ -65,7 +67,7 @@ const ClayTabs: React.FunctionComponent<IProps> & {
 			{children}
 		</ul>
 	);
-};
+}
 
 ClayTabs.Content = Content;
 ClayTabs.TabPane = TabPane;

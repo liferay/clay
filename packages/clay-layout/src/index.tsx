@@ -26,7 +26,7 @@ export {
 	SheetSection,
 };
 
-const ClayLayout: React.FunctionComponent<{}> & {
+function ClayLayout(): null & {
 	Col: typeof Col;
 	Container: typeof Container;
 	ContainerFluid: typeof ContainerFluid;
@@ -38,14 +38,16 @@ const ClayLayout: React.FunctionComponent<{}> & {
 	SheetFooter: typeof SheetFooter;
 	SheetHeader: typeof SheetHeader;
 	SheetSection: typeof SheetSection;
-} = () => {
+};
+
+function ClayLayout() {
 	warning(
 		true,
 		`ClayLayout is a no-op and is not expected to be used by itself. Try using one of the many namespaced components like '<ClayLayout.ContainerFluid>'`
 	);
 
 	return null;
-};
+}
 
 ClayLayout.Col = Col;
 ClayLayout.Container = Container;

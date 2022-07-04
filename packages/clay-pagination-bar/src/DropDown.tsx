@@ -7,9 +7,10 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayPaginationBarDropDown: React.FunctionComponent<
-	React.ComponentProps<typeof ClayDropDownWithItems>
-> = ({className, ...otherProps}) => {
+const ClayPaginationBarDropDown = ({
+	className,
+	...otherProps
+}: React.ComponentProps<typeof ClayDropDownWithItems>) => {
 	return (
 		<ClayDropDownWithItems
 			className={classNames(className, 'pagination-items-per-page')}

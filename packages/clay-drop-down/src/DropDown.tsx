@@ -106,7 +106,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	};
 }
 
-const ClayDropDown: React.FunctionComponent<IProps> & {
+function ClayDropDown(props: IProps): JSX.Element & {
 	Action: typeof Action;
 	Caption: typeof Caption;
 	Divider: typeof Divider;
@@ -117,7 +117,9 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	Menu: typeof Menu;
 	Search: typeof Search;
 	Section: typeof Section;
-} = ({
+};
+
+function ClayDropDown({
 	active,
 	alignmentByViewport,
 	alignmentPosition,
@@ -136,7 +138,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 	renderMenuOnClick = false,
 	trigger,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const triggerElementRef = React.useRef<HTMLButtonElement | null>(null);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
@@ -229,7 +231,7 @@ const ClayDropDown: React.FunctionComponent<IProps> & {
 			</ContainerElement>
 		</FocusScope>
 	);
-};
+}
 
 ClayDropDown.Action = Action;
 ClayDropDown.Caption = Caption;

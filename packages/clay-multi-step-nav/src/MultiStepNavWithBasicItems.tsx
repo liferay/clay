@@ -81,120 +81,114 @@ const IndicatorWithInnerRef = React.forwardRef<HTMLButtonElement, any>(
 
 IndicatorWithInnerRef.displayName = 'ClayIndicatorWithInnerRef';
 
-export const ClayMultiStepNavWithBasicItems: React.FunctionComponent<IProps> =
-	({
-		active,
-		activeIndex,
-		defaultActive,
-		maxStepsShown = MAX_STEPS_SHOWN,
-		onActiveChange,
-		onIndexChange,
-		spritemap,
-		steps,
-		...otherProps
-	}: IProps) => {
-		const [internalActive, setActive] = useInternalState({
-			defaultName: 'defaultActive',
-			defaultValue: defaultActive,
-			handleName: 'onActiveChange',
-			name: 'value',
-			onChange: onActiveChange ?? onIndexChange,
-			value: typeof active === 'undefined' ? activeIndex : active,
-		});
+export const ClayMultiStepNavWithBasicItems = ({
+	active,
+	activeIndex,
+	defaultActive,
+	maxStepsShown = MAX_STEPS_SHOWN,
+	onActiveChange,
+	onIndexChange,
+	spritemap,
+	steps,
+	...otherProps
+}: IProps) => {
+	const [internalActive, setActive] = useInternalState({
+		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
+		handleName: 'onActiveChange',
+		name: 'value',
+		onChange: onActiveChange ?? onIndexChange,
+		value: typeof active === 'undefined' ? activeIndex : active,
+	});
 
-		let dropdownItems;
-		let showSteps = steps;
-		const indexEnd = steps.length - 1;
+	let dropdownItems;
+	let showSteps = steps;
+	const indexEnd = steps.length - 1;
 
-		const lastStep = steps[indexEnd];
+	const lastStep = steps[indexEnd];
 
-		if (steps.length > maxStepsShown) {
-			const indexBeforeDropdown = maxStepsShown - 1;
+	if (steps.length > maxStepsShown) {
+		const indexBeforeDropdown = maxStepsShown - 1;
 
-			dropdownItems = steps
-				.slice(indexBeforeDropdown, indexEnd)
-				.map((step, i) => {
-					const index = indexBeforeDropdown + i;
+		dropdownItems = steps
+			.slice(indexBeforeDropdown, indexEnd)
+			.map((step, i) => {
+				const index = indexBeforeDropdown + i;
 
-					return {
-						active: internalActive === index,
-						label: `${index + 1}. ${step.title}`,
-						onClick: () => setActive(index),
-						symbolRight:
-							internalActive > index ? 'check' : undefined,
-					};
-				});
+				return {
+					active: internalActive === index,
+					label: `${index + 1}. ${step.title}`,
+					onClick: () => setActive(index),
+					symbolRight: internalActive > index ? 'check' : undefined,
+				};
+			});
 
-			showSteps = steps.slice(0, indexBeforeDropdown);
-		}
+		showSteps = steps.slice(0, indexBeforeDropdown);
+	}
 
-		const activeInDropDown =
-			internalActive > showSteps.length - 1 && internalActive < indexEnd;
+	const activeInDropDown =
+		internalActive > showSteps.length - 1 && internalActive < indexEnd;
 
-		return (
-			<ClayMultiStepNav {...otherProps}>
-				{showSteps.map(({subTitle, title}, i: number) => {
-					const complete = internalActive > i;
+	return (
+		<ClayMultiStepNav {...otherProps}>
+			{showSteps.map(({subTitle, title}, i: number) => {
+				const complete = internalActive > i;
 
-					return (
-						<ClayMultiStepNav.Item
-							active={internalActive === i}
+				return (
+					<ClayMultiStepNav.Item
+						active={internalActive === i}
+						complete={complete}
+						expand={i + 1 !== steps.length}
+						key={i}
+					>
+						<ClayMultiStepNav.Title>{title}</ClayMultiStepNav.Title>
+						<ClayMultiStepNav.Divider />
+						<ClayMultiStepNav.Indicator
 							complete={complete}
-							expand={i + 1 !== steps.length}
-							key={i}
-						>
-							<ClayMultiStepNav.Title>
-								{title}
-							</ClayMultiStepNav.Title>
-							<ClayMultiStepNav.Divider />
-							<ClayMultiStepNav.Indicator
-								complete={complete}
-								label={1 + i}
-								onClick={() => setActive(i)}
-								spritemap={spritemap}
-								subTitle={subTitle}
-							/>
-						</ClayMultiStepNav.Item>
-					);
-				})}
+							label={1 + i}
+							onClick={() => setActive(i)}
+							spritemap={spritemap}
+							subTitle={subTitle}
+						/>
+					</ClayMultiStepNav.Item>
+				);
+			})}
 
-				{dropdownItems && (
-					<>
-						<ClayMultiStepNav.Item
-							active={activeInDropDown}
-							complete={internalActive === indexEnd}
-							expand
-						>
-							<ClayMultiStepNav.Title>
-								{activeInDropDown
-									? steps[internalActive].title
-									: steps[showSteps.length].title}
-							</ClayMultiStepNav.Title>
-							<ClayMultiStepNav.Divider />
+			{dropdownItems && (
+				<>
+					<ClayMultiStepNav.Item
+						active={activeInDropDown}
+						complete={internalActive === indexEnd}
+						expand
+					>
+						<ClayMultiStepNav.Title>
+							{activeInDropDown
+								? steps[internalActive].title
+								: steps[showSteps.length].title}
+						</ClayMultiStepNav.Title>
+						<ClayMultiStepNav.Divider />
 
-							<ClayDropDownWithItems
-								items={dropdownItems}
-								spritemap={spritemap}
-								trigger={<IndicatorWithInnerRef />}
-							/>
-						</ClayMultiStepNav.Item>
+						<ClayDropDownWithItems
+							items={dropdownItems}
+							spritemap={spritemap}
+							trigger={<IndicatorWithInnerRef />}
+						/>
+					</ClayMultiStepNav.Item>
 
-						<ClayMultiStepNav.Item
-							active={internalActive === indexEnd}
-						>
-							<ClayMultiStepNav.Title>
-								{lastStep.title}
-							</ClayMultiStepNav.Title>
-							<ClayMultiStepNav.Divider />
-							<ClayMultiStepNav.Indicator
-								label={steps.length}
-								onClick={() => setActive(indexEnd)}
-								spritemap={spritemap}
-								subTitle={lastStep.subTitle}
-							/>
-						</ClayMultiStepNav.Item>
-					</>
-				)}
-			</ClayMultiStepNav>
-		);
-	};
+					<ClayMultiStepNav.Item active={internalActive === indexEnd}>
+						<ClayMultiStepNav.Title>
+							{lastStep.title}
+						</ClayMultiStepNav.Title>
+						<ClayMultiStepNav.Divider />
+						<ClayMultiStepNav.Indicator
+							label={steps.length}
+							onClick={() => setActive(indexEnd)}
+							spritemap={spritemap}
+							subTitle={lastStep.subTitle}
+						/>
+					</ClayMultiStepNav.Item>
+				</>
+			)}
+		</ClayMultiStepNav>
+	);
+};

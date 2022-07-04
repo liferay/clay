@@ -13,12 +13,7 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	expand?: boolean;
 }
 
-const Item: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	expand,
-	...otherProps
-}: IProps) => {
+const Item = ({children, className, expand, ...otherProps}: IProps) => {
 	return (
 		<li
 			className={classNames(className, 'tbar-item', {

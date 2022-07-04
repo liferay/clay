@@ -6,9 +6,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayModalItemGroup: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => (
+const ClayModalItemGroup = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) => (
 	<div className={classNames('modal-subtitle', className)} {...otherProps}>
 		{children}
 	</div>

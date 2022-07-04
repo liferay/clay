@@ -7,20 +7,17 @@ import React from 'react';
 
 import {IDay, Month} from './Helpers';
 
-interface IChildrenFn {
+type ChildrenFunction = {
 	day: IDay;
 	key: number;
-}
+};
 
-interface IProps {
-	children: (object: IChildrenFn) => React.ReactNode;
+type Props = {
+	children: (object: ChildrenFunction) => React.ReactNode;
 	weeks: Month;
-}
+};
 
-const ClayDatePickerDaysTable: React.FunctionComponent<IProps> = ({
-	children,
-	weeks,
-}) => {
+const ClayDatePickerDaysTable = ({children, weeks}: Props) => {
 	return (
 		<>
 			{weeks.map((days, index) => (

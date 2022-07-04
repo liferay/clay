@@ -8,11 +8,11 @@ import React from 'react';
 
 import Menu from './Menu';
 
-const Inner: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
+const Inner = ({
 	children,
 	className,
 	...otherProps
-}) => (
+}: React.HTMLAttributes<HTMLDivElement>) => (
 	<div className={classNames(className, 'drilldown-inner')} {...otherProps}>
 		{children}
 	</div>

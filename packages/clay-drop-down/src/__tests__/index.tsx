@@ -9,10 +9,7 @@ import React from 'react';
 
 import '@testing-library/jest-dom/extend-expect';
 
-const DropDownWithState: React.FunctionComponent<any> = ({
-	children,
-	...others
-}) => {
+const DropDownWithState = ({children, ...others}: any) => {
 	const [active, setActive] = React.useState(false);
 
 	return (

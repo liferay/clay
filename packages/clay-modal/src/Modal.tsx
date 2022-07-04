@@ -78,7 +78,7 @@ const warningMessage = `You need to pass the 'observer' prop to ClayModal for ev
 
 let counter = 0;
 
-const ClayModal: React.FunctionComponent<IProps> = ({
+const ClayModal = ({
 	center,
 	children,
 	className,

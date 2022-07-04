@@ -34,10 +34,7 @@ describe('clay-component-generator:app', () => {
 	});
 
 	it('produces MyComponent.tsx with templated content', () => {
-		assert.fileContent(
-			'src/index.tsx',
-			/const MyComponent: React.FunctionComponent<Props> = \(\{/
-		);
+		assert.fileContent('src/index.tsx', /const MyComponent = \(\{/);
 		assert.fileContent('src/index.tsx', /export default MyComponent/);
 	});
 });

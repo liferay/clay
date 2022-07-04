@@ -47,12 +47,12 @@ interface IDragItem {
 	type: string;
 }
 
-const DraggableListItem: React.FunctionComponent<IDraggableListItemProps> = ({
+const DraggableListItem = ({
 	id,
 	index,
 	onMove,
 	text,
-}) => {
+}: IDraggableListItemProps) => {
 	const ref = useRef<HTMLLIElement>(null);
 
 	const [, drop] = useDrop({

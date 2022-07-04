@@ -67,13 +67,15 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 }
 
-const ClayPanel: React.FunctionComponent<IProps> & {
+function ClayPanel(props: IProps): JSX.Element & {
 	Body: typeof ClayPanelBody;
 	Footer: typeof ClayPanelFooter;
 	Group: typeof ClayPanelGroup;
 	Header: typeof ClayPanelHeader;
 	Title: typeof ClayPanelTitle;
-} = ({
+};
+
+function ClayPanel({
 	children,
 	className,
 	collapsable,
@@ -86,7 +88,7 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 	showCollapseIcon = true,
 	spritemap,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const [internalExpanded, setInternalExpanded] = useInternalState({
 		defaultName: 'defaultExpanded',
 		defaultValue: defaultExpanded,
@@ -198,7 +200,7 @@ const ClayPanel: React.FunctionComponent<IProps> & {
 			)}
 		</div>
 	);
-};
+}
 
 ClayPanel.Body = ClayPanelBody;
 ClayPanel.Group = ClayPanelGroup;

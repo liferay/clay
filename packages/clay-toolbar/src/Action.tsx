@@ -24,7 +24,7 @@ export interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	symbol: string;
 }
 
-const Action: React.FunctionComponent<IProps> = ({
+const Action = ({
 	className,
 	disabled,
 	spritemap,

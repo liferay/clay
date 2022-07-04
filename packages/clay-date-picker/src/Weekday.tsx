@@ -5,11 +5,11 @@
 
 import React from 'react';
 
-interface IProps {
+type Props = {
 	weekday: string;
-}
+};
 
-const ClayDatePickerWeekday: React.FunctionComponent<IProps> = ({weekday}) => (
+const ClayDatePickerWeekday = ({weekday}: Props) => (
 	<div className="date-picker-col">
 		<div className="date-picker-calendar-item date-picker-day">
 			<abbr>{weekday}</abbr>

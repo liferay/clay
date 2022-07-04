@@ -6,11 +6,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const Item: React.FunctionComponent<React.HTMLAttributes<HTMLLIElement>> = ({
+const Item = ({
 	children,
 	className,
 	...otherProps
-}) => (
+}: React.HTMLAttributes<HTMLLIElement>) => (
 	<li {...otherProps} className={classNames('nav-item', className)}>
 		{children}
 	</li>

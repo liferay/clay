@@ -9,11 +9,7 @@ import React from 'react';
 
 export interface IProps extends React.ComponentProps<typeof ClayButton> {}
 
-const Trigger: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	...otherProps
-}: IProps) => (
+const Trigger = ({children, className, ...otherProps}: IProps) => (
 	<ClayButton
 		className={classNames(className, 'menubar-toggler')}
 		displayType="unstyled"

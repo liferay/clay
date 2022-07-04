@@ -28,7 +28,7 @@ interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	expand?: boolean;
 }
 
-const ClayMultiStepNavItem: React.FunctionComponent<IProps> = ({
+const ClayMultiStepNavItem = ({
 	active,
 	children,
 	className,

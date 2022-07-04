@@ -172,9 +172,11 @@ function renderItems(items: Array<IItem>, spritemap?: string, level = 0) {
 	});
 }
 
-const ClayVerticalNav: React.FunctionComponent<IProps> & {
+function ClayVerticalNav(props: IProps): JSX.Element & {
 	Trigger: typeof Trigger;
-} = ({
+};
+
+function ClayVerticalNav({
 	activeLabel,
 	decorated,
 	items,
@@ -183,7 +185,7 @@ const ClayVerticalNav: React.FunctionComponent<IProps> & {
 	trigger: CustomTrigger = Trigger,
 	triggerLabel = 'Menu',
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	const [active, setActive] = React.useState(false);
 
 	warning(
@@ -222,7 +224,7 @@ const ClayVerticalNav: React.FunctionComponent<IProps> & {
 			</div>
 		</nav>
 	);
-};
+}
 
 ClayVerticalNav.Trigger = Trigger;
 

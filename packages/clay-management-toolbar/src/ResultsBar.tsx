@@ -8,20 +8,27 @@ import React from 'react';
 
 import ResultsBarItem from './ResultsBarItem';
 
-const ClayResultsBar: React.FunctionComponent<
-	React.HTMLAttributes<HTMLElement>
-> & {
+function ClayResultsBar(
+	props: React.HTMLAttributes<HTMLElement>
+): JSX.Element & {
 	Item: typeof ResultsBarItem;
-} = ({children, ...otherProps}) => (
-	<nav
-		{...otherProps}
-		className="subnav-tbar subnav-tbar-primary tbar tbar-inline-xs-down"
-	>
-		<ClayLayout.ContainerFluid>
-			<ul className="tbar-nav tbar-nav-wrap">{children}</ul>
-		</ClayLayout.ContainerFluid>
-	</nav>
-);
+};
+
+function ClayResultsBar({
+	children,
+	...otherProps
+}: React.HTMLAttributes<HTMLElement>) {
+	return (
+		<nav
+			{...otherProps}
+			className="subnav-tbar subnav-tbar-primary tbar tbar-inline-xs-down"
+		>
+			<ClayLayout.ContainerFluid>
+				<ul className="tbar-nav tbar-nav-wrap">{children}</ul>
+			</ClayLayout.ContainerFluid>
+		</nav>
+	);
+}
 
 ClayResultsBar.Item = ResultsBarItem;
 

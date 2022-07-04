@@ -39,7 +39,7 @@ interface ICardDescriptionProps
 	truncate?: boolean;
 }
 
-const ClayCardDescription: React.FunctionComponent<ICardDescriptionProps> = ({
+const ClayCardDescription = ({
 	children,
 	className,
 	disabled,

@@ -13,7 +13,7 @@ interface ICardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	label?: string;
 }
 
-const ClayCardGroup: React.FunctionComponent<ICardGroupProps> = ({
+const ClayCardGroup = ({
 	children,
 	className,
 	label,

@@ -14,7 +14,7 @@ interface IProps extends ChartOptions {
 const useIsomorphicLayoutEffect =
 	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
 
-const BillboardWrapper: React.FunctionComponent<IProps> = ({
+const BillboardWrapper = ({
 	forwardRef,
 	elementProps = {},
 	...otherProps

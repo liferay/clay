@@ -9,10 +9,7 @@ import React from 'react';
 
 export interface IProps extends React.ComponentProps<typeof ClayInput> {}
 
-const Input: React.FunctionComponent<IProps> = ({
-	className,
-	...otherProps
-}: IProps) => (
+const Input = ({className, ...otherProps}: IProps) => (
 	<ClayInput.Group>
 		<ClayInput.GroupItem>
 			<ClayInput

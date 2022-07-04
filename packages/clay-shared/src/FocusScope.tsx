@@ -8,7 +8,7 @@ import React, {useContext} from 'react';
 import {Keys} from './Keys';
 import {useFocusManagement} from './useFocusManagement';
 
-interface IProps {
+type Props = {
 	/**
 	 * Flag indicates whether the focus will also be controlled with the right
 	 * and left arrow keys.
@@ -24,7 +24,7 @@ interface IProps {
 	children: React.ReactElement & {
 		ref?: React.MutableRefObject<HTMLElement>;
 	};
-}
+};
 
 /**
  * The context helps to identify if the FocusScope is being declared nested, to
@@ -38,11 +38,11 @@ const FocusConflictContext = React.createContext<boolean>(false);
  * for children's key down events, since the component handles the `onKeyDown`
  * event.
  */
-export const FocusScope: React.FunctionComponent<IProps> = ({
+export const FocusScope = ({
 	arrowKeysLeftRight = false,
 	arrowKeysUpDown = true,
 	children,
-}) => {
+}: Props) => {
 	const elRef = React.useRef<null | HTMLElement>(null);
 	const focusManager = useFocusManagement(elRef);
 

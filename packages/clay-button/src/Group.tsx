@@ -19,7 +19,7 @@ export interface IButtonGroupProps
 	vertical?: boolean;
 }
 
-const ClayButtonGroup: React.FunctionComponent<IButtonGroupProps> = ({
+const ClayButtonGroup = ({
 	children,
 	className,
 	role = 'group',

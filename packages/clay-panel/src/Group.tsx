@@ -37,7 +37,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	small?: boolean;
 }
 
-const ClayPanelGroup: React.FunctionComponent<IProps> = ({
+const ClayPanelGroup = ({
 	children,
 	className,
 	fluid,
