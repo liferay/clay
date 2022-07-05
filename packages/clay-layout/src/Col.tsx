@@ -10,7 +10,7 @@ type TColSize = boolean | number | 'auto';
 
 /* eslint-disable @liferay/no-abbreviations */
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Element or component to render for container
 	 */

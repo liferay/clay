@@ -87,7 +87,7 @@ const OFFSET_MAP = {
 	trtl: LEFT_OFFSET,
 };
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate if menu is showing or not.
 	 */

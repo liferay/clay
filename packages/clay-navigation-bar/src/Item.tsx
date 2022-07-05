@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
+export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Determines the active state of an dropdown list item.
 	 */

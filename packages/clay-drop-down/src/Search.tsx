@@ -9,7 +9,7 @@ import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	/**
 	 * Props to add to form element
 	 */
