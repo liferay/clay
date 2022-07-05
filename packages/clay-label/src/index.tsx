@@ -5,6 +5,7 @@
 
 import ClayIcon from '@clayui/icon';
 import ClayLink from '@clayui/link';
+import {useProvider} from '@clayui/provider';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -153,6 +154,8 @@ const ClayLabelHybrid = React.forwardRef<
 		}: IProps,
 		ref
 	) => {
+		const {focusRing} = useProvider();
+
 		return (
 			<ClayLabel
 				dismissible={withClose && !!closeButtonProps}
@@ -177,10 +180,19 @@ const ClayLabelHybrid = React.forwardRef<
 									)}
 									type="button"
 								>
-									<ClayIcon
-										spritemap={spritemap}
-										symbol="times-small"
-									/>
+									{focusRing ? (
+										<span className="c-inner" tabIndex={-1}>
+											<ClayIcon
+												spritemap={spritemap}
+												symbol="times-small"
+											/>
+										</span>
+									) : (
+										<ClayIcon
+											spritemap={spritemap}
+											symbol="times-small"
+										/>
+									)}
 								</button>
 							</ClayLabelItemAfter>
 						)}

@@ -20,6 +20,12 @@ interface IProviderProps extends IProviderContext {
 
 interface IProviderContext {
 	/**
+	 * Determines whether a focus ring should be shown to indicate
+	 * keyboard focus.
+	 */
+	focusRing?: boolean;
+
+	/**
 	 * The theme corresponds to a CSS class to scope the application.
 	 */
 	theme?: string;
@@ -31,11 +37,12 @@ Context.displayName = 'ClayProviderContext';
 
 export const Provider = ({
 	children,
+	focusRing = false,
 	spritemap,
 	theme,
 	...otherProps
 }: IProviderProps) => (
-	<Context.Provider value={{theme, ...otherProps}}>
+	<Context.Provider value={{focusRing, theme, ...otherProps}}>
 		<ClayIconSpriteContext.Provider value={spritemap}>
 			{theme ? <div className={theme}>{children}</div> : children}
 		</ClayIconSpriteContext.Provider>

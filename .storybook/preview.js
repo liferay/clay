@@ -5,7 +5,7 @@ import {Provider} from '@clayui/provider';
 
 export const decorators = [
 	(Story) => (
-		<Provider spritemap={spritemap}>
+		<Provider spritemap={spritemap} focusRing={true}>
 			<div>
 				<Story />
 			</div>

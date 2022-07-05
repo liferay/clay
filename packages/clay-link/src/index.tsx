@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -69,6 +70,8 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 		}: IProps,
 		ref
 	) => {
+		const {focusRing} = useProvider();
+
 		const TagOrComponent = React.useContext(ClayLinkContext);
 
 		let classes;
@@ -108,7 +111,13 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 				target={target}
 				{...otherProps}
 			>
-				{children}
+				{focusRing ? (
+					<span className="c-inner" tabIndex={-1}>
+						{children}
+					</span>
+				) : (
+					children
+				)}
 			</TagOrComponent>
 		);
 	}

@@ -7,6 +7,7 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
+import {useProvider} from '@clayui/provider';
 import ClaySticker from '@clayui/sticker';
 import classNames from 'classnames';
 import React from 'react';
@@ -120,6 +121,8 @@ const ListItem = ({
 	onSelectChange?: any;
 	spritemap?: string;
 }) => {
+	const {focusRing} = useProvider();
+
 	return (
 		<ClayList.Item active={selected} flex>
 			{onSelectChange && (
@@ -180,10 +183,19 @@ const ListItem = ({
 								{...dropDownTriggerProps}
 								className="component-action"
 							>
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="ellipsis-v"
-								/>
+								{focusRing ? (
+									<span className="c-inner" tabIndex={-1}>
+										<ClayIcon
+											spritemap={spritemap}
+											symbol="ellipsis-v"
+										/>
+									</span>
+								) : (
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="ellipsis-v"
+									/>
+								)}
 							</button>
 						}
 					/>

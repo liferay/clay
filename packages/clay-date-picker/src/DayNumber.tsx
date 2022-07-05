@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import {Keys} from '@clayui/shared';
 import classnames from 'classnames';
 import React from 'react';
@@ -24,6 +25,8 @@ const ClayDatePickerDayNumber = ({
 	onClick,
 	range,
 }: Props) => {
+	const {focusRing} = useProvider();
+
 	const {date, nextMonth, previousMonth} = day;
 	const [startDate, endDate] = daysSelected;
 
@@ -81,7 +84,13 @@ const ClayDatePickerDayNumber = ({
 				}}
 				type="button"
 			>
-				{date.getDate()}
+				{focusRing ? (
+					<span className="c-inner" tabIndex={-1}>
+						{date.getDate()}
+					</span>
+				) : (
+					date.getDate()
+				)}
 			</button>
 		</div>
 	);

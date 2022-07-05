@@ -4,6 +4,7 @@
  */
 
 import ClayLink from '@clayui/link';
+import {useProvider} from '@clayui/provider';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -21,6 +22,8 @@ export const ClayCardNavigation = ({
 	onClick,
 	...otherProps
 }: IProps) => {
+	const {focusRing} = useProvider();
+
 	const Container = href ? ClayLink : 'div';
 
 	return (
@@ -39,7 +42,13 @@ export const ClayCardNavigation = ({
 				role={onClick ? 'button' : undefined}
 				{...otherProps}
 			>
-				{children}
+				{focusRing ? (
+					<span className="c-inner" tabIndex={-1}>
+						{children}
+					</span>
+				) : (
+					children
+				)}
 			</Container>
 		</Context.Provider>
 	);

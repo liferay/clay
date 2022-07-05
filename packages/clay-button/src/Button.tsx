@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -72,25 +73,36 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 			...otherProps
 		}: IProps,
 		ref
-	) => (
-		<button
-			className={classNames(className, 'btn', {
-				'alert-btn': alert,
-				'btn-block': block,
-				'btn-monospaced': monospaced,
-				'btn-outline-borderless': borderless,
-				'btn-sm': small,
-				[`btn-${displayType}`]: displayType && !outline && !borderless,
-				[`btn-outline-${displayType}`]:
-					displayType && (outline || borderless),
-			})}
-			ref={ref}
-			type={type}
-			{...otherProps}
-		>
-			{children}
-		</button>
-	)
+	) => {
+		const {focusRing} = useProvider();
+
+		return (
+			<button
+				className={classNames(className, 'btn', {
+					'alert-btn': alert,
+					'btn-block': block,
+					'btn-monospaced': monospaced,
+					'btn-outline-borderless': borderless,
+					'btn-sm': small,
+					[`btn-${displayType}`]:
+						displayType && !outline && !borderless,
+					[`btn-outline-${displayType}`]:
+						displayType && (outline || borderless),
+				})}
+				ref={ref}
+				type={type}
+				{...otherProps}
+			>
+				{focusRing ? (
+					<span className="c-inner" tabIndex={-1}>
+						{children}
+					</span>
+				) : (
+					children
+				)}
+			</button>
+		);
+	}
 );
 
 ClayButton.displayName = 'ClayButton';

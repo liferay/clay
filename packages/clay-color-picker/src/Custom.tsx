@@ -4,6 +4,7 @@
  */
 
 import Icon from '@clayui/icon';
+import {useProvider} from '@clayui/provider';
 import React, {useRef} from 'react';
 import tinycolor from 'tinycolor2';
 
@@ -69,6 +70,8 @@ const ClayColorPickerCustom = ({
 	splotch,
 	spritemap,
 }: Props) => {
+	const {focusRing} = useProvider();
+
 	const previousColorRef = useRef(color);
 
 	return (
@@ -85,10 +88,19 @@ const ClayColorPickerCustom = ({
 							onClick={() => onEditorActiveChange(!editorActive)}
 							type="button"
 						>
-							<Icon
-								spritemap={spritemap}
-								symbol={editorActive ? 'times' : 'drop'}
-							/>
+							{focusRing ? (
+								<span className="c-inner" tabIndex={-1}>
+									<Icon
+										spritemap={spritemap}
+										symbol={editorActive ? 'times' : 'drop'}
+									/>
+								</span>
+							) : (
+								<Icon
+									spritemap={spritemap}
+									symbol={editorActive ? 'times' : 'drop'}
+								/>
+							)}
 						</button>
 					)}
 				</div>
