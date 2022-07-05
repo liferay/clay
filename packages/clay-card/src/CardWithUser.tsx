@@ -85,7 +85,7 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	userSymbol?: string;
 }
 
-export const ClayCardWithUser: React.FunctionComponent<IProps> = ({
+export const ClayCardWithUser = ({
 	actions,
 	checkboxProps = {},
 	description,

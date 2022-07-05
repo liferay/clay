@@ -33,7 +33,7 @@ interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 
 const defaultOnSubmit = (event: React.SyntheticEvent) => event.preventDefault();
 
-const ClayDropDownSearch: React.FunctionComponent<IProps> = ({
+const ClayDropDownSearch = ({
 	className,
 	formProps = {},
 	spritemap,

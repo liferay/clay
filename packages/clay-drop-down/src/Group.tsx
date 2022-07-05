@@ -5,17 +5,19 @@
 
 import React from 'react';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+type Props = {
+	/**
+	 * Group content.
+	 */
+	children?: React.ReactNode;
+
 	/**
 	 * Value provided is a display component that is a header for the items in the group.
 	 */
 	header?: string;
-}
+};
 
-const ClayDropDownGroup: React.FunctionComponent<IProps> = ({
-	children,
-	header,
-}: IProps) => {
+const ClayDropDownGroup = ({children, header}: Props) => {
 	return (
 		<>
 			{header && (

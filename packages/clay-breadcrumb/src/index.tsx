@@ -43,7 +43,7 @@ const findActiveItems = (items: TItems) => {
 	});
 };
 
-const ClayBreadcrumb: React.FunctionComponent<IProps> = ({
+const ClayBreadcrumb = ({
 	className,
 	ellipsisBuffer = 1,
 	ellipsisProps = {},

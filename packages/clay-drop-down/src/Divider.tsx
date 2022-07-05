@@ -5,9 +5,7 @@
 
 import React from 'react';
 
-const ClayDropDownDivider: React.FunctionComponent<
-	React.HTMLAttributes<HTMLLIElement>
-> = () => (
+const ClayDropDownDivider = () => (
 	<li aria-hidden="true" className="dropdown-divider" role="presentation" />
 );
 

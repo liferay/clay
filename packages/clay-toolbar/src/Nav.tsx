@@ -13,12 +13,7 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	wrap?: boolean;
 }
 
-const Nav: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	wrap,
-	...otherProps
-}: IProps) => (
+const Nav = ({children, className, wrap, ...otherProps}: IProps) => (
 	<ul
 		className={classNames(className, 'tbar-nav', {
 			'tbar-nav-wrap': wrap,

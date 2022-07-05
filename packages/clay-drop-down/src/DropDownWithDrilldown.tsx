@@ -105,7 +105,7 @@ type History = {
 	title: string;
 };
 
-export const ClayDropDownWithDrilldown: React.FunctionComponent<IProps> = ({
+export const ClayDropDownWithDrilldown = ({
 	active,
 	alignmentByViewport,
 	alignmentPosition,

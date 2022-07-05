@@ -59,7 +59,7 @@ interface IProps
 
 const noop = () => {};
 
-export const ClayCardWithNavigation: React.FunctionComponent<IProps> = ({
+export const ClayCardWithNavigation = ({
 	children,
 	description,
 	horizontal = false,

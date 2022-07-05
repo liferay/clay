@@ -9,7 +9,7 @@ import tinycolor from 'tinycolor2';
 import {usePointerPosition} from './hooks';
 import {colorToXY, xToSaturation, yToVisibility} from './util';
 
-interface IProps {
+type Props = {
 	/**
 	 * Color value that is currently selected.
 	 */
@@ -24,7 +24,7 @@ interface IProps {
 	 * Callback function for when saturation or visibility values change
 	 */
 	onChange?: (saturation: number, visibility: number) => void;
-}
+};
 
 const useIsomorphicLayoutEffect =
 	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
@@ -32,11 +32,11 @@ const useIsomorphicLayoutEffect =
 /**
  * Renders GradientSelector component
  */
-const ClayColorPickerGradientSelector: React.FunctionComponent<IProps> = ({
+const ClayColorPickerGradientSelector = ({
 	color,
 	onChange = () => {},
 	hue = 0,
-}) => {
+}: Props) => {
 	const containerRef = React.useRef<HTMLDivElement>(null);
 	const selectorActive = React.useRef<boolean>(false);
 

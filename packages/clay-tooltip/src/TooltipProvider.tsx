@@ -183,16 +183,14 @@ interface IPropsWithScope extends IPropsBase {
 	scope: string;
 }
 
-const TooltipProvider: React.FunctionComponent<
-	IPropsWithChildren | IPropsWithScope
-> = ({
+const TooltipProvider = ({
 	autoAlign = true,
 	children,
 	containerProps = {},
 	contentRenderer = (props) => props.title,
 	delay = 600,
 	scope,
-}) => {
+}: IPropsWithChildren | IPropsWithScope) => {
 	const [{align, message = '', setAsHTML, show}, dispatch] = React.useReducer(
 		reducer,
 		initialState

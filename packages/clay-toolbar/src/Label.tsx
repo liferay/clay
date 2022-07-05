@@ -9,11 +9,7 @@ import React from 'react';
 
 export interface IProps extends React.ComponentProps<typeof ClayLabel> {}
 
-const Label: React.FunctionComponent<IProps> = ({
-	children,
-	className,
-	...otherProps
-}: IProps) => (
+const Label = ({children, className, ...otherProps}: IProps) => (
 	<ClayLabel
 		className={classNames(className, 'component-label tbar-label')}
 		{...otherProps}

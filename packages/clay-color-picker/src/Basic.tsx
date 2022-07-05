@@ -7,7 +7,7 @@ import React from 'react';
 
 import Splotch from './Splotch';
 
-interface IProps {
+type Props = {
 	/**
 	 * List of hex's that will display as a color splotch
 	 */
@@ -22,16 +22,12 @@ interface IProps {
 	 * Callback for when a color is clicked
 	 */
 	onChange: (val: string) => void;
-}
+};
 
 /**
  * Renders basic color picker
  */
-const ClayColorPickerBasic: React.FunctionComponent<IProps> = ({
-	colors,
-	label,
-	onChange,
-}) => (
+const ClayColorPickerBasic = ({colors, label, onChange}: Props) => (
 	<>
 		{label && (
 			<div className="clay-color-header">

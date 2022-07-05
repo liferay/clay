@@ -33,13 +33,13 @@ interface IProps extends TooltipProps {
 	itemRenderer?: (val: any) => React.ReactNode;
 }
 
-const ClayRechartsTooltip: React.FunctionComponent<IProps> = ({
+const ClayRechartsTooltip = ({
 	active,
 	label,
 	payload,
 	labelRenderer = (val) => val,
 	itemRenderer = defaultRenderer,
-}) => {
+}: IProps) => {
 	if (active) {
 		return (
 			<div className="popover" style={{position: 'static'}}>

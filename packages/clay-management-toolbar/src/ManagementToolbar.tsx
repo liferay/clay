@@ -18,25 +18,34 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
 	active?: boolean;
 }
 
-const ClayManagementToolbar: React.FunctionComponent<IProps> & {
+function ClayManagementToolbar(props: IProps): JSX.Element & {
 	Item: typeof Item;
 	ItemList: typeof ItemList;
 	Search: typeof Search;
-} = ({active = false, children, className, ...otherProps}: IProps) => (
-	<nav
-		{...otherProps}
-		className={classNames(
-			'management-bar navbar navbar-expand-md',
-			className,
-			{
-				'management-bar-light': !active,
-				'management-bar-primary navbar-nowrap': active,
-			}
-		)}
-	>
-		<ClayLayout.ContainerFluid>{children}</ClayLayout.ContainerFluid>
-	</nav>
-);
+};
+
+function ClayManagementToolbar({
+	active = false,
+	children,
+	className,
+	...otherProps
+}: IProps) {
+	return (
+		<nav
+			{...otherProps}
+			className={classNames(
+				'management-bar navbar navbar-expand-md',
+				className,
+				{
+					'management-bar-light': !active,
+					'management-bar-primary navbar-nowrap': active,
+				}
+			)}
+		>
+			<ClayLayout.ContainerFluid>{children}</ClayLayout.ContainerFluid>
+		</nav>
+	);
+}
 
 ClayManagementToolbar.Item = Item;
 ClayManagementToolbar.ItemList = ItemList;

@@ -20,9 +20,11 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	selectable?: boolean;
 }
 
-const ClayCardHorizontalBody: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => (
+const ClayCardHorizontalBody = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) => (
 	<div
 		className={classNames('card card-horizontal', className)}
 		{...otherProps}
@@ -31,26 +33,36 @@ const ClayCardHorizontalBody: React.FunctionComponent<
 	</div>
 );
 
-export const ClayCardHorizontal: React.FunctionComponent<IProps> & {
+export function ClayCardHorizontal(props: IProps): JSX.Element & {
 	Body: typeof ClayCardHorizontalBody;
-} = ({active, children, className, selectable, ...otherProps}) => (
-	<Context.Provider value={{horizontal: true, interactive: false}}>
-		<div
-			className={classNames(
-				className,
-				{
-					active,
-					'card card-horizontal': !selectable,
-					'form-check-card form-check form-check-middle-left':
-						selectable,
-				},
-				'card-type-directory'
-			)}
-			{...otherProps}
-		>
-			{children}
-		</div>
-	</Context.Provider>
-);
+};
+
+export function ClayCardHorizontal({
+	active,
+	children,
+	className,
+	selectable,
+	...otherProps
+}: IProps) {
+	return (
+		<Context.Provider value={{horizontal: true, interactive: false}}>
+			<div
+				className={classNames(
+					className,
+					{
+						active,
+						'card card-horizontal': !selectable,
+						'form-check-card form-check form-check-middle-left':
+							selectable,
+					},
+					'card-type-directory'
+				)}
+				{...otherProps}
+			>
+				{children}
+			</div>
+		</Context.Provider>
+	);
+}
 
 ClayCardHorizontal.Body = ClayCardHorizontalBody;

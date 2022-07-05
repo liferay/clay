@@ -120,10 +120,7 @@ export const Monospaced = () => (
 );
 
 export const CustomLinkComponent = () => {
-	const ConfirmLink: React.FunctionComponent<any> = ({
-		children,
-		...otherProps
-	}) => (
+	const ConfirmLink = ({children, ...otherProps}: any) => (
 		<a
 			{...otherProps}
 			onClick={(event) => {

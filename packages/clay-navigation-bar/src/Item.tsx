@@ -18,7 +18,7 @@ interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	children: React.ReactElement;
 }
 
-const ClayNavigationBarIcon: React.FunctionComponent<IItemProps> = ({
+const ClayNavigationBarIcon = ({
 	active = false,
 	children,
 	className,

@@ -32,7 +32,7 @@ export interface IProps {
 	spritemap?: string;
 }
 
-const DrilldownMenu: React.FunctionComponent<IProps> = ({
+const DrilldownMenu = ({
 	active,
 	direction,
 	header,
@@ -40,7 +40,7 @@ const DrilldownMenu: React.FunctionComponent<IProps> = ({
 	onBack,
 	onForward,
 	spritemap,
-}) => {
+}: IProps) => {
 	const initialClasses = classNames('transitioning', {
 		'drilldown-prev-initial': direction === 'prev',
 	});

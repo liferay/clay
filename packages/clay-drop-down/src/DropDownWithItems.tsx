@@ -195,11 +195,11 @@ interface IInternalItem {
 	spritemap?: string;
 }
 
-const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
+const Checkbox = ({
 	checked = false,
 	onChange = () => {},
 	...otherProps
-}) => {
+}: IItem & IInternalItem) => {
 	const [value, setValue] = useState<boolean>(checked);
 
 	return (
@@ -218,40 +218,42 @@ const Checkbox: React.FunctionComponent<IItem & IInternalItem> = ({
 
 const ClayDropDownContext = React.createContext({close: () => {}});
 
-const Item: React.FunctionComponent<Omit<IItem, 'onChange'> & IInternalItem> =
-	({label, onClick, ...props}) => {
-		const {close} = useContext(ClayDropDownContext);
-
-		return (
-			<ClayDropDown.Item
-				onClick={(event) => {
-					if (onClick) {
-						onClick(event);
-					}
-
-					close();
-				}}
-				{...props}
-			>
-				{label}
-			</ClayDropDown.Item>
-		);
-	};
-
-const Group: React.FunctionComponent<IItem & IInternalItem> = ({
-	items,
+const Item = ({
 	label,
-	spritemap,
-}) => (
+	onClick,
+	...props
+}: Omit<IItem, 'onChange'> & IInternalItem) => {
+	const {close} = useContext(ClayDropDownContext);
+
+	return (
+		<ClayDropDown.Item
+			onClick={(event) => {
+				if (onClick) {
+					onClick(event);
+				}
+
+				close();
+			}}
+			{...props}
+		>
+			{label}
+		</ClayDropDown.Item>
+	);
+};
+
+const Group = ({items, label, spritemap}: IItem & IInternalItem) => (
 	<>
 		<ClayDropDownGroup header={label} />
 		{items && <DropDownContent items={items} spritemap={spritemap} />}
 	</>
 );
 
-const Contextual: React.FunctionComponent<
-	Omit<IItem, 'onChange'> & IInternalItem
-> = ({items, label, spritemap, ...otherProps}) => {
+const Contextual = ({
+	items,
+	label,
+	spritemap,
+	...otherProps
+}: Omit<IItem, 'onChange'> & IInternalItem) => {
 	const [visible, setVisible] = useState(false);
 	const {close} = useContext(ClayDropDownContext);
 
@@ -334,10 +336,7 @@ interface IRadioContext {
 
 const RadioGroupContext = React.createContext({} as IRadioContext);
 
-const Radio: React.FunctionComponent<IItem & IInternalItem> = ({
-	value = '',
-	...otherProps
-}) => {
+const Radio = ({value = '', ...otherProps}: IItem & IInternalItem) => {
 	const {checked, name, onChange} = useContext(RadioGroupContext);
 
 	return (
@@ -354,14 +353,14 @@ const Radio: React.FunctionComponent<IItem & IInternalItem> = ({
 	);
 };
 
-const RadioGroup: React.FunctionComponent<IItem & IInternalItem> = ({
+const RadioGroup = ({
 	items,
 	label,
 	name,
 	onChange = () => {},
 	spritemap,
 	value: defaultValue = '',
-}) => {
+}: IItem & IInternalItem) => {
 	const [value, setValue] = useState(defaultValue);
 
 	const params = {
@@ -404,10 +403,7 @@ const TYPE_MAP = {
 	radiogroup: RadioGroup,
 };
 
-const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
-	items,
-	spritemap,
-}) => (
+const DropDownContent = ({items, spritemap}: IDropDownContentProps) => (
 	<ClayDropDown.ItemList>
 		{items.map(({type, ...item}, key) => {
 			const Item = TYPE_MAP[type || 'item'];
@@ -417,7 +413,7 @@ const DropDownContent: React.FunctionComponent<IDropDownContentProps> = ({
 	</ClayDropDown.ItemList>
 );
 
-export const ClayDropDownWithItems: React.FunctionComponent<IProps> = ({
+export const ClayDropDownWithItems = ({
 	active,
 	alignmentByViewport,
 	alignmentPosition,

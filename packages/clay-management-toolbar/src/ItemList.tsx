@@ -13,10 +13,7 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	expand?: boolean;
 }
 
-const ItemList: React.FunctionComponent<IProps> = ({
-	children,
-	expand,
-}: IProps) => (
+const ItemList = ({children, expand}: IProps) => (
 	<ul
 		className={classNames('navbar-nav', {
 			'navbar-nav-expand': expand,

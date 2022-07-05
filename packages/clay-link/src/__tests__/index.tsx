@@ -72,10 +72,7 @@ describe('ClayLink', () => {
 	});
 
 	it('uses custom link component via context', () => {
-		const BoldLink: React.FunctionComponent<any> = ({
-			children,
-			...otherProps
-		}) => (
+		const BoldLink = ({children, ...otherProps}: any) => (
 			<a {...otherProps}>
 				<strong>{children}</strong>
 			</a>

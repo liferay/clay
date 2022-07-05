@@ -6,9 +6,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayPanelHeader: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement>
-> = ({children, className, ...otherProps}) => {
+const ClayPanelHeader = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLDivElement>) => {
 	return (
 		<div {...otherProps} className={classNames('panel-header', className)}>
 			{children}

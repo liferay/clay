@@ -9,11 +9,7 @@ import React, {useState} from 'react';
 
 import ClayTabs from '../src';
 
-const DropDownWithState: React.FunctionComponent<any> = ({
-	children,
-	trigger,
-	...others
-}) => {
+const DropDownWithState = ({children, trigger, ...others}: any) => {
 	const [active, setActive] = useState<boolean>(false);
 
 	return (
@@ -21,7 +17,7 @@ const DropDownWithState: React.FunctionComponent<any> = ({
 			active={active}
 			alignmentPosition={Align.BottomLeft}
 			hasRightSymbols
-			onActiveChange={(newVal) => setActive(newVal)}
+			onActiveChange={(newVal: boolean) => setActive(newVal)}
 			trigger={trigger}
 			{...others}
 		>

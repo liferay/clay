@@ -111,10 +111,12 @@ const ICON_MAP = {
 
 const VARIANTS = ['inline', 'feedback'];
 
-const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
+function ClayAlert(props: IClayAlertProps): JSX.Element & {
 	Footer: typeof Footer;
 	ToastContainer: typeof ToastContainer;
-} = ({
+};
+
+function ClayAlert({
 	actions,
 	autoClose,
 	children,
@@ -126,13 +128,13 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 	title,
 	variant,
 	...otherProps
-}: IClayAlertProps) => {
+}: IClayAlertProps) {
 	const {pauseAutoCloseTimer, startAutoCloseTimer} = useAutoClose(
 		autoClose,
 		onClose
 	);
 
-	const ConditionalContainer: React.FunctionComponent<{}> = ({children}) =>
+	const ConditionalContainer = ({children}: any) =>
 		variant === 'stripe' ? (
 			<div className="container">{children}</div>
 		) : (
@@ -209,7 +211,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 			</ConditionalContainer>
 		</div>
 	);
-};
+}
 
 ClayAlert.Footer = Footer;
 ClayAlert.ToastContainer = ToastContainer;

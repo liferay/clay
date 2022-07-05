@@ -130,7 +130,7 @@ export const getSelectedIndexes = (
 		return acc;
 	}, []);
 
-const ClaySelectBox: React.FunctionComponent<IProps> = ({
+const ClaySelectBox = ({
 	ariaLabels = {
 		reorderDown: 'Reorder Down',
 		reorderUp: 'Reorder Up',

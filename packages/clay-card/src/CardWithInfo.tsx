@@ -110,7 +110,7 @@ interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	title: string;
 }
 
-export const ClayCardWithInfo: React.FunctionComponent<IProps> = ({
+export const ClayCardWithInfo = ({
 	actions,
 	checkboxProps = {},
 	description,

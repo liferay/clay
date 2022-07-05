@@ -177,7 +177,7 @@ interface IProps
 	value?: string;
 }
 
-const ClayColorPicker: React.FunctionComponent<IProps> = ({
+const ClayColorPicker = ({
 	active,
 	ariaLabels = DEFAULT_ARIA_LABELS,
 	colors,

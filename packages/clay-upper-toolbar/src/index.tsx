@@ -10,10 +10,7 @@ import React from 'react';
 
 export interface IInputProps extends React.ComponentProps<typeof ClayInput> {}
 
-const Input: React.FunctionComponent<IInputProps> = ({
-	className,
-	...otherProps
-}) => (
+const Input = ({className, ...otherProps}: IInputProps) => (
 	<Item expand>
 		<ClayInput.Group>
 			<ClayInput.GroupItem>
@@ -36,12 +33,7 @@ interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	expand?: boolean;
 }
 
-const Item: React.FunctionComponent<IItemProps> = ({
-	children,
-	className,
-	expand,
-	...otherProps
-}: IItemProps) => {
+const Item = ({children, className, expand, ...otherProps}: IItemProps) => {
 	return (
 		<li
 			className={classNames(className, 'tbar-item', {
@@ -56,9 +48,11 @@ const Item: React.FunctionComponent<IItemProps> = ({
 
 Item.displayName = 'ClayUpperToolbarItem';
 
-const ClayUpperToolbar: React.FunctionComponent<
-	React.HTMLAttributes<HTMLElement>
-> = ({children, className, ...otherProps}) => {
+const ClayUpperToolbar = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLElement>) => {
 	return (
 		<nav
 			className={classNames(

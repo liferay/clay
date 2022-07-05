@@ -26,17 +26,19 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	stacked?: boolean;
 }
 
-const Nav: React.FunctionComponent<IProps> & {
+function Nav(props: IProps): JSX.Element & {
 	Item: typeof NavItem;
 	Link: typeof NavLink;
-} = ({
+};
+
+function Nav({
 	children,
 	className,
 	nestMargins,
 	nested,
 	stacked,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	return (
 		<ul
 			{...otherProps}
@@ -49,7 +51,7 @@ const Nav: React.FunctionComponent<IProps> & {
 			{children}
 		</ul>
 	);
-};
+}
 
 Nav.Item = NavItem;
 Nav.Link = NavLink;

@@ -18,11 +18,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	children?: any;
 }
 
-const ModalWithState: React.FunctionComponent<IProps> = ({
+const ModalWithState = ({
 	children,
 	initialVisible = false,
 	...props
-}) => {
+}: IProps) => {
 	const [visible, setVisible] = React.useState(initialVisible);
 	const {observer} = useModal({onClose: () => setVisible(false)});
 

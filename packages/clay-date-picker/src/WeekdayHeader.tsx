@@ -7,22 +7,22 @@ import React from 'react';
 
 import {FirstDayOfWeek} from './types';
 
-interface IChildrenProps {
+type ChildrenProps = {
 	key: number;
 	weekday: string;
-}
+};
 
-interface IProps {
-	children: (object: IChildrenProps) => React.ReactNode;
+type Props = {
+	children: (object: ChildrenProps) => React.ReactNode;
 	firstDayOfWeek: FirstDayOfWeek;
 	weekdaysShort: Array<string>;
-}
+};
 
-const ClayDatePickerWeekdayHeader: React.FunctionComponent<IProps> = ({
+const ClayDatePickerWeekdayHeader = ({
 	children,
 	firstDayOfWeek = 0,
 	weekdaysShort,
-}) => (
+}: Props) => (
 	<div className="date-picker-days-row date-picker-row">
 		{weekdaysShort.map((weekday, index) => {
 			return React.Children.only(

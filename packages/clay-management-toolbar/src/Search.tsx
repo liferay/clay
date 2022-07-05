@@ -20,12 +20,7 @@ interface IProps extends React.FormHTMLAttributes<HTMLFormElement> {
 	showMobile?: boolean;
 }
 
-const Search: React.FunctionComponent<IProps> = ({
-	children,
-	onlySearch,
-	showMobile,
-	...otherProps
-}: IProps) => {
+const Search = ({children, onlySearch, showMobile, ...otherProps}: IProps) => {
 	const content = (
 		<form {...otherProps} role="search">
 			{children}

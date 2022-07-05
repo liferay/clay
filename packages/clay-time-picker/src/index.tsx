@@ -159,7 +159,7 @@ const DEFAULT_CONFIG = {
 
 const regex = /^\d+$/;
 
-const ClayTimePicker: React.FunctionComponent<IProps> = ({
+const ClayTimePicker = ({
 	ariaLabels = {
 		ampm: 'Select time of day (AM/PM) using up (PM) and down (AM) arrow keys',
 		clear: 'Delete the entered time',

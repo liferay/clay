@@ -28,19 +28,21 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 
 const CLAY_REGEX = /Clay(?!ListItem|ListHeader).+/;
 
-const ClayList: React.FunctionComponent<IProps> & {
+function ClayList(props: IProps): JSX.Element & {
 	Header: typeof Header;
 	Item: typeof Item;
 	ItemField: typeof ClayLayout.ContentCol;
 	ItemText: typeof ItemText;
 	ItemTitle: typeof ItemTitle;
 	QuickActionMenu: typeof QuickActionMenu;
-} = ({
+};
+
+function ClayList({
 	children,
 	className,
 	showQuickActionsOnHover = true,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	return (
 		<ul
 			{...otherProps}
@@ -69,7 +71,7 @@ const ClayList: React.FunctionComponent<IProps> & {
 				})}
 		</ul>
 	);
-};
+}
 
 ClayList.displayName = 'ClayList';
 

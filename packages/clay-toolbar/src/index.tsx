@@ -36,7 +36,7 @@ interface IProps extends React.HTMLAttributes<HTMLElement> {
 		  };
 }
 
-const ClayToolbar: React.FunctionComponent<IProps> & {
+function ClayToolbar(props: IProps): JSX.Element & {
 	Action: typeof Action;
 	Item: typeof Item;
 	Input: typeof Input;
@@ -44,14 +44,16 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 	Link: typeof Link;
 	Nav: typeof Nav;
 	Section: typeof Section;
-} = ({
+};
+
+function ClayToolbar({
 	children,
 	className,
 	inlineBreakpoint,
 	light,
 	subnav,
 	...otherProps
-}: IProps) => {
+}: IProps) {
 	subnav = subnav === true ? {} : subnav;
 
 	const classes = classNames(
@@ -74,7 +76,7 @@ const ClayToolbar: React.FunctionComponent<IProps> & {
 			{children}
 		</nav>
 	);
-};
+}
 
 ClayToolbar.Action = Action;
 ClayToolbar.Item = Item;

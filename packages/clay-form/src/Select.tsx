@@ -6,15 +6,19 @@
 import classNames from 'classnames';
 import React from 'react';
 
-const OptGroup: React.FunctionComponent<
-	React.OptgroupHTMLAttributes<HTMLOptGroupElement>
-> = ({children, ...otherProps}) => (
+const OptGroup = ({
+	children,
+	...otherProps
+}: React.OptgroupHTMLAttributes<HTMLOptGroupElement>) => (
 	<optgroup {...otherProps}>{children}</optgroup>
 );
 
-const Option: React.FunctionComponent<
-	React.OptionHTMLAttributes<HTMLOptionElement>
-> = ({label, ...otherProps}) => <option {...otherProps}>{label}</option>;
+const Option = ({
+	label,
+	...otherProps
+}: React.OptionHTMLAttributes<HTMLOptionElement>) => (
+	<option {...otherProps}>{label}</option>
+);
 
 interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	/**
@@ -23,19 +27,23 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	sizing?: 'lg' | 'sm';
 }
 
-const ClaySelect: React.FunctionComponent<IProps> & {
+function ClaySelect(props: IProps): JSX.Element & {
 	OptGroup: typeof OptGroup;
 	Option: typeof Option;
-} = ({children, className, sizing, ...otherProps}: IProps) => (
-	<select
-		{...otherProps}
-		className={classNames('form-control', className, {
-			[`form-control-${sizing}`]: sizing,
-		})}
-	>
-		{children}
-	</select>
-);
+};
+
+function ClaySelect({children, className, sizing, ...otherProps}: IProps) {
+	return (
+		<select
+			{...otherProps}
+			className={classNames('form-control', className, {
+				[`form-control-${sizing}`]: sizing,
+			})}
+		>
+			{children}
+		</select>
+	);
+}
 
 ClaySelect.OptGroup = OptGroup;
 ClaySelect.Option = Option;

@@ -14,7 +14,7 @@ export interface IPaginationItemProps
 	href?: string;
 }
 
-const ClayPaginationItem: React.FunctionComponent<IPaginationItemProps> = ({
+const ClayPaginationItem = ({
 	active = false,
 	children,
 	disabled = false,

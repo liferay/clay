@@ -7,9 +7,11 @@ import ClayButton from '@clayui/button';
 import classNames from 'classnames';
 import React from 'react';
 
-const ClayDropDownAction: React.FunctionComponent<
-	React.HTMLAttributes<HTMLButtonElement>
-> = ({children, className, ...otherProps}) => {
+const ClayDropDownAction = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLButtonElement>) => {
 	return (
 		<div className={classNames('dropdown-section', className)}>
 			<ClayButton block {...otherProps}>

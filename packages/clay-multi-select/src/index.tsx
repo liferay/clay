@@ -61,7 +61,7 @@ interface IMenuRendererProps {
 	value: string;
 }
 
-type MenuRenderer = React.FunctionComponent<IMenuRendererProps>;
+type MenuRenderer = (props: IMenuRendererProps) => JSX.Element;
 
 export interface IProps
 	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {

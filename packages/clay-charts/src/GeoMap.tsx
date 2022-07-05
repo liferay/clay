@@ -233,7 +233,7 @@ export interface IProps {
 /**
  * GeoMap Chart component.
  */
-const Geomap: React.FunctionComponent<IProps> = ({
+const Geomap = ({
 	data,
 	elementProps = {},
 	forwardRef,

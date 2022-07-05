@@ -6,7 +6,7 @@
 import ClayIcon from '@clayui/icon';
 import React from 'react';
 
-interface IProps {
+type Props = {
 	/**
 	 * Flag to indicate if step should show its been completed
 	 */
@@ -33,13 +33,10 @@ interface IProps {
 	 * Value to display below step icon
 	 */
 	subTitle?: React.ReactText;
-}
+};
 
-const ClayMultiStepNavIndicator = React.forwardRef<HTMLDivElement, IProps>(
-	(
-		{complete, innerRef, label, onClick, spritemap, subTitle}: IProps,
-		ref
-	) => (
+const ClayMultiStepNavIndicator = React.forwardRef<HTMLDivElement, Props>(
+	({complete, innerRef, label, onClick, spritemap, subTitle}: Props, ref) => (
 		<div className="multi-step-indicator" ref={ref}>
 			{subTitle && (
 				<div className="multi-step-indicator-label">{subTitle}</div>

@@ -58,7 +58,7 @@ interface IGroupProps
 	value?: React.ReactText;
 }
 
-const ClayRadioGroup: React.FunctionComponent<IGroupProps> = ({
+const ClayRadioGroup = ({
 	children,
 	className,
 	defaultValue,

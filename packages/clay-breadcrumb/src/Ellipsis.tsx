@@ -22,11 +22,7 @@ interface IEllipsisProps extends React.HTMLAttributes<HTMLLIElement> {
 	spritemap?: string;
 }
 
-const Ellipsis: React.FunctionComponent<IEllipsisProps> = ({
-	items,
-	spritemap,
-	...otherProps
-}) => (
+const Ellipsis = ({items, spritemap, ...otherProps}: IEllipsisProps) => (
 	<ClayDropDown
 		className="breadcrumb-item"
 		containerElement="li"

@@ -8,9 +8,11 @@ import React from 'react';
 
 import Context from './Context';
 
-const ClayCardCaption: React.FunctionComponent<
-	React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>
-> = ({children, className, ...otherProps}) => {
+const ClayCardCaption = ({
+	children,
+	className,
+	...otherProps
+}: React.HTMLAttributes<HTMLDivElement | HTMLSpanElement>) => {
 	const {interactive} = React.useContext(Context);
 
 	const TagName = interactive ? 'span' : 'div';

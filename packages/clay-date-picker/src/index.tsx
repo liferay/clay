@@ -204,10 +204,7 @@ const normalizeTime = (date: Date) =>
 /**
  * ClayDatePicker component.
  */
-const ClayDatePicker: React.FunctionComponent<IProps> = React.forwardRef<
-	HTMLInputElement,
-	IProps
->(
+const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 	(
 		{
 			ariaLabels = {

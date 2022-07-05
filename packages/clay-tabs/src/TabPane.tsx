@@ -23,7 +23,7 @@ const delay = (fn: Function, val: number = 150) =>
 		fn();
 	}, val);
 
-const TabPane: React.FunctionComponent<ITabPaneProps> = ({
+const TabPane = ({
 	active = false,
 	children,
 	className,

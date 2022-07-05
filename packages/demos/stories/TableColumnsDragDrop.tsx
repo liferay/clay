@@ -62,10 +62,7 @@ export interface ICustomDragLayerProps {
 	width: number;
 }
 
-const CustomDragLayer: React.FunctionComponent<ICustomDragLayerProps> = ({
-	columns,
-	width,
-}) => {
+const CustomDragLayer = ({columns, width}: ICustomDragLayerProps) => {
 	const {currentOffset, initialOffset, isDragging, item} = useDragLayer(
 		(monitor) => ({
 			currentOffset: monitor.getSourceClientOffset(),
@@ -115,12 +112,12 @@ export interface IColumnDragPreviewProps {
 	width: number;
 }
 
-const ColumnDragPreview: React.FunctionComponent<IColumnDragPreviewProps> = ({
+const ColumnDragPreview = ({
 	column,
 	currentOffset,
 	initialOffset,
 	width,
-}) => {
+}: IColumnDragPreviewProps) => {
 	const dragLayerStyles: React.CSSProperties = {
 		height: '100%',
 		left: 0,
@@ -205,57 +202,61 @@ interface IDragItem {
 	type: string;
 }
 
-const DraggableTableHeaderCell: React.FunctionComponent<IDraggableTableHeadingProps> =
-	({id, index, onMove, title}) => {
-		const ref = React.useRef<HTMLTableHeaderCellElement>(null);
+const DraggableTableHeaderCell = ({
+	id,
+	index,
+	onMove,
+	title,
+}: IDraggableTableHeadingProps) => {
+	const ref = React.useRef<HTMLTableHeaderCellElement>(null);
 
-		const [{canDrop}, drop] = useDrop({
-			accept: TABLE_COLUMN_DND_TYPE,
-			collect: (monitor: DropTargetMonitor) => ({
-				canDrop: monitor.canDrop(),
-			}),
-			hover(dragItem: IDragItem) {
-				const dragIndex = dragItem.index;
+	const [{canDrop}, drop] = useDrop({
+		accept: TABLE_COLUMN_DND_TYPE,
+		collect: (monitor: DropTargetMonitor) => ({
+			canDrop: monitor.canDrop(),
+		}),
+		hover(dragItem: IDragItem) {
+			const dragIndex = dragItem.index;
 
-				const hoverIndex = index;
+			const hoverIndex = index;
 
-				if (!ref.current || dragIndex === hoverIndex) {
-					return;
-				}
+			if (!ref.current || dragIndex === hoverIndex) {
+				return;
+			}
 
-				onMove(dragIndex, hoverIndex);
+			onMove(dragIndex, hoverIndex);
 
-				dragItem.index = hoverIndex;
-			},
-		});
+			dragItem.index = hoverIndex;
+		},
+	});
 
-		const [{itemBeingDragged}, drag, preview] = useDrag({
-			collect: (monitor: any) => ({
-				itemBeingDragged: monitor.getItem() || {id: 0},
-			}),
-			item: {id, index, type: TABLE_COLUMN_DND_TYPE},
-		});
+	const [{itemBeingDragged}, drag, preview] = useDrag({
+		collect: (monitor: any) => ({
+			itemBeingDragged: monitor.getItem() || {id: 0},
+		}),
+		item: {id, index, type: TABLE_COLUMN_DND_TYPE},
+	});
 
-		React.useEffect(() => {
-			preview(getEmptyImage(), {captureDraggingState: true});
-		}, [preview]);
+	React.useEffect(() => {
+		preview(getEmptyImage(), {captureDraggingState: true});
+	}, [preview]);
 
-		drag(drop(ref));
+	drag(drop(ref));
 
-		return (
-			<ClayTable.Cell
-				className={classNames('c-drag', {
-					'c-dragging': itemBeingDragged.id === id,
-					'c-droppable': canDrop,
-				})}
-				headingCell
-				headingTitle
-				ref={ref}
-			>
-				{title}
-			</ClayTable.Cell>
-		);
-	};
+	return (
+		<ClayTable.Cell
+			className={classNames('c-drag', {
+				'c-dragging': itemBeingDragged.id === id,
+				'c-droppable': canDrop,
+			})}
+			headingCell
+			headingTitle
+			ref={ref}
+		>
+			{title}
+		</ClayTable.Cell>
+	);
+};
 
 const ClayTableWithDraggableColumns: React.FunctionComponent = () => {
 	const [tableColumns, setTableColumns] = React.useState(initialTableColumns);
