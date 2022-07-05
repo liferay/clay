@@ -29,9 +29,9 @@
 	resize: $direction;
 }
 
-// * REUSE-Snippet-Begin
+// * SPDX-SnippetBegin
 // * SPDX-License-Identifier: APLv2
-// * SPDX-FileCopyrightText: © 2018 A11Y Project <https://a11yproject.com/posts/how-to-hide-content/>
+// * SPDX-SnippetCopyrightText: © 2018 A11Y Project <https://a11yproject.com/posts/how-to-hide-content/>
 // *
 
 /// A Bootstrap 4 mixin that generates styles to only display content to screen readers.
@@ -48,11 +48,11 @@
 	width: 1px;
 }
 
-// * REUSE-Snippet-End
+// * SPDX-SnippetEnd
 
-// * REUSE-Snippet-Begin
+// * SPDX-SnippetBegin
 // * SPDX-License-Identifier: MIT
-// * SPDX-FileCopyrightText: © 2018 HTML5 Boilerplate <https://github.com/h5bp/main.css>
+// * SPDX-SnippetCopyrightText: © 2018 HTML5 Boilerplate <https://github.com/h5bp/main.css>
 // *
 
 /// A Bootstrap 4 mixin to display `.sr-only` content when focused. Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
@@ -69,7 +69,7 @@
 	}
 }
 
-// * REUSE-Snippet-End
+// * SPDX-SnippetEnd
 
 /// A Bootstrap 4 mixin for generating `width` and `height` properties.
 /// @deprecated

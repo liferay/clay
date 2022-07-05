@@ -4,9 +4,9 @@
 	@return map-remove((), 'key');
 }
 
-// * REUSE-Snippet-Begin
+// * SPDX-SnippetBegin
 // * SPDX-License-Identifier: MIT
-// * SPDX-FileCopyrightText: © 2014 Kitty Giraudel <https://kittygiraudel.com/>
+// * SPDX-SnippetCopyrightText: © 2014 Kitty Giraudel <https://kittygiraudel.com/>
 // *
 
 /// Add `$unit` to `$value`
@@ -95,11 +95,11 @@
 	@return if($minus, -$result, $result);
 }
 
-// * REUSE-Snippet-End
+// * SPDX-SnippetEnd
 
-// * REUSE-Snippet-Begin
+// * SPDX-SnippetBegin
 // * SPDX-License-Identifier: MIT
-// * SPDX-FileCopyrightText: © 2014 Kitty Giraudel <https://github.com/KittyGiraudel/SassyJSON>
+// * SPDX-SnippetCopyrightText: © 2014 Kitty Giraudel <https://github.com/KittyGiraudel/SassyJSON>
 // *
 
 /// Logs an error at `$pointer` with `$string` message
@@ -606,4 +606,4 @@
 	}
 }
 
-// * REUSE-Snippet-End
+// * SPDX-SnippetEnd
