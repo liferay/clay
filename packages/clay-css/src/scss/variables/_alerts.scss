@@ -185,6 +185,7 @@ $alert-indicator: map-deep-merge(
 		lead: (
 			margin-left: $alert-lead-spacer-x,
 		),
+		line-height: 1,
 	),
 	$alert-indicator
 );
@@ -397,6 +398,7 @@ $alert-notification-sm-down: map-merge(
 $alert-autofit-row: () !default;
 $alert-autofit-row: map-deep-merge(
 	(
+		align-items: baseline,
 		margin-left: -0.5rem,
 		margin-right: -0.5rem,
 		width: auto,
