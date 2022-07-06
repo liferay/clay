@@ -1,5 +1,27 @@
 $bg-checkered-fg: $gray-200 !default;
+
+// .inline-scroller
+
 $inline-scroller-max-height: 125px !default;
+
+$inline-scroller: () !default;
+$inline-scroller: map-deep-merge(
+	(
+		-webkit-overflow-scrolling: touch,
+		list-style: none,
+		margin: 0,
+		max-height: $inline-scroller-max-height,
+		overflow: auto,
+		padding: 0,
+		focus: (
+			outline: 0,
+		),
+		focus-visible: (
+			box-shadow: $component-focus-box-shadow,
+		)
+	),
+	$inline-scroller
+);
 
 // Autofit Row
 

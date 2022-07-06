@@ -1,5 +1,27 @@
 $cadmin-bg-checkered-fg: $cadmin-gray-300 !default;
+
+// .inline-scroller
+
 $cadmin-inline-scroller-max-height: 125px !default;
+
+$cadmin-inline-scroller: () !default;
+$cadmin-inline-scroller: map-deep-merge(
+	(
+		list-style: none,
+		margin: 0,
+		max-height: $cadmin-inline-scroller-max-height,
+		overflow: auto,
+		-webkit-overflow-scrolling: touch,
+		padding: 0,
+		focus: (
+			outline: 0,
+		),
+		focus-visible: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+		),
+	),
+	$cadmin-inline-scroller
+);
 
 // Autofit Row
 
