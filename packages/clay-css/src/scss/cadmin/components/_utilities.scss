@@ -272,14 +272,15 @@
 // Inline Scroller
 
 .inline-scroller {
-	list-style: none;
-	margin: 0;
-	max-height: $cadmin-inline-scroller-max-height;
-	overflow: auto;
+	@include clay-css($cadmin-inline-scroller);
 
-	-webkit-overflow-scrolling: touch;
+	&:focus {
+		@include clay-css(map-get($cadmin-inline-scroller, focus));
+	}
 
-	padding: 0;
+	&:focus-visible {
+		@include clay-css(map-get($cadmin-inline-scroller, focus-visible));
+	}
 }
 
 // Inline Item
