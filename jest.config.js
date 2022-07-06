@@ -32,7 +32,7 @@ module.exports = {
 			statements: 97,
 		},
 		'./packages/clay-button/src/': {
-			branches: 90,
+			branches: 87,
 			functions: 100,
 			lines: 100,
 			statements: 100,
@@ -44,7 +44,7 @@ module.exports = {
 			statements: 95,
 		},
 		'./packages/clay-color-picker/src/': {
-			branches: 74,
+			branches: 73,
 			functions: 87,
 			lines: 90,
 			statements: 90,
@@ -98,7 +98,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-label/src/': {
-			branches: 100,
+			branches: 93,
 			functions: 100,
 			lines: 100,
 			statements: 100,
@@ -116,7 +116,7 @@ module.exports = {
 			statements: 90,
 		},
 		'./packages/clay-list/src/': {
-			branches: 64,
+			branches: 61,
 			functions: 75,
 			lines: 93,
 			statements: 92,
