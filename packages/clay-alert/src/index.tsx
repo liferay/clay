@@ -162,11 +162,7 @@ const ClayAlert: React.FunctionComponent<IClayAlertProps> & {
 			role="alert"
 		>
 			<ConditionalContainer>
-				<ClayLayout.ContentRow
-					className={classNames('alert-autofit-row', {
-						'align-items-baseline': variant !== 'feedback',
-					})}
-				>
+				<ClayLayout.ContentRow className="alert-autofit-row">
 					{!VARIANTS.includes(variant as string) && (
 						<ClayLayout.ContentCol>
 							<ClayLayout.ContentSection>

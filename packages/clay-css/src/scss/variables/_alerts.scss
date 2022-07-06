@@ -177,16 +177,15 @@ $alert-link: map-deep-merge(
 // .alert-indicator
 
 $alert-indicator-font-size: 1.25rem !default;
-$alert-indicator-line-height: 1 !default;
 
 $alert-indicator: () !default;
 $alert-indicator: map-deep-merge(
 	(
 		font-size: $alert-indicator-font-size,
-		line-height: $alert-indicator-line-height,
 		lead: (
 			margin-left: $alert-lead-spacer-x,
 		),
+		line-height: 1,
 	),
 	$alert-indicator
 );
@@ -399,6 +398,7 @@ $alert-notification-sm-down: map-merge(
 $alert-autofit-row: () !default;
 $alert-autofit-row: map-deep-merge(
 	(
+		align-items: baseline,
 		margin-left: -0.5rem,
 		margin-right: -0.5rem,
 		width: auto,
