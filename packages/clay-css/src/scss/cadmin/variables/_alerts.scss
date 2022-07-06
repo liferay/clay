@@ -196,10 +196,10 @@ $cadmin-alert-indicator: () !default;
 $cadmin-alert-indicator: map-deep-merge(
 	(
 		font-size: $cadmin-alert-indicator-font-size,
+		line-height: 1,
 		lead: (
 			margin-left: $cadmin-alert-lead-spacer-x,
 		),
-		line-height: 1,
 	),
 	$cadmin-alert-indicator
 );

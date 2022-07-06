@@ -96,6 +96,7 @@ $alert-indicator: () !default;
 $alert-indicator: map-deep-merge(
 	(
 		font-size: $alert-indicator-font-size,
+		vertical-align: clay-unset,
 	),
 	$alert-indicator
 );
