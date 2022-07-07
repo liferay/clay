@@ -108,11 +108,31 @@
 // Badge Variants
 
 @each $color, $value in $badge-palette {
-	%badge-#{$color} {
-		@include clay-badge-variant($value);
-	}
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.badge-', 1)
+	);
 
-	.badge-#{$color} {
-		@extend %badge-#{$color} !optional;
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-badge-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%badge-#{$color}'
+		);
+
+		#{$placeholder} {
+			@include clay-badge-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }

@@ -66,24 +66,64 @@
 // Sticker Sizes
 
 @each $selector, $value in $sticker-sizes {
-	%#{$selector} {
-		@include clay-sticker-variant($value);
-	}
+	$selector: if(
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
 
-	.#{$selector} {
-		@extend %#{$selector} !optional;
+	@if (starts-with($selector, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-sticker-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($selector, '.') or starts-with($selector, '#'),
+			'%#{str-slice($selector, 2)}',
+			'%#{$selector}'
+		);
+
+		#{$placeholder} {
+			@include clay-sticker-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }
 
 // Sticker Variants
 
 @each $color, $value in $sticker-palette {
-	%sticker-#{$color} {
-		@include clay-sticker-variant($value);
-	}
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.sticker-', 1)
+	);
 
-	.sticker-#{$color} {
-		@extend %sticker-#{$color} !optional;
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-sticker-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%sticker-#{$color}'
+		);
+
+		#{$placeholder} {
+			@include clay-sticker-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }
 

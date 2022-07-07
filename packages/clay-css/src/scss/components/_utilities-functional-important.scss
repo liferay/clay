@@ -25,17 +25,23 @@
 // Background
 
 @each $color, $value in $bg-theme-colors {
-	$hover: setter(map-get($value, hover), ());
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.bg-', 1)
+	);
 
-	.bg-#{$color} {
-		@include clay-css(setter($value, ()));
+	#{$selector} {
+		@include clay-css($value);
 	}
 
-	a.bg-#{$color},
-	button.bg-#{$color} {
+	a#{$selector},
+	button#{$selector} {
 		&:hover,
 		&:focus {
-			@include clay-css($hover);
+			@include clay-css(map-get($value, hover));
 		}
 	}
 }
@@ -43,7 +49,7 @@
 @if $enable-gradients {
 	@each $color, $value in $bg-gradient-theme-colors {
 		.bg-gradient-#{$color} {
-			@include clay-css(setter($value, ()));
+			@include clay-css($value);
 		}
 	}
 }
@@ -91,8 +97,16 @@
 }
 
 @each $color, $value in $border-theme-colors {
-	.border-#{$color} {
-		@include clay-css(setter($value, ()));
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.border-', 1)
+	);
+
+	#{$selector} {
+		@include clay-css($value);
 	}
 }
 
@@ -719,7 +733,9 @@
 
 @each $selector, $value in $font-sizes {
 	$selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);
@@ -736,16 +752,22 @@
 }
 
 @each $color, $value in $text-theme-colors {
-	$hover: setter(map-get($value, hover), ());
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.text-', 1)
+	);
 
-	.text-#{$color} {
-		@include clay-css(setter($value, ()));
+	#{$selector} {
+		@include clay-css($value);
 	}
 
-	a.text-#{$color} {
+	a#{$selector} {
 		&:hover,
 		&:focus {
-			@include clay-css($hover);
+			@include clay-css(map-get($value, hover));
 		}
 	}
 }

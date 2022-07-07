@@ -420,11 +420,31 @@
 // Alert Variants
 
 @each $color, $value in $alert-palette {
-	%alert-#{$color} {
-		@include clay-alert-variant($value);
-	}
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.alert-', 1)
+	);
 
-	.alert-#{$color} {
-		@extend %alert-#{$color} !optional;
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-alert-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%alert-#{$color}'
+		);
+
+		#{$placeholder} {
+			@include clay-alert-variant($value);
+		}
+
+		#{$selector} {
+			@extend %alert-#{$color} !optional;
+		}
 	}
 }
