@@ -274,6 +274,8 @@
 							transition: none;
 						}
 					}
+				} @else if ($key == 'extend') {
+					@extend #{$value} !optional;
 				} @else if ($key == 'user-select') {
 					-ms-user-select: $value;
 					-moz-user-select: $value;
