@@ -433,12 +433,32 @@
 
 // Alert Variants
 
-@each $cadmin-color, $cadmin-value in $cadmin-alert-palette {
-	%alert-#{$cadmin-color} {
-		@include clay-alert-variant($cadmin-value);
-	}
+@each $color, $value in $cadmin-alert-palette {
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.alert-', 1)
+	);
 
-	.alert-#{$cadmin-color} {
-		@extend %alert-#{$cadmin-color} !optional;
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-alert-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%alert-#{$color}'
+		);
+
+		#{$placeholder} {
+			@include clay-alert-variant($value);
+		}
+
+		#{$selector} {
+			@extend %alert-#{$color} !optional;
+		}
 	}
 }

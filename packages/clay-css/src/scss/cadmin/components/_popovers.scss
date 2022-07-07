@@ -2,7 +2,9 @@
 
 @each $selector, $value in $cadmin-popovers {
 	$selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);
@@ -154,7 +156,9 @@
 
 @each $selector, $value in $cadmin-popover-headers {
 	$selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);
@@ -168,7 +172,9 @@
 
 @each $selector, $value in $cadmin-popover-bodies {
 	$selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);
@@ -182,7 +188,9 @@
 
 @each $selector, $value in $cadmin-popover-widths {
 	$selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);

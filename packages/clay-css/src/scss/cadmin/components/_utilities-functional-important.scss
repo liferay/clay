@@ -24,40 +24,34 @@
 
 // Background
 
-@each $cadmin-color, $cadmin-value in $cadmin-theme-colors {
-	.bg-#{$cadmin-color} {
-		background-color: $cadmin-value !important;
+@each $color, $value in $cadmin-bg-theme-colors {
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.bg-', 1)
+	);
+
+	#{$selector} {
+		@include clay-css($value);
 	}
 
-	a.bg-#{$cadmin-color},
-	button.bg-#{$cadmin-color} {
+	a#{$selector},
+	button#{$selector} {
 		&:hover,
 		&:focus {
-			background-color: clay-darken($cadmin-value, 10%) !important;
+			@include clay-css(map-get($value, hover));
 		}
 	}
 }
 
 @if $cadmin-enable-gradients {
-	@each $cadmin-color, $cadmin-value in $cadmin-theme-colors {
-		.bg-gradient-#{$cadmin-color} {
-			background: $cadmin-value
-				linear-gradient(
-					180deg,
-					clay-mix($cadmin-body-bg, $cadmin-value, 15%),
-					$cadmin-value
-				)
-				repeat-x !important;
+	@each $color, $value in $cadmin-bg-gradient-theme-colors {
+		.bg-gradient-#{$color} {
+			@include clay-css($value);
 		}
 	}
-}
-
-.bg-white {
-	background-color: $cadmin-white !important;
-}
-
-.bg-transparent {
-	background-color: transparent !important;
 }
 
 // Border
@@ -102,14 +96,18 @@
 	border-left: 0 !important;
 }
 
-@each $cadmin-color, $cadmin-value in $cadmin-theme-colors {
-	.border-#{$cadmin-color} {
-		border-color: $cadmin-value !important;
-	}
-}
+@each $color, $value in $cadmin-border-theme-colors {
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.border-', 1)
+	);
 
-.border-white {
-	border-color: $cadmin-white !important;
+	#{$selector} {
+		@include clay-css($value);
+	}
 }
 
 // Border-radius
@@ -759,7 +757,9 @@
 
 @each $selector, $value in $cadmin-font-sizes {
 	$selector: if(
-		starts-with($selector, '.') or starts-with($selector, '#'),
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
 		$selector,
 		str-insert($selector, '.', 1)
 	);
@@ -775,38 +775,25 @@
 	color: $cadmin-white !important;
 }
 
-@each $cadmin-color, $cadmin-value in $cadmin-theme-colors {
-	.text-#{$cadmin-color} {
-		color: $cadmin-value !important;
+@each $color, $value in $cadmin-text-theme-colors {
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.text-', 1)
+	);
+
+	#{$selector} {
+		@include clay-css($value);
 	}
 
-	@if $cadmin-emphasized-link-hover-darken-percentage != 0 {
-		a.text-#{$cadmin-color} {
-			&:hover,
-			&:focus {
-				color: clay-darken(
-					$cadmin-value,
-					$cadmin-emphasized-link-hover-darken-percentage
-				) !important;
-			}
+	a#{$selector} {
+		&:hover,
+		&:focus {
+			@include clay-css(map-get($value, hover));
 		}
 	}
-}
-
-.text-body {
-	color: $cadmin-body-color !important;
-}
-
-.text-muted {
-	color: $cadmin-text-muted !important;
-}
-
-.text-black-50 {
-	color: rgba($cadmin-black, 0.5) !important;
-}
-
-.text-white-50 {
-	color: rgba($cadmin-white, 0.5) !important;
 }
 
 // Misc
