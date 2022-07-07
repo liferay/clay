@@ -55,6 +55,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 			href,
 			innerRef,
 			onClick,
+			role,
 			spritemap,
 			symbolLeft,
 			symbolRight,
@@ -67,7 +68,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 		const ItemElement = href ? ClayLink : clickableElement;
 
 		return (
-			<li aria-selected={active} ref={ref}>
+			<li aria-selected={active} ref={ref} role={role}>
 				<ItemElement
 					{...otherProps}
 					className={classNames('dropdown-item', className, {
