@@ -9,8 +9,10 @@ mainTabURL: 'docs/components/sticker.html'
 <div class="nav-toc">
 
 -   [Colors](#css-colors)
+    -   [Sass API](#css-sticker-variant-sass-api)
 -   [Position](#css-position)
 -   [Sizes](#css-sizes)
+    -   [Sass API](#css-sticker-size-sass-api)
 -   [Variations](#css-variations)
     -   [Overlay](#css-overlay)
     -   [Outside](#css-outside)
@@ -39,6 +41,46 @@ Lexicon adopts in its design system the following colors below:
 <span class="sticker sticker-info">133</span>
 <span class="sticker sticker-warning">133</span>
 <span class="sticker sticker-danger">133</span>
+```
+
+### Sticker Variant Sass API(#css-sticker-variant-sass-api)
+
+The map `$sticker-palette` allows generating any number of sticker variants. If a key starts with `.`, `#`, or `%` Clay will output it as is, otherwise we will prepend `.sticker-` to the key (e.g., `.sticker-my-primary`). It will also generate a Sass placeholder prefixed by `%sticker-` (e.g., `%sticker-my-primary`).
+
+```scss{expanded}
+$sticker-palette: (
+    my-primary: (
+        background-color: blue,
+        color: #fff,
+    ),
+    '.sticker-primary': (
+        extend: '%sticker-my-primary',
+    ),
+    '%sticker-tertiary': (
+        background-color: green,
+        color: #fff,
+    ),
+    '.sticker-tertiary': (
+        extend: '%sticker-tertiary',
+    ),
+    '.sticker-quaternary': (
+        extend: '%sticker-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.sticker-my-primary, .sticker-primary {
+    background-color: blue;
+    color: #fff;
+}
+
+.sticker-tertiary, .sticker-quaternary {
+    background-color: green;
+    color: #fff;
+}
 ```
 
 ## Position(#css-position)
@@ -213,6 +255,36 @@ Stickers come in 4 sizes `sm`, default, `lg`, and `xl`. Create your own custom s
 		</svg>
 	</span>
 </span>
+```
+
+### Sticker Size Sass API(#css-sticker-size-sass-api)
+
+The map `$sticker-sizes` allows generating any number of sticker size variants. If a key starts with `.`, `#`, or `%` Clay will output it as is, otherwise it will prepend `.` to the key (e.g., `.my-sticker-lg`). It will also generate a Sass placeholder prefixed by `%` (e.g., `%my-sticker-lg`).
+
+```scss{expanded}
+$sticker-sizes: (
+    my-sticker-lg: (
+        font-size: 32px,
+        height: 64px,
+        width: 64px,
+    ),
+    sticker-lg: (
+        enabled: false,
+    ),
+    '.sticker-lg': (
+        extend: '%my-sticker-lg',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.my-sticker-lg, .sticker-lg {
+    font-size: 32px;
+    height: 64px;
+    width: 64px;
+}
 ```
 
 ## Variations(#css-variations)

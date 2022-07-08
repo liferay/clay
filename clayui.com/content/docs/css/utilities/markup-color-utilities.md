@@ -7,12 +7,14 @@ title: 'Color Utilities'
 
 -   [Text Color](#css-text-color)
     -   [Link Color](#css-link-color)
+    -   [Sass API](#css-text-color-sass-api)
 -   [Background Color](#css-background-color)
+    -   [Sass API](#css-background-color-sass-api)
 
 </div>
 </div>
 
-## Text Color
+## Text Color(#css-text-color)
 
 <div class="sheet-example">
 	<div class="table-responsive">
@@ -99,7 +101,7 @@ title: 'Color Utilities'
 
 ### Link Color(#css-link-color)
 
-Text color utilities applied to anchor tags.
+Text color utilities applied to anchor tags. These styles will only be output if a text color has `hover` state styles.
 
 <div class="sheet-example">
 	<div class="table-responsive">
@@ -179,6 +181,39 @@ Text color utilities applied to anchor tags.
 <a class="text-white-50" href="#1"></a>
 ```
 
+### Text Color Sass API(#css-text-color-sass-api)
+
+The map `$text-theme-colors` allows generating any number of text color variants. If a key starts with `.`, `#` or `%`, Clay will output it as is, otherwise we will prepend `.text-` to the key (e.g., `.text-primary`).
+
+```scss{expanded}
+$text-theme-colors: (
+    'primary': (
+        color: $primary !important,
+    ),
+    '%text-tertiary': (
+        color: green !important,
+    ),
+    '.text-tertiary': (
+        extend: '%text-tertiary',
+    ),
+    '.text-quaternary': (
+        extend: '%text-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.text-primary {
+    color: #0b5fff !important;
+}
+
+.text-tertiary, .text-quaternary {
+    color: green !important;
+}
+```
+
 ## Background Color(#css-background-color)
 
 <div class="sheet-example">
@@ -247,4 +282,37 @@ Text color utilities applied to anchor tags.
 <div class="bg-light"></div>
 <div class="bg-white"></div>
 <div class="bg-transparent"></div>
+```
+
+### Background Color Sass API(#css-background-color-sass-api)
+
+The map `$bg-theme-colors` allows generating any number of background color variants. If a key starts with `.`, `#` or `%`, Clay will output it as is, otherwise we will prepend `.bg-` to the key (e.g., `.bg-primary`).
+
+```scss{expanded}
+$bg-theme-colors: (
+    'primary': (
+        background-color: $primary !important,
+    ),
+    '%bg-tertiary': (
+        background-color: green !important,
+    ),
+    '.bg-tertiary': (
+        extend: '%bg-tertiary',
+    ),
+    '.bg-quaternary': (
+        extend: '%bg-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.bg-primary {
+    background-color: #0b5fff !important;
+}
+
+.bg-tertiary, .bg-quaternary {
+    background-color: green !important;
+}
 ```

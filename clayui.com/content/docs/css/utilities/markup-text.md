@@ -7,6 +7,7 @@ lexiconDefinition: 'https://liferay.design/lexicon/foundations/typography/'
 <div class="nav-toc">
 
 -   [Sizes](#css-text-sizes)
+    -   [Sass API](#css-text-sizes-sass-api)
 -   [Weights](#css-text-weights)
 -   [Styles](#css-text-styles)
 -   [Alignment](#css-text-alignment)
@@ -112,6 +113,39 @@ Utility classes for changing the `font-size` of text.
 <span class="text-3">The quick brown fox jumped over the lazy dog.</span>
 <span class="text-2">The quick brown fox jumped over the lazy dog.</span>
 <span class="text-1">The quick brown fox jumped over the lazy dog.</span>
+```
+
+### Text Sizes Sass API(#css-text-sizes-sass-api)
+
+The map `$font-sizes` allows generating any number of text size variants. If a key starts with `.`, `#` or `%`, Clay will output it as is, otherwise we will prepend `.` to the key (e.g., `.text-100`).
+
+```scss{expanded}
+$bg-theme-colors: (
+    text-100: (
+        font-size: 100px,
+    ),
+    '%text-200': (
+        font-size: 200px,
+    ),
+    '.text-200': (
+        extend: '%text-200',
+    ),
+    '.text-250': (
+        extend: '%text-200',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.text-100 {
+    font-size: 100px;
+}
+
+.text-200, .text-250 {
+    font-size: 200px;
+}
 ```
 
 ## Weights(#css-text-weights)
