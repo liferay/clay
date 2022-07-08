@@ -112,7 +112,9 @@
 
 @each $color, $value in $sidebar-palette {
 	$selector: if(
-		starts-with($color, '.') or starts-with($color, '#'),
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
 		$color,
 		str-insert($color, '.', 1)
 	);

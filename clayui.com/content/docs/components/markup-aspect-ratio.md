@@ -6,6 +6,7 @@ title: 'Aspect Ratio'
 <div class="nav-toc">
 
 -   [Aspect Ratio](#css-aspect-ratio)
+    -   [Sass API](#css-aspect-ratio-sass-api)
     -   [Bg Contain](#css-aspect-ratio-bg-contain)
     -   [Bg Cover](#css-aspect-ratio-bg-cover)
     -   [Bg Center](#css-aspect-ratio-bg-center)
@@ -68,6 +69,41 @@ Use `aspect-ratio-3-to-2`, `aspect-ratio-4-to-3`, `aspect-ratio-8-to-3`, `aspect
 <div class="aspect-ratio aspect-ratio-8-to-3"></div>
 <div class="aspect-ratio aspect-ratio-8-to-5"></div>
 <div class="aspect-ratio aspect-ratio-16-to-9"></div>
+```
+
+### Aspect Ratio Sass API(#css-aspect-ratio-sass-api)
+
+The map `$aspect-ratio-sizes` allows generating any number of aspect ratio variants. If a key starts with `.`, `#`, or '%' Clay will output it as is, otherwise we will prepend `.` to the key (e.g., `.aspect-ratio-16-to-9`). It will also generate a Sass placeholder prefixed by `%` (e.g., `%aspect-ratio-16-to-9`).
+
+```scss{expanded}
+$aspect-ratio-sizes: (
+    aspect-ratio-16-to-9: (
+        height: 9,
+        width: 16,
+    ),
+    '.card .aspect-ratio': (
+        extend: '%aspect-ratio-16-to-9',
+    ),
+    '%aspect-ratio-4-to-1': (
+        height: 1,
+        width: 4,
+    ),
+    '.aspect-ratio-4-to-1': (
+        extend: '%aspect-ratio-4-to-1',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.aspect-ratio-16-to-9, .card .aspect-ratio {
+    padding-bottom: calc(9 / 16 * 100%);
+}
+
+.aspect-ratio-4-to-1 {
+    padding-bottom: calc(1 / 4 * 100%);
+}
 ```
 
 ### Aspect Ratio Bg Contain(#css-aspect-ratio-bg-contain)

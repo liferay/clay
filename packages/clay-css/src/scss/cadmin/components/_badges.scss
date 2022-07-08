@@ -60,12 +60,32 @@
 
 // Badge Variants
 
-@each $cadmin-color, $cadmin-value in $cadmin-badge-palette {
-	%badge-#{$cadmin-color} {
-		@include clay-badge-variant($cadmin-value);
-	}
+@each $color, $value in $cadmin-badge-palette {
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.badge-', 1)
+	);
 
-	.badge-#{$cadmin-color} {
-		@extend %badge-#{$cadmin-color} !optional;
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-badge-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%badge-#{$color}'
+		);
+
+		#{$placeholder} {
+			@include clay-badge-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }

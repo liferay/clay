@@ -9,10 +9,13 @@ mainTabURL: 'docs/components/button.html'
 <div class="nav-toc">
 
 -   [Examples](#css-examples)
+    -   [Sass API](#css-button-variant-sass-api)
 -   [Sizes](#css-sizes)
+    -   [Sass API](#css-button-size-sass-api)
 -   [Active state](#css-active-state)
 -   [Disabled State](#css-disabled-state)
 -   [Icons](#css-icons)
+    -   [Sass API](#css-button-monospaced-sass-api)
     -   [With text button](#css-with-text-button)
 
 </div>
@@ -44,6 +47,39 @@ mainTabURL: 'docs/components/button.html'
 <button class="btn btn-link" type="button">Link</button>
 ```
 
+### Button Variant Sass API(#css-button-variant-sass-api)
+
+The map `$btn-palette` allows generating any number of button variants. If a key starts with `.`, `#` or `%`, Clay will output it as is, otherwise we will prepend `.btn-` to the key (e.g., `.btn-primary`). It will also generate Sass placeholders prefix/appended by `%btn-` and `%btn-{color}-focus` (e.g., `%btn-primary` and `%btn-primary-focus`), respectively.
+
+```scss{expanded}
+$btn-palette: (
+    primary: (
+        background-color: $primary,
+    ),
+    '%btn-tertiary': (
+        background-color: green,
+    ),
+    '.btn-tertiary': (
+        extend: '%btn-tertiary',
+    ),
+    '.btn-quaternary': (
+        extend: '%btn-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.btn-primary {
+    background-color: #0b5fff;
+}
+
+.btn-tertiary, .btn-quaternary {
+    background-color: green;
+}
+```
+
 ## Sizes(#css-sizes)
 
 <div class="sheet-example">
@@ -70,6 +106,39 @@ Create block level buttons—those that span the full width of a parent—by add
 <button class="btn btn-block btn-secondary" type="button">
 	Normal Block Level Button
 </button>
+```
+
+### Button Size Sass API(#css-button-size-sass-api)
+
+The map `$btn-sizes` allows generating any number of button size variants. If a key starts with `btn-` Clay will prepend `.` to the key (e.g., `.btn-sm`). It will also generate a Sass placeholder prefixed by `%clay-` (e.g., `%clay-btn-sm`).
+
+```scss{expanded}
+$btn-sizes: (
+    btn-sm: (
+        font-size: 14px,
+    ),
+    '.btn-xs': (
+        extend: '%clay-btn-sm',
+    ),
+    '%btn-xxs': (
+        font-size: 12px,
+    ),
+    '.btn-xxs': (
+        extend: '%btn-xxs',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.btn-sm, .btn-xs {
+    font-size: 14px;
+}
+
+.btn-xxs {
+    font-size: 12px;
+}
 ```
 
 ## Active State(#css-active-state)
@@ -138,6 +207,39 @@ Try adding the modifier class `.btn-monospaced`.
 		<use href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
+```
+
+### Button Monospaced Sass API(#css-button-monospaced-sass-api)
+
+The map `$btn-monospaced-sizes` allows generating any number of button monospaced size variants. If a key starts with `btn-monospaced-` Clay will replace it with `.btn-monospaced.btn` (e.g., `.btn-monospaced.btn-sm`). It will also generate a Sass placeholder prefixed by `%clay-` (e.g., `%clay-btn-monospaced-sm`).
+
+```scss{expanded}
+$btn-monospaced-sizes: (
+    btn-monospaced-sm: (
+        font-size: 14px,
+    ),
+    '.btn-monospaced.btn-xs': (
+        extend: '%clay-btn-monospaced-sm',
+    ),
+    '%btn-monospaced-xxs': (
+        font-size: 12px,
+    ),
+    '.btn-monospaced.btn-xxs': (
+        extend: '%btn-monospaced-xxs',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.btn-monospaced.btn-sm, .btn-monospaced.btn-xs {
+    font-size: 14px;
+}
+
+.btn-monospaced.btn-xxs {
+    font-size: 12px;
+}
 ```
 
 ### With Text Button(#css-with-text-button)

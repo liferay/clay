@@ -15,8 +15,10 @@ mainTabURL: 'docs/components/popover.html'
     -   [Left](#css-left)
 -   [Widths](#css-popover-widths)
     -   [Large](#css-popover-width-large)
+    -   [Sass API](#css-popover-width-sass-api)
 -   [Variants](#css-popover-variants)
     -   [Secondary](#css-popover-secondary)
+    -   [Sass API](#css-popover-variants-sass-api)
 
 </div>
 </div>
@@ -365,6 +367,43 @@ A wider popover for more content.
 </div>
 ```
 
+### Popover Width Sass API(#css-popover-width-sass-api)
+
+The map `$popover-widths` allows generating any number of popover widths. If a key starts with `.`, `#`, or `%` Clay will output it as is, otherwise we will prepend `.` to the key (e.g., `.popover-width-lg`). This doesn't generate a Sass placeholder.
+
+```scss{expanded}
+$popover-widths: (
+    popover-width-lg: (
+        max-width: 421px,
+    ),
+    '%popover-width-xl': (
+        max-width: 560px,
+    ),
+    '.popover-width-xl': (
+        extend: '%popover-width-xl',
+    ),
+    '.popover-width-xxl': (
+        max-width: 1000px,
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.popover-width-xl {
+    max-width: 421px;
+}
+
+.popover-width-xl {
+    max-width: 560px;
+}
+
+.popover-width-xxl {
+    max-width: 1000px;
+}
+```
+
 ### Variants(#css-popover-variants)
 
 #### Popover Secondary(#css-popover-secondary)
@@ -427,4 +466,59 @@ A different style of popover with a blue box shadow and no header divider.
 		</div>
 	</div>
 </div>
+```
+
+### Popover Variant Sass API(#css-popover-variants-sass-api)
+
+The map `$popovers` allows generating any number of popover variants. If a key starts with `.`, `#`, or `%` Clay will output it as is, otherwise we will prepend `.` to the key (e.g., `.my-popover-secondary`). This doesn't generate a Sass placeholder.
+
+```scss{expanded}
+$popovers: (
+    my-popover-secondary: (
+        background-color: #eee,
+        popover-header: (
+            background-color: inherit,
+        ),
+    ),
+    '%popover-dark': (
+        background-color: #000,
+        color: #fff,
+        popover-header: (
+            background-color: inherit,
+            color: inherit,
+        ),
+        popover-body: (
+            color: inherit,
+        ),
+    ),
+    '.popover-dark': (
+        extend: '%popover-dark',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.my-popover-secondary {
+    background-color: #eee;
+}
+
+.my-popover-secondary .popover-header {
+    background-color: inherit;
+}
+
+.popover-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.popover-dark .popover-header {
+    background-color: inherit;
+    color: inherit;
+}
+
+.popover-dark .popover-body {
+    color: inherit;
+}
 ```

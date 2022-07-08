@@ -9,6 +9,7 @@ mainTabURL: 'docs/components/badge.html'
 <div class="nav-toc">
 
 -   [Variations](#css-variations)
+    -   [Sass API](#css-badge-sass-api)
 -   [Pill Badges](#css-pill-badges)
 -   [Anchor](#css-anchor)
 -   [Links Inside](#css-links-inside)
@@ -84,6 +85,42 @@ Add any of the below mentioned modifier classes to change the appearance of a ba
 <span class="badge badge-dark">
 	<span class="badge-item badge-item-expand">Dark</span>
 </span>
+```
+
+### Badge Sass API(#css-badge-sass-api)
+
+The map `$badge-palette` allows generating any number of badge variants. If a key starts with `.`, `#`, or '%' Clay will output it as is, otherwise we will prepend `.badge-` to the key (e.g., `.badge-primary`). It will also generate a Sass placeholder prefixed by `%badge-` (e.g., `%badge-primary`).
+
+```scss{expanded}
+$badge-palette: (
+    primary: (
+        background-color: $primary,
+    ),
+    '.badge-primary-2': (
+        extend: '%badge-primary',
+    ),
+    '%badge-tertiary': (
+        background-color: green,
+    ),
+    '.badge-tertiary': (
+        extend: '%badge-tertiary',
+    ),
+    '.badge-quaternary': (
+        extend: '%badge-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.badge-primary, .badge-primary-2 {
+    background-color: #0b5fff;
+}
+
+.badge-tertiary, .badge-quaternary {
+    background-color: green;
+}
 ```
 
 ## Pill Badges(#css-pill-badges)

@@ -68,25 +68,65 @@
 
 // Sticker Sizes
 
-@each $cadmin-selector, $cadmin-value in $cadmin-sticker-sizes {
-	%#{$cadmin-selector} {
-		@include clay-sticker-variant($cadmin-value);
-	}
+@each $selector, $value in $cadmin-sticker-sizes {
+	$selector: if(
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
 
-	.#{$cadmin-selector} {
-		@extend %#{$cadmin-selector} !optional;
+	@if (starts-with($selector, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-sticker-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($selector, '.') or starts-with($selector, '#'),
+			'%#{str-slice($selector, 2)}',
+			'%#{$selector}'
+		);
+
+		#{$placeholder} {
+			@include clay-sticker-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }
 
 // Sticker Variants
 
-@each $cadmin-color, $cadmin-value in $cadmin-sticker-palette {
-	%sticker-#{$cadmin-color} {
-		@include clay-sticker-variant($cadmin-value);
-	}
+@each $color, $value in $cadmin-sticker-palette {
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.sticker-', 1)
+	);
 
-	.sticker-#{$cadmin-color} {
-		@extend %sticker-#{$cadmin-color} !optional;
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-sticker-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%sticker-#{$color}'
+		);
+
+		#{$placeholder} {
+			@include clay-sticker-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }
 

@@ -19,24 +19,30 @@ fieldset:disabled a.btn {
 // Button Sizes
 
 @each $size, $value in $btn-sizes {
-	$placeholder: if(
-		starts-with($size, 'btn-'),
-		'%clay-#{$size}',
-		'%#{str-slice($size, 2)}'
-	);
-
 	$selector: if(
 		starts-with($size, 'btn-'),
 		clay-str-replace($size, 'btn-', '.btn-'),
 		$size
 	);
 
-	#{$placeholder} {
-		@include clay-button-variant($value);
-	}
+	@if (starts-with($size, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-button-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($size, 'btn-'),
+			'%clay-#{$size}',
+			'%#{str-slice($size, 2)}'
+		);
 
-	#{$selector} {
-		@extend #{$placeholder} !optional;
+		#{$placeholder} {
+			@include clay-button-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }
 
@@ -74,12 +80,6 @@ input[type='button'] {
 // Button Monospaced
 
 @each $size, $value in $btn-monospaced-sizes {
-	$placeholder: if(
-		starts-with($size, 'btn-monospaced'),
-		'%clay-#{$size}',
-		'%#{str-slice($size, 2)}'
-	);
-
 	$selector: if(
 		starts-with($size, 'btn-monospaced-'),
 		clay-str-replace($size, 'btn-monospaced', '.btn-monospaced.btn'),
@@ -90,80 +90,108 @@ input[type='button'] {
 		)
 	);
 
-	#{$placeholder} {
-		@include clay-button-variant($value);
-	}
+	@if (starts-with($size, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-button-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($size, 'btn-monospaced'),
+			'%clay-#{$size}',
+			'%#{str-slice($size, 2)}'
+		);
 
-	#{$selector} {
-		@extend #{$placeholder} !optional;
+		#{$placeholder} {
+			@include clay-button-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }
 
 // Button Variants
 
 @each $color, $value in $btn-palette {
-	$placeholder: if(
-		starts-with($color, '.') or starts-with($color, '#'),
-		'%#{str-slice($color, 2)}',
-		'%btn-#{$color}'
-	);
-
-	$placeholder-focus: if(
-		starts-with($color, '.') or starts-with($color, '#'),
-		'%#{str-slice($color, 2)}-focus',
-		'%btn-#{$color}-focus'
-	);
-
 	$selector: if(
-		starts-with($color, '.') or starts-with($color, '#'),
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
 		$color,
 		str-insert($color, '.btn-', 1)
 	);
 
-	#{$placeholder} {
-		@include clay-button-variant($value);
-	}
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-button-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%btn-#{$color}'
+		);
 
-	#{$selector} {
-		@extend #{$placeholder} !optional;
-	}
+		$placeholder-focus: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}-focus',
+			'%btn-#{$color}-focus'
+		);
 
-	#{$placeholder-focus} {
-		@include clay-button-variant(map-get($value, focus));
+		#{$placeholder} {
+			@include clay-button-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
+
+		#{$placeholder-focus} {
+			@include clay-button-variant(map-get($value, focus));
+		}
 	}
 }
 
 // Button Outline Variants
 
 @each $color, $value in $btn-outline-palette {
-	$placeholder: if(
-		starts-with($color, '.') or starts-with($color, '#'),
-		'%#{str-slice($color, 2)}',
-		'%btn-outline-#{$color}'
-	);
-
-	$placeholder-focus: if(
-		starts-with($color, '.') or starts-with($color, '#'),
-		'%#{str-slice($color, 2)}-focus',
-		'%btn-outline-#{$color}-focus'
-	);
-
 	$selector: if(
-		starts-with($color, '.') or starts-with($color, '#'),
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
 		$color,
 		str-insert($color, '.btn-outline-', 1)
 	);
 
-	#{$placeholder} {
-		@include clay-button-variant($value);
-	}
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-button-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%btn-outline-#{$color}'
+		);
 
-	#{$selector} {
-		@extend #{$placeholder} !optional;
-	}
+		$placeholder-focus: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}-focus',
+			'%btn-outline-#{$color}-focus'
+		);
 
-	#{$placeholder-focus} {
-		@include clay-button-variant(map-get($value, focus));
+		#{$placeholder} {
+			@include clay-button-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
+
+		#{$placeholder-focus} {
+			@include clay-button-variant(map-get($value, focus));
+		}
 	}
 }
 

@@ -56,24 +56,64 @@
 
 // Label Sizes
 
-@each $cadmin-selector, $cadmin-value in $cadmin-label-sizes {
-	%#{$cadmin-selector} {
-		@include clay-label-variant($cadmin-value);
-	}
+@each $selector, $value in $cadmin-label-sizes {
+	$selector: if(
+		starts-with($selector, '.') or
+			starts-with($selector, '#') or
+			starts-with($selector, '%'),
+		$selector,
+		str-insert($selector, '.', 1)
+	);
 
-	.#{$cadmin-selector} {
-		@extend %#{$cadmin-selector} !optional;
+	@if (starts-with($selector, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-label-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($selector, '.') or starts-with($selector, '#'),
+			'%#{str-slice($selector, 2)}',
+			'%#{$selector}'
+		);
+
+		#{$placeholder} {
+			@include clay-label-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }
 
 // Label Variants
 
-@each $cadmin-color, $cadmin-value in $cadmin-label-palette {
-	%label-#{$cadmin-color} {
-		@include clay-label-variant($cadmin-value);
-	}
+@each $color, $value in $cadmin-label-palette {
+	$selector: if(
+		starts-with($color, '.') or
+			starts-with($color, '#') or
+			starts-with($color, '%'),
+		$color,
+		str-insert($color, '.label-', 1)
+	);
 
-	.label-#{$cadmin-color} {
-		@extend %label-#{$cadmin-color} !optional;
+	@if (starts-with($color, '%') or map-get($value, extend)) {
+		#{$selector} {
+			@include clay-label-variant($value);
+		}
+	} @else {
+		$placeholder: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			'%#{str-slice($color, 2)}',
+			'%label-#{$color}'
+		);
+
+		#{$placeholder} {
+			@include clay-label-variant($value);
+		}
+
+		#{$selector} {
+			@extend #{$placeholder} !optional;
+		}
 	}
 }

@@ -10,6 +10,7 @@ mainTabURL: 'docs/components/alert.html'
 
 -   [Colors](#css-colors)
     -   [Non-standard Colors](#css-non-standard-colors)
+    -   [Sass API](#css-alert-variant-sass-api)
 -   [Examples](#css-examples)
     -   [Toast](#css-toast)
     -   [Embedded](#css-embedded)
@@ -88,6 +89,39 @@ The colors below do not follow Lexicon standards but follow the idea of [​​s
 		</div>
 	</div>
 </div>
+
+### Variant Sass API(#css-alert-variant-sass-api)
+
+The map `$alert-palette` allows generating any number of alert variants. If a key starts with `.`, `#` or `%`, Clay will output it as is, otherwise we will prepend `.alert-` to the key (e.g., `.alert-primary`). It will also generate a Sass placeholder prefixed by `%calert-` (e.g., `%alert-primary`).
+
+```scss{expanded}
+$alert-palette: (
+    primary: (
+        background-color: $primary,
+    ),
+    '%alert-tertiary': (
+        background-color: green,
+    ),
+    '.alert-tertiary': (
+        extend: '%alert-tertiary',
+    ),
+    '.alert-quaternary': (
+        extend: '%alert-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.alert-primary {
+    background-color: #0b5fff;
+}
+
+.alert-tertiary, .alert-quaternary {
+    background-color: green;
+}
+```
 
 ## Examples(#css-examples)
 

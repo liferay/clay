@@ -187,6 +187,17 @@ $cadmin-btn-sm: map-deep-merge(
 	$cadmin-btn-sm
 );
 
+// Button Sizes
+
+$cadmin-btn-sizes: () !default;
+$cadmin-btn-sizes: map-deep-merge(
+	(
+		btn-lg: $cadmin-btn-lg,
+		btn-sm: $cadmin-btn-sm,
+	),
+	$cadmin-btn-sizes
+);
+
 // Button Monospaced
 
 $cadmin-btn-monospaced-padding-x: 0 !default;
@@ -278,6 +289,18 @@ $cadmin-btn-monospaced-sm: map-deep-merge(
 		),
 	),
 	$cadmin-btn-monospaced-sm
+);
+
+// Button Monospaced Sizes
+
+$cadmin-btn-monospaced-sizes: () !default;
+$cadmin-btn-monospaced-sizes: map-deep-merge(
+	(
+		btn-monospaced: $cadmin-btn-monospaced,
+		btn-monospaced-lg: $cadmin-btn-monospaced-lg,
+		btn-monospaced-sm: $cadmin-btn-monospaced-sm,
+	),
+	$cadmin-btn-monospaced-sizes
 );
 
 // Button Block

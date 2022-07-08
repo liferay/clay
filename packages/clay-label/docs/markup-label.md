@@ -9,7 +9,9 @@ mainTabURL: 'docs/components/label.html'
 <div class="nav-toc">
 
 -   [Colors](#css-colors)
+    -   [Sass API](#css-label-variant-sass-api)
 -   [Sizes](#css-sizes)
+    -   [Sass API](#css-label-size-sass-api)
 -   [Variations](#css-variations)
     -   [Simple](#css-simple)
     -   [Dismissible](#css-dismissible)
@@ -98,6 +100,42 @@ mainTabURL: 'docs/components/label.html'
 </span>
 ```
 
+### Label Variant Sass API(#css-label-variant-sass-api)
+
+The map `$label-palette` allows generating any number of label variants. If a key starts with `.`, `#`, or `%` Clay will output it as is, otherwise we will prepend `.label-` to the key (e.g., `.label-primary`). It will also generate a Sass placeholder prefixed by `%label-` (e.g., `%label-primary`).
+
+```scss{expanded}
+$label-palette: (
+    primary: (
+        background-color: $primary,
+    ),
+    '.label-primary-2': (
+        extend: '%label-primary',
+    ),
+    '%label-tertiary': (
+        background-color: green,
+    ),
+    '.label-tertiary': (
+        extend: '%label-tertiary',
+    ),
+    '.label-quaternary': (
+        extend: '%label-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.label-primary, .label-primary-2 {
+    background-color: #0b5fff;
+}
+
+.label-tertiary, .label-quaternary {
+    background-color: green;
+}
+```
+
 ## Sizes(#css-sizes)
 
 Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)` to create a custom sized label:
@@ -114,6 +152,39 @@ Use `label-lg` to make the label larger, or use the mixin `label-size($sassMap)`
 <span class="label label-lg label-success">
 	<span class="label-item label-item-expand"> Large Label </span>
 </span>
+```
+
+### Label Size Sass API(#css-label-size-sass-api)
+
+The map `$label-sizes` allows generating any number of label size variants. If a key starts with `.`, `#`, or `%` Clay will output it as is, otherwise it will prepend `.` to the key (e.g., `.label-lg`). It will also generate a Sass placeholder prefixed by `%` (e.g., `%label-lg`).
+
+```scss{expanded}
+$label-sizes: (
+    label-lg: (
+        font-size: 16px,
+    ),
+    '.label-xl': (
+        extend: '%label-lg',
+    ),
+    '%label-sm': (
+        font-size: 12px,
+    ),
+    '.label-sm': (
+        extend: '%label-sm',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.label-lg, .label-xl {
+    font-size: 16px;
+}
+
+.label-sm {
+    font-size: 12px;
+}
 ```
 
 ## Variations(#css-variations)

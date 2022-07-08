@@ -8,6 +8,7 @@ title: 'Border'
 -   [Additive](#css-additive)
 -   [Subtractive](#css-subtractive)
 -   [Border Color](#css-border-color)
+    -   [Sass API](#css-border-color-sass-api)
 -   [Rounded](#css-rounded)
 -   [Rounded Sizes](#css-rounded-sizes)
 
@@ -162,6 +163,39 @@ title: 'Border'
 <div class="border border-danger"></div>
 <div class="border border-dark"></div>
 <div class="border border-light"></div>
+```
+
+### Border Color Sass API(#css-border-color-sass-api)
+
+The map `$border-theme-colors` allows generating any number of border variants. If a key starts with `.`, `#` or `%`, Clay will output it as is, otherwise we will prepend `.border-` to the key (e.g., `.border-primary`).
+
+```scss{expanded}
+$border-theme-colors: (
+    'primary': (
+        border-color: $primary !important,
+    ),
+    '%b-tertiary': (
+        border-color: green !important,
+    ),
+    '.b-tertiary': (
+        extend: '%border-tertiary',
+    ),
+    '.b-quaternary': (
+        extend: '%border-tertiary',
+    ),
+);
+```
+
+Outputs:
+
+```css{expanded}
+.border-primary {
+    border-color: #0b5fff !important;
+}
+
+.b-tertiary, .b-quaternary {
+    border-color: green !important;
+}
 ```
 
 ## Rounded(#css-rounded)
