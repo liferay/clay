@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** adds the possibility to hover over the tooltip ([8b9b256](https://github.com/liferay/clay/commit/8b9b256db39be0a8f7708648946cec6faeb92bb1))
+
 # [3.58.0](https://github.com/liferay/clay/compare/v3.57.0...v3.58.0) (2022-05-23)
 
 **Note:** Version bump only for package @clayui/tooltip

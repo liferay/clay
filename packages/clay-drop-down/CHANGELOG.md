@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** Pass role as a parameter to items in dropdown ([a5cfd72](https://github.com/liferay/clay/commit/a5cfd72608beddc0b0d29ab3d44163f57b5d9a01))
+
 # [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
 
 ### Features

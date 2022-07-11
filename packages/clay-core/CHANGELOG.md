@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
+
+### Features
+
+-   **@clayui/core:** adds new `onItemMove` API ([3815731](https://github.com/liferay/clay/commit/3815731dbf304923970802176c56342a563c6194))
+
 # [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
 
 ### Features

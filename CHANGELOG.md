@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
+
+### Bug Fixes
+
+-   **@clayui/alert:** Simplifying ([cac8e75](https://github.com/liferay/clay/commit/cac8e75fdea31a16b09835b02a88eb2610ce5feb))
+-   **@clayui/alert:** Unset flex property for feedback variant ([0450de5](https://github.com/liferay/clay/commit/0450de5459e33da9957983b481d0fb0016f5f4ea))
+-   **@clayui/alert:** Use default line height for alert icon ([31a2911](https://github.com/liferay/clay/commit/31a2911f1331b04f93d6d1a987cce5c1a7dbdfbe))
+-   **@clayui/alert:** Use flex baseline for alert icon ([9d6b75a](https://github.com/liferay/clay/commit/9d6b75ae7c0a27f983b760321d03fdd257c46d52))
+-   **@clayui/css:** (cadmin) fix indicator alignment in alert ([029865a](https://github.com/liferay/clay/commit/029865a5af7303cb981c4f9ff55a4c965370ad69))
+-   **@clayui/css:** Add option to generate placeholders separately in component variant maps ([b638999](https://github.com/liferay/clay/commit/b6389997ffc04c494a63e1a512417429261d66b5))
+-   **@clayui/css:** Alert Indicator SF and adjust alignment in base theme ([6d7efa3](https://github.com/liferay/clay/commit/6d7efa37fbc6a74c2a731eb8f26907c98ea9139d))
+-   **@clayui/css:** Cadmin add option to generate placeholders separately in component variant maps ([30612d9](https://github.com/liferay/clay/commit/30612d9a54eff023b153754d0254fa012ff95754))
+-   **@clayui/css:** Form Validation disables validation icons ([f0b2daf](https://github.com/liferay/clay/commit/f0b2daf0f33d1cca989bbc67e8e807b3900dab66))
+-   **@clayui/css:** Utilities update inline-scroller focus ring ([50e3800](https://github.com/liferay/clay/commit/50e380031b083993b3e74d6569bb1ee20e2df462))
+-   **@clayui/drop-down:** Pass role as a parameter to items in dropdown ([a5cfd72](https://github.com/liferay/clay/commit/a5cfd72608beddc0b0d29ab3d44163f57b5d9a01))
+-   **@clayui/tooltip:** adds the possibility to hover over the tooltip ([8b9b256](https://github.com/liferay/clay/commit/8b9b256db39be0a8f7708648946cec6faeb92bb1))
+-   **clayui.com:** fix clipboard error in examples ([3ad788b](https://github.com/liferay/clay/commit/3ad788b5ae3a34ae1375097c371b58e629d3490c))
+
+### Features
+
+-   **@clayui/core:** adds new `onItemMove` API ([3815731](https://github.com/liferay/clay/commit/3815731dbf304923970802176c56342a563c6194))
+-   **@clayui/css:** Mixins `clay-css` adds option to output a Sass `[@extend](https://github.com/extend)` with the `extend` key ([eb6206b](https://github.com/liferay/clay/commit/eb6206bef95012513c2077ad1015ce8ddc9321d8))
+
 # [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
 
 ### Bug Fixes

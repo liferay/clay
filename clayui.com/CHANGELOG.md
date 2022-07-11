@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
+
+### Bug Fixes
+
+-   **clayui.com:** fix clipboard error in examples ([3ad788b](https://github.com/liferay/clay/commit/3ad788b5ae3a34ae1375097c371b58e629d3490c))
+
 # [3.64.0](https://github.com/liferay/clay/compare/v3.63.0...v3.64.0) (2022-07-04)
 
 **Note:** Version bump only for package clayui.com
