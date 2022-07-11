@@ -10,7 +10,7 @@ import {
 	delegate,
 	doAlign,
 } from '@clayui/shared';
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect, useReducer, useRef} from 'react';
 import warning from 'warning';
 
 import ClayTooltip from './Tooltip';
@@ -191,16 +191,16 @@ const TooltipProvider = ({
 	delay = 600,
 	scope,
 }: IPropsWithChildren | IPropsWithScope) => {
-	const [{align, message = '', setAsHTML, show}, dispatch] = React.useReducer(
+	const [{align, message = '', setAsHTML, show}, dispatch] = useReducer(
 		reducer,
 		initialState
 	);
 
 	// Using `any` type since TS incorrectly infers setTimeout to be from NodeJS
-	const timeoutIdRef = React.useRef<any>();
-	const targetRef = React.useRef<HTMLElement | null>(null);
-	const titleNodeRef = React.useRef<HTMLElement | null>(null);
-	const tooltipRef = React.useRef<HTMLElement | null>(null);
+	const timeoutIdRef = useRef<any>();
+	const targetRef = useRef<HTMLElement | null>(null);
+	const titleNodeRef = useRef<HTMLElement | null>(null);
+	const tooltipRef = useRef<HTMLElement | null>(null);
 
 	const saveTitle = useCallback((element: HTMLElement) => {
 		titleNodeRef.current = element;
@@ -245,7 +245,15 @@ const TooltipProvider = ({
 		}
 	}, []);
 
-	const handleHide = useCallback(() => {
+	const handleHide = useCallback((event?: any) => {
+		if (
+			event &&
+			(tooltipRef.current?.contains(event.relatedTarget) ||
+				targetRef.current?.contains(event.relatedTarget))
+		) {
+			return;
+		}
+
 		dispatch({type: 'hide'});
 
 		clearTimeout(timeoutIdRef.current);
@@ -260,8 +268,6 @@ const TooltipProvider = ({
 	}, []);
 
 	const handleShow = useCallback(({target}: {target: HTMLElement}) => {
-		targetRef.current = target;
-
 		const hasTitle =
 			target &&
 			(target.hasAttribute('title') || target.hasAttribute('data-title'));
@@ -271,6 +277,8 @@ const TooltipProvider = ({
 			: closestAncestor(target, '[title], [data-title]');
 
 		if (titleNode) {
+			targetRef.current = target;
+
 			target.addEventListener('click', handleHide);
 
 			const title =
@@ -304,7 +312,7 @@ const TooltipProvider = ({
 		}
 	}, []);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const handleEsc = (event: KeyboardEvent) => {
 			if (show && event.key === Keys.Esc) {
 				event.stopImmediatePropagation();
@@ -318,13 +326,18 @@ const TooltipProvider = ({
 		return () => document.removeEventListener('keyup', handleEsc, true);
 	}, [show]);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (scope) {
 			const disposeShowEvents = TRIGGER_SHOW_EVENTS.map((eventName) => {
 				return delegate(document.body, eventName, scope, handleShow);
 			});
 			const disposeHideEvents = TRIGGER_HIDE_EVENTS.map((eventName) => {
-				return delegate(document.body, eventName, scope, handleHide);
+				return delegate(
+					document.body,
+					eventName,
+					`${scope}, .tooltip`,
+					handleHide
+				);
 			});
 
 			return () => {
@@ -334,7 +347,7 @@ const TooltipProvider = ({
 		}
 	}, []);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (
 			titleNodeRef.current &&
 			(tooltipRef as React.RefObject<HTMLDivElement>).current
@@ -393,32 +406,43 @@ const TooltipProvider = ({
 		title: message,
 	});
 
+	const tooltip = show && (
+		<ClayPortal {...containerProps}>
+			<ClayTooltip alignPosition={align} ref={tooltipRef} show>
+				{setAsHTML && typeof titleContent === 'string' ? (
+					<span
+						dangerouslySetInnerHTML={{
+							__html: titleContent,
+						}}
+					/>
+				) : (
+					titleContent
+				)}
+			</ClayTooltip>
+		</ClayPortal>
+	);
+
 	return (
 		<>
-			{show && (
-				<ClayPortal {...containerProps}>
-					<ClayTooltip alignPosition={align} ref={tooltipRef} show>
-						{setAsHTML && typeof titleContent === 'string' ? (
-							<span
-								dangerouslySetInnerHTML={{
-									__html: titleContent,
-								}}
-							/>
-						) : (
-							titleContent
-						)}
-					</ClayTooltip>
-				</ClayPortal>
+			{scope ? (
+				<>
+					{tooltip}
+					{children}
+				</>
+			) : (
+				children &&
+				React.cloneElement(children, {
+					...children.props,
+					children: (
+						<>
+							{children.props.children}
+							{tooltip}
+						</>
+					),
+					onMouseOut: handleHide,
+					onMouseOver: handleShow,
+				})
 			)}
-
-			{scope
-				? children
-				: children &&
-				  React.cloneElement(children, {
-						...children.props,
-						onMouseOut: handleHide,
-						onMouseOver: handleShow,
-				  })}
 		</>
 	);
 };
