@@ -61,6 +61,11 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 
 	/**
+	 * Callback is called when an item is about to be moved elsewhere in the tree.
+	 */
+	onItemMove?: (item: T, parentItem: T) => void;
+
+	/**
 	 * When a tree is very large, loading items (nodes) asynchronously is preferred to
 	 * decrease the initial payload and memory space. The callback is called every time
 	 * the item is a leaf node of the tree.
@@ -116,6 +121,7 @@ export function TreeView<T>({
 	items,
 	nestedKey = 'children',
 	onExpandedChange,
+	onItemMove,
 	onItemsChange,
 	onLoadMore,
 	onRenameItem,
@@ -158,6 +164,7 @@ export function TreeView<T>({
 		expanderClassName,
 		expanderIcons,
 		nestedKey,
+		onItemMove,
 		onLoadMore,
 		onRenameItem,
 		onSelect,

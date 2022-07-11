@@ -9,7 +9,7 @@ import {Expand, Selection, useAPI} from './context';
 import {ItemContextProvider, useItem} from './useItem';
 
 export type ChildrenFunction<T> = (
-	item: Omit<T, 'indexes' | 'itemRef' | 'key' | 'parentItemRef'>,
+	item: Omit<T, 'index' | 'indexes' | 'itemRef' | 'key' | 'parentItemRef'>,
 	selection: Selection,
 	expand: Expand
 ) => React.ReactElement;
@@ -45,7 +45,7 @@ export function getKey(
 
 export function removeItemInternalProps<T extends Record<any, any>>(props: T) {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const {indexes, itemRef, key, parentItemRef, ...item} = props;
+	const {index, indexes, itemRef, key, parentItemRef, ...item} = props;
 
 	return item;
 }

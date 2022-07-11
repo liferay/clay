@@ -7,7 +7,9 @@ import React, {useContext, useEffect, useRef, useState} from 'react';
 import {useDrag, useDrop} from 'react-dnd';
 import {getEmptyImage} from 'react-dnd-html5-backend';
 
+import {removeItemInternalProps} from './Collection';
 import {useTreeViewContext} from './context';
+import {createImmutableTree} from './useTree';
 
 type Value = {
 	[propName: string]: any;
@@ -55,6 +57,7 @@ export function ItemContextProvider({children, value}: Props) {
 		expandedKeys,
 		items,
 		nestedKey,
+		onItemMove,
 		open,
 		reorder,
 		selection,
@@ -110,7 +113,7 @@ export function ItemContextProvider({children, value}: Props) {
 			isDragging: monitor.isDragging(),
 		}),
 		item: {
-			...item,
+			item,
 			type: 'treeViewItem',
 		},
 	});
@@ -123,7 +126,7 @@ export function ItemContextProvider({children, value}: Props) {
 		accept: 'treeViewItem',
 		canDrop(dragItem: unknown) {
 			return !isMovingIntoItself(
-				(dragItem as Value).indexes,
+				(dragItem as Value).item.indexes,
 				item.indexes
 			);
 		},
@@ -135,7 +138,7 @@ export function ItemContextProvider({children, value}: Props) {
 			if (
 				monitor.didDrop() ||
 				!monitor.canDrop() ||
-				(dragItem as Value).key === item.key
+				(dragItem as Value).item.key === item.key
 			) {
 				return;
 			}
@@ -161,7 +164,16 @@ export function ItemContextProvider({children, value}: Props) {
 					break;
 			}
 
-			reorder((dragItem as Value).indexes, indexes);
+			if (onItemMove) {
+				const tree = createImmutableTree(items as any, nestedKey!);
+
+				onItemMove(
+					removeItemInternalProps((dragItem as Value).item),
+					tree.nodeByPath(indexes).parent
+				);
+			}
+
+			reorder((dragItem as Value).item.indexes, indexes);
 		},
 		hover(dragItem, monitor) {
 			if (!monitor.canDrop() || isDragging) {
