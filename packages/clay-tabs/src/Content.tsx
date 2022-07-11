@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Receives a number that indicates the `tabkey` to be rendered.
 	 */

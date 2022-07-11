@@ -11,7 +11,7 @@ import ClayMultiStepNavIndicator from './Indicator';
 import ClayMultiStepNavItem from './Item';
 import ClayMultiStepNavTitle from './Title';
 
-interface IProps extends React.HTMLAttributes<HTMLOListElement> {
+export interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	/**
 	 * Flag to indicate if nav should add `multi-step-nav-collapse-sm` class
 	 */

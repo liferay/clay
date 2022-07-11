@@ -33,7 +33,7 @@ export interface ICardProps extends IContext {
 	selectable?: boolean;
 }
 
-interface IProps
+export interface IProps
 	extends ICardProps,
 		React.BaseHTMLAttributes<
 			HTMLAnchorElement | HTMLSpanElement | HTMLDivElement

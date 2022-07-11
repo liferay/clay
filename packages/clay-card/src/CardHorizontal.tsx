@@ -8,7 +8,7 @@ import React from 'react';
 
 import Context from './Context';
 
-interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag that indicates if `active` class is applied
 	 */

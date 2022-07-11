@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps extends React.HTMLAttributes<HTMLLIElement> {
+export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if `active` classname should be applied
 	 */

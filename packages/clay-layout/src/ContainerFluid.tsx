@@ -7,7 +7,7 @@ import React from 'react';
 
 import Container from './Container';
 
-interface IProps
+export interface IProps
 	extends Omit<
 		React.ComponentProps<typeof Container>,
 		'fluid' | 'fluidSize'

@@ -8,7 +8,7 @@ import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
 
-interface IProps
+export interface IProps
 	extends React.HTMLAttributes<
 		HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
 	> {

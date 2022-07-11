@@ -47,7 +47,7 @@ interface IItemWithItems extends IItem {
 	items?: Array<IItem>;
 }
 
-interface IProps {
+export interface IProps {
 	/**
 	 * Label of item that is currently active.
 	 * @deprecated since version 3.3.x
@@ -85,7 +85,7 @@ interface IProps {
 	spritemap?: string;
 }
 
-interface INavItemProps extends IItemWithItems {
+export interface INavItemProps extends IItemWithItems {
 	/**
 	 * Integer to keep track of what nested level the item is.
 	 */

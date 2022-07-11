@@ -11,7 +11,7 @@ import ClayDropDown from './DropDown';
 import ClayDropDownMenu from './Menu';
 import Drilldown from './drilldown';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate if the menu should be initially open (controlled).
 	 */
