@@ -23,7 +23,7 @@ import Menu, {Align} from './Menu';
 import Search from './Search';
 import Section from './Section';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
 	/**
 	 * Flag to indicate if the DropDown menu is active or not (controlled).
 	 *

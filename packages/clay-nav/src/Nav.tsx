@@ -9,7 +9,7 @@ import React from 'react';
 import {NavItem} from './NavItem';
 import {NavLink} from './NavLink';
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Flag to indicate if `nav-nested` class should be applied. Adds padding to indent each nested navigation.
 	 */

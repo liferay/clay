@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface ICardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface ICardGroupProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * Header's label of Card Group
 	 */

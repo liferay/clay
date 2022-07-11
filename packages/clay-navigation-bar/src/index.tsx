@@ -14,7 +14,7 @@ import warning from 'warning';
 
 import Item from './Item';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children elements received from ClayNavigationBar component.
 	 */

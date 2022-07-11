@@ -10,7 +10,7 @@ import Context from './Context';
 
 type ContainerAspectRatioType = '1/1' | '3/2' | '4/3' | '8/5' | '16/9';
 
-type Props = {
+export type Props = {
 	/**
 	 * AspectRatio content.
 	 */

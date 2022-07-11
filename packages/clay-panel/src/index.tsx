@@ -20,7 +20,7 @@ import ClayPanelGroup from './Group';
 import ClayPanelHeader from './Header';
 import ClayPanelTitle from './Title';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate that Panel is collapsable.
 	 */

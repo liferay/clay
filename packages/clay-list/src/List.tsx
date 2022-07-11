@@ -16,7 +16,7 @@ import QuickActionMenu from './QuickActionMenu';
 
 type TLIAttributes = React.ReactElement<React.HTMLAttributes<HTMLLIElement>>;
 
-interface IProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	children?: TLIAttributes | Array<TLIAttributes>;
 
 	/*

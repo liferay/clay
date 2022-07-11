@@ -12,7 +12,7 @@ import React from 'react';
 import ClayCard from './Card';
 import {ClayCardNavigation} from './CardNavigation';
 
-interface IProps
+export interface IProps
 	extends React.BaseHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
 	children?: React.ReactNode;
 

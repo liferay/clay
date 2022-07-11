@@ -6,7 +6,7 @@
 import ClayIcon from '@clayui/icon';
 import React from 'react';
 
-type Props = {
+export type Props = {
 	/**
 	 * Flag to indicate if step should show its been completed
 	 */
