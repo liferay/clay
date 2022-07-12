@@ -307,7 +307,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			if (active) {
 				align();
 			}
-		}, [active]);
+		}, [active, children]);
 
 		useEffect(() => {
 			if (alignElementRef && alignElementRef.current) {
