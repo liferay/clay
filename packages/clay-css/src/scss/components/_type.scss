@@ -189,7 +189,7 @@ strong {
 	@include clay-css($c-kbd-group);
 
 	> .c-kbd {
-		@include clay-css(setter(map-get($c-kbd-group, c-kbd), ()));
+		@include clay-css(map-get($c-kbd-group, c-kbd));
 	}
 }
 
@@ -254,7 +254,7 @@ strong {
 	@include clay-css($c-kbd-group-sm);
 
 	> .c-kbd {
-		@include clay-css(setter(map-get($c-kbd-group-sm, c-kbd), ()));
+		@include clay-css(map-get($c-kbd-group-sm, c-kbd));
 	}
 }
 
@@ -273,7 +273,7 @@ strong {
 	@include clay-css($c-kbd-group-lg);
 
 	> .c-kbd {
-		@include clay-css(setter(map-get($c-kbd-group-lg, c-kbd), ()));
+		@include clay-css(map-get($c-kbd-group-lg, c-kbd));
 	}
 }
 

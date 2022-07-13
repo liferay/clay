@@ -22,33 +22,23 @@ label {
 	@include clay-css($input-label);
 
 	@include clay-scale-component {
-		$mobile: setter(map-get($input-label, mobile), ());
-
-		@include clay-css($mobile);
+		@include clay-css(map-get($input-label, mobile));
 	}
 
 	&.focus {
-		$focus: setter(map-get($input-label, focus), ());
-
-		@include clay-css($focus);
+		@include clay-css(map-get($input-label, focus));
 	}
 
 	&[for] {
-		$for: setter(map-get($input-label, for), ());
-
-		@include clay-css($for);
+		@include clay-css(map-get($input-label, for));
 	}
 
 	+ .form-text {
-		$form-text: setter(map-get($input-label, form-text), ());
-
-		@include clay-css($form-text);
+		@include clay-css(map-get($input-label, form-text));
 	}
 
 	.reference-mark {
-		$reference-mark: setter(map-get($input-label, reference-mark), ());
-
-		@include clay-css($reference-mark);
+		@include clay-css(map-get($input-label, reference-mark));
 	}
 }
 
@@ -66,9 +56,7 @@ label {
 
 fieldset[disabled] label,
 label.disabled {
-	$disabled: setter(map-get($input-label, disabled), ());
-
-	@include clay-css($disabled);
+	@include clay-css(map-get($input-label, disabled));
 }
 
 fieldset[disabled] label {
@@ -84,9 +72,7 @@ fieldset[disabled] label {
 	@include clay-form-control-variant($input);
 
 	@include clay-scale-component {
-		$mobile: setter(map-get($input, mobile), ());
-
-		@include clay-css($mobile);
+		@include clay-css(map-get($input, mobile));
 	}
 
 	// Removes inner shadow on inputs in iOS. Bootstrap 4 uses
@@ -125,9 +111,7 @@ fieldset[disabled] label {
 // This adds disabled styles to div.form-control inside a disabled fielset.
 
 fieldset[disabled] .form-control {
-	$disabled: setter(map-get($input, disabled), ());
-
-	@include clay-css($disabled);
+	@include clay-css(map-get($input, disabled));
 }
 
 // Readonly controls as plain text
@@ -280,15 +264,11 @@ select.form-control {
 	@include clay-css($form-control-select);
 
 	&:hover {
-		$hover: setter(map-get($form-control-select, hover), ());
-
-		@include clay-css($hover);
+		@include clay-css(map-get($form-control-select, hover));
 	}
 
 	&:focus {
-		$focus: setter(map-get($form-control-select, focus), ());
-
-		@include clay-css($focus);
+		@include clay-css(map-get($form-control-select, focus));
 	}
 }
 
@@ -523,50 +503,33 @@ textarea.form-control-sm,
 	@include clay-css($form-fieldset);
 
 	&[disabled] {
-		@include clay-css(setter(map-get($form-fieldset, disabled), ()));
+		@include clay-css(map-get($form-fieldset, disabled));
 
 		label {
-			@include clay-css(
-				setter(map-deep-get($form-fieldset, disabled, label), ())
-			);
+			@include clay-css(map-deep-get($form-fieldset, disabled, label));
 
 			.form-control {
 				@include clay-css(
-					setter(
-						map-deep-get(
-							$form-fieldset,
-							disabled,
-							label,
-							form-control
-						),
-						()
-					)
+					map-deep-get($form-fieldset, disabled, label, form-control)
 				);
 			}
 		}
 
 		.form-control-label-text {
 			@include clay-css(
-				setter(
-					map-deep-get(
-						$form-fieldset,
-						disabled,
-						form-control-label-text
-					),
-					()
-				)
+				map-deep-get($form-fieldset, disabled, form-control-label-text)
 			);
 		}
 
 		.form-legend {
 			@include clay-css(
-				setter(map-deep-get($form-fieldset, disabled, form-legend), ())
+				map-deep-get($form-fieldset, disabled, form-legend)
 			);
 		}
 
 		.form-control {
 			@include clay-css(
-				setter(map-deep-get($form-fieldset, disabled, form-control), ())
+				map-deep-get($form-fieldset, disabled, form-control)
 			);
 		}
 	}

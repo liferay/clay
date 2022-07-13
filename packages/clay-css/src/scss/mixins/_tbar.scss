@@ -105,8 +105,6 @@
 		)
 	);
 
-	$nav: setter(map-get($map, nav), ());
-
 	$item: setter(map-get($map, item), ());
 	$item: map-merge(
 		$item,
@@ -138,12 +136,6 @@
 				),
 		)
 	);
-
-	$item-expand: setter(map-get($map, item-expand), ());
-
-	$divider-before: setter(map-get($map, divider-before), ());
-
-	$divider-after: setter(map-get($map, divider-after), ());
 
 	$btn: setter(map-get($map, btn), ());
 	$btn: map-merge(
@@ -410,18 +402,6 @@
 		)
 	);
 
-	$component-action: setter(map-get($map, component-action), ());
-
-	$component-link: setter(map-get($map, component-link), ());
-
-	$component-title: setter(map-get($map, component-title), ());
-
-	$component-text: setter(map-get($map, component-text), ());
-
-	$component-label: setter(map-get($map, component-label), ());
-
-	$tbar-label-size: setter(map-get($map, tbar-label-size), ());
-
 	@include clay-css($base);
 
 	strong {
@@ -429,15 +409,15 @@
 	}
 
 	.component-action {
-		@include clay-link($component-action);
+		@include clay-link(map-get($map, component-action));
 	}
 
 	.component-link {
-		@include clay-link($component-link);
+		@include clay-link(map-get($map, component-link));
 	}
 
 	.tbar-nav {
-		@include clay-css($nav);
+		@include clay-css(map-get($map, nav));
 	}
 
 	.tbar-item {
@@ -445,15 +425,15 @@
 	}
 
 	.tbar-divider-before::before {
-		@include clay-css($divider-before);
+		@include clay-css(map-get($map, divider-before));
 	}
 
 	.tbar-divider-after::after {
-		@include clay-css($divider-after);
+		@include clay-css(map-get($map, divider-after));
 	}
 
 	.tbar-item-expand {
-		@include clay-css($item-expand);
+		@include clay-css(map-get($map, item-expand));
 	}
 
 	.tbar-btn {
@@ -509,19 +489,19 @@
 	}
 
 	.component-title {
-		@include clay-text-typography($component-title);
+		@include clay-text-typography(map-get($map, component-title));
 	}
 
 	.component-text {
-		@include clay-text-typography($component-text);
+		@include clay-text-typography(map-get($map, component-text));
 	}
 
 	.component-label {
-		@include clay-label-variant($component-label);
+		@include clay-label-variant(map-get($map, component-label));
 	}
 
 	.tbar-label {
-		@include clay-label-size($tbar-label-size);
+		@include clay-label-size(map-get($map, tbar-label-size));
 	}
 }
 

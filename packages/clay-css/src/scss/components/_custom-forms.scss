@@ -66,15 +66,11 @@
 	@include clay-css($custom-control);
 
 	&:only-child {
-		$only-child: setter(map-get($custom-control, only-child), ());
-
-		@include clay-css($only-child);
+		@include clay-css(map-get($custom-control, only-child));
 	}
 
 	label {
-		$label: setter(map-get($custom-control, label), ());
-
-		@include clay-css($label);
+		@include clay-css(map-get($custom-control, label));
 	}
 }
 
@@ -106,15 +102,11 @@ label.custom-control-label {
 // Custom Control Indicator
 
 .custom-control-label::before {
-	$before: setter(map-get($custom-control-label, before), ());
-
-	@include clay-css($before);
+	@include clay-css(map-get($custom-control-label, before));
 }
 
 .custom-control-label::after {
-	$after: setter(map-get($custom-control-label, after), ());
-
-	@include clay-css($after);
+	@include clay-css(map-get($custom-control-label, after));
 }
 
 .custom-control-input {

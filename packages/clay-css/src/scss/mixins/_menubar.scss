@@ -53,8 +53,6 @@
 
 	// .menubar-vertical-expand-{md}
 
-	$base: setter($map, ());
-
 	$mobile: setter(map-get($map, mobile), ());
 	$mobile: map-merge(
 		$mobile,
@@ -129,8 +127,6 @@
 
 	// .menubar-collapse
 
-	$collapse: setter(map-get($map, collapse), ());
-
 	$collapse-mobile: setter(map-get($map, collapse-mobile), ());
 	$collapse-mobile: map-merge(
 		$collapse-mobile,
@@ -178,8 +174,6 @@
 		)
 	);
 
-	$nav-nested: setter(map-get($map, nav-nested), ());
-
 	$nav-nested-mobile: setter(map-get($map, nav-nested-mobile), ());
 	$nav-nested-mobile: map-merge(
 		$nav-nested-mobile,
@@ -196,8 +190,6 @@
 				),
 		)
 	);
-
-	$nav-nested-margins: setter(map-get($map, nav-nested-margins), ());
 
 	$nav-nested-margins-mobile: setter(
 		map-get($map, nav-nested-margins-mobile),
@@ -217,16 +209,6 @@
 					map-get($nav-nested-margins-mobile, margin-top)
 				),
 		)
-	);
-
-	$nav-nested-margins-item: setter(
-		map-get($map, nav-nested-margins-item),
-		()
-	);
-
-	$nav-nested-margins-item-mobile: setter(
-		map-get($map, nav-nested-margins-item-mobile),
-		()
 	);
 
 	// .menubar-toggler
@@ -278,11 +260,6 @@
 		)
 	);
 
-	$_toggler-mobile-lexicon-icon: setter(
-		map-get($toggler-mobile, lexicon-icon),
-		()
-	);
-
 	$_toggler-mobile-c-inner: setter(map-get($toggler-mobile, c-inner), ());
 	$_toggler-mobile-c-inner: map-merge(
 		$_toggler-mobile-c-inner,
@@ -327,14 +304,14 @@
 	);
 
 	@if ($enabled) {
-		@include clay-css($base);
+		@include clay-css($map);
 
 		@include media-breakpoint-down($breakpoint-down) {
 			@include clay-css($mobile);
 		}
 
 		.menubar-collapse {
-			@include clay-css($collapse);
+			@include clay-css(map-get($map, collapse));
 
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($collapse-mobile);
@@ -357,13 +334,13 @@
 				}
 
 				.lexicon-icon {
-					@include clay-css($_toggler-mobile-lexicon-icon);
+					@include clay-css(map-get($toggler-mobile, lexicon-icon));
 				}
 			}
 		}
 
 		.nav-nested {
-			@include clay-css($nav-nested);
+			@include clay-css(map-get($map, nav-nested));
 
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($nav-nested-mobile);
@@ -371,17 +348,19 @@
 		}
 
 		.nav-nested-margins {
-			@include clay-css($nav-nested-margins);
+			@include clay-css(map-get($map, nav-nested-margins));
 
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($nav-nested-margins-mobile);
 			}
 
 			> li .nav > li {
-				@include clay-css($nav-nested-margins-item);
+				@include clay-css(map-get($map, nav-nested-margins-item));
 
 				@include media-breakpoint-down($breakpoint-down) {
-					@include clay-css($nav-nested-margins-item-mobile);
+					@include clay-css(
+						map-get($map, nav-nested-margins-item-mobile)
+					);
 				}
 			}
 		}
@@ -762,8 +741,6 @@
 
 	// .menubar-collapse
 
-	$collapse: setter(map-get($map, collapse), ());
-
 	$collapse-mobile: setter(map-get($map, collapse-mobile), ());
 	$collapse-mobile: map-deep-merge(
 		$collapse-mobile,
@@ -832,16 +809,6 @@
 		)
 	);
 
-	$nav-nested-margins-item: setter(
-		map-get($map, nav-nested-margins-item),
-		()
-	);
-
-	$nav-nested-margins-item-mobile: setter(
-		map-get($map, nav-nested-margins-item-mobile),
-		()
-	);
-
 	// .menubar-toggler
 
 	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
@@ -877,14 +844,14 @@
 	);
 
 	@if ($enable) {
-		@include clay-css($base);
+		@include clay-css($map);
 
 		@include media-breakpoint-down($breakpoint-down) {
 			@include clay-css($mobile);
 		}
 
 		.menubar-collapse {
-			@include clay-css($collapse);
+			@include clay-css(map-get($map, collapse));
 
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($collapse-mobile);
@@ -899,10 +866,12 @@
 
 		.nav-nested-margins {
 			> li .nav > li {
-				@include clay-css($nav-nested-margins-item);
+				@include clay-css(map-get($map, nav-nested-margins-item));
 
 				@include media-breakpoint-down($breakpoint-down) {
-					@include clay-css($nav-nested-margins-item-mobile);
+					@include clay-css(
+						map-get($map, nav-nested-margins-item-mobile)
+					);
 				}
 			}
 		}

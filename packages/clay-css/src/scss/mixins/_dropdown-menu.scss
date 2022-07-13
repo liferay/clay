@@ -88,15 +88,15 @@
 			}
 
 			&::before {
-				@include clay-css(setter(map-get($map, before), ()));
+				@include clay-css(map-get($map, before));
 			}
 
 			&::after {
-				@include clay-css(setter(map-get($map, after), ()));
+				@include clay-css(map-get($map, after));
 			}
 
 			&.show {
-				@include clay-css(setter(map-get($map, show), ()));
+				@include clay-css(map-get($map, show));
 			}
 
 			.dropdown-item {
@@ -451,10 +451,6 @@
 			)
 		);
 
-		$autofit-row: setter(map-get($map, autofit-row), ());
-
-		$c-kbd-inline: setter(map-get($map, c-kbd-inline), ());
-
 		$c-inner: setter(map-get($map, c-inner), ());
 		$c-inner: map-merge(
 			(
@@ -485,11 +481,11 @@
 				@include clay-css($hover);
 
 				&::before {
-					@include clay-css(setter(map-get($hover, before), ()));
+					@include clay-css(map-get($hover, before));
 				}
 
 				&::after {
-					@include clay-css(setter(map-get($hover, after), ()));
+					@include clay-css(map-get($hover, after));
 				}
 
 				.c-kbd-inline {
@@ -501,11 +497,11 @@
 				@include clay-css($focus);
 
 				&::before {
-					@include clay-css(setter(map-get($focus, before), ()));
+					@include clay-css(map-get($focus, before));
 				}
 
 				&::after {
-					@include clay-css(setter(map-get($focus, after), ()));
+					@include clay-css(map-get($focus, after));
 				}
 
 				.c-kbd-inline {
@@ -517,11 +513,11 @@
 				@include clay-css($active);
 
 				&::before {
-					@include clay-css(setter(map-get($active, before), ()));
+					@include clay-css(map-get($active, before));
 				}
 
 				&::after {
-					@include clay-css(setter(map-get($active, after), ()));
+					@include clay-css(map-get($active, after));
 				}
 
 				label {
@@ -546,15 +542,11 @@
 				@include clay-css($active-class);
 
 				&::before {
-					@include clay-css(
-						setter(map-get($active-class, before), ())
-					);
+					@include clay-css(map-get($active-class, before));
 				}
 
 				&::after {
-					@include clay-css(
-						setter(map-get($active-class, after), ())
-					);
+					@include clay-css(map-get($active-class, after));
 				}
 
 				label {
@@ -590,11 +582,11 @@
 				@include clay-css($disabled);
 
 				&::before {
-					@include clay-css(setter(map-get($disabled, before), ()));
+					@include clay-css(map-get($disabled, before));
 				}
 
 				&::after {
-					@include clay-css(setter(map-get($disabled, after), ()));
+					@include clay-css(map-get($disabled, after));
 				}
 
 				label,
@@ -610,25 +602,21 @@
 					@include clay-css($disabled-active);
 
 					&::before {
-						@include clay-css(
-							setter(map-get($disabled-active, before), ())
-						);
+						@include clay-css(map-get($disabled-active, before));
 					}
 
 					&::after {
-						@include clay-css(
-							setter(map-get($disabled-active, after), ())
-						);
+						@include clay-css(map-get($disabled-active, after));
 					}
 				}
 			}
 
 			&::before {
-				@include clay-css(setter(map-get($map, before), ()));
+				@include clay-css(map-get($map, before));
 			}
 
 			&::after {
-				@include clay-css(setter(map-get($map, after), ()));
+				@include clay-css(map-get($map, after));
 			}
 
 			@if (map-get($c-inner, enabled)) {
@@ -654,7 +642,7 @@
 			}
 
 			.autofit-row {
-				@include clay-css($autofit-row);
+				@include clay-css(map-get($map, autofit-row));
 
 				> .autofit-col {
 					@include clay-css(
@@ -670,7 +658,7 @@
 			}
 
 			.c-kbd-inline {
-				@include clay-css($c-kbd-inline);
+				@include clay-css(map-get($map, c-kbd-inline));
 			}
 
 			.form-check-label {

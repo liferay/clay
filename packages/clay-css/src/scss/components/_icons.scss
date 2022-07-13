@@ -1,17 +1,17 @@
 .lexicon-icon {
-	@include clay-css(setter($lexicon-icon, ()));
+	@include clay-css($lexicon-icon);
 }
 
 .lexicon-icon-sm {
-	@include clay-css(setter($lexicon-icon-sm, ()));
+	@include clay-css($lexicon-icon-sm);
 }
 
 .lexicon-icon-lg {
-	@include clay-css(setter($lexicon-icon-lg, ()));
+	@include clay-css($lexicon-icon-lg);
 }
 
 .lexicon-icon-xl {
-	@include clay-css(setter($lexicon-icon-xl, ()));
+	@include clay-css($lexicon-icon-xl);
 }
 
 .order-arrow-down-active {

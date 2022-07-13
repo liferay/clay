@@ -8,11 +8,11 @@ fieldset:disabled a.btn {
 	@include clay-css($btn-disabled);
 
 	&:focus {
-		@include clay-css(setter(map-get($btn-disabled, focus), ()));
+		@include clay-css(map-get($btn-disabled, focus));
 	}
 
 	&:active {
-		@include clay-css(setter(map-get($btn-disabled, active), ()));
+		@include clay-css(map-get($btn-disabled, active));
 	}
 }
 

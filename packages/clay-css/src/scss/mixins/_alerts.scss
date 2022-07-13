@@ -106,17 +106,7 @@
 			)
 		);
 
-		$hr: setter(map-get($map, hr), ());
-
 		$alert-indicator: setter(map-get($map, alert-indicator), ());
-
-		$alert-indicator-lead: setter(map-get($alert-indicator, lead), ());
-
-		$alert-btn: setter(map-get($map, alert-btn), ());
-
-		$btn-group: setter(map-get($map, btn-group), ());
-
-		$btn-group-item: setter(map-get($map, btn-group-item), ());
 
 		$close: setter(map-get($map, close), ());
 		$close: map-deep-merge(
@@ -161,10 +151,6 @@
 			)
 		);
 
-		$component-title: setter(map-get($map, component-title), ());
-
-		$component-subtitle: setter(map-get($map, component-subtitle), ());
-
 		@if ($enabled) {
 			@include clay-css($base);
 
@@ -177,7 +163,7 @@
 			}
 
 			hr {
-				@include clay-css($hr);
+				@include clay-css(map-get($map, hr));
 			}
 
 			&.alert-dismissible {
@@ -202,26 +188,24 @@
 				@include clay-css($alert-indicator);
 
 				.lexicon-icon {
-					@include clay-css(
-						setter(map-get($alert-indicator, lexicon-icon), ())
-					);
+					@include clay-css(map-get($alert-indicator, lexicon-icon));
 				}
 
 				+ .lead {
-					@include clay-css($alert-indicator-lead);
+					@include clay-css(map-get($alert-indicator, lead));
 				}
 			}
 
 			.alert-btn {
-				@include clay-button-variant($alert-btn);
+				@include clay-button-variant(map-get($map, alert-btn));
 			}
 
 			.btn-group {
-				@include clay-container($btn-group);
+				@include clay-container(map-get($map, btn-group));
 			}
 
 			.btn-group-item {
-				@include clay-container($btn-group-item);
+				@include clay-container(map-get($map, btn-group-item));
 			}
 
 			.close {
@@ -242,11 +226,13 @@
 			}
 
 			.component-title {
-				@include clay-text-typography($component-title);
+				@include clay-text-typography(map-get($map, component-title));
 			}
 
 			.component-subtitle {
-				@include clay-text-typography($component-subtitle);
+				@include clay-text-typography(
+					map-get($map, component-subtitle)
+				);
 			}
 
 			@each $key, $properties in map-get($map, custom-selectors) {

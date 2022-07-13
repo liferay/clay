@@ -806,9 +806,7 @@
 			}
 
 			.aspect-ratio {
-				@include clay-aspect-ratio-variant(
-					setter(map-get($map, aspect-ratio), ())
-				);
+				@include clay-aspect-ratio-variant(map-get($map, aspect-ratio));
 
 				@if ($aspect-ratio-checkered-fg) {
 					@include clay-bg-checkered($aspect-ratio-checkered-fg);
@@ -828,7 +826,7 @@
 
 			.aspect-ratio-item {
 				@include clay-aspect-ratio-item-variant(
-					setter(map-get($map, aspect-ratio-item), ())
+					map-get($map, aspect-ratio-item)
 				);
 			}
 
@@ -879,9 +877,7 @@
 			}
 
 			.sticker {
-				@include clay-sticker-variant(
-					setter(map-get($map, sticker), ())
-				);
+				@include clay-sticker-variant(map-get($map, sticker));
 			}
 
 			.card {
@@ -1311,8 +1307,6 @@
 @mixin clay-card-type-asset-variant($map) {
 	$enabled: setter(map-get($map, enabled), true);
 
-	$base: setter($map, ());
-
 	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
 	$aspect-ratio: map-merge(
 		$aspect-ratio,
@@ -1381,7 +1375,7 @@
 	);
 
 	@if ($enabled) {
-		@include clay-css($base);
+		@include clay-css($map);
 
 		.aspect-ratio {
 			@include clay-css($aspect-ratio);

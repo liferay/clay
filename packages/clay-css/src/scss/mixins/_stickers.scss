@@ -222,58 +222,49 @@
 
 				.lexicon-icon {
 					@include clay-css(
-						setter(
-							map-deep-get($map, inline-item, lexicon-icon),
-							()
-						)
+						map-deep-get($map, inline-item, lexicon-icon)
 					);
 				}
 			}
 
 			.lexicon-icon {
-				@include clay-css(setter(map-get($map, lexicon-icon), ()));
+				@include clay-css(map-get($map, lexicon-icon));
 			}
 
 			.sticker-img {
-				@include clay-css(setter(map-get($map, sticker-img), ()));
+				@include clay-css(map-get($map, sticker-img));
 			}
 
 			.sticker-overlay {
-				@include clay-css(setter(map-get($map, sticker-overlay), ()));
+				@include clay-css(map-get($map, sticker-overlay));
 			}
 
 			&.rounded {
-				@include clay-css(setter(map-get($map, rounded), ()));
+				@include clay-css(map-get($map, rounded));
 
 				.sticker-overlay {
 					@include clay-css(
-						setter(map-deep-get($map, rounded, sticker-overlay), ())
+						map-deep-get($map, rounded, sticker-overlay)
 					);
 				}
 			}
 
 			&.rounded-circle {
-				@include clay-css(setter(map-get($map, rounded-circle), ()));
+				@include clay-css(map-get($map, rounded-circle));
 
 				.sticker-overlay {
 					@include clay-css(
-						setter(
-							map-deep-get($map, rounded-circle, sticker-overlay),
-							()
-						)
+						map-deep-get($map, rounded-circle, sticker-overlay)
 					);
 				}
 			}
 
 			&.rounded-0 {
-				@include clay-css(setter(map-get($map, rounded-0), ()));
+				@include clay-css(map-get($map, rounded-0));
 
 				.sticker-overlay {
 					@include clay-css(
-						setter(
-							map-deep-get($map, rounded-0, sticker-overlay),
-							()
-						)
+						map-deep-get($map, rounded-0, sticker-overlay)
 					);
 				}
 			}

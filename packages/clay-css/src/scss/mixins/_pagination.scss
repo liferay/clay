@@ -111,39 +111,35 @@
 
 			> a,
 			> button {
-				@include clay-link(setter(map-deep-get($map, link), ()));
+				@include clay-link(map-get($map, link));
 			}
 
 			&.active {
 				> a,
 				> button {
-					@include clay-link(
-						setter(map-deep-get($map, link, active-class), ())
-					);
+					@include clay-link(map-deep-get($map, link, active-class));
 				}
 			}
 
 			&.disabled {
 				> a,
 				> button {
-					@include clay-link(
-						setter(map-deep-get($map, link, disabled), ())
-					);
+					@include clay-link(map-deep-get($map, link, disabled));
 				}
 			}
 
 			.dropdown-menu {
 				@include clay-dropdown-menu-variant(
-					setter(map-deep-get($map, dropdown-menu), ())
+					map-get($map, dropdown-menu)
 				);
 			}
 
 			.lexicon-icon {
-				@include clay-css(map-deep-get($map, lexicon-icon));
+				@include clay-css(map-get($map, lexicon-icon));
 			}
 
 			+ .pagination-results {
-				@include clay-css(map-deep-get($map, pagination-results));
+				@include clay-css(map-get($map, pagination-results));
 			}
 
 			@if (map-get($map, media-breakpoint-down)) {
@@ -162,10 +158,7 @@
 						> a,
 						> button {
 							@include clay-link(
-								setter(
-									map-deep-get($media-breakpoint-down, link),
-									()
-								)
+								map-get($media-breakpoint-down, link)
 							);
 						}
 
@@ -173,13 +166,10 @@
 							> a,
 							> button {
 								@include clay-link(
-									setter(
-										map-deep-get(
-											$media-breakpoint-down,
-											link,
-											active-class
-										),
-										()
+									map-deep-get(
+										$media-breakpoint-down,
+										link,
+										active-class
 									)
 								);
 							}
@@ -189,13 +179,10 @@
 							> a,
 							> button {
 								@include clay-link(
-									setter(
-										map-deep-get(
-											$media-breakpoint-down,
-											link,
-											disabled
-										),
-										()
+									map-deep-get(
+										$media-breakpoint-down,
+										link,
+										disabled
 									)
 								);
 							}
@@ -203,28 +190,19 @@
 
 						.dropdown-menu {
 							@include clay-dropdown-menu-variant(
-								setter(
-									map-deep-get(
-										$media-breakpoint-down,
-										dropdown-menu
-									),
-									()
-								)
+								map-get($media-breakpoint-down, dropdown-menu)
 							);
 						}
 
 						.lexicon-icon {
 							@include clay-css(
-								map-deep-get(
-									$media-breakpoint-down,
-									lexicon-icon
-								)
+								map-get($media-breakpoint-down, lexicon-icon)
 							);
 						}
 
 						+ .pagination-results {
 							@include clay-css(
-								map-deep-get(
+								map-get(
 									$media-breakpoint-down,
 									pagination-results
 								)
@@ -317,7 +295,7 @@
 			}
 
 			.page-link {
-				@include clay-link(setter(map-get($map, page-link), ()));
+				@include clay-link(map-get($map, page-link));
 			}
 
 			.page-item:first-child .page-link,
@@ -334,10 +312,7 @@
 				&.active {
 					.page-link {
 						@include clay-link(
-							setter(
-								map-deep-get($map, page-link, active-class),
-								()
-							)
+							map-deep-get($map, page-link, active-class)
 						);
 					}
 				}
@@ -345,21 +320,19 @@
 				&.disabled {
 					.page-link {
 						@include clay-link(
-							setter(map-deep-get($map, page-link, disabled), ())
+							map-deep-get($map, page-link, disabled)
 						);
 					}
 				}
 			}
 
 			.pagination {
-				@include clay-pagination-variant(
-					map-deep-get($map, pagination)
-				);
+				@include clay-pagination-variant(map-get($map, pagination));
 			}
 
 			.pagination-items-per-page {
 				@include clay-pagination-items-per-page-variant(
-					map-deep-get($map, pagination-items-per-page)
+					map-get($map, pagination-items-per-page)
 				);
 			}
 
@@ -378,16 +351,13 @@
 
 						.page-item {
 							@include clay-css(
-								map-deep-get($media-breakpoint-down, page-item)
+								map-get($media-breakpoint-down, page-item)
 							);
 						}
 
 						.page-link {
 							@include clay-link(
-								setter(
-									map-get($media-breakpoint-down, page-link),
-									()
-								)
+								map-get($media-breakpoint-down, page-link)
 							);
 						}
 
@@ -409,13 +379,10 @@
 							&.active {
 								.page-link {
 									@include clay-link(
-										setter(
-											map-deep-get(
-												$media-breakpoint-down,
-												page-link,
-												active
-											),
-											()
+										map-deep-get(
+											$media-breakpoint-down,
+											page-link,
+											active
 										)
 									);
 								}
@@ -424,13 +391,10 @@
 							&.disabled {
 								.page-link {
 									@include clay-link(
-										setter(
-											map-deep-get(
-												$media-breakpoint-down,
-												page-link,
-												disabled
-											),
-											()
+										map-deep-get(
+											$media-breakpoint-down,
+											page-link,
+											disabled
 										)
 									);
 								}
@@ -439,13 +403,13 @@
 
 						.pagination {
 							@include clay-pagination-variant(
-								map-deep-get($media-breakpoint-down, pagination)
+								map-get($media-breakpoint-down, pagination)
 							);
 						}
 
 						.pagination-items-per-page {
 							@include clay-pagination-items-per-page-variant(
-								map-deep-get(
+								map-get(
 									$media-breakpoint-down,
 									pagination-items-per-page
 								)
