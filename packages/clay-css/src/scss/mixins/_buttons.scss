@@ -648,10 +648,19 @@
 				}
 			}
 
+			&.focus-ring {
+				&.show {
+					@include clay-css($focus);
+				}
+			}
+
+			&:focus:not(.focus-ring),
+			&.focus:not(.focus-ring) {
+				@include clay-css($focus);
+			}
+
 			&:focus,
 			&.focus {
-				@include clay-css($focus);
-
 				&::before {
 					@include clay-css(map-deep-get($map, focus, before));
 				}
@@ -677,6 +686,12 @@
 				}
 			}
 
+			&:active:not(.focus-ring) {
+				&:focus {
+					@include clay-css($active-focus);
+				}
+			}
+
 			&:active {
 				@include clay-css($active);
 
@@ -689,8 +704,6 @@
 				}
 
 				&:focus {
-					@include clay-css($active-focus);
-
 					&::before {
 						@include clay-css(
 							map-deep-get($map, active, focus, before)

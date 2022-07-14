@@ -4,6 +4,7 @@
  */
 
 import {useProvider} from '@clayui/provider';
+import {useFocusRing} from '@react-aria/focus';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -75,9 +76,11 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 		ref
 	) => {
 		const {focusRing} = useProvider();
+		const {isFocusVisible, focusProps} = useFocusRing();
 
 		return (
 			<button
+				{...focusProps}
 				className={classNames(className, 'btn', {
 					'alert-btn': alert,
 					'btn-block': block,
@@ -88,18 +91,14 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 						displayType && !outline && !borderless,
 					[`btn-outline-${displayType}`]:
 						displayType && (outline || borderless),
+					'focus-ring': focusRing,
+					'show': focusRing && isFocusVisible,
 				})}
 				ref={ref}
 				type={type}
 				{...otherProps}
 			>
-				{focusRing ? (
-					<span className="c-inner" tabIndex={-1}>
-						{children}
-					</span>
-				) : (
-					children
-				)}
+				{children}
 			</button>
 		);
 	}
