@@ -33,27 +33,15 @@
 	@include clay-css($sticker-outside);
 
 	&.sticker-bottom-left {
-		$bottom-left: setter(
-			map-get($sticker-outside, sticker-bottom-left),
-			()
-		);
-
-		@include clay-css($bottom-left);
+		@include clay-css(map-get($sticker-outside, sticker-bottom-left));
 	}
 
 	&.sticker-bottom-right {
-		$bottom-right: setter(
-			map-get($sticker-outside, sticker-bottom-right),
-			()
-		);
-
-		@include clay-css($bottom-right);
+		@include clay-css(map-get($sticker-outside, sticker-bottom-right));
 	}
 
 	&.sticker-top-right {
-		$top-right: setter(map-get($sticker-outside, sticker-top-right), ());
-
-		@include clay-css($top-right);
+		@include clay-css(map-get($sticker-outside, sticker-top-right));
 	}
 }
 

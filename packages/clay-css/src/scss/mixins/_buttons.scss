@@ -387,8 +387,6 @@
 		$active-class: setter(map-get($map, active-class), ());
 		$active-class: map-merge($active, $active-class);
 
-		$active-class-after: setter(map-get($map, active-class-after), ());
-
 		$show: map-deep-merge($active-class, map-get($map, show));
 
 		$disabled: setter(map-get($map, disabled), ());
@@ -432,8 +430,6 @@
 					),
 			)
 		);
-
-		$disabled-focus: setter(map-get($disabled, focus), ());
 
 		$nested-disabled-active: setter(map-get($disabled, active), ());
 		$disabled-active: setter(map-get($map, disabled-active), ());
@@ -729,7 +725,7 @@
 				}
 
 				&::after {
-					@include clay-css($active-class-after);
+					@include clay-css(map-get($map, active-class-after));
 				}
 
 				&:focus {
@@ -772,7 +768,7 @@
 				}
 
 				&:focus {
-					@include clay-css($disabled-focus);
+					@include clay-css(map-get($disabled, focus));
 
 					&::before {
 						@include clay-css(

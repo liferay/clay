@@ -31,10 +31,6 @@
 		)
 	);
 
-	$btn-group-mobile: setter(map-get($mobile, btn-group), ());
-
-	$btn-group-item-mobile: setter(map-get($mobile, btn-group-item), ());
-
 	@if ($enabled) {
 		@include media-breakpoint-down($breakpoint-down) {
 			@include clay-css($mobile);
@@ -44,11 +40,11 @@
 			}
 
 			.btn-group {
-				@include clay-css($btn-group-mobile);
+				@include clay-css(map-get($mobile, btn-group));
 			}
 
 			.btn-group-item {
-				@include clay-css($btn-group-item-mobile);
+				@include clay-css(map-get($mobile, btn-group-item));
 			}
 		}
 	}

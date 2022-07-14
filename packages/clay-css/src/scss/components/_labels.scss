@@ -50,27 +50,23 @@
 	@include clay-css($label-item);
 
 	a {
-		@include clay-link(setter(map-get($label-item, link), ()));
+		@include clay-link(map-get($label-item, link));
 	}
 
 	.btn-unstyled {
-		@include clay-button-variant(
-			setter(map-get($label-item, btn-unstyled), ())
-		);
+		@include clay-button-variant(map-get($label-item, btn-unstyled));
 	}
 
 	.close {
-		@include clay-close(setter(map-get($label-item, close), ()));
+		@include clay-close(map-get($label-item, close));
 	}
 
 	.lexicon-icon {
-		@include clay-css(setter(map-get($label-item, lexicon-icon), ()));
+		@include clay-css(map-get($label-item, lexicon-icon));
 	}
 
 	.text-truncate-inline {
-		@include clay-css(
-			setter(map-get($label-item, text-truncate-inline), ())
-		);
+		@include clay-css(map-get($label-item, text-truncate-inline));
 	}
 }
 
@@ -78,7 +74,7 @@
 	@include clay-css($label-item-expand);
 
 	a {
-		@include clay-link(setter(map-get($label-item-expand, link), ()));
+		@include clay-link(map-get($label-item-expand, link));
 	}
 }
 

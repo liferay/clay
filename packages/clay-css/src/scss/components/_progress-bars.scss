@@ -88,15 +88,11 @@
 	@include clay-css($progress-group-addon);
 
 	&:first-child {
-		$first-child: setter(map-get($progress-group-addon, first-child), ());
-
-		@include clay-css($first-child);
+		@include clay-css(map-get($progress-group-addon, first-child));
 	}
 
 	&:last-child {
-		$last-child: setter(map-get($progress-group-addon, last-child), ());
-
-		@include clay-css($last-child);
+		@include clay-css(map-get($progress-group-addon, last-child));
 	}
 }
 

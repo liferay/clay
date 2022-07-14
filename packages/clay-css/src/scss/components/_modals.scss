@@ -184,9 +184,7 @@
 	@include clay-css($modal-header);
 
 	@include clay-scale-component(null, $breakpoint-down) {
-		$mobile: setter(map-get($modal-header, mobile), ());
-
-		@include clay-css($mobile);
+		@include clay-css(map-get($modal-header, mobile));
 	}
 }
 
@@ -194,9 +192,7 @@
 	@include clay-css($modal-body);
 
 	&.inline-scroller {
-		$inline-scroller: setter(map-get($modal-body, inline-scroller), ());
-
-		@include clay-css($inline-scroller);
+		@include clay-css(map-get($modal-body, inline-scroller));
 	}
 }
 

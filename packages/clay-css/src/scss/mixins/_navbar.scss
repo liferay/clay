@@ -891,7 +891,7 @@
 			@include clay-css($map);
 
 			&.navbar-underline {
-				@include clay-css(map-deep-get($map, navbar-underline));
+				@include clay-css(map-get($map, navbar-underline));
 
 				.navbar-nav {
 					@include clay-css(
@@ -956,7 +956,7 @@
 			}
 
 			.navbar-collapse {
-				@include clay-css(map-deep-get($map, navbar-collapse));
+				@include clay-css(map-get($map, navbar-collapse));
 
 				.navbar-nav {
 					@include clay-css(
@@ -999,11 +999,11 @@
 			}
 
 			.container {
-				@include clay-css(map-deep-get($map, container));
+				@include clay-css(map-get($map, container));
 			}
 
 			.container-fluid {
-				@include clay-css(map-deep-get($map, container-fluid));
+				@include clay-css(map-get($map, container-fluid));
 			}
 
 			.navbar-nav {
@@ -1047,7 +1047,7 @@
 			}
 
 			.navbar-form {
-				@include clay-css(map-deep-get($map, navbar-form));
+				@include clay-css(map-get($map, navbar-form));
 
 				> .container {
 					@include clay-css(
@@ -1069,7 +1069,7 @@
 			}
 
 			.navbar-brand {
-				@include clay-link(map-deep-get($map, navbar-brand));
+				@include clay-link(map-get($map, navbar-brand));
 			}
 
 			.navbar-title {
@@ -1081,9 +1081,7 @@
 			}
 
 			.navbar-toggler {
-				@include clay-button-variant(
-					map-deep-get($map, navbar-toggler)
-				);
+				@include clay-button-variant(map-get($map, navbar-toggler));
 			}
 
 			.navbar-toggler-link {
@@ -1091,7 +1089,7 @@
 			}
 
 			.navbar-overlay {
-				@include clay-css(map-deep-get($map, navbar-overlay));
+				@include clay-css(map-get($map, navbar-overlay));
 			}
 
 			.dropdown-menu {
@@ -1139,7 +1137,7 @@
 			(
 				background-color:
 					setter(
-						map-deep-get($map, link-bg),
+						map-get($map, link-bg),
 						map-deep-get(
 							$map,
 							navbar-nav,
@@ -1149,33 +1147,33 @@
 					),
 				border-radius:
 					setter(
-						map-deep-get($map, link-border-radius),
+						map-get($map, link-border-radius),
 						map-deep-get($map, navbar-nav, nav-link, border-radius)
 					),
 				color:
 					setter(
-						map-deep-get($map, link-color),
+						map-get($map, link-color),
 						map-deep-get($map, navbar-nav, nav-link, color)
 					),
 				font-weight:
 					setter(
-						map-deep-get($map, link-font-weight),
+						map-get($map, link-font-weight),
 						map-deep-get($map, navbar-nav, nav-link, font-weight)
 					),
 				outline:
 					setter(
-						map-deep-get($map, link-outline),
+						map-get($map, link-outline),
 						map-deep-get($map, navbar-nav, nav-link, outline)
 					),
 				transition:
 					setter(
-						map-deep-get($map, link-transition),
+						map-get($map, link-transition),
 						map-deep-get($map, navbar-nav, nav-link, transition)
 					),
 				hover: (
 					background-color:
 						setter(
-							map-deep-get($map, link-hover-bg),
+							map-get($map, link-hover-bg),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1186,7 +1184,7 @@
 						),
 					color:
 						setter(
-							map-deep-get($map, link-hover-color),
+							map-get($map, link-hover-color),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1199,7 +1197,7 @@
 				focus: (
 					background-color:
 						setter(
-							map-deep-get($map, link-focus-bg),
+							map-get($map, link-focus-bg),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1210,7 +1208,7 @@
 						),
 					box-shadow:
 						setter(
-							map-deep-get($map, link-focus-box-shadow),
+							map-get($map, link-focus-box-shadow),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1221,7 +1219,7 @@
 						),
 					color:
 						setter(
-							map-deep-get($map, link-focus-color),
+							map-get($map, link-focus-color),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1234,7 +1232,7 @@
 				active: (
 					background-color:
 						setter(
-							map-deep-get($map, link-active-bg),
+							map-get($map, link-active-bg),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1245,7 +1243,7 @@
 						),
 					color:
 						setter(
-							map-deep-get($map, link-active-color),
+							map-get($map, link-active-color),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1258,7 +1256,7 @@
 				disabled: (
 					background-color:
 						setter(
-							map-deep-get($map, link-disabled-bg),
+							map-get($map, link-disabled-bg),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1269,7 +1267,7 @@
 						),
 					box-shadow:
 						setter(
-							map-deep-get($map, link-disabled-box-shadow),
+							map-get($map, link-disabled-box-shadow),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1280,7 +1278,7 @@
 						),
 					color:
 						setter(
-							map-deep-get($map, link-disabled-color),
+							map-get($map, link-disabled-color),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1291,7 +1289,7 @@
 						),
 					opacity:
 						setter(
-							map-deep-get($map, link-disabled-opacity),
+							map-get($map, link-disabled-opacity),
 							map-deep-get(
 								$map,
 								navbar-nav,
@@ -1301,7 +1299,7 @@
 							)
 						),
 					pointer-events: (
-						map-deep-get($map, link-disabled-pointer-events),
+						map-get($map, link-disabled-pointer-events),
 						map-deep-get(
 							$map,
 							navbar-nav,
@@ -1319,9 +1317,9 @@
 			(
 				font-weight:
 					setter(
-						map-deep-get($map, btn-font-weight),
+						map-get($map, btn-font-weight),
 						map-deep-get($map, navbar-nav, nav-btn, font-weight),
-						map-deep-get($nav-link, font-weight)
+						map-get($nav-link, font-weight)
 					),
 			)
 		);
@@ -1332,18 +1330,18 @@
 			(
 				background-color:
 					setter(
-						map-deep-get($map, brand-bg),
+						map-get($map, brand-bg),
 						map-deep-get($map, navbar-brand, background-color)
 					),
 				color:
 					setter(
-						map-deep-get($map, brand-color),
+						map-get($map, brand-color),
 						map-deep-get($map, navbar-brand, color)
 					),
 				hover: (
 					background-color:
 						setter(
-							map-deep-get($map, brand-hover-bg),
+							map-get($map, brand-hover-bg),
 							map-deep-get(
 								$map,
 								navbar-brand,
@@ -1353,7 +1351,7 @@
 						),
 					color:
 						setter(
-							map-deep-get($map, brand-hover-color),
+							map-get($map, brand-hover-color),
 							map-deep-get($map, navbar-brand, hover, color)
 						),
 				),
@@ -1365,13 +1363,13 @@
 			(
 				color:
 					setter(
-						map-deep-get($map, toggler-color),
+						map-get($map, toggler-color),
 						map-deep-get($map, navbar-toggler, color),
 						map-get($nav-link, color)
 					),
 				font-weight:
 					setter(
-						map-deep-get($map, toggler-font-weight),
+						map-get($map, toggler-font-weight),
 						map-deep-get($map, navbar-toggler, font-weight),
 						map-get($nav-link, font-weight)
 					),
@@ -1384,7 +1382,7 @@
 				background-color:
 					setter(
 						map-deep-get($map, navbar-overlay, background-color),
-						map-deep-get($map, background-color)
+						map-get($map, background-color)
 					),
 			)
 		);
@@ -1438,7 +1436,7 @@
 				}
 
 				.nav-divider {
-					@include clay-css(map-deep-get($map, nav-divider));
+					@include clay-css(map-get($map, nav-divider));
 
 					&::before {
 						@include clay-css(
@@ -1454,7 +1452,7 @@
 				}
 
 				.nav-divider-end {
-					@include clay-css(map-deep-get($map, nav-divider-end));
+					@include clay-css(map-get($map, nav-divider-end));
 
 					&::before {
 						@include clay-css(
@@ -1471,7 +1469,7 @@
 			}
 
 			.navbar-form {
-				@include clay-css(map-deep-get($map, navbar-form));
+				@include clay-css(map-get($map, navbar-form));
 
 				> .container {
 					@include clay-css(
@@ -1563,7 +1561,7 @@
 
 								&.navbar-expand#{$infix} {
 									@include clay-navbar-expand-variant(
-										map-deep-get(
+										map-get(
 											$media-breakpoint-down,
 											'navbar-expand#{$infix}'
 										)
@@ -1572,7 +1570,7 @@
 
 								.navbar-overlay-#{$breakpoint}-down {
 									@include clay-css(
-										map-deep-get(
+										map-get(
 											$media-breakpoint-down,
 											'navbar-overlay-#{$breakpoint}-down'
 										)
@@ -1620,7 +1618,7 @@
 
 								&.navbar-expand#{$infix} {
 									@include clay-navbar-expand-variant(
-										map-deep-get(
+										map-get(
 											$media-breakpoint-up,
 											'navbar-expand#{$infix}'
 										)

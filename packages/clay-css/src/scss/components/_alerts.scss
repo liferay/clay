@@ -21,13 +21,11 @@
 	@include clay-css($alert-indicator);
 
 	.lexicon-icon {
-		@include clay-css(setter(map-get($alert-indicator, lexicon-icon), ()));
+		@include clay-css(map-get($alert-indicator, lexicon-icon));
 	}
 
 	+ .lead {
-		$lead: setter(map-get($alert-indicator, lead), ());
-
-		@include clay-css($lead);
+		@include clay-css(map-get($alert-indicator, lead));
 	}
 }
 
@@ -75,9 +73,7 @@
 	@include clay-css($alert-notifications-absolute);
 
 	@include clay-scale-component(null, $breakpoint-down) {
-		$mobile: setter(map-get($alert-notifications-absolute, mobile), ());
-
-		@include clay-css($mobile);
+		@include clay-css(map-get($alert-notifications-absolute, mobile));
 	}
 }
 
@@ -87,9 +83,7 @@
 	@include clay-css($alert-notifications-fixed);
 
 	@include clay-scale-component(null, $breakpoint-down) {
-		$mobile: setter(map-get($alert-notifications-fixed, mobile), ());
-
-		@include clay-css($mobile);
+		@include clay-css(map-get($alert-notifications-fixed, mobile));
 	}
 }
 
@@ -170,12 +164,7 @@
 	@include clay-css($alert-inline);
 
 	&.alert-dismissible {
-		$alert-dismissible: setter(
-			map-get($alert-inline, alert-dismissible),
-			()
-		);
-
-		@include clay-css($alert-dismissible);
+		@include clay-css(map-get($alert-inline, alert-dismissible));
 
 		&.alert-fluid {
 			$alert-dismissible-alert-fluid: setter(
@@ -195,21 +184,17 @@
 				@include clay-css($container-fluid);
 
 				> .alert-autofit-row {
-					$alert-autofit-row: setter(
-						map-get($container-fluid, alert-autofit-row),
-						map-get($alert-inline, alert-autofit-row),
-						()
+					@include clay-css(
+						setter(
+							map-get($container-fluid, alert-autofit-row),
+							map-get($alert-inline, alert-autofit-row)
+						)
 					);
 
-					@include clay-css($alert-autofit-row);
-
 					.btn-group {
-						$btn-group: setter(
-							map-get($alert-autofit-row, btn-group),
-							()
+						@include clay-css(
+							map-get($alert-autofit-row, btn-group)
 						);
-
-						@include clay-css($btn-group);
 					}
 				}
 			}
@@ -225,16 +210,12 @@
 		@include clay-css($alert-autofit-row);
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
-
-			@include clay-css($btn-group);
+			@include clay-css(map-get($alert-autofit-row, btn-group));
 		}
 	}
 
 	.close {
-		$close: setter(map-get($alert-inline, close), ());
-
-		@include clay-close($close);
+		@include clay-close(map-get($alert-inline, close));
 	}
 }
 
@@ -252,22 +233,16 @@
 		@include clay-css($alert-autofit-row);
 
 		> .autofit-col {
-			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
-
-			@include clay-css($autofit-col);
+			@include clay-css(map-get($alert-autofit-row, autofit-col));
 		}
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
-
-			@include clay-css($btn-group);
+			@include clay-css(map-get($alert-autofit-row, btn-group));
 		}
 	}
 
 	.close {
-		$close: setter(map-get($alert-autofit-stacked, close), ());
-
-		@include clay-close($close);
+		@include clay-close(map-get($alert-autofit-stacked, close));
 	}
 }
 
@@ -287,27 +262,21 @@
 		}
 
 		> .autofit-col {
-			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
-
 			@include media-breakpoint-down(sm) {
-				@include clay-css($autofit-col);
+				@include clay-css(map-get($alert-autofit-row, autofit-col));
 			}
 		}
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
-
 			@include media-breakpoint-down(sm) {
-				@include clay-css($btn-group);
+				@include clay-css(map-get($alert-autofit-row, btn-group));
 			}
 		}
 	}
 
 	.close {
-		$close: setter(map-get($alert-autofit-stacked-sm-down, close), ());
-
 		@include media-breakpoint-down(sm) {
-			@include clay-css($close);
+			@include clay-css(map-get($alert-autofit-stacked-sm-down, close));
 		}
 	}
 }
@@ -328,27 +297,21 @@
 		}
 
 		> .autofit-col {
-			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
-
 			@include media-breakpoint-down(xs) {
-				@include clay-css($autofit-col);
+				@include clay-css(map-get($alert-autofit-row, autofit-col));
 			}
 		}
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
-
 			@include media-breakpoint-down(xs) {
-				@include clay-css($btn-group);
+				@include clay-css(map-get($alert-autofit-row, btn-group));
 			}
 		}
 	}
 
 	.close {
-		$close: setter(map-get($alert-autofit-stacked-xs-down, close), ());
-
 		@include media-breakpoint-down(xs) {
-			@include clay-css($close);
+			@include clay-css(map-get($alert-autofit-stacked-xs-down, close));
 		}
 	}
 }
@@ -365,22 +328,12 @@
 
 		> .container,
 		> .container-fluid {
-			$container-fluid: setter(
-				map-get($alert-fluid, container-fluid),
-				()
-			);
-
-			@include clay-css($container-fluid);
+			@include clay-css(map-get($alert-fluid, container-fluid));
 		}
 	}
 
 	&.alert-feedback {
-		$alert-feedback: setter(
-			map-get($alert-indicator-start, alert-feedback),
-			()
-		);
-
-		@include clay-css($alert-feedback);
+		@include clay-css(map-get($alert-indicator-start, alert-feedback));
 	}
 
 	.alert-indicator {
@@ -392,9 +345,7 @@
 		@include clay-css($alert-indicator);
 
 		+ .lead {
-			$lead: setter(map-get($alert-indicator, lead), ());
-
-			@include clay-css($lead);
+			@include clay-css(map-get($alert-indicator, lead));
 		}
 	}
 
@@ -407,12 +358,9 @@
 		@include clay-css($alert-autofit-row);
 
 		.alert-indicator:only-child {
-			$alert-indicator-only-child: setter(
-				map-get($alert-autofit-row, alert-indicator-only-child),
-				()
+			@include clay-css(
+				map-get($alert-autofit-row, alert-indicator-only-child)
 			);
-
-			@include clay-css($alert-indicator-only-child);
 		}
 	}
 }

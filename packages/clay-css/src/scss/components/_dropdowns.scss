@@ -15,11 +15,11 @@
 	@include clay-css($dropdown-header);
 
 	@include media-breakpoint-down(map-get($dropdown-header, breakpoint-down)) {
-		@include clay-css(setter(map-get($dropdown-header, mobile), ()));
+		@include clay-css(map-get($dropdown-header, mobile));
 	}
 
 	&:first-child {
-		@include clay-css(setter(map-get($dropdown-header, first-child), ()));
+		@include clay-css(map-get($dropdown-header, first-child));
 	}
 }
 
@@ -27,9 +27,7 @@
 	@include clay-css($dropdown-subheader);
 
 	&:first-child {
-		@include clay-css(
-			setter(map-get($dropdown-subheader, first-child), ())
-		);
+		@include clay-css(map-get($dropdown-subheader, first-child));
 	}
 }
 
@@ -62,41 +60,30 @@
 
 	.form-group + .form-group {
 		@include clay-css(
-			setter(map-deep-get($dropdown-section, form-group, form-group), ())
+			map-deep-get($dropdown-section, form-group, form-group)
 		);
 	}
 
 	.custom-control {
-		@include clay-css(
-			setter(map-get($dropdown-section, custom-control), ())
-		);
+		@include clay-css(map-get($dropdown-section, custom-control));
 	}
 
 	.custom-control-label {
-		@include clay-css(
-			setter(map-get($dropdown-section, custom-control-label), ())
-		);
+		@include clay-css(map-get($dropdown-section, custom-control-label));
 	}
 
 	.custom-control-label-text {
 		@include clay-css(
-			setter(map-get($dropdown-section, custom-control-label-text), ())
+			map-get($dropdown-section, custom-control-label-text)
 		);
 	}
 
 	&.active {
-		@include clay-css(setter(map-get($dropdown-section, active), ()));
+		@include clay-css(map-get($dropdown-section, active));
 
 		.custom-control-label {
 			@include clay-css(
-				setter(
-					map-deep-get(
-						$dropdown-section,
-						active,
-						custom-control-label
-					),
-					()
-				)
+				map-deep-get($dropdown-section, active, custom-control-label)
 			);
 		}
 	}
@@ -225,7 +212,7 @@
 
 	> .dropdown-toggle {
 		@include clay-button-variant(
-			setter(map-get($dropdown-action, dropdown-toggle), ())
+			map-get($dropdown-action, dropdown-toggle)
 		);
 	}
 }

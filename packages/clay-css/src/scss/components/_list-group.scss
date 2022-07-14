@@ -411,24 +411,19 @@
 
 @each $color, $value in $list-group-item-theme-colors {
 	.list-group-item-#{$color} {
-		@include clay-css(setter($value, ()));
+		@include clay-css($value);
 
 		&.list-group-item-action {
-			$active: setter(map-get($value, active), ());
-			$hover: setter(map-get($value, hover), ());
-
-			$focus: setter(map-get($value, focus), $hover);
-
 			&:hover {
-				@include clay-css($hover);
+				@include clay-css(map-get($value, hover));
 			}
 
 			&:focus {
-				@include clay-css($focus);
+				@include clay-css(map-get($value, focus));
 			}
 
 			&.active {
-				@include clay-css($active);
+				@include clay-css(map-get($value, active));
 			}
 		}
 	}

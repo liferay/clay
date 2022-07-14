@@ -28,219 +28,238 @@
 /// c-inner: {Map | Null}, // Pass parameters to `clay-css` mixin
 
 @mixin clay-label-size($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$base: setter($map, ());
-	$base: map-merge(
-		$base,
-		(
-			border-width:
-				setter(
-					map-get($base, border-width),
-					if(
-						variable-exists(label-border-width),
-						$label-border-width,
+		$base: setter($map, ());
+		$base: map-merge(
+			$base,
+			(
+				border-width:
+					setter(
+						map-get($base, border-width),
 						if(
-							variable-exists(cadmin-label-border-width),
-							$cadmin-label-border-width,
-							null
+							variable-exists(label-border-width),
+							$label-border-width,
+							if(
+								variable-exists(cadmin-label-border-width),
+								$cadmin-label-border-width,
+								null
+							)
 						)
-					)
-				),
-			padding-bottom:
-				setter(map-get($map, padding-y), map-get($base, padding-bottom)),
-			padding-left:
-				setter(map-get($map, padding-x), map-get($base, padding-left)),
-			padding-right:
-				setter(map-get($map, padding-x), map-get($base, padding-right)),
-			padding-top:
-				setter(map-get($map, padding-y), map-get($base, padding-top)),
-		)
-	);
+					),
+				padding-bottom:
+					setter(
+						map-get($map, padding-y),
+						map-get($base, padding-bottom)
+					),
+				padding-left:
+					setter(
+						map-get($map, padding-x),
+						map-get($base, padding-left)
+					),
+				padding-right:
+					setter(
+						map-get($map, padding-x),
+						map-get($base, padding-right)
+					),
+				padding-top:
+					setter(
+						map-get($map, padding-y),
+						map-get($base, padding-top)
+					),
+			)
+		);
 
-	$label-item: setter(map-get($map, label-item), ());
-	$label-item: map-merge(
-		$label-item,
-		(
-			margin-bottom:
-				setter(
-					map-get($map, item-spacer-y),
-					map-get($label-item, margin-bottom)
-				),
-			margin-top:
-				setter(
-					map-get($map, item-spacer-y),
-					map-get($label-item, margin-top)
-				),
-		)
-	);
+		$label-item: setter(map-get($map, label-item), ());
+		$label-item: map-merge(
+			$label-item,
+			(
+				margin-bottom:
+					setter(
+						map-get($map, item-spacer-y),
+						map-get($label-item, margin-bottom)
+					),
+				margin-top:
+					setter(
+						map-get($map, item-spacer-y),
+						map-get($label-item, margin-top)
+					),
+			)
+		);
 
-	$label-item-before: setter(map-get($map, label-item-before), ());
-	$label-item-before: map-merge(
-		$label-item-before,
-		(
-			margin-right:
-				setter(
-					map-get($map, item-spacer-x),
-					map-get($label-item-before, margin-right)
-				),
-		)
-	);
+		$label-item-before: setter(map-get($map, label-item-before), ());
+		$label-item-before: map-merge(
+			$label-item-before,
+			(
+				margin-right:
+					setter(
+						map-get($map, item-spacer-x),
+						map-get($label-item-before, margin-right)
+					),
+			)
+		);
 
-	$label-item-after: setter(map-get($map, label-item-after), ());
-	$label-item-after: map-merge(
-		$label-item-after,
-		(
-			margin-left:
-				setter(
-					map-get($map, item-spacer-x),
-					map-get($label-item-after, margin-left)
-				),
-		)
-	);
+		$label-item-after: setter(map-get($map, label-item-after), ());
+		$label-item-after: map-merge(
+			$label-item-after,
+			(
+				margin-left:
+					setter(
+						map-get($map, item-spacer-x),
+						map-get($label-item-after, margin-left)
+					),
+			)
+		);
 
-	$lexicon-icon: setter(map-get($map, lexicon-icon), ());
-	$lexicon-icon: map-merge(
-		$lexicon-icon,
-		(
-			height:
-				setter(
-					map-get($map, lexicon-icon-height),
-					map-get($lexicon-icon, height),
-					map-get($lexicon-icon, width)
-				),
-			margin-top:
-				setter(
-					map-get($map, lexicon-icon-margin-top),
-					map-get($lexicon-icon, margin-top)
-				),
-			width:
-				setter(
-					map-get($map, lexicon-icon-width),
-					map-get($lexicon-icon, width)
-				),
-		)
-	);
+		$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+		$lexicon-icon: map-merge(
+			$lexicon-icon,
+			(
+				height:
+					setter(
+						map-get($map, lexicon-icon-height),
+						map-get($lexicon-icon, height),
+						map-get($lexicon-icon, width)
+					),
+				margin-top:
+					setter(
+						map-get($map, lexicon-icon-margin-top),
+						map-get($lexicon-icon, margin-top)
+					),
+				width:
+					setter(
+						map-get($map, lexicon-icon-width),
+						map-get($lexicon-icon, width)
+					),
+			)
+		);
 
-	$sticker: setter(map-get($map, sticker), ());
-	$sticker: map-merge(
-		$sticker,
-		(
-			border-radius:
-				setter(
-					map-get($map, sticker-border-radius),
-					map-get($sticker, border-radius)
-				),
-			height:
-				setter(map-get($map, sticker-size), map-get($sticker, height)),
-			line-height:
-				setter(
-					map-get($map, sticker-size),
-					map-get($sticker, line-height)
-				),
-			width: setter(map-get($map, sticker-size), map-get($sticker, width)),
-		)
-	);
+		$sticker: setter(map-get($map, sticker), ());
+		$sticker: map-merge(
+			$sticker,
+			(
+				border-radius:
+					setter(
+						map-get($map, sticker-border-radius),
+						map-get($sticker, border-radius)
+					),
+				height:
+					setter(
+						map-get($map, sticker-size),
+						map-get($sticker, height)
+					),
+				line-height:
+					setter(
+						map-get($map, sticker-size),
+						map-get($sticker, line-height)
+					),
+				width:
+					setter(
+						map-get($map, sticker-size),
+						map-get($sticker, width)
+					),
+			)
+		);
 
-	$sticker-overlay: setter(map-get($map, sticker-overlay), ());
-	$sticker-overlay: map-merge(
-		$sticker-overlay,
-		(
-			border-radius:
-				setter(
-					map-get($sticker-overlay, border-radius),
-					map-get($sticker, border-radius)
-				),
-		)
-	);
+		$sticker-overlay: setter(map-get($map, sticker-overlay), ());
+		$sticker-overlay: map-merge(
+			$sticker-overlay,
+			(
+				border-radius:
+					setter(
+						map-get($sticker-overlay, border-radius),
+						map-get($sticker, border-radius)
+					),
+			)
+		);
 
-	$close: setter(map-get($map, close), ());
-
-	$c-inner: setter(map-get($map, c-inner), ());
-	$c-inner: map-deep-merge(
-		$c-inner,
-		(
-			enabled:
-				if(
-					variable-exists(enable-c-inner),
-					$enable-c-inner,
+		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-deep-merge(
+			$c-inner,
+			(
+				enabled:
 					if(
-						variable-exists(cadmin-enable-c-inner),
-						$cadmin-enable-c-inner,
-						true
-					)
-				),
-			margin-bottom:
-				setter(
-					map-get($c-inner, margin-bottom),
-					math-sign(map-get($base, padding-bottom))
-				),
-			margin-left:
-				setter(
-					map-get($c-inner, margin-left),
-					math-sign(map-get($base, padding-left))
-				),
-			margin-right:
-				setter(
-					map-get($c-inner, margin-right),
-					math-sign(map-get($base, padding-right))
-				),
-			margin-top:
-				setter(
-					map-get($c-inner, margin-top),
-					math-sign(map-get($base, padding-top))
-				),
-		)
-	);
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						if(
+							variable-exists(cadmin-enable-c-inner),
+							$cadmin-enable-c-inner,
+							true
+						)
+					),
+				margin-bottom:
+					setter(
+						map-get($c-inner, margin-bottom),
+						math-sign(map-get($base, padding-bottom))
+					),
+				margin-left:
+					setter(
+						map-get($c-inner, margin-left),
+						math-sign(map-get($base, padding-left))
+					),
+				margin-right:
+					setter(
+						map-get($c-inner, margin-right),
+						math-sign(map-get($base, padding-right))
+					),
+				margin-top:
+					setter(
+						map-get($c-inner, margin-top),
+						math-sign(map-get($base, padding-top))
+					),
+			)
+		);
 
-	@if ($enabled) {
-		@include clay-css($base);
+		@if ($enabled) {
+			@include clay-css($base);
 
-		// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
-		// pattern instead
-		.inline-item {
-			a,
-			.btn-unstyled,
+			// Inline Item in Labels are deprecated in v2.0.0-rc.11 use .label-item
+			// pattern instead
+			.inline-item {
+				a,
+				.btn-unstyled,
+				.close {
+					margin-top: map-get($lexicon-icon, margin-top);
+				}
+
+				.lexicon-icon {
+					@include clay-css($lexicon-icon);
+				}
+			}
+
+			.label-item {
+				@include clay-css($label-item);
+
+				.lexicon-icon {
+					@include clay-css($lexicon-icon);
+				}
+			}
+
+			.label-item-before {
+				@include clay-css($label-item-before);
+			}
+
+			.label-item-after {
+				@include clay-css($label-item-after);
+			}
+
 			.close {
-				margin-top: map-get($lexicon-icon, margin-top);
+				@include clay-close(map-get($map, close));
 			}
 
-			.lexicon-icon {
-				@include clay-css($lexicon-icon);
+			.sticker {
+				@include clay-css($sticker);
 			}
-		}
 
-		.label-item {
-			@include clay-css($label-item);
-
-			.lexicon-icon {
-				@include clay-css($lexicon-icon);
+			.sticker-overlay {
+				@include clay-css($sticker-overlay);
 			}
-		}
 
-		.label-item-before {
-			@include clay-css($label-item-before);
-		}
-
-		.label-item-after {
-			@include clay-css($label-item-after);
-		}
-
-		.close {
-			@include clay-close($close);
-		}
-
-		.sticker {
-			@include clay-css($sticker);
-		}
-
-		.sticker-overlay {
-			@include clay-css($sticker-overlay);
-		}
-
-		@if (map-get($c-inner, enabled)) {
-			> .c-inner {
-				@include clay-css($c-inner);
+			@if (map-get($c-inner, enabled)) {
+				> .c-inner {
+					@include clay-css($c-inner);
+				}
 			}
 		}
 	}
@@ -331,31 +350,30 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
-		$base: setter($map, ());
 		$base: map-merge(
-			$base,
+			$map,
 			(
 				background-color:
-					setter(map-get($map, bg), map-get($base, background-color)),
+					setter(map-get($map, bg), map-get($map, background-color)),
 				padding-bottom:
 					setter(
 						map-get($map, padding-y),
-						map-get($base, padding-bottom)
+						map-get($map, padding-bottom)
 					),
 				padding-left:
 					setter(
 						map-get($map, padding-x),
-						map-get($base, padding-left)
+						map-get($map, padding-left)
 					),
 				padding-right:
 					setter(
 						map-get($map, padding-x),
-						map-get($base, padding-right)
+						map-get($map, padding-right)
 					),
 				padding-top:
 					setter(
 						map-get($map, padding-y),
-						map-get($base, padding-top)
+						map-get($map, padding-top)
 					),
 			)
 		);
@@ -569,8 +587,6 @@
 			)
 		);
 
-		$close: setter(map-get($map, close), ());
-
 		$sticker: setter(map-get($map, sticker), ());
 		$sticker: map-merge(
 			$sticker,
@@ -629,28 +645,28 @@
 				margin-bottom:
 					setter(
 						map-get($c-inner, margin-bottom),
-						math-sign(map-get($base, padding-bottom))
+						math-sign(map-get($map, padding-bottom))
 					),
 				margin-left:
 					setter(
 						map-get($c-inner, margin-left),
-						math-sign(map-get($base, padding-left))
+						math-sign(map-get($map, padding-left))
 					),
 				margin-right:
 					setter(
 						map-get($c-inner, margin-right),
-						math-sign(map-get($base, padding-right))
+						math-sign(map-get($map, padding-right))
 					),
 				margin-top:
 					setter(
 						map-get($c-inner, margin-top),
-						math-sign(map-get($base, padding-top))
+						math-sign(map-get($map, padding-top))
 					),
 			)
 		);
 
 		@if ($enabled) {
-			@include clay-css($base);
+			@include clay-css($map);
 
 			&:disabled,
 			&.disabled {
@@ -689,7 +705,7 @@
 			}
 
 			.close {
-				@include clay-close($close);
+				@include clay-close(map-get($map, close));
 			}
 
 			.sticker {
