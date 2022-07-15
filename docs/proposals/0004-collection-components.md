@@ -2,7 +2,7 @@
 
 -   Start Date: 31-03-2022
 -   Author: [Matuzalém Teles](https://github.com/matuzalemsteles)
--   RFC PR: (leave this empty)
+-   RFC PR: [#4840](https://github.com/liferay/clay/pull/4840)
 -   Clay Issue: [#4112](https://github.com/liferay/clay/issues/4112)
 -   Status: **Awaiting implementation**
 
