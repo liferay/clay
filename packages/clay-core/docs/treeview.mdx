@@ -140,7 +140,7 @@ function Example() {
 		<TreeView defaultItems={items} nestedKey="children">
 			{(item) => (
 				<TreeView.Item key={item.name}>
-					{item.name}
+					<TreeView.ItemStack>{item.name}</TreeView.ItemStack>
 
 					{item.children && (
 						<TreeView.Group items={item.children}>
@@ -224,6 +224,8 @@ In static content, it is also possible to define the `key` to be used in the sel
 
 #### Nested
 
+Creating a nested item is necessary to declare it inside the `<TreeView.Item>` to differentiate the nested items from the current item, it is necessary to wrap the item elements in a `<TreeView.ItemStack />`. To declare the items of an item, declare the same components nested inside a `<TreeView.Group />` component.
+
 ```jsx
 <TreeView.Item>
 	<TreeView.ItemStack>
@@ -232,7 +234,11 @@ In static content, it is also possible to define the `key` to be used in the sel
 		Drive
 	</TreeView.ItemStack>
 	<TreeView.Group>
-		{...}
+		<TreeView.Item disabled={true}>
+			<Checkbox />
+			<Icon symbol="folder" />
+			Documents
+		</TreeView.Item>
 	</TreeView.Group>
 </TreeView.Item>
 ```
