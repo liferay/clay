@@ -7,6 +7,9 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-1"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         data-testid="trigger"
         style=""
@@ -17,6 +20,8 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
     <div>
       <div
         class="dropdown-menu drilldown dropdown-menu-indicator-end show"
+        id="clay-dropdown-menu-1"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -175,6 +180,9 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-2"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         data-testid="trigger"
         style=""
@@ -185,6 +193,8 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
     <div>
       <div
         class="dropdown-menu drilldown dropdown-menu-indicator-end show"
+        id="clay-dropdown-menu-2"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -363,6 +373,9 @@ exports[`ClayDropDownWithDrilldown renders with the menu initially active 1`] = 
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-5"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         data-testid="trigger"
       />
@@ -378,6 +391,9 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-6"
+        aria-expanded="false"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         data-testid="trigger"
         style=""
@@ -388,6 +404,8 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
     <div>
       <div
         class="dropdown-menu drilldown dropdown-menu-indicator-end"
+        id="clay-dropdown-menu-6"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div

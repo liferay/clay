@@ -10,7 +10,7 @@ import {
 	useInternalState,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -107,6 +107,8 @@ export interface IProps
 	};
 }
 
+let counter = 0;
+
 function ClayDropDown(props: IProps): JSX.Element & {
 	Action: typeof Action;
 	Caption: typeof Caption;
@@ -140,10 +142,10 @@ function ClayDropDown({
 	trigger,
 	...otherProps
 }: IProps) {
-	const triggerElementRef = React.useRef<HTMLButtonElement | null>(null);
-	const menuElementRef = React.useRef<HTMLDivElement>(null);
+	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
+	const menuElementRef = useRef<HTMLDivElement>(null);
 
-	const [initialized, setInitialized] = React.useState(!renderMenuOnClick);
+	const [initialized, setInitialized] = useState(!renderMenuOnClick);
 
 	const [internalActive, setInternalActive] = useInternalState({
 		defaultName: 'defaultActive',
@@ -171,13 +173,19 @@ function ClayDropDown({
 		}
 	};
 
-	React.useEffect(() => {
+	useEffect(() => {
 		document.addEventListener('focus', handleFocus, true);
 
 		return () => {
 			document.removeEventListener('focus', handleFocus, true);
 		};
 	}, [handleFocus]);
+
+	const ariaControls = useMemo(() => {
+		counter++;
+
+		return `clay-dropdown-menu-${counter}`;
+	}, []);
 
 	return (
 		<FocusScope>
@@ -187,6 +195,9 @@ function ClayDropDown({
 				onKeyUp={handleKeyUp}
 			>
 				{React.cloneElement(trigger, {
+					'aria-controls': ariaControls,
+					'aria-expanded': internalActive,
+					'aria-haspopup': 'menu',
 					className: classNames(
 						'dropdown-toggle',
 						trigger.props.className
@@ -221,6 +232,7 @@ function ClayDropDown({
 						hasLeftSymbols={hasLeftSymbols}
 						hasRightSymbols={hasRightSymbols}
 						height={menuHeight}
+						id={ariaControls}
 						offsetFn={offsetFn}
 						onSetActive={setInternalActive}
 						ref={menuElementRef}

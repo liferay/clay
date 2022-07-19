@@ -141,14 +141,19 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu"
+        role="presentation"
         style="max-width: none; left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
+          role="menu"
         >
-          <li>
+          <li
+            role="none"
+          >
             <button
               class="dropdown-item"
+              role="menuitem"
             >
               <strong>
                 one
@@ -511,14 +516,19 @@ exports[`ClayMultiSelect renders with items 1`] = `
 exports[`Interactions Use custom function for filtering autocomplete results 1`] = `
 <div
   class="dropdown-menu autocomplete-dropdown-menu"
+  role="presentation"
   style="max-width: none; left: -999px; top: -995px; width: 0px;"
 >
   <ul
     class="list-unstyled"
+    role="menu"
   >
-    <li>
+    <li
+      role="none"
+    >
       <button
         class="dropdown-item"
+        role="menuitem"
       >
         <strong>
           b
@@ -538,14 +548,19 @@ exports[`Interactions Use custom function for filtering autocomplete results 1`]
 exports[`Interactions Use custom function for filtering autocomplete results 2`] = `
 <div
   class="dropdown-menu autocomplete-dropdown-menu"
+  role="presentation"
   style="max-width: none; left: -999px; top: -995px; width: 0px;"
 >
   <ul
     class="list-unstyled"
+    role="menu"
   >
-    <li>
+    <li
+      role="none"
+    >
       <button
         class="dropdown-item"
+        role="menuitem"
       >
         foo
       </button>

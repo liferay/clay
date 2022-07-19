@@ -7,6 +7,9 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-2"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -18,31 +21,43 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
     <div>
       <div
         class="dropdown-menu show"
+        id="clay-dropdown-menu-2"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
+          role="menu"
         >
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#one"
+              role="menuitem"
             >
               one
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#two"
+              role="menuitem"
             >
               two
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#three"
+              role="menuitem"
             >
               three
             </a>
@@ -61,6 +76,9 @@ exports[`ClayDropDown renders with groups 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-7"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -72,10 +90,13 @@ exports[`ClayDropDown renders with groups 1`] = `
     <div>
       <div
         class="dropdown-menu show"
+        id="clay-dropdown-menu-7"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
+          role="menu"
         >
           <li
             class="dropdown-subheader"
@@ -83,26 +104,35 @@ exports[`ClayDropDown renders with groups 1`] = `
           >
             Group #1
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#one"
+              role="menuitem"
             >
               one
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#two"
+              role="menuitem"
             >
               two
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#three"
+              role="menuitem"
             >
               three
             </a>
@@ -113,26 +143,35 @@ exports[`ClayDropDown renders with groups 1`] = `
           >
             Group #2
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#one"
+              role="menuitem"
             >
               one
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#two"
+              role="menuitem"
             >
               two
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#three"
+              role="menuitem"
             >
               three
             </a>
@@ -151,6 +190,9 @@ exports[`ClayDropDown renders with icons 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-6"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -162,14 +204,20 @@ exports[`ClayDropDown renders with icons 1`] = `
     <div>
       <div
         class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start show"
+        id="clay-dropdown-menu-6"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <ul
           class="list-unstyled"
+          role="menu"
         >
-          <li>
+          <li
+            role="none"
+          >
             <span
               class="dropdown-item"
+              role="menuitem"
             >
               <span
                 class="dropdown-item-indicator-start"
@@ -186,9 +234,12 @@ exports[`ClayDropDown renders with icons 1`] = `
               Left
             </span>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <span
               class="dropdown-item"
+              role="menuitem"
             >
               Right
               <span
@@ -205,9 +256,12 @@ exports[`ClayDropDown renders with icons 1`] = `
               </span>
             </span>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <span
               class="dropdown-item"
+              role="menuitem"
             >
               <span
                 class="dropdown-item-indicator-start"
@@ -250,6 +304,9 @@ exports[`ClayDropDown renders with search input 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-5"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -261,6 +318,8 @@ exports[`ClayDropDown renders with search input 1`] = `
     <div>
       <div
         class="dropdown-menu show"
+        id="clay-dropdown-menu-5"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <form
@@ -303,27 +362,37 @@ exports[`ClayDropDown renders with search input 1`] = `
         </form>
         <ul
           class="list-unstyled"
+          role="menu"
         >
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#one"
+              role="menuitem"
             >
               one
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#two"
+              role="menuitem"
             >
               two
             </a>
           </li>
-          <li>
+          <li
+            role="none"
+          >
             <a
               class="dropdown-item"
               href="#three"
+              role="menuitem"
             >
               three
             </a>

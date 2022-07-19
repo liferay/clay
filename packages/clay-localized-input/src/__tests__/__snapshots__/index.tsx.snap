@@ -31,6 +31,9 @@ exports[`ClayLocalizedInput renders 1`] = `
           class="dropdown"
         >
           <button
+            aria-controls="clay-dropdown-menu-1"
+            aria-expanded="false"
+            aria-haspopup="menu"
             class="dropdown-toggle btn btn-monospaced btn-secondary"
             style=""
             title="Open Localizations"
@@ -106,6 +109,9 @@ exports[`ClayLocalizedInput renders with prepend content and result formatter 1`
           class="dropdown"
         >
           <button
+            aria-controls="clay-dropdown-menu-2"
+            aria-expanded="false"
+            aria-haspopup="menu"
             class="dropdown-toggle btn btn-monospaced btn-secondary"
             style=""
             title="Open Localizations"

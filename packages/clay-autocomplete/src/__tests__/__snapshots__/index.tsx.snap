@@ -32,6 +32,7 @@ exports[`ClayAutocomplete renders DropDown with alignment with container 1`] = `
     <div>
       <div
         class="dropdown-menu autocomplete-dropdown-menu show"
+        role="presentation"
         style="max-width: none;"
       />
     </div>
@@ -50,9 +51,12 @@ exports[`ClayAutocomplete renders Input with classNames when loading for true 1`
 
 exports[`ClayAutocomplete renders Item with matches values 1`] = `
 <div>
-  <li>
+  <li
+    role="none"
+  >
     <span
       class="dropdown-item"
+      role="menuitem"
     >
       Bar
     </span>

@@ -288,6 +288,9 @@ exports[`TreeView basic rendering render with actions 1`] = `
                 class="dropdown"
               >
                 <button
+                  aria-controls="clay-dropdown-menu-1"
+                  aria-expanded="false"
+                  aria-haspopup="menu"
                   class="dropdown-toggle component-action quick-action-item btn btn-monospaced"
                   style=""
                   tabindex="-1"

@@ -9,10 +9,15 @@ import React from 'react';
 const ClayDropDownItemList = ({
 	children,
 	className,
+	role = 'menu',
 	...otherProps
 }: React.HTMLAttributes<HTMLUListElement>) => {
 	return (
-		<ul {...otherProps} className={classnames('list-unstyled', className)}>
+		<ul
+			{...otherProps}
+			className={classnames('list-unstyled', className)}
+			role={role}
+		>
 			{children}
 		</ul>
 	);

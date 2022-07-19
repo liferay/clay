@@ -46,6 +46,8 @@ interface IItem {
 }
 
 interface IDropDownContentProps {
+	'aria-label'?: string;
+
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 */
@@ -55,9 +57,12 @@ interface IDropDownContentProps {
 	 * List of items to display in drop down menu
 	 */
 	items: Array<IItem>;
+
+	role?: string;
 }
 
-export interface IProps extends IDropDownContentProps {
+export interface IProps
+	extends Omit<IDropDownContentProps, 'role' | 'aria-label'> {
 	/**
 	 * Flag to indicate if the DropDown menu is active or not (controlled).
 	 */
@@ -203,7 +208,7 @@ const Checkbox = ({
 	const [value, setValue] = useState<boolean>(checked);
 
 	return (
-		<ClayDropDown.Section>
+		<ClayDropDown.Section role="none">
 			<ClayCheckbox
 				{...otherProps}
 				checked={value}
@@ -244,7 +249,16 @@ const Item = ({
 const Group = ({items, label, spritemap}: IItem & IInternalItem) => (
 	<>
 		<ClayDropDownGroup header={label} />
-		{items && <DropDownContent items={items} spritemap={spritemap} />}
+		{items && (
+			<li role="none">
+				<DropDownContent
+					aria-label={label}
+					items={items}
+					role="group"
+					spritemap={spritemap}
+				/>
+			</li>
+		)}
 	</>
 );
 
@@ -340,7 +354,7 @@ const Radio = ({value = '', ...otherProps}: IItem & IInternalItem) => {
 	const {checked, name, onChange} = useContext(RadioGroupContext);
 
 	return (
-		<ClayDropDown.Section>
+		<ClayDropDown.Section role="none">
 			<ClayRadio
 				{...otherProps}
 				checked={checked === value}
@@ -381,9 +395,14 @@ const RadioGroup = ({
 		<>
 			{label && <ClayDropDownGroup header={label} />}
 			{items && (
-				<li aria-label={label} role="radiogroup">
+				<li role="none">
 					<RadioGroupContext.Provider value={params}>
-						<DropDownContent items={items} spritemap={spritemap} />
+						<DropDownContent
+							aria-label={label}
+							items={items}
+							role="radiogroup"
+							spritemap={spritemap}
+						/>
 					</RadioGroupContext.Provider>
 				</li>
 			)}
@@ -403,8 +422,13 @@ const TYPE_MAP = {
 	radiogroup: RadioGroup,
 };
 
-const DropDownContent = ({items, spritemap}: IDropDownContentProps) => (
-	<ClayDropDown.ItemList>
+const DropDownContent = ({
+	items,
+	role,
+	spritemap,
+	...otherProps
+}: IDropDownContentProps) => (
+	<ClayDropDown.ItemList aria-label={otherProps['aria-label']} role={role}>
 		{items.map(({type, ...item}, key) => {
 			const Item = TYPE_MAP[type || 'item'];
 
@@ -507,7 +531,9 @@ export const ClayDropDownWithItems = ({
 					{caption && <Caption>{caption}</Caption>}
 
 					{footerContent && (
-						<div className="dropdown-section">{footerContent}</div>
+						<div className="dropdown-section" role="presentation">
+							{footerContent}
+						</div>
 					)}
 				</Wrap>
 			</ClayDropDownContext.Provider>

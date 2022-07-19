@@ -122,6 +122,9 @@ exports[`ClayUpperToolbar renders 1`] = `
               class="dropdown"
             >
               <button
+                aria-controls="clay-dropdown-menu-1"
+                aria-expanded="false"
+                aria-haspopup="menu"
                 class="dropdown-toggle btn btn-monospaced btn-sm btn-unstyled"
                 style=""
                 type="button"
