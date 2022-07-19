@@ -53,6 +53,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -749,6 +750,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
       <div
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -1445,6 +1447,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -2141,6 +2144,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -2857,6 +2861,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
       <div
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -3553,6 +3558,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div

@@ -57,6 +57,7 @@ exports[`Interactions color editor interactions ability to change color of click
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu show"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div>
@@ -455,6 +456,7 @@ exports[`Rendering default 1`] = `
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -833,6 +835,7 @@ exports[`Rendering disabled palette 1`] = `
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -1213,6 +1216,7 @@ exports[`Rendering disabled state 1`] = `
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -1598,6 +1602,7 @@ exports[`Rendering renders w/ var() 1`] = `
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -1976,6 +1981,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -2362,6 +2368,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -2740,6 +2747,7 @@ exports[`Rendering small color-picker 1`] = `
     <div>
       <div
         class="dropdown-menu clay-color-dropdown-menu"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div

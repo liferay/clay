@@ -21,6 +21,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
       <div
         class="dropdown-menu drilldown dropdown-menu-indicator-end show"
         id="clay-dropdown-menu-1"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -193,6 +194,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
       <div
         class="dropdown-menu drilldown dropdown-menu-indicator-end show"
         id="clay-dropdown-menu-2"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -403,6 +405,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
       <div
         class="dropdown-menu drilldown dropdown-menu-indicator-end"
         id="clay-dropdown-menu-6"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div

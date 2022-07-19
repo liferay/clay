@@ -52,6 +52,7 @@ exports[`BasicRendering renders by default 1`] = `
       <div
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -747,6 +748,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -1472,6 +1474,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
@@ -2309,6 +2312,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
+        role="presentation"
         style="left: -999px; top: -995px;"
       >
         <div
