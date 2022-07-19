@@ -7,6 +7,9 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-2"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -18,6 +21,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
     <div>
       <div
         class="dropdown-menu show"
+        id="clay-dropdown-menu-2"
         style="left: -999px; top: -995px;"
       >
         <ul
@@ -61,6 +65,9 @@ exports[`ClayDropDown renders with groups 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-7"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -72,6 +79,7 @@ exports[`ClayDropDown renders with groups 1`] = `
     <div>
       <div
         class="dropdown-menu show"
+        id="clay-dropdown-menu-7"
         style="left: -999px; top: -995px;"
       >
         <ul
@@ -151,6 +159,9 @@ exports[`ClayDropDown renders with icons 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-6"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -162,6 +173,7 @@ exports[`ClayDropDown renders with icons 1`] = `
     <div>
       <div
         class="dropdown-menu dropdown-menu-indicator-end dropdown-menu-indicator-start show"
+        id="clay-dropdown-menu-6"
         style="left: -999px; top: -995px;"
       >
         <ul
@@ -250,6 +262,9 @@ exports[`ClayDropDown renders with search input 1`] = `
       class="dropdown"
     >
       <button
+        aria-controls="clay-dropdown-menu-5"
+        aria-expanded="true"
+        aria-haspopup="menu"
         class="dropdown-toggle"
         style=""
       >
@@ -261,6 +276,7 @@ exports[`ClayDropDown renders with search input 1`] = `
     <div>
       <div
         class="dropdown-menu show"
+        id="clay-dropdown-menu-5"
         style="left: -999px; top: -995px;"
       >
         <form

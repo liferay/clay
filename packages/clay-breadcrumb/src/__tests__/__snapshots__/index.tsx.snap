@@ -36,6 +36,9 @@ exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
       class="dropdown breadcrumb-item"
     >
       <button
+        aria-controls="clay-dropdown-menu-3"
+        aria-expanded="false"
+        aria-haspopup="menu"
         class="dropdown-toggle breadcrumb-link btn btn-unstyled"
         data-testid="breadcrumbDropdownTrigger"
         style=""
@@ -115,6 +118,9 @@ exports[`ClayBreadcrumb renders 1`] = `
       class="dropdown breadcrumb-item"
     >
       <button
+        aria-controls="clay-dropdown-menu-1"
+        aria-expanded="false"
+        aria-haspopup="menu"
         class="dropdown-toggle breadcrumb-link btn btn-unstyled"
         data-testid="breadcrumbDropdownTrigger"
         style=""
@@ -195,6 +201,9 @@ exports[`ClayBreadcrumb renders with properties passed by \`ellipsisProps\` 1`] 
       style="font-size: 15px;"
     >
       <button
+        aria-controls="clay-dropdown-menu-2"
+        aria-expanded="false"
+        aria-haspopup="menu"
         class="dropdown-toggle breadcrumb-link btn btn-unstyled"
         data-testid="breadcrumbDropdownTrigger"
         style=""

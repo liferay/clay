@@ -1501,6 +1501,9 @@ exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
             class="dropdown"
           >
             <button
+              aria-controls="clay-dropdown-menu-2"
+              aria-expanded="false"
+              aria-haspopup="menu"
               class="dropdown-toggle component-action btn btn-monospaced btn-unstyled"
               style=""
               type="button"
@@ -2240,6 +2243,9 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
             class="dropdown"
           >
             <button
+              aria-controls="clay-dropdown-menu-3"
+              aria-expanded="false"
+              aria-haspopup="menu"
               class="dropdown-toggle component-action btn btn-monospaced btn-unstyled"
               style=""
               type="button"
@@ -2871,6 +2877,9 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
               class="dropdown"
             >
               <button
+                aria-controls="clay-dropdown-menu-1"
+                aria-expanded="false"
+                aria-haspopup="menu"
                 class="dropdown-toggle component-action btn btn-monospaced btn-unstyled"
                 style=""
                 type="button"
