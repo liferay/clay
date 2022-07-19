@@ -24,6 +24,8 @@ const ClayNavigationBarIcon = ({
 	className,
 	...otherProps
 }: IItemProps) => {
+	const ariaCurrent = active ? 'page' : false;
+
 	return (
 		<li {...otherProps} className={classNames('nav-item', className)}>
 			{React.Children.map(
@@ -37,7 +39,7 @@ const ClayNavigationBarIcon = ({
 					) {
 						return React.cloneElement(child, {
 							...child.props,
-							'aria-current': active,
+							'aria-current': ariaCurrent,
 							children: (
 								<span className="navbar-text-truncate">
 									{child.props.children}
