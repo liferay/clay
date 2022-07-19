@@ -5,7 +5,7 @@
 
 import {InternalDispatch} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import ClayDropDown from './DropDown';
 import ClayDropDownMenu from './Menu';
@@ -105,6 +105,11 @@ type History = {
 	title: string;
 };
 
+type FocusHistory = {
+	id: string;
+	element: HTMLElement;
+};
+
 export const ClayDropDownWithDrilldown = ({
 	active,
 	alignmentByViewport,
@@ -124,13 +129,51 @@ export const ClayDropDownWithDrilldown = ({
 	spritemap,
 	trigger,
 }: IProps) => {
-	const [activeMenu, setActiveMenu] = React.useState(
+	const [activeMenu, setActiveMenu] = useState(
 		defaultActiveMenu ?? initialActiveMenu
 	);
-	const [direction, setDirection] = React.useState<'prev' | 'next'>();
-	const [history, setHistory] = React.useState<Array<History>>([]);
+	const [direction, setDirection] = useState<'prev' | 'next'>();
+	const [history, setHistory] = useState<Array<History>>([]);
+
+	const focusHistory = useRef<Array<FocusHistory>>([]);
+
+	const innerRef = useRef<HTMLDivElement>(null);
+
+	const isKeyboard = useRef<boolean>(false);
 
 	const menuIds = Object.keys(menus);
+
+	useEffect(() => {
+		if (!isKeyboard.current) {
+			return;
+		}
+
+		if (innerRef.current) {
+			if (direction === 'prev') {
+				const [previous] = focusHistory.current.slice(-1);
+
+				focusHistory.current = focusHistory.current.slice(
+					0,
+					focusHistory.current.length - 1
+				);
+
+				previous?.element.focus();
+			} else {
+				const itemEl = innerRef.current.querySelector<HTMLElement>(
+					'.drilldown-current a.dropdown-item, .drilldown-current button.dropdown-item'
+				);
+
+				focusHistory.current = [
+					...focusHistory.current,
+					{
+						element: document.activeElement as HTMLElement,
+						id: activeMenu!,
+					},
+				];
+				itemEl?.focus();
+			}
+		}
+	}, [activeMenu, direction, innerRef, focusHistory, menus]);
 
 	return (
 		<ClayDropDown
@@ -152,7 +195,7 @@ export const ClayDropDownWithDrilldown = ({
 			renderMenuOnClick={renderMenuOnClick}
 			trigger={trigger}
 		>
-			<Drilldown.Inner>
+			<Drilldown.Inner ref={innerRef}>
 				{menuIds.map((menuKey) => {
 					return (
 						<Drilldown.Menu
@@ -185,6 +228,13 @@ export const ClayDropDownWithDrilldown = ({
 								setDirection('next');
 
 								setActiveMenu(childId);
+							}}
+							onKeyDown={(event) => {
+								if (event.key !== 'Enter') {
+									isKeyboard.current = false;
+								} else {
+									isKeyboard.current = true;
+								}
 							}}
 							spritemap={spritemap}
 						/>

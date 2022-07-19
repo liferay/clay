@@ -8,14 +8,22 @@ import React from 'react';
 
 import Menu from './Menu';
 
-const Inner = ({
-	children,
-	className,
-	...otherProps
-}: React.HTMLAttributes<HTMLDivElement>) => (
-	<div className={classNames(className, 'drilldown-inner')} {...otherProps}>
-		{children}
-	</div>
-);
+const Inner = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(function InnerForward(
+	{children, className, ...otherProps}: React.HTMLAttributes<HTMLDivElement>,
+	ref
+) {
+	return (
+		<div
+			{...otherProps}
+			className={classNames(className, 'drilldown-inner')}
+			ref={ref}
+		>
+			{children}
+		</div>
+	);
+});
 
 export default {Inner, Menu};
