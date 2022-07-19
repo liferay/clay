@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.65.2](https://github.com/liferay/clay/compare/v3.65.1...v3.65.2) (2022-07-19)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error of `alignment By Viewport` not positioning properly ([4ea771b](https://github.com/liferay/clay/commit/4ea771b2726a0ba469edca4d0e7548cbeb74d01e))
+-   **@clayui/drop-down:** fixes error when losing focus using arrow keys in Drilldown and improves accessibility ([15aeddf](https://github.com/liferay/clay/commit/15aeddf99aff6799639ecdb4aaecad966cb9ae3e))
+-   **@clayui/drop-down:** improve the accessibility of `DropDownWithItems` ([68eec9e](https://github.com/liferay/clay/commit/68eec9e2f2adb338b87d06d810f01126ca266d10))
+-   **@clayui/drop-down:** improves DropDown accessibility ([e420a85](https://github.com/liferay/clay/commit/e420a850f657c027a34c79ee8e13a21df1bce0eb))
+
 ## [3.65.1](https://github.com/liferay/clay/compare/v3.65.0...v3.65.1) (2022-07-11)
 
 **Note:** Version bump only for package @clayui/drop-down

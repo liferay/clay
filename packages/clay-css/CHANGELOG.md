@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.65.2](https://github.com/liferay/clay/compare/v3.65.1...v3.65.2) (2022-07-19)
+
+
+### Bug Fixes
+
+* **@clayui.css:** Removes uses of unnecessary setter functions ([67646f1](https://github.com/liferay/clay/commit/67646f1aedc96657c8ac381ba74d34ee6071fccb))
+
+
+
+
+
 ## [3.65.1](https://github.com/liferay/clay/compare/v3.65.0...v3.65.1) (2022-07-11)
 
 **Note:** Version bump only for package @clayui/css

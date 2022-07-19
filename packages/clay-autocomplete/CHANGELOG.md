@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.65.2](https://github.com/liferay/clay/compare/v3.65.1...v3.65.2) (2022-07-19)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error of `alignment By Viewport` not positioning properly ([4ea771b](https://github.com/liferay/clay/commit/4ea771b2726a0ba469edca4d0e7548cbeb74d01e))
+
 ## [3.65.1](https://github.com/liferay/clay/compare/v3.65.0...v3.65.1) (2022-07-11)
 
 **Note:** Version bump only for package @clayui/autocomplete
