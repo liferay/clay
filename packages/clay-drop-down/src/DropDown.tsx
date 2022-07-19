@@ -107,6 +107,8 @@ export interface IProps
 	};
 }
 
+let counter = 0;
+
 function ClayDropDown(props: IProps): JSX.Element & {
 	Action: typeof Action;
 	Caption: typeof Caption;
@@ -119,8 +121,6 @@ function ClayDropDown(props: IProps): JSX.Element & {
 	Search: typeof Search;
 	Section: typeof Section;
 };
-
-let counter = 0;
 
 function ClayDropDown({
 	active,
