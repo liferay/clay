@@ -105,11 +105,6 @@ type History = {
 	title: string;
 };
 
-type FocusHistory = {
-	id: string;
-	element: HTMLElement;
-};
-
 export const ClayDropDownWithDrilldown = ({
 	active,
 	alignmentByViewport,
@@ -135,7 +130,7 @@ export const ClayDropDownWithDrilldown = ({
 	const [direction, setDirection] = useState<'prev' | 'next'>();
 	const [history, setHistory] = useState<Array<History>>([]);
 
-	const focusHistory = useRef<Array<FocusHistory>>([]);
+	const focusHistory = useRef<Array<HTMLElement>>([]);
 
 	const innerRef = useRef<HTMLDivElement>(null);
 
@@ -157,7 +152,7 @@ export const ClayDropDownWithDrilldown = ({
 					focusHistory.current.length - 1
 				);
 
-				previous?.element.focus();
+				previous?.focus();
 			} else {
 				const itemEl = innerRef.current.querySelector<HTMLElement>(
 					'.drilldown-current a.dropdown-item, .drilldown-current button.dropdown-item'
@@ -165,10 +160,7 @@ export const ClayDropDownWithDrilldown = ({
 
 				focusHistory.current = [
 					...focusHistory.current,
-					{
-						element: document.activeElement as HTMLElement,
-						id: activeMenu!,
-					},
+					document.activeElement as HTMLElement,
 				];
 				itemEl?.focus();
 			}
