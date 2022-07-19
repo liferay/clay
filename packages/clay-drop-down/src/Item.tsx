@@ -55,7 +55,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 			href,
 			innerRef,
 			onClick,
-			role,
+			role = 'none',
 			spritemap,
 			symbolLeft,
 			symbolRight,
@@ -79,6 +79,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 					href={href}
 					onClick={onClick}
 					ref={innerRef}
+					role="menuitem"
 					tabIndex={disabled ? -1 : tabIndex}
 				>
 					{symbolLeft && (

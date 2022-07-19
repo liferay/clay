@@ -330,6 +330,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 							show: active,
 						})}
 						ref={ref}
+						role="presentation"
 					>
 						{children}
 					</div>

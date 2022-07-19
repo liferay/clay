@@ -15,6 +15,7 @@ const ClayDropDownCaption = ({
 		<div
 			{...otherProps}
 			className={classnames('dropdown-caption', className)}
+			role="presentation"
 		>
 			{children}
 		</div>

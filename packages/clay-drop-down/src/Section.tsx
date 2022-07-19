@@ -22,7 +22,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const ClayDropDownSection = React.forwardRef<HTMLLIElement, IProps>(
 	({active, children, className, disabled, innerRef, ...otherProps}, ref) => (
-		<li aria-selected={active} ref={ref}>
+		<li aria-selected={active} ref={ref} role="none">
 			<div
 				{...otherProps}
 				className={classNames('dropdown-section', className, {

@@ -110,14 +110,13 @@ export const Default = (args: any) => (
 Default.args = {
 	alignmentPosition: 5,
 	height: '',
-	renderMenuOnClick: true,
+	renderMenuOnClick: false,
 	width: '',
 };
 
 export const Groups = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
-		renderMenuOnClick
 		trigger={<ClayButton>Click Me</ClayButton>}
 	>
 		<ClayDropDown.ItemList>
@@ -151,7 +150,6 @@ export const Groups = () => (
 export const Checkbox = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
-		renderMenuOnClick
 		trigger={<ClayButton>Click Me</ClayButton>}
 	>
 		<ClayDropDown.ItemList>
@@ -172,7 +170,6 @@ export const Search = () => {
 	return (
 		<ClayDropDown
 			alignmentPosition={Align.BottomLeft}
-			renderMenuOnClick
 			trigger={<ClayButton>Click Me</ClayButton>}
 		>
 			<ClayDropDown.Search
@@ -201,7 +198,6 @@ export const Search = () => {
 export const Radio = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
-		renderMenuOnClick
 		trigger={<ClayButton>Click Me</ClayButton>}
 	>
 		<ClayDropDown.ItemList>
@@ -220,7 +216,6 @@ export const Radio = () => (
 export const CaptionAndHelp = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
-		renderMenuOnClick
 		trigger={<ClayButton>Click Me</ClayButton>}
 	>
 		<ClayDropDown.Help>Can I help you?</ClayDropDown.Help>
@@ -246,7 +241,6 @@ export const ItemsWithIcons = () => (
 		alignmentPosition={Align.BottomLeft}
 		hasLeftSymbols
 		hasRightSymbols
-		renderMenuOnClick
 		trigger={<ClayButton>Click Me</ClayButton>}
 	>
 		<ClayDropDown.ItemList>
@@ -271,7 +265,6 @@ export const CustomOffset = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
 		offsetFn={() => [20, 20]}
-		renderMenuOnClick
 		trigger={<ClayButton>Click Me</ClayButton>}
 	>
 		<ClayDropDown.ItemList>
@@ -336,7 +329,7 @@ export const Drilldown = (args: any) => (
 );
 
 Drilldown.args = {
-	renderMenuOnClick: true,
+	renderMenuOnClick: false,
 };
 
 export const DrillDownWithActive = () => {
@@ -406,7 +399,7 @@ export const DropDownWithItems = (args: any) => {
 };
 
 DropDownWithItems.args = {
-	renderMenuOnClick: true,
+	renderMenuOnClick: false,
 	searchable: true,
 };
 
