@@ -74,10 +74,10 @@ module.exports = {
 			statements: 95,
 		},
 		'./packages/clay-drop-down/src/': {
-			branches: 70,
+			branches: 66,
 			functions: 57,
-			lines: 80,
-			statements: 78,
+			lines: 78,
+			statements: 77,
 		},
 		'./packages/clay-empty-state/src/': {
 			branches: 100,
