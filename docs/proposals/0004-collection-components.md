@@ -218,11 +218,11 @@ The `items` property is reactive, this can change according to the implementatio
 
 #### Virtualization
 
-List virtualization is extremely important to prevent React.js don't lose performance with a large list of data being rendered. The implementation is to render only the visible elements in the viewport or the container where the element is being rendered.
+[List virtualization](https://www.patterns.dev/posts/virtual-lists/) is extremely important to prevent React.js don't lose performance with a large list of data being rendered. The implementation is to render only the visible elements in the viewport or the container where the element is being rendered.
 
-The virtualization implementations normally adjust with the size of the container, we can also provide if the container does not define any size automatically render only the elements considering the viewport.
+The [virtualization](https://www.patterns.dev/posts/virtual-lists/) implementations normally adjust with the size of the container, we can also provide if the container does not define any size automatically render only the elements considering the viewport.
 
-Virtualization also needs to consider that items can have dynamic sizes, virtualization must be offered in an OOTB way so that it is not necessary to configure any properties, obligatorily also all items being added in the Collection content must accept [`ref`](https://reactjs.org/docs/forwarding-refs.htm) so that it can calculate the element and auto-adjust.
+[Virtualization](https://www.patterns.dev/posts/virtual-lists/) also needs to consider that items can have dynamic sizes, [virtualization](https://www.patterns.dev/posts/virtual-lists/) must be offered in an OOTB way so that it is not necessary to configure any properties, obligatorily also all items being added in the Collection content must accept [`ref`](https://reactjs.org/docs/forwarding-refs.htm) so that it can calculate the element and auto-adjust.
 
 ```tsx
 const Item = React.forwardRef(({children}, ref) => (
