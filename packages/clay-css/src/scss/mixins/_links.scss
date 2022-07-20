@@ -684,6 +684,90 @@
 				}
 			}
 
+			@supports #{'\selector(:focus-visible)'} {
+				&:focus {
+					@include clay-css(
+						map-deep-get($map, supports-focus-visible, focus)
+					);
+				}
+
+				&:focus-visible {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							supports-focus-visible,
+							focus-visible
+						)
+					);
+
+					&::before {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								before
+							)
+						);
+					}
+
+					&::after {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								after
+							)
+						);
+					}
+
+					.inline-item {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item
+							)
+						);
+					}
+
+					.inline-item-before {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item-before
+							)
+						);
+					}
+
+					.inline-item-middle {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item-middle
+							)
+						);
+					}
+
+					.inline-item-after {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item-after
+							)
+						);
+					}
+				}
+			}
+
 			&:active {
 				@include clay-css($active);
 

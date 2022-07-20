@@ -689,6 +689,90 @@
 				}
 			}
 
+			@supports #{'\selector(:focus-visible)'} {
+				&:focus {
+					@include clay-css(
+						map-deep-get($map, supports-focus-visible, focus)
+					);
+				}
+
+				&:focus-visible {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							supports-focus-visible,
+							focus-visible
+						)
+					);
+
+					&::before {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								before
+							)
+						);
+					}
+
+					&::after {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								after
+							)
+						);
+					}
+
+					.inline-item {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item
+							)
+						);
+					}
+
+					.inline-item-before {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item-before
+							)
+						);
+					}
+
+					.inline-item-middle {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item-middle
+							)
+						);
+					}
+
+					.inline-item-after {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible,
+								inline-item-after
+							)
+						);
+					}
+				}
+			}
+
 			&:active {
 				@include clay-css($active);
 
@@ -713,6 +797,54 @@
 						@include clay-css(
 							map-deep-get($map, active, focus, after)
 						);
+					}
+				}
+
+				@supports #{'\selector(:focus-visible)'} {
+					&:focus {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								active,
+								supports-focus-visible,
+								focus
+							)
+						);
+					}
+
+					&:focus-visible {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								active,
+								supports-focus-visible,
+								focus-visible
+							)
+						);
+
+						&::before {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									active,
+									supports-focus-visible,
+									focus-visible,
+									before
+								)
+							);
+						}
+
+						&::after {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									active,
+									supports-focus-visible,
+									focus-visible,
+									after
+								)
+							);
+						}
 					}
 				}
 
@@ -746,6 +878,31 @@
 
 				&:focus {
 					@include clay-css(map-deep-get($map, active-class, focus));
+				}
+
+				@supports #{'\selector(:focus-visible)'} {
+					&:focus {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								active-class,
+								supports-focus-visible,
+								focus-visible,
+								focus
+							)
+						);
+					}
+
+					&:focus-visible {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								active-class,
+								supports-focus-visible,
+								focus-visible
+							)
+						);
+					}
 				}
 
 				.inline-item {
@@ -796,6 +953,54 @@
 						@include clay-css(
 							map-deep-get($map, disabled, focus, after)
 						);
+					}
+				}
+
+				@supports #{'\selector(:focus-visible)'} {
+					&:focus {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								disabled,
+								supports-focus-visible,
+								focus
+							)
+						);
+					}
+
+					&:focus-visible {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								disabled,
+								supports-focus-visible,
+								focus-visible
+							)
+						);
+
+						&::before {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									disabled,
+									supports-focus-visible,
+									focus-visible,
+									before
+								)
+							);
+						}
+
+						&::after {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									disabled,
+									supports-focus-visible,
+									focus-visible,
+									after
+								)
+							);
+						}
 					}
 				}
 

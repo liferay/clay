@@ -366,6 +366,24 @@
 				@include clay-css($focus);
 			}
 
+			@supports #{'\selector(:focus-visible)'} {
+				&:focus {
+					@include clay-css(
+						map-deep-get($map, supports-focus-visible, focus)
+					);
+				}
+
+				&:focus-visible {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							supports-focus-visible,
+							focus-visible
+						)
+					);
+				}
+			}
+
 			&:active {
 				@include clay-css($active);
 			}
