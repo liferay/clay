@@ -256,7 +256,6 @@
 	$ret-val: null;
 
 	$length: length($shadows);
-	$separator: list-separator($shadows);
 
 	$last-item: nth($shadows, $length);
 
@@ -276,18 +275,14 @@
 		)
 	);
 
-	@if ($separator == 'comma') {
-		@if ($length >= 2) {
-			@if ($enable) {
-				$ret-val: nth($shadows, 1);
-			} @else if not ($has-enable-param) {
-				$ret-val: nth($shadows, 2);
-			}
-		}
-	} @else if ($separator == 'space') {
+	@if ($length >= 2) {
 		@if ($enable) {
-			$ret-val: $shadows;
+			$ret-val: nth($shadows, 1);
+		} @else if not ($has-enable-param) {
+			$ret-val: nth($shadows, 2);
 		}
+	} @else if ($enable) {
+		$ret-val: $shadows;
 	}
 
 	@return $ret-val;
