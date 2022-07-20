@@ -65,6 +65,16 @@
 
 @mixin clay-close($map) {
 	@if (type-of($map) == 'map') {
+		$focus-visible: if(
+			variable-exists(enable-focus-visible),
+			$enable-focus-visible,
+			if(
+				variable-exists(cadmin-focus-visible),
+				$cadmin-focus-visible,
+				true
+			)
+		);
+
 		$enabled: setter(map-get($map, enabled), true);
 
 		$base: map-merge(
@@ -366,21 +376,23 @@
 				@include clay-css($focus);
 			}
 
-			@supports #{'\selector(:focus-visible)'} {
-				&:focus {
-					@include clay-css(
-						map-deep-get($map, supports-focus-visible, focus)
-					);
-				}
+			@if ($focus-visible) {
+				@supports #{'\selector(:focus-visible)'} {
+					&:focus {
+						@include clay-css(
+							map-deep-get($map, supports-focus-visible, focus)
+						);
+					}
 
-				&:focus-visible {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							supports-focus-visible,
-							focus-visible
-						)
-					);
+					&:focus-visible {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible
+							)
+						);
+					}
 				}
 			}
 

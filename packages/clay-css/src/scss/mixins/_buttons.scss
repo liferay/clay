@@ -246,6 +246,16 @@
 
 @mixin clay-button-variant($map) {
 	@if (type-of($map) == 'map') {
+		$focus-visible: if(
+			variable-exists(enable-focus-visible),
+			$enable-focus-visible,
+			if(
+				variable-exists(cadmin-focus-visible),
+				$cadmin-focus-visible,
+				true
+			)
+		);
+
 		$enabled: setter(map-get($map, enabled), true);
 
 		$breakpoint-down: map-get($map, breakpoint-down);
@@ -689,86 +699,88 @@
 				}
 			}
 
-			@supports #{'\selector(:focus-visible)'} {
-				&:focus {
-					@include clay-css(
-						map-deep-get($map, supports-focus-visible, focus)
-					);
-				}
-
-				&:focus-visible {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							supports-focus-visible,
-							focus-visible
-						)
-					);
-
-					&::before {
+			@if ($focus-visible) {
+				@supports #{'\selector(:focus-visible)'} {
+					&:focus {
 						@include clay-css(
-							map-deep-get(
-								$map,
-								supports-focus-visible,
-								focus-visible,
-								before
-							)
+							map-deep-get($map, supports-focus-visible, focus)
 						);
 					}
 
-					&::after {
+					&:focus-visible {
 						@include clay-css(
 							map-deep-get(
 								$map,
 								supports-focus-visible,
-								focus-visible,
-								after
+								focus-visible
 							)
 						);
-					}
 
-					.inline-item {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								supports-focus-visible,
-								focus-visible,
-								inline-item
-							)
-						);
-					}
+						&::before {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									supports-focus-visible,
+									focus-visible,
+									before
+								)
+							);
+						}
 
-					.inline-item-before {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								supports-focus-visible,
-								focus-visible,
-								inline-item-before
-							)
-						);
-					}
+						&::after {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									supports-focus-visible,
+									focus-visible,
+									after
+								)
+							);
+						}
 
-					.inline-item-middle {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								supports-focus-visible,
-								focus-visible,
-								inline-item-middle
-							)
-						);
-					}
+						.inline-item {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									supports-focus-visible,
+									focus-visible,
+									inline-item
+								)
+							);
+						}
 
-					.inline-item-after {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								supports-focus-visible,
-								focus-visible,
-								inline-item-after
-							)
-						);
+						.inline-item-before {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									supports-focus-visible,
+									focus-visible,
+									inline-item-before
+								)
+							);
+						}
+
+						.inline-item-middle {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									supports-focus-visible,
+									focus-visible,
+									inline-item-middle
+								)
+							);
+						}
+
+						.inline-item-after {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									supports-focus-visible,
+									focus-visible,
+									inline-item-after
+								)
+							);
+						}
 					}
 				}
 			}
@@ -800,50 +812,52 @@
 					}
 				}
 
-				@supports #{'\selector(:focus-visible)'} {
-					&:focus {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								active,
-								supports-focus-visible,
-								focus
-							)
-						);
-					}
-
-					&:focus-visible {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								active,
-								supports-focus-visible,
-								focus-visible
-							)
-						);
-
-						&::before {
+				@if ($focus-visible) {
+					@supports #{'\selector(:focus-visible)'} {
+						&:focus {
 							@include clay-css(
 								map-deep-get(
 									$map,
 									active,
 									supports-focus-visible,
-									focus-visible,
-									before
+									focus
 								)
 							);
 						}
 
-						&::after {
+						&:focus-visible {
 							@include clay-css(
 								map-deep-get(
 									$map,
 									active,
 									supports-focus-visible,
-									focus-visible,
-									after
+									focus-visible
 								)
 							);
+
+							&::before {
+								@include clay-css(
+									map-deep-get(
+										$map,
+										active,
+										supports-focus-visible,
+										focus-visible,
+										before
+									)
+								);
+							}
+
+							&::after {
+								@include clay-css(
+									map-deep-get(
+										$map,
+										active,
+										supports-focus-visible,
+										focus-visible,
+										after
+									)
+								);
+							}
 						}
 					}
 				}
@@ -880,28 +894,30 @@
 					@include clay-css(map-deep-get($map, active-class, focus));
 				}
 
-				@supports #{'\selector(:focus-visible)'} {
-					&:focus {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								active-class,
-								supports-focus-visible,
-								focus-visible,
-								focus
-							)
-						);
-					}
+				@if ($focus-visible) {
+					@supports #{'\selector(:focus-visible)'} {
+						&:focus {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									active-class,
+									supports-focus-visible,
+									focus-visible,
+									focus
+								)
+							);
+						}
 
-					&:focus-visible {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								active-class,
-								supports-focus-visible,
-								focus-visible
-							)
-						);
+						&:focus-visible {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									active-class,
+									supports-focus-visible,
+									focus-visible
+								)
+							);
+						}
 					}
 				}
 
@@ -956,50 +972,52 @@
 					}
 				}
 
-				@supports #{'\selector(:focus-visible)'} {
-					&:focus {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								disabled,
-								supports-focus-visible,
-								focus
-							)
-						);
-					}
-
-					&:focus-visible {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								disabled,
-								supports-focus-visible,
-								focus-visible
-							)
-						);
-
-						&::before {
+				@if ($focus-visible) {
+					@supports #{'\selector(:focus-visible)'} {
+						&:focus {
 							@include clay-css(
 								map-deep-get(
 									$map,
 									disabled,
 									supports-focus-visible,
-									focus-visible,
-									before
+									focus
 								)
 							);
 						}
 
-						&::after {
+						&:focus-visible {
 							@include clay-css(
 								map-deep-get(
 									$map,
 									disabled,
 									supports-focus-visible,
-									focus-visible,
-									after
+									focus-visible
 								)
 							);
+
+							&::before {
+								@include clay-css(
+									map-deep-get(
+										$map,
+										disabled,
+										supports-focus-visible,
+										focus-visible,
+										before
+									)
+								);
+							}
+
+							&::after {
+								@include clay-css(
+									map-deep-get(
+										$map,
+										disabled,
+										supports-focus-visible,
+										focus-visible,
+										after
+									)
+								);
+							}
 						}
 					}
 				}
