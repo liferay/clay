@@ -249,26 +249,40 @@
 	@return null;
 }
 
-/// A function that returns a shadow for use with the `box-shadow` property. This function returns `null` if `$enable-shadows` is set to `false`. This is a workaround for complying with Bootstrap's `$enable-shadows` setting.
-/// @param {List} $shadows - The box shadow. Pass in a single shadow or two shadows using `[$shadow1, $shadow2]` if you need a default shadow even if `$enable-shadows` is `false`. A focus shadow for example.
+/// A function that returns a shadow for use with the `box-shadow` property. This function returns `null` if there is only one shadow and the global variable `$enable-shadows` is set to `false`. You can override the `$enable-shadows` setting by passing a boolean value as the last parameter. This is a workaround for complying with Bootstrap's `$enable-shadows` setting.
+/// @param {ArgList} $shadows... - The box shadow(s) and an optional boolean parameter. Pass in a single shadow or two shadows using `$shadow1, $shadow2` if you need a default shadow even if `$enable-shadows` is `false`. We use this for supplying focus shadows in the base theme.
 
-@function clay-enable-shadows($shadows, $enable: null) {
+@function clay-enable-shadows($shadows...) {
 	$ret-val: null;
 
 	$length: length($shadows);
 	$separator: list-separator($shadows);
 
+	$last-item: nth($shadows, $length);
+
+	$has-enable-param: type-of($last-item) == bool;
+
 	$enable: if(
-		variable-exists(enable-shadows),
-		$enable-shadows,
-		if(variable-exists(cadmin-enable-shadows), $cadmin-enable-shadows, true)
+		$has-enable-param,
+		$last-item,
+		if(
+			variable-exists(enable-shadows),
+			$enable-shadows,
+			if(
+				variable-exists(cadmin-enable-shadows),
+				$cadmin-enable-shadows,
+				true
+			)
+		)
 	);
 
-	@if ($length == 2 and $separator == 'comma') {
-		@if ($enable) {
-			$ret-val: nth($shadows, 1);
-		} @else {
-			$ret-val: nth($shadows, 2);
+	@if ($separator == 'comma') {
+		@if ($length >= 2) {
+			@if ($enable) {
+				$ret-val: nth($shadows, 1);
+			} @else if not ($has-enable-param) {
+				$ret-val: nth($shadows, 2);
+			}
 		}
 	} @else if ($separator == 'space') {
 		@if ($enable) {
