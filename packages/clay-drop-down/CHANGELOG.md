@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.66.0](https://github.com/liferay/clay/compare/v3.65.2...v3.66.0) (2022-07-20)
+
+### Features
+
+-   **@clayui/drop-down:** add new `roleItem` property to set item role ([de82351](https://github.com/liferay/clay/commit/de823511b861a5022e7cc902de043211d5180ede))
+
 ## [3.65.2](https://github.com/liferay/clay/compare/v3.65.1...v3.65.2) (2022-07-19)
 
 ### Bug Fixes
