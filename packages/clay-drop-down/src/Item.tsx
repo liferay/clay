@@ -30,6 +30,12 @@ export interface IProps
 	innerRef?: React.Ref<any>;
 
 	/**
+	 * Sets the role accessibility property of the item. Set the item's
+	 * container (<li />) role use the role="" prop instead of roleItem="".
+	 */
+	roleItem?: string;
+
+	/**
 	 * Path to icon spritemap from clay-css.
 	 */
 	spritemap?: string;
@@ -56,6 +62,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 			innerRef,
 			onClick,
 			role = 'none',
+			roleItem = 'menuitem',
 			spritemap,
 			symbolLeft,
 			symbolRight,
@@ -79,7 +86,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 					href={href}
 					onClick={onClick}
 					ref={innerRef}
-					role="menuitem"
+					role={roleItem}
 					tabIndex={disabled ? -1 : tabIndex}
 				>
 					{symbolLeft && (
