@@ -160,6 +160,14 @@ $pagination-link: map-deep-merge(
 		transition: $pagination-link-transition,
 		hover: $pagination-link-hover,
 		focus: $pagination-link-focus,
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $pagination-focus-box-shadow,
+			),
+		),
 		active: $pagination-link-active,
 		disabled: $pagination-link-disabled,
 		lexicon-icon: (
@@ -350,6 +358,14 @@ $pagination-items-per-page-link: map-deep-merge(
 		transition: $pagination-items-per-page-transition,
 		hover: $pagination-items-per-page-link-hover,
 		focus: $pagination-items-per-page-link-focus,
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $pagination-items-per-page-focus-box-shadow,
+			),
+		),
 		active: $pagination-items-per-page-link-active,
 		disabled: $pagination-items-per-page-link-disabled,
 		lexicon-icon: (

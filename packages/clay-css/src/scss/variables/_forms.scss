@@ -63,7 +63,7 @@ $input: map-deep-merge(
 		border-right-width: $input-border-right-width,
 		border-top-width: $input-border-top-width,
 		border-radius: clay-enable-rounded($input-border-radius),
-		box-shadow: clay-enable-shadows([$input-box-shadow]),
+		box-shadow: clay-enable-shadows($input-box-shadow),
 		color: $input-color,
 		display: block,
 		font-family: $input-font-family,

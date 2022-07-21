@@ -18,10 +18,17 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			),
 			focus: (
 				background-color: rgba($primary, 0.04),
-				box-shadow:
-					clay-enable-shadows($component-focus-inset-box-shadow),
+				box-shadow: $component-focus-inset-box-shadow,
 				color: $gray-900,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
 			),
 			active-class: (
 				background-color: rgba($primary, 0.06),
@@ -61,6 +68,14 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			focus: (
 				box-shadow: clay-enable-shadows($component-focus-box-shadow),
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: clay-enable-shadows($component-focus-box-shadow),
+				),
 			),
 			disabled: (
 				box-shadow: clay-enable-shadows(none),
@@ -90,10 +105,17 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			),
 			focus: (
 				background-color: rgba($primary, 0.04),
-				box-shadow:
-					clay-enable-shadows($component-focus-inset-box-shadow),
+				box-shadow: $component-focus-inset-box-shadow,
 				color: $gray-900,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
 			),
 			active-class: (
 				background-color: rgba($primary, 0.06),
@@ -131,8 +153,16 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			font-weight: $font-weight-semi-bold,
 			transition: box-shadow 0.15s ease-in-out,
 			focus: (
-				box-shadow: clay-enable-shadows($component-focus-box-shadow),
+				box-shadow: $component-focus-box-shadow,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $component-focus-box-shadow,
+				),
 			),
 			disabled: (
 				box-shadow: clay-enable-shadows(none),

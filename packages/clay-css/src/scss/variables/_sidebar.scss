@@ -171,6 +171,14 @@ $sidebar-dark: map-deep-merge(
 					box-shadow: $component-focus-box-shadow,
 					outline: 0,
 				),
+				supports-focus-visible: (
+					focus: (
+						box-shadow: none,
+					),
+					focus-visible: (
+						box-shadow: $component-focus-box-shadow,
+					),
+				),
 				active: (
 					color: $white,
 				),
@@ -227,6 +235,14 @@ $sidebar-palette: map-deep-merge(
 					focus: (
 						box-shadow: $component-focus-box-shadow,
 						outline: 0,
+					),
+					supports-focus-visible: (
+						focus: (
+							box-shadow: none,
+						),
+						focus-visible: (
+							box-shadow: $component-focus-box-shadow,
+						),
 					),
 					active: (
 						color: $white,

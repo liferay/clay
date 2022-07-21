@@ -59,6 +59,14 @@ $badge: map-deep-merge(
 				box-shadow: $component-focus-box-shadow,
 				outline: 0,
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $component-focus-box-shadow,
+				),
+			),
 		),
 		link: (
 			color: $badge-link-color,
@@ -165,6 +173,15 @@ $badge-primary: map-deep-merge(
 					rgba($badge-primary-bg, 0.5),
 				color: $badge-primary-hover-color,
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-primary-bg, 0.5),
+				),
+			),
 		),
 		link: (
 			color: $badge-primary-link-color,
@@ -208,6 +225,15 @@ $badge-secondary: map-deep-merge(
 				color: $badge-secondary-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width
 					rgba($badge-secondary-bg, 0.5),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-secondary-bg, 0.5),
+				),
 			),
 		),
 		link: (
@@ -253,6 +279,15 @@ $badge-success: map-deep-merge(
 				box-shadow: 0 0 0 $badge-focus-width
 					rgba($badge-success-bg, 0.5),
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-success-bg, 0.5),
+				),
+			),
 		),
 		link: (
 			color: $badge-success-link-color,
@@ -295,6 +330,15 @@ $badge-info: map-deep-merge(
 				border-color: $badge-info-hover-border-color,
 				color: $badge-info-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-info-bg, 0.5),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-info-bg, 0.5),
+				),
 			),
 		),
 		link: (
@@ -340,6 +384,15 @@ $badge-warning: map-deep-merge(
 				box-shadow: 0 0 0 $badge-focus-width
 					rgba($badge-warning-bg, 0.5),
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-warning-bg, 0.5),
+				),
+			),
 		),
 		link: (
 			color: $badge-warning-link-color,
@@ -382,6 +435,15 @@ $badge-danger: map-deep-merge(
 				border-color: $badge-danger-hover-border-color,
 				color: $badge-danger-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-danger-bg, 0.5),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-danger-bg, 0.5),
+				),
 			),
 		),
 		link: (
@@ -426,6 +488,15 @@ $badge-light: map-deep-merge(
 				color: $badge-light-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-light-bg, 0.5),
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-light-bg, 0.5),
+				),
+			),
 		),
 		link: (
 			color: $badge-light-link-color,
@@ -468,6 +539,15 @@ $badge-dark: map-deep-merge(
 				border-color: $badge-dark-hover-border-color,
 				color: $badge-dark-hover-color,
 				box-shadow: 0 0 0 $badge-focus-width rgba($badge-dark-bg, 0.5),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: 0 0 0 $badge-focus-width
+						rgba($badge-dark-bg, 0.5),
+				),
 			),
 		),
 		link: (

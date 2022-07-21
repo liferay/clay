@@ -26,6 +26,14 @@ $btn: map-deep-merge(
 		focus: (
 			box-shadow: $btn-focus-box-shadow,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $btn-focus-box-shadow,
+			),
+		),
 		active: (
 			box-shadow: $btn-active-box-shadow,
 		),
@@ -134,11 +142,27 @@ $btn-primary: map-deep-merge(
 			background-image: clay-enable-gradients($primary-d1),
 			box-shadow: c-unset,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: $c-unset,
+			),
+		),
 		active: (
 			background-color: $primary-d2,
 			border-color: transparent,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow: $c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -169,12 +193,28 @@ $btn-secondary: map-deep-merge(
 			box-shadow: c-unset,
 			color: $gray-900,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: $c-unset,
+			),
+		),
 		active: (
 			background-color: $gray-200,
 			border-color: $secondary-l2,
 			color: $gray-900,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow: $c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -202,11 +242,27 @@ $btn-success: map-deep-merge(
 			border-color: transparent,
 			box-shadow: c-unset,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: c-unset,
+			),
+			focus-visible: (
+				box-shadow: c-unset,
+			),
+		),
 		active: (
 			background-color: $success-d2,
 			border-color: transparent,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: c-unset,
+				),
+				focus-visible: (
+					box-shadow: c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -231,11 +287,27 @@ $btn-info: map-deep-merge(
 			border-color: transparent,
 			box-shadow: c-unset,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: c-unset,
+			),
+			focus-visible: (
+				box-shadow: c-unset,
+			),
+		),
 		active: (
 			background-color: $info-d2,
 			border-color: transparent,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: c-unset,
+				),
+				focus-visible: (
+					box-shadow: c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -260,11 +332,27 @@ $btn-warning: map-deep-merge(
 			border-color: transparent,
 			box-shadow: c-unset,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: c-unset,
+			),
+			focus-visible: (
+				box-shadow: c-unset,
+			),
+		),
 		active: (
 			background-color: $warning-d2,
 			border-color: transparent,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: c-unset,
+				),
+				focus-visible: (
+					box-shadow: c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -289,11 +377,27 @@ $btn-danger: map-deep-merge(
 			border-color: transparent,
 			box-shadow: c-unset,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: c-unset,
+			),
+			focus-visible: (
+				box-shadow: c-unset,
+			),
+		),
 		active: (
 			background-color: $danger-d2,
 			border-color: transparent,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: c-unset,
+				),
+				focus-visible: (
+					box-shadow: c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -319,11 +423,27 @@ $btn-light: map-deep-merge(
 			border-color: transparent,
 			box-shadow: c-unset,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: c-unset,
+			),
+			focus-visible: (
+				box-shadow: c-unset,
+			),
+		),
 		active: (
 			background-color: $light-d2,
 			border-color: transparent,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: c-unset,
+				),
+				focus-visible: (
+					box-shadow: c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -348,11 +468,27 @@ $btn-dark: map-deep-merge(
 			border-color: transparent,
 			box-shadow: c-unset,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: c-unset,
+			),
+			focus-visible: (
+				box-shadow: c-unset,
+			),
+		),
 		active: (
 			background-color: $dark-d2,
 			border-color: transparent,
 			focus: (
 				box-shadow: c-unset,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: c-unset,
+				),
+				focus-visible: (
+					box-shadow: c-unset,
+				),
 			),
 		),
 		disabled: (
@@ -376,6 +512,14 @@ $btn-outline-primary: map-deep-merge(
 			box-shadow: map-deep-get($btn-primary, focus, box-shadow),
 			color: $primary,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-primary, focus, box-shadow),
+			),
+		),
 		active: (
 			background-color:
 				clay-lighten(clay-desaturate($primary, 42.05), 41.76),
@@ -384,6 +528,15 @@ $btn-outline-primary: map-deep-merge(
 			focus: (
 				box-shadow:
 					map-deep-get($btn-primary, active, focus, box-shadow),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-primary, active, focus, box-shadow),
+				),
 			),
 		),
 		disabled: (
@@ -411,10 +564,13 @@ $btn-outline-secondary: map-deep-merge(
 			box-shadow: map-deep-get($btn-secondary, focus, box-shadow),
 			color: map-deep-get($btn-secondary, focus, color),
 		),
-		disabled: (
-			background-color: transparent,
-			border-color: $secondary,
-			color: $secondary,
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-secondary, focus, box-shadow),
+			),
 		),
 		active: (
 			background-color: rgba($gray-900, 0.06),
@@ -425,6 +581,20 @@ $btn-outline-secondary: map-deep-merge(
 				box-shadow:
 					map-deep-get($btn-secondary, active, focus, box-shadow),
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-secondary, active, focus, box-shadow),
+				),
+			),
+		),
+		disabled: (
+			background-color: transparent,
+			border-color: $secondary,
+			color: $secondary,
 		),
 	),
 	$btn-outline-secondary
@@ -441,11 +611,28 @@ $btn-outline-info: map-deep-merge(
 			box-shadow: map-deep-get($btn-info, focus, box-shadow),
 			color: $white,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-info, focus, box-shadow),
+			),
+		),
 		active: (
 			background-color: map-deep-get($btn-info, active, background-color),
 			box-shadow: map-deep-get($btn-info, active, box-shadow),
 			focus: (
 				box-shadow: map-deep-get($btn-info, active, focus, box-shadow),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-info, active, focus, box-shadow),
+				),
 			),
 		),
 	),
@@ -465,6 +652,14 @@ $btn-outline-success: map-deep-merge(
 			box-shadow: map-deep-get($btn-success, focus, box-shadow),
 			color: $white,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-success, focus, box-shadow),
+			),
+		),
 		active: (
 			background-color:
 				map-deep-get($btn-success, active, background-color),
@@ -472,6 +667,15 @@ $btn-outline-success: map-deep-merge(
 			focus: (
 				box-shadow:
 					map-deep-get($btn-success, active, focus, box-shadow),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-success, active, focus, box-shadow),
+				),
 			),
 		),
 	),
@@ -491,6 +695,14 @@ $btn-outline-warning: map-deep-merge(
 			box-shadow: map-deep-get($btn-warning, focus, box-shadow),
 			color: $white,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-warning, focus, box-shadow),
+			),
+		),
 		active: (
 			background-color:
 				map-deep-get($btn-warning, active, background-color),
@@ -498,6 +710,15 @@ $btn-outline-warning: map-deep-merge(
 			focus: (
 				box-shadow:
 					map-deep-get($btn-warning, active, focus, box-shadow),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-warning, active, focus, box-shadow),
+				),
 			),
 		),
 	),
@@ -515,12 +736,29 @@ $btn-outline-danger: map-deep-merge(
 			box-shadow: map-deep-get($btn-danger, focus, box-shadow),
 			color: $white,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-danger, focus, box-shadow),
+			),
+		),
 		active: (
 			background-color:
 				map-deep-get($btn-danger, active, background-color),
 			box-shadow: map-deep-get($btn-danger, active, box-shadow),
 			focus: (
 				box-shadow: map-deep-get($btn-danger, active, focus, box-shadow),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-danger, active, focus, box-shadow),
+				),
 			),
 		),
 	),
@@ -538,11 +776,28 @@ $btn-outline-light: map-deep-merge(
 			box-shadow: map-deep-get($btn-light, focus, box-shadow),
 			color: $gray-900,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-light, focus, box-shadow),
+			),
+		),
 		active: (
 			background-color: map-deep-get($btn-light, active, background-color),
 			box-shadow: map-deep-get($btn-light, active, box-shadow),
 			focus: (
 				box-shadow: map-deep-get($btn-light, active, focus, box-shadow),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-light, active, focus, box-shadow),
+				),
 			),
 		),
 	),
@@ -560,11 +815,28 @@ $btn-outline-dark: map-deep-merge(
 			box-shadow: map-deep-get($btn-dark, focus, box-shadow),
 			color: $white,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: $c-unset,
+			),
+			focus-visible: (
+				box-shadow: map-deep-get($btn-dark, focus, box-shadow),
+			),
+		),
 		active: (
 			background-color: map-deep-get($btn-dark, active, background-color),
 			box-shadow: map-deep-get($btn-dark, active, box-shadow),
 			focus: (
 				box-shadow: map-deep-get($btn-dark, active, focus, box-shadow),
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: $c-unset,
+				),
+				focus-visible: (
+					box-shadow:
+						map-deep-get($btn-dark, active, focus, box-shadow),
+				),
 			),
 		),
 	),

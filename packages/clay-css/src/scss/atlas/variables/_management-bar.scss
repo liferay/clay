@@ -9,6 +9,14 @@ $management-bar-base: map-deep-merge(
 				focus: (
 					box-shadow: $component-focus-box-shadow,
 				),
+				supports-focus-visible: (
+					focus: (
+						box-shadow: none,
+					),
+					focus-visible: (
+						box-shadow: $btn-focus-box-shadow,
+					),
+				),
 				disabled: (
 					box-shadow: none,
 				),

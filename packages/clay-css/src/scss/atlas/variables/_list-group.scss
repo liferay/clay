@@ -39,6 +39,14 @@ $list-group-title-link: map-deep-merge(
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
+		),
 	),
 	$list-group-title-link
 );
@@ -69,6 +77,14 @@ $list-group-subtitle-link: map-deep-merge(
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
+		),
 	),
 	$list-group-subtitle-link
 );
@@ -88,6 +104,14 @@ $list-group-text-link: map-deep-merge(
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 	),
 	$list-group-text-link
@@ -116,6 +140,14 @@ $list-group-subtext-link: map-deep-merge(
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 	),
 	$list-group-subtext-link

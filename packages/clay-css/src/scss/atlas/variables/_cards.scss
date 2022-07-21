@@ -97,6 +97,15 @@ $card-interactive: map-deep-merge(
 			box-shadow: #{0 0 0 2px #fff,
 			0 0 0 4px #719aff},
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: #{0 0 0 2px #fff,
+				0 0 0 4px #719aff},
+			),
+		),
 		active: (
 			background-color: #f1f2f5,
 		),

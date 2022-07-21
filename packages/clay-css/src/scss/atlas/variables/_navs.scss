@@ -25,6 +25,14 @@ $nav-link-btn-unstyled: map-deep-merge(
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
+		),
 	),
 	$nav-link-btn-unstyled
 );
@@ -62,6 +70,14 @@ $nav-tabs-link: map-deep-merge(
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 		disabled: (
 			box-shadow: none,
@@ -107,6 +123,14 @@ $nav-underline-link: map-deep-merge(
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 		disabled: (
 			box-shadow: none,

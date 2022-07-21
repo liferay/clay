@@ -24,6 +24,14 @@ $table-head-link: map-deep-merge(
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
+		),
 	),
 	$table-head-link
 );
@@ -75,6 +83,14 @@ $table-title-link: map-deep-merge(
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
+		),
 	),
 	$table-title-link
 );
@@ -106,6 +122,14 @@ $table-action-link: map-deep-merge(
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
+		),
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),
 		),
@@ -129,6 +153,14 @@ $table-link: map-deep-merge(
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 	),
 	$table-link
@@ -177,6 +209,14 @@ $table-list-title-link: map-deep-merge(
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
+		),
 	),
 	$table-list-title-link
 );
@@ -197,6 +237,14 @@ $table-list-link: map-deep-merge(
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 	),
 	$table-list-link
@@ -219,6 +267,14 @@ $table-list-action-link: map-deep-merge(
 			color: $gray-900,
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),

@@ -84,6 +84,14 @@ $close: map-deep-merge(
 			outline: 0,
 			opacity: 0.75,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $input-btn-focus-box-shadow,
+			),
+		),
 		disabled: (
 			box-shadow: none,
 			cursor: $disabled-cursor,

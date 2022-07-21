@@ -23,6 +23,14 @@ $treeview: map-merge(
 			focus: (
 				box-shadow: $component-focus-inset-box-shadow,
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
+			),
 		),
 		custom-control: (
 			margin-left: 4px,
@@ -90,6 +98,14 @@ $treeview: map-merge(
 			focus: (
 				box-shadow: $component-focus-inset-box-shadow,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
 			),
 			disabled: (
 				cursor: $disabled-cursor,

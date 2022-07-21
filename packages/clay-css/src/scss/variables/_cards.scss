@@ -686,7 +686,15 @@ $card-interactive: map-deep-merge(
 		),
 		focus: (
 			border-color: clay-lighten($component-active-bg, 25%),
-			box-shadow: $input-btn-focus-box-shadow,
+			box-shadow: $component-focus-box-shadow,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $component-focus-box-shadow,
+			),
 		),
 		active: (
 			background-color: $gray-200,
