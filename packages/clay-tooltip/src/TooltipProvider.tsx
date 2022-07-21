@@ -9,7 +9,11 @@ import {
 	Keys,
 	delegate,
 	doAlign,
+	useMousePosition,
 } from '@clayui/shared';
+
+// @ts-ignore
+import {alignPoint} from 'dom-align';
 import React, {useCallback, useEffect, useReducer, useRef} from 'react';
 import warning from 'warning';
 
@@ -48,6 +52,22 @@ const ALIGNMENTS_INVERSE_MAP = {
 	trbr: 'bottom-right',
 } as const;
 
+const BOTTOM_OFFSET = [0, 7] as const;
+const LEFT_OFFSET = [-7, 0] as const;
+const RIGHT_OFFSET = [7, 0] as const;
+const TOP_OFFSET = [0, -7] as const;
+
+const OFFSET_MAP = {
+	bctc: TOP_OFFSET,
+	bltl: TOP_OFFSET,
+	brtr: TOP_OFFSET,
+	clcr: RIGHT_OFFSET,
+	crcl: LEFT_OFFSET,
+	tcbc: BOTTOM_OFFSET,
+	tlbl: BOTTOM_OFFSET,
+	trbr: BOTTOM_OFFSET,
+};
+
 const ALIGNMENTS_FORCE_MAP = {
 	...ALIGNMENTS_INVERSE_MAP,
 	bctc: 'top-left',
@@ -56,6 +76,7 @@ const ALIGNMENTS_FORCE_MAP = {
 
 interface IState {
 	align?: typeof ALIGNMENTS[number];
+	floating?: boolean;
 	message?: string;
 	show?: boolean;
 	setAsHTML?: boolean;
@@ -97,6 +118,7 @@ const reducer = (state: IState, {type, ...payload}: IAction): IState => {
 			return {
 				...state,
 				align: initialState.align,
+				floating: undefined,
 				show: false,
 			};
 		default:
@@ -191,10 +213,10 @@ const TooltipProvider = ({
 	delay = 600,
 	scope,
 }: IPropsWithChildren | IPropsWithScope) => {
-	const [{align, message = '', setAsHTML, show}, dispatch] = useReducer(
-		reducer,
-		initialState
-	);
+	const [{align, floating, message = '', setAsHTML, show}, dispatch] =
+		useReducer(reducer, initialState);
+
+	const mousePosition = useMousePosition(20);
 
 	// Using `any` type since TS incorrectly infers setTimeout to be from NodeJS
 	const timeoutIdRef = useRef<any>();
@@ -267,50 +289,62 @@ const TooltipProvider = ({
 		}
 	}, []);
 
-	const handleShow = useCallback(({target}: {target: HTMLElement}) => {
-		const hasTitle =
-			target &&
-			(target.hasAttribute('title') || target.hasAttribute('data-title'));
+	const handleShow = useCallback(
+		(event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+			const target = event!.target as HTMLElement;
 
-		const titleNode = hasTitle
-			? target
-			: closestAncestor(target, '[title], [data-title]');
+			const hasTitle =
+				target &&
+				(target.hasAttribute('title') ||
+					target.hasAttribute('data-title'));
 
-		if (titleNode) {
-			targetRef.current = target;
+			const titleNode = hasTitle
+				? target
+				: closestAncestor(target, '[title], [data-title]');
 
-			target.addEventListener('click', handleHide);
+			if (titleNode) {
+				targetRef.current = target;
 
-			const title =
-				titleNode.getAttribute('title') ||
-				titleNode.getAttribute('data-title') ||
-				'';
+				target.addEventListener('click', handleHide);
 
-			saveTitle(titleNode);
+				const title =
+					titleNode.getAttribute('title') ||
+					titleNode.getAttribute('data-title') ||
+					'';
 
-			const customDelay = titleNode.getAttribute('data-tooltip-delay');
-			const newAlign = titleNode.getAttribute(
-				'data-tooltip-align'
-			) as typeof align;
-			const setAsHTML = !!titleNode.getAttribute(
-				'data-title-set-as-html'
-			);
+				saveTitle(titleNode);
 
-			clearTimeout(timeoutIdRef.current);
+				const customDelay =
+					titleNode.getAttribute('data-tooltip-delay');
+				const newAlign = titleNode.getAttribute(
+					'data-tooltip-align'
+				) as typeof align;
+				const setAsHTML = !!titleNode.getAttribute(
+					'data-title-set-as-html'
+				);
 
-			timeoutIdRef.current = setTimeout(
-				() => {
-					dispatch({
-						align: newAlign || align,
-						message: title,
-						setAsHTML,
-						type: 'show',
-					});
-				},
-				customDelay ? Number(customDelay) : delay
-			);
-		}
-	}, []);
+				const isFloating = titleNode.getAttribute(
+					'data-tooltip-floating'
+				);
+
+				clearTimeout(timeoutIdRef.current);
+
+				timeoutIdRef.current = setTimeout(
+					() => {
+						dispatch({
+							align: newAlign || align,
+							floating: Boolean(isFloating),
+							message: title,
+							setAsHTML,
+							type: 'show',
+						});
+					},
+					customDelay ? Number(customDelay) : delay
+				);
+			}
+		},
+		[]
+	);
 
 	useEffect(() => {
 		const handleEsc = (event: KeyboardEvent) => {
@@ -345,12 +379,39 @@ const TooltipProvider = ({
 				disposeHideEvents.forEach(({dispose}) => dispose());
 			};
 		}
-	}, []);
+	}, [handleShow]);
+
+	useEffect(() => {
+		if (
+			(tooltipRef as React.RefObject<HTMLDivElement>).current &&
+			show &&
+			floating
+		) {
+			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
+
+			const [clientX, clientY] = mousePosition;
+
+			alignPoint(
+				(tooltipRef as React.RefObject<HTMLDivElement>).current!,
+				{
+					clientX,
+					clientY,
+				},
+				{
+					offset: OFFSET_MAP[
+						points.join('') as keyof typeof OFFSET_MAP
+					] as [number, number],
+					points,
+				}
+			);
+		}
+	}, [mousePosition, show, floating]);
 
 	useEffect(() => {
 		if (
 			titleNodeRef.current &&
-			(tooltipRef as React.RefObject<HTMLDivElement>).current
+			(tooltipRef as React.RefObject<HTMLDivElement>).current &&
+			!floating
 		) {
 			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
 
