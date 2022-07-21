@@ -15,7 +15,7 @@ $clay-unset-placeholder: clay-unset-placeholder !default;
 // Settings
 
 $enable-bs4-deprecated: true !default;
-$enable-c-inner: true !default;
+$enable-c-inner: false !default;
 $enable-lexicon-flat-colors: false !default;
 $enable-scaling-components: false !default;
 $scaling-breakpoint-down: sm !default;
