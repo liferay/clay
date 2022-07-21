@@ -132,6 +132,14 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			outline: 0,
 			text-decoration: none,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-inset-box-shadow,
+			),
+		),
 		active: (
 			background-color: $cadmin-dropdown-link-active-bg,
 			color: $cadmin-dropdown-link-active-color,

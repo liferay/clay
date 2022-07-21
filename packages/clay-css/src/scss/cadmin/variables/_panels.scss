@@ -58,6 +58,14 @@ $cadmin-panel-header-link: map-deep-merge(
 			outline: 0,
 			z-index: $cadmin-zindex-panel-header-link-focus,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-panel-header-link
 );
@@ -179,8 +187,15 @@ $cadmin-panel-unstyled-header-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		focus: (
-			box-shadow: #{0 0 0 4px $cadmin-body-bg,
-			0 0 0 6px $cadmin-primary-l1},
+			box-shadow: $cadmin-component-focus-box-shadow,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-panel-unstyled-header-link

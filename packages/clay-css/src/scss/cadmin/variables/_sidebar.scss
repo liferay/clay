@@ -128,8 +128,15 @@ $cadmin-sidebar-light: map-deep-merge(
 			header: (
 				link: (
 					focus: (
-						box-shadow: #{0 0 0 4px $cadmin-white,
-						0 0 0 6px $cadmin-primary-l1},
+						box-shadow: $cadmin-component-focus-box-shadow,
+					),
+					supports-focus-visible: (
+						focus: (
+							box-shadow: none,
+						),
+						focus-visible: (
+							box-shadow: $cadmin-component-focus-box-shadow,
+						),
 					),
 				),
 			),
@@ -185,6 +192,14 @@ $cadmin-sidebar-dark: map-deep-merge(
 				focus: (
 					box-shadow: $cadmin-component-focus-box-shadow,
 					outline: 0,
+				),
+				supports-focus-visible: (
+					focus: (
+						box-shadow: none,
+					),
+					focus-visible: (
+						box-shadow: $cadmin-component-focus-box-shadow,
+					),
 				),
 				active: (
 					color: $cadmin-white,
@@ -242,6 +257,14 @@ $cadmin-sidebar-palette: map-deep-merge(
 					focus: (
 						box-shadow: $cadmin-component-focus-box-shadow,
 						outline: 0,
+					),
+					supports-focus-visible: (
+						focus: (
+							box-shadow: none,
+						),
+						focus-visible: (
+							box-shadow: $cadmin-component-focus-box-shadow,
+						),
 					),
 					active: (
 						color: $cadmin-white,

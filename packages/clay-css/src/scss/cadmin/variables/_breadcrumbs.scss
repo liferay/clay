@@ -137,10 +137,17 @@ $cadmin-breadcrumb-link: map-deep-merge(
 			text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
 		),
 		focus: (
-			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-breadcrumb-link-hover-color,
 			outline: 0,
 			text-decoration: $cadmin-breadcrumb-link-hover-text-decoration,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-breadcrumb-link

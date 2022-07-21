@@ -75,6 +75,14 @@ $cadmin-label: map-deep-merge(
 				box-shadow: $cadmin-component-focus-box-shadow,
 				text-decoration: $cadmin-label-anchor-hover-text-decoration,
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $cadmin-btn-focus-box-shadow,
+				),
+			),
 		),
 		link: (
 			color: $cadmin-label-link-color,

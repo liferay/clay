@@ -72,7 +72,7 @@ $cadmin-tooltip-inner: map-merge(
 	(
 		background-color: $cadmin-tooltip-bg,
 		border-radius: clay-enable-rounded($cadmin-tooltip-border-radius),
-		box-shadow: clay-enable-shadows([$cadmin-tooltip-box-shadow]),
+		box-shadow: clay-enable-shadows($cadmin-tooltip-box-shadow),
 		color: $cadmin-tooltip-color,
 		max-width: $cadmin-tooltip-max-width,
 		padding: $cadmin-tooltip-padding-y $cadmin-tooltip-padding-x,

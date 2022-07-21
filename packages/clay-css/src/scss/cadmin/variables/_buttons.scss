@@ -38,7 +38,7 @@ $cadmin-btn: map-deep-merge(
 		border-style: solid,
 		border-width: $cadmin-btn-border-width,
 		border-radius: clay-enable-rounded($cadmin-btn-border-radius),
-		box-shadow: clay-enable-shadows([$cadmin-btn-box-shadow]),
+		box-shadow: clay-enable-shadows($cadmin-btn-box-shadow),
 		color: $cadmin-body-color,
 		cursor: $cadmin-btn-cursor,
 		display: inline-block,
@@ -71,14 +71,30 @@ $cadmin-btn: map-deep-merge(
 			box-shadow: $cadmin-btn-focus-box-shadow,
 			outline: 0,
 		),
-		active: (
-			box-shadow: clay-enable-shadows([$cadmin-btn-active-box-shadow]),
+		supports-focus-visible: (
 			focus: (
-				box-shadow: clay-enable-shadows([$cadmin-btn-focus-box-shadow]),
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-btn-focus-box-shadow,
+			),
+		),
+		active: (
+			box-shadow: clay-enable-shadows($cadmin-btn-active-box-shadow),
+			focus: (
+				box-shadow: $cadmin-btn-focus-box-shadow,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $cadmin-btn-focus-box-shadow,
+				),
 			),
 		),
 		active-class: (
-			box-shadow: clay-enable-shadows([$cadmin-btn-active-box-shadow]),
+			box-shadow: clay-enable-shadows($cadmin-btn-active-box-shadow),
 		),
 		disabled: (
 			cursor: $cadmin-btn-disabled-cursor,
@@ -662,7 +678,7 @@ $cadmin-btn-link: () !default;
 $cadmin-btn-link: map-deep-merge(
 	(
 		border-radius: 1px,
-		box-shadow: clay-enable-shadows([none]),
+		box-shadow: clay-enable-shadows(none),
 		color: $cadmin-link-color,
 		font-weight: $cadmin-font-weight-normal,
 		text-decoration: $cadmin-link-decoration,
@@ -671,11 +687,10 @@ $cadmin-btn-link: map-deep-merge(
 			text-decoration: $cadmin-link-hover-decoration,
 		),
 		focus: (
-			box-shadow: $cadmin-btn-focus-box-shadow,
 			text-decoration: $cadmin-link-decoration,
 		),
 		active: (
-			box-shadow: clay-enable-shadows([none]),
+			box-shadow: clay-enable-shadows(none),
 		),
 		disabled: (
 			box-shadow: none,
@@ -716,7 +731,6 @@ $cadmin-btn-outline-primary: map-deep-merge(
 		),
 		focus: (
 			background-color: $cadmin-primary-l3,
-			box-shadow: map-get($cadmin-btn-primary, focus-box-shadow),
 			color: $cadmin-primary,
 		),
 		active: (
@@ -747,8 +761,6 @@ $cadmin-btn-outline-secondary: map-deep-merge(
 		focus: (
 			background-color: rgba($cadmin-gray-900, 0.03),
 			border-color: transparent,
-			box-shadow:
-				map-get(map-get($cadmin-btn-secondary, focus), box-shadow),
 			color: map-get(map-get($cadmin-btn-secondary, focus), color),
 		),
 		active: (
@@ -810,14 +822,12 @@ $cadmin-btn-outline-info: map-deep-merge(
 		focus: (
 			background-color:
 				map-get(map-get($cadmin-btn-info, hover), background-color),
-			box-shadow: map-get(map-get($cadmin-btn-info, focus), box-shadow),
 			color: $cadmin-white,
 		),
 		active: (
 			background-color:
 				map-get(map-get($cadmin-btn-info, active), background-color),
 			border-color: $cadmin-info,
-			box-shadow: map-get(map-get($cadmin-btn-info, active), box-shadow),
 			color: color-yiq($cadmin-info),
 		),
 		disabled: (
@@ -843,15 +853,12 @@ $cadmin-btn-outline-warning: map-deep-merge(
 		focus: (
 			background-color:
 				map-get(map-get($cadmin-btn-warning, hover), background-color),
-			box-shadow: map-get(map-get($cadmin-btn-warning, focus), box-shadow),
 			color: $cadmin-white,
 		),
 		active: (
 			background-color:
 				map-get(map-get($cadmin-btn-warning, active), background-color),
 			border-color: $cadmin-warning,
-			box-shadow:
-				map-get(map-get($cadmin-btn-warning, active), box-shadow),
 			color: color-yiq($cadmin-warning),
 		),
 		disabled: (
@@ -877,7 +884,6 @@ $cadmin-btn-outline-danger: map-deep-merge(
 		focus: (
 			background-color:
 				map-get(map-get($cadmin-btn-danger, hover), background-color),
-			box-shadow: map-get(map-get($cadmin-btn-danger, focus), box-shadow),
 			color: $cadmin-white,
 		),
 		active: (
@@ -909,23 +915,13 @@ $cadmin-btn-outline-light: map-deep-merge(
 		focus: (
 			background-color:
 				map-get(map-get($cadmin-btn-light, hover), background-color),
-			box-shadow: map-get(map-get($cadmin-btn-light, focus), box-shadow),
 			color: $cadmin-gray-900,
 		),
 		active: (
 			background-color:
 				map-get(map-get($cadmin-btn-light, active), background-color),
 			border-color: $cadmin-light,
-			box-shadow: map-get(map-get($cadmin-btn-light, active), box-shadow),
 			color: color-yiq($cadmin-light),
-			focus: (
-				box-shadow:
-					clay-enable-shadows(
-						[ $cadmin-btn-active-box-shadow#{','} 0 0 0 $cadmin-btn-focus-width
-							rgba($cadmin-light, 0.5),
-						0 0 0 $cadmin-btn-focus-width rgba($cadmin-light, 0.5) ]
-					),
-			),
 		),
 		disabled: (
 			background-color: transparent,
@@ -950,25 +946,13 @@ $cadmin-btn-outline-dark: map-deep-merge(
 		focus: (
 			background-color:
 				map-get(map-get($cadmin-btn-dark, hover), background-color),
-			box-shadow: map-get(map-get($cadmin-btn-dark, focus), box-shadow),
 			color: $cadmin-white,
 		),
 		active: (
 			background-color:
 				map-get(map-get($cadmin-btn-dark, active), background-color),
 			border-color: $cadmin-dark,
-			box-shadow: map-get(map-get($cadmin-btn-dark, active), box-shadow),
 			color: color-yiq($cadmin-dark),
-			focus: (
-				box-shadow:
-					if(
-						$cadmin-enable-shadows and $cadmin-btn-active-box-shadow
-							!= none,
-						$cadmin-btn-active-box-shadow#{','} 0 0 0 $cadmin-btn-focus-width
-							rgba($cadmin-dark, 0.5),
-						0 0 0 $cadmin-btn-focus-width rgba($cadmin-dark, 0.5)
-					),
-			),
 		),
 		disabled: (
 			background-color: transparent,

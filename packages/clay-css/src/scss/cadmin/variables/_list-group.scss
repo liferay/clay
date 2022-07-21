@@ -80,6 +80,14 @@ $cadmin-list-group-title-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-list-group-title-link
 );
@@ -117,6 +125,14 @@ $cadmin-list-group-subtitle-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-list-group-subtitle-link
 );
@@ -147,6 +163,14 @@ $cadmin-list-group-text-link: map-deep-merge(
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-list-group-text-link
@@ -181,6 +205,14 @@ $cadmin-list-group-subtext-link: map-deep-merge(
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-list-group-subtext-link

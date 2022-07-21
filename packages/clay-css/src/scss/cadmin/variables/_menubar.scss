@@ -78,12 +78,17 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			),
 			focus: (
 				background-color: rgba($cadmin-primary, 0.04),
-				box-shadow:
-					clay-enable-shadows(
-						$cadmin-component-focus-inset-box-shadow
-					),
+				box-shadow: $cadmin-component-focus-inset-box-shadow,
 				color: $cadmin-gray-900,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $cadmin-component-focus-inset-box-shadow,
+				),
 			),
 			active: (
 				color: rgba($cadmin-black, 0.9),
@@ -141,9 +146,16 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			text-decoration: none,
 			transition: box-shadow 0.15s ease-in-out,
 			focus: (
-				box-shadow:
-					clay-enable-shadows($cadmin-component-focus-box-shadow),
+				box-shadow: $cadmin-component-focus-box-shadow,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $cadmin-component-focus-box-shadow,
+				),
 			),
 			disabled: (
 				box-shadow: clay-enable-shadows(none),
@@ -290,12 +302,17 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			),
 			focus: (
 				background-color: rgba($cadmin-primary, 0.04),
-				box-shadow:
-					clay-enable-shadows(
-						$cadmin-component-focus-inset-box-shadow
-					),
+				box-shadow: $cadmin-component-focus-inset-box-shadow,
 				color: $cadmin-gray-900,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $cadmin-component-focus-inset-box-shadow,
+				),
 			),
 			active: (
 				color: rgba($cadmin-black, 0.9),
@@ -353,9 +370,16 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 			text-decoration: none,
 			transition: box-shadow 0.15s ease-in-out,
 			focus: (
-				box-shadow:
-					clay-enable-shadows($cadmin-component-focus-box-shadow),
+				box-shadow: $cadmin-component-focus-box-shadow,
 				outline: 0,
+			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $cadmin-component-focus-box-shadow,
+				),
 			),
 			disabled: (
 				box-shadow: clay-enable-shadows(none),

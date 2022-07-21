@@ -14,6 +14,14 @@ $cadmin-component-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-component-link
 );
@@ -32,6 +40,14 @@ $cadmin-link-primary: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-link-primary
 );
@@ -49,6 +65,14 @@ $cadmin-link-secondary: map-deep-merge(
 			color: $cadmin-gray-900,
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-link-secondary
@@ -139,7 +163,16 @@ $cadmin-link-outline-primary: map-deep-merge(
 		),
 		focus: (
 			background-color: $cadmin-primary-l3,
+			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-primary,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 		active: (
 			background-color:
@@ -167,7 +200,16 @@ $cadmin-link-outline-secondary: map-deep-merge(
 		),
 		focus: (
 			background-color: rgba($cadmin-gray-900, 0.03),
+			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-gray-900,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 		active: (
 			background-color: rgba($cadmin-gray-900, 0.06),
@@ -241,6 +283,14 @@ $cadmin-component-title-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-component-title-link
 );
@@ -278,6 +328,14 @@ $cadmin-component-subtitle-link: map-deep-merge(
 			color: $cadmin-gray-900,
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-component-subtitle-link
@@ -319,6 +377,14 @@ $cadmin-component-action: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-gray-900,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 		active: (
 			background-color: rgba($cadmin-gray-900, 0.06),

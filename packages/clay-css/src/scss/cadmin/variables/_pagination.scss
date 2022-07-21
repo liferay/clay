@@ -156,6 +156,14 @@ $cadmin-pagination-link: map-deep-merge(
 		transition: $cadmin-pagination-link-transition,
 		hover: $cadmin-pagination-link-hover,
 		focus: $cadmin-pagination-link-focus,
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-pagination-focus-box-shadow,
+			),
+		),
 		active: $cadmin-pagination-link-active,
 		disabled: $cadmin-pagination-link-disabled,
 		lexicon-icon: (
@@ -349,6 +357,14 @@ $cadmin-pagination-items-per-page-link: map-deep-merge(
 		transition: $cadmin-pagination-items-per-page-transition,
 		hover: $cadmin-pagination-items-per-page-link-hover,
 		focus: $cadmin-pagination-items-per-page-link-focus,
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-pagination-items-per-page-focus-box-shadow,
+			),
+		),
 		active: $cadmin-pagination-items-per-page-link-active,
 		disabled: $cadmin-pagination-items-per-page-link-disabled,
 		lexicon-icon: (

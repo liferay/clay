@@ -59,6 +59,14 @@ $cadmin-badge: map-deep-merge(
 				box-shadow: $cadmin-component-focus-box-shadow,
 				outline: 0,
 			),
+			supports-focus-visible: (
+				focus: (
+					box-shadow: none,
+				),
+				focus-visible: (
+					box-shadow: $cadmin-component-focus-box-shadow,
+				),
+			),
 		),
 		link: (
 			color: $cadmin-badge-link-color,

@@ -99,6 +99,14 @@ $cadmin-table-head-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-table-head-link
 );
@@ -212,6 +220,14 @@ $cadmin-table-title-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-table-title-link
 );
@@ -232,6 +248,14 @@ $cadmin-table-link: map-deep-merge(
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-table-link
@@ -262,6 +286,14 @@ $cadmin-table-action-link: map-deep-merge(
 			color: $cadmin-gray-900,
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),
@@ -651,6 +683,14 @@ $cadmin-table-list-title-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 	),
 	$cadmin-table-list-title-link
 );
@@ -671,6 +711,14 @@ $cadmin-table-list-link: map-deep-merge(
 		focus: (
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 	),
 	$cadmin-table-list-link
@@ -700,6 +748,14 @@ $cadmin-table-list-action-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-gray-900,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 		active: (
 			background-color: rgba(0, 0, 0, 0.04),

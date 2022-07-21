@@ -81,6 +81,14 @@ $cadmin-close: map-deep-merge(
 			opacity: 1,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-btn-focus-box-shadow,
+			),
+		),
 		disabled: (
 			box-shadow: none,
 			color: $cadmin-gray-600,

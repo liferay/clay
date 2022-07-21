@@ -35,6 +35,14 @@ $cadmin-navigation-bar-base: map-deep-merge(
 				focus: (
 					box-shadow: $cadmin-component-focus-box-shadow,
 				),
+				supports-focus-visible: (
+					focus: (
+						box-shadow: none,
+					),
+					focus-visible: (
+						box-shadow: $cadmin-btn-focus-box-shadow,
+					),
+				),
 				disabled: (
 					box-shadow: none,
 				),

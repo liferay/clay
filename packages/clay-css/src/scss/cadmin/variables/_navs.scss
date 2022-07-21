@@ -39,8 +39,15 @@ $cadmin-nav-link-btn-unstyled: map-deep-merge(
 	(
 		width: 100%,
 		focus: (
-			box-shadow: #{0 0 0 2px $cadmin-white,
-			0 0 0 4px $cadmin-primary-l1},
+			box-shadow: $cadmin-component-focus-box-shadow,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 		disabled: (
 			opacity: 1,
@@ -360,6 +367,14 @@ $cadmin-nav-tabs-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			outline: 0,
 		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
+		),
 		active: (
 			background-color: $cadmin-nav-tabs-link-active-bg,
 			border-color: $cadmin-nav-tabs-link-active-border-color,
@@ -469,6 +484,14 @@ $cadmin-nav-underline-link: map-deep-merge(
 			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-nav-underline-link-hover-color,
 			outline: 0,
+		),
+		supports-focus-visible: (
+			focus: (
+				box-shadow: none,
+			),
+			focus-visible: (
+				box-shadow: $cadmin-component-focus-box-shadow,
+			),
 		),
 		active-class: (
 			color: $cadmin-nav-underline-link-active-color,
