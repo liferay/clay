@@ -15,6 +15,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
         class="nav-item"
       >
         <a
+          aria-current="page"
           class="nav-link active link-unstyled"
           href="#1"
         >
@@ -85,6 +86,7 @@ exports[`ClayNavigationBar renders 1`] = `
               class="nav-item"
             >
               <a
+                aria-current="page"
                 class="nav-link active link-unstyled"
                 href="#1"
               >
@@ -201,6 +203,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
         class="nav-item"
       >
         <a
+          aria-current="page"
           class="nav-link active link-unstyled"
           href="#1"
         >
@@ -285,6 +288,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
               class="nav-item"
             >
               <button
+                aria-current="page"
                 class="nav-link active btn btn-unstyled"
                 type="button"
               >
@@ -358,6 +362,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
               class="nav-item"
             >
               <a
+                aria-current="page"
                 class="nav-link active link-unstyled"
                 href="#1"
               >
@@ -417,6 +422,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
               class="nav-item"
             >
               <a
+                aria-current="page"
                 class="nav-link active link-unstyled"
                 href="#1"
               >
@@ -431,6 +437,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
               class="nav-item"
             >
               <button
+                aria-current="page"
                 class="nav-link active btn btn-unstyled"
                 type="button"
               >

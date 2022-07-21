@@ -37,6 +37,7 @@ const ClayNavigationBarIcon = ({
 					) {
 						return React.cloneElement(child, {
 							...child.props,
+							'aria-current': active ? 'page' : undefined,
 							children: (
 								<span className="navbar-text-truncate">
 									{child.props.children}
