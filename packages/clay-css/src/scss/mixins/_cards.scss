@@ -295,6 +295,16 @@
 
 @mixin clay-card-variant($map) {
 	@if (type-of($map) == 'map') {
+		$focus-visible: if(
+			variable-exists(enable-focus-visible),
+			$enable-focus-visible,
+			if(
+				variable-exists(cadmin-focus-visible),
+				$cadmin-focus-visible,
+				true
+			)
+		);
+
 		$enabled: setter(map-get($map, enabled), true);
 
 		$base: map-merge(
@@ -730,6 +740,26 @@
 
 				.card-link {
 					@include clay-link($focus-card-link);
+				}
+			}
+
+			@if ($focus-visible) {
+				@supports #{'\selector(:focus-visible)'} {
+					&:focus {
+						@include clay-css(
+							map-deep-get($map, supports-focus-visible, focus)
+						);
+					}
+
+					&:focus-visible {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								supports-focus-visible,
+								focus-visible
+							)
+						);
+					}
 				}
 			}
 
