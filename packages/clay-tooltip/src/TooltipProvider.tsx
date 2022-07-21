@@ -11,8 +11,6 @@ import {
 	doAlign,
 	useMousePosition,
 } from '@clayui/shared';
-
-// @ts-ignore
 import {alignPoint} from 'dom-align';
 import React, {useCallback, useEffect, useReducer, useRef} from 'react';
 import warning from 'warning';
