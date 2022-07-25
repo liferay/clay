@@ -16,6 +16,7 @@ import {
 
 -   [TooltipProvider](#tooltipprovider)
     -   [contentRenderer](#contentrenderer)
+    -   [Disabled elements with title](#disabled-elements-with-title)
 
 </div>
 </div>
@@ -43,3 +44,19 @@ Here's a list of html attributes that you can provide to children elements of th
 `contentRenderer` prop gives you the ability to format the content passed to the Tooltip via the `title` attribute to meet your requirements.
 
 <TooltipProviderRenderer />
+
+### Disabled elements with title
+
+Elements or components that use the browser's native `disabled` property, have the problem of the provider not being able to track element events, natively elements with disabled do not trigger events, such as `click`, `mouseup`, `mousedown`, `keydown`... if the element has a `title` the tooltip will not work correctly, for this scenario we recommend using a different strategy to continue that the element emits events but still has the disabled state. For example, the Button component:
+
+```jsx
+// instead of
+<button className="btn btn-primary" disabled="" title="Open Menu">Click</button>
+<Button disabled title="Top">Top</Button>
+
+// use
+<button className="btn btn-primary disabled" aria-disabled="true" title="Open Menu">Click</button>
+<Button aria-disabled="true" className="disabled" title="Top">Top</Button>
+```
+
+Add the `disabled` CSS class that adds the visual state of disabled and the `aria-disabled` property to keep the element accessible, this same behavior can be repeated for other elements where you want the title even when the component is disabled.
