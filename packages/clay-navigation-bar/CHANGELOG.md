@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.67.0](https://github.com/liferay/clay/compare/v3.66.0...v3.67.0) (2022-07-25)
+
+### Bug Fixes
+
+-   **@clayui/navigation-bar:** set aria-current based off of the status of active ([81bcc8f](https://github.com/liferay/clay/commit/81bcc8fb2e6578e4656da520666f85b25884e2f5))
+-   **@clayui/navigation-bar:** set it to 'page', not just 'true' ([80bf118](https://github.com/liferay/clay/commit/80bf11806e2a455daf4c15daacd4a6de19b69ca1))
+
 ## [3.65.1](https://github.com/liferay/clay/compare/v3.65.0...v3.65.1) (2022-07-11)
 
 **Note:** Version bump only for package @clayui/navigation-bar

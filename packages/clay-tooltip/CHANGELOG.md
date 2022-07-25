@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.67.0](https://github.com/liferay/clay/compare/v3.66.0...v3.67.0) (2022-07-25)
+
+### Features
+
+-   **@clayui/tooltip:** adds new properties to configure the tooltip to be floating ([c598ca3](https://github.com/liferay/clay/commit/c598ca335b96cafe01848fabdf020135126c9ff9))
+
 # [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
 
 ### Bug Fixes
