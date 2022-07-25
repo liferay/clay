@@ -177,3 +177,25 @@ export const CustomJSX = () => {
 		</div>
 	);
 };
+
+export const Floating = () => {
+	return (
+		<ClayTooltipProvider>
+			<div>
+				<div
+					data-tooltip-floating="true"
+					style={{
+						backgroundColor: '#e6e6e6',
+						borderRadius: '10px',
+						display: 'inline-block',
+						fontWeight: 500,
+						padding: '60px 100px',
+					}}
+					title="Edit Text"
+				>
+					Placeholder
+				</div>
+			</div>
+		</ClayTooltipProvider>
+	);
+};

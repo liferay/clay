@@ -20,6 +20,17 @@ declare module 'dom-align' {
 		useCssRight?: boolean
 	}
 
+	type MousePosition = {
+		clientX: number;
+		clientY: number;
+	};
+
+	export function alignPoint(
+		sourceNode: HTMLElement,
+		target: MousePosition,
+		config?: IConfigOptional
+	): void;
+
 	export default function doAlign(
 		sourceNode: HTMLElement,
 		targetNode: HTMLElement,
