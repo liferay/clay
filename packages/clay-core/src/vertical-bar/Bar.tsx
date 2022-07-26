@@ -4,7 +4,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useRef} from 'react';
 
 import {Collection} from '../collection';
 
@@ -17,17 +17,40 @@ interface IProps<T> extends ICollectionProps<T> {
 	displayType?: 'light' | 'dark';
 }
 
-export function Bar<T>({children, displayType = 'dark', items}: IProps<T>) {
+const List = ({
+	children,
+	...otherProps
+}: React.HTMLAttributes<HTMLUListElement>) => (
+	<ul {...otherProps} className="tbar-nav">
+		{children}
+	</ul>
+);
+
+export function Bar<T>({
+	children,
+	displayType = 'dark',
+	items,
+	virtualize,
+}: IProps<T>) {
+	const parentRef = useRef<HTMLDivElement | null>(null);
+
 	return (
 		<nav
 			className={classNames('tbar tbar-stacked c-slideout-show', {
 				'tbar-dark-l2': displayType === 'dark',
 				'tbar-light': displayType === 'light',
 			})}
+			ref={parentRef}
 		>
-			<ul className="tbar-nav">
-				<Collection<T> items={items}>{children}</Collection>
-			</ul>
+			<Collection<T>
+				as={List}
+				estimateSize={40}
+				items={items}
+				parentRef={parentRef}
+				virtualize={virtualize}
+			>
+				{children}
+			</Collection>
 		</nav>
 	);
 }

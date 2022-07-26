@@ -153,7 +153,11 @@ export const DynamicContent = (args: any) => {
 				)}
 			</VerticalBar.Content>
 
-			<VerticalBar.Bar displayType={args.barDisplayType} items={items}>
+			<VerticalBar.Bar
+				displayType={args.barDisplayType}
+				items={items}
+				virtualize
+			>
 				{(item) => (
 					<VerticalBar.Item divider={item.divider} key={item.title}>
 						<Button displayType={null}>
