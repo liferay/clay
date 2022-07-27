@@ -194,6 +194,7 @@ $cadmin-input-label: map-deep-merge(
 		font-weight: $cadmin-input-label-font-weight,
 		margin-bottom: $cadmin-input-label-margin-bottom,
 		max-width: 100%,
+		position: static,
 		word-wrap: break-word,
 		mobile: (
 			font-size: $cadmin-input-label-font-size-mobile,
