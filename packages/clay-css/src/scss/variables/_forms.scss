@@ -116,7 +116,9 @@ $input-plaintext-color: $body-color !default;
 
 /// @deprecated with no replacement
 
-$input-height-border: $input-border-top-width + $input-border-bottom-width !default;
+$input-height-border: calc(
+	#{$input-border-top-width} + #{$input-border-bottom-width}
+) !default;
 
 /// @deprecated with no replacement
 

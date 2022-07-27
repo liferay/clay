@@ -3,7 +3,9 @@ $popover-border-color: rgba($black, 0.2) !default;
 $popover-border-width: $border-width !default;
 
 $popover-border-radius: $border-radius-lg !default;
-$popover-inner-border-radius: $popover-border-radius - $popover-border-width !default;
+$popover-inner-border-radius: calc(
+	#{$popover-border-radius} - #{$popover-border-width}
+) !default;
 
 $popover-box-shadow: 0 0.25rem 0.5rem rgba($black, 0.2) !default;
 $popover-font-size: $font-size-sm !default;
