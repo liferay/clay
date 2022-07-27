@@ -19,8 +19,9 @@ $cadmin-modal-content-border-color: transparent !default;
 $cadmin-modal-content-border-width: $cadmin-border-width !default;
 
 $cadmin-modal-content-border-radius: $cadmin-border-radius-lg !default;
-$cadmin-modal-content-inner-border-radius: $cadmin-modal-content-border-radius -
-	$cadmin-modal-content-border-width !default;
+$cadmin-modal-content-inner-border-radius: calc(
+	#{$cadmin-modal-content-border-radius} - #{$cadmin-modal-content-border-width}
+) !default;
 
 $cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;

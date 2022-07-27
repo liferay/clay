@@ -118,12 +118,15 @@ $cadmin-input-plaintext-color: $cadmin-body-color !default;
 
 // Deprecated
 
-$cadmin-input-height-border: $cadmin-input-border-bottom-width +
-	$cadmin-input-border-top-width !default;
+$cadmin-input-height-border: calc(
+	#{$cadmin-input-border-bottom-width} + #{$cadmin-input-border-top-width}
+) !default;
 
 // Deprecated
 
-$cadmin-input-height-inner: $cadmin-input-height - $cadmin-input-height-border !default;
+$cadmin-input-height-inner: calc(
+	#{$cadmin-input-height} - #{$cadmin-input-border-bottom-width} - #{$cadmin-input-border-top-width}
+) !default;
 
 // Deprecated
 
