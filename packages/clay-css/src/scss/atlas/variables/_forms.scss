@@ -75,9 +75,13 @@ $input: map-deep-merge(
 	$input
 );
 
-$input-height-border: $input-border-bottom-width + $input-border-top-width !default;
+$input-height-border: calc(
+	#{$input-border-bottom-width} + #{$input-border-top-width}
+) !default;
 
-$input-height-inner: $input-height - $input-height-border !default;
+$input-height-inner: calc(
+	#{$input-height} - #{$input-border-bottom-width} - #{$input-border-top-width}
+) !default;
 
 // Input Lg (.form-control-lg)
 
