@@ -4,10 +4,11 @@
  */
 
 import {useDebounce} from '@clayui/shared';
-import React from 'react';
+import React, {useEffect} from 'react';
 import warning from 'warning';
 
 import {
+	FetchCursor,
 	FetchPolicy,
 	IDataProvider,
 	NetworkStatus,
@@ -54,6 +55,8 @@ const useResource = ({
 	// two requests.
 	const firstRenderRef = React.useRef<boolean>(true);
 
+	const cursorRef = React.useRef<string | null>(null);
+
 	const cache = useCache(
 		fetchPolicy,
 		storage,
@@ -63,12 +66,6 @@ const useResource = ({
 	);
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
-
-	const handleRefetch = () => {
-		// eslint-disable-next-line @typescript-eslint/no-use-before-define
-		doFetch();
-		dispatchNetworkStatus(NetworkStatus.Refetch);
-	};
 
 	const cleanRetry = () => {
 		if (retryDelayTimeoutId) {
@@ -135,10 +132,23 @@ const useResource = ({
 		// attempts are successful.
 		cleanRetry();
 
-		setResource(result);
+		let data = result;
+
+		if (cursorRef.current && resource !== null) {
+			if (Array.isArray(result) && Array.isArray(resource)) {
+				data = [...resource, ...result];
+			} else if (
+				typeof result === 'object' &&
+				typeof resource === 'object'
+			) {
+				data = {...resource, ...result};
+			}
+		}
+
+		setResource(data);
 		dispatchNetworkStatus(NetworkStatus.Unused);
 
-		cache.set(result);
+		cache.set(data);
 
 		if (pollIntervalRef.current > 0) {
 			setPoll();
@@ -160,10 +170,12 @@ const useResource = ({
 	const getUrlFormat = (link: string, variables: TVariables) => {
 		const uri = new URL(link);
 
-		warning(
-			uri.searchParams.toString() === '',
-			'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://clayui.com/docs/components/data-provider.html'
-		);
+		if (cursorRef.current === null) {
+			warning(
+				uri.searchParams.toString() === '',
+				'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://clayui.com/docs/components/data-provider.html'
+			);
+		}
 
 		if (!variables) {
 			return uri.toString();
@@ -197,15 +209,24 @@ const useResource = ({
 			case 'string': {
 				const fn = fetcher ?? fetch;
 
-				promise = fn(getUrlFormat(link, variables), fetchOptions).then(
-					(res: Response) => {
-						if (res.ok && !res.bodyUsed) {
-							return res.json();
-						}
+				promise = fn<Response | FetchCursor<unknown> | any>(
+					getUrlFormat(cursorRef.current ?? link, variables),
+					fetchOptions
+				).then((res: Response | FetchCursor<unknown> | any) => {
+					if (res instanceof Response && res.ok && !res.bodyUsed) {
+						return res.json();
+					} else if (
+						!(res instanceof Response) &&
+						res.items &&
+						res.cursor
+					) {
+						cursorRef.current = res.cursor;
 
-						return res;
+						return res.items;
 					}
-				);
+
+					return res;
+				});
 				break;
 			}
 			default:
@@ -235,7 +256,17 @@ const useResource = ({
 		doFetch();
 	};
 
-	React.useEffect(() => {
+	const loadMore = () => {
+		dispatchNetworkStatus(NetworkStatus.Loading);
+		doFetch();
+	};
+
+	const refetch = () => {
+		dispatchNetworkStatus(NetworkStatus.Refetch);
+		doFetch();
+	};
+
+	useEffect(() => {
 		pollIntervalRef.current = pollInterval;
 
 		if (pollInterval > 0) {
@@ -243,13 +274,13 @@ const useResource = ({
 		}
 	}, [pollInterval]);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (!firstRenderRef.current) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		maybeFetch(NetworkStatus.Loading);
 		firstRenderRef.current = false;
 
@@ -269,7 +300,7 @@ const useResource = ({
 		};
 	}, []);
 
-	return {refetch: handleRefetch, resource};
+	return {loadMore, refetch, resource};
 };
 
 export {useResource};

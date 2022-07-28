@@ -83,12 +83,20 @@ export interface IFetchRetry {
 	delay?: IFetchRetryDelay;
 }
 
+export type FetchCursor<T> = {
+	items: T;
+	cursor: string;
+};
+
 export interface IDataProvider {
 	/**
 	 * A Promise returning function to fetch your data, this replaces the
 	 * use of `fetch` by default.
 	 */
-	fetch?: (link: string, init?: RequestInit | undefined) => Promise<Response>;
+	fetch?: <T = unknown>(
+		link: string,
+		init?: RequestInit | undefined
+	) => Promise<Response> | Promise<FetchCursor<T>> | Promise<T>;
 
 	/**
 	 * This API is used in conjunction with variables API, if it is always
