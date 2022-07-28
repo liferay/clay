@@ -248,18 +248,22 @@
 	.dropdown-subheader,
 	.dropdown-caption,
 	.dropdown-item {
-		padding-left: $cadmin-dropdown-item-padding-x +
-			$cadmin-dropdown-item-indicator-size +
-			$cadmin-dropdown-item-indicator-spacer-x;
+		padding-left: calc(
+			#{$cadmin-dropdown-item-padding-x} + #{$cadmin-dropdown-item-indicator-size} +
+				#{$cadmin-dropdown-item-indicator-spacer-x}
+		);
 	}
 
 	@if ($cadmin-enable-c-inner) {
 		.dropdown-item {
 			.c-inner {
-				margin-left: math-sign(
-					$cadmin-dropdown-item-padding-x +
-						$cadmin-dropdown-item-indicator-size +
-						$cadmin-dropdown-item-indicator-spacer-x
+				margin-left: calc(
+					(
+							#{$cadmin-dropdown-item-padding-x} +
+								#{$cadmin-dropdown-item-indicator-size} +
+								#{$cadmin-dropdown-item-indicator-spacer-x}
+						) *
+						-1
 				);
 			}
 		}
@@ -291,16 +295,20 @@
 	}
 
 	.dropdown-item {
-		padding-right: $cadmin-dropdown-item-padding-x +
-			$cadmin-dropdown-item-indicator-size +
-			$cadmin-dropdown-item-indicator-spacer-x;
+		padding-right: calc(
+			#{$cadmin-dropdown-item-padding-x} + #{$cadmin-dropdown-item-indicator-size} +
+				#{$cadmin-dropdown-item-indicator-spacer-x}
+		);
 
 		@if ($cadmin-enable-c-inner) {
 			.c-inner {
-				margin-right: math-sign(
-					$cadmin-dropdown-item-padding-x +
-						$cadmin-dropdown-item-indicator-size +
-						$cadmin-dropdown-item-indicator-spacer-x
+				margin-right: calc(
+					(
+							#{$cadmin-dropdown-item-padding-x} +
+								#{$cadmin-dropdown-item-indicator-size} +
+								#{$cadmin-dropdown-item-indicator-spacer-x}
+						) *
+						-1
 				);
 			}
 		}

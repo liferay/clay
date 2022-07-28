@@ -238,17 +238,21 @@
 	.dropdown-subheader,
 	.dropdown-caption,
 	.dropdown-item {
-		padding-left: $dropdown-item-padding-x + $dropdown-item-indicator-size +
-			$dropdown-item-indicator-spacer-x;
+		padding-left: calc(
+			#{$dropdown-item-padding-x} + #{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
+		);
 	}
 
 	@if ($enable-c-inner) {
 		.dropdown-item {
 			.c-inner {
-				margin-left: math-sign(
-					$dropdown-item-padding-x +
-						$dropdown-item-indicator-size +
-						$dropdown-item-indicator-spacer-x
+				margin-left: calc(
+					(
+							#{$dropdown-item-padding-x} +
+								#{$dropdown-item-indicator-size} +
+								#{$dropdown-item-indicator-spacer-x}
+						) *
+						-1
 				);
 			}
 		}
@@ -279,15 +283,19 @@
 	}
 
 	.dropdown-item {
-		padding-right: $dropdown-item-padding-x + $dropdown-item-indicator-size +
-			$dropdown-item-indicator-spacer-x;
+		padding-right: calc(
+			#{$dropdown-item-padding-x} + #{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
+		);
 
 		@if ($enable-c-inner) {
 			.c-inner {
-				margin-right: math-sign(
-					$dropdown-item-padding-x +
-						$dropdown-item-indicator-size +
-						$dropdown-item-indicator-spacer-x
+				margin-right: calc(
+					(
+							#{$dropdown-item-padding-x} +
+								#{$dropdown-item-indicator-size} +
+								#{$dropdown-item-indicator-spacer-x}
+						) *
+						-1
 				);
 			}
 		}
