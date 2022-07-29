@@ -8,7 +8,6 @@ import React, {useEffect} from 'react';
 import warning from 'warning';
 
 import {
-	FetchCursor,
 	FetchPolicy,
 	IDataProvider,
 	NetworkStatus,
@@ -21,6 +20,11 @@ import {timeout} from './util';
 interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
 }
+
+// TODO(matuzalemsteles): Rewrite the cache implementation to use the
+// global implementation with promises.
+const PROMISES: Record<string, Promise<any> | undefined> = {};
+const CURSORS: Record<string, string | undefined> = {};
 
 const useResource = ({
 	fetch: fetcher,
@@ -41,6 +45,7 @@ const useResource = ({
 	},
 	fetchRetry = {},
 	storageMaxSize = 20,
+	suspense = false,
 	variables = null,
 }: IResource) => {
 	const [resource, setResource] = React.useState<any>(null);
@@ -50,12 +55,6 @@ const useResource = ({
 	let retryDelayTimeoutId = React.useRef<null | NodeJS.Timeout>(null).current;
 
 	const pollIntervalRef = React.useRef(pollInterval);
-
-	// A flag to identify if the first rendering happened to avoid
-	// two requests.
-	const firstRenderRef = React.useRef<boolean>(true);
-
-	const cursorRef = React.useRef<string | null>(null);
 
 	const cache = useCache(
 		fetchPolicy,
@@ -108,7 +107,16 @@ const useResource = ({
 				doFetch(retryAttempts + 1);
 			}, delay);
 		} else {
-			dispatchNetworkStatus(NetworkStatus.Error);
+			if (suspense) {
+				const cacheKey = cache.getCacheKey(link, variables);
+
+				if (cacheKey) {
+					PROMISES[cacheKey] = error;
+				}
+			} else {
+				dispatchNetworkStatus(NetworkStatus.Error);
+			}
+
 			warning(
 				false,
 				`DataProvider: Error making the requisition ${error}`
@@ -132,16 +140,27 @@ const useResource = ({
 		// attempts are successful.
 		cleanRetry();
 
+		const cacheKey = cache.getCacheKey(link, variables);
+
+		const previousData =
+			PROMISES[cacheKey!] instanceof Promise
+				? resource
+				: PROMISES[cacheKey!];
+
 		let data = result;
 
-		if (cursorRef.current && resource !== null) {
-			if (Array.isArray(result) && Array.isArray(resource)) {
-				data = [...resource, ...result];
+		if (
+			CURSORS[cacheKey!] &&
+			previousData !== null &&
+			previousData !== undefined
+		) {
+			if (Array.isArray(result) && Array.isArray(previousData)) {
+				data = [...previousData, ...result];
 			} else if (
 				typeof result === 'object' &&
-				typeof resource === 'object'
+				typeof previousData === 'object'
 			) {
-				data = {...resource, ...result};
+				data = {...previousData, ...result};
 			}
 		}
 
@@ -153,6 +172,12 @@ const useResource = ({
 		if (pollIntervalRef.current > 0) {
 			setPoll();
 		}
+
+		if (cacheKey) {
+			PROMISES[cacheKey] = data;
+		}
+
+		return result;
 	};
 
 	const populateSearchParams = (uri: URL, variables: TVariables) => {
@@ -170,7 +195,7 @@ const useResource = ({
 	const getUrlFormat = (link: string, variables: TVariables) => {
 		const uri = new URL(link);
 
-		if (cursorRef.current === null) {
+		if (CURSORS[cache.getCacheKey(link, variables)!] === null) {
 			warning(
 				uri.searchParams.toString() === '',
 				'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://clayui.com/docs/components/data-provider.html'
@@ -187,55 +212,64 @@ const useResource = ({
 	};
 
 	const doFetch = (retryAttempts = 0) => {
-		let promise: Promise<any>;
-
 		warning(
 			typeof link === 'string',
 			'DataProvider: The behavior of the `link` accepting a function has been deprecated in favor of the `fetcher` API. \n More details: https://clayui.com/docs/components/data-provider.html#data-fetching'
 		);
 
+		const cacheKey = cache.getCacheKey(link, variables);
+
 		switch (typeof link) {
 			case 'function':
-				promise = link(
-					populateSearchParams(
-						// This is just a hack to be able to instantiate the URL and make
-						// `populateSearchParams` reusable in `getUrlFormat` and make
-						// things easier.
-						new URL('http://clay.data.provider'),
-						variables
-					).searchParams.toString()
-				);
-				break;
+				return timeout(
+					fetchTimeout,
+					link(
+						populateSearchParams(
+							// This is just a hack to be able to instantiate the URL and make
+							// `populateSearchParams` reusable in `getUrlFormat` and make
+							// things easier.
+							new URL('http://clay.data.provider'),
+							variables
+						).searchParams.toString()
+					)
+				)
+					.then(fetchOnComplete)
+					.catch((error) => handleFetchRetry(error, retryAttempts));
 			case 'string': {
 				const fn = fetcher ?? fetch;
 
-				promise = fn<Response | FetchCursor<unknown> | any>(
-					getUrlFormat(cursorRef.current ?? link, variables),
-					fetchOptions
-				).then((res: Response | FetchCursor<unknown> | any) => {
-					if (res instanceof Response && res.ok && !res.bodyUsed) {
-						return res.json();
-					} else if (
-						!(res instanceof Response) &&
-						res.items &&
-						res.cursor
-					) {
-						cursorRef.current = res.cursor;
+				return timeout(
+					fetchTimeout,
+					fn(
+						getUrlFormat(CURSORS[cacheKey!] ?? link, variables),
+						fetchOptions
+					)
+				)
+					.then((res: any) => {
+						if (
+							res instanceof Response &&
+							res.ok &&
+							!res.bodyUsed
+						) {
+							return res.json();
+						} else if (
+							!(res instanceof Response) &&
+							res.items &&
+							res.cursor
+						) {
+							CURSORS[cacheKey!] = res.cursor;
 
-						return res.items;
-					}
+							return res.items;
+						}
 
-					return res;
-				});
-				break;
+						return res;
+					})
+					.then(fetchOnComplete)
+					.catch((error) => handleFetchRetry(error, retryAttempts));
 			}
 			default:
 				return null;
 		}
-
-		timeout(fetchTimeout, promise)
-			.then(fetchOnComplete)
-			.catch((error) => handleFetchRetry(error, retryAttempts));
 	};
 
 	const maybeFetch = (status: NetworkStatus) => {
@@ -253,12 +287,14 @@ const useResource = ({
 		}
 
 		dispatchNetworkStatus(status);
-		doFetch();
+
+		return doFetch();
 	};
 
 	const loadMore = () => {
 		dispatchNetworkStatus(NetworkStatus.Loading);
-		doFetch();
+
+		return doFetch();
 	};
 
 	const refetch = () => {
@@ -275,15 +311,12 @@ const useResource = ({
 	}, [pollInterval]);
 
 	useEffect(() => {
-		if (!firstRenderRef.current) {
+		if (resource !== null) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);
 
 	useEffect(() => {
-		maybeFetch(NetworkStatus.Loading);
-		firstRenderRef.current = false;
-
 		return () => {
 			// Reset the cache only if the storage reference is
 			// local from useResource.
@@ -300,7 +333,41 @@ const useResource = ({
 		};
 	}, []);
 
-	return {loadMore, refetch, resource};
+	const cacheKey = <string>cache.getCacheKey(link, variables);
+
+	let latestData = resource;
+
+	if (!PROMISES[cacheKey]) {
+		const result = maybeFetch(NetworkStatus.Loading);
+
+		if (result) {
+			PROMISES[cacheKey] = result;
+		}
+	}
+
+	// Integration with React.Suspense
+	if (suspense) {
+		if (latestData === null) {
+			// Integration with React.Suspense, throwing a throw with the promise in
+			// progress at render time for Suspense to catch.
+			if (
+				PROMISES[cacheKey] &&
+				typeof PROMISES[cacheKey]!.then === 'function'
+			) {
+				throw PROMISES[cacheKey];
+			}
+
+			// Integration with ErrorBoundary, when a network error happens we throw
+			// an error at render time so that ErrorBoundary catches the error.
+			if (PROMISES[cacheKey] instanceof Error) {
+				throw PROMISES[cacheKey];
+			}
+
+			latestData = PROMISES[cacheKey];
+		}
+	}
+
+	return {loadMore, refetch, resource: latestData};
 };
 
 export {useResource};
