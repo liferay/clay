@@ -73,8 +73,8 @@ $cadmin-dropdown-menu: map-deep-merge(
 
 // .dropdown-item
 
-$cadmin-dropdown-item-padding-x: 20px !default; // 20px
-$cadmin-dropdown-item-padding-y: 8px !default; // 8px
+$cadmin-dropdown-item-padding-x: 16px !default;
+$cadmin-dropdown-item-padding-y: 8px !default;
 
 $cadmin-dropdown-item-disabled-cursor: $cadmin-disabled-cursor !default;
 
@@ -163,20 +163,20 @@ $cadmin-dropdown-item-base: map-deep-merge(
 			line-height: $cadmin-dropdown-font-size * $cadmin-line-height-base,
 		),
 		'&.autofit-row': (
-			padding-left: 1rem,
-			padding-right: 1rem,
+			padding-left: calc(#{$cadmin-dropdown-item-padding-x} - 4px),
+			padding-right: calc(#{$cadmin-dropdown-item-padding-x} - 4px),
 			autofit-col: (
-				padding-left: 0.25rem,
-				padding-right: 0.25rem,
+				padding-left: 4px,
+				padding-right: 4px,
 			),
 		),
 		autofit-row: (
-			margin-left: 0.25rem,
-			margin-right: 0.25rem,
+			margin-left: -4px,
+			margin-right: -4px,
 			width: auto,
 			autofit-col: (
-				padding-left: 0.25rem,
-				padding-right: 0.25rem,
+				padding-left: 4px,
+				padding-right: 4px,
 			),
 		),
 	),

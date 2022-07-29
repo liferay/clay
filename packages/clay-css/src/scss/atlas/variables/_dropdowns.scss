@@ -53,8 +53,8 @@ $dropdown-menu: map-deep-merge(
 
 // .dropdown-item
 
-$dropdown-item-padding-x: 1.25rem !default; // 20px
-$dropdown-item-padding-y: 0.5rem !default; // 8px
+$dropdown-item-padding-x: 1rem !default;
+$dropdown-item-padding-y: 0.5rem !default;
 
 /// @deprecated as of v3.x use map $dropdown-item instead
 
