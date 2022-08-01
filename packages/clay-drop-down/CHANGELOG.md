@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.68.0](https://github.com/liferay/clay/compare/v3.67.0...v3.68.0) (2022-08-01)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** avoid adding focus event when drop down is closed ([5e68f54](https://github.com/liferay/clay/commit/5e68f54494efce03e1f42c85552fbf39afe0634a))
+-   **@clayui/drop-down:** move focus to button when closing dropdown ([fde657e](https://github.com/liferay/clay/commit/fde657eba339e7514766bdb4a4e901ab106364ac))
+
+### Features
+
+-   **@clayui/drop-down:** Adds the new API in DropDown to close the dropdown when clicking on the item ([6e4e133](https://github.com/liferay/clay/commit/6e4e1331328c90d83efdd5f8d9208ebbcef3b8e7))
+
 # [3.67.0](https://github.com/liferay/clay/compare/v3.66.0...v3.67.0) (2022-07-25)
 
 **Note:** Version bump only for package @clayui/drop-down

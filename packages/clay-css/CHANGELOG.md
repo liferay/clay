@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.68.0](https://github.com/liferay/clay/compare/v3.67.0...v3.68.0) (2022-08-01)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas and Cadmin dropdown-item should have 16px left and right padding ([77cd63b](https://github.com/liferay/clay/commit/77cd63b738da9fac1eff52ab930a9aacbfc8cf6e))
+* **@clayui/css:** Cadmin `<label>` element should have `position: static` ([f11bac0](https://github.com/liferay/clay/commit/f11bac0ad8c79e779b185131936185d97710f0a2))
+* **@clayui/css:** Cadmin use calc() instead of Sass math so we can handle mixed units better ([253cf28](https://github.com/liferay/clay/commit/253cf28fb7a6ed3d64deadc664267ed5a092c152))
+* **@clayui/css:** Dropdown use calc() instead of Sass math to calculate padding for dropdown-item-indicator ([fd8cad0](https://github.com/liferay/clay/commit/fd8cad0dfaa6a38a393f75768250b0a9415dee5f))
+* **@clayui/css:** Use calc() instead of Sass math so we can handle mixed units better ([4e4bd51](https://github.com/liferay/clay/commit/4e4bd512973b58ed811644f317fca39ff1718fb1))
+
+
+
+
+
 ## [3.65.2](https://github.com/liferay/clay/compare/v3.65.1...v3.65.2) (2022-07-19)
 
 
