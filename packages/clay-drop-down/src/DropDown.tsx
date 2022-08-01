@@ -169,24 +169,26 @@ function ClayDropDown({
 		}
 	};
 
-	const handleFocus = (event: FocusEvent) => {
-		if (
-			!menuElementRef.current?.parentElement?.contains(
-				event.target as Node
-			) &&
-			!triggerElementRef.current?.contains(event.target as Node)
-		) {
-			setInternalActive(false);
-		}
-	};
-
 	useEffect(() => {
-		document.addEventListener('focus', handleFocus, true);
+		if (internalActive) {
+			const onFocus = (event: FocusEvent) => {
+				if (
+					!menuElementRef.current?.parentElement?.contains(
+						event.target as Node
+					) &&
+					!triggerElementRef.current?.contains(event.target as Node)
+				) {
+					setInternalActive(false);
+				}
+			};
 
-		return () => {
-			document.removeEventListener('focus', handleFocus, true);
-		};
-	}, [handleFocus]);
+			document.addEventListener('focus', onFocus, true);
+
+			return () => {
+				document.removeEventListener('focus', onFocus, true);
+			};
+		}
+	}, [internalActive]);
 
 	const ariaControls = useMemo(() => {
 		counter++;
