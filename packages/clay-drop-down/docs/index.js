@@ -24,16 +24,17 @@ const dropDownCode = `const Component = () => {
 					id: 'dropdownMenuReactPortalDiv',
 				},
 			}}
+			closeOnClick
 		>
 			<ClayDropDown.Help>{'Can I help you?'}</ClayDropDown.Help>
 			<ClayDropDown.ItemList>
 				<ClayDropDown.Group header="Group #1">
 					{[
-						{href: '#one', label: 'one'},
-						{href: '#two', label: 'two'},
-						{href: '#three', label: 'three'},
+						{label: 'one'},
+						{label: 'two'},
+						{label: 'three'},
 					].map((item, i) => (
-						<ClayDropDown.Item href={item.href} key={i}>
+						<ClayDropDown.Item onClick={() => {}} key={i}>
 							{item.label}
 						</ClayDropDown.Item>
 					))}
@@ -89,9 +90,7 @@ const dropDownWithItemsCode = `const Component = () => {
 	const items = [
 		{
 			label: 'clickable',
-			onClick: () => {
-				alert('you clicked!');
-			},
+			onClick: (event) => event.preventDefault(),
 		},
 		{
 			type: 'divider',
