@@ -403,7 +403,7 @@ const TooltipProvider = ({
 				}
 			);
 		}
-	}, [mousePosition, show, floating]);
+	}, [show, floating]);
 
 	useEffect(() => {
 		if (
