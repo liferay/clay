@@ -114,7 +114,9 @@ export interface IProps
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
-	trigger: React.ReactElement;
+	trigger: React.ReactElement & {
+		ref?: (node: HTMLButtonElement | null) => void;
+	};
 
 	/**
 	 * Add informational text at the top of DropDown.
@@ -462,6 +464,8 @@ export const ClayDropDownWithItems = ({
 	spritemap,
 	trigger,
 }: IProps) => {
+	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
+
 	const [internalActive, setInternalActive] = useInternalState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
@@ -498,10 +502,26 @@ export const ClayDropDownWithItems = ({
 			offsetFn={offsetFn}
 			onActiveChange={setInternalActive}
 			renderMenuOnClick={renderMenuOnClick}
-			trigger={trigger}
+			trigger={React.cloneElement(trigger, {
+				ref: (node: HTMLButtonElement) => {
+					if (node) {
+						triggerElementRef.current = node;
+						// Call the original ref, if any.
+						const {ref} = trigger;
+						if (typeof ref === 'function') {
+							ref(node);
+						}
+					}
+				},
+			})}
 		>
 			<ClayDropDownContext.Provider
-				value={{close: () => setInternalActive(false)}}
+				value={{
+					close: () => {
+						setInternalActive(false);
+						triggerElementRef.current?.focus();
+					},
+				}}
 			>
 				{helpText && <Help>{helpText}</Help>}
 
