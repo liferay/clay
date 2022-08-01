@@ -74,7 +74,7 @@ module.exports = {
 			statements: 95,
 		},
 		'./packages/clay-drop-down/src/': {
-			branches: 66,
+			branches: 65,
 			functions: 57,
 			lines: 78,
 			statements: 77,
