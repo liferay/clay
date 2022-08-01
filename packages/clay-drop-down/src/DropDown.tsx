@@ -15,6 +15,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import Action from './Action';
 import Caption from './Caption';
 import Divider from './Divider';
+import {DropDownContext} from './DropDownContext';
 import Group from './Group';
 import Help from './Help';
 import Item from './Item';
@@ -50,6 +51,11 @@ export interface IProps
 	 * HTML element tag that the container should render.
 	 */
 	containerElement?: React.JSXElementConstructor<any> | 'div' | 'li';
+
+	/**
+	 * Flag that indicates whether to close DropDown when clicking on the item.
+	 */
+	closeOnClick?: boolean;
 
 	closeOnClickOutside?: React.ComponentProps<
 		typeof Menu
@@ -128,6 +134,7 @@ function ClayDropDown({
 	alignmentPosition,
 	children,
 	className,
+	closeOnClick = false,
 	closeOnClickOutside,
 	containerElement: ContainerElement = 'div',
 	defaultActive = false,
@@ -238,7 +245,17 @@ function ClayDropDown({
 						ref={menuElementRef}
 						width={menuWidth}
 					>
-						{children}
+						<DropDownContext.Provider
+							value={{
+								close: () => {
+									setInternalActive(false);
+									triggerElementRef.current?.focus();
+								},
+								closeOnClick,
+							}}
+						>
+							{children}
+						</DropDownContext.Provider>
 					</Menu>
 				)}
 			</ContainerElement>
