@@ -88,7 +88,12 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 					})}
 					disabled={disabled}
 					href={href}
-					onClick={(event) => {
+					onClick={(
+						event: React.MouseEvent<
+							HTMLButtonElement | HTMLAnchorElement,
+							MouseEvent
+						>
+					) => {
 						if (onClick) {
 							onClick(event);
 						}
