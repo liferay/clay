@@ -8,6 +8,9 @@ const path = require('path');
 const reactDocs = require('react-docgen');
 const visit = require('unist-util-visit');
 
+// eslint-disable-next-line no-useless-escape
+const BACKTICK_REGEX = /\`+(.*?)\`+/g;
+
 const generateTr = (item, key) => `<tr id="api-${key}">
 	<td class="table-cell-expand">
 		<code class="text-3" style="color: #B3482E;">${key}</code>
@@ -35,7 +38,7 @@ const generateTr = (item, key) => `<tr id="api-${key}">
 		<span dangerouslySetInnerHTML={{__html: ${JSON.stringify(
 			item.description
 		)?.replace(
-			/\`+(.*?)\`+/g,
+			BACKTICK_REGEX,
 			"<code class='language-text'>$1</code>"
 		)} }} />
 		${

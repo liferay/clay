@@ -4,7 +4,10 @@
  */
 
 import {useResource} from '@clayui/data-provider';
-import {FetchPolicy, NetworkStatus} from '@clayui/data-provider/src/types';
+import {
+	FetchPolicy,
+	NetworkStatus,
+} from '@clayui/data-provider/src/useResource';
 import ClayDropDown from '@clayui/drop-down';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import React, {useEffect, useRef, useState} from 'react';
