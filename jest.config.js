@@ -63,7 +63,7 @@ module.exports = {
 		},
 		'./packages/clay-data-provider/src/': {
 			branches: 69,
-			functions: 86,
+			functions: 84,
 			lines: 87,
 			statements: 87,
 		},
