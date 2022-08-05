@@ -26,12 +26,15 @@ import {
     -   [Network Status](#network-status)
     -   [Variables change](#variables-change)
     -   [Caching data](#caching-data)
+    -   [Infinite loading](#infinite-loading)
+    -   [Suspense and ErrorBoundary](#suspense-and-errorboundary)
     -   [Data Fetching](#data-fetching)
         -   [Fetch](#fetch)
 -   [Advanced](#advanced)
     -   [Avoiding thundering herd problem](#avoiding-thundering-herd-problem)
     -   [Caching data at root level](#caching-data-at-root-level)
 -   [API](#api)
+    -   [useResource](#useresource)
     -   [DataProvider](#dataprovider)
 
 </div>
@@ -45,6 +48,7 @@ ClayDataProvider gives functionality of data caching, attempts, polling, network
 -   **Simple to start**, use the basics you already know or take advantage of the full set of features to get the most out of it.
 -   **Built for data to reflect what users are doing in your application**, it works perfectly for cases where data changes according to user interaction.
 -   **Extensible**, enjoy the single cache in only one source of truth and save data between navigations to be used in future interactions.
+-   **Suspense and ErrorBoundary** do incremental adoption with `<React.Suspense />` and `<ErrorBoundary />` to the new React patterns.
 
 ## Getting started
 
@@ -107,6 +111,82 @@ The cache is guided by a policy, use the `fetchPolicy` prop to enable and config
 	</code> API. <b>Each new query is equivalent to 1 size</b>.
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	When <code class="language-text">suspense</code> is enabled the hook automatically
+	changes the <code class="language-text">fetchPolicy</code> to <code class="language-text">
+		FetchPolicy.CacheAndNetwork
+	</code> if it is set to <code class="language-text">
+		FetchPolicy.NoCache
+	</code> so it works properly.
+</div>
+
+### Infinite loading
+
+Using the `useResource` hook also supports paginated data, which is common in APIs to avoid large amounts of data being trafficked in just one request and decrease response time. To get this behavior you need to return the `cursor` value with the next page link in the `fetch` property.
+
+Data is automatically aggregated as new requests are being made when the `loadMore` callback is called.
+
+<div class="clay-site-alert alert alert-info">
+	<strong class="lead">Info</strong>
+	Calling the <code class="language-text">refetch</code> callback as an attempt
+	to refresh the data will not work since the data is already aggregated.
+</div>
+
+```javascript
+const {loadMore, resource} = useResource({
+	fetch: async (link: string) => {
+		const result = await fetch(link);
+		const json = await result.json();
+
+		return {
+			cursor: json.info.next,
+			items: json.results,
+		};
+	},
+	link: 'https://rickandmortyapi.com/api/character',
+	variables: {limit: 10},
+});
+```
+
+### Suspense and ErrorBoundary
+
+The `useResource` hook also supports integration with `<React.Suspense />` which allows you to "suspend" the component while a request is in progress and add a component in fallback and can in some scenarios parallelize the requests. Read more about using Suspense to load data and the benefits it can bring to your application.
+
+```javascript
+const Menu = () => {
+	const {resource} = useResource({
+		link: 'https://rickandmortyapi.com/api/character',
+
+		// Enable Suspense integration
+		suspense: true,
+		variables: {limit: 10},
+	});
+
+	return (
+		...
+	);
+};
+
+const Root = () => (
+	<React.Suspense fallback={<LoadingIndicator />}>
+		<Menu />
+	</React.Suspense>
+);
+```
+
+If a network error happens you can also catch the error in render time using [`<ErrorBoundary />`](https://reactjs.org/docs/error-boundaries.html#introducing-error-boundaries) and render some component as fallback when this happens and add the possibility for the component to try to recover.
+
+```javascript
+const Root = () => (
+	<ErrorBoundary>
+		<React.Suspense fallback={<LoadingIndicator />}>
+			<Menu />
+		</React.Suspense>
+	</ErrorBoundary>
+);
+```
+
 ### Data Fetching
 
 ```javascript
@@ -146,6 +226,15 @@ These two features combined help alleviate [the thundering herd problem](https:/
 ### Caching data at root level
 
 The DataProvider can be used on small components that need some data and if it is very reused by the application in other pages, it does not make sense to consult this data every time the user interacts with it in other parts of your application, you can take advantage of the root level cache, ensuring that the next user interactions in the component are with data in the cache, even if it is on other pages.
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	The use of the <code class="language-text">storage</code> property has been deprecated
+	since v3.67.0 in favor of declaring the <code class="language-text">
+		<ClayProvider storageMaxSize={100} />
+	</code> component in the application root to control cache state and other internal
+	details.
+</div>
 
 <DataProviderWithCacheRootLevel />
 
