@@ -218,6 +218,7 @@ const TooltipProvider = ({
 
 	// Using `any` type since TS incorrectly infers setTimeout to be from NodeJS
 	const timeoutIdRef = useRef<any>();
+	const floatingTimeoutIdRef = useRef<any>();
 	const targetRef = useRef<HTMLElement | null>(null);
 	const titleNodeRef = useRef<HTMLElement | null>(null);
 	const tooltipRef = useRef<HTMLElement | null>(null);
@@ -265,7 +266,7 @@ const TooltipProvider = ({
 		}
 	}, []);
 
-	const handleHide = useCallback((event?: any) => {
+	const handleHide = useCallback((event?: any, restore: boolean = true) => {
 		if (
 			event &&
 			(tooltipRef.current?.contains(event.relatedTarget) ||
@@ -277,8 +278,11 @@ const TooltipProvider = ({
 		dispatch({type: 'hide'});
 
 		clearTimeout(timeoutIdRef.current);
+		clearTimeout(floatingTimeoutIdRef.current);
 
-		restoreTitle();
+		if (restore) {
+			restoreTitle();
+		}
 
 		if (targetRef.current) {
 			targetRef.current.removeEventListener('click', handleHide);
@@ -336,6 +340,17 @@ const TooltipProvider = ({
 							setAsHTML,
 							type: 'show',
 						});
+
+						if (isFloating) {
+							clearTimeout(floatingTimeoutIdRef.current);
+
+							floatingTimeoutIdRef.current = setTimeout(
+								() => {
+									handleHide(undefined, false);
+								},
+								customDelay ? Number(customDelay) : delay
+							);
+						}
 					},
 					customDelay ? Number(customDelay) : delay
 				);
@@ -403,7 +418,7 @@ const TooltipProvider = ({
 				}
 			);
 		}
-	}, [mousePosition, show, floating]);
+	}, [show, floating]);
 
 	useEffect(() => {
 		if (

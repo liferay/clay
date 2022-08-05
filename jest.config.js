@@ -231,7 +231,7 @@ module.exports = {
 		},
 		'./packages/clay-tooltip/src/': {
 			branches: 52,
-			functions: 61,
+			functions: 60,
 			lines: 70,
 			statements: 69,
 		},
