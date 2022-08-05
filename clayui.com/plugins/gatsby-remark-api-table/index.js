@@ -9,31 +9,43 @@ const reactDocs = require('react-docgen');
 const visit = require('unist-util-visit');
 
 const generateTr = (item, key) => `<tr id="api-${key}">
-	<td>
-		<div class="table-title">
-			${key}
-			${
-				item.description?.includes('@deprecated')
-					? `
-				<span class="badge badge-danger badge-pill">
-					<span class="badge-item badge-item-expand">Deprecated</span>
-				</span>
-			`
-					: ''
-			}
-		</div>
+	<td class="table-cell-expand">
+		<code class="text-3" style="color: #B3482E;">${key}</code>
+		${
+			item.required
+				? `<svg class="ml-1 text-danger text-1 lexicon-icon lexicon-icon-asterisk" title="required" aria-label="Required" role="presentation" viewBox="0 0 512 512">	<path class="lexicon-icon-outline" d="M323.6,190l146.7-48.8L512,263.9l-149.2,47.6l93.6,125.2l-104.9,76.3l-96.1-126.4l-93.6,126.4L56.9,435.3l92.3-123.9L0,263.8l40.4-122.6L188.4,190v-159h135.3L323.6,190L323.6,190z"></path></svg>`
+				: ''
+		}
+		${
+			item.description?.includes('@deprecated')
+				? `
+			<span class="ml-1 badge badge-danger badge-pill">
+				<span class="badge-item badge-item-expand">Deprecated</span>
+			</span>
+		`
+				: ''
+		}
+		<br />
+		<code class="text-info text-2">{${
+			item.tsType &&
+			JSON.stringify(item.tsType.raw ? item.tsType.raw : item.tsType.name)
+		}}</code>
 	</td>
-	<td class="table-cell-expand table-cell-minw-150">{${
-		item.tsType &&
-		JSON.stringify(item.tsType.raw ? item.tsType.raw : item.tsType.name)
-	}}</td>
-	<td>${item.required ? 'true' : 'false'}</td>
-	<td class="table-cell-expand table-cell-minw-150">{${
-		item.defaultValue && JSON.stringify(item.defaultValue.value)
-	}}</td>
-	<td class="table-cell-expand table-cell-minw-250">{${JSON.stringify(
-		item.description
-	)}}</td>
+	<td class="table-cell-expand" style="white-space: break-spaces;">
+		<span dangerouslySetInnerHTML={{__html: ${JSON.stringify(
+			item.description
+		)?.replace(
+			/\`+(.*?)\`+/g,
+			"<code class='language-text'>$1</code>"
+		)} }} />
+		${
+			item.defaultValue
+				? `<br /><br />The default value is <b>{${JSON.stringify(
+						item.defaultValue.value
+				  )}}</b>`
+				: ''
+		}
+	</td>
 	</tr>`;
 
 module.exports = ({markdownAST}) => {
@@ -95,14 +107,11 @@ module.exports = ({markdownAST}) => {
 						node.value = propsKeys.length
 							? `
 						<div class="table-responsive">
-						<table class="table table-autofit table-bordered table-striped">
+						<table class="table table-autofit table-hover table-list">
 						<thead>
 							<tr>
-								<th>Property</th>
-								<th class="table-cell-expand table-cell-minw-150">Type</th>
-								<th>Required</th>
-								<th class="table-cell-expand table-cell-minw-150">Default</th>
-								<th class="table-cell-expand table-cell-minw-250">Description</th>
+								<th class="table-cell-expand">Property</th>
+								<th class="table-cell-expand">Description</th>
 							</tr>
 						</thead>
 						<tbody>
