@@ -11,7 +11,7 @@ import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-es
 import React, {useState} from 'react';
 
 import DataProvider from '../';
-import {FetchPolicy} from '../types';
+import {FetchPolicy} from '../useResource';
 
 describe('ClayDataProvider', () => {
 	afterEach(cleanup);

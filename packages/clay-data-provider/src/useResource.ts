@@ -9,12 +9,200 @@ import stringify from 'fast-json-stable-stringify';
 import {useEffect, useMemo, useRef, useState} from 'react';
 import warning from 'warning';
 
-import {FetchPolicy, IDataProvider, NetworkStatus, TVariables} from './types';
 import {timeout} from './util';
 
-interface IResource extends IDataProvider {
-	onNetworkStatusChange?: (status: NetworkStatus) => void;
+export enum FetchPolicy {
+	CacheFirst = 'cache-first',
+	NoCache = 'no-cache',
+	CacheAndNetwork = 'cache-and-network',
 }
+
+/**
+ * - Loading (1) The status is set to `loading` only when the first
+ *   requisition occurs.
+ * - Refetch (2) The status is set to `refetch` when a change in the variables API
+ *   or refetch method is called.
+ * - Polling (3) The status is set to `polling` when pollInterval is set above 0.
+ * - Unused (4) When no request is happening the status will be `unused`.
+ * - Error (5) When any timeout or request `error` occurs, the status will be set
+ *   to error.
+ */
+export enum NetworkStatus {
+	Error = 5,
+	Loading = 1,
+	Polling = 3,
+	Refetch = 2,
+	Unused = 4,
+}
+
+type Variables = Record<string, any> | null;
+
+type LinkFunction = (variables: string) => Promise<any>;
+
+type FetchRetryDelay = {
+	/**
+	 * The number of milliseconds to wait before attempting the first retry.
+	 *
+	 * Delays will increase exponentially for each attempt.  E.g. if this is
+	 * set to 100, subsequent retries will be delayed by 200, 400, 800, etc...
+	 *
+	 * Note that if jittering is enabled, this is the average delay.
+	 */
+	initial?: number;
+
+	/**
+	 * Whether delays between attempts should be randomized.
+	 *
+	 * This helps avoid thundering herd type situations by better
+	 * distributing load during major outages.
+	 */
+	jitter?: boolean;
+};
+
+type FetchRetry = {
+	/**
+	 * The maximum number of times to try a single request before giving up.
+	 */
+	attempts?: number;
+
+	/**
+	 * Configuration for the delay strategy to use.
+	 */
+	delay?: FetchRetryDelay;
+};
+
+type FetchCursor<T> = {
+	items: T;
+	cursor: string;
+};
+
+type Props = {
+	/**
+	 * A Promise returning function to fetch your data, this replaces the
+	 * use of `fetch` by default.
+	 */
+	fetch?: <T = unknown>(
+		link: string,
+		init?: RequestInit | undefined
+	) => Promise<Response> | Promise<FetchCursor<T>> | Promise<T>;
+
+	/**
+	 * This API is used in conjunction with variables API, if it is always
+	 * changing its value set a debounce time to make a new request.
+	 *
+	 * Set a value in ms.
+	 */
+	fetchDelay?: number;
+
+	/**
+	 * Options passed to request configuration.
+	 */
+	fetchOptions?: RequestInit;
+
+	/**
+	 * Fetch policy is an option that allows you to specify how you
+	 * want your component to interact with the cache.
+	 *
+	 * (cache-first) Whenever a new request occurs, the data provider
+	 * will first look at the cache and return it if it satisfies the
+	 * data, otherwise it will perform the request.
+	 * (no-cache) It will always make a new request and return the result
+	 * and the cache is deactivated. When using this with suspense enabled
+	 * the policy changes to `cache-and-network` to make it work better, you
+	 * can still change it to `cache-first` as well.
+	 * (cache-and-network) This case is specific to when you want your
+	 * users to have a quick response, when a new request happens, it
+	 * will first go to the cache and if it exists it will return and
+	 * regardless if it is in the cache it will make a new request on
+	 * the network.
+	 *
+	 * The data provider takes only the cached data when they meet the
+	 * requirements, the variables and URL are what they define when
+	 * the cache satisfies their request. Be careful if your request
+	 * is needed to cache to avoid problems.
+	 */
+	fetchPolicy?: FetchPolicy;
+
+	/**
+	 * Define the strategies for attempting new requests when it
+	 * fails.
+	 */
+	fetchRetry?: FetchRetry;
+
+	/**
+	 * Set a request timeout in ms, if it reaches this limit it will
+	 * go through the retry rules and if it still persists, it will
+	 * set the networkStatus to 4 (Error).
+	 */
+	fetchTimeout?: number;
+
+	/**
+	 * Set the URL to where the data provider will have to make a
+	 * request, by default the request is solved with json, if it does
+	 * not cover your use case you can also pass a function by returning
+	 * a Promise. We do not recommend that you use a function to do so,
+	 * you will lose some benefits of the data provider,
+	 * always try to avoid.
+	 *
+	 * (!) The behavior of the `link` accepting a function has been deprecated
+	 * in favor of the `fetcher` API.
+	 */
+	link: string | LinkFunction;
+
+	/**
+	 * Callback is called when the network status is changed.
+	 */
+	onNetworkStatusChange?: (status: NetworkStatus) => void;
+
+	/**
+	 * The interval is set in milliseconds, setting the value to zero
+	 * will disable polling.
+	 */
+	pollInterval?: number;
+
+	/**
+	 * Reference your storage provider, like Context, Store Object...
+	 * Whenever a new request happens the data provider will look at
+	 * storage, respecting the fetch policy.
+	 *
+	 * If you have a context serving as your store in your application
+	 * independent of where the user is interacting the data provider
+	 * can retrieve the data from the cache again if it is satisfied.
+	 * The data is removed in LRU (least recently used) order.
+	 * @deprecated since v3.67.0 - declare the `<ClayProvider />`
+	 * component at the root of your application to cache globally.
+	 */
+	storage?: Record<string, any>;
+
+	/**
+	 * Set the amount of items that can be cached, set to zero will be
+	 * treated as infinite, be aware to set an ideal size to offer a
+	 * positive experience for your user but not use a large amount of memory.
+	 * @deprecated since v3.67.0 - declare the `<ClayProvider />`
+	 * component at the root of your application to to configure maximum
+	 * cache usage.
+	 */
+	storageMaxSize?: number;
+
+	/**
+	 * Flag to enable `useResource` integration with suspense.
+	 */
+	suspense?: boolean;
+
+	/**
+	 * Variables are analyzed and converted to be passed as parameters
+	 * to the query of a GET request, for example.
+	 *
+	 * @example
+	 * {
+	 *   name: 'Matu',
+	 * }
+	 *
+	 * output for the link:
+	 * '/?name=Matu'
+	 */
+	variables?: Variables;
+};
 
 let idCounter = 0;
 
@@ -25,12 +213,12 @@ const useResource = ({
 	fetchPolicy = FetchPolicy.NoCache,
 	fetchTimeout = 6000,
 	link,
-	onNetworkStatusChange: dispatchNetworkStatus = () => {},
+	onNetworkStatusChange = () => {},
 	pollInterval = 0,
 	fetchRetry = {},
 	suspense = false,
 	variables = null,
-}: IResource) => {
+}: Props) => {
 	// We changed the cache policy when suspense is enabled so that the
 	// integration with suspense and the client works better, we need
 	// to store the data that was retrieved from the promise in progress
@@ -122,7 +310,7 @@ const useResource = ({
 			if (suspense) {
 				client.update(identifier, error);
 			} else {
-				dispatchNetworkStatus(NetworkStatus.Error);
+				onNetworkStatusChange(NetworkStatus.Error);
 			}
 
 			warning(
@@ -168,7 +356,7 @@ const useResource = ({
 		}
 
 		setResource(data);
-		dispatchNetworkStatus(NetworkStatus.Unused);
+		onNetworkStatusChange(NetworkStatus.Unused);
 
 		if (shouldUseCache) {
 			client.update(identifier, data);
@@ -181,7 +369,7 @@ const useResource = ({
 		return result;
 	};
 
-	const populateSearchParams = (uri: URL, variables: TVariables) => {
+	const populateSearchParams = (uri: URL, variables: Variables) => {
 		if (!variables) {
 			return uri;
 		}
@@ -193,7 +381,7 @@ const useResource = ({
 		return uri;
 	};
 
-	const getUrlFormat = (link: string, variables: TVariables) => {
+	const getUrlFormat = (link: string, variables: Variables) => {
 		const uri = new URL(link);
 
 		if (client.getCursor(identifier) === null) {
@@ -288,19 +476,19 @@ const useResource = ({
 			}
 		}
 
-		dispatchNetworkStatus(status);
+		onNetworkStatusChange(status);
 
 		return doFetch();
 	};
 
 	const loadMore = () => {
-		dispatchNetworkStatus(NetworkStatus.Loading);
+		onNetworkStatusChange(NetworkStatus.Loading);
 
 		return doFetch();
 	};
 
 	const refetch = () => {
-		dispatchNetworkStatus(NetworkStatus.Refetch);
+		onNetworkStatusChange(NetworkStatus.Refetch);
 		doFetch();
 	};
 
