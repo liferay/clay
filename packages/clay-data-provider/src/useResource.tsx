@@ -6,7 +6,7 @@
 import {useProvider} from '@clayui/provider';
 import {useDebounce} from '@clayui/shared';
 import stringify from 'fast-json-stable-stringify';
-import {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import warning from 'warning';
 
 import {timeout} from './util';
@@ -545,4 +545,9 @@ const useResource = ({
 	return {loadMore, refetch, resource};
 };
 
-export {useResource};
+// This is just a fake component so that react-docgen can generate the Table
+// API for useResource hook.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Resource = (props: Props) => <div />;
+
+export {Resource, useResource};
