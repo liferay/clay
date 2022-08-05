@@ -3,12 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {LRUCache} from './LRUCache';
-
-export const SYMBOL_DATA_PROVIDER = Symbol('clay.data.provider');
-
-export const SYMBOL_ORIGIN = Symbol('clay.internal');
-
 /**
  * - Loading (1) The status is set to `loading` only when the first
  *   requisition occurs.
@@ -33,8 +27,6 @@ export enum FetchPolicy {
 	CacheAndNetwork = 'cache-and-network',
 }
 
-export type TSymbolData = LRUCache<string, {}>;
-
 export interface IVariables {
 	[propName: string]: any;
 }
@@ -46,8 +38,6 @@ export type TLinkFunction = (variables: string) => Promise<any>;
 export type TLink = TLinkFunction | string;
 
 export interface IStorage {
-	[SYMBOL_DATA_PROVIDER]?: TSymbolData;
-	[SYMBOL_ORIGIN]?: boolean;
 	[propName: string]: any;
 }
 
@@ -119,7 +109,9 @@ export interface IDataProvider {
 	 * will first look at the cache and return it if it satisfies the
 	 * data, otherwise it will perform the request.
 	 * (no-cache) It will always make a new request and return the result
-	 * and the cache is deactivated.
+	 * and the cache is deactivated. When using this with suspense enabled
+	 * the policy changes to `cache-and-network` to make it work better, you
+	 * can still change it to `cache-first` as well.
 	 * (cache-and-network) This case is specific to when you want your
 	 * users to have a quick response, when a new request happens, it
 	 * will first go to the cache and if it exists it will return and

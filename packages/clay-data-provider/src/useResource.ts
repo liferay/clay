@@ -3,28 +3,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import {useDebounce} from '@clayui/shared';
-import React, {useEffect} from 'react';
+import stringify from 'fast-json-stable-stringify';
+import {useEffect, useMemo, useRef, useState} from 'react';
 import warning from 'warning';
 
-import {
-	FetchPolicy,
-	IDataProvider,
-	NetworkStatus,
-	SYMBOL_ORIGIN,
-	TVariables,
-} from './types';
-import {useCache} from './useCache';
+import {FetchPolicy, IDataProvider, NetworkStatus, TVariables} from './types';
 import {timeout} from './util';
 
 interface IResource extends IDataProvider {
 	onNetworkStatusChange?: (status: NetworkStatus) => void;
 }
 
-// TODO(matuzalemsteles): Rewrite the cache implementation to use the
-// global implementation with promises.
-const PROMISES: Record<string, Promise<any> | undefined> = {};
-const CURSORS: Record<string, string | undefined> = {};
+let idCounter = 0;
 
 const useResource = ({
 	fetch: fetcher,
@@ -35,40 +27,60 @@ const useResource = ({
 	link,
 	onNetworkStatusChange: dispatchNetworkStatus = () => {},
 	pollInterval = 0,
-	storage = {
-		/**
-		 * This will ensure that we know that the storage
-		 * reference is not external, otherwise the cache
-		 * will persist by the application.
-		 */
-		[SYMBOL_ORIGIN]: true,
-	},
 	fetchRetry = {},
-	storageMaxSize = 20,
 	suspense = false,
 	variables = null,
 }: IResource) => {
-	const [resource, setResource] = React.useState<any>(null);
+	// We changed the cache policy when suspense is enabled so that the
+	// integration with suspense and the client works better, we need
+	// to store the data that was retrieved from the promise in progress
+	// on the client and then get it again to fill in the hook.
+	// When we throw the promise at render time, suspense invokes and resets
+	// the hook states and refs every time, when realizes the promise has been
+	// resolved starts the hooks lifecycle with useEffects and other states.
+	if (fetchPolicy === FetchPolicy.NoCache && suspense) {
+		fetchPolicy = FetchPolicy.CacheAndNetwork;
+	}
 
-	let pollingTimeoutId = React.useRef<null | NodeJS.Timeout>(null).current;
+	const pollingTimeoutIdRef = useRef<null | NodeJS.Timeout>(null);
 
-	let retryDelayTimeoutId = React.useRef<null | NodeJS.Timeout>(null).current;
+	const retryDelayTimeoutIdRef = useRef<null | NodeJS.Timeout>(null);
 
-	const pollIntervalRef = React.useRef(pollInterval);
+	const pollIntervalRef = useRef(pollInterval);
 
-	const cache = useCache(
-		fetchPolicy,
-		storage,
-		storageMaxSize,
-		link,
-		variables
+	const uid = useMemo(() => {
+		idCounter++;
+
+		return String(idCounter);
+	}, []);
+
+	// A flag to identify if the first rendering happened to avoid
+	// two requests.
+	const firstRenderRef = useRef<boolean>(true);
+
+	const shouldUseCache =
+		fetchPolicy === FetchPolicy.CacheFirst ||
+		fetchPolicy === FetchPolicy.CacheAndNetwork;
+
+	const identifier = useMemo(() => {
+		if (typeof link === 'string') {
+			return `${link}:${stringify(variables)}`;
+		}
+
+		return uid;
+	}, [link, variables]);
+
+	const {client} = useProvider();
+
+	const [resource, setResource] = useState<any>(
+		client.read(identifier) ?? null
 	);
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
 
 	const cleanRetry = () => {
-		if (retryDelayTimeoutId) {
-			clearTimeout(retryDelayTimeoutId);
+		if (retryDelayTimeoutIdRef.current) {
+			clearTimeout(retryDelayTimeoutIdRef.current);
 		}
 	};
 
@@ -102,17 +114,13 @@ const useResource = ({
 				} of ${attempts} will happen in ${delay}ms`
 			);
 
-			retryDelayTimeoutId = setTimeout(() => {
+			retryDelayTimeoutIdRef.current = setTimeout(() => {
 				// eslint-disable-next-line @typescript-eslint/no-use-before-define
 				doFetch(retryAttempts + 1);
 			}, delay);
 		} else {
 			if (suspense) {
-				const cacheKey = cache.getCacheKey(link, variables);
-
-				if (cacheKey) {
-					PROMISES[cacheKey] = error;
-				}
+				client.update(identifier, error);
 			} else {
 				dispatchNetworkStatus(NetworkStatus.Error);
 			}
@@ -124,12 +132,14 @@ const useResource = ({
 		}
 	};
 
-	const cleanPoll = () => pollingTimeoutId && clearTimeout(pollingTimeoutId);
+	const cleanPoll = () =>
+		pollingTimeoutIdRef.current &&
+		clearTimeout(pollingTimeoutIdRef.current);
 
 	const setPoll = () => {
 		cleanPoll();
 
-		pollingTimeoutId = setTimeout(() => {
+		pollingTimeoutIdRef.current = setTimeout(() => {
 			// eslint-disable-next-line @typescript-eslint/no-use-before-define
 			maybeFetch(NetworkStatus.Polling);
 		}, pollIntervalRef.current);
@@ -140,41 +150,32 @@ const useResource = ({
 		// attempts are successful.
 		cleanRetry();
 
-		const cacheKey = cache.getCacheKey(link, variables);
-
-		const previousData =
-			PROMISES[cacheKey!] instanceof Promise
-				? resource
-				: PROMISES[cacheKey!];
-
 		let data = result;
 
 		if (
-			CURSORS[cacheKey!] &&
-			previousData !== null &&
-			previousData !== undefined
+			client.getCursor(identifier) &&
+			resource !== null &&
+			resource !== undefined
 		) {
-			if (Array.isArray(result) && Array.isArray(previousData)) {
-				data = [...previousData, ...result];
+			if (Array.isArray(result) && Array.isArray(resource)) {
+				data = [...resource, ...result];
 			} else if (
 				typeof result === 'object' &&
-				typeof previousData === 'object'
+				typeof resource === 'object'
 			) {
-				data = {...previousData, ...result};
+				data = {...resource, ...result};
 			}
 		}
 
 		setResource(data);
 		dispatchNetworkStatus(NetworkStatus.Unused);
 
-		cache.set(data);
+		if (shouldUseCache) {
+			client.update(identifier, data);
+		}
 
 		if (pollIntervalRef.current > 0) {
 			setPoll();
-		}
-
-		if (cacheKey) {
-			PROMISES[cacheKey] = data;
 		}
 
 		return result;
@@ -195,7 +196,7 @@ const useResource = ({
 	const getUrlFormat = (link: string, variables: TVariables) => {
 		const uri = new URL(link);
 
-		if (CURSORS[cache.getCacheKey(link, variables)!] === null) {
+		if (client.getCursor(identifier) === null) {
 			warning(
 				uri.searchParams.toString() === '',
 				'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://clayui.com/docs/components/data-provider.html'
@@ -216,8 +217,6 @@ const useResource = ({
 			typeof link === 'string',
 			'DataProvider: The behavior of the `link` accepting a function has been deprecated in favor of the `fetcher` API. \n More details: https://clayui.com/docs/components/data-provider.html#data-fetching'
 		);
-
-		const cacheKey = cache.getCacheKey(link, variables);
 
 		switch (typeof link) {
 			case 'function':
@@ -241,7 +240,10 @@ const useResource = ({
 				return timeout(
 					fetchTimeout,
 					fn(
-						getUrlFormat(CURSORS[cacheKey!] ?? link, variables),
+						getUrlFormat(
+							client.getCursor(identifier) ?? link,
+							variables
+						),
 						fetchOptions
 					)
 				)
@@ -257,7 +259,7 @@ const useResource = ({
 							res.items &&
 							res.cursor
 						) {
-							CURSORS[cacheKey!] = res.cursor;
+							client.setCursor(identifier, res.cursor);
 
 							return res.items;
 						}
@@ -273,10 +275,10 @@ const useResource = ({
 	};
 
 	const maybeFetch = (status: NetworkStatus) => {
-		const cacheData = cache.get();
+		const data = client.read(identifier);
 
-		if (cacheData) {
-			fetchOnComplete(cacheData);
+		if (shouldUseCache && data) {
+			fetchOnComplete(data);
 
 			// When fetch policy is only cache-first and gets the data from
 			// the cache, it should not perform a request, only when it is
@@ -311,19 +313,15 @@ const useResource = ({
 	}, [pollInterval]);
 
 	useEffect(() => {
-		if (resource !== null) {
+		if (!firstRenderRef.current) {
 			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);
 
 	useEffect(() => {
-		return () => {
-			// Reset the cache only if the storage reference is
-			// local from useResource.
-			if (storage[SYMBOL_ORIGIN]) {
-				cache.reset();
-			}
+		firstRenderRef.current = false;
 
+		return () => {
 			// Set to zero to prevent any unfinished requests
 			// from continuing polling after umount has occurred.
 			pollIntervalRef.current = 0;
@@ -333,41 +331,30 @@ const useResource = ({
 		};
 	}, []);
 
-	const cacheKey = <string>cache.getCacheKey(link, variables);
+	const fetchingOrError = client.isFetching(identifier);
 
-	let latestData = resource;
-
-	if (!PROMISES[cacheKey]) {
+	if (!fetchingOrError && firstRenderRef.current) {
 		const result = maybeFetch(NetworkStatus.Loading);
 
 		if (result) {
-			PROMISES[cacheKey] = result;
+			client.update(identifier, result);
 		}
 	}
 
 	// Integration with React.Suspense
-	if (suspense) {
-		if (latestData === null) {
-			// Integration with React.Suspense, throwing a throw with the promise in
-			// progress at render time for Suspense to catch.
-			if (
-				PROMISES[cacheKey] &&
-				typeof PROMISES[cacheKey]!.then === 'function'
-			) {
-				throw PROMISES[cacheKey];
-			}
-
-			// Integration with ErrorBoundary, when a network error happens we throw
-			// an error at render time so that ErrorBoundary catches the error.
-			if (PROMISES[cacheKey] instanceof Error) {
-				throw PROMISES[cacheKey];
-			}
-
-			latestData = PROMISES[cacheKey];
-		}
+	if (
+		suspense &&
+		resource === null &&
+		(fetchingOrError instanceof Promise || fetchingOrError instanceof Error)
+	) {
+		// Integration with React.Suspense, throwing a throw with the promise in
+		// progress at render time for Suspense to catch.
+		// Integration with ErrorBoundary, when a network error happens we throw
+		// an error at render time so that ErrorBoundary catches the error.
+		throw fetchingOrError;
 	}
 
-	return {loadMore, refetch, resource: latestData};
+	return {loadMore, refetch, resource};
 };
 
 export {useResource};
