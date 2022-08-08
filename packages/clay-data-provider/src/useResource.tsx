@@ -340,8 +340,10 @@ const useResource = ({
 
 		let data = result;
 
+		const cursor = client.getCursor(identifier);
+
 		if (
-			client.getCursor(identifier) &&
+			(cursor || cursor === null) &&
 			resource !== null &&
 			resource !== undefined
 		) {
@@ -445,7 +447,7 @@ const useResource = ({
 						} else if (
 							!(res instanceof Response) &&
 							res.items &&
-							res.cursor
+							(res.cursor || res.cursor === null)
 						) {
 							client.setCursor(identifier, res.cursor);
 
@@ -482,6 +484,10 @@ const useResource = ({
 	};
 
 	const loadMore = () => {
+		if (!client.getCursor(identifier)) {
+			return null;
+		}
+
 		onNetworkStatusChange(NetworkStatus.Loading);
 
 		return doFetch();

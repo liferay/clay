@@ -10,7 +10,7 @@ import {cleanup, fireEvent, render, waitFor} from '@testing-library/react';
 import {FetchMock} from 'jest-fetch-mock'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
 
-import DataProvider from '../';
+import DataProvider, {useResource} from '../';
 import {FetchPolicy} from '../useResource';
 
 describe('ClayDataProvider', () => {
@@ -395,5 +395,82 @@ describe('ClayDataProvider', () => {
 		expect(container.innerHTML).toMatchSnapshot();
 
 		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+	});
+
+	it('data must be aggregated when using paginated data', async () => {
+		fetchMock
+			.once(
+				JSON.stringify({
+					data: [{name: 'Foo'}],
+					next: 'https://clay.data/?cursor=1',
+				})
+			)
+			.once(
+				JSON.stringify({
+					data: [{name: 'Bar'}],
+					next: 'https://clay.data/?cursor=2',
+				})
+			)
+			.once(JSON.stringify({data: [{name: 'Baz'}]}));
+
+		const DataProviderTest = () => {
+			const {loadMore, resource} = useResource({
+				fetch: async (link: string) => {
+					const result = await fetch(link);
+					const json = await result.json();
+
+					return {
+						cursor: json.next ?? null,
+						items: json.data,
+					};
+				},
+				link: 'https://clay.data',
+				variables: {limit: 10},
+			});
+
+			return (
+				<>
+					<ul>
+						{resource?.map((item: any) => (
+							<li key={item.name}>{item.name}</li>
+						))}
+					</ul>
+					<button onClick={() => loadMore()} type="button">
+						Load more
+					</button>
+				</>
+			);
+		};
+
+		const {getAllByRole, getByRole} = render(
+			<Provider spritemap="">
+				<DataProviderTest />
+			</Provider>
+		);
+
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
+		expect(fetchMock.mock.calls[0][0]).toEqual(
+			'https://clay.data/?limit=10'
+		);
+
+		const button = getByRole('button');
+
+		fireEvent.click(button);
+
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
+
+		expect(fetchMock.mock.calls[1][0]).toEqual(
+			'https://clay.data/?cursor=1&limit=10'
+		);
+
+		fireEvent.click(button);
+
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(3));
+
+		expect(fetchMock.mock.calls[2][0]).toEqual(
+			'https://clay.data/?cursor=2&limit=10'
+		);
+
+		expect(getAllByRole('listitem').length).toBe(3);
 	});
 });
