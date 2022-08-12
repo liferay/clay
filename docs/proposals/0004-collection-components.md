@@ -283,10 +283,10 @@ To allow the scenarios below, [`useResource`](https://clayui.com/docs/components
 
 The collection does not handle this implementation internally, this should be a composition of the components to allow more flexibility in choosing where to catch the error and which element to render.
 
-As a recommendation, there are two ways to integrate the `<ErrorBoundary />` implementation, first this is an example of a component called `<FileExplorer />` using the `<TreeView />` component and the folders are the nodes of the tree. As there can be thousands of data, asynchronous loading here is desired to avoid taking up too much memory space and passing unnecessary information over the network, clicking on the folder should load the files inside that folder.
+The use of `<ErrorBoundary />` becomes recommended when integration with suspense is done and mainly for the initial request, first because the request is performed in render time instead of being executed by some handler, for example `onClick` or even being called by `useEffect` these use cases are not covered by `<ErrorBoundary />`. Considering the scenario of loading asynchronous data as the user clicks on a node of a `<TreeView />` component as in the example below from `<FileExplorer />`, we need to handle it in different ways.
 
 ```jsx
-// (!) Error boundary located
+// (!) Error located
 
 const FileExplorer = () => {
   const resource = useResource({
@@ -294,38 +294,100 @@ const FileExplorer = () => {
     cursor: (data) => data.next,
   });
 
-  return (
-    <TreeView
-      items={resource.data}
-      onLoadMore={resource.loadMore}
-    >
-      {(item) => (
-        <ErrorBoundary
-          exceptionElement={<ItemException />}
-        >
-          <TreeView.Item>
-            {...}
-          </TreeView.Item>
-        </ErrorBoundary>
-      )}
-    </TreeView>
-  )
+	return (
+		<TreeView
+			items={resource.data}
+			onLoadMore={resource.loadMore}
+		>
+			{(item) => (
+				<TreeView.Item>
+					{...}
+				</TreeView.Item>
+			)}
+		</TreeView>
+	);
 };
 ```
 
-In this scenario we don't want the tree view of the file explorer to break the whole component because the connection to the server was interrupted for some reason, this throws a network exception in the JavaScript call and we need to catch this error and handle it. So we add an `<ErrorBoundary />` to the item to add a fallback in the UI, we can add a button for the user to try again for example.
+In this scenario, `<ErrorBoundary />` does not capture errors that occur in some handler, as in the `onClick` callback, so if a network error occurs, the developer can add a `try catch` to control the error and render some fallback or just tell the user to try again, in the TreeView example above this becomes more complicated because `onLoadMore` is declared in the root and not declared directly in the node, under the hood it is called in the node handler that will invoking but catching this error is very difficult it would have to be exposed as an API to be invoked on the specific node so that the developer can catch the error and show a specific fallback component for the node instead of the root.
 
-The initial rendering must also be considered, so it is recommended to add an `<ErrorBoundary />` to catch the network error for example in the root of the component.
+The problem with this line of development is that asynchronous loading doesn't become OOTB, it starts to go into the developer's hands even if he just invokes the `loadMore` call. This is a more difficult behavior to deal with in cases when the data is structured in a tree like the TreeView, list collections are simpler because it usually has the infinite list effect and if it fails to add a component as a fallback is easier, for example:
+
+```jsx
+// (!) Error located
+
+const DropDownUsers = () => {
+	const [networkStatus, setNetworkStatus] = useState(() => ({
+    error: false,
+    loading: false,
+  }));
+
+  const resource = useResource({
+    link: 'https://api.example.com/v1/files/tree',
+    cursor: (data) => data.next,
+    onNetworkStatusChange: (status) =>
+      setNetworkStatus({
+        error: status === 5,
+        loading: status < 4,
+        networkStatus: status
+      }),
+    suspense: true,
+  });
+
+  return (
+    <DropDown>
+      <DropDown.List
+        items={resource.data}
+        onLoadMore={resource.loadMore}
+      >
+        {(item) => (
+          <DropDown.Item>
+            {...}
+          </DropDown.Item>
+        )}
+      </DropDown.List>
+
+      {networkStatus.error && (
+        <Error>
+          <Text>Failed to load data!</Text>
+          <Button>Try again</Button>
+        </Error>
+      )}
+    </DropDown>
+  );
+};
+```
+
+This scenario would not need to add a `try catch` with wrapper to `onLoadMore`, under the hood `useResource` handles catching network errors when requests do not happen at render time when suspense is enabled. Using network status is easier for list than tree because it is simpler to implement an error or loading fallback component at the end of the list.
+
+```jsx
+<DropDown>
+	<DropDown.List
+		items={resource.data}
+		onLoadMore={resource.loadMore}
+	>
+		{(item) => (
+			<DropDown.Item>
+				{...}
+			</DropDown.Item>
+		)}
+	</DropDown.List>
+
+	{networkStatus.loading && <LoadingIndicator />}
+</DropDown>
+```
+
+When suspense is enabled when a network error occurs for the first request of the component, it would not be possible to catch errors just by using the network state provided by `useResource` or adding a `try catch` for this the recommended thing is to add the `<ErrorBoundary />` above the component that makes the request to catch errors in render time.
 
 ```jsx
 // (!) Top-level Error Boundary
 
-<ErrorBoundary exceptionElement={<FileExplorerException />}>
-	<FileExplorer />
+<ErrorBoundary exceptionElement={<Exception />}>
+	<DropDownUsers />
 </ErrorBoundary>
 ```
 
-In this scenario, it is possible to catch the exception and render a UI as a fallback. Who takes care of this integration and launching the exceptions is the [`useResource`](https://clayui.com/docs/components/data-provider.html) itself, as well as launching the exception at the item level, that is, when the `loadMore` method is called, the exception must be launched where the method is being used to allow the `<ErrorBoundary />` to be able to catch the item-level exception.
+In this scenario, it is possible to catch the exception and render a UI as a fallback. Who takes care of this integration and thrown the exceptions is the [`useResource`](https://clayui.com/docs/components/data-provider.html) itself.
 
 #### `Suspense`
 
