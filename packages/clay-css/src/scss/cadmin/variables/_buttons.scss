@@ -94,6 +94,9 @@ $cadmin-btn: map-deep-merge(
 		),
 		inline-item: (
 			font-size: $cadmin-btn-inline-item-font-size,
+			lexicon-icon: (
+				margin-top: 0,
+			),
 		),
 		btn-section: (
 			display: block,
@@ -227,6 +230,9 @@ $cadmin-btn-monospaced: map-deep-merge(
 		mobile: (
 			height: $cadmin-btn-monospaced-size-mobile,
 			width: $cadmin-btn-monospaced-size-mobile,
+		),
+		lexicon-icon: (
+			margin-top: 0,
 		),
 		c-inner: (
 			align-items: center,
