@@ -183,7 +183,6 @@ export const Floating = () => {
 		<ClayTooltipProvider>
 			<div>
 				<div
-					data-tooltip-floating="true"
 					style={{
 						backgroundColor: '#e6e6e6',
 						borderRadius: '10px',
@@ -191,9 +190,35 @@ export const Floating = () => {
 						fontWeight: 500,
 						padding: '60px 100px',
 					}}
-					title="Edit Text"
 				>
-					Placeholder
+					<span data-tooltip-floating="true" title="Edit Text">
+						Placeholder
+					</span>
+				</div>
+
+				<div
+					style={{
+						backgroundColor: '#e6e6e6',
+						borderRadius: '10px',
+						display: 'inline-block',
+						fontWeight: 500,
+						marginTop: '30PX',
+						padding: '60px 100px',
+					}}
+				>
+					<span data-tooltip-floating="true" title="Edit Text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Fames ac turpis egestas integer eget
+						aliquet nibh praesent tristique. Nibh sed pulvinar proin
+						gravida hendrerit lectus a. Id interdum velit laoreet id
+						donec ultrices tincidunt arcu. Viverra mauris in aliquam
+						sem fringilla ut morbi. Convallis posuere morbi leo urna
+						molestie at elementum eu. Mi bibendum neque egestas
+						congue. Tempus quam pellentesque nec nam aliquam sem et
+						tortor. Faucibus nisl tincidunt eget nullam non nisi
+						est.{' '}
+					</span>
 				</div>
 			</div>
 		</ClayTooltipProvider>
