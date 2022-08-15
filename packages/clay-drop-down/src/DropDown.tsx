@@ -11,7 +11,7 @@ import {
 } from '@clayui/shared';
 import {hideOthers} from 'aria-hidden';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -204,6 +204,17 @@ function ClayDropDown({
 		return `clay-dropdown-menu-${counter}`;
 	}, []);
 
+	const openMenu = useCallback(
+		(value: boolean) => {
+			if (!initialized) {
+				setInitialized(true);
+			}
+
+			setInternalActive(value);
+		},
+		[initialized]
+	);
+
 	return (
 		<FocusScope>
 			{(focusManager) => (
@@ -220,12 +231,38 @@ function ClayDropDown({
 							'dropdown-toggle',
 							trigger.props.className
 						),
-						onClick: () => {
-							if (!initialized) {
-								setInitialized(true);
+						onClick: (
+							event: React.MouseEvent<HTMLButtonElement>
+						) => {
+							if (trigger.props.onClick) {
+								trigger.props.onClick(event);
 							}
 
-							setInternalActive(!internalActive);
+							openMenu(!internalActive);
+						},
+						onKeyDown: (
+							event: React.KeyboardEvent<HTMLButtonElement>
+						) => {
+							if (trigger.props.onKeyDown) {
+								trigger.props.onKeyDown(event);
+							}
+
+							if (event.key === Keys.Spacebar) {
+								openMenu(!internalActive);
+							}
+
+							if (event.key === Keys.Down) {
+								event.preventDefault();
+								event.stopPropagation();
+
+								openMenu(true);
+							}
+
+							if (
+								[Keys.Spacebar, Keys.Down].includes(event.key)
+							) {
+								event.preventDefault();
+							}
 						},
 						ref: (node: HTMLButtonElement) => {
 							if (node) {
