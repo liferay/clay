@@ -249,19 +249,9 @@ const Item = ({
 };
 
 const Group = ({items, label, spritemap}: IItem & IInternalItem) => (
-	<>
-		<ClayDropDownGroup header={label} />
-		{items && (
-			<li role="none">
-				<DropDownContent
-					aria-label={label}
-					items={items}
-					role="group"
-					spritemap={spritemap}
-				/>
-			</li>
-		)}
-	</>
+	<ClayDropDownGroup header={label}>
+		{items && <Items items={items} spritemap={spritemap} />}
+	</ClayDropDownGroup>
 );
 
 const Contextual = ({
@@ -394,21 +384,13 @@ const RadioGroup = ({
 	);
 
 	return (
-		<>
-			{label && <ClayDropDownGroup header={label} />}
+		<ClayDropDownGroup header={label} role="radiogroup">
 			{items && (
-				<li role="none">
-					<RadioGroupContext.Provider value={params}>
-						<DropDownContent
-							aria-label={label}
-							items={items}
-							role="radiogroup"
-							spritemap={spritemap}
-						/>
-					</RadioGroupContext.Provider>
-				</li>
+				<RadioGroupContext.Provider value={params}>
+					<Items items={items} spritemap={spritemap} />
+				</RadioGroupContext.Provider>
 			)}
-		</>
+		</ClayDropDownGroup>
 	);
 };
 
@@ -424,6 +406,18 @@ const TYPE_MAP = {
 	radiogroup: RadioGroup,
 };
 
+const Items = ({items, spritemap}: IDropDownContentProps) => {
+	return (
+		<>
+			{items.map(({type, ...item}, key) => {
+				const Item = TYPE_MAP[type || 'item'];
+
+				return <Item {...item} key={key} spritemap={spritemap} />;
+			})}
+		</>
+	);
+};
+
 const DropDownContent = ({
 	items,
 	role,
@@ -431,11 +425,7 @@ const DropDownContent = ({
 	...otherProps
 }: IDropDownContentProps) => (
 	<ClayDropDown.ItemList aria-label={otherProps['aria-label']} role={role}>
-		{items.map(({type, ...item}, key) => {
-			const Item = TYPE_MAP[type || 'item'];
-
-			return <Item {...item} key={key} spritemap={spritemap} />;
-		})}
+		<Items items={items} spritemap={spritemap} />
 	</ClayDropDown.ItemList>
 );
 

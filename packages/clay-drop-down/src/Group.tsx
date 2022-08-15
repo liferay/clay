@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useMemo} from 'react';
 
 type Props = {
 	/**
@@ -15,18 +15,43 @@ type Props = {
 	 * Value provided is a display component that is a header for the items in the group.
 	 */
 	header?: string;
+
+	/**
+	 * ARIA to define semantic meaning to content.
+	 */
+	role?: string;
 };
 
-const ClayDropDownGroup = ({children, header}: Props) => {
+let counter = 0;
+
+const ClayDropDownGroup = ({children, header, role = 'group'}: Props) => {
+	const ariaLabel = useMemo(() => {
+		counter++;
+
+		return `clay-dropdown-menu-group-${counter}`;
+	}, []);
+
 	return (
 		<>
 			{header && (
-				<li className="dropdown-subheader" role="presentation">
+				<li
+					className="dropdown-subheader"
+					id={ariaLabel}
+					role="presentation"
+				>
 					{header}
 				</li>
 			)}
 
-			{children}
+			<li role="none">
+				<ul
+					aria-labelledby={ariaLabel}
+					className="list-unstyled"
+					role={role}
+				>
+					{children}
+				</ul>
+			</li>
 		</>
 	);
 };
