@@ -197,7 +197,7 @@ function ClayDropDown({
 	}, []);
 
 	return (
-		<FocusScope>
+		<FocusScope arrowKeysLeftRight>
 			<ContainerElement
 				{...otherProps}
 				className={classNames('dropdown', className)}
