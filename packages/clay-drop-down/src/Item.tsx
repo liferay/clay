@@ -63,7 +63,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 			href,
 			innerRef,
 			onClick,
-			role = 'none',
+			role = 'presentation',
 			roleItem = 'menuitem',
 			spritemap,
 			symbolLeft,

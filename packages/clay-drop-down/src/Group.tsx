@@ -35,6 +35,7 @@ const ClayDropDownGroup = ({children, header, role = 'group'}: Props) => {
 		<>
 			{header && (
 				<li
+					aria-hidden="true"
 					className="dropdown-subheader"
 					id={ariaLabel}
 					role="presentation"
@@ -43,7 +44,7 @@ const ClayDropDownGroup = ({children, header, role = 'group'}: Props) => {
 				</li>
 			)}
 
-			<li role="none">
+			<li role="presentation">
 				<ul
 					aria-labelledby={ariaLabel}
 					className="list-unstyled"
