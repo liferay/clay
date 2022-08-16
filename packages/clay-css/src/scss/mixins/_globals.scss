@@ -241,7 +241,7 @@
 
 		@if ($enabled) {
 			@each $key, $value in $map {
-				@if ($value == clay-unset) {
+				@if ($value == clay-unset or $value == c-unset) {
 					$value: null;
 				}
 
