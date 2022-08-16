@@ -74,7 +74,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 				color: rgba($black, 0.9),
 			),
 			show: (
-				color: $c-unset,
+				color: c-unset,
 			),
 			disabled: (
 				color: rgba($black, 0.3),
@@ -99,9 +99,9 @@ $menubar-vertical-transparent-md: map-deep-merge(
 				color: $gray-600,
 			),
 			show: (
-				background-color: $c-unset,
-				color: $c-unset,
-				font-weight: $c-unset,
+				background-color: c-unset,
+				color: c-unset,
+				font-weight: c-unset,
 			),
 		),
 		collapse-mobile: (
@@ -241,7 +241,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 				color: rgba($black, 0.9),
 			),
 			show: (
-				color: $c-unset,
+				color: c-unset,
 			),
 			disabled: (
 				color: rgba($black, 0.3),
@@ -266,9 +266,9 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 				color: $gray-600,
 			),
 			show: (
-				background-color: $c-unset,
-				color: $c-unset,
-				font-weight: $c-unset,
+				background-color: c-unset,
+				color: c-unset,
+				font-weight: c-unset,
 			),
 		),
 		collapse-mobile: (

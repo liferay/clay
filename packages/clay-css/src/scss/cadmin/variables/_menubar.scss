@@ -98,7 +98,7 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 				color: rgba($cadmin-black, 0.3),
 			),
 			show: (
-				background-color: $cadmin-c-unset,
+				background-color: c-unset,
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 			),
@@ -124,9 +124,9 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 				color: $cadmin-gray-600,
 			),
 			show: (
-				background-color: $cadmin-c-unset,
-				color: $cadmin-c-unset,
-				font-weight: $cadmin-c-unset,
+				background-color: c-unset,
+				color: c-unset,
+				font-weight: c-unset,
 			),
 		),
 		collapse-mobile: (
@@ -311,7 +311,7 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 				color: rgba($cadmin-black, 0.3),
 			),
 			show: (
-				background-color: $cadmin-c-unset,
+				background-color: c-unset,
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 			),
@@ -337,9 +337,9 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 				color: $cadmin-gray-600,
 			),
 			show: (
-				background-color: $cadmin-c-unset,
-				color: $cadmin-c-unset,
-				font-weight: $cadmin-c-unset,
+				background-color: c-unset,
+				color: c-unset,
+				font-weight: c-unset,
 			),
 		),
 		collapse-mobile: (
