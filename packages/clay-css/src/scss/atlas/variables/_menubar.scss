@@ -32,7 +32,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 				box-shadow: clay-enable-shadows(none),
 			),
 			show: (
-				background-color: $c-unset,
+				background-color: c-unset,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
 			),
@@ -42,8 +42,8 @@ $menubar-vertical-transparent-md: map-deep-merge(
 				background-color: clay-lighten($component-active-bg, 44.9),
 			),
 			active: (
-				background-color: $c-unset,
-				color: $c-unset,
+				background-color: c-unset,
+				color: c-unset,
 			),
 			active-class: (
 				background-color: $primary-l3,
@@ -101,7 +101,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 				box-shadow: clay-enable-shadows(none),
 			),
 			show: (
-				background-color: $c-unset,
+				background-color: c-unset,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
 			),
@@ -111,8 +111,8 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 				background-color: clay-lighten($component-active-bg, 44.9),
 			),
 			active: (
-				background-color: $c-unset,
-				color: $c-unset,
+				background-color: c-unset,
+				color: c-unset,
 			),
 			active-class: (
 				background-color: $primary-l3,

@@ -30,7 +30,7 @@ $custom-control-indicator-checked-active-border-color: $custom-control-indicator
 
 $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-active-bg !default;
 
-$custom-control-indicator-checked-box-shadow: $c-unset !default;
+$custom-control-indicator-checked-box-shadow: c-unset !default;
 $custom-control-indicator-checked-color: $component-active-color !default;
 
 // @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
@@ -182,7 +182,7 @@ $custom-checkbox-indicator-icon-checked-bg-size: 100% !default;
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 100% !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
-$custom-checkbox-indicator-indeterminate-box-shadow: $c-unset !default;
+$custom-checkbox-indicator-indeterminate-box-shadow: c-unset !default;
 $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
 
 $custom-checkbox-indicator-icon-indeterminate: clay-icon(
