@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** Improves group semantics for DropDown ([7d0e1b7](https://github.com/liferay/clay/commit/7d0e1b716f8217c3b4d0437a22e6e9dff3eeffcb))
+
+### Features
+
+-   **@clayui/drop-down:** adds option to open menu when pressing ArrowDown and Spacebar ([c72a181](https://github.com/liferay/clay/commit/c72a181dec53e3bd234bf18a191a486586d7f9f1))
+-   **@clayui/drop-down:** enable move cursor using left and right arrow keys ([9006b62](https://github.com/liferay/clay/commit/9006b6281115a9a3a9b434b6e90288b048495df1))
+-   **@clayui/drop-down:** improves accessibility for virtual cursor ([83bdcb8](https://github.com/liferay/clay/commit/83bdcb879100dfbc68f71c048ecd214471fff0bc))
+
 # [3.68.0](https://github.com/liferay/clay/compare/v3.67.0...v3.68.0) (2022-08-01)
 
 ### Bug Fixes

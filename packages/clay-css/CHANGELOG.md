@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Buttons `$btn-palette` and `$btn-outline-palette` should support keys prefixed with `btn-` ([3de823e](https://github.com/liferay/clay/commit/3de823e70a02b1f3d916220add4566e946824163))
+* **@clayui/css:** Cadmin Buttons btn-monospaced icons should be centered ([7042cf0](https://github.com/liferay/clay/commit/7042cf0fecd92d6360e71b39d8a855fcf934ca6c))
+* **@clayui/css:** Mixins `clay-css` should accept `c-unset` as a value to reset a property ([a4fb956](https://github.com/liferay/clay/commit/a4fb95672fdfd7eae1538b3be40786aa60b9626f))
+* **@clayui/css:** Use `c-unset` instead of `$c-unset` to reset property values ([09fbde1](https://github.com/liferay/clay/commit/09fbde1a6a9d9cb6346cc5ab350940c31afe38e5))
+
+
+
+
+
 # [3.68.0](https://github.com/liferay/clay/compare/v3.67.0...v3.68.0) (2022-08-01)
 
 

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
+
+### Bug Fixes
+
+-   **@clayui/css:** Buttons `$btn-palette` and `$btn-outline-palette` should support keys prefixed with `btn-` ([3de823e](https://github.com/liferay/clay/commit/3de823e70a02b1f3d916220add4566e946824163))
+-   **@clayui/css:** Cadmin Buttons btn-monospaced icons should be centered ([7042cf0](https://github.com/liferay/clay/commit/7042cf0fecd92d6360e71b39d8a855fcf934ca6c))
+-   **@clayui/css:** Mixins `clay-css` should accept `c-unset` as a value to reset a property ([a4fb956](https://github.com/liferay/clay/commit/a4fb95672fdfd7eae1538b3be40786aa60b9626f))
+-   **@clayui/css:** Use `c-unset` instead of `$c-unset` to reset property values ([09fbde1](https://github.com/liferay/clay/commit/09fbde1a6a9d9cb6346cc5ab350940c31afe38e5))
+-   **@clayui/drop-down:** Improves group semantics for DropDown ([7d0e1b7](https://github.com/liferay/clay/commit/7d0e1b716f8217c3b4d0437a22e6e9dff3eeffcb))
+-   **@clayui/tooltip): Revert "fix(@clayui/tooltip:** adds the option to disappear the floating tooltip after a while" ([43b64b9](https://github.com/liferay/clay/commit/43b64b9e0ca7b503b022f69f2aa710dd51770114))
+-   **@clayui/tooltip:** adds the option to disappear the floating tooltip after a while ([7438e62](https://github.com/liferay/clay/commit/7438e62797131336b6547ffd986ff977c7a59d0d))
+-   **@clayui/tooltip:** remove the behavior of moving the tooltip when the mouse moves ([51585ff](https://github.com/liferay/clay/commit/51585ffb16fe0dea68086ed9c320db381d788215))
+
+### Features
+
+-   **@clayui/drop-down:** adds option to open menu when pressing ArrowDown and Spacebar ([c72a181](https://github.com/liferay/clay/commit/c72a181dec53e3bd234bf18a191a486586d7f9f1))
+-   **@clayui/drop-down:** enable move cursor using left and right arrow keys ([9006b62](https://github.com/liferay/clay/commit/9006b6281115a9a3a9b434b6e90288b048495df1))
+-   **@clayui/drop-down:** improves accessibility for virtual cursor ([83bdcb8](https://github.com/liferay/clay/commit/83bdcb879100dfbc68f71c048ecd214471fff0bc))
+
 # [3.68.0](https://github.com/liferay/clay/compare/v3.67.0...v3.68.0) (2022-08-01)
 
 ### Bug Fixes
