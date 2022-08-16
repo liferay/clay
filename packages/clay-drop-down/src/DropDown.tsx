@@ -9,8 +9,9 @@ import {
 	Keys,
 	useInternalState,
 } from '@clayui/shared';
+import {hideOthers} from 'aria-hidden';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Action from './Action';
 import Caption from './Caption';
@@ -190,79 +191,146 @@ function ClayDropDown({
 		}
 	}, [internalActive]);
 
+	useEffect(() => {
+		if (menuElementRef.current && initialized && internalActive) {
+			// Hide everything from ARIA except the MenuElement
+			return hideOthers(menuElementRef.current);
+		}
+	}, [initialized, internalActive]);
+
 	const ariaControls = useMemo(() => {
 		counter++;
 
 		return `clay-dropdown-menu-${counter}`;
 	}, []);
 
+	const openMenu = useCallback(
+		(value: boolean) => {
+			if (!initialized) {
+				setInitialized(true);
+			}
+
+			setInternalActive(value);
+		},
+		[initialized]
+	);
+
 	return (
 		<FocusScope>
-			<ContainerElement
-				{...otherProps}
-				className={classNames('dropdown', className)}
-				onKeyUp={handleKeyUp}
-			>
-				{React.cloneElement(trigger, {
-					'aria-controls': ariaControls,
-					'aria-expanded': internalActive,
-					'aria-haspopup': 'menu',
-					className: classNames(
-						'dropdown-toggle',
-						trigger.props.className
-					),
-					onClick: () => {
-						if (!initialized) {
-							setInitialized(true);
-						}
-
-						setInternalActive(!internalActive);
-					},
-					ref: (node: HTMLButtonElement) => {
-						if (node) {
-							triggerElementRef.current = node;
-							// Call the original ref, if any.
-							const {ref} = trigger;
-							if (typeof ref === 'function') {
-								ref(node);
+			{(focusManager) => (
+				<ContainerElement
+					{...otherProps}
+					className={classNames('dropdown', className)}
+					onKeyUp={handleKeyUp}
+				>
+					{React.cloneElement(trigger, {
+						'aria-controls': ariaControls,
+						'aria-expanded': internalActive,
+						'aria-haspopup': 'true',
+						className: classNames(
+							'dropdown-toggle',
+							trigger.props.className
+						),
+						onClick: (
+							event: React.MouseEvent<HTMLButtonElement>
+						) => {
+							if (trigger.props.onClick) {
+								trigger.props.onClick(event);
 							}
-						}
-					},
-				})}
 
-				{initialized && (
-					<Menu
-						{...menuElementAttrs}
-						active={internalActive}
-						alignElementRef={triggerElementRef}
-						alignmentByViewport={alignmentByViewport}
-						alignmentPosition={alignmentPosition}
-						closeOnClickOutside={closeOnClickOutside}
-						hasLeftSymbols={hasLeftSymbols}
-						hasRightSymbols={hasRightSymbols}
-						height={menuHeight}
-						id={ariaControls}
-						offsetFn={offsetFn}
-						onSetActive={setInternalActive}
-						ref={menuElementRef}
-						width={menuWidth}
-					>
-						<DropDownContext.Provider
-							value={{
-								close: () => {
-									setInternalActive(false);
-									triggerElementRef.current?.focus();
-								},
-								closeOnClick,
-							}}
+							openMenu(!internalActive);
+						},
+						onKeyDown: (
+							event: React.KeyboardEvent<HTMLButtonElement>
+						) => {
+							if (trigger.props.onKeyDown) {
+								trigger.props.onKeyDown(event);
+							}
+
+							if (event.key === Keys.Spacebar) {
+								openMenu(!internalActive);
+							}
+
+							if (event.key === Keys.Down) {
+								event.preventDefault();
+								event.stopPropagation();
+
+								openMenu(true);
+							}
+
+							if (
+								[Keys.Spacebar, Keys.Down].includes(event.key)
+							) {
+								event.preventDefault();
+							}
+						},
+						ref: (node: HTMLButtonElement) => {
+							if (node) {
+								triggerElementRef.current = node;
+								// Call the original ref, if any.
+								const {ref} = trigger;
+								if (typeof ref === 'function') {
+									ref(node);
+								}
+							}
+						},
+					})}
+
+					{initialized && (
+						<Menu
+							{...menuElementAttrs}
+							active={internalActive}
+							alignElementRef={triggerElementRef}
+							alignmentByViewport={alignmentByViewport}
+							alignmentPosition={alignmentPosition}
+							closeOnClickOutside={closeOnClickOutside}
+							hasLeftSymbols={hasLeftSymbols}
+							hasRightSymbols={hasRightSymbols}
+							height={menuHeight}
+							id={ariaControls}
+							offsetFn={offsetFn}
+							onSetActive={setInternalActive}
+							ref={menuElementRef}
+							width={menuWidth}
 						>
-							{children}
-						</DropDownContext.Provider>
-					</Menu>
-				)}
-			</ContainerElement>
+							<FocusMenu
+								condition={internalActive}
+								onRender={() => focusManager.focusNext()}
+							>
+								<DropDownContext.Provider
+									value={{
+										close: () => {
+											setInternalActive(false);
+											triggerElementRef.current?.focus();
+										},
+										closeOnClick,
+									}}
+								>
+									{children}
+								</DropDownContext.Provider>
+							</FocusMenu>
+						</Menu>
+					)}
+				</ContainerElement>
+			)}
 		</FocusScope>
 	);
+}
+
+type FocusMenuProps = {
+	children: JSX.Element;
+	condition: boolean;
+	onRender: () => void;
+};
+
+function FocusMenu({children, condition, onRender}: FocusMenuProps) {
+	useEffect(() => {
+		if (condition) {
+			onRender();
+		}
+	}, [condition]);
+
+	return children;
 }
 
 ClayDropDown.Action = Action;

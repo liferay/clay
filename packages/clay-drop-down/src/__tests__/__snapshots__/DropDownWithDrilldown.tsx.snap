@@ -2,14 +2,17 @@
 
 exports[`ClayDropDownWithDrilldown renders 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="dropdown"
     >
       <button
         aria-controls="clay-dropdown-menu-1"
         aria-expanded="true"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle"
         data-testid="trigger"
         style=""
@@ -202,14 +205,17 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
 
 exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="dropdown"
     >
       <button
         aria-controls="clay-dropdown-menu-2"
         aria-expanded="true"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle"
         data-testid="trigger"
         style=""
@@ -252,9 +258,8 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 </a>
               </li>
               <li
-                aria-hidden="true"
                 class="dropdown-divider"
-                role="presentation"
+                role="separator"
               />
               <li
                 role="none"
@@ -273,9 +278,8 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 </button>
               </li>
               <li
-                aria-hidden="true"
                 class="dropdown-divider"
-                role="presentation"
+                role="separator"
               />
               <li
                 role="none"
@@ -332,9 +336,8 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 </a>
               </li>
               <li
-                aria-hidden="true"
                 class="dropdown-divider"
-                role="presentation"
+                role="separator"
               />
               <li
                 role="none"
@@ -391,9 +394,8 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                 </button>
               </li>
               <li
-                aria-hidden="true"
                 class="dropdown-divider"
-                role="presentation"
+                role="separator"
               />
               <li
                 role="none"
@@ -429,7 +431,7 @@ exports[`ClayDropDownWithDrilldown renders with the menu initially active 1`] = 
       <button
         aria-controls="clay-dropdown-menu-5"
         aria-expanded="true"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle"
         data-testid="trigger"
       />
@@ -447,7 +449,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
       <button
         aria-controls="clay-dropdown-menu-6"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle"
         data-testid="trigger"
         style=""

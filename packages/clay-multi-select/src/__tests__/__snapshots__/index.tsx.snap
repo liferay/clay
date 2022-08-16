@@ -149,7 +149,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
           role="menu"
         >
           <li
-            role="none"
+            role="presentation"
           >
             <button
               class="dropdown-item"
@@ -524,7 +524,7 @@ exports[`Interactions Use custom function for filtering autocomplete results 1`]
     role="menu"
   >
     <li
-      role="none"
+      role="presentation"
     >
       <button
         class="dropdown-item"
@@ -556,7 +556,7 @@ exports[`Interactions Use custom function for filtering autocomplete results 2`]
     role="menu"
   >
     <li
-      role="none"
+      role="presentation"
     >
       <button
         class="dropdown-item"

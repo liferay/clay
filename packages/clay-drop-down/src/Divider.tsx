@@ -6,7 +6,7 @@
 import React from 'react';
 
 const ClayDropDownDivider = () => (
-	<li aria-hidden="true" className="dropdown-divider" role="presentation" />
+	<li className="dropdown-divider" role="separator" />
 );
 
 export default ClayDropDownDivider;

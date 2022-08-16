@@ -9,7 +9,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems 1`] = `
       <button
         aria-controls="clay-dropdown-menu-1"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle btn btn-primary"
         type="button"
       >
@@ -29,7 +29,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with caption 1`] = `
       <button
         aria-controls="clay-dropdown-menu-4"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle btn btn-primary"
         type="button"
       >
@@ -49,7 +49,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with checkbox 1`] = `
       <button
         aria-controls="clay-dropdown-menu-3"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle btn btn-primary"
         type="button"
       >
@@ -69,7 +69,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with footer content 1
       <button
         aria-controls="clay-dropdown-menu-5"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle btn btn-primary"
         type="button"
       >
@@ -89,7 +89,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with help text 1`] = 
       <button
         aria-controls="clay-dropdown-menu-6"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle btn btn-primary"
         type="button"
       >
@@ -109,7 +109,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with radio group 1`] 
       <button
         aria-controls="clay-dropdown-menu-2"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle btn btn-primary"
         type="button"
       >
@@ -129,7 +129,7 @@ exports[`ClayDropDownWithItems renders a DropDownWithItems with search 1`] = `
       <button
         aria-controls="clay-dropdown-menu-7"
         aria-expanded="false"
-        aria-haspopup="menu"
+        aria-haspopup="true"
         class="dropdown-toggle btn btn-primary"
         type="button"
       >
