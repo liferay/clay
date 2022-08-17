@@ -5,18 +5,20 @@
 
 import React from 'react';
 
-import {IDataProvider, NetworkStatus} from './types';
 import {useResource} from './useResource';
 
-interface IChildrenProps {
+import type {NetworkStatus} from './useResource';
+
+type ChildrenProps = {
 	data: any;
 	error: string | boolean;
 	loading: boolean;
 	networkStatus?: NetworkStatus;
 	refetch: Function;
-}
+};
 
-interface IProps extends IDataProvider {
+interface IProps
+	extends Omit<Parameters<typeof useResource>[0], 'onNetworkStatusChange'> {
 	/**
 	 * It uses a render props pattern made popular by libraries
 	 * like React Motion and React Router.
@@ -26,7 +28,7 @@ interface IProps extends IDataProvider {
 	 * refetch method and others. If this is an impediment try
 	 * using the `useResource` hook.
 	 */
-	children: (props: IChildrenProps) => React.ReactElement;
+	children: (props: ChildrenProps) => React.ReactElement;
 
 	/**
 	 * Set to true means that network status information will be passed

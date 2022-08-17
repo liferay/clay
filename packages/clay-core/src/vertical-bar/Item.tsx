@@ -30,14 +30,17 @@ type Props = {
 	 * @ignore
 	 */
 	keyValue?: React.Key;
+
+	/**
+	 * @ignore
+	 */
+	style?: React.StyleHTMLAttributes<HTMLLIElement>;
 };
 
-export function Item({
-	children,
-	divider = false,
-	expand = false,
-	keyValue,
-}: Props) {
+export const Item = React.forwardRef<HTMLLIElement, Props>(function Item(
+	{children, divider = false, expand = false, keyValue, style}: Props,
+	ref
+) {
 	const {activePanel, onActivePanel} = useContext(VerticalBarContext);
 
 	return (
@@ -46,6 +49,8 @@ export function Item({
 				'tbar-divider-after': divider,
 				'tbar-item-expand': expand,
 			})}
+			ref={ref}
+			style={style}
 		>
 			{React.cloneElement(children, {
 				className: classNames('tbar-btn tbar-btn-monospaced', {
@@ -69,4 +74,4 @@ export function Item({
 			})}
 		</li>
 	);
-}
+});

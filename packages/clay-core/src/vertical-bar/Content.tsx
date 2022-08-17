@@ -15,7 +15,7 @@ type Context = {
 
 export const ContentContext = React.createContext<Context>({} as Context);
 
-interface IProps<T> extends ICollectionProps<T> {
+interface IProps<T> extends Omit<ICollectionProps<T>, 'virtualize'> {
 	/**
 	 * Flag to determine which style the VerticalBar will display.
 	 */
