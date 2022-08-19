@@ -16,6 +16,14 @@ interface ITreeViewGroupProps<T>
 	extends ICollectionProps<T>,
 		Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {}
 
+function List({children}: React.HTMLAttributes<HTMLUListElement>) {
+	return (
+		<ul className="treeview-group" role="group">
+			{children}
+		</ul>
+	);
+}
+
 export function TreeViewGroup<T>(props: ITreeViewGroupProps<T>): JSX.Element & {
 	displayName: string;
 };
@@ -60,9 +68,9 @@ export function TreeViewGroup<T extends Record<any, any>>({
 			unmountOnExit
 		>
 			<div>
-				<ul className="treeview-group" role="group">
-					<Collection<T> items={items}>{children}</Collection>
-				</ul>
+				<Collection<T> as={List} items={items}>
+					{children}
+				</Collection>
 			</div>
 		</CSSTransition>
 	);

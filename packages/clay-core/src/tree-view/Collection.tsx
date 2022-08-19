@@ -5,14 +5,16 @@
 
 import React from 'react';
 
+import {
+	ChildrenFunction as ChildrenFunctionBase,
+	Collection as CollectionBase,
+	excludeProps,
+} from '../collection';
 import {Expand, Selection, useAPI} from './context';
 import {ItemContextProvider, useItem} from './useItem';
 
-export type ChildrenFunction<T> = (
-	item: Omit<T, 'index' | 'indexes' | 'itemRef' | 'key' | 'parentItemRef'>,
-	selection: Selection,
-	expand: Expand
-) => React.ReactElement;
+export type ChildrenFunction<T extends Record<string, any>> =
+	ChildrenFunctionBase<T, [Selection, Expand]>;
 
 export interface ICollectionProps<T> {
 	children: React.ReactNode | ChildrenFunction<T>;
@@ -28,72 +30,51 @@ export interface ICollectionProps<T> {
 	items?: Array<T>;
 }
 
-export function getKey(
-	index: number,
-	key?: React.Key | null,
-	parentKey?: React.Key
-) {
-	if (
-		key != null &&
-		(!String(key).startsWith('.') || String(key).startsWith('.$'))
-	) {
-		return key;
-	}
+const exclude = new Set([
+	'index',
+	'indexes',
+	'itemRef',
+	'key',
+	'parentItemRef',
+]);
 
-	return parentKey ? `${parentKey}.${index}` : `$.${index}`;
-}
+const ItemContainer: React.ComponentType<Record<string, any>> = ({
+	item = {},
+	index,
+	keyValue,
+	children,
+}) => (
+	<ItemContextProvider value={{...item, index, key: keyValue}}>
+		{children}
+	</ItemContextProvider>
+);
 
-export function removeItemInternalProps<T extends Record<any, any>>(props: T) {
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const {index, indexes, itemRef, key, parentItemRef, ...item} = props;
+type Props = {
+	as?: 'div' | React.ComponentType | React.ForwardRefExoticComponent<any>;
+};
 
-	return item;
-}
-
-export function Collection<T extends Record<any, any>>({
+export function Collection<T extends Record<string, any>>({
+	as,
 	children,
 	items,
-}: ICollectionProps<T>) {
+}: Props & ICollectionProps<T>) {
 	const api = useAPI();
 	const {key: parentKey} = useItem();
 
 	return (
-		<>
-			{typeof children === 'function' && items
-				? items.map((item, index) => {
-						const child = children(
-							removeItemInternalProps(item),
-							...api
-						);
-
-						const key = getKey(
-							index,
-							item.id ?? child.key,
-							parentKey
-						);
-
-						return (
-							<ItemContextProvider
-								key={key}
-								value={{...item, index, key}}
-							>
-								{child}
-							</ItemContextProvider>
-						);
-				  })
-				: React.Children.map(children, (child, index) => {
-						if (!React.isValidElement(child)) {
-							return null;
-						}
-
-						const key = getKey(index, child.key, parentKey);
-
-						return (
-							<ItemContextProvider key={key} value={{index, key}}>
-								{child}
-							</ItemContextProvider>
-						);
-				  })}
-		</>
+		<CollectionBase
+			as={as}
+			exclude={exclude}
+			itemContainer={ItemContainer}
+			items={items}
+			parentKey={parentKey}
+			publicApi={api}
+		>
+			{children}
+		</CollectionBase>
 	);
+}
+
+export function removeItemInternalProps<T extends Record<any, any>>(props: T) {
+	return excludeProps(props, exclude);
 }
