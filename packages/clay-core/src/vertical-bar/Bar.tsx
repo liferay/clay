@@ -10,7 +10,7 @@ import {Collection} from '../collection';
 
 import type {ICollectionProps} from '../collection';
 
-interface IProps<T> extends ICollectionProps<T> {
+interface IProps<T> extends ICollectionProps<T, unknown> {
 	/**
 	 * Flag to determine which style the Bar will display.
 	 */
