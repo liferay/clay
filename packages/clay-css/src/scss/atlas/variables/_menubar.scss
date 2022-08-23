@@ -13,19 +13,19 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			border-color 0.15s ease-in-out,
 			box-shadow 0.15s ease-in-out},
 			hover: (
-				background-color: rgba($gray-900, 0.03),
+				background-color: rgba($primary, 0.04),
 				color: $gray-900,
 			),
 			focus: (
-				background-color: rgba($gray-900, 0.03),
+				background-color: rgba($primary, 0.04),
 				box-shadow:
 					clay-enable-shadows($component-focus-inset-box-shadow),
 				color: $gray-900,
 				outline: 0,
 			),
 			active-class: (
-				background-color: $primary-l3,
-				color: $primary,
+				background-color: rgba($primary, 0.06),
+				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
 			),
 			disabled: (
@@ -38,16 +38,19 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			),
 		),
 		link-mobile: (
+			hover: (
+				background-color: rgba($primary, 0.04),
+			),
 			focus: (
-				background-color: clay-lighten($component-active-bg, 44.9),
+				background-color: rgba($primary, 0.04),
 			),
 			active: (
 				background-color: c-unset,
 				color: c-unset,
 			),
 			active-class: (
-				background-color: $primary-l3,
-				color: $primary,
+				background-color: rgba($primary, 0.06),
+				color: c-unset,
 			),
 		),
 		toggler-mobile: (
@@ -82,19 +85,19 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			border-color 0.15s ease-in-out,
 			box-shadow 0.15s ease-in-out},
 			hover: (
-				background-color: rgba($gray-900, 0.03),
+				background-color: rgba($primary, 0.04),
 				color: $gray-900,
 			),
 			focus: (
-				background-color: rgba($gray-900, 0.03),
+				background-color: rgba($primary, 0.04),
 				box-shadow:
 					clay-enable-shadows($component-focus-inset-box-shadow),
 				color: $gray-900,
 				outline: 0,
 			),
 			active-class: (
-				background-color: $primary-l3,
-				color: $primary,
+				background-color: rgba($primary, 0.06),
+				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
 			),
 			disabled: (
@@ -107,16 +110,19 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			),
 		),
 		link-mobile: (
+			hover: (
+				background-color: rgba($primary, 0.04),
+			),
 			focus: (
-				background-color: clay-lighten($component-active-bg, 44.9),
+				background-color: rgba($primary, 0.04),
 			),
 			active: (
 				background-color: c-unset,
 				color: c-unset,
 			),
 			active-class: (
-				background-color: $primary-l3,
-				color: $primary,
+				background-color: rgba($primary, 0.06),
+				color: $gray-900,
 			),
 		),
 		toggler-mobile: (
