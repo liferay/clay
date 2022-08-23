@@ -656,6 +656,22 @@
 					@include clay-css(map-deep-get($map, focus, after));
 				}
 
+				&:hover {
+					@include clay-css(map-deep-get($map, focus, hover));
+
+					&::before {
+						@include clay-css(
+							map-deep-get($map, focus, hover, before)
+						);
+					}
+
+					&::after {
+						@include clay-css(
+							map-deep-get($map, focus, hover, after)
+						);
+					}
+				}
+
 				.inline-item {
 					@include clay-css(map-get($focus, inline-item));
 				}
