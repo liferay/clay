@@ -120,7 +120,7 @@ input[type='button'] {
 			starts-with($color, '%'),
 		$color,
 		if(
-			starts-with($color, 'btn-'),
+			starts-with($color, 'btn'),
 			str-insert($color, '.', 1),
 			str-insert($color, '.btn-', 1)
 		)
@@ -158,7 +158,7 @@ input[type='button'] {
 			starts-with($color, '%'),
 		$color,
 		if(
-			starts-with($color, 'btn-'),
+			starts-with($color, 'btn'),
 			str-insert($color, '.', 1),
 			str-insert($color, '.btn-outline-', 1)
 		)
