@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
+
+### Bug Fixes
+
+-   **@clayui/css:** Buttons palette maps should output the selector `.btn` when using the key `btn` ([306dfa4](https://github.com/liferay/clay/commit/306dfa4b41805a8edcb477c11d4d5833cd2b1af1))
+-   **@clayui/css:** Menubar (Vertical Nav) update hover, focus, active colors to match Lexicon ([5a74890](https://github.com/liferay/clay/commit/5a7489085eaca4aad6ef07ea22671195f6192c94))
+-   **@clayui/css:** Mixins `clay-button-variant` add option to pass styles to `:focus:hover` ([b3a766d](https://github.com/liferay/clay/commit/b3a766db561c1f4d4f095c144d3a5056a6f2dfd0))
+-   **@clayui/data-provider:** fix the tests ([71672be](https://github.com/liferay/clay/commit/71672bebe69e3dd62d005398b015e8422dade399))
+
+### Features
+
+-   **@clayui/core:** Add list virtualization pattern in collection ([cd3d101](https://github.com/liferay/clay/commit/cd3d1015f134c64dd7445e16949f678215ac7b31))
+-   **@clayui/core:** adds virtualization support to VerticalBar.Bar ([de5679e](https://github.com/liferay/clay/commit/de5679ef7a2f1e0dfe7afb06d8400b53e211d3d5))
+-   **@clayui/data-provider:** adds functionality to load paginated data ([b2acb27](https://github.com/liferay/clay/commit/b2acb2729939cbb7e23621987a9b95b4d4004bd4))
+-   **@clayui/data-provider:** adds integration with React.Suspense and ErrorBoundary ([0c604fe](https://github.com/liferay/clay/commit/0c604fe9126133eab54423dba99962bb97e566e4))
+-   **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
+-   **clayui.com:** improves the readability of descriptions in the API table and the style ([6fe889d](https://github.com/liferay/clay/commit/6fe889da77235b1cda485dafa6e7e9e9fcdf2799))
+
 # [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
 
 ### Bug Fixes

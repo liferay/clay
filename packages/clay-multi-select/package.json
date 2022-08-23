@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/multi-select",
-	"version": "3.69.0",
+	"version": "3.70.0",
 	"description": "ClayMultiSelect component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -26,13 +26,13 @@
 		"react"
 	],
 	"dependencies": {
-		"@clayui/autocomplete": "^3.69.0",
+		"@clayui/autocomplete": "^3.70.0",
 		"@clayui/button": "^3.65.0",
-		"@clayui/drop-down": "^3.69.0",
-		"@clayui/form": "^3.69.0",
+		"@clayui/drop-down": "^3.70.0",
+		"@clayui/form": "^3.70.0",
 		"@clayui/label": "^3.56.0",
 		"@clayui/loading-indicator": "^3.60.0",
-		"@clayui/shared": "^3.69.0",
+		"@clayui/shared": "^3.70.0",
 		"classnames": "^2.2.6",
 		"fuzzy": "^0.1.3"
 	},

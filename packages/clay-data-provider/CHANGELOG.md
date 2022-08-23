@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
+
+### Bug Fixes
+
+-   **@clayui/data-provider:** fix the tests ([71672be](https://github.com/liferay/clay/commit/71672bebe69e3dd62d005398b015e8422dade399))
+
+### Features
+
+-   **@clayui/data-provider:** adds functionality to load paginated data ([b2acb27](https://github.com/liferay/clay/commit/b2acb2729939cbb7e23621987a9b95b4d4004bd4))
+-   **@clayui/data-provider:** adds integration with React.Suspense and ErrorBoundary ([0c604fe](https://github.com/liferay/clay/commit/0c604fe9126133eab54423dba99962bb97e566e4))
+-   **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
+
 # [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
 
 **Note:** Version bump only for package @clayui/data-provider

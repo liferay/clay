@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
+
+### Features
+
+-   **@clayui/core:** Add list virtualization pattern in collection ([cd3d101](https://github.com/liferay/clay/commit/cd3d1015f134c64dd7445e16949f678215ac7b31))
+-   **@clayui/core:** adds virtualization support to VerticalBar.Bar ([de5679e](https://github.com/liferay/clay/commit/de5679ef7a2f1e0dfe7afb06d8400b53e211d3d5))
+
 # [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
 
 **Note:** Version bump only for package @clayui/core

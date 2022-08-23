@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Buttons palette maps should output the selector `.btn` when using the key `btn` ([306dfa4](https://github.com/liferay/clay/commit/306dfa4b41805a8edcb477c11d4d5833cd2b1af1))
+* **@clayui/css:** Menubar (Vertical Nav) update hover, focus, active colors to match Lexicon ([5a74890](https://github.com/liferay/clay/commit/5a7489085eaca4aad6ef07ea22671195f6192c94))
+* **@clayui/css:** Mixins `clay-button-variant` add option to pass styles to `:focus:hover` ([b3a766d](https://github.com/liferay/clay/commit/b3a766db561c1f4d4f095c144d3a5056a6f2dfd0))
+
+
+
+
+
 # [3.69.0](https://github.com/liferay/clay/compare/v3.68.0...v3.69.0) (2022-08-16)
 
 

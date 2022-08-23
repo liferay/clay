@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
+
+### Features
+
+-   **@clayui/provider:** add client initialization to `useResource` hook ([ee5a8a8](https://github.com/liferay/clay/commit/ee5a8a8661a12cd1c0f91c0b129c1b1da8f8c2f1))
+
 # [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
 
 ### Bug Fixes
