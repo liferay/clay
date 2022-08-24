@@ -74,10 +74,10 @@ module.exports = {
 			statements: 95,
 		},
 		'./packages/clay-drop-down/src/': {
-			branches: 65,
+			branches: 64,
 			functions: 57,
-			lines: 77,
-			statements: 76,
+			lines: 75,
+			statements: 74,
 		},
 		'./packages/clay-empty-state/src/': {
 			branches: 100,
@@ -239,6 +239,7 @@ module.exports = {
 	moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
 	resolver: `${__dirname}/scripts/jest-clay-lerna-resolver`,
 	setupFiles: [`${__dirname}/scripts/setupTests.ts`, 'raf/polyfill'],
+	testEnvironment: 'jsdom',
 	testMatch: [
 		`${process.cwd()}/**/__tests__/**/*.[jt]s?(x)`,
 		`${process.cwd()}/**/?(*.)+(spec|test).[jt]s?(x)`,
@@ -250,6 +251,7 @@ module.exports = {
 		'lib',
 		'clayui.com',
 	],
+	timers: 'legacy',
 	transform: {
 		'.(ts|tsx)$': 'ts-jest',
 	},

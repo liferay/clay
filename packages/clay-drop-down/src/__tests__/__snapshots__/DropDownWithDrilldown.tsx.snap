@@ -429,7 +429,7 @@ exports[`ClayDropDownWithDrilldown renders with the menu initially active 1`] = 
       class="dropdown"
     >
       <button
-        aria-controls="clay-dropdown-menu-5"
+        aria-controls="clay-dropdown-menu-3"
         aria-expanded="true"
         aria-haspopup="true"
         class="dropdown-toggle"
@@ -447,7 +447,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
       class="dropdown"
     >
       <button
-        aria-controls="clay-dropdown-menu-6"
+        aria-controls="clay-dropdown-menu-4"
         aria-expanded="false"
         aria-haspopup="true"
         class="dropdown-toggle"
@@ -460,7 +460,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
     <div>
       <div
         class="dropdown-menu drilldown dropdown-menu-indicator-end"
-        id="clay-dropdown-menu-6"
+        id="clay-dropdown-menu-4"
         role="presentation"
         style="left: -999px; top: -995px;"
       >

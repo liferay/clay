@@ -42,7 +42,7 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	}
 
 	React.useEffect(() => {
-		if (autoClose && onClose) {
+		if (autoClose) {
 			startTimer();
 
 			return pauseTimer;
