@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "clayui.com",
-	"version": "3.70.0",
+	"version": "3.70.1",
 	"license": "MIT",
 	"scripts": {
 		"copy:clay-css": "yarn copy:clay-css-js && yarn copy:clay-css-site-images && yarn copy:clay-css-images",
@@ -19,7 +19,7 @@
 		"@clayui/card": "^3.70.0",
 		"@clayui/charts": "^3.65.0",
 		"@clayui/color-picker": "^3.70.0",
-		"@clayui/css": "^3.70.0",
+		"@clayui/css": "^3.70.1",
 		"@clayui/data-provider": "^3.70.0",
 		"@clayui/date-picker": "^3.70.0",
 		"@clayui/drop-down": "^3.70.0",
