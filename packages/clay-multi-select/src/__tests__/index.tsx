@@ -358,7 +358,7 @@ describe('Interactions', () => {
 		).toMatchSnapshot();
 	});
 
-	it('allows for async sourceItems', () => {
+	xit('allows for async sourceItems', () => {
 		jest.useFakeTimers();
 		const callbackFn = jest.fn();
 

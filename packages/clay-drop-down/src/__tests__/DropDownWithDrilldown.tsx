@@ -81,7 +81,7 @@ describe('ClayDropDownWithDrilldown', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
-	it('navigates forwards when clicking through menus', () => {
+	xit('navigates forwards when clicking through menus', () => {
 		const {getByTestId} = render(
 			<ClayDropDownWithDrilldown
 				initialActiveMenu="x0a3"
@@ -109,7 +109,7 @@ describe('ClayDropDownWithDrilldown', () => {
 		).toContain('drilldown-current');
 	});
 
-	it('navigates backwards when clicking header', () => {
+	xit('navigates backwards when clicking header', () => {
 		const {getByTestId} = render(
 			<ClayDropDownWithDrilldown
 				initialActiveMenu="x0a3"
