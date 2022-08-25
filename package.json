@@ -32,6 +32,7 @@
 		"lint:changed": "git ls-files -mz \"*.js\" \"**/*.js\" \"**/*.ts\" \"**/*.tsx\" | xargs -0 eslint",
 		"lint:fix": "eslint --fix \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"lint:quiet": "eslint --quiet \".*.js\" \"**/*.{js,ts,tsx}\"",
+		"lint:typescript": "tsc --project ./tsconfig.global.json",
 		"lint": "eslint \".*.js\" \"**/*.{js,ts,tsx}\"",
 		"site": "cd clayui.com && yarn build && yarn serve",
 		"sizeLimit": "size-limit",
