@@ -1,0 +1,9 @@
+{
+	"extends": "./tsconfig.declarations.json",
+	"compilerOptions": {
+		"noEmit": true,
+		"declaration": true,
+		"emitDeclarationOnly": false
+	},
+	"include": ["./packages/clay-*/src/**/*", "*.tsx", "*.ts"]
+}
