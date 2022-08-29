@@ -4,7 +4,7 @@
  */
 
 import {ClayIconSpriteContext} from '@clayui/icon';
-import React, {useContext} from 'react';
+import React, {useContext, useMemo} from 'react';
 
 import {DataClient} from './DataClient';
 
@@ -48,15 +48,22 @@ export const Provider = ({
 	storageMaxSize = 20,
 	theme,
 	...otherProps
-}: IProviderProps) => (
-	<Context.Provider
-		value={{client: new DataClient({storageMaxSize}), theme, ...otherProps}}
-	>
-		<ClayIconSpriteContext.Provider value={spritemap}>
-			{theme ? <div className={theme}>{children}</div> : children}
-		</ClayIconSpriteContext.Provider>
-	</Context.Provider>
-);
+}: IProviderProps) => {
+	// Use `useMemo` to instantiate the DataClient only once and when
+	// updating the property.
+	const client = useMemo(
+		() => new DataClient({storageMaxSize}),
+		[storageMaxSize]
+	);
+
+	return (
+		<Context.Provider value={{client, theme, ...otherProps}}>
+			<ClayIconSpriteContext.Provider value={spritemap}>
+				{theme ? <div className={theme}>{children}</div> : children}
+			</ClayIconSpriteContext.Provider>
+		</Context.Provider>
+	);
+};
 
 export const useProvider = () => {
 	return useContext(Context);
