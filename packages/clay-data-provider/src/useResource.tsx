@@ -246,6 +246,8 @@ const useResource = ({
 	// two requests.
 	const firstRenderRef = useRef<boolean>(true);
 
+	const firstRequestRef = useRef<boolean>(false);
+
 	const shouldUseCache =
 		fetchPolicy === FetchPolicy.CacheFirst ||
 		fetchPolicy === FetchPolicy.CacheAndNetwork;
@@ -527,11 +529,24 @@ const useResource = ({
 
 	const fetchingOrError = client.isFetching(identifier);
 
+	// Makes first request if not started at render time
 	if (!fetchingOrError && firstRenderRef.current) {
 		const result = maybeFetch(NetworkStatus.Loading);
 
 		if (result) {
+			firstRequestRef.current = true;
+
 			client.update(identifier, result);
+		}
+	}
+
+	// Attach the promise to the instance if it is not the that started
+	// the request.
+	if (fetchingOrError && firstRequestRef.current === false && !suspense) {
+		firstRequestRef.current = true;
+
+		if (fetchingOrError instanceof Promise) {
+			fetchingOrError.then(fetchOnComplete);
 		}
 	}
 
