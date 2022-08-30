@@ -99,6 +99,11 @@ const isFiberHostComponentFocusable = (fiber: any): boolean => {
 
 	const {memoizedProps, stateNode, type} = fiber;
 
+	// The element may be having an update in progress.
+	if (memoizedProps === null) {
+		return false;
+	}
+
 	return isFocusable({
 		contentEditable: memoizedProps.contentEditable,
 		disabled: memoizedProps.disabled,
