@@ -25,6 +25,20 @@ describe('BasicRendering', () => {
 		expect(document.body).toMatchSnapshot();
 	});
 
+	it('renders not in a dialog', () => {
+		render(
+			<ClayDatePicker
+				defaultMonth={new Date(2019, 3, 18)}
+				dialog={false}
+				placeholder="YYYY-MM-DD"
+				spritemap={spritemap}
+				years={{end: 2019, start: 2019}}
+			/>
+		);
+
+		expect(document.body).toMatchSnapshot();
+	});
+
 	it('renders the date picker with the selected day using the defaultMonth', () => {
 		const {getByLabelText} = render(
 			<ClayDatePicker

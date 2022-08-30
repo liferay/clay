@@ -203,3 +203,16 @@ export const DynamicYears = () => {
 		/>
 	);
 };
+
+export const OutsideOfDialog = () => {
+	return (
+		<ClayDatePickerWithState
+			dialog={false}
+			placeholder="YYYY-MM-DD"
+			years={{
+				end: 2024,
+				start: 1997,
+			}}
+		/>
+	);
+};

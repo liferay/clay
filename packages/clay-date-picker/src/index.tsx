@@ -53,6 +53,11 @@ interface IProps
 	defaultValue?: string;
 
 	/**
+	 * Renders date picker inside of a dialog
+	 */
+	dialog?: boolean;
+
+	/**
 	 * Flag to disable the component, buttons, open the datepicker, etc...
 	 */
 	disabled?: boolean;
@@ -217,6 +222,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			defaultExpanded,
 			defaultMonth,
 			defaultValue,
+			dialog = true,
 			disabled,
 			expanded,
 			firstDayOfWeek = FirstDayOfWeek.Sunday,
@@ -588,112 +594,135 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			};
 		}, [handleFocus]);
 
+		const Calendar = () => (
+			<>
+				<DateNavigation
+					ariaLabels={ariaLabels}
+					currentMonth={currentMonth}
+					disabled={disabled}
+					months={months}
+					onDotClicked={handleDotClicked}
+					onMonthChange={changeMonth}
+					spritemap={spritemap}
+					years={years}
+				/>
+				<div className="date-picker-calendar-body">
+					<WeekdayHeader
+						firstDayOfWeek={firstDayOfWeek}
+						weekdaysShort={weekdaysShort}
+					>
+						{({key, weekday}) => (
+							<Weekday key={key} weekday={weekday} />
+						)}
+					</WeekdayHeader>
+					<DaysTable weeks={weeks}>
+						{({day, key}) => (
+							<DayNumber
+								day={day}
+								daysSelected={daysSelected}
+								disabled={disabled}
+								key={key}
+								onClick={handleDayClicked}
+								range={range}
+							/>
+						)}
+					</DaysTable>
+				</div>
+				{(footerElement || time) && (
+					<div className="date-picker-calendar-footer">
+						{time && (
+							<TimePicker
+								currentTime={currentTime}
+								disabled={disabled}
+								onTimeChange={handleTimeChange}
+								spritemap={spritemap}
+								timezone={timezone}
+								use12Hours={use12Hours}
+							/>
+						)}
+						{!time &&
+							footerElement &&
+							React.Children.only(footerElement({spritemap}))}
+					</div>
+				)}
+			</>
+		);
+
 		return (
 			<FocusScope>
 				<div className="date-picker">
-					<ClayInput.Group id={id} ref={triggerElementRef}>
-						<ClayInput.GroupItem>
-							<InputDate
-								{...otherProps}
-								ariaLabel={ariaLabels.input}
+					{!dialog && (
+						<>
+							<Calendar />
+
+							<input
+								className="hide"
 								disabled={disabled}
-								inputName={inputName}
+								name={inputName}
 								onChange={inputChange}
-								placeholder={placeholder}
-								ref={ref}
-								useNative={useNative}
 								value={internalValue}
 							/>
-							{!useNative && (
-								<ClayInput.GroupInsetItem after>
-									<Button
-										aria-label={ariaLabels.buttonChooseDate}
-										className="date-picker-dropdown-toggle"
-										data-testid="date-button"
-										disabled={disabled}
-										displayType="unstyled"
-										onClick={handleCalendarButtonClicked}
-									>
-										<Icon
-											spritemap={spritemap}
-											symbol="calendar"
-										/>
-									</Button>
-								</ClayInput.GroupInsetItem>
-							)}
-						</ClayInput.GroupItem>
-					</ClayInput.Group>
+						</>
+					)}
 
-					{!useNative && (
-						<DropDown.Menu
-							active={expandedValue}
-							alignElementRef={triggerElementRef}
-							className="date-picker-dropdown-menu"
-							data-testid="dropdown"
-							onActiveChange={setExpandedValue}
-							ref={dropdownContainerRef}
-						>
-							<div
-								aria-modal="true"
-								className="date-picker-calendar"
-								role="dialog"
-							>
-								<DateNavigation
-									ariaLabels={ariaLabels}
-									currentMonth={currentMonth}
-									disabled={disabled}
-									months={months}
-									onDotClicked={handleDotClicked}
-									onMonthChange={changeMonth}
-									spritemap={spritemap}
-									years={years}
-								/>
-								<div className="date-picker-calendar-body">
-									<WeekdayHeader
-										firstDayOfWeek={firstDayOfWeek}
-										weekdaysShort={weekdaysShort}
+					{dialog && (
+						<>
+							<ClayInput.Group id={id} ref={triggerElementRef}>
+								<ClayInput.GroupItem>
+									<InputDate
+										{...otherProps}
+										ariaLabel={ariaLabels.input}
+										disabled={disabled}
+										inputName={inputName}
+										onChange={inputChange}
+										placeholder={placeholder}
+										ref={ref}
+										useNative={useNative}
+										value={internalValue}
+									/>
+									{!useNative && (
+										<ClayInput.GroupInsetItem after>
+											<Button
+												aria-label={
+													ariaLabels.buttonChooseDate
+												}
+												className="date-picker-dropdown-toggle"
+												data-testid="date-button"
+												disabled={disabled}
+												displayType="unstyled"
+												onClick={
+													handleCalendarButtonClicked
+												}
+											>
+												<Icon
+													spritemap={spritemap}
+													symbol="calendar"
+												/>
+											</Button>
+										</ClayInput.GroupInsetItem>
+									)}
+								</ClayInput.GroupItem>
+							</ClayInput.Group>
+
+							{!useNative && (
+								<DropDown.Menu
+									active={expandedValue}
+									alignElementRef={triggerElementRef}
+									className="date-picker-dropdown-menu"
+									data-testid="dropdown"
+									onActiveChange={setExpandedValue}
+									ref={dropdownContainerRef}
+								>
+									<div
+										aria-modal="true"
+										className="date-picker-calendar"
+										role="dialog"
 									>
-										{({key, weekday}) => (
-											<Weekday
-												key={key}
-												weekday={weekday}
-											/>
-										)}
-									</WeekdayHeader>
-									<DaysTable weeks={weeks}>
-										{({day, key}) => (
-											<DayNumber
-												day={day}
-												daysSelected={daysSelected}
-												disabled={disabled}
-												key={key}
-												onClick={handleDayClicked}
-												range={range}
-											/>
-										)}
-									</DaysTable>
-								</div>
-								{(footerElement || time) && (
-									<div className="date-picker-calendar-footer">
-										{time && (
-											<TimePicker
-												currentTime={currentTime}
-												disabled={disabled}
-												onTimeChange={handleTimeChange}
-												spritemap={spritemap}
-												timezone={timezone}
-												use12Hours={use12Hours}
-											/>
-										)}
-										{!time &&
-											footerElement &&
-											React.Children.only(
-												footerElement({spritemap})
-											)}
+										<Calendar />
 									</div>
-								)}
-							</div>
-						</DropDown.Menu>
+								</DropDown.Menu>
+							)}
+						</>
 					)}
 				</div>
 			</FocusScope>
