@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.71.0](https://github.com/liferay/clay/compare/v3.70.3...v3.71.0) (2022-08-30)
+
+### Features
+
+-   **@clayui/data-provider:** instantiates the DataClient locally if the Provider is not declared ([536dd34](https://github.com/liferay/clay/commit/536dd345759c88181dea19f59a71da3655d6f64a))
+
 ## [3.70.2](https://github.com/liferay/clay/compare/v3.70.1...v3.70.2) (2022-08-30)
 
 ### Bug Fixes
