@@ -4,3 +4,4 @@
  */
 
 export * from './Provider';
+export {DataClient as __UNSTABLE_DataClient} from './DataClient';

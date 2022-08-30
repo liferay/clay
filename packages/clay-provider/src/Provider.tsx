@@ -36,9 +36,7 @@ interface IProviderContext {
 	theme?: string;
 }
 
-const Context = React.createContext<IProviderContext>({
-	client: new DataClient(),
-} as IProviderContext);
+const Context = React.createContext<IProviderContext>({} as IProviderContext);
 
 Context.displayName = 'ClayProviderContext';
 

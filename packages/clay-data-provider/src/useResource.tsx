@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useProvider} from '@clayui/provider';
+import {__UNSTABLE_DataClient, useProvider} from '@clayui/provider';
 import {useDebounce} from '@clayui/shared';
 import stringify from 'fast-json-stable-stringify';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
@@ -211,11 +211,12 @@ const useResource = ({
 	fetchDelay = 300,
 	fetchOptions,
 	fetchPolicy = FetchPolicy.NoCache,
+	fetchRetry = {},
 	fetchTimeout = 6000,
 	link,
 	onNetworkStatusChange = () => {},
 	pollInterval = 0,
-	fetchRetry = {},
+	storageMaxSize,
 	suspense = false,
 	variables = null,
 }: Props) => {
@@ -260,10 +261,19 @@ const useResource = ({
 		return uid;
 	}, [link, variables]);
 
-	const {client} = useProvider();
+	const {client: globalClient} = useProvider();
+
+	const client = useRef(
+		globalClient ?? new __UNSTABLE_DataClient({storageMaxSize})
+	);
+
+	warning(
+		!(suspense && typeof globalClient === 'undefined'),
+		'DataProvider: for the integration with Suspense to work correctly, the ClayProvider must be declared at the root of the project.'
+	);
 
 	const [resource, setResource] = useState<any>(
-		client.read(identifier) ?? null
+		client.current.read(identifier) ?? null
 	);
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
@@ -310,7 +320,7 @@ const useResource = ({
 			}, delay);
 		} else {
 			if (suspense) {
-				client.update(identifier, error);
+				client.current.update(identifier, error);
 			} else {
 				onNetworkStatusChange(NetworkStatus.Error);
 			}
@@ -342,7 +352,7 @@ const useResource = ({
 
 		let data = result;
 
-		const cursor = client.getCursor(identifier);
+		const cursor = client.current.getCursor(identifier);
 
 		if (
 			(cursor || cursor === null) &&
@@ -363,7 +373,7 @@ const useResource = ({
 		onNetworkStatusChange(NetworkStatus.Unused);
 
 		if (shouldUseCache) {
-			client.update(identifier, data);
+			client.current.update(identifier, data);
 		}
 
 		if (pollIntervalRef.current > 0) {
@@ -388,7 +398,7 @@ const useResource = ({
 	const getUrlFormat = (link: string, variables: Variables) => {
 		const uri = new URL(link);
 
-		if (client.getCursor(identifier) === null) {
+		if (client.current.getCursor(identifier) === null) {
 			warning(
 				uri.searchParams.toString() === '',
 				'DataProvider: We recommend that instead of passing parameters over the link, use the variables API. \n More details: https://clayui.com/docs/components/data-provider.html'
@@ -433,7 +443,7 @@ const useResource = ({
 					fetchTimeout,
 					fn(
 						getUrlFormat(
-							client.getCursor(identifier) ?? link,
+							client.current.getCursor(identifier) ?? link,
 							variables
 						),
 						fetchOptions
@@ -451,7 +461,7 @@ const useResource = ({
 							res.items &&
 							(res.cursor || res.cursor === null)
 						) {
-							client.setCursor(identifier, res.cursor);
+							client.current.setCursor(identifier, res.cursor);
 
 							return res.items;
 						}
@@ -467,7 +477,7 @@ const useResource = ({
 	};
 
 	const maybeFetch = (status: NetworkStatus) => {
-		const data = client.read(identifier);
+		const data = client.current.read(identifier);
 
 		if (shouldUseCache && data) {
 			fetchOnComplete(data);
@@ -486,7 +496,7 @@ const useResource = ({
 	};
 
 	const loadMore = () => {
-		if (!client.getCursor(identifier)) {
+		if (!client.current.getCursor(identifier)) {
 			return null;
 		}
 
@@ -527,7 +537,7 @@ const useResource = ({
 		};
 	}, []);
 
-	const fetchingOrError = client.isFetching(identifier);
+	const fetchingOrError = client.current.isFetching(identifier);
 
 	// Makes first request if not started at render time
 	if (!fetchingOrError && firstRenderRef.current) {
@@ -536,7 +546,7 @@ const useResource = ({
 		if (result) {
 			firstRequestRef.current = true;
 
-			client.update(identifier, result);
+			client.current.update(identifier, result);
 		}
 	}
 
