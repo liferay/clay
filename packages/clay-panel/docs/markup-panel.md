@@ -8,6 +8,8 @@ mainTabURL: 'docs/components/panel.html'
 <div class="nav-toc">
 
 -   [Basic Usage](#css-basic-usage)
+    -   [Secondary](#css-panel-secondary)
+    -   [Unstyled](#css-panel-unstyled)
 -   [Collapsible](#css-collapsible)
 -   [Groups](#css-groups)
 -   [With Sheets](#css-with-sheets)
@@ -19,14 +21,14 @@ mainTabURL: 'docs/components/panel.html'
 ## Basic Usage(#css-basic-usage)
 
 <div class="sheet-example">
-    <div class="panel" role="tablist">
-        <div class="panel-header">
-            <span class="panel-title">Title</span>
-        </div>
-        <div class="panel-header">Header!</div>
-        <div class="panel-body">Body!</div>
-        <div class="panel-footer">Footer!</div>
-    </div>
+	<div class="panel" role="tablist">
+		<div class="panel-header">
+			<span class="panel-title">Title</span>
+		</div>
+		<div class="panel-header">Header!</div>
+		<div class="panel-body">Body!</div>
+		<div class="panel-footer">Footer!</div>
+	</div>
 </div>
 
 ```html
@@ -40,9 +42,57 @@ mainTabURL: 'docs/components/panel.html'
 </div>
 ```
 
+### Secondary(#css-panel-secondary)
+
+<div class="sheet-example">
+	<div class="panel panel-secondary" role="tablist">
+		<div class="panel-header">
+			<span class="panel-title">Title</span>
+		</div>
+		<div class="panel-body">Body!</div>
+		<div class="panel-footer">Footer!</div>
+	</div>
+</div>
+
+```html
+<div class="panel panel-secondary" role="tablist">
+	<div class="panel-header">
+		<span class="panel-title">Title</span>
+	</div>
+	<div class="panel-body">Body!</div>
+	<div class="panel-footer">Footer!</div>
+</div>
+```
+
+### Unstyled(#css-panel-unstyled)
+
+<div class="sheet-example">
+	<div class="panel panel-unstyled" role="tablist">
+		<div class="panel-header">
+			<span class="panel-title">Title</span>
+		</div>
+		<div class="panel-body">Body!</div>
+		<div class="panel-footer">Footer!</div>
+	</div>
+</div>
+
+```html
+<div class="panel panel-unstyled" role="tablist">
+	<div class="panel-header">
+		<span class="panel-title">Title</span>
+	</div>
+	<div class="panel-body">Body!</div>
+	<div class="panel-footer">Footer!</div>
+</div>
+```
+
 ## Collapsible(#css-collapsible)
 
 Collapsable panels provide you with the ability to expand and collapse content as needed. They can simplify the interface by hiding content until it is needed.
+
+<div class="clay-site-alert alert alert-warning">
+	This page uses Bootstrap's collapse plugin which requires JQuery. Liferay 7.4 no longer includes JQuery by default. We have included a standalone collapse plugin in 7.4, just replace the attribute <code>data-toggle="collapse"</code> with <code>data-toggle="liferay-collapse"</code> on the trigger.
+</div>
 
 <div class="sheet-example">
 	<div class="panel" role="tablist">
@@ -50,8 +100,8 @@ Collapsable panels provide you with the ability to expand and collapse content a
 			aria-controls="collapsePanel"
 			aria-expanded="false"
 			class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed"
-            data-target="#collapsablePanel" 
-            data-toggle="collapse"
+			data-target="#collapsablePanel" 
+			data-toggle="collapse"
 			role="tab"
 		>
 			<span class="panel-title">Toggle me for expanding!</span>
@@ -125,67 +175,67 @@ Collapsable panels provide you with the ability to expand and collapse content a
 Grouped panels provide you with the ability of making accordion-like elements with multiple collapsable panels.
 
 <div class="sheet-example">
-    <div aria-orientation="vertical" class="panel-group" role="tablist">
-        <div class="panel" role="tablist">
-            <button aria-controls="collapsePanelOne" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapsePanelOne" data-toggle="collapse" role="tab">
-                <span class="panel-title">One</span>
-                <span class="collapse-icon-closed">
-                    <svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
-                        <use xlink:href="/images/icons/icons.svg#angle-right"></use>
-                    </svg>
-                </span>
-                <span class="collapse-icon-open">
-                    <svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
-                        <use xlink:href="/images/icons/icons.svg#angle-down"></use>
-                    </svg>
-                </span>
-            </button>
-            <div class="panel-collapse collapse" id="collapsePanelOne" role="tabpanel">
-                <div class="panel-body">Here is some content inside for number One</div>
-            </div>
-        </div>
-        <div class="panel" role="tablist">
-            <button aria-controls="collapsePanelTwo" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapsePanelTwo" data-toggle="collapse" role="tab">
-                <span class="panel-title">Two</span>
-                <span class="collapse-icon-closed">
-                    <svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
-                        <use xlink:href="/images/icons/icons.svg#angle-right"></use>
-                    </svg>
-                </span>
-                <span class="collapse-icon-open">
-                    <svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
-                        <use xlink:href="/images/icons/icons.svg#angle-down"></use>
-                    </svg>
-                </span>
-            </button>
-            <div class="panel-collapse collapse" id="collapsePanelTwo" role="tabpanel">
-                <div class="panel-body">Here is some content inside for number Two</div>
-            </div>
-        </div>
-        <div class="panel" role="tablist">
-            <button aria-controls="collapsePanelThree" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapsePanelThree" data-toggle="collapse" role="tab">
-                <span class="panel-title">Three</span>
-                <span class="collapse-icon-closed">
-                    <svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
-                        <use xlink:href="/images/icons/icons.svg#angle-right"></use>
-                    </svg>
-                </span>
-                <span class="collapse-icon-open">
-                    <svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
-                        <use xlink:href="/images/icons/icons.svg#angle-down"></use>
-                    </svg>
-                </span>
-            </button>
-            <div class="panel-collapse collapse" id="collapsePanelThree" role="tabpanel">
-                <div class="panel-body">Here is some content inside for number Three</div>
-            </div>
-        </div>
-    </div>
+	<div aria-orientation="vertical" class="panel-group" role="tablist">
+		<div class="panel panel-secondary" role="tablist">
+			<button aria-controls="collapsePanelOne" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapsePanelOne" data-toggle="collapse" role="tab">
+				<span class="panel-title">One</span>
+				<span class="collapse-icon-closed">
+					<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+					</svg>
+				</span>
+			</button>
+			<div class="panel-collapse collapse" id="collapsePanelOne" role="tabpanel">
+				<div class="panel-body">Here is some content inside for number One</div>
+			</div>
+		</div>
+		<div class="panel panel-secondary" role="tablist">
+			<button aria-controls="collapsePanelTwo" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapsePanelTwo" data-toggle="collapse" role="tab">
+				<span class="panel-title">Two</span>
+				<span class="collapse-icon-closed">
+					<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+					</svg>
+				</span>
+			</button>
+			<div class="panel-collapse collapse" id="collapsePanelTwo" role="tabpanel">
+				<div class="panel-body">Here is some content inside for number Two</div>
+			</div>
+		</div>
+		<div class="panel panel-secondary" role="tablist">
+			<button aria-controls="collapsePanelThree" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapsePanelThree" data-toggle="collapse" role="tab">
+				<span class="panel-title">Three</span>
+				<span class="collapse-icon-closed">
+					<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
+						<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+					</svg>
+				</span>
+			</button>
+			<div class="panel-collapse collapse" id="collapsePanelThree" role="tabpanel">
+				<div class="panel-body">Here is some content inside for number Three</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 ```html
 <div aria-orientation="vertical" class="panel-group" role="tablist">
-	<div class="panel" role="tablist">
+	<div class="panel panel-secondary" role="tablist">
 		<button
 			aria-controls="collapsePanelOne"
 			aria-expanded="false"
@@ -222,7 +272,7 @@ Grouped panels provide you with the ability of making accordion-like elements wi
 			</div>
 		</div>
 	</div>
-	<div class="panel" role="tablist">
+	<div class="panel panel-secondary" role="tablist">
 		<button
 			aria-controls="collapsePanelTwo"
 			aria-expanded="false"
@@ -259,7 +309,7 @@ Grouped panels provide you with the ability of making accordion-like elements wi
 			</div>
 		</div>
 	</div>
-	<div class="panel" role="tablist">
+	<div class="panel panel-secondary" role="tablist">
 		<button
 			aria-controls="collapsePanelThree"
 			aria-expanded="false"
@@ -304,74 +354,80 @@ Grouped panels provide you with the ability of making accordion-like elements wi
 Sometimes you might want to place a panel inside of a card or a sheet, in that case, wrap the Panel component in a `sheet` wrapper like below.
 
 <div class="sheet-example">
-    <div class="sheet">
-        <div aria-orientation="vertical" class="panel-group panel-group-fluid" role="tablist">
-            <div class="panel panel-secondary" role="tablist">
-                <button aria-controls="collapseSheetPanelOne" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapseSheetPanelOne" data-toggle="collapse" role="tab">
-                    <span class="panel-title">One</span>
-                    <span class="collapse-icon-closed">
-                        <svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
-                            <use xlink:href="/images/icons/icons.svg#angle-right"></use>
-                        </svg>
-                    </span>
-                    <span class="collapse-icon-open">
-                        <svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
-                            <use xlink:href="/images/icons/icons.svg#angle-down"></use>
-                        </svg>
-                    </span>
-                </button>
-                <div class="panel-collapse collapse" id="collapseSheetPanelOne" role="tabpanel">
-                    <div class="panel-body">Here is some content inside for number One</div>
-                </div>
-            </div>
-            <div class="panel panel-secondary" role="tablist">
-                <button aria-controls="collapseSheetPanelTwo" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapseSheetPanelTwo" data-toggle="collapse" role="tab">
-                    <span class="panel-title">Two</span>
-                    <span class="collapse-icon-closed">
-                        <svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
-                            <use xlink:href="/images/icons/icons.svg#angle-right"></use>
-                        </svg>
-                    </span>
-                    <span class="collapse-icon-open">
-                        <svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
-                            <use xlink:href="/images/icons/icons.svg#angle-down"></use>
-                        </svg>
-                    </span>
-                </button>
-                <div class="panel-collapse collapse" id="collapseSheetPanelTwo" role="tabpanel">
-                    <div class="panel-body">Here is some content inside for number Two</div>
-                </div>
-            </div>
-            <div class="panel panel-secondary" role="tablist">
-                <button aria-controls="collapseSheetPanelThree" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapseSheetPanelThree" data-toggle="collapse" role="tab">
-                    <span class="panel-title">Three</span>
-                    <span class="collapse-icon-closed">
-                        <svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
-                            <use xlink:href="/images/icons/icons.svg#angle-right"></use>
-                        </svg>
-                    </span>
-                    <span class="collapse-icon-open">
-                        <svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
-                            <use xlink:href="/images/icons/icons.svg#angle-down"></use>
-                        </svg>
-                    </span>
-                </button>
-                <div class="panel-collapse collapse" id="collapseSheetPanelThree" role="tabpanel">
-                    <div class="panel-body">Here is some content inside for number Three</div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="sheet">
+		<div class="sheet-header">
+			<h4 class="sheet-title">Sheet Title</h4>
+		</div>
+		<div aria-orientation="vertical" class="panel-group panel-group-flush" role="tablist">
+			<div class="panel panel-unstyled" role="tablist">
+				<button aria-controls="collapseSheetPanelOne" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapseSheetPanelOne" data-toggle="collapse" role="tab">
+					<span class="panel-title">One</span>
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+						</svg>
+					</span>
+				</button>
+				<div class="panel-collapse collapse" id="collapseSheetPanelOne" role="tabpanel">
+					<div class="panel-body">Here is some content inside for number One</div>
+				</div>
+			</div>
+			<div class="panel panel-unstyled" role="tablist">
+				<button aria-controls="collapseSheetPanelTwo" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapseSheetPanelTwo" data-toggle="collapse" role="tab">
+					<span class="panel-title">Two</span>
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+						</svg>
+					</span>
+				</button>
+				<div class="panel-collapse collapse" id="collapseSheetPanelTwo" role="tabpanel">
+					<div class="panel-body">Here is some content inside for number Two</div>
+				</div>
+			</div>
+			<div class="panel panel-unstyled" role="tablist">
+				<button aria-controls="collapseSheetPanelThree" aria-expanded="false" class="btn btn-unstyled panel-header panel-header-link collapse-icon collapse-icon-middle collapsed" data-target="#collapseSheetPanelThree" data-toggle="collapse" role="tab">
+					<span class="panel-title">Three</span>
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#angle-right"></use>
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon lexicon-icon-angle-down" role="presentation">
+							<use xlink:href="/images/icons/icons.svg#angle-down"></use>
+						</svg>
+					</span>
+				</button>
+				<div class="panel-collapse collapse" id="collapseSheetPanelThree" role="tabpanel">
+					<div class="panel-body">Here is some content inside for number Three</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 ```html
 <div class="sheet">
+	<div class="sheet-header">
+		<h4 class="sheet-title">Sheet Title</h4>
+	</div>
 	<div
 		aria-orientation="vertical"
-		class="panel-group panel-group-fluid"
+		class="panel-group panel-group-flush"
 		role="tablist"
 	>
-		<div class="panel panel-secondary" role="tablist">
+		<div class="panel panel-unstyled" role="tablist">
 			<button
 				aria-controls="collapseSheetPanelOne"
 				aria-expanded="false"
@@ -412,7 +468,7 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 				</div>
 			</div>
 		</div>
-		<div class="panel panel-secondary" role="tablist">
+		<div class="panel panel-unstyled" role="tablist">
 			<button
 				aria-controls="collapseSheetPanelTwo"
 				aria-expanded="false"
@@ -453,7 +509,7 @@ Sometimes you might want to place a panel inside of a card or a sheet, in that c
 				</div>
 			</div>
 		</div>
-		<div class="panel panel-secondary" role="tablist">
+		<div class="panel panel-unstyled" role="tablist">
 			<button
 				aria-controls="collapseSheetPanelThree"
 				aria-expanded="false"
