@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.70.3](https://github.com/liferay/clay/compare/v3.70.2...v3.70.3) (2022-08-30)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fix error when checking a fiber element in progress in focus management ([b4484e0](https://github.com/liferay/clay/commit/b4484e03814740e25f95291ce79963d8b014fab8))
+
 ## [3.70.2](https://github.com/liferay/clay/compare/v3.70.1...v3.70.2) (2022-08-30)
 
 ### Bug Fixes
