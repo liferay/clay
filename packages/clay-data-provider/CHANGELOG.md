@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.70.2](https://github.com/liferay/clay/compare/v3.70.1...v3.70.2) (2022-08-30)
+
+### Bug Fixes
+
+-   **@clayui/data-provider:** fixes error of not retrieving initial cache value when there are multiple instances for the same endpoint ([9a37620](https://github.com/liferay/clay/commit/9a376200153cdbd2dd4e61339dae3b9ac282443a))
+
 # [3.70.0](https://github.com/liferay/clay/compare/v3.69.0...v3.70.0) (2022-08-23)
 
 ### Bug Fixes
