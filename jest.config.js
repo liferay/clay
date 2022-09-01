@@ -64,8 +64,8 @@ module.exports = {
 		'./packages/clay-data-provider/src/': {
 			branches: 69,
 			functions: 84,
-			lines: 87,
-			statements: 87,
+			lines: 86,
+			statements: 85,
 		},
 		'./packages/clay-date-picker/src/': {
 			branches: 76,
