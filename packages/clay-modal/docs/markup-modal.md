@@ -42,6 +42,114 @@ mainTabURL: 'docs/components/modal.html'
 </div>
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	This page uses Bootstrap's modal plugin which requires JQuery. Liferay 7.4 no longer includes JQuery by default. We have included a standalone modal plugin in 7.4.
+</div>
+
+```html{expanded}
+<button class="btn btn-primary" id="myModalToggle" type="button">Small Modal</button>
+<script>
+	document.getElementById('myModalToggle').addEventListener('click', function(event) {
+		Liferay.Util.openModal({
+			title: 'Modal Title',
+			bodyHTML: '<h4>Modal Body</h4>',
+			buttons: [
+				{
+					displayType: 'secondary',
+					label: 'Cancel',
+					type: 'cancel',
+				},
+				{
+					displayType: 'primary',
+					label: 'Primary',
+					type: 'submit',
+				},
+			],
+			size: 'sm',
+		});
+	});
+</script>
+```
+
+<div class="table-responsive">
+	<table class="table table-autofit table-hover table-list">
+		<thead>
+			<tr>
+				<th class="table-cell-expand-smallest">Property</th>
+				<th class="table-cell-expand-smallest">Type</th>
+				<th class="table-cell-expand">Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="table-cell-expand-smallest">bodyHTML</td>
+				<td class="table-cell-expand-smallest">String</td>
+				<td class="table-cell-expand">The HTML to place inside <code>modal-body</code>.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">buttons</td>
+				<td class="table-cell-expand-smallest">Array</td>
+				<td class="table-cell-expand">An array of objects that generate buttons in the <code>modal-footer</code>.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">containerProps</td>
+				<td class="table-cell-expand-smallest">Object</td>
+				<td class="table-cell-expand">The React container properties to add on the outer most element. Use <code>{ className: '', }</code> to remove the <code>cadmin</code> class from a modal.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">headerHTML</td>
+				<td class="table-cell-expand-smallest">String</td>
+				<td class="table-cell-expand">The HTML to place inside <code>modal-title</code>.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">id</td>
+				<td class="table-cell-expand-smallest">String</td>
+				<td class="table-cell-expand">The <code>id</code> attribute on the <code>modal</code>.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">iframeBodyCssClass</td>
+				<td class="table-cell-expand-smallest">String</td>
+				<td class="table-cell-expand">The CSS class names to add on the iframe body.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">height</td>
+				<td class="table-cell-expand-smallest">Number or String</td>
+				<td class="table-cell-expand">This gives a fixed height to the <code>modal-body</code>.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">onClose</td>
+				<td class="table-cell-expand-smallest">Function</td>
+				<td class="table-cell-expand">A JavaScript function to run when the modal is closed.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">onOpen</td>
+				<td class="table-cell-expand-smallest">Function</td>
+				<td class="table-cell-expand">A JavaScript function to run when the modal is opened.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">size</td>
+				<td class="table-cell-expand-smallest">String</td>
+				<td class="table-cell-expand">The size of the modal. The available values are <code>'sm'</code>, <code>'md'</code>, <code>'lg'</code>, <code>'full-screen'</code></td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">title</td>
+				<td class="table-cell-expand-smallest">String</td>
+				<td class="table-cell-expand">The text to display in the <code>modal-header</code>.</td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">url</td>
+				<td class="table-cell-expand-smallest">String</td>
+				<td class="table-cell-expand">This places the contents of the url inside an iframe in the <code>modal-body</code> section of the modal. This will always win over <code>bodyHTML</code></td>
+			</tr>
+			<tr>
+				<td class="table-cell-expand-smallest">zIndex</td>
+				<td class="table-cell-expand-smallest">Number</td>
+				<td class="table-cell-expand">The <code>z-index</code> of the modal.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
 ## Sizes(#css-sizes)
 
 ### Small(#css-small)
