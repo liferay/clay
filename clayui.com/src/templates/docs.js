@@ -212,6 +212,7 @@ export default function Documentation(props) {
 				</a>
 				<a
 					accessKey="k"
+					aria-keyshortcuts="k"
 					className="d-inline-flex m-1 p-1 sr-only sr-only-focusable"
 					href="#algolia-doc-search"
 				>
