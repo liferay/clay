@@ -14,7 +14,6 @@
 			position: absolute;
 			right: 0.875rem;
 			top: 50%;
-			width: 1.5rem;
 			z-index: 9;
 
 			.lexicon-icon {
@@ -26,7 +25,7 @@
 			background-color: white;
 			border-radius: 4px;
 			padding-left: 0.875rem;
-			padding-right: $base-size * 1.5;
+			padding-right: $base-size * 2.5;
 
 			&::-moz-placeholder {
 				opacity: 1;

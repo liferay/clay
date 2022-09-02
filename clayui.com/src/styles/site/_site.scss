@@ -38,3 +38,22 @@ body {
 		flex-wrap: nowrap;
 	}
 }
+
+.skippy {
+	background-color: $brand-bg-dark;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+
+	&:focus-within a {
+		height: auto !important;
+		overflow: visible !important;
+		width: auto !important;
+		position: static !important;
+	}
+
+	a {
+		color: $brand-lighten;
+	}
+}

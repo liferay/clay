@@ -29,6 +29,8 @@ export default (props) => {
 				/>
 
 				<span className="input-group-addon">
+					<kbd className="mr-2">K</kbd>
+
 					<svg className="lexicon-icon">
 						<use xlinkHref="/images/icons/icons.svg#search" />
 					</svg>

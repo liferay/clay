@@ -203,6 +203,22 @@ export default function Documentation(props) {
 
 	return (
 		<div className="docs">
+			<div className="overflow-hidden skippy">
+				<a
+					className="d-inline-flex m-1 p-1 sr-only sr-only-focusable"
+					href="#content"
+				>
+					Skip to main content
+				</a>
+				<a
+					accessKey="k"
+					aria-keyshortcuts="k"
+					className="d-inline-flex m-1 p-1 sr-only sr-only-focusable"
+					href="#algolia-doc-search"
+				>
+					Skip to search
+				</a>
+			</div>
 			<Helmet>
 				<title>{title}</title>
 				<meta content={excerpt} name="description" />
@@ -234,7 +250,7 @@ export default function Documentation(props) {
 										<LayoutNav
 											pathname={location.pathname}
 										/>
-										<header>
+										<header id="content">
 											<div className="clay-site-container container-fluid">
 												<div className="row">
 													<div className="col-12">
