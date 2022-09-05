@@ -5,11 +5,10 @@
 
 import {__UNSTABLE_DataClient, useProvider} from '@clayui/provider';
 import {useDebounce} from '@clayui/shared';
-import stringify from 'fast-json-stable-stringify';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import warning from 'warning';
 
-import {timeout} from './util';
+import {getIdentifier, timeout} from './util';
 
 export enum FetchPolicy {
 	CacheFirst = 'cache-first',
@@ -255,11 +254,11 @@ const useResource = ({
 
 	const identifier = useMemo(() => {
 		if (typeof link === 'string') {
-			return `${link}:${stringify(variables)}`;
+			return getIdentifier(link, variables, fetchOptions);
 		}
 
 		return uid;
-	}, [link, variables]);
+	}, [link, variables, fetchOptions]);
 
 	const {client: globalClient} = useProvider();
 
