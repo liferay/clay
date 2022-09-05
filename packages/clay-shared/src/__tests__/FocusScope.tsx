@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import Icon from '@clayui/icon';
 import {cleanup, fireEvent, render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import '@testing-library/jest-dom/extend-expect';
 import {ClayPortal, FocusScope} from '..';
@@ -327,5 +328,83 @@ describe('FocusScope', () => {
 
 			expect(button1El).toHaveFocus();
 		});
+	});
+
+	type Props = {
+		children: JSX.Element;
+		condition: boolean;
+		onRender: () => void;
+	};
+
+	it('move focus when there is an element in the tree in progress', () => {
+		document.body.innerHTML = '';
+
+		const OnRender = ({children, condition, onRender}: Props) => {
+			useEffect(() => {
+				if (condition) {
+					onRender();
+				}
+			}, [condition]);
+
+			return children;
+		};
+
+		const Menu = () => {
+			const [active, setActive] = useState(false);
+
+			return (
+				<FocusScope>
+					{(focusManager) => (
+						<div id="wrapper">
+							<button onClick={() => setActive(!active)}>
+								Open
+								<Icon
+									spritemap="icons.svg"
+									symbol={active ? 'up' : 'down'}
+								/>
+							</button>
+							<ClayPortal>
+								<OnRender
+									condition={active}
+									onRender={() => focusManager.focusNext()}
+								>
+									<ul role="menu">
+										<li role="presentation">
+											<a href="#" role="menuitem">
+												link 1
+											</a>
+										</li>
+										<li role="presentation">
+											<a href="#" role="menuitem">
+												link 2
+											</a>
+										</li>
+										<li role="presentation">
+											<a href="#" role="menuitem">
+												link 3
+											</a>
+										</li>
+									</ul>
+								</OnRender>
+							</ClayPortal>
+						</div>
+					)}
+				</FocusScope>
+			);
+		};
+
+		const {getAllByRole, getByRole} = render(<Menu />);
+
+		const button = getByRole('button');
+
+		button.focus();
+
+		expect(button === document.activeElement).toBeTruthy();
+
+		fireEvent.click(button);
+
+		const [link1] = getAllByRole('menuitem');
+
+		expect(link1 === document.activeElement).toBeTruthy();
 	});
 });
