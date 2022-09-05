@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.72.0](https://github.com/liferay/clay/compare/v3.71.0...v3.72.0) (2022-09-05)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes error when not moving focus to element in menu when renderMenuOnClick property is set ([2daac65](https://github.com/liferay/clay/commit/2daac65928b9f9d4c9503bc7ba1163173b530ff5))
+
 # [3.71.0](https://github.com/liferay/clay/compare/v3.70.3...v3.71.0) (2022-08-30)
 
 **Note:** Version bump only for package @clayui/drop-down

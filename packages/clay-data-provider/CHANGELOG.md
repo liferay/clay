@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.72.0](https://github.com/liferay/clay/compare/v3.71.0...v3.72.0) (2022-09-05)
+
+### Features
+
+-   **@clayui/data-provider:** improves the creation of the unique identifier of the request ([c9e753c](https://github.com/liferay/clay/commit/c9e753c0a8531afd7a275b474c295bf86ec1cf61))
+
 # [3.71.0](https://github.com/liferay/clay/compare/v3.70.3...v3.71.0) (2022-08-30)
 
 ### Features

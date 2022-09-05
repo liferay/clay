@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.72.0](https://github.com/liferay/clay/compare/v3.71.0...v3.72.0) (2022-09-05)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes error when not moving focus to element in menu when renderMenuOnClick property is set ([2daac65](https://github.com/liferay/clay/commit/2daac65928b9f9d4c9503bc7ba1163173b530ff5))
+
+### Features
+
+-   **@clayui/data-provider:** improves the creation of the unique identifier of the request ([c9e753c](https://github.com/liferay/clay/commit/c9e753c0a8531afd7a275b474c295bf86ec1cf61))
+-   **clayui.com:** Add Accessibility bar links ([213c0ff](https://github.com/liferay/clay/commit/213c0ff0cb70a5e2a6cb6324933b3ae4857932e4))
+-   **clayui.com:** Add accesskey K for search ([7175a5e](https://github.com/liferay/clay/commit/7175a5e66fe77691e812e29f90d1f8d1abae2b41))
+-   **clayui.com:** Add aria-keyshortcuts ([ace856f](https://github.com/liferay/clay/commit/ace856ff64607a9d8cdde81411580cad7919bc77))
+
 # [3.71.0](https://github.com/liferay/clay/compare/v3.70.3...v3.71.0) (2022-08-30)
 
 ### Features
