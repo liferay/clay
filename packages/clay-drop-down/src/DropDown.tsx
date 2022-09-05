@@ -4,6 +4,7 @@
  */
 
 import {
+	FOCUSABLE_ELEMENTS,
 	FocusScope,
 	InternalDispatch,
 	Keys,
@@ -295,7 +296,30 @@ function ClayDropDown({
 						>
 							<FocusMenu
 								condition={internalActive}
-								onRender={() => focusManager.focusNext()}
+								onRender={() => {
+									const element = focusManager.focusNext();
+
+									if (element !== document.activeElement) {
+										// If the focus manager is unable to move the focus to
+										// the item inside the menu, as a fallback try after a
+										// few milliseconds querying the elements in the DOM
+										// inside the menu. This especially when the menu is not
+										// rendered yet only after the menu is opened, React
+										// needs to commit the changes to the DOM so that the
+										// elements are visible and we can move the focus.
+										setTimeout(() => {
+											const first =
+												menuElementRef.current?.querySelector(
+													// @ts-ignore
+													FOCUSABLE_ELEMENTS
+												);
+
+											if (first) {
+												first.focus();
+											}
+										}, 10);
+									}
+								}}
 							>
 								<DropDownContext.Provider
 									value={{
@@ -317,13 +341,13 @@ function ClayDropDown({
 	);
 }
 
-type FocusMenuProps = {
-	children: JSX.Element;
+type FocusMenuProps<T> = {
+	children: T;
 	condition: boolean;
 	onRender: () => void;
 };
 
-function FocusMenu({children, condition, onRender}: FocusMenuProps) {
+function FocusMenu<T>({children, condition, onRender}: FocusMenuProps<T>) {
 	useEffect(() => {
 		if (condition) {
 			onRender();
