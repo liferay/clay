@@ -7,6 +7,9 @@ import React, {useEffect, useRef} from 'react';
 
 export default (props) => {
 	const autocompleteRef = useRef();
+	const inputRef = useRef();
+	let platform = null;
+
 	useEffect(() => {
 		if (window.docsearch) {
 			window.docsearch({
@@ -16,15 +19,34 @@ export default (props) => {
 			});
 		}
 
-		const platform = (
+		const platformUserAgent = (
 			navigator?.userAgentData?.platform || navigator?.platform
 		).toLowerCase();
 
-		if (platform.includes('mac')) {
+		if (platformUserAgent.includes('mac')) {
+			platform = 'mac';
 			autocompleteRef.current.setAttribute('data-platform', 'mac');
-		} else if (platform.includes('linux')) {
+		} else if (platformUserAgent.includes('linux')) {
+			platform = 'linux';
 			autocompleteRef.current.setAttribute('data-platform', 'linux');
 		}
+
+		const handleKeyDown = (event) => {
+			const isLinuxKey = platform == 'linux' && event.altKey;
+			const isNotMacKey = platform !== 'mac' && event.ctrlKey;
+
+			if (event.key === 'k' && (isLinuxKey || isNotMacKey)) {
+				inputRef.current.focus();
+			}
+		};
+
+		if (platform !== 'mac') {
+			document.addEventListener('keydown', handleKeyDown);
+		}
+
+		return () => {
+			document.removeEventListener('keydown', handleKeyDown);
+		};
 	}, []);
 
 	return (
@@ -36,6 +58,7 @@ export default (props) => {
 						id="algolia-doc-search"
 						name="q"
 						placeholder={props.placeholder}
+						ref={inputRef}
 						required
 						type="text"
 					/>
