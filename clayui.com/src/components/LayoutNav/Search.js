@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 export default (props) => {
+	const autocompleteRef = useRef();
 	useEffect(() => {
 		if (window.docsearch) {
 			window.docsearch({
@@ -14,27 +15,41 @@ export default (props) => {
 				inputSelector: '#algolia-doc-search',
 			});
 		}
+
+		const platform = (
+			navigator?.userAgentData?.platform || navigator?.platform
+		).toLowerCase();
+
+		if (platform.includes('mac')) {
+			autocompleteRef.current.setAttribute('data-platform', 'mac');
+		} else if (platform.includes('linux')) {
+			autocompleteRef.current.setAttribute('data-platform', 'linux');
+		}
 	}, []);
 
 	return (
-		<div className="page-autocomplete">
-			<div className="input-group">
-				<input
-					className="form-control"
-					id="algolia-doc-search"
-					name="q"
-					placeholder={props.placeholder}
-					required
-					type="text"
-				/>
+		<div className="platform" ref={autocompleteRef}>
+			<div className="page-autocomplete">
+				<div className="input-group">
+					<input
+						className="form-control"
+						id="algolia-doc-search"
+						name="q"
+						placeholder={props.placeholder}
+						required
+						type="text"
+					/>
 
-				<span className="input-group-addon">
-					<kbd className="mr-2">K</kbd>
+					<span aria-hidden="true" className="input-group-addon">
+						<span className="c-kbd c-kbd-sm d-md-block d-none mr-2">
+							<kbd className="c-kbd">K</kbd>
+						</span>
 
-					<svg className="lexicon-icon">
-						<use xlinkHref="/images/icons/icons.svg#search" />
-					</svg>
-				</span>
+						<svg className="lexicon-icon">
+							<use xlinkHref="/images/icons/icons.svg#search" />
+						</svg>
+					</span>
+				</div>
 			</div>
 		</div>
 	);

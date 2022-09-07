@@ -16,6 +16,20 @@
 			top: 50%;
 			z-index: 9;
 
+			> .c-kbd {
+				&:before {
+					content: 'ctrl + ';
+				}
+
+				@at-root [data-platform='mac'] &:before {
+					content: 'ctrl + ⌥ + ';
+				}
+
+				@at-root [data-platform='linux'] &:before {
+					content: 'alt + ';
+				}
+			}
+
 			.lexicon-icon {
 				margin-top: 0;
 			}
@@ -25,7 +39,11 @@
 			background-color: white;
 			border-radius: 4px;
 			padding-left: 0.875rem;
-			padding-right: $base-size * 2.5;
+			padding-right: $base-size * 4;
+
+			@at-root [data-platform='mac'] & {
+				padding-right: $base-size * 5;
+			}
 
 			&::-moz-placeholder {
 				opacity: 1;
