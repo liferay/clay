@@ -25,17 +25,23 @@ export default (props) => {
 
 		if (platformUserAgent.includes('mac')) {
 			platform = 'mac';
+			props.searchRef.current.setAttribute(
+				'aria-keyshortcuts',
+				'Control+Option+K'
+			);
 			autocompleteRef.current.setAttribute('data-platform', 'mac');
 		} else if (platformUserAgent.includes('linux')) {
 			platform = 'linux';
+			props.searchRef.current.setAttribute('aria-keyshortcuts', 'Alt+K');
 			autocompleteRef.current.setAttribute('data-platform', 'linux');
 		}
 
 		const handleKeyDown = (event) => {
-			const isLinuxKey = platform == 'linux' && event.altKey;
-			const isNotMacKey = platform !== 'mac' && event.ctrlKey;
+			const isLinuxKey = platform === 'linux' && event.altKey;
+			const isNotMacKey = platform === null && event.ctrlKey;
 
-			if (event.key === 'k' && (isLinuxKey || isNotMacKey)) {
+			if (event.code === 'KeyK' && (isLinuxKey || isNotMacKey)) {
+				event.preventDefault();
 				inputRef.current.focus();
 			}
 		};
