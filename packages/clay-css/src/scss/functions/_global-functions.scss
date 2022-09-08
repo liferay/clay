@@ -300,7 +300,7 @@
 /// @param {String} $var - The CSS Custom Property to evaluate.
 
 @function clay-get-fallback($var) {
-	@if (is-css-var($var)) {
+	@if (is-css-var($var) and str-index($var, ',')) {
 		$fallback-value: str-slice(
 			$var,
 			str-index($var, ',') + 2,
