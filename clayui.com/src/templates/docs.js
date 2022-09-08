@@ -10,7 +10,7 @@ import {ClayTooltipProvider} from '@clayui/tooltip';
 import {MDXProvider} from '@mdx-js/react';
 import {Link, graphql} from 'gatsby';
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import Helmet from 'react-helmet';
 import svg4everybody from 'svg4everybody';
 
@@ -160,6 +160,7 @@ const Content = ({html, jsx}) =>
 	) : null;
 
 export default function Documentation(props) {
+	const skipToSearch = useRef();
 	const {
 		data,
 		location,
@@ -212,9 +213,10 @@ export default function Documentation(props) {
 				</a>
 				<a
 					accessKey="k"
-					aria-keyshortcuts="k"
+					aria-keyshortcuts="Control+K"
 					className="d-inline-flex m-1 p-1 sr-only sr-only-focusable"
 					href="#algolia-doc-search"
+					ref={skipToSearch}
 				>
 					Skip to search
 				</a>
@@ -249,6 +251,7 @@ export default function Documentation(props) {
 									<div className="col-xl sidebar-offset">
 										<LayoutNav
 											pathname={location.pathname}
+											searchRef={skipToSearch}
 										/>
 										<header id="content">
 											<div className="clay-site-container container-fluid">
