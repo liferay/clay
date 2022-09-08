@@ -55,7 +55,10 @@ export default (location) => {
 		<nav className="navbar navbar-clay-site navbar-expand-lg navbar-fixed-clay-site navbar-light">
 			<div className="autofit-float-sm-down autofit-padded autofit-row">
 				<div className="autofit-col autofit-col-expand">
-					<Search placeholder="Search..." />
+					<Search
+						placeholder="Search..."
+						searchRef={location.searchRef}
+					/>
 				</div>
 				<div className="autofit-col flex-wrap">
 					<ul className="ml-auto navbar-nav">
