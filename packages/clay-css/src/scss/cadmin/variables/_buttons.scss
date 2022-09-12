@@ -382,7 +382,7 @@ $cadmin-btn-primary: map-deep-merge(
 	(
 		background-color: $cadmin-primary,
 		background-image: clay-enable-gradients($cadmin-primary),
-		border-color: $cadmin-primary,
+		border-color: transparent,
 		color: color-yiq($cadmin-primary),
 		hover: (
 			background-color: $cadmin-primary-d1,
@@ -393,7 +393,7 @@ $cadmin-btn-primary: map-deep-merge(
 		focus: (
 			background-color: $cadmin-primary-d1,
 			background-image: clay-enable-gradients($cadmin-primary-d1),
-			border-color: clay-darken($cadmin-primary, 10%),
+			border-color: transparent,
 			color: color-yiq(clay-darken($cadmin-primary, 7.5%)),
 		),
 		active: (
@@ -405,7 +405,7 @@ $cadmin-btn-primary: map-deep-merge(
 		disabled: (
 			background-color: $cadmin-primary,
 			background-image: clay-enable-gradients($cadmin-primary),
-			border-color: $cadmin-primary,
+			border-color: transparent,
 			color: color-yiq($cadmin-primary),
 		),
 	),
@@ -452,7 +452,7 @@ $cadmin-btn-success: map-deep-merge(
 	(
 		background-color: $cadmin-success,
 		background-image: clay-enable-gradients($cadmin-success),
-		border-color: $cadmin-success,
+		border-color: transparent,
 		color: color-yiq($cadmin-success),
 		hover: (
 			background-color: $cadmin-success-d1,
@@ -475,7 +475,7 @@ $cadmin-btn-success: map-deep-merge(
 		disabled: (
 			background-color: $cadmin-success,
 			background-image: clay-enable-gradients($cadmin-success),
-			border-color: $cadmin-success,
+			border-color: transparent,
 			color: color-yiq($cadmin-success),
 		),
 	),
@@ -487,7 +487,7 @@ $cadmin-btn-info: map-deep-merge(
 	(
 		background-color: $cadmin-info,
 		background-image: clay-enable-gradients($cadmin-info),
-		border-color: $cadmin-info,
+		border-color: transparent,
 		color: color-yiq($cadmin-info),
 		hover: (
 			background-color: $cadmin-info-d1,
@@ -510,7 +510,7 @@ $cadmin-btn-info: map-deep-merge(
 		disabled: (
 			background-color: $cadmin-info,
 			background-image: clay-enable-gradients($cadmin-info),
-			border-color: $cadmin-info,
+			border-color: transparent,
 			color: color-yiq($cadmin-info),
 		),
 	),
@@ -522,7 +522,7 @@ $cadmin-btn-warning: map-deep-merge(
 	(
 		background-color: $cadmin-warning,
 		background-image: clay-enable-gradients($cadmin-warning),
-		border-color: $cadmin-warning,
+		border-color: transparent,
 		color: color-yiq($cadmin-warning),
 		hover: (
 			background-color: $cadmin-warning-d1,
@@ -546,7 +546,7 @@ $cadmin-btn-warning: map-deep-merge(
 		disabled: (
 			background-color: $cadmin-warning,
 			background-image: clay-enable-gradients($cadmin-warning),
-			border-color: $cadmin-warning,
+			border-color: transparent,
 			color: color-yiq($cadmin-warning),
 		),
 	),
@@ -558,7 +558,7 @@ $cadmin-btn-danger: map-deep-merge(
 	(
 		background-color: $cadmin-danger,
 		background-image: clay-enable-gradients($cadmin-danger),
-		border-color: $cadmin-danger,
+		border-color: transparent,
 		color: color-yiq($cadmin-danger),
 		hover: (
 			background-color: $cadmin-danger-d1,
@@ -581,7 +581,7 @@ $cadmin-btn-danger: map-deep-merge(
 		disabled: (
 			background-color: $cadmin-danger,
 			background-image: clay-enable-gradients(none),
-			border-color: $cadmin-danger,
+			border-color: transparent,
 			color: color-yiq($cadmin-danger),
 		),
 	),
@@ -593,7 +593,7 @@ $cadmin-btn-light: map-deep-merge(
 	(
 		background-color: $cadmin-light,
 		background-image: clay-enable-gradients($cadmin-light),
-		border-color: $cadmin-light,
+		border-color: transparent,
 		color: $cadmin-gray-900,
 		hover: (
 			background-color: $cadmin-light-d1,
@@ -616,7 +616,7 @@ $cadmin-btn-light: map-deep-merge(
 		disabled: (
 			background-color: $cadmin-light,
 			background-image: clay-enable-gradients($cadmin-light),
-			border-color: $cadmin-light,
+			border-color: transparent,
 			color: color-yiq($cadmin-light),
 		),
 	),
@@ -628,7 +628,7 @@ $cadmin-btn-dark: map-deep-merge(
 	(
 		background-color: $cadmin-dark,
 		background-image: clay-enable-gradients($cadmin-dark),
-		border-color: $cadmin-dark,
+		border-color: transparent,
 		color: color-yiq($cadmin-dark),
 		hover: (
 			background-color: $cadmin-dark-d1,
@@ -651,7 +651,7 @@ $cadmin-btn-dark: map-deep-merge(
 		disabled: (
 			background-color: $cadmin-dark,
 			background-image: clay-enable-gradients($cadmin-dark),
-			border-color: $cadmin-dark,
+			border-color: transparent,
 			color: color-yiq($cadmin-dark),
 		),
 	),
