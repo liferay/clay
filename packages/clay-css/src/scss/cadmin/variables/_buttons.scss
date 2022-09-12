@@ -94,6 +94,8 @@ $cadmin-btn: map-deep-merge(
 		),
 		inline-item: (
 			font-size: $cadmin-btn-inline-item-font-size,
+			line-height: 1,
+			margin-top: -3px,
 			lexicon-icon: (
 				margin-top: 0,
 			),
@@ -195,6 +197,26 @@ $cadmin-btn-sm: map-deep-merge(
 $cadmin-btn-sizes: () !default;
 $cadmin-btn-sizes: map-deep-merge(
 	(
+		btn-xs: (
+			font-size: 0.75rem,
+			padding-bottom: 0.125rem,
+			padding-left: 0.5rem,
+			padding-right: 0.5rem,
+			padding-top: 0.125rem,
+			inline-item: (
+				font-size: inherit,
+				margin-top: -3px,
+			),
+			inline-item-before: (
+				margin-right: 0.25rem,
+			),
+			inline-item-after: (
+				margin-left: 0.25rem,
+			),
+			btn-section: (
+				font-size: 0.375rem,
+			),
+		),
 		btn-lg: $cadmin-btn-lg,
 		btn-sm: $cadmin-btn-sm,
 	),
@@ -230,6 +252,9 @@ $cadmin-btn-monospaced: map-deep-merge(
 		mobile: (
 			height: $cadmin-btn-monospaced-size-mobile,
 			width: $cadmin-btn-monospaced-size-mobile,
+		),
+		inline-item: (
+			margin-top: 0,
 		),
 		lexicon-icon: (
 			margin-top: 0,
@@ -302,6 +327,10 @@ $cadmin-btn-monospaced-sm: map-deep-merge(
 $cadmin-btn-monospaced-sizes: () !default;
 $cadmin-btn-monospaced-sizes: map-deep-merge(
 	(
+		btn-monospaced-xs: (
+			height: 1.5rem,
+			width: 1.4rem,
+		),
 		btn-monospaced: $cadmin-btn-monospaced,
 		btn-monospaced-lg: $cadmin-btn-monospaced-lg,
 		btn-monospaced-sm: $cadmin-btn-monospaced-sm,
