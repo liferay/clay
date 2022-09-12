@@ -93,6 +93,8 @@ $btn: map-deep-merge(
 		),
 		inline-item: (
 			font-size: $btn-inline-item-font-size,
+			line-height: 1,
+			margin-top: -3px,
 			lexicon-icon: (
 				margin-top: 0,
 			),
@@ -194,6 +196,26 @@ $btn-sm: map-deep-merge(
 $btn-sizes: () !default;
 $btn-sizes: map-deep-merge(
 	(
+		btn-xs: (
+			font-size: 0.75rem,
+			padding-bottom: 0.125rem,
+			padding-left: 0.5rem,
+			padding-right: 0.5rem,
+			padding-top: 0.125rem,
+			inline-item: (
+				font-size: inherit,
+				margin-top: -3px,
+			),
+			inline-item-before: (
+				margin-right: 0.25rem,
+			),
+			inline-item-after: (
+				margin-left: 0.25rem,
+			),
+			btn-section: (
+				font-size: 0.375rem,
+			),
+		),
 		btn-lg: $btn-lg,
 		btn-sm: $btn-sm,
 	),
@@ -229,6 +251,9 @@ $btn-monospaced: map-deep-merge(
 		mobile: (
 			height: $btn-monospaced-size-mobile,
 			width: $btn-monospaced-size-mobile,
+		),
+		inline-item: (
+			margin-top: 0,
 		),
 		lexicon-icon: (
 			margin-top: 0,
@@ -301,6 +326,10 @@ $btn-monospaced-sm: map-deep-merge(
 $btn-monospaced-sizes: () !default;
 $btn-monospaced-sizes: map-deep-merge(
 	(
+		btn-monospaced-xs: (
+			height: 1.5rem,
+			width: 1.5rem,
+		),
 		btn-monospaced: $btn-monospaced,
 		btn-monospaced-lg: $btn-monospaced-lg,
 		btn-monospaced-sm: $btn-monospaced-sm,
