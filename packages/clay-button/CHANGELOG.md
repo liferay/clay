@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
+
+### Bug Fixes
+
+-   **@clayui/button:** Storybook adds rounded and shape ([cffacb1](https://github.com/liferay/clay/commit/cffacb18a425af50fe635e94edd9276fdc279b39))
+
+### Features
+
+-   **@clayui/button:** Adds rounded and size attributes to output pill and different size buttons ([7ce56ff](https://github.com/liferay/clay/commit/7ce56ffe80890fea318e82245770d3403ded586d))
+
 # [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
 
 **Note:** Version bump only for package @clayui/button

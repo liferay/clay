@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Buttons use transparent border for solid buttons ([8357269](https://github.com/liferay/clay/commit/83572697500a621f18b1e4a1adc9fc78a922d9d9))
+* **@clayui/css:** Functions `clay-get-fallback()` should return custom property if no fallback value ([242216a](https://github.com/liferay/clay/commit/242216ae188a2d59db950e00dd0daa27d05d57c1))
+
+
+### Features
+
+* **@clayui/css:** Buttons adds a 24px tall button, `btn-xs` ([fadeb3a](https://github.com/liferay/clay/commit/fadeb3ad559ea5c82892c2ca88e8f5a7ae752dd4))
+* **@clayui/css:** Cadmin Buttons adds a 24px tall button, `btn-xs` ([06f56f6](https://github.com/liferay/clay/commit/06f56f609d98c9847e71019ced9ae7ec93b62d55))
+* **@clayui/css:** SVG Icons adds Argentina, Mexico, and Columbia flags ([8d5a33c](https://github.com/liferay/clay/commit/8d5a33c5690286d1fdb4f4831172f969eea4d69b))
+
+
+
+
+
 ## [3.70.1](https://github.com/liferay/clay/compare/v3.70.0...v3.70.1) (2022-08-24)
 
 **Note:** Version bump only for package @clayui/css

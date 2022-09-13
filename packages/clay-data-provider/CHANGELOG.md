@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
+
+### Bug Fixes
+
+-   **@clayui/data-provider:** fixes error when not activating suspense ([a563a87](https://github.com/liferay/clay/commit/a563a872ffdaa9d825ba796ee2e99bb8c625b917))
+
 # [3.72.0](https://github.com/liferay/clay/compare/v3.71.0...v3.72.0) (2022-09-05)
 
 ### Features

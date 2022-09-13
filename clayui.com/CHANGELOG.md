@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
+
+### Features
+
+-   **clayui.com:** Add aria changes and improve compatibility ([1b1bab0](https://github.com/liferay/clay/commit/1b1bab00f0ce704f35a62658b7fbd63f8016a88b))
+-   **clayui.com:** Add JS key shortcut for linux and windows ([25fe337](https://github.com/liferay/clay/commit/25fe33721673a6b6fd6360d7dbd6fc19fd3f77f0))
+-   **clayui.com:** Add key shortcut keys by platform type and hiding it in mobile ([e6a5561](https://github.com/liferay/clay/commit/e6a5561e71fce1ed736dae4a591e0153aa26eb7e))
+
 # [3.72.0](https://github.com/liferay/clay/compare/v3.71.0...v3.72.0) (2022-09-05)
 
 ### Features
