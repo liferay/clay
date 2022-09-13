@@ -536,7 +536,7 @@ const useResource = ({
 		};
 	}, []);
 
-	const fetchingOrError = client.current.isFetching(identifier);
+	let fetchingOrError = client.current.isFetching(identifier);
 
 	// Makes first request if not started at render time
 	if (!fetchingOrError && firstRenderRef.current) {
@@ -544,6 +544,7 @@ const useResource = ({
 
 		if (result) {
 			firstRequestRef.current = true;
+			fetchingOrError = result;
 
 			client.current.update(identifier, result);
 		}
