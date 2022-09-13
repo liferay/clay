@@ -125,7 +125,7 @@ describe('ClayDataProvider', () => {
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
-	it.skip('calls clay.data and returns data from the cache and fetches data on the network', async () => {
+	xit('calls clay.data and returns data from the cache and fetches data on the network', async () => {
 		fetchMock.mockResponse(JSON.stringify({title: 'Bar'}));
 
 		const {container} = render(
@@ -473,5 +473,192 @@ describe('ClayDataProvider', () => {
 		);
 
 		expect(getAllByRole('listitem').length).toBe(3);
+	});
+
+	it('does not deduplicate the request to the same endpoint when there is no declared Provider', async () => {
+		const data = [{name: 'Bar'}];
+
+		fetchMock.mockResponse(JSON.stringify(data));
+
+		const DataProviderTest = () => {
+			const {resource} = useResource({
+				link: 'https://clay.data',
+				variables: {limit: 10},
+			});
+
+			const {resource: resource2} = useResource({
+				link: 'https://clay.data',
+				variables: {limit: 10},
+			});
+
+			return (
+				<>
+					<ul role="list">
+						{resource &&
+							resource.map((item: any) => (
+								<li key={item.name} role="listitem">
+									{item.name}
+								</li>
+							))}
+					</ul>
+
+					<ul role="list">
+						{resource2 &&
+							resource2.map((item: any) => (
+								<li key={item.name} role="listitem">
+									{item.name}
+								</li>
+							))}
+					</ul>
+				</>
+			);
+		};
+
+		const {getAllByRole} = render(<DataProviderTest />);
+
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
+
+		const [listitem1, listitem2] = getAllByRole('listitem');
+
+		expect(listitem1).toBeDefined();
+		expect(listitem2).toBeDefined();
+	});
+
+	it('deduplicates the first request to the same endpoint when the Provider is declared', async () => {
+		const data = [{name: 'Bar'}];
+
+		fetchMock.mockResponse(JSON.stringify(data));
+
+		const DataProviderTest = () => {
+			const {resource} = useResource({
+				link: 'https://clay.data',
+				variables: {limit: 10},
+			});
+
+			const {resource: resource2} = useResource({
+				link: 'https://clay.data',
+				variables: {limit: 10},
+			});
+
+			return (
+				<>
+					<ul role="list">
+						{resource &&
+							resource.map((item: any) => (
+								<li key={item.name} role="listitem">
+									{item.name}
+								</li>
+							))}
+					</ul>
+
+					<ul role="list">
+						{resource2 &&
+							resource2.map((item: any) => (
+								<li key={item.name} role="listitem">
+									{item.name}
+								</li>
+							))}
+					</ul>
+				</>
+			);
+		};
+
+		const {getAllByRole} = render(
+			<Provider spritemap="">
+				<DataProviderTest />
+			</Provider>
+		);
+
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
+
+		const [listitem1, listitem2] = getAllByRole('listitem');
+
+		expect(listitem1).toBeDefined();
+		expect(listitem2).toBeDefined();
+	});
+
+	it('do not deduplicate request to same endpoint when options are different', async () => {
+		fetchMock.mockResponse(
+			(request) =>
+				new Promise((resolve, reject) =>
+					request.text().then((body) => {
+						const search = new URLSearchParams(body);
+						const cmd = JSON.parse(search.get('cmd')!);
+
+						if (cmd['/foo/query']) {
+							resolve(JSON.stringify([{name: 'Foo'}]));
+						} else if (cmd['/bar/query']) {
+							resolve(JSON.stringify([{name: 'Baz'}]));
+						}
+					}, reject)
+				)
+		);
+
+		const DataProviderTest = () => {
+			const {resource} = useResource({
+				fetchOptions: {
+					body: new URLSearchParams({
+						cmd: JSON.stringify({
+							'/foo/query': {
+								name: 'f',
+							},
+						}),
+					}),
+					method: 'POST',
+				},
+				link: 'https://clay.data',
+				variables: {limit: 10},
+			});
+
+			const {resource: resource2} = useResource({
+				fetchOptions: {
+					body: new URLSearchParams({
+						cmd: JSON.stringify({
+							'/bar/query': {
+								name: 'b',
+							},
+						}),
+					}),
+					method: 'POST',
+				},
+				link: 'https://clay.data',
+				variables: {limit: 10},
+			});
+
+			return (
+				<>
+					<ul role="list">
+						{resource &&
+							resource.map((item: any) => (
+								<li key={item.name} role="listitem">
+									{item.name}
+								</li>
+							))}
+					</ul>
+
+					<ul role="list">
+						{resource2 &&
+							resource2.map((item: any) => (
+								<li key={item.name} role="listitem">
+									{item.name}
+								</li>
+							))}
+					</ul>
+				</>
+			);
+		};
+
+		const {getAllByRole} = render(
+			<Provider spritemap="">
+				<DataProviderTest />
+			</Provider>
+		);
+
+		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
+
+		const [listitem1, listitem2] = getAllByRole('listitem');
+
+		expect(listitem1.innerHTML).toBe('Foo');
+		expect(listitem2.innerHTML).toBe('Baz');
 	});
 });
