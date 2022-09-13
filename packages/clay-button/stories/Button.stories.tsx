@@ -13,6 +13,10 @@ export default {
 			control: {type: 'select'},
 			options: ['link', 'primary', 'secondary', 'unstyled'],
 		},
+		size: {
+			control: {type: 'select'},
+			options: [null, 'xs', 'sm'],
+		},
 	},
 	component: ClayButton,
 	title: 'Design System/Components/Button',
@@ -26,6 +30,8 @@ export const Default = (args: any) => (
 		displayType={args.displayType}
 		monospaced={args.monospaced}
 		outline={args.outline}
+		rounded={args.rounded}
+		size={args.size}
 		small={args.small}
 	>
 		{args.children}
@@ -40,6 +46,7 @@ Default.args = {
 	displayType: 'primary',
 	monospaced: false,
 	outline: false,
+	rounded: false,
 	small: false,
 };
 
