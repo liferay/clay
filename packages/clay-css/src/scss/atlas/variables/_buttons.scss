@@ -12,7 +12,7 @@ $btn-disabled-opacity: 0.4 !default;
 
 $btn-active-box-shadow: c-unset !default;
 
-$btn-inline-item-font-size: 1rem !default; // 16px
+$btn-inline-item-font-size: null !default;
 
 $btn: () !default;
 $btn: map-deep-merge(

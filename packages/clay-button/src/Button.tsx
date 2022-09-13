@@ -26,7 +26,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	alert?: boolean;
 
 	/**
-	 * Flag to indicate if link should be borderless.
+	 * Flag to indicate if the button should be borderless.
 	 */
 	borderless?: boolean;
 
@@ -36,7 +36,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	block?: boolean;
 
 	/**
-	 * Determines how to button is displayed.
+	 * Determines the button variant to use.
 	 */
 	displayType?: DisplayType;
 
@@ -46,12 +46,23 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	monospaced?: boolean;
 
 	/**
-	 * Flag to indicate if link need have an outline.
+	 * Flag to indicate if the button should use the outline variant.
 	 */
 	outline?: boolean;
 
 	/**
+	 * Flag to indicate if the button should be shaped like a pill.
+	 */
+	rounded?: boolean;
+
+	/**
+	 * Determines the size of a button.
+	 */
+	size?: 'xs' | 'sm';
+
+	/**
 	 * Indicates button should be a small variant.
+	 * @deprecated since v3.72.0 - use `size` instead.
 	 */
 	small?: boolean;
 }
@@ -67,6 +78,8 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 			displayType = 'primary',
 			monospaced,
 			outline,
+			rounded,
+			size,
 			small,
 			type = 'button',
 			...otherProps
@@ -79,10 +92,12 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 				'btn-block': block,
 				'btn-monospaced': monospaced,
 				'btn-outline-borderless': borderless,
-				'btn-sm': small,
+				'btn-sm': small && !size,
 				[`btn-${displayType}`]: displayType && !outline && !borderless,
 				[`btn-outline-${displayType}`]:
 					displayType && (outline || borderless),
+				'rounded-pill': rounded,
+				[`btn-${size}`]: size,
 			})}
 			ref={ref}
 			type={type}
