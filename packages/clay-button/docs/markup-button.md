@@ -17,6 +17,8 @@ mainTabURL: 'docs/components/button.html'
 -   [Icons](#css-icons)
     -   [Sass API](#css-button-monospaced-sass-api)
     -   [With text button](#css-with-text-button)
+-   [Shapes](#css-shapes)
+    -   [Rounded](#css-rounded)
 
 </div>
 </div>
@@ -85,21 +87,27 @@ Outputs:
 <div class="sheet-example">
 	<button class="btn btn-primary" type="button">Default</button>
 	<button class="btn btn-primary btn-sm" type="button">Small</button>
+	<button class="btn btn-primary btn-xs" type="button">Extra Small</button>
 </div>
 
 ```html
 <button class="btn btn-primary" type="button">Default</button>
 <button class="btn btn-primary btn-sm" type="button">Small</button>
+<button class="btn btn-primary btn-xs" type="button">Extra Small</button>
 ```
 
 Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
 
 <div class="sheet-example">
+	<button class="btn btn-block btn-secondary btn-xs" type="button">Extra Small Block Level Button</button>
 	<button class="btn btn-block btn-secondary btn-sm" type="button">Small Block Level Button</button>
 	<button class="btn btn-block btn-secondary" type="button">Normal Block Level Button</button>
 </div>
 
 ```html
+<button class="btn btn-block btn-secondary btn-xs" type="button">
+	Extra Small Block Level Button
+</button>
 <button class="btn btn-block btn-secondary btn-sm" type="button">
 	Small Block Level Button
 </button>
@@ -176,19 +184,85 @@ Buttons can display icons instead of text. The icons, however, must be monospace
 Try adding the modifier class `.btn-monospaced`.
 
 <div class="sheet-example">
-	<button class="btn btn-monospaced btn-primary" type="button">
-		<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#blogs"></use>
-		</svg>
-	</button>
-	<button class="btn btn-monospaced btn-secondary" type="button">
-		<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
-			<use href="/images/icons/icons.svg#blogs"></use>
-		</svg>
-	</button>
+	<div class="mb-2">
+		<button class="btn btn-monospaced btn-primary btn-xs" type="button">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#blogs"></use>
+			</svg>
+		</button>
+		<button class="btn btn-monospaced btn-secondary btn-xs" type="button">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#blogs"></use>
+			</svg>
+		</button>
+	</div>
+	<div class="mb-2">
+		<button class="btn btn-monospaced btn-primary btn-sm" type="button">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#blogs"></use>
+			</svg>
+		</button>
+		<button class="btn btn-monospaced btn-secondary btn-sm" type="button">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#blogs"></use>
+			</svg>
+		</button>
+	</div>
+	<div>
+		<button class="btn btn-monospaced btn-primary" type="button">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#blogs"></use>
+			</svg>
+		</button>
+		<button class="btn btn-monospaced btn-secondary" type="button">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#blogs"></use>
+			</svg>
+		</button>
+	</div>
 </div>
 
 ```html
+<button class="btn btn-monospaced btn-primary btn-xs" type="button">
+	<svg
+		class="lexicon-icon lexicon-icon-blogs"
+		focusable="false"
+		role="presentation"
+	>
+		<use href="/images/icons/icons.svg#blogs"></use>
+	</svg>
+</button>
+
+<button class="btn btn-monospaced btn-secondary btn-xs" type="button">
+	<svg
+		class="lexicon-icon lexicon-icon-blogs"
+		focusable="false"
+		role="presentation"
+	>
+		<use href="/images/icons/icons.svg#blogs"></use>
+	</svg>
+</button>
+
+<button class="btn btn-monospaced btn-primary btn-sm" type="button">
+	<svg
+		class="lexicon-icon lexicon-icon-blogs"
+		focusable="false"
+		role="presentation"
+	>
+		<use href="/images/icons/icons.svg#blogs"></use>
+	</svg>
+</button>
+
+<button class="btn btn-monospaced btn-secondary btn-sm" type="button">
+	<svg
+		class="lexicon-icon lexicon-icon-blogs"
+		focusable="false"
+		role="presentation"
+	>
+		<use href="/images/icons/icons.svg#blogs"></use>
+	</svg>
+</button>
+
 <button class="btn btn-monospaced btn-primary" type="button">
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
@@ -198,6 +272,7 @@ Try adding the modifier class `.btn-monospaced`.
 		<use href="/images/icons/icons.svg#blogs"></use>
 	</svg>
 </button>
+
 <button class="btn btn-monospaced btn-secondary" type="button">
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
@@ -257,10 +332,124 @@ Wrap the icon with the `<span />` tag and adding the [Inline Item](/docs/css/uti
 		</span>
 		Share
 	</button>
+	<button class="btn btn-secondary btn-sm" type="button">
+		<span class="inline-item inline-item-before">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#share"></use>
+			</svg>
+		</span>
+		Share
+	</button>
+	<button class="btn btn-secondary btn-xs" type="button">
+		<span class="inline-item inline-item-before">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#share"></use>
+			</svg>
+		</span>
+		Share
+	</button>
 </div>
 
 ```html
 <button class="btn btn-secondary" type="button">
+	<span class="inline-item inline-item-before">
+		<svg
+			class="lexicon-icon lexicon-icon-blogs"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#share"></use>
+		</svg>
+	</span>
+	Share
+</button>
+
+<button class="btn btn-secondary btn-sm" type="button">
+	<span class="inline-item inline-item-before">
+		<svg
+			class="lexicon-icon lexicon-icon-blogs"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#share"></use>
+		</svg>
+	</span>
+	Share
+</button>
+
+<button class="btn btn-secondary btn-xs" type="button">
+	<span class="inline-item inline-item-before">
+		<svg
+			class="lexicon-icon lexicon-icon-blogs"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#share"></use>
+		</svg>
+	</span>
+	Share
+</button>
+```
+
+## Shapes(#css-shapes)
+
+### Rounded(#css-rounded)
+
+The class `rounded-pill` will make the button pill shaped.
+
+<div class="sheet-example">
+	<button class="btn btn-secondary rounded-pill" type="button">
+		<span class="inline-item inline-item-before">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#share"></use>
+			</svg>
+		</span>
+		Share
+	</button>
+	<button class="btn btn-secondary btn-sm rounded-pill" type="button">
+		<span class="inline-item inline-item-before">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#share"></use>
+			</svg>
+		</span>
+		Share
+	</button>
+	<button class="btn btn-secondary btn-xs rounded-pill" type="button">
+		<span class="inline-item inline-item-before">
+			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#share"></use>
+			</svg>
+		</span>
+		Share
+	</button>
+</div>
+
+```html
+<button class="btn btn-secondary rounded-pill" type="button">
+	<span class="inline-item inline-item-before">
+		<svg
+			class="lexicon-icon lexicon-icon-blogs"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#share"></use>
+		</svg>
+	</span>
+	Share
+</button>
+<button class="btn btn-secondary btn-sm rounded-pill" type="button">
+	<span class="inline-item inline-item-before">
+		<svg
+			class="lexicon-icon lexicon-icon-blogs"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#share"></use>
+		</svg>
+	</span>
+	Share
+</button>
+<button class="btn btn-secondary btn-xs rounded-pill" type="button">
 	<span class="inline-item inline-item-before">
 		<svg
 			class="lexicon-icon lexicon-icon-blogs"
