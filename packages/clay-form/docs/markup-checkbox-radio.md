@@ -13,6 +13,10 @@ mainTabURL: 'docs/components/checkbox.html'
 -   [Disabled](#css-disabled)
 -   [Without Labels](#css-without-labels)
 -   [Custom](#css-custom)
+    -   [Checkboxes](#css-custom-checkboxes)
+        -   [Indeterminate](#css-custom-checkbox-indeterminate)
+        -   [Readonly](#css-custom-checkbox-readonly)
+    -   [Radios](#css-custom-radios)
 
 </div>
 </div>
@@ -380,18 +384,106 @@ Using the `id` binding engine with `<label />`and `<input />`.
 </div>
 ```
 
+#### Custom Checkbox Indeterminate(#css-custom-checkbox-indeterminate)
+
 Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+
+<div class="sheet-example">
+	<div class="clay-site-custom-checkbox-indeterminate">
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input class="custom-control-input" type="checkbox">
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Indeterminate</span>
+				</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+#### Custom Checkbox Readonly(#css-custom-checkbox-readonly)
+
+<div class="clay-site-alert alert alert-warning">
+	This uses the non-standard <code>readonly</code> and <code>onclick="return false;"</code> attributes on the <code>input[type="checkbox"]</code> element. The <code>readonly</code> attribute is <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly" rel="noopener noreferrer" target="_blank">only supported in text controls</a>.
+</div>
+
+The `onclick="return false;"` attribute must be used on the `custom-control-input` to prevent the state of the checkbox from being changed on click.
 
 <div class="sheet-example">
 	<div class="custom-control custom-checkbox">
 		<label>
-			<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+			<input class="custom-control-input" onclick="return false;" readonly type="checkbox" />
 			<span class="custom-control-label">
-				<span class="custom-control-label-text">Indeterminate</span>
+				<span class="custom-control-label-text">Unchecked Readonly</span>
 			</span>
 		</label>
 	</div>
+	<div class="custom-control custom-checkbox">
+		<label>
+			<input checked class="custom-control-input" onclick="return false;" readonly type="checkbox" />
+			<span class="custom-control-label">
+				<span class="custom-control-label-text">Checked Readonly</span>
+			</span>
+		</label>
+	</div>
+	<div class="clay-site-custom-checkbox-indeterminate">
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input class="custom-control-input" onclick="return false;" readonly type="checkbox" />
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Indeterminate Readonly</span>
+				</span>
+			</label>
+		</div>
+	</div>
 </div>
+
+```html
+<div class="custom-control custom-checkbox">
+	<label>
+		<input
+			class="custom-control-input"
+			onclick="return false;"
+			readonly
+			type="checkbox"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Unchecked Readonly</span>
+		</span>
+	</label>
+</div>
+
+<div class="custom-control custom-checkbox">
+	<label>
+		<input
+			checked
+			class="custom-control-input"
+			onclick="return false;"
+			readonly
+			type="checkbox"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text">Checked Readonly</span>
+		</span>
+	</label>
+</div>
+
+<div class="custom-control custom-checkbox">
+	<label>
+		<input
+			class="custom-control-input"
+			onclick="return false;"
+			readonly
+			type="checkbox"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Indeterminate Readonly</span
+			>
+		</span>
+	</label>
+</div>
+```
 
 ### Radios(#css-custom-radios)
 
@@ -447,3 +539,13 @@ Custom checkboxes can also utilize the `:indeterminate` pseudo class when manual
 	</label>
 </div>
 ```
+
+<script>
+(function() {
+	var indeterminateCheckbox = document.querySelectorAll('.clay-site-custom-checkbox-indeterminate .custom-control-input');
+
+	indeterminateCheckbox.forEach(function(checkbox) {
+		checkbox.indeterminate = true;
+	});
+})();
+</script>
