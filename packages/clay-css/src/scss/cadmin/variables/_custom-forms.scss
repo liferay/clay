@@ -271,6 +271,11 @@ $cadmin-custom-control-input: map-deep-merge(
 					border-color: $cadmin-secondary-l3,
 				),
 			),
+			disabled: (
+				custom-control-label: (
+					color: $cadmin-custom-control-label-disabled-color,
+				),
+			),
 		),
 		checked: (
 			custom-control-label: (
@@ -385,6 +390,16 @@ $cadmin-custom-checkbox: map-deep-merge(
 								clay-icon(check-small, $cadmin-secondary),
 						),
 					),
+					disabled: (
+						custom-control-label: (
+							before: (
+								opacity: 0.4,
+							),
+							after: (
+								opacity: 0.4,
+							),
+						),
+					),
 				),
 			),
 			indeterminate: (
@@ -424,6 +439,16 @@ $cadmin-custom-checkbox: map-deep-merge(
 						),
 						after: (
 							background-image: clay-icon(hr, $cadmin-secondary),
+						),
+					),
+					disabled: (
+						custom-control-label: (
+							before: (
+								opacity: 0.4,
+							),
+							after: (
+								opacity: 0.4,
+							),
 						),
 					),
 				),

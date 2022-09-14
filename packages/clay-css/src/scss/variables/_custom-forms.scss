@@ -363,6 +363,9 @@ $custom-checkbox: map-deep-merge(
 				),
 				readonly: (
 					custom-control-label: (
+						before: (
+							background-color: $white,
+						),
 						after: (
 							background-image:
 								clay-svg-url(
