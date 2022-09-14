@@ -244,6 +244,69 @@
 				}
 			}
 
+			&[readonly] {
+				@include clay-css(map-deep-get($map, readonly));
+
+				~ .custom-control-label {
+					@include clay-css(
+						map-deep-get($map, readonly, custom-control-label)
+					);
+				}
+
+				~ .custom-control-label::before {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							readonly,
+							custom-control-label,
+							before
+						)
+					);
+				}
+
+				~ .custom-control-label::after {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							readonly,
+							custom-control-label,
+							after
+						)
+					);
+				}
+
+				~ .card {
+					@include clay-card-variant(
+						map-deep-get($map, readonly, card)
+					);
+				}
+			}
+
+			&:checked {
+				~ .custom-control-label::before {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							checked,
+							custom-control-label,
+							before
+						)
+					);
+				}
+
+				~ .custom-control-label::after {
+					@include clay-css(
+						map-deep-get($map, checked, custom-control-label, after)
+					);
+				}
+
+				~ .card {
+					@include clay-card-variant(
+						map-deep-get($map, checked, card)
+					);
+				}
+			}
+
 			&:checked:hover {
 				~ .custom-control-label::before {
 					@include clay-css(
@@ -369,6 +432,38 @@
 				~ .card {
 					@include clay-card-variant(
 						map-deep-get($map, checked, disabled, card)
+					);
+				}
+			}
+
+			&:checked[readonly] {
+				~ .custom-control-label::before {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							checked,
+							readonly,
+							custom-control-label,
+							before
+						)
+					);
+				}
+
+				~ .custom-control-label::after {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							checked,
+							readonly,
+							custom-control-label,
+							after
+						)
+					);
+				}
+
+				~ .card {
+					@include clay-card-variant(
+						map-deep-get($map, checked, readonly, card)
 					);
 				}
 			}
@@ -528,6 +623,38 @@
 				~ .card {
 					@include clay-card-variant(
 						map-deep-get($map, indeterminate, disabled, card)
+					);
+				}
+			}
+
+			&:indeterminate[readonly] {
+				~ .custom-control-label::before {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							indeterminate,
+							readonly,
+							custom-control-label,
+							before
+						)
+					);
+				}
+
+				~ .custom-control-label::after {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							indeterminate,
+							readonly,
+							custom-control-label,
+							after
+						)
+					);
+				}
+
+				~ .card {
+					@include clay-card-variant(
+						map-deep-get($map, indeterminate, readonly, card)
 					);
 				}
 			}
