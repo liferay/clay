@@ -16,6 +16,7 @@ mainTabURL: 'docs/components/checkbox.html'
     -   [Checkboxes](#css-custom-checkboxes)
         -   [Indeterminate](#css-custom-checkbox-indeterminate)
         -   [Readonly](#css-custom-checkbox-readonly)
+        -   [Readonly Disabled](#css-custom-checkbox-readonly-disabled)
     -   [Radios](#css-custom-radios)
 
 </div>
@@ -412,7 +413,7 @@ The `onclick="return false;"` attribute must be used on the `custom-control-inpu
 <div class="sheet-example">
 	<div class="custom-control custom-checkbox">
 		<label>
-			<input class="custom-control-input" onclick="return false;" readonly type="checkbox" />
+			<input aria-disabled="true" class="custom-control-input" onclick="return false;" readonly type="checkbox" />
 			<span class="custom-control-label">
 				<span class="custom-control-label-text">Unchecked Readonly</span>
 			</span>
@@ -420,7 +421,7 @@ The `onclick="return false;"` attribute must be used on the `custom-control-inpu
 	</div>
 	<div class="custom-control custom-checkbox">
 		<label>
-			<input checked class="custom-control-input" onclick="return false;" readonly type="checkbox" />
+			<input aria-disabled="true" checked class="custom-control-input" onclick="return false;" readonly type="checkbox" />
 			<span class="custom-control-label">
 				<span class="custom-control-label-text">Checked Readonly</span>
 			</span>
@@ -429,7 +430,7 @@ The `onclick="return false;"` attribute must be used on the `custom-control-inpu
 	<div class="clay-site-custom-checkbox-indeterminate">
 		<div class="custom-control custom-checkbox">
 			<label>
-				<input class="custom-control-input" onclick="return false;" readonly type="checkbox" />
+				<input aria-disabled="true" class="custom-control-input" onclick="return false;" readonly type="checkbox" />
 				<span class="custom-control-label">
 					<span class="custom-control-label-text">Indeterminate Readonly</span>
 				</span>
@@ -442,6 +443,7 @@ The `onclick="return false;"` attribute must be used on the `custom-control-inpu
 <div class="custom-control custom-checkbox">
 	<label>
 		<input
+			aria-disabled="true"
 			class="custom-control-input"
 			onclick="return false;"
 			readonly
@@ -456,6 +458,7 @@ The `onclick="return false;"` attribute must be used on the `custom-control-inpu
 <div class="custom-control custom-checkbox">
 	<label>
 		<input
+			aria-disabled="true"
 			checked
 			class="custom-control-input"
 			onclick="return false;"
@@ -471,6 +474,7 @@ The `onclick="return false;"` attribute must be used on the `custom-control-inpu
 <div class="custom-control custom-checkbox">
 	<label>
 		<input
+			aria-disabled="true"
 			class="custom-control-input"
 			onclick="return false;"
 			readonly
@@ -479,6 +483,94 @@ The `onclick="return false;"` attribute must be used on the `custom-control-inpu
 		<span class="custom-control-label">
 			<span class="custom-control-label-text"
 				>Indeterminate Readonly</span
+			>
+		</span>
+	</label>
+</div>
+```
+
+#### Custom Checkbox Readonly Disabled(#css-custom-checkbox-readonly-disabled)
+
+<div class="sheet-example">
+	<div class="form-group">
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input aria-hidden="true" class="custom-control-input" disabled onclick="return false;" readonly type="checkbox" />
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Unchecked Disabled Readonly</span>
+				</span>
+			</label>
+		</div>
+		<div class="custom-control custom-checkbox">
+			<label>
+				<input aria-hidden="true" checked class="custom-control-input" disabled onclick="return false;" readonly type="checkbox" />
+				<span class="custom-control-label">
+					<span class="custom-control-label-text">Checked Disabled Readonly</span>
+				</span>
+			</label>
+		</div>
+		<div class="clay-site-custom-checkbox-indeterminate">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input aria-hidden="true" class="clay-site-custom-checkbox-indeterminate custom-control-input" disabled onclick="return false;" readonly type="checkbox" />
+					<span class="custom-control-label">
+						<span class="custom-control-label-text">Indeterminate Disabled Readonly</span>
+					</span>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="custom-control custom-checkbox">
+	<label>
+		<input
+			aria-hidden="true"
+			class="custom-control-input"
+			disabled
+			onclick="return false;"
+			readonly
+			type="checkbox"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Unchecked Disabled Readonly</span
+			>
+		</span>
+	</label>
+</div>
+<div class="custom-control custom-checkbox">
+	<label>
+		<input
+			aria-hidden="true"
+			checked
+			class="custom-control-input"
+			disabled
+			onclick="return false;"
+			readonly
+			type="checkbox"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Checked Disabled Readonly</span
+			>
+		</span>
+	</label>
+</div>
+<div class="custom-control custom-checkbox">
+	<label>
+		<input
+			aria-hidden="true"
+			class="clay-site-custom-checkbox-indeterminate custom-control-input"
+			disabled
+			onclick="return false;"
+			readonly
+			type="checkbox"
+		/>
+		<span class="custom-control-label">
+			<span class="custom-control-label-text"
+				>Indeterminate Disabled Readonly</span
 			>
 		</span>
 	</label>
