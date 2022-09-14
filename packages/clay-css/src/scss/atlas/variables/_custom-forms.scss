@@ -149,6 +149,15 @@ $custom-control-input: map-deep-merge(
 		disabled: (
 			custom-control-label: $custom-control-label-disabled,
 		),
+		readonly: (
+			custom-control-label: (
+				color: $gray-900,
+				before: (
+					background-color: $gray-200,
+					border-color: $secondary-l3,
+				),
+			),
+		),
 		checked: (
 			custom-control-label: (
 				before: (
@@ -224,6 +233,17 @@ $custom-checkbox: map-deep-merge(
 						),
 					),
 				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $white,
+							border-color: $secondary-l2,
+						),
+						after: (
+							background-image: clay-icon(check-small, $secondary),
+						),
+					),
+				),
 			),
 			indeterminate: (
 				custom-control-label: (
@@ -249,6 +269,17 @@ $custom-checkbox: map-deep-merge(
 								$custom-control-indicator-checked-disabled-bg,
 							border-color:
 								$custom-control-indicator-checked-disabled-border-color,
+						),
+					),
+				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $white,
+							border-color: $secondary-l2,
+						),
+						after: (
+							background-image: clay-icon(hr, $secondary),
 						),
 					),
 				),
