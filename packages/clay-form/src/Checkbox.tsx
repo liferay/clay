@@ -33,9 +33,9 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	label?: React.ReactText;
 
 	/**
-	 * Callback for when checkbox value is changed
+	 * Callback for when checkbox value is changed.
 	 */
-	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
@@ -48,6 +48,7 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 			indeterminate = false,
 			inline,
 			label,
+			readOnly,
 			...otherProps
 		}: IProps,
 		ref
@@ -74,11 +75,13 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 				<label>
 					<input
 						{...otherProps}
+						aria-disabled={readOnly}
 						checked={checked}
 						className={classNames(
 							'custom-control-input',
 							className
 						)}
+						readOnly={readOnly}
 						ref={(r) => {
 							inputRef.current = r;
 							if (typeof ref === 'function') {
