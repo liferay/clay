@@ -4,11 +4,13 @@
  */
 
 import Button from '@clayui/button';
+import {ClayDropDownWithItems as DropDownWithItems} from '@clayui/drop-down';
 import {ClayCheckbox as Checkbox} from '@clayui/form';
 import {cleanup, fireEvent, render, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import {Provider, TreeView} from '../..';
+import {Icon, Provider, TreeView} from '../..';
 
 const spritemap = 'icons.svg';
 
@@ -1054,5 +1056,94 @@ describe('TreeView incremental interactions', () => {
 
 			expect(random).toBeTruthy();
 		});
+	});
+
+	it('clicking the action with DropDown should stay visible', () => {
+		const {getAllByRole} = render(
+			<Provider spritemap={spritemap}>
+				<TreeView>
+					<TreeView.Item
+						actions={
+							<DropDownWithItems
+								items={[
+									{label: 'One'},
+									{label: 'Two'},
+									{label: 'Three'},
+								]}
+								trigger={
+									<Button displayType={null} monospaced>
+										<Icon symbol="ellipsis-v" />
+									</Button>
+								}
+							/>
+						}
+					>
+						Item 1
+					</TreeView.Item>
+					<TreeView.Item>Item 2</TreeView.Item>
+				</TreeView>
+			</Provider>
+		);
+
+		const [item1, item2] = getAllByRole('treeitem');
+
+		expect(item1.classList).not.toContain('focus');
+
+		fireEvent.focus(item1);
+
+		expect(item1.classList).toContain('focus');
+
+		const [button1] = getAllByRole('button');
+
+		fireEvent.click(button1);
+
+		expect(button1.getAttribute('aria-expanded')).toBe('true');
+		expect(item1.classList).toContain('focus');
+
+		userEvent.click(item2);
+
+		expect(button1.getAttribute('aria-expanded')).toBe('false');
+		expect(item1.classList).not.toContain('focus');
+	});
+
+	it('focus on item with action and move focus to another element the action should not be visible', () => {
+		const {getAllByRole} = render(
+			<Provider spritemap={spritemap}>
+				<TreeView>
+					<TreeView.Item
+						actions={
+							<DropDownWithItems
+								items={[
+									{label: 'One'},
+									{label: 'Two'},
+									{label: 'Three'},
+								]}
+								trigger={
+									<Button displayType={null} monospaced>
+										<Icon symbol="ellipsis-v" />
+									</Button>
+								}
+							/>
+						}
+					>
+						Item 1
+					</TreeView.Item>
+					<TreeView.Item>Item 2</TreeView.Item>
+				</TreeView>
+			</Provider>
+		);
+
+		const [item1, item2] = getAllByRole('treeitem');
+
+		expect(item1.classList).not.toContain('focus');
+
+		userEvent.tab();
+
+		expect(item1.classList).toContain('focus');
+
+		userEvent.click(item2);
+
+		expect(item1.classList).not.toContain('focus');
+		expect(item2.classList).not.toContain('focus');
 	});
 });
