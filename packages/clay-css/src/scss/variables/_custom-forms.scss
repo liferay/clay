@@ -287,6 +287,14 @@ $custom-control-input: map-deep-merge(
 					),
 				),
 			),
+			readonly: (
+				custom-control-label: (
+					before: (
+						background-color: $custom-control-indicator-bg,
+						border-color: $custom-control-indicator-border-color,
+					),
+				),
+			),
 		),
 	),
 	$custom-control-input
@@ -353,6 +361,19 @@ $custom-checkbox: map-deep-merge(
 						),
 					),
 				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $white,
+						),
+						after: (
+							background-image:
+								clay-svg-url(
+									"<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$gray-600}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>"
+								),
+						),
+					),
+				),
 			),
 			indeterminate: (
 				custom-control-label: (
@@ -382,6 +403,20 @@ $custom-checkbox: map-deep-merge(
 								$custom-control-indicator-checked-disabled-bg,
 							border-color:
 								$custom-control-indicator-checked-disabled-border-color,
+						),
+					),
+				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $custom-control-indicator-bg,
+							border-color: $custom-control-indicator-border-color,
+						),
+						after: (
+							background-image:
+								clay-svg-url(
+									"<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$gray-800}' d='M0 2h4'/></svg>"
+								),
 						),
 					),
 				),

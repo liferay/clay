@@ -14,7 +14,7 @@ $custom-control-indicator-active-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1),
 	$custom-control-indicator-focus-box-shadow !default;
 
 $custom-control-indicator-disabled-bg: $input-disabled-bg !default;
-$custom-control-indicator-disabled-border-color: transparent !default;
+$custom-control-indicator-disabled-border-color: $secondary-l3 !default;
 
 // Custom Control Indicator Checked
 
@@ -149,6 +149,20 @@ $custom-control-input: map-deep-merge(
 		disabled: (
 			custom-control-label: $custom-control-label-disabled,
 		),
+		readonly: (
+			custom-control-label: (
+				color: $gray-900,
+				before: (
+					background-color: $gray-200,
+					border-color: $secondary-l3,
+				),
+			),
+			disabled: (
+				custom-control-label: (
+					color: $custom-control-label-disabled-color,
+				),
+			),
+		),
 		checked: (
 			custom-control-label: (
 				before: (
@@ -224,6 +238,27 @@ $custom-checkbox: map-deep-merge(
 						),
 					),
 				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $white,
+							border-color: $secondary-l2,
+						),
+						after: (
+							background-image: clay-icon(check-small, $secondary),
+						),
+					),
+					disabled: (
+						custom-control-label: (
+							before: (
+								opacity: 0.4,
+							),
+							after: (
+								opacity: 0.4,
+							),
+						),
+					),
+				),
 			),
 			indeterminate: (
 				custom-control-label: (
@@ -249,6 +284,27 @@ $custom-checkbox: map-deep-merge(
 								$custom-control-indicator-checked-disabled-bg,
 							border-color:
 								$custom-control-indicator-checked-disabled-border-color,
+						),
+					),
+				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $white,
+							border-color: $secondary-l2,
+						),
+						after: (
+							background-image: clay-icon(hr, $secondary),
+						),
+					),
+					disabled: (
+						custom-control-label: (
+							before: (
+								opacity: 0.4,
+							),
+							after: (
+								opacity: 0.4,
+							),
 						),
 					),
 				),

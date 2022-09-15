@@ -24,7 +24,7 @@ $cadmin-custom-control-indicator-active-border-color: $cadmin-custom-control-ind
 $cadmin-custom-control-indicator-active-color: $cadmin-component-active-color !default;
 
 $cadmin-custom-control-indicator-disabled-bg: $cadmin-input-disabled-bg !default;
-$cadmin-custom-control-indicator-disabled-border-color: $cadmin-input-disabled-border-color !default;
+$cadmin-custom-control-indicator-disabled-border-color: $cadmin-secondary-l3 !default;
 $cadmin-custom-control-indicator-disabled-cursor: $cadmin-disabled-cursor !default;
 
 // Custom Control Indicator Checked
@@ -263,6 +263,20 @@ $cadmin-custom-control-input: map-deep-merge(
 			cursor: $cadmin-custom-control-indicator-disabled-cursor,
 			custom-control-label: $cadmin-custom-control-label-disabled,
 		),
+		readonly: (
+			custom-control-label: (
+				color: $cadmin-gray-900,
+				before: (
+					background-color: $cadmin-gray-200,
+					border-color: $cadmin-secondary-l3,
+				),
+			),
+			disabled: (
+				custom-control-label: (
+					color: $cadmin-custom-control-label-disabled-color,
+				),
+			),
+		),
 		checked: (
 			custom-control-label: (
 				before: (
@@ -327,7 +341,7 @@ $cadmin-custom-checkbox-indicator-indeterminate-border-color: $cadmin-custom-che
 
 $cadmin-custom-control-indicator-indeterminate-border-color: $cadmin-custom-control-indicator-checked-active-bg !default;
 
-$cadmin-custom-checkbox-indicator-indeterminate-box-shadow: none !default;
+$cadmin-custom-checkbox-indicator-indeterminate-box-shadow: null !default;
 $cadmin-custom-checkbox-indicator-indeterminate-color: $cadmin-custom-control-indicator-checked-color !default;
 
 $cadmin-custom-checkbox-indicator-icon-indeterminate: clay-icon(
@@ -365,6 +379,28 @@ $cadmin-custom-checkbox: map-deep-merge(
 						),
 					),
 				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $cadmin-white,
+							border-color: $cadmin-secondary-l2,
+						),
+						after: (
+							background-image:
+								clay-icon(check-small, $cadmin-secondary),
+						),
+					),
+					disabled: (
+						custom-control-label: (
+							before: (
+								opacity: 0.4,
+							),
+							after: (
+								opacity: 0.4,
+							),
+						),
+					),
+				),
 			),
 			indeterminate: (
 				custom-control-label: (
@@ -392,6 +428,27 @@ $cadmin-custom-checkbox: map-deep-merge(
 								$cadmin-custom-control-indicator-checked-disabled-bg,
 							border-color:
 								$cadmin-custom-control-indicator-checked-disabled-border-color,
+						),
+					),
+				),
+				readonly: (
+					custom-control-label: (
+						before: (
+							background-color: $cadmin-white,
+							border-color: $cadmin-secondary-l2,
+						),
+						after: (
+							background-image: clay-icon(hr, $cadmin-secondary),
+						),
+					),
+					disabled: (
+						custom-control-label: (
+							before: (
+								opacity: 0.4,
+							),
+							after: (
+								opacity: 0.4,
+							),
 						),
 					),
 				),

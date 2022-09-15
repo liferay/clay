@@ -1,166 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClayCheckbox render as read only 1`] = `
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        aria-disabled="true"
+        checked=""
+        class="custom-control-input"
+        readonly=""
+        type="checkbox"
+      />
+      <span
+        class="custom-control-label"
+      >
+        <span
+          class="custom-control-label-text"
+        >
+          Indeterminate disabled
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`ClayCheckbox renders 1`] = `
-<div
-  className="custom-control custom-checkbox"
->
-  <label>
-    <input
-      checked={false}
-      className="custom-control-input"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="custom-control-label"
-    />
-  </label>
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        class="custom-control-input"
+        type="checkbox"
+      />
+      <span
+        class="custom-control-label"
+      />
+    </label>
+  </div>
 </div>
 `;
 
 exports[`ClayCheckbox renders as checked 1`] = `
-<div
-  className="custom-control custom-checkbox"
->
-  <label>
-    <input
-      checked={true}
-      className="custom-control-input"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="custom-control-label"
-    >
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        checked=""
+        class="custom-control-input"
+        type="checkbox"
+      />
       <span
-        className="custom-control-label-text"
+        class="custom-control-label"
       >
-        Checked
+        <span
+          class="custom-control-label-text"
+        >
+          Checked
+        </span>
       </span>
-    </span>
-  </label>
+    </label>
+  </div>
 </div>
 `;
 
 exports[`ClayCheckbox renders as checked and disabled 1`] = `
-<div
-  className="custom-control custom-checkbox"
->
-  <label>
-    <input
-      checked={true}
-      className="custom-control-input"
-      disabled={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="custom-control-label"
-    >
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        checked=""
+        class="custom-control-input"
+        disabled=""
+        type="checkbox"
+      />
       <span
-        className="custom-control-label-text"
+        class="custom-control-label"
       >
-        Checked disabled
+        <span
+          class="custom-control-label-text"
+        >
+          Checked disabled
+        </span>
       </span>
-    </span>
-  </label>
+    </label>
+  </div>
 </div>
 `;
 
 exports[`ClayCheckbox renders as disabled 1`] = `
-<div
-  className="custom-control custom-checkbox"
->
-  <label>
-    <input
-      checked={false}
-      className="custom-control-input"
-      disabled={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="custom-control-label"
-    >
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        class="custom-control-input"
+        disabled=""
+        type="checkbox"
+      />
       <span
-        className="custom-control-label-text"
+        class="custom-control-label"
       >
-        Unchecked disabled
+        <span
+          class="custom-control-label-text"
+        >
+          Unchecked disabled
+        </span>
       </span>
-    </span>
-  </label>
+    </label>
+  </div>
 </div>
 `;
 
 exports[`ClayCheckbox renders with a label 1`] = `
-<div
-  className="custom-control custom-checkbox"
->
-  <label>
-    <input
-      checked={false}
-      className="custom-control-input"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="custom-control-label"
-    >
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        class="custom-control-input"
+        type="checkbox"
+      />
       <span
-        className="custom-control-label-text"
+        class="custom-control-label"
       >
-        Unchecked
+        <span
+          class="custom-control-label-text"
+        >
+          Unchecked
+        </span>
       </span>
-    </span>
-  </label>
+    </label>
+  </div>
 </div>
 `;
 
 exports[`ClayCheckbox renders with an indeterminate value 1`] = `
-<div
-  className="custom-control custom-checkbox"
->
-  <label>
-    <input
-      checked={true}
-      className="custom-control-input"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="custom-control-label"
-    >
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        checked=""
+        class="custom-control-input"
+        type="checkbox"
+      />
       <span
-        className="custom-control-label-text"
+        class="custom-control-label"
       >
-        Indeterminate
+        <span
+          class="custom-control-label-text"
+        >
+          Indeterminate
+        </span>
       </span>
-    </span>
-  </label>
+    </label>
+  </div>
 </div>
 `;
 
 exports[`ClayCheckbox renders with an indeterminate value and disabled 1`] = `
-<div
-  className="custom-control custom-checkbox"
->
-  <label>
-    <input
-      checked={true}
-      className="custom-control-input"
-      disabled={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <span
-      className="custom-control-label"
-    >
+<div>
+  <div
+    class="custom-control custom-checkbox"
+  >
+    <label>
+      <input
+        checked=""
+        class="custom-control-input"
+        disabled=""
+        type="checkbox"
+      />
       <span
-        className="custom-control-label-text"
+        class="custom-control-label"
       >
-        Indeterminate disabled
+        <span
+          class="custom-control-label-text"
+        >
+          Indeterminate disabled
+        </span>
       </span>
-    </span>
-  </label>
+    </label>
+  </div>
 </div>
 `;
