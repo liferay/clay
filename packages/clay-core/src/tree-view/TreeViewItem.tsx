@@ -9,7 +9,7 @@ import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 
 import {removeItemInternalProps} from './Collection';
 import {Icons, useAPI, useTreeViewContext} from './context';
@@ -100,6 +100,8 @@ export const TreeViewItem = React.forwardRef<
 
 	const [loading, setLoading] = useState(false);
 
+	const clickCapturedRef = useRef(false);
+
 	const api = useAPI();
 
 	const [left, right] = React.Children.toArray(children);
@@ -107,6 +109,26 @@ export const TreeViewItem = React.forwardRef<
 	const group =
 		// @ts-ignore
 		right?.type?.displayName === 'ClayTreeViewGroup' ? right : null;
+
+	useEffect(() => {
+		if (focus) {
+			const onClick = () => {
+				if (!clickCapturedRef.current) {
+					setFocus(false);
+				}
+
+				clickCapturedRef.current = false;
+			};
+
+			document.addEventListener('focus', onClick, true);
+			document.addEventListener('mousedown', onClick);
+
+			return () => {
+				document.removeEventListener('focus', onClick, true);
+				document.removeEventListener('mousedown', onClick);
+			};
+		}
+	}, [focus]);
 
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
@@ -176,17 +198,19 @@ export const TreeViewItem = React.forwardRef<
 						}
 					)}
 					disabled={itemStackProps.disabled || nodeProps.disabled}
-					onBlur={({currentTarget, relatedTarget}) => {
-						if (
-							actions &&
-							relatedTarget &&
-							!currentTarget.contains(relatedTarget as Node)
-						) {
-							setFocus(false);
-						}
-					}}
+					onBlur={() => actions && setFocus(false)}
 					onClick={(event) => {
 						if (itemStackProps.disabled || nodeProps.disabled) {
+							return;
+						}
+
+						// Any click that happened outside the item does not trigger the
+						// node expansion. For example click on a DropDown item.
+						if (
+							!item.itemRef.current?.contains(
+								event.target as Node
+							)
+						) {
 							return;
 						}
 
@@ -245,7 +269,12 @@ export const TreeViewItem = React.forwardRef<
 							}
 						}
 					}}
-					onFocus={() => actions && setFocus(true)}
+					onFocus={() => {
+						if (actions) {
+							setFocus(true);
+							clickCapturedRef.current = true;
+						}
+					}}
 					onKeyDown={(event) => {
 						if (itemStackProps.disabled || nodeProps.disabled) {
 							return;
@@ -372,6 +401,12 @@ export const TreeViewItem = React.forwardRef<
 								onSelect(removeItemInternalProps(item));
 							}
 						}
+					}}
+					onMouseDown={() => {
+						clickCapturedRef.current = true;
+					}}
+					onTouchStart={() => {
+						clickCapturedRef.current = true;
 					}}
 					ref={ref}
 					role="treeitem"
