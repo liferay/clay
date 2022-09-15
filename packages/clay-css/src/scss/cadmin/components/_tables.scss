@@ -77,14 +77,6 @@ caption {
 
 // Table Row Backgrounds
 
-@each $cadmin-color, $cadmin-value in $cadmin-theme-colors {
-	@include table-row-variant(
-		$cadmin-color,
-		theme-color-level($cadmin-color, $cadmin-table-bg-level),
-		theme-color-level($cadmin-color, $cadmin-table-border-level)
-	);
-}
-
 .table-striped {
 	tbody .table-disabled:nth-of-type(#{$cadmin-table-striped-order}) {
 		td,

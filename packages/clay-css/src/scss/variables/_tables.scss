@@ -938,6 +938,12 @@ $table-row-theme-colors: map-deep-merge(
 				background-color:
 					clay-darken(theme-color-level(dark, $table-bg-level), 5%),
 			),
+			table-title: (
+				color: $table-dark-color,
+				href: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$table-row-theme-colors
