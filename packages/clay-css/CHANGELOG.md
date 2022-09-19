@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Unchecked Disabled Custom Checkbox should have border color secondary-l3 ([23e09ae](https://github.com/liferay/clay/commit/23e09aed83af656abe61bc5bad841b06b09b8d53))
+* **@clayui/css:** Cadmin Tables removes table row variants, these are unused in admin ([a12d65c](https://github.com/liferay/clay/commit/a12d65c40044dc5a2f4c1de81561f9ee8ee8ebaa))
+* **@clayui/css:** Tables table row variants should style the background ([45024a2](https://github.com/liferay/clay/commit/45024a2a8499c97c3561ce0ab5005c5c006c1479))
+
+
+### Features
+
+* **@clayui/css:** Base, Atlas, Cadmin Custom Checkbox adds readonly disabled styles ([39c6ad0](https://github.com/liferay/clay/commit/39c6ad0a5acefe5c337c0fd3d531ca33bc03f903))
+* **@clayui/css:** Cadmin Custom Checkbox adds readonly styles ([3ec6b85](https://github.com/liferay/clay/commit/3ec6b85cffc57a64c3ea36c091fb01e46517e109))
+* **@clayui/css:** Custom Checkbox adds readonly styles ([e7481e7](https://github.com/liferay/clay/commit/e7481e79c9907723664b23dd8a9d8f6a17b6144f))
+* **@clayui/css:** Mixins `clay-custom-control-input-variant` adds option to configure readonly ([302bd13](https://github.com/liferay/clay/commit/302bd132f0b77637985f9a0ff92175c1b5e2d45d))
+* **@clayui/css:** Mixins `clay-custom-control-input-variant` adds option to configure readonly disabled ([2e80a2d](https://github.com/liferay/clay/commit/2e80a2dc15b6161e34933215a8ffd1cb22d35058))
+
+
+
+
+
 # [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
 
 

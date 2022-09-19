@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error of TreeView actions not disappearing ([33ff8ac](https://github.com/liferay/clay/commit/33ff8ac9b67fd178f92474cb6c1ebf65194780af))
+
 # [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
 
 **Note:** Version bump only for package @clayui/core

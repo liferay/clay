@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
+
+### Features
+
+-   **@clayui/form:** add `aria-disabled` when `readOnly` is enabled in the checkbox ([003a6a3](https://github.com/liferay/clay/commit/003a6a3335fbd39d20b25e23f33b518201fe3a66))
+
 # [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
 
 **Note:** Version bump only for package @clayui/form
