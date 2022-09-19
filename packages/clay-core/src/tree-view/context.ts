@@ -48,7 +48,7 @@ export type Expand = {
 	has: (key: Key) => boolean;
 };
 
-export function useAPI() {
+export function useAPI(): [Selection, Expand] {
 	const {expandedKeys, selection, toggle} = useTreeViewContext();
 
 	const hasKey = useCallback(
@@ -69,5 +69,5 @@ export function useAPI() {
 			toggle: selection.toggleSelection,
 		},
 		{has: hasExpandedKey, toggle},
-	] as const;
+	];
 }

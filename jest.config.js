@@ -58,7 +58,7 @@ module.exports = {
 		'./packages/clay-core/src/tree-view/': {
 			branches: 68,
 			functions: 73,
-			lines: 77,
+			lines: 76,
 			statements: 75,
 		},
 		'./packages/clay-data-provider/src/': {

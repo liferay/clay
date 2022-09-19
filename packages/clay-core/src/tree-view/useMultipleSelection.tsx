@@ -6,7 +6,7 @@
 import {useInternalState} from '@clayui/shared';
 import {Key, useCallback, useMemo, useRef} from 'react';
 
-import {getKey} from './Collection';
+import {getKey} from '../collection';
 import {ITreeProps, createImmutableTree} from './useTree';
 
 import type {ICollectionProps} from './Collection';

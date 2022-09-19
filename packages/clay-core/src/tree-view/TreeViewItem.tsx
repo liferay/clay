@@ -305,101 +305,113 @@ export const TreeViewItem = React.forwardRef<
 
 						const {key} = event;
 
-						if (key === Keys.Left) {
-							if (
-								!close(item.key) &&
-								item.parentItemRef?.current
-							) {
-								item.parentItemRef.current.focus();
+						switch (key) {
+							case Keys.Left:
+								if (
+									!close(item.key) &&
+									item.parentItemRef?.current
+								) {
+									item.parentItemRef.current.focus();
+								}
+								break;
+							case Keys.Right:
+								if (!group) {
+									if (onLoadMore) {
+										setLoading(true);
+										onLoadMore(item)
+											.then((items) => {
+												setLoading(false);
+
+												if (!items) {
+													return;
+												}
+
+												insert(
+													[...item.indexes, 0],
+													items
+												);
+											})
+											.catch((error) => {
+												console.error(error);
+											});
+									} else {
+										return;
+									}
+								}
+
+								if (!open(item.key) && item.itemRef.current) {
+									const group =
+										item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
+											'.treeview-group'
+										);
+									const firstItemElement =
+										group?.querySelector<HTMLDivElement>(
+											'.treeview-link:not(.disabled)'
+										);
+
+									firstItemElement?.focus();
+								} else {
+									item.itemRef.current?.focus();
+								}
+								break;
+							case Keys.Backspace:
+							case Keys.Del: {
+								remove(item.indexes);
+								item.parentItemRef.current?.focus();
+								break;
 							}
-						}
+							case Keys.Home: {
+								const firstListElement = rootRef.current
+									?.firstElementChild as HTMLLinkElement;
+								const linkElement =
+									firstListElement.firstElementChild as HTMLDivElement;
 
-						if (key === Keys.Right) {
-							if (!group) {
-								if (onLoadMore) {
-									setLoading(true);
-									onLoadMore(item)
-										.then((items) => {
-											setLoading(false);
+								linkElement.focus();
+								break;
+							}
+							case Keys.End: {
+								const lastListElement = rootRef.current
+									?.lastElementChild as HTMLLinkElement;
+								const linkElement =
+									lastListElement.firstElementChild as HTMLDivElement;
 
-											if (!items) {
-												return;
-											}
+								linkElement.focus();
+								break;
+							}
+							case Keys.Spacebar: {
+								selection.toggleSelection(item.key);
 
-											insert([...item.indexes, 0], items);
+								if (onSelect) {
+									onSelect(removeItemInternalProps(item));
+								}
+								break;
+							}
+							case Keys.R.toLowerCase():
+							case Keys.R:
+							case Keys.F2: {
+								if (onRenameItem) {
+									onRenameItem({...item})
+										.then((newItem) => {
+											replace(item.indexes, {
+												...newItem,
+												index: item.index,
+												indexes: item.indexes,
+												itemRef: item.itemRef,
+												key: item.key,
+												parentItemRef:
+													item.parentItemRef,
+											});
+
+											item.itemRef.current?.focus();
 										})
 										.catch((error) => {
 											console.error(error);
 										});
-								} else {
-									return;
 								}
+								break;
 							}
-							if (!open(item.key) && item.itemRef.current) {
-								const group =
-									item.itemRef.current.parentElement?.querySelector<HTMLDivElement>(
-										'.treeview-group'
-									);
-								const firstItemElement =
-									group?.querySelector<HTMLDivElement>(
-										'.treeview-link:not(.disabled)'
-									);
-								firstItemElement?.focus();
-							} else {
-								item.itemRef.current?.focus();
-							}
-						}
-
-						if (key === Keys.Backspace || key === Keys.Del) {
-							remove(item.indexes);
-
-							item.parentItemRef.current?.focus();
-						}
-
-						if (key === Keys.End) {
-							const lastListElement = rootRef.current
-								?.lastElementChild as HTMLLinkElement;
-							const linkElement =
-								lastListElement.firstElementChild as HTMLDivElement;
-							linkElement.focus();
-						}
-
-						if (key === Keys.Home) {
-							const firstListElement = rootRef.current
-								?.firstElementChild as HTMLLinkElement;
-							const linkElement =
-								firstListElement.firstElementChild as HTMLDivElement;
-							linkElement.focus();
-						}
-
-						if (
-							(key.toUpperCase() === Keys.R || key === Keys.F2) &&
-							onRenameItem
-						) {
-							onRenameItem({...item})
-								.then((newItem) => {
-									replace(item.indexes, {
-										...newItem,
-										index: item.index,
-										indexes: item.indexes,
-										itemRef: item.itemRef,
-										key: item.key,
-										parentItemRef: item.parentItemRef,
-									});
-
-									item.itemRef.current?.focus();
-								})
-								.catch((error) => {
-									console.error(error);
-								});
-						}
-
-						if (key === Keys.Spacebar) {
-							selection.toggleSelection(item.key);
-
-							if (onSelect) {
-								onSelect(removeItemInternalProps(item));
-							}
+							default:
+								break;
 						}
 					}}
 					onMouseDown={() => {
