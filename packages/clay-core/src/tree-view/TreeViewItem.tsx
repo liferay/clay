@@ -104,7 +104,7 @@ export const TreeViewItem = React.forwardRef<
 
 	const api = useAPI();
 
-	const [left, right] = React.Children.toArray(children);
+	const [left, right, ...otherElements] = React.Children.toArray(children);
 
 	const group =
 		// @ts-ignore
@@ -468,6 +468,16 @@ export const TreeViewItem = React.forwardRef<
 					</span>
 				</div>
 				{group}
+
+				{Boolean(otherElements.length) && (
+					<div
+						style={{
+							paddingLeft: `${spacing + 24}px`,
+						}}
+					>
+						{otherElements}
+					</div>
+				)}
 			</li>
 		</SpacingContext.Provider>
 	);
