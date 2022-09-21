@@ -56,11 +56,11 @@ export function ItemContextProvider({children, value}: Props) {
 		dragAndDrop,
 		expandedKeys,
 		items,
+		layout,
 		nestedKey,
 		onItemMove,
 		open,
 		reorder,
-		selection,
 	} = useTreeViewContext();
 	const {
 		indexes: parentIndexes = [],
@@ -88,14 +88,14 @@ export function ItemContextProvider({children, value}: Props) {
 
 	useEffect(
 		() =>
-			selection.createPartialLayoutItem(
+			layout.createPartialLayoutItem(
 				keyRef.current,
 				hasLazyChildren,
 				indexesRef.current,
 				parentKey
 			),
 		[
-			selection.createPartialLayoutItem,
+			layout.createPartialLayoutItem,
 			hasLazyChildren,
 			indexesRef,
 			keyRef,

@@ -10,6 +10,7 @@ import {getKey} from '../collection';
 import {ITreeProps, createImmutableTree} from './useTree';
 
 import type {ICollectionProps} from './Collection';
+import type {LayoutInfo} from './useLayout';
 
 export interface IMultipleSelection {
 	/**
@@ -29,12 +30,6 @@ export interface IMultipleSelection {
 }
 
 export interface IMultipleSelectionState {
-	createPartialLayoutItem: (
-		key: Key,
-		lazy: boolean,
-		loc: Array<number>,
-		parentKey?: Key
-	) => () => void;
 	isIntermediate: (key: Key) => boolean;
 	replaceIntermediateKeys: (keys: Array<Key>) => void;
 	selectedKeys: Set<Key>;
@@ -46,19 +41,8 @@ export interface IMultipleSelectionProps<T>
 		Pick<ITreeProps<T>, 'nestedKey'>,
 		Pick<ICollectionProps<T>, 'items'> {
 	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
+	layoutKeys: React.MutableRefObject<Map<React.Key, LayoutInfo>>;
 }
-
-type LayoutInfo = {
-	children: Set<Key>;
-
-	/**
-	 * Lazy Child means that the current Node has children but they were not
-	 * created because they are not visible in the DOM.
-	 */
-	lazyChild: boolean;
-	loc: Array<number>;
-	parentKey?: Key;
-};
 
 /**
  * The selection hook implementation handles the responsibility of optimizing
@@ -116,8 +100,6 @@ export function useMultipleSelection<T>(
 ): IMultipleSelectionState {
 	const selectionMode = props.selectionMode;
 
-	const layoutKeys = useRef(new Map<Key, LayoutInfo>());
-
 	const intermediateKeys = useRef(new Set<Key>());
 
 	const [selectedKeys, setSelectionKeys, isUncontrolled] = useInternalState<
@@ -141,7 +123,9 @@ export function useMultipleSelection<T>(
 
 			intermediateKeys.current = new Set(
 				intermediates.filter((key) => {
-					const keyMap = layoutKeys.current.get(key) as LayoutInfo;
+					const keyMap = props.layoutKeys.current.get(
+						key
+					) as LayoutInfo;
 
 					const children = [...keyMap.children];
 
@@ -169,94 +153,13 @@ export function useMultipleSelection<T>(
 		}
 	}, [selectedKeys]);
 
-	/**
-	 * The method creates the mirror of the tree in a hashmap structure with a
-	 * linked list using `parentKey` and `children`. Adding data to the structure
-	 * is reactive to item component rendering and disassembly. Only the rendered
-	 * items are in the structure, if a component is moved, removed, or added the
-	 * structure is updated automatically.
-	 *
-	 * useEffect(() => createPartialLayoutItem(...), []);
-	 *
-	 * The design of this method is to be coupled to `useEffect` which has the
-	 * mount and unmount behavior, also handles lifecycle and call order,
-	 * `useEffect` in nested components are called bottom-up instead of top-down
-	 * as in rendering.
-	 */
-	const createPartialLayoutItem = useCallback(
-		(key: Key, lazyChild: boolean, loc: Array<number>, parentKey?: Key) => {
-			const keyMap = layoutKeys.current.get(key);
-
-			if (!keyMap) {
-				layoutKeys.current.set(key, {
-					children: new Set(),
-					lazyChild,
-					loc,
-					parentKey,
-				});
-			} else if (keyMap.parentKey !== parentKey) {
-				layoutKeys.current.set(key, {
-					...keyMap,
-					parentKey,
-				});
-			}
-
-			if (parentKey) {
-				const keyMap = layoutKeys.current.get(parentKey);
-
-				if (keyMap) {
-					layoutKeys.current.set(parentKey, {
-						...keyMap,
-						children: new Set([...keyMap.children, key]),
-						lazyChild: false,
-					});
-				} else {
-					// Pre-initializes the parent layout, as this is linked to
-					// React rendering, the mount is used inside `useEffect`
-					// this causes callbacks from the last rendering to be
-					// called first than parents, starting from the bottom up.
-					//
-					// We just add an initial value then update the parentKey
-					// when the corresponding one is called.
-					layoutKeys.current.set(parentKey, {
-						children: new Set([key]),
-						lazyChild: false,
-						loc: loc.slice(0, -1),
-						parentKey: undefined,
-					});
-				}
-			}
-
-			return function unmount() {
-				layoutKeys.current.delete(key);
-
-				if (parentKey && layoutKeys.current.has(parentKey)) {
-					const keyMap = layoutKeys.current.get(
-						parentKey
-					) as LayoutInfo;
-
-					const children = new Set(keyMap.children);
-
-					children.delete(key);
-
-					layoutKeys.current.set(parentKey, {
-						...keyMap,
-						children,
-						lazyChild: children.size === 0,
-					});
-				}
-			};
-		},
-		[layoutKeys]
-	);
-
 	const toggleParentSelection = useCallback(
 		(hasIntermediate: boolean, keyMap: LayoutInfo, selecteds: Set<Key>) => {
 			if (!keyMap.parentKey) {
 				return;
 			}
 
-			const parentKeyMap = layoutKeys.current.get(
+			const parentKeyMap = props.layoutKeys.current.get(
 				keyMap.parentKey
 			) as LayoutInfo;
 
@@ -312,7 +215,7 @@ export function useMultipleSelection<T>(
 				selecteds
 			);
 		},
-		[layoutKeys, intermediateKeys]
+		[props.layoutKeys, intermediateKeys]
 	);
 
 	const toggleLazyChildrenSelection = useCallback(
@@ -385,14 +288,19 @@ export function useMultipleSelection<T>(
 					selecteds.delete(key);
 				}
 
-				const childrenKeyMap = layoutKeys.current.get(
+				const childrenKeyMap = props.layoutKeys.current.get(
 					key
 				) as LayoutInfo;
 
 				toggleChildrenSelection(childrenKeyMap, key, selecteds, select);
 			});
 		},
-		[toggleLazyChildrenSelection, layoutKeys, props.items, props.nestedKey]
+		[
+			toggleLazyChildrenSelection,
+			props.layoutKeys,
+			props.items,
+			props.nestedKey,
+		]
 	);
 
 	const toggleSelection = useCallback(
@@ -413,7 +321,9 @@ export function useMultipleSelection<T>(
 				case 'multiple-recursive': {
 					const selecteds = new Set(selectedKeys);
 
-					const keyMap = layoutKeys.current.get(key) as LayoutInfo;
+					const keyMap = props.layoutKeys.current.get(
+						key
+					) as LayoutInfo;
 
 					if (selecteds.has(key)) {
 						selecteds.delete(key);
@@ -448,7 +358,7 @@ export function useMultipleSelection<T>(
 			}
 		},
 		[
-			layoutKeys,
+			props.layoutKeys,
 			intermediateKeys,
 			selectedKeys,
 			selectionMode,
@@ -470,7 +380,6 @@ export function useMultipleSelection<T>(
 	);
 
 	return {
-		createPartialLayoutItem,
 		isIntermediate,
 		replaceIntermediateKeys,
 		selectedKeys,

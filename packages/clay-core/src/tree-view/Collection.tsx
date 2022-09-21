@@ -10,11 +10,11 @@ import {
 	Collection as CollectionBase,
 	excludeProps,
 } from '../collection';
-import {Expand, Selection, useAPI} from './context';
+import {Expand, LoadMore, Selection, useAPI} from './context';
 import {ItemContextProvider, useItem} from './useItem';
 
 export type ChildrenFunction<T extends Record<string, any>> =
-	ChildrenFunctionBase<T, [Selection, Expand]>;
+	ChildrenFunctionBase<T, [Selection, Expand, LoadMore]>;
 
 export interface ICollectionProps<T> {
 	children: React.ReactNode | ChildrenFunction<T>;

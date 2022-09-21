@@ -80,7 +80,6 @@ export const TreeViewItem = React.forwardRef<
 		close,
 		expandDoubleClick,
 		expandedKeys,
-		insert,
 		nestedKey,
 		onLoadMore,
 		onRenameItem,
@@ -103,6 +102,8 @@ export const TreeViewItem = React.forwardRef<
 	const clickCapturedRef = useRef(false);
 
 	const api = useAPI();
+
+	const loadMore = api[2];
 
 	const [left, right, ...otherElements] = React.Children.toArray(children);
 
@@ -252,20 +253,11 @@ export const TreeViewItem = React.forwardRef<
 						if (group) {
 							toggle(item.key);
 						} else {
-							if (onLoadMore) {
-								setLoading(true);
-								onLoadMore(item)
-									.then((items) => {
-										setLoading(false);
+							const promise = loadMore(item.key, item, true);
 
-										if (items) {
-											insert([...item.indexes, 0], items);
-											toggle(item.key);
-										}
-									})
-									.catch((error) => {
-										console.error(error);
-									});
+							if (promise) {
+								setLoading(true);
+								promise.then(() => setLoading(false));
 							}
 						}
 					}}
@@ -316,24 +308,11 @@ export const TreeViewItem = React.forwardRef<
 								break;
 							case Keys.Right:
 								if (!group) {
-									if (onLoadMore) {
+									const promise = loadMore(item.key, item);
+
+									if (promise) {
 										setLoading(true);
-										onLoadMore(item)
-											.then((items) => {
-												setLoading(false);
-
-												if (!items) {
-													return;
-												}
-
-												insert(
-													[...item.indexes, 0],
-													items
-												);
-											})
-											.catch((error) => {
-												console.error(error);
-											});
+										promise.then(() => setLoading(false));
 									} else {
 										return;
 									}

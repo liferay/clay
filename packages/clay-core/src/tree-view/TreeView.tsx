@@ -13,7 +13,7 @@ import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import DragLayer from './DragLayer';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
-import {Icons, TreeViewContext} from './context';
+import {Icons, OnLoadMore, TreeViewContext} from './context';
 import {ITreeProps, useTree} from './useTree';
 
 interface ITreeViewProps<T>
@@ -70,7 +70,7 @@ interface ITreeViewProps<T>
 	 * decrease the initial payload and memory space. The callback is called every time
 	 * the item is a leaf node of the tree.
 	 */
-	onLoadMore?: (item: T) => Promise<unknown>;
+	onLoadMore?: OnLoadMore<T>;
 
 	/**
 	 * Callback called whenever an item is selected. Similar to the `onSelectionChange`
