@@ -1074,11 +1074,76 @@ export const AsyncLoad = () => (
 	</TreeView>
 );
 
+export const AsyncLoadDataPaginated = () => (
+	<TreeView
+		defaultItems={ITEMS_DRIVE}
+		nestedKey="children"
+		onLoadMore={async (item) => {
+			// Example conditional, I don't want to load data for an item that has
+			// no children.
+			if (!item.children) {
+				return;
+			}
+
+			// Delay to simulate loading of new data
+			await new Promise((resolve) => {
+				setTimeout(() => resolve(''), 1000);
+			});
+
+			return {
+				// Just for simulation
+				cursor: 'http://clay.dev/...',
+				items: [
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+				],
+			};
+		}}
+	>
+		{(item, selection, expand, loadMore) => (
+			<TreeView.Item>
+				<TreeView.ItemStack>
+					<Icon symbol="folder" />
+					{item.name}
+				</TreeView.ItemStack>
+				<TreeView.Group items={item.children}>
+					{(item) => (
+						<TreeView.Item>
+							<Icon symbol="folder" />
+							{item.name}
+						</TreeView.Item>
+					)}
+				</TreeView.Group>
+
+				{expand.has(item.id) && (
+					<Button
+						borderless
+						displayType="secondary"
+						onClick={() => loadMore(item.id, item)}
+					>
+						Load more results
+					</Button>
+				)}
+			</TreeView.Item>
+		)}
+	</TreeView>
+);
+
 export const AsyncLoadWithErrorHandling = () => {
 	const [renderToast, setRenderToast] = useState(false);
 
 	const onLoadMore = () => {
-		return new Promise((resolve, reject) => {
+		return new Promise<any>((resolve, reject) => {
 			setTimeout(() => {
 				reject(new Error('Could not load more items'));
 			}, 1000);
