@@ -112,7 +112,7 @@ export const Keyboard = () => {
 
 								<ClayAutocomplete.DropDown
 									active={active}
-									onSetActive={setActive}
+									onActiveChange={setActive}
 								>
 									<ClayDropDown.ItemList>
 										{filteredItems.map((item) => (
