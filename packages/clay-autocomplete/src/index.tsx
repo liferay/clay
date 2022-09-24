@@ -4,13 +4,17 @@
  */
 
 import {ClayInput} from '@clayui/form';
+import {FocusScope} from '@clayui/shared';
 import React from 'react';
 
+import {Autocomplete} from './Autocomplete';
 import Context from './Context';
 import DropDown from './DropDown';
 import Input from './Input';
 import Item from './Item';
 import LoadingIndicator from './LoadingIndicator';
+
+import type {IProps as IAutocompleteProps} from './Autocomplete';
 
 const AutocompleteMarkup = React.forwardRef<
 	HTMLDivElement,
@@ -23,7 +27,31 @@ const AutocompleteMarkup = React.forwardRef<
 
 AutocompleteMarkup.displayName = 'ClayAutocompleteMarkup';
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+/**
+ * Temporary helper function to determine which version of autocomplete
+ * is being used.
+ */
+const hasInputOrDropDown = (children?: React.ReactNode) => {
+	if (!children) {
+		return [];
+	}
+
+	return React.Children.map(children, (child) => {
+		if (
+			React.isValidElement(child) &&
+			// @ts-ignore
+			(child.type.displayName === 'ClayAutocompleteDropDown' ||
+				// @ts-ignore
+				child.type.displayName === 'ClayAutocompleteInput')
+		) {
+			return true;
+		}
+
+		return false;
+	}).filter(Boolean);
+};
+
+interface IProps extends IAutocompleteProps {
 	/**
 	 * Div component to render. It can be a one component that will replace the markup.
 	 */
@@ -44,32 +72,38 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 		const [loading, setLoading] = React.useState(false);
 
 		return (
-			<Component
-				{...otherProps}
-				className={className}
-				ref={(r: any) => {
-					if (r) {
-						containerElementRef.current = r;
+			<FocusScope>
+				<Component
+					className={className}
+					ref={(r: any) => {
+						if (r) {
+							containerElementRef.current = r;
 
-						if (typeof ref === 'function') {
-							ref(r);
-						} else if (ref !== null) {
-							(ref as React.MutableRefObject<any>).current = r;
+							if (typeof ref === 'function') {
+								ref(r);
+							} else if (ref !== null) {
+								(ref as React.MutableRefObject<any>).current =
+									r;
+							}
 						}
-					}
-				}}
-			>
-				<Context.Provider
-					value={{
-						containerElementRef,
-						loading,
-						onLoadingChange: (loading: boolean) =>
-							setLoading(loading),
 					}}
 				>
-					{children}
-				</Context.Provider>
-			</Component>
+					{hasInputOrDropDown(children).length >= 1 ? (
+						<Context.Provider
+							value={{
+								containerElementRef,
+								loading,
+								onLoadingChange: (loading: boolean) =>
+									setLoading(loading),
+							}}
+						>
+							{children}
+						</Context.Provider>
+					) : (
+						<Autocomplete {...otherProps}>{children}</Autocomplete>
+					)}
+				</Component>
+			</FocusScope>
 		);
 	}
 );

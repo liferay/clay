@@ -8,6 +8,11 @@ import fuzzy from 'fuzzy';
 import React from 'react';
 
 export interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
+	/**
+	 * The item content.
+	 */
+	children?: React.ReactText;
+
 	innerRef?: React.Ref<HTMLAnchorElement>;
 
 	/**
@@ -18,15 +23,17 @@ export interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
 	/**
 	 * Value is the string that will be compared to the characters of
 	 * the match property.
+	 * @deprecated since v3.74.0 - use `children` instead.
 	 */
-	value: string;
+	value?: string;
 }
 
 const optionsFuzzy = {post: '|+', pre: '+|'};
 
 const ClayAutocompleteItem = React.forwardRef<HTMLLIElement, IProps>(
-	({innerRef, match = '', value, ...otherProps}: IProps, ref) => {
-		const fuzzyMatch = fuzzy.match(match, value, optionsFuzzy);
+	({children, innerRef, match = '', value, ...otherProps}: IProps, ref) => {
+		const currentValue = value ?? String(children);
+		const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
 
 		return (
 			<ClayDropDown.Item {...otherProps} innerRef={innerRef} ref={ref}>
@@ -44,7 +51,7 @@ const ClayAutocompleteItem = React.forwardRef<HTMLLIElement, IProps>(
 								) : null;
 							})
 							.filter(Boolean)
-					: value}
+					: currentValue}
 			</ClayDropDown.Item>
 		);
 	}

@@ -83,4 +83,6 @@ const ClayAutocompleteDropDown = ({
 	);
 };
 
+ClayAutocompleteDropDown.displayName = 'ClayAutocompleteDropDown';
+
 export default ClayAutocompleteDropDown;
