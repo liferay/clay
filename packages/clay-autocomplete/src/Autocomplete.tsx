@@ -5,7 +5,8 @@
 
 import DropDown from '@clayui/drop-down';
 import {ClayInput as Input} from '@clayui/form';
-import {InternalDispatch, useInternalState} from '@clayui/shared';
+import {InternalDispatch, Keys, useId, useInternalState} from '@clayui/shared';
+import {hideOthers} from 'aria-hidden';
 import React, {useEffect, useMemo, useRef} from 'react';
 
 type Messages = {
@@ -59,6 +60,11 @@ export interface IProps
 	 * The current value of the input (controlled).
 	 */
 	value?: React.ReactText;
+
+	/**
+	 * The interaction required to display the menu.
+	 */
+	menuTrigger?: 'input' | 'focus';
 }
 
 export function Autocomplete({
@@ -71,6 +77,7 @@ export function Autocomplete({
 	onActiveChange,
 	onChange,
 	value: externalValue,
+	menuTrigger = 'input',
 	...otherProps
 }: IProps) {
 	const inputRef = useRef<HTMLInputElement>(null);
@@ -96,6 +103,8 @@ export function Autocomplete({
 		value: externalActive,
 	});
 
+	const ariaControlsId = useId();
+
 	useEffect(() => {
 		if (active) {
 			const onFocus = (event: FocusEvent) => {
@@ -112,6 +121,32 @@ export function Autocomplete({
 			return () => {
 				document.removeEventListener('focus', onFocus, true);
 			};
+		}
+	}, [active]);
+
+	useEffect(() => {
+		if (active) {
+			const onKeyDown = (event: KeyboardEvent) => {
+				if (
+					inputRef.current &&
+					(event.key === Keys.Left || event.key === Keys.Right)
+				) {
+					inputRef.current.focus();
+				}
+			};
+
+			document.addEventListener('keydown', onKeyDown, true);
+
+			return () => {
+				document.removeEventListener('keydown', onKeyDown, true);
+			};
+		}
+	}, [active]);
+
+	useEffect(() => {
+		if (menuRef.current && inputRef.current && active) {
+			// Hide everything from ARIA except the MenuElement and Input
+			return hideOthers([menuRef.current, inputRef.current]);
 		}
 	}, [active]);
 
@@ -158,6 +193,7 @@ export function Autocomplete({
 
 							inputRef.current?.focus();
 						},
+						roleItem: 'option',
 					})
 				);
 			} else {
@@ -174,7 +210,11 @@ export function Autocomplete({
 
 			<Input
 				{...otherProps}
+				aria-autocomplete="list"
+				aria-controls={ariaControlsId}
+				aria-expanded={active}
 				autoComplete="off"
+				autoCorrect="off"
 				onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 					const {value} = event.target;
 
@@ -185,7 +225,31 @@ export function Autocomplete({
 					setActive(true);
 					setValue(value);
 				}}
+				onFocus={(event) => {
+					if (otherProps.onFocus) {
+						otherProps.onFocus(event);
+					}
+
+					if (menuTrigger === 'focus') {
+						setActive(true);
+					}
+				}}
+				onKeyDown={(event) => {
+					if (otherProps.onKeyDown) {
+						otherProps.onKeyDown(event);
+					}
+
+					if (event.key === Keys.Enter) {
+						setActive(false);
+					}
+
+					if (!active && event.altKey && event.key === Keys.Down) {
+						setActive(true);
+					}
+				}}
 				ref={inputRef}
+				role="combobox"
+				spellCheck={false}
 				value={value}
 			/>
 
@@ -196,6 +260,7 @@ export function Autocomplete({
 				autoBestAlign={!!alignmentByViewport}
 				className="autocomplete-dropdown-menu"
 				focusRefOnEsc={inputRef}
+				id={ariaControlsId}
 				onActiveChange={setActive}
 				ref={menuRef}
 				style={{
@@ -203,11 +268,19 @@ export function Autocomplete({
 					width: `${inputRef.current?.clientWidth}px`,
 				}}
 			>
-				<DropDown.ItemList>
+				<DropDown.ItemList
+					aria-label={otherProps['aria-label']}
+					aria-labelledby={otherProps['aria-labelledby']}
+					role="listbox"
+				>
 					{itemsElements.length ? (
 						itemsElements
 					) : (
-						<DropDown.Item disabled>
+						<DropDown.Item
+							aria-disabled="true"
+							className="disabled"
+							roleItem="option"
+						>
 							{messages.notFound}
 						</DropDown.Item>
 					)}

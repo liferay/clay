@@ -40,13 +40,21 @@ export default {
 	title: 'Design System/Components/Autocomplete',
 };
 
-export const Default = () => (
+export const Default = (args: any) => (
 	<div className="row">
 		<div className="col-md-5">
 			<div className="sheet">
 				<div className="form-group">
-					<label>Numbers (one-five)</label>
+					<label
+						htmlFor="clay-autocomplete-1"
+						id="clay-autocomplete-label-1"
+					>
+						Numbers (one-five)
+					</label>
 					<ClayAutocomplete
+						aria-labelledby="clay-autocomplete-label-1"
+						id="clay-autocomplete-1"
+						menuTrigger={args.menuTrigger}
 						messages={{
 							loading: 'Loading...',
 							notFound: 'No results found',
@@ -64,6 +72,13 @@ export const Default = () => (
 		</div>
 	</div>
 );
+
+Default.argTypes = {
+	menuTrigger: {
+		control: {type: 'select'},
+		options: ['focus', 'input'],
+	},
+};
 
 export const Keyboard = () => {
 	const inputRef = useRef<HTMLInputElement | null>(null);
