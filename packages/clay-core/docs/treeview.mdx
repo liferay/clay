@@ -160,7 +160,12 @@ function Example() {
 
 #### Asynchronous Item
 
-When a tree is very large, loading items (nodes) asynchronously is preferred to decrease the initial payload and memory space.
+When a tree is very large, loading items (nodes) asynchronously is preferred to decrease the initial payload and memory space. TreeView provides two ways to load asynchronous data:
+
+-   Load the children of an item when clicking on the item
+-   Load paginated data from an item
+
+**Load the children of an item**
 
 The TreeView doesn't know when an item is asynchronous, so the developer must specify whether the item is asynchronous or not. The `onLoadMore` property is called every time the item is a leaf node of the tree and depending on the method's return value it will behave differently.
 
@@ -183,6 +188,52 @@ When adding a new asynchronous item to the tree, the `onItemsChange` method is r
 	}}
 >
 	{...}
+</TreeView>
+```
+
+**Load paginated data from an item**
+
+The `onLoadMore` API can also be used to load paginated data for a specific item. The signature just needs to be followed so the TreeView can know what to do.
+
+```jsx
+<TreeView
+	onLoadMore={async (item, cursor) => {
+		const result = await fetch(cursor ?? `example.com/tree/item?parent_id=${item.id}`);
+
+		return {
+			cursor: result.next,
+			items: result.data,
+		};
+	}}
+>
+	{...}
+</TreeView>
+```
+
+The `cursor` helps to store the data that will be used to identify which will be the next request, this can be an `offset`, `cursor`, `id` the URL or any other data that represents the item cursor, when there is no more data just sets the cursor to `null`. The TreeView also exposes a public API that can invoke `loadMore` and find out if there is a cursor for a specific item.
+
+```jsx
+<TreeView {...}>
+	{(item, selection, expand, load) => (
+		<TreeView.Item>
+			<TreeView.ItemStack>{item.name}</TreeView.ItemStack>
+			<TreeView.Group items={item.children}>
+				{(item) => (
+					<TreeView.Item>{item.name}</TreeView.Item>
+				)}
+			</TreeView.Group>
+
+			{expand.has(item.id) && load.has(item.id) !== null && (
+				<Button
+					borderless
+					displayType="secondary"
+					onClick={() => load.loadMore(item.id, item)}
+				>
+					Load more results
+				</Button>
+			)}
+		</TreeView.Item>
+	)}
 </TreeView>
 ```
 
