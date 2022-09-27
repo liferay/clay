@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {Key, useCallback, useContext, useRef} from 'react';
+import React, {Key, useCallback, useContext} from 'react';
 
 import type {ChildrenFunction} from './Collection';
 import type {ITreeState} from './useTree';
@@ -20,7 +20,7 @@ type LoadMoreCursor = {
 
 export type OnLoadMore<T> = (
 	item: T,
-	cursor?: unknown
+	cursor?: any
 ) => Promise<Array<any> | undefined> | Promise<LoadMoreCursor | undefined>;
 
 export interface ITreeViewContext<T> extends ITreeState<T> {
@@ -58,20 +58,28 @@ export type Expand = {
 	has: (key: Key) => boolean;
 };
 
-export type LoadMore = <T>(
-	id: React.Key,
-	item: T,
-	willToggle?: boolean
-) => Promise<void> | undefined;
+export type LoadMore = {
+	has: (key: Key) => any;
+	loadMore: <T>(
+		id: React.Key,
+		item: T,
+		willToggle?: boolean
+	) => Promise<void> | undefined;
+};
 
 export function useAPI(): [Selection, Expand, LoadMore] {
-	const {expandedKeys, insert, layout, onLoadMore, selection, toggle} =
-		useTreeViewContext();
-
-	const cursorRef = useRef<unknown>(null);
+	const {
+		cursors,
+		expandedKeys,
+		insert,
+		layout,
+		onLoadMore,
+		selection,
+		toggle,
+	} = useTreeViewContext();
 
 	const loadMore = useCallback(
-		<T>(id: React.Key, item: T, willToggle: boolean = false) => {
+		<T>(id: Key, item: T, willToggle: boolean = false) => {
 			if (!onLoadMore) {
 				return;
 			}
@@ -82,7 +90,9 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 				return;
 			}
 
-			return onLoadMore(item, cursorRef.current)
+			const cursor = cursors.current.get(id);
+
+			return onLoadMore(item, cursor)
 				.then((items) => {
 					if (!items) {
 						return;
@@ -94,9 +104,9 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 						if (willToggle) {
 							toggle(id);
 						}
-					} else if (items.cursor && items.items) {
+					} else if (items.items) {
+						cursors.current.set(id, items.cursor);
 						insert([...layoutItem.loc, 0], items.items);
-						cursorRef.current = items.cursor;
 					}
 				})
 				.catch((error) => {
@@ -107,9 +117,7 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 	);
 
 	const hasKey = useCallback(
-		(key: Key) => {
-			return selection.selectedKeys.has(key);
-		},
+		(key: Key) => selection.selectedKeys.has(key),
 		[selection.selectedKeys]
 	);
 
@@ -118,12 +126,17 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 		[expandedKeys]
 	);
 
+	const hasCursor = useCallback(
+		(key: Key) => cursors.current.get(key),
+		[cursors]
+	);
+
 	return [
 		{
 			has: hasKey,
 			toggle: selection.toggleSelection,
 		},
 		{has: hasExpandedKey, toggle},
-		loadMore,
+		{has: hasCursor, loadMore},
 	];
 }

@@ -1078,10 +1078,15 @@ export const AsyncLoadDataPaginated = () => (
 	<TreeView
 		defaultItems={ITEMS_DRIVE}
 		nestedKey="children"
-		onLoadMore={async (item) => {
+		onLoadMore={async (item, cursor: number = 1) => {
 			// Example conditional, I don't want to load data for an item that has
 			// no children.
 			if (!item.children) {
+				return;
+			}
+
+			// No more data to fetch.
+			if (cursor === null) {
 				return;
 			}
 
@@ -1090,9 +1095,11 @@ export const AsyncLoadDataPaginated = () => (
 				setTimeout(() => resolve(''), 1000);
 			});
 
+			const newCursor = cursor + 1;
+
 			return {
 				// Just for simulation
-				cursor: 'http://clay.dev/...',
+				cursor: newCursor <= 3 ? newCursor : null,
 				items: [
 					{
 						id: Math.random(),
@@ -1110,7 +1117,7 @@ export const AsyncLoadDataPaginated = () => (
 			};
 		}}
 	>
-		{(item, selection, expand, loadMore) => (
+		{(item, selection, expand, load) => (
 			<TreeView.Item>
 				<TreeView.ItemStack>
 					<Icon symbol="folder" />
@@ -1125,11 +1132,11 @@ export const AsyncLoadDataPaginated = () => (
 					)}
 				</TreeView.Group>
 
-				{expand.has(item.id) && (
+				{expand.has(item.id) && load.has(item.id) !== null && (
 					<Button
 						borderless
 						displayType="secondary"
-						onClick={() => loadMore(item.id, item)}
+						onClick={() => load.loadMore(item.id, item)}
 					>
 						Load more results
 					</Button>

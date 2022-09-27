@@ -4,7 +4,7 @@
  */
 
 import {useInternalState} from '@clayui/shared';
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 import {Layout, useLayout} from './useLayout';
 import {
@@ -78,6 +78,7 @@ export interface ITreeProps<T>
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	close: (key: Key) => boolean;
+	cursors: React.MutableRefObject<Map<React.Key, unknown>>;
 	expandedKeys: Set<Key>;
 	insert: (path: Array<number>, value: unknown) => void;
 	layout: Layout;
@@ -98,6 +99,8 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		onChange: props.onItemsChange,
 		value: props.items,
 	});
+
+	const cursors = useRef<Map<React.Key, unknown>>(new Map());
 
 	const layout = useLayout();
 
@@ -291,6 +294,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	return {
 		close,
+		cursors,
 		expandedKeys,
 		insert,
 		items,

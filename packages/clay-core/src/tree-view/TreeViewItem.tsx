@@ -103,7 +103,7 @@ export const TreeViewItem = React.forwardRef<
 
 	const api = useAPI();
 
-	const loadMore = api[2];
+	const load = api[2];
 
 	const [left, right, ...otherElements] = React.Children.toArray(children);
 
@@ -253,7 +253,7 @@ export const TreeViewItem = React.forwardRef<
 						if (group) {
 							toggle(item.key);
 						} else {
-							const promise = loadMore(item.key, item, true);
+							const promise = load.loadMore(item.key, item, true);
 
 							if (promise) {
 								setLoading(true);
@@ -308,7 +308,10 @@ export const TreeViewItem = React.forwardRef<
 								break;
 							case Keys.Right:
 								if (!group) {
-									const promise = loadMore(item.key, item);
+									const promise = load.loadMore(
+										item.key,
+										item
+									);
 
 									if (promise) {
 										setLoading(true);
