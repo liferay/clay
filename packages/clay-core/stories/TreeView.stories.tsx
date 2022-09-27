@@ -1076,7 +1076,14 @@ export const AsyncLoad = () => (
 
 export const AsyncLoadDataPaginated = () => (
 	<TreeView
-		defaultItems={ITEMS_DRIVE}
+		defaultExpandedKeys={new Set(['root'])}
+		defaultItems={[
+			{
+				children: ITEMS_DRIVE,
+				id: 'root',
+				name: 'Root',
+			},
+		]}
 		nestedKey="children"
 		onLoadMore={async (item, cursor: number = 1) => {
 			// Example conditional, I don't want to load data for an item that has
