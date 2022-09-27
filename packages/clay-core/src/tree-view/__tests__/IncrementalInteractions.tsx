@@ -1056,6 +1056,107 @@ describe('TreeView incremental interactions', () => {
 
 			expect(random).toBeTruthy();
 		});
+
+		it('load paginated data for a specific item', async () => {
+			const data = [
+				[
+					{
+						id: 3,
+						name: 'Item 2',
+					},
+					{
+						id: 4,
+						name: 'Item 3',
+					},
+				],
+				[
+					{
+						id: 5,
+						name: 'Item 4',
+					},
+					{
+						id: 6,
+						name: 'Item 5',
+					},
+				],
+			];
+
+			const {getAllByRole, getByText} = render(
+				<Provider spritemap={spritemap}>
+					<TreeView
+						defaultExpandedKeys={new Set([1])}
+						defaultItems={[
+							{
+								children: [{id: 2, name: 'Item'}],
+								id: 1,
+								name: 'Root',
+							},
+						]}
+						onLoadMore={async (item, cursor: number = 0) => {
+							const fakeData = data[cursor];
+							const next = cursor + 1;
+
+							if (cursor === null) {
+								return;
+							}
+
+							return {
+								cursor: next <= fakeData.length ? next : null,
+								items: fakeData,
+							};
+						}}
+					>
+						{(item, s, expand, load) => (
+							<TreeView.Item>
+								<TreeView.ItemStack>
+									{item.name}
+								</TreeView.ItemStack>
+								<TreeView.Group items={item.children}>
+									{(item) => (
+										<TreeView.Item>
+											{item.name}
+										</TreeView.Item>
+									)}
+								</TreeView.Group>
+
+								{expand.has(item.id) &&
+									load.has(item.id) !== null && (
+										<Button
+											borderless
+											displayType="secondary"
+											onClick={() =>
+												load.loadMore(item.id, item)
+											}
+										>
+											Load more results
+										</Button>
+									)}
+							</TreeView.Item>
+						)}
+					</TreeView>
+				</Provider>
+			);
+
+			const loadMoreButton = getByText('Load more results');
+
+			fireEvent.click(loadMoreButton);
+
+			await waitFor(() => getByText('Item 2'));
+
+			const [, , item2, item3] = getAllByRole('treeitem');
+
+			expect(item2).toBeDefined();
+			expect(item3).toBeDefined();
+
+			fireEvent.click(loadMoreButton);
+
+			await waitFor(() => getByText('Item 4'));
+
+			const [, , , , item4, item5] = getAllByRole('treeitem');
+
+			expect(item4).toBeDefined();
+			expect(item5).toBeDefined();
+		});
 	});
 
 	it('clicking the action with DropDown should stay visible', () => {
