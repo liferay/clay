@@ -244,6 +244,8 @@ export function Autocomplete({
 					}
 
 					if (!active && event.altKey && event.key === Keys.Down) {
+						event.stopPropagation();
+
 						setActive(true);
 					}
 				}}
