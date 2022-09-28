@@ -1139,7 +1139,7 @@ export const AsyncLoadDataPaginated = () => (
 					)}
 				</TreeView.Group>
 
-				{expand.has(item.id) && load.has(item.id) !== null && (
+				{expand.has(item.id) && load.get(item.id) !== null && (
 					<Button
 						borderless
 						displayType="secondary"
