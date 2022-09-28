@@ -40,44 +40,44 @@ export default {
 	title: 'Design System/Components/Autocomplete',
 };
 
-export const Default = () => {
-	const [value, setValue] = useState('');
-
-	return (
-		<div className="row">
-			<div className="col-md-5">
-				<div className="sheet">
-					<div className="form-group">
-						<label>Numbers (one-five)</label>
-						<ClayAutocomplete>
-							<ClayAutocomplete.Input
-								aria-label="Numbers: Enter a number from One to Five"
-								onChange={(event: any) =>
-									setValue(event.target.value)
-								}
-								value={value}
-							/>
-
-							<ClayAutocomplete.DropDown active={!!value}>
-								<ClayDropDown.ItemList>
-									{['one', 'two', 'three', 'four', 'five']
-										.filter((item) => item.match(value))
-										.map((item) => (
-											<ClayAutocomplete.Item
-												key={item}
-												match={value}
-												onClick={() => setValue(item)}
-												value={item}
-											/>
-										))}
-								</ClayDropDown.ItemList>
-							</ClayAutocomplete.DropDown>
-						</ClayAutocomplete>
-					</div>
+export const Default = (args: any) => (
+	<div className="row">
+		<div className="col-md-5">
+			<div className="sheet">
+				<div className="form-group">
+					<label
+						htmlFor="clay-autocomplete-1"
+						id="clay-autocomplete-label-1"
+					>
+						Numbers (one-five)
+					</label>
+					<ClayAutocomplete
+						aria-labelledby="clay-autocomplete-label-1"
+						id="clay-autocomplete-1"
+						menuTrigger={args.menuTrigger}
+						messages={{
+							loading: 'Loading...',
+							notFound: 'No results found',
+						}}
+						placeholder="Enter a number from One to Five"
+					>
+						{['one', 'two', 'three', 'four', 'five'].map((item) => (
+							<ClayAutocomplete.Item key={item}>
+								{item}
+							</ClayAutocomplete.Item>
+						))}
+					</ClayAutocomplete>
 				</div>
 			</div>
 		</div>
-	);
+	</div>
+);
+
+Default.argTypes = {
+	menuTrigger: {
+		control: {type: 'select'},
+		options: ['focus', 'input'],
+	},
 };
 
 export const Keyboard = () => {

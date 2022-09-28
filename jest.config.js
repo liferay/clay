@@ -14,10 +14,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-autocomplete/src/': {
-			branches: 50,
-			functions: 75,
-			lines: 90,
-			statements: 90,
+			branches: 79,
+			functions: 93,
+			lines: 92,
+			statements: 92,
 		},
 		'./packages/clay-badge/src/': {
 			branches: 0,
