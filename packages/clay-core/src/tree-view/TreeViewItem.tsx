@@ -451,7 +451,7 @@ export const TreeViewItem = React.forwardRef<
 				</div>
 				{group}
 
-				{Boolean(otherElements.length) && (
+				{left && group && Boolean(otherElements.length) && (
 					<div
 						style={{
 							paddingLeft: `${spacing + 24}px`,
