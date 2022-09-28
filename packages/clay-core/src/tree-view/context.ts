@@ -13,6 +13,16 @@ export type Icons = {
 	close: React.ReactElement;
 };
 
+type LoadMoreCursor = {
+	cursor: unknown;
+	items: Array<unknown>;
+};
+
+export type OnLoadMore<T> = (
+	item: T,
+	cursor?: any
+) => Promise<Array<any> | undefined> | Promise<LoadMoreCursor | undefined>;
+
 export interface ITreeViewContext<T> extends ITreeState<T> {
 	childrenRoot: React.MutableRefObject<ChildrenFunction<Object> | null>;
 	dragAndDrop?: boolean;
@@ -22,7 +32,7 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	expanderIcons?: Icons;
 	nestedKey?: string;
 	onItemMove?: (item: T, parentItem: T) => void;
-	onLoadMore?: (item: any) => Promise<unknown>;
+	onLoadMore?: OnLoadMore<T>;
 	onSelect?: (item: T) => void;
 	onRenameItem?: (item: T) => Promise<any>;
 	rootRef: React.RefObject<HTMLUListElement>;
@@ -48,13 +58,66 @@ export type Expand = {
 	has: (key: Key) => boolean;
 };
 
-export function useAPI(): [Selection, Expand] {
-	const {expandedKeys, selection, toggle} = useTreeViewContext();
+export type LoadMore = {
+	get: (key: Key) => any;
+	loadMore: <T>(
+		id: React.Key,
+		item: T,
+		willToggle?: boolean
+	) => Promise<void> | undefined;
+};
+
+export function useAPI(): [Selection, Expand, LoadMore] {
+	const {
+		cursors,
+		expandedKeys,
+		insert,
+		layout,
+		onLoadMore,
+		selection,
+		toggle,
+	} = useTreeViewContext();
+
+	const loadMore = useCallback(
+		<T>(id: Key, item: T, willToggle: boolean = false) => {
+			if (!onLoadMore) {
+				return;
+			}
+
+			const layoutItem = layout.layoutKeys.current.get(id);
+
+			if (!layoutItem) {
+				return;
+			}
+
+			const cursor = cursors.current.get(id);
+
+			return onLoadMore(item, cursor)
+				.then((items) => {
+					if (!items) {
+						return;
+					}
+
+					if (Array.isArray(items)) {
+						insert([...layoutItem.loc, 0], items);
+
+						if (willToggle) {
+							toggle(id);
+						}
+					} else if (items.items) {
+						cursors.current.set(id, items.cursor);
+						insert([...layoutItem.loc, 0], items.items);
+					}
+				})
+				.catch((error) => {
+					console.error(error);
+				});
+		},
+		[insert]
+	);
 
 	const hasKey = useCallback(
-		(key: Key) => {
-			return selection.selectedKeys.has(key);
-		},
+		(key: Key) => selection.selectedKeys.has(key),
 		[selection.selectedKeys]
 	);
 
@@ -63,11 +126,17 @@ export function useAPI(): [Selection, Expand] {
 		[expandedKeys]
 	);
 
+	const getCursor = useCallback(
+		(key: Key) => cursors.current.get(key),
+		[cursors]
+	);
+
 	return [
 		{
 			has: hasKey,
 			toggle: selection.toggleSelection,
 		},
 		{has: hasExpandedKey, toggle},
+		{get: getCursor, loadMore},
 	];
 }

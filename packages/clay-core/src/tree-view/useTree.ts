@@ -4,8 +4,9 @@
  */
 
 import {useInternalState} from '@clayui/shared';
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
+import {Layout, useLayout} from './useLayout';
 import {
 	IMultipleSelection,
 	IMultipleSelectionState,
@@ -77,8 +78,10 @@ export interface ITreeProps<T>
 
 export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	close: (key: Key) => boolean;
+	cursors: React.MutableRefObject<Map<React.Key, unknown>>;
 	expandedKeys: Set<Key>;
 	insert: (path: Array<number>, value: unknown) => void;
+	layout: Layout;
 	open: (key: Key) => boolean;
 	remove: (path: Array<number>) => void;
 	reorder: (from: Array<number>, path: Array<number>) => void;
@@ -97,9 +100,14 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		value: props.items,
 	});
 
+	const cursors = useRef<Map<React.Key, unknown>>(new Map());
+
+	const layout = useLayout();
+
 	const selection = useMultipleSelection<T>({
 		defaultSelectedKeys: props.defaultSelectedKeys,
 		items,
+		layoutKeys: layout.layoutKeys,
 		nestedKey: props.nestedKey,
 		onSelectionChange: props.onSelectionChange,
 		selectedKeys: props.selectedKeys,
@@ -286,9 +294,11 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	return {
 		close,
+		cursors,
 		expandedKeys,
 		insert,
 		items,
+		layout,
 		open,
 		remove,
 		reorder,
@@ -479,7 +489,14 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 					const node = nodeByPath(path);
 
 					if (node.parent) {
-						node.parent[nestedKey] = value;
+						if (node.parent[nestedKey]) {
+							node.parent[nestedKey] = [
+								...node.parent[nestedKey],
+								...(value as Array<unknown>),
+							];
+						} else {
+							node.parent[nestedKey] = value;
+						}
 					}
 
 					break;

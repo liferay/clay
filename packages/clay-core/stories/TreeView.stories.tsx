@@ -1074,11 +1074,90 @@ export const AsyncLoad = () => (
 	</TreeView>
 );
 
+export const AsyncLoadDataPaginated = () => (
+	<TreeView
+		defaultExpandedKeys={new Set(['root'])}
+		defaultItems={[
+			{
+				children: ITEMS_DRIVE,
+				id: 'root',
+				name: 'Root',
+			},
+		]}
+		nestedKey="children"
+		onLoadMore={async (item, cursor: number = 1) => {
+			// Example conditional, I don't want to load data for an item that has
+			// no children.
+			if (!item.children) {
+				return;
+			}
+
+			// No more data to fetch.
+			if (cursor === null) {
+				return;
+			}
+
+			// Delay to simulate loading of new data
+			await new Promise((resolve) => {
+				setTimeout(() => resolve(''), 1000);
+			});
+
+			const newCursor = cursor + 1;
+
+			return {
+				// Just for simulation
+				cursor: newCursor <= 3 ? newCursor : null,
+				items: [
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+					{
+						id: Math.random(),
+						name: `${item.name} ${Math.random()}`,
+					},
+				],
+			};
+		}}
+	>
+		{(item, selection, expand, load) => (
+			<TreeView.Item>
+				<TreeView.ItemStack>
+					<Icon symbol="folder" />
+					{item.name}
+				</TreeView.ItemStack>
+				<TreeView.Group items={item.children}>
+					{(item) => (
+						<TreeView.Item>
+							<Icon symbol="folder" />
+							{item.name}
+						</TreeView.Item>
+					)}
+				</TreeView.Group>
+
+				{expand.has(item.id) && load.has(item.id) !== null && (
+					<Button
+						borderless
+						displayType="secondary"
+						onClick={() => load.loadMore(item.id, item)}
+					>
+						Load more results
+					</Button>
+				)}
+			</TreeView.Item>
+		)}
+	</TreeView>
+);
+
 export const AsyncLoadWithErrorHandling = () => {
 	const [renderToast, setRenderToast] = useState(false);
 
 	const onLoadMore = () => {
-		return new Promise((resolve, reject) => {
+		return new Promise<any>((resolve, reject) => {
 			setTimeout(() => {
 				reject(new Error('Could not load more items'));
 			}, 1000);
