@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fix bug of getting focused elements in document in menus ([5cce01c](https://github.com/liferay/clay/commit/5cce01c92c30fe1f7d5175208e13e5fdfbafc4ca))
+
 # [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
 
 **Note:** Version bump only for package @clayui/shared

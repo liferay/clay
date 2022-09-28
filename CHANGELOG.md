@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error when moving focus when pressing alt + arrowdown ([b260984](https://github.com/liferay/clay/commit/b260984484f25617d2f3010ce5b8211e2075ff0f))
+-   **@clayui/shared:** fix bug of getting focused elements in document in menus ([5cce01c](https://github.com/liferay/clay/commit/5cce01c92c30fe1f7d5175208e13e5fdfbafc4ca))
+
+### Features
+
+-   **@clayui/autocomplete:** adds accessibility to new autocomplete behavior ([f2ad617](https://github.com/liferay/clay/commit/f2ad617f8f19ad15630f8fd7afd83a126a241e4c))
+-   **@clayui/autocomplete:** adds new less verbose composition with more OOTB features ([37e9e89](https://github.com/liferay/clay/commit/37e9e8977fa3b741b0619ba41607beaa97d0d976))
+-   **@clayui/autocomplete:** deprecated the `onSetActive` API and replaced it with `onActiveChange` ([9ad5bcb](https://github.com/liferay/clay/commit/9ad5bcb72f057909bdac83789bb4e96a2dd28aff))
+-   **@clayui/core:** add paginated data support ([1c3e3d8](https://github.com/liferay/clay/commit/1c3e3d86014c19217e0d64f86a426bcfb63108b7))
+-   **@clayui/core:** add single cursor per item ([b5b3bb3](https://github.com/liferay/clay/commit/b5b3bb327721c68b03cdb2de9f5433c8c64a34ec))
+-   **@clayui/core:** adds the possibility to render non-Clay elements inside the TreeView.Item ([01dcf32](https://github.com/liferay/clay/commit/01dcf32da8c5a10e7c876f951ecc128c7f8ecc7b))
+-   **@clayui/css:** Functions `map-deep-merge` shouldn't merge maps if `merge: false` ([2e68bfe](https://github.com/liferay/clay/commit/2e68bfe6833421c999fbd8ee2b596ae697e13756))
+-   **@clayui/css:** SVG Icons updates mobile icons ([13c4e21](https://github.com/liferay/clay/commit/13c4e211f59be74d9ffb19fc7a95ddcaf4abe6d9))
+
 # [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
 
 ### Bug Fixes

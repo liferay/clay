@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
+
+
+### Features
+
+* **@clayui/css:** Functions `map-deep-merge` shouldn't merge maps if `merge: false` ([2e68bfe](https://github.com/liferay/clay/commit/2e68bfe6833421c999fbd8ee2b596ae697e13756))
+* **@clayui/css:** SVG Icons updates mobile icons ([13c4e21](https://github.com/liferay/clay/commit/13c4e211f59be74d9ffb19fc7a95ddcaf4abe6d9))
+
+
+
+
+
 # [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
 
 

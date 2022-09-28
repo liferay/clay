@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error when moving focus when pressing alt + arrowdown ([b260984](https://github.com/liferay/clay/commit/b260984484f25617d2f3010ce5b8211e2075ff0f))
+
+### Features
+
+-   **@clayui/autocomplete:** adds accessibility to new autocomplete behavior ([f2ad617](https://github.com/liferay/clay/commit/f2ad617f8f19ad15630f8fd7afd83a126a241e4c))
+-   **@clayui/autocomplete:** adds new less verbose composition with more OOTB features ([37e9e89](https://github.com/liferay/clay/commit/37e9e8977fa3b741b0619ba41607beaa97d0d976))
+-   **@clayui/autocomplete:** deprecated the `onSetActive` API and replaced it with `onActiveChange` ([9ad5bcb](https://github.com/liferay/clay/commit/9ad5bcb72f057909bdac83789bb4e96a2dd28aff))
+
 # [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
 
 **Note:** Version bump only for package @clayui/autocomplete

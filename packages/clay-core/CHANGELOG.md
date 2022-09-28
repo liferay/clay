@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
+
+### Features
+
+-   **@clayui/core:** add paginated data support ([1c3e3d8](https://github.com/liferay/clay/commit/1c3e3d86014c19217e0d64f86a426bcfb63108b7))
+-   **@clayui/core:** add single cursor per item ([b5b3bb3](https://github.com/liferay/clay/commit/b5b3bb327721c68b03cdb2de9f5433c8c64a34ec))
+-   **@clayui/core:** adds the possibility to render non-Clay elements inside the TreeView.Item ([01dcf32](https://github.com/liferay/clay/commit/01dcf32da8c5a10e7c876f951ecc128c7f8ecc7b))
+
 # [3.74.0](https://github.com/liferay/clay/compare/v3.73.0...v3.74.0) (2022-09-19)
 
 ### Bug Fixes
