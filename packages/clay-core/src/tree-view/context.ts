@@ -59,7 +59,7 @@ export type Expand = {
 };
 
 export type LoadMore = {
-	has: (key: Key) => any;
+	get: (key: Key) => any;
 	loadMore: <T>(
 		id: React.Key,
 		item: T,
@@ -126,7 +126,7 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 		[expandedKeys]
 	);
 
-	const hasCursor = useCallback(
+	const getCursor = useCallback(
 		(key: Key) => cursors.current.get(key),
 		[cursors]
 	);
@@ -137,6 +137,6 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 			toggle: selection.toggleSelection,
 		},
 		{has: hasExpandedKey, toggle},
-		{has: hasCursor, loadMore},
+		{get: getCursor, loadMore},
 	];
 }

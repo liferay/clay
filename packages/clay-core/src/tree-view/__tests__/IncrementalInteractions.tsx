@@ -1120,7 +1120,7 @@ describe('TreeView incremental interactions', () => {
 								</TreeView.Group>
 
 								{expand.has(item.id) &&
-									load.has(item.id) !== null && (
+									load.get(item.id) !== null && (
 										<Button
 											borderless
 											displayType="secondary"
