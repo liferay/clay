@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.75.1](https://github.com/liferay/clay/compare/v3.75.0...v3.75.1) (2022-09-28)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes error of duplicating element rendering in TreeView ([f242a1e](https://github.com/liferay/clay/commit/f242a1ed0fe07edf781b20578c6cc255c8694eb0))
+
 # [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
 
 ### Bug Fixes
