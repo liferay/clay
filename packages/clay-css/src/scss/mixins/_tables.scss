@@ -52,7 +52,8 @@
 
 @mixin clay-table-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		@if ($enabled) {
 			@include clay-css($map);
@@ -390,17 +391,23 @@
 /// c-droppable-after: {Map | Null}, // See Mixin `clay-css` for available keys. This is an extra pseudo element if you need.
 
 @mixin clay-table-drag-variant($map) {
-	$cell: setter(map-get($map, cell), ());
+	$cell: map-get($map, cell);
+	$cell: if($cell, $cell, ());
 
-	$c-drag: setter(map-get($map, c-drag), ());
+	$c-drag: map-get($map, c-drag);
+	$c-drag: if($c-drag, $c-drag, ());
 
-	$c-dragging-before: setter(map-get($map, c-dragging-before), ());
+	$c-dragging-before: map-get($map, c-dragging-before);
+	$c-dragging-before: if($c-dragging-before, $c-dragging-before, ());
 
-	$c-dragging-after: setter(map-get($map, c-dragging-after), ());
+	$c-dragging-after: map-get($map, c-dragging-after);
+	$c-dragging-after: if($c-dragging-after, $c-dragging-after, ());
 
-	$c-droppable-before: setter(map-get($map, c-droppable-before), ());
+	$c-droppable-before: map-get($map, c-droppable-before);
+	$c-droppable-before: if($c-droppable-before, $c-droppable-before, ());
 
-	$c-droppable-after: setter(map-get($map, c-droppable-after), ());
+	$c-droppable-after: map-get($map, c-droppable-after);
+	$c-droppable-after: if($c-droppable-after, $c-droppable-after, ());
 
 	@include clay-css($map);
 
@@ -443,11 +450,14 @@
 /// cell: {Map | Null}, // See Mixin `clay-css` for available keys. This styles the table cell (th and td) in the `table-clone` variant.
 
 @mixin clay-table-clone-variant($map) {
-	$before: setter(map-get($map, before), ());
+	$before: map-get($map, before);
+	$before: if($before, $before, ());
 
-	$after: setter(map-get($map, after), ());
+	$after: map-get($map, after);
+	$after: if($after, $after, ());
 
-	$cell: setter(map-get($map, cell), ());
+	$cell: map-get($map, cell);
+	$cell: if($cell, $cell, ());
 
 	@include clay-css($map);
 

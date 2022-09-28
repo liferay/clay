@@ -35,10 +35,12 @@
 /// - Add @link to documentation
 
 @mixin clay-loading-animation-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
 	$mixin-name: 'clay-loading-animation-variant';
 
-	$after: setter(map-get($map, after), ());
+	$after: map-get($map, after);
+	$after: if($after, $after, ());
 	$after-color: setter(map-get($map, color), map-get($after, color));
 
 	$ball-0-scale: setter(map-get($map, ball-0-scale), 0em);

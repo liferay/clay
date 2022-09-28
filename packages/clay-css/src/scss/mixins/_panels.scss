@@ -57,7 +57,8 @@
 
 @mixin clay-panel-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -67,7 +68,8 @@
 			)
 		);
 
-		$header: setter(map-get($map, header), ());
+		$header: map-get($map, header);
+		$header: if($header, $header, ());
 		$header: map-merge(
 			$header,
 			(
@@ -144,8 +146,14 @@
 			)
 		);
 
-		$old-header-collapsed: setter(map-get($map, header-collapsed), ());
-		$header-collapsed: setter(map-get($header, collapsed), ());
+		$old-header-collapsed: map-get($map, header-collapsed);
+		$old-header-collapsed: if(
+			$old-header-collapsed,
+			$old-header-collapsed,
+			()
+		);
+		$header-collapsed: map-get($header, collapsed);
+		$header-collapsed: if($header-collapsed, $header-collapsed, ());
 		$header-collapsed: map-merge($header-collapsed, $old-header-collapsed);
 		$header-collapsed: map-merge(
 			$header-collapsed,
@@ -158,8 +166,10 @@
 			)
 		);
 
-		$old-header-c-inner: setter(map-get($map, header-c-inner), ());
-		$header-c-inner: setter(map-get($header, c-inner), ());
+		$old-header-c-inner: map-get($map, header-c-inner);
+		$old-header-c-inner: if($old-header-c-inner, $old-header-c-inner, ());
+		$header-c-inner: map-get($header, c-inner);
+		$header-c-inner: if($header-c-inner, $header-c-inner, ());
 		$header-c-inner: map-merge(
 			(
 				enabled:
@@ -180,11 +190,14 @@
 			$header-c-inner
 		);
 
-		$old-header-link: setter(map-get($map, header-link), ());
-		$header-link: setter(map-get($header, link), ());
+		$old-header-link: map-get($map, header-link);
+		$old-header-link: if($old-header-link, $old-header-link, ());
+		$header-link: map-get($header, link);
+		$header-link: if($header-link, $header-link, ());
 		$header-link: map-deep-merge($header-link, $old-header-link);
 
-		$title: setter(map-get($map, title), ());
+		$title: map-get($map, title);
+		$title: if($title, $title, ());
 		$title: map-merge(
 			$title,
 			(
@@ -206,7 +219,8 @@
 			)
 		);
 
-		$collapse-icon: setter(map-get($map, collapse-icon), ());
+		$collapse-icon: map-get($map, collapse-icon);
+		$collapse-icon: if($collapse-icon, $collapse-icon, ());
 		$collapse-icon: map-merge(
 			$collapse-icon,
 			(
@@ -238,7 +252,8 @@
 			)
 		);
 
-		$body: setter(map-get($map, body), ());
+		$body: map-get($map, body);
+		$body: if($body, $body, ());
 		$body: map-merge(
 			$body,
 			(
@@ -285,7 +300,8 @@
 			)
 		);
 
-		$footer: setter(map-get($map, footer), ());
+		$footer: map-get($map, footer);
+		$footer: if($footer, $footer, ());
 		$footer: map-merge(
 			$footer,
 			(

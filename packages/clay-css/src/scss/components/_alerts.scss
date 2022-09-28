@@ -167,8 +167,13 @@
 		@include clay-css(map-get($alert-inline, alert-dismissible));
 
 		&.alert-fluid {
-			$alert-dismissible-alert-fluid: setter(
-				map-get($alert-inline, alert-dismissible-alert-fluid),
+			$alert-dismissible-alert-fluid: map-get(
+				$alert-inline,
+				alert-dismissible-alert-fluid
+			);
+			$alert-dismissible-alert-fluid: if(
+				$alert-dismissible-alert-fluid,
+				$alert-dismissible-alert-fluid,
 				()
 			);
 
@@ -176,17 +181,24 @@
 
 			> .container,
 			> .container-fluid {
-				$container-fluid: setter(
-					map-get($alert-dismissible-alert-fluid, container-fluid),
-					()
+				$container-fluid: map-get(
+					$alert-dismissible-alert-fluid,
+					container-fluid
 				);
+				$container-fluid: if($container-fluid, $container-fluid, ());
 
 				@include clay-css($container-fluid);
 
 				> .alert-autofit-row {
+					$container-fluid-alert-autofit-row: map-get(
+						$container-fluid,
+						alert-autofit-row
+					);
+
 					@include clay-css(
-						setter(
-							map-get($container-fluid, alert-autofit-row),
+						if(
+							$container-fluid-alert-autofit-row,
+							$container-fluid-alert-autofit-row,
 							map-get($alert-inline, alert-autofit-row)
 						)
 					);
@@ -202,10 +214,8 @@
 	}
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($alert-inline, alert-autofit-row),
-			()
-		);
+		$alert-autofit-row: map-get($alert-inline, alert-autofit-row);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include clay-css($alert-autofit-row);
 
@@ -225,10 +235,8 @@
 	@include clay-css($alert-autofit-stacked);
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($alert-autofit-stacked, alert-autofit-row),
-			()
-		);
+		$alert-autofit-row: map-get($alert-autofit-stacked, alert-autofit-row);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include clay-css($alert-autofit-row);
 
@@ -252,7 +260,8 @@
 	@include clay-css($alert-autofit-stacked-sm-down);
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
+		$alert-autofit-row: if(
+			map-get($alert-autofit-stacked-sm-down, alert-autofit-row),
 			map-get($alert-autofit-stacked-sm-down, alert-autofit-row),
 			()
 		);
@@ -287,10 +296,11 @@
 	@include clay-css($alert-autofit-stacked-xs-down);
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($alert-autofit-stacked-xs-down, alert-autofit-row),
-			()
+		$alert-autofit-row: map-get(
+			$alert-autofit-stacked-xs-down,
+			alert-autofit-row
 		);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include media-breakpoint-down(xs) {
 			@include clay-css($alert-autofit-row);
@@ -322,7 +332,8 @@
 	@include clay-css($alert-indicator-start);
 
 	&.alert-fluid {
-		$alert-fluid: setter(map-get($alert-indicator-start, alert-fluid), ());
+		$alert-fluid: map-get($alert-indicator-start, alert-fluid);
+		$alert-fluid: if($alert-fluid, $alert-fluid, ());
 
 		@include clay-css($alert-fluid);
 
@@ -337,10 +348,8 @@
 	}
 
 	.alert-indicator {
-		$alert-indicator: setter(
-			map-get($alert-indicator-start, alert-indicator),
-			()
-		);
+		$alert-indicator: map-get($alert-indicator-start, alert-indicator);
+		$alert-indicator: if($alert-indicator, $alert-indicator, ());
 
 		@include clay-css($alert-indicator);
 
@@ -350,10 +359,8 @@
 	}
 
 	.alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($alert-indicator-start, alert-autofit-row),
-			()
-		);
+		$alert-autofit-row: map-get($alert-indicator-start, alert-autofit-row);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include clay-css($alert-autofit-row);
 

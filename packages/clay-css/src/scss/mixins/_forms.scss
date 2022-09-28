@@ -295,9 +295,10 @@
 
 @mixin clay-form-control-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
-		$base: setter($map, ());
+		$base: if($map, $map, ());
 		$base: map-merge(
 			$map,
 			(
@@ -331,7 +332,8 @@
 			)
 		);
 
-		$placeholder: setter(map-get($map, placeholder), ());
+		$placeholder: map-get($map, placeholder);
+		$placeholder: if($placeholder, $placeholder, ());
 		$placeholder: map-deep-merge(
 			$placeholder,
 			(
@@ -348,7 +350,8 @@
 			)
 		);
 
-		$selection: setter(map-get($map, selection), ());
+		$selection: map-get($map, selection);
+		$selection: if($selection, $selection, ());
 		$selection: map-deep-merge(
 			$selection,
 			(
@@ -365,7 +368,8 @@
 			)
 		);
 
-		$hover: setter(map-get($map, hover), ());
+		$hover: map-get($map, hover);
+		$hover: if($hover, $hover, ());
 		$hover: map-deep-merge(
 			$hover,
 			(
@@ -389,8 +393,14 @@
 			)
 		);
 
-		$old-hover-placeholder: setter(map-get($map, hover-placeholder), ());
-		$hover-placeholder: setter(map-get($hover, placeholder), ());
+		$old-hover-placeholder: map-get($map, hover-placeholder);
+		$old-hover-placeholder: if(
+			$old-hover-placeholder,
+			$old-hover-placeholder,
+			()
+		);
+		$hover-placeholder: map-get($hover, placeholder);
+		$hover-placeholder: if($hover-placeholder, $hover-placeholder, ());
 		$hover-placeholder: map-deep-merge(
 			$hover-placeholder,
 			$old-hover-placeholder
@@ -406,7 +416,8 @@
 			)
 		);
 
-		$focus: setter(map-get($map, focus), ());
+		$focus: map-get($map, focus);
+		$focus: if($focus, $focus, ());
 		$focus: map-deep-merge(
 			$focus,
 			(
@@ -435,8 +446,14 @@
 			)
 		);
 
-		$old-focus-placeholder: setter(map-get($map, focus-placeholder), ());
-		$focus-placeholder: setter(map-get($focus, placeholder), ());
+		$old-focus-placeholder: map-get($map, focus-placeholder);
+		$old-focus-placeholder: if(
+			$old-focus-placeholder,
+			$old-focus-placeholder,
+			()
+		);
+		$focus-placeholder: map-get($focus, placeholder);
+		$focus-placeholder: if($focus-placeholder, $focus-placeholder, ());
 		$focus-placeholder: map-deep-merge(
 			$focus-placeholder,
 			$old-focus-placeholder
@@ -463,7 +480,8 @@
 		$readonly-opacity: map-get($map, readonly-opacity);
 		$readonly-placeholder-color: map-get($map, readonly-placeholder-color);
 
-		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-get($map, disabled);
+		$disabled: if($disabled, $disabled, ());
 		$disabled: map-deep-merge(
 			$disabled,
 			(
@@ -505,11 +523,18 @@
 			)
 		);
 
-		$old-disabled-placeholder: setter(
-			map-get($map, disabled-placeholder),
+		$old-disabled-placeholder: map-get($map, disabled-placeholder);
+		$old-disabled-placeholder: if(
+			$old-disabled-placeholder,
+			$old-disabled-placeholder,
 			()
 		);
-		$disabled-placeholder: setter(map-get($disabled, placeholder), ());
+		$disabled-placeholder: map-get($disabled, placeholder);
+		$disabled-placeholder: if(
+			$disabled-placeholder,
+			$disabled-placeholder,
+			()
+		);
 		$disabled-placeholder: map-deep-merge(
 			$disabled-placeholder,
 			$old-disabled-placeholder
@@ -701,9 +726,10 @@
 /// - Add @link to documentation
 
 @mixin clay-select-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
 
-	$base: setter($map, ());
+	$base: if($map, $map, ());
 	$base: map-merge(
 		$base,
 		(
@@ -741,7 +767,8 @@
 		)
 	);
 
-	$hover: setter(map-get($map, hover), ());
+	$hover: map-get($map, hover);
+	$hover: if($hover, $hover, ());
 	$hover: map-deep-merge(
 		$hover,
 		(
@@ -764,7 +791,8 @@
 		)
 	);
 
-	$focus: setter(map-get($map, focus), ());
+	$focus: map-get($map, focus);
+	$focus: if($focus, $focus, ());
 	$focus: map-deep-merge(
 		$focus,
 		(
@@ -792,7 +820,8 @@
 		)
 	);
 
-	$disabled: setter(map-get($map, disabled), ());
+	$disabled: map-get($map, disabled);
+	$disabled: if($disabled, $disabled, ());
 	$disabled: map-deep-merge(
 		$disabled,
 		(
@@ -831,7 +860,8 @@
 		)
 	);
 
-	$disabled-option: setter(map-get($disabled, option), ());
+	$disabled-option: map-get($disabled, option);
+	$disabled-option: if($disabled-option, $disabled-option, ());
 	$disabled-option: map-deep-merge(
 		$disabled-option,
 		(
@@ -843,7 +873,8 @@
 		)
 	);
 
-	$option: setter(map-get($map, option), ());
+	$option: map-get($map, option);
+	$option: if($option, $option, ());
 
 	@if ($enabled) {
 		@include clay-css($base);
@@ -1065,7 +1096,8 @@
 /// )
 
 @mixin clay-form-validation-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
 
 	@if ($enabled) {
 		@include clay-css($map);
@@ -1429,9 +1461,11 @@
 
 @mixin clay-range-input-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
-		$clay-range-thumb: setter(map-get($map, clay-range-thumb), ());
+		$clay-range-thumb: map-get($map, clay-range-thumb);
+		$clay-range-thumb: if($clay-range-thumb, $clay-range-thumb, ());
 		$clay-range-thumb: map-merge(
 			$clay-range-thumb,
 			(
@@ -1504,7 +1538,8 @@
 			)
 		);
 
-		$moz-range-thumb: setter(map-get($map, moz-range-thumb), ());
+		$moz-range-thumb: map-get($map, moz-range-thumb);
+		$moz-range-thumb: if($moz-range-thumb, $moz-range-thumb, ());
 		$moz-range-thumb: map-merge(
 			$moz-range-thumb,
 			(
@@ -1524,7 +1559,8 @@
 			)
 		);
 
-		$ms-thumb: setter(map-get($map, ms-thumb), ());
+		$ms-thumb: map-get($map, ms-thumb);
+		$ms-thumb: if($ms-thumb, $ms-thumb, ());
 		$ms-thumb: map-merge(
 			$ms-thumb,
 			(
@@ -1541,7 +1577,12 @@
 			)
 		);
 
-		$webkit-slider-thumb: setter(map-get($map, webkit-slider-thumb), ());
+		$webkit-slider-thumb: map-get($map, webkit-slider-thumb);
+		$webkit-slider-thumb: if(
+			$webkit-slider-thumb,
+			$webkit-slider-thumb,
+			()
+		);
 		$webkit-slider-thumb: map-merge(
 			$webkit-slider-thumb,
 			(
@@ -1563,7 +1604,8 @@
 			)
 		);
 
-		$clay-range-track: setter(map-get($map, clay-range-track), ());
+		$clay-range-track: map-get($map, clay-range-track);
+		$clay-range-track: if($clay-range-track, $clay-range-track, ());
 		$clay-range-track: map-merge(
 			$clay-range-track,
 			(
@@ -1636,7 +1678,12 @@
 			)
 		);
 
-		$clay-range-progress: setter(map-get($map, clay-range-progress), ());
+		$clay-range-progress: map-get($map, clay-range-progress);
+		$clay-range-progress: if(
+			$clay-range-progress,
+			$clay-range-progress,
+			()
+		);
 		$clay-range-progress: map-merge(
 			$clay-range-progress,
 			(
@@ -1711,7 +1758,8 @@
 			)
 		);
 
-		$tooltip: setter(map-get($map, tooltip), ());
+		$tooltip: map-get($map, tooltip);
+		$tooltip: if($tooltip, $tooltip, ());
 		$tooltip: map-merge(
 			$tooltip,
 			(
@@ -1744,7 +1792,8 @@
 			)
 		);
 
-		$tooltip-inner: setter(map-get($map, tooltip-inner), ());
+		$tooltip-inner: map-get($map, tooltip-inner);
+		$tooltip-inner: if($tooltip-inner, $tooltip-inner, ());
 		$tooltip-inner: map-merge(
 			$tooltip-inner,
 			(
@@ -1786,7 +1835,8 @@
 			)
 		);
 
-		$tooltip-arrow: setter(map-get($map, tooltip-arrow), ());
+		$tooltip-arrow: map-get($map, tooltip-arrow);
+		$tooltip-arrow: if($tooltip-arrow, $tooltip-arrow, ());
 		$tooltip-arrow: map-merge(
 			$tooltip-arrow,
 			(
@@ -1818,7 +1868,12 @@
 			)
 		);
 
-		$clay-tooltip-bottom: setter(map-get($map, clay-tooltip-bottom), ());
+		$clay-tooltip-bottom: map-get($map, clay-tooltip-bottom);
+		$clay-tooltip-bottom: if(
+			$clay-tooltip-bottom,
+			$clay-tooltip-bottom,
+			()
+		);
 		$clay-tooltip-bottom: map-merge(
 			$clay-tooltip-bottom,
 			(
@@ -1842,8 +1897,14 @@
 			)
 		);
 
-		$clay-tooltip-bottom-tooltip-arrow: setter(
-			map-deep-get($map, clay-tooltip-bottom, tooltip-arrow),
+		$clay-tooltip-bottom-tooltip-arrow: map-deep-get(
+			$map,
+			clay-tooltip-bottom,
+			tooltip-arrow
+		);
+		$clay-tooltip-bottom-tooltip-arrow: if(
+			$clay-tooltip-bottom-tooltip-arrow,
+			$clay-tooltip-bottom-tooltip-arrow,
 			()
 		);
 		$clay-tooltip-bottom-tooltip-arrow: map-merge(
@@ -1860,7 +1921,8 @@
 			)
 		);
 
-		$clay-tooltip-top: setter(map-get($map, clay-tooltip-top), ());
+		$clay-tooltip-top: map-get($map, clay-tooltip-top);
+		$clay-tooltip-top: if($clay-tooltip-top, $clay-tooltip-top, ());
 		$clay-tooltip-top: map-merge(
 			$clay-tooltip-top,
 			(
@@ -1884,8 +1946,14 @@
 			)
 		);
 
-		$clay-tooltip-top-tooltip-arrow: setter(
-			map-deep-get($map, clay-tooltip-top, tooltip-arrow),
+		$clay-tooltip-top-tooltip-arrow: map-deep-get(
+			$map,
+			clay-tooltip-top,
+			tooltip-arrow
+		);
+		$clay-tooltip-top-tooltip-arrow: if(
+			$clay-tooltip-top-tooltip-arrow,
+			$clay-tooltip-top-tooltip-arrow,
 			()
 		);
 		$clay-tooltip-top-tooltip-arrow: map-merge(
@@ -1899,7 +1967,8 @@
 			)
 		);
 
-		$form-control-range: setter(map-get($map, form-control-range), ());
+		$form-control-range: map-get($map, form-control-range);
+		$form-control-range: if($form-control-range, $form-control-range, ());
 		$form-control-range: map-merge(
 			$form-control-range,
 			(
@@ -1936,7 +2005,8 @@
 			)
 		);
 
-		$data-label-min-max: setter(map-get($map, data-label-min-max), ());
+		$data-label-min-max: map-get($map, data-label-min-max);
+		$data-label-min-max: if($data-label-min-max, $data-label-min-max, ());
 		$data-label-min-max: map-merge(
 			$data-label-min-max,
 			(
@@ -1948,7 +2018,8 @@
 			)
 		);
 
-		$before-after: setter(map-get($map, before-after), ());
+		$before-after: map-get($map, before-after);
+		$before-after: if($before-after, $before-after, ());
 		$before-after: map-merge(
 			$before-after,
 			(
@@ -1995,8 +2066,10 @@
 			)
 		);
 
-		$data-label-min-before: setter(
-			map-deep-get($map, data-label-min, before),
+		$data-label-min-before: map-deep-get($map, data-label-min, before);
+		$data-label-min-before: if(
+			$data-label-min-before,
+			$data-label-min-before,
 			()
 		);
 		$data-label-min-before: map-merge(
@@ -2015,8 +2088,10 @@
 			)
 		);
 
-		$data-label-max-after: setter(
-			map-deep-get($map, data-label-max, after),
+		$data-label-max-after: map-deep-get($map, data-label-max, after);
+		$data-label-max-after: if(
+			$data-label-max-after,
+			$data-label-max-after,
 			()
 		);
 		$data-label-max-after: map-merge(
@@ -2035,7 +2110,8 @@
 			)
 		);
 
-		$hover: setter(map-deep-get($map, form-control-range, hover), ());
+		$hover: map-deep-get($map, form-control-range, hover);
+		$hover: if($hover, $hover, ());
 		$hover: map-merge(
 			$hover,
 			(
@@ -2047,8 +2123,10 @@
 			)
 		);
 
-		$hover-clay-range-thumb: setter(
-			map-deep-get($map, hover, clay-range-thumb),
+		$hover-clay-range-thumb: map-deep-get($map, hover, clay-range-thumb);
+		$hover-clay-range-thumb: if(
+			$hover-clay-range-thumb,
+			$hover-clay-range-thumb,
 			()
 		);
 		$hover-clay-range-thumb: map-merge(
@@ -2061,7 +2139,9 @@
 					),
 			)
 		);
-		$focus: setter(map-deep-get($map, form-control-range, focus), ());
+
+		$focus: map-deep-get($map, form-control-range, focus);
+		$focus: if($focus, $focus, ());
 		$focus: map-merge(
 			$focus,
 			(
@@ -2073,8 +2153,10 @@
 			)
 		);
 
-		$focus-clay-range-thumb: setter(
-			map-deep-get($map, focus, clay-range-thumb),
+		$focus-clay-range-thumb: map-deep-get($map, focus, clay-range-thumb);
+		$focus-clay-range-thumb: if(
+			$focus-clay-range-thumb,
+			$focus-clay-range-thumb,
 			()
 		);
 		$focus-clay-range-thumb: map-merge(
@@ -2088,7 +2170,8 @@
 			)
 		);
 
-		$disabled: setter(map-deep-get($map, form-control-range, disabled), ());
+		$disabled: map-deep-get($map, form-control-range, disabled);
+		$disabled: if($disabled, $disabled, ());
 		$disabled: map-merge(
 			$disabled,
 			(
@@ -2105,8 +2188,14 @@
 			)
 		);
 
-		$disabled-clay-range-thumb: setter(
-			map-deep-get($map, disabled, clay-range-thumb),
+		$disabled-clay-range-thumb: map-deep-get(
+			$map,
+			disabled,
+			clay-range-thumb
+		);
+		$disabled-clay-range-thumb: if(
+			$disabled-clay-range-thumb,
+			$disabled-clay-range-thumb,
 			()
 		);
 		$disabled-clay-range-thumb: map-merge(
@@ -2125,8 +2214,15 @@
 			)
 		);
 
-		$disabled-clay-range-track: setter(
-			map-deep-get($map, form-control-range, disabled, clay-range-track),
+		$disabled-clay-range-track: map-deep-get(
+			$map,
+			form-control-range,
+			disabled,
+			clay-range-track
+		);
+		$disabled-clay-range-track: if(
+			$disabled-clay-range-track,
+			$disabled-clay-range-track,
 			()
 		);
 		$disabled-clay-range-track: map-merge(
@@ -2140,13 +2236,15 @@
 			)
 		);
 
-		$disabled-clay-range-progress: setter(
-			map-deep-get(
-				$map,
-				form-control-range,
-				disabled,
-				clay-range-progress
-			),
+		$disabled-clay-range-progress: map-deep-get(
+			$map,
+			form-control-range,
+			disabled,
+			clay-range-progress
+		);
+		$disabled-clay-range-progress: if(
+			$disabled-clay-range-progress,
+			$disabled-clay-range-progress,
 			()
 		);
 		$disabled-clay-range-progress: map-merge(

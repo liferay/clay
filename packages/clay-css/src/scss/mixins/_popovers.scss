@@ -24,7 +24,8 @@
 
 @mixin clay-popover-header-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		@if ($enabled) {
 			@include clay-css($map);
@@ -88,7 +89,8 @@
 
 @mixin clay-popover-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		@if ($enabled) {
 			@include clay-css($map);

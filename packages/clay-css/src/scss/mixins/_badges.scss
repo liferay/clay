@@ -17,14 +17,20 @@
 /// - Update or Deprecate this mixin in favor of a `clay-badge-variant` mixin
 
 @mixin clay-badge-size($map) {
-	$border-width: setter(map-get($map, border-width), $badge-border-width);
+	$border-width: map-get($map, border-width);
+	$border-width: if($border-width, $border-width, $badge-border-width);
+
 	$font-size: map-get($map, font-size);
 	$height: map-get($map, height);
 	$padding-x: map-get($map, padding-x);
-	$padding-y: setter(map-get($map, padding-y), 0);
 
-	$lexicon-icon-height: setter(
-		map-get($map, lexicon-icon-height),
+	$padding-y: map-get($map, padding-y);
+	$padding-y: if($padding-y, $padding-y, 0);
+
+	$lexicon-icon-height: map-get($map, lexicon-icon-height);
+	$lexicon-icon-height: if(
+		$lexicon-icon-height,
+		$lexicon-icon-height,
 		map-get($map, lexicon-icon-width)
 	);
 	$lexicon-icon-margin-top: map-get($map, lexicon-icon-margin-top);
@@ -63,7 +69,8 @@
 
 @mixin clay-badge-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -93,7 +100,8 @@
 			)
 		);
 
-		$href: setter(map-get($map, href), ());
+		$href: map-get($map, href);
+		$href: if($href, $href, ());
 		$href: map-deep-merge(
 			$href,
 			(
@@ -134,7 +142,8 @@
 			)
 		);
 
-		$link: setter(map-get($map, link), ());
+		$link: map-get($map, link);
+		$link: if($link, $link, ());
 		$link: map-deep-merge(
 			$link,
 			(
@@ -156,7 +165,8 @@
 			)
 		);
 
-		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-get($map, c-inner);
+		$c-inner: if($c-inner, $c-inner, ());
 		$c-inner: map-merge(
 			(
 				enabled:
@@ -173,9 +183,11 @@
 			$c-inner
 		);
 
-		$badge-item: setter(map-get($map, badge-item), ());
+		$badge-item: map-get($map, badge-item);
+		$badge-item: if($badge-item, $badge-item, ());
 
-		$badge-item-expand: setter(map-get($map, badge-item-expand), ());
+		$badge-item-expand: map-get($map, badge-item-expand);
+		$badge-item-expand: if($badge-item-expand, $badge-item-expand, ());
 
 		@if ($enabled) {
 			@include clay-css($base);

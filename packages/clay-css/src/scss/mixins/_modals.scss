@@ -21,9 +21,11 @@
 /// footer-border-color: {Color | String | List | Null}, // deprecated after 3.9.0
 
 @mixin clay-modal-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled != null, $enabled, true);
 
-	$header: setter(map-get($map, header), ());
+	$header: map-get($map, header);
+	$header: if($header, $header, ());
 	$header: map-merge(
 		$header,
 		(
@@ -41,7 +43,8 @@
 		)
 	);
 
-	$header-close: setter(map-get($map, header-close), ());
+	$header-close: map-get($map, header-close);
+	$header-close: if($header-close, $header-close, ());
 	$header-close: map-merge(
 		$header-close,
 		(
@@ -53,7 +56,12 @@
 		)
 	);
 
-	$header-close-btn-focus: setter(map-get($header-close, btn-focus), ());
+	$header-close-btn-focus: map-get($header-close, btn-focus);
+	$header-close-btn-focus: if(
+		$header-close-btn-focus,
+		$header-close-btn-focus,
+		()
+	);
 	$header-close-btn-focus: map-merge(
 		$header-close-btn-focus,
 		(
@@ -70,7 +78,8 @@
 		)
 	);
 
-	$body: setter(map-get($map, body), ());
+	$body: map-get($map, body);
+	$body: if($body, $body, ());
 	$body: map-merge(
 		$body,
 		(
@@ -80,7 +89,8 @@
 		)
 	);
 
-	$footer: setter(map-get($map, footer), ());
+	$footer: map-get($map, footer);
+	$footer: if($footer, $footer, ());
 	$footer: map-merge(
 		$footer,
 		(

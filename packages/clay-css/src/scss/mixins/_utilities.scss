@@ -123,9 +123,11 @@
 /// autofit-col-padding-top: {Number | String | Null}, // deprecated after 3.9.0
 
 @mixin clay-autofit-row($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled != null, $enabled, true);
 
-	$autofit-col: setter(map-get($map, autofit-col), ());
+	$autofit-col: map-get($map, autofit-col);
+	$autofit-col: if($autofit-col, $autofit-col, ());
 	$autofit-col: map-merge(
 		$autofit-col,
 		(

@@ -92,7 +92,8 @@
 
 @mixin clay-nav-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -102,9 +103,11 @@
 			)
 		);
 
-		$nav-link: setter(map-get($map, nav-link), ());
+		$nav-link: map-get($map, nav-link);
+		$nav-link: if($nav-link, $nav-link, ());
 
-		$nav-link-hover: setter(map-get($nav-link, hover), ());
+		$nav-link-hover: map-get($nav-link, hover);
+		$nav-link-hover: if($nav-link-hover, $nav-link-hover, ());
 		$nav-link-hover: map-merge(
 			$nav-link-hover,
 			(
@@ -121,7 +124,8 @@
 			)
 		);
 
-		$nav-link-focus: setter(map-get($nav-link, focus), ());
+		$nav-link-focus: map-get($nav-link, focus);
+		$nav-link-focus: if($nav-link-focus, $nav-link-focus, ());
 		$nav-link-focus: map-merge(
 			$nav-link-focus,
 			(
@@ -138,7 +142,12 @@
 			)
 		);
 
-		$nav-link-active-class: setter(map-get($nav-link, active-class), ());
+		$nav-link-active-class: map-get($nav-link, active-class);
+		$nav-link-active-class: if(
+			$nav-link-active-class,
+			$nav-link-active-class,
+			()
+		);
 		$nav-link-active-class: map-merge(
 			$nav-link-active-class,
 			(
@@ -160,7 +169,8 @@
 			)
 		);
 
-		$nav-link-disabled: setter(map-get($nav-link, disabled), ());
+		$nav-link-disabled: map-get($nav-link, disabled);
+		$nav-link-disabled: if($nav-link-disabled, $nav-link-disabled, ());
 		$nav-link-disabled: map-merge(
 			$nav-link-disabled,
 			(

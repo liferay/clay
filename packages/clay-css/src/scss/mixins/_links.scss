@@ -251,7 +251,8 @@
 
 @mixin clay-link($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -261,7 +262,8 @@
 			)
 		);
 
-		$hover: setter(map-get($map, hover), ());
+		$hover: map-get($map, hover);
+		$hover: if($hover, $hover, ());
 		$hover: map-merge(
 			$hover,
 			(
@@ -295,7 +297,8 @@
 			)
 		);
 
-		$focus: setter(map-get($map, focus), ());
+		$focus: map-get($map, focus);
+		$focus: if($focus, $focus, ());
 		$focus: map-merge(
 			$focus,
 			(
@@ -344,7 +347,8 @@
 			)
 		);
 
-		$active: setter(map-get($map, active), ());
+		$active: map-get($map, active);
+		$active: if($active, $active, ());
 		$active: map-merge(
 			$active,
 			(
@@ -376,7 +380,8 @@
 			)
 		);
 
-		$active-class: setter(map-get($map, active-class), ());
+		$active-class: map-get($map, active-class);
+		$active-class: if($active-class, $active-class, ());
 		$active-class: map-merge(
 			$active-class,
 			(
@@ -413,7 +418,8 @@
 			)
 		);
 
-		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-get($map, disabled);
+		$disabled: if($disabled, $disabled, ());
 		$disabled: map-merge(
 			$disabled,
 			(
@@ -460,7 +466,8 @@
 			)
 		);
 
-		$disabled-active: setter(map-get($disabled, active), ());
+		$disabled-active: map-get($disabled, active);
+		$disabled-active: if($disabled-active, $disabled-active, ());
 		$disabled-active: map-deep-merge(
 			$disabled-active,
 			map-get($map, disabled-active)
@@ -476,10 +483,12 @@
 			)
 		);
 
-		$show: setter(map-get($map, show), ());
+		$show: map-get($map, show);
+		$show: if($show, $show, ());
 		$show: map-merge($active-class, $show);
 
-		$btn-focus: setter(map-get($map, btn-focus), ());
+		$btn-focus: map-get($map, btn-focus);
+		$btn-focus: if($btn-focus, $btn-focus, ());
 		$btn-focus: map-merge(
 			$btn-focus,
 			(
@@ -496,7 +505,8 @@
 			)
 		);
 
-		$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+		$lexicon-icon: map-get($map, lexicon-icon);
+		$lexicon-icon: if($lexicon-icon, $lexicon-icon, ());
 		$lexicon-icon: map-merge(
 			$lexicon-icon,
 			(
@@ -528,7 +538,8 @@
 			)
 		);
 
-		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-get($map, c-inner);
+		$c-inner: if($c-inner, $c-inner, ());
 		$c-inner: map-merge(
 			(
 				enabled:
@@ -863,15 +874,19 @@
 
 @mixin clay-text-typography($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		@if ($enabled) {
-			$clay-link: setter(map-get($map, clay-link), ());
+			$clay-link: map-get($map, clay-link);
+			$clay-link: if($clay-link, $clay-link, ());
 
-			$link: setter(map-get($map, link), ());
+			$link: map-get($map, link);
+			$link: if($link, $link, ());
 			$link: map-merge($link, $clay-link);
 
-			$href: setter(map-get($map, href), ());
+			$href: map-get($map, href);
+			$href: if($href, $href, ());
 			$href: map-deep-merge($href, $link);
 
 			@include clay-css($map);

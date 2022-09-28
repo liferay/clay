@@ -36,7 +36,8 @@
 
 @mixin clay-aspect-ratio-item-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		@if ($enabled) {
 			@include clay-css($map);
@@ -59,12 +60,13 @@
 
 @mixin clay-aspect-ratio-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$horizontal: map-get($map, horizontal);
 		$vertical: map-get($map, vertical);
 
-		$base: setter($map, ());
+		$base: if($map, $map, ());
 		$base: map-merge(
 			$map,
 			(
@@ -78,7 +80,8 @@
 			)
 		);
 
-		$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+		$lexicon-icon: map-get($map, lexicon-icon);
+		$lexicon-icon: if($lexicon-icon, $lexicon-icon, ());
 		$lexicon-icon: map-merge(
 			$lexicon-icon,
 			(

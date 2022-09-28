@@ -63,8 +63,10 @@
 /// - Add @link to documentation
 
 @mixin clay-list-group-notification-item-variant($map) {
-	$bg: setter(
-		map-get($map, bg),
+	$bg: map-get($map, bg);
+	$bg: if(
+		$bg,
+		$bg,
 		if(
 			variable-exists(list-group-bg),
 			$list-group-bg,
@@ -75,8 +77,11 @@
 			)
 		)
 	);
-	$border-bottom-color: setter(
-		map-get($map, border-bottom-color),
+
+	$border-bottom-color: map-get($map, border-bottom-color);
+	$border-bottom-color: if(
+		$border-bottom-color,
+		$border-bottom-color,
 		if(
 			variable-exists(list-group-notification-item-border-bottom-color),
 			$list-group-notification-item-border-bottom-color,
@@ -89,8 +94,11 @@
 			)
 		)
 	);
-	$border-left-color: setter(
-		map-get($map, border-left-color),
+
+	$border-left-color: map-get($map, border-left-color);
+	$border-left-color: if(
+		$border-left-color,
+		$border-left-color,
 		if(
 			variable-exists(list-group-notification-item-border-left-color),
 			$list-group-notification-item-border-left-color,
@@ -103,8 +111,11 @@
 			)
 		)
 	);
-	$border-right-color: setter(
-		map-get($map, border-right-color),
+
+	$border-right-color: map-get($map, border-right-color);
+	$border-right-color: if(
+		$border-right-color,
+		$border-right-color,
 		if(
 			variable-exists(list-group-notification-item-border-right-color),
 			$list-group-notification-item-border-right-color,
@@ -117,8 +128,11 @@
 			)
 		)
 	);
-	$border-top-color: setter(
-		map-get($map, border-top-color),
+
+	$border-top-color: map-get($map, border-top-color);
+	$border-top-color: if(
+		$border-top-color,
+		$border-top-color,
 		if(
 			variable-exists(list-group-notification-item-border-top-color),
 			$list-group-notification-item-border-top-color,
@@ -132,8 +146,10 @@
 		)
 	);
 
-	$border-bottom-width: setter(
-		map-get($map, border-bottom-width),
+	$border-bottom-width: map-get($map, border-bottom-width);
+	$border-bottom-width: if(
+		$border-bottom-width,
+		$border-bottom-width,
 		if(
 			variable-exists(list-group-notification-item-border-bottom-width),
 			$list-group-notification-item-border-bottom-width,
@@ -146,8 +162,11 @@
 			)
 		)
 	);
-	$border-left-width: setter(
-		map-get($map, border-left-width),
+
+	$border-left-width: map-get($map, border-left-width);
+	$border-left-width: if(
+		$border-left-width,
+		$border-left-width,
 		if(
 			variable-exists(list-group-notification-item-border-left-width),
 			$list-group-notification-item-border-left-width,
@@ -160,8 +179,11 @@
 			)
 		)
 	);
-	$border-right-width: setter(
-		map-get($map, border-right-width),
+
+	$border-right-width: map-get($map, border-right-width);
+	$border-right-width: if(
+		$border-right-width,
+		$border-right-width,
 		if(
 			variable-exists(list-group-notification-item-border-right-width),
 			$list-group-notification-item-border-right-width,
@@ -174,8 +196,11 @@
 			)
 		)
 	);
-	$border-top-width: setter(
-		map-get($map, border-top-width),
+
+	$border-top-width: map-get($map, border-top-width);
+	$border-top-width: if(
+		$border-top-width,
+		$border-top-width,
 		if(
 			variable-exists(list-group-notification-item-border-top-width),
 			$list-group-notification-item-border-top-width,
@@ -196,8 +221,10 @@
 
 	$color: map-get($map, color);
 
-	$active-bg: setter(
-		map-get($map, active-bg),
+	$active-bg: map-get($map, active-bg);
+	$active-bg: if(
+		$active-bg,
+		$active-bg,
 		if(
 			variable-exists(list-group-active-bg),
 			$list-group-active-bg,
@@ -208,8 +235,11 @@
 			)
 		)
 	);
-	$active-border-bottom-color: setter(
-		map-get($map, active-border-bottom-color),
+
+	$active-border-bottom-color: map-get($map, active-border-bottom-color);
+	$active-border-bottom-color: if(
+		$active-border-bottom-color,
+		$active-border-bottom-color,
 		if(
 			variable-exists(
 				list-group-notification-item-active-border-bottom-color
@@ -224,8 +254,11 @@
 			)
 		)
 	);
-	$active-border-left-color: setter(
-		map-get($map, active-border-left-color),
+
+	$active-border-left-color: map-get($map, active-border-left-color);
+	$active-border-left-color: if(
+		$active-border-left-color,
+		$active-border-left-color,
 		if(
 			variable-exists(
 				list-group-notification-item-active-border-left-color
@@ -240,8 +273,11 @@
 			)
 		)
 	);
-	$active-border-right-color: setter(
-		map-get($map, active-border-right-color),
+
+	$active-border-right-color: map-get($map, active-border-right-color);
+	$active-border-right-color: if(
+		$active-border-right-color,
+		$active-border-right-color,
 		if(
 			variable-exists(
 				list-group-notification-item-active-border-right-color
@@ -256,8 +292,11 @@
 			)
 		)
 	);
-	$active-border-top-color: setter(
-		map-get($map, active-border-top-color),
+
+	$active-border-top-color: map-get($map, active-border-top-color);
+	$active-border-top-color: if(
+		$active-border-top-color,
+		$active-border-top-color,
 		if(
 			variable-exists(
 				list-group-notification-item-active-border-top-color

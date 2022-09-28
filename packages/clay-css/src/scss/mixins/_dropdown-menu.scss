@@ -39,7 +39,8 @@
 
 @mixin clay-dropdown-menu-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$breakpoint-down: map-get($map, breakpoint-down);
 
@@ -56,7 +57,8 @@
 			)
 		);
 
-		$mobile: setter(map-get($map, mobile), ());
+		$mobile: map-get($map, mobile);
+		$mobile: if($mobile, $mobile, ());
 		$mobile: map-merge(
 			$mobile,
 			(
@@ -221,7 +223,8 @@
 
 @mixin clay-dropdown-item-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -231,7 +234,8 @@
 			)
 		);
 
-		$hover: setter(map-get($map, hover), ());
+		$hover: map-get($map, hover);
+		$hover: if($hover, $hover, ());
 		$hover: map-deep-merge(
 			$hover,
 			(
@@ -260,7 +264,8 @@
 			setter(map-get($map, hover-c-kbd-inline), ())
 		);
 
-		$focus: setter(map-get($map, focus), ());
+		$focus: map-get($map, focus);
+		$focus: if($focus, $focus, ());
 		$focus: map-deep-merge(
 			$focus,
 			(
@@ -341,7 +346,8 @@
 			setter(map-get($map, active-c-kbd-inline), ())
 		);
 
-		$active-class: setter(map-get($map, active-class), ());
+		$active-class: map-get($map, active-class);
+		$active-class: if($active-class, $active-class, ());
 		$active-class: map-deep-merge($active, $active-class);
 		$active-class: map-deep-merge(
 			$active-class,
@@ -379,7 +385,8 @@
 			setter(map-get($map, active-class-c-kbd-inline), ())
 		);
 
-		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-get($map, disabled);
+		$disabled: if($disabled, $disabled, ());
 		$disabled: map-deep-merge(
 			$disabled,
 			(
@@ -451,7 +458,8 @@
 			)
 		);
 
-		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-get($map, c-inner);
+		$c-inner: if($c-inner, $c-inner, ());
 		$c-inner: map-merge(
 			(
 				enabled:

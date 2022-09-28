@@ -16,11 +16,16 @@
 
 @mixin clay-sticker-size($map) {
 	$font-size: map-get($map, font-size);
+
 	$inline-item-font-size: map-get($map, inline-item-font-size);
-	$outside-offset: setter(
-		map-get($map, outside-offset),
+
+	$outside-offset: map-get($map, outside-offset);
+	$outside-offset: if(
+		$outside-offset,
+		$outside-offset,
 		math-sign(map-get($map, size) * 0.5)
 	);
+
 	$size: map-get($map, size);
 
 	font-size: $font-size;
@@ -114,7 +119,8 @@
 
 @mixin clay-sticker-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -128,7 +134,8 @@
 			)
 		);
 
-		$inline-item: setter(map-get($map, inline-item), ());
+		$inline-item: map-get($map, inline-item);
+		$inline-item: if($inline-item, $inline-item, ());
 		$inline-item: map-merge(
 			$inline-item,
 			(
@@ -140,8 +147,10 @@
 			)
 		);
 
-		$outside-offset: setter(
-			map-get($map, outside-offset),
+		$outside-offset: map-get($map, outside-offset);
+		$outside-offset: if(
+			$outside-offset,
+			$outside-offset,
 			if(
 				map-get($map, size),
 				calc(#{math-sign(map-get($map, size))} / 2),
@@ -149,33 +158,76 @@
 			)
 		);
 
-		$sticker-outside: setter(map-get($map, sticker-outside), ());
+		$sticker-outside: map-get($map, sticker-outside);
+		$sticker-outside: if($sticker-outside, $sticker-outside, ());
 
-		$sticker-outside-bottom-left: setter(
-			map-get($sticker-outside, sticker-bottom-left),
+		$_old-sticker-outside-bottom-left: map-get(
+			$map,
+			sticker-outside-bottom-left
+		);
+		$_old-sticker-outside-bottom-left: if(
+			$_old-sticker-outside-bottom-left,
+			$_old-sticker-outside-bottom-left,
+			()
+		);
+		$sticker-outside-bottom-left: map-get(
+			$sticker-outside,
+			sticker-bottom-left
+		);
+		$sticker-outside-bottom-left: if(
+			$sticker-outside-bottom-left,
+			$sticker-outside-bottom-left,
 			()
 		);
 		$sticker-outside-bottom-left: map-merge(
 			$sticker-outside-bottom-left,
-			setter(map-get($map, sticker-outside-bottom-left), ())
+			$_old-sticker-outside-bottom-left
 		);
 
-		$sticker-outside-bottom-right: setter(
-			map-get($sticker-outside, sticker-bottom-right),
+		$_old-sticker-outside-bottom-right: map-get(
+			$map,
+			sticker-outside-bottom-right
+		);
+		$_old-sticker-outside-bottom-right: if(
+			$_old-sticker-outside-bottom-right,
+			$_old-sticker-outside-bottom-right,
+			()
+		);
+		$sticker-outside-bottom-right: map-get(
+			$sticker-outside,
+			sticker-bottom-right
+		);
+		$sticker-outside-bottom-right: if(
+			$sticker-outside-bottom-right,
+			$sticker-outside-bottom-right,
 			()
 		);
 		$sticker-outside-bottom-right: map-merge(
 			$sticker-outside-bottom-right,
-			setter(map-get($map, sticker-outside-bottom-right), ())
+			$_old-sticker-outside-bottom-right
 		);
 
-		$sticker-outside-top-right: setter(
-			map-get($sticker-outside, sticker-top-right),
+		$_old-sticker-outside-top-right: map-get(
+			$map,
+			sticker-outside-top-right
+		);
+		$_old-sticker-outside-top-right: if(
+			$_old-sticker-outside-top-right,
+			$_old-sticker-outside-top-right,
+			()
+		);
+		$sticker-outside-top-right: map-get(
+			$sticker-outside,
+			sticker-top-right
+		);
+		$sticker-outside-top-right: if(
+			$sticker-outside-top-right,
+			$sticker-outside-top-right,
 			()
 		);
 		$sticker-outside-top-right: map-merge(
 			$sticker-outside-top-right,
-			setter(map-get($map, sticker-outside-top-right), ())
+			$_old-sticker-outside-top-right
 		);
 
 		@if ($outside-offset) {

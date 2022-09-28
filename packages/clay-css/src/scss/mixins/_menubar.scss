@@ -44,16 +44,23 @@
 /// - Add @link to documentation
 
 @mixin clay-menubar-vertical-expand($map) {
-	$enabled: setter(map-get($map, enabled), true);
-	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
-	$breakpoint-down: setter(
-		map-get($map, breakpoint-down),
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
+
+	$breakpoint-up: map-get($map, breakpoint-up);
+	$breakpoint-up: if($breakpoint-up, $breakpoint-up, md);
+
+	$breakpoint-down: map-get($map, breakpoint-down);
+	$breakpoint-down: if(
+		$breakpoint-down,
+		$breakpoint-down,
 		clay-breakpoint-prev($breakpoint-up)
 	);
 
 	// .menubar-vertical-expand-{md}
 
-	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-get($map, mobile);
+	$mobile: if($mobile, $mobile, ());
 	$mobile: map-merge(
 		$mobile,
 		(
@@ -127,7 +134,8 @@
 
 	// .menubar-collapse
 
-	$collapse-mobile: setter(map-get($map, collapse-mobile), ());
+	$collapse-mobile: map-get($map, collapse-mobile);
+	$collapse-mobile: if($collapse-mobile, $collapse-mobile, ());
 	$collapse-mobile: map-merge(
 		$collapse-mobile,
 		(
@@ -174,7 +182,8 @@
 		)
 	);
 
-	$nav-nested-mobile: setter(map-get($map, nav-nested-mobile), ());
+	$nav-nested-mobile: map-get($map, nav-nested-mobile);
+	$nav-nested-mobile: if($nav-nested-mobile, $nav-nested-mobile, ());
 	$nav-nested-mobile: map-merge(
 		$nav-nested-mobile,
 		(
@@ -191,8 +200,10 @@
 		)
 	);
 
-	$nav-nested-margins-mobile: setter(
-		map-get($map, nav-nested-margins-mobile),
+	$nav-nested-margins-mobile: map-get($map, nav-nested-margins-mobile);
+	$nav-nested-margins-mobile: if(
+		$nav-nested-margins-mobile,
+		$nav-nested-margins-mobile,
 		()
 	);
 	$nav-nested-margins-mobile: map-merge(
@@ -213,7 +224,8 @@
 
 	// .menubar-toggler
 
-	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
+	$toggler-mobile: map-get($map, toggler-mobile);
+	$toggler-mobile: if($toggler-mobile, $toggler-mobile, ());
 	$toggler-mobile: map-deep-merge(
 		$toggler-mobile,
 		(
@@ -260,7 +272,12 @@
 		)
 	);
 
-	$_toggler-mobile-c-inner: setter(map-get($toggler-mobile, c-inner), ());
+	$_toggler-mobile-c-inner: map-get($toggler-mobile, c-inner);
+	$_toggler-mobile-c-inner: if(
+		$_toggler-mobile-c-inner,
+		$_toggler-mobile-c-inner,
+		()
+	);
 	$_toggler-mobile-c-inner: map-merge(
 		$_toggler-mobile-c-inner,
 		(
@@ -297,7 +314,8 @@
 		)
 	);
 
-	$_old-toggler-c-inner: setter(map-get($map, toggler-c-inner), ());
+	$_old-toggler-c-inner: map-get($map, toggler-c-inner);
+	$_old-toggler-c-inner: if($_old-toggler-c-inner, $_old-toggler-c-inner, ());
 	$_toggler-mobile-c-inner: map-merge(
 		$_toggler-mobile-c-inner,
 		$_old-toggler-c-inner
@@ -457,8 +475,12 @@
 /// - Add @link to documentation
 
 @mixin clay-menubar-vertical-variant($map) {
-	$enable: setter(map-get($map, enable), true);
-	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
+	$enable: map-get($map, enable);
+	$enable: if($enable, $enable, true);
+
+	$breakpoint-up: map-get($map, breakpoint-up);
+	$breakpoint-up: if($breakpoint-up, $breakpoint-up, md);
+
 	$breakpoint-down: clay-breakpoint-prev($breakpoint-up);
 
 	// .menubar-vertical-expand-{md}.menubar-{variant}
@@ -471,7 +493,8 @@
 		)
 	);
 
-	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-get($map, mobile);
+	$mobile: if($mobile, $mobile, ());
 	$mobile: map-merge(
 		$mobile,
 		(
@@ -495,11 +518,21 @@
 
 	// .nav-link
 
-	$link: setter(map-get($map, link), ());
-	$link-hover: setter(map-get($link, hover), ());
-	$link-active: setter(map-get($link, active), ());
-	$link-active-class: setter(map-get($link, active-class), ());
-	$link-disabled: setter(map-get($link, disabled), ());
+	$link: map-get($map, link);
+	$link: if($link, $link, ());
+
+	$link-hover: map-get($link, hover);
+	$link-hover: if($link-hover, $link-hover, ());
+
+	$link-active: map-get($link, active);
+	$link-active: if($link-active, $link-active, ());
+
+	$link-active-class: map-get($link, active-class);
+	$link-active-class: if($link-active-class, $link-active-class, ());
+
+	$link-disabled: map-get($link, disabled);
+	$link-disabled: if($link-disabled, $link-disabled, ());
+
 	$link: map-deep-merge(
 		$link,
 		(
@@ -603,11 +636,25 @@
 		)
 	);
 
-	$link-mobile: setter(map-get($map, link-mobile), ());
-	$link-mobile-hover: setter(map-get($link-mobile, hover), ());
-	$link-mobile-active: setter(map-get($link-mobile, active), ());
-	$link-mobile-active-class: setter(map-get($link-mobile, active-class), ());
-	$link-mobile-disabled: setter(map-get($link-mobile, disabled), ());
+	$link-mobile: map-get($map, link-mobile);
+	$link-mobile: if($link-mobile, $link-mobile, ());
+
+	$link-mobile-hover: map-get($link-mobile, hover);
+	$link-mobile-hover: if($link-mobile-hover, $link-mobile-hover, ());
+
+	$link-mobile-active: map-get($link-mobile, active);
+	$link-mobile-active: if($link-mobile-active, $link-mobile-active, ());
+
+	$link-mobile-active-class: map-get($link-mobile, active-class);
+	$link-mobile-active-class: if(
+		$link-mobile-active-class,
+		$link-mobile-active-class,
+		()
+	);
+
+	$link-mobile-disabled: map-get($link-mobile, disabled);
+	$link-mobile-disabled: if($link-mobile-disabled, $link-mobile-disabled, ());
+
 	$link-mobile: map-deep-merge(
 		$link-mobile,
 		(
@@ -741,7 +788,8 @@
 
 	// .menubar-collapse
 
-	$collapse-mobile: setter(map-get($map, collapse-mobile), ());
+	$collapse-mobile: map-get($map, collapse-mobile);
+	$collapse-mobile: if($collapse-mobile, $collapse-mobile, ());
 	$collapse-mobile: map-deep-merge(
 		$collapse-mobile,
 		(
@@ -811,7 +859,8 @@
 
 	// .menubar-toggler
 
-	$toggler-mobile: setter(map-get($map, toggler-mobile), ());
+	$toggler-mobile: map-get($map, toggler-mobile);
+	$toggler-mobile: if($toggler-mobile, $toggler-mobile, ());
 	$toggler-mobile: map-deep-merge(
 		$toggler-mobile,
 		(

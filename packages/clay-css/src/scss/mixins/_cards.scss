@@ -32,7 +32,8 @@
 
 @mixin clay-card-section-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -42,7 +43,8 @@
 			)
 		);
 
-		$autofit-col: setter(map-get($map, autofit-col), ());
+		$autofit-col: map-get($map, autofit-col);
+		$autofit-col: if($autofit-col, $autofit-col, ());
 		$autofit-col: map-merge(
 			$autofit-col,
 			(
@@ -295,7 +297,8 @@
 
 @mixin clay-card-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -305,7 +308,8 @@
 			)
 		);
 
-		$hover: setter(map-get($map, hover), ());
+		$hover: map-get($map, hover);
+		$hover: if($hover, $hover, ());
 		$hover: map-merge(
 			$hover,
 			(
@@ -334,29 +338,55 @@
 			)
 		);
 
-		$old-hover-card-title: setter(map-get($map, hover-card-title), ());
-		$hover-card-title: setter(map-get($hover, card-title), ());
-		$hover-card-title: map-merge($hover-card-title, $old-hover-card-title);
-
-		$old-hover-card-subtitle: setter(
-			map-get($map, hover-card-subtitle),
+		$old-hover-card-title: map-get($map, hover-card-title);
+		$old-hover-card-title: if(
+			$old-hover-card-title,
+			$old-hover-card-title,
 			()
 		);
-		$hover-card-subtitle: setter(map-get($hover, card-subtitle), ());
+		$hover-card-title: map-get($hover, card-title);
+		$hover-card-title: if($hover-card-title, $hover-card-title, ());
+		$hover-card-title: map-merge($hover-card-title, $old-hover-card-title);
+
+		$old-hover-card-subtitle: map-get($map, hover-card-subtitle);
+		$old-hover-card-subtitle: if(
+			$old-hover-card-subtitle,
+			$old-hover-card-subtitle,
+			()
+		);
+		$hover-card-subtitle: map-get($hover, card-subtitle);
+		$hover-card-subtitle: if(
+			$hover-card-subtitle,
+			$hover-card-subtitle,
+			()
+		);
 		$hover-card-subtitle: map-merge(
 			$hover-card-subtitle,
 			$old-hover-card-subtitle
 		);
 
-		$old-hover-card-text: setter(map-get($map, hover-card-text), ());
-		$hover-card-text: setter(map-get($hover, card-text), ());
+		$old-hover-card-text: map-get($map, hover-card-text);
+		$old-hover-card-text: if(
+			$old-hover-card-text,
+			$old-hover-card-text,
+			()
+		);
+		$hover-card-text: map-get($hover, card-text);
+		$hover-card-text: if($hover-card-text, $hover-card-text, ());
 		$hover-card-text: map-merge($hover-card-text, $old-hover-card-text);
 
-		$old-hover-card-link: setter(map-get($map, hover-card-link), ());
-		$hover-card-link: setter(map-get($hover, card-link), ());
+		$old-hover-card-link: map-get($map, hover-card-link);
+		$old-hover-card-link: if(
+			$old-hover-card-link,
+			$old-hover-card-link,
+			()
+		);
+		$hover-card-link: map-get($hover, card-link);
+		$hover-card-link: if($hover-card-link, $hover-card-link, ());
 		$hover-card-link: map-merge($hover-card-link, $old-hover-card-link);
 
-		$focus: setter(map-get($map, focus), ());
+		$focus: map-get($map, focus);
+		$focus: if($focus, $focus, ());
 		$focus: map-merge(
 			$focus,
 			(
@@ -385,29 +415,55 @@
 			)
 		);
 
-		$old-focus-card-title: setter(map-get($map, focus-card-title), ());
-		$focus-card-title: setter(map-get($focus, card-title), ());
-		$focus-card-title: map-merge($focus-card-title, $old-focus-card-title);
-
-		$old-focus-card-subtitle: setter(
-			map-get($map, focus-card-subtitle),
+		$old-focus-card-title: map-get($map, focus-card-title);
+		$old-focus-card-title: if(
+			$old-focus-card-title,
+			$old-focus-card-title,
 			()
 		);
-		$focus-card-subtitle: setter(map-get($focus, card-subtitle), ());
+		$focus-card-title: map-get($focus, card-title);
+		$focus-card-title: if($focus-card-title, $focus-card-title, ());
+		$focus-card-title: map-merge($focus-card-title, $old-focus-card-title);
+
+		$old-focus-card-subtitle: map-get($map, focus-card-subtitle);
+		$old-focus-card-subtitle: if(
+			$old-focus-card-subtitle,
+			$old-focus-card-subtitle,
+			()
+		);
+		$focus-card-subtitle: map-get($focus, card-subtitle);
+		$focus-card-subtitle: if(
+			$focus-card-subtitle,
+			$focus-card-subtitle,
+			()
+		);
 		$focus-card-subtitle: map-merge(
 			$focus-card-subtitle,
 			$old-focus-card-subtitle
 		);
 
-		$old-focus-card-text: setter(map-get($map, focus-card-text), ());
-		$focus-card-text: setter(map-get($focus, card-text), ());
+		$old-focus-card-text: map-get($map, focus-card-text);
+		$old-focus-card-text: if(
+			$old-focus-card-text,
+			$old-focus-card-text,
+			()
+		);
+		$focus-card-text: map-get($focus, card-text);
+		$focus-card-text: if($focus-card-text, $focus-card-text, ());
 		$focus-card-text: map-merge($focus-card-text, $old-focus-card-text);
 
-		$old-focus-card-link: setter(map-get($map, focus-card-link), ());
-		$focus-card-link: setter(map-get($focus, card-link), ());
+		$old-focus-card-link: map-get($map, focus-card-link);
+		$old-focus-card-link: if(
+			$old-focus-card-link,
+			$old-focus-card-link,
+			()
+		);
+		$focus-card-link: map-get($focus, card-link);
+		$focus-card-link: if($focus-card-link, $focus-card-link, ());
 		$focus-card-link: map-merge($focus-card-link, $old-focus-card-link);
 
-		$active: setter(map-get($map, active), ());
+		$active: map-get($map, active);
+		$active: if($active, $active, ());
 		$active: map-merge(
 			$active,
 			(
@@ -429,39 +485,72 @@
 			)
 		);
 
-		$old-active-card-title: setter(map-get($map, active-card-title), ());
-		$active-card-title: setter(map-get($active, card-title), ());
+		$old-active-card-title: map-get($map, active-card-title);
+		$old-active-card-title: if(
+			$old-active-card-title,
+			$old-active-card-title,
+			()
+		);
+		$active-card-title: map-get($active, card-title);
+		$active-card-title: if($active-card-title, $active-card-title, ());
 		$active-card-title: map-merge(
 			$active-card-title,
 			$old-active-card-title
 		);
 
-		$old-active-card-subtitle: setter(
-			map-get($map, active-card-subtitle),
+		$old-active-card-subtitle: map-get($map, active-card-subtitle);
+		$old-active-card-subtitle: if(
+			$old-active-card-subtitle,
+			$old-active-card-subtitle,
 			()
 		);
-		$active-card-subtitle: setter(map-get($active, card-subtitle), ());
+		$active-card-subtitle: map-get($active, card-subtitle);
+		$active-card-subtitle: if(
+			$active-card-subtitle,
+			$active-card-subtitle,
+			()
+		);
 		$active-card-subtitle: map-merge(
 			$active-card-subtitle,
 			$old-active-card-subtitle
 		);
 
-		$old-active-card-text: setter(map-get($map, active-card-text), ());
-		$active-card-text: setter(map-get($active, card-text), ());
+		$old-active-card-text: map-get($map, active-card-text);
+		$old-active-card-text: if(
+			$old-active-card-text,
+			$old-active-card-text,
+			()
+		);
+		$active-card-text: map-get($active, card-text);
+		$active-card-text: if($active-card-text, $active-card-text, ());
 		$active-card-text: map-merge($active-card-text, $old-active-card-text);
 
-		$old-active-card-link: setter(map-get($map, active-card-link), ());
-		$active-card-link: setter(map-get($active, card-link), ());
+		$old-active-card-link: map-get($map, active-card-link);
+		$old-active-card-link: if(
+			$old-active-card-link,
+			$old-active-card-link,
+			()
+		);
+		$active-card-link: map-get($active, card-link);
+		$active-card-link: if($active-card-link, $active-card-link, ());
 		$active-card-link: map-merge($active-card-link, $old-active-card-link);
 
-		$aspect-ratio: setter(map-get($map, aspect-ratio), ());
+		$aspect-ratio: map-get($map, aspect-ratio);
+		$aspect-ratio: if($aspect-ratio, $aspect-ratio, ());
 
-		$aspect-ratio-custom-control-label: setter(
-			map-deep-get($aspect-ratio, custom-control, label),
+		$aspect-ratio-custom-control-label: map-deep-get(
+			$aspect-ratio,
+			custom-control,
+			label
+		);
+		$aspect-ratio-custom-control-label: if(
+			$aspect-ratio-custom-control-label,
+			$aspect-ratio-custom-control-label,
 			()
 		);
 
-		$checkbox: setter(map-get($map, checkbox), ());
+		$checkbox: map-get($map, checkbox);
+		$checkbox: if($checkbox, $checkbox, ());
 		$checkbox: map-merge(
 			$checkbox,
 			(
@@ -530,7 +619,8 @@
 			checkered-foreground-color
 		);
 
-		$card-body: setter(map-get($map, card-body), ());
+		$card-body: map-get($map, card-body);
+		$card-body: if($card-body, $card-body, ());
 		$card-body: map-merge(
 			$card-body,
 			(
@@ -557,7 +647,8 @@
 			)
 		);
 
-		$card-row: setter(map-get($map, card-row), ());
+		$card-row: map-get($map, card-row);
+		$card-row: if($card-row, $card-row, ());
 		$card-row: map-merge(
 			$card-row,
 			(
@@ -569,17 +660,30 @@
 			)
 		);
 
-		$card-type-asset-icon: setter(map-get($map, card-type-asset-icon), ());
-
-		$asset-icon: setter(map-get($map, asset-icon), ());
-
-		$asset-icon-lexicon-icon: setter(
-			map-get($asset-icon, lexicon-icon),
+		$card-type-asset-icon: map-get($map, card-type-asset-icon);
+		$card-type-asset-icon: if(
+			$card-type-asset-icon,
+			$card-type-asset-icon,
 			()
 		);
 
-		$card-type-asset-icon-lexicon-icon: setter(
-			map-get($card-type-asset-icon, lexicon-icon),
+		$asset-icon: map-get($map, asset-icon);
+		$asset-icon: if($asset-icon, $asset-icon, ());
+
+		$asset-icon-lexicon-icon: map-get($asset-icon, lexicon-icon);
+		$asset-icon-lexicon-icon: if(
+			$asset-icon-lexicon-icon,
+			$asset-icon-lexicon-icon,
+			()
+		);
+
+		$card-type-asset-icon-lexicon-icon: map-get(
+			$card-type-asset-icon,
+			lexicon-icon
+		);
+		$card-type-asset-icon-lexicon-icon: if(
+			$card-type-asset-icon-lexicon-icon,
+			$card-type-asset-icon-lexicon-icon,
 			()
 		);
 		$card-type-asset-icon-lexicon-icon: map-merge(
@@ -633,8 +737,10 @@
 			)
 		);
 
-		$card-type-asset-icon-sticker: setter(
-			map-get($card-type-asset-icon, sticker),
+		$card-type-asset-icon-sticker: map-get($card-type-asset-icon, sticker);
+		$card-type-asset-icon-sticker: if(
+			$card-type-asset-icon-sticker,
+			$card-type-asset-icon-sticker,
 			()
 		);
 		$card-type-asset-icon-sticker: map-merge(
@@ -653,7 +759,8 @@
 			)
 		);
 
-		$dropdown-action: setter(map-get($map, dropdown-action), ());
+		$dropdown-action: map-get($map, dropdown-action);
+		$dropdown-action: if($dropdown-action, $dropdown-action, ());
 		$dropdown-action: map-merge(
 			$dropdown-action,
 			(
@@ -787,8 +894,10 @@
 				}
 			}
 
+			$after-highlight-variant: map-get($map, after-highlight);
+
 			@include clay-after-highlight-variant(
-				setter(map-get($map, after-highlight), ())
+				if($after-highlight-variant, $after-highlight-variant, ())
 			);
 
 			&::before {
@@ -1042,9 +1151,11 @@
 /// - Add @link to documentation
 
 @mixin clay-card-type-asset($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
 
-	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
+	$aspect-ratio: map-get($map, aspect-ratio);
+	$aspect-ratio: if($aspect-ratio, $aspect-ratio, ());
 	$aspect-ratio: map-merge(
 		$aspect-ratio,
 		(
@@ -1093,7 +1204,8 @@
 	$aspect-ratio-horizontal: map-get($aspect-ratio, horizontal);
 	$aspect-ratio-vertical: map-get($aspect-ratio, vertical);
 
-	$card-body: setter(map-get($map, card-body), ());
+	$card-body: map-get($map, card-body);
+	$card-body: if($card-body, $card-body, ());
 	$card-body: map-merge(
 		$card-body,
 		(
@@ -1120,7 +1232,8 @@
 		)
 	);
 
-	$card-row: setter(map-get($map, card-row), ());
+	$card-row: map-get($map, card-row);
+	$card-row: if($card-row, $card-row, ());
 	$card-row: map-merge(
 		$card-row,
 		(
@@ -1133,7 +1246,8 @@
 		)
 	);
 
-	$checkbox: setter(map-get($map, checkbox), ());
+	$checkbox: map-get($map, checkbox);
+	$checkbox: if($checkbox, $checkbox, ());
 	$checkbox: map-merge(
 		$checkbox,
 		(
@@ -1154,7 +1268,8 @@
 		)
 	);
 
-	$card-type-asset-icon: setter(map-get($map, card-type-asset-icon), ());
+	$card-type-asset-icon: map-get($map, card-type-asset-icon);
+	$card-type-asset-icon: if($card-type-asset-icon, $card-type-asset-icon, ());
 	$card-type-asset-icon: map-merge(
 		$card-type-asset-icon,
 		(
@@ -1172,9 +1287,10 @@
 		)
 	);
 
-	$card-type-asset-icon-sticker: setter(
-		map-get($card-type-asset-icon, sticker),
-		()
+	$card-type-asset-icon-sticker: map-get($card-type-asset-icon, sticker);
+	$card-type-asset-icon-sticker: if(
+		$card-type-asset-icon-sticker,
+		$card-type-asset-icon-sticker ()
 	);
 	$card-type-asset-icon-sticker: map-merge(
 		$card-type-asset-icon-sticker,
@@ -1305,9 +1421,11 @@
 /// - Add @link to documentation
 
 @mixin clay-card-type-asset-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
 
-	$aspect-ratio: setter(map-get($map, aspect-ratio), ());
+	$aspect-ratio: map-get($map, aspect-ratio);
+	$aspect-ratio: if($aspect-ratio, $aspect-ratio, ());
 	$aspect-ratio: map-merge(
 		$aspect-ratio,
 		(
@@ -1330,7 +1448,8 @@
 		checkered-foreground-color
 	);
 
-	$asset-icon: setter(map-get($map, asset-icon), ());
+	$asset-icon: map-get($map, asset-icon);
+	$asset-icon: if($asset-icon, $asset-icon, ());
 	$asset-icon: map-merge(
 		$asset-icon,
 		(
@@ -1357,7 +1476,12 @@
 		)
 	);
 
-	$asset-icon-lexicon-icon: setter(map-get($asset-icon, lexicon-icon), ());
+	$asset-icon-lexicon-icon: map-get($asset-icon, lexicon-icon);
+	$asset-icon-lexicon-icon: if(
+		$asset-icon-lexicon-icon,
+		$asset-icon-lexicon-icon,
+		()
+	);
 	$asset-icon-lexicon-icon: map-merge(
 		$asset-icon-lexicon-icon,
 		(
@@ -1416,11 +1540,13 @@
 /// - Add @link to documentation
 
 @mixin clay-card-type-directory($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
 
-	$base: setter($map, ());
+	$base: if($map, $map, ());
 
-	$card-body: setter(map-get($map, card-body), ());
+	$card-body: map-get($map, card-body);
+	$card-body: if($card-body, $card-body, ());
 	$card-body: map-merge(
 		$card-body,
 		(
@@ -1447,7 +1573,8 @@
 		)
 	);
 
-	$sticker: setter(map-get($map, sticker), ());
+	$sticker: map-get($map, sticker);
+	$sticker: if($sticker, $sticker, ());
 	$sticker: map-merge(
 		$sticker,
 		(
@@ -1470,7 +1597,8 @@
 
 	$sticker-size: map-get($map, sticker-size);
 
-	$dropdown-action: setter(map-get($map, dropdown-action), ());
+	$dropdown-action: map-get($map, dropdown-action);
+	$dropdown-action: if($dropdown-action, $dropdown-action, ());
 	$dropdown-action: map-merge(
 		$dropdown-action,
 		(
@@ -1574,7 +1702,8 @@
 
 @mixin clay-form-check-card-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		@if ($enabled) {
 			@include clay-css($map);

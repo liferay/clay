@@ -383,7 +383,8 @@
 /// @param {List} $breakpoint-names[map-keys($breakpoints)] - A list of all the keys in $breakpoints
 
 @function breakpoint-next($name, $breakpoints: null, $breakpoint-names: null) {
-	$breakpoints: setter(
+	$breakpoints: if(
+		$breakpoints,
 		$breakpoints,
 		if(
 			variable-exists(grid-breakpoints),
@@ -402,7 +403,11 @@
 		)
 	);
 
-	$breakpoint-names: setter($breakpoint-names, map-keys($breakpoints));
+	$breakpoint-names: if(
+		$breakpoint-names,
+		$breakpoint-names,
+		map-keys($breakpoints)
+	);
 
 	$n: index($breakpoint-names, $name);
 
@@ -423,7 +428,8 @@
 	$breakpoints: null,
 	$breakpoint-names: null
 ) {
-	$breakpoints: setter(
+	$breakpoints: if(
+		$breakpoints,
 		$breakpoints,
 		if(
 			variable-exists(grid-breakpoints),
@@ -442,7 +448,11 @@
 		)
 	);
 
-	$breakpoint-names: setter($breakpoint-names, map-keys($breakpoints));
+	$breakpoint-names: if(
+		$breakpoint-names,
+		$breakpoint-names,
+		map-keys($breakpoints)
+	);
 
 	@each $value in $breakpoint-names {
 		@if (breakpoint-next($value) == $name) {
@@ -459,7 +469,8 @@
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
 @function breakpoint-min($name, $breakpoints: null) {
-	$breakpoints: setter(
+	$breakpoints: if(
+		$breakpoints,
 		$breakpoints,
 		if(
 			variable-exists(grid-breakpoints),
@@ -492,7 +503,8 @@
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
 @function breakpoint-max($name, $breakpoints: null) {
-	$breakpoints: setter(
+	$breakpoints: if(
+		$breakpoints,
 		$breakpoints,
 		if(
 			variable-exists(grid-breakpoints),
@@ -523,7 +535,8 @@
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
 @function breakpoint-infix($name, $breakpoints: null) {
-	$breakpoints: setter(
+	$breakpoints: if(
+		$breakpoints,
 		$breakpoints,
 		if(
 			variable-exists(grid-breakpoints),
@@ -568,7 +581,8 @@
 
 	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) * 0.001;
 
-	$dark: setter(
+	$dark: if(
+		$dark,
 		$dark,
 		if(
 			variable-exists(yiq-text-dark),
@@ -581,7 +595,8 @@
 		)
 	);
 
-	$light: setter(
+	$light: if(
+		$light,
 		$light,
 		if(
 			variable-exists(yiq-text-light),
@@ -594,7 +609,8 @@
 		)
 	);
 
-	$threshold: setter(
+	$threshold: if(
+		$threshold,
 		$threshold,
 		if(
 			variable-exists(yiq-contrasted-threshold),
@@ -672,7 +688,8 @@
 	$color-base: if($level > 0, $black, $white);
 	$level: abs($level);
 
-	$color-interval: setter(
+	$color-interval: if(
+		$color-interval,
 		$color-interval,
 		if(
 			variable-exists(theme-color-interval),

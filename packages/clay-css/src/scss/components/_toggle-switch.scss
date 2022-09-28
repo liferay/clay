@@ -25,10 +25,8 @@
 }
 
 .toggle-switch-text-left {
-	$breakpoint-down: setter(
-		map-get($toggle-switch-text-left, breakpoint-down),
-		sm
-	);
+	$breakpoint-down: map-get($toggle-switch-text-left, breakpoint-down);
+	$breakpoint-down: if($breakpoint-down, $breakpoint-down, sm);
 
 	@include clay-css($toggle-switch-text-left);
 
@@ -38,10 +36,8 @@
 }
 
 .toggle-switch-text-right {
-	$breakpoint-down: setter(
-		map-get($toggle-switch-text-right, breakpoint-down),
-		sm
-	);
+	$breakpoint-down: map-get($toggle-switch-text-right, breakpoint-down);
+	$breakpoint-down: if($breakpoint-down, $breakpoint-down, sm);
 
 	@include clay-css($toggle-switch-text-right);
 

@@ -23,7 +23,8 @@
 /// - Add @link to documentation
 
 @mixin clay-after-highlight-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled, $enabled, true);
 
 	$base: map-merge(
 		$map,
@@ -33,7 +34,8 @@
 		)
 	);
 
-	$hover: setter(map-get($map, hover), ());
+	$hover: map-get($map, hover);
+	$hover: if($hover, $hover, ());
 	$hover: map-merge(
 		$hover,
 		(
@@ -48,7 +50,8 @@
 		)
 	);
 
-	$focus: setter(map-get($map, focus), ());
+	$focus: map-get($map, focus);
+	$focus: if($focus, $focus, ());
 	$focus: map-merge(
 		$focus,
 		(
@@ -63,7 +66,8 @@
 		)
 	);
 
-	$active: setter(map-get($map, active), ());
+	$active: map-get($map, active);
+	$active: if($active, $active, ());
 	$active: map-merge(
 		$active,
 		(

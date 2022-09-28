@@ -6,7 +6,8 @@
 /// @param {Bool} $scale[$enable-scaling-components] - Enables or disables this mixin
 
 @mixin clay-scale-component($scale: null, $breakpoint-down: null) {
-	$breakpoint-down: setter(
+	$breakpoint-down: if(
+		$breakpoint-down,
 		$breakpoint-down,
 		if(
 			variable-exists(scaling-breakpoint-down),
@@ -19,7 +20,8 @@
 		)
 	);
 
-	$scale: setter(
+	$scale: if(
+		$scale,
 		$scale,
 		if(
 			variable-exists(enable-scaling-components),

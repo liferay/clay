@@ -826,23 +826,34 @@ $has-error: map-deep-merge(
 		input-group-item: (
 			focus: (
 				box-shadow:
-					setter(
+					if(
+						$input-danger-focus-box-shadow,
 						$input-danger-focus-box-shadow,
 						$input-danger-box-shadow
 					),
 				input-group-inset: (
 					background-color:
-						setter($input-danger-focus-bg, $input-danger-bg),
+						if(
+							$input-danger-focus-bg,
+							$input-danger-focus-bg,
+							$input-danger-bg
+						),
 					border-color:
-						setter(
+						if(
+							$input-danger-focus-border-color,
 							$input-danger-focus-border-color,
 							$input-danger-border-color
 						),
 					input-group-inset-item: (
 						background-color:
-							setter($input-danger-focus-bg, $input-danger-bg),
+							if(
+								$input-danger-focus-bg,
+								$input-danger-focus-bg,
+								$input-danger-bg
+							),
 						border-color:
-							setter(
+							if(
+								$input-danger-focus-border-color,
 								$input-danger-focus-border-color,
 								$input-danger-border-color
 							),
@@ -859,9 +870,14 @@ $has-error: map-deep-merge(
 					box-shadow: none,
 					input-group-inset-item: (
 						background-color:
-							setter($input-danger-focus-bg, $input-danger-bg),
+							if(
+								$input-danger-focus-bg,
+								$input-danger-focus-bg,
+								$input-danger-bg
+							),
 						border-color:
-							setter(
+							if(
+								$input-danger-focus-border-color,
 								$input-danger-focus-border-color,
 								$input-danger-border-color
 							),
@@ -979,23 +995,34 @@ $has-warning: map-deep-merge(
 		input-group-item: (
 			focus: (
 				box-shadow:
-					setter(
+					if(
+						$input-warning-focus-box-shadow,
 						$input-warning-focus-box-shadow,
 						$input-warning-box-shadow
 					),
 				input-group-inset: (
 					background-color:
-						setter($input-warning-focus-bg, $input-warning-bg),
+						if(
+							$input-warning-focus-bg,
+							$input-warning-focus-bg,
+							$input-warning-bg
+						),
 					border-color:
-						setter(
+						if(
+							$input-warning-focus-border-color,
 							$input-warning-focus-border-color,
 							$input-warning-border-color
 						),
 					input-group-inset-item: (
 						background-color:
-							setter($input-warning-focus-bg, $input-warning-bg),
+							if(
+								$input-warning-focus-bg,
+								$input-warning-focus-bg,
+								$input-warning-bg
+							),
 						border-color:
-							setter(
+							if(
+								$input-warning-focus-border-color,
 								$input-warning-focus-border-color,
 								$input-warning-border-color
 							),
@@ -1012,9 +1039,14 @@ $has-warning: map-deep-merge(
 					box-shadow: none,
 					input-group-inset-item: (
 						background-color:
-							setter($input-warning-focus-bg, $input-warning-bg),
+							if(
+								$input-warning-focus-bg,
+								$input-warning-focus-bg,
+								$input-warning-bg
+							),
 						border-color:
-							setter(
+							if(
+								$input-warning-focus-border-color,
 								$input-warning-focus-border-color,
 								$input-warning-border-color
 							),
@@ -1132,23 +1164,34 @@ $has-success: map-deep-merge(
 		input-group-item: (
 			focus: (
 				box-shadow:
-					setter(
+					if(
+						$input-success-focus-box-shadow,
 						$input-success-focus-box-shadow,
 						$input-success-box-shadow
 					),
 				input-group-inset: (
 					background-color:
-						setter($input-success-focus-bg, $input-success-bg),
+						if(
+							$input-success-focus-bg,
+							$input-success-focus-bg,
+							$input-success-bg
+						),
 					border-color:
-						setter(
+						if(
+							$input-success-focus-border-color,
 							$input-success-focus-border-color,
 							$input-success-border-color
 						),
 					input-group-inset-item: (
 						background-color:
-							setter($input-success-focus-bg, $input-success-bg),
+							if(
+								$input-success-focus-bg,
+								$input-success-focus-bg,
+								$input-success-bg
+							),
 						border-color:
-							setter(
+							if(
+								$input-success-focus-border-color,
 								$input-success-focus-border-color,
 								$input-success-border-color
 							),
@@ -1165,9 +1208,14 @@ $has-success: map-deep-merge(
 					box-shadow: none,
 					input-group-inset-item: (
 						background-color:
-							setter($input-success-focus-bg, $input-success-bg),
+							if(
+								$input-success-focus-bg,
+								$input-success-focus-bg,
+								$input-success-bg
+							),
 						border-color:
-							setter(
+							if(
+								$input-success-focus-border-color,
 								$input-success-focus-border-color,
 								$input-success-border-color
 							),

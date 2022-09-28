@@ -102,7 +102,8 @@
 
 @mixin clay-sidebar-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled !=null, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -169,10 +170,13 @@
 			setter(map-get($map, nav-nested-link), ())
 		);
 
-		$sidebar-list-group: setter(map-get($map, sidebar-list-group), ());
+		$sidebar-list-group: map-get($map, sidebar-list-group);
+		$sidebar-list-group: if($sidebar-list-group, $sidebar-list-group, ());
 
-		$sidebar-list-group-item: setter(
-			map-get($sidebar-list-group, list-group-item),
+		$sidebar-list-group-item: map-get($sidebar-list-group, list-group-item);
+		$sidebar-list-group-item: if(
+			$sidebar-list-group-item,
+			$sidebar-list-group-item,
 			()
 		);
 		$sidebar-list-group-item: map-merge(

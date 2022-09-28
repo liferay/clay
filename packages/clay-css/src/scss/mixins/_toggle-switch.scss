@@ -63,7 +63,8 @@
 
 @mixin clay-toggle-switch-bar-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		@if ($enabled) {
 			@include clay-css($map);
@@ -643,8 +644,11 @@
 
 @mixin clay-toggle-switch-check-variant($map) {
 	@if (type-of($map) == 'map') {
-		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
-		$enabled: setter(map-get($map, enabled), true);
+		$breakpoint-down: map-get($map, breakpoint-down);
+		$breakpoint-down: if($breakpoint-down, $breakpoint-down, sm);
+
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		@include clay-css($map);
 
@@ -968,8 +972,11 @@
 
 @mixin clay-toggle-switch-variant($map) {
 	@if (type-of($map) == 'map') {
-		$breakpoint-down: setter(map-get($map, breakpoint-down), sm);
-		$enabled: setter(map-get($map, enabled), true);
+		$breakpoint-down: map-get($map, breakpoint-down);
+		$breakpoint-down: if($breakpoint-down, $breakpoint-down, sm);
+
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		@include clay-css($map);
 

@@ -223,7 +223,8 @@ $input-danger-readonly: () !default;
 $input-danger-readonly: map-deep-merge(
 	(
 		background-color:
-			setter(
+			if(
+				map-get($input-readonly, bg),
 				map-get($input-readonly, bg),
 				map-get($input-readonly, background-color)
 			),
@@ -283,7 +284,8 @@ $input-warning-readonly: () !default;
 $input-warning-readonly: map-deep-merge(
 	(
 		background-color:
-			setter(
+			if(
+				map-get($input-readonly, bg),
 				map-get($input-readonly, bg),
 				map-get($input-readonly, background-color)
 			),
@@ -343,7 +345,8 @@ $input-success-readonly: () !default;
 $input-success-readonly: map-deep-merge(
 	(
 		background-color:
-			setter(
+			if(
+				map-get($input-readonly, bg),
 				map-get($input-readonly, bg),
 				map-get($input-readonly, background-color)
 			),

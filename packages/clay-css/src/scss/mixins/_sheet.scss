@@ -13,13 +13,16 @@
 /// - Add @link to documentation
 
 @mixin sheet-footer-btn-block($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled != null, $enabled, true);
 
 	$breakpoint-down: map-get($map, breakpoint-down);
 
-	$mobile: setter(map-get($map, mobile), ());
+	$mobile: map-get($map, mobile);
+	$mobile: if($mobile, $mobile, ());
 
-	$btn-mobile: setter(map-get($mobile, btn), ());
+	$btn-mobile: map-get($mobile, btn);
+	$btn-mobile: if($btn-mobile, $btn-mobile, ());
 	$btn-mobile: map-merge(
 		$btn-mobile,
 		(

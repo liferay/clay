@@ -65,22 +65,41 @@
 
 @mixin clay-indicator-bg($map) {
 	$indicator: map-get($map, indicator);
-	$indicator-bg-position: setter(
-		map-get($map, indicator-bg-position),
+
+	$indicator-bg-position: map-get($map, indicator-bg-position);
+	$indicator-bg-position: if(
+		$indicator-bg-position,
+		$indicator-bg-position,
 		top 0.125rem left
 	);
-	$indicator-bg-size: setter(map-get($map, indicator-bg-size), 100%);
-	$indicator-display: setter(map-get($map, indicator-display), inline-block);
-	$indicator-height: setter(
-		map-get($map, indicator-height),
+
+	$indicator-bg-size: map-get($map, indicator-bg-size);
+	$indicator-bg-size: if($indicator-bg-size, $indicator-bg-size, 100%);
+
+	$indicator-display: map-get($map, indicator-display);
+	$indicator-display: if(
+		$indicator-display,
+		$indicator-display,
+		inline-block
+	);
+
+	$indicator-height: map-get($map, indicator-height);
+	$indicator-height: if(
+		$indicator-height,
+		$indicator-height,
 		#{$line-height-base}em
 	);
+
 	$indicator-text-indent: map-get($map, indicator-text-indent);
-	$indicator-vertical-align: setter(
-		map-get($map, indicator-vertical-align),
-		middle
+
+	$indicator-vertical-align: map-get($map, indicator-vertical-align);
+	$indicator-vertical-align: if(
+		$indicator-vertical-align,
+		$indicator-vertical-align middle
 	);
-	$indicator-width: setter(map-get($map, indicator-width), 1em);
+
+	$indicator-width: map-get($map, indicator-width);
+	$indicator-width: if($indicator-width, $indicator-width, 1em);
 
 	background-image: $indicator;
 	background-position: $indicator-bg-position;

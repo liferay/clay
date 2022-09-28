@@ -3,7 +3,8 @@
 }
 
 fieldset:disabled a.btn {
-	$btn-disabled: setter(map-get($btn, disabled), ());
+	$btn-disabled: map-get($btn, disabled);
+	$btn-disabled: if($btn-disabled, $btn-disabled, ());
 
 	@include clay-css($btn-disabled);
 

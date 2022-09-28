@@ -93,7 +93,8 @@
 		)
 	);
 
-	$strong: setter(map-get($map, strong), ());
+	$strong: map-get($map, strong);
+	$strong: if($strong, $strong, ());
 	$strong: map-merge(
 		$strong,
 		(
@@ -105,7 +106,8 @@
 		)
 	);
 
-	$item: setter(map-get($map, item), ());
+	$item: map-get($map, item);
+	$item: if($item, $item, ());
 	$item: map-merge(
 		$item,
 		(
@@ -137,7 +139,8 @@
 		)
 	);
 
-	$btn: setter(map-get($map, btn), ());
+	$btn: map-get($map, btn);
+	$btn: if($btn, $btn, ());
 	$btn: map-merge(
 		$btn,
 		(
@@ -185,7 +188,8 @@
 		)
 	);
 
-	$btn-c-inner: setter(map-get($map, btn-c-inner), ());
+	$btn-c-inner: map-get($map, btn-c-inner);
+	$btn-c-inner: if($btn-c-inner, $btn-c-inner, ());
 	$btn-c-inner: map-merge(
 		(
 			enabled: $enable-c-inner,
@@ -197,7 +201,8 @@
 		$btn-c-inner
 	);
 
-	$btn-monospaced: setter(map-get($map, btn-monospaced), ());
+	$btn-monospaced: map-get($map, btn-monospaced);
+	$btn-monospaced: if($btn-monospaced, $btn-monospaced, ());
 	$btn-monospaced: map-merge(
 		$btn-monospaced,
 		(
@@ -256,7 +261,12 @@
 		)
 	);
 
-	$btn-monospaced-c-inner: setter(map-get($map, btn-monospaced-c-inner), ());
+	$btn-monospaced-c-inner: map-get($map, btn-monospaced-c-inner);
+	$btn-monospaced-c-inner: if(
+		$btn-monospaced-c-inner,
+		$btn-monospaced-c-inner,
+		()
+	);
 	$btn-monospaced-c-inner: map-merge(
 		(
 			enabled: $enable-c-inner,
@@ -265,7 +275,8 @@
 		$btn-monospaced-c-inner
 	);
 
-	$link: setter(map-get($map, link), ());
+	$link: map-get($map, link);
+	$link: if($link, $link, ());
 	$link: map-merge(
 		$link,
 		(
@@ -309,7 +320,8 @@
 		)
 	);
 
-	$link-c-inner: setter(map-get($map, link-c-inner), ());
+	$link-c-inner: map-get($map, link-c-inner);
+	$link-c-inner: if($link-c-inner, $link-c-inner, ());
 	$link-c-inner: map-merge(
 		(
 			enabled: $enable-c-inner,
@@ -321,7 +333,8 @@
 		$link-c-inner
 	);
 
-	$link-monospaced: setter(map-get($map, link-monospaced), ());
+	$link-monospaced: map-get($map, link-monospaced);
+	$link-monospaced: if($link-monospaced, $link-monospaced, ());
 	$link-monospaced: map-merge(
 		(
 			border-radius:
@@ -378,8 +391,10 @@
 		$link-monospaced
 	);
 
-	$link-monospaced-c-inner: setter(
-		map-get($map, link-monospaced-c-inner),
+	$link-monospaced-c-inner: map-get($map, link-monospaced-c-inner);
+	$link-monospaced-c-inner: if(
+		$link-monospaced-c-inner,
+		$link-monospaced-c-inner,
 		()
 	);
 	$link-monospaced-c-inner: map-merge(
@@ -390,7 +405,8 @@
 		$link-monospaced-c-inner
 	);
 
-	$section: setter(map-get($map, section), ());
+	$section: map-get($map, section);
+	$section: if($section, $section, ());
 	$section: map-merge(
 		$section,
 		(

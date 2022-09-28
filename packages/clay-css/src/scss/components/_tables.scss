@@ -80,7 +80,7 @@ caption {
 @each $color, $value in $table-row-theme-colors {
 	.table {
 		.table-#{$color} {
-			$table-row: setter($value, ());
+			$table-row: if($value, $value, ());
 
 			&,
 			> th,
@@ -107,7 +107,8 @@ caption {
 	// Note: this is not available for cells or rows within `thead` or `tfoot`.
 
 	.table-hover {
-		$hover: setter(map-get($value, hover), ());
+		$hover: map-get($value, hover);
+		$hover: if($hover, $hover, ());
 
 		.table-#{$color} {
 			&:hover {

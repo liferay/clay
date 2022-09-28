@@ -96,7 +96,8 @@
 
 @mixin clay-alert-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -106,9 +107,11 @@
 			)
 		);
 
-		$alert-indicator: setter(map-get($map, alert-indicator), ());
+		$alert-indicator: map-get($map, alert-indicator);
+		$alert-indicator: if($alert-indicator, $alert-indicator, ());
 
-		$close: setter(map-get($map, close), ());
+		$close: map-get($map, close);
+		$close: if($close, $close, ());
 		$close: map-deep-merge(
 			$close,
 			(
@@ -124,7 +127,8 @@
 			)
 		);
 
-		$lead: setter(map-get($map, lead), ());
+		$lead: map-get($map, lead);
+		$lead: if($lead, $lead, ());
 		$lead: map-deep-merge(
 			$lead,
 			(
@@ -132,7 +136,8 @@
 			)
 		);
 
-		$alert-link: setter(map-get($map, alert-link), ());
+		$alert-link: map-get($map, alert-link);
+		$alert-link: if($alert-link, $alert-link, ());
 		$alert-link: map-deep-merge(
 			$alert-link,
 			(
@@ -167,19 +172,22 @@
 			}
 
 			&.alert-dismissible {
-				@include clay-css(setter(map-get($map, alert-dismissible), ()));
+				$alert-dismissible: map-get($map, alert-dismissible);
+
+				@include clay-css(
+					if($alert-dismissible, $alert-dismissible, ())
+				);
 
 				.container,
 				.container-fluid {
+					$container-fluid: map-deep-get(
+						$map,
+						alert-dismissible,
+						container-fluid
+					);
+
 					@include clay-css(
-						setter(
-							map-deep-get(
-								$map,
-								alert-dismissible,
-								container-fluid
-							),
-							()
-						)
+						if($container-fluid, $container-fluid, ())
 					);
 				}
 			}
@@ -214,7 +222,8 @@
 
 			.container,
 			.container-fluid {
-				@include clay-css(setter(map-get($map, container-fluid), ()));
+				$container-fluid: map-get($map, container-fluid);
+				@include clay-css(if($container-fluid, $container-fluid, ()));
 			}
 
 			.lead {

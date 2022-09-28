@@ -3,7 +3,8 @@
 // @param $map - Sass map that contain Navbar properties to modify
 
 @mixin clay-navbar-size($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	$enabled: map-get($map, enabled);
+	$enabled: if($enabled != null, $enabled, true);
 
 	$enable-c-inner: if(
 		variable-exists(enable-c-inner),
@@ -37,21 +38,38 @@
 		)
 	);
 
-	$scaling-navbar: setter(map-get($map, scaling-navbar), false);
+	$scaling-navbar: map-get($map, scaling-navbar);
+	$scaling-navbar: if($scaling-navbar, $scaling-navbar, false);
 	$container-padding-x: map-get($map, container-padding-x);
-	$container-padding-x-mobile: setter(
-		map-get($map, container-padding-x-mobile),
+
+	$container-padding-x-mobile: map-get($map, container-padding-x-mobile);
+	$container-padding-x-mobile: if(
+		$container-padding-x-mobile,
+		$container-padding-x-mobile,
 		$container-padding-x
 	);
 
-	$height: setter(map-get($map, height), 3.5rem);
-	$border-bottom-width: setter(map-get($map, border-bottom-width), 0px);
-	$border-left-width: setter(map-get($map, border-left-width), 0px);
-	$border-right-width: setter(map-get($map, border-right-width), 0px);
-	$border-top-width: setter(map-get($map, border-top-width), 0px);
+	$height: map-get($map, height);
+	$height: if($height, $height, 3.5rem);
+
+	$border-bottom-width: map-get($map, border-bottom-width);
+	$border-bottom-width: if($border-bottom-width, $border-bottom-width, 0px);
+
+	$border-left-width: map-get($map, border-left-width);
+	$border-left-width: if($border-left-width, $border-left-width, 0px);
+
+	$border-right-width: map-get($map, border-right-width);
+	$border-right-width: if($border-right-width, $border-right-width, 0px);
+
+	$border-top-width: map-get($map, border-top-width);
+	$border-top-width: if($border-top-width, $border-top-width, 0px);
+
 	$box-shadow: map-get($map, box-shadow);
-	$font-size: setter(
-		map-get($map, font-size),
+
+	$font-size: map-get($map, font-size);
+	$font-size: if(
+		$font-size,
+		$font-size,
 		if(
 			variable-exists(font-size-base),
 			$font-size-base,
@@ -62,9 +80,13 @@
 			)
 		)
 	);
+
 	$min-height: map-get($map, min-height);
-	$padding-x: setter(
-		map-get($map, padding-x),
+
+	$padding-x: map-get($map, padding-x);
+	$padding-x: if(
+		$padding-x,
+		$padding-x,
 		if(
 			variable-exists(navbar-padding-x),
 			$navbar-padding-x,
@@ -75,8 +97,11 @@
 			)
 		)
 	);
-	$padding-y: setter(
-		map-get($map, padding-y),
+
+	$padding-y: map-get($map, padding-y);
+	$padding-y: if(
+		$padding-y,
+		$padding-y,
 		if(
 			variable-exists(navbar-padding-y),
 			$navbar-padding-y,
@@ -88,14 +113,20 @@
 		)
 	);
 	$padding-y: if($padding-y == 0 or $padding-y == null, 0px, $padding-y);
-	$link-height: setter(
-		map-get($map, link-height),
+
+	$link-height: map-get($map, link-height);
+	$link-height: if(
+		$link-height,
+		$link-height,
 		'#{$height} - #{$border-bottom-width} - #{$border-top-width} - #{$padding-y} * 2'
 	);
 
 	$link-margin-x: map-get($map, link-margin-x);
-	$link-margin-y: setter(
-		map-get($map, link-margin-y),
+
+	$link-margin-y: map-get($map, link-margin-y);
+	$link-margin-y: if(
+		$link-margin-y,
+		$link-margin-y,
 		calc(
 			(
 					(
@@ -104,8 +135,11 @@
 				) * 0.5
 		)
 	);
-	$link-padding-x: setter(
-		map-get($map, link-padding-x),
+
+	$link-padding-x: map-get($map, link-padding-x);
+	$link-padding-x: if(
+		$link-padding-x,
+		$link-padding-x,
 		if(
 			variable-exists(navbar-nav-link-padding-x),
 			$navbar-nav-link-padding-x,
@@ -116,8 +150,11 @@
 			)
 		)
 	);
-	$link-padding-y: setter(
-		map-get($map, link-padding-y),
+
+	$link-padding-y: map-get($map, link-padding-y);
+	$link-padding-y: if(
+		$link-padding-y,
+		$link-padding-y,
 		(
 			calc(
 				(#{$link-height} - (#{$font-size} * #{$_line-height-base})) *
@@ -125,12 +162,20 @@
 			)
 		)
 	);
-	$btn-font-size: setter(map-get($map, btn-font-size), $font-size);
+
+	$btn-font-size: map-get($map, btn-font-size);
+	$btn-font-size: if($btn-font-size, $btn-font-size, $font-size);
+
 	$btn-monospaced-font-size: map-get($map, btn-monospaced-font-size);
 	$btn-monospaced-size: map-get($map, btn-monospaced-size);
-	$btn-margin-x: setter(map-get($map, btn-margin-x), $link-padding-x);
-	$btn-margin-y: setter(
-		map-get($map, btn-margin-y),
+
+	$btn-margin-x: map-get($map, btn-margin-x);
+	$btn-margin-x: if($btn-margin-x, $btn-margin-x, $link-padding-x);
+
+	$btn-margin-y: map-get($map, btn-margin-y);
+	$btn-margin-y: if(
+		$btn-margin-y,
+		$btn-margin-y,
 		calc(
 			(
 					#{$height} - #{$border-bottom-width} - #{$border-top-width} -
@@ -152,11 +197,19 @@
 				) * 0.5
 		)
 	);
-	$btn-padding-x: setter(map-get($map, btn-padding-x), $link-padding-x);
-	$btn-padding-y: setter(map-get($map, btn-padding-y), $link-padding-y);
+
+	$btn-padding-x: map-get($map, btn-padding-x);
+	$btn-padding-x: if($btn-padding-x, $btn-padding-x, $link-padding-x);
+
+	$btn-padding-y: map-get($map, btn-padding-y);
+	$btn-padding-y: if($btn-padding-y, $btn-padding-y, $link-padding-y);
+
 	$form-control-height: map-get($map, form-control-height);
-	$brand-font-size: setter(
-		map-get($map, brand-font-size),
+
+	$brand-font-size: map-get($map, brand-font-size);
+	$brand-font-size: if(
+		$brand-font-size,
+		$brand-font-size,
 		if(
 			variable-exists(navbar-brand-font-size),
 			$navbar-brand-font-size,
@@ -167,14 +220,23 @@
 			)
 		)
 	);
+
 	$brand-max-width: map-get($map, brand-max-width);
-	$brand-margin-right: setter(
-		map-get($map, brand-margin-right),
+
+	$brand-margin-right: map-get($map, brand-margin-right);
+	$brand-margin-right: if(
+		$brand-margin-right,
+		$brand-margin-right,
 		$link-padding-x
 	);
-	$brand-padding-x: setter(map-get($map, brand-padding-x), $link-padding-x);
-	$brand-padding-y: setter(
-		map-get($map, brand-padding-y),
+
+	$brand-padding-x: map-get($map, brand-padding-x);
+	$brand-padding-x: if($brand-padding-x, $brand-padding-x, $link-padding-x);
+
+	$brand-padding-y: map-get($map, brand-padding-y);
+	$brand-padding-y: if(
+		$brand-padding-y,
+		$brand-padding-y,
 		(
 			calc(
 				(
@@ -185,25 +247,39 @@
 			)
 		)
 	);
+
 	$title-font-size: map-get($map, title-font-size);
 	$title-font-weight: map-get($map, title-font-weight);
 	$title-margin-bottom: map-get($map, title-margin-bottom);
 	$title-text-transform: map-get($map, title-text-transform);
 	$nav-item-dropdown-margin-top: map-get($map, nav-item-dropdown-margin-top);
 
-	$height-mobile: setter(map-get($map, height-mobile), $height);
-	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size);
+	$height-mobile: map-get($map, height-mobile);
+	$height-mobile: if($height-mobile, $height-mobile, $height);
+
+	$font-size-mobile: map-get($map, font-size-mobile);
+	$font-size-mobile: if($font-size-mobile, $font-size-mobile, $font-size);
+
 	$min-height-mobile: map-get($map, min-height-mobile);
-	$link-height-mobile: setter(
-		map-get($map, link-height-mobile),
+
+	$link-height-mobile: map-get($map, link-height-mobile);
+	$link-height-mobile: if(
+		$link-height-mobile,
+		$link-height-mobile,
 		'#{$height-mobile} - #{$border-bottom-width} - #{$border-top-width} - #{$padding-y} * 2'
 	);
-	$link-margin-x-mobile: setter(
-		map-get($map, link-margin-x-mobile),
+
+	$link-margin-x-mobile: map-get($map, link-margin-x-mobile);
+	$link-margin-x-mobile: if(
+		$link-margin-x-mobile,
+		$link-margin-x-mobile,
 		$link-margin-x
 	);
-	$link-margin-y-mobile: setter(
-		map-get($map, link-margin-y-mobile),
+
+	$link-margin-y-mobile: map-get($map, link-margin-y-mobile);
+	$link-margin-y-mobile: if(
+		$link-margin-y-mobile,
+		$link-margin-y-mobile,
 		calc(
 			(
 					(
@@ -212,36 +288,60 @@
 				) * 0.5
 		)
 	);
-	$link-padding-x-mobile: setter(
-		map-get($map, link-padding-x-mobile),
+
+	$link-padding-x-mobile: map-get($map, link-padding-x-mobile);
+	$link-padding-x-mobile: if(
+		$link-padding-x-mobile,
+		$link-padding-x-mobile,
 		$link-padding-x
 	);
-	$link-padding-y-mobile: setter(
-		map-get($map, link-padding-y-mobile),
+
+	$link-padding-y-mobile: map-get($map, link-padding-y-mobile);
+	$link-padding-y-mobile: if(
+		$link-padding-y-mobile,
+		$link-padding-y-mobile,
 		calc(
 			(
 					#{$link-height-mobile} - (#{$font-size-mobile} * #{$_line-height-base})
 				) * 0.5
 		)
 	);
-	$btn-font-size-mobile: setter(
-		map-get($map, btn-font-size-mobile),
+
+	$btn-font-size-mobile: map-get($map, btn-font-size-mobile);
+	$btn-font-size-mobile: if(
+		$btn-font-size-mobile,
+		$btn-font-size-mobile,
 		$font-size-mobile
 	);
-	$btn-monospaced-font-size-mobile: setter(
-		map-get($map, btn-monospaced-font-size-mobile),
+
+	$btn-monospaced-font-size-mobile: map-get(
+		$map,
+		btn-monospaced-font-size-mobile
+	);
+	$btn-monospaced-font-size-mobile: if(
+		$btn-monospaced-font-size-mobile,
+		$btn-monospaced-font-size-mobile,
 		$btn-monospaced-font-size
 	);
-	$btn-monospaced-size-mobile: setter(
-		map-get($map, btn-monospaced-size-mobile),
+
+	$btn-monospaced-size-mobile: map-get($map, btn-monospaced-size-mobile);
+	$btn-monospaced-size-mobile: if(
+		$btn-monospaced-size-mobile,
+		$btn-monospaced-size-mobile,
 		$btn-monospaced-size
 	);
-	$btn-margin-x-mobile: setter(
-		map-get($map, btn-margin-x-mobile),
+
+	$btn-margin-x-mobile: map-get($map, btn-margin-x-mobile);
+	$btn-margin-x-mobile: if(
+		$btn-margin-x-mobile,
+		$btn-margin-x-mobile,
 		$link-padding-x-mobile
 	);
-	$btn-margin-y-mobile: setter(
-		map-get($map, btn-margin-y-mobile),
+
+	$btn-margin-y-mobile: map-get($map, btn-margin-y-mobile);
+	$btn-margin-y-mobile: if(
+		$btn-margin-y-mobile,
+		$btn-margin-y-mobile,
 		calc(
 			(
 					#{$height-mobile} - #{$border-bottom-width} - #{$border-top-width} -
@@ -263,17 +363,27 @@
 				) * 0.5
 		)
 	);
-	$btn-padding-x-mobile: setter(
-		map-get($map, btn-padding-x-mobile),
+
+	$btn-padding-x-mobile: map-get($map, brand-padding-x-mobile);
+	$btn-padding-x-mobile: if(
+		$btn-padding-x-mobile,
+		$btn-padding-x-mobile,
 		$link-padding-x-mobile
 	);
-	$btn-padding-y-mobile: setter(
-		map-get($map, btn-padding-y-mobile),
+
+	$btn-padding-y-mobile: map-get($map, btn-padding-y-mobile);
+	$btn-padding-y-mobile: if(
+		$btn-padding-y-mobile,
+		$btn-padding-y-mobile,
 		$link-padding-x-mobile
 	);
+
 	$form-control-height-mobile: map-get($map, form-control-height-mobile);
-	$brand-font-size-mobile: setter(
-		map-get($map, brand-font-size-mobile),
+
+	$brand-font-size-mobile: map-get($map, brand-font-size-mobile);
+	$brand-font-size-mobile: if(
+		$brand-font-size-mobile,
+		$brand-font-size-mobile,
 		if(
 			variable-exists(font-size-lg-mobile),
 			$font-size-lg-mobile,
@@ -284,16 +394,25 @@
 			)
 		)
 	);
-	$brand-margin-right-mobile: setter(
-		map-get($map, brand-margin-right-mobile),
+
+	$brand-margin-right-mobile: map-get($map, brand-margin-right-mobile);
+	$brand-margin-right-mobile: if(
+		$brand-margin-right-mobile,
+		$brand-margin-right-mobile,
 		0
 	);
-	$brand-padding-x-mobile: setter(
-		map-get($map, brand-padding-x-mobile),
+
+	$brand-padding-x-mobile: map-get($map, brand-padding-x-mobile);
+	$brand-padding-x-mobile: if(
+		$brand-padding-x-mobile,
+		$brand-padding-x-mobile,
 		$link-padding-x-mobile
 	);
-	$brand-padding-y-mobile: setter(
-		map-get($map, brand-padding-y-mobile),
+
+	$brand-padding-y-mobile: map-get($map, brand-padding-y-mobile);
+	$brand-padding-y-mobile: if(
+		$brand-padding-y-mobile,
+		$brand-padding-y-mobile,
 		(
 			calc(
 				(
@@ -303,17 +422,21 @@
 			)
 		)
 	);
+
 	$collapse-dropdown-item-padding-x-mobile: map-get(
 		$map,
 		collapse-dropdown-item-padding-x-mobile
 	);
+
 	$collapse-dropdown-item-padding-y-mobile: map-get(
 		$map,
 		collapse-dropdown-item-padding-y-mobile
 	);
 
-	$toggler-font-size: setter(
-		map-get($map, toggler-font-size),
+	$toggler-font-size: map-get($map, toggler-font-size);
+	$toggler-font-size: if(
+		$toggler-font-size,
+		$toggler-font-size,
 		if(
 			variable-exists(navbar-toggler-font-size),
 			$navbar-toggler-font-size,
@@ -324,17 +447,27 @@
 			)
 		)
 	);
-	$toggler-height: setter(
-		map-get($map, toggler-height),
+
+	$toggler-height: map-get($map, toggler-height);
+	$toggler-height: if(
+		$toggler-height,
+		$toggler-height,
 		calc(#{$height-mobile} * 0.66667)
 	);
-	$toggler-margin-x: setter(
-		map-get($map, toggler-margin-x),
+
+	$toggler-margin-x: map-get($map, toggler-margin-x);
+	$toggler-margin-x: if(
+		$toggler-margin-x,
+		$toggler-margin-x,
 		$link-padding-x-mobile
 	);
+
 	$toggler-margin-y: map-get($map, toggler-margin-y);
-	$toggler-padding-x: setter(
-		map-get($map, toggler-padding-x),
+
+	$toggler-padding-x: map-get($map, toggler-padding-x);
+	$toggler-padding-x: if(
+		$toggler-padding-x,
+		$toggler-padding-x,
 		if(
 			variable-exists(navbar-toggler-padding-x),
 			$navbar-toggler-padding-x,
@@ -345,8 +478,11 @@
 			)
 		)
 	);
-	$toggler-padding-y: setter(
-		map-get($map, toggler-padding-y),
+
+	$toggler-padding-y: map-get($map, toggler-padding-y);
+	$toggler-padding-y: if(
+		$toggler-padding-y,
+		$toggler-padding-y,
 		if(
 			variable-exists(navbar-toggler-padding-y),
 			$navbar-toggler-padding-y,
@@ -358,23 +494,43 @@
 		)
 	);
 
-	$toggler-link-font-size: setter(
-		map-get($map, toggler-link-font-size),
+	$toggler-link-font-size: map-get($map, toggler-link-font-size);
+	$toggler-link-font-size: if(
+		$toggler-link-font-size,
+		$toggler-link-font-size,
 		$font-size-mobile
 	);
-	$toggler-link-height: setter(map-get($map, toggler-link-height), auto);
-	$toggler-link-line-height: setter(
-		map-get($map, toggler-link-line-height),
+
+	$toggler-link-height: map-get($map, toggler-link-height);
+	$toggler-link-height: if($toggler-link-height, $toggler-link-height, auto);
+
+	$toggler-link-line-height: map-get($map, toggler-link-line-height);
+	$toggler-link-line-height: if(
+		$toggler-link-line-height,
+		$toggler-link-line-height,
 		$_line-height-base
 	);
-	$toggler-link-margin-x: setter(map-get($map, toggler-link-margin-x), 0);
+
+	$toggler-link-margin-x: map-get($map, toggler-link-margin-x);
+	$toggler-link-margin-x: if(
+		$toggler-link-margin-x,
+		$toggler-link-margin-x,
+		0
+	);
+
 	$toggler-link-margin-y: map-get($map, toggler-link-margin-y);
-	$toggler-link-padding-x: setter(
-		map-get($map, toggler-link-padding-x),
+
+	$toggler-link-padding-x: map-get($map, toggler-link-padding-x);
+	$toggler-link-padding-x: if(
+		$toggler-link-padding-x,
+		$toggler-link-padding-x,
 		$link-padding-x-mobile
 	);
-	$toggler-link-padding-y: setter(
-		map-get($map, toggler-link-padding-y),
+
+	$toggler-link-padding-y: map-get($map, toggler-link-padding-y);
+	$toggler-link-padding-y: if(
+		$toggler-link-padding-y,
+		$toggler-link-padding-y,
 		calc(
 			(
 					#{$height-mobile} - #{$border-bottom-width} - #{$border-top-width} -
@@ -383,19 +539,31 @@
 		)
 	);
 
-	$active-border-bottom-width: setter(
-		map-get($map, active-border-bottom-width),
+	$active-border-bottom-width: map-get($map, active-border-bottom-width);
+	$active-border-bottom-width: if(
+		$active-border-bottom-width,
+		$active-border-bottom-width,
 		0.125rem
 	);
+
 	$active-border-offset-x: map-get($map, active-border-offset-x);
-	$active-border-offset-bottom: setter(
-		map-get($map, active-border-offset-bottom),
+
+	$active-border-offset-bottom: map-get($map, active-border-offset-bottom);
+	$active-border-offset-bottom: if(
+		$active-border-offset-bottom,
+		$active-border-offset-bottom,
 		calc((#{$border-bottom-width} + #{$padding-y} + #{$link-margin-y}) * -1)
 	);
+
 	$active-border-offset-top: map-get($map, active-border-offset-top);
 
-	$active-border-offset-bottom-mobile: setter(
-		map-get($map, active-border-offset-bottom-mobile),
+	$active-border-offset-bottom-mobile: map-get(
+		$map,
+		active-border-offset-bottom-mobile
+	);
+	$active-border-offset-bottom-mobile: if(
+		$active-border-offset-bottom-mobile,
+		$active-border-offset-bottom-mobile,
 		calc(
 			(#{$border-bottom-width} + #{$padding-y} + #{$link-margin-y-mobile}) *
 				-1
@@ -885,7 +1053,8 @@
 
 @mixin clay-navbar-expand-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
 
 		@if ($enabled) {
 			@include clay-css($map);
@@ -1107,7 +1276,9 @@
 
 @mixin clay-navbar-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled != null, $enabled, true);
+
 		$breakpoints: if(
 			variable-exists(grid-breakpoints),
 			$grid-breakpoints,

@@ -29,9 +29,10 @@
 
 @mixin clay-label-size($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
-		$base: setter($map, ());
+		$base: if($map, $map, ());
 		$base: map-merge(
 			$base,
 			(
@@ -71,7 +72,8 @@
 			)
 		);
 
-		$label-item: setter(map-get($map, label-item), ());
+		$label-item: map-get($map, label-item);
+		$label-item: if($label-item, $label-item, ());
 		$label-item: map-merge(
 			$label-item,
 			(
@@ -88,7 +90,8 @@
 			)
 		);
 
-		$label-item-before: setter(map-get($map, label-item-before), ());
+		$label-item-before: map-get($map, label-item-before);
+		$label-item-before: if($label-item-before, $label-item-before, ());
 		$label-item-before: map-merge(
 			$label-item-before,
 			(
@@ -100,7 +103,8 @@
 			)
 		);
 
-		$label-item-after: setter(map-get($map, label-item-after), ());
+		$label-item-after: map-get($map, label-item-after);
+		$label-item-after: if($label-item-after, $label-item-after, ());
 		$label-item-after: map-merge(
 			$label-item-after,
 			(
@@ -112,7 +116,8 @@
 			)
 		);
 
-		$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+		$lexicon-icon: map-get($map, lexicon-icon);
+		$lexicon-icon: if($lexicon-icon, $lexicon-icon, ());
 		$lexicon-icon: map-merge(
 			$lexicon-icon,
 			(
@@ -135,7 +140,8 @@
 			)
 		);
 
-		$sticker: setter(map-get($map, sticker), ());
+		$sticker: map-get($map, sticker);
+		$sticker: if($sticker, $sticker, ());
 		$sticker: map-merge(
 			$sticker,
 			(
@@ -162,7 +168,8 @@
 			)
 		);
 
-		$sticker-overlay: setter(map-get($map, sticker-overlay), ());
+		$sticker-overlay: map-get($map, sticker-overlay);
+		$sticker-overlay: if($sticker-overlay, $sticker-overlay, ());
 		$sticker-overlay: map-merge(
 			$sticker-overlay,
 			(
@@ -174,7 +181,8 @@
 			)
 		);
 
-		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-get($map, c-inner);
+		$c-inner: if($c-inner, $c-inner, ());
 		$c-inner: map-deep-merge(
 			$c-inner,
 			(
@@ -348,7 +356,8 @@
 
 @mixin clay-label-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$base: map-merge(
 			$map,
@@ -378,7 +387,8 @@
 			)
 		);
 
-		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-get($map, disabled);
+		$disabled: if($disabled, $disabled, ());
 		$disabled: map-merge(
 			$disabled,
 			(
@@ -405,7 +415,8 @@
 			)
 		);
 
-		$href: setter(map-get($map, href), ());
+		$href: map-get($map, href);
+		$href: if($href, $href, ());
 		$href: map-deep-merge(
 			$href,
 			(
@@ -476,7 +487,8 @@
 			)
 		);
 
-		$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+		$lexicon-icon: map-get($map, lexicon-icon);
+		$lexicon-icon: if($lexicon-icon, $lexicon-icon, ());
 		$lexicon-icon: map-merge(
 			$lexicon-icon,
 			(
@@ -499,7 +511,8 @@
 			)
 		);
 
-		$label-item: setter(map-get($map, label-item), ());
+		$label-item: map-get($map, label-item);
+		$label-item: if($label-item, $label-item, ());
 		$label-item: map-merge(
 			$label-item,
 			(
@@ -538,7 +551,8 @@
 			)
 		);
 
-		$label-item-before: setter(map-get($map, label-item-before), ());
+		$label-item-before: map-get($map, label-item-before);
+		$label-item-before: if($label-item-before, $label-item-before, ());
 		$label-item-before: map-merge(
 			$label-item-before,
 			(
@@ -550,7 +564,8 @@
 			)
 		);
 
-		$label-item-after: setter(map-get($map, label-item-after), ());
+		$label-item-after: map-get($map, label-item-after);
+		$label-item-after: if($label-item-after, $label-item-after, ());
 		$label-item-after: map-merge(
 			$label-item-after,
 			(
@@ -562,7 +577,8 @@
 			)
 		);
 
-		$link: setter(map-get($map, link), ());
+		$link: map-get($map, link);
+		$link: if($link, $link, ());
 		$link: map-deep-merge(
 			$link,
 			(
@@ -587,7 +603,8 @@
 			)
 		);
 
-		$sticker: setter(map-get($map, sticker), ());
+		$sticker: map-get($map, sticker);
+		$sticker: if($sticker, $sticker, ());
 		$sticker: map-merge(
 			$sticker,
 			(
@@ -614,7 +631,8 @@
 			)
 		);
 
-		$sticker-overlay: setter(map-get($map, sticker-overlay), ());
+		$sticker-overlay: map-get($map, sticker-overlay);
+		$sticker-overlay: if($sticker-overlay, $sticker-overlay, ());
 		$sticker-overlay: map-merge(
 			$sticker-overlay,
 			(
@@ -626,7 +644,8 @@
 			)
 		);
 
-		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-get($map, c-inner);
+		$c-inner: if($c-inner, $c-inner, ());
 		$c-inner: map-deep-merge(
 			$c-inner,
 			(

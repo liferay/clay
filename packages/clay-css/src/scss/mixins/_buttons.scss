@@ -246,7 +246,8 @@
 
 @mixin clay-button-variant($map) {
 	@if (type-of($map) == 'map') {
-		$enabled: setter(map-get($map, enabled), true);
+		$enabled: map-get($map, enabled);
+		$enabled: if($enabled, $enabled, true);
 
 		$breakpoint-down: map-get($map, breakpoint-down);
 
@@ -258,7 +259,8 @@
 			)
 		);
 
-		$hover: setter(map-get($map, hover), ());
+		$hover: map-get($map, hover);
+		$hover: if($hover, $hover, ());
 		$hover: map-merge(
 			$hover,
 			(
@@ -292,7 +294,8 @@
 			)
 		);
 
-		$focus: setter(map-get($map, focus), ());
+		$focus: map-get($map, focus);
+		$focus: if($focus, $focus, ());
 		$focus: map-merge(
 			$focus,
 			(
@@ -331,7 +334,8 @@
 			)
 		);
 
-		$active: setter(map-get($map, active), ());
+		$active: map-get($map, active);
+		$active: if($active, $active, ());
 		$active: map-merge(
 			$active,
 			(
@@ -368,8 +372,14 @@
 			)
 		);
 
-		$nested-active-focus: setter(map-get($active, focus), ());
-		$active-focus: setter(map-get($map, active-focus), ());
+		$nested-active-focus: map-get($active, focus);
+		$nested-active-focus: if(
+			$nested-active-focus,
+			$nested-active-focus,
+			()
+		);
+		$active-focus: map-get($map, active-focus);
+		$active-focus: if($active-focus, $active-focus, ());
 		$active-focus: map-merge($nested-active-focus, $active-focus);
 		$active-focus: map-merge(
 			$active-focus,
@@ -384,12 +394,14 @@
 			)
 		);
 
-		$active-class: setter(map-get($map, active-class), ());
+		$active-class: map-get($map, active-class);
+		$active-class: if($active-class, $active-class, ());
 		$active-class: map-merge($active, $active-class);
 
 		$show: map-deep-merge($active-class, map-get($map, show));
 
-		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-get($map, disabled);
+		$disabled: if($disabled, $disabled, ());
 		$disabled: map-merge(
 			$disabled,
 			(
@@ -431,11 +443,18 @@
 			)
 		);
 
-		$nested-disabled-active: setter(map-get($disabled, active), ());
-		$disabled-active: setter(map-get($map, disabled-active), ());
+		$nested-disabled-active: map-get($disabled, active);
+		$nested-disabled-active: if(
+			$nested-disabled-active,
+			$nested-disabled-active,
+			()
+		);
+		$disabled-active: map-get($map, disabled-active);
+		$disabled-active: if($disabled-active, $disabled-active, ());
 		$disabled-active: map-merge($nested-disabled-active, $disabled-active);
 
-		$lexicon-icon: setter(map-get($map, lexicon-icon), ());
+		$lexicon-icon: map-get($map, lexicon-icon);
+		$lexicon-icon: if($lexicon-icon, $lexicon-icon, ());
 		$lexicon-icon: map-merge(
 			$lexicon-icon,
 			(
@@ -467,7 +486,8 @@
 			)
 		);
 
-		$inline-item: setter(map-get($map, inline-item), ());
+		$inline-item: map-get($map, inline-item);
+		$inline-item: if($inline-item, $inline-item, ());
 		$inline-item: map-merge(
 			$inline-item,
 			(
@@ -479,8 +499,10 @@
 			)
 		);
 
-		$btn-section: setter(map-get($map, btn-section), ());
-		$section: setter(map-get($map, section), ());
+		$btn-section: map-get($map, btn-section);
+		$btn-section: if($btn-section, $btn-section, ());
+		$section: map-get($map, section);
+		$section: if($section, $section, ());
 		$section: map-merge($btn-section, $section);
 		$section: map-merge(
 			$section,
@@ -503,7 +525,8 @@
 			)
 		);
 
-		$mobile: setter(map-get($map, mobile), ());
+		$mobile: map-get($map, mobile);
+		$mobile: if($mobile, $mobile, ());
 		$mobile: map-merge(
 			$mobile,
 			(
@@ -545,7 +568,8 @@
 			)
 		);
 
-		$mobile-c-inner: setter(map-get($mobile, c-inner), ());
+		$mobile-c-inner: map-get($mobile, c-inner);
+		$mobile-c-inner: if($mobile-c-inner, $mobile-c-inner, ());
 		$mobile-c-inner: map-merge(
 			(
 				enabled:
@@ -567,12 +591,15 @@
 			$mobile-c-inner
 		);
 
-		$loading-animation: setter(
-			map-get($map, loading-animation),
+		$loading-animation: map-get($map, loading-animation);
+		$loading-animation: if(
+			$loading-animation,
+			$loading-animation,
 			clay-unset-placeholder
 		);
 
-		$c-inner: setter(map-get($map, c-inner), ());
+		$c-inner: map-get($map, c-inner);
+		$c-inner: if($c-inner, $c-inner, ());
 		$c-inner: map-merge(
 			(
 				enabled:
