@@ -9,7 +9,9 @@ import {Keys} from './Keys';
 import {useFocusManagement} from './useFocusManagement';
 
 type Children = React.ReactElement & {
-	ref?: React.MutableRefObject<HTMLElement>;
+	ref?:
+		| React.MutableRefObject<HTMLElement>
+		| ((ref: HTMLElement | null) => void);
 };
 
 type ChildrenFunction =
@@ -116,6 +118,8 @@ export const FocusScope = ({
 						if (ref) {
 							if (typeof ref === 'object') {
 								ref.current = r;
+							} else if (typeof ref === 'function') {
+								ref(r);
 							}
 						}
 					}
