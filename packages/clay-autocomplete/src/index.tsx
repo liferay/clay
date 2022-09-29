@@ -31,7 +31,7 @@ AutocompleteMarkup.displayName = 'ClayAutocompleteMarkup';
  * Temporary helper function to determine which version of autocomplete
  * is being used.
  */
-const hasInputOrDropDown = (children?: React.ReactNode) => {
+const hasItems = (children?: React.ReactNode) => {
 	if (!children) {
 		return [];
 	}
@@ -40,9 +40,7 @@ const hasInputOrDropDown = (children?: React.ReactNode) => {
 		if (
 			React.isValidElement(child) &&
 			// @ts-ignore
-			(child.type.displayName === 'ClayAutocompleteDropDown' ||
-				// @ts-ignore
-				child.type.displayName === 'ClayAutocompleteInput')
+			child.type.displayName === 'ClayAutocompleteItem'
 		) {
 			return true;
 		}
@@ -71,12 +69,12 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 		const containerElementRef = React.useRef<null | HTMLDivElement>(null);
 		const [loading, setLoading] = React.useState(false);
 
-		const isOldBehavior = hasInputOrDropDown(children).length >= 1;
+		const isNewBehavior = hasItems(children).length >= 1;
 
 		return (
 			<FocusScope>
 				<Component
-					{...(isOldBehavior ? otherProps : {})}
+					{...(isNewBehavior ? {} : otherProps)}
 					className={className}
 					ref={(r: any) => {
 						if (r) {
@@ -91,7 +89,9 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 						}
 					}}
 				>
-					{isOldBehavior ? (
+					{isNewBehavior ? (
+						<Autocomplete {...otherProps}>{children}</Autocomplete>
+					) : (
 						<Context.Provider
 							value={{
 								containerElementRef,
@@ -102,8 +102,6 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 						>
 							{children}
 						</Context.Provider>
-					) : (
-						<Autocomplete {...otherProps}>{children}</Autocomplete>
 					)}
 				</Component>
 			</FocusScope>
