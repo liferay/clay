@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix of switching the owner of otherProps on Autocomplete ([d5ced5e](https://github.com/liferay/clay/commit/d5ced5e6d85266e25f7955249fedf904fb46de66))
+
 # [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
 
 ### Bug Fixes

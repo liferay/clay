@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fix bug of not doing forwardRef when `ref` is a function ([8601622](https://github.com/liferay/clay/commit/8601622a542ea5029dc96df17d6a6d1711cf8753))
+
 # [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
 
 ### Bug Fixes
