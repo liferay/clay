@@ -795,14 +795,8 @@
 	$newMap: $map;
 
 	@each $key in $keys {
-		@if (type-of($newMap) == 'list' and length($newMap) == 0) or
-			(type-of($newMap) == 'null')
-		{
-			$newMap: map-new();
-		}
-
-		@if (type-of($newMap) != map) {
-			@error ('argument `$map: #{$map}` of `map-deep-get($map, $keys)` must be a map');
+		@if (type-of($newMap) != 'map') {
+			@return null;
 		}
 
 		$newMap: map-get($newMap, $key);
