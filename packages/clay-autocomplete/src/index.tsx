@@ -71,9 +71,12 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 		const containerElementRef = React.useRef<null | HTMLDivElement>(null);
 		const [loading, setLoading] = React.useState(false);
 
+		const isOldBehavior = hasInputOrDropDown(children).length >= 1;
+
 		return (
 			<FocusScope>
 				<Component
+					{...(isOldBehavior ? otherProps : {})}
 					className={className}
 					ref={(r: any) => {
 						if (r) {
@@ -88,7 +91,7 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 						}
 					}}
 				>
-					{hasInputOrDropDown(children).length >= 1 ? (
+					{isOldBehavior ? (
 						<Context.Provider
 							value={{
 								containerElementRef,
