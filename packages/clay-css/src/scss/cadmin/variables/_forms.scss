@@ -737,29 +737,34 @@ $cadmin-has-error: map-deep-merge(
 		input-group-item: (
 			focus: (
 				box-shadow:
-					setter(
+					if(
+						$cadmin-input-danger-focus-box-shadow,
 						$cadmin-input-danger-focus-box-shadow,
 						$cadmin-input-danger-box-shadow
 					),
 				input-group-inset: (
 					background-color:
-						setter(
+						if(
+							$cadmin-input-danger-focus-bg,
 							$cadmin-input-danger-focus-bg,
 							$cadmin-input-danger-bg
 						),
 					border-color:
-						setter(
+						if(
+							$cadmin-input-danger-focus-border-color,
 							$cadmin-input-danger-focus-border-color,
 							$cadmin-input-danger-border-color
 						),
 					input-group-inset-item: (
 						background-color:
-							setter(
+							if(
+								$cadmin-input-danger-focus-bg,
 								$cadmin-input-danger-focus-bg,
 								$cadmin-input-danger-bg
 							),
 						border-color:
-							setter(
+							if(
+								$cadmin-input-danger-focus-border-color,
 								$cadmin-input-danger-focus-border-color,
 								$cadmin-input-danger-border-color
 							),
@@ -776,12 +781,14 @@ $cadmin-has-error: map-deep-merge(
 					box-shadow: none,
 					input-group-inset-item: (
 						background-color:
-							setter(
+							if(
+								$cadmin-input-danger-focus-bg,
 								$cadmin-input-danger-focus-bg,
 								$cadmin-input-danger-bg
 							),
 						border-color:
-							setter(
+							if(
+								$cadmin-input-danger-focus-border-color,
 								$cadmin-input-danger-focus-border-color,
 								$cadmin-input-danger-border-color
 							),
@@ -907,29 +914,34 @@ $cadmin-has-warning: map-deep-merge(
 		input-group-item: (
 			focus: (
 				box-shadow:
-					setter(
+					if(
+						$cadmin-input-warning-focus-box-shadow,
 						$cadmin-input-warning-focus-box-shadow,
 						$cadmin-input-warning-box-shadow
 					),
 				input-group-inset: (
 					background-color:
-						setter(
+						if(
+							$cadmin-input-warning-focus-bg,
 							$cadmin-input-warning-focus-bg,
 							$cadmin-input-warning-bg
 						),
 					border-color:
-						setter(
+						if(
+							$cadmin-input-warning-focus-border-color,
 							$cadmin-input-warning-focus-border-color,
 							$cadmin-input-warning-border-color
 						),
 					input-group-inset-item: (
 						background-color:
-							setter(
+							if(
+								$cadmin-input-warning-focus-bg,
 								$cadmin-input-warning-focus-bg,
 								$cadmin-input-warning-bg
 							),
 						border-color:
-							setter(
+							if(
+								$cadmin-input-warning-focus-border-color,
 								$cadmin-input-warning-focus-border-color,
 								$cadmin-input-warning-border-color
 							),
@@ -946,12 +958,14 @@ $cadmin-has-warning: map-deep-merge(
 					box-shadow: none,
 					input-group-inset-item: (
 						background-color:
-							setter(
+							if(
+								$cadmin-input-warning-focus-bg,
 								$cadmin-input-warning-focus-bg,
 								$cadmin-input-warning-bg
 							),
 						border-color:
-							setter(
+							if(
+								$cadmin-input-warning-focus-border-color,
 								$cadmin-input-warning-focus-border-color,
 								$cadmin-input-warning-border-color
 							),
@@ -1077,29 +1091,34 @@ $cadmin-has-success: map-deep-merge(
 		input-group-item: (
 			focus: (
 				box-shadow:
-					setter(
+					if(
+						$cadmin-input-success-focus-box-shadow,
 						$cadmin-input-success-focus-box-shadow,
 						$cadmin-input-success-box-shadow
 					),
 				input-group-inset: (
 					background-color:
-						setter(
+						if(
+							$cadmin-input-success-focus-bg,
 							$cadmin-input-success-focus-bg,
 							$cadmin-input-success-bg
 						),
 					border-color:
-						setter(
+						if(
+							$cadmin-input-success-focus-border-color,
 							$cadmin-input-success-focus-border-color,
 							$cadmin-input-success-border-color
 						),
 					input-group-inset-item: (
 						background-color:
-							setter(
+							if(
+								$cadmin-input-success-focus-bg,
 								$cadmin-input-success-focus-bg,
 								$cadmin-input-success-bg
 							),
 						border-color:
-							setter(
+							if(
+								$cadmin-input-success-focus-border-color,
 								$cadmin-input-success-focus-border-color,
 								$cadmin-input-success-border-color
 							),
@@ -1116,12 +1135,14 @@ $cadmin-has-success: map-deep-merge(
 					box-shadow: none,
 					input-group-inset-item: (
 						background-color:
-							setter(
+							if(
+								$cadmin-input-success-focus-bg,
 								$cadmin-input-success-focus-bg,
 								$cadmin-input-success-bg
 							),
 						border-color:
-							setter(
+							if(
+								$cadmin-input-success-focus-border-color,
 								$cadmin-input-success-focus-border-color,
 								$cadmin-input-success-border-color
 							),

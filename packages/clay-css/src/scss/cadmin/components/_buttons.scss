@@ -3,16 +3,26 @@
 }
 
 fieldset:disabled a.btn {
-	$btn-disabled: setter(map-get($cadmin-btn, disabled), ());
+	$btn-disabled: map-get($cadmin-btn, disabled);
+	$btn-disabled: if($btn-disabled, $btn-disabled, ());
 
 	@include clay-css($btn-disabled);
 
 	&:focus {
-		@include clay-css(setter(map-get($btn-disabled, focus), ()));
+		$btn-disabled-focus: map-get($btn-disabled, focus);
+		$btn-disabled-focus: if($btn-disabled-focus, $btn-disabled-focus, ());
+
+		@include clay-css($btn-disabled-focus);
 	}
 
 	&:active {
-		@include clay-css(setter(map-get($btn-disabled, active), ()));
+		$btn-disabled-active: map-get($btn-disabled, active);
+		$btn-disabled-active: if(
+			$btn-disabled-active,
+			$btn-disabled-active,
+			()
+		);
+		@include clay-css($btn-disabled-active);
 	}
 }
 

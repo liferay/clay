@@ -20,7 +20,8 @@
 .alert-indicator {
 	@include clay-css($cadmin-alert-indicator);
 	+ .lead {
-		$lead: setter(map-get($cadmin-alert-indicator, lead), ());
+		$lead: map-get($cadmin-alert-indicator, lead);
+		$lead: if($lead, $lead, ());
 
 		@include clay-css($lead);
 	}
@@ -74,10 +75,8 @@
 	@include clay-css($cadmin-alert-notifications-absolute);
 
 	@include clay-scale-component(null, $breakpoint-down) {
-		$mobile: setter(
-			map-get($cadmin-alert-notifications-absolute, mobile),
-			()
-		);
+		$mobile: map-get($cadmin-alert-notifications-absolute, mobile);
+		$mobile: if($mobile, $mobile, ());
 
 		@include clay-css($mobile);
 	}
@@ -92,7 +91,8 @@
 	@include clay-css($cadmin-alert-notifications-fixed);
 
 	@include clay-scale-component(null, $breakpoint-down) {
-		$mobile: setter(map-get($cadmin-alert-notifications-fixed, mobile), ());
+		$mobile: map-get($cadmin-alert-notifications-fixed, mobile);
+		$mobile: if($mobile, $mobile, ());
 
 		@include clay-css($mobile);
 	}
@@ -175,16 +175,19 @@
 	@include clay-css($cadmin-alert-inline);
 
 	&.alert-dismissible {
-		$alert-dismissible: setter(
-			map-get($cadmin-alert-inline, alert-dismissible),
-			()
-		);
+		$alert-dismissible: map-get($cadmin-alert-inline, alert-dismissible);
+		$alert-dismissible: if($alert-dismissible, $alert-dismissible, ());
 
 		@include clay-css($alert-dismissible);
 
 		&.alert-fluid {
-			$alert-dismissible-alert-fluid: setter(
-				map-get($cadmin-alert-inline, alert-dismissible-alert-fluid),
+			$alert-dismissible-alert-fluid: map-get(
+				$cadmin-alert-inline,
+				alert-dismissible-alert-fluid
+			);
+			$alert-dismissible-alert-fluid: if(
+				$alert-dismissible-alert-fluid,
+				$alert-dismissible-alert-fluid,
 				()
 			);
 
@@ -192,10 +195,11 @@
 
 			> .container,
 			> .container-fluid {
-				$container-fluid: setter(
-					map-get($alert-dismissible-alert-fluid, container-fluid),
-					()
+				$container-fluid: map-get(
+					$alert-dismissible-alert-fluid,
+					container-fluid
 				);
+				$container-fluid: if($container-fluid, $container-fluid, ());
 
 				@include clay-css($container-fluid);
 
@@ -209,10 +213,8 @@
 					@include clay-css($alert-autofit-row);
 
 					.btn-group {
-						$btn-group: setter(
-							map-get($alert-autofit-row, btn-group),
-							()
-						);
+						$btn-group: map-get($alert-autofit-row, btn-group);
+						$btn-group: if($btn-group, $btn-group, ());
 
 						@include clay-css($btn-group);
 					}
@@ -222,22 +224,22 @@
 	}
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($cadmin-alert-inline, alert-autofit-row),
-			()
-		);
+		$alert-autofit-row: map-get($cadmin-alert-inline, alert-autofit-row);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include clay-css($alert-autofit-row);
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+			$btn-group: map-get($alert-autofit-row, btn-group);
+			$btn-group: if($btn-group, $btn-group, ());
 
 			@include clay-css($btn-group);
 		}
 	}
 
 	.close {
-		$close: setter(map-get($cadmin-alert-inline, close), ());
+		$close: map-get($cadmin-alert-inline, close);
+		$close: if($close, $close, ());
 
 		@include clay-close($close);
 	}
@@ -249,28 +251,32 @@
 	@include clay-css($cadmin-alert-autofit-stacked);
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($cadmin-alert-autofit-stacked, alert-autofit-row),
-			()
+		$alert-autofit-row: map-get(
+			$cadmin-alert-autofit-stacked,
+			alert-autofit-row
 		);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include clay-css($alert-autofit-row);
 
 		> .autofit-col {
-			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
+			$autofit-col: map-get($alert-autofit-row, autofit-col);
+			$autofit-col: if($autofit-col, $autofit-col, ());
 
 			@include clay-css($autofit-col);
 		}
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+			$btn-group: map-get($alert-autofit-row, btn-group);
+			$btn-group: if($btn-group, $btn-group, ());
 
 			@include clay-css($btn-group);
 		}
 	}
 
 	.close {
-		$close: setter(map-get($cadmin-alert-autofit-stacked, close), ());
+		$close: map-get($cadmin-alert-autofit-stacked, close);
+		$close: if($close, $close, ());
 
 		@include clay-close($close);
 	}
@@ -282,17 +288,19 @@
 	@include clay-css($cadmin-alert-autofit-stacked-sm-down);
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($cadmin-alert-autofit-stacked-sm-down, alert-autofit-row),
-			()
+		$alert-autofit-row: map-get(
+			$cadmin-alert-autofit-stacked-sm-down,
+			alert-autofit-row
 		);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
 			@include clay-css($alert-autofit-row);
 		}
 
 		> .autofit-col {
-			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
+			$autofit-col: map-get($alert-autofit-row, autofit-col);
+			$autofit-col: if($autofit-col, $autofit-col, ());
 
 			@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
 				@include clay-css($autofit-col);
@@ -300,7 +308,8 @@
 		}
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+			$btn-group: map-get($alert-autofit-row, btn-group);
+			$btn-group: if($btn-group, $btn-group, ());
 
 			@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
 				@include clay-css($btn-group);
@@ -309,10 +318,8 @@
 	}
 
 	.close {
-		$close: setter(
-			map-get($cadmin-alert-autofit-stacked-sm-down, close),
-			()
-		);
+		$close: map-get($cadmin-alert-autofit-stacked-sm-down, close);
+		$close: if($close, $close, ());
 
 		@include media-breakpoint-down(sm, $cadmin-grid-breakpoints) {
 			@include clay-css($close);
@@ -326,17 +333,19 @@
 	@include clay-css($cadmin-alert-autofit-stacked-xs-down);
 
 	> .alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($cadmin-alert-autofit-stacked-xs-down, alert-autofit-row),
-			()
+		$alert-autofit-row: map-get(
+			$cadmin-alert-autofit-stacked-xs-down,
+			alert-autofit-row
 		);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
 			@include clay-css($alert-autofit-row);
 		}
 
 		> .autofit-col {
-			$autofit-col: setter(map-get($alert-autofit-row, autofit-col), ());
+			$autofit-col: map-get($alert-autofit-row, autofit-col);
+			$autofit-col: if($autofit-col, $autofit-col, ());
 
 			@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
 				@include clay-css($autofit-col);
@@ -344,7 +353,8 @@
 		}
 
 		.btn-group {
-			$btn-group: setter(map-get($alert-autofit-row, btn-group), ());
+			$btn-group: map-get($alert-autofit-row, btn-group);
+			$btn-group: if($btn-group, $btn-group, ());
 
 			@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
 				@include clay-css($btn-group);
@@ -353,10 +363,8 @@
 	}
 
 	.close {
-		$close: setter(
-			map-get($cadmin-alert-autofit-stacked-xs-down, close),
-			()
-		);
+		$close: map-get($cadmin-alert-autofit-stacked-xs-down, close);
+		$close: if($close, $close, ());
 
 		@include media-breakpoint-down(xs, $cadmin-grid-breakpoints) {
 			@include clay-css($close);
@@ -370,59 +378,61 @@
 	@include clay-css($cadmin-alert-indicator-start);
 
 	&.alert-fluid {
-		$alert-fluid: setter(
-			map-get($cadmin-alert-indicator-start, alert-fluid),
-			()
-		);
+		$alert-fluid: map-get($cadmin-alert-indicator-start, alert-fluid);
+		$alert-fluid: if($alert-fluid, $alert-fluid, ());
 
 		@include clay-css($alert-fluid);
 
 		> .container,
 		> .container-fluid {
-			$container-fluid: setter(
-				map-get($alert-fluid, container-fluid),
-				()
-			);
+			$container-fluid: map-get($alert-fluid, container-fluid);
+			$container-fluid: if($container-fluid, $container-fluid, ());
 
 			@include clay-css($container-fluid);
 		}
 	}
 
 	&.alert-feedback {
-		$alert-feedback: setter(
-			map-get($cadmin-alert-indicator-start, alert-feedback),
-			()
-		);
+		$alert-feedback: map-get($cadmin-alert-indicator-start, alert-feedback);
+		$alert-feedback: if($alert-feedback, $alert-feedback, ());
 
 		@include clay-css($alert-feedback);
 	}
 
 	.alert-indicator {
-		$alert-indicator: setter(
-			map-get($cadmin-alert-indicator-start, alert-indicator),
-			()
+		$alert-indicator: map-get(
+			$cadmin-alert-indicator-start,
+			alert-indicator
 		);
+		$alert-indicator: if($alert-indicator, $alert-indicator, ());
 
 		@include clay-css($alert-indicator);
 
 		+ .lead {
-			$lead: setter(map-get($alert-indicator, lead), ());
+			$lead: map-get($alert-indicator, lead);
+			$lead: if($lead, $lead, ());
 
 			@include clay-css($lead);
 		}
 	}
 
 	.alert-autofit-row {
-		$alert-autofit-row: setter(
-			map-get($cadmin-alert-indicator-start, alert-autofit-row),
-			()
+		$alert-autofit-row: map-get(
+			$cadmin-alert-indicator-start,
+			alert-autofit-row
 		);
+		$alert-autofit-row: if($alert-autofit-row, $alert-autofit-row, ());
 
 		@include clay-css($alert-autofit-row);
 
 		.alert-indicator:only-child {
-			$alert-indicator-only-child: setter(
-				map-get($alert-autofit-row, alert-indicator-only-child),
+			$alert-indicator-only-child: map-get(
+				$alert-autofit-row,
+				alert-indicator-only-child
+			);
+			$alert-indicator-only-child: if(
+				$alert-indicator-only-child,
+				$alert-indicator-only-child,
 				()
 			);
 

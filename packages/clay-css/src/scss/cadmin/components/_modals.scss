@@ -165,7 +165,8 @@
 	@include clay-css($cadmin-modal-header);
 
 	@include clay-scale-component(null, $breakpoint-down) {
-		$mobile: setter(map-get($cadmin-modal-header, mobile), ());
+		$mobile: map-get($cadmin-modal-header, mobile);
+		$mobile: if($mobile, $mobile, ());
 
 		@include clay-css($mobile);
 	}
@@ -176,10 +177,8 @@
 	@include clay-css($cadmin-modal-body);
 
 	&.inline-scroller {
-		$inline-scroller: setter(
-			map-get($cadmin-modal-body, inline-scroller),
-			()
-		);
+		$inline-scroller: map-get($cadmin-modal-body, inline-scroller);
+		$inline-scroller: if($inline-scroller, $inline-scroller, ());
 
 		@include clay-css($inline-scroller);
 	}

@@ -12,13 +12,17 @@
 	@include media-breakpoint-down(
 		map-get($cadmin-dropdown-header, breakpoint-down)
 	) {
-		@include clay-css(setter(map-get($cadmin-dropdown-header, mobile), ()));
+		$dropdown-header: map-get($cadmin-dropdown-header, mobile);
+		$dropdown-header: if($dropdown-header, $dropdown-header, ());
+
+		@include clay-css($dropdown-header);
 	}
 
 	&:first-child {
-		@include clay-css(
-			setter(map-get($cadmin-dropdown-header, first-child), ())
-		);
+		$first-child: map-get($cadmin-dropdown-header, first-child);
+		$first-child: if($first-child, $first-child, ());
+
+		@include clay-css($first-child);
 	}
 }
 
@@ -26,9 +30,9 @@
 	@include clay-css($cadmin-dropdown-subheader);
 
 	&:first-child {
-		@include clay-css(
-			setter(map-get($cadmin-dropdown-subheader, first-child), ())
-		);
+		$first-child: map-get($cadmin-dropdown-subheader, first-child);
+		$first-child: if($first-child, $first-child, ());
+		@include clay-css($first-child);
 	}
 }
 
@@ -60,51 +64,74 @@
 	@include clay-css($cadmin-dropdown-section);
 
 	.form-group + .form-group {
-		@include clay-css(
-			setter(
-				map-deep-get($cadmin-dropdown-section, form-group, form-group),
-				()
-			)
+		$form-group: map-deep-get(
+			$cadmin-dropdown-section,
+			form-group,
+			form-group
 		);
+		$form-group: if($form-group, $form-group, ());
+
+		@include clay-css($form-group);
 	}
 
 	.custom-control {
-		@include clay-css(
-			setter(map-get($cadmin-dropdown-section, custom-control), ())
-		);
+		$custom-control: map-get($cadmin-dropdown-section, custom-control);
+		$custom-control: if($custom-control, $custom-control, ());
+
+		@include clay-css($custom-control);
 	}
 
 	.custom-control-label {
-		@include clay-css(
-			setter(map-get($cadmin-dropdown-section, custom-control-label), ())
+		$custom-control-label: map-get(
+			$cadmin-dropdown-section,
+			custom-control-label
 		);
+		$custom-control-label: if(
+			$custom-control-label,
+			$custom-control-label,
+			()
+		);
+
+		@include clay-css($custom-control-label);
 	}
 
 	.custom-control-label-text {
-		@include clay-css(
-			setter(
-				map-get($cadmin-dropdown-section, custom-control-label-text),
-				()
-			)
+		$custom-control-label-text: map-get(
+			$cadmin-dropdown-section,
+			custom-control-label-text
 		);
+		$custom-control-label-text: if(
+			$custom-control-label-text,
+			$custom-control-label-text,
+			()
+		);
+
+		@include clay-css($custom-control-label-text);
 	}
 
 	&.active {
-		@include clay-css(
-			setter(map-get($cadmin-dropdown-section, active), ())
+		$dropdown-section-active: map-get($cadmin-dropdown-section, active);
+		$dropdown-section-active: if(
+			$dropdown-section-active,
+			$dropdown-section-active,
+			()
 		);
 
+		@include clay-css($dropdown-section-active);
+
 		.custom-control-label {
-			@include clay-css(
-				setter(
-					map-deep-get(
-						$cadmin-dropdown-section,
-						active,
-						custom-control-label
-					),
-					()
-				)
+			$custom-control-label: map-deep-get(
+				$cadmin-dropdown-section,
+				active,
+				custom-control-label
 			);
+			$custom-control-label: if(
+				$custom-control-label,
+				$custom-control-label,
+				()
+			);
+
+			@include clay-css($custom-control-label);
 		}
 	}
 }
@@ -220,9 +247,10 @@
 	@include clay-css($cadmin-dropdown-action);
 
 	> .dropdown-toggle {
-		@include clay-button-variant(
-			setter(map-get($cadmin-dropdown-action, dropdown-toggle), ())
-		);
+		$dropdown-toggle: map-get($cadmin-dropdown-action, dropdown-toggle);
+		$dropdown-toggle: if($dropdown-toggle, $dropdown-toggle, ());
+
+		@include clay-button-variant($dropdown-toggle);
 	}
 }
 

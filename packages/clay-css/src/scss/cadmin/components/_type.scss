@@ -189,7 +189,10 @@ strong {
 	@include clay-css($cadmin-c-kbd-group);
 
 	> .c-kbd {
-		@include clay-css(setter(map-get($cadmin-c-kbd-group, c-kbd), ()));
+		$kbd: map-get($cadmin-c-kbd-group, c-kbd);
+		$kbd: if($kbd, $kbd, ());
+
+		@include clay-css($kbd);
 	}
 }
 
@@ -254,7 +257,10 @@ strong {
 	@include clay-css($cadmin-c-kbd-group-sm);
 
 	> .c-kbd {
-		@include clay-css(setter(map-get($cadmin-c-kbd-group-sm, c-kbd), ()));
+		$kbd: map-get($cadmin-c-kbd-group-sm, c-kbd);
+		$kbd: if($kbd, $kbd, ());
+
+		@include clay-css($kbd);
 	}
 }
 
@@ -273,7 +279,10 @@ strong {
 	@include clay-css($cadmin-c-kbd-group-lg);
 
 	> .c-kbd {
-		@include clay-css(setter(map-get($cadmin-c-kbd-group-lg, c-kbd), ()));
+		$kbd: map-get($cadmin-c-kbd-group-lg, c-kbd);
+		$kbd: if($kbd, $kbd, ());
+
+		@include clay-css($kbd);
 	}
 }
 

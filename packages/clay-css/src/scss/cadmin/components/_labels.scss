@@ -10,29 +10,45 @@
 	@include clay-css($cadmin-label-item);
 
 	a {
-		@include clay-link(setter(map-get($cadmin-label-item, link), ()));
+		$link: map-get($cadmin-label-item, link);
+		$link: if($link, $link, ());
+
+		@include clay-link($link);
 	}
 
 	.btn-unstyled {
-		@include clay-button-variant(
-			setter(map-get($cadmin-label-item, btn-unstyled), ())
-		);
+		$btn-unstyled: map-get($cadmin-label-item, btn-unstyled);
+		$btn-unstyled: if($btn-unstyled, $btn-unstyled, ());
+
+		@include clay-button-variant($btn-unstyled);
 	}
 
 	.close {
-		@include clay-close(setter(map-get($cadmin-label-item, close), ()));
+		$close: map-get($cadmin-label-item, close);
+		$close: if($close, $close, ());
+
+		@include clay-close($close);
 	}
 
 	.lexicon-icon {
-		@include clay-css(
-			setter(map-get($cadmin-label-item, lexicon-icon), ())
-		);
+		$lexicon-icon: map-get($cadmin-label-item, lexicon-icon);
+		$lexicon-icon: if($lexicon-icon, $lexicon-icon, ());
+
+		@include clay-css($lexicon-icon);
 	}
 
 	.text-truncate-inline {
-		@include clay-css(
-			setter(map-get($cadmin-label-item, text-truncate-inline), ())
+		$text-truncate-inline: map-get(
+			$cadmin-label-item,
+			text-truncate-inline
 		);
+		$text-truncate-inline: if(
+			$text-truncate-inline,
+			$text-truncate-inline,
+			()
+		);
+
+		@include clay-css($text-truncate-inline);
 	}
 }
 
@@ -40,9 +56,10 @@
 	@include clay-css($cadmin-label-item-expand);
 
 	a {
-		@include clay-link(
-			setter(map-get($cadmin-label-item-expand, link), ())
-		);
+		$link: map-get($cadmin-label-item-expand, link);
+		$link: if($link, $link, ());
+
+		@include clay-link($link);
 	}
 }
 

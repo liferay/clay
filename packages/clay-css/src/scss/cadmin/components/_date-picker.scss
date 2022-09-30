@@ -78,16 +78,19 @@
 	@include clay-css($cadmin-date-picker-col);
 
 	&.c-selected {
-		$cadmin-_c-selected: setter(
-			map-get($cadmin-date-picker-col, c-selected),
-			()
-		);
+		$cadmin-_c-selected: map-get($cadmin-date-picker-col, c-selected);
+		$cadmin-_c-selected: if($cadmin-_c-selected, $cadmin-_c-selected, ());
 
 		@include clay-css($cadmin-_c-selected);
 
 		&:first-child {
-			$cadmin-_c-selected-first-child: setter(
-				map-get($cadmin-date-picker-col, c-selected-first-child),
+			$cadmin-_c-selected-first-child: map-get(
+				$cadmin-date-picker-col,
+				c-selected-first-child
+			);
+			$cadmin-_c-selected-first-child: if(
+				$cadmin-_c-selected-first-child,
+				$cadmin-_c-selected-first-child,
 				()
 			);
 
@@ -95,8 +98,13 @@
 		}
 
 		&:last-child {
-			$cadmin-_c-selected-last-child: setter(
-				map-get($cadmin-date-picker-col, c-selected-last-child),
+			$cadmin-_c-selected-last-child: map-get(
+				$cadmin-date-picker-col,
+				c-selected-last-child
+			);
+			$cadmin-_c-selected-last-child: if(
+				$cadmin-_c-selected-last-child,
+				$cadmin-_c-selected-last-child,
 				()
 			);
 
@@ -105,8 +113,13 @@
 	}
 
 	&.c-selected-start {
-		$cadmin-_c-selected-start: setter(
-			map-get($cadmin-date-picker-col, c-selected-start),
+		$cadmin-_c-selected-start: map-get(
+			$cadmin-date-picker-col,
+			c-selected-start
+		);
+		$cadmin-_c-selected-start: if(
+			$cadmin-_c-selected-start,
+			$cadmin-_c-selected-start,
 			()
 		);
 
@@ -114,8 +127,13 @@
 	}
 
 	&.c-selected-end {
-		$cadmin-_c-selected-end: setter(
-			map-get($cadmin-date-picker-col, c-selected-end),
+		$cadmin-_c-selected-end: map-get(
+			$cadmin-date-picker-col,
+			c-selected-end
+		);
+		$cadmin-_c-selected-end: if(
+			$cadmin-_c-selected-end,
+			$cadmin-_c-selected-end,
 			()
 		);
 

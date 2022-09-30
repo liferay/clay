@@ -26,34 +26,36 @@ label {
 	@include clay-css($cadmin-input-label);
 
 	@include clay-scale-component {
-		$mobile: setter(map-get($cadmin-input-label, mobile), ());
+		$mobile: map-get($cadmin-input-label, mobile);
+		$mobile: if($mobile, $mobile, ());
 
 		@include clay-css($mobile);
 	}
 
 	&.focus {
-		$focus: setter(map-get($cadmin-input-label, focus), ());
+		$focus: map-get($cadmin-input-label, focus);
+		$focus: if($focus, $focus, ());
 
 		@include clay-css($focus);
 	}
 
 	&[for] {
-		$for: setter(map-get($cadmin-input-label, for), ());
+		$for: map-get($cadmin-input-label, for);
+		$for: if($for, $for, ());
 
 		@include clay-css($for);
 	}
 
 	+ .form-text {
-		$form-text: setter(map-get($cadmin-input-label, form-text), ());
+		$form-text: map-get($cadmin-input-label, form-text);
+		$form-text: if($form-text, $form-text, ());
 
 		@include clay-css($form-text);
 	}
 
 	.reference-mark {
-		$reference-mark: setter(
-			map-get($cadmin-input-label, reference-mark),
-			()
-		);
+		$reference-mark: map-get($cadmin-input-label, reference-mark);
+		$reference-mark: if($reference-mark, $reference-mark, ());
 
 		@include clay-css($reference-mark);
 	}
@@ -73,7 +75,8 @@ label {
 
 fieldset[disabled] label,
 label.disabled {
-	$disabled: setter(map-get($cadmin-input-label, disabled), ());
+	$disabled: map-get($cadmin-input-label, disabled);
+	$disabled: if($disabled, $disabled, ());
 
 	@include clay-css($disabled);
 }
@@ -91,7 +94,8 @@ fieldset[disabled] label {
 	@include clay-form-control-variant($cadmin-input);
 
 	@include clay-scale-component {
-		$mobile: setter(map-get($cadmin-input, mobile), ());
+		$mobile: map-get($cadmin-input, mobile);
+		$mobile: if($mobile, $mobile, ());
 
 		@include clay-css($mobile);
 	}
@@ -132,7 +136,8 @@ fieldset[disabled] label {
 // This adds disabled styles to div.form-control inside a disabled fielset.
 
 fieldset[disabled] .form-control {
-	$disabled: setter(map-get($cadmin-input, disabled), ());
+	$disabled: map-get($cadmin-input, disabled);
+	$disabled: if($disabled, $disabled, ());
 
 	@include clay-css($disabled);
 }
@@ -291,13 +296,15 @@ select.form-control {
 	@include clay-css($cadmin-form-control-select);
 
 	&:hover {
-		$hover: setter(map-get($cadmin-form-control-select, hover), ());
+		$hover: map-get($cadmin-form-control-select, hover);
+		$hover: if($hover, $hover, ());
 
 		@include clay-css($hover);
 	}
 
 	&:focus {
-		$focus: setter(map-get($cadmin-form-control-select, focus), ());
+		$focus: map-get($cadmin-form-control-select, focus);
+		$focus: if($focus, $focus, ());
 
 		@include clay-css($focus);
 	}
@@ -536,10 +543,13 @@ textarea.form-control-lg,
 }
 
 %clay-select-form-control-sm {
-	@include clay-css(setter($cadmin-form-control-select-sm, ()));
+	@include clay-css(
+		if($cadmin-form-control-select-sm, $cadmin-form-control-select-sm, ())
+	);
 
 	@include clay-scale-component {
-		$mobile: setter(map-get($cadmin-form-control-select-sm, mobile), ());
+		$mobile: map-get($cadmin-form-control-select-sm, mobile);
+		$mobile: if($mobile, $mobile, ());
 
 		@include clay-css($mobile);
 	}

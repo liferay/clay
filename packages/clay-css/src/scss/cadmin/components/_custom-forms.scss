@@ -66,13 +66,15 @@
 	@include clay-css($cadmin-custom-control);
 
 	&:only-child {
-		$only-child: setter(map-get($cadmin-custom-control, only-child), ());
+		$only-child: map-get($cadmin-custom-control, only-child);
+		$only-child: if($only-child, $only-child, ());
 
 		@include clay-css($only-child);
 	}
 
 	label {
-		$label: setter(map-get($cadmin-custom-control, label), ());
+		$label: map-get($cadmin-custom-control, label);
+		$label: if($label, $label, ());
 
 		@include clay-css($label);
 	}
@@ -106,7 +108,8 @@ label.custom-control-label {
 // Custom Control Indicator
 
 .custom-control-label::before {
-	$before: setter(map-get($cadmin-custom-control-label, before), ());
+	$before: map-get($cadmin-custom-control-label, before);
+	$before: if($before, $before, ());
 
 	@extend %cadmin-pseudo-reset !optional;
 
@@ -114,7 +117,8 @@ label.custom-control-label {
 }
 
 .custom-control-label::after {
-	$after: setter(map-get($cadmin-custom-control-label, after), ());
+	$after: map-get($cadmin-custom-control-label, after);
+	$after: if($after, $after, ());
 
 	@extend %cadmin-pseudo-reset !optional;
 

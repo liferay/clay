@@ -33,28 +33,22 @@
 	@include clay-css($cadmin-sticker-outside);
 
 	&.sticker-bottom-left {
-		$bottom-left: setter(
-			map-get($cadmin-sticker-outside, sticker-bottom-left),
-			()
-		);
+		$bottom-left: map-get($cadmin-sticker-outside, sticker-bottom-left);
+		$bottom-left: if($bottom-left, $bottom-left, ());
 
 		@include clay-css($bottom-left);
 	}
 
 	&.sticker-bottom-right {
-		$bottom-right: setter(
-			map-get($cadmin-sticker-outside, sticker-bottom-right),
-			()
-		);
+		$bottom-right: map-get($cadmin-sticker-outside, sticker-bottom-right);
+		$bottom-right: if($bottom-right, $bottom-right, ());
 
 		@include clay-css($bottom-right);
 	}
 
 	&.sticker-top-right {
-		$top-right: setter(
-			map-get($cadmin-sticker-outside, sticker-top-right),
-			()
-		);
+		$top-right: map-get($cadmin-sticker-outside, sticker-top-right);
+		$top-right: if($top-right, $top-right, ());
 
 		@include clay-css($top-right);
 	}

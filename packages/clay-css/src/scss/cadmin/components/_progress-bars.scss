@@ -88,19 +88,15 @@
 	@include clay-css($cadmin-progress-group-addon);
 
 	&:first-child {
-		$first-child: setter(
-			map-get($cadmin-progress-group-addon, first-child),
-			()
-		);
+		$first-child: map-get($cadmin-progress-group-addon, first-child);
+		$first-child: if($first-child, $first-child, ());
 
 		@include clay-css($first-child);
 	}
 
 	&:last-child {
-		$last-child: setter(
-			map-get($cadmin-progress-group-addon, last-child),
-			()
-		);
+		$last-child: map-get($cadmin-progress-group-addon, last-child);
+		$last-child: if($last-child, $last-child, ());
 
 		@include clay-css($last-child);
 	}

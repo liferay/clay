@@ -1,5 +1,5 @@
 .lexicon-icon {
-	@include clay-css(setter($cadmin-lexicon-icon, ()));
+	@include clay-css(if($cadmin-lexicon-icon, $cadmin-lexicon-icon, ()));
 }
 
 .order-arrow-down-active {
