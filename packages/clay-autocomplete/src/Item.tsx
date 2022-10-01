@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayDropDown from '@clayui/drop-down';
+import {DropDown} from '@clayui/core';
 import fuzzy from 'fuzzy';
 import React from 'react';
 
-export interface IProps extends React.ComponentProps<typeof ClayDropDown.Item> {
+export interface IProps extends React.ComponentProps<typeof DropDown.Item> {
 	/**
 	 * The item content.
 	 */
@@ -36,7 +36,7 @@ const ClayAutocompleteItem = React.forwardRef<HTMLLIElement, IProps>(
 		const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
 
 		return (
-			<ClayDropDown.Item {...otherProps} innerRef={innerRef} ref={ref}>
+			<DropDown.Item {...otherProps} innerRef={innerRef} ref={ref}>
 				{match && fuzzyMatch
 					? fuzzyMatch.rendered
 							.split('|')
@@ -52,7 +52,7 @@ const ClayAutocompleteItem = React.forwardRef<HTMLLIElement, IProps>(
 							})
 							.filter(Boolean)
 					: currentValue}
-			</ClayDropDown.Item>
+			</DropDown.Item>
 		);
 	}
 );

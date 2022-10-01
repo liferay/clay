@@ -49,27 +49,28 @@ const hasItems = (children?: React.ReactNode) => {
 	}).filter(Boolean);
 };
 
-interface IProps extends IAutocompleteProps {
+interface IProps<T> extends Omit<IAutocompleteProps<T>, 'containerElementRef'> {
 	/**
 	 * Div component to render. It can be a one component that will replace the markup.
 	 */
 	component?: React.ForwardRefExoticComponent<any>;
 }
 
-const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
+const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps<any>>(
 	(
 		{
 			children,
 			className,
 			component: Component = AutocompleteMarkup,
 			...otherProps
-		}: IProps,
+		}: IProps<any>,
 		ref
 	) => {
 		const containerElementRef = React.useRef<null | HTMLDivElement>(null);
 		const [loading, setLoading] = React.useState(false);
 
-		const isNewBehavior = hasItems(children).length >= 1;
+		const isNewBehavior =
+			hasItems(children).length >= 1 || children instanceof Function;
 
 		return (
 			<FocusScope>
@@ -90,7 +91,12 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps>(
 					}}
 				>
 					{isNewBehavior ? (
-						<Autocomplete {...otherProps}>{children}</Autocomplete>
+						<Autocomplete
+							containerElementRef={containerElementRef}
+							{...otherProps}
+						>
+							{children}
+						</Autocomplete>
 					) : (
 						<Context.Provider
 							value={{
