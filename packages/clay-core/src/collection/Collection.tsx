@@ -4,7 +4,7 @@
  */
 
 import {useVirtualizer} from '@tanstack/react-virtual';
-import React from 'react';
+import React, {useCallback} from 'react';
 
 export type ChildrenFunction<T, P> = P extends Array<unknown>
 	? (item: T, ...args: P) => React.ReactElement
@@ -45,6 +45,16 @@ interface IProps<P, K> {
 	exclude?: Set<K>;
 
 	/**
+	 * Test method for filtering elements in children.
+	 */
+	filter?: (value: string) => boolean;
+
+	/**
+	 * Defines the name of the property key that is used in the filter.
+	 */
+	filterKey?: string;
+
+	/**
 	 * Add the reference of the parent element that will be used to define the
 	 * scroll and get the height of the element for virtualization of the
 	 * collection.
@@ -67,7 +77,7 @@ interface IProps<P, K> {
 	 * Defines a component that will be used as a wrapper for items in the
 	 * collection if defined.
 	 */
-	itemContainer?: React.ComponentType<Record<string, any>>;
+	itemContainer?: (props: any) => JSX.Element | null;
 }
 
 type ChildElement = React.ReactElement<any> & {
@@ -110,8 +120,16 @@ export function excludeProps<T extends Record<string, any>, K extends keyof T>(
 	}, {} as T);
 }
 
-type VirtualProps<T, P, K> = IProps<P, K> & {
+type VirtualProps<T, P, K> = Omit<IProps<P, K>, 'filter'> & {
 	children: ChildrenFunction<T, P>;
+	filter: (
+		child:
+			| React.ReactPortal
+			| React.ReactElement<
+					unknown,
+					string | React.JSXElementConstructor<any>
+			  >
+	) => boolean;
 	items: Array<T>;
 };
 
@@ -120,6 +138,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	children,
 	estimateSize = 37,
 	exclude,
+	filter,
 	items,
 	parentKey,
 	parentRef,
@@ -146,6 +165,10 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 				const child: ChildElement = Array.isArray(publicApi)
 					? children(publicItem, ...publicApi)
 					: children(publicItem);
+
+				if (filter(child)) {
+					return;
+				}
 
 				const key = getKey(
 					virtual.index,
@@ -185,6 +208,8 @@ export function Collection<
 	children,
 	estimateSize,
 	exclude,
+	filter,
+	filterKey,
 	itemContainer: ItemContainer,
 	items,
 	parentKey,
@@ -192,11 +217,38 @@ export function Collection<
 	publicApi,
 	virtualize = false,
 }: ICollectionProps<T, P> & Partial<IProps<P, K>>) {
+	const performFilter = useCallback(
+		(
+			child:
+				| React.ReactPortal
+				| React.ReactElement<
+						unknown,
+						string | React.JSXElementConstructor<any>
+				  >
+		) => {
+			if (!filter) {
+				return false;
+			}
+
+			if (typeof child.props.children === 'string') {
+				return !filter(child.props.children);
+			}
+
+			if (filterKey && child.props[filterKey]) {
+				return !filter(child.props[filterKey]);
+			}
+
+			return false;
+		},
+		[filter]
+	);
+
 	if (virtualize && children instanceof Function && items && parentRef) {
 		return (
 			<VirtualDynamicCollection
 				as={as}
 				estimateSize={estimateSize}
+				filter={performFilter}
 				items={items}
 				parentKey={parentKey}
 				parentRef={parentRef}
@@ -219,6 +271,10 @@ export function Collection<
 						const child: ChildElement = Array.isArray(publicApi)
 							? children(publicItem, ...publicApi)
 							: children(publicItem);
+
+						if (performFilter(child)) {
+							return;
+						}
 
 						const key = getKey(
 							index,
@@ -247,6 +303,10 @@ export function Collection<
 				: React.Children.map(children, (child, index) => {
 						if (!React.isValidElement(child)) {
 							return null;
+						}
+
+						if (performFilter(child)) {
+							return;
 						}
 
 						const key = getKey(index, child.key, parentKey);

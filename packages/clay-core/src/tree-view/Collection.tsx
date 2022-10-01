@@ -38,12 +38,12 @@ const exclude = new Set([
 	'parentItemRef',
 ]);
 
-const ItemContainer: React.ComponentType<Record<string, any>> = ({
+const ItemContainer = ({
 	item = {},
 	index,
 	keyValue,
 	children,
-}) => (
+}: Record<string, any>) => (
 	<ItemContextProvider value={{...item, index, key: keyValue}}>
 		{children}
 	</ItemContextProvider>
