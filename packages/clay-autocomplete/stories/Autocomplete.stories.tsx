@@ -80,6 +80,90 @@ Default.argTypes = {
 	},
 };
 
+export const Dynamic = () => (
+	<div className="row">
+		<div className="col-md-5">
+			<div className="sheet">
+				<div className="form-group">
+					<label
+						htmlFor="clay-autocomplete-1"
+						id="clay-autocomplete-label-1"
+					>
+						Numbers (one-five)
+					</label>
+					<ClayAutocomplete
+						aria-labelledby="clay-autocomplete-label-1"
+						defaultItems={['one', 'two', 'three', 'four', 'five']}
+						id="clay-autocomplete-1"
+						messages={{
+							loading: 'Loading...',
+							notFound: 'No results found',
+						}}
+						placeholder="Enter a number from One to Five"
+					>
+						{(item) => (
+							<ClayAutocomplete.Item key={item}>
+								{item}
+							</ClayAutocomplete.Item>
+						)}
+					</ClayAutocomplete>
+				</div>
+			</div>
+		</div>
+	</div>
+);
+
+export const AsyncFilter = () => {
+	const [value, setValue] = useState('');
+
+	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
+		NetworkStatus.Unused
+	);
+	const {resource} = useResource({
+		fetchPolicy: FetchPolicy.CacheFirst,
+		link: 'https://rickandmortyapi.com/api/character/',
+		onNetworkStatusChange: setNetworkStatus,
+		variables: {name: value},
+	});
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-1"
+							id="clay-autocomplete-label-1"
+						>
+							Name
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-1"
+							id="clay-autocomplete-1"
+							isLoading={networkStatus < NetworkStatus.Unused}
+							items={resource?.results ?? []}
+							messages={{
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							onChange={setValue}
+							onItemsChange={() => {}}
+							placeholder="Enter a name"
+							value={value}
+						>
+							{(item) => (
+								<ClayAutocomplete.Item key={item.id}>
+									{item.name}
+								</ClayAutocomplete.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
 export const Keyboard = () => {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 	const [value, setValue] = useState('');
