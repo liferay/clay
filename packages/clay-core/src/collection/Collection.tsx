@@ -27,7 +27,8 @@ export interface ICollectionProps<T, P> {
 	virtualize?: boolean;
 }
 
-interface IProps<P, K> {
+interface IProps<P, K>
+	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
 	/**
 	 * Component to render.
 	 */
@@ -139,10 +140,12 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	estimateSize = 37,
 	exclude,
 	filter,
+	itemContainer: ItemContainer,
 	items,
 	parentKey,
 	parentRef,
 	publicApi,
+	...otherProps
 }: VirtualProps<T, P, K>) {
 	const virtualizer = useVirtualizer({
 		count: items.length,
@@ -152,6 +155,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 
 	return (
 		<Container
+			{...otherProps}
 			style={{
 				height: virtualizer.getTotalSize(),
 				position: 'relative',
@@ -176,9 +180,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 					parentKey
 				);
 
-				return React.cloneElement(child, {
-					key,
-					keyValue: key,
+				const props = {
 					ref: (node: HTMLElement) => {
 						virtual.measureElement(node);
 
@@ -193,6 +195,25 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 						transform: `translateY(${virtual.start}px)`,
 						width: '100%',
 					},
+				};
+
+				if (ItemContainer) {
+					return (
+						<ItemContainer
+							index={virtual.index}
+							item={item}
+							key={key}
+							keyValue={key}
+						>
+							{React.cloneElement(child, props)}
+						</ItemContainer>
+					);
+				}
+
+				return React.cloneElement(child, {
+					key,
+					keyValue: key,
+					...props,
 				});
 			})}
 		</Container>
@@ -216,6 +237,7 @@ export function Collection<
 	parentRef,
 	publicApi,
 	virtualize = false,
+	...otherProps
 }: ICollectionProps<T, P> & Partial<IProps<P, K>>) {
 	const performFilter = useCallback(
 		(
@@ -246,9 +268,11 @@ export function Collection<
 	if (virtualize && children instanceof Function && items && parentRef) {
 		return (
 			<VirtualDynamicCollection
+				{...otherProps}
 				as={as}
 				estimateSize={estimateSize}
 				filter={performFilter}
+				itemContainer={ItemContainer}
 				items={items}
 				parentKey={parentKey}
 				parentRef={parentRef}
@@ -262,7 +286,7 @@ export function Collection<
 	const Container = as ?? React.Fragment;
 
 	return (
-		<Container>
+		<Container {...otherProps}>
 			{children instanceof Function && items
 				? items.map((item, index) => {
 						const publicItem = exclude
