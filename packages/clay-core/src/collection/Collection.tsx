@@ -46,12 +46,12 @@ interface IProps<P, K>
 	exclude?: Set<K>;
 
 	/**
-	 * Test method for filtering elements in children.
+	 * Test method for filtering elements in children (static only).
 	 */
 	filter?: (value: string) => boolean;
 
 	/**
-	 * Defines the name of the property key that is used in the filter.
+	 * Defines the name of the property key that is used in the filter (static only).
 	 */
 	filterKey?: string;
 
@@ -123,14 +123,6 @@ export function excludeProps<T extends Record<string, any>, K extends keyof T>(
 
 type VirtualProps<T, P, K> = Omit<IProps<P, K>, 'filter'> & {
 	children: ChildrenFunction<T, P>;
-	filter: (
-		child:
-			| React.ReactPortal
-			| React.ReactElement<
-					unknown,
-					string | React.JSXElementConstructor<any>
-			  >
-	) => boolean;
 	items: Array<T>;
 };
 
@@ -139,7 +131,6 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	children,
 	estimateSize = 37,
 	exclude,
-	filter,
 	itemContainer: ItemContainer,
 	items,
 	parentKey,
@@ -169,10 +160,6 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 				const child: ChildElement = Array.isArray(publicApi)
 					? children(publicItem, ...publicApi)
 					: children(publicItem);
-
-				if (filter(child)) {
-					return;
-				}
 
 				const key = getKey(
 					virtual.index,
@@ -271,7 +258,6 @@ export function Collection<
 				{...otherProps}
 				as={as}
 				estimateSize={estimateSize}
-				filter={performFilter}
 				itemContainer={ItemContainer}
 				items={items}
 				parentKey={parentKey}
@@ -295,10 +281,6 @@ export function Collection<
 						const child: ChildElement = Array.isArray(publicApi)
 							? children(publicItem, ...publicApi)
 							: children(publicItem);
-
-						if (performFilter(child)) {
-							return;
-						}
 
 						const key = getKey(
 							index,
