@@ -701,280 +701,315 @@
 /// - Add @link to documentation
 
 @mixin clay-select-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	$base: setter($map, ());
-	$base: map-merge(
-		$base,
-		(
-			background-color:
-				setter(map-get($map, bg), map-get($map, background-color)),
-			background-clip:
-				setter(map-get($map, bg-clip), map-get($map, background-clip)),
-			background-image:
-				setter(map-get($map, bg-image), map-get($map, background-image)),
-			background-position:
-				setter(
-					map-get($map, bg-position),
-					map-get($map, background-position)
-				),
-			background-repeat:
-				setter(
-					map-get($map, bg-repeat),
-					map-get($map, background-repeat)
-				),
-			background-size:
-				setter(map-get($map, bg-size), map-get($map, background-size)),
-			color:
-				setter(
-					map-get($map, color),
-					if(
-						variable-exists(input-color),
-						$input-color,
+		$base: map-merge(
+			$map,
+			(
+				background-color:
+					setter(map-get($map, bg), map-get($map, background-color)),
+				background-clip:
+					setter(
+						map-get($map, bg-clip),
+						map-get($map, background-clip)
+					),
+				background-image:
+					setter(
+						map-get($map, bg-image),
+						map-get($map, background-image)
+					),
+				background-position:
+					setter(
+						map-get($map, bg-position),
+						map-get($map, background-position)
+					),
+				background-repeat:
+					setter(
+						map-get($map, bg-repeat),
+						map-get($map, background-repeat)
+					),
+				background-size:
+					setter(
+						map-get($map, bg-size),
+						map-get($map, background-size)
+					),
+				color:
+					setter(
+						map-get($map, color),
 						if(
-							variable-exists(cadmin-input-color),
-							$cadmin-input-color,
-							null
+							variable-exists(input-color),
+							$input-color,
+							if(
+								variable-exists(cadmin-input-color),
+								$cadmin-input-color,
+								null
+							)
 						)
-					)
-				),
-		)
-	);
+					),
+			)
+		);
 
-	$hover: setter(map-get($map, hover), ());
-	$hover: map-deep-merge(
-		$hover,
-		(
-			background-color:
-				setter(
-					map-get($map, hover-bg),
-					map-get($hover, background-color)
-				),
-			border-color:
-				setter(
-					map-get($map, hover-border-color),
-					map-get($hover, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, hover-box-shadow),
-					map-get($hover, box-shadow)
-				),
-			color: setter(map-get($map, hover-color), map-get($hover, color)),
-		)
-	);
+		$hover: setter(map-get($map, hover), ());
+		$hover: map-deep-merge(
+			$hover,
+			(
+				background-color:
+					setter(
+						map-get($map, hover-bg),
+						map-get($hover, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, hover-border-color),
+						map-get($hover, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, hover-box-shadow),
+						map-get($hover, box-shadow)
+					),
+				color:
+					setter(map-get($map, hover-color), map-get($hover, color)),
+			)
+		);
 
-	$focus: setter(map-get($map, focus), ());
-	$focus: map-deep-merge(
-		$focus,
-		(
-			background-color:
-				setter(
-					map-get($map, focus-bg),
-					map-get($focus, background-color)
-				),
-			background-image:
-				setter(
-					map-get($map, focus-bg-image),
-					map-get($focus, background-image)
-				),
-			border-color:
-				setter(
-					map-get($map, focus-border-color),
-					map-get($focus, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, focus-box-shadow),
-					map-get($focus, box-shadow)
-				),
-			color: setter(map-get($map, focus-color), map-get($focus, color)),
-		)
-	);
+		$focus: setter(map-get($map, focus), ());
+		$focus: map-deep-merge(
+			$focus,
+			(
+				background-color:
+					setter(
+						map-get($map, focus-bg),
+						map-get($focus, background-color)
+					),
+				background-image:
+					setter(
+						map-get($map, focus-bg-image),
+						map-get($focus, background-image)
+					),
+				border-color:
+					setter(
+						map-get($map, focus-border-color),
+						map-get($focus, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, focus-box-shadow),
+						map-get($focus, box-shadow)
+					),
+				color:
+					setter(map-get($map, focus-color), map-get($focus, color)),
+			)
+		);
 
-	$disabled: setter(map-get($map, disabled), ());
-	$disabled: map-deep-merge(
-		$disabled,
-		(
-			background-color:
-				setter(
-					map-get($map, disabled-bg),
-					map-get($disabled, background-color)
-				),
-			background-image:
-				setter(
-					map-get($map, disabled-bg-image),
-					map-get($disabled, background-image)
-				),
-			border-color:
-				setter(
-					map-get($map, disabled-border-color),
-					map-get($disabled, border-color)
-				),
-			box-shadow:
-				setter(
-					map-get($map, disabled-box-shadow),
-					map-get($disabled, box-shadow)
-				),
-			color:
-				setter(map-get($map, disabled-color), map-get($disabled, color)),
-			cursor:
-				setter(
-					map-get($map, disabled-cursor),
-					map-get($disabled, cursor)
-				),
-			opacity:
-				setter(
-					map-get($map, disabled-opacity),
-					map-get($disabled, opacity)
-				),
-		)
-	);
+		$disabled: setter(map-get($map, disabled), ());
+		$disabled: map-deep-merge(
+			$disabled,
+			(
+				background-color:
+					setter(
+						map-get($map, disabled-bg),
+						map-get($disabled, background-color)
+					),
+				background-image:
+					setter(
+						map-get($map, disabled-bg-image),
+						map-get($disabled, background-image)
+					),
+				border-color:
+					setter(
+						map-get($map, disabled-border-color),
+						map-get($disabled, border-color)
+					),
+				box-shadow:
+					setter(
+						map-get($map, disabled-box-shadow),
+						map-get($disabled, box-shadow)
+					),
+				color:
+					setter(
+						map-get($map, disabled-color),
+						map-get($disabled, color)
+					),
+				cursor:
+					setter(
+						map-get($map, disabled-cursor),
+						map-get($disabled, cursor)
+					),
+				opacity:
+					setter(
+						map-get($map, disabled-opacity),
+						map-get($disabled, opacity)
+					),
+			)
+		);
 
-	$disabled-option: setter(map-get($disabled, option), ());
-	$disabled-option: map-deep-merge(
-		$disabled-option,
-		(
-			color:
-				setter(
-					map-get($map, disabled-color),
-					map-get($disabled-option, color)
-				),
-		)
-	);
+		$disabled-option: setter(map-get($disabled, option), ());
+		$disabled-option: map-deep-merge(
+			$disabled-option,
+			(
+				color:
+					setter(
+						map-get($map, disabled-color),
+						map-get($disabled-option, color)
+					),
+			)
+		);
 
-	$option: setter(map-get($map, option), ());
+		$option: setter(map-get($map, option), ());
 
-	@if ($enabled) {
-		@include clay-css($base);
+		@if ($enabled) {
+			@include clay-css($base);
 
-		&:hover {
-			@include clay-css($hover);
+			&:hover {
+				@include clay-css($hover);
 
-			> option {
-				@include clay-css(map-get($hover, option));
+				> option {
+					@include clay-css(map-get($hover, option));
 
-				&:checked {
-					@include clay-css(map-deep-get($hover, option, checked));
-				}
-			}
-		}
-
-		&:focus,
-		&.focus {
-			@include clay-css($focus);
-
-			> option {
-				@include clay-css(map-get($focus, option));
-
-				&:checked {
-					@include clay-css(map-deep-get($focus, option, checked));
-				}
-			}
-		}
-
-		&:disabled,
-		&.disabled {
-			@include clay-css($disabled);
-
-			> option {
-				@include clay-css($disabled-option);
-
-				&:checked {
-					@include clay-css(map-get($disabled-option, checked));
-				}
-			}
-		}
-
-		option {
-			@include clay-css($option);
-
-			&:checked {
-				@include clay-css(map-get($option, checked));
-			}
-		}
-
-		@if (map-get($map, firefox-only)) {
-			@-moz-document url-prefix() {
-				@include clay-css(map-get($map, firefox-only));
-
-				&:hover {
-					@include clay-css(map-deep-get($map, firefox-only, hover));
-
-					> option {
+					&:checked {
 						@include clay-css(
-							map-deep-get($map, firefox-only, hover, option)
+							map-deep-get($hover, option, checked)
 						);
-
-						&:checked {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									firefox-only,
-									hover,
-									option,
-									checked
-								)
-							);
-						}
 					}
 				}
+			}
 
-				&:focus,
-				&.focus {
-					@include clay-css(map-deep-get($map, firefox-only, focus));
+			&:focus,
+			&.focus {
+				@include clay-css($focus);
 
-					> option {
+				> option {
+					@include clay-css(map-get($focus, option));
+
+					&:checked {
 						@include clay-css(
-							map-deep-get($map, firefox-only, focus, option)
+							map-deep-get($focus, option, checked)
 						);
-
-						&:checked {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									firefox-only,
-									focus,
-									option,
-									checked
-								)
-							);
-						}
 					}
 				}
+			}
 
-				&:disabled,
-				&.disabled {
-					@include clay-css(
-						map-deep-get($map, firefox-only, disabled)
-					);
+			&:disabled,
+			&.disabled {
+				@include clay-css($disabled);
 
-					> option {
+				> option {
+					@include clay-css($disabled-option);
+
+					&:checked {
+						@include clay-css(map-get($disabled-option, checked));
+					}
+				}
+			}
+
+			option {
+				@include clay-css($option);
+
+				&:checked {
+					@include clay-css(map-get($option, checked));
+				}
+			}
+
+			@if (map-get($map, firefox-only)) {
+				@-moz-document url-prefix() {
+					@include clay-css(map-get($map, firefox-only));
+
+					&:hover {
 						@include clay-css(
-							map-deep-get($map, firefox-only, disabled, option)
+							map-deep-get($map, firefox-only, hover)
 						);
 
-						&:checked {
+						> option {
+							@include clay-css(
+								map-deep-get($map, firefox-only, hover, option)
+							);
+
+							&:checked {
+								@include clay-css(
+									map-deep-get(
+										$map,
+										firefox-only,
+										hover,
+										option,
+										checked
+									)
+								);
+							}
+						}
+					}
+
+					&:focus,
+					&.focus {
+						@include clay-css(
+							map-deep-get($map, firefox-only, focus)
+						);
+
+						> option {
+							@include clay-css(
+								map-deep-get($map, firefox-only, focus, option)
+							);
+
+							&:checked {
+								@include clay-css(
+									map-deep-get(
+										$map,
+										firefox-only,
+										focus,
+										option,
+										checked
+									)
+								);
+							}
+						}
+					}
+
+					&:disabled,
+					&.disabled {
+						@include clay-css(
+							map-deep-get($map, firefox-only, disabled)
+						);
+
+						> option {
 							@include clay-css(
 								map-deep-get(
 									$map,
 									firefox-only,
 									disabled,
+									option
+								)
+							);
+
+							&:checked {
+								@include clay-css(
+									map-deep-get(
+										$map,
+										firefox-only,
+										disabled,
+										option,
+										checked
+									)
+								);
+							}
+						}
+					}
+
+					option {
+						@include clay-css(
+							map-deep-get($map, firefox-only, option)
+						);
+
+						&:checked {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									firefox-only,
 									option,
 									checked
 								)
 							);
 						}
-					}
-				}
-
-				option {
-					@include clay-css(map-deep-get($map, firefox-only, option));
-
-					&:checked {
-						@include clay-css(
-							map-deep-get($map, firefox-only, option, checked)
-						);
 					}
 				}
 			}
@@ -1065,143 +1100,125 @@
 /// )
 
 @mixin clay-form-validation-variant($map) {
-	$enabled: setter(map-get($map, enabled), true);
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
 
-	@if ($enabled) {
-		@include clay-css($map);
+		@if ($enabled) {
+			@include clay-css($map);
 
-		label {
-			@include clay-css(map-get($map, label));
-		}
+			label {
+				@include clay-css(map-get($map, label));
+			}
 
-		.custom-control-label,
-		.form-check-label {
-			@include clay-css(map-get($map, custom-control-label));
-		}
+			.custom-control-label,
+			.form-check-label {
+				@include clay-css(map-get($map, custom-control-label));
+			}
 
-		.form-control {
-			@include clay-form-control-variant(map-get($map, form-control));
-		}
+			.form-control {
+				@include clay-form-control-variant(map-get($map, form-control));
+			}
 
-		.form-control[readonly] {
-			@include clay-form-control-variant(
-				map-deep-get($map, form-control, readonly)
-			);
-		}
+			.form-control[readonly] {
+				@include clay-form-control-variant(
+					map-deep-get($map, form-control, readonly)
+				);
+			}
 
-		.form-feedback-group {
-			@include clay-css(map-get($map, form-feedback-group));
-		}
+			.form-feedback-group {
+				@include clay-css(map-get($map, form-feedback-group));
+			}
 
-		.form-feedback-item {
-			@include clay-css(map-get($map, form-feedback-item));
-		}
+			.form-feedback-item {
+				@include clay-css(map-get($map, form-feedback-item));
+			}
 
-		.form-feedback-indicator {
-			@include clay-css(map-get($map, form-feedback-indicator));
-		}
+			.form-feedback-indicator {
+				@include clay-css(map-get($map, form-feedback-indicator));
+			}
 
-		.form-feedback-text {
-			@include clay-css(map-get($map, form-feedback-text));
-		}
+			.form-feedback-text {
+				@include clay-css(map-get($map, form-feedback-text));
+			}
 
-		select.form-control {
-			@include clay-select-variant(
-				map-deep-get($map, select, form-control)
-			);
-
-			&[size] {
+			select.form-control {
 				@include clay-select-variant(
-					map-deep-get($map, select, form-control, size)
-				);
-			}
-
-			&[multiple] {
-				@include clay-select-variant(
-					map-deep-get($map, select, form-control, multiple)
-				);
-			}
-		}
-
-		.input-group-item {
-			@include clay-css(map-get($map, input-group-item));
-
-			&:hover {
-				.input-group-inset {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							input-group-item,
-							hover,
-							input-group-inset
-						)
-					);
-
-					~ .input-group-inset-item {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								input-group-item,
-								hover,
-								input-group-inset,
-								input-group-inset-item
-							)
-						);
-					}
-				}
-			}
-
-			&.focus {
-				@include clay-css(map-deep-get($map, input-group-item, focus));
-
-				.input-group-inset {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							input-group-item,
-							focus,
-							input-group-inset
-						)
-					);
-
-					~ .input-group-inset-item {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								input-group-item,
-								focus,
-								input-group-inset,
-								input-group-inset-item
-							)
-						);
-					}
-				}
-			}
-
-			.input-group-inset {
-				@include clay-css(
-					map-deep-get($map, input-group-item, input-group-inset)
+					map-deep-get($map, select, form-control)
 				);
 
-				~ .input-group-inset-item {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							input-group-item,
-							input-group-inset,
-							input-group-inset-item
-						)
+				&[size] {
+					@include clay-select-variant(
+						map-deep-get($map, select, form-control, size)
 					);
 				}
+
+				&[multiple] {
+					@include clay-select-variant(
+						map-deep-get($map, select, form-control, multiple)
+					);
+				}
+			}
+
+			.input-group-item {
+				@include clay-css(map-get($map, input-group-item));
 
 				&:hover {
+					.input-group-inset {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								input-group-item,
+								hover,
+								input-group-inset
+							)
+						);
+
+						~ .input-group-inset-item {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									input-group-item,
+									hover,
+									input-group-inset,
+									input-group-inset-item
+								)
+							);
+						}
+					}
+				}
+
+				&.focus {
 					@include clay-css(
-						map-deep-get(
-							$map,
-							input-group-item,
-							input-group-inset,
-							hover
-						)
+						map-deep-get($map, input-group-item, focus)
+					);
+
+					.input-group-inset {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								input-group-item,
+								focus,
+								input-group-inset
+							)
+						);
+
+						~ .input-group-inset-item {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									input-group-item,
+									focus,
+									input-group-inset,
+									input-group-inset-item
+								)
+							);
+						}
+					}
+				}
+
+				.input-group-inset {
+					@include clay-css(
+						map-deep-get($map, input-group-item, input-group-inset)
 					);
 
 					~ .input-group-inset-item {
@@ -1210,33 +1227,55 @@
 								$map,
 								input-group-item,
 								input-group-inset,
-								hover,
 								input-group-inset-item
 							)
 						);
 					}
-				}
 
-				&:focus {
-					@include clay-css(
-						map-deep-get(
-							$map,
-							input-group-item,
-							input-group-inset,
-							focus
-						)
-					);
-
-					~ .input-group-inset-item {
+					&:hover {
 						@include clay-css(
 							map-deep-get(
 								$map,
 								input-group-item,
 								input-group-inset,
-								focus,
-								input-group-inset-item
+								hover
 							)
 						);
+
+						~ .input-group-inset-item {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									input-group-item,
+									input-group-inset,
+									hover,
+									input-group-inset-item
+								)
+							);
+						}
+					}
+
+					&:focus {
+						@include clay-css(
+							map-deep-get(
+								$map,
+								input-group-item,
+								input-group-inset,
+								focus
+							)
+						);
+
+						~ .input-group-inset-item {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									input-group-item,
+									input-group-inset,
+									focus,
+									input-group-inset-item
+								)
+							);
+						}
 					}
 				}
 			}

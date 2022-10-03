@@ -122,63 +122,68 @@
 }
 
 @mixin clay-custom-grid-columns($map) {
-	$custom-grid-props: map-merge(
-		(
-			enabled:
-				if(
-					variable-exists(enable-grid-classes),
-					$enable-grid-classes,
+	@if (type-of($map) == 'map') {
+		$custom-grid-props: map-merge(
+			(
+				enabled:
 					if(
-						variable-exists(cadmin-enable-grid-classes),
-						$cadmin-enable-grid-classes,
-						true
-					)
-				),
-		),
-		$map
-	);
-
-	$enabled: map-get($custom-grid-props, enabled);
-
-	@if ($custom-grid-props and $enabled) {
-		display: block;
-		flex-basis: map-get(map-get($custom-grid-props, base), flex-basis);
-		flex-grow: 1;
-		max-width: map-get(map-get($custom-grid-props, base), max-width);
-		min-width: map-get(map-get($custom-grid-props, base), min-width);
-		padding-left: map-get(map-get($custom-grid-props, base), padding-left);
-		padding-right: map-get(
-			map-get($custom-grid-props, base),
-			padding-right
+						variable-exists(enable-grid-classes),
+						$enable-grid-classes,
+						if(
+							variable-exists(cadmin-enable-grid-classes),
+							$cadmin-enable-grid-classes,
+							true
+						)
+					),
+			),
+			$map
 		);
-		position: relative;
-		width: 100%;
 
-		@each $breakpoint in map-keys($custom-grid-props) {
-			$next: breakpoint-next($breakpoint, $custom-grid-props);
+		$enabled: map-get($custom-grid-props, enabled);
 
-			@if ($next) {
-				@media (min-width: map-get(map-get($custom-grid-props, $next), breakpoint)) {
-					flex-basis: map-get(
-						map-get($custom-grid-props, $next),
-						flex-basis
-					);
-					max-width: map-get(
-						map-get($custom-grid-props, $next),
-						max-width
-					);
-					min-width: map-get(
-						map-get($custom-grid-props, $next),
-						min-width
-					);
-					padding-left: map-get(
-						map-get($custom-grid-props, $next),
-						padding-left
-					);
-					padding-right: map-get(
-						map-get($custom-grid-props, $next),
-						padding-right
-					);
+		@if ($custom-grid-props and $enabled) {
+			display: block;
+			flex-basis: map-get(map-get($custom-grid-props, base), flex-basis);
+			flex-grow: 1;
+			max-width: map-get(map-get($custom-grid-props, base), max-width);
+			min-width: map-get(map-get($custom-grid-props, base), min-width);
+			padding-left: map-get(
+				map-get($custom-grid-props, base),
+				padding-left
+			);
+			padding-right: map-get(
+				map-get($custom-grid-props, base),
+				padding-right
+			);
+			position: relative;
+			width: 100%;
+
+			@each $breakpoint in map-keys($custom-grid-props) {
+				$next: breakpoint-next($breakpoint, $custom-grid-props);
+
+				@if ($next) {
+					@media (min-width: map-get(map-get($custom-grid-props, $next), breakpoint)) {
+						flex-basis: map-get(
+							map-get($custom-grid-props, $next),
+							flex-basis
+						);
+						max-width: map-get(
+							map-get($custom-grid-props, $next),
+							max-width
+						);
+						min-width: map-get(
+							map-get($custom-grid-props, $next),
+							min-width
+						);
+						padding-left: map-get(
+							map-get($custom-grid-props, $next),
+							padding-left
+						);
+						padding-right: map-get(
+							map-get($custom-grid-props, $next),
+							padding-right
+						);
+					}
 				}
 			}
 		}
@@ -189,26 +194,28 @@
 /// @param {Map} $map - A map of `key: value` pairs that is passed to the `clay-css` mixin
 
 @mixin clay-generate-media-breakpoints($map) {
-	@if (map-get($map, media-breakpoint-up)) {
-		$media-breakpoint-up: map-get($map, media-breakpoint-up);
+	@if (type-of($map) == 'map') {
+		@if (map-get($map, media-breakpoint-up)) {
+			$media-breakpoint-up: map-get($map, media-breakpoint-up);
 
-		@each $breakpoint in map-keys($media-breakpoint-up) {
-			$breakpoint-up: map-get($media-breakpoint-up, $breakpoint);
+			@each $breakpoint in map-keys($media-breakpoint-up) {
+				$breakpoint-up: map-get($media-breakpoint-up, $breakpoint);
 
-			@include media-breakpoint-up($breakpoint) {
-				@include clay-css($breakpoint-up);
+				@include media-breakpoint-up($breakpoint) {
+					@include clay-css($breakpoint-up);
+				}
 			}
 		}
-	}
 
-	@if (map-get($map, media-breakpoint-down)) {
-		$media-breakpoint-down: map-get($map, media-breakpoint-down);
+		@if (map-get($map, media-breakpoint-down)) {
+			$media-breakpoint-down: map-get($map, media-breakpoint-down);
 
-		@each $breakpoint in map-keys($media-breakpoint-down) {
-			$breakpoint-down: map-get($media-breakpoint-down, $breakpoint);
+			@each $breakpoint in map-keys($media-breakpoint-down) {
+				$breakpoint-down: map-get($media-breakpoint-down, $breakpoint);
 
-			@include media-breakpoint-down($breakpoint) {
-				@include clay-css($breakpoint-down);
+				@include media-breakpoint-down($breakpoint) {
+					@include clay-css($breakpoint-down);
+				}
 			}
 		}
 	}
