@@ -4,7 +4,7 @@
  */
 
 import {graphql} from 'gatsby';
-import React from 'react';
+import React, {useRef} from 'react';
 import Helmet from 'react-helmet';
 
 import LayoutNav from '../components/LayoutNav';
@@ -14,6 +14,8 @@ export default function Blog({data, location}) {
 	const {allMarkdownRemark, markdownRemark} = data;
 	const {excerpt, frontmatter, html, timeToRead} = markdownRemark;
 	const title = `${frontmatter.title} - Clay`;
+
+	const skipToSearch = useRef();
 
 	const list = allMarkdownRemark.edges.map(({node}) => {
 		const {
@@ -26,6 +28,23 @@ export default function Blog({data, location}) {
 
 	return (
 		<div className="blog docs">
+			<div className="overflow-hidden skippy">
+				<a
+					className="d-inline-flex m-1 p-1 sr-only sr-only-focusable"
+					href="#content"
+				>
+					Skip to main content
+				</a>
+				<a
+					accessKey="k"
+					aria-keyshortcuts="Control+K"
+					className="d-inline-flex m-1 p-1 sr-only sr-only-focusable"
+					href="#algolia-doc-search"
+					ref={skipToSearch}
+				>
+					Skip to search
+				</a>
+			</div>
 			<Helmet>
 				<title>{title}</title>
 				<meta content={excerpt} name="description" />
@@ -41,7 +60,10 @@ export default function Blog({data, location}) {
 					<div className="flex-xl-nowrap row">
 						<Sidebar data={list} location={location} />
 						<div className="col-xl sidebar-offset">
-							<LayoutNav pathname={location.pathname} />
+							<LayoutNav
+								pathname={location.pathname}
+								searchRef={skipToSearch}
+							/>
 							<div className="clay-blog-content">
 								<div className="clay-site-container container-fluid">
 									<header>
