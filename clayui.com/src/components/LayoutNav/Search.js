@@ -8,7 +8,6 @@ import React, {useEffect, useRef} from 'react';
 export default (props) => {
 	const autocompleteRef = useRef();
 	const inputRef = useRef();
-	let platform = null;
 
 	useEffect(() => {
 		if (window.docsearch) {
@@ -18,6 +17,10 @@ export default (props) => {
 				inputSelector: '#algolia-doc-search',
 			});
 		}
+	}, []);
+
+	useEffect(() => {
+		let platform = null;
 
 		const platformUserAgent = (
 			navigator?.userAgentData?.platform || navigator?.platform
@@ -48,11 +51,11 @@ export default (props) => {
 
 		if (platform !== 'mac') {
 			document.addEventListener('keydown', handleKeyDown);
-		}
 
-		return () => {
-			document.removeEventListener('keydown', handleKeyDown);
-		};
+			return () => {
+				document.removeEventListener('keydown', handleKeyDown);
+			};
+		}
 	}, []);
 
 	return (
