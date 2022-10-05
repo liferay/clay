@@ -390,46 +390,48 @@
 /// c-droppable-after: {Map | Null}, // See Mixin `clay-css` for available keys. This is an extra pseudo element if you need.
 
 @mixin clay-table-drag-variant($map) {
-	$cell: setter(map-get($map, cell), ());
+	@if (type-of($map) == 'map') {
+		$cell: setter(map-get($map, cell), ());
 
-	$c-drag: setter(map-get($map, c-drag), ());
+		$c-drag: setter(map-get($map, c-drag), ());
 
-	$c-dragging-before: setter(map-get($map, c-dragging-before), ());
+		$c-dragging-before: setter(map-get($map, c-dragging-before), ());
 
-	$c-dragging-after: setter(map-get($map, c-dragging-after), ());
+		$c-dragging-after: setter(map-get($map, c-dragging-after), ());
 
-	$c-droppable-before: setter(map-get($map, c-droppable-before), ());
+		$c-droppable-before: setter(map-get($map, c-droppable-before), ());
 
-	$c-droppable-after: setter(map-get($map, c-droppable-after), ());
+		$c-droppable-after: setter(map-get($map, c-droppable-after), ());
 
-	@include clay-css($map);
+		@include clay-css($map);
 
-	th,
-	td {
-		@include clay-css($cell);
-	}
-
-	.c-drag {
-		@include clay-css($c-drag);
-	}
-
-	.c-dragging {
-		&::before {
-			@include clay-css($c-dragging-before);
+		th,
+		td {
+			@include clay-css($cell);
 		}
 
-		&::after {
-			@include clay-css($c-dragging-after);
-		}
-	}
-
-	.c-droppable {
-		&::before {
-			@include clay-css($c-droppable-before);
+		.c-drag {
+			@include clay-css($c-drag);
 		}
 
-		&::after {
-			@include clay-css($c-droppable-after);
+		.c-dragging {
+			&::before {
+				@include clay-css($c-dragging-before);
+			}
+
+			&::after {
+				@include clay-css($c-dragging-after);
+			}
+		}
+
+		.c-droppable {
+			&::before {
+				@include clay-css($c-droppable-before);
+			}
+
+			&::after {
+				@include clay-css($c-droppable-after);
+			}
 		}
 	}
 }
@@ -443,24 +445,26 @@
 /// cell: {Map | Null}, // See Mixin `clay-css` for available keys. This styles the table cell (th and td) in the `table-clone` variant.
 
 @mixin clay-table-clone-variant($map) {
-	$before: setter(map-get($map, before), ());
+	@if (type-of($map) == 'map') {
+		$before: setter(map-get($map, before), ());
 
-	$after: setter(map-get($map, after), ());
+		$after: setter(map-get($map, after), ());
 
-	$cell: setter(map-get($map, cell), ());
+		$cell: setter(map-get($map, cell), ());
 
-	@include clay-css($map);
+		@include clay-css($map);
 
-	&::before {
-		@include clay-css($before);
-	}
+		&::before {
+			@include clay-css($before);
+		}
 
-	&::after {
-		@include clay-css($after);
-	}
+		&::after {
+			@include clay-css($after);
+		}
 
-	thead th,
-	tbody td {
-		@include clay-css($cell);
+		thead th,
+		tbody td {
+			@include clay-css($cell);
+		}
 	}
 }

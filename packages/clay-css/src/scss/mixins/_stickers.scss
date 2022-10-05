@@ -15,41 +15,43 @@
 /// - Add @link to documentation
 
 @mixin clay-sticker-size($map) {
-	$font-size: map-get($map, font-size);
-	$inline-item-font-size: map-get($map, inline-item-font-size);
-	$outside-offset: setter(
-		map-get($map, outside-offset),
-		math-sign(map-get($map, size) * 0.5)
-	);
-	$size: map-get($map, size);
+	@if (type-of($map) == 'map') {
+		$font-size: map-get($map, font-size);
+		$inline-item-font-size: map-get($map, inline-item-font-size);
+		$outside-offset: setter(
+			map-get($map, outside-offset),
+			math-sign(map-get($map, size) * 0.5)
+		);
+		$size: map-get($map, size);
 
-	font-size: $font-size;
+		font-size: $font-size;
 
-	@include clay-monospace($size);
+		@include clay-monospace($size);
 
-	> .inline-item {
-		font-size: $inline-item-font-size;
-	}
-
-	&.sticker-outside {
-		left: $outside-offset;
-		top: $outside-offset;
-
-		&.sticker-bottom-left {
-			bottom: $outside-offset;
-			top: auto;
+		> .inline-item {
+			font-size: $inline-item-font-size;
 		}
 
-		&.sticker-bottom-right {
-			bottom: $outside-offset;
-			left: auto;
-			right: $outside-offset;
-			top: auto;
-		}
+		&.sticker-outside {
+			left: $outside-offset;
+			top: $outside-offset;
 
-		&.sticker-top-right {
-			left: auto;
-			right: $outside-offset;
+			&.sticker-bottom-left {
+				bottom: $outside-offset;
+				top: auto;
+			}
+
+			&.sticker-bottom-right {
+				bottom: $outside-offset;
+				left: auto;
+				right: $outside-offset;
+				top: auto;
+			}
+
+			&.sticker-top-right {
+				left: auto;
+				right: $outside-offset;
+			}
 		}
 	}
 }

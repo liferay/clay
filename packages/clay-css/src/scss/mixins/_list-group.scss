@@ -63,254 +63,278 @@
 /// - Add @link to documentation
 
 @mixin clay-list-group-notification-item-variant($map) {
-	$bg: setter(
-		map-get($map, bg),
-		if(
-			variable-exists(list-group-bg),
-			$list-group-bg,
+	@if (type-of($map) == 'map') {
+		$bg: setter(
+			map-get($map, bg),
 			if(
-				variable-exists(cadmin-list-group-bg),
-				$cadmin-list-group-bg,
-				null
+				variable-exists(list-group-bg),
+				$list-group-bg,
+				if(
+					variable-exists(cadmin-list-group-bg),
+					$cadmin-list-group-bg,
+					null
+				)
 			)
-		)
-	);
-	$border-bottom-color: setter(
-		map-get($map, border-bottom-color),
-		if(
-			variable-exists(list-group-notification-item-border-bottom-color),
-			$list-group-notification-item-border-bottom-color,
+		);
+		$border-bottom-color: setter(
+			map-get($map, border-bottom-color),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-border-bottom-color
+					list-group-notification-item-border-bottom-color
 				),
-				$cadmin-list-group-notification-item-border-bottom-color,
-				null
+				$list-group-notification-item-border-bottom-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-bottom-color
+					),
+					$cadmin-list-group-notification-item-border-bottom-color,
+					null
+				)
 			)
-		)
-	);
-	$border-left-color: setter(
-		map-get($map, border-left-color),
-		if(
-			variable-exists(list-group-notification-item-border-left-color),
-			$list-group-notification-item-border-left-color,
+		);
+		$border-left-color: setter(
+			map-get($map, border-left-color),
+			if(
+				variable-exists(list-group-notification-item-border-left-color),
+				$list-group-notification-item-border-left-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-left-color
+					),
+					$cadmin-list-group-notification-item-border-left-color,
+					null
+				)
+			)
+		);
+		$border-right-color: setter(
+			map-get($map, border-right-color),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-border-left-color
+					list-group-notification-item-border-right-color
 				),
-				$cadmin-list-group-notification-item-border-left-color,
-				null
+				$list-group-notification-item-border-right-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-right-color
+					),
+					$cadmin-list-group-notification-item-border-right-color,
+					null
+				)
 			)
-		)
-	);
-	$border-right-color: setter(
-		map-get($map, border-right-color),
-		if(
-			variable-exists(list-group-notification-item-border-right-color),
-			$list-group-notification-item-border-right-color,
+		);
+		$border-top-color: setter(
+			map-get($map, border-top-color),
 			if(
-				variable-exists(
-					cadmin-list-group-notification-item-border-right-color
-				),
-				$cadmin-list-group-notification-item-border-right-color,
-				null
+				variable-exists(list-group-notification-item-border-top-color),
+				$list-group-notification-item-border-top-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-top-color
+					),
+					$cadmin-list-group-notification-item-border-top-color,
+					null
+				)
 			)
-		)
-	);
-	$border-top-color: setter(
-		map-get($map, border-top-color),
-		if(
-			variable-exists(list-group-notification-item-border-top-color),
-			$list-group-notification-item-border-top-color,
-			if(
-				variable-exists(
-					cadmin-list-group-notification-item-border-top-color
-				),
-				$cadmin-list-group-notification-item-border-top-color,
-				null
-			)
-		)
-	);
+		);
 
-	$border-bottom-width: setter(
-		map-get($map, border-bottom-width),
-		if(
-			variable-exists(list-group-notification-item-border-bottom-width),
-			$list-group-notification-item-border-bottom-width,
+		$border-bottom-width: setter(
+			map-get($map, border-bottom-width),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-border-bottom-width
+					list-group-notification-item-border-bottom-width
 				),
-				$cadmin-list-group-notification-item-border-bottom-width,
-				null
+				$list-group-notification-item-border-bottom-width,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-bottom-width
+					),
+					$cadmin-list-group-notification-item-border-bottom-width,
+					null
+				)
 			)
-		)
-	);
-	$border-left-width: setter(
-		map-get($map, border-left-width),
-		if(
-			variable-exists(list-group-notification-item-border-left-width),
-			$list-group-notification-item-border-left-width,
+		);
+		$border-left-width: setter(
+			map-get($map, border-left-width),
+			if(
+				variable-exists(list-group-notification-item-border-left-width),
+				$list-group-notification-item-border-left-width,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-left-width
+					),
+					$cadmin-list-group-notification-item-border-left-width,
+					null
+				)
+			)
+		);
+		$border-right-width: setter(
+			map-get($map, border-right-width),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-border-left-width
+					list-group-notification-item-border-right-width
 				),
-				$cadmin-list-group-notification-item-border-left-width,
-				null
+				$list-group-notification-item-border-right-width,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-right-width
+					),
+					$cadmin-list-group-notification-item-border-right-width,
+					null
+				)
 			)
-		)
-	);
-	$border-right-width: setter(
-		map-get($map, border-right-width),
-		if(
-			variable-exists(list-group-notification-item-border-right-width),
-			$list-group-notification-item-border-right-width,
+		);
+		$border-top-width: setter(
+			map-get($map, border-top-width),
+			if(
+				variable-exists(list-group-notification-item-border-top-width),
+				$list-group-notification-item-border-top-width,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-border-top-width
+					),
+					$cadmin-list-group-notification-item-border-top-width,
+					null
+				)
+			)
+		);
+
+		$border-bottom-left-radius: map-get($map, border-bottom-left-radius);
+		$border-bottom-right-radius: map-get($map, border-bottom-right-radius);
+		$border-top-left-radius: map-get($map, border-top-left-radius);
+		$border-top-right-radius: map-get($map, border-top-right-radius);
+
+		$color: map-get($map, color);
+
+		$active-bg: setter(
+			map-get($map, active-bg),
+			if(
+				variable-exists(list-group-active-bg),
+				$list-group-active-bg,
+				if(
+					variable-exists(cadmin-list-group-active-bg),
+					$cadmin-list-group-active-bg,
+					null
+				)
+			)
+		);
+		$active-border-bottom-color: setter(
+			map-get($map, active-border-bottom-color),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-border-right-width
+					list-group-notification-item-active-border-bottom-color
 				),
-				$cadmin-list-group-notification-item-border-right-width,
-				null
+				$list-group-notification-item-active-border-bottom-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-active-border-bottom-color
+					),
+					$cadmin-list-group-notification-item-active-border-bottom-color,
+					null
+				)
 			)
-		)
-	);
-	$border-top-width: setter(
-		map-get($map, border-top-width),
-		if(
-			variable-exists(list-group-notification-item-border-top-width),
-			$list-group-notification-item-border-top-width,
+		);
+		$active-border-left-color: setter(
+			map-get($map, active-border-left-color),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-border-top-width
+					list-group-notification-item-active-border-left-color
 				),
-				$cadmin-list-group-notification-item-border-top-width,
-				null
+				$list-group-notification-item-active-border-left-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-active-border-left-color
+					),
+					$cadmin-list-group-notification-item-active-border-left-color,
+					null
+				)
 			)
-		)
-	);
-
-	$border-bottom-left-radius: map-get($map, border-bottom-left-radius);
-	$border-bottom-right-radius: map-get($map, border-bottom-right-radius);
-	$border-top-left-radius: map-get($map, border-top-left-radius);
-	$border-top-right-radius: map-get($map, border-top-right-radius);
-
-	$color: map-get($map, color);
-
-	$active-bg: setter(
-		map-get($map, active-bg),
-		if(
-			variable-exists(list-group-active-bg),
-			$list-group-active-bg,
-			if(
-				variable-exists(cadmin-list-group-active-bg),
-				$cadmin-list-group-active-bg,
-				null
-			)
-		)
-	);
-	$active-border-bottom-color: setter(
-		map-get($map, active-border-bottom-color),
-		if(
-			variable-exists(
-				list-group-notification-item-active-border-bottom-color
-			),
-			$list-group-notification-item-active-border-bottom-color,
+		);
+		$active-border-right-color: setter(
+			map-get($map, active-border-right-color),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-active-border-bottom-color
+					list-group-notification-item-active-border-right-color
 				),
-				$cadmin-list-group-notification-item-active-border-bottom-color,
-				null
+				$list-group-notification-item-active-border-right-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-active-border-right-color
+					),
+					$cadmin-list-group-notification-item-active-border-right-color,
+					null
+				)
 			)
-		)
-	);
-	$active-border-left-color: setter(
-		map-get($map, active-border-left-color),
-		if(
-			variable-exists(
-				list-group-notification-item-active-border-left-color
-			),
-			$list-group-notification-item-active-border-left-color,
+		);
+		$active-border-top-color: setter(
+			map-get($map, active-border-top-color),
 			if(
 				variable-exists(
-					cadmin-list-group-notification-item-active-border-left-color
+					list-group-notification-item-active-border-top-color
 				),
-				$cadmin-list-group-notification-item-active-border-left-color,
-				null
+				$list-group-notification-item-active-border-top-color,
+				if(
+					variable-exists(
+						cadmin-list-group-notification-item-active-border-top-color
+					),
+					$cadmin-list-group-notification-item-active-border-top-color,
+					null
+				)
 			)
-		)
-	);
-	$active-border-right-color: setter(
-		map-get($map, active-border-right-color),
-		if(
-			variable-exists(
-				list-group-notification-item-active-border-right-color
-			),
-			$list-group-notification-item-active-border-right-color,
+		);
+
+		// Box shadows are used for borders, determined by border variables above
+
+		$box-shadow-bottom: inset
+			0 -#{$border-bottom-width}
+			#{$border-bottom-color};
+		$box-shadow-left: inset #{$border-left-width} 0 #{$border-left-color};
+		$box-shadow-right: inset -#{$border-right-width}
+			0
+			#{$border-right-color};
+		$box-shadow-top: inset 0 #{$border-top-width} #{$border-top-color};
+
+		$active-box-shadow-bottom: inset
+			0 -#{$border-bottom-width}
+			#{$active-border-bottom-color};
+		$active-box-shadow-left: inset
+			#{$border-left-width}
+			0
+			#{$active-border-left-color};
+		$active-box-shadow-right: inset -#{$border-right-width}
+			0
+			#{$active-border-right-color};
+		$active-box-shadow-top: inset
+			0
+			#{$border-top-width}
+			#{$active-border-top-color};
+
+		background-color: $bg;
+
+		@if (
 			if(
-				variable-exists(
-					cadmin-list-group-notification-item-active-border-right-color
-				),
-				$cadmin-list-group-notification-item-active-border-right-color,
-				null
+				variable-exists(enable-rounded),
+				$enable-rounded,
+				if(
+					variable-exists(cadmin-enable-rounded),
+					$cadmin-enable-rounded,
+					true
+				)
 			)
-		)
-	);
-	$active-border-top-color: setter(
-		map-get($map, active-border-top-color),
-		if(
-			variable-exists(
-				list-group-notification-item-active-border-top-color
-			),
-			$list-group-notification-item-active-border-top-color,
-			if(
-				variable-exists(
-					cadmin-list-group-notification-item-active-border-top-color
-				),
-				$cadmin-list-group-notification-item-active-border-top-color,
-				null
-			)
-		)
-	);
+		) {
+			border-bottom-left-radius: $border-bottom-left-radius;
+			border-bottom-right-radius: $border-bottom-right-radius;
+			border-top-left-radius: $border-top-left-radius;
+			border-top-right-radius: $border-top-right-radius;
+		}
 
-	// Box shadows are used for borders, determined by border variables above
+		box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top,
+			$box-shadow-bottom;
+		color: $color;
 
-	$box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$border-bottom-color};
-	$box-shadow-left: inset #{$border-left-width} 0 #{$border-left-color};
-	$box-shadow-right: inset -#{$border-right-width} 0 #{$border-right-color};
-	$box-shadow-top: inset 0 #{$border-top-width} #{$border-top-color};
-
-	$active-box-shadow-bottom: inset 0 -#{$border-bottom-width} #{$active-border-bottom-color};
-	$active-box-shadow-left: inset #{$border-left-width} 0 #{$active-border-left-color};
-	$active-box-shadow-right: inset -#{$border-right-width} 0 #{$active-border-right-color};
-	$active-box-shadow-top: inset 0 #{$border-top-width} #{$active-border-top-color};
-
-	background-color: $bg;
-
-	@if (
-		if(
-			variable-exists(enable-rounded),
-			$enable-rounded,
-			if(
-				variable-exists(cadmin-enable-rounded),
-				$cadmin-enable-rounded,
-				true
-			)
-		)
-	) {
-		border-bottom-left-radius: $border-bottom-left-radius;
-		border-bottom-right-radius: $border-bottom-right-radius;
-		border-top-left-radius: $border-top-left-radius;
-		border-top-right-radius: $border-top-right-radius;
-	}
-
-	box-shadow: $box-shadow-left, $box-shadow-right, $box-shadow-top,
-		$box-shadow-bottom;
-	color: $color;
-
-	&.active {
-		background-color: $active-bg;
-		box-shadow: $active-box-shadow-left, $active-box-shadow-right,
-			$active-box-shadow-top, $active-box-shadow-bottom;
+		&.active {
+			background-color: $active-bg;
+			box-shadow: $active-box-shadow-left, $active-box-shadow-right,
+				$active-box-shadow-top, $active-box-shadow-bottom;
+		}
 	}
 }
