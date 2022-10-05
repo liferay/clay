@@ -118,6 +118,7 @@ export function TreeView<T>({
 	expanderClassName,
 	expanderIcons,
 	expandOnCheck = false,
+	itemNameKey = 'name',
 	items,
 	nestedKey = 'children',
 	onExpandedChange,
@@ -140,6 +141,7 @@ export function TreeView<T>({
 		defaultItems,
 		defaultSelectedKeys,
 		expandedKeys,
+		itemNameKey,
 		items,
 		nestedKey,
 		onExpandedChange,
@@ -163,6 +165,7 @@ export function TreeView<T>({
 		expandOnCheck,
 		expanderClassName,
 		expanderIcons,
+		itemNameKey,
 		nestedKey,
 		onItemMove,
 		onLoadMore,
@@ -197,7 +200,7 @@ export function TreeView<T>({
 						<Collection<T> items={state.items}>
 							{children}
 						</Collection>
-						<DragLayer />
+						<DragLayer itemNameKey={itemNameKey} />
 					</TreeViewContext.Provider>
 				</DndProvider>
 			</ul>
