@@ -138,12 +138,16 @@ $link-outline-primary: map-deep-merge(
 		),
 		focus: (
 			background-color: $primary-l3,
+			box-shadow: $component-focus-box-shadow,
 			color: $primary,
 		),
 		active: (
 			background-color:
 				clay-lighten(clay-desaturate($primary, 42.05), 41.76),
 			color: $primary,
+		),
+		disabled: (
+			box-shadow: none,
 		),
 	),
 	$link-outline-primary
@@ -159,6 +163,7 @@ $link-outline-secondary: map-deep-merge(
 		),
 		focus: (
 			background-color: rgba($gray-900, 0.03),
+			box-shadow: $component-focus-box-shadow,
 			color: $gray-900,
 		),
 		active: (

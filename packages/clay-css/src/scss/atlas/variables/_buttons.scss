@@ -3,12 +3,11 @@ $btn-box-shadow: none !default;
 $btn-font-weight: $font-weight-semi-bold !default;
 $btn-padding-x: 0.9375rem !default; // 15px
 $btn-padding-y: 0.4375rem !default; // 7px
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-transition: $component-transition !default;
 
 $btn-focus-box-shadow: $component-focus-box-shadow !default;
 
-$btn-disabled-opacity: 0.4 !default;
+$btn-disabled-opacity: $component-disabled-opacity !default;
 
 $btn-active-box-shadow: c-unset !default;
 

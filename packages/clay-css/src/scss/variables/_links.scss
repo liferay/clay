@@ -41,15 +41,27 @@ $link-secondary: map-deep-merge(
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
-$link-outline-border-radius: $btn-border-radius !default;
+$link-outline-border-radius: if(
+	variable-exists(btn-border-radius),
+	$btn-border-radius,
+	$border-radius
+) !default;
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
-$link-outline-border-width: $btn-border-width !default;
+$link-outline-border-width: if(
+	variable-exists(btn-border-width),
+	$btn-border-width,
+	$border-width
+) !default;
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
-$link-outline-font-size: $btn-font-size-sm !default;
+$link-outline-font-size: if(
+	variable-exists(btn-font-size-sm),
+	$btn-font-size-sm,
+	$font-size-sm
+) !default;
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
@@ -57,19 +69,31 @@ $link-outline-font-weight: $font-weight-semi-bold !default;
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
-$link-outline-line-height: $btn-line-height-sm !default;
+$link-outline-line-height: if(
+	variable-exists(btn-line-height-sm),
+	$btn-line-height-sm,
+	$line-height-sm
+) !default;
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
-$link-outline-padding-x: $btn-padding-x-sm !default;
+$link-outline-padding-x: if(
+	variable-exists(btn-padding-x-sm),
+	$btn-padding-x-sm,
+	0.5rem
+) !default;
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
-$link-outline-padding-y: $btn-padding-y-sm !default;
+$link-outline-padding-y: if(
+	variable-exists(btn-padding-x-sm),
+	$btn-padding-y-sm,
+	0.25rem
+) !default;
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-outline` instead
 
-$link-outline-transition: $btn-transition !default;
+$link-outline-transition: $component-transition !default;
 
 $link-outline: () !default;
 $link-outline: map-deep-merge(
@@ -127,8 +151,8 @@ $link-outline-primary: map-deep-merge(
 		disabled: (
 			background-color: transparent,
 			color: $primary,
-			cursor: $btn-disabled-cursor,
-			opacity: $btn-disabled-opacity,
+			cursor: $disabled-cursor,
+			opacity: $component-disabled-opacity,
 		),
 	),
 	$link-outline-primary
@@ -150,8 +174,8 @@ $link-outline-secondary: map-deep-merge(
 		disabled: (
 			background-color: transparent,
 			color: $secondary,
-			cursor: $btn-disabled-cursor,
-			opacity: $btn-disabled-opacity,
+			cursor: $disabled-cursor,
+			opacity: $component-disabled-opacity,
 		),
 	),
 	$link-outline-secondary
@@ -161,7 +185,11 @@ $link-outline-secondary: map-deep-merge(
 
 /// @deprecated as of v3.4.0 use the Sass map `$link-monospaced` instead
 
-$link-monospaced-size: $btn-monospaced-size-sm !default;
+$link-monospaced-size: if(
+	variable-exists(btn-monospaced-size-sm),
+	$btn-monospaced-size-sm,
+	1.9375rem
+) !default;
 
 $link-monospaced: () !default;
 $link-monospaced: map-deep-merge(
@@ -272,7 +300,7 @@ $component-action: map-deep-merge(
 		justify-content: center,
 		overflow: hidden,
 		padding: 0,
-		transition: $btn-transition,
+		transition: $component-transition,
 		vertical-align: middle,
 		width: map-get($link-monospaced, width),
 		hover: (
@@ -292,7 +320,7 @@ $component-action: map-deep-merge(
 			box-shadow: none,
 			color: $secondary,
 			cursor: $disabled-cursor,
-			opacity: $btn-disabled-opacity,
+			opacity: $component-disabled-opacity,
 			active: (
 				pointer-events: none,
 			),

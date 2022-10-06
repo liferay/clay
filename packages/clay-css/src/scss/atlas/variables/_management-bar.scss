@@ -7,7 +7,7 @@ $management-bar-base: map-deep-merge(
 				outline: 0,
 				transition: box-shadow 0.15s ease-in-out,
 				focus: (
-					box-shadow: $btn-focus-box-shadow,
+					box-shadow: $component-focus-box-shadow,
 				),
 				disabled: (
 					box-shadow: none,

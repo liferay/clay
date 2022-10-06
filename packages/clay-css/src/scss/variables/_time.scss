@@ -89,7 +89,12 @@ $clay-time-inner-spin: map-deep-merge(
 		border-color: $secondary-d1,
 		border-radius: 8px,
 		border-style: solid,
-		border-width: $btn-border-width,
+		border-width:
+			if(
+				variable-exists(btn-border-width),
+				$btn-border-width,
+				$border-width
+			),
 	),
 	$clay-time-inner-spin
 );

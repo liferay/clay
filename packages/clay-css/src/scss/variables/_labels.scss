@@ -142,7 +142,7 @@ $label-close: map-deep-merge(
 			opacity: 1,
 		),
 		disabled: (
-			opacity: $btn-disabled-opacity,
+			opacity: $component-disabled-opacity,
 		),
 	),
 	$label-close
