@@ -33,6 +33,11 @@ export interface ITreeViewItemProps
 	children: React.ReactNode;
 
 	/**
+	 * Flag to define if the item is draggable and dropable.
+	 */
+	draggable?: boolean;
+
+	/**
 	 * Flag indicating that the component is disabled.
 	 */
 	disabled?: boolean;
@@ -402,7 +407,12 @@ export const TreeViewItem = React.forwardRef<
 					onTouchStart={() => {
 						clickCapturedRef.current = true;
 					}}
-					ref={ref}
+					ref={
+						itemStackProps.draggable === false ||
+						nodeProps.draggable === false
+							? undefined
+							: ref
+					}
 					role="treeitem"
 					style={{
 						...(itemStackProps?.style ?? {}),
@@ -482,6 +492,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Item content.
 	 */
 	children: React.ReactNode;
+
+	/**
+	 * Flag to define if the item is draggable and dropable.
+	 */
+	draggable?: boolean;
 
 	/**
 	 * Flag indicating that the component is disabled.
