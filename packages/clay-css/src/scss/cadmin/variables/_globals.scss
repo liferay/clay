@@ -309,6 +309,10 @@ $cadmin-embed-responsive-aspect-ratios: join(
 	$cadmin-embed-responsive-aspect-ratios
 );
 
+$cadmin-component-transition: color 0.15s ease-in-out,
+	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+	box-shadow 0.15s ease-in-out !default;
+
 $cadmin-component-focus-box-shadow: #{0 0 0 2px $cadmin-white,
 	0 0 0 4px $cadmin-primary-l1} !default;
 $cadmin-component-focus-inset-box-shadow: #{inset 0 0 0 2px $cadmin-primary-l1,
@@ -316,6 +320,8 @@ $cadmin-component-focus-inset-box-shadow: #{inset 0 0 0 2px $cadmin-primary-l1,
 
 $cadmin-component-active-bg: $cadmin-primary !default;
 $cadmin-component-active-color: $cadmin-white !default;
+
+$cadmin-component-disabled-opacity: 0.4 !default;
 
 // Cursors
 
