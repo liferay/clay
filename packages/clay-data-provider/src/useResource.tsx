@@ -234,6 +234,8 @@ const useResource = ({
 
 	const retryDelayTimeoutIdRef = useRef<null | NodeJS.Timeout>(null);
 
+	const abortController = useRef<AbortController | null>(null);
+
 	const networkStatusRef = useRef<NetworkStatus>();
 
 	const pollIntervalRef = useRef(pollInterval);
@@ -448,6 +450,12 @@ const useResource = ({
 
 				let nextCursor: any = undefined;
 
+				if (abortController.current) {
+					abortController.current.abort();
+				}
+
+				abortController.current = new AbortController();
+
 				return timeout(
 					fetchTimeout,
 					fn(
@@ -455,8 +463,12 @@ const useResource = ({
 							client.current.getCursor(identifier) ?? link,
 							variables
 						),
-						fetchOptions
-					)
+						{
+							...fetchOptions,
+							signal: abortController.current.signal,
+						}
+					),
+					abortController.current
 				)
 					.then((res: any) => {
 						if (

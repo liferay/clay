@@ -9,9 +9,15 @@ import stringify from 'fast-json-stable-stringify';
  * Implementation of the timeout.
  * Based on: https://github.com/github/fetch/issues/175#issuecomment-125779262
  */
-export const timeout = (ms: number, promise: Promise<any>) => {
+export const timeout = (
+	ms: number,
+	promise: Promise<any>,
+	controller?: AbortController
+) => {
 	return new Promise((resolve, reject) => {
 		const timeoutId = setTimeout(() => {
+			controller?.abort();
+
 			reject(new Error('timeout'));
 		}, ms);
 
