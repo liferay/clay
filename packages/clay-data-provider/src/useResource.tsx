@@ -490,10 +490,12 @@ const useResource = ({
 						return res;
 					})
 					.then(fetchOnComplete)
-					.then(() => {
+					.then((res) => {
 						if (nextCursor !== undefined) {
 							client.current.setCursor(identifier, nextCursor);
 						}
+
+						return res;
 					})
 					.catch((error) => handleFetchRetry(error, retryAttempts));
 			}
