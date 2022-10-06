@@ -41,7 +41,7 @@ function getItemStyles(
 	};
 }
 
-const DragLayer = () => {
+const DragLayer = ({itemNameKey}: {itemNameKey: string}) => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
 
 	const {currentOffset, isDragging, item} = useDragLayer(
@@ -54,9 +54,11 @@ const DragLayer = () => {
 
 	const mousePosition = useMousePosition();
 
-	if (!isDragging) {
+	if (!isDragging || item.type !== 'treeViewItem') {
 		return null;
 	}
+
+	const name = item.item[itemNameKey];
 
 	return (
 		<div style={layerStyles}>
@@ -65,7 +67,7 @@ const DragLayer = () => {
 				ref={elementRef}
 				style={getItemStyles(currentOffset, mousePosition, elementRef)}
 			>
-				{item.name}
+				{name}
 			</div>
 		</div>
 	);

@@ -61,6 +61,12 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 
 	/**
+	 * Flag to indicate which key name matches the item name to be displayed
+	 * in drag preview.
+	 */
+	itemNameKey?: string;
+
+	/**
 	 * Callback is called when an item is about to be moved elsewhere in the tree.
 	 */
 	onItemMove?: (item: T, parentItem: T) => void;
@@ -118,6 +124,7 @@ export function TreeView<T>({
 	expanderClassName,
 	expanderIcons,
 	expandOnCheck = false,
+	itemNameKey = 'name',
 	items,
 	nestedKey = 'children',
 	onExpandedChange,
@@ -197,7 +204,7 @@ export function TreeView<T>({
 						<Collection<T> items={state.items}>
 							{children}
 						</Collection>
-						<DragLayer />
+						<DragLayer itemNameKey={itemNameKey} />
 					</TreeViewContext.Provider>
 				</DndProvider>
 			</ul>
