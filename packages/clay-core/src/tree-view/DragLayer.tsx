@@ -54,7 +54,7 @@ const DragLayer = ({itemNameKey}: {itemNameKey: string}) => {
 
 	const mousePosition = useMousePosition();
 
-	if (!isDragging) {
+	if (!isDragging || item.type !== 'treeViewItem') {
 		return null;
 	}
 
