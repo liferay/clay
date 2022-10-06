@@ -61,6 +61,12 @@ interface ITreeViewProps<T>
 	expanderIcons?: Icons;
 
 	/**
+	 * Flag to indicate which key name matches the item name to be displayed
+	 * in drag preview.
+	 */
+	itemNameKey?: string;
+
+	/**
 	 * Callback is called when an item is about to be moved elsewhere in the tree.
 	 */
 	onItemMove?: (item: T, parentItem: T) => void;
@@ -141,7 +147,6 @@ export function TreeView<T>({
 		defaultItems,
 		defaultSelectedKeys,
 		expandedKeys,
-		itemNameKey,
 		items,
 		nestedKey,
 		onExpandedChange,
@@ -165,7 +170,6 @@ export function TreeView<T>({
 		expandOnCheck,
 		expanderClassName,
 		expanderIcons,
-		itemNameKey,
 		nestedKey,
 		onItemMove,
 		onLoadMore,

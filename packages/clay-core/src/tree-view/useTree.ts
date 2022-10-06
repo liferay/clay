@@ -65,11 +65,6 @@ export interface ITreeProps<T>
 		IMultipleSelection,
 		Pick<ICollectionProps<T>, 'items' | 'defaultItems'> {
 	/**
-	 * Flag to indicate which key name matches the item name to be displayed in drag preview.
-	 */
-	itemNameKey?: string;
-
-	/**
 	 * Flag to indicate which key name matches the nested rendering of the tree.
 	 */
 	nestedKey?: string;
