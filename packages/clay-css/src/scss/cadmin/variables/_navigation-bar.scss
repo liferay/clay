@@ -31,7 +31,7 @@ $cadmin-navigation-bar-base: map-deep-merge(
 				border-radius: 0,
 				outline: 0,
 				focus: (
-					box-shadow: $cadmin-btn-focus-box-shadow,
+					box-shadow: $cadmin-component-focus-box-shadow,
 				),
 				disabled: (
 					box-shadow: none,
@@ -64,7 +64,7 @@ $cadmin-navigation-bar-light: map-deep-merge(
 				),
 				disabled: (
 					color: $cadmin-gray-600,
-					opacity: $cadmin-btn-disabled-opacity,
+					opacity: $cadmin-component-disabled-opacity,
 				),
 			),
 		),
@@ -87,7 +87,7 @@ $cadmin-navigation-bar-light: map-deep-merge(
 								),
 								disabled: (
 									color: $cadmin-gray-600,
-									opacity: $cadmin-btn-disabled-opacity,
+									opacity: $cadmin-component-disabled-opacity,
 								),
 							),
 						),
@@ -120,7 +120,7 @@ $cadmin-navigation-bar-secondary: map-deep-merge(
 				),
 				disabled: (
 					color: $cadmin-gray-400,
-					opacity: $cadmin-btn-disabled-opacity,
+					opacity: $cadmin-component-disabled-opacity,
 				),
 			),
 		),
@@ -149,7 +149,7 @@ $cadmin-navigation-bar-secondary: map-deep-merge(
 								),
 								disabled: (
 									color: $cadmin-gray-400,
-									opacity: $cadmin-btn-disabled-opacity,
+									opacity: $cadmin-component-disabled-opacity,
 								),
 							),
 						),

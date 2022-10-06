@@ -394,7 +394,7 @@ $cadmin-card-interactive: map-deep-merge(
 	(
 		cursor: $cadmin-link-cursor,
 		outline: 0,
-		transition: $cadmin-btn-transition,
+		transition: $cadmin-component-transition,
 		hover-bg: #f7f8f9,
 		hover-text-decoration: none,
 		focus-box-shadow: 0 0 0 2px #FFF#{','} 0 0 0 4px #719aff,
