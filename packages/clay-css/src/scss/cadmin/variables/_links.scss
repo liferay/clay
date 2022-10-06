@@ -111,7 +111,12 @@ $cadmin-link-outline: map-deep-merge(
 		hover: (
 			text-decoration: none,
 		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
 		disabled: (
+			box-shadow: none,
 			active: (
 				pointer-events: none,
 			),
@@ -134,9 +139,7 @@ $cadmin-link-outline-primary: map-deep-merge(
 		),
 		focus: (
 			background-color: $cadmin-primary-l3,
-			box-shadow: map-get($cadmin-btn-outline-primary, focus-box-shadow),
 			color: $cadmin-primary,
-			outline: 0,
 		),
 		active: (
 			background-color:
@@ -145,14 +148,10 @@ $cadmin-link-outline-primary: map-deep-merge(
 		),
 		disabled: (
 			background-color: transparent,
-			box-shadow: none,
 			color: $cadmin-primary,
 			cursor: $cadmin-btn-disabled-cursor,
 			opacity: $cadmin-btn-disabled-opacity,
 		),
-		btn-focus-box-shadow:
-			map-get($cadmin-btn-outline-primary, focus-box-shadow),
-		btn-focus-outline: 0,
 	),
 	$cadmin-link-outline-primary
 );
@@ -168,9 +167,7 @@ $cadmin-link-outline-secondary: map-deep-merge(
 		),
 		focus: (
 			background-color: rgba($cadmin-gray-900, 0.03),
-			box-shadow: map-get($cadmin-btn-outline-secondary, focus-box-shadow),
 			color: $cadmin-gray-900,
-			outline: 0,
 		),
 		active: (
 			background-color: rgba($cadmin-gray-900, 0.06),
@@ -178,14 +175,10 @@ $cadmin-link-outline-secondary: map-deep-merge(
 		),
 		disabled: (
 			background-color: transparent,
-			box-shadow: none,
 			color: $cadmin-secondary,
 			cursor: $cadmin-btn-disabled-cursor,
 			opacity: $cadmin-btn-disabled-opacity,
 		),
-		btn-focus-box-shadow:
-			map-get($cadmin-btn-outline-secondary, focus-box-shadow),
-		btn-focus-outline: 0,
 	),
 	$cadmin-link-outline-secondary
 );
@@ -323,7 +316,7 @@ $cadmin-component-action: map-deep-merge(
 		),
 		focus: (
 			background-color: rgba($cadmin-gray-900, 0.03),
-			box-shadow: map-get($cadmin-btn-secondary, focus-box-shadow),
+			box-shadow: $cadmin-component-focus-box-shadow,
 			color: $cadmin-gray-900,
 			outline: 0,
 		),
@@ -341,8 +334,6 @@ $cadmin-component-action: map-deep-merge(
 				pointer-events: none,
 			),
 		),
-		btn-focus-box-shadow: map-get($cadmin-btn-secondary, focus-box-shadow),
-		btn-focus-outline: 0,
 		lexicon-icon: (
 			margin-top: 0,
 		),
