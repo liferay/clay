@@ -234,6 +234,8 @@ const useResource = ({
 
 	const retryDelayTimeoutIdRef = useRef<null | NodeJS.Timeout>(null);
 
+	const networkStatusRef = useRef<NetworkStatus>();
+
 	const pollIntervalRef = useRef(pollInterval);
 
 	const uid = useMemo(() => {
@@ -276,6 +278,11 @@ const useResource = ({
 	);
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
+
+	const dispatchNetworkStatus = (status: NetworkStatus) => {
+		onNetworkStatusChange(status);
+		networkStatusRef.current = status;
+	};
 
 	const cleanRetry = () => {
 		if (retryDelayTimeoutIdRef.current) {
@@ -321,7 +328,7 @@ const useResource = ({
 			if (suspense) {
 				client.current.update(identifier, error);
 			} else {
-				onNetworkStatusChange(NetworkStatus.Error);
+				dispatchNetworkStatus(NetworkStatus.Error);
 			}
 
 			warning(
@@ -354,6 +361,7 @@ const useResource = ({
 		const cursor = client.current.getCursor(identifier);
 
 		if (
+			networkStatusRef.current === NetworkStatus.Loading &&
 			(cursor || cursor === null) &&
 			resource !== null &&
 			resource !== undefined
@@ -369,7 +377,7 @@ const useResource = ({
 		}
 
 		setResource(data);
-		onNetworkStatusChange(NetworkStatus.Unused);
+		dispatchNetworkStatus(NetworkStatus.Unused);
 
 		if (shouldUseCache) {
 			client.current.update(identifier, data);
@@ -438,6 +446,8 @@ const useResource = ({
 			case 'string': {
 				const fn = fetcher ?? fetch;
 
+				let nextCursor: any = undefined;
+
 				return timeout(
 					fetchTimeout,
 					fn(
@@ -460,7 +470,7 @@ const useResource = ({
 							res.items &&
 							(res.cursor || res.cursor === null)
 						) {
-							client.current.setCursor(identifier, res.cursor);
+							nextCursor = res.cursor;
 
 							return res.items;
 						}
@@ -468,6 +478,11 @@ const useResource = ({
 						return res;
 					})
 					.then(fetchOnComplete)
+					.then(() => {
+						if (nextCursor !== undefined) {
+							client.current.setCursor(identifier, nextCursor);
+						}
+					})
 					.catch((error) => handleFetchRetry(error, retryAttempts));
 			}
 			default:
@@ -489,7 +504,7 @@ const useResource = ({
 			}
 		}
 
-		onNetworkStatusChange(status);
+		dispatchNetworkStatus(status);
 
 		return doFetch();
 	};
@@ -499,13 +514,13 @@ const useResource = ({
 			return null;
 		}
 
-		onNetworkStatusChange(NetworkStatus.Loading);
+		dispatchNetworkStatus(NetworkStatus.Loading);
 
 		return doFetch();
 	};
 
 	const refetch = () => {
-		onNetworkStatusChange(NetworkStatus.Refetch);
+		dispatchNetworkStatus(NetworkStatus.Refetch);
 		doFetch();
 	};
 
