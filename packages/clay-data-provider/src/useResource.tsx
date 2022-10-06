@@ -520,6 +520,11 @@ const useResource = ({
 	};
 
 	const refetch = () => {
+		if (!shouldUseCache) {
+			// Resets the cursor
+			delete client.current.cursors[identifier];
+		}
+
 		dispatchNetworkStatus(NetworkStatus.Refetch);
 		doFetch();
 	};
@@ -534,6 +539,11 @@ const useResource = ({
 
 	useEffect(() => {
 		if (!firstRenderRef.current) {
+			if (!shouldUseCache) {
+				// Resets the cursor
+				delete client.current.cursors[identifier];
+			}
+
 			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);
