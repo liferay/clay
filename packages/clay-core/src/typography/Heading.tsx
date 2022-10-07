@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+export type Level = 1 | 2 | 3 | 4 | 5 | 6;
 
 export type WeightFont =
 	| 'lighter'
@@ -23,9 +23,14 @@ type Props = {
 	children?: React.ReactNode;
 
 	/**
+	 * Determines the font size of the heading regardless of the tag.
+	 */
+	fontSize?: Level;
+
+	/**
 	 * Number to set the heading level.
 	 */
-	level?: HeadingLevel;
+	level?: Level;
 
 	/**
 	 * Determines the weight of the font.
@@ -33,12 +38,19 @@ type Props = {
 	weight?: WeightFont;
 };
 
-export const Heading = ({children, level = 1, weight = 'bold'}: Props) => {
+export const Heading = ({
+	children,
+	fontSize,
+	level = 1,
+	weight = 'bold',
+}: Props) => {
 	const HeadingTag = `h${level}` as React.ElementType;
+
+	const size = fontSize ?? level;
 
 	return (
 		<HeadingTag
-			className={classNames([`text-${11 - level}`], {
+			className={classNames([`text-${11 - size}`], {
 				[`font-weight-${weight}`]: weight,
 			})}
 		>

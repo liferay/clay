@@ -9,6 +9,10 @@ import {Heading} from '../src/typography';
 
 export default {
 	argTypes: {
+		fontSize: {
+			control: {type: 'select'},
+			options: [1, 2, 3, 4, 5, 6],
+		},
 		level: {
 			control: {type: 'select'},
 			options: [1, 2, 3, 4, 5, 6],
@@ -31,7 +35,11 @@ export default {
 
 export const HeadingTypography = (args: any) => {
 	return (
-		<Heading level={args.level} weight={args.weight}>
+		<Heading
+			fontSize={args.fontSize}
+			level={args.level}
+			weight={args.weight}
+		>
 			This is a Heading
 		</Heading>
 	);

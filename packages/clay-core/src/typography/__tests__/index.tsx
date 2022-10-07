@@ -31,6 +31,19 @@ describe('Heading', () => {
 		).toBeTruthy();
 		expect(document.body).toMatchSnapshot();
 	});
+
+	it('renders different font size than heading', () => {
+		const {getByRole} = render(
+			<Heading fontSize={4} level={1} weight="semi-bold">
+				Heading
+			</Heading>
+		);
+
+		const heading = getByRole('heading');
+
+		expect(heading.classList).toContain('text-7');
+		expect(heading.tagName).toBe('H1');
+	});
 });
 
 describe('Text', () => {
