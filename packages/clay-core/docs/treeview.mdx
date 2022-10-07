@@ -603,6 +603,41 @@ function Example() {
 }
 ```
 
+The component allows you to add rules in Drag and Drop like disabling an item to be draggable and dropable, for this you need to set the `draggable` property of the component to `TreeView.Item` or `TreeView.ItemStack`.
+
+```jsx
+<TreeView dragAndDrop>
+	{(item) => (
+		<TreeView.Item>
+			<TreeView.ItemStack draggable={false}>
+				{item.name}
+			</TreeView.ItemStack>
+			<TreeView.Item.Group items={item.children}>
+				{(item) => (
+					<TreeView.Item draggable={false}>{item.name}</TreeView.Item>
+				)}
+			</TreeView.Item.Group>
+		</TreeView.Item>
+	)}
+</TreeView>
+```
+
+In some cases it is necessary to check if the item can be dropped in another item, for example a TreeView from a file explorer, does not allow moving a file into another file. You need to use `onItemMove` to decide if the item can be droppable on a specific item.
+
+```jsx
+<TreeView
+	dragAndDrop
+	onItemMove={(item, parentItem) => {
+		// your logic here
+
+		// Returning false does not allow the item to be dropped in the parentItem.
+		return false;
+	}}
+>
+	{...}
+</TreeView>
+```
+
 ## Shortcuts
 
 The TreeView implements shortcuts and manages the focus. Some shortcuts and focus trigger some actions like renaming, removing or asynchronous loading if any.

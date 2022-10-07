@@ -167,10 +167,14 @@ export function ItemContextProvider({children, value}: Props) {
 			if (onItemMove) {
 				const tree = createImmutableTree(items as any, nestedKey!);
 
-				onItemMove(
+				const isMoved = onItemMove(
 					removeItemInternalProps((dragItem as Value).item),
 					tree.nodeByPath(indexes).parent
 				);
+
+				if (!isMoved) {
+					return;
+				}
 			}
 
 			reorder((dragItem as Value).item.indexes, indexes);

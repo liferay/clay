@@ -69,7 +69,7 @@ interface ITreeViewProps<T>
 	/**
 	 * Callback is called when an item is about to be moved elsewhere in the tree.
 	 */
-	onItemMove?: (item: T, parentItem: T) => void;
+	onItemMove?: (item: T, parentItem: T) => boolean;
 
 	/**
 	 * When a tree is very large, loading items (nodes) asynchronously is preferred to
