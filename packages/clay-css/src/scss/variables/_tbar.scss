@@ -326,7 +326,7 @@ $subnav-tbar-primary-component-link: map-deep-merge(
 		hover-color: $gray-900,
 		disabled-color: $gray-600,
 		disabled-cursor: $disabled-cursor,
-		disabled-opacity: $btn-disabled-opacity,
+		disabled-opacity: $component-disabled-opacity,
 		disabled-text-decoration: none,
 	),
 	$subnav-tbar-primary-component-link
@@ -337,7 +337,7 @@ $subnav-tbar-primary-component-label-close: map-deep-merge(
 	(
 		focus-color: inherit,
 		disabled-color: $gray-600,
-		disabled-opacity: $btn-disabled-opacity,
+		disabled-opacity: $component-disabled-opacity,
 	),
 	$subnav-tbar-primary-component-label-close
 );

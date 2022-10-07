@@ -20,7 +20,7 @@ $navigation-bar-base: map-deep-merge(
 				border-radius: 0px,
 				outline: 0,
 				focus: (
-					box-shadow: $btn-focus-box-shadow,
+					box-shadow: $component-focus-box-shadow,
 				),
 				disabled: (
 					box-shadow: none,
@@ -49,7 +49,7 @@ $navigation-bar-light: map-deep-merge(
 				),
 				disabled: (
 					color: $gray-600,
-					opacity: $btn-disabled-opacity,
+					opacity: $component-disabled-opacity,
 				),
 			),
 		),
@@ -72,7 +72,7 @@ $navigation-bar-light: map-deep-merge(
 								),
 								disabled: (
 									color: $gray-600,
-									opacity: $btn-disabled-opacity,
+									opacity: $component-disabled-opacity,
 								),
 							),
 						),
@@ -103,7 +103,7 @@ $navigation-bar-secondary: map-deep-merge(
 				),
 				disabled: (
 					color: $gray-400,
-					opacity: $btn-disabled-opacity,
+					opacity: $component-disabled-opacity,
 				),
 			),
 		),
@@ -126,7 +126,7 @@ $navigation-bar-secondary: map-deep-merge(
 								),
 								disabled: (
 									color: $gray-400,
-									opacity: $btn-disabled-opacity,
+									opacity: $component-disabled-opacity,
 								),
 							),
 						),

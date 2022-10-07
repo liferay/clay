@@ -264,12 +264,18 @@ $embed-responsive-aspect-ratios: join(
 	$embed-responsive-aspect-ratios
 );
 
+$component-transition: color 0.15s ease-in-out,
+	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+	box-shadow 0.15s ease-in-out !default;
+
 $component-focus-box-shadow: #{0 0 0 0.125rem $white, 0 0 0 0.25rem $primary-l1} !default;
 $component-focus-inset-box-shadow: #{inset 0 0 0 0.125rem $primary-l1,
 	inset 0 0 0 0.25rem $white} !default;
 
 $component-active-color: #fff !default;
 $component-active-bg: #0b5fff !default;
+
+$component-disabled-opacity: 0.4 !default;
 
 // Cursors
 

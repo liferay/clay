@@ -86,7 +86,7 @@ $cadmin-link-outline-padding-y: $cadmin-btn-padding-y-sm !default;
 
 // @deprecated as of v3.4.0 use the Sass map `$cadmin-link-outline` instead
 
-$cadmin-link-outline-transition: $cadmin-btn-transition !default;
+$cadmin-link-outline-transition: $cadmin-component-transition !default;
 
 $cadmin-link-outline: () !default;
 $cadmin-link-outline: map-deep-merge(
@@ -149,8 +149,8 @@ $cadmin-link-outline-primary: map-deep-merge(
 		disabled: (
 			background-color: transparent,
 			color: $cadmin-primary,
-			cursor: $cadmin-btn-disabled-cursor,
-			opacity: $cadmin-btn-disabled-opacity,
+			cursor: $cadmin-disabled-cursor,
+			opacity: $cadmin-component-disabled-opacity,
 		),
 	),
 	$cadmin-link-outline-primary
@@ -176,8 +176,8 @@ $cadmin-link-outline-secondary: map-deep-merge(
 		disabled: (
 			background-color: transparent,
 			color: $cadmin-secondary,
-			cursor: $cadmin-btn-disabled-cursor,
-			opacity: $cadmin-btn-disabled-opacity,
+			cursor: $cadmin-disabled-cursor,
+			opacity: $cadmin-component-disabled-opacity,
 		),
 	),
 	$cadmin-link-outline-secondary
@@ -307,7 +307,7 @@ $cadmin-component-action: map-deep-merge(
 		justify-content: center,
 		overflow: hidden,
 		padding: 0,
-		transition: $cadmin-btn-transition,
+		transition: $cadmin-component-transition,
 		vertical-align: middle,
 		width: map-get($cadmin-link-monospaced, width),
 		hover: (
@@ -329,7 +329,7 @@ $cadmin-component-action: map-deep-merge(
 			box-shadow: none,
 			color: $cadmin-secondary,
 			cursor: $cadmin-disabled-cursor,
-			opacity: $cadmin-btn-disabled-opacity,
+			opacity: $cadmin-component-disabled-opacity,
 			active: (
 				pointer-events: none,
 			),

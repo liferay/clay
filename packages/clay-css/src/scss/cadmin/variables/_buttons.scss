@@ -9,9 +9,7 @@ $cadmin-btn-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-btn-line-height: $cadmin-input-btn-line-height !default;
 $cadmin-btn-padding-x: 15px !default; // 15px
 $cadmin-btn-padding-y: 7px !default; // 7px
-$cadmin-btn-transition: color 0.15s ease-in-out,
-	background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-	box-shadow 0.15s ease-in-out !default;
+$cadmin-btn-transition: $cadmin-component-transition !default;
 $cadmin-btn-white-space: null !default;
 
 $cadmin-btn-font-size-mobile: null !default;
@@ -24,7 +22,7 @@ $cadmin-btn-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 $cadmin-btn-active-box-shadow: null !default;
 
 $cadmin-btn-disabled-cursor: $cadmin-disabled-cursor !default;
-$cadmin-btn-disabled-opacity: 0.4 !default;
+$cadmin-btn-disabled-opacity: $cadmin-component-disabled-opacity !default;
 
 $cadmin-btn-inline-item-font-size: 16px !default; // 16px
 

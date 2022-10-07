@@ -93,7 +93,7 @@ $clay-color-dropdown-menu-component-action: map-deep-merge(
 	(
 		hover-bg: transparent,
 		hover-color: $black,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $component-focus-box-shadow,
 		focus-color: $black,
 	),
 	$clay-color-dropdown-menu-component-action
@@ -170,7 +170,7 @@ $clay-color-pointer: map-deep-merge(
 		position: absolute,
 		transition: box-shadow 0.15s ease-in-out,
 		width: 0.875rem,
-		focus-box-shadow: $btn-focus-box-shadow,
+		focus-box-shadow: $component-focus-box-shadow,
 		focus-outline: 0,
 	),
 	$clay-color-pointer

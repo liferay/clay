@@ -9,8 +9,7 @@ $btn-font-weight: $font-weight-normal !default;
 $btn-line-height: $input-btn-line-height !default;
 $btn-padding-x: $input-btn-padding-x !default;
 $btn-padding-y: $input-btn-padding-y !default;
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-transition: $component-transition !default;
 $btn-white-space: null !default;
 
 $btn-font-size-mobile: null !default;
@@ -23,7 +22,7 @@ $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
 
 $btn-disabled-cursor: $disabled-cursor !default;
-$btn-disabled-opacity: 0.65 !default;
+$btn-disabled-opacity: $component-disabled-opacity !default;
 
 $btn-inline-item-font-size: null !default;
 

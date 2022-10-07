@@ -14,13 +14,36 @@ $alert-padding-y: 0.75rem !default;
 $alert-btn: () !default;
 $alert-btn: map-deep-merge(
 	(
-		border-radius: $btn-border-radius-sm,
-		font-size: $btn-font-size-sm,
-		line-height: $btn-line-height-sm,
-		padding-bottom: $btn-padding-y-sm,
-		padding-left: $btn-padding-x-sm,
-		padding-right: $btn-padding-x-sm,
-		padding-top: $btn-padding-y-sm,
+		border-radius:
+			if(
+				variable-exists(btn-sm),
+				map-get($btn-sm, border-radius),
+				$border-radius-sm
+			),
+		font-size:
+			if(
+				variable-exists(btn-sm),
+				map-get($btn-sm, font-size),
+				$font-size-sm
+			),
+		line-height:
+			if(
+				variable-exists(btn-sm),
+				map-get($btn-sm, line-height),
+				$line-height-sm
+			),
+		padding-bottom:
+			if(
+				variable-exists(btn-sm),
+				map-get($btn-sm, padding-bottom),
+				0.25rem
+			),
+		padding-left:
+			if(variable-exists(btn-sm), map-get($btn-sm, padding-left), 0.5rem),
+		padding-right:
+			if(variable-exists(btn-sm), map-get($btn-sm, padding-right), 0.5rem),
+		padding-top:
+			if(variable-exists(btn-sm), map-get($btn-sm, padding-top), 0.25rem),
 	),
 	$alert-btn
 );

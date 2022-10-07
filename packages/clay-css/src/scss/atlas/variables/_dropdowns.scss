@@ -247,9 +247,13 @@ $dropdown-action-toggle-font-size: 1rem !default; // 16px
 
 /// @deprecated as of v3.x use map $dropdown-action instead
 
-$dropdown-action-toggle-disabled-opacity: $btn-disabled-opacity !default;
+$dropdown-action-toggle-disabled-opacity: $component-disabled-opacity !default;
 
-$dropdown-action-toggle-size: $btn-monospaced-size-sm !default;
+$dropdown-action-toggle-size: if(
+	variable-exists(btn-monospaced-size-sm),
+	$btn-monospaced-size-sm,
+	2rem
+) !default;
 
 $dropdown-action: () !default;
 $dropdown-action: map-deep-merge(

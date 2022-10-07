@@ -68,7 +68,7 @@ $nav-btn-margin-y: calc(
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 
-$nav-btn-padding-x: $btn-padding-x-sm !default;
+$nav-btn-padding-x: 0.5rem !default;
 
 /// @deprecated after v3.4.0 use the Sass map `$nav-btn` instead
 
@@ -98,7 +98,14 @@ $nav-btn: map-deep-merge(
 			margin-bottom: 0,
 			margin-left: math-sign($nav-btn-padding-x),
 			margin-right: math-sign($nav-btn-padding-x),
-			margin-top: math-sign($btn-border-width),
+			margin-top:
+				math-sign(
+					if(
+						variable-exists(btn-border-width),
+						$btn-border-width,
+						$border-width
+					)
+				),
 		),
 		btn-link: (
 			margin-left: 0,
@@ -118,8 +125,22 @@ $nav-btn-monospaced: map-deep-merge(
 	(
 		padding: 0,
 		c-inner: (
-			margin-left: math-sign($btn-border-width),
-			margin-right: math-sign($btn-border-width),
+			margin-left:
+				math-sign(
+					if(
+						variable-exists(btn-border-width),
+						$btn-border-width,
+						$border-width
+					)
+				),
+			margin-right:
+				math-sign(
+					if(
+						variable-exists(btn-border-width),
+						$btn-border-width,
+						$border-width
+					)
+				),
 		),
 	),
 	$nav-btn-monospaced

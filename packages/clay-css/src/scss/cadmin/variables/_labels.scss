@@ -72,7 +72,7 @@ $cadmin-label: map-deep-merge(
 				text-decoration: $cadmin-label-anchor-hover-text-decoration,
 			),
 			focus: (
-				box-shadow: $cadmin-btn-focus-box-shadow,
+				box-shadow: $cadmin-component-focus-box-shadow,
 				text-decoration: $cadmin-label-anchor-hover-text-decoration,
 			),
 		),
@@ -145,7 +145,7 @@ $cadmin-label-close: map-deep-merge(
 		),
 		disabled: (
 			color: inherit,
-			opacity: $cadmin-btn-disabled-opacity,
+			opacity: $cadmin-component-disabled-opacity,
 		),
 	),
 	$cadmin-label-close

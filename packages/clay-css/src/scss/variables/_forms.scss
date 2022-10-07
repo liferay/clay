@@ -497,8 +497,10 @@ $form-control-tag-group-btn: map-deep-merge(
 		margin-bottom: $form-control-inset-margin-y,
 		margin-top: $form-control-inset-margin-y,
 		padding-bottom: 0,
-		padding-left: $btn-padding-x-sm,
-		padding-right: $btn-padding-x-sm,
+		padding-left:
+			if(variable-exists(btn-padding-x-sm), $btn-padding-x-sm, 0.5rem),
+		padding-right:
+			if(variable-exists(btn-padding-x-sm), $btn-padding-x-sm, 0.5rem),
 		padding-top: 0,
 	),
 	$form-control-tag-group-btn
@@ -1531,24 +1533,77 @@ $input-group-lg-item-btn: () !default; // .input-group-lg .input-group-item
 $input-group-lg-item-btn: map-deep-merge(
 	(
 		breakpoint-down: null,
-		font-size: $btn-font-size-lg,
-		line-height: map-get($btn-lg, line-height),
-		padding-bottom: map-get($btn-lg, padding-bottom),
-		padding-left: map-get($btn-lg, padding-left),
-		padding-right: map-get($btn-lg, padding-right),
-		padding-top: map-get($btn-lg, padding-top),
+		font-size:
+			if(
+				variable-exists(btn-lg),
+				map-get($btn-lg, font-size),
+				$font-size-lg
+			),
+		line-height:
+			if(
+				variable-exists(btn-lg),
+				map-get($btn-lg, line-height),
+				$line-height-lg
+			),
+		padding-bottom:
+			if(
+				variable-exists(btn-lg),
+				map-get($btn-lg, padding-bottom),
+				0.375rem
+			),
+		padding-left:
+			if(variable-exists(btn-lg), map-get($btn-lg, padding-left), 1rem),
+		padding-right:
+			if(variable-exists(btn-lg), map-get($btn-lg, padding-right), 1rem),
+		padding-top:
+			if(variable-exists(btn-lg), map-get($btn-lg, padding-top), 0.375rem),
 		inline-item: (
-			font-size: $btn-inline-item-font-size-lg,
+			font-size:
+				if(
+					variable-exists(btn-lg),
+					map-deep-get($btn-lg, inline-item, font-size),
+					null
+				),
 		),
 		btn-section: (
-			font-size: $btn-section-font-size-lg,
+			font-size:
+				if(
+					variable-exists(btn-lg),
+					map-deep-get($btn-lg, btn-section, font-size),
+					0.8125rem
+				),
 		),
 		mobile: (
-			font-size: $btn-font-size-lg-mobile,
-			padding-bottom: $btn-padding-y-lg-mobile,
-			padding-left: $btn-padding-x-lg-mobile,
-			padding-right: $btn-padding-x-lg-mobile,
-			padding-top: $btn-padding-y-lg-mobile,
+			font-size:
+				if(
+					variable-exists(btn-lg),
+					map-deep-get($btn-lg, mobile, font-size),
+					null
+				),
+			padding-bottom:
+				if(
+					variable-exists(btn-lg),
+					map-deep-get($btn-lg, mobile, padding-bottom),
+					null
+				),
+			padding-left:
+				if(
+					variable-exists(btn-lg),
+					map-deep-get($btn-lg, mobile, padding-left),
+					null
+				),
+			padding-right:
+				if(
+					variable-exists(btn-lg),
+					map-deep-get($btn-lg, mobile, padding-right),
+					null
+				),
+			padding-top:
+				if(
+					variable-exists(btn-lg),
+					map-deep-get($btn-lg, mobile, padding-top),
+					null
+				),
 		),
 	),
 	$input-group-lg-item-btn
@@ -1558,16 +1613,56 @@ $input-group-lg-item-btn-monospaced: () !default;
 $input-group-lg-item-btn-monospaced: map-deep-merge(
 	(
 		breakpoint-down: null,
-		height: $btn-monospaced-size-lg,
+		height:
+			if(
+				variable-exists(btn-monospaced-lg),
+				map-get($btn-monospaced-lg, height),
+				3rem
+			),
 		line-height: 1,
-		padding-bottom: $btn-monospaced-padding-y-lg,
-		padding-left: $btn-monospaced-padding-x-lg,
-		padding-right: $btn-monospaced-padding-x-lg,
-		padding-top: $btn-monospaced-padding-y-lg,
-		width: $btn-monospaced-size-lg,
+		padding-bottom:
+			if(
+				variable-exists(btn-monospaced-lg),
+				map-get($btn-monospaced-lg, padding-bottom),
+				null
+			),
+		padding-left:
+			if(
+				variable-exists(btn-monospaced-lg),
+				map-get($btn-monospaced-lg, padding-left),
+				null
+			),
+		padding-right:
+			if(
+				variable-exists(btn-monospaced-lg),
+				map-get($btn-monospaced-lg, padding-right),
+				null
+			),
+		padding-top:
+			if(
+				variable-exists(btn-monospaced-lg),
+				map-get($btn-monospaced-lg, padding-top),
+				null
+			),
+		width:
+			if(
+				variable-exists(btn-monospaced-lg),
+				map-get($btn-monospaced-lg, width),
+				3rem
+			),
 		mobile: (
-			height: $btn-monospaced-size-lg-mobile,
-			width: $btn-monospaced-size-lg-mobile,
+			height:
+				if(
+					variable-exists(btn-monospaced-lg),
+					map-deep-get($btn-monospaced-lg, mobile, height),
+					null
+				),
+			width:
+				if(
+					variable-exists(btn-monospaced-lg),
+					map-deep-get($btn-monospaced-lg, mobile, width),
+					null
+				),
 		),
 	),
 	$input-group-lg-item-btn-monospaced
@@ -1683,24 +1778,77 @@ $input-group-addon-padding-y-sm: null !default;
 $input-group-sm-item-btn: () !default;
 $input-group-sm-item-btn: map-deep-merge(
 	(
-		font-size: $btn-font-size-sm,
-		line-height: map-get($btn-sm, line-height),
-		padding-bottom: map-get($btn-sm, padding-bottom),
-		padding-left: map-get($btn-sm, padding-left),
-		padding-right: map-get($btn-sm, padding-right),
-		padding-top: map-get($btn-sm, padding-top),
+		font-size:
+			if(
+				variable-exists(btn-sm),
+				map-get($btn-sm, font-size),
+				$font-size-sm
+			),
+		line-height:
+			if(
+				variable-exists(btn-sm),
+				map-get($btn-sm, line-height),
+				$line-height-sm
+			),
+		padding-bottom:
+			if(
+				variable-exists(btn-sm),
+				map-get($btn-sm, padding-bottom),
+				0.25rem
+			),
+		padding-left:
+			if(variable-exists(btn-sm), map-get($btn-sm, padding-left), 0.5rem),
+		padding-right:
+			if(variable-exists(btn-sm), map-get($btn-sm, padding-right), 0.5rem),
+		padding-top:
+			if(variable-exists(btn-sm), map-get($btn-sm, padding-top), 0.25rem),
 		inline-item: (
-			font-size: $btn-inline-item-font-size-sm,
+			font-size:
+				if(
+					variable-exists(btn-sm),
+					map-deep-get($btn-sm, inline-item, font-size),
+					null
+				),
 		),
 		btn-section: (
-			font-size: $btn-section-font-size-sm,
+			font-size:
+				if(
+					variable-exists(btn-sm),
+					map-deep-get($btn-sm, btn-section, font-size),
+					0.5625rem
+				),
 		),
 		mobile: (
-			font-size: $btn-font-size-sm-mobile,
-			padding-bottom: $btn-padding-y-sm-mobile,
-			padding-left: $btn-padding-x-sm-mobile,
-			padding-right: $btn-padding-x-sm-mobile,
-			padding-top: $btn-padding-y-sm-mobile,
+			font-size:
+				if(
+					variable-exists(btn-sm),
+					map-deep-get($btn-sm, mobile, font-size),
+					null
+				),
+			padding-bottom:
+				if(
+					variable-exists(btn-sm),
+					map-deep-get($btn-sm, mobile, padding-bottom),
+					null
+				),
+			padding-left:
+				if(
+					variable-exists(btn-sm),
+					map-deep-get($btn-sm, mobile, padding-left),
+					null
+				),
+			padding-right:
+				if(
+					variable-exists(btn-sm),
+					map-deep-get($btn-sm, mobile, padding-right),
+					null
+				),
+			padding-top:
+				if(
+					variable-exists(btn-sm),
+					map-deep-get($btn-sm, mobile, padding-top),
+					null
+				),
 		),
 	),
 	$input-group-sm-item-btn
@@ -1709,16 +1857,56 @@ $input-group-sm-item-btn: map-deep-merge(
 $input-group-sm-item-btn-monospaced: () !default;
 $input-group-sm-item-btn-monospaced: map-deep-merge(
 	(
-		height: $btn-monospaced-size-sm,
+		height:
+			if(
+				variable-exists(btn-monospaced-sm),
+				map-get($btn-monospaced-sm, height),
+				1.9375rem
+			),
 		line-height: 1,
-		padding-bottom: $btn-monospaced-padding-y-sm,
-		padding-left: $btn-monospaced-padding-x-sm,
-		padding-right: $btn-monospaced-padding-x-sm,
-		padding-top: $btn-monospaced-padding-y-sm,
-		width: $btn-monospaced-size-sm,
+		padding-bottom:
+			if(
+				variable-exists(btn-monospaced-sm),
+				map-get($btn-monospaced-sm, padding-bottom),
+				null
+			),
+		padding-left:
+			if(
+				variable-exists(btn-monospaced-sm),
+				map-get($btn-monospaced-sm, padding-left),
+				null
+			),
+		padding-right:
+			if(
+				variable-exists(btn-monospaced-sm),
+				map-get($btn-monospaced-sm, padding-right),
+				null
+			),
+		padding-top:
+			if(
+				variable-exists(btn-monospaced-sm),
+				map-get($btn-monospaced-sm, padding-top),
+				null
+			),
+		width:
+			if(
+				variable-exists(btn-monospaced-sm),
+				map-get($btn-monospaced-sm, width),
+				1.9375rem
+			),
 		mobile: (
-			height: $btn-monospaced-size-sm-mobile,
-			width: $btn-monospaced-size-sm-mobile,
+			height:
+				if(
+					variable-exists(btn-monospaced-sm),
+					map-deep-get($btn-monospaced-sm, mobile, height),
+					null
+				),
+			width:
+				if(
+					variable-exists(btn-monospaced-sm),
+					map-deep-get($btn-monospaced-sm, mobile, width),
+					null
+				),
 		),
 	),
 	$input-group-sm-item-btn-monospaced

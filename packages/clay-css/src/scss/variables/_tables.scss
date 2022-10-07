@@ -207,7 +207,12 @@ $table-action-link: () !default;
 $table-action-link: map-deep-merge(
 	(
 		align-items: center,
-		border-radius: $btn-border-radius,
+		border-radius:
+			if(
+				variable-exists(btn-border-radius),
+				$btn-border-radius,
+				$border-radius
+			),
 		display: inline-flex,
 		height: 2rem,
 		justify-content: center,

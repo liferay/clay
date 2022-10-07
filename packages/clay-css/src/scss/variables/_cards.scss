@@ -679,7 +679,7 @@ $card-interactive: map-deep-merge(
 	(
 		cursor: $link-cursor,
 		outline: 0,
-		transition: $btn-transition,
+		transition: $component-transition,
 		hover: (
 			background-color: $gray-100,
 			text-decoration: none,

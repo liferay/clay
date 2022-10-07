@@ -840,7 +840,11 @@ $dropdown-action-toggle-disabled-cursor: $disabled-cursor !default;
 
 $dropdown-action-toggle-disabled-opacity: 0.65 !default;
 
-$dropdown-action-toggle-size: $btn-monospaced-size-sm !default;
+$dropdown-action-toggle-size: if(
+	variable-exists(btn-monospaced-size-sm),
+	$btn-monospaced-size-sm,
+	1.9375rem
+) !default;
 
 $dropdown-action: () !default;
 $dropdown-action: map-deep-merge(
@@ -852,7 +856,7 @@ $dropdown-action: map-deep-merge(
 			align-items: center,
 			border-radius:
 				clay-enable-rounded($dropdown-action-toggle-border-radius),
-			cursor: $btn-cursor,
+			cursor: $link-cursor,
 			display: flex,
 			font-size: inherit,
 			font-weight: inherit,

@@ -249,7 +249,7 @@ $cadmin-table-action-link: map-deep-merge(
 		font-size: 16px,
 		height: 32px,
 		justify-content: center,
-		transition: $cadmin-btn-transition,
+		transition: $cadmin-component-transition,
 		vertical-align: middle,
 		width: 32px,
 		hover: (
@@ -687,7 +687,7 @@ $cadmin-table-list-action-link: map-deep-merge(
 		font-size: 16px,
 		height: 32px,
 		justify-content: center,
-		transition: $cadmin-btn-transition,
+		transition: $cadmin-component-transition,
 		vertical-align: middle,
 		width: 32px,
 		hover: (

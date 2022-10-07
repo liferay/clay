@@ -9,7 +9,7 @@ $cadmin-management-bar-base: map-deep-merge(
 				outline: 0,
 				transition: box-shadow 0.15s ease-in-out,
 				focus: (
-					box-shadow: $cadmin-btn-focus-box-shadow,
+					box-shadow: $cadmin-component-focus-box-shadow,
 				),
 				disabled: (
 					box-shadow: none,
