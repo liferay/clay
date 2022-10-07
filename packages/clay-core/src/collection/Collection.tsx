@@ -190,7 +190,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 				width: '100%',
 			}}
 		>
-			{virtualizer.getVirtualItems().map(virtual => {
+			{virtualizer.getVirtualItems().map((virtual) => {
 				const item = items[virtual.index];
 
 				// Virtual item to loading

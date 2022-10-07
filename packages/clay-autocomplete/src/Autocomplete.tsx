@@ -14,7 +14,7 @@ import {
 	useInternalState,
 } from '@clayui/shared';
 import {hideOthers} from 'aria-hidden';
-import React, {useCallback, useEffect, useMemo, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {ICollectionProps} from '@clayui/core';
 
@@ -71,12 +71,6 @@ export interface IProps<T>
 	filterKey?: string;
 
 	/**
-	 * The current loading state of Autocomplete. Determines whether or not
-	 * the loading indicator should be shown.
-	 */
-	isLoading?: boolean;
-
-	/**
 	 * Property to set the initial value of `items` (uncontrolled).
 	 */
 	defaultItems?: Array<T>;
@@ -102,6 +96,12 @@ export interface IProps<T>
 	onItemsChange?: InternalDispatch<Array<T>>;
 
 	/**
+	 * Callback is called when more items need to be loaded when the scroll
+	 * reaches the bottom.
+	 */
+	onLoadMore?: () => Promise<any> | null;
+
+	/**
 	 * The current value of the input (controlled).
 	 */
 	value?: string;
@@ -110,6 +110,12 @@ export interface IProps<T>
 	 * The interaction required to display the menu.
 	 */
 	menuTrigger?: 'input' | 'focus';
+
+	/**
+	 * The current state of Autocomplete current loading. Determines whether the
+	 * loading indicator should be shown or not.
+	 */
+	loadingState?: number;
 }
 
 export function Autocomplete<T extends Record<string, any>>({
@@ -121,13 +127,14 @@ export function Autocomplete<T extends Record<string, any>>({
 	defaultItems,
 	defaultValue,
 	filterKey,
-	isLoading,
 	items: externalItems,
+	loadingState,
 	menuTrigger = 'input',
 	messages = {loading: '', notFound: ''},
 	onActiveChange,
 	onChange,
 	onItemsChange,
+	onLoadMore,
 	value: externalValue,
 	virtualize = true,
 	...otherProps
@@ -137,7 +144,13 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	const currentItemSelected = useRef<string>('');
 
+	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
+
 	const debouncedLoadingChange = useDebounce(isLoading, 500);
+
+	const cursorsRef = useRef<Map<string, boolean>>(new Map());
+
+	const [infiniteScroll, setInfiniteScroll] = useState(Boolean(onLoadMore));
 
 	const [items, , isItemsUncontrolled] = useInternalState({
 		defaultName: 'defaultItems',
@@ -218,6 +231,12 @@ export function Autocomplete<T extends Record<string, any>>({
 			setValue(currentItemSelected.current);
 		}
 	}, [active]);
+
+	useEffect(() => {
+		setInfiniteScroll(
+			Boolean(onLoadMore) && !cursorsRef.current.has(value)
+		);
+	}, [value]);
 
 	const filterFn = useCallback(
 		(itemValue: string) => itemValue.match(new RegExp(value, 'i')) !== null,
@@ -312,6 +331,8 @@ export function Autocomplete<T extends Record<string, any>>({
 					estimateSize={37}
 					filter={isNotFound ? undefined : filterFn}
 					filterKey="value"
+					infiniteScroll={infiniteScroll}
+					isLoading={loadingState === 1}
 					itemContainer={({children}: ItemProps<any>) => {
 						const itemValue =
 							children.props.value ?? children.props.children;
@@ -339,6 +360,15 @@ export function Autocomplete<T extends Record<string, any>>({
 						}) as React.ReactElement;
 					}}
 					items={filteredItems}
+					onBottom={() => {
+						if (onLoadMore) {
+							const hasItems = onLoadMore();
+
+							if (hasItems === null) {
+								cursorsRef.current.set(value, true);
+							}
+						}
+					}}
 					parentRef={menuRef}
 					role="listbox"
 					virtualize={virtualize}
