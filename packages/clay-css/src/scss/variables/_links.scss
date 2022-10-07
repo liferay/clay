@@ -94,7 +94,12 @@ $link-outline: map-deep-merge(
 		hover: (
 			text-decoration: none,
 		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 		disabled: (
+			box-shadow: none,
 			active: (
 				pointer-events: none,
 			),
@@ -115,8 +120,6 @@ $link-outline-primary: map-deep-merge(
 			background-color: $primary,
 			color: $white,
 		),
-		btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.5),
-		btn-focus-outline: 0,
 		active: (
 			background-color: $primary,
 			color: $white,
@@ -140,8 +143,6 @@ $link-outline-secondary: map-deep-merge(
 			background-color: $secondary,
 			color: $white,
 		),
-		btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
-		btn-focus-outline: 0,
 		active: (
 			background-color: $secondary,
 			color: $white,
@@ -278,14 +279,17 @@ $component-action: map-deep-merge(
 			background-color: $secondary,
 			color: $white,
 		),
-		btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($secondary, 0.5),
-		btn-focus-outline: 0,
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 		active: (
 			background-color: $secondary,
 			color: $white,
 		),
 		disabled: (
 			background-color: transparent,
+			box-shadow: none,
 			color: $secondary,
 			cursor: $disabled-cursor,
 			opacity: $btn-disabled-opacity,
