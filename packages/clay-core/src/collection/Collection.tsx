@@ -4,7 +4,7 @@
  */
 
 import {useVirtualizer} from '@tanstack/react-virtual';
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 export type ChildrenFunction<T, P> = P extends Array<unknown>
 	? (item: T, ...args: P) => React.ReactElement
@@ -46,6 +46,16 @@ interface IProps<P, K>
 	exclude?: Set<K>;
 
 	/**
+	 * Flag to enable infinite scroll.
+	 */
+	infiniteScroll?: boolean;
+
+	/**
+	 * Flag if a request is in progress.
+	 */
+	isLoading?: boolean;
+
+	/**
 	 * Test method for filtering elements in children (static only).
 	 */
 	filter?: (value: string) => boolean;
@@ -61,6 +71,12 @@ interface IProps<P, K>
 	 * collection.
 	 */
 	parentRef: React.RefObject<HTMLElement>;
+
+	/**
+	 * Callback called when the last element of the list is rendered in
+	 * virtualization and infiniteScroll is enabled.
+	 */
+	onBottom?: () => void;
 
 	/**
 	 * Set for the parent's key to create the unique key of the list items, if
@@ -131,18 +147,39 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	children,
 	estimateSize = 37,
 	exclude,
+	infiniteScroll,
+	isLoading,
 	itemContainer: ItemContainer,
 	items,
+	onBottom,
 	parentKey,
 	parentRef,
 	publicApi,
 	...otherProps
 }: VirtualProps<T, P, K>) {
+	const previousLengthRef = useRef(items.length);
+
 	const virtualizer = useVirtualizer({
 		count: items.length,
 		estimateSize: () => estimateSize,
 		getScrollElement: () => parentRef.current,
 	});
+
+	const callbackCaptureRef = useRef<boolean>(false);
+
+	useEffect(() => {
+		if (items.length < previousLengthRef.current) {
+			virtualizer.scrollToIndex(0, {smoothScroll: false});
+		}
+
+		previousLengthRef.current = items.length;
+	}, [items.length]);
+
+	useEffect(() => {
+		if (!isLoading) {
+			callbackCaptureRef.current = false;
+		}
+	}, [isLoading]);
 
 	return (
 		<Container
@@ -153,8 +190,22 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 				width: '100%',
 			}}
 		>
-			{virtualizer.getVirtualItems().map((virtual) => {
+			{virtualizer.getVirtualItems().map(virtual => {
 				const item = items[virtual.index];
+
+				// Virtual item to loading
+				if (
+					infiniteScroll &&
+					items.length !== 0 &&
+					virtual.index === items.length - 1 &&
+					onBottom &&
+					!callbackCaptureRef.current
+				) {
+					callbackCaptureRef.current = true;
+
+					onBottom();
+				}
+
 				const publicItem = exclude ? excludeProps(item, exclude) : item;
 
 				const child: ChildElement = Array.isArray(publicApi)
@@ -218,8 +269,11 @@ export function Collection<
 	exclude,
 	filter,
 	filterKey,
+	infiniteScroll,
+	isLoading,
 	itemContainer: ItemContainer,
 	items,
+	onBottom,
 	parentKey,
 	parentRef,
 	publicApi,
@@ -258,8 +312,11 @@ export function Collection<
 				{...otherProps}
 				as={as}
 				estimateSize={estimateSize}
+				infiniteScroll={infiniteScroll}
+				isLoading={isLoading}
 				itemContainer={ItemContainer}
 				items={items}
+				onBottom={onBottom}
 				parentKey={parentKey}
 				parentRef={parentRef}
 				publicApi={publicApi}
