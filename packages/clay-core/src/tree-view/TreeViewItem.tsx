@@ -565,7 +565,8 @@ export function TreeViewItemStack({
 	const nestedChildren =
 		nestedKey && (item[nestedKey] as Array<Record<string, any>>);
 
-	const hasChildren = nestedChildren && nestedChildren.length > 0;
+	const hasChildren =
+		(nestedChildren && nestedChildren.length > 0) || item.hasChildren;
 
 	return (
 		<Layout.ContentRow {...otherProps}>
