@@ -46,6 +46,7 @@ function ClayTabs({
 }: IProps) {
 	return (
 		<ul
+			{...otherProps}
 			className={classNames(
 				'nav',
 				{'nav-justified': justified},
@@ -62,7 +63,6 @@ function ClayTabs({
 				className
 			)}
 			role="tablist"
-			{...otherProps}
 		>
 			{children}
 		</ul>
