@@ -140,8 +140,8 @@ export const AsyncFilter = () => {
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							id="clay-autocomplete-1"
-							isLoading={networkStatus < NetworkStatus.Unused}
 							items={resource?.results ?? []}
+							loadingState={networkStatus}
 							messages={{
 								loading: 'Loading...',
 								notFound: 'No results found',
@@ -201,7 +201,6 @@ export const AsyncFilterPaginated = () => {
 							aria-labelledby="clay-autocomplete-label-1"
 							id="clay-autocomplete-1"
 							items={resource ?? []}
-							loadMore={loadMore}
 							loadingState={networkStatus}
 							messages={{
 								loading: 'Loading...',
@@ -209,6 +208,7 @@ export const AsyncFilterPaginated = () => {
 							}}
 							onChange={setValue}
 							onItemsChange={() => {}}
+							onLoadMore={loadMore}
 							placeholder="Enter a name"
 							value={value}
 						>
