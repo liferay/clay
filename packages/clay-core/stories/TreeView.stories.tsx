@@ -1063,7 +1063,7 @@ export const AsyncLoad = () => (
 				</TreeView.ItemStack>
 				<TreeView.Group items={item.children}>
 					{(item) => (
-						<TreeView.Item>
+						<TreeView.Item expandable>
 							<Icon symbol="folder" />
 							{item.name}
 						</TreeView.Item>
