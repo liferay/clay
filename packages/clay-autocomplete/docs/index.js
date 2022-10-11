@@ -5,111 +5,105 @@
 
 import Editor from '$clayui.com/src/components/Editor';
 import ClayAutocomplete from '@clayui/autocomplete';
-import ClayDataProvider, {useResource} from '@clayui/data-provider';
-import ClayDropDown from '@clayui/drop-down';
+import ClayForm from '@clayui/form';
 import React from 'react';
 
-const autocompleteWithLoadingImportsCode = `import ClayAutocomplete from '@clayui/autocomplete';`;
+const searchAutocompleteImports = `import ClayAutocomplete from '@clayui/autocomplete';`;
 
-const autocompleteWithLoadingStateCode = `const Component = () => {
-	const [loading] = useState(true);
-	const [value, setValue] = useState('');
-
+const searchAutocompleteCode = `const SearchAutocomplete = () => {
 	return (
-		<ClayAutocomplete>
-			<ClayAutocomplete.Input
-				onChange={event => setValue(event.target.value)}
-				value={value}
-			/>
-			{loading && <ClayAutocomplete.LoadingIndicator />}
-		</ClayAutocomplete>
-	);
-}
-
-render(<Component />)`;
-
-const AutocompleteWithLoadingState = () => {
-	const scope = {ClayAutocomplete};
-
-	return (
-		<Editor
-			code={autocompleteWithLoadingStateCode}
-			imports={autocompleteWithLoadingImportsCode}
-			scope={scope}
-		/>
-	);
-};
-
-const autocompleteWithDataProviderImportsCode = `
-import ClayAutocomplete from '@clayui/autocomplete';
-import {useResource} from '@clayui/data-provider';
-import ClayDropDown from '@clayui/drop-down';`;
-
-const autocompleteWithDataProviderCode = `const Component = () => {
-	const [value, setValue] = useState('');
-	const [networkStatus, setNetworkStatus] = useState(4);
-	const {resource} = useResource({
-		fetchPolicy: 'cache-first',
-		link: 'https://rickandmortyapi.com/api/character/',
-		onNetworkStatusChange: setNetworkStatus,
-		variables: {name: value},
-	});
-
-	const initialLoading = networkStatus === 1;
-	const loading = networkStatus < 4;
-	const error = networkStatus === 5;
-
-	return (
-		<ClayAutocomplete>
-			<ClayAutocomplete.Input
-				onChange={event => setValue(event.target.value)}
-				placeholder="Type here"
-				value={value}
-			/>
-			<ClayAutocomplete.DropDown
-				active={(!!resource && !!value) || initialLoading}
+		<ClayForm.Group>
+			<label
+				htmlFor="clay-autocomplete-1"
+				id="clay-autocomplete-label-1"
 			>
-				<ClayDropDown.ItemList>
-					{(error || (resource && resource.error)) && (
-						<ClayDropDown.Item className="disabled">
-							{'No Results Found'}
-						</ClayDropDown.Item>
-					)}
-					{!error &&
-						resource &&
-						resource.results &&
-						resource.results.map((item) => (
-							<ClayAutocomplete.Item
-								key={item.id}
-								match={value}
-								value={item.name}
-							/>
-						))}
-				</ClayDropDown.ItemList>
-			</ClayAutocomplete.DropDown>
-			{loading && <ClayAutocomplete.LoadingIndicator />}
-		</ClayAutocomplete>
+				Numbers (one-five)
+			</label>
+			<ClayAutocomplete
+				aria-labelledby="clay-autocomplete-label-1"
+				id="clay-autocomplete-1"
+				defaultItems={['one', 'two', 'three', 'four', 'five']}
+				messages={{
+					loading: 'Loading...',
+					notFound: 'No results found',
+				}}
+				placeholder="Enter a number from One to Five"
+			>
+				{(item) => (
+					<ClayAutocomplete.Item key={item}>
+						{item}
+					</ClayAutocomplete.Item>
+				)}
+			</ClayAutocomplete>
+		</ClayForm.Group>
 	);
-}
+};
 
-render(<Component />)`;
+render(<SearchAutocomplete />)`;
 
-const AutocompleteWithDataProvider = () => {
-	const scope = {
-		ClayAutocomplete,
-		ClayDataProvider,
-		ClayDropDown,
-
-		useResource,
-	};
+const SearchAutocomplete = () => {
+	const scope = {ClayAutocomplete, ClayForm};
 
 	return (
 		<Editor
-			code={autocompleteWithDataProviderCode}
-			imports={autocompleteWithDataProviderImportsCode}
+			code={searchAutocompleteCode}
+			imports={searchAutocompleteImports}
 			scope={scope}
 		/>
 	);
 };
 
-export {AutocompleteWithLoadingState, AutocompleteWithDataProvider};
+const menuTriggerAutocompleteImports = `import ClayAutocomplete from '@clayui/autocomplete';`;
+
+const menuTriggerAutocompleteCode = `const SearchAutocomplete = () => {
+	return (
+		<ClayForm.Group>
+			<label
+				htmlFor="clay-autocomplete-2"
+				id="clay-autocomplete-label-2"
+			>
+				Fruits
+			</label>
+			<ClayAutocomplete
+				aria-labelledby="clay-autocomplete-label-2"
+				id="clay-autocomplete-2"
+				defaultItems={[
+					'Apples',
+					'Bananas',
+					'Cantaloupe',
+					'Mangos',
+					'Oranges',
+					'Strawberries',
+				]}
+				messages={{
+					loading: 'Loading...',
+					notFound: 'No results found',
+				}}
+				placeholder="Enter the name of a fruit"
+				menuTrigger="focus"
+			>
+				{(item) => (
+					<ClayAutocomplete.Item key={item}>
+						{item}
+					</ClayAutocomplete.Item>
+				)}
+			</ClayAutocomplete>
+		</ClayForm.Group>
+	);
+};
+
+render(<SearchAutocomplete />)`;
+
+const MenuTriggerAutocomplete = () => {
+	const scope = {ClayAutocomplete, ClayForm};
+
+	return (
+		<Editor
+			code={menuTriggerAutocompleteCode}
+			imports={menuTriggerAutocompleteImports}
+			scope={scope}
+		/>
+	);
+};
+
+export {MenuTriggerAutocomplete, SearchAutocomplete};
