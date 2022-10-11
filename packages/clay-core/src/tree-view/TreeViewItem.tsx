@@ -9,7 +9,13 @@ import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useEffect, useRef, useState} from 'react';
+import React, {
+	useCallback,
+	useContext,
+	useEffect,
+	useRef,
+	useState,
+} from 'react';
 
 import {removeItemInternalProps} from './Collection';
 import {Icons, useAPI, useTreeViewContext} from './context';
@@ -43,6 +49,12 @@ export interface ITreeViewItemProps
 	disabled?: boolean;
 
 	/**
+	 * Flag to indicate if the item is expandable. This renders the arrow
+	 * button on the item.
+	 */
+	expandable?: boolean;
+
+	/**
 	 * @ignore
 	 */
 	isDragging?: boolean;
@@ -72,6 +84,7 @@ export const TreeViewItem = React.forwardRef<
 	{
 		actions,
 		children,
+		expandable,
 		isDragging,
 		overPosition,
 		overTarget,
@@ -86,7 +99,6 @@ export const TreeViewItem = React.forwardRef<
 		expandDoubleClick,
 		expandedKeys,
 		nestedKey,
-		onLoadMore,
 		onRenameItem,
 		onSelect,
 		open,
@@ -136,6 +148,19 @@ export const TreeViewItem = React.forwardRef<
 		}
 	}, [focus]);
 
+	const loadMore = useCallback(() => {
+		if (group) {
+			return;
+		}
+
+		const promise = load.loadMore(item.key, item, true);
+
+		if (promise) {
+			setLoading(true);
+			promise.then(() => setLoading(false));
+		}
+	}, [item, group, load.loadMore]);
+
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
 			childrenRoot.current(removeItemInternalProps(item), ...api),
@@ -163,6 +188,14 @@ export const TreeViewItem = React.forwardRef<
 
 	const itemProps = propsOwnership === 'item' ? otherProps : {};
 	const nodeProps = propsOwnership === 'node' ? otherProps : {};
+
+	const hasChildren =
+		nestedKey && item[nestedKey] && item[nestedKey].length > 0;
+
+	const isExpand =
+		expandable ||
+		itemStackProps.expandable ||
+		(childrenRoot.current ? hasChildren : group);
 
 	return (
 		<SpacingContext.Provider value={spacing + 24}>
@@ -258,12 +291,7 @@ export const TreeViewItem = React.forwardRef<
 						if (group) {
 							toggle(item.key);
 						} else {
-							const promise = load.loadMore(item.key, item, true);
-
-							if (promise) {
-								setLoading(true);
-								promise.then(() => setLoading(false));
-							}
+							loadMore();
 						}
 					}}
 					onFocus={() => {
@@ -418,7 +446,7 @@ export const TreeViewItem = React.forwardRef<
 						...(itemStackProps?.style ?? {}),
 						...(nodeProps?.style ?? {}),
 						paddingLeft: `${
-							spacing + (group || onLoadMore ? 0 : 24)
+							spacing + (isExpand || loading ? 0 : 24)
 						}px`,
 					}}
 					tabIndex={
@@ -429,7 +457,7 @@ export const TreeViewItem = React.forwardRef<
 						className="c-inner"
 						style={{
 							marginLeft: `-${
-								spacing + (group || onLoadMore ? 0 : 24)
+								spacing + (isExpand || loading ? 0 : 24)
 							}px`,
 						}}
 						tabIndex={-2}
@@ -445,14 +473,17 @@ export const TreeViewItem = React.forwardRef<
 						) : group ? (
 							React.cloneElement(left as React.ReactElement, {
 								actions,
+								expandable: isExpand,
 								onClick: undefined,
+								onLoadMore: !group ? loadMore : undefined,
 							})
 						) : (
 							<TreeViewItemStack
 								actions={actions}
 								disabled={nodeProps.disabled}
-								expandable={!!onLoadMore}
+								expandable={isExpand}
 								loading={loading}
+								onLoadMore={!group ? loadMore : undefined}
 							>
 								{children}
 							</TreeViewItemStack>
@@ -510,7 +541,8 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	expanderDisabled?: boolean;
 
 	/**
-	 * @ignore
+	 * Flag to indicate if the item is expandable. This renders the arrow
+	 * button on the item.
 	 */
 	expandable?: boolean;
 
@@ -523,6 +555,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * @ignore
 	 */
 	loading?: boolean;
+
+	/**
+	 * @ignore
+	 */
+	onLoadMore?: () => void;
 }
 
 type ExpanderProps = {
@@ -555,18 +592,17 @@ export function TreeViewItemStack({
 	actions,
 	children,
 	disabled,
-	expandable = true,
+	expandable = false,
 	expanderDisabled,
 	loading = false,
+	onLoadMore,
 	...otherProps
 }: ITreeViewItemStackProps) {
 	const {
-		childrenRoot,
 		expandOnCheck,
 		expandedKeys,
 		expanderClassName,
 		expanderIcons,
-		nestedKey,
 		onSelect,
 		open,
 		selection,
@@ -577,14 +613,9 @@ export function TreeViewItemStack({
 
 	const childrenCount = React.Children.count(children);
 
-	const nestedChildren =
-		nestedKey && (item[nestedKey] as Array<Record<string, any>>);
-
-	const hasChildren = nestedChildren && nestedChildren.length > 0;
-
 	return (
 		<Layout.ContentRow {...otherProps}>
-			{expandable && (
+			{expandable && !loading && (
 				<Layout.ContentCol>
 					<Button
 						aria-controls={`${item.key}`}
@@ -606,20 +637,24 @@ export function TreeViewItemStack({
 						onClick={(event) => {
 							event.stopPropagation();
 
-							toggle(item.key);
+							if (onLoadMore) {
+								onLoadMore();
+							} else {
+								toggle(item.key);
+							}
 						}}
 						tabIndex={-1}
 					>
 						<span className="c-inner" tabIndex={-2}>
-							{loading ? (
-								<ClayLoadingIndicator small />
-							) : (
-								(hasChildren || !childrenRoot.current) && (
-									<Expander expanderIcons={expanderIcons} />
-								)
-							)}
+							<Expander expanderIcons={expanderIcons} />
 						</span>
 					</Button>
+				</Layout.ContentCol>
+			)}
+
+			{loading && (
+				<Layout.ContentCol className="btn-monospaced">
+					<ClayLoadingIndicator small />
 				</Layout.ContentCol>
 			)}
 
