@@ -68,6 +68,7 @@ const TabPane = ({
 				className
 			)}
 			role="tabpanel"
+			tabIndex={0}
 		>
 			{children}
 		</div>

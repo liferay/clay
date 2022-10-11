@@ -49,10 +49,13 @@ const Item = React.forwardRef<any, IProps>(
 		}: IProps,
 		ref
 	) => (
-		<li {...otherProps} className={classNames('nav-item', className)}>
+		<li
+			{...otherProps}
+			className={classNames('nav-item', className)}
+			role="none"
+		>
 			<LinkOrButton
 				{...innerProps}
-				aria-disabled={!active}
 				aria-selected={active}
 				buttonDisplayType="unstyled"
 				buttonType="button"
@@ -66,7 +69,7 @@ const Item = React.forwardRef<any, IProps>(
 				onClick={onClick}
 				ref={ref}
 				role="tab"
-				tabIndex={disabled ? -1 : undefined}
+				tabIndex={!active ? -1 : undefined}
 			>
 				{children}
 			</LinkOrButton>
