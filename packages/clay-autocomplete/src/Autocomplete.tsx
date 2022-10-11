@@ -37,7 +37,7 @@ export interface IProps<T>
 			React.HTMLAttributes<HTMLInputElement>,
 			'onChange' | 'children'
 		>,
-		ICollectionProps<T, unknown> {
+		Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize'> {
 	/**
 	 * Flag to indicate if menu is showing or not.
 	 */
@@ -136,7 +136,6 @@ export function Autocomplete<T extends Record<string, any>>({
 	onItemsChange,
 	onLoadMore,
 	value: externalValue,
-	virtualize = true,
 	...otherProps
 }: IProps<T>) {
 	const inputRef = useRef<HTMLInputElement>(null);
@@ -371,7 +370,7 @@ export function Autocomplete<T extends Record<string, any>>({
 					}}
 					parentRef={menuRef}
 					role="listbox"
-					virtualize={virtualize}
+					virtualize
 				>
 					{debouncedLoadingChange ? (
 						<DropDown.Item
