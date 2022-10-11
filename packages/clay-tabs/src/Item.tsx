@@ -52,7 +52,6 @@ const Item = React.forwardRef<any, IProps>(
 		<li {...otherProps} className={classNames('nav-item', className)}>
 			<LinkOrButton
 				{...innerProps}
-				aria-disabled={!active}
 				aria-selected={active}
 				buttonDisplayType="unstyled"
 				buttonType="button"
