@@ -113,7 +113,7 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 					console.error(error);
 				});
 		},
-		[insert]
+		[toggle, insert]
 	);
 
 	const hasKey = useCallback(
