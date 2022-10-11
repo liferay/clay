@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin convert properties that use button focus, disabled, and transition variables ([2115b66](https://github.com/liferay/clay/commit/2115b66ed8ee09ea3ee1339c8606d09230719d3c))
+* **@clayui/css:** Cadmin Links `.component-action` and `.link-outline` should have focus shadow ([d646ef1](https://github.com/liferay/clay/commit/d646ef15e2ff5d18f7c440df14699a3a0c20e769))
+* **@clayui/css:** Global Functions speed up `map-deep-get` ([51123e9](https://github.com/liferay/clay/commit/51123e967940ee2563470258ed87662411cdf306))
+* **@clayui/css:** Links `.component-action` and `.link-outline` should have focus shadow ([4cd0681](https://github.com/liferay/clay/commit/4cd0681303b0322258d42faaa20717a53999a83f))
+* **@clayui/css:** Mixins check if parameter is map to avoid Sass error ([0441281](https://github.com/liferay/clay/commit/0441281a84763f14e53bd5d24f1cd2fa8a5464bf))
+
+
+### Features
+
+* **@clayui/css:** Cadmin Globals adds transition and disabled opacity component variables for easier reuse ([107d19a](https://github.com/liferay/clay/commit/107d19a7f268913247cbf80cdefa70080532637e))
+* **@clayui/css:** Decouple button variables from other components ([f0f357d](https://github.com/liferay/clay/commit/f0f357d83024f45baa7e3a5e05a75e127996c25b))
+* **@clayui/css:** Globals adds transition and disabled opacity component variables for easier reuse ([33e7cef](https://github.com/liferay/clay/commit/33e7cef87593dc9ff243515071b4f4d32c83c3ed))
+
+
+
+
+
 # [3.75.0](https://github.com/liferay/clay/compare/v3.74.0...v3.75.0) (2022-09-28)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix reference error when loading more items and expand ([b61697c](https://github.com/liferay/clay/commit/b61697cc1343bbadc8f59d6797c95a8e0ebc0c4b))
+
+### Features
+
+-   **@clayui/core:** add `expandable` API public to TreeView ([28f762d](https://github.com/liferay/clay/commit/28f762d7d7fd93771c487bd07fc67f158169e28b))
+-   **@clayui/core:** add possibility to specify item name key ([e74d9df](https://github.com/liferay/clay/commit/e74d9df0eedacedfd43c1624073dcb1751808529))
+-   **@clayui/core:** add possibility to specify that an item has children, so caret is shown even if children haven't loaded ([4868084](https://github.com/liferay/clay/commit/4868084503c1685c5067a445d4c802c2fa64a970))
+-   **@clayui/core:** adds API to set heading fontSize independent of tag ([b8554ee](https://github.com/liferay/clay/commit/b8554ee91c7659d9fd340f317e56b12163fad113))
+-   **@clayui/core:** adds support for `onItemMove` to decide if item should be droppable ([0f034ed](https://github.com/liferay/clay/commit/0f034ed1621ececa780fa812fc8bd161c643f42d))
+-   **@clayui/core:** adds support for disabling drag and drop of a specific item from TreeView ([4258fc4](https://github.com/liferay/clay/commit/4258fc4b7ab4671fbfe68a203c44e8332ef744e8))
+-   **@clayui/core:** prevent drag preview to be shown in other drag and drop contexts ([8e1e915](https://github.com/liferay/clay/commit/8e1e9153e2bcd83fc6d4b39301fa1d89838e324a))
+
 ## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
 
 **Note:** Version bump only for package @clayui/core

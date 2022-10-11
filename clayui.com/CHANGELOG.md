@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
+
+### Bug Fixes
+
+-   **clayui.com:** fix search error on blog page ([baaa977](https://github.com/liferay/clay/commit/baaa977cbd8b9122180dc990bc1e549207daaa1d))
+
 ## [3.75.3](https://github.com/liferay/clay/compare/v3.75.2...v3.75.3) (2022-09-29)
 
 **Note:** Version bump only for package clayui.com

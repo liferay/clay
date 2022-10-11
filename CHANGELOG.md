@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix reference error when loading more items and expand ([b61697c](https://github.com/liferay/clay/commit/b61697cc1343bbadc8f59d6797c95a8e0ebc0c4b))
+-   **@clayui/css:** Cadmin convert properties that use button focus, disabled, and transition variables ([2115b66](https://github.com/liferay/clay/commit/2115b66ed8ee09ea3ee1339c8606d09230719d3c))
+-   **@clayui/css:** Cadmin Links `.component-action` and `.link-outline` should have focus shadow ([d646ef1](https://github.com/liferay/clay/commit/d646ef15e2ff5d18f7c440df14699a3a0c20e769))
+-   **@clayui/css:** Global Functions speed up `map-deep-get` ([51123e9](https://github.com/liferay/clay/commit/51123e967940ee2563470258ed87662411cdf306))
+-   **@clayui/css:** Links `.component-action` and `.link-outline` should have focus shadow ([4cd0681](https://github.com/liferay/clay/commit/4cd0681303b0322258d42faaa20717a53999a83f))
+-   **@clayui/css:** Mixins check if parameter is map to avoid Sass error ([0441281](https://github.com/liferay/clay/commit/0441281a84763f14e53bd5d24f1cd2fa8a5464bf))
+-   **clayui.com:** fix search error on blog page ([baaa977](https://github.com/liferay/clay/commit/baaa977cbd8b9122180dc990bc1e549207daaa1d))
+
+### Features
+
+-   **@clayui/core:** add `expandable` API public to TreeView ([28f762d](https://github.com/liferay/clay/commit/28f762d7d7fd93771c487bd07fc67f158169e28b))
+-   **@clayui/core:** add possibility to specify item name key ([e74d9df](https://github.com/liferay/clay/commit/e74d9df0eedacedfd43c1624073dcb1751808529))
+-   **@clayui/core:** add possibility to specify that an item has children, so caret is shown even if children haven't loaded ([4868084](https://github.com/liferay/clay/commit/4868084503c1685c5067a445d4c802c2fa64a970))
+-   **@clayui/core:** adds API to set heading fontSize independent of tag ([b8554ee](https://github.com/liferay/clay/commit/b8554ee91c7659d9fd340f317e56b12163fad113))
+-   **@clayui/core:** adds support for `onItemMove` to decide if item should be droppable ([0f034ed](https://github.com/liferay/clay/commit/0f034ed1621ececa780fa812fc8bd161c643f42d))
+-   **@clayui/core:** adds support for disabling drag and drop of a specific item from TreeView ([4258fc4](https://github.com/liferay/clay/commit/4258fc4b7ab4671fbfe68a203c44e8332ef744e8))
+-   **@clayui/core:** prevent drag preview to be shown in other drag and drop contexts ([8e1e915](https://github.com/liferay/clay/commit/8e1e9153e2bcd83fc6d4b39301fa1d89838e324a))
+-   **@clayui/css:** Cadmin Globals adds transition and disabled opacity component variables for easier reuse ([107d19a](https://github.com/liferay/clay/commit/107d19a7f268913247cbf80cdefa70080532637e))
+-   **@clayui/css:** Decouple button variables from other components ([f0f357d](https://github.com/liferay/clay/commit/f0f357d83024f45baa7e3a5e05a75e127996c25b))
+-   **@clayui/css:** Globals adds transition and disabled opacity component variables for easier reuse ([33e7cef](https://github.com/liferay/clay/commit/33e7cef87593dc9ff243515071b4f4d32c83c3ed))
+
 ## [3.75.3](https://github.com/liferay/clay/compare/v3.75.2...v3.75.3) (2022-09-29)
 
 ### Bug Fixes
