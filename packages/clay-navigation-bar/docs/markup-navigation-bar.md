@@ -63,7 +63,7 @@ mainTabURL: 'docs/components/navigation-bar.html'
                                     <use href="/images/icons/icons.svg#caret-bottom"></use>
                                 </svg>
                             </a>
-                            <ul aria-labelledby="" class="dropdown-menu">
+                            <ul aria-labelledby="" class="dropdown-menu dropdown-menu-width-shrink">
                                 <li><a class="dropdown-item" href="#1">App Section 4</a></li>
                                 <li><a class="dropdown-item" href="#1">App Section 5</a></li>
                             </ul>
@@ -146,7 +146,10 @@ mainTabURL: 'docs/components/navigation-bar.html'
 								></use>
 							</svg>
 						</a>
-						<ul aria-labelledby="" class="dropdown-menu">
+						<ul
+							aria-labelledby=""
+							class="dropdown-menu dropdown-menu-width-shrink"
+						>
 							<li>
 								<a class="dropdown-item" href="#1"
 									>App Section 4</a
@@ -202,7 +205,7 @@ mainTabURL: 'docs/components/navigation-bar.html'
                                     <use href="/images/icons/icons.svg#caret-bottom"></use>
                                 </svg>
                             </a>
-                            <ul aria-labelledby="" class="dropdown-menu">
+                            <ul aria-labelledby="" class="dropdown-menu dropdown-menu-width-shrink">
                                 <li><a class="dropdown-item" href="#1">App Section 4</a></li>
                                 <li><a class="dropdown-item" href="#1">App Section 5</a></li>
                             </ul>
@@ -285,7 +288,10 @@ mainTabURL: 'docs/components/navigation-bar.html'
 								></use>
 							</svg>
 						</a>
-						<ul aria-labelledby="" class="dropdown-menu">
+						<ul
+							aria-labelledby=""
+							class="dropdown-menu dropdown-menu-width-shrink"
+						>
 							<li>
 								<a class="dropdown-item" href="#1"
 									>App Section 4</a
@@ -341,7 +347,7 @@ mainTabURL: 'docs/components/navigation-bar.html'
                                     <use href="/images/icons/icons.svg#caret-bottom"></use>
                                 </svg>
                             </button>
-                            <ul aria-labelledby="" class="dropdown-menu">
+                            <ul aria-labelledby="" class="dropdown-menu dropdown-menu-width-shrink">
                                 <li>
                                     <button class="dropdown-item" type="button">App Section 4</button>
                                 </li>
@@ -430,7 +436,10 @@ mainTabURL: 'docs/components/navigation-bar.html'
 								></use>
 							</svg>
 						</button>
-						<ul aria-labelledby="" class="dropdown-menu">
+						<ul
+							aria-labelledby=""
+							class="dropdown-menu dropdown-menu-width-shrink"
+						>
 							<li>
 								<button class="dropdown-item" type="button">
 									App Section 4
