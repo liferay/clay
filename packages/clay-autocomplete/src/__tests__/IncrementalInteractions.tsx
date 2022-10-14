@@ -14,6 +14,8 @@ const messages = {
 	notFound: 'No results found',
 };
 
+global.ResizeObserver = require('resize-observer-polyfill');
+
 /**
  * Incremental iteration tests for the new autocomplete behavior.
  */
@@ -83,14 +85,15 @@ describe('Autocomplete incremental interactions', () => {
 	it('typing a value that does not exist shows the menu with results not found', () => {
 		const {getByRole} = render(
 			<ClayAutocomplete
+				defaultItems={['one', 'two', 'three']}
 				messages={messages}
 				placeholder="Enter a number from One to Five"
 			>
-				{['one', 'two', 'three'].map((item) => (
+				{(item) => (
 					<ClayAutocomplete.Item key={item}>
 						{item}
 					</ClayAutocomplete.Item>
-				))}
+				)}
 			</ClayAutocomplete>
 		);
 
@@ -136,6 +139,7 @@ describe('Autocomplete incremental interactions', () => {
 		expect(two).toBeDefined();
 		expect(three).toBeDefined();
 
+		userEvent.clear(input);
 		userEvent.type(input, 'two');
 
 		const [two2] = getAllByRole('option');
@@ -521,7 +525,7 @@ describe('Autocomplete incremental interactions', () => {
 		});
 
 		it('moving the focus outside of autocomplete closes the menu', () => {
-			const {debug, getByRole} = render(
+			const {getByRole} = render(
 				<>
 					<ClayAutocomplete
 						messages={messages}
@@ -548,8 +552,6 @@ describe('Autocomplete incremental interactions', () => {
 			userEvent.tab();
 			userEvent.tab();
 			userEvent.tab();
-
-			debug(document.activeElement!);
 
 			expect(input.value).toBe('');
 			expect(listbox.parentElement!.classList).not.toContain('show');

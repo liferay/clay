@@ -100,7 +100,10 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetch).toHaveBeenCalled());
 
-		expect(fetch).toHaveBeenCalledWith('https://clay.data/', undefined);
+		expect(fetch).toHaveBeenCalledWith(
+			'https://clay.data/',
+			expect.any(Object)
+		);
 	});
 
 	it.skip('calls clay.data and return data from cache', async () => {

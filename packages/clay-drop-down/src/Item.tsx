@@ -66,6 +66,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 			role = 'presentation',
 			roleItem = 'menuitem',
 			spritemap,
+			style,
 			symbolLeft,
 			symbolRight,
 			tabIndex,
@@ -79,7 +80,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 		const {close, closeOnClick} = useContext(DropDownContext);
 
 		return (
-			<li aria-selected={active} ref={ref} role={role}>
+			<li aria-selected={active} ref={ref} role={role} style={style}>
 				<ItemElement
 					{...otherProps}
 					className={classNames('dropdown-item', className, {

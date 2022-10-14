@@ -3,19 +3,41 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import DropDown from '@clayui/drop-down';
+import {DropDown, __NOT_PUBLIC_COLLECTION} from '@clayui/core';
 import {ClayInput as Input} from '@clayui/form';
-import {InternalDispatch, Keys, useId, useInternalState} from '@clayui/shared';
+import LoadingIndicator from '@clayui/loading-indicator';
+import {
+	InternalDispatch,
+	Keys,
+	useDebounce,
+	useId,
+	useInternalState,
+} from '@clayui/shared';
 import {hideOthers} from 'aria-hidden';
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+
+import type {ICollectionProps} from '@clayui/core';
+
+const {Collection} = __NOT_PUBLIC_COLLECTION;
 
 type Messages = {
 	loading: string;
 	notFound: string;
 };
 
-export interface IProps
-	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
+type ItemProps<T> = {
+	children: React.ReactElement;
+	index: number;
+	item: T;
+	keyValue: React.Key;
+};
+
+export interface IProps<T>
+	extends Omit<
+			React.HTMLAttributes<HTMLInputElement>,
+			'onChange' | 'children'
+		>,
+		Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize'> {
 	/**
 	 * Flag to indicate if menu is showing or not.
 	 */
@@ -27,9 +49,10 @@ export interface IProps
 	alignmentByViewport?: boolean;
 
 	/**
-	 * The content.
+	 * Autocomplete container reference.
+	 * @ignore
 	 */
-	children?: React.ReactNode;
+	containerElementRef: React.MutableRefObject<HTMLElement | null>;
 
 	/**
 	 * The initial value of the active state (uncontrolled).
@@ -39,7 +62,18 @@ export interface IProps
 	/**
 	 * The initial value of the input (uncontrolled).
 	 */
-	defaultValue?: React.ReactText;
+	defaultValue?: string;
+
+	/**
+	 * Defines the name of the property key that is used in the items filter
+	 * test (Dynamic content).
+	 */
+	filterKey?: string;
+
+	/**
+	 * Property to set the initial value of `items` (uncontrolled).
+	 */
+	defaultItems?: Array<T>;
 
 	/**
 	 * Messages for autocomplete.
@@ -54,36 +88,77 @@ export interface IProps
 	/**
 	 * Callback called when input value changes (controlled).
 	 */
-	onChange?: InternalDispatch<React.ReactText>;
+	onChange?: InternalDispatch<string>;
+
+	/**
+	 * Callback called when items change (controlled).
+	 */
+	onItemsChange?: InternalDispatch<Array<T>>;
+
+	/**
+	 * Callback is called when more items need to be loaded when the scroll
+	 * reaches the bottom.
+	 */
+	onLoadMore?: () => Promise<any> | null;
 
 	/**
 	 * The current value of the input (controlled).
 	 */
-	value?: React.ReactText;
+	value?: string;
 
 	/**
 	 * The interaction required to display the menu.
 	 */
 	menuTrigger?: 'input' | 'focus';
+
+	/**
+	 * The current state of Autocomplete current loading. Determines whether the
+	 * loading indicator should be shown or not.
+	 */
+	loadingState?: number;
 }
 
-export function Autocomplete({
+export function Autocomplete<T extends Record<string, any>>({
 	active: externalActive,
 	alignmentByViewport,
 	children,
+	containerElementRef,
 	defaultActive,
+	defaultItems,
 	defaultValue,
+	filterKey,
+	items: externalItems,
+	loadingState,
+	menuTrigger = 'input',
 	messages = {loading: '', notFound: ''},
 	onActiveChange,
 	onChange,
+	onItemsChange,
+	onLoadMore,
 	value: externalValue,
-	menuTrigger = 'input',
 	...otherProps
-}: IProps) {
+}: IProps<T>) {
 	const inputRef = useRef<HTMLInputElement>(null);
 	const menuRef = useRef<HTMLDivElement>(null);
 
 	const currentItemSelected = useRef<string>('');
+
+	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
+
+	const debouncedLoadingChange = useDebounce(isLoading, 500);
+
+	const cursorsRef = useRef<Map<string, boolean>>(new Map());
+
+	const [infiniteScroll, setInfiniteScroll] = useState(Boolean(onLoadMore));
+
+	const [items, , isItemsUncontrolled] = useInternalState({
+		defaultName: 'defaultItems',
+		defaultValue: defaultItems,
+		handleName: 'onItemsChange',
+		name: 'items',
+		onChange: onItemsChange,
+		value: externalItems,
+	});
 
 	const [value = '', setValue] = useInternalState({
 		defaultName: 'defaultValue',
@@ -156,58 +231,35 @@ export function Autocomplete({
 		}
 	}, [active]);
 
-	const [itemsElements, childElements] = useMemo(() => {
-		const otherElements: Array<React.ReactNode> = [];
-		const menu: Array<React.ReactElement> = [];
+	useEffect(() => {
+		setInfiniteScroll(
+			Boolean(onLoadMore) && !cursorsRef.current.has(value)
+		);
+	}, [value]);
 
-		React.Children.forEach(children, (child) => {
-			if (
-				React.isValidElement(child) &&
-				// @ts-ignore
-				child.type.displayName === 'ClayAutocompleteItem'
-			) {
-				const itemValue = child.props.value ?? child.props.children;
+	const filterFn = useCallback(
+		(itemValue: string) => itemValue.match(new RegExp(value, 'i')) !== null,
+		[value]
+	);
 
-				// Static filter
-				if (!itemValue.match(value)) {
-					return;
-				}
+	const filteredItems = useMemo(() => {
+		if (debouncedLoadingChange) {
+			return [];
+		}
 
-				menu.push(
-					React.cloneElement(child as React.ReactElement, {
-						match: value,
-						onClick: (
-							event: React.MouseEvent<
-								| HTMLSpanElement
-								| HTMLButtonElement
-								| HTMLAnchorElement
-							>
-						) => {
-							if (child.props.onClick) {
-								child.props.onClick(event);
-							}
+		if (!isItemsUncontrolled) {
+			return items;
+		}
 
-							currentItemSelected.current = itemValue;
-							setActive(false);
-							setValue(itemValue);
+		return items?.filter((option) =>
+			filterFn(filterKey ? option[filterKey] : option)
+		);
+	}, [debouncedLoadingChange, isItemsUncontrolled, items, filterFn]);
 
-							inputRef.current?.focus();
-						},
-						roleItem: 'option',
-					})
-				);
-			} else {
-				otherElements.push(child);
-			}
-		});
-
-		return [menu, otherElements];
-	}, [value, children]);
+	const isNotFound = filteredItems?.length === 0;
 
 	return (
 		<>
-			{childElements}
-
 			<Input
 				{...otherProps}
 				aria-autocomplete="list"
@@ -215,6 +267,7 @@ export function Autocomplete({
 				aria-expanded={active}
 				autoComplete="off"
 				autoCorrect="off"
+				insetAfter={isLoading}
 				onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 					const {value} = event.target;
 
@@ -257,7 +310,7 @@ export function Autocomplete({
 
 			<DropDown.Menu
 				active={active}
-				alignElementRef={inputRef}
+				alignElementRef={containerElementRef}
 				alignmentByViewport={alignmentByViewport}
 				autoBestAlign={!!alignmentByViewport}
 				className="autocomplete-dropdown-menu"
@@ -267,17 +320,67 @@ export function Autocomplete({
 				ref={menuRef}
 				style={{
 					maxWidth: 'none',
-					width: `${inputRef.current?.clientWidth}px`,
+					width: `${containerElementRef.current?.clientWidth}px`,
 				}}
 			>
-				<DropDown.ItemList
+				<Collection<T>
 					aria-label={otherProps['aria-label']}
 					aria-labelledby={otherProps['aria-labelledby']}
+					as={DropDown.ItemList}
+					estimateSize={37}
+					filter={isNotFound ? undefined : filterFn}
+					filterKey="value"
+					infiniteScroll={infiniteScroll}
+					isLoading={loadingState === 1}
+					itemContainer={({children}: ItemProps<any>) => {
+						const itemValue =
+							children.props.value ?? children.props.children;
+
+						return React.cloneElement(children, {
+							match: value,
+							onClick: (
+								event: React.MouseEvent<
+									| HTMLSpanElement
+									| HTMLButtonElement
+									| HTMLAnchorElement
+								>
+							) => {
+								if (children.props.onClick) {
+									children.props.onClick(event);
+								}
+
+								currentItemSelected.current = itemValue;
+								setActive(false);
+								setValue(itemValue);
+
+								inputRef.current?.focus();
+							},
+							roleItem: 'option',
+						}) as React.ReactElement;
+					}}
+					items={filteredItems}
+					onBottom={() => {
+						if (onLoadMore) {
+							const hasItems = onLoadMore();
+
+							if (hasItems === null) {
+								cursorsRef.current.set(value, true);
+							}
+						}
+					}}
+					parentRef={menuRef}
 					role="listbox"
+					virtualize
 				>
-					{itemsElements.length ? (
-						itemsElements
-					) : (
+					{debouncedLoadingChange ? (
+						<DropDown.Item
+							aria-disabled="true"
+							className="disabled"
+							roleItem="option"
+						>
+							{messages.loading}
+						</DropDown.Item>
+					) : isNotFound ? (
 						<DropDown.Item
 							aria-disabled="true"
 							className="disabled"
@@ -285,9 +388,25 @@ export function Autocomplete({
 						>
 							{messages.notFound}
 						</DropDown.Item>
+					) : (
+						children
 					)}
-				</DropDown.ItemList>
+				</Collection>
 			</DropDown.Menu>
+
+			{isLoading && (
+				<Input.GroupInsetItem
+					after
+					aria-label={messages.loading}
+					aria-valuemax={100}
+					aria-valuemin={0}
+					role="progressbar"
+				>
+					<span className="inline-item inline-item-middle">
+						<LoadingIndicator size="sm" />
+					</span>
+				</Input.GroupInsetItem>
+			)}
 		</>
 	);
 }

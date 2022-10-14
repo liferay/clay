@@ -4,7 +4,7 @@
  */
 
 import {useVirtualizer} from '@tanstack/react-virtual';
-import React from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 export type ChildrenFunction<T, P> = P extends Array<unknown>
 	? (item: T, ...args: P) => React.ReactElement
@@ -27,7 +27,8 @@ export interface ICollectionProps<T, P> {
 	virtualize?: boolean;
 }
 
-interface IProps<P, K> {
+interface IProps<P, K>
+	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
 	/**
 	 * Component to render.
 	 */
@@ -45,11 +46,37 @@ interface IProps<P, K> {
 	exclude?: Set<K>;
 
 	/**
+	 * Flag to enable infinite scroll.
+	 */
+	infiniteScroll?: boolean;
+
+	/**
+	 * Flag if a request is in progress.
+	 */
+	isLoading?: boolean;
+
+	/**
+	 * Test method for filtering elements in children (static only).
+	 */
+	filter?: (value: string) => boolean;
+
+	/**
+	 * Defines the name of the property key that is used in the filter (static only).
+	 */
+	filterKey?: string;
+
+	/**
 	 * Add the reference of the parent element that will be used to define the
 	 * scroll and get the height of the element for virtualization of the
 	 * collection.
 	 */
 	parentRef: React.RefObject<HTMLElement>;
+
+	/**
+	 * Callback called when the last element of the list is rendered in
+	 * virtualization and infiniteScroll is enabled.
+	 */
+	onBottom?: () => void;
 
 	/**
 	 * Set for the parent's key to create the unique key of the list items, if
@@ -67,7 +94,7 @@ interface IProps<P, K> {
 	 * Defines a component that will be used as a wrapper for items in the
 	 * collection if defined.
 	 */
-	itemContainer?: React.ComponentType<Record<string, any>>;
+	itemContainer?: (props: any) => JSX.Element | null;
 }
 
 type ChildElement = React.ReactElement<any> & {
@@ -110,7 +137,7 @@ export function excludeProps<T extends Record<string, any>, K extends keyof T>(
 	}, {} as T);
 }
 
-type VirtualProps<T, P, K> = IProps<P, K> & {
+type VirtualProps<T, P, K> = Omit<IProps<P, K>, 'filter'> & {
 	children: ChildrenFunction<T, P>;
 	items: Array<T>;
 };
@@ -120,19 +147,43 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	children,
 	estimateSize = 37,
 	exclude,
+	infiniteScroll,
+	isLoading,
+	itemContainer: ItemContainer,
 	items,
+	onBottom,
 	parentKey,
 	parentRef,
 	publicApi,
+	...otherProps
 }: VirtualProps<T, P, K>) {
+	const previousLengthRef = useRef(items.length);
+
 	const virtualizer = useVirtualizer({
 		count: items.length,
 		estimateSize: () => estimateSize,
 		getScrollElement: () => parentRef.current,
 	});
 
+	const callbackCaptureRef = useRef<boolean>(false);
+
+	useEffect(() => {
+		if (items.length < previousLengthRef.current) {
+			virtualizer.scrollToIndex(0, {smoothScroll: false});
+		}
+
+		previousLengthRef.current = items.length;
+	}, [items.length]);
+
+	useEffect(() => {
+		if (!isLoading) {
+			callbackCaptureRef.current = false;
+		}
+	}, [isLoading]);
+
 	return (
 		<Container
+			{...otherProps}
 			style={{
 				height: virtualizer.getTotalSize(),
 				position: 'relative',
@@ -141,6 +192,20 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 		>
 			{virtualizer.getVirtualItems().map((virtual) => {
 				const item = items[virtual.index];
+
+				// Virtual item to loading
+				if (
+					infiniteScroll &&
+					items.length !== 0 &&
+					virtual.index === items.length - 1 &&
+					onBottom &&
+					!callbackCaptureRef.current
+				) {
+					callbackCaptureRef.current = true;
+
+					onBottom();
+				}
+
 				const publicItem = exclude ? excludeProps(item, exclude) : item;
 
 				const child: ChildElement = Array.isArray(publicApi)
@@ -153,9 +218,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 					parentKey
 				);
 
-				return React.cloneElement(child, {
-					key,
-					keyValue: key,
+				const props = {
 					ref: (node: HTMLElement) => {
 						virtual.measureElement(node);
 
@@ -170,6 +233,25 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 						transform: `translateY(${virtual.start}px)`,
 						width: '100%',
 					},
+				};
+
+				if (ItemContainer) {
+					return (
+						<ItemContainer
+							index={virtual.index}
+							item={item}
+							key={key}
+							keyValue={key}
+						>
+							{React.cloneElement(child, props)}
+						</ItemContainer>
+					);
+				}
+
+				return React.cloneElement(child, {
+					key,
+					keyValue: key,
+					...props,
 				});
 			})}
 		</Container>
@@ -185,19 +267,56 @@ export function Collection<
 	children,
 	estimateSize,
 	exclude,
+	filter,
+	filterKey,
+	infiniteScroll,
+	isLoading,
 	itemContainer: ItemContainer,
 	items,
+	onBottom,
 	parentKey,
 	parentRef,
 	publicApi,
 	virtualize = false,
+	...otherProps
 }: ICollectionProps<T, P> & Partial<IProps<P, K>>) {
+	const performFilter = useCallback(
+		(
+			child:
+				| React.ReactPortal
+				| React.ReactElement<
+						unknown,
+						string | React.JSXElementConstructor<any>
+				  >
+		) => {
+			if (!filter) {
+				return false;
+			}
+
+			if (typeof child.props.children === 'string') {
+				return !filter(child.props.children);
+			}
+
+			if (filterKey && child.props[filterKey]) {
+				return !filter(child.props[filterKey]);
+			}
+
+			return false;
+		},
+		[filter]
+	);
+
 	if (virtualize && children instanceof Function && items && parentRef) {
 		return (
 			<VirtualDynamicCollection
+				{...otherProps}
 				as={as}
 				estimateSize={estimateSize}
+				infiniteScroll={infiniteScroll}
+				isLoading={isLoading}
+				itemContainer={ItemContainer}
 				items={items}
+				onBottom={onBottom}
 				parentKey={parentKey}
 				parentRef={parentRef}
 				publicApi={publicApi}
@@ -210,7 +329,7 @@ export function Collection<
 	const Container = as ?? React.Fragment;
 
 	return (
-		<Container>
+		<Container {...otherProps}>
 			{children instanceof Function && items
 				? items.map((item, index) => {
 						const publicItem = exclude
@@ -247,6 +366,10 @@ export function Collection<
 				: React.Children.map(children, (child, index) => {
 						if (!React.isValidElement(child)) {
 							return null;
+						}
+
+						if (performFilter(child)) {
+							return;
 						}
 
 						const key = getKey(index, child.key, parentKey);

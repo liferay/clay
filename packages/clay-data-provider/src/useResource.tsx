@@ -234,6 +234,10 @@ const useResource = ({
 
 	const retryDelayTimeoutIdRef = useRef<null | NodeJS.Timeout>(null);
 
+	const abortController = useRef<AbortController | null>(null);
+
+	const networkStatusRef = useRef<NetworkStatus>();
+
 	const pollIntervalRef = useRef(pollInterval);
 
 	const uid = useMemo(() => {
@@ -276,6 +280,11 @@ const useResource = ({
 	);
 
 	const debouncedVariablesChange = useDebounce(variables, fetchDelay);
+
+	const dispatchNetworkStatus = (status: NetworkStatus) => {
+		onNetworkStatusChange(status);
+		networkStatusRef.current = status;
+	};
 
 	const cleanRetry = () => {
 		if (retryDelayTimeoutIdRef.current) {
@@ -321,7 +330,7 @@ const useResource = ({
 			if (suspense) {
 				client.current.update(identifier, error);
 			} else {
-				onNetworkStatusChange(NetworkStatus.Error);
+				dispatchNetworkStatus(NetworkStatus.Error);
 			}
 
 			warning(
@@ -354,6 +363,7 @@ const useResource = ({
 		const cursor = client.current.getCursor(identifier);
 
 		if (
+			networkStatusRef.current === NetworkStatus.Loading &&
 			(cursor || cursor === null) &&
 			resource !== null &&
 			resource !== undefined
@@ -369,7 +379,7 @@ const useResource = ({
 		}
 
 		setResource(data);
-		onNetworkStatusChange(NetworkStatus.Unused);
+		dispatchNetworkStatus(NetworkStatus.Unused);
 
 		if (shouldUseCache) {
 			client.current.update(identifier, data);
@@ -438,6 +448,14 @@ const useResource = ({
 			case 'string': {
 				const fn = fetcher ?? fetch;
 
+				let nextCursor: any = undefined;
+
+				if (abortController.current) {
+					abortController.current.abort();
+				}
+
+				abortController.current = new AbortController();
+
 				return timeout(
 					fetchTimeout,
 					fn(
@@ -445,8 +463,12 @@ const useResource = ({
 							client.current.getCursor(identifier) ?? link,
 							variables
 						),
-						fetchOptions
-					)
+						{
+							...fetchOptions,
+							signal: abortController.current.signal,
+						}
+					),
+					abortController.current
 				)
 					.then((res: any) => {
 						if (
@@ -460,7 +482,7 @@ const useResource = ({
 							res.items &&
 							(res.cursor || res.cursor === null)
 						) {
-							client.current.setCursor(identifier, res.cursor);
+							nextCursor = res.cursor;
 
 							return res.items;
 						}
@@ -468,6 +490,13 @@ const useResource = ({
 						return res;
 					})
 					.then(fetchOnComplete)
+					.then((res) => {
+						if (nextCursor !== undefined) {
+							client.current.setCursor(identifier, nextCursor);
+						}
+
+						return res;
+					})
 					.catch((error) => handleFetchRetry(error, retryAttempts));
 			}
 			default:
@@ -489,7 +518,7 @@ const useResource = ({
 			}
 		}
 
-		onNetworkStatusChange(status);
+		dispatchNetworkStatus(status);
 
 		return doFetch();
 	};
@@ -499,13 +528,18 @@ const useResource = ({
 			return null;
 		}
 
-		onNetworkStatusChange(NetworkStatus.Loading);
+		dispatchNetworkStatus(NetworkStatus.Loading);
 
 		return doFetch();
 	};
 
 	const refetch = () => {
-		onNetworkStatusChange(NetworkStatus.Refetch);
+		if (!shouldUseCache) {
+			// Resets the cursor
+			delete client.current.cursors[identifier];
+		}
+
+		dispatchNetworkStatus(NetworkStatus.Refetch);
 		doFetch();
 	};
 
@@ -519,6 +553,11 @@ const useResource = ({
 
 	useEffect(() => {
 		if (!firstRenderRef.current) {
+			if (!shouldUseCache) {
+				// Resets the cursor
+				delete client.current.cursors[identifier];
+			}
+
 			maybeFetch(NetworkStatus.Refetch);
 		}
 	}, [debouncedVariablesChange]);

@@ -56,7 +56,7 @@ export class DataClient {
 		return this.cursors[key];
 	}
 
-	public setCursor(key: string | null, value: string) {
+	public setCursor(key: string | null, value: string | undefined) {
 		if (!key) {
 			return null;
 		}
