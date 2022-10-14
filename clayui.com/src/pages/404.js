@@ -19,7 +19,7 @@ const PageNotFound = () => {
 				<div className="container-fluid container-fluid-max-xl d-flex px-0">
 					<Link className="d-none d-sm-flex mx-3" to="/">
 						<img
-							alt="Clay"
+							alt=""
 							className="align-items-center d-flex justify-content-center"
 							src={clayLogo}
 						/>
