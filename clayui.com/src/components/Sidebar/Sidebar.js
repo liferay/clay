@@ -56,7 +56,7 @@ export default ({active, data, location}) => (
 					>
 						<span className="c-inner" tabIndex="-1">
 							<img
-								alt="Clay"
+								alt=""
 								className="align-middle sidebar-logo-image"
 								src="/images/clay_logo_w.png"
 							/>

@@ -27,7 +27,7 @@ const LayoutNavHome = () => {
 						<div className="d-inline-block text-decoration-none text-reset">
 							<span className="c-inner" tabIndex="-1">
 								<img
-									alt="Clay"
+									alt=""
 									className="align-middle sidebar-logo-image"
 									height="32"
 									src="/images/clay_logo_w.png"
