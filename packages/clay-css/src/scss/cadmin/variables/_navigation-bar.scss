@@ -17,6 +17,8 @@ $cadmin-navigation-bar-size: map-deep-merge(
 		toggler-link-height: 32px,
 		toggler-link-margin-y: 7.5px,
 		toggler-link-padding-y: 0,
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$cadmin-navigation-bar-size
 );
@@ -38,8 +40,250 @@ $cadmin-navigation-bar-base: map-deep-merge(
 				),
 			),
 		),
-		media-breakpoint-down: (),
-		media-breakpoint-up: (),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					navbar-collapse-absolute: (
+						navbar-collapse: (
+							border-color:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										border-color
+									),
+									transparent
+								),
+							border-style:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										border-style
+									),
+									solid
+								),
+							border-bottom-width:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										border-bottom-width
+									),
+									1px
+								),
+							border-left-width:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										border-left-width
+									),
+									0
+								),
+							border-right-width:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										border-right-width
+									),
+									0
+								),
+							border-top-width:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										border-top-width
+									),
+									0
+								),
+							box-shadow:
+								clay-enable-shadows(
+									setter(
+										map-get(
+											$cadmin-navigation-bar-size,
+											box-shadow
+										),
+										null
+									)
+								),
+							left:
+								math-sign(
+									setter(
+										map-get(
+											$cadmin-navigation-bar-size,
+											border-left-width
+										),
+										0
+									)
+								),
+							margin-top:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										border-bottom-width
+									),
+									1px
+								),
+							padding-bottom:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										padding-y
+									),
+									0
+								),
+							padding-left:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										padding-x
+									),
+									0
+								),
+							padding-right:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										padding-x
+									),
+									0
+								),
+							padding-top:
+								setter(
+									map-get(
+										$cadmin-navigation-bar-size,
+										padding-y
+									),
+									0
+								),
+							right:
+								math-sign(
+									setter(
+										map-get(
+											$cadmin-navigation-bar-size,
+											border-right-width
+										),
+										0
+									)
+								),
+						),
+					),
+					navbar-collapse: (
+						navbar-nav: (
+							dropdown-divider: (
+								margin-left:
+									math-sign(
+										setter(
+											map-get(
+												$cadmin-navigation-bar-size,
+												padding-x
+											),
+											null
+										)
+									),
+								margin-right:
+									math-sign(
+										setter(
+											map-get(
+												$cadmin-navigation-bar-size,
+												padding-x
+											),
+											null
+										)
+									),
+							),
+							dropdown-item: (
+								padding-bottom:
+									setter(
+										map-get(
+											$cadmin-navigation-bar-size,
+											collapse-dropdown-item-padding-y-mobile
+										),
+										11.5px
+									),
+								padding-left:
+									setter(
+										map-get(
+											$cadmin-navigation-bar-size,
+											collapse-dropdown-item-padding-x-mobile
+										),
+										16px
+									),
+								padding-right:
+									setter(
+										map-get(
+											$cadmin-navigation-bar-size,
+											collapse-dropdown-item-padding-x-mobile
+										),
+										16px
+									),
+								padding-top:
+									setter(
+										map-get(
+											$cadmin-navigation-bar-size,
+											collapse-dropdown-item-padding-y-mobile
+										),
+										11.5px
+									),
+							),
+						),
+					),
+				),
+			),
+		),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-underline: (
+						navbar-nav: (
+							nav-link: (
+								active-class: (
+									after: (
+										bottom:
+											setter(
+												map-get(
+													$cadmin-navigation-bar-size,
+													active-border-offset-bottom
+												),
+												-1px
+											),
+										height:
+											setter(
+												map-get(
+													$cadmin-navigation-bar-size,
+													active-border-bottom-width
+												),
+												4px
+											),
+										left:
+											setter(
+												map-get(
+													$cadmin-navigation-bar-size,
+													active-border-offset-x
+												),
+												null
+											),
+										right:
+											setter(
+												map-get(
+													$cadmin-navigation-bar-size,
+													active-border-offset-x
+												),
+												null
+											),
+										top:
+											setter(
+												map-get(
+													$cadmin-navigation-bar-size,
+													active-border-offset-top
+												),
+												null
+											),
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
 	),
 	$cadmin-navigation-bar-base
 );
