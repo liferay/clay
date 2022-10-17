@@ -983,8 +983,7 @@
 						map-deep-get($map, navbar-underline, navbar-nav)
 					);
 
-					.nav-link,
-					.btn-unstyled {
+					.nav-link {
 						@include clay-link(
 							map-deep-get(
 								$map,
@@ -1092,8 +1091,7 @@
 			}
 
 			.navbar-nav {
-				.nav-link,
-				.btn-unstyled {
+				.nav-link {
 					@include clay-link(
 						map-deep-get($map, navbar-nav, nav-link)
 					);
@@ -1486,8 +1484,7 @@
 			}
 
 			.navbar-nav {
-				.nav-link,
-				.btn-unstyled {
+				.nav-link {
 					@include clay-link($nav-link);
 				}
 
