@@ -654,223 +654,227 @@
 					&#{$infix} {
 						// .navbar-expand, sm, md, lg, xl
 						@if not($infix == '') {
-							// .navbar-expand-sm, md, lg, xl
-							@include media-breakpoint-down($breakpoint) {
-								min-height: $min-height-mobile;
+							@if not(map-get($map, media-breakpoint-down)) {
+								// .navbar-expand-sm, md, lg, xl
+								@include media-breakpoint-down($breakpoint) {
+									min-height: $min-height-mobile;
 
-								&.navbar-collapse-absolute {
+									&.navbar-collapse-absolute {
+										.navbar-collapse {
+											border-color: transparent;
+											border-style: solid;
+											border-width: 0 $border-right-width
+												$border-bottom-width
+												$border-left-width;
+
+											@include box-shadow($box-shadow);
+
+											left: -$border-left-width;
+											margin-top: $border-bottom-width;
+											padding-bottom: $padding-y;
+											padding-left: $padding-x;
+											padding-right: $padding-x;
+											padding-top: $padding-y;
+											right: -$border-right-width;
+										}
+									}
+
 									.navbar-collapse {
-										border-color: transparent;
-										border-style: solid;
-										border-width: 0 $border-right-width
-											$border-bottom-width
-											$border-left-width;
+										.navbar-nav {
+											.dropdown-divider {
+												margin-left: -$padding-x;
+												margin-right: -$padding-x;
+											}
 
-										@include box-shadow($box-shadow);
-
-										left: -$border-left-width;
-										margin-top: $border-bottom-width;
-										padding-bottom: $padding-y;
-										padding-left: $padding-x;
-										padding-right: $padding-x;
-										padding-top: $padding-y;
-										right: -$border-right-width;
-									}
-								}
-
-								.navbar-collapse {
-									.navbar-nav {
-										.dropdown-divider {
-											margin-left: -$padding-x;
-											margin-right: -$padding-x;
-										}
-
-										.dropdown-item {
-											padding-bottom: $collapse-dropdown-item-padding-y-mobile;
-											padding-left: $collapse-dropdown-item-padding-x-mobile;
-											padding-right: $collapse-dropdown-item-padding-x-mobile;
-											padding-top: $collapse-dropdown-item-padding-y-mobile;
+											.dropdown-item {
+												padding-bottom: $collapse-dropdown-item-padding-y-mobile;
+												padding-left: $collapse-dropdown-item-padding-x-mobile;
+												padding-right: $collapse-dropdown-item-padding-x-mobile;
+												padding-top: $collapse-dropdown-item-padding-y-mobile;
+											}
 										}
 									}
-								}
 
-								.navbar-form {
-									height: calc(
-										#{$height-mobile} - #{$border-bottom-width} -
-											#{$border-top-width}
-									);
-									padding-bottom: $link-padding-y-mobile;
-									padding-left: $link-padding-x-mobile;
-									padding-right: $link-padding-x-mobile;
-									padding-top: $link-padding-y-mobile;
+									.navbar-form {
+										height: calc(
+											#{$height-mobile} - #{$border-bottom-width} -
+												#{$border-top-width}
+										);
+										padding-bottom: $link-padding-y-mobile;
+										padding-left: $link-padding-x-mobile;
+										padding-right: $link-padding-x-mobile;
+										padding-top: $link-padding-y-mobile;
 
-									.form-control {
-										height: $form-control-height-mobile;
-										padding-bottom: 0;
-										padding-top: 0;
-									}
-								}
-							}
-						}
-
-						@include media-breakpoint-up($next) {
-							.container,
-							.container-fluid {
-								@if ($scaling-navbar) {
-									padding-left: $container-padding-x;
-									padding-right: $container-padding-x;
-								}
-							}
-
-							.navbar-brand {
-								@if ($scaling-navbar) {
-									font-size: $brand-font-size;
-									margin-right: $brand-margin-right;
-									padding-bottom: $brand-padding-y;
-									padding-left: $brand-padding-x;
-									padding-right: $brand-padding-x;
-									padding-top: $brand-padding-y;
-
-									@if ($enable-c-inner) {
-										.c-inner {
-											margin-bottom: math-sign(
-												$brand-padding-y
-											);
-											margin-left: math-sign(
-												$brand-padding-x
-											);
-											margin-right: math-sign(
-												$brand-padding-x
-											);
-											margin-top: math-sign(
-												$brand-padding-y
-											);
+										.form-control {
+											height: $form-control-height-mobile;
+											padding-bottom: 0;
+											padding-top: 0;
 										}
 									}
 								}
 							}
 
-							.navbar-form {
-								@if ($scaling-navbar) {
-									height: calc(
-										#{$height} -
-											#{$border-bottom-width} -
-											#{$border-top-width}
-									);
-									padding-left: $link-padding-x;
-									padding-right: $link-padding-x;
-
-									> .container,
-									> .container-fluid {
-										padding-left: 0;
-										padding-right: 0;
-									}
-
-									.form-control {
-										height: $form-control-height;
-									}
-								}
-							}
-
-							.nav-btn {
-								@if ($scaling-navbar) {
-									font-size: $btn-font-size;
-									height: $btn-monospaced-size;
-									margin-bottom: $btn-margin-y;
-									margin-left: $btn-margin-x;
-									margin-right: $btn-margin-x;
-									margin-top: $btn-margin-y;
-									padding-bottom: $btn-padding-y;
-									padding-left: $btn-padding-x;
-									padding-right: $btn-padding-x;
-									padding-top: $btn-padding-y;
-									min-width: $btn-monospaced-size;
-
-									@if ($enable-c-inner) {
-										.c-inner {
-											margin-bottom: math-sign(
-												$btn-padding-y
-											);
-											margin-left: math-sign(
-												$btn-padding-x
-											);
-											margin-right: math-sign(
-												$btn-padding-x
-											);
-											margin-top: math-sign(
-												$btn-padding-y
-											);
+							@if not(map-get($map, media-breakpoint-up)) {
+								@include media-breakpoint-up($next) {
+									.container,
+									.container-fluid {
+										@if ($scaling-navbar) {
+											padding-left: $container-padding-x;
+											padding-right: $container-padding-x;
 										}
 									}
-								}
-							}
 
-							.nav-btn-monospaced {
-								@if ($scaling-navbar) {
-									font-size: $btn-monospaced-font-size;
-									padding: 0;
+									.navbar-brand {
+										@if ($scaling-navbar) {
+											font-size: $brand-font-size;
+											margin-right: $brand-margin-right;
+											padding-bottom: $brand-padding-y;
+											padding-left: $brand-padding-x;
+											padding-right: $brand-padding-x;
+											padding-top: $brand-padding-y;
 
-									@if ($enable-c-inner) {
-										.c-inner {
-											margin: 0;
+											@if ($enable-c-inner) {
+												.c-inner {
+													margin-bottom: math-sign(
+														$brand-padding-y
+													);
+													margin-left: math-sign(
+														$brand-padding-x
+													);
+													margin-right: math-sign(
+														$brand-padding-x
+													);
+													margin-top: math-sign(
+														$brand-padding-y
+													);
+												}
+											}
 										}
 									}
-								}
-							}
 
-							.nav-item {
-								> .custom-control,
-								> .form-check {
-									@if ($scaling-navbar) {
-										margin-left: $btn-margin-x;
-										margin-right: $btn-margin-x;
-									}
-								}
-							}
+									.navbar-form {
+										@if ($scaling-navbar) {
+											height: calc(
+												#{$height} -
+													#{$border-bottom-width} -
+													#{$border-top-width}
+											);
+											padding-left: $link-padding-x;
+											padding-right: $link-padding-x;
 
-							.nav-link,
-							.navbar-text {
-								@if ($scaling-navbar) {
-									margin-bottom: $link-margin-y;
-									margin-left: $link-margin-x;
-									margin-right: $link-margin-x;
-									margin-top: $link-margin-y;
-									padding-bottom: $link-padding-y;
-									padding-left: $link-padding-x;
-									padding-right: $link-padding-x;
-									padding-top: $link-padding-y;
+											> .container,
+											> .container-fluid {
+												padding-left: 0;
+												padding-right: 0;
+											}
 
-									@if ($enable-c-inner) {
-										.c-inner {
-											margin-bottom: math-sign(
-												$link-padding-y
-											);
-											margin-left: math-sign(
-												$link-padding-x
-											);
-											margin-right: math-sign(
-												$link-padding-x
-											);
-											margin-top: math-sign(
-												$link-padding-y
-											);
+											.form-control {
+												height: $form-control-height;
+											}
 										}
 									}
-								}
-							}
 
-							.nav-link-monospaced {
-								@if ($scaling-navbar) {
-									font-size: $btn-monospaced-font-size;
-									margin-bottom: $btn-margin-y;
-									margin-left: $btn-margin-x;
-									margin-right: $btn-margin-x;
-									margin-top: $btn-margin-y;
-									padding: 0;
+									.nav-btn {
+										@if ($scaling-navbar) {
+											font-size: $btn-font-size;
+											height: $btn-monospaced-size;
+											margin-bottom: $btn-margin-y;
+											margin-left: $btn-margin-x;
+											margin-right: $btn-margin-x;
+											margin-top: $btn-margin-y;
+											padding-bottom: $btn-padding-y;
+											padding-left: $btn-padding-x;
+											padding-right: $btn-padding-x;
+											padding-top: $btn-padding-y;
+											min-width: $btn-monospaced-size;
 
-									@if ($enable-c-inner) {
-										.c-inner {
-											margin: 0;
+											@if ($enable-c-inner) {
+												.c-inner {
+													margin-bottom: math-sign(
+														$btn-padding-y
+													);
+													margin-left: math-sign(
+														$btn-padding-x
+													);
+													margin-right: math-sign(
+														$btn-padding-x
+													);
+													margin-top: math-sign(
+														$btn-padding-y
+													);
+												}
+											}
+										}
+									}
+
+									.nav-btn-monospaced {
+										@if ($scaling-navbar) {
+											font-size: $btn-monospaced-font-size;
+											padding: 0;
+
+											@if ($enable-c-inner) {
+												.c-inner {
+													margin: 0;
+												}
+											}
+										}
+									}
+
+									.nav-item {
+										> .custom-control,
+										> .form-check {
+											@if ($scaling-navbar) {
+												margin-left: $btn-margin-x;
+												margin-right: $btn-margin-x;
+											}
+										}
+									}
+
+									.nav-link,
+									.navbar-text {
+										@if ($scaling-navbar) {
+											margin-bottom: $link-margin-y;
+											margin-left: $link-margin-x;
+											margin-right: $link-margin-x;
+											margin-top: $link-margin-y;
+											padding-bottom: $link-padding-y;
+											padding-left: $link-padding-x;
+											padding-right: $link-padding-x;
+											padding-top: $link-padding-y;
+
+											@if ($enable-c-inner) {
+												.c-inner {
+													margin-bottom: math-sign(
+														$link-padding-y
+													);
+													margin-left: math-sign(
+														$link-padding-x
+													);
+													margin-right: math-sign(
+														$link-padding-x
+													);
+													margin-top: math-sign(
+														$link-padding-y
+													);
+												}
+											}
+										}
+									}
+
+									.nav-link-monospaced {
+										@if ($scaling-navbar) {
+											font-size: $btn-monospaced-font-size;
+											margin-bottom: $btn-margin-y;
+											margin-left: $btn-margin-x;
+											margin-right: $btn-margin-x;
+											margin-top: $btn-margin-y;
+											padding: 0;
+
+											@if ($enable-c-inner) {
+												.c-inner {
+													margin: 0;
+												}
+											}
 										}
 									}
 								}
@@ -880,72 +884,80 @@
 				}
 			}
 
-			// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
-			// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
-			// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
+			// if media-breakpoint-up doesn't exist output styles .navbar-expand-{sm|md|lg|xl|??}
 
-			@each $breakpoint in map-keys($breakpoints) {
-				$index: index(map-keys($breakpoints), $breakpoint);
-				$length: length(map-keys($breakpoints));
-				$infix: '.navbar-overlay-#{$breakpoint}-down';
+			@if not(map-get($map, media-breakpoint-down)) {
+				// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
+				// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
+				// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
 
-				@if ($index == $length) {
-					$infix: '.navbar-overlay-up';
-				}
-
-				#{$infix} {
-					@include media-breakpoint-down($breakpoint) {
-						@include border-radius(
-							if(
-								variable-exists(navbar-border-radius),
-								$navbar-border-radius,
-								if(
-									variable-exists(
-										cadmin-navbar-border-radius
-									),
-									$cadmin-navbar-border-radius,
-									null
-								)
-							)
-						);
-
-						padding-bottom: $padding-y;
-						padding-left: $padding-x;
-						padding-right: $padding-x;
-						padding-top: $padding-y;
-					}
-				}
-			}
-
-			// Navbar Underline
-
-			&.navbar-underline {
-				.navbar-toggler-link {
-					&:after {
-						bottom: $active-border-offset-bottom-mobile;
-						height: $active-border-bottom-width;
-						left: $active-border-offset-x;
-						right: $active-border-offset-x;
-						top: $active-border-offset-top;
-					}
-				}
-			}
-
-			&.navbar-underline.navbar-expand {
 				@each $breakpoint in map-keys($breakpoints) {
-					$next: breakpoint-next($breakpoint, $breakpoints);
-					$infix: breakpoint-infix($next, $breakpoints);
+					$index: index(map-keys($breakpoints), $breakpoint);
+					$length: length(map-keys($breakpoints));
+					$infix: '.navbar-overlay-#{$breakpoint}-down';
 
-					&#{$infix} {
-						// .navbar-expand, sm, md, lg, xl
-						@include media-breakpoint-up($next) {
-							.navbar-nav .nav-link {
-								&.active:after {
-									bottom: $active-border-offset-bottom;
-									height: $active-border-bottom-width;
-									left: $active-border-offset-x;
-									right: $active-border-offset-x;
-									top: $active-border-offset-top;
+					@if ($index == $length) {
+						$infix: '.navbar-overlay-up';
+					}
+
+					#{$infix} {
+						@include media-breakpoint-down($breakpoint) {
+							@include border-radius(
+								if(
+									variable-exists(navbar-border-radius),
+									$navbar-border-radius,
+									if(
+										variable-exists(
+											cadmin-navbar-border-radius
+										),
+										$cadmin-navbar-border-radius,
+										null
+									)
+								)
+							);
+
+							padding-bottom: $padding-y;
+							padding-left: $padding-x;
+							padding-right: $padding-x;
+							padding-top: $padding-y;
+						}
+					}
+				}
+
+				// Navbar Underline
+
+				&.navbar-underline {
+					.navbar-toggler-link {
+						&:after {
+							bottom: $active-border-offset-bottom-mobile;
+							height: $active-border-bottom-width;
+							left: $active-border-offset-x;
+							right: $active-border-offset-x;
+							top: $active-border-offset-top;
+						}
+					}
+				}
+
+				// if media-breakpoint-up doesn't exist output styles .navbar-expand-{sm|md|lg|xl|??}
+
+				@if not(map-get($map, media-breakpoint-up)) {
+					&.navbar-underline.navbar-expand {
+						@each $breakpoint in map-keys($breakpoints) {
+							$next: breakpoint-next($breakpoint, $breakpoints);
+							$infix: breakpoint-infix($next, $breakpoints);
+
+							&#{$infix} {
+								// .navbar-expand, sm, md, lg, xl
+								@include media-breakpoint-up($next) {
+									.navbar-nav .nav-link {
+										&.active:after {
+											bottom: $active-border-offset-bottom;
+											height: $active-border-bottom-width;
+											left: $active-border-offset-x;
+											right: $active-border-offset-x;
+											top: $active-border-offset-top;
+										}
+									}
 								}
 							}
 						}
@@ -971,8 +983,7 @@
 						map-deep-get($map, navbar-underline, navbar-nav)
 					);
 
-					.nav-link,
-					.btn-unstyled {
+					.nav-link {
 						@include clay-link(
 							map-deep-get(
 								$map,
@@ -1080,8 +1091,7 @@
 			}
 
 			.navbar-nav {
-				.nav-link,
-				.btn-unstyled {
+				.nav-link {
 					@include clay-link(
 						map-deep-get($map, navbar-nav, nav-link)
 					);
@@ -1474,8 +1484,7 @@
 			}
 
 			.navbar-nav {
-				.nav-link,
-				.btn-unstyled {
+				.nav-link {
 					@include clay-link($nav-link);
 				}
 
@@ -1704,7 +1713,7 @@
 			}
 
 			// if media-breakpoint-down doesn't exist output styles .navbar-expand-{sm|md|lg|xl|??}
-			// deprecated use `media-breakpoint-down` key instead
+			// deprecated use the key `media-breakpoint-down` instead
 
 			@if not(map-get($map, media-breakpoint-down)) {
 				&.navbar-expand {
@@ -1781,7 +1790,7 @@
 			}
 
 			// if media-breakpoint-up doesn't exist output styles .navbar-expand through .navbar-expand-{sm|md|lg|xl|??}
-			// deprecated use `media-breakpoint-up` key instead
+			// deprecated use the key `media-breakpoint-up` instead
 
 			@if not(map-get($map, media-breakpoint-up)) {
 				&.navbar-expand {

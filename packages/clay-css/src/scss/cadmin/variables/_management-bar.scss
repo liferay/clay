@@ -32,6 +32,7 @@ $cadmin-management-bar-size: map-deep-merge(
 		min-height: 64px,
 		padding-x: 0,
 		padding-y: 0,
+		font-size-mobile: $cadmin-navbar-font-size,
 		height-mobile: 48px,
 		min-height-mobile: 48px,
 		btn-monospaced-font-size: 16px,
@@ -44,8 +45,536 @@ $cadmin-management-bar-size: map-deep-merge(
 		toggler-margin-x: 14px,
 		active-border-bottom-width: 4px,
 		nav-item-dropdown-margin-top: 0,
+		media-breakpoint-down: (),
+		media-breakpoint-up: (),
 	),
 	$cadmin-management-bar-size
+);
+
+$cadmin-management-bar-base: () !default;
+$cadmin-management-bar-base: map-deep-merge(
+	(
+		border-color: transparent,
+		border-style: solid,
+		navbar-nav: (
+			nav-link: (
+				border-radius: $cadmin-border-radius,
+				outline: 0,
+				transition: box-shadow 0.15s ease-in-out,
+				focus: (
+					box-shadow: $cadmin-btn-focus-box-shadow,
+				),
+				disabled: (
+					box-shadow: none,
+				),
+			),
+		),
+		navbar-overlay: (
+			padding: 0,
+		),
+		media-breakpoint-down: (
+			sm: (
+				navbar-expand-md: (
+					min-height:
+						map-get($cadmin-management-bar-size, min-height-mobile),
+					navbar-collapse-absolute: (
+						navbar-collapse: (
+							border-color: transparent,
+							border-style: solid,
+							border-width: 0
+								map-get(
+									$cadmin-management-bar-size,
+									border-right-width
+								)
+								map-get(
+									$cadmin-management-bar-size,
+									border-bottom-width
+								)
+								map-get(
+									$cadmin-management-bar-size,
+									border-left-width
+								),
+							box-shadow:
+								clay-enable-shadows(
+									map-get(
+										$cadmin-management-bar-size,
+										box-shadow
+									)
+								),
+							left:
+								math-sign(
+									map-get(
+										$cadmin-management-bar-size,
+										border-left-width
+									)
+								),
+							margin-top:
+								map-get(
+									$cadmin-management-bar-size,
+									border-bottom-width
+								),
+							padding-bottom:
+								map-get($cadmin-management-bar-size, padding-y),
+							padding-left:
+								map-get($cadmin-management-bar-size, padding-x),
+							padding-right:
+								map-get($cadmin-management-bar-size, padding-x),
+							padding-top:
+								map-get($cadmin-management-bar-size, padding-y),
+							right:
+								math-sign(
+									map-get(
+										$cadmin-management-bar-size,
+										border-right-width
+									)
+								),
+						),
+					),
+					navbar-form: (
+						height:
+							calc(
+								#{map-get(
+										$cadmin-management-bar-size,
+										height-mobile
+									)} - #{map-get(
+										$cadmin-management-bar-size,
+										border-bottom-width
+									)}
+							),
+						padding-bottom:
+							setter(
+								map-get(
+									$cadmin-management-bar-size,
+									link-padding-y-mobile
+								),
+								calc(
+									(
+											#{map-get(
+													$cadmin-management-bar-size,
+													link-height-mobile
+												)} - (#{map-get(
+															$cadmin-management-bar-size,
+															font-size-mobile
+														)} * #{$cadmin-line-height-base})
+										) * 0.5
+								)
+							),
+						padding-left:
+							map-get(
+								$cadmin-management-bar-size,
+								link-padding-x-mobile
+							),
+						padding-right:
+							map-get(
+								$cadmin-management-bar-size,
+								link-padding-x-mobile
+							),
+						padding-top:
+							setter(
+								map-get(
+									$cadmin-management-bar-size,
+									link-padding-y-mobile
+								),
+								calc(
+									(
+											#{map-get(
+													$cadmin-management-bar-size,
+													link-height-mobile
+												)} - (#{map-get(
+															$cadmin-management-bar-size,
+															font-size-mobile
+														)} * #{$cadmin-line-height-base})
+										) * 0.5
+								)
+							),
+						form-control: (
+							height:
+								map-get(
+									$cadmin-management-bar-size,
+									form-control-height-mobile
+								),
+							padding-bottom: 0,
+							padding-top: 0,
+						),
+					),
+				),
+			),
+		),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-form: (
+						height:
+							calc(
+								#{map-get($cadmin-management-bar-size, height)} -
+									#{map-get(
+										$cadmin-management-bar-size,
+										border-bottom-width
+									)}
+							),
+						padding-left:
+							map-get($cadmin-management-bar-size, link-padding-x),
+						padding-right:
+							map-get($cadmin-management-bar-size, link-padding-x),
+						container: (
+							padding-left: 0,
+							padding-right: 0,
+						),
+						container-fluid: (
+							padding-left: 0,
+							padding-right: 0,
+						),
+						form-control: (
+							height:
+								map-get(
+									$cadmin-management-bar-size,
+									form-control-height
+								),
+						),
+					),
+					navbar-nav: (
+						nav-item: (
+							custom-control: (
+								margin-left:
+									setter(
+										map-get(
+											$cadmin-management-bar-size,
+											btn-margin-x
+										),
+										map-get(
+											$cadmin-management-bar-size,
+											link-padding-x
+										)
+									),
+								margin-right:
+									setter(
+										map-get(
+											$cadmin-management-bar-size,
+											btn-margin-x
+										),
+										map-get(
+											$cadmin-management-bar-size,
+											link-padding-x
+										)
+									),
+							),
+						),
+						nav-link: (
+							margin-bottom:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										link-margin-y
+									),
+									calc(
+										(
+												(
+														#{map-get(
+																$cadmin-management-bar-size,
+																height
+															)} - #{map-get(
+																$cadmin-management-bar-size,
+																border-bottom-width
+															)}
+													) - #{map-get(
+														$cadmin-management-bar-size,
+														link-height
+													)}
+											) * 0.5
+									)
+								),
+							margin-left:
+								map-get(
+									$cadmin-management-bar-size,
+									link-margin-x
+								),
+							margin-right:
+								map-get(
+									$cadmin-management-bar-size,
+									link-margin-x
+								),
+							margin-top:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										link-margin-y
+									),
+									calc(
+										(
+												(
+														#{map-get(
+																$cadmin-management-bar-size,
+																height
+															)} - #{map-get(
+																$cadmin-management-bar-size,
+																border-bottom-width
+															)}
+													) - #{map-get(
+														$cadmin-management-bar-size,
+														link-height
+													)}
+											) * 0.5
+									)
+								),
+							padding-bottom:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										link-padding-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														link-height
+													)} - (#{map-get(
+																$cadmin-management-bar-size,
+																font-size
+															)} * #{$cadmin-line-height-base})
+											) * 0.5
+									)
+								),
+							padding-left:
+								map-get(
+									$cadmin-management-bar-size,
+									link-padding-x
+								),
+							padding-right:
+								map-get(
+									$cadmin-management-bar-size,
+									link-padding-x
+								),
+							padding-top:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										link-padding-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														link-height
+													)} - (#{map-get(
+																$cadmin-management-bar-size,
+																font-size
+															)} * #{$cadmin-line-height-base})
+											) * 0.5
+									)
+								),
+						),
+						nav-link-monospaced: (
+							font-size:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-monospaced-font-size
+								),
+							margin-bottom:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										btn-margin-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														height
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														border-bottom-width
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														padding-y
+													)} * 2 - #{setter(
+														map-get(
+															$cadmin-management-bar-size,
+															btn-monospaced-size
+														),
+														2rem
+													)}
+											) * 0.5
+									)
+								),
+							margin-left:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-margin-x
+								),
+							margin-right:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-margin-x
+								),
+							margin-top:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										btn-margin-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														height
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														border-bottom-width
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														padding-y
+													)} * 2 - #{setter(
+														map-get(
+															$cadmin-management-bar-size,
+															btn-monospaced-size
+														),
+														2rem
+													)}
+											) * 0.5
+									)
+								),
+							padding: 0,
+						),
+						nav-btn: (
+							font-size: inherit,
+							height:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-monospaced-size
+								),
+							margin-bottom:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										btn-margin-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														height
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														border-bottom-width
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														padding-y
+													)} * 2 - #{setter(
+														map-get(
+															$cadmin-management-bar-size,
+															btn-monospaced-size
+														),
+														2rem
+													)}
+											) * 0.5
+									)
+								),
+							margin-left:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-margin-x
+								),
+							margin-right:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-margin-x
+								),
+							margin-top:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										btn-margin-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														height
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														border-bottom-width
+													)} - #{map-get(
+														$cadmin-management-bar-size,
+														padding-y
+													)} * 2 - #{setter(
+														map-get(
+															$cadmin-management-bar-size,
+															btn-monospaced-size
+														),
+														2rem
+													)}
+											) * 0.5
+									)
+								),
+							min-width:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-monospaced-size
+								),
+							padding-bottom:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										btn-padding-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														link-height
+													)} - (#{map-get(
+																$cadmin-management-bar-size,
+																font-size
+															)} * #{$cadmin-line-height-base})
+											) * 0.5
+									)
+								),
+							padding-left:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-padding-x
+								),
+							padding-right:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-padding-x
+								),
+							padding-top:
+								setter(
+									map-get(
+										$cadmin-management-bar-size,
+										btn-padding-y
+									),
+									calc(
+										(
+												#{map-get(
+														$cadmin-management-bar-size,
+														link-height
+													)} - (#{map-get(
+																$cadmin-management-bar-size,
+																font-size
+															)} * #{$cadmin-line-height-base})
+											) * 0.5
+									)
+								),
+						),
+						nav-btn-monospaced: (
+							font-size:
+								map-get(
+									$cadmin-management-bar-size,
+									btn-monospaced-font-size
+								),
+							padding-bottom: 0,
+							padding-left: 0,
+							padding-right: 0,
+							padding-top: 0,
+						),
+					),
+				),
+			),
+		),
+	),
+	$cadmin-management-bar-base
 );
 
 $cadmin-management-bar-light: () !default;
