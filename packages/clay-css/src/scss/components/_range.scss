@@ -24,8 +24,8 @@
 	}
 }
 
-.clay-range-progress-none .clay-range-progress {
-	visibility: hidden;
+.clay-range-progress-none {
+	@include clay-range-variant($clay-range-progress-none);
 }
 
 .clay-range-title {
