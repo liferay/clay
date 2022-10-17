@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
+
+### Features
+
+-   **@clayui/drop-down:** add `forwardRef` to ItemList ([9143196](https://github.com/liferay/clay/commit/9143196bfc0340e3316b5b1997c395a676034d60))
+-   **@clayui/drop-down:** move style prop to Item container ([4bc2fd4](https://github.com/liferay/clay/commit/4bc2fd47c38c17b655c590a2d0c269ccefcad8ff))
+
 ## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
 
 **Note:** Version bump only for package @clayui/drop-down

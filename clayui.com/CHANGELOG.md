@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
+
+### Bug Fixes
+
+-   **clayui.com:** General accessibility fixes ([df18552](https://github.com/liferay/clay/commit/df185521ee55c0a398e9acef2f0ec22e5616e1ba))
+
 # [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
 
 ### Bug Fixes

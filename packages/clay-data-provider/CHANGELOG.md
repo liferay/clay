@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
+
+### Bug Fixes
+
+-   **@clayui/data-provider:** fix error when grouping data in refetch ([64cfa70](https://github.com/liferay/clay/commit/64cfa7071e07ca71d540664b36ff19b333b35054))
+-   **@clayui/data-provider:** reset cursor when refetch without cache policy ([98e2ce3](https://github.com/liferay/clay/commit/98e2ce3fcc72486352ef97df3a2cdcb719cc1e1c))
+
+### Features
+
+-   **@clayui/data-provider:** add `useResource` controlled AbortController ([146f53b](https://github.com/liferay/clay/commit/146f53b51bcd5dbb1a48a1ae9e573e6c4424a971))
+
 ## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
 
 **Note:** Version bump only for package @clayui/data-provider

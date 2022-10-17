@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
+
 ## [3.75.2](https://github.com/liferay/clay/compare/v3.75.1...v3.75.2) (2022-09-29)
 
 **Note:** Version bump only for package @clayui/tabs

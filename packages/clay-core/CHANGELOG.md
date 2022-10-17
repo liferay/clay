@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
+
+### Features
+
+-   **@clayui/autocomplete:** adds support for paginated data integrated with the `useResource` hook ([cfb35c1](https://github.com/liferay/clay/commit/cfb35c17f311e75c6aee06250953abfdfd422bc3))
+
 # [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
 
 ### Bug Fixes

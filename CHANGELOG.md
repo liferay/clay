@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
+
+### Bug Fixes
+
+-   **@clayui/data-provider:** fix error when grouping data in refetch ([64cfa70](https://github.com/liferay/clay/commit/64cfa7071e07ca71d540664b36ff19b333b35054))
+-   **@clayui/data-provider:** reset cursor when refetch without cache policy ([98e2ce3](https://github.com/liferay/clay/commit/98e2ce3fcc72486352ef97df3a2cdcb719cc1e1c))
+-   **@clayui/tabs:** sets `tabIndex=-1` when not active and `tabIndex=0` for the tabpanel ([cbd8710](https://github.com/liferay/clay/commit/cbd8710491b4262000b0af43244977351429228b))
+-   **clayui.com:** General accessibility fixes ([df18552](https://github.com/liferay/clay/commit/df185521ee55c0a398e9acef2f0ec22e5616e1ba))
+
+### Features
+
+-   **@clayui/autocomplete:** add the Collection pattern and loading state ([ab44b4a](https://github.com/liferay/clay/commit/ab44b4affed2202020d3b8b75124e423e9668f7e))
+-   **@clayui/autocomplete:** adds support for paginated data integrated with the `useResource` hook ([cfb35c1](https://github.com/liferay/clay/commit/cfb35c17f311e75c6aee06250953abfdfd422bc3))
+-   **@clayui/data-provider:** add `useResource` controlled AbortController ([146f53b](https://github.com/liferay/clay/commit/146f53b51bcd5dbb1a48a1ae9e573e6c4424a971))
+-   **@clayui/drop-down:** add `forwardRef` to ItemList ([9143196](https://github.com/liferay/clay/commit/9143196bfc0340e3316b5b1997c395a676034d60))
+-   **@clayui/drop-down:** move style prop to Item container ([4bc2fd4](https://github.com/liferay/clay/commit/4bc2fd47c38c17b655c590a2d0c269ccefcad8ff))
+
 # [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
 
 ### Bug Fixes
