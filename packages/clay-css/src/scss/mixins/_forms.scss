@@ -1517,8 +1517,6 @@
 				position:
 					setter(map-get($clay-range-thumb, position), absolute),
 				top: setter(map-get($clay-range-thumb, top), 50%),
-				visibility:
-					setter(map-get($clay-range-thumb, visibility), hidden),
 				width:
 					setter(
 						map-get($map, thumb-width),
@@ -2292,10 +2290,30 @@
 
 				// Webkit
 
+				&::-webkit-slider-container {
+					@include clay-css(
+						map-deep-get(
+							$map,
+							form-control-range,
+							webkit-slider-container
+						)
+					);
+				}
+
 				&::-webkit-slider-runnable-track {
-					-webkit-appearance: none;
-					appearance: none;
-					height: 100%;
+					$webkit-slider-runnable-track: map-deep-get(
+						$map,
+						form-control-range,
+						webkit-slider-runnable-track
+					);
+
+					@if not($webkit-slider-runnable-track) {
+						-webkit-appearance: none;
+						appearance: none;
+						height: 100%;
+					} @else {
+						@include clay-css($webkit-slider-runnable-track);
+					}
 				}
 
 				&::-webkit-slider-thumb {
@@ -2442,6 +2460,200 @@
 			&::after,
 			&::before {
 				@include clay-css($before-after);
+			}
+		}
+	}
+}
+
+@mixin clay-range-variant($map) {
+	@if (type-of($map) == 'map') {
+		$enabled: setter(map-get($map, enabled), true);
+
+		$clay-range-input: setter(map-get($map, clay-range-input), ());
+
+		$clay-range-thumb: setter(
+			map-get($clay-range-input, clay-range-thumb),
+			()
+		);
+		$clay-range-thumb: map-merge(
+			$clay-range-thumb,
+			(
+				margin-top:
+					setter(map-get($clay-range-thumb, margin-top), c-unset),
+				position: setter(map-get($clay-range-thumb, position), c-unset),
+				right: setter(map-get($clay-range-thumb, right), c-unset),
+				top: setter(map-get($clay-range-thumb, top), c-unset),
+			)
+		);
+
+		$moz-range-thumb: setter(
+			map-get($clay-range-input, moz-range-thumb),
+			()
+		);
+		$moz-range-thumb: map-merge(
+			$moz-range-thumb,
+			(
+				appearance:
+					setter(map-get($moz-range-thumb, appearance), c-unset),
+				position: setter(map-get($moz-range-thumb, position), c-unset),
+			)
+		);
+
+		$ms-thumb: setter(map-get($clay-range-input, ms-thumb), ());
+		$ms-thumb: map-merge(
+			$ms-thumb,
+			(
+				appearance: setter(map-get($ms-thumb, appearance), c-unset),
+			)
+		);
+
+		$webkit-slider-thumb: setter(
+			map-get($clay-range-input, webkit-slider-thumb),
+			()
+		);
+		$webkit-slider-thumb: map-merge(
+			$webkit-slider-thumb,
+			(
+				appearance:
+					setter(map-get($webkit-slider-thumb, appearance), c-unset),
+				position:
+					setter(map-get($webkit-slider-thumb, position), c-unset),
+			)
+		);
+
+		$clay-range-track: setter(
+			map-get($clay-range-input, clay-range-track),
+			()
+		);
+		$clay-range-track: map-merge(
+			$clay-range-track,
+			(
+				margin-top:
+					setter(map-get($clay-range-track, margin-top), c-unset),
+			)
+		);
+
+		$clay-range-progress: setter(
+			map-get($clay-range-input, clay-range-progress),
+			()
+		);
+		$clay-range-progress: map-merge(
+			$clay-range-progress,
+			(
+				margin-top:
+					setter(map-get($clay-range-progress, margin-top), c-unset),
+			)
+		);
+
+		$tooltip: setter(map-get($clay-range-input, tooltip), ());
+		$tooltip: map-merge(
+			$tooltip,
+			(
+				margin-left: setter(map-get($tooltip, margin-left), c-unset),
+			)
+		);
+
+		$clay-tooltip-bottom: setter(
+			map-get($clay-range-input, clay-tooltip-bottom),
+			()
+		);
+		$clay-tooltip-bottom: map-merge(
+			$clay-tooltip-bottom,
+			(
+				padding-top:
+					setter(
+						map-get($map, tooltip-arrow-offset),
+						map-get($clay-tooltip-bottom, padding-top),
+						c-unset
+					),
+				top: setter(map-get($clay-tooltip-bottom, top), c-unset),
+				transform:
+					setter(map-get($clay-tooltip-bottom, transform), c-unset),
+			)
+		);
+
+		$clay-tooltip-bottom-tooltip-arrow: setter(
+			map-get($clay-tooltip-bottom, tooltip-arrow),
+			()
+		);
+		$clay-tooltip-bottom-tooltip-arrow: map-merge(
+			$clay-tooltip-bottom-tooltip-arrow,
+			(
+				margin-left:
+					setter(
+						map-get(
+							$clay-tooltip-bottom-tooltip-arrow,
+							margin-left
+						),
+						c-unset
+					),
+			)
+		);
+
+		$clay-tooltip-bottom: map-deep-merge(
+			$clay-tooltip-bottom,
+			(
+				tooltip-arrow: $clay-tooltip-bottom-tooltip-arrow,
+			)
+		);
+
+		$clay-tooltip-top: setter(
+			map-get($clay-range-input, clay-tooltip-top),
+			()
+		);
+		$clay-tooltip-top: map-merge(
+			$clay-tooltip-top,
+			(
+				bottom: setter(map-get($clay-tooltip-top, bottom), c-unset),
+				padding-bottom:
+					setter(map-get($clay-tooltip-top, padding-bottom), c-unset),
+				transform:
+					setter(map-get($clay-tooltip-top, transform), c-unset),
+			)
+		);
+
+		$clay-tooltip-top-tooltip-arrow: setter(
+			map-get($clay-tooltip-top, tooltip-arrow),
+			()
+		);
+		$clay-tooltip-top-tooltip-arrow: map-merge(
+			$clay-tooltip-top-tooltip-arrow,
+			(
+				margin-left:
+					setter(
+						map-get($clay-tooltip-top-tooltip-arrow, margin-left),
+						c-unset
+					),
+			)
+		);
+
+		$clay-tooltip-top: map-deep-merge(
+			$clay-tooltip-top,
+			(
+				tooltip-arrow: $clay-tooltip-top-tooltip-arrow,
+			)
+		);
+
+		$clay-range-input: map-deep-merge(
+			$clay-range-input,
+			(
+				clay-range-thumb: $clay-range-thumb,
+				moz-range-thumb: $moz-range-thumb,
+				ms-thumb: $ms-thumb,
+				webkit-slider-thumb: $webkit-slider-thumb,
+				clay-range-track: $clay-range-track,
+				clay-range-progress: $clay-range-progress,
+				tooltip: $tooltip,
+				clay-tooltip-bottom: $clay-tooltip-bottom,
+				clay-tooltip-top: $clay-tooltip-top,
+			)
+		);
+
+		@if ($enabled) {
+			@include clay-css($map);
+
+			.clay-range-input {
+				@include clay-range-input-variant($clay-range-input);
 			}
 		}
 	}
