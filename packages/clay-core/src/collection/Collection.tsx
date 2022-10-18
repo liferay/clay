@@ -353,6 +353,10 @@ export function Collection<
 							parentKey
 						);
 
+						if (performFilter(child)) {
+							return;
+						}
+
 						if (ItemContainer) {
 							return (
 								<ItemContainer
