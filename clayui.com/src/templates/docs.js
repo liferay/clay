@@ -361,6 +361,7 @@ export default function Documentation(props) {
 													<ul className="social-icons">
 														<li>
 															<a
+																aria-label="Github clay repository"
 																className="rounded-circle sticker sticker-secondary"
 																href="https://github.com/liferay/clay"
 																rel="noopener noreferrer"
