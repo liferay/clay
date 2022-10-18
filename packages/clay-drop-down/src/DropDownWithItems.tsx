@@ -518,9 +518,7 @@ export const ClayDropDownWithItems = ({
 				{searchable && (
 					<Search
 						{...searchProps}
-						onChange={(event) =>
-							onSearchValueChange(event.target.value)
-						}
+						onChange={onSearchValueChange}
 						spritemap={spritemap}
 						value={searchValue}
 					/>

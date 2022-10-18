@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {__NOT_PUBLIC_COLLECTION} from '@clayui/core';
 import {
 	FocusScope,
 	InternalDispatch,
@@ -25,8 +26,16 @@ import Menu, {Align} from './Menu';
 import Search from './Search';
 import Section from './Section';
 
-export interface IProps
-	extends React.HTMLAttributes<HTMLDivElement | HTMLLIElement> {
+import type {ICollectionProps} from '@clayui/core';
+
+const {Collection} = __NOT_PUBLIC_COLLECTION;
+
+export interface IProps<T>
+	extends Omit<
+			React.HTMLAttributes<HTMLDivElement | HTMLLIElement>,
+			'children'
+		>,
+		Omit<ICollectionProps<T, unknown>, 'virtualize'> {
 	/**
 	 * Flag to indicate if the DropDown menu is active or not (controlled).
 	 *
@@ -66,6 +75,12 @@ export interface IProps
 	 *  Property to set the default value of `active` (uncontrolled).
 	 */
 	defaultActive?: boolean;
+
+	/**
+	 * Defines the name of the property key that is used in the items filter
+	 * test (Dynamic content).
+	 */
+	filterKey?: string;
 
 	/**
 	 * Flag to indicate if menu contains icon symbols on the right side.
@@ -116,7 +131,7 @@ export interface IProps
 
 let counter = 0;
 
-function ClayDropDown(props: IProps): JSX.Element & {
+function ClayDropDown<T>(props: IProps<T>): JSX.Element & {
 	Action: typeof Action;
 	Caption: typeof Caption;
 	Divider: typeof Divider;
@@ -129,7 +144,7 @@ function ClayDropDown(props: IProps): JSX.Element & {
 	Section: typeof Section;
 };
 
-function ClayDropDown({
+function ClayDropDown<T>({
 	active,
 	alignmentByViewport,
 	alignmentPosition,
@@ -139,8 +154,10 @@ function ClayDropDown({
 	closeOnClickOutside,
 	containerElement: ContainerElement = 'div',
 	defaultActive = false,
+	filterKey,
 	hasLeftSymbols,
 	hasRightSymbols,
+	items,
 	menuElementAttrs,
 	menuHeight,
 	menuWidth,
@@ -149,7 +166,7 @@ function ClayDropDown({
 	renderMenuOnClick = false,
 	trigger,
 	...otherProps
-}: IProps) {
+}: IProps<T>) {
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
 	const menuElementRef = useRef<HTMLDivElement>(null);
 
@@ -163,6 +180,8 @@ function ClayDropDown({
 		onChange: onActiveChange,
 		value: active,
 	});
+
+	const [search, setSearch] = useState('');
 
 	useEffect(() => {
 		if (internalActive) {
@@ -305,9 +324,21 @@ function ClayDropDown({
 											triggerElementRef.current?.focus();
 										},
 										closeOnClick,
+										filterKey,
+										onSearch: setSearch,
+										search,
 									}}
 								>
-									{children}
+									{children instanceof Function ? (
+										<Collection<T>
+											items={items}
+											passthroughKey={false}
+										>
+											{children}
+										</Collection>
+									) : (
+										children
+									)}
 								</DropDownContext.Provider>
 							</FocusMenu>
 						</Menu>

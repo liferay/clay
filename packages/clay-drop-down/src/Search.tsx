@@ -6,19 +6,28 @@
 import ClayButton from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
+import {InternalDispatch, useInternalState} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 
-export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
+import {DropDownContext} from './DropDownContext';
+
+export interface IProps
+	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
+	/**
+	 * Initial value of the input (uncontrolled).
+	 */
+	defaultValue?: string;
+
 	/**
 	 * Props to add to form element
 	 */
 	formProps?: React.HTMLAttributes<HTMLFormElement>;
 
 	/**
-	 * Callback for when input value changes.
+	 * Callback for when input value changes (controlled).
 	 */
-	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	onChange?: InternalDispatch<string>;
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -26,20 +35,40 @@ export interface IProps extends React.HTMLAttributes<HTMLInputElement> {
 	spritemap?: string;
 
 	/**
-	 * Value of the searchInput
+	 * Current value of the input (controlled).
 	 */
-	value: React.ReactText;
+	value?: string;
 }
 
 const defaultOnSubmit = (event: React.SyntheticEvent) => event.preventDefault();
 
 const ClayDropDownSearch = ({
 	className,
+	defaultValue = '',
 	formProps = {},
+	onChange,
 	spritemap,
+	value: valueProp,
 	...otherProps
 }: IProps) => {
 	const {className: formClassName, onSubmit, ...otherFormProps} = formProps;
+
+	const [value, setValue, isUncontrolled] = useInternalState({
+		defaultName: 'defaultValue',
+		defaultValue,
+		handleName: 'onChange',
+		name: 'value',
+		onChange,
+		value: valueProp,
+	});
+
+	const {onSearch} = useContext(DropDownContext);
+
+	useEffect(() => {
+		if (isUncontrolled) {
+			onSearch(value);
+		}
+	}, [isUncontrolled, value]);
 
 	return (
 		<form
@@ -50,7 +79,13 @@ const ClayDropDownSearch = ({
 			<div className="dropdown-section">
 				<ClayInput.Group small>
 					<ClayInput.GroupItem>
-						<ClayInput {...otherProps} insetAfter type="text" />
+						<ClayInput
+							{...otherProps}
+							insetAfter
+							onChange={(event) => setValue(event.target.value)}
+							type="text"
+							value={value}
+						/>
 
 						<ClayInput.GroupInsetItem after tag="span">
 							<ClayButton displayType="unstyled" type="button">
