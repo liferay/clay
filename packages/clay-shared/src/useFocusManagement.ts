@@ -88,7 +88,13 @@ export const FOCUSABLE_ELEMENTS = [
 function collectDocumentFocusableElements() {
 	return Array.from<HTMLElement>(
 		document.querySelectorAll(FOCUSABLE_ELEMENTS.join(','))
-	).filter((element) => isFocusable(element));
+	).filter((element) => {
+		if (isFocusable(element)) {
+			return window.getComputedStyle(element).visibility !== 'hidden';
+		}
+
+		return false;
+	});
 }
 
 // https://github.com/facebook/react/pull/15849#diff-39a673d38713257d5fe7d90aac2acb5aR107
