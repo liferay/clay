@@ -37,7 +37,7 @@ const ClayDropDownItemList = React.forwardRef<
 		>
 			<Collection<any>
 				filter={filterFn}
-				filterKey="value"
+				filterKey="textValue"
 				items={items}
 				passthroughKey={false}
 			>
