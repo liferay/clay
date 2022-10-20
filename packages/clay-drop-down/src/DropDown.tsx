@@ -4,7 +4,6 @@
  */
 
 import {
-	FOCUSABLE_ELEMENTS,
 	FocusScope,
 	InternalDispatch,
 	Keys,
@@ -218,113 +217,110 @@ function ClayDropDown({
 
 	return (
 		<FocusScope>
-			<ContainerElement
-				{...otherProps}
-				className={classNames('dropdown', className)}
-				onKeyUp={handleKeyUp}
-			>
-				{React.cloneElement(trigger, {
-					'aria-controls': ariaControls,
-					'aria-expanded': internalActive,
-					'aria-haspopup': 'true',
-					className: classNames(
-						'dropdown-toggle',
-						trigger.props.className
-					),
-					onClick: (event: React.MouseEvent<HTMLButtonElement>) => {
-						if (trigger.props.onClick) {
-							trigger.props.onClick(event);
-						}
+			{(focusManager) => (
+				<ContainerElement
+					{...otherProps}
+					className={classNames('dropdown', className)}
+					onKeyUp={handleKeyUp}
+				>
+					{React.cloneElement(trigger, {
+						'aria-controls': ariaControls,
+						'aria-expanded': internalActive,
+						'aria-haspopup': 'true',
+						className: classNames(
+							'dropdown-toggle',
+							trigger.props.className
+						),
+						onClick: (
+							event: React.MouseEvent<HTMLButtonElement>
+						) => {
+							if (trigger.props.onClick) {
+								trigger.props.onClick(event);
+							}
 
-						openMenu(!internalActive);
-					},
-					onKeyDown: (
-						event: React.KeyboardEvent<HTMLButtonElement>
-					) => {
-						if (trigger.props.onKeyDown) {
-							trigger.props.onKeyDown(event);
-						}
-
-						if (event.key === Keys.Spacebar) {
 							openMenu(!internalActive);
-						}
+						},
+						onKeyDown: (
+							event: React.KeyboardEvent<HTMLButtonElement>
+						) => {
+							if (trigger.props.onKeyDown) {
+								trigger.props.onKeyDown(event);
+							}
 
-						if (event.key === Keys.Down) {
-							event.preventDefault();
-							event.stopPropagation();
+							if (event.key === Keys.Spacebar) {
+								openMenu(!internalActive);
+							}
 
-							openMenu(true);
-						}
+							if (event.key === Keys.Down) {
+								event.preventDefault();
+								event.stopPropagation();
 
-						if ([Keys.Spacebar, Keys.Down].includes(event.key)) {
-							event.preventDefault();
-						}
-					},
-					ref: (node: HTMLButtonElement) => {
-						if (node) {
+								openMenu(true);
+							}
+
+							if (
+								[Keys.Spacebar, Keys.Down].includes(event.key)
+							) {
+								event.preventDefault();
+							}
+						},
+						ref: (node: HTMLButtonElement) => {
 							triggerElementRef.current = node;
 							// Call the original ref, if any.
 							const {ref} = trigger;
 							if (typeof ref === 'function') {
 								ref(node);
 							}
-						}
-					},
-				})}
+						},
+					})}
 
-				{initialized && (
-					<Menu
-						{...menuElementAttrs}
-						active={internalActive}
-						alignElementRef={triggerElementRef}
-						alignmentByViewport={alignmentByViewport}
-						alignmentPosition={alignmentPosition}
-						closeOnClickOutside={closeOnClickOutside}
-						hasLeftSymbols={hasLeftSymbols}
-						hasRightSymbols={hasRightSymbols}
-						height={menuHeight}
-						id={ariaControls}
-						offsetFn={offsetFn}
-						onSetActive={setInternalActive}
-						ref={menuElementRef}
-						width={menuWidth}
-					>
-						<FocusMenu
-							condition={internalActive}
-							onRender={() => {
-								// After a few milliseconds querying the elements in the DOM
-								// inside the menu. This especially when the menu is not
-								// rendered yet only after the menu is opened, React needs
-								// to commit the changes to the DOM so that the elements are
-								// visible and we can move the focus.
-								setTimeout(() => {
-									const first =
-										menuElementRef.current?.querySelector(
-											// @ts-ignore
-											FOCUSABLE_ELEMENTS
-										);
-
-									if (first) {
-										first.focus();
-									}
-								}, 10);
-							}}
+					{initialized && (
+						<Menu
+							{...menuElementAttrs}
+							active={internalActive}
+							alignElementRef={triggerElementRef}
+							alignmentByViewport={alignmentByViewport}
+							alignmentPosition={alignmentPosition}
+							closeOnClickOutside={closeOnClickOutside}
+							focusRefOnEsc={triggerElementRef}
+							hasLeftSymbols={hasLeftSymbols}
+							hasRightSymbols={hasRightSymbols}
+							height={menuHeight}
+							id={ariaControls}
+							offsetFn={offsetFn}
+							onSetActive={setInternalActive}
+							ref={menuElementRef}
+							width={menuWidth}
 						>
-							<DropDownContext.Provider
-								value={{
-									close: () => {
-										setInternalActive(false);
-										triggerElementRef.current?.focus();
-									},
-									closeOnClick,
+							<FocusMenu
+								condition={internalActive}
+								onRender={() => {
+									// After a few milliseconds querying the elements in the DOM
+									// inside the menu. This especially when the menu is not
+									// rendered yet only after the menu is opened, React needs
+									// to commit the changes to the DOM so that the elements are
+									// visible and we can move the focus.
+									setTimeout(() => {
+										focusManager.focusNext();
+									}, 10);
 								}}
 							>
-								{children}
-							</DropDownContext.Provider>
-						</FocusMenu>
-					</Menu>
-				)}
-			</ContainerElement>
+								<DropDownContext.Provider
+									value={{
+										close: () => {
+											setInternalActive(false);
+											triggerElementRef.current?.focus();
+										},
+										closeOnClick,
+									}}
+								>
+									{children}
+								</DropDownContext.Provider>
+							</FocusMenu>
+						</Menu>
+					)}
+				</ContainerElement>
+			)}
 		</FocusScope>
 	);
 }
