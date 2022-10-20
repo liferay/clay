@@ -164,12 +164,6 @@ function ClayDropDown({
 		value: active,
 	});
 
-	const handleKeyUp = (event: React.KeyboardEvent<HTMLElement>) => {
-		if (event.key === Keys.Esc) {
-			setInternalActive(!internalActive);
-		}
-	};
-
 	useEffect(() => {
 		if (internalActive) {
 			const onFocus = (event: FocusEvent) => {
@@ -221,7 +215,6 @@ function ClayDropDown({
 				<ContainerElement
 					{...otherProps}
 					className={classNames('dropdown', className)}
-					onKeyUp={handleKeyUp}
 				>
 					{React.cloneElement(trigger, {
 						'aria-controls': ariaControls,
@@ -288,7 +281,7 @@ function ClayDropDown({
 							height={menuHeight}
 							id={ariaControls}
 							offsetFn={offsetFn}
-							onSetActive={setInternalActive}
+							onActiveChange={setInternalActive}
 							ref={menuElementRef}
 							width={menuWidth}
 						>
