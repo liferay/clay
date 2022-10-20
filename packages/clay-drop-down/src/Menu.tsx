@@ -223,6 +223,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 	) => {
 		const setActive = onActiveChange ?? onSetActive;
 
+		const menuRef = useRef<HTMLDivElement | null>(null);
 		const subPortalRef = useRef<HTMLDivElement | null>(null);
 
 		useEffect(() => {
@@ -286,7 +287,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 					);
 				}
 
-				if ((ref as React.RefObject<HTMLElement>).current) {
+				if (menuRef.current) {
 					doAlign({
 						offset: offsetFn(points),
 						overflow: {
@@ -295,8 +296,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 							alwaysByViewport: alignmentByViewport,
 						},
 						points,
-						sourceElement: (ref as React.RefObject<HTMLElement>)
-							.current!,
+						sourceElement: menuRef.current,
 						targetElement: alignElementRef.current,
 					});
 				}
@@ -329,7 +329,16 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 							[`dropdown-menu-width-${width}`]: width,
 							show: active,
 						})}
-						ref={ref}
+						ref={(node) => {
+							menuRef.current = node;
+
+							if (ref instanceof Function) {
+								ref(node);
+							} else if (ref instanceof Object) {
+								// @ts-ignore
+								ref.current = node;
+							}
+						}}
 						role="presentation"
 					>
 						{children}
