@@ -160,7 +160,7 @@ const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
 
 const getFocusableElementsInScope = (fiberNode: any) => {
 	const focusableElements: Array<any> = [];
-	const {child} = fiberNode;
+	const {child} = fiberNode.alternate ?? fiberNode;
 
 	if (child !== null) {
 		collectFocusableElements(child, focusableElements);

@@ -112,15 +112,14 @@ export const FocusScope = ({
 					onKeyDown(event);
 				},
 				ref: (r: HTMLElement) => {
-					if (r) {
-						elRef.current = r;
-						const {ref} = child;
-						if (ref) {
-							if (typeof ref === 'object') {
-								ref.current = r;
-							} else if (typeof ref === 'function') {
-								ref(r);
-							}
+					elRef.current = r;
+					const {ref} = child;
+
+					if (ref) {
+						if (typeof ref === 'object') {
+							ref.current = r;
+						} else if (typeof ref === 'function') {
+							ref(r);
 						}
 					}
 				},
