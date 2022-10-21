@@ -24,6 +24,7 @@ exports[`ClayTabs renders with items 1`] = `
         class="nav-link active btn btn-unstyled"
         data-testid="tabItem"
         role="tab"
+        tabindex="0"
         type="button"
       >
         Dummy1
