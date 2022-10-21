@@ -212,10 +212,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-tabs/src/': {
-			branches: 84,
+			branches: 58,
 			functions: 66,
-			lines: 94,
-			statements: 90,
+			lines: 78,
+			statements: 76,
 		},
 		'./packages/clay-time-picker/src/': {
 			branches: 85,
