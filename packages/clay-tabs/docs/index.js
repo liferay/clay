@@ -13,48 +13,42 @@ const tabsImportsCode = `import ClayTabs from '@clayui/tabs';
 `;
 
 const tabsCode = `const Component = () => {
-    const [activeTabKeyValue, setActiveTabKeyValue] = useState(0);
+    const [active, setActive] = useState(0);
 
     return (
         <>
-            <ClayTabs modern>
+            <ClayTabs active={active} modern onActiveChange={setActive}>
                 <ClayTabs.Item
-                    active={activeTabKeyValue === 0}
                     innerProps={{
                         'aria-controls': 'tabpanel-1',
                     }}
-                    onClick={() => setActiveTabKeyValue(0)}
                 >
-                    {'Tab 1'}
+                    Tab 1
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue === 1}
                     innerProps={{
                         'aria-controls': 'tabpanel-2',
                     }}
-                    onClick={() => setActiveTabKeyValue(1)}
                 >
-                    {'Tab 2'}
+                    Tab 2
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue === 2}
                     innerProps={{
                         'aria-controls': 'tabpanel-3',
                     }}
-                    onClick={() => setActiveTabKeyValue(2)}
                 >
-                    {'Tab 3'}
+                    Tab 3
                 </ClayTabs.Item>
             </ClayTabs>
-            <ClayTabs.Content activeIndex={activeTabKeyValue} fade>
+            <ClayTabs.Content activeIndex={active} fade>
                 <ClayTabs.TabPane aria-labelledby="tab-1">
-                    {\`1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-2">
-                    {\`2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-3">
-                    {\`3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
             </ClayTabs.Content>
         </>
@@ -96,7 +90,7 @@ const tabsDropdownCode = `const Component = () => {
         );
     };
 
-    const [activeTabKeyValue, setActiveTabKeyValue] = useState(0);
+    const [active, setActive] = useState(0);
 
     const dropdownTabsItems = [
         {
@@ -116,54 +110,45 @@ const tabsDropdownCode = `const Component = () => {
 
     return (
         <ClayIconSpriteContext.Provider value={spritemap}>
-            <ClayTabs modern>
+            <ClayTabs active={active} modern onActiveChange={setActive}>
                 <ClayTabs.Item
-                    active={activeTabKeyValue === 0}
                     innerProps={{
                         'aria-controls': 'tabpanel-1',
                     }}
-                    onClick={() => setActiveTabKeyValue(0)}
                 >
-                    {'Tab 1'}
+                    Tab 1
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue === 1}
                     innerProps={{
                         'aria-controls': 'tabpanel-2',
                     }}
-                    onClick={() => setActiveTabKeyValue(1)}
                 >
-                    {'Tab 2'}
+                    Tab 2
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue === 2}
                     innerProps={{
                         'aria-controls': 'tabpanel-3',
                     }}
-                    onClick={() => setActiveTabKeyValue(2)}
                 >
-                    {'Tab 3'}
+                    Tab 3
                 </ClayTabs.Item>
                 <ClayTabs.Item
-                    active={activeTabKeyValue === 3}
                     innerProps={{
                         'aria-controls': 'tabpanel-4',
                     }}
-                    onClick={() => setActiveTabKeyValue(3)}
                 >
-                    {'Tab 4'}
+                    Tab 4
                 </ClayTabs.Item>
 
                 <DropDownWithState
                     trigger={
                         <ClayTabs.Item
-                            active={[5, 6, 7].includes(activeTabKeyValue)}
+                            active={[5, 6, 7].includes(active)}
                             innerProps={{
                                 'aria-controls': 'tabpanel-5',
                             }}
-                            onClick={() => setActiveTabKeyValue(4)}
                         >
-                            {'More'}
+                            More
                             <ClayIcon symbol="caret-bottom" />
                         </ClayTabs.Item>
                     }
@@ -174,10 +159,10 @@ const tabsDropdownCode = `const Component = () => {
                                 return (
                                     <ClayDropDown.Item
                                         active={
-                                            activeTabKeyValue === tabkey
+                                            active === tabkey
                                         }
                                         aria-selected={
-                                            activeTabKeyValue === tabkey
+                                            active === tabkey
                                         }
                                         disabled={disabled}
                                         key={i}
@@ -187,7 +172,7 @@ const tabsDropdownCode = `const Component = () => {
                                         role="tab"
                                         spritemap={spritemap}
                                         symbolRight={
-                                            activeTabKeyValue === tabkey
+                                            active === tabkey
                                                 ? 'check'
                                                 : undefined
                                         }
@@ -201,32 +186,32 @@ const tabsDropdownCode = `const Component = () => {
                 </DropDownWithState>
             </ClayTabs>
             <ClayTabs.Content
-                activeIndex={activeTabKeyValue}
+                activeIndex={active}
                 fade
             >
                 <ClayTabs.TabPane aria-labelledby="tab-1">
-                    {\`1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-2">
-                    {\`2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-3">
-                    {\`3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-4">
-                    {\`4. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    4. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-5">
-                    {\`5. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    5. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-6">
-                    {\`6. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    6. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-7">
-                    {\`7. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    7. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
                 <ClayTabs.TabPane aria-labelledby="tab-8">
-                    {\`8. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.\`}
+                    8. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
                 </ClayTabs.TabPane>
             </ClayTabs.Content>
         </ClayIconSpriteContext.Provider>

@@ -69,7 +69,7 @@ const Item = React.forwardRef<any, IProps>(
 				onClick={onClick}
 				ref={ref}
 				role="tab"
-				tabIndex={!active ? -1 : undefined}
+				tabIndex={!active ? -1 : 0}
 			>
 				{children}
 			</LinkOrButton>

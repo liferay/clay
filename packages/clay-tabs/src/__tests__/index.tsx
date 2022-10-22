@@ -9,32 +9,16 @@ import {cleanup, fireEvent, render} from '@testing-library/react';
 import React from 'react';
 
 const ClayTabsWithItems = () => {
-	const [activeTabKeyValue, setActiveTabKeyValue] = React.useState<number>(0);
+	const [active, setActive] = React.useState<number>(0);
 
 	return (
 		<>
-			<ClayTabs>
-				<ClayTabs.Item
-					active={activeTabKeyValue == 0}
-					onClick={() => setActiveTabKeyValue(0)}
-				>
-					Dummy1
-				</ClayTabs.Item>
-				<ClayTabs.Item
-					active={activeTabKeyValue == 1}
-					data-testid="tabItem2"
-					onClick={() => setActiveTabKeyValue(1)}
-				>
-					Dummy2
-				</ClayTabs.Item>
-				<ClayTabs.Item
-					active={activeTabKeyValue == 2}
-					onClick={() => setActiveTabKeyValue(2)}
-				>
-					Dummy3
-				</ClayTabs.Item>
+			<ClayTabs active={active} onActiveChange={setActive}>
+				<ClayTabs.Item>Dummy1</ClayTabs.Item>
+				<ClayTabs.Item data-testid="tabItem2">Dummy2</ClayTabs.Item>
+				<ClayTabs.Item>Dummy3</ClayTabs.Item>
 			</ClayTabs>
-			<ClayTabs.Content activeIndex={activeTabKeyValue}>
+			<ClayTabs.Content activeIndex={active}>
 				<ClayTabs.TabPane data-testid="tabPane1">
 					Tab Content 1
 				</ClayTabs.TabPane>
@@ -96,8 +80,9 @@ describe('ClayTabs', () => {
 		const {getAllByTestId} = render(
 			<>
 				<ClayTabs>
-					<ClayTabs.Item active href="https://clay.dev/foo" />
-					One
+					<ClayTabs.Item active href="https://clay.dev/foo">
+						One
+					</ClayTabs.Item>
 					<ClayTabs.Item href="https://clay.dev/bar">
 						Two
 					</ClayTabs.Item>
