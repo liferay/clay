@@ -3,9 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useState} from 'react';
-
 import ClaySlider from '@clayui/slider';
+import React, {useState} from 'react';
 
 import {usePointerPosition} from './hooks';
 
@@ -27,26 +26,23 @@ type Props = {
 const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 	const containerRef = React.useRef<HTMLDivElement>(null);
 
-	const {setXY, x} = usePointerPosition(containerRef);
+	const {setXY, y} = usePointerPosition(containerRef);
 
 	const [internalValue, setInternalValue] = useState<number>(value);
 
-	const handleOnChangeEnd = (event) => {
+	const handleOnChangeEnd = (event: any) => {
 		onChange(internalValue);
 
-		setXY({x: internalValue});
+		setXY({x: internalValue, y});
 
 		event.target.blur();
 
 		event.target.focus();
 	};
 
-	React.useEffect(
-		(event) => {
-			setInternalValue(value);
-		},
-		[value]
-	);
+	React.useEffect(() => {
+		setInternalValue(value);
+	}, [value]);
 
 	return (
 		<ClaySlider
