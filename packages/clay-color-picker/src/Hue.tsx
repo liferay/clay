@@ -3,10 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useState} from 'react';
+
+import ClaySlider from '@clayui/slider';
 
 import {usePointerPosition} from './hooks';
-import {hueToX, xToHue} from './util';
 
 type Props = {
 	/**
@@ -20,66 +21,59 @@ type Props = {
 	value: number;
 };
 
-const useIsomorphicLayoutEffect =
-	typeof window === 'undefined' ? React.useEffect : React.useLayoutEffect;
-
 /**
  * Renders Hue component
  */
 const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 	const containerRef = React.useRef<HTMLDivElement>(null);
-	const selectorActive = React.useRef<boolean>(false);
 
-	const {onPointerMove, setXY, x, y} = usePointerPosition(containerRef);
+	const {setXY, x} = usePointerPosition(containerRef);
 
-	const removeListeners = () => {
-		selectorActive.current = false;
+	const [internalValue, setInternalValue] = useState<number>(value);
 
-		window.removeEventListener('pointermove', onPointerMove);
-		window.removeEventListener('pointerup', removeListeners);
+	const handleOnChangeEnd = (event) => {
+		onChange(internalValue);
+
+		setXY({x: internalValue});
+
+		event.target.blur();
+
+		event.target.focus();
 	};
 
-	useIsomorphicLayoutEffect(() => {
-		if (containerRef.current && selectorActive.current) {
-			onChange(xToHue(x, containerRef.current));
-		}
-	}, [x]);
-
-	React.useEffect(() => {
-		if (containerRef.current) {
-			setXY({x: hueToX(value, containerRef.current), y});
-		}
-	}, [value]);
-
-	React.useEffect(() => removeListeners, []);
+	React.useEffect(
+		(event) => {
+			setInternalValue(value);
+		},
+		[value]
+	);
 
 	return (
-		<div
-			className="clay-color-range clay-color-range-hue"
-			onPointerDown={(event) => {
-				event.preventDefault();
+		<ClaySlider
+			className="clay-color-slider clay-color-slider-hue"
+			max={360}
+			min={0}
+			onChange={setInternalValue}
+			onKeyUp={(event) => {
+				const arrowKeys = [
+					'ArrowDown',
+					'ArrowLeft',
+					'ArrowRight',
+					'ArrowUp',
+				];
 
-				selectorActive.current = true;
-				onPointerMove(event);
-
-				(containerRef.current!.querySelector(
-					'.clay-color-range-pointer'
-				) as HTMLElement)!.focus();
-
-				window.addEventListener('pointermove', onPointerMove);
-				window.addEventListener('pointerup', removeListeners);
+				if (arrowKeys.indexOf(event.key) > -1) {
+					handleOnChangeEnd(event);
+				}
 			}}
-			ref={containerRef}
-		>
-			<button
-				className="clay-color-pointer clay-color-range-pointer"
-				style={{
-					background: `hsl(${value}, 100%, 50%)`,
-					left: x - 7,
-				}}
-				type="button"
-			/>
-		</div>
+			onPointerUp={handleOnChangeEnd}
+			showTooltip={false}
+			step={1}
+			style={{
+				color: `hsl(${internalValue}, 100%, 50%)`,
+			}}
+			value={internalValue}
+		/>
 	);
 };
 
