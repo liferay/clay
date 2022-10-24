@@ -8,83 +8,28 @@ import {
 	IPortalBaseProps,
 	Keys,
 	delegate,
-	doAlign,
-	useMousePosition,
+	useInteractionFocus,
 } from '@clayui/shared';
-import {alignPoint} from 'dom-align';
 import React, {useCallback, useEffect, useReducer, useRef} from 'react';
 import warning from 'warning';
 
 import ClayTooltip from './Tooltip';
-
-const ALIGNMENTS = [
-	'top',
-	'top-right',
-	'right',
-	'bottom-right',
-	'bottom',
-	'bottom-left',
-	'left',
-	'top-left',
-] as const;
-
-const ALIGNMENTS_MAP = {
-	bottom: ['tc', 'bc'],
-	'bottom-left': ['tl', 'bl'],
-	'bottom-right': ['tr', 'br'],
-	left: ['cr', 'cl'],
-	right: ['cl', 'cr'],
-	top: ['bc', 'tc'],
-	'top-left': ['bl', 'tl'],
-	'top-right': ['br', 'tr'],
-} as const;
-
-const ALIGNMENTS_INVERSE_MAP = {
-	bctc: 'top',
-	bltl: 'top-left',
-	brtr: 'top-right',
-	clcr: 'right',
-	crcl: 'left',
-	tcbc: 'bottom',
-	tlbl: 'bottom-left',
-	trbr: 'bottom-right',
-} as const;
-
-const BOTTOM_OFFSET = [0, 7] as const;
-const LEFT_OFFSET = [-7, 0] as const;
-const RIGHT_OFFSET = [7, 0] as const;
-const TOP_OFFSET = [0, -7] as const;
-
-const OFFSET_MAP = {
-	bctc: TOP_OFFSET,
-	bltl: TOP_OFFSET,
-	brtr: TOP_OFFSET,
-	clcr: RIGHT_OFFSET,
-	crcl: LEFT_OFFSET,
-	tcbc: BOTTOM_OFFSET,
-	tlbl: BOTTOM_OFFSET,
-	trbr: BOTTOM_OFFSET,
-};
-
-const ALIGNMENTS_FORCE_MAP = {
-	...ALIGNMENTS_INVERSE_MAP,
-	bctc: 'top-left',
-	tcbc: 'bottom-left',
-} as const;
+import {Align, useAlign} from './useAlign';
+import {useClosestTitle} from './useClosestTitle';
+import {useTooltipState} from './useTooltipState';
 
 interface IState {
-	align?: typeof ALIGNMENTS[number];
-	floating?: boolean;
+	align: Align;
+	floating: boolean;
 	message?: string;
-	show?: boolean;
 	setAsHTML?: boolean;
 }
 
 const initialState: IState = {
 	align: 'top',
+	floating: false,
 	message: '',
 	setAsHTML: false,
-	show: false,
 };
 
 const TRIGGER_HIDE_EVENTS = [
@@ -102,63 +47,24 @@ const TRIGGER_SHOW_EVENTS = [
 	'touchstart',
 ] as const;
 
-interface IAction extends IState {
-	type: 'align' | 'hide' | 'show';
+interface IAction extends Partial<IState> {
+	type: 'reset' | 'update';
 }
 
 const reducer = (state: IState, {type, ...payload}: IAction): IState => {
 	switch (type) {
-		case 'align':
+		case 'update':
 			return {...state, ...payload};
-		case 'show':
-			return {...state, ...payload, show: true};
-		case 'hide':
+		case 'reset':
 			return {
 				...state,
 				align: initialState.align,
-				floating: undefined,
-				show: false,
+				floating: false,
 			};
 		default:
 			throw new TypeError();
 	}
 };
-
-function matches(
-	element: HTMLElement & {
-		msMatchesSelector?: HTMLElement['matches'];
-	},
-	selectorString: string
-) {
-	if (element.matches) {
-		return element.matches(selectorString);
-	} else if (element.msMatchesSelector) {
-		return element.msMatchesSelector(selectorString);
-	} else if (element.webkitMatchesSelector) {
-		return element.webkitMatchesSelector(selectorString);
-	} else {
-		return false;
-	}
-}
-
-function closestAncestor(node: HTMLElement, s: string) {
-	const element = node;
-	let ancestor: HTMLElement | null = node;
-
-	if (!document.documentElement.contains(element)) {
-		return null;
-	}
-
-	do {
-		if (matches(ancestor, s)) {
-			return ancestor;
-		}
-
-		ancestor = ancestor.parentElement;
-	} while (ancestor !== null);
-
-	return null;
-}
 
 type TContentRenderer = (props: {
 	targetNode?: HTMLElement | null;
@@ -211,238 +117,151 @@ const TooltipProvider = ({
 	delay = 600,
 	scope,
 }: IPropsWithChildren | IPropsWithScope) => {
-	const [{align, floating, message = '', setAsHTML, show}, dispatch] =
-		useReducer(reducer, initialState);
+	const [{align, floating, message = '', setAsHTML}, dispatch] = useReducer(
+		reducer,
+		initialState
+	);
 
-	const mousePosition = useMousePosition(20);
+	const tooltipRef = useRef<HTMLElement>(null);
 
-	// Using `any` type since TS incorrectly infers setTimeout to be from NodeJS
-	const timeoutIdRef = useRef<any>();
-	const targetRef = useRef<HTMLElement | null>(null);
-	const titleNodeRef = useRef<HTMLElement | null>(null);
-	const tooltipRef = useRef<HTMLElement | null>(null);
+	const {getInteraction, isFocusVisible} = useInteractionFocus();
 
-	const saveTitle = useCallback((element: HTMLElement) => {
-		titleNodeRef.current = element;
+	const isHovered = useRef(false);
+	const isFocused = useRef(false);
 
-		const title = element.getAttribute('title');
+	const {close, isOpen, open} = useTooltipState({delay});
 
-		if (title) {
-			element.setAttribute('data-restore-title', title);
-			element.removeAttribute('title');
-		} else if (element.tagName === 'svg') {
-			const titleTag = element.querySelector('title');
-
-			if (titleTag) {
-				element.setAttribute('data-restore-title', titleTag.innerHTML);
-
-				titleTag.remove();
+	const {getProps, onHide, target, titleNode} = useClosestTitle({
+		onClick: useCallback(() => {
+			isFocused.current = false;
+			isHovered.current = false;
+		}, []),
+		onHide: useCallback(() => {
+			if (!isHovered.current && !isFocused.current) {
+				dispatch({type: 'reset'});
+				close();
 			}
-		}
-	}, []);
+		}, []),
+		tooltipRef,
+	});
 
-	const restoreTitle = useCallback(() => {
-		const element = titleNodeRef.current;
+	useAlign({
+		align,
+		autoAlign,
+		floating,
+		isOpen,
+		onAlign: useCallback((align) => dispatch({align, type: 'update'}), []),
+		sourceElement: tooltipRef,
+		targetElement: titleNode,
+	});
 
-		if (element) {
-			const title = element.getAttribute('data-restore-title');
-
-			if (title) {
-				if (element.tagName === 'svg') {
-					const titleTag = document.createElement('title');
-
-					titleTag.innerHTML = title;
-
-					element.appendChild(titleTag);
-				} else {
-					element.setAttribute('title', title);
-				}
-
-				element.removeAttribute('data-restore-title');
-			}
-
-			titleNodeRef.current = null;
-		}
-	}, []);
-
-	const handleHide = useCallback((event?: any) => {
-		if (
-			event &&
-			(tooltipRef.current?.contains(event.relatedTarget) ||
-				targetRef.current?.contains(event.relatedTarget))
-		) {
-			return;
-		}
-
-		dispatch({type: 'hide'});
-
-		clearTimeout(timeoutIdRef.current);
-
-		restoreTitle();
-
-		if (targetRef.current) {
-			targetRef.current.removeEventListener('click', handleHide);
-
-			targetRef.current = null;
-		}
-	}, []);
-
-	const handleShow = useCallback(
+	const onShow = useCallback(
 		(event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-			const target = event!.target as HTMLElement;
+			if (isHovered.current || isFocused.current) {
+				const props = getProps(event);
 
-			const hasTitle =
-				target &&
-				(target.hasAttribute('title') ||
-					target.hasAttribute('data-title'));
-
-			const titleNode = hasTitle
-				? target
-				: closestAncestor(target, '[title], [data-title]');
-
-			if (titleNode) {
-				targetRef.current = target;
-
-				target.addEventListener('click', handleHide);
-
-				const title =
-					titleNode.getAttribute('title') ||
-					titleNode.getAttribute('data-title') ||
-					'';
-
-				saveTitle(titleNode);
-
-				const customDelay =
-					titleNode.getAttribute('data-tooltip-delay');
-				const newAlign = titleNode.getAttribute(
-					'data-tooltip-align'
-				) as typeof align;
-				const setAsHTML = !!titleNode.getAttribute(
-					'data-title-set-as-html'
-				);
-
-				const isFloating = titleNode.getAttribute(
-					'data-tooltip-floating'
-				);
-
-				clearTimeout(timeoutIdRef.current);
-
-				timeoutIdRef.current = setTimeout(
-					() => {
-						dispatch({
-							align: newAlign || align,
-							floating: Boolean(isFloating),
-							message: title,
-							setAsHTML,
-							type: 'show',
-						});
-					},
-					customDelay ? Number(customDelay) : delay
-				);
+				if (props) {
+					dispatch({
+						align: (props.align as any) ?? align,
+						floating: props.floating,
+						message: props.title,
+						setAsHTML: props.setAsHTML,
+						type: 'update',
+					});
+					open(
+						isFocused.current,
+						props.delay ? Number(props.delay) : undefined
+					);
+				}
 			}
 		},
-		[]
+		[align]
 	);
 
 	useEffect(() => {
 		const handleEsc = (event: KeyboardEvent) => {
-			if (show && event.key === Keys.Esc) {
+			if (isOpen && event.key === Keys.Esc) {
 				event.stopImmediatePropagation();
 
-				handleHide();
+				onHide();
 			}
 		};
 
 		document.addEventListener('keyup', handleEsc, true);
 
 		return () => document.removeEventListener('keyup', handleEsc, true);
-	}, [show]);
+	}, [isOpen]);
+
+	const onHoverStart = (event: any) => {
+		if (getInteraction() === 'pointer') {
+			isHovered.current = true;
+		} else {
+			isHovered.current = false;
+		}
+
+		onShow(event);
+	};
+
+	const onHoverEnd = (event: any) => {
+		isFocused.current = false;
+		isHovered.current = false;
+
+		onHide(event);
+	};
+
+	const onFocus = (event: any) => {
+		if (isFocusVisible()) {
+			isFocused.current = true;
+
+			onShow(event);
+		}
+	};
+
+	const onBlur = (event: any) => {
+		isFocused.current = false;
+		isHovered.current = false;
+
+		onHide(event);
+	};
 
 	useEffect(() => {
 		if (scope) {
-			const disposeShowEvents = TRIGGER_SHOW_EVENTS.map((eventName) => {
-				return delegate(document.body, eventName, scope, handleShow);
-			});
-			const disposeHideEvents = TRIGGER_HIDE_EVENTS.map((eventName) => {
-				return delegate(
+			const disposeShowEvents = TRIGGER_SHOW_EVENTS.map((eventName) =>
+				delegate(document.body, eventName, scope, onHoverStart)
+			);
+			const disposeHideEvents = TRIGGER_HIDE_EVENTS.map((eventName) =>
+				delegate(
 					document.body,
 					eventName,
 					`${scope}, .tooltip`,
-					handleHide
-				);
-			});
+					onHoverEnd
+				)
+			);
+
+			const disposeShowFocus = delegate(
+				document.body,
+				'focus',
+				`${scope}, .tooltip`,
+				onFocus,
+				true
+			);
+			const disposeCloseBlur = delegate(
+				document.body,
+				'blur',
+				`${scope}, .tooltip`,
+				onBlur,
+				true
+			);
 
 			return () => {
 				disposeShowEvents.forEach(({dispose}) => dispose());
 				disposeHideEvents.forEach(({dispose}) => dispose());
+
+				disposeShowFocus.dispose();
+				disposeCloseBlur.dispose();
 			};
 		}
-	}, [handleShow]);
-
-	useEffect(() => {
-		if (
-			(tooltipRef as React.RefObject<HTMLDivElement>).current &&
-			show &&
-			floating
-		) {
-			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
-
-			const [clientX, clientY] = mousePosition;
-
-			alignPoint(
-				(tooltipRef as React.RefObject<HTMLDivElement>).current!,
-				{
-					clientX,
-					clientY,
-				},
-				{
-					offset: OFFSET_MAP[
-						points.join('') as keyof typeof OFFSET_MAP
-					] as [number, number],
-					points,
-				}
-			);
-		}
-	}, [show, floating]);
-
-	useEffect(() => {
-		if (
-			titleNodeRef.current &&
-			(tooltipRef as React.RefObject<HTMLDivElement>).current &&
-			!floating
-		) {
-			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
-
-			const alignment = doAlign({
-				overflow: {
-					adjustX: autoAlign,
-					adjustY: autoAlign,
-				},
-				points,
-				sourceElement: (tooltipRef as React.RefObject<HTMLDivElement>)
-					.current!,
-				targetElement: titleNodeRef.current,
-			});
-
-			const alignmentString = alignment.points.join(
-				''
-			) as keyof typeof ALIGNMENTS_INVERSE_MAP;
-
-			const pointsString = points.join('');
-
-			if (alignment.overflow.adjustX) {
-				dispatch({
-					align: ALIGNMENTS_FORCE_MAP[alignmentString],
-					type: 'align',
-				});
-			} else if (pointsString !== alignmentString) {
-				dispatch({
-					align: ALIGNMENTS_INVERSE_MAP[alignmentString],
-					type: 'align',
-				});
-			}
-		}
-	}, [align, show]);
+	}, [onShow]);
 
 	warning(
 		(typeof children === 'undefined' && typeof scope !== 'undefined') ||
@@ -461,11 +280,11 @@ const TooltipProvider = ({
 	);
 
 	const titleContent = contentRenderer({
-		targetNode: targetRef.current,
+		targetNode: target.current,
 		title: message,
 	});
 
-	const tooltip = show && (
+	const tooltip = isOpen && (
 		<ClayPortal {...containerProps}>
 			<ClayTooltip alignPosition={align} ref={tooltipRef} show>
 				{setAsHTML && typeof titleContent === 'string' ? (
@@ -498,8 +317,10 @@ const TooltipProvider = ({
 							{tooltip}
 						</>
 					),
-					onMouseOut: handleHide,
-					onMouseOver: handleShow,
+					onBlur,
+					onFocus,
+					onMouseOut: onHoverEnd,
+					onMouseOver: onHoverStart,
 				})
 			)}
 		</>
