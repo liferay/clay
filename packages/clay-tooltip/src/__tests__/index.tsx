@@ -33,6 +33,8 @@ describe('ClayTooltip', () => {
 
 		expect(document.querySelector('.tooltip')).toBeFalsy();
 
+		fireEvent.mouseDown(document.body);
+
 		fireEvent.mouseOver(getByTestId('button'));
 
 		act(() => {
@@ -46,6 +48,32 @@ describe('ClayTooltip', () => {
 		act(() => {
 			jest.runAllTimers();
 		});
+
+		expect(document.querySelector('.tooltip')).toBeFalsy();
+	});
+
+	it('show tooltip on element focus and hide on blur', () => {
+		const {getByTestId} = render(
+			<ClayTooltipProvider>
+				<button
+					data-testid="button"
+					data-tooltip-align="bottom"
+					title="Bottom"
+				>
+					tooltip
+				</button>
+			</ClayTooltipProvider>
+		);
+
+		fireEvent.keyDown(document.body, {key: 'Tab'});
+
+		expect(document.querySelector('.tooltip')).toBeFalsy();
+
+		fireEvent.focus(getByTestId('button'));
+
+		expect(document.querySelector('.tooltip')).toBeTruthy();
+
+		fireEvent.blur(getByTestId('button'));
 
 		expect(document.querySelector('.tooltip')).toBeFalsy();
 	});
