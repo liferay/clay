@@ -364,23 +364,23 @@ $clay-color-slider: map-deep-merge(
 				visibility: visible,
 			),
 			moz-range-thumb: (
+				height: 0.625rem,
 				visibility: visible,
+				width: 0.625rem,
 			),
 			webkit-slider-thumb: (
 				visibility: visible,
 			),
 			clay-range-thumb: (
 				background-color: currentColor,
-				border-color: $white,
-				border-style: solid,
-				border-width: 0.125rem,
-				box-shadow: none,
-				height: 0.875rem,
-				margin-top: -0.4375rem,
+				border-width: 0,
+				box-shadow: 0 0 0 0.125rem $white,
+				height: 0.625rem,
+				margin-top: -0.3125rem,
 				transition:
 					clay-enable-transitions(box-shadow 0.15s ease-in-out),
 				visibility: hidden,
-				width: 0.875rem,
+				width: 0.625rem,
 			),
 			form-control-range: (
 				background-color: inherit,
@@ -394,7 +394,8 @@ $clay-color-slider: map-deep-merge(
 			),
 			focus: (
 				clay-range-thumb: (
-					box-shadow: 0 0 0 0.125rem $primary-l1,
+					box-shadow: #{0 0 0 0.125rem $white,
+					0 0 0 0.25rem $primary-l1},
 				),
 			),
 		),
