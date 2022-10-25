@@ -21,15 +21,15 @@ import {useTooltipState} from './useTooltipState';
 interface IState {
 	align: Align;
 	floating: boolean;
-	message?: string;
 	setAsHTML?: boolean;
+	title?: string;
 }
 
 const initialState: IState = {
 	align: 'top',
 	floating: false,
-	message: '',
 	setAsHTML: false,
+	title: '',
 };
 
 const TRIGGER_HIDE_EVENTS = [
@@ -117,7 +117,7 @@ const TooltipProvider = ({
 	delay = 600,
 	scope,
 }: IPropsWithChildren | IPropsWithScope) => {
-	const [{align, floating, message = '', setAsHTML}, dispatch] = useReducer(
+	const [{align, floating, setAsHTML, title = ''}, dispatch] = useReducer(
 		reducer,
 		initialState
 	);
@@ -153,6 +153,7 @@ const TooltipProvider = ({
 		onAlign: useCallback((align) => dispatch({align, type: 'update'}), []),
 		sourceElement: tooltipRef,
 		targetElement: titleNode,
+		title,
 	});
 
 	const onShow = useCallback(
@@ -164,8 +165,8 @@ const TooltipProvider = ({
 					dispatch({
 						align: (props.align as any) ?? align,
 						floating: props.floating,
-						message: props.title,
 						setAsHTML: props.setAsHTML,
+						title: props.title,
 						type: 'update',
 					});
 					open(
@@ -281,7 +282,7 @@ const TooltipProvider = ({
 
 	const titleContent = contentRenderer({
 		targetNode: target.current,
-		title: message,
+		title,
 	});
 
 	const tooltip = isOpen && (
