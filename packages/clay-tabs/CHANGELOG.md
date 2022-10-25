@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
+
+### Features
+
+-   **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
+
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 ### Bug Fixes

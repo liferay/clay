@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Management and Navigation Bar only output media queries for md breakpoint ([617d696](https://github.com/liferay/clay/commit/617d696b2a6efe5739671e103e849dc6ac2777db))
+* **@clayui/css:** Mixin clay-navbar-expand-variant shouldn't style `.btn-unstyled` ([04615be](https://github.com/liferay/clay/commit/04615be71d48342bb2d4048e1cdc59f5201d2370))
+
+
+### Features
+
+* **@clayui/css:** Mixins `clay-navbar-size` don't output media-query styles ([7ddcb52](https://github.com/liferay/clay/commit/7ddcb52498d865c4e6003c47a7c91e19dba782a6))
+
+
+
+
+
 # [3.76.0](https://github.com/liferay/clay/compare/v3.75.3...v3.76.0) (2022-10-11)
 
 

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
+
+### Bug Fixes
+
+-   **@clayui/css:** Cadmin Management and Navigation Bar only output media queries for md breakpoint ([617d696](https://github.com/liferay/clay/commit/617d696b2a6efe5739671e103e849dc6ac2777db))
+-   **@clayui/css:** Mixin clay-navbar-expand-variant shouldn't style `.btn-unstyled` ([04615be](https://github.com/liferay/clay/commit/04615be71d48342bb2d4048e1cdc59f5201d2370))
+-   **@clayui/drop-down:** fix error when esc open menu ([9ecc8e4](https://github.com/liferay/clay/commit/9ecc8e4acdebaa60f72ca3f13c22e138518d4540))
+-   **@clayui/drop-down:** fix focus order error ([3062d5e](https://github.com/liferay/clay/commit/3062d5ed09292e187529749607f39f965ed71ae2))
+-   **@clayui/shared:** fix error of not finding focused elements when React.Portal is under a conditional ([179cd7a](https://github.com/liferay/clay/commit/179cd7a523ebc5a4c96fcb0194e5c8873da6c367))
+-   **@clayui/shared:** fixes error when identifying non-visible element as focusable ([82cc0f8](https://github.com/liferay/clay/commit/82cc0f8078810b4610f220d09792ee53f9fb3da8))
+-   **clayui.com:** Github link accessibility fixe ([90e380c](https://github.com/liferay/clay/commit/90e380c43866fca915b754acda440fb4f8174c27))
+
+### Features
+
+-   **@clayui/css:** Mixins `clay-navbar-size` don't output media-query styles ([7ddcb52](https://github.com/liferay/clay/commit/7ddcb52498d865c4e6003c47a7c91e19dba782a6))
+-   **@clayui/shared:** add hook to detect user interaction type ([a20e236](https://github.com/liferay/clay/commit/a20e23638e28d27da18d8d140ebb38818595f129))
+-   **@clayui/tabs:** add new API to configure browsing behavior between tabs ([30595be](https://github.com/liferay/clay/commit/30595bed1d5ec2de1a7d3d1759d6a2398c904c76))
+
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 ### Bug Fixes

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix error when esc open menu ([9ecc8e4](https://github.com/liferay/clay/commit/9ecc8e4acdebaa60f72ca3f13c22e138518d4540))
+-   **@clayui/drop-down:** fix focus order error ([3062d5e](https://github.com/liferay/clay/commit/3062d5ed09292e187529749607f39f965ed71ae2))
+
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 ### Features
