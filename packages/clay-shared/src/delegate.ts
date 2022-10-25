@@ -11,7 +11,8 @@ function delegate(
 	element: HTMLElement,
 	eventName: keyof GlobalEventHandlersEventMap,
 	selector: string,
-	callback: (event: any) => void
+	callback: (event: any) => void,
+	capture?: boolean
 ) {
 	const eventHandler = (event: {
 		delegateTarget?: Element;
@@ -38,11 +39,15 @@ function delegate(
 		}
 	};
 
-	element.addEventListener(eventName, eventHandler as any);
+	element.addEventListener(eventName, eventHandler as any, capture);
 
 	return {
 		dispose() {
-			element.removeEventListener(eventName, eventHandler as any);
+			element.removeEventListener(
+				eventName,
+				eventHandler as any,
+				capture
+			);
 		},
 	};
 }

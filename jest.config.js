@@ -188,10 +188,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-shared/src/': {
-			branches: 42,
-			functions: 29,
-			lines: 59,
-			statements: 60,
+			branches: 41,
+			functions: 24,
+			lines: 52,
+			statements: 54,
 		},
 		'./packages/clay-slider/src/': {
 			branches: 92,

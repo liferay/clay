@@ -20,5 +20,6 @@ export {setElementFullHeight} from './setElementFullHeight';
 export {useInternalState} from './useInternalState';
 export {useMousePosition} from './useMousePosition';
 export {MouseSafeArea} from './MouseSafeArea';
+export {useInteractionFocus} from './useInteractionFocus';
 export type {IBaseProps as IPortalBaseProps} from './Portal';
 export type {InternalDispatch} from './useInternalState';
