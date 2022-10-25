@@ -72,6 +72,7 @@ type Props = {
 	onAlign: (align: Align) => void;
 	sourceElement: React.MutableRefObject<HTMLElement | null>;
 	targetElement: React.MutableRefObject<HTMLElement | null>;
+	title: string;
 };
 
 export function useAlign({
@@ -82,6 +83,7 @@ export function useAlign({
 	onAlign,
 	sourceElement,
 	targetElement,
+	title,
 }: Props) {
 	const mousePosition = useMousePosition(20);
 
@@ -108,7 +110,12 @@ export function useAlign({
 	}, [isOpen, floating]);
 
 	useEffect(() => {
-		if (targetElement.current && sourceElement.current && !floating) {
+		if (
+			targetElement.current &&
+			sourceElement.current &&
+			isOpen &&
+			!floating
+		) {
 			const points = ALIGNMENTS_MAP[align || 'top'] as [string, string];
 
 			const alignment = doAlign({
@@ -133,5 +140,5 @@ export function useAlign({
 				onAlign(ALIGNMENTS_INVERSE_MAP[alignmentString]);
 			}
 		}
-	}, [align, isOpen]);
+	}, [align, title, isOpen]);
 }
