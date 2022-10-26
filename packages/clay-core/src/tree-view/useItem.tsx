@@ -169,7 +169,11 @@ export function ItemContextProvider({children, value}: Props) {
 
 				const isMoved = onItemMove(
 					removeItemInternalProps((dragItem as Value).item),
-					tree.nodeByPath(indexes).parent
+					tree.nodeByPath(indexes).parent,
+					{
+						next: indexes[indexes.length - 1],
+						previous: (dragItem as Value).item.index,
+					}
 				);
 
 				if (!isMoved) {

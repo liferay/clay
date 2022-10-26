@@ -23,6 +23,11 @@ export type OnLoadMore<T> = (
 	cursor?: any
 ) => Promise<Array<any> | undefined> | Promise<LoadMoreCursor | undefined>;
 
+export type MoveItemIndex = {
+	next: number;
+	previous: number;
+};
+
 export interface ITreeViewContext<T> extends ITreeState<T> {
 	childrenRoot: React.MutableRefObject<ChildrenFunction<Object> | null>;
 	dragAndDrop?: boolean;
@@ -31,7 +36,7 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	expanderClassName?: string;
 	expanderIcons?: Icons;
 	nestedKey?: string;
-	onItemMove?: (item: T, parentItem: T) => boolean;
+	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
 	onLoadMore?: OnLoadMore<T>;
 	onSelect?: (item: T) => void;
 	onRenameItem?: (item: T) => Promise<any>;
