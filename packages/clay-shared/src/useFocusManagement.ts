@@ -173,7 +173,11 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 	const nextFocusInDocRef = React.useRef<HTMLElement | null>(null);
 	const prevFocusInDocRef = React.useRef<HTMLElement | null>(null);
 
-	const moveFocusInScope = (scope: any, backwards: boolean = false) => {
+	const moveFocusInScope = (
+		scope: any,
+		backwards: boolean = false,
+		persistOnScope: boolean = false
+	) => {
 		const fiberFocusElements = getFocusableElementsInScope(scope);
 
 		if (fiberFocusElements.length === 0) {
@@ -201,6 +205,14 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 
 		const nextFocusInFiber = fiberFocusElements[reactFiberPosition + 1];
 		const prevFocusInFiber = fiberFocusElements[reactFiberPosition - 1];
+
+		// Only moves to the next element if it is in scope.
+		if (
+			persistOnScope &&
+			(!nextFocusInFiber || (backwards && !prevFocusInFiber))
+		) {
+			return null;
+		}
 
 		// If these two nodes are not equal, that means React is likely using
 		// a portal to render the node in a different part of the DOM. When
@@ -257,7 +269,9 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 	};
 
 	return {
-		focusNext: () => moveFocusInScope(getFiber(scope)),
-		focusPrevious: () => moveFocusInScope(getFiber(scope), true),
+		focusNext: (persistOnScope?: boolean) =>
+			moveFocusInScope(getFiber(scope), false, persistOnScope),
+		focusPrevious: (persistOnScope?: boolean) =>
+			moveFocusInScope(getFiber(scope), true, persistOnScope),
 	};
 }
