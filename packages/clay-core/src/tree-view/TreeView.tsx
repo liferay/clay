@@ -67,6 +67,12 @@ interface ITreeViewProps<T>
 	itemNameKey?: string;
 
 	/**
+	 * The callback is called whenever there is an item dragging over
+	 * another item.
+	 */
+	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => void;
+
+	/**
 	 * Callback is called when an item is about to be moved elsewhere in the tree.
 	 */
 	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
@@ -128,6 +134,7 @@ export function TreeView<T>({
 	items,
 	nestedKey = 'children',
 	onExpandedChange,
+	onItemHover,
 	onItemMove,
 	onItemsChange,
 	onLoadMore,
@@ -171,6 +178,7 @@ export function TreeView<T>({
 		expanderClassName,
 		expanderIcons,
 		nestedKey,
+		onItemHover,
 		onItemMove,
 		onLoadMore,
 		onRenameItem,
