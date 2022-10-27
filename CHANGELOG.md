@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.78.3](https://github.com/liferay/clay/compare/v3.78.2...v3.78.3) (2022-10-27)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fix error when alternate is with old reference ([e5e93c1](https://github.com/liferay/clay/commit/e5e93c14c503d83bdb2e574e86ceaa509747617e))
+-   **@clayui/tooltip:** fixes error when not aligning the tooltip with focus in sequence of elements ([19d5d92](https://github.com/liferay/clay/commit/19d5d925cd19cba846e473c52f72b0f3c6e57a69))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 ### Bug Fixes
