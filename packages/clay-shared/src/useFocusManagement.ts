@@ -85,6 +85,8 @@ export const FOCUSABLE_ELEMENTS = [
 	'textarea:not([disabled]):not([aria-hidden])',
 ];
 
+// A switcher that helps define which fiber to use to navigate, the
+// component's current fiber or the fiber in progress.
 let hasSibling = false;
 
 function collectDocumentFocusableElements() {
@@ -164,7 +166,7 @@ const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
 
 const getFocusableElementsInScope = (fiberNode: any) => {
 	const focusableElements: Array<any> = [];
-	const {child} = !hasSibling ? fiberNode.alternate ?? fiberNode : fiberNode;
+	const {child} = fiberNode;
 
 	if (child !== null) {
 		collectFocusableElements(child, focusableElements);
@@ -182,10 +184,18 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		backwards: boolean = false,
 		persistOnScope: boolean = false
 	) => {
-		let fiberFocusElements = getFocusableElementsInScope(scope);
+		let fiberFocusElements = getFocusableElementsInScope(
+			scope.alternate ?? scope
+		);
 
+		// When browsing the alternate/in progress fiber if don't find sibling
+		// elements that might correspond to a React.Portal try searching for
+		// focusable elements using the current fiber.
 		if (!hasSibling) {
 			fiberFocusElements = getFocusableElementsInScope(scope);
+		} else {
+			// Just resets the value for the next focus iteration.
+			hasSibling = false;
 		}
 
 		if (fiberFocusElements.length === 0) {
