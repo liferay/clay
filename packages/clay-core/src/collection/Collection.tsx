@@ -73,6 +73,11 @@ interface IProps<P, K>
 	parentRef: React.RefObject<HTMLElement>;
 
 	/**
+	 * Flag to pass the key value to the element.
+	 */
+	passthroughKey?: boolean;
+
+	/**
 	 * Callback called when the last element of the list is rendered in
 	 * virtualization and infiniteScroll is enabled.
 	 */
@@ -154,6 +159,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	onBottom,
 	parentKey,
 	parentRef,
+	passthroughKey,
 	publicApi,
 	...otherProps
 }: VirtualProps<T, P, K>) {
@@ -250,7 +256,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 
 				return React.cloneElement(child, {
 					key,
-					keyValue: key,
+					...(passthroughKey ? {keyValue: key} : {}),
 					...props,
 				});
 			})}
@@ -276,6 +282,7 @@ export function Collection<
 	onBottom,
 	parentKey,
 	parentRef,
+	passthroughKey = true,
 	publicApi,
 	virtualize = false,
 	...otherProps
@@ -319,6 +326,7 @@ export function Collection<
 				onBottom={onBottom}
 				parentKey={parentKey}
 				parentRef={parentRef}
+				passthroughKey={passthroughKey}
 				publicApi={publicApi}
 			>
 				{children}
@@ -345,6 +353,10 @@ export function Collection<
 							parentKey
 						);
 
+						if (performFilter(child)) {
+							return;
+						}
+
 						if (ItemContainer) {
 							return (
 								<ItemContainer
@@ -360,7 +372,7 @@ export function Collection<
 
 						return React.cloneElement(child, {
 							key,
-							keyValue: key,
+							...(passthroughKey ? {keyValue: key} : {}),
 						});
 				  })
 				: React.Children.map(children, (child, index) => {
@@ -390,7 +402,7 @@ export function Collection<
 							child as React.ReactElement<{keyValue?: React.Key}>,
 							{
 								key,
-								keyValue: key,
+								...(passthroughKey ? {keyValue: key} : {}),
 							}
 						);
 				  })}

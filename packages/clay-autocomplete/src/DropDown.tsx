@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {DropDown} from '@clayui/core';
+import DropDown from '@clayui/drop-down';
 import {InternalDispatch} from '@clayui/shared';
 import React from 'react';
 

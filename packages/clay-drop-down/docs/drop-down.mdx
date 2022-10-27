@@ -1,5 +1,5 @@
 ---
-title: 'Drop Down'
+title: 'DropDown'
 description: 'A dropdown menu displays a list of options for the element that triggers it.'
 lexiconDefinition: 'https://liferay.design/lexicon/core-components/dropdowns/'
 packageNpm: '@clayui/drop-down'
@@ -7,6 +7,7 @@ packageNpm: '@clayui/drop-down'
 
 import {
 	DropDown,
+	DropDownExample,
 	DropDownWithItems,
 	DropDownWithDrilldown,
 } from '$packages/clay-drop-down/docs/index';
@@ -14,35 +15,189 @@ import {
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Composing](#composing)
-    -   [Using dropdown without a trigger](#using-dropdown-without-a-trigger)
--   [DropDownWithItems](#dropdownwithitems)
-    -   [Cascading Menu](#cascading-menu)
--   [DropDownWithDrilldown](#dropdownwithdrilldown)
+-   [Example](#example)
+-   [Introduction](#introduction)
+-   [Content](#content)
+    -   [Static](#static)
+    -   [Dynamic](#dynamic)
+-   [Filter](#filter)
+    -   [Value](#value)
+-   [Without Trigger](#without-trigger)
+-   [Variants](#variants)
+    -   [With Items](#with-items)
+        -   [Cascading Menu](#cascading-menu)
+    -   [Drilldown](#drilldown)
 -   [Caveats](#caveats)
 
 </div>
 </div>
 
-## Composing
+## Example
 
-DropDown's composition gives you the space to create more complex DropDowns, such as adding a form within DropDown, and creating simple DropDowns with the high-level `ClayDropDownWithItems` component that covers most basic Lexicon use cases.
+<DropDownExample />
 
-<DropDown />
+## Introduction
 
-You may want to use only the content of DropDown for other cases, such as mounting an `Autocomplete`, so use `DropDown.Menu` instead of `DropDown` which gives you the flexibility to only control content without a trigger.
+The DropDown component is designed to display menus that when clicked triggers some action, there are different forms of Menu in Clay/Lexicon. This document describes the main ways to build a menu and recommendations.
 
-<div class="clay-site-alert alert alert-warning">
-	<code class="language-text">DropDown</code> consists of a{' '}
-	<code class="language-text">DropDown.Menu</code> that controls the trigger
-	and uses it as the basis for aligning DropDown content.
-</div>
+Clay provides two possible possibilities to build a Menu, using composition that we call low-level that allows you to add new use cases and adapt them to your use case and components like high-level which are property-setting oriented components. We recommend that you always try to use compositing when you need flexibility, whether it's configuring some internal components that aren't possible in a high-level component or adding your own elements to an item, group, or other use cases that don't exist in Clay.
 
-### Using dropdown without a trigger
+## Content
+
+DropDown provides two options for building the menu using static content when data does not change during an application's lifecycle and dynamic for content that changes during the application lifecycle or the data comes from the server.
+
+### Static
+
+The simplest example of a static menu is rendering a simple list of options.
+
+```jsx
+<DropDown trigger={<Button>Click Me</Button>}>
+	<DropDown.ItemList>
+		<DropDown.Item>one</DropDown.Item>
+		<DropDown.Item>two</DropDown.Item>
+		<DropDown.Item>three</DropDown.Item>
+	</DropDown.ItemList>
+</DropDown>
+```
+
+Other cases are also possible, for example rendering a group of options with a search bar to filter the options.
+
+```jsx
+<DropDown trigger={<Button>Click Me</Button>}>
+	<DropDown.Search placeholder="Type to filter" />
+	<DropDown.ItemList>
+		<DropDown.Group header="Numbers">
+			<DropDown.Item>one</DropDown.Item>
+			<DropDown.Item>two</DropDown.Item>
+			<DropDown.Item>three</DropDown.Item>
+		</DropDown.Group>
+		<DropDown.Group header="Letters">
+			<DropDown.Item>a</DropDown.Item>
+			<DropDown.Item>b</DropDown.Item>
+			<DropDown.Item>c</DropDown.Item>
+		</DropDown.Group>
+	</DropDown.ItemList>
+</DropDown>
+```
+
+The example above shows how Clay even with the explicit composition of the menu structure manages to provide the filter to work OOTB with static content.
+
+### Dynamic
+
+```jsx
+<DropDown items={['one', 'two', 'three']} trigger={<Button>Click Me</Button>}>
+	{(item) => <DropDown.Item>{item}</DropDown.Item>}
+</DropDown>
+```
+
+Compositing for dynamic content becomes simpler and also provides the same features as static, such as OOTB filter and groups. The component is also data agnostic designed from the ground up for this purpose to avoid transformations having to be done at render time.
+
+```jsx
+<DropDown filterKey="name" trigger={<Button>Click Me</Button>}>
+	<DropDown.Search placeholder="Type to filter" />
+	<DropDown.ItemList
+		items={[
+			{
+				children: [{name: 'one'}, {name: 'two'}, {name: 'three'}],
+				name: 'Numbers',
+			},
+			{
+				children: [{name: 'a'}, {name: 'b'}, {name: 'c'}],
+				name: 'Letters',
+			},
+		]}
+	>
+		{(item) => (
+			<DropDown.Group
+				header={item.name}
+				items={item.children}
+				key={item.name}
+			>
+				{(item) => (
+					<DropDown.Item key={item.name}>{item.name}</DropDown.Item>
+				)}
+			</DropDown.Group>
+		)}
+	</DropDown.ItemList>
+</DropDown>
+```
+
+## Filter
+
+The filter in a Menu works OOTB, just declaring the `<DropDown.Search />` component in the composition, as in the examples shown for static and dynamic content. The Filter can be done by DropDown itself as well as the developer can control the filter and make his own filter rule.
+
+```jsx
+function Example() {
+	const [value, setValue] = useState('');
+
+	const options = [{name: 'one'}, {name: 'two'}, {name: 'three'}];
+
+	const filteredOptions = useMemo(() => {
+		if (!value) {
+			return options;
+		}
+
+		return options.filter(
+			(option) => option.match(new RegExp(value, 'i')) !== null
+		);
+	}, [options, value]);
+
+	return (
+		<DropDown trigger={<Button>Click Me</Button>}>
+			<DropDown.Search
+				value={value}
+				onChange={setValue}
+				placeholder="Type to filter"
+			/>
+			<DropDown.ItemList items={filteredOptions}>
+				{(item) => (
+					<DropDown.Item key={item.name}>{item.name}</DropDown.Item>
+				)}
+			</DropDown.ItemList>
+		</DropDown>
+	);
+}
+```
+
+If you just need to set an initial value, just use the `defaultValue` property.
+
+```jsx
+<DropDown filterKey="name" trigger={<Button>Click Me</Button>}>
+	<DropDown.Search defaultValue="o" placeholder="Type to filter" />
+	<DropDown.ItemList items={[{name: 'one'}, {name: 'two'}, {name: 'three'}]}>
+		{(item) => <DropDown.Item key={item.name}>{item.name}</DropDown.Item>}
+	</DropDown.ItemList>
+</DropDown>
+```
+
+### Value
+
+DropDown filters items according to the value rendered as `children` of `<DropDown.Item />`, when there are more detailed compositions in the item, the filter will not work because it cannot determine which value to use to filter, in this scenario configure the item's value using the `textValue` property.
+
+```jsx
+<DropDown filterKey="name" trigger={<Button>Click Me</Button>}>
+	<DropDown.Search placeholder="Type to filter" />
+	<DropDown.ItemList items={[{name: 'one'}, {name: 'two'}, {name: 'three'}]}>
+		{(item) => (
+			<DropDown.Item key={item.name} textValue={item.name}>
+				<Checkbox />
+				{item.name}
+			</DropDown.Item>
+		)}
+	</DropDown.ItemList>
+</DropDown>
+```
+
+## Without Trigger
 
 You may want to create a trigger that is not necessarily in the same tree as DropDown, due to HTML markup issues, for these cases you can use `<ClayDropDown.Menu />`.
 
 Using `<ClayDropDown.Menu />` allows you to better control the state of DropDown but you will have to deal with visibility, focus management, and other details.
+
+<div class="clay-site-alert alert alert-warning">
+	As a recommendation only use this component as a last resort, it doesn't
+	provide some OOTB features like focus control or accessibility at all.
+</div>
 
 ```jsx
 import ClayDropDown from '@clayui/drop-down';
@@ -90,13 +245,17 @@ const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
 };
 ```
 
-## DropDownWithItems
+## Variants
+
+Clay provides other ways to use the Clay component, which we call high-level components, which are designed to do a specific high-level behavior different from compositing that allow different possibilities, are less flexible.
+
+### With Items
 
 Allows you to create a simple DropDown, through its API you are able to create a Menu with groups of checkboxes and radios, links, buttons, search, caption, etc.
 
 <DropDownWithItems />
 
-### Cascading Menu
+#### Cascading Menu
 
 `DropDownWithItems` allows the possibility to create a contextual menu, the nature of the API allows the creation of more cascade menus but the **Lexicon specification recommends using only one level** and using `DropDownWithDrilldown` component.
 
@@ -122,7 +281,7 @@ const items = [
 ];
 ```
 
-## DropDownWithDrilldown
+### Drilldown
 
 A Drilldown menu allows the user to navigate to and/or select an element from a contextual list. It can be triggered by a dropdown button.
 

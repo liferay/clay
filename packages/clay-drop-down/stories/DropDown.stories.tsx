@@ -114,6 +114,75 @@ Default.args = {
 	width: '',
 };
 
+export const Dynamic = () => (
+	<ClayDropDown
+		items={['one', 'two', 'three', 'four']}
+		trigger={<ClayButton>Click Me</ClayButton>}
+	>
+		{(item) => <ClayDropDown.Item key={item}>{item}</ClayDropDown.Item>}
+	</ClayDropDown>
+);
+
+export const DynamicWithSearch = () => {
+	return (
+		<ClayDropDown trigger={<ClayButton>Click Me</ClayButton>}>
+			<ClayDropDown.Search placeholder="Type to filter" />
+			<ClayDropDown.ItemList items={['one', 'two', 'three', 'four']}>
+				{(item: string) => (
+					<ClayDropDown.Item key={item}>{item}</ClayDropDown.Item>
+				)}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+};
+
+export const DynamicGroup = () => {
+	const items = [
+		{
+			children: [
+				{id: 2, name: 'Apple'},
+				{id: 3, name: 'Banana'},
+				{id: 4, name: 'Mangos'},
+			],
+			id: 1,
+			name: 'Fruit',
+		},
+		{
+			children: [
+				{id: 6, name: 'Potatoes'},
+				{id: 7, name: 'Tomatoes'},
+				{id: 8, name: 'Onions'},
+			],
+			id: 5,
+			name: 'Vegetable',
+		},
+	];
+
+	return (
+		<ClayDropDown
+			filterKey="name"
+			trigger={<ClayButton>Select</ClayButton>}
+		>
+			<ClayDropDown.Search placeholder="Type to filter" />
+			<ClayDropDown.ItemList items={items}>
+				{(item: any) => (
+					<ClayDropDown.Group
+						header={item.name}
+						items={item.children}
+						key={item.name}
+					>
+						{(item: any) => (
+							<ClayDropDown.Item key={item.name}>
+								{item.name}
+							</ClayDropDown.Item>
+						)}
+					</ClayDropDown.Group>
+				)}
+			</ClayDropDown.ItemList>
+		</ClayDropDown>
+	);
+};
+
 export const Groups = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}

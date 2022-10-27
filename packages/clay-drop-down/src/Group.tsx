@@ -3,14 +3,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useMemo} from 'react';
+import {__NOT_PUBLIC_COLLECTION} from '@clayui/core';
+import React, {useCallback, useContext, useMemo} from 'react';
 
-type Props = {
-	/**
-	 * Group content.
-	 */
-	children?: React.ReactNode;
+import {DropDownContext} from './DropDownContext';
 
+import type {ICollectionProps} from '@clayui/core';
+
+const {Collection} = __NOT_PUBLIC_COLLECTION;
+
+export interface IProps<T>
+	extends Omit<ICollectionProps<T, unknown>, 'virtualize'> {
 	/**
 	 * Value provided is a display component that is a header for the items in the group.
 	 */
@@ -20,16 +23,28 @@ type Props = {
 	 * ARIA to define semantic meaning to content.
 	 */
 	role?: string;
-};
+}
 
 let counter = 0;
 
-const ClayDropDownGroup = ({children, header, role = 'group'}: Props) => {
+function ClayDropDownGroup<T>({
+	children,
+	header,
+	items,
+	role = 'group',
+}: IProps<T>) {
 	const ariaLabel = useMemo(() => {
 		counter++;
 
 		return `clay-dropdown-menu-group-${counter}`;
 	}, []);
+
+	const {search} = useContext(DropDownContext);
+
+	const filterFn = useCallback(
+		(value: string) => value.match(new RegExp(search, 'i')) !== null,
+		[search]
+	);
 
 	return (
 		<>
@@ -50,11 +65,18 @@ const ClayDropDownGroup = ({children, header, role = 'group'}: Props) => {
 					className="list-unstyled"
 					role={role}
 				>
-					{children}
+					<Collection<any>
+						filter={filterFn}
+						filterKey="textValue"
+						items={items}
+						passthroughKey={false}
+					>
+						{children}
+					</Collection>
 				</ul>
 			</li>
 		</>
 	);
-};
+}
 
 export default ClayDropDownGroup;

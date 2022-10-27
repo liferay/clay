@@ -212,4 +212,68 @@ const DropDownWithDrilldown = () => {
 	);
 };
 
-export {DropDown, DropDownWithItems, DropDownWithDrilldown};
+const dropDownExampleImportsCode = `import Button from '@clayui/button';
+import DropDown from '@clayui/drop-down';`;
+
+const dropDownExampleCode = `const Component = () => {
+	const items = [
+		{
+			children: [
+				{id: 2, name: 'Apple'},
+				{id: 3, name: 'Banana'},
+				{id: 4, name: 'Mangos'},
+			],
+			id: 1,
+			name: 'Fruit',
+		},
+		{
+			children: [
+				{id: 6, name: 'Potatoes'},
+				{id: 7, name: 'Tomatoes'},
+				{id: 8, name: 'Onions'},
+			],
+			id: 5,
+			name: 'Vegetable',
+		},
+	];
+
+	return (
+		<DropDown
+			filterKey="name"
+			trigger={<Button>Select</Button>}
+		>
+			<DropDown.Search placeholder="Type to filter" />
+			<DropDown.ItemList items={items}>
+				{(item) => (
+					<DropDown.Group
+						header={item.name}
+						items={item.children}
+						key={item.name}
+					>
+						{(item) => (
+							<DropDown.Item key={item.name}>
+								{item.name}
+							</DropDown.Item>
+						)}
+					</DropDown.Group>
+				)}
+			</DropDown.ItemList>
+		</DropDown>
+	);
+}
+
+render(<Component />)`;
+
+const DropDownExample = () => {
+	const scope = {Button: ClayButton, DropDown: ClayDropDown};
+
+	return (
+		<Editor
+			code={dropDownExampleCode}
+			imports={dropDownExampleImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+export {DropDown, DropDownExample, DropDownWithItems, DropDownWithDrilldown};

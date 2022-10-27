@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {DropDown, __NOT_PUBLIC_COLLECTION} from '@clayui/core';
+import {__NOT_PUBLIC_COLLECTION} from '@clayui/core';
+import DropDown from '@clayui/drop-down';
 import {ClayInput as Input} from '@clayui/form';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {
