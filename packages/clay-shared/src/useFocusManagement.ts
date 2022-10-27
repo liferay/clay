@@ -85,6 +85,8 @@ export const FOCUSABLE_ELEMENTS = [
 	'textarea:not([disabled]):not([aria-hidden])',
 ];
 
+let hasSibling = false;
+
 function collectDocumentFocusableElements() {
 	return Array.from<HTMLElement>(
 		document.querySelectorAll(FOCUSABLE_ELEMENTS.join(','))
@@ -136,6 +138,8 @@ const collectFocusableElements = (node: any, focusableElements: Array<any>) => {
 	const sibling = node.sibling;
 
 	if (sibling) {
+		hasSibling = true;
+
 		collectFocusableElements(sibling, focusableElements);
 	}
 };
@@ -160,7 +164,7 @@ const getFiber = (scope: React.RefObject<HTMLElement | null>) => {
 
 const getFocusableElementsInScope = (fiberNode: any) => {
 	const focusableElements: Array<any> = [];
-	const {child} = fiberNode.alternate ?? fiberNode;
+	const {child} = !hasSibling ? fiberNode.alternate ?? fiberNode : fiberNode;
 
 	if (child !== null) {
 		collectFocusableElements(child, focusableElements);
@@ -178,7 +182,11 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		backwards: boolean = false,
 		persistOnScope: boolean = false
 	) => {
-		const fiberFocusElements = getFocusableElementsInScope(scope);
+		let fiberFocusElements = getFocusableElementsInScope(scope);
+
+		if (!hasSibling) {
+			fiberFocusElements = getFocusableElementsInScope(scope);
+		}
 
 		if (fiberFocusElements.length === 0) {
 			return null;
