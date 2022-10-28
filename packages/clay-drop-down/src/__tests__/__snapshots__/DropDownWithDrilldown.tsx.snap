@@ -31,7 +31,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
           class="drilldown-inner"
         >
           <div
-            aria-hidden="true"
+            aria-hidden="false"
             class="drilldown-item drilldown-current"
           >
             <ul
@@ -85,7 +85,9 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                     Subnav
                   </span>
                   <span
+                    aria-label=" Subnav"
                     class="dropdown-item-indicator-end"
+                    title=" Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -101,7 +103,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
             </ul>
           </div>
           <div
-            aria-hidden="false"
+            aria-hidden="true"
             class="drilldown-item"
           >
             <ul
@@ -139,7 +141,9 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                     Subnav
                   </span>
                   <span
+                    aria-label=" Subnav"
                     class="dropdown-item-indicator-end"
+                    title=" Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -155,7 +159,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
             </ul>
           </div>
           <div
-            aria-hidden="false"
+            aria-hidden="true"
             class="drilldown-item"
           >
             <ul
@@ -235,7 +239,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
         >
           <div
             aria-hidden="true"
-            class="drilldown-item drilldown-current"
+            class="drilldown-item"
           >
             <ul
               class="inline-scroller"
@@ -296,7 +300,9 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                     Subnav
                   </span>
                   <span
+                    aria-label=" Subnav"
                     class="dropdown-item-indicator-end"
+                    title=" Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -312,7 +318,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
             </ul>
           </div>
           <div
-            aria-hidden="false"
+            aria-hidden="true"
             class="drilldown-item"
           >
             <ul
@@ -354,7 +360,9 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                     Subnav
                   </span>
                   <span
+                    aria-label=" Subnav"
                     class="dropdown-item-indicator-end"
+                    title=" Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -370,7 +378,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
             </ul>
           </div>
           <div
-            aria-hidden="false"
+            aria-hidden="true"
             class="drilldown-item"
           >
             <ul
@@ -469,7 +477,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
           class="drilldown-inner"
         >
           <div
-            aria-hidden="true"
+            aria-hidden="false"
             class="drilldown-item drilldown-current"
           >
             <ul
@@ -507,7 +515,9 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
                     Subnav
                   </span>
                   <span
+                    aria-label=" Subnav"
                     class="dropdown-item-indicator-end"
+                    title=" Subnav"
                   >
                     <svg
                       class="lexicon-icon lexicon-icon-angle-right"
@@ -523,7 +533,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
             </ul>
           </div>
           <div
-            aria-hidden="false"
+            aria-hidden="true"
             class="drilldown-item"
           >
             <ul
