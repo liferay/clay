@@ -14,6 +14,11 @@ import Divider from '../Divider';
 
 type TType = 'divider';
 
+export type Messages = {
+	goTo: string;
+	back: string;
+};
+
 export interface IItem extends React.ComponentProps<typeof LinkOrButton> {
 	child?: string;
 	title?: string;
@@ -27,6 +32,7 @@ export interface IProps {
 	direction?: 'prev' | 'next';
 	header?: string;
 	items: Array<IItem>;
+	messages: Messages;
 	onBack: () => void;
 	onForward: (title: string, child: string) => void;
 	spritemap?: string;
@@ -37,6 +43,7 @@ const DrilldownMenu = ({
 	direction,
 	header,
 	items,
+	messages,
 	onBack,
 	onForward,
 	spritemap,
@@ -69,10 +76,12 @@ const DrilldownMenu = ({
 							onClick={onBack}
 						>
 							<ClayButtonWithIcon
+								aria-label={messages.back}
 								className="component-action dropdown-item-indicator-start"
 								onClick={onBack}
 								spritemap={spritemap}
 								symbol="angle-left"
+								title={messages.back}
 							/>
 
 							<span className="dropdown-item-indicator-text-start">
@@ -138,7 +147,11 @@ const DrilldownMenu = ({
 											</span>
 
 											{child && (
-												<span className="dropdown-item-indicator-end">
+												<span
+													aria-label={`${messages.goTo} ${title}`}
+													className="dropdown-item-indicator-end"
+													title={`${messages.goTo} ${title}`}
+												>
 													<ClayIcon
 														spritemap={spritemap}
 														symbol="angle-right"

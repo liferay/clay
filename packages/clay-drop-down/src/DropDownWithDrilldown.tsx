@@ -3,13 +3,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch, useInteractionFocus, useInternalState} from '@clayui/shared';
+import {
+	InternalDispatch,
+	useInteractionFocus,
+	useInternalState,
+} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import ClayDropDown from './DropDown';
 import ClayDropDownMenu from './Menu';
 import Drilldown from './drilldown';
+
+import type {Messages} from './drilldown';
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -61,16 +67,21 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 		typeof ClayDropDown
 	>['menuElementAttrs'];
 
+	menuHeight?: React.ComponentProps<typeof ClayDropDown>['menuHeight'];
+
+	menuWidth?: React.ComponentProps<typeof ClayDropDown>['menuWidth'];
+
+	/**
+	 * Messages for drilldown.
+	 */
+	messages?: Messages;
+
 	/**
 	 * Map of menus and items to be used in the drilldown. Each key should be a unique identifier for the menu.
 	 */
 	menus: {
 		[id: string]: React.ComponentProps<typeof Drilldown.Menu>['items'];
 	};
-
-	menuHeight?: React.ComponentProps<typeof ClayDropDown>['menuHeight'];
-
-	menuWidth?: React.ComponentProps<typeof ClayDropDown>['menuWidth'];
 
 	/**
 	 * Function for setting the offset of the menu from the trigger.
@@ -106,7 +117,7 @@ type History = {
 };
 
 export const ClayDropDownWithDrilldown = ({
-	active,
+	active: externalActive,
 	alignmentByViewport,
 	alignmentPosition,
 	className,
@@ -118,6 +129,10 @@ export const ClayDropDownWithDrilldown = ({
 	menuHeight,
 	menuWidth,
 	menus,
+	messages = {
+		back: '',
+		goTo: '',
+	},
 	offsetFn,
 	onActiveChange,
 	renderMenuOnClick,
@@ -200,6 +215,7 @@ export const ClayDropDownWithDrilldown = ({
 							}
 							items={menus[menuKey]}
 							key={menuKey}
+							messages={messages}
 							onBack={() => {
 								const [parent] = history.slice(-1);
 

@@ -8,6 +8,8 @@ import React from 'react';
 
 import Menu from './Menu';
 
+import type {Messages} from './Menu';
+
 const Inner = React.forwardRef<
 	HTMLDivElement,
 	React.HTMLAttributes<HTMLDivElement>
@@ -26,4 +28,5 @@ const Inner = React.forwardRef<
 	);
 });
 
+export type {Messages};
 export default {Inner, Menu};
