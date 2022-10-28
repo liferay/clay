@@ -49,7 +49,7 @@ const DrilldownMenu = ({
 
 	return (
 		<CSSTransition
-			aria-hidden={active}
+			aria-hidden={!active}
 			className={classNames('drilldown-item', {
 				'drilldown-current': active,
 			})}
