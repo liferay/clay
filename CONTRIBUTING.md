@@ -409,20 +409,23 @@ npm i -g verdaccio
 # Alternatively, if you are using yarn, you can issue this command
 # yarn global add verdaccio
 
-# Once installed, you'll need to run verdaccio locally
+# Once installed, you'll need to leave verdaccio running locally
+# If everything is correct, it will use http://localhost:4873 by default
 verdaccio
 
-# In order to publish packages, you'll need to create a user and log in
+# In order to publish packages, you'll need to open a new terminal window
+# and create a user and log in
 npm adduser --registry http://localhost:4873
 
-# Let's assume you have made a change in the clay-button component,
+# Let's assume you have made some changes in the clay-button component,
 # in order to test those changes, you'll need to publish the package locally.
 
-# Please note that publishing an "existing version" of a module will fail;
+# IMPORTANT:
+# Publishing an "existing version" of a module will fail;
 # in order to fix that, you'll need to change the "version" field in the
 # package.json file of the module you want to publish.
-# One you are sure that the version you are going to publish is not
-# published on npmjs.com, you can publish the package locally
+# Once you are sure that the version you are going to publish is not
+# already published on npmjs.com, you can publish the package locally
 
 cd packages/clay-button
 npm publish --registry http://localhost:4873
@@ -430,16 +433,16 @@ npm publish --registry http://localhost:4873
 # If you are using yarn, you can issue this command instead
 # YARN_REGISTRY=http://localhost:4873 yarn publish
 
-# Now navigate to the frontend-taglib-clay module
+# Now navigate to the frontend-taglib-clay module of your Liferay Portal
 cd {PORTAL_ROOT}/modules/apps/frontend-taglib/frontend-taglib-clay
 
 # Install the @clayui/button package from your local registry
 YARN_REGISTRY=http://localhost:4873 yarn add @clayui/button
 
-# Before deploying you shoud stop tomcat
+# Before deploying, you shoud stop the tomcat that's running your Liferay Portal
 
 # Deploy the module
 gradlew deploy -a
 
-# Restart tomcat
+# Restart the tomcat
 ```
