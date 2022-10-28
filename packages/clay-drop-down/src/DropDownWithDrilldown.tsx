@@ -122,7 +122,7 @@ export const ClayDropDownWithDrilldown = ({
 	alignmentPosition,
 	className,
 	containerElement,
-	defaultActive,
+	defaultActive = false,
 	defaultActiveMenu,
 	initialActiveMenu,
 	menuElementAttrs,
@@ -146,6 +146,15 @@ export const ClayDropDownWithDrilldown = ({
 	const [history, setHistory] = useState<Array<History>>([]);
 
 	const {isFocusVisible} = useInteractionFocus();
+
+	const [active, setActive] = useInternalState({
+		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
+		handleName: 'onActiveChange',
+		name: 'active',
+		onChange: onActiveChange,
+		value: externalActive,
+	});
 
 	const focusHistory = useRef<Array<HTMLElement>>([]);
 
@@ -189,7 +198,6 @@ export const ClayDropDownWithDrilldown = ({
 			alignmentPosition={alignmentPosition}
 			className={className}
 			containerElement={containerElement}
-			defaultActive={defaultActive}
 			hasRightSymbols
 			menuElementAttrs={{
 				...menuElementAttrs,
@@ -198,7 +206,16 @@ export const ClayDropDownWithDrilldown = ({
 			menuHeight={menuHeight}
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
-			onActiveChange={onActiveChange}
+			onActiveChange={(value: boolean) => {
+				if (!active) {
+					setActiveMenu(defaultActiveMenu);
+					focusHistory.current = [];
+					setHistory([]);
+					setDirection('prev');
+				}
+
+				setActive(value);
+			}}
 			renderMenuOnClick={renderMenuOnClick}
 			trigger={trigger}
 		>
