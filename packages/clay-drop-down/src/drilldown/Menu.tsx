@@ -29,7 +29,6 @@ export interface IProps {
 	items: Array<IItem>;
 	onBack: () => void;
 	onForward: (title: string, child: string) => void;
-	onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
 	spritemap?: string;
 }
 
@@ -40,7 +39,6 @@ const DrilldownMenu = ({
 	items,
 	onBack,
 	onForward,
-	onKeyDown,
 	spritemap,
 }: IProps) => {
 	const initialClasses = classNames('transitioning', {
@@ -73,7 +71,6 @@ const DrilldownMenu = ({
 							<ClayButtonWithIcon
 								className="component-action dropdown-item-indicator-start"
 								onClick={onBack}
-								onKeyDown={onKeyDown}
 								spritemap={spritemap}
 								symbol="angle-left"
 							/>
@@ -125,7 +122,6 @@ const DrilldownMenu = ({
 													onForward(title, child);
 												}
 											}}
-											onKeyDown={onKeyDown}
 											role="menuitem"
 										>
 											{symbol && (

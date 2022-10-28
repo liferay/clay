@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch} from '@clayui/shared';
+import {InternalDispatch, useInteractionFocus, useInternalState} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -130,16 +130,16 @@ export const ClayDropDownWithDrilldown = ({
 	const [direction, setDirection] = useState<'prev' | 'next'>();
 	const [history, setHistory] = useState<Array<History>>([]);
 
+	const {isFocusVisible} = useInteractionFocus();
+
 	const focusHistory = useRef<Array<HTMLElement>>([]);
 
 	const innerRef = useRef<HTMLDivElement>(null);
 
-	const isKeyboard = useRef<boolean>(false);
-
 	const menuIds = Object.keys(menus);
 
 	useEffect(() => {
-		if (!isKeyboard.current) {
+		if (!isFocusVisible()) {
 			return;
 		}
 
@@ -220,13 +220,6 @@ export const ClayDropDownWithDrilldown = ({
 								setDirection('next');
 
 								setActiveMenu(childId);
-							}}
-							onKeyDown={(event) => {
-								if (event.key !== 'Enter') {
-									isKeyboard.current = false;
-								} else {
-									isKeyboard.current = true;
-								}
 							}}
 							spritemap={spritemap}
 						/>
