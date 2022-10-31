@@ -186,45 +186,13 @@ export function Editor({
 				</div>
 			</div>
 
-			<div className="clay-color-form-group">
-				<Hue
-					onChange={(hue) => {
-						onHueChange(hue);
-						onColorChange(tinycolor({h: hue, s, v}));
-					}}
-					value={hue}
-				/>
-				<ClayInput.Group>
-					<ClayInput.GroupItem>
-						<ClayInput
-							data-testid="hInput"
-							insetBefore
-							max="360"
-							min="0"
-							onChange={(event) => {
-								const value = event.target.value;
-
-								let newVal = Number(value);
-
-								if (newVal < 0) {
-									newVal = 0;
-								} else if (newVal > 360) {
-									newVal = 360;
-								}
-
-								onHueChange(Math.round(newVal));
-
-								onColorChange(tinycolor({h: newVal, s, v}));
-							}}
-							type="number"
-							value={hue}
-						/>
-						<ClayInput.GroupInsetItem before tag="label">
-							H
-						</ClayInput.GroupInsetItem>
-					</ClayInput.GroupItem>
-				</ClayInput.Group>
-			</div>
+			<Hue
+				onChange={(hue) => {
+					onHueChange(hue);
+					onColorChange(tinycolor({h: hue, s, v}));
+				}}
+				value={hue}
+			/>
 
 			<div className="clay-color-footer">
 				<ClayForm.Group>
