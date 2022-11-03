@@ -145,8 +145,12 @@ function ClayTabs({
 			ref={tabsRef}
 			role="tablist"
 		>
-			{React.Children.map(children, (child, index) =>
-				React.cloneElement(child as React.ReactElement, {
+			{React.Children.map(children, (child, index) => {
+				if (!React.isValidElement(child)) {
+					return child;
+				}
+
+				return React.cloneElement(child as React.ReactElement, {
 					active:
 						(child as React.ReactElement).props.active !== undefined
 							? (child as React.ReactElement).props.active
@@ -162,8 +166,8 @@ function ClayTabs({
 							setActive(index);
 						}
 					},
-				})
-			)}
+				});
+			})}
 		</ul>
 	);
 }

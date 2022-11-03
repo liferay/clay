@@ -15,7 +15,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Children elements received from ClayTabs.Content component.
 	 */
-	children: Array<React.ReactElement>;
+	children: React.ReactNode;
 
 	/**
 	 * Flag to indicate if `fade` classname that applies an fading animation should be applied.
@@ -33,15 +33,16 @@ const Content = ({
 	return (
 		<div className={classNames('tab-content', className)} {...otherProps}>
 			{React.Children.map(children, (child, index) => {
-				return (
-					child &&
-					React.cloneElement(child, {
-						...child.props,
-						active: activeIndex === index,
-						fade,
-						key: index,
-					})
-				);
+				if (!React.isValidElement(child)) {
+					return child;
+				}
+
+				return React.cloneElement(child, {
+					...child.props,
+					active: activeIndex === index,
+					fade,
+					key: index,
+				});
 			})}
 		</div>
 	);
