@@ -148,4 +148,28 @@ describe('ClayTabs', () => {
 		fireEvent.click(tabItems[1]);
 		expect(onClick).toBeCalled();
 	});
+
+	it('renders elements not valid tabs should continue to work', () => {
+		const {getAllByRole} = render(
+			<>
+				<ClayTabs>
+					{false && <ClayTabs.Item active>One</ClayTabs.Item>}
+					<ClayTabs.Item>Two</ClayTabs.Item>
+				</ClayTabs>
+				<ClayTabs.Content activeIndex={1}>
+					{false && <ClayTabs.TabPane>Content One</ClayTabs.TabPane>}
+					<ClayTabs.TabPane>Content Two</ClayTabs.TabPane>
+				</ClayTabs.Content>
+			</>
+		);
+
+		const tabItems = getAllByRole('tab');
+		const tabPanels = getAllByRole('tabpanel');
+
+		expect(tabItems[0].innerHTML).toBe('Two');
+		expect(tabItems.length).toBe(1);
+
+		expect(tabPanels[0].innerHTML).toBe('Content Two');
+		expect(tabPanels.length).toBe(1);
+	});
 });
