@@ -376,7 +376,7 @@ const ClayColorPicker = ({
 								label={label}
 								onChange={(color, hex) => {
 									dispatch({
-										hex: color.toHex(),
+										hex: color.toHex8(),
 										hue: color.toHsv().h,
 									});
 									setValue(hex);
@@ -405,7 +405,7 @@ const ClayColorPicker = ({
 								hex={state.hex}
 								hue={state.hue}
 								onChange={(color, active) => {
-									const hex = color.toHex();
+									const hex = color.toHex8();
 
 									if (active) {
 										const newColors = [...customColors];
@@ -420,7 +420,7 @@ const ClayColorPicker = ({
 									setValue(hex);
 								}}
 								onColorChange={(color) => {
-									const hex = color.toHex();
+									const hex = color.toHex8();
 									const newColors = [...customColors];
 
 									newColors[state.splotch!] = hex;
@@ -459,7 +459,15 @@ const ClayColorPicker = ({
 
 									if (newColor.isValid()) {
 										if (newColor.getFormat() === 'hex') {
-											value = newColor.toHex();
+											value = newColor
+												.toHex()
+												.toUpperCase();
+										} else if (
+											newColor.getFormat() === 'hex8'
+										) {
+											value = newColor
+												.toHex8()
+												.toUpperCase();
 										} else if (
 											newColor.toString() !== value
 										) {
@@ -500,7 +508,7 @@ const ClayColorPicker = ({
 											value.includes('var('))
 									) {
 										dispatch({
-											hex: color.toHex(),
+											hex: color.toHex8(),
 											hue: color.toHsv().h,
 										});
 
@@ -508,7 +516,7 @@ const ClayColorPicker = ({
 											const newColors = [...customColors];
 
 											newColors[state.splotch!] =
-												color.toHex();
+												color.toHex8();
 
 											onColorsChange(newColors);
 										} else {

@@ -7,6 +7,7 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import React, {useEffect, useReducer, useRef, useState} from 'react';
 import tinycolor from 'tinycolor2';
 
+import Alpha from './Alpha';
 import GradientSelector from './GradientSelector';
 import Hue from './Hue';
 import {findColorIndex} from './util';
@@ -37,7 +38,7 @@ export function useEditor(
 		);
 
 		return {
-			hex: color.toHex(),
+			hex: color.toHex8(),
 			hue: color.toHsv().h,
 			splotch: index !== -1 ? index : undefined,
 		};
@@ -147,8 +148,28 @@ export function Editor({
 		[b, 'b'],
 	];
 
+	const [alpha, setAlpha] = useState<number>(1);
+
+	React.useEffect(() => {
+		let currentAlpha = color.getAlpha();
+
+		if (currentAlpha !== 0 && currentAlpha !== 1) {
+			currentAlpha = +currentAlpha.toFixed(2);
+		}
+
+		setAlpha(currentAlpha);
+	}, [alpha, color]);
+
 	return (
 		<>
+			<Hue
+				onChange={(hue) => {
+					onHueChange(hue);
+					onColorChange(tinycolor({h: hue, s, v}).setAlpha(alpha));
+				}}
+				value={hue}
+			/>
+
 			<div className="clay-color-map-group">
 				<GradientSelector
 					color={color}
@@ -159,7 +180,7 @@ export function Editor({
 								h: hue,
 								s: saturation,
 								v: visibility,
-							})
+							}).setAlpha(alpha)
 						);
 					}}
 				/>
@@ -186,12 +207,15 @@ export function Editor({
 				</div>
 			</div>
 
-			<Hue
-				onChange={(hue) => {
-					onHueChange(hue);
-					onColorChange(tinycolor({h: hue, s, v}));
+			<Alpha
+				onChange={(event) => {
+					setAlpha(event.target.value);
+					onColorChange(color.setAlpha(event.target.value));
 				}}
-				value={hue}
+				style={{
+					color: `#${color.toHex()}`,
+				}}
+				value={alpha}
 			/>
 
 			<div className="clay-color-footer">
@@ -207,9 +231,9 @@ export function Editor({
 									);
 
 									if (newColor.isValid()) {
-										onHexChange(newColor.toHex());
+										onHexChange(newColor.toHex8());
 									} else {
-										onHexChange(color.toHex());
+										onHexChange(color.toHex8());
 									}
 								}}
 								onChange={(event) => {
@@ -231,7 +255,7 @@ export function Editor({
 									}
 								}}
 								type="text"
-								value={hex.toUpperCase().substring(0, 6)}
+								value={hex.toUpperCase().substring(0, 8)}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
