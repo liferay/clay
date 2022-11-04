@@ -172,4 +172,24 @@ describe('ClayTabs', () => {
 		expect(tabPanels[0].innerHTML).toBe('Content Two');
 		expect(tabPanels.length).toBe(1);
 	});
+
+	it('renders the new default composition', () => {
+		const {getAllByRole} = render(
+			<ClayTabs>
+				<ClayTabs.List>
+					<ClayTabs.Item>Tab 1</ClayTabs.Item>
+					<ClayTabs.Item>Tab 2</ClayTabs.Item>
+					<ClayTabs.Item>Tab 3</ClayTabs.Item>
+				</ClayTabs.List>
+				<ClayTabs.Panels>
+					<ClayTabs.TabPanel>Tab Content 1</ClayTabs.TabPanel>
+					<ClayTabs.TabPanel>Tab Content 2</ClayTabs.TabPanel>
+					<ClayTabs.TabPanel>Tab Content 3</ClayTabs.TabPanel>
+				</ClayTabs.Panels>
+			</ClayTabs>
+		);
+
+		expect(getAllByRole('tab').length).toBe(3);
+		expect(getAllByRole('tabpanel').length).toBe(3);
+	});
 });
