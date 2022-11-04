@@ -11,7 +11,7 @@ export default {
 	argTypes: {
 		activation: {
 			control: {type: 'select'},
-			options: ['manual', 'automatic', null],
+			options: ['manual', 'automatic'],
 		},
 		displayType: {
 			control: {type: 'select'},
@@ -133,6 +133,25 @@ Default.args = {
 	displayType: 'underline',
 	justified: false,
 	modern: true,
+};
+
+export const NewDefault = (args: any) => (
+	<ClayTabs activation={args.activation} displayType={args.displayType}>
+		<ClayTabs.List>
+			<ClayTabs.Item>Tab 1</ClayTabs.Item>
+			<ClayTabs.Item>Tab 2</ClayTabs.Item>
+			<ClayTabs.Item>Tab 3</ClayTabs.Item>
+		</ClayTabs.List>
+		<ClayTabs.Panels>
+			<ClayTabs.TabPanel>Tab Content 1</ClayTabs.TabPanel>
+			<ClayTabs.TabPanel>Tab Content 2</ClayTabs.TabPanel>
+			<ClayTabs.TabPanel>Tab Content 3</ClayTabs.TabPanel>
+		</ClayTabs.Panels>
+	</ClayTabs>
+);
+
+NewDefault.args = {
+	activation: 'manual',
 };
 
 export const WithState = () => {
