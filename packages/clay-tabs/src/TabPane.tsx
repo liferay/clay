@@ -28,6 +28,7 @@ const TabPane = ({
 	children,
 	className,
 	fade,
+	tabIndex = 0,
 	...otherProps
 }: ITabPaneProps) => {
 	const [internalActive, setInternalActive] = React.useState(active);
@@ -68,7 +69,7 @@ const TabPane = ({
 				className
 			)}
 			role="tabpanel"
-			tabIndex={0}
+			tabIndex={tabIndex}
 		>
 			{children}
 		</div>
