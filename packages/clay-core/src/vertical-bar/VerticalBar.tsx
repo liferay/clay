@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch, useInternalState} from '@clayui/shared';
+import {InternalDispatch, useId, useInternalState} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -19,6 +19,15 @@ type Props = {
 	 * fixed position.
 	 */
 	absolute?: boolean;
+
+	/**
+	 * Flag to indicate the navigation behavior in the tab.
+	 *
+	 * - manual - it will just move the focus and tab activation is done just
+	 * by pressing space or enter.
+	 * - automatic - moves the focus to the tab and activates the tab.
+	 */
+	activation?: 'manual' | 'automatic';
 
 	/**
 	 * The VerticalBar content.
@@ -60,6 +69,7 @@ export function VerticalBar(props: Props): JSX.Element & {
 
 export function VerticalBar({
 	absolute = false,
+	activation = 'manual',
 	active,
 	children,
 	className,
@@ -78,6 +88,8 @@ export function VerticalBar({
 		value: active,
 	});
 
+	const id = useId();
+
 	return (
 		<div
 			className={classNames('c-slideout c-slideout-shown', className, {
@@ -89,7 +101,9 @@ export function VerticalBar({
 		>
 			<VerticalBarContext.Provider
 				value={{
+					activation,
 					activePanel,
+					id: `${id}-verticalbar`,
 					onActivePanel: setActivePanel,
 				}}
 			>

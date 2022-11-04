@@ -29,6 +29,12 @@ type Props = {
 	 * Internal property.
 	 * @ignore
 	 */
+	index?: number;
+
+	/**
+	 * Internal property.
+	 * @ignore
+	 */
 	keyValue?: React.Key;
 
 	/**
@@ -38,10 +44,10 @@ type Props = {
 };
 
 export const Item = React.forwardRef<HTMLLIElement, Props>(function Item(
-	{children, divider = false, expand = false, keyValue, style}: Props,
+	{children, divider = false, expand = false, index, keyValue, style}: Props,
 	ref
 ) {
-	const {activePanel, onActivePanel} = useContext(VerticalBarContext);
+	const {activePanel, id, onActivePanel} = useContext(VerticalBarContext);
 
 	return (
 		<li
@@ -50,12 +56,16 @@ export const Item = React.forwardRef<HTMLLIElement, Props>(function Item(
 				'tbar-item-expand': expand,
 			})}
 			ref={ref}
+			role="none"
 			style={style}
 		>
 			{React.cloneElement(children, {
+				'aria-controls': `${id}-tabpanel-${keyValue}`,
+				'aria-selected': activePanel === keyValue,
 				className: classNames('tbar-btn tbar-btn-monospaced', {
 					active: activePanel === keyValue,
 				}),
+				id: `${id}-tab-${keyValue}`,
 				onClick: (
 					event: React.MouseEvent<HTMLButtonElement, MouseEvent>
 				) => {
@@ -71,6 +81,12 @@ export const Item = React.forwardRef<HTMLLIElement, Props>(function Item(
 						keyValue === activePanel ? undefined : keyValue!
 					);
 				},
+				role: 'tab',
+				tabIndex:
+					(activePanel !== undefined && activePanel !== keyValue) ||
+					(activePanel === undefined && index !== 0)
+						? -1
+						: null,
 			})}
 		</li>
 	);

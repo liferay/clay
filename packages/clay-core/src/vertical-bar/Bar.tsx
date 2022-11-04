@@ -3,10 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useRef} from 'react';
+import React, {useContext, useRef} from 'react';
 
 import {Collection} from '../collection';
+import {VerticalBarContext} from './context';
 
 import type {ICollectionProps} from '../collection';
 
@@ -34,19 +36,30 @@ export function Bar<T>({
 }: IProps<T>) {
 	const parentRef = useRef<HTMLDivElement | null>(null);
 
+	const {activation} = useContext(VerticalBarContext);
+
+	const {onKeyDown} = useNavigation({
+		activation,
+		containeRef: parentRef,
+		orientation: 'vertical',
+	});
+
 	return (
 		<nav
 			className={classNames('tbar tbar-stacked c-slideout-show', {
 				'tbar-dark-l2': displayType === 'dark',
 				'tbar-light': displayType === 'light',
 			})}
+			onKeyDown={onKeyDown}
 			ref={parentRef}
 		>
 			<Collection<T>
+				aria-orientation="vertical"
 				as={List}
 				estimateSize={40}
 				items={items}
 				parentRef={parentRef}
+				role="tablist"
 				virtualize={virtualize}
 			>
 				{children}
