@@ -56,8 +56,11 @@ const Content = ({
 						typeof active === 'number'
 							? active === index
 							: activeIndex === index,
+					'aria-labelledby': tabsId
+						? `${tabsId}-tab-${index}`
+						: child.props['aria-labelledby'],
 					fade,
-					id: tabsId ? `${tabsId}-${index}` : child.props.id,
+					id: tabsId ? `${tabsId}-tabpanel-${index}` : child.props.id,
 					key: index,
 				});
 			})}

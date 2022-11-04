@@ -135,7 +135,9 @@ export function List({
 							? (child as React.ReactElement).props.active
 							: active === index,
 					innerProps: {
-						'aria-controls': tabsId && `${tabsId}-${index}`,
+						'aria-controls':
+							tabsId && `${tabsId}-tabpanel-${index}`,
+						id: tabsId && `${tabsId}-tab-${index}`,
 						...(child.props.innerProps ?? {}),
 					},
 					onClick: (
