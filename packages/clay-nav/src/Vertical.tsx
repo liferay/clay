@@ -4,9 +4,9 @@
  */
 
 import ClayIcon from '@clayui/icon';
-import {setElementFullHeight} from '@clayui/shared';
+import {setElementFullHeight, useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
@@ -48,6 +48,15 @@ interface IItemWithItems extends IItem {
 }
 
 export interface IProps {
+	/**
+	 * Flag to indicate the navigation behavior in the menu.
+	 *
+	 * - manual - it will just move the focus and menu activation is done just
+	 * by pressing space or enter.
+	 * - automatic - moves the focus to the menuitem and activates the menu.
+	 */
+	activation?: 'manual' | 'automatic';
+
 	/**
 	 * Label of item that is currently active.
 	 * @deprecated since version 3.3.x
@@ -111,9 +120,12 @@ function Item({
 	const [expanded, setExpaned] = React.useState(!initialExpanded);
 
 	return (
-		<Nav.Item {...otherProps}>
+		<Nav.Item role="none" {...otherProps}>
 			<Nav.Link
 				active={active}
+				aria-current={active ? 'page' : undefined}
+				aria-expanded={subItems ? expanded : undefined}
+				aria-haspopup={subItems ? true : undefined}
 				collapsed={!expanded}
 				href={href}
 				onClick={() => {
@@ -123,9 +135,10 @@ function Item({
 						onClick();
 					}
 				}}
-				role="button"
+				role={subItems ? 'button' : 'menuitem'}
 				showIcon={!!subItems}
 				spritemap={spritemap}
+				tabIndex={!active ? -1 : undefined}
 			>
 				{label}
 			</Nav.Link>
@@ -154,7 +167,7 @@ function Item({
 					timeout={250}
 				>
 					<div>
-						<Nav stacked>
+						<Nav role="menu" stacked>
 							{renderItems(subItems, spritemap, level++)}
 						</Nav>
 					</div>
@@ -177,6 +190,7 @@ function ClayVerticalNav(props: IProps): JSX.Element & {
 };
 
 function ClayVerticalNav({
+	activation = 'manual',
 	activeLabel,
 	decorated,
 	items,
@@ -186,7 +200,14 @@ function ClayVerticalNav({
 	triggerLabel = 'Menu',
 	...otherProps
 }: IProps) {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
+	const containerRef = useRef<HTMLDivElement | null>(null);
+
+	const {onKeyDown} = useNavigation({
+		activation,
+		containeRef: containerRef,
+		orientation: 'vertical',
+	});
 
 	warning(
 		!activeLabel,
@@ -219,8 +240,12 @@ function ClayVerticalNav({
 				className={classNames('collapse menubar-collapse', {
 					show: active,
 				})}
+				onKeyDown={onKeyDown}
+				ref={containerRef}
 			>
-				<Nav nested>{renderItems(items, spritemap)}</Nav>
+				<Nav aria-orientation="vertical" nested role="menubar">
+					{renderItems(items, spritemap)}
+				</Nav>
 			</div>
 		</nav>
 	);
