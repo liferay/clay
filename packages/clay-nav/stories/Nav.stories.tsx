@@ -14,7 +14,6 @@ export default {
 
 const items = [
 	{
-		initialExpanded: true,
 		items: [
 			{
 				href: '#',
@@ -32,6 +31,7 @@ const items = [
 		label: 'Contact',
 	},
 	{
+		initialExpanded: true,
 		items: [
 			{
 				active: true,

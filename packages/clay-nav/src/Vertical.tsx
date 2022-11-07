@@ -140,7 +140,7 @@ function Item({
 	spritemap,
 	...otherProps
 }: INavItemProps) {
-	const [expanded, setExpaned] = React.useState(!initialExpanded);
+	const [expanded, setExpaned] = React.useState(initialExpanded);
 
 	const itemRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
 	const menusRef = useRef<HTMLDivElement>(null);
