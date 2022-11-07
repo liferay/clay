@@ -35,51 +35,62 @@ export interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	spritemap?: string;
 }
 
-export const NavLink = ({
-	active,
-	children,
-	className,
-	collapsed,
-	disabled,
-	showIcon,
-	spritemap,
-	...otherProps
-}: IProps) => {
-	return (
-		<LinkOrButton
-			{...otherProps}
-			buttonDisplayType="unstyled"
-			buttonType="button"
-			className={classNames('nav-link', className, {
-				active,
-				['collapse-icon']: showIcon,
-				collapsed,
-				disabled,
-			})}
-		>
-			{children}
+export const NavLink = React.forwardRef<
+	HTMLButtonElement | HTMLAnchorElement,
+	IProps
+>(
+	(
+		{
+			active,
+			children,
+			className,
+			collapsed,
+			disabled,
+			showIcon,
+			spritemap,
+			...otherProps
+		},
+		ref
+	) => {
+		return (
+			<LinkOrButton
+				{...otherProps}
+				buttonDisplayType="unstyled"
+				buttonType="button"
+				className={classNames('nav-link', className, {
+					active,
+					['collapse-icon']: showIcon,
+					collapsed,
+					disabled,
+				})}
+				ref={ref}
+			>
+				{children}
 
-			{showIcon && (
-				<>
-					<span className="collapse-icon-closed">
-						<ClayIcon
-							focusable="false"
-							role="presentation"
-							spritemap={spritemap}
-							symbol="caret-right"
-						/>
-					</span>
+				{showIcon && (
+					<>
+						<span className="collapse-icon-closed">
+							<ClayIcon
+								focusable="false"
+								role="presentation"
+								spritemap={spritemap}
+								symbol="caret-right"
+							/>
+						</span>
 
-					<span className="collapse-icon-open">
-						<ClayIcon
-							focusable="false"
-							role="presentation"
-							spritemap={spritemap}
-							symbol="caret-bottom"
-						/>
-					</span>
-				</>
-			)}
-		</LinkOrButton>
-	);
-};
+						<span className="collapse-icon-open">
+							<ClayIcon
+								focusable="false"
+								role="presentation"
+								spritemap={spritemap}
+								symbol="caret-bottom"
+							/>
+						</span>
+					</>
+				)}
+			</LinkOrButton>
+		);
+	}
+);
+
+NavLink.displayName = 'NavLink';
