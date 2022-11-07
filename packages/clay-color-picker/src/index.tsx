@@ -157,6 +157,11 @@ interface IProps
 	small?: boolean;
 
 	/**
+	 * The title of the Main Splotch component
+	 */
+	splotchTitle?: string;
+
+	/**
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;
@@ -196,6 +201,7 @@ const ClayColorPicker = ({
 	showPalette = true,
 	showPredefinedColorsWithCustom = false,
 	small,
+	splotchTitle,
 	spritemap,
 	title,
 	useNative = false,
@@ -326,6 +332,7 @@ const ClayColorPicker = ({
 									}
 								}}
 								ref={splotchRef}
+								title={splotchTitle}
 								value={internalValue}
 							/>
 						</ClayInput.GroupText>
