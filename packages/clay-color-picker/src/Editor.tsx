@@ -123,10 +123,11 @@ type Props = {
 	colors: Array<string>;
 	hex: string;
 	hue: number;
+	internalToHex: (value: Instance) => string;
 	onChange: (color: Instance, active: boolean) => void;
 	onColorChange: (color: Instance) => void;
-	onHueChange: (value: number) => void;
 	onHexChange: (value: string) => void;
+	onHueChange: (value: number) => void;
 };
 
 export function Editor({
@@ -134,6 +135,7 @@ export function Editor({
 	colors,
 	hex,
 	hue,
+	internalToHex,
 	onChange,
 	onColorChange,
 	onHexChange,
@@ -208,12 +210,10 @@ export function Editor({
 			</div>
 
 			<Alpha
-				onChange={(event) => {
+				color={`#${color.toHex()}`}
+				onChange={(event: any) => {
 					setAlpha(event.target.value);
 					onColorChange(color.setAlpha(event.target.value));
-				}}
-				style={{
-					color: `#${color.toHex()}`,
 				}}
 				value={alpha}
 			/>
@@ -231,9 +231,9 @@ export function Editor({
 									);
 
 									if (newColor.isValid()) {
-										onHexChange(newColor.toHex8());
+										onHexChange(internalToHex(newColor));
 									} else {
-										onHexChange(color.toHex8());
+										onHexChange(internalToHex(color));
 									}
 								}}
 								onChange={(event) => {
@@ -255,7 +255,11 @@ export function Editor({
 									}
 								}}
 								type="text"
-								value={hex.toUpperCase().substring(0, 8)}
+								value={
+									hex.toUpperCase().slice(-2) === 'FF'
+										? hex.toUpperCase().substring(0, 6)
+										: hex
+								}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">

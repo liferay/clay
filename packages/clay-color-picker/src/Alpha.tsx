@@ -9,16 +9,14 @@ import React, {useState} from 'react';
 
 type Props = {
 	/**
-	 * Callback function for when the hue value changes
+	 * Sets the color on ClaySlider form-control-range
 	 */
-	onChange: (event: any) => void;
+	color: string;
 
 	/**
-	 * The inline styles to add on ClaySlider
+	 * Callback function for when the hue value changes
 	 */
-	style: {
-		color: string;
-	};
+	onChange: (event: React.KeyboardEvent<HTMLInputElement>) => void;
 
 	/**
 	 * The value of the alpha transparency
@@ -29,11 +27,7 @@ type Props = {
 /**
  * Renders Alpha component
  */
-const ClayColorPickerAlpha = ({
-	style,
-	value = 0,
-	onChange = () => {},
-}: Props) => {
+const ClayColorPickerAlpha = ({color, onChange, value = 0}: Props) => {
 	const [alpha, setAlpha] = useState(value);
 
 	const handleOnChangeEnd = (event: any) => {
@@ -72,7 +66,9 @@ const ClayColorPickerAlpha = ({
 				onPointerUp={handleOnChangeEnd}
 				showTooltip={false}
 				step={0.01}
-				style={style}
+				style={{
+					color,
+				}}
 				value={alpha}
 			/>
 			<ClayInput.Group>
