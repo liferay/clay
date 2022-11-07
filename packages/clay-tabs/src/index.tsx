@@ -3,17 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {
-	FOCUSABLE_ELEMENTS,
-	InternalDispatch,
-	Keys,
-	useInternalState,
-} from '@clayui/shared';
-import classNames from 'classnames';
-import React, {useRef} from 'react';
+import {InternalDispatch, useId, useInternalState} from '@clayui/shared';
+import React from 'react';
 
 import Content from './Content';
 import Item from './Item';
+import {List} from './List';
 import TabPane from './TabPane';
 
 export type DisplayType = null | 'basic' | 'underline';
@@ -44,6 +39,12 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	displayType?: DisplayType;
 
 	/**
+	 * Flag to indicate if `fade` classname that applies an fading animation
+	 * should be applied.
+	 */
+	fade?: boolean;
+
+	/**
 	 * Justify the nav items according the tab content.
 	 */
 	justified?: boolean;
@@ -61,9 +62,11 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 
 function ClayTabs(props: IProps): JSX.Element & {
 	Content: typeof Content;
+	Item: typeof Item;
+	List: typeof List;
+	Panels: typeof Content;
 	TabPane: typeof TabPane;
 	TabPanel: typeof TabPane;
-	Item: typeof Item;
 };
 
 function ClayTabs({
@@ -73,13 +76,12 @@ function ClayTabs({
 	className,
 	defaultActive = 0,
 	displayType,
+	fade = false,
 	justified,
 	modern = true,
 	onActiveChange,
 	...otherProps
 }: IProps) {
-	const tabsRef = useRef<HTMLUListElement>(null);
-
 	const [active, setActive] = useInternalState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
@@ -89,92 +91,59 @@ function ClayTabs({
 		value: externalActive,
 	});
 
+	const [left, right] = React.Children.toArray(children);
+
+	const tabsId = useId();
+
+	// @ts-ignore
+	if (left?.type?.displayName === 'ClayTabsList') {
+		return (
+			<>
+				{React.cloneElement(left as React.ReactElement, {
+					activation,
+					active,
+					displayType,
+					justified,
+					modern,
+					onActiveChange: setActive,
+					tabsId,
+				})}
+
+				{React.isValidElement(right) &&
+					React.cloneElement(right as React.ReactElement, {
+						active,
+						fade,
+						tabsId,
+					})}
+			</>
+		);
+	}
+
 	return (
-		<ul
+		<List
 			{...otherProps}
-			className={classNames(
-				'nav',
-				{'nav-justified': justified},
-				!displayType
-					? {
-							'nav-tabs': !modern,
-							'nav-underline': modern,
-					  }
-					: {
-							'nav-tabs': displayType === 'basic',
-							'nav-underline': displayType === 'underline',
-					  },
-
-				className
-			)}
-			onKeyDown={(event) => {
-				if (!tabsRef.current) {
-					return;
-				}
-
-				if (event.key === Keys.Left || event.key === Keys.Right) {
-					const tabs = Array.from<HTMLElement>(
-						tabsRef.current.querySelectorAll(
-							FOCUSABLE_ELEMENTS.join(',')
-						)
-					);
-					const activeElement = document.activeElement as HTMLElement;
-
-					const position = tabs.indexOf(activeElement);
-
-					const tab =
-						tabs[
-							event.key === Keys.Left
-								? position - 1
-								: position + 1
-						];
-
-					if (tab) {
-						tab.focus();
-
-						if (activation === 'automatic') {
-							const newActive = Array.from(
-								tabsRef.current.querySelectorAll('a, button')
-							).indexOf(tab);
-
-							setActive(newActive);
-						}
-					}
-				}
-			}}
-			ref={tabsRef}
-			role="tablist"
+			activation={activation}
+			active={active}
+			className={className}
+			displayType={displayType}
+			justified={justified}
+			modern={modern}
+			onActiveChange={setActive}
 		>
-			{React.Children.map(children, (child, index) => {
-				if (!React.isValidElement(child)) {
-					return child;
-				}
-
-				return React.cloneElement(child as React.ReactElement, {
-					active:
-						(child as React.ReactElement).props.active !== undefined
-							? (child as React.ReactElement).props.active
-							: active === index,
-					onClick: (
-						event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-					) => {
-						const {onClick} = (child as React.ReactElement).props;
-
-						if (onClick) {
-							onClick(event);
-						} else {
-							setActive(index);
-						}
-					},
-				});
-			})}
-		</ul>
+			{children}
+		</List>
 	);
 }
 
+/**
+ * @deprecated since v3.78.2 - Use new composition with Tabs.List and Tabs.Panels.
+ */
 ClayTabs.Content = Content;
+
+ClayTabs.Panels = Content;
+ClayTabs.Item = Item;
+ClayTabs.List = List;
 ClayTabs.TabPane = TabPane;
 ClayTabs.TabPanel = TabPane;
-ClayTabs.Item = Item;
 
 export default ClayTabs;

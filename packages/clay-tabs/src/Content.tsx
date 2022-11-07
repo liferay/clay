@@ -8,9 +8,15 @@ import React from 'react';
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
-	 * Receives a number that indicates the `tabkey` to be rendered.
+	 * @ignore
 	 */
-	activeIndex: number;
+	active?: React.Key;
+
+	/**
+	 * Receives a number that indicates the `tabkey` to be rendered.
+	 * @deprecated since v3.78.2 - No longer needed in new composition.
+	 */
+	activeIndex?: number;
 
 	/**
 	 * Children elements received from ClayTabs.Content component.
@@ -21,13 +27,20 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Flag to indicate if `fade` classname that applies an fading animation should be applied.
 	 */
 	fade?: boolean;
+
+	/**
+	 * @ignore
+	 */
+	tabsId?: string;
 }
 
 const Content = ({
+	active,
 	activeIndex = 0,
 	children,
 	className,
 	fade = false,
+	tabsId,
 	...otherProps
 }: IProps) => {
 	return (
@@ -39,8 +52,15 @@ const Content = ({
 
 				return React.cloneElement(child, {
 					...child.props,
-					active: activeIndex === index,
+					active:
+						typeof active === 'number'
+							? active === index
+							: activeIndex === index,
+					'aria-labelledby': tabsId
+						? `${tabsId}-tab-${index}`
+						: child.props['aria-labelledby'],
 					fade,
+					id: tabsId ? `${tabsId}-tabpanel-${index}` : child.props.id,
 					key: index,
 				});
 			})}
