@@ -164,6 +164,7 @@ function ClayDropDown<T>({
 	offsetFn,
 	onActiveChange,
 	renderMenuOnClick = false,
+	role = 'menu',
 	trigger,
 	...otherProps
 }: IProps<T>) {
@@ -330,12 +331,17 @@ function ClayDropDown<T>({
 									}}
 								>
 									{children instanceof Function ? (
-										<Collection<T>
-											items={items}
-											passthroughKey={false}
+										<ul
+											className="list-unstyled"
+											role={role}
 										>
-											{children}
-										</Collection>
+											<Collection<T>
+												items={items}
+												passthroughKey={false}
+											>
+												{children}
+											</Collection>
+										</ul>
 									) : (
 										children
 									)}
