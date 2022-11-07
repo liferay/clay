@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {FOCUSABLE_ELEMENTS, InternalDispatch, Keys} from '@clayui/shared';
+import {InternalDispatch, useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useRef} from 'react';
 
@@ -68,6 +68,12 @@ export function List({
 }: IProps) {
 	const tabsRef = useRef<HTMLUListElement>(null);
 
+	const {onKeyDown} = useNavigation({
+		activation,
+		containeRef: tabsRef,
+		orientation: 'horizontal',
+	});
+
 	return (
 		<ul
 			{...otherProps}
@@ -86,41 +92,7 @@ export function List({
 
 				className
 			)}
-			onKeyDown={(event) => {
-				if (!tabsRef.current) {
-					return;
-				}
-
-				if (event.key === Keys.Left || event.key === Keys.Right) {
-					const tabs = Array.from<HTMLElement>(
-						tabsRef.current.querySelectorAll(
-							FOCUSABLE_ELEMENTS.join(',')
-						)
-					);
-					const activeElement = document.activeElement as HTMLElement;
-
-					const position = tabs.indexOf(activeElement);
-
-					const tab =
-						tabs[
-							event.key === Keys.Left
-								? position - 1
-								: position + 1
-						];
-
-					if (tab) {
-						tab.focus();
-
-						if (activation === 'automatic') {
-							const newActive = Array.from(
-								tabsRef.current.querySelectorAll('a, button')
-							).indexOf(tab);
-
-							onActiveChange!(newActive);
-						}
-					}
-				}
-			}}
+			onKeyDown={onKeyDown}
 			ref={tabsRef}
 			role="tablist"
 		>
