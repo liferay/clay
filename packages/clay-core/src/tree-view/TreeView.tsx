@@ -13,7 +13,7 @@ import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import DragLayer from './DragLayer';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
-import {Icons, OnLoadMore, TreeViewContext} from './context';
+import {Icons, MoveItemIndex, OnLoadMore, TreeViewContext} from './context';
 import {ITreeProps, useTree} from './useTree';
 
 interface ITreeViewProps<T>
@@ -67,9 +67,15 @@ interface ITreeViewProps<T>
 	itemNameKey?: string;
 
 	/**
+	 * The callback is called whenever there is an item dragging over
+	 * another item.
+	 */
+	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => void;
+
+	/**
 	 * Callback is called when an item is about to be moved elsewhere in the tree.
 	 */
-	onItemMove?: (item: T, parentItem: T) => boolean;
+	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
 
 	/**
 	 * When a tree is very large, loading items (nodes) asynchronously is preferred to
@@ -128,6 +134,7 @@ export function TreeView<T>({
 	items,
 	nestedKey = 'children',
 	onExpandedChange,
+	onItemHover,
 	onItemMove,
 	onItemsChange,
 	onLoadMore,
@@ -171,6 +178,7 @@ export function TreeView<T>({
 		expanderClassName,
 		expanderIcons,
 		nestedKey,
+		onItemHover,
 		onItemMove,
 		onLoadMore,
 		onRenameItem,

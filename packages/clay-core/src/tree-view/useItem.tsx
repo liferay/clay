@@ -51,6 +51,27 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 	);
 }
 
+function getNewItemPath(item: Value, overPosition: Position) {
+	let indexes = [...item.indexes];
+	const lastIndex = indexes.pop();
+
+	switch (overPosition) {
+		case TARGET_POSITION.BOTTOM:
+			indexes = [...indexes, lastIndex! + 1];
+			break;
+		case TARGET_POSITION.MIDDLE:
+			indexes = [...indexes, lastIndex!, 0];
+			break;
+		case TARGET_POSITION.TOP:
+			indexes = [...indexes, lastIndex!];
+			break;
+		default:
+			break;
+	}
+
+	return indexes;
+}
+
 export function ItemContextProvider({children, value}: Props) {
 	const {
 		dragAndDrop,
@@ -58,6 +79,7 @@ export function ItemContextProvider({children, value}: Props) {
 		items,
 		layout,
 		nestedKey,
+		onItemHover,
 		onItemMove,
 		open,
 		reorder,
@@ -147,29 +169,18 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			let indexes = [...item.indexes];
-			const lastIndex = indexes.pop();
-
-			switch (overPosition) {
-				case TARGET_POSITION.BOTTOM:
-					indexes = [...indexes, lastIndex! + 1];
-					break;
-				case TARGET_POSITION.MIDDLE:
-					indexes = [...indexes, lastIndex!, 0];
-					break;
-				case TARGET_POSITION.TOP:
-					indexes = [...indexes, lastIndex!];
-					break;
-				default:
-					break;
-			}
+			const indexes = getNewItemPath(item, overPosition!);
 
 			if (onItemMove) {
 				const tree = createImmutableTree(items as any, nestedKey!);
 
 				const isMoved = onItemMove(
 					removeItemInternalProps((dragItem as Value).item),
-					tree.nodeByPath(indexes).parent
+					tree.nodeByPath(indexes).parent,
+					{
+						next: indexes[indexes.length - 1],
+						previous: (dragItem as Value).item.index,
+					}
 				);
 
 				if (!isMoved) {
@@ -206,19 +217,37 @@ export function ItemContextProvider({children, value}: Props) {
 			).getBoundingClientRect();
 			const clientOffsetY = monitor.getClientOffset()!.y;
 
+			let currentPosition: Position = TARGET_POSITION.MIDDLE;
+
 			if (
 				clientOffsetY <
 				dropItemRect.height * DISTANCE + dropItemRect.top
 			) {
-				setOverPosition(TARGET_POSITION.TOP);
+				currentPosition = TARGET_POSITION.TOP;
 			} else if (
 				clientOffsetY >
 				dropItemRect.bottom - dropItemRect.height * DISTANCE
 			) {
-				setOverPosition(TARGET_POSITION.BOTTOM);
-			} else {
-				setOverPosition(TARGET_POSITION.MIDDLE);
+				currentPosition = TARGET_POSITION.BOTTOM;
 			}
+
+			if (onItemHover) {
+				const tree = createImmutableTree(items as any, nestedKey!);
+				const indexes = getNewItemPath(item, currentPosition);
+
+				onItemHover(
+					removeItemInternalProps(
+						(dragItem as unknown as Value).item
+					),
+					tree.nodeByPath(indexes).parent,
+					{
+						next: indexes[indexes.length - 1],
+						previous: (dragItem as unknown as Value).item.index,
+					}
+				);
+			}
+
+			setOverPosition(currentPosition);
 		},
 	});
 
