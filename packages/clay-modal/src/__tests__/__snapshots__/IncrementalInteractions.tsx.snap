@@ -24,6 +24,7 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -92,13 +93,18 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
       </div>
     </div>
     <button
+      aria-hidden="true"
       class="btn btn-primary"
+      data-aria-hidden="true"
       data-testid="button"
       type="button"
     >
       Open modal
     </button>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
