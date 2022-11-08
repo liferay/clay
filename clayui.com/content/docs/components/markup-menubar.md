@@ -1,10 +1,10 @@
 ---
-title: 'Menubar (Vertical Navigation)'
+title: 'Vertical Navigation'
 description: 'An alternative navigation pattern that displays navigation items vertically.'
 order: 5
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/vertical-nav/'
+mainTabURL: 'docs/components/vertical-nav.html'
 ---
-
-<div class="clay-site-alert alert alert-info">Check the <a href="https://liferay.design/lexicon" rel="noopener noreferrer" target="_blank">Lexicon</a> <a href="https://liferay.design/lexicon/core-components/navigation/vertical-nav/" rel="noopener noreferrer" target="_blank">Vertical Navigation Pattern</a> for a more in-depth look at the motivations and proper usage of this component.</div>
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
