@@ -432,7 +432,7 @@ describe('Interactions', () => {
 			expect(input.value).toBe('DFCAFF');
 
 			expect(
-				document.body.querySelectorAll('button[title="dfcaff"]').length
+				document.body.querySelectorAll('button[title="#dfcaff"]').length
 			).toBe(0);
 
 			expect(editorGetByTestId('rInput').value).toBe('223');
@@ -455,14 +455,14 @@ describe('Interactions', () => {
 
 			const blankSplotch = (
 				document.body as HTMLButtonElement
-			).querySelector('button[title="FFFFFF"]');
+			).querySelector('button[title="#FFFFFF"]');
 
 			fireEvent.click(blankSplotch as HTMLButtonElement, {});
 
 			expect(input.value).toBe('DFCAFF');
 
 			expect(
-				document.body.querySelectorAll('button[title="dfcaff"]').length
+				document.body.querySelectorAll('button[title="#dfcaff"]').length
 			).toBe(1);
 
 			expect(editorGetByTestId('rInput').value).toBe('223');
@@ -484,7 +484,7 @@ describe('Interactions', () => {
 			fireEvent.click(dropdownToggle as HTMLButtonElement, {});
 
 			const colorSplotch = editorGetByTitle(
-				'008000'
+				'#008000'
 			) as HTMLButtonElement;
 
 			fireEvent.click(colorSplotch as HTMLButtonElement, {});
@@ -498,7 +498,7 @@ describe('Interactions', () => {
 			expect(input.value).toBe('008000');
 
 			expect(
-				document.body.querySelectorAll('button[title="dfcaff"]').length
+				document.body.querySelectorAll('button[title="#dfcaff"]').length
 			).toBe(0);
 
 			expect(editorGetByTestId('rInput').value).toBe('0');
@@ -539,7 +539,7 @@ describe('Interactions', () => {
 
 			expect(
 				document.body.querySelector(
-					'.clay-color-header button[title="c8c8c8"]'
+					'.clay-color-header button[title="#c8c8c8"]'
 				)
 			).toBeNull();
 
@@ -560,7 +560,7 @@ describe('Interactions', () => {
 
 			const blankSplotch = (
 				document.body as HTMLButtonElement
-			).querySelector('button[title="FFFFFF"]');
+			).querySelector('button[title="#FFFFFF"]');
 
 			fireEvent.click(blankSplotch as HTMLButtonElement, {});
 
@@ -568,7 +568,7 @@ describe('Interactions', () => {
 
 			const greenSplotch = (
 				document.body as HTMLButtonElement
-			).querySelector('button[title="008000"]');
+			).querySelector('button[title="#008000"]');
 
 			fireEvent.click(greenSplotch as HTMLButtonElement, {});
 
@@ -576,7 +576,7 @@ describe('Interactions', () => {
 
 			const purpleSplotchs = (
 				document.body as HTMLButtonElement
-			).querySelectorAll('button[title="dfcaff"]');
+			).querySelectorAll('button[title="#dfcaff"]');
 
 			expect(purpleSplotchs.length).toBe(2);
 		});
@@ -594,7 +594,7 @@ describe('Interactions', () => {
 
 			const blankSplotch = (
 				document.body as HTMLButtonElement
-			).querySelector('button[title="FFFFFF"]');
+			).querySelector('button[title="#FFFFFF"]');
 
 			fireEvent.click(blankSplotch as HTMLButtonElement, {});
 
