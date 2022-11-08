@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fix error when alternate is with old reference ([4ae7ffe](https://github.com/liferay/clay/commit/4ae7ffe444c34a54e0c513d76e26718339a495ea))
+-   **@clayui/shared:** fixes error when trying to navigate by non-visible element using `useNavigation` hook ([2345873](https://github.com/liferay/clay/commit/2345873905150ccdd5ab48054a9affdb2890f2f8))
+-   **@clayui/shared:** fixes flag to switch which fiber to use to find focusable elements ([a26fc70](https://github.com/liferay/clay/commit/a26fc70744b4c04fad28e66142401a6bead4b64f))
+
+### Features
+
+-   **@clayui/shared:** adds new hook to handle navigation using arrow keys ([87b13a6](https://github.com/liferay/clay/commit/87b13a6f57922f233fa738bcee87cd1a7e704eae))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 ### Bug Fixes

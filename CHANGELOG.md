@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clay/modal:** fix error of content outside the modal is still navigable with JAWS ([b20531e](https://github.com/liferay/clay/commit/b20531eacaf54d2e0cf403d93c1387f839d92682))
+-   **@clayui/core:** fixes error of actions not being navigable via keyboard in TreeView ([7849603](https://github.com/liferay/clay/commit/78496033105b69431895623fbab4b898e40da8f9))
+-   **@clayui/drop-down:** fix error when not properly rendering markup for simplified collection ([e0c4fcf](https://github.com/liferay/clay/commit/e0c4fcfd2ad1125e7de980a1be09c7d906b4c722))
+-   **@clayui/nav:** fix bug when reversing `initialExpanded` state ([6fefa44](https://github.com/liferay/clay/commit/6fefa4490defbc3172eb5b163d472fd5b7094f84))
+-   **@clayui/shared:** fix error when alternate is with old reference ([4ae7ffe](https://github.com/liferay/clay/commit/4ae7ffe444c34a54e0c513d76e26718339a495ea))
+-   **@clayui/shared:** fixes error when trying to navigate by non-visible element using `useNavigation` hook ([2345873](https://github.com/liferay/clay/commit/2345873905150ccdd5ab48054a9affdb2890f2f8))
+-   **@clayui/shared:** fixes flag to switch which fiber to use to find focusable elements ([a26fc70](https://github.com/liferay/clay/commit/a26fc70744b4c04fad28e66142401a6bead4b64f))
+-   **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
+-   **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
+-   **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
+-   **@clayui/tooltip:** fixes error when not aligning the tooltip with focus in sequence of elements ([0d3e415](https://github.com/liferay/clay/commit/0d3e415746f33e62b7eb68e798c19c3ce5173b23))
+
+### Features
+
+-   **@clayui/color-picker:** Adds splotchTitle to pass custom title to the input group splotch ([56eec39](https://github.com/liferay/clay/commit/56eec39fe84245dc1378dd966d2c09131bd9a838))
+-   **@clayui/core:** add accessibility improvements to VerticalBar ([eb76fcc](https://github.com/liferay/clay/commit/eb76fcc1c65c2aaf503fa0569e93fbfdcdc40ce9))
+-   **@clayui/core:** add index data when moving item in TreeView ([0047d40](https://github.com/liferay/clay/commit/0047d408b1530275c71edc8063654c5d28248536))
+-   **@clayui/core:** adds new `onItemHover` property to TreeView ([5f54076](https://github.com/liferay/clay/commit/5f54076a4cf422107907885bb8285b192de8d644))
+-   **@clayui/drop-down:** add collection pattern ([2335ef2](https://github.com/liferay/clay/commit/2335ef28bb670a0ea145ddc2d8b2bd9ef68c9faa))
+-   **@clayui/nav:** add accessibility to the Vertical Nav component ([7b4ddfe](https://github.com/liferay/clay/commit/7b4ddfeb462c2d2df4b606e97ce9a3d6e0b3d3a7))
+-   **@clayui/nav:** adds keyboard interaction when moving through nested elements in VerticalNav ([626633c](https://github.com/liferay/clay/commit/626633c8af356bfa49b9228af7ef4a1226768cef))
+-   **@clayui/shared:** adds new hook to handle navigation using arrow keys ([87b13a6](https://github.com/liferay/clay/commit/87b13a6f57922f233fa738bcee87cd1a7e704eae))
+-   **@clayui/shared:** adds new hook to handle navigation using arrow keys ([77a6aab](https://github.com/liferay/clay/commit/77a6aab68a674363e4471d547f31782c383d9221))
+-   **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 ### Bug Fixes

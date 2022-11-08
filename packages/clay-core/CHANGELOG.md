@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes error of actions not being navigable via keyboard in TreeView ([7849603](https://github.com/liferay/clay/commit/78496033105b69431895623fbab4b898e40da8f9))
+
+### Features
+
+-   **@clayui/core:** add accessibility improvements to VerticalBar ([eb76fcc](https://github.com/liferay/clay/commit/eb76fcc1c65c2aaf503fa0569e93fbfdcdc40ce9))
+-   **@clayui/core:** add index data when moving item in TreeView ([0047d40](https://github.com/liferay/clay/commit/0047d408b1530275c71edc8063654c5d28248536))
+-   **@clayui/core:** adds new `onItemHover` property to TreeView ([5f54076](https://github.com/liferay/clay/commit/5f54076a4cf422107907885bb8285b192de8d644))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 **Note:** Version bump only for package @clayui/core

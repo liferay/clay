@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/nav:** fix bug when reversing `initialExpanded` state ([6fefa44](https://github.com/liferay/clay/commit/6fefa4490defbc3172eb5b163d472fd5b7094f84))
+
+### Features
+
+-   **@clayui/nav:** add accessibility to the Vertical Nav component ([7b4ddfe](https://github.com/liferay/clay/commit/7b4ddfeb462c2d2df4b606e97ce9a3d6e0b3d3a7))
+-   **@clayui/nav:** adds keyboard interaction when moving through nested elements in VerticalNav ([626633c](https://github.com/liferay/clay/commit/626633c8af356bfa49b9228af7ef4a1226768cef))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 **Note:** Version bump only for package @clayui/nav

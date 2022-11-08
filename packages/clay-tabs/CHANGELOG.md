@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** add configurable tabIndex property to TabPane component ([b5b37ce](https://github.com/liferay/clay/commit/b5b37ce855c122db2aeddfd47afbe1ad4f301179))
+-   **@clayui/tabs:** associate the panel label with the tab ([40dbdba](https://github.com/liferay/clay/commit/40dbdba6958ae0ca02440c9e524d34d279494ad4))
+-   **@clayui/tabs:** fix error when trying to clone an invalid element ([26d0200](https://github.com/liferay/clay/commit/26d0200f9910fcc3102ca5d44a06a77f8b4cb798))
+
+### Features
+
+-   **@clayui/tabs:** adds new compositing pattern ([c7fe61e](https://github.com/liferay/clay/commit/c7fe61e48f0b8dd23273467e40010973f7ecd7aa))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 **Note:** Version bump only for package @clayui/tabs

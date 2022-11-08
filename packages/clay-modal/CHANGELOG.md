@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clay/modal:** fix error of content outside the modal is still navigable with JAWS ([b20531e](https://github.com/liferay/clay/commit/b20531eacaf54d2e0cf403d93c1387f839d92682))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 **Note:** Version bump only for package @clayui/modal

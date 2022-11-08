@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix error when not properly rendering markup for simplified collection ([e0c4fcf](https://github.com/liferay/clay/commit/e0c4fcfd2ad1125e7de980a1be09c7d906b4c722))
+
+### Features
+
+-   **@clayui/drop-down:** add collection pattern ([2335ef2](https://github.com/liferay/clay/commit/2335ef28bb670a0ea145ddc2d8b2bd9ef68c9faa))
+
 ## [3.78.2](https://github.com/liferay/clay/compare/v3.78.1...v3.78.2) (2022-10-25)
 
 **Note:** Version bump only for package @clayui/drop-down
