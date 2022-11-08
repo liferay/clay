@@ -180,7 +180,7 @@ describe('Interactions', () => {
 		fireEvent.change(input, {target: {value: 'fff'}});
 		fireEvent.blur(input);
 
-		expect(input.value).toBe('ffffff');
+		expect(input.value).toBe('FFFFFF');
 	});
 
 	it('typing an invalid color in the input sets the input to an empty value', () => {
@@ -535,7 +535,7 @@ describe('Interactions', () => {
 
 			fireEvent.change(bInput, {target: {value: '200'}});
 
-			expect(input.value).toBe('c8c8c8');
+			expect(input.value).toBe('C8C8C8');
 
 			expect(
 				document.body.querySelector(
@@ -564,7 +564,7 @@ describe('Interactions', () => {
 
 			fireEvent.click(blankSplotch as HTMLButtonElement, {});
 
-			expect(input.value).toBe('dfcaff');
+			expect(input.value).toBe('DFCAFF');
 
 			const greenSplotch = (
 				document.body as HTMLButtonElement
@@ -576,7 +576,7 @@ describe('Interactions', () => {
 
 			const purpleSplotchs = (
 				document.body as HTMLButtonElement
-			).querySelectorAll('button[title="#dfcaff"]');
+			).querySelectorAll('button[title="#DFCAFF"]');
 
 			expect(purpleSplotchs.length).toBe(2);
 		});
