@@ -4,9 +4,9 @@
  */
 
 import ClayIcon from '@clayui/icon';
-import {setElementFullHeight} from '@clayui/shared';
+import {Keys, setElementFullHeight, useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
@@ -48,6 +48,15 @@ interface IItemWithItems extends IItem {
 }
 
 export interface IProps {
+	/**
+	 * Flag to indicate the navigation behavior in the menu.
+	 *
+	 * - manual - it will just move the focus and menu activation is done just
+	 * by pressing space or enter.
+	 * - automatic - moves the focus to the menuitem and activates the menu.
+	 */
+	activation?: 'manual' | 'automatic';
+
 	/**
 	 * Label of item that is currently active.
 	 * @deprecated since version 3.3.x
@@ -92,28 +101,65 @@ export interface INavItemProps extends IItemWithItems {
 	level: number;
 
 	/**
+	 * Internal property
+	 * @ignore
+	 */
+	parentItemRef?: React.RefObject<HTMLButtonElement | HTMLAnchorElement>;
+
+	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
 	spritemap?: string;
+}
+
+function findSelectedNested(
+	items: Array<IItemWithItems>
+): IItemWithItems | undefined {
+	return items.find((item) => {
+		if (item.active) {
+			return true;
+		}
+
+		if (item.items) {
+			return findSelectedNested(item.items);
+		}
+
+		return false;
+	});
 }
 
 function Item({
 	active,
 	href,
 	initialExpanded = false,
-	items: subItems,
+	items,
 	label,
 	level,
 	onClick,
+	parentItemRef,
 	spritemap,
 	...otherProps
 }: INavItemProps) {
-	const [expanded, setExpaned] = React.useState(!initialExpanded);
+	const [expanded, setExpaned] = React.useState(initialExpanded);
+
+	const itemRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
+	const menusRef = useRef<HTMLDivElement>(null);
+
+	const hasItemSelectedNested = useMemo(() => {
+		if (items) {
+			return !!findSelectedNested(items);
+		}
+
+		return false;
+	}, [items]);
 
 	return (
-		<Nav.Item {...otherProps}>
+		<Nav.Item role="none" {...otherProps}>
 			<Nav.Link
 				active={active}
+				aria-current={active ? 'page' : undefined}
+				aria-expanded={items ? expanded : undefined}
+				aria-haspopup={items ? true : undefined}
 				collapsed={!expanded}
 				href={href}
 				onClick={() => {
@@ -123,14 +169,46 @@ function Item({
 						onClick();
 					}
 				}}
-				role="button"
-				showIcon={!!subItems}
+				onKeyDown={(event) => {
+					switch (event.key) {
+						case Keys.Right: {
+							if (items && !expanded) {
+								setExpaned(true);
+							} else if (items && menusRef.current) {
+								const firstItemElement =
+									menusRef.current.querySelector<HTMLElement>(
+										'.nav-link:not([disabled])'
+									);
+								firstItemElement?.focus();
+							}
+							break;
+						}
+						case Keys.Left: {
+							if (items && expanded) {
+								setExpaned(false);
+							} else if (!items && parentItemRef?.current) {
+								parentItemRef.current?.focus();
+							}
+							break;
+						}
+						default:
+							break;
+					}
+				}}
+				ref={itemRef}
+				role={items ? 'button' : 'menuitem'}
+				showIcon={!!items}
 				spritemap={spritemap}
+				tabIndex={
+					!active && !(hasItemSelectedNested && items && !expanded)
+						? -1
+						: undefined
+				}
 			>
 				{label}
 			</Nav.Link>
 
-			{subItems && (
+			{items && (
 				<CSSTransition
 					className={expanded ? undefined : 'collapse'}
 					classNames={{
@@ -153,9 +231,9 @@ function Item({
 					}
 					timeout={250}
 				>
-					<div>
-						<Nav stacked>
-							{renderItems(subItems, spritemap, level++)}
+					<div ref={menusRef}>
+						<Nav role="menu" stacked>
+							{renderItems(items, spritemap, level++, itemRef)}
 						</Nav>
 					</div>
 				</CSSTransition>
@@ -164,11 +242,24 @@ function Item({
 	);
 }
 
-function renderItems(items: Array<IItem>, spritemap?: string, level = 0) {
+function renderItems(
+	items: Array<IItem>,
+	spritemap?: string,
+	level = 0,
+	parentItemRef?: React.RefObject<HTMLButtonElement | HTMLAnchorElement>
+) {
 	return items.map((item, i) => {
 		const key = `${level}-${i}`;
 
-		return <Item {...item} key={key} level={level} spritemap={spritemap} />;
+		return (
+			<Item
+				{...item}
+				key={key}
+				level={level}
+				parentItemRef={parentItemRef}
+				spritemap={spritemap}
+			/>
+		);
 	});
 }
 
@@ -177,6 +268,7 @@ function ClayVerticalNav(props: IProps): JSX.Element & {
 };
 
 function ClayVerticalNav({
+	activation = 'manual',
 	activeLabel,
 	decorated,
 	items,
@@ -186,7 +278,14 @@ function ClayVerticalNav({
 	triggerLabel = 'Menu',
 	...otherProps
 }: IProps) {
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = useState(false);
+	const containerRef = useRef<HTMLDivElement | null>(null);
+
+	const {onKeyDown} = useNavigation({
+		activation,
+		containeRef: containerRef,
+		orientation: 'vertical',
+	});
 
 	warning(
 		!activeLabel,
@@ -219,8 +318,12 @@ function ClayVerticalNav({
 				className={classNames('collapse menubar-collapse', {
 					show: active,
 				})}
+				onKeyDown={onKeyDown}
+				ref={containerRef}
 			>
-				<Nav nested>{renderItems(items, spritemap)}</Nav>
+				<Nav aria-orientation="vertical" nested role="menubar">
+					{renderItems(items, spritemap)}
+				</Nav>
 			</div>
 		</nav>
 	);

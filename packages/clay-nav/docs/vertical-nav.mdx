@@ -1,0 +1,58 @@
+---
+title: 'Vertical Navigation'
+description: 'An alternative patterns that displays navigation items in a vertical menu.'
+lexiconDefinition: 'https://liferay.design/lexicon/core-components/navigation/vertical-nav/'
+packageNpm: '@clayui/nav'
+storybookPath: 'design-system-components-nav--vertical-nav'
+---
+
+import {VerticalNavigation} from '$packages/clay-nav/docs/index';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Example](#example)
+-   [Custom Trigger](#custom-trigger)
+
+</div>
+</div>
+
+## Example
+
+<VerticalNavigation />
+
+## Custom Trigger
+
+In its mobile version, Vertical Navigation adds a trigger that is responsible for opening the menu, in some cases you may want to customize this trigger, for this use the `<ClayVerticalNav.Trigger />` component.
+
+```js
+<ClayVerticalNav
+	trigger={(props) => (
+		<ClayVerticalNav.Trigger {...props}>
+			<ClayIcon
+				focusable="false"
+				role="presentation"
+				spritemap={spritemap}
+				symbol="ellipsis-v"
+			/>
+		</ClayVerticalNav.Trigger>
+	)}
+/>
+```
+
+Your custom trigger receives the `children` property with the default content, for cases when you just want to change the Trigger Button and not its content.
+
+```js
+<ClayVerticalNav
+	trigger={({onClick}) => (
+		<button className="btn btn-secondary" onClick={onClick}>
+			<ClayIcon
+				focusable="false"
+				role="presentation"
+				spritemap={spritemap}
+				symbol="ellipsis-v"
+			/>
+		</button>
+	)}
+/>
+```

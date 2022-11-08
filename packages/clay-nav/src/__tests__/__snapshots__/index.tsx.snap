@@ -38,14 +38,20 @@ exports[`ClayVerticalNav renders 1`] = `
       class="collapse menubar-collapse"
     >
       <ul
+        aria-orientation="vertical"
         class="nav nav-nested"
+        role="menubar"
       >
         <li
           class="nav-item"
+          role="none"
         >
           <button
+            aria-expanded="true"
+            aria-haspopup="true"
             class="nav-link collapse-icon btn btn-unstyled"
             role="button"
+            tabindex="-1"
             type="button"
           >
             Home
@@ -79,14 +85,17 @@ exports[`ClayVerticalNav renders 1`] = `
           <div>
             <ul
               class="nav nav-stacked"
+              role="menu"
             >
               <li
                 class="nav-item"
+                role="none"
               >
                 <a
-                  class="nav-link"
+                  class="nav-link collapsed"
                   href="#nested1"
-                  role="button"
+                  role="menuitem"
+                  tabindex="-1"
                 >
                   Nested1
                 </a>

@@ -49,7 +49,6 @@ const VerticalNavigationCode = `const Component = () => {
 		<ClayVerticalNav
 			items={[
 			{
-				initialExpanded: true,
 				items: [
 				{
 					href: '#nested1',
@@ -67,6 +66,7 @@ const VerticalNavigationCode = `const Component = () => {
 				label: 'Contact',
 			},
 			{
+				initialExpanded: true,
 				items: [
 				{
 					active: true,

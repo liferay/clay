@@ -6,7 +6,7 @@
 import {useCallback} from 'react';
 
 import {Keys} from './Keys';
-import {FOCUSABLE_ELEMENTS} from './useFocusManagement';
+import {FOCUSABLE_ELEMENTS, isFocusable} from './useFocusManagement';
 
 type Props<T> = {
 	/**
@@ -49,6 +49,13 @@ export function useNavigation<T extends HTMLElement | null>({
 				containeRef.current.querySelectorAll(
 					FOCUSABLE_ELEMENTS.join(',')
 				)
+			).filter((element) =>
+				isFocusable({
+					contentEditable: element.contentEditable,
+					offsetParent: element.offsetParent,
+					tabIndex: 0,
+					tagName: element.tagName,
+				})
 			);
 
 			let tab: HTMLElement | undefined;
