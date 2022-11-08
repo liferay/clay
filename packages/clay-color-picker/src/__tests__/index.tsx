@@ -335,22 +335,17 @@ describe('Interactions', () => {
 		});
 
 		it('changes the color by changing the hue', () => {
-			const hueSelector = document.querySelector('.clay-color-range-hue');
+			const hueSelector = document.querySelector(
+				'.clay-color-slider-hue .form-control-range'
+			);
 
 			mockClientRect(hueSelector as HTMLElement);
 
-			const mouseDown = getMouseEvent('pointerdown', {
-				pageX: 0,
-				pageY: 0,
-			});
+			fireEvent.change(hueSelector as HTMLElement, {target: {value: 50}});
 
-			fireEvent(hueSelector as HTMLElement, mouseDown);
+			const mouseUp = getMouseEvent('pointerup', {});
 
-			const mouseMove = getMouseEvent('pointermove', {
-				pageX: 50,
-			});
-
-			fireEvent(hueSelector as HTMLElement, mouseMove);
+			fireEvent(hueSelector as HTMLElement, mouseUp);
 
 			expect(handleColorsChange).toBeCalledTimes(1);
 		});
