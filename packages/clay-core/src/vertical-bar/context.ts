@@ -9,7 +9,9 @@ import type {InternalDispatch} from '@clayui/shared';
 import type {Key} from 'react';
 
 type Context = {
+	activation?: 'manual' | 'automatic';
 	activePanel: Key | undefined;
+	id: string;
 	onActivePanel: InternalDispatch<React.Key | undefined>;
 };
 

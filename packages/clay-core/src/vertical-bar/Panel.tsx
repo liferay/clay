@@ -23,6 +23,9 @@ function useIsFirstRender(): boolean {
 }
 
 type Props = {
+	/**
+	 * The panel content.
+	 */
 	children: React.ReactNode;
 
 	/**
@@ -30,10 +33,15 @@ type Props = {
 	 * @ignore
 	 */
 	keyValue?: React.Key;
+
+	/**
+	 * Indicates whether the panel can be focused.
+	 */
+	tabIndex?: number;
 };
 
-export function Panel({children, keyValue}: Props) {
-	const {activePanel} = useContext(VerticalBarContext);
+export function Panel({children, keyValue, tabIndex}: Props) {
+	const {activePanel, id} = useContext(VerticalBarContext);
 	const {displayType} = useContext(ContentContext);
 
 	const isFirst = useIsFirstRender();
@@ -46,6 +54,7 @@ export function Panel({children, keyValue}: Props) {
 
 	return (
 		<CSSTransition
+			aria-labelledby={`${id}-tab-${keyValue}`}
 			className={classNames('sidebar', {
 				'c-slideout-show': activePanel === keyValue && isFirst,
 				'sidebar-dark-l2': displayType === 'dark',
@@ -57,7 +66,10 @@ export function Panel({children, keyValue}: Props) {
 				enterDone: 'c-slideout-show',
 				exit: 'c-slideout-transition c-slideout-transition-out',
 			}}
+			id={`${id}-tabpanel-${keyValue}`}
 			in={activePanel === keyValue}
+			role="tabpanel"
+			tabIndex={tabIndex}
 			timeout={
 				(activePanel !== undefined &&
 					previousActivePanelRef.current === undefined) ||

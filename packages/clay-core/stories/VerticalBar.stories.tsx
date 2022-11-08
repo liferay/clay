@@ -11,6 +11,10 @@ import {VerticalBar} from '../src/vertical-bar';
 
 export default {
 	argTypes: {
+		activation: {
+			control: {type: 'select'},
+			options: ['manual', 'automatic'],
+		},
 		barDisplayType: {
 			control: {type: 'select'},
 			options: [null, 'light', 'dark'],
@@ -27,7 +31,7 @@ export default {
 export const Default = (args: any) => {
 	return (
 		<>
-			<VerticalBar position="left">
+			<VerticalBar activation={args.activation} position="left">
 				<VerticalBar.Bar displayType={args.barDisplayType}>
 					<VerticalBar.Item>
 						<Button displayType={null}>
@@ -56,13 +60,13 @@ export const Default = (args: any) => {
 				</VerticalBar.Bar>
 
 				<VerticalBar.Content displayType={args.contentDisplayType}>
-					<VerticalBar.Panel>
+					<VerticalBar.Panel tabIndex={0}>
 						<div className="sidebar-header">
 							<div className="component-title">Tag</div>
 						</div>
 					</VerticalBar.Panel>
 
-					<VerticalBar.Panel>
+					<VerticalBar.Panel tabIndex={0}>
 						<div className="sidebar-header">
 							<div className="component-title">Message</div>
 						</div>
@@ -70,15 +74,15 @@ export const Default = (args: any) => {
 				</VerticalBar.Content>
 			</VerticalBar>
 
-			<VerticalBar position="right">
+			<VerticalBar activation={args.activation} position="right">
 				<VerticalBar.Content displayType={args.contentDisplayType}>
-					<VerticalBar.Panel>
+					<VerticalBar.Panel tabIndex={0}>
 						<div className="sidebar-header">
 							<div className="component-title">Tag</div>
 						</div>
 					</VerticalBar.Panel>
 
-					<VerticalBar.Panel>
+					<VerticalBar.Panel tabIndex={0}>
 						<div className="sidebar-header">
 							<div className="component-title">Message</div>
 						</div>
@@ -117,6 +121,7 @@ export const Default = (args: any) => {
 };
 
 Default.args = {
+	activation: 'manual',
 	barDisplayType: 'light',
 	contentDisplayType: 'light',
 };
@@ -145,7 +150,7 @@ export const DynamicContent = (args: any) => {
 				items={items}
 			>
 				{(item) => (
-					<VerticalBar.Panel key={item.title}>
+					<VerticalBar.Panel key={item.title} tabIndex={0}>
 						<div className="sidebar-header">
 							<div className="component-title">{item.title}</div>
 						</div>

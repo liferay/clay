@@ -256,7 +256,9 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 
 				return React.cloneElement(child, {
 					key,
-					...(passthroughKey ? {keyValue: key} : {}),
+					...(passthroughKey
+						? {index: virtual.index, keyValue: key}
+						: {}),
 					...props,
 				});
 			})}
@@ -372,7 +374,7 @@ export function Collection<
 
 						return React.cloneElement(child, {
 							key,
-							...(passthroughKey ? {keyValue: key} : {}),
+							...(passthroughKey ? {index, keyValue: key} : {}),
 						});
 				  })
 				: React.Children.map(children, (child, index) => {
@@ -402,7 +404,9 @@ export function Collection<
 							child as React.ReactElement<{keyValue?: React.Key}>,
 							{
 								key,
-								...(passthroughKey ? {keyValue: key} : {}),
+								...(passthroughKey
+									? {index, keyValue: key}
+									: {}),
 							}
 						);
 				  })}

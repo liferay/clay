@@ -9,13 +9,20 @@ exports[`VerticalBar basic rendering render component in left position 1`] = `
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
     >
       <ul
+        aria-orientation="vertical"
         class="tbar-nav"
+        role="tablist"
       >
         <li
           class="tbar-item tbar-divider-after"
+          role="none"
         >
           <button
+            aria-controls="clay-id-5-verticalbar-tabpanel-$.0"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-5-verticalbar-tab-$.0"
+            role="tab"
             type="button"
           >
             <svg
@@ -30,9 +37,15 @@ exports[`VerticalBar basic rendering render component in left position 1`] = `
         </li>
         <li
           class="tbar-item"
+          role="none"
         >
           <button
+            aria-controls="clay-id-5-verticalbar-tabpanel-$.1"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-5-verticalbar-tab-$.1"
+            role="tab"
+            tabindex="-1"
             type="button"
           >
             <svg
@@ -60,13 +73,20 @@ exports[`VerticalBar basic rendering render dark theme 1`] = `
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
     >
       <ul
+        aria-orientation="vertical"
         class="tbar-nav"
+        role="tablist"
       >
         <li
           class="tbar-item tbar-divider-after"
+          role="none"
         >
           <button
+            aria-controls="clay-id-4-verticalbar-tabpanel-$.0"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-4-verticalbar-tab-$.0"
+            role="tab"
             type="button"
           >
             <svg
@@ -81,9 +101,15 @@ exports[`VerticalBar basic rendering render dark theme 1`] = `
         </li>
         <li
           class="tbar-item"
+          role="none"
         >
           <button
+            aria-controls="clay-id-4-verticalbar-tabpanel-$.1"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-4-verticalbar-tab-$.1"
+            role="tab"
+            tabindex="-1"
             type="button"
           >
             <svg
@@ -111,13 +137,20 @@ exports[`VerticalBar basic rendering render dynamic content 1`] = `
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
     >
       <ul
+        aria-orientation="vertical"
         class="tbar-nav"
+        role="tablist"
       >
         <li
           class="tbar-item"
+          role="none"
         >
           <button
+            aria-controls="clay-id-2-verticalbar-tabpanel-Tag"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-2-verticalbar-tab-Tag"
+            role="tab"
             type="button"
           >
             <svg
@@ -132,9 +165,15 @@ exports[`VerticalBar basic rendering render dynamic content 1`] = `
         </li>
         <li
           class="tbar-item tbar-divider-after"
+          role="none"
         >
           <button
+            aria-controls="clay-id-2-verticalbar-tabpanel-Message"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-2-verticalbar-tab-Message"
+            role="tab"
+            tabindex="-1"
             type="button"
           >
             <svg
@@ -149,9 +188,15 @@ exports[`VerticalBar basic rendering render dynamic content 1`] = `
         </li>
         <li
           class="tbar-item"
+          role="none"
         >
           <button
+            aria-controls="clay-id-2-verticalbar-tabpanel-Effects"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-2-verticalbar-tab-Effects"
+            role="tab"
+            tabindex="-1"
             type="button"
           >
             <svg
@@ -179,13 +224,20 @@ exports[`VerticalBar basic rendering render light theme 1`] = `
       class="tbar tbar-stacked c-slideout-show tbar-light"
     >
       <ul
+        aria-orientation="vertical"
         class="tbar-nav"
+        role="tablist"
       >
         <li
           class="tbar-item tbar-divider-after"
+          role="none"
         >
           <button
+            aria-controls="clay-id-3-verticalbar-tabpanel-$.0"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-3-verticalbar-tab-$.0"
+            role="tab"
             type="button"
           >
             <svg
@@ -200,9 +252,15 @@ exports[`VerticalBar basic rendering render light theme 1`] = `
         </li>
         <li
           class="tbar-item"
+          role="none"
         >
           <button
+            aria-controls="clay-id-3-verticalbar-tabpanel-$.1"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-3-verticalbar-tab-$.1"
+            role="tab"
+            tabindex="-1"
             type="button"
           >
             <svg
@@ -230,13 +288,20 @@ exports[`VerticalBar basic rendering render static content 1`] = `
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
     >
       <ul
+        aria-orientation="vertical"
         class="tbar-nav"
+        role="tablist"
       >
         <li
           class="tbar-item tbar-divider-after"
+          role="none"
         >
           <button
+            aria-controls="clay-id-1-verticalbar-tabpanel-$.0"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-1-verticalbar-tab-$.0"
+            role="tab"
             type="button"
           >
             <svg
@@ -251,9 +316,15 @@ exports[`VerticalBar basic rendering render static content 1`] = `
         </li>
         <li
           class="tbar-item"
+          role="none"
         >
           <button
+            aria-controls="clay-id-1-verticalbar-tabpanel-$.1"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-1-verticalbar-tab-$.1"
+            role="tab"
+            tabindex="-1"
             type="button"
           >
             <svg
@@ -278,7 +349,10 @@ exports[`VerticalBar basic rendering renders the component with the active panel
     class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
   >
     <div
+      aria-labelledby="clay-id-6-verticalbar-tab-$.0"
       class="sidebar c-slideout-show sidebar-light"
+      id="clay-id-6-verticalbar-tabpanel-$.0"
+      role="tabpanel"
     >
       Tag
     </div>
@@ -286,13 +360,20 @@ exports[`VerticalBar basic rendering renders the component with the active panel
       class="tbar tbar-stacked c-slideout-show tbar-dark-l2"
     >
       <ul
+        aria-orientation="vertical"
         class="tbar-nav"
+        role="tablist"
       >
         <li
           class="tbar-item tbar-divider-after"
+          role="none"
         >
           <button
+            aria-controls="clay-id-6-verticalbar-tabpanel-$.0"
+            aria-selected="true"
             class="tbar-btn tbar-btn-monospaced active btn"
+            id="clay-id-6-verticalbar-tab-$.0"
+            role="tab"
             type="button"
           >
             <svg
@@ -307,9 +388,15 @@ exports[`VerticalBar basic rendering renders the component with the active panel
         </li>
         <li
           class="tbar-item"
+          role="none"
         >
           <button
+            aria-controls="clay-id-6-verticalbar-tabpanel-$.1"
+            aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
+            id="clay-id-6-verticalbar-tab-$.1"
+            role="tab"
+            tabindex="-1"
             type="button"
           >
             <svg
