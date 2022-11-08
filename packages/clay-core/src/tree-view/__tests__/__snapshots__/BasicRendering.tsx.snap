@@ -263,7 +263,6 @@ exports[`TreeView basic rendering render with actions 1`] = `
             >
               <button
                 class="component-action quick-action-item btn btn-monospaced"
-                tabindex="-1"
                 type="button"
               >
                 <div
@@ -293,7 +292,6 @@ exports[`TreeView basic rendering render with actions 1`] = `
                   aria-haspopup="true"
                   class="dropdown-toggle component-action quick-action-item btn btn-monospaced"
                   style=""
-                  tabindex="-1"
                   type="button"
                 >
                   <div

@@ -776,7 +776,6 @@ function Actions({children}: TreeViewItemActionsProps) {
 										child.props.onClick(event);
 									}
 								},
-								tabIndex: -1,
 							})}
 						</Layout.ContentCol>
 					);
@@ -819,7 +818,6 @@ function Actions({children}: TreeViewItemActionsProps) {
 												);
 											}
 										},
-										tabIndex: -1,
 									}
 								),
 							})}
