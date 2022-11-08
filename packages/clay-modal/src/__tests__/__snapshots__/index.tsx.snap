@@ -8,6 +8,7 @@ exports[`ClayModal renders 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -76,7 +77,10 @@ exports[`ClayModal renders 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
 
@@ -88,6 +92,7 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -140,7 +145,10 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
 
@@ -152,6 +160,7 @@ exports[`ClayModal renders a body component with url 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -177,7 +186,10 @@ exports[`ClayModal renders a body component with url 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
 
@@ -189,6 +201,7 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -240,7 +253,10 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
 
@@ -252,6 +268,7 @@ exports[`ClayModal renders with Header 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -293,7 +310,10 @@ exports[`ClayModal renders with Header 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
 
@@ -305,6 +325,7 @@ exports[`ClayModal renders with center 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -321,7 +342,10 @@ exports[`ClayModal renders with center 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
 
@@ -333,6 +357,7 @@ exports[`ClayModal renders with size 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -349,7 +374,10 @@ exports[`ClayModal renders with size 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
 
@@ -361,6 +389,7 @@ exports[`ClayModal renders with status 1`] = `
     <div
       aria-hidden="true"
       class="modal-backdrop fade show"
+      data-aria-hidden="true"
     />
     <div
       class="fade modal d-block show"
@@ -377,6 +406,9 @@ exports[`ClayModal renders with status 1`] = `
       </div>
     </div>
   </div>
-  <div />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  />
 </body>
 `;
