@@ -251,7 +251,12 @@ const dropDownExampleCode = `const Component = () => {
 						key={item.name}
 					>
 						{(item) => (
-							<DropDown.Item key={item.name}>
+							<DropDown.Item
+								key={item.name}
+								onClick={() => {
+									// logic stuff...
+								}}
+							>
 								{item.name}
 							</DropDown.Item>
 						)}
