@@ -52,8 +52,6 @@ export function useClosestTitle(props: Props) {
 	const titleNodeRef = useRef<HTMLElement | null>(null);
 
 	const saveTitle = useCallback((element: HTMLElement) => {
-		titleNodeRef.current = element;
-
 		const title = element.getAttribute('title');
 
 		if (title) {
@@ -120,7 +118,10 @@ export function useClosestTitle(props: Props) {
 	}, []);
 
 	const getProps = useCallback(
-		(event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+		(
+			event: React.MouseEvent<HTMLElement, MouseEvent>,
+			hideBrowserTitle: boolean
+		) => {
 			if (targetRef.current) {
 				props.onClick();
 
@@ -150,7 +151,11 @@ export function useClosestTitle(props: Props) {
 					node.getAttribute('data-title') ||
 					'';
 
-				saveTitle(node);
+				titleNodeRef.current = node;
+
+				if (hideBrowserTitle) {
+					saveTitle(node);
+				}
 
 				return {
 					align: node.getAttribute('data-tooltip-align'),
