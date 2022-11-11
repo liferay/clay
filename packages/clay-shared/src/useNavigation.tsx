@@ -24,17 +24,23 @@ type Props<T> = {
 	containeRef: React.MutableRefObject<T>;
 
 	/**
+	 * Flag to indicate if navigation should loop.
+	 */
+	loop?: boolean;
+
+	/**
 	 * Indicates whether the element's orientation is horizontal or vertical.
 	 */
-	orientation: 'horizontal' | 'vertical';
+	orientation?: 'horizontal' | 'vertical';
 };
 
 const verticalKeys = [Keys.Up, Keys.Down, Keys.Home, Keys.End];
 const horizontalKeys = [Keys.Left, Keys.Right, Keys.Home, Keys.End];
 
 export function useNavigation<T extends HTMLElement | null>({
-	activation,
+	activation = 'manual',
 	containeRef,
+	loop = false,
 	orientation = 'horizontal',
 }: Props<T>) {
 	const onKeyDown = useCallback((event: React.KeyboardEvent<HTMLElement>) => {
@@ -52,6 +58,7 @@ export function useNavigation<T extends HTMLElement | null>({
 			).filter((element) =>
 				isFocusable({
 					contentEditable: element.contentEditable,
+					disabled: element.getAttribute('disabled') !== null,
 					offsetParent: element.offsetParent,
 					tabIndex: 0,
 					tagName: element.tagName,
@@ -72,6 +79,10 @@ export function useNavigation<T extends HTMLElement | null>({
 						orientation === 'vertical' ? Keys.Up : Keys.Left;
 
 					tab = tabs[event.key === key ? position - 1 : position + 1];
+
+					if (loop && !tab) {
+						tab = tabs[event.key === key ? tabs.length - 1 : 0];
+					}
 
 					break;
 				}
