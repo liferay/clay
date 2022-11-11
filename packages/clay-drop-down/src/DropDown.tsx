@@ -9,6 +9,7 @@ import {
 	InternalDispatch,
 	Keys,
 	useInternalState,
+	useNavigation,
 } from '@clayui/shared';
 import {hideOthers} from 'aria-hidden';
 import classNames from 'classnames';
@@ -229,8 +230,15 @@ function ClayDropDown<T>({
 		[initialized]
 	);
 
+	const navigationProps = useNavigation({
+		activation: 'manual',
+		containeRef: menuElementRef,
+		loop: true,
+		orientation: 'vertical',
+	});
+
 	return (
-		<FocusScope>
+		<FocusScope arrowKeysUpDown={false}>
 			{(focusManager) => (
 				<ContainerElement
 					{...otherProps}
@@ -302,6 +310,7 @@ function ClayDropDown<T>({
 							id={ariaControls}
 							offsetFn={offsetFn}
 							onActiveChange={setInternalActive}
+							onKeyDown={navigationProps.onKeyDown}
 							ref={menuElementRef}
 							width={menuWidth}
 						>
@@ -328,6 +337,7 @@ function ClayDropDown<T>({
 										filterKey,
 										onSearch: setSearch,
 										search,
+										tabFocus: false,
 									}}
 								>
 									{children instanceof Function ? (

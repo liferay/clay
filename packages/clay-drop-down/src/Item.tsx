@@ -77,7 +77,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 		const clickableElement = onClick ? 'button' : 'span';
 		const ItemElement = href ? ClayLink : clickableElement;
 
-		const {close, closeOnClick} = useContext(DropDownContext);
+		const {close, closeOnClick, tabFocus} = useContext(DropDownContext);
 
 		return (
 			<li aria-selected={active} ref={ref} role={role} style={style}>
@@ -109,7 +109,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 					}}
 					ref={innerRef}
 					role={roleItem}
-					tabIndex={disabled ? -1 : tabIndex}
+					tabIndex={disabled || !tabFocus ? -1 : tabIndex}
 				>
 					{symbolLeft && (
 						<span className="dropdown-item-indicator-start">
