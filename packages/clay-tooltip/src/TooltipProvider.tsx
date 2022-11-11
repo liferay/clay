@@ -159,7 +159,7 @@ const TooltipProvider = ({
 	const onShow = useCallback(
 		(event: React.MouseEvent<HTMLElement, MouseEvent>) => {
 			if (isHovered.current || isFocused.current) {
-				const props = getProps(event);
+				const props = getProps(event, isHovered.current);
 
 				if (props) {
 					dispatch({
