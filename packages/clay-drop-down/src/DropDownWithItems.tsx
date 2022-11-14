@@ -15,6 +15,7 @@ import warning from 'warning';
 import Caption from './Caption';
 import Divider from './Divider';
 import ClayDropDown from './DropDown';
+import {DropDownContext} from './DropDownContext';
 import ClayDropDownGroup from './Group';
 import Help from './Help';
 import ClayDropDownMenu from './Menu';
@@ -209,6 +210,8 @@ const Checkbox = ({
 }: IItem & IInternalItem) => {
 	const [value, setValue] = useState<boolean>(checked);
 
+	const {tabFocus} = useContext(DropDownContext);
+
 	return (
 		<ClayDropDown.Section role="none">
 			<ClayCheckbox
@@ -218,6 +221,7 @@ const Checkbox = ({
 					setValue((val) => !val);
 					onChange(!value);
 				}}
+				tabIndex={!tabFocus ? -1 : undefined}
 			/>
 		</ClayDropDown.Section>
 	);
@@ -345,6 +349,8 @@ const RadioGroupContext = React.createContext({} as IRadioContext);
 const Radio = ({value = '', ...otherProps}: IItem & IInternalItem) => {
 	const {checked, name, onChange} = useContext(RadioGroupContext);
 
+	const {tabFocus} = useContext(DropDownContext);
+
 	return (
 		<ClayDropDown.Section role="none">
 			<ClayRadio
@@ -353,6 +359,7 @@ const Radio = ({value = '', ...otherProps}: IItem & IInternalItem) => {
 				inline
 				name={name}
 				onChange={() => onChange(value as string)}
+				tabIndex={!tabFocus ? -1 : undefined}
 				value={value as string}
 			/>
 		</ClayDropDown.Section>
