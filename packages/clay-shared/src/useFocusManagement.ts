@@ -8,6 +8,8 @@ import React from 'react';
 // https://github.com/facebook/react/blob/master/packages/shared/ReactWorkTags.js#L39
 const HostComponent = 5;
 
+let minimalTabIndex = 0;
+
 export function isFocusable({
 	contentEditable,
 	disabled,
@@ -39,14 +41,12 @@ export function isFocusable({
 		return false;
 	}
 
-	const minTabIndex = 0;
-
-	if (tabIndex != null && tabIndex < minTabIndex) {
+	if (tabIndex != null && tabIndex < minimalTabIndex) {
 		return false;
 	}
 
 	if (
-		(tabIndex != null && tabIndex >= minTabIndex) ||
+		(tabIndex != null && tabIndex >= minimalTabIndex) ||
 		contentEditable === true ||
 		contentEditable === 'true'
 	) {
@@ -287,6 +287,13 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 	};
 
 	return {
+		focusFirst: () => {
+			minimalTabIndex = -1;
+			const next = moveFocusInScope(getFiber(scope), false, true);
+			minimalTabIndex = 0;
+
+			return next;
+		},
 		focusNext: (persistOnScope?: boolean) =>
 			moveFocusInScope(getFiber(scope), false, persistOnScope),
 		focusPrevious: (persistOnScope?: boolean) =>

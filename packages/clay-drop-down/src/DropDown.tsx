@@ -323,7 +323,7 @@ function ClayDropDown<T>({
 									// to commit the changes to the DOM so that the elements are
 									// visible and we can move the focus.
 									setTimeout(() => {
-										focusManager.focusNext(true);
+										focusManager.focusFirst();
 									}, 10);
 								}}
 							>
