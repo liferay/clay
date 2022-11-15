@@ -5,16 +5,19 @@
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import {
+	FOCUSABLE_ELEMENTS,
 	InternalDispatch,
+	Keys,
 	MouseSafeArea,
 	useInternalState,
+	useNavigation,
 } from '@clayui/shared';
 import React, {useContext, useRef, useState} from 'react';
 import warning from 'warning';
 
 import Caption from './Caption';
 import Divider from './Divider';
-import ClayDropDown from './DropDown';
+import ClayDropDown, {FocusMenu} from './DropDown';
 import {DropDownContext} from './DropDownContext';
 import ClayDropDownGroup from './Group';
 import Help from './Help';
@@ -227,14 +230,21 @@ const Checkbox = ({
 	);
 };
 
-const ClayDropDownContext = React.createContext({close: () => {}});
+type Context = {
+	back?: () => void;
+	close: () => void;
+};
+
+const ClayDropDownContext = React.createContext({
+	close: () => {},
+} as Context);
 
 const Item = ({
 	label,
 	onClick,
 	...props
 }: Omit<IItem, 'onChange'> & IInternalItem) => {
-	const {close} = useContext(ClayDropDownContext);
+	const {back, close} = useContext(ClayDropDownContext);
 
 	return (
 		<ClayDropDown.Item
@@ -244,6 +254,11 @@ const Item = ({
 				}
 
 				close();
+			}}
+			onKeyDown={(event) => {
+				if (back && event.key === Keys.Left) {
+					back();
+				}
 			}}
 			{...props}
 		>
@@ -271,6 +286,8 @@ const Contextual = ({
 	const menuElementRef = useRef<HTMLDivElement>(null);
 	const timeoutHandleRef = useRef<any>(null);
 
+	const keyboardRef = useRef(false);
+
 	const hasRightSymbols = React.useMemo(
 		() => items && !!findNested(items, 'symbolRight'),
 		[items]
@@ -280,10 +297,18 @@ const Contextual = ({
 		[items]
 	);
 
+	const navigationProps = useNavigation({
+		activation: 'manual',
+		containeRef: menuElementRef,
+		loop: true,
+		orientation: 'vertical',
+	});
+
 	return (
 		<ClayDropDown.Item
 			{...otherProps}
 			onClick={(event) => {
+				keyboardRef.current = false;
 				if (event.currentTarget === event.target) {
 					setVisible(true);
 
@@ -291,8 +316,20 @@ const Contextual = ({
 					timeoutHandleRef.current = null;
 				}
 			}}
+			onKeyDown={(event) => {
+				switch (event.key) {
+					case Keys.Right:
+						setVisible(true);
+						keyboardRef.current = true;
+						break;
+					default:
+						navigationProps.onKeyDown(event);
+						break;
+				}
+			}}
 			onMouseEnter={() => {
 				if (!visible) {
+					keyboardRef.current = false;
 					timeoutHandleRef.current = setTimeout(
 						() => setVisible(true),
 						500
@@ -300,6 +337,7 @@ const Contextual = ({
 				}
 			}}
 			onMouseLeave={() => {
+				keyboardRef.current = false;
 				setVisible(false);
 
 				clearTimeout(timeoutHandleRef.current);
@@ -324,13 +362,42 @@ const Contextual = ({
 					{visible && <MouseSafeArea parentRef={menuElementRef} />}
 					<ClayDropDownContext.Provider
 						value={{
+							back: () => {
+								(
+									triggerElementRef.current
+										?.children[0] as HTMLElement
+								).focus();
+								setVisible(false);
+							},
 							close: () => {
 								setVisible(false);
 								close();
 							},
 						}}
 					>
-						<DropDownContent items={items} spritemap={spritemap} />
+						<FocusMenu
+							condition={visible}
+							onRender={() => {
+								if (
+									menuElementRef.current &&
+									keyboardRef.current
+								) {
+									const first =
+										menuElementRef.current.querySelector<HTMLElement>(
+											FOCUSABLE_ELEMENTS.join(',')
+										);
+
+									if (first) {
+										first.focus();
+									}
+								}
+							}}
+						>
+							<DropDownContent
+								items={items}
+								spritemap={spritemap}
+							/>
+						</FocusMenu>
 					</ClayDropDownContext.Provider>
 				</ClayDropDown.Menu>
 			)}

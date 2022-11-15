@@ -75,6 +75,11 @@ export function useNavigation<T extends HTMLElement | null>({
 					const activeElement = document.activeElement as HTMLElement;
 
 					const position = tabs.indexOf(activeElement);
+
+					if (position === -1) {
+						break;
+					}
+
 					const key =
 						orientation === 'vertical' ? Keys.Up : Keys.Left;
 

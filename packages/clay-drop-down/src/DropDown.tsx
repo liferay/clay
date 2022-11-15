@@ -371,7 +371,11 @@ type FocusMenuProps<T> = {
 	onRender: () => void;
 };
 
-function FocusMenu<T>({children, condition, onRender}: FocusMenuProps<T>) {
+export function FocusMenu<T>({
+	children,
+	condition,
+	onRender,
+}: FocusMenuProps<T>) {
 	useEffect(() => {
 		if (condition) {
 			onRender();
