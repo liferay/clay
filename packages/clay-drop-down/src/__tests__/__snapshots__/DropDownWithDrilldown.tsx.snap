@@ -46,6 +46,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                   data-testid="menu-item-Hash Link"
                   href="#"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   <span
                     class="dropdown-item-indicator-text-end"
@@ -61,6 +62,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Alert!"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -77,6 +79,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Subnav"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -118,6 +121,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                   data-testid="menu-item-2nd hash link"
                   href="#"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   <span
                     class="dropdown-item-indicator-text-end"
@@ -133,6 +137,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Subnav"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -173,6 +178,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-The"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -189,6 +195,7 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-End"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -253,6 +260,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                   data-testid="menu-item-Hash Link"
                   href="#"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   <span
                     class="dropdown-item-indicator-text-end"
@@ -272,6 +280,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Alert!"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -292,6 +301,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Subnav"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -333,6 +343,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                   data-testid="menu-item-2nd hash link"
                   href="#"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   <span
                     class="dropdown-item-indicator-text-end"
@@ -352,6 +363,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Subnav"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -392,6 +404,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-The"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -412,6 +425,7 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-End"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -491,6 +505,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Toggle"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -507,6 +522,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
                   class="dropdown-item btn btn-unstyled"
                   data-testid="menu-item-Subnav"
                   role="menuitem"
+                  tabindex="-1"
                   type="button"
                 >
                   <span
@@ -548,6 +564,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
                   data-testid="menu-item-2nd hash link"
                   href="#"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   <span
                     class="dropdown-item-indicator-text-end"

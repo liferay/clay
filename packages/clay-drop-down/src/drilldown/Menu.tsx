@@ -81,6 +81,7 @@ const DrilldownMenu = ({
 								onClick={onBack}
 								spritemap={spritemap}
 								symbol="angle-left"
+								tabIndex={-1}
 								title={messages.back}
 							/>
 
@@ -132,6 +133,7 @@ const DrilldownMenu = ({
 												}
 											}}
 											role="menuitem"
+											tabIndex={-1}
 										>
 											{symbol && (
 												<span className="dropdown-item-indicator-start">
