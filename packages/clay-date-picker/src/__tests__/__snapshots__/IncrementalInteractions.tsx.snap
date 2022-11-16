@@ -2,7 +2,10 @@
 
 exports[`IncrementalInteractions clicking a month on the selector should change the content to the corresponding month 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -29,6 +32,9 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-5"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -53,13 +59,13 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-5"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -202,9 +208,12 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -286,9 +295,11 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Jun 30 2019"
@@ -300,6 +311,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Jul 01 2019"
@@ -311,6 +323,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Jul 02 2019"
@@ -322,6 +335,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Jul 03 2019"
@@ -333,6 +347,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Jul 04 2019"
@@ -344,6 +359,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Jul 05 2019"
@@ -355,6 +371,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Jul 06 2019"
@@ -367,9 +384,11 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Jul 07 2019"
@@ -381,6 +400,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Jul 08 2019"
@@ -392,6 +412,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Jul 09 2019"
@@ -403,6 +424,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Jul 10 2019"
@@ -414,6 +436,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Jul 11 2019"
@@ -425,6 +448,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Jul 12 2019"
@@ -436,6 +460,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Jul 13 2019"
@@ -448,9 +473,11 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Jul 14 2019"
@@ -462,6 +489,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Jul 15 2019"
@@ -473,6 +501,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Jul 16 2019"
@@ -484,6 +513,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Jul 17 2019"
@@ -495,6 +525,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Jul 18 2019"
@@ -506,6 +537,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Jul 19 2019"
@@ -517,6 +549,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Jul 20 2019"
@@ -529,9 +562,11 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Jul 21 2019"
@@ -543,6 +578,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Jul 22 2019"
@@ -554,6 +590,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Jul 23 2019"
@@ -565,6 +602,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Jul 24 2019"
@@ -576,6 +614,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Jul 25 2019"
@@ -587,6 +626,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Jul 26 2019"
@@ -598,6 +638,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Jul 27 2019"
@@ -610,9 +651,11 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Jul 28 2019"
@@ -624,6 +667,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Jul 29 2019"
@@ -635,6 +679,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Jul 30 2019"
@@ -646,6 +691,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Jul 31 2019"
@@ -657,6 +703,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Aug 01 2019"
@@ -668,6 +715,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Aug 02 2019"
@@ -679,6 +727,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Aug 03 2019"
@@ -726,6 +775,9 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-3"
+              aria-expanded="false"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -751,13 +803,13 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
         aria-hidden="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-3"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -900,9 +952,12 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -984,9 +1039,11 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
@@ -998,6 +1055,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
@@ -1009,6 +1067,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
@@ -1020,6 +1079,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
@@ -1031,6 +1091,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
@@ -1042,6 +1103,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
@@ -1053,6 +1115,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
@@ -1065,9 +1128,11 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
@@ -1079,6 +1144,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
@@ -1090,6 +1156,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
@@ -1101,6 +1168,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
@@ -1112,6 +1180,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
@@ -1123,6 +1192,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
@@ -1134,6 +1204,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
@@ -1146,9 +1217,11 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
@@ -1160,6 +1233,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
@@ -1171,6 +1245,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
@@ -1182,6 +1257,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
@@ -1192,7 +1268,9 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
@@ -1204,6 +1282,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
@@ -1215,6 +1294,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
@@ -1227,9 +1307,11 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
@@ -1241,6 +1323,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
@@ -1252,6 +1335,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
@@ -1263,6 +1347,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
@@ -1274,6 +1359,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
@@ -1285,6 +1371,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
@@ -1296,6 +1383,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
@@ -1308,9 +1396,11 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
@@ -1322,6 +1412,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
@@ -1333,6 +1424,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
@@ -1344,6 +1436,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
@@ -1355,6 +1448,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
@@ -1366,6 +1460,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
@@ -1377,6 +1472,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
@@ -1397,7 +1493,10 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
 
 exports[`IncrementalInteractions clicking on the date icon should open the dropdown 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -1424,6 +1523,9 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-2"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -1448,13 +1550,13 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-2"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -1597,9 +1699,12 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -1681,9 +1786,11 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
@@ -1695,6 +1802,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
@@ -1706,6 +1814,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
@@ -1717,6 +1826,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
@@ -1728,6 +1838,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
@@ -1739,6 +1850,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
@@ -1750,6 +1862,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
@@ -1762,9 +1875,11 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
@@ -1776,6 +1891,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
@@ -1787,6 +1903,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
@@ -1798,6 +1915,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
@@ -1809,6 +1927,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
@@ -1820,6 +1939,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
@@ -1831,6 +1951,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
@@ -1843,9 +1964,11 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
@@ -1857,6 +1980,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
@@ -1868,6 +1992,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
@@ -1879,6 +2004,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
@@ -1889,7 +2015,9 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
@@ -1901,6 +2029,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
@@ -1912,6 +2041,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
@@ -1924,9 +2054,11 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
@@ -1938,6 +2070,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
@@ -1949,6 +2082,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
@@ -1960,6 +2094,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
@@ -1971,6 +2106,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
@@ -1982,6 +2118,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
@@ -1993,6 +2130,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
@@ -2005,9 +2143,11 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
@@ -2019,6 +2159,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
@@ -2030,6 +2171,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
@@ -2041,6 +2183,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
@@ -2052,6 +2195,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
@@ -2063,6 +2207,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
@@ -2074,6 +2219,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
@@ -2094,7 +2240,10 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
 
 exports[`IncrementalInteractions clicking on the year selector should switch to the year of the corresponding month selected 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -2121,6 +2270,9 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-6"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -2145,13 +2297,13 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-6"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -2309,9 +2461,12 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -2393,9 +2548,11 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 01 2018"
@@ -2407,6 +2564,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 02 2018"
@@ -2418,6 +2576,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 03 2018"
@@ -2429,6 +2588,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 04 2018"
@@ -2440,6 +2600,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 05 2018"
@@ -2451,6 +2612,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 06 2018"
@@ -2462,6 +2624,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 07 2018"
@@ -2474,9 +2637,11 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 08 2018"
@@ -2488,6 +2653,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 09 2018"
@@ -2499,6 +2665,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 10 2018"
@@ -2510,6 +2677,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 11 2018"
@@ -2521,6 +2689,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 12 2018"
@@ -2532,6 +2701,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 13 2018"
@@ -2543,6 +2713,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 14 2018"
@@ -2555,9 +2726,11 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 15 2018"
@@ -2569,6 +2742,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 16 2018"
@@ -2580,6 +2754,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 17 2018"
@@ -2591,6 +2766,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 18 2018"
@@ -2602,6 +2778,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 19 2018"
@@ -2613,6 +2790,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 20 2018"
@@ -2624,6 +2802,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 21 2018"
@@ -2636,9 +2815,11 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 22 2018"
@@ -2650,6 +2831,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 23 2018"
@@ -2661,6 +2843,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 24 2018"
@@ -2672,6 +2855,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 25 2018"
@@ -2683,6 +2867,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 26 2018"
@@ -2694,6 +2879,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 27 2018"
@@ -2705,6 +2891,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 28 2018"
@@ -2717,9 +2904,11 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 29 2018"
@@ -2731,6 +2920,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 30 2018"
@@ -2742,6 +2932,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue May 01 2018"
@@ -2753,6 +2944,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 02 2018"
@@ -2764,6 +2956,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 03 2018"
@@ -2775,6 +2968,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 04 2018"
@@ -2786,6 +2980,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 05 2018"
@@ -2833,6 +3028,9 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-4"
+              aria-expanded="false"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -2863,13 +3061,13 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
         aria-hidden="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-4"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -3012,9 +3210,12 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -3096,9 +3297,11 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
@@ -3110,6 +3313,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
@@ -3121,6 +3325,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
@@ -3132,6 +3337,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
@@ -3143,6 +3349,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
@@ -3154,6 +3361,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
@@ -3165,6 +3373,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
@@ -3177,9 +3386,11 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
@@ -3191,6 +3402,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
@@ -3202,6 +3414,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
@@ -3213,6 +3426,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
@@ -3224,6 +3438,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
@@ -3235,6 +3450,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
@@ -3246,6 +3462,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
@@ -3258,9 +3475,11 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
@@ -3272,6 +3491,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
@@ -3283,6 +3503,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
@@ -3294,6 +3515,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
@@ -3304,7 +3526,9 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
@@ -3316,6 +3540,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
@@ -3327,6 +3552,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
@@ -3339,9 +3565,11 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
@@ -3353,6 +3581,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
@@ -3364,6 +3593,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
@@ -3375,6 +3605,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
@@ -3386,6 +3617,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
@@ -3397,6 +3629,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
@@ -3408,6 +3641,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
@@ -3420,9 +3654,11 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
@@ -3434,6 +3670,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
@@ -3445,6 +3682,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
@@ -3456,6 +3694,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
@@ -3467,6 +3706,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
@@ -3478,6 +3718,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
@@ -3489,6 +3730,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
@@ -3509,7 +3751,10 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
 
 exports[`IncrementalInteractions date entered in the input element should reflect on the date picker 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="date-picker"
     >
@@ -3536,6 +3781,9 @@ exports[`IncrementalInteractions date entered in the input element should reflec
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
+              aria-controls="clay-id-1"
+              aria-expanded="true"
+              aria-haspopup="dialog"
               aria-label="Choose your desired date"
               class="date-picker-dropdown-toggle btn btn-unstyled"
               data-testid="date-button"
@@ -3560,13 +3808,13 @@ exports[`IncrementalInteractions date entered in the input element should reflec
       <div
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        role="presentation"
+        id="clay-id-1"
+        role="dialog"
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-modal="true"
           class="date-picker-calendar"
-          role="dialog"
+          role="group"
         >
           <div
             class="date-picker-calendar-header"
@@ -3709,9 +3957,12 @@ exports[`IncrementalInteractions date entered in the input element should reflec
           </div>
           <div
             class="date-picker-calendar-body"
+            role="grid"
           >
             <div
+              aria-hidden="true"
               class="date-picker-days-row date-picker-row"
+              role="presentation"
             >
               <div
                 class="date-picker-col"
@@ -3793,9 +4044,11 @@ exports[`IncrementalInteractions date entered in the input element should reflec
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Mar 31 2019"
@@ -3807,6 +4060,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 01 2019"
@@ -3818,6 +4072,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 02 2019"
@@ -3829,6 +4084,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 03 2019"
@@ -3840,6 +4096,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 04 2019"
@@ -3851,6 +4108,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 05 2019"
@@ -3862,6 +4120,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 06 2019"
@@ -3874,9 +4133,11 @@ exports[`IncrementalInteractions date entered in the input element should reflec
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 07 2019"
@@ -3888,6 +4149,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 08 2019"
@@ -3899,6 +4161,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 09 2019"
@@ -3909,7 +4172,9 @@ exports[`IncrementalInteractions date entered in the input element should reflec
                 </button>
               </div>
               <div
+                aria-selected="true"
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 10 2019"
@@ -3921,6 +4186,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 11 2019"
@@ -3932,6 +4198,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 12 2019"
@@ -3943,6 +4210,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 13 2019"
@@ -3955,9 +4223,11 @@ exports[`IncrementalInteractions date entered in the input element should reflec
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 14 2019"
@@ -3969,6 +4239,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 15 2019"
@@ -3980,6 +4251,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 16 2019"
@@ -3991,6 +4263,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 17 2019"
@@ -4002,6 +4275,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 18 2019"
@@ -4013,6 +4287,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 19 2019"
@@ -4024,6 +4299,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 20 2019"
@@ -4036,9 +4312,11 @@ exports[`IncrementalInteractions date entered in the input element should reflec
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 21 2019"
@@ -4050,6 +4328,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 22 2019"
@@ -4061,6 +4340,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 23 2019"
@@ -4072,6 +4352,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed Apr 24 2019"
@@ -4083,6 +4364,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu Apr 25 2019"
@@ -4094,6 +4376,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri Apr 26 2019"
@@ -4105,6 +4388,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat Apr 27 2019"
@@ -4117,9 +4401,11 @@ exports[`IncrementalInteractions date entered in the input element should reflec
             </div>
             <div
               class="date-picker-date-row date-picker-row"
+              role="row"
             >
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sun Apr 28 2019"
@@ -4131,6 +4417,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Mon Apr 29 2019"
@@ -4142,6 +4429,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Tue Apr 30 2019"
@@ -4153,6 +4441,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Wed May 01 2019"
@@ -4164,6 +4453,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Thu May 02 2019"
@@ -4175,6 +4465,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Fri May 03 2019"
@@ -4186,6 +4477,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
               </div>
               <div
                 class="date-picker-col"
+                role="gridcell"
               >
                 <button
                   aria-label="Sat May 04 2019"
