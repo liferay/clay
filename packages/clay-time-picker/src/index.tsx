@@ -83,6 +83,11 @@ interface IProps
 	icon?: boolean;
 
 	/**
+	 * Id to be applied to `clay-time-hours` input.
+	 */
+	id?: string;
+
+	/**
 	 * Called when input values change hour, minutes or ampm (controlled).
 	 */
 	onChange?: InternalDispatch<Input>;
@@ -175,6 +180,7 @@ const ClayTimePicker = ({
 		minutes: DEFAULT_VALUE,
 	},
 	icon = false,
+	id,
 	name,
 	onChange,
 	onInputChange,
@@ -422,6 +428,7 @@ const ClayTimePicker = ({
 									)}
 									data-testid="hours"
 									disabled={disabled}
+									id={id}
 									maxLength={2}
 									onFocus={() =>
 										handleInputFocus(TimeType.hours)
