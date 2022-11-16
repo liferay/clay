@@ -307,6 +307,8 @@ const Contextual = ({
 	return (
 		<ClayDropDown.Item
 			{...otherProps}
+			aria-expanded={visible}
+			aria-haspopup={Boolean(items)}
 			onClick={(event) => {
 				keyboardRef.current = false;
 				if (event.currentTarget === event.target) {

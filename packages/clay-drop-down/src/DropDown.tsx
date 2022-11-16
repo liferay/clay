@@ -209,7 +209,7 @@ function ClayDropDown<T>({
 	useEffect(() => {
 		if (menuElementRef.current && initialized && internalActive) {
 			// Hide everything from ARIA except the MenuElement
-			return hideOthers(menuElementRef.current);
+			return hideOthers(menuElementRef.current.parentElement!);
 		}
 	}, [initialized, internalActive]);
 

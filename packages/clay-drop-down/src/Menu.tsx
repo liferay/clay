@@ -322,6 +322,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 				<div ref={subPortalRef}>
 					<div
 						{...otherProps}
+						aria-hidden={!active ? true : undefined}
 						className={classNames('dropdown-menu', className, {
 							'dropdown-menu-indicator-end': hasRightSymbols,
 							'dropdown-menu-indicator-start': hasLeftSymbols,
