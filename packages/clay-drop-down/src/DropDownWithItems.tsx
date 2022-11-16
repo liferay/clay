@@ -302,6 +302,8 @@ const Contextual = ({
 		containeRef: menuElementRef,
 		loop: true,
 		orientation: 'vertical',
+		typeahead: true,
+		visible,
 	});
 
 	return (
@@ -320,12 +322,12 @@ const Contextual = ({
 			}}
 			onKeyDown={(event) => {
 				switch (event.key) {
+					case Keys.Enter:
 					case Keys.Right:
 						setVisible(true);
 						keyboardRef.current = true;
 						break;
 					default:
-						navigationProps.onKeyDown(event);
 						break;
 				}
 			}}
@@ -359,6 +361,7 @@ const Contextual = ({
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
 					onActiveChange={setVisible}
+					onKeyDown={navigationProps.onKeyDown}
 					ref={menuElementRef}
 				>
 					{visible && <MouseSafeArea parentRef={menuElementRef} />}

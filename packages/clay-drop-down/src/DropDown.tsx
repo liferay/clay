@@ -235,6 +235,8 @@ function ClayDropDown<T>({
 		containeRef: menuElementRef,
 		loop: true,
 		orientation: 'vertical',
+		typeahead: true,
+		visible: internalActive,
 	});
 
 	return (
