@@ -42,12 +42,12 @@ describe('Autocomplete incremental interactions', () => {
 
 		expect(input).toBeDefined();
 
-		const listbox = getByRole('listbox');
+		const listbox = getByRole('listbox', {hidden: true});
 
 		expect(listbox.parentElement!.classList).not.toContain('show');
 		expect(listbox.children.length).toBe(3);
 
-		const [one, two, three] = getAllByRole('option');
+		const [one, two, three] = getAllByRole('option', {hidden: true});
 
 		expect(one).toBeDefined();
 		expect(two).toBeDefined();
@@ -233,9 +233,9 @@ describe('Autocomplete incremental interactions', () => {
 
 		userEvent.click(two);
 
-		const listbox = getByRole('listbox');
-
-		expect(listbox.parentElement!.classList).not.toContain('show');
+		expect(
+			document.querySelector('.dropdown-menu')!.classList
+		).not.toContain('show');
 		expect(input.value).toBe('two');
 	});
 
@@ -284,11 +284,9 @@ describe('Autocomplete incremental interactions', () => {
 
 		userEvent.click(input);
 
-		const listbox = getByRole('listbox');
-
-		expect(listbox.parentElement!.classList).not.toContain('show');
-
 		userEvent.keyboard('{Alt>}{ArrowDown/}');
+
+		const listbox = getByRole('listbox');
 
 		expect(listbox.parentElement!.classList).toContain('show');
 	});

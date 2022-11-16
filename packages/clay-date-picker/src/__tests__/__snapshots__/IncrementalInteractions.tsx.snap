@@ -748,6 +748,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
         role="presentation"
@@ -2859,6 +2860,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
         role="presentation"

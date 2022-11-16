@@ -50,6 +50,7 @@ exports[`BasicRendering renders by default 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
         role="presentation"

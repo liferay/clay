@@ -331,7 +331,7 @@ describe('ClayDropDown', () => {
 	});
 
 	it('render simple dynamic content', () => {
-		const {getAllByRole} = render(
+		const {getAllByRole, getByRole} = render(
 			<ClayDropDown
 				items={['one', 'two', 'three']}
 				trigger={<button>Click Me</button>}
@@ -342,6 +342,10 @@ describe('ClayDropDown', () => {
 			</ClayDropDown>
 		);
 
+		const button = getByRole('button');
+
+		fireEvent.click(button);
+
 		const [one, two, three] = getAllByRole('menuitem');
 
 		expect(one).toBeDefined();
@@ -350,7 +354,7 @@ describe('ClayDropDown', () => {
 	});
 
 	it('render simple static content', () => {
-		const {getAllByRole} = render(
+		const {getAllByRole, getByRole} = render(
 			<ClayDropDown trigger={<button>Click Me</button>}>
 				<ClayDropDown.ItemList>
 					<ClayDropDown.Item>one</ClayDropDown.Item>
@@ -359,6 +363,10 @@ describe('ClayDropDown', () => {
 				</ClayDropDown.ItemList>
 			</ClayDropDown>
 		);
+
+		const button = getByRole('button');
+
+		fireEvent.click(button);
 
 		const [one, two, three] = getAllByRole('menuitem');
 
@@ -379,6 +387,10 @@ describe('ClayDropDown', () => {
 			</ClayDropDown>
 		);
 
+		const button = getByRole('button');
+
+		fireEvent.click(button);
+
 		const [one, two, three] = getAllByRole('menuitem');
 
 		expect(one).toBeDefined();
@@ -395,7 +407,7 @@ describe('ClayDropDown', () => {
 	});
 
 	it('render dynamic content with group', () => {
-		const {getAllByRole: cGetAllByRole} = render(
+		const {getAllByRole: cGetAllByRole, getByRole} = render(
 			<ClayDropDown
 				items={[
 					{
@@ -434,6 +446,10 @@ describe('ClayDropDown', () => {
 				)}
 			</ClayDropDown>
 		);
+
+		const button = getByRole('button');
+
+		fireEvent.click(button);
 
 		const [fruit, vegetable] = cGetAllByRole('group');
 
@@ -498,6 +514,10 @@ describe('ClayDropDown', () => {
 				</ClayDropDown.ItemList>
 			</ClayDropDown>
 		);
+
+		const button = getByRole('button');
+
+		fireEvent.click(button);
 
 		const input = getByRole('textbox');
 

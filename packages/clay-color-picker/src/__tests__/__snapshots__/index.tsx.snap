@@ -455,6 +455,7 @@ exports[`Rendering default 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
         style="left: -999px; top: -995px;"
@@ -834,6 +835,7 @@ exports[`Rendering disabled palette 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
         style="left: -999px; top: -995px;"
@@ -1215,6 +1217,7 @@ exports[`Rendering disabled state 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
         style="left: -999px; top: -995px;"
@@ -1601,6 +1604,7 @@ exports[`Rendering renders w/ var() 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
         style="left: -999px; top: -995px;"
@@ -1980,6 +1984,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
         style="left: -999px; top: -995px;"
@@ -2367,6 +2372,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
         style="left: -999px; top: -995px;"
@@ -2746,6 +2752,7 @@ exports[`Rendering small color-picker 1`] = `
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
         style="left: -999px; top: -995px;"
