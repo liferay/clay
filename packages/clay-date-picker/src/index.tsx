@@ -591,12 +591,13 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		return (
 			<FocusScope>
 				<div className="date-picker">
-					<ClayInput.Group id={id} ref={triggerElementRef}>
+					<ClayInput.Group ref={triggerElementRef}>
 						<ClayInput.GroupItem>
 							<InputDate
 								{...otherProps}
 								ariaLabel={ariaLabels.input}
 								disabled={disabled}
+								id={id}
 								inputName={inputName}
 								onChange={inputChange}
 								placeholder={placeholder}
