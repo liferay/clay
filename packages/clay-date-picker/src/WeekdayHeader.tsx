@@ -23,7 +23,11 @@ const ClayDatePickerWeekdayHeader = ({
 	firstDayOfWeek = 0,
 	weekdaysShort,
 }: Props) => (
-	<div className="date-picker-days-row date-picker-row">
+	<div
+		aria-hidden="true"
+		className="date-picker-days-row date-picker-row"
+		role="presentation"
+	>
 		{weekdaysShort.map((weekday, index) => {
 			return React.Children.only(
 				children({

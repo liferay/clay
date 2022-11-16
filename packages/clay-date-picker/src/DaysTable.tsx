@@ -24,6 +24,7 @@ const ClayDatePickerDaysTable = ({children, weeks}: Props) => {
 				<div
 					className="date-picker-date-row date-picker-row"
 					key={index}
+					role="row"
 				>
 					{days.map((day, index) => {
 						return React.Children.only(children({day, key: index}));

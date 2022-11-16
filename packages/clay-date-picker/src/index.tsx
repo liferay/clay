@@ -7,7 +7,13 @@ import Button from '@clayui/button';
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
-import {FocusScope, InternalDispatch, useInternalState} from '@clayui/shared';
+import {
+	FocusScope,
+	InternalDispatch,
+	useId,
+	useInternalState,
+} from '@clayui/shared';
+import {hideOthers} from 'aria-hidden';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import DateNavigation from './DateNavigation';
@@ -580,6 +586,15 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			}
 		};
 
+		const ariaControls = useId();
+
+		useEffect(() => {
+			if (dropdownContainerRef.current && expandedValue) {
+				// Hide everything from ARIA except the MenuElement
+				return hideOthers(dropdownContainerRef.current);
+			}
+		}, [expandedValue]);
+
 		useEffect(() => {
 			document.addEventListener('focus', handleFocus, true);
 
@@ -608,6 +623,9 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							{!useNative && (
 								<ClayInput.GroupInsetItem after>
 									<Button
+										aria-controls={ariaControls}
+										aria-expanded={expandedValue}
+										aria-haspopup="dialog"
 										aria-label={ariaLabels.buttonChooseDate}
 										className="date-picker-dropdown-toggle"
 										data-testid="date-button"
@@ -631,14 +649,12 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							alignElementRef={triggerElementRef}
 							className="date-picker-dropdown-menu"
 							data-testid="dropdown"
+							id={ariaControls}
 							onActiveChange={setExpandedValue}
 							ref={dropdownContainerRef}
+							role="dialog"
 						>
-							<div
-								aria-modal="true"
-								className="date-picker-calendar"
-								role="dialog"
-							>
+							<div className="date-picker-calendar" role="group">
 								<DateNavigation
 									ariaLabels={ariaLabels}
 									currentMonth={currentMonth}
@@ -649,7 +665,10 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 									spritemap={spritemap}
 									years={years}
 								/>
-								<div className="date-picker-calendar-body">
+								<div
+									className="date-picker-calendar-body"
+									role="grid"
+								>
 									<WeekdayHeader
 										firstDayOfWeek={firstDayOfWeek}
 										weekdaysShort={weekdaysShort}

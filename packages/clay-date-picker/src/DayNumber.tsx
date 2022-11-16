@@ -43,6 +43,13 @@ const ClayDatePickerDayNumber = ({
 
 	return (
 		<div
+			aria-selected={
+				(startDate.toDateString() !== endDate.toDateString() &&
+					isWithinInterval(date, daysSelected)) ||
+				hasStartDateSelected
+					? true
+					: undefined
+			}
 			className={classnames(
 				'date-picker-col',
 				range && {
@@ -55,6 +62,7 @@ const ClayDatePickerDayNumber = ({
 						hasStartDateSelected && !hasEndDateSelected,
 				}
 			)}
+			role="gridcell"
 		>
 			<button
 				aria-label={setDate(date, {
