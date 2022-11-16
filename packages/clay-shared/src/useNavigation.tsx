@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useCallback} from 'react';
+import {useCallback, useEffect, useRef} from 'react';
 
 import {Keys} from './Keys';
 import {FOCUSABLE_ELEMENTS, isFocusable} from './useFocusManagement';
@@ -32,6 +32,17 @@ type Props<T> = {
 	 * Indicates whether the element's orientation is horizontal or vertical.
 	 */
 	orientation?: 'horizontal' | 'vertical';
+
+	/**
+	 * Flag to enable the possibility of moving the focus when typing values
+	 * that correspond to some item in the menu.
+	 */
+	typeahead?: boolean;
+
+	/**
+	 * Flag to indicate list is visible.
+	 */
+	visible?: boolean;
 };
 
 const verticalKeys = [Keys.Up, Keys.Down, Keys.Home, Keys.End];
@@ -42,15 +53,35 @@ export function useNavigation<T extends HTMLElement | null>({
 	containeRef,
 	loop = false,
 	orientation = 'horizontal',
+	typeahead = false,
+	visible = false,
 }: Props<T>) {
+	const timeoutIdRef = useRef<any>();
+	const stringRef = useRef('');
+	const prevIndexRef = useRef<number | null>(-1);
+	const matchIndexRef = useRef<number | null>(null);
+
+	useEffect(() => {
+		if (visible) {
+			clearTimeout(timeoutIdRef.current);
+			matchIndexRef.current = null;
+			stringRef.current = '';
+		}
+	}, [visible]);
+
 	const onKeyDown = useCallback((event: React.KeyboardEvent<HTMLElement>) => {
 		if (!containeRef.current) {
 			return;
 		}
 
 		const keys = orientation === 'vertical' ? verticalKeys : horizontalKeys;
+		const alternativeKeys =
+			orientation === 'vertical' ? horizontalKeys : verticalKeys;
 
-		if (keys.includes(event.key)) {
+		if (
+			keys.includes(event.key) ||
+			(typeahead && !alternativeKeys.includes(event.key))
+		) {
 			const tabs = Array.from<HTMLElement>(
 				containeRef.current.querySelectorAll(
 					FOCUSABLE_ELEMENTS.join(',')
@@ -91,9 +122,77 @@ export function useNavigation<T extends HTMLElement | null>({
 
 					break;
 				}
-				default:
+				case Keys.Home:
+				case Keys.End:
 					tab = tabs[event.key === Keys.Home ? 0 : tabs.length - 1];
 					break;
+				default: {
+					if (!typeahead) {
+						return;
+					}
+
+					if (
+						!event.currentTarget.contains(
+							event.target as HTMLElement
+						)
+					) {
+						return;
+					}
+
+					if (
+						stringRef.current.length > 0 &&
+						stringRef.current[0] !== Keys.Spacebar
+					) {
+						if (event.key === Keys.Spacebar) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+					}
+
+					if (
+						event.key.length !== 1 ||
+						event.ctrlKey ||
+						event.metaKey ||
+						event.altKey
+					) {
+						return;
+					}
+
+					if (stringRef.current === event.key) {
+						stringRef.current = '';
+						prevIndexRef.current = matchIndexRef.current;
+					}
+
+					stringRef.current += event.key;
+
+					clearTimeout(timeoutIdRef.current);
+
+					timeoutIdRef.current = setTimeout(() => {
+						stringRef.current = '';
+						prevIndexRef.current = matchIndexRef.current;
+					}, 1000);
+
+					const prevIndex = prevIndexRef.current;
+
+					const orderedList = [
+						...tabs.slice((prevIndex ?? 0) + 1),
+						...tabs.slice(0, (prevIndex ?? 0) + 1),
+					];
+
+					tab = orderedList.find(
+						(element) =>
+							element.innerText
+								?.toLowerCase()
+								.indexOf(
+									stringRef.current.toLocaleLowerCase()
+								) === 0
+					);
+
+					if (tab) {
+						matchIndexRef.current = tabs.indexOf(tab);
+					}
+					break;
+				}
 			}
 
 			if (tab) {
