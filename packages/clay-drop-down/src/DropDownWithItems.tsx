@@ -5,16 +5,20 @@
 
 import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import {
+	FOCUSABLE_ELEMENTS,
 	InternalDispatch,
+	Keys,
 	MouseSafeArea,
 	useInternalState,
+	useNavigation,
 } from '@clayui/shared';
 import React, {useContext, useRef, useState} from 'react';
 import warning from 'warning';
 
 import Caption from './Caption';
 import Divider from './Divider';
-import ClayDropDown from './DropDown';
+import ClayDropDown, {FocusMenu} from './DropDown';
+import {DropDownContext} from './DropDownContext';
 import ClayDropDownGroup from './Group';
 import Help from './Help';
 import ClayDropDownMenu from './Menu';
@@ -209,6 +213,8 @@ const Checkbox = ({
 }: IItem & IInternalItem) => {
 	const [value, setValue] = useState<boolean>(checked);
 
+	const {tabFocus} = useContext(DropDownContext);
+
 	return (
 		<ClayDropDown.Section role="none">
 			<ClayCheckbox
@@ -218,19 +224,27 @@ const Checkbox = ({
 					setValue((val) => !val);
 					onChange(!value);
 				}}
+				tabIndex={!tabFocus ? -1 : undefined}
 			/>
 		</ClayDropDown.Section>
 	);
 };
 
-const ClayDropDownContext = React.createContext({close: () => {}});
+type Context = {
+	back?: () => void;
+	close: () => void;
+};
+
+const ClayDropDownContext = React.createContext({
+	close: () => {},
+} as Context);
 
 const Item = ({
 	label,
 	onClick,
 	...props
 }: Omit<IItem, 'onChange'> & IInternalItem) => {
-	const {close} = useContext(ClayDropDownContext);
+	const {back, close} = useContext(ClayDropDownContext);
 
 	return (
 		<ClayDropDown.Item
@@ -240,6 +254,11 @@ const Item = ({
 				}
 
 				close();
+			}}
+			onKeyDown={(event) => {
+				if (back && event.key === Keys.Left) {
+					back();
+				}
 			}}
 			{...props}
 		>
@@ -267,6 +286,8 @@ const Contextual = ({
 	const menuElementRef = useRef<HTMLDivElement>(null);
 	const timeoutHandleRef = useRef<any>(null);
 
+	const keyboardRef = useRef(false);
+
 	const hasRightSymbols = React.useMemo(
 		() => items && !!findNested(items, 'symbolRight'),
 		[items]
@@ -276,10 +297,22 @@ const Contextual = ({
 		[items]
 	);
 
+	const navigationProps = useNavigation({
+		activation: 'manual',
+		containeRef: menuElementRef,
+		loop: true,
+		orientation: 'vertical',
+		typeahead: true,
+		visible,
+	});
+
 	return (
 		<ClayDropDown.Item
 			{...otherProps}
+			aria-expanded={visible}
+			aria-haspopup={Boolean(items)}
 			onClick={(event) => {
+				keyboardRef.current = false;
 				if (event.currentTarget === event.target) {
 					setVisible(true);
 
@@ -287,8 +320,20 @@ const Contextual = ({
 					timeoutHandleRef.current = null;
 				}
 			}}
+			onKeyDown={(event) => {
+				switch (event.key) {
+					case Keys.Enter:
+					case Keys.Right:
+						setVisible(true);
+						keyboardRef.current = true;
+						break;
+					default:
+						break;
+				}
+			}}
 			onMouseEnter={() => {
 				if (!visible) {
+					keyboardRef.current = false;
 					timeoutHandleRef.current = setTimeout(
 						() => setVisible(true),
 						500
@@ -296,6 +341,7 @@ const Contextual = ({
 				}
 			}}
 			onMouseLeave={() => {
+				keyboardRef.current = false;
 				setVisible(false);
 
 				clearTimeout(timeoutHandleRef.current);
@@ -315,18 +361,48 @@ const Contextual = ({
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
 					onActiveChange={setVisible}
+					onKeyDown={navigationProps.onKeyDown}
 					ref={menuElementRef}
 				>
 					{visible && <MouseSafeArea parentRef={menuElementRef} />}
 					<ClayDropDownContext.Provider
 						value={{
+							back: () => {
+								(
+									triggerElementRef.current
+										?.children[0] as HTMLElement
+								).focus();
+								setVisible(false);
+							},
 							close: () => {
 								setVisible(false);
 								close();
 							},
 						}}
 					>
-						<DropDownContent items={items} spritemap={spritemap} />
+						<FocusMenu
+							condition={visible}
+							onRender={() => {
+								if (
+									menuElementRef.current &&
+									keyboardRef.current
+								) {
+									const first =
+										menuElementRef.current.querySelector<HTMLElement>(
+											FOCUSABLE_ELEMENTS.join(',')
+										);
+
+									if (first) {
+										first.focus();
+									}
+								}
+							}}
+						>
+							<DropDownContent
+								items={items}
+								spritemap={spritemap}
+							/>
+						</FocusMenu>
 					</ClayDropDownContext.Provider>
 				</ClayDropDown.Menu>
 			)}
@@ -345,6 +421,8 @@ const RadioGroupContext = React.createContext({} as IRadioContext);
 const Radio = ({value = '', ...otherProps}: IItem & IInternalItem) => {
 	const {checked, name, onChange} = useContext(RadioGroupContext);
 
+	const {tabFocus} = useContext(DropDownContext);
+
 	return (
 		<ClayDropDown.Section role="none">
 			<ClayRadio
@@ -353,6 +431,7 @@ const Radio = ({value = '', ...otherProps}: IItem & IInternalItem) => {
 				inline
 				name={name}
 				onChange={() => onChange(value as string)}
+				tabIndex={!tabFocus ? -1 : undefined}
 				value={value as string}
 			/>
 		</ClayDropDown.Section>

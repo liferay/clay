@@ -39,6 +39,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
               class="dropdown-item"
               href="#one"
               role="menuitem"
+              tabindex="-1"
             >
               one
             </a>
@@ -50,6 +51,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
               class="dropdown-item"
               href="#two"
               role="menuitem"
+              tabindex="-1"
             >
               two
             </a>
@@ -61,6 +63,7 @@ exports[`ClayDropDown renders dropdown menu when clicked 1`] = `
               class="dropdown-item"
               href="#three"
               role="menuitem"
+              tabindex="-1"
             >
               three
             </a>
@@ -127,6 +130,7 @@ exports[`ClayDropDown renders with groups 1`] = `
                   class="dropdown-item"
                   href="#one"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   one
                 </a>
@@ -138,6 +142,7 @@ exports[`ClayDropDown renders with groups 1`] = `
                   class="dropdown-item"
                   href="#two"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   two
                 </a>
@@ -149,6 +154,7 @@ exports[`ClayDropDown renders with groups 1`] = `
                   class="dropdown-item"
                   href="#three"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   three
                 </a>
@@ -178,6 +184,7 @@ exports[`ClayDropDown renders with groups 1`] = `
                   class="dropdown-item"
                   href="#one"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   one
                 </a>
@@ -189,6 +196,7 @@ exports[`ClayDropDown renders with groups 1`] = `
                   class="dropdown-item"
                   href="#two"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   two
                 </a>
@@ -200,6 +208,7 @@ exports[`ClayDropDown renders with groups 1`] = `
                   class="dropdown-item"
                   href="#three"
                   role="menuitem"
+                  tabindex="-1"
                 >
                   three
                 </a>
@@ -251,6 +260,7 @@ exports[`ClayDropDown renders with icons 1`] = `
             <span
               class="dropdown-item"
               role="menuitem"
+              tabindex="-1"
             >
               <span
                 class="dropdown-item-indicator-start"
@@ -273,6 +283,7 @@ exports[`ClayDropDown renders with icons 1`] = `
             <span
               class="dropdown-item"
               role="menuitem"
+              tabindex="-1"
             >
               Right
               <span
@@ -295,6 +306,7 @@ exports[`ClayDropDown renders with icons 1`] = `
             <span
               class="dropdown-item"
               role="menuitem"
+              tabindex="-1"
             >
               <span
                 class="dropdown-item-indicator-start"
@@ -372,6 +384,7 @@ exports[`ClayDropDown renders with search input 1`] = `
               >
                 <input
                   class="form-control input-group-inset input-group-inset-after"
+                  tabindex="-1"
                   type="text"
                   value="test"
                 />
@@ -380,6 +393,7 @@ exports[`ClayDropDown renders with search input 1`] = `
                 >
                   <button
                     class="btn btn-unstyled"
+                    tabindex="-1"
                     type="button"
                   >
                     <svg
@@ -407,6 +421,7 @@ exports[`ClayDropDown renders with search input 1`] = `
               class="dropdown-item"
               href="#one"
               role="menuitem"
+              tabindex="-1"
             >
               one
             </a>
@@ -418,6 +433,7 @@ exports[`ClayDropDown renders with search input 1`] = `
               class="dropdown-item"
               href="#two"
               role="menuitem"
+              tabindex="-1"
             >
               two
             </a>
@@ -429,6 +445,7 @@ exports[`ClayDropDown renders with search input 1`] = `
               class="dropdown-item"
               href="#three"
               role="menuitem"
+              tabindex="-1"
             >
               three
             </a>

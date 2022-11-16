@@ -11,9 +11,11 @@ type Context = {
 	filterKey?: string;
 	onSearch: (value: string) => void;
 	search: string;
+	tabFocus: boolean;
 };
 
 export const DropDownContext = React.createContext<Context>({
 	close: () => {},
 	closeOnClick: false,
+	tabFocus: true,
 } as Context);

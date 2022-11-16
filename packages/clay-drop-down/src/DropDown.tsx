@@ -9,6 +9,7 @@ import {
 	InternalDispatch,
 	Keys,
 	useInternalState,
+	useNavigation,
 } from '@clayui/shared';
 import {hideOthers} from 'aria-hidden';
 import classNames from 'classnames';
@@ -208,7 +209,7 @@ function ClayDropDown<T>({
 	useEffect(() => {
 		if (menuElementRef.current && initialized && internalActive) {
 			// Hide everything from ARIA except the MenuElement
-			return hideOthers(menuElementRef.current);
+			return hideOthers(menuElementRef.current.parentElement!);
 		}
 	}, [initialized, internalActive]);
 
@@ -229,8 +230,17 @@ function ClayDropDown<T>({
 		[initialized]
 	);
 
+	const navigationProps = useNavigation({
+		activation: 'manual',
+		containeRef: menuElementRef,
+		loop: true,
+		orientation: 'vertical',
+		typeahead: true,
+		visible: internalActive,
+	});
+
 	return (
-		<FocusScope>
+		<FocusScope arrowKeysUpDown={false}>
 			{(focusManager) => (
 				<ContainerElement
 					{...otherProps}
@@ -302,6 +312,7 @@ function ClayDropDown<T>({
 							id={ariaControls}
 							offsetFn={offsetFn}
 							onActiveChange={setInternalActive}
+							onKeyDown={navigationProps.onKeyDown}
 							ref={menuElementRef}
 							width={menuWidth}
 						>
@@ -314,7 +325,7 @@ function ClayDropDown<T>({
 									// to commit the changes to the DOM so that the elements are
 									// visible and we can move the focus.
 									setTimeout(() => {
-										focusManager.focusNext(true);
+										focusManager.focusFirst();
 									}, 10);
 								}}
 							>
@@ -328,6 +339,7 @@ function ClayDropDown<T>({
 										filterKey,
 										onSearch: setSearch,
 										search,
+										tabFocus: false,
 									}}
 								>
 									{children instanceof Function ? (
@@ -361,7 +373,11 @@ type FocusMenuProps<T> = {
 	onRender: () => void;
 };
 
-function FocusMenu<T>({children, condition, onRender}: FocusMenuProps<T>) {
+export function FocusMenu<T>({
+	children,
+	condition,
+	onRender,
+}: FocusMenuProps<T>) {
 	useEffect(() => {
 		if (condition) {
 			onRender();

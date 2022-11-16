@@ -99,7 +99,12 @@ export const Default = (args: any) => (
 				{disabled: true, href: '#three', label: 'three'},
 				{href: '#four', label: 'four'},
 			].map(({href, label, ...otherProps}, i) => (
-				<ClayDropDown.Item href={href} key={i} {...otherProps}>
+				<ClayDropDown.Item
+					href={href}
+					key={i}
+					onClick={() => {}}
+					{...otherProps}
+				>
 					{label}
 				</ClayDropDown.Item>
 			))}
@@ -119,7 +124,11 @@ export const Dynamic = () => (
 		items={['one', 'two', 'three', 'four']}
 		trigger={<ClayButton>Click Me</ClayButton>}
 	>
-		{(item) => <ClayDropDown.Item key={item}>{item}</ClayDropDown.Item>}
+		{(item) => (
+			<ClayDropDown.Item key={item} onClick={() => {}}>
+				{item}
+			</ClayDropDown.Item>
+		)}
 	</ClayDropDown>
 );
 
@@ -129,7 +138,9 @@ export const DynamicWithSearch = () => {
 			<ClayDropDown.Search placeholder="Type to filter" />
 			<ClayDropDown.ItemList items={['one', 'two', 'three', 'four']}>
 				{(item: string) => (
-					<ClayDropDown.Item key={item}>{item}</ClayDropDown.Item>
+					<ClayDropDown.Item key={item} onClick={() => {}}>
+						{item}
+					</ClayDropDown.Item>
 				)}
 			</ClayDropDown.ItemList>
 		</ClayDropDown>
@@ -172,7 +183,10 @@ export const DynamicGroup = () => {
 						key={item.name}
 					>
 						{(item: any) => (
-							<ClayDropDown.Item key={item.name}>
+							<ClayDropDown.Item
+								key={item.name}
+								onClick={() => {}}
+							>
 								{item.name}
 							</ClayDropDown.Item>
 						)}
@@ -320,6 +334,7 @@ export const ItemsWithIcons = () => (
 			].map((item, i) => (
 				<ClayDropDown.Item
 					key={i}
+					onClick={() => {}}
 					symbolLeft={item.left}
 					symbolRight={item.right}
 				>

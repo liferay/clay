@@ -62,7 +62,7 @@ const ClayDropDownSearch = ({
 		value: valueProp,
 	});
 
-	const {onSearch} = useContext(DropDownContext);
+	const {onSearch, tabFocus} = useContext(DropDownContext);
 
 	useEffect(() => {
 		if (isUncontrolled) {
@@ -83,12 +83,17 @@ const ClayDropDownSearch = ({
 							{...otherProps}
 							insetAfter
 							onChange={(event) => setValue(event.target.value)}
+							tabIndex={!tabFocus ? -1 : undefined}
 							type="text"
 							value={value}
 						/>
 
 						<ClayInput.GroupInsetItem after tag="span">
-							<ClayButton displayType="unstyled" type="button">
+							<ClayButton
+								displayType="unstyled"
+								tabIndex={!tabFocus ? -1 : undefined}
+								type="button"
+							>
 								<ClayIcon
 									spritemap={spritemap}
 									symbol="search"

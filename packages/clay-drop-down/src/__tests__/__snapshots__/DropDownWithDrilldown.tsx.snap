@@ -459,6 +459,7 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
   <div>
     <div>
       <div
+        aria-hidden="true"
         class="dropdown-menu drilldown dropdown-menu-indicator-end"
         id="clay-dropdown-menu-4"
         role="presentation"
