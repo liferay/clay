@@ -3,8 +3,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import LoadingIndicator from '@clayui/loading-indicator';
 import {useVirtualizer} from '@tanstack/react-virtual';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {
+	useCallback,
+	useEffect,
+	useImperativeHandle,
+	useRef,
+} from 'react';
+
+import type {Virtualizer} from '@tanstack/react-virtual';
 
 export type ChildrenFunction<T, P> = P extends Array<unknown>
 	? (item: T, ...args: P) => React.ReactElement
@@ -78,6 +86,11 @@ interface IProps<P, K>
 	passthroughKey?: boolean;
 
 	/**
+	 * The custom loading component for the infinite scroll.
+	 */
+	loadingComponent?: React.ForwardRefExoticComponent<any>;
+
+	/**
 	 * Callback called when the last element of the list is rendered in
 	 * virtualization and infiniteScroll is enabled.
 	 */
@@ -100,6 +113,11 @@ interface IProps<P, K>
 	 * collection if defined.
 	 */
 	itemContainer?: (props: any) => JSX.Element | null;
+
+	/**
+	 * Reference for accessing the virtualization API.
+	 */
+	virtualizerRef?: React.RefObject<Virtualizer<HTMLElement, Element>>;
 }
 
 type ChildElement = React.ReactElement<any> & {
@@ -156,22 +174,25 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	isLoading,
 	itemContainer: ItemContainer,
 	items,
+	loadingComponent: LoadingComponent = LoadingIndicator,
 	onBottom,
 	parentKey,
 	parentRef,
 	passthroughKey,
 	publicApi,
+	virtualizerRef,
 	...otherProps
 }: VirtualProps<T, P, K>) {
 	const previousLengthRef = useRef(items.length);
 
 	const virtualizer = useVirtualizer({
-		count: items.length,
+		count: infiniteScroll ? items.length + 1 : items.length,
+		debug: true,
 		estimateSize: () => estimateSize,
 		getScrollElement: () => parentRef.current,
 	});
 
-	const callbackCaptureRef = useRef<boolean>(false);
+	useImperativeHandle(virtualizerRef, () => virtualizer, [virtualizer]);
 
 	useEffect(() => {
 		if (items.length < previousLengthRef.current) {
@@ -182,10 +203,26 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	}, [items.length]);
 
 	useEffect(() => {
-		if (!isLoading) {
-			callbackCaptureRef.current = false;
+		const [lastItem] = [...virtualizer.getVirtualItems()].reverse();
+
+		if (!lastItem) {
+			return;
 		}
-	}, [isLoading]);
+
+		if (
+			lastItem.index >= items.length - 1 &&
+			infiniteScroll &&
+			onBottom &&
+			!isLoading
+		) {
+			onBottom();
+		}
+	}, [
+		infiniteScroll,
+		isLoading,
+		items.length,
+		virtualizer.getVirtualItems(),
+	]);
 
 	return (
 		<Container
@@ -200,16 +237,21 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 				const item = items[virtual.index];
 
 				// Virtual item to loading
-				if (
-					infiniteScroll &&
-					items.length !== 0 &&
-					virtual.index === items.length - 1 &&
-					onBottom &&
-					!callbackCaptureRef.current
-				) {
-					callbackCaptureRef.current = true;
-
-					onBottom();
+				if (!item && virtual.index > items.length - 1) {
+					return (
+						<LoadingComponent
+							data-index={virtual.index}
+							key={`loading-${virtual.key}-${items.length}`}
+							ref={virtualizer.measureElement}
+							style={{
+								left: 0,
+								position: 'absolute',
+								top: 0,
+								transform: `translateY(${virtual.start}px)`,
+								width: '100%',
+							}}
+						/>
+					);
 				}
 
 				const publicItem = exclude ? excludeProps(item, exclude) : item;
@@ -282,12 +324,14 @@ export function Collection<
 	isLoading,
 	itemContainer: ItemContainer,
 	items,
+	loadingComponent,
 	onBottom,
 	parentKey,
 	parentRef,
 	passthroughKey = true,
 	publicApi,
 	virtualize = false,
+	virtualizerRef,
 	...otherProps
 }: ICollectionProps<T, P> & Partial<IProps<P, K>>) {
 	const performFilter = useCallback(
@@ -326,11 +370,13 @@ export function Collection<
 				isLoading={isLoading}
 				itemContainer={ItemContainer}
 				items={items}
+				loadingComponent={loadingComponent}
 				onBottom={onBottom}
 				parentKey={parentKey}
 				parentRef={parentRef}
 				passthroughKey={passthroughKey}
 				publicApi={publicApi}
+				virtualizerRef={virtualizerRef}
 			>
 				{children}
 			</VirtualDynamicCollection>
