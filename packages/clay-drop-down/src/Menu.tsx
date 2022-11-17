@@ -223,8 +223,14 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 	) => {
 		const setActive = onActiveChange ?? onSetActive;
 
-		const menuRef = useRef<HTMLDivElement | null>(null);
+		const menuInternalRef = useRef<HTMLDivElement | null>(null);
 		const subPortalRef = useRef<HTMLDivElement | null>(null);
+
+		let menuRef = menuInternalRef;
+
+		if (ref) {
+			menuRef = ref as React.MutableRefObject<HTMLDivElement | null>;
+		}
 
 		useEffect(() => {
 			if (closeOnClickOutside) {
@@ -330,16 +336,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 							[`dropdown-menu-width-${width}`]: width,
 							show: active,
 						})}
-						ref={(node) => {
-							menuRef.current = node;
-
-							if (ref instanceof Function) {
-								ref(node);
-							} else if (ref instanceof Object) {
-								// @ts-ignore
-								ref.current = node;
-							}
-						}}
+						ref={menuRef}
 						role="presentation"
 					>
 						{children}
