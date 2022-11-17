@@ -225,8 +225,9 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 				);
 
 				const props = {
+					'data-index': virtual.index,
 					ref: (node: HTMLElement) => {
-						virtual.measureElement(node);
+						virtualizer.measureElement(node);
 
 						if (typeof child.ref === 'function') {
 							child.ref(node);
