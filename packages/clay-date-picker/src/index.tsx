@@ -218,6 +218,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				buttonDot: 'Select current date',
 				buttonNextMonth: 'Select the next month',
 				buttonPreviousMonth: 'Select the previous month',
+				dialog: 'Choose date',
 			},
 			dateFormat = 'yyyy-MM-dd',
 			defaultExpanded,
@@ -647,6 +648,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 						<DropDown.Menu
 							active={expandedValue}
 							alignElementRef={triggerElementRef}
+							aria-label={ariaLabels.dialog}
 							className="date-picker-dropdown-menu"
 							data-testid="dropdown"
 							id={ariaControls}
@@ -654,7 +656,14 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							ref={dropdownContainerRef}
 							role="dialog"
 						>
-							<div className="date-picker-calendar" role="group">
+							<div
+								aria-label={formatDate(
+									currentMonth,
+									'MMMM yyyy'
+								)}
+								className="date-picker-calendar"
+								role="group"
+							>
 								<DateNavigation
 									ariaLabels={ariaLabels}
 									currentMonth={currentMonth}

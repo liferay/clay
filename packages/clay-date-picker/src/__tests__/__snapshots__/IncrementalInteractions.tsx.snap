@@ -64,6 +64,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-label="July 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -808,6 +809,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-label="April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -1555,6 +1557,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-label="April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -2302,6 +2305,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-label="April 2018"
           class="date-picker-calendar"
           role="group"
         >
@@ -3066,6 +3070,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-label="April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -3813,6 +3818,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
         style="left: -999px; top: -995px;"
       >
         <div
+          aria-label="April 2019"
           class="date-picker-calendar"
           role="group"
         >

@@ -19,6 +19,7 @@ export interface IAriaLabels {
 	buttonNextMonth: string;
 	buttonPreviousMonth: string;
 	input?: string;
+	dialog?: string;
 }
 
 export interface IYears {
