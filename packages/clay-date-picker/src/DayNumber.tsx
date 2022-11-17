@@ -27,35 +27,24 @@ const ClayDatePickerDayNumber = ({
 	const {date, nextMonth, previousMonth} = day;
 	const [startDate, endDate] = daysSelected;
 
+	const isStartAndEndDateRange =
+		startDate.toDateString() !== endDate.toDateString() &&
+		isWithinInterval(date, daysSelected);
 	const hasEndDateSelected = date.toDateString() === endDate.toDateString();
 	const hasStartDateSelected =
 		date.toDateString() === startDate.toDateString();
 
-	const classNames = classnames(
-		'date-picker-date date-picker-calendar-item',
-		{
-			active: hasStartDateSelected || (range && hasEndDateSelected),
-			disabled,
-			'next-month-date': nextMonth,
-			'previous-month-date': previousMonth,
-		}
-	);
-
 	return (
 		<div
 			aria-selected={
-				(startDate.toDateString() !== endDate.toDateString() &&
-					isWithinInterval(date, daysSelected)) ||
-				hasStartDateSelected
+				isStartAndEndDateRange || hasStartDateSelected
 					? true
 					: undefined
 			}
 			className={classnames(
 				'date-picker-col',
 				range && {
-					'c-selected':
-						startDate.toDateString() !== endDate.toDateString() &&
-						isWithinInterval(date, daysSelected),
+					'c-selected': isStartAndEndDateRange,
 					'c-selected-end':
 						hasEndDateSelected && !hasStartDateSelected,
 					'c-selected-start':
@@ -71,7 +60,17 @@ const ClayDatePickerDayNumber = ({
 					minutes: 0,
 					seconds: 0,
 				}).toDateString()}
-				className={classNames}
+				className={classnames(
+					'date-picker-date date-picker-calendar-item',
+					{
+						active:
+							hasStartDateSelected ||
+							(range && hasEndDateSelected),
+						disabled,
+						'next-month-date': nextMonth,
+						'previous-month-date': previousMonth,
+					}
+				)}
 				disabled={disabled}
 				onClick={() => onClick(date)}
 				onKeyDown={(event) => {
