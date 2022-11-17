@@ -214,6 +214,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 			onActiveChange,
 			onSetActive,
 			width,
+			role = 'presentation',
 			...otherProps
 		}: IProps,
 		// TS + refs don't always play nicely together, which is why it is casted
@@ -340,7 +341,7 @@ const ClayDropDownMenu = React.forwardRef<HTMLDivElement, IProps>(
 								ref.current = node;
 							}
 						}}
-						role="presentation"
+						role={role}
 					>
 						{children}
 					</div>

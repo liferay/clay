@@ -27,6 +27,7 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 					buttonDot: 'Go to today',
 					buttonNextMonth: 'Next month',
 					buttonPreviousMonth: 'Previous month',
+					dialog: 'Choose Date',
 					input: value.toLocaleString(),
 				}}
 				onChange={setValue}

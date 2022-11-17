@@ -4,7 +4,12 @@
  */
 
 import ClayDatePicker from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {
+	cleanup,
+	fireEvent,
+	queryAllByLabelText,
+	render,
+} from '@testing-library/react';
 import {default as formatDate} from 'date-fns/format';
 import React from 'react';
 
@@ -175,7 +180,7 @@ describe('IncrementalInteractions', () => {
 	});
 
 	it('clicking on the back arrow button the content must be updated with the corresponding month', () => {
-		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
+		const {getByLabelText, getByRole, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				defaultExpanded
@@ -192,7 +197,8 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(backArrowButtonEl);
 
-		const days = queryAllByLabelText('Mar', {exact: false});
+		const grid = getByRole('grid', {hidden: true});
+		const days = queryAllByLabelText(grid, 'Mar', {exact: false});
 
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('2');
@@ -223,7 +229,7 @@ describe('IncrementalInteractions', () => {
 	});
 
 	it('clicking on the next arrow button the content must be updated with the corresponding month', () => {
-		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
+		const {getByLabelText, getByRole, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				defaultExpanded
@@ -238,7 +244,8 @@ describe('IncrementalInteractions', () => {
 
 		fireEvent.click(nextArrowButtonEl);
 
-		const days = queryAllByLabelText('May', {exact: false});
+		const grid = getByRole('grid', {hidden: true});
+		const days = queryAllByLabelText(grid, 'May', {exact: false});
 
 		expect(yearSelect.value).toBe('2019');
 		expect(monthSelect.value).toBe('4');
@@ -246,7 +253,7 @@ describe('IncrementalInteractions', () => {
 	});
 
 	it('clicking the back arrow button should update the date to the end of the previous year when the current month is January', () => {
-		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
+		const {getByLabelText, getByRole, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				defaultExpanded
@@ -268,7 +275,9 @@ describe('IncrementalInteractions', () => {
 
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
-		const days = queryAllByLabelText('Dec', {exact: false});
+
+		const grid = getByRole('grid', {hidden: true});
+		const days = queryAllByLabelText(grid, 'Dec', {exact: false});
 
 		expect(yearSelect.value).toBe('2018');
 		expect(monthSelect.value).toBe('11');
@@ -276,7 +285,7 @@ describe('IncrementalInteractions', () => {
 	});
 
 	it('clicking the next arrow button should update the date to January next year, when the current month is December', () => {
-		const {getByLabelText, getByTestId, queryAllByLabelText} = render(
+		const {getByLabelText, getByRole, getByTestId} = render(
 			<DatePickerWithState
 				ariaLabels={ariaLabels}
 				defaultExpanded
@@ -296,7 +305,9 @@ describe('IncrementalInteractions', () => {
 
 		const monthSelect: any = getByTestId('month-select');
 		const yearSelect: any = getByTestId('year-select');
-		const days = queryAllByLabelText('Jan', {exact: false});
+
+		const grid = getByRole('grid', {hidden: true});
+		const days = queryAllByLabelText(grid, 'Jan', {exact: false});
 
 		expect(yearSelect.value).toBe('2020');
 		expect(monthSelect.value).toBe('0');
