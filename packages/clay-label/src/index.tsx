@@ -149,6 +149,7 @@ const ClayLabelHybrid = React.forwardRef<
 			innerElementProps = {},
 			withClose = true,
 			spritemap,
+			role,
 			...otherProps
 		}: IProps,
 		ref
@@ -158,17 +159,28 @@ const ClayLabelHybrid = React.forwardRef<
 				dismissible={withClose && !!closeButtonProps}
 				{...otherProps}
 				ref={ref}
+				role={role}
 			>
 				{!withClose && children}
 
 				{withClose && (
 					<>
-						<ClayLabelItemExpand {...innerElementProps} href={href}>
+						<ClayLabelItemExpand
+							{...innerElementProps}
+							href={href}
+							role={
+								role === 'row'
+									? 'gridcell'
+									: innerElementProps.role
+							}
+						>
 							{children}
 						</ClayLabelItemExpand>
 
 						{closeButtonProps && (
-							<ClayLabelItemAfter>
+							<ClayLabelItemAfter
+								role={role === 'row' ? 'gridcell' : undefined}
+							>
 								<button
 									{...closeButtonProps}
 									className={classNames(
