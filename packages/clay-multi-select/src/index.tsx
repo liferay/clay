@@ -230,6 +230,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const inputRef = useRef<HTMLInputElement | null>(null);
 		const lastItemRef = useRef<HTMLSpanElement | null>(null);
 
+		const labelsRef = useRef<HTMLDivElement | null>(null);
 		const lastFocusedItemRef = useRef<string | null>(null);
 
 		const [active, setActive] = useState(false);
@@ -420,6 +421,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							}
 						}}
 						prepend
+						ref={(ref) => {
+							labelsRef.current = ref;
+						}}
 						role="grid"
 						shrink
 					>
@@ -431,14 +435,43 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								item[locator.value]
 							}-close`;
 
-							const removeItem = () =>
+							const removeItem = () => {
+								if (labelsRef.current) {
+									const focusableElements =
+										Array.from<HTMLElement>(
+											labelsRef.current.querySelectorAll(
+												'button'
+											)
+										);
+
+									const position = focusableElements.indexOf(
+										document.activeElement as HTMLElement
+									);
+									const closeElement =
+										focusableElements[
+											focusableElements.length - 1 >
+											position
+												? position + 1
+												: position - 1
+										];
+
+									if (closeElement) {
+										closeElement.focus();
+										lastFocusedItemRef.current =
+											closeElement.getAttribute('id');
+									} else {
+										lastFocusedItemRef.current = null;
+									}
+								}
+
 								setItems([
 									...internalItems.slice(0, i),
 									...internalItems.slice(i + 1),
 								]);
+							};
 
 							return (
-								<React.Fragment key={i}>
+								<React.Fragment key={id}>
 									<ClayLabel
 										id={id}
 										onKeyDown={({key}) => {
