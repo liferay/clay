@@ -19,7 +19,7 @@ import {
 } from '@clayui/shared';
 import classNames from 'classnames';
 import fuzzy from 'fuzzy';
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const DELIMITER_KEYS = ['Enter', ','];
 
@@ -221,11 +221,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const containerRef = React.useRef<HTMLDivElement>(null);
-		const inputRef = React.useRef<HTMLInputElement | null>(null);
-		const lastItemRef = React.useRef<HTMLSpanElement | null>(null);
-		const [active, setActive] = React.useState(false);
-		const [isFocused, setIsFocused] = React.useState(false);
+		const containerRef = useRef<HTMLDivElement>(null);
+		const inputRef = useRef<HTMLInputElement | null>(null);
+		const lastItemRef = useRef<HTMLSpanElement | null>(null);
+
+		const lastFocusedItemRef = useRef<HTMLElement | null>(null);
+
+		const [active, setActive] = useState(false);
+		const [isFocused, setIsFocused] = useState(false);
 
 		const [internalItems, setItems] = useInternalState({
 			defaultName: 'defaultItems',
@@ -328,7 +331,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					)}
 					ref={containerRef}
 				>
-					<ClayInput.GroupItem>
+					<ClayInput.GroupItem
+						onFocus={(event) => {
+							if (event.target !== inputElementRef.current) {
+								lastFocusedItemRef.current = event.target;
+							}
+						}}
+						role="grid"
+					>
 						{internalItems.map((item, i) => {
 							const removeItem = () =>
 								setItems([
@@ -359,6 +369,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 													lastItemRef.current = ref;
 												}
 											},
+											tabIndex: -1,
 										}}
 										onKeyDown={({key}) => {
 											if (key !== Keys.Backspace) {
@@ -369,7 +380,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 											}
 											removeItem();
 										}}
+										role="row"
 										spritemap={spritemap}
+										tabIndex={
+											lastFocusedItemRef.current ===
+												null && i === 0
+												? 0
+												: -1
+										}
 									>
 										{item[locator.label]}
 									</ClayLabel>
