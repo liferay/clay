@@ -7,6 +7,7 @@ import ClayAutocomplete from '@clayui/autocomplete';
 import {ClayButtonWithIcon} from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
+import Icon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {
@@ -15,6 +16,7 @@ import {
 	Keys,
 	noop,
 	sub,
+	useId,
 	useInternalState,
 } from '@clayui/shared';
 import classNames from 'classnames';
@@ -186,6 +188,9 @@ const MultiSelectMenuRenderer: MenuRenderer = ({
 	</ClayDropDown.ItemList>
 );
 
+const KeysNavigation = [Keys.Left, Keys.Right, Keys.Up, Keys.Down];
+const KeysSides = [Keys.Left, Keys.Right];
+
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
@@ -225,7 +230,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const inputRef = useRef<HTMLInputElement | null>(null);
 		const lastItemRef = useRef<HTMLSpanElement | null>(null);
 
-		const lastFocusedItemRef = useRef<HTMLElement | null>(null);
+		const lastFocusedItemRef = useRef<string | null>(null);
 
 		const [active, setActive] = useState(false);
 		const [isFocused, setIsFocused] = useState(false);
@@ -319,6 +324,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		};
 
+		const labelId = useId();
+
 		return (
 			<FocusScope arrowKeysUpDown={false}>
 				<div
@@ -333,13 +340,97 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 				>
 					<ClayInput.GroupItem
 						onFocus={(event) => {
-							if (event.target !== inputElementRef.current) {
-								lastFocusedItemRef.current = event.target;
+							lastFocusedItemRef.current =
+								event.target.getAttribute('id')!;
+						}}
+						onKeyDown={(event) => {
+							if (KeysNavigation.includes(event.key)) {
+								// Query labels and buttons to exclude the label that are
+								// focusable the navigation order depends on which orientation
+								// the navigation is happen.
+								// - Left and Right. Query all elements.
+								// - Up and Down. Query for elements of the same type as the
+								//   last focused element.
+								const focusableElements =
+									Array.from<HTMLElement>(
+										event.currentTarget.querySelectorAll(
+											KeysSides.includes(event.key)
+												? '[role=row], button'
+												: lastFocusedItemRef.current?.includes(
+														'span'
+												  )
+												? '[role=row]'
+												: 'button'
+										)
+									);
+
+								const position = focusableElements.indexOf(
+									document.activeElement as HTMLElement
+								);
+
+								const key = KeysSides.includes(event.key)
+									? Keys.Left
+									: Keys.Up;
+
+								const label =
+									focusableElements[
+										event.key === key
+											? position - 1
+											: position + 1
+									];
+
+								if (label) {
+									lastFocusedItemRef.current =
+										label.getAttribute('id')!;
+									label.focus();
+								}
+							}
+
+							if (
+								event.key === Keys.Home ||
+								event.key === Keys.End
+							) {
+								const isLabel =
+									lastFocusedItemRef.current!.includes(
+										'span'
+									);
+
+								if (
+									(isLabel && event.key === Keys.Home) ||
+									(!isLabel && event.key === Keys.End)
+								) {
+									return;
+								}
+
+								const label =
+									event.currentTarget.querySelector<HTMLElement>(
+										`[id=${lastFocusedItemRef.current?.replace(
+											isLabel ? 'span' : 'close',
+											event.key === Keys.Home
+												? 'span'
+												: 'close'
+										)}]`
+									);
+
+								if (label) {
+									lastFocusedItemRef.current =
+										label.getAttribute('id')!;
+									label.focus();
+								}
 							}
 						}}
+						prepend
 						role="grid"
+						shrink
 					>
 						{internalItems.map((item, i) => {
+							const id = `${labelId}-label-${
+								item[locator.value]
+							}-span`;
+							const closeId = `${labelId}-label-${
+								item[locator.value]
+							}-close`;
+
 							const removeItem = () =>
 								setItems([
 									...internalItems.slice(0, i),
@@ -349,47 +440,61 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							return (
 								<React.Fragment key={i}>
 									<ClayLabel
-										closeButtonProps={{
-											'aria-label': sub(
-												closeButtonAriaLabel,
-												[item[locator.label]]
-											),
-											disabled,
-											onClick: () => {
-												if (inputElementRef.current) {
-													inputElementRef.current.focus();
-												}
-												removeItem();
-											},
-											ref: (ref) => {
-												if (
-													i ===
-													internalItems.length - 1
-												) {
-													lastItemRef.current = ref;
-												}
-											},
-											tabIndex: -1,
-										}}
+										id={id}
 										onKeyDown={({key}) => {
-											if (key !== Keys.Backspace) {
-												return;
+											if (key === Keys.Backspace) {
+												removeItem();
 											}
-											if (inputElementRef.current) {
-												inputElementRef.current.focus();
-											}
-											removeItem();
 										}}
 										role="row"
 										spritemap={spritemap}
 										tabIndex={
-											lastFocusedItemRef.current ===
-												null && i === 0
+											(lastFocusedItemRef.current ===
+												null &&
+												i === 0) ||
+											lastFocusedItemRef.current === id
 												? 0
 												: -1
 										}
+										withClose={false}
 									>
-										{item[locator.label]}
+										<ClayLabel.ItemExpand role="gridcell">
+											{item[locator.label]}
+										</ClayLabel.ItemExpand>
+
+										<ClayLabel.ItemAfter role="gridcell">
+											<button
+												aria-label={sub(
+													closeButtonAriaLabel,
+													[item[locator.label]]
+												)}
+												className="close"
+												disabled={disabled}
+												id={closeId}
+												onClick={() => removeItem()}
+												ref={(ref) => {
+													if (
+														i ===
+														internalItems.length - 1
+													) {
+														lastItemRef.current =
+															ref;
+													}
+												}}
+												tabIndex={
+													lastFocusedItemRef.current ===
+													closeId
+														? 0
+														: -1
+												}
+												type="button"
+											>
+												<Icon
+													spritemap={spritemap}
+													symbol="times-small"
+												/>
+											</button>
+										</ClayLabel.ItemAfter>
 									</ClayLabel>
 
 									{inputName && (
@@ -402,7 +507,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								</React.Fragment>
 							);
 						})}
+					</ClayInput.GroupItem>
 
+					<ClayInput.GroupItem prepend>
 						<input
 							{...otherProps}
 							className="form-control-inset"
