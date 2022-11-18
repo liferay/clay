@@ -7,7 +7,11 @@ exports[`ClayMultiSelect renders 1`] = `
       class="form-control form-control-tag-group input-group"
     >
       <div
-        class="input-group-item"
+        class="input-group-item input-group-item-shrink input-group-prepend"
+        role="grid"
+      />
+      <div
+        class="input-group-item input-group-prepend"
       >
         <input
           class="form-control-inset"
@@ -27,22 +31,30 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
       class="form-control form-control-tag-group input-group"
     >
       <div
-        class="input-group-item"
+        class="input-group-item input-group-item-shrink input-group-prepend"
+        role="grid"
       >
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-5-label-1-span"
+          role="row"
+          tabindex="0"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             foo
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove foo"
               class="close"
+              id="clay-id-5-label-1-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -57,19 +69,26 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-5-label-2-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             bar
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove bar"
               class="close"
+              id="clay-id-5-label-2-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -84,19 +103,26 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-5-label-3-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             baz
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove baz"
               class="close"
+              id="clay-id-5-label-3-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -110,6 +136,10 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
             </button>
           </span>
         </span>
+      </div>
+      <div
+        class="input-group-item input-group-prepend"
+      >
         <input
           class="form-control-inset"
           type="text"
@@ -178,23 +208,31 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
       class="form-control form-control-tag-group input-group"
     >
       <div
-        class="input-group-item"
+        class="input-group-item input-group-item-shrink input-group-prepend"
+        role="grid"
       >
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-4-label-1-span"
+          role="row"
+          tabindex="0"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             foo
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove foo"
               class="close"
               disabled=""
+              id="clay-id-4-label-1-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -209,20 +247,27 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-4-label-2-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             bar
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove bar"
               class="close"
               disabled=""
+              id="clay-id-4-label-2-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -237,20 +282,27 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-4-label-3-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             baz
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove baz"
               class="close"
               disabled=""
+              id="clay-id-4-label-3-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -264,6 +316,10 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
             </button>
           </span>
         </span>
+      </div>
+      <div
+        class="input-group-item input-group-prepend"
+      >
         <input
           class="form-control-inset"
           disabled=""
@@ -283,22 +339,30 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
       class="form-control form-control-tag-group input-group"
     >
       <div
-        class="input-group-item"
+        class="input-group-item input-group-item-shrink input-group-prepend"
+        role="grid"
       >
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-3-label-1-span"
+          role="row"
+          tabindex="0"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             foo
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove foo"
               class="close"
+              id="clay-id-3-label-1-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -313,19 +377,26 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-3-label-2-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             bar
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove bar"
               class="close"
+              id="clay-id-3-label-2-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -340,19 +411,26 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-3-label-3-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             baz
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove baz"
               class="close"
+              id="clay-id-3-label-3-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -366,6 +444,10 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
             </button>
           </span>
         </span>
+      </div>
+      <div
+        class="input-group-item input-group-prepend"
+      >
         <input
           class="form-control-inset"
           type="text"
@@ -403,22 +485,30 @@ exports[`ClayMultiSelect renders with items 1`] = `
       class="form-control form-control-tag-group input-group"
     >
       <div
-        class="input-group-item"
+        class="input-group-item input-group-item-shrink input-group-prepend"
+        role="grid"
       >
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-2-label-1-span"
+          role="row"
+          tabindex="0"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             foo
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove foo"
               class="close"
+              id="clay-id-2-label-1-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -433,19 +523,26 @@ exports[`ClayMultiSelect renders with items 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-2-label-2-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             bar
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove bar"
               class="close"
+              id="clay-id-2-label-2-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -460,19 +557,26 @@ exports[`ClayMultiSelect renders with items 1`] = `
           </span>
         </span>
         <span
-          class="label label-dismissible label-secondary"
+          class="label label-secondary"
+          id="clay-id-2-label-3-span"
+          role="row"
+          tabindex="-1"
         >
           <span
             class="label-item label-item-expand"
+            role="gridcell"
           >
             baz
           </span>
           <span
             class="label-item label-item-after"
+            role="gridcell"
           >
             <button
               aria-label="Remove baz"
               class="close"
+              id="clay-id-2-label-3-close"
+              tabindex="-1"
               type="button"
             >
               <svg
@@ -486,6 +590,10 @@ exports[`ClayMultiSelect renders with items 1`] = `
             </button>
           </span>
         </span>
+      </div>
+      <div
+        class="input-group-item input-group-prepend"
+      >
         <input
           class="form-control-inset"
           type="text"
