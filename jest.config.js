@@ -134,10 +134,10 @@ module.exports = {
 			statements: 85,
 		},
 		'./packages/clay-multi-select/src/': {
-			branches: 85,
+			branches: 64,
 			functions: 80,
-			lines: 87,
-			statements: 86,
+			lines: 78,
+			statements: 78,
 		},
 		'./packages/clay-multi-step-nav/src/': {
 			branches: 94,
