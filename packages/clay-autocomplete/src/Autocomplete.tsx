@@ -13,6 +13,7 @@ import {
 	useDebounce,
 	useId,
 	useInternalState,
+	useNavigation,
 } from '@clayui/shared';
 import {hideOthers} from 'aria-hidden';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -43,6 +44,15 @@ export interface IProps<T>
 	 * Flag to indicate if menu is showing or not.
 	 */
 	active?: boolean;
+
+	/**
+	 * Component to render.
+	 */
+	as?:
+		| 'div'
+		| typeof Input
+		| React.ComponentType
+		| React.ForwardRefExoticComponent<any>;
 
 	/**
 	 * Flag to align the DropDown menu within the viewport.
@@ -119,7 +129,31 @@ export interface IProps<T>
 	loadingState?: number;
 }
 
+type LoadingProps = {
+	'data-index': number;
+	'aria-label': string;
+	style: React.StyleHTMLAttributes<HTMLSpanElement>;
+};
+
+const Loading = React.forwardRef<HTMLLIElement, LoadingProps>(
+	({style, ...props}, ref) => (
+		<DropDown.Item
+			{...props}
+			aria-valuemax={100}
+			aria-valuemin={0}
+			ref={ref}
+			roleItem="progressbar"
+			style={style}
+		>
+			<LoadingIndicator />
+		</DropDown.Item>
+	)
+);
+
+Loading.displayName = 'AutocompleteLoading';
+
 export function Autocomplete<T extends Record<string, any>>({
+	as: As = Input,
 	active: externalActive,
 	alignmentByViewport,
 	children,
@@ -144,6 +178,8 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	const currentItemSelected = useRef<string>('');
 
+	const firstItemId = useRef<string>('');
+
 	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
 
 	const debouncedLoadingChange = useDebounce(isLoading, 500);
@@ -151,6 +187,8 @@ export function Autocomplete<T extends Record<string, any>>({
 	const cursorsRef = useRef<Map<string, boolean>>(new Map());
 
 	const [infiniteScroll, setInfiniteScroll] = useState(Boolean(onLoadMore));
+
+	const [focus, setFocus] = useState<string>();
 
 	const [items, , isItemsUncontrolled] = useInternalState({
 		defaultName: 'defaultItems',
@@ -179,45 +217,34 @@ export function Autocomplete<T extends Record<string, any>>({
 		value: externalActive,
 	});
 
+	const virtualizerRef = useRef<any>();
+
+	const navigationProps = useNavigation({
+		activation: 'manual',
+		containeRef: menuRef,
+		getPosition: useCallback(
+			(list) =>
+				list.findIndex(
+					(element: HTMLElement) =>
+						element.getAttribute('id')! === focus
+				),
+			[focus]
+		),
+		loop: true,
+		onNavigate: (element) => {
+			if (virtualizerRef.current) {
+				virtualizerRef.current?.scrollToIndex(
+					Number(element.getAttribute('data-index')!),
+					{smoothScroll: false}
+				);
+			}
+
+			setFocus(element.getAttribute('id')!);
+		},
+		orientation: 'vertical',
+	});
+
 	const ariaControlsId = useId();
-
-	useEffect(() => {
-		if (active) {
-			const onFocus = (event: FocusEvent) => {
-				if (
-					!inputRef.current?.contains(event.target as Node) &&
-					!menuRef.current?.contains(event.target as Node)
-				) {
-					setActive(false);
-				}
-			};
-
-			document.addEventListener('focus', onFocus, true);
-
-			return () => {
-				document.removeEventListener('focus', onFocus, true);
-			};
-		}
-	}, [active]);
-
-	useEffect(() => {
-		if (active) {
-			const onKeyDown = (event: KeyboardEvent) => {
-				if (
-					inputRef.current &&
-					(event.key === Keys.Left || event.key === Keys.Right)
-				) {
-					inputRef.current.focus();
-				}
-			};
-
-			document.addEventListener('keydown', onKeyDown, true);
-
-			return () => {
-				document.removeEventListener('keydown', onKeyDown, true);
-			};
-		}
-	}, [active]);
 
 	useEffect(() => {
 		if (menuRef.current && inputRef.current && active) {
@@ -228,6 +255,7 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	useEffect(() => {
 		if (active === false) {
+			setFocus(undefined);
 			setValue(currentItemSelected.current);
 		}
 	}, [active]);
@@ -237,6 +265,20 @@ export function Autocomplete<T extends Record<string, any>>({
 			Boolean(onLoadMore) && !cursorsRef.current.has(value)
 		);
 	}, [value]);
+
+	const previousLengthRef = useRef(items?.length);
+
+	useEffect(() => {
+		if (!items) {
+			return;
+		}
+
+		if (items.length < previousLengthRef.current) {
+			setFocus(undefined);
+		}
+
+		previousLengthRef.current = items.length;
+	}, [items?.length]);
 
 	const filterFn = useCallback(
 		(itemValue: string) => itemValue.match(new RegExp(value, 'i')) !== null,
@@ -261,14 +303,22 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	return (
 		<>
-			<Input
+			<As
 				{...otherProps}
+				aria-activedescendant={active ? focus : undefined}
 				aria-autocomplete="list"
 				aria-controls={ariaControlsId}
 				aria-expanded={active}
 				autoComplete="off"
 				autoCorrect="off"
 				insetAfter={isLoading}
+				onBlur={(event) => {
+					if (otherProps.onBlur) {
+						otherProps.onBlur(event);
+					}
+
+					setFocus(undefined);
+				}}
 				onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 					const {value} = event.target;
 
@@ -293,14 +343,47 @@ export function Autocomplete<T extends Record<string, any>>({
 						otherProps.onKeyDown(event);
 					}
 
-					if (event.key === Keys.Enter) {
-						setActive(false);
-					}
+					switch (event.key) {
+						case Keys.Enter: {
+							if (focus) {
+								const element =
+									menuRef.current?.querySelector<HTMLElement>(
+										`#${focus}`
+									);
 
-					if (!active && event.altKey && event.key === Keys.Down) {
-						event.stopPropagation();
+								if (element) {
+									element.click();
+								}
+							}
 
-						setActive(true);
+							setActive(false);
+							break;
+						}
+						case Keys.Down: {
+							if (!active && event.altKey) {
+								event.stopPropagation();
+								setActive(true);
+							} else {
+								if (!active) {
+									setActive(true);
+									setFocus(firstItemId.current);
+								} else if (!focus) {
+									setFocus(firstItemId.current);
+								}
+
+								event.preventDefault();
+								navigationProps.onKeyDown(event);
+							}
+							break;
+						}
+						case Keys.Up:
+							event.preventDefault();
+							navigationProps.onKeyDown(event);
+							break;
+						default:
+							setFocus(undefined);
+							navigationProps.onKeyDown(event);
+							break;
 					}
 				}}
 				ref={inputRef}
@@ -309,91 +392,111 @@ export function Autocomplete<T extends Record<string, any>>({
 				value={value}
 			/>
 
-			<DropDown.Menu
-				active={active}
-				alignElementRef={containerElementRef}
-				alignmentByViewport={alignmentByViewport}
-				autoBestAlign={!!alignmentByViewport}
-				className="autocomplete-dropdown-menu"
-				focusRefOnEsc={inputRef}
-				id={ariaControlsId}
-				onActiveChange={setActive}
-				ref={menuRef}
-				style={{
-					maxWidth: 'none',
-					width: `${containerElementRef.current?.clientWidth}px`,
-				}}
-			>
-				<Collection<T>
-					aria-label={otherProps['aria-label']}
-					aria-labelledby={otherProps['aria-labelledby']}
-					as={DropDown.ItemList}
-					estimateSize={37}
-					filter={isNotFound ? undefined : filterFn}
-					filterKey="value"
-					infiniteScroll={infiniteScroll}
-					isLoading={loadingState === 1}
-					itemContainer={({children}: ItemProps<any>) => {
-						const itemValue =
-							children.props.value ?? children.props.children;
-
-						return React.cloneElement(children, {
-							match: value,
-							onClick: (
-								event: React.MouseEvent<
-									| HTMLSpanElement
-									| HTMLButtonElement
-									| HTMLAnchorElement
-								>
-							) => {
-								if (children.props.onClick) {
-									children.props.onClick(event);
-								}
-
-								currentItemSelected.current = itemValue;
-								setActive(false);
-								setValue(itemValue);
-
-								inputRef.current?.focus();
-							},
-							roleItem: 'option',
-						}) as React.ReactElement;
+			{active && (
+				<DropDown.Menu
+					active={active}
+					alignElementRef={containerElementRef}
+					alignmentByViewport={alignmentByViewport}
+					autoBestAlign={!!alignmentByViewport}
+					className="autocomplete-dropdown-menu"
+					focusRefOnEsc={inputRef}
+					id={ariaControlsId}
+					onActiveChange={setActive}
+					ref={menuRef}
+					style={{
+						maxWidth: 'none',
+						width: `${containerElementRef.current?.clientWidth}px`,
 					}}
-					items={filteredItems}
-					onBottom={() => {
-						if (onLoadMore) {
-							const hasItems = onLoadMore();
-
-							if (hasItems === null) {
-								cursorsRef.current.set(value, true);
-							}
-						}
-					}}
-					parentRef={menuRef}
-					role="listbox"
-					virtualize
 				>
-					{debouncedLoadingChange ? (
-						<DropDown.Item
-							aria-disabled="true"
-							className="disabled"
-							roleItem="option"
-						>
-							{messages.loading}
-						</DropDown.Item>
-					) : isNotFound ? (
-						<DropDown.Item
-							aria-disabled="true"
-							className="disabled"
-							roleItem="option"
-						>
-							{messages.notFound}
-						</DropDown.Item>
-					) : (
-						children
-					)}
-				</Collection>
-			</DropDown.Menu>
+					<Collection<T>
+						aria-label={otherProps['aria-label']}
+						aria-labelledby={otherProps['aria-labelledby']}
+						as={DropDown.ItemList}
+						estimateSize={37}
+						filter={isNotFound ? undefined : filterFn}
+						filterKey="value"
+						infiniteScroll={infiniteScroll}
+						isLoading={loadingState === 1}
+						itemContainer={({
+							children,
+							index,
+							keyValue,
+						}: ItemProps<any>) => {
+							const itemValue =
+								children.props.value ?? children.props.children;
+							const id = `${ariaControlsId}-${itemValue
+								.toLowerCase()
+								.split(' ')
+								.join('-')}-${keyValue}`;
+
+							if (index === 0) {
+								firstItemId.current = id;
+							}
+
+							return React.cloneElement(children, {
+								className: id === focus ? 'active' : null,
+								id,
+								match: value,
+								onClick: (
+									event: React.MouseEvent<
+										| HTMLSpanElement
+										| HTMLButtonElement
+										| HTMLAnchorElement
+									>
+								) => {
+									if (children.props.onClick) {
+										children.props.onClick(event);
+									}
+
+									currentItemSelected.current = itemValue;
+									setActive(false);
+									setValue(itemValue);
+
+									inputRef.current?.focus();
+								},
+								roleItem: 'option',
+								tabIndex: -1,
+							}) as React.ReactElement;
+						}}
+						items={filteredItems}
+						loadingComponent={Loading}
+						onBottom={() => {
+							if (onLoadMore) {
+								const hasItems = onLoadMore();
+
+								if (hasItems === null) {
+									cursorsRef.current.set(value, true);
+									setInfiniteScroll(false);
+								}
+							}
+						}}
+						parentRef={menuRef}
+						role="listbox"
+						virtualize
+						virtualizerRef={virtualizerRef}
+					>
+						{debouncedLoadingChange ? (
+							<DropDown.Item
+								aria-disabled="true"
+								className="disabled"
+								roleItem="option"
+							>
+								{messages.loading}
+							</DropDown.Item>
+						) : isNotFound ? (
+							<DropDown.Item
+								aria-disabled="true"
+								className="disabled"
+								roleItem="option"
+							>
+								{messages.notFound}
+							</DropDown.Item>
+						) : (
+							children
+						)}
+					</Collection>
+				</DropDown.Menu>
+			)}
 
 			{isLoading && (
 				<Input.GroupInsetItem

@@ -73,7 +73,7 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps<any>>(
 			hasItems(children).length >= 1 || children instanceof Function;
 
 		return (
-			<FocusScope>
+			<FocusScope arrowKeysUpDown={false}>
 				<Component
 					{...(isNewBehavior ? {} : otherProps)}
 					className={className}
