@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** persist the title attribute when navigate via keyboard ([44fe7c4](https://github.com/liferay/clay/commit/44fe7c4113a0889a109f3d71435800468b9ab94a))
+
 # [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
 
 ### Bug Fixes

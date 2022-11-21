@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+### Features
+
+-   **@clayui/time-picker:** Add id prop that sets id on `clay-time-hours` ([63a151b](https://github.com/liferay/clay/commit/63a151bb5168f776caf6bd22ac8edf1c207945e4))
+
 # [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
 
 **Note:** Version bump only for package @clayui/time-picker

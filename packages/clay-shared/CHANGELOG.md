@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix keyboard navigation for context menu ([b44c7db](https://github.com/liferay/clay/commit/b44c7db37a53720860b832f12119d40f377a438b))
+
+### Features
+
+-   **@clayui/shared:** Add typeahead function to list ([ce1347f](https://github.com/liferay/clay/commit/ce1347fa8dcaa90d2d09e507c357ba834468b75b))
+
 # [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
 
 ### Bug Fixes

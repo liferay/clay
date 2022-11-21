@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** adds keyboard navigation with looped arrow keys ([c919b22](https://github.com/liferay/clay/commit/c919b226a1f38750042856157f1b45f76306461c))
+-   **@clayui/drop-down:** associates the contextual item with the menu and fixes assertive aria for SRs with contextual menu ([b62b7ba](https://github.com/liferay/clay/commit/b62b7ba93f4f566363a8c7666743594956625f35))
+-   **@clayui/drop-down:** disable tabbing of Menu elements ([81c0b20](https://github.com/liferay/clay/commit/81c0b20452008e15f8c0184cdd1318bad7cab488))
+-   **@clayui/drop-down:** fix keyboard navigation for context menu ([b44c7db](https://github.com/liferay/clay/commit/b44c7db37a53720860b832f12119d40f377a438b))
+
+### Features
+
+-   **@clayui/date-picker:** improves semantic accessibility for the component ([60a7f76](https://github.com/liferay/clay/commit/60a7f7616563faa15817b4daa3525bd842260ef3))
+-   **@clayui/drop-down:** enable typeahead for menu ([6287f96](https://github.com/liferay/clay/commit/6287f9635e7deeb3973b42f8db4ca62ef7bed7d3))
+
 # [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
 
 ### Bug Fixes

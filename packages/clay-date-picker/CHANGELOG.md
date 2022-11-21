@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** Map id attribute to .form-control ([b53a81a](https://github.com/liferay/clay/commit/b53a81a98defdb248d5ad86739e766efc88e4dec))
+
+### Features
+
+-   **@clayui/date-picker:** improves semantic accessibility for the component ([60a7f76](https://github.com/liferay/clay/commit/60a7f7616563faa15817b4daa3525bd842260ef3))
+
+### BREAKING CHANGES
+
+-   **@clayui/date-picker:** The `id` attribute now maps to `.form-control`
+
 # [3.79.0](https://github.com/liferay/clay/compare/v3.78.2...v3.79.0) (2022-11-08)
 
 **Note:** Version bump only for package @clayui/date-picker
