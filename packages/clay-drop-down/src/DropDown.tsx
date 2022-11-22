@@ -281,6 +281,13 @@ function ClayDropDown<T>({
 								openMenu(true);
 							}
 
+							if (internalActive && event.key === Keys.Down) {
+								event.preventDefault();
+								event.stopPropagation();
+
+								focusManager.focusFirst();
+							}
+
 							if (
 								[Keys.Spacebar, Keys.Down].includes(event.key)
 							) {

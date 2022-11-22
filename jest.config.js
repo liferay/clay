@@ -77,7 +77,7 @@ module.exports = {
 			branches: 60,
 			functions: 57,
 			lines: 73,
-			statements: 73,
+			statements: 72,
 		},
 		'./packages/clay-empty-state/src/': {
 			branches: 100,
