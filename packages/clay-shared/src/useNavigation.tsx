@@ -127,15 +127,13 @@ export function useNavigation<T extends HTMLElement | null>({
 					tab = tabs[event.key === Keys.Home ? 0 : tabs.length - 1];
 					break;
 				default: {
-					if (!typeahead) {
+					const target = event.target as HTMLElement;
+
+					if (!typeahead || target.tagName === 'INPUT') {
 						return;
 					}
 
-					if (
-						!event.currentTarget.contains(
-							event.target as HTMLElement
-						)
-					) {
+					if (!event.currentTarget.contains(target)) {
 						return;
 					}
 
