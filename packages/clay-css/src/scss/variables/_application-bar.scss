@@ -2,7 +2,8 @@ $application-bar-size: () !default;
 $application-bar-size: map-deep-merge(
 	(
 		scaling-navbar: true,
-		font-size: $navbar-font-size,
+		font-size:
+			if(variable-exists(navbar-font-size), $navbar-font-size, null),
 		height: 3.5rem,
 		height-mobile: 3rem,
 		btn-monospaced-font-size: 1rem,
@@ -22,18 +23,43 @@ $application-bar-dark: () !default;
 $application-bar-dark: map-deep-merge(
 	(
 		background-color: $dark,
-		color: $navbar-dark-color,
+		color:
+			if(
+				variable-exists(navbar-dark-color),
+				$navbar-dark-color,
+				rgba($white, 0.5)
+			),
 		navbar-nav: (
 			nav-link: (
-				color: $navbar-dark-color,
+				color:
+					if(
+						variable-exists(navbar-dark-color),
+						$navbar-dark-color,
+						rgba($white, 0.5)
+					),
 				hover: (
-					color: $navbar-dark-hover-color,
+					color:
+						if(
+							variable-exists(navbar-dark-hover-color),
+							$navbar-dark-hover-color,
+							rgba($white, 0.75)
+						),
 				),
 				active: (
-					color: $navbar-dark-active-color,
+					color:
+						if(
+							variable-exists(navbar-dark-active-color),
+							$navbar-dark-active-color,
+							$white
+						),
 				),
 				disabled: (
-					color: $navbar-dark-disabled-color,
+					color:
+						if(
+							variable-exists(navbar-dark-disabled-color),
+							$navbar-dark-disabled-color,
+							rgba($white, 0.25)
+						),
 					opacity: 1,
 				),
 			),

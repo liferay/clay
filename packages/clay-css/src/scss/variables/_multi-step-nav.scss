@@ -69,7 +69,11 @@ $multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
 $multi-step-divider-complete-bg: $multi-step-icon-complete-bg !default;
 $multi-step-dropdown-indicator-complete-icon: clay-icon(
 	check,
-	$dropdown-link-active-color
+	if(
+		variable-exists(dropdown-link-active-color),
+		$dropdown-link-active-color,
+		$component-active-color
+	)
 ) !default;
 $multi-step-dropdown-indicator-complete-width: 0.875rem !default;
 

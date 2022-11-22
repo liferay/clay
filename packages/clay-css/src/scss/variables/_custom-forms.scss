@@ -9,16 +9,32 @@ $custom-forms-transition: background-color 0.15s ease-in-out,
 
 $custom-control-indicator-size: 1rem !default;
 
-$custom-control-indicator-bg: $input-bg !default;
+$custom-control-indicator-bg: if(
+	variable-exists(input-bg),
+	$input-bg,
+	$white
+) !default;
 $custom-control-indicator-bg-size: 50% 50% !default;
 $custom-control-indicator-border-color: $gray-500 !default;
 $custom-control-indicator-border-style: solid !default;
 $custom-control-indicator-border-width: $border-width !default;
-$custom-control-indicator-box-shadow: $input-box-shadow !default;
+$custom-control-indicator-box-shadow: if(
+	variable-exists(input-box-shadow),
+	$input-box-shadow,
+	inset 0 1px 1px rgba($black, 0.075)
+) !default;
 $custom-control-indicator-position-top: 0.25rem !default;
 
-$custom-control-indicator-focus-border-color: $input-focus-border-color !default;
-$custom-control-indicator-focus-box-shadow: $input-focus-box-shadow !default;
+$custom-control-indicator-focus-border-color: if(
+	variable-exists(input-focus-border-color),
+	$input-focus-border-color,
+	clay-lighten($component-active-bg, 25%)
+) !default;
+$custom-control-indicator-focus-box-shadow: if(
+	variable-exists(input-focus-box-shadow),
+	$input-focus-box-shadow,
+	$component-focus-box-shadow
+) !default;
 
 $custom-control-indicator-active-bg: clay-lighten(
 	$component-active-bg,
@@ -28,7 +44,11 @@ $custom-control-indicator-active-box-shadow: none !default;
 $custom-control-indicator-active-border-color: $custom-control-indicator-active-bg !default;
 $custom-control-indicator-active-color: $component-active-color !default;
 
-$custom-control-indicator-disabled-bg: $input-disabled-bg !default;
+$custom-control-indicator-disabled-bg: if(
+	variable-exists(input-disabled-bg),
+	$input-disabled-bg,
+	$gray-200
+) !default;
 $custom-control-indicator-disabled-border-color: $gray-400 !default;
 $custom-control-indicator-disabled-cursor: $disabled-cursor !default;
 
@@ -82,7 +102,11 @@ $custom-control-min-height: $custom-control-indicator-size +
 
 /// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
 
-$custom-control-description-cursor: $form-check-label-cursor !default;
+$custom-control-description-cursor: if(
+	variable-exists(form-check-label-cursor),
+	$form-check-label-cursor,
+	$link-cursor
+) !default;
 
 /// @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
 
@@ -227,7 +251,12 @@ $custom-control: map-deep-merge(
 $custom-control-input: () !default;
 $custom-control-input: map-deep-merge(
 	(
-		cursor: $form-check-input-cursor,
+		cursor:
+			if(
+				variable-exists(form-check-input-cursor),
+				$form-check-input-cursor,
+				$link-cursor
+			),
 		height: $custom-control-indicator-size,
 		left: 0,
 		opacity: 0,
@@ -503,7 +532,7 @@ $custom-switch-indicator-size: $custom-control-indicator-size -
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-bg: $input-bg !default;
+$custom-select-bg: if(variable-exists(input-bg), $input-bg, $white) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -511,7 +540,11 @@ $custom-select-bg-size: 8px 10px !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-border-color: $input-border-color !default;
+$custom-select-border-color: if(
+	variable-exists(input-border-color),
+	$input-border-color,
+	$gray-400
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -519,7 +552,11 @@ $custom-select-border-radius: $border-radius !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-border-width: $input-border-width !default;
+$custom-select-border-width: if(
+	variable-exists(input-border-width),
+	$input-border-width,
+	0.0625rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -527,23 +564,43 @@ $custom-select-box-shadow: inset 0 1px 2px rgba($black, 0.075) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-color: $input-color !default;
+$custom-select-color: if(
+	variable-exists(input-color),
+	$input-color,
+	$gray-700
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-font-family: $input-font-family !default;
+$custom-select-font-family: if(
+	variable-exists(input-font-family),
+	$input-font-family,
+	null
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-font-size: $input-font-size !default;
+$custom-select-font-size: if(
+	variable-exists(input-font-size),
+	$input-font-size,
+	$font-size-base
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-font-weight: $input-font-weight !default;
+$custom-select-font-weight: if(
+	variable-exists(input-font-weight),
+	$input-font-weight,
+	$font-weight-base
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-height: $input-height !default;
+$custom-select-height: if(
+	variable-exists(input-height),
+	$input-height,
+	2.375rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -551,15 +608,27 @@ $custom-select-indicator-padding: 1rem !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-line-height: $input-line-height !default;
+$custom-select-line-height: if(
+	variable-exists(input-line-height),
+	$input-line-height,
+	$line-height-base
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-padding-x: $input-padding-x !default;
+$custom-select-padding-x: if(
+	variable-exists(input-padding-x),
+	$input-padding-x,
+	0.75rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-padding-y: $input-padding-y !default;
+$custom-select-padding-y: if(
+	variable-exists(input-padding-y),
+	$input-padding-y,
+	0.375rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -580,16 +649,24 @@ $custom-select-background: $custom-select-indicator no-repeat right
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-focus-border-color: $input-focus-border-color !default;
+$custom-select-focus-border-color: if(
+	variable-exists(input-focus-border-color),
+	$input-focus-border-color,
+	clay-lighten($component-active-bg, 25%)
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-focus-width: $input-focus-width !default;
+$custom-select-focus-width: if(
+	variable-exists(input-focus-width),
+	$input-focus-width,
+	0.2rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
 $custom-select-focus-box-shadow: 0 0 0 $custom-select-focus-width
-	$input-btn-focus-color !default;
+	$custom-select-focus-border-color !default;
 
 // Custom Select Disabled
 
@@ -623,37 +700,69 @@ $custom-select-feedback-icon-size: 18px 18px !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-font-size-lg: $input-font-size-lg !default;
+$custom-select-font-size-lg: if(
+	variable-exists(input-font-size-lg),
+	$input-font-size-lg,
+	$font-size-lg
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-height-lg: $input-height-lg !default;
+$custom-select-height-lg: if(
+	variable-exists(input-height-lg),
+	$input-height-lg,
+	3rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-padding-x-lg: $input-padding-x-lg !default;
+$custom-select-padding-x-lg: if(
+	variable-exists(input-padding-x-lg),
+	$input-padding-x-lg,
+	1rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-padding-y-lg: $input-padding-y-lg !default;
+$custom-select-padding-y-lg: if(
+	variable-exists(input-padding-y-lg),
+	$input-padding-y-lg,
+	0.5rem
+) !default;
 
 // Custom Select Sm
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-font-size-sm: $input-font-size-sm !default;
+$custom-select-font-size-sm: if(
+	variable-exists(input-font-size-sm),
+	$input-font-size-sm,
+	$font-size-sm
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-height-sm: $input-height-sm !default;
+$custom-select-height-sm: if(
+	variable-exists(input-height-sm),
+	$input-height-sm,
+	1.9375rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-padding-x-sm: $input-padding-x-sm !default;
+$custom-select-padding-x-sm: if(
+	variable-exists(input-padding-x-sm),
+	$input-padding-x-sm,
+	0.5rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-select-padding-y-sm: $input-padding-y-sm !default;
+$custom-select-padding-y-sm: if(
+	variable-exists(input-padding-y-sm),
+	$input-padding-y-sm,
+	0.25rem
+) !default;
 
 // Custom Range
 
@@ -708,11 +817,19 @@ $custom-range-thumb-height: $custom-range-thumb-width !default;
 /// @deprecated as of v3.x with no replacement
 
 $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg,
-	$input-focus-box-shadow !default;
+	if(
+		variable-exists(input-focus-box-shadow),
+		$input-focus-box-shadow,
+		$component-focus-box-shadow
+	) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-range-thumb-focus-box-shadow-width: $input-focus-width !default;
+$custom-range-thumb-focus-box-shadow-width: if(
+	variable-exists(input-focus-width),
+	$input-focus-width,
+	0.2rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -726,35 +843,63 @@ $custom-range-thumb-disabled-bg: $gray-500 !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-bg: $input-bg !default;
+$custom-file-bg: if(variable-exists(input-bg), $input-bg, $white) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-border-color: $input-border-color !default;
+$custom-file-border-color: if(
+	variable-exists(input-border-color),
+	$input-border-color,
+	$gray-400
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-border-width: $input-border-width !default;
+$custom-file-border-width: if(
+	variable-exists(input-border-width),
+	$input-border-width,
+	0.0625rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-border-radius: $input-border-radius !default;
+$custom-file-border-radius: if(
+	variable-exists(input-border-radius),
+	$input-border-radius,
+	$border-radius
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-box-shadow: $input-box-shadow !default;
+$custom-file-box-shadow: if(
+	variable-exists(input-box-shadow),
+	$input-box-shadow,
+	inset 0 1px 1px rgba($black, 0.075)
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-color: $input-color !default;
+$custom-file-color: if(
+	variable-exists(input-color),
+	$input-color,
+	$gray-700
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-font-family: $input-font-family !default;
+$custom-file-font-family: if(
+	variable-exists(input-font-family),
+	$input-font-family,
+	null
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-font-weight: $input-font-weight !default;
+$custom-file-font-weight: if(
+	variable-exists(input-font-weight),
+	$input-font-weight,
+	$font-weight-base
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
@@ -762,35 +907,67 @@ $custom-file-height-inner: 36px !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-height: $input-height !default;
+$custom-file-height: if(
+	variable-exists(input-height),
+	$input-height,
+	2.375rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-line-height: $input-line-height !default;
+$custom-file-line-height: if(
+	variable-exists(input-line-height),
+	$input-line-height,
+	$line-height-base
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-padding-x: $input-padding-x !default;
+$custom-file-padding-x: if(
+	variable-exists(input-padding-x),
+	$input-padding-x,
+	0.75rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-padding-y: $input-padding-y !default;
+$custom-file-padding-y: if(
+	variable-exists(input-padding-y),
+	$input-padding-y,
+	0.375rem
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-focus-border-color: $input-focus-border-color !default;
+$custom-file-focus-border-color: if(
+	variable-exists(input-focus-border-color),
+	$input-focus-border-color,
+	clay-lighten($component-active-bg, 25%)
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-focus-box-shadow: $input-focus-box-shadow !default;
+$custom-file-focus-box-shadow: if(
+	variable-exists(input-focus-box-shadow),
+	$input-focus-box-shadow,
+	$component-focus-box-shadow
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-disabled-bg: $input-disabled-bg !default;
+$custom-file-disabled-bg: if(
+	variable-exists(input-disabled-bg),
+	$input-disabled-bg,
+	$gray-200
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 
-$custom-file-button-bg: $input-group-addon-bg !default;
+$custom-file-button-bg: if(
+	variable-exists(input-group-addon-bg),
+	$input-group-addon-bg,
+	$gray-200
+) !default;
 
 /// @deprecated as of v3.x with no replacement
 

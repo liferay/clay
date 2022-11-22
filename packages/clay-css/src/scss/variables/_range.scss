@@ -120,7 +120,7 @@ $clay-range-input: map-deep-merge(
 		form-control-range: (
 			appearance: none,
 			background-color: transparent,
-			height: $input-height,
+			height: if(variable-exists(input-height), $input-height, 2.375rem),
 			margin: 0,
 			padding: 0,
 			position: relative,

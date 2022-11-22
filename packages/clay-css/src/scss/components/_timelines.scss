@@ -69,7 +69,13 @@
 
 	.panel {
 		.timeline-increment {
-			margin-left: math-sign($panel-border-left-width);
+			margin-left: math-sign(
+				if(
+					variable-exists(panel-border-left-width),
+					$panel-border-left-width,
+					1px
+				)
+			);
 		}
 	}
 }

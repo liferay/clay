@@ -31,7 +31,7 @@ $date-picker-nav-select: map-deep-merge(
 		color: $secondary,
 		font-size: $font-size-sm,
 		font-weight: $font-weight-semi-bold,
-		height: $input-height-sm,
+		height: if(variable-exists(input-height-sm), $input-height-sm, 2rem),
 		padding-bottom: 0,
 		padding-left: 0.5rem,
 		padding-top: 0,
@@ -45,7 +45,12 @@ $date-picker-nav-select: map-deep-merge(
 		),
 		disabled: (
 			background-color: transparent,
-			color: $input-disabled-color,
+			color:
+				if(
+					variable-exists(input-disabled-color),
+					$input-disabled-color,
+					$gray-500
+				),
 		),
 	),
 	$date-picker-nav-select

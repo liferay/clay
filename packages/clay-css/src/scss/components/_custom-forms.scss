@@ -4,7 +4,11 @@
 }
 
 .form-file-input {
-	cursor: $input-file-cursor;
+	cursor: if(
+		variable-exists(input-file-cursor),
+		$input-file-cursor,
+		$link-cursor
+	);
 	height: 100%;
 	opacity: 0;
 	overflow: hidden;
@@ -13,7 +17,11 @@
 	z-index: 10;
 
 	&::-webkit-file-upload-button {
-		cursor: $input-file-cursor;
+		cursor: if(
+			variable-exists(input-file-cursor),
+			$input-file-cursor,
+			$link-cursor
+		);
 	}
 
 	&:focus {
@@ -52,10 +60,18 @@
 	}
 
 	&:disabled {
-		cursor: $input-disabled-cursor;
+		cursor: if(
+			variable-exists(input-disabled-cursor),
+			$input-disabled-cursor,
+			$disabled-cursor
+		);
 
 		&::-webkit-file-upload-button {
-			cursor: $input-disabled-cursor;
+			cursor: if(
+				variable-exists(input-disabled-cursor),
+				$input-disabled-cursor,
+				$disabled-cursor
+			);
 		}
 	}
 }
@@ -268,8 +284,16 @@ label.custom-control-label {
 				// in IE and (under certain conditions) Edge.
 				// See https://github.com/twbs/bootstrap/issues/19398.
 
-				background-color: $input-bg;
-				color: $input-color;
+				background-color: if(
+					variable-exists(input-bg),
+					$input-bg,
+					$white
+				);
+				color: if(
+					variable-exists(input-color),
+					$input-color,
+					$gray-700
+				);
 			}
 		}
 

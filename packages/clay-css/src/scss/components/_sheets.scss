@@ -95,7 +95,9 @@
 
 	> .card-page:last-child,
 	.card-page-last {
-		margin-bottom: math-sign($card-margin-bottom);
+		margin-bottom: math-sign(
+			if(variable-exists(card-margin-bottom), $card-margin-bottom, 1.5rem)
+		);
 	}
 
 	&::after {

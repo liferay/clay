@@ -14,7 +14,8 @@ $management-bar-size: map-deep-merge(
 	(
 		scaling-navbar: true,
 		border-bottom-width: 0.0625rem,
-		font-size: $navbar-font-size,
+		font-size:
+			if(variable-exists(navbar-font-size), $navbar-font-size, null),
 		height: 4rem,
 		min-height: 4rem,
 		padding-x: 0,
@@ -41,15 +42,35 @@ $management-bar-light: map-deep-merge(
 		background-color: $light,
 		navbar-nav: (
 			nav-link: (
-				color: $navbar-light-color,
+				color:
+					if(
+						variable-exists(navbar-light-color),
+						$navbar-light-color,
+						rgba($black, 0.5)
+					),
 				hover: (
-					color: $navbar-light-hover-color,
+					color:
+						if(
+							variable-exists(navbar-light-hover-color),
+							$navbar-light-hover-color,
+							rgba($black, 0.7)
+						),
 				),
 				active: (
-					color: $navbar-light-active-color,
+					color:
+						if(
+							variable-exists(navbar-light-active-color),
+							$navbar-light-active-color,
+							rgba($black, 0.9)
+						),
 				),
 				disabled: (
-					color: $navbar-light-disabled-color,
+					color:
+						if(
+							variable-exists(navbar-light-disabled-color),
+							$navbar-light-disabled-color,
+							rgba($black, 0.3)
+						),
 					opacity: 1,
 				),
 			),
@@ -65,18 +86,43 @@ $management-bar-primary: map-deep-merge(
 	(
 		background-color: $primary-l3,
 		border-color: $primary,
-		color: $navbar-light-color,
+		color:
+			if(
+				variable-exists(navbar-light-color),
+				$navbar-light-color,
+				rgba($black, 0.5)
+			),
 		navbar-nav: (
 			nav-link: (
-				color: $navbar-light-color,
+				color:
+					if(
+						variable-exists(navbar-light-color),
+						$navbar-light-color,
+						rgba($black, 0.5)
+					),
 				hover: (
-					color: $navbar-light-hover-color,
+					color:
+						if(
+							variable-exists(navbar-light-hover-color),
+							$navbar-light-hover-color,
+							rgba($black, 0.7)
+						),
 				),
 				active: (
-					color: $navbar-light-active-color,
+					color:
+						if(
+							variable-exists(navbar-light-active-color),
+							$navbar-light-active-color,
+							rgba($black, 0.9)
+						),
 				),
 				disabled: (
-					color: $navbar-light-disabled-color,
+					color:
+						if(
+							variable-exists(navbar-light-disabled-color),
+							$navbar-light-disabled-color,
+							rgba($black, 0.3)
+						),
 					opacity: 1,
 				),
 			),

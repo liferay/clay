@@ -311,7 +311,12 @@ $subnav-tbar-light: () !default;
 $subnav-tbar-light: map-deep-merge(
 	(
 		bg-color: $light,
-		color: $navbar-light-color,
+		color:
+			if(
+				variable-exists(navbar-light-color),
+				$navbar-light-color,
+				rgba($black, 0.5)
+			),
 		padding-y: 0.125rem,
 	),
 	$subnav-tbar-light

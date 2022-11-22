@@ -45,7 +45,11 @@
 	.custom-control {
 		margin-bottom: 0;
 		margin-right: 0;
-		min-height: $custom-control-indicator-size;
+		min-height: if(
+			variable-exists(custom-control-indicator-size),
+			$custom-control-indicator-size,
+			null
+		);
 	}
 }
 

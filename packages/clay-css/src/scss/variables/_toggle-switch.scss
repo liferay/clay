@@ -1,5 +1,9 @@
 $toggle-switch-cursor: $link-cursor !default;
-$toggle-switch-font-weight: $input-label-font-weight !default;
+$toggle-switch-font-weight: if(
+	variable-exists(input-label-font-weight),
+	$input-label-font-weight,
+	null
+) !default;
 $toggle-switch-transition: background-color 100ms ease-in,
 	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
 	color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
@@ -17,22 +21,22 @@ $toggle-switch-bar-height-mobile: $toggle-switch-bar-height !default;
 $toggle-switch-bar-width-mobile: $toggle-switch-bar-width !default;
 // must all be same units--end
 
-$toggle-switch-bar-bg: $input-group-addon-bg !default;
-$toggle-switch-bar-border-color: $input-group-addon-border-color !default;
+$toggle-switch-bar-bg: $gray-200 !default;
+$toggle-switch-bar-border-color: $gray-400 !default;
 $toggle-switch-bar-border-radius: 3px !default;
 $toggle-switch-bar-border-width: 1px !default;
-$toggle-switch-bar-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$toggle-switch-bar-focus-box-shadow: $component-focus-box-shadow !default;
 $toggle-switch-bar-font-size: 0.75rem !default; // 12px
 $toggle-switch-bar-font-size-mobile: $toggle-switch-bar-font-size !default;
-$toggle-switch-bar-icon-color: $input-color !default;
+$toggle-switch-bar-icon-color: $gray-700 !default;
 
-$toggle-switch-button-bg: $input-bg !default;
-$toggle-switch-button-border-color: $input-group-addon-border-color !default;
+$toggle-switch-button-bg: $white !default;
+$toggle-switch-button-border-color: $gray-400 !default;
 $toggle-switch-button-border-radius: 3px 0 0 3px !default;
 $toggle-switch-button-border-width: 1px !default;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default;
 $toggle-switch-button-font-size-mobile: $toggle-switch-button-font-size !default; // null
-$toggle-switch-button-icon-color: $input-color !default;
+$toggle-switch-button-icon-color: $gray-700 !default;
 
 // See https://issues.liferay.com/browse/LPS-147457.
 
@@ -64,13 +68,21 @@ $toggle-switch-disabled-opacity: 0.4 !default;
 
 // Toggle Switch Label
 
-$toggle-switch-label-disabled-color: $input-label-disabled-color !default;
+$toggle-switch-label-disabled-color: if(
+	variable-exists(input-label-disabled-color),
+	$input-label-disabled-color,
+	$gray-600
+) !default;
 
 // Toggle Switch Text
 
 $toggle-switch-text-font-size: 0.75rem !default;
 
-$toggle-switch-text-disabled-color: $input-label-disabled-color !default;
+$toggle-switch-text-disabled-color: if(
+	variable-exists(input-label-disabled-color),
+	$input-label-disabled-color,
+	$gray-600
+) !default;
 
 // .toggle-switch
 

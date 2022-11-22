@@ -14,8 +14,10 @@ $clay-reorder-input-inset: map-deep-merge(
 		margin-bottom: 0,
 		margin-top: 0,
 		overflow: auto,
-		padding-bottom: $input-padding-y,
-		padding-top: $input-padding-y,
+		padding-bottom:
+			if(variable-exists(input-padding-y), $input-padding-y, 0.375rem),
+		padding-top:
+			if(variable-exists(input-padding-y), $input-padding-y, 0.375rem),
 		width: 100%,
 		focus: (
 			background-color: transparent,
@@ -41,9 +43,20 @@ $clay-reorder-underlay: map-deep-merge(
 $clay-reorder-underlay-focus: () !default;
 $clay-reorder-underlay-focus: map-deep-merge(
 	(
-		background-color: $input-focus-bg,
-		border-color: $input-focus-border-color,
-		box-shadow: $input-focus-box-shadow,
+		background-color:
+			if(variable-exists(input-focus-bg), $input-focus-bg, $white),
+		border-color:
+			if(
+				variable-exists(input-focus-border-color),
+				$input-focus-border-color,
+				$gray-700
+			),
+		box-shadow:
+			if(
+				variable-exists(input-focus-box-shadow),
+				$input-focus-box-shadow,
+				$component-focus-box-shadow
+			),
 	),
 	$clay-reorder-underlay-focus
 );

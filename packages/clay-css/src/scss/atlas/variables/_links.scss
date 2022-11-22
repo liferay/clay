@@ -51,8 +51,25 @@ $component-title: map-deep-merge(
 		font-size: 1rem,
 		line-height: 1.25,
 		margin-bottom:
-			calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
-		margin-top: calc((#{$dropdown-action-toggle-size} - (1em * 1.25)) / 2),
+			calc(
+				(
+						#{if(
+								variable-exists(dropdown-action-toggle-size),
+								$dropdown-action-toggle-size,
+								2rem
+							)} - (1em * 1.25)
+					) / 2
+			),
+		margin-top:
+			calc(
+				(
+						#{if(
+								variable-exists(dropdown-action-toggle-size),
+								$dropdown-action-toggle-size,
+								2rem
+							)} - (1em * 1.25)
+					) / 2
+			),
 	),
 	$component-title
 );
