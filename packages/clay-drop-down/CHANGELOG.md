@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.80.1](https://github.com/liferay/clay/compare/v3.80.0...v3.80.1) (2022-11-22)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** moves focus to first focusable item when pressing down key on trigger ([bd1b114](https://github.com/liferay/clay/commit/bd1b114025870a2d5b95814d56b82b93fc5cdad9))
+
 # [3.80.0](https://github.com/liferay/clay/compare/v3.79.0...v3.80.0) (2022-11-21)
 
 ### Bug Fixes
