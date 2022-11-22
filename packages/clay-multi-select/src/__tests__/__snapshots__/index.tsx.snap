@@ -35,6 +35,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         role="grid"
       >
         <span
+          aria-labelledby="clay-id-5-label-1-text"
           class="label label-secondary"
           id="clay-id-5-label-1-span"
           role="row"
@@ -42,6 +43,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-5-label-1-text"
             role="gridcell"
           >
             foo
@@ -69,6 +71,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-5-label-2-text"
           class="label label-secondary"
           id="clay-id-5-label-2-span"
           role="row"
@@ -76,6 +79,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-5-label-2-text"
             role="gridcell"
           >
             bar
@@ -103,6 +107,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-5-label-3-text"
           class="label label-secondary"
           id="clay-id-5-label-3-span"
           role="row"
@@ -110,6 +115,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-5-label-3-text"
             role="gridcell"
           >
             baz
@@ -212,6 +218,7 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
         role="grid"
       >
         <span
+          aria-labelledby="clay-id-4-label-1-text"
           class="label label-secondary"
           id="clay-id-4-label-1-span"
           role="row"
@@ -219,6 +226,7 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-4-label-1-text"
             role="gridcell"
           >
             foo
@@ -247,6 +255,7 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-4-label-2-text"
           class="label label-secondary"
           id="clay-id-4-label-2-span"
           role="row"
@@ -254,6 +263,7 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-4-label-2-text"
             role="gridcell"
           >
             bar
@@ -282,6 +292,7 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-4-label-3-text"
           class="label label-secondary"
           id="clay-id-4-label-3-span"
           role="row"
@@ -289,6 +300,7 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-4-label-3-text"
             role="gridcell"
           >
             baz
@@ -343,6 +355,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
         role="grid"
       >
         <span
+          aria-labelledby="clay-id-3-label-1-text"
           class="label label-secondary"
           id="clay-id-3-label-1-span"
           role="row"
@@ -350,6 +363,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-3-label-1-text"
             role="gridcell"
           >
             foo
@@ -377,6 +391,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-3-label-2-text"
           class="label label-secondary"
           id="clay-id-3-label-2-span"
           role="row"
@@ -384,6 +399,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-3-label-2-text"
             role="gridcell"
           >
             bar
@@ -411,6 +427,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-3-label-3-text"
           class="label label-secondary"
           id="clay-id-3-label-3-span"
           role="row"
@@ -418,6 +435,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-3-label-3-text"
             role="gridcell"
           >
             baz
@@ -489,6 +507,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
         role="grid"
       >
         <span
+          aria-labelledby="clay-id-2-label-1-text"
           class="label label-secondary"
           id="clay-id-2-label-1-span"
           role="row"
@@ -496,6 +515,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-2-label-1-text"
             role="gridcell"
           >
             foo
@@ -523,6 +543,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-2-label-2-text"
           class="label label-secondary"
           id="clay-id-2-label-2-span"
           role="row"
@@ -530,6 +551,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-2-label-2-text"
             role="gridcell"
           >
             bar
@@ -557,6 +579,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
           </span>
         </span>
         <span
+          aria-labelledby="clay-id-2-label-3-text"
           class="label label-secondary"
           id="clay-id-2-label-3-span"
           role="row"
@@ -564,6 +587,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
         >
           <span
             class="label-item label-item-expand"
+            id="clay-id-2-label-3-text"
             role="gridcell"
           >
             baz

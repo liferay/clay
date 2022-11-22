@@ -431,6 +431,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							const id = `${labelId}-label-${
 								item[locator.value]
 							}-span`;
+							const textId = `${labelId}-label-${
+								item[locator.value]
+							}-text`;
 							const closeId = `${labelId}-label-${
 								item[locator.value]
 							}-close`;
@@ -473,6 +476,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							return (
 								<React.Fragment key={id}>
 									<ClayLabel
+										aria-labelledby={textId}
 										id={id}
 										onKeyDown={({key}) => {
 											if (key === Keys.Backspace) {
@@ -491,7 +495,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 										}
 										withClose={false}
 									>
-										<ClayLabel.ItemExpand role="gridcell">
+										<ClayLabel.ItemExpand
+											id={textId}
+											role="gridcell"
+										>
 											{item[locator.label]}
 										</ClayLabel.ItemExpand>
 
