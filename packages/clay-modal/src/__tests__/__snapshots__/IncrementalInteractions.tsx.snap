@@ -31,6 +31,7 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
     >
       <div
         aria-labelledby="clay-modal-label-9"
+        aria-modal="true"
         class="modal-dialog modal-lg"
         role="dialog"
         tabindex="-1"

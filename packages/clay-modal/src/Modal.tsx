@@ -151,6 +151,7 @@ const ClayModal = ({
 			>
 				<div
 					aria-labelledby={ariaLabelledby}
+					aria-modal="true"
 					className={classNames('modal-dialog', {
 						[`modal-${size}`]: size,
 						[`modal-${status}`]: status,
