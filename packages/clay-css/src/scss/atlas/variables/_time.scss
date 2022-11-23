@@ -8,7 +8,7 @@ $clay-time-btn: map-deep-merge(
 );
 
 $clay-time-inner-spin: () !default;
-$clay-time-inner-spin: map-deep-merge(
+$clay-time-inner-spin: map-merge(
 	(
 		border-color: $secondary-l2,
 	),

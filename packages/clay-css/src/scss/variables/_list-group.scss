@@ -323,7 +323,7 @@ $list-group-notification-item-primary: map-deep-merge(
 // List Group Sm
 
 $list-group-sm-item: () !default;
-$list-group-sm-item: map-deep-merge(
+$list-group-sm-item: map-merge(
 	(
 		padding-bottom: 0.40625rem,
 		padding-top: 0.40625rem,
@@ -332,7 +332,7 @@ $list-group-sm-item: map-deep-merge(
 );
 
 $list-group-sm-quick-action-menu: () !default;
-$list-group-sm-quick-action-menu: map-deep-merge(
+$list-group-sm-quick-action-menu: map-merge(
 	(
 		margin-bottom: -0.40625rem,
 		margin-top: -0.40625rem,

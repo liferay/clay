@@ -75,7 +75,15 @@
 }
 
 .custom-control-label {
-	@include clay-container($custom-control-label);
+	@include clay-css($custom-control-label);
+
+	&::before {
+		@include clay-css(map-get($custom-control-label, before));
+	}
+
+	&::after {
+		@include clay-css(map-get($custom-control-label, after));
+	}
 }
 
 label.custom-control-label {
@@ -83,11 +91,19 @@ label.custom-control-label {
 }
 
 .custom-control-label-text {
-	@include clay-container($custom-control-label-text);
+	@include clay-css($custom-control-label-text);
+
+	&::before {
+		@include clay-css(map-get($custom-control-label-text, before));
+	}
+
+	&::after {
+		@include clay-css(map-get($custom-control-label-text, after));
+	}
 
 	small,
 	.small {
-		@include clay-container($custom-control-label-text-small);
+		@include clay-css($custom-control-label-text-small);
 	}
 }
 
@@ -95,7 +111,19 @@ label.custom-control-label {
 
 .custom-control-primary {
 	.custom-control-label-text {
-		@include clay-container($custom-control-primary-label-text);
+		@include clay-css($custom-control-primary-label-text);
+
+		&::before {
+			@include clay-css(
+				map-get($custom-control-primary-label-text, before)
+			);
+		}
+
+		&::after {
+			@include clay-css(
+				map-get($custom-control-primary-label-text, after)
+			);
+		}
 	}
 }
 

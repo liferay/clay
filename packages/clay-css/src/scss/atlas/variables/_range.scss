@@ -1,7 +1,7 @@
 $clay-range-disabled-color: $gray-500 !default;
 
 $clay-range-input-group-text: () !default;
-$clay-range-input-group-text: map-deep-merge(
+$clay-range-input-group-text: map-merge(
 	(
 		color: $gray-500,
 	),

@@ -435,7 +435,7 @@ $form-control-inset: map-deep-merge(
 );
 
 $form-control-tag-group: () !default;
-$form-control-tag-group: map-deep-merge(
+$form-control-tag-group: map-merge(
 	(
 		align-items: center,
 		color: $secondary,
@@ -451,7 +451,7 @@ $form-control-tag-group: map-deep-merge(
 );
 
 $form-control-tag-group-autofit-row: () !default;
-$form-control-tag-group-autofit-row: map-deep-merge(
+$form-control-tag-group-autofit-row: map-merge(
 	(
 		align-items: center,
 		flex-grow: 1,
@@ -463,7 +463,7 @@ $form-control-tag-group-autofit-row: map-deep-merge(
 );
 
 $form-control-tag-group-autofit-col: () !default;
-$form-control-tag-group-autofit-col: map-deep-merge(
+$form-control-tag-group-autofit-col: map-merge(
 	(
 		padding-left: 0.5rem,
 		padding-right: 0.5rem,
@@ -472,7 +472,7 @@ $form-control-tag-group-autofit-col: map-deep-merge(
 );
 
 $form-control-tag-group-input-group-item: () !default;
-$form-control-tag-group-input-group-item: map-deep-merge(
+$form-control-tag-group-input-group-item: map-merge(
 	(
 		align-items: center,
 	),
@@ -480,7 +480,7 @@ $form-control-tag-group-input-group-item: map-deep-merge(
 );
 
 $form-control-tag-group-inline-item: () !default;
-$form-control-tag-group-inline-item: map-deep-merge(
+$form-control-tag-group-inline-item: map-merge(
 	(
 		height: $form-control-inset-min-height,
 		margin-bottom: $form-control-inset-margin-y,

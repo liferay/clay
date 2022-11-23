@@ -9,7 +9,7 @@
 }
 
 .alert-footer {
-	@include clay-container($alert-footer);
+	@include clay-css($alert-footer);
 }
 
 .alert-link,
