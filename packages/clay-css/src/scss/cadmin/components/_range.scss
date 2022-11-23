@@ -2,15 +2,15 @@
 	padding-bottom: 0.1px;
 
 	.input-group {
-		@include clay-container($cadmin-clay-range-input-group);
+		@include clay-css($cadmin-clay-range-input-group);
 	}
 
 	.input-group-item {
-		@include clay-container($cadmin-clay-range-input-group-item);
+		@include clay-css($cadmin-clay-range-input-group-item);
 	}
 
 	.input-group-text {
-		@include clay-container($cadmin-clay-range-input-group-text);
+		@include clay-css($cadmin-clay-range-input-group-text);
 	}
 
 	&.disabled {

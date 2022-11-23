@@ -1,9 +1,13 @@
 // Clay Color Input Group Text (.clay-color > .input-group-item > .input-group-text)
 
 $cadmin-clay-color-input-group-text: () !default;
-$cadmin-clay-color-input-group-text: map-deep-merge(
+$cadmin-clay-color-input-group-text: map-merge(
 	(
-		bg: $cadmin-white,
+		background-color:
+			setter(
+				map-get($cadmin-clay-color-input-group-text, bg),
+				$cadmin-white
+			),
 		border-color: $cadmin-input-border-color,
 		padding-left: 0,
 		padding-right: 0,
@@ -18,7 +22,7 @@ $cadmin-clay-color-input-group-input: () !default;
 // Clay Color Input Group Inset Item Before (.clay-color > .input-group-item > .input-group-inset-item-before)
 
 $cadmin-clay-color-input-group-inset-item-before: () !default;
-$cadmin-clay-color-input-group-inset-item-before: map-deep-merge(
+$cadmin-clay-color-input-group-inset-item-before: map-merge(
 	(
 		color: $cadmin-gray-600,
 		font-size: inherit,
@@ -47,7 +51,7 @@ $cadmin-clay-color-dropdown-menu: map-deep-merge(
 // Dropdown Menu Form Group
 
 $cadmin-clay-color-dropdown-menu-form-group: () !default;
-$cadmin-clay-color-dropdown-menu-form-group: map-deep-merge(
+$cadmin-clay-color-dropdown-menu-form-group: map-merge(
 	(
 		margin-bottom: 16px,
 	),
@@ -72,7 +76,7 @@ $cadmin-clay-color-dropdown-menu-input: map-deep-merge(
 // Dropdown Menu Input Group Inset Item Before
 
 $cadmin-clay-color-dropdown-menu-input-group-inset-item-before: () !default;
-$cadmin-clay-color-dropdown-menu-input-group-inset-item-before: map-deep-merge(
+$cadmin-clay-color-dropdown-menu-input-group-inset-item-before: map-merge(
 	(
 		color: $cadmin-gray-600,
 		font-size: 14px,
@@ -105,7 +109,7 @@ $cadmin-clay-color-dropdown-menu-component-action: () !default;
 // Clay Color Swatch
 
 $cadmin-clay-color-swatch: () !default;
-$cadmin-clay-color-swatch: map-deep-merge(
+$cadmin-clay-color-swatch: map-merge(
 	(
 		display: flex,
 		flex-wrap: wrap,
@@ -117,7 +121,7 @@ $cadmin-clay-color-swatch: map-deep-merge(
 );
 
 $cadmin-clay-color-swatch-item: () !default;
-$cadmin-clay-color-swatch-item: map-deep-merge(
+$cadmin-clay-color-swatch-item: map-merge(
 	(
 		display: flex,
 		flex-wrap: wrap,
@@ -182,7 +186,7 @@ $cadmin-clay-color-pointer: map-deep-merge(
 // Clay Color Header
 
 $cadmin-clay-color-header: () !default;
-$cadmin-clay-color-header: map-deep-merge(
+$cadmin-clay-color-header: map-merge(
 	(
 		display: flex,
 		justify-content: space-between,
@@ -209,7 +213,7 @@ $cadmin-clay-color-header-component-title: map-deep-merge(
 // Clay Color Footer
 
 $cadmin-clay-color-footer: () !default;
-$cadmin-clay-color-footer: map-deep-merge(
+$cadmin-clay-color-footer: map-merge(
 	(
 		margin-bottom: 16px,
 	),
@@ -219,7 +223,7 @@ $cadmin-clay-color-footer: map-deep-merge(
 // Clay Color Map
 
 $cadmin-clay-color-map-group: () !default;
-$cadmin-clay-color-map-group: map-deep-merge(
+$cadmin-clay-color-map-group: map-merge(
 	(
 		display: flex,
 		margin-top: 8px,
@@ -228,7 +232,7 @@ $cadmin-clay-color-map-group: map-deep-merge(
 );
 
 $cadmin-clay-color-map: () !default;
-$cadmin-clay-color-map: map-deep-merge(
+$cadmin-clay-color-map: map-merge(
 	(
 		flex-shrink: 0,
 		height: 128px,
@@ -243,6 +247,13 @@ $cadmin-clay-color-map: map-deep-merge(
 );
 
 $cadmin-clay-color-map-hsb: () !default;
+$cadmin-clay-color-map-hsb: map-merge(
+	(
+		background-image: #{linear-gradient(to top, #000, rgba(0, 0, 0, 0)),
+		linear-gradient(to right, #fff, rgba(255, 255, 255, 0))},
+	),
+	$cadmin-clay-color-map-hsb
+);
 
 // Clay Color Map Pointer
 
@@ -251,7 +262,7 @@ $cadmin-clay-color-map-pointer: () !default;
 // Clay Color Map Values
 
 $cadmin-clay-color-map-values: () !default;
-$cadmin-clay-color-map-values: map-deep-merge(
+$cadmin-clay-color-map-values: map-merge(
 	(
 		flex-grow: 1,
 		flex-shrink: 1,
@@ -290,7 +301,7 @@ $cadmin-clay-color-map-values-input-group-inset-item-before: map-deep-merge(
 // Clay Color Range
 
 $cadmin-clay-color-range: () !default;
-$cadmin-clay-color-range: map-deep-merge(
+$cadmin-clay-color-range: map-merge(
 	(
 		border-radius: 100px,
 		height: 8px,

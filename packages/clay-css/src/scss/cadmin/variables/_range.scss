@@ -1,7 +1,7 @@
 $cadmin-clay-range-disabled-color: $cadmin-gray-500 !default;
 
 $cadmin-clay-range-input-group: () !default;
-$cadmin-clay-range-input-group: map-deep-merge(
+$cadmin-clay-range-input-group: map-merge(
 	(
 		align-items: center,
 	),
@@ -9,7 +9,7 @@ $cadmin-clay-range-input-group: map-deep-merge(
 );
 
 $cadmin-clay-range-input-group-item: () !default;
-$cadmin-clay-range-input-group-item: map-deep-merge(
+$cadmin-clay-range-input-group-item: map-merge(
 	(
 		flex-direction: column,
 	),
@@ -17,9 +17,13 @@ $cadmin-clay-range-input-group-item: map-deep-merge(
 );
 
 $cadmin-clay-range-input-group-text: () !default;
-$cadmin-clay-range-input-group-text: map-deep-merge(
+$cadmin-clay-range-input-group-text: map-merge(
 	(
-		bg: transparent,
+		background-color:
+			setter(
+				map-get($cadmin-clay-range-input-group-text, bg),
+				transparent
+			),
 		border-width: 0,
 		color: $cadmin-gray-500,
 		font-size: 14px,

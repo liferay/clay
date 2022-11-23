@@ -150,7 +150,7 @@ $cadmin-date-picker-day: map-deep-merge(
 // Date Picker Calendar
 
 $cadmin-date-picker-calendar-container: () !default;
-$cadmin-date-picker-calendar-container: map-deep-merge(
+$cadmin-date-picker-calendar-container: map-merge(
 	(
 		float: left,
 		min-width: 100%,
@@ -159,7 +159,7 @@ $cadmin-date-picker-calendar-container: map-deep-merge(
 );
 
 $cadmin-date-picker-calendar-header-container: () !default;
-$cadmin-date-picker-calendar-header-container: map-deep-merge(
+$cadmin-date-picker-calendar-header-container: map-merge(
 	(
 		padding-bottom: 16px,
 		padding-left: 16px,
@@ -170,7 +170,7 @@ $cadmin-date-picker-calendar-header-container: map-deep-merge(
 );
 
 $cadmin-date-picker-calendar-body-container: () !default;
-$cadmin-date-picker-calendar-body-container: map-deep-merge(
+$cadmin-date-picker-calendar-body-container: map-merge(
 	(
 		padding-left: 16px,
 		padding-right: 16px,
@@ -180,7 +180,7 @@ $cadmin-date-picker-calendar-body-container: map-deep-merge(
 );
 
 $cadmin-date-picker-calendar-footer-container: () !default;
-$cadmin-date-picker-calendar-footer-container: map-deep-merge(
+$cadmin-date-picker-calendar-footer-container: map-merge(
 	(
 		border-color: $cadmin-gray-400,
 		border-style: solid,

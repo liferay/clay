@@ -192,7 +192,7 @@ $cadmin-custom-control-label-text: map-deep-merge(
 // .custom-control-label-text small, .custom-control-label-text .small
 
 $cadmin-custom-control-label-text-small: () !default;
-$cadmin-custom-control-label-text-small: map-deep-merge(
+$cadmin-custom-control-label-text-small: map-merge(
 	(
 		font-size: $cadmin-custom-control-description-small-font-size,
 	),
@@ -319,7 +319,7 @@ $cadmin-custom-control-input: map-deep-merge(
 // Custom Control Primary
 
 $cadmin-custom-control-primary-label-text: () !default;
-$cadmin-custom-control-primary-label-text: map-deep-merge(
+$cadmin-custom-control-primary-label-text: map-merge(
 	(
 		font-weight: $cadmin-font-weight-semi-bold,
 	),
