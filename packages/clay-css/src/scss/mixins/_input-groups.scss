@@ -27,7 +27,7 @@
 	$breakpoint: setter(map-get($map, breakpoint), md);
 	$breakpoint-down: clay-breakpoint-prev($breakpoint);
 
-	$item: setter(map-get($map, item), ());
+	$item: setter(map-get($map, input-group-item), map-get($map, item), ());
 	$item: map-merge(
 		$item,
 		(
@@ -55,7 +55,11 @@
 		)
 	);
 
-	$item-shrink: setter(map-get($map, item-shrink), ());
+	$item-shrink: setter(
+		map-get($map, input-group-item-shrink),
+		map-get($map, item-shrink),
+		()
+	);
 	$item-shrink: map-merge(
 		$item-shrink,
 		(
