@@ -24,7 +24,7 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
-		$header: setter(map-get($map, header), ());
+		$header: setter(map-get($map, modal-header), map-get($map, header), ());
 		$header: map-merge(
 			$header,
 			(
@@ -46,7 +46,11 @@
 			)
 		);
 
-		$header-close: setter(map-get($map, header-close), ());
+		$header-close: setter(
+			map-deep-get($map, header, close),
+			map-get($map, header-close),
+			()
+		);
 		$header-close: map-merge(
 			$header-close,
 			(
@@ -75,7 +79,7 @@
 			)
 		);
 
-		$body: setter(map-get($map, body), ());
+		$body: setter(map-get($map, modal-body), map-get($map, body), ());
 		$body: map-merge(
 			$body,
 			(
@@ -88,7 +92,7 @@
 			)
 		);
 
-		$footer: setter(map-get($map, footer), ());
+		$footer: setter(map-get($map, modal-footer), map-get($map, footer), ());
 		$footer: map-merge(
 			$footer,
 			(
