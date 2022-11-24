@@ -21,7 +21,7 @@ import {
 } from '@clayui/shared';
 import classNames from 'classnames';
 import fuzzy from 'fuzzy';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 const DELIMITER_KEYS = ['Enter', ','];
 
@@ -130,6 +130,15 @@ export interface IProps
 	items: Array<Item>;
 
 	/**
+	 * The off-screen live region informs screen reader users the result of
+	 * removing or adding a label.
+	 */
+	liveRegion?: {
+		added: string;
+		removed: string;
+	};
+
+	/**
 	 * Sets the name of the field to map the value/label of the item
 	 */
 	locator?: Locator;
@@ -170,6 +179,11 @@ export interface IProps
 	value?: string;
 }
 
+type LastChangeLiveRegion = {
+	label: string;
+	action: 'removed' | 'added';
+};
+
 const MultiSelectMenuRenderer: MenuRenderer = ({
 	locator,
 	onItemClick = () => {},
@@ -205,6 +219,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			isLoading = false,
 			isValid = true,
 			items,
+			liveRegion = {
+				added: 'Label {0} added to the list',
+				removed: 'Label {0} removed to the list',
+			},
 			locator = {
 				label: 'label',
 				value: 'value',
@@ -229,6 +247,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const containerRef = useRef<HTMLDivElement>(null);
 		const inputRef = useRef<HTMLInputElement | null>(null);
 		const lastItemRef = useRef<HTMLSpanElement | null>(null);
+		const lastChangesRef = useRef<LastChangeLiveRegion | null>(null);
 
 		const labelsRef = useRef<HTMLDivElement | null>(null);
 		const lastFocusedItemRef = useRef<string | null>(null);
@@ -296,6 +315,11 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			if (internalValue.trim() && DELIMITER_KEYS.includes(key)) {
 				event.preventDefault();
 
+				lastChangesRef.current = {
+					action: 'added',
+					label: internalValue,
+				};
+
 				setNewValue(getNewItem(internalValue));
 			} else if (
 				!internalValue &&
@@ -325,6 +349,52 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		};
 
+		const onRemove = useCallback(
+			(label: string, index: number) => {
+				if (labelsRef.current) {
+					const focusableElements = Array.from<HTMLElement>(
+						labelsRef.current.querySelectorAll('button')
+					);
+
+					const activeElement =
+						document.activeElement!.tagName === 'SPAN'
+							? document.activeElement!.querySelector('button')
+							: document.activeElement;
+
+					const position = focusableElements.indexOf(
+						activeElement as HTMLElement
+					);
+
+					const closeElement =
+						focusableElements[
+							focusableElements.length - 1 > position
+								? position + 1
+								: position - 1
+						];
+
+					if (closeElement) {
+						closeElement.focus();
+						lastFocusedItemRef.current =
+							closeElement.getAttribute('id');
+					} else {
+						inputElementRef.current?.focus();
+						lastFocusedItemRef.current = null;
+					}
+				}
+
+				lastChangesRef.current = {
+					action: 'removed',
+					label,
+				};
+
+				setItems([
+					...internalItems.slice(0, index),
+					...internalItems.slice(index + 1),
+				]);
+			},
+			[internalItems]
+		);
+
 		const labelId = useId();
 
 		return (
@@ -340,6 +410,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					ref={containerRef}
 				>
 					<ClayInput.GroupItem
+						aria-labelledby={otherProps['aria-labelledby']}
 						onFocus={(event) => {
 							lastFocusedItemRef.current =
 								event.target.getAttribute('id')!;
@@ -438,41 +509,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								item[locator.value]
 							}-close`;
 
-							const removeItem = () => {
-								if (labelsRef.current) {
-									const focusableElements =
-										Array.from<HTMLElement>(
-											labelsRef.current.querySelectorAll(
-												'button'
-											)
-										);
-
-									const position = focusableElements.indexOf(
-										document.activeElement as HTMLElement
-									);
-									const closeElement =
-										focusableElements[
-											focusableElements.length - 1 >
-											position
-												? position + 1
-												: position - 1
-										];
-
-									if (closeElement) {
-										closeElement.focus();
-										lastFocusedItemRef.current =
-											closeElement.getAttribute('id');
-									} else {
-										lastFocusedItemRef.current = null;
-									}
-								}
-
-								setItems([
-									...internalItems.slice(0, i),
-									...internalItems.slice(i + 1),
-								]);
-							};
-
 							return (
 								<React.Fragment key={id}>
 									<ClayLabel
@@ -480,7 +516,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 										id={id}
 										onKeyDown={({key}) => {
 											if (key === Keys.Backspace) {
-												removeItem();
+												onRemove(
+													item[locator.label],
+													i
+												);
 											}
 										}}
 										role="row"
@@ -511,7 +550,12 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 												className="close"
 												disabled={disabled}
 												id={closeId}
-												onClick={() => removeItem()}
+												onClick={() =>
+													onRemove(
+														item[locator.label],
+														i
+													)
+												}
 												ref={(ref) => {
 													if (
 														i ===
@@ -575,6 +619,19 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 							value={internalValue}
 						/>
 					</ClayInput.GroupItem>
+
+					<div className="sr-only">
+						<span aria-live="polite" aria-relevant="text">
+							{lastChangesRef.current
+								? sub(
+										liveRegion[
+											lastChangesRef.current.action
+										],
+										[lastChangesRef.current.label]
+								  )
+								: null}
+						</span>
+					</div>
 
 					{isLoading && (
 						<ClayInput.GroupItem shrink>

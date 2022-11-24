@@ -55,6 +55,7 @@ const ClayMultiSelectWithAutocomplete = (props: any) => {
 
 	return (
 		<ClayMultiSelect
+			aria-labelledby="multi-select-label"
 			inputName="myInput"
 			items={items}
 			onChange={setValue}
@@ -76,16 +77,19 @@ export const Default = (args: any) => {
 
 	return (
 		<>
-			<label htmlFor="multiSelect">Multi Select</label>
+			<label htmlFor="multiSelect" id="multi-select-label">
+				Multi Select
+			</label>
 
 			<ClayMultiSelect
+				aria-labelledby="multi-select-label"
 				disabled={args.disabled}
 				disabledClearAll={args.disabledClearAll}
 				id="multiSelect"
 				inputName="myInput"
 				isValid={args.isValid}
 				items={items}
-				onItemsChange={setItems}
+				onItemsChange={(items) => setItems(items)}
 				size={args.size}
 			/>
 		</>
@@ -111,9 +115,12 @@ export const ComparingItems = () => {
 
 	return (
 		<>
-			<label htmlFor="multiSelect">Multi Select</label>
+			<label htmlFor="multiSelect" id="multi-select-label">
+				Multi Select
+			</label>
 
 			<ClayMultiSelect
+				aria-labelledby="multi-select-label"
 				id="multiSelect"
 				inputName="myInput"
 				items={items}
@@ -150,9 +157,12 @@ export const SourceItems = () => {
 
 	return (
 		<>
-			<label htmlFor="multiSelect">Multi Select</label>
+			<label htmlFor="multiSelect" id="multi-select-label">
+				Multi Select
+			</label>
 
 			<ClayMultiSelect
+				aria-labelledby="multi-select-label"
 				inputName="myInput"
 				items={items}
 				onChange={setValue}
@@ -207,7 +217,9 @@ export const CustomMenu = () => {
 
 	return (
 		<>
-			<label htmlFor="multiSelect">Multi Select</label>
+			<label htmlFor="multiSelect" id="multi-select-label">
+				Multi Select
+			</label>
 
 			<ClayMultiSelectWithAutocomplete
 				id="multiSelect"
@@ -288,7 +300,9 @@ export const Group = (args: any) => {
 	return (
 		<div className="sheet">
 			<ClayForm.Group className={!args.isValid ? 'has-error' : ''}>
-				<label htmlFor="multiSelect">Composed MultiSelect</label>
+				<label htmlFor="multiSelect" id="multi-select-label">
+					Composed MultiSelect
+				</label>
 
 				<ClayInput.Group>
 					<ClayInput.GroupItem>
