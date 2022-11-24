@@ -19,6 +19,14 @@ exports[`ClayMultiSelect renders 1`] = `
           value=""
         />
       </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          aria-live="polite"
+          aria-relevant="text"
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -150,6 +158,14 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
           class="form-control-inset"
           type="text"
           value="one"
+        />
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          aria-live="polite"
+          aria-relevant="text"
         />
       </div>
       <div
@@ -339,6 +355,14 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
           value=""
         />
       </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          aria-live="polite"
+          aria-relevant="text"
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -470,6 +494,14 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
           class="form-control-inset"
           type="text"
           value=""
+        />
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          aria-live="polite"
+          aria-relevant="text"
         />
       </div>
       <div
@@ -622,6 +654,14 @@ exports[`ClayMultiSelect renders with items 1`] = `
           class="form-control-inset"
           type="text"
           value=""
+        />
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          aria-live="polite"
+          aria-relevant="text"
         />
       </div>
       <div

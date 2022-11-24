@@ -134,7 +134,7 @@ module.exports = {
 			statements: 85,
 		},
 		'./packages/clay-multi-select/src/': {
-			branches: 64,
+			branches: 62,
 			functions: 80,
 			lines: 78,
 			statements: 78,
