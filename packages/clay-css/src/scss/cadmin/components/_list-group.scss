@@ -493,10 +493,10 @@
 
 .list-group-sm {
 	.list-group-item {
-		@include clay-container($cadmin-list-group-sm-item);
+		@include clay-css($cadmin-list-group-sm-item);
 	}
 
 	.quick-action-menu {
-		@include clay-container($cadmin-list-group-sm-quick-action-menu);
+		@include clay-css($cadmin-list-group-sm-quick-action-menu);
 	}
 }

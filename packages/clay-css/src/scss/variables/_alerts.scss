@@ -217,7 +217,7 @@ $alert-indicator: map-deep-merge(
 // .alert-footer
 
 $alert-footer: () !default;
-$alert-footer: map-deep-merge(
+$alert-footer: map-merge(
 	(
 		margin-top: 1.375rem,
 	),

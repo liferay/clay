@@ -388,7 +388,7 @@ $cadmin-form-control-inset: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group: () !default;
-$cadmin-form-control-tag-group: map-deep-merge(
+$cadmin-form-control-tag-group: map-merge(
 	(
 		align-items: center,
 		color: $cadmin-secondary,
@@ -404,7 +404,7 @@ $cadmin-form-control-tag-group: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-autofit-row: () !default;
-$cadmin-form-control-tag-group-autofit-row: map-deep-merge(
+$cadmin-form-control-tag-group-autofit-row: map-merge(
 	(
 		align-items: center,
 		flex-grow: 1,
@@ -416,7 +416,7 @@ $cadmin-form-control-tag-group-autofit-row: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-autofit-col: () !default;
-$cadmin-form-control-tag-group-autofit-col: map-deep-merge(
+$cadmin-form-control-tag-group-autofit-col: map-merge(
 	(
 		padding-left: 8px,
 		padding-right: 8px,
@@ -425,7 +425,7 @@ $cadmin-form-control-tag-group-autofit-col: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-input-group-item: () !default;
-$cadmin-form-control-tag-group-input-group-item: map-deep-merge(
+$cadmin-form-control-tag-group-input-group-item: map-merge(
 	(
 		align-items: center,
 	),
@@ -433,7 +433,7 @@ $cadmin-form-control-tag-group-input-group-item: map-deep-merge(
 );
 
 $cadmin-form-control-tag-group-inline-item: () !default;
-$cadmin-form-control-tag-group-inline-item: map-deep-merge(
+$cadmin-form-control-tag-group-inline-item: map-merge(
 	(
 		height: $cadmin-form-control-inset-min-height,
 		margin-bottom: $cadmin-form-control-inset-margin-y,

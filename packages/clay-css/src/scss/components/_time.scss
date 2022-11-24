@@ -16,7 +16,7 @@
 	}
 
 	.input-group-text {
-		@include clay-container($clay-time-input-group-text);
+		@include clay-css($clay-time-input-group-text);
 	}
 
 	.clay-time-ampm {
@@ -30,7 +30,7 @@
 }
 
 .clay-time-edit {
-	@include clay-container($clay-time-edit);
+	@include clay-css($clay-time-edit);
 
 	&:first-child {
 		margin-left: math-sign(map-get($clay-time-edit, padding-left));
@@ -57,7 +57,7 @@
 }
 
 .clay-time-inner-spin {
-	@include clay-container($clay-time-inner-spin);
+	@include clay-css($clay-time-inner-spin);
 
 	.btn {
 		@include clay-button-variant($clay-time-inner-spin-btn);

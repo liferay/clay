@@ -479,10 +479,10 @@
 	}
 
 	.modal-content {
-		@include clay-container($modal-height-full-modal-content);
+		@include clay-css($modal-height-full-modal-content);
 
 		@include media-breakpoint-up(sm) {
-			@include clay-container($modal-height-full-modal-content-sm-up);
+			@include clay-css($modal-height-full-modal-content-sm-up);
 		}
 	}
 }

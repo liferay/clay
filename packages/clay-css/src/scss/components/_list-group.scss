@@ -522,10 +522,10 @@
 
 .list-group-sm {
 	.list-group-item {
-		@include clay-container($list-group-sm-item);
+		@include clay-css($list-group-sm-item);
 	}
 
 	.quick-action-menu {
-		@include clay-container($list-group-sm-quick-action-menu);
+		@include clay-css($list-group-sm-quick-action-menu);
 	}
 }

@@ -7,11 +7,11 @@
 		}
 
 		> .input-group-inset-item-before {
-			@include clay-container($clay-color-input-group-inset-item-before);
+			@include clay-css($clay-color-input-group-inset-item-before);
 		}
 
 		> .input-group-text {
-			@include clay-container($clay-color-input-group-text);
+			@include clay-css($clay-color-input-group-text);
 		}
 	}
 }
@@ -36,11 +36,11 @@
 	}
 
 	.form-group {
-		@include clay-container($clay-color-dropdown-menu-form-group);
+		@include clay-css($clay-color-dropdown-menu-form-group);
 	}
 
 	.input-group .input-group-inset-item-before {
-		@include clay-container(
+		@include clay-css(
 			$clay-color-dropdown-menu-input-group-inset-item-before
 		);
 	}
@@ -65,7 +65,7 @@
 // Clay Color Header
 
 .clay-color-header {
-	@include clay-container($clay-color-header);
+	@include clay-css($clay-color-header);
 
 	.component-title {
 		@include clay-title($clay-color-header-component-title);
@@ -75,13 +75,13 @@
 // Clay Color Footer
 
 .clay-color-footer {
-	@include clay-container($clay-color-footer);
+	@include clay-css($clay-color-footer);
 }
 
 // Clay Color Swatch
 
 .clay-color-swatch {
-	@include clay-row($clay-color-swatch);
+	@include clay-css($clay-color-swatch);
 
 	+ .clay-color-swatch {
 		margin-top: 0;
@@ -89,24 +89,21 @@
 }
 
 .clay-color-swatch-item {
-	@include clay-container($clay-color-swatch-item);
+	@include clay-css($clay-color-swatch-item);
 }
 
 // Clay Color Map Group
 
 .clay-color-map-group {
-	@include clay-container($clay-color-map-group);
+	@include clay-css($clay-color-map-group);
 }
 
 .clay-color-map {
-	@include clay-container($clay-color-map);
+	@include clay-css($clay-color-map);
 }
 
 .clay-color-map-hsb {
-	background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)),
-		linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-
-	@include clay-container($clay-color-map-hsb);
+	@include clay-css($clay-color-map-hsb);
 }
 
 .clay-color-map-pointer {
@@ -116,27 +113,25 @@
 // Clay Color Map Values
 
 .clay-color-map-values {
-	@include clay-container($clay-color-map-values);
+	@include clay-css($clay-color-map-values);
 
 	.form-control {
 		@include clay-form-control-variant($clay-color-map-values-input);
 	}
 
 	.input-group .input-group-inset-item-before {
-		@include clay-container(
-			$clay-color-map-values-input-group-inset-item-before
-		);
+		@include clay-css($clay-color-map-values-input-group-inset-item-before);
 	}
 
 	.form-group {
-		@include clay-container($clay-color-map-values-form-group);
+		@include clay-css($clay-color-map-values-form-group);
 	}
 }
 
 // Clay Color Range
 
 .clay-color-range {
-	@include clay-container($clay-color-range);
+	@include clay-css($clay-color-range);
 }
 
 .clay-color-range-hue {

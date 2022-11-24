@@ -120,7 +120,7 @@ $date-picker-day: map-deep-merge(
 // Date Picker Calendar
 
 $date-picker-calendar-container: () !default;
-$date-picker-calendar-container: map-deep-merge(
+$date-picker-calendar-container: map-merge(
 	(
 		float: left,
 		min-width: 100%,
@@ -129,7 +129,7 @@ $date-picker-calendar-container: map-deep-merge(
 );
 
 $date-picker-calendar-header-container: () !default;
-$date-picker-calendar-header-container: map-deep-merge(
+$date-picker-calendar-header-container: map-merge(
 	(
 		padding-bottom: 1rem,
 		padding-left: 1rem,
@@ -140,7 +140,7 @@ $date-picker-calendar-header-container: map-deep-merge(
 );
 
 $date-picker-calendar-body-container: () !default;
-$date-picker-calendar-body-container: map-deep-merge(
+$date-picker-calendar-body-container: map-merge(
 	(
 		padding-left: 1rem,
 		padding-right: 1rem,
@@ -150,7 +150,7 @@ $date-picker-calendar-body-container: map-deep-merge(
 );
 
 $date-picker-calendar-footer-container: () !default;
-$date-picker-calendar-footer-container: map-deep-merge(
+$date-picker-calendar-footer-container: map-merge(
 	(
 		border-color: $gray-400,
 		border-style: solid,

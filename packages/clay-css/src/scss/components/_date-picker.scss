@@ -47,19 +47,19 @@
 // Date Picker Calendar
 
 .date-picker-calendar {
-	@include clay-container($date-picker-calendar-container);
+	@include clay-css($date-picker-calendar-container);
 }
 
 .date-picker-calendar-header {
-	@include clay-container($date-picker-calendar-header-container);
+	@include clay-css($date-picker-calendar-header-container);
 }
 
 .date-picker-calendar-body {
-	@include clay-container($date-picker-calendar-body-container);
+	@include clay-css($date-picker-calendar-body-container);
 }
 
 .date-picker-calendar-footer {
-	@include clay-container($date-picker-calendar-footer-container);
+	@include clay-css($date-picker-calendar-footer-container);
 }
 
 .date-picker-calendar-item {

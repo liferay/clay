@@ -482,12 +482,10 @@
 	}
 
 	.modal-content {
-		@include clay-container($cadmin-modal-height-full-modal-content);
+		@include clay-css($cadmin-modal-height-full-modal-content);
 
 		@include media-breakpoint-up(sm, $cadmin-grid-breakpoints) {
-			@include clay-container(
-				$cadmin-modal-height-full-modal-content-sm-up
-			);
+			@include clay-css($cadmin-modal-height-full-modal-content-sm-up);
 		}
 	}
 }

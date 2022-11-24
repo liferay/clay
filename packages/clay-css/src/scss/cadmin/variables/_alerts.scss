@@ -207,7 +207,7 @@ $cadmin-alert-indicator: map-deep-merge(
 // .alert-footer
 
 $cadmin-alert-footer: () !default;
-$cadmin-alert-footer: map-deep-merge(
+$cadmin-alert-footer: map-merge(
 	(
 		margin-top: 16px,
 	),

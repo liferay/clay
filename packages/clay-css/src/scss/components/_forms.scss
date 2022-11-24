@@ -180,14 +180,14 @@ div {
 }
 
 .form-control-tag-group {
-	@include clay-container($form-control-tag-group);
+	@include clay-css($form-control-tag-group);
 
 	.autofit-row {
-		@include clay-container($form-control-tag-group-autofit-row);
+		@include clay-css($form-control-tag-group-autofit-row);
 	}
 
 	.autofit-col {
-		@include clay-container($form-control-tag-group-autofit-col);
+		@include clay-css($form-control-tag-group-autofit-col);
 
 		.form-control-inset {
 			width: auto;
@@ -195,11 +195,11 @@ div {
 	}
 
 	.input-group-item {
-		@include clay-container($form-control-tag-group-input-group-item);
+		@include clay-css($form-control-tag-group-input-group-item);
 	}
 
 	.inline-item {
-		@include clay-container($form-control-tag-group-inline-item);
+		@include clay-css($form-control-tag-group-inline-item);
 	}
 
 	.btn {

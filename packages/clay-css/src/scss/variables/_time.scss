@@ -56,9 +56,10 @@ $clay-time-ampm: map-deep-merge(
 );
 
 $clay-time-input-group-text: () !default;
-$clay-time-input-group-text: map-deep-merge(
+$clay-time-input-group-text: map-merge(
 	(
-		bg: transparent,
+		background-color:
+			setter(map-get($clay-time-input-group-text, bg), transparent),
 		border-color: transparent,
 		padding-bottom: 0,
 		padding-left: 0,
@@ -72,7 +73,7 @@ $clay-time-divider-margin-left: null !default;
 $clay-time-divider-margin-right: null !default;
 
 $clay-time-edit: () !default;
-$clay-time-edit: map-deep-merge(
+$clay-time-edit: map-merge(
 	(
 		display: flex,
 		flex-wrap: wrap,
@@ -84,7 +85,7 @@ $clay-time-edit: map-deep-merge(
 );
 
 $clay-time-inner-spin: () !default;
-$clay-time-inner-spin: map-deep-merge(
+$clay-time-inner-spin: map-merge(
 	(
 		border-color: $secondary-d1,
 		border-radius: 8px,

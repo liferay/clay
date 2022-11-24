@@ -49,19 +49,19 @@
 // Date Picker Calendar
 
 .date-picker-calendar {
-	@include clay-container($cadmin-date-picker-calendar-container);
+	@include clay-css($cadmin-date-picker-calendar-container);
 }
 
 .date-picker-calendar-header {
-	@include clay-container($cadmin-date-picker-calendar-header-container);
+	@include clay-css($cadmin-date-picker-calendar-header-container);
 }
 
 .date-picker-calendar-body {
-	@include clay-container($cadmin-date-picker-calendar-body-container);
+	@include clay-css($cadmin-date-picker-calendar-body-container);
 }
 
 .date-picker-calendar-footer {
-	@include clay-container($cadmin-date-picker-calendar-footer-container);
+	@include clay-css($cadmin-date-picker-calendar-footer-container);
 }
 
 .date-picker-calendar-item {
