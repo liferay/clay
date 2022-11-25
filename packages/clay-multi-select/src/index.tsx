@@ -104,6 +104,12 @@ export interface IProps
 	disabledClearAll?: boolean;
 
 	/**
+	 * Defines the description of hotkeys for the component, use this
+	 * to handle internationalization.
+	 */
+	hotkeysDescription?: string;
+
+	/**
 	 * Value used for each selected item's hidden input name attribute
 	 */
 	inputName?: string;
@@ -214,6 +220,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			defaultValue = '',
 			disabled,
 			disabledClearAll,
+			hotkeysDescription = 'Use the arrow keys to navigate the labels and pressing backspace will delete.',
 			inputName,
 			inputValue,
 			isLoading = false,
@@ -396,6 +403,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		);
 
 		const labelId = useId();
+		const ariaDescriptionId = useId();
 
 		return (
 			<FocusScope arrowKeysUpDown={false}>
@@ -410,6 +418,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					ref={containerRef}
 				>
 					<ClayInput.GroupItem
+						aria-describedby={ariaDescriptionId}
 						aria-labelledby={otherProps['aria-labelledby']}
 						onFocus={(event) => {
 							lastFocusedItemRef.current =
@@ -620,19 +629,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 						/>
 					</ClayInput.GroupItem>
 
-					<div className="sr-only">
-						<span aria-live="polite" aria-relevant="text">
-							{lastChangesRef.current
-								? sub(
-										liveRegion[
-											lastChangesRef.current.action
-										],
-										[lastChangesRef.current.label]
-								  )
-								: null}
-						</span>
-					</div>
-
 					{isLoading && (
 						<ClayInput.GroupItem shrink>
 							<ClayLoadingIndicator small />
@@ -667,6 +663,20 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								/>
 							</ClayInput.GroupItem>
 						)}
+
+					<div className="sr-only">
+						<span id={ariaDescriptionId}>{hotkeysDescription}</span>
+						<span aria-live="polite" aria-relevant="text">
+							{lastChangesRef.current
+								? sub(
+										liveRegion[
+											lastChangesRef.current.action
+										],
+										[lastChangesRef.current.label]
+								  )
+								: null}
+						</span>
+					</div>
 
 					{sourceItems.length > 0 && (
 						<ClayAutocomplete.DropDown
