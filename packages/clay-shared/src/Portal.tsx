@@ -40,7 +40,7 @@ export interface IBaseProps {
 }
 
 interface IProps extends IBaseProps {
-	children: React.ReactElement | Array<React.ReactElement>;
+	children: React.ReactNode;
 
 	/**
 	 * Ref of element to render portal into.

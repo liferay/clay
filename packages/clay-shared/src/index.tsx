@@ -13,6 +13,7 @@ export {Keys} from './Keys';
 export {LinkOrButton} from './LinkOrButton';
 export {MouseSafeArea} from './MouseSafeArea';
 export {observeRect} from './observeRect';
+export {Overlay} from './Overlay';
 export {setElementFullHeight} from './setElementFullHeight';
 export {sub} from './sub';
 export {useDebounce} from './useDebounce';
