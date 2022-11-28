@@ -422,6 +422,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 						(internalValue || internalItems.length > 0) && (
 							<ClayInput.GroupItem shrink>
 								<ClayButtonWithIcon
+									aria-label={clearAllTitle}
 									borderless
 									className="component-action"
 									displayType="secondary"
