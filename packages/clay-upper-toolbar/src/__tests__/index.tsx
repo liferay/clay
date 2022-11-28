@@ -29,6 +29,7 @@ describe('ClayUpperToolbar', () => {
 				<ClayUpperToolbar.Item>
 					<ClayButton.Group>
 						<ClayButtonWithIcon
+							aria-label="Left"
 							displayType="secondary"
 							onClick={() => {}}
 							small
@@ -37,6 +38,7 @@ describe('ClayUpperToolbar', () => {
 						/>
 
 						<ClayButtonWithIcon
+							aria-label="Right"
 							displayType="secondary"
 							onClick={() => {}}
 							small
@@ -70,6 +72,7 @@ describe('ClayUpperToolbar', () => {
 						spritemap={spritemap}
 						trigger={
 							<ClayButtonWithIcon
+								aria-label="More actions"
 								displayType="unstyled"
 								small
 								spritemap={spritemap}

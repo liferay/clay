@@ -10,6 +10,11 @@ import ClayButton from './Button';
 
 interface IProps extends React.ComponentProps<typeof ClayButton> {
 	/**
+	 * Define a value that labels the button.
+	 */
+	'aria-label': string;
+
+	/**
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;

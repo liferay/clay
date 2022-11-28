@@ -5,8 +5,9 @@
 
 import classNames from 'classnames';
 import React from 'react';
+import warning from 'warning';
 
-import ButtonGroup from './Group';
+import Group from './Group';
 
 export type DisplayType =
 	| null
@@ -85,29 +86,44 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 			...otherProps
 		}: IProps,
 		ref
-	) => (
-		<button
-			className={classNames(className, 'btn', {
-				'alert-btn': alert,
-				'btn-block': block,
-				'btn-monospaced': monospaced,
-				'btn-outline-borderless': borderless,
-				'btn-sm': small && !size,
-				[`btn-${displayType}`]: displayType && !outline && !borderless,
-				[`btn-outline-${displayType}`]:
-					displayType && (outline || borderless),
-				'rounded-pill': rounded,
-				[`btn-${size}`]: size,
-			})}
-			ref={ref}
-			type={type}
-			{...otherProps}
-		>
-			{children}
-		</button>
-	)
+	) => {
+		const childArray = React.Children.toArray(children);
+
+		warning(
+			!(
+				childArray.length === 1 &&
+				// @ts-ignore
+				childArray[0].type?.displayName === 'ClayIcon' &&
+				typeof otherProps['aria-label'] !== 'string'
+			),
+			'Button accessibility: component has only the Icon declared, defines an `aria-label` or `title` (consult your design team) attribute that labels the interactive button that screen readers can read.'
+		);
+
+		return (
+			<button
+				className={classNames(className, 'btn', {
+					'alert-btn': alert,
+					'btn-block': block,
+					'btn-monospaced': monospaced,
+					'btn-outline-borderless': borderless,
+					'btn-sm': small && !size,
+					[`btn-${displayType}`]:
+						displayType && !outline && !borderless,
+					[`btn-outline-${displayType}`]:
+						displayType && (outline || borderless),
+					'rounded-pill': rounded,
+					[`btn-${size}`]: size,
+				})}
+				ref={ref}
+				type={type}
+				{...otherProps}
+			>
+				{children}
+			</button>
+		);
+	}
 );
 
 ClayButton.displayName = 'ClayButton';
 
-export default Object.assign(ClayButton, {Group: ButtonGroup});
+export default Object.assign(ClayButton, {Group});

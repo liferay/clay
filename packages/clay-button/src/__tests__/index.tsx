@@ -93,7 +93,11 @@ describe('ClayButton', () => {
 
 	it('renders ButtonWithIcon', () => {
 		const testRenderer = TestRenderer.create(
-			<ClayButtonWithIcon spritemap="/some/path" symbol="trash" />
+			<ClayButtonWithIcon
+				aria-label="Delete"
+				spritemap="/some/path"
+				symbol="trash"
+			/>
 		);
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
@@ -102,6 +106,7 @@ describe('ClayButton', () => {
 	it('renders ButtonWithIcon without monospaced', () => {
 		const testRenderer = TestRenderer.create(
 			<ClayButtonWithIcon
+				aria-label="Delete"
 				monospaced={false}
 				spritemap="/some/path"
 				symbol="trash"

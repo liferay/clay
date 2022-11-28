@@ -121,6 +121,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         class="input-group-item input-group-item-shrink"
       >
         <button
+          aria-label="Clear All"
           class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
           title="Clear All"
           type="button"
@@ -376,6 +377,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
         class="input-group-item input-group-item-shrink"
       >
         <button
+          aria-label="Clear All"
           class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
           title="Clear All"
           type="button"
@@ -495,6 +497,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
         class="input-group-item input-group-item-shrink"
       >
         <button
+          aria-label="Clear All"
           class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
           title="Clear All"
           type="button"

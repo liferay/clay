@@ -64,6 +64,7 @@ exports[`ClayUpperToolbar renders 1`] = `
               role="group"
             >
               <button
+                aria-label="Left"
                 class="btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
@@ -77,6 +78,7 @@ exports[`ClayUpperToolbar renders 1`] = `
                 </svg>
               </button>
               <button
+                aria-label="Right"
                 class="btn btn-monospaced btn-sm btn-secondary"
                 type="button"
               >
@@ -125,6 +127,7 @@ exports[`ClayUpperToolbar renders 1`] = `
                 aria-controls="clay-dropdown-menu-1"
                 aria-expanded="false"
                 aria-haspopup="true"
+                aria-label="More actions"
                 class="dropdown-toggle btn btn-monospaced btn-sm btn-unstyled"
                 style=""
                 type="button"

@@ -251,6 +251,7 @@ export const ClayCardWithInfo = ({
 								spritemap={spritemap}
 								trigger={
 									<ClayButtonWithIcon
+										aria-label="More actions"
 										{...dropDownTriggerProps}
 										className="component-action"
 										disabled={disabled}
