@@ -3,13 +3,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch} from '@clayui/shared';
+import {
+	InternalDispatch,
+	useInteractionFocus,
+	useInternalState,
+} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import ClayDropDown from './DropDown';
 import ClayDropDownMenu from './Menu';
 import Drilldown from './drilldown';
+
+import type {Messages} from './drilldown';
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -61,16 +67,21 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 		typeof ClayDropDown
 	>['menuElementAttrs'];
 
+	menuHeight?: React.ComponentProps<typeof ClayDropDown>['menuHeight'];
+
+	menuWidth?: React.ComponentProps<typeof ClayDropDown>['menuWidth'];
+
+	/**
+	 * Messages for drilldown.
+	 */
+	messages?: Messages;
+
 	/**
 	 * Map of menus and items to be used in the drilldown. Each key should be a unique identifier for the menu.
 	 */
 	menus: {
 		[id: string]: React.ComponentProps<typeof Drilldown.Menu>['items'];
 	};
-
-	menuHeight?: React.ComponentProps<typeof ClayDropDown>['menuHeight'];
-
-	menuWidth?: React.ComponentProps<typeof ClayDropDown>['menuWidth'];
 
 	/**
 	 * Function for setting the offset of the menu from the trigger.
@@ -106,18 +117,22 @@ type History = {
 };
 
 export const ClayDropDownWithDrilldown = ({
-	active,
+	active: externalActive,
 	alignmentByViewport,
 	alignmentPosition,
 	className,
 	containerElement,
-	defaultActive,
+	defaultActive = false,
 	defaultActiveMenu,
 	initialActiveMenu,
 	menuElementAttrs,
 	menuHeight,
 	menuWidth,
 	menus,
+	messages = {
+		back: '',
+		goTo: '',
+	},
 	offsetFn,
 	onActiveChange,
 	renderMenuOnClick,
@@ -130,16 +145,25 @@ export const ClayDropDownWithDrilldown = ({
 	const [direction, setDirection] = useState<'prev' | 'next'>();
 	const [history, setHistory] = useState<Array<History>>([]);
 
+	const {isFocusVisible} = useInteractionFocus();
+
+	const [active, setActive] = useInternalState({
+		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
+		handleName: 'onActiveChange',
+		name: 'active',
+		onChange: onActiveChange,
+		value: externalActive,
+	});
+
 	const focusHistory = useRef<Array<HTMLElement>>([]);
 
 	const innerRef = useRef<HTMLDivElement>(null);
 
-	const isKeyboard = useRef<boolean>(false);
-
 	const menuIds = Object.keys(menus);
 
 	useEffect(() => {
-		if (!isKeyboard.current) {
+		if (!isFocusVisible()) {
 			return;
 		}
 
@@ -174,7 +198,6 @@ export const ClayDropDownWithDrilldown = ({
 			alignmentPosition={alignmentPosition}
 			className={className}
 			containerElement={containerElement}
-			defaultActive={defaultActive}
 			hasRightSymbols
 			menuElementAttrs={{
 				...menuElementAttrs,
@@ -183,7 +206,16 @@ export const ClayDropDownWithDrilldown = ({
 			menuHeight={menuHeight}
 			menuWidth={menuWidth}
 			offsetFn={offsetFn}
-			onActiveChange={onActiveChange}
+			onActiveChange={(value: boolean) => {
+				if (!active) {
+					setActiveMenu(defaultActiveMenu);
+					focusHistory.current = [];
+					setHistory([]);
+					setDirection('prev');
+				}
+
+				setActive(value);
+			}}
 			renderMenuOnClick={renderMenuOnClick}
 			trigger={trigger}
 		>
@@ -200,6 +232,7 @@ export const ClayDropDownWithDrilldown = ({
 							}
 							items={menus[menuKey]}
 							key={menuKey}
+							messages={messages}
 							onBack={() => {
 								const [parent] = history.slice(-1);
 
@@ -220,13 +253,6 @@ export const ClayDropDownWithDrilldown = ({
 								setDirection('next');
 
 								setActiveMenu(childId);
-							}}
-							onKeyDown={(event) => {
-								if (event.key !== 'Enter') {
-									isKeyboard.current = false;
-								} else {
-									isKeyboard.current = true;
-								}
 							}}
 							spritemap={spritemap}
 						/>

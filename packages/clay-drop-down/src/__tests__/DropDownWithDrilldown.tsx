@@ -166,7 +166,7 @@ describe('ClayDropDownWithDrilldown', () => {
 		const {getByTestId} = render(
 			<ClayDropDownWithDrilldown
 				active={false}
-				initialActiveMenu="x0a3"
+				defaultActiveMenu="x0a3"
 				menus={{
 					x0a3: [
 						{onClick: onActiveChange, title: 'Toggle'},

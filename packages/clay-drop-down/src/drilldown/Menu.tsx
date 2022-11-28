@@ -14,6 +14,11 @@ import Divider from '../Divider';
 
 type TType = 'divider';
 
+export type Messages = {
+	goTo: string;
+	back: string;
+};
+
 export interface IItem extends React.ComponentProps<typeof LinkOrButton> {
 	child?: string;
 	title?: string;
@@ -27,9 +32,9 @@ export interface IProps {
 	direction?: 'prev' | 'next';
 	header?: string;
 	items: Array<IItem>;
+	messages: Messages;
 	onBack: () => void;
 	onForward: (title: string, child: string) => void;
-	onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
 	spritemap?: string;
 }
 
@@ -38,9 +43,9 @@ const DrilldownMenu = ({
 	direction,
 	header,
 	items,
+	messages,
 	onBack,
 	onForward,
-	onKeyDown,
 	spritemap,
 }: IProps) => {
 	const initialClasses = classNames('transitioning', {
@@ -49,7 +54,7 @@ const DrilldownMenu = ({
 
 	return (
 		<CSSTransition
-			aria-hidden={active}
+			aria-hidden={!active}
 			className={classNames('drilldown-item', {
 				'drilldown-current': active,
 			})}
@@ -71,11 +76,13 @@ const DrilldownMenu = ({
 							onClick={onBack}
 						>
 							<ClayButtonWithIcon
+								aria-label={messages.back}
 								className="component-action dropdown-item-indicator-start"
 								onClick={onBack}
-								onKeyDown={onKeyDown}
 								spritemap={spritemap}
 								symbol="angle-left"
+								tabIndex={-1}
+								title={messages.back}
 							/>
 
 							<span className="dropdown-item-indicator-text-start">
@@ -125,8 +132,8 @@ const DrilldownMenu = ({
 													onForward(title, child);
 												}
 											}}
-											onKeyDown={onKeyDown}
 											role="menuitem"
+											tabIndex={-1}
 										>
 											{symbol && (
 												<span className="dropdown-item-indicator-start">
@@ -142,7 +149,11 @@ const DrilldownMenu = ({
 											</span>
 
 											{child && (
-												<span className="dropdown-item-indicator-end">
+												<span
+													aria-label={`${messages.goTo} ${title}`}
+													className="dropdown-item-indicator-end"
+													title={`${messages.goTo} ${title}`}
+												>
 													<ClayIcon
 														spritemap={spritemap}
 														symbol="angle-right"

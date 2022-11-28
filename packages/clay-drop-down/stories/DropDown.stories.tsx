@@ -391,7 +391,7 @@ export const AlignmentPositions = () => (
 
 export const Drilldown = (args: any) => (
 	<ClayDropDownWithDrilldown
-		initialActiveMenu="x0a3"
+		defaultActiveMenu="x0a3"
 		menus={{
 			x0a3: [
 				{href: '#', title: 'Hash Link'},
@@ -406,6 +406,10 @@ export const Drilldown = (args: any) => (
 				{child: 'x0a5', title: 'Subnav'},
 			],
 			x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
+		}}
+		messages={{
+			back: 'Back',
+			goTo: 'Go to',
 		}}
 		renderMenuOnClick={args.renderMenuOnClick}
 		trigger={<ClayButton>Click Me</ClayButton>}
@@ -426,7 +430,7 @@ export const DrillDownWithActive = () => {
 	return (
 		<ClayDropDownWithDrilldown
 			active={active}
-			initialActiveMenu="x0a3"
+			defaultActiveMenu="x0a3"
 			menus={{
 				x0a3: [
 					{href: '#', title: 'Hash Link'},
@@ -444,6 +448,10 @@ export const DrillDownWithActive = () => {
 					{child: 'x0a5', title: 'Subnav'},
 				],
 				x0a5: [{title: 'The'}, {title: 'End'}],
+			}}
+			messages={{
+				back: 'Back',
+				goTo: 'Go to',
 			}}
 			onActiveChange={onActiveChange}
 			trigger={<ClayButton>Click Me</ClayButton>}
