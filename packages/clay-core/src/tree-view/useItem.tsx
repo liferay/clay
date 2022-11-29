@@ -207,22 +207,6 @@ export function ItemContextProvider({children, value}: Props) {
 
 			const child = item[nestedKey!];
 
-			if (
-				typeof hoverTimeoutIdRef.current !== 'number' &&
-				!expandedKeys.has(item.key) &&
-				child &&
-				Array.isArray(child) &&
-				child.length > 0
-			) {
-				hoverTimeoutIdRef.current = setTimeout(() => {
-					hoverTimeoutIdRef.current = null;
-
-					if (monitor.isOver({shallow: true})) {
-						open(item.key);
-					}
-				}, 500) as unknown as number;
-			}
-
 			const dropItemRect = (
 				childRef.current! as HTMLElement
 			).getBoundingClientRect();
@@ -241,6 +225,23 @@ export function ItemContextProvider({children, value}: Props) {
 				!expandedKeys.has(item.key)
 			) {
 				currentPosition = TARGET_POSITION.BOTTOM;
+			}
+
+			if (
+				currentPosition === TARGET_POSITION.MIDDLE &&
+				typeof hoverTimeoutIdRef.current !== 'number' &&
+				!expandedKeys.has(item.key) &&
+				child &&
+				Array.isArray(child) &&
+				child.length > 0
+			) {
+				hoverTimeoutIdRef.current = setTimeout(() => {
+					hoverTimeoutIdRef.current = null;
+
+					if (monitor.isOver({shallow: true})) {
+						open(item.key);
+					}
+				}, 500) as unknown as number;
 			}
 
 			if (onItemHover) {
