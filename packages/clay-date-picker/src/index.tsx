@@ -13,7 +13,6 @@ import {
 	useId,
 	useInternalState,
 } from '@clayui/shared';
-import {hideOthers} from 'aria-hidden';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import DateNavigation from './DateNavigation';
@@ -385,11 +384,6 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		/**
 		 * Create a ref to store the datepicker DOM element
 		 */
-		const dropdownContainerRef = useRef<HTMLDivElement | null>(null);
-
-		/**
-		 * Create a ref to store the datepicker DOM element
-		 */
 		const triggerElementRef = useRef<HTMLDivElement | null>(null);
 
 		/**
@@ -610,21 +604,6 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		const handleCalendarButtonClicked = () =>
 			setExpandedValue(!expandedValue);
 
-		/**
-		 * Handle with the focus when it's outside of the component
-		 * In this case, forces the state of expanded to be false
-		 */
-		const handleFocus = (event: FocusEvent) => {
-			if (
-				dropdownContainerRef.current &&
-				!dropdownContainerRef.current.contains(event.target as Node) &&
-				triggerElementRef.current &&
-				!triggerElementRef.current.contains(event.target as Node)
-			) {
-				setExpandedValue(false);
-			}
-		};
-
 		const calendarNavigation = useCalendarNavigation({
 			daysSelected,
 			isOpen: expandedValue,
@@ -647,21 +626,6 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		});
 
 		const ariaControls = useId();
-
-		useEffect(() => {
-			if (dropdownContainerRef.current && expandedValue) {
-				// Hide everything from ARIA except the MenuElement
-				return hideOthers(dropdownContainerRef.current);
-			}
-		}, [expandedValue]);
-
-		useEffect(() => {
-			document.addEventListener('focus', handleFocus, true);
-
-			return () => {
-				document.removeEventListener('focus', handleFocus, true);
-			};
-		}, [handleFocus]);
 
 		return (
 			<FocusScope arrowKeysUpDown={false}>
@@ -711,11 +675,11 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							aria-label={ariaLabels.dialog}
 							className="date-picker-dropdown-menu"
 							data-testid="dropdown"
-							focusRefOnEsc={chooseDateRef}
 							id={ariaControls}
+							lock
 							onActiveChange={setExpandedValue}
-							ref={dropdownContainerRef}
 							role="dialog"
+							triggerRef={chooseDateRef}
 						>
 							<div
 								aria-label={formatDate(
