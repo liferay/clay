@@ -51,19 +51,20 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 	);
 }
 
-function getNewItemPath(item: Value, overPosition: Position) {
-	let indexes = [...item.indexes];
-	const lastIndex = indexes.pop();
+function getNewItemPath(path: Array<number>, overPosition: Position) {
+	let indexes = [...path];
+
+	const lastPathIndex = indexes.pop() as number;
 
 	switch (overPosition) {
 		case TARGET_POSITION.BOTTOM:
-			indexes = [...indexes, lastIndex! + 1];
+			indexes = [...indexes, lastPathIndex + 1];
 			break;
 		case TARGET_POSITION.MIDDLE:
-			indexes = [...indexes, lastIndex!, 0];
+			indexes = [...indexes, lastPathIndex, 0];
 			break;
 		case TARGET_POSITION.TOP:
-			indexes = [...indexes, lastIndex!];
+			indexes = [...indexes, lastPathIndex];
 			break;
 		default:
 			break;
@@ -174,7 +175,7 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			const indexes = getNewItemPath(item, overPosition!);
+			const indexes = getNewItemPath(item.indexes, overPosition!);
 
 			if (onItemMove) {
 				const tree = createImmutableTree(items as any, nestedKey!);
@@ -204,9 +205,14 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
+			const child = item[nestedKey!];
+
 			if (
 				typeof hoverTimeoutIdRef.current !== 'number' &&
-				!expandedKeys.has(item.key)
+				!expandedKeys.has(item.key) &&
+				child &&
+				Array.isArray(child) &&
+				child.length > 0
 			) {
 				hoverTimeoutIdRef.current = setTimeout(() => {
 					hoverTimeoutIdRef.current = null;
@@ -239,7 +245,7 @@ export function ItemContextProvider({children, value}: Props) {
 
 			if (onItemHover) {
 				const tree = createImmutableTree(items as any, nestedKey!);
-				const indexes = getNewItemPath(item, currentPosition);
+				const indexes = getNewItemPath(item.indexes, currentPosition);
 
 				onItemHover(
 					removeItemInternalProps(
