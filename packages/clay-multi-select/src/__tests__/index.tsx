@@ -6,6 +6,7 @@
 import ClayMultiSelect, {itemLabelFilter} from '..';
 import ClayDropDown from '@clayui/drop-down';
 import {cleanup, fireEvent, render} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 const items = [
@@ -229,7 +230,7 @@ describe('Interactions', () => {
 	it('autocomplete menu renders with left and top styles', () => {
 		const onItemsChangeFn = jest.fn();
 
-		render(
+		const {container} = render(
 			<ClayMultiSelectWithState
 				items={[items[0]]}
 				onItemsChange={onItemsChangeFn}
@@ -237,6 +238,13 @@ describe('Interactions', () => {
 				spritemap="/foo/bar"
 			/>
 		);
+
+		const input = container.querySelector<HTMLInputElement>('input');
+
+		userEvent.click(input!);
+		fireEvent.change(input!, {
+			target: {value: 'foo'},
+		});
 
 		const menuStyles = (
 			document.querySelector('.autocomplete-dropdown-menu') as HTMLElement

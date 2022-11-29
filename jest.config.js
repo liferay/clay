@@ -14,7 +14,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-autocomplete/src/': {
-			branches: 79,
+			branches: 77,
 			functions: 93,
 			lines: 92,
 			statements: 92,
@@ -74,9 +74,9 @@ module.exports = {
 			statements: 82,
 		},
 		'./packages/clay-drop-down/src/': {
-			branches: 60,
-			functions: 57,
-			lines: 73,
+			branches: 58,
+			functions: 53,
+			lines: 72,
 			statements: 72,
 		},
 		'./packages/clay-empty-state/src/': {
