@@ -8,7 +8,6 @@ exports[`BasicRendering renders by default 1`] = `
     >
       <div
         class="input-group"
-        style=""
       >
         <div
           class="input-group-item"
@@ -51,15 +50,20 @@ exports[`BasicRendering renders by default 1`] = `
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
         aria-hidden="true"
         aria-label="Choose date"
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
         id="clay-id-1"
         role="dialog"
-        style="left: -999px; top: -995px;"
       >
         <div
           aria-label="April 2019"
@@ -816,6 +820,11 @@ exports[`BasicRendering renders by default 1`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -874,9 +883,16 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
         aria-label="Choose date"
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-3"
@@ -1639,6 +1655,12 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -1727,9 +1749,16 @@ exports[`BasicRendering renders date picker with time 1`] = `
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
         aria-label="Choose date"
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-4"
@@ -2634,6 +2663,12 @@ exports[`BasicRendering renders date picker with time 1`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -2692,9 +2727,16 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
         aria-label="Choose date"
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-6"
@@ -3592,6 +3634,12 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;

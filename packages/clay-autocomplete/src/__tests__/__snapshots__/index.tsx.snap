@@ -22,7 +22,10 @@ exports[`ClayAutocomplete renders Autocomplete with other markup component 1`] =
 
 exports[`ClayAutocomplete renders DropDown with alignment with container 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <input
       class="form-control"
       type="text"

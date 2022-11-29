@@ -55,8 +55,15 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-5"
@@ -818,6 +825,12 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -874,9 +887,15 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
         aria-hidden="true"
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
         id="clay-id-3"
@@ -1638,6 +1657,11 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -1697,8 +1721,15 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-2"
@@ -2461,6 +2492,12 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -2520,8 +2557,15 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-6"
@@ -3298,6 +3342,12 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -3359,9 +3409,15 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
         aria-hidden="true"
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
         id="clay-id-4"
@@ -4123,6 +4179,11 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;
@@ -4182,8 +4243,15 @@ exports[`IncrementalInteractions date entered in the input element should reflec
     </div>
   </div>
   <div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-start="true"
+      tabindex="0"
+    />
     <div>
       <div
+        aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-1"
@@ -4946,6 +5014,12 @@ exports[`IncrementalInteractions date entered in the input element should reflec
         </div>
       </div>
     </div>
+    <span
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-scope-end="true"
+      tabindex="0"
+    />
   </div>
 </body>
 `;

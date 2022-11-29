@@ -2,7 +2,10 @@
 
 exports[`Interactions color editor interactions ability to change color of clicked splotch 1`] = `
 <body>
-  <div>
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
     <div
       class="clay-color-picker"
     >
@@ -344,7 +347,10 @@ exports[`Interactions color editor interactions ability to change color of click
 `;
 
 exports[`Interactions opens custom color picker drop down when clicked 1`] = `
-<div>
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
   <div
     class="clay-color-picker"
   >
@@ -410,7 +416,6 @@ exports[`Rendering default 1`] = `
       </label>
       <div
         class="input-group clay-color"
-        style=""
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -458,7 +463,6 @@ exports[`Rendering default 1`] = `
         aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="clay-color-header"
@@ -790,7 +794,6 @@ exports[`Rendering disabled palette 1`] = `
       </label>
       <div
         class="input-group clay-color"
-        style=""
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -838,7 +841,6 @@ exports[`Rendering disabled palette 1`] = `
         aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="clay-color-header"
@@ -1170,7 +1172,6 @@ exports[`Rendering disabled state 1`] = `
       </label>
       <div
         class="input-group clay-color"
-        style=""
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -1220,7 +1221,6 @@ exports[`Rendering disabled state 1`] = `
         aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="clay-color-header"
@@ -1552,7 +1552,6 @@ exports[`Rendering renders w/ var() 1`] = `
       </label>
       <div
         class="input-group clay-color"
-        style=""
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -1607,7 +1606,6 @@ exports[`Rendering renders w/ var() 1`] = `
         aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="clay-color-header"
@@ -1939,7 +1937,6 @@ exports[`Rendering renders with a hash for the value 1`] = `
       </label>
       <div
         class="input-group clay-color"
-        style=""
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -1987,7 +1984,6 @@ exports[`Rendering renders with a hash for the value 1`] = `
         aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="clay-color-header"
@@ -2319,7 +2315,6 @@ exports[`Rendering renders with a named color for the value 1`] = `
       </label>
       <div
         class="input-group clay-color"
-        style=""
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -2375,7 +2370,6 @@ exports[`Rendering renders with a named color for the value 1`] = `
         aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="clay-color-header"
@@ -2707,7 +2701,6 @@ exports[`Rendering small color-picker 1`] = `
       </label>
       <div
         class="input-group clay-color input-group-sm"
-        style=""
       >
         <div
           class="input-group-item input-group-item-shrink input-group-prepend"
@@ -2755,7 +2748,6 @@ exports[`Rendering small color-picker 1`] = `
         aria-hidden="true"
         class="dropdown-menu clay-color-dropdown-menu"
         role="presentation"
-        style="left: -999px; top: -995px;"
       >
         <div
           class="clay-color-header"

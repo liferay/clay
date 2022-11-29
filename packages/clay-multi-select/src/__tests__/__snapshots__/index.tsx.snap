@@ -25,7 +25,6 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
   <div>
     <div
       class="form-control form-control-tag-group input-group"
-      style=""
     >
       <div
         class="input-group-item"
@@ -144,7 +143,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         aria-hidden="true"
         class="dropdown-menu autocomplete-dropdown-menu"
         role="presentation"
-        style="max-width: none; left: -999px; top: -995px;"
+        style="max-width: none;"
       >
         <ul
           class="list-unstyled"
@@ -522,7 +521,7 @@ exports[`Interactions Use custom function for filtering autocomplete results 1`]
   aria-hidden="true"
   class="dropdown-menu autocomplete-dropdown-menu"
   role="presentation"
-  style="max-width: none; left: -999px; top: -995px; width: 0px;"
+  style="max-width: none; width: 0px;"
 >
   <ul
     class="list-unstyled"
@@ -555,7 +554,7 @@ exports[`Interactions Use custom function for filtering autocomplete results 2`]
   aria-hidden="true"
   class="dropdown-menu autocomplete-dropdown-menu"
   role="presentation"
-  style="max-width: none; left: -999px; top: -995px; width: 0px;"
+  style="max-width: none; width: 0px;"
 >
   <ul
     class="list-unstyled"
