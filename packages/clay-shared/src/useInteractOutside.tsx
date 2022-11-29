@@ -39,9 +39,6 @@ export function useInteractOutside({
 
 		const onPointerDown = (event: Event) => {
 			if (isValidEvent(event, ref, triggerRef) && state.onInteract) {
-				event.stopPropagation();
-				event.preventDefault();
-
 				state.isPointerDown = true;
 			}
 		};

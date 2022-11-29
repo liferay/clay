@@ -106,9 +106,7 @@ export function Overlay({
 
 	useInteractOutside({
 		isDisabled: isOpen ? !isCloseOnInteractOutside : true,
-		onInteract: (event) => {
-			event.stopPropagation();
-			event.preventDefault();
+		onInteract: () => {
 			onClose();
 		},
 		ref: portalRef ?? menuRef,
