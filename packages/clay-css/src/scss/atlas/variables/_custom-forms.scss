@@ -13,7 +13,11 @@ $custom-control-indicator-active-border-color: $custom-control-indicator-border-
 $custom-control-indicator-active-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1),
 	$custom-control-indicator-focus-box-shadow !default;
 
-$custom-control-indicator-disabled-bg: $input-disabled-bg !default;
+$custom-control-indicator-disabled-bg: if(
+	variable-exists(input-disabled-bg),
+	$input-disabled-bg,
+	$gray-200
+) !default;
 $custom-control-indicator-disabled-border-color: $secondary-l3 !default;
 
 // Custom Control Indicator Checked
@@ -60,7 +64,11 @@ $custom-control-margin-bottom: 1rem !default;
 
 // @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
 
-$custom-control-description-font-size: $input-label-font-size !default; // 13px
+$custom-control-description-font-size: if(
+	variable-exists(input-label-font-size),
+	$input-label-font-size,
+	0.875rem
+) !default; // 13px
 
 // @deprecated as of v2.19.0 use the Sass map `$custom-control-label` instead
 
@@ -68,7 +76,11 @@ $custom-control-description-font-weight: $font-weight-normal !default;
 
 // @deprecated as of v2.19.0 use the Sass map `$custom-control-label-disabled` instead. This variable is not used in Clay CSS.
 
-$custom-control-label-disabled-color: $input-label-disabled-color !default;
+$custom-control-label-disabled-color: if(
+	variable-exists(input-label-disabled-color),
+	$input-label-disabled-color,
+	$gray-500
+) !default;
 
 // @deprecated as of v2.19.0 use the Sass map `$custom-control-label-text-small` instead
 

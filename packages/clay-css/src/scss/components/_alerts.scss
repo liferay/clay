@@ -106,7 +106,11 @@
 .modal-body {
 	.alert {
 		.close {
-			right: $modal-inner-padding;
+			right: if(
+				variable-exists(modal-inner-padding),
+				$modal-inner-padding,
+				null
+			);
 		}
 	}
 

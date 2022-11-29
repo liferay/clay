@@ -68,8 +68,16 @@
 	}
 
 	.collapse-icon {
-		padding-left: $collapse-icon-padding-left;
-		padding-right: $collapse-icon-padding-right;
+		padding-left: if(
+			variable-exists(collapse-icon-padding-left),
+			$collapse-icon-padding-left,
+			null
+		);
+		padding-right: if(
+			variable-exists(collapse-icon-padding-right),
+			$collapse-icon-padding-right,
+			2.28125rem
+		);
 	}
 }
 
@@ -201,27 +209,63 @@
 	> .panel-group-fluid,
 	> .panel-group-fluid-first,
 	> .panel-group-fluid-last {
-		margin-left: math-sign($card-spacer-x);
-		margin-right: math-sign($card-spacer-x);
+		margin-left: math-sign(
+			if(variable-exists(card-spacer-x), $card-spacer-x, 1.25rem)
+		);
+		margin-right: math-sign(
+			if(variable-exists(card-spacer-x), $card-spacer-x, 1.25rem)
+		);
 	}
 }
 
 .sheet {
 	> .panel-group-fluid {
-		margin-left: math-sign($sheet-padding-left);
-		margin-right: math-sign($sheet-padding-right);
+		margin-left: math-sign(
+			if(variable-exists(sheet-padding-left), $sheet-padding-left, 1.5rem)
+		);
+		margin-right: math-sign(
+			if(
+				variable-exists(sheet-padding-right),
+				$sheet-padding-right,
+				1.5rem
+			)
+		);
 	}
 
 	> .panel-group-fluid-first {
-		margin-left: math-sign($sheet-padding-left);
-		margin-right: math-sign($sheet-padding-right);
-		margin-top: math-sign($sheet-padding-top);
+		margin-left: math-sign(
+			if(variable-exists(sheet-padding-left), $sheet-padding-left, 1.5rem)
+		);
+		margin-right: math-sign(
+			if(
+				variable-exists(sheet-padding-right),
+				$sheet-padding-right,
+				1.5rem
+			)
+		);
+		margin-top: math-sign(
+			if(variable-exists(sheet-padding-top), $sheet-padding-top, 1.5rem)
+		);
 	}
 
 	> .panel-group-fluid-last {
-		margin-bottom: math-sign($sheet-padding-bottom);
-		margin-left: math-sign($sheet-padding-left);
-		margin-right: math-sign($sheet-padding-right);
+		margin-bottom: math-sign(
+			if(
+				variable-exists(sheet-padding-bottom),
+				$sheet-padding-bottom,
+				0.0625rem
+			)
+		);
+		margin-left: math-sign(
+			if(variable-exists(sheet-padding-left), $sheet-padding-left, 1.5rem)
+		);
+		margin-right: math-sign(
+			if(
+				variable-exists(sheet-padding-right),
+				$sheet-padding-right,
+				1.5rem
+			)
+		);
 	}
 }
 

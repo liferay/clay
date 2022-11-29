@@ -1,3 +1,20 @@
+$clay-color-border-color: if(
+	variable-exists(input-border-color),
+	$input-border-color,
+	$gray-400
+) !default;
+$clay-color-padding-x: if(
+	variable-exists(input-padding-x),
+	$input-padding-x,
+	0.75rem
+) !default;
+
+$clay-color-sm-padding-x: if(
+	variable-exists(input-padding-x-sm),
+	$input-padding-x-sm,
+	0.5rem
+) !default;
+
 // Clay Color Input Group Text (.clay-color > .input-group-item > .input-group-text)
 
 $clay-color-input-group-text: () !default;
@@ -5,7 +22,7 @@ $clay-color-input-group-text: map-merge(
 	(
 		background-color:
 			setter(map-get($clay-color-input-group-text, bg), $white),
-		border-color: $input-border-color,
+		border-color: $clay-color-border-color,
 		padding-left: 0,
 		padding-right: 0,
 	),
@@ -23,7 +40,7 @@ $clay-color-input-group-inset-item-before: map-merge(
 	(
 		color: $gray-600,
 		font-size: inherit,
-		padding-left: $input-padding-x,
+		padding-left: $clay-color-padding-x,
 		padding-right: 0.5rem,
 	),
 	$clay-color-input-group-inset-item-before
@@ -77,7 +94,7 @@ $clay-color-dropdown-menu-input-group-inset-item-before: map-deep-merge(
 	(
 		color: $gray-600,
 		font-size: 0.875rem,
-		padding-left: $input-padding-x-sm,
+		padding-left: $clay-color-sm-padding-x,
 		padding-right: 0.5rem,
 	),
 	$clay-color-dropdown-menu-input-group-inset-item-before
@@ -322,7 +339,7 @@ $clay-color-range-pointer: map-deep-merge(
 $clay-color-sm-input-group-inset-item-before: () !default;
 $clay-color-sm-input-group-inset-item-before: map-merge(
 	(
-		padding-left: $input-padding-x-sm,
+		padding-left: $clay-color-sm-padding-x,
 	),
 	$clay-color-sm-input-group-inset-item-before
 );

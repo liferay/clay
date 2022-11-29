@@ -1,7 +1,11 @@
 $drilldown-inner-transition: height 0.25s ease !default;
 
 $drilldown-transition: all 0.25s ease !default;
-$drilldown-width: $dropdown-max-width !default;
+$drilldown-width: if(
+	variable-exists(dropdown-max-width),
+	$dropdown-max-width,
+	260px
+) !default;
 
 $drilldown-inline-scroller-max-height: none !default;
 

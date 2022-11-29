@@ -203,5 +203,9 @@ input[type='button'] {
 
 .btn .loading-animation {
 	font-size: 1em;
-	margin-top: $inline-item-lexicon-icon-margin-top;
+	margin-top: if(
+		variable-exists(inline-item-lexicon-icon-margin-top),
+		$inline-item-lexicon-icon-margin-top,
+		null
+	);
 }
