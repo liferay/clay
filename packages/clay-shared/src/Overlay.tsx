@@ -21,6 +21,7 @@ type Props = {
 	menuRef: React.RefObject<HTMLElement>;
 	onClose: () => void;
 	portalRef?: React.RefObject<HTMLElement>;
+	suppress?: Array<React.RefObject<HTMLElement>>;
 	triggerRef: React.RefObject<HTMLElement>;
 };
 
@@ -48,6 +49,7 @@ export function Overlay({
 	menuRef,
 	onClose,
 	portalRef,
+	suppress,
 	triggerRef,
 }: Props) {
 	const unsuppressCallbackRef = useRef<Undo | null>(null);
@@ -115,8 +117,12 @@ export function Overlay({
 
 	useEffect(() => {
 		if (menuRef.current && isOpen) {
+			const elements = suppress
+				? suppress.map((ref) => ref.current!)
+				: menuRef.current;
+
 			if (isModal && hasInertSupport) {
-				unsuppressCallbackRef.current = suppressOthers(menuRef.current);
+				unsuppressCallbackRef.current = suppressOthers(elements);
 
 				return () => {
 					if (unsuppressCallbackRef.current) {
@@ -125,7 +131,7 @@ export function Overlay({
 					unsuppressCallbackRef.current = null;
 				};
 			} else {
-				return hideOthers(menuRef.current);
+				return hideOthers(elements);
 			}
 		}
 	}, [isModal, isOpen]);
