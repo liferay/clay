@@ -226,7 +226,8 @@ export function ItemContextProvider({children, value}: Props) {
 				currentPosition = TARGET_POSITION.TOP;
 			} else if (
 				clientOffsetY >
-				dropItemRect.bottom - dropItemRect.height * DISTANCE
+					dropItemRect.bottom - dropItemRect.height * DISTANCE &&
+				!expandedKeys.has(item.key)
 			) {
 				currentPosition = TARGET_POSITION.BOTTOM;
 			}
