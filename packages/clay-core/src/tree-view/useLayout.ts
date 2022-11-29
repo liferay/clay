@@ -25,6 +25,7 @@ export type Layout = {
 		parentKey?: Key
 	) => () => void;
 	layoutKeys: React.MutableRefObject<Map<Key, LayoutInfo>>;
+	patchItem: (key: Key, loc: Array<number>) => void;
 };
 
 export function useLayout(): Layout {
@@ -111,5 +112,19 @@ export function useLayout(): Layout {
 		[layoutKeys]
 	);
 
-	return {createPartialLayoutItem, layoutKeys};
+	const patchItem = useCallback(
+		(key: Key, loc: Array<number>) => {
+			const keyMap = layoutKeys.current.get(key);
+
+			if (keyMap) {
+				layoutKeys.current.set(key, {
+					...keyMap,
+					loc,
+				});
+			}
+		},
+		[layoutKeys]
+	);
+
+	return {createPartialLayoutItem, layoutKeys, patchItem};
 }

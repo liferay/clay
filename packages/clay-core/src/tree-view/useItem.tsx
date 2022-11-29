@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useContext, useEffect, useRef, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 import {useDrag, useDrop} from 'react-dnd';
 import {getEmptyImage} from 'react-dnd-html5-backend';
 
@@ -85,9 +85,9 @@ export function ItemContextProvider({children, value}: Props) {
 		reorder,
 	} = useTreeViewContext();
 	const {
-		indexes: parentIndexes = [],
-		key: parentKey,
+		indexes: parentIndexes,
 		itemRef: parentItemRef,
+		key: parentKey,
 	} = useItem();
 
 	const keyRef = useRef(getKey(value.key));
@@ -96,11 +96,17 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const hoverTimeoutIdRef = useRef<number | null>();
 
-	const indexesRef = useRef([...parentIndexes, value.index]);
+	// Holds a reference to the index value and only updates when its positions
+	// change. This causes a ripple effect that we only want to update
+	// when necessary.
+	const indexes = useMemo(
+		() => [...(parentIndexes ?? []), value.index],
+		[parentIndexes, value.index]
+	);
 
 	const item: Value = {
 		...value,
-		indexes: indexesRef.current,
+		indexes,
 		itemRef: childRef,
 		key: keyRef.current,
 		parentItemRef,
@@ -113,16 +119,15 @@ export function ItemContextProvider({children, value}: Props) {
 			layout.createPartialLayoutItem(
 				keyRef.current,
 				hasLazyChildren,
-				indexesRef.current,
+				indexes,
 				parentKey
 			),
-		[
-			layout.createPartialLayoutItem,
-			hasLazyChildren,
-			indexesRef,
-			keyRef,
-			parentKey,
-		]
+		[layout.createPartialLayoutItem, hasLazyChildren, keyRef, parentKey]
+	);
+
+	useEffect(
+		() => layout.patchItem(keyRef.current, indexes),
+		[layout.patchItem, indexes]
 	);
 
 	const [overPosition, setOverPosition] = useState<Position | null>(null);
