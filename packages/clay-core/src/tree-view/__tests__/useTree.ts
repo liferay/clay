@@ -185,7 +185,7 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [0], op: 'move', path: [1]});
+		immutableTree.produce({from: [0], op: 'move', path: [2]});
 
 		const result = immutableTree.applyPatches();
 

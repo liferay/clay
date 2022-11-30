@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useContext, useEffect, useRef, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 import {useDrag, useDrop} from 'react-dnd';
 import {getEmptyImage} from 'react-dnd-html5-backend';
 
@@ -51,19 +51,20 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 	);
 }
 
-function getNewItemPath(item: Value, overPosition: Position) {
-	let indexes = [...item.indexes];
-	const lastIndex = indexes.pop();
+function getNewItemPath(path: Array<number>, overPosition: Position) {
+	let indexes = [...path];
+
+	const lastPathIndex = indexes.pop() as number;
 
 	switch (overPosition) {
 		case TARGET_POSITION.BOTTOM:
-			indexes = [...indexes, lastIndex! + 1];
+			indexes = [...indexes, lastPathIndex + 1];
 			break;
 		case TARGET_POSITION.MIDDLE:
-			indexes = [...indexes, lastIndex!, 0];
+			indexes = [...indexes, lastPathIndex, 0];
 			break;
 		case TARGET_POSITION.TOP:
-			indexes = [...indexes, lastIndex!];
+			indexes = [...indexes, lastPathIndex];
 			break;
 		default:
 			break;
@@ -85,9 +86,9 @@ export function ItemContextProvider({children, value}: Props) {
 		reorder,
 	} = useTreeViewContext();
 	const {
-		indexes: parentIndexes = [],
-		key: parentKey,
+		indexes: parentIndexes,
 		itemRef: parentItemRef,
+		key: parentKey,
 	} = useItem();
 
 	const keyRef = useRef(getKey(value.key));
@@ -96,11 +97,17 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const hoverTimeoutIdRef = useRef<number | null>();
 
-	const indexesRef = useRef([...parentIndexes, value.index]);
+	// Holds a reference to the index value and only updates when its positions
+	// change. This causes a ripple effect that we only want to update
+	// when necessary.
+	const indexes = useMemo(
+		() => [...(parentIndexes ?? []), value.index],
+		[parentIndexes, value.index]
+	);
 
 	const item: Value = {
 		...value,
-		indexes: indexesRef.current,
+		indexes,
 		itemRef: childRef,
 		key: keyRef.current,
 		parentItemRef,
@@ -113,16 +120,15 @@ export function ItemContextProvider({children, value}: Props) {
 			layout.createPartialLayoutItem(
 				keyRef.current,
 				hasLazyChildren,
-				indexesRef.current,
+				indexes,
 				parentKey
 			),
-		[
-			layout.createPartialLayoutItem,
-			hasLazyChildren,
-			indexesRef,
-			keyRef,
-			parentKey,
-		]
+		[layout.createPartialLayoutItem, hasLazyChildren, keyRef, parentKey]
+	);
+
+	useEffect(
+		() => layout.patchItem(keyRef.current, indexes),
+		[layout.patchItem, indexes]
 	);
 
 	const [overPosition, setOverPosition] = useState<Position | null>(null);
@@ -169,7 +175,7 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			const indexes = getNewItemPath(item, overPosition!);
+			const indexes = getNewItemPath(item.indexes, overPosition!);
 
 			if (onItemMove) {
 				const tree = createImmutableTree(items as any, nestedKey!);
@@ -199,18 +205,7 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			if (
-				typeof hoverTimeoutIdRef.current !== 'number' &&
-				!expandedKeys.has(item.key)
-			) {
-				hoverTimeoutIdRef.current = setTimeout(() => {
-					hoverTimeoutIdRef.current = null;
-
-					if (monitor.isOver({shallow: true})) {
-						open(item.key);
-					}
-				}, 500) as unknown as number;
-			}
+			const child = item[nestedKey!];
 
 			const dropItemRect = (
 				childRef.current! as HTMLElement
@@ -226,14 +221,32 @@ export function ItemContextProvider({children, value}: Props) {
 				currentPosition = TARGET_POSITION.TOP;
 			} else if (
 				clientOffsetY >
-				dropItemRect.bottom - dropItemRect.height * DISTANCE
+					dropItemRect.bottom - dropItemRect.height * DISTANCE &&
+				!expandedKeys.has(item.key)
 			) {
 				currentPosition = TARGET_POSITION.BOTTOM;
 			}
 
+			if (
+				currentPosition === TARGET_POSITION.MIDDLE &&
+				typeof hoverTimeoutIdRef.current !== 'number' &&
+				!expandedKeys.has(item.key) &&
+				child &&
+				Array.isArray(child) &&
+				child.length > 0
+			) {
+				hoverTimeoutIdRef.current = setTimeout(() => {
+					hoverTimeoutIdRef.current = null;
+
+					if (monitor.isOver({shallow: true})) {
+						open(item.key);
+					}
+				}, 500) as unknown as number;
+			}
+
 			if (onItemHover) {
 				const tree = createImmutableTree(items as any, nestedKey!);
-				const indexes = getNewItemPath(item, currentPosition);
+				const indexes = getNewItemPath(item.indexes, currentPosition);
 
 				onItemHover(
 					removeItemInternalProps(
