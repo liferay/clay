@@ -124,11 +124,38 @@
 @each $color, $value in $progress-palette {
 	.progress-#{$color} {
 		.progress-bar {
-			background-color: map-get($value, bar-bg);
+			$progress-bar: setter(map-get($value, progress-bar), ());
+			$progress-bar: map-merge(
+				$progress-bar,
+				(
+					background-color:
+						setter(
+							map-get($progress-bar, background-color),
+							map-get($value, bar-bg)
+						),
+				)
+			);
+
+			@include clay-css($progress-bar);
 		}
 
 		.progress-group-feedback {
-			color: map-get($value, group-feedback-color);
+			$progress-group-feedback: setter(
+				map-get($value, progress-group-feedback),
+				()
+			);
+			$progress-group-feedback: map-merge(
+				$progress-group-feedback,
+				(
+					color:
+						setter(
+							map-get($progress-group-feedback, color),
+							map-get($value, group-feedback-color)
+						),
+				)
+			);
+
+			@include clay-css($progress-group-feedback);
 		}
 	}
 }
