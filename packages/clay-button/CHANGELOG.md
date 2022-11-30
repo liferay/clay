@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+### Features
+
+-   **@clayui/button:** add warning when button with icon has not declared `aria-label` attribute ([cb23cd3](https://github.com/liferay/clay/commit/cb23cd3426255c3e551029a999de58e26e2fddae))
+
 # [3.73.0](https://github.com/liferay/clay/compare/v3.72.0...v3.73.0) (2022-09-13)
 
 ### Bug Fixes

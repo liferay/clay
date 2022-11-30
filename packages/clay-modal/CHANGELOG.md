@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+### Features
+
+-   **@clayui/modal:** add `aria-modal` attribute to dialog ([e47fc57](https://github.com/liferay/clay/commit/e47fc57b961496ca3fca60b3f3fd5b7735def3a4))
+
 ## [3.80.1](https://github.com/liferay/clay/compare/v3.80.0...v3.80.1) (2022-11-22)
 
 **Note:** Version bump only for package @clayui/modal

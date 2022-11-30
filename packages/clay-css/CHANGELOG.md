@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin replace improper clay-container with clay-css mixins ([841dc91](https://github.com/liferay/clay/commit/841dc91b3a60fcc1f42ccaf4e4835e0343bcedf4))
+* **@clayui/css:** Replace improper clay-container with clay-css mixins ([1ddf44b](https://github.com/liferay/clay/commit/1ddf44b91076ccbec9bc4d86eb6a0cc317d6fd1f))
+
+
+### Features
+
+* **@clayui/css:** Modularize most Clay CSS components ([e39673a](https://github.com/liferay/clay/commit/e39673aad55fe2e6a23c7f8e9d2265d27211512c))
+
+
+
+
+
 # [3.78.0](https://github.com/liferay/clay/compare/v3.77.0...v3.78.0) (2022-10-25)
 
 

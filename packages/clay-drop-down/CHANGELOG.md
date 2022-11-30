@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** close drilldown menu returns to initial state ([756e5f5](https://github.com/liferay/clay/commit/756e5f50328c4c071080524495767c3e82c658a8))
+-   **@clayui/drop-down:** fix error add aria-hidden="true" in active Drilldown menu ([43d488f](https://github.com/liferay/clay/commit/43d488fa06250db62bd0ed4c967f1f9ff24bbe91))
+
+### Features
+
+-   **@clayui/drop-down:** adds API to set aria-label of Drilldown stuff ([9ea0b9b](https://github.com/liferay/clay/commit/9ea0b9b86ff68fa51dabb778598f493dc090a42c))
+
 ## [3.80.1](https://github.com/liferay/clay/compare/v3.80.0...v3.80.1) (2022-11-22)
 
 ### Bug Fixes

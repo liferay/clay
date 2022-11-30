@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix bug not updating indexes when items move ([54100be](https://github.com/liferay/clay/commit/54100be5eddfff85dc76dd97982e4ecab1e5963b))
+-   **@clayui/core:** fix error when moving items in tree view ([ab20a44](https://github.com/liferay/clay/commit/ab20a44c060cb3baaf660373824d0c2b0bfb766f))
+-   **@clayui/core:** only expands the item if the intent to move is inside the item ([fd09e05](https://github.com/liferay/clay/commit/fd09e05ac400e456446797399900eaaee7f54e5a))
+-   **@clayui/core:** when the item is expanded it only allows moving to middle and top ([7e30197](https://github.com/liferay/clay/commit/7e30197f44eab1e3685590b6a2ae259283fc219c))
+-   **@clayui/css:** Cadmin replace improper clay-container with clay-css mixins ([841dc91](https://github.com/liferay/clay/commit/841dc91b3a60fcc1f42ccaf4e4835e0343bcedf4))
+-   **@clayui/css:** Replace improper clay-container with clay-css mixins ([1ddf44b](https://github.com/liferay/clay/commit/1ddf44b91076ccbec9bc4d86eb6a0cc317d6fd1f))
+-   **@clayui/drop-down:** close drilldown menu returns to initial state ([756e5f5](https://github.com/liferay/clay/commit/756e5f50328c4c071080524495767c3e82c658a8))
+-   **@clayui/drop-down:** fix error add aria-hidden="true" in active Drilldown menu ([43d488f](https://github.com/liferay/clay/commit/43d488fa06250db62bd0ed4c967f1f9ff24bbe91))
+
+### Features
+
+-   **@clayui/button:** add warning when button with icon has not declared `aria-label` attribute ([cb23cd3](https://github.com/liferay/clay/commit/cb23cd3426255c3e551029a999de58e26e2fddae))
+-   **@clayui/css:** Modularize most Clay CSS components ([e39673a](https://github.com/liferay/clay/commit/e39673aad55fe2e6a23c7f8e9d2265d27211512c))
+-   **@clayui/drop-down:** adds API to set aria-label of Drilldown stuff ([9ea0b9b](https://github.com/liferay/clay/commit/9ea0b9b86ff68fa51dabb778598f493dc090a42c))
+-   **@clayui/modal:** add `aria-modal` attribute to dialog ([e47fc57](https://github.com/liferay/clay/commit/e47fc57b961496ca3fca60b3f3fd5b7735def3a4))
+
 ## [3.80.1](https://github.com/liferay/clay/compare/v3.80.0...v3.80.1) (2022-11-22)
 
 ### Bug Fixes
