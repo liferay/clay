@@ -374,9 +374,15 @@ $cadmin-card-interactive-after-highlight: map-deep-merge(
 		position: absolute,
 		right: math-sign($cadmin-card-border-width),
 		transition: height 0.15s ease-out,
-		hover-height: 4px,
-		focus-height: 4px,
-		active-height: 4px,
+		hover: (
+			height: 4px,
+		),
+		focus: (
+			height: 4px,
+		),
+		active: (
+			height: 4px,
+		),
 	),
 	$cadmin-card-interactive-after-highlight
 );
@@ -395,10 +401,17 @@ $cadmin-card-interactive: map-deep-merge(
 		cursor: $cadmin-link-cursor,
 		outline: 0,
 		transition: $cadmin-component-transition,
-		hover-bg: #f7f8f9,
-		hover-text-decoration: none,
-		focus-box-shadow: 0 0 0 2px #FFF#{','} 0 0 0 4px #719aff,
-		active-bg: #f1f2f5,
+		hover: (
+			background-color: #f7f8f9,
+			text-decoration: none,
+		),
+		focus: (
+			box-shadow: #{0 0 0 2px #fff,
+			0 0 0 4px #719aff},
+		),
+		active: (
+			background-color: #f1f2f5,
+		),
 		after-highlight: $cadmin-card-interactive-after-highlight,
 		card-body: $cadmin-card-interactive-card-body,
 	),
@@ -410,9 +423,15 @@ $cadmin-card-interactive: map-deep-merge(
 $cadmin-card-interactive-primary-after-highlight: () !default;
 $cadmin-card-interactive-primary-after-highlight: map-deep-merge(
 	(
-		hover-bg: $cadmin-component-active-bg,
-		focus-bg: $cadmin-component-active-bg,
-		active-bg: $cadmin-component-active-bg,
+		hover: (
+			background-color: $cadmin-component-active-bg,
+		),
+		focus: (
+			background-color: $cadmin-component-active-bg,
+		),
+		active: (
+			background-color: $cadmin-component-active-bg,
+		),
 	),
 	$cadmin-card-interactive-primary-after-highlight
 );
@@ -420,8 +439,12 @@ $cadmin-card-interactive-primary-after-highlight: map-deep-merge(
 $cadmin-card-interactive-primary: () !default;
 $cadmin-card-interactive-primary: map-deep-merge(
 	(
-		focus-bg: $cadmin-gray-100,
-		active-bg: $cadmin-gray-200,
+		focus: (
+			background-color: $cadmin-gray-100,
+		),
+		active: (
+			background-color: $cadmin-gray-200,
+		),
 		after-highlight: $cadmin-card-interactive-primary-after-highlight,
 	),
 	$cadmin-card-interactive-primary
@@ -433,13 +456,19 @@ $cadmin-card-interactive-secondary: () !default;
 $cadmin-card-interactive-secondary: map-deep-merge(
 	(
 		color: $cadmin-gray-900,
-		hover-color: $cadmin-gray-900,
-		hover-bg: $cadmin-white,
-		hover-border-color: transparent,
-		hover-box-shadow: 0 0 0 2px #719aff,
-		focus-border-color: transparent,
-		focus-box-shadow: 0 0 0 2px #719aff,
-		active-bg: $cadmin-white,
+		hover: (
+			background-color: $cadmin-white,
+			border-color: transparent,
+			box-shadow: 0 0 0 2px #719aff,
+			color: $cadmin-gray-900,
+		),
+		focus: (
+			border-color: transparent,
+			box-shadow: 0 0 0 2px #719aff,
+		),
+		active: (
+			background-color: $cadmin-white,
+		),
 	),
 	$cadmin-card-interactive-secondary
 );

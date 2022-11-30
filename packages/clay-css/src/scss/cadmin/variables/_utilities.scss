@@ -87,13 +87,13 @@ $cadmin-close: map-deep-merge(
 			cursor: $cadmin-disabled-cursor,
 			opacity: $cadmin-component-disabled-opacity,
 			outline: 0,
+			active: (
+				pointer-events: none,
+			),
 		),
-		disabled-active: (
-			pointer-events: none,
+		lexicon-icon: (
+			margin-top: 0,
 		),
-		btn-focus-box-shadow: $cadmin-component-focus-box-shadow,
-		btn-focus-outline: 0,
-		lexicon-icon-margin-top: 0,
 	),
 	$cadmin-close
 );
