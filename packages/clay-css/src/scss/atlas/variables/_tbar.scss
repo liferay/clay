@@ -12,7 +12,9 @@ $component-tbar: map-deep-merge(
 $subnav-tbar-primary-component-link: () !default;
 $subnav-tbar-primary-component-link: map-deep-merge(
 	(
-		disabled-opacity: 0.65,
+		disabled: (
+			opacity: 0.65,
+		),
 	),
 	$subnav-tbar-primary-component-link
 );
@@ -20,7 +22,9 @@ $subnav-tbar-primary-component-link: map-deep-merge(
 $subnav-tbar-primary-component-label-close: () !default;
 $subnav-tbar-primary-component-label-close: map-deep-merge(
 	(
-		disabled-opacity: 0.65,
+		disabled: (
+			opacity: 0.65,
+		),
 	),
 	$subnav-tbar-primary-component-label-close
 );
@@ -48,7 +52,7 @@ $subnav-tbar-primary-disabled: map-deep-merge(
 $subnav-tbar-light: () !default;
 $subnav-tbar-light: map-deep-merge(
 	(
-		bg-color: $light-l2,
+		background-color: $light-l2,
 		color: $gray-600,
 	),
 	$subnav-tbar-light

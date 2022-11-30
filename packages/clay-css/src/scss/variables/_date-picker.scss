@@ -31,12 +31,18 @@ $date-picker-nav-btn: map-deep-merge(
 	(
 		color: $gray-600,
 		transition: $component-transition,
-		hover-bg: $gray-200,
-		focus-box-shadow: $component-focus-box-shadow,
-		disabled-bg: transparent,
-		disabled-box-shadow: none,
-		disabled-color: $gray-600,
-		disabled-opacity: $component-disabled-opacity,
+		hover: (
+			background-color: $gray-200,
+		),
+		focus: (
+			box-shadow: $input-btn-focus-box-shadow,
+		),
+		disabled: (
+			background-color: transparent,
+			box-shadow: none,
+			color: $gray-600,
+			opacity: $component-disabled-opacity,
+		),
 	),
 	$date-picker-nav-btn
 );
@@ -169,7 +175,8 @@ $date-picker-calendar-item: () !default;
 $date-picker-calendar-item: map-deep-merge(
 	(
 		align-items: center,
-		bg: transparent,
+		background-color:
+			setter(map-get($date-picker-calendar-item, bg) transparent),
 		border-width: 0px,
 		disabled-cursor: $disabled-cursor,
 		display: inline-flex,
@@ -200,14 +207,22 @@ $date-picker-date: map-deep-merge(
 		color: $gray-600,
 		cursor: $link-cursor,
 		position: relative,
-		hover-bg: $gray-200,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
-		active-bg: $component-active-bg,
-		active-color: $component-active-color,
-		disabled-bg: transparent,
-		disabled-box-shadow: none,
-		disabled-opacity: $component-disabled-opacity,
+		hover: (
+			background-color: $gray-200,
+		),
+		focus: (
+			box-shadow: $input-btn-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			background-color: $component-active-bg,
+			color: $component-active-color,
+		),
+		disabled: (
+			background-color: transparent,
+			box-shadow: none,
+			opacity: $component-disabled-opacity,
+		),
 	),
 	$date-picker-date
 );
@@ -216,7 +231,9 @@ $date-picker-previous-month-date: () !default;
 $date-picker-previous-month-date: map-deep-merge(
 	(
 		opacity: 0.65,
-		focus-opacity: 1,
+		focus: (
+			opacity: 1,
+		),
 		active: (
 			background-color: $primary-l1,
 			color: $primary-l3,
@@ -229,7 +246,9 @@ $date-picker-next-month-date: () !default;
 $date-picker-next-month-date: map-deep-merge(
 	(
 		opacity: 0.65,
-		focus-opacity: 1,
+		focus: (
+			opacity: 1,
+		),
 		active: (
 			background-color: $primary-l1,
 			color: $primary-l3,
@@ -243,7 +262,8 @@ $date-picker-next-month-date: map-deep-merge(
 $date-picker-input-group-text: () !default;
 $date-picker-input-group-text: map-deep-merge(
 	(
-		bg: transparent,
+		background-color:
+			setter(map-get($date-picker-input-group-text, bg) transparent),
 		border-color: transparent,
 		min-width: 2rem,
 		padding-left: 0.25rem,

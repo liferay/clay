@@ -46,7 +46,7 @@ $panel-title-small-margin-left: 0.375rem !default; // 6px
 $panel-group-sm: () !default;
 $panel-group-sm: map-deep-merge(
 	(
-		title: (
+		panel-title: (
 			font-size: 0.75rem,
 		),
 	),
@@ -60,11 +60,11 @@ $panel-secondary: map-deep-merge(
 	(
 		border-color: $gray-300,
 		color: $gray-600,
-		header: (
+		panel-header: (
 			background-color: null,
 			border-color: $gray-300,
 		),
-		footer: (
+		panel-footer: (
 			background-color: null,
 			border-color: $gray-300,
 		),

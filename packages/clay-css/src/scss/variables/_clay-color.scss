@@ -109,10 +109,14 @@ $clay-color-dropdown-menu-close: () !default;
 $clay-color-dropdown-menu-component-action: () !default;
 $clay-color-dropdown-menu-component-action: map-deep-merge(
 	(
-		hover-bg: transparent,
-		hover-color: $black,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-color: $black,
+		hover: (
+			background-color: transparent,
+			color: $black,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			color: $black,
+		),
 	),
 	$clay-color-dropdown-menu-component-action
 );
@@ -175,7 +179,7 @@ $clay-color-btn-bordered: map-deep-merge(
 $clay-color-pointer: () !default;
 $clay-color-pointer: map-deep-merge(
 	(
-		bg: transparent,
+		background-color: setter(map-get($clay-color-pointer, bg), transparent),
 		border-radius: 100px,
 		border-color: $white,
 		border-style: solid,
@@ -188,8 +192,10 @@ $clay-color-pointer: map-deep-merge(
 		position: absolute,
 		transition: box-shadow 0.15s ease-in-out,
 		width: 0.875rem,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$clay-color-pointer
 );

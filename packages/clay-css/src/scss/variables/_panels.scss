@@ -114,11 +114,11 @@ $panel-group-sm: () !default;
 $panel-group-sm: map-deep-merge(
 	(
 		font-size: 0.875rem,
-		header: (
+		panel-header: (
 			padding-bottom: 0.5rem,
 			padding-top: 0.5rem,
 		),
-		title: (
+		panel-title: (
 			font-size: 0.875rem,
 		),
 		collapse-icon: (
@@ -150,7 +150,7 @@ $panel-group-flush-panel-unstyled: () !default;
 $panel-group-flush-panel-unstyled: map-deep-merge(
 	(
 		margin-bottom: 1.5rem,
-		body: (
+		panel-body: (
 			margin-bottom: 0,
 		),
 	),
@@ -165,12 +165,12 @@ $panel-secondary: () !default;
 $panel-secondary: map-deep-merge(
 	(
 		border-color: rgba($black, 0.125),
-		header: (
+		panel-header: (
 			background-color: $gray-100,
 			border-color: rgba($black, 0.125),
 			link: $panel-secondary-header-link,
 		),
-		footer: (
+		panel-footer: (
 			background-color: $gray-100,
 			border-color: rgba($black, 0.125),
 		),
@@ -189,7 +189,7 @@ $panel-unstyled: map-deep-merge(
 		border-radius: 0px,
 		border-width: 0px,
 		margin-bottom: 1.5rem,
-		header: (
+		panel-header: (
 			border-color: $gray-500,
 			border-radius: 0px,
 			border-style: solid,
@@ -203,10 +203,10 @@ $panel-unstyled: map-deep-merge(
 		collapse-icon: (
 			right: 0,
 		),
-		body: (
+		panel-body: (
 			padding: 1rem 0 0.1px 0,
 		),
-		footer: (
+		panel-footer: (
 			padding: 1rem 0 0.1px 0,
 		),
 	),

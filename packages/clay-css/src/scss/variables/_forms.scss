@@ -2069,9 +2069,13 @@ $input-group-stacked-sm-down: () !default;
 $input-group-stacked-sm-down: map-deep-merge(
 	(
 		breakpoint: sm,
-		item-margin-bottom: 0.5rem,
-		item-margin-left: 0,
-		shrink-margin-right: 0.5rem,
+		input-group-item: (
+			margin-bottom: 0.5rem,
+			margin-left: 0,
+		),
+		input-group-item-shrink: (
+			margin-right: 0.5rem,
+		),
 	),
 	$input-group-stacked-sm-down
 );
