@@ -107,6 +107,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						displayType={null}
 						onClick={handlePreviousMonthClicked}
+						title={ariaLabels.buttonPreviousMonth}
 					>
 						<Icon spritemap={spritemap} symbol="angle-left" />
 					</Button>
@@ -116,6 +117,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						displayType={null}
 						onClick={onDotClicked}
+						title={ariaLabels.buttonDot}
 					>
 						<Icon spritemap={spritemap} symbol="simple-circle" />
 					</Button>
@@ -125,6 +127,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						displayType={null}
 						onClick={handleNextMonthClicked}
+						title={ariaLabels.buttonNextMonth}
 					>
 						<Icon spritemap={spritemap} symbol="angle-right" />
 					</Button>
