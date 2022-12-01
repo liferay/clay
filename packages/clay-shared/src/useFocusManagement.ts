@@ -221,8 +221,36 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		const nextFocusInDoc = docFocusElements[docPosition + 1];
 		const prevFocusInDoc = docFocusElements[docPosition - 1];
 
-		const nextFocusInFiber = fiberFocusElements[reactFiberPosition + 1];
-		const prevFocusInFiber = fiberFocusElements[reactFiberPosition - 1];
+		let nextFocusInFiber = fiberFocusElements[reactFiberPosition + 1];
+		let prevFocusInFiber = fiberFocusElements[reactFiberPosition - 1];
+
+		// Checks if the focus has reached the end of the scope and should
+		// go back to the beginning.
+		if (
+			nextFocusInFiber &&
+			nextFocusInFiber.getAttribute('data-focus-scope-end') === 'true'
+		) {
+			const focusGuardIndex = docFocusElements.findIndex(
+				(element) =>
+					element.getAttribute('data-focus-scope-start') === 'true'
+			);
+
+			nextFocusInFiber = docFocusElements[focusGuardIndex + 1];
+		}
+
+		// Checks if the focus has arrived at the beginning of the scope and is
+		// returning moves the focus to the end of the scope.
+		if (
+			prevFocusInFiber &&
+			prevFocusInFiber.getAttribute('data-focus-scope-start') === 'true'
+		) {
+			const focusGuardIndex = docFocusElements.findIndex(
+				(element) =>
+					element.getAttribute('data-focus-scope-end') === 'true'
+			);
+
+			prevFocusInFiber = docFocusElements[focusGuardIndex - 1];
+		}
 
 		// Only moves to the next element if it is in scope.
 		if (
