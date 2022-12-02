@@ -272,6 +272,13 @@ export const useCalendarNavigation = ({
 		[lastItemFocused, daysSelected]
 	);
 
+	// Moves the focus to the cell when selected if it is not yet in focus.
+	useEffect(() => {
+		if (gridRef.current && isOpen) {
+			focusNext({date: daysSelected[0]});
+		}
+	}, [daysSelected]);
+
 	useEffect(() => {
 		if (gridRef.current) {
 			if (isOpen) {
