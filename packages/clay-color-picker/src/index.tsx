@@ -343,9 +343,9 @@ const ClayColorPicker = ({
 						alignElementRef={triggerElementRef}
 						className="clay-color-dropdown-menu"
 						containerProps={dropDownContainerProps}
-						focusRefOnEsc={splotchRef}
 						onActiveChange={setInternalActive}
 						ref={dropdownContainerRef}
+						triggerRef={splotchRef}
 					>
 						{(!onColorsChange ||
 							(showPredefinedColorsWithCustom &&

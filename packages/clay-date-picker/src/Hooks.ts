@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useCallback, useState} from 'react';
+import {Keys} from '@clayui/shared';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {IDay, Month, WeekDays, clone, formatDate, setDate} from './Helpers';
 import {FirstDayOfWeek} from './types';
@@ -94,6 +95,287 @@ export const useCurrentTime = (
 	);
 
 	return [currentTime, setCurrentTime] as const;
+};
+
+type CalendarNavigationProps = {
+	daysSelected: readonly [Date, Date];
+	isOpen: boolean;
+	onChangeMonth: (month: number, year?: number) => void;
+	weeks: Month;
+};
+
+export const useCalendarNavigation = ({
+	daysSelected,
+	isOpen,
+	onChangeMonth,
+	weeks,
+}: CalendarNavigationProps) => {
+	const [lastItemFocused, setLastItemFocused] = useState<string | null>(null);
+
+	const gridRef = useRef<HTMLDivElement>(null);
+	const lastKeyPressed = useRef<string>('');
+	const hasNextFocus = useRef<boolean>(false);
+
+	const focusNext = useCallback((day: IDay) => {
+		if (!gridRef.current) {
+			return;
+		}
+
+		const nextFocusElement =
+			gridRef.current.querySelector<HTMLButtonElement>(
+				`button[aria-label="${setDate(day.date, {
+					hours: 12,
+					milliseconds: 0,
+					minutes: 0,
+					seconds: 0,
+				}).toDateString()}"]`
+			);
+
+		nextFocusElement!.focus();
+		setLastItemFocused(String(day.date.getDate()));
+	}, []);
+
+	const onKeyDown = useCallback(
+		(event: React.KeyboardEvent<HTMLElement>) => {
+			switch (event.key) {
+				case Keys.Down:
+				case Keys.Up:
+				case Keys.Right:
+				case Keys.Left: {
+					event.preventDefault();
+
+					const currentRowPosition = Number(
+						document
+							.activeElement!.closest('[role=row]')!
+							.getAttribute('data-index')
+					);
+					const position = Number(
+						document.activeElement!.getAttribute('data-index')
+					);
+
+					const currentRow = weeks[currentRowPosition];
+
+					let nextFocus: IDay | null = null;
+
+					switch (event.key) {
+						case Keys.Right:
+						case Keys.Left: {
+							nextFocus =
+								currentRow[
+									event.key === Keys.Left
+										? position - 1
+										: position + 1
+								];
+
+							if (!nextFocus) {
+								nextFocus =
+									weeks[
+										event.key === Keys.Left
+											? currentRowPosition - 1
+											: currentRowPosition + 1
+									]?.[
+										event.key === Keys.Left
+											? currentRow.length - 1
+											: 0
+									];
+							}
+							break;
+						}
+						case Keys.Up:
+						case Keys.Down: {
+							nextFocus =
+								weeks[
+									event.key === Keys.Up
+										? currentRowPosition - 1
+										: currentRowPosition + 1
+								]?.[position];
+							break;
+						}
+						default:
+							break;
+					}
+
+					if (
+						nextFocus &&
+						!nextFocus.nextMonth &&
+						!nextFocus.previousMonth
+					) {
+						focusNext(nextFocus);
+					} else {
+						onChangeMonth(
+							event.key === Keys.Left || event.key === Keys.Up
+								? -1
+								: 1
+						);
+						lastKeyPressed.current = event.key;
+						hasNextFocus.current = true;
+					}
+
+					break;
+				}
+				case Keys.End:
+				case Keys.Home: {
+					event.preventDefault();
+
+					const grid =
+						event.currentTarget.querySelectorAll<HTMLElement>(
+							'button:not(.previous-month-date):not(.next-month-date)'
+						);
+
+					const day =
+						grid[event.key === Keys.Home ? 0 : grid.length - 1];
+
+					if (day) {
+						day.focus();
+						setLastItemFocused(day.innerText);
+					}
+					break;
+				}
+				case 'PageDown':
+				case 'PageUp': {
+					event.preventDefault();
+
+					const value = event.key === 'PageUp' ? -1 : 1;
+
+					if (event.shiftKey) {
+						onChangeMonth(0, value);
+					} else {
+						onChangeMonth(value);
+					}
+
+					lastKeyPressed.current = event.key;
+					hasNextFocus.current = true;
+					break;
+				}
+				default:
+					break;
+			}
+		},
+		[weeks]
+	);
+
+	const onFocus = useCallback((event: React.FocusEvent<HTMLElement>) => {
+		setLastItemFocused(event.target.innerText);
+	}, []);
+
+	const isFocused = useCallback(
+		(day: IDay) => {
+			return (
+				!day.nextMonth &&
+				!day.previousMonth &&
+				(lastItemFocused === String(day.date.getDate()) ||
+					(lastItemFocused === null &&
+						day.date.toDateString() ===
+							daysSelected[0].toDateString()))
+			);
+		},
+		[lastItemFocused, daysSelected]
+	);
+
+	// Moves the focus to the cell when selected if it is not yet in focus.
+	useEffect(() => {
+		if (gridRef.current && isOpen) {
+			focusNext({date: daysSelected[0]});
+		}
+	}, [daysSelected]);
+
+	useEffect(() => {
+		if (gridRef.current) {
+			if (isOpen) {
+				const focusNext = gridRef.current.querySelector<HTMLElement>(
+					'button:not([tabindex="-1"])'
+				);
+
+				if (focusNext) {
+					focusNext.focus();
+				}
+			} else {
+				setLastItemFocused(null);
+			}
+		}
+	}, [isOpen]);
+
+	useEffect(() => {
+		// Recalculates the focus position when changing the calendar month when
+		// navigating via keyboard.
+		if (hasNextFocus.current && gridRef.current) {
+			hasNextFocus.current = false;
+
+			const position = Number(
+				document.activeElement!.getAttribute('data-index')
+			);
+			const row =
+				weeks[
+					lastKeyPressed.current === Keys.Left ||
+					lastKeyPressed.current === Keys.Up
+						? weeks.length - 1
+						: 0
+				];
+
+			switch (lastKeyPressed.current) {
+				case Keys.Right:
+				case Keys.Left: {
+					// Remaps the row to remove out-of-month dates for horizontal
+					// navigation.
+					const newRow = row.filter(
+						(value) => !value.nextMonth && !value.previousMonth
+					);
+
+					focusNext(
+						newRow[
+							lastKeyPressed.current === Keys.Left
+								? newRow.length - 1
+								: 0
+						]
+					);
+					break;
+				}
+				case Keys.Down:
+				case Keys.Up: {
+					// Remap the row to remove dates outside the month but keep the
+					// position to find the next element in the vertical navigation.
+					let nextFocus = row.map((value) =>
+						!value.nextMonth && !value.previousMonth ? value : null
+					)[position];
+
+					if (!nextFocus) {
+						nextFocus =
+							weeks[
+								lastKeyPressed.current === Keys.Up
+									? weeks.length - 2
+									: 1
+							][position];
+					}
+
+					focusNext(nextFocus);
+					break;
+				}
+				case 'PageDown':
+				case 'PageUp': {
+					const focusNext =
+						gridRef.current.querySelector<HTMLElement>(
+							'button:not([tabindex="-1"])'
+						);
+
+					if (focusNext) {
+						focusNext.focus();
+					}
+					break;
+				}
+				default:
+					break;
+			}
+
+			lastKeyPressed.current = '';
+		}
+	}, [weeks]);
+
+	const gridProps = {onFocus, onKeyDown, ref: gridRef};
+
+	return {
+		gridProps,
+		isFocused,
+	};
 };
 
 function getDaysInMonth(d: Date) {

@@ -6,6 +6,8 @@
 import {default as formatDate} from 'date-fns/format';
 import {default as parseDate} from 'date-fns/parse';
 
+import type {ISelectOption} from './Select';
+
 export {formatDate, parseDate};
 
 export interface IDay {
@@ -66,4 +68,17 @@ export function setDate(
 
 export function isValid(date: Date) {
 	return date instanceof Date && !isNaN(date.getTime());
+}
+
+export function setMonth(
+	range: Array<ISelectOption>,
+	month: number,
+	currentMonth: Date
+) {
+	const date = addMonths(currentMonth, month);
+	const year = date.getFullYear();
+
+	if (range.find((elem) => elem.value === year)) {
+		return date;
+	}
 }

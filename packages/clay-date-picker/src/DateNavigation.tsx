@@ -7,15 +7,15 @@ import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import React from 'react';
 
-import {addMonths, range} from './Helpers';
+import {setMonth} from './Helpers';
 import Select, {ISelectOption} from './Select';
-import {IAriaLabels, IYears} from './types';
+import {IAriaLabels} from './types';
 
 type Props = {
 	ariaLabels: IAriaLabels;
 	currentMonth: Date;
 	disabled?: boolean;
-	months: Array<string>;
+	months: Array<ISelectOption>;
 	onDotClicked: () => void;
 	onMonthChange: (date: Date) => void;
 
@@ -24,7 +24,7 @@ type Props = {
 	 */
 	spritemap?: string;
 
-	years: IYears;
+	years: Array<ISelectOption>;
 };
 
 const ClayDatePickerDateNavigation = ({
@@ -37,28 +37,6 @@ const ClayDatePickerDateNavigation = ({
 	spritemap,
 	years,
 }: Props) => {
-	const memoizedYears: Array<ISelectOption> = React.useMemo(
-		() =>
-			range(years).map((elem) => {
-				return {
-					label: elem,
-					value: elem,
-				};
-			}),
-		[years]
-	);
-
-	const memoizedMonths: Array<ISelectOption> = React.useMemo(
-		() =>
-			months.map((month, index) => {
-				return {
-					label: month,
-					value: index,
-				};
-			}),
-		[months]
-	);
-
 	const monthSelectorRef = React.useRef<HTMLSelectElement | null>(null);
 
 	const yearSelectorRef = React.useRef<HTMLSelectElement | null>(null);
@@ -68,10 +46,9 @@ const ClayDatePickerDateNavigation = ({
 	 * years in the range
 	 */
 	function handleChangeMonth(month: number) {
-		const date = addMonths(currentMonth, month);
-		const year = date.getFullYear();
+		const date = setMonth(years, month, currentMonth);
 
-		if (memoizedYears.find((elem) => elem.value === year)) {
+		if (date) {
 			onMonthChange(date);
 		}
 	}
@@ -105,7 +82,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						name="month"
 						onChange={() => handleFormChange()}
-						options={memoizedMonths}
+						options={months}
 						ref={monthSelectorRef}
 						testId="month-select"
 						value={currentMonth.getMonth()}
@@ -116,7 +93,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						name="year"
 						onChange={() => handleFormChange()}
-						options={memoizedYears}
+						options={years}
 						ref={yearSelectorRef}
 						testId="year-select"
 						value={currentMonth.getFullYear()}
@@ -130,6 +107,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						displayType={null}
 						onClick={handlePreviousMonthClicked}
+						title={ariaLabels.buttonPreviousMonth}
 					>
 						<Icon spritemap={spritemap} symbol="angle-left" />
 					</Button>
@@ -139,6 +117,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						displayType={null}
 						onClick={onDotClicked}
+						title={ariaLabels.buttonDot}
 					>
 						<Icon spritemap={spritemap} symbol="simple-circle" />
 					</Button>
@@ -148,6 +127,7 @@ const ClayDatePickerDateNavigation = ({
 						disabled={disabled}
 						displayType={null}
 						onClick={handleNextMonthClicked}
+						title={ariaLabels.buttonNextMonth}
 					>
 						<Icon spritemap={spritemap} symbol="angle-right" />
 					</Button>

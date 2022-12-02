@@ -11,7 +11,6 @@ import {
 	useInternalState,
 	useNavigation,
 } from '@clayui/shared';
-import {hideOthers} from 'aria-hidden';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -185,34 +184,6 @@ function ClayDropDown<T>({
 
 	const [search, setSearch] = useState('');
 
-	useEffect(() => {
-		if (internalActive) {
-			const onFocus = (event: FocusEvent) => {
-				if (
-					!menuElementRef.current?.parentElement?.contains(
-						event.target as Node
-					) &&
-					!triggerElementRef.current?.contains(event.target as Node)
-				) {
-					setInternalActive(false);
-				}
-			};
-
-			document.addEventListener('focus', onFocus, true);
-
-			return () => {
-				document.removeEventListener('focus', onFocus, true);
-			};
-		}
-	}, [internalActive]);
-
-	useEffect(() => {
-		if (menuElementRef.current && initialized && internalActive) {
-			// Hide everything from ARIA except the MenuElement
-			return hideOthers(menuElementRef.current.parentElement!);
-		}
-	}, [initialized, internalActive]);
-
 	const ariaControls = useMemo(() => {
 		counter++;
 
@@ -312,7 +283,6 @@ function ClayDropDown<T>({
 							alignmentByViewport={alignmentByViewport}
 							alignmentPosition={alignmentPosition}
 							closeOnClickOutside={closeOnClickOutside}
-							focusRefOnEsc={triggerElementRef}
 							hasLeftSymbols={hasLeftSymbols}
 							hasRightSymbols={hasRightSymbols}
 							height={menuHeight}
@@ -321,6 +291,7 @@ function ClayDropDown<T>({
 							onActiveChange={setInternalActive}
 							onKeyDown={navigationProps.onKeyDown}
 							ref={menuElementRef}
+							triggerRef={triggerElementRef}
 							width={menuWidth}
 						>
 							<FocusMenu

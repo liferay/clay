@@ -13,14 +13,18 @@ type Props = {
 	day: IDay;
 	daysSelected: readonly [Date, Date];
 	disabled?: boolean;
-	range?: boolean;
+	index: number;
+	isFocused: boolean;
 	onClick: (date: Date) => void;
+	range?: boolean;
 };
 
 const ClayDatePickerDayNumber = ({
 	day,
 	daysSelected,
 	disabled,
+	index,
+	isFocused,
 	onClick,
 	range,
 }: Props) => {
@@ -71,6 +75,7 @@ const ClayDatePickerDayNumber = ({
 						'previous-month-date': previousMonth,
 					}
 				)}
+				data-index={index}
 				disabled={disabled}
 				onClick={() => onClick(date)}
 				onKeyDown={(event) => {
@@ -86,6 +91,7 @@ const ClayDatePickerDayNumber = ({
 						onClick(date);
 					}
 				}}
+				tabIndex={isFocused ? undefined : -1}
 				type="button"
 			>
 				{date.getDate()}

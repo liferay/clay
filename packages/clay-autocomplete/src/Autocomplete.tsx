@@ -14,7 +14,6 @@ import {
 	useId,
 	useInternalState,
 } from '@clayui/shared';
-import {hideOthers} from 'aria-hidden';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {ICollectionProps} from '@clayui/core';
@@ -183,25 +182,6 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	useEffect(() => {
 		if (active) {
-			const onFocus = (event: FocusEvent) => {
-				if (
-					!inputRef.current?.contains(event.target as Node) &&
-					!menuRef.current?.contains(event.target as Node)
-				) {
-					setActive(false);
-				}
-			};
-
-			document.addEventListener('focus', onFocus, true);
-
-			return () => {
-				document.removeEventListener('focus', onFocus, true);
-			};
-		}
-	}, [active]);
-
-	useEffect(() => {
-		if (active) {
 			const onKeyDown = (event: KeyboardEvent) => {
 				if (
 					inputRef.current &&
@@ -216,13 +196,6 @@ export function Autocomplete<T extends Record<string, any>>({
 			return () => {
 				document.removeEventListener('keydown', onKeyDown, true);
 			};
-		}
-	}, [active]);
-
-	useEffect(() => {
-		if (menuRef.current && inputRef.current && active) {
-			// Hide everything from ARIA except the MenuElement and Input
-			return hideOthers([menuRef.current, inputRef.current]);
 		}
 	}, [active]);
 
@@ -315,7 +288,6 @@ export function Autocomplete<T extends Record<string, any>>({
 				alignmentByViewport={alignmentByViewport}
 				autoBestAlign={!!alignmentByViewport}
 				className="autocomplete-dropdown-menu"
-				focusRefOnEsc={inputRef}
 				id={ariaControlsId}
 				onActiveChange={setActive}
 				ref={menuRef}
@@ -323,6 +295,8 @@ export function Autocomplete<T extends Record<string, any>>({
 					maxWidth: 'none',
 					width: `${containerElementRef.current?.clientWidth}px`,
 				}}
+				suppress={[menuRef, inputRef]}
+				triggerRef={inputRef}
 			>
 				<Collection<T>
 					aria-label={otherProps['aria-label']}

@@ -117,9 +117,7 @@ describe('ClayDropDown', () => {
 			document.body.querySelector('.dropdown-menu')!.classList
 		).toContain('show');
 
-		const outsideElement = getByTestId('OUTSIDE_ELEMENT');
-
-		fireEvent.mouseDown(outsideElement as HTMLDivElement, {});
+		userEvent.click(getByTestId('OUTSIDE_ELEMENT'));
 
 		expect(
 			document.body.querySelector('.dropdown-menu')!.classList

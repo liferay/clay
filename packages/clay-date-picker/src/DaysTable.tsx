@@ -23,6 +23,7 @@ const ClayDatePickerDaysTable = ({children, weeks}: Props) => {
 			{weeks.map((days, index) => (
 				<div
 					className="date-picker-date-row date-picker-row"
+					data-index={index}
 					key={index}
 					role="row"
 				>

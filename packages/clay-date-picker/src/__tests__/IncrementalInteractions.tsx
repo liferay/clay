@@ -10,6 +10,7 @@ import {
 	queryAllByLabelText,
 	render,
 } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import {default as formatDate} from 'date-fns/format';
 import React from 'react';
 
@@ -125,7 +126,7 @@ describe('IncrementalInteractions', () => {
 
 		const dropdown = getByTestId('dropdown');
 
-		fireEvent.mouseDown(getByTestId('outsideElement'), {});
+		userEvent.click(getByTestId('outsideElement'));
 
 		expect(dropdown.classList).not.toContain('show');
 		expect(document.body).toMatchSnapshot();

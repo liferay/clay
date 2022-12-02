@@ -77,6 +77,7 @@ const ClayAutocompleteDropDown = ({
 				maxWidth: 'none',
 				width: `${alignElementWidth}px`,
 			}}
+			triggerRef={alignElementRef}
 		>
 			{children}
 		</DropDown.Menu>
