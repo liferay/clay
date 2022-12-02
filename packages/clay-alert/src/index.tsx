@@ -57,7 +57,8 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 
 export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
 
-export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IClayAlertProps
+	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'role'> {
 	/**
 	 * A React Component to render the alert actions.
 	 */
@@ -74,6 +75,11 @@ export interface IClayAlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Callback function for when the 'x' is clicked.
 	 */
 	onClose?: () => void;
+
+	/**
+	 * The alert role is for important, and usually time-sensitive, information.
+	 */
+	role?: string | null;
 
 	/**
 	 * Determines the style of the alert.
@@ -124,6 +130,7 @@ function ClayAlert({
 	displayType = 'info',
 	hideCloseIcon = false,
 	onClose,
+	role = 'alert',
 	spritemap,
 	title,
 	variant,
@@ -161,7 +168,7 @@ function ClayAlert({
 			})}
 			onMouseOut={startAutoCloseTimer}
 			onMouseOver={pauseAutoCloseTimer}
-			role="alert"
+			role={role as string}
 		>
 			<ConditionalContainer>
 				<ClayLayout.ContentRow className="alert-autofit-row">
