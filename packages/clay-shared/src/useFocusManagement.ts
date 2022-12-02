@@ -214,7 +214,11 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		const reactFiberPosition = fiberFocusElements.indexOf(activeElement);
 
 		// Ignore when the active element is not in the scope.
-		if (reactFiberPosition < 0) {
+		if (
+			reactFiberPosition < 0 &&
+			!prevFocusInDocRef.current &&
+			!nextFocusInDocRef.current
+		) {
 			return null;
 		}
 
