@@ -142,6 +142,8 @@ export const useCalendarNavigation = ({
 				case Keys.Up:
 				case Keys.Right:
 				case Keys.Left: {
+					event.preventDefault();
+
 					const currentRowPosition = Number(
 						document
 							.activeElement!.closest('[role=row]')!
@@ -213,6 +215,8 @@ export const useCalendarNavigation = ({
 				}
 				case Keys.End:
 				case Keys.Home: {
+					event.preventDefault();
+
 					const grid =
 						event.currentTarget.querySelectorAll<HTMLElement>(
 							'button:not(.previous-month-date):not(.next-month-date)'
@@ -229,6 +233,8 @@ export const useCalendarNavigation = ({
 				}
 				case 'PageDown':
 				case 'PageUp': {
+					event.preventDefault();
+
 					const value = event.key === 'PageUp' ? -1 : 1;
 
 					if (event.shiftKey) {

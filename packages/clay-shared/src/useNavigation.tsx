@@ -194,6 +194,7 @@ export function useNavigation<T extends HTMLElement | null>({
 			}
 
 			if (tab) {
+				event.preventDefault();
 				tab.focus();
 
 				if (activation === 'automatic') {
