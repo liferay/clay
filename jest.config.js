@@ -70,7 +70,7 @@ module.exports = {
 		'./packages/clay-date-picker/src/': {
 			branches: 56,
 			functions: 89,
-			lines: 82,
+			lines: 81,
 			statements: 82,
 		},
 		'./packages/clay-drop-down/src/': {
