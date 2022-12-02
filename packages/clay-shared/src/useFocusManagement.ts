@@ -213,47 +213,56 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		const docPosition = docFocusElements.indexOf(activeElement);
 		const reactFiberPosition = fiberFocusElements.indexOf(activeElement);
 
-		// Ignore when the active element is not in the scope.
-		if (
-			reactFiberPosition < 0 &&
-			!prevFocusInDocRef.current &&
-			!nextFocusInDocRef.current
-		) {
-			return null;
-		}
+		const startFocusTrap = fiberFocusElements.find(
+			(element) =>
+				element.getAttribute('data-focus-scope-start') === 'true'
+		);
+		const endFocusTrap = fiberFocusElements.find(
+			(element) => element.getAttribute('data-focus-scope-end') === 'true'
+		);
 
 		const nextFocusInDoc = docFocusElements[docPosition + 1];
 		const prevFocusInDoc = docFocusElements[docPosition - 1];
 
+		// Ignore when the active element is not in the scope.
+		if (
+			reactFiberPosition < 0 &&
+			!prevFocusInDocRef.current &&
+			!nextFocusInDocRef.current &&
+			nextFocusInDoc !== endFocusTrap &&
+			prevFocusInDoc !== startFocusTrap
+		) {
+			return null;
+		}
+
 		let nextFocusInFiber = fiberFocusElements[reactFiberPosition + 1];
 		let prevFocusInFiber = fiberFocusElements[reactFiberPosition - 1];
 
+		// If the focus is moving within the focus trap, let the browser handle
+		// navigation and focus order.
+		if (
+			startFocusTrap &&
+			endFocusTrap &&
+			startFocusTrap !== prevFocusInDoc &&
+			endFocusTrap !== nextFocusInDoc
+		) {
+			return null;
+		}
+
 		// Checks if the focus has reached the end of the scope and should
 		// go back to the beginning.
-		if (
-			nextFocusInFiber &&
-			nextFocusInFiber.getAttribute('data-focus-scope-end') === 'true'
-		) {
-			const focusGuardIndex = docFocusElements.findIndex(
-				(element) =>
-					element.getAttribute('data-focus-scope-start') === 'true'
+		if (endFocusTrap && endFocusTrap === nextFocusInDoc) {
+			nextFocusInFiber = docFocusElements.find(
+				(_, index, array) => array[index - 1] === startFocusTrap
 			);
-
-			nextFocusInFiber = docFocusElements[focusGuardIndex + 1];
 		}
 
 		// Checks if the focus has arrived at the beginning of the scope and is
 		// returning moves the focus to the end of the scope.
-		if (
-			prevFocusInFiber &&
-			prevFocusInFiber.getAttribute('data-focus-scope-start') === 'true'
-		) {
-			const focusGuardIndex = docFocusElements.findIndex(
-				(element) =>
-					element.getAttribute('data-focus-scope-end') === 'true'
+		if (startFocusTrap && startFocusTrap === prevFocusInDoc) {
+			prevFocusInFiber = docFocusElements.find(
+				(_, index, array) => array[index + 1] === endFocusTrap
 			);
-
-			prevFocusInFiber = docFocusElements[focusGuardIndex - 1];
 		}
 
 		// Only moves to the next element if it is in scope.
