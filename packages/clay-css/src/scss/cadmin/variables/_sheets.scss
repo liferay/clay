@@ -125,11 +125,15 @@ $cadmin-sheet-subtitle-link: map-deep-merge(
 		color: $cadmin-sheet-subtitle-link-color,
 		text-decoration: $cadmin-sheet-subtitle-link-text-decoration,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $cadmin-sheet-subtitle-link-hover-color,
-		hover-text-decoration: $cadmin-sheet-subtitle-link-hover-text-decoration,
-		focus-box-shadow: #{0 0 0 4px $cadmin-white,
-		0 0 0 6px $cadmin-primary-l1},
-		focus-outline: 0,
+		hover: (
+			color: $cadmin-sheet-subtitle-link-hover-color,
+			text-decoration: $cadmin-sheet-subtitle-link-hover-text-decoration,
+		),
+		focus: (
+			box-shadow: #{0 0 0 4px $cadmin-white,
+			0 0 0 6px $cadmin-primary-l1},
+			outline: 0,
+		),
 	),
 	$cadmin-sheet-subtitle-link
 );

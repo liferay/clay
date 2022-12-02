@@ -262,14 +262,22 @@ $cadmin-modal-height-full-modal-content-sm-up: map-merge(
 $cadmin-modal-success: () !default;
 $cadmin-modal-success: map-deep-merge(
 	(
-		header-bg: $cadmin-success-l2,
-		header-border-color: $cadmin-success-l1,
-		header-color: $cadmin-success,
-		header-close: (
+		modal-header: (
+			background-color: $cadmin-success-l2,
+			border-color: $cadmin-success-l1,
 			color: $cadmin-success,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $cadmin-success,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$cadmin-modal-success
@@ -280,14 +288,22 @@ $cadmin-modal-success: map-deep-merge(
 $cadmin-modal-info: () !default;
 $cadmin-modal-info: map-deep-merge(
 	(
-		header-bg: $cadmin-info-l2,
-		header-border-color: $cadmin-info-l1,
-		header-color: $cadmin-info,
-		header-close: (
+		modal-header: (
+			background-color: $cadmin-info-l2,
+			border-color: $cadmin-info-l1,
 			color: $cadmin-info,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $cadmin-info,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$cadmin-modal-info
@@ -298,14 +314,22 @@ $cadmin-modal-info: map-deep-merge(
 $cadmin-modal-warning: () !default;
 $cadmin-modal-warning: map-deep-merge(
 	(
-		header-bg: $cadmin-warning-l2,
-		header-border-color: $cadmin-warning-l1,
-		header-color: $cadmin-warning,
-		header-close: (
+		modal-header: (
+			background-color: $cadmin-warning-l2,
+			border-color: $cadmin-warning-l1,
 			color: $cadmin-warning,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $cadmin-warning,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$cadmin-modal-warning
@@ -316,14 +340,22 @@ $cadmin-modal-warning: map-deep-merge(
 $cadmin-modal-danger: () !default;
 $cadmin-modal-danger: map-deep-merge(
 	(
-		header-bg: $cadmin-danger-l2,
-		header-border-color: $cadmin-danger-l1,
-		header-color: $cadmin-danger,
-		header-close: (
+		modal-header: (
+			background-color: $cadmin-danger-l2,
+			border-color: $cadmin-danger-l1,
 			color: $cadmin-danger,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $cadmin-danger,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$cadmin-modal-danger

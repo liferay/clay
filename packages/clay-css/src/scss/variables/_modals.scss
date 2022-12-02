@@ -262,14 +262,22 @@ $modal-height-full-modal-content-sm-up: map-merge(
 $modal-success: () !default;
 $modal-success: map-deep-merge(
 	(
-		header-bg: theme-color-level(success, -10),
-		header-border-color: theme-color-level(success, -9),
-		header-color: theme-color-level(success, 6),
-		header-close: (
+		modal-header: (
+			background-color: theme-color-level(success, -10),
+			border-color: theme-color-level(success, -9),
 			color: theme-color-level(success, 6),
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: theme-color-level(success, 6),
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-success
@@ -280,14 +288,22 @@ $modal-success: map-deep-merge(
 $modal-info: () !default;
 $modal-info: map-deep-merge(
 	(
-		header-bg: theme-color-level(info, -10),
-		header-border-color: theme-color-level(info, -9),
-		header-color: theme-color-level(info, 6),
-		header-close: (
+		modal-header: (
+			background-color: theme-color-level(info, -10),
+			border-color: theme-color-level(info, -9),
 			color: theme-color-level(info, 6),
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: theme-color-level(info, 6),
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-info
@@ -298,14 +314,22 @@ $modal-info: map-deep-merge(
 $modal-warning: () !default;
 $modal-warning: map-deep-merge(
 	(
-		header-bg: theme-color-level(warning, -10),
-		header-border-color: theme-color-level(warning, -9),
-		header-color: theme-color-level(warning, 6),
-		header-close: (
+		modal-header: (
+			background-color: theme-color-level(warning, -10),
+			border-color: theme-color-level(warning, -9),
 			color: theme-color-level(warning, 6),
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: theme-color-level(warning, 6),
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-warning
@@ -316,14 +340,22 @@ $modal-warning: map-deep-merge(
 $modal-danger: () !default;
 $modal-danger: map-deep-merge(
 	(
-		header-bg: theme-color-level(danger, -10),
-		header-border-color: theme-color-level(danger, -9),
-		header-color: theme-color-level(danger, 6),
-		header-close: (
+		modal-header: (
+			background-color: theme-color-level(danger, -10),
+			border-color: theme-color-level(danger, -9),
 			color: theme-color-level(danger, 6),
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: theme-color-level(danger, 6),
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-danger

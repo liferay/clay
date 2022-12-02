@@ -94,10 +94,18 @@ $cadmin-clay-color-dropdown-menu-close: map-deep-merge(
 		color: $cadmin-gray-600,
 		font-size: 16px,
 		opacity: 1,
-		hover-bg: rgba($cadmin-gray-900, 0.03),
-		focus-bg: rgba($cadmin-gray-900, 0.03),
-		active-bg: rgba($cadmin-gray-900, 0.06),
-		disabled-bg: transparent,
+		hover: (
+			background-color: rgba($cadmin-gray-900, 0.03),
+		),
+		focus: (
+			background-color: rgba($cadmin-gray-900, 0.03),
+		),
+		active: (
+			background-color: rgba($cadmin-gray-900, 0.06),
+		),
+		disabled: (
+			background-color: transparent,
+		),
 	),
 	$cadmin-clay-color-dropdown-menu-close
 );
@@ -164,7 +172,7 @@ $cadmin-clay-color-btn-bordered: map-deep-merge(
 $cadmin-clay-color-pointer: () !default;
 $cadmin-clay-color-pointer: map-deep-merge(
 	(
-		bg: transparent,
+		background-color: transparent,
 		border-radius: 100px,
 		border-color: $cadmin-white,
 		border-style: solid,
@@ -177,8 +185,10 @@ $cadmin-clay-color-pointer: map-deep-merge(
 		position: absolute,
 		transition: box-shadow 0.15s ease-in-out,
 		width: 14px,
-		focus-box-shadow: 0 0 0 2px $cadmin-primary-l1,
-		focus-outline: 0,
+		focus: (
+			box-shadow: 0 0 0 2px $cadmin-primary-l1,
+			outline: 0,
+		),
 	),
 	$cadmin-clay-color-pointer
 );

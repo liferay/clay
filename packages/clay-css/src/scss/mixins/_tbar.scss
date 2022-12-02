@@ -122,7 +122,8 @@
 			)
 		);
 
-		$item: setter(map-get($map, item), ());
+		$item: setter(map-get($map, tbar-item), ());
+		$item: map-merge($item, setter(map-get($map, item), ()));
 		$item: map-merge(
 			$item,
 			(
@@ -154,8 +155,9 @@
 			)
 		);
 
-		$btn: setter(map-get($map, btn), ());
-		$btn: map-merge(
+		$btn: setter(map-get($map, tbar-btn), ());
+		$btn: map-deep-merge($btn, setter(map-get($map, btn), ()));
+		$btn: map-deep-merge(
 			$btn,
 			(
 				height:
@@ -218,7 +220,11 @@
 			)
 		);
 
-		$btn-c-inner: setter(map-get($map, btn-c-inner), ());
+		$btn-c-inner: setter(map-get($btn, c-inner), ());
+		$btn-c-inner: map-merge(
+			$btn-c-inner,
+			setter(map-get($map, btn-c-inner), ())
+		);
 		$btn-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
@@ -230,8 +236,12 @@
 			$btn-c-inner
 		);
 
-		$btn-monospaced: setter(map-get($map, btn-monospaced), ());
-		$btn-monospaced: map-merge(
+		$btn-monospaced: setter(map-get($map, tbar-btn-monospaced), ());
+		$btn-monospaced: map-deep-merge(
+			$btn-monospaced,
+			setter(map-get($map, btn-monospaced), ())
+		);
+		$btn-monospaced: map-deep-merge(
 			$btn-monospaced,
 			(
 				border-radius:
@@ -289,9 +299,10 @@
 			)
 		);
 
-		$btn-monospaced-c-inner: setter(
-			map-get($map, btn-monospaced-c-inner),
-			()
+		$btn-monospaced-c-inner: setter(map-get($btn-monospaced, c-inner), ());
+		$btn-monospaced-c-inner: map-merge(
+			$btn-monospaced-c-inner,
+			setter(map-get($map, btn-monospaced-c-inner), ())
 		);
 		$btn-monospaced-c-inner: map-merge(
 			(
@@ -301,8 +312,9 @@
 			$btn-monospaced-c-inner
 		);
 
-		$link: setter(map-get($map, link), ());
-		$link: map-merge(
+		$link: setter(map-get($map, tbar-link), ());
+		$link: map-deep-merge($link, setter(map-get($map, link), ()));
+		$link: map-deep-merge(
 			$link,
 			(
 				margin-bottom:
@@ -348,7 +360,11 @@
 			)
 		);
 
-		$link-c-inner: setter(map-get($map, link-c-inner), ());
+		$link-c-inner: setter(map-get($link, c-inner), ());
+		$link-c-inner: map-merge(
+			$link-c-inner,
+			setter(map-get($map, link-c-inner), ())
+		);
 		$link-c-inner: map-merge(
 			(
 				enabled: $enable-c-inner,
@@ -360,8 +376,12 @@
 			$link-c-inner
 		);
 
-		$link-monospaced: setter(map-get($map, link-monospaced), ());
-		$link-monospaced: map-merge(
+		$link-monospaced: setter(map-get($map, tbar-link-monospaced), ());
+		$link-monospaced: map-deep-merge(
+			$link-monospaced,
+			setter(map-get($map, link-monospaced), ())
+		);
+		$link-monospaced: map-deep-merge(
 			(
 				border-radius:
 					setter(
@@ -418,8 +438,12 @@
 		);
 
 		$link-monospaced-c-inner: setter(
-			map-get($map, link-monospaced-c-inner),
+			map-get($link-monospaced, c-inner),
 			()
+		);
+		$link-monospaced-c-inner: map-merge(
+			$link-monospaced-c-inner,
+			setter(map-get($map, link-monospaced-c-inner), ())
 		);
 		$link-monospaced-c-inner: map-merge(
 			(
@@ -429,7 +453,8 @@
 			$link-monospaced-c-inner
 		);
 
-		$section: setter(map-get($map, section), ());
+		$section: setter(map-get($map, tbar-section), ());
+		$section: map-merge($section, setter(map-get($map, section), ()));
 		$section: map-merge(
 			$section,
 			(
@@ -456,23 +481,66 @@
 		}
 
 		.tbar-nav {
-			@include clay-css(map-get($map, nav));
+			$tbar-nav: setter(map-get($map, tbar-nav), ());
+			$tbar-nav: map-merge($tbar-nav, setter(map-get($map, nav), ()));
+
+			@include clay-css($tbar-nav);
 		}
 
 		.tbar-item {
 			@include clay-css($item);
 		}
 
-		.tbar-divider-before::before {
-			@include clay-css(map-get($map, divider-before));
+		.tbar-divider-before {
+			$tbar-divider-before: setter(
+				map-get($map, tbar-divider-before),
+				()
+			);
+
+			@include clay-css($tbar-divider-before);
+
+			&::before {
+				$before: setter(map-get($tbar-divider-before, before), ());
+				$before: map-merge(
+					$before,
+					setter(map-get($map, divider-before), ())
+				);
+
+				@include clay-css($before);
+			}
+
+			&::after {
+				@include clay-css(map-get($tbar-divider-before, after));
+			}
 		}
 
 		.tbar-divider-after::after {
-			@include clay-css(map-get($map, divider-after));
+			$tbar-divider-after: setter(map-get($map, tbar-divider-after), ());
+
+			@include clay-css($tbar-divider-after);
+
+			&::before {
+				@include clay-css(map-get($tbar-divider-after, before));
+			}
+
+			&::after {
+				$after: setter(map-get($tbar-divider-after, after), ());
+				$after: map-merge(
+					$after,
+					setter(map-get($map, divider-after), ())
+				);
+
+				@include clay-css($after);
+			}
 		}
 
 		.tbar-item-expand {
-			@include clay-css(map-get($map, item-expand));
+			$tbar-item-expand: setter(map-get($map, tbar-item-expand), ());
+			$tbar-item-expand: map-merge(
+				$tbar-item-expand,
+				setter(map-get($map, item-expand), ())
+			);
+			@include clay-css($tbar-item-expand);
 		}
 
 		.tbar-btn {
@@ -540,7 +608,13 @@
 		}
 
 		.tbar-label {
-			@include clay-label-size(map-get($map, tbar-label-size));
+			$tbar-label: setter(map-get($map, tbar-label), ());
+			$tbar-label: map-merge(
+				$tbar-label,
+				setter(map-get($map, tbar-label-size), ())
+			);
+
+			@include clay-label-size($tbar-label);
 		}
 	}
 }
@@ -558,8 +632,24 @@
 @mixin clay-tbar-inline-down($map) {
 	@if (type-of($map) == 'map') {
 		$breakpoint-down: map-get($map, breakpoint-down);
-		$item-padding-left: map-get($map, item-padding-left);
-		$item-padding-right: map-get($map, item-padding-right);
+
+		$tbar-item: setter(map-get($map, tbar-item), ());
+		$tbar-item: map-merge(
+			$tbar-item,
+			(
+				display: setter(map-get($tbar-item, display), inline),
+				padding-left:
+					setter(
+						map-get($tbar-item, padding-left),
+						map-get($map, item-padding-left)
+					),
+				padding-right:
+					setter(
+						map-get($tbar-item, padding-right),
+						map-get($map, item-padding-right)
+					),
+			)
+		);
 
 		@if ($breakpoint-down) {
 			@include media-breakpoint-down($breakpoint-down) {
@@ -577,9 +667,7 @@
 				}
 
 				.tbar-item {
-					display: inline;
-					padding-left: $item-padding-left;
-					padding-right: $item-padding-right;
+					@include clay-css($tbar-item);
 				}
 			}
 		}

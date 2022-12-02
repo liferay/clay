@@ -33,14 +33,22 @@ $modal-title-font-weight: $font-weight-bold !default;
 $modal-success: () !default;
 $modal-success: map-deep-merge(
 	(
-		header-bg: $success-l2,
-		header-border-color: $success-l1,
-		header-color: $success,
-		header-close: (
+		modal-header: (
+			background-color: $success-l2,
+			border-color: $success-l1,
 			color: $success,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $success,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-success
@@ -51,14 +59,22 @@ $modal-success: map-deep-merge(
 $modal-info: () !default;
 $modal-info: map-deep-merge(
 	(
-		header-bg: $info-l2,
-		header-border-color: $info-l1,
-		header-color: $info,
-		header-close: (
+		modal-header: (
+			background-color: $info-l2,
+			border-color: $info-l1,
 			color: $info,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $info,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-info
@@ -69,14 +85,22 @@ $modal-info: map-deep-merge(
 $modal-warning: () !default;
 $modal-warning: map-deep-merge(
 	(
-		header-bg: $warning-l2,
-		header-border-color: $warning-l1,
-		header-color: $warning,
-		header-close: (
+		modal-header: (
+			background-color: $warning-l2,
+			border-color: $warning-l1,
 			color: $warning,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $warning,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-warning
@@ -87,14 +111,22 @@ $modal-warning: map-deep-merge(
 $modal-danger: () !default;
 $modal-danger: map-deep-merge(
 	(
-		header-bg: $danger-l2,
-		header-border-color: $danger-l1,
-		header-color: $danger,
-		header-close: (
+		modal-header: (
+			background-color: $danger-l2,
+			border-color: $danger-l1,
 			color: $danger,
-			hover-color: inherit,
-			focus-color: inherit,
-			disabled-color: inherit,
+			close: (
+				color: $danger,
+				hover: (
+					color: inherit,
+				),
+				focus: (
+					color: inherit,
+				),
+				disabled: (
+					color: inherit,
+				),
+			),
 		),
 	),
 	$modal-danger

@@ -67,7 +67,7 @@
 			)
 		);
 
-		$header: setter(map-get($map, header), ());
+		$header: setter(map-get($map, panel-header), map-get($map, header), ());
 		$header: map-merge(
 			$header,
 			(
@@ -184,7 +184,7 @@
 		$header-link: setter(map-get($header, link), ());
 		$header-link: map-deep-merge($header-link, $old-header-link);
 
-		$title: setter(map-get($map, title), ());
+		$title: setter(map-get($map, panel-title), map-get($map, title), ());
 		$title: map-merge(
 			$title,
 			(
@@ -238,7 +238,7 @@
 			)
 		);
 
-		$body: setter(map-get($map, body), ());
+		$body: setter(map-get($map, panel-body), map-get($map, body), ());
 		$body: map-merge(
 			$body,
 			(
@@ -285,7 +285,7 @@
 			)
 		);
 
-		$footer: setter(map-get($map, footer), ());
+		$footer: setter(map-get($map, panel-footer), map-get($map, footer), ());
 		$footer: map-merge(
 			$footer,
 			(

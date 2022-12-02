@@ -66,20 +66,36 @@ $progress-palette: () !default;
 $progress-palette: map-deep-merge(
 	(
 		success: (
-			bar-bg: $progress-bar-success-bg,
-			group-feedback-color: $progress-group-feedback-success-color,
+			progress-bar: (
+				background-color: $progress-bar-success-bg,
+			),
+			progress-group-feedback: (
+				color: $progress-group-feedback-success-color,
+			),
 		),
 		info: (
-			bar-bg: $progress-bar-info-bg,
-			group-feedback-color: $progress-group-feedback-info-color,
+			progress-bar: (
+				background-color: $progress-bar-info-bg,
+			),
+			progress-group-feedback: (
+				color: $progress-group-feedback-info-color,
+			),
 		),
 		warning: (
-			bar-bg: $progress-bar-warning-bg,
-			group-feedback-color: $progress-group-feedback-warning-color,
+			progress-bar: (
+				background-color: $progress-bar-warning-bg,
+			),
+			progress-group-feedback: (
+				color: $progress-group-feedback-warning-color,
+			),
 		),
 		danger: (
-			bar-bg: $progress-bar-danger-bg,
-			group-feedback-color: $progress-group-feedback-danger-color,
+			progress-bar: (
+				background-color: $progress-bar-danger-bg,
+			),
+			progress-group-feedback: (
+				color: $progress-group-feedback-danger-color,
+			),
 		),
 	),
 	$progress-palette
