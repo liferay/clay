@@ -1693,7 +1693,7 @@ A monospaced `dropdown-toggle` for a dropdown containing several actions, add `d
 
 <div class="sheet-example">
 	<div class="dropdown dropdown-action">
-		<a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+		<a aria-label="More Actions" aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
 			<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#ellipsis-v"></use>
 			</svg>
@@ -1743,7 +1743,7 @@ A monospaced `dropdown-toggle` for a dropdown containing several actions, add `d
 
 <div class="sheet-example">
 	<div class="dropdown dropdown-action">
-		<button aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownBtnAction1" type="button">
+		<button aria-label="More Actions" aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" id="dropdownBtnAction1" type="button">
 			<svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#ellipsis-v"></use>
 			</svg>
