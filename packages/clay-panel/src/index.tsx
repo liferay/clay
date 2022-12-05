@@ -182,15 +182,15 @@ function ClayPanel({
 						}}
 						in={internalExpanded}
 						onEnter={(element: HTMLElement) =>
-							element.setAttribute('style', `height: 0px`)
-						}
-						onEntering={(element: HTMLElement) =>
 							setElementFullHeight(element)
 						}
+						onEntered={(element: HTMLElement) => {
+							element.style.height = '';
+						}}
 						onExit={(element) => setElementFullHeight(element)}
-						onExiting={(element) =>
-							element.setAttribute('style', `height: 0px`)
-						}
+						onExiting={(element) => {
+							element.style.height = '';
+						}}
 						role="tabpanel"
 						timeout={250}
 					>
