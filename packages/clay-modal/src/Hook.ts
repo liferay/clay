@@ -84,9 +84,9 @@ const useUserInteractions = (
 
 		if (
 			event.target === modalElementRef.current &&
-			(mouseEventTargetRef.current === event.target ||
-				mouseEventTargetRef.current === null)
+			mouseEventTargetRef.current === event.target
 		) {
+			mouseEventTargetRef.current = null;
 			onClick();
 		}
 
