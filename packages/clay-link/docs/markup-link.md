@@ -205,28 +205,28 @@ Use these patterns for actions in components.
 ## Monospaced(#css-monospaced)
 
 <div class="sheet-example">
-	<a class="link-monospaced link-outline link-outline-primary" href="#1">
+	<a aria-label="Add cell" title="Add cell" class="link-monospaced link-outline link-outline-primary" href="#1">
 		<span class="inline-item">
 			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#add-cell" />
 			</svg>
 		</span>
 	</a>
-	<a class="link-monospaced link-outline link-outline-borderless link-outline-primary" href="#1">
+	<a aria-label="Add cell" title="Add cell" class="link-monospaced link-outline link-outline-borderless link-outline-primary" href="#1">
 		<span class="inline-item">
 			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#add-cell" />
 			</svg>
 		</span>
 	</a>
-	<a class="link-monospaced link-outline link-outline-secondary" href="#1">
+	<a aria-label="Image" title="Image" class="link-monospaced link-outline link-outline-secondary" href="#1">
 		<span class="inline-item">
 			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 	</a>
-	<a class="link-monospaced link-outline link-outline-borderless link-outline-secondary" href="#1">
+	<a aria-label="Image" title="Image" class="link-monospaced link-outline link-outline-borderless link-outline-secondary" href="#1">
 		<span class="inline-item">
 			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#picture" />
@@ -236,7 +236,12 @@ Use these patterns for actions in components.
 </div>
 
 ```html
-<a class="link-monospaced link-outline link-outline-primary" href="#1">
+<a
+	aria-label="Add cell"
+	title="Add cell"
+	class="link-monospaced link-outline link-outline-primary"
+	href="#1"
+>
 	<span class="inline-item">
 		<svg
 			class="lexicon-icon lexicon-icon-add-cell"
@@ -249,6 +254,8 @@ Use these patterns for actions in components.
 </a>
 
 <a
+	aria-label="Add cell"
+	title="Add cell"
 	class="link-monospaced link-outline link-outline-borderless link-outline-primary"
 	href="#1"
 >
@@ -263,7 +270,12 @@ Use these patterns for actions in components.
 	</span>
 </a>
 
-<a class="link-monospaced link-outline link-outline-secondary" href="#1">
+<a
+	aria-label="Image"
+	title="Image"
+	class="link-monospaced link-outline link-outline-secondary"
+	href="#1"
+>
 	<span class="inline-item">
 		<svg
 			class="lexicon-icon lexicon-icon-picture"
@@ -276,6 +288,8 @@ Use these patterns for actions in components.
 </a>
 
 <a
+	aria-label="Image"
+	title="Image"
 	class="link-monospaced link-outline link-outline-borderless link-outline-secondary"
 	href="#1"
 >
