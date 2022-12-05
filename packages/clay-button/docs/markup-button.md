@@ -185,36 +185,36 @@ Try adding the modifier class `.btn-monospaced`.
 
 <div class="sheet-example">
 	<div class="mb-2">
-		<button class="btn btn-monospaced btn-primary btn-xs" type="button">
+		<button aria-label="Blogs" title="Blogs" class="btn btn-monospaced btn-primary btn-xs" type="button">
 			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#blogs"></use>
 			</svg>
 		</button>
-		<button class="btn btn-monospaced btn-secondary btn-xs" type="button">
+		<button aria-label="Blogs" title="Blogs" class="btn btn-monospaced btn-secondary btn-xs" type="button">
 			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#blogs"></use>
 			</svg>
 		</button>
 	</div>
 	<div class="mb-2">
-		<button class="btn btn-monospaced btn-primary btn-sm" type="button">
+		<button aria-label="Blogs" title="Blogs" class="btn btn-monospaced btn-primary btn-sm" type="button">
 			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#blogs"></use>
 			</svg>
 		</button>
-		<button class="btn btn-monospaced btn-secondary btn-sm" type="button">
+		<button aria-label="Blogs" title="Blogs" class="btn btn-monospaced btn-secondary btn-sm" type="button">
 			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#blogs"></use>
 			</svg>
 		</button>
 	</div>
 	<div>
-		<button class="btn btn-monospaced btn-primary" type="button">
+		<button aria-label="Blogs" title="Blogs" class="btn btn-monospaced btn-primary" type="button">
 			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#blogs"></use>
 			</svg>
 		</button>
-		<button class="btn btn-monospaced btn-secondary" type="button">
+		<button aria-label="Blogs" title="Blogs" class="btn btn-monospaced btn-secondary" type="button">
 			<svg class="lexicon-icon lexicon-icon-blogs" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#blogs"></use>
 			</svg>
@@ -223,7 +223,12 @@ Try adding the modifier class `.btn-monospaced`.
 </div>
 
 ```html
-<button class="btn btn-monospaced btn-primary btn-xs" type="button">
+<button
+	aria-label="Blogs"
+	title="Blogs"
+	class="btn btn-monospaced btn-primary btn-xs"
+	type="button"
+>
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
@@ -233,7 +238,12 @@ Try adding the modifier class `.btn-monospaced`.
 	</svg>
 </button>
 
-<button class="btn btn-monospaced btn-secondary btn-xs" type="button">
+<button
+	aria-label="Blogs"
+	title="Blogs"
+	class="btn btn-monospaced btn-secondary btn-xs"
+	type="button"
+>
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
@@ -243,7 +253,12 @@ Try adding the modifier class `.btn-monospaced`.
 	</svg>
 </button>
 
-<button class="btn btn-monospaced btn-primary btn-sm" type="button">
+<button
+	aria-label="Blogs"
+	title="Blogs"
+	class="btn btn-monospaced btn-primary btn-sm"
+	type="button"
+>
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
@@ -253,7 +268,12 @@ Try adding the modifier class `.btn-monospaced`.
 	</svg>
 </button>
 
-<button class="btn btn-monospaced btn-secondary btn-sm" type="button">
+<button
+	aria-label="Blogs"
+	title="Blogs"
+	class="btn btn-monospaced btn-secondary btn-sm"
+	type="button"
+>
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
@@ -263,7 +283,12 @@ Try adding the modifier class `.btn-monospaced`.
 	</svg>
 </button>
 
-<button class="btn btn-monospaced btn-primary" type="button">
+<button
+	aria-label="Blogs"
+	title="Blogs"
+	class="btn btn-monospaced btn-primary"
+	type="button"
+>
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"
@@ -273,7 +298,12 @@ Try adding the modifier class `.btn-monospaced`.
 	</svg>
 </button>
 
-<button class="btn btn-monospaced btn-secondary" type="button">
+<button
+	aria-label="Blogs"
+	title="Blogs"
+	class="btn btn-monospaced btn-secondary"
+	type="button"
+>
 	<svg
 		class="lexicon-icon lexicon-icon-blogs"
 		focusable="false"

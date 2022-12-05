@@ -107,7 +107,7 @@ import ClayIcon from '@clayui/icon;`;
 const ButtonIconCode = `const Component = () => {
 	return (
 		<>
-			<ClayButtonWithIcon spritemap={spritemap} symbol="times" />
+			<ClayButtonWithIcon aria-label="Close" spritemap={spritemap} symbol="times" title="Close" />
 
 			<br />
 			<br />
