@@ -16,6 +16,8 @@ const LabelCode = `const Component = () => {
 		<ClayLabel
 			closeButtonProps={
 				{
+					'aria-label': 'Close',
+					title: 'Close',
 					onClick: () => setVisible(val => !val)
 				}
 			}
@@ -40,11 +42,11 @@ const labelClosingActionsImportsCode = `import ClayLabel from '@clayui/label';`;
 
 const LabelClosingActionsCode = `const Component = () => (
 	<ClayLabel
-		closeButtonProps={
-			{
-				id: 'closeId'
-			}
-		}
+		closeButtonProps={{
+			'aria-label': 'Close',
+			title: 'Close',
+			id: 'closeId'
+		}}
 		displayType="success"
 		spritemap={spritemap}
 	>
