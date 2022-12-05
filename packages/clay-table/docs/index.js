@@ -15,6 +15,7 @@ const tableCode = `const Component = () => {
 
 	return (
 		<ClayTable>
+			<caption>Table caption</caption>
 			<ClayTable.Head>
 				<ClayTable.Row>
 					<ClayTable.Cell expanded headingCell>
