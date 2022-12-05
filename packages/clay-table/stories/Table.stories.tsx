@@ -77,6 +77,7 @@ function Dropdown() {
 
 export const Default = () => (
 	<ClayTable>
+		<caption>Table caption</caption>
 		<ClayTable.Head>
 			<ClayTable.Row>
 				<ClayTable.Cell expanded headingCell headingTitle>
@@ -190,6 +191,7 @@ export const WithHover = (args: any) => {
 				striped={args.striped}
 				tableVerticalAlignment={args.tableVerticalAlignment}
 			>
+				<caption>Table caption</caption>
 				<ClayTable.Head>
 					<ClayTable.Row>
 						<ClayTable.Cell headingCell>
@@ -349,6 +351,7 @@ export const WithTableList = (args: any) => {
 				striped={args.striped}
 				tableVerticalAlignment={args.tableVerticalAlignment}
 			>
+				<caption>Table caption</caption>
 				<ClayTable.Head>
 					<ClayTable.Row>
 						<ClayTable.Cell />
@@ -418,6 +421,7 @@ export const WithTableListStriped = (args: any) => (
 			striped={args.striped}
 			tableVerticalAlignment={args.tableVerticalAlignment}
 		>
+			<caption>Table caption</caption>
 			<ClayTable.Head>
 				<ClayTable.Row>
 					<ClayTable.Cell headingCell />
@@ -523,6 +527,7 @@ export const WithNonWrappedCells = (args: any) => (
 			striped={args.striped}
 			tableVerticalAlignment={args.tableVerticalAlignment}
 		>
+			<caption>Table caption</caption>
 			<ClayTable.Head>
 				<ClayTable.Row>
 					<ClayTable.Cell headingCell />
