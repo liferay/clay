@@ -37,12 +37,16 @@ const ListCode = `const Component = () => {
 				<ClayList.ItemField>
 					<ClayList.QuickActionMenu>
 						<ClayList.QuickActionMenu.Item
+							aria-label="Delete"
+							title="Delete"
 							onClick={() => alert('Clicked the trash!')}
 							spritemap={spritemap}
 							symbol="trash"
 						/>
 
 						<ClayList.QuickActionMenu.Item
+							aria-label="Settings"
+							title="Settings"
 							onClick={() => alert('Clicked the cog!')}
 							spritemap={spritemap}
 							symbol="cog"
@@ -89,11 +93,15 @@ const ListQuickActionsMenuCode = `const Component = () => {
 				<ClayList.ItemField>
 					<ClayList.QuickActionMenu>
 						<ClayList.QuickActionMenu.Item
+							aria-label="Delete"
+							title="Delete"
 							onClick={() => alert('Clicked the trash!')}
 							spritemap={spritemap}
 							symbol="trash"
 						/>
 						<ClayList.QuickActionMenu.Item
+							aria-label="Settings"
+							title="Settings"
 							onClick={() => alert('Clicked the cog!')}
 							spritemap={spritemap}
 							symbol="cog"

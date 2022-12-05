@@ -116,13 +116,17 @@ export const Simple = () => (
 			<ClayList.ItemField>
 				<ClayList.QuickActionMenu>
 					<ClayList.QuickActionMenu.Item
+						aria-label="Delete"
 						onClick={() => alert('Clicked the trash!')}
 						symbol="trash"
+						title="Delete"
 					/>
 
 					<ClayList.QuickActionMenu.Item
+						aria-label="Settings"
 						onClick={() => alert('Clicked the cog!')}
 						symbol="cog"
+						title="Settings"
 					/>
 				</ClayList.QuickActionMenu>
 			</ClayList.ItemField>
@@ -168,13 +172,17 @@ export const Complex = (args: any) => (
 				<ClayList.ItemField>
 					<ClayList.QuickActionMenu>
 						<ClayList.QuickActionMenu.Item
+							aria-label="Delete"
 							onClick={() => alert('Clicked the trash!')}
 							symbol="trash"
+							title="Delete"
 						/>
 
 						<ClayList.QuickActionMenu.Item
+							aria-label="Settings"
 							onClick={() => alert('Clicked the cog!')}
 							symbol="cog"
+							title="Settings"
 						/>
 					</ClayList.QuickActionMenu>
 				</ClayList.ItemField>
