@@ -92,6 +92,11 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	ellipsisBuffer?: number;
 
 	/**
+	 * Properties to pass to the ellipsis trigger.
+	 */
+	ellipsisProps?: Object;
+
+	/**
 	 * Function used to create the href provided for each page link.
 	 */
 	hrefConstructor?: (page?: number) => string;
@@ -159,6 +164,7 @@ export const ClayPaginationBarWithBasicItems = ({
 	disabledPages,
 	disableEllipsis = false,
 	ellipsisBuffer,
+	ellipsisProps,
 	hrefConstructor,
 	labels = DEFAULT_LABELS,
 	onActiveChange,
@@ -249,6 +255,7 @@ export const ClayPaginationBarWithBasicItems = ({
 				disableEllipsis={disableEllipsis}
 				disabledPages={disabledPages}
 				ellipsisBuffer={ellipsisBuffer}
+				ellipsisProps={ellipsisProps}
 				hrefConstructor={hrefConstructor}
 				onActiveChange={setActive}
 				spritemap={spritemap}
