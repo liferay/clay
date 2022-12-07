@@ -96,7 +96,7 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 				childArray[0].type?.displayName === 'ClayIcon' &&
 				typeof otherProps['aria-label'] !== 'string'
 			),
-			'Button accessibility: component has only the Icon declared, defines an `aria-label` or `title` (consult your design team) attribute that labels the interactive button that screen readers can read.'
+			'Button Accessibility: Component has only the Icon declared. Define an `aria-label` or `title` attribute (consult your design team) that labels the interactive button that screen readers can read.'
 		);
 
 		return (
