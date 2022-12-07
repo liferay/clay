@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+### Features
+
+-   **@clayui/alert:** adds possibility to remove alert attribute ([222e2ee](https://github.com/liferay/clay/commit/222e2eefceefb94d2071fce304929a8d97fc44e4))
+
 ## [3.70.1](https://github.com/liferay/clay/compare/v3.70.0...v3.70.1) (2022-08-24)
 
 **Note:** Version bump only for package @clayui/alert

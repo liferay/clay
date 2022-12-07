@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+### Bug Fixes
+
+-   **@clayui/breadcrumb:** add `aria-label` and `title` to ellipsis ([7905087](https://github.com/liferay/clay/commit/7905087c927396c74f5a9230d9d5b29a6aeebb30))
+-   **@clayui/button:** update warning text ([a1e571b](https://github.com/liferay/clay/commit/a1e571bbdf959b20e2ec544e7dc278d65fce328d))
+-   **@clayui/css:** Cadmin normalize Sass map keys to be closer to the selector name ([66dbd7a](https://github.com/liferay/clay/commit/66dbd7ab604a754f60801197f10a60202b7787a4))
+-   **@clayui/css:** Mixins clay-css adds gap and row-gap to properties ([ba0447c](https://github.com/liferay/clay/commit/ba0447c44ad5d13b6b367f06874209c74e3dcee2))
+-   **@clayui/css:** Mixins clay-modal-variant keys should be closer to the selector name ([60439a6](https://github.com/liferay/clay/commit/60439a6ea237b4cc5c73570f5f5f15e39dfe2911))
+-   **@clayui/css:** Mixins clay-tbar-variant fix typo in `.tbar-divider-after` selector ([651c34a](https://github.com/liferay/clay/commit/651c34a1ff8cce6f467984deb1e042eadd0f4caa))
+-   **@clayui/css:** Mixins keys should be closer to the selector name ([8ad67a5](https://github.com/liferay/clay/commit/8ad67a5ca3d8b222de6643f777e6d70e46e8b4b2))
+-   **@clayui/css:** Normalize Sass map keys to be closer to the selector name ([3af7cde](https://github.com/liferay/clay/commit/3af7cdeb52b822079100ae9cc8324f182ba17d7e))
+-   **@clayui/css:** Progress Bar variant keys should be closer to the selector name ([68aea6c](https://github.com/liferay/clay/commit/68aea6c09afc4e81d369693890fd3490e573a844))
+-   **@clayui/date-picker:** moves focus to selected cell when clicking dot button ([9d0d8d1](https://github.com/liferay/clay/commit/9d0d8d1326ab4752d28fb6367ee0ee066cffc46c))
+-   **@clayui/modal:** fix double click in the file select window in case outside of the modal ([fd24158](https://github.com/liferay/clay/commit/fd241587a9068397af5e405696b613910330f2dc))
+-   **@clayui/pagination-bar:** add `aria-label` and `title` to ellipsis ([c1124ac](https://github.com/liferay/clay/commit/c1124acc7c82c0bd3b736c506804a7aa4b356b3c))
+-   **@clayui/pagination:** add `aria-label` and `title` to ellipsis ([be831e5](https://github.com/liferay/clay/commit/be831e582f9c54c37535fd4267caff19c7ed74d8))
+-   **@clayui/panel:** Remove fixed height after panel is shown ([07aea35](https://github.com/liferay/clay/commit/07aea35a767dd85a9e927df0fc4b3671174907e5))
+-   **@clayui/shared:** fix error when losing focus in DropDown ([7f7a903](https://github.com/liferay/clay/commit/7f7a9033259b458c6ae6d999c45f2d6e8df4b7df))
+-   **@clayui/shared:** fix navigation when focus trap ([3ecb858](https://github.com/liferay/clay/commit/3ecb85881703ca4a7072d55556db1e4d526521c3))
+-   fix bug when scrolling page when navigating via arrow keys ([45092ec](https://github.com/liferay/clay/commit/45092ec26bf6ce6adefc5e53ab3e0d69330662fb))
+
+### Features
+
+-   **@clayui/alert:** adds possibility to remove alert attribute ([222e2ee](https://github.com/liferay/clay/commit/222e2eefceefb94d2071fce304929a8d97fc44e4))
+-   **@clayui/css:** Cadmin Utilities adds 5 levels of gap utilities ([2ebeb50](https://github.com/liferay/clay/commit/2ebeb507cc933ac3a0600bf150541e697612ebd2))
+-   **@clayui/css:** Utilities adds 5 levels of gap utilities ([c095efd](https://github.com/liferay/clay/commit/c095efd483d9bd37d6ed4a870f4ad1b5aedab767))
+-   **@clayui/date-picker:** implements keyboard navigation to DatePicker ([c8b0a13](https://github.com/liferay/clay/commit/c8b0a13f62623ae080e5777760ad1296619eafe8))
+-   **@clayui/shared:** add component to handle overlay for Clay components ([a911038](https://github.com/liferay/clay/commit/a91103851fe6aab734bf94649990b1a1eb5b9e3d))
+-   **@clayui/shared:** add hook to handle overlay positioning ([d7427eb](https://github.com/liferay/clay/commit/d7427ebb99e5c3901a548428ac285c4fa603dbd2))
+-   removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
+
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
 ### Bug Fixes

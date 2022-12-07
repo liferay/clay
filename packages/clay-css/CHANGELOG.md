@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin normalize Sass map keys to be closer to the selector name ([66dbd7a](https://github.com/liferay/clay/commit/66dbd7ab604a754f60801197f10a60202b7787a4))
+* **@clayui/css:** Mixins clay-css adds gap and row-gap to properties ([ba0447c](https://github.com/liferay/clay/commit/ba0447c44ad5d13b6b367f06874209c74e3dcee2))
+* **@clayui/css:** Mixins clay-modal-variant keys should be closer to the selector name ([60439a6](https://github.com/liferay/clay/commit/60439a6ea237b4cc5c73570f5f5f15e39dfe2911))
+* **@clayui/css:** Mixins clay-tbar-variant fix typo in `.tbar-divider-after` selector ([651c34a](https://github.com/liferay/clay/commit/651c34a1ff8cce6f467984deb1e042eadd0f4caa))
+* **@clayui/css:** Mixins keys should be closer to the selector name ([8ad67a5](https://github.com/liferay/clay/commit/8ad67a5ca3d8b222de6643f777e6d70e46e8b4b2))
+* **@clayui/css:** Normalize Sass map keys to be closer to the selector name ([3af7cde](https://github.com/liferay/clay/commit/3af7cdeb52b822079100ae9cc8324f182ba17d7e))
+* **@clayui/css:** Progress Bar variant keys should be closer to the selector name ([68aea6c](https://github.com/liferay/clay/commit/68aea6c09afc4e81d369693890fd3490e573a844))
+
+
+### Features
+
+* **@clayui/css:** Cadmin Utilities adds 5 levels of gap utilities ([2ebeb50](https://github.com/liferay/clay/commit/2ebeb507cc933ac3a0600bf150541e697612ebd2))
+* **@clayui/css:** Utilities adds 5 levels of gap utilities ([c095efd](https://github.com/liferay/clay/commit/c095efd483d9bd37d6ed4a870f4ad1b5aedab767))
+* removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
+
+
+
+
+
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
 

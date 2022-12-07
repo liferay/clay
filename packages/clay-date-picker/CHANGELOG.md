@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** moves focus to selected cell when clicking dot button ([9d0d8d1](https://github.com/liferay/clay/commit/9d0d8d1326ab4752d28fb6367ee0ee066cffc46c))
+-   fix bug when scrolling page when navigating via arrow keys ([45092ec](https://github.com/liferay/clay/commit/45092ec26bf6ce6adefc5e53ab3e0d69330662fb))
+
+### Features
+
+-   **@clayui/date-picker:** implements keyboard navigation to DatePicker ([c8b0a13](https://github.com/liferay/clay/commit/c8b0a13f62623ae080e5777760ad1296619eafe8))
+-   removes duplication of implementation of accessibility features for menu using Overlay component ([9d60eb9](https://github.com/liferay/clay/commit/9d60eb9670cb5dc9fc18e02e3a97f139f1db4cfd))
+
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
 **Note:** Version bump only for package @clayui/date-picker

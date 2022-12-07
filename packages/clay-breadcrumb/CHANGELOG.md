@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+### Bug Fixes
+
+-   **@clayui/breadcrumb:** add `aria-label` and `title` to ellipsis ([7905087](https://github.com/liferay/clay/commit/7905087c927396c74f5a9230d9d5b29a6aeebb30))
+
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
 **Note:** Version bump only for package @clayui/breadcrumb

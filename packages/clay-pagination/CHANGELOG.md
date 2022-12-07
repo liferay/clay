@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** add `aria-label` and `title` to ellipsis ([be831e5](https://github.com/liferay/clay/commit/be831e582f9c54c37535fd4267caff19c7ed74d8))
+
 # [3.81.0](https://github.com/liferay/clay/compare/v3.80.1...v3.81.0) (2022-11-30)
 
 **Note:** Version bump only for package @clayui/pagination
