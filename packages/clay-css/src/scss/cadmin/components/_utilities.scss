@@ -324,6 +324,28 @@
 	background-color: $cadmin-page-header-bg;
 }
 
+// Clay Gap
+
+@each $breakpoint in map-keys($cadmin-grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $cadmin-grid-breakpoints);
+
+		@each $size, $length in $cadmin-c-gap {
+			.c-gap#{$infix}-#{$size} {
+				gap: $length;
+			}
+
+			.c-gapx#{$infix}-#{$size} {
+				column-gap: $length;
+			}
+
+			.c-gapy#{$infix}-#{$size} {
+				row-gap: $length;
+			}
+		}
+	}
+}
+
 // Clay Margin and Padding
 
 @each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {

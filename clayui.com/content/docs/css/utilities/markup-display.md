@@ -61,6 +61,11 @@ The utility `d-*` sets the `display` property.
 					<td class="table-cell-expand"><div class="d-flex bg-secondary text-white">This is flex text.</div></td>
 				</tr>
 				<tr>
+					<td class="table-cell-minw-150">d-grid</td>
+					<td class="table-cell-expand">grid</td>
+					<td class="table-cell-expand"><div class="d-flex bg-secondary text-white">This is grid text.</div></td>
+				</tr>
+				<tr>
 					<td class="table-cell-minw-150">d-table</td>
 					<td class="table-cell-expand">table</td>
 					<td class="table-cell-expand"><div class="d-table bg-secondary text-white">This is table text.</div></td>
@@ -87,6 +92,7 @@ The utility `d-*` sets the `display` property.
 <div class="d-block">This is block text.</div>
 <div class="d-inline-flex">This is inline-flex text.</div>
 <div class="d-flex">This is flex text.</div>
+<div class="d-grid">This is grid text.</div>
 <div class="d-table">This is table text.</div>
 <div class="d-table-row">This is table-row text.</div>
 <div class="d-table-cell">This is table-cell text.</div>
@@ -138,6 +144,11 @@ The utility `d-sm-*` sets the `display` property for screen sizes 576px(sm) and 
 					<td class="table-cell-expand"><div class="d-none d-sm-flex bg-secondary text-white">This is flex text.</div></td>
 				</tr>
 				<tr>
+					<td class="table-cell-minw-150">d-none d-sm-grid</td>
+					<td class="table-cell-expand">Hidden between 0 and 575px and `grid` on min-width: 576px (sm)</td>
+					<td class="table-cell-expand"><div class="d-none d-sm-flex bg-secondary text-white">This is grid text.</div></td>
+				</tr>
+				<tr>
 					<td class="table-cell-minw-150">d-none d-sm-table</td>
 					<td class="table-cell-expand">Hidden between 0 and 575px and `table` on min-width: 576px (sm)</td>
 					<td class="table-cell-expand"><div class="d-none d-sm-table bg-secondary text-white">This is table text.</div></td>
@@ -164,6 +175,7 @@ The utility `d-sm-*` sets the `display` property for screen sizes 576px(sm) and 
 <div class="d-none d-sm-block">This is block text.</div>
 <div class="d-none d-sm-inline-flex">This is inline-flex text.</div>
 <div class="d-none d-sm-flex">This is flex text.</div>
+<div class="d-none d-sm-grid">This is grid text.</div>
 <div class="d-none d-sm-table">This is table text.</div>
 <div class="d-none d-sm-table-row">This is table-row text.</div>
 <div class="d-none d-sm-table-cell">This is table-cell text.</div>
@@ -215,6 +227,11 @@ The utility `d-md-*` sets the `display` property for screen sizes 768px(md) and 
 					<td class="table-cell-expand"><div class="d-none d-md-flex bg-secondary text-white">This is flex text.</div></td>
 				</tr>
 				<tr>
+					<td class="table-cell-minw-150">d-none d-md-grid</td>
+					<td class="table-cell-expand">Hidden between 0 and 767px and `grid` on min-width: 768px (md)</td>
+					<td class="table-cell-expand"><div class="d-none d-md-flex bg-secondary text-white">This is grid text.</div></td>
+				</tr>
+				<tr>
 					<td class="table-cell-minw-150">d-none d-md-table</td>
 					<td class="table-cell-expand">Hidden between 0 and 767px and `table` on min-width: 768px (md)</td>
 					<td class="table-cell-expand"><div class="d-none d-md-table bg-secondary text-white">This is table text.</div></td>
@@ -241,6 +258,7 @@ The utility `d-md-*` sets the `display` property for screen sizes 768px(md) and 
 <div class="d-none d-md-block">This is block text.</div>
 <div class="d-none d-md-inline-flex">This is inline-flex text.</div>
 <div class="d-none d-md-flex">This is flex text.</div>
+<div class="d-none d-md-grid">This is grid text.</div>
 <div class="d-none d-md-table">This is table text.</div>
 <div class="d-none d-md-table-row">This is table-row text.</div>
 <div class="d-none d-md-table-cell">This is table-cell text.</div>
@@ -292,6 +310,11 @@ The utility `d-lg-*` sets the `display` property for screen sizes 992px(lg) and 
 					<td class="table-cell-expand"><div class="d-none d-lg-flex bg-secondary text-white">This is flex text.</div></td>
 				</tr>
 				<tr>
+					<td class="table-cell-minw-150">d-none d-lg-grid</td>
+					<td class="table-cell-expand">Hidden between 0 and 991px and `grid` on min-width: 992px (lg)</td>
+					<td class="table-cell-expand"><div class="d-none d-lg-flex bg-secondary text-white">This is grid text.</div></td>
+				</tr>
+				<tr>
 					<td class="table-cell-minw-150">d-none d-lg-table</td>
 					<td class="table-cell-expand">Hidden between 0 and 991px and `table` on min-width: 992px (lg)</td>
 					<td class="table-cell-expand"><div class="d-none d-lg-table bg-secondary text-white">This is table text.</div></td>
@@ -318,6 +341,7 @@ The utility `d-lg-*` sets the `display` property for screen sizes 992px(lg) and 
 <div class="d-none d-lg-block">This is block text.</div>
 <div class="d-none d-lg-inline-flex">This is inline-flex text.</div>
 <div class="d-none d-lg-flex">This is flex text.</div>
+<div class="d-none d-lg-grid">This is grid text.</div>
 <div class="d-none d-lg-table">This is table text.</div>
 <div class="d-none d-lg-table-row">This is table-row text.</div>
 <div class="d-none d-lg-table-cell">This is table-cell text.</div>
@@ -369,6 +393,11 @@ The utility `d-xl-*` sets the `display` property for screen sizes 1280px(xl) and
 					<td class="table-cell-expand"><div class="d-none d-xl-flex bg-secondary text-white">This is flex text.</div></td>
 				</tr>
 				<tr>
+					<td class="table-cell-minw-150">d-none d-xl-grid</td>
+					<td class="table-cell-expand">Hidden between 0 and 1279px and `grid` on min-width: 1280px (xl)</td>
+					<td class="table-cell-expand"><div class="d-none d-xl-flex bg-secondary text-white">This is grid text.</div></td>
+				</tr>
+				<tr>
 					<td class="table-cell-minw-150">d-none d-xl-table</td>
 					<td class="table-cell-expand">Hidden between 0 and 1279px and `table` on min-width: 1280px (xl)</td>
 					<td class="table-cell-expand"><div class="d-none d-xl-table bg-secondary text-white">This is table text.</div></td>
@@ -395,6 +424,7 @@ The utility `d-xl-*` sets the `display` property for screen sizes 1280px(xl) and
 <div class="d-none d-xl-block">This is block text.</div>
 <div class="d-none d-xl-inline-flex">This is inline-flex text.</div>
 <div class="d-none d-xl-flex">This is flex text.</div>
+<div class="d-none d-xl-grid">This is grid text.</div>
 <div class="d-none d-xl-table">This is table text.</div>
 <div class="d-none d-xl-table-row">This is table-row text.</div>
 <div class="d-none d-xl-table-cell">This is table-cell text.</div>

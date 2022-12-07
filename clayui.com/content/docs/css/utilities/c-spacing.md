@@ -8,6 +8,7 @@ title: 'C Spacing Utilities'
 -   [How to Read the Class](#css-read)
 -   [How to Understand the Class](#css-understand)
 -   [How to Use the Class](#css-use)
+-   [Gap](#css-gap)
 
 </div>
 </div>
@@ -99,3 +100,39 @@ If we translated these classes into CSS, this would be the result:
 	}
 }
 ```
+
+## Gap(#css-gap)
+
+The gap CSS property sets the gutters between rows and columns of a flex or grid element. We use the same naming convention as margin and padding. The gap utility sizes are based on the `$spacers` scale, but can be customized to a different scale through the `$c-gap` Sass map.
+
+The classes `c-gap-{breakpoint}-{#}` sets the `gap` CSS property which is shorthand for `row-gap` and `column-gap`. The classes `c-gapx-{breakpoint}-{#}` sets the `column-gap` CSS property; the left and right spaces between elements. The classes `c-gapy-{breakpoint}-{#}` sets the `row-gap` CSS property; the top and bottom spaces between elements.
+
+<div class="sheet-example">
+	<div class="h6">c-gap-3</div>
+	<div class="d-flex flex-wrap c-gap-3">
+		<div class="bg-secondary text-center text-white w-25">1</div>
+		<div class="bg-secondary text-center text-white w-25">2</div>
+		<div class="bg-secondary text-center text-white w-25">3</div>
+		<div class="bg-secondary text-center text-white w-25">4</div>
+		<div class="bg-secondary text-center text-white w-25">5</div>
+		<div class="bg-secondary text-center text-white w-25">6</div>
+	</div>
+	<div class="h6 mt-3">c-gapx-3</div>
+	<div class="d-flex flex-wrap c-gapx-3">
+		<div class="bg-secondary text-center text-white w-25">1</div>
+		<div class="bg-secondary text-center text-white w-25">2</div>
+		<div class="bg-secondary text-center text-white w-25">3</div>
+		<div class="bg-secondary text-center text-white w-25">4</div>
+		<div class="bg-secondary text-center text-white w-25">5</div>
+		<div class="bg-secondary text-center text-white w-25">6</div>
+	</div>
+	<div class="h6 mt-3">c-gapy-3</div>
+	<div class="d-flex flex-wrap c-gapy-3">
+		<div class="bg-secondary text-center text-white w-25">1</div>
+		<div class="bg-secondary text-center text-white w-25">2</div>
+		<div class="bg-secondary text-center text-white w-25">3</div>
+		<div class="bg-secondary text-center text-white w-25">4</div>
+		<div class="bg-secondary text-center text-white w-25">5</div>
+		<div class="bg-secondary text-center text-white w-25">6</div>
+	</div>
+</div>

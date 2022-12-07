@@ -172,6 +172,21 @@ $cadmin-inline-item: map-deep-merge(
 
 $cadmin-page-header-bg: $cadmin-white !default;
 
+// Clay Gap
+
+$cadmin-c-gap: () !default;
+$cadmin-c-gap: map-merge(
+	(
+		0: map-get($cadmin-spacers, 0),
+		1: map-get($cadmin-spacers, 1),
+		2: map-get($cadmin-spacers, 2),
+		3: map-get($cadmin-spacers, 3),
+		4: map-get($cadmin-spacers, 4),
+		5: map-get($cadmin-spacers, 5),
+	),
+	$cadmin-c-gap
+);
+
 // Background
 
 $cadmin-bg-theme-colors: () !default;
@@ -352,7 +367,7 @@ $cadmin-border-theme-colors: map-deep-merge(
 
 // Display
 
-$cadmin-displays: none, inline, inline-block, block, table, table-row,
+$cadmin-displays: none, inline, inline-block, grid, block, table, table-row,
 	table-cell, flex, inline-flex !default;
 
 // Overflow

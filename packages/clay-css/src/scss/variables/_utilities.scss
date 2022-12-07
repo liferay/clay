@@ -174,6 +174,21 @@ $inline-item: map-deep-merge(
 
 $page-header-bg: $gray-200 !default;
 
+// Clay Gap
+
+$c-gap: () !default;
+$c-gap: map-merge(
+	(
+		0: map-get($spacers, 0),
+		1: map-get($spacers, 1),
+		2: map-get($spacers, 2),
+		3: map-get($spacers, 3),
+		4: map-get($spacers, 4),
+		5: map-get($spacers, 5),
+	),
+	$c-gap
+);
+
 // Background
 
 $bg-theme-colors: () !default;
@@ -342,8 +357,8 @@ $border-theme-colors: map-deep-merge(
 
 // Display
 
-$displays: none, inline, inline-block, block, table, table-row, table-cell, flex,
-	inline-flex !default;
+$displays: none, inline, inline-block, block, grid, table, table-row, table-cell,
+	flex, inline-flex !default;
 
 // Overflow
 
