@@ -49,7 +49,7 @@ Use `pagination-bar`'s preset styles to give your users more control over the co
             <li class="active page-item"><a class="page-link" href="#1" tabindex="-1">1</a></li>
             <li class="page-item"><a class="page-link" href="#1">2</a></li>
             <li class="dropdown page-item">
-                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
+                <a aria-label="More" title="More" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
                 <ul class="dropdown-menu dropdown-menu-top-center">
                     <li>
                         <ul class="inline-scroller">
@@ -125,6 +125,8 @@ Use `pagination-bar`'s preset styles to give your users more control over the co
 		<li class="page-item"><a class="page-link" href="#1">2</a></li>
 		<li class="dropdown page-item">
 			<a
+				aria-label="More"
+				title="More"
 				aria-expanded="false"
 				aria-haspopup="true"
 				class="dropdown-toggle page-link"
@@ -200,7 +202,7 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
             <li class="active page-item"><a class="page-link" href="#1" tabindex="-1">1</a></li>
             <li class="page-item"><a class="page-link" href="#1">2</a></li>
             <li class="dropdown page-item">
-                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
+                <a aria-label="More" title="More" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
                 <ul class="dropdown-menu dropdown-menu-top-center">
                     <li>
                         <ul class="inline-scroller">
@@ -276,6 +278,8 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
 		<li class="page-item"><a class="page-link" href="#1">2</a></li>
 		<li class="dropdown page-item">
 			<a
+				aria-label="More"
+				title="More"
 				aria-expanded="false"
 				aria-haspopup="true"
 				class="dropdown-toggle page-link"
@@ -347,7 +351,7 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
             <li class="active page-item"><a class="page-link" href="#1" tabindex="-1">1</a></li>
             <li class="page-item"><a class="page-link" href="#1">2</a></li>
             <li class="dropdown page-item">
-                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
+                <a aria-label="More" title="More" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
                 <ul class="dropdown-menu dropdown-menu-top-center">
                     <li>
                         <ul class="inline-scroller">
@@ -423,6 +427,8 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
 		<li class="page-item"><a class="page-link" href="#1">2</a></li>
 		<li class="dropdown page-item">
 			<a
+				aria-label="More"
+				title="More"
 				aria-expanded="false"
 				aria-haspopup="true"
 				class="dropdown-toggle page-link"
@@ -494,7 +500,7 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
             <li class="active page-item"><a class="page-link" href="#1" tabindex="-1">1</a></li>
             <li class="page-item"><a class="page-link" href="#1">2</a></li>
             <li class="dropdown page-item">
-                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
+                <a aria-label="More" title="More" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle page-link" data-toggle="dropdown" href="#1" role="button">...</a>
                 <ul class="dropdown-menu dropdown-menu-top-center">
                     <li>
                         <ul class="inline-scroller">
@@ -570,6 +576,8 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
 		<li class="page-item"><a class="page-link" href="#1">2</a></li>
 		<li class="dropdown page-item">
 			<a
+				aria-label="More"
+				title="More"
 				aria-expanded="false"
 				aria-haspopup="true"
 				class="dropdown-toggle page-link"
@@ -645,7 +653,7 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
                 <button class="btn btn-unstyled page-link" type="button">2</button>
             </li>
             <li class="dropdown page-item">
-                <button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle page-link" data-toggle="dropdown" type="button">...</button>
+                <button aria-label="More" title="More" aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle page-link" data-toggle="dropdown" type="button">...</button>
                 <ul class="dropdown-menu dropdown-menu-top-center">
                     <li>
                         <ul class="inline-scroller">
@@ -734,6 +742,8 @@ More sizing options, add `pagination-sm` or `pagination-lg` to any pagination co
 		</li>
 		<li class="dropdown page-item">
 			<button
+				aria-label="More"
+				title="More"
 				aria-expanded="false"
 				aria-haspopup="true"
 				class="btn btn-unstyled dropdown-toggle page-link"

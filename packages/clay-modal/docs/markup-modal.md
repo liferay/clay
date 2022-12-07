@@ -55,7 +55,7 @@ mainTabURL: 'docs/components/modal.html'
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="claySmallModalLabel">Modal Title</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" role="button" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -106,7 +106,8 @@ mainTabURL: 'docs/components/modal.html'
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					role="button"
@@ -160,7 +161,7 @@ mainTabURL: 'docs/components/modal.html'
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" role="button" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -202,7 +203,8 @@ mainTabURL: 'docs/components/modal.html'
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					role="button"
@@ -256,7 +258,7 @@ The large modal is an 800px wide window on displays greater than 992px. It is a 
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="clayLargeModalLabel">Modal Title</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" role="button" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -298,7 +300,8 @@ The large modal is an 800px wide window on displays greater than 992px. It is a 
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					role="button"
@@ -354,7 +357,7 @@ The full screen modal stretches to fit the browser window, with 45px spacing on 
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="clayLargeModalLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -416,7 +419,8 @@ The full screen modal stretches to fit the browser window, with 45px spacing on 
 					Add Picture to Documents and Media Library in Liferay Seven
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -508,7 +512,7 @@ Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the brow
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="clayModalFullScreenSmDownLabel">Modal Title</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -561,7 +565,8 @@ Add `modal-full-screen-sm-down` to any `modal-dialog` to stretch to fit the brow
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -642,7 +647,7 @@ Add the class `modal-height-sm` to the `modal` or `modal-dialog` element to fix 
 						</div>
 					</div>
 				</div>
-				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+				<button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
 					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
@@ -700,6 +705,7 @@ Add the class `modal-height-sm` to the `modal` or `modal-dialog` element to fix 
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -758,7 +764,7 @@ Add the class `modal-height-md` to the `modal` or `modal-dialog` element to fix 
 						</div>
 					</div>
 				</div>
-				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+				<button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
 					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
@@ -816,6 +822,7 @@ Add the class `modal-height-md` to the `modal` or `modal-dialog` element to fix 
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -874,7 +881,7 @@ Add the class `modal-height-lg` to the `modal` or `modal-dialog` element to fix 
 						</div>
 					</div>
 				</div>
-				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+				<button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
 					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
@@ -932,6 +939,7 @@ Add the class `modal-height-lg` to the `modal` or `modal-dialog` element to fix 
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -990,7 +998,7 @@ Add the class `modal-height-xl` to the `modal` or `modal-dialog` element to fix 
 						</div>
 					</div>
 				</div>
-				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+				<button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
 					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
@@ -1048,6 +1056,7 @@ Add the class `modal-height-xl` to the `modal` or `modal-dialog` element to fix 
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -1106,7 +1115,7 @@ Add the class `modal-height-full` to the `modal` or `modal-dialog` element to ex
 						</div>
 					</div>
 				</div>
-				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+				<button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
 					<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 						<use xlink:href="/images/icons/icons.svg#times" />
 					</svg>
@@ -1164,6 +1173,7 @@ Add the class `modal-height-full` to the `modal` or `modal-dialog` element to ex
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -1220,7 +1230,7 @@ A classic modal window is composed of three main parts: header, body, and footer
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="clayDefaultModalLabel">Modal Title</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" role="button" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -1262,7 +1272,8 @@ A classic modal window is composed of three main parts: header, body, and footer
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					role="button"
@@ -1324,7 +1335,7 @@ Insert a Navigation or Input Group between the Header and Body
 							</div>
 						</div>
 					</div>
-					<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
 						<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 							<use xlink:href="/images/icons/icons.svg#times" />
 						</svg>
@@ -1338,12 +1349,12 @@ Insert a Navigation or Input Group between the Header and Body
 									<div class="input-group-item">
 										<input class="form-control input-group-inset input-group-inset-after" placeholder="Search for..." type="text">
 										<span class="input-group-inset-item input-group-inset-item-after">
-											<button class="btn btn-monospaced btn-unstyled" type="submit">
+											<button aria-label="Search" class="btn btn-monospaced btn-unstyled" type="submit">
 												<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#search" />
 												</svg>
 											</button>
-											<button class="btn btn-monospaced btn-unstyled d-none" type="button">
+											<button aria-label="Close search" class="btn btn-monospaced btn-unstyled d-none" type="button">
 												<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 													<use xlink:href="/images/icons/icons.svg#times" />
 												</svg>
@@ -1355,7 +1366,7 @@ Insert a Navigation or Input Group between the Header and Body
 						</div>
 						<ul class="navbar-nav">
 							<li class="dropdown nav-item">
-								<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle nav-btn nav-btn-monospaced" data-toggle="dropdown" type="button">
+								<button aria-label="Add" aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle nav-btn nav-btn-monospaced" data-toggle="dropdown" type="button">
 									<svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation">
 										<use xlink:href="/images/icons/icons.svg#plus" />
 									</svg>
@@ -1451,6 +1462,7 @@ Insert a Navigation or Input Group between the Header and Body
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -1481,6 +1493,7 @@ Insert a Navigation or Input Group between the Header and Body
 										class="input-group-inset-item input-group-inset-item-after"
 									>
 										<button
+											aria-label="Search"
 											class="btn btn-monospaced btn-unstyled"
 											type="submit"
 										>
@@ -1495,6 +1508,7 @@ Insert a Navigation or Input Group between the Header and Body
 											</svg>
 										</button>
 										<button
+											aria-label="Close search"
 											class="btn btn-monospaced btn-unstyled d-none"
 											type="button"
 										>
@@ -1516,6 +1530,7 @@ Insert a Navigation or Input Group between the Header and Body
 					<ul class="navbar-nav">
 						<li class="dropdown nav-item">
 							<button
+								aria-label="Add"
 								aria-expanded="false"
 								aria-haspopup="true"
 								class="btn btn-primary dropdown-toggle nav-btn nav-btn-monospaced"
@@ -1639,7 +1654,7 @@ Insert a Navigation or Input Group between the Header and Body
 							</div>
 						</div>
 					</div>
-					<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
 						<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 							<use xlink:href="/images/icons/icons.svg#times" />
 						</svg>
@@ -1649,12 +1664,12 @@ Insert a Navigation or Input Group between the Header and Body
 					<div class="input-group-item">
 						<input aria-label="Search for" class="form-control input-group-inset input-group-inset-after" placeholder="Search..." type="text">
 						<div class="input-group-inset-item input-group-inset-item-after">
-							<button class="btn btn-unstyled d-md-none" type="button">
+							<button aria-label="Close search" class="btn btn-unstyled d-md-none" type="button">
 								<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#times" />
 								</svg>
 							</button>
-							<button class="btn btn-unstyled d-none d-md-inline-block" type="button">
+							<button aria-label="Search" class="btn btn-unstyled d-none d-md-inline-block" type="button">
 								<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation">
 									<use xlink:href="/images/icons/icons.svg#search" />
 								</svg>
@@ -1662,7 +1677,7 @@ Insert a Navigation or Input Group between the Header and Body
 						</div>
 					</div>
 					<div class="input-group-item input-group-item-shrink">
-						<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced btn-sm dropdown-toggle" data-toggle="dropdown" type="button">
+						<button aria-label="Add" aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced btn-sm dropdown-toggle" data-toggle="dropdown" type="button">
 							<svg class="lexicon-icon lexicon-icon-plus" focusable="false" role="presentation"><use xlink:href="/images/icons/icons.svg#plus" /></svg>
 						</button>
 						<ul class="dropdown-menu dropdown-menu-right">
@@ -1729,6 +1744,7 @@ Insert a Navigation or Input Group between the Header and Body
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -1754,6 +1770,7 @@ Insert a Navigation or Input Group between the Header and Body
 						class="input-group-inset-item input-group-inset-item-after"
 					>
 						<button
+							aria-label="Close search"
 							class="btn btn-unstyled d-md-none"
 							type="button"
 						>
@@ -1768,6 +1785,7 @@ Insert a Navigation or Input Group between the Header and Body
 							</svg>
 						</button>
 						<button
+							aria-label="Search"
 							class="btn btn-unstyled d-none d-md-inline-block"
 							type="button"
 						>
@@ -1785,6 +1803,7 @@ Insert a Navigation or Input Group between the Header and Body
 				</div>
 				<div class="input-group-item input-group-item-shrink">
 					<button
+						aria-label="Add"
 						aria-expanded="false"
 						aria-haspopup="true"
 						class="btn btn-primary btn-monospaced btn-sm dropdown-toggle"
@@ -1861,7 +1880,7 @@ When you don't need a footer bar to place your icons, you can just have a header
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="clayHeaderBodyModalLabel">Modal Title</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" role="button" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -1898,7 +1917,8 @@ When you don't need a footer bar to place your icons, you can just have a header
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					role="button"
@@ -2000,7 +2020,7 @@ Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` w
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="gridModalLabel">Grids in modals</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
                 <div class="container-fluid bd-example-row">
@@ -2066,6 +2086,7 @@ Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` w
 					class="close"
 					data-dismiss="modal"
 					aria-label="Close"
+					title="Close"
 				>
 					<span aria-hidden="true">×</span>
 				</button>
@@ -2146,7 +2167,7 @@ In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="clayFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -2195,7 +2216,8 @@ In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser
 						Seven
 					</div>
 					<button
-						aria-labelledby="Close"
+						aria-label="Close"
+						title="Close"
 						class="close"
 						data-dismiss="modal"
 						type="button"
@@ -2260,7 +2282,7 @@ Add one of the following helper classes to the `modal-dialog` element to style i
                         </span>
                         Modal Title
                     </div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -2316,7 +2338,8 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -2379,7 +2402,7 @@ Add one of the following helper classes to the `modal-dialog` element to style i
                         </span>
                         Modal Title
                     </div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -2432,7 +2455,8 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -2490,7 +2514,7 @@ Add one of the following helper classes to the `modal-dialog` element to style i
                         </span>
                         Modal Title
                     </div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -2543,7 +2567,8 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -2601,7 +2626,7 @@ Add one of the following helper classes to the `modal-dialog` element to style i
                         </span>
                         Modal Title
                     </div>
-                    <button aria-labelledby="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -2660,7 +2685,8 @@ Add one of the following helper classes to the `modal-dialog` element to style i
 					Modal Title
 				</div>
 				<button
-					aria-labelledby="Close"
+					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"
@@ -2725,7 +2751,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close">
                 <span aria-hidden="true">×</span>
                 </button>
             </div>
@@ -2770,6 +2796,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 					class="close"
 					data-dismiss="modal"
 					aria-label="Close"
+					title="Close"
 				>
 					<span aria-hidden="true">×</span>
 				</button>
@@ -2813,7 +2840,7 @@ For modals that simply appear rather than fade in to view, remove the `.fade` cl
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</div>
-                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <button aria-label="Close" title="Close" class="close" data-dismiss="modal" type="button">
                         <svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
                             <use href="/images/icons/icons.svg#times"></use>
                         </svg>
@@ -2879,6 +2906,7 @@ For modals that simply appear rather than fade in to view, remove the `.fade` cl
 				</div>
 				<button
 					aria-label="Close"
+					title="Close"
 					class="close"
 					data-dismiss="modal"
 					type="button"

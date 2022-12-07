@@ -50,6 +50,11 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	ellipsisBuffer?: number;
 
 	/**
+	 * Properties to pass to the ellipsis trigger.
+	 */
+	ellipsisProps?: Object;
+
+	/**
 	 * Sets the default active page (uncontrolled).
 	 */
 	defaultActive?: number;
@@ -107,6 +112,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 			disabledPages = [],
 			disableEllipsis = false,
 			ellipsisBuffer = ELLIPSIS_BUFFER,
+			ellipsisProps = {},
 			hrefConstructor,
 			onActiveChange,
 			onPageChange,
@@ -152,6 +158,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 							{
 								EllipsisComponent: Pagination.Ellipsis,
 								ellipsisProps: {
+									...ellipsisProps,
 									alignmentPosition,
 									disabled: disableEllipsis,
 									disabledPages,

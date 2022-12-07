@@ -19,10 +19,12 @@ const ToolbarCode = `const Component = () => {
 			<ClayToolbar.Nav>
 				<ClayToolbar.Item>
 					<ClayToolbar.Action
+						aria-label="Previous"
 						disabled
 						href="#"
 						spritemap={spritemap}
 						symbol="angle-left"
+						title="Previous"
 					/>
 				</ClayToolbar.Item>
 
@@ -46,6 +48,8 @@ const ToolbarCode = `const Component = () => {
 
 				<ClayToolbar.Item>
 					<ClayToolbar.Action
+						aria-label="Next"
+						title="Next"
 						disabled
 						href="#"
 						spritemap={spritemap}
@@ -55,6 +59,8 @@ const ToolbarCode = `const Component = () => {
 
 				<ClayToolbar.Item>
 					<ClayToolbar.Action
+						aria-label="Close"
+						title="Close"
 						disabled
 						href="#"
 						spritemap={spritemap}
@@ -105,6 +111,8 @@ const ComplexToolbarCode = `const Component = () => {
 					<ClayToolbar.Section>
 						<ClayButton.Group>
 							<ClayButtonWithIcon
+								aria-label="Previous"
+								title="Previous"
 								displayType="secondary"
 								onClick={() => {}}
 								small
@@ -113,6 +121,8 @@ const ComplexToolbarCode = `const Component = () => {
 							/>
 
 							<ClayButtonWithIcon
+								aria-label="Next"
+								title="Next"
 								displayType="secondary"
 								onClick={() => {}}
 								small
@@ -146,6 +156,8 @@ const ComplexToolbarCode = `const Component = () => {
 						spritemap={spritemap}
 						trigger={
 							<ClayButtonWithIcon
+								aria-label="More Actions"
+								title="More Actions"
 								displayType="unstyled"
 								small
 								spritemap={spritemap}

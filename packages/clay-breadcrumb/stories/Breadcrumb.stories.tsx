@@ -15,6 +15,7 @@ export default {
 export const Default = (args: any) => (
 	<ClayBreadcrumb
 		ellipsisBuffer={args.ellipsisBuffer}
+		ellipsisProps={{'aria-label': 'More', title: 'More'}}
 		items={[
 			{
 				active: true,
@@ -75,6 +76,7 @@ export const Buttons = (args: any) => {
 	return (
 		<ClayBreadcrumb
 			ellipsisBuffer={args.ellipsisBuffer}
+			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			items={[
 				{
 					active: true,
@@ -161,5 +163,11 @@ export const ActiveState = () => {
 		},
 	];
 
-	return <ClayBreadcrumb ellipsisBuffer={1} items={items} />;
+	return (
+		<ClayBreadcrumb
+			ellipsisBuffer={1}
+			ellipsisProps={{'aria-label': 'More', title: 'More'}}
+			items={items}
+		/>
+	);
 };

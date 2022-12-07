@@ -19,7 +19,13 @@ export const Default = () => (
 	<ClayToolbar>
 		<ClayToolbar.Nav>
 			<ClayToolbar.Item>
-				<ClayToolbar.Action disabled href="#" symbol="angle-left" />
+				<ClayToolbar.Action
+					aria-label="Previous"
+					disabled
+					href="#"
+					symbol="angle-left"
+					title="Previous"
+				/>
 			</ClayToolbar.Item>
 
 			<ClayToolbar.Item expand>
@@ -38,11 +44,23 @@ export const Default = () => (
 			</ClayToolbar.Item>
 
 			<ClayToolbar.Item>
-				<ClayToolbar.Action disabled href="#" symbol="angle-right" />
+				<ClayToolbar.Action
+					aria-label="Next"
+					disabled
+					href="#"
+					symbol="angle-right"
+					title="Next"
+				/>
 			</ClayToolbar.Item>
 
 			<ClayToolbar.Item>
-				<ClayToolbar.Action disabled href="#" symbol="times" />
+				<ClayToolbar.Action
+					aria-label="Close"
+					disabled
+					href="#"
+					symbol="times"
+					title="Close"
+				/>
 			</ClayToolbar.Item>
 		</ClayToolbar.Nav>
 	</ClayToolbar>
@@ -53,7 +71,13 @@ export const ComponentToolbar = () => (
 		<ClayLayout.ContainerFluid>
 			<ClayToolbar.Nav>
 				<ClayToolbar.Item>
-					<ClayToolbar.Action disabled href="#" symbol="angle-left" />
+					<ClayToolbar.Action
+						aria-label="Previous"
+						disabled
+						href="#"
+						symbol="angle-left"
+						title="Previous"
+					/>
 				</ClayToolbar.Item>
 
 				<ClayToolbar.Item expand>
@@ -63,14 +87,22 @@ export const ComponentToolbar = () => (
 
 				<ClayToolbar.Item>
 					<ClayToolbar.Action
+						aria-label="Next"
 						disabled
 						href="#"
 						symbol="angle-right"
+						title="Next"
 					/>
 				</ClayToolbar.Item>
 
 				<ClayToolbar.Item>
-					<ClayToolbar.Action disabled href="#" symbol="times" />
+					<ClayToolbar.Action
+						aria-label="Close"
+						disabled
+						href="#"
+						symbol="times"
+						title="Close"
+					/>
 				</ClayToolbar.Item>
 			</ClayToolbar.Nav>
 		</ClayLayout.ContainerFluid>
@@ -198,14 +230,18 @@ export const UpperToolbar = () => (
 				<ClayToolbar.Item>
 					<ClayButton.Group>
 						<ClayButtonWithIcon
+							aria-label="Previous"
 							displayType="secondary"
 							small
 							symbol="angle-left"
+							title="Previous"
 						/>
 						<ClayButtonWithIcon
+							aria-label="Next"
 							displayType="secondary"
 							small
 							symbol="angle-right"
+							title="Next"
 						/>
 					</ClayButton.Group>
 				</ClayToolbar.Item>
@@ -227,9 +263,11 @@ export const UpperToolbar = () => (
 
 				<ClayToolbar.Item>
 					<ClayButtonWithIcon
+						aria-label="More Actions"
 						displayType="unstyled"
 						small
 						symbol="ellipsis-v"
+						title="Previous"
 					/>
 				</ClayToolbar.Item>
 			</ClayToolbar.Nav>

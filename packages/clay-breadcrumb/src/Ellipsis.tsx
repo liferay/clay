@@ -22,21 +22,24 @@ interface IEllipsisProps extends React.HTMLAttributes<HTMLLIElement> {
 	spritemap?: string;
 }
 
-const Ellipsis = ({items, spritemap, ...otherProps}: IEllipsisProps) => (
+const Ellipsis = ({items, spritemap, title, ...otherProps}: IEllipsisProps) => (
 	<ClayDropDown
 		className="breadcrumb-item"
 		containerElement="li"
 		trigger={
 			<ClayButton
+				aria-label={otherProps['aria-label']}
 				className="breadcrumb-link"
 				data-testid="breadcrumbDropdownTrigger"
 				displayType="unstyled"
+				title={title}
 			>
 				<ClayIcon spritemap={spritemap} symbol="ellipsis-h" />
 				<ClayIcon spritemap={spritemap} symbol="caret-bottom" />
 			</ClayButton>
 		}
 		{...otherProps}
+		aria-label={undefined}
 	>
 		<ClayDropDown.ItemList>
 			{items.map(({href, label, onClick}, i) => (

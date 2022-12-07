@@ -98,7 +98,7 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
 <div class="sheet-example">
     <ol class="breadcrumb">
         <li class="breadcrumb-item dropdown">
-            <a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
+            <a aria-expanded="false" aria-label="More" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
                 <svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
                     <use href="/images/icons/icons.svg#ellipsis-h"></use>
                 </svg>
@@ -132,6 +132,7 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
 <ol class="breadcrumb">
 	<li class="breadcrumb-item dropdown">
 		<a
+			aria-label="More"
 			aria-expanded="false"
 			aria-haspopup="true"
 			class="breadcrumb-link dropdown-toggle"
@@ -216,7 +217,7 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
             </ul>
         </li>
         <li class="breadcrumb-item dropdown">
-            <button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb2Dropdown2" type="button">
+            <button aria-expanded="false" aria-label="More" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb2Dropdown2" type="button">
                 <svg class="lexicon-icon lexicon-icon-ellipsis-h" focusable="false" role="presentation">
                     <use href="/images/icons/icons.svg#ellipsis-h"></use>
                 </svg>
@@ -309,6 +310,7 @@ Use `<span class="breadcrumb-text-truncate"></span>` inside breadcrumb links to 
 	</li>
 	<li class="breadcrumb-item dropdown">
 		<button
+			aria-label="More"
 			aria-expanded="false"
 			aria-haspopup="true"
 			class="breadcrumb-link btn btn-unstyled dropdown-toggle"

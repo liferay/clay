@@ -14,6 +14,7 @@ const BreadcrumbCode = `const Component = () => {
 	return (
 		<ClayBreadcrumb
 			ellipsisBuffer={1}
+			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			items={[
 				{
 					active: true,

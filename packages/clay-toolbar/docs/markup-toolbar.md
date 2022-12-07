@@ -22,7 +22,7 @@ mainTabURL: 'docs/components/toolbar.html'
 		<div class="container-fluid container-fluid-max-xl">
 			<ul class="tbar-nav">
 				<li class="tbar-item">
-					<a class="component-action disabled" href="#1" role="button" tabindex="-1">
+					<a aria-label="Previous" title="Previous" class="component-action disabled" href="#1" role="button" tabindex="-1">
 						<svg class="lexicon-icon lexicon-icon-angle-left" focusable="false" role="presentation">
 							<use xlink:href="/images/icons/icons.svg#angle-left" />
 						</svg>
@@ -36,14 +36,14 @@ mainTabURL: 'docs/components/toolbar.html'
 					</div>
 				</li>
 				<li class="tbar-item">
-					<a class="component-action" href="#1" role="button">
+					<a aria-label="Next" title="Next" class="component-action" href="#1" role="button">
 						<svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
 							<use xlink:href="/images/icons/icons.svg#angle-right" />
 						</svg>
 					</a>
 				</li>
 				<li class="tbar-item">
-					<a class="component-action" href="#1" role="button">
+					<a aria-label="Close" title="Close" class="component-action" href="#1" role="button">
 						<svg class="lexicon-icon lexicon-icon-times" focusable="false" role="presentation">
 							<use xlink:href="/images/icons/icons.svg#times" />
 						</svg>
@@ -60,6 +60,8 @@ mainTabURL: 'docs/components/toolbar.html'
 		<ul class="tbar-nav">
 			<li class="tbar-item">
 				<a
+					aria-label="Previous"
+					title="Previous"
 					class="component-action disabled"
 					href="#1"
 					role="button"
@@ -85,7 +87,13 @@ mainTabURL: 'docs/components/toolbar.html'
 				</div>
 			</li>
 			<li class="tbar-item">
-				<a class="component-action" href="#1" role="button">
+				<a
+					aria-label="Next"
+					title="Next"
+					class="component-action"
+					href="#1"
+					role="button"
+				>
 					<svg
 						class="lexicon-icon lexicon-icon-angle-right"
 						focusable="false"
@@ -96,7 +104,13 @@ mainTabURL: 'docs/components/toolbar.html'
 				</a>
 			</li>
 			<li class="tbar-item">
-				<a class="component-action" href="#1" role="button">
+				<a
+					aria-label="Close"
+					title="Close"
+					class="component-action"
+					href="#1"
+					role="button"
+				>
 					<svg
 						class="lexicon-icon lexicon-icon-times"
 						focusable="false"

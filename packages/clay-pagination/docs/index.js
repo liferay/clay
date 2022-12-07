@@ -14,7 +14,7 @@ const PaginationCode = `const Component = () => {
 	return (
 		<ClayPagination>
 			<ClayPagination.Item>{1}</ClayPagination.Item>
-			<ClayPagination.Ellipsis items={[2,3,4,5]} />
+			<ClayPagination.Ellipsis aria-label="More" title="More" items={[2,3,4,5]} />
 			<ClayPagination.Item>{'End'}</ClayPagination.Item>
 		</ClayPagination>
 	);
@@ -38,6 +38,7 @@ const PaginationWithBasicItemsCode = `const Component = () => {
 		<ClayPaginationWithBasicItems
 			active={active}
 			ellipsisBuffer={2}
+			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			onActiveChange={setActive}
 			spritemap={spritemap}
 			totalPages={25}
