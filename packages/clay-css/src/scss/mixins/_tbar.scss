@@ -514,7 +514,7 @@
 			}
 		}
 
-		.tbar-divider-after::after {
+		.tbar-divider-after {
 			$tbar-divider-after: setter(map-get($map, tbar-divider-after), ());
 
 			@include clay-css($tbar-divider-after);
