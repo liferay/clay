@@ -110,6 +110,10 @@ $input: map-deep-merge(
 	$input
 );
 
+// Form Control Variants
+
+$input-palette: () !default;
+
 // Form Control Plaintext
 
 $input-plaintext-color: $body-color !default;
@@ -1259,6 +1263,12 @@ $form-control-select: map-deep-merge(
 	),
 	$form-control-select
 );
+
+// Form Control Select Variants
+
+$form-control-select-palette: () !default;
+
+// Form Control Select Sizes
 
 $form-control-select-sm: () !default;
 $form-control-select-sm: map-deep-merge(

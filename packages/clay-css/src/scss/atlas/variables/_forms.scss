@@ -75,6 +75,10 @@ $input: map-deep-merge(
 	$input
 );
 
+// Form Control Variants
+
+$input-palette: () !default;
+
 $input-height-border: calc(
 	#{$input-border-bottom-width} + #{$input-border-top-width}
 ) !default;
@@ -396,6 +400,36 @@ $input-select-icon-disabled: clay-icon(
 	caret-double-l,
 	$input-select-icon-disabled-color
 ) !default;
+
+// Form Control Select Variants
+
+$form-control-select-palette: () !default;
+$form-control-select-palette: map-deep-merge(
+	(
+		form-control-select-secondary: (
+			background-color: $white,
+			color: $gray-600,
+			hover: (
+				color: $gray-600,
+			),
+			focus: (
+				background-image: clay-icon(caret-double-l, $gray-900),
+				color: $gray-900,
+			),
+			disabled: (
+				background-color: $white,
+				color: $gray-600,
+				opacity: $component-disabled-opacity,
+			),
+			show: (
+				background-color: $gray-200,
+				background-image: clay-icon(caret-double-l, $gray-900),
+				color: $gray-900,
+			),
+		),
+	),
+	$form-control-select-palette
+);
 
 // select.form-control[size]
 
