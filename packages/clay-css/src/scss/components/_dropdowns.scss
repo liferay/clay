@@ -121,6 +121,20 @@
 	}
 }
 
+// Dropdown Menu Variants
+
+@each $key, $value in $dropdown-menu-palette {
+	$selector: if(
+		starts-with($key, '.') or starts-with($key, '#'),
+		$key,
+		str-insert($key, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-dropdown-menu-variant($value);
+	}
+}
+
 // Dropdown Menu Alignment
 
 @each $breakpoint in map-keys($grid-breakpoints) {
