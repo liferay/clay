@@ -572,6 +572,14 @@
 				}
 			}
 
+			&:active {
+				@include clay-css(map-get($map, active));
+			}
+
+			&.active {
+				@include clay-css(map-get($map, active-class));
+			}
+
 			// @deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
 
 			&[readonly] {
@@ -887,6 +895,54 @@
 						@include clay-css(
 							map-deep-get($focus, option, checked)
 						);
+					}
+				}
+			}
+
+			&:active {
+				$active: setter(map-get($map, active), ());
+
+				@include clay-css($active);
+
+				> option {
+					$option: setter(map-get($active, option), ());
+
+					@include clay-css($option);
+
+					&:checked {
+						@include clay-css(map-get($option, checked));
+					}
+				}
+			}
+
+			&.active {
+				$active-class: setter(map-get($map, active-class), ());
+
+				@include clay-css($active-class);
+
+				> option {
+					$option: setter(map-get($active-class, option), ());
+
+					@include clay-css($option);
+
+					&:checked {
+						@include clay-css(map-get($option, checked));
+					}
+				}
+			}
+
+			&.show {
+				$show: setter(map-get($map, show), ());
+
+				@include clay-css($show);
+
+				> option {
+					$option: setter(map-get($show, option), ());
+
+					@include clay-css($option);
+
+					&:checked {
+						@include clay-css(map-get($option, checked));
 					}
 				}
 			}
