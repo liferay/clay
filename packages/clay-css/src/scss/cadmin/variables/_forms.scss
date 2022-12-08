@@ -112,6 +112,10 @@ $cadmin-input: map-deep-merge(
 	$cadmin-input
 );
 
+// Form Control Variants
+
+$cadmin-input-palette: () !default;
+
 // Form Control Plaintext
 
 $cadmin-input-plaintext-color: $cadmin-body-color !default;
@@ -1215,6 +1219,36 @@ $cadmin-form-control-select: map-deep-merge(
 		)
 	),
 	$cadmin-form-control-select
+);
+
+// Form Control Select Variants
+
+$cadmin-form-control-select-palette: () !default;
+$cadmin-form-control-select-palette: map-deep-merge(
+	(
+		form-control-select-secondary: (
+			background-color: $cadmin-white,
+			color: $cadmin-gray-600,
+			hover: (
+				color: $cadmin-gray-600,
+			),
+			focus: (
+				background-image: clay-icon(caret-double-l, $cadmin-gray-900),
+				color: $cadmin-gray-900,
+			),
+			disabled: (
+				background-color: $cadmin-white,
+				color: $cadmin-gray-600,
+				opacity: $cadmin-component-disabled-opacity,
+			),
+			show: (
+				background-color: $cadmin-gray-200,
+				background-image: clay-icon(caret-double-l, $cadmin-gray-900),
+				color: $cadmin-gray-900,
+			),
+		),
+	),
+	$cadmin-form-control-select-palette
 );
 
 $cadmin-form-control-select-sm: () !default;
