@@ -19,6 +19,7 @@ export {Heading, Text} from './typography';
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
 export {VerticalBar} from './vertical-bar';
+export {Picker, Option} from './picker';
 
 // Internal dependencies not public but exposed to other Clay packages.
 export * as __NOT_PUBLIC_COLLECTION from './collection';
