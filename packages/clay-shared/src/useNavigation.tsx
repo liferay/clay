@@ -233,6 +233,20 @@ export function useNavigation<T extends HTMLElement | null>({
 					event.preventDefault();
 					if (onNavigate) {
 						onNavigate(tab, tabs.indexOf(tab));
+
+						const child = containeRef.current
+							.firstElementChild as HTMLElement;
+
+						if (isScrollable(child)) {
+							maintainScrollVisibility(tab, child);
+						}
+
+						if (!isElementInView(tab)) {
+							tab.scrollIntoView({
+								behavior: 'smooth',
+								block: 'nearest',
+							});
+						}
 					} else {
 						tab.focus();
 					}
@@ -245,6 +259,19 @@ export function useNavigation<T extends HTMLElement | null>({
 		},
 		[active]
 	);
+
+	useEffect(() => {
+		// Moves the scroll to the element with visual "focus" if it exists.
+		if (visible && containeRef.current && active && onNavigate) {
+			const child = containeRef.current.firstElementChild as HTMLElement;
+			const activeElement =
+				containeRef.current.querySelector<HTMLElement>(`#${active}`);
+
+			if (activeElement && isScrollable(child)) {
+				maintainScrollVisibility(activeElement, child);
+			}
+		}
+	}, [visible]);
 
 	useEffect(() => {
 		if (visible && pendingEventStack.current.length !== 0) {
@@ -261,4 +288,38 @@ export function useNavigation<T extends HTMLElement | null>({
 	}, [visible]);
 
 	return {onKeyDown};
+}
+
+function isElementInView(element: HTMLElement) {
+	var bounding = element.getBoundingClientRect();
+
+	return (
+		bounding.top >= 0 &&
+		bounding.left >= 0 &&
+		bounding.bottom <=
+			(window.innerHeight || document.documentElement.clientHeight) &&
+		bounding.right <=
+			(window.innerWidth || document.documentElement.clientWidth)
+	);
+}
+
+function isScrollable(element: HTMLElement) {
+	return element && element.clientHeight < element.scrollHeight;
+}
+
+function maintainScrollVisibility(
+	activeElement: HTMLElement,
+	scrollParent: HTMLElement
+) {
+	const {offsetHeight, offsetTop} = activeElement;
+	const {offsetHeight: parentOffsetHeight, scrollTop} = scrollParent;
+
+	const isAbove = offsetTop < scrollTop;
+	const isBelow = offsetTop + offsetHeight > scrollTop + parentOffsetHeight;
+
+	if (isAbove) {
+		scrollParent.scrollTo(0, offsetTop);
+	} else if (isBelow) {
+		scrollParent.scrollTo(0, offsetTop - parentOffsetHeight + offsetHeight);
+	}
 }
