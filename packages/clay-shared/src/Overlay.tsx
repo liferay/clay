@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {hideOthers, suppressOthers} from 'aria-hidden';
+import {hideOthers, supportsInert, suppressOthers} from 'aria-hidden';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {Keys} from './Keys';
@@ -24,16 +24,6 @@ type Props = {
 	suppress?: Array<React.RefObject<HTMLElement>>;
 	triggerRef: React.RefObject<HTMLElement>;
 };
-
-/**
- * Inert is a new native feature to better handle DOM arias that are not
- * assertive to a SR or that should ignore any user interaction.
- * https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
- */
-const hasInertSupport =
-	typeof window !== 'undefined' &&
-	// @ts-ignore
-	typeof document.createElement('div').inert === 'boolean';
 
 /**
  * Overlay component is used for components like dialog and modal.
@@ -119,7 +109,10 @@ export function Overlay({
 				? suppress.map((ref) => ref.current!)
 				: menuRef.current;
 
-			if (isModal && hasInertSupport) {
+			// Inert is a new native feature to better handle DOM arias that are not
+			// assertive to a SR or that should ignore any user interaction.
+			// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
+			if (isModal && supportsInert()) {
 				unsuppressCallbackRef.current = suppressOthers(elements);
 
 				return () => {
