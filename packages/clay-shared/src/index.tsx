@@ -24,6 +24,7 @@ export {useInternalState} from './useInternalState';
 export {useMousePosition} from './useMousePosition';
 export {useNavigation} from './useNavigation';
 export {useOverlayPosition} from './useOverlayPositon';
+export {useHover} from './useHover';
 export type {AlignPoints} from './useOverlayPositon';
 export type {IBaseProps as IPortalBaseProps} from './Portal';
 export type {InternalDispatch} from './useInternalState';
