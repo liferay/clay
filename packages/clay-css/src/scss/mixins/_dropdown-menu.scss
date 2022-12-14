@@ -549,7 +549,8 @@
 		@if ($enabled) {
 			@include clay-css($base);
 
-			&:hover {
+			&:hover,
+			&.hover {
 				@include clay-css($hover);
 
 				&::before {
@@ -565,7 +566,8 @@
 				}
 			}
 
-			&:focus {
+			&:focus,
+			&.focus {
 				@include clay-css($focus);
 
 				&::before {
