@@ -19,7 +19,7 @@ type Props = {
 	isModal?: boolean;
 	isOpen: boolean;
 	menuRef: React.RefObject<HTMLElement>;
-	onClose: () => void;
+	onClose: (action: 'escape' | 'blur') => void;
 	portalRef?: React.RefObject<HTMLElement>;
 	suppress?: Array<React.RefObject<HTMLElement>>;
 	triggerRef: React.RefObject<HTMLElement>;
@@ -54,7 +54,7 @@ export function Overlay({
 					triggerRef.current &&
 					!triggerRef.current.contains(event.target as Node)
 				) {
-					onClose();
+					onClose('blur');
 				}
 			},
 			[onClose]
@@ -84,7 +84,7 @@ export function Overlay({
 						triggerRef.current.focus();
 					}
 
-					onClose();
+					onClose('escape');
 				}
 			},
 			[onClose]
@@ -97,7 +97,7 @@ export function Overlay({
 	useInteractOutside({
 		isDisabled: isOpen ? !isCloseOnInteractOutside : true,
 		onInteract: () => {
-			onClose();
+			onClose('blur');
 		},
 		ref: portalRef ?? menuRef,
 		triggerRef,
