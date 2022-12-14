@@ -9,6 +9,7 @@ import {
 	Overlay,
 	isTypeahead,
 	useId,
+	useInteractionFocus,
 	useInternalState,
 	useNavigation,
 	useOverlayPosition,
@@ -133,6 +134,8 @@ export function Picker<T>({
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
 	const menuRef = useRef<HTMLDivElement | null>(null);
 
+	const {isFocusVisible} = useInteractionFocus();
+
 	useOverlayPosition(
 		{
 			alignmentByViewport: true,
@@ -251,13 +254,22 @@ export function Picker<T>({
 					isKeyboardDismiss
 					isOpen
 					menuRef={menuRef}
-					onClose={() => {
-						const key =
-							String(selectedKey) === 'undefined'
-								? ''
-								: String(selectedKey);
-						if (key !== activeDescendant) {
-							setActiveDescendant(key);
+					onClose={(action) => {
+						if (
+							isFocusVisible() &&
+							activeDescendant &&
+							action === 'blur'
+						) {
+							onPress();
+						} else {
+							const key =
+								String(selectedKey) === 'undefined'
+									? ''
+									: String(selectedKey);
+
+							if (key !== activeDescendant) {
+								setActiveDescendant(key);
+							}
 						}
 
 						setActive(false);
