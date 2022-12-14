@@ -81,7 +81,7 @@ export function useNavigation<T extends HTMLElement | null>({
 	);
 
 	useEffect(() => {
-		if (visible) {
+		if (!visible) {
 			clearTimeout(timeoutIdRef.current);
 			matchIndexRef.current = null;
 			stringRef.current = '';
@@ -169,7 +169,10 @@ export function useNavigation<T extends HTMLElement | null>({
 							return;
 						}
 
-						if (!event.currentTarget.contains(target)) {
+						if (
+							event.currentTarget &&
+							!event.currentTarget.contains(target)
+						) {
 							return;
 						}
 
@@ -191,6 +194,8 @@ export function useNavigation<T extends HTMLElement | null>({
 						) {
 							return;
 						}
+
+						event.stopPropagation();
 
 						if (stringRef.current === event.key) {
 							stringRef.current = '';
@@ -288,6 +293,15 @@ export function useNavigation<T extends HTMLElement | null>({
 	}, [visible]);
 
 	return {onKeyDown};
+}
+
+export function isTypeahead(event: React.KeyboardEvent<HTMLElement>) {
+	return (
+		event.key.length === 1 &&
+		!event.ctrlKey &&
+		!event.metaKey &&
+		!event.altKey
+	);
 }
 
 function isElementInView(element: HTMLElement) {
