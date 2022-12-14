@@ -7,6 +7,7 @@ import {
 	InternalDispatch,
 	Keys,
 	Overlay,
+	isTypeahead,
 	useId,
 	useInternalState,
 	useNavigation,
@@ -25,6 +26,12 @@ export type Props<T> = {
 	 * Flag to indicate if the DropDown menu is active or not (controlled).
 	 */
 	active?: boolean;
+
+	/**
+	 * The `aria-label` attribute defines a string value that labels an interactive
+	 * element.
+	 */
+	'aria-label'?: string;
 
 	/**
 	 * The `aria-labelledby` attribute identifies the element (or elements) that
@@ -222,9 +229,14 @@ export function Picker<T>({
 							navigationProps.onKeyDown(event);
 							break;
 						}
-						default:
+						default: {
+							if (isTypeahead(event)) {
+								setActive(true);
+							}
+
 							navigationProps.onKeyDown(event);
 							break;
+						}
 					}
 				}}
 				ref={triggerRef}
