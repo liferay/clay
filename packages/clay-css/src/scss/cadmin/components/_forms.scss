@@ -180,6 +180,18 @@ fieldset[disabled] .form-control {
 	}
 }
 
+@each $key, $value in $cadmin-input-palette {
+	$selector: if(
+		starts-with($key, '.') or starts-with($key, '#'),
+		$key,
+		str-insert($key, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-form-control-variant($value);
+	}
+}
+
 .form-control-hidden {
 	left: 0;
 	opacity: 0;
@@ -307,6 +319,20 @@ select.form-control[size] {
 
 select.form-control[multiple] {
 	@include clay-select-variant($cadmin-input-select-multiple);
+}
+
+// Form Control Select Variants
+
+@each $key, $value in $cadmin-form-control-select-palette {
+	$selector: if(
+		starts-with($key, '.') or starts-with($key, '#'),
+		$key,
+		str-insert($key, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-select-variant($value);
+	}
 }
 
 // Textarea

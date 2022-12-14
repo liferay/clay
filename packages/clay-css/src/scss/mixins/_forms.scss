@@ -543,7 +543,8 @@
 				@include clay-css(map-deep-get($map, input-group-inset-item));
 			}
 
-			&:hover {
+			&:hover,
+			&.hover {
 				@include clay-css($hover);
 
 				&::placeholder {
@@ -570,6 +571,14 @@
 						map-deep-get($map, focus, input-group-inset-item)
 					);
 				}
+			}
+
+			&:active {
+				@include clay-css(map-get($map, active));
+			}
+
+			&.active {
+				@include clay-css(map-get($map, active-class));
 			}
 
 			// @deprecated after v2.18.0 [readonly] can have hover focus styles, declare a separate selector and use `clay-form-control-variant` mixin (e.g., `.form-control[readonly] { @include clay-form-control-variant($the-readonly-map); }`).
@@ -862,7 +871,8 @@
 		@if ($enabled) {
 			@include clay-css($base);
 
-			&:hover {
+			&:hover,
+			&.hover {
 				@include clay-css($hover);
 
 				> option {
@@ -887,6 +897,54 @@
 						@include clay-css(
 							map-deep-get($focus, option, checked)
 						);
+					}
+				}
+			}
+
+			&:active {
+				$active: setter(map-get($map, active), ());
+
+				@include clay-css($active);
+
+				> option {
+					$option: setter(map-get($active, option), ());
+
+					@include clay-css($option);
+
+					&:checked {
+						@include clay-css(map-get($option, checked));
+					}
+				}
+			}
+
+			&.active {
+				$active-class: setter(map-get($map, active-class), ());
+
+				@include clay-css($active-class);
+
+				> option {
+					$option: setter(map-get($active-class, option), ());
+
+					@include clay-css($option);
+
+					&:checked {
+						@include clay-css(map-get($option, checked));
+					}
+				}
+			}
+
+			&.show {
+				$show: setter(map-get($map, show), ());
+
+				@include clay-css($show);
+
+				> option {
+					$option: setter(map-get($show, option), ());
+
+					@include clay-css($option);
+
+					&:checked {
+						@include clay-css(map-get($option, checked));
 					}
 				}
 			}
@@ -916,7 +974,8 @@
 				@-moz-document url-prefix() {
 					@include clay-css(map-get($map, firefox-only));
 
-					&:hover {
+					&:hover,
+					&.hover {
 						@include clay-css(
 							map-deep-get($map, firefox-only, hover)
 						);

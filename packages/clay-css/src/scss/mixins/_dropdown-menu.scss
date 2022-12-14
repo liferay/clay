@@ -99,10 +99,34 @@
 				@include clay-css(map-get($map, show));
 			}
 
+			.dropdown-header {
+				@include clay-css(map-get($map, dropdown-header));
+			}
+
+			.dropdown-subheader {
+				@include clay-css(map-get($map, dropdown-subheader));
+			}
+
+			.dropdown-section {
+				@include clay-css(map-get($map, dropdown-section));
+			}
+
+			.dropdown-caption {
+				@include clay-css(map-get($map, dropdown-caption));
+			}
+
 			.dropdown-item {
 				@include clay-dropdown-item-variant(
 					map-deep-get($map, dropdown-item)
 				);
+			}
+
+			.dropdown-divider {
+				@include clay-css(map-get($map, dropdown-divider));
+			}
+
+			.dropdown-footer {
+				@include clay-css(map-get($map, dropdown-footer));
 			}
 
 			.alert {
@@ -111,6 +135,54 @@
 
 			.alert-fluid {
 				@include clay-alert-variant(map-get($map, alert-fluid));
+			}
+
+			&.dropdown-menu-indicator-start {
+				$dropdown-menu-indicator-start: setter(
+					map-get($map, dropdown-menu-indicator-start),
+					()
+				);
+
+				@include clay-css($dropdown-menu-indicator-start);
+
+				.dropdown-item {
+					@include clay-dropdown-item-variant(
+						map-get($dropdown-menu-indicator-start, dropdown-item)
+					);
+				}
+
+				.dropdown-item-indicator-start {
+					@include clay-link(
+						map-get(
+							$dropdown-menu-indicator-start,
+							dropdown-item-indicator-start
+						)
+					);
+				}
+			}
+
+			&.dropdown-menu-indicator-end {
+				$dropdown-menu-indicator-end: setter(
+					map-get($map, dropdown-menu-indicator-end),
+					()
+				);
+
+				@include clay-css($dropdown-menu-indicator-end);
+
+				.dropdown-item {
+					@include clay-dropdown-item-variant(
+						map-get($dropdown-menu-indicator-end, dropdown-item)
+					);
+				}
+
+				.dropdown-item-indicator-end {
+					@include clay-link(
+						map-get(
+							$dropdown-menu-indicator-end,
+							dropdown-item-indicator-end
+						)
+					);
+				}
 			}
 		}
 	}
@@ -477,7 +549,8 @@
 		@if ($enabled) {
 			@include clay-css($base);
 
-			&:hover {
+			&:hover,
+			&.hover {
 				@include clay-css($hover);
 
 				&::before {
@@ -493,7 +566,8 @@
 				}
 			}
 
-			&:focus {
+			&:focus,
+			&.focus {
 				@include clay-css($focus);
 
 				&::before {

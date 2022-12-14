@@ -936,3 +936,55 @@ $dropdown-menu: map-deep-merge(
 	),
 	$dropdown-menu
 );
+
+// Dropdown Menu Variants
+
+$dropdown-menu-palette: () !default;
+$dropdown-menu-palette: map-deep-merge(
+	(
+		'.dropdown-menu-select.dropdown-menu': (
+			dropdown-header: (
+				padding-bottom: 0.375rem,
+				padding-left: 1.75rem,
+				padding-right: 1.75rem,
+				padding-top: 0.3125rem,
+			),
+			dropdown-subheader: (
+				padding-bottom: 0.4375rem,
+				padding-left: 1.75rem,
+				padding-right: 1.75rem,
+				padding-top: 0.4375rem,
+			),
+			dropdown-section: (
+				padding-left: 1.75rem,
+				padding-right: 1.75rem,
+			),
+			dropdown-item: (
+				padding-bottom: 0.375rem,
+				padding-left: 1.75rem,
+				padding-right: 1.75rem,
+				padding-top: 0.3125rem,
+				'&.autofit-row': (
+					padding-left: 1.5rem,
+					padding-right: 1.5rem,
+				),
+			),
+			dropdown-divider: (
+				margin: 0.3125rem 0,
+			),
+			dropdown-menu-indicator-start: (
+				dropdown-item-indicator-start: (
+					left: 0.5rem,
+					top: 0.5rem,
+				),
+			),
+			dropdown-menu-indicator-end: (
+				dropdown-item-indicator-end: (
+					right: 0.5rem,
+					top: 0.5rem,
+				),
+			),
+		),
+	),
+	$dropdown-menu-palette
+);
