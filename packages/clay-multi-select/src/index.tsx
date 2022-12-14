@@ -257,7 +257,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		const lastChangesRef = useRef<LastChangeLiveRegion | null>(null);
 
 		const labelsRef = useRef<HTMLDivElement | null>(null);
-		const lastFocusedItemRef = useRef<string | null>(null);
+
+		const [lastFocusedItem, setLastFocusedItem] = useState<string | null>(
+			null
+		);
 
 		const [active, setActive] = useState(false);
 		const [isFocused, setIsFocused] = useState(false);
@@ -381,11 +384,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 					if (closeElement) {
 						closeElement.focus();
-						lastFocusedItemRef.current =
-							closeElement.getAttribute('id');
+						setLastFocusedItem(closeElement.getAttribute('id'));
 					} else {
 						inputElementRef.current?.focus();
-						lastFocusedItemRef.current = null;
+						setLastFocusedItem(null);
 					}
 				}
 
@@ -417,216 +419,244 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					)}
 					ref={containerRef}
 				>
-					<ClayInput.GroupItem
-						aria-describedby={ariaDescriptionId}
-						aria-labelledby={otherProps['aria-labelledby']}
-						onFocus={(event) => {
-							lastFocusedItemRef.current =
-								event.target.getAttribute('id')!;
-						}}
-						onKeyDown={(event) => {
-							if (KeysNavigation.includes(event.key)) {
-								// Query labels and buttons to exclude the label that are
-								// focusable the navigation order depends on which orientation
-								// the navigation is happen.
-								// - Left and Right. Query all elements.
-								// - Up and Down. Query for elements of the same type as the
-								//   last focused element.
-								const focusableElements =
-									Array.from<HTMLElement>(
-										event.currentTarget.querySelectorAll(
-											KeysSides.includes(event.key)
-												? '[role=row], button'
-												: lastFocusedItemRef.current?.includes(
-														'span'
-												  )
-												? '[role=row]'
-												: 'button'
-										)
-									);
-
-								const position = focusableElements.indexOf(
-									document.activeElement as HTMLElement
-								);
-
-								const key = KeysSides.includes(event.key)
-									? Keys.Left
-									: Keys.Up;
-
-								const label =
-									focusableElements[
-										event.key === key
-											? position - 1
-											: position + 1
-									];
-
-								if (label) {
-									lastFocusedItemRef.current =
-										label.getAttribute('id')!;
-									label.focus();
+					<ClayInput.GroupItem>
+						<ClayInput.Group>
+							<ClayInput.GroupItem
+								aria-describedby={ariaDescriptionId}
+								aria-labelledby={otherProps['aria-labelledby']}
+								className="d-contents"
+								onFocus={(event) =>
+									setLastFocusedItem(
+										event.target.getAttribute('id')!
+									)
 								}
-							}
-
-							if (
-								event.key === Keys.Home ||
-								event.key === Keys.End
-							) {
-								const isLabel =
-									lastFocusedItemRef.current!.includes(
-										'span'
-									);
-
-								if (
-									(isLabel && event.key === Keys.Home) ||
-									(!isLabel && event.key === Keys.End)
-								) {
-									return;
-								}
-
-								const label =
-									event.currentTarget.querySelector<HTMLElement>(
-										`[id=${lastFocusedItemRef.current?.replace(
-											isLabel ? 'span' : 'close',
-											event.key === Keys.Home
-												? 'span'
-												: 'close'
-										)}]`
-									);
-
-								if (label) {
-									lastFocusedItemRef.current =
-										label.getAttribute('id')!;
-									label.focus();
-								}
-							}
-						}}
-						prepend
-						ref={(ref) => {
-							labelsRef.current = ref;
-						}}
-						role="grid"
-						shrink
-					>
-						{internalItems.map((item, i) => {
-							const id = `${labelId}-label-${
-								item[locator.value]
-							}-span`;
-							const textId = `${labelId}-label-${
-								item[locator.value]
-							}-text`;
-							const closeId = `${labelId}-label-${
-								item[locator.value]
-							}-close`;
-
-							return (
-								<React.Fragment key={id}>
-									<ClayLabel
-										aria-labelledby={textId}
-										id={id}
-										onKeyDown={({key}) => {
-											if (key === Keys.Backspace) {
-												onRemove(
-													item[locator.label],
-													i
-												);
-											}
-										}}
-										role="row"
-										spritemap={spritemap}
-										tabIndex={
-											(lastFocusedItemRef.current ===
-												null &&
-												i === 0) ||
-											lastFocusedItemRef.current === id
-												? 0
-												: -1
-										}
-										withClose={false}
-									>
-										<ClayLabel.ItemExpand
-											id={textId}
-											role="gridcell"
-										>
-											{item[locator.label]}
-										</ClayLabel.ItemExpand>
-
-										<ClayLabel.ItemAfter role="gridcell">
-											<button
-												aria-label={sub(
-													closeButtonAriaLabel,
-													[item[locator.label]]
-												)}
-												className="close"
-												disabled={disabled}
-												id={closeId}
-												onClick={() =>
-													onRemove(
-														item[locator.label],
-														i
+								onKeyDown={(event) => {
+									if (KeysNavigation.includes(event.key)) {
+										// Query labels and buttons to exclude the label that are
+										// focusable the navigation order depends on which orientation
+										// the navigation is happen.
+										// - Left and Right. Query all elements.
+										// - Up and Down. Query for elements of the same type as the
+										//   last focused element.
+										const focusableElements =
+											Array.from<HTMLElement>(
+												event.currentTarget.querySelectorAll(
+													KeysSides.includes(
+														event.key
 													)
-												}
-												ref={(ref) => {
+														? '[role=row], button'
+														: lastFocusedItem?.includes(
+																'span'
+														  )
+														? '[role=row]'
+														: 'button'
+												)
+											);
+
+										const position =
+											focusableElements.indexOf(
+												document.activeElement as HTMLElement
+											);
+
+										const key = KeysSides.includes(
+											event.key
+										)
+											? Keys.Left
+											: Keys.Up;
+
+										const label =
+											focusableElements[
+												event.key === key
+													? position - 1
+													: position + 1
+											];
+
+										if (label) {
+											setLastFocusedItem(
+												label.getAttribute('id')!
+											);
+											label.focus();
+										}
+									}
+
+									if (
+										event.key === Keys.Home ||
+										event.key === Keys.End
+									) {
+										const isLabel =
+											lastFocusedItem!.includes('span');
+
+										if (
+											(isLabel &&
+												event.key === Keys.Home) ||
+											(!isLabel && event.key === Keys.End)
+										) {
+											return;
+										}
+
+										const label =
+											event.currentTarget.querySelector<HTMLElement>(
+												`[id=${lastFocusedItem?.replace(
+													isLabel ? 'span' : 'close',
+													event.key === Keys.Home
+														? 'span'
+														: 'close'
+												)}]`
+											);
+
+										if (label) {
+											setLastFocusedItem(
+												label.getAttribute('id')!
+											);
+											label.focus();
+										}
+									}
+								}}
+								prepend
+								ref={(ref) => {
+									labelsRef.current = ref;
+								}}
+								role="grid"
+								shrink
+							>
+								{internalItems.map((item, i) => {
+									const id = `${labelId}-label-${
+										item[locator.value]
+									}-span`;
+									const textId = `${labelId}-label-${
+										item[locator.value]
+									}-text`;
+									const closeId = `${labelId}-label-${
+										item[locator.value]
+									}-close`;
+
+									return (
+										<React.Fragment key={id}>
+											<ClayLabel
+												aria-labelledby={textId}
+												id={id}
+												onKeyDown={({key}) => {
 													if (
-														i ===
-														internalItems.length - 1
+														key === Keys.Backspace
 													) {
-														lastItemRef.current =
-															ref;
+														onRemove(
+															item[locator.label],
+															i
+														);
 													}
 												}}
+												role="row"
+												spritemap={spritemap}
 												tabIndex={
-													lastFocusedItemRef.current ===
-													closeId
+													(lastFocusedItem === null &&
+														i === 0) ||
+													lastFocusedItem === id
 														? 0
 														: -1
 												}
-												type="button"
+												withClose={false}
 											>
-												<Icon
-													spritemap={spritemap}
-													symbol="times-small"
+												<ClayLabel.ItemExpand
+													id={textId}
+													role="gridcell"
+												>
+													{item[locator.label]}
+												</ClayLabel.ItemExpand>
+
+												<ClayLabel.ItemAfter role="gridcell">
+													<button
+														aria-label={sub(
+															closeButtonAriaLabel,
+															[
+																item[
+																	locator
+																		.label
+																],
+															]
+														)}
+														className="close"
+														disabled={disabled}
+														id={closeId}
+														onClick={() =>
+															onRemove(
+																item[
+																	locator
+																		.label
+																],
+																i
+															)
+														}
+														ref={(ref) => {
+															if (
+																i ===
+																internalItems.length -
+																	1
+															) {
+																lastItemRef.current =
+																	ref;
+															}
+														}}
+														tabIndex={
+															lastFocusedItem ===
+															closeId
+																? 0
+																: -1
+														}
+														type="button"
+													>
+														<Icon
+															spritemap={
+																spritemap
+															}
+															symbol="times-small"
+														/>
+													</button>
+												</ClayLabel.ItemAfter>
+											</ClayLabel>
+
+											{inputName && (
+												<input
+													name={inputName}
+													type="hidden"
+													value={item[locator.value]}
 												/>
-											</button>
-										</ClayLabel.ItemAfter>
-									</ClayLabel>
+											)}
+										</React.Fragment>
+									);
+								})}
+							</ClayInput.GroupItem>
 
-									{inputName && (
-										<input
-											name={inputName}
-											type="hidden"
-											value={item[locator.value]}
-										/>
-									)}
-								</React.Fragment>
-							);
-						})}
-					</ClayInput.GroupItem>
-
-					<ClayInput.GroupItem prepend>
-						<input
-							{...otherProps}
-							className="form-control-inset"
-							disabled={disabled}
-							onBlur={(event) => {
-								onBlur(event);
-								setIsFocused(false);
-							}}
-							onChange={(event) =>
-								setValue(event.target.value.replace(',', ''))
-							}
-							onFocus={(event) => {
-								onFocus(event);
-								setIsFocused(true);
-							}}
-							onKeyDown={handleKeyDown}
-							onPaste={handlePaste}
-							placeholder={
-								internalItems.length ? undefined : placeholder
-							}
-							ref={inputElementRef}
-							type="text"
-							value={internalValue}
-						/>
+							<ClayInput.GroupItem prepend>
+								<input
+									{...otherProps}
+									className="form-control-inset"
+									disabled={disabled}
+									onBlur={(event) => {
+										onBlur(event);
+										setIsFocused(false);
+									}}
+									onChange={(event) =>
+										setValue(
+											event.target.value.replace(',', '')
+										)
+									}
+									onFocus={(event) => {
+										onFocus(event);
+										setIsFocused(true);
+									}}
+									onKeyDown={handleKeyDown}
+									onPaste={handlePaste}
+									placeholder={
+										internalItems.length
+											? undefined
+											: placeholder
+									}
+									ref={inputElementRef}
+									type="text"
+									value={internalValue}
+								/>
+							</ClayInput.GroupItem>
+						</ClayInput.Group>
 					</ClayInput.GroupItem>
 
 					{isLoading && (
