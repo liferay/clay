@@ -14,6 +14,30 @@ exports[`Picker basic rendering render dynamic content 1`] = `
 </div>
 `;
 
+exports[`Picker basic rendering render dynamic content using native selector 1`] = `
+<div>
+  <select
+    class="form-control form-control-select form-control-select-secondary"
+  >
+    <option
+      value="Apple"
+    >
+      Apple
+    </option>
+    <option
+      value="Banana"
+    >
+      Banana
+    </option>
+    <option
+      value="Blueberry"
+    >
+      Blueberry
+    </option>
+  </select>
+</div>
+`;
+
 exports[`Picker basic rendering render static content 1`] = `
 <body>
   <div>
@@ -30,15 +54,39 @@ exports[`Picker basic rendering render static content 1`] = `
 </body>
 `;
 
+exports[`Picker basic rendering render static content using native selector 1`] = `
+<div>
+  <select
+    class="form-control form-control-select form-control-select-secondary"
+  >
+    <option
+      value="apple"
+    >
+      Apple
+    </option>
+    <option
+      value="banana"
+    >
+      Banana
+    </option>
+    <option
+      value="blueberry"
+    >
+      Blueberry
+    </option>
+  </select>
+</div>
+`;
+
 exports[`Picker basic rendering renders open component by default 1`] = `
 <body>
   <div>
     <button
       aria-activedescendant="Apple"
-      aria-controls="clay-id-5"
+      aria-controls="clay-id-11"
       aria-expanded="true"
       aria-haspopup="listbox"
-      aria-owns="clay-id-6"
+      aria-owns="clay-id-12"
       class="form-control form-control-select form-control-select-secondary show"
       role="combobox"
       style=""
@@ -49,13 +97,13 @@ exports[`Picker basic rendering renders open component by default 1`] = `
   <div>
     <div
       class="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
-      id="clay-id-5"
+      id="clay-id-11"
       role="presentation"
       style="left: -999px; top: -995px;"
     >
       <ul
         class="inline-scroller list-unstyled"
-        id="clay-id-6"
+        id="clay-id-12"
         role="listbox"
         tabindex="-1"
       >

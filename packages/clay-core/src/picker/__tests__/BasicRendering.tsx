@@ -34,6 +34,48 @@ describe('Picker basic rendering', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('render dynamic content using native selector', () => {
+		window.innerWidth = 600;
+
+		const {container} = render(
+			<Picker items={['Apple', 'Banana', 'Blueberry']} native>
+				{(item) => <Option key={item}>{item}</Option>}
+			</Picker>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('render static content using native selector', () => {
+		window.innerWidth = 600;
+
+		const {container} = render(
+			<Picker native>
+				<Option key="apple">Apple</Option>
+				<Option key="banana">Banana</Option>
+				<Option key="blueberry">Blueberry</Option>
+			</Picker>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders component with selected by default using native selector', () => {
+		window.innerWidth = 600;
+
+		const {getByRole} = render(
+			<Picker defaultSelectedKey="apple" native>
+				<Option key="apple">Apple</Option>
+				<Option key="banana">Banana</Option>
+				<Option key="blueberry">Blueberry</Option>
+			</Picker>
+		);
+
+		const combobox = getByRole('combobox') as HTMLSelectElement;
+
+		expect(combobox.value).toBe('apple');
+	});
+
 	it('renders open component by default', () => {
 		render(
 			<Picker defaultActive items={['Apple', 'Banana', 'Blueberry']}>

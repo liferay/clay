@@ -57,7 +57,7 @@ module.exports = {
 		},
 		'./packages/clay-core/src/picker/': {
 			branches: 87,
-			functions: 93,
+			functions: 88,
 			lines: 95,
 			statements: 95,
 		},
