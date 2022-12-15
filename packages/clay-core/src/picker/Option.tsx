@@ -6,7 +6,7 @@
 import Icon from '@clayui/icon';
 import {useHover, useInteractionFocus} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback} from 'react';
 
 import {usePickerState} from './context';
 
@@ -25,12 +25,6 @@ type Props = {
 	 * Internal property.
 	 * @ignore
 	 */
-	index?: React.Key;
-
-	/**
-	 * Internal property.
-	 * @ignore
-	 */
 	keyValue?: React.Key;
 
 	/**
@@ -40,36 +34,15 @@ type Props = {
 	textValue?: string;
 };
 
-export function Option({
-	children,
-	disabled,
-	index,
-	keyValue,
-	textValue,
-}: Props) {
+export function Option({children, disabled, keyValue}: Props) {
 	const {
 		activeDescendant,
 		onActiveDescendant,
-		onItemRendered,
 		onSelectionChange,
 		selectedKey,
 	} = usePickerState();
 
 	const {isFocusVisible} = useInteractionFocus();
-
-	if (typeof children !== 'string' && !textValue) {
-		console.warn(
-			'Clay: <Option /> with non-plain text content is not compatible with the type being selected. Please add a `textValue` prop.'
-		);
-	}
-
-	// Sets the initial activeDescendant value when the first one is rendered if
-	// it is empty.
-	useEffect(() => {
-		if (index === 0 && !activeDescendant) {
-			onActiveDescendant(String(keyValue));
-		}
-	}, []);
 
 	const hoverProps = useHover({
 		disabled,
@@ -93,12 +66,7 @@ export function Option({
 				})}
 				disabled={disabled}
 				id={String(keyValue)}
-				onClick={() => {
-					onSelectionChange(keyValue!);
-					onItemRendered(
-						typeof children === 'string' ? children : textValue!
-					);
-				}}
+				onClick={() => onSelectionChange(keyValue!)}
 				role="option"
 				tabIndex={-1}
 			>

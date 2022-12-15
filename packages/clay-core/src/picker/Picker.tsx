@@ -18,7 +18,7 @@ import {
 import classNames from 'classnames';
 import React, {useCallback, useRef, useState} from 'react';
 
-import {Collection} from '../collection';
+import {Collection, useCollection} from '../collection';
 import {PickerContext} from './context';
 
 import type {ICollectionProps} from '../collection';
@@ -126,8 +126,19 @@ export function Picker<T>({
 		value: externalSelectedKey,
 	});
 
-	const [itemRendered, setItemRendered] = useState('');
-	const [activeDescendant, setActiveDescendant] = useState('');
+	// We initialize the collection in the picker and then pass it down so the
+	// collection can be cached even before the listbox is not mounted.
+	const collection = useCollection<T, unknown>({
+		children,
+		items,
+		suppressTextValueWarning: false,
+	});
+
+	const [activeDescendant, setActiveDescendant] = useState(() =>
+		typeof selectedKey !== 'undefined'
+			? String(selectedKey)
+			: collection.getFirstItem().key
+	);
 
 	const ariaControls = useId();
 	const ariaOwns = useId();
@@ -279,7 +290,7 @@ export function Picker<T>({
 				ref={triggerRef}
 				role="combobox"
 			>
-				{selectedKey ? itemRendered : placeholder}
+				{selectedKey ? collection.getItem(selectedKey) : placeholder}
 			</As>
 
 			{active && (
@@ -298,7 +309,7 @@ export function Picker<T>({
 						} else {
 							const key =
 								String(selectedKey) === 'undefined'
-									? ''
+									? collection.getFirstItem().key
 									: String(selectedKey);
 
 							if (key !== activeDescendant) {
@@ -331,7 +342,6 @@ export function Picker<T>({
 								value={{
 									activeDescendant,
 									onActiveDescendant: setActiveDescendant,
-									onItemRendered: setItemRendered,
 									onSelectionChange: (key: React.Key) => {
 										triggerRef.current!.focus();
 										setActiveDescendant(String(key));
@@ -341,9 +351,7 @@ export function Picker<T>({
 									selectedKey,
 								}}
 							>
-								<Collection<T> items={items}>
-									{children}
-								</Collection>
+								<Collection<T> collection={collection} />
 							</PickerContext.Provider>
 						</ul>
 					</div>

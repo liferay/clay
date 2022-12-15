@@ -10,7 +10,6 @@ import type {InternalDispatch} from '@clayui/shared';
 type PickerContextProps = {
 	onSelectionChange: InternalDispatch<React.Key>;
 	selectedKey: React.Key;
-	onItemRendered: (value: string) => void;
 	activeDescendant: string;
 	onActiveDescendant: (value: string) => void;
 };
