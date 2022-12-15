@@ -25,6 +25,7 @@ export {useMousePosition} from './useMousePosition';
 export {useNavigation, isTypeahead, getFocusableList} from './useNavigation';
 export {useOverlayPosition} from './useOverlayPositon';
 export {useHover} from './useHover';
+export {useIsMobileDevice} from './useIsMobileDevice';
 export type {AlignPoints} from './useOverlayPositon';
 export type {IBaseProps as IPortalBaseProps} from './Portal';
 export type {InternalDispatch} from './useInternalState';
