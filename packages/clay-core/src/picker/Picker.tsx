@@ -7,6 +7,7 @@ import {
 	InternalDispatch,
 	Keys,
 	Overlay,
+	getFocusableList,
 	isTypeahead,
 	useId,
 	useInteractionFocus,
@@ -148,7 +149,7 @@ export function Picker<T>({
 		[active, children]
 	);
 
-	const navigationProps = useNavigation({
+	const {accessibilityFocus, navigationProps} = useNavigation({
 		activation: 'manual',
 		active: activeDescendant,
 		containeRef: menuRef,
@@ -230,6 +231,39 @@ export function Picker<T>({
 							}
 
 							navigationProps.onKeyDown(event);
+							break;
+						}
+						case 'PageUp':
+						case 'PageDown': {
+							if (!active) {
+								return;
+							}
+
+							event.preventDefault();
+
+							const list = getFocusableList(menuRef);
+
+							const position = list.findIndex(
+								(element) =>
+									element.getAttribute('id') ===
+									activeDescendant
+							);
+
+							if (position === -1) {
+								break;
+							}
+
+							const option =
+								list[
+									event.key === 'PageUp'
+										? position - 10
+										: position + 10
+								] ??
+								list[
+									event.key === 'PageUp' ? 0 : list.length - 1
+								];
+
+							accessibilityFocus(option);
 							break;
 						}
 						default: {
