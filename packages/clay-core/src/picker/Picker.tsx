@@ -44,7 +44,10 @@ export type Props<T> = {
 	/**
 	 * Custom trigger component.
 	 */
-	as?: 'button' | React.ComponentType | React.ForwardRefExoticComponent<any>;
+	as?:
+		| 'button'
+		| React.ForwardRefExoticComponent<any>
+		| ((props: React.HTMLAttributes<HTMLElement>) => JSX.Element);
 
 	/**
 	 *  Property to set the default value of `active` (uncontrolled).
@@ -96,7 +99,7 @@ export function Picker<T>({
 	active: externalActive,
 	as: As = 'button',
 	children,
-	defaultActive,
+	defaultActive = false,
 	defaultSelectedKey,
 	direction = 'bottom',
 	disabled,
@@ -323,9 +326,7 @@ export function Picker<T>({
 					triggerRef={triggerRef}
 				>
 					<div
-						className={classNames(
-							'dropdown-menu dropdown-menu-select dropdown-menu-indicator-start show'
-						)}
+						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
 						id={ariaControls}
 						onFocus={() => triggerRef.current?.focus()}
 						ref={menuRef}

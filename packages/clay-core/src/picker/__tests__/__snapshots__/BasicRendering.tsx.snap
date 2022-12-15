@@ -4,6 +4,7 @@ exports[`Picker basic rendering render dynamic content 1`] = `
 <div>
   <button
     aria-activedescendant=""
+    aria-expanded="false"
     aria-haspopup="listbox"
     class="form-control form-control-select form-control-select-secondary"
     role="combobox"
@@ -18,6 +19,7 @@ exports[`Picker basic rendering render static content 1`] = `
   <div>
     <button
       aria-activedescendant=""
+      aria-expanded="false"
       aria-haspopup="listbox"
       class="form-control form-control-select form-control-select-secondary"
       role="combobox"

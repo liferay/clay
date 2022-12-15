@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import Icon from '@clayui/icon';
 import {cleanup, render} from '@testing-library/react';
 import React from 'react';
 
@@ -73,5 +74,96 @@ describe('Picker basic rendering', () => {
 
 		expect(apple.getAttribute('aria-selected')).toBe('true');
 		expect(apple.textContent).toBe('Apple');
+	});
+
+	it('renders the component as disabled', () => {
+		const {getByRole} = render(
+			<Picker
+				defaultSelectedKey="Banana"
+				disabled
+				items={['Apple', 'Banana', 'Blueberry']}
+			>
+				{(item) => <Option key={item}>{item}</Option>}
+			</Picker>
+		);
+
+		const selectedValue = getByRole('combobox');
+
+		expect(selectedValue.getAttribute('disabled')).toBe('');
+		expect(selectedValue.textContent).toBe('Banana');
+	});
+
+	it('renders component with custom placeholder', () => {
+		const {getByRole} = render(
+			<Picker
+				items={['Apple', 'Banana', 'Blueberry']}
+				placeholder="Select a fruit"
+			>
+				{(item) => <Option key={item}>{item}</Option>}
+			</Picker>
+		);
+
+		const selectedValue = getByRole('combobox');
+
+		expect(selectedValue.textContent).toBe('Select a fruit');
+	});
+
+	it('render component with label id', () => {
+		const {getByRole} = render(
+			<>
+				<label htmlFor="picker" id="picker-label">
+					Choose a fruit
+				</label>
+				<Picker
+					aria-labelledby="picker-label"
+					id="picker"
+					items={['Apple', 'Banana', 'Blueberry']}
+					placeholder="Select a fruit"
+				>
+					{(item) => <Option key={item}>{item}</Option>}
+				</Picker>
+			</>
+		);
+
+		const selectedValue = getByRole('combobox') as HTMLButtonElement;
+		const label = selectedValue.labels[0];
+
+		expect(selectedValue.getAttribute('id')).toBe('picker');
+		expect(selectedValue.getAttribute('aria-labelledby')).toBe(
+			'picker-label'
+		);
+		expect(label.getAttribute('id')).toBe('picker-label');
+		expect(label.getAttribute('for')).toBe('picker');
+	});
+
+	it('render component with custom trigger', () => {
+		const Trigger = React.forwardRef<
+			HTMLDivElement,
+			React.HTMLAttributes<HTMLDivElement>
+		>(({children, ...otherProps}, ref) => (
+			<div ref={ref} {...otherProps} tabIndex={0}>
+				<Icon className="mr-2" symbol="user" />
+				{children}
+			</div>
+		));
+
+		Trigger.displayName = 'Trigger';
+
+		const {getByRole} = render(
+			<Picker as={Trigger} items={['Apple', 'Banana', 'Blueberry']}>
+				{(item) => <Option key={item}>{item}</Option>}
+			</Picker>
+		);
+
+		const svg = getByRole('presentation');
+		const selectedValue = getByRole('combobox');
+
+		expect(selectedValue.textContent).toBe('Select an option');
+		expect(svg.tagName).toBe('svg');
+		expect(selectedValue.getAttribute('aria-activedescendant')).toBe('');
+		expect(selectedValue.getAttribute('aria-haspopup')).toBe('listbox');
+		expect(selectedValue.getAttribute('role')).toBe('combobox');
+		expect(selectedValue.getAttribute('aria-expanded')).toBe('false');
+		expect(selectedValue.getAttribute('tabindex')).toBe('0');
 	});
 });
