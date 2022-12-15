@@ -4,7 +4,7 @@
  */
 
 import Icon from '@clayui/icon';
-import {useHover} from '@clayui/shared';
+import {useHover, useInteractionFocus} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useCallback, useEffect} from 'react';
 
@@ -55,6 +55,8 @@ export function Option({
 		selectedKey,
 	} = usePickerState();
 
+	const {isFocusVisible} = useInteractionFocus();
+
 	if (typeof children !== 'string' && !textValue) {
 		console.warn(
 			'Clay: <Option /> with non-plain text content is not compatible with the type being selected. Please add a `textValue` prop.'
@@ -77,15 +79,17 @@ export function Option({
 		),
 	});
 
+	const isFocus = isFocusVisible();
+
 	return (
 		<li role="presentation">
 			<button
 				{...hoverProps}
 				aria-selected={selectedKey === keyValue}
 				className={classNames('dropdown-item', {
-					active:
-						selectedKey === keyValue ||
-						activeDescendant === String(keyValue),
+					active: selectedKey === keyValue,
+					focus: activeDescendant === String(keyValue) && isFocus,
+					hover: activeDescendant === String(keyValue) && !isFocus,
 				})}
 				disabled={disabled}
 				id={String(keyValue)}
