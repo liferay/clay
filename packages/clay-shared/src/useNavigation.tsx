@@ -228,7 +228,7 @@ export function useNavigation<T extends HTMLElement | null>({
 
 						tab = orderedList.find(
 							(element) =>
-								element.innerText
+								(element.innerText ?? element.textContent)
 									?.toLowerCase()
 									.indexOf(
 										stringRef.current.toLocaleLowerCase()
