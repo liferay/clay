@@ -322,6 +322,7 @@ export function Picker<T>({
 
 						setActive(false);
 					}}
+					portalRef={menuRef}
 					suppress={[triggerRef, menuRef]}
 					triggerRef={triggerRef}
 				>
