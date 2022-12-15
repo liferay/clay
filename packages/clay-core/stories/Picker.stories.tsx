@@ -4,6 +4,7 @@
  */
 
 import Form from '@clayui/form';
+import Icon from '@clayui/icon';
 import {useId} from '@clayui/shared';
 import React from 'react';
 
@@ -73,6 +74,36 @@ export const Dynamic = () => {
 						'Huckleberry',
 					]}
 				>
+					{(item) => <Option key={item}>{item}</Option>}
+				</Picker>
+			</Form.Group>
+		</div>
+	);
+};
+
+const Trigger = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({children, ...otherProps}, ref) => (
+	<div ref={ref} {...otherProps} tabIndex={0}>
+		<Icon className="mr-2" symbol="user" />
+		{children}
+	</div>
+));
+
+Trigger.displayName = 'Trigger';
+
+export const CustomTrigger = () => {
+	const pickerId = useId();
+	const labelId = useId();
+
+	return (
+		<div style={{width: '180px'}}>
+			<Form.Group>
+				<label htmlFor={pickerId} id={labelId}>
+					Choose a user
+				</label>
+				<Picker as={Trigger} items={['Liam', 'Noah', 'Oliver']}>
 					{(item) => <Option key={item}>{item}</Option>}
 				</Picker>
 			</Form.Group>
