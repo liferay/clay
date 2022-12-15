@@ -34,9 +34,10 @@ type Props = {
 	textValue?: string;
 };
 
-export function Option({children, disabled, keyValue}: Props) {
+export function Option({children, disabled, keyValue, textValue}: Props) {
 	const {
 		activeDescendant,
+		isMobile,
 		onActiveDescendant,
 		onSelectionChange,
 		selectedKey,
@@ -53,6 +54,14 @@ export function Option({children, disabled, keyValue}: Props) {
 	});
 
 	const isFocus = isFocusVisible();
+
+	if (isMobile) {
+		return (
+			<option disabled={disabled} value={keyValue}>
+				{typeof children === 'string' ? children : textValue}
+			</option>
+		);
+	}
 
 	return (
 		<li role="presentation">

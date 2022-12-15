@@ -12,6 +12,7 @@ import {
 	useId,
 	useInteractionFocus,
 	useInternalState,
+	useIsMobileDevice,
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
@@ -50,6 +51,11 @@ export type Props<T> = {
 		| ((props: React.HTMLAttributes<HTMLElement>) => JSX.Element);
 
 	/**
+	 * Sets the CSS className for the component.
+	 */
+	className?: string;
+
+	/**
 	 *  Property to set the default value of `active` (uncontrolled).
 	 */
 	defaultActive?: boolean;
@@ -73,6 +79,12 @@ export type Props<T> = {
 	 * The id of the component.
 	 */
 	id?: string;
+
+	/**
+	 * Flag to make the component hybrid, when identified it is on a mobile
+	 * device it will use the native selector.
+	 */
+	native?: boolean;
 
 	/**
 	 * Callback for when the active state changes (controlled).
@@ -99,12 +111,14 @@ export function Picker<T>({
 	active: externalActive,
 	as: As = 'button',
 	children,
+	className,
 	defaultActive = false,
 	defaultSelectedKey,
 	direction = 'bottom',
 	disabled,
 	id,
 	items,
+	native = false,
 	onActiveChange,
 	onSelectionChange,
 	placeholder = 'Select an option',
@@ -163,6 +177,8 @@ export function Picker<T>({
 		[active, children]
 	);
 
+	const isMobile = useIsMobileDevice();
+
 	const {accessibilityFocus, navigationProps} = useNavigation({
 		activation: 'manual',
 		active: activeDescendant,
@@ -185,6 +201,37 @@ export function Picker<T>({
 		}
 	}, [activeDescendant]);
 
+	const context = {
+		activeDescendant,
+		isMobile: isMobile && native,
+		onActiveDescendant: setActiveDescendant,
+		onSelectionChange: (key: React.Key) => {
+			triggerRef.current!.focus();
+			setActiveDescendant(String(key));
+			setSelectedKey(key);
+			setActive(false);
+		},
+		selectedKey,
+	};
+
+	if (context.isMobile) {
+		return (
+			<select
+				{...otherProps}
+				className={classNames(
+					'form-control form-control-select form-control-select-secondary',
+					className
+				)}
+				onChange={(event) => setSelectedKey(event.target.value)}
+				value={selectedKey}
+			>
+				<PickerContext.Provider value={context}>
+					<Collection<T> collection={collection} />
+				</PickerContext.Provider>
+			</select>
+		);
+	}
+
 	return (
 		<>
 			<As
@@ -196,6 +243,7 @@ export function Picker<T>({
 				aria-owns={active ? ariaOwns : undefined}
 				className={classNames(
 					'form-control form-control-select form-control-select-secondary',
+					className,
 					{
 						show: active,
 					}
@@ -340,19 +388,7 @@ export function Picker<T>({
 							role="listbox"
 							tabIndex={-1}
 						>
-							<PickerContext.Provider
-								value={{
-									activeDescendant,
-									onActiveDescendant: setActiveDescendant,
-									onSelectionChange: (key: React.Key) => {
-										triggerRef.current!.focus();
-										setActiveDescendant(String(key));
-										setSelectedKey(key);
-										setActive(false);
-									},
-									selectedKey,
-								}}
-							>
+							<PickerContext.Provider value={context}>
 								<Collection<T> collection={collection} />
 							</PickerContext.Provider>
 						</ul>
