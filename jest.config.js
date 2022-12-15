@@ -190,7 +190,7 @@ module.exports = {
 		'./packages/clay-shared/src/': {
 			branches: 21,
 			functions: 16,
-			lines: 37,
+			lines: 36,
 			statements: 39,
 		},
 		'./packages/clay-slider/src/': {
