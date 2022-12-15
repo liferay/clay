@@ -176,10 +176,10 @@ export function Picker<T>({
 			<As
 				{...otherProps}
 				aria-activedescendant={active ? activeDescendant : ''}
-				aria-controls={ariaControls}
+				aria-controls={active ? ariaControls : undefined}
 				aria-expanded={active}
 				aria-haspopup="listbox"
-				aria-owns={ariaOwns}
+				aria-owns={active ? ariaOwns : undefined}
 				className={classNames(
 					'form-control form-control-select form-control-select-secondary',
 					{
@@ -316,6 +316,7 @@ export function Picker<T>({
 							'dropdown-menu dropdown-menu-select dropdown-menu-indicator-start show'
 						)}
 						id={ariaControls}
+						onFocus={() => triggerRef.current?.focus()}
 						ref={menuRef}
 						role="presentation"
 					>
