@@ -17,6 +17,18 @@ import type {IPaginationEllipsisProps} from './Ellipsis';
 
 const ELLIPSIS_BUFFER = 2;
 
+const replacePlaceholders = (
+	str: string,
+	page: number | JSX.Element | Object | undefined
+) => {
+	if (str) {
+		return str.replace(
+			/%PREVIOUS%|%NEXT%|%PAGE%/g,
+			page ? page.toString() : ''
+		);
+	}
+};
+
 interface IProps extends React.ComponentProps<typeof Pagination> {
 	/**
 	 * Sets the currently active page (controlled).
@@ -39,6 +51,7 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	 * Labels for the aria attributes
 	 */
 	ariaLabels?: {
+		link: string;
 		previous: string;
 		next: string;
 	};
@@ -52,7 +65,7 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	/**
 	 * Properties to pass to the ellipsis trigger.
 	 */
-	ellipsisProps?: Object;
+	ellipsisProps?: {} | undefined;
 
 	/**
 	 * Sets the default active page (uncontrolled).
@@ -105,14 +118,18 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 			activePage,
 			alignmentPosition,
 			ariaLabels = {
-				next: 'Next',
-				previous: 'Previous',
+				link: 'Go to page, %PAGE%',
+				next: 'Go to the next page, %NEXT%',
+				previous: 'Go to the previous page, %PREVIOUS%',
 			},
 			defaultActive,
 			disabledPages = [],
 			disableEllipsis = false,
 			ellipsisBuffer = ELLIPSIS_BUFFER,
-			ellipsisProps = {},
+			ellipsisProps = {
+				'aria-label': 'Show pages %START% through %END%',
+				title: 'Show pages %START% through %END%',
+			},
 			hrefConstructor,
 			onActiveChange,
 			onPageChange,
@@ -144,7 +161,10 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 		return (
 			<Pagination {...otherProps} ref={ref}>
 				<Pagination.Item
-					aria-label={ariaLabels.previous}
+					aria-label={replacePlaceholders(
+						ariaLabels.previous,
+						previousPage
+					)}
 					data-testid="prevArrow"
 					disabled={internalActive === 1}
 					href={previousHref}
@@ -171,27 +191,35 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 							internalActive - 1
 					  )
 					: pages
-				).map((page: number | JSX.Element | Object, index: number) =>
-					React.isValidElement(page) ? (
-						React.cloneElement(page, {key: `ellipsis${index}`})
-					) : (
-						<Pagination.Item
-							active={page === internalActive}
-							disabled={disabledPages.includes(page as number)}
-							href={
-								hrefConstructor &&
-								hrefConstructor(page as number)
-							}
-							key={page as number}
-							onClick={() => setActive(page as number)}
-						>
-							{page}
-						</Pagination.Item>
-					)
+				).map(
+					(page: number | JSX.Element | Object, index: number) =>
+						React.isValidElement(page) ? (
+							React.cloneElement(page, {key: `ellipsis${index}`})
+						) : (
+							<Pagination.Item
+								active={page === internalActive}
+								aria-label={replacePlaceholders(
+									ariaLabels.link,
+									page
+								)}
+								disabled={disabledPages.includes(
+									page as number
+								)}
+								href={
+									hrefConstructor &&
+									hrefConstructor(page as number)
+								}
+								key={page as number}
+								onClick={() => setActive(page as number)}
+							>
+								{page}
+							</Pagination.Item>
+						),
+					replacePlaceholders
 				)}
 
 				<Pagination.Item
-					aria-label={ariaLabels.next}
+					aria-label={replacePlaceholders(ariaLabels.next, nextPage)}
 					data-testid="nextArrow"
 					disabled={internalActive === totalPages}
 					href={nextHref}

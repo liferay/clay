@@ -38,6 +38,18 @@ const ClayPaginationEllipsis = ({
 				onClick: () => onPageChange && onPageChange(page),
 		  }));
 
+	const replacePlaceholders = (str: string | undefined) => {
+		if (str) {
+			str = str.replace(/%START%|%END%/g, (s: string | undefined) => {
+				return s === '%START%'
+					? pages[0]?.label.toString()
+					: pages[pages.length - 1]?.label.toString();
+			});
+		}
+
+		return str;
+	};
+
 	return (
 		<ClayDropDownWithItems
 			alignmentPosition={alignmentPosition}
@@ -47,9 +59,11 @@ const ClayPaginationEllipsis = ({
 			trigger={
 				<ClayButton
 					{...otherProps}
+					aria-label={replacePlaceholders(otherProps['aria-label'])}
 					className="page-link"
 					disabled={disabled}
 					displayType="unstyled"
+					title={replacePlaceholders(otherProps?.title)}
 				>
 					...
 				</ClayButton>
