@@ -37,7 +37,7 @@ type Props<T> = {
 	/**
 	 * Callback is called when the intent is to move to the element.
 	 */
-	onNavigate?: (element: HTMLElement, index: number) => void;
+	onNavigate?: (element: HTMLElement, index: number | null) => void;
 
 	/**
 	 * Indicates whether the element's orientation is horizontal or vertical.
@@ -88,6 +88,26 @@ export function useNavigation<T extends HTMLElement | null>({
 		}
 	}, [visible]);
 
+	const accessibilityFocus = useCallback(
+		(tab: HTMLElement, tabs?: Array<HTMLElement>) => {
+			onNavigate!(tab, tabs ? tabs.indexOf(tab) : null);
+
+			const child = containeRef.current!.firstElementChild as HTMLElement;
+
+			if (isScrollable(child)) {
+				maintainScrollVisibility(tab, child);
+			}
+
+			if (!isElementInView(tab)) {
+				tab.scrollIntoView({
+					behavior: 'smooth',
+					block: 'nearest',
+				});
+			}
+		},
+		[]
+	);
+
 	const onKeyDown = useCallback(
 		(event: React.KeyboardEvent<HTMLElement>) => {
 			if (!containeRef.current) {
@@ -106,19 +126,7 @@ export function useNavigation<T extends HTMLElement | null>({
 				keys.includes(event.key) ||
 				(typeahead && !alternativeKeys.includes(event.key))
 			) {
-				const tabs = Array.from<HTMLElement>(
-					containeRef.current.querySelectorAll(
-						FOCUSABLE_ELEMENTS.join(',')
-					)
-				).filter((element) =>
-					isFocusable({
-						contentEditable: element.contentEditable,
-						disabled: element.getAttribute('disabled') !== null,
-						offsetParent: element.offsetParent,
-						tabIndex: 0,
-						tagName: element.tagName,
-					})
-				);
+				const tabs = getFocusableList(containeRef);
 
 				let tab: HTMLElement | undefined;
 
@@ -237,21 +245,7 @@ export function useNavigation<T extends HTMLElement | null>({
 				if (tab) {
 					event.preventDefault();
 					if (onNavigate) {
-						onNavigate(tab, tabs.indexOf(tab));
-
-						const child = containeRef.current
-							.firstElementChild as HTMLElement;
-
-						if (isScrollable(child)) {
-							maintainScrollVisibility(tab, child);
-						}
-
-						if (!isElementInView(tab)) {
-							tab.scrollIntoView({
-								behavior: 'smooth',
-								block: 'nearest',
-							});
-						}
+						accessibilityFocus(tab, tabs);
 					} else {
 						tab.focus();
 					}
@@ -292,7 +286,29 @@ export function useNavigation<T extends HTMLElement | null>({
 		}
 	}, [visible]);
 
-	return {onKeyDown};
+	const navigationProps = {onKeyDown};
+
+	return {accessibilityFocus, navigationProps};
+}
+
+export function getFocusableList<T extends HTMLElement | null>(
+	containeRef: React.MutableRefObject<T>
+) {
+	if (!containeRef.current) {
+		return [];
+	}
+
+	return Array.from<HTMLElement>(
+		containeRef.current.querySelectorAll(FOCUSABLE_ELEMENTS.join(','))
+	).filter((element) =>
+		isFocusable({
+			contentEditable: element.contentEditable,
+			disabled: element.getAttribute('disabled') !== null,
+			offsetParent: element.offsetParent,
+			tabIndex: 0,
+			tagName: element.tagName,
+		})
+	);
 }
 
 export function isTypeahead(event: React.KeyboardEvent<HTMLElement>) {

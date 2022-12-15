@@ -297,7 +297,7 @@ const Contextual = ({
 		[items]
 	);
 
-	const navigationProps = useNavigation({
+	const {navigationProps} = useNavigation({
 		activation: 'manual',
 		containeRef: menuElementRef,
 		loop: true,

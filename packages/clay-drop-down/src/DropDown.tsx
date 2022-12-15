@@ -201,7 +201,7 @@ function ClayDropDown<T>({
 		[initialized]
 	);
 
-	const navigationProps = useNavigation({
+	const {navigationProps} = useNavigation({
 		activation: 'manual',
 		containeRef: menuElementRef,
 		loop: true,

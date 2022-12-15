@@ -281,7 +281,7 @@ function ClayVerticalNav({
 	const [active, setActive] = useState(false);
 	const containerRef = useRef<HTMLDivElement | null>(null);
 
-	const {onKeyDown} = useNavigation({
+	const {navigationProps} = useNavigation({
 		activation,
 		containeRef: containerRef,
 		orientation: 'vertical',
@@ -315,10 +315,10 @@ function ClayVerticalNav({
 			</CustomTrigger>
 
 			<div
+				{...navigationProps}
 				className={classNames('collapse menubar-collapse', {
 					show: active,
 				})}
-				onKeyDown={onKeyDown}
 				ref={containerRef}
 			>
 				<Nav aria-orientation="vertical" nested role="menubar">
