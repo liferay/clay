@@ -27,7 +27,7 @@ type Props<T> = {
 	/**
 	 * Reference of the parent element of the focusable elements.
 	 */
-	containeRef: React.MutableRefObject<T>;
+	containerRef: React.MutableRefObject<T>;
 
 	/**
 	 * Flag to indicate if navigation should loop.
@@ -62,7 +62,7 @@ const horizontalKeys = [Keys.Left, Keys.Right, Keys.Home, Keys.End];
 export function useNavigation<T extends HTMLElement | null>({
 	activation = 'manual',
 	active,
-	containeRef,
+	containerRef,
 	loop = false,
 	onNavigate,
 	orientation = 'horizontal',
@@ -92,7 +92,8 @@ export function useNavigation<T extends HTMLElement | null>({
 		(tab: HTMLElement, tabs?: Array<HTMLElement>) => {
 			onNavigate!(tab, tabs ? tabs.indexOf(tab) : null);
 
-			const child = containeRef.current!.firstElementChild as HTMLElement;
+			const child = containerRef.current!
+				.firstElementChild as HTMLElement;
 
 			if (isScrollable(child)) {
 				maintainScrollVisibility(tab, child);
@@ -110,7 +111,7 @@ export function useNavigation<T extends HTMLElement | null>({
 
 	const onKeyDown = useCallback(
 		(event: React.KeyboardEvent<HTMLElement>) => {
-			if (!containeRef.current) {
+			if (!containerRef.current) {
 				event.persist();
 				pendingEventStack.current.push(event);
 
@@ -126,7 +127,7 @@ export function useNavigation<T extends HTMLElement | null>({
 				keys.includes(event.key) ||
 				(typeahead && !alternativeKeys.includes(event.key))
 			) {
-				const tabs = getFocusableList(containeRef);
+				const tabs = getFocusableList(containerRef);
 
 				let tab: HTMLElement | undefined;
 
@@ -261,10 +262,10 @@ export function useNavigation<T extends HTMLElement | null>({
 
 	useEffect(() => {
 		// Moves the scroll to the element with visual "focus" if it exists.
-		if (visible && containeRef.current && active && onNavigate) {
-			const child = containeRef.current.firstElementChild as HTMLElement;
+		if (visible && containerRef.current && active && onNavigate) {
+			const child = containerRef.current.firstElementChild as HTMLElement;
 			const activeElement =
-				containeRef.current.querySelector<HTMLElement>(`#${active}`);
+				containerRef.current.querySelector<HTMLElement>(`#${active}`);
 
 			if (activeElement && isScrollable(child)) {
 				maintainScrollVisibility(activeElement, child);

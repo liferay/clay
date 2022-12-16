@@ -70,7 +70,7 @@ export function List({
 
 	const {navigationProps} = useNavigation({
 		activation,
-		containeRef: tabsRef,
+		containerRef: tabsRef,
 		orientation: 'horizontal',
 	});
 

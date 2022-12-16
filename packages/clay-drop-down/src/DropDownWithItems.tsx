@@ -299,7 +299,7 @@ const Contextual = ({
 
 	const {navigationProps} = useNavigation({
 		activation: 'manual',
-		containeRef: menuElementRef,
+		containerRef: menuElementRef,
 		loop: true,
 		orientation: 'vertical',
 		typeahead: true,

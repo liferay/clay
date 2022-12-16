@@ -203,7 +203,7 @@ function ClayDropDown<T>({
 
 	const {navigationProps} = useNavigation({
 		activation: 'manual',
-		containeRef: menuElementRef,
+		containerRef: menuElementRef,
 		loop: true,
 		orientation: 'vertical',
 		typeahead: true,

@@ -182,7 +182,7 @@ export function Picker<T>({
 	const {accessibilityFocus, navigationProps} = useNavigation({
 		activation: 'manual',
 		active: activeDescendant,
-		containeRef: menuRef,
+		containerRef: menuRef,
 		onNavigate: (tab) => setActiveDescendant(tab.getAttribute('id')!),
 		orientation: 'vertical',
 		typeahead: true,

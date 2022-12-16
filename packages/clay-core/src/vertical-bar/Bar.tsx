@@ -40,7 +40,7 @@ export function Bar<T>({
 
 	const {navigationProps} = useNavigation({
 		activation,
-		containeRef: parentRef,
+		containerRef: parentRef,
 		orientation: 'vertical',
 	});
 

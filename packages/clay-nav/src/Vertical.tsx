@@ -283,7 +283,7 @@ function ClayVerticalNav({
 
 	const {navigationProps} = useNavigation({
 		activation,
-		containeRef: containerRef,
+		containerRef,
 		orientation: 'vertical',
 	});
 
