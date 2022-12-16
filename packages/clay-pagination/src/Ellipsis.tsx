@@ -5,6 +5,7 @@
 
 import ClayButton from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
+import {sub} from '@clayui/shared';
 import React from 'react';
 
 export interface IPaginationEllipsisProps {
@@ -38,17 +39,19 @@ const ClayPaginationEllipsis = ({
 				onClick: () => onPageChange && onPageChange(page),
 		  }));
 
-	const replacePlaceholders = (str: string | undefined) => {
-		if (str) {
-			str = str.replace(/%START%|%END%/g, (s: string | undefined) => {
-				return s === '%START%'
-					? pages[0]?.label.toString()
-					: pages[pages.length - 1]?.label.toString();
-			});
-		}
+	const ariaLabel = otherProps['aria-label']
+		? sub(otherProps['aria-label'], [
+				pages[0]?.label.toString(),
+				pages[pages.length - 1]?.label.toString(),
+		  ])
+		: undefined;
 
-		return str;
-	};
+	const title = otherProps['title']
+		? sub(otherProps['title'], [
+				pages[0]?.label.toString(),
+				pages[pages.length - 1]?.label.toString(),
+		  ])
+		: undefined;
 
 	return (
 		<ClayDropDownWithItems
@@ -59,11 +62,11 @@ const ClayPaginationEllipsis = ({
 			trigger={
 				<ClayButton
 					{...otherProps}
-					aria-label={replacePlaceholders(otherProps['aria-label'])}
+					aria-label={ariaLabel}
 					className="page-link"
 					disabled={disabled}
 					displayType="unstyled"
-					title={replacePlaceholders(otherProps?.title)}
+					title={title}
 				>
 					...
 				</ClayButton>
