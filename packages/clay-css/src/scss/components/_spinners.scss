@@ -9,9 +9,10 @@
 
 	.spinner-border {
 		animation: spinner-border 0.75s linear infinite;
+		border-color: currentColor transparent currentColor currentColor;
 		border-radius: 50%;
-		border-right-color: transparent;
-		border: $spinner-border-width solid currentColor;
+		border-style: solid;
+		border-width: $spinner-border-width;
 		display: inline-block;
 		height: $spinner-height;
 		vertical-align: text-bottom;
