@@ -106,7 +106,12 @@ export const CustomTrigger = () => {
 				<label htmlFor={pickerId} id={labelId}>
 					Choose a user
 				</label>
-				<Picker as={Trigger} items={['Liam', 'Noah', 'Oliver']}>
+				<Picker
+					aria-labelledby={labelId}
+					as={Trigger}
+					id={pickerId}
+					items={['Liam', 'Noah', 'Oliver']}
+				>
 					{(item) => <Option key={item}>{item}</Option>}
 				</Picker>
 			</Form.Group>
@@ -124,7 +129,11 @@ export const CustomOptions = () => {
 				<label htmlFor={pickerId} id={labelId}>
 					Choose a user
 				</label>
-				<Picker items={['Liam', 'Noah', 'Oliver']}>
+				<Picker
+					aria-labelledby={labelId}
+					id={pickerId}
+					items={['Liam', 'Noah', 'Oliver']}
+				>
 					{(item) => (
 						<Option key={item} textValue={item}>
 							<Layout.ContentRow>
