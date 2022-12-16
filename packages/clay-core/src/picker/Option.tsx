@@ -90,3 +90,5 @@ export function Option({children, disabled, keyValue, textValue}: Props) {
 		</li>
 	);
 }
+
+Option.displayName = 'Item';

@@ -3,17 +3,22 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useCallback, useMemo, useRef} from 'react';
+import React, {useCallback, useContext, useMemo, useRef} from 'react';
 
 import {excludeProps, getKey} from './utils';
 
-import type {ChildElement, ICollectionProps, Props} from './types';
+import type {
+	ChildElement,
+	CollectionState,
+	ICollectionProps,
+	Props,
+} from './types';
 
-export type CollectionState = {
-	collection: Array<JSX.Element | null | undefined>;
-	getFirstItem: () => {key: string; value: string};
-	getItem: (key: React.Key) => string;
+type CollectionContextProps = {
+	layout: React.MutableRefObject<Map<React.Key, any>>;
 };
+
+const CollectionContext = React.createContext({} as CollectionContextProps);
 
 export function useCollection<
 	T extends Record<any, any>,
@@ -31,7 +36,11 @@ export function useCollection<
 	publicApi,
 	suppressTextValueWarning = true,
 }: ICollectionProps<T, P> & Props<P, K>): CollectionState {
+	const {layout: parentLayout} = useContext(CollectionContext);
+
 	const layoutRef = useRef<Map<React.Key, any>>(new Map());
+
+	const layout = parentLayout ?? layoutRef;
 
 	const performFilter = useCallback(
 		(
@@ -60,15 +69,15 @@ export function useCollection<
 	);
 
 	const getItem = useCallback((key: React.Key) => {
-		return layoutRef.current.get(key);
+		return layout.current.get(key);
 	}, []);
 
 	const getFirstItem = useCallback(() => {
-		const key = layoutRef.current.keys().next().value;
+		const key = layout.current.keys().next().value;
 
 		return {
 			key,
-			value: layoutRef.current.get(key),
+			value: layout.current.get(key),
 		};
 	}, []);
 
@@ -82,10 +91,13 @@ export function useCollection<
 
 				const key = getKey(index, item.id ?? child.key, parentKey);
 
-				layoutRef.current.set(
-					key,
-					getTextValue(key, child, suppressTextValueWarning)
-				);
+				// @ts-ignore
+				if (child.type.displayName === 'Item') {
+					layout.current.set(
+						key,
+						getTextValue(key, child, suppressTextValueWarning)
+					);
+				}
 
 				if (performFilter(child)) {
 					return;
@@ -118,10 +130,13 @@ export function useCollection<
 
 			const key = getKey(index, child.key, parentKey);
 
-			layoutRef.current.set(
-				key,
-				getTextValue(key, child, suppressTextValueWarning)
-			);
+			// @ts-ignore
+			if (child.type.displayName === 'Item') {
+				layout.current.set(
+					key,
+					getTextValue(key, child, suppressTextValueWarning)
+				);
+			}
 
 			if (performFilter(child)) {
 				return;
@@ -145,7 +160,15 @@ export function useCollection<
 		});
 	}, [children, performFilter, items, publicApi]);
 
-	return {collection, getFirstItem, getItem};
+	return {
+		collection: (
+			<CollectionContext.Provider value={{layout: layoutRef}}>
+				{collection}
+			</CollectionContext.Provider>
+		),
+		getFirstItem,
+		getItem,
+	};
 }
 
 function getTextValue(

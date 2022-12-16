@@ -29,8 +29,9 @@ export interface ICollectionProps<T, P> {
 }
 
 export type CollectionState = {
-	collection: Array<JSX.Element | null | undefined>;
-	getItem: (key: React.Key) => any;
+	collection: JSX.Element;
+	getFirstItem: () => {key: string; value: string};
+	getItem: (key: React.Key) => string;
 };
 
 export type Props<P, K> = {
