@@ -5,10 +5,13 @@
 
 import Form from '@clayui/form';
 import Icon from '@clayui/icon';
+import Label from '@clayui/label';
+import Layout from '@clayui/layout';
 import {useId} from '@clayui/shared';
 import React from 'react';
 
 import {Option, Picker} from '../src/picker';
+import {Text} from '../src/typography';
 
 export default {
 	component: Picker,
@@ -105,6 +108,40 @@ export const CustomTrigger = () => {
 				</label>
 				<Picker as={Trigger} items={['Liam', 'Noah', 'Oliver']}>
 					{(item) => <Option key={item}>{item}</Option>}
+				</Picker>
+			</Form.Group>
+		</div>
+	);
+};
+
+export const CustomOptions = () => {
+	const pickerId = useId();
+	const labelId = useId();
+
+	return (
+		<div style={{width: '180px'}}>
+			<Form.Group>
+				<label htmlFor={pickerId} id={labelId}>
+					Choose a user
+				</label>
+				<Picker items={['Liam', 'Noah', 'Oliver']}>
+					{(item) => (
+						<Option key={item} textValue={item}>
+							<Layout.ContentRow>
+								<Layout.ContentCol expand>
+									<Text size={3} weight="semi-bold">
+										{item}
+									</Text>
+									<Text color="secondary" size={2}>
+										Description
+									</Text>
+								</Layout.ContentCol>
+								<Layout.ContentCol>
+									<Label displayType="success">Active</Label>
+								</Layout.ContentCol>
+							</Layout.ContentRow>
+						</Option>
+					)}
 				</Picker>
 			</Form.Group>
 		</div>
