@@ -11,30 +11,15 @@ import Item from './Item';
 
 interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
-	 * Use this property for defining `otherProps` that will be passed to the `nav` element.
-	 */
-	navProps?: {
-		'aria-label'?: string;
-		role?: string;
-	};
-
-	/**
 	 * The size of pagination element.
 	 */
 	size?: 'lg' | 'sm';
 }
 
 const ClayPagination = React.forwardRef<HTMLUListElement, IProps>(
-	(
-		{children, className, navProps = {}, size, ...otherProps}: IProps,
-		ref
-	) => {
+	({children, className, size, ...otherProps}: IProps, ref) => {
 		return (
-			<nav
-				aria-label={navProps['aria-label'] || 'Pagination'}
-				role={navProps?.role || 'navigation'}
-				{...navProps}
-			>
+			<nav aria-label={otherProps['aria-label'] || 'Pagination'}>
 				<ul
 					{...otherProps}
 					className={classNames(
