@@ -1,0 +1,153 @@
+---
+title: 'Picker'
+description: 'A select is very similar to a dropdown visually but it let users select options from the panel and then represent the selection in the button.'
+packageNpm: '@clayui/core'
+packageStatus: 'Beta'
+storybookPath: 'design-system-components-picker'
+---
+
+import {PickerExample} from '$packages/clay-core/docs/picker';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Example](#example)
+-   [Introduction](#introduction)
+-   [Content](#content)
+    -   [Static](#static)
+    -   [Dynamic](#dynamic)
+-   [Controlled and Uncontrolled component](#controlled-and-uncontrolled-component)
+-   [Hybrid component](#hybrid-component)
+
+</div>
+</div>
+
+## Example
+
+<PickerExample />
+
+## Introduction
+
+The Picker component is visually similar to a DropDown component but developed specifically for the user to select options from the menu but following the [w3c accessibility](https://www.w3.org/WAI/ARIA/apg/example-index/combobox/combobox-select-only.html) recommendations.
+
+Like the TreeView, VerticalBar and other components this is a middle-level component rather than a low-level or high-level component. Unlike a DropDown, the Picker has simplified APIs and OOTB features to follow accessibility patterns for a combobox-only but following the same APIs pattern and allowing flexibility to customize the content of the options and the trigger.
+
+## Content
+
+Content rendered in the `<Picker />` Menu can be done in two different ways, static and dynamic content just like in DropDown, the choice depends on the use case.
+
+### Static
+
+Static content is when the `<Picker />` options do not change during the lifecycle of the application or are hardcoded options.
+
+```jsx
+<Form.Group>
+	<label htmlFor="picker" id="picker-label">
+		Choose a fruit
+	</label>
+	<Picker aria-labelledby="picker-label" id="picker">
+		<Option key="apple">Apple</Option>
+		<Option disabled key="banana">
+			Banana
+		</Option>
+		<Option key="mangos">Mangos</Option>
+		<Option key="blueberry">Blueberry</Option>
+	</Picker>
+</Form.Group>
+```
+
+### Dynamic
+
+Unlike static content, dynamic content is when the options can change during the lifecycle of the application or when the data comes from a service. Dynamic content rendering is data agnostic, this allows you to configure how to render the component options regardless of the chosen data structure.
+
+```jsx
+<Form.Group>
+	<label htmlFor="picker" id="picker-label">
+		Choose a fruit
+	</label>
+	<Picker
+		aria-labelledby="picker-label"
+		id="picker"
+		items={['Apple', 'Banana', 'Mangos']}
+	>
+		{(item) => <Option key={item}>{item}</Option>}
+	</Picker>
+</Form.Group>
+```
+
+## Controlled and Uncontrolled component
+
+As with any component in Clay, controlled and uncontrolled components are the ability to manage state in the parent or let Clay control the state of the component. You can [read more about this in our blog](/blog/2022/05/02/api-consistency-improvements-for-controlled-and-uncontrolled-components.html).
+
+For the `<Picker />` component you can control the `selectedKey` and `active` states by adding a state to your component, this is only advisable when you need this information otherwise don't use it.
+
+If you just need to set the initial state of the `selectedKey`, use the `defaultSelectedKey` property which is appropriate for that use case.
+
+<div class="clay-site-alert alert alert-info">
+	<strong class="lead">Info</strong>
+	The <code class="language-text">selectedKey</code> property is represented by
+	the <code class="language-text">key</code> property configured in the <code class="language-text">
+		Option
+	</code> component, so the component can identify which value is selected and
+	which should be shown in the trigger. <br />
+	<br />
+	When the content rendering is dynamic and the data has <code class="language-text">
+		id
+	</code> property defined, the component uses <code class="language-text">
+		id
+	</code> instead of <code class="language-text">key</code>.
+</div>
+
+```jsx
+function Example() {
+	// Controlled
+	const [active, setActive] = useState(false);
+
+	// Controlled
+	const [selectedKey, setSelectedKey] = useState('');
+
+	return (
+		<Form.Group>
+			<label htmlFor="picker" id="picker-label">
+				Choose a fruit
+			</label>
+			<Picker
+				active={active}
+				aria-labelledby="picker-label"
+				id="picker"
+				onActiveChange={setActive}
+				onSelectionChange={setSelectedKey}
+				selectedKey={selectedKey}
+			>
+				<Option key="apple">Apple</Option>
+				<Option key="banana">Banana</Option>
+				<Option key="mangos">Mangos</Option>
+			</Picker>
+		</Form.Group>
+	);
+}
+```
+
+## Hybrid component
+
+Native select for mobile devices offers a better experience compared to Picker in some cases. The Picker offers the possibility to render using the native selector of the browser of the device when it is detected that it is on a mobile device, by default this property is disabled but it can be enabled by setting the `native` property to `true`.
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	If the content of the Option component is not simple text, for it to work correctly
+	set the property <code class="language-text">textValue</code> to ensure that
+	the component knows what the option label is.
+</div>
+
+```jsx
+<Form.Group>
+	<label htmlFor="picker" id="picker-label">
+		Choose a fruit
+	</label>
+	<Picker aria-labelledby="picker-label" id="picker" native>
+		<Option key="apple">Apple</Option>
+		<Option key="banana">Banana</Option>
+		<Option key="mangos">Mangos</Option>
+	</Picker>
+</Form.Group>
+```
