@@ -3,7 +3,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export type ChildElement = React.ReactElement<any> & {
+type ChildType = {
+	displayName?: string;
+	passthroughKey?: boolean;
+};
+
+interface IReactTypeElement extends Omit<React.ReactElement<any>, 'type'> {
+	type: ChildType;
+}
+
+export type ChildElement = IReactTypeElement & {
 	ref?: (node: HTMLElement | null) => void;
 };
 

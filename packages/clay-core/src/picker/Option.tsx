@@ -91,4 +91,5 @@ export function Option({children, disabled, keyValue, textValue}: Props) {
 	);
 }
 
+Option.passthroughKey = true;
 Option.displayName = 'Item';

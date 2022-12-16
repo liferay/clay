@@ -131,7 +131,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 
 				const publicItem = exclude ? excludeProps(item, exclude) : item;
 
-				const child: ChildElement = Array.isArray(publicApi)
+				const child = Array.isArray(publicApi)
 					? children(publicItem, ...publicApi)
 					: children(publicItem);
 
@@ -145,8 +145,10 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 					ref: (node: HTMLElement) => {
 						virtual.measureElement(node);
 
-						if (typeof child.ref === 'function') {
-							child.ref(node);
+						const ref = (child as ChildElement).ref;
+
+						if (typeof ref === 'function') {
+							ref(node);
 						}
 					},
 					style: {

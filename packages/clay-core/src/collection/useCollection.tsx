@@ -43,14 +43,7 @@ export function useCollection<
 	const layout = parentLayout ?? layoutRef;
 
 	const performFilter = useCallback(
-		(
-			child:
-				| React.ReactPortal
-				| React.ReactElement<
-						unknown,
-						string | React.JSXElementConstructor<any>
-				  >
-		) => {
+		(child: ChildElement) => {
 			if (!filter) {
 				return false;
 			}
@@ -66,6 +59,44 @@ export function useCollection<
 			return false;
 		},
 		[filter]
+	);
+
+	const performItemRender = useCallback(
+		(child: ChildElement, key: React.Key, index: number, item?: T) => {
+			if (child.type.displayName === 'Item') {
+				layout.current.set(
+					key,
+					getTextValue(key, child, suppressTextValueWarning)
+				);
+			}
+
+			if (performFilter(child)) {
+				return;
+			}
+
+			if (ItemContainer) {
+				return (
+					<ItemContainer
+						index={index}
+						item={item}
+						key={key}
+						keyValue={key}
+					>
+						{child}
+					</ItemContainer>
+				);
+			}
+
+			const hasChildNeedPassthroughKey = child.type.passthroughKey;
+
+			return React.cloneElement(child as React.ReactElement<any>, {
+				key,
+				...(passthroughKey || hasChildNeedPassthroughKey
+					? {index, keyValue: key}
+					: {}),
+			});
+		},
+		[performFilter]
 	);
 
 	const getItem = useCallback((key: React.Key) => {
@@ -85,41 +116,16 @@ export function useCollection<
 		if (children instanceof Function && items) {
 			return items.map((item, index) => {
 				const publicItem = exclude ? excludeProps(item, exclude) : item;
-				const child: ChildElement = Array.isArray(publicApi)
-					? children(publicItem, ...publicApi)
-					: children(publicItem);
+				const child = Array.isArray(publicApi)
+					? (children(publicItem, ...publicApi) as ChildElement)
+					: (children(publicItem) as ChildElement);
 
-				const key = getKey(index, item.id ?? child.key, parentKey);
-
-				// @ts-ignore
-				if (child.type.displayName === 'Item') {
-					layout.current.set(
-						key,
-						getTextValue(key, child, suppressTextValueWarning)
-					);
-				}
-
-				if (performFilter(child)) {
-					return;
-				}
-
-				if (ItemContainer) {
-					return (
-						<ItemContainer
-							index={index}
-							item={item}
-							key={key}
-							keyValue={key}
-						>
-							{child}
-						</ItemContainer>
-					);
-				}
-
-				return React.cloneElement(child, {
-					key,
-					...(passthroughKey ? {index, keyValue: key} : {}),
-				});
+				return performItemRender(
+					child,
+					getKey(index, item.id ?? child.key, parentKey),
+					index,
+					item
+				);
 			});
 		}
 
@@ -128,41 +134,17 @@ export function useCollection<
 				return null;
 			}
 
-			const key = getKey(index, child.key, parentKey);
-
-			// @ts-ignore
-			if (child.type.displayName === 'Item') {
-				layout.current.set(
-					key,
-					getTextValue(key, child, suppressTextValueWarning)
-				);
-			}
-
-			if (performFilter(child)) {
-				return;
-			}
-
-			if (ItemContainer) {
-				return (
-					<ItemContainer index={index} key={key} keyValue={key}>
-						{child}
-					</ItemContainer>
-				);
-			}
-
-			return React.cloneElement(
-				child as React.ReactElement<{keyValue?: React.Key}>,
-				{
-					key,
-					...(passthroughKey ? {index, keyValue: key} : {}),
-				}
+			return performItemRender(
+				child as ChildElement,
+				getKey(index, child.key, parentKey),
+				index
 			);
 		});
-	}, [children, performFilter, items, publicApi]);
+	}, [children, performItemRender, items, publicApi]);
 
 	return {
 		collection: (
-			<CollectionContext.Provider value={{layout: layoutRef}}>
+			<CollectionContext.Provider value={{layout}}>
 				{collection}
 			</CollectionContext.Provider>
 		),
@@ -173,12 +155,7 @@ export function useCollection<
 
 function getTextValue(
 	key: React.Key,
-	child:
-		| React.ReactPortal
-		| React.ReactElement<
-				unknown,
-				string | React.JSXElementConstructor<any>
-		  >,
+	child: ChildElement,
 	suppressTextValueWarning: boolean
 ) {
 	if (typeof child.props.children === 'string') {
