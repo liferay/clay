@@ -8,12 +8,25 @@ import React from 'react';
 
 import ClayButton from './Button';
 
-interface IProps extends React.ComponentProps<typeof ClayButton> {
-	/**
-	 * Define a value that labels the button.
-	 */
-	'aria-label': string;
+import type {IProps} from './Button';
 
+type ButtonAria =
+	| {
+			/**
+			 * Define a value that labels the button.
+			 */
+			'aria-label': string;
+			'aria-labelledby'?: never;
+	  }
+	| {
+			/**
+			 * Define a value that labels the button.
+			 */
+			'aria-label'?: never;
+			'aria-labelledby': string;
+	  };
+
+interface ICommonProps extends Omit<IProps, 'aria-label' | 'aria-labelledby'> {
 	/**
 	 * Path to the location of the spritemap resource.
 	 */
@@ -25,8 +38,10 @@ interface IProps extends React.ComponentProps<typeof ClayButton> {
 	symbol: string;
 }
 
-const ClayButtonWithIcon = React.forwardRef<HTMLButtonElement, IProps>(
-	({monospaced = true, spritemap, symbol, ...otherProps}: IProps, ref) => (
+export type Props = ICommonProps & ButtonAria;
+
+const ClayButtonWithIcon = React.forwardRef<HTMLButtonElement, Props>(
+	({monospaced = true, spritemap, symbol, ...otherProps}: Props, ref) => (
 		<ClayButton {...otherProps} monospaced={monospaced} ref={ref}>
 			<ClayIcon spritemap={spritemap} symbol={symbol} />
 		</ClayButton>

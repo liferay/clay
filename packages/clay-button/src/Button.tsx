@@ -20,7 +20,7 @@ export type DisplayType =
 	| 'info'
 	| 'unstyled';
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Flag to indicate if button is used within an alert component.
 	 */
@@ -94,9 +94,10 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 				childArray.length === 1 &&
 				// @ts-ignore
 				childArray[0].type?.displayName === 'ClayIcon' &&
-				typeof otherProps['aria-label'] !== 'string'
+				typeof otherProps['aria-label'] !== 'string' &&
+				typeof otherProps['aria-labelledby'] !== 'string'
 			),
-			'Button Accessibility: Component has only the Icon declared. Define an `aria-label` or `title` attribute (consult your design team) that labels the interactive button that screen readers can read.'
+			'Button Accessibility: Component has only the Icon declared. Define an `aria-label` or `aria-labelledby` attribute that labels the interactive button that screen readers can read. The `title` attribute is optional but consult your design team.'
 		);
 
 		return (
