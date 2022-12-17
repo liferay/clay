@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picker basic rendering render dynamic content 1`] = `
+<div>
+  <button
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    class="form-control form-control-select form-control-select-secondary"
+    role="combobox"
+  >
+    Select an option
+  </button>
+</div>
+`;
+
+exports[`Picker basic rendering render dynamic content using native selector 1`] = `
+<div>
+  <select
+    class="form-control form-control-select form-control-select-secondary"
+  >
+    <option
+      value="Apple"
+    >
+      Apple
+    </option>
+    <option
+      value="Banana"
+    >
+      Banana
+    </option>
+    <option
+      value="Blueberry"
+    >
+      Blueberry
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Picker basic rendering render static content 1`] = `
+<body>
+  <div>
+    <button
+      aria-activedescendant=""
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="form-control form-control-select form-control-select-secondary"
+      role="combobox"
+    >
+      Select an option
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Picker basic rendering render static content using native selector 1`] = `
+<div>
+  <select
+    class="form-control form-control-select form-control-select-secondary"
+  >
+    <option
+      value="apple"
+    >
+      Apple
+    </option>
+    <option
+      value="banana"
+    >
+      Banana
+    </option>
+    <option
+      value="blueberry"
+    >
+      Blueberry
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Picker basic rendering renders open component by default 1`] = `
+<body>
+  <div>
+    <button
+      aria-activedescendant="Apple"
+      aria-controls="clay-id-11"
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-owns="clay-id-12"
+      class="form-control form-control-select form-control-select-secondary show"
+      role="combobox"
+      style=""
+    >
+      Select an option
+    </button>
+  </div>
+  <div>
+    <div
+      class="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
+      id="clay-id-11"
+      role="presentation"
+      style="left: -999px; top: -995px;"
+    >
+      <ul
+        class="inline-scroller list-unstyled"
+        id="clay-id-12"
+        role="listbox"
+        tabindex="-1"
+      >
+        <li
+          role="presentation"
+        >
+          <button
+            aria-selected="false"
+            class="dropdown-item focus"
+            id="Apple"
+            role="option"
+            tabindex="-1"
+          >
+            Apple
+          </button>
+        </li>
+        <li
+          role="presentation"
+        >
+          <button
+            aria-selected="false"
+            class="dropdown-item"
+            id="Banana"
+            role="option"
+            tabindex="-1"
+          >
+            Banana
+          </button>
+        </li>
+        <li
+          role="presentation"
+        >
+          <button
+            aria-selected="false"
+            class="dropdown-item"
+            id="Blueberry"
+            role="option"
+            tabindex="-1"
+          >
+            Blueberry
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;

@@ -55,6 +55,12 @@ module.exports = {
 			lines: 91,
 			statements: 91,
 		},
+		'./packages/clay-core/src/picker/': {
+			branches: 87,
+			functions: 88,
+			lines: 95,
+			statements: 95,
+		},
 		'./packages/clay-core/src/tree-view/': {
 			branches: 68,
 			functions: 73,
@@ -188,10 +194,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-shared/src/': {
-			branches: 25,
-			functions: 17,
-			lines: 40,
-			statements: 43,
+			branches: 21,
+			functions: 16,
+			lines: 36,
+			statements: 39,
 		},
 		'./packages/clay-slider/src/': {
 			branches: 92,

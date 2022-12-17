@@ -38,19 +38,19 @@ export function Bar<T>({
 
 	const {activation} = useContext(VerticalBarContext);
 
-	const {onKeyDown} = useNavigation({
+	const {navigationProps} = useNavigation({
 		activation,
-		containeRef: parentRef,
+		containerRef: parentRef,
 		orientation: 'vertical',
 	});
 
 	return (
 		<nav
+			{...navigationProps}
 			className={classNames('tbar tbar-stacked c-slideout-show', {
 				'tbar-dark-l2': displayType === 'dark',
 				'tbar-light': displayType === 'light',
 			})}
-			onKeyDown={onKeyDown}
 			ref={parentRef}
 		>
 			<Collection<T>

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {hideOthers, suppressOthers} from 'aria-hidden';
+import {hideOthers, supportsInert, suppressOthers} from 'aria-hidden';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {Keys} from './Keys';
@@ -19,21 +19,11 @@ type Props = {
 	isModal?: boolean;
 	isOpen: boolean;
 	menuRef: React.RefObject<HTMLElement>;
-	onClose: () => void;
+	onClose: (action: 'escape' | 'blur') => void;
 	portalRef?: React.RefObject<HTMLElement>;
 	suppress?: Array<React.RefObject<HTMLElement>>;
 	triggerRef: React.RefObject<HTMLElement>;
 };
-
-/**
- * Inert is a new native feature to better handle DOM arias that are not
- * assertive to a SR or that should ignore any user interaction.
- * https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
- */
-const hasInertSupport =
-	typeof window !== 'undefined' &&
-	// @ts-ignore
-	typeof document.createElement('div').inert === 'boolean';
 
 /**
  * Overlay component is used for components like dialog and modal.
@@ -64,7 +54,7 @@ export function Overlay({
 					triggerRef.current &&
 					!triggerRef.current.contains(event.target as Node)
 				) {
-					onClose();
+					onClose('blur');
 				}
 			},
 			[onClose]
@@ -94,7 +84,7 @@ export function Overlay({
 						triggerRef.current.focus();
 					}
 
-					onClose();
+					onClose('escape');
 				}
 			},
 			[onClose]
@@ -107,7 +97,7 @@ export function Overlay({
 	useInteractOutside({
 		isDisabled: isOpen ? !isCloseOnInteractOutside : true,
 		onInteract: () => {
-			onClose();
+			onClose('blur');
 		},
 		ref: portalRef ?? menuRef,
 		triggerRef,
@@ -119,7 +109,10 @@ export function Overlay({
 				? suppress.map((ref) => ref.current!)
 				: menuRef.current;
 
-			if (isModal && hasInertSupport) {
+			// Inert is a new native feature to better handle DOM arias that are not
+			// assertive to a SR or that should ignore any user interaction.
+			// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
+			if (isModal && supportsInert()) {
 				unsuppressCallbackRef.current = suppressOthers(elements);
 
 				return () => {

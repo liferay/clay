@@ -3,10 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export {
-	Collection,
-	ChildrenFunction,
-	excludeProps,
-	ICollectionProps,
-	getKey,
-} from './Collection';
+export {getKey, excludeProps} from './utils';
+export {Collection} from './Collection';
+export {useCollection} from './useCollection';
+export type {ChildrenFunction, ICollectionProps} from './types';

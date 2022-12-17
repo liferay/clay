@@ -68,15 +68,16 @@ export function List({
 }: IProps) {
 	const tabsRef = useRef<HTMLUListElement>(null);
 
-	const {onKeyDown} = useNavigation({
+	const {navigationProps} = useNavigation({
 		activation,
-		containeRef: tabsRef,
+		containerRef: tabsRef,
 		orientation: 'horizontal',
 	});
 
 	return (
 		<ul
 			{...otherProps}
+			{...navigationProps}
 			className={classNames(
 				'nav',
 				{'nav-justified': justified},
@@ -92,7 +93,6 @@ export function List({
 
 				className
 			)}
-			onKeyDown={onKeyDown}
 			ref={tabsRef}
 			role="tablist"
 		>
