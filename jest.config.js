@@ -164,7 +164,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-pagination/src/': {
-			branches: 89,
+			branches: 86,
 			functions: 100,
 			lines: 100,
 			statements: 100,

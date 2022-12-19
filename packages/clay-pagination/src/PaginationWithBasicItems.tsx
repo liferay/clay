@@ -7,6 +7,7 @@ import ClayIcon from '@clayui/icon';
 import {
 	InternalDispatch,
 	getEllipsisItems,
+	sub,
 	useInternalState,
 } from '@clayui/shared';
 import React from 'react';
@@ -39,6 +40,7 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	 * Labels for the aria attributes
 	 */
 	ariaLabels?: {
+		link: string;
 		previous: string;
 		next: string;
 	};
@@ -52,7 +54,7 @@ interface IProps extends React.ComponentProps<typeof Pagination> {
 	/**
 	 * Properties to pass to the ellipsis trigger.
 	 */
-	ellipsisProps?: Object;
+	ellipsisProps?: {} | undefined;
 
 	/**
 	 * Sets the default active page (uncontrolled).
@@ -105,14 +107,18 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 			activePage,
 			alignmentPosition,
 			ariaLabels = {
-				next: 'Next',
-				previous: 'Previous',
+				link: 'Go to page, {0}',
+				next: 'Go to the next page, {0}',
+				previous: 'Go to the previous page, {0}',
 			},
 			defaultActive,
 			disabledPages = [],
 			disableEllipsis = false,
 			ellipsisBuffer = ELLIPSIS_BUFFER,
-			ellipsisProps = {},
+			ellipsisProps = {
+				'aria-label': 'Show pages {0} through {1}',
+				title: 'Show pages {0} through {1}',
+			},
 			hrefConstructor,
 			onActiveChange,
 			onPageChange,
@@ -144,7 +150,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 		return (
 			<Pagination {...otherProps} ref={ref}>
 				<Pagination.Item
-					aria-label={ariaLabels.previous}
+					aria-label={sub(ariaLabels.previous, [previousPage])}
 					data-testid="prevArrow"
 					disabled={internalActive === 1}
 					href={previousHref}
@@ -177,6 +183,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 					) : (
 						<Pagination.Item
 							active={page === internalActive}
+							aria-label={sub(ariaLabels.link, [page as number])}
 							disabled={disabledPages.includes(page as number)}
 							href={
 								hrefConstructor &&
@@ -191,7 +198,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 				)}
 
 				<Pagination.Item
-					aria-label={ariaLabels.next}
+					aria-label={sub(ariaLabels.next, [nextPage])}
 					data-testid="nextArrow"
 					disabled={internalActive === totalPages}
 					href={nextHref}
