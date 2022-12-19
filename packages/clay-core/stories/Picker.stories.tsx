@@ -135,18 +135,38 @@ export const CustomOptions = () => {
 					items={['Liam', 'Noah', 'Oliver']}
 				>
 					{(item) => (
-						<Option key={item} textValue={item}>
+						<Option
+							aria-describedby={`${item}-description ${item}-status`}
+							aria-labelledby={`${item}-title`}
+							key={item}
+							textValue={item}
+						>
 							<Layout.ContentRow>
 								<Layout.ContentCol expand>
-									<Text size={3} weight="semi-bold">
+									<Text
+										id={`${item}-title`}
+										size={3}
+										weight="semi-bold"
+									>
 										{item}
 									</Text>
-									<Text color="secondary" size={2}>
+									<Text
+										aria-hidden
+										color="secondary"
+										id={`${item}-description`}
+										size={2}
+									>
 										Description
 									</Text>
 								</Layout.ContentCol>
 								<Layout.ContentCol>
-									<Label displayType="success">Active</Label>
+									<Label
+										aria-hidden
+										displayType="success"
+										id={`${item}-status`}
+									>
+										Active
+									</Label>
 								</Layout.ContentCol>
 							</Layout.ContentRow>
 						</Option>
