@@ -220,7 +220,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			defaultValue = '',
 			disabled,
 			disabledClearAll,
-			hotkeysDescription = 'Use the arrow keys to navigate the labels and pressing backspace will delete.',
+			hotkeysDescription = 'Press backspace to delete the current row.',
 			inputName,
 			inputValue,
 			isLoading = false,
@@ -396,10 +396,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					label,
 				};
 
-				setItems([
-					...internalItems.slice(0, index),
-					...internalItems.slice(index + 1),
-				]);
+				setItems(
+					internalItems.filter((_, itemIndex) => itemIndex !== index)
+				);
 			},
 			[internalItems]
 		);
@@ -422,7 +421,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					<ClayInput.GroupItem>
 						<ClayInput.Group>
 							<ClayInput.GroupItem
-								aria-describedby={ariaDescriptionId}
 								aria-labelledby={otherProps['aria-labelledby']}
 								className="d-contents"
 								onFocus={(event) =>
@@ -444,11 +442,11 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 													KeysSides.includes(
 														event.key
 													)
-														? '[role=row], button'
+														? '[role=gridcell][tabindex], button'
 														: lastFocusedItem?.includes(
 																'span'
 														  )
-														? '[role=row]'
+														? '[role=gridcell][tabindex]'
 														: 'button'
 												)
 											);
@@ -523,9 +521,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 									const id = `${labelId}-label-${
 										item[locator.value]
 									}-span`;
-									const textId = `${labelId}-label-${
-										item[locator.value]
-									}-text`;
 									const closeId = `${labelId}-label-${
 										item[locator.value]
 									}-close`;
@@ -533,8 +528,6 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 									return (
 										<React.Fragment key={id}>
 											<ClayLabel
-												aria-labelledby={textId}
-												id={id}
 												onKeyDown={({key}) => {
 													if (
 														key === Keys.Backspace
@@ -547,18 +540,22 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 												}}
 												role="row"
 												spritemap={spritemap}
-												tabIndex={
-													(lastFocusedItem === null &&
-														i === 0) ||
-													lastFocusedItem === id
-														? 0
-														: -1
-												}
 												withClose={false}
 											>
 												<ClayLabel.ItemExpand
-													id={textId}
+													aria-describedby={
+														ariaDescriptionId
+													}
+													id={id}
 													role="gridcell"
+													tabIndex={
+														(lastFocusedItem ===
+															null &&
+															i === 0) ||
+														lastFocusedItem === id
+															? 0
+															: -1
+													}
 												>
 													{item[locator.label]}
 												</ClayLabel.ItemExpand>

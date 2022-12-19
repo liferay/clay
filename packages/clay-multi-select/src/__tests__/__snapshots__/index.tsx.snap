@@ -13,7 +13,6 @@ exports[`ClayMultiSelect renders 1`] = `
           class="input-group"
         >
           <div
-            aria-describedby="clay-id-2"
             class="input-group-item d-contents input-group-item-shrink input-group-prepend"
             role="grid"
           />
@@ -34,7 +33,7 @@ exports[`ClayMultiSelect renders 1`] = `
         <span
           id="clay-id-2"
         >
-          Use the arrow keys to navigate the labels and pressing backspace will delete.
+          Press backspace to delete the current row.
         </span>
         <span
           aria-live="polite"
@@ -59,21 +58,19 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
           class="input-group"
         >
           <div
-            aria-describedby="clay-id-10"
             class="input-group-item d-contents input-group-item-shrink input-group-prepend"
             role="grid"
           >
             <span
-              aria-labelledby="clay-id-9-label-1-text"
               class="label label-secondary"
-              id="clay-id-9-label-1-span"
               role="row"
-              tabindex="0"
             >
               <span
+                aria-describedby="clay-id-10"
                 class="label-item label-item-expand"
-                id="clay-id-9-label-1-text"
+                id="clay-id-9-label-1-span"
                 role="gridcell"
+                tabindex="0"
               >
                 foo
               </span>
@@ -100,16 +97,15 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-9-label-2-text"
               class="label label-secondary"
-              id="clay-id-9-label-2-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-10"
                 class="label-item label-item-expand"
-                id="clay-id-9-label-2-text"
+                id="clay-id-9-label-2-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 bar
               </span>
@@ -136,16 +132,15 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-9-label-3-text"
               class="label label-secondary"
-              id="clay-id-9-label-3-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-10"
                 class="label-item label-item-expand"
-                id="clay-id-9-label-3-text"
+                id="clay-id-9-label-3-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 baz
               </span>
@@ -208,7 +203,7 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
         <span
           id="clay-id-10"
         >
-          Use the arrow keys to navigate the labels and pressing backspace will delete.
+          Press backspace to delete the current row.
         </span>
         <span
           aria-live="polite"
@@ -264,21 +259,19 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
           class="input-group"
         >
           <div
-            aria-describedby="clay-id-8"
             class="input-group-item d-contents input-group-item-shrink input-group-prepend"
             role="grid"
           >
             <span
-              aria-labelledby="clay-id-7-label-1-text"
               class="label label-secondary"
-              id="clay-id-7-label-1-span"
               role="row"
-              tabindex="0"
             >
               <span
+                aria-describedby="clay-id-8"
                 class="label-item label-item-expand"
-                id="clay-id-7-label-1-text"
+                id="clay-id-7-label-1-span"
                 role="gridcell"
+                tabindex="0"
               >
                 foo
               </span>
@@ -306,16 +299,15 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-7-label-2-text"
               class="label label-secondary"
-              id="clay-id-7-label-2-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-8"
                 class="label-item label-item-expand"
-                id="clay-id-7-label-2-text"
+                id="clay-id-7-label-2-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 bar
               </span>
@@ -343,16 +335,15 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-7-label-3-text"
               class="label label-secondary"
-              id="clay-id-7-label-3-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-8"
                 class="label-item label-item-expand"
-                id="clay-id-7-label-3-text"
+                id="clay-id-7-label-3-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 baz
               </span>
@@ -398,7 +389,7 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
         <span
           id="clay-id-8"
         >
-          Use the arrow keys to navigate the labels and pressing backspace will delete.
+          Press backspace to delete the current row.
         </span>
         <span
           aria-live="polite"
@@ -423,21 +414,19 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
           class="input-group"
         >
           <div
-            aria-describedby="clay-id-6"
             class="input-group-item d-contents input-group-item-shrink input-group-prepend"
             role="grid"
           >
             <span
-              aria-labelledby="clay-id-5-label-1-text"
               class="label label-secondary"
-              id="clay-id-5-label-1-span"
               role="row"
-              tabindex="0"
             >
               <span
+                aria-describedby="clay-id-6"
                 class="label-item label-item-expand"
-                id="clay-id-5-label-1-text"
+                id="clay-id-5-label-1-span"
                 role="gridcell"
+                tabindex="0"
               >
                 foo
               </span>
@@ -464,16 +453,15 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-5-label-2-text"
               class="label label-secondary"
-              id="clay-id-5-label-2-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-6"
                 class="label-item label-item-expand"
-                id="clay-id-5-label-2-text"
+                id="clay-id-5-label-2-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 bar
               </span>
@@ -500,16 +488,15 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-5-label-3-text"
               class="label label-secondary"
-              id="clay-id-5-label-3-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-6"
                 class="label-item label-item-expand"
-                id="clay-id-5-label-3-text"
+                id="clay-id-5-label-3-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 baz
               </span>
@@ -572,7 +559,7 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
         <span
           id="clay-id-6"
         >
-          Use the arrow keys to navigate the labels and pressing backspace will delete.
+          Press backspace to delete the current row.
         </span>
         <span
           aria-live="polite"
@@ -597,21 +584,19 @@ exports[`ClayMultiSelect renders with items 1`] = `
           class="input-group"
         >
           <div
-            aria-describedby="clay-id-4"
             class="input-group-item d-contents input-group-item-shrink input-group-prepend"
             role="grid"
           >
             <span
-              aria-labelledby="clay-id-3-label-1-text"
               class="label label-secondary"
-              id="clay-id-3-label-1-span"
               role="row"
-              tabindex="0"
             >
               <span
+                aria-describedby="clay-id-4"
                 class="label-item label-item-expand"
-                id="clay-id-3-label-1-text"
+                id="clay-id-3-label-1-span"
                 role="gridcell"
+                tabindex="0"
               >
                 foo
               </span>
@@ -638,16 +623,15 @@ exports[`ClayMultiSelect renders with items 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-3-label-2-text"
               class="label label-secondary"
-              id="clay-id-3-label-2-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-4"
                 class="label-item label-item-expand"
-                id="clay-id-3-label-2-text"
+                id="clay-id-3-label-2-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 bar
               </span>
@@ -674,16 +658,15 @@ exports[`ClayMultiSelect renders with items 1`] = `
               </span>
             </span>
             <span
-              aria-labelledby="clay-id-3-label-3-text"
               class="label label-secondary"
-              id="clay-id-3-label-3-span"
               role="row"
-              tabindex="-1"
             >
               <span
+                aria-describedby="clay-id-4"
                 class="label-item label-item-expand"
-                id="clay-id-3-label-3-text"
+                id="clay-id-3-label-3-span"
                 role="gridcell"
+                tabindex="-1"
               >
                 baz
               </span>
@@ -746,7 +729,7 @@ exports[`ClayMultiSelect renders with items 1`] = `
         <span
           id="clay-id-4"
         >
-          Use the arrow keys to navigate the labels and pressing backspace will delete.
+          Press backspace to delete the current row.
         </span>
         <span
           aria-live="polite"
