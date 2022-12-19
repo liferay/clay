@@ -39,19 +39,21 @@ const ClayPaginationEllipsis = ({
 				onClick: () => onPageChange && onPageChange(page),
 		  }));
 
-	const ariaLabel = otherProps['aria-label'] && !disabled
-		? sub(otherProps['aria-label'], [
-				pages[0]?.label as string,
-				pages[pages.length - 1]?.label as string,
-		  ])
-		: undefined;
+	const ariaLabel =
+		otherProps['aria-label'] && !disabled
+			? sub(otherProps['aria-label'], [
+					pages[0]?.label as string,
+					pages[pages.length - 1]?.label as string,
+			  ])
+			: undefined;
 
-	const title = otherProps['title'] && !disabled
-		? sub(otherProps['title'], [
-				pages[0]?.label as string,
-				pages[pages.length - 1]?.label as string,
-		  ])
-		: undefined;
+	const title =
+		otherProps['title'] && !disabled
+			? sub(otherProps['title'], [
+					pages[0]?.label as string,
+					pages[pages.length - 1]?.label as string,
+			  ])
+			: undefined;
 
 	return (
 		<ClayDropDownWithItems

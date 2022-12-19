@@ -28,6 +28,15 @@ const ClayPaginationItem = ({
 				aria-current={active && href ? 'page' : undefined}
 				className="page-link"
 				href={disabled || active ? undefined : href}
+				onClick={(event) => {
+					if (!href) {
+						event.preventDefault();
+					}
+
+					if (otherProps.onClick) {
+						otherProps.onClick(event);
+					}
+				}}
 			>
 				{children}
 			</ClayLink>
