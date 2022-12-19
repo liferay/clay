@@ -244,6 +244,11 @@
 				}
 			}
 
+			&:focus,
+			&.focus {
+				@include clay-css(map-get($map, focus));
+			}
+
 			.component-link {
 				@include clay-text-typography(map-get($map, component-link));
 			}

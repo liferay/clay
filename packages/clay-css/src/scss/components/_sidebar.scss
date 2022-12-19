@@ -1,8 +1,10 @@
 .sidebar {
-	height: 100%;
-	overflow: auto;
+	@include clay-css($sidebar);
 
-	-webkit-overflow-scrolling: touch;
+	&:focus,
+	&.focus {
+		@include clay-css(map-get($sidebar, focus));
+	}
 
 	.container-fluid {
 		padding-left: $sidebar-padding-left;
@@ -12,35 +14,32 @@
 
 // Sidebar Header / Footer
 
-.sidebar-header,
-.sidebar-footer {
-	padding-bottom: $sidebar-padding-bottom;
-	padding-left: $sidebar-padding-left;
-	padding-right: $sidebar-padding-right;
-	padding-top: $sidebar-padding-top;
-}
-
 .sidebar-header {
+	$sidebar-header: setter(map-get($sidebar, sidebar-header), ());
+
+	@include clay-css($sidebar-header);
+
 	.component-title {
-		@include clay-text-typography($sidebar-header-component-title);
+		@include clay-text-typography(
+			map-get($sidebar-header, component-title)
+		);
 	}
 
 	.component-subtitle {
-		@include clay-text-typography($sidebar-header-component-subtitle);
+		@include clay-text-typography(
+			map-get($sidebar-header, component-subtitle)
+		);
 	}
+}
+
+.sidebar-footer {
+	@include clay-css(map-get($sidebar, sidebar-footer));
 }
 
 // Sidebar Body
 
 .sidebar-body {
-	overflow: auto;
-
-	-webkit-overflow-scrolling: touch;
-
-	padding-bottom: $sidebar-padding-bottom;
-	padding-left: $sidebar-padding-left;
-	padding-right: $sidebar-padding-right;
-	padding-top: $sidebar-padding-top;
+	@include clay-css(map-get($sidebar, sidebar-body));
 
 	> .sidebar-section {
 		margin-bottom: 2rem;
@@ -61,11 +60,9 @@
 // Sidebar List Group
 
 .sidebar-list-group {
-	display: flex;
-	flex-direction: column;
-	font-size: $sidebar-list-group-font-size;
-	margin-bottom: 0;
-	padding-left: 0;
+	$sidebar-list-group: setter(map-get($sidebar, sidebar-list-group));
+
+	@include clay-css($sidebar-list-group);
 
 	@extend %#{$sidebar-list-group-type} !optional;
 
@@ -81,31 +78,28 @@
 	}
 
 	.list-group-item {
-		background-color: $sidebar-list-group-bg;
-		border-color: $sidebar-list-group-border-color;
-		padding: $sidebar-list-group-item-padding;
+		@include clay-css(map-get($sidebar-list-group, list-group-item));
 	}
 
 	.sticker {
-		@include clay-sticker-variant($sidebar-list-group-sticker-size);
+		@include clay-sticker-variant(map-get($sidebar-list-group, sticker));
 	}
 }
 
 // Sidebar Panel
 
 .sidebar-panel {
-	margin-bottom: $sidebar-panel-margin-bottom;
-	position: relative;
+	@include clay-css(map-get($sidebar, sidebar-panel));
 }
 
 // Sidebar Definition List (dl dt dd)
 
 .sidebar-dt {
-	@include clay-text-typography($sidebar-dt);
+	@include clay-text-typography(map-get($sidebar, sidebar-dt));
 }
 
 .sidebar-dd {
-	@include clay-text-typography($sidebar-dd);
+	@include clay-text-typography(map-get($sidebar, sidebar-dd));
 }
 
 // Sidebar Variants
