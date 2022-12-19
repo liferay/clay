@@ -1,9 +1,11 @@
 .sidebar,
 &.sidebar {
-	height: 100%;
-	overflow: auto;
+	@include clay-css($cadmin-sidebar);
 
-	-webkit-overflow-scrolling: touch;
+	&:focus,
+	&.focus {
+		@include clay-css(map-get($cadmin-sidebar, focus));
+	}
 
 	.container-fluid {
 		padding-left: $cadmin-sidebar-padding-left;
@@ -13,37 +15,32 @@
 
 // Sidebar Header / Footer
 
-.sidebar-header,
-.sidebar-footer {
-	padding-bottom: $cadmin-sidebar-padding-bottom;
-	padding-left: $cadmin-sidebar-padding-left;
-	padding-right: $cadmin-sidebar-padding-right;
-	padding-top: $cadmin-sidebar-padding-top;
-}
-
 .sidebar-header {
+	$sidebar-header: setter(map-get($cadmin-sidebar, sidebar-header), ());
+
+	@include clay-css($sidebar-header);
+
 	.component-title {
-		@include clay-text-typography($cadmin-sidebar-header-component-title);
+		@include clay-text-typography(
+			map-get($sidebar-header, component-title)
+		);
 	}
 
 	.component-subtitle {
 		@include clay-text-typography(
-			$cadmin-sidebar-header-component-subtitle
+			map-get($sidebar-header, component-subtitle)
 		);
 	}
+}
+
+.sidebar-footer {
+	@include clay-css(map-get($cadmin-sidebar, sidebar-footer));
 }
 
 // Sidebar Body
 
 .sidebar-body {
-	overflow: auto;
-
-	-webkit-overflow-scrolling: touch;
-
-	padding-bottom: $cadmin-sidebar-padding-bottom;
-	padding-left: $cadmin-sidebar-padding-left;
-	padding-right: $cadmin-sidebar-padding-right;
-	padding-top: $cadmin-sidebar-padding-top;
+	@include clay-css(map-get($cadmin-sidebar, sidebar-body));
 
 	> .sidebar-section {
 		margin-bottom: 32px;
@@ -64,11 +61,12 @@
 // Sidebar List Group
 
 .sidebar-list-group {
-	display: flex;
-	flex-direction: column;
-	font-size: $cadmin-sidebar-list-group-font-size;
-	margin-bottom: 0;
-	padding-left: 0;
+	$sidebar-list-group: setter(
+		map-get($cadmin-sidebar, sidebar-list-group),
+		()
+	);
+
+	@include clay-css($sidebar-list-group);
 
 	@extend %#{$cadmin-sidebar-list-group-type} !optional;
 
@@ -84,31 +82,28 @@
 	}
 
 	.list-group-item {
-		background-color: $cadmin-sidebar-list-group-bg;
-		border-color: $cadmin-sidebar-list-group-border-color;
-		padding: $cadmin-sidebar-list-group-item-padding;
+		@include clay-css(map-get($sidebar-list-group, list-group-item));
 	}
 
 	.sticker {
-		@include clay-sticker-variant($cadmin-sidebar-list-group-sticker-size);
+		@include clay-sticker-variant(map-get($sidebar-list-group, sticker));
 	}
 }
 
 // Sidebar Panel
 
 .sidebar-panel {
-	margin-bottom: $cadmin-sidebar-panel-margin-bottom;
-	position: relative;
+	@include clay-css(map-get($cadmin-sidebar, sidebar-panel));
 }
 
 // Sidebar Definition List (dl dt dd)
 
 .sidebar-dt {
-	@include clay-text-typography($cadmin-sidebar-dt);
+	@include clay-text-typography(map-get($cadmin-sidebar, sidebar-dt));
 }
 
 .sidebar-dd {
-	@include clay-text-typography($cadmin-sidebar-dd);
+	@include clay-text-typography(map-get($cadmin-sidebar, sidebar-dd));
 }
 
 // Sidebar Variants

@@ -75,6 +75,60 @@ $cadmin-sidebar-list-group-sticker-size: map-deep-merge(
 	$cadmin-sidebar-list-group-sticker-size
 );
 
+$cadmin-sidebar: () !default;
+$cadmin-sidebar: map-deep-merge(
+	(
+		height: 100%,
+		overflow: auto,
+		-webkit-overflow-scrolling: touch,
+		focus: (
+			box-shadow: $cadmin-component-focus-inset-box-shadow,
+		),
+		sidebar-header: (
+			padding-bottom: $cadmin-sidebar-padding-bottom,
+			padding-left: $cadmin-sidebar-padding-left,
+			padding-right: $cadmin-sidebar-padding-right,
+			padding-top: $cadmin-sidebar-padding-top,
+			component-title: $cadmin-sidebar-header-component-title,
+			component-subtitle: $cadmin-sidebar-header-component-subtitle,
+		),
+		sidebar-footer: (
+			padding-bottom: $cadmin-sidebar-padding-bottom,
+			padding-left: $cadmin-sidebar-padding-left,
+			padding-right: $cadmin-sidebar-padding-right,
+			padding-top: $cadmin-sidebar-padding-top,
+		),
+		sidebar-body: (
+			overflow: auto,
+			-webkit-overflow-scrolling: touch,
+			padding-bottom: $cadmin-sidebar-padding-bottom,
+			padding-left: $cadmin-sidebar-padding-left,
+			padding-right: $cadmin-sidebar-padding-right,
+			padding-top: $cadmin-sidebar-padding-top,
+		),
+		sidebar-list-group: (
+			display: flex,
+			flex-direction: column,
+			font-size: $cadmin-sidebar-list-group-font-size,
+			margin-bottom: 0,
+			padding-left: 0,
+			list-group-item: (
+				background-color: $cadmin-sidebar-list-group-bg,
+				border-color: $cadmin-sidebar-list-group-border-color,
+				padding: $cadmin-sidebar-list-group-item-padding,
+			),
+			sticker: $cadmin-sidebar-list-group-sticker-size,
+		),
+		sidebar-panel: (
+			margin-bottom: $cadmin-sidebar-panel-margin-bottom,
+			position: relative,
+		),
+		sidebar-dt: $cadmin-sidebar-dt,
+		sidebar-dd: $cadmin-sidebar-dd,
+	),
+	$cadmin-sidebar
+);
+
 // Sidebar Light
 
 $cadmin-sidebar-light-navigation-bar: () !default;

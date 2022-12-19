@@ -77,6 +77,60 @@ $sidebar-list-group-sticker-size: map-deep-merge(
 	$sidebar-list-group-sticker-size
 );
 
+$sidebar: () !default;
+$sidebar: map-deep-merge(
+	(
+		height: 100%,
+		overflow: auto,
+		-webkit-overflow-scrolling: touch,
+		focus: (
+			box-shadow: $component-focus-inset-box-shadow,
+		),
+		sidebar-header: (
+			padding-bottom: $sidebar-padding-bottom,
+			padding-left: $sidebar-padding-left,
+			padding-right: $sidebar-padding-right,
+			padding-top: $sidebar-padding-top,
+			component-title: $sidebar-header-component-title,
+			component-subtitle: $sidebar-header-component-subtitle,
+		),
+		sidebar-footer: (
+			padding-bottom: $sidebar-padding-bottom,
+			padding-left: $sidebar-padding-left,
+			padding-right: $sidebar-padding-right,
+			padding-top: $sidebar-padding-top,
+		),
+		sidebar-body: (
+			overflow: auto,
+			-webkit-overflow-scrolling: touch,
+			padding-bottom: $sidebar-padding-bottom,
+			padding-left: $sidebar-padding-left,
+			padding-right: $sidebar-padding-right,
+			padding-top: $sidebar-padding-top,
+		),
+		sidebar-list-group: (
+			display: flex,
+			flex-direction: column,
+			font-size: $sidebar-list-group-font-size,
+			margin-bottom: 0,
+			padding-left: 0,
+			list-group-item: (
+				background-color: $sidebar-list-group-bg,
+				border-color: $sidebar-list-group-border-color,
+				padding: $sidebar-list-group-item-padding,
+			),
+			sticker: $sidebar-list-group-sticker-size,
+		),
+		sidebar-panel: (
+			margin-bottom: $sidebar-panel-margin-bottom,
+			position: relative,
+		),
+		sidebar-dt: $sidebar-dt,
+		sidebar-dd: $sidebar-dd,
+	),
+	$sidebar
+);
+
 // Sidebar Light
 
 $sidebar-light-navigation-bar: () !default;
