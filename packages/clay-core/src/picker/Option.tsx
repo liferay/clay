@@ -12,6 +12,36 @@ import {usePickerState} from './context';
 
 type Props = {
 	/**
+	 * The global aria-describedby attribute identifies the element (or elements)
+	 * that describes the element on which the attribute is set.
+	 */
+	'aria-describedby'?: string;
+
+	/**
+	 * The `aria-label` attribute defines a string value that labels an interactive
+	 * element.
+	 */
+	'aria-label'?: string;
+
+	/**
+	 * The `aria-labelledby` attribute identifies the element (or elements) that
+	 * labels the element it is applied to.
+	 */
+	'aria-labelledby'?: string;
+
+	/**
+	 * Sets the number or position in the current set of listitems
+	 * or treeitems when not all items are present in the DOM.
+	 */
+	'aria-posinset'?: number;
+
+	/**
+	 * Sets the number of items in the current set of listitems
+	 * or treeitems when not all items in the set are present in the DOM.
+	 */
+	'aria-setsize'?: number;
+
+	/**
 	 * The contents of the component.
 	 */
 	children?: React.ReactNode;
@@ -34,7 +64,17 @@ type Props = {
 	textValue?: string;
 };
 
-export function Option({children, disabled, keyValue, textValue}: Props) {
+export function Option({
+	'aria-describedby': ariaDescribedby,
+	'aria-label': ariaLabel,
+	'aria-labelledby': ariaLabelledby,
+	'aria-posinset': ariaPosInset,
+	'aria-setsize': ariaSetSize,
+	children,
+	disabled,
+	keyValue,
+	textValue,
+}: Props) {
 	const {
 		activeDescendant,
 		isMobile,
@@ -57,7 +97,11 @@ export function Option({children, disabled, keyValue, textValue}: Props) {
 
 	if (isMobile) {
 		return (
-			<option disabled={disabled} value={keyValue}>
+			<option
+				aria-describedby={ariaDescribedby}
+				disabled={disabled}
+				value={keyValue}
+			>
 				{typeof children === 'string' ? children : textValue}
 			</option>
 		);
@@ -67,7 +111,12 @@ export function Option({children, disabled, keyValue, textValue}: Props) {
 		<li role="presentation">
 			<button
 				{...hoverProps}
+				aria-describedby={ariaDescribedby}
+				aria-label={ariaLabel}
+				aria-labelledby={ariaLabelledby}
+				aria-posinset={ariaPosInset}
 				aria-selected={selectedKey === keyValue}
+				aria-setsize={ariaSetSize}
 				className={classNames('dropdown-item', {
 					active: selectedKey === keyValue,
 					focus: activeDescendant === String(keyValue) && isFocus,

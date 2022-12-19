@@ -28,6 +28,12 @@ export type ColorType =
 
 type Props = {
 	/**
+	 * State indicates whether the component will be exposed to an
+	 * accessibility API.
+	 */
+	'aria-hidden'?: boolean;
+
+	/**
 	 * Determine the way in which a text is displayed.
 	 */
 	as?: 'p' | 'span';
@@ -41,6 +47,12 @@ type Props = {
 	 * Determine the color text.
 	 */
 	color?: ColorType;
+
+	/**
+	 * The id global attribute defines an identifier (ID) which must be unique
+	 * in the whole document.
+	 */
+	id?: string;
 
 	/**
 	 * Set the text in italic style.
@@ -69,9 +81,11 @@ type Props = {
 };
 
 export const Text = ({
+	'aria-hidden': ariaHidden,
 	as = 'span',
 	children,
 	color,
+	id,
 	italic,
 	monospace,
 	size = 4,
@@ -82,6 +96,7 @@ export const Text = ({
 
 	return (
 		<TextTag
+			aria-hidden={ariaHidden}
 			className={classNames([`text-${size}`], {
 				[`text-${color}`]: color,
 				['font-italic']: italic,
@@ -89,6 +104,7 @@ export const Text = ({
 				['text-truncate']: truncate,
 				[`font-weight-${weight}`]: weight,
 			})}
+			id={id}
 		>
 			{children}
 		</TextTag>
