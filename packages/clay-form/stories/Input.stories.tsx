@@ -46,13 +46,15 @@ export const InputFeedback = () => (
 			<ClayForm.Group className="has-error">
 				<label htmlFor="Feedback Input">Name</label>
 				<ClayInput
+					aria-describedby="input-group-error"
+					aria-invalid="true"
 					id="Feedback Input"
 					placeholder="Enter some text..."
 					type="text"
 				/>
 
 				<ClayForm.FeedbackGroup>
-					<ClayForm.FeedbackItem>
+					<ClayForm.FeedbackItem id="input-group-error">
 						<ClayForm.FeedbackIndicator symbol="exclamation-full" />
 						This is a description of the error!
 					</ClayForm.FeedbackItem>

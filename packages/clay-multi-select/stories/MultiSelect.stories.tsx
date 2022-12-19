@@ -293,6 +293,10 @@ export const Group = (args: any) => {
 				<ClayInput.Group>
 					<ClayInput.GroupItem>
 						<ClayMultiSelectWithAutocomplete
+							aria-describedby={
+								!args.isValid ? 'multiselect-error' : undefined
+							}
+							aria-invalid={!args.isValid}
 							id="multiSelect"
 							isValid={args.isValid}
 							items={[
@@ -313,7 +317,7 @@ export const Group = (args: any) => {
 
 						{!args.isValid && (
 							<ClayForm.FeedbackGroup>
-								<ClayForm.FeedbackItem>
+								<ClayForm.FeedbackItem id="multiselect-error">
 									<ClayForm.FeedbackIndicator symbol="info-circle" />
 									You made an error
 								</ClayForm.FeedbackItem>

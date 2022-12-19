@@ -300,9 +300,9 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 				<use href="/images/icons/icons.svg#asterisk" />
 			</svg>
 		</label>
-		<input class="form-control" id="inputError1" type="text"/>
+		<input aria-describedby="input-error-1-error-message" aria-invalid="true" class="form-control" id="inputError1" type="text"/>
 		<div class="form-feedback-group">
-			<div class="form-feedback-item">This is a form-feedback-item.</div>
+			<div class="form-feedback-item" id="input-error-1-error-message">This is a form-feedback-item.</div>
 			<div class="form-feedback-item">
 				<span class="form-feedback-indicator">
 					<svg class="lexicon-icon lexicon-icon-exclamation-full" focusable="false" role="presentation">
@@ -315,6 +315,46 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 		</div>
 	</div>
 </div>
+
+```html
+<div class="form-group has-error">
+	<label for="inputError1">
+		has-error
+		<svg
+			class="lexicon-icon lexicon-icon-asterisk reference-mark"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#asterisk" />
+		</svg>
+	</label>
+	<input
+		aria-describedby="input-error-1-error-message"
+		aria-invalid="true"
+		class="form-control"
+		id="inputError1"
+		type="text"
+	/>
+	<div class="form-feedback-group">
+		<div class="form-feedback-item" id="input-error-1-error-message">
+			This is a form-feedback-item.
+		</div>
+		<div class="form-feedback-item">
+			<span class="form-feedback-indicator">
+				<svg
+					class="lexicon-icon lexicon-icon-exclamation-full"
+					focusable="false"
+					role="presentation"
+				>
+					<use href="/images/icons/icons.svg#exclamation-full" />
+				</svg>
+			</span>
+			This is a form-feedback-indicator.
+		</div>
+		<div class="form-text">This is form-text.</div>
+	</div>
+</div>
+```
 
 ## HTML 5 Validations(#css-html-5-validations)
 
