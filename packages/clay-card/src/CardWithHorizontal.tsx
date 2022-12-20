@@ -14,6 +14,8 @@ import React from 'react';
 import ClayCard from './Card';
 import {ClayCardHorizontal} from './CardHorizontal';
 
+import type {ButtonWithIconProps} from '@clayui/button';
+
 export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	actions?: React.ComponentProps<typeof ClayDropDownWithItems>['items'];
 
@@ -30,7 +32,10 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Props to add to the dropdown trigger element
 	 */
-	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
+	dropDownTriggerProps?: Omit<
+		ButtonWithIconProps,
+		'symbol' | 'spritemap' | 'displayType' | 'className'
+	>;
 
 	/**
 	 * Path or URL to item
@@ -67,7 +72,9 @@ export const ClayCardWithHorizontal = ({
 	actions,
 	checkboxProps = {},
 	disabled,
-	dropDownTriggerProps = {},
+	dropDownTriggerProps = {
+		'aria-label': 'More actions',
+	},
 	href,
 	onSelectChange,
 	selected = false,
@@ -102,8 +109,7 @@ export const ClayCardWithHorizontal = ({
 							spritemap={spritemap}
 							trigger={
 								<ClayButtonWithIcon
-									aria-label="More actions"
-									{...dropDownTriggerProps}
+									{...(dropDownTriggerProps as ButtonWithIconProps)}
 									className="component-action"
 									disabled={disabled}
 									displayType="unstyled"

@@ -15,6 +15,8 @@ import React from 'react';
 
 import ClayCard from './Card';
 
+import type {ButtonWithIconProps} from '@clayui/button';
+
 export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * List of actions in the dropdown menu
@@ -44,7 +46,10 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	/**
 	 * Props to add to the dropdown trigger element
 	 */
-	dropDownTriggerProps?: React.HTMLAttributes<HTMLButtonElement>;
+	dropDownTriggerProps?: Omit<
+		ButtonWithIconProps,
+		'symbol' | 'spritemap' | 'displayType' | 'className'
+	>;
 
 	/**
 	 * Flag to indicate if `aspect-ratio-item-flush` class should be
@@ -116,7 +121,9 @@ export const ClayCardWithInfo = ({
 	description,
 	disabled,
 	displayType,
-	dropDownTriggerProps = {},
+	dropDownTriggerProps = {
+		'aria-label': 'More actions',
+	},
 	flushHorizontal,
 	flushVertical,
 	href,
@@ -251,8 +258,7 @@ export const ClayCardWithInfo = ({
 								spritemap={spritemap}
 								trigger={
 									<ClayButtonWithIcon
-										aria-label="More actions"
-										{...dropDownTriggerProps}
+										{...(dropDownTriggerProps as ButtonWithIconProps)}
 										className="component-action"
 										disabled={disabled}
 										displayType="unstyled"
