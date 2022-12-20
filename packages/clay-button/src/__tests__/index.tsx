@@ -129,3 +129,52 @@ describe('Button', () => {
 		expect(container).toMatchSnapshot();
 	});
 });
+
+describe('Button accessibility error', () => {
+	afterEach(cleanup);
+
+	it('<Button /> with <Icon /> without an ARIA property throws an exception', () => {
+		const originalError = console.error;
+		console.error = jest.fn();
+
+		render(
+			<Button displayType="primary" outline>
+				<Icon spritemap="icons.svg" symbol="plus" />
+			</Button>
+		);
+
+		expect(console.error).toBeCalledWith(
+			expect.stringContaining(
+				'Button Accessibility: Component has only the Icon declared.'
+			)
+		);
+
+		console.error = originalError;
+	});
+
+	it.concurrent.each(['aria-label', 'aria-labelledby'])(
+		'<Button /> with <Icon /> with `%s` property does not throw an exception',
+		(property) => {
+			const originalError = console.error;
+			console.error = jest.fn();
+
+			const props = {
+				[property]: 'some text',
+			};
+
+			render(
+				<Button {...props} displayType="primary" outline>
+					<Icon spritemap="icons.svg" symbol="plus" />
+				</Button>
+			);
+
+			expect(console.error).not.toBeCalledWith(
+				expect.stringContaining(
+					'Button Accessibility: Component has only the Icon declared.'
+				)
+			);
+
+			console.error = originalError;
+		}
+	);
+});
