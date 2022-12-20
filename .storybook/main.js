@@ -33,6 +33,11 @@ const config = {
 		storyStoreV7: true,
 		postcss: false,
 	},
+	webpackFinal: (config) => {
+		config.resolve.mainFields = ['ts:main', ...config.resolve.mainFields];
+
+		return config;
+	},
 };
 
 module.exports = config;
