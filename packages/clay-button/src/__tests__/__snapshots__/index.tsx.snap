@@ -1,15 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayButton renders 1`] = `
+exports[`Button renders 1`] = `
 <div>
   <button
     class="btn btn-primary"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders ButtonWithIcon 1`] = `
+exports[`Button renders ClayButtonWithIcon 1`] = `
 <div>
   <button
     aria-label="Delete"
@@ -28,7 +30,7 @@ exports[`ClayButton renders ButtonWithIcon 1`] = `
 </div>
 `;
 
-exports[`ClayButton renders ButtonWithIcon without monospaced 1`] = `
+exports[`Button renders ClayButtonWithIcon without monospaced 1`] = `
 <div>
   <button
     aria-label="Delete"
@@ -47,7 +49,7 @@ exports[`ClayButton renders ButtonWithIcon without monospaced 1`] = `
 </div>
 `;
 
-exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
+exports[`Button renders a ButtonGroup with spaced 1`] = `
 <div>
   <div
     class="btn-group"
@@ -59,7 +61,9 @@ exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
       <button
         class="btn btn-primary"
         type="button"
-      />
+      >
+        Button
+      </button>
     </div>
     <div
       class="btn-group-item"
@@ -67,68 +71,82 @@ exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
       <button
         class="btn btn-primary"
         type="button"
-      />
+      >
+        Button
+      </button>
     </div>
   </div>
 </div>
 `;
 
-exports[`ClayButton renders block 1`] = `
+exports[`Button renders block 1`] = `
 <div>
   <button
     class="btn btn-block btn-primary"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders borderless 1`] = `
+exports[`Button renders borderless 1`] = `
 <div>
   <button
     class="btn btn-outline-borderless btn-outline-primary"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders disabled 1`] = `
+exports[`Button renders disabled 1`] = `
 <div>
   <button
     class="btn btn-primary"
     disabled=""
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders monospaced 1`] = `
+exports[`Button renders monospaced 1`] = `
 <div>
   <button
     class="btn btn-monospaced btn-primary"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders outline 1`] = `
+exports[`Button renders outline 1`] = `
 <div>
   <button
     class="btn btn-outline-primary"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders small 1`] = `
+exports[`Button renders small 1`] = `
 <div>
   <button
     class="btn btn-sm btn-primary"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders with a ButtonGroup 1`] = `
+exports[`Button renders with a ButtonGroup 1`] = `
 <div>
   <div
     class="btn-group"
@@ -137,16 +155,20 @@ exports[`ClayButton renders with a ButtonGroup 1`] = `
     <button
       class="btn btn-primary"
       type="button"
-    />
+    >
+      Button
+    </button>
   </div>
 </div>
 `;
 
-exports[`ClayButton renders with a different display type 1`] = `
+exports[`Button renders with a different display type 1`] = `
 <div>
   <button
     class="btn btn-link"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;

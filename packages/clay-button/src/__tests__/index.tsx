@@ -3,28 +3,31 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton, {ClayButtonWithIcon} from '..';
+import Button, {ClayButtonWithIcon} from '..';
+import Icon from '@clayui/icon';
 import {cleanup, render} from '@testing-library/react';
 import React from 'react';
 
-describe('ClayButton', () => {
+describe('Button', () => {
 	afterEach(cleanup);
 
 	it('renders', () => {
-		const {container} = render(<ClayButton />);
+		const {container} = render(<Button>Button</Button>);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with a different display type', () => {
-		const {container} = render(<ClayButton displayType="link" />);
+		const {container} = render(<Button displayType="link">Button</Button>);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it('renders disabled', () => {
 		const {container} = render(
-			<ClayButton disabled displayType="primary" />
+			<Button disabled displayType="primary">
+				Button
+			</Button>
 		);
 
 		expect(container).toMatchSnapshot();
@@ -32,21 +35,29 @@ describe('ClayButton', () => {
 
 	it('renders borderless', () => {
 		const {container} = render(
-			<ClayButton borderless displayType="primary" />
+			<Button borderless displayType="primary">
+				Button
+			</Button>
 		);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it('renders block', () => {
-		const {container} = render(<ClayButton block displayType="primary" />);
+		const {container} = render(
+			<Button block displayType="primary">
+				Button
+			</Button>
+		);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it('renders outline', () => {
 		const {container} = render(
-			<ClayButton displayType="primary" outline />
+			<Button displayType="primary" outline>
+				Button
+			</Button>
 		);
 
 		expect(container).toMatchSnapshot();
@@ -54,23 +65,29 @@ describe('ClayButton', () => {
 
 	it('renders monospaced', () => {
 		const {container} = render(
-			<ClayButton displayType="primary" monospaced />
+			<Button displayType="primary" monospaced>
+				Button
+			</Button>
 		);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it('renders small', () => {
-		const {container} = render(<ClayButton displayType="primary" small />);
+		const {container} = render(
+			<Button displayType="primary" small>
+				Button
+			</Button>
+		);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with a ButtonGroup', () => {
 		const {container} = render(
-			<ClayButton.Group>
-				<ClayButton />
-			</ClayButton.Group>
+			<Button.Group>
+				<Button>Button</Button>
+			</Button.Group>
 		);
 
 		expect(container).toMatchSnapshot();
@@ -78,16 +95,16 @@ describe('ClayButton', () => {
 
 	it('renders a ButtonGroup with spaced', () => {
 		const {container} = render(
-			<ClayButton.Group spaced>
-				<ClayButton />
-				<ClayButton />
-			</ClayButton.Group>
+			<Button.Group spaced>
+				<Button>Button</Button>
+				<Button>Button</Button>
+			</Button.Group>
 		);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders ButtonWithIcon', () => {
+	it('renders ClayButtonWithIcon', () => {
 		const {container} = render(
 			<ClayButtonWithIcon
 				aria-label="Delete"
@@ -99,7 +116,7 @@ describe('ClayButton', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('renders ButtonWithIcon without monospaced', () => {
+	it('renders ClayButtonWithIcon without monospaced', () => {
 		const {container} = render(
 			<ClayButtonWithIcon
 				aria-label="Delete"
