@@ -264,8 +264,7 @@ export function useNavigation<T extends HTMLElement | null>({
 		// Moves the scroll to the element with visual "focus" if it exists.
 		if (visible && containerRef.current && active && onNavigate) {
 			const child = containerRef.current.firstElementChild as HTMLElement;
-			const activeElement =
-				containerRef.current.querySelector<HTMLElement>(`#${active}`);
+			const activeElement = document.getElementById(active);
 
 			if (activeElement && isScrollable(child)) {
 				maintainScrollVisibility(activeElement, child);
