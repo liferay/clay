@@ -866,8 +866,6 @@
 			)
 		);
 
-		$option: setter(map-get($map, option), ());
-
 		@if ($enabled) {
 			@include clay-css($base);
 
@@ -963,6 +961,8 @@
 			}
 
 			option {
+				$option: setter(map-get($map, option), ());
+
 				@include clay-css($option);
 
 				&:checked {
