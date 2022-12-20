@@ -14,6 +14,7 @@ import {
 <div class="nav-toc">
 
 -   [Numbered Pagination](#numbered-pagination)
+    -   [Accessibility](#numbered-pagination-accessibility)
 
 </div>
 </div>
@@ -31,3 +32,45 @@ Combining these you can reach the following result:
 If you want to have a simple Pagination with integers as Pagination items you can use a simpler variant, `PaginationWithBasicItems` as you can see below:
 
 <PaginationWithBasicItems />
+
+### Accessibility(#numbered-pagination-accessibility)
+
+`ClayPaginationWithBasicItems` generates `aria-label`'s for the previous, next, page, and ellipsis links. Custom labels can be passed to the previous, next, and page links through the `ariaLabels` attribute. It is useful for providing translated labels for screen readers or custom text more relevant to your app. The component will replace the placeholder `{0}` with the page number.
+
+```tsx
+<ClayPaginationWithBasicItems
+	ariaLabels={{
+		link: 'Change the page to {0}',
+		next: 'Change the page to {0}',
+		previous: 'Change the page to {0}',
+	}}
+	activePage={8}
+	ellipsisBuffer={2}
+	totalPages={25}
+/>
+```
+
+The `aria-label` attribute on `ClayPaginationWithBasicItems` sets the `aria-label` on the `nav` element. It defaults to "Pagination".
+
+```tsx
+<ClayPaginationWithBasicItems
+	aria-label="Pagination for 25 pages worth of stuff"
+	activePage={8}
+	ellipsisBuffer={2}
+	totalPages={25}
+/>
+```
+
+The ellipsis `aria-label` and `title` are customized through the `ellipsisProps` attribute. The placeholder text `{0}` will be replaced with the first page number on the list and `{1}` will be replaced with the last page number on the list.
+
+```tsx
+<ClayPaginationWithBasicItems
+	activePage={8}
+	ellipsisBuffer={2}
+	ellipsisProps={{
+		'aria-label': 'Show links to pages {0} through {1}',
+		title: 'Show links to pages {0} through {1}',
+	}}
+	totalPages={25}
+/>
+```
