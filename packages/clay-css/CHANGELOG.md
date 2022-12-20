@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Mixins clay-select-variant `$option` should be scoped to the selector ([4f08997](https://github.com/liferay/clay/commit/4f08997965343b5592a7b5ecf91444424fa54b2b))
+
+
+
+
+
 # [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
 
 
