@@ -4,95 +4,91 @@
  */
 
 import ClayButton, {ClayButtonWithIcon} from '..';
+import {cleanup, render} from '@testing-library/react';
 import React from 'react';
-import TestRenderer from 'react-test-renderer';
 
 describe('ClayButton', () => {
-	it('renders', () => {
-		const testRenderer = TestRenderer.create(<ClayButton />);
+	afterEach(cleanup);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+	it('renders', () => {
+		const {container} = render(<ClayButton />);
+
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with a different display type', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton displayType="link" />
-		);
+		const {container} = render(<ClayButton displayType="link" />);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders disabled', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButton disabled displayType="primary" />
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders borderless', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButton borderless displayType="primary" />
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders block', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton block displayType="primary" />
-		);
+		const {container} = render(<ClayButton block displayType="primary" />);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders outline', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButton displayType="primary" outline />
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders monospaced', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButton displayType="primary" monospaced />
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders small', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton displayType="primary" small />
-		);
+		const {container} = render(<ClayButton displayType="primary" small />);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with a ButtonGroup', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButton.Group>
 				<ClayButton />
 			</ClayButton.Group>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders a ButtonGroup with spaced', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButton.Group spaced>
 				<ClayButton />
 				<ClayButton />
 			</ClayButton.Group>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders ButtonWithIcon', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButtonWithIcon
 				aria-label="Delete"
 				spritemap="/some/path"
@@ -100,11 +96,11 @@ describe('ClayButton', () => {
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders ButtonWithIcon without monospaced', () => {
-		const testRenderer = TestRenderer.create(
+		const {container} = render(
 			<ClayButtonWithIcon
 				aria-label="Delete"
 				monospaced={false}
@@ -113,6 +109,6 @@ describe('ClayButton', () => {
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 });
