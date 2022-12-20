@@ -7,6 +7,7 @@ import ClayAutocomplete from '@clayui/autocomplete';
 import {ClayButtonWithIcon} from '@clayui/button';
 import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
+import Icon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import {
@@ -15,11 +16,12 @@ import {
 	Keys,
 	noop,
 	sub,
+	useId,
 	useInternalState,
 } from '@clayui/shared';
 import classNames from 'classnames';
 import fuzzy from 'fuzzy';
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 const DELIMITER_KEYS = ['Enter', ','];
 
@@ -102,6 +104,12 @@ export interface IProps
 	disabledClearAll?: boolean;
 
 	/**
+	 * Defines the description of hotkeys for the component, use this
+	 * to handle internationalization.
+	 */
+	hotkeysDescription?: string;
+
+	/**
 	 * Value used for each selected item's hidden input name attribute
 	 */
 	inputName?: string;
@@ -126,6 +134,15 @@ export interface IProps
 	 * Values that display as label items (controlled).
 	 */
 	items: Array<Item>;
+
+	/**
+	 * The off-screen live region informs screen reader users the result of
+	 * removing or adding a label.
+	 */
+	liveRegion?: {
+		added: string;
+		removed: string;
+	};
 
 	/**
 	 * Sets the name of the field to map the value/label of the item
@@ -168,6 +185,11 @@ export interface IProps
 	value?: string;
 }
 
+type LastChangeLiveRegion = {
+	label: string;
+	action: 'removed' | 'added';
+};
+
 const MultiSelectMenuRenderer: MenuRenderer = ({
 	locator,
 	onItemClick = () => {},
@@ -186,6 +208,9 @@ const MultiSelectMenuRenderer: MenuRenderer = ({
 	</ClayDropDown.ItemList>
 );
 
+const KeysNavigation = [Keys.Left, Keys.Right, Keys.Up, Keys.Down];
+const KeysSides = [Keys.Left, Keys.Right];
+
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
@@ -195,11 +220,16 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			defaultValue = '',
 			disabled,
 			disabledClearAll,
+			hotkeysDescription = 'Press backspace to delete the current row.',
 			inputName,
 			inputValue,
 			isLoading = false,
 			isValid = true,
 			items,
+			liveRegion = {
+				added: 'Label {0} added to the list',
+				removed: 'Label {0} removed to the list',
+			},
 			locator = {
 				label: 'label',
 				value: 'value',
@@ -221,11 +251,19 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const containerRef = React.useRef<HTMLDivElement>(null);
-		const inputRef = React.useRef<HTMLInputElement | null>(null);
-		const lastItemRef = React.useRef<HTMLSpanElement | null>(null);
-		const [active, setActive] = React.useState(false);
-		const [isFocused, setIsFocused] = React.useState(false);
+		const containerRef = useRef<HTMLDivElement>(null);
+		const inputRef = useRef<HTMLInputElement | null>(null);
+		const lastItemRef = useRef<HTMLSpanElement | null>(null);
+		const lastChangesRef = useRef<LastChangeLiveRegion | null>(null);
+
+		const labelsRef = useRef<HTMLDivElement | null>(null);
+
+		const [lastFocusedItem, setLastFocusedItem] = useState<string | null>(
+			null
+		);
+
+		const [active, setActive] = useState(false);
+		const [isFocused, setIsFocused] = useState(false);
 
 		const [internalItems, setItems] = useInternalState({
 			defaultName: 'defaultItems',
@@ -287,6 +325,11 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			if (internalValue.trim() && DELIMITER_KEYS.includes(key)) {
 				event.preventDefault();
 
+				lastChangesRef.current = {
+					action: 'added',
+					label: internalValue,
+				};
+
 				setNewValue(getNewItem(internalValue));
 			} else if (
 				!internalValue &&
@@ -316,6 +359,53 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			}
 		};
 
+		const onRemove = useCallback(
+			(label: string, index: number) => {
+				if (labelsRef.current) {
+					const focusableElements = Array.from<HTMLElement>(
+						labelsRef.current.querySelectorAll('button')
+					);
+
+					const activeElement =
+						document.activeElement!.tagName === 'SPAN'
+							? document.activeElement!.querySelector('button')
+							: document.activeElement;
+
+					const position = focusableElements.indexOf(
+						activeElement as HTMLElement
+					);
+
+					const closeElement =
+						focusableElements[
+							focusableElements.length - 1 > position
+								? position + 1
+								: position - 1
+						];
+
+					if (closeElement) {
+						closeElement.focus();
+						setLastFocusedItem(closeElement.getAttribute('id'));
+					} else {
+						inputElementRef.current?.focus();
+						setLastFocusedItem(null);
+					}
+				}
+
+				lastChangesRef.current = {
+					action: 'removed',
+					label,
+				};
+
+				setItems(
+					internalItems.filter((_, itemIndex) => itemIndex !== index)
+				);
+			},
+			[internalItems]
+		);
+
+		const labelId = useId();
+		const ariaDescriptionId = useId();
+
 		return (
 			<FocusScope arrowKeysUpDown={false}>
 				<div
@@ -329,86 +419,241 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 					ref={containerRef}
 				>
 					<ClayInput.GroupItem>
-						{internalItems.map((item, i) => {
-							const removeItem = () =>
-								setItems([
-									...internalItems.slice(0, i),
-									...internalItems.slice(i + 1),
-								]);
+						<ClayInput.Group>
+							<ClayInput.GroupItem
+								aria-labelledby={otherProps['aria-labelledby']}
+								className="d-contents"
+								onFocus={(event) =>
+									setLastFocusedItem(
+										event.target.getAttribute('id')!
+									)
+								}
+								onKeyDown={(event) => {
+									if (KeysNavigation.includes(event.key)) {
+										// Query labels and buttons to exclude the label that are
+										// focusable the navigation order depends on which orientation
+										// the navigation is happen.
+										// - Left and Right. Query all elements.
+										// - Up and Down. Query for elements of the same type as the
+										//   last focused element.
+										const focusableElements =
+											Array.from<HTMLElement>(
+												event.currentTarget.querySelectorAll(
+													KeysSides.includes(
+														event.key
+													)
+														? '[role=gridcell][tabindex], button'
+														: lastFocusedItem?.includes(
+																'span'
+														  )
+														? '[role=gridcell][tabindex]'
+														: 'button'
+												)
+											);
 
-							return (
-								<React.Fragment key={i}>
-									<ClayLabel
-										closeButtonProps={{
-											'aria-label': sub(
-												closeButtonAriaLabel,
-												[item[locator.label]]
-											),
-											disabled,
-											onClick: () => {
-												if (inputElementRef.current) {
-													inputElementRef.current.focus();
-												}
-												removeItem();
-											},
-											ref: (ref) => {
-												if (
-													i ===
-													internalItems.length - 1
-												) {
-													lastItemRef.current = ref;
-												}
-											},
-										}}
-										onKeyDown={({key}) => {
-											if (key !== Keys.Backspace) {
-												return;
-											}
-											if (inputElementRef.current) {
-												inputElementRef.current.focus();
-											}
-											removeItem();
-										}}
-										spritemap={spritemap}
-									>
-										{item[locator.label]}
-									</ClayLabel>
+										const position =
+											focusableElements.indexOf(
+												document.activeElement as HTMLElement
+											);
 
-									{inputName && (
-										<input
-											name={inputName}
-											type="hidden"
-											value={item[locator.value]}
-										/>
-									)}
-								</React.Fragment>
-							);
-						})}
+										const key = KeysSides.includes(
+											event.key
+										)
+											? Keys.Left
+											: Keys.Up;
 
-						<input
-							{...otherProps}
-							className="form-control-inset"
-							disabled={disabled}
-							onBlur={(event) => {
-								onBlur(event);
-								setIsFocused(false);
-							}}
-							onChange={(event) =>
-								setValue(event.target.value.replace(',', ''))
-							}
-							onFocus={(event) => {
-								onFocus(event);
-								setIsFocused(true);
-							}}
-							onKeyDown={handleKeyDown}
-							onPaste={handlePaste}
-							placeholder={
-								internalItems.length ? undefined : placeholder
-							}
-							ref={inputElementRef}
-							type="text"
-							value={internalValue}
-						/>
+										const label =
+											focusableElements[
+												event.key === key
+													? position - 1
+													: position + 1
+											];
+
+										if (label) {
+											setLastFocusedItem(
+												label.getAttribute('id')!
+											);
+											label.focus();
+										}
+									}
+
+									if (
+										event.key === Keys.Home ||
+										event.key === Keys.End
+									) {
+										const isLabel =
+											lastFocusedItem!.includes('span');
+
+										if (
+											(isLabel &&
+												event.key === Keys.Home) ||
+											(!isLabel && event.key === Keys.End)
+										) {
+											return;
+										}
+
+										const label =
+											event.currentTarget.querySelector<HTMLElement>(
+												`[id=${lastFocusedItem?.replace(
+													isLabel ? 'span' : 'close',
+													event.key === Keys.Home
+														? 'span'
+														: 'close'
+												)}]`
+											);
+
+										if (label) {
+											setLastFocusedItem(
+												label.getAttribute('id')!
+											);
+											label.focus();
+										}
+									}
+								}}
+								prepend
+								ref={(ref) => {
+									labelsRef.current = ref;
+								}}
+								role="grid"
+								shrink
+							>
+								{internalItems.map((item, i) => {
+									const id = `${labelId}-label-${
+										item[locator.value]
+									}-span`;
+									const closeId = `${labelId}-label-${
+										item[locator.value]
+									}-close`;
+
+									return (
+										<React.Fragment key={id}>
+											<ClayLabel
+												onKeyDown={({key}) => {
+													if (
+														key === Keys.Backspace
+													) {
+														onRemove(
+															item[locator.label],
+															i
+														);
+													}
+												}}
+												role="row"
+												spritemap={spritemap}
+												withClose={false}
+											>
+												<ClayLabel.ItemExpand
+													aria-describedby={
+														ariaDescriptionId
+													}
+													id={id}
+													role="gridcell"
+													tabIndex={
+														(lastFocusedItem ===
+															null &&
+															i === 0) ||
+														lastFocusedItem === id
+															? 0
+															: -1
+													}
+												>
+													{item[locator.label]}
+												</ClayLabel.ItemExpand>
+
+												<ClayLabel.ItemAfter role="gridcell">
+													<button
+														aria-label={sub(
+															closeButtonAriaLabel,
+															[
+																item[
+																	locator
+																		.label
+																],
+															]
+														)}
+														className="close"
+														disabled={disabled}
+														id={closeId}
+														onClick={() =>
+															onRemove(
+																item[
+																	locator
+																		.label
+																],
+																i
+															)
+														}
+														ref={(ref) => {
+															if (
+																i ===
+																internalItems.length -
+																	1
+															) {
+																lastItemRef.current =
+																	ref;
+															}
+														}}
+														tabIndex={
+															lastFocusedItem ===
+															closeId
+																? 0
+																: -1
+														}
+														type="button"
+													>
+														<Icon
+															spritemap={
+																spritemap
+															}
+															symbol="times-small"
+														/>
+													</button>
+												</ClayLabel.ItemAfter>
+											</ClayLabel>
+
+											{inputName && (
+												<input
+													name={inputName}
+													type="hidden"
+													value={item[locator.value]}
+												/>
+											)}
+										</React.Fragment>
+									);
+								})}
+							</ClayInput.GroupItem>
+
+							<ClayInput.GroupItem prepend>
+								<input
+									{...otherProps}
+									className="form-control-inset"
+									disabled={disabled}
+									onBlur={(event) => {
+										onBlur(event);
+										setIsFocused(false);
+									}}
+									onChange={(event) =>
+										setValue(
+											event.target.value.replace(',', '')
+										)
+									}
+									onFocus={(event) => {
+										onFocus(event);
+										setIsFocused(true);
+									}}
+									onKeyDown={handleKeyDown}
+									onPaste={handlePaste}
+									placeholder={
+										internalItems.length
+											? undefined
+											: placeholder
+									}
+									ref={inputElementRef}
+									type="text"
+									value={internalValue}
+								/>
+							</ClayInput.GroupItem>
+						</ClayInput.Group>
 					</ClayInput.GroupItem>
 
 					{isLoading && (
@@ -445,6 +690,20 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 								/>
 							</ClayInput.GroupItem>
 						)}
+
+					<div className="sr-only">
+						<span id={ariaDescriptionId}>{hotkeysDescription}</span>
+						<span aria-live="polite" aria-relevant="text">
+							{lastChangesRef.current
+								? sub(
+										liveRegion[
+											lastChangesRef.current.action
+										],
+										[lastChangesRef.current.label]
+								  )
+								: null}
+						</span>
+					</div>
 
 					{sourceItems.length > 0 && (
 						<ClayAutocomplete.DropDown

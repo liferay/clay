@@ -9,10 +9,35 @@ exports[`ClayMultiSelect renders 1`] = `
       <div
         class="input-group-item"
       >
-        <input
-          class="form-control-inset"
-          type="text"
-          value=""
+        <div
+          class="input-group"
+        >
+          <div
+            class="input-group-item d-contents input-group-item-shrink input-group-prepend"
+            role="grid"
+          />
+          <div
+            class="input-group-item input-group-prepend"
+          >
+            <input
+              class="form-control-inset"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          id="clay-id-2"
+        >
+          Press backspace to delete the current row.
+        </span>
+        <span
+          aria-live="polite"
+          aria-relevant="text"
         />
       </div>
     </div>
@@ -29,92 +54,129 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
       <div
         class="input-group-item"
       >
-        <span
-          class="label label-dismissible label-secondary"
+        <div
+          class="input-group"
         >
-          <span
-            class="label-item label-item-expand"
+          <div
+            class="input-group-item d-contents input-group-item-shrink input-group-prepend"
+            role="grid"
           >
-            foo
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove foo"
-              class="close"
-              type="button"
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-10"
+                class="label-item label-item-expand"
+                id="clay-id-9-label-1-span"
+                role="gridcell"
+                tabindex="0"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            bar
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove bar"
-              class="close"
-              type="button"
+                foo
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove foo"
+                  class="close"
+                  id="clay-id-9-label-1-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-10"
+                class="label-item label-item-expand"
+                id="clay-id-9-label-2-span"
+                role="gridcell"
+                tabindex="-1"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            baz
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove baz"
-              class="close"
-              type="button"
+                bar
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove bar"
+                  class="close"
+                  id="clay-id-9-label-2-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-10"
+                class="label-item label-item-expand"
+                id="clay-id-9-label-3-span"
+                role="gridcell"
+                tabindex="-1"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          class="form-control-inset"
-          type="text"
-          value="one"
-        />
+                baz
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove baz"
+                  class="close"
+                  id="clay-id-9-label-3-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+          </div>
+          <div
+            class="input-group-item input-group-prepend"
+          >
+            <input
+              class="form-control-inset"
+              type="text"
+              value="one"
+            />
+          </div>
+        </div>
       </div>
       <div
         class="input-group-item input-group-item-shrink"
@@ -134,6 +196,19 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
             />
           </svg>
         </button>
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          id="clay-id-10"
+        >
+          Press backspace to delete the current row.
+        </span>
+        <span
+          aria-live="polite"
+          aria-relevant="text"
+        />
       </div>
     </div>
   </div>
@@ -180,95 +255,145 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
       <div
         class="input-group-item"
       >
-        <span
-          class="label label-dismissible label-secondary"
+        <div
+          class="input-group"
         >
-          <span
-            class="label-item label-item-expand"
+          <div
+            class="input-group-item d-contents input-group-item-shrink input-group-prepend"
+            role="grid"
           >
-            foo
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove foo"
-              class="close"
-              disabled=""
-              type="button"
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-8"
+                class="label-item label-item-expand"
+                id="clay-id-7-label-1-span"
+                role="gridcell"
+                tabindex="0"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
+                foo
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove foo"
+                  class="close"
+                  disabled=""
+                  id="clay-id-7-label-1-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
+            >
+              <span
+                aria-describedby="clay-id-8"
+                class="label-item label-item-expand"
+                id="clay-id-7-label-2-span"
+                role="gridcell"
+                tabindex="-1"
+              >
+                bar
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove bar"
+                  class="close"
+                  disabled=""
+                  id="clay-id-7-label-2-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
+            >
+              <span
+                aria-describedby="clay-id-8"
+                class="label-item label-item-expand"
+                id="clay-id-7-label-3-span"
+                role="gridcell"
+                tabindex="-1"
+              >
+                baz
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove baz"
+                  class="close"
+                  disabled=""
+                  id="clay-id-7-label-3-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+          </div>
+          <div
+            class="input-group-item input-group-prepend"
+          >
+            <input
+              class="form-control-inset"
+              disabled=""
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          id="clay-id-8"
+        >
+          Press backspace to delete the current row.
         </span>
         <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            bar
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove bar"
-              class="close"
-              disabled=""
-              type="button"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
-              >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            baz
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove baz"
-              class="close"
-              disabled=""
-              type="button"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
-              >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          class="form-control-inset"
-          disabled=""
-          type="text"
-          value=""
+          aria-live="polite"
+          aria-relevant="text"
         />
       </div>
     </div>
@@ -285,92 +410,129 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
       <div
         class="input-group-item"
       >
-        <span
-          class="label label-dismissible label-secondary"
+        <div
+          class="input-group"
         >
-          <span
-            class="label-item label-item-expand"
+          <div
+            class="input-group-item d-contents input-group-item-shrink input-group-prepend"
+            role="grid"
           >
-            foo
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove foo"
-              class="close"
-              type="button"
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-6"
+                class="label-item label-item-expand"
+                id="clay-id-5-label-1-span"
+                role="gridcell"
+                tabindex="0"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            bar
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove bar"
-              class="close"
-              type="button"
+                foo
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove foo"
+                  class="close"
+                  id="clay-id-5-label-1-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-6"
+                class="label-item label-item-expand"
+                id="clay-id-5-label-2-span"
+                role="gridcell"
+                tabindex="-1"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            baz
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove baz"
-              class="close"
-              type="button"
+                bar
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove bar"
+                  class="close"
+                  id="clay-id-5-label-2-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-6"
+                class="label-item label-item-expand"
+                id="clay-id-5-label-3-span"
+                role="gridcell"
+                tabindex="-1"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          class="form-control-inset"
-          type="text"
-          value=""
-        />
+                baz
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove baz"
+                  class="close"
+                  id="clay-id-5-label-3-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+          </div>
+          <div
+            class="input-group-item input-group-prepend"
+          >
+            <input
+              class="form-control-inset"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
       </div>
       <div
         class="input-group-item input-group-item-shrink"
@@ -390,6 +552,19 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
             />
           </svg>
         </button>
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          id="clay-id-6"
+        >
+          Press backspace to delete the current row.
+        </span>
+        <span
+          aria-live="polite"
+          aria-relevant="text"
+        />
       </div>
     </div>
   </div>
@@ -405,92 +580,129 @@ exports[`ClayMultiSelect renders with items 1`] = `
       <div
         class="input-group-item"
       >
-        <span
-          class="label label-dismissible label-secondary"
+        <div
+          class="input-group"
         >
-          <span
-            class="label-item label-item-expand"
+          <div
+            class="input-group-item d-contents input-group-item-shrink input-group-prepend"
+            role="grid"
           >
-            foo
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove foo"
-              class="close"
-              type="button"
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-4"
+                class="label-item label-item-expand"
+                id="clay-id-3-label-1-span"
+                role="gridcell"
+                tabindex="0"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            bar
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove bar"
-              class="close"
-              type="button"
+                foo
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove foo"
+                  class="close"
+                  id="clay-id-3-label-1-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-4"
+                class="label-item label-item-expand"
+                id="clay-id-3-label-2-span"
+                role="gridcell"
+                tabindex="-1"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <span
-          class="label label-dismissible label-secondary"
-        >
-          <span
-            class="label-item label-item-expand"
-          >
-            baz
-          </span>
-          <span
-            class="label-item label-item-after"
-          >
-            <button
-              aria-label="Remove baz"
-              class="close"
-              type="button"
+                bar
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove bar"
+                  class="close"
+                  id="clay-id-3-label-2-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+            <span
+              class="label label-secondary"
+              role="row"
             >
-              <svg
-                class="lexicon-icon lexicon-icon-times-small"
-                role="presentation"
+              <span
+                aria-describedby="clay-id-4"
+                class="label-item label-item-expand"
+                id="clay-id-3-label-3-span"
+                role="gridcell"
+                tabindex="-1"
               >
-                <use
-                  xlink:href="/foo/bar#times-small"
-                />
-              </svg>
-            </button>
-          </span>
-        </span>
-        <input
-          class="form-control-inset"
-          type="text"
-          value=""
-        />
+                baz
+              </span>
+              <span
+                class="label-item label-item-after"
+                role="gridcell"
+              >
+                <button
+                  aria-label="Remove baz"
+                  class="close"
+                  id="clay-id-3-label-3-close"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-times-small"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="/foo/bar#times-small"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </span>
+          </div>
+          <div
+            class="input-group-item input-group-prepend"
+          >
+            <input
+              class="form-control-inset"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
       </div>
       <div
         class="input-group-item input-group-item-shrink"
@@ -510,6 +722,19 @@ exports[`ClayMultiSelect renders with items 1`] = `
             />
           </svg>
         </button>
+      </div>
+      <div
+        class="sr-only"
+      >
+        <span
+          id="clay-id-4"
+        >
+          Press backspace to delete the current row.
+        </span>
+        <span
+          aria-live="polite"
+          aria-relevant="text"
+        />
       </div>
     </div>
   </div>

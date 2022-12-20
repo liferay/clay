@@ -367,8 +367,8 @@ $cadmin-border-theme-colors: map-deep-merge(
 
 // Display
 
-$cadmin-displays: none, inline, inline-block, grid, block, table, table-row,
-	table-cell, flex, inline-flex !default;
+$cadmin-displays: none, inline, inline-block, grid, block, contents, table,
+	table-row, table-cell, flex, inline-flex !default;
 
 // Overflow
 
