@@ -3,96 +3,109 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton, {ClayButtonWithIcon} from '..';
+import Button, {ClayButtonWithIcon} from '..';
+import Icon from '@clayui/icon';
+import {cleanup, render} from '@testing-library/react';
 import React from 'react';
-import TestRenderer from 'react-test-renderer';
 
-describe('ClayButton', () => {
+describe('Button', () => {
+	afterEach(cleanup);
+
 	it('renders', () => {
-		const testRenderer = TestRenderer.create(<ClayButton />);
+		const {container} = render(<Button>Button</Button>);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with a different display type', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton displayType="link" />
-		);
+		const {container} = render(<Button displayType="link">Button</Button>);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders disabled', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton disabled displayType="primary" />
+		const {container} = render(
+			<Button disabled displayType="primary">
+				Button
+			</Button>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders borderless', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton borderless displayType="primary" />
+		const {container} = render(
+			<Button borderless displayType="primary">
+				Button
+			</Button>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders block', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton block displayType="primary" />
+		const {container} = render(
+			<Button block displayType="primary">
+				Button
+			</Button>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders outline', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton displayType="primary" outline />
+		const {container} = render(
+			<Button displayType="primary" outline>
+				Button
+			</Button>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders monospaced', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton displayType="primary" monospaced />
+		const {container} = render(
+			<Button displayType="primary" monospaced>
+				Button
+			</Button>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders small', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton displayType="primary" small />
+		const {container} = render(
+			<Button displayType="primary" small>
+				Button
+			</Button>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders with a ButtonGroup', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton.Group>
-				<ClayButton />
-			</ClayButton.Group>
+		const {container} = render(
+			<Button.Group>
+				<Button>Button</Button>
+			</Button.Group>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
 	it('renders a ButtonGroup with spaced', () => {
-		const testRenderer = TestRenderer.create(
-			<ClayButton.Group spaced>
-				<ClayButton />
-				<ClayButton />
-			</ClayButton.Group>
+		const {container} = render(
+			<Button.Group spaced>
+				<Button>Button</Button>
+				<Button>Button</Button>
+			</Button.Group>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
-	it('renders ButtonWithIcon', () => {
-		const testRenderer = TestRenderer.create(
+	it('renders ClayButtonWithIcon', () => {
+		const {container} = render(
 			<ClayButtonWithIcon
 				aria-label="Delete"
 				spritemap="/some/path"
@@ -100,11 +113,11 @@ describe('ClayButton', () => {
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 
-	it('renders ButtonWithIcon without monospaced', () => {
-		const testRenderer = TestRenderer.create(
+	it('renders ClayButtonWithIcon without monospaced', () => {
+		const {container} = render(
 			<ClayButtonWithIcon
 				aria-label="Delete"
 				monospaced={false}
@@ -113,6 +126,55 @@ describe('ClayButton', () => {
 			/>
 		);
 
-		expect(testRenderer.toJSON()).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
+});
+
+describe('Button accessibility error', () => {
+	afterEach(cleanup);
+
+	it('<Button /> with <Icon /> without an ARIA property throws an exception', () => {
+		const originalError = console.error;
+		console.error = jest.fn();
+
+		render(
+			<Button displayType="primary" outline>
+				<Icon spritemap="icons.svg" symbol="plus" />
+			</Button>
+		);
+
+		expect(console.error).toBeCalledWith(
+			expect.stringContaining(
+				'Button Accessibility: Component has only the Icon declared.'
+			)
+		);
+
+		console.error = originalError;
+	});
+
+	it.concurrent.each(['aria-label', 'aria-labelledby'])(
+		'<Button /> with <Icon /> with `%s` property does not throw an exception',
+		(property) => {
+			const originalError = console.error;
+			console.error = jest.fn();
+
+			const props = {
+				[property]: 'some text',
+			};
+
+			render(
+				<Button {...props} displayType="primary" outline>
+					<Icon spritemap="icons.svg" symbol="plus" />
+				</Button>
+			);
+
+			expect(console.error).not.toBeCalledWith(
+				expect.stringContaining(
+					'Button Accessibility: Component has only the Icon declared.'
+				)
+			);
+
+			console.error = originalError;
+		}
+	);
 });

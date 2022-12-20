@@ -1,128 +1,174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayButton renders 1`] = `
-<button
-  className="btn btn-primary"
-  type="button"
-/>
-`;
-
-exports[`ClayButton renders ButtonWithIcon 1`] = `
-<button
-  aria-label="Delete"
-  className="btn btn-monospaced btn-primary"
-  type="button"
->
-  <svg
-    className="lexicon-icon lexicon-icon-trash"
-    role="presentation"
-  >
-    <use
-      xlinkHref="/some/path#trash"
-    />
-  </svg>
-</button>
-`;
-
-exports[`ClayButton renders ButtonWithIcon without monospaced 1`] = `
-<button
-  aria-label="Delete"
-  className="btn btn-primary"
-  type="button"
->
-  <svg
-    className="lexicon-icon lexicon-icon-trash"
-    role="presentation"
-  >
-    <use
-      xlinkHref="/some/path#trash"
-    />
-  </svg>
-</button>
-`;
-
-exports[`ClayButton renders a ButtonGroup with spaced 1`] = `
-<div
-  className="btn-group"
-  role="group"
->
-  <div
-    className="btn-group-item"
-  >
-    <button
-      className="btn btn-primary"
-      type="button"
-    />
-  </div>
-  <div
-    className="btn-group-item"
-  >
-    <button
-      className="btn btn-primary"
-      type="button"
-    />
-  </div>
-</div>
-`;
-
-exports[`ClayButton renders block 1`] = `
-<button
-  className="btn btn-block btn-primary"
-  type="button"
-/>
-`;
-
-exports[`ClayButton renders borderless 1`] = `
-<button
-  className="btn btn-outline-borderless btn-outline-primary"
-  type="button"
-/>
-`;
-
-exports[`ClayButton renders disabled 1`] = `
-<button
-  className="btn btn-primary"
-  disabled={true}
-  type="button"
-/>
-`;
-
-exports[`ClayButton renders monospaced 1`] = `
-<button
-  className="btn btn-monospaced btn-primary"
-  type="button"
-/>
-`;
-
-exports[`ClayButton renders outline 1`] = `
-<button
-  className="btn btn-outline-primary"
-  type="button"
-/>
-`;
-
-exports[`ClayButton renders small 1`] = `
-<button
-  className="btn btn-sm btn-primary"
-  type="button"
-/>
-`;
-
-exports[`ClayButton renders with a ButtonGroup 1`] = `
-<div
-  className="btn-group"
-  role="group"
->
+exports[`Button renders 1`] = `
+<div>
   <button
-    className="btn btn-primary"
+    class="btn btn-primary"
     type="button"
-  />
+  >
+    Button
+  </button>
 </div>
 `;
 
-exports[`ClayButton renders with a different display type 1`] = `
-<button
-  className="btn btn-link"
-  type="button"
-/>
+exports[`Button renders ClayButtonWithIcon 1`] = `
+<div>
+  <button
+    aria-label="Delete"
+    class="btn btn-monospaced btn-primary"
+    type="button"
+  >
+    <svg
+      class="lexicon-icon lexicon-icon-trash"
+      role="presentation"
+    >
+      <use
+        xlink:href="/some/path#trash"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button renders ClayButtonWithIcon without monospaced 1`] = `
+<div>
+  <button
+    aria-label="Delete"
+    class="btn btn-primary"
+    type="button"
+  >
+    <svg
+      class="lexicon-icon lexicon-icon-trash"
+      role="presentation"
+    >
+      <use
+        xlink:href="/some/path#trash"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button renders a ButtonGroup with spaced 1`] = `
+<div>
+  <div
+    class="btn-group"
+    role="group"
+  >
+    <div
+      class="btn-group-item"
+    >
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Button
+      </button>
+    </div>
+    <div
+      class="btn-group-item"
+    >
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Button
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button renders block 1`] = `
+<div>
+  <button
+    class="btn btn-block btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders borderless 1`] = `
+<div>
+  <button
+    class="btn btn-outline-borderless btn-outline-primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders disabled 1`] = `
+<div>
+  <button
+    class="btn btn-primary"
+    disabled=""
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders monospaced 1`] = `
+<div>
+  <button
+    class="btn btn-monospaced btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders outline 1`] = `
+<div>
+  <button
+    class="btn btn-outline-primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders small 1`] = `
+<div>
+  <button
+    class="btn btn-sm btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders with a ButtonGroup 1`] = `
+<div>
+  <div
+    class="btn-group"
+    role="group"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Button
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Button renders with a different display type 1`] = `
+<div>
+  <button
+    class="btn btn-link"
+    type="button"
+  >
+    Button
+  </button>
+</div>
 `;

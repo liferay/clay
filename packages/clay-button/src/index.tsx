@@ -6,5 +6,6 @@
 import Button from './Button';
 import ClayButtonWithIcon from './ButtonWithIcon';
 
+export type {Props as ButtonWithIconProps} from './ButtonWithIcon';
 export {ClayButtonWithIcon};
 export default Button;
