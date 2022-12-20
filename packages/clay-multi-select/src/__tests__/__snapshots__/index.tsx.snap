@@ -64,12 +64,14 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-10"
                 class="label-item label-item-expand"
                 id="clay-id-9-label-1-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="0"
               >
                 foo
@@ -99,12 +101,14 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-10"
                 class="label-item label-item-expand"
                 id="clay-id-9-label-2-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 bar
@@ -134,12 +138,14 @@ exports[`ClayMultiSelect renders a custom menu 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-10"
                 class="label-item label-item-expand"
                 id="clay-id-9-label-3-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 baz
@@ -265,12 +271,14 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-8"
                 class="label-item label-item-expand"
                 id="clay-id-7-label-1-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="0"
               >
                 foo
@@ -301,12 +309,14 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-8"
                 class="label-item label-item-expand"
                 id="clay-id-7-label-2-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 bar
@@ -337,12 +347,14 @@ exports[`ClayMultiSelect renders as disabled 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-8"
                 class="label-item label-item-expand"
                 id="clay-id-7-label-3-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 baz
@@ -420,12 +432,14 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-6"
                 class="label-item label-item-expand"
                 id="clay-id-5-label-1-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="0"
               >
                 foo
@@ -455,12 +469,14 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-6"
                 class="label-item label-item-expand"
                 id="clay-id-5-label-2-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 bar
@@ -490,12 +506,14 @@ exports[`ClayMultiSelect renders as not valid 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-6"
                 class="label-item label-item-expand"
                 id="clay-id-5-label-3-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 baz
@@ -590,12 +608,14 @@ exports[`ClayMultiSelect renders with items 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-4"
                 class="label-item label-item-expand"
                 id="clay-id-3-label-1-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="0"
               >
                 foo
@@ -625,12 +645,14 @@ exports[`ClayMultiSelect renders with items 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-4"
                 class="label-item label-item-expand"
                 id="clay-id-3-label-2-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 bar
@@ -660,12 +682,14 @@ exports[`ClayMultiSelect renders with items 1`] = `
             <span
               class="label label-secondary"
               role="row"
+              tabindex="-1"
             >
               <span
                 aria-describedby="clay-id-4"
                 class="label-item label-item-expand"
                 id="clay-id-3-label-3-span"
                 role="gridcell"
+                style="outline: none;"
                 tabindex="-1"
               >
                 baz
