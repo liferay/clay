@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import DropDown from '@clayui/drop-down';
 import Form from '@clayui/form';
 import Icon from '@clayui/icon';
 import Label from '@clayui/label';
@@ -170,6 +171,54 @@ export const CustomOptions = () => {
 								</Layout.ContentCol>
 							</Layout.ContentRow>
 						</Option>
+					)}
+				</Picker>
+			</Form.Group>
+		</div>
+	);
+};
+
+export const CustomGroup = () => {
+	const pickerId = useId();
+	const labelId = useId();
+
+	return (
+		<div style={{width: '180px'}}>
+			<Form.Group>
+				<label htmlFor={pickerId} id={labelId}>
+					Select an option
+				</label>
+				<Picker
+					aria-labelledby={labelId}
+					id={pickerId}
+					items={[
+						{
+							items: [
+								{label: 'Apple', value: '1'},
+								{label: 'Banana', value: '2'},
+								{label: 'Mangos', value: '3'},
+							],
+							label: 'Fruit',
+						},
+						{
+							items: [
+								{label: 'Onions', value: '4'},
+								{label: 'abc', value: '5'},
+								{label: 'def', value: '6'},
+							],
+							label: 'Vegetable',
+						},
+					]}
+				>
+					{(group) => (
+						<DropDown.Group
+							header={group.label}
+							items={group.items}
+						>
+							{(item) => (
+								<Option key={item.value}>{item.label}</Option>
+							)}
+						</DropDown.Group>
 					)}
 				</Picker>
 			</Form.Group>

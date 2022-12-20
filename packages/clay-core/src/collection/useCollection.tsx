@@ -20,6 +20,8 @@ type CollectionContextProps = {
 
 const CollectionContext = React.createContext({} as CollectionContextProps);
 
+const SECTION_NAMES = ['Group', 'Section'];
+
 export function useCollection<
 	T extends Record<any, any>,
 	P = unknown,
@@ -99,6 +101,60 @@ export function useCollection<
 		[performFilter]
 	);
 
+	const performCollection = useCallback(
+		({children, items}: ICollectionProps<T, P>) => {
+			// Pre-initialization of nested collections to mount the layout
+			// structure.
+			// TODO: Mount a structure with the children's information and cache it
+			// to use when rendering the component.
+			const callNestedChild = (child: ChildElement) => {
+				if (
+					child.type.displayName &&
+					SECTION_NAMES.includes(child.type.displayName)
+				) {
+					const {children, items} = child.props;
+
+					performCollection({children, items});
+				}
+			};
+
+			if (children instanceof Function && items) {
+				return items.map((item, index) => {
+					const publicItem = exclude
+						? excludeProps(item, exclude)
+						: item;
+					const child = Array.isArray(publicApi)
+						? (children(publicItem, ...publicApi) as ChildElement)
+						: (children(publicItem) as ChildElement);
+
+					callNestedChild(child);
+
+					return performItemRender(
+						child,
+						getKey(index, item.id ?? child.key, parentKey),
+						index,
+						item
+					);
+				});
+			}
+
+			return React.Children.map(children, (child, index) => {
+				if (!React.isValidElement(child)) {
+					return null;
+				}
+
+				callNestedChild(child as ChildElement);
+
+				return performItemRender(
+					child as ChildElement,
+					getKey(index, child.key, parentKey),
+					index
+				);
+			});
+		},
+		[performItemRender, publicApi]
+	);
+
 	const getItem = useCallback((key: React.Key) => {
 		return layout.current.get(key);
 	}, []);
@@ -112,35 +168,10 @@ export function useCollection<
 		};
 	}, []);
 
-	const collection = useMemo(() => {
-		if (children instanceof Function && items) {
-			return items.map((item, index) => {
-				const publicItem = exclude ? excludeProps(item, exclude) : item;
-				const child = Array.isArray(publicApi)
-					? (children(publicItem, ...publicApi) as ChildElement)
-					: (children(publicItem) as ChildElement);
-
-				return performItemRender(
-					child,
-					getKey(index, item.id ?? child.key, parentKey),
-					index,
-					item
-				);
-			});
-		}
-
-		return React.Children.map(children, (child, index) => {
-			if (!React.isValidElement(child)) {
-				return null;
-			}
-
-			return performItemRender(
-				child as ChildElement,
-				getKey(index, child.key, parentKey),
-				index
-			);
-		});
-	}, [children, performItemRender, items, publicApi]);
+	const collection = useMemo(
+		() => performCollection({children, items}),
+		[children, performCollection, items]
+	);
 
 	return {
 		collection: (

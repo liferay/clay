@@ -191,9 +191,7 @@ export function Picker<T>({
 
 	const onPress = useCallback(() => {
 		if (menuRef.current && activeDescendant) {
-			const item = menuRef.current.querySelector<HTMLButtonElement>(
-				`#${activeDescendant}`
-			);
+			const item = document.getElementById(activeDescendant);
 
 			if (item) {
 				item.click();

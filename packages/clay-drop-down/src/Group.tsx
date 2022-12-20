@@ -79,4 +79,6 @@ function ClayDropDownGroup<T>({
 	);
 }
 
+ClayDropDownGroup.displayName = 'Group';
+
 export default ClayDropDownGroup;
