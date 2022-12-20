@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Bug Fixes
+
+-   **@clayui/shared:** add utility function to check typeahead and fix bugs not properly clearing timeout when closing menu ([88eaab4](https://github.com/liferay/clay/commit/88eaab4f40aa5302f6312fc6e14d40ed81a867a6))
+
+### Features
+
+-   **@clayui/shared:** add hook to identify if it's a mobile device ([65af0e6](https://github.com/liferay/clay/commit/65af0e62f960c927d1f054b336b8f4dfc41c0682))
+-   **@clayui/shared:** adds `useHover` hook to normalize hover pointer interactions ([fc1f6c2](https://github.com/liferay/clay/commit/fc1f6c297cb3ce5df87017faa23c7b0e8509eda1))
+-   **@clayui/shared:** adds configuration for visual navigation and event scheduling ([6b055ad](https://github.com/liferay/clay/commit/6b055ada959d7dfc9977a1ddcf69542b8a1e2c05))
+-   **@clayui/shared:** implements moving the scroll in visual focus ([614c812](https://github.com/liferay/clay/commit/614c81223dec7d53626e8c0ce860cd88853e0123))
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 ### Bug Fixes

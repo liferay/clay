@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix menu reference error ([4f70e1e](https://github.com/liferay/clay/commit/4f70e1e063ea751a2ad7053f2bd651fa90a4de63))
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 ### Features

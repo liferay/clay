@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Bug Fixes
+
+-   **@clayui/button:** improves the error message for button accessibility and the ButtonWithIcon component type ([2801f97](https://github.com/liferay/clay/commit/2801f978157a3b7781fc49f8ac3b9f85e90da0e6))
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 ### Bug Fixes

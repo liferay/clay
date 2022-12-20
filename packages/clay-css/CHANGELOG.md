@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Bootstrap spinners are broken ([9fabd50](https://github.com/liferay/clay/commit/9fabd5012c37d42c96fd882d2eb19e2d15ec4113))
+* **@clayui/css:** Forms button.form-control-select should be left aligned ([63a140f](https://github.com/liferay/clay/commit/63a140f482aac5bfa8bae5cf703340913aa7304b))
+* **@clayui/css:** Mixins clay-dropdown-item-variant adds .hover and .focus ([92221ef](https://github.com/liferay/clay/commit/92221ef3e5bb23ccb7bf57837dbcfdd78ce23fb7))
+* **@clayui/css:** Mixins form-control-variant and clay-select-variant should output .hover ([3823eef](https://github.com/liferay/clay/commit/3823eef969b53b96ea9171fc4128ec857af253a8))
+* **@clayui/css:** Sidebar adds focus state ([89443e5](https://github.com/liferay/clay/commit/89443e56a279e4db016726885aedb446feca130c))
+
+
+### Features
+
+* **@clayui/css:** add display `contents` utility ([e92be6a](https://github.com/liferay/clay/commit/e92be6a86763eb054edea89c50265b37149fd79b))
+* **@clayui/css:** Cadmin Forms adds form-control-select-secondary ([c66ef0f](https://github.com/liferay/clay/commit/c66ef0fdcd33f1b30377d3ff25c3e4d8b887f3f4))
+* **@clayui/css:** Dropdown adds dropdown-menu-select variant ([13680ed](https://github.com/liferay/clay/commit/13680edfd39880d4014f7d74c98e2753028d9632))
+* **@clayui/css:** Forms adds form-control-select-secondary ([8ab290e](https://github.com/liferay/clay/commit/8ab290efe28ce4d8fc634c46d7a7fd53a6efc958))
+* **@clayui/css:** Mixins clay-dropdown-menu-variant adds ability to style more sub components ([1527b71](https://github.com/liferay/clay/commit/1527b71a6cdb84926a65d1580614d2db09f56bc1))
+* **@clayui/css:** Mixins clay-form-control-variant adds active state ([92c1b0a](https://github.com/liferay/clay/commit/92c1b0aa2bfbaec25137ed7c1bdf35e436d0c909))
+
+
+
+
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** add semantic role to pills ([7f99cfb](https://github.com/liferay/clay/commit/7f99cfb4098690608a3d7b5ab5f5c1f3f9d1a5f0))
+-   **@clayui/multi-select:** associate the text with the label to improve readability for the SR ([e0e79da](https://github.com/liferay/clay/commit/e0e79dad1854d7e58df95054394ce5b33118f6a7))
+-   **@clayui/multi-select:** fix input alignment error with label and loss of label focus ([824d326](https://github.com/liferay/clay/commit/824d326739516eeace26ae055f8e1f69d4be0eb6))
+
+### Features
+
+-   **@clayui/multi-select:** add focus control on labels on remove ([1d557b2](https://github.com/liferay/clay/commit/1d557b2dfeecbcf8f2991bba33882dc2b522813b))
+-   **@clayui/multi-select:** adds keyboard navigation interactions to labels ([7c6121f](https://github.com/liferay/clay/commit/7c6121f9f892718bb5de135250b38deca9e2fba5))
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 **Note:** Version bump only for package @clayui/multi-select

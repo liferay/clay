@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** Items should be links only ([d3c09be](https://github.com/liferay/clay/commit/d3c09be75afc28b9a6924dd33b0d67b3842c8c1a))
+-   **@clayui/pagination:** Map aria-label to the nav element ([7500043](https://github.com/liferay/clay/commit/750004328032cee3c9e4146f164be1f91b68a47a))
+-   **@clayui/pagination:** preventDefault on ClayLink when there is no href and SF ([1264f24](https://github.com/liferay/clay/commit/1264f242338bb794a66ab33d262677c42509a0f7))
+-   **@clayui/pagination:** Use @clayui/shared sub to replace placeholder text ([d99aa66](https://github.com/liferay/clay/commit/d99aa66259c9d83a0da809d677e1b2620d6653d1))
+
+### Features
+
+-   **@clayui/pagination:** PaginationWithBasicItems should have aria-labels by default ([262d686](https://github.com/liferay/clay/commit/262d68636d4d2432442e86ab9943c1355eb63e96))
+-   **@clayui/pagination:** Wraps pagination in nav element and adds navProps attribute ([d17a125](https://github.com/liferay/clay/commit/d17a12529c16fcd34962cf7fa57a8aa08dc0db67))
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 ### Bug Fixes

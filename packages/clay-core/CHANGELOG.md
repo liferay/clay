@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.83.0](https://github.com/liferay/clay/compare/v3.82.0...v3.83.0) (2022-12-20)
+
+### Features
+
+-   **@clayui/core:** add ARIA properties to Option and Text component ([2c41e18](https://github.com/liferay/clay/commit/2c41e182fdfef0c37b088c57c0eaa4f8468bbd29))
+-   **@clayui/core:** add typeahead support when menu is closed ([10a2681](https://github.com/liferay/clay/commit/10a2681e4543732705232914875bd18554958f74))
+-   **@clayui/core:** adds hybrid component implementation to use native selector on mobile device ([a987646](https://github.com/liferay/clay/commit/a987646d2c44b553d7718fa682c44f88985e0030))
+-   **@clayui/core:** Adds new Picker/Custom Select component ([be6dc86](https://github.com/liferay/clay/commit/be6dc86aeea79ec4d31e9fdfc26ea0a61c731d09))
+-   **@clayui/core:** adds shortcut jump for PageUp and PageDown ([d46c286](https://github.com/liferay/clay/commit/d46c286c49ceb0e6d1c2ac1f65c45f6334e55aea))
+-   **@clayui/core:** when leaving the focus of the Picker selects the option with visual focus ([be57258](https://github.com/liferay/clay/commit/be57258c482a566df266754c7f80f62e4d5188a2))
+-   **@clayui/shared:** differentiates focus and hover for accessibility focus ([cf46b07](https://github.com/liferay/clay/commit/cf46b072b91968bb0cf4dd489b0c2ccf38d80672))
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 **Note:** Version bump only for package @clayui/core
