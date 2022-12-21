@@ -18,10 +18,13 @@ interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 
 const ClayPagination = React.forwardRef<HTMLUListElement, IProps>(
 	({children, className, size, ...otherProps}: IProps, ref) => {
+		const ariaLabel = otherProps['aria-label'] || 'Pagination';
+
 		return (
-			<nav aria-label={otherProps['aria-label'] || 'Pagination'}>
+			<nav aria-label={ariaLabel}>
 				<ul
 					{...otherProps}
+					aria-label={undefined}
 					className={classNames(
 						'pagination pagination-root',
 						className,
