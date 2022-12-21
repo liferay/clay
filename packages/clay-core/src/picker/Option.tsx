@@ -130,7 +130,7 @@ export function Option({
 			>
 				{selectedKey === keyValue && (
 					<span className="dropdown-item-indicator-start">
-						<Icon symbol="check" />
+						<Icon symbol="check-small" />
 					</span>
 				)}
 
