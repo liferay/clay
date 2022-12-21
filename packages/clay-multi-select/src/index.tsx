@@ -68,6 +68,11 @@ type MenuRenderer = (props: IMenuRendererProps) => JSX.Element;
 export interface IProps
 	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
 	/**
+	 * Flag to align the Autocomplete within the viewport.
+	 */
+	alignmentByViewport?: boolean;
+
+	/**
 	 * Title for the `Clear All` button.
 	 */
 	clearAllTitle?: string;
@@ -214,6 +219,7 @@ const KeysSides = [Keys.Left, Keys.Right];
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
+			alignmentByViewport = false,
 			clearAllTitle = 'Clear All',
 			closeButtonAriaLabel = 'Remove {0}',
 			defaultItems = [],
@@ -709,6 +715,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 						<ClayAutocomplete.DropDown
 							active={active}
 							alignElementRef={containerRef}
+							alignmentByViewport={alignmentByViewport}
 							onSetActive={setActive}
 						>
 							<MenuRenderer
