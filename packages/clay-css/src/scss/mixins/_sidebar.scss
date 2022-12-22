@@ -235,12 +235,26 @@
 			@at-root {
 				#{clay-insert-before(clay-parent(&), '.sidenav-start ')},
 				#{clay-insert-before(clay-parent(&), '.sidenav-left ')} {
-					@include clay-css(map-get($map, sidenav-start));
+					$sidenav-start: setter(map-get($map, sidenav-start), ());
+
+					@include clay-css($sidenav-start);
+
+					&:focus,
+					&.focus {
+						@include clay-css(map-get($sidenav-start, focus));
+					}
 				}
 
 				#{clay-insert-before(clay-parent(&), '.sidenav-end ')},
 				#{clay-insert-before(clay-parent(&), '.sidenav-right ')} {
-					@include clay-css(map-get($map, sidenav-right));
+					$sidenav-end: setter(map-get($map, sidenav-right), ());
+
+					@include clay-css($sidenav-end);
+
+					&:focus,
+					&.focus {
+						@include clay-css(map-get($sidenav-end, focus));
+					}
 				}
 			}
 
