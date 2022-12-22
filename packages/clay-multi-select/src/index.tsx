@@ -409,6 +409,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 			[internalItems]
 		);
 
+		const [isLabelFocused, setIsLabelFocused] = useState<string | null>(
+			null
+		);
+
 		const labelId = useId();
 		const ariaDescriptionId = useId();
 
@@ -534,6 +538,11 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 									return (
 										<React.Fragment key={id}>
 											<ClayLabel
+												className={
+													isLabelFocused === id
+														? 'focus'
+														: undefined
+												}
 												onKeyDown={({key}) => {
 													if (
 														key === Keys.Backspace
@@ -546,6 +555,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 												}}
 												role="row"
 												spritemap={spritemap}
+												tabIndex={-1}
 												withClose={false}
 											>
 												<ClayLabel.ItemExpand
@@ -553,7 +563,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 														ariaDescriptionId
 													}
 													id={id}
+													onBlur={() =>
+														setIsLabelFocused(null)
+													}
+													onFocus={() =>
+														setIsLabelFocused(id)
+													}
 													role="gridcell"
+													style={{outline: 'none'}}
 													tabIndex={
 														(lastFocusedItem ===
 															null &&

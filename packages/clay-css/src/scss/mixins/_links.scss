@@ -656,6 +656,7 @@
 				}
 			}
 
+			&.focus,
 			&:focus {
 				@include clay-css($focus);
 
