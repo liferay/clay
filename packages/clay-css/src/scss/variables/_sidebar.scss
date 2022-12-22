@@ -85,6 +85,7 @@ $sidebar: map-deep-merge(
 		-webkit-overflow-scrolling: touch,
 		focus: (
 			box-shadow: $component-focus-inset-box-shadow,
+			outline: 0,
 		),
 		sidebar-header: (
 			padding-bottom: $sidebar-padding-bottom,

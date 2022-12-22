@@ -63,6 +63,10 @@ $sidebar-light: map-deep-merge(
 		box-shadow: -0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
 		sidenav-start: (
 			box-shadow: 0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+			focus: (
+				box-shadow: #{0.25rem 0 0.5rem -0.25rem rgba(0, 0, 0, 0.1),
+				$component-focus-inset-box-shadow},
+			),
 		),
 		sidebar-panel: (
 			background-color: $gray-200,
