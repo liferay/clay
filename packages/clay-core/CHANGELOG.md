@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.84.0](https://github.com/liferay/clay/compare/v3.83.1...v3.84.0) (2022-12-23)
+
+### Bug Fixes
+
+-   **@clayui/core:** update Picker select icon ([637d5fc](https://github.com/liferay/clay/commit/637d5fc4cfe11954e8d80d8c6028292a00198207))
+
 ## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
 
 ### Bug Fixes
