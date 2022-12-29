@@ -218,49 +218,53 @@ export const ClayPaginationBarWithBasicItems = ({
 	}, [totalPages]);
 
 	return (
-		<PaginationBar {...otherProps}>
-			{showDeltasDropDown && (
-				<PaginationBar.DropDown
-					alignmentPosition={alignmentPosition}
-					items={items}
-					trigger={
-						<ClayButton
-							data-testid="selectPaginationBar"
-							displayType="unstyled"
-						>
-							{sub(labels.perPageItems, [activeDelta])}
+		<>
+			{totalItems ? (
+				<PaginationBar {...otherProps}>
+					{showDeltasDropDown && (
+						<PaginationBar.DropDown
+							alignmentPosition={alignmentPosition}
+							items={items}
+							trigger={
+								<ClayButton
+									data-testid="selectPaginationBar"
+									displayType="unstyled"
+								>
+									{sub(labels.perPageItems, [activeDelta])}
 
-							<ClayIcon
-								spritemap={spritemap}
-								symbol="caret-double-l"
-							/>
-						</ClayButton>
-					}
-				/>
-			)}
+									<ClayIcon
+										spritemap={spritemap}
+										symbol="caret-double-l"
+									/>
+								</ClayButton>
+							}
+						/>
+					)}
 
-			<PaginationBar.Results>
-				{sub(labels.paginationResults, [
-					(internalActive - 1) * activeDelta + 1,
-					internalActive * activeDelta < totalItems
-						? internalActive * activeDelta
-						: totalItems,
-					totalItems,
-				])}
-			</PaginationBar.Results>
+					<PaginationBar.Results>
+						{sub(labels.paginationResults, [
+							(internalActive - 1) * activeDelta + 1,
+							internalActive * activeDelta < totalItems
+								? internalActive * activeDelta
+								: totalItems,
+							totalItems,
+						])}
+					</PaginationBar.Results>
 
-			<ClayPaginationWithBasicItems
-				active={internalActive}
-				alignmentPosition={alignmentPosition}
-				disableEllipsis={disableEllipsis}
-				disabledPages={disabledPages}
-				ellipsisBuffer={ellipsisBuffer}
-				ellipsisProps={ellipsisProps}
-				hrefConstructor={hrefConstructor}
-				onActiveChange={setActive}
-				spritemap={spritemap}
-				totalPages={totalPages}
-			/>
-		</PaginationBar>
+					<ClayPaginationWithBasicItems
+						active={internalActive}
+						alignmentPosition={alignmentPosition}
+						disableEllipsis={disableEllipsis}
+						disabledPages={disabledPages}
+						ellipsisBuffer={ellipsisBuffer}
+						ellipsisProps={ellipsisProps}
+						hrefConstructor={hrefConstructor}
+						onActiveChange={setActive}
+						spritemap={spritemap}
+						totalPages={totalPages}
+					/>
+				</PaginationBar>
+			) : null}
+		</>
 	);
 };
