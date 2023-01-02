@@ -874,12 +874,16 @@
 				@include clay-css($hover);
 
 				> option {
-					@include clay-css(map-get($hover, option));
+					$hover-option: setter(map-get($hover, option), ());
+
+					@include clay-css($hover-option);
+
+					&:hover {
+						@include clay-css(map-get($hover-option, hover));
+					}
 
 					&:checked {
-						@include clay-css(
-							map-deep-get($hover, option, checked)
-						);
+						@include clay-css(map-get($hover-option, checked));
 					}
 				}
 			}
@@ -889,12 +893,16 @@
 				@include clay-css($focus);
 
 				> option {
-					@include clay-css(map-get($focus, option));
+					$focus-option: setter(map-get($focus, option), ());
+
+					@include clay-css($focus-option);
+
+					&:hover {
+						@include clay-css(map-get($focus-option, hover));
+					}
 
 					&:checked {
-						@include clay-css(
-							map-deep-get($focus, option, checked)
-						);
+						@include clay-css(map-get($focus-option, checked));
 					}
 				}
 			}
@@ -954,6 +962,10 @@
 				> option {
 					@include clay-css($disabled-option);
 
+					&:hover {
+						@include clay-css(map-get($disabled-option, hover));
+					}
+
 					&:checked {
 						@include clay-css(map-get($disabled-option, checked));
 					}
@@ -965,6 +977,10 @@
 
 				@include clay-css($option);
 
+				&:hover {
+					@include clay-css(map-get($option, hover));
+				}
+
 				&:checked {
 					@include clay-css(map-get($option, checked));
 				}
@@ -972,28 +988,33 @@
 
 			@if (map-get($map, firefox-only)) {
 				@-moz-document url-prefix() {
-					@include clay-css(map-get($map, firefox-only));
+					$ff-only: setter(map-get($map, firefox-only), ());
+
+					@include clay-css($ff-only);
 
 					&:hover,
 					&.hover {
-						@include clay-css(
-							map-deep-get($map, firefox-only, hover)
-						);
+						$ff-only-hover: setter(map-get($ff-only, hover), ());
+
+						@include clay-css($ff-only-hover);
 
 						> option {
-							@include clay-css(
-								map-deep-get($map, firefox-only, hover, option)
+							$ff-only-hover-option: setter(
+								map-get($ff-only-hover, option),
+								()
 							);
+
+							@include clay-css($ff-only-hover-option);
+
+							&:hover {
+								@include clay-css(
+									map-get($ff-only-hover-option, hover)
+								);
+							}
 
 							&:checked {
 								@include clay-css(
-									map-deep-get(
-										$map,
-										firefox-only,
-										hover,
-										option,
-										checked
-									)
+									map-get($ff-only-hover-option, checked)
 								);
 							}
 						}
@@ -1001,24 +1022,27 @@
 
 					&:focus,
 					&.focus {
-						@include clay-css(
-							map-deep-get($map, firefox-only, focus)
-						);
+						$ff-only-focus: setter(map-get($ff-only, focus), ());
+
+						@include clay-css($ff-only-focus);
 
 						> option {
-							@include clay-css(
-								map-deep-get($map, firefox-only, focus, option)
+							$ff-only-focus-option: setter(
+								map-get($ff-only-focus, option),
+								()
 							);
+
+							@include clay-css($ff-only-focus-option);
+
+							&:hover {
+								@include clay-css(
+									map-get($ff-only-focus-option, hover)
+								);
+							}
 
 							&:checked {
 								@include clay-css(
-									map-deep-get(
-										$map,
-										firefox-only,
-										focus,
-										option,
-										checked
-									)
+									map-get($ff-only-focus-option, checked)
 								);
 							}
 						}
@@ -1026,47 +1050,47 @@
 
 					&:disabled,
 					&.disabled {
-						@include clay-css(
-							map-deep-get($map, firefox-only, disabled)
+						$ff-only-disabled: setter(
+							map-get($ff-only, disabled),
+							()
 						);
 
+						@include clay-css($ff-only-disabled);
+
 						> option {
-							@include clay-css(
-								map-deep-get(
-									$map,
-									firefox-only,
-									disabled,
-									option
-								)
+							$ff-only-disabled-option: setter(
+								map-get($ff-only-disabled, option),
+								()
 							);
+
+							@include clay-css($ff-only-disabled-option);
+
+							&:hover {
+								@include clay-css(
+									map-get($ff-only-disabled-option, hover)
+								);
+							}
 
 							&:checked {
 								@include clay-css(
-									map-deep-get(
-										$map,
-										firefox-only,
-										disabled,
-										option,
-										checked
-									)
+									map-get($ff-only-disabled-option, checked)
 								);
 							}
 						}
 					}
 
 					option {
-						@include clay-css(
-							map-deep-get($map, firefox-only, option)
-						);
+						$ff-only-option: setter(map-get($ff-only, option), ());
+
+						@include clay-css($ff-only-option);
+
+						&:hover {
+							@include clay-css(map-get($ff-only-option, hover));
+						}
 
 						&:checked {
 							@include clay-css(
-								map-deep-get(
-									$map,
-									firefox-only,
-									option,
-									checked
-								)
+								map-get($ff-only-option, checked)
 							);
 						}
 					}

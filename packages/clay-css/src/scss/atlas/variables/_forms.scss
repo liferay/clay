@@ -443,16 +443,18 @@ $input-select-size: map-deep-merge(
 		focus: (
 			option: (
 				checked: (
-					background-image: linear-gradient(#ffa700, #ffa700),
-					color: #fff,
-					filter: invert(100%),
+					background-image: linear-gradient(#ffb528, #ffb528),
+					filter: invert(1),
 				),
 			),
 		),
 		option: (
 			padding: 0.4375rem 0.5rem,
-			checked: (
+			hover: (
 				background-image: linear-gradient(#{$gray-300}, #{$gray-300}),
+			),
+			checked: (
+				background-image: linear-gradient(#{$light-d2}, #{$light-d2}),
 			),
 		),
 		firefox-only: (
@@ -464,9 +466,6 @@ $input-select-size: map-deep-merge(
 						filter: invert(0),
 					),
 				),
-			),
-			option: (
-				padding: 0.40625rem 0.5rem,
 			),
 		),
 	),
