@@ -35,6 +35,18 @@ describe('ClayPaginationBar', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("doesn't render when there are no items", () => {
+		const {container} = render(
+			<ClayPaginationBarWithBasicItems
+				showDeltasDropDown={false}
+				spritemap={spritemap}
+				totalItems={0}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('calls onPageChange when arrow is clicked', () => {
 		const changeMock = jest.fn();
 
