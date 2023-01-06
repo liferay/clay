@@ -2,7 +2,40 @@
 /// @group Links
 ////
 
-$single-link-font-weight: $font-weight-semi-bold !default;
+$c-link: () !default;
+$c-link: map-deep-merge(
+	(
+		text-decoration: none,
+		transition: clay-enable-transitions(box-shadow 0.15s ease-in-out),
+		hover: (
+			text-decoration: none,
+		),
+		focus: (
+			border-radius: 1px,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		c-link-variants: (
+			text-secondary: (
+				color: $gray-900 !important,
+				hover: (
+					color: $black !important,
+				),
+				focus: (
+					color: $black !important,
+				),
+			),
+			text-tertiary: (
+				color: $gray-900 !important,
+				hover: (
+					color: $black !important,
+					text-decoration: underline,
+				),
+			),
+		),
+	),
+	$c-link
+);
 
 $component-link: () !default;
 $component-link: map-deep-merge(
@@ -36,6 +69,8 @@ $link-secondary: map-deep-merge(
 	),
 	$link-secondary
 );
+
+$single-link-font-weight: $font-weight-semi-bold !default;
 
 // Link Outline
 

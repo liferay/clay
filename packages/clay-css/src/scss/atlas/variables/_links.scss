@@ -17,6 +17,10 @@ $link-primary: map-deep-merge(
 	(
 		border-radius: 1px,
 		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			background-color: $primary-l3,
+			color: clay-darken($primary, 15%),
+		),
 		focus: (
 			color: clay-darken($primary, 15%),
 			box-shadow: $component-focus-box-shadow,
@@ -32,6 +36,7 @@ $link-secondary: map-deep-merge(
 		border-radius: 1px,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
+			background-color: $gray-200,
 			color: $gray-900,
 		),
 		focus: (
