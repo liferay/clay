@@ -37,6 +37,7 @@ const ClayPaginationItem = ({
 						otherProps.onClick(event);
 					}
 				}}
+				tabIndex={active || (!href && !disabled) ? 0 : undefined}
 			>
 				{children}
 			</ClayLink>
