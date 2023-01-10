@@ -12,7 +12,7 @@ export default {
 	argTypes: {
 		displayType: {
 			control: {type: 'select'},
-			options: ['danger', 'info', 'success', 'warning'],
+			options: ['danger', 'info', 'secondary', 'success', 'warning'],
 		},
 		variant: {
 			control: {type: 'select'},
@@ -49,6 +49,9 @@ export const Feedback = () => (
 		</ClayAlert>
 		<ClayAlert displayType="success" variant="feedback">
 			Data is saved
+		</ClayAlert>
+		<ClayAlert displayType="secondary" variant="feedback">
+			Due to permission restrictions, this content cannot be displayed.
 		</ClayAlert>
 	</>
 );
@@ -95,6 +98,12 @@ export const Toast = () => (
 			viennese barista, spoon carajillo shop viennese dark. And ristretto
 			caffeine, plunger pot black, café au lait galão flavour foam strong.
 			Macchiato roast, breve fair trade seasonal et cultivar.
+		</ClayAlert>
+		<ClayAlert displayType="secondary" onClose={() => {}}>
+			Due to permission restrictions, this content cannot be displayed.
+		</ClayAlert>
+		<ClayAlert displayType="secondary" onClose={() => {}} title="Success">
+			Due to permission restrictions, this content cannot be displayed.
 		</ClayAlert>
 	</ClayAlert.ToastContainer>
 );
