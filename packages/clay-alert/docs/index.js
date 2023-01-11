@@ -12,16 +12,24 @@ const AlertCode = `const Component = () => {
 	return (
 		<>
 			<ClayAlert displayType="info" spritemap={spritemap} title="Info">
-				This is a default alert
+				This is an info message.
 			</ClayAlert>
 
-			<ClayAlert displayType="warning" spritemap={spritemap} title="Warning" variant="stripe">
-				This is a stripe alert
+			<ClayAlert displayType="secondary" spritemap={spritemap} title="Secondary">
+				This is a secondary message.
 			</ClayAlert>
 
-			<div className="c-mt-3">
-				<ClayAlert displayType="danger" spritemap={spritemap} title="Error Indicator" variant="feedback" />
-			</div>
+			<ClayAlert displayType="success" spritemap={spritemap} title="Success">
+				This is a success message.
+			</ClayAlert>
+
+			<ClayAlert displayType="warning" spritemap={spritemap} title="Warning">
+				This is a warning message.
+			</ClayAlert>
+
+			<ClayAlert displayType="danger" spritemap={spritemap} title="Danger">
+				This is a danger message.
+			</ClayAlert>
 		</>
 	);
 }
@@ -34,15 +42,9 @@ import ClayAlert from '@clayui/alert';`;
 const alertJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
 
 const AlertJSPCode = `<clay:alert
-	message="This is a default alert"
+	message="This is an info message."
 	displayType="info"
 	title="Info"
-/>
-
-<clay:stripe
-	message="This is a stripe alert"
-	displayType="warning"
-	title="Warning"
 />`;
 
 export const Alert = () => {
@@ -59,6 +61,97 @@ export const Alert = () => {
 			imports: alertJSPImportsCode,
 			name: 'JSP',
 			value: AlertJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
+};
+
+const AlertVariantsCode = `const Component = () => {
+	return (
+		<>
+			<ClayAlert displayType="info" spritemap={spritemap} title="Info" variant="stripe">
+				This is a stripe variant.
+			</ClayAlert>
+
+			<div className="c-mt-3">
+				<ClayAlert displayType="success" spritemap={spritemap} title="This is an inline variant." variant="inline" />
+			</div>
+
+			<div className="c-mt-3">
+				<ClayAlert displayType="danger" spritemap={spritemap} title="This is a feedback variant." variant="feedback" />
+			</div>
+		</>
+	);
+}
+
+render(<Component />);`;
+
+const alertVariantsImportsCode = `import React from 'react';
+import ClayAlert from '@clayui/alert';`;
+
+const alertVariantsJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const AlertVariantsJSPCode = `<clay:stripe
+	message="This is a stripe variant."
+	displayType="info"
+	title="Info"
+/>
+
+<clay:alert
+	displayType="success"
+	title="This is an inline variant."
+	variant="inline"
+/>
+
+<clay:alert
+	displayType="danger"
+	title="This is a feedback variant."
+	variant="feedback"
+/>`;
+
+export const AlertVariants = () => {
+	const scope = {ClayAlert};
+
+	const codeSnippets = [
+		{
+			imports: alertVariantsImportsCode,
+			name: 'React',
+			value: AlertVariantsCode,
+		},
+		{
+			imports: alertVariantsJSPImportsCode,
+			name: 'JSP',
+			value: AlertVariantsJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
+};
+
+const AlertIconCode = `const Component = () => {
+	return (
+		<>
+			<ClayAlert displayType="info" spritemap={spritemap} symbol="thumbs-up-full" title="Info" variant="stripe">
+				This is a stripe variant.
+			</ClayAlert>
+		</>
+	);
+}
+
+render(<Component />);`;
+
+const alertIconImportsCode = `import React from 'react';
+import ClayAlert from '@clayui/alert';`;
+
+export const AlertIcon = () => {
+	const scope = {ClayAlert};
+
+	const codeSnippets = [
+		{
+			imports: alertIconImportsCode,
+			name: 'React',
+			value: AlertIconCode,
 		},
 	];
 

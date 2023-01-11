@@ -7,7 +7,9 @@ packageNpm: '@clayui/alert'
 
 import {
 	Alert,
+	AlertIcon,
 	AlertToastContainer,
+	AlertVariants,
 	AlertWithButton,
 	InlineAlert,
 } from '$packages/clay-alert/docs/index';
@@ -15,7 +17,9 @@ import {
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [Display Types](#alert-display-types)
 -   [Variants](#variants)
+-   [Icons](#alert-icons)
 -   [Using with ClayButton](#using-with-claybutton)
     -   [Inline](#inline)
 -   [Using with ToastContainer](#using-with-toastcontainer)
@@ -23,13 +27,25 @@ import {
 </div>
 </div>
 
-## Variants
+## Display Types(#alert-display-types)
 
-You can use alert with the following variants:
+The available `displayTypes` are `info`, `secondary`, `success`, `warning`, and `danger`.
 
 <Alert />
 
 We recommend that you review the use cases in the <a href="https://storybook.clayui.com/?path=/story/design-system-components-alert--default">Storybook</a>.
+
+## Variants
+
+You can use alert with the `feedback`, `inline`, and `stripe` variants.
+
+<AlertVariants />
+
+## Icons(#alert-icons)
+
+Each Alert `displayType` has a default icon, the icon can be changed through the `symbol` attribute.
+
+<AlertIcon />
 
 ## Using with ClayButton
 
