@@ -15,6 +15,7 @@ exports[`ClayPagination renders 1`] = `
           aria-label="Go to the previous page, 11"
           class="page-link"
           data-testid="prevArrow"
+          tabindex="0"
         >
           <svg
             class="lexicon-icon lexicon-icon-angle-left"
@@ -32,6 +33,7 @@ exports[`ClayPagination renders 1`] = `
         <a
           aria-label="Go to page, 1"
           class="page-link"
+          tabindex="0"
         >
           1
         </a>
@@ -57,6 +59,7 @@ exports[`ClayPagination renders 1`] = `
         <a
           aria-label="Go to page, 10"
           class="page-link"
+          tabindex="0"
         >
           10
         </a>
@@ -67,6 +70,7 @@ exports[`ClayPagination renders 1`] = `
         <a
           aria-label="Go to page, 11"
           class="page-link"
+          tabindex="0"
         >
           11
         </a>
@@ -77,6 +81,7 @@ exports[`ClayPagination renders 1`] = `
         <a
           aria-label="Go to page, 12"
           class="page-link"
+          tabindex="0"
         >
           12
         </a>
@@ -87,6 +92,7 @@ exports[`ClayPagination renders 1`] = `
         <a
           aria-label="Go to page, 13"
           class="page-link"
+          tabindex="0"
         >
           13
         </a>
@@ -97,6 +103,7 @@ exports[`ClayPagination renders 1`] = `
         <a
           aria-label="Go to page, 14"
           class="page-link"
+          tabindex="0"
         >
           14
         </a>
@@ -122,6 +129,7 @@ exports[`ClayPagination renders 1`] = `
         <a
           aria-label="Go to page, 25"
           class="page-link"
+          tabindex="0"
         >
           25
         </a>
@@ -133,6 +141,7 @@ exports[`ClayPagination renders 1`] = `
           aria-label="Go to the next page, 13"
           class="page-link"
           data-testid="nextArrow"
+          tabindex="0"
         >
           <svg
             class="lexicon-icon lexicon-icon-angle-right"
@@ -181,6 +190,7 @@ exports[`ClayPagination renders with only one page 1`] = `
         <a
           aria-label="Go to page, 1"
           class="page-link"
+          tabindex="0"
         >
           1
         </a>
