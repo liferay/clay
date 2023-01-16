@@ -77,14 +77,12 @@ export const Item = React.forwardRef<HTMLLIElement, Props>(function Item(
 						return;
 					}
 
-					onActivePanel(
-						keyValue === activePanel ? undefined : keyValue!
-					);
+					onActivePanel(keyValue === activePanel ? null : keyValue!);
 				},
 				role: 'tab',
 				tabIndex:
-					(activePanel !== undefined && activePanel !== keyValue) ||
-					(activePanel === undefined && index !== 0)
+					(activePanel !== null && activePanel !== keyValue) ||
+					(activePanel === null && index !== 0)
 						? -1
 						: null,
 			})}

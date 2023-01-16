@@ -34,19 +34,20 @@ export const Default = (args: any) => {
 			<VerticalBar activation={args.activation} position="left">
 				<VerticalBar.Bar displayType={args.barDisplayType}>
 					<VerticalBar.Item>
-						<Button displayType={null}>
+						<Button aria-label="Tag tab" displayType={null}>
 							<Icon symbol="tag" />
 						</Button>
 					</VerticalBar.Item>
 
 					<VerticalBar.Item divider>
-						<Button displayType={null}>
+						<Button aria-label="Message tab" displayType={null}>
 							<Icon symbol="message" />
 						</Button>
 					</VerticalBar.Item>
 
 					<VerticalBar.Item>
 						<Button
+							aria-label="Effects tab"
 							displayType={null}
 							onClick={(event) => {
 								event.preventDefault();
@@ -91,19 +92,20 @@ export const Default = (args: any) => {
 
 				<VerticalBar.Bar displayType={args.barDisplayType}>
 					<VerticalBar.Item>
-						<Button displayType={null}>
+						<Button aria-label="Tag tab" displayType={null}>
 							<Icon symbol="tag" />
 						</Button>
 					</VerticalBar.Item>
 
 					<VerticalBar.Item divider>
-						<Button displayType={null}>
+						<Button aria-label="Message tab" displayType={null}>
 							<Icon symbol="message" />
 						</Button>
 					</VerticalBar.Item>
 
 					<VerticalBar.Item>
 						<Button
+							aria-label="Effects tab"
 							displayType={null}
 							onClick={(event) => {
 								event.preventDefault();
@@ -165,7 +167,10 @@ export const DynamicContent = (args: any) => {
 			>
 				{(item) => (
 					<VerticalBar.Item divider={item.divider} key={item.title}>
-						<Button displayType={null}>
+						<Button
+							aria-label={`${item.title} tab`}
+							displayType={null}
+						>
 							<Icon symbol={item.icon} />
 						</Button>
 					</VerticalBar.Item>
