@@ -263,8 +263,8 @@ $alert-primary: map-deep-merge(
 // .alert-secondary
 
 $alert-secondary-color: $secondary !default;
-$alert-secondary-bg: $secondary-l3 !default;
-$alert-secondary-border-color: $secondary-l1 !default;
+$alert-secondary-bg: $light-l1 !default;
+$alert-secondary-border-color: $light-d2 !default;
 $alert-secondary-close-color: $alert-secondary-color !default;
 $alert-secondary-close-hover-color: $alert-secondary-color !default;
 $alert-secondary-lead-color: $alert-secondary-color !default;

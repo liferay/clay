@@ -55,7 +55,12 @@ const useAutoClose = (autoClose?: boolean | number, onClose = () => {}) => {
 	};
 };
 
-export type DisplayType = 'danger' | 'info' | 'success' | 'warning';
+export type DisplayType =
+	| 'danger'
+	| 'info'
+	| 'secondary'
+	| 'success'
+	| 'warning';
 
 export interface IClayAlertProps
 	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'role'> {
@@ -98,6 +103,11 @@ export interface IClayAlertProps
 	spritemap?: string;
 
 	/**
+	 * The icon's symbol name in the spritemap.
+	 */
+	symbol?: string;
+
+	/**
 	 * The summary of the Alert, often is something like 'Error' or 'Info'.
 	 */
 	title?: string;
@@ -111,6 +121,7 @@ export interface IClayAlertProps
 const ICON_MAP = {
 	danger: 'exclamation-full',
 	info: 'info-circle',
+	secondary: 'password-policies',
 	success: 'check-circle-full',
 	warning: 'warning-full',
 };
@@ -132,6 +143,7 @@ function ClayAlert({
 	onClose,
 	role = 'alert',
 	spritemap,
+	symbol,
 	title,
 	variant,
 	...otherProps
@@ -152,7 +164,10 @@ function ClayAlert({
 
 	const AlertIndicator = () => (
 		<span className="alert-indicator">
-			<Icon spritemap={spritemap} symbol={ICON_MAP[displayType]} />
+			<Icon
+				spritemap={spritemap}
+				symbol={symbol || ICON_MAP[displayType]}
+			/>
 		</span>
 	);
 
