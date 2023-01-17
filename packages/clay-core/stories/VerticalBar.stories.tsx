@@ -5,7 +5,7 @@
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {VerticalBar} from '../src/vertical-bar';
 
@@ -145,8 +145,13 @@ export const DynamicContent = (args: any) => {
 		},
 	];
 
+	const [active, setActive] = useState('Tag');
+
 	return (
-		<VerticalBar defaultActive="Tag">
+		<VerticalBar
+			active={active}
+			onActiveChange={(active) => setActive(active)}
+		>
 			<VerticalBar.Content
 				displayType={args.contentDisplayType}
 				items={items}
