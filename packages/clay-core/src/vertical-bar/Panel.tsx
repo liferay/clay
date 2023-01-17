@@ -62,22 +62,17 @@ export function Panel({children, keyValue, tabIndex}: Props) {
 			})}
 			classNames={{
 				enter: 'c-slideout-transition c-slideout-transition-in',
-				enterActive: 'c-slideout-show',
+				enterActive:
+					'c-slideout-show c-slideout-transition c-slideout-transition-in',
 				enterDone: 'c-slideout-show',
 				exit: 'c-slideout-transition c-slideout-transition-out',
 			}}
 			id={`${id}-tabpanel-${keyValue}`}
 			in={activePanel === keyValue}
+			exit={!activePanel}
 			role="tabpanel"
 			tabIndex={tabIndex}
-			timeout={
-				(activePanel !== undefined &&
-					previousActivePanelRef.current === undefined) ||
-				(activePanel === undefined &&
-					previousActivePanelRef.current !== undefined)
-					? {enter: 300, exit: 200}
-					: 0
-			}
+			timeout={{enter: 300, exit: 200}}
 			unmountOnExit
 		>
 			<div>{children}</div>
