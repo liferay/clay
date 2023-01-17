@@ -29,15 +29,15 @@ $pagination-color: $gray-600 !default;
 $pagination-padding-x: 0.625rem !default; // 10px
 $pagination-padding-y: 0 !default;
 
-$pagination-hover-bg: rgba(0, 0, 0, 0.02) !default;
+$pagination-hover-bg: rgba(39, 40, 41, 0.04) !default;
 $pagination-hover-border-color: transparent !default;
 $pagination-hover-color: $gray-900 !default;
 
 $pagination-focus-box-shadow: $component-focus-box-shadow !default;
 
-$pagination-active-bg: rgba(0, 0, 0, 0.04) !default;
+$pagination-active-bg: $secondary !default;
 $pagination-active-border-color: transparent !default;
-$pagination-active-color: $pagination-hover-color !default;
+$pagination-active-color: $white !default;
 
 $pagination-disabled-bg: transparent !default;
 $pagination-disabled-border-color: $pagination-disabled-bg !default;
