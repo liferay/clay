@@ -39,6 +39,19 @@ describe('ClayPagination', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('totalPages with 0 will render the pagination with only one page', () => {
+		const {container} = render(
+			<ClayPaginationWithBasicItems
+				defaultActive={1}
+				ellipsisBuffer={1}
+				spritemap={spritemap}
+				totalPages={0}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('calls onPageChange when arrow is clicked', () => {
 		const changeMock = jest.fn();
 

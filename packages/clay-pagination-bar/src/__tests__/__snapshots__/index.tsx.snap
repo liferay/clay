@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClayPaginationBar doesn't render when there are no items 1`] = `<div />`;
-
 exports[`ClayPaginationBar renders 1`] = `
 <div>
   <div
@@ -243,6 +241,75 @@ exports[`ClayPaginationBar renders without a DropDown 1`] = `
             class="page-link"
             data-testid="nextArrow"
             tabindex="0"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-angle-right"
+              role="presentation"
+            >
+              <use
+                xlink:href="path/to/spritemap#angle-right"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`ClayPaginationBar totalItems with 0 will render the pagination bar with only one page 1`] = `
+<div>
+  <div
+    class="pagination-bar"
+  >
+    <div
+      class="pagination-results"
+    >
+      Showing 1 to 1 of 1
+    </div>
+    <nav
+      aria-label="Pagination"
+    >
+      <ul
+        class="pagination pagination-root"
+      >
+        <li
+          class="page-item disabled"
+        >
+          <a
+            aria-label="Go to the previous page, 0"
+            class="page-link"
+            data-testid="prevArrow"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-angle-left"
+              role="presentation"
+            >
+              <use
+                xlink:href="path/to/spritemap#angle-left"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="page-item active"
+        >
+          <a
+            aria-label="Go to page, 1"
+            class="page-link"
+            tabindex="0"
+          >
+            1
+          </a>
+        </li>
+        <li
+          class="page-item disabled"
+        >
+          <a
+            aria-label="Go to the next page, 2"
+            class="page-link"
+            data-testid="nextArrow"
           >
             <svg
               class="lexicon-icon lexicon-icon-angle-right"

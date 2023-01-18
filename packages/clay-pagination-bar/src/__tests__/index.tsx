@@ -35,7 +35,7 @@ describe('ClayPaginationBar', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("doesn't render when there are no items", () => {
+	it('totalItems with 0 will render the pagination bar with only one page', () => {
 		const {container} = render(
 			<ClayPaginationBarWithBasicItems
 				showDeltasDropDown={false}
