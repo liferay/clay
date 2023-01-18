@@ -18,6 +18,7 @@ type Props = {
 	isKeyboardDismiss?: boolean;
 	isModal?: boolean;
 	isOpen: boolean;
+	menuClassName?: string;
 	menuRef: React.RefObject<HTMLElement>;
 	onClose: (action: 'escape' | 'blur') => void;
 	portalRef?: React.RefObject<HTMLElement>;
@@ -36,6 +37,7 @@ export function Overlay({
 	isKeyboardDismiss = false,
 	isModal = false,
 	isOpen = false,
+	menuClassName,
 	menuRef,
 	onClose,
 	portalRef,
@@ -128,7 +130,7 @@ export function Overlay({
 	}, [isModal, isOpen]);
 
 	return (
-		<ClayPortal subPortalRef={portalRef}>
+		<ClayPortal className={menuClassName} subPortalRef={portalRef}>
 			{isModal && (
 				<span
 					aria-hidden="true"

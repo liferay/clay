@@ -105,9 +105,15 @@ export type Props<T> = {
 	 * The currently selected key (controlled).
 	 */
 	selectedKey?: React.Key;
+
+	/**
+	 * Sets the className for the React.Portal Menu element.
+	 */
+	UNSAFE_menuClassName?: string;
 } & Omit<ICollectionProps<T, unknown>, 'virtualize'>;
 
 export function Picker<T>({
+	UNSAFE_menuClassName,
 	active: externalActive,
 	as: As = 'button',
 	children,
@@ -347,6 +353,7 @@ export function Picker<T>({
 					isCloseOnInteractOutside
 					isKeyboardDismiss
 					isOpen
+					menuClassName={UNSAFE_menuClassName}
 					menuRef={menuRef}
 					onClose={(action) => {
 						if (
