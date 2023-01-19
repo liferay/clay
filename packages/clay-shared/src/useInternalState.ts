@@ -28,7 +28,9 @@ export function useInternalState<Value>({
 	onChange,
 	value,
 }: Props<Value>) {
-	const [internalValue, setInternalValue] = useState(defaultValue ?? value);
+	const [internalValue, setInternalValue] = useState(
+		defaultValue === undefined ? value : defaultValue
+	);
 
 	warning(
 		!(typeof value === 'undefined' && typeof onChange !== 'undefined'),

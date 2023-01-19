@@ -10,9 +10,9 @@ import type {Key} from 'react';
 
 type Context = {
 	activation?: 'manual' | 'automatic';
-	activePanel: Key | undefined;
+	activePanel: Key | null;
 	id: string;
-	onActivePanel: InternalDispatch<React.Key | undefined>;
+	onActivePanel: InternalDispatch<React.Key | null>;
 };
 
 export const VerticalBarContext = createContext<Context>({} as Context);
