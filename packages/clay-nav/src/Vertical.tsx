@@ -49,6 +49,12 @@ interface IItemWithItems extends IItem {
 
 export interface IProps {
 	/**
+	 * Flag to define if the item represents the current page. Disable this
+	 * attribute only if there are multiple navigations on the page.
+	 */
+	'aria-current'?: 'page' | null;
+
+	/**
 	 * Flag to indicate the navigation behavior in the menu.
 	 *
 	 * - manual - it will just move the focus and menu activation is done just
@@ -94,7 +100,9 @@ export interface IProps {
 	spritemap?: string;
 }
 
-export interface INavItemProps extends IItemWithItems {
+export interface INavItemProps extends Omit<IItemWithItems, 'aria-current'> {
+	'aria-current'?: 'page' | null;
+
 	/**
 	 * Integer to keep track of what nested level the item is.
 	 */
@@ -130,6 +138,7 @@ function findSelectedNested(
 
 function Item({
 	active,
+	'aria-current': ariaCurrent = 'page',
 	href,
 	initialExpanded = false,
 	items,
@@ -157,7 +166,7 @@ function Item({
 		<Nav.Item role="none" {...otherProps}>
 			<Nav.Link
 				active={active}
-				aria-current={active ? 'page' : undefined}
+				aria-current={active ? ariaCurrent ?? undefined : undefined}
 				aria-expanded={items ? expanded : undefined}
 				aria-haspopup={items ? true : undefined}
 				collapsed={!expanded}
@@ -233,7 +242,13 @@ function Item({
 				>
 					<div ref={menusRef}>
 						<Nav role="menu" stacked>
-							{renderItems(items, spritemap, level++, itemRef)}
+							{renderItems(
+								items,
+								ariaCurrent,
+								spritemap,
+								level++,
+								itemRef
+							)}
 						</Nav>
 					</div>
 				</CSSTransition>
@@ -244,6 +259,7 @@ function Item({
 
 function renderItems(
 	items: Array<IItem>,
+	ariaCurrent: 'page' | null,
 	spritemap?: string,
 	level = 0,
 	parentItemRef?: React.RefObject<HTMLButtonElement | HTMLAnchorElement>
@@ -254,6 +270,7 @@ function renderItems(
 		return (
 			<Item
 				{...item}
+				aria-current={ariaCurrent}
 				key={key}
 				level={level}
 				parentItemRef={parentItemRef}
@@ -268,6 +285,7 @@ function ClayVerticalNav(props: IProps): JSX.Element & {
 };
 
 function ClayVerticalNav({
+	'aria-current': ariaCurrent = 'page',
 	activation = 'manual',
 	activeLabel,
 	decorated,
@@ -322,7 +340,7 @@ function ClayVerticalNav({
 				ref={containerRef}
 			>
 				<Nav aria-orientation="vertical" nested role="menubar">
-					{renderItems(items, spritemap)}
+					{renderItems(items, ariaCurrent, spritemap)}
 				</Nav>
 			</div>
 		</nav>
