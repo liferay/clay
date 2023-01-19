@@ -227,8 +227,7 @@ exports[`ClayPagination totalPages with 0 will render the pagination with only o
       <li
         class="page-item disabled"
       >
-        <a
-          aria-label="Go to the previous page, 0"
+        <div
           class="page-link"
           data-testid="prevArrow"
         >
@@ -240,7 +239,7 @@ exports[`ClayPagination totalPages with 0 will render the pagination with only o
               xlink:href="path/to/spritemap#angle-left"
             />
           </svg>
-        </a>
+        </div>
       </li>
       <li
         class="page-item active"
@@ -256,8 +255,7 @@ exports[`ClayPagination totalPages with 0 will render the pagination with only o
       <li
         class="page-item disabled"
       >
-        <a
-          aria-label="Go to the next page, 2"
+        <div
           class="page-link"
           data-testid="nextArrow"
         >
@@ -269,7 +267,7 @@ exports[`ClayPagination totalPages with 0 will render the pagination with only o
               xlink:href="path/to/spritemap#angle-right"
             />
           </svg>
-        </a>
+        </div>
       </li>
     </ul>
   </nav>
