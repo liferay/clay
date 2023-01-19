@@ -806,8 +806,18 @@
 	text-shadow: none;
 }
 
-.text-decoration-none {
-	text-decoration: none !important;
+@each $key, $value in $cadmin-text-decorations {
+	$selector: if(
+		starts-with($key, '.') or
+			starts-with($key, '#') or
+			starts-with($key, '%'),
+		$key,
+		str-insert($key, '.', 1)
+	);
+
+	#{$selector} {
+		@include clay-link($value);
+	}
 }
 
 .text-break {

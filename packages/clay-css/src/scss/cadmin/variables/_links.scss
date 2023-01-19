@@ -1,4 +1,36 @@
-$cadmin-single-link-font-weight: $cadmin-font-weight-semi-bold !default;
+$cadmin-c-link: () !default;
+$cadmin-c-link: map-deep-merge(
+	(
+		text-decoration: none,
+		transition: clay-enable-transitions(box-shadow 0.15s ease-in-out),
+		hover: (
+			text-decoration: none,
+		),
+		focus: (
+			border-radius: 1px,
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
+		c-link-variants: (
+			text-secondary: (
+				color: $cadmin-gray-900 !important,
+				hover: (
+					color: $cadmin-black !important,
+				),
+				focus: (
+					color: $cadmin-black !important,
+				),
+			),
+			text-tertiary: (
+				color: $cadmin-gray-900 !important,
+				hover: (
+					color: $cadmin-black !important,
+				),
+			),
+		),
+	),
+	$cadmin-c-link
+);
 
 $cadmin-component-link: () !default;
 $cadmin-component-link: map-deep-merge(
@@ -53,6 +85,8 @@ $cadmin-link-secondary: map-deep-merge(
 	),
 	$cadmin-link-secondary
 );
+
+$cadmin-single-link-font-weight: $cadmin-font-weight-semi-bold !default;
 
 // Link Outline
 

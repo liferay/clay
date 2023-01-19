@@ -693,9 +693,20 @@ $cadmin-link: map-deep-merge(
 		color: $cadmin-link-color,
 		cursor: $cadmin-link-cursor,
 		text-decoration: $cadmin-link-decoration,
+		text-underline-offset: 0.23em,
 		hover: (
 			color: $cadmin-link-hover-color,
 			text-decoration: $cadmin-link-hover-decoration,
+		),
+		inline-item-before: (
+			margin-right: 4px,
+		),
+		inline-item-middle: (
+			margin-left: 4px,
+			margin-right: 4px,
+		),
+		inline-item-after: (
+			margin-left: 4px,
 		),
 	),
 	$cadmin-link
