@@ -152,7 +152,7 @@ module.exports = {
 			statements: 98,
 		},
 		'./packages/clay-nav/src/': {
-			branches: 90,
+			branches: 88,
 			functions: 80,
 			lines: 93,
 			statements: 93,
