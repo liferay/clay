@@ -6,11 +6,18 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
+export interface IItemProps
+	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'aria-current'> {
 	/**
 	 * Determines the active state of an dropdown list item.
 	 */
 	active?: boolean;
+
+	/**
+	 * Flag to define if the item represents the current page. Disable this
+	 * attribute only if there are multiple navigations on the page.
+	 */
+	'aria-current'?: 'page' | null;
 
 	/**
 	 * Children elements received from ClayNavigationBar.Item component.
@@ -20,6 +27,7 @@ export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 
 const ClayNavigationBarIcon = ({
 	active = false,
+	'aria-current': ariaCurrent = 'page',
 	children,
 	className,
 	...otherProps
@@ -37,7 +45,9 @@ const ClayNavigationBarIcon = ({
 					) {
 						return React.cloneElement(child, {
 							...child.props,
-							'aria-current': active ? 'page' : undefined,
+							'aria-current': active
+								? ariaCurrent ?? undefined
+								: undefined,
 							children: (
 								<span className="navbar-text-truncate">
 									{child.props.children}
