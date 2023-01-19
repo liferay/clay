@@ -322,6 +322,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 		) => {
 			onKeyDown(event);
 
+			if (event.defaultPrevented) {
+				return;
+			}
+
 			const {key} = event;
 
 			if (key === Keys.Backspace && !internalValue) {
@@ -350,6 +354,10 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 
 		const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
 			onPaste(event);
+
+			if (event.defaultPrevented) {
+				return;
+			}
 
 			const pastedText = event.clipboardData.getData('Text');
 
