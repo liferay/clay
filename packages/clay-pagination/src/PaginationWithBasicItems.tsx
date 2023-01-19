@@ -128,6 +128,10 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 		}: IProps,
 		ref
 	) => {
+		if (totalPages === 0) {
+			totalPages = 1;
+		}
+
 		const [internalActive, setActive] = useInternalState({
 			defaultName: 'defaultActive',
 			defaultValue: defaultActive,
