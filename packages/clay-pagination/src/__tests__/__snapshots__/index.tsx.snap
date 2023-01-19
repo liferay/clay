@@ -169,8 +169,7 @@ exports[`ClayPagination renders with only one page 1`] = `
       <li
         class="page-item disabled"
       >
-        <a
-          aria-label="Go to the previous page, 0"
+        <div
           class="page-link"
           data-testid="prevArrow"
         >
@@ -182,7 +181,7 @@ exports[`ClayPagination renders with only one page 1`] = `
               xlink:href="path/to/spritemap#angle-left"
             />
           </svg>
-        </a>
+        </div>
       </li>
       <li
         class="page-item active"
@@ -198,8 +197,7 @@ exports[`ClayPagination renders with only one page 1`] = `
       <li
         class="page-item disabled"
       >
-        <a
-          aria-label="Go to the next page, 2"
+        <div
           class="page-link"
           data-testid="nextArrow"
         >
@@ -211,7 +209,7 @@ exports[`ClayPagination renders with only one page 1`] = `
               xlink:href="path/to/spritemap#angle-right"
             />
           </svg>
-        </a>
+        </div>
       </li>
     </ul>
   </nav>

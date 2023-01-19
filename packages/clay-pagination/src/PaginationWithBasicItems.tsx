@@ -154,7 +154,12 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 		return (
 			<Pagination {...otherProps} ref={ref}>
 				<Pagination.Item
-					aria-label={sub(ariaLabels.previous, [previousPage])}
+					aria-label={
+						internalActive !== 1
+							? sub(ariaLabels.previous, [previousPage])
+							: undefined
+					}
+					as={internalActive === 1 ? 'div' : undefined}
 					data-testid="prevArrow"
 					disabled={internalActive === 1}
 					href={previousHref}
@@ -202,7 +207,12 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 				)}
 
 				<Pagination.Item
-					aria-label={sub(ariaLabels.next, [nextPage])}
+					aria-label={
+						internalActive !== totalPages
+							? sub(ariaLabels.next, [nextPage])
+							: undefined
+					}
+					as={internalActive === totalPages ? 'div' : undefined}
 					data-testid="nextArrow"
 					disabled={internalActive === totalPages}
 					href={nextHref}

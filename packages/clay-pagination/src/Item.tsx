@@ -8,13 +8,15 @@ import classNames from 'classnames';
 import React from 'react';
 
 export interface IPaginationItemProps
-	extends React.HTMLAttributes<HTMLAnchorElement | HTMLButtonElement> {
+	extends React.HTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
+	as?: 'div' | typeof ClayLink;
 	active?: boolean;
 	disabled?: boolean;
 	href?: string;
 }
 
 const ClayPaginationItem = ({
+	as: As = ClayLink,
 	active = false,
 	children,
 	disabled = false,
@@ -23,24 +25,30 @@ const ClayPaginationItem = ({
 }: IPaginationItemProps) => {
 	return (
 		<li className={classNames('page-item', {active, disabled})}>
-			<ClayLink
-				{...otherProps}
-				aria-current={active && href ? 'page' : undefined}
-				className="page-link"
-				href={disabled || active ? undefined : href}
-				onClick={(event) => {
-					if (!href) {
-						event.preventDefault();
-					}
+			{As === 'div' ? (
+				<As {...otherProps} className="page-link">
+					{children}
+				</As>
+			) : (
+				<As
+					{...otherProps}
+					aria-current={active && href ? 'page' : undefined}
+					className="page-link"
+					href={disabled || active ? undefined : href}
+					onClick={(event) => {
+						if (!href) {
+							event.preventDefault();
+						}
 
-					if (otherProps.onClick) {
-						otherProps.onClick(event);
-					}
-				}}
-				tabIndex={active || (!href && !disabled) ? 0 : undefined}
-			>
-				{children}
-			</ClayLink>
+						if (otherProps.onClick) {
+							otherProps.onClick(event as any);
+						}
+					}}
+					tabIndex={active || (!href && !disabled) ? 0 : undefined}
+				>
+					{children}
+				</As>
+			)}
 		</li>
 	);
 };
