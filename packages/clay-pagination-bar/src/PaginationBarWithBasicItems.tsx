@@ -4,10 +4,11 @@
  */
 
 import ClayButton from '@clayui/button';
+import {Option, Picker} from '@clayui/core';
 import ClayIcon from '@clayui/icon';
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
-import {InternalDispatch, sub, useInternalState} from '@clayui/shared';
-import React from 'react';
+import {InternalDispatch, sub, useId, useInternalState} from '@clayui/shared';
+import React, {useEffect} from 'react';
 
 import PaginationBar from './PaginationBar';
 
@@ -154,6 +155,28 @@ const DEFAULT_LABELS = {
 	selectPerPageItems: '{0} items',
 };
 
+const Trigger = React.forwardRef<HTMLButtonElement>(
+	(
+		{activeDelta, labels, spritemap, ...otherProps}: Record<string, any>,
+		ref
+	) => {
+		return (
+			<ClayButton
+				{...otherProps}
+				className="dropdown-toggle"
+				displayType="unstyled"
+				ref={ref}
+			>
+				{sub(labels.perPageItems, [activeDelta])}
+
+				<ClayIcon spritemap={spritemap} symbol="caret-double-l" />
+			</ClayButton>
+		);
+	}
+);
+
+Trigger.displayName = 'Trigger';
+
 export const ClayPaginationBarWithBasicItems = ({
 	active,
 	activeDelta,
@@ -192,81 +215,65 @@ export const ClayPaginationBarWithBasicItems = ({
 		activeDelta = deltas[0].label;
 	}
 
-	const items: Items = deltas.map(({href, label}) => {
-		const item: {
-			href?: string;
-			label?: string;
-			onClick?: () => void;
-		} = {
-			href,
-			label: sub(labels.selectPerPageItems, [String(label)]),
-		};
-
-		if (!href) {
-			item.onClick = () => {
-				if (onDeltaChange) {
-					onDeltaChange(label as number);
-				}
-			};
-		}
-
-		return item;
-	});
-
 	const totalPages = Math.ceil(totalItems / activeDelta);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (internalActive > totalPages) {
 			setActive(1);
 		}
 	}, [totalPages]);
 
+	const ariaDescribedby = useId();
+
 	return (
-		<>
-			<PaginationBar {...otherProps}>
-				{showDeltasDropDown && (
-					<PaginationBar.DropDown
-						alignmentPosition={alignmentPosition}
-						items={items}
-						trigger={
-							<ClayButton
-								data-testid="selectPaginationBar"
-								displayType="unstyled"
-							>
-								{sub(labels.perPageItems, [activeDelta])}
-
-								<ClayIcon
-									spritemap={spritemap}
-									symbol="caret-double-l"
-								/>
-							</ClayButton>
+		<PaginationBar {...otherProps}>
+			{showDeltasDropDown && (
+				<div className="pagination-items-per-page">
+					<Picker
+						activeDelta={activeDelta}
+						aria-describedby={ariaDescribedby}
+						as={Trigger}
+						items={deltas}
+						labels={labels}
+						onSelectionChange={(key: React.Key) =>
+							onDeltaChange && onDeltaChange(Number(key))
 						}
-					/>
-				)}
+						selectedKey={String(activeDelta)}
+						spritemap={spritemap}
+					>
+						{(item) => (
+							<Option key={item.label}>
+								{sub(labels.selectPerPageItems, [
+									String(item.label),
+								])}
+							</Option>
+						)}
+					</Picker>
+				</div>
+			)}
 
-				<PaginationBar.Results>
-					{sub(labels.paginationResults, [
-						(internalActive - 1) * activeDelta + 1,
-						internalActive * activeDelta < totalItems
-							? internalActive * activeDelta
-							: totalItems,
-						totalItems,
-					])}
-				</PaginationBar.Results>
+			<PaginationBar.Results id={ariaDescribedby}>
+				{sub(labels.paginationResults, [
+					(internalActive - 1) * activeDelta + 1,
+					internalActive * activeDelta < totalItems
+						? internalActive * activeDelta
+						: totalItems,
+					totalItems,
+				])}
+			</PaginationBar.Results>
 
-				<ClayPaginationWithBasicItems
-					active={internalActive}
-					alignmentPosition={alignmentPosition}
-					disableEllipsis={disableEllipsis}
-					disabledPages={disabledPages}
-					ellipsisBuffer={ellipsisBuffer}
-					ellipsisProps={ellipsisProps}
-					hrefConstructor={hrefConstructor}
-					onActiveChange={setActive}
-					spritemap={spritemap}
-					totalPages={totalPages}
-				/>
-			</PaginationBar>
-		</>
+			<ClayPaginationWithBasicItems
+				active={internalActive}
+				alignmentPosition={alignmentPosition}
+				disableEllipsis={disableEllipsis}
+				disabledPages={disabledPages}
+				ellipsisBuffer={ellipsisBuffer}
+				ellipsisProps={ellipsisProps}
+				hrefConstructor={hrefConstructor}
+				onActiveChange={setActive}
+				spritemap={spritemap}
+				totalPages={totalPages}
+			/>
+		</PaginationBar>
 	);
 };
