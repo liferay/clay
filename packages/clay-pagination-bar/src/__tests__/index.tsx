@@ -92,7 +92,7 @@ describe('ClayPaginationBar', () => {
 	it('calls onDeltaChange when select is expanded', () => {
 		const deltaChangeMock = jest.fn();
 
-		const {getByTestId} = render(
+		const {getByRole} = render(
 			<ClayPaginationBarWithBasicItems
 				defaultActive={12}
 				onDeltaChange={deltaChangeMock}
@@ -101,7 +101,9 @@ describe('ClayPaginationBar', () => {
 			/>
 		);
 
-		fireEvent.click(getByTestId('selectPaginationBar'), {});
+		const combobox = getByRole('combobox');
+
+		fireEvent.click(combobox, {});
 
 		fireEvent.click(getByText(document.body, '20 items'), {});
 
@@ -109,7 +111,7 @@ describe('ClayPaginationBar', () => {
 	});
 
 	it('shows dropdown when pagination dropdown is clicked', () => {
-		const {getByTestId} = render(
+		const {getByRole} = render(
 			<ClayPaginationBarWithBasicItems
 				defaultActive={12}
 				spritemap={spritemap}
@@ -117,11 +119,11 @@ describe('ClayPaginationBar', () => {
 			/>
 		);
 
-		fireEvent.click(getByTestId('selectPaginationBar'), {});
+		const combobox = getByRole('combobox');
 
-		expect(
-			document.body.querySelector('.dropdown-menu')!.classList
-		).toContain('show');
+		fireEvent.click(combobox, {});
+
+		expect(getByRole('listbox')).toBeTruthy();
 	});
 
 	it('automatically goes to page 1 if active page exceeds delta', () => {
@@ -140,9 +142,11 @@ describe('ClayPaginationBar', () => {
 				/>
 			);
 		};
-		const {container, getByTestId} = render(<Comp />);
+		const {container, getByRole} = render(<Comp />);
 
-		fireEvent.click(getByTestId('selectPaginationBar'), {});
+		const combobox = getByRole('combobox');
+
+		fireEvent.click(combobox, {});
 
 		fireEvent.click(getByText(document.body, '20 items'), {});
 

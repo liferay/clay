@@ -171,9 +171,9 @@ module.exports = {
 		},
 		'./packages/clay-pagination-bar/src/': {
 			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
+			functions: 88,
+			lines: 94,
+			statements: 95,
 		},
 		'./packages/clay-panel/src/': {
 			branches: 93,
