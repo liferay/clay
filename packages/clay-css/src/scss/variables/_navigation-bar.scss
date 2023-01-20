@@ -22,6 +22,11 @@ $navigation-bar-base: map-deep-merge(
 	(
 		border-color: transparent,
 		border-style: solid,
+		navbar-nav: (
+			nav-link: (
+				font-size: inherit,
+			),
+		),
 		media-breakpoint-down: (),
 		media-breakpoint-up: (),
 	),
