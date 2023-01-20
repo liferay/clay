@@ -682,7 +682,7 @@ export function TreeViewItemStack({
 					content = React.cloneElement(child as React.ReactElement, {
 						checked: selection.selectedKeys.has(item.key),
 						disabled: loading || disabled,
-						indeterminate: selection.isIntermediate(item.key),
+						indeterminate: selection.isIndeterminate(item.key),
 						onChange: (
 							event: React.ChangeEvent<HTMLInputElement>
 						) => {

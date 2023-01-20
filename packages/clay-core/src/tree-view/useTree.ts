@@ -36,14 +36,14 @@ export interface IExpandable {
 	/**
 	 * Flag to indicate the hydration phase to expand the selected items. When
 	 * `selectionMode` is `multiple-recursive` it also revalidates the
-	 * intermediate state of the items.
+	 * indeterminate state of the items.
 	 *
 	 * It supports two rendering phases, render-first and hydrate after or
 	 * hydrate before rendering, both have trade-offs that depend on the number
 	 * of items being rendered.
 	 *
 	 * Both cases traverse the tree looking for the selected items to know which
-	 * items should be expanded and which should be in the intermediate state,
+	 * items should be expanded and which should be in the indeterminate state,
 	 * this is done only the first time the component is rendered and if it has
 	 * selected items. This operation can degrade the performance of the
 	 * component depending on the number of items, choose the best option for
@@ -106,6 +106,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 
 	const selection = useMultipleSelection<T>({
 		defaultSelectedKeys: props.defaultSelectedKeys,
+		indeterminate: props.indeterminate,
 		items,
 		layoutKeys: layout.layoutKeys,
 		nestedKey: props.nestedKey,
@@ -119,6 +120,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		defaultValue: () => {
 			const {
 				defaultExpandedKeys,
+				indeterminate,
 				nestedKey,
 				selectionHydrationMode,
 				selectionMode,
@@ -139,8 +141,8 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 					selection.selectedKeys
 				);
 
-				if (selectionMode === 'multiple-recursive') {
-					selection.replaceIntermediateKeys(
+				if (selectionMode === 'multiple-recursive' && indeterminate) {
+					selection.replaceIndeterminateKeys(
 						expand.filter((key) => !selection.selectedKeys.has(key))
 					);
 				}
@@ -163,6 +165,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 	useEffect(() => {
 		const {
 			defaultExpandedKeys,
+			indeterminate,
 			nestedKey,
 			selectionHydrationMode,
 			selectionMode,
@@ -183,8 +186,8 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 				selection.selectedKeys
 			);
 
-			if (selectionMode === 'multiple-recursive') {
-				selection.replaceIntermediateKeys(
+			if (selectionMode === 'multiple-recursive' && indeterminate) {
+				selection.replaceIndeterminateKeys(
 					expand.filter((key) => !selection.selectedKeys.has(key))
 				);
 			}
