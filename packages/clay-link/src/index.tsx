@@ -131,26 +131,23 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 				[`btn-${displayType}`]: displayType && !outline && !borderless,
 				[`btn-outline-${displayType}`]:
 					displayType && (outline || borderless),
-				[weight ? FONT_WEIGHTS[weight] : '']: weight,
+				[FONT_WEIGHTS[weight!]]: weight,
 				[`text-${fontSize}`]: fontSize,
 				[`text-decoration-${decoration}`]: decoration,
 			};
 		} else {
-			if (displayType && LINK_PRESETS[displayType]) {
-				if (decoration !== null && !outline) {
-					decoration =
-						decoration || LINK_PRESETS[displayType]?.decoration;
-				}
-			}
+			decoration =
+				decoration === null || outline
+					? undefined
+					: decoration || LINK_PRESETS[displayType!]?.decoration;
 
 			classes = {
 				'link-monospaced': monospaced,
 				'link-outline': outline,
 				'link-outline-borderless': borderless,
-				[displayType ? LINK_PRESETS[displayType]?.base : '']:
-					displayType && !outline,
+				[LINK_PRESETS[displayType!]?.base]: displayType && !outline,
 				[`link-outline-${displayType}`]: displayType && outline,
-				[weight ? FONT_WEIGHTS[weight] : '']: weight,
+				[FONT_WEIGHTS[weight!]]: weight,
 				[`text-${fontSize}`]: fontSize,
 				[`text-decoration-${decoration}`]: decoration,
 			};
