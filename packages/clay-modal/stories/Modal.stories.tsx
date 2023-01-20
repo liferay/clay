@@ -47,8 +47,7 @@ export const Default = (args: any) => {
 						scrollable={args.scrollable}
 						url={args.url}
 					>
-						<h1>Hello world!</h1>
-						<div>
+						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Curabitur dignissim eu ante eget lobortis.
 							Praesent a mattis diam, nec auctor nisi. Nam porta
@@ -64,23 +63,21 @@ export const Default = (args: any) => {
 							posuere enim porttitor, mollis justo eget, molestie
 							mauris. Duis lobortis purus quis risus sodales
 							dictum ut eu velit.
-						</div>
+						</p>
 					</ClayModal.Body>
 					<ClayModal.Footer
-						first={
+						last={
 							<ClayButton.Group spaced>
-								<ClayButton displayType="secondary">
-									Secondary
+								<ClayButton
+									displayType="secondary"
+									onClick={() => onOpenChange(false)}
+								>
+									Cancel
 								</ClayButton>
-								<ClayButton displayType="secondary">
-									Secondary
+								<ClayButton onClick={() => onOpenChange(false)}>
+									Save changes
 								</ClayButton>
 							</ClayButton.Group>
-						}
-						last={
-							<ClayButton onClick={() => onOpenChange(false)}>
-								Primary
-							</ClayButton>
 						}
 					/>
 				</ClayModal>
@@ -96,12 +93,12 @@ export const Default = (args: any) => {
 };
 
 Default.args = {
-	autoClose: true,
+	autoClose: false,
 	center: false,
 	scrollable: false,
 	size: 'lg',
 	status: undefined,
-	title: 'Title',
+	title: 'Modal Title',
 	url: '',
 };
 
@@ -298,7 +295,7 @@ const MyApp = () => {
 			onClick={() =>
 				dispatch({
 					payload: {
-						body: <h1>Hello world!</h1>,
+						body: <h2>Hello world!</h2>,
 						footer: [
 							<></>,
 							<></>,
@@ -327,7 +324,7 @@ const MyAppWithoutFooterAndHeader = () => {
 			onClick={() =>
 				dispatch({
 					payload: {
-						body: <h1>Hello world!</h1>,
+						body: <h2>Hello world!</h2>,
 						size: 'lg',
 					},
 					type: 1,

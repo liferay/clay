@@ -26,12 +26,12 @@ exports[`ClayModal renders 1`] = `
           <div
             class="modal-header"
           >
-            <div
+            <h1
               class="modal-title"
               id="clay-modal-label-1"
             >
               Foo
-            </div>
+            </h1>
             <button
               aria-label="close"
               class="close btn btn-unstyled"
@@ -120,12 +120,12 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
                 <div
                   class="modal-title-section"
                 >
-                  <div
+                  <h1
                     class="modal-title"
                     id="clay-modal-label-3"
                   >
                     Modal Title
-                  </div>
+                  </h1>
                 </div>
               </div>
               <div
@@ -290,12 +290,12 @@ exports[`ClayModal renders with Header 1`] = `
           <div
             class="modal-header"
           >
-            <div
+            <h1
               class="modal-title"
               id="clay-modal-label-2"
             >
               Foo
-            </div>
+            </h1>
             <button
               aria-label="close"
               class="close btn btn-unstyled"

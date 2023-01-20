@@ -10,9 +10,10 @@ export type Size = 'full-screen' | 'lg' | 'sm';
 export enum ObserverType {
 	Close = 0,
 	Open = 1,
+	RestoreFocus = 2,
 }
 
 export type Observer = {
-	dispatch: (type: ObserverType) => void;
+	dispatch: (type: ObserverType, payload?: any) => void;
 	mutation: [boolean, boolean];
 };

@@ -87,6 +87,7 @@ const ClayModal = ({
 	containerProps = {},
 	disableAutoClose = false,
 	observer,
+	role = 'dialog',
 	size,
 	spritemap,
 	status,
@@ -96,6 +97,9 @@ const ClayModal = ({
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
 
+	const [show, content] =
+		observer && observer.mutation ? observer.mutation : [false, false];
+
 	warning(observer !== undefined, warningMessage);
 
 	useUserInteractions(
@@ -104,22 +108,22 @@ const ClayModal = ({
 		() => !disableAutoClose && observer.dispatch(ObserverType.Close)
 	);
 
-	useEffect(() => observer.dispatch(ObserverType.Open), []);
+	useEffect(() => {
+		observer.dispatch(ObserverType.RestoreFocus, document.activeElement);
+		observer.dispatch(ObserverType.Open);
+	}, []);
 
 	useEffect(() => {
-		if (modalBodyElementRef.current) {
+		if (modalBodyElementRef.current && show && content) {
 			modalBodyElementRef.current.focus();
 		}
-	}, [modalBodyElementRef]);
+	}, [show, content]);
 
 	const ariaLabelledby = useMemo(() => {
 		counter++;
 
 		return `clay-modal-label-${counter}`;
 	}, []);
-
-	const [show, content] =
-		observer && observer.mutation ? observer.mutation : [false, false];
 
 	useEffect(() => {
 		if (modalElementRef.current && show) {
@@ -158,7 +162,7 @@ const ClayModal = ({
 						'modal-dialog-centered': center,
 					})}
 					ref={modalBodyElementRef}
-					role="dialog"
+					role={role}
 					tabIndex={-1}
 				>
 					<div className="modal-content">

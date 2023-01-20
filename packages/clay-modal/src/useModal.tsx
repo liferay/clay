@@ -60,6 +60,8 @@ export const useModal = ({
 	const [visible, setVisible] = useState<[boolean, boolean]>([false, false]);
 	const timerIdRef = useRef<NodeJS.Timeout | null>(null);
 
+	const restoreTriggerRef = useRef<HTMLElement | null>(null);
+
 	/**
 	 * Control the close of the modal to create the component's "unmount"
 	 * animation and call the onClose prop with delay.
@@ -73,6 +75,11 @@ export const useModal = ({
 				onClose();
 			}
 
+			if (restoreTriggerRef.current) {
+				restoreTriggerRef.current.focus();
+				restoreTriggerRef.current = null;
+			}
+
 			setOpen(false);
 			setVisible([false, false]);
 		});
@@ -84,13 +91,19 @@ export const useModal = ({
 		timerIdRef.current = delay(() => setVisible([true, true]));
 	};
 
-	const handleObserverDispatch = (type: ObserverType) => {
+	const handleObserverDispatch = (
+		type: ObserverType,
+		payload: HTMLElement
+	) => {
 		switch (type) {
 			case ObserverType.Close:
 				handleCloseModal();
 				break;
 			case ObserverType.Open:
 				handleOpenModal();
+				break;
+			case ObserverType.RestoreFocus:
+				restoreTriggerRef.current = payload;
 				break;
 			default:
 				break;
