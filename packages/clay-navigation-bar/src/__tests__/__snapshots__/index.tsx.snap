@@ -16,7 +16,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
       >
         <a
           aria-current="page"
-          class="nav-link active link-unstyled"
+          class="nav-link active"
           href="#1"
         >
           <span
@@ -30,7 +30,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
         class="nav-item"
       >
         <button
-          class="nav-link btn btn-unstyled"
+          class="nav-link btn"
           type="button"
         >
           <span
@@ -87,7 +87,7 @@ exports[`ClayNavigationBar renders 1`] = `
             >
               <a
                 aria-current="page"
-                class="nav-link active link-unstyled"
+                class="nav-link active"
                 href="#1"
               >
                 <span
@@ -101,7 +101,7 @@ exports[`ClayNavigationBar renders 1`] = `
               class="nav-item"
             >
               <button
-                class="nav-link btn btn-unstyled"
+                class="nav-link btn"
                 type="button"
               >
                 <span
@@ -115,7 +115,7 @@ exports[`ClayNavigationBar renders 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link link-unstyled"
+                class="nav-link"
                 href="#3"
               >
                 <span
@@ -204,7 +204,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
       >
         <a
           aria-current="page"
-          class="nav-link active link-unstyled"
+          class="nav-link active"
           href="#1"
         >
           <span
@@ -218,7 +218,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
         class="nav-item"
       >
         <button
-          class="nav-link btn btn-unstyled"
+          class="nav-link btn"
           type="button"
         >
           <span
@@ -274,7 +274,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
               class="nav-item"
             >
               <a
-                class="nav-link link-unstyled"
+                class="nav-link"
                 href="#1"
               >
                 <span
@@ -289,7 +289,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
             >
               <button
                 aria-current="page"
-                class="nav-link active btn btn-unstyled"
+                class="nav-link active btn"
                 type="button"
               >
                 <span
@@ -303,7 +303,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
               class="nav-item"
             >
               <a
-                class="nav-link link-unstyled"
+                class="nav-link"
                 href="#3"
               >
                 <span
@@ -363,7 +363,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
             >
               <a
                 aria-current="page"
-                class="nav-link active link-unstyled"
+                class="nav-link active"
                 href="#1"
               >
                 <span
@@ -423,7 +423,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
             >
               <a
                 aria-current="page"
-                class="nav-link active link-unstyled"
+                class="nav-link active"
                 href="#1"
               >
                 <span
@@ -438,7 +438,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
             >
               <button
                 aria-current="page"
-                class="nav-link active btn btn-unstyled"
+                class="nav-link active btn"
                 type="button"
               >
                 <span
