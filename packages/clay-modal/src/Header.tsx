@@ -64,13 +64,13 @@ export const Title = ({
 	const {ariaLabelledby} = React.useContext(Context);
 
 	return (
-		<div
+		<h1
 			className={classNames('modal-title', className)}
 			{...otherProps}
 			id={ariaLabelledby}
 		>
 			{children}
-		</div>
+		</h1>
 	);
 };
 
