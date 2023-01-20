@@ -4,20 +4,15 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useContext} from 'react';
 
-export interface IItemProps
-	extends Omit<React.HTMLAttributes<HTMLLIElement>, 'aria-current'> {
+import {NavigationBarContext} from './context';
+
+export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Determines the active state of an dropdown list item.
 	 */
 	active?: boolean;
-
-	/**
-	 * Flag to define if the item represents the current page. Disable this
-	 * attribute only if there are multiple navigations on the page.
-	 */
-	'aria-current'?: 'page' | null;
 
 	/**
 	 * Children elements received from ClayNavigationBar.Item component.
@@ -27,11 +22,12 @@ export interface IItemProps
 
 const ClayNavigationBarIcon = ({
 	active = false,
-	'aria-current': ariaCurrent = 'page',
 	children,
 	className,
 	...otherProps
 }: IItemProps) => {
+	const {ariaCurrent} = useContext(NavigationBarContext);
+
 	return (
 		<li {...otherProps} className={classNames('nav-item', className)}>
 			{React.Children.map(
