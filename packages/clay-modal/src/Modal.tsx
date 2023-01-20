@@ -87,6 +87,7 @@ const ClayModal = ({
 	containerProps = {},
 	disableAutoClose = false,
 	observer,
+	role = 'dialog',
 	size,
 	spritemap,
 	status,
@@ -161,7 +162,7 @@ const ClayModal = ({
 						'modal-dialog-centered': center,
 					})}
 					ref={modalBodyElementRef}
-					role="dialog"
+					role={role}
 					tabIndex={-1}
 				>
 					<div className="modal-content">
