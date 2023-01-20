@@ -34,7 +34,7 @@ exports[`ClayLink renders with a children content 1`] = `
 
 exports[`ClayLink renders with a display type 1`] = `
 <a
-  className="link-secondary"
+  className="c-link link-secondary text-decoration-underline"
 />
 `;
 
@@ -56,7 +56,7 @@ exports[`ClayLink renders with monospaced 1`] = `
 
 exports[`ClayLink uses custom link component via context 1`] = `
 <a
-  className="link-secondary"
+  className="c-link link-secondary text-decoration-underline"
   href="#1"
 >
   <strong>
