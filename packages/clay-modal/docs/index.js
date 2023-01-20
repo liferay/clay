@@ -25,29 +25,24 @@ const modalCode = `const Component = () => {
 					spritemap={spritemap}
 					status="info"
 				>
-					<ClayModal.Header>{'Title'}</ClayModal.Header>
+					<ClayModal.Header>Documents</ClayModal.Header>
 					<ClayModal.Body>
-						<h1>{'Hello world!'}</h1>
+						<p>Do you want to save your documents?</p>
 					</ClayModal.Body>
 					<ClayModal.Footer
-						first={
-							<ClayButton.Group spaced>
-								<ClayButton displayType="secondary">
-									{'Secondary'}
-								</ClayButton>
-								<ClayButton displayType="secondary">
-									{'Secondary'}
-								</ClayButton>
-							</ClayButton.Group>
-						}
 						last={
-							<ClayButton onClick={() => onOpenChange(false)}>{'Primary'}</ClayButton>
+							<ClayButton.Group spaced>
+								<ClayButton displayType="secondary" onClick={() => onOpenChange(false)}>
+									Cancel
+								</ClayButton>
+								<ClayButton onClick={() => onOpenChange(false)}>Save changes</ClayButton>
+							</ClayButton.Group>
 						}
 					/>
 				</ClayModal>
 			)}
 			<ClayButton onClick={() => onOpenChange(true)}>
-				{'Open modal'}
+				Open modal
 			</ClayButton>
 		</>
 	);
