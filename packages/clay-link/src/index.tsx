@@ -8,6 +8,34 @@ import React from 'react';
 
 import ClayLinkContext from './Context';
 
+const LINK_PRESETS = {
+	danger: {
+		base: 'c-link text-danger',
+		decoration: 'underline',
+	},
+	primary: {
+		base: 'c-link link-primary',
+		decoration: 'underline',
+	},
+	secondary: {
+		base: 'c-link link-secondary',
+		decoration: 'underline',
+	},
+	tertiary: {
+		base: 'c-link text-tertiary',
+		decoration: null,
+	},
+	unstyled: {
+		base: 'link-unstyled',
+		decoration: null,
+	},
+} as const;
+
+const FONT_WEIGHTS = {
+	normal: 'font-weight-normal',
+	'semi-bold': 'font-weight-semi-bold',
+};
+
 interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	/**
 	 * Renders the button as a block element.
@@ -31,24 +59,39 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 		  };
 
 	/**
-	 * Determines how the link is displayed.
+	 * Indicates if the text should be underlined
 	 */
-	displayType?: 'primary' | 'secondary' | 'unstyled';
+	decoration?: 'none' | 'underline' | null;
 
 	/**
-	 * Flag to indicate if link should be monospaced.
+	 * Determines how the link is displayed.
+	 */
+	displayType?: 'danger' | 'primary' | 'secondary' | 'tertiary' | 'unstyled';
+
+	/**
+	 * Sets the text size based on a number scale.
+	 */
+	fontSize?: Number;
+
+	/**
+	 * Flag to indicate if the link should be monospaced.
 	 */
 	monospaced?: boolean;
 
 	/**
-	 * Flag to indicate if link need have an outline.
+	 * Flag to indicate if the link should use the outlined style.
 	 */
 	outline?: boolean;
 
 	/**
-	 * Indicates button should be a small variant.
+	 * Indicates whether the button should use the small variant.
 	 */
 	small?: boolean;
+
+	/**
+	 * Determines the font-weight of the link.
+	 */
+	weight?: 'normal' | 'semi-bold';
 }
 
 const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
@@ -59,12 +102,15 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 			button,
 			children,
 			className,
+			decoration,
 			displayType,
+			fontSize,
 			monospaced,
 			outline,
 			rel,
 			small,
 			target,
+			weight,
 			...otherProps
 		}: IProps,
 		ref
@@ -85,14 +131,28 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 				[`btn-${displayType}`]: displayType && !outline && !borderless,
 				[`btn-outline-${displayType}`]:
 					displayType && (outline || borderless),
+				[weight ? FONT_WEIGHTS[weight] : '']: weight,
+				[`text-${fontSize}`]: fontSize,
+				[`text-decoration-${decoration}`]: decoration,
 			};
 		} else {
+			if (displayType && LINK_PRESETS[displayType]) {
+				if (decoration !== null && !outline) {
+					decoration =
+						decoration || LINK_PRESETS[displayType]?.decoration;
+				}
+			}
+
 			classes = {
 				'link-monospaced': monospaced,
 				'link-outline': outline,
 				'link-outline-borderless': borderless,
-				[`link-${displayType}`]: displayType && !outline,
+				[displayType ? LINK_PRESETS[displayType]?.base : '']:
+					displayType && !outline,
 				[`link-outline-${displayType}`]: displayType && outline,
+				[weight ? FONT_WEIGHTS[weight] : '']: weight,
+				[`text-${fontSize}`]: fontSize,
+				[`text-decoration-${decoration}`]: decoration,
 			};
 		}
 
