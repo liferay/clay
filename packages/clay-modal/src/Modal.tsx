@@ -97,6 +97,9 @@ const ClayModal = ({
 	const modalElementRef = useRef<HTMLDivElement | null>(null);
 	const modalBodyElementRef = useRef<HTMLDivElement | null>(null);
 
+	const [show, content] =
+		observer && observer.mutation ? observer.mutation : [false, false];
+
 	warning(observer !== undefined, warningMessage);
 
 	useUserInteractions(
@@ -111,19 +114,16 @@ const ClayModal = ({
 	}, []);
 
 	useEffect(() => {
-		if (modalBodyElementRef.current) {
+		if (modalBodyElementRef.current && show && content) {
 			modalBodyElementRef.current.focus();
 		}
-	}, [modalBodyElementRef]);
+	}, [show, content]);
 
 	const ariaLabelledby = useMemo(() => {
 		counter++;
 
 		return `clay-modal-label-${counter}`;
 	}, []);
-
-	const [show, content] =
-		observer && observer.mutation ? observer.mutation : [false, false];
 
 	useEffect(() => {
 		if (modalElementRef.current && show) {
