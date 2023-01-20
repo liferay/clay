@@ -31,6 +31,12 @@ export type Props<T> = {
 	active?: boolean;
 
 	/**
+	 * The global `aria-describedby` attribute identifies the element that
+	 * describes the component.
+	 */
+	'aria-describedby'?: string;
+
+	/**
 	 * The `aria-label` attribute defines a string value that labels an interactive
 	 * element.
 	 */
@@ -110,6 +116,8 @@ export type Props<T> = {
 	 * Sets the className for the React.Portal Menu element.
 	 */
 	UNSAFE_menuClassName?: string;
+
+	[key: string]: any;
 } & Omit<ICollectionProps<T, unknown>, 'virtualize'>;
 
 export function Picker<T>({

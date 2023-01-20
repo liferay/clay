@@ -7,6 +7,9 @@ import {ClayDropDownWithItems} from '@clayui/drop-down';
 import classNames from 'classnames';
 import React from 'react';
 
+/**
+ * @deprecated since v3.84.0 - use `Picker` component instead.
+ */
 const ClayPaginationBarDropDown = ({
 	className,
 	...otherProps

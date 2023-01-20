@@ -63,6 +63,9 @@ export const WithItems = (args: any) => {
 		{
 			label: 4,
 		},
+		{
+			label: 5,
+		},
 	];
 
 	return (

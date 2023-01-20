@@ -4,10 +4,21 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {forwardRef} from 'react';
 
 import DropDown from './DropDown';
 import Results from './Results';
+
+interface IPaginationForwardRef<T, P>
+	extends React.ForwardRefExoticComponent<
+		React.PropsWithoutRef<P> & React.RefAttributes<T>
+	> {
+	/**
+	 * @deprecated since v3.84.0 - use `Picker` component instead.
+	 */
+	DropDown: typeof DropDown;
+	Results: typeof Results;
+}
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -16,7 +27,8 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	size?: 'sm' | 'lg';
 }
 
-const ClayPaginationBar = React.forwardRef<HTMLDivElement, IProps>(
+// eslint-disable-next-line react/display-name
+const ClayPaginationBar = forwardRef<HTMLDivElement, IProps>(
 	({children, className, size, ...otherProps}: IProps, ref) => {
 		return (
 			<div
@@ -30,8 +42,11 @@ const ClayPaginationBar = React.forwardRef<HTMLDivElement, IProps>(
 			</div>
 		);
 	}
-);
+) as unknown as IPaginationForwardRef<HTMLDivElement, IProps>;
+
+ClayPaginationBar.DropDown = DropDown;
+ClayPaginationBar.Results = Results;
 
 ClayPaginationBar.displayName = 'ClayPaginationBar';
 
-export default Object.assign(ClayPaginationBar, {DropDown, Results});
+export default ClayPaginationBar;
