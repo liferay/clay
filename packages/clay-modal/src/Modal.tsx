@@ -104,7 +104,10 @@ const ClayModal = ({
 		() => !disableAutoClose && observer.dispatch(ObserverType.Close)
 	);
 
-	useEffect(() => observer.dispatch(ObserverType.Open), []);
+	useEffect(() => {
+		observer.dispatch(ObserverType.RestoreFocus, document.activeElement);
+		observer.dispatch(ObserverType.Open);
+	}, []);
 
 	useEffect(() => {
 		if (modalBodyElementRef.current) {
