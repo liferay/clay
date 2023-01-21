@@ -24,6 +24,7 @@ $navigation-bar-base: map-deep-merge(
 		border-style: solid,
 		navbar-nav: (
 			nav-link: (
+				border-width: 0,
 				font-size: inherit,
 			),
 		),
