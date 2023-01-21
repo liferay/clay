@@ -512,3 +512,16 @@ $text-theme-colors: map-deep-merge(
 	),
 	$text-theme-colors
 );
+
+$text-decorations: () !default;
+$text-decorations: map-deep-merge(
+	(
+		text-decoration-none: (
+			text-decoration: none !important,
+		),
+		text-decoration-underline: (
+			text-decoration: underline !important,
+		),
+	),
+	$text-decorations
+);

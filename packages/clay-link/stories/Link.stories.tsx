@@ -15,26 +15,55 @@ export default {
 
 export const Default = () => (
 	<div>
-		<ClayLink href="#link-styles">Default</ClayLink>
-
-		<ClayLink displayType="secondary" href="#link-styles">
-			Secondary
-		</ClayLink>
-
+		<h1>Regular</h1>
+		<ClayLink href="#link-styles">Default</ClayLink>{' '}
 		<ClayLink aria-label="My Link" href="#link-styles">
 			With Aria Label
-		</ClayLink>
-
+		</ClayLink>{' '}
+		<ClayLink displayType="primary" href="#link-styles">
+			Primary
+		</ClayLink>{' '}
+		<ClayLink displayType="secondary" href="#link-styles">
+			Secondary
+		</ClayLink>{' '}
+		<ClayLink displayType="danger" href="#link-styles">
+			Danger
+		</ClayLink>{' '}
+		<ClayLink displayType="tertiary" href="#link-styles">
+			Tertiary
+		</ClayLink>{' '}
+		<ClayLink displayType="unstyled" href="#link-styles">
+			Unstyled
+		</ClayLink>{' '}
 		<div id="link-styles" />
+		<h1>Semi Bold</h1>
+		<ClayLink href="#link-styles" weight="semi-bold">
+			Default
+		</ClayLink>{' '}
+		<ClayLink displayType="primary" href="#link-styles" weight="semi-bold">
+			Primary
+		</ClayLink>{' '}
+		<ClayLink
+			displayType="secondary"
+			href="#link-styles"
+			weight="semi-bold"
+		>
+			Secondary
+		</ClayLink>{' '}
+		<ClayLink displayType="danger" href="#link-styles" weight="semi-bold">
+			Danger
+		</ClayLink>{' '}
+		<ClayLink displayType="tertiary" href="#link-styles" weight="semi-bold">
+			Tertiary
+		</ClayLink>{' '}
 	</div>
 );
 
 export const Borderless = () => (
 	<>
-		<ClayLink borderless href="#1">
+		<ClayLink borderless href="#1" outline>
 			Borderless
-		</ClayLink>
-
+		</ClayLink>{' '}
 		<div id="1" />
 	</>
 );
@@ -43,17 +72,16 @@ export const Outline = () => (
 	<>
 		<ClayLink displayType="primary" href="#1" outline>
 			Outline Primary
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink displayType="secondary" href="#1" outline>
 			Outline Secondary
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink borderless displayType="primary" href="#1" outline>
 			Outline Borderless Primary
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink borderless displayType="secondary" href="#1" outline>
 			Outline Borderless Secondary
-		</ClayLink>
-
+		</ClayLink>{' '}
 		<div id="1" />
 	</>
 );
@@ -62,14 +90,13 @@ export const DisplayedAsButton = () => (
 	<>
 		<ClayLink button displayType="primary" href="#1">
 			Primary
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink button displayType="secondary" href="#1">
 			Secondary
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink borderless button displayType="secondary" href="#1" outline>
 			Borderless Secondary
-		</ClayLink>
-
+		</ClayLink>{' '}
 		<div id="1" />
 	</>
 );
@@ -84,7 +111,7 @@ export const Monospaced = () => (
 			outline
 		>
 			<ClayIcon symbol="add-cell" />
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink
 			aria-label="Monospaced link with icon borderless"
 			borderless
@@ -94,7 +121,7 @@ export const Monospaced = () => (
 			outline
 		>
 			<ClayIcon symbol="add-cell" />
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink
 			aria-label="Monospaced link with icon secondary"
 			displayType="secondary"
@@ -103,7 +130,7 @@ export const Monospaced = () => (
 			outline
 		>
 			<ClayIcon symbol="picture" />
-		</ClayLink>
+		</ClayLink>{' '}
 		<ClayLink
 			aria-label="Monospaced link with icon secondary borderless"
 			borderless
@@ -113,8 +140,7 @@ export const Monospaced = () => (
 			outline
 		>
 			<ClayIcon symbol="picture" />
-		</ClayLink>
-
+		</ClayLink>{' '}
 		<div id="1" />
 	</>
 );

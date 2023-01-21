@@ -1,3 +1,7 @@
+.c-link {
+	@include clay-link($cadmin-c-link);
+}
+
 .component-link {
 	@include clay-link($cadmin-component-link);
 }

@@ -628,7 +628,8 @@
 				}
 			}
 
-			&:hover {
+			&:hover,
+			&.hover {
 				@include clay-css($hover);
 
 				&::before {
@@ -845,6 +846,22 @@
 
 			.lexicon-icon {
 				@include clay-css($lexicon-icon);
+			}
+
+			$c-link-variants: map-get($map, c-link-variants);
+
+			@if ($c-link-variants) {
+				@each $key, $value in $c-link-variants {
+					$selector: if(
+						starts-with($key, '.') or starts-with($key, '#'),
+						$key,
+						str-insert($key, '.', 1)
+					);
+
+					&#{$selector} {
+						@include clay-link($value);
+					}
+				}
 			}
 		}
 	}

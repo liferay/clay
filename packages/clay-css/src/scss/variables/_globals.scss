@@ -579,9 +579,20 @@ $link: map-deep-merge(
 	(
 		color: $link-color,
 		text-decoration: $link-decoration,
+		text-underline-offset: 0.23em,
 		hover: (
 			color: $link-hover-color,
 			text-decoration: $link-hover-decoration,
+		),
+		inline-item-before: (
+			margin-right: 0.25rem,
+		),
+		inline-item-middle: (
+			margin-left: 0.25rem,
+			margin-right: 0.25rem,
+		),
+		inline-item-after: (
+			margin-left: 0.25rem,
 		),
 	),
 	$link
