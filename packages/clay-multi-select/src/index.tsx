@@ -74,6 +74,12 @@ type MenuRenderer = (props: IMenuRendererProps) => JSX.Element;
 export interface IProps
 	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
 	/**
+	 * Whether MultiSelect allows an input value not corresponding to an item
+	 * to be added.
+	 */
+	allowsCustomLabel?: boolean;
+
+	/**
 	 * Flag to align the Autocomplete within the viewport.
 	 */
 	alignmentByViewport?: boolean;
@@ -227,6 +233,7 @@ let counterUid = 0;
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 	(
 		{
+			allowsCustomLabel = true,
 			alignmentByViewport = false,
 			clearAllTitle = 'Clear All',
 			closeButtonAriaLabel = 'Remove {0}',
@@ -344,7 +351,11 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 				event.preventDefault();
 			}
 
-			if (internalValue.trim() && DELIMITER_KEYS.includes(key)) {
+			if (
+				allowsCustomLabel &&
+				internalValue.trim() &&
+				DELIMITER_KEYS.includes(key)
+			) {
 				event.preventDefault();
 
 				lastChangesRef.current = {
@@ -378,7 +389,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 				.map((itemLabel) => getNewItem(itemLabel.trim()))
 				.filter(Boolean);
 
-			if (pastedItems.length > 0) {
+			if (allowsCustomLabel && pastedItems.length > 0) {
 				event.preventDefault();
 
 				setItems([...internalItems, ...pastedItems]);
@@ -674,11 +685,15 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps>(
 										onBlur(event);
 										setIsFocused(false);
 									}}
-									onChange={(event) =>
+									onChange={(event) => {
+										const {value} = event.target;
+
 										setValue(
-											event.target.value.replace(',', '')
-										)
-									}
+											allowsCustomLabel
+												? value.replace(',', '')
+												: value
+										);
+									}}
 									onFocus={(event) => {
 										onFocus(event);
 										setIsFocused(true);
