@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/navigation-bar:** Removes classes btn-unstyled and link-unstyled from nav-link ([10419a7](https://github.com/liferay/clay/commit/10419a73920cf9c6138c8198007b45e1fa39546f))
+
+### Features
+
+-   **@clayui/navigation-bar:** add prop to remove `aria-current` from `NavigationBar` component ([a872c2c](https://github.com/liferay/clay/commit/a872c2c65c90def154b3b60343603875663b05de))
+
 ## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
 
 **Note:** Version bump only for package @clayui/navigation-bar

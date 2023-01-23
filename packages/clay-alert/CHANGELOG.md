@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Features
+
+-   **@clayui/alert:** Adds a secondary variant and symbol attribute ([b3ebd3e](https://github.com/liferay/clay/commit/b3ebd3ef25a50058a92cd823ab3d467535dcc146))
+
 # [3.82.0](https://github.com/liferay/clay/compare/v3.81.0...v3.82.0) (2022-12-07)
 
 ### Features

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/link:** Source Format ([ebc9464](https://github.com/liferay/clay/commit/ebc9464650f9810ac5a8b67a31453ea8d9adf09a))
+
+### Features
+
+-   **@clayui/link:** Adds new displayTypes, decoration, fontSize, and weight properties ([43bd938](https://github.com/liferay/clay/commit/43bd9383726136f56bb8fd0e897f1ea0bd78fe39))
+
 # [3.56.0](https://github.com/liferay/clay/compare/v3.55.0...v3.56.0) (2022-05-09)
 
 **Note:** Version bump only for package @clayui/link

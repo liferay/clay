@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** Adds tabindex to links with no href ([566ae6b](https://github.com/liferay/clay/commit/566ae6b56f7bf10bbbbaa8140ab626f2666ab077))
+-   **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
+-   **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
+
 # [3.84.0](https://github.com/liferay/clay/compare/v3.83.1...v3.84.0) (2022-12-23)
 
 **Note:** Version bump only for package @clayui/pagination

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/modal:** only moves focus to dialog when content has rendered ([421e4fd](https://github.com/liferay/clay/commit/421e4fd2659141502cd683b0d9c9ae7475f05e5b))
+-   **@clayui/modal:** restore trigger focus when closing modal ([146c939](https://github.com/liferay/clay/commit/146c939a4d95a2fb654b868637b172cdfeab09dc))
+
+### Features
+
+-   **@clayui/modal:** allows modifying the `role` of the modal ([6ec5de2](https://github.com/liferay/clay/commit/6ec5de20b02d6a2c7f112a83ed9a751c2bad597d))
+
 ## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
 
 **Note:** Version bump only for package @clayui/modal

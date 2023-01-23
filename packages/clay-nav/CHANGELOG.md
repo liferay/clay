@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Features
+
+-   **@clayui/nav:** add prop to remove `aria-current` from `VerticalNav` component ([5502734](https://github.com/liferay/clay/commit/5502734d034e8584307b1c30692e84cae7e2886a))
+
 ## [3.83.1](https://github.com/liferay/clay/compare/v3.83.0...v3.83.1) (2022-12-20)
 
 **Note:** Version bump only for package @clayui/nav

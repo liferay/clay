@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+### Bug Fixes
+
+-   **@clayui/pagination-bar:** PaginationBarWithBasicItems shouldn't render if totalItems is 0 ([13519e8](https://github.com/liferay/clay/commit/13519e89e5c381627574e06b9bdf0277737e91ee))
+-   **@clayui/pagination:** fix error when `totalPages` is 0 ([16d6094](https://github.com/liferay/clay/commit/16d60941ecd7d5f50c0cd5d51ff6bb925cc26707))
+-   **@clayui/pagination:** remove link from Prev and Next when disabled ([6552d93](https://github.com/liferay/clay/commit/6552d93a6c103c9c8e9bfc1fbcc654821afeaea0))
+
+### Features
+
+-   **@clayui/pagination-bar:** change the DropDown component to the Picker in the high-level component ([6a641d4](https://github.com/liferay/clay/commit/6a641d48cfa14630d68c146527b7afbfff836d21))
+
 # [3.84.0](https://github.com/liferay/clay/compare/v3.83.1...v3.84.0) (2022-12-23)
 
 **Note:** Version bump only for package @clayui/pagination-bar

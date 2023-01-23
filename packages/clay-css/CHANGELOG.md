@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Alert update secondary colors ([9d85766](https://github.com/liferay/clay/commit/9d857661ba8e554be63eb8b071b91dd2800f66d3))
+* **@clayui/css:** Atlas Pagination active state should have more contrast ([7e26618](https://github.com/liferay/clay/commit/7e266186b762aa2bf7f89bccca32f33ae9c84125))
+* **@clayui/css:** Cadmin Navigation Bar nav-link should inherit font size ([b30e861](https://github.com/liferay/clay/commit/b30e8616970d741d60b669191db3e9a02953c675))
+* **@clayui/css:** Custom Checkbox and Radio border-color should have better contrast ([77bdad4](https://github.com/liferay/clay/commit/77bdad4e4852a8ded6d1ce3346af9dd7d9aaf037))
+* **@clayui/css:** Mixins clay-select-variant adds hover states ([f6bb985](https://github.com/liferay/clay/commit/f6bb985e21db606f10586e734bdda2cb8240c3cf))
+* **@clayui/css:** Navigation Bar nav-link should inherit font size from parent ([a359c32](https://github.com/liferay/clay/commit/a359c3235a275ee001e1b9e9ff0eb9114095c12d))
+* **@clayui/css:** Navigation Bar remove default btn border from .btn.nav-link ([6468728](https://github.com/liferay/clay/commit/64687286c5b7caf138c2a011790698b248c56c71))
+* **@clayui/css:** Pagination adds cursor pointer to link for tags without href ([c988ce7](https://github.com/liferay/clay/commit/c988ce7ea16e39b78cb8038981b08995b45a3b6e))
+* **@clayui/css:** Select box selected state should have darker background-color ([1890825](https://github.com/liferay/clay/commit/1890825e1385c0083c76a163d50e77d9949b3b78))
+
+
+### Features
+
+* **@clayui/css:** Cadmin adds c-link ([f0b4d3a](https://github.com/liferay/clay/commit/f0b4d3ace756c9a362e8f0af91493232740dbc1f))
+* **@clayui/css:** Links adds c-link to be used with utility classes ([156446b](https://github.com/liferay/clay/commit/156446b998d669345502b2fe49157f6a4906d6bd))
+* **@clayui/css:** Mixins clay-link adds ability to create variants ([60e9662](https://github.com/liferay/clay/commit/60e966265304dc12b39b5748ceb50ea477f2b91b))
+* **@clayui/css:** Utilities adds text-decoration-underline ([9b4873d](https://github.com/liferay/clay/commit/9b4873dd287fc1c2bf7dba693b7402f9fff5d62c))
+
+
+
+
+
 # [3.84.0](https://github.com/liferay/clay/compare/v3.83.1...v3.84.0) (2022-12-23)
 
 
