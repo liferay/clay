@@ -27,20 +27,27 @@ export interface IMultipleSelection {
 	 * The currently selected keys in the collection.
 	 */
 	selectedKeys?: Set<Key>;
+
+	/**
+	 * Flag to disable indeterminate state when selectionMode is multiple-recursive.
+	 */
+	indeterminate?: boolean;
 }
 
+type SelectionMode = 'single' | 'multiple' | 'multiple-recursive' | null;
+
 export interface IMultipleSelectionState {
-	isIntermediate: (key: Key) => boolean;
-	replaceIntermediateKeys: (keys: Array<Key>) => void;
+	isIndeterminate: (key: Key) => boolean;
+	replaceIndeterminateKeys: (keys: Array<Key>) => void;
 	selectedKeys: Set<Key>;
-	toggleSelection: (key: Key) => void;
+	toggleSelection: (key: Key, mode?: SelectionMode) => void;
 }
 
 export interface IMultipleSelectionProps<T>
 	extends IMultipleSelection,
 		Pick<ITreeProps<T>, 'nestedKey'>,
 		Pick<ICollectionProps<T>, 'items'> {
-	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
+	selectionMode?: SelectionMode;
 	layoutKeys: React.MutableRefObject<Map<React.Key, LayoutInfo>>;
 }
 
@@ -100,7 +107,7 @@ export function useMultipleSelection<T>(
 ): IMultipleSelectionState {
 	const selectionMode = props.selectionMode;
 
-	const intermediateKeys = useRef(new Set<Key>());
+	const indeterminateKeys = useRef(new Set<Key>());
 
 	const [selectedKeys, setSelectionKeys, isUncontrolled] = useInternalState<
 		Set<Key>
@@ -114,15 +121,15 @@ export function useMultipleSelection<T>(
 	});
 
 	/**
-	 * We are using `useMemo` to do intermediate state revalidation in the
+	 * We are using `useMemo` to do indeterminate state revalidation in the
 	 * render cycle instead of in the `useEffect` which happens after rendering.
 	 */
 	useMemo(() => {
 		if (props.selectionMode === 'multiple-recursive' && !isUncontrolled) {
-			const intermediates = Array.from(intermediateKeys.current);
+			const indeterminates = Array.from(indeterminateKeys.current);
 
-			intermediateKeys.current = new Set(
-				intermediates.filter((key) => {
+			indeterminateKeys.current = new Set(
+				indeterminates.filter((key) => {
 					const keyMap = props.layoutKeys.current.get(
 						key
 					) as LayoutInfo;
@@ -138,7 +145,7 @@ export function useMultipleSelection<T>(
 							children.some(
 								(key) =>
 									selectedKeys.has(key) ||
-									intermediateKeys.current.has(key)
+									indeterminateKeys.current.has(key)
 							)
 						) {
 							return true;
@@ -154,7 +161,11 @@ export function useMultipleSelection<T>(
 	}, [selectedKeys]);
 
 	const toggleParentSelection = useCallback(
-		(hasIntermediate: boolean, keyMap: LayoutInfo, selecteds: Set<Key>) => {
+		(
+			hasIndeterminate: boolean,
+			keyMap: LayoutInfo,
+			selecteds: Set<Key>
+		) => {
 			if (!keyMap.parentKey) {
 				return;
 			}
@@ -163,19 +174,27 @@ export function useMultipleSelection<T>(
 				keyMap.parentKey
 			) as LayoutInfo;
 
+			// Support variable for indeterminate state during recursive flow when
+			// visual indeterminate state is disabled.
+			let isIndeterminate = false;
+
 			// Root
 			// ├─ Item 0
 			// ├─ Item 1 <- Current recursion flow
-			// │  ├─ (Intermediate) Item 2
+			// │  ├─ (Indeterminate) Item 2
 			// │  │  ├─ (Checked) Item 3 <- Start
 			// │  │  ├─ Item 4
 			//
 			// As the method works recursively from the item's point in the tree
-			// to up, if the item's parent was already marked as intermediate, from
-			// here we start to mark all the parents as intermediate to avoid
+			// to up, if the item's parent was already marked as indeterminate, from
+			// here we start to mark all the parents as indeterminate to avoid
 			// unnecessary operations.
-			if (hasIntermediate) {
-				intermediateKeys.current.add(keyMap.parentKey);
+			if (hasIndeterminate) {
+				if (props.indeterminate) {
+					indeterminateKeys.current.add(keyMap.parentKey);
+				}
+
+				isIndeterminate = true;
 				selecteds.delete(keyMap.parentKey);
 			} else {
 				const children = [...parentKeyMap.children];
@@ -187,35 +206,37 @@ export function useMultipleSelection<T>(
 				const unselected = children.some((key) => !selecteds.has(key));
 
 				if (unselected) {
-					// An item can only be intermediate when there is at least
-					// one selected or intermediate item in its tree. We don't need
+					// An item can only be indeterminate when there is at least
+					// one selected or indeterminate item in its tree. We don't need
 					// to sweep the tree because we have the recursive effect.
 					if (
 						children.some(
 							(key) =>
 								selecteds.has(key) ||
-								intermediateKeys.current.has(key)
+								indeterminateKeys.current.has(key)
 						)
 					) {
-						intermediateKeys.current.add(keyMap.parentKey);
+						if (props.indeterminate) {
+							indeterminateKeys.current.add(keyMap.parentKey);
+						}
+
+						isIndeterminate = true;
 					} else {
-						intermediateKeys.current.delete(keyMap.parentKey);
+						indeterminateKeys.current.delete(keyMap.parentKey);
+						isIndeterminate = false;
 					}
 
 					selecteds.delete(keyMap.parentKey);
 				} else {
-					intermediateKeys.current.delete(keyMap.parentKey);
+					indeterminateKeys.current.delete(keyMap.parentKey);
+					isIndeterminate = false;
 					selecteds.add(keyMap.parentKey);
 				}
 			}
 
-			toggleParentSelection(
-				intermediateKeys.current.has(keyMap.parentKey),
-				parentKeyMap,
-				selecteds
-			);
+			toggleParentSelection(isIndeterminate, parentKeyMap, selecteds);
 		},
-		[props.layoutKeys, intermediateKeys]
+		[props.layoutKeys, indeterminateKeys, props.indeterminate]
 	);
 
 	const toggleLazyChildrenSelection = useCallback(
@@ -304,8 +325,8 @@ export function useMultipleSelection<T>(
 	);
 
 	const toggleSelection = useCallback(
-		(key: Key) => {
-			switch (selectionMode) {
+		(key: Key, mode?: SelectionMode) => {
+			switch (mode ?? selectionMode) {
 				case 'multiple': {
 					const selecteds = new Set(selectedKeys);
 
@@ -327,13 +348,13 @@ export function useMultipleSelection<T>(
 
 					if (selecteds.has(key)) {
 						selecteds.delete(key);
-					} else if (!intermediateKeys.current.has(key)) {
+					} else if (!indeterminateKeys.current.has(key)) {
 						selecteds.add(key);
 					}
 
-					// Resets the intermediate state because its selected state
+					// Resets the indeterminate state because its selected state
 					// will change.
-					intermediateKeys.current.delete(key);
+					indeterminateKeys.current.delete(key);
 
 					toggleChildrenSelection(
 						keyMap,
@@ -359,7 +380,7 @@ export function useMultipleSelection<T>(
 		},
 		[
 			props.layoutKeys,
-			intermediateKeys,
+			indeterminateKeys,
 			selectedKeys,
 			selectionMode,
 			toggleChildrenSelection,
@@ -367,21 +388,21 @@ export function useMultipleSelection<T>(
 		]
 	);
 
-	const isIntermediate = useCallback(
-		(key: Key) => intermediateKeys.current.has(key),
-		[intermediateKeys]
+	const isIndeterminate = useCallback(
+		(key: Key) => indeterminateKeys.current.has(key),
+		[indeterminateKeys]
 	);
 
-	const replaceIntermediateKeys = useCallback(
+	const replaceIndeterminateKeys = useCallback(
 		(keys: Array<Key>) => {
-			intermediateKeys.current = new Set(keys);
+			indeterminateKeys.current = new Set(keys);
 		},
-		[intermediateKeys]
+		[indeterminateKeys]
 	);
 
 	return {
-		isIntermediate,
-		replaceIntermediateKeys,
+		isIndeterminate,
+		replaceIndeterminateKeys,
 		selectedKeys,
 		toggleSelection,
 	};
