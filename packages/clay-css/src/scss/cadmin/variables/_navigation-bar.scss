@@ -31,7 +31,9 @@ $cadmin-navigation-bar-base: map-deep-merge(
 		navbar-nav: (
 			nav-link: (
 				border-radius: 0,
+				border-width: 0,
 				outline: 0,
+				font-size: inherit,
 				focus: (
 					box-shadow: $cadmin-component-focus-box-shadow,
 				),

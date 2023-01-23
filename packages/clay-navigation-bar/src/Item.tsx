@@ -57,7 +57,7 @@ const ClayNavigationBarIcon = ({
 								}
 							),
 							// @ts-ignore
-							displayType: 'unstyled',
+							displayType: null,
 							key: index,
 						});
 					}
