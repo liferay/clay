@@ -4,7 +4,9 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useContext} from 'react';
+
+import {NavigationBarContext} from './context';
 
 export interface IItemProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
@@ -24,6 +26,8 @@ const ClayNavigationBarIcon = ({
 	className,
 	...otherProps
 }: IItemProps) => {
+	const {ariaCurrent} = useContext(NavigationBarContext);
+
 	return (
 		<li {...otherProps} className={classNames('nav-item', className)}>
 			{React.Children.map(
@@ -37,7 +41,9 @@ const ClayNavigationBarIcon = ({
 					) {
 						return React.cloneElement(child, {
 							...child.props,
-							'aria-current': active ? 'page' : undefined,
+							'aria-current': active
+								? ariaCurrent ?? undefined
+								: undefined,
 							children: (
 								<span className="navbar-text-truncate">
 									{child.props.children}
