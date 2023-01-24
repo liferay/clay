@@ -5,12 +5,25 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/link/'
 packageNpm: '@clayui/link'
 ---
 
-import {Link, LinkContext} from '$packages/clay-link/docs/index';
+import {
+	Link,
+	LinkBorderless,
+	LinkFontSize,
+	LinkMonospaced,
+	LinkOutline,
+	LinkWeight,
+	LinkContext,
+} from '$packages/clay-link/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Basic Usage](#basic-usage)
+    -   [Semi Bold](#link-semi-bold)
+    -   [Font Size](#link-font-size)
+    -   [Outline](#link-outline)
+    -   [Borderless](#link-outline-borderless)
+    -   [Monospaced](#link-monospaced)
 -   [With Context](#with-context)
 
 </div>
@@ -20,9 +33,39 @@ import {Link, LinkContext} from '$packages/clay-link/docs/index';
 
 By default, when using ClayLink your component will be rendered as an anchor.
 
-You can style a link just passing [`displayType`](#api-displayType) property to value `secondary` or `primary`.
+You can style a link with predefined styles by using [`displayType`](#api-displayType) property. The available values are `primary`, `secondary`, `danger`, and `tertiary`.
 
 <Link />
+
+### Semi Bold(#link-semi-bold)
+
+The `weight` attribute sets the `font-weight` for the link. The available values are `normal`, `semi-bold`, and `null`.
+
+<LinkWeight />
+
+### Font Size(#link-font-size)
+
+The `fontSize` attribute appiles the `text-#` class on the link. It is based on the sizes listed on the [Text page](/docs/components/text.html#size).
+
+<LinkFontSize />
+
+### Outline(#link-outline)
+
+The `outline` attribute enables the `link-outline` variation of `ClayLink`.
+
+<LinkOutline />
+
+### Borderless(#link-outline-borderless)
+
+The `borderless` attribute removes the border from `link-outline`.
+
+<LinkBorderless />
+
+### Monospaced(#link-monospaced)
+
+The `monospaced` attribute renders a link that is equal width and height.
+
+<LinkMonospaced />
 
 ## With Context
 
