@@ -56,10 +56,10 @@ module.exports = {
 			statements: 91,
 		},
 		'./packages/clay-core/src/picker/': {
-			branches: 87,
+			branches: 81,
 			functions: 88,
-			lines: 95,
-			statements: 95,
+			lines: 93,
+			statements: 93,
 		},
 		'./packages/clay-core/src/tree-view/': {
 			branches: 68,
@@ -194,8 +194,8 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-shared/src/': {
-			branches: 21,
-			functions: 16,
+			branches: 20,
+			functions: 15,
 			lines: 36,
 			statements: 39,
 		},

@@ -8,6 +8,7 @@ exports[`Picker basic rendering render dynamic content 1`] = `
     aria-haspopup="listbox"
     class="form-control form-control-select form-control-select-secondary"
     role="combobox"
+    tabindex="0"
   >
     Select an option
   </button>
@@ -47,9 +48,25 @@ exports[`Picker basic rendering render static content 1`] = `
       aria-haspopup="listbox"
       class="form-control form-control-select form-control-select-secondary"
       role="combobox"
+      tabindex="0"
     >
       Select an option
     </button>
+  </div>
+  <div
+    data-live-announcer="true"
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  >
+    <div
+      aria-live="assertive"
+      aria-relevant="additions"
+      role="log"
+    />
+    <div
+      aria-live="polite"
+      aria-relevant="additions"
+      role="log"
+    />
   </div>
 </body>
 `;
@@ -83,27 +100,41 @@ exports[`Picker basic rendering renders open component by default 1`] = `
   <div>
     <button
       aria-activedescendant="Apple"
-      aria-controls="clay-id-11"
       aria-expanded="true"
       aria-haspopup="listbox"
-      aria-owns="clay-id-12"
+      aria-owns="clay-id-6"
       class="form-control form-control-select form-control-select-secondary show"
       role="combobox"
       style=""
+      tabindex="0"
     >
       Select an option
     </button>
   </div>
+  <div
+    data-live-announcer="true"
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"
+  >
+    <div
+      aria-live="assertive"
+      aria-relevant="additions"
+      role="log"
+    />
+    <div
+      aria-live="polite"
+      aria-relevant="additions"
+      role="log"
+    />
+  </div>
   <div>
     <div
       class="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
-      id="clay-id-11"
       role="presentation"
       style="left: -999px; top: -995px;"
     >
       <ul
         class="inline-scroller list-unstyled"
-        id="clay-id-12"
+        id="clay-id-6"
         role="listbox"
         tabindex="-1"
       >

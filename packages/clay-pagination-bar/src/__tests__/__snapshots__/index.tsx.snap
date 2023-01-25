@@ -15,6 +15,7 @@ exports[`ClayPaginationBar renders 1`] = `
         aria-haspopup="listbox"
         class="dropdown-toggle btn btn-unstyled"
         role="combobox"
+        tabindex="0"
         type="button"
       >
         10 items
@@ -148,7 +149,7 @@ exports[`ClayPaginationBar renders without a DropDown 1`] = `
   >
     <div
       class="pagination-results"
-      id="clay-id-4"
+      id="clay-id-3"
     >
       Showing 1 to 10 of 100
     </div>
@@ -266,7 +267,7 @@ exports[`ClayPaginationBar totalItems with 0 will render the pagination bar with
   >
     <div
       class="pagination-results"
-      id="clay-id-5"
+      id="clay-id-4"
     >
       Showing 1 to 1 of 1
     </div>
