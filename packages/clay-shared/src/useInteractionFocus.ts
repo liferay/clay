@@ -5,6 +5,8 @@
 
 import {useEffect} from 'react';
 
+import {isMac} from './platform';
+
 export type Interaction = 'keyboard' | 'pointer' | 'virtual';
 
 let currentInteraction: any = null;
@@ -12,21 +14,11 @@ let hasSetupGlobalListeners = false;
 let hasEventBeforeFocus = false;
 let hasBlurredWindowRecently = false;
 
-function testPlatform(re: RegExp) {
-	return typeof window !== 'undefined' && window.navigator != null
-		? re.test(
-				// @ts-ignore
-				window.navigator['userAgentData']?.platform ||
-					window.navigator.platform
-		  )
-		: false;
-}
-
 function isValidKey(event: KeyboardEvent) {
 	// Control and Shift keys trigger when navigating back to the tab with keyboard.
 	return !(
 		event.metaKey ||
-		(!testPlatform(/^Mac/i) && event.altKey) ||
+		(!isMac() && event.altKey) ||
 		event.ctrlKey ||
 		event.key === 'Control' ||
 		event.key === 'Shift' ||
