@@ -10,6 +10,7 @@ import {
 	getFocusableList,
 	isAppleDevice,
 	isTypeahead,
+	sub,
 	useId,
 	useInteractionFocus,
 	useInternalState,
@@ -90,6 +91,14 @@ export type Props<T> = {
 	id?: string;
 
 	/**
+	 * Texts used for assertive messages to SRs.
+	 */
+	messages?: {
+		itemSelected: string;
+		itemDescribedby: string;
+	};
+
+	/**
 	 * Flag to make the component hybrid, when identified it is on a mobile
 	 * device it will use the native selector.
 	 */
@@ -135,6 +144,11 @@ export function Picker<T>({
 	disabled,
 	id,
 	items,
+	messages = {
+		itemDescribedby:
+			'You are currently on a text element, inside of a list box.',
+		itemSelected: '{0}, selected',
+	},
 	native = false,
 	onActiveChange,
 	onSelectionChange,
@@ -232,9 +246,14 @@ export function Picker<T>({
 
 			announcerAPI.current.announce(
 				selectedKey === activeDescendant
-					? `${value}, selected`
+					? sub(messages.itemSelected, [value])
 					: `${value}`
 			);
+
+			// Announces item description with delay to replace combobox description.
+			setTimeout(() => {
+				announcerAPI.current!.announce(messages.itemDescribedby);
+			}, 1000);
 		}
 	}, [active]);
 

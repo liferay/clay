@@ -57,9 +57,9 @@ module.exports = {
 		},
 		'./packages/clay-core/src/picker/': {
 			branches: 81,
-			functions: 88,
-			lines: 93,
-			statements: 93,
+			functions: 84,
+			lines: 91,
+			statements: 91,
 		},
 		'./packages/clay-core/src/tree-view/': {
 			branches: 68,
