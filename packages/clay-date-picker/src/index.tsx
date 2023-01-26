@@ -438,7 +438,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			let daysSelectedToString;
 
 			if (range) {
-				if (startDate !== endDate) {
+				if (startDate.toString() !== endDate.toString()) {
 					newDaysSelected = [date, date];
 				} else if (date < startDate) {
 					newDaysSelected = [date, endDate];
