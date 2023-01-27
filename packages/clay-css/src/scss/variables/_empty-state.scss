@@ -3,9 +3,7 @@ $c-empty-state: () !default;
 $c-empty-state-animation: () !default;
 $c-empty-state-animation: map-deep-merge(
 	(
-		align-items: center,
-		display: flex,
-		flex-direction: column,
+		display: block,
 		margin: 5rem auto 1.5rem,
 		max-width: 340px,
 		text-align: center,
@@ -16,7 +14,7 @@ $c-empty-state-animation: map-deep-merge(
 $c-empty-state-image: () !default;
 $c-empty-state-image: map-deep-merge(
 	(
-		margin-bottom: -0.5rem,
+		margin: 0 auto 2rem,
 		max-width: 250px,
 		width: 100%,
 		word-wrap: break-word,
