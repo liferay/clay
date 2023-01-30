@@ -8,7 +8,9 @@ import {
 	Keys,
 	Overlay,
 	getFocusableList,
+	isAppleDevice,
 	isTypeahead,
+	sub,
 	useId,
 	useInteractionFocus,
 	useInternalState,
@@ -17,12 +19,14 @@ import {
 	useOverlayPosition,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {Collection, useCollection} from '../collection';
+import {LiveAnnouncer} from '../live-announcer';
 import {PickerContext} from './context';
 
 import type {ICollectionProps} from '../collection';
+import type {AnnouncerAPI} from '../live-announcer';
 
 export type Props<T> = {
 	/**
@@ -87,6 +91,14 @@ export type Props<T> = {
 	id?: string;
 
 	/**
+	 * Texts used for assertive messages to SRs.
+	 */
+	messages?: {
+		itemSelected: string;
+		itemDescribedby: string;
+	};
+
+	/**
 	 * Flag to make the component hybrid, when identified it is on a mobile
 	 * device it will use the native selector.
 	 */
@@ -132,6 +144,11 @@ export function Picker<T>({
 	disabled,
 	id,
 	items,
+	messages = {
+		itemDescribedby:
+			'You are currently on a text element, inside of a list box.',
+		itemSelected: '{0}, selected',
+	},
 	native = false,
 	onActiveChange,
 	onSelectionChange,
@@ -172,10 +189,11 @@ export function Picker<T>({
 	);
 
 	const ariaControls = useId();
-	const ariaOwns = useId();
 
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
 	const menuRef = useRef<HTMLDivElement | null>(null);
+
+	const announcerAPI = useRef<AnnouncerAPI>(null);
 
 	const {isFocusVisible} = useInteractionFocus();
 
@@ -213,6 +231,32 @@ export function Picker<T>({
 		}
 	}, [activeDescendant]);
 
+	// Apple devices with VoiceOver do not announce correctly when the menu is
+	// opened. There is a bug with `aria-activedescendant` when the element is
+	// not an input and uses `aria-controls` or `aria-owns`.
+	// https://github.com/liferay/clay/issues/5281#issuecomment-1399151900
+	useEffect(() => {
+		if (
+			announcerAPI.current &&
+			isAppleDevice() &&
+			activeDescendant &&
+			active
+		) {
+			const value = collection.getItem(activeDescendant);
+
+			announcerAPI.current.announce(
+				selectedKey === activeDescendant
+					? sub(messages.itemSelected, [value])
+					: `${value}`
+			);
+
+			// Announces item description with delay to replace combobox description.
+			setTimeout(() => {
+				announcerAPI.current!.announce(messages.itemDescribedby);
+			}, 1000);
+		}
+	}, [active]);
+
 	const context = {
 		activeDescendant,
 		isMobile: isMobile && native,
@@ -246,13 +290,19 @@ export function Picker<T>({
 
 	return (
 		<>
+			<LiveAnnouncer ref={announcerAPI} />
+
 			<As
 				{...otherProps}
 				aria-activedescendant={active ? activeDescendant : ''}
-				aria-controls={active ? ariaControls : undefined}
+				aria-controls={
+					active && isAppleDevice() ? ariaControls : undefined
+				}
 				aria-expanded={active}
 				aria-haspopup="listbox"
-				aria-owns={active ? ariaOwns : undefined}
+				aria-owns={
+					active && !isAppleDevice() ? ariaControls : undefined
+				}
 				className={classNames(
 					'form-control form-control-select form-control-select-secondary',
 					className,
@@ -352,6 +402,7 @@ export function Picker<T>({
 				}}
 				ref={triggerRef}
 				role="combobox"
+				tabIndex={0}
 			>
 				{selectedKey ? collection.getItem(selectedKey) : placeholder}
 			</As>
@@ -389,15 +440,14 @@ export function Picker<T>({
 				>
 					<div
 						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
-						id={ariaControls}
-						onFocus={() => triggerRef.current?.focus()}
 						ref={menuRef}
 						role="presentation"
 					>
 						<ul
 							aria-labelledby={otherProps['aria-labelledby']}
 							className="inline-scroller list-unstyled"
-							id={ariaOwns}
+							id={ariaControls}
+							onFocus={() => triggerRef.current?.focus()}
 							role="listbox"
 							tabIndex={-1}
 						>
