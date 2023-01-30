@@ -55,7 +55,10 @@ export function useTreeViewContext(): ITreeViewContext<unknown> {
 }
 
 export type Selection = {
-	toggle: (key: Key) => void;
+	toggle: (
+		key: Key,
+		selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null
+	) => void;
 	has: (key: Key) => boolean;
 };
 
