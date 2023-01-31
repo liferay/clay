@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.86.0](https://github.com/liferay/clay/compare/v3.85.0...v3.86.0) (2023-01-31)
+
+### Bug Fixes
+
+-   **@clayui/core:** announce item description when opening menu in Picker component ([7509ef7](https://github.com/liferay/clay/commit/7509ef7de1a7f07fc94e79446d9a3321f5fa9a06))
+-   **@clayui/core:** fix `selection.toggle` typing error ([a61329f](https://github.com/liferay/clay/commit/a61329fb0e31f3b731fcb9e3cca52512c9010a86))
+-   **@clayui/core:** fix Picker accessibility error on Apple devices with VoiceOver ([b3f56b2](https://github.com/liferay/clay/commit/b3f56b20e1c96f5547eda645b86fa95576168289))
+-   **@clayui/css:** Empty State add bigger margin-bottom on image ([e19f587](https://github.com/liferay/clay/commit/e19f587da161c40a376228706f81c11086057f0c))
+-   **@clayui/css:** Readd text-underline and add text-none ([5f7f691](https://github.com/liferay/clay/commit/5f7f691ff69b93ead8204eed674fbd43664cc105))
+-   **@clayui/css:** Text decoration utility selector typo ([8970d78](https://github.com/liferay/clay/commit/8970d78574ac9a75897646b93603e768049eca0d))
+-   **@clayui/date-picker:** Date Range should be selectable with a single click ([ecd4c94](https://github.com/liferay/clay/commit/ecd4c942617244df6797bc69d5659957f7590540))
+
+### Features
+
+-   **@clayui/core:** adds simple implementation for LiveAnnouncer ([cd0fd12](https://github.com/liferay/clay/commit/cd0fd12f92d6d4d8ebcf506b92360acbcb0522f2))
+
 # [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
 
 ### Bug Fixes

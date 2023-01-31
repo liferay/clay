@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.86.0](https://github.com/liferay/clay/compare/v3.85.0...v3.86.0) (2023-01-31)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Empty State add bigger margin-bottom on image ([e19f587](https://github.com/liferay/clay/commit/e19f587da161c40a376228706f81c11086057f0c))
+* **@clayui/css:** Readd text-underline and add text-none ([5f7f691](https://github.com/liferay/clay/commit/5f7f691ff69b93ead8204eed674fbd43664cc105))
+* **@clayui/css:** Text decoration utility selector typo ([8970d78](https://github.com/liferay/clay/commit/8970d78574ac9a75897646b93603e768049eca0d))
+
+
+
+
+
 # [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.86.0](https://github.com/liferay/clay/compare/v3.85.0...v3.86.0) (2023-01-31)
+
+### Bug Fixes
+
+-   **@clayui/core:** announce item description when opening menu in Picker component ([7509ef7](https://github.com/liferay/clay/commit/7509ef7de1a7f07fc94e79446d9a3321f5fa9a06))
+-   **@clayui/core:** fix `selection.toggle` typing error ([a61329f](https://github.com/liferay/clay/commit/a61329fb0e31f3b731fcb9e3cca52512c9010a86))
+-   **@clayui/core:** fix Picker accessibility error on Apple devices with VoiceOver ([b3f56b2](https://github.com/liferay/clay/commit/b3f56b20e1c96f5547eda645b86fa95576168289))
+
+### Features
+
+-   **@clayui/core:** adds simple implementation for LiveAnnouncer ([cd0fd12](https://github.com/liferay/clay/commit/cd0fd12f92d6d4d8ebcf506b92360acbcb0522f2))
+
 # [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
 
 ### Bug Fixes
