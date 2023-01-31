@@ -532,10 +532,10 @@ $cadmin-text-theme-colors: map-deep-merge(
 $cadmin-text-decorations: () !default;
 $cadmin-text-decorations: map-deep-merge(
 	(
-		text-decoration-none: (
+		'.text-none, .text-decoration-none': (
 			text-decoration: none !important,
 		),
-		text-decoration-underline: (
+		'.text-underline, .text-decoration-underline': (
 			text-decoration: underline !important,
 		),
 	),
