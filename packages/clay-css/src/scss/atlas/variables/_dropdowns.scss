@@ -3,6 +3,7 @@
 // @deprecated as of v3.x use map $dropdown-menu instead
 
 $dropdown-bg: $white !default;
+
 // @deprecated as of v3.x use map $dropdown-menu instead
 
 $dropdown-border-color: $gray-300 !default;
@@ -54,7 +55,7 @@ $dropdown-menu: map-deep-merge(
 // .dropdown-item
 
 $dropdown-item-padding-x: 1rem !default;
-$dropdown-item-padding-y: 0.5rem !default;
+$dropdown-item-padding-y: 0.34375rem !default;
 
 /// @deprecated as of v3.x use map $dropdown-item instead
 
@@ -82,7 +83,7 @@ $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
 
 /// @deprecated as of v3.x use map $dropdown-item instead
 
-$dropdown-link-active-font-weight: $font-weight-semi-bold !default;
+$dropdown-link-active-font-weight: null !default;
 
 /// @deprecated as of v3.x use map $dropdown-item instead
 
@@ -128,6 +129,10 @@ $dropdown-header-font-size: 0.875rem !default; // 14px
 
 $dropdown-header-margin-top: 0.625rem !default; // 10px
 
+// @deprecated as of v3.x use map $dropdown-header instead
+
+$dropdown-header-padding-y: 0.34375rem !default;
+
 $dropdown-header: () !default;
 $dropdown-header: map-deep-merge(
 	(
@@ -147,6 +152,10 @@ $dropdown-subheader-font-size: 0.75rem !default; // 12px
 // @deprecated as of v3.x use map $dropdown-subheader instead
 
 $dropdown-subheader-margin-top: 0.625rem !default; // 10px
+
+// @deprecated as of v3.x use map $dropdown-subheader instead
+
+$dropdown-subheader-padding-y: 0.375rem !default;
 
 $dropdown-subheader: () !default;
 $dropdown-subheader: map-deep-merge(
@@ -212,7 +221,7 @@ $dropdown-section-active-custom-control-label: map-deep-merge(
 $dropdown-section-custom-control-label-text: () !default;
 $dropdown-section-custom-control-label-text: map-deep-merge(
 	(
-		padding-left: 1rem,
+		padding-left: 0.75rem,
 	),
 	$dropdown-section-custom-control-label-text
 );
@@ -220,6 +229,7 @@ $dropdown-section-custom-control-label-text: map-deep-merge(
 $dropdown-section: () !default;
 $dropdown-section: map-deep-merge(
 	(
+		padding: 0.375rem $dropdown-item-padding-x,
 		custom-control-label: $dropdown-section-custom-control-label,
 		custom-control-label-text: $dropdown-section-custom-control-label-text,
 		active: (
@@ -228,6 +238,11 @@ $dropdown-section: map-deep-merge(
 	),
 	$dropdown-section
 );
+
+// Dropdown Item Indicator
+
+$dropdown-item-indicator-size: 1rem !default;
+$dropdown-item-indicator-spacer-x: 0.75rem !default;
 
 // Autocomplete Dropdown Menu
 
