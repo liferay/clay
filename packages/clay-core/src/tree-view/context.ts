@@ -54,11 +54,13 @@ export function useTreeViewContext(): ITreeViewContext<unknown> {
 	return useContext(TreeViewContext);
 }
 
+type SelectionToggleOptions = {
+	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
+	parentSelection?: boolean;
+};
+
 export type Selection = {
-	toggle: (
-		key: Key,
-		selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null
-	) => void;
+	toggle: (key: Key, options?: SelectionToggleOptions) => void;
 	has: (key: Key) => boolean;
 };
 
