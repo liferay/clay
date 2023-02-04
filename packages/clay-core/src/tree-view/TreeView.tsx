@@ -10,6 +10,7 @@ import {DndProvider} from 'react-dnd';
 import {HTML5Backend} from 'react-dnd-html5-backend';
 
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
+import {DragAndDropProvider} from './DragAndDrop';
 import DragLayer from './DragLayer';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
@@ -148,7 +149,7 @@ export function TreeView<T>({
 	showExpanderOnHover = true,
 	...otherProps
 }: ITreeViewProps<T>) {
-	const rootRef = React.useRef(null);
+	const rootRef = useRef<HTMLUListElement>(null);
 
 	const state = useTree<T>({
 		defaultExpandedKeys,
@@ -211,10 +212,12 @@ export function TreeView<T>({
 					context={dragAndDropContext}
 				>
 					<TreeViewContext.Provider value={context}>
-						<Collection<T> items={state.items}>
-							{children}
-						</Collection>
-						<DragLayer itemNameKey={itemNameKey} />
+						<DragAndDropProvider rootRef={rootRef}>
+							<Collection<T> items={state.items}>
+								{children}
+							</Collection>
+							<DragLayer itemNameKey={itemNameKey} />
+						</DragAndDropProvider>
 					</TreeViewContext.Provider>
 				</DndProvider>
 			</ul>

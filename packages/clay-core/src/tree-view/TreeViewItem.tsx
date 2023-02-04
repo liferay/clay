@@ -18,6 +18,7 @@ import React, {
 } from 'react';
 
 import {removeItemInternalProps} from './Collection';
+import {useDnD} from './DragAndDrop';
 import {Icons, useAPI, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
@@ -96,6 +97,7 @@ export const TreeViewItem = React.forwardRef<
 	const {
 		childrenRoot,
 		close,
+		dragAndDrop,
 		expandDoubleClick,
 		expandedKeys,
 		nestedKey,
@@ -236,8 +238,16 @@ export const TreeViewItem = React.forwardRef<
 								itemStackProps.noHover || nodeProps.noHover,
 						}
 					)}
+					data-dnd-dropping={
+						overTarget && overPosition ? 'true' : undefined
+					}
+					data-id={
+						typeof item.key === 'number'
+							? `number,${item.key}`
+							: `string,${item.key}`
+					}
 					disabled={itemStackProps.disabled || nodeProps.disabled}
-					onBlur={() => actions && setFocus(false)}
+					onBlur={() => actions || (dragAndDrop && setFocus(false))}
 					onClick={(event) => {
 						if (itemStackProps.disabled || nodeProps.disabled) {
 							return;
@@ -295,7 +305,7 @@ export const TreeViewItem = React.forwardRef<
 						}
 					}}
 					onFocus={() => {
-						if (actions) {
+						if (actions || dragAndDrop) {
 							setFocus(true);
 							clickCapturedRef.current = true;
 						}
@@ -599,6 +609,7 @@ export function TreeViewItemStack({
 	...otherProps
 }: ITreeViewItemStackProps) {
 	const {
+		dragAndDrop,
 		expandOnCheck,
 		expandedKeys,
 		expanderClassName,
@@ -610,6 +621,9 @@ export function TreeViewItemStack({
 	} = useTreeViewContext();
 
 	const item = useItem();
+
+	const {currentDrag, dragCancelDescribedBy, dragDescribedBy, onDragStart} =
+		useDnD();
 
 	const childrenCount = React.Children.count(children);
 
@@ -731,6 +745,35 @@ export function TreeViewItemStack({
 					</Layout.ContentCol>
 				);
 			})}
+
+			{dragAndDrop && (
+				<Actions>
+					<Button
+						aria-describedby={
+							currentDrag === item.key
+								? dragCancelDescribedBy
+								: dragDescribedBy
+						}
+						aria-label="Drag"
+						displayType={null}
+						draggable
+						monospaced
+						onClick={(event) => {
+							const element =
+								event.currentTarget.closest<HTMLElement>(
+									'.treeview-item'
+								);
+
+							if (element) {
+								element.focus();
+							}
+							onDragStart(item.key);
+						}}
+					>
+						<Icon symbol="drag" />
+					</Button>
+				</Actions>
+			)}
 
 			{actions && <Actions>{actions}</Actions>}
 		</Layout.ContentRow>

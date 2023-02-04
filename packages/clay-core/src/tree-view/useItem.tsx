@@ -8,6 +8,7 @@ import {useDrag, useDrop} from 'react-dnd';
 import {getEmptyImage} from 'react-dnd-html5-backend';
 
 import {removeItemInternalProps} from './Collection';
+import {Position, TARGET_POSITION, getNewItemPath, useDnD} from './DragAndDrop';
 import {useTreeViewContext} from './context';
 import {createImmutableTree} from './useTree';
 
@@ -26,16 +27,6 @@ type Props = {
 
 const ItemContext = React.createContext<Value>({} as Value);
 
-const TARGET_POSITION = {
-	BOTTOM: 'bottom',
-	MIDDLE: 'middle',
-	TOP: 'top',
-} as const;
-
-type ValueOf<T> = T[keyof T];
-
-type Position = ValueOf<typeof TARGET_POSITION>;
-
 const DISTANCE = 0.2;
 
 function getKey(key: React.Key) {
@@ -49,28 +40,6 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 		!fromClosestPathTree.some((loc, index) => loc !== path[index]) &&
 		path.length > from.length
 	);
-}
-
-function getNewItemPath(path: Array<number>, overPosition: Position) {
-	let indexes = [...path];
-
-	const lastPathIndex = indexes.pop() as number;
-
-	switch (overPosition) {
-		case TARGET_POSITION.BOTTOM:
-			indexes = [...indexes, lastPathIndex + 1];
-			break;
-		case TARGET_POSITION.MIDDLE:
-			indexes = [...indexes, lastPathIndex, 0];
-			break;
-		case TARGET_POSITION.TOP:
-			indexes = [...indexes, lastPathIndex];
-			break;
-		default:
-			break;
-	}
-
-	return indexes;
 }
 
 export function ItemContextProvider({children, value}: Props) {
@@ -90,6 +59,8 @@ export function ItemContextProvider({children, value}: Props) {
 		itemRef: parentItemRef,
 		key: parentKey,
 	} = useItem();
+
+	const {currentDrag, currentTarget, mode, position} = useDnD();
 
 	const keyRef = useRef(getKey(value.key));
 
@@ -271,9 +242,11 @@ export function ItemContextProvider({children, value}: Props) {
 	return (
 		<ItemContext.Provider value={item}>
 			{React.cloneElement(children as JSX.Element, {
-				isDragging,
-				overPosition,
-				overTarget,
+				isDragging:
+					(mode === 'keyboard' && currentDrag === item.key) ||
+					isDragging,
+				overPosition: position || overPosition,
+				overTarget: currentTarget === item.key || overTarget,
 				ref: childRef,
 			})}
 		</ItemContext.Provider>

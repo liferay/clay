@@ -51,6 +51,11 @@ export function TreeViewGroup<T extends Record<any, any>>({
 				exit: 'show',
 				exitActive: 'collapsing',
 			}}
+			data-id={
+				typeof item.key === 'number'
+					? `number,${item.key}`
+					: `string,${item.key}`
+			}
 			id={item.key}
 			in={expandedKeys.has(item.key)}
 			onEnter={(element: HTMLElement) =>

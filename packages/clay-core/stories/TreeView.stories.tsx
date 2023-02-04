@@ -578,7 +578,7 @@ export const PageElements = () => {
 	];
 
 	const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
-		new Set(['1', '2', '3', '4', '5'])
+		new Set([1, 2, 3, 4, 5])
 	);
 
 	return (
