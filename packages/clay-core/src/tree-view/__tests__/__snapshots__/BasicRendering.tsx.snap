@@ -13,6 +13,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
       <div
         aria-expanded="false"
         class="treeview-link"
+        data-id="string,Root"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -88,6 +89,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
       <div
         aria-expanded="false"
         class="treeview-link"
+        data-id="string,Foo"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -163,6 +165,7 @@ exports[`TreeView basic rendering render static content 1`] = `
       <div
         aria-expanded="false"
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -237,6 +240,7 @@ exports[`TreeView basic rendering render with actions 1`] = `
     >
       <div
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 24px;"
         tabindex="0"
@@ -330,6 +334,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
       <div
         aria-expanded="false"
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -422,6 +427,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
       <div
         aria-expanded="false"
         class="treeview-link active"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
@@ -514,6 +520,7 @@ exports[`TreeView basic rendering render with text 1`] = `
       <div
         aria-expanded="false"
         class="treeview-link"
+        data-id="string,$.0"
         role="treeitem"
         style="padding-left: 0px;"
         tabindex="0"
