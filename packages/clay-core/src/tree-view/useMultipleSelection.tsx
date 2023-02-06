@@ -36,11 +36,16 @@ export interface IMultipleSelection {
 
 type SelectionMode = 'single' | 'multiple' | 'multiple-recursive' | null;
 
+type SelectionToggleOptions = {
+	selectionMode?: SelectionMode;
+	parentSelection?: boolean;
+};
+
 export interface IMultipleSelectionState {
 	isIndeterminate: (key: Key) => boolean;
 	replaceIndeterminateKeys: (keys: Array<Key>) => void;
 	selectedKeys: Set<Key>;
-	toggleSelection: (key: Key, mode?: SelectionMode) => void;
+	toggleSelection: (key: Key, options?: SelectionToggleOptions) => void;
 }
 
 export interface IMultipleSelectionProps<T>
@@ -325,7 +330,9 @@ export function useMultipleSelection<T>(
 	);
 
 	const toggleSelection = useCallback(
-		(key: Key, mode?: SelectionMode) => {
+		(key: Key, options?: SelectionToggleOptions) => {
+			const {parentSelection = true, selectionMode: mode} = options ?? {};
+
 			switch (mode ?? selectionMode) {
 				case 'multiple': {
 					const selecteds = new Set(selectedKeys);
@@ -363,7 +370,9 @@ export function useMultipleSelection<T>(
 						selecteds.has(key)
 					);
 
-					toggleParentSelection(false, keyMap, selecteds);
+					if (parentSelection) {
+						toggleParentSelection(false, keyMap, selecteds);
+					}
 
 					setSelectionKeys(selecteds);
 					break;
