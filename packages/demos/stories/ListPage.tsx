@@ -10,7 +10,7 @@ import ClayIcon from '@clayui/icon';
 import {ClayListWithItems} from '@clayui/list';
 import ClayManagementToolbar from '@clayui/management-toolbar';
 import {ClayPaginationBarWithBasicItems} from '@clayui/pagination-bar';
-import {sub} from '@clayui/shared';
+import {sub, useId} from '@clayui/shared';
 import {ClayTooltipProvider} from '@clayui/tooltip';
 import React, {useState} from 'react';
 
@@ -89,6 +89,8 @@ export default function ListPage() {
 
 	const isActive = !!numOfSelected;
 
+	const checkboxDescribedby = useId();
+
 	return (
 		<ClayTooltipProvider>
 			<div>
@@ -96,6 +98,12 @@ export default function ListPage() {
 					<ClayManagementToolbar.ItemList expand={isActive}>
 						<ClayManagementToolbar.Item>
 							<ClayCheckbox
+								aria-describedby={checkboxDescribedby}
+								aria-label={
+									numOfSelected === totalItems
+										? 'Unselect all'
+										: 'Select all'
+								}
 								checked={allSelected}
 								data-tooltip-align="top"
 								onChange={() => {
@@ -116,7 +124,10 @@ export default function ListPage() {
 						{isActive && (
 							<>
 								<ClayManagementToolbar.Item>
-									<span className="navbar-text">
+									<span
+										className="navbar-text"
+										id={checkboxDescribedby}
+									>
 										{numOfSelected === totalItems ? (
 											'All Selected'
 										) : (
@@ -180,6 +191,11 @@ export default function ListPage() {
 
 								<ClayManagementToolbar.Item>
 									<ClayButton
+										aria-label={
+											sortAsc
+												? 'Order list up'
+												: 'Order list down'
+										}
 										className="nav-link nav-link-monospaced"
 										displayType="unstyled"
 										onClick={() => setSortAsc(!sortAsc)}
@@ -219,6 +235,7 @@ export default function ListPage() {
 											tag="span"
 										>
 											<ClayButtonWithIcon
+												aria-label="Close"
 												className="navbar-breakpoint-d-none"
 												displayType="unstyled"
 												onClick={() =>
@@ -227,6 +244,7 @@ export default function ListPage() {
 												symbol="times"
 											/>
 											<ClayButtonWithIcon
+												aria-label="Search for..."
 												displayType="unstyled"
 												symbol="search"
 												type="submit"
@@ -239,6 +257,7 @@ export default function ListPage() {
 							<ClayManagementToolbar.ItemList>
 								<ClayManagementToolbar.Item className="navbar-breakpoint-d-none">
 									<ClayButton
+										aria-label="Search"
 										className="nav-link nav-link-monospaced"
 										displayType="unstyled"
 										onClick={() => setSearchMobile(true)}
@@ -249,6 +268,7 @@ export default function ListPage() {
 
 								<ClayManagementToolbar.Item>
 									<ClayButton
+										aria-label="Info"
 										className="nav-link nav-link-monospaced"
 										displayType="unstyled"
 										onClick={() => {}}
@@ -262,6 +282,7 @@ export default function ListPage() {
 										items={viewTypes}
 										trigger={
 											<ClayButton
+												aria-label="Display view"
 												className="nav-link nav-link-monospaced"
 												displayType="unstyled"
 											>
@@ -273,6 +294,7 @@ export default function ListPage() {
 
 								<ClayManagementToolbar.Item>
 									<ClayButtonWithIcon
+										aria-label="Add New Item"
 										className="nav-btn nav-btn-monospaced"
 										data-tooltip-align="bottom"
 										symbol="plus"

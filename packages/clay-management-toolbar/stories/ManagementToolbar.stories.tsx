@@ -43,6 +43,7 @@ const viewTypes = [
 
 export const Default = () => {
 	const [searchMobile, setSearchMobile] = useState<boolean>(false);
+	const [checked, setChecked] = useState<boolean>(false);
 	const viewTypeActive = viewTypes.find((type) => type.active);
 
 	return (
@@ -50,7 +51,13 @@ export const Default = () => {
 			<ClayManagementToolbar aria-label="Management toolbar">
 				<ClayManagementToolbar.ItemList>
 					<ClayManagementToolbar.Item>
-						<ClayCheckbox checked={false} onChange={() => {}} />
+						<ClayCheckbox
+							aria-label={checked ? 'Unselect all' : 'Select all'}
+							checked={checked}
+							onChange={(event) =>
+								setChecked(event.target.checked)
+							}
+						/>
 					</ClayManagementToolbar.Item>
 
 					<ClayManagementToolbar.Item>

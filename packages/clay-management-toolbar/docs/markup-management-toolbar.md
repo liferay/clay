@@ -41,7 +41,7 @@ mainTabURL: 'docs/components/management-toolbar.html'
                 <li class="nav-item">
                     <div class="custom-control custom-checkbox">
                         <label>
-                            <input class="custom-control-input" type="checkbox">
+                            <input class="custom-control-input" aria-label="Select all" type="checkbox">
                             <span class="custom-control-label"></span>
                         </label>
                     </div>
@@ -197,13 +197,13 @@ mainTabURL: 'docs/components/management-toolbar.html'
                 <li class="nav-item">
                     <div class="custom-control custom-checkbox">
                         <label>
-                            <input class="custom-control-input" type="checkbox">
+                            <input aria-label="Select all" aria-describedby="checkbox-description-1" class="custom-control-input" type="checkbox">
                             <span class="custom-control-label"></span>
                         </label>
                     </div>
                 </li>
                 <li class="nav-item nav-item-shrink">
-                    <span class="navbar-text">
+                    <span class="navbar-text" id="checkbox-description-1">
                         3 of 7
                         <span class="navbar-breakpoint-down-d-none">items selected</span>
                     </span>
@@ -300,7 +300,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                 <li class="nav-item">
                     <div class="custom-control custom-checkbox">
                         <label>
-                            <input class="custom-control-input" type="checkbox">
+                            <input aria-label="Select all" class="custom-control-input" type="checkbox">
                             <span class="custom-control-label"></span>
                         </label>
                     </div>
@@ -1586,7 +1586,7 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
                 <li class="nav-item">
                     <div class="custom-control custom-checkbox">
                         <label>
-                            <input class="custom-control-input" type="checkbox">
+                            <input aria-label="Select all" class="custom-control-input" type="checkbox">
                             <span class="custom-control-label"></span>
                         </label>
                     </div>
@@ -1684,7 +1684,11 @@ Use `navbar-overlay navbar-overlay-up` on any direct descendant of navbar to cre
 			<li class="nav-item">
 				<div class="custom-control custom-checkbox">
 					<label>
-						<input class="custom-control-input" type="checkbox" />
+						<input
+							aria-label="Select all"
+							class="custom-control-input"
+							type="checkbox"
+						/>
 						<span class="custom-control-label"></span>
 					</label>
 				</div>
