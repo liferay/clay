@@ -82,7 +82,7 @@ function ClayTabs({
 	onActiveChange,
 	...otherProps
 }: IProps) {
-	const [active, setActive] = useInternalState({
+	const [active, setActive, isUncontrolled] = useInternalState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',
@@ -106,6 +106,7 @@ function ClayTabs({
 					justified,
 					modern,
 					onActiveChange: setActive,
+					shouldUseActive: isUncontrolled,
 					tabsId,
 				})}
 

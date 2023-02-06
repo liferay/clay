@@ -5,7 +5,7 @@
 
 import {InternalDispatch, useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
@@ -51,6 +51,11 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * @ignore
 	 */
+	shouldUseActive?: boolean;
+
+	/**
+	 * @ignore
+	 */
 	tabsId?: string;
 }
 
@@ -63,6 +68,7 @@ export function List({
 	justified,
 	modern,
 	onActiveChange,
+	shouldUseActive = false,
 	tabsId,
 	...otherProps
 }: IProps) {
@@ -73,6 +79,28 @@ export function List({
 		containerRef: tabsRef,
 		orientation: 'horizontal',
 	});
+
+	useEffect(() => {
+		// Internal API to maintain compatibility with the old Tabs pattern and to
+		// only update the initial state when the component is in
+		// uncontrolled mode.
+		if (!shouldUseActive) {
+			return;
+		}
+
+		const childrenArray = React.Children.toArray(children);
+
+		// The `active` API in the new pattern has uncontrolled behavior, working
+		// just like defaultActive as in the prop declared in the root component.
+		for (let index = 0; index < childrenArray.length; index++) {
+			const child = childrenArray[index];
+
+			if (React.isValidElement(child) && child.props.active) {
+				onActiveChange!(index);
+				break;
+			}
+		}
+	}, []);
 
 	return (
 		<ul
@@ -103,6 +131,7 @@ export function List({
 
 				return React.cloneElement(child as React.ReactElement, {
 					active:
+						!shouldUseActive &&
 						(child as React.ReactElement).props.active !== undefined
 							? (child as React.ReactElement).props.active
 							: active === index,
