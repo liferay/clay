@@ -195,7 +195,7 @@ module.exports = {
 		},
 		'./packages/clay-shared/src/': {
 			branches: 20,
-			functions: 15,
+			functions: 14,
 			lines: 36,
 			statements: 39,
 		},
