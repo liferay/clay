@@ -118,6 +118,8 @@ export interface IProps<T>
 	loadingState?: number;
 }
 
+const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
+
 export function Autocomplete<T extends Record<string, any>>({
 	active: externalActive,
 	alignmentByViewport,
@@ -212,7 +214,10 @@ export function Autocomplete<T extends Record<string, any>>({
 	}, [value]);
 
 	const filterFn = useCallback(
-		(itemValue: string) => itemValue.match(new RegExp(value, 'i')) !== null,
+		(itemValue: string) =>
+			itemValue.match(
+				new RegExp(value.replace(ESCAPE_REGEXP, '\\$&'), 'i')
+			) !== null,
 		[value]
 	);
 
