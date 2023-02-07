@@ -192,4 +192,25 @@ describe('ClayTabs', () => {
 		expect(getAllByRole('tab').length).toBe(3);
 		expect(getAllByRole('tabpanel').length).toBe(3);
 	});
+
+	it('renders the tab item active when `active` is set on uncontrolled state', () => {
+		const {getByRole} = render(
+			<ClayTabs>
+				<ClayTabs.List>
+					<ClayTabs.Item>Tab 1</ClayTabs.Item>
+					<ClayTabs.Item active>Tab 2</ClayTabs.Item>
+					<ClayTabs.Item>Tab 3</ClayTabs.Item>
+				</ClayTabs.List>
+				<ClayTabs.Panels>
+					<ClayTabs.TabPanel>Tab Content 1</ClayTabs.TabPanel>
+					<ClayTabs.TabPanel>Tab Content 2</ClayTabs.TabPanel>
+					<ClayTabs.TabPanel>Tab Content 3</ClayTabs.TabPanel>
+				</ClayTabs.Panels>
+			</ClayTabs>
+		);
+
+		const activeTab = getByRole('tab', {selected: true});
+
+		expect(activeTab.innerHTML).toBe('Tab 2');
+	});
 });
