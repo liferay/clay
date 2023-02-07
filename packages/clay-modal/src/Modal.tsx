@@ -4,7 +4,7 @@
  */
 
 import {ClayPortal, IPortalBaseProps} from '@clayui/shared';
-import {hideOthers} from 'aria-hidden';
+import {suppressOthers} from 'aria-hidden';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 import warning from 'warning';
@@ -128,7 +128,7 @@ const ClayModal = ({
 	useEffect(() => {
 		if (modalElementRef.current && show) {
 			// Hide everything from ARIA except the Modal Body
-			return hideOthers(modalElementRef.current);
+			return suppressOthers(modalElementRef.current);
 		}
 	}, [show]);
 

@@ -26,6 +26,8 @@ type Props = {
 	triggerRef: React.RefObject<HTMLElement>;
 };
 
+const overlayStack: Array<React.RefObject<Element>> = [];
+
 /**
  * Overlay component is used for components like dialog and modal.
  * For example, Autocomplete, DatePicker, ColorPicker, DropDown are components
@@ -46,6 +48,15 @@ export function Overlay({
 }: Props) {
 	const unsuppressCallbackRef = useRef<Undo | null>(null);
 
+	const onHide = useCallback(
+		(action: 'escape' | 'blur') => {
+			if (overlayStack[overlayStack.length - 1] === menuRef) {
+				onClose(action);
+			}
+		},
+		[onClose]
+	);
+
 	useEvent(
 		'focus',
 		useCallback(
@@ -56,21 +67,24 @@ export function Overlay({
 					triggerRef.current &&
 					!triggerRef.current.contains(event.target as Node)
 				) {
-					onClose('blur');
+					onHide('blur');
 				}
 			},
-			[onClose]
+			[onHide]
 		),
 		isOpen,
 		true,
-		[isOpen, onClose]
+		[isOpen, onHide]
 	);
 
 	useEvent(
 		'keydown',
 		useCallback(
 			(event: KeyboardEvent) => {
-				if (event.key === Keys.Esc) {
+				if (
+					event.key === Keys.Esc &&
+					overlayStack[overlayStack.length - 1] === menuRef
+				) {
 					event.stopImmediatePropagation();
 					event.preventDefault();
 
@@ -99,11 +113,31 @@ export function Overlay({
 	useInteractOutside({
 		isDisabled: isOpen ? !isCloseOnInteractOutside : true,
 		onInteract: () => {
-			onClose('blur');
+			onHide('blur');
+		},
+		onInteractStart: (event) => {
+			if (overlayStack[overlayStack.length - 1] === menuRef && isModal) {
+				event.stopPropagation();
+				event.preventDefault();
+			}
 		},
 		ref: portalRef ?? menuRef,
 		triggerRef,
 	});
+
+	useEffect(() => {
+		if (isOpen) {
+			overlayStack.push(menuRef);
+		}
+
+		return () => {
+			const index = overlayStack.indexOf(menuRef);
+
+			if (index >= 0) {
+				overlayStack.splice(index, 1);
+			}
+		};
+	}, [isOpen, menuRef]);
 
 	useEffect(() => {
 		if (menuRef.current && isOpen) {
