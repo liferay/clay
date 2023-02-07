@@ -153,25 +153,25 @@ $btn-secondary: map-deep-merge(
 	(
 		background-color: $white,
 		background-image: clay-enable-gradients($white),
-		border-color: $secondary-l2,
+		border-color: $secondary-l0,
 		box-shadow: c-unset,
 		color: $secondary,
 		hover: (
 			background-color: $gray-100,
 			background-image: clay-enable-gradients($gray-100),
-			border-color: $secondary-l2,
+			border-color: $secondary-l0,
 			color: $gray-900,
 		),
 		focus: (
 			background-color: $gray-100,
 			background-image: clay-enable-gradients($gray-100),
-			border-color: $secondary-l2,
+			border-color: $secondary-l0,
 			box-shadow: c-unset,
 			color: $gray-900,
 		),
 		active: (
 			background-color: $gray-200,
-			border-color: $secondary-l2,
+			border-color: $secondary-l0,
 			color: $gray-900,
 			focus: (
 				box-shadow: c-unset,
@@ -180,7 +180,7 @@ $btn-secondary: map-deep-merge(
 		disabled: (
 			background-color: $white,
 			background-image: clay-enable-gradients($white),
-			border-color: $secondary-l2,
+			border-color: $secondary-l0,
 			color: $secondary,
 		),
 	),
