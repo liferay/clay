@@ -8,6 +8,7 @@ import React, {useEffect, useRef} from 'react';
 type Props = {
 	isDisabled?: boolean;
 	onInteract?: (event: Event) => void;
+	onInteractStart?: (event: Event) => void;
 	ref: React.RefObject<HTMLElement>;
 	triggerRef: React.RefObject<HTMLElement>;
 };
@@ -19,6 +20,7 @@ type Props = {
 export function useInteractOutside({
 	isDisabled = false,
 	onInteract,
+	onInteractStart,
 	ref,
 	triggerRef,
 }: Props) {
@@ -39,6 +41,9 @@ export function useInteractOutside({
 
 		const onPointerDown = (event: Event) => {
 			if (isValidEvent(event, ref, triggerRef) && state.onInteract) {
+				if (onInteractStart) {
+					onInteractStart(event);
+				}
 				state.isPointerDown = true;
 			}
 		};

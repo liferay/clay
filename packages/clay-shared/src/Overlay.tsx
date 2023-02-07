@@ -115,6 +115,12 @@ export function Overlay({
 		onInteract: () => {
 			onHide('blur');
 		},
+		onInteractStart: (event) => {
+			if (overlayStack[overlayStack.length - 1] === menuRef && isModal) {
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		},
 		ref: portalRef ?? menuRef,
 		triggerRef,
 	});
