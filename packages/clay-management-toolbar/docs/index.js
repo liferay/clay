@@ -191,6 +191,7 @@ const ManagementToolbarCode = `const Component = () => {
 	];
 
 	const [searchMobile, setSearchMobile] = useState(false);
+	const [checked, setChecked] = useState(false);
 
 	const viewTypeActive = viewTypes.find(type => type.active);
 
@@ -199,7 +200,13 @@ const ManagementToolbarCode = `const Component = () => {
 			<ClayManagementToolbar>
 				<ClayManagementToolbar.ItemList>
 					<ClayManagementToolbar.Item>
-						<ClayCheckbox checked={false} onChange={() => {}} />
+						<ClayCheckbox
+							aria-label={checked ? 'Unselect all' : 'Select all'}
+							checked={checked}
+							onChange={(event) =>
+								setChecked(event.target.checked)
+							}
+						/>
 					</ClayManagementToolbar.Item>
 
 					<ClayDropDownWithItems
