@@ -384,37 +384,37 @@ $cadmin-font-sizes: () !default;
 $cadmin-font-sizes: map-deep-merge(
 	(
 		text-1: (
-			font-size: 0.625rem,
+			font-size: 10px,
 		),
 		text-2: (
-			font-size: 0.75rem,
+			font-size: 12px,
 		),
 		text-3: (
-			font-size: 0.875rem,
+			font-size: 14px,
 		),
 		text-4: (
-			font-size: 1rem,
+			font-size: 16px,
 		),
 		text-5: (
-			font-size: 1.125rem,
+			font-size: 18px,
 		),
 		text-6: (
-			font-size: 1.25rem,
+			font-size: 20px,
 		),
 		text-7: (
-			font-size: 1.5rem,
+			font-size: 24px,
 		),
 		text-8: (
-			font-size: 1.75rem,
+			font-size: 28px,
 		),
 		text-9: (
-			font-size: 2rem,
+			font-size: 32px,
 		),
 		text-10: (
-			font-size: 2.25rem,
+			font-size: 36px,
 		),
 		text-11: (
-			font-size: 2.5rem,
+			font-size: 40px,
 		),
 	),
 	$cadmin-font-sizes
