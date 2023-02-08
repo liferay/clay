@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.87.1](https://github.com/liferay/clay/compare/v3.87.0...v3.87.1) (2023-02-08)
+
+
+### Bug Fixes
+
+* **@clayui/css:** fix build error when `$secondary` variable is a CSS variable ([10da9f2](https://github.com/liferay/clay/commit/10da9f27846284f18be9cbd919498efb09762d07))
+
+
+
+
+
 # [3.87.0](https://github.com/liferay/clay/compare/v3.86.1...v3.87.0) (2023-02-08)
 
 
