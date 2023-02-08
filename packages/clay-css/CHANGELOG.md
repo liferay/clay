@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.87.2](https://github.com/liferay/clay/compare/v3.87.1...v3.87.2) (2023-02-08)
+
+
+### Bug Fixes
+
+* **@clayui/css:** use `clay-saturate` instead of `saturate` ([c3cc7ba](https://github.com/liferay/clay/commit/c3cc7ba5cca479250adc15c114e87670a45b5654))
+
+
+
+
+
 ## [3.87.1](https://github.com/liferay/clay/compare/v3.87.0...v3.87.1) (2023-02-08)
 
 
