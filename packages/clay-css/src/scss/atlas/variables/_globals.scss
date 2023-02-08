@@ -110,6 +110,7 @@ $primary-l3: clay-lighten($primary, 44.9) !default;
 $secondary: #6b6c7e !default;
 $secondary-d1: clay-darken(clay-saturate($secondary, 4.82), 20) !default;
 $secondary-d2: clay-darken(clay-saturate($secondary, 5.36), 23.92) !default;
+$secondary-l0: clay-lighten(saturate(adjust-hue($secondary, 3), 0.03), 11.18);
 $secondary-l1: clay-lighten(
 	clay-saturate(clay-adjust-hue($secondary, -3), 5.39),
 	23.92
