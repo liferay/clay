@@ -134,7 +134,7 @@ $cadmin-secondary-d2: clay-darken(
 	23.92
 ) !default;
 $cadmin-secondary-l0: clay-lighten(
-	saturate(adjust-hue($cadmin-secondary, 3), 0.03),
+	saturate(clay-adjust-hue($cadmin-secondary, 3), 0.03),
 	11.18
 );
 $cadmin-secondary-l1: clay-lighten(
