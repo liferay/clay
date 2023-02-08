@@ -281,6 +281,7 @@ $cadmin-btn-monospaced-size-lg-mobile: null !default;
 $cadmin-btn-monospaced-lg: () !default;
 $cadmin-btn-monospaced-lg: map-deep-merge(
 	(
+		font-size: map-get($cadmin-btn-lg, font-size),
 		height: $cadmin-btn-monospaced-size-lg,
 		padding-bottom: $cadmin-btn-monospaced-padding-y-lg,
 		padding-left: $cadmin-btn-monospaced-padding-x-lg,
@@ -306,6 +307,7 @@ $cadmin-btn-monospaced-size-sm-mobile: null !default;
 $cadmin-btn-monospaced-sm: () !default;
 $cadmin-btn-monospaced-sm: map-deep-merge(
 	(
+		font-size: map-get($cadmin-btn-sm, font-size),
 		height: $cadmin-btn-monospaced-size-sm,
 		padding-bottom: $cadmin-btn-monospaced-padding-y-sm,
 		padding-left: $cadmin-btn-monospaced-padding-x-sm,
@@ -326,6 +328,7 @@ $cadmin-btn-monospaced-sizes: () !default;
 $cadmin-btn-monospaced-sizes: map-deep-merge(
 	(
 		btn-monospaced-xs: (
+			font-size: map-deep-get($cadmin-btn-sizes, btn-xs, font-size),
 			height: 1.5rem,
 			width: 1.4rem,
 		),
