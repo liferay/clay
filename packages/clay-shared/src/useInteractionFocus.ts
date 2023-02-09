@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 
 import {isMac} from './platform';
 
@@ -13,6 +13,10 @@ let currentInteraction: any = null;
 let hasSetupGlobalListeners = false;
 let hasEventBeforeFocus = false;
 let hasBlurredWindowRecently = false;
+
+type Handler = (interaction: Interaction) => void;
+
+const handlers = new Set<Handler>();
 
 function isValidKey(event: KeyboardEvent) {
 	// Control and Shift keys trigger when navigating back to the tab with keyboard.
@@ -42,6 +46,12 @@ function getInteraction(): Interaction {
 	return currentInteraction;
 }
 
+function callHandlers(interaction: Interaction) {
+	for (const handler of handlers) {
+		handler(interaction);
+	}
+}
+
 /**
  * Detects what type of interaction the user is doing with the page, using the
  * keyboard, pointer or using screen reader. This works like a singleton even
@@ -61,6 +71,7 @@ export function useInteractionFocus() {
 
 			if (isValidKey(event)) {
 				currentInteraction = 'keyboard';
+				callHandlers(currentInteraction);
 			}
 		};
 
@@ -68,6 +79,7 @@ export function useInteractionFocus() {
 			if (isVirtualClick(event)) {
 				hasEventBeforeFocus = true;
 				currentInteraction = 'virtual';
+				callHandlers(currentInteraction);
 			}
 		};
 
@@ -78,6 +90,7 @@ export function useInteractionFocus() {
 
 			if (!hasEventBeforeFocus && !hasBlurredWindowRecently) {
 				currentInteraction = 'virtual';
+				callHandlers(currentInteraction);
 			}
 
 			hasEventBeforeFocus = false;
@@ -94,6 +107,7 @@ export function useInteractionFocus() {
 
 			if (event.type === 'mousedown' || event.type === 'pointerdown') {
 				hasEventBeforeFocus = true;
+				callHandlers(currentInteraction);
 			}
 		};
 
@@ -139,4 +153,24 @@ export function useInteractionFocus() {
 	}, []);
 
 	return {getInteraction, isFocusVisible};
+}
+
+export function useFocusVisible() {
+	useInteractionFocus();
+
+	const [interaction, setInteraction] = useState(isFocusVisible());
+
+	useEffect(() => {
+		const handler = (interaction: Interaction) => {
+			setInteraction(interaction !== 'pointer');
+		};
+
+		handlers.add(handler);
+
+		return () => {
+			handlers.delete(handler);
+		};
+	}, []);
+
+	return interaction;
 }

@@ -19,7 +19,7 @@ export {sub} from './sub';
 export {useDebounce} from './useDebounce';
 export {useFocusManagement, FOCUSABLE_ELEMENTS} from './useFocusManagement';
 export {useId} from './useId';
-export {useInteractionFocus} from './useInteractionFocus';
+export {useInteractionFocus, useFocusVisible} from './useInteractionFocus';
 export {useInternalState} from './useInternalState';
 export {useMousePosition} from './useMousePosition';
 export {useNavigation, isTypeahead, getFocusableList} from './useNavigation';
