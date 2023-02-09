@@ -31,6 +31,7 @@ $list-group-title-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		display: inline-block,
+		text-decoration: underline,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
 			color: $gray-900,
@@ -96,7 +97,7 @@ $list-group-text-link: map-deep-merge(
 $list-group-text: () !default;
 $list-group-text: map-deep-merge(
 	(
-		line-height: 1.45,
+		color: $gray-600,
 	),
 	$list-group-text
 );
@@ -124,7 +125,8 @@ $list-group-subtext-link: map-deep-merge(
 $list-group-subtext: () !default;
 $list-group-subtext: map-deep-merge(
 	(
-		line-height: 1.45,
+		color: $gray-600,
+		margin-top: 0.5rem,
 	),
 	$list-group-subtext
 );
