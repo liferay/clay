@@ -70,7 +70,8 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
                 <p class="list-group-title text-truncate">
                     <a href="#1">Account Example One</a>
                 </p>
-                <p class="list-group-subtitle text-truncate">Second Level Text</p>
+                <p class="list-group-text text-truncate">Second Level Text</p>
+                <p class="list-group-subtext">Third Level Text</p>
                 <div class="list-group-detail">
                     <span class="label label-success">
                         <span class="label-item label-item-expand">Approved</span>
@@ -134,7 +135,8 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
                 <p class="list-group-title">
                     <a href="#1">Account Example One</a>
                 </p>
-                <p class="list-group-subtitle">Second Level Text</p>
+                <p class="list-group-text">Second Level Text</p>
+                <p class="list-group-subtext">Third Level Text</p>
                 <div class="list-group-detail">
                     <span class="label label-success">
                         <span class="label-item label-item-expand">Approved</span>
@@ -202,7 +204,8 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 			<p class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
 			</p>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+			<p class="list-group-text text-truncate">Second Level Text</p>
+			<p class="list-group-subtext">Third Level Text</p>
 			<div class="list-group-detail">
 				<span class="label label-success">
 					<span class="label-item label-item-expand">Approved</span>
@@ -264,7 +267,8 @@ Add the class `show-dropdown-action-on-active` to display `dropdown-menu`s when 
 			<p class="list-group-title">
 				<a href="#1">Account Example One</a>
 			</p>
-			<p class="list-group-subtitle">Second Level Text</p>
+			<p class="list-group-text">Second Level Text</p>
+			<p class="list-group-subtext">Third Level Text</p>
 			<div class="list-group-detail">
 				<span class="label label-success">
 					<span class="label-item label-item-expand">Approved</span>
@@ -645,7 +649,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
                     <div class="list-group-title">
                         <a href="#1">Account Example One</a>
                     </div>
-                    <p class="list-group-subtext">List Group Subtext</p>
+                    <p class="list-group-text">Second Level Text</p>
                 </section>
             </div>
             <div class="autofit-col">
@@ -686,7 +690,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
                     <div class="list-group-title">
                         <a href="#1">Account Example Two</a>
                     </div>
-                    <p class="list-group-subtext">List Group Subtext</p>
+                    <p class="list-group-text">Second Level Text</p>
                 </section>
             </div>
             <div class="autofit-col">
@@ -723,7 +727,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 				<div class="list-group-title">
 					<a href="#1">Account Example One</a>
 				</div>
-				<p class="list-group-subtext">List Group Subtext</p>
+				<p class="list-group-text">Second Level Text</p>
 			</section>
 		</div>
 		<div class="autofit-col">
@@ -749,7 +753,7 @@ Use `.list-group-bordered` on `.list-group` to style `.list-group-item-flex` lik
 				<div class="list-group-title">
 					<a href="#1">Account Example Two</a>
 				</div>
-				<p class="list-group-subtext">List Group Subtext</p>
+				<p class="list-group-text">Second Level Text</p>
 			</section>
 		</div>
 		<div class="autofit-col">
@@ -795,9 +799,9 @@ Use the `.list-group-header` and `.list-group-header-title` class.
                             <a class="text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
                         </span>
                     </div>
-                    <p class="list-group-subtext">
+                    <p class="list-group-text">
                         <span class="text-truncate-inline">
-                            <span class="text-truncate">List Group Subtext</span>
+                            <span class="text-truncate">Second Level Text</span>
                         </span>
                     </p>
                     <div class="list-group-detail">
@@ -853,9 +857,9 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 						>
 					</span>
 				</div>
-				<p class="list-group-subtext">
+				<p class="list-group-text">
 					<span class="text-truncate-inline">
-						<span class="text-truncate">List Group Subtext</span>
+						<span class="text-truncate">Second Level Text</span>
 					</span>
 				</p>
 				<div class="list-group-detail">
@@ -1164,9 +1168,9 @@ Use the `.list-group-header` and `.list-group-header-title` class.
                             <a class="text-truncate" href="#1">Account Example One</a>
                         </span>
                     </div>
-                    <p class="list-group-subtext">
+                    <p class="list-group-text">
                         <span class="text-truncate-inline">
-                            <span class="text-truncate">List Group Subtext</span>
+                            <span class="text-truncate">Second Level Text</span>
                         </span>
                     </p>
                 </section>
@@ -1237,9 +1241,9 @@ Use the `.list-group-header` and `.list-group-header-title` class.
 						>
 					</span>
 				</div>
-				<p class="list-group-subtext">
+				<p class="list-group-text">
 					<span class="text-truncate-inline">
-						<span class="text-truncate">List Group Subtext</span>
+						<span class="text-truncate">Second Level Text</span>
 					</span>
 				</p>
 			</section>
@@ -1338,7 +1342,7 @@ Use the `.active` class on the same element that you putted `.list-group-item`.
                 <p class="list-group-title text-truncate">
                     <a href="#1">Account Example One</a>
                 </p>
-                <p class="list-group-subtitle text-truncate">Second Level Text</p>
+                <p class="list-group-text text-truncate">Second Level Text</p>
             </div>
             <div class="autofit-col">
                 <div class="dropdown dropdown-action">
@@ -1385,7 +1389,7 @@ Use the `.active` class on the same element that you putted `.list-group-item`.
 			<p class="list-group-title text-truncate">
 				<a href="#1">Account Example One</a>
 			</p>
-			<p class="list-group-subtitle text-truncate">Second Level Text</p>
+			<p class="list-group-text text-truncate">Second Level Text</p>
 		</div>
 		<div class="autofit-col">
 			<div class="dropdown dropdown-action">...</div>
