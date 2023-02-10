@@ -71,6 +71,7 @@ $cadmin-list-group-title-link: map-deep-merge(
 		border-radius: 1px,
 		color: $cadmin-gray-900,
 		display: inline-block,
+		text-decoration: underline,
 		transition: box-shadow 0.15s ease-in-out,
 		max-width: 100%,
 		hover: (
@@ -137,7 +138,7 @@ $cadmin-list-group-text-link: () !default;
 $cadmin-list-group-text-link: map-deep-merge(
 	(
 		border-radius: 1px,
-		color: $cadmin-gray-900,
+		color: $cadmin-gray-600,
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
@@ -155,8 +156,7 @@ $cadmin-list-group-text-link: map-deep-merge(
 $cadmin-list-group-text: () !default;
 $cadmin-list-group-text: map-deep-merge(
 	(
-		color: $cadmin-gray-900,
-		line-height: 1.45,
+		color: $cadmin-gray-600,
 		margin-bottom: 0,
 		href: $cadmin-list-group-text-link,
 	),
@@ -190,8 +190,8 @@ $cadmin-list-group-subtext: () !default;
 $cadmin-list-group-subtext: map-deep-merge(
 	(
 		color: $cadmin-gray-600,
-		line-height: 1.45,
 		margin-bottom: 0,
+		margin-top: 8px,
 		href: $cadmin-list-group-subtext-link,
 	),
 	$cadmin-list-group-subtext
