@@ -7,7 +7,7 @@ import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
-import {Keys} from '@clayui/shared';
+import {Keys, useFocusVisible, useId} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {
 	useCallback,
@@ -17,6 +17,7 @@ import React, {
 	useState,
 } from 'react';
 
+import {VisuallyHidden} from '../live-announcer';
 import {removeItemInternalProps} from './Collection';
 import {useDnD} from './DragAndDrop';
 import {Icons, useAPI, useTreeViewContext} from './context';
@@ -97,7 +98,6 @@ export const TreeViewItem = React.forwardRef<
 	const {
 		childrenRoot,
 		close,
-		dragAndDrop,
 		expandDoubleClick,
 		expandedKeys,
 		nestedKey,
@@ -111,15 +111,11 @@ export const TreeViewItem = React.forwardRef<
 		selectionMode,
 		toggle,
 	} = useTreeViewContext();
-
-	const item = useItem();
-
 	const [focus, setFocus] = useState(false);
-
 	const [loading, setLoading] = useState(false);
-
+	const {mode} = useDnD();
+	const item = useItem();
 	const clickCapturedRef = useRef(false);
-
 	const api = useAPI();
 
 	const load = api[2];
@@ -162,6 +158,8 @@ export const TreeViewItem = React.forwardRef<
 			promise.then(() => setLoading(false));
 		}
 	}, [item, group, load.loadMore]);
+
+	const labelId = useId();
 
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
@@ -208,6 +206,10 @@ export const TreeViewItem = React.forwardRef<
 				})}
 				role="none"
 			>
+				<ItemIndicator
+					labelId={labelId}
+					target={{dropPosition: 'top', key: item.key}}
+				/>
 				<div
 					{...itemStackProps}
 					{...nodeProps}
@@ -247,7 +249,7 @@ export const TreeViewItem = React.forwardRef<
 							: `string,${item.key}`
 					}
 					disabled={itemStackProps.disabled || nodeProps.disabled}
-					onBlur={() => actions || (dragAndDrop && setFocus(false))}
+					onBlur={() => actions && setFocus(false)}
 					onClick={(event) => {
 						if (itemStackProps.disabled || nodeProps.disabled) {
 							return;
@@ -305,7 +307,7 @@ export const TreeViewItem = React.forwardRef<
 						}
 					}}
 					onFocus={() => {
-						if (actions || dragAndDrop) {
+						if (actions) {
 							setFocus(true);
 							clickCapturedRef.current = true;
 						}
@@ -460,9 +462,17 @@ export const TreeViewItem = React.forwardRef<
 						}px`,
 					}}
 					tabIndex={
-						itemStackProps.disabled || nodeProps.disabled ? -1 : 0
+						itemStackProps.disabled ||
+						nodeProps.disabled ||
+						mode === 'keyboard'
+							? -1
+							: 0
 					}
 				>
+					<ItemIndicator
+						labelId={labelId}
+						target={{dropPosition: 'middle', key: item.key}}
+					/>
 					<span
 						className="c-inner"
 						style={{
@@ -475,7 +485,12 @@ export const TreeViewItem = React.forwardRef<
 						{typeof left === 'string' && !right ? (
 							<Layout.ContentRow>
 								<Layout.ContentCol expand>
-									<div className="component-text">{left}</div>
+									<div
+										className="component-text"
+										id={labelId}
+									>
+										{left}
+									</div>
 								</Layout.ContentCol>
 
 								{actions && <Actions>{actions}</Actions>}
@@ -484,6 +499,7 @@ export const TreeViewItem = React.forwardRef<
 							React.cloneElement(left as React.ReactElement, {
 								actions,
 								expandable: isExpand,
+								labelId,
 								onClick: undefined,
 								onLoadMore: !group ? loadMore : undefined,
 							})
@@ -492,6 +508,7 @@ export const TreeViewItem = React.forwardRef<
 								actions={actions}
 								disabled={nodeProps.disabled}
 								expandable={isExpand}
+								labelId={labelId}
 								loading={loading}
 								onLoadMore={!group ? loadMore : undefined}
 							>
@@ -500,6 +517,12 @@ export const TreeViewItem = React.forwardRef<
 						)}
 					</span>
 				</div>
+
+				<ItemIndicator
+					labelId={labelId}
+					target={{dropPosition: 'bottom', key: item.key}}
+				/>
+
 				{group}
 
 				{left && group && Boolean(otherElements.length) && (
@@ -564,6 +587,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * @ignore
 	 */
+	labelId?: string;
+
+	/**
+	 * @ignore
+	 */
 	loading?: boolean;
 
 	/**
@@ -604,6 +632,7 @@ export function TreeViewItemStack({
 	disabled,
 	expandable = false,
 	expanderDisabled,
+	labelId,
 	loading = false,
 	onLoadMore,
 	...otherProps
@@ -620,10 +649,19 @@ export function TreeViewItemStack({
 		toggle,
 	} = useTreeViewContext();
 
+	const dragElement = useRef<HTMLButtonElement>(null);
 	const item = useItem();
 
-	const {currentDrag, dragCancelDescribedBy, dragDescribedBy, onDragStart} =
-		useDnD();
+	const {
+		currentDrag,
+		dragCancelDescribedBy,
+		dragDescribedBy,
+		mode,
+		onCancel,
+		onDragStart,
+	} = useDnD();
+
+	const isFocusVisible = useFocusVisible();
 
 	const childrenCount = React.Children.count(children);
 
@@ -672,6 +710,45 @@ export function TreeViewItemStack({
 				</Layout.ContentCol>
 			)}
 
+			{dragAndDrop && isFocusVisible && (
+				<Layout.ContentCol>
+					<Button
+						aria-describedby={
+							currentDrag === item.key
+								? dragCancelDescribedBy
+								: dragDescribedBy
+						}
+						aria-label="Drag"
+						data-draggable={currentDrag === item.key}
+						disabled={disabled}
+						displayType={null}
+						draggable
+						monospaced
+						onClick={(event) => {
+							event.stopPropagation();
+
+							if (mode === 'keyboard') {
+								onCancel();
+							} else {
+								onDragStart(item.key);
+							}
+						}}
+						onKeyDown={(event) => {
+							if (
+								event.key === Keys.Enter ||
+								event.key === Keys.Spacebar
+							) {
+								event.stopPropagation();
+							}
+						}}
+						ref={dragElement}
+						tabIndex={currentDrag === item.key || !mode ? 0 : -1}
+					>
+						<Icon symbol="drag" />
+					</Button>
+				</Layout.ContentCol>
+			)}
+
 			{React.Children.map(children, (child, index) => {
 				let content = child;
 
@@ -685,7 +762,11 @@ export function TreeViewItemStack({
 					// @ts-ignore
 					child?.type.displayName === 'Text'
 				) {
-					content = <div className="component-text">{child}</div>;
+					content = (
+						<div className="component-text" id={labelId}>
+							{child}
+						</div>
+					);
 
 					// @ts-ignore
 				} else if (child?.type.displayName === 'ClayIcon') {
@@ -745,35 +826,6 @@ export function TreeViewItemStack({
 					</Layout.ContentCol>
 				);
 			})}
-
-			{dragAndDrop && (
-				<Actions>
-					<Button
-						aria-describedby={
-							currentDrag === item.key
-								? dragCancelDescribedBy
-								: dragDescribedBy
-						}
-						aria-label="Drag"
-						displayType={null}
-						draggable
-						monospaced
-						onClick={(event) => {
-							const element =
-								event.currentTarget.closest<HTMLElement>(
-									'.treeview-item'
-								);
-
-							if (element) {
-								element.focus();
-							}
-							onDragStart(item.key);
-						}}
-					>
-						<Icon symbol="drag" />
-					</Button>
-				</Actions>
-			)}
 
 			{actions && <Actions>{actions}</Actions>}
 		</Layout.ContentRow>
@@ -875,3 +927,56 @@ function Actions({children}: TreeViewItemActionsProps) {
 }
 
 Actions.displayName = 'TreeViewItemActions';
+
+type TargetDrop = {
+	key: React.Key;
+	dropPosition: 'bottom' | 'middle' | 'top';
+};
+
+type ItemIndicatorProps = {
+	labelId: string;
+	target: TargetDrop;
+};
+
+function ItemIndicator({labelId, target}: ItemIndicatorProps) {
+	const {currentTarget, dragDropDescribedBy, mode, position} = useDnD();
+	const indicatorRef = useRef<HTMLDivElement>(null);
+
+	const id = useId();
+
+	useEffect(() => {
+		if (
+			indicatorRef.current &&
+			currentTarget === target.key &&
+			target.dropPosition === position
+		) {
+			indicatorRef.current.focus();
+		}
+	}, [currentTarget, target]);
+
+	if (!mode) {
+		return null;
+	}
+
+	return (
+		<VisuallyHidden
+			aria-describedby={dragDropDescribedBy}
+			aria-hidden={mode !== 'keyboard' ? true : undefined}
+			aria-label={classNames({
+				'Drop on': target.dropPosition === 'middle',
+				'Insert on bottom of the': target.dropPosition === 'bottom',
+				'Insert on top of the': target.dropPosition === 'top',
+			})}
+			aria-labelledby={`${id} ${labelId}`}
+			aria-roledescription="drop indicator"
+			id={id}
+			ref={indicatorRef}
+			role="button"
+			tabIndex={
+				currentTarget === target.key && target.dropPosition === position
+					? 0
+					: -1
+			}
+		/>
+	);
+}

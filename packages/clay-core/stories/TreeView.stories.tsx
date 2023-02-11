@@ -583,6 +583,7 @@ export const PageElements = () => {
 
 	return (
 		<TreeView
+			aria-label="Treeview page elements example"
 			defaultItems={items}
 			expandedKeys={expandedKeys}
 			expanderIcons={{

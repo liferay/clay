@@ -4,6 +4,7 @@
  */
 
 import {Keys, useId} from '@clayui/shared';
+import {suppressOthers} from 'aria-hidden';
 import React, {
 	useCallback,
 	useContext,
@@ -26,15 +27,18 @@ type ContextProps = {
 	dragDropDescribedBy: string;
 	dragCancelDescribedBy: string;
 	currentTarget: React.Key | null;
-	lastDrop: React.Key | null;
+	onCancel: () => void;
 	onDragStart: (target: React.Key) => void;
 	onDrop: () => void;
 };
 
 type State = Pick<
 	ContextProps,
-	'mode' | 'currentTarget' | 'currentDrag' | 'position' | 'lastDrop'
->;
+	'mode' | 'currentTarget' | 'currentDrag' | 'position'
+> & {
+	lastItem: React.Key | null;
+	status: 'complete' | 'canceled' | null;
+};
 
 const DnDContext = React.createContext<ContextProps>({} as ContextProps);
 
@@ -88,6 +92,10 @@ function getNextTarget(
 	const target =
 		items[dragPosition === items.length ? dragPosition - 1 : dragPosition];
 
+	if (!target) {
+		return null;
+	}
+
 	const [type, key] = target.getAttribute('data-id')!.split(',');
 
 	return type === 'number' ? Number(key) : key;
@@ -101,17 +109,22 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 	const [state, setState] = useState<State>({
 		currentDrag: null,
 		currentTarget: null,
-		lastDrop: null,
+		lastItem: null,
 		mode: null,
 		position: null,
+		status: null,
 	});
 
 	const onDragStart = useCallback((dragKey: React.Key) => {
+		const nextTargetKey = getNextTarget(rootRef, dragKey);
+
+		if (nextTargetKey === null) {
+			return;
+		}
+
 		announcerRef.current?.announce(
 			'Started dragging. Press Tab to navigate to a drop target, then press Enter to drop, or press Escape to cancel.'
 		);
-
-		const nextTargetKey = getNextTarget(rootRef, dragKey);
 
 		setState((state) => ({
 			...state,
@@ -119,6 +132,7 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 			currentTarget: nextTargetKey,
 			mode: 'keyboard',
 			position: 'bottom',
+			status: null,
 		}));
 	}, []);
 
@@ -128,16 +142,56 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 		const dragItem = layout.layoutKeys.current.get(currentDrag!);
 
 		reorder(dragItem!.loc, getNewItemPath(dropItem!.loc, position!));
-		setState((state) => ({
-			...state,
+		setState({
 			currentDrag: null,
 			currentTarget: null,
-			lastDrop: currentTarget,
+			lastItem: currentDrag,
 			mode: null,
 			position: null,
-		}));
+			status: 'complete',
+		});
 		announcerRef.current?.announce('Drop complete.');
 	}, [state]);
+
+	const onCancel = useCallback(() => {
+		announcerRef.current?.announce('Drop cancelled.');
+		setState((state) => ({
+			currentDrag: null,
+			currentTarget: null,
+			lastItem: state.currentDrag,
+			mode: null,
+			position: null,
+			status: 'canceled',
+		}));
+	}, []);
+
+	useEffect(() => {
+		if (state.lastItem && state.status) {
+			const element = rootRef.current?.querySelector<HTMLDivElement>(
+				`[data-id="${
+					typeof state.lastItem === 'number'
+						? `number,${state.lastItem}`
+						: `string,${state.lastItem}`
+				}"]${state.status === 'canceled' ? ' [data-draggable]' : ''}`
+			);
+
+			if (element) {
+				element.focus();
+			}
+		}
+	}, [state]);
+
+	useEffect(() => {
+		if (rootRef.current && state.mode === 'keyboard') {
+			return suppressOthers(
+				Array.from(
+					rootRef.current.querySelectorAll(
+						'[aria-roledescription="drop indicator"], [data-draggable="true"]'
+					)
+				)
+			);
+		}
+	}, [state.mode]);
 
 	const dragDescribedBy = useId();
 	const dragDropDescribedBy = useId();
@@ -148,17 +202,16 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 			const onKeyDown = (event: KeyboardEvent) => {
 				switch (event.key) {
 					case Keys.Esc:
-						announcerRef.current?.announce('Drop cancelled.');
-						setState((state) => ({
-							...state,
-							currentDrag: null,
-							currentTarget: null,
-							mode: null,
-							position: null,
-						}));
+						onCancel();
 						break;
 					case Keys.Enter: {
-						onDrop();
+						if (
+							(event.target as HTMLDivElement).getAttribute(
+								'aria-roledescription'
+							)
+						) {
+							onDrop();
+						}
 						break;
 					}
 					case Keys.Up:
@@ -232,13 +285,30 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 				dragCancelDescribedBy,
 				dragDescribedBy,
 				dragDropDescribedBy,
+				onCancel,
 				onDragStart,
 				onDrop,
 			}}
 		>
 			{dragAndDrop && <LiveAnnouncer ref={announcerRef} />}
 
-			{children}
+			{state.mode === 'keyboard' ? (
+				<>
+					<span
+						aria-hidden="true"
+						data-focus-scope-start="true"
+						tabIndex={0}
+					/>
+					{children}
+					<span
+						aria-hidden="true"
+						data-focus-scope-end="true"
+						tabIndex={0}
+					/>
+				</>
+			) : (
+				children
+			)}
 
 			{dragAndDrop && (
 				<>

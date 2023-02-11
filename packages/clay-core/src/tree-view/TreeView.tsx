@@ -206,6 +206,7 @@ export function TreeView<T>({
 				)}
 				ref={rootRef}
 				role="tree"
+				tabIndex={-1}
 			>
 				<DndProvider
 					backend={HTML5Backend}

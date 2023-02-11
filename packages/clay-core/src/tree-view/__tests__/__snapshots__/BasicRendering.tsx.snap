@@ -5,6 +5,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -64,6 +65,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
             >
               <div
                 class="component-text"
+                id="clay-id-11"
               >
                 Root
               </div>
@@ -81,6 +83,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -140,6 +143,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
             >
               <div
                 class="component-text"
+                id="clay-id-18"
               >
                 Foo
               </div>
@@ -157,6 +161,7 @@ exports[`TreeView basic rendering render static content 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -216,6 +221,7 @@ exports[`TreeView basic rendering render static content 1`] = `
             >
               <div
                 class="component-text"
+                id="clay-id-4"
               >
                 Root
               </div>
@@ -233,6 +239,7 @@ exports[`TreeView basic rendering render with actions 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -258,6 +265,7 @@ exports[`TreeView basic rendering render with actions 1`] = `
             >
               <div
                 class="component-text"
+                id="clay-id-46"
               >
                 Root
               </div>
@@ -326,6 +334,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -402,6 +411,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
             >
               <div
                 class="component-text"
+                id="clay-id-67"
               >
                 Root
               </div>
@@ -419,6 +429,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -495,6 +506,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
             >
               <div
                 class="component-text"
+                id="clay-id-110"
               >
                 Root
               </div>
@@ -512,6 +524,7 @@ exports[`TreeView basic rendering render with text 1`] = `
   <ul
     class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
     role="tree"
+    tabindex="-1"
   >
     <li
       class="treeview-item"
@@ -588,6 +601,7 @@ exports[`TreeView basic rendering render with text 1`] = `
             >
               <div
                 class="component-text"
+                id="clay-id-74"
               >
                 <span
                   class="text-3 text-truncate"
