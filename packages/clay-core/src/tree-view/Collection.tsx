@@ -57,12 +57,14 @@ export function Collection<T extends Record<string, any>>({
 	as,
 	children,
 	items,
+	...otherProps
 }: Props & ICollectionProps<T>) {
 	const api = useAPI();
 	const {key: parentKey} = useItem();
 
 	return (
 		<CollectionBase
+			{...otherProps}
 			as={as}
 			exclude={exclude}
 			itemContainer={ItemContainer}

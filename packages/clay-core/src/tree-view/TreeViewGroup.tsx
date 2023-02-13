@@ -16,9 +16,12 @@ interface ITreeViewGroupProps<T>
 	extends ICollectionProps<T>,
 		Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {}
 
-function List({children}: React.HTMLAttributes<HTMLUListElement>) {
+function List({
+	children,
+	...otherProps
+}: React.HTMLAttributes<HTMLUListElement>) {
 	return (
-		<ul className="treeview-group" role="group">
+		<ul {...otherProps} className="treeview-group" role="group">
 			{children}
 		</ul>
 	);
@@ -40,7 +43,6 @@ export function TreeViewGroup<T extends Record<any, any>>({
 
 	return (
 		<CSSTransition
-			{...otherProps}
 			className={classNames('collapse', className, {
 				show: expandedKeys.has(item.key),
 			})}
@@ -73,7 +75,7 @@ export function TreeViewGroup<T extends Record<any, any>>({
 			unmountOnExit
 		>
 			<div>
-				<Collection<T> as={List} items={items}>
+				<Collection<T> as={List} items={items} {...otherProps}>
 					{children}
 				</Collection>
 			</div>

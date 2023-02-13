@@ -160,6 +160,7 @@ export const TreeViewItem = React.forwardRef<
 	}, [item, group, load.loadMore]);
 
 	const labelId = useId();
+	const ariaOwns = useId();
 
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
@@ -216,6 +217,8 @@ export const TreeViewItem = React.forwardRef<
 					aria-expanded={
 						group ? expandedKeys.has(item.key) : undefined
 					}
+					aria-labelledby={labelId}
+					aria-owns={ariaOwns}
 					className={classNames(
 						'treeview-link',
 						itemStackProps.className,
@@ -485,12 +488,13 @@ export const TreeViewItem = React.forwardRef<
 						{typeof left === 'string' && !right ? (
 							<Layout.ContentRow>
 								<Layout.ContentCol expand>
-									<div
+									<span
 										className="component-text"
 										id={labelId}
+										tabIndex={-1}
 									>
 										{left}
-									</div>
+									</span>
 								</Layout.ContentCol>
 
 								{actions && <Actions>{actions}</Actions>}
@@ -523,7 +527,11 @@ export const TreeViewItem = React.forwardRef<
 					target={{dropPosition: 'bottom', key: item.key}}
 				/>
 
-				{group}
+				{group &&
+					React.cloneElement(group as React.ReactElement, {
+						'aria-labelledby': labelId,
+						id: ariaOwns,
+					})}
 
 				{left && group && Boolean(otherElements.length) && (
 					<div
@@ -649,7 +657,6 @@ export function TreeViewItemStack({
 		toggle,
 	} = useTreeViewContext();
 
-	const dragElement = useRef<HTMLButtonElement>(null);
 	const item = useItem();
 
 	const {
@@ -662,6 +669,7 @@ export function TreeViewItemStack({
 	} = useDnD();
 
 	const isFocusVisible = useFocusVisible();
+	const dragButtonId = useId();
 
 	const childrenCount = React.Children.count(children);
 
@@ -719,10 +727,11 @@ export function TreeViewItemStack({
 								: dragDescribedBy
 						}
 						aria-label="Drag"
+						aria-labelledby={`${dragButtonId} ${labelId}`}
 						data-draggable={currentDrag === item.key}
-						disabled={disabled}
 						displayType={null}
 						draggable
+						id={dragButtonId}
 						monospaced
 						onClick={(event) => {
 							event.stopPropagation();
@@ -741,10 +750,9 @@ export function TreeViewItemStack({
 								event.stopPropagation();
 							}
 						}}
-						ref={dragElement}
 						tabIndex={currentDrag === item.key || !mode ? 0 : -1}
 					>
-						<Icon symbol="drag" />
+						<Icon aria-hidden symbol="drag" />
 					</Button>
 				</Layout.ContentCol>
 			)}
@@ -763,9 +771,13 @@ export function TreeViewItemStack({
 					child?.type.displayName === 'Text'
 				) {
 					content = (
-						<div className="component-text" id={labelId}>
+						<span
+							className="component-text"
+							id={labelId}
+							tabIndex={-1}
+						>
 							{child}
-						</div>
+						</span>
 					);
 
 					// @ts-ignore

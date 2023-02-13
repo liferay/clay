@@ -183,13 +183,14 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 
 	useEffect(() => {
 		if (rootRef.current && state.mode === 'keyboard') {
-			return suppressOthers(
-				Array.from(
-					rootRef.current.querySelectorAll(
-						'[aria-roledescription="drop indicator"], [data-draggable="true"]'
-					)
-				)
-			);
+			return suppressOthers([
+				...rootRef.current.querySelectorAll(
+					'[aria-roledescription="drop indicator"], [data-draggable="true"], [class="component-text"]'
+				),
+				document.body.querySelector<Element>(
+					'[data-live-announcer="true"]'
+				)!,
+			]);
 		}
 	}, [state.mode]);
 
