@@ -663,6 +663,7 @@ export function TreeViewItemStack({
 		currentDrag,
 		dragCancelDescribedBy,
 		dragDescribedBy,
+		messages,
 		mode,
 		onCancel,
 		onDragStart,
@@ -726,7 +727,7 @@ export function TreeViewItemStack({
 								? dragCancelDescribedBy
 								: dragDescribedBy
 						}
-						aria-label="Drag"
+						aria-label={messages.dragItem}
 						aria-labelledby={`${dragButtonId} ${labelId}`}
 						data-draggable={currentDrag === item.key}
 						displayType={null}
@@ -951,7 +952,8 @@ type ItemIndicatorProps = {
 };
 
 function ItemIndicator({labelId, target}: ItemIndicatorProps) {
-	const {currentTarget, dragDropDescribedBy, mode, position} = useDnD();
+	const {currentTarget, dragDropDescribedBy, messages, mode, position} =
+		useDnD();
 	const indicatorRef = useRef<HTMLDivElement>(null);
 
 	const id = useId();
@@ -975,12 +977,12 @@ function ItemIndicator({labelId, target}: ItemIndicatorProps) {
 			aria-describedby={dragDropDescribedBy}
 			aria-hidden={mode !== 'keyboard' ? true : undefined}
 			aria-label={classNames({
-				'Drop on': target.dropPosition === 'middle',
-				'Insert on bottom of the': target.dropPosition === 'bottom',
-				'Insert on top of the': target.dropPosition === 'top',
+				[messages.dropOn]: target.dropPosition === 'middle',
+				[messages.insertAfter]: target.dropPosition === 'bottom',
+				[messages.insertBefore]: target.dropPosition === 'top',
 			})}
 			aria-labelledby={`${id} ${labelId}`}
-			aria-roledescription="drop indicator"
+			aria-roledescription={messages.dropIndicator}
 			id={id}
 			ref={indicatorRef}
 			role="button"

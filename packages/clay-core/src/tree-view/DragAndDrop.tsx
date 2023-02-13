@@ -19,6 +19,20 @@ import {useTreeViewContext} from './context';
 
 import type {AnnouncerAPI} from '../live-announcer';
 
+export type DragAndDropMessages = {
+	dragDescriptionKeyboard: string;
+	dragItem: string;
+	dragStartedKeyboard: string;
+	dropCanceled: string;
+	dropComplete: string;
+	dropDescriptionKeyboard: string;
+	dropIndicator: string;
+	dropOn: string;
+	endDragKeyboard: string;
+	insertAfter: string;
+	insertBefore: string;
+};
+
 type ContextProps = {
 	mode: 'keyboard' | 'mouse' | null;
 	position: 'bottom' | 'middle' | 'top' | null;
@@ -27,6 +41,7 @@ type ContextProps = {
 	dragDropDescribedBy: string;
 	dragCancelDescribedBy: string;
 	currentTarget: React.Key | null;
+	messages: DragAndDropMessages;
 	onCancel: () => void;
 	onDragStart: (target: React.Key) => void;
 	onDrop: () => void;
@@ -45,6 +60,7 @@ const DnDContext = React.createContext<ContextProps>({} as ContextProps);
 type Props = {
 	rootRef: React.RefObject<HTMLUListElement>;
 	children: React.ReactNode;
+	messages?: DragAndDropMessages;
 };
 
 function getFocusableTree(rootRef: React.RefObject<HTMLUListElement>) {
@@ -101,7 +117,27 @@ function getNextTarget(
 	return type === 'number' ? Number(key) : key;
 }
 
-export const DragAndDropProvider = ({children, rootRef}: Props) => {
+const defaultMessages: DragAndDropMessages = {
+	dragDescriptionKeyboard: 'Press Enter to start dragging.',
+	dragItem: 'Drag',
+	dragStartedKeyboard:
+		'Started dragging. Press Tab to navigate to a drop target, then press Enter to drop, or press Escape to cancel.',
+	dropCanceled: 'Drop cancelled.',
+	dropComplete: 'Drop complete.',
+	dropDescriptionKeyboard:
+		'Press Enter to drop. Press Escape to cancel drag.',
+	dropIndicator: 'drop indicator',
+	dropOn: 'Drop on',
+	endDragKeyboard: 'Dragging. Press Enter to cancel drag.',
+	insertAfter: 'Insert on bottom of the',
+	insertBefore: 'Insert on top of the',
+};
+
+export const DragAndDropProvider = ({
+	children,
+	messages = defaultMessages,
+	rootRef,
+}: Props) => {
 	const {dragAndDrop, layout, reorder} = useTreeViewContext();
 
 	const announcerRef = useRef<AnnouncerAPI>(null);
@@ -122,10 +158,7 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 			return;
 		}
 
-		announcerRef.current?.announce(
-			'Started dragging. Press Tab to navigate to a drop target, then press Enter to drop, or press Escape to cancel.'
-		);
-
+		announcerRef.current?.announce(messages.dragStartedKeyboard);
 		setState((state) => ({
 			...state,
 			currentDrag: dragKey,
@@ -150,11 +183,11 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 			position: null,
 			status: 'complete',
 		});
-		announcerRef.current?.announce('Drop complete.');
+		announcerRef.current?.announce(messages.dropComplete);
 	}, [state]);
 
 	const onCancel = useCallback(() => {
-		announcerRef.current?.announce('Drop cancelled.');
+		announcerRef.current?.announce(messages.dropCanceled);
 		setState((state) => ({
 			currentDrag: null,
 			currentTarget: null,
@@ -286,6 +319,7 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 				dragCancelDescribedBy,
 				dragDescribedBy,
 				dragDropDescribedBy,
+				messages,
 				onCancel,
 				onDragStart,
 				onDrop,
@@ -315,7 +349,7 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 				<>
 					{createPortal(
 						<div id={dragDescribedBy} style={{display: 'none'}}>
-							Press Enter to start dragging.
+							{messages.dragDescriptionKeyboard}
 						</div>,
 						document.body
 					)}
@@ -327,8 +361,7 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 									id={dragDropDescribedBy}
 									style={{display: 'none'}}
 								>
-									Press Enter to drop. Press Escape to cancel
-									drag.
+									{messages.dropDescriptionKeyboard}
 								</div>,
 								document.body
 							)}
@@ -337,7 +370,7 @@ export const DragAndDropProvider = ({children, rootRef}: Props) => {
 									id={dragCancelDescribedBy}
 									style={{display: 'none'}}
 								>
-									Dragging. Press Enter to cancel drag.
+									{messages.endDragKeyboard}
 								</div>,
 								document.body
 							)}

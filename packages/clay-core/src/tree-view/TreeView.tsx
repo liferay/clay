@@ -10,7 +10,7 @@ import {DndProvider} from 'react-dnd';
 import {HTML5Backend} from 'react-dnd-html5-backend';
 
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
-import {DragAndDropProvider} from './DragAndDrop';
+import {DragAndDropMessages, DragAndDropProvider} from './DragAndDrop';
 import DragLayer from './DragLayer';
 import {TreeViewGroup} from './TreeViewGroup';
 import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
@@ -66,6 +66,12 @@ interface ITreeViewProps<T>
 	 * in drag preview.
 	 */
 	itemNameKey?: string;
+
+	/**
+	 * Messages that the TreeView uses to announce to the screen reader. Use
+	 * this to handle internationalization.
+	 */
+	messages?: DragAndDropMessages;
 
 	/**
 	 * The callback is called whenever there is an item dragging over
@@ -134,6 +140,7 @@ export function TreeView<T>({
 	indeterminate = true,
 	itemNameKey = 'name',
 	items,
+	messages,
 	nestedKey = 'children',
 	onExpandedChange,
 	onItemHover,
@@ -213,7 +220,10 @@ export function TreeView<T>({
 					context={dragAndDropContext}
 				>
 					<TreeViewContext.Provider value={context}>
-						<DragAndDropProvider rootRef={rootRef}>
+						<DragAndDropProvider
+							messages={messages}
+							rootRef={rootRef}
+						>
 							<Collection<T> items={state.items}>
 								{children}
 							</Collection>
