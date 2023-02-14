@@ -104,6 +104,7 @@ $colors: map-merge(
 $primary: $blue !default;
 $primary-d1: clay-darken($primary, 7.5) !default;
 $primary-d2: clay-darken($primary, 10) !default;
+$primary-l0: clay-lighten($primary, 13.92) !default;
 $primary-l1: clay-lighten($primary, 22.94) !default;
 $primary-l2: clay-lighten($primary, 32.94) !default;
 $primary-l3: clay-lighten($primary, 44.9) !default;

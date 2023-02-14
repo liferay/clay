@@ -120,6 +120,7 @@ $cadmin-colors: map-merge(
 $cadmin-primary: #0b5fff !default;
 $cadmin-primary-d1: clay-darken($cadmin-primary, 5.1) !default;
 $cadmin-primary-d2: clay-darken($cadmin-primary, 10) !default;
+$cadmin-primary-l0: clay-lighten($cadmin-primary, 13.92) !default;
 $cadmin-primary-l1: clay-lighten($cadmin-primary, 22.94) !default;
 $cadmin-primary-l2: clay-lighten($cadmin-primary, 32.94) !default;
 $cadmin-primary-l3: clay-lighten($cadmin-primary, 44.9) !default;
