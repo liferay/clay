@@ -341,7 +341,23 @@ $cadmin-navigation-bar-light: map-deep-merge(
 				),
 			),
 		),
-		media-breakpoint-up: (),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-underline: (
+						navbar-nav: (
+							nav-link: (
+								active-class: (
+									after: (
+										background-color: $cadmin-primary-l0,
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
 	),
 	$cadmin-navigation-bar-light
 );
