@@ -9,7 +9,7 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
-import {Text} from '@clayui/core';
+import {Text, TextHighlight} from '@clayui/core';
 import React from 'react';
 
 const exampleImports = `import {Text} from '@clayui/core';
@@ -260,6 +260,29 @@ export const TextWeight = () => {
 		<Editor
 			code={exampleWeightCode}
 			imports={exampleImports}
+			scope={scope}
+		/>
+	);
+};
+
+const exampleTextHighlightImports = `import {TextHighlight} from '@clayui/core';
+import React from 'react';`;
+
+const exampleTextHighlightCode = `const Component = () => {
+    return (
+        <TextHighlight match="Ri s">Rick Sanchez</TextHighlight>
+      );
+  };
+  
+  render(<Component />)`;
+
+export const ExampleTextHighlight = () => {
+	const scope = {TextHighlight};
+
+	return (
+		<Editor
+			code={exampleTextHighlightCode}
+			imports={exampleTextHighlightImports}
 			scope={scope}
 		/>
 	);

@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import {Text} from '../src/typography';
+import {Text, TextHighlight} from '../src/typography';
 
 export default {
 	argTypes: {
@@ -74,4 +74,13 @@ TextTypography.args = {
 	italic: false,
 	monospace: false,
 	truncate: false,
+};
+
+export const TextHighlightTypography = (args: any) => (
+	<TextHighlight match={args.match}>{args.value}</TextHighlight>
+);
+
+TextHighlightTypography.args = {
+	match: 'Ri s',
+	value: 'Rick Sanchez',
 };
