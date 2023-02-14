@@ -107,4 +107,10 @@ describe('ClayCard w/ @testing-library/react', () => {
 			'foo bar'
 		);
 	});
+
+	it('add extra aria-label when target is `_blank`', () => {
+		const {getByText} = render(<ClayLink target="_blank">Page</ClayLink>);
+
+		expect(getByText('(Opens a new window)')).toBeTruthy();
+	});
 });
