@@ -7,7 +7,7 @@ import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
-import {Keys} from '@clayui/shared';
+import {Keys, useFocusVisible, useId} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {
 	useCallback,
@@ -17,7 +17,9 @@ import React, {
 	useState,
 } from 'react';
 
+import {VisuallyHidden} from '../live-announcer';
 import {removeItemInternalProps} from './Collection';
+import {useDnD} from './DragAndDrop';
 import {Icons, useAPI, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
@@ -109,15 +111,11 @@ export const TreeViewItem = React.forwardRef<
 		selectionMode,
 		toggle,
 	} = useTreeViewContext();
-
-	const item = useItem();
-
 	const [focus, setFocus] = useState(false);
-
 	const [loading, setLoading] = useState(false);
-
+	const {mode} = useDnD();
+	const item = useItem();
 	const clickCapturedRef = useRef(false);
-
 	const api = useAPI();
 
 	const load = api[2];
@@ -160,6 +158,9 @@ export const TreeViewItem = React.forwardRef<
 			promise.then(() => setLoading(false));
 		}
 	}, [item, group, load.loadMore]);
+
+	const labelId = useId();
+	const ariaOwns = useId();
 
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
@@ -206,12 +207,18 @@ export const TreeViewItem = React.forwardRef<
 				})}
 				role="none"
 			>
+				<ItemIndicator
+					labelId={labelId}
+					target={{dropPosition: 'top', key: item.key}}
+				/>
 				<div
 					{...itemStackProps}
 					{...nodeProps}
 					aria-expanded={
 						group ? expandedKeys.has(item.key) : undefined
 					}
+					aria-labelledby={labelId}
+					aria-owns={ariaOwns}
 					className={classNames(
 						'treeview-link',
 						itemStackProps.className,
@@ -236,6 +243,14 @@ export const TreeViewItem = React.forwardRef<
 								itemStackProps.noHover || nodeProps.noHover,
 						}
 					)}
+					data-dnd-dropping={
+						overTarget && overPosition ? 'true' : undefined
+					}
+					data-id={
+						typeof item.key === 'number'
+							? `number,${item.key}`
+							: `string,${item.key}`
+					}
 					disabled={itemStackProps.disabled || nodeProps.disabled}
 					onBlur={() => actions && setFocus(false)}
 					onClick={(event) => {
@@ -450,9 +465,17 @@ export const TreeViewItem = React.forwardRef<
 						}px`,
 					}}
 					tabIndex={
-						itemStackProps.disabled || nodeProps.disabled ? -1 : 0
+						itemStackProps.disabled ||
+						nodeProps.disabled ||
+						mode === 'keyboard'
+							? -1
+							: 0
 					}
 				>
+					<ItemIndicator
+						labelId={labelId}
+						target={{dropPosition: 'middle', key: item.key}}
+					/>
 					<span
 						className="c-inner"
 						style={{
@@ -465,7 +488,13 @@ export const TreeViewItem = React.forwardRef<
 						{typeof left === 'string' && !right ? (
 							<Layout.ContentRow>
 								<Layout.ContentCol expand>
-									<div className="component-text">{left}</div>
+									<span
+										className="component-text"
+										id={labelId}
+										tabIndex={-1}
+									>
+										{left}
+									</span>
 								</Layout.ContentCol>
 
 								{actions && <Actions>{actions}</Actions>}
@@ -474,6 +503,7 @@ export const TreeViewItem = React.forwardRef<
 							React.cloneElement(left as React.ReactElement, {
 								actions,
 								expandable: isExpand,
+								labelId,
 								onClick: undefined,
 								onLoadMore: !group ? loadMore : undefined,
 							})
@@ -482,6 +512,7 @@ export const TreeViewItem = React.forwardRef<
 								actions={actions}
 								disabled={nodeProps.disabled}
 								expandable={isExpand}
+								labelId={labelId}
 								loading={loading}
 								onLoadMore={!group ? loadMore : undefined}
 							>
@@ -490,7 +521,17 @@ export const TreeViewItem = React.forwardRef<
 						)}
 					</span>
 				</div>
-				{group}
+
+				<ItemIndicator
+					labelId={labelId}
+					target={{dropPosition: 'bottom', key: item.key}}
+				/>
+
+				{group &&
+					React.cloneElement(group as React.ReactElement, {
+						'aria-labelledby': labelId,
+						id: ariaOwns,
+					})}
 
 				{left && group && Boolean(otherElements.length) && (
 					<div
@@ -554,6 +595,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * @ignore
 	 */
+	labelId?: string;
+
+	/**
+	 * @ignore
+	 */
 	loading?: boolean;
 
 	/**
@@ -594,11 +640,13 @@ export function TreeViewItemStack({
 	disabled,
 	expandable = false,
 	expanderDisabled,
+	labelId,
 	loading = false,
 	onLoadMore,
 	...otherProps
 }: ITreeViewItemStackProps) {
 	const {
+		dragAndDrop,
 		expandOnCheck,
 		expandedKeys,
 		expanderClassName,
@@ -610,6 +658,19 @@ export function TreeViewItemStack({
 	} = useTreeViewContext();
 
 	const item = useItem();
+
+	const {
+		currentDrag,
+		dragCancelDescribedBy,
+		dragDescribedBy,
+		messages,
+		mode,
+		onCancel,
+		onDragStart,
+	} = useDnD();
+
+	const isFocusVisible = useFocusVisible();
+	const dragButtonId = useId();
 
 	const childrenCount = React.Children.count(children);
 
@@ -658,6 +719,45 @@ export function TreeViewItemStack({
 				</Layout.ContentCol>
 			)}
 
+			{dragAndDrop && isFocusVisible && (
+				<Layout.ContentCol>
+					<Button
+						aria-describedby={
+							currentDrag === item.key
+								? dragCancelDescribedBy
+								: dragDescribedBy
+						}
+						aria-label={messages.dragItem}
+						aria-labelledby={`${dragButtonId} ${labelId}`}
+						data-draggable={currentDrag === item.key}
+						displayType={null}
+						draggable
+						id={dragButtonId}
+						monospaced
+						onClick={(event) => {
+							event.stopPropagation();
+
+							if (mode === 'keyboard') {
+								onCancel();
+							} else {
+								onDragStart(item.key);
+							}
+						}}
+						onKeyDown={(event) => {
+							if (
+								event.key === Keys.Enter ||
+								event.key === Keys.Spacebar
+							) {
+								event.stopPropagation();
+							}
+						}}
+						tabIndex={currentDrag === item.key || !mode ? 0 : -1}
+					>
+						<Icon aria-hidden symbol="drag" />
+					</Button>
+				</Layout.ContentCol>
+			)}
+
 			{React.Children.map(children, (child, index) => {
 				let content = child;
 
@@ -671,7 +771,15 @@ export function TreeViewItemStack({
 					// @ts-ignore
 					child?.type.displayName === 'Text'
 				) {
-					content = <div className="component-text">{child}</div>;
+					content = (
+						<span
+							className="component-text"
+							id={labelId}
+							tabIndex={-1}
+						>
+							{child}
+						</span>
+					);
 
 					// @ts-ignore
 				} else if (child?.type.displayName === 'ClayIcon') {
@@ -832,3 +940,57 @@ function Actions({children}: TreeViewItemActionsProps) {
 }
 
 Actions.displayName = 'TreeViewItemActions';
+
+type TargetDrop = {
+	key: React.Key;
+	dropPosition: 'bottom' | 'middle' | 'top';
+};
+
+type ItemIndicatorProps = {
+	labelId: string;
+	target: TargetDrop;
+};
+
+function ItemIndicator({labelId, target}: ItemIndicatorProps) {
+	const {currentTarget, dragDropDescribedBy, messages, mode, position} =
+		useDnD();
+	const indicatorRef = useRef<HTMLDivElement>(null);
+
+	const id = useId();
+
+	useEffect(() => {
+		if (
+			indicatorRef.current &&
+			currentTarget === target.key &&
+			target.dropPosition === position
+		) {
+			indicatorRef.current.focus();
+		}
+	}, [currentTarget, target]);
+
+	if (!mode) {
+		return null;
+	}
+
+	return (
+		<VisuallyHidden
+			aria-describedby={dragDropDescribedBy}
+			aria-hidden={mode !== 'keyboard' ? true : undefined}
+			aria-label={classNames({
+				[messages.dropOn]: target.dropPosition === 'middle',
+				[messages.insertAfter]: target.dropPosition === 'bottom',
+				[messages.insertBefore]: target.dropPosition === 'top',
+			})}
+			aria-labelledby={`${id} ${labelId}`}
+			aria-roledescription={messages.dropIndicator}
+			id={id}
+			ref={indicatorRef}
+			role="button"
+			tabIndex={
+				currentTarget === target.key && target.dropPosition === position
+					? 0
+					: -1
+			}
+		/>
+	);
+}

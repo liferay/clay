@@ -19,14 +19,21 @@ const styles: React.CSSProperties = {
 };
 
 type Props = {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 	liveAnnouncer?: boolean;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
-export function VisuallyHidden({children, liveAnnouncer}: Props) {
-	return (
-		<div data-live-announcer={liveAnnouncer} style={styles}>
-			{children}
-		</div>
-	);
-}
+export const VisuallyHidden = React.forwardRef<HTMLDivElement, Props>(
+	function VisuallyHidden({children, liveAnnouncer, ...props}, ref) {
+		return (
+			<div
+				{...props}
+				data-live-announcer={liveAnnouncer}
+				ref={ref}
+				style={styles}
+			>
+				{children}
+			</div>
+		);
+	}
+);
