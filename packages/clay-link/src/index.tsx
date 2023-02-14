@@ -74,6 +74,13 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	fontSize?: Number;
 
 	/**
+	 * Messages used for announcement to SR. Use this for internationalization.
+	 */
+	messages?: {
+		opensNewWindow: string;
+	};
+
+	/**
 	 * Flag to indicate if the link should be monospaced.
 	 */
 	monospaced?: boolean;
@@ -94,6 +101,10 @@ interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	weight?: 'normal' | 'semi-bold';
 }
 
+const defaultMessages = {
+	opensNewWindow: '(Opens a new window)',
+};
+
 const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 	(
 		{
@@ -105,6 +116,7 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 			decoration,
 			displayType,
 			fontSize,
+			messages = defaultMessages,
 			monospaced,
 			outline,
 			rel,
@@ -166,6 +178,9 @@ const ClayLink = React.forwardRef<HTMLAnchorElement, IProps>(
 				{...otherProps}
 			>
 				{children}
+				{target === '_blank' && (
+					<span className="sr-only">{messages.opensNewWindow}</span>
+				)}
 			</TagOrComponent>
 		);
 	}
