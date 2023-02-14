@@ -34,17 +34,24 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	tabsId?: string;
 }
 
-const Content = ({
-	active,
-	activeIndex = 0,
-	children,
-	className,
-	fade = false,
-	tabsId,
-	...otherProps
-}: IProps) => {
+const Content = React.forwardRef<HTMLDivElement, IProps>(function Content(
+	{
+		active,
+		activeIndex = 0,
+		children,
+		className,
+		fade = false,
+		tabsId,
+		...otherProps
+	},
+	ref
+) {
 	return (
-		<div className={classNames('tab-content', className)} {...otherProps}>
+		<div
+			className={classNames('tab-content', className)}
+			{...otherProps}
+			ref={ref}
+		>
 			{React.Children.map(children, (child, index) => {
 				if (!React.isValidElement(child)) {
 					return child;
@@ -66,6 +73,6 @@ const Content = ({
 			})}
 		</div>
 	);
-};
+});
 
 export default Content;

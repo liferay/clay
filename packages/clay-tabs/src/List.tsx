@@ -5,7 +5,7 @@
 
 import {InternalDispatch, useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useImperativeHandle, useRef} from 'react';
 
 export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
@@ -59,19 +59,22 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	tabsId?: string;
 }
 
-export function List({
-	activation,
-	active,
-	children,
-	className,
-	displayType,
-	justified,
-	modern,
-	onActiveChange,
-	shouldUseActive = false,
-	tabsId,
-	...otherProps
-}: IProps) {
+export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
+	{
+		activation,
+		active,
+		children,
+		className,
+		displayType,
+		justified,
+		modern,
+		onActiveChange,
+		shouldUseActive = false,
+		tabsId,
+		...otherProps
+	},
+	ref
+) {
 	const tabsRef = useRef<HTMLUListElement>(null);
 
 	const {navigationProps} = useNavigation({
@@ -79,6 +82,8 @@ export function List({
 		containerRef: tabsRef,
 		orientation: 'horizontal',
 	});
+
+	useImperativeHandle(ref, () => tabsRef.current!, [tabsRef]);
 
 	useEffect(() => {
 		// Internal API to maintain compatibility with the old Tabs pattern and to
@@ -156,6 +161,6 @@ export function List({
 			})}
 		</ul>
 	);
-}
+});
 
 List.displayName = 'ClayTabsList';
