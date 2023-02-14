@@ -1,66 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClayLink renders 1`] = `
-<a
-  className=""
-/>
+<div>
+  <a
+    class=""
+  />
+</div>
 `;
 
 exports[`ClayLink renders borderless links 1`] = `
-<a
-  className="link-outline-borderless"
-  href="#1"
->
-  Borderless
-</a>
+<div>
+  <a
+    class="link-outline-borderless"
+    href="#1"
+  >
+    Borderless
+  </a>
+</div>
 `;
 
 exports[`ClayLink renders outline links 1`] = `
-<a
-  className="link-outline link-outline-primary"
-  href="#1"
->
-  Outline
-</a>
+<div>
+  <a
+    class="link-outline link-outline-primary"
+    href="#1"
+  >
+    Outline
+  </a>
+</div>
 `;
 
 exports[`ClayLink renders with a children content 1`] = `
-<a
-  className=""
->
-  My Link
-</a>
+<div>
+  <a
+    class=""
+  >
+    My Link
+  </a>
+</div>
 `;
 
 exports[`ClayLink renders with a display type 1`] = `
-<a
-  className="c-link link-secondary text-decoration-underline"
-/>
+<div>
+  <a
+    class="c-link link-secondary text-decoration-underline"
+  />
+</div>
 `;
 
 exports[`ClayLink renders with href 1`] = `
-<a
-  className=""
-  href="#links"
-/>
+<div>
+  <a
+    class=""
+    href="#links"
+  />
+</div>
 `;
 
 exports[`ClayLink renders with monospaced 1`] = `
-<a
-  className="link-monospaced link-outline link-outline-borderless link-outline-primary"
-  href="#1"
->
-  M
-</a>
+<div>
+  <a
+    class="link-monospaced link-outline link-outline-borderless link-outline-primary"
+    href="#1"
+  >
+    M
+  </a>
+</div>
 `;
 
 exports[`ClayLink uses custom link component via context 1`] = `
-<a
-  className="c-link link-secondary text-decoration-underline"
-  href="#1"
->
-  <strong>
-    I am Bold!
-  </strong>
-</a>
+<div>
+  <a
+    class="c-link link-secondary text-decoration-underline"
+    href="#1"
+  >
+    <strong>
+      I am Bold!
+    </strong>
+  </a>
+</div>
 `;
