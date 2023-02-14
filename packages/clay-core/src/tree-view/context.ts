@@ -118,6 +118,10 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 					} else if (items.items) {
 						cursors.current.set(id, items.cursor);
 						insert([...layoutItem.loc, 0], items.items);
+
+						if (willToggle && !expandedKeys.has(id)) {
+							toggle(id);
+						}
 					}
 				})
 				.catch((error) => {
