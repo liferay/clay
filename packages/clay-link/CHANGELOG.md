@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.88.0](https://github.com/liferay/clay/compare/v3.87.2...v3.88.0) (2023-02-14)
+
+### Features
+
+-   **@clayui/link:** add extra aria-label when target is `_blank` ([6268a88](https://github.com/liferay/clay/commit/6268a8853bab3ea411773238c16a3f6750e70f6c))
+
 # [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
 
 ### Bug Fixes
