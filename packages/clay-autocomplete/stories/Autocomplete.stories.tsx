@@ -3,12 +3,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Text, TextHighlight} from '@clayui/core';
 import {useResource} from '@clayui/data-provider';
 import {
 	FetchPolicy,
 	NetworkStatus,
 } from '@clayui/data-provider/src/useResource';
-import ClayDropDown from '@clayui/drop-down';
+import DropDown from '@clayui/drop-down';
+import Layout from '@clayui/layout';
 import {FocusScope, useDebounce} from '@clayui/shared';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -26,11 +28,7 @@ const LoadingWithDebounce = ({
 	const debouncedLoadingChange = useDebounce(loading, 500);
 
 	if (networkStatus === 1 || debouncedLoadingChange) {
-		return (
-			<ClayDropDown.Item className="disabled">
-				Loading...
-			</ClayDropDown.Item>
-		);
+		return <DropDown.Item className="disabled">Loading...</DropDown.Item>;
 	}
 
 	return render;
@@ -112,6 +110,62 @@ export const Dynamic = () => (
 		</div>
 	</div>
 );
+
+export const CustomItem = () => {
+	const [value, setValue] = useState('');
+
+	return (
+		<div className="row">
+			<div className="col-md-5">
+				<div className="sheet">
+					<div className="form-group">
+						<label
+							htmlFor="clay-autocomplete-2"
+							id="clay-autocomplete-label-2"
+						>
+							Numbers (one-five)
+						</label>
+						<ClayAutocomplete
+							aria-labelledby="clay-autocomplete-label-2"
+							defaultItems={[
+								'one',
+								'two',
+								'three',
+								'four',
+								'five',
+							]}
+							id="clay-autocomplete-2"
+							messages={{
+								loading: 'Loading...',
+								notFound: 'No results found',
+							}}
+							onChange={setValue}
+							placeholder="Enter a number from One to Five"
+							value={value}
+						>
+							{(item) => (
+								<DropDown.Item key={item}>
+									<Layout.ContentRow>
+										<Layout.ContentCol expand>
+											<Text size={3}>
+												<TextHighlight match={value}>
+													{item}
+												</TextHighlight>
+											</Text>
+										</Layout.ContentCol>
+										<Layout.ContentCol>
+											<Text size={2}>Description</Text>
+										</Layout.ContentCol>
+									</Layout.ContentRow>
+								</DropDown.Item>
+							)}
+						</ClayAutocomplete>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 export const AsyncFilter = () => {
 	const [value, setValue] = useState('');
@@ -259,7 +313,7 @@ export const Keyboard = () => {
 									active={active}
 									onActiveChange={setActive}
 								>
-									<ClayDropDown.ItemList>
+									<DropDown.ItemList>
 										{filteredItems.map((item) => (
 											<ClayAutocomplete.Item
 												key={item}
@@ -268,7 +322,7 @@ export const Keyboard = () => {
 												value={item}
 											/>
 										))}
-									</ClayDropDown.ItemList>
+									</DropDown.ItemList>
 								</ClayAutocomplete.DropDown>
 							</ClayAutocomplete>
 						</FocusScope>
@@ -315,7 +369,7 @@ export const AsyncData = () => {
 									(!!resource && !!value) || initialLoading
 								}
 							>
-								<ClayDropDown.ItemList>
+								<DropDown.ItemList>
 									<LoadingWithDebounce
 										loading={loading}
 										networkStatus={networkStatus}
@@ -324,9 +378,9 @@ export const AsyncData = () => {
 												{(error ||
 													(resource &&
 														resource.error)) && (
-													<ClayDropDown.Item className="disabled">
+													<DropDown.Item className="disabled">
 														No Results Found
-													</ClayDropDown.Item>
+													</DropDown.Item>
 												)}
 												{!error &&
 													resource &&
@@ -350,7 +404,7 @@ export const AsyncData = () => {
 											</>
 										}
 									/>
-								</ClayDropDown.ItemList>
+								</DropDown.ItemList>
 							</ClayAutocomplete.DropDown>
 							{loading && <ClayAutocomplete.LoadingIndicator />}
 						</ClayAutocomplete>
