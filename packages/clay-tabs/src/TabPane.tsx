@@ -23,57 +23,63 @@ const delay = (fn: Function, val: number = 150) =>
 		fn();
 	}, val);
 
-const TabPane = ({
-	active = false,
-	children,
-	className,
-	fade,
-	tabIndex = 0,
-	...otherProps
-}: ITabPaneProps) => {
-	const [internalActive, setInternalActive] = React.useState(active);
-	const [internalShow, setInternalShow] = React.useState(active);
+const TabPane = React.forwardRef<HTMLDivElement, ITabPaneProps>(
+	function TabPane(
+		{
+			active = false,
+			children,
+			className,
+			fade,
+			tabIndex = 0,
+			...otherProps
+		},
+		ref
+	) {
+		const [internalActive, setInternalActive] = React.useState(active);
+		const [internalShow, setInternalShow] = React.useState(active);
 
-	React.useEffect(() => {
-		let delayFn = () => {
-			setInternalActive(true);
+		React.useEffect(() => {
+			let delayFn = () => {
+				setInternalActive(true);
 
-			delay(() => setInternalShow(true), 50);
-		};
+				delay(() => setInternalShow(true), 50);
+			};
 
-		if (!active) {
-			setInternalShow(false);
+			if (!active) {
+				setInternalShow(false);
 
-			delayFn = () => setInternalActive(false);
-		}
+				delayFn = () => setInternalActive(false);
+			}
 
-		const timer = delay(delayFn);
+			const timer = delay(delayFn);
 
-		return () => {
-			clearTimeout(timer);
+			return () => {
+				clearTimeout(timer);
 
-			setInternalShow(false);
-		};
-	}, [active]);
+				setInternalShow(false);
+			};
+		}, [active]);
 
-	return (
-		<div
-			{...otherProps}
-			className={classNames(
-				'tab-pane',
-				{
-					active: internalActive,
-					fade,
-					show: internalShow,
-				},
-				className
-			)}
-			role="tabpanel"
-			tabIndex={tabIndex}
-		>
-			{children}
-		</div>
-	);
-};
+		return (
+			<div
+				{...otherProps}
+				className={classNames(
+					'tab-pane',
+					{
+						active: internalActive,
+						fade,
+						show: internalShow,
+					},
+					className
+				)}
+				ref={ref}
+				role="tabpanel"
+				tabIndex={tabIndex}
+			>
+				{children}
+			</div>
+		);
+	}
+);
 
 export default TabPane;
