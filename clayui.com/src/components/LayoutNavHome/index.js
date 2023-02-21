@@ -195,6 +195,7 @@ const LayoutNavHome = () => {
 									spritemap={spritemap}
 									trigger={
 										<ClayButton
+											aria-label="Site themes"
 											className="nav-link"
 											displayType="unstyled"
 										>

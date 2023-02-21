@@ -29,7 +29,7 @@ export default function Home() {
 						'This site is for version 3.x. If you are looking for version 2.x documentation, it has been moved to '
 					}
 					<a
-						className="text-secondary"
+						className="clay-link link-primary text-decoration-underline"
 						href="https://v2.clayui.com"
 						rel="noopener noreferrer"
 						target="_blank"
