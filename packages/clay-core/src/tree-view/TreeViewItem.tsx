@@ -487,6 +487,8 @@ export const TreeViewItem = React.forwardRef<
 					>
 						{typeof left === 'string' && !right ? (
 							<Layout.ContentRow>
+								<Drag labelId={labelId} />
+
 								<Layout.ContentCol expand>
 									<span
 										className="component-text"
@@ -646,7 +648,6 @@ export function TreeViewItemStack({
 	...otherProps
 }: ITreeViewItemStackProps) {
 	const {
-		dragAndDrop,
 		expandOnCheck,
 		expandedKeys,
 		expanderClassName,
@@ -658,19 +659,6 @@ export function TreeViewItemStack({
 	} = useTreeViewContext();
 
 	const item = useItem();
-
-	const {
-		currentDrag,
-		dragCancelDescribedBy,
-		dragDescribedBy,
-		messages,
-		mode,
-		onCancel,
-		onDragStart,
-	} = useDnD();
-
-	const isFocusVisible = useFocusVisible();
-	const dragButtonId = useId();
 
 	const childrenCount = React.Children.count(children);
 
@@ -719,44 +707,7 @@ export function TreeViewItemStack({
 				</Layout.ContentCol>
 			)}
 
-			{dragAndDrop && isFocusVisible && (
-				<Layout.ContentCol>
-					<Button
-						aria-describedby={
-							currentDrag === item.key
-								? dragCancelDescribedBy
-								: dragDescribedBy
-						}
-						aria-label={messages.dragItem}
-						aria-labelledby={`${dragButtonId} ${labelId}`}
-						data-draggable={currentDrag === item.key}
-						displayType={null}
-						draggable
-						id={dragButtonId}
-						monospaced
-						onClick={(event) => {
-							event.stopPropagation();
-
-							if (mode === 'keyboard') {
-								onCancel();
-							} else {
-								onDragStart(item.key);
-							}
-						}}
-						onKeyDown={(event) => {
-							if (
-								event.key === Keys.Enter ||
-								event.key === Keys.Spacebar
-							) {
-								event.stopPropagation();
-							}
-						}}
-						tabIndex={currentDrag === item.key || !mode ? 0 : -1}
-					>
-						<Icon aria-hidden symbol="drag" />
-					</Button>
-				</Layout.ContentCol>
-			)}
+			<Drag labelId={labelId} />
 
 			{React.Children.map(children, (child, index) => {
 				let content = child;
@@ -992,5 +943,68 @@ function ItemIndicator({labelId, target}: ItemIndicatorProps) {
 					: -1
 			}
 		/>
+	);
+}
+
+type DragProps = {
+	labelId?: string;
+};
+
+function Drag({labelId}: DragProps) {
+	const {dragAndDrop} = useTreeViewContext();
+	const {
+		currentDrag,
+		dragCancelDescribedBy,
+		dragDescribedBy,
+		messages,
+		mode,
+		onCancel,
+		onDragStart,
+	} = useDnD();
+	const item = useItem();
+	const isFocusVisible = useFocusVisible();
+	const dragButtonId = useId();
+
+	if (!(dragAndDrop && isFocusVisible)) {
+		return null;
+	}
+
+	return (
+		<Layout.ContentCol>
+			<Button
+				aria-describedby={
+					currentDrag === item.key
+						? dragCancelDescribedBy
+						: dragDescribedBy
+				}
+				aria-label={messages.dragItem}
+				aria-labelledby={`${dragButtonId} ${labelId}`}
+				data-draggable={currentDrag === item.key}
+				displayType={null}
+				draggable
+				id={dragButtonId}
+				monospaced
+				onClick={(event) => {
+					event.stopPropagation();
+
+					if (mode === 'keyboard') {
+						onCancel();
+					} else {
+						onDragStart(item.key);
+					}
+				}}
+				onKeyDown={(event) => {
+					if (
+						event.key === Keys.Enter ||
+						event.key === Keys.Spacebar
+					) {
+						event.stopPropagation();
+					}
+				}}
+				tabIndex={currentDrag === item.key || !mode ? 0 : -1}
+			>
+				<Icon aria-hidden symbol="drag" />
+			</Button>
+		</Layout.ContentCol>
 	);
 }
