@@ -35,6 +35,11 @@ export interface IProps
 	spritemap?: string;
 
 	/**
+	 * Props to add to the button component.
+	 */
+	submitProps?: React.HTMLAttributes<HTMLButtonElement>;
+
+	/**
 	 * Current value of the input (controlled).
 	 */
 	value?: string;
@@ -42,12 +47,18 @@ export interface IProps
 
 const defaultOnSubmit = (event: React.SyntheticEvent) => event.preventDefault();
 
+const defaultSubmitProps = {
+	'aria-label': 'Search',
+	type: 'button',
+};
+
 const ClayDropDownSearch = ({
 	className,
 	defaultValue = '',
 	formProps = {},
 	onChange,
 	spritemap,
+	submitProps = defaultSubmitProps,
 	value: valueProp,
 	...otherProps
 }: IProps) => {
@@ -90,9 +101,9 @@ const ClayDropDownSearch = ({
 
 						<ClayInput.GroupInsetItem after tag="span">
 							<ClayButton
+								{...submitProps}
 								displayType="unstyled"
 								tabIndex={!tabFocus ? -1 : undefined}
-								type="button"
 							>
 								<ClayIcon
 									spritemap={spritemap}
