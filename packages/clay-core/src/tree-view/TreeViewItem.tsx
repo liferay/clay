@@ -332,7 +332,7 @@ export const TreeViewItem = React.forwardRef<
 							)(event);
 						}
 
-						if (event.defaultPrevented) {
+						if (event.defaultPrevented || event.key === Keys.Tab) {
 							return;
 						}
 
