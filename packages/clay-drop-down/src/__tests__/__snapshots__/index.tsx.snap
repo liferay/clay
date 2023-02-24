@@ -392,6 +392,7 @@ exports[`ClayDropDown renders with search input 1`] = `
                   class="input-group-inset-item input-group-inset-item-after"
                 >
                   <button
+                    aria-label="Search"
                     class="btn btn-unstyled"
                     tabindex="-1"
                     type="button"
