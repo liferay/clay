@@ -229,7 +229,10 @@ export function TreeView<T>({
 			<DndProvider backend={HTML5Backend} context={dragAndDropContext}>
 				<TreeViewContext.Provider value={context}>
 					<DragAndDropProvider messages={messages} rootRef={rootRef}>
-						<FocusWithinProvider containerRef={rootRef}>
+						<FocusWithinProvider
+							containerRef={rootRef}
+							focusableElements={focusableElements}
+						>
 							<Collection<T> items={state.items}>
 								{children}
 							</Collection>

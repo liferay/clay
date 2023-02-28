@@ -19,16 +19,16 @@ type FocusContext = {
 
 const FocusContext = React.createContext<FocusContext>({} as FocusContext);
 
-const focusableElements = ['.treeview-link[tabindex]'];
-
 type Props<T> = {
 	children: React.ReactNode;
 	containerRef: React.RefObject<T>;
+	focusableElements: Array<string>;
 };
 
 export function FocusWithinProvider<T extends HTMLElement>({
 	children,
 	containerRef,
+	focusableElements,
 }: Props<T>) {
 	const [focusId, setFocusId] = useState<React.Key | null>(null);
 
