@@ -35,6 +35,11 @@ export function FocusWithinProvider<T extends HTMLElement>({
 	useEffect(() => {
 		// TODO: Get this information using the collection API
 		const item = getFocusableList(containerRef, focusableElements)[0];
+
+		if (!item) {
+			return;
+		}
+
 		const [type, id] = item.getAttribute('data-id')!.split(',');
 		const key = type === 'number' ? Number(id) : id;
 

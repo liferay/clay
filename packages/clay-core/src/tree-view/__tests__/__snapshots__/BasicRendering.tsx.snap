@@ -287,21 +287,17 @@ exports[`TreeView basic rendering render with actions 1`] = `
             >
               <button
                 class="component-action quick-action-item btn btn-monospaced"
+                tabindex="0"
                 type="button"
               >
-                <div
-                  class="c-inner"
-                  tabindex="-2"
+                <svg
+                  class="lexicon-icon lexicon-icon-times"
+                  role="presentation"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-times"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#times"
-                    />
-                  </svg>
-                </div>
+                  <use
+                    xlink:href="icons.svg#times"
+                  />
+                </svg>
               </button>
             </div>
             <div
@@ -315,21 +311,17 @@ exports[`TreeView basic rendering render with actions 1`] = `
                   aria-expanded="false"
                   aria-haspopup="true"
                   class="dropdown-toggle component-action quick-action-item btn btn-monospaced"
+                  tabindex="0"
                   type="button"
                 >
-                  <div
-                    class="c-inner"
-                    tabindex="-2"
+                  <svg
+                    class="lexicon-icon lexicon-icon-ellipsis-v"
+                    role="presentation"
                   >
-                    <svg
-                      class="lexicon-icon lexicon-icon-ellipsis-v"
-                      role="presentation"
-                    >
-                      <use
-                        xlink:href="icons.svg#ellipsis-v"
-                      />
-                    </svg>
-                  </div>
+                    <use
+                      xlink:href="icons.svg#ellipsis-v"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
