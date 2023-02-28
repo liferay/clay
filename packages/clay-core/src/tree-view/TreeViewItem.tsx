@@ -261,7 +261,16 @@ export const TreeViewItem = React.forwardRef<
 							: `string,${item.key}`
 					}
 					disabled={itemStackProps.disabled || nodeProps.disabled}
-					onBlur={() => actions && setFocus(false)}
+					onBlur={(event) => {
+						if (
+							actions &&
+							!item.itemRef.current?.contains(
+								event.relatedTarget as HTMLElement
+							)
+						) {
+							setFocus(false);
+						}
+					}}
 					onClick={(event) => {
 						if (itemStackProps.disabled || nodeProps.disabled) {
 							return;
@@ -854,6 +863,16 @@ function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 										child.props.onClick(event);
 									}
 								},
+								onKeyDown: (
+									event: React.KeyboardEvent<HTMLButtonElement>
+								) => {
+									if (
+										event.key === Keys.Enter ||
+										event.key === Keys.Spacebar
+									) {
+										event.stopPropagation();
+									}
+								},
 								tabIndex,
 							})}
 						</Layout.ContentCol>
@@ -884,6 +903,16 @@ function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 												child.props.trigger.props.onClick(
 													event
 												);
+											}
+										},
+										onKeyDown: (
+											event: React.KeyboardEvent<HTMLButtonElement>
+										) => {
+											if (
+												event.key === Keys.Enter ||
+												event.key === Keys.Spacebar
+											) {
+												event.stopPropagation();
 											}
 										},
 										tabIndex,
