@@ -9,6 +9,7 @@ import React, {useRef} from 'react';
 import {DndProvider} from 'react-dnd';
 import {HTML5Backend} from 'react-dnd-html5-backend';
 
+import {FocusWithinProvider} from '../aria';
 import {ChildrenFunction, Collection, ICollectionProps} from './Collection';
 import {DragAndDropMessages, DragAndDropProvider} from './DragAndDrop';
 import DragLayer from './DragLayer';
@@ -228,10 +229,12 @@ export function TreeView<T>({
 			<DndProvider backend={HTML5Backend} context={dragAndDropContext}>
 				<TreeViewContext.Provider value={context}>
 					<DragAndDropProvider messages={messages} rootRef={rootRef}>
-						<Collection<T> items={state.items}>
-							{children}
-						</Collection>
-						<DragLayer itemNameKey={itemNameKey} />
+						<FocusWithinProvider containerRef={rootRef}>
+							<Collection<T> items={state.items}>
+								{children}
+							</Collection>
+							<DragLayer itemNameKey={itemNameKey} />
+						</FocusWithinProvider>
 					</DragAndDropProvider>
 				</TreeViewContext.Provider>
 			</DndProvider>
