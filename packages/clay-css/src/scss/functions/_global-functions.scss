@@ -26,6 +26,27 @@
 	@return $toggle-switch-width + $label-spacer-x;
 }
 
+/// A function that combines two maps. It adds new key value pairs to the end of the map.
+
+@function clay-map-merge($map1, $map2) {
+	@if (length($map2) < 1) {
+		@return $map1;
+	}
+
+	@each $key, $value in $map1 {
+		@if not(map-has-key($map2, $key)) {
+			$map2: map-merge(
+				$map2,
+				(
+					$key: $value,
+				)
+			);
+		}
+	}
+
+	@return $map2;
+}
+
 /// A function that returns a new map with all the keys and values including nested keys and values from both `$map1` and `$map2`. If both `$map1` and `$map2` have the same key, `$map2`’s value takes precedence. The key value pair `merge: false,` will skip merging maps. This allows component properties to be reset to a blank state.
 /// @param {Map, Null} $map1[()]
 /// @param {Map, Null} $map2[()]
