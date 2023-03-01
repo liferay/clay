@@ -52,7 +52,7 @@ export interface IProps {
 	 * Flag to define if the item represents the current page. Disable this
 	 * attribute only if there are multiple navigations on the page.
 	 */
-	'aria-current'?: 'page' | null;
+	itemAriaCurrent?: boolean;
 
 	/**
 	 * Flag to indicate the navigation behavior in the menu.
@@ -285,10 +285,10 @@ function ClayVerticalNav(props: IProps): JSX.Element & {
 };
 
 function ClayVerticalNav({
-	'aria-current': ariaCurrent = 'page',
 	activation = 'manual',
 	activeLabel,
 	decorated,
+	itemAriaCurrent: ariaCurrent = true,
 	items,
 	large,
 	spritemap,
@@ -340,7 +340,7 @@ function ClayVerticalNav({
 				ref={containerRef}
 			>
 				<Nav aria-orientation="vertical" nested role="menubar">
-					{renderItems(items, ariaCurrent, spritemap)}
+					{renderItems(items, ariaCurrent ? 'page' : null, spritemap)}
 				</Nav>
 			</div>
 		</nav>

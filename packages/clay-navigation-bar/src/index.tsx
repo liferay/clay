@@ -21,7 +21,7 @@ export interface IProps
 	 * Flag to define if the item represents the current page. Disable this
 	 * attribute only if there are multiple navigations on the page.
 	 */
-	'aria-current'?: 'page' | null;
+	itemAriaCurrent?: boolean;
 
 	/**
 	 * Children elements received from ClayNavigationBar component.
@@ -51,10 +51,10 @@ function ClayNavigationBar(props: IProps): JSX.Element & {
 };
 
 function ClayNavigationBar({
-	'aria-current': ariaCurrent = 'page',
 	children,
 	className,
 	inverted = false,
+	itemAriaCurrent: ariaCurrent = true,
 	spritemap,
 	triggerLabel,
 	...otherProps
@@ -87,7 +87,9 @@ function ClayNavigationBar({
 				}
 			)}
 		>
-			<NavigationBarContext.Provider value={{ariaCurrent}}>
+			<NavigationBarContext.Provider
+				value={{ariaCurrent: ariaCurrent ? 'page' : null}}
+			>
 				<ClayLayout.ContainerFluid>
 					<ClayButton
 						aria-expanded={expanded}
