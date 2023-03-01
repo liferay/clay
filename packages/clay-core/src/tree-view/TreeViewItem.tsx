@@ -17,6 +17,7 @@ import React, {
 	useState,
 } from 'react';
 
+import {useFocusWithin} from '../aria';
 import {VisuallyHidden} from '../live-announcer';
 import {removeItemInternalProps} from './Collection';
 import {useDnD} from './DragAndDrop';
@@ -159,22 +160,6 @@ export const TreeViewItem = React.forwardRef<
 		}
 	}, [item, group, load.loadMore]);
 
-	const labelId = useId();
-	const ariaOwns = useId();
-
-	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
-		return React.cloneElement(
-			childrenRoot.current(removeItemInternalProps(item), ...api),
-			{
-				actions,
-				isDragging,
-				overPosition,
-				overTarget,
-				ref,
-			}
-		);
-	}
-
 	const hasItemStack =
 		typeof left !== 'string' && group && React.isValidElement(left);
 
@@ -198,6 +183,29 @@ export const TreeViewItem = React.forwardRef<
 		itemStackProps.expandable ||
 		(childrenRoot.current ? hasChildren : group);
 
+	const focusWithinProps = useFocusWithin({
+		disabled:
+			itemStackProps.disabled ||
+			nodeProps.disabled ||
+			mode === 'keyboard',
+		id: item.key,
+	});
+	const labelId = useId();
+	const ariaOwns = useId();
+
+	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
+		return React.cloneElement(
+			childrenRoot.current(removeItemInternalProps(item), ...api),
+			{
+				actions,
+				isDragging,
+				overPosition,
+				overTarget,
+				ref,
+			}
+		);
+	}
+
 	return (
 		<SpacingContext.Provider value={spacing + 24}>
 			<li
@@ -214,6 +222,7 @@ export const TreeViewItem = React.forwardRef<
 				<div
 					{...itemStackProps}
 					{...nodeProps}
+					{...focusWithinProps}
 					aria-expanded={
 						group ? expandedKeys.has(item.key) : undefined
 					}
@@ -252,7 +261,16 @@ export const TreeViewItem = React.forwardRef<
 							: `string,${item.key}`
 					}
 					disabled={itemStackProps.disabled || nodeProps.disabled}
-					onBlur={() => actions && setFocus(false)}
+					onBlur={(event) => {
+						if (
+							actions &&
+							!item.itemRef.current?.contains(
+								event.relatedTarget as HTMLElement
+							)
+						) {
+							setFocus(false);
+						}
+					}}
 					onClick={(event) => {
 						if (itemStackProps.disabled || nodeProps.disabled) {
 							return;
@@ -310,6 +328,10 @@ export const TreeViewItem = React.forwardRef<
 						}
 					}}
 					onFocus={() => {
+						if (focusWithinProps.onFocus) {
+							focusWithinProps.onFocus();
+						}
+
 						if (actions) {
 							setFocus(true);
 							clickCapturedRef.current = true;
@@ -332,7 +354,7 @@ export const TreeViewItem = React.forwardRef<
 							)(event);
 						}
 
-						if (event.defaultPrevented) {
+						if (event.defaultPrevented || event.key === Keys.Tab) {
 							return;
 						}
 
@@ -464,13 +486,6 @@ export const TreeViewItem = React.forwardRef<
 							spacing + (isExpand || loading ? 0 : 24)
 						}px`,
 					}}
-					tabIndex={
-						itemStackProps.disabled ||
-						nodeProps.disabled ||
-						mode === 'keyboard'
-							? -1
-							: 0
-					}
 				>
 					<ItemIndicator
 						labelId={labelId}
@@ -487,7 +502,10 @@ export const TreeViewItem = React.forwardRef<
 					>
 						{typeof left === 'string' && !right ? (
 							<Layout.ContentRow>
-								<Drag labelId={labelId} />
+								<Drag
+									labelId={labelId}
+									tabIndex={focusWithinProps.tabIndex}
+								/>
 
 								<Layout.ContentCol expand>
 									<span
@@ -499,7 +517,13 @@ export const TreeViewItem = React.forwardRef<
 									</span>
 								</Layout.ContentCol>
 
-								{actions && <Actions>{actions}</Actions>}
+								{actions && (
+									<Actions
+										tabIndex={focusWithinProps.tabIndex}
+									>
+										{actions}
+									</Actions>
+								)}
 							</Layout.ContentRow>
 						) : group ? (
 							React.cloneElement(left as React.ReactElement, {
@@ -508,6 +532,7 @@ export const TreeViewItem = React.forwardRef<
 								labelId,
 								onClick: undefined,
 								onLoadMore: !group ? loadMore : undefined,
+								tabIndex: focusWithinProps.tabIndex,
 							})
 						) : (
 							<TreeViewItemStack
@@ -517,6 +542,7 @@ export const TreeViewItem = React.forwardRef<
 								labelId={labelId}
 								loading={loading}
 								onLoadMore={!group ? loadMore : undefined}
+								tabIndex={focusWithinProps.tabIndex}
 							>
 								{children}
 							</TreeViewItemStack>
@@ -608,6 +634,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * @ignore
 	 */
 	onLoadMore?: () => void;
+
+	/**
+	 * @ignore
+	 */
+	tabIndex?: number;
 }
 
 type ExpanderProps = {
@@ -645,6 +676,7 @@ export function TreeViewItemStack({
 	labelId,
 	loading = false,
 	onLoadMore,
+	tabIndex,
 	...otherProps
 }: ITreeViewItemStackProps) {
 	const {
@@ -707,7 +739,7 @@ export function TreeViewItemStack({
 				</Layout.ContentCol>
 			)}
 
-			<Drag labelId={labelId} />
+			<Drag labelId={labelId} tabIndex={tabIndex!} />
 
 			{React.Children.map(children, (child, index) => {
 				let content = child;
@@ -791,7 +823,7 @@ export function TreeViewItemStack({
 				);
 			})}
 
-			{actions && <Actions>{actions}</Actions>}
+			{actions && <Actions tabIndex={tabIndex!}>{actions}</Actions>}
 		</Layout.ContentRow>
 	);
 }
@@ -800,9 +832,10 @@ TreeViewItemStack.displayName = 'TreeViewItemStack';
 
 type TreeViewItemActionsProps = {
 	children: React.ReactElement;
+	tabIndex: number;
 };
 
-function Actions({children}: TreeViewItemActionsProps) {
+function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 	const childrenArray = React.Children.toArray(
 		children.type === React.Fragment ? children.props.children : children
 	);
@@ -814,11 +847,6 @@ function Actions({children}: TreeViewItemActionsProps) {
 					return (
 						<Layout.ContentCol key={index}>
 							{React.cloneElement(child, {
-								children: (
-									<div className="c-inner" tabIndex={-2}>
-										{child.props.children}
-									</div>
-								),
 								className: classNames(
 									'component-action quick-action-item',
 									child.props.className
@@ -835,6 +863,17 @@ function Actions({children}: TreeViewItemActionsProps) {
 										child.props.onClick(event);
 									}
 								},
+								onKeyDown: (
+									event: React.KeyboardEvent<HTMLButtonElement>
+								) => {
+									if (
+										event.key === Keys.Enter ||
+										event.key === Keys.Spacebar
+									) {
+										event.stopPropagation();
+									}
+								},
+								tabIndex,
 							})}
 						</Layout.ContentCol>
 					);
@@ -845,17 +884,6 @@ function Actions({children}: TreeViewItemActionsProps) {
 								trigger: React.cloneElement(
 									child.props.trigger,
 									{
-										children: (
-											<div
-												className="c-inner"
-												tabIndex={-2}
-											>
-												{
-													child.props.trigger.props
-														.children
-												}
-											</div>
-										),
 										className: classNames(
 											'component-action quick-action-item',
 											child.props.trigger.props.className
@@ -877,6 +905,17 @@ function Actions({children}: TreeViewItemActionsProps) {
 												);
 											}
 										},
+										onKeyDown: (
+											event: React.KeyboardEvent<HTMLButtonElement>
+										) => {
+											if (
+												event.key === Keys.Enter ||
+												event.key === Keys.Spacebar
+											) {
+												event.stopPropagation();
+											}
+										},
+										tabIndex,
 									}
 								),
 							})}
@@ -948,9 +987,10 @@ function ItemIndicator({labelId, target}: ItemIndicatorProps) {
 
 type DragProps = {
 	labelId?: string;
+	tabIndex: number;
 };
 
-function Drag({labelId}: DragProps) {
+function Drag({labelId, tabIndex}: DragProps) {
 	const {dragAndDrop} = useTreeViewContext();
 	const {
 		currentDrag,
@@ -1001,7 +1041,7 @@ function Drag({labelId}: DragProps) {
 						event.stopPropagation();
 					}
 				}}
-				tabIndex={currentDrag === item.key || !mode ? 0 : -1}
+				tabIndex={currentDrag === item.key || tabIndex === 0 ? 0 : -1}
 			>
 				<Icon aria-hidden symbol="drag" />
 			</Button>

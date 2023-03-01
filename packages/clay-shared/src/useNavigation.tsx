@@ -29,6 +29,8 @@ type Props<T> = {
 	 */
 	containerRef: React.MutableRefObject<T>;
 
+	focusableElements?: Array<string>;
+
 	/**
 	 * Flag to indicate if navigation should loop.
 	 */
@@ -63,6 +65,7 @@ export function useNavigation<T extends HTMLElement | null>({
 	activation = 'manual',
 	active,
 	containerRef,
+	focusableElements = FOCUSABLE_ELEMENTS,
 	loop = false,
 	onNavigate,
 	orientation = 'horizontal',
@@ -127,7 +130,7 @@ export function useNavigation<T extends HTMLElement | null>({
 				keys.includes(event.key) ||
 				(typeahead && !alternativeKeys.includes(event.key))
 			) {
-				const tabs = getFocusableList(containerRef);
+				const tabs = getFocusableList(containerRef, focusableElements);
 
 				let tab: HTMLElement | undefined;
 
@@ -174,7 +177,11 @@ export function useNavigation<T extends HTMLElement | null>({
 					default: {
 						const target = event.target as HTMLElement;
 
-						if (!typeahead || target.tagName === 'INPUT') {
+						if (
+							!typeahead ||
+							target.tagName === 'INPUT' ||
+							event.key === Keys.Tab
+						) {
 							return;
 						}
 
@@ -292,14 +299,15 @@ export function useNavigation<T extends HTMLElement | null>({
 }
 
 export function getFocusableList<T extends HTMLElement | null>(
-	containeRef: React.MutableRefObject<T>
+	containeRef: React.MutableRefObject<T>,
+	focusableElements: Array<string> = FOCUSABLE_ELEMENTS
 ) {
 	if (!containeRef.current) {
 		return [];
 	}
 
 	return Array.from<HTMLElement>(
-		containeRef.current.querySelectorAll(FOCUSABLE_ELEMENTS.join(','))
+		containeRef.current.querySelectorAll(focusableElements.join(','))
 	).filter((element) =>
 		isFocusable({
 			contentEditable: element.contentEditable,

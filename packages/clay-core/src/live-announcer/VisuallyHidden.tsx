@@ -9,13 +9,13 @@ const styles: React.CSSProperties = {
 	border: 0,
 	clip: 'rect(0 0 0 0)',
 	clipPath: 'inset(50%)',
-	height: 1,
+	height: '1px',
 	margin: '0 -1px -1px 0',
 	overflow: 'hidden',
 	padding: 0,
 	position: 'absolute',
 	whiteSpace: 'nowrap',
-	width: 1,
+	width: '1px',
 };
 
 type Props = {

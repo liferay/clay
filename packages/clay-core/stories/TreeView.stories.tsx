@@ -227,7 +227,7 @@ export const Actions = () => (
 		<TreeView.Item
 			actions={
 				<>
-					<Button displayType={null} monospaced>
+					<Button aria-label="Close" displayType={null} monospaced>
 						<Icon symbol="times" />
 					</Button>
 					<DropDownWithItems
@@ -237,7 +237,11 @@ export const Actions = () => (
 							{label: 'Three'},
 						]}
 						trigger={
-							<Button displayType={null} monospaced>
+							<Button
+								aria-label="More"
+								displayType={null}
+								monospaced
+							>
 								<Icon symbol="ellipsis-v" />
 							</Button>
 						}
@@ -258,7 +262,7 @@ export const Actions = () => (
 		<TreeView.Item
 			actions={
 				<>
-					<Button displayType={null} monospaced>
+					<Button aria-label="Close" displayType={null} monospaced>
 						<Icon symbol="times" />
 					</Button>
 					<DropDownWithItems
@@ -268,7 +272,11 @@ export const Actions = () => (
 							{label: 'Six'},
 						]}
 						trigger={
-							<Button displayType={null} monospaced>
+							<Button
+								aria-label="More"
+								displayType={null}
+								monospaced
+							>
 								<Icon symbol="ellipsis-v" />
 							</Button>
 						}
