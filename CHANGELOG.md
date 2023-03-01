@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error when not rendering drag button when Item is just string ([96c5646](https://github.com/liferay/clay/commit/96c5646c646e5a65fe29489e02296b6ece65d110))
+-   **@clayui/core:** fixes bug when not focus on actions ([78dd821](https://github.com/liferay/clay/commit/78dd8214a4914e5293040456649176ca55099e8d))
+-   **@clayui/css:** Buttons increase font-weight of text in btn-monospaced ([0e92f96](https://github.com/liferay/clay/commit/0e92f96cdb5732cc0008e75d107f96d73d416cda))
+-   **@clayui/css:** Links change spacing between text and icon back to 8px ([3309eb9](https://github.com/liferay/clay/commit/3309eb95bff3b31964cdfbd303460b77419b586a))
+-   **@clayui/css:** nav-underline and navigation-bar-light should use primary-l0 for active highlight ([fdeb072](https://github.com/liferay/clay/commit/fdeb07208a7f4cf21ac2916587cb91d5c7d1be2c))
+
+### Features
+
+-   **@clayui/core:** adds implementation to track most recent focus on component ([efa266e](https://github.com/liferay/clay/commit/efa266e612440921782bdd27415de050cb19df58))
+-   **@clayui/css:** Global Functions adds clay-map-merge ([901f288](https://github.com/liferay/clay/commit/901f28895166e201b1d322729630328a4173a879))
+-   **@clayui/css:** Globals adds `$c-root` map for outputting custom properties ([8afe1b6](https://github.com/liferay/clay/commit/8afe1b6dfdec119d258e0721cbae3cf3766e3751))
+-   **@clayui/css:** Globals adds `$clay-root` map for outputting custom properties ([49f05c7](https://github.com/liferay/clay/commit/49f05c725ad24f5fc6470083a1d66dd8e3a23827))
+-   **@clayui/css:** Globals adds $primary-l0 ([d76fb5c](https://github.com/liferay/clay/commit/d76fb5cc6f866056bab9229e2bace3aaee0ee8d1))
+-   **@clayui/css:** Moves c-root to the end of variables file ([ea82657](https://github.com/liferay/clay/commit/ea8265774603ebfd7852c78c92652ac46208d8fe))
+-   **@clayui/drop-down:** add new prop to pass props to DropDown.Search button ([47604f3](https://github.com/liferay/clay/commit/47604f38c99fe294d3e96a420aab0e4699548293))
+
 # [3.88.0](https://github.com/liferay/clay/compare/v3.87.2...v3.88.0) (2023-02-14)
 
 ### Bug Fixes

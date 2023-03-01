@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
+
+### Features
+
+-   **@clayui/drop-down:** add new prop to pass props to DropDown.Search button ([47604f3](https://github.com/liferay/clay/commit/47604f38c99fe294d3e96a420aab0e4699548293))
+
 # [3.88.0](https://github.com/liferay/clay/compare/v3.87.2...v3.88.0) (2023-02-14)
 
 **Note:** Version bump only for package @clayui/drop-down
