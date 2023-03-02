@@ -8,7 +8,7 @@ mainTabURL: 'docs/components/tabs.html'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Classic](#css-classic)
+-   [Basic](#css-basic)
 -   [Modern](#css-modern)
 -   [Variations](#css-variations)
     -   [Buttons](#css-buttons)
@@ -22,7 +22,7 @@ mainTabURL: 'docs/components/tabs.html'
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel">WAI-ARIA</a> accessibility pratices for Tabs when writting your markup.
 </div>
 
-## Classic(#css-classic)
+## Classic(#css-basic)
 
 <div class="sheet-example">
     <ul class="nav nav-tabs" role="tablist">
