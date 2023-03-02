@@ -305,7 +305,7 @@ $cadmin-nav-tabs-font-size: 14px !default; // 14px
 
 // Nav Tabs Link
 
-$cadmin-nav-tabs-border-color: transparent !default;
+$cadmin-nav-tabs-border-color: $cadmin-gray-400 !default;
 $cadmin-nav-tabs-border-width: $cadmin-border-width !default;
 $cadmin-nav-tabs-border-radius: $cadmin-border-radius $cadmin-border-radius 0 0 !default;
 
@@ -316,14 +316,13 @@ $cadmin-nav-tabs-link-padding-y: 4.5px !default; // 4.5px
 $cadmin-nav-tabs-link-hover-border-color: transparent !default;
 
 $cadmin-nav-tabs-link-active-bg: $cadmin-white !default;
-$cadmin-nav-tabs-link-active-border-color: transparent transparent
+$cadmin-nav-tabs-link-active-border-color: $cadmin-gray-400 $cadmin-gray-400
 	$cadmin-body-bg !default;
 $cadmin-nav-tabs-link-active-color: $cadmin-gray-900 !default;
 
 $cadmin-nav-tabs-link-show-color: $cadmin-nav-tabs-link-active-color !default;
-$cadmin-nav-tabs-link-show-bg: transparent !default;
-$cadmin-nav-tabs-link-show-border-color: transparent transparent
-	$cadmin-nav-tabs-border-color transparent !default;
+$cadmin-nav-tabs-link-show-bg: $cadmin-white !default;
+$cadmin-nav-tabs-link-show-border-color: $cadmin-nav-tabs-link-active-border-color !default;
 
 // .nav-tabs .nav-link[aria-expanded="true"]
 
@@ -381,8 +380,13 @@ $cadmin-nav-tabs-link: map-deep-merge(
 $cadmin-nav-tabs: () !default;
 $cadmin-nav-tabs: map-deep-merge(
 	(
-		border-bottom: $cadmin-nav-tabs-border-width solid
-			$cadmin-nav-tabs-border-color,
+		background-color: $cadmin-gray-100,
+		border-color: $cadmin-gray-400,
+		border-style: solid,
+		border-width: 1px 0,
+		padding-left: 24px,
+		padding-right: 24px,
+		padding-top: 7px,
 		font-size: $cadmin-nav-tabs-font-size,
 		nav-item: (
 			margin-bottom: math-sign($cadmin-nav-tabs-border-width),
