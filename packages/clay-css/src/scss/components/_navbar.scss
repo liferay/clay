@@ -575,44 +575,5 @@
 // Navbar Underline
 
 .navbar-underline {
-	.navbar-toggler-link {
-		&:after {
-			background-color: $navbar-underline-active-bg;
-			bottom: math-sign($navbar-padding-y);
-			content: '';
-			display: block;
-			height: $nav-underline-link-active-highlight-height;
-			left: 0;
-			position: absolute;
-			right: 0;
-			width: auto;
-		}
-	}
-}
-
-.navbar-underline.navbar-expand {
-	@each $breakpoint in map-keys($grid-breakpoints) {
-		$next: breakpoint-next($breakpoint, $grid-breakpoints);
-		$infix: breakpoint-infix($next, $grid-breakpoints);
-
-		// .navbar-expand, sm, md, lg, xl
-
-		&#{$infix} {
-			@include media-breakpoint-up($next) {
-				.navbar-nav .nav-link {
-					&.active:after {
-						background-color: $navbar-underline-active-bg;
-						bottom: math-sign($navbar-padding-y);
-						content: '';
-						display: block;
-						height: $nav-underline-link-active-highlight-height;
-						left: 0;
-						position: absolute;
-						right: 0;
-						width: auto;
-					}
-				}
-			}
-		}
-	}
+	@include clay-navbar-variant($navbar-underline);
 }

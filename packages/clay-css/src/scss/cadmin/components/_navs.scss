@@ -196,24 +196,16 @@
 	}
 }
 
-// Nav Underline
+// Nav Variants
 
-@each $cadmin-value in $cadmin-nav-underline-link-highlight-palette {
-	$cadmin-index: index(
-		$cadmin-nav-underline-link-highlight-palette,
-		$cadmin-value
+@each $key, $value in $cadmin-nav-palette {
+	$selector: if(
+		starts-with($key, '.') or starts-with($key, '#'),
+		$key,
+		str-insert($key, '.', 1)
 	);
 
-	.nav-underline .nav-item:nth-of-type(#{$cadmin-index}n + 0) {
-		.nav-link::after {
-			background-color: nth(
-				$cadmin-nav-underline-link-highlight-palette,
-				$cadmin-index
-			);
-		}
+	#{$selector} {
+		@include clay-nav-variant($value);
 	}
-}
-
-.nav-underline {
-	@include clay-nav-variant($cadmin-nav-underline);
 }
