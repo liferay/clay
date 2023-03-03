@@ -17,7 +17,7 @@ const tabsCode = `const Component = () => {
 
 	return (
 		<>
-			<ClayTabs active={active} displayType="basic" onActiveChange={setActive}>
+			<ClayTabs active={active} onActiveChange={setActive}>
 				<ClayTabs.Item
 					innerProps={{
 						'aria-controls': 'tabpanel-1',
@@ -163,7 +163,7 @@ const tabsDropdownCode = `const Component = () => {
 
 	return (
 		<ClayIconSpriteContext.Provider value={spritemap}>
-			<ClayTabs active={active} modern onActiveChange={setActive}>
+			<ClayTabs active={active} onActiveChange={setActive}>
 				<ClayTabs.Item
 					innerProps={{
 						'aria-controls': 'tabpanel-1',

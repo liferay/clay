@@ -25,13 +25,24 @@ import {Tabs, ModernTabs, TabsDropdown} from '$packages/clay-tabs/docs/index';
 
 Use `ClayTabs.Item` for defining a TabPane's trigger. For using this trigger as an `anchor` element, just define `href` property, otherwise, the trigger will be a `button`. Use `ClayTabs.TabPane` for wrapping the content that will be rendered by TabPane as the following example:
 
-## Basic Tabs
+## Tabs
 
-For the basic variant use `displayType="basic"`.
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	The `displayType` attribute has been deprecated after 3.89.0.
+</div>
+
+This is the default tab. The `displayType` attribute was deprecated after 3.89.0. You no longer need to use `displayType="basic"` to output this style.
 
 <Tabs />
 
 ## Modern Tabs
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	The `modern` attribute has been deprecated after 3.89.0. The styles for the `.nav-underline`
+	class have been removed.
+</div>
 
 For the modern variant of Tabs use the `modern` property. If you need to justify the text inside the `ClayTabs.Item`, use the `justified` property.
 
