@@ -33,6 +33,8 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	title?: string | null;
 }
 
+const defaultTile = 'No results found';
+
 const ClayEmptyState = ({
 	children,
 	className,
@@ -40,7 +42,7 @@ const ClayEmptyState = ({
 	imgProps,
 	imgSrc,
 	small,
-	title = 'No results found',
+	title = defaultTile,
 	...otherProps
 }: IProps) => {
 	const hasImg = imgSrc || imgProps;
@@ -69,13 +71,13 @@ const ClayEmptyState = ({
 				</div>
 			)}
 
-			{title && (
-				<div className="c-empty-state-title">
-					<span className="text-truncate-inline">
-						<span className="text-truncate">{title}</span>
+			<div className="c-empty-state-title">
+				<span className="text-truncate-inline">
+					<span className="text-truncate">
+						{title || defaultTile}
 					</span>
-				</div>
-			)}
+				</span>
+			</div>
 
 			<div className="c-empty-state-text">{description}</div>
 
