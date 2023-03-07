@@ -7,33 +7,35 @@
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
 @mixin media-breakpoint-up($name, $breakpoints: null) {
-	$breakpoints: setter(
-		$breakpoints,
-		if(
-			variable-exists(grid-breakpoints),
-			$grid-breakpoints,
+	@if ($name != c-unset) {
+		$breakpoints: setter(
+			$breakpoints,
 			if(
-				variable-exists(cadmin-grid-breakpoints),
-				$cadmin-grid-breakpoints,
-				(
-					xs: 0,
-					sm: 576px,
-					md: 768px,
-					lg: 992px,
-					xl: 1280px,
+				variable-exists(grid-breakpoints),
+				$grid-breakpoints,
+				if(
+					variable-exists(cadmin-grid-breakpoints),
+					$cadmin-grid-breakpoints,
+					(
+						xs: 0,
+						sm: 576px,
+						md: 768px,
+						lg: 992px,
+						xl: 1280px,
+					)
 				)
 			)
-		)
-	);
+		);
 
-	$min: breakpoint-min($name, $breakpoints);
+		$min: breakpoint-min($name, $breakpoints);
 
-	@if $min {
-		@media (min-width: $min) {
+		@if $min {
+			@media (min-width: $min) {
+				@content;
+			}
+		} @else {
 			@content;
 		}
-	} @else {
-		@content;
 	}
 }
 
@@ -42,33 +44,35 @@
 /// @param {Map} $breakpoints[$grid-breakpoints] - A map that defines the breakpoints
 
 @mixin media-breakpoint-down($name, $breakpoints: null) {
-	$breakpoints: setter(
-		$breakpoints,
-		if(
-			variable-exists(grid-breakpoints),
-			$grid-breakpoints,
+	@if ($name != c-unset) {
+		$breakpoints: setter(
+			$breakpoints,
 			if(
-				variable-exists(cadmin-grid-breakpoints),
-				$cadmin-grid-breakpoints,
-				(
-					xs: 0,
-					sm: 576px,
-					md: 768px,
-					lg: 992px,
-					xl: 1280px,
+				variable-exists(grid-breakpoints),
+				$grid-breakpoints,
+				if(
+					variable-exists(cadmin-grid-breakpoints),
+					$cadmin-grid-breakpoints,
+					(
+						xs: 0,
+						sm: 576px,
+						md: 768px,
+						lg: 992px,
+						xl: 1280px,
+					)
 				)
 			)
-		)
-	);
+		);
 
-	$max: breakpoint-max($name, $breakpoints);
+		$max: breakpoint-max($name, $breakpoints);
 
-	@if $max {
-		@media (max-width: $max) {
+		@if $max {
+			@media (max-width: $max) {
+				@content;
+			}
+		} @else {
 			@content;
 		}
-	} @else {
-		@content;
 	}
 }
 
