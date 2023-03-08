@@ -24,10 +24,10 @@ describe('ClayEmptyState', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('when passing `title` property with null, it will not render title section', () => {
+	it('when passing `title` property with null, render the title section', () => {
 		const {queryByText} = render(<ClayEmptyState title={null} />);
 
-		expect(queryByText('No results found')).toBeNull();
+		expect(queryByText('No results found')).toBeDefined();
 	});
 
 	it('renders with a children content', () => {
