@@ -131,8 +131,10 @@ export const useCalendarNavigation = ({
 				}).toDateString()}"]`
 			);
 
-		nextFocusElement!.focus();
-		setLastItemFocused(String(day.date.getDate()));
+		if (nextFocusElement) {
+			nextFocusElement!.focus();
+			setLastItemFocused(String(day.date.getDate()));
+		}
 	}, []);
 
 	const onKeyDown = useCallback(
