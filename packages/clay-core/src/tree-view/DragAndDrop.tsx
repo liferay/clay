@@ -348,7 +348,11 @@ export const DragAndDropProvider = ({
 			{dragAndDrop && (
 				<>
 					{createPortal(
-						<div id={dragDescribedBy} style={{display: 'none'}}>
+						<div
+							aria-hidden="true"
+							id={dragDescribedBy}
+							style={{display: 'none'}}
+						>
 							{messages.dragDescriptionKeyboard}
 						</div>,
 						document.body
@@ -358,6 +362,7 @@ export const DragAndDropProvider = ({
 						<>
 							{createPortal(
 								<div
+									aria-hidden="true"
 									id={dragDropDescribedBy}
 									style={{display: 'none'}}
 								>
@@ -367,6 +372,7 @@ export const DragAndDropProvider = ({
 							)}
 							{createPortal(
 								<div
+									aria-hidden="true"
 									id={dragCancelDescribedBy}
 									style={{display: 'none'}}
 								>
