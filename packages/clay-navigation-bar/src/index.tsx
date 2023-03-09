@@ -77,7 +77,7 @@ function ClayNavigationBar({
 			className={classNames(
 				className,
 				'navbar',
-				'navbar-collapse-absolute',
+				'navbar-collapse-relative',
 				'navbar-expand-md',
 				'navbar-underline',
 				'navigation-bar',
