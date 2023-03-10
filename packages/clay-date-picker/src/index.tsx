@@ -512,7 +512,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 					}
 				}
 			},
-			[dateFormat]
+			[dateFormat, use12Hours, time, years, yearsCheck]
 		);
 
 		/**
