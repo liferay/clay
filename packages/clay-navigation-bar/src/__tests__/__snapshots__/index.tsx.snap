@@ -48,7 +48,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
 exports[`ClayNavigationBar renders 1`] = `
 <div>
   <nav
-    class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
+    class="navbar navbar-collapse-relative navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
   >
     <div
       class="container-fluid container-fluid-max-xl"
@@ -136,7 +136,7 @@ exports[`ClayNavigationBar renders 1`] = `
 exports[`ClayNavigationBar renders a custom item 1`] = `
 <div>
   <nav
-    class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
+    class="navbar navbar-collapse-relative navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
   >
     <div
       class="container-fluid container-fluid-max-xl"
@@ -236,7 +236,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
 exports[`ClayNavigationBar renders when passing more than one active item 1`] = `
 <div>
   <nav
-    class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
+    class="navbar navbar-collapse-relative navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
   >
     <div
       class="container-fluid container-fluid-max-xl"
@@ -324,7 +324,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
 exports[`ClayNavigationBar renders with a single item 1`] = `
 <div>
   <nav
-    class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
+    class="navbar navbar-collapse-relative navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
   >
     <div
       class="container-fluid container-fluid-max-xl"
@@ -384,7 +384,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
 exports[`ClayNavigationBar throws a warning when passing more than one active prop to child 1`] = `
 <div>
   <nav
-    class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
+    class="navbar navbar-collapse-relative navbar-expand-md navbar-underline navigation-bar navigation-bar-secondary"
   >
     <div
       class="container-fluid container-fluid-max-xl"

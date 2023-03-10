@@ -46,11 +46,16 @@
 @mixin clay-menubar-vertical-expand($map) {
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
-		$breakpoint-up: setter(map-get($map, breakpoint-up), md);
-		$breakpoint-down: setter(
-			map-get($map, breakpoint-down),
-			clay-breakpoint-prev($breakpoint-up)
-		);
+		$breakpoint-up: map-get($map, breakpoint-up);
+		$breakpoint-down: setter(map-get($map, breakpoint-down), c-unset);
+
+		@if ($breakpoint-up) and ($breakpoint-up != c-unset) {
+			@warn "`breakpoint-up` is deprecated in the mixin `clay-menubar-vertical-expand`, use the key `media-breakpoint-down: (sm: ())` instead.";
+		}
+
+		@if ($breakpoint-down) and ($breakpoint-down != c-unset) {
+			@warn "`breakpoint-down` is deprecated in the mixin `clay-menubar-vertical-expand`, use the key `media-breakpoint-down: (sm: ())` instead.";
+		}
 
 		// .menubar-vertical-expand-{md}
 
@@ -312,7 +317,13 @@
 			}
 
 			.menubar-collapse {
-				@include clay-css(map-get($map, collapse));
+				$_menubar-collapse: setter(map-get($map, collapse), ());
+				$_menubar-collapse: map-deep-merge(
+					setter(map-get($map, menubar-collapse), ()),
+					$_menubar-collapse
+				);
+
+				@include clay-css($_menubar-collapse);
 
 				@include media-breakpoint-down($breakpoint-down) {
 					@include clay-css($collapse-mobile);
@@ -364,6 +375,46 @@
 						@include clay-css(
 							map-get($map, nav-nested-margins-item-mobile)
 						);
+					}
+				}
+			}
+
+			@if (map-get($map, media-breakpoint-down)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-down))
+				{
+					$media-breakpoint-down: map-deep-get(
+						$map,
+						media-breakpoint-down,
+						$breakpoint
+					);
+
+					@if ($breakpoint) {
+						@include media-breakpoint-down($breakpoint) {
+							@include clay-menubar-vertical-variant(
+								$media-breakpoint-down
+							);
+						}
+					}
+				}
+			}
+
+			@if (map-get($map, media-breakpoint-up)) {
+				@each $breakpoint
+					in map-keys(map-get($map, media-breakpoint-up))
+				{
+					$media-breakpoint-up: map-deep-get(
+						$map,
+						media-breakpoint-up,
+						$breakpoint
+					);
+
+					@if ($breakpoint) {
+						@include media-breakpoint-up($breakpoint) {
+							@include clay-menubar-vertical-variant(
+								$media-breakpoint-up
+							);
+						}
 					}
 				}
 			}
@@ -462,8 +513,16 @@
 
 @mixin clay-menubar-vertical-variant($map) {
 	$enable: setter(map-get($map, enable), true);
-	$breakpoint-up: setter(map-get($map, breakpoint-up), md);
-	$breakpoint-down: clay-breakpoint-prev($breakpoint-up);
+	$breakpoint-up: map-get($map, breakpoint-up);
+	$breakpoint-down: setter(map-get($map, breakpoint-down), c-unset);
+
+	@if ($breakpoint-up) and ($breakpoint-up != c-unset) {
+		@warn "`breakpoint-up` is deprecated in the mixin `clay-menubar-vertical-variant`, use the key `media-breakpoint-down: (sm: ())` instead.";
+	}
+
+	@if ($breakpoint-down) and ($breakpoint-down != c-unset) {
+		@warn "`breakpoint-down` is deprecated in the mixin `clay-menubar-vertical-variant`, use the key `media-breakpoint-down: (sm: ())` instead.";
+	}
 
 	// .menubar-vertical-expand-{md}.menubar-{variant}
 
@@ -855,7 +914,13 @@
 		}
 
 		.menubar-collapse {
-			@include clay-css(map-get($map, collapse));
+			$_menubar-collapse: setter(map-get($map, collapse), ());
+			$_menubar-collapse: map-merge(
+				setter(map-get($map, menubar-collapse), ()),
+				$_menubar-collapse
+			);
+
+			@include clay-css($_menubar-collapse);
 
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-css($collapse-mobile);
@@ -863,9 +928,25 @@
 		}
 
 		.menubar-toggler {
+			$_menubar-toggler: setter(map-get($map, menubar-toggler), ());
+
+			@include clay-css($_menubar-toggler);
+
+			.c-inner {
+				@include clay-css(map-get($_menubar-toggler, c-inner));
+			}
+
+			.lexicon-icon {
+				@include clay-css(map-get($_menubar-toggler, lexicon-icon));
+			}
+
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-button-variant($toggler-mobile);
 			}
+		}
+
+		.nav-nested {
+			@include clay-css(map-get($map, nav-nested));
 		}
 
 		.nav-nested-margins {
@@ -881,10 +962,50 @@
 		}
 
 		.nav-link {
-			@include clay-link($link);
+			$_nav-link: setter(map-get($map, nav-link), ());
+			$_nav-link: map-deep-merge($link, $_nav-link);
+
+			@include clay-link($_nav-link);
 
 			@include media-breakpoint-down($breakpoint-down) {
 				@include clay-link($link-mobile);
+			}
+		}
+
+		@if (map-get($map, media-breakpoint-down)) {
+			@each $breakpoint in map-keys(map-get($map, media-breakpoint-down))
+			{
+				$media-breakpoint-down: map-deep-get(
+					$map,
+					media-breakpoint-down,
+					$breakpoint
+				);
+
+				@if ($breakpoint) {
+					@include media-breakpoint-down($breakpoint) {
+						@include clay-menubar-vertical-variant(
+							$media-breakpoint-down
+						);
+					}
+				}
+			}
+		}
+
+		@if (map-get($map, media-breakpoint-up)) {
+			@each $breakpoint in map-keys(map-get($map, media-breakpoint-up)) {
+				$media-breakpoint-up: map-deep-get(
+					$map,
+					media-breakpoint-up,
+					$breakpoint
+				);
+
+				@if ($breakpoint) {
+					@include media-breakpoint-up($breakpoint) {
+						@include clay-menubar-vertical-variant(
+							$media-breakpoint-up
+						);
+					}
+				}
 			}
 		}
 	}
