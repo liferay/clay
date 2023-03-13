@@ -470,44 +470,50 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			setValue(daysSelectedToString);
 		};
 
-		const updateDate = useCallback((value: string) => {
-			if (!value) {
-				changeMonth(initialMonth);
+		const updateDate = useCallback(
+			(value: string) => {
+				if (!value) {
+					changeMonth(initialMonth);
 
-				setDaysSelected([initialMonth, initialMonth]);
-
-				if (time) {
-					setCurrentTime('--', '--', undefined);
-				}
-			} else {
-				const days = hasDaysSelected({
-					checkRangeYears: yearsCheck,
-					dateFormat,
-					is12Hours: use12Hours,
-					isTime: time,
-					value,
-					years,
-				});
-
-				if (days) {
-					const [startDate, endDate] = days;
-
-					changeMonth(startDate);
-
-					setDaysSelected([startDate, endDate]);
+					setDaysSelected([initialMonth, initialMonth]);
 
 					if (time) {
-						setCurrentTime(
-							startDate.getHours(),
-							startDate.getMinutes(),
-							use12Hours
-								? (formatDate(startDate, 'a') as Input['ampm'])
-								: undefined
-						);
+						setCurrentTime('--', '--', undefined);
+					}
+				} else {
+					const days = hasDaysSelected({
+						checkRangeYears: yearsCheck,
+						dateFormat,
+						is12Hours: use12Hours,
+						isTime: time,
+						value,
+						years,
+					});
+
+					if (days) {
+						const [startDate, endDate] = days;
+
+						changeMonth(startDate);
+
+						setDaysSelected([startDate, endDate]);
+
+						if (time) {
+							setCurrentTime(
+								startDate.getHours(),
+								startDate.getMinutes(),
+								use12Hours
+									? (formatDate(
+											startDate,
+											'a'
+									  ) as Input['ampm'])
+									: undefined
+							);
+						}
 					}
 				}
-			}
-		}, []);
+			},
+			[dateFormat, use12Hours, time, years, yearsCheck]
+		);
 
 		/**
 		 * Control the value of the input propagating with the call
