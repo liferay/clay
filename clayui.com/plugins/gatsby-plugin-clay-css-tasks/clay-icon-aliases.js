@@ -337,7 +337,7 @@ const flagsData = {
 	"ja-jp-jp-u-ca-japanese":       '"ja-jp-jp-u-ca-japanese", "Japanese", "Japan,JP"',
 	"ka-ge":                        '"ka-ge", "Georgian", "Georgia"',
 	"kk-kz":                        '"kk-kz", "Kazakh", "Kazakhstan"',
-	"km-kh":                        '"km-kh", "Khmer", "Cambodia"',
+	"km-kh":                        '"km-kh", "Cambodia"',
 	"kn-in":                        '"kn-in", "Kannada", "India"',
 	"ko":                           '"ko", "Korean"',
 	"ko-kp":                        '"ko-kp", "Korean", "DPRK"',
