@@ -607,6 +607,7 @@ const iconsData = {
 	"exclamation-circle":       '"alert", "attention", "error", "validation"',
 	"exclamation-full":         '"alert", "attention", "error", "validation"',
 	"expand":                   '"fullscreen", "increase"',
+	"field-area":               '"field", "area"',
 	"file-script":              '"code", "document"',
 	"file-template":            '"document", "layout", "page", "structure"',
 	"file-xsl":                 '"document"',
