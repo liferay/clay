@@ -65,9 +65,9 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 		active,
 		children,
 		className,
-		displayType,
+		displayType: _,
 		justified,
-		modern,
+		modern: __,
 		onActiveChange,
 		shouldUseActive = false,
 		tabsId,
@@ -112,18 +112,8 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 			{...otherProps}
 			{...navigationProps}
 			className={classNames(
-				'nav',
+				'nav nav-tabs',
 				{'nav-justified': justified},
-				!displayType
-					? {
-							'nav-tabs': !modern,
-							'nav-underline': modern,
-					  }
-					: {
-							'nav-tabs': displayType === 'basic',
-							'nav-underline': displayType === 'underline',
-					  },
-
 				className
 			)}
 			ref={tabsRef}
