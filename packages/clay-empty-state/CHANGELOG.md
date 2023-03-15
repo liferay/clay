@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
+
+### Features
+
+-   **@clayui/empty-state:** always render the title ([aa887e8](https://github.com/liferay/clay/commit/aa887e89d060665deb037e21ce8ce4b16d18ac69))
+
 # [3.65.0](https://github.com/liferay/clay/compare/v3.64.0...v3.65.0) (2022-07-11)
 
 **Note:** Version bump only for package @clayui/empty-state

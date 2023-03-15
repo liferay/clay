@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
+
+### Bug Fixes
+
+-   **@clayui/navigation-bar:** Mobile nav should push content down instead of overlaying ([0176e40](https://github.com/liferay/clay/commit/0176e40536a6c07eca67ef88651f8e9abcf44677))
+
 # [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
 
 **Note:** Version bump only for package @clayui/navigation-bar

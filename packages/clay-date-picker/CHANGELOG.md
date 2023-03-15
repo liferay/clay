@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
+
+### Bug Fixes
+
+-   **@clayui/date-picker:** Dependency array of UseCallback should include every dependencies of the memoized function ([38f859e](https://github.com/liferay/clay/commit/38f859ed8d65b44c78f7e6208311d5a66fc5810c))
+-   **@clayui/date-picker:** fix focus bug in date picker ([613d041](https://github.com/liferay/clay/commit/613d0412961aa3073b9de4736561efec0435bb84))
+-   **@clayui/date-picker:** updateDate is memoized without dateFormat dependency ([827acff](https://github.com/liferay/clay/commit/827acff5a5c26fe54f8c77be488b2f94162ac83f))
+
 # [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
 
 **Note:** Version bump only for package @clayui/date-picker

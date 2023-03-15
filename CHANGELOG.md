@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
+
+### Bug Fixes
+
+-   **@clayui/css:** Cadmin Pagination active state should have more contrast ([a09539a](https://github.com/liferay/clay/commit/a09539ad61c408fd9abd63790fc0c1308f232537))
+-   **@clayui/css:** Clay and Cadmin Menubar make collapsed nav 100% wide ([ef3d431](https://github.com/liferay/clay/commit/ef3d431c223f4bfef1daf9539369bbb43176b646))
+-   **@clayui/css:** Mixins Breakpoints don't output any styles if the breakpoint is `c-unset` ([a8a02e2](https://github.com/liferay/clay/commit/a8a02e226a19b65fc4750e929fcca7364e8eeaa3))
+-   **@clayui/css:** Mixins Menubar update to use media query pattern ([c6d9c16](https://github.com/liferay/clay/commit/c6d9c168742cf2b4411f919ba4376fbd6a75ffdf))
+-   **@clayui/date-picker:** Dependency array of UseCallback should include every dependencies of the memoized function ([38f859e](https://github.com/liferay/clay/commit/38f859ed8d65b44c78f7e6208311d5a66fc5810c))
+-   **@clayui/date-picker:** fix focus bug in date picker ([613d041](https://github.com/liferay/clay/commit/613d0412961aa3073b9de4736561efec0435bb84))
+-   **@clayui/date-picker:** updateDate is memoized without dateFormat dependency ([827acff](https://github.com/liferay/clay/commit/827acff5a5c26fe54f8c77be488b2f94162ac83f))
+-   **@clayui/navigation-bar:** Mobile nav should push content down instead of overlaying ([0176e40](https://github.com/liferay/clay/commit/0176e40536a6c07eca67ef88651f8e9abcf44677))
+
+### Features
+
+-   **@clayui/css:** add new `angle-double` icons ([04e8bb0](https://github.com/liferay/clay/commit/04e8bb08b7b733cac9e280b240f4109da8163df9))
+-   **@clayui/css:** add new `field-area` icon ([a0382b2](https://github.com/liferay/clay/commit/a0382b2a6984c8bad3347cfad57480c9323bc2b1))
+-   **@clayui/css:** add new `km-KH` icon ([9b2c70e](https://github.com/liferay/clay/commit/9b2c70ed7bb1222e9ed18a0f0bd376f8e5511946))
+-   **@clayui/empty-state:** always render the title ([aa887e8](https://github.com/liferay/clay/commit/aa887e89d060665deb037e21ce8ce4b16d18ac69))
+
 # [3.89.0](https://github.com/liferay/clay/compare/v3.88.0...v3.89.0) (2023-03-01)
 
 ### Bug Fixes
