@@ -23,6 +23,10 @@ export default {
 			control: {type: 'select'},
 			options: [null, 'light', 'dark'],
 		},
+		enableResize: {
+			control: {type: 'select'},
+			options: [true, false],
+		},
 	},
 	component: VerticalBar,
 	title: 'Design System/Components/VerticalBar',
@@ -31,7 +35,11 @@ export default {
 export const Default = (args: any) => {
 	return (
 		<>
-			<VerticalBar activation={args.activation} position="left">
+			<VerticalBar
+				activation={args.activation}
+				position="left"
+				resize={args.enableResize}
+			>
 				<VerticalBar.Bar displayType={args.barDisplayType}>
 					<VerticalBar.Item>
 						<Button aria-label="Tag tab" displayType={null}>
@@ -75,7 +83,11 @@ export const Default = (args: any) => {
 				</VerticalBar.Content>
 			</VerticalBar>
 
-			<VerticalBar activation={args.activation} position="right">
+			<VerticalBar
+				activation={args.activation}
+				position="right"
+				resize={args.enableResize}
+			>
 				<VerticalBar.Content displayType={args.contentDisplayType}>
 					<VerticalBar.Panel tabIndex={0}>
 						<div className="sidebar-header">
