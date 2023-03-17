@@ -20,6 +20,7 @@ export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
 export {VerticalBar} from './vertical-bar';
 export {Picker, Option} from './picker';
+export {FocusTrap} from './focus-trap';
 
 // Internal dependencies not public but exposed to other Clay packages.
 export * as __NOT_PUBLIC_COLLECTION from './collection';
