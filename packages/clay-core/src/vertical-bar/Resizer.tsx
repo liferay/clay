@@ -38,21 +38,25 @@ export function Resizer({nodeRef, ...otherProps}: Props) {
 	};
 
 	const decreasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
-		const width =
-			panelWidth - delta < panelWidthMin
-				? panelWidthMin
-				: startWidth - delta;
+		if (panelWidth >= panelWidthMin) {
+			const width =
+				panelWidth - delta < panelWidthMin
+					? panelWidthMin
+					: startWidth - delta;
 
-		onPanelWidthChange(Math.round(width));
+			onPanelWidthChange(Math.round(width));
+		}
 	};
 
 	const increasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
-		const width =
-			panelWidth + delta > panelWidthMax
-				? panelWidthMax
-				: startWidth + delta;
+		if (panelWidth <= panelWidthMax) {
+			const width =
+				panelWidth + delta > panelWidthMax
+					? panelWidthMax
+					: startWidth + delta;
 
-		onPanelWidthChange(Math.round(width));
+			onPanelWidthChange(Math.round(width));
+		}
 	};
 
 	return (
