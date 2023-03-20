@@ -70,7 +70,7 @@ const paginationWithBasicItemsImportsCode = `import {ClayPaginationBarWithBasicI
 `;
 
 const PaginationBarWithBasicItemsCode = `const Component = () => {
-	const [delta, setDelta] = useState(5);
+	const [delta, setDelta] = useState(4);
 
 	const deltas = [
 		{
