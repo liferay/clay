@@ -20,6 +20,8 @@ type Props = {
 	nodeRef?: React.RefObject<HTMLDivElement>;
 };
 
+const MAIN_MOUSE_BUTTON = 0;
+
 let keyDownCounter = 0;
 
 export function Resizer({nodeRef, ...otherProps}: Props) {
@@ -133,7 +135,7 @@ export function Resizer({nodeRef, ...otherProps}: Props) {
 					);
 				}
 
-				if (event.button === 0) {
+				if (event.button === MAIN_MOUSE_BUTTON) {
 					document.addEventListener('pointermove', onResizerMove);
 
 					document.addEventListener('pointerup', removeResizerEvents);
