@@ -24,8 +24,8 @@ let keyDownCounter = 0;
 
 export function Resizer({nodeRef, ...otherProps}: Props) {
 	const {
-		internalPanelWidth,
 		onPanelWidthChange,
+		panelWidth,
 		panelWidthMax,
 		panelWidthMin,
 		position,
@@ -39,7 +39,7 @@ export function Resizer({nodeRef, ...otherProps}: Props) {
 
 	const decreasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
 		const width =
-			internalPanelWidth - delta < panelWidthMin
+			panelWidth - delta < panelWidthMin
 				? panelWidthMin
 				: startWidth - delta;
 
@@ -48,7 +48,7 @@ export function Resizer({nodeRef, ...otherProps}: Props) {
 
 	const increasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
 		const width =
-			internalPanelWidth + delta > panelWidthMax
+			panelWidth + delta > panelWidthMax
 				? panelWidthMax
 				: startWidth + delta;
 
@@ -137,6 +137,6 @@ export function Resizer({nodeRef, ...otherProps}: Props) {
 			}}
 			role="separator"
 			tabIndex={0}
-		></div>
+		/>
 	);
 }

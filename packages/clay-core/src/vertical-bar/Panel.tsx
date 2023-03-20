@@ -42,14 +42,8 @@ type Props = {
 };
 
 export function Panel({children, keyValue, tabIndex}: Props) {
-	const {
-		activePanel,
-		id,
-		internalPanelWidth,
-		panelWidthMax,
-		panelWidthMin,
-		resize,
-	} = useContext(VerticalBarContext);
+	const {activePanel, id, panelWidth, panelWidthMax, panelWidthMin, resize} =
+		useContext(VerticalBarContext);
 	const {displayType} = useContext(ContentContext);
 
 	const isFirst = useIsFirstRender();
@@ -94,7 +88,7 @@ export function Panel({children, keyValue, tabIndex}: Props) {
 			<div
 				ref={nodeRef}
 				style={{
-					width: internalPanelWidth,
+					width: panelWidth,
 				}}
 			>
 				{children}
@@ -105,7 +99,7 @@ export function Panel({children, keyValue, tabIndex}: Props) {
 						aria-orientation="vertical"
 						aria-valuemax={panelWidthMax}
 						aria-valuemin={panelWidthMin}
-						aria-valuenow={internalPanelWidth}
+						aria-valuenow={panelWidth}
 						className="c-horizontal-resizer"
 						nodeRef={nodeRef}
 					/>

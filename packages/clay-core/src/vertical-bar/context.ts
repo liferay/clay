@@ -12,9 +12,9 @@ type Context = {
 	activation?: 'manual' | 'automatic';
 	activePanel: Key | null;
 	id: string;
-	internalPanelWidth: number;
 	onActivePanel: InternalDispatch<React.Key | null>;
-	onPanelWidthChange: (value: number) => void;
+	onPanelWidthChange: InternalDispatch<number>;
+	panelWidth: number;
 	panelWidthMax: number;
 	panelWidthMin: number;
 	position: string;
