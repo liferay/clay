@@ -12,7 +12,7 @@ import {Position, TARGET_POSITION, getNewItemPath, useDnD} from './DragAndDrop';
 import {useTreeViewContext} from './context';
 import {createImmutableTree} from './useTree';
 
-type Value = {
+export type Value = {
 	[propName: string]: any;
 	indexes: Array<number>;
 	itemRef: React.RefObject<HTMLDivElement>;
@@ -121,7 +121,7 @@ export function ItemContextProvider({children, value}: Props) {
 		preview(getEmptyImage(), {captureDraggingState: true});
 	}, [preview]);
 
-	const [{overTarget}, drop] = useDrop({
+	const [{overTarget}] = useDrop({
 		accept: 'treeViewItem',
 		canDrop(dragItem: unknown) {
 			return !isMovingIntoItself(
@@ -236,7 +236,7 @@ export function ItemContextProvider({children, value}: Props) {
 	});
 
 	if (items && items.length && dragAndDrop) {
-		drag(drop(childRef));
+		drag(childRef);
 	}
 
 	return (

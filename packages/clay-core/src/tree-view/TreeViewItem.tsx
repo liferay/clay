@@ -18,9 +18,8 @@ import React, {
 } from 'react';
 
 import {useFocusWithin} from '../aria';
-import {VisuallyHidden} from '../live-announcer';
 import {removeItemInternalProps} from './Collection';
-import {useDnD} from './DragAndDrop';
+import {ItemIndicator, useDnD} from './DragAndDrop';
 import {Icons, useAPI, useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
@@ -215,10 +214,12 @@ export const TreeViewItem = React.forwardRef<
 				})}
 				role="none"
 			>
-				<ItemIndicator
-					labelId={labelId}
-					target={{dropPosition: 'top', key: item.key}}
-				/>
+				{item.index === 0 && (
+					<ItemIndicator
+						labelId={labelId}
+						target={{dropPosition: 'top', key: item.key}}
+					/>
+				)}
 				<div
 					{...itemStackProps}
 					{...nodeProps}
@@ -550,10 +551,12 @@ export const TreeViewItem = React.forwardRef<
 					</span>
 				</div>
 
-				<ItemIndicator
-					labelId={labelId}
-					target={{dropPosition: 'bottom', key: item.key}}
-				/>
+				{!expandedKeys.has(item.key) && (
+					<ItemIndicator
+						labelId={labelId}
+						target={{dropPosition: 'bottom', key: item.key}}
+					/>
+				)}
 
 				{group &&
 					React.cloneElement(group as React.ReactElement, {
@@ -931,60 +934,6 @@ function Actions({children, tabIndex}: TreeViewItemActionsProps) {
 
 Actions.displayName = 'TreeViewItemActions';
 
-type TargetDrop = {
-	key: React.Key;
-	dropPosition: 'bottom' | 'middle' | 'top';
-};
-
-type ItemIndicatorProps = {
-	labelId: string;
-	target: TargetDrop;
-};
-
-function ItemIndicator({labelId, target}: ItemIndicatorProps) {
-	const {currentTarget, dragDropDescribedBy, messages, mode, position} =
-		useDnD();
-	const indicatorRef = useRef<HTMLDivElement>(null);
-
-	const id = useId();
-
-	useEffect(() => {
-		if (
-			indicatorRef.current &&
-			currentTarget === target.key &&
-			target.dropPosition === position
-		) {
-			indicatorRef.current.focus();
-		}
-	}, [currentTarget, target]);
-
-	if (!mode) {
-		return null;
-	}
-
-	return (
-		<VisuallyHidden
-			aria-describedby={dragDropDescribedBy}
-			aria-hidden={mode !== 'keyboard' ? true : undefined}
-			aria-label={classNames({
-				[messages.dropOn]: target.dropPosition === 'middle',
-				[messages.insertAfter]: target.dropPosition === 'bottom',
-				[messages.insertBefore]: target.dropPosition === 'top',
-			})}
-			aria-labelledby={`${id} ${labelId}`}
-			aria-roledescription={messages.dropIndicator}
-			id={id}
-			ref={indicatorRef}
-			role="button"
-			tabIndex={
-				currentTarget === target.key && target.dropPosition === position
-					? 0
-					: -1
-			}
-		/>
-	);
-}
-
 type DragProps = {
 	labelId?: string;
 	tabIndex: number;
@@ -1048,3 +997,4 @@ function Drag({labelId, tabIndex}: DragProps) {
 		</Layout.ContentCol>
 	);
 }
+ 

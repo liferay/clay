@@ -5,6 +5,7 @@
 
 import {Keys, useId} from '@clayui/shared';
 import {suppressOthers} from 'aria-hidden';
+import classNames from 'classnames';
 import React, {
 	useCallback,
 	useContext,
@@ -12,12 +13,17 @@ import React, {
 	useRef,
 	useState,
 } from 'react';
+import {useDrop} from 'react-dnd';
 import {createPortal} from 'react-dom';
 
 import {LiveAnnouncer} from '../live-announcer';
+import {removeItemInternalProps} from './Collection';
 import {useTreeViewContext} from './context';
+import {useItem} from './useItem';
+import {createImmutableTree} from './useTree';
 
 import type {AnnouncerAPI} from '../live-announcer';
+import type {Value} from './useItem';
 
 export type DragAndDropMessages = {
 	dragDescriptionKeyboard: string;
@@ -33,9 +39,19 @@ export type DragAndDropMessages = {
 	insertBefore: string;
 };
 
+export const TARGET_POSITION = {
+	BOTTOM: 'bottom',
+	MIDDLE: 'middle',
+	TOP: 'top',
+} as const;
+
+type ValueOf<T> = T[keyof T];
+
+export type Position = ValueOf<typeof TARGET_POSITION>;
+
 type ContextProps = {
 	mode: 'keyboard' | 'mouse' | null;
-	position: 'bottom' | 'middle' | 'top' | null;
+	position: Position | null;
 	currentDrag: React.Key | null;
 	dragDescribedBy: string;
 	dragDropDescribedBy: string;
@@ -388,16 +404,6 @@ export const DragAndDropProvider = ({
 	);
 };
 
-export const TARGET_POSITION = {
-	BOTTOM: 'bottom',
-	MIDDLE: 'middle',
-	TOP: 'top',
-} as const;
-
-type ValueOf<T> = T[keyof T];
-
-export type Position = ValueOf<typeof TARGET_POSITION>;
-
 export function getNewItemPath(path: Array<number>, overPosition: Position) {
 	let indexes = [...path];
 
@@ -420,6 +426,155 @@ export function getNewItemPath(path: Array<number>, overPosition: Position) {
 	return indexes;
 }
 
+function isMovingIntoItself(from: Array<number>, path: Array<number>) {
+	const fromClosestPathTree = from.slice(0, path.length);
+
+	return (
+		!fromClosestPathTree.some((loc, index) => loc !== path[index]) &&
+		path.length > from.length
+	);
+}
+
 export const useDnD = () => {
 	return useContext(DnDContext);
 };
+
+type TargetDrop = {
+	key: React.Key;
+	dropPosition: Position;
+};
+
+type ItemIndicatorProps = {
+	labelId: string;
+	target: TargetDrop;
+};
+
+export function ItemIndicator({labelId, target}: ItemIndicatorProps) {
+	const {currentTarget, dragDropDescribedBy, messages, mode, position} =
+		useDnD();
+	const indicatorRef = useRef<HTMLDivElement>(null);
+	const {
+		dragAndDrop,
+		items,
+		nestedKey,
+		onItemHover,
+		onItemMove,
+		reorder,
+	} = useTreeViewContext();
+	const item = useItem();
+
+	const id = useId();
+
+	useEffect(() => {
+		if (
+			indicatorRef.current &&
+			currentTarget === target.key &&
+			target.dropPosition === position
+		) {
+			indicatorRef.current.focus();
+		}
+	}, [currentTarget, target]);
+
+	const [{canDrop, overTarget}, drop] = useDrop({
+		accept: 'treeViewItem',
+		canDrop(dragItem: unknown) {
+			return !isMovingIntoItself(
+				(dragItem as Value).item.indexes,
+				item.indexes
+			);
+		},
+		collect: (monitor) => ({
+			canDrop: monitor.canDrop(),
+			overTarget: monitor.isOver({shallow: true}),
+		}),
+		drop(dragItem: unknown, monitor) {
+			if (
+				monitor.didDrop() ||
+				!monitor.canDrop() ||
+				(dragItem as Value).item.key === item.key
+			) {
+				return;
+			}
+
+			const indexes = getNewItemPath(item.indexes, target.dropPosition);
+
+			if (onItemMove) {
+				const tree = createImmutableTree(items as any, nestedKey!);
+
+				const isMoved = onItemMove(
+					removeItemInternalProps((dragItem as Value).item),
+					tree.nodeByPath(indexes).parent,
+					{
+						next: indexes[indexes.length - 1],
+						previous: (dragItem as Value).item.index,
+					}
+				);
+
+				if (!isMoved) {
+					return;
+				}
+			}
+
+			reorder((dragItem as Value).item.indexes, indexes);
+		},
+		hover(dragItem, monitor) {
+			if (!monitor.canDrop()) {
+				return;
+			}
+
+			if (!monitor.isOver({shallow: true})) {
+				return;
+			}
+
+			if (onItemHover) {
+				const tree = createImmutableTree(items as any, nestedKey!);
+				const indexes = getNewItemPath(item.indexes, target.dropPosition);
+
+				onItemHover(
+					removeItemInternalProps(
+						(dragItem as unknown as Value).item
+					),
+					tree.nodeByPath(indexes).parent,
+					{
+						next: indexes[indexes.length - 1],
+						previous: (dragItem as unknown as Value).item.index,
+					}
+				);
+			}
+		},
+	});
+
+	if (!dragAndDrop) {
+		return null;
+	}
+
+	drop(indicatorRef);
+
+	return (
+		<div
+			aria-describedby={dragDropDescribedBy}
+			aria-hidden={mode !== 'keyboard' ? true : undefined}
+			aria-label={classNames({
+				[messages.dropOn]: target.dropPosition === 'middle',
+				[messages.insertAfter]: target.dropPosition === 'bottom',
+				[messages.insertBefore]: target.dropPosition === 'top',
+			})}
+			aria-labelledby={`${id} ${labelId}`}
+			aria-roledescription={messages.dropIndicator}
+			className={classNames({
+				'treeview-dropping-indicator-bottom': target.dropPosition === 'bottom',
+				'treeview-dropping-indicator-middle': target.dropPosition === 'middle',
+				'treeview-dropping-indicator-over': canDrop && overTarget,
+				'treeview-dropping-indicator-top': target.dropPosition === 'top',
+			})}
+			id={id}
+			ref={indicatorRef}
+			role="button"
+			tabIndex={
+				currentTarget === target.key && target.dropPosition === position
+					? 0
+					: -1
+			}
+		/>
+	);
+}
