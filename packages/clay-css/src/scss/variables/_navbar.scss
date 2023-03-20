@@ -42,6 +42,52 @@ $navbar-toggler-padding-y: 0.25rem !default;
 
 $navbar-underline-active-bg: $component-active-bg !default;
 
+$navbar-underline: () !default;
+$navbar-underline: map-deep-merge(
+	(
+		navbar-toggler-link: (
+			after: (
+				background-color: $navbar-underline-active-bg,
+				bottom: math-sign($navbar-padding-y),
+				content: '',
+				display: block,
+				height: 0.1875rem,
+				left: 0,
+				position: absolute,
+				right: 0,
+				width: auto,
+			),
+		),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-underline: (
+						navbar-nav: (
+							nav-link: (
+								active-class: (
+									after: (
+										background-color:
+											$navbar-underline-active-bg,
+										bottom: math-sign($navbar-padding-y),
+										content: '',
+										display: block,
+										height: 0.1875rem,
+										left: 0,
+										position: absolute,
+										right: 0,
+										width: auto,
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+	),
+	$navbar-underline
+);
+
 // Navbar Dark
 
 $navbar-dark-color: rgba($white, 0.5) !default;

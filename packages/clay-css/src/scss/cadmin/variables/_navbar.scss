@@ -44,6 +44,53 @@ $cadmin-navbar-underline-active-bg: clay-lighten(
 	22.94
 ) !default;
 
+$cadmin-navbar-underline: () !default;
+$cadmin-navbar-underline: map-deep-merge(
+	(
+		navbar-toggler-link: (
+			after: (
+				background-color: $cadmin-navbar-underline-active-bg,
+				bottom: math-sign($cadmin-navbar-padding-y),
+				content: '',
+				display: block,
+				height: 0.25rem,
+				left: 0,
+				position: absolute,
+				right: 0,
+				width: auto,
+			),
+		),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-underline: (
+						navbar-nav: (
+							nav-link: (
+								active-class: (
+									after: (
+										background-color:
+											$cadmin-navbar-underline-active-bg,
+										bottom:
+											math-sign($cadmin-navbar-padding-y),
+										content: '',
+										display: block,
+										height: 0.25rem,
+										left: 0,
+										position: absolute,
+										right: 0,
+										width: auto,
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+	),
+	$cadmin-navbar-underline
+);
+
 // Navbar Dark
 
 $cadmin-navbar-dark-color: $cadmin-white !default;

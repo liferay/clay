@@ -587,47 +587,5 @@
 // Navbar Underline
 
 .navbar-underline {
-	.navbar-toggler-link {
-		&:after {
-			background-color: $cadmin-navbar-underline-active-bg;
-			bottom: math-sign($cadmin-navbar-padding-y);
-			content: '';
-			display: block;
-			height: $cadmin-nav-underline-link-active-highlight-height;
-			left: 0;
-			position: absolute;
-			right: 0;
-			width: auto;
-		}
-	}
-}
-
-.navbar-underline.navbar-expand {
-	@each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
-		$cadmin-next: breakpoint-next(
-			$cadmin-breakpoint,
-			$cadmin-grid-breakpoints
-		);
-		$cadmin-infix: breakpoint-infix($cadmin-next, $cadmin-grid-breakpoints);
-
-		// .navbar-expand, sm, md, lg, xl
-
-		&#{$cadmin-infix} {
-			@include media-breakpoint-up($cadmin-next) {
-				.navbar-nav .nav-link {
-					&.active:after {
-						background-color: $cadmin-navbar-underline-active-bg;
-						bottom: math-sign($cadmin-navbar-padding-y);
-						content: '';
-						display: block;
-						height: $cadmin-nav-underline-link-active-highlight-height;
-						left: 0;
-						position: absolute;
-						right: 0;
-						width: auto;
-					}
-				}
-			}
-		}
-	}
+	@include clay-navbar-variant($cadmin-navbar-underline);
 }

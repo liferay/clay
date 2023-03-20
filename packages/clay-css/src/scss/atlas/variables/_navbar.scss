@@ -1,6 +1,40 @@
 $navbar-font-size: 0.875rem !default; // 14px
 
+// Navbar Underline
+
 $navbar-underline-active-bg: clay-lighten($component-active-bg, 22.94) !default;
+
+$navbar-underline: () !default;
+$navbar-underline: map-deep-merge(
+	(
+		navbar-toggler-link: (
+			after: (
+				background-color: $navbar-underline-active-bg,
+				height: 0.125rem,
+			),
+		),
+		media-breakpoint-up: (
+			md: (
+				navbar-expand-md: (
+					navbar-underline: (
+						navbar-nav: (
+							nav-link: (
+								active-class: (
+									after: (
+										background-color:
+											$navbar-underline-active-bg,
+										height: 0.125rem,
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+		),
+	),
+	$navbar-underline
+);
 
 // Navbar Light
 

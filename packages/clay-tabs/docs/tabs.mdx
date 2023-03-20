@@ -5,12 +5,14 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 packageNpm: '@clayui/tabs'
 ---
 
-import {Tabs, TabsDropdown} from '$packages/clay-tabs/docs/index';
+import {Tabs, ModernTabs, TabsDropdown} from '$packages/clay-tabs/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Introduction](#introduction)
+-   [Basic Tabs](#basic-tabs)
+-   [Modern Tabs](#modern-tabs)
 -   [Dropdown Tabs](#dropdown-tabs)
 -   [TabPanel](#tabpanel)
 
@@ -21,11 +23,30 @@ import {Tabs, TabsDropdown} from '$packages/clay-tabs/docs/index';
 
 `ClayTabs` is a controlled component, we left this component controlled because the user can use Dropdowns or another control to select a `TabPane` for render. Just creating states to manage it.
 
-For the modern variant of Tabs use the `modern` property. If you need to justify the text inside the `ClayTabs.Item`, use the `justified` property.
-
 Use `ClayTabs.Item` for defining a TabPane's trigger. For using this trigger as an `anchor` element, just define `href` property, otherwise, the trigger will be a `button`. Use `ClayTabs.TabPane` for wrapping the content that will be rendered by TabPane as the following example:
 
+## Tabs
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	The `displayType` attribute has been deprecated after 3.89.0.
+</div>
+
+This is the default tab. The `displayType` attribute was deprecated after 3.89.0. You no longer need to use `displayType="basic"` to output this style.
+
 <Tabs />
+
+## Modern Tabs
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	The `modern` attribute has been deprecated after 3.89.0. The styles for the `.nav-underline`
+	class have been removed.
+</div>
+
+For the modern variant of Tabs use the `modern` property. If you need to justify the text inside the `ClayTabs.Item`, use the `justified` property.
+
+<ModernTabs />
 
 ## Dropdown Tabs
 

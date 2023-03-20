@@ -277,10 +277,7 @@ export default function Documentation(props) {
 													</div>
 													<div className="col-12">
 														{tabs.length > 0 && (
-															<ClayTabs
-																className="border-bottom nav-clay"
-																modern
-															>
+															<ClayTabs>
 																{tabs.map(
 																	({
 																		href,

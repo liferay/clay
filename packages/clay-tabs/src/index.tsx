@@ -35,6 +35,7 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 
 	/**
 	 * Determines how tab is displayed.
+	 * @deprecated since v3.89.0 with no replacement.
 	 */
 	displayType?: DisplayType;
 
@@ -51,6 +52,7 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 
 	/**
 	 * Applies a modern style to the tab.
+	 * @deprecated since v3.89.0 with no replacement.
 	 */
 	modern?: boolean;
 
@@ -78,7 +80,7 @@ function ClayTabs({
 	displayType,
 	fade = false,
 	justified,
-	modern = true,
+	modern = false,
 	onActiveChange,
 	...otherProps
 }: IProps) {

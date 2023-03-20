@@ -8,12 +8,15 @@ mainTabURL: 'docs/components/tabs.html'
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Classic](#css-classic)
--   [Modern](#css-modern)
+-   [Default](#css-default)
+-   [Modern (Deprecated)](#css-modern)
 -   [Variations](#css-variations)
     -   [Buttons](#css-buttons)
     -   [Justified](#css-justified)
     -   [Grid](#css-grid)
+-   [Add Nav Underline](#css-add-nav-underline)
+    -   [Classic](#css-add-nav-underline-classic)
+    -   [Styled](#css-add-nav-underline-styled)
 
 </div>
 </div>
@@ -22,7 +25,7 @@ mainTabURL: 'docs/components/tabs.html'
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel">WAI-ARIA</a> accessibility pratices for Tabs when writting your markup.
 </div>
 
-## Classic(#css-classic)
+## Default(#css-default)
 
 <div class="sheet-example">
     <ul class="nav nav-tabs" role="tablist">
@@ -243,7 +246,12 @@ mainTabURL: 'docs/components/tabs.html'
 </div>
 ```
 
-## Modern(#css-modern)
+## Modern (Deprecated)(#css-modern)
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	The styles for the `.nav-underline` class have been removed after 3.89.0. Please see the <a href="#css-add-nav-underline">adding nav-underline section</a> to re-add this in your theme.
+</div>
 
 Use `.nav-underline` instead of `.nav-tabs`.
 
@@ -1189,4 +1197,239 @@ Use bootstrap's grid inside list items in `nav-tabs`.
 		seasonal skinny barista carajillo robust cream.
 	</div>
 </div>
+```
+
+## Add Nav Underline(#css-add-nav-underline)
+
+To re-add `nav-underline` styles in your theme, copy and paste the variable code below in to your theme's `_clay_variables.scss` file.
+
+### Classic(#css-add-nav-underline-classic)
+
+```scss{expanded}
+// Nav Underline Link Highlight
+
+$nav-underline-link-highlight-content: null !default;
+$nav-underline-link-highlight-height: null !default;
+$nav-underline-link-highlight-bottom: 0 !default;
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+$nav-underline-link-highlight-top: null !default;
+
+$nav-underline-link-active-highlight: #528EFF !default;
+$nav-underline-link-active-content: '' !default;
+$nav-underline-link-active-highlight-height: 0.125rem !default; // 2px
+
+$nav-underline-link-disabled-highlight: null !default;
+
+// .nav-underline
+
+$nav-underline-font-size: null !default;
+
+$nav-underline-link-highlight-palette: null !default;
+
+$nav-underline-link-color: #6B6C7E !default;
+$nav-underline-link-padding-x: null !default;
+$nav-underline-link-padding-y: null !default;
+
+$nav-underline-link-hover-color: null !default;
+
+$nav-underline-link-active-color: #272833 !default;
+
+$nav-underline-link-disabled-color: #A7A9BC !default;
+
+// .nav-underline .nav-link[aria-expanded='true']
+
+$nav-underline-link-show: () !default;
+$nav-underline-link-show: map-deep-merge(
+	(
+		color: $nav-underline-link-active-color,
+		after: (
+			content: $nav-underline-link-active-content,
+			height: $nav-underline-link-active-highlight-height,
+		),
+	),
+	$nav-underline-link-show
+);
+
+$nav-underline-link: () !default;
+$nav-underline-link: map-deep-merge(
+	(
+		border-radius: 1px,
+		color: $nav-underline-link-color,
+		font-weight: 600,
+		line-height: 1,
+		padding-bottom: 0.5625rem,
+		padding-left: $nav-underline-link-padding-x,
+		padding-right: $nav-underline-link-padding-x,
+		padding-top: 0.5625rem,
+		transition: box-shadow 0.15s ease-in-out,
+		after: (
+			bottom: $nav-underline-link-highlight-bottom,
+			content: $nav-underline-link-highlight-content,
+			display: block,
+			height: $nav-underline-link-highlight-height,
+			position: absolute,
+			left: $nav-underline-link-highlight-left,
+			right: $nav-underline-link-highlight-right,
+			top: $nav-underline-link-highlight-top,
+			width: auto,
+		),
+		hover: (
+			color: $nav-underline-link-hover-color,
+		),
+		focus: (
+			box-shadow: #{0 0 0 0.125rem #FFF, 0 0 0 0.25rem #80ACFF},
+			color: $nav-underline-link-hover-color,
+			outline: 0,
+		),
+		active-class: (
+			color: $nav-underline-link-active-color,
+			after: (
+				background-color: $nav-underline-link-active-highlight,
+				content: $nav-underline-link-active-content,
+				height: $nav-underline-link-active-highlight-height,
+			),
+		),
+		show: $nav-underline-link-show,
+		disabled: (
+			box-shadow: none,
+			color: $nav-underline-link-disabled-color,
+			after: (
+				background-color: $nav-underline-link-disabled-highlight,
+			),
+		),
+	),
+	$nav-underline-link
+);
+
+// .nav-underline
+
+$nav-underline: () !default;
+$nav-underline: map-deep-merge(
+	(
+		font-size: $nav-underline-font-size,
+		nav-link: $nav-underline-link,
+	),
+	$nav-underline
+);
+
+$nav-palette: () !default;
+$nav-palette: map-deep-merge(
+	(
+		nav-underline: $nav-underline,
+	),
+	$nav-palette
+);
+```
+
+### Styled(#css-add-nav-underline-styled)
+
+```scss{expanded}
+// Nav Underline Link Highlight
+
+$nav-underline-link-highlight-content: null !default;
+$nav-underline-link-highlight-height: null !default;
+$nav-underline-link-highlight-bottom: 0 !default;
+$nav-underline-link-highlight-left: 0.5rem !default;
+$nav-underline-link-highlight-right: 0.5rem !default;
+$nav-underline-link-highlight-top: null !default;
+
+$nav-underline-link-active-highlight: #47A0FF !default;
+$nav-underline-link-active-content: '' !default;
+$nav-underline-link-active-highlight-height: 0.1875rem !default;
+
+$nav-underline-link-disabled-highlight: null !default;
+
+// .nav-underline
+
+$nav-underline-font-size: null !default;
+
+$nav-underline-link-highlight-palette: null !default;
+
+$nav-underline-link-color: null !default;
+$nav-underline-link-padding-x: null !default;
+$nav-underline-link-padding-y: null !default;
+
+$nav-underline-link-hover-color: null !default;
+
+$nav-underline-link-active-color: null !default;
+
+$nav-underline-link-disabled-color: null !default;
+
+// .nav-underline .nav-link[aria-expanded='true']
+
+$nav-underline-link-show: () !default;
+$nav-underline-link-show: map-deep-merge(
+	(
+		color: $nav-underline-link-active-color,
+		after: (
+			content: $nav-underline-link-active-content,
+			height: $nav-underline-link-active-highlight-height,
+		),
+	),
+	$nav-underline-link-show
+);
+
+$nav-underline-link: () !default;
+$nav-underline-link: map-deep-merge(
+	(
+		color: $nav-underline-link-color,
+		padding-bottom: $nav-underline-link-padding-y,
+		padding-left: $nav-underline-link-padding-x,
+		padding-right: $nav-underline-link-padding-x,
+		padding-top: $nav-underline-link-padding-y,
+		after: (
+			bottom: $nav-underline-link-highlight-bottom,
+			content: $nav-underline-link-highlight-content,
+			display: block,
+			height: $nav-underline-link-highlight-height,
+			position: absolute,
+			left: $nav-underline-link-highlight-left,
+			right: $nav-underline-link-highlight-right,
+			top: $nav-underline-link-highlight-top,
+			width: auto,
+		),
+		hover: (
+			color: $nav-underline-link-hover-color,
+		),
+		focus: (
+			color: $nav-underline-link-hover-color,
+		),
+		active-class: (
+			color: $nav-underline-link-active-color,
+			after: (
+				background-color: $nav-underline-link-active-highlight,
+				content: $nav-underline-link-active-content,
+				height: $nav-underline-link-active-highlight-height,
+			),
+		),
+		show: $nav-underline-link-show,
+		disabled: (
+			color: $nav-underline-link-disabled-color,
+			after: (
+				background-color: $nav-underline-link-disabled-highlight,
+			),
+		),
+	),
+	$nav-underline-link
+);
+
+// .nav-underline
+
+$nav-underline: () !default;
+$nav-underline: map-deep-merge(
+	(
+		font-size: $nav-underline-font-size,
+		nav-link: $nav-underline-link,
+	),
+	$nav-underline
+);
+
+$nav-palette: () !default;
+$nav-palette: map-deep-merge(
+	(
+		nav-underline: $nav-underline,
+	),
+	$nav-palette
+);
 ```
