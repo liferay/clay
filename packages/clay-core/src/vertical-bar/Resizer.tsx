@@ -25,13 +25,8 @@ const MAIN_MOUSE_BUTTON = 0;
 let keyDownCounter = 0;
 
 export function Resizer({nodeRef, ...otherProps}: Props) {
-	const {
-		onPanelWidthChange,
-		panelWidth,
-		panelWidthMax,
-		panelWidthMin,
-		position,
-	} = useContext(VerticalBarContext);
+	const {onPanelWidthChange, panelWidthMax, panelWidthMin, position} =
+		useContext(VerticalBarContext);
 
 	const positionLeft = position === 'left';
 
@@ -40,24 +35,22 @@ export function Resizer({nodeRef, ...otherProps}: Props) {
 	};
 
 	const decreasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
-		if (panelWidth >= panelWidthMin) {
-			const width =
-				panelWidth - delta < panelWidthMin
-					? panelWidthMin
-					: startWidth - delta;
+		const width = Math.round(startWidth - delta);
 
-			onPanelWidthChange(Math.round(width));
+		if (width > panelWidthMin - 100 && width < panelWidthMin) {
+			onPanelWidthChange(panelWidthMin);
+		} else if (width > panelWidthMin) {
+			onPanelWidthChange(width);
 		}
 	};
 
 	const increasePanelWidth = (delta = 1, startWidth = getStartWidth()) => {
-		if (panelWidth <= panelWidthMax) {
-			const width =
-				panelWidth + delta > panelWidthMax
-					? panelWidthMax
-					: startWidth + delta;
+		const width = Math.round(startWidth + delta);
 
-			onPanelWidthChange(Math.round(width));
+		if (width > panelWidthMax && width < panelWidthMax + 100) {
+			onPanelWidthChange(panelWidthMax);
+		} else if (width < panelWidthMax) {
+			onPanelWidthChange(width);
 		}
 	};
 
