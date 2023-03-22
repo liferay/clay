@@ -6,17 +6,21 @@ packageStatus: 'Beta'
 storybookPath: 'design-system-components-verticalbar'
 ---
 
-import {VerticalBarExample} from '$packages/clay-core/docs/vertical-bar';
+import {
+	VerticalBarExample,
+	VerticalBarResize,
+} from '$packages/clay-core/docs/vertical-bar';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Example](#example)
 -   [Introduction](#introduction)
--   [Content](#content)
+-   [Content](#vertical-bar-content)
     -   [Static](#static)
     -   [Dynamic](#dynamic)
 -   [Position](#position)
+-   [Resize](#vertical-bar-resize)
 -   [Load lazy panel](#load-lazy-panel)
 
 </div>
@@ -32,7 +36,7 @@ VerticalBar allows rendering a vertical navigation bar positioned fixedly on the
 
 Just like the TreeView component, the VerticalBar is considered a middle-level component instead of a low-level or high-level, it guarantees more flexibility and composition and delivers features that would only be available at high-level with the same synthetic form of an API low-level.
 
-## Content
+## Content(#vertical-bar-content)
 
 As VerticalBar is middle-level, it allows you to build static or dynamic content if you need to consume data from some service.
 
@@ -175,6 +179,24 @@ Positioning the VerticalBar on the right or left side is possible by setting the
 	<VerticalBar.Content></VerticalBar.Content>
 </VerticalBar>
 ```
+
+## Resize(#vertical-bar-resize)
+
+The property `resize` in `<VerticalBar.Bar />` enables the user to increase or decrease the panel width using the mouse or keyboard. The maximum width can be set using the property `panelWidthMax`. It defaults to 500px. The minimum width is set using the property `panelWidthMin` and defaults to 280px. The starting width is set using `panelWidth` with a default value of 320px.
+
+The property `onPanelWidthChange` accepts a callback function that executes when the `panelWidth` is updated. The callback function has the value of the panel width as the parameter. It can be used to make updates to other parts of your application, such as pushing body content over as the user resizes the Vertical Bar Panel.
+
+<div class="clay-site-alert alert alert-warning">
+	When using the property `onPanelWidthChange`, you must also declare
+	`panelWidth`. Setting a fixed value for `panelWidth` will result in
+	`onPanelWidthChange` always returning that value, you must use
+	`React.useState` to get your callback function to return the correct value.
+	Please see the code example below.
+</div>
+
+<div class="overflow-hidden">
+	<VerticalBarResize />
+</div>
 
 ## Load lazy panel
 
