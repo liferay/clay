@@ -40,6 +40,11 @@ type Props = {
 	className?: string;
 
 	/**
+	 * Panel width initial value (uncontrolled).
+	 */
+	defaultPanelWidth?: number;
+
+	/**
 	 * Sets the position of the vertical bar.
 	 */
 	position?: 'left' | 'right';
@@ -58,6 +63,31 @@ type Props = {
 	 * Callback is called when the active state changes (controlled).
 	 */
 	onActiveChange?: InternalDispatch<React.Key | null>;
+
+	/**
+	 * Callback called when panel width changes (controlled).
+	 */
+	onPanelWidthChange?: InternalDispatch<number>;
+
+	/**
+	 * Sets a custom width on the sidebar panel (controlled).
+	 */
+	panelWidth?: number;
+
+	/**
+	 * Sets a maximum width on the sidebar panel.
+	 */
+	panelWidthMax?: number;
+
+	/**
+	 * Sets a minimum width on the sidebar panel.
+	 */
+	panelWidthMin?: number;
+
+	/**
+	 * Flag to enable resizing the sidebar panel.
+	 */
+	resize?: boolean;
 };
 
 export function VerticalBar(props: Props): JSX.Element & {
@@ -74,8 +104,14 @@ export function VerticalBar({
 	children,
 	className,
 	defaultActive = null,
+	defaultPanelWidth = 320,
 	onActiveChange,
+	onPanelWidthChange,
+	panelWidth: externalPanelWidth,
+	panelWidthMax = 500,
+	panelWidthMin = 280,
 	position = 'right',
+	resize = false,
 }: Props) {
 	const [activePanel, setActivePanel] = useInternalState<React.Key | null>({
 		defaultName: 'defaultItems',
@@ -87,6 +123,15 @@ export function VerticalBar({
 	});
 
 	const id = useId();
+
+	const [panelWidth, setPanelWidth] = useInternalState({
+		defaultName: 'defaultPanelWidth',
+		defaultValue: defaultPanelWidth,
+		handleName: 'onPanelWidthChange',
+		name: 'panelWidth',
+		onChange: onPanelWidthChange,
+		value: externalPanelWidth,
+	});
 
 	return (
 		<div
@@ -103,6 +148,12 @@ export function VerticalBar({
 					activePanel,
 					id: `${id}-verticalbar`,
 					onActivePanel: setActivePanel,
+					onPanelWidthChange: setPanelWidth,
+					panelWidth,
+					panelWidthMax,
+					panelWidthMin,
+					position,
+					resize,
 				}}
 			>
 				{children}

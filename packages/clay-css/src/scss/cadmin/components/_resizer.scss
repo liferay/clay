@@ -1,0 +1,11 @@
+.c-horizontal-resizer {
+	@include clay-css($cadmin-c-horizontal-resizer);
+
+	&:hover {
+		@include clay-css(map-get($cadmin-c-horizontal-resizer, hover));
+	}
+
+	&:focus {
+		@include clay-css(map-get($cadmin-c-horizontal-resizer, focus));
+	}
+}

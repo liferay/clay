@@ -8,6 +8,7 @@ import React, {useContext, useEffect, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import {ContentContext} from './Content';
+import {Resizer} from './Resizer';
 import {VerticalBarContext} from './context';
 
 function useIsFirstRender(): boolean {
@@ -41,10 +42,13 @@ type Props = {
 };
 
 export function Panel({children, keyValue, tabIndex}: Props) {
-	const {activePanel, id} = useContext(VerticalBarContext);
+	const {activePanel, id, panelWidth, panelWidthMax, panelWidthMin, resize} =
+		useContext(VerticalBarContext);
 	const {displayType} = useContext(ContentContext);
 
 	const isFirst = useIsFirstRender();
+
+	const nodeRef = useRef<HTMLDivElement | null>(null);
 
 	const previousActivePanelRef = useRef<React.Key | null>(null);
 
@@ -68,6 +72,7 @@ export function Panel({children, keyValue, tabIndex}: Props) {
 			}}
 			id={`${id}-tabpanel-${keyValue}`}
 			in={activePanel === keyValue}
+			nodeRef={nodeRef}
 			role="tabpanel"
 			tabIndex={tabIndex}
 			timeout={
@@ -80,7 +85,26 @@ export function Panel({children, keyValue, tabIndex}: Props) {
 			}
 			unmountOnExit
 		>
-			<div>{children}</div>
+			<div
+				ref={nodeRef}
+				style={{
+					width: panelWidth,
+				}}
+			>
+				{children}
+
+				{resize && (
+					<Resizer
+						aria-controls={`${id}-tabpanel-${keyValue}`}
+						aria-orientation="vertical"
+						aria-valuemax={panelWidthMax}
+						aria-valuemin={panelWidthMin}
+						aria-valuenow={panelWidth}
+						className="c-horizontal-resizer"
+						nodeRef={nodeRef}
+					/>
+				)}
+			</div>
 		</CSSTransition>
 	);
 }

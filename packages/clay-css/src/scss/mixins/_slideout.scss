@@ -44,7 +44,21 @@
 			}
 
 			.sidebar.c-slideout-transition {
-				@include clay-css(map-get($map, sidebar-c-slideout-transition));
+				$_sidebar-c-slideout-transition: setter(
+					map-get($map, sidebar-c-slideout-transition),
+					()
+				);
+
+				@include clay-css($_sidebar-c-slideout-transition);
+
+				.c-horizontal-resizer {
+					@include clay-css(
+						map-get(
+							$_sidebar-c-slideout-transition,
+							c-horizontal-resizer
+						)
+					);
+				}
 			}
 
 			.tbar-stacked {
@@ -59,6 +73,23 @@
 				@include clay-css(
 					map-get($map, tbar-stacked-c-slideout-transition)
 				);
+			}
+
+			.c-horizontal-resizer {
+				$_c-horizontal-resizer: setter(
+					map-get($map, c-horizontal-resizer),
+					()
+				);
+
+				@include clay-css($_c-horizontal-resizer);
+
+				&:hover {
+					@include clay-css(map-get($_c-horizontal-resizer, hover));
+				}
+
+				&:focus {
+					@include clay-css(map-get($_c-horizontal-resizer, focus));
+				}
 			}
 		}
 	}

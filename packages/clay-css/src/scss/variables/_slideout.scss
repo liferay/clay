@@ -56,6 +56,7 @@ $c-slideout: map-deep-merge(
 		sidebar: (
 			display: none,
 			flex-shrink: 0,
+			overflow: visible,
 			position: relative,
 			width: $c-slideout-sidebar-width,
 		),
@@ -64,6 +65,9 @@ $c-slideout: map-deep-merge(
 		),
 		sidebar-c-slideout-transition: (
 			display: block,
+			c-horizontal-resizer: (
+				display: none,
+			),
 		),
 		tbar-stacked: (
 			display: none,
@@ -163,6 +167,10 @@ $c-slideout-end: map-deep-merge(
 		),
 		tbar-stacked-c-slideout-show: (
 			right: 0,
+		),
+		c-horizontal-resizer: (
+			left: 0,
+			right: auto,
 		),
 	),
 	$c-slideout-end

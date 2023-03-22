@@ -13,6 +13,12 @@ type Context = {
 	activePanel: Key | null;
 	id: string;
 	onActivePanel: InternalDispatch<React.Key | null>;
+	onPanelWidthChange: InternalDispatch<number>;
+	panelWidth: number;
+	panelWidthMax: number;
+	panelWidthMin: number;
+	position: string;
+	resize: boolean;
 };
 
 export const VerticalBarContext = createContext<Context>({} as Context);
