@@ -17,7 +17,7 @@ $navigation-bar-base: map-deep-merge(
 	(
 		navbar-nav: (
 			nav-link: (
-				border-radius: 0px,
+				border-radius: clay-enable-rounded($border-radius),
 				outline: 0,
 				focus: (
 					box-shadow: $component-focus-box-shadow,

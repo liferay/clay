@@ -30,7 +30,7 @@ $cadmin-navigation-bar-base: map-deep-merge(
 		border-style: solid,
 		navbar-nav: (
 			nav-link: (
-				border-radius: 0,
+				border-radius: clay-enable-rounded($cadmin-border-radius),
 				border-width: 0,
 				outline: 0,
 				font-size: inherit,
