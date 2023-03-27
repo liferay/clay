@@ -16,6 +16,11 @@ type Props = {
 	 * The elements that will receive the focus within the focus trap.
 	 */
 	children: React.ReactNode;
+
+	/**
+	 * Ref of the element that receives the focus when the focus trap is activated.
+	 */
+	focusElementRef?: React.RefObject<HTMLElement>;
 };
 
 const getFocusableElements = (childrenRef: React.RefObject<HTMLDivElement>) => {
@@ -28,11 +33,17 @@ const getFocusableElements = (childrenRef: React.RefObject<HTMLDivElement>) => {
 	].filter((element) => !element.getAttribute('aria-hidden'));
 };
 
-export function FocusTrap({active = false, children}: Props) {
+export function FocusTrap({active = false, children, focusElementRef}: Props) {
 	const childrenRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (active) {
+			if (focusElementRef?.current) {
+				focusElementRef.current.focus();
+
+				return;
+			}
+
 			const focusableElements = getFocusableElements(childrenRef);
 
 			if (focusableElements) {
