@@ -35,7 +35,7 @@ type Props = {
 	 * Internal property.
 	 * @ignore
 	 */
-	keyValue?: React.Key;
+	keyValue?: React.Key | null;
 
 	/**
 	 * @ignore
@@ -44,10 +44,18 @@ type Props = {
 };
 
 export const Item = React.forwardRef<HTMLLIElement, Props>(function Item(
-	{children, divider = false, expand = false, index, keyValue, style}: Props,
+	{
+		children,
+		divider = false,
+		expand = false,
+		index,
+		keyValue = null,
+		style,
+	}: Props,
 	ref
 ) {
-	const {activePanel, id, onActivePanel} = useContext(VerticalBarContext);
+	const {activePanel, id, onActivePanel, setPanelNext} =
+		useContext(VerticalBarContext);
 
 	return (
 		<li
@@ -77,7 +85,19 @@ export const Item = React.forwardRef<HTMLLIElement, Props>(function Item(
 						return;
 					}
 
-					onActivePanel(keyValue === activePanel ? null : keyValue!);
+					if (keyValue === activePanel) {
+						onActivePanel(null);
+
+						setPanelNext(null);
+					} else if (keyValue && activePanel === null) {
+						onActivePanel(keyValue);
+
+						setPanelNext(null);
+					} else if (keyValue !== activePanel) {
+						onActivePanel(null);
+
+						setPanelNext(keyValue);
+					}
 				},
 				role: 'tab',
 				tabIndex:
