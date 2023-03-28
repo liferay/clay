@@ -840,3 +840,9 @@
 .invisible {
 	visibility: hidden !important;
 }
+
+// Transitions
+
+.c-prefers-reduced-motion {
+	@include clay-css($cadmin-c-prefers-reduced-motion);
+}

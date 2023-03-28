@@ -525,3 +525,14 @@ $text-decorations: map-deep-merge(
 	),
 	$text-decorations
 );
+
+// Transitions
+
+$c-prefers-reduced-motion: () !default;
+$c-prefers-reduced-motion: map-merge(
+	(
+		scroll-behavior: auto,
+		transition: clay-enable-transitions(none),
+	),
+	$c-prefers-reduced-motion
+);

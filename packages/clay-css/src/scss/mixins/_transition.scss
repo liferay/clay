@@ -32,5 +32,11 @@
 		@media (prefers-reduced-motion: reduce) {
 			transition: none;
 		}
+
+		@at-root {
+			.c-prefers-reduced-motion & {
+				transition: none;
+			}
+		}
 	}
 }
