@@ -104,7 +104,7 @@ $cadmin-c-focus-inset-focus: () !default;
 $cadmin-c-focus-inset-focus: map-deep-merge(
 	(
 		box-shadow: $cadmin-component-focus-inset-box-shadow,
-		border-color: $cadmin-primary-l1,
+		border-color: $cadmin-primary-l0,
 		outline: 0,
 	),
 	$cadmin-c-focus-inset-focus

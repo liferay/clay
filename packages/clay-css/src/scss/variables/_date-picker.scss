@@ -35,7 +35,7 @@ $date-picker-nav-btn: map-deep-merge(
 			background-color: $gray-200,
 		),
 		focus: (
-			box-shadow: $input-btn-focus-box-shadow,
+			box-shadow: $component-focus-box-shadow,
 		),
 		disabled: (
 			background-color: transparent,
@@ -211,7 +211,7 @@ $date-picker-date: map-deep-merge(
 			background-color: $gray-200,
 		),
 		focus: (
-			box-shadow: $input-btn-focus-box-shadow,
+			box-shadow: $component-focus-box-shadow,
 			outline: 0,
 		),
 		active: (

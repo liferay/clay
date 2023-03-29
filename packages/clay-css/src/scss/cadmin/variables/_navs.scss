@@ -39,8 +39,7 @@ $cadmin-nav-link-btn-unstyled: map-deep-merge(
 	(
 		width: 100%,
 		focus: (
-			box-shadow: #{0 0 0 2px $cadmin-white,
-			0 0 0 4px $cadmin-primary-l1},
+			box-shadow: $cadmin-component-focus-box-shadow,
 		),
 		disabled: (
 			opacity: 1,

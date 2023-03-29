@@ -80,7 +80,7 @@ $panel-unstyled-header-link: map-deep-merge(
 		border-radius: 1px,
 		focus: (
 			box-shadow: #{0 0 0 0.25rem $body-bg,
-			0 0 0 0.375rem $primary-l1},
+			0 0 0 0.375rem $primary-l0},
 		),
 	),
 	$panel-unstyled-header-link

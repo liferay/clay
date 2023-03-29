@@ -32,7 +32,7 @@ $treeview: map-merge(
 		),
 		treeview-dragging: (
 			background-color: $white,
-			border-color: $primary-l1,
+			border-color: $primary-l0,
 			border-radius: $border-radius-sm,
 			border-style: solid,
 			border-width: 1px,
@@ -76,14 +76,14 @@ $treeview: map-merge(
 			text-align: left,
 			user-select: none,
 			treeview-dropping-bottom: (
-				box-shadow: 0 2px 0 0 $primary-l1,
+				box-shadow: 0 2px 0 0 $primary-l0,
 			),
 			treeview-dropping-middle: (
 				background-color: $primary-l3,
-				border-color: $primary-l1,
+				border-color: $primary-l0,
 			),
 			treeview-dropping-top: (
-				box-shadow: 0 -2px 0 0 $primary-l1,
+				box-shadow: 0 -2px 0 0 $primary-l0,
 			),
 			hover: (
 				text-decoration: none,

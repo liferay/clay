@@ -180,7 +180,7 @@ $cadmin-panel-unstyled-header-link: map-deep-merge(
 		border-radius: 1px,
 		focus: (
 			box-shadow: #{0 0 0 4px $cadmin-body-bg,
-			0 0 0 6px $cadmin-primary-l1},
+			0 0 0 6px $cadmin-primary-l0},
 		),
 	),
 	$cadmin-panel-unstyled-header-link
