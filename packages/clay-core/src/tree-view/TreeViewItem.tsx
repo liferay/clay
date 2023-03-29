@@ -1005,7 +1005,7 @@ function Drag({labelId, tabIndex}: DragProps) {
 	const isFocusVisible = useFocusVisible();
 	const dragButtonId = useId();
 
-	if (!(dragAndDrop && isFocusVisible)) {
+	if (!dragAndDrop) {
 		return null;
 	}
 
@@ -1027,6 +1027,10 @@ function Drag({labelId, tabIndex}: DragProps) {
 				onClick={(event) => {
 					event.stopPropagation();
 
+					if (!isFocusVisible) {
+						return;
+					}
+
 					if (mode === 'keyboard') {
 						onCancel();
 					} else {
@@ -1041,9 +1045,21 @@ function Drag({labelId, tabIndex}: DragProps) {
 						event.stopPropagation();
 					}
 				}}
-				tabIndex={currentDrag === item.key || tabIndex === 0 ? 0 : -1}
+				tabIndex={
+					currentDrag === item.key ||
+					tabIndex === 0 ||
+					!isFocusVisible
+						? 0
+						: -1
+				}
 			>
-				<Icon aria-hidden symbol="drag" />
+				{isFocusVisible ? (
+					<Icon aria-hidden symbol="drag" />
+				) : (
+					<div className="c-inner" tabIndex={-2}>
+						<Icon aria-hidden symbol="drag" />
+					</div>
+				)}
 			</Button>
 		</Layout.ContentCol>
 	);
