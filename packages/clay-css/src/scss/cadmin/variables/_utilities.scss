@@ -541,3 +541,14 @@ $cadmin-text-decorations: map-deep-merge(
 	),
 	$cadmin-text-decorations
 );
+
+// Transitions
+
+$cadmin-c-prefers-reduced-motion: () !default;
+$cadmin-c-prefers-reduced-motion: map-merge(
+	(
+		scroll-behavior: auto,
+		transition: clay-enable-transitions(none),
+	),
+	$cadmin-c-prefers-reduced-motion
+);

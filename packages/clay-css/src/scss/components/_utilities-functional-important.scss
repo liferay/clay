@@ -816,3 +816,9 @@
 .invisible {
 	visibility: hidden !important;
 }
+
+// Transitions
+
+.c-prefers-reduced-motion {
+	@include clay-css($c-prefers-reduced-motion);
+}
