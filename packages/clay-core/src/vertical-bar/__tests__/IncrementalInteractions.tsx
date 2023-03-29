@@ -144,31 +144,36 @@ describe('VerticalBar incremental interactions', () => {
 
 	it('clicking the item switches between the visible panel', () => {
 		const {getByLabelText, getByText} = render(
-			<VerticalBar>
-				<VerticalBar.Content items={items}>
-					{(item) => (
-						<VerticalBar.Panel key={item.title}>
-							{item.title}
-						</VerticalBar.Panel>
-					)}
-				</VerticalBar.Content>
+			<div id="switchBetweenVisiblePanel">
+				<VerticalBar>
+					<VerticalBar.Content items={items}>
+						{(item) => (
+							<VerticalBar.Panel key={item.title}>
+								{item.title}
+							</VerticalBar.Panel>
+						)}
+					</VerticalBar.Content>
 
-				<VerticalBar.Bar items={items}>
-					{(item) => (
-						<VerticalBar.Item
-							divider={item.divider}
-							key={item.title}
-						>
-							<Button aria-label={item.title} displayType={null}>
-								<Icon
-									spritemap={spritemap}
-									symbol={item.icon}
-								/>
-							</Button>
-						</VerticalBar.Item>
-					)}
-				</VerticalBar.Bar>
-			</VerticalBar>
+					<VerticalBar.Bar items={items}>
+						{(item) => (
+							<VerticalBar.Item
+								divider={item.divider}
+								key={item.title}
+							>
+								<Button
+									aria-label={item.title}
+									displayType={null}
+								>
+									<Icon
+										spritemap={spritemap}
+										symbol={item.icon}
+									/>
+								</Button>
+							</VerticalBar.Item>
+						)}
+					</VerticalBar.Bar>
+				</VerticalBar>
+			</div>
 		);
 
 		const messageButton = getByLabelText('Message');
@@ -184,11 +189,15 @@ describe('VerticalBar incremental interactions', () => {
 
 		fireEvent.click(tagButton);
 
-		const tagPanel = getByText('Tag');
+		const container = document.getElementById('switchBetweenVisiblePanel');
 
-		expect(messageButton.classList).not.toContain('active');
-		expect(messagePanel.classList).not.toContain('c-slideout-show');
-		expect(tagButton.classList).toContain('active');
-		expect(tagPanel.classList).toContain('c-slideout-show');
+		container?.addEventListener('transitionend', () => {
+			const tagPanel = getByText('Tag');
+
+			expect(messageButton.classList).not.toContain('active');
+			expect(messagePanel.classList).not.toContain('c-slideout-show');
+			expect(tagButton.classList).toContain('active');
+			expect(tagPanel.classList).toContain('c-slideout-show');
+		});
 	});
 });
