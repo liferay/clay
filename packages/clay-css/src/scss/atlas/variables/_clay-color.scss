@@ -45,7 +45,7 @@ $clay-color-pointer: () !default;
 $clay-color-pointer: map-deep-merge(
 	(
 		focus: (
-			box-shadow: 0 0 0 0.125rem $primary-l1,
+			box-shadow: 0 0 0 0.125rem $primary-l0,
 		),
 	),
 	$clay-color-pointer

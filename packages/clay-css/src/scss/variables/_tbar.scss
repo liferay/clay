@@ -62,11 +62,11 @@ $tbar-stacked: map-deep-merge(
 			position: relative,
 			width: 2.5rem,
 			focus: (
-				box-shadow: #{inset 0 0 0 0.125rem $primary-l1,
+				box-shadow: #{inset 0 0 0 0.125rem $primary-l0,
 				inset 0 0 0 0.25rem $white},
 			),
 			active-focus: (
-				box-shadow: #{inset 0 0 0 0.125rem $primary-l1,
+				box-shadow: #{inset 0 0 0 0.125rem $primary-l0,
 				inset 0 0 0 0.25rem $white},
 			),
 		),

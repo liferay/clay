@@ -3,7 +3,7 @@ $clay-time-btn: map-deep-merge(
 	(
 		color: $secondary,
 		focus: (
-			box-shadow: 0 0 0 1px #80acff,
+			box-shadow: 0 0 0 1px $primary-l0,
 		),
 	),
 	$clay-time-btn

@@ -32,7 +32,7 @@ $cadmin-treeview: map-merge(
 		),
 		treeview-dragging: (
 			background-color: $cadmin-white,
-			border-color: $cadmin-primary-l1,
+			border-color: $cadmin-primary-l0,
 			border-radius: $cadmin-border-radius-sm,
 			border-style: solid,
 			border-width: 1px,
@@ -76,14 +76,14 @@ $cadmin-treeview: map-merge(
 			text-align: left,
 			user-select: none,
 			treeview-dropping-bottom: (
-				box-shadow: 0 2px 0 0 $cadmin-primary-l1,
+				box-shadow: 0 2px 0 0 $cadmin-primary-l0,
 			),
 			treeview-dropping-middle: (
 				background-color: $cadmin-primary-l3,
-				border-color: $cadmin-primary-l1,
+				border-color: $cadmin-primary-l0,
 			),
 			treeview-dropping-top: (
-				box-shadow: 0 -2px 0 0 $cadmin-primary-l1,
+				box-shadow: 0 -2px 0 0 $cadmin-primary-l0,
 			),
 			hover: (
 				text-decoration: none,

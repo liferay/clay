@@ -94,8 +94,7 @@ $card-interactive: map-deep-merge(
 		),
 		focus: (
 			border-color: null,
-			box-shadow: #{0 0 0 2px #fff,
-			0 0 0 4px #719aff},
+			box-shadow: $component-focus-box-shadow,
 		),
 		active: (
 			background-color: #f1f2f5,
@@ -111,11 +110,11 @@ $card-interactive-secondary: map-deep-merge(
 	(
 		hover: (
 			border-color: transparent,
-			box-shadow: 0 0 0 2px #719aff,
+			box-shadow: 0 0 0 2px $primary-l0,
 		),
 		focus: (
 			border-color: transparent,
-			box-shadow: 0 0 0 2px #719aff,
+			box-shadow: 0 0 0 2px $primary-l0,
 		),
 	),
 	$card-interactive-secondary
