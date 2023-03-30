@@ -892,6 +892,19 @@ $btn-palette: map-deep-merge(
 		light: $btn-light,
 		dark: $btn-dark,
 		link: $btn-link,
+		btn-beta: (
+			background-color: $gray-100,
+			color: $info,
+			text-transform: uppercase,
+			hover: (
+				background-color: $gray-200,
+				color: $info,
+			),
+			focus: (
+				background-color: $gray-200,
+				color: $info,
+			),
+		),
 	),
 	$btn-palette
 );

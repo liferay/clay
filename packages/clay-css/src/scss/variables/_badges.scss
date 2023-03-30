@@ -494,6 +494,11 @@ $badge-palette: map-deep-merge(
 		danger: $badge-danger,
 		light: $badge-light,
 		dark: $badge-dark,
+		badge-beta: (
+			background-color: $gray-100,
+			color: $info,
+			text-transform: uppercase,
+		),
 	),
 	$badge-palette
 );
