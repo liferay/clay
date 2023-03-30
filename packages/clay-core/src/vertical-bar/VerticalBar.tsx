@@ -124,6 +124,8 @@ export function VerticalBar({
 
 	const id = useId();
 
+	const [panelNext, setPanelNext] = React.useState<React.Key | null>(null);
+
 	const [panelWidth, setPanelWidth] = useInternalState({
 		defaultName: 'defaultPanelWidth',
 		defaultValue: defaultPanelWidth,
@@ -149,11 +151,13 @@ export function VerticalBar({
 					id: `${id}-verticalbar`,
 					onActivePanel: setActivePanel,
 					onPanelWidthChange: setPanelWidth,
+					panelNext,
 					panelWidth,
 					panelWidthMax,
 					panelWidthMin,
 					position,
 					resize,
+					setPanelNext,
 				}}
 			>
 				{children}
