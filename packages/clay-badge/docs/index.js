@@ -75,3 +75,44 @@ export const Badge = () => {
 
 	return <Editor code={codeSnippets} scope={scope} />;
 };
+
+//
+
+const badgeBetaImportsCode = `import ClayBadge from '@clayui/badge';`;
+
+const BadgeBetaCode = `const Component = () => {
+    return (
+        <>
+            <ClayBadge displayType="beta" label="Beta" />
+        </>
+    );
+}
+
+render(<Component />);`;
+
+const badgeBetaJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const BadgeBetaJSPCode = `<clay:badge
+    displayType="beta"
+    label="Beta" 
+/>`;
+
+export const BadgeBeta = () => {
+	const scope = {ClayBadge};
+
+	const codeSnippets = [
+		{
+			imports: badgeBetaImportsCode,
+			name: 'React',
+			value: BadgeBetaCode,
+		},
+		{
+			disabled: true,
+			imports: badgeBetaJSPImportsCode,
+			name: 'JSP',
+			value: BadgeBetaJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
+};

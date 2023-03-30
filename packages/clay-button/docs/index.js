@@ -132,4 +132,32 @@ const ButtonIcon = () => {
 	return <Editor code={code} imports={buttonIconImportsCode} scope={scope} />;
 };
 
-export {ButtonDisplayTypes, ButtonGroup, ButtonIcon};
+const buttonBetaImportsCode = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import ClayIcon from '@clayui/icon;`;
+
+const ButtonBetaCode = `const Component = () => {
+	return (
+		<>
+			<ClayButton className="btn-beta btn-xs rounded-circle" displayType={null}>
+				<span className="inline-item">
+					{'Beta'}
+				</span>
+
+				<span className="inline-item inline-item-after">
+					<ClayIcon spritemap={spritemap} symbol="info-panel-open" />
+				</span>
+			</ClayButton>
+		</>
+	);
+}
+
+render(<Component />);`;
+
+const ButtonBeta = () => {
+	const scope = {ClayButton, ClayButtonWithIcon, ClayIcon};
+	const code = ButtonBetaCode;
+
+	return <Editor code={code} imports={buttonBetaImportsCode} scope={scope} />;
+};
+
+export {ButtonDisplayTypes, ButtonGroup, ButtonIcon, ButtonBeta};
