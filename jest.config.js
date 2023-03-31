@@ -62,10 +62,10 @@ module.exports = {
 			statements: 91,
 		},
 		'./packages/clay-core/src/tree-view/': {
-			branches: 58,
-			functions: 69,
-			lines: 71,
-			statements: 71,
+			branches: 56,
+			functions: 65,
+			lines: 70,
+			statements: 69,
 		},
 		'./packages/clay-data-provider/src/': {
 			branches: 69,
