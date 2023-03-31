@@ -115,6 +115,45 @@
 		}
 	}
 
+	&.error {
+		@include clay-css($cadmin-multi-step-item-error);
+
+		.multi-step-title {
+			@include clay-css(
+				map-get($cadmin-multi-step-item-error, multi-step-title)
+			);
+		}
+
+		.multi-step-icon {
+			$_multi-step-icon: setter(
+				map-get($cadmin-multi-step-item-error, multi-step-icon)
+			);
+
+			@include clay-css($_multi-step-icon);
+
+			&[data-multi-step-icon] {
+				$_data-multi-step-icon: setter(
+					map-get($_multi-step-icon, data-multi-step-icon),
+					()
+				);
+
+				&::before {
+					@include clay-css(map-get($_data-multi-step-icon, before));
+				}
+			}
+
+			.lexicon-icon {
+				@include clay-css(map-get($_multi-step-icon, lexicon-icon));
+			}
+		}
+
+		.multi-step-divider {
+			@include clay-css(
+				map-get($cadmin-multi-step-item-error, multi-step-divider)
+			);
+		}
+	}
+
 	&.disabled {
 		.multi-step-title {
 			color: $cadmin-multi-step-title-disabled-color;

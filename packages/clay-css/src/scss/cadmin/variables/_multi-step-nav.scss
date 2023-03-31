@@ -52,6 +52,29 @@ $cadmin-multi-step-item-margin-bottom: 10px !default;
 $cadmin-multi-step-item-width: 75px !default;
 $cadmin-multi-step-item-fixed-width: 150px !default;
 
+// data-multi-step-icon::before See https://issues.liferay.com/browse/LPS-147457.
+
+$cadmin-multi-step-item-error: () !default;
+$cadmin-multi-step-item-error: map-deep-merge(
+	(
+		multi-step-icon: (
+			background-color: $cadmin-danger,
+			background-image: clay-icon(times, $cadmin-white),
+			color: $cadmin-white,
+			text-indent: -100px,
+			data-multi-step-icon: (
+				before: (
+					content: none,
+				),
+			),
+			lexicon-icon: (
+				display: none,
+			),
+		),
+	),
+	$cadmin-multi-step-item-error
+);
+
 $cadmin-multi-step-icon-complete-color: $cadmin-white !default;
 $cadmin-multi-step-icon-complete-bg: $cadmin-gray-600 !default;
 $cadmin-multi-step-icon-complete-bg-image: clay-icon(

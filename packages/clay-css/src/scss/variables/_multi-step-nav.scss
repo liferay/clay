@@ -58,6 +58,29 @@ $multi-step-item-margin-bottom: 10px !default;
 $multi-step-item-width: 75px !default;
 $multi-step-item-fixed-width: 150px !default;
 
+// data-multi-step-icon::before See https://issues.liferay.com/browse/LPS-147457.
+
+$multi-step-item-error: () !default;
+$multi-step-item-error: map-deep-merge(
+	(
+		multi-step-icon: (
+			background-color: $danger,
+			background-image: clay-icon(times, $white),
+			color: $white,
+			text-indent: -100px,
+			data-multi-step-icon: (
+				before: (
+					content: none,
+				),
+			),
+			lexicon-icon: (
+				display: none,
+			),
+		),
+	),
+	$multi-step-item-error
+);
+
 $multi-step-icon-complete-color: $white !default;
 $multi-step-icon-complete-bg: $gray-600 !default;
 $multi-step-icon-complete-bg-image: clay-icon(
