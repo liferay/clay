@@ -18,7 +18,6 @@ export const Default = (args: any) => (
 		ellipsisProps={{'aria-label': 'More', title: 'More'}}
 		items={[
 			{
-				active: true,
 				href: '#1',
 				label: 'Home',
 			},
@@ -59,6 +58,7 @@ export const Default = (args: any) => (
 				label: 'Ten',
 			},
 			{
+				active: true,
 				href: '#11',
 				label: 'Eleven',
 			},
@@ -79,7 +79,6 @@ export const Buttons = (args: any) => {
 			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			items={[
 				{
-					active: true,
 					label: 'Home',
 					onClick: onItemClick,
 				},
@@ -120,6 +119,7 @@ export const Buttons = (args: any) => {
 					onClick: onItemClick,
 				},
 				{
+					active: true,
 					label: 'Eleven',
 					onClick: onItemClick,
 				},
@@ -133,7 +133,7 @@ Buttons.args = {
 };
 
 export const ActiveState = () => {
-	const [active, setActive] = useState<number>(0);
+	const [active, setActive] = useState<number>(4);
 
 	const items = [
 		{

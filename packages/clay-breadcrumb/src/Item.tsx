@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
 import ClayLink from '@clayui/link';
 import classNames from 'classnames';
 import React from 'react';
@@ -37,34 +36,20 @@ const Item = ({active, href, label, onClick, ...otherProps}: IItem) => (
 		})}
 		{...otherProps}
 	>
-		{!active && href ? (
-			<ClayLink
-				className="breadcrumb-link"
-				data-testid={`testId${label}`}
-				href={href}
-				role="button"
-			>
-				<span className="breadcrumb-text-truncate">{label}</span>
-			</ClayLink>
-		) : !active && onClick ? (
-			<ClayButton
-				className="breadcrumb-link"
-				data-testid={`testId${label}`}
-				displayType="unstyled"
-				onClick={onClick}
-				title={label}
-			>
-				<span className="breadcrumb-text-truncate">{label}</span>
-			</ClayButton>
-		) : (
-			<span
-				className="breadcrumb-text-truncate"
-				data-testid={`testId${label}`}
-				title={label}
-			>
-				{label}
-			</span>
-		)}
+		<ClayLink
+			aria-current={active ? 'page' : undefined}
+			className="breadcrumb-link"
+			data-testid={`testId${label}`}
+			href={href}
+			onClick={(event) => {
+				if (onClick) {
+					event.preventDefault();
+					onClick(event);
+				}
+			}}
+		>
+			{label}
+		</ClayLink>
 	</li>
 );
 

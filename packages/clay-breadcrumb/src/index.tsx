@@ -44,6 +44,7 @@ const findActiveItems = (items: TItems) => {
 };
 
 const ClayBreadcrumb = ({
+	'aria-label': ariaLabel = 'Breadcrumb',
 	className,
 	ellipsisBuffer = 1,
 	ellipsisProps = {},
@@ -72,21 +73,24 @@ const ClayBreadcrumb = ({
 		: items;
 
 	return (
-		<ol {...otherProps} className={classNames('breadcrumb', className)}>
-			{breadCrumbItems.map((item: TItem | React.ReactNode, i: number) =>
-				React.isValidElement(item) ? (
-					React.cloneElement(item, {key: `ellipsis${i}`})
-				) : (
-					<Item
-						active={(item as TItem).active}
-						href={(item as TItem).href}
-						key={`breadcrumbItem${i}`}
-						label={(item as TItem).label}
-						onClick={(item as TItem).onClick}
-					/>
-				)
-			)}
-		</ol>
+		<nav aria-label={ariaLabel}>
+			<ol {...otherProps} className={classNames('breadcrumb', className)}>
+				{breadCrumbItems.map(
+					(item: TItem | React.ReactNode, i: number) =>
+						React.isValidElement(item) ? (
+							React.cloneElement(item, {key: `ellipsis${i}`})
+						) : (
+							<Item
+								active={(item as TItem).active}
+								href={(item as TItem).href}
+								key={`breadcrumbItem${i}`}
+								label={(item as TItem).label}
+								onClick={(item as TItem).onClick}
+							/>
+						)
+				)}
+			</ol>
+		</nav>
 	);
 };
 
