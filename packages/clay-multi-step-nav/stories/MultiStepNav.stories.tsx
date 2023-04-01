@@ -131,3 +131,27 @@ export const MultiStepNavWithBasicItems = (args: any) => {
 MultiStepNavWithBasicItems.args = {
 	maxStepsShown: 7,
 };
+
+export const Error = () => {
+	const steps = [
+		{
+			title: 'Basic Information',
+		},
+		{
+			title: 'Segment',
+		},
+		{
+			error: true,
+			title: 'Goals',
+		},
+		{
+			title: 'Review and Save',
+		},
+	];
+
+	return (
+		<div className="sheet">
+			<ClayMultiStepNavWithBasicItems defaultActive={2} steps={steps} />
+		</div>
+	);
+};

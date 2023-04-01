@@ -23,6 +23,11 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	complete?: boolean;
 
 	/**
+	 * Flag to indicate that the step has an error.
+	 */
+	error?: boolean;
+
+	/**
 	 * Flag to indicate if progress line should expand out from step
 	 */
 	expand?: boolean;
@@ -33,6 +38,7 @@ const ClayMultiStepNavItem = ({
 	children,
 	className,
 	complete,
+	error,
 	expand,
 	...otherProps
 }: IProps) => {
@@ -42,6 +48,7 @@ const ClayMultiStepNavItem = ({
 				active,
 				className,
 				complete,
+				error,
 				['multi-step-item-expand']: expand,
 			})}
 			{...otherProps}

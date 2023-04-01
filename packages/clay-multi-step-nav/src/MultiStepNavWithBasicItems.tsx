@@ -19,6 +19,11 @@ interface ISteps {
 	 * Value that is displayed above the step icon.
 	 */
 	title?: string;
+
+	/**
+	 * Flag to indicate that the step has an error.
+	 */
+	error?: boolean;
 }
 
 export interface IProps extends React.ComponentProps<typeof ClayMultiStepNav> {
@@ -131,13 +136,14 @@ export const ClayMultiStepNavWithBasicItems = ({
 
 	return (
 		<ClayMultiStepNav {...otherProps}>
-			{showSteps.map(({subTitle, title}, i: number) => {
-				const complete = internalActive > i;
+			{showSteps.map(({error, subTitle, title}, i: number) => {
+				const complete = !error ? internalActive > i : false;
 
 				return (
 					<ClayMultiStepNav.Item
 						active={internalActive === i}
 						complete={complete}
+						error={error}
 						expand={i + 1 !== steps.length}
 						key={i}
 					>
@@ -145,7 +151,7 @@ export const ClayMultiStepNavWithBasicItems = ({
 						<ClayMultiStepNav.Divider />
 						<ClayMultiStepNav.Indicator
 							complete={complete}
-							label={1 + i}
+							label={error ? undefined : 1 + i}
 							onClick={() => setActive(i)}
 							spritemap={spritemap}
 							subTitle={subTitle}
