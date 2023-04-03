@@ -19,18 +19,19 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 
 	/**
 	 * Flag to indicate if `complete` classname should be applied
+	 * @deprecated since v3.91.0 - use `state` instead.
 	 */
 	complete?: boolean;
-
-	/**
-	 * Flag to indicate that the step has an error.
-	 */
-	error?: boolean;
 
 	/**
 	 * Flag to indicate if progress line should expand out from step
 	 */
 	expand?: boolean;
+
+	/**
+	 * Defines the status of the current step.
+	 */
+	state?: 'error' | 'complete';
 }
 
 const ClayMultiStepNavItem = ({
@@ -38,8 +39,8 @@ const ClayMultiStepNavItem = ({
 	children,
 	className,
 	complete,
-	error,
 	expand,
+	state,
 	...otherProps
 }: IProps) => {
 	return (
@@ -47,8 +48,8 @@ const ClayMultiStepNavItem = ({
 			className={classNames('multi-step-item', {
 				active,
 				className,
-				complete,
-				error,
+				complete: complete ?? state === 'complete',
+				error: state === 'error',
 				['multi-step-item-expand']: expand,
 			})}
 			{...otherProps}

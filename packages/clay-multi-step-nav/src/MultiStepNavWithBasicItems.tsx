@@ -19,11 +19,6 @@ interface ISteps {
 	 * Value that is displayed above the step icon.
 	 */
 	title?: string;
-
-	/**
-	 * Flag to indicate that the step has an error.
-	 */
-	error?: boolean;
 }
 
 export interface IProps extends React.ComponentProps<typeof ClayMultiStepNav> {
@@ -66,6 +61,11 @@ export interface IProps extends React.ComponentProps<typeof ClayMultiStepNav> {
 	spritemap?: string;
 
 	/**
+	 * Defines the status of the current step.
+	 */
+	state?: 'error' | 'complete';
+
+	/**
 	 * List of steps to display
 	 */
 	steps: Array<ISteps>;
@@ -94,6 +94,7 @@ export const ClayMultiStepNavWithBasicItems = ({
 	onActiveChange,
 	onIndexChange,
 	spritemap,
+	state = 'complete',
 	steps,
 	...otherProps
 }: IProps) => {
@@ -136,22 +137,24 @@ export const ClayMultiStepNavWithBasicItems = ({
 
 	return (
 		<ClayMultiStepNav {...otherProps}>
-			{showSteps.map(({error, subTitle, title}, i: number) => {
+			{showSteps.map(({subTitle, title}, i: number) => {
+				const error = state === 'error' && internalActive === i;
 				const complete = !error ? internalActive > i : false;
 
 				return (
 					<ClayMultiStepNav.Item
 						active={internalActive === i}
-						complete={complete}
-						error={error}
 						expand={i + 1 !== steps.length}
 						key={i}
+						state={
+							error ? 'error' : complete ? 'complete' : undefined
+						}
 					>
 						<ClayMultiStepNav.Title>{title}</ClayMultiStepNav.Title>
 						<ClayMultiStepNav.Divider />
 						<ClayMultiStepNav.Indicator
 							complete={complete}
-							label={error ? undefined : 1 + i}
+							label={!error ? 1 + i : undefined}
 							onClick={() => setActive(i)}
 							spritemap={spritemap}
 							subTitle={subTitle}

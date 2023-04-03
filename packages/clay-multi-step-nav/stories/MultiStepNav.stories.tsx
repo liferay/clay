@@ -17,30 +17,18 @@ export const Default = () => {
 
 	const steps = [
 		{
-			active: value === 0,
-			complete: value > 0,
-			onClick: () => setValue(0),
 			subTitle: 'SubOne',
 			title: 'One',
 		},
 		{
-			active: value === 1,
-			complete: value > 1,
-			onClick: () => setValue(1),
 			subTitle: 'SubTwo',
 			title: 'Two',
 		},
 		{
-			active: value === 2,
-			complete: value > 2,
-			onClick: () => setValue(2),
 			subTitle: 'SubThree',
 			title: 'Three',
 		},
 		{
-			active: value === 3,
-			complete: value > 3,
-			onClick: () => setValue(3),
 			subTitle: 'SubFour',
 			title: 'Four',
 		},
@@ -49,16 +37,15 @@ export const Default = () => {
 	return (
 		<div className="sheet">
 			<ClayMultiStepNav>
-				{steps.map(
-					(
-						{active, complete, onClick, subTitle, title},
-						i: number
-					) => (
+				{steps.map(({subTitle, title}, i: number) => {
+					const complete = value > i;
+
+					return (
 						<ClayMultiStepNav.Item
-							active={active}
-							complete={complete}
+							active={value === i}
 							expand={i + 1 !== steps.length}
 							key={i}
+							state={complete ? 'complete' : undefined}
 						>
 							<ClayMultiStepNav.Title>
 								{title}
@@ -67,12 +54,12 @@ export const Default = () => {
 							<ClayMultiStepNav.Indicator
 								complete={complete}
 								label={1 + i}
-								onClick={onClick}
+								onClick={() => setValue(i)}
 								subTitle={subTitle}
 							/>
 						</ClayMultiStepNav.Item>
-					)
-				)}
+					);
+				})}
 			</ClayMultiStepNav>
 		</div>
 	);
@@ -141,7 +128,6 @@ export const Error = () => {
 			title: 'Segment',
 		},
 		{
-			error: true,
 			title: 'Goals',
 		},
 		{
@@ -151,7 +137,11 @@ export const Error = () => {
 
 	return (
 		<div className="sheet">
-			<ClayMultiStepNavWithBasicItems defaultActive={2} steps={steps} />
+			<ClayMultiStepNavWithBasicItems
+				defaultActive={2}
+				state="error"
+				steps={steps}
+			/>
 		</div>
 	);
 };
