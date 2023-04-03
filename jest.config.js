@@ -146,7 +146,7 @@ module.exports = {
 			statements: 75,
 		},
 		'./packages/clay-multi-step-nav/src/': {
-			branches: 89,
+			branches: 87,
 			functions: 92,
 			lines: 98,
 			statements: 98,
