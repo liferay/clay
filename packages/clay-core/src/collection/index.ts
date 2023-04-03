@@ -5,5 +5,5 @@
 
 export {getKey, excludeProps} from './utils';
 export {Collection} from './Collection';
-export {useCollection} from './useCollection';
+export {useCollection, useCollectionKeys} from './useCollection';
 export type {ChildrenFunction, ICollectionProps} from './types';

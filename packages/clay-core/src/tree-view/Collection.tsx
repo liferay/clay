@@ -36,6 +36,8 @@ const exclude = new Set([
 	'itemRef',
 	'key',
 	'parentItemRef',
+	'prevKey',
+	'nextKey',
 ]);
 
 const ItemContainer = ({

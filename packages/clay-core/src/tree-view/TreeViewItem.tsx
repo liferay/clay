@@ -242,12 +242,8 @@ export const TreeViewItem = React.forwardRef<
 							disabled:
 								itemStackProps.disabled || nodeProps.disabled,
 							focus,
-							'treeview-dropping-bottom':
-								overTarget && overPosition === 'bottom',
 							'treeview-dropping-middle':
 								overTarget && overPosition === 'middle',
-							'treeview-dropping-top':
-								overTarget && overPosition === 'top',
 							'treeview-no-hover':
 								itemStackProps.noHover || nodeProps.noHover,
 						}
@@ -950,6 +946,7 @@ function ItemIndicator({labelId, target}: ItemIndicatorProps) {
 
 	useEffect(() => {
 		if (
+			mode === 'keyboard' &&
 			indicatorRef.current &&
 			currentTarget === target.key &&
 			target.dropPosition === position
@@ -962,8 +959,30 @@ function ItemIndicator({labelId, target}: ItemIndicatorProps) {
 		return null;
 	}
 
+	if (mode === 'mouse') {
+		return (
+			<div
+				aria-hidden="true"
+				className={classNames({
+					'treeview-dropping-indicator-bottom':
+						target.dropPosition === 'bottom',
+					'treeview-dropping-indicator-over':
+						currentTarget === target.key &&
+						target.dropPosition === position,
+					'treeview-dropping-indicator-top':
+						target.dropPosition === 'top',
+				})}
+				ref={indicatorRef}
+				role="button"
+				tabIndex={-1}
+			/>
+		);
+	}
+
+	const Component = target.dropPosition !== 'middle' ? 'div' : VisuallyHidden;
+
 	return (
-		<VisuallyHidden
+		<Component
 			aria-describedby={dragDropDescribedBy}
 			aria-hidden={mode !== 'keyboard' ? true : undefined}
 			aria-label={classNames({
@@ -973,6 +992,15 @@ function ItemIndicator({labelId, target}: ItemIndicatorProps) {
 			})}
 			aria-labelledby={`${id} ${labelId}`}
 			aria-roledescription={messages.dropIndicator}
+			className={classNames({
+				'treeview-dropping-indicator-bottom':
+					target.dropPosition === 'bottom',
+				'treeview-dropping-indicator-over':
+					currentTarget === target.key &&
+					target.dropPosition === position,
+				'treeview-dropping-indicator-top':
+					target.dropPosition === 'top',
+			})}
 			id={id}
 			ref={indicatorRef}
 			role="button"
@@ -1034,7 +1062,7 @@ function Drag({labelId, tabIndex}: DragProps) {
 					if (mode === 'keyboard') {
 						onCancel();
 					} else {
-						onDragStart(item.key);
+						onDragStart('keyboard', item.key);
 					}
 				}}
 				onKeyDown={(event) => {

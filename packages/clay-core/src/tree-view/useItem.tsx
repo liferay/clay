@@ -3,10 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useRef} from 'react';
 import {useDrag, useDrop} from 'react-dnd';
 import {getEmptyImage} from 'react-dnd-html5-backend';
 
+import {useCollectionKeys} from '../collection';
 import {removeItemInternalProps} from './Collection';
 import {Position, TARGET_POSITION, getNewItemPath, useDnD} from './DragAndDrop';
 import {useTreeViewContext} from './context';
@@ -14,6 +15,8 @@ import {createImmutableTree} from './useTree';
 
 type Value = {
 	[propName: string]: any;
+	prevKey?: React.Key;
+	nextKey?: React.Key;
 	indexes: Array<number>;
 	itemRef: React.RefObject<HTMLDivElement>;
 	key: React.Key;
@@ -60,7 +63,17 @@ export function ItemContextProvider({children, value}: Props) {
 		key: parentKey,
 	} = useItem();
 
-	const {currentDrag, currentTarget, mode, position} = useDnD();
+	const keys = useCollectionKeys();
+
+	const {
+		currentDrag,
+		currentTarget,
+		mode,
+		onDragStart,
+		onEnd,
+		onPositionChange,
+		position,
+	} = useDnD();
 
 	const keyRef = useRef(getKey(value.key));
 
@@ -78,6 +91,7 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const item: Value = {
 		...value,
+		...keys.current.get(keyRef.current),
 		indexes,
 		itemRef: childRef,
 		key: keyRef.current,
@@ -102,15 +116,19 @@ export function ItemContextProvider({children, value}: Props) {
 		[layout.patchItem, indexes]
 	);
 
-	const [overPosition, setOverPosition] = useState<Position | null>(null);
-
 	const [{isDragging}, drag, preview] = useDrag({
+		begin() {
+			onDragStart('mouse', item.key);
+		},
 		canDrag() {
 			return dragAndDrop ?? false;
 		},
 		collect: (monitor) => ({
 			isDragging: monitor.isDragging(),
 		}),
+		end() {
+			onEnd();
+		},
 		item: {
 			item,
 			type: 'treeViewItem',
@@ -146,7 +164,13 @@ export function ItemContextProvider({children, value}: Props) {
 				return;
 			}
 
-			const indexes = getNewItemPath(item.indexes, overPosition!);
+			let currentPosition = position;
+
+			if (item.key !== currentTarget) {
+				currentPosition = TARGET_POSITION.TOP;
+			}
+
+			const indexes = getNewItemPath(item.indexes, currentPosition!);
 
 			if (onItemMove) {
 				const tree = createImmutableTree(items as any, nestedKey!);
@@ -198,6 +222,17 @@ export function ItemContextProvider({children, value}: Props) {
 				currentPosition = TARGET_POSITION.BOTTOM;
 			}
 
+			let currentKey = item.key;
+
+			if (
+				currentPosition === TARGET_POSITION.TOP &&
+				item.prevKey &&
+				!expandedKeys.has(item.prevKey)
+			) {
+				currentPosition = TARGET_POSITION.BOTTOM;
+				currentKey = item.prevKey;
+			}
+
 			if (
 				currentPosition === TARGET_POSITION.MIDDLE &&
 				typeof hoverTimeoutIdRef.current !== 'number' &&
@@ -231,7 +266,9 @@ export function ItemContextProvider({children, value}: Props) {
 				);
 			}
 
-			setOverPosition(currentPosition);
+			if (currentPosition !== position) {
+				onPositionChange(currentKey, currentPosition);
+			}
 		},
 	});
 
@@ -245,7 +282,7 @@ export function ItemContextProvider({children, value}: Props) {
 				isDragging:
 					(mode === 'keyboard' && currentDrag === item.key) ||
 					isDragging,
-				overPosition: position || overPosition,
+				overPosition: position,
 				overTarget: currentTarget === item.key || overTarget,
 				ref: childRef,
 			})}

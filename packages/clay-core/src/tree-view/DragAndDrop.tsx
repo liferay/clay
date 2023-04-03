@@ -43,7 +43,9 @@ type ContextProps = {
 	currentTarget: React.Key | null;
 	messages: DragAndDropMessages;
 	onCancel: () => void;
-	onDragStart: (target: React.Key) => void;
+	onEnd: () => void;
+	onDragStart: (mode: 'keyboard' | 'mouse', target: React.Key) => void;
+	onPositionChange: (key: React.Key, position: Position) => void;
 	onDrop: () => void;
 };
 
@@ -151,23 +153,57 @@ export const DragAndDropProvider = ({
 		status: null,
 	});
 
-	const onDragStart = useCallback((dragKey: React.Key) => {
-		const nextTargetKey = getNextTarget(rootRef, dragKey);
+	const onDragStart = useCallback(
+		(mode: 'keyboard' | 'mouse', dragKey: React.Key) => {
+			if (mode === 'mouse') {
+				setState((state) => ({
+					...state,
+					currentDrag: dragKey,
+					mode: 'mouse',
+					status: null,
+				}));
+			} else {
+				const nextTargetKey = getNextTarget(rootRef, dragKey);
 
-		if (nextTargetKey === null) {
-			return;
-		}
+				if (nextTargetKey === null) {
+					return;
+				}
 
-		announcerRef.current?.announce(messages.dragStartedKeyboard);
+				announcerRef.current?.announce(messages.dragStartedKeyboard);
+				setState((state) => ({
+					...state,
+					currentDrag: dragKey,
+					currentTarget: nextTargetKey,
+					mode: 'keyboard',
+					position: 'bottom',
+					status: null,
+				}));
+			}
+		},
+		[]
+	);
+
+	const onEnd = useCallback(() => {
 		setState((state) => ({
-			...state,
-			currentDrag: dragKey,
-			currentTarget: nextTargetKey,
-			mode: 'keyboard',
-			position: 'bottom',
+			currentDrag: null,
+			currentTarget: null,
+			lastItem: state.currentDrag,
+			mode: null,
+			position: null,
 			status: null,
 		}));
 	}, []);
+
+	const onPositionChange = useCallback(
+		(key: React.Key, position: Position) => {
+			setState((state) => ({
+				...state,
+				currentTarget: key,
+				position,
+			}));
+		},
+		[]
+	);
 
 	const onDrop = useCallback(() => {
 		const {currentDrag, currentTarget, position} = state;
@@ -266,14 +302,22 @@ export const DragAndDropProvider = ({
 							];
 
 						if (
-							(event.key === Keys.Down &&
-								state.position === 'top') ||
 							(event.key === Keys.Up &&
-								state.position === 'bottom')
+								state.position === 'bottom') ||
+							(event.key === Keys.Down &&
+								state.position === 'top')
 						) {
 							setState((state) => ({
 								...state,
 								position: 'middle',
+							}));
+						} else if (
+							event.key === Keys.Down &&
+							state.position === 'middle'
+						) {
+							setState((state) => ({
+								...state,
+								position: 'bottom',
 							}));
 						} else {
 							if (!item) {
@@ -294,7 +338,7 @@ export const DragAndDropProvider = ({
 								currentTarget:
 									type === 'number' ? Number(key) : key,
 								position:
-									event.key === Keys.Up ? 'bottom' : 'top',
+									event.key === Keys.Up ? 'bottom' : 'middle',
 							}));
 						}
 						break;
@@ -323,6 +367,8 @@ export const DragAndDropProvider = ({
 				onCancel,
 				onDragStart,
 				onDrop,
+				onEnd,
+				onPositionChange,
 			}}
 		>
 			{dragAndDrop && <LiveAnnouncer ref={announcerRef} />}

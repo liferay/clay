@@ -162,24 +162,30 @@
 	}
 }
 
+.treeview-dropping-indicator-top {
+	@include clay-link(
+		map-deep-get($treeview, treeview-dropping-indicator-top)
+	);
+}
+
+.treeview-dropping-indicator-bottom {
+	@include clay-link(
+		map-deep-get($treeview, treeview-dropping-indicator-bottom)
+	);
+}
+
+.treeview-dropping-indicator-over {
+	@include clay-link(
+		map-deep-get($treeview, treeview-dropping-indicator-over)
+	);
+}
+
 .treeview-link {
 	@include clay-link(map-get($treeview, treeview-link));
-
-	&.treeview-dropping-bottom {
-		@include clay-link(
-			map-deep-get($treeview, treeview-link, treeview-dropping-bottom)
-		);
-	}
 
 	&.treeview-dropping-middle {
 		@include clay-link(
 			map-deep-get($treeview, treeview-link, treeview-dropping-middle)
-		);
-	}
-
-	&.treeview-dropping-top {
-		@include clay-link(
-			map-deep-get($treeview, treeview-link, treeview-dropping-top)
 		);
 	}
 

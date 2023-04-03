@@ -14,8 +14,14 @@ import type {
 	Props,
 } from './types';
 
+type ItemLoc = {
+	prevKey?: React.Key;
+	nextKey?: React.Key;
+};
+
 type CollectionContextProps = {
 	layout: React.MutableRefObject<Map<React.Key, any>>;
+	keys: React.MutableRefObject<Map<React.Key, ItemLoc>>;
 };
 
 const CollectionContext = React.createContext({} as CollectionContextProps);
@@ -41,6 +47,8 @@ export function useCollection<
 	const {layout: parentLayout} = useContext(CollectionContext);
 
 	const layoutRef = useRef<Map<React.Key, any>>(new Map());
+	const layoutKeysRef = useRef<Map<React.Key, ItemLoc>>(new Map());
+	const keysRef = useRef<Array<React.Key>>([]);
 
 	const layout = parentLayout ?? layoutRef;
 
@@ -76,6 +84,18 @@ export function useCollection<
 				return;
 			}
 
+			const prevKey = keysRef.current[keysRef.current.length - 1];
+			keysRef.current.push(key);
+
+			layoutKeysRef.current.set(key, {prevKey});
+
+			if (layoutKeysRef.current.has(prevKey)) {
+				layoutKeysRef.current.set(prevKey, {
+					...layoutKeysRef.current.get(prevKey),
+					nextKey: key,
+				});
+			}
+
 			if (ItemContainer) {
 				return (
 					<ItemContainer
@@ -103,6 +123,9 @@ export function useCollection<
 
 	const performCollection = useCallback(
 		({children, items}: ICollectionProps<T, P>) => {
+			keysRef.current = [];
+			layoutKeysRef.current.clear();
+
 			// Pre-initialization of nested collections to mount the layout
 			// structure.
 			// TODO: Mount a structure with the children's information and cache it
@@ -175,13 +198,19 @@ export function useCollection<
 
 	return {
 		collection: (
-			<CollectionContext.Provider value={{layout}}>
+			<CollectionContext.Provider value={{keys: layoutKeysRef, layout}}>
 				{collection}
 			</CollectionContext.Provider>
 		),
 		getFirstItem,
 		getItem,
 	};
+}
+
+export function useCollectionKeys() {
+	const {keys} = useContext(CollectionContext);
+
+	return keys;
 }
 
 function getTextValue(

@@ -61,6 +61,25 @@ $cadmin-treeview: map-merge(
 				box-shadow: none,
 			),
 		),
+		treeview-dropping-indicator-top: (
+			background-color: transparent,
+			display: block,
+			height: 2px,
+			margin-top: -2px,
+			outline: none,
+			width: 100%,
+		),
+		treeview-dropping-indicator-bottom: (
+			background-color: transparent,
+			display: block,
+			height: 2px,
+			margin-bottom: -2px,
+			outline: none,
+			width: 100%,
+		),
+		treeview-dropping-indicator-over: (
+			background-color: $cadmin-primary-l0,
+		),
 		treeview-link: (
 			background-color: transparent,
 			cursor: pointer,
@@ -75,15 +94,9 @@ $cadmin-treeview: map-merge(
 			position: relative,
 			text-align: left,
 			user-select: none,
-			treeview-dropping-bottom: (
-				box-shadow: 0 2px 0 0 $cadmin-primary-l0,
-			),
 			treeview-dropping-middle: (
 				background-color: $cadmin-primary-l3,
 				border-color: $cadmin-primary-l0,
-			),
-			treeview-dropping-top: (
-				box-shadow: 0 -2px 0 0 $cadmin-primary-l0,
 			),
 			hover: (
 				text-decoration: none,
