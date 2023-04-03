@@ -183,10 +183,12 @@ function ClayAlert({
 			})}
 			onMouseOut={startAutoCloseTimer}
 			onMouseOver={pauseAutoCloseTimer}
-			role={role as string}
 		>
 			<ConditionalContainer>
-				<ClayLayout.ContentRow className="alert-autofit-row">
+				<ClayLayout.ContentRow
+					className="alert-autofit-row"
+					role={role as string}
+				>
 					{!VARIANTS.includes(variant as string) && (
 						<ClayLayout.ContentCol>
 							<ClayLayout.ContentSection>
