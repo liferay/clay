@@ -244,6 +244,10 @@ export function Picker<T>({
 		) {
 			const value = collection.getItem(activeDescendant);
 
+			if (!value) {
+				return;
+			}
+
 			announcerAPI.current.announce(
 				selectedKey === activeDescendant
 					? sub(messages.itemSelected, [value])
