@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.91.1](https://github.com/liferay/clay/compare/v3.91.0...v3.91.1) (2023-04-04)
+
+### Bug Fixes
+
+-   **@clayui/core:** prevents JS from breaking component implementation ([3e0cf3b](https://github.com/liferay/clay/commit/3e0cf3b0c072fce28fcde9cc0bc30dbab2c06524))
+
 # [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
 
 ### Bug Fixes
