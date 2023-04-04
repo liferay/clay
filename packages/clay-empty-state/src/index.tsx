@@ -59,7 +59,7 @@ const ClayEmptyState = ({
 				<div className="c-empty-state-image">
 					<div className="c-empty-state-aspect-ratio">
 						<img
-							alt="c-empty-state-image"
+							alt=""
 							className={classNames(
 								'aspect-ratio-item aspect-ratio-item-fluid',
 								imgProps && imgProps.className
