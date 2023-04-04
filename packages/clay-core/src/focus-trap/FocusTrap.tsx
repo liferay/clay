@@ -4,6 +4,7 @@
  */
 
 import {FOCUSABLE_ELEMENTS, FocusScope} from '@clayui/shared';
+import {hideOthers, supportsInert, suppressOthers} from 'aria-hidden';
 import React, {useEffect, useRef} from 'react';
 
 type Props = {
@@ -48,6 +49,19 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 
 			if (focusableElements) {
 				(focusableElements[0] as HTMLDivElement).focus();
+			}
+		}
+	}, [active]);
+
+	useEffect(() => {
+		if (childrenRef.current && active) {
+			// Inert is a new native feature to better handle DOM arias that are not
+			// assertive to a SR or that should ignore any user interaction.
+			// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
+			if (supportsInert()) {
+				return suppressOthers(childrenRef.current);
+			} else {
+				return hideOthers(childrenRef.current);
 			}
 		}
 	}, [active]);
