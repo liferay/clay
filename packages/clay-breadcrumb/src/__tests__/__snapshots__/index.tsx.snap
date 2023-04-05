@@ -4,59 +4,36 @@ exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
 <div>
   <nav
     aria-label="Breadcrumb"
+    class="align-items-center d-flex"
   >
+    <button
+      aria-expanded="false"
+      aria-label="See full nested"
+      class="c-focus-inset btn btn-monospaced btn-xs"
+      title="See full nested"
+      type="button"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-angle-double-right"
+        role="presentation"
+      >
+        <use
+          xlink:href="path/to/spritemap#angle-double-right"
+        />
+      </svg>
+    </button>
     <ol
       class="breadcrumb"
     >
-      <li
-        class="breadcrumb-item active"
-      >
-        <a
-          aria-current="page"
-          class="breadcrumb-link"
-          data-testid="testId1"
-        >
-          1
-        </a>
-      </li>
       <li
         class="breadcrumb-item"
       >
         <a
           class="breadcrumb-link"
-          data-testid="testId2"
+          data-testid="testId4"
         >
-          2
+          4
         </a>
-      </li>
-      <li
-        class="dropdown breadcrumb-item"
-      >
-        <button
-          aria-controls="clay-dropdown-menu-3"
-          aria-expanded="false"
-          aria-haspopup="true"
-          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-          data-testid="breadcrumbDropdownTrigger"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-ellipsis-h"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#ellipsis-h"
-            />
-          </svg>
-          <svg
-            class="lexicon-icon lexicon-icon-caret-bottom"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#caret-bottom"
-            />
-          </svg>
-        </button>
       </li>
       <li
         class="breadcrumb-item"
@@ -77,61 +54,37 @@ exports[`ClayBreadcrumb renders 1`] = `
 <div>
   <nav
     aria-label="Breadcrumb"
+    class="align-items-center d-flex"
   >
+    <button
+      aria-expanded="false"
+      aria-label="See full nested"
+      class="c-focus-inset btn btn-monospaced btn-xs"
+      title="See full nested"
+      type="button"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-angle-double-right"
+        role="presentation"
+      >
+        <use
+          xlink:href="path/to/spritemap#angle-double-right"
+        />
+      </svg>
+    </button>
     <ol
       class="breadcrumb"
     >
-      <li
-        class="breadcrumb-item active"
-      >
-        <a
-          aria-current="page"
-          class="breadcrumb-link"
-          data-testid="testId1"
-          href="#1"
-        >
-          1
-        </a>
-      </li>
       <li
         class="breadcrumb-item"
       >
         <a
           class="breadcrumb-link"
-          data-testid="testId2"
-          href="#2"
+          data-testid="testId4"
+          href="#4"
         >
-          2
+          4
         </a>
-      </li>
-      <li
-        class="dropdown breadcrumb-item"
-      >
-        <button
-          aria-controls="clay-dropdown-menu-1"
-          aria-expanded="false"
-          aria-haspopup="true"
-          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-          data-testid="breadcrumbDropdownTrigger"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-ellipsis-h"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#ellipsis-h"
-            />
-          </svg>
-          <svg
-            class="lexicon-icon lexicon-icon-caret-bottom"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#caret-bottom"
-            />
-          </svg>
-        </button>
       </li>
       <li
         class="breadcrumb-item"
@@ -153,62 +106,37 @@ exports[`ClayBreadcrumb renders with properties passed by \`ellipsisProps\` 1`] 
 <div>
   <nav
     aria-label="Breadcrumb"
+    class="align-items-center d-flex"
   >
+    <button
+      aria-expanded="false"
+      aria-label="See full nested"
+      class="c-focus-inset btn btn-monospaced btn-xs"
+      title="See full nested"
+      type="button"
+    >
+      <svg
+        class="lexicon-icon lexicon-icon-angle-double-right"
+        role="presentation"
+      >
+        <use
+          xlink:href="path/to/spritemap#angle-double-right"
+        />
+      </svg>
+    </button>
     <ol
       class="breadcrumb"
     >
-      <li
-        class="breadcrumb-item active"
-      >
-        <a
-          aria-current="page"
-          class="breadcrumb-link"
-          data-testid="testId1"
-          href="#1"
-        >
-          1
-        </a>
-      </li>
       <li
         class="breadcrumb-item"
       >
         <a
           class="breadcrumb-link"
-          data-testid="testId2"
-          href="#2"
+          data-testid="testId4"
+          href="#4"
         >
-          2
+          4
         </a>
-      </li>
-      <li
-        class="dropdown breadcrumb-item"
-        style="font-size: 15px;"
-      >
-        <button
-          aria-controls="clay-dropdown-menu-2"
-          aria-expanded="false"
-          aria-haspopup="true"
-          class="dropdown-toggle breadcrumb-link btn btn-unstyled"
-          data-testid="breadcrumbDropdownTrigger"
-          type="button"
-        >
-          <svg
-            class="lexicon-icon lexicon-icon-ellipsis-h"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#ellipsis-h"
-            />
-          </svg>
-          <svg
-            class="lexicon-icon lexicon-icon-caret-bottom"
-            role="presentation"
-          >
-            <use
-              xlink:href="path/to/spritemap#caret-bottom"
-            />
-          </svg>
-        </button>
       </li>
       <li
         class="breadcrumb-item"
@@ -230,6 +158,7 @@ exports[`ClayBreadcrumb throws a warning when not passing \`active\` to any \`it
 <div>
   <nav
     aria-label="Breadcrumb"
+    class="align-items-center d-flex"
   >
     <ol
       class="breadcrumb"
