@@ -153,8 +153,7 @@ export const ClayMultiStepNavWithBasicItems = ({
 						<ClayMultiStepNav.Title>{title}</ClayMultiStepNav.Title>
 						<ClayMultiStepNav.Divider />
 						<ClayMultiStepNav.Indicator
-							complete={complete}
-							label={!error ? 1 + i : undefined}
+							label={1 + i}
 							onClick={() => setActive(i)}
 							spritemap={spritemap}
 							subTitle={subTitle}

@@ -6,6 +6,14 @@
 import classNames from 'classnames';
 import React from 'react';
 
+type State = 'error' | 'complete';
+
+type Context = {
+	state?: State;
+};
+
+export const ItemContext = React.createContext<Context>({});
+
 export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if `active` classname should be applied
@@ -31,7 +39,7 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Defines the status of the step.
 	 */
-	state?: 'error' | 'complete';
+	state?: State;
 }
 
 const ClayMultiStepNavItem = ({
@@ -54,7 +62,9 @@ const ClayMultiStepNavItem = ({
 			})}
 			{...otherProps}
 		>
-			{children}
+			<ItemContext.Provider value={{state}}>
+				{children}
+			</ItemContext.Provider>
 		</li>
 	);
 };
