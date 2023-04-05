@@ -29,7 +29,7 @@ export interface IProps extends React.HTMLAttributes<HTMLLIElement> {
 	expand?: boolean;
 
 	/**
-	 * Defines the status of the current step.
+	 * Defines the status of the step.
 	 */
 	state?: 'error' | 'complete';
 }

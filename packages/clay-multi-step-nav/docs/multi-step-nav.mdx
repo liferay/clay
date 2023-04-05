@@ -30,11 +30,11 @@ Each step can have two different states: `active` or `complete` defined by props
 
 ## State
 
-The current step can currently be represented by three states, `complete`, `active` or `error`.
+Each step can have two different states: `active` or `complete` defined by props as you can see below.
 
 The active state can be set using the `active` property in the `ClayMultiStepNav.Item` or `ClayMultiStepNavWithBasicItems` component which defines the step index.
 
-The `complete` and `error` states are defined using the `state` property in the `ClayMultiStepNav.Item` which defines whether the item is complete or had an error in the current state, the `ClayMultiStepNavWithBasicItems` component follows the same API with the difference that it sets the state of the item to the current step which is set when using the `active` or `defaultActive` API.
+The `complete` and `error` states are defined using the `state` property in the `ClayMultiStepNav.Item` which defines whether the item is complete or has an error in the current state. The `ClayMultiStepNavWithBasicItems` component follows the same API with the difference that it sets the state of the item to the current step which is set when using the `active` or `defaultActive` API.
 
 <MultiStepNavError />
 
