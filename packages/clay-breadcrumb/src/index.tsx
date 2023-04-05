@@ -3,12 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {getEllipsisItems} from '@clayui/shared';
+import {ClayButtonWithIcon} from '@clayui/button';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useState} from 'react';
 import warning from 'warning';
 
-import Ellipsis from './Ellipsis';
 import Item from './Item';
 
 type TItem = React.ComponentProps<typeof Item>;
@@ -16,13 +15,24 @@ type TItems = Array<TItem>;
 
 interface IProps extends React.HTMLAttributes<HTMLOListElement> {
 	/**
+	 * Defines the aria label of component elements.
+	 */
+	ariaLabels?: {
+		breadcrumb: string;
+		open: string;
+		close: string;
+	};
+
+	/**
 	 * The number of Breadcrumb Items to show on each side of the active Breadcrumb Item before
 	 * using an ellipsis dropdown.
+	 * @deprecated since v3.91.0 - It is no longer necessary.
 	 */
 	ellipsisBuffer?: number;
 
 	/**
 	 * Use this property for defining `otherProps` that will be passed to ellipsis dropdown trigger.
+	 * @deprecated since v3.91.0 - It is no longer necessary.
 	 */
 	ellipsisProps?: Object;
 
@@ -44,9 +54,16 @@ const findActiveItems = (items: TItems) => {
 };
 
 const ClayBreadcrumb = ({
-	className,
+	ariaLabels = {
+		breadcrumb: 'Breadcrumb',
+		close: 'Partially nest breadcrumbs',
+		open: 'See full nested',
+	},
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	ellipsisBuffer = 1,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	ellipsisProps = {},
+	className,
 	items,
 	spritemap,
 	...otherProps
@@ -56,24 +73,52 @@ const ClayBreadcrumb = ({
 		'ClayBreadcrumb expects at least one `active` item on `items`.'
 	);
 
-	const activeItems = findActiveItems(items);
-
-	const breadCrumbItems = ellipsisBuffer
-		? getEllipsisItems(
-				{
-					EllipsisComponent: Ellipsis,
-					ellipsisProps,
-					items,
-					spritemap,
-				},
-				ellipsisBuffer,
-				items.indexOf(activeItems[0])
-		  )
-		: items;
+	const [collapsed, setCollapsed] = useState(false);
 
 	return (
-		<ol {...otherProps} className={classNames('breadcrumb', className)}>
-			{breadCrumbItems.map((item: TItem | React.ReactNode, i: number) =>
+		<nav
+			aria-label={ariaLabels.breadcrumb}
+			className="align-items-center d-flex"
+		>
+			{items.length > 3 && (
+				<ClayButtonWithIcon
+					aria-expanded={collapsed}
+					aria-label={collapsed ? ariaLabels.close : ariaLabels.open}
+					className="c-focus-inset"
+					displayType={null}
+					onClick={() => setCollapsed(!collapsed)}
+					size="xs"
+					spritemap={spritemap}
+					symbol={
+						collapsed ? 'angle-double-left' : 'angle-double-right'
+					}
+					title={collapsed ? ariaLabels.close : ariaLabels.open}
+				/>
+			)}
+			<ol {...otherProps} className={classNames('breadcrumb', className)}>
+				{items.length > 3 && !collapsed ? (
+					<Items
+						items={[
+							items[items.length - 2],
+							items[items.length - 1],
+						]}
+					/>
+				) : (
+					<Items items={items} />
+				)}
+			</ol>
+		</nav>
+	);
+};
+
+type ItemsProps = {
+	items: TItems;
+};
+
+function Items({items}: ItemsProps) {
+	return (
+		<>
+			{items.map((item: TItem | React.ReactNode, i: number) =>
 				React.isValidElement(item) ? (
 					React.cloneElement(item, {key: `ellipsis${i}`})
 				) : (
@@ -86,8 +131,8 @@ const ClayBreadcrumb = ({
 					/>
 				)
 			)}
-		</ol>
+		</>
 	);
-};
+}
 
 export default ClayBreadcrumb;

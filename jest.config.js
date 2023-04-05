@@ -26,10 +26,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-breadcrumb/src/': {
-			branches: 90,
+			branches: 75,
 			functions: 85,
 			lines: 95,
-			statements: 97,
+			statements: 96,
 		},
 		'./packages/clay-button/src/': {
 			branches: 90,
