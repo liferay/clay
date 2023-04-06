@@ -702,16 +702,16 @@ $cadmin-btn-palette: map-deep-merge(
 		dark: $cadmin-btn-dark,
 		link: $cadmin-btn-link,
 		btn-beta: (
-			background-color: $cadmin-gray-100,
-			color: $cadmin-info,
+			background-color: $cadmin-light-l1,
+			color: $cadmin-info-d1,
 			text-transform: uppercase,
 			hover: (
-				background-color: $cadmin-gray-200,
-				color: $cadmin-info,
+				background-color: $cadmin-light,
+				color: $cadmin-info-d1,
 			),
 			focus: (
-				background-color: $cadmin-gray-200,
-				color: $cadmin-info,
+				background-color: $cadmin-light,
+				color: $cadmin-info-d1,
 			),
 		),
 	),

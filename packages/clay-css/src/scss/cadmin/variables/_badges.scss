@@ -467,8 +467,8 @@ $cadmin-badge-palette: map-deep-merge(
 		light: $cadmin-badge-light,
 		dark: $cadmin-badge-dark,
 		badge-beta: (
-			background-color: $cadmin-gray-100,
-			color: $cadmin-info,
+			background-color: $cadmin-light-l1,
+			color: $cadmin-info-d1,
 			text-transform: uppercase,
 		),
 	),

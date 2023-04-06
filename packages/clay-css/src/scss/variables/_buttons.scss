@@ -893,16 +893,16 @@ $btn-palette: map-deep-merge(
 		dark: $btn-dark,
 		link: $btn-link,
 		btn-beta: (
-			background-color: $gray-100,
-			color: $info,
+			background-color: $light-l1,
+			color: $info-d1,
 			text-transform: uppercase,
 			hover: (
-				background-color: $gray-200,
-				color: $info,
+				background-color: $light,
+				color: $info-d1,
 			),
 			focus: (
-				background-color: $gray-200,
-				color: $info,
+				background-color: $light,
+				color: $info-d1,
 			),
 		),
 	),
