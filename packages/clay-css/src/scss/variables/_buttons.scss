@@ -203,7 +203,7 @@ $btn-sizes: map-deep-merge(
 			padding-top: 0.125rem,
 			inline-item: (
 				font-size: inherit,
-				margin-top: -3px,
+				margin-top: -0.16em,
 			),
 			inline-item-before: (
 				margin-right: 0.25rem,
@@ -892,6 +892,19 @@ $btn-palette: map-deep-merge(
 		light: $btn-light,
 		dark: $btn-dark,
 		link: $btn-link,
+		btn-beta: (
+			background-color: $light-l1,
+			color: $info-d1,
+			text-transform: uppercase,
+			hover: (
+				background-color: $light,
+				color: $info-d1,
+			),
+			focus: (
+				background-color: $light,
+				color: $info-d1,
+			),
+		),
 	),
 	$btn-palette
 );

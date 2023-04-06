@@ -5,7 +5,18 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/badges/'
 packageNpm: '@clayui/badge'
 ---
 
-import {Badge} from '$packages/clay-badge/docs/index';
+import {Badge, BadgeBeta} from '$packages/clay-badge/docs/index';
+
+<div class="nav-toc-absolute">
+<div class="nav-toc">
+
+-   [Display Types](#display-types)
+-   [Beta](#badge-beta)
+
+</div>
+</div>
+
+## Display Types(#display-types)
 
 Badges are not used for non-numeric values. If you have a non-numeric value, use labels instead. Badges work for exact numbers up to 999.
 For numbers greater than 999, use K to indicate Thousands (5K for 5.231) and M to indicate Millions (2M for 2.100.523).
@@ -13,3 +24,9 @@ For numbers greater than 999, use K to indicate Thousands (5K for 5.231) and M t
 <Badge />
 
 We recommend that you review the use cases in the <a href="https://storybook.clayui.com/?path=/story/design-system-components-badge--default">Storybook</a>.
+
+## Beta(#badge-beta)
+
+A component to indicate beta features in DXP. The `badge-beta` variant doesn’t have any interaction. It just informs the user. It uses a Badge component with custom visual states.
+
+<BadgeBeta />

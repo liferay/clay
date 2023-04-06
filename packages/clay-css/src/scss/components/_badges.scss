@@ -113,7 +113,11 @@
 			starts-with($color, '#') or
 			starts-with($color, '%'),
 		$color,
-		str-insert($color, '.badge-', 1)
+		if(
+			starts-with($color, 'badge'),
+			str-insert($color, '.', 1),
+			str-insert($color, '.badge-', 1)
+		)
 	);
 
 	@if (starts-with($color, '%') or map-get($value, extend)) {
