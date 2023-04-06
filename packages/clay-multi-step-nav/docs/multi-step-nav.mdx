@@ -8,12 +8,15 @@ storybookPath: 'design-system-components-multistepnav'
 
 import {
 	MultiStepNav,
+	MultiStepNavError,
 	MultiStepNavWithBasicItems,
 } from '$packages/clay-multi-step-nav/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
+-   [State](#state)
+-   [Indicator position](#indicator-position)
 -   [Collapsable Steps](#collapsable-steps)
 
 </div>
@@ -24,6 +27,16 @@ It's used when a major or big task has to be divided into smaller task, with the
 Each step can have two different states: `active` or `complete` defined by props as you can see below.
 
 <MultiStepNav />
+
+## State
+
+Each step can have two different states: `active` or `complete` defined by props as you can see below.
+
+The active state can be set using the `active` property in the `ClayMultiStepNav.Item` or `ClayMultiStepNavWithBasicItems` component which defines the step index.
+
+The `complete` and `error` states are defined using the `state` property in the `ClayMultiStepNav.Item` which defines whether the item is complete or has an error in the current state. The `ClayMultiStepNavWithBasicItems` component follows the same API with the difference that it sets the state of the item to the current step which is set when using the `active` or `defaultActive` API.
+
+<MultiStepNavError />
 
 ## Indicator position
 
