@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
+
+### Features
+
+-   **@clayui/multi-step-nav:** adds new API for error indicator ([6187657](https://github.com/liferay/clay/commit/6187657d8172f5812c83d3a794bb49cf31c7cff5))
+
 # [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
 
 **Note:** Version bump only for package @clayui/multi-step-nav

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
+
+### Bug Fixes
+
+-   **@clayui/empty-state:** Empty alt attribute ([8871eb9](https://github.com/liferay/clay/commit/8871eb98833a40fd7feafda8a0426bbc4faca9ab))
+-   **@clayui/empty-state:** Update snapshot ([dac2adb](https://github.com/liferay/clay/commit/dac2adbc0de7a94634efc9a9dc13d33407723c0f))
+
 # [3.90.0](https://github.com/liferay/clay/compare/v3.89.0...v3.90.0) (2023-03-15)
 
 ### Features

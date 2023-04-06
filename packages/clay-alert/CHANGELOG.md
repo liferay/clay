@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
+
+### Bug Fixes
+
+-   **@clayui/alert:** move close button outside of ARIA ([04306bb](https://github.com/liferay/clay/commit/04306bb3fa21adb1c6f457b30ff45ef3777b139c))
+
 # [3.85.0](https://github.com/liferay/clay/compare/v3.84.0...v3.85.0) (2023-01-23)
 
 ### Features

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Buttons btn-xs adjust inline-item position ([cd78784](https://github.com/liferay/clay/commit/cd78784384fa7dd4021e4af7d8119088130beb08))
+* **@clayui/css:** Cadmin and Clay update focus outline colors for accessibility ([372af84](https://github.com/liferay/clay/commit/372af84932f277d1a8ee0a0f0cdf3a99c9e7279c))
+* **@clayui/css:** Nav Tabs adds nav-tabs-light and adjust borders ([68f8bec](https://github.com/liferay/clay/commit/68f8bec3a596d0818933772fed8db86b4160a667))
+* **@clayui/css:** Popover arrow has 1px gap in Safari ([caaf7f7](https://github.com/liferay/clay/commit/caaf7f7439ae39f093545deda61de24c9c7a1c8e))
+
+
+### Features
+
+* **@clayui/css:** Cadmin and Clay adds btn-beta and badge-beta variants ([e09566a](https://github.com/liferay/clay/commit/e09566a14d3374440ba41ced1b17139a12fbfd17))
+* **@clayui/css:** Multi Step Nav adds error state ([9d5846e](https://github.com/liferay/clay/commit/9d5846e6af4133e6815e3dbf66483fcc93111814))
+* **@clayui/css:** Utilities adds c-prefers-reduced-motion ([89deb26](https://github.com/liferay/clay/commit/89deb2689c10556a4bbe8bb3297a6fb819176b47))
+
+
+
+
+
 # [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
 
 

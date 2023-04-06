@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
+
+### Features
+
+-   **@clayui/breadcrumb:** changes the ellipse implementation to collapse ([5bbc5fc](https://github.com/liferay/clay/commit/5bbc5fc20572dce091e5dfb64836b83041014ab4))
+-   **@clayui/breadcrumb:** improve breadcrumb accessibility ([f3c6131](https://github.com/liferay/clay/commit/f3c61311dd55c68e3aeb772d8dff0c77a1287362))
+
 # [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
 
 **Note:** Version bump only for package @clayui/breadcrumb

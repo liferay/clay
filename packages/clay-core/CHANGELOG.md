@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
+
+### Bug Fixes
+
+-   **@clayui/core:** always shows the drag and drop icon ([9395174](https://github.com/liferay/clay/commit/9395174bbe099a6b4af8fddeabe79e8a7f90a332))
+-   **@clayui/core:** prevents JS from breaking component implementation ([3796b55](https://github.com/liferay/clay/commit/3796b5513a5886b5d23e20a32e6a9e12497f89b4))
+-   **@clayui/core:** Vertical Bar open panel shouldn't disappear on resize ([127b1c4](https://github.com/liferay/clay/commit/127b1c46121af093314b0371343b7dc996a5330d))
+
+### Features
+
+-   **@clayui/core:** adds suppression of elements outside the scope of focus ([f96fc60](https://github.com/liferay/clay/commit/f96fc603022c6ffab1bc86011137acd7910a6cd3))
+-   **@clayui/focus-trap:** Add documentation for FocusTrap ([3c8a1df](https://github.com/liferay/clay/commit/3c8a1df89c8ac41cfdd461b9e7f0395440138980))
+-   **@clayui/focus-trap:** Add FocusTrap component ([8ecba27](https://github.com/liferay/clay/commit/8ecba2772cdbc99e3ee057f7b6ac7435b1b20e74))
+-   **@clayui/focus-trap:** Add new props to focus on another element than the first ([72093cd](https://github.com/liferay/clay/commit/72093cd6dfa915de52f39e4a099a031e0976d858))
+-   **@clayui/focus-trap:** Add stories for FocusTrap component ([99ab581](https://github.com/liferay/clay/commit/99ab5811ead8419576f73c052d65c5463ab3acaf))
+-   **@clayui/focus-trap:** Add tests for FocusTrap ([af2e8f6](https://github.com/liferay/clay/commit/af2e8f6bf1fc44df02fe3d995a2e37840567e318))
+
 # [3.91.0](https://github.com/liferay/clay/compare/v3.90.0...v3.91.0) (2023-03-24)
 
 ### Bug Fixes
