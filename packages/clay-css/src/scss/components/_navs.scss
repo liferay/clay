@@ -135,20 +135,8 @@
 .nav-tabs {
 	@include clay-nav-variant($nav-tabs);
 
-	.dropdown-menu {
-		@include border-top-radius(0);
-
-		margin-top: math-sign($nav-tabs-border-width);
-	}
-
 	+ .tab-content {
 		.tab-pane {
-			background-color: $nav-tabs-tab-pane-bg;
-
-			@include border-radius($nav-tabs-tab-pane-border-radius);
-
-			padding: $nav-tabs-tab-pane-padding;
-
 			&.active:first-child {
 				border-top-left-radius: 0;
 			}

@@ -421,6 +421,12 @@ $nav-tabs-link: map-deep-merge(
 	$nav-tabs-link
 );
 
+// Nav Tabs Tab Pane
+
+$nav-tabs-tab-pane-bg: null !default;
+$nav-tabs-tab-pane-border-radius: null !default;
+$nav-tabs-tab-pane-padding: null !default;
+
 // .nav-tabs
 
 $nav-tabs: () !default;
@@ -432,15 +438,36 @@ $nav-tabs: map-deep-merge(
 			margin-bottom: math-sign($nav-tabs-border-width),
 		),
 		nav-link: $nav-tabs-link,
+		dropdown-menu: (
+			border-top-left-radius: clay-enable-rounded(0),
+			border-top-right-radius: clay-enable-rounded(0),
+			margin-top: math-sign($nav-tabs-border-width),
+		),
+		tab-content: (
+			tab-pane: (
+				background-color: $nav-tabs-tab-pane-bg,
+				border-radius:
+					clay-enable-rounded($nav-tabs-tab-pane-border-radius),
+				padding: $nav-tabs-tab-pane-padding,
+			),
+		),
 	),
 	$nav-tabs
 );
 
-// Nav Tabs Tab Pane
-
-$nav-tabs-tab-pane-bg: null !default;
-$nav-tabs-tab-pane-border-radius: null !default;
-$nav-tabs-tab-pane-padding: null !default;
+$nav-tabs-light: () !default;
+$nav-tabs-light: map-deep-merge(
+	(
+		background-color: $gray-100,
+		tab-content: (
+			tab-pane: (
+				background-color: transparent,
+				border-radius: clay-enable-rounded(0),
+			),
+		),
+	),
+	$nav-tabs-light
+);
 
 // Nav Pills
 
@@ -459,3 +486,9 @@ $nav-pills-link-active-color: $component-active-color !default;
 // Nav Variants
 
 $nav-palette: () !default;
+$nav-palette: map-deep-merge(
+	(
+		nav-tabs-light: $nav-tabs-light,
+	),
+	$nav-palette
+);

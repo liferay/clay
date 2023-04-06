@@ -72,24 +72,20 @@ $nav-tabs-link: map-deep-merge(
 	$nav-tabs-link
 );
 
+// Nav Tabs Tab Pane
+
+$nav-tabs-tab-pane-bg: $white !default;
+$nav-tabs-tab-pane-border-radius: 0 0 4px 4px !default;
+$nav-tabs-tab-pane-padding: 2rem !default;
+
 // .nav-tabs
 
 $nav-tabs: () !default;
 $nav-tabs: map-deep-merge(
 	(
-		background-color: $gray-100,
-		border-color: $gray-400,
-		border-style: solid,
-		border-width: 0.0625rem 0,
 		padding-left: 1.5rem,
 		padding-right: 1.5rem,
 		padding-top: 0.4375rem,
 	),
 	$nav-tabs
 );
-
-// Nav Tabs Tab Pane
-
-$nav-tabs-tab-pane-bg: $white !default;
-$nav-tabs-tab-pane-border-radius: 4px !default;
-$nav-tabs-tab-pane-padding: 2rem !default;

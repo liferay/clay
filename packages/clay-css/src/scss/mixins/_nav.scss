@@ -258,6 +258,22 @@
 			.nav-form {
 				@include clay-css(map-get($map, nav-form));
 			}
+
+			.dropdown-menu {
+				@include clay-dropdown-menu-variant(
+					map-get($map, dropdown-menu)
+				);
+			}
+
+			+ .tab-content {
+				$_tab-content: setter(map-get($map, tab-content), ());
+
+				@include clay-css($_tab-content);
+
+				.tab-pane {
+					@include clay-css(map-get($_tab-content, tab-pane));
+				}
+			}
 		}
 	}
 }
