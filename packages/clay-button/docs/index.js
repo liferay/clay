@@ -132,13 +132,13 @@ const ButtonIcon = () => {
 	return <Editor code={code} imports={buttonIconImportsCode} scope={scope} />;
 };
 
-const buttonBetaImportsCode = `import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
-import ClayIcon from '@clayui/icon;`;
+const buttonBetaImportsCode = `import ClayButton from '@clayui/button';
+import ClayIcon from '@clayui/icon;'`;
 
 const ButtonBetaCode = `const Component = () => {
 	return (
 		<>
-			<ClayButton className="btn-beta btn-xs rounded-circle" displayType={null}>
+			<ClayButton className="rounded-circle" displayType="beta" size="xs">
 				<span className="inline-item">
 					{'Beta'}
 				</span>

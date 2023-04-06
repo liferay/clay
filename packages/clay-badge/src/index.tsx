@@ -12,7 +12,8 @@ type DisplayType =
 	| 'info'
 	| 'danger'
 	| 'success'
-	| 'warning';
+	| 'warning'
+	| 'beta';
 
 interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	/**

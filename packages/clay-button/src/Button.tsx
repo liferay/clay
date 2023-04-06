@@ -18,6 +18,7 @@ export type DisplayType =
 	| 'warning'
 	| 'danger'
 	| 'info'
+	| 'beta'
 	| 'unstyled';
 
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
