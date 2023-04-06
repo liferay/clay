@@ -1,11 +1,12 @@
 $popover-border-color: transparent !default;
 $popover-border-radius: $border-radius !default; // 4px
+$popover-border-width: 1px !default;
 $popover-box-shadow: 0 1px 15px -2px rgba(0, 0, 0, 0.2) !default;
 $popover-max-width: 14.5rem !default; // 232px
 $popover-inline-scroller-max-height: 14.875rem !default; // 238px
 
 $popover-arrow-outer-color: transparent !default;
-$popover-arrow-height: 0.3rem !default;
+$popover-arrow-height: 5px !default;
 $popover-arrow-offset: 0.625rem !default; // 10px
 $popover-arrow-width: $popover-arrow-height * 2 !default;
 
