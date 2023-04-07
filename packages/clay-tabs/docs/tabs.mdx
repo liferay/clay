@@ -5,14 +5,20 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/tabs/'
 packageNpm: '@clayui/tabs'
 ---
 
-import {Tabs, ModernTabs, TabsDropdown} from '$packages/clay-tabs/docs/index';
+import {
+	Tabs,
+	TabsLight,
+	ModernTabs,
+	TabsDropdown,
+} from '$packages/clay-tabs/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Introduction](#introduction)
 -   [Basic Tabs](#basic-tabs)
--   [Modern Tabs](#modern-tabs)
+-   [Light Tabs](#light-tabs)
+-   [Modern Tabs (Deprecated)](#modern-tabs)
 -   [Dropdown Tabs](#dropdown-tabs)
 -   [TabPanel](#tabpanel)
 
@@ -25,7 +31,7 @@ import {Tabs, ModernTabs, TabsDropdown} from '$packages/clay-tabs/docs/index';
 
 Use `ClayTabs.Item` for defining a TabPane's trigger. For using this trigger as an `anchor` element, just define `href` property, otherwise, the trigger will be a `button`. Use `ClayTabs.TabPane` for wrapping the content that will be rendered by TabPane as the following example:
 
-## Tabs
+## Tabs(#basic-tabs)
 
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
@@ -35,6 +41,10 @@ Use `ClayTabs.Item` for defining a TabPane's trigger. For using this trigger as 
 This is the default tab. The `displayType` attribute was deprecated after 3.89.0. You no longer need to use `displayType="basic"` to output this style.
 
 <Tabs />
+
+## Light Tabs(#light-tabs)
+
+<TabsLight />
 
 ## Modern Tabs
 
