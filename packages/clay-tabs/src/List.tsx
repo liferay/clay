@@ -114,7 +114,7 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 			className={classNames(
 				'nav nav-tabs',
 				{'nav-justified': justified},
-				{[`nav-tabs-${displayType}`]: displayType},
+				{[`nav-tabs-${displayType}`]: displayType === 'light'},
 				className
 			)}
 			ref={tabsRef}
