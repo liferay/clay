@@ -31,7 +31,7 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
 	 * @ignore
 	 */
-	displayType?: null | 'basic' | 'underline';
+	displayType?: null | 'basic' | 'light' | 'underline';
 
 	/**
 	 * @ignore
@@ -65,7 +65,7 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 		active,
 		children,
 		className,
-		displayType: _,
+		displayType = null,
 		justified,
 		modern: __,
 		onActiveChange,
@@ -114,6 +114,7 @@ export const List = React.forwardRef<HTMLUListElement, IProps>(function List(
 			className={classNames(
 				'nav nav-tabs',
 				{'nav-justified': justified},
+				{[`nav-tabs-${displayType}`]: displayType === 'light'},
 				className
 			)}
 			ref={tabsRef}

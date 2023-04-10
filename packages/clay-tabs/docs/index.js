@@ -63,6 +63,68 @@ const Tabs = () => {
 	return <Editor code={tabsCode} imports={tabsImportsCode} scope={scope} />;
 };
 
+const tabsLightImportsCode = `import ClayTabs from '@clayui/tabs';
+`;
+
+const tabsLightCode = `const Component = () => {
+	const [active, setActive] = useState(0);
+
+	return (
+		<>
+			<ClayTabs active={active} displayType="light" onActiveChange={setActive}>
+				<ClayTabs.List>
+					<ClayTabs.Item
+						innerProps={{
+							'aria-controls': 'tabpanel-1',
+						}}
+					>
+						Tab 1
+					</ClayTabs.Item>
+					<ClayTabs.Item
+						innerProps={{
+							'aria-controls': 'tabpanel-2',
+						}}
+					>
+						Tab 2
+					</ClayTabs.Item>
+					<ClayTabs.Item
+						innerProps={{
+							'aria-controls': 'tabpanel-3',
+						}}
+					>
+						Tab 3
+					</ClayTabs.Item>
+				</ClayTabs.List>
+				<ClayTabs.Panels>
+					<ClayTabs.TabPanel aria-labelledby="tab-1">
+						1. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+					</ClayTabs.TabPanel>
+					<ClayTabs.TabPanel aria-labelledby="tab-2">
+						2. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+					</ClayTabs.TabPanel>
+					<ClayTabs.TabPanel aria-labelledby="tab-3">
+						3. Proin efficitur imperdiet dolor, a iaculis orci lacinia eu.
+					</ClayTabs.TabPanel>
+				</ClayTabs.Panels>
+			</ClayTabs>
+		</>
+	);
+};
+
+render(<Component />)`;
+
+const TabsLight = () => {
+	const scope = {ClayTabs};
+
+	return (
+		<Editor
+			code={tabsLightCode}
+			imports={tabsLightImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
 const modernTabsCode = `const Component = () => {
 	const [active, setActive] = useState(0);
 
@@ -291,4 +353,4 @@ const TabsDropdown = () => {
 	);
 };
 
-export {Tabs, ModernTabs, TabsDropdown};
+export {Tabs, TabsLight, ModernTabs, TabsDropdown};
