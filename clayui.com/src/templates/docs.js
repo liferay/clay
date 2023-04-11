@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Heading} from '@clayui/core';
 import {ClayIconSpriteContext} from '@clayui/icon/src';
 import ClayLink, {ClayLinkContext} from '@clayui/link';
 import NavigationBar from '@clayui/navigation-bar';
@@ -257,15 +258,9 @@ export default function Documentation(props) {
 											<div className="clay-site-container container-fluid">
 												<div className="row">
 													<div className="col-12">
-														<h1 className="docs-title">
+														<Heading level={1}>
 															{frontmatter.title}
-														</h1>
-
-														{frontmatter.packageNpm && (
-															<p className="docs-subtitle">
-																{`yarn add ${frontmatter.packageNpm}`}
-															</p>
-														)}
+														</Heading>
 
 														{frontmatter.description && (
 															<p className="docs-subtitle">
@@ -273,6 +268,32 @@ export default function Documentation(props) {
 																	frontmatter.description
 																}
 															</p>
+														)}
+
+														{frontmatter.packageNpm && (
+															<table className="docs-table table">
+																<tbody>
+																	<tr>
+																		<th>
+																			install
+																		</th>
+																		<td>{`yarn add ${frontmatter.packageNpm}`}</td>
+																	</tr>
+
+																	{fields.packageVersion && (
+																		<tr>
+																			<th>
+																				version
+																			</th>
+																			<td>
+																				{
+																					fields.packageVersion
+																				}
+																			</td>
+																		</tr>
+																	)}
+																</tbody>
+															</table>
 														)}
 													</div>
 													<div className="col-12">
@@ -292,7 +313,9 @@ export default function Documentation(props) {
 																				name
 																			}
 																		>
-																			<ClayLink href={`/${href}`}>
+																			<ClayLink
+																				href={`/${href}`}
+																			>
 																				{
 																					name
 																				}
