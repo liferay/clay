@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Heading} from '@clayui/core';
 import {ClayIconSpriteContext} from '@clayui/icon/src';
-import {ClayLinkContext} from '@clayui/link';
-import ClayTabs from '@clayui/tabs';
+import ClayLink, {ClayLinkContext} from '@clayui/link';
+import NavigationBar from '@clayui/navigation-bar';
 import {ClayTooltipProvider} from '@clayui/tooltip';
 import {MDXProvider} from '@mdx-js/react';
 import {Link, graphql} from 'gatsby';
@@ -257,15 +258,9 @@ export default function Documentation(props) {
 											<div className="clay-site-container container-fluid">
 												<div className="row">
 													<div className="col-12">
-														<h1 className="docs-title">
+														<Heading level={1}>
 															{frontmatter.title}
-														</h1>
-
-														{frontmatter.packageNpm && (
-															<p className="docs-subtitle">
-																{`yarn add ${frontmatter.packageNpm}`}
-															</p>
-														)}
+														</Heading>
 
 														{frontmatter.description && (
 															<p className="docs-subtitle">
@@ -274,37 +269,61 @@ export default function Documentation(props) {
 																}
 															</p>
 														)}
+
+														{frontmatter.packageNpm && (
+															<table className="docs-table table">
+																<tbody>
+																	<tr>
+																		<th>
+																			install
+																		</th>
+																		<td>{`yarn add ${frontmatter.packageNpm}`}</td>
+																	</tr>
+
+																	{fields.packageVersion && (
+																		<tr>
+																			<th>
+																				version
+																			</th>
+																			<td>
+																				{
+																					fields.packageVersion
+																				}
+																			</td>
+																		</tr>
+																	)}
+																</tbody>
+															</table>
+														)}
 													</div>
 													<div className="col-12">
 														{tabs.length > 0 && (
-															<ClayTabs>
+															<NavigationBar>
 																{tabs.map(
 																	({
 																		href,
 																		name,
 																	}) => (
-																		<ClayTabs.Item
+																		<NavigationBar.Item
 																			active={
 																				`/${href}` ===
 																				location.pathname
 																			}
-																			href={`/${href}`}
 																			key={
 																				name
 																			}
 																		>
-																			<span
-																				className="c-inner"
-																				tabIndex="-1"
+																			<ClayLink
+																				href={`/${href}`}
 																			>
 																				{
 																					name
 																				}
-																			</span>
-																		</ClayTabs.Item>
+																			</ClayLink>
+																		</NavigationBar.Item>
 																	)
 																)}
-															</ClayTabs>
+															</NavigationBar>
 														)}
 													</div>
 												</div>
