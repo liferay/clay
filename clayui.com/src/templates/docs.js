@@ -4,8 +4,8 @@
  */
 
 import {ClayIconSpriteContext} from '@clayui/icon/src';
-import {ClayLinkContext} from '@clayui/link';
-import ClayTabs from '@clayui/tabs';
+import ClayLink, {ClayLinkContext} from '@clayui/link';
+import NavigationBar from '@clayui/navigation-bar';
 import {ClayTooltipProvider} from '@clayui/tooltip';
 import {MDXProvider} from '@mdx-js/react';
 import {Link, graphql} from 'gatsby';
@@ -277,34 +277,30 @@ export default function Documentation(props) {
 													</div>
 													<div className="col-12">
 														{tabs.length > 0 && (
-															<ClayTabs>
+															<NavigationBar>
 																{tabs.map(
 																	({
 																		href,
 																		name,
 																	}) => (
-																		<ClayTabs.Item
+																		<NavigationBar.Item
 																			active={
 																				`/${href}` ===
 																				location.pathname
 																			}
-																			href={`/${href}`}
 																			key={
 																				name
 																			}
 																		>
-																			<span
-																				className="c-inner"
-																				tabIndex="-1"
-																			>
+																			<ClayLink href={`/${href}`}>
 																				{
 																					name
 																				}
-																			</span>
-																		</ClayTabs.Item>
+																			</ClayLink>
+																		</NavigationBar.Item>
 																	)
 																)}
-															</ClayTabs>
+															</NavigationBar>
 														)}
 													</div>
 												</div>
