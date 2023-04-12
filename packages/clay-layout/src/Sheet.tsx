@@ -90,6 +90,30 @@ const SheetSection = React.forwardRef<HTMLElement, IContainerProps>(
 
 SheetSection.displayName = 'ClaySheetSection';
 
+const SheetRow = React.forwardRef<HTMLElement, IContainerProps>(
+	(
+		{
+			children,
+			className,
+			containerElement: ContainerElement = 'div',
+			...otherProps
+		}: IContainerProps,
+		ref
+	) => {
+		return (
+			<ContainerElement
+				{...otherProps}
+				className={classNames(className, 'sheet-row')}
+				ref={ref}
+			>
+				{children}
+			</ContainerElement>
+		);
+	}
+);
+
+SheetRow.displayName = 'ClaySheetRow';
+
 export interface IProps extends IContainerProps {
 	/**
 	 * Setting this to sets a max-width on the sheet
@@ -124,4 +148,4 @@ const Sheet = React.forwardRef<HTMLElement, IProps>(
 
 Sheet.displayName = 'ClaySheet';
 
-export {Sheet, SheetFooter, SheetHeader, SheetSection};
+export {Sheet, SheetFooter, SheetHeader, SheetSection, SheetRow};

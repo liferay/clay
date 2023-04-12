@@ -10,7 +10,7 @@ import Container from './Container';
 import ContainerFluid from './ContainerFluid';
 import {ContentCol, ContentRow, ContentSection} from './Content';
 import Row from './Row';
-import {Sheet, SheetFooter, SheetHeader, SheetSection} from './Sheet';
+import {Sheet, SheetFooter, SheetHeader, SheetRow, SheetSection} from './Sheet';
 
 export {
 	Col,
@@ -24,6 +24,7 @@ export {
 	SheetFooter,
 	SheetHeader,
 	SheetSection,
+	SheetRow,
 };
 
 function ClayLayout(): null & {
@@ -38,6 +39,7 @@ function ClayLayout(): null & {
 	SheetFooter: typeof SheetFooter;
 	SheetHeader: typeof SheetHeader;
 	SheetSection: typeof SheetSection;
+	SheetRow: typeof SheetRow;
 };
 
 function ClayLayout() {
@@ -60,5 +62,6 @@ ClayLayout.Sheet = Sheet;
 ClayLayout.SheetFooter = SheetFooter;
 ClayLayout.SheetHeader = SheetHeader;
 ClayLayout.SheetSection = SheetSection;
+ClayLayout.SheetRow = SheetRow;
 
 export default ClayLayout;
