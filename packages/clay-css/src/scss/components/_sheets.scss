@@ -64,6 +64,45 @@
 	}
 }
 
+.sheet-row {
+	@include clay-css($sheet-row);
+
+	@if (map-get($sheet-row, media-breakpoint-up)) {
+		@each $breakpoint in map-keys(map-get($sheet-row, media-breakpoint-up))
+		{
+			$media-breakpoint-up: map-deep-get(
+				$sheet-row,
+				media-breakpoint-up,
+				$breakpoint
+			);
+
+			@if ($breakpoint) {
+				@include media-breakpoint-up($breakpoint) {
+					@include clay-css($media-breakpoint-up);
+				}
+			}
+		}
+	}
+
+	@if (map-get($sheet-row, media-breakpoint-down)) {
+		@each $breakpoint
+			in map-keys(map-get($sheet-row, media-breakpoint-down))
+		{
+			$media-breakpoint-down: map-deep-get(
+				$sheet-row,
+				media-breakpoint-down,
+				$breakpoint
+			);
+
+			@if ($breakpoint) {
+				@include media-breakpoint-down($breakpoint) {
+					@include clay-css($media-breakpoint-down);
+				}
+			}
+		}
+	}
+}
+
 .sheet-header {
 	margin-bottom: $sheet-header-margin-bottom;
 

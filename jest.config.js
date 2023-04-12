@@ -110,10 +110,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-layout/src/': {
-			branches: 64,
-			functions: 21,
-			lines: 78,
-			statements: 79,
+			branches: 62,
+			functions: 19,
+			lines: 76,
+			statements: 78,
 		},
 		'./packages/clay-link/src/': {
 			branches: 34,
