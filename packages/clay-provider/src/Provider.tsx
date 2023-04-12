@@ -7,12 +7,19 @@ import {ClayIconSpriteContext} from '@clayui/icon';
 import React, {useContext, useMemo} from 'react';
 
 import {DataClient} from './DataClient';
+import {useReducedMotion} from './useReducedMotion';
 
-interface IProviderProps extends Omit<IProviderContext, 'client'> {
+interface IProviderProps
+	extends Omit<IProviderContext, 'client' | 'prefersReducedMotion'> {
 	/**
 	 * The content of the Provider.
 	 */
 	children: React.ReactNode;
+
+	/**
+	 * Defines the transition for the entire tree.
+	 */
+	reducedMotion?: 'user' | 'always' | 'never';
 
 	/**
 	 * Path to the location of the spritemap resource.
@@ -30,6 +37,8 @@ interface IProviderProps extends Omit<IProviderContext, 'client'> {
 interface IProviderContext {
 	client: DataClient;
 
+	prefersReducedMotion?: boolean;
+
 	/**
 	 * The theme corresponds to a CSS class to scope the application.
 	 */
@@ -42,6 +51,7 @@ Context.displayName = 'ClayProviderContext';
 
 export const Provider = ({
 	children,
+	reducedMotion = 'user',
 	spritemap,
 	storageMaxSize = 20,
 	theme,
@@ -54,8 +64,17 @@ export const Provider = ({
 		[storageMaxSize]
 	);
 
+	const isReducedMotion = useReducedMotion(reducedMotion);
+
 	return (
-		<Context.Provider value={{client, theme, ...otherProps}}>
+		<Context.Provider
+			value={{
+				client,
+				prefersReducedMotion: isReducedMotion,
+				theme,
+				...otherProps,
+			}}
+		>
 			<ClayIconSpriteContext.Provider value={spritemap}>
 				{theme ? <div className={theme}>{children}</div> : children}
 			</ClayIconSpriteContext.Provider>
