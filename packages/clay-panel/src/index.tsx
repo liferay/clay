@@ -5,6 +5,7 @@
 
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
+import {useProvider} from '@clayui/provider';
 import {
 	InternalDispatch,
 	setElementFullHeight,
@@ -97,6 +98,8 @@ function ClayPanel({
 		onChange: onExpandedChange,
 		value: expanded,
 	});
+
+	const {prefersReducedMotion} = useProvider();
 
 	return (
 		<div
@@ -192,7 +195,7 @@ function ClayPanel({
 							element.style.height = '';
 						}}
 						role="tabpanel"
-						timeout={250}
+						timeout={!prefersReducedMotion ? 250 : 0}
 					>
 						<div>{children}</div>
 					</CSSTransition>
