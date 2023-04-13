@@ -6,9 +6,10 @@
 import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
+import {useProvider} from '@clayui/provider';
 import {setElementFullHeight} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
@@ -59,7 +60,9 @@ function ClayNavigationBar({
 	triggerLabel,
 	...otherProps
 }: IProps) {
-	const [expanded, setExpanded] = React.useState(false);
+	const [expanded, setExpanded] = useState(false);
+
+	const {prefersReducedMotion} = useProvider();
 
 	const activeElementsCount = React.Children.map(
 		children,
@@ -133,7 +136,7 @@ function ClayNavigationBar({
 						onExiting={(element) =>
 							element.setAttribute('style', `height: 0px`)
 						}
-						timeout={250}
+						timeout={prefersReducedMotion ? 0 : 250}
 					>
 						<div>
 							<ClayLayout.ContainerFluid>

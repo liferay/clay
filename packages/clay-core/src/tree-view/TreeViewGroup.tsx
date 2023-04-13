@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import {setElementFullHeight} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -39,6 +40,8 @@ export function TreeViewGroup<T extends Record<any, any>>({
 }: ITreeViewGroupProps<T>) {
 	const {expandedKeys} = useTreeViewContext();
 
+	const {prefersReducedMotion} = useProvider();
+
 	const item = useItem();
 
 	return (
@@ -71,7 +74,7 @@ export function TreeViewGroup<T extends Record<any, any>>({
 			onExiting={(element) =>
 				element.setAttribute('style', 'height: 0px')
 			}
-			timeout={250}
+			timeout={prefersReducedMotion ? 0 : 250}
 			unmountOnExit
 		>
 			<div>
