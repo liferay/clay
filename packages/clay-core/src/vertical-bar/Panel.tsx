@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import classNames from 'classnames';
 import React, {useContext, useEffect, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
@@ -58,6 +59,8 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 
 	const previousActivePanelRef = useRef<React.Key | null>(null);
 
+	const {prefersReducedMotion} = useProvider();
+
 	const isFirst = useIsFirstRender();
 
 	const isPanelOpen = () => {
@@ -102,7 +105,9 @@ export function Panel({children, keyValue = null, tabIndex}: Props) {
 			}}
 			role="tabpanel"
 			tabIndex={tabIndex}
-			timeout={panelNext ? 0 : {enter: 300, exit: 200}}
+			timeout={
+				panelNext || prefersReducedMotion ? 0 : {enter: 300, exit: 200}
+			}
 			unmountOnExit
 		>
 			<div
