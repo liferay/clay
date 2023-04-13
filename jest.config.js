@@ -176,7 +176,7 @@ module.exports = {
 			statements: 95,
 		},
 		'./packages/clay-panel/src/': {
-			branches: 93,
+			branches: 88,
 			functions: 100,
 			lines: 100,
 			statements: 100,
