@@ -616,6 +616,66 @@
 				@include clay-css(map-get($map, after));
 			}
 
+			&:link {
+				$_link: setter(map-get($map, link), ());
+
+				@include clay-css($_link);
+
+				&::before {
+					@include clay-css(map-get($_link, before));
+				}
+
+				&::after {
+					@include clay-css(map-get($_link, after));
+				}
+
+				.inline-item {
+					@include clay-css(map-get($_link, inline-item));
+				}
+
+				.inline-item-before {
+					@include clay-css(map-get($_link, inline-item-before));
+				}
+
+				.inline-item-middle {
+					@include clay-css(map-get($_link, inline-item-middle));
+				}
+
+				.inline-item-after {
+					@include clay-css(map-get($_link, inline-item-after));
+				}
+			}
+
+			&:visited {
+				$_visited: setter(map-get($map, visited), ());
+
+				@include clay-css($_visited);
+
+				&::before {
+					@include clay-css(map-get($_visited, before));
+				}
+
+				&::after {
+					@include clay-css(map-get($_visited, after));
+				}
+
+				.inline-item {
+					@include clay-css(map-get($_visited, inline-item));
+				}
+
+				.inline-item-before {
+					@include clay-css(map-get($_visited, inline-item-before));
+				}
+
+				.inline-item-middle {
+					@include clay-css(map-get($_visited, inline-item-middle));
+				}
+
+				.inline-item-after {
+					@include clay-css(map-get($_visited, inline-item-after));
+				}
+			}
+
 			&:hover {
 				@include clay-css($hover);
 

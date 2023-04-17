@@ -549,6 +549,42 @@
 		@if ($enabled) {
 			@include clay-css($base);
 
+			&:link {
+				$_link: setter(map-get($map, link), ());
+
+				@include clay-css($_link);
+
+				&::before {
+					@include clay-css(map-get($_link, before));
+				}
+
+				&::after {
+					@include clay-css(map-get($_link, after));
+				}
+
+				.c-kbd-inline {
+					@include clay-css(map-get($_link, c-kbd-inline));
+				}
+			}
+
+			&:visited {
+				$_visited: setter(map-get($map, visited), ());
+
+				@include clay-css($_visited);
+
+				&::before {
+					@include clay-css(map-get($_visited, before));
+				}
+
+				&::after {
+					@include clay-css(map-get($_visited, after));
+				}
+
+				.c-kbd-inline {
+					@include clay-css(map-get($_visited, c-kbd-inline));
+				}
+			}
+
 			&:hover,
 			&.hover {
 				@include clay-css($hover);
