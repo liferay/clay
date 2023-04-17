@@ -78,44 +78,46 @@ caption {
 // Table Row Backgrounds
 
 @each $color, $value in $table-row-theme-colors {
-	.table {
-		.table-#{$color} {
-			$table-row: setter($value, ());
+	@if not clay-is-map-unset($value) {
+		.table {
+			.table-#{$color} {
+				$table-row: setter($value, ());
 
-			&,
-			> th,
-			> td {
-				@include clay-css($table-row);
+				&,
+				> th,
+				> td {
+					@include clay-css($table-row);
 
-				.table-title {
-					@include clay-text-typography(
-						map-get($table-row, table-title)
-					);
+					.table-title {
+						@include clay-text-typography(
+							map-get($table-row, table-title)
+						);
+					}
+				}
+
+				th,
+				td,
+				thead th,
+				tbody + tbody {
+					border-color: map-get($table-row, border-color);
 				}
 			}
-
-			th,
-			td,
-			thead th,
-			tbody + tbody {
-				border-color: map-get($table-row, border-color);
-			}
 		}
-	}
 
-	// Hover states for `.table-hover`
-	// Note: this is not available for cells or rows within `thead` or `tfoot`.
+		// Hover states for `.table-hover`
+		// Note: this is not available for cells or rows within `thead` or `tfoot`.
 
-	.table-hover {
-		$hover: setter(map-get($value, hover), ());
+		.table-hover {
+			$hover: setter(map-get($value, hover), ());
 
-		.table-#{$color} {
-			&:hover {
-				@include clay-css($hover);
+			.table-#{$color} {
+				&:hover {
+					@include clay-css($hover);
 
-				> td,
-				> th {
-					background-color: map-get($hover, background-color);
+					> td,
+					> th {
+						background-color: map-get($hover, background-color);
+					}
 				}
 			}
 		}

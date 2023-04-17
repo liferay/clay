@@ -25,31 +25,35 @@
 // Background
 
 @each $color, $value in $bg-theme-colors {
-	$selector: if(
-		starts-with($color, '.') or
-			starts-with($color, '#') or
-			starts-with($color, '%'),
-		$color,
-		str-insert($color, '.bg-', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			str-insert($color, '.bg-', 1)
+		);
 
-	#{$selector} {
-		@include clay-css($value);
-	}
+		#{$selector} {
+			@include clay-css($value);
+		}
 
-	a#{$selector},
-	button#{$selector} {
-		&:hover,
-		&:focus {
-			@include clay-css(map-get($value, hover));
+		a#{$selector},
+		button#{$selector} {
+			&:hover,
+			&:focus {
+				@include clay-css(map-get($value, hover));
+			}
 		}
 	}
 }
 
 @if $enable-gradients {
 	@each $color, $value in $bg-gradient-theme-colors {
-		.bg-gradient-#{$color} {
-			@include clay-css($value);
+		@if not clay-is-map-unset($value) {
+			.bg-gradient-#{$color} {
+				@include clay-css($value);
+			}
 		}
 	}
 }
@@ -97,16 +101,18 @@
 }
 
 @each $color, $value in $border-theme-colors {
-	$selector: if(
-		starts-with($color, '.') or
-			starts-with($color, '#') or
-			starts-with($color, '%'),
-		$color,
-		str-insert($color, '.border-', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			str-insert($color, '.border-', 1)
+		);
 
-	#{$selector} {
-		@include clay-css($value);
+		#{$selector} {
+			@include clay-css($value);
+		}
 	}
 }
 
@@ -732,16 +738,18 @@
 // Font Sizes
 
 @each $selector, $value in $font-sizes {
-	$selector: if(
-		starts-with($selector, '.') or
-			starts-with($selector, '#') or
-			starts-with($selector, '%'),
-		$selector,
-		str-insert($selector, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($selector, '.') or
+				starts-with($selector, '#') or
+				starts-with($selector, '%'),
+			$selector,
+			str-insert($selector, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-css($value);
+		#{$selector} {
+			@include clay-css($value);
+		}
 	}
 }
 
@@ -752,22 +760,24 @@
 }
 
 @each $color, $value in $text-theme-colors {
-	$selector: if(
-		starts-with($color, '.') or
-			starts-with($color, '#') or
-			starts-with($color, '%'),
-		$color,
-		str-insert($color, '.text-', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			str-insert($color, '.text-', 1)
+		);
 
-	#{$selector} {
-		@include clay-css($value);
-	}
+		#{$selector} {
+			@include clay-css($value);
+		}
 
-	a#{$selector} {
-		&:hover,
-		&:focus {
-			@include clay-css(map-get($value, hover));
+		a#{$selector} {
+			&:hover,
+			&:focus {
+				@include clay-css(map-get($value, hover));
+			}
 		}
 	}
 }
@@ -783,16 +793,18 @@
 }
 
 @each $key, $value in $text-decorations {
-	$selector: if(
-		starts-with($key, '.') or
-			starts-with($key, '#') or
-			starts-with($key, '%'),
-		$key,
-		str-insert($key, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($key, '.') or
+				starts-with($key, '#') or
+				starts-with($key, '%'),
+			$key,
+			str-insert($key, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-link($value);
+		#{$selector} {
+			@include clay-link($value);
+		}
 	}
 }
 
