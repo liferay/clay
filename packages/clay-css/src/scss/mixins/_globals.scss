@@ -260,6 +260,25 @@
 					}
 
 					appearance: $value;
+				} @else if ($key == 'animation') {
+					animation: $value;
+
+					@if ($value != 'none' and $value != null) {
+						@at-root {
+							$selector: if(
+								variable-exists(cadmin-selector),
+								clay-insert-after(
+									'.cadmin ',
+									'.c-prefers-reduced-motion '
+								),
+								'.c-prefers-reduced-motion &'
+							);
+
+							#{$selector} {
+								animation: none;
+							}
+						}
+					}
 				} @else if ($key == 'content') {
 					content: $value;
 				} @else if ($key == 'word-wrap') {
@@ -277,7 +296,16 @@
 						}
 
 						@at-root {
-							.c-prefers-reduced-motion & {
+							$selector: if(
+								variable-exists(cadmin-selector),
+								clay-insert-after(
+									'.cadmin ',
+									'.c-prefers-reduced-motion '
+								),
+								'.c-prefers-reduced-motion &'
+							);
+
+							#{$selector} {
 								transition: none;
 							}
 						}
