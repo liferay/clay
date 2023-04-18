@@ -39,6 +39,7 @@ export function useCollection<
 	filterKey,
 	itemContainer: ItemContainer,
 	items,
+	notFound,
 	parentKey,
 	passthroughKey = true,
 	publicApi,
@@ -201,10 +202,15 @@ export function useCollection<
 		};
 	}, []);
 
-	const collection = useMemo(
-		() => performCollection({children, items}),
-		[children, performCollection, items]
-	);
+	const collection = useMemo(() => {
+		const list = performCollection({children, items});
+
+		if (list.length === 0 && filter) {
+			return notFound;
+		}
+
+		return list;
+	}, [children, performCollection, items]);
 
 	return {
 		collection: (

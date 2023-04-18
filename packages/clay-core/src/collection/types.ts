@@ -84,5 +84,10 @@ export type Props<P, K> = {
 	 */
 	itemContainer?: (props: any) => JSX.Element | null;
 
+	/**
+	 * Renders an element when there is no item matching the list of items.
+	 */
+	notFound?: JSX.Element;
+
 	suppressTextValueWarning?: boolean;
 };
