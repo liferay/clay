@@ -140,7 +140,20 @@
 	@return nth($selector-list, length($selector-list));
 }
 
-/// A function that inserts a CSS selector at a specific place (e.g., clay-insert-at('.container', '#content ', '#wrapper .container .row')) will return `#wrapper #content .container .row`.
+/// A function that appends to a specific place in a CSS selector (e.g., clay-insert-after('.container ', '.myselector ', '.container .row .col-md-12')) will return `.container .myselector .row .col-md-12`.
+/// @param {String} $location - The string to target
+/// @param {String} $insert - The string to insert after the location
+/// @param {String} $selector - The full selector
+
+@function clay-insert-after($location, $insert, $selector: &) {
+	@return clay-str-replace(
+		'#{$selector}',
+		'#{$location}',
+		'#{$location}#{$insert}'
+	);
+}
+
+/// A function that prepends to a specific place in a CSS selector (e.g., clay-insert-before('.container ', '.myselector ', '.container .row .col-md-12')) will return `.myselector .container .row .col-md-12`.
 /// @param {String} $location - The string to target
 /// @param {String} $insert - The string to insert before the location
 /// @param {String} $selector - The full selector
