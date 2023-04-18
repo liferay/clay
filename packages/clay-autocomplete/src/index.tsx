@@ -8,7 +8,7 @@ import {FocusScope} from '@clayui/shared';
 import React from 'react';
 
 import {Autocomplete} from './Autocomplete';
-import Context from './Context';
+import {LegacyContext} from './Context';
 import DropDown from './DropDown';
 import Input from './Input';
 import Item from './Item';
@@ -40,7 +40,7 @@ const hasItems = (children?: React.ReactNode) => {
 		if (
 			React.isValidElement(child) &&
 			// @ts-ignore
-			child.type.displayName === 'ClayAutocompleteItem'
+			child.type.displayName === 'Item'
 		) {
 			return true;
 		}
@@ -72,8 +72,10 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps<any>>(
 		const isNewBehavior =
 			hasItems(children).length >= 1 || children instanceof Function;
 
+		const Container = isNewBehavior ? React.Fragment : FocusScope;
+
 		return (
-			<FocusScope>
+			<Container>
 				<Component
 					{...(isNewBehavior ? {} : otherProps)}
 					className={className}
@@ -98,7 +100,7 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps<any>>(
 							{children}
 						</Autocomplete>
 					) : (
-						<Context.Provider
+						<LegacyContext.Provider
 							value={{
 								containerElementRef,
 								loading,
@@ -107,10 +109,10 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps<any>>(
 							}}
 						>
 							{children}
-						</Context.Provider>
+						</LegacyContext.Provider>
 					)}
 				</Component>
-			</FocusScope>
+			</Container>
 		);
 	}
 );

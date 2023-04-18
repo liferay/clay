@@ -10,15 +10,20 @@ import LoadingIndicator from '@clayui/loading-indicator';
 import {
 	InternalDispatch,
 	Keys,
+	Overlay,
 	useDebounce,
 	useId,
 	useInternalState,
+	useNavigation,
+	useOverlayPosition,
 } from '@clayui/shared';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import {AutocompleteContext} from './Context';
+
 import type {ICollectionProps} from '@clayui/core';
 
-const {Collection} = __NOT_PUBLIC_COLLECTION;
+const {Collection, useCollection} = __NOT_PUBLIC_COLLECTION;
 
 type Messages = {
 	loading: string;
@@ -45,6 +50,7 @@ export interface IProps<T>
 
 	/**
 	 * Flag to align the DropDown menu within the viewport.
+	 * @deprecated since v3.92.0 - it is no longer necessary..
 	 */
 	alignmentByViewport?: boolean;
 
@@ -63,6 +69,11 @@ export interface IProps<T>
 	 * The initial value of the input (uncontrolled).
 	 */
 	defaultValue?: string;
+
+	/**
+	 * Direction the menu will render relative to the Autocomplete.
+	 */
+	direction?: 'bottom' | 'top';
 
 	/**
 	 * Defines the name of the property key that is used in the items filter
@@ -122,12 +133,13 @@ const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 export function Autocomplete<T extends Record<string, any>>({
 	active: externalActive,
-	alignmentByViewport,
+	alignmentByViewport: _,
 	children,
 	containerElementRef,
 	defaultActive,
 	defaultItems,
 	defaultValue,
+	direction,
 	filterKey,
 	items: externalItems,
 	loadingState,
@@ -136,23 +148,10 @@ export function Autocomplete<T extends Record<string, any>>({
 	onActiveChange,
 	onChange,
 	onItemsChange,
-	onLoadMore,
+	onLoadMore: _onLoadMore,
 	value: externalValue,
 	...otherProps
 }: IProps<T>) {
-	const inputRef = useRef<HTMLInputElement>(null);
-	const menuRef = useRef<HTMLDivElement>(null);
-
-	const currentItemSelected = useRef<string>('');
-
-	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
-
-	const debouncedLoadingChange = useDebounce(isLoading, 500);
-
-	const cursorsRef = useRef<Map<string, boolean>>(new Map());
-
-	const [infiniteScroll, setInfiniteScroll] = useState(Boolean(onLoadMore));
-
 	const [items, , isItemsUncontrolled] = useInternalState({
 		defaultName: 'defaultItems',
 		defaultValue: defaultItems,
@@ -180,38 +179,21 @@ export function Autocomplete<T extends Record<string, any>>({
 		value: externalActive,
 	});
 
+	const inputRef = useRef<HTMLInputElement>(null);
+	const menuRef = useRef<HTMLDivElement>(null);
+
+	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
+	const debouncedLoadingChange = useDebounce(isLoading, 500);
+
+	const currentItemSelected = useRef<string>('');
+
 	const ariaControlsId = useId();
-
-	useEffect(() => {
-		if (active) {
-			const onKeyDown = (event: KeyboardEvent) => {
-				if (
-					inputRef.current &&
-					(event.key === Keys.Left || event.key === Keys.Right)
-				) {
-					inputRef.current.focus();
-				}
-			};
-
-			document.addEventListener('keydown', onKeyDown, true);
-
-			return () => {
-				document.removeEventListener('keydown', onKeyDown, true);
-			};
-		}
-	}, [active]);
 
 	useEffect(() => {
 		if (active === false) {
 			setValue(currentItemSelected.current);
 		}
 	}, [active]);
-
-	useEffect(() => {
-		setInfiniteScroll(
-			Boolean(onLoadMore) && !cursorsRef.current.has(value)
-		);
-	}, [value]);
 
 	const filterFn = useCallback(
 		(itemValue: string) =>
@@ -235,12 +217,88 @@ export function Autocomplete<T extends Record<string, any>>({
 		);
 	}, [debouncedLoadingChange, isItemsUncontrolled, items, filterFn]);
 
-	const isNotFound = filteredItems?.length === 0;
+	// We initialize the collection in the picker and then pass it down so the
+	// collection can be cached even before the listbox is not mounted.
+	const collection = useCollection<T, unknown>({
+		children,
+		filter: filterFn,
+		filterKey: 'value',
+		itemContainer: ({children, keyValue}: ItemProps<any>) => {
+			const itemValue = children.props.value ?? children.props.children;
+
+			return React.cloneElement(children, {
+				keyValue,
+				match: value,
+				onClick: (
+					event: React.MouseEvent<
+						HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
+					>
+				) => {
+					if (children.props.onClick) {
+						children.props.onClick(event);
+					}
+
+					currentItemSelected.current = itemValue;
+					setActive(false);
+					setValue(itemValue);
+
+					inputRef.current?.focus();
+				},
+				roleItem: 'option',
+			}) as React.ReactElement;
+		},
+		items: filteredItems,
+		notFound: (
+			<DropDown.Item
+				aria-disabled="true"
+				className="disabled"
+				roleItem="option"
+			>
+				{messages.notFound}
+			</DropDown.Item>
+		),
+		suppressTextValueWarning: false,
+	});
+
+	const [activeDescendant, setActiveDescendant] = useState<string>('');
+
+	useOverlayPosition(
+		{
+			alignmentByViewport: true,
+			alignmentPosition: direction === 'bottom' ? 5 : 7,
+			autoBestAlign: true,
+			isOpen: active,
+			ref: menuRef,
+			triggerRef: containerElementRef,
+		},
+		[active, children]
+	);
+
+	const {navigationProps} = useNavigation({
+		activation: 'manual',
+		active: activeDescendant,
+		containerRef: menuRef,
+		loop: true,
+		onNavigate: (item) => setActiveDescendant(item.getAttribute('id')!),
+		orientation: 'vertical',
+		visible: active,
+	});
+
+	const onPress = useCallback(() => {
+		if (menuRef.current && activeDescendant) {
+			const item = document.getElementById(activeDescendant);
+
+			if (item) {
+				item.click();
+			}
+		}
+	}, [activeDescendant]);
 
 	return (
 		<>
 			<Input
 				{...otherProps}
+				aria-activedescendant={active ? activeDescendant : undefined}
 				aria-autocomplete="list"
 				aria-controls={ariaControlsId}
 				aria-expanded={active}
@@ -256,6 +314,10 @@ export function Autocomplete<T extends Record<string, any>>({
 
 					setActive(true);
 					setValue(value);
+
+					if (activeDescendant) {
+						setActiveDescendant('');
+					}
 				}}
 				onFocus={(event) => {
 					if (otherProps.onFocus) {
@@ -271,14 +333,63 @@ export function Autocomplete<T extends Record<string, any>>({
 						otherProps.onKeyDown(event);
 					}
 
-					if (event.key === Keys.Enter) {
-						setActive(false);
-					}
+					switch (event.key) {
+						case Keys.Tab:
+						case Keys.Esc: {
+							setActive(false);
+							break;
+						}
+						case Keys.Enter: {
+							setActive(false);
 
-					if (!active && event.altKey && event.key === Keys.Down) {
-						event.stopPropagation();
+							if (active && activeDescendant) {
+								onPress();
+							}
 
-						setActive(true);
+							if (!active && event.key === Keys.Esc) {
+								setValue('');
+							}
+							break;
+						}
+						case Keys.Home:
+						case Keys.End: {
+							setActiveDescendant('');
+							break;
+						}
+						case Keys.Up:
+						case Keys.Down: {
+							event.preventDefault();
+
+							if (
+								!active &&
+								event.altKey &&
+								event.key === Keys.Down
+							) {
+								event.stopPropagation();
+								setActive(true);
+
+								return;
+							}
+
+							if (!activeDescendant) {
+								const item =
+									event.key === Keys.Down
+										? collection.getFirstItem()
+										: collection.getLastItem();
+
+								setActiveDescendant(item.key);
+							}
+
+							if (!active) {
+								return setActive(true);
+							}
+
+							navigationProps.onKeyDown(event);
+							break;
+						}
+						default:
+							navigationProps.onKeyDown(event);
+							break;
 					}
 				}}
 				ref={inputRef}
@@ -287,92 +398,60 @@ export function Autocomplete<T extends Record<string, any>>({
 				value={value}
 			/>
 
-			<DropDown.Menu
-				active={active}
-				alignElementRef={containerElementRef}
-				alignmentByViewport={alignmentByViewport}
-				autoBestAlign={!!alignmentByViewport}
-				className="autocomplete-dropdown-menu"
-				id={ariaControlsId}
-				onActiveChange={setActive}
-				ref={menuRef}
-				style={{
-					maxWidth: 'none',
-					width: `${containerElementRef.current?.clientWidth}px`,
-				}}
-				suppress={[menuRef, inputRef]}
-				triggerRef={inputRef}
-			>
-				<Collection<T>
-					aria-label={otherProps['aria-label']}
-					aria-labelledby={otherProps['aria-labelledby']}
-					as={DropDown.ItemList}
-					estimateSize={37}
-					filter={isNotFound ? undefined : filterFn}
-					filterKey="value"
-					infiniteScroll={infiniteScroll}
-					isLoading={loadingState === 1}
-					itemContainer={({children}: ItemProps<any>) => {
-						const itemValue =
-							children.props.value ?? children.props.children;
-
-						return React.cloneElement(children, {
-							match: value,
-							onClick: (
-								event: React.MouseEvent<
-									| HTMLSpanElement
-									| HTMLButtonElement
-									| HTMLAnchorElement
-								>
-							) => {
-								if (children.props.onClick) {
-									children.props.onClick(event);
-								}
-
-								currentItemSelected.current = itemValue;
-								setActive(false);
-								setValue(itemValue);
-
-								inputRef.current?.focus();
-							},
-							roleItem: 'option',
-						}) as React.ReactElement;
+			{active && (
+				<Overlay
+					isCloseOnInteractOutside
+					isKeyboardDismiss
+					isOpen
+					menuRef={menuRef}
+					onClose={() => {
+						setActiveDescendant('');
+						setActive(false);
 					}}
-					items={filteredItems}
-					onBottom={() => {
-						if (onLoadMore) {
-							const hasItems = onLoadMore();
-
-							if (hasItems === null) {
-								cursorsRef.current.set(value, true);
-							}
-						}
-					}}
-					parentRef={menuRef}
-					role="listbox"
-					virtualize
+					portalRef={menuRef}
+					suppress={[menuRef, inputRef]}
+					triggerRef={inputRef}
 				>
-					{debouncedLoadingChange ? (
-						<DropDown.Item
-							aria-disabled="true"
-							className="disabled"
-							roleItem="option"
+					<div
+						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
+						ref={menuRef}
+						role="presentation"
+						style={{
+							maxWidth: 'none',
+							width: `${containerElementRef.current?.clientWidth}px`,
+						}}
+					>
+						<AutocompleteContext.Provider
+							value={{
+								activeDescendant,
+								onActiveDescendant: setActiveDescendant,
+								onClick: setValue,
+							}}
 						>
-							{messages.loading}
-						</DropDown.Item>
-					) : isNotFound ? (
-						<DropDown.Item
-							aria-disabled="true"
-							className="disabled"
-							roleItem="option"
-						>
-							{messages.notFound}
-						</DropDown.Item>
-					) : (
-						children
-					)}
-				</Collection>
-			</DropDown.Menu>
+							<Collection<T>
+								aria-label={otherProps['aria-label']}
+								aria-labelledby={otherProps['aria-labelledby']}
+								as={DropDown.ItemList}
+								collection={collection}
+								id={ariaControlsId}
+								role="listbox"
+							>
+								{debouncedLoadingChange ? (
+									<DropDown.Item
+										aria-disabled="true"
+										className="disabled"
+										roleItem="option"
+									>
+										{messages.loading}
+									</DropDown.Item>
+								) : (
+									children
+								)}
+							</Collection>
+						</AutocompleteContext.Provider>
+					</div>
+				</Overlay>
+			)}
 
 			{isLoading && (
 				<Input.GroupInsetItem

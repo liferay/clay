@@ -7,7 +7,7 @@ import {ClayInput} from '@clayui/form';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
 import React from 'react';
 
-import Context from './Context';
+import {LegacyContext} from './Context';
 
 const LoadingIndicatorMarkup = ({
 	children,
@@ -30,7 +30,7 @@ const ClayAutocompleteLoadingIndicator = ({
 	component: Component = LoadingIndicatorMarkup,
 	...otherProps
 }: IProps) => {
-	const {onLoadingChange} = React.useContext(Context);
+	const {onLoadingChange} = React.useContext(LegacyContext);
 
 	React.useEffect(() => {
 		onLoadingChange(true);
