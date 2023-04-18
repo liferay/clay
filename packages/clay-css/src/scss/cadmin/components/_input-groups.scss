@@ -174,7 +174,8 @@
 		margin-bottom: 0;
 		padding-left: $cadmin-input-group-inset-item-padding-left;
 		padding-right: $cadmin-input-group-inset-item-padding-right;
-		transition: $cadmin-input-transition;
+
+		@include transition($cadmin-input-transition);
 
 		.btn {
 			@include clay-button-size($cadmin-input-group-inset-item-btn);

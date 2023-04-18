@@ -343,7 +343,8 @@ textarea.form-control-plaintext,
 
 	&::-webkit-slider-thumb {
 		border-radius: 100px;
-		transition: $input-transition;
+
+		@include transition($input-transition);
 	}
 }
 

@@ -13,7 +13,7 @@
 // Drilldown Transition Classes
 
 .drilldown-transition {
-	transition: $cadmin-drilldown-transition;
+	@include transition($cadmin-drilldown-transition);
 }
 
 .drilldown-item.transitioning {

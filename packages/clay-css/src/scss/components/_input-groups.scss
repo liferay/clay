@@ -226,7 +226,8 @@
 		margin-bottom: 0;
 		padding-left: $input-group-inset-item-padding-left;
 		padding-right: $input-group-inset-item-padding-right;
-		transition: $input-transition;
+
+		@include transition($input-transition);
 
 		.btn {
 			@include clay-button-size($input-group-inset-item-btn);

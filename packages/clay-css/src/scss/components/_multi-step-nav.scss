@@ -275,7 +275,9 @@
 	padding-left: $multi-step-icon-padding-left;
 	padding-right: $multi-step-icon-padding-right;
 	padding-top: $multi-step-icon-padding-top;
-	transition: $multi-step-icon-transition;
+
+	@include transition($multi-step-icon-transition);
+
 	width: $multi-step-icon-size;
 
 	&:hover {

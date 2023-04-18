@@ -91,7 +91,7 @@
 	.sidenav-content,
 	.sidenav-menu,
 	.sidenav-menu-slider {
-		transition: $cadmin-sidenav-transition;
+		@include transition($cadmin-sidenav-transition);
 	}
 }
 
@@ -99,7 +99,7 @@
 
 .sidenav-transition,
 &.sidenav-transition {
-	transition: $cadmin-sidenav-transition;
+	@include transition($cadmin-sidenav-transition);
 }
 
 // Simple Sidenav
