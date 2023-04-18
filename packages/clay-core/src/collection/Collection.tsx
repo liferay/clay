@@ -73,6 +73,7 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	isLoading,
 	itemContainer: ItemContainer,
 	items,
+	loadingComponent: LoadingComponent,
 	onBottom,
 	parentKey,
 	parentRef,
@@ -83,26 +84,40 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 	const previousLengthRef = useRef(items.length);
 
 	const virtualizer = useVirtualizer({
-		count: items.length,
+		count: infiniteScroll ? items.length + 1 : items.length,
 		estimateSize: () => estimateSize,
 		getScrollElement: () => parentRef.current,
 	});
 
-	const callbackCaptureRef = useRef<boolean>(false);
-
 	useEffect(() => {
 		if (items.length < previousLengthRef.current) {
-			virtualizer.scrollToIndex(0, {smoothScroll: false});
+			virtualizer.scrollToIndex(0, {behavior: 'auto'});
 		}
 
 		previousLengthRef.current = items.length;
 	}, [items.length]);
 
 	useEffect(() => {
-		if (!isLoading) {
-			callbackCaptureRef.current = false;
+		const [lastItem] = [...virtualizer.getVirtualItems()].reverse();
+
+		if (!lastItem) {
+			return;
 		}
-	}, [isLoading]);
+
+		if (
+			lastItem.index >= items.length - 1 &&
+			infiniteScroll &&
+			onBottom &&
+			!isLoading
+		) {
+			onBottom();
+		}
+	}, [
+		infiniteScroll,
+		isLoading,
+		items.length,
+		virtualizer.getVirtualItems(),
+	]);
 
 	return (
 		<Container
@@ -118,15 +133,24 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 
 				// Virtual item to loading
 				if (
-					infiniteScroll &&
-					items.length !== 0 &&
-					virtual.index === items.length - 1 &&
-					onBottom &&
-					!callbackCaptureRef.current
+					!item &&
+					virtual.index > items.length - 1 &&
+					LoadingComponent
 				) {
-					callbackCaptureRef.current = true;
-
-					onBottom();
+					return (
+						<LoadingComponent
+							data-index={virtual.index}
+							key={`loading-${virtual.key}-${items.length}`}
+							ref={virtualizer.measureElement}
+							style={{
+								left: 0,
+								position: 'absolute',
+								top: 0,
+								transform: `translateY(${virtual.start}px)`,
+								width: '100%',
+							}}
+						/>
+					);
 				}
 
 				const publicItem = exclude ? excludeProps(item, exclude) : item;
@@ -142,8 +166,9 @@ function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
 				);
 
 				const props = {
+					'data-index': virtual.index,
 					ref: (node: HTMLElement) => {
-						virtual.measureElement(node);
+						virtualizer.measureElement(node);
 
 						const ref = (child as ChildElement).ref;
 
@@ -231,6 +256,7 @@ export function Collection<
 	isLoading,
 	itemContainer,
 	items,
+	loadingComponent,
 	onBottom,
 	parentKey,
 	parentRef,
@@ -249,6 +275,7 @@ export function Collection<
 				isLoading={isLoading}
 				itemContainer={itemContainer}
 				items={items}
+				loadingComponent={loadingComponent}
 				onBottom={onBottom}
 				parentKey={parentKey}
 				parentRef={parentRef}

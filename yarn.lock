@@ -4083,17 +4083,17 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tanstack/react-virtual@3.0.0-beta.18":
-  version "3.0.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.0.0-beta.18.tgz#b97b2019f7d6a5770fb88ee1f7591da55b9059b4"
-  integrity sha512-mnyCZT6htcRNw1jVb+WyfMUMbd1UmXX/JWPuMf6Bmj92DB/V7Ogk5n5rby5Y5aste7c7mlsBeMF8HtpwERRvEQ==
+"@tanstack/react-virtual@3.0.0-beta.54":
+  version "3.0.0-beta.54"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.0.0-beta.54.tgz#755979455adf13f2584937204a3f38703e446037"
+  integrity sha512-D1mDMf4UPbrtHRZZriCly5bXTBMhylslm4dhcHqTtDJ6brQcgGmk8YD9JdWBGWfGSWPKoh2x1H3e7eh+hgPXtQ==
   dependencies:
-    "@tanstack/virtual-core" "3.0.0-beta.18"
+    "@tanstack/virtual-core" "3.0.0-beta.54"
 
-"@tanstack/virtual-core@3.0.0-beta.18":
-  version "3.0.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@tanstack/virtual-core/-/virtual-core-3.0.0-beta.18.tgz#d4b0738c1d0aada922063c899675ff4df9f696b2"
-  integrity sha512-tcXutY05NpN9lp3+AXI9Sn85RxSPV0EJC0XMim9oeQj/E7bjXoL0qZ4Er4wwnvIbv/hZjC91EmbIQGjgdr6nZg==
+"@tanstack/virtual-core@3.0.0-beta.54":
+  version "3.0.0-beta.54"
+  resolved "https://registry.yarnpkg.com/@tanstack/virtual-core/-/virtual-core-3.0.0-beta.54.tgz#12259d007911ad9fce1388385c54a9141f4ecdc4"
+  integrity sha512-jtkwqdP2rY2iCCDVAFuaNBH3fiEi29aTn2RhtIoky8DTTiCdc48plpHHreLwmv1PICJ4AJUUESaq3xa8fZH8+g==
 
 "@testing-library/dom@^8.0.0", "@testing-library/dom@^8.9.0":
   version "8.10.1"
@@ -8291,10 +8291,15 @@ core-js-compat@^3.16.0, core-js-compat@^3.16.2, core-js-compat@^3.8.1:
     browserslist "^4.17.5"
     semver "7.0.0"
 
-core-js-pure@^3.16.0, core-js-pure@^3.8.1:
+core-js-pure@^3.16.0:
   version "3.21.1"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.21.1.tgz#8c4d1e78839f5f46208de7230cebfb72bc3bdb51"
   integrity sha512-12VZfFIu+wyVbBebyHmRTuEE/tZrB4tJToWcwAMcsp3h4+sHR+fMJWbKpYiCRWlhFBq+KNyO8rIV9rTkeVmznQ==
+
+core-js-pure@^3.8.1:
+  version "3.30.1"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.30.1.tgz#7d93dc89e7d47b8ef05d7e79f507b0e99ea77eec"
+  integrity sha512-nXBEVpmUnNRhz83cHd9JRQC52cTMcuXAmR56+9dSMpRdpeA4I1PX6yjmhd71Eyc/wXNsdBdUDIj1QTIeZpU5Tg==
 
 core-js@^2.4.0, core-js@^2.6.10, core-js@^2.6.5:
   version "2.6.12"

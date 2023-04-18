@@ -67,6 +67,11 @@ export type Props<P, K> = {
 	passthroughKey?: boolean;
 
 	/**
+	 * The custom loading component for the infinite scroll.
+	 */
+	loadingComponent?: React.ForwardRefExoticComponent<any>;
+
+	/**
 	 * Set for the parent's key to create the unique key of the list items, if
 	 * the collection is rendered nested.
 	 */
