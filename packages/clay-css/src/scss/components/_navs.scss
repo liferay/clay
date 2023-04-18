@@ -189,13 +189,15 @@
 // Nav Variants
 
 @each $key, $value in $nav-palette {
-	$selector: if(
-		starts-with($key, '.') or starts-with($key, '#'),
-		$key,
-		str-insert($key, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($key, '.') or starts-with($key, '#'),
+			$key,
+			str-insert($key, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-nav-variant($value);
+		#{$selector} {
+			@include clay-nav-variant($value);
+		}
 	}
 }

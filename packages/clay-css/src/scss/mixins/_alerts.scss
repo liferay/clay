@@ -236,15 +236,17 @@
 			}
 
 			@each $key, $properties in map-get($map, custom-selectors) {
-				@if ($key) {
-					$selector: if(
-						starts-with($key, '.') or starts-with($key, '#'),
-						$key,
-						str-insert($key, '.', 1)
-					);
+				@if not clay-is-map-unset($properties) {
+					@if ($key) {
+						$selector: if(
+							starts-with($key, '.') or starts-with($key, '#'),
+							$key,
+							str-insert($key, '.', 1)
+						);
 
-					#{$selector} {
-						@include clay-button-variant($properties);
+						#{$selector} {
+							@include clay-button-variant($properties);
+						}
 					}
 				}
 			}

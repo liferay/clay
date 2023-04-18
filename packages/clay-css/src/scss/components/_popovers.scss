@@ -1,16 +1,18 @@
 // Popovers
 
 @each $selector, $value in $popovers {
-	$selector: if(
-		starts-with($selector, '.') or
-			starts-with($selector, '#') or
-			starts-with($selector, '%'),
-		$selector,
-		str-insert($selector, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($selector, '.') or
+				starts-with($selector, '#') or
+				starts-with($selector, '%'),
+			$selector,
+			str-insert($selector, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-popover-variant($value);
+		#{$selector} {
+			@include clay-popover-variant($value);
+		}
 	}
 }
 
@@ -150,32 +152,36 @@
 // Popover Headers
 
 @each $selector, $value in $popover-headers {
-	$selector: if(
-		starts-with($selector, '.') or
-			starts-with($selector, '#') or
-			starts-with($selector, '%'),
-		$selector,
-		str-insert($selector, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($selector, '.') or
+				starts-with($selector, '#') or
+				starts-with($selector, '%'),
+			$selector,
+			str-insert($selector, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-popover-header-variant($value);
+		#{$selector} {
+			@include clay-popover-header-variant($value);
+		}
 	}
 }
 
 // Popover Bodies
 
 @each $selector, $value in $popover-bodies {
-	$selector: if(
-		starts-with($selector, '.') or
-			starts-with($selector, '#') or
-			starts-with($selector, '%'),
-		$selector,
-		str-insert($selector, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($selector, '.') or
+				starts-with($selector, '#') or
+				starts-with($selector, '%'),
+			$selector,
+			str-insert($selector, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-popover-header-variant($value);
+		#{$selector} {
+			@include clay-popover-header-variant($value);
+		}
 	}
 }
 

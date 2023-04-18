@@ -852,14 +852,16 @@
 
 			@if ($c-link-variants) {
 				@each $key, $value in $c-link-variants {
-					$selector: if(
-						starts-with($key, '.') or starts-with($key, '#'),
-						$key,
-						str-insert($key, '.', 1)
-					);
+					@if not clay-is-map-unset($value) {
+						$selector: if(
+							starts-with($key, '.') or starts-with($key, '#'),
+							$key,
+							str-insert($key, '.', 1)
+						);
 
-					&#{$selector} {
-						@include clay-link($value);
+						&#{$selector} {
+							@include clay-link($value);
+						}
 					}
 				}
 			}

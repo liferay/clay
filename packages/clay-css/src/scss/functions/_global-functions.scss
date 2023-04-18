@@ -8,6 +8,13 @@
 @import '_lx-icons-generated.scss';
 @import '_type-conversion-functions.scss';
 
+/// A function that checks if the value contains the key word `c-unset` or `clay-unset`
+/// @param {Any} $value The value to check
+
+@function clay-is-map-unset($value) {
+	@return if(($value == c-unset) or ($value == clay-unset), true, false);
+}
+
 /// A helper function that calculates text-indent of data-label-on and data-label-off in a `.toggle-switch`.
 /// @param {Number} $toggle-switch-width - Width of switch bar
 /// @param {Number} $toggle-switch-padding - Space between button and bar
@@ -52,6 +59,10 @@
 /// @param {Map, Null} $map2[()]
 
 @function map-deep-merge($map1: (), $map2: ()) {
+	// @if ($map1 == c-unset or $map2 == c-unset) or ($map1 == clay-unset or $map2 == clay-unset) {
+	// 	@return null;
+	// }
+
 	@if (type-of($map1) == 'list' and length($map1) == 0) or
 		(type-of($map1) == 'null')
 	{

@@ -122,40 +122,42 @@
 // Progress Variants
 
 @each $color, $value in $progress-palette {
-	.progress-#{$color} {
-		.progress-bar {
-			$progress-bar: setter(map-get($value, progress-bar), ());
-			$progress-bar: map-merge(
-				$progress-bar,
-				(
-					background-color:
-						setter(
-							map-get($progress-bar, background-color),
-							map-get($value, bar-bg)
-						),
-				)
-			);
+	@if not clay-is-map-unset($value) {
+		.progress-#{$color} {
+			.progress-bar {
+				$progress-bar: setter(map-get($value, progress-bar), ());
+				$progress-bar: map-merge(
+					$progress-bar,
+					(
+						background-color:
+							setter(
+								map-get($progress-bar, background-color),
+								map-get($value, bar-bg)
+							),
+					)
+				);
 
-			@include clay-css($progress-bar);
-		}
+				@include clay-css($progress-bar);
+			}
 
-		.progress-group-feedback {
-			$progress-group-feedback: setter(
-				map-get($value, progress-group-feedback),
-				()
-			);
-			$progress-group-feedback: map-merge(
-				$progress-group-feedback,
-				(
-					color:
-						setter(
-							map-get($progress-group-feedback, color),
-							map-get($value, group-feedback-color)
-						),
-				)
-			);
+			.progress-group-feedback {
+				$progress-group-feedback: setter(
+					map-get($value, progress-group-feedback),
+					()
+				);
+				$progress-group-feedback: map-merge(
+					$progress-group-feedback,
+					(
+						color:
+							setter(
+								map-get($progress-group-feedback, color),
+								map-get($value, group-feedback-color)
+							),
+					)
+				);
 
-			@include clay-css($progress-group-feedback);
+				@include clay-css($progress-group-feedback);
+			}
 		}
 	}
 }
