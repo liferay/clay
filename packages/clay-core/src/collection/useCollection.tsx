@@ -125,6 +125,7 @@ export function useCollection<
 		({children, items}: ICollectionProps<T, P>) => {
 			keysRef.current = [];
 			layoutKeysRef.current.clear();
+			layout.current.clear();
 
 			// Pre-initialization of nested collections to mount the layout
 			// structure.
@@ -191,6 +192,15 @@ export function useCollection<
 		};
 	}, []);
 
+	const getLastItem = useCallback(() => {
+		const key = Array.from(layout.current.values()).pop();
+
+		return {
+			key,
+			value: layout.current.get(key),
+		};
+	}, []);
+
 	const collection = useMemo(
 		() => performCollection({children, items}),
 		[children, performCollection, items]
@@ -204,6 +214,7 @@ export function useCollection<
 		),
 		getFirstItem,
 		getItem,
+		getLastItem,
 	};
 }
 

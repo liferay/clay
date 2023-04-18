@@ -41,6 +41,7 @@ export type CollectionState = {
 	collection: JSX.Element;
 	getFirstItem: () => {key: string; value: string};
 	getItem: (key: React.Key) => string;
+	getLastItem: () => {key: string; value: string};
 };
 
 export type Props<P, K> = {
