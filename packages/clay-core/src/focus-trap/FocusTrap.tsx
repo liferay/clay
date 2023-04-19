@@ -68,7 +68,7 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 
 	return (
 		<FocusScope>
-			<div ref={childrenRef}>
+			<div ref={childrenRef} style={{display: 'contents'}}>
 				{active ? (
 					<span
 						aria-hidden="true"
