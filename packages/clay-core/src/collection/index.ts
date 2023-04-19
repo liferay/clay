@@ -6,4 +6,5 @@
 export {getKey, excludeProps} from './utils';
 export {Collection} from './Collection';
 export {useCollection, useCollectionKeys} from './useCollection';
+export {useVirtual} from './useVirtual';
 export type {ChildrenFunction, ICollectionProps} from './types';

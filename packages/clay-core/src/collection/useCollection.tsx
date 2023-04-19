@@ -44,6 +44,7 @@ export function useCollection<
 	passthroughKey = true,
 	publicApi,
 	suppressTextValueWarning = true,
+	virtualizer,
 }: ICollectionProps<T, P> & Props<P, K>): CollectionState {
 	const {layout: parentLayout} = useContext(CollectionContext);
 
@@ -73,7 +74,13 @@ export function useCollection<
 	);
 
 	const performItemRender = useCallback(
-		(child: ChildElement, key: React.Key, index: number, item?: T) => {
+		(
+			child: ChildElement,
+			key: React.Key,
+			index: number,
+			item?: T,
+			props?: Record<string, any>
+		) => {
 			if (child.type.displayName === 'Item') {
 				layout.current.set(
 					key,
@@ -105,7 +112,12 @@ export function useCollection<
 						key={key}
 						keyValue={key}
 					>
-						{child}
+						{props
+							? React.cloneElement(
+									child as React.ReactElement,
+									props
+							  )
+							: child}
 					</ItemContainer>
 				);
 			}
@@ -117,6 +129,7 @@ export function useCollection<
 				...(passthroughKey || hasChildNeedPassthroughKey
 					? {index, keyValue: key}
 					: {}),
+				...(props ? props : {}),
 			});
 		},
 		[performFilter]
@@ -144,6 +157,54 @@ export function useCollection<
 			};
 
 			if (children instanceof Function && items) {
+				if (virtualizer) {
+					return virtualizer.getVirtualItems().map((virtual) => {
+						const item = items[virtual.index];
+
+						const publicItem = exclude
+							? excludeProps(item, exclude)
+							: item;
+						const child = Array.isArray(publicApi)
+							? (children(
+									publicItem,
+									...publicApi
+							  ) as ChildElement)
+							: (children(publicItem) as ChildElement);
+
+						const props = {
+							'data-index': virtual.index,
+							ref: (node: HTMLElement) => {
+								virtualizer.measureElement(node);
+
+								const ref = (child as ChildElement).ref;
+
+								if (typeof ref === 'function') {
+									ref(node);
+								}
+							},
+							style: {
+								left: 0,
+								position: 'absolute',
+								top: 0,
+								transform: `translateY(${virtual.start}px)`,
+								width: '100%',
+							},
+						};
+
+						return performItemRender(
+							child,
+							getKey(
+								virtual.index,
+								item.id ?? child.key,
+								parentKey
+							),
+							virtual.index,
+							item,
+							props
+						);
+					});
+				}
+
 				return items.map((item, index) => {
 					const publicItem = exclude
 						? excludeProps(item, exclude)
@@ -177,7 +238,7 @@ export function useCollection<
 				);
 			});
 		},
-		[performItemRender, publicApi]
+		[performItemRender, publicApi, virtualizer?.getVirtualItems().length]
 	);
 
 	const getItem = useCallback((key: React.Key) => {
@@ -221,6 +282,8 @@ export function useCollection<
 		getFirstItem,
 		getItem,
 		getLastItem,
+		size: virtualizer ? virtualizer.getTotalSize() : undefined,
+		virtualize: !!virtualizer,
 	};
 }
 

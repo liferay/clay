@@ -3,19 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useVirtualizer} from '@tanstack/react-virtual';
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 
 import {useCollection} from './useCollection';
-import {excludeProps, getKey} from './utils';
+import {useVirtual} from './useVirtual';
 
-import type {
-	ChildElement,
-	ChildrenFunction,
-	CollectionState,
-	ICollectionProps,
-	Props,
-} from './types';
+import type {CollectionState, ICollectionProps, Props} from './types';
 
 interface IProps
 	extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
@@ -35,178 +28,66 @@ interface IProps
 	estimateSize?: number;
 
 	/**
-	 * Flag to enable infinite scroll.
-	 */
-	infiniteScroll?: boolean;
-
-	/**
-	 * Flag if a request is in progress.
-	 */
-	isLoading?: boolean;
-
-	/**
 	 * Add the reference of the parent element that will be used to define the
 	 * scroll and get the height of the element for virtualization of the
 	 * collection.
 	 */
 	parentRef: React.RefObject<HTMLElement>;
-
-	/**
-	 * Callback called when the last element of the list is rendered in
-	 * virtualization and infiniteScroll is enabled.
-	 */
-	onBottom?: () => void;
 }
 
-type VirtualProps<T, P, K> = Omit<IProps, 'filter' | 'collection'> &
-	Props<P, K> & {
-		children: ChildrenFunction<T, P>;
-		items: Array<T>;
-	};
-
-function VirtualDynamicCollection<T extends Record<any, any>, P, K>({
-	as: Container = 'div',
+function VirtualDynamicCollection<
+	T extends Record<any, any>,
+	P = unknown,
+	K = unknown
+>({
+	as,
 	children,
 	estimateSize = 37,
 	exclude,
-	infiniteScroll,
-	isLoading,
-	itemContainer: ItemContainer,
+	filter,
+	filterKey,
+	itemContainer,
 	items,
-	loadingComponent: LoadingComponent,
-	onBottom,
 	parentKey,
 	parentRef,
 	passthroughKey,
 	publicApi,
 	...otherProps
-}: VirtualProps<T, P, K>) {
-	const previousLengthRef = useRef(items.length);
-
-	const virtualizer = useVirtualizer({
-		count: infiniteScroll ? items.length + 1 : items.length,
-		estimateSize: () => estimateSize,
-		getScrollElement: () => parentRef.current,
+}: Required<Omit<ICollectionProps<T, P>, 'virtualize'>> &
+	Props<P, K> &
+	IProps) {
+	const virtualizer = useVirtual({
+		estimateSize,
+		items,
+		parentRef,
 	});
 
-	useEffect(() => {
-		if (items.length < previousLengthRef.current) {
-			virtualizer.scrollToIndex(0, {behavior: 'auto'});
-		}
+	const state = useCollection({
+		children,
+		exclude,
+		filter,
+		filterKey,
+		itemContainer,
+		items,
+		parentKey,
+		passthroughKey,
+		publicApi,
+		virtualizer,
+	});
 
-		previousLengthRef.current = items.length;
-	}, [items.length]);
-
-	useEffect(() => {
-		const [lastItem] = [...virtualizer.getVirtualItems()].reverse();
-
-		if (!lastItem) {
-			return;
-		}
-
-		if (
-			lastItem.index >= items.length - 1 &&
-			infiniteScroll &&
-			onBottom &&
-			!isLoading
-		) {
-			onBottom();
-		}
-	}, [
-		infiniteScroll,
-		isLoading,
-		items.length,
-		virtualizer.getVirtualItems(),
-	]);
+	const As = as ?? React.Fragment;
 
 	return (
-		<Container
+		<As
 			{...otherProps}
 			style={{
-				height: virtualizer.getTotalSize(),
+				height: `${state.size}px`,
 				position: 'relative',
 				width: '100%',
 			}}
 		>
-			{virtualizer.getVirtualItems().map((virtual) => {
-				const item = items[virtual.index];
-
-				// Virtual item to loading
-				if (
-					!item &&
-					virtual.index > items.length - 1 &&
-					LoadingComponent
-				) {
-					return (
-						<LoadingComponent
-							data-index={virtual.index}
-							key={`loading-${virtual.key}-${items.length}`}
-							ref={virtualizer.measureElement}
-							style={{
-								left: 0,
-								position: 'absolute',
-								top: 0,
-								transform: `translateY(${virtual.start}px)`,
-								width: '100%',
-							}}
-						/>
-					);
-				}
-
-				const publicItem = exclude ? excludeProps(item, exclude) : item;
-
-				const child = Array.isArray(publicApi)
-					? children(publicItem, ...publicApi)
-					: children(publicItem);
-
-				const key = getKey(
-					virtual.index,
-					item.id ?? child.key,
-					parentKey
-				);
-
-				const props = {
-					'data-index': virtual.index,
-					ref: (node: HTMLElement) => {
-						virtualizer.measureElement(node);
-
-						const ref = (child as ChildElement).ref;
-
-						if (typeof ref === 'function') {
-							ref(node);
-						}
-					},
-					style: {
-						left: 0,
-						position: 'absolute',
-						top: 0,
-						transform: `translateY(${virtual.start}px)`,
-						width: '100%',
-					},
-				};
-
-				if (ItemContainer) {
-					return (
-						<ItemContainer
-							index={virtual.index}
-							item={item}
-							key={key}
-							keyValue={key}
-						>
-							{React.cloneElement(child, props)}
-						</ItemContainer>
-					);
-				}
-
-				return React.cloneElement(child, {
-					key,
-					...(passthroughKey
-						? {index: virtual.index, keyValue: key}
-						: {}),
-					...props,
-				});
-			})}
-		</Container>
+			{state.collection}
+		</As>
 	);
 }
 
@@ -252,12 +133,8 @@ export function Collection<
 	exclude,
 	filter,
 	filterKey,
-	infiniteScroll,
-	isLoading,
 	itemContainer,
 	items,
-	loadingComponent,
-	onBottom,
 	parentKey,
 	parentRef,
 	passthroughKey = true,
@@ -265,18 +142,26 @@ export function Collection<
 	virtualize = false,
 	...otherProps
 }: Partial<ICollectionProps<T, P>> & Props<P, K> & Partial<IProps>) {
-	if (virtualize && children instanceof Function && items && parentRef) {
+	const isVirtual = collection?.virtualize;
+	const Container = as ?? isVirtual ? 'div' : React.Fragment;
+
+	let content;
+
+	if (collection) {
+		content = <>{collection.collection}</>;
+	} else if (
+		virtualize &&
+		children instanceof Function &&
+		items &&
+		parentRef
+	) {
 		return (
 			<VirtualDynamicCollection
 				{...otherProps}
 				as={as}
 				estimateSize={estimateSize}
-				infiniteScroll={infiniteScroll}
-				isLoading={isLoading}
 				itemContainer={itemContainer}
 				items={items}
-				loadingComponent={loadingComponent}
-				onBottom={onBottom}
 				parentKey={parentKey}
 				parentRef={parentRef}
 				passthroughKey={passthroughKey}
@@ -285,14 +170,6 @@ export function Collection<
 				{children}
 			</VirtualDynamicCollection>
 		);
-	}
-
-	const Container = as ?? React.Fragment;
-
-	let content;
-
-	if (collection) {
-		content = <>{collection.collection}</>;
 	} else {
 		content = (
 			<DynamicCollection
@@ -310,5 +187,19 @@ export function Collection<
 		);
 	}
 
-	return <Container {...otherProps}>{content}</Container>;
+	const virtualProps = isVirtual
+		? {
+				style: {
+					height: `${collection.size}px`,
+					position: 'relative',
+					width: '100%',
+				} as React.CSSProperties,
+		  }
+		: {};
+
+	return (
+		<Container {...otherProps} {...virtualProps}>
+			{content}
+		</Container>
+	);
 }

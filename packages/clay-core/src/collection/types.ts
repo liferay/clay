@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import type {Virtualizer} from '@tanstack/react-virtual';
+
 type ChildType = {
 	displayName?: string;
 	passthroughKey?: boolean;
@@ -42,6 +44,8 @@ export type CollectionState = {
 	getFirstItem: () => {key: string; value: string};
 	getItem: (key: React.Key) => string;
 	getLastItem: () => {key: string; value: string};
+	size?: number;
+	virtualize: boolean;
 };
 
 export type Props<P, K> = {
@@ -67,11 +71,6 @@ export type Props<P, K> = {
 	passthroughKey?: boolean;
 
 	/**
-	 * The custom loading component for the infinite scroll.
-	 */
-	loadingComponent?: React.ForwardRefExoticComponent<any>;
-
-	/**
 	 * Set for the parent's key to create the unique key of the list items, if
 	 * the collection is rendered nested.
 	 */
@@ -95,4 +94,6 @@ export type Props<P, K> = {
 	notFound?: JSX.Element;
 
 	suppressTextValueWarning?: boolean;
+
+	virtualizer?: Virtualizer<HTMLElement, Element>;
 };
