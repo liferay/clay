@@ -17,6 +17,16 @@
 		height: $spinner-height;
 		vertical-align: text-bottom;
 		width: $spinner-width;
+
+		@if $enable-prefers-reduced-motion-media-query {
+			@media (prefers-reduced-motion: reduce) {
+				animation: none;
+			}
+		}
+
+		.c-prefers-reduced-motion & {
+			animation: none;
+		}
 	}
 
 	.spinner-border-sm {
@@ -45,6 +55,16 @@
 		opacity: 0;
 		vertical-align: text-bottom;
 		width: $spinner-width;
+
+		@if $enable-prefers-reduced-motion-media-query {
+			@media (prefers-reduced-motion: reduce) {
+				animation: none;
+			}
+		}
+
+		.c-prefers-reduced-motion & {
+			animation: none;
+		}
 	}
 
 	.spinner-grow-sm {

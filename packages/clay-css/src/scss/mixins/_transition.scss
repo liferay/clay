@@ -34,7 +34,13 @@
 		}
 
 		@at-root {
-			.c-prefers-reduced-motion & {
+			$selector: if(
+				variable-exists(cadmin-selector),
+				clay-insert-after('.cadmin ', '.c-prefers-reduced-motion '),
+				'.c-prefers-reduced-motion &'
+			);
+
+			#{$selector} {
 				transition: none;
 			}
 		}

@@ -373,7 +373,7 @@ textarea.form-control-plaintext,
 
 	&::-webkit-slider-thumb {
 		border-radius: 100px;
-		transition: $cadmin-input-transition;
+		@include transition($cadmin-input-transition);
 	}
 }
 

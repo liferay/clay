@@ -13,7 +13,7 @@
 // Drilldown Transition Classes
 
 .drilldown-transition {
-	transition: $drilldown-transition;
+	@include transition($drilldown-transition);
 }
 
 .drilldown-item.transitioning {

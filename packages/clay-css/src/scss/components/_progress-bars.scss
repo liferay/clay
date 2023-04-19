@@ -61,6 +61,10 @@
 				animation: none;
 			}
 		}
+
+		.c-prefers-reduced-motion & {
+			animation: none;
+		}
 	}
 }
 

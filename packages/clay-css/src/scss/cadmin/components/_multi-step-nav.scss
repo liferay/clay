@@ -264,7 +264,9 @@
 	padding-left: $cadmin-multi-step-icon-padding-left;
 	padding-right: $cadmin-multi-step-icon-padding-right;
 	padding-top: $cadmin-multi-step-icon-padding-top;
-	transition: $cadmin-multi-step-icon-transition;
+
+	@include transition($cadmin-multi-step-icon-transition);
+
 	width: $cadmin-multi-step-icon-size;
 
 	&:hover {
