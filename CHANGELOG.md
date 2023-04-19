@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
+
+### Bug Fixes
+
+-   **@clayui/css:** c-prefers-reduced-motion should completely remove transitions and animations ([ad58f8e](https://github.com/liferay/clay/commit/ad58f8e5b8fd976644ccf892641b2c6a5c0855c2))
+-   **@clayui/css:** Exclude variant styles from being output when using c-unset ([59f5716](https://github.com/liferay/clay/commit/59f571657a73edd54141004e402cdf803079c891))
+-   **@clayui/css:** Global Functions adds clay-is-map-unset ([5c6d168](https://github.com/liferay/clay/commit/5c6d1682ed5c03d4bf10fb0a77dc0bdbee5790c4))
+-   **@clayui/css:** Mixins clay-button-variant adds ability to style :link and :visited pseudo classes ([639ef02](https://github.com/liferay/clay/commit/639ef026db59a678748450aed768ca62be0a625f))
+-   **@clayui/css:** Mixins clay-css should remove animations with c-prefers-reduced-motion ([e042a3c](https://github.com/liferay/clay/commit/e042a3cded1bd9832adb998fe76618d65e73ee05))
+-   **@clayui/focus-trap:** Add display contents to ignore the element itself ([6e772ff](https://github.com/liferay/clay/commit/6e772ffbf4cdbdac1e0ab2aad57bb5427ca44cce))
+-   **@clayui/focus-trap:** Improve the description of the component ([d5d2786](https://github.com/liferay/clay/commit/d5d27865ec6d86e44a481964c7bcd0d077980de8))
+-   **@clayui/focus-trap:** Prevent focus if focusableElements is empty ([6b61c4c](https://github.com/liferay/clay/commit/6b61c4c9312aaf9440fd0423bfa76effea8a3354))
+-   **@clayui/focus-trap:** Update snapshot ([014170f](https://github.com/liferay/clay/commit/014170f5f051730efbe673ff994e3b6344fb58c8))
+-   **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
+-   **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
+-   **clayui.com:** Change tab navigation to navigation bar ([0a4f9a6](https://github.com/liferay/clay/commit/0a4f9a6f4f33591dfb865ad72f87ea9640723bd7))
+
+### Features
+
+-   **@clayui/core:** add motion reduction ([509e6dc](https://github.com/liferay/clay/commit/509e6dcac80d0f86a3d581da1e2b47f014dff605))
+-   **@clayui/css:** Global Functions adds clay-insert-after ([e462c59](https://github.com/liferay/clay/commit/e462c5984cf1e0625b326011e9a12aa52f33d8fa))
+-   **@clayui/css:** Sheets adds sheet-row for aligning content flush ([9897c65](https://github.com/liferay/clay/commit/9897c650de5baa5dca448c61e570927ff778cc8d))
+-   **@clayui/layout:** Adds the Sheet Row component ([1271df1](https://github.com/liferay/clay/commit/1271df1d57a169eb7e930428f17f87ac7dee030e))
+-   **@clayui/navigation-bar:** add motion reduction ([a49132d](https://github.com/liferay/clay/commit/a49132d883d65ce7bc3a2f3db1cfc1e2ffbe7df5))
+-   **@clayui/panel:** add motion reduction ([cb5c69a](https://github.com/liferay/clay/commit/cb5c69a63e2fd73763b21a708a84aa548bf88d69))
+-   **@clayui/provider:** add motion reduction config ([fcd2849](https://github.com/liferay/clay/commit/fcd2849a17106ef6f037c5fb5e56d4d0a52e13a5))
+-   **clayui.com:** updates the look of the page docs header ([c3ef028](https://github.com/liferay/clay/commit/c3ef02880d52192e3643c26fdfef15bb853c71f7))
+
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
 ### Bug Fixes

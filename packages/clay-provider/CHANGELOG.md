@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
+
+### Features
+
+-   **@clayui/provider:** add motion reduction config ([fcd2849](https://github.com/liferay/clay/commit/fcd2849a17106ef6f037c5fb5e56d4d0a52e13a5))
+
 # [3.77.0](https://github.com/liferay/clay/compare/v3.76.0...v3.77.0) (2022-10-17)
 
 **Note:** Version bump only for package @clayui/provider

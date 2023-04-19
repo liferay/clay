@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
+
+### Bug Fixes
+
+-   **@clayui/tabs:** displayType should output nav-tabs variants ([ff15ca2](https://github.com/liferay/clay/commit/ff15ca25d9d39e9479bacf9a78d5a2af9645ec79))
+-   **@clayui/tabs:** Output nav-tabs-light only if displayType equals light ([b599225](https://github.com/liferay/clay/commit/b59922542b7edd52750661139422b1df7d2fc1b5)), closes [/github.com/liferay/clay/pull/5463#discussion_r1161986963](https://github.com//github.com/liferay/clay/pull/5463/issues/discussion_r1161986963)
+
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
 **Note:** Version bump only for package @clayui/tabs

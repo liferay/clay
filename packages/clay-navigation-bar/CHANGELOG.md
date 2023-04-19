@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
+
+### Features
+
+-   **@clayui/navigation-bar:** add motion reduction ([a49132d](https://github.com/liferay/clay/commit/a49132d883d65ce7bc3a2f3db1cfc1e2ffbe7df5))
+
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
 **Note:** Version bump only for package @clayui/navigation-bar

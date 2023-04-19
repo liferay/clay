@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
+
+
+### Bug Fixes
+
+* **@clayui/css:** c-prefers-reduced-motion should completely remove transitions and animations ([ad58f8e](https://github.com/liferay/clay/commit/ad58f8e5b8fd976644ccf892641b2c6a5c0855c2))
+* **@clayui/css:** Exclude variant styles from being output when using c-unset ([59f5716](https://github.com/liferay/clay/commit/59f571657a73edd54141004e402cdf803079c891))
+* **@clayui/css:** Global Functions adds clay-is-map-unset ([5c6d168](https://github.com/liferay/clay/commit/5c6d1682ed5c03d4bf10fb0a77dc0bdbee5790c4))
+* **@clayui/css:** Mixins clay-button-variant adds ability to style :link and :visited pseudo classes ([639ef02](https://github.com/liferay/clay/commit/639ef026db59a678748450aed768ca62be0a625f))
+* **@clayui/css:** Mixins clay-css should remove animations with c-prefers-reduced-motion ([e042a3c](https://github.com/liferay/clay/commit/e042a3cded1bd9832adb998fe76618d65e73ee05))
+
+
+### Features
+
+* **@clayui/css:** Global Functions adds clay-insert-after ([e462c59](https://github.com/liferay/clay/commit/e462c5984cf1e0625b326011e9a12aa52f33d8fa))
+* **@clayui/css:** Sheets adds sheet-row for aligning content flush ([9897c65](https://github.com/liferay/clay/commit/9897c650de5baa5dca448c61e570927ff778cc8d))
+
+
+
+
+
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
 

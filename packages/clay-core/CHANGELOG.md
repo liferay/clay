@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
+
+### Bug Fixes
+
+-   **@clayui/focus-trap:** Add display contents to ignore the element itself ([6e772ff](https://github.com/liferay/clay/commit/6e772ffbf4cdbdac1e0ab2aad57bb5427ca44cce))
+-   **@clayui/focus-trap:** Improve the description of the component ([d5d2786](https://github.com/liferay/clay/commit/d5d27865ec6d86e44a481964c7bcd0d077980de8))
+-   **@clayui/focus-trap:** Prevent focus if focusableElements is empty ([6b61c4c](https://github.com/liferay/clay/commit/6b61c4c9312aaf9440fd0423bfa76effea8a3354))
+-   **@clayui/focus-trap:** Update snapshot ([014170f](https://github.com/liferay/clay/commit/014170f5f051730efbe673ff994e3b6344fb58c8))
+
+### Features
+
+-   **@clayui/core:** add motion reduction ([509e6dc](https://github.com/liferay/clay/commit/509e6dcac80d0f86a3d581da1e2b47f014dff605))
+
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
 ### Bug Fixes

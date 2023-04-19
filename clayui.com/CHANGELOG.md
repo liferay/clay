@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
+
+### Bug Fixes
+
+-   **clayui.com:** Change tab navigation to navigation bar ([0a4f9a6](https://github.com/liferay/clay/commit/0a4f9a6f4f33591dfb865ad72f87ea9640723bd7))
+
+### Features
+
+-   **clayui.com:** updates the look of the page docs header ([c3ef028](https://github.com/liferay/clay/commit/c3ef02880d52192e3643c26fdfef15bb853c71f7))
+
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
 **Note:** Version bump only for package clayui.com
