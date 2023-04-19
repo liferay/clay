@@ -3,7 +3,9 @@
 exports[`FocusTrap basic rendering render static content when focus trap is actived 1`] = `
 <body>
   <div>
-    <div>
+    <div
+      style="display: contents;"
+    >
       <span
         aria-hidden="true"
         data-focus-scope-start="true"
@@ -28,7 +30,9 @@ exports[`FocusTrap basic rendering render static content when focus trap is acti
 exports[`FocusTrap basic rendering render static content when focus trap is not actived 1`] = `
 <body>
   <div>
-    <div>
+    <div
+      style="display: contents;"
+    >
       <button
         class="btn btn-primary"
         type="button"

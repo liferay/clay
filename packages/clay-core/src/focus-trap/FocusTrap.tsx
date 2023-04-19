@@ -47,7 +47,7 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 
 			const focusableElements = getFocusableElements(childrenRef);
 
-			if (focusableElements) {
+			if (focusableElements?.length) {
 				(focusableElements[0] as HTMLDivElement).focus();
 			}
 		}
@@ -68,7 +68,7 @@ export function FocusTrap({active = false, children, focusElementRef}: Props) {
 
 	return (
 		<FocusScope>
-			<div ref={childrenRef}>
+			<div ref={childrenRef} style={{display: 'contents'}}>
 				{active ? (
 					<span
 						aria-hidden="true"
