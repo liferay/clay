@@ -107,6 +107,7 @@ export const ClayCardWithNavigation = ({
 						<>
 							{title && (
 								<ClayCard.Description
+									aria-label={title}
 									displayType="title"
 									truncate
 								>
@@ -128,7 +129,7 @@ export const ClayCardWithNavigation = ({
 					{horizontal && (
 						<ClayCard.Row>
 							<ClayLayout.ContentCol>
-								<ClaySticker inline>
+								<ClaySticker inline title={horizontalSymbol}>
 									<ClayIcon
 										spritemap={spritemap}
 										symbol={horizontalSymbol}
@@ -139,6 +140,7 @@ export const ClayCardWithNavigation = ({
 								<ClayLayout.ContentCol expand>
 									<ClayLayout.ContentSection>
 										<ClayCard.Description
+											aria-label={title}
 											displayType="title"
 											truncate
 										>

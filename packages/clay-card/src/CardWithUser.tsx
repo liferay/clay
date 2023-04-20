@@ -115,6 +115,7 @@ export const ClayCardWithUser = ({
 				className="sticker-user-icon"
 				displayType={userDisplayType}
 				shape="circle"
+				title={userSymbol}
 			>
 				{userImageSrc && (
 					<ClaySticker.Image alt={userImageAlt} src={userImageSrc} />
@@ -152,6 +153,7 @@ export const ClayCardWithUser = ({
 				<ClayCard.Row>
 					<ClayLayout.ContentCol expand>
 						<ClayCard.Description
+							aria-label={title}
 							disabled={disabled}
 							displayType="title"
 							href={href}

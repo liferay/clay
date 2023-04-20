@@ -186,6 +186,11 @@ export const ClayCardWithInfo = ({
 							: 'primary'
 					}
 					position="bottom-left"
+					title={
+						stickerProps.content
+							? stickerProps.content
+							: stickerSymbol
+					}
 					{...stickerProps}
 				>
 					{stickerProps.children ? (
@@ -227,6 +232,7 @@ export const ClayCardWithInfo = ({
 				<ClayCard.Row>
 					<ClayLayout.ContentCol expand>
 						<ClayCard.Description
+							aria-label={title}
 							disabled={disabled}
 							displayType="title"
 							href={href}

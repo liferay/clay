@@ -87,13 +87,14 @@ export const ClayCardWithHorizontal = ({
 		<ClayCard.Body>
 			<ClayCard.Row>
 				<ClayLayout.ContentCol>
-					<ClaySticker inline>
+					<ClaySticker inline title={symbol}>
 						<ClayIcon spritemap={spritemap} symbol={symbol} />
 					</ClaySticker>
 				</ClayLayout.ContentCol>
 
 				<ClayLayout.ContentCol expand gutters>
 					<ClayCard.Description
+						aria-label={title}
 						disabled={disabled}
 						displayType="title"
 						href={href}
