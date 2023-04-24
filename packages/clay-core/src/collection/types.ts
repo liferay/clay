@@ -41,9 +41,9 @@ export interface ICollectionProps<T, P> {
 
 export type CollectionState = {
 	collection: JSX.Element;
-	getFirstItem: () => {key: string; value: string};
-	getItem: (key: React.Key) => string;
-	getLastItem: () => {key: string; value: string};
+	getFirstItem: () => {key: React.Key; value: string; index: number};
+	getItem: (key: React.Key) => {value: string; index: number};
+	getLastItem: () => {key: React.Key; value: string; index: number};
 	size?: number;
 	virtualize: boolean;
 };
