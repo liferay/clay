@@ -8,6 +8,18 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import {Keys} from './Keys';
 import {FOCUSABLE_ELEMENTS, isFocusable} from './useFocusManagement';
 
+// TODO: To avoid circular dependency we are just copying but we must remove this
+// when moving this into the core package.
+type CollectionState = {
+	collection: JSX.Element;
+	getFirstItem: () => {key: React.Key; value: string; index: number};
+	getItem: (key: React.Key) => {value: string; index: number};
+	getItems: () => Array<React.Key>;
+	getLastItem: () => {key: React.Key; value: string; index: number};
+	size?: number;
+	virtualize: boolean;
+};
+
 type Props<T> = {
 	/**
 	 * Flag to indicate the navigation behavior in the tab.
@@ -22,12 +34,19 @@ type Props<T> = {
 	 * The id of the currently active item that is highlighted.
 	 * Typically used when navigation is not done via focus.
 	 */
-	active?: string;
+	active?: React.Key;
 
 	/**
 	 * Reference of the parent element of the focusable elements.
 	 */
 	containerRef: React.MutableRefObject<T>;
+
+	/**
+	 * Defines that the navigation is done with the collection API when
+	 * it's declared.
+	 * OBS: Only supported with Collection and List Virtualization.
+	 */
+	collection?: CollectionState;
 
 	focusableElements?: Array<string>;
 
@@ -39,7 +58,7 @@ type Props<T> = {
 	/**
 	 * Callback is called when the intent is to move to the element.
 	 */
-	onNavigate?: (element: HTMLElement, index: number | null) => void;
+	onNavigate?: (item: HTMLElement | React.Key, index: number | null) => void;
 
 	/**
 	 * Indicates whether the element's orientation is horizontal or vertical.
@@ -64,6 +83,7 @@ const horizontalKeys = [Keys.Left, Keys.Right, Keys.Home, Keys.End];
 export function useNavigation<T extends HTMLElement | null>({
 	activation = 'manual',
 	active,
+	collection,
 	containerRef,
 	focusableElements = FOCUSABLE_ELEMENTS,
 	loop = false,
@@ -130,25 +150,39 @@ export function useNavigation<T extends HTMLElement | null>({
 				keys.includes(event.key) ||
 				(typeahead && !alternativeKeys.includes(event.key))
 			) {
-				const tabs = getFocusableList(containerRef, focusableElements);
+				const items = collection
+					? collection.getItems()
+					: getFocusableList(containerRef, focusableElements);
 
-				let tab: HTMLElement | undefined;
+				let item: HTMLElement | React.Key | undefined;
 
 				switch (event.key) {
 					case Keys.Left:
 					case Keys.Right:
 					case Keys.Down:
 					case Keys.Up: {
-						const activeElement =
-							document.activeElement as HTMLElement;
+						let position: number;
 
-						let position = tabs.indexOf(activeElement);
-
-						if (typeof active === 'string') {
-							position = tabs.findIndex(
-								(element) =>
-									element.getAttribute('id') === active
+						if (collection) {
+							position = (items as Array<React.Key>).indexOf(
+								active!
 							);
+						} else {
+							const activeElement =
+								document.activeElement as HTMLElement;
+
+							position = (items as Array<HTMLElement>).indexOf(
+								activeElement
+							);
+
+							if (typeof active === 'string') {
+								position = (
+									items as Array<HTMLElement>
+								).findIndex(
+									(element) =>
+										element.getAttribute('id') === active
+								);
+							}
 						}
 
 						if (position === -1) {
@@ -158,21 +192,24 @@ export function useNavigation<T extends HTMLElement | null>({
 						const key =
 							orientation === 'vertical' ? Keys.Up : Keys.Left;
 
-						tab =
-							tabs[
+						item =
+							items[
 								event.key === key ? position - 1 : position + 1
 							];
 
-						if (loop && !tab) {
-							tab = tabs[event.key === key ? tabs.length - 1 : 0];
+						if (loop && !item) {
+							item =
+								items[event.key === key ? items.length - 1 : 0];
 						}
 
 						break;
 					}
 					case Keys.Home:
 					case Keys.End:
-						tab =
-							tabs[event.key === Keys.Home ? 0 : tabs.length - 1];
+						item =
+							items[
+								event.key === Keys.Home ? 0 : items.length - 1
+							];
 						break;
 					default: {
 						const target = event.target as HTMLElement;
@@ -230,36 +267,54 @@ export function useNavigation<T extends HTMLElement | null>({
 						const prevIndex = prevIndexRef.current;
 
 						const orderedList = [
-							...tabs.slice((prevIndex ?? 0) + 1),
-							...tabs.slice(0, (prevIndex ?? 0) + 1),
+							...items.slice((prevIndex ?? 0) + 1),
+							...items.slice(0, (prevIndex ?? 0) + 1),
 						];
 
-						tab = orderedList.find(
-							(element) =>
-								(element.innerText ?? element.textContent)
+						item = orderedList.find((item) => {
+							const value =
+								item instanceof HTMLElement
+									? item.innerText ?? item.textContent
+									: collection?.getItem(item).value;
+
+							return (
+								value
 									?.toLowerCase()
 									.indexOf(
 										stringRef.current.toLocaleLowerCase()
 									) === 0
-						);
+							);
+						});
 
-						if (tab) {
-							matchIndexRef.current = tabs.indexOf(tab);
+						if (item) {
+							// @ts-ignore
+							matchIndexRef.current = items.indexOf(item);
 						}
 						break;
 					}
 				}
 
-				if (tab) {
+				if (item) {
 					event.preventDefault();
-					if (onNavigate) {
-						accessibilityFocus(tab, tabs);
-					} else {
-						tab.focus();
-					}
 
-					if (activation === 'automatic') {
-						tab.click();
+					if (item instanceof HTMLElement) {
+						if (onNavigate) {
+							accessibilityFocus(
+								item,
+								items as Array<HTMLElement>
+							);
+						} else {
+							item.focus();
+						}
+
+						if (activation === 'automatic') {
+							item.click();
+						}
+					} else if (onNavigate) {
+						onNavigate(
+							item,
+							(items as Array<React.Key>).indexOf(item)
+						);
 					}
 				}
 			}
@@ -271,7 +326,7 @@ export function useNavigation<T extends HTMLElement | null>({
 		// Moves the scroll to the element with visual "focus" if it exists.
 		if (visible && containerRef.current && active && onNavigate) {
 			const child = containerRef.current.firstElementChild as HTMLElement;
-			const activeElement = document.getElementById(active);
+			const activeElement = document.getElementById(String(active));
 
 			if (activeElement && isScrollable(child)) {
 				maintainScrollVisibility(activeElement, child);
