@@ -184,7 +184,7 @@ export function Picker<T>({
 
 	const [activeDescendant, setActiveDescendant] = useState(() =>
 		typeof selectedKey !== 'undefined'
-			? String(selectedKey)
+			? selectedKey
 			: collection.getFirstItem().key
 	);
 
@@ -215,7 +215,8 @@ export function Picker<T>({
 		activation: 'manual',
 		active: activeDescendant,
 		containerRef: menuRef,
-		onNavigate: (tab) => setActiveDescendant(tab.getAttribute('id')!),
+		onNavigate: (tab) =>
+			setActiveDescendant((tab as HTMLElement).getAttribute('id')!),
 		orientation: 'vertical',
 		typeahead: true,
 		visible: active,
@@ -223,7 +224,7 @@ export function Picker<T>({
 
 	const onPress = useCallback(() => {
 		if (menuRef.current && activeDescendant) {
-			const item = document.getElementById(activeDescendant);
+			const item = document.getElementById(String(activeDescendant));
 
 			if (item) {
 				item.click();
@@ -242,16 +243,16 @@ export function Picker<T>({
 			activeDescendant &&
 			active
 		) {
-			const value = collection.getItem(activeDescendant);
+			const item = collection.getItem(activeDescendant);
 
-			if (!value) {
+			if (!item) {
 				return;
 			}
 
 			announcerAPI.current.announce(
 				selectedKey === activeDescendant
-					? sub(messages.itemSelected, [value])
-					: `${value}`
+					? sub(messages.itemSelected, [item.value])
+					: `${item.value}`
 			);
 
 			// Announces item description with delay to replace combobox description.
@@ -298,7 +299,7 @@ export function Picker<T>({
 
 			<As
 				{...otherProps}
-				aria-activedescendant={active ? activeDescendant : ''}
+				aria-activedescendant={active ? String(activeDescendant) : ''}
 				aria-controls={
 					active && isAppleDevice() ? ariaControls : undefined
 				}
@@ -374,7 +375,7 @@ export function Picker<T>({
 							const position = list.findIndex(
 								(element) =>
 									element.getAttribute('id') ===
-									activeDescendant
+									String(activeDescendant)
 							);
 
 							if (position === -1) {
@@ -408,7 +409,9 @@ export function Picker<T>({
 				role="combobox"
 				tabIndex={0}
 			>
-				{selectedKey ? collection.getItem(selectedKey) : placeholder}
+				{selectedKey
+					? collection.getItem(selectedKey)?.value
+					: placeholder}
 			</As>
 
 			{active && (
@@ -427,9 +430,9 @@ export function Picker<T>({
 							onPress();
 						} else {
 							const key =
-								String(selectedKey) === 'undefined'
+								typeof selectedKey === 'undefined'
 									? collection.getFirstItem().key
-									: String(selectedKey);
+									: selectedKey;
 
 							if (key !== activeDescendant) {
 								setActiveDescendant(key);

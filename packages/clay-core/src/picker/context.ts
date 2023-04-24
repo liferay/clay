@@ -8,9 +8,9 @@ import {createContext, useContext} from 'react';
 import type {InternalDispatch} from '@clayui/shared';
 
 type PickerContextProps = {
-	activeDescendant: string;
+	activeDescendant: React.Key;
 	isMobile: boolean;
-	onActiveDescendant: (value: string) => void;
+	onActiveDescendant: (value: React.Key) => void;
 	onSelectionChange: InternalDispatch<React.Key>;
 	selectedKey: React.Key;
 };

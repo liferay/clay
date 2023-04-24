@@ -87,10 +87,7 @@ export function Option({
 
 	const hoverProps = useHover({
 		disabled,
-		onHover: useCallback(
-			() => onActiveDescendant(String(keyValue)),
-			[keyValue]
-		),
+		onHover: useCallback(() => onActiveDescendant(keyValue!), [keyValue]),
 	});
 
 	const isFocus = isFocusVisible();
@@ -119,8 +116,8 @@ export function Option({
 				aria-setsize={ariaSetSize}
 				className={classNames('dropdown-item', {
 					active: selectedKey === keyValue,
-					focus: activeDescendant === String(keyValue) && isFocus,
-					hover: activeDescendant === String(keyValue) && !isFocus,
+					focus: activeDescendant === keyValue && isFocus,
+					hover: activeDescendant === keyValue && !isFocus,
 				})}
 				disabled={disabled}
 				id={String(keyValue)}
