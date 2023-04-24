@@ -344,6 +344,7 @@ export function useCollection<
 	}, [children, createItemsLayout, performCollectionRender, items]);
 
 	return {
+		UNSAFE_virtualizer: virtualizer,
 		collection: (
 			<CollectionContext.Provider value={{keys: layoutKeysRef, layout}}>
 				{collection}

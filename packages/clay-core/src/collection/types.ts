@@ -40,6 +40,7 @@ export interface ICollectionProps<T, P> {
 }
 
 export type CollectionState = {
+	UNSAFE_virtualizer?: Virtualizer<HTMLElement, Element>;
 	collection: JSX.Element;
 	getFirstItem: () => {key: React.Key; value: string; index: number};
 	getItem: (key: React.Key) => {value: string; index: number};
