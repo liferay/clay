@@ -61,7 +61,7 @@ const Item = React.forwardRef<HTMLLIElement, IProps>(
 		const hoverProps = useHover({
 			disabled,
 			onHover: useCallback(
-				() => onActiveDescendant(String(keyValue)),
+				() => onActiveDescendant(keyValue!),
 				[keyValue]
 			),
 		});
@@ -75,10 +75,10 @@ const Item = React.forwardRef<HTMLLIElement, IProps>(
 			<DropDown.Item
 				{...otherProps}
 				{...hoverProps}
-				aria-selected={activeDescendant === String(keyValue)}
+				aria-selected={activeDescendant === keyValue}
 				className={classnames(className, {
-					focus: activeDescendant === String(keyValue) && isFocus,
-					hover: activeDescendant === String(keyValue) && !isFocus,
+					focus: activeDescendant === keyValue && isFocus,
+					hover: activeDescendant === keyValue && !isFocus,
 				})}
 				id={String(keyValue)}
 				innerRef={innerRef}

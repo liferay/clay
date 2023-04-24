@@ -23,7 +23,7 @@ import {AutocompleteContext} from './Context';
 
 import type {ICollectionProps} from '@clayui/core';
 
-const {Collection, useCollection} = __NOT_PUBLIC_COLLECTION;
+const {Collection, useCollection, useVirtual} = __NOT_PUBLIC_COLLECTION;
 
 type Messages = {
 	loading: string;
@@ -217,6 +217,12 @@ export function Autocomplete<T extends Record<string, any>>({
 		);
 	}, [debouncedLoadingChange, isItemsUncontrolled, items, filterFn]);
 
+	const virtualizer = useVirtual({
+		estimateSize: 37,
+		items: filteredItems,
+		parentRef: menuRef,
+	});
+
 	// We initialize the collection in the picker and then pass it down so the
 	// collection can be cached even before the listbox is not mounted.
 	const collection = useCollection<T, unknown>({
@@ -258,9 +264,10 @@ export function Autocomplete<T extends Record<string, any>>({
 			</DropDown.Item>
 		),
 		suppressTextValueWarning: false,
+		virtualizer,
 	});
 
-	const [activeDescendant, setActiveDescendant] = useState<string>('');
+	const [activeDescendant, setActiveDescendant] = useState<React.Key>('');
 
 	useOverlayPosition(
 		{
@@ -277,16 +284,27 @@ export function Autocomplete<T extends Record<string, any>>({
 	const {navigationProps} = useNavigation({
 		activation: 'manual',
 		active: activeDescendant,
+		collection,
 		containerRef: menuRef,
 		loop: true,
-		onNavigate: (item) => setActiveDescendant(item.getAttribute('id')!),
+		onNavigate: (item, index) => {
+			if (items) {
+				// TODO: Move this to the `useNavigation` hook
+				virtualizer.scrollToIndex(index!, {
+					align: 'auto',
+					behavior: 'smooth',
+				});
+			}
+
+			setActiveDescendant(item as React.Key);
+		},
 		orientation: 'vertical',
 		visible: active,
 	});
 
 	const onPress = useCallback(() => {
 		if (menuRef.current && activeDescendant) {
-			const item = document.getElementById(activeDescendant);
+			const item = document.getElementById(String(activeDescendant));
 
 			if (item) {
 				item.click();
@@ -294,11 +312,23 @@ export function Autocomplete<T extends Record<string, any>>({
 		}
 	}, [activeDescendant]);
 
+	// TODO: Move this to the `useNavigation` hook
+	useEffect(() => {
+		if (active && activeDescendant) {
+			virtualizer.scrollToIndex(
+				collection.getItem(activeDescendant).index,
+				{align: 'center', behavior: 'auto'}
+			);
+		}
+	}, [active]);
+
 	return (
 		<>
 			<Input
 				{...otherProps}
-				aria-activedescendant={active ? activeDescendant : undefined}
+				aria-activedescendant={
+					active ? String(activeDescendant) : undefined
+				}
 				aria-autocomplete="list"
 				aria-controls={ariaControlsId}
 				aria-expanded={active}

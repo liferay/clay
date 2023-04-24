@@ -28,8 +28,8 @@ export const LegacyContext = createContext({} as IContext);
 LegacyContext.displayName = 'ClayAutocompleteLegacyContext';
 
 type AutocompleteContext = {
-	activeDescendant?: string;
-	onActiveDescendant: (value: string) => void;
+	activeDescendant?: React.Key;
+	onActiveDescendant: (value: React.Key) => void;
 	onClick: (value: string) => void;
 };
 
