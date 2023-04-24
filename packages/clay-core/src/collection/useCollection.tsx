@@ -310,6 +310,10 @@ export function useCollection<
 		};
 	}, []);
 
+	const getItems = useCallback(() => {
+		return Array.from(layout.current.keys());
+	}, []);
+
 	// It builds the dynamic or static collection, done in two steps: Data and
 	// Rendering, both go through the elements to get the data of each item.
 	//
@@ -347,6 +351,7 @@ export function useCollection<
 		),
 		getFirstItem,
 		getItem,
+		getItems,
 		getLastItem,
 		size: virtualizer ? virtualizer.getTotalSize() : undefined,
 		virtualize: !!virtualizer,
