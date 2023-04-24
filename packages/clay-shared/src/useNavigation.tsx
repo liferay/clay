@@ -8,9 +8,12 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import {Keys} from './Keys';
 import {FOCUSABLE_ELEMENTS, isFocusable} from './useFocusManagement';
 
+import type {Virtualizer} from '@tanstack/react-virtual';
+
 // TODO: To avoid circular dependency we are just copying but we must remove this
 // when moving this into the core package.
 type CollectionState = {
+	UNSAFE_virtualizer?: Virtualizer<HTMLElement, Element>;
 	collection: JSX.Element;
 	getFirstItem: () => {key: React.Key; value: string; index: number};
 	getItem: (key: React.Key) => {value: string; index: number};
@@ -112,18 +115,37 @@ export function useNavigation<T extends HTMLElement | null>({
 	}, [visible]);
 
 	const accessibilityFocus = useCallback(
-		(tab: HTMLElement, tabs?: Array<HTMLElement>) => {
-			onNavigate!(tab, tabs ? tabs.indexOf(tab) : null);
+		(
+			item: HTMLElement | React.Key,
+			items?: Array<HTMLElement> | Array<React.Key>
+		) => {
+			const index = items ? items.indexOf(item as any) : null;
+			const element =
+				item instanceof HTMLElement
+					? item
+					: document.getElementById(String(item))!;
 
-			const child = containerRef.current!
-				.firstElementChild as HTMLElement;
+			onNavigate!(item, index);
 
-			if (isScrollable(child)) {
-				maintainScrollVisibility(tab, child);
+			if (collection?.virtualize) {
+				collection.UNSAFE_virtualizer!.scrollToIndex(index!, {
+					align: 'auto',
+					behavior: 'smooth',
+				});
+
+				return;
 			}
 
-			if (!isElementInView(tab)) {
-				tab.scrollIntoView({
+			const child = isScrollable(containerRef.current!)
+				? (containerRef.current as HTMLElement)
+				: (containerRef.current!.firstElementChild as HTMLElement);
+
+			if (isScrollable(child)) {
+				maintainScrollVisibility(element, child);
+			}
+
+			if (!isElementInView(element)) {
+				element.scrollIntoView({
 					behavior: 'smooth',
 					block: 'nearest',
 				});
@@ -296,25 +318,19 @@ export function useNavigation<T extends HTMLElement | null>({
 
 				if (item) {
 					event.preventDefault();
+					const element =
+						item instanceof HTMLElement
+							? item
+							: document.getElementById(String(item))!;
 
-					if (item instanceof HTMLElement) {
-						if (onNavigate) {
-							accessibilityFocus(
-								item,
-								items as Array<HTMLElement>
-							);
-						} else {
-							item.focus();
-						}
+					if (onNavigate) {
+						accessibilityFocus(item, items);
+					} else {
+						element.focus();
+					}
 
-						if (activation === 'automatic') {
-							item.click();
-						}
-					} else if (onNavigate) {
-						onNavigate(
-							item,
-							(items as Array<React.Key>).indexOf(item)
-						);
+					if (activation === 'automatic') {
+						element.click();
 					}
 				}
 			}
@@ -325,12 +341,19 @@ export function useNavigation<T extends HTMLElement | null>({
 	useEffect(() => {
 		// Moves the scroll to the element with visual "focus" if it exists.
 		if (visible && containerRef.current && active && onNavigate) {
-			const child = containerRef.current.firstElementChild as HTMLElement;
+			const child = isScrollable(containerRef.current)
+				? containerRef.current
+				: (containerRef.current.firstElementChild as HTMLElement);
 			const activeElement = document.getElementById(String(active));
 
 			if (activeElement && isScrollable(child)) {
 				maintainScrollVisibility(activeElement, child);
 			}
+		} else if (visible && active && collection?.virtualize) {
+			collection.UNSAFE_virtualizer!.scrollToIndex(
+				collection.getItem(active).index,
+				{align: 'center', behavior: 'auto'}
+			);
 		}
 	}, [visible]);
 
