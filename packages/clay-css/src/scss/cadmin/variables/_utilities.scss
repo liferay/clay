@@ -370,6 +370,30 @@ $cadmin-border-theme-colors: map-deep-merge(
 $cadmin-displays: none, inline, inline-block, grid, block, contents, table,
 	table-row, table-cell, flex, inline-flex !default;
 
+$cadmin-displays-c-prefers-reduced-motion: () !default;
+$cadmin-displays-c-prefers-reduced-motion: map-deep-merge(
+	(
+		d-block-c-prefers-reduced-motion: (
+			display: none !important,
+		),
+		d-inline-block-c-prefers-reduced-motion: (
+			display: none !important,
+		),
+		c-prefers-reduced-motion: (
+			d-none-c-prefers-reduced-motion: (
+				display: none !important,
+			),
+			d-block-c-prefers-reduced-motion: (
+				display: block !important,
+			),
+			d-inline-block-c-prefers-reduced-motion: (
+				display: inline-block !important,
+			),
+		),
+	),
+	$cadmin-displays-c-prefers-reduced-motion
+);
+
 // Overflow
 
 $cadmin-overflows: auto, hidden !default;
