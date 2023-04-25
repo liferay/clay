@@ -264,7 +264,7 @@ export function Autocomplete<T extends Record<string, any>>({
 			</DropDown.Item>
 		),
 		suppressTextValueWarning: false,
-		virtualizer,
+		virtualizer: items ? virtualizer : undefined,
 	});
 
 	const [activeDescendant, setActiveDescendant] = useState<React.Key>('');
@@ -287,17 +287,7 @@ export function Autocomplete<T extends Record<string, any>>({
 		collection,
 		containerRef: menuRef,
 		loop: true,
-		onNavigate: (item, index) => {
-			if (items) {
-				// TODO: Move this to the `useNavigation` hook
-				virtualizer.scrollToIndex(index!, {
-					align: 'auto',
-					behavior: 'smooth',
-				});
-			}
-
-			setActiveDescendant(item as React.Key);
-		},
+		onNavigate: (item) => setActiveDescendant(item as React.Key),
 		orientation: 'vertical',
 		visible: active,
 	});
@@ -311,16 +301,6 @@ export function Autocomplete<T extends Record<string, any>>({
 			}
 		}
 	}, [activeDescendant]);
-
-	// TODO: Move this to the `useNavigation` hook
-	useEffect(() => {
-		if (active && activeDescendant) {
-			virtualizer.scrollToIndex(
-				collection.getItem(activeDescendant).index,
-				{align: 'center', behavior: 'auto'}
-			);
-		}
-	}, [active]);
 
 	return (
 		<>
