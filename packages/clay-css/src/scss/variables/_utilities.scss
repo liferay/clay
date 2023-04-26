@@ -369,6 +369,17 @@ $displays-c-prefers-reduced-motion: map-deep-merge(
 		d-inline-block-c-prefers-reduced-motion: (
 			display: none !important,
 		),
+		'@media (prefers-reduced-motion: reduce)': (
+			d-none-c-prefers-reduced-motion: (
+				display: none !important,
+			),
+			d-block-c-prefers-reduced-motion: (
+				display: block !important,
+			),
+			d-inline-block-c-prefers-reduced-motion: (
+				display: inline-block !important,
+			),
+		),
 		c-prefers-reduced-motion: (
 			d-none-c-prefers-reduced-motion: (
 				display: none !important,

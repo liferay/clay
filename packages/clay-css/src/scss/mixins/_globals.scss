@@ -333,19 +333,29 @@
 			@each $nestedKey, $nestedValue in $value {
 				@if (type-of($nestedValue) == 'map') {
 					$parentSelector: if(
-						starts-with($key, '.') or starts-with($key, '#'),
+						starts-with($key, '.') or
+							starts-with($key, '#') or
+							starts-with($key, '@'),
 						$key,
 						str-insert($key, '.', 1)
 					);
 
 					$nestedMap: (#{$nestedKey}: $nestedValue);
 
-					#{$parentSelector} {
-						@include clay-map-to-css($nestedMap);
+					@if (starts-with($parentSelector, '@media ')) {
+						@media #{clay-str-replace('#{$parentSelector}', '@media ', '')} {
+							@include clay-map-to-css($nestedMap);
+						}
+					} @else {
+						#{$parentSelector} {
+							@include clay-map-to-css($nestedMap);
+						}
 					}
 				} @else {
 					$selector: if(
-						starts-with($key, '.') or starts-with($key, '#'),
+						starts-with($key, '.') or
+							starts-with($key, '#') or
+							starts-with($key, '@'),
 						$key,
 						str-insert($key, '.', 1)
 					);
