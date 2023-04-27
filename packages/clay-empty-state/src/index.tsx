@@ -77,7 +77,9 @@ const ClayEmptyState = ({
 						<img
 							alt=""
 							className={classNames(
-								'aspect-ratio-item aspect-ratio-item-fluid d-none-c-prefers-reduced-motion',
+								'aspect-ratio-item aspect-ratio-item-fluid',
+								imgSrcReducedMotion &&
+									'd-none-c-prefers-reduced-motion',
 								imgProps && imgProps.className
 							)}
 							src={imgSrc}
