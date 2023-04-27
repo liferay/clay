@@ -6,7 +6,7 @@
 import {ClayInput} from '@clayui/form';
 import React from 'react';
 
-import Context from './Context';
+import {LegacyContext} from './Context';
 
 export interface IProps
 	extends React.InputHTMLAttributes<HTMLInputElement>,
@@ -14,7 +14,7 @@ export interface IProps
 
 const ClayAutocompleteInput = React.forwardRef<HTMLInputElement, IProps>(
 	(props, ref) => {
-		const {loading} = React.useContext(Context);
+		const {loading} = React.useContext(LegacyContext);
 
 		return <ClayInput {...props} insetAfter={loading} ref={ref} />;
 	}
