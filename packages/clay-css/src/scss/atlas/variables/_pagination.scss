@@ -17,7 +17,8 @@ $pagination-link-border-radius: 4px !default;
 
 // @deprecated as of v2 use the Sass map `$pagination-link` instead
 
-$pagination-link-transition: box-shadow 0.15s ease-in-out !default;
+$pagination-link-transition: background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out !default;
 
 $pagination-link-first-border-radius: $pagination-link-border-radius !default;
 $pagination-link-last-border-radius: $pagination-link-border-radius !default;
@@ -29,15 +30,15 @@ $pagination-color: $gray-600 !default;
 $pagination-padding-x: 0.625rem !default; // 10px
 $pagination-padding-y: 0 !default;
 
-$pagination-hover-bg: rgba(39, 40, 41, 0.04) !default;
+$pagination-hover-bg: rgba($gray-900, 0.04) !default;
 $pagination-hover-border-color: transparent !default;
 $pagination-hover-color: $gray-900 !default;
 
 $pagination-focus-box-shadow: $component-focus-box-shadow !default;
 
-$pagination-active-bg: $secondary !default;
+$pagination-active-bg: rgba($primary, 0.06) !default;
 $pagination-active-border-color: transparent !default;
-$pagination-active-color: $white !default;
+$pagination-active-color: $gray-900 !default;
 
 $pagination-disabled-bg: transparent !default;
 $pagination-disabled-border-color: $pagination-disabled-bg !default;
@@ -47,19 +48,70 @@ $pagination-disabled-color: $gray-600 !default;
 
 $pagination-disabled-opacity: 0.5 !default;
 
-$pagination-link-focus: () !default;
-$pagination-link-focus: map-deep-merge(
+$pagination-link-hover: () !default;
+$pagination-link-hover: map-deep-merge(
 	(
 		background-color: $pagination-hover-bg,
 		border-color: $pagination-hover-border-color,
+		box-shadow: inset 0 -0.125rem 0 0 $secondary-l0,
 		color: $pagination-hover-color,
+		text-decoration: none,
+		z-index: 2,
+	),
+	$pagination-link-hover
+);
+
+$pagination-link-focus: () !default;
+$pagination-link-focus: map-deep-merge(
+	(
+		background-color: c-unset,
+		border-color: $pagination-hover-border-color,
+		box-shadow: c-unset,
+		color: $pagination-hover-color,
+		after: (
+			border-radius: $pagination-link-border-radius,
+			bottom: 0,
+			box-shadow: $pagination-focus-box-shadow,
+			content: '',
+			display: block,
+			left: 0,
+			pointer-events: none,
+			position: absolute,
+			right: 0,
+			top: 0,
+		),
 	),
 	$pagination-link-focus
+);
+
+$pagination-link-active: () !default;
+$pagination-link-active: map-deep-merge(
+	(
+		background-color: $pagination-active-bg,
+		border-color: $pagination-active-border-color,
+		color: $pagination-active-color,
+		box-shadow: inset 0 -0.25rem 0 0 $primary-l0,
+	),
+	$pagination-link-active
+);
+
+$pagination-link: () !default;
+$pagination-link: map-deep-merge(
+	(
+		show: (
+			box-shadow: inset 0 -0.25rem 0 0 $primary-l0,
+		),
+	),
+	$pagination-link
 );
 
 // Pagination Dropdown Menu
 
 $pagination-dropdown-menu-spacer-y: 0.625rem !default; // 10px
+
+/// @deprecated as of v2 use the Sass map `$pagination-items-per-page-link-focus` instead
+
+$pagination-items-per-page-focus-box-shadow: c-unset !default;
 
 // Pagination Items Per Page Link
 
@@ -68,9 +120,24 @@ $pagination-items-per-page-link-focus: map-deep-merge(
 	(
 		background-color: map-get($pagination-link-focus, background-color),
 		border-color: map-get($pagination-link-focus, border-color),
+		box-shadow: $pagination-items-per-page-focus-box-shadow,
 		color: map-get($pagination-link-focus, color),
+		after: map-get($pagination-link-focus, after),
 	),
 	$pagination-items-per-page-link-focus
+);
+
+// .pagination-items-per-page > a, .pagination-items-per-page > button
+
+$pagination-items-per-page-link: () !default;
+$pagination-items-per-page-link: map-deep-merge(
+	(
+		hover: (
+			box-shadow: map-get($pagination-link-hover, box-shadow),
+		),
+		show: map-get($pagination-link, show),
+	),
+	$pagination-items-per-page-link
 );
 
 // Pagination Results
