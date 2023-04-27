@@ -47,7 +47,6 @@ type Props<T> = {
 	/**
 	 * Defines that the navigation is done with the collection API when
 	 * it's declared.
-	 * OBS: Only supported with Collection and List Virtualization.
 	 */
 	collection?: CollectionState;
 
@@ -407,7 +406,7 @@ export function isTypeahead(event: React.KeyboardEvent<HTMLElement>) {
 }
 
 function isElementInView(element: HTMLElement) {
-	var bounding = element.getBoundingClientRect();
+	const bounding = element.getBoundingClientRect();
 
 	return (
 		bounding.top >= 0 &&
