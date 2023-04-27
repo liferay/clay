@@ -230,7 +230,10 @@ export function Autocomplete<T extends Record<string, any>>({
 		filter: isItemsUncontrolled ? filterFn : undefined,
 		filterKey: 'value',
 		itemContainer: ({children, keyValue}: ItemProps<any>) => {
-			const itemValue = children.props.value ?? children.props.children;
+			const itemValue =
+				children.props.textValue ??
+				children.props.value ??
+				children.props.children;
 
 			return React.cloneElement(children, {
 				keyValue,

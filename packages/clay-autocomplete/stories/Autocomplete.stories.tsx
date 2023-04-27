@@ -195,7 +195,10 @@ export const CustomItem = () => {
 							value={value}
 						>
 							{(item) => (
-								<DropDown.Item key={item}>
+								<ClayAutocomplete.Item
+									key={item}
+									textValue={item}
+								>
 									<Layout.ContentRow>
 										<Layout.ContentCol expand>
 											<Text size={3}>
@@ -208,7 +211,7 @@ export const CustomItem = () => {
 											<Text size={2}>Description</Text>
 										</Layout.ContentCol>
 									</Layout.ContentRow>
-								</DropDown.Item>
+								</ClayAutocomplete.Item>
 							)}
 						</ClayAutocomplete>
 					</div>

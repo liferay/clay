@@ -15,7 +15,7 @@ export interface IProps extends React.ComponentProps<typeof DropDown.Item> {
 	/**
 	 * The item content.
 	 */
-	children?: React.ReactText;
+	children?: React.ReactNode;
 
 	innerRef?: React.Ref<HTMLAnchorElement>;
 
@@ -36,74 +36,107 @@ export interface IProps extends React.ComponentProps<typeof DropDown.Item> {
 	 * @ignore
 	 */
 	keyValue?: React.Key;
+
+	/**
+	 * Sets a text value if the component's content is not plain text. This value
+	 * is used in the combobox element to show the selected option.
+	 */
+	textValue?: string;
 }
 
 const optionsFuzzy = {post: '|+', pre: '+|'};
 
-const Item = React.forwardRef<HTMLLIElement, IProps>(
-	(
-		{
-			children,
-			className,
-			disabled,
-			innerRef,
-			keyValue,
-			match = '',
-			value,
-			...otherProps
-		}: IProps,
-		ref
-	) => {
-		const {activeDescendant, onActiveDescendant} = useAutocompleteState();
+const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
+	{
+		children,
+		className,
+		disabled,
+		innerRef,
+		keyValue,
+		match = '',
+		textValue,
+		value,
+		...otherProps
+	}: IProps,
+	ref
+) {
+	const {activeDescendant, onActiveDescendant} = useAutocompleteState();
+	const {isFocusVisible} = useInteractionFocus();
 
-		const {isFocusVisible} = useInteractionFocus();
+	const hoverProps = useHover({
+		disabled,
+		onHover: useCallback(() => onActiveDescendant(keyValue!), [keyValue]),
+	});
 
-		const hoverProps = useHover({
-			disabled,
-			onHover: useCallback(
-				() => onActiveDescendant(keyValue!),
-				[keyValue]
-			),
-		});
+	const isFocus = isFocusVisible();
 
-		const isFocus = isFocusVisible();
+	const currentValue = textValue ?? value ?? String(children);
+	const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
 
-		const currentValue = value ?? String(children);
-		const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
+	return (
+		<DropDown.Item
+			{...otherProps}
+			{...hoverProps}
+			aria-selected={activeDescendant === keyValue}
+			className={classnames(className, {
+				focus: activeDescendant === keyValue && isFocus,
+				hover: activeDescendant === keyValue && !isFocus,
+			})}
+			id={String(keyValue)}
+			innerRef={innerRef}
+			ref={ref}
+			tabIndex={-1}
+		>
+			{match && fuzzyMatch && typeof children === 'string'
+				? fuzzyMatch.rendered
+						.split('|')
+						.map((item, index) => {
+							const Text = item.includes('+') ? 'span' : 'strong';
+							const value = item.replace(/\+/g, '');
 
-		return (
-			<DropDown.Item
-				{...otherProps}
-				{...hoverProps}
-				aria-selected={activeDescendant === keyValue}
-				className={classnames(className, {
-					focus: activeDescendant === keyValue && isFocus,
-					hover: activeDescendant === keyValue && !isFocus,
-				})}
-				id={String(keyValue)}
-				innerRef={innerRef}
-				ref={ref}
-				tabIndex={-1}
-			>
-				{match && fuzzyMatch
-					? fuzzyMatch.rendered
-							.split('|')
-							.map((item, index) => {
-								const Text = item.includes('+')
-									? 'span'
-									: 'strong';
-								const value = item.replace(/\+/g, '');
+							return value ? (
+								<Text key={index}>{value}</Text>
+							) : null;
+						})
+						.filter(Boolean)
+				: children ?? currentValue}
+		</DropDown.Item>
+	);
+});
 
-								return value ? (
-									<Text key={index}>{value}</Text>
-								) : null;
-							})
-							.filter(Boolean)
-					: currentValue}
-			</DropDown.Item>
-		);
-	}
-);
+const ItemLegacy = React.forwardRef<HTMLLIElement, IProps>(function ItemLegacy(
+	{children, innerRef, match = '', value, ...otherProps}: IProps,
+	ref
+) {
+	const currentValue = value ?? String(children);
+	const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);
+
+	return (
+		<DropDown.Item {...otherProps} innerRef={innerRef} ref={ref}>
+			{match && fuzzyMatch
+				? fuzzyMatch.rendered
+						.split('|')
+						.map((item, index) => {
+							const Text = item.includes('+') ? 'span' : 'strong';
+							const value = item.replace(/\+/g, '');
+
+							return value ? (
+								<Text key={index}>{value}</Text>
+							) : null;
+						})
+						.filter(Boolean)
+				: currentValue}
+		</DropDown.Item>
+	);
+});
+
+const Item = React.forwardRef<HTMLLIElement, IProps>((props: IProps, ref) => {
+	const {onActiveDescendant} = useAutocompleteState();
+
+	const Component = onActiveDescendant! ? NewItem : ItemLegacy;
+
+	return <Component {...props} ref={ref} />;
+});
 
 Item.displayName = 'Item';
 
