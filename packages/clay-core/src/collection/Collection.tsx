@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 import {useCollection} from './useCollection';
 import {useVirtual} from './useVirtual';
@@ -26,6 +26,17 @@ interface IProps
 	 * Flag to estimate the default height of a list item in pixels.
 	 */
 	estimateSize?: number;
+
+	/**
+	 * Flag if a request is in progress.
+	 */
+	isLoading?: boolean;
+
+	/**
+	 * Defines the method for enable infinite scroll and loading more data into
+	 * the list.
+	 */
+	onLoadMore?: () => Promise<any> | null;
 
 	/**
 	 * Add the reference of the parent element that will be used to define the
@@ -133,8 +144,10 @@ export function Collection<
 	exclude,
 	filter,
 	filterKey,
+	isLoading,
 	itemContainer,
 	items,
+	onLoadMore,
 	parentKey,
 	parentRef,
 	passthroughKey = true,
@@ -142,8 +155,35 @@ export function Collection<
 	virtualize = false,
 	...otherProps
 }: Partial<ICollectionProps<T, P>> & Props<P, K> & Partial<IProps>) {
+	const containerRef = useRef<HTMLDivElement>(null);
 	const isVirtual = collection?.virtualize;
 	const Container = as ?? isVirtual ? 'div' : React.Fragment;
+
+	const onScroll = useCallback(
+		(event: Event) => {
+			const target = event.target as HTMLElement;
+
+			if (
+				target.scrollTop + target.clientHeight >=
+					target.scrollHeight - 40 &&
+				!isLoading
+			) {
+				onLoadMore!();
+			}
+		},
+		[onLoadMore, isLoading]
+	);
+
+	useEffect(() => {
+		if (onLoadMore && containerRef.current) {
+			const element = containerRef.current.parentElement!;
+			element.addEventListener('scroll', onScroll, true);
+
+			return () => {
+				element.removeEventListener('scroll', onScroll, true);
+			};
+		}
+	}, [onScroll]);
 
 	let content;
 
@@ -197,8 +237,10 @@ export function Collection<
 		  }
 		: {};
 
+	const props = as || isVirtual ? {ref: containerRef} : {};
+
 	return (
-		<Container {...otherProps} {...virtualProps}>
+		<Container {...otherProps} {...virtualProps} {...props}>
 			{content}
 		</Container>
 	);

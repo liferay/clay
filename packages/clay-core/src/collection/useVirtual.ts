@@ -13,11 +13,6 @@ type Props<T> = {
 	estimateSize: number;
 
 	/**
-	 * Flag to enable infinite scroll.
-	 */
-	hasMore?: boolean;
-
-	/**
 	 * Property to render content with dynamic data.
 	 */
 	items: Array<T>;
@@ -30,14 +25,9 @@ type Props<T> = {
 	parentRef: React.RefObject<HTMLElement>;
 };
 
-export function useVirtual<T>({
-	estimateSize,
-	hasMore,
-	items = [],
-	parentRef,
-}: Props<T>) {
+export function useVirtual<T>({estimateSize, items = [], parentRef}: Props<T>) {
 	const virtualizer = useVirtualizer({
-		count: hasMore ? items.length + 1 : items.length,
+		count: items.length,
 		estimateSize: () => estimateSize,
 		getScrollElement: () => parentRef.current,
 		overscan: 5,
