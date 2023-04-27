@@ -139,7 +139,7 @@ export function Autocomplete<T extends Record<string, any>>({
 	defaultActive,
 	defaultItems,
 	defaultValue,
-	direction,
+	direction = 'bottom',
 	filterKey,
 	items: externalItems,
 	loadingState,
@@ -148,7 +148,7 @@ export function Autocomplete<T extends Record<string, any>>({
 	onActiveChange,
 	onChange,
 	onItemsChange,
-	onLoadMore: _onLoadMore,
+	onLoadMore,
 	value: externalValue,
 	...otherProps
 }: IProps<T>) {
@@ -227,7 +227,7 @@ export function Autocomplete<T extends Record<string, any>>({
 	// collection can be cached even before the listbox is not mounted.
 	const collection = useCollection<T, unknown>({
 		children,
-		filter: filterFn,
+		filter: isItemsUncontrolled ? filterFn : undefined,
 		filterKey: 'value',
 		itemContainer: ({children, keyValue}: ItemProps<any>) => {
 			const itemValue = children.props.value ?? children.props.children;
@@ -444,6 +444,8 @@ export function Autocomplete<T extends Record<string, any>>({
 								as={DropDown.ItemList}
 								collection={collection}
 								id={ariaControlsId}
+								isLoading={isLoading}
+								onLoadMore={onLoadMore}
 								role="listbox"
 							>
 								{debouncedLoadingChange ? (
