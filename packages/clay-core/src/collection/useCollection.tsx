@@ -118,7 +118,7 @@ export function useCollection<
 				...(props ? props : {}),
 			});
 		},
-		[performFilter]
+		[ItemContainer, performFilter]
 	);
 
 	const createItemsLayout = useCallback(
@@ -336,7 +336,7 @@ export function useCollection<
 
 		const list = performCollectionRender({children, items});
 
-		if (list.length === 0 && filter) {
+		if (list.length === 0 && notFound) {
 			return notFound;
 		}
 
