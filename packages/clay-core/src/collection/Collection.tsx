@@ -157,7 +157,7 @@ export function Collection<
 }: Partial<ICollectionProps<T, P>> & Props<P, K> & Partial<IProps>) {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const isVirtual = collection?.virtualize;
-	const Container = as ?? isVirtual ? 'div' : React.Fragment;
+	const Container = as ? as : isVirtual ? 'div' : React.Fragment;
 
 	const onScroll = useCallback(
 		(event: Event) => {
