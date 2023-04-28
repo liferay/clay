@@ -24,6 +24,17 @@ describe('ClayEmptyState', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders with a reduced motion image provided', () => {
+		const {container} = render(
+			<ClayEmptyState
+				imgSrc="https://via.placeholder.com/256"
+				imgSrcReducedMotion="https://via.placeholder.com/256"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('when passing `title` property with null, render the title section', () => {
 		const {queryByText} = render(<ClayEmptyState title={null} />);
 
@@ -43,6 +54,21 @@ describe('ClayEmptyState', () => {
 			<ClayEmptyState
 				imgProps={{alt: 'hello world'}}
 				imgSrc="https://via.placeholder.com/256"
+			>
+				My Empty State
+			</ClayEmptyState>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with different reduced motion image props', () => {
+		const {container} = render(
+			<ClayEmptyState
+				imgProps={{alt: 'hello world'}}
+				imgPropsReducedMotion={{alt: 'hello world?'}}
+				imgSrc="https://via.placeholder.com/256"
+				imgSrcReducedMotion="https://via.placeholder.com/256"
 			>
 				My Empty State
 			</ClayEmptyState>

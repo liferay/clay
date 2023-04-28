@@ -18,9 +18,19 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	imgProps?: React.ImgHTMLAttributes<HTMLImageElement>;
 
 	/**
+	 * HTMLImage element attributes to add to the reduced motion image within the component
+	 */
+	imgPropsReducedMotion?: React.ImgHTMLAttributes<HTMLImageElement>;
+
+	/**
 	 * Source of the image to signify the state
 	 */
 	imgSrc?: string;
+
+	/**
+	 * Source of the image to show when `.c-prefers-reduced-motion` is active
+	 */
+	imgSrcReducedMotion?: string;
 
 	/**
 	 * Indicates empty state should be a small variant.
@@ -40,12 +50,18 @@ const ClayEmptyState = ({
 	className,
 	description = 'Sorry, there are no results found',
 	imgProps,
+	imgPropsReducedMotion,
 	imgSrc,
+	imgSrcReducedMotion,
 	small,
 	title = defaultTile,
 	...otherProps
 }: IProps) => {
 	const hasImg = imgSrc || imgProps;
+
+	imgPropsReducedMotion = imgPropsReducedMotion
+		? imgPropsReducedMotion
+		: imgProps;
 
 	return (
 		<div
@@ -62,11 +78,25 @@ const ClayEmptyState = ({
 							alt=""
 							className={classNames(
 								'aspect-ratio-item aspect-ratio-item-fluid',
+								imgSrcReducedMotion &&
+									'd-none-c-prefers-reduced-motion',
 								imgProps && imgProps.className
 							)}
 							src={imgSrc}
 							{...imgProps}
 						/>
+						{imgSrcReducedMotion && (
+							<img
+								alt=""
+								className={classNames(
+									'aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion',
+									imgPropsReducedMotion &&
+										imgPropsReducedMotion.className
+								)}
+								src={imgSrcReducedMotion}
+								{...imgPropsReducedMotion}
+							/>
+						)}
 					</div>
 				</div>
 			)}

@@ -190,6 +190,10 @@
 	display: none !important;
 }
 
+// Display C Reduced Motion
+
+@include clay-map-to-css($displays-c-prefers-reduced-motion);
+
 // Display Print
 
 @media print {

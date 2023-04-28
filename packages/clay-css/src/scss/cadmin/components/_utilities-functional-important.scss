@@ -188,6 +188,10 @@
 	display: none !important;
 }
 
+// Display C Reduced Motion
+
+@include clay-map-to-css($cadmin-displays-c-prefers-reduced-motion);
+
 // Display Print
 
 @media print {
