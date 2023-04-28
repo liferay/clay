@@ -339,7 +339,13 @@ export function useNavigation<T extends HTMLElement | null>({
 
 	useEffect(() => {
 		// Moves the scroll to the element with visual "focus" if it exists.
-		if (visible && containerRef.current && active && onNavigate) {
+		if (
+			visible &&
+			containerRef.current &&
+			active &&
+			onNavigate &&
+			!collection?.virtualize
+		) {
 			const child = isScrollable(containerRef.current)
 				? containerRef.current!
 				: (containerRef.current.firstElementChild as HTMLElement);
