@@ -8,7 +8,7 @@ import ClayAutocomplete from '..';
 import {cleanup, render} from '@testing-library/react';
 import React from 'react';
 
-import Context from '../Context';
+import {LegacyContext} from '../Context';
 
 describe('ClayAutocomplete', () => {
 	afterEach(cleanup);
@@ -48,7 +48,7 @@ describe('ClayAutocomplete', () => {
 
 	it('renders LoadingIndicator', () => {
 		const LoadingIndicatorWithContext = () => (
-			<Context.Provider
+			<LegacyContext.Provider
 				value={{
 					containerElementRef: {current: null},
 					loading: false,
@@ -56,7 +56,7 @@ describe('ClayAutocomplete', () => {
 				}}
 			>
 				<ClayAutocomplete.LoadingIndicator />
-			</Context.Provider>
+			</LegacyContext.Provider>
 		);
 		const {container} = render(<LoadingIndicatorWithContext />);
 
@@ -72,7 +72,7 @@ describe('ClayAutocomplete', () => {
 			</span>
 		);
 		const LoadingIndicatorWithContext = () => (
-			<Context.Provider
+			<LegacyContext.Provider
 				value={{
 					containerElementRef: {current: null},
 					loading: false,
@@ -80,7 +80,7 @@ describe('ClayAutocomplete', () => {
 				}}
 			>
 				<ClayAutocomplete.LoadingIndicator component={MyMarkup} />
-			</Context.Provider>
+			</LegacyContext.Provider>
 		);
 
 		const {container} = render(<LoadingIndicatorWithContext />);
@@ -91,7 +91,7 @@ describe('ClayAutocomplete', () => {
 	it('renders LoadingIndicator and calls the onLoadingChange', () => {
 		const spyFn = jest.fn();
 		const LoadingIndicatorWithContext = () => (
-			<Context.Provider
+			<LegacyContext.Provider
 				value={{
 					containerElementRef: {current: null},
 					loading: false,
@@ -99,7 +99,7 @@ describe('ClayAutocomplete', () => {
 				}}
 			>
 				<ClayAutocomplete.LoadingIndicator />
-			</Context.Provider>
+			</LegacyContext.Provider>
 		);
 
 		render(<LoadingIndicatorWithContext />);
@@ -110,7 +110,7 @@ describe('ClayAutocomplete', () => {
 
 	it('renders Input with classNames when loading for true', () => {
 		const InputWithContext = () => (
-			<Context.Provider
+			<LegacyContext.Provider
 				value={{
 					containerElementRef: {current: null},
 					loading: true,
@@ -118,7 +118,7 @@ describe('ClayAutocomplete', () => {
 				}}
 			>
 				<ClayAutocomplete.Input />
-			</Context.Provider>
+			</LegacyContext.Provider>
 		);
 
 		const {container} = render(<InputWithContext />);
@@ -131,7 +131,7 @@ describe('ClayAutocomplete', () => {
 			const containerElementRef = React.useRef<HTMLDivElement>(null);
 
 			return (
-				<Context.Provider
+				<LegacyContext.Provider
 					value={{
 						containerElementRef,
 						loading: false,
@@ -140,7 +140,7 @@ describe('ClayAutocomplete', () => {
 				>
 					<ClayAutocomplete.Input />
 					<ClayAutocomplete.DropDown active />
-				</Context.Provider>
+				</LegacyContext.Provider>
 			);
 		};
 
