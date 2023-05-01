@@ -14,6 +14,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 				background-color: rgba($gray-900, 0.04),
 				box-shadow: inset 0.125rem 0 0 0 $secondary-l0,
 				color: $gray-900,
+				font-weight: $font-weight-semi-bold,
 			),
 			focus: (
 				background-color: c-unset,
@@ -108,6 +109,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 				background-color: rgba($gray-900, 0.04),
 				box-shadow: inset 0.125rem 0 0 0 $secondary-l0,
 				color: $gray-900,
+				font-weight: $font-weight-semi-bold,
 			),
 			focus: (
 				background-color: rgba($primary, 0.04),

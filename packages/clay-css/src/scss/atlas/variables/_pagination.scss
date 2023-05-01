@@ -55,6 +55,7 @@ $pagination-link-hover: map-deep-merge(
 		border-color: $pagination-hover-border-color,
 		box-shadow: inset 0 -0.125rem 0 0 $secondary-l0,
 		color: $pagination-hover-color,
+		font-weight: $font-weight-semi-bold,
 		text-decoration: none,
 		z-index: 2,
 	),
