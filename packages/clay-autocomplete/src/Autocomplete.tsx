@@ -369,6 +369,13 @@ export function Autocomplete<T extends Record<string, any>>({
 							setActiveDescendant('');
 							break;
 						}
+						case Keys.Left:
+						case Keys.Right: {
+							if (activeDescendant) {
+								setActiveDescendant('');
+							}
+							break;
+						}
 						case Keys.Up:
 						case Keys.Down: {
 							event.preventDefault();
