@@ -56,6 +56,7 @@ $pagination-link-hover: map-deep-merge(
 		box-shadow: inset 0 -0.125rem 0 0 $secondary-l0,
 		color: $pagination-hover-color,
 		font-weight: $font-weight-semi-bold,
+		letter-spacing: 0,
 		text-decoration: none,
 		z-index: 2,
 	),
@@ -92,6 +93,8 @@ $pagination-link-active: map-deep-merge(
 		border-color: $pagination-active-border-color,
 		color: $pagination-active-color,
 		box-shadow: inset 0 -0.25rem 0 0 $primary-l0,
+		font-weight: $font-weight-semi-bold,
+		letter-spacing: 0,
 	),
 	$pagination-link-active
 );
@@ -99,8 +102,11 @@ $pagination-link-active: map-deep-merge(
 $pagination-link: () !default;
 $pagination-link: map-deep-merge(
 	(
+		letter-spacing: 0.033em,
 		show: (
 			box-shadow: inset 0 -0.25rem 0 0 $primary-l0,
+			font-weight: $font-weight-semi-bold,
+			letter-spacing: 0,
 		),
 	),
 	$pagination-link
@@ -133,9 +139,8 @@ $pagination-items-per-page-link-focus: map-deep-merge(
 $pagination-items-per-page-link: () !default;
 $pagination-items-per-page-link: map-deep-merge(
 	(
-		hover: (
-			box-shadow: map-get($pagination-link-hover, box-shadow),
-		),
+		letter-spacing: 0.025em,
+		hover: $pagination-link-hover,
 		show: map-get($pagination-link, show),
 	),
 	$pagination-items-per-page-link
