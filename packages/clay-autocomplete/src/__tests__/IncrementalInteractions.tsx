@@ -3,9 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-/* eslint-disable react/display-name */
 import ClayAutocomplete from '..';
-import {cleanup, render} from '@testing-library/react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -23,7 +22,7 @@ describe('Autocomplete incremental interactions', () => {
 	afterEach(cleanup);
 
 	it('render default component', () => {
-		const {getAllByRole, getByRole} = render(
+		const {getByRole, queryByRole} = render(
 			<ClayAutocomplete
 				messages={messages}
 				placeholder="Enter a number from One to Five"
@@ -36,22 +35,15 @@ describe('Autocomplete incremental interactions', () => {
 			</ClayAutocomplete>
 		);
 
-		const input = getByRole('combobox');
+		const input = getByRole('combobox') as HTMLInputElement;
 
 		userEvent.click(input);
 
 		expect(input).toBeDefined();
 
-		const listbox = getByRole('listbox', {hidden: true});
+		const listbox = queryByRole('listbox');
 
-		expect(listbox.parentElement!.classList).not.toContain('show');
-		expect(listbox.children.length).toBe(3);
-
-		const [one, two, three] = getAllByRole('option', {hidden: true});
-
-		expect(one).toBeDefined();
-		expect(two).toBeDefined();
-		expect(three).toBeDefined();
+		expect(listbox).toBeFalsy();
 	});
 
 	it('typing a value in the input shows the menu', () => {
@@ -227,20 +219,19 @@ describe('Autocomplete incremental interactions', () => {
 
 		const input = getByRole('combobox') as HTMLInputElement;
 
+		userEvent.click(input);
 		userEvent.type(input, 't');
 
 		const [two] = getAllByRole('option');
 
-		userEvent.click(two);
+		fireEvent.click(two);
 
-		expect(
-			document.querySelector('.dropdown-menu')!.classList
-		).not.toContain('show');
+		expect(document.querySelector('.dropdown-menu')).toBeFalsy();
 		expect(input.value).toBe('two');
 	});
 
 	it('press enter close the menu', () => {
-		const {getByRole} = render(
+		const {getByRole, queryByRole} = render(
 			<ClayAutocomplete
 				messages={messages}
 				placeholder="Enter a number from One to Five"
@@ -255,6 +246,7 @@ describe('Autocomplete incremental interactions', () => {
 
 		const input = getByRole('combobox') as HTMLInputElement;
 
+		userEvent.click(input);
 		userEvent.type(input, 't');
 
 		const listbox = getByRole('listbox');
@@ -263,7 +255,7 @@ describe('Autocomplete incremental interactions', () => {
 
 		userEvent.keyboard('[Enter]');
 
-		expect(listbox.parentElement!.classList).not.toContain('show');
+		expect(queryByRole('listbox')).toBeFalsy();
 	});
 
 	it('pressing alt + key down shows the menu if not open', () => {
@@ -307,32 +299,39 @@ describe('Autocomplete incremental interactions', () => {
 
 		const input = getByRole('combobox') as HTMLInputElement;
 
+		userEvent.click(input);
 		userEvent.type(input, 't');
 
 		expect(input).toEqual(document.activeElement);
 
-		userEvent.tab();
+		userEvent.keyboard('[ArrowDown]');
 
-		const [two] = getAllByRole('option');
-
-		expect(two).toEqual(document.activeElement);
+		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+			'true'
+		);
 
 		userEvent.keyboard('[ArrowLeft]');
 
-		expect(input).toEqual(document.activeElement);
+		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+			'false'
+		);
 
-		userEvent.tab();
+		userEvent.keyboard('[ArrowDown]');
 
-		expect(two).toEqual(document.activeElement);
+		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+			'true'
+		);
 
 		userEvent.keyboard('[ArrowRight]');
 
-		expect(input).toEqual(document.activeElement);
+		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+			'false'
+		);
 	});
 
 	describe('Selected option', () => {
 		it('pressing esc closes the menu', () => {
-			const {getAllByRole, getByRole} = render(
+			const {getAllByRole, getByRole, queryByRole} = render(
 				<ClayAutocomplete
 					messages={messages}
 					placeholder="Enter a number from One to Five"
@@ -347,32 +346,31 @@ describe('Autocomplete incremental interactions', () => {
 
 			const input = getByRole('combobox') as HTMLInputElement;
 
+			userEvent.click(input);
 			userEvent.type(input, 't');
 
-			const listbox = getByRole('listbox');
-
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('listbox')).toBeDefined();
 
 			const [two] = getAllByRole('option');
 
-			userEvent.click(two);
+			fireEvent.click(two);
 
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 			expect(input.value).toBe('two');
 
 			userEvent.type(input, 'oo');
 
 			expect(input.value).toBe('twooo');
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('option').textContent).toBe('No results found');
 
 			userEvent.keyboard('[Escape]');
 
 			expect(input.value).toBe('two');
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 		});
 
 		it('clicking outside closes the menu', () => {
-			const {getAllByRole, getByRole} = render(
+			const {getAllByRole, getByRole, queryByRole} = render(
 				<>
 					<ClayAutocomplete
 						messages={messages}
@@ -390,34 +388,33 @@ describe('Autocomplete incremental interactions', () => {
 
 			const input = getByRole('combobox') as HTMLInputElement;
 
+			userEvent.click(input);
 			userEvent.type(input, 't');
 
-			const listbox = getByRole('listbox');
-
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('listbox')).toBeDefined();
 
 			const [two] = getAllByRole('option');
 
-			userEvent.click(two);
+			fireEvent.click(two);
 
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 			expect(input.value).toBe('two');
 
 			userEvent.type(input, 'oo');
 
 			expect(input.value).toBe('twooo');
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('option').textContent).toBe('No results found');
 
 			const buttonOutside = getByRole('button', {hidden: true});
 
 			userEvent.click(buttonOutside);
 
 			expect(input.value).toBe('two');
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 		});
 
 		it('moving the focus outside of autocomplete closes the menu', () => {
-			const {getAllByRole, getByRole} = render(
+			const {getAllByRole, getByRole, queryByRole} = render(
 				<>
 					<ClayAutocomplete
 						messages={messages}
@@ -435,34 +432,33 @@ describe('Autocomplete incremental interactions', () => {
 
 			const input = getByRole('combobox') as HTMLInputElement;
 
+			userEvent.click(input);
 			userEvent.type(input, 't');
 
-			const listbox = getByRole('listbox');
-
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('listbox')).toBeDefined();
 
 			const [two] = getAllByRole('option');
 
-			userEvent.click(two);
+			fireEvent.click(two);
 
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 			expect(input.value).toBe('two');
 
 			userEvent.type(input, 'oo');
 
 			expect(input.value).toBe('twooo');
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('option').textContent).toBe('No results found');
 
 			userEvent.tab();
 
 			expect(input.value).toBe('two');
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 		});
 	});
 
 	describe('Option not selected', () => {
 		it('pressing esc closes the menu', () => {
-			const {getByRole} = render(
+			const {getByRole, queryByRole} = render(
 				<ClayAutocomplete
 					messages={messages}
 					placeholder="Enter a number from One to Five"
@@ -477,20 +473,19 @@ describe('Autocomplete incremental interactions', () => {
 
 			const input = getByRole('combobox') as HTMLInputElement;
 
+			userEvent.click(input);
 			userEvent.type(input, 't');
 
-			const listbox = getByRole('listbox');
-
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('listbox')).toBeDefined();
 
 			userEvent.keyboard('[Escape]');
 
 			expect(input.value).toBe('');
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 		});
 
 		it('clicking outside closes the menu', () => {
-			const {getByRole} = render(
+			const {getByRole, queryByRole} = render(
 				<>
 					<ClayAutocomplete
 						messages={messages}
@@ -508,22 +503,21 @@ describe('Autocomplete incremental interactions', () => {
 
 			const input = getByRole('combobox') as HTMLInputElement;
 
+			userEvent.click(input);
 			userEvent.type(input, 't');
 
-			const listbox = getByRole('listbox');
-
-			expect(listbox.parentElement!.classList).toContain('show');
+			expect(getByRole('listbox')).toBeDefined();
 
 			const buttonOutside = getByRole('button', {hidden: true});
 
 			userEvent.click(buttonOutside);
 
 			expect(input.value).toBe('');
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 		});
 
 		it('moving the focus outside of autocomplete closes the menu', () => {
-			const {getByRole} = render(
+			const {getByRole, queryByRole} = render(
 				<>
 					<ClayAutocomplete
 						messages={messages}
@@ -541,18 +535,15 @@ describe('Autocomplete incremental interactions', () => {
 
 			const input = getByRole('combobox') as HTMLInputElement;
 
+			userEvent.click(input);
 			userEvent.type(input, 't');
 
-			const listbox = getByRole('listbox');
+			expect(getByRole('listbox')).toBeDefined();
 
-			expect(listbox.parentElement!.classList).toContain('show');
-
-			userEvent.tab();
-			userEvent.tab();
 			userEvent.tab();
 
 			expect(input.value).toBe('');
-			expect(listbox.parentElement!.classList).not.toContain('show');
+			expect(queryByRole('listbox')).toBeFalsy();
 		});
 	});
 });
