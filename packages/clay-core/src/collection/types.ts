@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import type {Virtualizer} from '@tanstack/react-virtual';
+
 type ChildType = {
 	displayName?: string;
 	passthroughKey?: boolean;
@@ -38,9 +40,14 @@ export interface ICollectionProps<T, P> {
 }
 
 export type CollectionState = {
+	UNSAFE_virtualizer?: Virtualizer<HTMLElement, Element>;
 	collection: JSX.Element;
-	getFirstItem: () => {key: string; value: string};
-	getItem: (key: React.Key) => string;
+	getFirstItem: () => {key: React.Key; value: string; index: number};
+	getItem: (key: React.Key) => {value: string; index: number};
+	getItems: () => Array<React.Key>;
+	getLastItem: () => {key: React.Key; value: string; index: number};
+	size?: number;
+	virtualize: boolean;
 };
 
 export type Props<P, K> = {
@@ -83,5 +90,12 @@ export type Props<P, K> = {
 	 */
 	itemContainer?: (props: any) => JSX.Element | null;
 
+	/**
+	 * Renders an element when there is no item matching the list of items.
+	 */
+	notFound?: JSX.Element;
+
 	suppressTextValueWarning?: boolean;
+
+	virtualizer?: Virtualizer<HTMLElement, Element>;
 };

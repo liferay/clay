@@ -87,17 +87,68 @@ export const Dynamic = () => (
 						htmlFor="clay-autocomplete-1"
 						id="clay-autocomplete-label-1"
 					>
-						Numbers (one-five)
+						States
 					</label>
 					<ClayAutocomplete
 						aria-labelledby="clay-autocomplete-label-1"
-						defaultItems={['one', 'two', 'three', 'four', 'five']}
+						defaultItems={[
+							'Alabama',
+							'Alaska',
+							'Arizona',
+							'Arkansas',
+							'California',
+							'Colorado',
+							'Connecticut',
+							'Delaware',
+							'Florida',
+							'Georgia',
+							'Hawaii',
+							'Idaho',
+							'Illinois',
+							'Indiana',
+							'Iowa',
+							'Kansas',
+							'Kentucky',
+							'Louisiana',
+							'Maine',
+							'Maryland',
+							'Massachusetts',
+							'Michigan',
+							'Minnesota',
+							'Mississippi',
+							'Missouri',
+							'Montana',
+							'Nebraska',
+							'Nevada',
+							'New Hampshire',
+							'New Jersey',
+							'New Mexico',
+							'New York',
+							'North Carolina',
+							'North Dakota',
+							'Ohio',
+							'Oklahoma',
+							'Oregon',
+							'Pennsylvania',
+							'Rhode Island',
+							'South Carolina',
+							'South Dakota',
+							'Tennessee',
+							'Texas',
+							'Utah',
+							'Vermont',
+							'Virginia',
+							'Washington',
+							'West Virginia',
+							'Wisconsin',
+							'Wyoming',
+						]}
 						id="clay-autocomplete-1"
 						messages={{
 							loading: 'Loading...',
 							notFound: 'No results found',
 						}}
-						placeholder="Enter a number from One to Five"
+						placeholder="Enter a US state name"
 					>
 						{(item) => (
 							<ClayAutocomplete.Item key={item}>
@@ -144,7 +195,10 @@ export const CustomItem = () => {
 							value={value}
 						>
 							{(item) => (
-								<DropDown.Item key={item}>
+								<ClayAutocomplete.Item
+									key={item}
+									textValue={item}
+								>
 									<Layout.ContentRow>
 										<Layout.ContentCol expand>
 											<Text size={3}>
@@ -157,7 +211,7 @@ export const CustomItem = () => {
 											<Text size={2}>Description</Text>
 										</Layout.ContentCol>
 									</Layout.ContentRow>
-								</DropDown.Item>
+								</ClayAutocomplete.Item>
 							)}
 						</ClayAutocomplete>
 					</div>

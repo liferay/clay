@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import {createContext, useContext} from 'react';
 
 interface IContext {
 	/**
@@ -23,8 +23,18 @@ interface IContext {
 	containerElementRef: React.RefObject<HTMLElement>;
 }
 
-const context = React.createContext({} as IContext);
+export const LegacyContext = createContext({} as IContext);
 
-context.displayName = 'ClayAutocompleteContext';
+LegacyContext.displayName = 'ClayAutocompleteLegacyContext';
 
-export default context;
+type AutocompleteContext = {
+	activeDescendant?: React.Key;
+	onActiveDescendant: (value: React.Key) => void;
+	onClick: (value: string) => void;
+};
+
+export const AutocompleteContext = createContext({} as AutocompleteContext);
+
+export function useAutocompleteState() {
+	return useContext(AutocompleteContext);
+}

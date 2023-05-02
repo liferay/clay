@@ -25,6 +25,11 @@ export interface IProps
 	disabled?: boolean;
 
 	/**
+	 * @ignore
+	 */
+	'data-index'?: number;
+
+	/**
 	 * Path for item to link to.
 	 */
 	href?: string;
@@ -59,6 +64,7 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 			active,
 			children,
 			className,
+			'data-index': dataIndex,
 			disabled,
 			href,
 			innerRef,
@@ -80,7 +86,13 @@ const ClayDropDownItem = React.forwardRef<HTMLLIElement, IProps>(
 		const {close, closeOnClick, tabFocus} = useContext(DropDownContext);
 
 		return (
-			<li aria-selected={active} ref={ref} role={role} style={style}>
+			<li
+				aria-selected={active}
+				data-index={dataIndex}
+				ref={ref}
+				role={role}
+				style={style}
+			>
 				<ItemElement
 					{...otherProps}
 					className={classNames('dropdown-item', className, {

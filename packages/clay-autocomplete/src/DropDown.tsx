@@ -7,7 +7,7 @@ import DropDown from '@clayui/drop-down';
 import {InternalDispatch} from '@clayui/shared';
 import React from 'react';
 
-import Context from './Context';
+import {LegacyContext} from './Context';
 
 export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
@@ -53,7 +53,7 @@ const ClayAutocompleteDropDown = ({
 	onActiveChange,
 	onSetActive,
 }: IProps) => {
-	const {containerElementRef} = React.useContext(Context);
+	const {containerElementRef} = React.useContext(LegacyContext);
 	const menuElementRef = React.useRef<HTMLDivElement>(null);
 
 	if (!alignElementRef) {

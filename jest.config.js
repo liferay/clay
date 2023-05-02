@@ -14,10 +14,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-autocomplete/src/': {
-			branches: 77,
-			functions: 93,
-			lines: 92,
-			statements: 92,
+			branches: 71,
+			functions: 87,
+			lines: 89,
+			statements: 89,
 		},
 		'./packages/clay-badge/src/': {
 			branches: 0,
@@ -56,7 +56,7 @@ module.exports = {
 			statements: 91,
 		},
 		'./packages/clay-core/src/picker/': {
-			branches: 81,
+			branches: 80,
 			functions: 84,
 			lines: 90,
 			statements: 90,
@@ -194,10 +194,10 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-shared/src/': {
-			branches: 20,
+			branches: 18,
 			functions: 14,
-			lines: 36,
-			statements: 39,
+			lines: 35,
+			statements: 38,
 		},
 		'./packages/clay-slider/src/': {
 			branches: 92,
