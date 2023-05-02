@@ -146,6 +146,10 @@ export function useCollection<
 				child: ChildElement,
 				index: number
 			) {
+				if (performFilter(child)) {
+					return;
+				}
+
 				const key = getKey(index, childKey, parentKey);
 
 				if (child.type.displayName === 'Item') {
@@ -157,10 +161,6 @@ export function useCollection<
 							suppressTextValueWarning
 						),
 					});
-				}
-
-				if (performFilter(child)) {
-					return;
 				}
 
 				const prevKey = keysRef.current[keysRef.current.length - 1];
