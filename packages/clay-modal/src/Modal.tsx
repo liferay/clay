@@ -154,18 +154,20 @@ const ClayModal = ({
 				style={{zIndex: zIndex && zIndex + 10}}
 			>
 				<div
-					aria-labelledby={ariaLabelledby}
-					aria-modal="true"
 					className={classNames('modal-dialog', {
 						[`modal-${size}`]: size,
 						[`modal-${status}`]: status,
 						'modal-dialog-centered': center,
 					})}
-					ref={modalBodyElementRef}
-					role={role}
-					tabIndex={-1}
 				>
-					<div className="modal-content">
+					<div
+						aria-labelledby={ariaLabelledby}
+						aria-modal="true"
+						className="modal-content"
+						ref={modalBodyElementRef}
+						role={role}
+						tabIndex={-1}
+					>
 						<Context.Provider
 							value={{
 								ariaLabelledby,

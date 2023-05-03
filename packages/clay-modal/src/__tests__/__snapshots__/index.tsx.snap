@@ -14,14 +14,14 @@ exports[`ClayModal renders 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-1"
-        aria-modal="true"
         class="modal-dialog"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-1"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         >
           <div
             class="modal-header"
@@ -99,14 +99,14 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-3"
-        aria-modal="true"
         class="modal-dialog"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-3"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         >
           <div
             class="modal-header"
@@ -168,14 +168,14 @@ exports[`ClayModal renders a body component with url 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-7"
-        aria-modal="true"
         class="modal-dialog"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-7"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         >
           <div
             class="modal-body modal-body-iframe"
@@ -210,14 +210,14 @@ exports[`ClayModal renders a footer component with buttons 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-8"
-        aria-modal="true"
         class="modal-dialog"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-8"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         >
           <div
             class="modal-footer"
@@ -278,14 +278,14 @@ exports[`ClayModal renders with Header 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-2"
-        aria-modal="true"
         class="modal-dialog"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-2"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         >
           <div
             class="modal-header"
@@ -336,14 +336,14 @@ exports[`ClayModal renders with center 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-6"
-        aria-modal="true"
         class="modal-dialog modal-dialog-centered"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-6"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         />
       </div>
     </div>
@@ -369,14 +369,14 @@ exports[`ClayModal renders with size 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-4"
-        aria-modal="true"
         class="modal-dialog modal-lg"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-4"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         />
       </div>
     </div>
@@ -402,14 +402,14 @@ exports[`ClayModal renders with status 1`] = `
       class="fade modal d-block show"
     >
       <div
-        aria-labelledby="clay-modal-label-5"
-        aria-modal="true"
         class="modal-dialog modal-success"
-        role="dialog"
-        tabindex="-1"
       >
         <div
+          aria-labelledby="clay-modal-label-5"
+          aria-modal="true"
           class="modal-content"
+          role="dialog"
+          tabindex="-1"
         />
       </div>
     </div>
