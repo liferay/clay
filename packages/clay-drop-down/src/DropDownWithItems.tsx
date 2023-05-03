@@ -12,6 +12,7 @@ import {
 	useInternalState,
 	useNavigation,
 } from '@clayui/shared';
+import classNames from 'classnames';
 import React, {useContext, useRef, useState} from 'react';
 import warning from 'warning';
 
@@ -273,6 +274,26 @@ const Group = ({items, label, spritemap}: IItem & IInternalItem) => (
 	</ClayDropDownGroup>
 );
 
+const BOTTOM_OFFSET = [0, 1] as const;
+const LEFT_OFFSET = [-1, 6] as const;
+const RIGHT_OFFSET = [1, -6] as const;
+const TOP_OFFSET = [0, -1] as const;
+
+const OFFSET_MAP = {
+	bctc: TOP_OFFSET,
+	blbr: RIGHT_OFFSET,
+	bltl: TOP_OFFSET,
+	brbl: LEFT_OFFSET,
+	brtr: TOP_OFFSET,
+	clcr: RIGHT_OFFSET,
+	crcl: LEFT_OFFSET,
+	tcbc: BOTTOM_OFFSET,
+	tlbl: BOTTOM_OFFSET,
+	tltr: RIGHT_OFFSET,
+	trbr: BOTTOM_OFFSET,
+	trtl: LEFT_OFFSET,
+};
+
 const Contextual = ({
 	items,
 	label,
@@ -311,6 +332,9 @@ const Contextual = ({
 			{...otherProps}
 			aria-expanded={visible}
 			aria-haspopup={Boolean(items)}
+			className={classNames({
+				active: visible,
+			})}
 			onClick={(event) => {
 				keyboardRef.current = false;
 				if (event.currentTarget === event.target) {
@@ -360,6 +384,11 @@ const Contextual = ({
 					alignmentPosition={8}
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
+					offsetFn={(points) =>
+						OFFSET_MAP[
+							points.join('') as keyof typeof OFFSET_MAP
+						] as [number, number]
+					}
 					onActiveChange={setVisible}
 					onKeyDown={navigationProps.onKeyDown}
 					ref={menuElementRef}
