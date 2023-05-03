@@ -344,11 +344,10 @@
 	@each $key, $value in $map {
 		@if not clay-is-map-unset($value) {
 			@if (type-of($value) == 'map') {
+				$valid-prefixes: '#', '&', '.', '>', '@';
+
 				$selector: if(
-					starts-with($key, '.') or
-						starts-with($key, '#') or
-						starts-with($key, '&') or
-						starts-with($key, '@'),
+					index($valid-prefixes, str-slice($key, 1, 1)),
 					$key,
 					str-insert($key, '.', 1)
 				);
