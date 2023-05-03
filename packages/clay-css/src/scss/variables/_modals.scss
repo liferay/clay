@@ -341,6 +341,9 @@ $modal: map-deep-merge(
 			padding-left: $modal-footer-padding-x,
 			padding-right: $modal-footer-padding-x,
 			padding-top: $modal-footer-padding-y,
+			'> *': (
+				margin: calc(#{$modal-footer-margin-between} * 0.5),
+			),
 		),
 		modal-title: (
 			flex-grow: 1,

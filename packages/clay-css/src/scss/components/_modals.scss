@@ -170,7 +170,7 @@
 		)
 	);
 
-	@include clay-map-to-css($modal-body);
+	@include clay-map-to-css($_modal-body);
 }
 
 .modal-body-flush {
@@ -182,10 +182,6 @@
 
 	@include clay-scale-component {
 		height: $modal-footer-height-mobile;
-	}
-
-	> * {
-		margin: $modal-footer-margin-between * 0.5;
 	}
 }
 
