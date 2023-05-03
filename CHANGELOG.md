@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix collection wrapper error ([7ad663a](https://github.com/liferay/clay/commit/7ad663a3263d97d7689a5f754e5681333f97a929))
+-   **@clayui/core:** fix obsolete state of collection item and render not found component when state is controlled ([a0c7323](https://github.com/liferay/clay/commit/a0c732376328d09e35e972dcb7d9b25f789bd4ad))
+-   **@clayui/core:** register the items in the collection after filtering with static content ([bed4573](https://github.com/liferay/clay/commit/bed4573ff572d2bba39be784b4323e7ffad52c6d))
+-   **@clayui/css:** Atlas Custom Forms `$custom-control-indicator-checked-*` variables should be grouped ([8854b6c](https://github.com/liferay/clay/commit/8854b6c384ed09fea3bbd598a91e04b5b3ffaf0a))
+-   **@clayui/css:** Atlas Menubar update active and hover state to improve contrast ([9886c7a](https://github.com/liferay/clay/commit/9886c7a799f68b2d9a20346a6bd567ddf27079b6))
+-   **@clayui/css:** Atlas Pagination active state should be semi bold and hover shouldn't shift content ([667ea8e](https://github.com/liferay/clay/commit/667ea8e2e4b6ff4e0dfbdcd25babe95717e58350))
+-   **@clayui/css:** Atlas Pagination and Menubar hover state should have semi bold font ([9bbab24](https://github.com/liferay/clay/commit/9bbab24abd3e68bf4856c98ef9217c293dfb2d8d))
+-   **@clayui/css:** c-prefers-reduced-motion utilities should work with prefers-reduce-motion media query ([7191e1b](https://github.com/liferay/clay/commit/7191e1b18947da553567d8ef5782c55850f96feb))
+-   **@clayui/css:** Cadmin output the correct selector for c-prefers-reduced-motion ([9ff6965](https://github.com/liferay/clay/commit/9ff69654c07f71fd9ed1fe500369aa549244f408))
+-   **@clayui/css:** Pagination update active and hover state to improve contrast ([283d30b](https://github.com/liferay/clay/commit/283d30b89b955aafac76ff46758472bb34a0d500))
+-   **@clayui/empty-state:** Adds props imgSrcReducedMotion and imgPropsReducedMotion ([aa39994](https://github.com/liferay/clay/commit/aa399947943ab836f7311b5369df2fbb83cc946c))
+-   **@clayui/empty-state:** Should only output d-none-c-prefers-reduced-motion if there is a value for imgSrcReducedMotion ([d428502](https://github.com/liferay/clay/commit/d4285023e89107d7c17487c4f50e56e2d630a883))
+-   **@clayui/modal:** fix focus visual error in Modal ([13418c3](https://github.com/liferay/clay/commit/13418c3c917ec49f3ffe537010ebbb857f63565e))
+-   **@clayui/shared:** fix error when not moving initial scroll to virtualized list ([4b5051e](https://github.com/liferay/clay/commit/4b5051efc5e3a216740d124afee0c4dac06588e8))
+
+### Features
+
+-   **@clayui/autocomplete:** add list virtualization for dynamic content ([9710fd7](https://github.com/liferay/clay/commit/9710fd7693f9ba14d1b2b617fc12e15f71a311e3))
+-   **@clayui/autocomplete:** refactors autocomplete implementation with accessibility improvements ([1dc82e6](https://github.com/liferay/clay/commit/1dc82e63b0d51e6cc3bf2cb1c7d08f4e698e6ba1))
+-   **@clayui/core:** Add API to collection to return list with ids ([10cc1bb](https://github.com/liferay/clay/commit/10cc1bbcfaaa903f03ac804cb01000d99de99226))
+-   **@clayui/core:** add API to get the last item of the collection ([54149c0](https://github.com/liferay/clay/commit/54149c015f90bd7c9ca77e05d15e16e08f042775))
+-   **@clayui/core:** add infinite scroll to autocomplete ([d3358b4](https://github.com/liferay/clay/commit/d3358b47f8ff872f941e4eba64abd219189110c9))
+-   **@clayui/core:** adds infinite scroll feature to collection ([0248e36](https://github.com/liferay/clay/commit/0248e365f2384fddc4c2c5f60ea20afad22e8941))
+-   **@clayui/core:** adds new API to render a not found element in the collection ([8f15cab](https://github.com/liferay/clay/commit/8f15cab011b4acf6b45334689a247646dbede360))
+-   **@clayui/core:** adds the step of extracting data from the collection separate from the rendering ([87ca0a4](https://github.com/liferay/clay/commit/87ca0a4b9f1317d4dbc3aa60c0abb12401255579))
+-   **@clayui/core:** update the react-virtual package and refactor the infinite scroll implementation ([88b8334](https://github.com/liferay/clay/commit/88b8334f9cc5c8353df7e3f03f650525cfe93507))
+-   **@clayui/css:** Utilities adds display classes based on c-prefers-reduced-motion ([817987e](https://github.com/liferay/clay/commit/817987e9d0b6a48166ccb22511f69e7d9e40bfe0))
+-   **@clayui/drop-down:** add active state to item for cascading menu ([e9a1471](https://github.com/liferay/clay/commit/e9a1471d7d84acabddf8ffbfdd22432da027ac37))
+-   **@clayui/shared:** add implementation of moving scroll with virtualization in `useNavigation` hook ([fd50e8c](https://github.com/liferay/clay/commit/fd50e8cf9bee61e8295e77956c1f12188e4ce3c5))
+-   **@clayui/shared:** implements navigation integration with the collection API ([7291d6b](https://github.com/liferay/clay/commit/7291d6bc0f13ec079f1097b90584380d27d74f36))
+-   **clay-card:** Added card-title aria labels and sticker titles. ([0f3038e](https://github.com/liferay/clay/commit/0f3038e2f1d0f0d0a656c98def63bab86d1c5f13))
+
 # [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
 
 ### Bug Fixes

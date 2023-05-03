@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Atlas Custom Forms `$custom-control-indicator-checked-*` variables should be grouped ([8854b6c](https://github.com/liferay/clay/commit/8854b6c384ed09fea3bbd598a91e04b5b3ffaf0a))
+* **@clayui/css:** Atlas Menubar update active and hover state to improve contrast ([9886c7a](https://github.com/liferay/clay/commit/9886c7a799f68b2d9a20346a6bd567ddf27079b6))
+* **@clayui/css:** Atlas Pagination active state should be semi bold and hover shouldn't shift content ([667ea8e](https://github.com/liferay/clay/commit/667ea8e2e4b6ff4e0dfbdcd25babe95717e58350))
+* **@clayui/css:** Atlas Pagination and Menubar hover state should have semi bold font ([9bbab24](https://github.com/liferay/clay/commit/9bbab24abd3e68bf4856c98ef9217c293dfb2d8d))
+* **@clayui/css:** c-prefers-reduced-motion utilities should work with prefers-reduce-motion media query ([7191e1b](https://github.com/liferay/clay/commit/7191e1b18947da553567d8ef5782c55850f96feb))
+* **@clayui/css:** Cadmin output the correct selector for c-prefers-reduced-motion ([9ff6965](https://github.com/liferay/clay/commit/9ff69654c07f71fd9ed1fe500369aa549244f408))
+* **@clayui/css:** Pagination update active and hover state to improve contrast ([283d30b](https://github.com/liferay/clay/commit/283d30b89b955aafac76ff46758472bb34a0d500))
+
+
+### Features
+
+* **@clayui/css:** Utilities adds display classes based on c-prefers-reduced-motion ([817987e](https://github.com/liferay/clay/commit/817987e9d0b6a48166ccb22511f69e7d9e40bfe0))
+
+
+
+
+
 # [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
 
 

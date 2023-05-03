@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
+
+### Features
+
+-   **clay-card:** Added card-title aria labels and sticker titles. ([0f3038e](https://github.com/liferay/clay/commit/0f3038e2f1d0f0d0a656c98def63bab86d1c5f13))
+
 # [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
 
 **Note:** Version bump only for package @clayui/card

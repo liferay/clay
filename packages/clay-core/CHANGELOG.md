@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix collection wrapper error ([7ad663a](https://github.com/liferay/clay/commit/7ad663a3263d97d7689a5f754e5681333f97a929))
+-   **@clayui/core:** fix obsolete state of collection item and render not found component when state is controlled ([a0c7323](https://github.com/liferay/clay/commit/a0c732376328d09e35e972dcb7d9b25f789bd4ad))
+-   **@clayui/core:** register the items in the collection after filtering with static content ([bed4573](https://github.com/liferay/clay/commit/bed4573ff572d2bba39be784b4323e7ffad52c6d))
+
+### Features
+
+-   **@clayui/core:** Add API to collection to return list with ids ([10cc1bb](https://github.com/liferay/clay/commit/10cc1bbcfaaa903f03ac804cb01000d99de99226))
+-   **@clayui/core:** add API to get the last item of the collection ([54149c0](https://github.com/liferay/clay/commit/54149c015f90bd7c9ca77e05d15e16e08f042775))
+-   **@clayui/core:** adds infinite scroll feature to collection ([0248e36](https://github.com/liferay/clay/commit/0248e365f2384fddc4c2c5f60ea20afad22e8941))
+-   **@clayui/core:** adds new API to render a not found element in the collection ([8f15cab](https://github.com/liferay/clay/commit/8f15cab011b4acf6b45334689a247646dbede360))
+-   **@clayui/core:** adds the step of extracting data from the collection separate from the rendering ([87ca0a4](https://github.com/liferay/clay/commit/87ca0a4b9f1317d4dbc3aa60c0abb12401255579))
+-   **@clayui/core:** update the react-virtual package and refactor the infinite scroll implementation ([88b8334](https://github.com/liferay/clay/commit/88b8334f9cc5c8353df7e3f03f650525cfe93507))
+
 # [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
 
 ### Bug Fixes

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
+
+### Bug Fixes
+
+-   **@clayui/empty-state:** Adds props imgSrcReducedMotion and imgPropsReducedMotion ([aa39994](https://github.com/liferay/clay/commit/aa399947943ab836f7311b5369df2fbb83cc946c))
+-   **@clayui/empty-state:** Should only output d-none-c-prefers-reduced-motion if there is a value for imgSrcReducedMotion ([d428502](https://github.com/liferay/clay/commit/d4285023e89107d7c17487c4f50e56e2d630a883))
+
 # [3.92.0](https://github.com/liferay/clay/compare/v3.91.0...v3.92.0) (2023-04-06)
 
 ### Bug Fixes

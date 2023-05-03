@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
+
+### Features
+
+-   **@clayui/autocomplete:** add list virtualization for dynamic content ([9710fd7](https://github.com/liferay/clay/commit/9710fd7693f9ba14d1b2b617fc12e15f71a311e3))
+-   **@clayui/autocomplete:** refactors autocomplete implementation with accessibility improvements ([1dc82e6](https://github.com/liferay/clay/commit/1dc82e63b0d51e6cc3bf2cb1c7d08f4e698e6ba1))
+-   **@clayui/core:** add infinite scroll to autocomplete ([d3358b4](https://github.com/liferay/clay/commit/d3358b47f8ff872f941e4eba64abd219189110c9))
+
 # [3.93.0](https://github.com/liferay/clay/compare/v3.92.0...v3.93.0) (2023-04-19)
 
 **Note:** Version bump only for package @clayui/autocomplete
