@@ -1,6 +1,26 @@
 $modal-backdrop-bg: $black !default;
 $modal-backdrop-opacity: 0.5 !default;
 
+$modal-backdrop: () !default;
+$modal-backdrop: map-deep-merge(
+	(
+		background-color: $modal-backdrop-bg,
+		height: 100vh,
+		left: 0,
+		position: fixed,
+		top: 0,
+		width: 100vw,
+		z-index: $zindex-modal-backdrop,
+		'&.fade': (
+			opacity: 0,
+		),
+		'&.show': (
+			opacity: $modal-backdrop-opacity,
+		),
+	),
+	$modal-backdrop
+);
+
 // Modal Dialog
 
 $modal-dialog-margin: 0.5rem !default;
@@ -25,6 +45,26 @@ $modal-content-inner-border-radius: calc(
 
 $modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($black, 0.5) !default;
 $modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba($black, 0.5) !default;
+
+$modal-content: () !default;
+$modal-content: map-deep-merge(
+	(
+		background-clip: padding-box,
+		background-color: $modal-content-bg,
+		border-radius: clay-enable-rounded($modal-content-border-radius),
+		border: $modal-content-border-width solid $modal-content-border-color,
+		box-shadow: clay-enable-shadows($modal-content-box-shadow-xs),
+		color: $modal-content-color,
+		display: flex,
+		flex-direction: column,
+		outline: 0,
+		overflow: hidden,
+		pointer-events: auto,
+		position: relative,
+		width: 100%,
+	),
+	$modal-content
+);
 
 // Modal Header
 
@@ -85,7 +125,7 @@ $modal-body: map-deep-merge(
 		margin-top: math-sign($modal-content-border-width),
 		padding: $modal-inner-padding,
 		position: relative,
-		inline-scroller: (
+		'&.inline-scroller': (
 			max-height: 320px,
 			-webkit-overflow-scrolling: touch,
 			overflow: auto,
@@ -255,6 +295,73 @@ $modal-height-full-modal-content-sm-up: map-merge(
 		top: $modal-dialog-margin-y-sm-up,
 	),
 	$modal-height-full-modal-content-sm-up
+);
+
+// Modal
+
+$modal: () !default;
+$modal: map-deep-merge(
+	(
+		display: none,
+		height: 100%,
+		left: 0,
+		outline: 0,
+		overflow: hidden,
+		position: fixed,
+		top: 0,
+		width: 100%,
+		z-index: $zindex-modal,
+		close: (
+			'&:first-child': (
+				margin-left: math-sign($modal-close-spacer-x),
+			),
+			'&:last-child': (
+				margin-right: math-sign($modal-close-spacer-x),
+			),
+		),
+		modal-header: $modal-header,
+		modal-body: $modal-body,
+		modal-footer: (
+			align-items: center,
+			background-color: $modal-footer-bg,
+			border-bottom-left-radius:
+				clay-enable-rounded($modal-content-inner-border-radius),
+			border-bottom-right-radius:
+				clay-enable-rounded($modal-content-inner-border-radius),
+			border-top: $modal-footer-border-width solid
+				$modal-footer-border-color,
+			box-shadow: clay-enable-shadows($modal-footer-box-shadow),
+			color: $modal-footer-color,
+			display: flex,
+			flex-shrink: 0,
+			flex-wrap: wrap,
+			height: $modal-footer-height,
+			justify-content: flex-start,
+			padding-bottom: $modal-footer-padding-y,
+			padding-left: $modal-footer-padding-x,
+			padding-right: $modal-footer-padding-x,
+			padding-top: $modal-footer-padding-y,
+		),
+		modal-title: (
+			flex-grow: 1,
+			font-size: $modal-title-font-size,
+			font-weight: $modal-title-font-weight,
+			line-height: $modal-title-line-height,
+			margin-bottom: 0,
+			overflow: hidden,
+			text-align: $modal-title-text-align,
+			text-overflow: ellipsis,
+			white-space: nowrap,
+		),
+		modal-title-indicator: (
+			display: inline-block,
+			font-size: $modal-title-indicator-font-size,
+			margin-right: $modal-title-indicator-spacer-x,
+			margin-top: -0.2em,
+			vertical-align: middle,
+		),
+	),
+	$modal
 );
 
 // Modal Success

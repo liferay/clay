@@ -8,15 +8,7 @@
 }
 
 .modal {
-	display: none;
-	height: 100%;
-	left: 0;
-	outline: 0;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: $zindex-modal;
+	@include clay-css($modal);
 }
 
 .modal-dialog {
@@ -143,57 +135,42 @@
 }
 
 .modal-backdrop {
-	background-color: $modal-backdrop-bg;
-	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	z-index: $zindex-modal-backdrop;
-
-	&.fade {
-		opacity: 0;
-	}
-
-	&.show {
-		opacity: $modal-backdrop-opacity;
-	}
+	@include clay-map-to-css($modal-backdrop);
 }
 
 .modal-content {
-	background-clip: padding-box;
-	background-color: $modal-content-bg;
-	border: $modal-content-border-width solid $modal-content-border-color;
-
-	@include border-radius($modal-content-border-radius);
-	@include box-shadow($modal-content-box-shadow-xs);
-
-	color: $modal-content-color;
-	display: flex;
-	flex-direction: column;
-	outline: 0;
-	overflow: hidden;
-	pointer-events: auto;
-	position: relative;
-	width: 100%;
+	@include clay-map-to-css($modal-content);
 }
 
 .modal-header {
-	$breakpoint-down: map-get($modal-header, breakpoint-down);
+	$_modal-header: setter(map-get($modal, modal-header), ());
 
-	@include clay-css($modal-header);
+	$_breakpoint-down: map-get($_modal-header, breakpoint-down);
+	$_mobile: map-get($_modal-header, mobile);
 
-	@include clay-scale-component(null, $breakpoint-down) {
-		@include clay-css(map-get($modal-header, mobile));
+	$_modal-header: map-remove($_modal-header, breakpoint-down, mobile);
+
+	@include clay-map-to-css($_modal-header);
+
+	@include clay-scale-component(null, $_breakpoint-down) {
+		@include clay-css(map-get($_modal-header, mobile));
 	}
 }
 
 .modal-body {
-	@include clay-css($modal-body);
+	$_modal-body: setter(map-get($modal, modal-body), ());
+	$_modal-body: map-deep-merge(
+		$_modal-body,
+		(
+			'&.inline-scroller':
+				map-merge(
+					setter(map-get($_modal-body, '&.inline-scroller'), ()),
+					setter(map-get($_modal-body, inline-scroller), ())
+				),
+		)
+	);
 
-	&.inline-scroller {
-		@include clay-css(map-get($modal-body, inline-scroller));
-	}
+	@include clay-map-to-css($modal-body);
 }
 
 .modal-body-flush {
@@ -201,23 +178,7 @@
 }
 
 .modal-footer {
-	align-items: center;
-	background-color: $modal-footer-bg;
-	border-top: $modal-footer-border-width solid $modal-footer-border-color;
-
-	@include border-bottom-radius($modal-content-inner-border-radius);
-	@include box-shadow($modal-footer-box-shadow);
-
-	color: $modal-footer-color;
-	display: flex;
-	flex-shrink: 0;
-	flex-wrap: wrap;
-	height: $modal-footer-height;
-	justify-content: flex-start;
-	padding-bottom: $modal-footer-padding-y;
-	padding-left: $modal-footer-padding-x;
-	padding-right: $modal-footer-padding-x;
-	padding-top: $modal-footer-padding-y;
+	@include clay-map-to-css(map-get($modal, modal-footer));
 
 	@include clay-scale-component {
 		height: $modal-footer-height-mobile;
@@ -279,15 +240,7 @@
 // Modal Title
 
 .modal-title {
-	flex-grow: 1;
-	font-size: $modal-title-font-size;
-	font-weight: $modal-title-font-weight;
-	line-height: $modal-title-line-height;
-	margin-bottom: 0;
-	overflow: hidden;
-	text-align: $modal-title-text-align;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	@include clay-css(map-get($modal, modal-title));
 
 	@include clay-scale-component {
 		font-size: $modal-title-font-size-mobile;
@@ -295,11 +248,7 @@
 }
 
 .modal-title-indicator {
-	display: inline-block;
-	font-size: $modal-title-indicator-font-size;
-	margin-right: $modal-title-indicator-spacer-x;
-	margin-top: -0.2em;
-	vertical-align: middle;
+	@include clay-css(map-get($modal, modal-title-indicator));
 }
 
 // Modal Subtitle
@@ -319,13 +268,7 @@
 // Modal Close
 
 .modal .close {
-	&:first-child {
-		margin-left: math-sign($modal-close-spacer-x);
-	}
-
-	&:last-child {
-		margin-right: math-sign($modal-close-spacer-x);
-	}
+	@include clay-close(map-get($modal, close));
 }
 
 .close + .modal-title {
