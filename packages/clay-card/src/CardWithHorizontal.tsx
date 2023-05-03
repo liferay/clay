@@ -94,6 +94,7 @@ export const ClayCardWithHorizontal = ({
 
 				<ClayLayout.ContentCol expand gutters>
 					<ClayCard.Description
+						aria-label={title}
 						disabled={disabled}
 						displayType="title"
 						href={href}

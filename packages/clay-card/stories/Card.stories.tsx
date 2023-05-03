@@ -56,6 +56,9 @@ export const CardWithInfo = (args: any) => {
 							value: 'Awesome',
 						},
 					]}
+					stickerProps={{
+						title: 'File',
+					}}
 					title="Very Large File"
 				/>
 			</div>
@@ -93,6 +96,7 @@ export const CardWithInfo = (args: any) => {
 					stickerProps={{
 						content: 'DOC',
 						displayType: 'danger',
+						title: 'Document',
 					}}
 					title="Selectable File"
 				/>
@@ -129,6 +133,9 @@ export const CardWithInfoImage = (args: any) => {
 					]}
 					onSelectChange={setValue}
 					selected={value}
+					stickerProps={{
+						title: 'Photo File',
+					}}
 					title="thumbnail_coffee.jpg"
 				/>
 			</div>
@@ -149,6 +156,9 @@ export const CardWithInfoImage = (args: any) => {
 							value: 'Approved',
 						},
 					]}
+					stickerProps={{
+						title: 'Photo File',
+					}}
 					title="thumbnail_coffee.jpg"
 				/>
 			</div>
@@ -223,6 +233,7 @@ export const CardWithNavigation = () => (
 				horizontal
 				horizontalSymbol="page"
 				href="#"
+				stickerTitle="Page"
 				title="Layout Page"
 			/>
 		</div>
@@ -255,6 +266,7 @@ export const CardWithUser = (args: any) => {
 					name="Abraham Kuyper"
 					onSelectChange={setValue}
 					selected={value}
+					stickerTitle="User Icon"
 				/>
 			</div>
 			<div className="col-md-4">
@@ -262,6 +274,7 @@ export const CardWithUser = (args: any) => {
 					description="Assistant to the regional manager"
 					disabled={args.disabled}
 					name="Abraham Kuyper"
+					stickerTitle="User Icon"
 					userImageSrc="https://via.placeholder.com/256"
 				/>
 			</div>
