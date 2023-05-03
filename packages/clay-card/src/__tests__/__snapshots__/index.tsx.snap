@@ -1421,6 +1421,7 @@ exports[`ClayCardWithHorizontal renders as disabled 1`] = `
                 class="autofit-col autofit-col-expand autofit-col-gutters"
               >
                 <p
+                  aria-label="Foo Bar"
                   class="card-title"
                   title="Foo Bar"
                 >
@@ -1479,6 +1480,7 @@ exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
           class="autofit-col autofit-col-expand autofit-col-gutters"
         >
           <p
+            aria-label="Foo Bar"
             class="card-title"
             title="Foo Bar"
           >
@@ -1574,6 +1576,7 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
                 class="autofit-col autofit-col-expand autofit-col-gutters"
               >
                 <p
+                  aria-label="Foo Bar"
                   class="card-title"
                   title="Foo Bar"
                 >
@@ -1662,6 +1665,7 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -1747,6 +1751,7 @@ exports[`ClayCardWithInfo renders as file card specifying the displayType 1`] = 
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -1824,6 +1829,7 @@ exports[`ClayCardWithInfo renders as image card specifying imageProps and not th
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -1901,6 +1907,7 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and i
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -1986,6 +1993,7 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and n
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2062,6 +2070,7 @@ exports[`ClayCardWithInfo renders as image card with flush horizontal 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2139,6 +2148,7 @@ exports[`ClayCardWithInfo renders as image card with flush vertical 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2208,6 +2218,7 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
           class="autofit-col autofit-col-expand"
         >
           <p
+            aria-label="Very Large File"
             class="card-title"
             title="Very Large File"
           >
@@ -2330,6 +2341,7 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2399,6 +2411,7 @@ exports[`ClayCardWithInfo renders with custom sticker 1`] = `
           class="autofit-col autofit-col-expand"
         >
           <p
+            aria-label="Very Large File"
             class="card-title"
             title="Very Large File"
           >
@@ -2480,6 +2493,7 @@ exports[`ClayCardWithInfo renders with custom sticker with custom Icon 1`] = `
           class="autofit-col autofit-col-expand"
         >
           <p
+            aria-label="Very Large File"
             class="card-title"
             title="Very Large File"
           >
@@ -2577,6 +2591,7 @@ exports[`ClayCardWithInfo renders with description 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2660,6 +2675,7 @@ exports[`ClayCardWithInfo renders with no sticker 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2705,6 +2721,7 @@ exports[`ClayCardWithUser renders ClayCardWithNavigation with image 1`] = `
       class="card-body"
     >
       <p
+        aria-label="Layout Page"
         class="card-title"
         title="Layout Page"
       >
@@ -2779,6 +2796,7 @@ exports[`ClayCardWithUser renders as disabled 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2855,6 +2873,7 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
             class="autofit-col autofit-col-expand"
           >
             <p
+              aria-label="Foo Bar"
               class="card-title"
               title="Foo Bar"
             >
@@ -2941,6 +2960,7 @@ exports[`ClayCardWithUser renders with description 1`] = `
           class="autofit-col autofit-col-expand"
         >
           <p
+            aria-label="Foo Bar"
             class="card-title"
             title="Foo Bar"
           >
@@ -3015,6 +3035,7 @@ exports[`ClayCardWithUser renders with icon 1`] = `
           class="autofit-col autofit-col-expand"
         >
           <p
+            aria-label="Foo Bar"
             class="card-title"
             title="Foo Bar"
           >
@@ -3072,6 +3093,7 @@ exports[`ClayCardWithUser renders with image 1`] = `
           class="autofit-col autofit-col-expand"
         >
           <p
+            aria-label="Foo Bar"
             class="card-title"
             title="Foo Bar"
           >

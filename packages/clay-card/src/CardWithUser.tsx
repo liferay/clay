@@ -70,6 +70,11 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 
 	/**
+	 * Title for user icon.
+	 */
+	stickerTitle?: string;
+
+	/**
 	 * Displays the color of the user icon
 	 */
 	userDisplayType?: StickerDisplayType;
@@ -103,6 +108,7 @@ export const ClayCardWithUser = ({
 	onSelectChange,
 	selected = false,
 	spritemap,
+	stickerTitle,
 	userImageAlt = 'thumbnail',
 	userDisplayType,
 	userImageSrc,
@@ -115,6 +121,7 @@ export const ClayCardWithUser = ({
 				className="sticker-user-icon"
 				displayType={userDisplayType}
 				shape="circle"
+				title={stickerTitle}
 			>
 				{userImageSrc && (
 					<ClaySticker.Image alt={userImageAlt} src={userImageSrc} />
@@ -152,6 +159,7 @@ export const ClayCardWithUser = ({
 				<ClayCard.Row>
 					<ClayLayout.ContentCol expand>
 						<ClayCard.Description
+							aria-label={name}
 							disabled={disabled}
 							displayType="title"
 							href={href}

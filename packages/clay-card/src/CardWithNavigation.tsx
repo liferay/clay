@@ -52,6 +52,11 @@ export interface IProps
 	spritemap?: string;
 
 	/**
+	 * Title for bottom-left icon.
+	 */
+	stickerTitle?: string;
+
+	/**
 	 * Value displayed for the card's title
 	 */
 	title?: string;
@@ -68,6 +73,7 @@ export const ClayCardWithNavigation = ({
 	onClick,
 	onKeyDown = noop,
 	spritemap,
+	stickerTitle,
 	title,
 	...otherProps
 }: IProps) => {
@@ -107,6 +113,7 @@ export const ClayCardWithNavigation = ({
 						<>
 							{title && (
 								<ClayCard.Description
+									aria-label={title}
 									displayType="title"
 									truncate
 								>
@@ -128,7 +135,7 @@ export const ClayCardWithNavigation = ({
 					{horizontal && (
 						<ClayCard.Row>
 							<ClayLayout.ContentCol>
-								<ClaySticker inline>
+								<ClaySticker inline title={stickerTitle}>
 									<ClayIcon
 										spritemap={spritemap}
 										symbol={horizontalSymbol}
@@ -139,6 +146,7 @@ export const ClayCardWithNavigation = ({
 								<ClayLayout.ContentCol expand>
 									<ClayLayout.ContentSection>
 										<ClayCard.Description
+											aria-label={title}
 											displayType="title"
 											truncate
 										>
