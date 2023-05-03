@@ -22,6 +22,10 @@ $custom-control-indicator-disabled-border-color: $secondary-l3 !default;
 
 // Custom Control Indicator Checked
 
+$custom-control-indicator-checked-border-color: $component-active-bg !default;
+$custom-control-indicator-checked-box-shadow: c-unset !default;
+$custom-control-indicator-checked-color: $component-active-color !default;
+
 // @deprecated as of v2.2.1 use `$custom-control-indicator-checked-active-bg` instead
 
 $custom-control-indicator-active-checked-bg: $component-active-bg !default;
@@ -31,11 +35,6 @@ $custom-control-indicator-checked-active-bg: $custom-control-indicator-active-ch
 
 $custom-control-indicator-active-checked-border-color: $custom-control-indicator-checked-active-bg !default;
 $custom-control-indicator-checked-active-border-color: $custom-control-indicator-active-checked-border-color !default;
-
-$custom-control-indicator-checked-border-color: $custom-control-indicator-checked-active-bg !default;
-
-$custom-control-indicator-checked-box-shadow: c-unset !default;
-$custom-control-indicator-checked-color: $component-active-color !default;
 
 // @deprecated as of v2.2.1 use `$custom-control-indicator-checked-disabled-bg` instead
 
