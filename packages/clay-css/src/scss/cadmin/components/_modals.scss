@@ -10,15 +10,7 @@
 
 .modal,
 &.modal {
-	display: none;
-	height: 100%;
-	left: 0;
-	outline: 0;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: $cadmin-zindex-modal;
+	@include clay-css($cadmin-modal);
 }
 
 .modal-dialog {
@@ -122,67 +114,44 @@
 
 .modal-backdrop,
 &.modal-backdrop {
-	background-color: $cadmin-modal-backdrop-bg;
-	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	z-index: $cadmin-zindex-modal-backdrop;
-
-	&.fade {
-		opacity: 0;
-	}
-
-	&.show {
-		opacity: $cadmin-modal-backdrop-opacity;
-	}
+	@include clay-map-to-css($cadmin-modal-backdrop);
 }
 
 .modal-content {
-	background-clip: padding-box;
-	background-color: $cadmin-modal-content-bg;
-	border: $cadmin-modal-content-border-width solid
-		$cadmin-modal-content-border-color;
-
-	@include border-radius($cadmin-modal-content-border-radius);
-	@include box-shadow($cadmin-modal-content-box-shadow-xs);
-
-	color: $cadmin-modal-content-color;
-	display: flex;
-	flex-direction: column;
-	outline: 0;
-	overflow: hidden;
-	pointer-events: auto;
-	position: relative;
-	width: 100%;
+	@include clay-map-to-css($cadmin-modal-content);
 }
 
 .modal-header,
 &.modal-header {
-	$breakpoint-down: map-get($cadmin-modal-header, breakpoint-down);
+	$_modal-header: setter(map-get($cadmin-modal, modal-header), ());
 
-	@include clay-css($cadmin-modal-header);
+	$_breakpoint-down: map-get($_modal-header, breakpoint-down);
+	$_mobile: map-get($_modal-header, mobile);
 
-	@include clay-scale-component(null, $breakpoint-down) {
-		$mobile: setter(map-get($cadmin-modal-header, mobile), ());
+	$_modal-header: map-remove($_modal-header, breakpoint-down, mobile);
 
-		@include clay-css($mobile);
+	@include clay-map-to-css($_modal-header);
+
+	@include clay-scale-component(null, $_breakpoint-down) {
+		@include clay-css(map-get($_modal-header, mobile));
 	}
 }
 
 .modal-body,
 &.modal-body {
-	@include clay-css($cadmin-modal-body);
+	$_modal-body: setter(map-get($cadmin-modal, modal-body), ());
+	$_modal-body: map-deep-merge(
+		$_modal-body,
+		(
+			'&.inline-scroller':
+				map-merge(
+					setter(map-get($_modal-body, '&.inline-scroller'), ()),
+					setter(map-get($_modal-body, inline-scroller), ())
+				),
+		)
+	);
 
-	&.inline-scroller {
-		$inline-scroller: setter(
-			map-get($cadmin-modal-body, inline-scroller),
-			()
-		);
-
-		@include clay-css($inline-scroller);
-	}
+	@include clay-map-to-css($_modal-body);
 }
 
 .modal-body-flush,
@@ -192,31 +161,10 @@
 
 .modal-footer,
 &.modal-footer {
-	align-items: center;
-	background-color: $cadmin-modal-footer-bg;
-	border-top: $cadmin-modal-footer-border-width solid
-		$cadmin-modal-footer-border-color;
-
-	@include border-bottom-radius($cadmin-modal-content-inner-border-radius);
-	@include box-shadow($cadmin-modal-footer-box-shadow);
-
-	color: $cadmin-modal-footer-color;
-	display: flex;
-	flex-shrink: 0;
-	flex-wrap: wrap;
-	height: $cadmin-modal-footer-height;
-	justify-content: flex-start;
-	padding-bottom: $cadmin-modal-footer-padding-y;
-	padding-left: $cadmin-modal-footer-padding-x;
-	padding-right: $cadmin-modal-footer-padding-x;
-	padding-top: $cadmin-modal-footer-padding-y;
+	@include clay-map-to-css(map-get($cadmin-modal, modal-footer));
 
 	@include clay-scale-component {
 		height: $cadmin-modal-footer-height-mobile;
-	}
-
-	> * {
-		margin: $cadmin-modal-footer-margin-between * 0.5;
 	}
 }
 
@@ -272,15 +220,7 @@
 // Modal Title
 
 .modal-title {
-	flex-grow: 1;
-	font-size: $cadmin-modal-title-font-size;
-	font-weight: $cadmin-modal-title-font-weight;
-	line-height: $cadmin-modal-title-line-height;
-	margin-bottom: 0;
-	overflow: hidden;
-	text-align: $cadmin-modal-title-text-align;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	@include clay-map-to-css(map-get($cadmin-modal, modal-title));
 
 	@include clay-scale-component {
 		font-size: $cadmin-modal-title-font-size-mobile;
@@ -288,11 +228,7 @@
 }
 
 .modal-title-indicator {
-	display: inline-block;
-	font-size: $cadmin-modal-title-indicator-font-size;
-	margin-right: $cadmin-modal-title-indicator-spacer-x;
-	margin-top: -0.2em;
-	vertical-align: middle;
+	@include clay-map-to-css(map-get($cadmin-modal, modal-title-indicator));
 }
 
 // Modal Subtitle
@@ -314,13 +250,7 @@
 &.modal,
 .modal {
 	.close {
-		&:first-child {
-			margin-left: math-sign($cadmin-modal-close-spacer-x);
-		}
-
-		&:last-child {
-			margin-right: math-sign($cadmin-modal-close-spacer-x);
-		}
+		@include clay-close(map-get($cadmin-modal, close));
 	}
 }
 
