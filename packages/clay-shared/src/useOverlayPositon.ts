@@ -122,10 +122,10 @@ export function useOverlayPosition(
 			}
 		}
 
-		if (isOpen && ref.current) {
+		if (isOpen && triggerRef.current) {
 			alignElement();
 
-			return observeRect(ref.current, alignElement);
+			return observeRect(triggerRef.current, alignElement);
 		}
 	}, deps);
 }
