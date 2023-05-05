@@ -28,6 +28,9 @@ $btn: map-deep-merge(
 		),
 		active: (
 			box-shadow: $btn-active-box-shadow,
+			focus: (
+				box-shadow: c-unset,
+			),
 		),
 		disabled: (
 			opacity: $btn-disabled-opacity,

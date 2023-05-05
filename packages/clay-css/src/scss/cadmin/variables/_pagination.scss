@@ -7,16 +7,16 @@ $cadmin-pagination-line-height: 1 !default;
 $cadmin-pagination-padding-x: 10px !default; // 10px
 $cadmin-pagination-padding-y: 0 !default;
 
-$cadmin-pagination-hover-bg: rgba(39, 40, 41, 0.04) !default;
+$cadmin-pagination-hover-bg: rgba($cadmin-gray-900, 0.04) !default;
 $cadmin-pagination-hover-border-color: transparent !default;
 $cadmin-pagination-hover-color: $cadmin-gray-900 !default;
 
 $cadmin-pagination-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 $cadmin-pagination-focus-outline: 0 !default;
 
-$cadmin-pagination-active-bg: $cadmin-secondary !default;
+$cadmin-pagination-active-bg: rgba($cadmin-primary, 0.06) !default;
 $cadmin-pagination-active-border-color: transparent !default;
-$cadmin-pagination-active-color: $cadmin-white !default;
+$cadmin-pagination-active-color: $cadmin-gray-900 !default;
 
 $cadmin-pagination-disabled-bg: transparent !default;
 $cadmin-pagination-disabled-border-color: $cadmin-pagination-disabled-bg !default;
@@ -57,7 +57,8 @@ $cadmin-pagination-link-cursor: null !default;
 
 // @deprecated as of v2 use the Sass map `$cadmin-pagination-link` instead
 
-$cadmin-pagination-link-transition: box-shadow 0.15s ease-in-out !default;
+$cadmin-pagination-link-transition: background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out !default;
 
 $cadmin-pagination-link-first-border-radius: $cadmin-pagination-link-border-radius !default;
 $cadmin-pagination-link-last-border-radius: $cadmin-pagination-link-border-radius !default;
@@ -85,7 +86,10 @@ $cadmin-pagination-link-hover: map-deep-merge(
 	(
 		background-color: $cadmin-pagination-hover-bg,
 		border-color: $cadmin-pagination-hover-border-color,
+		box-shadow: inset 0 -0.125rem 0 0 $cadmin-secondary-l0,
 		color: $cadmin-pagination-hover-color,
+		font-weight: $cadmin-font-weight-semi-bold,
+		letter-spacing: 0,
 		text-decoration: none,
 		z-index: 2,
 	),
@@ -95,12 +99,23 @@ $cadmin-pagination-link-hover: map-deep-merge(
 $cadmin-pagination-link-focus: () !default;
 $cadmin-pagination-link-focus: map-deep-merge(
 	(
-		background-color: $cadmin-pagination-hover-bg,
 		border-color: $cadmin-pagination-hover-border-color,
-		box-shadow: $cadmin-pagination-focus-box-shadow,
+		box-shadow: none,
 		color: $cadmin-pagination-hover-color,
 		outline: $cadmin-pagination-focus-outline,
 		z-index: $cadmin-zindex-pagination-link-focus,
+		after: (
+			border-radius: $cadmin-pagination-link-border-radius,
+			bottom: 0,
+			box-shadow: $cadmin-pagination-focus-box-shadow,
+			content: '',
+			display: block,
+			left: 0,
+			pointer-events: none,
+			position: absolute,
+			right: 0,
+			top: 0,
+		),
 	),
 	$cadmin-pagination-link-focus
 );
@@ -110,8 +125,10 @@ $cadmin-pagination-link-active: map-deep-merge(
 	(
 		background-color: $cadmin-pagination-active-bg,
 		border-color: $cadmin-pagination-active-border-color,
+		box-shadow: inset 0 -0.125rem 0 0 $cadmin-primary-l0,
 		color: $cadmin-pagination-active-color,
-		cursor: default,
+		font-weight: $cadmin-font-weight-semi-bold,
+		letter-spacing: 0,
 		z-index: $cadmin-zindex-pagination-link-active,
 	),
 	$cadmin-pagination-link-active
@@ -128,6 +145,11 @@ $cadmin-pagination-link-disabled: map-deep-merge(
 		opacity: $cadmin-pagination-disabled-opacity,
 		pointer-events: $cadmin-pagination-disabled-pointer-events,
 		z-index: $cadmin-zindex-pagination-link-disabled,
+		focus: (
+			after: (
+				content: none,
+			),
+		),
 	),
 	$cadmin-pagination-link-disabled
 );
@@ -146,6 +168,7 @@ $cadmin-pagination-link: map-deep-merge(
 		display: inline-flex,
 		height: $cadmin-pagination-item-height,
 		justify-content: center,
+		letter-spacing: 0.033em,
 		line-height: $cadmin-pagination-line-height,
 		margin-left: 0,
 		padding-bottom: $cadmin-pagination-padding-y,
@@ -157,7 +180,20 @@ $cadmin-pagination-link: map-deep-merge(
 		hover: $cadmin-pagination-link-hover,
 		focus: $cadmin-pagination-link-focus,
 		active: $cadmin-pagination-link-active,
+		active-class: (
+			background-color: $cadmin-pagination-active-bg,
+			border-color: $cadmin-pagination-active-border-color,
+			color: $cadmin-pagination-active-color,
+			box-shadow: inset 0 -0.25rem 0 0 $cadmin-primary-l0,
+			font-weight: $cadmin-font-weight-semi-bold,
+			letter-spacing: 0,
+		),
 		disabled: $cadmin-pagination-link-disabled,
+		show: (
+			box-shadow: inset 0 -0.25rem 0 0 $cadmin-primary-l0,
+			font-weight: $cadmin-font-weight-semi-bold,
+			letter-spacing: 0,
+		),
 		lexicon-icon: (
 			margin-top: 0,
 		),
@@ -294,11 +330,13 @@ $cadmin-pagination-items-per-page-link-hover: map-deep-merge(
 $cadmin-pagination-items-per-page-link-focus: () !default;
 $cadmin-pagination-items-per-page-link-focus: map-deep-merge(
 	(
-		background-color: map-get($cadmin-pagination-link-focus, bg),
+		background-color:
+			map-get($cadmin-pagination-link-focus, background-color),
 		border-color: map-get($cadmin-pagination-link-focus, border-color),
 		box-shadow: $cadmin-pagination-items-per-page-focus-box-shadow,
 		color: map-get($cadmin-pagination-link-focus, color),
 		outline: $cadmin-pagination-items-per-page-focus-outline,
+		after: map-get($cadmin-pagination-link-focus, after),
 	),
 	$cadmin-pagination-items-per-page-link-focus
 );
@@ -340,6 +378,7 @@ $cadmin-pagination-items-per-page-link: map-deep-merge(
 		display: inline-flex,
 		height: $cadmin-pagination-item-height,
 		justify-content: center,
+		letter-spacing: 0.025em,
 		line-height: $cadmin-pagination-line-height,
 		padding-bottom: $cadmin-pagination-padding-y,
 		padding-left: $cadmin-pagination-padding-x,
@@ -351,6 +390,7 @@ $cadmin-pagination-items-per-page-link: map-deep-merge(
 		focus: $cadmin-pagination-items-per-page-link-focus,
 		active: $cadmin-pagination-items-per-page-link-active,
 		disabled: $cadmin-pagination-items-per-page-link-disabled,
+		show: map-get($cadmin-pagination-link, show),
 		lexicon-icon: (
 			margin-left:
 				$cadmin-pagination-items-per-page-lexicon-icon-margin-left,

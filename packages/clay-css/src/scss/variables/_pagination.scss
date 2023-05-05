@@ -112,7 +112,6 @@ $pagination-link-active: map-deep-merge(
 		background-color: $pagination-active-bg,
 		border-color: $pagination-active-border-color,
 		color: $pagination-active-color,
-		cursor: default,
 		z-index: $zindex-pagination-link-active,
 	),
 	$pagination-link-active
@@ -161,6 +160,7 @@ $pagination-link: map-deep-merge(
 		hover: $pagination-link-hover,
 		focus: $pagination-link-focus,
 		active: $pagination-link-active,
+		active-class: $pagination-link-active,
 		disabled: $pagination-link-disabled,
 		lexicon-icon: (
 			margin-top: 0,

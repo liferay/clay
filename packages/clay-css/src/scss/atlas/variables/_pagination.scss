@@ -68,7 +68,7 @@ $pagination-link-focus: map-deep-merge(
 	(
 		background-color: c-unset,
 		border-color: $pagination-hover-border-color,
-		box-shadow: c-unset,
+		box-shadow: none,
 		color: $pagination-hover-color,
 		after: (
 			border-radius: $pagination-link-border-radius,
@@ -92,17 +92,38 @@ $pagination-link-active: map-deep-merge(
 		background-color: $pagination-active-bg,
 		border-color: $pagination-active-border-color,
 		color: $pagination-active-color,
-		box-shadow: inset 0 -0.25rem 0 0 $primary-l0,
+		box-shadow: inset 0 -0.125rem 0 0 $primary-l0,
 		font-weight: $font-weight-semi-bold,
 		letter-spacing: 0,
 	),
 	$pagination-link-active
 );
 
+$pagination-link-disabled: () !default;
+$pagination-link-disabled: map-deep-merge(
+	(
+		focus: (
+			after: (
+				content: none,
+			),
+		),
+	),
+	$pagination-link-disabled
+);
+
 $pagination-link: () !default;
 $pagination-link: map-deep-merge(
 	(
 		letter-spacing: 0.033em,
+		active: $pagination-link-active,
+		active-class: (
+			background-color: $pagination-active-bg,
+			border-color: $pagination-active-border-color,
+			color: $pagination-active-color,
+			box-shadow: inset 0 -0.25rem 0 0 $primary-l0,
+			font-weight: $font-weight-semi-bold,
+			letter-spacing: 0,
+		),
 		show: (
 			box-shadow: inset 0 -0.25rem 0 0 $primary-l0,
 			font-weight: $font-weight-semi-bold,
