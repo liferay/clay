@@ -19,7 +19,7 @@
 
 	&.active {
 		.page-link {
-			@include clay-link(map-get($pagination-link, active));
+			@include clay-link(map-get($pagination-link, active-class));
 		}
 	}
 
