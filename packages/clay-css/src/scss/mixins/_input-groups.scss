@@ -300,6 +300,14 @@
 		@if ($enabled) {
 			@include clay-css($map);
 
+			&::before {
+				@include clay-css(map-get($map, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($map, after));
+			}
+
 			&.focus {
 				@include clay-input-group-item-variant(
 					map-deep-get($map, focus)
