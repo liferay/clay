@@ -17,10 +17,17 @@
 	$nav-class: '.nav',
 	$i: 1
 ) {
+	$_nav-class-next: '#{$nav-class}';
+
 	@for $i from (1) through $nest-level {
-		#{$nav-class} > li {
-			> a {
+		#{$_nav-class-next} > li {
+			> a,
+			> .btn {
 				padding-left: calc(#{$indent} * #{$i + 1});
+
+				.c-inner {
+					margin-left: calc(#{$indent} * -#{$i + 1});
+				}
 			}
 
 			> .nav-equal-height-heading {
@@ -28,6 +35,6 @@
 			}
 		}
 
-		$nav-class: '#{$nav-class} .nav';
+		$_nav-class-next: '#{$nav-class} #{$_nav-class-next}';
 	}
 }
