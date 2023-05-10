@@ -109,8 +109,30 @@
 			)
 		);
 
+		$map: map-remove(
+			$map,
+			enabled,
+			modal-header,
+			header,
+			header-bg,
+			header-border-color,
+			header-color,
+			header-close,
+			header-close-color,
+			btn-focus-box-shadow,
+			btn-focus-outline,
+			modal-body,
+			body,
+			body-bg,
+			body-color,
+			modal-footer,
+			footer,
+			footer-bg,
+			footer-border-color
+		);
+
 		@if ($enabled) {
-			@include clay-css($map);
+			@include clay-map-to-css($map);
 
 			// Modal specific btn-monospaced is deprecated in v2.0.0-rc.12
 
@@ -130,15 +152,15 @@
 			}
 
 			.modal-header {
-				@include clay-css($header);
+				@include clay-map-to-css($header);
 			}
 
 			.modal-body {
-				@include clay-css($body);
+				@include clay-map-to-css($body);
 			}
 
 			.modal-footer {
-				@include clay-css($footer);
+				@include clay-map-to-css($footer);
 			}
 		}
 	}

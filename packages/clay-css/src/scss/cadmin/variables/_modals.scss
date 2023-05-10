@@ -1,6 +1,26 @@
 $cadmin-modal-backdrop-bg: $cadmin-gray-800 !default;
 $cadmin-modal-backdrop-opacity: 0.8 !default;
 
+$cadmin-modal-backdrop: () !default;
+$cadmin-modal-backdrop: map-deep-merge(
+	(
+		background-color: $cadmin-modal-backdrop-bg,
+		height: 100vh,
+		left: 0,
+		position: fixed,
+		top: 0,
+		width: 100vw,
+		z-index: $cadmin-zindex-modal-backdrop,
+		'&.fade': (
+			opacity: 0,
+		),
+		'&.show': (
+			opacity: $cadmin-modal-backdrop-opacity,
+		),
+	),
+	$cadmin-modal-backdrop
+);
+
 // Modal Dialog
 
 $cadmin-modal-dialog-margin: 8px !default;
@@ -25,6 +45,27 @@ $cadmin-modal-content-inner-border-radius: calc(
 
 $cadmin-modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $cadmin-modal-content-box-shadow-sm-up: 0 8px 16px rgba($cadmin-black, 0.5) !default;
+
+$cadmin-modal-content: () !default;
+$cadmin-modal-content: map-deep-merge(
+	(
+		background-clip: padding-box,
+		background-color: $cadmin-modal-content-bg,
+		border-radius: clay-enable-rounded($cadmin-modal-content-border-radius),
+		border: $cadmin-modal-content-border-width solid
+			$cadmin-modal-content-border-color,
+		box-shadow: clay-enable-shadows($cadmin-modal-content-box-shadow-xs),
+		color: $cadmin-modal-content-color,
+		display: flex,
+		flex-direction: column,
+		outline: 0,
+		overflow: hidden,
+		pointer-events: auto,
+		position: relative,
+		width: 100%,
+	),
+	$cadmin-modal-content
+);
 
 // .modal-header
 
@@ -85,7 +126,7 @@ $cadmin-modal-body: map-deep-merge(
 		margin-top: math-sign($cadmin-modal-content-border-width),
 		padding: $cadmin-modal-inner-padding,
 		position: relative,
-		inline-scroller: (
+		'&.inline-scroller': (
 			max-height: 320px,
 			-webkit-overflow-scrolling: touch,
 			overflow: auto,
@@ -255,6 +296,76 @@ $cadmin-modal-height-full-modal-content-sm-up: map-merge(
 		top: $cadmin-modal-dialog-margin-y-sm-up,
 	),
 	$cadmin-modal-height-full-modal-content-sm-up
+);
+
+// Modal
+
+$cadmin-modal: () !default;
+$cadmin-modal: map-deep-merge(
+	(
+		display: none,
+		height: 100%,
+		left: 0,
+		outline: 0,
+		overflow: hidden,
+		position: fixed,
+		top: 0,
+		width: 100%,
+		z-index: $cadmin-zindex-modal,
+		close: (
+			'&:first-child': (
+				margin-left: math-sign($cadmin-modal-close-spacer-x),
+			),
+			'&:last-child': (
+				margin-right: math-sign($cadmin-modal-close-spacer-x),
+			),
+		),
+		modal-header: $cadmin-modal-header,
+		modal-body: $cadmin-modal-body,
+		modal-footer: (
+			align-items: center,
+			background-color: $cadmin-modal-footer-bg,
+			border-bottom-left-radius:
+				clay-enable-rounded($cadmin-modal-content-inner-border-radius),
+			border-bottom-right-radius:
+				clay-enable-rounded($cadmin-modal-content-inner-border-radius),
+			border-top: $cadmin-modal-footer-border-width solid
+				$cadmin-modal-footer-border-color,
+			box-shadow: clay-enable-shadows($cadmin-modal-footer-box-shadow),
+			color: $cadmin-modal-footer-color,
+			display: flex,
+			flex-shrink: 0,
+			flex-wrap: wrap,
+			height: $cadmin-modal-footer-height,
+			justify-content: flex-start,
+			padding-bottom: $cadmin-modal-footer-padding-y,
+			padding-left: $cadmin-modal-footer-padding-x,
+			padding-right: $cadmin-modal-footer-padding-x,
+			padding-top: $cadmin-modal-footer-padding-y,
+			'> *': (
+				margin: calc(#{$cadmin-modal-footer-margin-between} * 0.5),
+			),
+		),
+		modal-title: (
+			flex-grow: 1,
+			font-size: $cadmin-modal-title-font-size,
+			font-weight: $cadmin-modal-title-font-weight,
+			line-height: $cadmin-modal-title-line-height,
+			margin-bottom: 0,
+			overflow: hidden,
+			text-align: $cadmin-modal-title-text-align,
+			text-overflow: ellipsis,
+			white-space: nowrap,
+		),
+		modal-title-indicator: (
+			display: inline-block,
+			font-size: $cadmin-modal-title-indicator-font-size,
+			margin-right: $cadmin-modal-title-indicator-spacer-x,
+			margin-top: -0.2em,
+			vertical-align: middle,
+		),
+	),
+	$cadmin-modal
 );
 
 // Modal Success

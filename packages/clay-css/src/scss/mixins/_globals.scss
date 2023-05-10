@@ -336,42 +336,29 @@
 }
 
 /// A mixin that outputs CSS based on the structure of a Sass map.
+/// @param {Map} $map - A map of `key: value` pairs.
 
 @mixin clay-map-to-css($map) {
+	@include clay-css($map);
+
 	@each $key, $value in $map {
 		@if not clay-is-map-unset($value) {
-			@each $nestedKey, $nestedValue in $value {
-				@if (type-of($nestedValue) == 'map') {
-					$parentSelector: if(
-						starts-with($key, '.') or
-							starts-with($key, '#') or
-							starts-with($key, '@'),
-						$key,
-						str-insert($key, '.', 1)
-					);
+			@if (type-of($value) == 'map') {
+				$valid-prefixes: '#', '&', '.', '>', '@';
 
-					$nestedMap: (#{$nestedKey}: $nestedValue);
+				$selector: if(
+					index($valid-prefixes, str-slice($key, 1, 1)),
+					$key,
+					str-insert($key, '.', 1)
+				);
 
-					@if (starts-with($parentSelector, '@media ')) {
-						@media #{clay-str-replace('#{$parentSelector}', '@media ', '')} {
-							@include clay-map-to-css($nestedMap);
-						}
-					} @else {
-						#{$parentSelector} {
-							@include clay-map-to-css($nestedMap);
-						}
+				@if (starts-with($selector, '@media ')) {
+					@media #{clay-str-replace('#{$selector}', '@media ', '')} {
+						@include clay-map-to-css($value);
 					}
 				} @else {
-					$selector: if(
-						starts-with($key, '.') or
-							starts-with($key, '#') or
-							starts-with($key, '@'),
-						$key,
-						str-insert($key, '.', 1)
-					);
-
 					#{$selector} {
-						@include clay-css($value);
+						@include clay-map-to-css($value);
 					}
 				}
 			}
