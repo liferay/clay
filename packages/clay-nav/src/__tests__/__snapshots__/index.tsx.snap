@@ -82,26 +82,24 @@ exports[`ClayVerticalNav renders 1`] = `
               </svg>
             </span>
           </button>
-          <div>
-            <ul
-              class="nav nav-stacked"
-              role="menu"
+          <ul
+            class="nav nav-stacked"
+            role="menu"
+          >
+            <li
+              class="nav-item"
+              role="none"
             >
-              <li
-                class="nav-item"
-                role="none"
+              <a
+                class="nav-link collapsed"
+                href="#nested1"
+                role="menuitem"
+                tabindex="-1"
               >
-                <a
-                  class="nav-link collapsed"
-                  href="#nested1"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Nested1
-                </a>
-              </li>
-            </ul>
-          </div>
+                Nested1
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

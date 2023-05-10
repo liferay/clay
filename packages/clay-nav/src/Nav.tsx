@@ -26,19 +26,10 @@ export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	stacked?: boolean;
 }
 
-function Nav(props: IProps): JSX.Element & {
-	Item: typeof NavItem;
-	Link: typeof NavLink;
-};
-
-function Nav({
-	children,
-	className,
-	nestMargins,
-	nested,
-	stacked,
-	...otherProps
-}: IProps) {
+const Nav = React.forwardRef<HTMLUListElement, IProps>(function Nav(
+	{children, className, nestMargins, nested, stacked, ...otherProps},
+	ref
+) {
 	return (
 		<ul
 			{...otherProps}
@@ -47,13 +38,14 @@ function Nav({
 				['nav-nested-margins']: nestMargins,
 				['nav-stacked']: stacked,
 			})}
+			ref={ref}
 		>
 			{children}
 		</ul>
 	);
-}
+});
 
-Nav.Item = NavItem;
-Nav.Link = NavLink;
-
-export default Nav;
+export default Object.assign(Nav, {
+	Item: NavItem,
+	Link: NavLink,
+});
