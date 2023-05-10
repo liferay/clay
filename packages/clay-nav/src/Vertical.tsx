@@ -152,7 +152,7 @@ function Item({
 	const [expanded, setExpaned] = React.useState(initialExpanded);
 
 	const itemRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
-	const menusRef = useRef<HTMLDivElement>(null);
+	const menusRef = useRef<HTMLUListElement | null>(null);
 
 	const hasItemSelectedNested = useMemo(() => {
 		if (items) {
@@ -231,6 +231,9 @@ function Item({
 					onEnter={(element: HTMLElement) =>
 						element.setAttribute('style', `height: 0px`)
 					}
+					onEntered={(element: HTMLElement) =>
+						element.removeAttribute('style')
+					}
 					onEntering={(element: HTMLElement) =>
 						setElementFullHeight(element)
 					}
@@ -240,17 +243,15 @@ function Item({
 					}
 					timeout={250}
 				>
-					<div ref={menusRef}>
-						<Nav role="menu" stacked>
-							{renderItems(
-								items,
-								ariaCurrent,
-								spritemap,
-								level++,
-								itemRef
-							)}
-						</Nav>
-					</div>
+					<Nav ref={menusRef} role="menu" stacked>
+						{renderItems(
+							items,
+							ariaCurrent,
+							spritemap,
+							level++,
+							itemRef
+						)}
+					</Nav>
 				</CSSTransition>
 			)}
 		</Nav.Item>
