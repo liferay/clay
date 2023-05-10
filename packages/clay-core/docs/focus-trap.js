@@ -5,7 +5,7 @@
 
 import Editor from '$clayui.com/src/components/Editor';
 import {Button, FocusTrap} from '@clayui/core';
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 const exampleImports = `import {Button, FocusTrap} from '@clayui/core';
 import React, {useState, useRef} from 'react';`;
@@ -14,13 +14,11 @@ const exampleCode = `const FocusTrapTrigger = () => {
     const [active, setActive] = useState(false);
 	const activateButtonRef = useRef(null);
 
-	const onDeactivateFocusTrap = () => {
-		setActive(false);
-
-		if (activateButtonRef.current) {
-			activateButtonRef.current.focus();
+	useEffect(() => {
+		if (active) {
+			return () => activateButtonRef.current?.focus();
 		}
-	};
+	}, [active]);
 
 	return (
 		<>
@@ -33,7 +31,7 @@ const exampleCode = `const FocusTrapTrigger = () => {
                     <Button displayType="link">Button 1</Button>
                     <Button displayType="link">Button 2</Button>
                     <div className="c-mt-4">
-                        <Button onClick={onDeactivateFocusTrap}>
+                        <Button onClick={() => setActive(false)}>
                             Leave trap
                         </Button>
                     </div>
@@ -47,7 +45,7 @@ const exampleCode = `const FocusTrapTrigger = () => {
 render(<FocusTrapTrigger/>)`;
 
 const FocusTrapExample = () => {
-	const scope = {Button, FocusTrap, useRef, useState};
+	const scope = {Button, FocusTrap, useEffect, useRef, useState};
 
 	return <Editor code={exampleCode} imports={exampleImports} scope={scope} />;
 };
