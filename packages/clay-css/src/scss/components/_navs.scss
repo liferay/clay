@@ -118,7 +118,11 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 
-	@include clay-nav-nested($nav-nested-spacer-x);
+	@include clay-nav-nested(
+		$nav-nested-spacer-x,
+		$nav-nested-nest-level,
+		$nav-nested-nav-class
+	);
 }
 
 .nav-nested-margins {
