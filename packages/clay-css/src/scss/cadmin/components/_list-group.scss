@@ -376,23 +376,25 @@
 // List Group Item Variants
 
 @each $cadmin-color, $cadmin-value in $cadmin-theme-colors {
-	.list-group-item-#{$cadmin-color} {
-		background-color: theme-color-level($cadmin-color, -9);
-		color: theme-color-level($cadmin-color, 6);
+	@if not clay-is-map-unset($cadmin-value) {
+		.list-group-item-#{$cadmin-color} {
+			background-color: theme-color-level($cadmin-color, -9);
+			color: theme-color-level($cadmin-color, 6);
 
-		&.list-group-item-action {
-			@include hover-focus() {
-				background-color: clay-darken(
-					theme-color-level($cadmin-color, -9),
-					5%
-				);
-				color: theme-color-level($cadmin-color, 6);
-			}
+			&.list-group-item-action {
+				@include hover-focus() {
+					background-color: clay-darken(
+						theme-color-level($cadmin-color, -9),
+						5%
+					);
+					color: theme-color-level($cadmin-color, 6);
+				}
 
-			&.active {
-				background-color: theme-color-level($cadmin-color, 6);
-				border-color: theme-color-level($cadmin-color, 6);
-				color: $cadmin-white;
+				&.active {
+					background-color: theme-color-level($cadmin-color, 6);
+					border-color: theme-color-level($cadmin-color, 6);
+					color: $cadmin-white;
+				}
 			}
 		}
 	}

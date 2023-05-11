@@ -109,13 +109,15 @@
 // Sidebar Variants
 
 @each $color, $value in $cadmin-sidebar-palette {
-	$selector: if(
-		starts-with($color, '.') or starts-with($color, '#'),
-		$color,
-		str-insert($color, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or starts-with($color, '#'),
+			$color,
+			str-insert($color, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-sidebar-variant($value);
+		#{$selector} {
+			@include clay-sidebar-variant($value);
+		}
 	}
 }

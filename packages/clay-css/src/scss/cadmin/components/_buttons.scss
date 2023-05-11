@@ -19,29 +19,31 @@ fieldset:disabled a.btn {
 // Button Sizes
 
 @each $size, $value in $cadmin-btn-sizes {
-	$selector: if(
-		starts-with($size, 'btn-'),
-		clay-str-replace($size, 'btn-', '.btn-'),
-		$size
-	);
-
-	@if (starts-with($size, '%') or map-get($value, extend)) {
-		#{$selector} {
-			@include clay-button-variant($value);
-		}
-	} @else {
-		$placeholder: if(
+	@if not clay-is-map-unset($value) {
+		$selector: if(
 			starts-with($size, 'btn-'),
-			'%clay-#{$size}',
-			'%#{str-slice($size, 2)}'
+			clay-str-replace($size, 'btn-', '.btn-'),
+			$size
 		);
 
-		#{$placeholder} {
-			@include clay-button-variant($value);
-		}
+		@if (starts-with($size, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
+		} @else if (starts-with($size, 'btn-')) {
+			$placeholder: '%clay-#{$size}';
 
-		#{$selector} {
-			@extend #{$placeholder} !optional;
+			#{$placeholder} {
+				@include clay-button-variant($value);
+			}
+
+			#{$selector} {
+				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
 		}
 	}
 }
@@ -80,33 +82,35 @@ input[type='button'] {
 // Button Monospaced
 
 @each $size, $value in $cadmin-btn-monospaced-sizes {
-	$selector: if(
-		starts-with($size, 'btn-monospaced-'),
-		clay-str-replace($size, 'btn-monospaced', '.btn-monospaced.btn'),
-		if(
-			$size == 'btn-monospaced',
-			clay-str-replace($size, 'btn-monospaced', '.btn-monospaced'),
-			$size
-		)
-	);
-
-	@if (starts-with($size, '%') or map-get($value, extend)) {
-		#{$selector} {
-			@include clay-button-variant($value);
-		}
-	} @else {
-		$placeholder: if(
-			starts-with($size, 'btn-monospaced'),
-			'%clay-#{$size}',
-			'%#{str-slice($size, 2)}'
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($size, 'btn-monospaced-'),
+			clay-str-replace($size, 'btn-monospaced', '.btn-monospaced.btn'),
+			if(
+				$size == 'btn-monospaced',
+				clay-str-replace($size, 'btn-monospaced', '.btn-monospaced'),
+				$size
+			)
 		);
 
-		#{$placeholder} {
-			@include clay-button-variant($value);
-		}
+		@if (starts-with($size, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
+		} @else if (starts-with($size, 'btn-monospaced')) {
+			$placeholder: '%clay-#{$size}';
 
-		#{$selector} {
-			@extend #{$placeholder} !optional;
+			#{$placeholder} {
+				@include clay-button-variant($value);
+			}
+
+			#{$selector} {
+				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
 		}
 	}
 }
@@ -114,37 +118,43 @@ input[type='button'] {
 // Button Variants
 
 @each $color, $value in $cadmin-btn-palette {
-	$selector: if(
-		starts-with($color, '.') or
-			starts-with($color, '#') or
-			starts-with($color, '%'),
-		$color,
-		if(
-			starts-with($color, 'btn-'),
-			str-insert($color, '.', 1),
-			str-insert($color, '.btn-', 1)
-		)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			if(
+				starts-with($color, 'btn'),
+				str-insert($color, '.', 1),
+				str-insert($color, '.btn-', 1)
+			)
+		);
 
-	@if (starts-with($color, '%') or map-get($value, extend)) {
-		#{$selector} {
-			@include clay-button-variant($value);
-		}
-	} @else {
-		$placeholder: '%#{str-slice($selector, 2)}';
+		@if (starts-with($color, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
+		} @else if (starts-with($color, 'btn-')) {
+			$placeholder: '%#{str-slice($selector, 2)}';
 
-		$placeholder-focus: '%#{str-slice($selector, 2)}-focus';
+			$placeholder-focus: '%#{str-slice($selector, 2)}-focus';
 
-		#{$placeholder} {
-			@include clay-button-variant($value);
-		}
+			#{$placeholder} {
+				@include clay-button-variant($value);
+			}
 
-		#{$selector} {
-			@extend #{$placeholder} !optional;
-		}
+			#{$selector} {
+				@extend #{$placeholder} !optional;
+			}
 
-		#{$placeholder-focus} {
-			@include clay-button-variant(map-get($value, focus));
+			#{$placeholder-focus} {
+				@include clay-button-variant(map-get($value, focus));
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
 		}
 	}
 }
@@ -152,37 +162,43 @@ input[type='button'] {
 // Button Outline Variants
 
 @each $color, $value in $cadmin-btn-outline-palette {
-	$selector: if(
-		starts-with($color, '.') or
-			starts-with($color, '#') or
-			starts-with($color, '%'),
-		$color,
-		if(
-			starts-with($color, 'btn-'),
-			str-insert($color, '.', 1),
-			str-insert($color, '.btn-outline-', 1)
-		)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			if(
+				starts-with($color, 'btn'),
+				str-insert($color, '.', 1),
+				str-insert($color, '.btn-outline-', 1)
+			)
+		);
 
-	@if (starts-with($color, '%') or map-get($value, extend)) {
-		#{$selector} {
-			@include clay-button-variant($value);
-		}
-	} @else {
-		$placeholder: '%#{str-slice($selector, 2)}';
+		@if (starts-with($color, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
+		} @else if (starts-with($color, 'btn-outline')) {
+			$placeholder: '%#{str-slice($selector, 2)}';
 
-		$placeholder-focus: '%#{str-slice($selector, 2)}-focus';
+			$placeholder-focus: '%#{str-slice($selector, 2)}-focus';
 
-		#{$placeholder} {
-			@include clay-button-variant($value);
-		}
+			#{$placeholder} {
+				@include clay-button-variant($value);
+			}
 
-		#{$selector} {
-			@extend #{$placeholder} !optional;
-		}
+			#{$selector} {
+				@extend #{$placeholder} !optional;
+			}
 
-		#{$placeholder-focus} {
-			@include clay-button-variant(map-get($value, focus));
+			#{$placeholder-focus} {
+				@include clay-button-variant(map-get($value, focus));
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
+			}
 		}
 	}
 }

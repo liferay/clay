@@ -79,31 +79,35 @@
 // Loading Animation Sizes
 
 @each $selector, $value in $cadmin-loading-animation-sizes {
-	$_selector: if(
-		starts-with($selector, '.') or
-			starts-with($selector, '#') or
-			starts-with($selector, '%'),
-		$selector,
-		str-insert($selector, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$_selector: if(
+			starts-with($selector, '.') or
+				starts-with($selector, '#') or
+				starts-with($selector, '%'),
+			$selector,
+			str-insert($selector, '.', 1)
+		);
 
-	#{$_selector} {
-		@include clay-spinner-variant($value);
+		#{$_selector} {
+			@include clay-spinner-variant($value);
+		}
 	}
 }
 
 // Loading Animation Variants
 
 @each $selector, $value in $cadmin-loading-animation-palette {
-	$_selector: if(
-		starts-with($selector, '.') or
-			starts-with($selector, '#') or
-			starts-with($selector, '%'),
-		$selector,
-		str-insert($selector, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$_selector: if(
+			starts-with($selector, '.') or
+				starts-with($selector, '#') or
+				starts-with($selector, '%'),
+			$selector,
+			str-insert($selector, '.', 1)
+		);
 
-	#{$_selector} {
-		@include clay-spinner-variant($value);
+		#{$_selector} {
+			@include clay-spinner-variant($value);
+		}
 	}
 }

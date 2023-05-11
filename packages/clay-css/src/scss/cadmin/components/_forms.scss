@@ -181,14 +181,16 @@ fieldset[disabled] .form-control {
 }
 
 @each $key, $value in $cadmin-input-palette {
-	$selector: if(
-		starts-with($key, '.') or starts-with($key, '#'),
-		$key,
-		str-insert($key, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($key, '.') or starts-with($key, '#'),
+			$key,
+			str-insert($key, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-form-control-variant($value);
+		#{$selector} {
+			@include clay-form-control-variant($value);
+		}
 	}
 }
 
@@ -324,14 +326,16 @@ select.form-control[multiple] {
 // Form Control Select Variants
 
 @each $key, $value in $cadmin-form-control-select-palette {
-	$selector: if(
-		starts-with($key, '.') or starts-with($key, '#'),
-		$key,
-		str-insert($key, '.', 1)
-	);
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($key, '.') or starts-with($key, '#'),
+			$key,
+			str-insert($key, '.', 1)
+		);
 
-	#{$selector} {
-		@include clay-select-variant($value);
+		#{$selector} {
+			@include clay-select-variant($value);
+		}
 	}
 }
 

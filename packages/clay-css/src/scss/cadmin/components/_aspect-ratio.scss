@@ -160,42 +160,47 @@
 
 // aspect-ratio-#-to-#
 
-@each $selector, $value in $cadmin-aspect-ratio-sizes {
-	$selector: if(
-		starts-with($selector, '.') or
-			starts-with($selector, '#') or
-			starts-with($selector, '%'),
-		$selector,
-		str-insert($selector, '.', 1)
-	);
-
-	@if (starts-with($selector, '%')) {
-		#{$selector} {
-			@include clay-aspect-ratio(
-				map-get($value, width),
-				map-get($value, height)
-			);
-		}
-	} @else if (map-get($value, extend)) {
-		#{$selector} {
-			@include clay-css($value);
-		}
-	} @else {
-		$placeholder: str-insert(
-			str-slice($selector, 2, str-length($selector)),
-			'%',
-			1
+@each $size, $value in $cadmin-aspect-ratio-sizes {
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($size, '.') or
+				starts-with($size, '#') or
+				starts-with($size, '%'),
+			$size,
+			str-insert($size, '.', 1)
 		);
 
-		#{$placeholder} {
-			@include clay-aspect-ratio(
-				map-get($value, width),
-				map-get($value, height)
-			);
-		}
+		@if (starts-with($selector, '%')) {
+			#{$selector} {
+				@include clay-aspect-ratio(
+					map-get($value, width),
+					map-get($value, height)
+				);
+			}
+		} @else if (map-get($value, extend)) {
+			#{$selector} {
+				@include clay-css($value);
+			}
+		} @else if (starts-with($size, 'aspect-ratio-')) {
+			$placeholder: '%#{$size}';
 
-		#{$selector} {
-			@extend #{$placeholder} !optional;
+			#{$placeholder} {
+				@include clay-aspect-ratio(
+					map-get($value, width),
+					map-get($value, height)
+				);
+			}
+
+			#{$selector} {
+				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-aspect-ratio(
+					map-get($value, width),
+					map-get($value, height)
+				);
+			}
 		}
 	}
 }
