@@ -88,26 +88,22 @@
 
 // Label Sizes
 
-@each $selector, $value in $label-sizes {
+@each $size, $value in $label-sizes {
 	@if not clay-is-map-unset($value) {
 		$selector: if(
-			starts-with($selector, '.') or
-				starts-with($selector, '#') or
-				starts-with($selector, '%'),
-			$selector,
-			str-insert($selector, '.', 1)
+			starts-with($size, '.') or
+				starts-with($size, '#') or
+				starts-with($size, '%'),
+			$size,
+			str-insert($size, '.', 1)
 		);
 
-		@if (starts-with($selector, '%') or map-get($value, extend)) {
+		@if (starts-with($size, '%') or map-get($value, extend)) {
 			#{$selector} {
 				@include clay-label-variant($value);
 			}
-		} @else {
-			$placeholder: if(
-				starts-with($selector, '.') or starts-with($selector, '#'),
-				'%#{str-slice($selector, 2)}',
-				'%#{$selector}'
-			);
+		} @else if (starts-with($size, 'label-')) {
+			$placeholder: '%#{size}';
 
 			#{$placeholder} {
 				@include clay-label-variant($value);
@@ -115,6 +111,10 @@
 
 			#{$selector} {
 				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-label-variant($value);
 			}
 		}
 	}
@@ -124,6 +124,9 @@
 
 @each $color, $value in $label-palette {
 	@if not clay-is-map-unset($value) {
+		$deprecated-keys: 'primary', 'secondary', 'success', 'info', 'warning',
+			'danger', 'dark', 'light';
+
 		$selector: if(
 			starts-with($color, '.') or
 				starts-with($color, '#') or
@@ -136,12 +139,14 @@
 			#{$selector} {
 				@include clay-label-variant($value);
 			}
-		} @else {
-			$placeholder: if(
-				starts-with($color, '.') or starts-with($color, '#'),
-				'%#{str-slice($color, 2)}',
-				'%label-#{$color}'
-			);
+		} @else if
+			(
+				starts-with($color, 'inverse-') or
+					index($deprecated-keys, '#{$color}') !=
+					null
+			)
+		{
+			$placeholder: '%label-#{$color}';
 
 			#{$placeholder} {
 				@include clay-label-variant($value);
@@ -149,6 +154,10 @@
 
 			#{$selector} {
 				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-label-variant($value);
 			}
 		}
 	}
