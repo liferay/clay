@@ -491,7 +491,16 @@
 
 @each $color, $value in $modal-palette {
 	@if not clay-is-map-unset($value) {
-		.modal-#{$color} {
+		$deprecated-keys: 'primary', 'secondary', 'success', 'info', 'warning',
+			'danger', 'dark', 'light';
+
+		$selector: if(
+			index($deprecated-keys, '#{$color}') != null,
+			str-insert($color, '.modal-', 1),
+			$color
+		);
+
+		#{$selector} {
 			@include clay-modal-variant($value);
 		}
 	}
