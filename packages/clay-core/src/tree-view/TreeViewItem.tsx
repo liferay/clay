@@ -99,6 +99,7 @@ export const TreeViewItem = React.forwardRef<
 	const {
 		childrenRoot,
 		close,
+		dragAndDrop,
 		expandDoubleClick,
 		expandedKeys,
 		nestedKey,
@@ -193,6 +194,9 @@ export const TreeViewItem = React.forwardRef<
 	const labelId = useId();
 	const ariaOwns = useId();
 
+	const isNonDraggrable =
+		itemStackProps.draggable === false || nodeProps.draggable;
+
 	if (!group && nestedKey && item[nestedKey] && childrenRoot.current) {
 		return React.cloneElement(
 			childrenRoot.current(removeItemInternalProps(item), ...api),
@@ -248,6 +252,7 @@ export const TreeViewItem = React.forwardRef<
 								itemStackProps.noHover || nodeProps.noHover,
 						}
 					)}
+					data-dnd={dragAndDrop ? !isNonDraggrable : undefined}
 					data-dnd-dropping={
 						overTarget && overPosition ? 'true' : undefined
 					}
@@ -468,12 +473,7 @@ export const TreeViewItem = React.forwardRef<
 					onTouchStart={() => {
 						clickCapturedRef.current = true;
 					}}
-					ref={
-						itemStackProps.draggable === false ||
-						nodeProps.draggable === false
-							? undefined
-							: ref
-					}
+					ref={isNonDraggrable ? undefined : ref}
 					role="treeitem"
 					style={{
 						...(itemStackProps?.style ?? {}),
@@ -498,10 +498,12 @@ export const TreeViewItem = React.forwardRef<
 					>
 						{typeof left === 'string' && !right ? (
 							<Layout.ContentRow>
-								<Drag
-									labelId={labelId}
-									tabIndex={focusWithinProps.tabIndex}
-								/>
+								{!isNonDraggrable && (
+									<Drag
+										labelId={labelId}
+										tabIndex={focusWithinProps.tabIndex}
+									/>
+								)}
 
 								<Layout.ContentCol expand>
 									<span
@@ -525,6 +527,7 @@ export const TreeViewItem = React.forwardRef<
 							React.cloneElement(left as React.ReactElement, {
 								actions,
 								expandable: isExpand,
+								isNonDraggrable,
 								labelId,
 								onClick: undefined,
 								onLoadMore: !group ? loadMore : undefined,
@@ -535,6 +538,7 @@ export const TreeViewItem = React.forwardRef<
 								actions={actions}
 								disabled={nodeProps.disabled}
 								expandable={isExpand}
+								isNonDraggrable={isNonDraggrable}
 								labelId={labelId}
 								loading={loading}
 								onLoadMore={!group ? loadMore : undefined}
@@ -635,6 +639,11 @@ interface ITreeViewItemStackProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * @ignore
 	 */
 	tabIndex?: number;
+
+	/**
+	 * @ignore
+	 */
+	isNonDraggrable?: boolean;
 }
 
 type ExpanderProps = {
@@ -669,6 +678,7 @@ export function TreeViewItemStack({
 	disabled,
 	expandable = false,
 	expanderDisabled,
+	isNonDraggrable,
 	labelId,
 	loading = false,
 	onLoadMore,
@@ -735,7 +745,9 @@ export function TreeViewItemStack({
 				</Layout.ContentCol>
 			)}
 
-			<Drag labelId={labelId} tabIndex={tabIndex!} />
+			{!isNonDraggrable && (
+				<Drag labelId={labelId} tabIndex={tabIndex!} />
+			)}
 
 			{React.Children.map(children, (child, index) => {
 				let content = child;

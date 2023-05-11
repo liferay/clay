@@ -70,7 +70,11 @@ function getFocusableTree(rootRef: React.RefObject<HTMLUListElement>) {
 		return [];
 	}
 
-	return [...rootRef.current.querySelectorAll('[role="treeitem"]')].filter(
+	return [
+		...rootRef.current.querySelectorAll(
+			'[role="treeitem"][data-dnd="true"]'
+		),
+	].filter(
 		(element) =>
 			!(
 				element.getAttribute('disabled') ||
