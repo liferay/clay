@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Nav} from '@clayui/core';
 import ClayIcon from '@clayui/icon';
 import {Keys, setElementFullHeight, useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
@@ -10,7 +11,6 @@ import React, {useMemo, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
-import Nav from './Nav';
 import Trigger from './Trigger';
 
 interface IItem extends React.ComponentProps<typeof Nav.Item> {

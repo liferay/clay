@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayIcon from '@clayui/icon';
+import Icon from '@clayui/icon';
 import {LinkOrButton} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -35,7 +35,7 @@ export interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	spritemap?: string;
 }
 
-export const NavLink = React.forwardRef<
+export const Link = React.forwardRef<
 	HTMLButtonElement | HTMLAnchorElement,
 	IProps
 >(
@@ -70,7 +70,7 @@ export const NavLink = React.forwardRef<
 				{showIcon && (
 					<>
 						<span className="collapse-icon-closed">
-							<ClayIcon
+							<Icon
 								focusable="false"
 								role="presentation"
 								spritemap={spritemap}
@@ -79,7 +79,7 @@ export const NavLink = React.forwardRef<
 						</span>
 
 						<span className="collapse-icon-open">
-							<ClayIcon
+							<Icon
 								focusable="false"
 								role="presentation"
 								spritemap={spritemap}
@@ -93,4 +93,4 @@ export const NavLink = React.forwardRef<
 	}
 );
 
-NavLink.displayName = 'NavLink';
+Link.displayName = 'NavLink';

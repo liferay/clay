@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav basic rendering renders 1`] = `
+<div>
+  <ul
+    class="nav"
+  >
+    <li
+      class="nav-item"
+    >
+      <a
+        class="nav-link active"
+        href="#"
+      >
+        Active
+      </a>
+    </li>
+    <li
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        href="#"
+      >
+        Normal
+      </a>
+    </li>
+    <li
+      class="nav-item"
+    >
+      <a
+        class="nav-link disabled"
+        href="#"
+      >
+        Disabled
+      </a>
+    </li>
+  </ul>
+</div>
+`;
