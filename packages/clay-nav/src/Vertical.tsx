@@ -96,6 +96,7 @@ export interface IProps extends React.ComponentProps<typeof VerticalNav> {
 
 function ClayVerticalNav(props: IProps): JSX.Element & {
 	Trigger: typeof VerticalNav.Trigger;
+	Item: typeof VerticalNav.Item;
 };
 
 function ClayVerticalNav({
@@ -138,5 +139,6 @@ function ClayVerticalNav({
 }
 
 ClayVerticalNav.Trigger = VerticalNav.Trigger;
+ClayVerticalNav.Item = VerticalNav.Item;
 
 export {ClayVerticalNav};
