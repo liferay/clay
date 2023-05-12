@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useProvider} from '@clayui/provider';
 import {Keys, setElementFullHeight} from '@clayui/shared';
 import React, {useContext, useMemo, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
@@ -92,6 +93,8 @@ export function Item<T extends object>({
 		spritemap,
 		toggle,
 	} = useVertical();
+
+	const {prefersReducedMotion} = useProvider();
 
 	const itemRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
 	const menusRef = useRef<HTMLUListElement | null>(null);
@@ -208,7 +211,7 @@ export function Item<T extends object>({
 					onExiting={(element) =>
 						element.setAttribute('style', 'height: 0px')
 					}
-					timeout={250}
+					timeout={prefersReducedMotion ? 0 : 250}
 				>
 					<Nav ref={menusRef} role="menu" stacked>
 						<ParentContext.Provider value={itemRef}>
