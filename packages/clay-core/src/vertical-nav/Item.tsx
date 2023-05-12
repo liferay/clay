@@ -102,7 +102,7 @@ export function Item<T extends object>({
 
 	// State only for compatibility with the old compositing version where state
 	// was kept on each Item instead of centralized with `expandedKeys`.
-	const [expanded, setExpaned] = useState(initialExpanded);
+	const [expanded, setExpanded] = useState(initialExpanded);
 	const isOldVersion = typeof initialExpanded !== 'undefined';
 
 	const isExpanded = isOldVersion ? expanded : expandedKeys.has(keyValue!);
@@ -135,7 +135,7 @@ export function Item<T extends object>({
 					}
 
 					if (isOldVersion) {
-						setExpaned(!expanded);
+						setExpanded(!expanded);
 					} else {
 						toggle(keyValue!);
 					}
@@ -145,7 +145,7 @@ export function Item<T extends object>({
 						case Keys.Right: {
 							if (items && !isExpanded) {
 								if (isOldVersion) {
-									setExpaned(true);
+									setExpanded(true);
 								} else {
 									open(keyValue!);
 								}
@@ -161,7 +161,7 @@ export function Item<T extends object>({
 						case Keys.Left: {
 							if (items && isExpanded) {
 								if (isOldVersion) {
-									setExpaned(false);
+									setExpanded(false);
 								} else {
 									close(keyValue!);
 								}
