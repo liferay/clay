@@ -346,9 +346,14 @@ $nav-unstyled: map-deep-merge(
 	$nav-unstyled
 );
 
-// Nav Nested
+// Nav Nested Margins
 
 $nav-nested-margins-spacer-x: $nav-link-padding-x !default;
+
+// Nav Nested
+
+$nav-nested-nav-class: '.nav' !default;
+$nav-nested-nest-level: 7 !default;
 $nav-nested-spacer-x: $nav-link-padding-x !default;
 
 // Nav Tabs
