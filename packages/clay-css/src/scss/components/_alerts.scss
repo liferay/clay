@@ -385,12 +385,8 @@
 			#{$selector} {
 				@include clay-alert-variant($value);
 			}
-		} @else {
-			$placeholder: if(
-				starts-with($color, '.') or starts-with($color, '#'),
-				'%#{str-slice($color, 2)}',
-				'%alert-#{$color}'
-			);
+		} @else if (starts-with($color, 'alert-')) {
+			$placeholder: '%alert-#{$color}';
 
 			#{$placeholder} {
 				@include clay-alert-variant($value);
@@ -398,6 +394,10 @@
 
 			#{$selector} {
 				@extend %alert-#{$color} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-alert-variant($value);
 			}
 		}
 	}

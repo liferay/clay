@@ -434,31 +434,33 @@
 // Alert Variants
 
 @each $color, $value in $cadmin-alert-palette {
-	$selector: if(
-		starts-with($color, '.') or
-			starts-with($color, '#') or
-			starts-with($color, '%'),
-		$color,
-		str-insert($color, '.alert-', 1)
-	);
-
-	@if (starts-with($color, '%') or map-get($value, extend)) {
-		#{$selector} {
-			@include clay-alert-variant($value);
-		}
-	} @else {
-		$placeholder: if(
-			starts-with($color, '.') or starts-with($color, '#'),
-			'%#{str-slice($color, 2)}',
-			'%alert-#{$color}'
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			str-insert($color, '.alert-', 1)
 		);
 
-		#{$placeholder} {
-			@include clay-alert-variant($value);
-		}
+		@if (starts-with($color, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-alert-variant($value);
+			}
+		} @else if (starts-with($color, 'alert-')) {
+			$placeholder: '%alert-#{$color}';
 
-		#{$selector} {
-			@extend %alert-#{$color} !optional;
+			#{$placeholder} {
+				@include clay-alert-variant($value);
+			}
+
+			#{$selector} {
+				@extend %alert-#{$color} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-alert-variant($value);
+			}
 		}
 	}
 }

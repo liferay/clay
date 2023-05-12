@@ -53,26 +53,22 @@
 
 // Sticker Sizes
 
-@each $selector, $value in $sticker-sizes {
+@each $size, $value in $sticker-sizes {
 	@if not clay-is-map-unset($value) {
 		$selector: if(
-			starts-with($selector, '.') or
-				starts-with($selector, '#') or
-				starts-with($selector, '%'),
-			$selector,
-			str-insert($selector, '.', 1)
+			starts-with($size, '.') or
+				starts-with($size, '#') or
+				starts-with($size, '%'),
+			$size,
+			str-insert($size, '.', 1)
 		);
 
-		@if (starts-with($selector, '%') or map-get($value, extend)) {
+		@if (starts-with($size, '%') or map-get($value, extend)) {
 			#{$selector} {
 				@include clay-sticker-variant($value);
 			}
-		} @else {
-			$placeholder: if(
-				starts-with($selector, '.') or starts-with($selector, '#'),
-				'%#{str-slice($selector, 2)}',
-				'%#{$selector}'
-			);
+		} @else if(starts-with($size, 'sticker-')) {
+			$placeholder: '%#{$size}';
 
 			#{$placeholder} {
 				@include clay-sticker-variant($value);
@@ -80,6 +76,10 @@
 
 			#{$selector} {
 				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-sticker-variant($value);
 			}
 		}
 	}
@@ -89,6 +89,9 @@
 
 @each $color, $value in $sticker-palette {
 	@if not clay-is-map-unset($value) {
+		$deprecated-keys: 'primary', 'secondary', 'success', 'info', 'warning',
+			'danger', 'dark', 'light';
+
 		$selector: if(
 			starts-with($color, '.') or
 				starts-with($color, '#') or
@@ -101,12 +104,8 @@
 			#{$selector} {
 				@include clay-sticker-variant($value);
 			}
-		} @else {
-			$placeholder: if(
-				starts-with($color, '.') or starts-with($color, '#'),
-				'%#{str-slice($color, 2)}',
-				'%sticker-#{$color}'
-			);
+		} @else if (index($deprecated-keys, '#{$color}') != null) {
+			$placeholder: '%sticker-#{$color}';
 
 			#{$placeholder} {
 				@include clay-sticker-variant($value);
@@ -114,6 +113,10 @@
 
 			#{$selector} {
 				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-sticker-variant($value);
 			}
 		}
 	}

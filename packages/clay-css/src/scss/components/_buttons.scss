@@ -30,12 +30,8 @@ fieldset:disabled a.btn {
 			#{$selector} {
 				@include clay-button-variant($value);
 			}
-		} @else {
-			$placeholder: if(
-				starts-with($size, 'btn-'),
-				'%clay-#{$size}',
-				'%#{str-slice($size, 2)}'
-			);
+		} @else if (starts-with($size, 'btn-')) {
+			$placeholder: '%clay-#{$size}';
 
 			#{$placeholder} {
 				@include clay-button-variant($value);
@@ -43,6 +39,10 @@ fieldset:disabled a.btn {
 
 			#{$selector} {
 				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
 			}
 		}
 	}
@@ -97,12 +97,8 @@ input[type='button'] {
 			#{$selector} {
 				@include clay-button-variant($value);
 			}
-		} @else {
-			$placeholder: if(
-				starts-with($size, 'btn-monospaced'),
-				'%clay-#{$size}',
-				'%#{str-slice($size, 2)}'
-			);
+		} @else if (starts-with($size, 'btn-monospaced')) {
+			$placeholder: '%clay-#{$size}';
 
 			#{$placeholder} {
 				@include clay-button-variant($value);
@@ -110,6 +106,10 @@ input[type='button'] {
 
 			#{$selector} {
 				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
 			}
 		}
 	}
@@ -135,7 +135,7 @@ input[type='button'] {
 			#{$selector} {
 				@include clay-button-variant($value);
 			}
-		} @else {
+		} @else if (starts-with($color, 'btn-')) {
 			$placeholder: '%#{str-slice($selector, 2)}';
 
 			$placeholder-focus: '%#{str-slice($selector, 2)}-focus';
@@ -150,6 +150,10 @@ input[type='button'] {
 
 			#{$placeholder-focus} {
 				@include clay-button-variant(map-get($value, focus));
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
 			}
 		}
 	}
@@ -175,7 +179,7 @@ input[type='button'] {
 			#{$selector} {
 				@include clay-button-variant($value);
 			}
-		} @else {
+		} @else if (starts-with($color, 'btn-outline')) {
 			$placeholder: '%#{str-slice($selector, 2)}';
 
 			$placeholder-focus: '%#{str-slice($selector, 2)}-focus';
@@ -190,6 +194,10 @@ input[type='button'] {
 
 			#{$placeholder-focus} {
 				@include clay-button-variant(map-get($value, focus));
+			}
+		} @else {
+			#{$selector} {
+				@include clay-button-variant($value);
 			}
 		}
 	}

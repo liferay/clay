@@ -61,35 +61,49 @@
 // Badge Variants
 
 @each $color, $value in $cadmin-badge-palette {
-	$selector: if(
-		starts-with($color, '.') or
-			starts-with($color, '#') or
-			starts-with($color, '%'),
-		$color,
-		if(
-			starts-with($color, 'badge'),
-			str-insert($color, '.', 1),
-			str-insert($color, '.badge-', 1)
-		)
-	);
+	@if not clay-is-map-unset($value) {
+		$deprecated-keys: 'primary', 'secondary', 'success', 'info', 'warning',
+			'danger', 'dark', 'light';
 
-	@if (starts-with($color, '%') or map-get($value, extend)) {
-		#{$selector} {
-			@include clay-badge-variant($value);
-		}
-	} @else {
-		$placeholder: if(
-			starts-with($color, '.') or starts-with($color, '#'),
-			'%#{str-slice($color, 2)}',
-			'%badge-#{$color}'
+		$selector: if(
+			index($deprecated-keys, '#{$color}') != null,
+			str-insert($color, '.badge-', 1),
+			if
+				(
+					starts-with($color, 'badge'),
+					str-insert($color, '.', 1),
+					$color
+				)
 		);
 
-		#{$placeholder} {
-			@include clay-badge-variant($value);
-		}
+		@if (starts-with($color, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-badge-variant($value);
+			}
+		} @else if
+			(
+				starts-with($color, 'badge') or
+					index($deprecated-keys, '#{$color}') !=
+					null
+			)
+		{
+			$placeholder: if(
+				starts-with($color, '.') or starts-with($color, '#'),
+				'%#{str-slice($color, 2)}',
+				'%badge-#{$color}'
+			);
 
-		#{$selector} {
-			@extend #{$placeholder} !optional;
+			#{$placeholder} {
+				@include clay-badge-variant($value);
+			}
+
+			#{$selector} {
+				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-badge-variant($value);
+			}
 		}
 	}
 }
