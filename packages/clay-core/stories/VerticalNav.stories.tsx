@@ -42,7 +42,6 @@ const items = [
 		id: 5,
 		items: [
 			{
-				active: true,
 				href: '#',
 				id: 6,
 				label: 'Five',
@@ -440,14 +439,9 @@ export default {
 };
 
 export const Default = () => (
-	<VerticalNav items={items}>
+	<VerticalNav active={6} items={items}>
 		{(item) => (
-			<VerticalNav.Item
-				active={item.active}
-				href={item.href}
-				items={item.items}
-				key={item.id}
-			>
+			<VerticalNav.Item href={item.href} items={item.items} key={item.id}>
 				{item.label}
 			</VerticalNav.Item>
 		)}
@@ -477,16 +471,13 @@ export const ControlledExpandedKeys = () => {
 			</Button>
 
 			<VerticalNav
+				active={active}
 				expandedKeys={expandedKeys}
 				items={items_long}
 				onExpandedChange={setExpandedKeys}
 			>
 				{(item) => (
-					<VerticalNav.Item
-						active={active === item.label}
-						items={item.items}
-						key={item.label}
-					>
+					<VerticalNav.Item items={item.items} key={item.label}>
 						{item.label}
 					</VerticalNav.Item>
 				)}

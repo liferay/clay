@@ -8,6 +8,7 @@ import {createContext, useContext} from 'react';
 import type {ChildrenFunction} from '../collection';
 
 type VertivalNavContextProps = {
+	activeKey?: React.Key;
 	ariaCurrent?: 'page' | null;
 	spritemap?: string;
 	childrenRoot: React.MutableRefObject<

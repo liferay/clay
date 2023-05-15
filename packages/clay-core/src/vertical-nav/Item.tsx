@@ -15,6 +15,8 @@ import {useVertical} from './context';
 interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if item is active.
+	 * @deprecated since version 3.94.0 - uses the `active` property on the
+	 * root component.
 	 */
 	active?: boolean;
 
@@ -74,7 +76,7 @@ const ParentContext = React.createContext<React.RefObject<
 > | null>(null);
 
 export function Item<T extends object>({
-	active,
+	active: depreactedActive,
 	children,
 	href,
 	index: _,
@@ -85,6 +87,7 @@ export function Item<T extends object>({
 	...otherProps
 }: IProps<T>) {
 	const {
+		activeKey,
 		ariaCurrent = 'page',
 		childrenRoot,
 		close,
@@ -114,6 +117,8 @@ export function Item<T extends object>({
 
 		return false;
 	}, [items]);
+
+	const active = depreactedActive ?? activeKey === keyValue;
 
 	return (
 		<Nav.Item role="none" {...otherProps}>

@@ -5,7 +5,11 @@
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
-import {useInternalState, useNavigation} from '@clayui/shared';
+import {
+	InternalDispatch,
+	useInternalState,
+	useNavigation,
+} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useCallback, useRef, useState} from 'react';
 
@@ -31,6 +35,11 @@ const Trigger = ({
 );
 
 type Props<T> = {
+	/**
+	 * Flag to define which item has the active state/current page.
+	 */
+	active?: React.Key;
+
 	/**
 	 * Flag to indicate the navigation behavior in the menu.
 	 *
@@ -80,7 +89,7 @@ type Props<T> = {
 	 * A callback that is called when items are expanded or collapsed
 	 * (controlled).
 	 */
-	onExpandedChange?: (keys: Set<React.Key>) => void;
+	onExpandedChange?: InternalDispatch<Set<React.Key>>;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
@@ -106,6 +115,7 @@ function VerticalNav<T>(props: Props<T>): JSX.Element & {
 };
 
 function VerticalNav<T>({
+	active,
 	activation = 'manual',
 	children,
 	decorated,
@@ -119,7 +129,7 @@ function VerticalNav<T>({
 	trigger: CustomTrigger = Trigger,
 	triggerLabel = 'Menu',
 }: Props<T>) {
-	const [active, setActive] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -197,7 +207,7 @@ function VerticalNav<T>({
 				['menubar-vertical-expand-md']: !large,
 			})}
 		>
-			<CustomTrigger onClick={() => setActive(!active)}>
+			<CustomTrigger onClick={() => setIsOpen(!isOpen)}>
 				<span className="inline-item inline-item-before">
 					{triggerLabel}
 				</span>
@@ -213,13 +223,14 @@ function VerticalNav<T>({
 			<div
 				{...navigationProps}
 				className={classNames('collapse menubar-collapse', {
-					show: active,
+					show: isOpen,
 				})}
 				ref={containerRef}
 			>
 				<Nav aria-orientation="vertical" nested role="menubar">
 					<VertivalNavContext.Provider
 						value={{
+							activeKey: active,
 							ariaCurrent: ariaCurrent ? 'page' : null,
 							childrenRoot: childrenRootRef,
 							close,
