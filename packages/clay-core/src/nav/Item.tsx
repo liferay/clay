@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export const NavItem = ({
+export const Item = ({
 	children,
 	className,
 	...otherProps

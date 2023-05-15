@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Nav from './Nav';
+import {Nav} from '@clayui/core';
+
 import {ClayVerticalNav} from './Vertical';
 
 export {ClayVerticalNav};

@@ -47,47 +47,58 @@ const verticalNavigationImportsCode = `import {ClayVerticalNav} from '@clayui/na
 const VerticalNavigationCode = `const Component = () => {
 	return (
 		<ClayVerticalNav
+			defaultExpandedKeys={new Set(['Projects'])}
 			items={[
-			{
-				items: [
 				{
-					href: '#nested1',
-					label: 'Nested1',
-				},
-				],
-				label: 'Home',
-			},
-			{
-				href: '#2',
-				label: 'About',
-			},
-			{
-				href: '#3',
-				label: 'Contact',
-			},
-			{
-				initialExpanded: true,
-				items: [
-				{
-					active: true,
-					href: '#5',
-					label: 'Five',
+					items: [
+						{
+							href: '#nested1',
+							label: 'Nested1',
+						},
+					],
+					label: 'Home',
 				},
 				{
-					href: '#6',
-					label: 'Six',
+					href: '#2',
+					label: 'About',
 				},
-				],
-				label: 'Projects',
-			},
-			{
-				href: '#7',
-				label: 'Seven',
-			},
-		]}
-		large={false}
-		spritemap={spritemap}
-	  />
+				{
+					href: '#3',
+					label: 'Contact',
+				},
+				{
+					items: [
+						{
+							active: true,
+							href: '#5',
+							label: 'Five',
+						},
+						{
+							href: '#6',
+							label: 'Six',
+						},
+					],
+					label: 'Projects',
+				},
+				{
+					href: '#7',
+					label: 'Seven',
+				},
+			]}
+			large={false}
+			spritemap={spritemap}
+		>
+			{(item) => (
+				<ClayVerticalNav.Item
+					active={item.active}
+					href={item.href}
+					items={item.items}
+					key={item.label}
+				>
+					{item.label}
+				</ClayVerticalNav.Item>
+			)}
+		</ClayVerticalNav>
 	);
 }
 

@@ -6,8 +6,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {NavItem} from './NavItem';
-import {NavLink} from './NavLink';
+import {Item} from './Item';
+import {Link} from './Link';
 
 export interface IProps extends React.HTMLAttributes<HTMLUListElement> {
 	/**
@@ -46,6 +46,6 @@ const Nav = React.forwardRef<HTMLUListElement, IProps>(function Nav(
 });
 
 export default Object.assign(Nav, {
-	Item: NavItem,
-	Link: NavLink,
+	Item,
+	Link,
 });

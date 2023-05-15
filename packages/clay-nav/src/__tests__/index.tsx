@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayNav, {ClayVerticalNav} from '..';
+import {ClayVerticalNav} from '..';
 import {
 	cleanup,
 	fireEvent,
@@ -12,20 +12,6 @@ import {
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-
-describe('ClayNav', () => {
-	afterEach(() => cleanup());
-
-	it('renders', () => {
-		const {container} = render(
-			<ClayNav>
-				<div />
-			</ClayNav>
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-});
 
 const ITEMS = [
 	{
