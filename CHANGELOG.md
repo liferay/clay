@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.95.0](https://github.com/liferay/clay/compare/v3.94.0...v3.95.0) (2023-05-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error when not disabling item drag and drop via keyboard ([5646c63](https://github.com/liferay/clay/commit/5646c632d123af43523a6fd7c81359a570e0de94))
+-   **@clayui/css:** Atlas Buttons undo `.btn:active:focus` box-shadow from base theme ([258c60f](https://github.com/liferay/clay/commit/258c60f53629c2e08451cef0f81ecfa08e0451f7))
+-   **@clayui/css:** Cadmin Buttons undo `.btn:active:focus` box-shadow ([4cc6c3e](https://github.com/liferay/clay/commit/4cc6c3ee65eab05d545b758b7a10e49e9256b236))
+-   **@clayui/css:** Cadmin Menubar update to new hover, focus, active styles ([f4e5d9e](https://github.com/liferay/clay/commit/f4e5d9ef0decb95e4cecdcd6197da2900c9dad21))
+-   **@clayui/css:** Cadmin Modals converts some components to clay Sass map pattern ([3053c19](https://github.com/liferay/clay/commit/3053c19d0a3ae3c41b87275e63866426a8709887))
+-   **@clayui/css:** Cadmin only generate Sass placeholders for specific key names ([f8f5fff](https://github.com/liferay/clay/commit/f8f5fff03948c1d04156630b767179ec0091a299))
+-   **@clayui/css:** Cadmin update Pagination to new hover active styles ([be8e82c](https://github.com/liferay/clay/commit/be8e82cbceb7ff41d23f1b1136d1614ab423cf1b))
+-   **@clayui/css:** Forms c-unset/clay-unset shouldn't output anything for $form-control-select-palette ([dc601b0](https://github.com/liferay/clay/commit/dc601b0b1423cbd20a1a15de9c136786bec679f4))
+-   **@clayui/css:** Mixins clay-link adds customization for active and disabled focus states ([8d4e1ba](https://github.com/liferay/clay/commit/8d4e1ba9d13d24cec3cdd14d8f40fb62c9885767))
+-   **@clayui/css:** Mixins clay-map-to-css should accept child combinator (>) ([12e938f](https://github.com/liferay/clay/commit/12e938fd785621b27c4ffb132fb61a625dfc0452))
+-   **@clayui/css:** Mixins clay-map-to-css should accept parent selector & ([d1462d7](https://github.com/liferay/clay/commit/d1462d7a62c6d009ad3597bd4233b1e196806774))
+-   **@clayui/css:** Mixins clay-modal-variant should use clay-map-to-css where applicable ([4cab2ab](https://github.com/liferay/clay/commit/4cab2ab1b235454e684f079a68b08f7766ce3b90))
+-   **@clayui/css:** Mixins clay-nav-nested should apply to .btn as well ([a541843](https://github.com/liferay/clay/commit/a5418430bc18fb779e756eb94e2f1df5c1a0b305))
+-   **@clayui/css:** Modals .modal-body should use the value from $modal ([18d922a](https://github.com/liferay/clay/commit/18d922a0a73435546a04877bba73f9c07a335655))
+-   **@clayui/css:** Modals converts some components to clay Sass map pattern ([d2ee903](https://github.com/liferay/clay/commit/d2ee903c4678214abf5bbc80d1b35893fb331bce))
+-   **@clayui/css:** Modals update modal-palette loop to prepend `.modal-` only to specific keys ([a796dc4](https://github.com/liferay/clay/commit/a796dc47576febfa76e864a91a3e71c5835fd6df))
+-   **@clayui/css:** Navs nav-nested reduce the number of nested navs to 7 by default ([429876a](https://github.com/liferay/clay/commit/429876a833a6d3ad546311019030a61cd40431f6))
+-   **@clayui/css:** Only generate Sass placeholders for specific key names ([25bd58c](https://github.com/liferay/clay/commit/25bd58cdab4f1a73697ebc8d662046446adc4015))
+-   **@clayui/css:** Pagination maps `.page-item.active .page-link` to `active-class` instead of `active` ([5e77a99](https://github.com/liferay/clay/commit/5e77a999828eb4fe5a271e4fe620d2473eb4f675))
+-   **@clayui/nav:** fix overlapping items in VerticalNav ([53352e9](https://github.com/liferay/clay/commit/53352e97fb6830977c6f076f4195e6f6f271667a))
+-   **@clayui/shared:** fix error when not recalculating positioning for elements with parent with scroll ([16a4c77](https://github.com/liferay/clay/commit/16a4c77ea3be35cbf52c96449f237373fe163f36))
+
+### Features
+
+-   **@clayui/core:** add basic snapshot tests for Vertical Nav ([52a4a91](https://github.com/liferay/clay/commit/52a4a91dbad8570efbb70c3b7bf2abeffa229bbe))
+-   **@clayui/nav:** add new composition to Vertical Nav with collection API ([80d1a6e](https://github.com/liferay/clay/commit/80d1a6ec88de531af6595d7bdec61f0d8af8fe6e))
+
 # [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
 
 ### Bug Fixes

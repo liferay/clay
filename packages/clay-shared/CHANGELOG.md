@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.95.0](https://github.com/liferay/clay/compare/v3.94.0...v3.95.0) (2023-05-15)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fix error when not recalculating positioning for elements with parent with scroll ([16a4c77](https://github.com/liferay/clay/commit/16a4c77ea3be35cbf52c96449f237373fe163f36))
+
 # [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
 
 ### Bug Fixes

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.95.0](https://github.com/liferay/clay/compare/v3.94.0...v3.95.0) (2023-05-15)
+
+### Bug Fixes
+
+-   **@clayui/nav:** fix overlapping items in VerticalNav ([53352e9](https://github.com/liferay/clay/commit/53352e97fb6830977c6f076f4195e6f6f271667a))
+
+### Features
+
+-   **@clayui/nav:** add new composition to Vertical Nav with collection API ([80d1a6e](https://github.com/liferay/clay/commit/80d1a6ec88de531af6595d7bdec61f0d8af8fe6e))
+
 # [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
 
 **Note:** Version bump only for package @clayui/nav

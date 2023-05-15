@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.95.0](https://github.com/liferay/clay/compare/v3.94.0...v3.95.0) (2023-05-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error when not disabling item drag and drop via keyboard ([5646c63](https://github.com/liferay/clay/commit/5646c632d123af43523a6fd7c81359a570e0de94))
+
+### Features
+
+-   **@clayui/core:** add basic snapshot tests for Vertical Nav ([52a4a91](https://github.com/liferay/clay/commit/52a4a91dbad8570efbb70c3b7bf2abeffa229bbe))
+-   **@clayui/nav:** add new composition to Vertical Nav with collection API ([80d1a6e](https://github.com/liferay/clay/commit/80d1a6ec88de531af6595d7bdec61f0d8af8fe6e))
+
 # [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
 
 ### Bug Fixes
