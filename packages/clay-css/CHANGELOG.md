@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
+
+
+### Bug Fixes
+
+* **@clayui/css:** fix syntax error ([04b90d9](https://github.com/liferay/clay/commit/04b90d936ccad90778031dee2d74df5b0ab38bbb))
+
+
+
+
+
 # [3.95.0](https://github.com/liferay/clay/compare/v3.94.0...v3.95.0) (2023-05-15)
 
 
