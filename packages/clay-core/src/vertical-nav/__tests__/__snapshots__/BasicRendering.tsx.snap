@@ -71,24 +71,6 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
               </svg>
             </span>
           </button>
-          <ul
-            class="nav collapse nav-stacked"
-            role="menu"
-          >
-            <li
-              class="nav-item"
-              role="none"
-            >
-              <button
-                aria-current="page"
-                class="nav-link active collapsed btn btn-unstyled"
-                role="menuitem"
-                type="button"
-              >
-                Nested1
-              </button>
-            </li>
-          </ul>
         </li>
         <li
           class="nav-item"
