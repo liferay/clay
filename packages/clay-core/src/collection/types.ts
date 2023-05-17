@@ -96,6 +96,17 @@ export type Props<P, K> = {
 	 */
 	notFound?: JSX.Element;
 
+	/**
+	 * Flag to enable force updating the root collection when layout creation
+	 * is done at render time from nested collections instead of assembling
+	 * everything in the root.
+	 *
+	 * NOTE: This can be slow when you have a large list and is not necessary
+	 * when you don't have nested collections or the collections are group
+	 * primitives when the nested items are created in the root.
+	 */
+	forceDeepRootUpdate?: boolean;
+
 	suppressTextValueWarning?: boolean;
 
 	virtualizer?: Virtualizer<HTMLElement, Element>;

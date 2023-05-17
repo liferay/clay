@@ -3,7 +3,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useCallback, useContext, useMemo, useRef} from 'react';
+import {useId} from '@clayui/shared';
+import React, {
+	useCallback,
+	useContext,
+	useEffect,
+	useMemo,
+	useReducer,
+	useRef,
+} from 'react';
 
 import {excludeProps, getKey} from './utils';
 
@@ -28,6 +36,7 @@ type LayoutValue = {
 type CollectionContextProps = {
 	layout: React.MutableRefObject<Map<React.Key, LayoutValue>>;
 	keys: React.MutableRefObject<Map<React.Key, ItemLoc>>;
+	forceUpdate?: React.Dispatch<unknown>;
 };
 
 const CollectionContext = React.createContext({} as CollectionContextProps);
@@ -43,6 +52,7 @@ export function useCollection<
 	exclude,
 	filter,
 	filterKey,
+	forceDeepRootUpdate,
 	itemContainer: ItemContainer,
 	items,
 	notFound,
@@ -52,11 +62,12 @@ export function useCollection<
 	suppressTextValueWarning = true,
 	virtualizer,
 }: ICollectionProps<T, P> & Props<P, K>): CollectionState {
-	const {layout: parentLayout} = useContext(CollectionContext);
+	const {forceUpdate, layout: parentLayout} = useContext(CollectionContext);
 
 	const layoutRef = useRef<Map<React.Key, LayoutValue>>(new Map());
 	const layoutKeysRef = useRef<Map<React.Key, ItemLoc>>(new Map());
 	const keysRef = useRef<Array<React.Key>>([]);
+	const [, setForceUpdate] = useReducer((renders) => renders + 1, 0);
 
 	const collectionId = useId();
 
@@ -359,10 +370,42 @@ export function useCollection<
 		return list;
 	}, [children, createItemsLayout, performCollectionRender, items]);
 
+	// Effect only called when the component is unmounted removing the layout
+	// items that are rendered by the collection instance, effect only when
+	// there are nested collections.
+	useEffect(
+		() => () => {
+			cleanUp();
+
+			if (forceUpdate) {
+				forceUpdate(null);
+			}
+		},
+		[]
+	);
+
+	// Effect forces the rerender of the root collection if it exists after
+	// adding the items of the collection instance to the layout root.
+	// NOTE: This update avoids the side effect of set the state in a `useMemo`
+	// at render time then only being called when the collection is ready.
+	useEffect(() => {
+		if (forceUpdate) {
+			forceUpdate(null);
+		}
+	}, [children, createItemsLayout, performCollectionRender, items]);
+
 	return {
 		UNSAFE_virtualizer: virtualizer,
 		collection: (
-			<CollectionContext.Provider value={{keys: layoutKeysRef, layout}}>
+			<CollectionContext.Provider
+				value={{
+					forceUpdate: forceDeepRootUpdate
+						? setForceUpdate
+						: undefined,
+					keys: layoutKeysRef,
+					layout,
+				}}
+			>
 				{collection}
 			</CollectionContext.Provider>
 		),
