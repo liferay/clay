@@ -224,7 +224,7 @@ export function Item<T extends object>({
 				>
 					<Nav ref={menusRef} role="menu" stacked>
 						<ParentContext.Provider value={itemRef}>
-							<Collection<T> items={items}>
+							<Collection<T> items={items} parentKey={keyValue}>
 								{childrenRoot.current}
 							</Collection>
 						</ParentContext.Provider>

@@ -11,7 +11,7 @@ import {
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import {Collection, useCollection} from '../collection';
 import {Nav} from '../nav';
@@ -108,6 +108,22 @@ type Props<T> = {
 	 */
 	triggerLabel?: string;
 };
+
+function depthActive<T extends Record<string, any>>(
+	items: Array<T>
+): T | undefined {
+	return items.find((item) => {
+		if ('active' in item) {
+			return true;
+		}
+
+		if ('items' in item) {
+			return depthActive(item.items as Array<T>);
+		}
+
+		return false;
+	});
+}
 
 function VerticalNav<T>(props: Props<T>): JSX.Element & {
 	Trigger: typeof Trigger;
@@ -210,6 +226,16 @@ function VerticalNav<T>({
 		suppressTextValueWarning: false,
 	});
 
+	// Checks if the `active` property exists in the items tree to maintain
+	// compatibility with the previous version.
+	const hasDepthActive = useMemo(() => {
+		if (typeof active !== 'undefined' || !items) {
+			return undefined;
+		}
+
+		return depthActive(items as Array<Record<string, any>>);
+	}, [active, items]);
+
 	return (
 		<nav
 			className={classNames('menubar menubar-transparent', {
@@ -244,6 +270,8 @@ function VerticalNav<T>({
 							activeKey:
 								active && collection.hasItem(active)
 									? active
+									: hasDepthActive
+									? null
 									: undefined,
 							ariaCurrent: ariaCurrent ? 'page' : null,
 							childrenRoot: childrenRootRef,
