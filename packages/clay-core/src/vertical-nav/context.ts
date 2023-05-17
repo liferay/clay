@@ -16,6 +16,7 @@ type VertivalNavContextProps = {
 	>;
 	close: (key: React.Key) => void;
 	expandedKeys: Set<React.Key>;
+	firstKey: React.Key;
 	open: (key: React.Key) => void;
 	toggle: (key: React.Key) => void;
 };

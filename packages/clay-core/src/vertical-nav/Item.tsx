@@ -92,6 +92,7 @@ export function Item<T extends object>({
 		childrenRoot,
 		close,
 		expandedKeys,
+		firstKey,
 		open,
 		spritemap,
 		toggle,
@@ -184,7 +185,9 @@ export function Item<T extends object>({
 				showIcon={!!items}
 				spritemap={spritemap}
 				tabIndex={
-					!active && !(hasItemSelectedNested && items && !isExpanded)
+					!active &&
+					!(hasItemSelectedNested && items && !isExpanded) &&
+					!(firstKey === keyValue && typeof activeKey === 'undefined')
 						? -1
 						: undefined
 				}
@@ -217,6 +220,7 @@ export function Item<T extends object>({
 						element.setAttribute('style', 'height: 0px')
 					}
 					timeout={prefersReducedMotion ? 0 : 250}
+					unmountOnExit
 				>
 					<Nav ref={menusRef} role="menu" stacked>
 						<ParentContext.Provider value={itemRef}>
@@ -230,3 +234,5 @@ export function Item<T extends object>({
 		</Nav.Item>
 	);
 }
+
+Item.displayName = 'Item';

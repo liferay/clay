@@ -13,7 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useCallback, useRef, useState} from 'react';
 
-import {Collection} from '../collection';
+import {Collection, useCollection} from '../collection';
 import {Nav} from '../nav';
 import {Item} from './Item';
 import {VertivalNavContext} from './context';
@@ -199,6 +199,17 @@ function VerticalNav<T>({
 		orientation: 'vertical',
 	});
 
+	const collection = useCollection<T>({
+		children,
+
+		// Avoid collection list is obsolete because we have collection nesting
+		// which is not based on group primitive like Picker with groups
+		// or DropDown.
+		forceDeepRootUpdate: true,
+		items,
+		suppressTextValueWarning: false,
+	});
+
 	return (
 		<nav
 			className={classNames('menubar menubar-transparent', {
@@ -230,17 +241,21 @@ function VerticalNav<T>({
 				<Nav aria-orientation="vertical" nested role="menubar">
 					<VertivalNavContext.Provider
 						value={{
-							activeKey: active,
+							activeKey:
+								active && collection.hasItem(active)
+									? active
+									: undefined,
 							ariaCurrent: ariaCurrent ? 'page' : null,
 							childrenRoot: childrenRootRef,
 							close,
 							expandedKeys,
+							firstKey: collection.getFirstItem().key,
 							open,
 							spritemap,
 							toggle,
 						}}
 					>
-						<Collection<T> items={items}>{children}</Collection>
+						<Collection<T> collection={collection} />
 					</VertivalNavContext.Provider>
 				</Nav>
 			</div>
