@@ -46,6 +46,7 @@ export type CollectionState = {
 	getItem: (key: React.Key) => {value: string; index: number};
 	getItems: () => Array<React.Key>;
 	getLastItem: () => {key: React.Key; value: string; index: number};
+	hasItem: (key: React.Key) => boolean;
 	size?: number;
 	virtualize: boolean;
 };

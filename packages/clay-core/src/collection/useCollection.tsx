@@ -22,6 +22,7 @@ type ItemLoc = {
 type LayoutValue = {
 	index: number;
 	value: string;
+	instanceId: string;
 };
 
 type CollectionContextProps = {
@@ -56,6 +57,8 @@ export function useCollection<
 	const layoutRef = useRef<Map<React.Key, LayoutValue>>(new Map());
 	const layoutKeysRef = useRef<Map<React.Key, ItemLoc>>(new Map());
 	const keysRef = useRef<Array<React.Key>>([]);
+
+	const collectionId = useId();
 
 	const layout = parentLayout ?? layoutRef;
 
@@ -155,6 +158,7 @@ export function useCollection<
 				if (child.type.displayName === 'Item') {
 					layout.current.set(key, {
 						index,
+						instanceId: collectionId,
 						value: getTextValue(
 							key,
 							child,
@@ -292,6 +296,10 @@ export function useCollection<
 		return layout.current.get(key)!;
 	}, []);
 
+	const hasItem = useCallback((key: React.Key) => {
+		return layout.current.has(key)!;
+	}, []);
+
 	const getFirstItem = useCallback(() => {
 		const key = layout.current.keys().next().value;
 
@@ -314,6 +322,14 @@ export function useCollection<
 		return Array.from(layout.current.keys());
 	}, []);
 
+	const cleanUp = useCallback(() => {
+		layout.current.forEach((value, key) => {
+			if (value.instanceId === collectionId) {
+				layout.current.delete(key);
+			}
+		});
+	}, []);
+
 	// It builds the dynamic or static collection, done in two steps: Data and
 	// Rendering, both go through the elements to get the data of each item.
 	//
@@ -326,7 +342,7 @@ export function useCollection<
 	// that should be rendered with virtualization from list.
 	const collection = useMemo(() => {
 		if (!parentLayout) {
-			layout.current.clear();
+			cleanUp();
 		}
 
 		// Walks through the elements to compute the layout of the collection
@@ -354,6 +370,7 @@ export function useCollection<
 		getItem,
 		getItems,
 		getLastItem,
+		hasItem,
 		size: virtualizer ? virtualizer.getTotalSize() : undefined,
 		virtualize: !!virtualizer,
 	};
