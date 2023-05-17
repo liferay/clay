@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React, {useEffect, useLayoutEffect} from 'react';
+import React, {useCallback, useEffect, useLayoutEffect} from 'react';
 
 import {doAlign} from './doAlign';
 import {observeRect} from './observeRect';
@@ -95,37 +95,41 @@ export function useOverlayPosition(
 	}: Props,
 	deps: Array<any> = [isOpen]
 ) {
-	useIsomorphicLayoutEffect(() => {
-		function alignElement() {
-			if (triggerRef.current) {
-				let points = alignmentPosition;
+	const alignElement = useCallback(() => {
+		if (triggerRef.current && ref.current) {
+			let points = alignmentPosition;
 
-				if (typeof points === 'number') {
-					points = getAlignPoints(
-						points as keyof typeof ALIGN_INVERSE
-					);
-				}
-
-				if (ref.current) {
-					doAlign({
-						offset: getOffset(points),
-						overflow: {
-							adjustX: autoBestAlign,
-							adjustY: autoBestAlign,
-							alwaysByViewport: alignmentByViewport,
-						},
-						points,
-						sourceElement: ref.current,
-						targetElement: triggerRef.current,
-					});
-				}
+			if (typeof points === 'number') {
+				points = getAlignPoints(points as keyof typeof ALIGN_INVERSE);
 			}
-		}
 
+			doAlign({
+				offset: getOffset(points),
+				overflow: {
+					adjustX: autoBestAlign,
+					adjustY: autoBestAlign,
+					alwaysByViewport: alignmentByViewport,
+				},
+				points,
+				sourceElement: ref.current,
+				targetElement: triggerRef.current,
+			});
+		}
+	}, []);
+
+	useIsomorphicLayoutEffect(() => {
 		if (isOpen && triggerRef.current) {
 			alignElement();
 
 			return observeRect(triggerRef.current, alignElement);
+		}
+	}, deps);
+
+	useIsomorphicLayoutEffect(() => {
+		if (isOpen && ref.current) {
+			alignElement();
+
+			return observeRect(ref.current, alignElement);
 		}
 	}, deps);
 }
