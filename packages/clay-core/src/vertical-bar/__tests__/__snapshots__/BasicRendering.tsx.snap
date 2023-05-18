@@ -18,10 +18,10 @@ exports[`VerticalBar basic rendering render component in left position 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-5-verticalbar-tabpanel-$.0"
+            aria-controls="clay-id-13-verticalbar-tabpanel-$.0"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-5-verticalbar-tab-$.0"
+            id="clay-id-13-verticalbar-tab-$.0"
             role="tab"
             type="button"
           >
@@ -40,10 +40,10 @@ exports[`VerticalBar basic rendering render component in left position 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-5-verticalbar-tabpanel-$.1"
+            aria-controls="clay-id-13-verticalbar-tabpanel-$.1"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-5-verticalbar-tab-$.1"
+            id="clay-id-13-verticalbar-tab-$.1"
             role="tab"
             tabindex="-1"
             type="button"
@@ -82,10 +82,10 @@ exports[`VerticalBar basic rendering render dark theme 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-4-verticalbar-tabpanel-$.0"
+            aria-controls="clay-id-10-verticalbar-tabpanel-$.0"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-4-verticalbar-tab-$.0"
+            id="clay-id-10-verticalbar-tab-$.0"
             role="tab"
             type="button"
           >
@@ -104,10 +104,10 @@ exports[`VerticalBar basic rendering render dark theme 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-4-verticalbar-tabpanel-$.1"
+            aria-controls="clay-id-10-verticalbar-tabpanel-$.1"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-4-verticalbar-tab-$.1"
+            id="clay-id-10-verticalbar-tab-$.1"
             role="tab"
             tabindex="-1"
             type="button"
@@ -146,10 +146,10 @@ exports[`VerticalBar basic rendering render dynamic content 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-2-verticalbar-tabpanel-Tag"
+            aria-controls="clay-id-4-verticalbar-tabpanel-Tag"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-2-verticalbar-tab-Tag"
+            id="clay-id-4-verticalbar-tab-Tag"
             role="tab"
             type="button"
           >
@@ -168,10 +168,10 @@ exports[`VerticalBar basic rendering render dynamic content 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-2-verticalbar-tabpanel-Message"
+            aria-controls="clay-id-4-verticalbar-tabpanel-Message"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-2-verticalbar-tab-Message"
+            id="clay-id-4-verticalbar-tab-Message"
             role="tab"
             tabindex="-1"
             type="button"
@@ -191,10 +191,10 @@ exports[`VerticalBar basic rendering render dynamic content 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-2-verticalbar-tabpanel-Effects"
+            aria-controls="clay-id-4-verticalbar-tabpanel-Effects"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-2-verticalbar-tab-Effects"
+            id="clay-id-4-verticalbar-tab-Effects"
             role="tab"
             tabindex="-1"
             type="button"
@@ -233,10 +233,10 @@ exports[`VerticalBar basic rendering render light theme 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-3-verticalbar-tabpanel-$.0"
+            aria-controls="clay-id-7-verticalbar-tabpanel-$.0"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-3-verticalbar-tab-$.0"
+            id="clay-id-7-verticalbar-tab-$.0"
             role="tab"
             type="button"
           >
@@ -255,10 +255,10 @@ exports[`VerticalBar basic rendering render light theme 1`] = `
           role="none"
         >
           <button
-            aria-controls="clay-id-3-verticalbar-tabpanel-$.1"
+            aria-controls="clay-id-7-verticalbar-tabpanel-$.1"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-3-verticalbar-tab-$.1"
+            id="clay-id-7-verticalbar-tab-$.1"
             role="tab"
             tabindex="-1"
             type="button"
@@ -349,9 +349,9 @@ exports[`VerticalBar basic rendering renders the component with the active panel
     class="c-slideout c-slideout-shown c-slideout-end c-slideout-fixed"
   >
     <div
-      aria-labelledby="clay-id-6-verticalbar-tab-$.0"
+      aria-labelledby="clay-id-16-verticalbar-tab-$.0"
       class="sidebar c-slideout-show sidebar-light"
-      id="clay-id-6-verticalbar-tabpanel-$.0"
+      id="clay-id-16-verticalbar-tabpanel-$.0"
       role="tabpanel"
       style="width: 320px;"
     >
@@ -370,10 +370,10 @@ exports[`VerticalBar basic rendering renders the component with the active panel
           role="none"
         >
           <button
-            aria-controls="clay-id-6-verticalbar-tabpanel-$.0"
+            aria-controls="clay-id-16-verticalbar-tabpanel-$.0"
             aria-selected="true"
             class="tbar-btn tbar-btn-monospaced active btn"
-            id="clay-id-6-verticalbar-tab-$.0"
+            id="clay-id-16-verticalbar-tab-$.0"
             role="tab"
             type="button"
           >
@@ -392,10 +392,10 @@ exports[`VerticalBar basic rendering renders the component with the active panel
           role="none"
         >
           <button
-            aria-controls="clay-id-6-verticalbar-tabpanel-$.1"
+            aria-controls="clay-id-16-verticalbar-tabpanel-$.1"
             aria-selected="false"
             class="tbar-btn tbar-btn-monospaced btn"
-            id="clay-id-6-verticalbar-tab-$.1"
+            id="clay-id-16-verticalbar-tab-$.1"
             role="tab"
             tabindex="-1"
             type="button"

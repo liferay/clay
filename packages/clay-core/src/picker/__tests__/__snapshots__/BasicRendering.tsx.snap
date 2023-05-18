@@ -102,7 +102,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
       aria-activedescendant="Apple"
       aria-expanded="true"
       aria-haspopup="listbox"
-      aria-owns="clay-id-6"
+      aria-owns="clay-id-12"
       class="form-control form-control-select form-control-select-secondary show"
       role="combobox"
       style=""
@@ -134,7 +134,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
     >
       <ul
         class="inline-scroller list-unstyled"
-        id="clay-id-6"
+        id="clay-id-12"
         role="listbox"
         tabindex="-1"
       >
