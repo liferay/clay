@@ -5,11 +5,15 @@
 
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
-import {useInternalState, useNavigation} from '@clayui/shared';
+import {
+	InternalDispatch,
+	useInternalState,
+	useNavigation,
+} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 
-import {Collection} from '../collection';
+import {Collection, useCollection} from '../collection';
 import {Nav} from '../nav';
 import {Item} from './Item';
 import {VertivalNavContext} from './context';
@@ -31,6 +35,11 @@ const Trigger = ({
 );
 
 type Props<T> = {
+	/**
+	 * Flag to define which item has the active state/current page.
+	 */
+	active?: React.Key;
+
 	/**
 	 * Flag to indicate the navigation behavior in the menu.
 	 *
@@ -80,7 +89,7 @@ type Props<T> = {
 	 * A callback that is called when items are expanded or collapsed
 	 * (controlled).
 	 */
-	onExpandedChange?: (keys: Set<React.Key>) => void;
+	onExpandedChange?: InternalDispatch<Set<React.Key>>;
 
 	/**
 	 * Path to the spritemap that Icon should use when referencing symbols.
@@ -100,12 +109,29 @@ type Props<T> = {
 	triggerLabel?: string;
 };
 
+function depthActive<T extends Record<string, any>>(
+	items: Array<T>
+): T | undefined {
+	return items.find((item) => {
+		if ('active' in item) {
+			return true;
+		}
+
+		if ('items' in item) {
+			return depthActive(item.items as Array<T>);
+		}
+
+		return false;
+	});
+}
+
 function VerticalNav<T>(props: Props<T>): JSX.Element & {
 	Trigger: typeof Trigger;
 	Item: typeof Item;
 };
 
 function VerticalNav<T>({
+	active,
 	activation = 'manual',
 	children,
 	decorated,
@@ -119,7 +145,7 @@ function VerticalNav<T>({
 	trigger: CustomTrigger = Trigger,
 	triggerLabel = 'Menu',
 }: Props<T>) {
-	const [active, setActive] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -189,6 +215,27 @@ function VerticalNav<T>({
 		orientation: 'vertical',
 	});
 
+	const collection = useCollection<T>({
+		children,
+
+		// Avoid collection list is obsolete because we have collection nesting
+		// which is not based on group primitive like Picker with groups
+		// or DropDown.
+		forceDeepRootUpdate: true,
+		items,
+		suppressTextValueWarning: false,
+	});
+
+	// Checks if the `active` property exists in the items tree to maintain
+	// compatibility with the previous version.
+	const hasDepthActive = useMemo(() => {
+		if (typeof active !== 'undefined' || !items) {
+			return undefined;
+		}
+
+		return depthActive(items as Array<Record<string, any>>);
+	}, [active, items]);
+
 	return (
 		<nav
 			className={classNames('menubar menubar-transparent', {
@@ -197,7 +244,7 @@ function VerticalNav<T>({
 				['menubar-vertical-expand-md']: !large,
 			})}
 		>
-			<CustomTrigger onClick={() => setActive(!active)}>
+			<CustomTrigger onClick={() => setIsOpen(!isOpen)}>
 				<span className="inline-item inline-item-before">
 					{triggerLabel}
 				</span>
@@ -213,23 +260,30 @@ function VerticalNav<T>({
 			<div
 				{...navigationProps}
 				className={classNames('collapse menubar-collapse', {
-					show: active,
+					show: isOpen,
 				})}
 				ref={containerRef}
 			>
 				<Nav aria-orientation="vertical" nested role="menubar">
 					<VertivalNavContext.Provider
 						value={{
+							activeKey:
+								active && collection.hasItem(active)
+									? active
+									: hasDepthActive
+									? null
+									: undefined,
 							ariaCurrent: ariaCurrent ? 'page' : null,
 							childrenRoot: childrenRootRef,
 							close,
 							expandedKeys,
+							firstKey: collection.getFirstItem().key,
 							open,
 							spritemap,
 							toggle,
 						}}
 					>
-						<Collection<T> items={items}>{children}</Collection>
+						<Collection<T> collection={collection} />
 					</VertivalNavContext.Provider>
 				</Nav>
 			</div>

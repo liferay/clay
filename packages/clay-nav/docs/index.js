@@ -47,11 +47,14 @@ const verticalNavigationImportsCode = `import {ClayVerticalNav} from '@clayui/na
 const VerticalNavigationCode = `const Component = () => {
 	return (
 		<ClayVerticalNav
-			defaultExpandedKeys={new Set(['Projects'])}
+			active={6}
+			defaultExpandedKeys={new Set([5])}
 			items={[
 				{
+					id: 1,
 					items: [
 						{
+							id: 2,
 							href: '#nested1',
 							label: 'Nested1',
 						},
@@ -59,21 +62,25 @@ const VerticalNavigationCode = `const Component = () => {
 					label: 'Home',
 				},
 				{
+					id: 3,
 					href: '#2',
 					label: 'About',
 				},
 				{
+					id: 4,
 					href: '#3',
 					label: 'Contact',
 				},
 				{
+					id: 5,
 					items: [
 						{
-							active: true,
+							id: 6,
 							href: '#5',
 							label: 'Five',
 						},
 						{
+							id: 7,
 							href: '#6',
 							label: 'Six',
 						},
@@ -81,6 +88,7 @@ const VerticalNavigationCode = `const Component = () => {
 					label: 'Projects',
 				},
 				{
+					id: 8,
 					href: '#7',
 					label: 'Seven',
 				},
@@ -90,10 +98,9 @@ const VerticalNavigationCode = `const Component = () => {
 		>
 			{(item) => (
 				<ClayVerticalNav.Item
-					active={item.active}
 					href={item.href}
 					items={item.items}
-					key={item.label}
+					key={item.id}
 				>
 					{item.label}
 				</ClayVerticalNav.Item>

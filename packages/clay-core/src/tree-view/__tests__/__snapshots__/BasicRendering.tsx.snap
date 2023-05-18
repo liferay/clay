@@ -13,8 +13,8 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
     >
       <div
         aria-expanded="false"
-        aria-labelledby="clay-id-13"
-        aria-owns="clay-id-14"
+        aria-labelledby="clay-id-15"
+        aria-owns="clay-id-16"
         class="treeview-link"
         data-id="string,Root"
         role="treeitem"
@@ -67,7 +67,7 @@ exports[`TreeView basic rendering render dynamic content 1`] = `
             >
               <span
                 class="component-text"
-                id="clay-id-13"
+                id="clay-id-15"
                 tabindex="-1"
               >
                 Root
@@ -94,8 +94,8 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
     >
       <div
         aria-expanded="false"
-        aria-labelledby="clay-id-22"
-        aria-owns="clay-id-23"
+        aria-labelledby="clay-id-25"
+        aria-owns="clay-id-26"
         class="treeview-link"
         data-id="string,Foo"
         role="treeitem"
@@ -148,7 +148,7 @@ exports[`TreeView basic rendering render nested dynamic content 1`] = `
             >
               <span
                 class="component-text"
-                id="clay-id-22"
+                id="clay-id-25"
                 tabindex="-1"
               >
                 Foo
@@ -175,8 +175,8 @@ exports[`TreeView basic rendering render static content 1`] = `
     >
       <div
         aria-expanded="false"
-        aria-labelledby="clay-id-4"
-        aria-owns="clay-id-5"
+        aria-labelledby="clay-id-5"
+        aria-owns="clay-id-6"
         class="treeview-link"
         data-id="string,$.0"
         role="treeitem"
@@ -229,7 +229,7 @@ exports[`TreeView basic rendering render static content 1`] = `
             >
               <span
                 class="component-text"
-                id="clay-id-4"
+                id="clay-id-5"
                 tabindex="-1"
               >
                 Root
@@ -255,8 +255,8 @@ exports[`TreeView basic rendering render with actions 1`] = `
       role="none"
     >
       <div
-        aria-labelledby="clay-id-58"
-        aria-owns="clay-id-59"
+        aria-labelledby="clay-id-65"
+        aria-owns="clay-id-66"
         class="treeview-link"
         data-id="string,$.0"
         role="treeitem"
@@ -276,7 +276,7 @@ exports[`TreeView basic rendering render with actions 1`] = `
             >
               <span
                 class="component-text"
-                id="clay-id-58"
+                id="clay-id-65"
                 tabindex="-1"
               >
                 Root
@@ -346,8 +346,8 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
     >
       <div
         aria-expanded="false"
-        aria-labelledby="clay-id-85"
-        aria-owns="clay-id-86"
+        aria-labelledby="clay-id-96"
+        aria-owns="clay-id-97"
         class="treeview-link"
         data-id="string,$.0"
         role="treeitem"
@@ -417,7 +417,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
             >
               <span
                 class="component-text"
-                id="clay-id-85"
+                id="clay-id-96"
                 tabindex="-1"
               >
                 Root
@@ -444,8 +444,8 @@ exports[`TreeView basic rendering render with item active 1`] = `
     >
       <div
         aria-expanded="false"
-        aria-labelledby="clay-id-142"
-        aria-owns="clay-id-143"
+        aria-labelledby="clay-id-160"
+        aria-owns="clay-id-161"
         class="treeview-link active"
         data-id="string,$.0"
         role="treeitem"
@@ -515,7 +515,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
             >
               <span
                 class="component-text"
-                id="clay-id-142"
+                id="clay-id-160"
                 tabindex="-1"
               >
                 Root
@@ -542,8 +542,8 @@ exports[`TreeView basic rendering render with text 1`] = `
     >
       <div
         aria-expanded="false"
-        aria-labelledby="clay-id-94"
-        aria-owns="clay-id-95"
+        aria-labelledby="clay-id-106"
+        aria-owns="clay-id-107"
         class="treeview-link"
         data-id="string,$.0"
         role="treeitem"
@@ -613,7 +613,7 @@ exports[`TreeView basic rendering render with text 1`] = `
             >
               <span
                 class="component-text"
-                id="clay-id-94"
+                id="clay-id-106"
                 tabindex="-1"
               >
                 <span

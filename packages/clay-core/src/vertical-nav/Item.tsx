@@ -15,6 +15,8 @@ import {useVertical} from './context';
 interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	/**
 	 * Flag to indicate if item is active.
+	 * @deprecated since version 3.94.0 - uses the `active` property on the
+	 * root component.
 	 */
 	active?: boolean;
 
@@ -74,7 +76,7 @@ const ParentContext = React.createContext<React.RefObject<
 > | null>(null);
 
 export function Item<T extends object>({
-	active,
+	active: depreactedActive,
 	children,
 	href,
 	index: _,
@@ -85,10 +87,12 @@ export function Item<T extends object>({
 	...otherProps
 }: IProps<T>) {
 	const {
+		activeKey,
 		ariaCurrent = 'page',
 		childrenRoot,
 		close,
 		expandedKeys,
+		firstKey,
 		open,
 		spritemap,
 		toggle,
@@ -114,6 +118,8 @@ export function Item<T extends object>({
 
 		return false;
 	}, [items]);
+
+	const active = depreactedActive ?? activeKey === keyValue;
 
 	return (
 		<Nav.Item role="none" {...otherProps}>
@@ -179,7 +185,9 @@ export function Item<T extends object>({
 				showIcon={!!items}
 				spritemap={spritemap}
 				tabIndex={
-					!active && !(hasItemSelectedNested && items && !isExpanded)
+					!active &&
+					!(hasItemSelectedNested && items && !isExpanded) &&
+					!(firstKey === keyValue && typeof activeKey === 'undefined')
 						? -1
 						: undefined
 				}
@@ -212,10 +220,11 @@ export function Item<T extends object>({
 						element.setAttribute('style', 'height: 0px')
 					}
 					timeout={prefersReducedMotion ? 0 : 250}
+					unmountOnExit
 				>
 					<Nav ref={menusRef} role="menu" stacked>
 						<ParentContext.Provider value={itemRef}>
-							<Collection<T> items={items}>
+							<Collection<T> items={items} parentKey={keyValue}>
 								{childrenRoot.current}
 							</Collection>
 						</ParentContext.Provider>
@@ -225,3 +234,5 @@ export function Item<T extends object>({
 		</Nav.Item>
 	);
 }
+
+Item.displayName = 'Item';
