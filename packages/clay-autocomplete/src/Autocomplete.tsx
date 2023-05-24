@@ -49,6 +49,14 @@ export interface IProps<T>
 	active?: boolean;
 
 	/**
+	 * Custom input component.
+	 */
+	as?:
+		| 'input'
+		| React.ForwardRefExoticComponent<any>
+		| ((props: React.ComponentProps<typeof Input>) => JSX.Element);
+
+	/**
 	 * Flag to align the DropDown menu within the viewport.
 	 * @deprecated since v3.92.0 - it is no longer necessary..
 	 */
@@ -127,12 +135,15 @@ export interface IProps<T>
 	 * loading indicator should be shown or not.
 	 */
 	loadingState?: number;
+
+	[key: string]: any;
 }
 
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 export function Autocomplete<T extends Record<string, any>>({
 	active: externalActive,
+	as: As = Input,
 	alignmentByViewport: _,
 	children,
 	containerElementRef,
@@ -247,8 +258,13 @@ export function Autocomplete<T extends Record<string, any>>({
 						children.props.onClick(event);
 					}
 
-					currentItemSelected.current = itemValue;
 					setActive(false);
+
+					if (event.defaultPrevented) {
+						return;
+					}
+
+					currentItemSelected.current = itemValue;
 					setValue(itemValue);
 
 					inputRef.current?.focus();
@@ -307,7 +323,7 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	return (
 		<>
-			<Input
+			<As
 				{...otherProps}
 				aria-activedescendant={
 					active ? String(activeDescendant) : undefined
