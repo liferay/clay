@@ -279,40 +279,7 @@ const MultiSelectInputWithValidation = () => {
 	);
 };
 
-const multiSelectWithCustomAutocompleteCode = `const MenuCustom = ({
-	inputValue,
-	locator,
-	onItemClick = () => {},
-	sourceItems,
-}) => (
-	<ClayDropDown.ItemList>
-		{sourceItems
-			.filter(item => inputValue && item[locator.label].match(inputValue))
-			.map(item => (
-				<ClayDropDown.Item
-					key={item[locator.value]}
-					onClick={() => onItemClick(item)}
-				>
-					<div className="autofit-row autofit-row-center">
-						<div className="autofit-col mr-3">
-							<ClaySticker
-								className="sticker-user-icon"
-								size="lg"
-							>
-								<ClayIcon spritemap={spritemap} symbol="user" />
-							</ClaySticker>
-						</div>
-						<div className="autofit-col">
-							<strong>{item[locator.label]}</strong>
-							<span>{item.email}</span>
-						</div>
-					</div>
-				</ClayDropDown.Item>
-			))}
-	</ClayDropDown.ItemList>
-);
-
-const Component = () => {
+const multiSelectWithCustomAutocompleteCode = `const Component = () => {
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState([
 		{
@@ -339,13 +306,34 @@ const Component = () => {
 		<ClayMultiSelect
 			inputName="myInput"
 			items={items}
-			menuRenderer={MenuCustom}
 			onChange={setValue}
 			onItemsChange={setItems}
 			sourceItems={sourceItems}
 			spritemap={spritemap}
 			value={value}
-		/>
+		>
+			{(item) => (
+				<ClayMultiSelect.Item
+					key={item.value}
+					textValue={item.label}
+				>
+					<div className="autofit-row autofit-row-center">
+						<div className="autofit-col mr-3">
+							<ClaySticker
+								className="sticker-user-icon"
+								size="lg"
+							>
+								<ClayIcon spritemap={spritemap} symbol="user" />
+							</ClaySticker>
+						</div>
+						<div className="autofit-col">
+							<strong>{item.label}</strong>
+							<span>{item.email}</span>
+						</div>
+					</div>
+				</ClayMultiSelect.Item>
+			)}
+		</ClayMultiSelect>
 	);
 }
 
