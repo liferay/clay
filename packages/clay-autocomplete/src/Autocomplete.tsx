@@ -141,28 +141,34 @@ export interface IProps<T>
 
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
-export function Autocomplete<T extends Record<string, any>>({
-	active: externalActive,
-	as: As = Input,
-	alignmentByViewport: _,
-	children,
-	containerElementRef,
-	defaultActive,
-	defaultItems,
-	defaultValue,
-	direction = 'bottom',
-	filterKey,
-	items: externalItems,
-	loadingState,
-	menuTrigger = 'input',
-	messages = {loading: '', notFound: ''},
-	onActiveChange,
-	onChange,
-	onItemsChange,
-	onLoadMore,
-	value: externalValue,
-	...otherProps
-}: IProps<T>) {
+export const Autocomplete = React.forwardRef<
+	HTMLInputElement,
+	IProps<Record<string, any>>
+>(function Autocomplete<T extends Record<string, any>>(
+	{
+		active: externalActive,
+		as: As = Input,
+		alignmentByViewport: _,
+		children,
+		containerElementRef,
+		defaultActive,
+		defaultItems,
+		defaultValue,
+		direction = 'bottom',
+		filterKey,
+		items: externalItems,
+		loadingState,
+		menuTrigger = 'input',
+		messages = {loading: '', notFound: ''},
+		onActiveChange,
+		onChange,
+		onItemsChange,
+		onLoadMore,
+		value: externalValue,
+		...otherProps
+	}: IProps<T>,
+	ref: React.Ref<HTMLInputElement>
+) {
 	const [items, , isItemsUncontrolled] = useInternalState({
 		defaultName: 'defaultItems',
 		defaultValue: defaultItems,
@@ -192,6 +198,9 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	const inputRef = useRef<HTMLInputElement>(null);
 	const menuRef = useRef<HTMLDivElement>(null);
+
+	const inputElementRef =
+		(ref as React.RefObject<HTMLInputElement>) || inputRef;
 
 	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
 	const debouncedLoadingChange = useDebounce(isLoading, 500);
@@ -267,7 +276,7 @@ export function Autocomplete<T extends Record<string, any>>({
 					currentItemSelected.current = itemValue;
 					setValue(itemValue);
 
-					inputRef.current?.focus();
+					inputElementRef.current?.focus();
 				},
 				roleItem: 'option',
 			}) as React.ReactElement;
@@ -428,7 +437,7 @@ export function Autocomplete<T extends Record<string, any>>({
 							break;
 					}
 				}}
-				ref={inputRef}
+				ref={inputElementRef}
 				role="combobox"
 				spellCheck={false}
 				value={value}
@@ -445,8 +454,8 @@ export function Autocomplete<T extends Record<string, any>>({
 						setActive(false);
 					}}
 					portalRef={menuRef}
-					suppress={[menuRef, inputRef]}
-					triggerRef={inputRef}
+					suppress={[menuRef, inputElementRef]}
+					triggerRef={inputElementRef}
 				>
 					<div
 						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
@@ -506,4 +515,4 @@ export function Autocomplete<T extends Record<string, any>>({
 			)}
 		</>
 	);
-}
+});
