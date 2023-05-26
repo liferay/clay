@@ -119,6 +119,8 @@ const ClayAutocomplete = React.forwardRef<HTMLDivElement, IProps<any>>(
 
 ClayAutocomplete.displayName = 'ClayAutocomplete';
 
+export {Autocomplete, Item};
+
 export default Object.assign(ClayAutocomplete, {
 	DropDown,
 	Input,

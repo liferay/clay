@@ -49,6 +49,14 @@ export interface IProps<T>
 	active?: boolean;
 
 	/**
+	 * Custom input component.
+	 */
+	as?:
+		| 'input'
+		| React.ForwardRefExoticComponent<any>
+		| ((props: React.ComponentProps<typeof Input>) => JSX.Element);
+
+	/**
 	 * Flag to align the DropDown menu within the viewport.
 	 * @deprecated since v3.92.0 - it is no longer necessary..
 	 */
@@ -127,31 +135,40 @@ export interface IProps<T>
 	 * loading indicator should be shown or not.
 	 */
 	loadingState?: number;
+
+	[key: string]: any;
 }
 
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
-export function Autocomplete<T extends Record<string, any>>({
-	active: externalActive,
-	alignmentByViewport: _,
-	children,
-	containerElementRef,
-	defaultActive,
-	defaultItems,
-	defaultValue,
-	direction = 'bottom',
-	filterKey,
-	items: externalItems,
-	loadingState,
-	menuTrigger = 'input',
-	messages = {loading: '', notFound: ''},
-	onActiveChange,
-	onChange,
-	onItemsChange,
-	onLoadMore,
-	value: externalValue,
-	...otherProps
-}: IProps<T>) {
+export const Autocomplete = React.forwardRef<
+	HTMLInputElement,
+	IProps<Record<string, any>>
+>(function Autocomplete<T extends Record<string, any>>(
+	{
+		active: externalActive,
+		as: As = Input,
+		alignmentByViewport: _,
+		children,
+		containerElementRef,
+		defaultActive,
+		defaultItems,
+		defaultValue,
+		direction = 'bottom',
+		filterKey,
+		items: externalItems,
+		loadingState,
+		menuTrigger = 'input',
+		messages = {loading: '', notFound: ''},
+		onActiveChange,
+		onChange,
+		onItemsChange,
+		onLoadMore,
+		value: externalValue,
+		...otherProps
+	}: IProps<T>,
+	ref: React.Ref<HTMLInputElement>
+) {
 	const [items, , isItemsUncontrolled] = useInternalState({
 		defaultName: 'defaultItems',
 		defaultValue: defaultItems,
@@ -182,6 +199,9 @@ export function Autocomplete<T extends Record<string, any>>({
 	const inputRef = useRef<HTMLInputElement>(null);
 	const menuRef = useRef<HTMLDivElement>(null);
 
+	const inputElementRef =
+		(ref as React.RefObject<HTMLInputElement>) || inputRef;
+
 	const isLoading = Boolean(loadingState !== undefined && loadingState === 1);
 	const debouncedLoadingChange = useDebounce(isLoading, 500);
 
@@ -209,7 +229,7 @@ export function Autocomplete<T extends Record<string, any>>({
 		}
 
 		if (!isItemsUncontrolled) {
-			return items;
+			return items ?? [];
 		}
 
 		return items?.filter((option) =>
@@ -247,11 +267,16 @@ export function Autocomplete<T extends Record<string, any>>({
 						children.props.onClick(event);
 					}
 
-					currentItemSelected.current = itemValue;
 					setActive(false);
+
+					if (event.defaultPrevented) {
+						return;
+					}
+
+					currentItemSelected.current = itemValue;
 					setValue(itemValue);
 
-					inputRef.current?.focus();
+					inputElementRef.current?.focus();
 				},
 				roleItem: 'option',
 			}) as React.ReactElement;
@@ -307,7 +332,7 @@ export function Autocomplete<T extends Record<string, any>>({
 
 	return (
 		<>
-			<Input
+			<As
 				{...otherProps}
 				aria-activedescendant={
 					active ? String(activeDescendant) : undefined
@@ -325,7 +350,10 @@ export function Autocomplete<T extends Record<string, any>>({
 						currentItemSelected.current = value;
 					}
 
-					setActive(true);
+					if (items !== null) {
+						setActive(true);
+					}
+
 					setValue(value);
 
 					if (activeDescendant) {
@@ -337,7 +365,7 @@ export function Autocomplete<T extends Record<string, any>>({
 						otherProps.onFocus(event);
 					}
 
-					if (menuTrigger === 'focus') {
+					if (menuTrigger === 'focus' && items !== null) {
 						setActive(true);
 					}
 				}}
@@ -383,7 +411,8 @@ export function Autocomplete<T extends Record<string, any>>({
 							if (
 								!active &&
 								event.altKey &&
-								event.key === Keys.Down
+								event.key === Keys.Down &&
+								items !== null
 							) {
 								event.stopPropagation();
 								setActive(true);
@@ -400,7 +429,7 @@ export function Autocomplete<T extends Record<string, any>>({
 								setActiveDescendant(item.key);
 							}
 
-							if (!active) {
+							if (!active && items !== null) {
 								return setActive(true);
 							}
 
@@ -412,7 +441,7 @@ export function Autocomplete<T extends Record<string, any>>({
 							break;
 					}
 				}}
-				ref={inputRef}
+				ref={inputElementRef}
 				role="combobox"
 				spellCheck={false}
 				value={value}
@@ -429,8 +458,8 @@ export function Autocomplete<T extends Record<string, any>>({
 						setActive(false);
 					}}
 					portalRef={menuRef}
-					suppress={[menuRef, inputRef]}
-					triggerRef={inputRef}
+					suppress={[menuRef, inputElementRef]}
+					triggerRef={inputElementRef}
 				>
 					<div
 						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
@@ -490,4 +519,4 @@ export function Autocomplete<T extends Record<string, any>>({
 			)}
 		</>
 	);
-}
+});

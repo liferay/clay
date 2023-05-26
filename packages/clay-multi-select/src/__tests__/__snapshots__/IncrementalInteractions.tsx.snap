@@ -1,0 +1,392 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelect incremental interactions renders a custom item 1`] = `
+<ul
+  class="list-unstyled"
+  id="clay-id-10"
+  role="listbox"
+  style="height: 0px; position: relative; width: 100%;"
+>
+  <li
+    data-index="0"
+    role="presentation"
+    style="left: 0px; position: absolute; top: 0px; transform: translateY(0px); width: 100%;"
+  >
+    <button
+      aria-selected="false"
+      class="dropdown-item"
+      id="1"
+      role="option"
+      tabindex="-1"
+    >
+      <strong>
+        one
+      </strong>
+      <p>
+        Name
+      </p>
+    </button>
+  </li>
+  <li
+    data-index="1"
+    role="presentation"
+    style="left: 0px; position: absolute; top: 0px; transform: translateY(0px); width: 100%;"
+  >
+    <button
+      aria-selected="false"
+      class="dropdown-item"
+      id="2"
+      role="option"
+      tabindex="-1"
+    >
+      <strong>
+        two
+      </strong>
+      <p>
+        Name
+      </p>
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`MultiSelect incremental interactions renders as disabled 1`] = `
+<div>
+  <div
+    class="form-control form-control-tag-group input-group"
+  >
+    <div
+      class="input-group-item"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item d-contents input-group-item-shrink input-group-prepend"
+          role="grid"
+        >
+          <span
+            class="label label-secondary"
+            role="row"
+            tabindex="-1"
+          >
+            <span
+              aria-describedby="clay-id-5"
+              class="label-item label-item-expand"
+              id="clay-id-8-label-1-span"
+              role="gridcell"
+              style="outline: none;"
+              tabindex="0"
+            >
+              foo
+            </span>
+            <span
+              class="label-item label-item-after"
+              role="gridcell"
+            >
+              <button
+                aria-label="Remove foo"
+                class="close"
+                id="clay-id-8-label-1-close"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-small"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-small"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span
+            class="label label-secondary"
+            role="row"
+            tabindex="-1"
+          >
+            <span
+              aria-describedby="clay-id-5"
+              class="label-item label-item-expand"
+              id="clay-id-8-label-2-span"
+              role="gridcell"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              bar
+            </span>
+            <span
+              class="label-item label-item-after"
+              role="gridcell"
+            >
+              <button
+                aria-label="Remove bar"
+                class="close"
+                id="clay-id-8-label-2-close"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-small"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-small"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span
+            class="label label-secondary"
+            role="row"
+            tabindex="-1"
+          >
+            <span
+              aria-describedby="clay-id-5"
+              class="label-item label-item-expand"
+              id="clay-id-8-label-3-span"
+              role="gridcell"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              baz
+            </span>
+            <span
+              class="label-item label-item-after"
+              role="gridcell"
+            >
+              <button
+                aria-label="Remove baz"
+                class="close"
+                id="clay-id-8-label-3-close"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-small"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-small"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </div>
+        <div
+          class="input-group-item input-group-prepend"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-controls="clay-id-6"
+            autocomplete="off"
+            autocorrect="off"
+            class="form-control-inset"
+            role="combobox"
+            spellcheck="false"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="sr-only"
+    >
+      <span
+        id="clay-id-5"
+      >
+        Press backspace to delete the current row.
+      </span>
+      <span
+        aria-live="polite"
+        aria-relevant="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MultiSelect incremental interactions renders with items 1`] = `
+<div>
+  <div
+    class="form-control form-control-tag-group input-group"
+  >
+    <div
+      class="input-group-item"
+    >
+      <div
+        class="input-group"
+      >
+        <div
+          class="input-group-item d-contents input-group-item-shrink input-group-prepend"
+          role="grid"
+        >
+          <span
+            class="label label-secondary"
+            role="row"
+            tabindex="-1"
+          >
+            <span
+              aria-describedby="clay-id-1"
+              class="label-item label-item-expand"
+              id="clay-id-4-label-1-span"
+              role="gridcell"
+              style="outline: none;"
+              tabindex="0"
+            >
+              foo
+            </span>
+            <span
+              class="label-item label-item-after"
+              role="gridcell"
+            >
+              <button
+                aria-label="Remove foo"
+                class="close"
+                id="clay-id-4-label-1-close"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-small"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-small"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span
+            class="label label-secondary"
+            role="row"
+            tabindex="-1"
+          >
+            <span
+              aria-describedby="clay-id-1"
+              class="label-item label-item-expand"
+              id="clay-id-4-label-2-span"
+              role="gridcell"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              bar
+            </span>
+            <span
+              class="label-item label-item-after"
+              role="gridcell"
+            >
+              <button
+                aria-label="Remove bar"
+                class="close"
+                id="clay-id-4-label-2-close"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-small"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-small"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+          <span
+            class="label label-secondary"
+            role="row"
+            tabindex="-1"
+          >
+            <span
+              aria-describedby="clay-id-1"
+              class="label-item label-item-expand"
+              id="clay-id-4-label-3-span"
+              role="gridcell"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              baz
+            </span>
+            <span
+              class="label-item label-item-after"
+              role="gridcell"
+            >
+              <button
+                aria-label="Remove baz"
+                class="close"
+                id="clay-id-4-label-3-close"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-times-small"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="/foo/bar#times-small"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </div>
+        <div
+          class="input-group-item input-group-prepend"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-controls="clay-id-2"
+            autocomplete="off"
+            autocorrect="off"
+            class="form-control-inset"
+            role="combobox"
+            spellcheck="false"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="input-group-item input-group-item-shrink"
+    >
+      <button
+        aria-label="Clear All"
+        class="component-action btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+        title="Clear All"
+        type="button"
+      >
+        <svg
+          class="lexicon-icon lexicon-icon-times-circle"
+          role="presentation"
+        >
+          <use
+            xlink:href="/foo/bar#times-circle"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="sr-only"
+    >
+      <span
+        id="clay-id-1"
+      >
+        Press backspace to delete the current row.
+      </span>
+      <span
+        aria-live="polite"
+        aria-relevant="text"
+      />
+    </div>
+  </div>
+</div>
+`;

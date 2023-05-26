@@ -4,13 +4,17 @@
  */
 
 import ClayButton from '@clayui/button';
-import ClayDropDown from '@clayui/drop-down';
+import {useResource} from '@clayui/data-provider';
+import {
+	FetchPolicy,
+	NetworkStatus,
+} from '@clayui/data-provider/src/useResource';
 import ClayForm, {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClaySticker from '@clayui/sticker';
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 
-import ClayMultiSelect, {itemLabelFilter} from '../src';
+import ClayMultiSelect from '../src';
 
 export default {
 	argTypes: {
@@ -41,31 +45,6 @@ const sourceItems = [
 		value: '4',
 	},
 ];
-
-const ClayMultiSelectWithAutocomplete = (props: any) => {
-	const [value, setValue] = useState('');
-	const [items, setItems] = useState(
-		props.items || [
-			{
-				label: 'one',
-				value: '1',
-			},
-		]
-	);
-
-	return (
-		<ClayMultiSelect
-			aria-labelledby="multi-select-label"
-			inputName="myInput"
-			items={items}
-			onChange={setValue}
-			onItemsChange={setItems}
-			sourceItems={itemLabelFilter(sourceItems, value)}
-			value={value}
-			{...props}
-		/>
-	);
-};
 
 export const Default = (args: any) => {
 	const [items, setItems] = useState([
@@ -167,47 +146,21 @@ export const SourceItems = () => {
 				items={items}
 				onChange={setValue}
 				onItemsChange={(val) => setItems(val as any)}
-				sourceItems={itemLabelFilter(sourceItems, value)}
+				sourceItems={sourceItems}
 				value={value}
 			/>
 		</>
 	);
 };
 
-const MenuCustom: React.ComponentProps<typeof ClayMultiSelect>['menuRenderer'] =
-	({inputValue, locator, onItemClick = () => {}, sourceItems}) => (
-		<ClayDropDown.ItemList>
-			{sourceItems
-				.filter(
-					(item) =>
-						inputValue && item[locator.label].match(inputValue)
-				)
-				.map((item) => (
-					<ClayDropDown.Item
-						key={item[locator.value]}
-						onClick={() => onItemClick(item)}
-					>
-						<div className="autofit-row autofit-row-center">
-							<div className="autofit-col mr-3">
-								<ClaySticker
-									className="sticker-user-icon"
-									size="lg"
-								>
-									<ClayIcon symbol="user" />
-								</ClaySticker>
-							</div>
-							<div className="autofit-col">
-								<strong>{item[locator.label]}</strong>
-								<span>{item.email}</span>
-							</div>
-						</div>
-					</ClayDropDown.Item>
-				))}
-		</ClayDropDown.ItemList>
-	);
+type CustomItem = {
+	email: string;
+	label: string;
+	value: string;
+};
 
 export const CustomMenu = () => {
-	const [items, setItems] = React.useState([
+	const [items, setItems] = useState<Array<CustomItem>>([
 		{
 			email: 'one@example.com',
 			label: 'One',
@@ -221,12 +174,12 @@ export const CustomMenu = () => {
 				Multi Select
 			</label>
 
-			<ClayMultiSelectWithAutocomplete
+			<ClayMultiSelect
+				aria-labelledby="multi-select-label"
 				id="multiSelect"
 				inputName="myInput"
 				items={items}
-				menuRenderer={MenuCustom}
-				onItemsChange={setItems}
+				onItemsChange={(items) => setItems(items)}
 				sourceItems={[
 					{
 						email: 'one@example.com',
@@ -239,7 +192,29 @@ export const CustomMenu = () => {
 						value: '2',
 					},
 				]}
-			/>
+			>
+				{(item: CustomItem) => (
+					<ClayMultiSelect.Item
+						key={item.value}
+						textValue={item.label}
+					>
+						<div className="autofit-row autofit-row-center">
+							<div className="autofit-col mr-3">
+								<ClaySticker
+									className="sticker-user-icon"
+									size="lg"
+								>
+									<ClayIcon symbol="user" />
+								</ClaySticker>
+							</div>
+							<div className="autofit-col">
+								<strong>{item.label}</strong>
+								<span>{item.email}</span>
+							</div>
+						</div>
+					</ClayMultiSelect.Item>
+				)}
+			</ClayMultiSelect>
 		</>
 	);
 };
@@ -260,43 +235,50 @@ export const CustomFilter = () => {
 };
 
 export const Async = () => {
-	const [dropdownItems, setDropdownItems] = useState<any>([]);
 	const [value, setValue] = useState('');
 	const [items, setItems] = useState<any>([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const timeoutRef = useRef<number | NodeJS.Timeout>(0);
 
-	function asyncData(query: string) {
-		setIsLoading(true);
-
-		clearTimeout(timeoutRef.current as number);
-
-		timeoutRef.current = setTimeout(() => {
-			setDropdownItems(
-				sourceItems.filter((item) => item.label.match(query))
-			);
-
-			setIsLoading(false);
-		}, 2000);
-	}
+	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
+		NetworkStatus.Unused
+	);
+	const {resource} = useResource({
+		fetchPolicy: FetchPolicy.CacheFirst,
+		link: 'https://rickandmortyapi.com/api/character/',
+		onNetworkStatusChange: setNetworkStatus,
+		variables: {name: value},
+	});
 
 	return (
 		<ClayMultiSelect
-			isLoading={isLoading}
 			items={items}
-			onChange={(newInputVal) => {
-				setValue(newInputVal);
-
-				asyncData(newInputVal);
-			}}
+			loadingState={networkStatus}
+			locator={{id: 'id', label: 'name', value: 'name'}}
+			onChange={setValue}
 			onItemsChange={setItems}
-			sourceItems={dropdownItems}
+			sourceItems={resource?.results ?? []}
 			value={value}
-		/>
+		>
+			{(item: any) => (
+				<ClayMultiSelect.Item key={item.id}>
+					{item.name}
+				</ClayMultiSelect.Item>
+			)}
+		</ClayMultiSelect>
 	);
 };
 
 export const Group = (args: any) => {
+	const [items, setItems] = useState([
+		{
+			label: 'one',
+			value: '1',
+		},
+		{
+			label: 'two',
+			value: '2',
+		},
+	]);
+
 	return (
 		<div className="sheet">
 			<ClayForm.Group className={!args.isValid ? 'has-error' : ''}>
@@ -306,23 +288,17 @@ export const Group = (args: any) => {
 
 				<ClayInput.Group>
 					<ClayInput.GroupItem>
-						<ClayMultiSelectWithAutocomplete
+						<ClayMultiSelect
 							aria-describedby={
 								!args.isValid ? 'multiselect-error' : undefined
 							}
 							aria-invalid={!args.isValid}
 							id="multiSelect"
+							inputName="myInput"
 							isValid={args.isValid}
-							items={[
-								{
-									label: 'one',
-									value: '1',
-								},
-								{
-									label: 'two',
-									value: '2',
-								},
-							]}
+							items={items}
+							onItemsChange={(items) => setItems(items)}
+							sourceItems={sourceItems}
 						/>
 
 						<ClayForm.FeedbackGroup>
