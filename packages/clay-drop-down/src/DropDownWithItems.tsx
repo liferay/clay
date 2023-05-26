@@ -268,11 +268,22 @@ const Item = ({
 	);
 };
 
-const Group = ({items, label, spritemap}: IItem & IInternalItem) => (
-	<ClayDropDownGroup header={label}>
-		{items && <Items items={items} spritemap={spritemap} />}
-	</ClayDropDownGroup>
-);
+const Group = ({items, label, spritemap}: IItem & IInternalItem) => {
+	warning(
+		typeof items !== 'undefined',
+		`ClayDropDownWithItems -> The '${label}' group contains no items to render.`
+	);
+
+	if (typeof items === 'undefined') {
+		return null;
+	}
+
+	return (
+		<ClayDropDownGroup header={label}>
+			{items && <Items items={items} spritemap={spritemap} />}
+		</ClayDropDownGroup>
+	);
+};
 
 const BOTTOM_OFFSET = [0, 1] as const;
 const LEFT_OFFSET = [-1, 6] as const;
