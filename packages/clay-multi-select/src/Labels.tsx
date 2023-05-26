@@ -381,6 +381,9 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 										...labels,
 										getNewItem(value as string),
 									]);
+
+									// @ts-ignore
+									onChange!({target: {value: ''}});
 								} else if (
 									!value &&
 									key === Keys.Backspace &&

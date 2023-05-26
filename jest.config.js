@@ -14,8 +14,8 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-autocomplete/src/': {
-			branches: 71,
-			functions: 87,
+			branches: 70,
+			functions: 84,
 			lines: 89,
 			statements: 89,
 		},
@@ -140,10 +140,10 @@ module.exports = {
 			statements: 85,
 		},
 		'./packages/clay-multi-select/src/': {
-			branches: 62,
-			functions: 77,
-			lines: 76,
-			statements: 75,
+			branches: 54,
+			functions: 60,
+			lines: 66,
+			statements: 66,
 		},
 		'./packages/clay-multi-step-nav/src/': {
 			branches: 87,

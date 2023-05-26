@@ -81,7 +81,7 @@ describe('Autocomplete incremental interactions', () => {
 				messages={messages}
 				placeholder="Enter a number from One to Five"
 			>
-				{(item) => (
+				{(item: any) => (
 					<ClayAutocomplete.Item key={item}>
 						{item}
 					</ClayAutocomplete.Item>

@@ -133,7 +133,7 @@ export interface IProps<T>
 	/**
 	 * Values that display as label items (controlled).
 	 */
-	items: Array<Item>;
+	items?: Array<Item>;
 
 	/**
 	 * The off-screen live region informs screen reader users the result of
@@ -167,7 +167,7 @@ export interface IProps<T>
 	/**
 	 * Callback for when items are added or removed (controlled).
 	 */
-	onItemsChange: InternalDispatch<Array<Item>>;
+	onItemsChange?: InternalDispatch<Array<Item>>;
 
 	/**
 	 * Callback is called when more items need to be loaded when the scroll
@@ -183,7 +183,7 @@ export interface IProps<T>
 	/**
 	 * List of pre-populated items that will show up in a dropdown menu
 	 */
-	sourceItems?: Array<Item>;
+	sourceItems?: Array<Item> | null;
 
 	/**
 	 * Path to spritemap for clay icons
@@ -235,7 +235,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			onItemsChange,
 			placeholder,
 			size,
-			sourceItems = [],
+			sourceItems = null,
 			spritemap,
 			value: externalValue,
 			...otherProps
