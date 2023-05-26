@@ -4,7 +4,7 @@
  */
 
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import {InternalDispatch, useInternalState} from '@clayui/shared';
+import {InternalDispatch, useControlledState} from '@clayui/shared';
 import React from 'react';
 
 import ClayMultiStepNav from './MultiStepNav';
@@ -98,7 +98,7 @@ export const ClayMultiStepNavWithBasicItems = ({
 	steps,
 	...otherProps
 }: IProps) => {
-	const [internalActive, setActive] = useInternalState({
+	const [internalActive, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

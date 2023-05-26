@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch, useInternalState} from '@clayui/shared';
+import {InternalDispatch, useControlledState} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -70,7 +70,7 @@ const ClayRadioGroup = ({
 	value,
 	...otherProps
 }: IGroupProps) => {
-	const [internalValue, setValue] = useInternalState({
+	const [internalValue, setValue] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
 		handleName: 'onChange',

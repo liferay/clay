@@ -9,7 +9,7 @@ import {useProvider} from '@clayui/provider';
 import {
 	InternalDispatch,
 	setElementFullHeight,
-	useInternalState,
+	useControlledState,
 } from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -90,7 +90,7 @@ function ClayPanel({
 	spritemap,
 	...otherProps
 }: IProps) {
-	const [internalExpanded, setInternalExpanded] = useInternalState({
+	const [internalExpanded, setInternalExpanded] = useControlledState({
 		defaultName: 'defaultExpanded',
 		defaultValue: defaultExpanded,
 		handleName: 'onExpandedChange',

@@ -7,7 +7,7 @@ import ClayButton from '@clayui/button';
 import {Option, Picker} from '@clayui/core';
 import ClayIcon from '@clayui/icon';
 import {ClayPaginationWithBasicItems} from '@clayui/pagination';
-import {InternalDispatch, sub, useId, useInternalState} from '@clayui/shared';
+import {InternalDispatch, sub, useControlledState, useId} from '@clayui/shared';
 import React, {useEffect} from 'react';
 
 import PaginationBar from './PaginationBar';
@@ -202,7 +202,7 @@ export const ClayPaginationBarWithBasicItems = ({
 		totalItems = 1;
 	}
 
-	const [internalActive, setActive] = useInternalState({
+	const [internalActive, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

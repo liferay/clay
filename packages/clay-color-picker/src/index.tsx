@@ -10,7 +10,7 @@ import {
 	FocusScope,
 	InternalDispatch,
 	sub,
-	useInternalState,
+	useControlledState,
 } from '@clayui/shared';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import tinycolor from 'tinycolor2';
@@ -208,7 +208,7 @@ const ClayColorPicker = ({
 	value,
 	...otherProps
 }: IProps) => {
-	const [internalValue, setValue] = useInternalState({
+	const [internalValue, setValue] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue: defaultValue
 			? normalizeValueHex(defaultValue)
@@ -258,7 +258,7 @@ const ClayColorPicker = ({
 	const valueInputRef = useRef<HTMLInputElement>(null);
 	const splotchRef = useRef<HTMLButtonElement>(null);
 
-	const [internalActive, setInternalActive] = useInternalState({
+	const [internalActive, setInternalActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

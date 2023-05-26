@@ -5,8 +5,8 @@
 
 import {
 	InternalDispatch,
+	useControlledState,
 	useInteractionFocus,
-	useInternalState,
 } from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
@@ -147,7 +147,7 @@ export const ClayDropDownWithDrilldown = ({
 
 	const {isFocusVisible} = useInteractionFocus();
 
-	const [active, setActive] = useInternalState({
+	const [active, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

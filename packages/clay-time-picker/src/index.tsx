@@ -6,7 +6,7 @@
 import ClayButton from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
-import {FocusScope, InternalDispatch, useInternalState} from '@clayui/shared';
+import {FocusScope, InternalDispatch, useControlledState} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -190,7 +190,7 @@ const ClayTimePicker = ({
 	value,
 	values,
 }: IProps) => {
-	const [internalValue, setValue] = useInternalState({
+	const [internalValue, setValue] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
 		handleName: 'onChange',

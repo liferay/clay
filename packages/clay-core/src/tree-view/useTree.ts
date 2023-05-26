@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useInternalState} from '@clayui/shared';
+import {useControlledState} from '@clayui/shared';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {Layout, useLayout} from './useLayout';
@@ -91,7 +91,7 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 }
 
 export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
-	const [items, setItems] = useInternalState({
+	const [items, setItems] = useControlledState({
 		defaultName: 'defaultItems',
 		defaultValue: props.defaultItems ?? [],
 		handleName: 'onItemsChange',
@@ -115,7 +115,7 @@ export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
 		selectionMode: props.selectionMode,
 	});
 
-	const [expandedKeys, setExpandedKeys] = useInternalState<Set<Key>>({
+	const [expandedKeys, setExpandedKeys] = useControlledState<Set<Key>>({
 		defaultName: 'defaultExpandedKeys',
 		defaultValue: () => {
 			const {

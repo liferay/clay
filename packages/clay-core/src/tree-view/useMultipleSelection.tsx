@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useInternalState} from '@clayui/shared';
+import {useControlledState} from '@clayui/shared';
 import {Key, useCallback, useMemo, useRef} from 'react';
 
 import {getKey} from '../collection';
@@ -114,7 +114,7 @@ export function useMultipleSelection<T>(
 
 	const indeterminateKeys = useRef(new Set<Key>());
 
-	const [selectedKeys, setSelectionKeys, isUncontrolled] = useInternalState<
+	const [selectedKeys, setSelectionKeys, isUncontrolled] = useControlledState<
 		Set<Key>
 	>({
 		defaultName: 'defaultSelectedKeys',

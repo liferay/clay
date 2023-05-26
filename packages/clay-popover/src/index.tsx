@@ -9,7 +9,7 @@ import {
 	InternalDispatch,
 	doAlign,
 	observeRect,
-	useInternalState,
+	useControlledState,
 } from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef} from 'react';
@@ -155,7 +155,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		}: IProps,
 		ref
 	) => {
-		const [internalShow, setShow] = useInternalState({
+		const [internalShow, setShow] = useControlledState({
 			defaultName: 'defaultShow',
 			defaultValue: defaultShow,
 			handleName: 'onShowChange',

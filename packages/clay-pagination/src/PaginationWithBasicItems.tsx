@@ -8,7 +8,7 @@ import {
 	InternalDispatch,
 	getEllipsisItems,
 	sub,
-	useInternalState,
+	useControlledState,
 } from '@clayui/shared';
 import React from 'react';
 
@@ -132,7 +132,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 			totalPages = 1;
 		}
 
-		const [internalActive, setActive] = useInternalState({
+		const [internalActive, setActive] = useControlledState({
 			defaultName: 'defaultActive',
 			defaultValue: defaultActive,
 			handleName: 'onActiveChange',

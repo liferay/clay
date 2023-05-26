@@ -6,7 +6,7 @@
 import {Autocomplete, Item as AutocompleteItem} from '@clayui/autocomplete';
 import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayInput} from '@clayui/form';
-import {InternalDispatch, sub, useId, useInternalState} from '@clayui/shared';
+import {InternalDispatch, sub, useControlledState, useId} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useRef, useState} from 'react';
 
@@ -248,7 +248,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 
 		const [isFocused, setIsFocused] = useState(false);
 
-		const [items, setItems] = useInternalState({
+		const [items, setItems] = useControlledState({
 			defaultName: 'defaultItems',
 			defaultValue: defaultItems,
 			handleName: 'onItemsChange',
@@ -257,7 +257,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			value: externalItems,
 		});
 
-		const [value, setValue] = useInternalState({
+		const [value, setValue] = useControlledState({
 			defaultName: 'defaultValue',
 			defaultValue,
 			handleName: 'onChange',

@@ -10,8 +10,8 @@ import Icon from '@clayui/icon';
 import {
 	FocusScope,
 	InternalDispatch,
+	useControlledState,
 	useId,
-	useInternalState,
 } from '@clayui/shared';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -285,7 +285,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		// `initialMonth`.
 		initialMonth = defaultMonth ?? initialMonth;
 
-		const [internalValue, setValue, isUncontrolled] = useInternalState({
+		const [internalValue, setValue, isUncontrolled] = useControlledState({
 			defaultName: 'defaultValue',
 			defaultValue,
 			handleName: 'onChange',
@@ -369,7 +369,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 		 * Flag to indicate if date is expanded. Uses an internal state value
 		 * if component is not controlled by props.
 		 */
-		const [expandedValue, setExpandedValue] = useInternalState({
+		const [expandedValue, setExpandedValue] = useControlledState({
 			defaultName: 'defaultExpanded',
 			defaultValue:
 				defaultExpanded === undefined

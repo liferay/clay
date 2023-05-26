@@ -11,9 +11,9 @@ import {
 	isAppleDevice,
 	isTypeahead,
 	sub,
+	useControlledState,
 	useId,
 	useInteractionFocus,
-	useInternalState,
 	useIsMobileDevice,
 	useNavigation,
 	useOverlayPosition,
@@ -156,7 +156,7 @@ export function Picker<T>({
 	selectedKey: externalSelectedKey,
 	...otherProps
 }: Props<T>) {
-	const [active, setActive] = useInternalState({
+	const [active, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',
@@ -165,7 +165,7 @@ export function Picker<T>({
 		value: externalActive,
 	});
 
-	const [selectedKey, setSelectedKey] = useInternalState({
+	const [selectedKey, setSelectedKey] = useControlledState({
 		defaultName: 'defaultSelectedKey',
 		defaultValue: defaultSelectedKey,
 		handleName: 'onSelectionChange',
