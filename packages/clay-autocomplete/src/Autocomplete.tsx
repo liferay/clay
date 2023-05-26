@@ -229,7 +229,7 @@ export const Autocomplete = React.forwardRef<
 		}
 
 		if (!isItemsUncontrolled) {
-			return items;
+			return items ?? [];
 		}
 
 		return items?.filter((option) =>
@@ -350,7 +350,10 @@ export const Autocomplete = React.forwardRef<
 						currentItemSelected.current = value;
 					}
 
-					setActive(true);
+					if (items !== null) {
+						setActive(true);
+					}
+
 					setValue(value);
 
 					if (activeDescendant) {
@@ -362,7 +365,7 @@ export const Autocomplete = React.forwardRef<
 						otherProps.onFocus(event);
 					}
 
-					if (menuTrigger === 'focus') {
+					if (menuTrigger === 'focus' && items !== null) {
 						setActive(true);
 					}
 				}}
@@ -408,7 +411,8 @@ export const Autocomplete = React.forwardRef<
 							if (
 								!active &&
 								event.altKey &&
-								event.key === Keys.Down
+								event.key === Keys.Down &&
+								items !== null
 							) {
 								event.stopPropagation();
 								setActive(true);
@@ -425,7 +429,7 @@ export const Autocomplete = React.forwardRef<
 								setActiveDescendant(item.key);
 							}
 
-							if (!active) {
+							if (!active && items !== null) {
 								return setActive(true);
 							}
 
