@@ -69,6 +69,7 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 }
 
 export const ClayCardWithHorizontal = ({
+	'aria-label': ariaLabel,
 	actions,
 	checkboxProps = {},
 	disabled,
@@ -94,7 +95,7 @@ export const ClayCardWithHorizontal = ({
 
 				<ClayLayout.ContentCol expand gutters>
 					<ClayCard.Description
-						aria-label={title}
+						aria-label={ariaLabel ?? title}
 						disabled={disabled}
 						displayType="title"
 						href={href}

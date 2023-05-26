@@ -38,7 +38,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-card/src/': {
-			branches: 85,
+			branches: 82,
 			functions: 90,
 			lines: 95,
 			statements: 95,

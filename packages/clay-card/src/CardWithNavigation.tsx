@@ -65,6 +65,7 @@ export interface IProps
 const noop = () => {};
 
 export const ClayCardWithNavigation = ({
+	'aria-label': ariaLabel,
 	children,
 	description,
 	horizontal = false,
@@ -146,7 +147,7 @@ export const ClayCardWithNavigation = ({
 								<ClayLayout.ContentCol expand>
 									<ClayLayout.ContentSection>
 										<ClayCard.Description
-											aria-label={title}
+											aria-label={ariaLabel ?? title}
 											displayType="title"
 											truncate
 										>
