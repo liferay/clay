@@ -96,6 +96,7 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 }
 
 export const ClayCardWithUser = ({
+	'aria-label': ariaLabel,
 	actions,
 	checkboxProps = {},
 	description,
@@ -159,7 +160,7 @@ export const ClayCardWithUser = ({
 				<ClayCard.Row>
 					<ClayLayout.ContentCol expand>
 						<ClayCard.Description
-							aria-label={name}
+							aria-label={ariaLabel ?? name}
 							disabled={disabled}
 							displayType="title"
 							href={href}
