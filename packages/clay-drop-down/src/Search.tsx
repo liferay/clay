@@ -6,7 +6,7 @@
 import ClayButton from '@clayui/button';
 import {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
-import {InternalDispatch, useInternalState} from '@clayui/shared';
+import {InternalDispatch, useControlledState} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useContext, useEffect} from 'react';
 
@@ -64,7 +64,7 @@ const ClayDropDownSearch = ({
 }: IProps) => {
 	const {className: formClassName, onSubmit, ...otherFormProps} = formProps;
 
-	const [value, setValue, isUncontrolled] = useInternalState({
+	const [value, setValue, isUncontrolled] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
 		handleName: 'onChange',

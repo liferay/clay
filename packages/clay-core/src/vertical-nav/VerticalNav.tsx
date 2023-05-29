@@ -7,7 +7,7 @@ import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import {
 	InternalDispatch,
-	useInternalState,
+	useControlledState,
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
@@ -149,7 +149,7 @@ function VerticalNav<T>({
 
 	const containerRef = useRef<HTMLDivElement | null>(null);
 
-	const [expandedKeys, setExpandedKeys] = useInternalState({
+	const [expandedKeys, setExpandedKeys] = useControlledState({
 		defaultName: 'defaultExpandedKeys',
 		defaultValue: defaultExpandedKeys,
 		handleName: 'onExpandedChange',

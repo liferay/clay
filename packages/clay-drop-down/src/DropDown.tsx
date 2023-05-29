@@ -8,7 +8,7 @@ import {
 	FocusScope,
 	InternalDispatch,
 	Keys,
-	useInternalState,
+	useControlledState,
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
@@ -173,7 +173,7 @@ function ClayDropDown<T>({
 
 	const [initialized, setInitialized] = useState(!renderMenuOnClick);
 
-	const [internalActive, setInternalActive] = useInternalState({
+	const [internalActive, setInternalActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

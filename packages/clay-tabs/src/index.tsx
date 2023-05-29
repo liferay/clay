@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch, useId, useInternalState} from '@clayui/shared';
+import {InternalDispatch, useControlledState, useId} from '@clayui/shared';
 import React from 'react';
 
 import Content from './Content';
@@ -84,7 +84,7 @@ function ClayTabs({
 	onActiveChange,
 	...otherProps
 }: IProps) {
-	const [active, setActive, isUncontrolled] = useInternalState({
+	const [active, setActive, isUncontrolled] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

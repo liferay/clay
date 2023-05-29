@@ -9,7 +9,7 @@ import {
 	InternalDispatch,
 	Keys,
 	MouseSafeArea,
-	useInternalState,
+	useControlledState,
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
@@ -575,7 +575,7 @@ export const ClayDropDownWithItems = ({
 }: IProps) => {
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
 
-	const [internalActive, setInternalActive] = useInternalState({
+	const [internalActive, setInternalActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',

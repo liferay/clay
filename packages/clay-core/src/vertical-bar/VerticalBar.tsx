@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {InternalDispatch, useId, useInternalState} from '@clayui/shared';
+import {InternalDispatch, useControlledState, useId} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -113,7 +113,7 @@ export function VerticalBar({
 	position = 'right',
 	resize = false,
 }: Props) {
-	const [activePanel, setActivePanel] = useInternalState<React.Key | null>({
+	const [activePanel, setActivePanel] = useControlledState<React.Key | null>({
 		defaultName: 'defaultItems',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',
@@ -126,7 +126,7 @@ export function VerticalBar({
 
 	const [panelNext, setPanelNext] = React.useState<React.Key | null>(null);
 
-	const [panelWidth, setPanelWidth] = useInternalState({
+	const [panelWidth, setPanelWidth] = useControlledState({
 		defaultName: 'defaultPanelWidth',
 		defaultValue: defaultPanelWidth,
 		handleName: 'onPanelWidthChange',

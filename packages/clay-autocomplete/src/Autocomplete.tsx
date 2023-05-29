@@ -11,9 +11,9 @@ import {
 	InternalDispatch,
 	Keys,
 	Overlay,
+	useControlledState,
 	useDebounce,
 	useId,
-	useInternalState,
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
@@ -169,7 +169,7 @@ export const Autocomplete = React.forwardRef<
 	}: IProps<T>,
 	ref: React.Ref<HTMLInputElement>
 ) {
-	const [items, , isItemsUncontrolled] = useInternalState({
+	const [items, , isItemsUncontrolled] = useControlledState({
 		defaultName: 'defaultItems',
 		defaultValue: defaultItems,
 		handleName: 'onItemsChange',
@@ -178,7 +178,7 @@ export const Autocomplete = React.forwardRef<
 		value: externalItems,
 	});
 
-	const [value = '', setValue] = useInternalState({
+	const [value = '', setValue] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
 		handleName: 'onChange',
@@ -187,7 +187,7 @@ export const Autocomplete = React.forwardRef<
 		value: externalValue,
 	});
 
-	const [active, setActive] = useInternalState({
+	const [active, setActive] = useControlledState({
 		defaultName: 'defaultActive',
 		defaultValue: defaultActive,
 		handleName: 'onActiveChange',
