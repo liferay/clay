@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix error when breaking component when group has no items ([b13f32c](https://github.com/liferay/clay/commit/b13f32c72fce7b88abefca02d5ab9ca7efc7fa81))
+
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
 **Note:** Version bump only for package @clayui/drop-down

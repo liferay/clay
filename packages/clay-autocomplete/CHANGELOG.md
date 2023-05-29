@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** don't open menu if items is null ([300fb73](https://github.com/liferay/clay/commit/300fb73452613c588d613e8d9cc687faaab99b68))
+
+### Features
+
+-   **@clayui/autocomplete:** adds new API to customize input ([b6a213b](https://github.com/liferay/clay/commit/b6a213b325e82d2472977463e76762252a519fe6))
+
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
 **Note:** Version bump only for package @clayui/autocomplete

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug with not having a focusable item when there is no active item ([f852f26](https://github.com/liferay/clay/commit/f852f26244eabf7464a285b2aa2d72bba14f4853))
+
+### Features
+
+-   **@clayui/core:** add backward compatibility for VerticalNav ([bc1c59c](https://github.com/liferay/clay/commit/bc1c59ceadda34d9519806a5840c02b56ea58297))
+-   **@clayui/core:** adds new `active` API to VerticalNav ([ebec342](https://github.com/liferay/clay/commit/ebec342f3f9b79abf86f25ab12f00754ee3952fa))
+
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
 **Note:** Version bump only for package @clayui/core

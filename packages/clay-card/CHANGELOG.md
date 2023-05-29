@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
+
+### Features
+
+-   **@clayui/card:** moves root `aria-label` to card titles ([6dc08c2](https://github.com/liferay/clay/commit/6dc08c219c2df8a37ce0bf414724348e2fe0003d))
+
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
 **Note:** Version bump only for package @clayui/card

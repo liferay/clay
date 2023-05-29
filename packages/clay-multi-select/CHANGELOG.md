@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
+
+### Features
+
+-   **@clayui/multi-select:** adds implementation of new autocomplete ([506c72f](https://github.com/liferay/clay/commit/506c72f4bcfa4beaec74d09bbf2fc0d58577cd35))
+
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
 **Note:** Version bump only for package @clayui/multi-select

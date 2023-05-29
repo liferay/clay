@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** don't open menu if items is null ([300fb73](https://github.com/liferay/clay/commit/300fb73452613c588d613e8d9cc687faaab99b68))
+-   **@clayui/core:** fixes bug with not having a focusable item when there is no active item ([f852f26](https://github.com/liferay/clay/commit/f852f26244eabf7464a285b2aa2d72bba14f4853))
+-   **@clayui/drop-down:** fix error when breaking component when group has no items ([b13f32c](https://github.com/liferay/clay/commit/b13f32c72fce7b88abefca02d5ab9ca7efc7fa81))
+
+### Features
+
+-   **@clayui/autocomplete:** adds new API to customize input ([b6a213b](https://github.com/liferay/clay/commit/b6a213b325e82d2472977463e76762252a519fe6))
+-   **@clayui/card:** moves root `aria-label` to card titles ([6dc08c2](https://github.com/liferay/clay/commit/6dc08c219c2df8a37ce0bf414724348e2fe0003d))
+-   **@clayui/core:** add backward compatibility for VerticalNav ([bc1c59c](https://github.com/liferay/clay/commit/bc1c59ceadda34d9519806a5840c02b56ea58297))
+-   **@clayui/core:** adds new `active` API to VerticalNav ([ebec342](https://github.com/liferay/clay/commit/ebec342f3f9b79abf86f25ab12f00754ee3952fa))
+-   **@clayui/multi-select:** adds implementation of new autocomplete ([506c72f](https://github.com/liferay/clay/commit/506c72f4bcfa4beaec74d09bbf2fc0d58577cd35))
+
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
 ### Bug Fixes
