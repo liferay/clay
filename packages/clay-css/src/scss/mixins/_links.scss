@@ -845,6 +845,50 @@
 				&::after {
 					@include clay-css(map-get($show, after));
 				}
+
+				&:hover {
+					$_show-hover: setter(map-get($show, hover), ());
+
+					@include clay-css($_show-hover);
+
+					&::before {
+						@include clay-css(map-get($_show-hover, before));
+					}
+
+					&::after {
+						@include clay-css(map-get($_show-hover, after));
+					}
+				}
+
+				&:focus {
+					$_show-focus: setter(map-get($show, focus), ());
+
+					@include clay-css($_show-focus);
+
+					&::before {
+						@include clay-css(map-get($_show-focus, before));
+					}
+
+					&::after {
+						@include clay-css(map-get($_show-focus, after));
+					}
+				}
+
+				.inline-item {
+					@include clay-css(map-get($show, inline-item));
+				}
+
+				.inline-item-before {
+					@include clay-css(map-get($show, inline-item-before));
+				}
+
+				.inline-item-middle {
+					@include clay-css(map-get($show, inline-item-middle));
+				}
+
+				.inline-item-after {
+					@include clay-css(map-get($show, inline-item-after));
+				}
 			}
 
 			@if (map-get($c-inner, enabled)) {
