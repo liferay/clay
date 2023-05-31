@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.96.1](https://github.com/liferay/clay/compare/v3.96.0...v3.96.1) (2023-05-31)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error when rendering two collections ([03473be](https://github.com/liferay/clay/commit/03473be98f22d52613b741528cbebec64073b771))
+-   **@clayui/multi-select:** fix error when not doing OOTB filter ([0da49e2](https://github.com/liferay/clay/commit/0da49e22a0483350af87ba417a6c9d1826add723))
+
 # [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
 
 ### Bug Fixes
