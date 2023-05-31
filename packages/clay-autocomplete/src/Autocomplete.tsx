@@ -139,6 +139,17 @@ export interface IProps<T>
 	[key: string]: any;
 }
 
+const List = React.forwardRef<
+	HTMLUListElement,
+	React.HTMLAttributes<HTMLUListElement>
+>(function List({children, ...otherProps}, ref) {
+	return (
+		<ul {...otherProps} className="list-unstyled" ref={ref}>
+			{children}
+		</ul>
+	);
+});
+
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 export const Autocomplete = React.forwardRef<
@@ -480,7 +491,7 @@ export const Autocomplete = React.forwardRef<
 							<Collection<T>
 								aria-label={otherProps['aria-label']}
 								aria-labelledby={otherProps['aria-labelledby']}
-								as={DropDown.ItemList}
+								as={List}
 								collection={collection}
 								id={ariaControlsId}
 								isLoading={isLoading}
