@@ -229,10 +229,16 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 				label: 'label',
 				value: 'value',
 			},
+			loadingState,
 			menuRenderer: _m,
+			messages = {
+				loading: 'Loading...',
+				notFound: 'No results found',
+			},
 			onChange,
 			onClearAllButtonClick,
 			onItemsChange,
+			onLoadMore,
 			placeholder,
 			size,
 			sourceItems = null,
@@ -271,6 +277,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 
 		const ariaDescriptionId = useId();
 
+		const hasAsyncItems = !!onLoadMore || typeof loadingState === 'number';
+
 		return (
 			<div
 				className={classNames(
@@ -289,16 +297,18 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 					as={Labels}
 					closeButtonAriaLabel={closeButtonAriaLabel}
 					containerElementRef={containerRef}
+					defaultItems={!hasAsyncItems ? sourceItems : undefined}
 					filterKey={locator.label}
 					inputName={inputName}
-					items={sourceItems}
+					items={hasAsyncItems ? sourceItems : undefined}
 					labels={items}
 					lastChangesRef={lastChangesRef}
 					locator={locator}
 					menuTrigger="focus"
+					messages={messages}
 					onChange={setValue}
 					onFocusChange={setIsFocused}
-					onItemsChange={() => {}}
+					onItemsChange={hasAsyncItems ? () => {} : undefined}
 					onLabelsChange={setItems}
 					placeholder={placeholder}
 					ref={inputElementRef}
