@@ -48,7 +48,6 @@ describe('MultiSelect incremental interactions', () => {
 		const {getByRole} = render(
 			<MultiSelect
 				defaultItems={labels}
-				defaultValue="one"
 				sourceItems={[
 					{
 						label: 'one',
