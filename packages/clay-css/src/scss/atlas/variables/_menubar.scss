@@ -5,16 +5,30 @@ $menubar-vertical-transparent-md: map-deep-merge(
 	(
 		nav-link: (
 			border-radius: $border-radius,
+			letter-spacing: 0.02em,
+			margin-bottom: 0.25rem,
 			transition: #{color 0.15s ease-in-out,
 			background-color 0.15s ease-in-out,
 			border-color 0.15s ease-in-out,
 			box-shadow 0.15s ease-in-out},
-			margin-bottom: 0.25rem,
+			before: (
+				border-radius: $border-radius 0 0 $border-radius,
+				bottom: 0,
+				content: '',
+				display: block,
+				left: 0,
+				position: absolute,
+				top: 0,
+			),
 			hover: (
 				background-color: rgba($gray-900, 0.04),
-				box-shadow: inset 0.125rem 0 0 0 $secondary-l0,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
+				letter-spacing: 0,
+				before: (
+					background: $secondary-l0,
+					width: 0.1875rem,
+				),
 			),
 			focus: (
 				background-color: c-unset,
@@ -35,18 +49,40 @@ $menubar-vertical-transparent-md: map-deep-merge(
 			),
 			active-class: (
 				background-color: rgba($primary, 0.06),
-				box-shadow: inset 0.25rem 0 0 0 $primary-l0,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
+				letter-spacing: 0,
+				before: (
+					background-color: $primary-l0,
+					width: 0.25rem,
+				),
 			),
 			disabled: (
+				background-color: transparent,
 				box-shadow: none,
+				font-weight: $font-weight-normal,
+				letter-spacing: 0.02em,
+				before: (
+					content: none,
+				),
+				after: (
+					content: none,
+				),
 			),
 			show: (
 				background-color: c-unset,
 				box-shadow: c-unset,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
+				before: (
+					background-color: transparent,
+				),
+				hover: (
+					before: (
+						background-color: $secondary-l0,
+						width: 0.1875rem,
+					),
+				),
 			),
 		),
 		media-breakpoint-down: (
@@ -54,6 +90,9 @@ $menubar-vertical-transparent-md: map-deep-merge(
 				background-color: $white,
 				nav-link: (
 					margin-bottom: 0,
+					before: (
+						content: none,
+					),
 					hover: (
 						background-color: rgba($gray-900, 0.04),
 						box-shadow: none,
@@ -100,19 +139,33 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 	(
 		nav-link: (
 			border-radius: $border-radius,
+			letter-spacing: 0.02em,
+			margin-bottom: 0.25rem,
 			transition: #{color 0.15s ease-in-out,
 			background-color 0.15s ease-in-out,
 			border-color 0.15s ease-in-out,
 			box-shadow 0.15s ease-in-out},
-			margin-bottom: 0.25rem,
+			before: (
+				border-radius: $border-radius 0 0 $border-radius,
+				bottom: 0,
+				content: '',
+				display: block,
+				left: 0,
+				position: absolute,
+				top: 0,
+			),
 			hover: (
 				background-color: rgba($gray-900, 0.04),
-				box-shadow: inset 0.125rem 0 0 0 $secondary-l0,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
+				letter-spacing: 0,
+				before: (
+					background: $secondary-l0,
+					width: 0.1875rem,
+				),
 			),
 			focus: (
-				background-color: rgba($primary, 0.04),
+				background-color: c-unset,
 				color: $gray-900,
 				outline: 0,
 				after: (
@@ -129,18 +182,40 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 			),
 			active-class: (
 				background-color: rgba($primary, 0.06),
-				box-shadow: inset 0.25rem 0 0 0 $primary-l0,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
+				letter-spacing: 0,
+				before: (
+					background-color: $primary-l0,
+					width: 0.25rem,
+				),
 			),
 			disabled: (
+				background-color: transparent,
 				box-shadow: none,
+				font-weight: $font-weight-normal,
+				letter-spacing: 0.02em,
+				before: (
+					content: none,
+				),
+				after: (
+					content: none,
+				),
 			),
 			show: (
 				background-color: c-unset,
 				box-shadow: c-unset,
 				color: $gray-900,
 				font-weight: $font-weight-semi-bold,
+				before: (
+					background-color: transparent,
+				),
+				hover: (
+					before: (
+						background-color: $secondary-l0,
+						width: 0.1875rem,
+					),
+				),
 			),
 		),
 		media-breakpoint-down: (
@@ -148,6 +223,9 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 				background-color: $white,
 				nav-link: (
 					margin-bottom: 0,
+					before: (
+						content: none,
+					),
 					hover: (
 						background-color: rgba($gray-900, 0.04),
 						box-shadow: none,
