@@ -10,7 +10,7 @@
         </h1>
     </div>
 
-[![Build Status](https://travis-ci.org/liferay/clay.svg?branch=master)](https://travis-ci.org/liferay/clay) [![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
+![Clay CI](https://github.com/liferay/clay/actions/workflows/main.yml/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/liferay/clay/badge.svg)](https://coveralls.io/github/liferay/clay)
 
 </div>
 
