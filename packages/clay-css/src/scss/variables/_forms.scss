@@ -1435,7 +1435,18 @@ $input-group-item: map-deep-merge(
 		word-wrap: break-word,
 		focus: (
 			border-radius: clay-enable-rounded($input-border-radius),
-			box-shadow: $input-focus-box-shadow,
+			after: (
+				border-radius: inherit,
+				bottom: 0,
+				box-shadow: $input-focus-box-shadow,
+				content: '',
+				display: block,
+				left: 0,
+				pointer-events: none,
+				position: absolute,
+				right: 0,
+				top: 0,
+			),
 			input-group-prepend: (
 				border-bottom-right-radius: clay-enable-rounded(0),
 				border-top-right-radius: clay-enable-rounded(0),
