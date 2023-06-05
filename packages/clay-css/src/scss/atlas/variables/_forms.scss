@@ -1,6 +1,5 @@
 $input-bg: $gray-200 !default;
 $input-border-color: $gray-300 !default;
-$input-border-radius: $border-radius !default;
 $input-border-width: 0.0625rem !default; // 1px
 
 $input-border-bottom-width: $input-border-width !default; // 1px
@@ -525,26 +524,7 @@ $input-group-item-margin-left: 0.5rem !default;
 $input-group-item: () !default;
 $input-group-item: map-deep-merge(
 	(
-		display: flex,
-		flex-grow: 1,
-		flex-wrap: wrap,
-		margin-left: $input-group-item-margin-left,
-		width: 1%,
-		word-wrap: break-word,
 		focus: (
-			border-radius: clay-enable-rounded($input-border-radius),
-			after: (
-				border-radius: inherit,
-				bottom: 0,
-				box-shadow: $input-focus-box-shadow,
-				content: '',
-				display: block,
-				left: 0,
-				pointer-events: none,
-				position: absolute,
-				right: 0,
-				top: 0,
-			),
 			input-group-prepend: (
 				border-bottom-right-radius: clay-enable-rounded(0),
 				border-top-right-radius: clay-enable-rounded(0),
