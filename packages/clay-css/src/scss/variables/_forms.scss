@@ -76,7 +76,7 @@ $input: map-deep-merge(
 		padding-left: $input-padding-x,
 		padding-right: $input-padding-x,
 		padding-top: $input-padding-y,
-		transition: $input-transition,
+		transition: clay-enable-transitions($input-transition),
 		width: 100%,
 		mobile: (
 			font-size: $input-font-size-mobile,
@@ -339,7 +339,7 @@ $input-plaintext-readonly: map-deep-merge(
 	(
 		border-radius: $input-border-radius,
 		outline: 0,
-		transition: $input-transition,
+		transition: clay-enable-transitions($input-transition),
 		focus: (
 			box-shadow: $input-focus-box-shadow,
 		),
@@ -1433,19 +1433,22 @@ $input-group-item: map-deep-merge(
 		margin-left: $input-group-item-margin-left,
 		width: 1%,
 		word-wrap: break-word,
+		after: (
+			border-radius: inherit,
+			bottom: 0,
+			content: '',
+			display: block,
+			left: 0,
+			pointer-events: none,
+			position: absolute,
+			right: 0,
+			top: 0,
+			transition: clay-enable-transitions($input-transition),
+		),
 		focus: (
 			border-radius: clay-enable-rounded($input-border-radius),
 			after: (
-				border-radius: inherit,
-				bottom: 0,
 				box-shadow: $input-focus-box-shadow,
-				content: '',
-				display: block,
-				left: 0,
-				pointer-events: none,
-				position: absolute,
-				right: 0,
-				top: 0,
 			),
 			input-group-prepend: (
 				border-bottom-right-radius: clay-enable-rounded(0),
