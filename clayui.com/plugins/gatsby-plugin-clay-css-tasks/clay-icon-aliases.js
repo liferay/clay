@@ -749,6 +749,7 @@ const iconsData = {
 	"star":                     '"favorite", "rating"',
 	"star-half":                '"favorite", "rating"',
 	"star-o":                   '"favorite", "rating"',
+	"stars":                    '"ai", "magic", "effects"',
 	"sticky":                   '"deprecated"',
 	"strikethrough":            '"editor", "style", "text"',
 	"subscript":                '"editor", "style", "text"',
