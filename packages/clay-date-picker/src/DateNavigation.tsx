@@ -4,7 +4,9 @@
  */
 
 import Button from '@clayui/button';
+import {Option, Picker} from '@clayui/core';
 import Icon from '@clayui/icon';
+import {Keys} from '@clayui/shared';
 import React from 'react';
 
 import {setMonth} from './Helpers';
@@ -39,8 +41,6 @@ const ClayDatePickerDateNavigation = ({
 }: Props) => {
 	const monthSelectorRef = React.useRef<HTMLSelectElement | null>(null);
 
-	const yearSelectorRef = React.useRef<HTMLSelectElement | null>(null);
-
 	/**
 	 * Handles the change of the month from the available
 	 * years in the range
@@ -63,17 +63,6 @@ const ClayDatePickerDateNavigation = ({
 	 */
 	const handleNextMonthClicked = () => handleChangeMonth(1);
 
-	/**
-	 * Handles the change of the year and month of the header
-	 */
-	function handleFormChange() {
-		if (monthSelectorRef.current && yearSelectorRef.current) {
-			const year = Number(yearSelectorRef.current.value);
-			const month = Number(monthSelectorRef.current.value);
-			onMonthChange(new Date(year, month));
-		}
-	}
-
 	return (
 		<div className="date-picker-calendar-header">
 			<div className="date-picker-nav">
@@ -81,23 +70,57 @@ const ClayDatePickerDateNavigation = ({
 					<Select
 						disabled={disabled}
 						name="month"
-						onChange={() => handleFormChange()}
+						onChange={(event) =>
+							onMonthChange(
+								new Date(
+									currentMonth.getFullYear(),
+									Number(event.target.value)
+								)
+							)
+						}
 						options={months}
-						ref={monthSelectorRef}
 						testId="month-select"
 						value={currentMonth.getMonth()}
 					/>
 				</div>
 				<div className="date-picker-nav-item input-date-picker-year">
-					<Select
+					<Picker
+						UNSAFE_behavior="secondary"
+						className="form-control-sm"
 						disabled={disabled}
-						name="year"
-						onChange={() => handleFormChange()}
-						options={years}
-						ref={yearSelectorRef}
-						testId="year-select"
-						value={currentMonth.getFullYear()}
-					/>
+						items={years}
+						native
+						onKeyDown={(
+							event: React.KeyboardEvent<HTMLButtonElement>
+						) => {
+							if (
+								event.shiftKey &&
+								(event.key === Keys.Up ||
+									event.key === Keys.Down)
+							) {
+								event.key =
+									event.key === Keys.Up
+										? 'PageUp'
+										: 'PageDown';
+							}
+						}}
+						onSelectionChange={(key: React.Key) => {
+							if (!monthSelectorRef.current) {
+								return;
+							}
+
+							onMonthChange(
+								new Date(Number(key), currentMonth.getMonth())
+							);
+						}}
+						selectedKey={String(currentMonth.getFullYear())}
+					>
+						{(item) => (
+							<Option key={item.value}>
+								{String(item.label)}
+							</Option>
+						)}
+					</Picker>
 				</div>
 
 				<div className="date-picker-nav-controls date-picker-nav-item date-picker-nav-item-expand">
