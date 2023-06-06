@@ -41,6 +41,7 @@ const emptyStateWithImageCode = `const Component = () => {
 			description="You don't have more notifications to review"
 			imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
 			imgSrc="/images/success_state.gif"
+			imgSrcReducedMotion="/images/success_state_reduced_motion.gif"
 			title="Hurray"
 		/>
 	);
@@ -64,14 +65,15 @@ const emptyStateReducedMotionWithImageCodeImports = `import ClayEmptyState from 
 
 const emptyStateReducedMotionWithImageCode = `const Component = () => {
 	return (
-		<ClayEmptyState
-			className="c-prefers-reduced-motion"
-			description="You don't have more notifications to review"
-			imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
-			imgSrc="/images/success_state.gif"
-			imgSrcReducedMotion="/images/success_state_reduced_motion.gif"
-			title="Hurray"
-		/>
+		<div className="c-prefers-reduced-motion">
+			<ClayEmptyState
+				description="You don't have more notifications to review"
+				imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
+				imgSrc="/images/success_state.gif"
+				imgSrcReducedMotion="/images/success_state_reduced_motion.gif"
+				title="Hurray"
+			/>
+		</div>
 	);
 }
 
