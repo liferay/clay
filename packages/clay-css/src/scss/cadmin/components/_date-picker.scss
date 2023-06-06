@@ -28,6 +28,10 @@
 	select.form-control {
 		@include clay-select-variant($cadmin-date-picker-nav-select);
 	}
+
+	.form-control-select {
+		@include clay-select-variant($cadmin-date-picker-nav-select);
+	}
 }
 
 .date-picker-nav-item {
