@@ -248,18 +248,6 @@
 	.container-form-lg,
 	&.container-form-lg {
 		@include clay-container($cadmin-container-form-lg);
-
-		.menubar-vertical-expand-lg {
-			$cadmin-container-form-lg-breakpoint-down: clay-breakpoint-prev(
-				map-get($cadmin-container-form-lg, breakpoint-up)
-			);
-
-			@include media-breakpoint-down(
-				$cadmin-container-form-lg-breakpoint-down
-			) {
-				margin-top: -(map-get($cadmin-container-form-lg, padding-top-mobile));
-			}
-		}
 	}
 
 	.container-view,

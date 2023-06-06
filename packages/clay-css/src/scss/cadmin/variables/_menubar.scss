@@ -9,22 +9,14 @@ $cadmin-menubar-vertical-expand-md: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			sm: (
-				align-items: center,
-				display: flex,
-				flex-wrap: wrap,
-				justify-content: space-between,
-				margin-bottom: 24px,
-				margin-left: math-sign($cadmin-grid-gutter-width * 0.5),
-				margin-right: math-sign($cadmin-grid-gutter-width * 0.5),
+				margin-bottom: 16px,
 				max-width: none,
 				menubar-collapse: (
 					border-color: transparent,
 					border-style: solid,
 					border-width: 1px,
 					display: none,
-					left: -1px,
-					position: absolute,
-					right: -1px,
+					position: relative,
 					top: 100%,
 					z-index:
 						$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile,
@@ -50,6 +42,8 @@ $cadmin-menubar-vertical-expand-md: map-deep-merge(
 					padding-left: 8px,
 					padding-right: 8px,
 					c-inner: (
+						margin-left: -8px,
+						margin-right: -8px,
 						max-width: none,
 					),
 					lexicon-icon: (
@@ -87,6 +81,7 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 				background-color: rgba($cadmin-gray-900, 0.04),
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
+				letter-spacing: 0,
 				before: (
 					background: $cadmin-secondary-l0,
 					width: 3px,
@@ -133,6 +128,7 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 				),
 			),
 			show: (
+				background-color: transparent,
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 				before: (
@@ -148,7 +144,6 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			sm: (
-				background-color: $cadmin-white,
 				nav-link: (
 					border-radius: clay-enable-rounded(0),
 					color: $cadmin-gray-900,
@@ -191,8 +186,7 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 						clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
 				),
 				menubar-toggler: (
-					box-shadow: $cadmin-component-focus-box-shadow,
-					color: $cadmin-gray-900,
+					color: $cadmin-gray-600,
 					font-size: 14px,
 					font-weight: $cadmin-font-weight-semi-bold,
 					text-decoration: none,
@@ -281,22 +275,14 @@ $cadmin-menubar-vertical-expand-lg: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			md: (
-				align-items: center,
-				display: flex,
-				flex-wrap: wrap,
-				justify-content: space-between,
-				margin-bottom: 24px,
-				margin-left: math-sign($cadmin-grid-gutter-width * 0.5),
-				margin-right: math-sign($cadmin-grid-gutter-width * 0.5),
+				margin-bottom: 16px,
 				max-width: none,
 				menubar-collapse: (
 					border-color: transparent,
 					border-style: solid,
 					border-width: 1px,
 					display: none,
-					left: -1px,
-					position: absolute,
-					right: -1px,
+					position: relative,
 					top: 100%,
 					z-index:
 						$cadmin-zindex-menubar-vertical-expand-md-collapse-mobile,
@@ -322,6 +308,8 @@ $cadmin-menubar-vertical-expand-lg: map-deep-merge(
 					padding-left: 8px,
 					padding-right: 8px,
 					c-inner: (
+						margin-left: -8px,
+						margin-right: -8px,
 						max-width: none,
 					),
 					lexicon-icon: (
@@ -404,6 +392,7 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 				),
 			),
 			show: (
+				background-color: transparent,
 				color: $cadmin-gray-900,
 				font-weight: $cadmin-font-weight-semi-bold,
 				before: (
@@ -419,7 +408,6 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			md: (
-				background-color: $cadmin-white,
 				nav-link: (
 					border-radius: clay-enable-rounded(0),
 					color: $cadmin-gray-900,
@@ -461,7 +449,7 @@ $cadmin-menubar-vertical-transparent-lg: map-deep-merge(
 						clay-enable-shadows(0 1px 5px -1px rgba(0, 0, 0, 0.3)),
 				),
 				menubar-toggler: (
-					color: $cadmin-gray-900,
+					color: $cadmin-gray-600,
 					font-size: 14px,
 					font-weight: $cadmin-font-weight-semi-bold,
 					text-decoration: none,
