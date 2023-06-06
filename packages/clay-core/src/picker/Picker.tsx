@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import Button from '@clayui/button';
+import Icon from '@clayui/icon';
 import {
 	InternalDispatch,
 	Keys,
@@ -129,10 +131,17 @@ export type Props<T> = {
 	 */
 	UNSAFE_menuClassName?: string;
 
+	/**
+	 * Property intended for internal use only.
+	 * @ignore
+	 */
+	UNSAFE_behavior?: 'secondary';
+
 	[key: string]: any;
 } & Omit<ICollectionProps<T, unknown>, 'virtualize'>;
 
 export function Picker<T>({
+	UNSAFE_behavior,
 	UNSAFE_menuClassName,
 	active: externalActive,
 	as: As = 'button',
@@ -192,6 +201,7 @@ export function Picker<T>({
 
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
 	const menuRef = useRef<HTMLDivElement | null>(null);
+	const scrollRef = useRef<HTMLUListElement | null>(null);
 
 	const announcerAPI = useRef<AnnouncerAPI>(null);
 
@@ -262,6 +272,48 @@ export function Picker<T>({
 		}
 	}, [active]);
 
+	const [isArrowVisible, setIsArrowVisible] = useState<
+		null | 'top' | 'bottom' | 'both'
+	>(null);
+
+	useEffect(() => {
+		if (
+			!active ||
+			UNSAFE_behavior !== 'secondary' ||
+			collection.getItems().length <= 7
+		) {
+			return;
+		}
+
+		const THRESHOLD = 32;
+
+		function onScroll(event: any) {
+			const scrollTop = event.target.scrollTop;
+			const scrollHeightMax =
+				event.target.scrollHeight - event.target.clientHeight;
+
+			if (
+				scrollTop >= THRESHOLD &&
+				scrollTop <= scrollHeightMax - THRESHOLD &&
+				isArrowVisible !== 'both'
+			) {
+				setIsArrowVisible('both');
+			} else if (scrollTop >= THRESHOLD && isArrowVisible !== 'top') {
+				setIsArrowVisible('top');
+			} else if (
+				scrollTop <= scrollHeightMax - THRESHOLD &&
+				isArrowVisible !== 'bottom'
+			) {
+				setIsArrowVisible('bottom');
+			}
+		}
+
+		scrollRef.current?.addEventListener('scroll', onScroll, true);
+
+		return () =>
+			scrollRef.current?.removeEventListener('scroll', onScroll, true);
+	}, [active]);
+
 	const context = {
 		activeDescendant,
 		isMobile: isMobile && native,
@@ -319,6 +371,10 @@ export function Picker<T>({
 				id={id}
 				onClick={() => setActive(!active)}
 				onKeyDown={(event: React.KeyboardEvent<HTMLButtonElement>) => {
+					if (otherProps.onKeyDown) {
+						otherProps.onKeyDown(event);
+					}
+
 					switch (event.key) {
 						case Keys.Enter:
 						case Keys.Spacebar: {
@@ -447,15 +503,35 @@ export function Picker<T>({
 					triggerRef={triggerRef}
 				>
 					<div
-						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
+						className={classNames(
+							'dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show',
+							{
+								'dropdown-menu-width-shrink':
+									UNSAFE_behavior === 'secondary',
+							}
+						)}
 						ref={menuRef}
 						role="presentation"
 					>
+						{UNSAFE_behavior === 'secondary' &&
+							(isArrowVisible === 'top' ||
+								isArrowVisible === 'both') && (
+								<Button
+									aria-label="Scroll to top"
+									className="dropdown-item text-4 text-center"
+									displayType="unstyled"
+									tabIndex={-1}
+								>
+									<Icon symbol="caret-top" />
+								</Button>
+							)}
+
 						<ul
 							aria-labelledby={otherProps['aria-labelledby']}
 							className="inline-scroller list-unstyled"
 							id={ariaControls}
 							onFocus={() => triggerRef.current?.focus()}
+							ref={scrollRef}
 							role="listbox"
 							tabIndex={-1}
 						>
@@ -463,6 +539,19 @@ export function Picker<T>({
 								<Collection<T> collection={collection} />
 							</PickerContext.Provider>
 						</ul>
+
+						{UNSAFE_behavior === 'secondary' &&
+							(isArrowVisible === 'bottom' ||
+								isArrowVisible === 'both') && (
+								<Button
+									aria-label="Scroll to bottom"
+									className="dropdown-item text-4 text-center"
+									displayType="unstyled"
+									tabIndex={-1}
+								>
+									<Icon symbol="caret-bottom" />
+								</Button>
+							)}
 					</div>
 				</Overlay>
 			)}
