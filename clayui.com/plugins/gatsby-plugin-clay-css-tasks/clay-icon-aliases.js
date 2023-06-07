@@ -484,6 +484,7 @@ const flagsData = {
 
 // prettier-ignore
 const iconsData = {
+	"accessibility":            '"human", "inclusive", "user"',
 	"add-cell":                 '"center", "excel", "grid", "squares", "table"',
 	"add-column":               '"cell", "center", "excel", "grid", "squares", "table", "vertical"',
 	"add-row":                  '"cell", "squares", "grid", "table", "center", "horizontal", "excel"',
