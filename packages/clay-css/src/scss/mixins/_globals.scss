@@ -368,7 +368,7 @@
 	@each $key, $value in $map {
 		@if not clay-is-map-unset($value) {
 			@if (type-of($value) == 'map') {
-				$valid-prefixes: '#', '&', '.', '>', '@', '~', '+';
+				$valid-prefixes: '#', '&', '.', '>', '@', '~', '+', '[';
 
 				$selector: if(
 					index($valid-prefixes, str-slice($key, 1, 1)),

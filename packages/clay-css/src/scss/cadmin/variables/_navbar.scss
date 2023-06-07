@@ -15,6 +15,19 @@ $cadmin-navbar-title-text-transform: null !default;
 $cadmin-navbar-text-truncate-spacer-right: 25px !default; // 25px
 $cadmin-navbar-text-truncate-max-width: 200px !default; // 200px
 
+$cadmin-navbar-text-truncate: () !default;
+$cadmin-navbar-text-truncate: map-deep-merge(
+	(
+		display: inline-block,
+		max-width: 100%,
+		overflow: hidden,
+		text-overflow: ellipsis,
+		vertical-align: bottom,
+		white-space: nowrap,
+	),
+	$cadmin-navbar-text-truncate
+);
+
 // Navbar Brand
 
 $cadmin-navbar-brand-font-size: $cadmin-font-size-lg !default;

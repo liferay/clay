@@ -72,6 +72,7 @@ $cadmin-input: map-deep-merge(
 		font-size: $cadmin-input-font-size,
 		font-weight: $cadmin-input-font-weight,
 		height: $cadmin-input-height,
+		letter-spacing: inherit,
 		line-height: $cadmin-input-line-height,
 		min-width: 0,
 		padding-bottom: $cadmin-input-padding-y,
@@ -119,6 +120,36 @@ $cadmin-input-palette: () !default;
 // Form Control Plaintext
 
 $cadmin-input-plaintext-color: $cadmin-body-color !default;
+
+$cadmin-input-plaintext: () !default;
+$cadmin-input-plaintext: map-deep-merge(
+	(
+		background-clip: border-box,
+		background-color: transparent,
+		border-bottom-width: $cadmin-input-border-bottom-width,
+		border-color: transparent,
+		border-left-width: $cadmin-input-border-left-width,
+		border-right-width: $cadmin-input-border-right-width,
+		border-style: solid,
+		border-top-width: $cadmin-input-border-top-width,
+		color: $cadmin-input-plaintext-color,
+		display: block,
+		font-size: $cadmin-input-font-size,
+		height: $cadmin-input-height,
+		letter-spacing: inherit,
+		line-height: $cadmin-input-line-height,
+		// match inputs if this class comes on inputs with default margins
+		margin-bottom: 0,
+		min-width: 0,
+		padding-bottom: $cadmin-input-padding-y,
+		padding-left: 0,
+		padding-right: 0,
+		padding-top: $cadmin-input-padding-y,
+		text-overflow: ellipsis,
+		width: 100%,
+	),
+	$cadmin-input-plaintext
+);
 
 // Deprecated
 

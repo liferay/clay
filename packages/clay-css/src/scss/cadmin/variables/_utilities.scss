@@ -577,7 +577,117 @@ $cadmin-text-decorations: map-deep-merge(
 	$cadmin-text-decorations
 );
 
-// Transitions
+// Text Truncate
+
+$cadmin-text-truncate: () !default;
+$cadmin-text-truncate: map-merge(
+	(
+		display: block,
+		overflow: hidden,
+		text-overflow: ellipsis,
+		white-space: nowrap,
+	),
+	$cadmin-text-truncate
+);
+
+// Text Truncate Inline
+
+$cadmin-text-truncate-inline: () !default;
+$cadmin-text-truncate-inline: map-deep-merge(
+	(
+		display: inline-flex,
+		max-width: 100%,
+		text-truncate: (
+			display: inline-block,
+			max-width: 100%,
+			overflow: hidden,
+			text-overflow: ellipsis,
+			vertical-align: bottom,
+			white-space: nowrap,
+			word-wrap: normal,
+		),
+	),
+	$cadmin-text-truncate-inline
+);
+
+// C Prefers
+
+$cadmin-c-prefers-link-underline: () !default;
+$cadmin-c-prefers-link-underline: map-deep-merge(
+	(
+		'.c-prefers-link-underline': (
+			'[href]:not(.disabled):not([role="button"])': (
+				text-decoration: underline !important,
+			),
+			'.btn-monospaced, .nav-btn-monospaced, .nav-link-monospaced': (
+				'&[href]:not(.disabled):not([role="button"]):not([role="tab"])::after':
+				(
+					content: '\00a0\00a0\00a0',
+					position: absolute,
+					text-decoration: underline !important,
+				),
+			),
+			'.multi-step-item.active, .multi-step-item.complete, .multi-step-item.error, .dropdown':
+			(
+				'.multi-step-icon[href]:not([role="button"])::after': (
+					content: '\00a0\00a0\00a0',
+					position: absolute,
+					text-decoration: underline !important,
+				),
+			),
+			'.multi-step-item.disabled .multi-step-icon[href]:not([role="button"])::after':
+			(
+				text-decoration: none !important,
+			),
+		),
+	),
+	$cadmin-c-prefers-link-underline
+);
+
+$cadmin-c-prefers-letter-spacing: () !default;
+$cadmin-c-prefers-letter-spacing: map-deep-merge(
+	(
+		'.c-prefers-letter-spacing-1': (
+			letter-spacing: 1px !important,
+		),
+	),
+	$cadmin-c-prefers-letter-spacing
+);
+
+$cadmin-displays-c-prefers-reduced-motion: () !default;
+$cadmin-displays-c-prefers-reduced-motion: map-deep-merge(
+	(
+		d-block-c-prefers-reduced-motion: (
+			display: none !important,
+		),
+		d-inline-block-c-prefers-reduced-motion: (
+			display: none !important,
+		),
+		'@media (prefers-reduced-motion: reduce)': (
+			d-none-c-prefers-reduced-motion: (
+				display: none !important,
+			),
+			d-block-c-prefers-reduced-motion: (
+				display: block !important,
+			),
+			d-inline-block-c-prefers-reduced-motion: (
+				display: inline-block !important,
+			),
+		),
+		c-prefers-reduced-motion: (
+			d-none-c-prefers-reduced-motion: (
+				display: none !important,
+			),
+			d-block-c-prefers-reduced-motion: (
+				display: block !important,
+			),
+			d-inline-block-c-prefers-reduced-motion: (
+				display: inline-block !important,
+			),
+		),
+	),
+	$cadmin-displays-c-prefers-reduced-motion
+);
 
 $cadmin-c-prefers-reduced-motion: () !default;
 $cadmin-c-prefers-reduced-motion: map-merge(

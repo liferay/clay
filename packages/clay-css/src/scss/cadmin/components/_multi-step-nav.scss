@@ -31,17 +31,7 @@
 }
 
 .multi-step-title-center {
-	.multi-step-title {
-		margin-left: $cadmin-multi-step-icon-size * 0.5;
-		max-width: $cadmin-multi-step-title-max-width;
-		overflow: hidden;
-		position: relative;
-		text-align: center;
-		text-overflow: ellipsis;
-		transform: translateX(-50%);
-		white-space: nowrap;
-		width: auto;
-	}
+	@include clay-map-to-css($cadmin-multi-step-title-center);
 }
 
 .multi-step-item {

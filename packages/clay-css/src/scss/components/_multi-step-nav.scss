@@ -33,16 +33,12 @@
 }
 
 .multi-step-title-center {
+	@include clay-css($multi-step-title-center);
+
 	.multi-step-title {
-		margin-left: calc(#{$multi-step-icon-size} * 0.5);
-		max-width: $multi-step-title-max-width;
-		overflow: hidden;
-		position: relative;
-		text-align: center;
-		text-overflow: ellipsis;
-		transform: translateX(-50%);
-		white-space: nowrap;
-		width: auto;
+		@include clay-text-typography(
+			map-get($multi-step-title-center, multi-step-title)
+		);
 	}
 }
 
@@ -224,8 +220,7 @@
 }
 
 .multi-step-indicator {
-	position: relative;
-	width: $multi-step-indicator-width;
+	@include clay-css($multi-step-indicator);
 
 	.dropdown-item-indicator,
 	.dropdown-item-indicator-start,
@@ -242,15 +237,9 @@
 	}
 
 	.multi-step-indicator-label {
-		color: $multi-step-indicator-label-color;
-		font-size: $multi-step-indicator-label-font-size;
-		font-weight: $multi-step-indicator-label-font-weight;
-		left: 50%;
-		max-width: $multi-step-indicator-label-max-width;
-		position: absolute;
-		transform: translateX(-50%);
-
-		@include text-truncate;
+		@include clay-css(
+			map-get($multi-step-indicator, multi-step-indicator-label)
+		);
 	}
 }
 
