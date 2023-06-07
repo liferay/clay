@@ -822,6 +822,11 @@ export function TreeViewItemStack({
 							}
 						},
 					});
+				} else {
+					content = React.cloneElement(child as React.ReactElement, {
+						...(child as React.ReactElement)?.props,
+						id: (child as React.ReactElement)?.props?.id || labelId,
+					});
 				}
 
 				return (
