@@ -201,7 +201,7 @@ export function Picker<T>({
 
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
 	const menuRef = useRef<HTMLDivElement | null>(null);
-	const scrollRef = useRef<HTMLUListElement | null>(null);
+	const listRef = useRef<HTMLUListElement | null>(null);
 
 	const announcerAPI = useRef<AnnouncerAPI>(null);
 
@@ -224,7 +224,7 @@ export function Picker<T>({
 	const {accessibilityFocus, navigationProps} = useNavigation({
 		activation: 'manual',
 		active: activeDescendant,
-		containerRef: menuRef,
+		containerRef: listRef,
 		onNavigate: (tab) =>
 			setActiveDescendant((tab as HTMLElement).getAttribute('id')!),
 		orientation: 'vertical',
@@ -290,29 +290,54 @@ export function Picker<T>({
 		function onScroll(event: any) {
 			const scrollTop = event.target.scrollTop;
 			const scrollHeightMax =
-				event.target.scrollHeight - event.target.clientHeight;
+				event.target.scrollHeight -
+				event.target.clientHeight -
+				THRESHOLD;
 
 			if (
 				scrollTop >= THRESHOLD &&
-				scrollTop <= scrollHeightMax - THRESHOLD &&
+				scrollTop <= scrollHeightMax &&
 				isArrowVisible !== 'both'
 			) {
 				setIsArrowVisible('both');
 			} else if (scrollTop >= THRESHOLD && isArrowVisible !== 'top') {
 				setIsArrowVisible('top');
 			} else if (
-				scrollTop <= scrollHeightMax - THRESHOLD &&
+				scrollTop <= scrollHeightMax &&
 				isArrowVisible !== 'bottom'
 			) {
 				setIsArrowVisible('bottom');
 			}
 		}
 
-		scrollRef.current?.addEventListener('scroll', onScroll, true);
+		listRef.current?.addEventListener('scroll', onScroll, true);
 
 		return () =>
-			scrollRef.current?.removeEventListener('scroll', onScroll, true);
+			listRef.current?.removeEventListener('scroll', onScroll, true);
 	}, [active]);
+
+	const onMoveFocus = useCallback(
+		(
+			key: 'PageUp' | 'PageDown',
+			position: number,
+			list: Array<HTMLElement> | Array<React.Key>
+		) => {
+			if (position === -1) {
+				return;
+			}
+
+			const option =
+				list[key === 'PageUp' ? position - 10 : position + 10] ??
+				list[key === 'PageUp' ? 0 : list.length - 1];
+
+			accessibilityFocus(
+				option instanceof HTMLElement
+					? option
+					: document.getElementById(String(option))!
+			);
+		},
+		[accessibilityFocus]
+	);
 
 	const context = {
 		activeDescendant,
@@ -428,27 +453,15 @@ export function Picker<T>({
 
 							const list = getFocusableList(menuRef);
 
-							const position = list.findIndex(
-								(element) =>
-									element.getAttribute('id') ===
-									String(activeDescendant)
+							onMoveFocus(
+								event.key,
+								list.findIndex(
+									(element) =>
+										element.getAttribute('id') ===
+										String(activeDescendant)
+								),
+								list
 							);
-
-							if (position === -1) {
-								break;
-							}
-
-							const option =
-								list[
-									event.key === 'PageUp'
-										? position - 10
-										: position + 10
-								] ??
-								list[
-									event.key === 'PageUp' ? 0 : list.length - 1
-								];
-
-							accessibilityFocus(option);
 							break;
 						}
 						default: {
@@ -517,9 +530,23 @@ export function Picker<T>({
 							(isArrowVisible === 'top' ||
 								isArrowVisible === 'both') && (
 								<Button
+									aria-hidden="true"
 									aria-label="Scroll to top"
 									className="dropdown-item text-4 text-center"
 									displayType="unstyled"
+									onClick={() => {
+										const list = collection.getItems();
+
+										onMoveFocus(
+											'PageUp',
+											list.findIndex(
+												(item) =>
+													item === activeDescendant
+											),
+											list
+										);
+										triggerRef.current?.focus();
+									}}
 									tabIndex={-1}
 								>
 									<Icon symbol="caret-top" />
@@ -531,7 +558,7 @@ export function Picker<T>({
 							className="inline-scroller list-unstyled"
 							id={ariaControls}
 							onFocus={() => triggerRef.current?.focus()}
-							ref={scrollRef}
+							ref={listRef}
 							role="listbox"
 							tabIndex={-1}
 						>
@@ -544,9 +571,23 @@ export function Picker<T>({
 							(isArrowVisible === 'bottom' ||
 								isArrowVisible === 'both') && (
 								<Button
+									aria-hidden="true"
 									aria-label="Scroll to bottom"
 									className="dropdown-item text-4 text-center"
 									displayType="unstyled"
+									onClick={() => {
+										const list = collection.getItems();
+
+										onMoveFocus(
+											'PageDown',
+											list.findIndex(
+												(item) =>
+													item === activeDescendant
+											),
+											list
+										);
+										triggerRef.current?.focus();
+									}}
 									tabIndex={-1}
 								>
 									<Icon symbol="caret-bottom" />
