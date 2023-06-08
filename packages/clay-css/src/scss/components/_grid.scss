@@ -214,16 +214,6 @@
 
 	.container-form-lg {
 		@include clay-container($container-form-lg);
-
-		.menubar-vertical-expand-lg {
-			$container-form-lg-breakpoint-down: clay-breakpoint-prev(
-				map-get($container-form-lg, breakpoint-up)
-			);
-
-			@include media-breakpoint-down($container-form-lg-breakpoint-down) {
-				margin-top: -(map-get($container-form-lg, padding-top-mobile));
-			}
-		}
 	}
 
 	.container-view {

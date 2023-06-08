@@ -9,9 +9,7 @@ $menubar-vertical-expand-md: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			sm: (
-				margin-bottom: 1.5rem,
-				margin-left: math-sign($grid-gutter-width * 0.5),
-				margin-right: math-sign($grid-gutter-width * 0.5),
+				margin-bottom: 1rem,
 				max-width: none,
 				menubar-collapse: (
 					border-color: transparent,
@@ -38,11 +36,13 @@ $menubar-vertical-expand-md: map-deep-merge(
 					border-color: transparent,
 					border-style: solid,
 					border-width: 0.0625rem,
-					display: flex,
+					display: inline-flex,
 					height: 2rem,
 					padding-left: 0.5rem,
 					padding-right: 0.5rem,
 					c-inner: (
+						margin-left: -0.5rem,
+						margin-right: -0.5rem,
 						max-width: none,
 					),
 					lexicon-icon: (
@@ -75,7 +75,6 @@ $menubar-vertical-transparent-md: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			sm: (
-				background-color: $gray-100,
 				nav-link: (
 					border-radius: clay-enable-rounded(0),
 					color: $gray-900,
@@ -174,9 +173,7 @@ $menubar-vertical-expand-lg: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			md: (
-				margin-bottom: 1.5rem,
-				margin-left: math-sign($grid-gutter-width * 0.5),
-				margin-right: math-sign($grid-gutter-width * 0.5),
+				margin-bottom: 1rem,
 				max-width: none,
 				menubar-collapse: (
 					border-color: transparent,
@@ -203,11 +200,13 @@ $menubar-vertical-expand-lg: map-deep-merge(
 					border-color: transparent,
 					border-style: solid,
 					border-width: 0.0625rem,
-					display: flex,
+					display: inline-flex,
 					height: 2rem,
 					padding-left: 0.5rem,
 					padding-right: 0.5rem,
 					c-inner: (
+						margin-left: -0.5rem,
+						margin-right: -0.5rem,
 						max-width: none,
 					),
 					lexicon-icon: (
@@ -240,7 +239,6 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 		),
 		media-breakpoint-down: (
 			md: (
-				background-color: $gray-100,
 				nav-link: (
 					border-radius: clay-enable-rounded(0),
 					color: $gray-900,

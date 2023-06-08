@@ -114,7 +114,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 					),
 				),
 				menubar-toggler: (
-					color: $gray-900,
+					color: $gray-600,
 					font-size: 0.875rem,
 					font-weight: $font-weight-semi-bold,
 					transition: box-shadow 0.15s ease-in-out,
@@ -247,7 +247,7 @@ $menubar-vertical-transparent-lg: map-deep-merge(
 					),
 				),
 				menubar-toggler: (
-					color: $gray-900,
+					color: $gray-600,
 					font-size: 0.875rem,
 					font-weight: $font-weight-semi-bold,
 					transition: box-shadow 0.15s ease-in-out,
