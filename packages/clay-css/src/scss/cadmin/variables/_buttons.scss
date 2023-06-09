@@ -24,7 +24,7 @@ $cadmin-btn-active-box-shadow: null !default;
 $cadmin-btn-disabled-cursor: $cadmin-disabled-cursor !default;
 $cadmin-btn-disabled-opacity: $cadmin-component-disabled-opacity !default;
 
-$cadmin-btn-inline-item-font-size: 16px !default; // 16px
+$cadmin-btn-inline-item-font-size: null !default;
 
 $cadmin-btn-section-font-size: 11px !default; // 11px
 $cadmin-btn-section-font-weight: $cadmin-font-weight-semi-bold !default;
@@ -104,6 +104,9 @@ $cadmin-btn: map-deep-merge(
 			font-weight: $cadmin-btn-section-font-weight,
 			line-height: $cadmin-btn-section-line-height,
 		),
+		lexicon-icon: (
+			font-size: 16px,
+		),
 	),
 	$cadmin-btn
 );
@@ -115,7 +118,7 @@ $cadmin-btn-font-size-lg: $cadmin-font-size-lg !default; // 18px
 $cadmin-btn-line-height-lg: $cadmin-input-btn-line-height-lg !default;
 $cadmin-btn-padding-x-lg: 24px !default; // 24px
 $cadmin-btn-padding-y-lg: 9.5px !default; // 9.5px
-$cadmin-btn-inline-item-font-size-lg: $cadmin-font-size-lg !default; // 18px
+$cadmin-btn-inline-item-font-size-lg: null !default; // 18px
 $cadmin-btn-section-font-size-lg: 13px !default; // 13px
 
 $cadmin-btn-font-size-lg-mobile: null !default;
@@ -144,6 +147,9 @@ $cadmin-btn-lg: map-deep-merge(
 		),
 		btn-section: (
 			font-size: $cadmin-btn-section-font-size-lg,
+		),
+		lexicon-icon: (
+			font-size: $cadmin-font-size-lg,
 		),
 	),
 	$cadmin-btn-lg
@@ -331,6 +337,9 @@ $cadmin-btn-monospaced-sizes: map-deep-merge(
 			font-size: map-deep-get($cadmin-btn-sizes, btn-xs, font-size),
 			height: 1.5rem,
 			width: 1.4rem,
+			lexicon-icon: (
+				font-size: inherit,
+			),
 		),
 		btn-monospaced: $cadmin-btn-monospaced,
 		btn-monospaced-lg: $cadmin-btn-monospaced-lg,
