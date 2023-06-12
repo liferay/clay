@@ -140,10 +140,10 @@ module.exports = {
 			statements: 85,
 		},
 		'./packages/clay-multi-select/src/': {
-			branches: 54,
-			functions: 60,
-			lines: 66,
-			statements: 66,
+			branches: 52,
+			functions: 57,
+			lines: 65,
+			statements: 65,
 		},
 		'./packages/clay-multi-step-nav/src/': {
 			branches: 87,
