@@ -3,12 +3,21 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {Autocomplete, Item as AutocompleteItem} from '@clayui/autocomplete';
+import ACT, {
+	Autocomplete,
+	Item as AutocompleteItem,
+} from '@clayui/autocomplete';
 import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayInput} from '@clayui/form';
-import {InternalDispatch, sub, useControlledState, useId} from '@clayui/shared';
+import {
+	FocusScope,
+	InternalDispatch,
+	sub,
+	useControlledState,
+	useId,
+} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {Labels} from './Labels';
 
@@ -206,7 +215,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 	(
 		{
 			allowsCustomLabel = true,
-			alignmentByViewport: _,
+			alignmentByViewport,
 			children,
 			clearAllTitle = 'Clear All',
 			closeButtonAriaLabel = 'Remove {0}',
@@ -230,7 +239,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 				value: 'value',
 			},
 			loadingState,
-			menuRenderer: _m,
+			menuRenderer: MenuRenderer,
 			messages = {
 				loading: 'Loading...',
 				notFound: 'No results found',
@@ -272,6 +281,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			value: externalValue ?? inputValue,
 		});
 
+		// Backward compatibility with the `menuRenderer` API.
+		const [active, setActive] = useState(false);
+
 		const inputElementRef =
 			(ref as React.RefObject<HTMLInputElement>) || inputRef;
 
@@ -279,108 +291,169 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 
 		const hasAsyncItems = !!onLoadMore || typeof loadingState === 'number';
 
+		const Container = MenuRenderer ? FocusScope : React.Fragment;
+		const containerProps = MenuRenderer ? {arrowKeysUpDown: false} : {};
+
+		// Throws the warning only when the component is mounted and avoids
+		// throwing it every time a rerender happens.
+		useEffect(() => {
+			if (MenuRenderer) {
+				console.warn(
+					`<ClayMultiSelect />: You are using 'menuRenderer' which is deprecated and missing the new features and improvements that have been implemented in the component try to migrate to the new composition based API to custom list items.`
+				);
+			}
+		}, []);
+
+		useEffect(() => {
+			// Backward compatibility with the `menuRenderer` API.
+			if (MenuRenderer && sourceItems) {
+				setActive(!!value && sourceItems.length !== 0);
+			}
+		}, [value]);
+
 		return (
-			<div
-				className={classNames(
-					'form-control form-control-tag-group input-group',
-					{
-						focus: isFocused && isValid,
-						[`form-control-tag-group-${size}`]: size,
-					}
-				)}
-				ref={containerRef}
-			>
-				<Autocomplete
-					{...otherProps}
-					allowsCustomLabel={allowsCustomLabel}
-					ariaDescriptionId={ariaDescriptionId}
-					as={Labels}
-					closeButtonAriaLabel={closeButtonAriaLabel}
-					containerElementRef={containerRef}
-					defaultItems={!hasAsyncItems ? sourceItems : undefined}
-					filterKey={locator.label}
-					inputName={inputName}
-					items={hasAsyncItems ? sourceItems : undefined}
-					labels={items}
-					lastChangesRef={lastChangesRef}
-					locator={locator}
-					menuTrigger="focus"
-					messages={messages}
-					onChange={setValue}
-					onFocusChange={setIsFocused}
-					onItemsChange={hasAsyncItems ? () => {} : undefined}
-					onLabelsChange={setItems}
-					placeholder={placeholder}
-					ref={inputElementRef}
-					spritemap={spritemap}
-					value={value}
-				>
-					{(item: Item) => {
-						if (children && typeof children === 'function') {
-							return React.cloneElement(children(item), {
-								onClick: (event) => {
-									event.preventDefault();
-
-									setItems([...items, item]);
-									setValue('');
-								},
-							});
+			<Container {...containerProps}>
+				<div
+					className={classNames(
+						'form-control form-control-tag-group input-group',
+						{
+							focus: isFocused && isValid,
+							[`form-control-tag-group-${size}`]: size,
 						}
+					)}
+					ref={containerRef}
+				>
+					<Autocomplete
+						{...otherProps}
+						active={MenuRenderer ? false : undefined}
+						allowsCustomLabel={allowsCustomLabel}
+						ariaDescriptionId={ariaDescriptionId}
+						as={Labels}
+						closeButtonAriaLabel={closeButtonAriaLabel}
+						containerElementRef={containerRef}
+						defaultItems={!hasAsyncItems ? sourceItems : undefined}
+						filterKey={locator.label}
+						inputName={inputName}
+						items={hasAsyncItems ? sourceItems : undefined}
+						labels={items}
+						lastChangesRef={lastChangesRef}
+						locator={locator}
+						menuTrigger="focus"
+						messages={messages}
+						onActiveChange={MenuRenderer ? () => {} : undefined}
+						onChange={setValue}
+						onFocus={
+							MenuRenderer && sourceItems
+								? () =>
+										setActive(
+											!!value && sourceItems.length !== 0
+										)
+								: undefined
+						}
+						onFocusChange={setIsFocused}
+						onItemsChange={hasAsyncItems ? () => {} : undefined}
+						onLabelsChange={setItems}
+						placeholder={placeholder}
+						ref={inputElementRef}
+						spritemap={spritemap}
+						value={value}
+					>
+						{(item: Item) => {
+							if (children && typeof children === 'function') {
+								return React.cloneElement(children(item), {
+									onClick: (event) => {
+										event.preventDefault();
 
-						return (
-							<AutocompleteItem
-								key={item[locator.value]}
-								onClick={(event) => {
-									event.preventDefault();
+										setItems([...items, item]);
+										setValue('');
+									},
+								});
+							}
 
+							return (
+								<AutocompleteItem
+									key={item[locator.value]}
+									onClick={(event) => {
+										event.preventDefault();
+
+										setItems([...items, item]);
+										setValue('');
+									}}
+								>
+									{item[locator.label]}
+								</AutocompleteItem>
+							);
+						}}
+					</Autocomplete>
+
+					{sourceItems && MenuRenderer && sourceItems.length > 0 && (
+						<ACT.DropDown
+							active={active}
+							alignElementRef={containerRef}
+							alignmentByViewport={alignmentByViewport}
+							onActiveChange={setActive}
+						>
+							<MenuRenderer
+								inputValue={value}
+								locator={locator}
+								onItemClick={(item) => {
 									setItems([...items, item]);
 									setValue('');
+
+									if (inputElementRef.current) {
+										inputElementRef.current.focus();
+									}
 								}}
-							>
-								{item[locator.label]}
-							</AutocompleteItem>
-						);
-					}}
-				</Autocomplete>
+								sourceItems={sourceItems}
+								value={value}
+							/>
+						</ACT.DropDown>
+					)}
 
-				{!disabled && !disabledClearAll && (value || items.length > 0) && (
-					<ClayInput.GroupItem shrink>
-						<ClayButtonWithIcon
-							aria-label={clearAllTitle}
-							borderless
-							className="component-action"
-							displayType="secondary"
-							onClick={() => {
-								if (onClearAllButtonClick) {
-									onClearAllButtonClick();
-								} else {
-									setItems([]);
-									setValue('');
-								}
+					{!disabled &&
+						!disabledClearAll &&
+						(value || items.length > 0) && (
+							<ClayInput.GroupItem shrink>
+								<ClayButtonWithIcon
+									aria-label={clearAllTitle}
+									borderless
+									className="component-action"
+									displayType="secondary"
+									onClick={() => {
+										if (onClearAllButtonClick) {
+											onClearAllButtonClick();
+										} else {
+											setItems([]);
+											setValue('');
+										}
 
-								if (inputElementRef.current) {
-									inputElementRef.current.focus();
-								}
-							}}
-							outline
-							spritemap={spritemap}
-							symbol="times-circle"
-							title={clearAllTitle}
-						/>
-					</ClayInput.GroupItem>
-				)}
+										if (inputElementRef.current) {
+											inputElementRef.current.focus();
+										}
+									}}
+									outline
+									spritemap={spritemap}
+									symbol="times-circle"
+									title={clearAllTitle}
+								/>
+							</ClayInput.GroupItem>
+						)}
 
-				<div className="sr-only">
-					<span id={ariaDescriptionId}>{hotkeysDescription}</span>
-					<span aria-live="polite" aria-relevant="text">
-						{lastChangesRef.current
-							? sub(liveRegion[lastChangesRef.current.action], [
-									lastChangesRef.current.label,
-							  ])
-							: null}
-					</span>
+					<div className="sr-only">
+						<span id={ariaDescriptionId}>{hotkeysDescription}</span>
+						<span aria-live="polite" aria-relevant="text">
+							{lastChangesRef.current
+								? sub(
+										liveRegion[
+											lastChangesRef.current.action
+										],
+										[lastChangesRef.current.label]
+								  )
+								: null}
+						</span>
+					</div>
 				</div>
-			</div>
+			</Container>
 		);
 	}
 );

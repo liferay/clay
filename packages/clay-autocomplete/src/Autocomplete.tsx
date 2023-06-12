@@ -473,7 +473,7 @@ export const Autocomplete = React.forwardRef<
 					triggerRef={inputElementRef}
 				>
 					<div
-						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
+						className="dropdown-menu dropdown-menu-select show"
 						ref={menuRef}
 						role="presentation"
 						style={{
