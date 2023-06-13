@@ -7,7 +7,7 @@ import {createContext, useContext} from 'react';
 
 import type {ChildrenFunction} from '../collection';
 
-type VertivalNavContextProps = {
+type VerticalNavContextProps = {
 	activeKey?: React.Key | null;
 	ariaCurrent?: 'page' | null;
 	spritemap?: string;
@@ -21,10 +21,10 @@ type VertivalNavContextProps = {
 	toggle: (key: React.Key) => void;
 };
 
-export const VertivalNavContext = createContext<VertivalNavContextProps>(
-	{} as VertivalNavContextProps
+export const VerticalNavContext = createContext<VerticalNavContextProps>(
+	{} as VerticalNavContextProps
 );
 
 export function useVertical() {
-	return useContext(VertivalNavContext);
+	return useContext(VerticalNavContext);
 }
