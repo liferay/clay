@@ -408,6 +408,7 @@ export function Picker<T>({
 				ref={triggerRef}
 				role="combobox"
 				tabIndex={0}
+				type="button"
 			>
 				{selectedKey
 					? collection.getItem(selectedKey)?.value
