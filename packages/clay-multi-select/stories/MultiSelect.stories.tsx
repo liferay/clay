@@ -83,9 +83,7 @@ Default.args = {
 };
 
 export const ComparingItems = () => {
-	const [items, setItems] = useState<
-		React.ComponentProps<typeof ClayMultiSelect>['items']
-	>([
+	const [items, setItems] = useState([
 		{
 			label: 'one',
 			value: '1',

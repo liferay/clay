@@ -360,8 +360,18 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 					>
 						{(item: Item) => {
 							if (children && typeof children === 'function') {
-								return React.cloneElement(children(item), {
+								const child = children(item);
+
+								return React.cloneElement(child, {
 									onClick: (event) => {
+										if (child.props.onClick) {
+											child.props.onClick(event);
+										}
+
+										if (event.defaultPrevented) {
+											return;
+										}
+
 										event.preventDefault();
 
 										setItems([...items, item]);
