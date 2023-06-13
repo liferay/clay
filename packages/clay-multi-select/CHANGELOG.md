@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.97.0](https://github.com/liferay/clay/compare/v3.96.1...v3.97.0) (2023-06-13)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** explicitly add the `active` API in the component's typing ([e956828](https://github.com/liferay/clay/commit/e95682814d3ec7ab45e65e41bba291a2da023e74))
+-   **@clayui/multi-select:** maintains backwards compatibility with the `menuRenderer` API but without the new features ([63ffb84](https://github.com/liferay/clay/commit/63ffb8449ec2c8e14d433be360bae8b29a6962e3))
+
+### Features
+
+-   **@clayui/multi-select:** adds the possibility to ignore the item's default behavior ([5412700](https://github.com/liferay/clay/commit/5412700e3118575588907ff551a27c594d9fe4d8))
+-   **@clayui/multi-select:** deprecated the `liveRegion` and `hotkeysDescription` APIs to use the `messages` API ([2cf0766](https://github.com/liferay/clay/commit/2cf07669bc295918e4bacbbaaffc1c4996b67a65))
+
 ## [3.96.1](https://github.com/liferay/clay/compare/v3.96.0...v3.96.1) (2023-05-31)
 
 ### Bug Fixes

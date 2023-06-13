@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.97.0](https://github.com/liferay/clay/compare/v3.96.1...v3.97.0) (2023-06-13)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin btn-sm icons should be 16px x 16px ([ca05132](https://github.com/liferay/clay/commit/ca05132d1b37e451c212906eee7a22428e6cfebd))
+* **@clayui/css:** Menubar removes negative margins in mobile and sync up Cadmin styles with Atlas ([a490fe6](https://github.com/liferay/clay/commit/a490fe661f572b4049273dd4251f98bb9fbf2904))
+* **@clayui/css:** Menubar update hover and active borders ([297a214](https://github.com/liferay/clay/commit/297a214a34f57ff558fea7c69b0b89ee058e8916))
+* **@clayui/css:** Mixins clay-css output truncated text override .c-prefers-expanded-text selectors ([8dfeafd](https://github.com/liferay/clay/commit/8dfeafddb3d726ee7cee722fa2893c844667d645))
+* **@clayui/css:** Mixins clay-link add more options to customize in show state ([2c83bfd](https://github.com/liferay/clay/commit/2c83bfd06d0e6af36ea518580fad099c1e8ee21e))
+* **@clayui/css:** Mixins text-truncate should use clay-css mixin to output .c-prefers-expanded-text selectors ([d0d7fdd](https://github.com/liferay/clay/commit/d0d7fdd5f01edd6f3740aad8ffc39e9280ddf811))
+* **@clayui/css:** More complex input-groups should accommodate inset focus styles ([3061ded](https://github.com/liferay/clay/commit/3061ded11e39ac15b8c75b7f514eb0c91f253b63))
+* **@clayui/css:** Pagination update hover and active borders ([abdce0e](https://github.com/liferay/clay/commit/abdce0e2fa2258d51327c0781c43ebbbd16eb9bc))
+* **@clayui/css:** Remove dependence on _nav variables in _icons.scss ([bf8cb83](https://github.com/liferay/clay/commit/bf8cb83ef81309478cc1776736bf8cd0cc6e8aa1))
+* **@clayui/css:** Transitions should work for .input-group-item.focus ([d3acc25](https://github.com/liferay/clay/commit/d3acc259c71b02b50a93a3d527ed3be4afb3902e))
+
+
+### Features
+
+* **@clayui/css:** Adds global classes to configure accessibility ([232e15a](https://github.com/liferay/clay/commit/232e15ad8700d89ec9c004653a5a188bcbe25fa9))
+* **@clayui/css:** SVG Icon adds accessibility.svg ([f2e5ff5](https://github.com/liferay/clay/commit/f2e5ff506288f86e236274fb46dd6f65fb4a33da))
+* **@clayui/css:** SVG Icons adds stars.svg ([dafbfbd](https://github.com/liferay/clay/commit/dafbfbd0d8c5244cbcc7f6a844504128304c2db1))
+
+
+
+
+
 ## [3.95.2](https://github.com/liferay/clay/compare/v3.95.0...v3.95.2) (2023-05-17)
 
 

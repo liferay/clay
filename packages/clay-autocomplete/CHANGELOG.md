@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.97.0](https://github.com/liferay/clay/compare/v3.96.1...v3.97.0) (2023-06-13)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** removes unnecessary use of the `dropdown-menu-indicator-start` CSS class ([ce09cd8](https://github.com/liferay/clay/commit/ce09cd814bf547e3437a45956f315a0588c52114))
+-   **@clayui/multi-select:** explicitly add the `active` API in the component's typing ([e956828](https://github.com/liferay/clay/commit/e95682814d3ec7ab45e65e41bba291a2da023e74))
+
 ## [3.96.1](https://github.com/liferay/clay/compare/v3.96.0...v3.96.1) (2023-05-31)
 
 ### Bug Fixes

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.97.0](https://github.com/liferay/clay/compare/v3.96.1...v3.97.0) (2023-06-13)
+
+### Bug Fixes
+
+-   **@clayui/core:** Add the missing id so that the screen reader makes a correct reading ([ff5df5c](https://github.com/liferay/clay/commit/ff5df5c29b6a37a19c1c6cb7537b6e9c81f28603))
+-   **@clayui/core:** fix error when submitting the form ([75e07fe](https://github.com/liferay/clay/commit/75e07fef03a3695d14bef73cba84ff585193883e))
+-   **@clayui/core:** fix typo ([665a5e3](https://github.com/liferay/clay/commit/665a5e3c6c6e7199fea8dcfaf7c3cdc5441bb915))
+
 # [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
 
 ### Bug Fixes
