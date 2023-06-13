@@ -16,7 +16,7 @@ import React, {useCallback, useMemo, useRef, useState} from 'react';
 import {Collection, useCollection} from '../collection';
 import {Nav} from '../nav';
 import {Item} from './Item';
-import {VertivalNavContext} from './context';
+import {VerticalNavContext} from './context';
 
 import type {ChildrenFunction} from '../collection';
 
@@ -265,7 +265,7 @@ function VerticalNav<T>({
 				ref={containerRef}
 			>
 				<Nav aria-orientation="vertical" nested role="menubar">
-					<VertivalNavContext.Provider
+					<VerticalNavContext.Provider
 						value={{
 							activeKey:
 								active && collection.hasItem(active)
@@ -284,7 +284,7 @@ function VerticalNav<T>({
 						}}
 					>
 						<Collection<T> collection={collection} />
-					</VertivalNavContext.Provider>
+					</VerticalNavContext.Provider>
 				</Nav>
 			</div>
 		</nav>
