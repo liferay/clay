@@ -278,11 +278,11 @@ export const Autocomplete = React.forwardRef<
 						children.props.onClick(event);
 					}
 
-					setActive(false);
-
 					if (event.defaultPrevented) {
 						return;
 					}
+
+					setActive(false);
 
 					currentItemSelected.current = itemValue;
 					setValue(itemValue);

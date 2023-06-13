@@ -58,6 +58,11 @@ export interface IProps<T>
 		>,
 		Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize' | 'items'> {
 	/**
+	 * Flag to indicate if menu is showing or not.
+	 */
+	active?: boolean;
+
+	/**
 	 * Whether MultiSelect allows an input value not corresponding to an item
 	 * to be added.
 	 */
@@ -78,6 +83,11 @@ export interface IProps<T>
 	 * Aria label for the Close button of the labels.
 	 */
 	closeButtonAriaLabel?: string;
+
+	/**
+	 * The initial value of the active state (uncontrolled).
+	 */
+	defaultActive?: boolean;
 
 	/**
 	 * Property to set the default value (uncontrolled).
@@ -164,6 +174,11 @@ export interface IProps<T>
 	messages?: Messages;
 
 	/**
+	 * Callback for when the active state changes (controlled).
+	 */
+	onActiveChange?: InternalDispatch<boolean>;
+
+	/**
 	 * Callback for when the clear all button is clicked
 	 */
 	onClearAllButtonClick?: () => void;
@@ -214,11 +229,13 @@ export interface IProps<T>
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 	(
 		{
+			active: externalActive,
 			allowsCustomLabel = true,
 			alignmentByViewport,
 			children,
 			clearAllTitle = 'Clear All',
 			closeButtonAriaLabel = 'Remove {0}',
+			defaultActive,
 			defaultItems = [],
 			defaultValue = '',
 			disabled,
@@ -244,6 +261,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 				loading: 'Loading...',
 				notFound: 'No results found',
 			},
+			onActiveChange,
 			onChange,
 			onClearAllButtonClick,
 			onItemsChange,
@@ -281,8 +299,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			value: externalValue ?? inputValue,
 		});
 
-		// Backward compatibility with the `menuRenderer` API.
-		const [active, setActive] = useState(false);
+		const [active, setActive] = useControlledState({
+			defaultName: 'defaultActive',
+			defaultValue: defaultActive,
+			handleName: 'onActiveChange',
+			name: 'active',
+			onChange: onActiveChange,
+			value: externalActive,
+		});
 
 		const inputElementRef =
 			(ref as React.RefObject<HTMLInputElement>) || inputRef;
@@ -325,7 +349,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 				>
 					<Autocomplete
 						{...otherProps}
-						active={MenuRenderer ? false : undefined}
+						active={MenuRenderer ? false : active}
 						allowsCustomLabel={allowsCustomLabel}
 						ariaDescriptionId={ariaDescriptionId}
 						as={Labels}
@@ -340,7 +364,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 						locator={locator}
 						menuTrigger="focus"
 						messages={messages}
-						onActiveChange={MenuRenderer ? () => {} : undefined}
+						onActiveChange={MenuRenderer ? () => {} : setActive}
 						onChange={setValue}
 						onFocus={
 							MenuRenderer && sourceItems
@@ -374,6 +398,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 
 										event.preventDefault();
 
+										setActive(false);
 										setItems([...items, item]);
 										setValue('');
 									},
@@ -386,6 +411,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 									onClick={(event) => {
 										event.preventDefault();
 
+										setActive(false);
 										setItems([...items, item]);
 										setValue('');
 									}}
