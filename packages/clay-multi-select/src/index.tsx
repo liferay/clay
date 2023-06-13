@@ -27,11 +27,6 @@ import type {Item, LastChangeLiveRegion, Locator} from './types';
 
 type Size = null | 'sm';
 
-type Messages = {
-	loading: string;
-	notFound: string;
-};
-
 interface IMenuRendererProps {
 	/**
 	 * Value of input
@@ -58,6 +53,11 @@ export interface IProps<T>
 		>,
 		Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize' | 'items'> {
 	/**
+	 * Flag to indicate if menu is showing or not.
+	 */
+	active?: boolean;
+
+	/**
 	 * Whether MultiSelect allows an input value not corresponding to an item
 	 * to be added.
 	 */
@@ -78,6 +78,11 @@ export interface IProps<T>
 	 * Aria label for the Close button of the labels.
 	 */
 	closeButtonAriaLabel?: string;
+
+	/**
+	 * The initial value of the active state (uncontrolled).
+	 */
+	defaultActive?: boolean;
 
 	/**
 	 * Property to set the default value (uncontrolled).
@@ -114,6 +119,7 @@ export interface IProps<T>
 	/**
 	 * Defines the description of hotkeys for the component, use this
 	 * to handle internationalization.
+	 * @deprecated since v3.96.1 - use `messages` instead.
 	 */
 	hotkeysDescription?: string;
 
@@ -147,6 +153,7 @@ export interface IProps<T>
 	/**
 	 * The off-screen live region informs screen reader users the result of
 	 * removing or adding a label.
+	 * @deprecated since v3.96.1 - use `messages` instead.
 	 */
 	liveRegion?: {
 		added: string;
@@ -161,7 +168,24 @@ export interface IProps<T>
 	/**
 	 * Messages for autocomplete.
 	 */
-	messages?: Messages;
+	messages?: {
+		loading: string;
+		notFound: string;
+
+		// Defines the description of hotkeys for the component, use this
+		// to handle internationalization.
+		hotkeys: string;
+
+		// The off-screen live region informs screen reader users the result of
+		// removing or adding a label.
+		labelAdded: string;
+		labelRemoved: string;
+	};
+
+	/**
+	 * Callback for when the active state changes (controlled).
+	 */
+	onActiveChange?: InternalDispatch<boolean>;
 
 	/**
 	 * Callback for when the clear all button is clicked
@@ -214,25 +238,24 @@ export interface IProps<T>
 const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 	(
 		{
+			active: externalActive,
 			allowsCustomLabel = true,
 			alignmentByViewport,
 			children,
 			clearAllTitle = 'Clear All',
 			closeButtonAriaLabel = 'Remove {0}',
+			defaultActive,
 			defaultItems = [],
 			defaultValue = '',
 			disabled,
 			disabledClearAll,
-			hotkeysDescription = 'Press backspace to delete the current row.',
+			hotkeysDescription,
 			inputName,
 			inputValue,
 			isLoading: _i,
 			isValid = true,
 			items: externalItems,
-			liveRegion = {
-				added: 'Label {0} added to the list',
-				removed: 'Label {0} removed to the list',
-			},
+			liveRegion,
 			locator = {
 				id: 'key',
 				label: 'label',
@@ -241,9 +264,13 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			loadingState,
 			menuRenderer: MenuRenderer,
 			messages = {
+				hotkeys: 'Press backspace to delete the current row.',
+				labelAdded: 'Label {0} added to the list',
+				labelRemoved: 'Label {0} removed to the list',
 				loading: 'Loading...',
 				notFound: 'No results found',
 			},
+			onActiveChange,
 			onChange,
 			onClearAllButtonClick,
 			onItemsChange,
@@ -281,8 +308,14 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			value: externalValue ?? inputValue,
 		});
 
-		// Backward compatibility with the `menuRenderer` API.
-		const [active, setActive] = useState(false);
+		const [active, setActive] = useControlledState({
+			defaultName: 'defaultActive',
+			defaultValue: defaultActive,
+			handleName: 'onActiveChange',
+			name: 'active',
+			onChange: onActiveChange,
+			value: externalActive,
+		});
 
 		const inputElementRef =
 			(ref as React.RefObject<HTMLInputElement>) || inputRef;
@@ -325,7 +358,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 				>
 					<Autocomplete
 						{...otherProps}
-						active={MenuRenderer ? false : undefined}
+						active={MenuRenderer ? false : active}
 						allowsCustomLabel={allowsCustomLabel}
 						ariaDescriptionId={ariaDescriptionId}
 						as={Labels}
@@ -340,7 +373,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 						locator={locator}
 						menuTrigger="focus"
 						messages={messages}
-						onActiveChange={MenuRenderer ? () => {} : undefined}
+						onActiveChange={MenuRenderer ? () => {} : setActive}
 						onChange={setValue}
 						onFocus={
 							MenuRenderer && sourceItems
@@ -360,10 +393,21 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 					>
 						{(item: Item) => {
 							if (children && typeof children === 'function') {
-								return React.cloneElement(children(item), {
+								const child = children(item);
+
+								return React.cloneElement(child, {
 									onClick: (event) => {
+										if (child.props.onClick) {
+											child.props.onClick(event);
+										}
+
+										if (event.defaultPrevented) {
+											return;
+										}
+
 										event.preventDefault();
 
+										setActive(false);
 										setItems([...items, item]);
 										setValue('');
 									},
@@ -376,6 +420,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 									onClick={(event) => {
 										event.preventDefault();
 
+										setActive(false);
 										setItems([...items, item]);
 										setValue('');
 									}}
@@ -440,13 +485,21 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 						)}
 
 					<div className="sr-only">
-						<span id={ariaDescriptionId}>{hotkeysDescription}</span>
+						<span id={ariaDescriptionId}>
+							{hotkeysDescription ?? messages.hotkeys}
+						</span>
 						<span aria-live="polite" aria-relevant="text">
 							{lastChangesRef.current
 								? sub(
-										liveRegion[
-											lastChangesRef.current.action
-										],
+										liveRegion
+											? liveRegion[
+													lastChangesRef.current
+														.action
+											  ]
+											: lastChangesRef.current.action ===
+											  'added'
+											? messages.labelAdded
+											: messages.labelRemoved,
 										[lastChangesRef.current.label]
 								  )
 								: null}
