@@ -117,7 +117,13 @@
 
 			.dropdown-item {
 				@include clay-dropdown-item-variant(
-					map-deep-get($map, dropdown-item)
+					map-get($map, dropdown-item)
+				);
+			}
+
+			.dropdown-item-scroll {
+				@include clay-dropdown-item-variant(
+					map-get($map, dropdown-item-scroll)
 				);
 			}
 
