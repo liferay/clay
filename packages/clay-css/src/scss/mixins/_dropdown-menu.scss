@@ -127,6 +127,18 @@
 				);
 			}
 
+			.dropdown-item-scroll-down {
+				@include clay-dropdown-item-variant(
+					map-get($map, dropdown-item-scroll-down)
+				);
+			}
+
+			.dropdown-item-scroll-up {
+				@include clay-dropdown-item-variant(
+					map-get($map, dropdown-item-scroll-up)
+				);
+			}
+
 			.dropdown-divider {
 				@include clay-css(map-get($map, dropdown-divider));
 			}
@@ -189,6 +201,10 @@
 						)
 					);
 				}
+			}
+
+			.inline-scroller {
+				@include clay-css(map-get($map, inline-scroller));
 			}
 		}
 	}
@@ -724,6 +740,20 @@
 					&::after {
 						@include clay-css(map-get($disabled-active, after));
 					}
+				}
+			}
+
+			&.show {
+				$show: setter(map-get($map, show), ());
+
+				@include clay-css($show);
+
+				&::before {
+					@include clay-css(map-get($show, before));
+				}
+
+				&::after {
+					@include clay-css(map-get($show, after));
 				}
 			}
 

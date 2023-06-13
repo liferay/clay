@@ -969,6 +969,55 @@ $dropdown-menu-palette: map-deep-merge(
 					padding-right: 1.5rem,
 				),
 			),
+			dropdown-item-scroll: (
+				font-size: 1rem,
+				height: 2rem,
+				padding: 0,
+				position: absolute,
+				text-align: center,
+				z-index: 1,
+				hover: (
+					background-color: $dropdown-link-hover-bg,
+					background-image: none,
+					color: $dropdown-link-hover-color,
+				),
+				focus: (
+					background-color: $dropdown-link-hover-bg,
+					background-image: none,
+					color: $dropdown-link-hover-color,
+				),
+				active: (
+					background-color: $dropdown-link-active-bg,
+					background-image: none,
+					color: $dropdown-link-active-color,
+				),
+				disabled: (
+					background-color: transparent,
+					background-image: none,
+					color: $dropdown-link-disabled-color,
+					cursor: $dropdown-item-disabled-cursor,
+				),
+			),
+			dropdown-item-scroll-up: (
+				background-image: (
+					linear-gradient(
+						to bottom,
+						rgba(255, 255, 255, 1) 84%,
+						rgba(255, 255, 255, 0) 100%
+					),
+				),
+				top: $dropdown-padding-y,
+			),
+			dropdown-item-scroll-down: (
+				background-image: (
+					linear-gradient(
+						to top,
+						rgba(255, 255, 255, 1) 84%,
+						rgba(255, 255, 255, 0) 100%
+					),
+				),
+				bottom: $dropdown-padding-y,
+			),
 			dropdown-divider: (
 				margin: 0.3125rem 0,
 			),
