@@ -9,6 +9,7 @@ exports[`Picker basic rendering render dynamic content 1`] = `
     class="form-control form-control-select form-control-select-secondary"
     role="combobox"
     tabindex="0"
+    type="button"
   >
     Select an option
   </button>
@@ -49,6 +50,7 @@ exports[`Picker basic rendering render static content 1`] = `
       class="form-control form-control-select form-control-select-secondary"
       role="combobox"
       tabindex="0"
+      type="button"
     >
       Select an option
     </button>
@@ -107,6 +109,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
       role="combobox"
       style=""
       tabindex="0"
+      type="button"
     >
       Select an option
     </button>
