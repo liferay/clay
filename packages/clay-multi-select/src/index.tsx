@@ -27,11 +27,6 @@ import type {Item, LastChangeLiveRegion, Locator} from './types';
 
 type Size = null | 'sm';
 
-type Messages = {
-	loading: string;
-	notFound: string;
-};
-
 interface IMenuRendererProps {
 	/**
 	 * Value of input
@@ -124,6 +119,7 @@ export interface IProps<T>
 	/**
 	 * Defines the description of hotkeys for the component, use this
 	 * to handle internationalization.
+	 * @deprecated since v3.96.1 - use `messages` instead.
 	 */
 	hotkeysDescription?: string;
 
@@ -157,6 +153,7 @@ export interface IProps<T>
 	/**
 	 * The off-screen live region informs screen reader users the result of
 	 * removing or adding a label.
+	 * @deprecated since v3.96.1 - use `messages` instead.
 	 */
 	liveRegion?: {
 		added: string;
@@ -171,7 +168,19 @@ export interface IProps<T>
 	/**
 	 * Messages for autocomplete.
 	 */
-	messages?: Messages;
+	messages?: {
+		loading: string;
+		notFound: string;
+
+		// Defines the description of hotkeys for the component, use this
+		// to handle internationalization.
+		hotkeys: string;
+
+		// The off-screen live region informs screen reader users the result of
+		// removing or adding a label.
+		labelAdded: string;
+		labelRemoved: string;
+	};
 
 	/**
 	 * Callback for when the active state changes (controlled).
@@ -240,16 +249,13 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			defaultValue = '',
 			disabled,
 			disabledClearAll,
-			hotkeysDescription = 'Press backspace to delete the current row.',
+			hotkeysDescription,
 			inputName,
 			inputValue,
 			isLoading: _i,
 			isValid = true,
 			items: externalItems,
-			liveRegion = {
-				added: 'Label {0} added to the list',
-				removed: 'Label {0} removed to the list',
-			},
+			liveRegion,
 			locator = {
 				id: 'key',
 				label: 'label',
@@ -258,6 +264,9 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			loadingState,
 			menuRenderer: MenuRenderer,
 			messages = {
+				hotkeys: 'Press backspace to delete the current row.',
+				labelAdded: 'Label {0} added to the list',
+				labelRemoved: 'Label {0} removed to the list',
 				loading: 'Loading...',
 				notFound: 'No results found',
 			},
@@ -476,13 +485,21 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 						)}
 
 					<div className="sr-only">
-						<span id={ariaDescriptionId}>{hotkeysDescription}</span>
+						<span id={ariaDescriptionId}>
+							{hotkeysDescription ?? messages.hotkeys}
+						</span>
 						<span aria-live="polite" aria-relevant="text">
 							{lastChangesRef.current
 								? sub(
-										liveRegion[
-											lastChangesRef.current.action
-										],
+										liveRegion
+											? liveRegion[
+													lastChangesRef.current
+														.action
+											  ]
+											: lastChangesRef.current.action ===
+											  'added'
+											? messages.labelAdded
+											: messages.labelRemoved,
 										[lastChangesRef.current.label]
 								  )
 								: null}
