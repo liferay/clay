@@ -50,9 +50,13 @@
 /// A Bootstrap 4 mixin for displaying ellipsis if text overflows its container. Requires other CSS properties to function properly depending on the `display` property. Clay CSS `truncate-text-inline` with `text-truncate` is a more fail safe pattern.
 
 @mixin text-truncate() {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	@include clay-css(
+		(
+			overflow: hidden,
+			text-overflow: ellipsis,
+			white-space: nowrap,
+		)
+	);
 }
 
 // Highlight inline text

@@ -292,6 +292,30 @@
 				} @else if ($key == 'overflow-wrap') {
 					overflow-wrap: $value;
 					word-wrap: $value;
+				} @else if ($key == 'text-overflow') {
+					@if ($value == 'ellipsis') {
+						text-overflow: $value;
+
+						@at-root {
+							$selector: '.c-prefers-expanded-text &';
+
+							@if (variable-exists(cadmin-selector)) {
+								$selector: clay-insert-after(
+									'.cadmin ',
+									'.c-prefers-expanded-text '
+								);
+								$selector: clay-insert-after(
+									'.cadmin.',
+									'c-prefers-expanded-text.',
+									$selector
+								);
+							}
+
+							#{$selector} {
+								@extend %c-prefers-expanded-text !optional;
+							}
+						}
+					}
 				} @else if ($key == 'transition') {
 					transition: $value;
 
@@ -344,7 +368,7 @@
 	@each $key, $value in $map {
 		@if not clay-is-map-unset($value) {
 			@if (type-of($value) == 'map') {
-				$valid-prefixes: '#', '&', '.', '>', '@';
+				$valid-prefixes: '#', '&', '.', '>', '@', '~', '+', '[';
 
 				$selector: if(
 					index($valid-prefixes, str-slice($key, 1, 1)),

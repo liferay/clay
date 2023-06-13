@@ -301,24 +301,3 @@ strong {
 .c-kbd-dark {
 	@include clay-css($c-kbd-dark);
 }
-
-// Text Truncate
-
-.text-truncate {
-	display: block;
-}
-
-.text-truncate-inline {
-	display: inline-flex;
-	max-width: 100%;
-
-	.text-truncate {
-		display: inline-block;
-		max-width: 100%;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		vertical-align: bottom;
-		white-space: nowrap;
-		word-wrap: normal;
-	}
-}

@@ -15,6 +15,20 @@ $navbar-title-text-transform: null !default;
 $navbar-text-truncate-spacer-right: 1.5625rem !default; // 25px
 $navbar-text-truncate-max-width: 12.5rem !default; // 200px
 
+$navbar-text-truncate: () !default;
+$navbar-text-truncate: map-deep-merge(
+	(
+		display: inline-block,
+		max-width: 100%,
+		overflow: hidden,
+		text-decoration: inherit,
+		text-overflow: ellipsis,
+		vertical-align: bottom,
+		white-space: nowrap,
+	),
+	$navbar-text-truncate
+);
+
 // Navbar Brand
 
 $navbar-brand-font-size: $font-size-lg !default;

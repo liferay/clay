@@ -48,6 +48,24 @@ $cadmin-multi-step-title-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-multi-step-title-margin-bottom: 10px !default; // 10px
 $cadmin-multi-step-title-max-width: 100px !default;
 
+$cadmin-multi-step-title-center: () !default;
+$cadmin-multi-step-title-center: map-deep-merge(
+	(
+		multi-step-title: (
+			margin-left: calc(#{$cadmin-multi-step-icon-size} * 0.5),
+			max-width: $cadmin-multi-step-title-max-width,
+			overflow: hidden,
+			position: relative,
+			text-align: center,
+			text-overflow: ellipsis,
+			transform: translateX(-50%),
+			white-space: nowrap,
+			width: auto,
+		),
+	),
+	$cadmin-multi-step-title-center
+);
+
 $cadmin-multi-step-item-margin-bottom: 10px !default;
 $cadmin-multi-step-item-width: 75px !default;
 $cadmin-multi-step-item-fixed-width: 150px !default;

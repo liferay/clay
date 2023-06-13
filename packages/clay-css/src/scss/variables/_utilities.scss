@@ -360,41 +360,6 @@ $border-theme-colors: map-deep-merge(
 $displays: none, inline, inline-block, block, grid, contents, table, table-row,
 	table-cell, flex, inline-flex !default;
 
-$displays-c-prefers-reduced-motion: () !default;
-$displays-c-prefers-reduced-motion: map-deep-merge(
-	(
-		d-block-c-prefers-reduced-motion: (
-			display: none !important,
-		),
-		d-inline-block-c-prefers-reduced-motion: (
-			display: none !important,
-		),
-		'@media (prefers-reduced-motion: reduce)': (
-			d-none-c-prefers-reduced-motion: (
-				display: none !important,
-			),
-			d-block-c-prefers-reduced-motion: (
-				display: block !important,
-			),
-			d-inline-block-c-prefers-reduced-motion: (
-				display: inline-block !important,
-			),
-		),
-		c-prefers-reduced-motion: (
-			d-none-c-prefers-reduced-motion: (
-				display: none !important,
-			),
-			d-block-c-prefers-reduced-motion: (
-				display: block !important,
-			),
-			d-inline-block-c-prefers-reduced-motion: (
-				display: inline-block !important,
-			),
-		),
-	),
-	$displays-c-prefers-reduced-motion
-);
-
 // Overflow
 
 $overflows: auto, hidden !default;
@@ -561,7 +526,117 @@ $text-decorations: map-deep-merge(
 	$text-decorations
 );
 
-// Transitions
+// Text Truncate
+
+$text-truncate: () !default;
+$text-truncate: map-merge(
+	(
+		display: block,
+		overflow: hidden,
+		text-overflow: ellipsis,
+		white-space: nowrap,
+	),
+	$text-truncate
+);
+
+// Text Truncate Inline
+
+$text-truncate-inline: () !default;
+$text-truncate-inline: map-deep-merge(
+	(
+		display: inline-flex,
+		max-width: 100%,
+		text-truncate: (
+			display: inline-block,
+			max-width: 100%,
+			overflow: hidden,
+			text-overflow: ellipsis,
+			vertical-align: bottom,
+			white-space: nowrap,
+			word-wrap: normal,
+		),
+	),
+	$text-truncate-inline
+);
+
+// C Prefers
+
+$c-prefers-link-underline: () !default;
+$c-prefers-link-underline: map-deep-merge(
+	(
+		'.c-prefers-link-underline': (
+			'[href]:not(.disabled):not([role="button"])': (
+				text-decoration: underline !important,
+			),
+			'.btn-monospaced, .nav-btn-monospaced, .nav-link-monospaced': (
+				'&[href]:not(.disabled):not([role="button"]):not([role="tab"])::after':
+				(
+					content: '\00a0\00a0\00a0',
+					position: absolute,
+					text-decoration: underline !important,
+				),
+			),
+			'.multi-step-item.active, .multi-step-item.complete, .multi-step-item.error, .dropdown':
+			(
+				'.multi-step-icon[href]:not([role="button"])::after': (
+					content: '\00a0\00a0\00a0',
+					position: absolute,
+					text-decoration: underline !important,
+				),
+			),
+			'.multi-step-item.disabled .multi-step-icon[href]:not([role="button"])::after':
+			(
+				text-decoration: none !important,
+			),
+		),
+	),
+	$c-prefers-link-underline
+);
+
+$c-prefers-letter-spacing: () !default;
+$c-prefers-letter-spacing: map-deep-merge(
+	(
+		'.c-prefers-letter-spacing-1': (
+			letter-spacing: 1px !important,
+		),
+	),
+	$c-prefers-letter-spacing
+);
+
+$displays-c-prefers-reduced-motion: () !default;
+$displays-c-prefers-reduced-motion: map-deep-merge(
+	(
+		d-block-c-prefers-reduced-motion: (
+			display: none !important,
+		),
+		d-inline-block-c-prefers-reduced-motion: (
+			display: none !important,
+		),
+		'@media (prefers-reduced-motion: reduce)': (
+			d-none-c-prefers-reduced-motion: (
+				display: none !important,
+			),
+			d-block-c-prefers-reduced-motion: (
+				display: block !important,
+			),
+			d-inline-block-c-prefers-reduced-motion: (
+				display: inline-block !important,
+			),
+		),
+		c-prefers-reduced-motion: (
+			d-none-c-prefers-reduced-motion: (
+				display: none !important,
+			),
+			d-block-c-prefers-reduced-motion: (
+				display: block !important,
+			),
+			d-inline-block-c-prefers-reduced-motion: (
+				display: inline-block !important,
+			),
+		),
+	),
+	$displays-c-prefers-reduced-motion
+);
 
 $c-prefers-reduced-motion: () !default;
 $c-prefers-reduced-motion: map-merge(

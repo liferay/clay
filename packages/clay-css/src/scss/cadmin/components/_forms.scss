@@ -142,31 +142,7 @@ fieldset[disabled] .form-control {
 // text (without any border, background color, focus indicator)
 
 .form-control-plaintext {
-	background-clip: border-box;
-	background-color: transparent;
-	border-color: transparent;
-	border-style: solid;
-
-	border-bottom-width: $cadmin-input-border-bottom-width;
-	border-left-width: $cadmin-input-border-left-width;
-	border-right-width: $cadmin-input-border-right-width;
-	border-top-width: $cadmin-input-border-top-width;
-	color: $cadmin-input-plaintext-color;
-	display: block;
-	font-size: $cadmin-input-font-size;
-	height: $cadmin-input-height;
-	line-height: $cadmin-input-line-height;
-
-	// match inputs if this class comes on inputs with default margins
-
-	margin-bottom: 0;
-	min-width: 0;
-	padding-bottom: $cadmin-input-padding-y;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: $cadmin-input-padding-y;
-	text-overflow: ellipsis;
-	width: 100%;
+	@include clay-form-control-variant($cadmin-input-plaintext);
 
 	@include clay-scale-component {
 		font-size: $cadmin-input-font-size-mobile;

@@ -678,10 +678,14 @@
 	white-space: nowrap !important;
 }
 
+// Text Truncate
+
 .text-truncate {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	@include clay-css($cadmin-text-truncate);
+}
+
+.text-truncate-inline {
+	@include clay-map-to-css($cadmin-text-truncate-inline);
 }
 
 // Responsive Text Alignment
@@ -857,7 +861,19 @@
 	visibility: hidden !important;
 }
 
-// Transitions
+// C Prefers Link Underline
+
+@include clay-map-to-css($cadmin-c-prefers-link-underline);
+
+// C Prefers Letter Spacing
+
+@include clay-map-to-css($cadmin-c-prefers-letter-spacing);
+
+// Display C Reduced Motion
+
+@include clay-map-to-css($cadmin-displays-c-prefers-reduced-motion);
+
+// C Prefers Reduced Motion
 
 .c-prefers-reduced-motion {
 	@include clay-css($cadmin-c-prefers-reduced-motion);

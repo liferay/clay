@@ -133,12 +133,7 @@
 }
 
 .navbar-text-truncate {
-	display: inline-block;
-	max-width: 100%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	vertical-align: bottom;
-	white-space: nowrap;
+	@include clay-css($navbar-text-truncate);
 }
 
 // Navbar Toggler

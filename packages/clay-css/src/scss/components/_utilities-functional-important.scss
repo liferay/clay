@@ -190,10 +190,6 @@
 	display: none !important;
 }
 
-// Display C Reduced Motion
-
-@include clay-map-to-css($displays-c-prefers-reduced-motion);
-
 // Display Print
 
 @media print {
@@ -658,9 +654,11 @@
 }
 
 .text-truncate {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	@include clay-css($text-truncate);
+}
+
+.text-truncate-inline {
+	@include clay-map-to-css($text-truncate-inline);
 }
 
 // Responsive Text Alignment
@@ -833,7 +831,28 @@
 	visibility: hidden !important;
 }
 
-// Transitions
+// C Prefers Expanded Text
+
+%c-prefers-expanded-text {
+	max-width: 100% !important;
+	overflow-wrap: break-word !important;
+	white-space: normal !important;
+	word-wrap: break-word !important;
+}
+
+// C Prefers Link Underline
+
+@include clay-map-to-css($c-prefers-link-underline);
+
+// C Prefers Letter Spacing
+
+@include clay-map-to-css($c-prefers-letter-spacing);
+
+// Display C Reduced Motion
+
+@include clay-map-to-css($displays-c-prefers-reduced-motion);
+
+// C Prefers Reduced Motion
 
 .c-prefers-reduced-motion {
 	@include clay-css($c-prefers-reduced-motion);
