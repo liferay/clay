@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.97.1](https://github.com/liferay/clay/compare/v3.97.0...v3.97.1) (2023-06-14)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix the order of importance for using the item id of a collection ([b40958e](https://github.com/liferay/clay/commit/b40958e87f2b9442c7caae87209837a3a0398592))
+
 # [3.97.0](https://github.com/liferay/clay/compare/v3.96.1...v3.97.0) (2023-06-13)
 
 ### Bug Fixes
