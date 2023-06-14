@@ -203,7 +203,7 @@ export function useCollection<
 
 					callNestedChild(child);
 
-					registerItem((item as T).id ?? child.key, child, index);
+					registerItem(child.key ?? (item as T).id, child, index);
 				}
 			} else {
 				React.Children.forEach(children, (child, index) => {
@@ -261,7 +261,7 @@ export function useCollection<
 							child,
 							getKey(
 								virtual.index,
-								item.id ?? child.key,
+								child.key ?? item.id,
 								parentKey
 							),
 							virtual.index,
@@ -281,7 +281,7 @@ export function useCollection<
 
 					return performItemRender(
 						child,
-						getKey(index, item.id ?? child.key, parentKey),
+						getKey(index, child.key ?? item.id, parentKey),
 						index,
 						item
 					);
