@@ -331,6 +331,15 @@ export const Autocomplete = React.forwardRef<
 		visible: active,
 	});
 
+	// Resets `activeDescendant` when the menu is closed, this avoids a bug when
+	// the `active` state is controlled and closes the menu with different
+	// statements than what is expected internally.
+	useEffect(() => {
+		if (!active && activeDescendant) {
+			setActiveDescendant('');
+		}
+	}, [active]);
+
 	const onPress = useCallback(() => {
 		if (menuRef.current && activeDescendant) {
 			const item = document.getElementById(String(activeDescendant));
@@ -464,10 +473,7 @@ export const Autocomplete = React.forwardRef<
 					isKeyboardDismiss
 					isOpen
 					menuRef={menuRef}
-					onClose={() => {
-						setActiveDescendant('');
-						setActive(false);
-					}}
+					onClose={() => setActive(false)}
 					portalRef={menuRef}
 					suppress={[menuRef, inputElementRef]}
 					triggerRef={inputElementRef}
