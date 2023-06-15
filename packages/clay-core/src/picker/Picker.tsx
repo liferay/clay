@@ -519,7 +519,7 @@ export function Picker<T>({
 						className={classNames(
 							'dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show',
 							{
-								'dropdown-menu-width-shrink':
+								'dropdown-menu-height-lg dropdown-menu-width-shrink':
 									UNSAFE_behavior === 'secondary',
 							}
 						)}
