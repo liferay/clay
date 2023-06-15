@@ -209,6 +209,7 @@ export const Autocomplete = React.forwardRef<
 
 	const inputRef = useRef<HTMLInputElement>(null);
 	const menuRef = useRef<HTMLDivElement>(null);
+	const shouldIgnoreOpenMenuOnFocus = useRef(false);
 
 	const inputElementRef =
 		(ref as React.RefObject<HTMLInputElement>) || inputRef;
@@ -287,6 +288,7 @@ export const Autocomplete = React.forwardRef<
 					currentItemSelected.current = itemValue;
 					setValue(itemValue);
 
+					shouldIgnoreOpenMenuOnFocus.current = true;
 					inputElementRef.current?.focus();
 				},
 				roleItem: 'option',
@@ -377,6 +379,12 @@ export const Autocomplete = React.forwardRef<
 					}
 
 					if (menuTrigger === 'focus' && items !== null) {
+						if (shouldIgnoreOpenMenuOnFocus.current) {
+							shouldIgnoreOpenMenuOnFocus.current = false;
+
+							return;
+						}
+
 						setActive(true);
 					}
 				}}
