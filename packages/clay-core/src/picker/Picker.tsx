@@ -294,18 +294,11 @@ export function Picker<T>({
 				event.target.clientHeight -
 				THRESHOLD;
 
-			if (
-				scrollTop >= THRESHOLD &&
-				scrollTop <= scrollHeightMax &&
-				isArrowVisible !== 'both'
-			) {
+			if (scrollTop >= THRESHOLD && scrollTop <= scrollHeightMax) {
 				setIsArrowVisible('both');
-			} else if (scrollTop >= THRESHOLD && isArrowVisible !== 'top') {
+			} else if (scrollTop >= THRESHOLD) {
 				setIsArrowVisible('top');
-			} else if (
-				scrollTop <= scrollHeightMax &&
-				isArrowVisible !== 'bottom'
-			) {
+			} else if (scrollTop <= scrollHeightMax) {
 				setIsArrowVisible('bottom');
 			}
 		}
