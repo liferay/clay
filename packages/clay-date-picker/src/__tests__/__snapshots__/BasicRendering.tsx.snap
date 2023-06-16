@@ -150,9 +150,8 @@ exports[`BasicRendering renders by default 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"
@@ -863,7 +862,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-3"
+              aria-controls="clay-id-7"
               aria-expanded="true"
               aria-haspopup="dialog"
               aria-label="Choose date"
@@ -898,7 +897,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        id="clay-id-3"
+        id="clay-id-7"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -987,9 +986,8 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"
@@ -1731,7 +1729,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-4"
+              aria-controls="clay-id-10"
               aria-expanded="true"
               aria-haspopup="dialog"
               aria-label="Choose date"
@@ -1766,7 +1764,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        id="clay-id-4"
+        id="clay-id-10"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -1855,9 +1853,8 @@ exports[`BasicRendering renders date picker with time 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"
@@ -2711,7 +2708,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-6"
+              aria-controls="clay-id-14"
               aria-expanded="true"
               aria-haspopup="dialog"
               aria-label="Choose date"
@@ -2746,7 +2743,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        id="clay-id-6"
+        id="clay-id-14"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -2835,9 +2832,8 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="1997"

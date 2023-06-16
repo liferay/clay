@@ -85,6 +85,7 @@ const ClayDatePickerDateNavigation = ({
 					<Picker
 						UNSAFE_behavior="secondary"
 						className="form-control-sm"
+						data-testid="year-select"
 						disabled={disabled}
 						items={years}
 						native
