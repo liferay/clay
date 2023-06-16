@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.97.2](https://github.com/liferay/clay/compare/v3.97.1...v3.97.2) (2023-06-16)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error keeping menu open after selecting option with `menuTrigger="focus"` ([5f305f7](https://github.com/liferay/clay/commit/5f305f7962677c5e0c2b1b7a366f507755fc9947))
+-   **@clayui/autocomplete:** fixes error when losing reference to nodes at each rerender ([a28aa05](https://github.com/liferay/clay/commit/a28aa050ab3dbe8d337518361289f4a4fbc87cac))
+-   **@clayui/autocomplete:** fixes error when not resetting visual focus when menu is closed by custom logic ([b45c87e](https://github.com/liferay/clay/commit/b45c87e15456639def329731a0fc0a038df87906))
+-   **@clayui/multi-select:** fix error when changing active state from uncontrolled to controlled ([f6ef5be](https://github.com/liferay/clay/commit/f6ef5beff49f6e703c31694bca542f160be417af))
+-   **@clayui/multi-select:** fix error when not invoking method of `onFocus` when defined ([934878a](https://github.com/liferay/clay/commit/934878ab4a1ee74735a4b06369e2581826acf9b2))
+
 ## [3.97.1](https://github.com/liferay/clay/compare/v3.97.0...v3.97.1) (2023-06-14)
 
 ### Bug Fixes

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.97.2](https://github.com/liferay/clay/compare/v3.97.1...v3.97.2) (2023-06-16)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fix error when changing active state from uncontrolled to controlled ([f6ef5be](https://github.com/liferay/clay/commit/f6ef5beff49f6e703c31694bca542f160be417af))
+-   **@clayui/multi-select:** fix error when not invoking method of `onFocus` when defined ([934878a](https://github.com/liferay/clay/commit/934878ab4a1ee74735a4b06369e2581826acf9b2))
+
 ## [3.97.1](https://github.com/liferay/clay/compare/v3.97.0...v3.97.1) (2023-06-14)
 
 **Note:** Version bump only for package @clayui/multi-select
