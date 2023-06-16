@@ -113,4 +113,4 @@ jobs:
       - name: NPM Identity
         run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
       - name: Publish
-        run: lerna publish from-package --no-verify-access --yes
+        run: yarn lerna:publish
