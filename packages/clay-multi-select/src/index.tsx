@@ -92,7 +92,7 @@ export interface IProps<T>
 	/**
 	 * Set the default value of label items (uncontrolled).
 	 */
-	defaultItems?: Array<Item>;
+	defaultItems?: Array<T>;
 
 	/**
 	 * Direction the menu will render relative to the Autocomplete.
@@ -148,7 +148,7 @@ export interface IProps<T>
 	/**
 	 * Values that display as label items (controlled).
 	 */
-	items?: Array<Item>;
+	items?: Array<T>;
 
 	/**
 	 * The off-screen live region informs screen reader users the result of
@@ -202,7 +202,7 @@ export interface IProps<T>
 	/**
 	 * Callback for when items are added or removed (controlled).
 	 */
-	onItemsChange?: InternalDispatch<Array<Item>>;
+	onItemsChange?: InternalDispatch<Array<T>>;
 
 	/**
 	 * Callback is called when more items need to be loaded when the scroll
@@ -218,7 +218,7 @@ export interface IProps<T>
 	/**
 	 * List of pre-populated items that will show up in a dropdown menu
 	 */
-	sourceItems?: Array<Item> | null;
+	sourceItems?: Array<T> | null;
 
 	/**
 	 * Path to spritemap for clay icons
@@ -237,293 +237,296 @@ export interface IProps<T>
 	loadingState?: number;
 }
 
-const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
-	(
-		{
-			active: externalActive,
-			allowsCustomLabel = true,
-			alignmentByViewport,
-			children,
-			clearAllTitle = 'Clear All',
-			closeButtonAriaLabel = 'Remove {0}',
-			defaultActive = false,
-			defaultItems = [],
-			defaultValue = '',
-			disabled,
-			disabledClearAll,
-			hotkeysDescription,
-			inputName,
-			inputValue,
-			isLoading: _i,
-			isValid = true,
-			items: externalItems,
-			liveRegion,
-			locator = {
-				id: 'key',
-				label: 'label',
-				value: 'value',
-			},
-			loadingState,
-			menuRenderer: MenuRenderer,
-			messages = {
-				hotkeys: 'Press backspace to delete the current row.',
-				labelAdded: 'Label {0} added to the list',
-				labelRemoved: 'Label {0} removed to the list',
-				listCount: '{0} option available.',
-				listCountPlural: '{0} options available.',
-				loading: 'Loading...',
-				notFound: 'No results found',
-			},
-			onActiveChange,
-			onChange,
-			onClearAllButtonClick,
-			onItemsChange,
-			onLoadMore,
-			placeholder,
-			size,
-			sourceItems = null,
-			spritemap,
-			value: externalValue,
-			...otherProps
-		}: IProps<unknown>,
-		ref
-	) => {
-		const containerRef = useRef<HTMLDivElement>(null);
-		const inputRef = useRef<HTMLInputElement | null>(null);
-		const lastChangesRef = useRef<LastChangeLiveRegion | null>(null);
+function ClayMultiSelectInner<T extends Record<string, any> = Item>(
+	{
+		active: externalActive,
+		allowsCustomLabel = true,
+		alignmentByViewport,
+		children,
+		clearAllTitle = 'Clear All',
+		closeButtonAriaLabel = 'Remove {0}',
+		defaultActive = false,
+		defaultItems = [],
+		defaultValue = '',
+		disabled,
+		disabledClearAll,
+		hotkeysDescription,
+		inputName,
+		inputValue,
+		isLoading: _i,
+		isValid = true,
+		items: externalItems,
+		liveRegion,
+		locator = {
+			id: 'key',
+			label: 'label',
+			value: 'value',
+		},
+		loadingState,
+		menuRenderer: MenuRenderer,
+		messages = {
+			hotkeys: 'Press backspace to delete the current row.',
+			labelAdded: 'Label {0} added to the list',
+			labelRemoved: 'Label {0} removed to the list',
+			listCount: '{0} option available.',
+			listCountPlural: '{0} options available.',
+			loading: 'Loading...',
+			notFound: 'No results found',
+		},
+		onActiveChange,
+		onChange,
+		onClearAllButtonClick,
+		onItemsChange,
+		onLoadMore,
+		placeholder,
+		size,
+		sourceItems = null,
+		spritemap,
+		value: externalValue,
+		...otherProps
+	}: IProps<T>,
+	ref: React.Ref<HTMLInputElement>
+) {
+	const containerRef = useRef<HTMLDivElement>(null);
+	const inputRef = useRef<HTMLInputElement | null>(null);
+	const lastChangesRef = useRef<LastChangeLiveRegion | null>(null);
 
-		const [isFocused, setIsFocused] = useState(false);
+	const [isFocused, setIsFocused] = useState(false);
 
-		const [items, setItems] = useControlledState({
-			defaultName: 'defaultItems',
-			defaultValue: defaultItems,
-			handleName: 'onItemsChange',
-			name: 'items',
-			onChange: onItemsChange,
-			value: externalItems,
-		});
+	const [items, setItems] = useControlledState({
+		defaultName: 'defaultItems',
+		defaultValue: defaultItems,
+		handleName: 'onItemsChange',
+		name: 'items',
+		onChange: onItemsChange,
+		value: externalItems,
+	});
 
-		const [value, setValue] = useControlledState({
-			defaultName: 'defaultValue',
-			defaultValue,
-			handleName: 'onChange',
-			name: 'value',
-			onChange,
-			value: externalValue ?? inputValue,
-		});
+	const [value, setValue] = useControlledState({
+		defaultName: 'defaultValue',
+		defaultValue,
+		handleName: 'onChange',
+		name: 'value',
+		onChange,
+		value: externalValue ?? inputValue,
+	});
 
-		const [active, setActive] = useControlledState({
-			defaultName: 'defaultActive',
-			defaultValue: defaultActive,
-			handleName: 'onActiveChange',
-			name: 'active',
-			onChange: onActiveChange,
-			value: externalActive,
-		});
+	const [active, setActive] = useControlledState({
+		defaultName: 'defaultActive',
+		defaultValue: defaultActive,
+		handleName: 'onActiveChange',
+		name: 'active',
+		onChange: onActiveChange,
+		value: externalActive,
+	});
 
-		const inputElementRef =
-			(ref as React.RefObject<HTMLInputElement>) || inputRef;
+	const inputElementRef =
+		(ref as React.RefObject<HTMLInputElement>) || inputRef;
 
-		const ariaDescriptionId = useId();
+	const ariaDescriptionId = useId();
 
-		const hasAsyncItems = !!onLoadMore || typeof loadingState === 'number';
+	const hasAsyncItems = !!onLoadMore || typeof loadingState === 'number';
 
-		const Container = MenuRenderer ? FocusScope : React.Fragment;
-		const containerProps = MenuRenderer ? {arrowKeysUpDown: false} : {};
+	const Container = MenuRenderer ? FocusScope : React.Fragment;
+	const containerProps = MenuRenderer ? {arrowKeysUpDown: false} : {};
 
-		// Throws the warning only when the component is mounted and avoids
-		// throwing it every time a rerender happens.
-		useEffect(() => {
-			if (MenuRenderer) {
-				console.warn(
-					`<ClayMultiSelect />: You are using 'menuRenderer' which is deprecated and missing the new features and improvements that have been implemented in the component try to migrate to the new composition based API to custom list items.`
-				);
-			}
-		}, []);
+	// Throws the warning only when the component is mounted and avoids
+	// throwing it every time a rerender happens.
+	useEffect(() => {
+		if (MenuRenderer) {
+			console.warn(
+				`<ClayMultiSelect />: You are using 'menuRenderer' which is deprecated and missing the new features and improvements that have been implemented in the component try to migrate to the new composition based API to custom list items.`
+			);
+		}
+	}, []);
 
-		useEffect(() => {
-			// Backward compatibility with the `menuRenderer` API.
-			if (MenuRenderer && sourceItems) {
-				setActive(!!value && sourceItems.length !== 0);
-			}
-		}, [value, sourceItems]);
+	useEffect(() => {
+		// Backward compatibility with the `menuRenderer` API.
+		if (MenuRenderer && sourceItems) {
+			setActive(!!value && sourceItems.length !== 0);
+		}
+	}, [value, sourceItems]);
 
-		return (
-			<Container {...containerProps}>
-				<div
-					className={classNames(
-						'form-control form-control-tag-group input-group',
-						{
-							focus: isFocused && isValid,
-							[`form-control-tag-group-${size}`]: size,
-						}
-					)}
-					ref={containerRef}
+	return (
+		<Container {...containerProps}>
+			<div
+				className={classNames(
+					'form-control form-control-tag-group input-group',
+					{
+						focus: isFocused && isValid,
+						[`form-control-tag-group-${size}`]: size,
+					}
+				)}
+				ref={containerRef}
+			>
+				<Autocomplete<T>
+					{...otherProps}
+					active={MenuRenderer ? false : active}
+					allowsCustomLabel={allowsCustomLabel}
+					ariaDescriptionId={ariaDescriptionId}
+					as={Labels}
+					closeButtonAriaLabel={closeButtonAriaLabel}
+					containerElementRef={containerRef}
+					defaultItems={!hasAsyncItems ? sourceItems : undefined}
+					disabled={disabled}
+					filterKey={locator.label}
+					inputName={inputName}
+					items={hasAsyncItems ? sourceItems : undefined}
+					labels={items}
+					lastChangesRef={lastChangesRef}
+					locator={locator}
+					menuTrigger="focus"
+					messages={messages}
+					onActiveChange={MenuRenderer ? () => {} : setActive}
+					onChange={setValue}
+					onFocus={
+						MenuRenderer && sourceItems
+							? (event: React.FocusEvent<HTMLInputElement>) => {
+									if (otherProps.onFocus) {
+										otherProps.onFocus(event);
+									}
+
+									setActive(
+										!!value && sourceItems.length !== 0
+									);
+							  }
+							: otherProps.onFocus
+					}
+					onFocusChange={setIsFocused}
+					onItemsChange={hasAsyncItems ? () => {} : undefined}
+					onLabelsChange={setItems}
+					placeholder={placeholder}
+					ref={inputElementRef}
+					spritemap={spritemap}
+					value={value}
 				>
-					<Autocomplete
-						{...otherProps}
-						active={MenuRenderer ? false : active}
-						allowsCustomLabel={allowsCustomLabel}
-						ariaDescriptionId={ariaDescriptionId}
-						as={Labels}
-						closeButtonAriaLabel={closeButtonAriaLabel}
-						containerElementRef={containerRef}
-						defaultItems={!hasAsyncItems ? sourceItems : undefined}
-						disabled={disabled}
-						filterKey={locator.label}
-						inputName={inputName}
-						items={hasAsyncItems ? sourceItems : undefined}
-						labels={items}
-						lastChangesRef={lastChangesRef}
-						locator={locator}
-						menuTrigger="focus"
-						messages={messages}
-						onActiveChange={MenuRenderer ? () => {} : setActive}
-						onChange={setValue}
-						onFocus={
-							MenuRenderer && sourceItems
-								? (
-										event: React.FocusEvent<HTMLInputElement>
-								  ) => {
-										if (otherProps.onFocus) {
-											otherProps.onFocus(event);
-										}
+					{(item) => {
+						if (children && typeof children === 'function') {
+							const child = children(item) as React.ReactElement<
+								any,
+								string | React.JSXElementConstructor<any>
+							>;
 
-										setActive(
-											!!value && sourceItems.length !== 0
-										);
-								  }
-								: otherProps.onFocus
-						}
-						onFocusChange={setIsFocused}
-						onItemsChange={hasAsyncItems ? () => {} : undefined}
-						onLabelsChange={setItems}
-						placeholder={placeholder}
-						ref={inputElementRef}
-						spritemap={spritemap}
-						value={value}
-					>
-						{(item: Item) => {
-							if (children && typeof children === 'function') {
-								const child = children(item);
+							return React.cloneElement(child, {
+								onClick: (
+									event: React.MouseEvent<
+										| HTMLSpanElement
+										| HTMLButtonElement
+										| HTMLAnchorElement,
+										MouseEvent
+									>
+								) => {
+									if (child.props.onClick) {
+										child.props.onClick(event);
+									}
 
-								return React.cloneElement(child, {
-									onClick: (event) => {
-										if (child.props.onClick) {
-											child.props.onClick(event);
-										}
+									if (event.defaultPrevented) {
+										return;
+									}
 
-										if (event.defaultPrevented) {
-											return;
-										}
+									event.preventDefault();
 
-										event.preventDefault();
-
-										setActive(false);
-										setItems([...items, item]);
-										setValue('');
-									},
-								});
-							}
-
-							return (
-								<AutocompleteItem
-									key={item[locator.value]}
-									onClick={(event) => {
-										event.preventDefault();
-
-										setActive(false);
-										setItems([...items, item]);
-										setValue('');
-									}}
-								>
-									{item[locator.label]}
-								</AutocompleteItem>
-							);
-						}}
-					</Autocomplete>
-
-					{sourceItems && MenuRenderer && sourceItems.length > 0 && (
-						<ACT.DropDown
-							active={active}
-							alignElementRef={containerRef}
-							alignmentByViewport={alignmentByViewport}
-							onActiveChange={setActive}
-						>
-							<MenuRenderer
-								inputValue={value}
-								locator={locator}
-								onItemClick={(item) => {
+									setActive(false);
 									setItems([...items, item]);
 									setValue('');
+								},
+							});
+						}
 
-									if (inputElementRef.current) {
-										inputElementRef.current.focus();
-									}
+						return (
+							<AutocompleteItem
+								key={item[locator.value]}
+								onClick={(event) => {
+									event.preventDefault();
+
+									setActive(false);
+									setItems([...items, item]);
+									setValue('');
 								}}
-								sourceItems={sourceItems}
-								value={value}
-							/>
-						</ACT.DropDown>
-					)}
+							>
+								{item[locator.label]}
+							</AutocompleteItem>
+						);
+					}}
+				</Autocomplete>
 
-					{!disabled &&
-						!disabledClearAll &&
-						(value || items.length > 0) && (
-							<ClayInput.GroupItem shrink>
-								<ClayButtonWithIcon
-									aria-label={clearAllTitle}
-									borderless
-									className="component-action"
-									displayType="secondary"
-									onClick={() => {
-										if (onClearAllButtonClick) {
-											onClearAllButtonClick();
-										} else {
-											setItems([]);
-											setValue('');
-										}
+				{sourceItems && MenuRenderer && sourceItems.length > 0 && (
+					<ACT.DropDown
+						active={active}
+						alignElementRef={containerRef}
+						alignmentByViewport={alignmentByViewport}
+						onActiveChange={setActive}
+					>
+						<MenuRenderer
+							inputValue={value}
+							locator={locator}
+							onItemClick={(item) => {
+								setItems([...items, item as unknown as T]);
+								setValue('');
 
-										if (inputElementRef.current) {
-											inputElementRef.current.focus();
-										}
-									}}
-									outline
-									spritemap={spritemap}
-									symbol="times-circle"
-									title={clearAllTitle}
-								/>
-							</ClayInput.GroupItem>
-						)}
+								if (inputElementRef.current) {
+									inputElementRef.current.focus();
+								}
+							}}
+							sourceItems={sourceItems}
+							value={value}
+						/>
+					</ACT.DropDown>
+				)}
 
-					<div className="sr-only">
-						<span id={ariaDescriptionId}>
-							{hotkeysDescription ?? messages.hotkeys}
-						</span>
-						<span aria-live="polite" aria-relevant="text">
-							{lastChangesRef.current
-								? sub(
-										liveRegion
-											? liveRegion[
-													lastChangesRef.current
-														.action
-											  ]
-											: lastChangesRef.current.action ===
-											  'added'
-											? messages.labelAdded
-											: messages.labelRemoved,
-										[lastChangesRef.current.label]
-								  )
-								: null}
-						</span>
-					</div>
+				{!disabled && !disabledClearAll && (value || items.length > 0) && (
+					<ClayInput.GroupItem shrink>
+						<ClayButtonWithIcon
+							aria-label={clearAllTitle}
+							borderless
+							className="component-action"
+							displayType="secondary"
+							onClick={() => {
+								if (onClearAllButtonClick) {
+									onClearAllButtonClick();
+								} else {
+									setItems([]);
+									setValue('');
+								}
+
+								if (inputElementRef.current) {
+									inputElementRef.current.focus();
+								}
+							}}
+							outline
+							spritemap={spritemap}
+							symbol="times-circle"
+							title={clearAllTitle}
+						/>
+					</ClayInput.GroupItem>
+				)}
+
+				<div className="sr-only">
+					<span id={ariaDescriptionId}>
+						{hotkeysDescription ?? messages.hotkeys}
+					</span>
+					<span aria-live="polite" aria-relevant="text">
+						{lastChangesRef.current
+							? sub(
+									liveRegion
+										? liveRegion[
+												lastChangesRef.current.action
+										  ]
+										: lastChangesRef.current.action ===
+										  'added'
+										? messages.labelAdded
+										: messages.labelRemoved,
+									[lastChangesRef.current.label]
+							  )
+							: null}
+					</span>
 				</div>
-			</Container>
-		);
-	}
-);
+			</div>
+		</Container>
+	);
+}
 
-ClayMultiSelect.displayName = 'ClayMultiSelect';
+ClayMultiSelectInner.displayName = 'ClayMultiSelect';
 
 /**
  * Utility used for filtering an array of items based off the locator which
@@ -536,6 +539,16 @@ export const itemLabelFilter = (
 	_locator = 'label'
 ) => items;
 
-export default Object.assign(ClayMultiSelect, {
-	Item: AutocompleteItem,
-});
+type ForwardRef = {
+	Item: typeof AutocompleteItem;
+	displayName: string;
+	<T>(props: IProps<T> & {ref?: React.Ref<HTMLInputElement>}): JSX.Element;
+};
+
+const ClayMultiSelect = React.forwardRef(
+	ClayMultiSelectInner
+) as unknown as ForwardRef;
+
+ClayMultiSelect.Item = AutocompleteItem;
+
+export default ClayMultiSelect;
