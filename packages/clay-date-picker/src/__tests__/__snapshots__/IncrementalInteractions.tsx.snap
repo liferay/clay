@@ -32,7 +32,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-5"
+              aria-controls="clay-id-13"
               aria-expanded="true"
               aria-haspopup="dialog"
               aria-label="Choose your desired date"
@@ -66,7 +66,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        id="clay-id-5"
+        id="clay-id-13"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -155,9 +155,8 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"
@@ -866,7 +865,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-3"
+              aria-controls="clay-id-7"
               aria-expanded="false"
               aria-haspopup="dialog"
               aria-label="Choose your desired date"
@@ -900,7 +899,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
-        id="clay-id-3"
+        id="clay-id-7"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -989,9 +988,8 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"
@@ -1703,7 +1701,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-2"
+              aria-controls="clay-id-4"
               aria-expanded="true"
               aria-haspopup="dialog"
               aria-label="Choose your desired date"
@@ -1737,7 +1735,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        id="clay-id-2"
+        id="clay-id-4"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -1826,9 +1824,8 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"
@@ -2542,7 +2539,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-6"
+              aria-controls="clay-id-16"
               aria-expanded="true"
               aria-haspopup="dialog"
               aria-label="Choose your desired date"
@@ -2576,7 +2573,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu show"
         data-testid="dropdown"
-        id="clay-id-6"
+        id="clay-id-16"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -2665,9 +2662,8 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2017"
@@ -3391,7 +3387,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
             class="input-group-inset-item input-group-inset-item-after"
           >
             <button
-              aria-controls="clay-id-4"
+              aria-controls="clay-id-10"
               aria-expanded="false"
               aria-haspopup="dialog"
               aria-label="Choose your desired date"
@@ -3430,7 +3426,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
         aria-modal="true"
         class="dropdown-menu date-picker-dropdown-menu"
         data-testid="dropdown"
-        id="clay-id-4"
+        id="clay-id-10"
         role="dialog"
         style="left: -999px; top: -995px;"
       >
@@ -3519,9 +3515,8 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"
@@ -4356,9 +4351,8 @@ exports[`IncrementalInteractions date entered in the input element should reflec
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
-                  class="form-control form-control-sm"
+                  class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
-                  name="year"
                 >
                   <option
                     value="2019"

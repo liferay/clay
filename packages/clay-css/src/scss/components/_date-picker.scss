@@ -26,6 +26,10 @@
 	select.form-control {
 		@include clay-select-variant($date-picker-nav-select);
 	}
+
+	.form-control-select {
+		@include clay-select-variant($date-picker-nav-select);
+	}
 }
 
 .date-picker-nav-item {

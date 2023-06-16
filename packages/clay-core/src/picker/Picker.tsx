@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import Button from '@clayui/button';
+import Icon from '@clayui/icon';
 import {
 	InternalDispatch,
 	Keys,
@@ -129,10 +131,17 @@ export type Props<T> = {
 	 */
 	UNSAFE_menuClassName?: string;
 
+	/**
+	 * Property intended for internal use only.
+	 * @ignore
+	 */
+	UNSAFE_behavior?: 'secondary';
+
 	[key: string]: any;
 } & Omit<ICollectionProps<T, unknown>, 'virtualize'>;
 
 export function Picker<T>({
+	UNSAFE_behavior,
 	UNSAFE_menuClassName,
 	active: externalActive,
 	as: As = 'button',
@@ -192,6 +201,7 @@ export function Picker<T>({
 
 	const triggerRef = useRef<HTMLButtonElement | null>(null);
 	const menuRef = useRef<HTMLDivElement | null>(null);
+	const listRef = useRef<HTMLUListElement | null>(null);
 
 	const announcerAPI = useRef<AnnouncerAPI>(null);
 
@@ -214,7 +224,7 @@ export function Picker<T>({
 	const {accessibilityFocus, navigationProps} = useNavigation({
 		activation: 'manual',
 		active: activeDescendant,
-		containerRef: menuRef,
+		containerRef: listRef,
 		onNavigate: (tab) =>
 			setActiveDescendant((tab as HTMLElement).getAttribute('id')!),
 		orientation: 'vertical',
@@ -261,6 +271,66 @@ export function Picker<T>({
 			}, 1000);
 		}
 	}, [active]);
+
+	const [isArrowVisible, setIsArrowVisible] = useState<
+		null | 'top' | 'bottom' | 'both'
+	>(null);
+
+	useEffect(() => {
+		if (
+			!active ||
+			UNSAFE_behavior !== 'secondary' ||
+			collection.getItems().length <= 12
+		) {
+			return;
+		}
+
+		const THRESHOLD = 32;
+
+		function onScroll(event: any) {
+			const scrollTop = event.target.scrollTop;
+			const scrollHeightMax =
+				event.target.scrollHeight -
+				event.target.clientHeight -
+				THRESHOLD;
+
+			if (scrollTop >= THRESHOLD && scrollTop <= scrollHeightMax) {
+				setIsArrowVisible('both');
+			} else if (scrollTop >= THRESHOLD) {
+				setIsArrowVisible('top');
+			} else if (scrollTop <= scrollHeightMax) {
+				setIsArrowVisible('bottom');
+			}
+		}
+
+		listRef.current?.addEventListener('scroll', onScroll, true);
+
+		return () =>
+			listRef.current?.removeEventListener('scroll', onScroll, true);
+	}, [active]);
+
+	const onMoveFocus = useCallback(
+		(
+			key: 'PageUp' | 'PageDown',
+			position: number,
+			list: Array<HTMLElement> | Array<React.Key>
+		) => {
+			if (position === -1) {
+				return;
+			}
+
+			const option =
+				list[key === 'PageUp' ? position - 10 : position + 10] ??
+				list[key === 'PageUp' ? 0 : list.length - 1];
+
+			accessibilityFocus(
+				option instanceof HTMLElement
+					? option
+					: document.getElementById(String(option))!
+			);
+		},
+		[accessibilityFocus]
+	);
 
 	const context = {
 		activeDescendant,
@@ -319,6 +389,10 @@ export function Picker<T>({
 				id={id}
 				onClick={() => setActive(!active)}
 				onKeyDown={(event: React.KeyboardEvent<HTMLButtonElement>) => {
+					if (otherProps.onKeyDown) {
+						otherProps.onKeyDown(event);
+					}
+
 					switch (event.key) {
 						case Keys.Enter:
 						case Keys.Spacebar: {
@@ -372,27 +446,15 @@ export function Picker<T>({
 
 							const list = getFocusableList(menuRef);
 
-							const position = list.findIndex(
-								(element) =>
-									element.getAttribute('id') ===
-									String(activeDescendant)
+							onMoveFocus(
+								event.key,
+								list.findIndex(
+									(element) =>
+										element.getAttribute('id') ===
+										String(activeDescendant)
+								),
+								list
 							);
-
-							if (position === -1) {
-								break;
-							}
-
-							const option =
-								list[
-									event.key === 'PageUp'
-										? position - 10
-										: position + 10
-								] ??
-								list[
-									event.key === 'PageUp' ? 0 : list.length - 1
-								];
-
-							accessibilityFocus(option);
 							break;
 						}
 						default: {
@@ -447,15 +509,49 @@ export function Picker<T>({
 					triggerRef={triggerRef}
 				>
 					<div
-						className="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show"
+						className={classNames(
+							'dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show',
+							{
+								'dropdown-menu-height-lg dropdown-menu-width-shrink':
+									UNSAFE_behavior === 'secondary',
+							}
+						)}
 						ref={menuRef}
 						role="presentation"
 					>
+						{UNSAFE_behavior === 'secondary' &&
+							(isArrowVisible === 'top' ||
+								isArrowVisible === 'both') && (
+								<Button
+									aria-hidden="true"
+									aria-label="Scroll to top"
+									className="dropdown-item dropdown-item-scroll dropdown-item-scroll-up"
+									displayType="unstyled"
+									onClick={() => {
+										const list = collection.getItems();
+
+										onMoveFocus(
+											'PageUp',
+											list.findIndex(
+												(item) =>
+													item === activeDescendant
+											),
+											list
+										);
+										triggerRef.current?.focus();
+									}}
+									tabIndex={-1}
+								>
+									<Icon symbol="caret-top" />
+								</Button>
+							)}
+
 						<ul
 							aria-labelledby={otherProps['aria-labelledby']}
 							className="inline-scroller list-unstyled"
 							id={ariaControls}
 							onFocus={() => triggerRef.current?.focus()}
+							ref={listRef}
 							role="listbox"
 							tabIndex={-1}
 						>
@@ -463,6 +559,33 @@ export function Picker<T>({
 								<Collection<T> collection={collection} />
 							</PickerContext.Provider>
 						</ul>
+
+						{UNSAFE_behavior === 'secondary' &&
+							(isArrowVisible === 'bottom' ||
+								isArrowVisible === 'both') && (
+								<Button
+									aria-hidden="true"
+									aria-label="Scroll to bottom"
+									className="dropdown-item dropdown-item-scroll dropdown-item-scroll-down"
+									displayType="unstyled"
+									onClick={() => {
+										const list = collection.getItems();
+
+										onMoveFocus(
+											'PageDown',
+											list.findIndex(
+												(item) =>
+													item === activeDescendant
+											),
+											list
+										);
+										triggerRef.current?.focus();
+									}}
+									tabIndex={-1}
+								>
+									<Icon symbol="caret-bottom" />
+								</Button>
+							)}
 					</div>
 				</Overlay>
 			)}
