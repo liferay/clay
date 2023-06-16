@@ -201,55 +201,55 @@ $bg-theme-colors: map-deep-merge(
 			),
 		),
 		'indigo': (
-			background-color: $indigo,
+			background-color: $indigo !important,
 			hover: (
 				background-color: clay-darken($indigo, 10%) !important,
 			),
 		),
 		'purple': (
-			background-color: $purple,
+			background-color: $purple !important,
 			hover: (
 				background-color: clay-darken($purple, 10%) !important,
 			),
 		),
 		'pink': (
-			background-color: $pink,
+			background-color: $pink !important,
 			hover: (
 				background-color: clay-darken($pink, 10%) !important,
 			),
 		),
 		'red': (
-			background-color: $red,
+			background-color: $red !important,
 			hover: (
 				background-color: clay-darken($red, 10%) !important,
 			),
 		),
 		'orange': (
-			background-color: $orange,
+			background-color: $orange !important,
 			hover: (
 				background-color: clay-darken($orange, 10%) !important,
 			),
 		),
 		'yellow': (
-			background-color: $yellow,
+			background-color: $yellow !important,
 			hover: (
 				background-color: clay-darken($yellow, 10%) !important,
 			),
 		),
 		'green': (
-			background-color: $green,
+			background-color: $green !important,
 			hover: (
 				background-color: clay-darken($green, 10%) !important,
 			),
 		),
 		'teal': (
-			background-color: $teal,
+			background-color: $teal !important,
 			hover: (
 				background-color: clay-darken($teal, 10%) !important,
 			),
 		),
 		'cyan': (
-			background-color: $cyan,
+			background-color: $cyan !important,
 			hover: (
 				background-color: clay-darken($cyan, 10%) !important,
 			),
