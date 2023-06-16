@@ -30,7 +30,7 @@ exports[`MultiSelect incremental interactions renders a custom item 1`] = `
   <li
     data-index="1"
     role="presentation"
-    style="left: 0px; position: absolute; top: 0px; transform: translateY(0px); width: 100%;"
+    style="left: 0px; position: absolute; top: 0px; transform: translateY(37px); width: 100%;"
   >
     <button
       aria-selected="false"
@@ -183,6 +183,7 @@ exports[`MultiSelect incremental interactions renders as disabled 1`] = `
           <input
             aria-autocomplete="list"
             aria-controls="clay-id-6"
+            aria-expanded="false"
             autocomplete="off"
             autocorrect="off"
             class="form-control-inset"
@@ -344,6 +345,7 @@ exports[`MultiSelect incremental interactions renders with items 1`] = `
           <input
             aria-autocomplete="list"
             aria-controls="clay-id-2"
+            aria-expanded="false"
             autocomplete="off"
             autocorrect="off"
             class="form-control-inset"

@@ -261,39 +261,44 @@ export const Autocomplete = React.forwardRef<
 		children,
 		filter: isItemsUncontrolled ? filterFn : undefined,
 		filterKey: 'value',
-		itemContainer: ({children, keyValue}: ItemProps<any>) => {
-			const itemValue =
-				children.props.textValue ??
-				children.props.value ??
-				children.props.children;
+		itemContainer: useCallback(
+			({children, keyValue}: ItemProps<any>) => {
+				const itemValue =
+					children.props.textValue ??
+					children.props.value ??
+					children.props.children;
 
-			return React.cloneElement(children, {
-				keyValue,
-				match: value,
-				onClick: (
-					event: React.MouseEvent<
-						HTMLSpanElement | HTMLButtonElement | HTMLAnchorElement
-					>
-				) => {
-					if (children.props.onClick) {
-						children.props.onClick(event);
-					}
+				return React.cloneElement(children, {
+					keyValue,
+					match: value,
+					onClick: (
+						event: React.MouseEvent<
+							| HTMLSpanElement
+							| HTMLButtonElement
+							| HTMLAnchorElement
+						>
+					) => {
+						if (children.props.onClick) {
+							children.props.onClick(event);
+						}
 
-					if (event.defaultPrevented) {
-						return;
-					}
+						if (event.defaultPrevented) {
+							return;
+						}
 
-					setActive(false);
+						setActive(false);
 
-					currentItemSelected.current = itemValue;
-					setValue(itemValue);
+						currentItemSelected.current = itemValue;
+						setValue(itemValue);
 
-					shouldIgnoreOpenMenuOnFocus.current = true;
-					inputElementRef.current?.focus();
-				},
-				roleItem: 'option',
-			}) as React.ReactElement;
-		},
+						shouldIgnoreOpenMenuOnFocus.current = true;
+						inputElementRef.current?.focus();
+					},
+					roleItem: 'option',
+				}) as React.ReactElement;
+			},
+			[value]
+		),
 		items: filteredItems,
 		notFound: (
 			<DropDown.Item
@@ -341,6 +346,8 @@ export const Autocomplete = React.forwardRef<
 			setActiveDescendant('');
 		}
 	}, [active]);
+
+	const onClose = useCallback(() => setActive(false), []);
 
 	const onPress = useCallback(() => {
 		if (menuRef.current && activeDescendant) {
@@ -481,7 +488,7 @@ export const Autocomplete = React.forwardRef<
 					isKeyboardDismiss
 					isOpen
 					menuRef={menuRef}
-					onClose={() => setActive(false)}
+					onClose={onClose}
 					portalRef={menuRef}
 					suppress={[menuRef, inputElementRef]}
 					triggerRef={inputElementRef}
