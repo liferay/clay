@@ -264,9 +264,22 @@ export const Autocomplete = React.forwardRef<
 			return items ?? [];
 		}
 
-		return items?.filter((option) =>
-			filterFn(filterKey ? option[filterKey] : option)
-		);
+		return items?.filter((option) => {
+			if (!filterKey && typeof option === 'object') {
+				console.warn(
+					`<Autocomplete />: the component is trying to filter the list but it doesn't know which key to use for comparison, defines the key in 'filterKey' ('<Autocomplete filterKey="value" />'). option=`,
+					option
+				);
+
+				return true;
+			}
+
+			return filterFn(
+				filterKey && typeof option === 'object'
+					? option[filterKey]
+					: option
+			);
+		});
 	}, [debouncedLoadingChange, isItemsUncontrolled, items, filterFn]);
 
 	const virtualizer = useVirtual({
