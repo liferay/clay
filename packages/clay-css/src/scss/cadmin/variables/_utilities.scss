@@ -370,41 +370,6 @@ $cadmin-border-theme-colors: map-deep-merge(
 $cadmin-displays: none, inline, inline-block, grid, block, contents, table,
 	table-row, table-cell, flex, inline-flex !default;
 
-$cadmin-displays-c-prefers-reduced-motion: () !default;
-$cadmin-displays-c-prefers-reduced-motion: map-deep-merge(
-	(
-		d-block-c-prefers-reduced-motion: (
-			display: none !important,
-		),
-		d-inline-block-c-prefers-reduced-motion: (
-			display: none !important,
-		),
-		'@media (prefers-reduced-motion: reduce)': (
-			d-none-c-prefers-reduced-motion: (
-				display: none !important,
-			),
-			d-block-c-prefers-reduced-motion: (
-				display: block !important,
-			),
-			d-inline-block-c-prefers-reduced-motion: (
-				display: inline-block !important,
-			),
-		),
-		c-prefers-reduced-motion: (
-			d-none-c-prefers-reduced-motion: (
-				display: none !important,
-			),
-			d-block-c-prefers-reduced-motion: (
-				display: block !important,
-			),
-			d-inline-block-c-prefers-reduced-motion: (
-				display: inline-block !important,
-			),
-		),
-	),
-	$cadmin-displays-c-prefers-reduced-motion
-);
-
 // Overflow
 
 $cadmin-overflows: auto, hidden !default;
@@ -615,7 +580,7 @@ $cadmin-text-truncate-inline: map-deep-merge(
 $cadmin-c-prefers-link-underline: () !default;
 $cadmin-c-prefers-link-underline: map-deep-merge(
 	(
-		'.c-prefers-link-underline': (
+		'.c-prefers-link-underline .cadmin': (
 			'[href]:not(.disabled):not([role="button"])': (
 				text-decoration: underline !important,
 			),
@@ -647,7 +612,7 @@ $cadmin-c-prefers-link-underline: map-deep-merge(
 $cadmin-c-prefers-letter-spacing: () !default;
 $cadmin-c-prefers-letter-spacing: map-deep-merge(
 	(
-		'.c-prefers-letter-spacing-1': (
+		'.c-prefers-letter-spacing-1 .cadmin': (
 			letter-spacing: 1px !important,
 		),
 	),
@@ -657,31 +622,31 @@ $cadmin-c-prefers-letter-spacing: map-deep-merge(
 $cadmin-displays-c-prefers-reduced-motion: () !default;
 $cadmin-displays-c-prefers-reduced-motion: map-deep-merge(
 	(
-		d-block-c-prefers-reduced-motion: (
+		'.cadmin .d-block-c-prefers-reduced-motion': (
 			display: none !important,
 		),
-		d-inline-block-c-prefers-reduced-motion: (
+		'.cadmin .d-inline-block-c-prefers-reduced-motion': (
 			display: none !important,
 		),
 		'@media (prefers-reduced-motion: reduce)': (
-			d-none-c-prefers-reduced-motion: (
+			'.cadmin .d-none-c-prefers-reduced-motion': (
 				display: none !important,
 			),
-			d-block-c-prefers-reduced-motion: (
+			'.cadmin .d-block-c-prefers-reduced-motion': (
 				display: block !important,
 			),
-			d-inline-block-c-prefers-reduced-motion: (
+			'.cadmin .d-inline-block-c-prefers-reduced-motion': (
 				display: inline-block !important,
 			),
 		),
-		c-prefers-reduced-motion: (
-			d-none-c-prefers-reduced-motion: (
+		'.c-prefers-reduced-motion .cadmin': (
+			'.d-none-c-prefers-reduced-motion': (
 				display: none !important,
 			),
-			d-block-c-prefers-reduced-motion: (
+			'.d-block-c-prefers-reduced-motion': (
 				display: block !important,
 			),
-			d-inline-block-c-prefers-reduced-motion: (
+			'.d-inline-block-c-prefers-reduced-motion': (
 				display: inline-block !important,
 			),
 		),

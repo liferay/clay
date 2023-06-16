@@ -61,6 +61,12 @@
 				animation: none;
 			}
 		}
+
+		@at-root {
+			#{clay-insert-before('.cadmin', '.c-prefers-reduced-motion ')} {
+				animation: none;
+			}
+		}
 	}
 }
 

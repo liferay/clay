@@ -194,10 +194,6 @@
 	display: none !important;
 }
 
-// Display C Reduced Motion
-
-@include clay-map-to-css($cadmin-displays-c-prefers-reduced-motion);
-
 // Display Print
 
 @media print {
@@ -861,20 +857,28 @@
 	visibility: hidden !important;
 }
 
-// C Prefers Link Underline
+@at-root {
+	// C Prefers Link Underline
 
-@include clay-map-to-css($cadmin-c-prefers-link-underline);
+	html#{$cadmin-selector} {
+		@include clay-map-to-css($cadmin-c-prefers-link-underline);
+	}
 
-// C Prefers Letter Spacing
+	// C Prefers Letter Spacing
 
-@include clay-map-to-css($cadmin-c-prefers-letter-spacing);
+	html#{$cadmin-selector} {
+		@include clay-map-to-css($cadmin-c-prefers-letter-spacing);
+	}
 
-// Display C Reduced Motion
+	// Display C Reduced Motion
 
-@include clay-map-to-css($cadmin-displays-c-prefers-reduced-motion);
+	html#{$cadmin-selector} {
+		@include clay-map-to-css($cadmin-displays-c-prefers-reduced-motion);
+	}
 
-// C Prefers Reduced Motion
+	// C Prefers Reduced Motion
 
-.c-prefers-reduced-motion {
-	@include clay-css($cadmin-c-prefers-reduced-motion);
+	html#{$cadmin-selector} .c-prefers-reduced-motion .cadmin {
+		@include clay-css($cadmin-c-prefers-reduced-motion);
+	}
 }
