@@ -78,7 +78,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
       - name: Version
-        run: lerna version --conventional-commits ${{ github.event.inputs.version }} --no-push --yes
+        run: yarn lerna:version ${{ github.event.inputs.version }} --no-push --yes
       - run: git push origin master --follow-tags
       - name: Get SHA
         id: sha
