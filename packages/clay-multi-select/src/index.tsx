@@ -377,11 +377,18 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 						onChange={setValue}
 						onFocus={
 							MenuRenderer && sourceItems
-								? () =>
+								? (
+										event: React.FocusEvent<HTMLInputElement>
+								  ) => {
+										if (otherProps.onFocus) {
+											otherProps.onFocus(event);
+										}
+
 										setActive(
 											!!value && sourceItems.length !== 0
-										)
-								: undefined
+										);
+								  }
+								: otherProps.onFocus
 						}
 						onFocusChange={setIsFocused}
 						onItemsChange={hasAsyncItems ? () => {} : undefined}
