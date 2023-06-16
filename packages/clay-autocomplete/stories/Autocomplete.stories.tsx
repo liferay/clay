@@ -221,6 +221,12 @@ export const CustomItem = () => {
 	);
 };
 
+type RickandMorty = {
+	id: number;
+	name: string;
+	[key: string]: any;
+};
+
 export const AsyncFilter = () => {
 	const [value, setValue] = useState('');
 
@@ -248,7 +254,9 @@ export const AsyncFilter = () => {
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							id="clay-autocomplete-1"
-							items={resource?.results ?? []}
+							items={
+								(resource?.results as Array<RickandMorty>) ?? []
+							}
 							loadingState={networkStatus}
 							messages={{
 								loading: 'Loading...',
@@ -308,7 +316,7 @@ export const AsyncFilterPaginated = () => {
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							id="clay-autocomplete-1"
-							items={resource ?? []}
+							items={(resource as Array<RickandMorty>) ?? []}
 							loadingState={networkStatus}
 							messages={{
 								loading: 'Loading...',

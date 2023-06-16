@@ -38,12 +38,7 @@ type ItemProps<T> = {
 	keyValue: React.Key;
 };
 
-export interface IProps<T>
-	extends Omit<
-			React.HTMLAttributes<HTMLInputElement>,
-			'onChange' | 'children'
-		>,
-		Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize'> {
+export type IProps<T> = {
 	/**
 	 * Flag to indicate if menu is showing or not.
 	 */
@@ -62,12 +57,6 @@ export interface IProps<T>
 	 * @deprecated since v3.92.0 - it is no longer necessary..
 	 */
 	alignmentByViewport?: boolean;
-
-	/**
-	 * Autocomplete container reference.
-	 * @ignore
-	 */
-	containerElementRef: React.MutableRefObject<HTMLElement | null>;
 
 	/**
 	 * The initial value of the active state (uncontrolled).
@@ -91,9 +80,14 @@ export interface IProps<T>
 	filterKey?: string;
 
 	/**
+	 * Property to render content with dynamic data.
+	 */
+	items?: Array<T> | null;
+
+	/**
 	 * Property to set the initial value of `items` (uncontrolled).
 	 */
-	defaultItems?: Array<T>;
+	defaultItems?: Array<T> | null;
 
 	/**
 	 * Messages for autocomplete.
@@ -118,7 +112,7 @@ export interface IProps<T>
 	/**
 	 * Callback called when items change (controlled).
 	 */
-	onItemsChange?: InternalDispatch<Array<T>>;
+	onItemsChange?: InternalDispatch<Array<T> | null>;
 
 	/**
 	 * Callback is called when more items need to be loaded when the scroll
@@ -143,7 +137,8 @@ export interface IProps<T>
 	loadingState?: number;
 
 	[key: string]: any;
-}
+} & Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange' | 'children'> &
+	Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize' | 'items'>;
 
 const List = React.forwardRef<
 	HTMLUListElement,
@@ -165,10 +160,7 @@ const defaultMessages = {
 	notFound: 'No results found',
 };
 
-export const Autocomplete = React.forwardRef<
-	HTMLInputElement,
-	IProps<Record<string, any>>
->(function Autocomplete<T extends Record<string, any>>(
+function AutocompleteInner<T extends Record<string, any> | string | number>(
 	{
 		active: externalActive,
 		as: As = Input,
@@ -262,6 +254,10 @@ export const Autocomplete = React.forwardRef<
 
 		if (!isItemsUncontrolled) {
 			return items ?? [];
+		}
+
+		if (!items) {
+			return [];
 		}
 
 		return items?.filter((option) => {
@@ -615,4 +611,13 @@ export const Autocomplete = React.forwardRef<
 			)}
 		</>
 	);
-});
+}
+
+type ForwardRef = {
+	displayName: string;
+	<T>(props: IProps<T> & {ref?: React.Ref<HTMLInputElement>}): JSX.Element;
+};
+
+export const Autocomplete = React.forwardRef(AutocompleteInner) as ForwardRef;
+
+Autocomplete.displayName = 'Autocomplete';
