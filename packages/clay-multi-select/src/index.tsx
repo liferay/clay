@@ -244,7 +244,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			children,
 			clearAllTitle = 'Clear All',
 			closeButtonAriaLabel = 'Remove {0}',
-			defaultActive,
+			defaultActive = false,
 			defaultItems = [],
 			defaultValue = '',
 			disabled,
