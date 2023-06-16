@@ -39,8 +39,6 @@ const ClayDatePickerDateNavigation = ({
 	spritemap,
 	years,
 }: Props) => {
-	const monthSelectorRef = React.useRef<HTMLSelectElement | null>(null);
-
 	/**
 	 * Handles the change of the month from the available
 	 * years in the range
@@ -104,15 +102,11 @@ const ClayDatePickerDateNavigation = ({
 										: 'PageDown';
 							}
 						}}
-						onSelectionChange={(key: React.Key) => {
-							if (!monthSelectorRef.current) {
-								return;
-							}
-
+						onSelectionChange={(key: React.Key) =>
 							onMonthChange(
 								new Date(Number(key), currentMonth.getMonth())
-							);
-						}}
+							)
+						}
 						selectedKey={String(currentMonth.getFullYear())}
 					>
 						{(item) => (

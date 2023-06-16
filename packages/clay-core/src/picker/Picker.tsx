@@ -280,7 +280,7 @@ export function Picker<T>({
 		if (
 			!active ||
 			UNSAFE_behavior !== 'secondary' ||
-			collection.getItems().length <= 7
+			collection.getItems().length <= 12
 		) {
 			return;
 		}
