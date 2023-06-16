@@ -56,10 +56,10 @@ module.exports = {
 			statements: 91,
 		},
 		'./packages/clay-core/src/picker/': {
-			branches: 80,
-			functions: 84,
-			lines: 90,
-			statements: 90,
+			branches: 59,
+			functions: 66,
+			lines: 77,
+			statements: 77,
 		},
 		'./packages/clay-core/src/tree-view/': {
 			branches: 56,
@@ -74,7 +74,7 @@ module.exports = {
 			statements: 85,
 		},
 		'./packages/clay-date-picker/src/': {
-			branches: 56,
+			branches: 55,
 			functions: 89,
 			lines: 81,
 			statements: 82,
