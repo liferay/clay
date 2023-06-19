@@ -241,6 +241,18 @@
 
 		$enabled: setter(map-get($map, enabled), true);
 
+		$_prefers-reduced-motion-media-query: if(
+			variable-exists(enable-prefers-reduced-motion-media-query),
+			$enable-prefers-reduced-motion-media-query,
+			if(
+				variable-exists(
+					cadmin-enable-prefers-reduced-motion-media-query
+				),
+				$cadmin-enable-prefers-reduced-motion-media-query,
+				true
+			)
+		);
+
 		@if ($enabled) {
 			@each $key, $value in $map {
 				@if ($value == clay-unset or $value == c-unset) {
@@ -264,18 +276,19 @@
 					animation: $value;
 
 					@if ($value != 'none' and $value != null) {
+						@if ($_prefers-reduced-motion-media-query) {
+							@media (prefers-reduced-motion: reduce) {
+								animation: none;
+							}
+						}
+
 						@at-root {
 							$selector: '.c-prefers-reduced-motion &';
 
 							@if (variable-exists(cadmin-selector)) {
-								$selector: clay-insert-after(
-									'.cadmin ',
+								$selector: clay-insert-before(
+									'.cadmin',
 									'.c-prefers-reduced-motion '
-								);
-								$selector: clay-insert-after(
-									'.cadmin.',
-									'c-prefers-reduced-motion.',
-									$selector
 								);
 							}
 
@@ -300,14 +313,9 @@
 							$selector: '.c-prefers-expanded-text &';
 
 							@if (variable-exists(cadmin-selector)) {
-								$selector: clay-insert-after(
-									'.cadmin ',
+								$selector: clay-insert-before(
+									'.cadmin',
 									'.c-prefers-expanded-text '
-								);
-								$selector: clay-insert-after(
-									'.cadmin.',
-									'c-prefers-expanded-text.',
-									$selector
 								);
 							}
 
@@ -320,22 +328,19 @@
 					transition: $value;
 
 					@if ($value != 'none' and $value != null) {
-						@media (prefers-reduced-motion: reduce) {
-							transition: none;
+						@if ($_prefers-reduced-motion-media-query) {
+							@media (prefers-reduced-motion: reduce) {
+								transition: none;
+							}
 						}
 
 						@at-root {
 							$selector: '.c-prefers-reduced-motion &';
 
 							@if (variable-exists(cadmin-selector)) {
-								$selector: clay-insert-after(
-									'.cadmin ',
+								$selector: clay-insert-before(
+									'.cadmin',
 									'.c-prefers-reduced-motion '
-								);
-								$selector: clay-insert-after(
-									'.cadmin.',
-									'c-prefers-reduced-motion.',
-									$selector
 								);
 							}
 

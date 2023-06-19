@@ -37,14 +37,9 @@
 			$selector: '.c-prefers-reduced-motion &';
 
 			@if (variable-exists(cadmin-selector)) {
-				$selector: clay-insert-after(
-					'.cadmin ',
+				$selector: clay-insert-before(
+					'.cadmin',
 					'.c-prefers-reduced-motion '
-				);
-				$selector: clay-insert-after(
-					'.cadmin.',
-					'c-prefers-reduced-motion.',
-					$selector
 				);
 			}
 
