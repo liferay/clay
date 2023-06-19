@@ -78,7 +78,7 @@ interface ITreeViewProps<T>
 	 * The callback is called whenever there is an item dragging over
 	 * another item.
 	 */
-	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => void;
+	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
 
 	/**
 	 * Callback is called when an item is about to be moved elsewhere in the tree.
