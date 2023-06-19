@@ -342,7 +342,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 			if (MenuRenderer && sourceItems) {
 				setActive(!!value && sourceItems.length !== 0);
 			}
-		}, [value]);
+		}, [value, sourceItems]);
 
 		return (
 			<Container {...containerProps}>
