@@ -192,6 +192,66 @@ $cadmin-c-gap: map-merge(
 $cadmin-bg-theme-colors: () !default;
 $cadmin-bg-theme-colors: map-deep-merge(
 	(
+		'blue': (
+			background-color: $cadmin-blue !important,
+			hover: (
+				background-color: clay-darken($cadmin-blue, 10%) !important,
+			),
+		),
+		'indigo': (
+			background-color: $cadmin-indigo !important,
+			hover: (
+				background-color: clay-darken($cadmin-indigo, 10%) !important,
+			),
+		),
+		'purple': (
+			background-color: $cadmin-purple !important,
+			hover: (
+				background-color: clay-darken($cadmin-purple, 10%) !important,
+			),
+		),
+		'pink': (
+			background-color: $cadmin-pink !important,
+			hover: (
+				background-color: clay-darken($cadmin-pink, 10%) !important,
+			),
+		),
+		'red': (
+			background-color: $cadmin-red !important,
+			hover: (
+				background-color: clay-darken($cadmin-red, 10%) !important,
+			),
+		),
+		'orange': (
+			background-color: $cadmin-orange !important,
+			hover: (
+				background-color: clay-darken($cadmin-orange, 10%) !important,
+			),
+		),
+		'yellow': (
+			background-color: $cadmin-yellow !important,
+			hover: (
+				background-color: clay-darken($cadmin-yellow, 10%) !important,
+			),
+		),
+		'green': (
+			background-color: $cadmin-green !important,
+			hover: (
+				background-color: clay-darken($cadmin-green, 10%) !important,
+			),
+		),
+		'teal': (
+			background-color: $cadmin-teal !important,
+			hover: (
+				background-color: clay-darken($cadmin-teal, 10%) !important,
+			),
+		),
+		'cyan': (
+			background-color: $cadmin-cyan !important,
+			hover: (
+				background-color: clay-darken($cadmin-cyan, 10%) !important,
+			),
+		),
 		'primary': (
 			background-color: $cadmin-primary !important,
 			hover: (
@@ -425,6 +485,116 @@ $cadmin-font-sizes: map-deep-merge(
 $cadmin-text-theme-colors: () !default;
 $cadmin-text-theme-colors: map-deep-merge(
 	(
+		'blue': (
+			color: $cadmin-blue !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-blue,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'indigo': (
+			color: $cadmin-indigo !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-indigo,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'purple': (
+			color: $cadmin-purple !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-purple,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'pink': (
+			color: $cadmin-pink !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-pink,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'red': (
+			color: $cadmin-red !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-red,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'orange': (
+			color: $cadmin-orange !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-orange,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'yellow': (
+			color: $cadmin-yellow !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-yellow,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'green': (
+			color: $cadmin-green !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-green,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'teal': (
+			color: $cadmin-teal !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-teal,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'cyan': (
+			color: $cadmin-cyan !important,
+			hover: (
+				color:
+					clay-darken(
+						$cadmin-cyan,
+						$cadmin-emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
 		'primary': (
 			color: $cadmin-primary !important,
 			hover: (

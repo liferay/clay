@@ -27,6 +27,46 @@ title: 'Color Utilities'
 			</thead>
 			<tbody>
 				<tr>
+					<td class="table-cell-minw-150">text-blue</td>
+					<td class="table-cell-expand"><div class="text-blue">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-indigo</td>
+					<td class="table-cell-expand"><div class="text-indigo">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-purple</td>
+					<td class="table-cell-expand"><div class="text-purple">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-pink</td>
+					<td class="table-cell-expand"><div class="text-pink">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-red</td>
+					<td class="table-cell-expand"><div class="text-red">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-orange</td>
+					<td class="table-cell-expand"><div class="text-orange">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-yellow</td>
+					<td class="table-cell-expand"><div class="text-yellow">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-green</td>
+					<td class="table-cell-expand"><div class="text-green">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-teal</td>
+					<td class="table-cell-expand"><div class="text-teal">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-cyan</td>
+					<td class="table-cell-expand"><div class="text-cyan">The quick brown fox jumped over the lazy dog.</div></td>
+				</tr>
+				<tr>
 					<td class="table-cell-minw-150">text-primary</td>
 					<td class="table-cell-expand"><div class="text-primary">The quick brown fox jumped over the lazy dog.</div></td>
 				</tr>
@@ -84,6 +124,16 @@ title: 'Color Utilities'
 </div>
 
 ```html
+<div class="text-blue" href="#1"></div>
+<div class="text-indigo" href="#1"></div>
+<div class="text-purple" href="#1"></div>
+<div class="text-pink" href="#1"></div>
+<div class="text-red" href="#1"></div>
+<div class="text-orange" href="#1"></div>
+<div class="text-yellow" href="#1"></div>
+<div class="text-green" href="#1"></div>
+<div class="text-teal" href="#1"></div>
+<div class="text-cyan" href="#1"></div>
 <div class="text-primary"></div>
 <div class="text-secondary"></div>
 <div class="text-success"></div>
@@ -113,6 +163,46 @@ Text color utilities applied to anchor tags. These styles will only be output if
 				<tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td class="table-cell-minw-150">text-blue</td>
+					<td class="table-cell-expand"><a class="text-blue" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-indigo</td>
+					<td class="table-cell-expand"><a class="text-indigo" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-purple</td>
+					<td class="table-cell-expand"><a class="text-purple" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-pink</td>
+					<td class="table-cell-expand"><a class="text-pink" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-red</td>
+					<td class="table-cell-expand"><a class="text-red" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-orange</td>
+					<td class="table-cell-expand"><a class="text-orange" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-yellow</td>
+					<td class="table-cell-expand"><a class="text-yellow" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-green</td>
+					<td class="table-cell-expand"><a class="text-green" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-teal</td>
+					<td class="table-cell-expand"><a class="text-teal" href="#1">Link to Somewhere</a></td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">text-cyan</td>
+					<td class="table-cell-expand"><a class="text-cyan" href="#1">Link to Somewhere</a></td>
+				</tr>
 				<tr>
 					<td class="table-cell-minw-150">text-primary</td>
 					<td class="table-cell-expand"><a class="text-primary" href="#1">Link to Somewhere</a></td>
@@ -167,6 +257,16 @@ Text color utilities applied to anchor tags. These styles will only be output if
 </div>
 
 ```html
+<a class="text-blue" href="#1"></a>
+<a class="text-indigo" href="#1"></a>
+<a class="text-purple" href="#1"></a>
+<a class="text-pink" href="#1"></a>
+<a class="text-red" href="#1"></a>
+<a class="text-orange" href="#1"></a>
+<a class="text-yellow" href="#1"></a>
+<a class="text-green" href="#1"></a>
+<a class="text-teal" href="#1"></a>
+<a class="text-cyan" href="#1"></a>
 <a class="text-primary" href="#1"></a>
 <a class="text-secondary" href="#1"></a>
 <a class="text-success" href="#1"></a>
@@ -227,6 +327,46 @@ Outputs:
 			</thead>
 			<tbody>
 				<tr>
+					<td class="table-cell-minw-150">bg-blue</td>
+					<td class="table-cell-expand bg-blue text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-indigo</td>
+					<td class="table-cell-expand bg-indigo text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-purple</td>
+					<td class="table-cell-expand bg-purple text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-pink</td>
+					<td class="table-cell-expand bg-pink text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-red</td>
+					<td class="table-cell-expand bg-red text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-orange</td>
+					<td class="table-cell-expand bg-orange text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-yellow</td>
+					<td class="table-cell-expand bg-yellow text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-green</td>
+					<td class="table-cell-expand bg-green text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-teal</td>
+					<td class="table-cell-expand bg-teal text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
+					<td class="table-cell-minw-150">bg-cyan</td>
+					<td class="table-cell-expand bg-cyan text-white">The quick brown fox jumped over the lazy dog.</td>
+				</tr>
+				<tr>
 					<td class="table-cell-minw-150">bg-primary</td>
 					<td class="table-cell-expand bg-primary text-white">The quick brown fox jumped over the lazy dog.</td>
 				</tr>
@@ -272,6 +412,16 @@ Outputs:
 </div>
 
 ```html
+<div class="bg-blue"></div>
+<div class="bg-indigo"></div>
+<div class="bg-purple"></div>
+<div class="bg-pink"></div>
+<div class="bg-red"></div>
+<div class="bg-orange"></div>
+<div class="bg-yellow"></div>
+<div class="bg-green"></div>
+<div class="bg-teal"></div>
+<div class="bg-cyan"></div>
 <div class="bg-primary"></div>
 <div class="bg-secondary"></div>
 <div class="bg-success"></div>

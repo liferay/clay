@@ -194,6 +194,66 @@ $c-gap: map-merge(
 $bg-theme-colors: () !default;
 $bg-theme-colors: map-deep-merge(
 	(
+		'blue': (
+			background-color: $blue !important,
+			hover: (
+				background-color: clay-darken($blue, 10%) !important,
+			),
+		),
+		'indigo': (
+			background-color: $indigo !important,
+			hover: (
+				background-color: clay-darken($indigo, 10%) !important,
+			),
+		),
+		'purple': (
+			background-color: $purple !important,
+			hover: (
+				background-color: clay-darken($purple, 10%) !important,
+			),
+		),
+		'pink': (
+			background-color: $pink !important,
+			hover: (
+				background-color: clay-darken($pink, 10%) !important,
+			),
+		),
+		'red': (
+			background-color: $red !important,
+			hover: (
+				background-color: clay-darken($red, 10%) !important,
+			),
+		),
+		'orange': (
+			background-color: $orange !important,
+			hover: (
+				background-color: clay-darken($orange, 10%) !important,
+			),
+		),
+		'yellow': (
+			background-color: $yellow !important,
+			hover: (
+				background-color: clay-darken($yellow, 10%) !important,
+			),
+		),
+		'green': (
+			background-color: $green !important,
+			hover: (
+				background-color: clay-darken($green, 10%) !important,
+			),
+		),
+		'teal': (
+			background-color: $teal !important,
+			hover: (
+				background-color: clay-darken($teal, 10%) !important,
+			),
+		),
+		'cyan': (
+			background-color: $cyan !important,
+			hover: (
+				background-color: clay-darken($cyan, 10%) !important,
+			),
+		),
 		'primary': (
 			background-color: $primary !important,
 			hover: (
@@ -415,6 +475,101 @@ $font-sizes: map-deep-merge(
 $text-theme-colors: () !default;
 $text-theme-colors: map-deep-merge(
 	(
+		'blue': (
+			color: $blue !important,
+			hover: (
+				color:
+					clay-darken($blue, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		'indigo': (
+			color: $indigo !important,
+			hover: (
+				color:
+					clay-darken(
+						$indigo,
+						$emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'purple': (
+			color: $purple !important,
+			hover: (
+				color:
+					clay-darken(
+						$purple,
+						$emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'pink': (
+			color: $pink !important,
+			hover: (
+				color:
+					clay-darken($pink, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		'red': (
+			color: $red !important,
+			hover: (
+				color:
+					clay-darken($red, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		'orange': (
+			color: $orange !important,
+			hover: (
+				color:
+					clay-darken(
+						$orange,
+						$emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'yellow': (
+			color: $yellow !important,
+			hover: (
+				color:
+					clay-darken(
+						$yellow,
+						$emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'green': (
+			color: $green !important,
+			hover: (
+				color:
+					clay-darken(
+						$green,
+						$emphasized-link-hover-darken-percentage
+					)
+					!important,
+			),
+		),
+		'teal': (
+			color: $teal !important,
+			hover: (
+				color:
+					clay-darken($teal, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
+		'cyan': (
+			color: $cyan !important,
+			hover: (
+				color:
+					clay-darken($cyan, $emphasized-link-hover-darken-percentage)
+					!important,
+			),
+		),
 		'primary': (
 			color: $primary !important,
 			hover: (
