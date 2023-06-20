@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fix error of not showing menu if it has suggestions when menuRenderer is used ([ebc719f](https://github.com/liferay/clay/commit/ebc719ff77ba88dc407d648936cd1edf0e3372e5))
+
 ## [3.97.2](https://github.com/liferay/clay/compare/v3.97.1...v3.97.2) (2023-06-16)
 
 ### Bug Fixes

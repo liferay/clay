@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug with not correctly handling visibility state of arrow buttons ([ff08e9f](https://github.com/liferay/clay/commit/ff08e9fd101c445ba96e39b3b838edf0fb9efbac))
+-   **@clayui/date-picker:** fixes error when not selecting the year ([747f09e](https://github.com/liferay/clay/commit/747f09e8d3d716eda68d3e080b3efd9592ecf26c))
+
+### Features
+
+-   **@clayui/core:** Picker add dropdown-menu-height-lg class to year picker ([c092968](https://github.com/liferay/clay/commit/c09296806d4505cabb47d92ecd5896db795caf41))
+-   **@clayui/core:** Picker use dropdown-item-scroll classes ([ec90630](https://github.com/liferay/clay/commit/ec90630785725d043ca6fcca887ad970331859ff))
+
 ## [3.97.1](https://github.com/liferay/clay/compare/v3.97.0...v3.97.1) (2023-06-14)
 
 ### Bug Fixes

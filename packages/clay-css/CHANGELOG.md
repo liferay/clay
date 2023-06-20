@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin c-prefers-* should qualify the cadmin class ([a8b1d7b](https://github.com/liferay/clay/commit/a8b1d7be2f7055bea5430c0783b573f281c7a0b9))
+* **@clayui/css:** Mixins clay-css and transition should output the correct c-prefers-* selector for cadmin ([b81e2a3](https://github.com/liferay/clay/commit/b81e2a3ab1d029ec7a7dbe8fd6fa1b084281bb52))
+
+
+### Features
+
+* **@clayui/css:** customize Picker style in DatePicker ([26064de](https://github.com/liferay/clay/commit/26064debdd3b6cde034130f7cbf6ee360ce67c5e))
+* **@clayui/css:** Dropdown Menu adds dropdown-item-scroll styles ([08e3ab9](https://github.com/liferay/clay/commit/08e3ab9d276739a83d450a0cf0e04b86f32e3579))
+* **@clayui/css:** dropdown-menu-select inline-scroller should be taller ([320c166](https://github.com/liferay/clay/commit/320c166ff26de63b45f6dba09874a0b545d482ea))
+* **@clayui/css:** Mixins clay-dropdown-menu-variant adds dropdown-item-scroll ([f4ae8f1](https://github.com/liferay/clay/commit/f4ae8f12b13470d3d026a97de7467b705add2da4))
+
+
+
+
+
 # [3.97.0](https://github.com/liferay/clay/compare/v3.96.1...v3.97.0) (2023-06-13)
 
 
