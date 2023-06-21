@@ -31,6 +31,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 			label,
 			onChange,
 			onToggle,
+			role = 'switch',
 			spritemap,
 			symbol,
 			toggled,
@@ -71,6 +72,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 								onToggle(!toggled);
 							}
 						}}
+						role={role}
 						type={type}
 						value={value}
 					/>
