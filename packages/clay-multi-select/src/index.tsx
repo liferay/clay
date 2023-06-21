@@ -169,6 +169,8 @@ export interface IProps<T>
 	 * Messages for autocomplete.
 	 */
 	messages?: {
+		listCount: string;
+		listCountPlural: string;
 		loading: string;
 		notFound: string;
 
@@ -267,6 +269,8 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 				hotkeys: 'Press backspace to delete the current row.',
 				labelAdded: 'Label {0} added to the list',
 				labelRemoved: 'Label {0} removed to the list',
+				listCount: '{0} option available.',
+				listCountPlural: '{0} options available.',
 				loading: 'Loading...',
 				notFound: 'No results found',
 			},
