@@ -11,6 +11,7 @@ exports[`Rendering default 1`] = `
       checked={false}
       className="toggle-switch-check"
       onChange={[Function]}
+      role="switch"
       type="checkbox"
     />
     <span
@@ -39,6 +40,7 @@ exports[`Rendering inside radiogroup 1`] = `
         checked={true}
         className="toggle-switch-check"
         onChange={[Function]}
+        role="switch"
         type="radio"
         value="foo"
       />
@@ -67,6 +69,7 @@ exports[`Rendering inside radiogroup 1`] = `
         checked={false}
         className="toggle-switch-check"
         onChange={[Function]}
+        role="switch"
         type="radio"
         value="bar"
       />
@@ -95,6 +98,7 @@ exports[`Rendering inside radiogroup 1`] = `
         checked={false}
         className="toggle-switch-check"
         onChange={[Function]}
+        role="switch"
         type="radio"
         value="baz"
       />
@@ -128,6 +132,7 @@ exports[`Rendering w/ disabled 1`] = `
       className="toggle-switch-check"
       disabled={true}
       onChange={[Function]}
+      role="switch"
       type="checkbox"
     />
     <span
@@ -153,6 +158,7 @@ exports[`Rendering w/ symbol 1`] = `
       checked={false}
       className="toggle-switch-check"
       onChange={[Function]}
+      role="switch"
       type="checkbox"
     />
     <span
