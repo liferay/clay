@@ -3,7 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {__NOT_PUBLIC_COLLECTION} from '@clayui/core';
+import {
+	__NOT_PUBLIC_COLLECTION,
+	__NOT_PUBLIC_LIVE_ANNOUNCER,
+} from '@clayui/core';
 import DropDown from '@clayui/drop-down';
 import {ClayInput as Input} from '@clayui/form';
 import LoadingIndicator from '@clayui/loading-indicator';
@@ -11,6 +14,8 @@ import {
 	InternalDispatch,
 	Keys,
 	Overlay,
+	isAppleDevice,
+	sub,
 	useControlledState,
 	useDebounce,
 	useId,
@@ -21,14 +26,10 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {AutocompleteContext} from './Context';
 
-import type {ICollectionProps} from '@clayui/core';
+import type {AnnouncerAPI, ICollectionProps} from '@clayui/core';
 
 const {Collection, useCollection, useVirtual} = __NOT_PUBLIC_COLLECTION;
-
-type Messages = {
-	loading: string;
-	notFound: string;
-};
+const {LiveAnnouncer} = __NOT_PUBLIC_LIVE_ANNOUNCER;
 
 type ItemProps<T> = {
 	children: React.ReactElement;
@@ -97,7 +98,12 @@ export interface IProps<T>
 	/**
 	 * Messages for autocomplete.
 	 */
-	messages?: Messages;
+	messages?: {
+		listCount: string;
+		listCountPlural: string;
+		loading: string;
+		notFound: string;
+	};
 
 	/**
 	 * Callback for when the active state changes (controlled).
@@ -152,6 +158,13 @@ const List = React.forwardRef<
 
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
+const defaultMessages = {
+	listCount: '{0} option available.',
+	listCountPlural: '{0} options available.',
+	loading: 'Loading...',
+	notFound: 'No results found',
+};
+
 export const Autocomplete = React.forwardRef<
 	HTMLInputElement,
 	IProps<Record<string, any>>
@@ -170,7 +183,7 @@ export const Autocomplete = React.forwardRef<
 		items: externalItems,
 		loadingState,
 		menuTrigger = 'input',
-		messages = {loading: '', notFound: ''},
+		messages,
 		onActiveChange,
 		onChange,
 		onItemsChange,
@@ -180,6 +193,11 @@ export const Autocomplete = React.forwardRef<
 	}: IProps<T>,
 	ref: React.Ref<HTMLInputElement>
 ) {
+	messages = {
+		...defaultMessages,
+		...(messages ?? {}),
+	};
+
 	const [items, , isItemsUncontrolled] = useControlledState({
 		defaultName: 'defaultItems',
 		defaultValue: defaultItems,
@@ -220,6 +238,8 @@ export const Autocomplete = React.forwardRef<
 	const currentItemSelected = useRef<string>('');
 
 	const ariaControlsId = useId();
+
+	const announcerAPI = useRef<AnnouncerAPI>(null);
 
 	useEffect(() => {
 		if (active === false) {
@@ -347,6 +367,35 @@ export const Autocomplete = React.forwardRef<
 		}
 	}, [active]);
 
+	const optionCount = collection.getItems().length;
+	const lastSize = useRef(optionCount);
+
+	useEffect(() => {
+		// Only announces the number of options available when the menu is open
+		// if there is no item with focus, with the exception of Voice Over
+		// which does not include the message.
+		if (
+			announcerAPI.current &&
+			active &&
+			(!activeDescendant ||
+				isAppleDevice() ||
+				optionCount !== lastSize.current)
+		) {
+			const optionCount = collection.getItems().length;
+
+			announcerAPI.current.announce(
+				sub(
+					optionCount === 1
+						? messages!.listCount
+						: messages!.listCountPlural,
+					[optionCount]
+				)
+			);
+		}
+
+		lastSize.current = optionCount;
+	}, [active, value]);
+
 	const onClose = useCallback(() => setActive(false), []);
 
 	const onPress = useCallback(() => {
@@ -361,6 +410,8 @@ export const Autocomplete = React.forwardRef<
 
 	return (
 		<>
+			<LiveAnnouncer ref={announcerAPI} />
+
 			<As
 				{...otherProps}
 				aria-activedescendant={
