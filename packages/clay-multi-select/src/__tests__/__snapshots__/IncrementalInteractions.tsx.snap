@@ -87,6 +87,7 @@ exports[`MultiSelect incremental interactions renders as disabled 1`] = `
               <button
                 aria-label="Remove foo"
                 class="close"
+                disabled=""
                 id="clay-id-8-label-1-close"
                 tabindex="-1"
                 type="button"
@@ -124,6 +125,7 @@ exports[`MultiSelect incremental interactions renders as disabled 1`] = `
               <button
                 aria-label="Remove bar"
                 class="close"
+                disabled=""
                 id="clay-id-8-label-2-close"
                 tabindex="-1"
                 type="button"
@@ -161,6 +163,7 @@ exports[`MultiSelect incremental interactions renders as disabled 1`] = `
               <button
                 aria-label="Remove baz"
                 class="close"
+                disabled=""
                 id="clay-id-8-label-3-close"
                 tabindex="-1"
                 type="button"
@@ -187,6 +190,7 @@ exports[`MultiSelect incremental interactions renders as disabled 1`] = `
             autocomplete="off"
             autocorrect="off"
             class="form-control-inset"
+            disabled=""
             role="combobox"
             spellcheck="false"
             type="text"
