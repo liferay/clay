@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 import {VerticalNav} from '../src';
 
 type Item = {
-	id: number;
+	id: string;
 	href?: string;
 	label: string;
 	active?: boolean;
@@ -18,11 +18,11 @@ type Item = {
 
 const items = [
 	{
-		id: 1,
+		id: '1',
 		items: [
 			{
 				href: '#',
-				id: 2,
+				id: '2',
 				label: 'Nested1',
 			},
 		],
@@ -30,25 +30,25 @@ const items = [
 	},
 	{
 		href: '#',
-		id: 3,
+		id: '3',
 		label: 'About',
 	},
 	{
 		href: '#',
-		id: 4,
+		id: '4',
 		label: 'Contact',
 	},
 	{
-		id: 5,
+		id: '5',
 		items: [
 			{
 				href: '#',
-				id: 6,
+				id: '6',
 				label: 'Five',
 			},
 			{
 				href: '#',
-				id: 7,
+				id: '7',
 				label: 'Six',
 			},
 		],
@@ -56,7 +56,7 @@ const items = [
 	},
 	{
 		href: '#',
-		id: 8,
+		id: '8',
 		label: 'Seven',
 	},
 ] as Array<Item>;
@@ -439,7 +439,7 @@ export default {
 };
 
 export const Default = () => (
-	<VerticalNav active={6} items={items}>
+	<VerticalNav active="6" items={items}>
 		{(item) => (
 			<VerticalNav.Item href={item.href} items={item.items} key={item.id}>
 				{item.label}
