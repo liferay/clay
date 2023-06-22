@@ -369,6 +369,7 @@ const ClayMultiSelect = React.forwardRef<HTMLDivElement, IProps<unknown>>(
 						closeButtonAriaLabel={closeButtonAriaLabel}
 						containerElementRef={containerRef}
 						defaultItems={!hasAsyncItems ? sourceItems : undefined}
+						disabled={disabled}
 						filterKey={locator.label}
 						inputName={inputName}
 						items={hasAsyncItems ? sourceItems : undefined}
