@@ -44,7 +44,7 @@ export interface IProps extends React.ComponentProps<typeof DropDown.Item> {
 	textValue?: string;
 }
 
-const optionsFuzzy = {post: '|+', pre: '+|'};
+const optionsFuzzy = {post: '|}', pre: '}|'};
 
 const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	{
@@ -91,8 +91,8 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 				? fuzzyMatch.rendered
 						.split('|')
 						.map((item, index) => {
-							const Text = item.includes('+') ? 'span' : 'strong';
-							const value = item.replace(/\+/g, '');
+							const Text = item.includes('}') ? 'span' : 'strong';
+							const value = item.replace(/\}/g, '');
 
 							return value ? (
 								<Text key={index}>{value}</Text>
@@ -117,8 +117,8 @@ const ItemLegacy = React.forwardRef<HTMLLIElement, IProps>(function ItemLegacy(
 				? fuzzyMatch.rendered
 						.split('|')
 						.map((item, index) => {
-							const Text = item.includes('+') ? 'span' : 'strong';
-							const value = item.replace(/\+/g, '');
+							const Text = item.includes('}') ? 'span' : 'strong';
+							const value = item.replace(/\}/g, '');
 
 							return value ? (
 								<Text key={index}>{value}</Text>
