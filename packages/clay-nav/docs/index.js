@@ -129,18 +129,18 @@ import ClayIcon from '@clayui/icon';
 `;
 
 const VerticalNavigationCustomItemCode = `const Component = () => {
-	const noIcons = [1, 5];
+	const noIcons = ['1', '5'];
 
 	return (
 		<ClayVerticalNav
-			active={6}
-			defaultExpandedKeys={new Set([5])}
+			active="6"
+			defaultExpandedKeys={new Set(['5'])}
 			items={[
 				{
-					id: 1,
+					id: '1',
 					items: [
 						{
-							id: 2,
+							id: '2',
 							href: '#nested1',
 							label: 'Nested1',
 						},
@@ -148,25 +148,25 @@ const VerticalNavigationCustomItemCode = `const Component = () => {
 					label: 'Home',
 				},
 				{
-					id: 3,
+					id: '3',
 					href: '#2',
 					label: 'About',
 				},
 				{
-					id: 4,
+					id: '4',
 					href: '#3',
 					label: 'Contact',
 				},
 				{
-					id: 5,
+					id: '5',
 					items: [
 						{
-							id: 6,
+							id: '6',
 							href: '#5',
 							label: 'Five',
 						},
 						{
-							id: 7,
+							id: '7',
 							href: '#6',
 							label: 'Six',
 						},
@@ -174,7 +174,7 @@ const VerticalNavigationCustomItemCode = `const Component = () => {
 					label: 'Projects',
 				},
 				{
-					id: 8,
+					id: '8',
 					href: '#7',
 					label: 'Seven',
 				},
@@ -189,7 +189,7 @@ const VerticalNavigationCustomItemCode = `const Component = () => {
 					key={item.id}
 				>
 					{item.label}
-					{noIcons.indexOf(item.id) < 0 && (
+					{!noIcons.includes(item.id) && (
 						<span class="inline-item inline-item-after">
 							<ClayIcon spritemap={spritemap} symbol="lock" />
 						</span>
