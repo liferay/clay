@@ -81,6 +81,8 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const hoverTimeoutIdRef = useRef<number | null>();
 
+	const isValidDrop = useRef<boolean>(true);
+
 	// Holds a reference to the index value and only updates when its positions
 	// change. This causes a ripple effect that we only want to update
 	// when necessary.
@@ -136,6 +138,13 @@ export function ItemContextProvider({children, value}: Props) {
 	});
 
 	useEffect(() => {
+		// Resets the flag when the drag and drop is finished or cancelled.
+		if (mode === null) {
+			isValidDrop.current = true;
+		}
+	}, [mode]);
+
+	useEffect(() => {
 		preview(getEmptyImage(), {captureDraggingState: true});
 	}, [preview]);
 
@@ -155,7 +164,8 @@ export function ItemContextProvider({children, value}: Props) {
 			if (
 				monitor.didDrop() ||
 				!monitor.canDrop() ||
-				(dragItem as Value).item.key === item.key
+				(dragItem as Value).item.key === item.key ||
+				!isValidDrop.current
 			) {
 				return;
 			}
@@ -266,10 +276,13 @@ export function ItemContextProvider({children, value}: Props) {
 				);
 
 				if (!isHovered) {
+					isValidDrop.current = false;
+
 					return;
 				}
 			}
 
+			isValidDrop.current = true;
 			if (currentPosition !== position) {
 				onPositionChange(currentKey, currentPosition);
 			}
