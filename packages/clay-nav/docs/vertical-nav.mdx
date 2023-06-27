@@ -6,12 +6,16 @@ packageNpm: '@clayui/nav'
 storybookPath: 'design-system-components-verticalnav--default'
 ---
 
-import {VerticalNavigation} from '$packages/clay-nav/docs/index';
+import {
+	VerticalNavigation,
+	VerticalNavigationCustomItem,
+} from '$packages/clay-nav/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Example](#example)
+-   [Custom Links](#custom-links)
 -   [Custom Trigger](#custom-trigger)
 
 </div>
@@ -20,6 +24,12 @@ import {VerticalNavigation} from '$packages/clay-nav/docs/index';
 ## Example
 
 <VerticalNavigation />
+
+## Custom Links
+
+The markup between the `<ClayVerticalNav.Item>` tag will render inside the `nav-link`. In the example below, we are outputting the lock icon next to the label only for non collapsible items.
+
+<VerticalNavigationCustomItem />
 
 ## Custom Trigger
 

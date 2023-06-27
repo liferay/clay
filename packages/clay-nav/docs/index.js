@@ -4,6 +4,7 @@
  */
 
 import Editor from '$clayui.com/src/components/Editor';
+import ClayIcon from '@clayui/icon';
 import ClayNav, {ClayVerticalNav} from '@clayui/nav';
 import React from 'react';
 
@@ -123,4 +124,94 @@ const VerticalNavigation = () => {
 	);
 };
 
-export {Navigation, VerticalNavigation};
+const verticalNavigationCustomItemImportsCode = `import {VerticalNav} from '@clayui/nav';
+import ClayIcon from '@clayui/icon';
+`;
+
+const VerticalNavigationCustomItemCode = `const Component = () => {
+	const noIcons = ['1', '5'];
+
+	return (
+		<ClayVerticalNav
+			active="6"
+			defaultExpandedKeys={new Set(['5'])}
+			items={[
+				{
+					id: '1',
+					items: [
+						{
+							id: '2',
+							href: '#nested1',
+							label: 'Nested1',
+						},
+					],
+					label: 'Home',
+				},
+				{
+					id: '3',
+					href: '#2',
+					label: 'About',
+				},
+				{
+					id: '4',
+					href: '#3',
+					label: 'Contact',
+				},
+				{
+					id: '5',
+					items: [
+						{
+							id: '6',
+							href: '#5',
+							label: 'Five',
+						},
+						{
+							id: '7',
+							href: '#6',
+							label: 'Six',
+						},
+					],
+					label: 'Projects',
+				},
+				{
+					id: '8',
+					href: '#7',
+					label: 'Seven',
+				},
+			]}
+			large={false}
+			spritemap={spritemap}
+		>
+			{(item) => (
+				<ClayVerticalNav.Item
+					href={item.href}
+					items={item.items}
+					key={item.id}
+				>
+					{item.label}
+					{!noIcons.includes(item.id) && (
+						<span class="inline-item inline-item-after">
+							<ClayIcon spritemap={spritemap} symbol="lock" />
+						</span>
+					)}
+				</ClayVerticalNav.Item>
+			)}
+		</ClayVerticalNav>
+	);
+}
+
+render(<Component />);`;
+
+const VerticalNavigationCustomItem = () => {
+	const scope = {ClayIcon, ClayVerticalNav};
+
+	return (
+		<Editor
+			code={VerticalNavigationCustomItemCode}
+			imports={verticalNavigationCustomItemImportsCode}
+			scope={scope}
+		/>
+	);
+};
+
+export {Navigation, VerticalNavigation, VerticalNavigationCustomItem};
