@@ -3,8 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useMousePosition} from '@clayui/shared';
-import React, {CSSProperties, useRef} from 'react';
+import React, {CSSProperties} from 'react';
 import {DragLayerMonitor, XYCoord, useDragLayer} from 'react-dnd';
 
 const layerStyles: CSSProperties = {
@@ -18,22 +17,14 @@ const layerStyles: CSSProperties = {
 	zIndex: 150,
 };
 
-function getItemStyles(
-	currentOffset: XYCoord | null,
-	mousePosition: [number, number],
-	ref: React.MutableRefObject<HTMLDivElement | null>
-): CSSProperties {
-	if (!currentOffset || !ref.current) {
+function getItemStyles(currentOffset: XYCoord | null): CSSProperties {
+	if (!currentOffset) {
 		return {
 			display: 'none',
 		};
 	}
 
-	const rect = ref.current.getBoundingClientRect();
-
-	const transform = `translate(${
-		mousePosition[0] + currentOffset.x - rect.width * 0.5
-	}px, ${currentOffset.y}px)`;
+	const transform = `translate(${currentOffset.x}px, ${currentOffset.y}px)`;
 
 	return {
 		WebkitTransform: transform,
@@ -42,17 +33,13 @@ function getItemStyles(
 }
 
 const DragLayer = ({itemNameKey}: {itemNameKey: string}) => {
-	const elementRef = useRef<HTMLDivElement | null>(null);
-
 	const {currentOffset, isDragging, item} = useDragLayer(
 		(monitor: DragLayerMonitor) => ({
-			currentOffset: monitor.getSourceClientOffset(),
+			currentOffset: monitor.getClientOffset(),
 			isDragging: monitor.isDragging(),
 			item: monitor.getItem(),
 		})
 	);
-
-	const mousePosition = useMousePosition();
 
 	if (!isDragging || item.type !== 'treeViewItem') {
 		return null;
@@ -64,8 +51,7 @@ const DragLayer = ({itemNameKey}: {itemNameKey: string}) => {
 		<div style={layerStyles}>
 			<div
 				className="treeview-dragging"
-				ref={elementRef}
-				style={getItemStyles(currentOffset, mousePosition, elementRef)}
+				style={getItemStyles(currentOffset)}
 			>
 				{name}
 			</div>
