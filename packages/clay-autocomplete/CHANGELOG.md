@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix bug not announcing available options when autocomplete is open ([1dc9581](https://github.com/liferay/clay/commit/1dc9581bd2e96b7cdf250bf02c4858c5df4eb833))
+-   **@clayui/autocomplete:** fixes suppressing the `+` from the value when filtering the list ([1ba8356](https://github.com/liferay/clay/commit/1ba8356fce973dce24a63b5154e9ae9370c43562))
+
 # [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
 
 **Note:** Version bump only for package @clayui/autocomplete

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fixes error when restoring focus from DropDown ([5802f32](https://github.com/liferay/clay/commit/5802f32b885c0479e82c46ffcfdc99f0a5a0b461))
+
 # [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
 
 **Note:** Version bump only for package @clayui/drop-down

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix bug not announcing available options when autocomplete is open ([1dc9581](https://github.com/liferay/clay/commit/1dc9581bd2e96b7cdf250bf02c4858c5df4eb833))
+-   **@clayui/autocomplete:** fixes suppressing the `+` from the value when filtering the list ([1ba8356](https://github.com/liferay/clay/commit/1ba8356fce973dce24a63b5154e9ae9370c43562))
+-   **@clayui/css:** Utilities forgot to add !important to some bg utils ([c164484](https://github.com/liferay/clay/commit/c164484abc0aeb4928c9f7b057f1d46ed42d8f95))
+-   **@clayui/drop-down:** fixes error when restoring focus from DropDown ([5802f32](https://github.com/liferay/clay/commit/5802f32b885c0479e82c46ffcfdc99f0a5a0b461))
+-   **@clayui/form:** adds the proper `role` to the switch component ([c3530c3](https://github.com/liferay/clay/commit/c3530c38f08b8679a4681f04da631259baef2654))
+-   **@clayui/multi-select:** fixes error when not disabling the MultiSelect component ([51dafd3](https://github.com/liferay/clay/commit/51dafd3f729034f0cac40dce87315e8ad2ae413d))
+
+### Features
+
+-   **@clayui/core:** adds feature parity for `onItemMove` and `onItemHover` with drag and drop via keyboard ([dfa8e9e](https://github.com/liferay/clay/commit/dfa8e9ef86a43bb3f9a25aef7deb20abf215a783))
+-   **@clayui/core:** allow returning false to cancel hover ([764210d](https://github.com/liferay/clay/commit/764210d3373495f0c3c8481ee25490250630c6a0))
+-   **@clayui/core:** disable drop when not a valid target by `onItemHover` ([006eef6](https://github.com/liferay/clay/commit/006eef675d57ee8fb6daafb7321fb399872f8774))
+-   **@clayui/css:** Utilities adds more text and bg color utilities ([5230949](https://github.com/liferay/clay/commit/5230949577407b21c96011eda3acfea4c2c3f1e7))
+
 # [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
 
 ### Bug Fixes

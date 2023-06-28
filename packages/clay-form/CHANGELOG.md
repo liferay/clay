@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **@clayui/form:** adds the proper `role` to the switch component ([c3530c3](https://github.com/liferay/clay/commit/c3530c38f08b8679a4681f04da631259baef2654))
+
 # [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
 
 **Note:** Version bump only for package @clayui/form

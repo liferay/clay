@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix bug not announcing available options when autocomplete is open ([1dc9581](https://github.com/liferay/clay/commit/1dc9581bd2e96b7cdf250bf02c4858c5df4eb833))
+
+### Features
+
+-   **@clayui/core:** adds feature parity for `onItemMove` and `onItemHover` with drag and drop via keyboard ([dfa8e9e](https://github.com/liferay/clay/commit/dfa8e9ef86a43bb3f9a25aef7deb20abf215a783))
+-   **@clayui/core:** allow returning false to cancel hover ([764210d](https://github.com/liferay/clay/commit/764210d3373495f0c3c8481ee25490250630c6a0))
+-   **@clayui/core:** disable drop when not a valid target by `onItemHover` ([006eef6](https://github.com/liferay/clay/commit/006eef675d57ee8fb6daafb7321fb399872f8774))
+
 # [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
 
 ### Bug Fixes

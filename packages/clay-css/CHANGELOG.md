@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Utilities forgot to add !important to some bg utils ([c164484](https://github.com/liferay/clay/commit/c164484abc0aeb4928c9f7b057f1d46ed42d8f95))
+
+
+### Features
+
+* **@clayui/css:** Utilities adds more text and bg color utilities ([5230949](https://github.com/liferay/clay/commit/5230949577407b21c96011eda3acfea4c2c3f1e7))
+
+
+
+
+
 # [3.98.0](https://github.com/liferay/clay/compare/v3.97.2...v3.98.0) (2023-06-20)
 
 
