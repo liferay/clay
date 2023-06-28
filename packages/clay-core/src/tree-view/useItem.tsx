@@ -13,15 +13,7 @@ import {Position, TARGET_POSITION, getNewItemPath, useDnD} from './DragAndDrop';
 import {useTreeViewContext} from './context';
 import {createImmutableTree} from './useTree';
 
-type Value = {
-	[propName: string]: any;
-	prevKey?: React.Key;
-	nextKey?: React.Key;
-	indexes: Array<number>;
-	itemRef: React.RefObject<HTMLDivElement>;
-	key: React.Key;
-	parentItemRef: React.RefObject<HTMLDivElement>;
-};
+import type {Value} from './DragAndDrop';
 
 type Props = {
 	children: React.ReactNode;
