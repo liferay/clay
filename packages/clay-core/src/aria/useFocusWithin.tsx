@@ -25,6 +25,12 @@ type Props<T> = {
 	focusableElements: Array<string>;
 };
 
+function getId(element: HTMLElement) {
+	const [type, id] = element.getAttribute('data-id')!.split(',');
+
+	return type === 'number' ? Number(id) : id;
+}
+
 export function FocusWithinProvider<T extends HTMLElement>({
 	children,
 	containerRef,
@@ -40,11 +46,24 @@ export function FocusWithinProvider<T extends HTMLElement>({
 			return;
 		}
 
-		const [type, id] = item.getAttribute('data-id')!.split(',');
-		const key = type === 'number' ? Number(id) : id;
-
-		setFocusId(key);
+		setFocusId(getId(item));
 	}, []);
+
+	// Revalidates the focus if the item no longer exists in the list.
+	useEffect(() => {
+		if (!focusId) {
+			return;
+		}
+
+		// TODO: Get this information using the collection API
+		const items = getFocusableList(containerRef, focusableElements);
+
+		const hasItem = items.find((item) => focusId === getId(item));
+
+		if (!hasItem) {
+			setFocusId(getId(items[0]));
+		}
+	}, [children]);
 
 	return (
 		<FocusContext.Provider value={{focusId, onFocusChange: setFocusId}}>
