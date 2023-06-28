@@ -37,7 +37,7 @@ export interface ITreeViewContext<T> extends ITreeState<T> {
 	expanderIcons?: Icons;
 	nestedKey?: string;
 	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
-	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => void;
+	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
 	onLoadMore?: OnLoadMore<T>;
 	onSelect?: (item: T) => void;
 	onRenameItem?: (item: T) => Promise<any>;

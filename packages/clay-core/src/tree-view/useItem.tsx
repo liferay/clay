@@ -13,15 +13,7 @@ import {Position, TARGET_POSITION, getNewItemPath, useDnD} from './DragAndDrop';
 import {useTreeViewContext} from './context';
 import {createImmutableTree} from './useTree';
 
-type Value = {
-	[propName: string]: any;
-	prevKey?: React.Key;
-	nextKey?: React.Key;
-	indexes: Array<number>;
-	itemRef: React.RefObject<HTMLDivElement>;
-	key: React.Key;
-	parentItemRef: React.RefObject<HTMLDivElement>;
-};
+import type {Value} from './DragAndDrop';
 
 type Props = {
 	children: React.ReactNode;
@@ -81,6 +73,8 @@ export function ItemContextProvider({children, value}: Props) {
 
 	const hoverTimeoutIdRef = useRef<number | null>();
 
+	const isValidDrop = useRef<boolean>(true);
+
 	// Holds a reference to the index value and only updates when its positions
 	// change. This causes a ripple effect that we only want to update
 	// when necessary.
@@ -136,6 +130,13 @@ export function ItemContextProvider({children, value}: Props) {
 	});
 
 	useEffect(() => {
+		// Resets the flag when the drag and drop is finished or cancelled.
+		if (mode === null) {
+			isValidDrop.current = true;
+		}
+	}, [mode]);
+
+	useEffect(() => {
 		preview(getEmptyImage(), {captureDraggingState: true});
 	}, [preview]);
 
@@ -155,7 +156,8 @@ export function ItemContextProvider({children, value}: Props) {
 			if (
 				monitor.didDrop() ||
 				!monitor.canDrop() ||
-				(dragItem as Value).item.key === item.key
+				(dragItem as Value).item.key === item.key ||
+				!isValidDrop.current
 			) {
 				return;
 			}
@@ -254,7 +256,7 @@ export function ItemContextProvider({children, value}: Props) {
 				const tree = createImmutableTree(items as any, nestedKey!);
 				const indexes = getNewItemPath(item.indexes, currentPosition);
 
-				onItemHover(
+				const isHovered = onItemHover(
 					removeItemInternalProps(
 						(dragItem as unknown as Value).item
 					),
@@ -264,8 +266,15 @@ export function ItemContextProvider({children, value}: Props) {
 						previous: (dragItem as unknown as Value).item.index,
 					}
 				);
+
+				if (!isHovered) {
+					isValidDrop.current = false;
+
+					return;
+				}
 			}
 
+			isValidDrop.current = true;
 			if (currentPosition !== position) {
 				onPositionChange(currentKey, currentPosition);
 			}

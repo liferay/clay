@@ -78,7 +78,7 @@ interface ITreeViewProps<T>
 	 * The callback is called whenever there is an item dragging over
 	 * another item.
 	 */
-	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => void;
+	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
 
 	/**
 	 * Callback is called when an item is about to be moved elsewhere in the tree.
@@ -228,7 +228,13 @@ export function TreeView<T>({
 		>
 			<DndProvider backend={HTML5Backend} context={dragAndDropContext}>
 				<TreeViewContext.Provider value={context}>
-					<DragAndDropProvider messages={messages} rootRef={rootRef}>
+					<DragAndDropProvider<T>
+						messages={messages}
+						nestedKey={nestedKey}
+						onItemHover={onItemHover}
+						onItemMove={onItemMove}
+						rootRef={rootRef}
+					>
 						<FocusWithinProvider
 							containerRef={rootRef}
 							focusableElements={focusableElements}

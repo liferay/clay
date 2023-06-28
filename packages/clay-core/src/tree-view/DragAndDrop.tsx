@@ -15,7 +15,8 @@ import React, {
 import {createPortal} from 'react-dom';
 
 import {LiveAnnouncer} from '../live-announcer';
-import {useTreeViewContext} from './context';
+import {MoveItemIndex, useTreeViewContext} from './context';
+import {createImmutableTree} from './useTree';
 
 import type {AnnouncerAPI} from '../live-announcer';
 
@@ -31,6 +32,16 @@ export type DragAndDropMessages = {
 	endDragKeyboard: string;
 	insertAfter: string;
 	insertBefore: string;
+};
+
+export type Value = {
+	[propName: string]: any;
+	indexes: Array<number>;
+	itemRef: React.RefObject<HTMLDivElement>;
+	key: React.Key;
+	nextKey?: React.Key;
+	parentItemRef: React.RefObject<HTMLDivElement>;
+	prevKey?: React.Key;
 };
 
 type ContextProps = {
@@ -59,10 +70,13 @@ type State = Pick<
 
 const DnDContext = React.createContext<ContextProps>({} as ContextProps);
 
-type Props = {
-	rootRef: React.RefObject<HTMLUListElement>;
+type Props<T> = {
 	children: React.ReactNode;
 	messages?: DragAndDropMessages;
+	nestedKey: string;
+	onItemHover?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
+	onItemMove?: (item: T, parentItem: T, index: MoveItemIndex) => boolean;
+	rootRef: React.RefObject<HTMLUListElement>;
 };
 
 function getFocusableTree(rootRef: React.RefObject<HTMLUListElement>) {
@@ -139,12 +153,15 @@ const defaultMessages: DragAndDropMessages = {
 	insertBefore: 'Insert on top of the',
 };
 
-export const DragAndDropProvider = ({
+export function DragAndDropProvider<T>({
 	children,
 	messages = defaultMessages,
+	nestedKey,
+	onItemMove,
+	onItemHover,
 	rootRef,
-}: Props) => {
-	const {dragAndDrop, layout, reorder} = useTreeViewContext();
+}: Props<T>) {
+	const {dragAndDrop, items, layout, reorder} = useTreeViewContext();
 
 	const announcerRef = useRef<AnnouncerAPI>(null);
 
@@ -209,23 +226,6 @@ export const DragAndDropProvider = ({
 		[]
 	);
 
-	const onDrop = useCallback(() => {
-		const {currentDrag, currentTarget, position} = state;
-		const dropItem = layout.layoutKeys.current.get(currentTarget!);
-		const dragItem = layout.layoutKeys.current.get(currentDrag!);
-
-		reorder(dragItem!.loc, getNewItemPath(dropItem!.loc, position!));
-		setState({
-			currentDrag: null,
-			currentTarget: null,
-			lastItem: currentDrag,
-			mode: null,
-			position: null,
-			status: 'complete',
-		});
-		announcerRef.current?.announce(messages.dropComplete);
-	}, [state]);
-
 	const onCancel = useCallback(() => {
 		announcerRef.current?.announce(messages.dropCanceled);
 		setState((state) => ({
@@ -237,6 +237,46 @@ export const DragAndDropProvider = ({
 			status: 'canceled',
 		}));
 	}, []);
+
+	const onDrop = useCallback(() => {
+		const {currentDrag, currentTarget, position} = state;
+		const dropLayoutItem = layout.layoutKeys.current.get(currentTarget!);
+		const dragLayoutItem = layout.layoutKeys.current.get(currentDrag!);
+
+		const indexes = getNewItemPath(dropLayoutItem!.loc, position!);
+
+		if (onItemMove) {
+			const tree = createImmutableTree(items as any, nestedKey!);
+
+			const dragNode = tree.nodeByPath(dragLayoutItem!.loc);
+
+			const isMoved = onItemMove(
+				dragNode.item as Record<any, any>,
+				tree.nodeByPath(indexes).parent as Record<any, any>,
+				{
+					next: indexes[indexes.length - 1],
+					previous: dragNode.index,
+				}
+			);
+
+			if (!isMoved) {
+				onCancel();
+
+				return;
+			}
+		}
+
+		reorder(dragLayoutItem!.loc, indexes);
+		setState({
+			currentDrag: null,
+			currentTarget: null,
+			lastItem: currentDrag,
+			mode: null,
+			position: null,
+			status: 'complete',
+		});
+		announcerRef.current?.announce(messages.dropComplete);
+	}, [state, onCancel]);
 
 	useEffect(() => {
 		if (state.lastItem && state.status) {
@@ -273,6 +313,8 @@ export const DragAndDropProvider = ({
 
 	useEffect(() => {
 		if (state.mode === 'keyboard') {
+			const denylist = new Set<React.Key>();
+
 			const onKeyDown = (event: KeyboardEvent) => {
 				switch (event.key) {
 					case Keys.Esc:
@@ -293,58 +335,120 @@ export const DragAndDropProvider = ({
 						event.preventDefault();
 						event.stopPropagation();
 
-						const items = getFocusableTree(rootRef);
-						const position = items.findIndex((element) =>
+						const focusableItems = getFocusableTree(rootRef).filter(
+							(item) => {
+								if (item.getAttribute('data-dnd-dropping')) {
+									return true;
+								}
+
+								const [type, key] = item
+									.getAttribute('data-id')!
+									.split(',');
+
+								return !denylist.has(
+									type === 'number' ? Number(key) : key
+								);
+							}
+						);
+						const position = focusableItems.findIndex((element) =>
 							element.getAttribute('data-dnd-dropping')
 						);
 
 						const item =
-							items[
+							focusableItems[
 								event.key === Keys.Up
 									? position - 1
 									: position + 1
 							];
 
-						if (
+						const newState: State = {
+							...state,
+						};
+
+						if (denylist.has(newState.currentTarget!)) {
+							const [type, key] = item
+								.getAttribute('data-id')!
+								.split(',');
+
+							newState.position =
+								event.key === Keys.Up ? 'top' : 'bottom';
+							newState.currentTarget =
+								type === 'number' ? Number(key) : key;
+						} else if (
 							(event.key === Keys.Up &&
 								state.position === 'bottom') ||
 							(event.key === Keys.Down &&
 								state.position === 'top')
 						) {
-							setState((state) => ({
-								...state,
-								position: 'middle',
-							}));
+							newState.position = 'middle';
 						} else if (
 							event.key === Keys.Down &&
 							state.position === 'middle'
 						) {
-							setState((state) => ({
-								...state,
-								position: 'bottom',
-							}));
+							newState.position = 'bottom';
 						} else {
 							if (!item) {
-								setState((state) => ({
-									...state,
-									position: position === 0 ? 'top' : 'bottom',
-								}));
+								newState.position =
+									position === 0 ? 'top' : 'bottom';
+							} else {
+								const [type, key] = item
+									.getAttribute('data-id')!
+									.split(',');
+
+								newState.position =
+									event.key === Keys.Up ? 'bottom' : 'middle';
+								newState.currentTarget =
+									type === 'number' ? Number(key) : key;
+							}
+						}
+
+						if (onItemHover) {
+							const dropLayoutItem =
+								layout.layoutKeys.current.get(
+									newState.currentTarget!
+								);
+							const dragLayoutItem =
+								layout.layoutKeys.current.get(
+									newState.currentDrag!
+								);
+							const tree = createImmutableTree(
+								items as any,
+								nestedKey!
+							);
+							const indexes = getNewItemPath(
+								dropLayoutItem!.loc,
+								newState.position!
+							);
+
+							const dragNode = tree.nodeByPath(
+								dragLayoutItem!.loc
+							);
+
+							const isHovered = onItemHover(
+								dragNode.item as Record<any, any>,
+								tree.nodeByPath(indexes).parent as Record<
+									any,
+									any
+								>,
+								{
+									next: indexes[indexes.length - 1],
+									previous: dragNode.index,
+								}
+							);
+
+							if (!isHovered) {
+								// Removes the item from the list so that the next function
+								// call looks for the next element.
+								denylist.add(newState.currentTarget!);
+
+								// Try moving to the next item.
+								onKeyDown(event);
 
 								return;
 							}
-
-							const [type, key] = item
-								.getAttribute('data-id')!
-								.split(',');
-
-							setState((state) => ({
-								...state,
-								currentTarget:
-									type === 'number' ? Number(key) : key,
-								position:
-									event.key === Keys.Up ? 'bottom' : 'middle',
-							}));
 						}
+
+						setState(newState);
 						break;
 					}
 					default:
@@ -436,7 +540,7 @@ export const DragAndDropProvider = ({
 			)}
 		</DnDContext.Provider>
 	);
-};
+}
 
 export const TARGET_POSITION = {
 	BOTTOM: 'bottom',
