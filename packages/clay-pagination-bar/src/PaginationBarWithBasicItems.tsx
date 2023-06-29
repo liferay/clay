@@ -228,7 +228,7 @@ export const ClayPaginationBarWithBasicItems = ({
 	return (
 		<PaginationBar {...otherProps}>
 			{showDeltasDropDown && (
-				<div className="pagination-items-per-page">
+				<div className="dropdown pagination-items-per-page">
 					<Picker
 						activeDelta={activeDelta}
 						aria-describedby={ariaDescribedby}
