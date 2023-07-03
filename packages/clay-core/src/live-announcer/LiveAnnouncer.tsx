@@ -11,6 +11,7 @@ import React, {
 } from 'react';
 import {createPortal} from 'react-dom';
 
+import {useIsMounted} from '../hooks/useIsMounted';
 import {VisuallyHidden} from './VisuallyHidden';
 
 export type AnnouncerAPI = {
@@ -35,6 +36,7 @@ export const LiveAnnouncer = forwardRef<AnnouncerAPI>(function LiveAnnouncer(
 	ref
 ) {
 	const [logs, setLogs] = useState<Array<Log>>([]);
+	const isMounted = useIsMounted();
 
 	const announce = useCallback(
 		(
@@ -55,12 +57,14 @@ export const LiveAnnouncer = forwardRef<AnnouncerAPI>(function LiveAnnouncer(
 			});
 
 			setTimeout(() => {
-				setLogs((logs) => {
-					const newLogs = [...logs];
-					newLogs.shift();
+				if (isMounted()) {
+					setLogs((logs) => {
+						const newLogs = [...logs];
+						newLogs.shift();
 
-					return newLogs;
-				});
+						return newLogs;
+					});
+				}
 			}, LIVEREGION_TIMEOUT_DELAY);
 		},
 		[]
