@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.99.1](https://github.com/liferay/clay/compare/v3.99.0...v3.99.1) (2023-07-04)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** adds warning when `filterKey` is not defined and tries to filter an option that is object ([48dd887](https://github.com/liferay/clay/commit/48dd887b7fb6afbade67a98e6d325d1068ddc6b7))
+-   **@clayui/autocomplete:** fixes type inference for properties and generic type ([cfc4309](https://github.com/liferay/clay/commit/cfc4309313b46bea777ddae3f9d810ae032b2a3c))
+-   **@clayui/core:** fix bug losing component focus when item is removed from DOM ([080b315](https://github.com/liferay/clay/commit/080b31586a9c6fe2c3b3f07ab547be329daa9203))
+-   **@clayui/core:** fix error when updating state after component is unmounted ([8a43055](https://github.com/liferay/clay/commit/8a430550f6ff12f19475f4843c6c736a2a5240bb))
+-   **@clayui/core:** fix position of TreeView drag preview ([253b784](https://github.com/liferay/clay/commit/253b7846c42c8ebc525605922017ea1d52d8e1d2))
+-   **@clayui/core:** fix types for collection with support for string and number ([36cce77](https://github.com/liferay/clay/commit/36cce77a0e962de48148ed24f7c465b67c6cdd36))
+-   **@clayui/multi-select:** fixes type inference for properties and generic type ([ae7b2a3](https://github.com/liferay/clay/commit/ae7b2a383de1a710dcfe88e92335ad6afc6613a9))
+-   **@clayui/tooltip:** fix error not showing tooltip on nested elements ([cf31736](https://github.com/liferay/clay/commit/cf31736b5515af8c2e906443c86c6cdd4c11631d))
+
 # [3.99.0](https://github.com/liferay/clay/compare/v3.98.0...v3.99.0) (2023-06-28)
 
 ### Bug Fixes

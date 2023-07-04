@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.99.1](https://github.com/liferay/clay/compare/v3.99.0...v3.99.1) (2023-07-04)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** fix error not showing tooltip on nested elements ([cf31736](https://github.com/liferay/clay/commit/cf31736b5515af8c2e906443c86c6cdd4c11631d))
+
 # [3.96.0](https://github.com/liferay/clay/compare/v3.95.2...v3.96.0) (2023-05-29)
 
 **Note:** Version bump only for package @clayui/tooltip
