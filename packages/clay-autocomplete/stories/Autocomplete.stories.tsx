@@ -54,6 +54,8 @@ export const Default = (args: any) => (
 						id="clay-autocomplete-1"
 						menuTrigger={args.menuTrigger}
 						messages={{
+							listCount: '{0} option available.',
+							listCountPlural: '{0} options available.',
 							loading: 'Loading...',
 							notFound: 'No results found',
 						}}
@@ -145,6 +147,8 @@ export const Dynamic = () => (
 						]}
 						id="clay-autocomplete-1"
 						messages={{
+							listCount: '{0} option available.',
+							listCountPlural: '{0} options available.',
 							loading: 'Loading...',
 							notFound: 'No results found',
 						}}
@@ -187,6 +191,8 @@ export const CustomItem = () => {
 							]}
 							id="clay-autocomplete-2"
 							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
 								loading: 'Loading...',
 								notFound: 'No results found',
 							}}
@@ -259,6 +265,8 @@ export const AsyncFilter = () => {
 							}
 							loadingState={networkStatus}
 							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
 								loading: 'Loading...',
 								notFound: 'No results found',
 							}}
@@ -319,6 +327,8 @@ export const AsyncFilterPaginated = () => {
 							items={(resource as Array<RickandMorty>) ?? []}
 							loadingState={networkStatus}
 							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
 								loading: 'Loading...',
 								notFound: 'No results found',
 							}}
