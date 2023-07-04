@@ -68,7 +68,7 @@ export const Default = (args: any) => {
 				inputName="myInput"
 				isValid={args.isValid}
 				items={items}
-				onItemsChange={(items) => setItems(items)}
+				onItemsChange={setItems}
 				size={args.size}
 			/>
 		</>
@@ -151,14 +151,8 @@ export const SourceItems = () => {
 	);
 };
 
-type CustomItem = {
-	email: string;
-	label: string;
-	value: string;
-};
-
 export const CustomMenu = () => {
-	const [items, setItems] = useState<Array<CustomItem>>([
+	const [items, setItems] = useState([
 		{
 			email: 'one@example.com',
 			label: 'One',
@@ -191,7 +185,7 @@ export const CustomMenu = () => {
 					},
 				]}
 			>
-				{(item: CustomItem) => (
+				{(item) => (
 					<ClayMultiSelect.Item
 						key={item.value}
 						textValue={item.label}
@@ -219,7 +213,9 @@ export const CustomMenu = () => {
 
 export const CustomFilter = () => {
 	const [value, setValue] = useState('');
-	const [items, setItems] = useState<any>([]);
+	const [items, setItems] = useState<Array<{label: string; value: string}>>(
+		[]
+	);
 
 	return (
 		<ClayMultiSelect
@@ -232,9 +228,15 @@ export const CustomFilter = () => {
 	);
 };
 
+type RickandMorty = {
+	id: number;
+	name: string;
+	[key: string]: any;
+};
+
 export const Async = () => {
 	const [value, setValue] = useState('');
-	const [items, setItems] = useState<any>([]);
+	const [items, setItems] = useState<Array<RickandMorty>>([]);
 
 	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
 		NetworkStatus.Unused
@@ -253,10 +255,10 @@ export const Async = () => {
 			locator={{id: 'id', label: 'name', value: 'name'}}
 			onChange={setValue}
 			onItemsChange={setItems}
-			sourceItems={resource?.results ?? []}
+			sourceItems={(resource?.results as Array<RickandMorty>) ?? []}
 			value={value}
 		>
-			{(item: any) => (
+			{(item) => (
 				<ClayMultiSelect.Item key={item.id}>
 					{item.name}
 				</ClayMultiSelect.Item>

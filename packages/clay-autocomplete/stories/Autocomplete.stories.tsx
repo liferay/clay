@@ -54,6 +54,8 @@ export const Default = (args: any) => (
 						id="clay-autocomplete-1"
 						menuTrigger={args.menuTrigger}
 						messages={{
+							listCount: '{0} option available.',
+							listCountPlural: '{0} options available.',
 							loading: 'Loading...',
 							notFound: 'No results found',
 						}}
@@ -145,6 +147,8 @@ export const Dynamic = () => (
 						]}
 						id="clay-autocomplete-1"
 						messages={{
+							listCount: '{0} option available.',
+							listCountPlural: '{0} options available.',
 							loading: 'Loading...',
 							notFound: 'No results found',
 						}}
@@ -187,6 +191,8 @@ export const CustomItem = () => {
 							]}
 							id="clay-autocomplete-2"
 							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
 								loading: 'Loading...',
 								notFound: 'No results found',
 							}}
@@ -221,6 +227,12 @@ export const CustomItem = () => {
 	);
 };
 
+type RickandMorty = {
+	id: number;
+	name: string;
+	[key: string]: any;
+};
+
 export const AsyncFilter = () => {
 	const [value, setValue] = useState('');
 
@@ -248,9 +260,13 @@ export const AsyncFilter = () => {
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							id="clay-autocomplete-1"
-							items={resource?.results ?? []}
+							items={
+								(resource?.results as Array<RickandMorty>) ?? []
+							}
 							loadingState={networkStatus}
 							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
 								loading: 'Loading...',
 								notFound: 'No results found',
 							}}
@@ -308,9 +324,11 @@ export const AsyncFilterPaginated = () => {
 						<ClayAutocomplete
 							aria-labelledby="clay-autocomplete-label-1"
 							id="clay-autocomplete-1"
-							items={resource ?? []}
+							items={(resource as Array<RickandMorty>) ?? []}
 							loadingState={networkStatus}
 							messages={{
+								listCount: '{0} option available.',
+								listCountPlural: '{0} options available.',
 								loading: 'Loading...',
 								notFound: 'No results found',
 							}}
