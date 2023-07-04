@@ -9,6 +9,8 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 const messages = {
+	listCount: '{0} option available.',
+	listCountPlural: '{0} options available.',
 	loading: 'Loading...',
 	notFound: 'No results found',
 };
