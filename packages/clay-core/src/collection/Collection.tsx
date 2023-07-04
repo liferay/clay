@@ -47,7 +47,7 @@ interface IProps
 }
 
 function VirtualDynamicCollection<
-	T extends Record<any, any>,
+	T extends Record<string, any> | string | number,
 	P = unknown,
 	K = unknown
 >({
@@ -103,7 +103,7 @@ function VirtualDynamicCollection<
 }
 
 function DynamicCollection<
-	T extends Record<any, any>,
+	T extends Record<string, any> | string | number,
 	P = unknown,
 	K = unknown
 >({
@@ -133,7 +133,7 @@ function DynamicCollection<
 }
 
 export function Collection<
-	T extends Record<any, any>,
+	T extends Record<string, any> | string | number,
 	P = unknown,
 	K = unknown
 >({

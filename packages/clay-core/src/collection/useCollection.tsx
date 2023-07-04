@@ -43,8 +43,12 @@ const CollectionContext = React.createContext({} as CollectionContextProps);
 
 const SECTION_NAMES = ['Group', 'Section'];
 
+function getItemId(value: Record<string, any> | string | number) {
+	return typeof value === 'object' ? value.id : value;
+}
+
 export function useCollection<
-	T extends Record<any, any>,
+	T extends Record<string, any> | string | number,
 	P = unknown,
 	K = unknown
 >({
@@ -194,16 +198,17 @@ export function useCollection<
 			if (items && children instanceof Function) {
 				for (let index = 0; index < items.length; index++) {
 					const item = items[index];
-					const publicItem = exclude
-						? excludeProps(item as T, exclude)
-						: (item as T);
+					const publicItem =
+						exclude && typeof item === 'object'
+							? excludeProps(item as Record<any, any>, exclude)
+							: (item as T);
 					const child = Array.isArray(publicApi)
 						? (children(publicItem, ...publicApi) as ChildElement)
 						: (children(publicItem) as ChildElement);
 
 					callNestedChild(child);
 
-					registerItem(child.key ?? (item as T).id, child, index);
+					registerItem(child.key ?? getItemId(item), child, index);
 				}
 			} else {
 				React.Children.forEach(children, (child, index) => {
@@ -227,9 +232,13 @@ export function useCollection<
 					return virtualizer.getVirtualItems().map((virtual) => {
 						const item = items[virtual.index];
 
-						const publicItem = exclude
-							? excludeProps(item, exclude)
-							: item;
+						const publicItem =
+							exclude && typeof item === 'object'
+								? excludeProps(
+										item as Record<any, any>,
+										exclude
+								  )
+								: item;
 						const child = Array.isArray(publicApi)
 							? (children(
 									publicItem,
@@ -261,7 +270,7 @@ export function useCollection<
 							child,
 							getKey(
 								virtual.index,
-								child.key ?? item.id,
+								child.key ?? getItemId(item),
 								parentKey
 							),
 							virtual.index,
@@ -272,16 +281,17 @@ export function useCollection<
 				}
 
 				return items.map((item, index) => {
-					const publicItem = exclude
-						? excludeProps(item, exclude)
-						: item;
+					const publicItem =
+						exclude && typeof item === 'object'
+							? excludeProps(item as Record<any, any>, exclude)
+							: item;
 					const child = Array.isArray(publicApi)
 						? (children(publicItem, ...publicApi) as ChildElement)
 						: (children(publicItem) as ChildElement);
 
 					return performItemRender(
 						child,
-						getKey(index, child.key ?? item.id, parentKey),
+						getKey(index, child.key ?? getItemId(item), parentKey),
 						index,
 						item
 					);

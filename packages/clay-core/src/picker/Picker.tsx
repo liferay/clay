@@ -140,7 +140,7 @@ export type Props<T> = {
 	[key: string]: any;
 } & Omit<ICollectionProps<T, unknown>, 'virtualize'>;
 
-export function Picker<T>({
+export function Picker<T extends Record<string, any> | string | number>({
 	UNSAFE_behavior,
 	UNSAFE_menuClassName,
 	active: externalActive,
