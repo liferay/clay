@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.99.3](https://github.com/liferay/clay/compare/v3.99.2...v3.99.3) (2023-07-05)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fix error when not getting list data when pressing enter or comma ([485e0e8](https://github.com/liferay/clay/commit/485e0e8f245c4a366037f3d88f23d48774b2e1dc))
+
 ## [3.99.2](https://github.com/liferay/clay/compare/v3.99.1...v3.99.2) (2023-07-05)
 
 ### Bug Fixes
