@@ -93,8 +93,8 @@ export type IProps<T> = {
 	 * Messages for autocomplete.
 	 */
 	messages?: {
-		listCount: string;
-		listCountPlural: string;
+		listCount?: string;
+		listCountPlural?: string;
 		loading: string;
 		notFound: string;
 	};
@@ -395,8 +395,8 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			announcerAPI.current.announce(
 				sub(
 					optionCount === 1
-						? messages!.listCount
-						: messages!.listCountPlural,
+						? messages!.listCount!
+						: messages!.listCountPlural!,
 					[optionCount]
 				)
 			);

@@ -169,8 +169,8 @@ export interface IProps<T>
 	 * Messages for autocomplete.
 	 */
 	messages?: {
-		listCount: string;
-		listCountPlural: string;
+		listCount?: string;
+		listCountPlural?: string;
 		loading: string;
 		notFound: string;
 
