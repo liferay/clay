@@ -857,6 +857,15 @@
 	visibility: hidden !important;
 }
 
+// C Prefers Expanded Text
+
+%c-prefers-expanded-text {
+	max-width: none !important;
+	overflow-wrap: break-word !important;
+	white-space: normal !important;
+	word-wrap: break-word !important;
+}
+
 @at-root {
 	// C Prefers Link Underline
 
