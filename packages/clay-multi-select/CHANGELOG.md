@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.99.2](https://github.com/liferay/clay/compare/v3.99.1...v3.99.2) (2023-07-05)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** makes new `messages` properties optional ([94eceb6](https://github.com/liferay/clay/commit/94eceb6261334272d0b3a000052a7a9592505284))
+
 ## [3.99.1](https://github.com/liferay/clay/compare/v3.99.0...v3.99.1) (2023-07-04)
 
 ### Bug Fixes
