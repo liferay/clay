@@ -22,6 +22,7 @@ interface IProps extends React.ComponentProps<typeof ClayInput> {
 	spritemap?: string;
 	ariaDescriptionId: string;
 	lastChangesRef: React.MutableRefObject<LastChangeLiveRegion | null>;
+	suggestionList: Array<Item>;
 }
 
 const DELIMITER_KEYS = ['Enter', ','];
@@ -48,6 +49,7 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 			onLabelsChange,
 			placeholder,
 			spritemap,
+			suggestionList,
 			value,
 			...otherProps
 		}: IProps,
@@ -70,7 +72,7 @@ export const Labels = React.forwardRef<HTMLInputElement, IProps>(
 		const labelId = useId();
 
 		const getSourceItemByLabel = (label: string) => {
-			return labels.find((item) => item[locator.label] === label);
+			return suggestionList.find((item) => item[locator.label] === label);
 		};
 
 		const getNewItem = (value: string): Item => {
