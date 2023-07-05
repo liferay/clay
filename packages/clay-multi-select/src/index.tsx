@@ -398,6 +398,7 @@ function ClayMultiSelectInner<T extends Record<string, any> = Item>(
 					placeholder={placeholder}
 					ref={inputElementRef}
 					spritemap={spritemap}
+					suggestionList={sourceItems ?? []}
 					value={value}
 				>
 					{(item) => {
