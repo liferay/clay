@@ -76,8 +76,6 @@ export const Badge = () => {
 	return <Editor code={codeSnippets} scope={scope} />;
 };
 
-//
-
 const badgeBetaImportsCode = `import ClayBadge from '@clayui/badge';`;
 
 const BadgeBetaCode = `const Component = () => {
@@ -111,6 +109,47 @@ export const BadgeBeta = () => {
 			imports: badgeBetaJSPImportsCode,
 			name: 'JSP',
 			value: BadgeBetaJSPCode,
+		},
+	];
+
+	return <Editor code={codeSnippets} scope={scope} />;
+};
+
+const badgeBetaDarkImportsCode = `import ClayBadge from '@clayui/badge';`;
+
+const BadgeBetaDarkCode = `const Component = () => {
+    return (
+        <>
+        	<div className="bg-dark p-2">
+            	<ClayBadge displayType="beta-dark" label="Beta" />
+            </div>
+        </>
+    );
+}
+
+render(<Component />);`;
+
+const badgeBetaDarkJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
+
+const BadgeBetaDarkJSPCode = `<clay:badge
+    displayType="beta-dark"
+    label="Beta" 
+/>`;
+
+export const BadgeBetaDark = () => {
+	const scope = {ClayBadge};
+
+	const codeSnippets = [
+		{
+			imports: badgeBetaDarkImportsCode,
+			name: 'React',
+			value: BadgeBetaDarkCode,
+		},
+		{
+			disabled: true,
+			imports: badgeBetaDarkJSPImportsCode,
+			name: 'JSP',
+			value: BadgeBetaDarkJSPCode,
 		},
 	];
 
