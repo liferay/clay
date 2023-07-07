@@ -40,6 +40,12 @@ type ItemProps<T> = {
 
 export type IProps<T> = {
 	/**
+	 * Internal property to change the loading indicator markup to shrink.
+	 * @ignore
+	 */
+	UNSAFE_loadingShrink?: boolean;
+
+	/**
 	 * Flag to indicate if menu is showing or not.
 	 */
 	active?: boolean;
@@ -162,6 +168,7 @@ const defaultMessages = {
 
 function AutocompleteInner<T extends Record<string, any> | string | number>(
 	{
+		UNSAFE_loadingShrink,
 		active: externalActive,
 		as: As = Input,
 		alignmentByViewport: _,
@@ -417,6 +424,10 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 		}
 	}, [activeDescendant]);
 
+	const LoadingGroupItem = UNSAFE_loadingShrink
+		? Input.GroupItem
+		: Input.GroupInsetItem;
+
 	return (
 		<>
 			<LiveAnnouncer ref={announcerAPI} />
@@ -597,17 +608,18 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			)}
 
 			{isLoading && (
-				<Input.GroupInsetItem
-					after
+				<LoadingGroupItem
+					after={!UNSAFE_loadingShrink ? true : undefined}
 					aria-label={messages.loading}
 					aria-valuemax={100}
 					aria-valuemin={0}
 					role="progressbar"
+					shrink={UNSAFE_loadingShrink}
 				>
 					<span className="inline-item inline-item-middle">
 						<LoadingIndicator size="sm" />
 					</span>
-				</Input.GroupInsetItem>
+				</LoadingGroupItem>
 			)}
 		</>
 	);

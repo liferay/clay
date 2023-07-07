@@ -361,6 +361,7 @@ function ClayMultiSelectInner<T extends Record<string, any> = Item>(
 			>
 				<Autocomplete<T>
 					{...otherProps}
+					UNSAFE_loadingShrink
 					active={MenuRenderer ? false : active}
 					allowsCustomLabel={allowsCustomLabel}
 					ariaDescriptionId={ariaDescriptionId}
