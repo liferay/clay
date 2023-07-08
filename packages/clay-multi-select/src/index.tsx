@@ -413,6 +413,7 @@ function ClayMultiSelectInner<T extends Record<string, any> = Item>(
 			>
 				<Autocomplete<T>
 					{...otherProps}
+					UNSAFE_loadingShrink
 					active={MenuRenderer ? false : active}
 					allowsCustomLabel={allowsCustomLabel}
 					ariaDescriptionId={ariaDescriptionId}
@@ -426,6 +427,7 @@ function ClayMultiSelectInner<T extends Record<string, any> = Item>(
 					items={hasAsyncItems ? sourceItems : undefined}
 					labels={items}
 					lastChangesRef={lastChangesRef}
+					loadingState={loadingState}
 					locator={locator}
 					menuTrigger="focus"
 					messages={messages}
@@ -447,6 +449,7 @@ function ClayMultiSelectInner<T extends Record<string, any> = Item>(
 					onFocusChange={setIsFocused}
 					onItemsChange={hasAsyncItems ? () => {} : undefined}
 					onLabelsChange={setItems}
+					onLoadMore={onLoadMore}
 					placeholder={placeholder}
 					ref={inputElementRef}
 					spritemap={spritemap}
