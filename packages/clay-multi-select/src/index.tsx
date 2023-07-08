@@ -17,7 +17,7 @@ import {
 	useId,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {Labels} from './Labels';
 
@@ -347,6 +347,58 @@ function ClayMultiSelectInner<T extends Record<string, any> = Item>(
 		}
 	}, [value, sourceItems]);
 
+	const memoizedChildren = useCallback(
+		(item: T) => {
+			if (children && typeof children === 'function') {
+				const child = children(item) as React.ReactElement<
+					any,
+					string | React.JSXElementConstructor<any>
+				>;
+
+				return React.cloneElement(child, {
+					onClick: (
+						event: React.MouseEvent<
+							| HTMLSpanElement
+							| HTMLButtonElement
+							| HTMLAnchorElement,
+							MouseEvent
+						>
+					) => {
+						if (child.props.onClick) {
+							child.props.onClick(event);
+						}
+
+						if (event.defaultPrevented) {
+							return;
+						}
+
+						event.preventDefault();
+
+						setActive(false);
+						setItems([...items, item]);
+						setValue('');
+					},
+				});
+			}
+
+			return (
+				<AutocompleteItem
+					key={item[locator.value]}
+					onClick={(event) => {
+						event.preventDefault();
+
+						setActive(false);
+						setItems([...items, item]);
+						setValue('');
+					}}
+				>
+					{item[locator.label]}
+				</AutocompleteItem>
+			);
+		},
+		[children, locator]
+	);
+
 	return (
 		<Container {...containerProps}>
 			<div
@@ -401,54 +453,7 @@ function ClayMultiSelectInner<T extends Record<string, any> = Item>(
 					suggestionList={sourceItems ?? []}
 					value={value}
 				>
-					{(item) => {
-						if (children && typeof children === 'function') {
-							const child = children(item) as React.ReactElement<
-								any,
-								string | React.JSXElementConstructor<any>
-							>;
-
-							return React.cloneElement(child, {
-								onClick: (
-									event: React.MouseEvent<
-										| HTMLSpanElement
-										| HTMLButtonElement
-										| HTMLAnchorElement,
-										MouseEvent
-									>
-								) => {
-									if (child.props.onClick) {
-										child.props.onClick(event);
-									}
-
-									if (event.defaultPrevented) {
-										return;
-									}
-
-									event.preventDefault();
-
-									setActive(false);
-									setItems([...items, item]);
-									setValue('');
-								},
-							});
-						}
-
-						return (
-							<AutocompleteItem
-								key={item[locator.value]}
-								onClick={(event) => {
-									event.preventDefault();
-
-									setActive(false);
-									setItems([...items, item]);
-									setValue('');
-								}}
-							>
-								{item[locator.label]}
-							</AutocompleteItem>
-						);
-					}}
+					{memoizedChildren}
 				</Autocomplete>
 
 				{sourceItems && MenuRenderer && sourceItems.length > 0 && (
