@@ -222,7 +222,7 @@ export function useCollection<
 				});
 			}
 		},
-		[performFilter, publicApi, virtualizer?.getVirtualItems().length]
+		[performFilter, publicApi]
 	);
 
 	const performCollectionRender = useCallback(
@@ -351,17 +351,11 @@ export function useCollection<
 		});
 	}, []);
 
-	// It builds the dynamic or static collection, done in two steps: Data and
-	// Rendering, both go through the elements to get the data of each item.
-	//
-	// - Data: We get the data of the item to consume later
-	// - Rendering: We render each element in memory
-	//
-	// For a small list we have no problem going walk the items twice to extract
-	// the data and then rendering for a large list only the data step will go
-	// through all the elements the render step will go through only the items
-	// that should be rendered with virtualization from list.
-	const collection = useMemo(() => {
+	// We build the list data structure into the collection first so we can
+	// consume the data later and only recompute when the data changes or
+	// the children this avoids recalculating again on any rendering,
+	// for example on a virtualized list.
+	useMemo(() => {
 		if (!parentLayout) {
 			cleanUp();
 		}
@@ -370,7 +364,14 @@ export function useCollection<
 		// before rendering the element. The data can be consumed later even
 		// if the element is not rendered.
 		createItemsLayout({children, items});
+	}, [children, createItemsLayout, items]);
 
+	// It builds the dynamic or static collection, done in two steps: Data and
+	// Rendering, both go through the elements to get the data of each item.
+	//
+	// - Data: We get the data of the item to consume later
+	// - Rendering: We render each element in memory
+	const rendered = useMemo(() => {
 		const list = performCollectionRender({children, items});
 
 		if (list.length === 0 && notFound) {
@@ -378,7 +379,7 @@ export function useCollection<
 		}
 
 		return list;
-	}, [children, createItemsLayout, performCollectionRender, items]);
+	}, [children, performCollectionRender, items]);
 
 	// Effect only called when the component is unmounted removing the layout
 	// items that are rendered by the collection instance, effect only when
@@ -416,7 +417,7 @@ export function useCollection<
 					layout,
 				}}
 			>
-				{collection}
+				{rendered}
 			</CollectionContext.Provider>
 		),
 		getFirstItem,
