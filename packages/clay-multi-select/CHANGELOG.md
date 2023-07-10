@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.99.4](https://github.com/liferay/clay/compare/v3.99.3...v3.99.4) (2023-07-10)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fix loading indicator markup in MultiSelect ([b883824](https://github.com/liferay/clay/commit/b8838247d1638524691fda2a74934e0676e6597d))
+-   **@clayui/multi-select:** pass async properties to autocomplete ([0faaab8](https://github.com/liferay/clay/commit/0faaab89049dd9a808666c82b8b8cba455d461f6))
+-   **@clayui/multi-select:** stabilize the children reference to avoid unnecessary renderings ([7ff4af5](https://github.com/liferay/clay/commit/7ff4af5ffab85e64220623042e8085a2afd0d565))
+
 ## [3.99.3](https://github.com/liferay/clay/compare/v3.99.2...v3.99.3) (2023-07-05)
 
 ### Bug Fixes

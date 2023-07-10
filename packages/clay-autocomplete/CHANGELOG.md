@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.99.4](https://github.com/liferay/clay/compare/v3.99.3...v3.99.4) (2023-07-10)
+
+### Bug Fixes
+
+-   **@clayui/multi-select:** fix loading indicator markup in MultiSelect ([b883824](https://github.com/liferay/clay/commit/b8838247d1638524691fda2a74934e0676e6597d))
+
 ## [3.99.2](https://github.com/liferay/clay/compare/v3.99.1...v3.99.2) (2023-07-05)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.99.4](https://github.com/liferay/clay/compare/v3.99.3...v3.99.4) (2023-07-10)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix collection rendering performance bottleneck ([ecf3155](https://github.com/liferay/clay/commit/ecf315594c07a26bed72aba5f734806e76e56a92))
+
 ## [3.99.1](https://github.com/liferay/clay/compare/v3.99.0...v3.99.1) (2023-07-04)
 
 ### Bug Fixes
