@@ -60,7 +60,7 @@ export function FocusWithinProvider<T extends HTMLElement>({
 
 		const hasItem = items.find((item) => focusId === getId(item));
 
-		if (!hasItem) {
+		if (!hasItem && items.length) {
 			setFocusId(getId(items[0]));
 		}
 	}, [children]);
