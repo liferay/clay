@@ -13,6 +13,15 @@ $cadmin-clay-unset-placeholder: clay-unset-placeholder !default;
 $cadmin-enable-lexicon-flat-colors: true !default;
 $cadmin-enable-scaling-components: true !default;
 $cadmin-enable-c-inner: true !default;
+
+$cadmin-enable-focus-visible: true !default;
+
+$focus-visible-selector: if(
+	$cadmin-enable-focus-visible,
+	'&:focus-visible',
+	'&:focus'
+) !default;
+
 $cadmin-scaling-breakpoint-down: sm !default;
 
 // This enables Clay color functions to get the fallback color of a CSS Custom Property, convert it to the correct Sass type color, then process it using the corresponding Sass color function. The Clay color function will return a CSS color value. Set this variable to `false` if you want the Clay color function to return the CSS Custom Property without any modifications.

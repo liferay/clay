@@ -1553,6 +1553,31 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
+		$_enable-focus-visible: if(
+			variable-exists(enable-focus-visible),
+			$enable-focus-visible,
+			if(
+				variable-exists(cadmin-enable-focus-visible),
+				$cadmin-enable-focus-visible,
+				true
+			)
+		);
+
+		$_c-prefers-focus-selector: if(
+			$_enable-focus-visible,
+			'.c-prefers-focus &:focus',
+			''
+		);
+
+		@if (variable-exists(cadmin-enable-focus-visible)) and
+			($_enable-focus-visible)
+		{
+			$_c-prefers-focus-selector: clay-insert-before(
+				'.cadmin',
+				'.c-prefers-focus '
+			);
+		}
+
 		$clay-range-thumb: setter(map-get($map, clay-range-thumb), ());
 		$clay-range-thumb: map-merge(
 			$clay-range-thumb,
@@ -2432,51 +2457,54 @@
 					}
 				}
 
-				&:focus,
-				&.focus {
-					@include clay-css($focus);
+				@at-root {
+					&.focus,
+					#{$focus-visible-selector},
+					#{$_c-prefers-focus-selector} {
+						@include clay-css($focus);
 
-					~ .clay-range-track {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								form-control-range,
-								focus,
-								clay-range-track
-							)
-						);
-					}
+						~ .clay-range-track {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									form-control-range,
+									focus,
+									clay-range-track
+								)
+							);
+						}
 
-					~ .clay-range-progress {
-						@include clay-css(
-							map-deep-get(
-								$map,
-								form-control-range,
-								focus,
-								clay-range-progress
-							)
-						);
+						~ .clay-range-progress {
+							@include clay-css(
+								map-deep-get(
+									$map,
+									form-control-range,
+									focus,
+									clay-range-progress
+								)
+							);
 
-						.clay-range-thumb {
+							.clay-range-thumb {
+								@include clay-css($focus-clay-range-thumb);
+							}
+
+							.tooltip {
+								visibility: visible;
+								opacity: 1;
+							}
+						}
+
+						&::-moz-range-thumb {
 							@include clay-css($focus-clay-range-thumb);
 						}
 
-						.tooltip {
-							visibility: visible;
-							opacity: 1;
+						&::-ms-thumb {
+							@include clay-css($focus-clay-range-thumb);
 						}
-					}
 
-					&::-moz-range-thumb {
-						@include clay-css($focus-clay-range-thumb);
-					}
-
-					&::-ms-thumb {
-						@include clay-css($focus-clay-range-thumb);
-					}
-
-					&::-webkit-slider-thumb {
-						@include clay-css($focus-clay-range-thumb);
+						&::-webkit-slider-thumb {
+							@include clay-css($focus-clay-range-thumb);
+						}
 					}
 				}
 
