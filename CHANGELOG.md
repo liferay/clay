@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.100.0](https://github.com/liferay/clay/compare/v3.99.4...v3.100.0) (2023-07-13)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error when validating focus without any element ([b8196ac](https://github.com/liferay/clay/commit/b8196acc087dba8a28c65dabfbda2cdf8a8048b2))
+-   **@clayui/css:** Adds btn-beta-dark and badge-beta-dark and updates background colors ([13733df](https://github.com/liferay/clay/commit/13733dfe7a0a3306274aa1b99b14f6087345c249))
+-   **@clayui/css:** Remove fixed height and width to follow SVG guidelines ([893396b](https://github.com/liferay/clay/commit/893396bd7ad00b20946af0783e21139858d57894))
+
+### Features
+
+-   **@clayui/badge:** Adds display type beta-dark ([2f53849](https://github.com/liferay/clay/commit/2f5384940aff5909753adeecd8a2f9c12d3dab89))
+-   **@clayui/button:** Adds display type beta-dark ([cc6e973](https://github.com/liferay/clay/commit/cc6e97317b3e29fa91d3b3d4c53f53b67010ed95))
+
 ## [3.99.4](https://github.com/liferay/clay/compare/v3.99.3...v3.99.4) (2023-07-10)
 
 ### Bug Fixes

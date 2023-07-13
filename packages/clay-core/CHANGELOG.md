@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.100.0](https://github.com/liferay/clay/compare/v3.99.4...v3.100.0) (2023-07-13)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error when validating focus without any element ([b8196ac](https://github.com/liferay/clay/commit/b8196acc087dba8a28c65dabfbda2cdf8a8048b2))
+
 ## [3.99.4](https://github.com/liferay/clay/compare/v3.99.3...v3.99.4) (2023-07-10)
 
 ### Bug Fixes
