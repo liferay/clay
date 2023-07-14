@@ -24,11 +24,17 @@ if (!Element.prototype.closest) {
 	document.addEventListener('click', function(event) {
 		var t = event.target;
 
-		var a = t.tagName === 'a' ? t : t.closest('a');
+		var a = t.tagName === 'a' || t.tagName === 'button' ? t : t.closest('a') || t.closest('button');
 
 		if (a) {
 			if (a.getAttribute('href') === '#1') {
 				event.preventDefault();
+			}
+
+			var dataToggle = a.getAttribute('data-toggle');
+
+			if (dataToggle && dataToggle.startsWith('c-prefers')) {
+				document.querySelector('body').classList.toggle(a.getAttribute('data-toggle'));
 			}
 		}
 	});

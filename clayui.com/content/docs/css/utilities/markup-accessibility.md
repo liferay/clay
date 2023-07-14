@@ -10,6 +10,7 @@ title: 'Accessibility'
 -   [C Prefers Reduced Motion](#css-c-prefers-reduced-motion)
 -   [C Prefers Link Underline](#css-c-prefers-link-underline)
 -   [C Prefers Letter Spacing 1](#css-c-prefers-letter-spacing-1)
+-   [C Prefers Focus](#css-c-prefers-focus)
 
 </div>
 </div>
@@ -86,4 +87,22 @@ The class `c-prefers-expanded-text` expands all truncated text to be visible.
 			<span class="text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 		</span>
 	</div>
+</div>
+
+## C Prefers Focus(#css-c-prefers-focus)
+
+The class `c-prefers-focus` should be added to the `body` element to show the focus outline on mouse click. This is an accessibility feature for users who prefer this style of navigation.
+
+Focus Visible is now <a href="https://caniuse.com/?search=focus-visible" rel="noopener noreferrer" target="_blank">supported in all major browsers</a>. We have enabled it by default in Clay CSS. Using the mouse to click on links, buttons, checkboxes, and other elements no longer show the focus outline. The focus outline will be shown when interacting with elements via keyboard.
+
+<div class="clay-site-alert alert alert-warning">
+	The focus ring will always show in Text and Select elements that use the `input` tag. <a href="https://www.w3.org/TR/selectors-4/#the-focus-visible-pseudo" rel="noopener noreferrer" target="_blank">It is assumed the user will be interacting with the input via the keyboard</a>.
+</div>
+
+<div class="clay-site-alert alert alert-info">
+	To disable `:focus-visible`, set the Sass variable `$enable-focus-visible: false;`.
+</div>
+
+<div class="sheet-example">
+	<button class="btn btn-primary" data-toggle="c-prefers-focus" type="button">Toggle Focus</button>
 </div>
