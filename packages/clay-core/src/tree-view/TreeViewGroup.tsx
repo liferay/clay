@@ -17,16 +17,19 @@ interface ITreeViewGroupProps<T extends Record<string, any>>
 	extends ICollectionProps<T>,
 		Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {}
 
-function List({
-	children,
-	...otherProps
-}: React.HTMLAttributes<HTMLUListElement>) {
+const List = React.forwardRef<
+	HTMLUListElement,
+	React.HTMLAttributes<HTMLUListElement>
+>(function ListInner(
+	{children, ...otherProps}: React.HTMLAttributes<HTMLUListElement>,
+	ref
+) {
 	return (
-		<ul {...otherProps} className="treeview-group" role="group">
+		<ul {...otherProps} className="treeview-group" ref={ref} role="group">
 			{children}
 		</ul>
 	);
-}
+});
 
 export function TreeViewGroup<T extends Record<string, any>>(
 	props: ITreeViewGroupProps<T>
