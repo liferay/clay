@@ -48,7 +48,7 @@ export interface IMultipleSelectionState {
 	toggleSelection: (key: Key, options?: SelectionToggleOptions) => void;
 }
 
-export interface IMultipleSelectionProps<T>
+export interface IMultipleSelectionProps<T extends Record<string, any>>
 	extends IMultipleSelection,
 		Pick<ITreeProps<T>, 'nestedKey'>,
 		Pick<ICollectionProps<T>, 'items'> {
@@ -107,7 +107,7 @@ export interface IMultipleSelectionProps<T>
  * the item has unrendered children and using the tree to navigate but using
  * the item path to avoid traversing the entire tree.
  */
-export function useMultipleSelection<T>(
+export function useMultipleSelection<T extends Record<string, any>>(
 	props: IMultipleSelectionProps<T>
 ): IMultipleSelectionState {
 	const selectionMode = props.selectionMode;

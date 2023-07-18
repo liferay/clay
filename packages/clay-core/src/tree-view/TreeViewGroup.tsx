@@ -13,7 +13,7 @@ import {Collection, ICollectionProps} from './Collection';
 import {useTreeViewContext} from './context';
 import {useItem} from './useItem';
 
-interface ITreeViewGroupProps<T>
+interface ITreeViewGroupProps<T extends Record<string, any>>
 	extends ICollectionProps<T>,
 		Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {}
 
@@ -28,7 +28,9 @@ function List({
 	);
 }
 
-export function TreeViewGroup<T>(props: ITreeViewGroupProps<T>): JSX.Element & {
+export function TreeViewGroup<T extends Record<string, any>>(
+	props: ITreeViewGroupProps<T>
+): JSX.Element & {
 	displayName: string;
 };
 
