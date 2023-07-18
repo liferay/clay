@@ -4,7 +4,7 @@
  */
 
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo, useState} from 'react';
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	/**
@@ -30,7 +30,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	/**
 	 * Source of the image to show when `.c-prefers-reduced-motion` is active
 	 */
-	imgSrcReducedMotion?: string;
+	imgSrcReducedMotion?: string | null;
 
 	/**
 	 * Indicates empty state should be a small variant.
@@ -59,6 +59,27 @@ const ClayEmptyState = ({
 }: IProps) => {
 	const hasImg = imgSrc || imgProps;
 
+	const [error, setError] = useState(false);
+
+	const reducedMotionImage = useMemo(() => {
+		if (error) {
+			console.warn(
+				'The image url defined in `imgSrcReducedMotion` does not exist on the server. You can provide an updated url through the attribute `imgSrcReducedMotion` or set it to `{null}`.'
+			);
+
+			return null;
+		}
+
+		const dotPosition = imgSrc?.lastIndexOf('.');
+
+		if (dotPosition !== -1 && imgSrc && imgSrcReducedMotion !== null) {
+			return `${imgSrc.substr(
+				0,
+				dotPosition
+			)}_reduced_motion${imgSrc.substr(dotPosition!)}`;
+		}
+	}, [error, imgSrcReducedMotion]);
+
 	imgPropsReducedMotion = imgPropsReducedMotion
 		? imgPropsReducedMotion
 		: imgProps;
@@ -78,14 +99,14 @@ const ClayEmptyState = ({
 							alt=""
 							className={classNames(
 								'aspect-ratio-item aspect-ratio-item-fluid',
-								imgSrcReducedMotion &&
+								reducedMotionImage &&
 									'd-none-c-prefers-reduced-motion',
 								imgProps && imgProps.className
 							)}
 							src={imgSrc}
 							{...imgProps}
 						/>
-						{imgSrcReducedMotion && (
+						{reducedMotionImage && (
 							<img
 								alt=""
 								className={classNames(
@@ -93,7 +114,8 @@ const ClayEmptyState = ({
 									imgPropsReducedMotion &&
 										imgPropsReducedMotion.className
 								)}
-								src={imgSrcReducedMotion}
+								onError={() => setError(true)}
+								src={reducedMotionImage}
 								{...imgPropsReducedMotion}
 							/>
 						)}
