@@ -60,7 +60,7 @@ export interface IExpandable {
 	selectionHydrationMode?: 'render-first' | 'hydrate-first';
 }
 
-export interface ITreeProps<T>
+export interface ITreeProps<T extends Record<string, any>>
 	extends IExpandable,
 		IMultipleSelection,
 		Pick<ICollectionProps<T>, 'items' | 'defaultItems'> {
@@ -76,7 +76,8 @@ export interface ITreeProps<T>
 	selectionMode?: 'single' | 'multiple' | 'multiple-recursive' | null;
 }
 
-export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
+export interface ITreeState<T extends Record<string, any>>
+	extends Pick<ICollectionProps<T>, 'items'> {
 	close: (key: Key) => boolean;
 	cursors: React.MutableRefObject<Map<React.Key, unknown>>;
 	expandedKeys: Set<Key>;
@@ -90,7 +91,9 @@ export interface ITreeState<T> extends Pick<ICollectionProps<T>, 'items'> {
 	toggle: (key: Key) => void;
 }
 
-export function useTree<T>(props: ITreeProps<T>): ITreeState<T> {
+export function useTree<T extends Record<string, any>>(
+	props: ITreeProps<T>
+): ITreeState<T> {
 	const [items, setItems] = useControlledState({
 		defaultName: 'defaultItems',
 		defaultValue: props.defaultItems ?? [],

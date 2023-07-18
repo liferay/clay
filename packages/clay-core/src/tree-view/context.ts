@@ -28,7 +28,8 @@ export type MoveItemIndex = {
 	previous: number;
 };
 
-export interface ITreeViewContext<T> extends ITreeState<T> {
+export interface ITreeViewContext<T extends Record<string, any>>
+	extends ITreeState<T> {
 	childrenRoot: React.MutableRefObject<ChildrenFunction<Object> | null>;
 	dragAndDrop?: boolean;
 	expandDoubleClick?: boolean;
@@ -50,7 +51,7 @@ export const TreeViewContext = React.createContext<ITreeViewContext<any>>(
 	{} as ITreeViewContext<any>
 );
 
-export function useTreeViewContext(): ITreeViewContext<unknown> {
+export function useTreeViewContext(): ITreeViewContext<Record<string, any>> {
 	return useContext(TreeViewContext);
 }
 
@@ -71,7 +72,7 @@ export type Expand = {
 
 export type LoadMore = {
 	get: (key: Key) => any;
-	loadMore: <T>(
+	loadMore: <T extends Record<string, any>>(
 		id: React.Key,
 		item: T,
 		willToggle?: boolean
@@ -90,7 +91,11 @@ export function useAPI(): [Selection, Expand, LoadMore] {
 	} = useTreeViewContext();
 
 	const loadMore = useCallback(
-		<T>(id: Key, item: T, willToggle: boolean = false) => {
+		<T extends Record<string, any>>(
+			id: Key,
+			item: T,
+			willToggle: boolean = false
+		) => {
 			if (!onLoadMore) {
 				return;
 			}
