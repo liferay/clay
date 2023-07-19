@@ -1,10 +1,14 @@
 .modal-open,
 &.modal-open {
 	overflow: hidden;
+}
 
-	.modal {
-		overflow-x: hidden;
-		overflow-y: auto;
+@at-root {
+	#{clay-insert-before('.cadmin', '.modal-open ')} {
+		.modal {
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
 	}
 }
 
