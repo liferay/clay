@@ -96,8 +96,8 @@ describe('ClayTabs', () => {
 
 		const tabItems = getAllByTestId('tabItem');
 
-		expect(tabItems[0].nodeName).toBe('A');
-		expect(tabItems[1].nodeName).toBe('A');
+		expect(tabItems[0]!.nodeName).toBe('A');
+		expect(tabItems[1]!.nodeName).toBe('A');
 	});
 
 	it('renders disabled nav items', () => {
@@ -118,8 +118,8 @@ describe('ClayTabs', () => {
 
 		const tabItems = getAllByTestId('tabItem');
 
-		expect(tabItems[2].classList).toContain('disabled');
-		expect(tabItems[2].attributes.getNamedItem('disabled')).toBeTruthy();
+		expect(tabItems[2]!.classList).toContain('disabled');
+		expect(tabItems[2]!.attributes.getNamedItem('disabled')).toBeTruthy();
 	});
 
 	it('emits a number when clicking an item', () => {
@@ -142,10 +142,10 @@ describe('ClayTabs', () => {
 
 		const tabItems = getAllByTestId('tabItem');
 
-		fireEvent.click(tabItems[0]);
+		fireEvent.click(tabItems[0]!);
 		expect(onClick).toBeCalled();
 
-		fireEvent.click(tabItems[1]);
+		fireEvent.click(tabItems[1]!);
 		expect(onClick).toBeCalled();
 	});
 
@@ -166,10 +166,10 @@ describe('ClayTabs', () => {
 		const tabItems = getAllByRole('tab');
 		const tabPanels = getAllByRole('tabpanel');
 
-		expect(tabItems[0].innerHTML).toBe('Two');
+		expect(tabItems[0]!.innerHTML).toBe('Two');
 		expect(tabItems.length).toBe(1);
 
-		expect(tabPanels[0].innerHTML).toBe('Content Two');
+		expect(tabPanels[0]!.innerHTML).toBe('Content Two');
 		expect(tabPanels.length).toBe(1);
 	});
 

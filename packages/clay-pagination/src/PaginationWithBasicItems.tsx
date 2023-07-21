@@ -149,7 +149,7 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 
 		const pages = Array(totalPages)
 			.fill(0)
-			.map((item, index) => index + 1);
+			.map((_item, index) => index + 1);
 
 		return (
 			<Pagination {...otherProps} ref={ref}>

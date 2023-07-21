@@ -105,7 +105,7 @@ describe('ClayDropDownWithDrilldown', () => {
 		jest.runAllTimers();
 
 		expect(
-			document.querySelectorAll('.drilldown-item')[1].classList
+			document.querySelectorAll('.drilldown-item')[1]!.classList
 		).toContain('drilldown-current');
 	});
 
@@ -135,7 +135,7 @@ describe('ClayDropDownWithDrilldown', () => {
 		jest.runAllTimers();
 
 		expect(
-			document.querySelectorAll('.drilldown-item')[0].classList
+			document.querySelectorAll('.drilldown-item')[0]!.classList
 		).toContain('drilldown-current');
 	});
 

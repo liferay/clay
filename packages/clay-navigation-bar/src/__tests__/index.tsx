@@ -193,7 +193,7 @@ describe('ClayNavigationBar', () => {
 		);
 
 		expect(mockWarnings).toBeCalled();
-		expect(mockWarnings.mock.calls[0][0]).toBe(
+		expect(mockWarnings.mock.calls[0]![0]).toBe(
 			'Warning: ClayNavigationBar expects 0 or 1 active children, but received 2'
 		);
 		expect(container).toMatchSnapshot();

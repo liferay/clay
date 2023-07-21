@@ -42,7 +42,7 @@ describe('ClayLocalizedInput', () => {
 				locales={locales}
 				onSelectedLocaleChange={() => {}}
 				onTranslationsChange={() => {}}
-				selectedLocale={locales[0]}
+				selectedLocale={locales[0]!}
 				spritemap="/path/to/svg"
 				translations={{
 					'en-US': 'Apple',
@@ -65,7 +65,7 @@ describe('ClayLocalizedInput', () => {
 				onTranslationsChange={() => {}}
 				prependContent={prepend}
 				resultFormatter={(val) => `https://liferay.com${prepend}${val}`}
-				selectedLocale={locales[0]}
+				selectedLocale={locales[0]!}
 				spritemap="/path/to/svg"
 				translations={{
 					'en-US': 'Apple',
@@ -85,7 +85,7 @@ describe('ClayLocalizedInput', () => {
 				locales={locales}
 				onSelectedLocaleChange={onSelectedChangeFn}
 				onTranslationsChange={() => {}}
-				selectedLocale={locales[0]}
+				selectedLocale={locales[0]!}
 				spritemap="/path/to/svg"
 				translations={{
 					'en-US': 'Apple',

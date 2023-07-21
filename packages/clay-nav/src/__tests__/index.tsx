@@ -105,7 +105,7 @@ describe('ClayVerticalNav', () => {
 
 		userEvent.keyboard('[ArrowRight]');
 
-		expect(projects.getAttribute('aria-expanded')).toBe('true');
+		expect(projects!.getAttribute('aria-expanded')).toBe('true');
 	});
 
 	it('collapse items by pressing the left arrow key', () => {
@@ -122,11 +122,11 @@ describe('ClayVerticalNav', () => {
 
 		userEvent.keyboard('[ArrowRight]');
 
-		expect(projects.getAttribute('aria-expanded')).toBe('true');
+		expect(projects!.getAttribute('aria-expanded')).toBe('true');
 
 		userEvent.keyboard('[ArrowLeft]');
 
-		expect(projects.getAttribute('aria-expanded')).toBe('false');
+		expect(projects!.getAttribute('aria-expanded')).toBe('false');
 	});
 
 	it('moves focus to first item if item is expanded', () => {
@@ -143,12 +143,12 @@ describe('ClayVerticalNav', () => {
 
 		userEvent.keyboard('[ArrowRight]');
 
-		expect(projects.getAttribute('aria-expanded')).toBe('true');
+		expect(projects!.getAttribute('aria-expanded')).toBe('true');
 
 		userEvent.keyboard('[ArrowRight]');
 
 		const [first] = docGetAllByRole(
-			projects.parentNode as HTMLElement,
+			projects!.parentNode as HTMLElement,
 			'menuitem'
 		);
 
@@ -169,12 +169,12 @@ describe('ClayVerticalNav', () => {
 
 		userEvent.keyboard('[ArrowRight]');
 
-		expect(projects.getAttribute('aria-expanded')).toBe('true');
+		expect(projects!.getAttribute('aria-expanded')).toBe('true');
 
 		userEvent.keyboard('[ArrowRight]');
 
 		const [first] = docGetAllByRole(
-			projects.parentNode as HTMLElement,
+			projects!.parentNode as HTMLElement,
 			'menuitem'
 		);
 

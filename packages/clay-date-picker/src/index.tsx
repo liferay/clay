@@ -311,7 +311,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 				});
 
 				if (days) {
-					return [normalizeTime(days[0]), normalizeTime(days[1])];
+					return [normalizeTime(days[0]!), normalizeTime(days[1]!)];
 				}
 			}
 
@@ -493,17 +493,17 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 					if (days) {
 						const [startDate, endDate] = days;
 
-						changeMonth(startDate);
+						changeMonth(startDate!);
 
-						setDaysSelected([startDate, endDate]);
+						setDaysSelected([startDate!, endDate!]);
 
 						if (time) {
 							setCurrentTime(
-								startDate.getHours(),
-								startDate.getMinutes(),
+								startDate!.getHours(),
+								startDate!.getMinutes(),
 								use12Hours
 									? (formatDate(
-											startDate,
+											startDate!,
 											'a'
 									  ) as Input['ampm'])
 									: undefined
@@ -779,7 +779,7 @@ function fromStringToRange(
 ): readonly [Date, Date] {
 	const [startDateString, endDateString] = value.split(RANGE_SEPARATOR);
 
-	const startDate = parseDate(startDateString, dateFormat, referenceDate);
+	const startDate = parseDate(startDateString!, dateFormat, referenceDate);
 
 	return [
 		startDate,

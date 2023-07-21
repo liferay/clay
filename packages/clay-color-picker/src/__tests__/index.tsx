@@ -383,7 +383,7 @@ describe('Interactions', () => {
 				'.clay-color-dropdown-menu .clay-color-swatch-item'
 			);
 
-			fireEvent.click(splotchArray[5], {});
+			fireEvent.click(splotchArray[5]!, {});
 
 			const hexInput = editorGetByTestId('customHexInput');
 

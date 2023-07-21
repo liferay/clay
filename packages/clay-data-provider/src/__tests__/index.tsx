@@ -67,7 +67,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
@@ -82,7 +82,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data');
+		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data');
 	});
 
 	it('call clay.data with a custom fetch', async () => {
@@ -146,7 +146,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
@@ -172,11 +172,11 @@ describe('ClayDataProvider', () => {
 			</Provider>
 		);
 
-		await fetchMock.mock.results[0].value;
+		await fetchMock.mock.results[0]!.value;
 
 		expect(fetchMock.mock.calls.length).toEqual(1);
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 	});
 
@@ -197,22 +197,22 @@ describe('ClayDataProvider', () => {
 			timeout: 15000,
 		});
 		expect(spy.mock.calls.length).toBe(5);
-		expect(spy.mock.calls[0][0]).not.toBe(
+		expect(spy.mock.calls[0]![0]).not.toBe(
 			'DataProvider: Trying 1 of 5 will happen in 150ms'
 		);
-		expect(spy.mock.calls[1][0]).not.toBe(
+		expect(spy.mock.calls[1]![0]).not.toBe(
 			'DataProvider: Trying 2 of 5 will happen in 300ms'
 		);
-		expect(spy.mock.calls[2][0]).not.toBe(
+		expect(spy.mock.calls[2]![0]).not.toBe(
 			'DataProvider: Trying 3 of 5 will happen in 600ms'
 		);
-		expect(spy.mock.calls[3][0]).not.toBe(
+		expect(spy.mock.calls[3]![0]).not.toBe(
 			'DataProvider: Trying 4 of 5 will happen in 1200ms'
 		);
-		expect(spy.mock.calls[4][0]).not.toBe(
+		expect(spy.mock.calls[4]![0]).not.toBe(
 			'DataProvider: Trying 5 of 5 will happen in 2400ms'
 		);
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 
 		spy.mockRestore();
@@ -238,22 +238,22 @@ describe('ClayDataProvider', () => {
 			timeout: 8000,
 		});
 		expect(spy.mock.calls.length).toBe(5);
-		expect(spy.mock.calls[0][0]).toBe(
+		expect(spy.mock.calls[0]![0]).toBe(
 			'DataProvider: Trying 1 of 5 will happen in 150ms'
 		);
-		expect(spy.mock.calls[1][0]).toBe(
+		expect(spy.mock.calls[1]![0]).toBe(
 			'DataProvider: Trying 2 of 5 will happen in 300ms'
 		);
-		expect(spy.mock.calls[2][0]).toBe(
+		expect(spy.mock.calls[2]![0]).toBe(
 			'DataProvider: Trying 3 of 5 will happen in 600ms'
 		);
-		expect(spy.mock.calls[3][0]).toBe(
+		expect(spy.mock.calls[3]![0]).toBe(
 			'DataProvider: Trying 4 of 5 will happen in 1200ms'
 		);
-		expect(spy.mock.calls[4][0]).toBe(
+		expect(spy.mock.calls[4]![0]).toBe(
 			'DataProvider: Trying 5 of 5 will happen in 2400ms'
 		);
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 		expect(container.innerHTML).toMatchSnapshot();
 
 		spy.mockRestore();
@@ -276,18 +276,18 @@ describe('ClayDataProvider', () => {
 			<DataProviderTest variables={{name: 'Bar'}} />
 		);
 
-		await fetchMock.mock.results[0].value;
+		await fetchMock.mock.results[0]!.value;
 		expect(fetchMock.mock.calls.length).toEqual(1);
 
 		rerender(<DataProviderTest variables={{name: 'Baz'}} />);
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
-		await fetchMock.mock.results[1].value;
+		await fetchMock.mock.results[1]!.value;
 
-		expect(fetchMock.mock.calls[0][0]).toEqual(
+		expect(fetchMock.mock.calls[0]![0]).toEqual(
 			'https://clay.data/?name=Bar'
 		);
-		expect(fetchMock.mock.calls[1][0]).toEqual(
+		expect(fetchMock.mock.calls[1]![0]).toEqual(
 			'https://clay.data/?name=Baz'
 		);
 	});
@@ -306,7 +306,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
 
-		expect(fetchMock.mock.calls[0][0]).toEqual(
+		expect(fetchMock.mock.calls[0]![0]).toEqual(
 			'https://clay.data/?name=Bar'
 		);
 	});
@@ -370,7 +370,7 @@ describe('ClayDataProvider', () => {
 
 		jest.runAllTimers();
 
-		await fetchMock.mock.results[0].value;
+		await fetchMock.mock.results[0]!.value;
 		await waitFor(() => expect(fetchMock).toBeCalledTimes(2));
 	});
 
@@ -397,7 +397,7 @@ describe('ClayDataProvider', () => {
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(3));
 		expect(container.innerHTML).toMatchSnapshot();
 
-		expect(fetchMock.mock.calls[0][0]).toEqual('https://clay.data/');
+		expect(fetchMock.mock.calls[0]![0]).toEqual('https://clay.data/');
 	});
 
 	it('data must be aggregated when using paginated data', async () => {
@@ -453,7 +453,7 @@ describe('ClayDataProvider', () => {
 		);
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(1));
-		expect(fetchMock.mock.calls[0][0]).toEqual(
+		expect(fetchMock.mock.calls[0]![0]).toEqual(
 			'https://clay.data/?limit=10'
 		);
 
@@ -463,7 +463,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(2));
 
-		expect(fetchMock.mock.calls[1][0]).toEqual(
+		expect(fetchMock.mock.calls[1]![0]).toEqual(
 			'https://clay.data/?cursor=1&limit=10'
 		);
 
@@ -471,7 +471,7 @@ describe('ClayDataProvider', () => {
 
 		await waitFor(() => expect(fetchMock.mock.calls.length).toEqual(3));
 
-		expect(fetchMock.mock.calls[2][0]).toEqual(
+		expect(fetchMock.mock.calls[2]![0]).toEqual(
 			'https://clay.data/?cursor=2&limit=10'
 		);
 
@@ -661,7 +661,7 @@ describe('ClayDataProvider', () => {
 
 		const [listitem1, listitem2] = getAllByRole('listitem');
 
-		expect(listitem1.innerHTML).toBe('Foo');
-		expect(listitem2.innerHTML).toBe('Baz');
+		expect(listitem1!.innerHTML).toBe('Foo');
+		expect(listitem2!.innerHTML).toBe('Baz');
 	});
 });

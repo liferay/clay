@@ -99,8 +99,8 @@ const ClayBreadcrumb = ({
 				{items.length > 3 && !collapsed ? (
 					<Items
 						items={[
-							items[items.length - 2],
-							items[items.length - 1],
+							items[items.length - 2]!,
+							items[items.length - 1]!,
 						]}
 					/>
 				) : (

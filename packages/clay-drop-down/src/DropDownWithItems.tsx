@@ -196,7 +196,7 @@ const findNested = <
 		// because it will be in another menu and the current menu does not need
 		// to know the information of what exists inside the contextual one, like
 		// knowing if there is an icon.
-		if (item.items && item.type !== 'contextual') {
+		if (item.items && item['type'] !== 'contextual') {
 			return findNested(item.items, key);
 		}
 

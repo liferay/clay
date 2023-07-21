@@ -415,12 +415,12 @@ describe('Picker incremental interactions', () => {
 
 			const [, , blueberry] = getAllByRole('option');
 
-			userEvent.hover(blueberry);
+			userEvent.hover(blueberry!);
 
 			expect(combobox.getAttribute('aria-activedescendant')).toBe(
 				'Blueberry'
 			);
-			expect(blueberry.classList).toContain('hover');
+			expect(blueberry!.classList).toContain('hover');
 		});
 
 		it.concurrent.each([
@@ -446,7 +446,7 @@ describe('Picker incremental interactions', () => {
 
 				const [apple, banana, blueberry] = getAllByRole('option');
 
-				userEvent.hover(banana);
+				userEvent.hover(banana!);
 
 				expect(combobox.getAttribute('aria-activedescendant')).toBe(
 					'Banana'
@@ -458,12 +458,12 @@ describe('Picker incremental interactions', () => {
 					expect(combobox.getAttribute('aria-activedescendant')).toBe(
 						'Apple'
 					);
-					expect(apple.classList).toContain('focus');
+					expect(apple!.classList).toContain('focus');
 				} else {
 					expect(combobox.getAttribute('aria-activedescendant')).toBe(
 						'Blueberry'
 					);
-					expect(blueberry.classList).toContain('focus');
+					expect(blueberry!.classList).toContain('focus');
 				}
 			}
 		);

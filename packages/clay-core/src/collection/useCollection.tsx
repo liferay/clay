@@ -44,7 +44,7 @@ const CollectionContext = React.createContext({} as CollectionContextProps);
 const SECTION_NAMES = ['Group', 'Section'];
 
 function getItemId(value: Record<string, any> | string | number) {
-	return typeof value === 'object' ? value.id : value;
+	return typeof value === 'object' ? value['id'] : value;
 }
 
 export function useCollection<
@@ -187,7 +187,7 @@ export function useCollection<
 
 				layoutKeysRef.current.set(key, {prevKey});
 
-				if (layoutKeysRef.current.has(prevKey)) {
+				if (prevKey && layoutKeysRef.current.has(prevKey)) {
 					layoutKeysRef.current.set(prevKey, {
 						...layoutKeysRef.current.get(prevKey),
 						nextKey: key,
@@ -197,7 +197,7 @@ export function useCollection<
 
 			if (items && children instanceof Function) {
 				for (let index = 0; index < items.length; index++) {
-					const item = items[index];
+					const item = items[index] as T;
 					const publicItem =
 						exclude && typeof item === 'object'
 							? excludeProps(item as Record<any, any>, exclude)
@@ -230,7 +230,7 @@ export function useCollection<
 			if (children instanceof Function && items) {
 				if (virtualizer) {
 					return virtualizer.getVirtualItems().map((virtual) => {
-						const item = items[virtual.index];
+						const item = items[virtual.index] as T;
 
 						const publicItem =
 							exclude && typeof item === 'object'

@@ -67,7 +67,7 @@ export const getEllipsisItems = (
 	const rightBuffer = getBufferList(rightBufferStart, lastIndex, config);
 
 	const newArray = [
-		items[0],
+		items[0]!,
 		...leftBuffer,
 		...items.slice(
 			Math.max(activeIndex - ellipsisBuffer, 1),
@@ -78,7 +78,7 @@ export const getEllipsisItems = (
 	];
 
 	if (items.length > 1) {
-		newArray.push(items[lastIndex]);
+		newArray.push(items[lastIndex]!);
 	}
 
 	return newArray;

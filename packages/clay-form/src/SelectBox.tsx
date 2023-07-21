@@ -18,7 +18,7 @@ function arrayMove(
 	oldIndex: number,
 	newIndex: number
 ) {
-	arrayToMove.splice(newIndex, 0, arrayToMove.splice(oldIndex, 1)[0]);
+	arrayToMove.splice(newIndex, 0, arrayToMove.splice(oldIndex, 1)[0]!);
 
 	return arrayToMove;
 }
@@ -27,7 +27,7 @@ function reorderUp(array: Array<TItem>, selectedIndexes: Array<number>) {
 	let clonedArray = [...array];
 
 	for (let i = 0; i < selectedIndexes.length; i++) {
-		const item = selectedIndexes[i];
+		const item = selectedIndexes[i]!;
 
 		if (item === 0) {
 			return clonedArray;
@@ -43,7 +43,7 @@ function reorderDown(array: Array<TItem>, selectedIndexes: Array<number>) {
 	let clonedArray = [...array];
 
 	for (let i = 0; i < selectedIndexes.length; i++) {
-		const item = selectedIndexes[i];
+		const item = selectedIndexes[i]!;
 
 		if (selectedIndexes.includes(clonedArray.length - 1)) {
 			return clonedArray;

@@ -542,7 +542,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 						[...from].slice(0, -1).join('') ===
 						[...path].slice(0, -1).join('');
 
-					let index = path[path.length - 1];
+					let index = path[path.length - 1]!;
 
 					// If moving an item within the same parent and the drop position of
 					// the item is greater than the origin it affects the position

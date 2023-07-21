@@ -32,7 +32,7 @@ export function range({end, start}: {end: number; start: number}) {
 		{
 			length: end - start + 1,
 		},
-		(v, k) => k + start
+		(_v, k) => k + start
 	);
 }
 

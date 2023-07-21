@@ -134,7 +134,7 @@ function getNextTarget(
 
 	const [type, key] = target.getAttribute('data-id')!.split(',');
 
-	return type === 'number' ? Number(key) : key;
+	return type === 'number' ? Number(key) : key!;
 }
 
 const defaultMessages: DragAndDropMessages = {
@@ -254,7 +254,7 @@ export function DragAndDropProvider<T>({
 				dragNode.item as Record<any, any>,
 				tree.nodeByPath(indexes).parent as Record<any, any>,
 				{
-					next: indexes[indexes.length - 1],
+					next: indexes[indexes.length - 1]!,
 					previous: dragNode.index,
 				}
 			);
@@ -346,7 +346,7 @@ export function DragAndDropProvider<T>({
 									.split(',');
 
 								return !denylist.has(
-									type === 'number' ? Number(key) : key
+									type === 'number' ? Number(key) : key!
 								);
 							}
 						);
@@ -365,7 +365,7 @@ export function DragAndDropProvider<T>({
 							...state,
 						};
 
-						if (denylist.has(newState.currentTarget!)) {
+						if (item && denylist.has(newState.currentTarget!)) {
 							const [type, key] = item
 								.getAttribute('data-id')!
 								.split(',');
@@ -373,7 +373,7 @@ export function DragAndDropProvider<T>({
 							newState.position =
 								event.key === Keys.Up ? 'top' : 'bottom';
 							newState.currentTarget =
-								type === 'number' ? Number(key) : key;
+								type === 'number' ? Number(key) : key!;
 						} else if (
 							(event.key === Keys.Up &&
 								state.position === 'bottom') ||
@@ -398,7 +398,7 @@ export function DragAndDropProvider<T>({
 								newState.position =
 									event.key === Keys.Up ? 'bottom' : 'middle';
 								newState.currentTarget =
-									type === 'number' ? Number(key) : key;
+									type === 'number' ? Number(key) : key!;
 							}
 						}
 
@@ -431,7 +431,7 @@ export function DragAndDropProvider<T>({
 									any
 								>,
 								{
-									next: indexes[indexes.length - 1],
+									next: indexes[indexes.length - 1]!,
 									previous: dragNode.index,
 								}
 							);

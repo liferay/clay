@@ -50,9 +50,9 @@ function ClayList({
 				'show-quick-actions-on-hover': showQuickActionsOnHover,
 			})}
 		>
-			{process.env.NODE_ENV !== 'development' && children}
+			{process.env['NODE_ENV'] !== 'development' && children}
 
-			{process.env.NODE_ENV === 'development' &&
+			{process.env['NODE_ENV'] === 'development' &&
 				children &&
 				React.Children.map(children, (child) => {
 					warning(
