@@ -1,0 +1,53 @@
+name: Auto Close and Comment on Issues
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  closeAndComment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close the Issue
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.payload.issue.number;
+            github.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              state: 'closed'
+            });
+
+      - name: Get Author's Username
+        id: get_author
+        run: echo "::set-output name=author::${{ github.event.issue.user.login }}"
+
+      - name: Add Comment
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.payload.issue.number;
+            const author = context.payload.comment ? context.payload.comment.user.login : '${{ steps.get_author.outputs.author }}';
+            const comment = `
+            <h1>
+              Thanks for sending your Clay issue to PEDS Team.
+            </h1>
+            <h2>
+              @${author}, we appreciate your contribution, however, please be informed that we have transitioned away from using GitHub issues to track and prioritize our work. At present, we are exclusively utilizing LPS tickets for issue management. Therefore, we kindly request you to create your LPS tickets for any new matters or inquiries ;)
+            </h1>
+              <a href="https://liferay.atlassian.net/wiki/spaces/~313362024/pages/2391179332/Clay+new+processO">Link for How To Open a LPS Ticket to Clay</a>
+            </h1>
+            <h2>
+              If you are an external contributor, we strongly recommend reaching out to our support team for further assistance :)
+            </h2>`;
+            github.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: comment
+            });
