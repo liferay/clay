@@ -415,6 +415,10 @@
 		}
 	}
 
+	.modal-body {
+		overflow: auto;
+	}
+
 	.modal-content {
 		@include clay-css($cadmin-modal-height-full-modal-content);
 
