@@ -70,13 +70,24 @@ const ClayEmptyState = ({
 			return null;
 		}
 
-		const dotPosition = imgSrc?.lastIndexOf('.');
+		if (imgSrc && imgSrcReducedMotion !== null) {
+			const url = new URL(
+				imgSrc,
+				imgSrc?.match(/http:\/\/|https:\/\//)
+					? undefined
+					: `https://${location.host}`
+			);
 
-		if (dotPosition !== -1 && imgSrc && imgSrcReducedMotion !== null) {
-			return `${imgSrc.substr(
-				0,
-				dotPosition
-			)}_reduced_motion${imgSrc.substr(dotPosition!)}`;
+			const hasImgExtension = url.pathname.match(/.(gif|png| jpeg|jpg)/);
+
+			return hasImgExtension
+				? `${url.pathname.substring(
+						0,
+						hasImgExtension.index
+				  )}_reduced_motion${url.pathname.substring(
+						hasImgExtension.index!
+				  )}`
+				: null;
 		}
 	}, [error, imgSrcReducedMotion]);
 
