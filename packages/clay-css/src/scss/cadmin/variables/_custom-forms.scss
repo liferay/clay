@@ -17,9 +17,7 @@ $cadmin-custom-control-indicator-focus-border-color: $cadmin-custom-control-indi
 $cadmin-custom-control-indicator-focus-box-shadow: $cadmin-component-focus-box-shadow !default;
 
 $cadmin-custom-control-indicator-active-bg: $cadmin-white !default;
-$cadmin-custom-control-indicator-active-box-shadow: inset 0 0 0 1px
-		rgba(0, 0, 0, 0.1),
-	$cadmin-custom-control-indicator-focus-box-shadow !default;
+$cadmin-custom-control-indicator-active-box-shadow: c-unset !default;
 $cadmin-custom-control-indicator-active-border-color: $cadmin-custom-control-indicator-border-color !default;
 $cadmin-custom-control-indicator-active-color: $cadmin-component-active-color !default;
 

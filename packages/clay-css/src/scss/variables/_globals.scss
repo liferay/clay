@@ -16,6 +16,14 @@ $clay-unset-placeholder: clay-unset-placeholder !default;
 
 $enable-bs4-deprecated: true !default;
 $enable-c-inner: true !default;
+$enable-focus-visible: true !default;
+
+$focus-visible-selector: if(
+	$enable-focus-visible,
+	'&:focus-visible',
+	'&:focus'
+) !default;
+
 $enable-lexicon-flat-colors: false !default;
 $enable-scaling-components: false !default;
 $scaling-breakpoint-down: sm !default;

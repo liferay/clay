@@ -354,6 +354,26 @@
 			setter(map-get($map, hover-c-kbd-inline), ())
 		);
 
+		$_enable-focus-visible: if(
+			variable-exists(enable-focus-visible),
+			$enable-focus-visible,
+			if(
+				variable-exists(cadmin-enable-focus-visible),
+				$cadmin-enable-focus-visible,
+				true
+			)
+		);
+		$_focus-selector: if(
+			$_enable-focus-visible,
+			'&:focus-visible',
+			'&:focus'
+		);
+		$_prefers-focus-selector: if(
+			$_enable-focus-visible,
+			'.c-prefers-focus &:focus',
+			''
+		);
+
 		$focus: setter(map-get($map, focus), ());
 		$focus: map-deep-merge(
 			$focus,
@@ -624,20 +644,23 @@
 				}
 			}
 
-			&:focus,
-			&.focus {
-				@include clay-css($focus);
+			@at-root {
+				&.focus,
+				#{$_focus-selector},
+				#{$_prefers-focus-selector} {
+					@include clay-css($focus);
 
-				&::before {
-					@include clay-css(map-get($focus, before));
-				}
+					&::before {
+						@include clay-css(map-get($focus, before));
+					}
 
-				&::after {
-					@include clay-css(map-get($focus, after));
-				}
+					&::after {
+						@include clay-css(map-get($focus, after));
+					}
 
-				.c-kbd-inline {
-					@include clay-css($focus-c-kbd-inline);
+					.c-kbd-inline {
+						@include clay-css($focus-c-kbd-inline);
+					}
 				}
 			}
 
@@ -702,10 +725,13 @@
 			// Overwrite Bootstrap's Ensure active button styles are not applied to disabled buttons
 			// https://github.com/twbs/bootstrap/commit/de3973b5e74058e37fd15fecc4cb7b9fd3409def
 
-			&.btn:not([disabled]):not(.disabled):active,
-			&.btn:not([disabled]):not(.disabled).active {
-				&:focus {
-					box-shadow: map-get($focus, box-shadow);
+			@at-root {
+				&.btn:not([disabled]):not(.disabled):active,
+				&.btn:not([disabled]):not(.disabled).active {
+					#{$_focus-selector},
+					#{$_prefers-focus-selector} {
+						box-shadow: map-get($focus, box-shadow);
+					}
 				}
 			}
 

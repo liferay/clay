@@ -250,6 +250,31 @@
 
 		$breakpoint-down: map-get($map, breakpoint-down);
 
+		$_enable-focus-visible: if(
+			variable-exists(enable-focus-visible),
+			$enable-focus-visible,
+			if(
+				variable-exists(cadmin-enable-focus-visible),
+				$cadmin-enable-focus-visible,
+				true
+			)
+		);
+
+		$_c-prefers-focus-selector: if(
+			$_enable-focus-visible,
+			'.c-prefers-focus &:focus',
+			''
+		);
+
+		@if (variable-exists(cadmin-enable-focus-visible)) and
+			($_enable-focus-visible)
+		{
+			$_c-prefers-focus-selector: clay-insert-before(
+				'.cadmin',
+				'.c-prefers-focus '
+			);
+		}
+
 		$base: map-merge(
 			$map,
 			(
@@ -704,48 +729,51 @@
 				}
 			}
 
-			&:focus,
-			&.focus {
-				@include clay-css($focus);
-
-				&::before {
-					@include clay-css(map-deep-get($map, focus, before));
-				}
-
-				&::after {
-					@include clay-css(map-deep-get($map, focus, after));
-				}
-
-				&:hover {
-					@include clay-css(map-deep-get($map, focus, hover));
+			@at-root {
+				&.focus,
+				#{$focus-visible-selector},
+				#{$_c-prefers-focus-selector} {
+					@include clay-css($focus);
 
 					&::before {
-						@include clay-css(
-							map-deep-get($map, focus, hover, before)
-						);
+						@include clay-css(map-deep-get($map, focus, before));
 					}
 
 					&::after {
-						@include clay-css(
-							map-deep-get($map, focus, hover, after)
-						);
+						@include clay-css(map-deep-get($map, focus, after));
 					}
-				}
 
-				.inline-item {
-					@include clay-css(map-get($focus, inline-item));
-				}
+					&:hover {
+						@include clay-css(map-deep-get($map, focus, hover));
 
-				.inline-item-before {
-					@include clay-css(map-get($focus, inline-item-before));
-				}
+						&::before {
+							@include clay-css(
+								map-deep-get($map, focus, hover, before)
+							);
+						}
 
-				.inline-item-middle {
-					@include clay-css(map-get($focus, inline-item-middle));
-				}
+						&::after {
+							@include clay-css(
+								map-deep-get($map, focus, hover, after)
+							);
+						}
+					}
 
-				.inline-item-after {
-					@include clay-css(map-get($focus, inline-item-after));
+					.inline-item {
+						@include clay-css(map-get($focus, inline-item));
+					}
+
+					.inline-item-before {
+						@include clay-css(map-get($focus, inline-item-before));
+					}
+
+					.inline-item-middle {
+						@include clay-css(map-get($focus, inline-item-middle));
+					}
+
+					.inline-item-after {
+						@include clay-css(map-get($focus, inline-item-after));
+					}
 				}
 			}
 
@@ -760,19 +788,22 @@
 					@include clay-css(map-deep-get($map, active, after));
 				}
 
-				&:focus {
-					@include clay-css($active-focus);
+				@at-root {
+					#{$focus-visible-selector},
+					#{$_c-prefers-focus-selector} {
+						@include clay-css($active-focus);
 
-					&::before {
-						@include clay-css(
-							map-deep-get($map, active, focus, before)
-						);
-					}
+						&::before {
+							@include clay-css(
+								map-deep-get($map, active, focus, before)
+							);
+						}
 
-					&::after {
-						@include clay-css(
-							map-deep-get($map, active, focus, after)
-						);
+						&::after {
+							@include clay-css(
+								map-deep-get($map, active, focus, after)
+							);
+						}
 					}
 				}
 
@@ -804,8 +835,13 @@
 					@include clay-css(map-get($map, active-class-after));
 				}
 
-				&:focus {
-					@include clay-css(map-deep-get($map, active-class, focus));
+				@at-root {
+					#{$focus-visible-selector},
+					#{$_c-prefers-focus-selector} {
+						@include clay-css(
+							map-deep-get($map, active-class, focus)
+						);
+					}
 				}
 
 				.inline-item {
@@ -843,19 +879,22 @@
 					@include clay-css(map-deep-get($map, disabled, after));
 				}
 
-				&:focus {
-					@include clay-css(map-get($disabled, focus));
+				@at-root {
+					#{$focus-visible-selector},
+					#{$_c-prefers-focus-selector} {
+						@include clay-css(map-get($disabled, focus));
 
-					&::before {
-						@include clay-css(
-							map-deep-get($map, disabled, focus, before)
-						);
-					}
+						&::before {
+							@include clay-css(
+								map-deep-get($map, disabled, focus, before)
+							);
+						}
 
-					&::after {
-						@include clay-css(
-							map-deep-get($map, disabled, focus, after)
-						);
+						&::after {
+							@include clay-css(
+								map-deep-get($map, disabled, focus, after)
+							);
+						}
 					}
 				}
 

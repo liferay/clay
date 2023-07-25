@@ -84,7 +84,6 @@ const ClayBreadcrumb = ({
 				<ClayButtonWithIcon
 					aria-expanded={collapsed}
 					aria-label={collapsed ? ariaLabels.close : ariaLabels.open}
-					className="c-focus-inset"
 					displayType={null}
 					onClick={() => setCollapsed(!collapsed)}
 					size="xs"
