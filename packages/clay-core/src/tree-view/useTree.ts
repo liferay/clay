@@ -375,6 +375,68 @@ function visit<T extends Array<Record<string, any>>>(
 	return {iter};
 }
 
+// Utility function to correct the path of the item in the TreeView when moving
+// an item from top to bottom in the tree that causes inconsistency when moving
+// because the index order changes when we first delete the item in the tree
+// and then add it to the tree.
+//
+// Example (1):
+// 1. Item A
+//   1. Item B
+//   2. Item C
+//   3. Item D
+//
+// Op:
+// from=[1, 1] path=[1, 3]
+//
+// 1. Item A
+//   ~1. Item B~ <- Remove item to move
+//   1. Item C
+//   2. Item D
+//
+// Example (2):
+// 1. Item A
+//   1. Item B
+// 2. Item C
+//   1. Item D
+//   2. Item E
+//
+// Op:
+// from=[1] path=[2, 1]
+//
+// ~1. Item A~ <- Remove item to move
+//   1. Item B
+// 2. Item C
+//   1. Item D
+//   2. Item E
+function fixIndexesParity({from, path}: PatchMove) {
+	const newPath = [...path];
+
+	const isSameParent =
+		[...from].slice(0, -1).join('') === [...path].slice(0, -1).join('');
+
+	// This is an invalid operation because we are moving from the same depth
+	// level, but the parents are different.
+	if (!isSameParent && from.length === path.length) {
+		return {from, path};
+	}
+
+	for (let index = 0; index < from.length; index++) {
+		const value = from[index]!;
+		const previousValue = from[index - 1]!;
+
+		if (previousValue! > newPath[index - 1]!) {
+			break;
+		}
+
+		if (newPath[index]! > value) {
+			newPath[index] = newPath[index]! - 1;
+		}
+	}
+
+	return {from, path: newPath};
+}
+
 // Operation of `move` value to the same document structure, removing from
 // `from` and then adding to `path`.
 // RFC 6902 (JSON Patch) 4.4
@@ -520,7 +582,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 				// immediately followed by the "add" operation at the target
 				// location with the value that was removed.
 				case 'move': {
-					const {from, path} = patch;
+					const {from, path} = fixIndexesParity(patch);
 
 					const nodeToRemove = nodeByPath(from);
 
@@ -539,21 +601,7 @@ export function createImmutableTree<T extends Array<Record<string, any>>>(
 					}
 
 					const pathToAdd = nodeByPath(path);
-
-					// It has the same parent the index can change
-					const isSameParent =
-						[...from].slice(0, -1).join('') ===
-						[...path].slice(0, -1).join('');
-
-					let index = path[path.length - 1]!;
-
-					// If moving an item within the same parent and the drop position of
-					// the item is greater than the origin it affects the position
-					// because the item is always removed first, we just fix the position
-					// by decreasing.
-					if (isSameParent && nodeToRemove.index < pathToAdd.index) {
-						index -= 1;
-					}
+					const index = path[path.length - 1];
 
 					if (pathToAdd.parent) {
 						pathToAdd.parent[nestedKey] = [
