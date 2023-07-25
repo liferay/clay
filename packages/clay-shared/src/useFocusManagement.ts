@@ -278,12 +278,12 @@ export function useFocusManagement(scope: React.RefObject<null | HTMLElement>) {
 		// this happens, we want to track where the next node is in case we
 		// reach the end of the list of focusable nodes.
 		if (nextFocusInFiber !== nextFocusInDoc) {
-			nextFocusInDocRef.current = nextFocusInDoc;
+			nextFocusInDocRef.current = nextFocusInDoc!;
 		}
 
 		// Same as above, except we track the previous node for tabbing backwards.
 		if (prevFocusInFiber !== prevFocusInDoc) {
-			prevFocusInDocRef.current = prevFocusInDoc;
+			prevFocusInDocRef.current = prevFocusInDoc!;
 		}
 
 		let nextActive = backwards ? prevFocusInFiber : nextFocusInFiber;

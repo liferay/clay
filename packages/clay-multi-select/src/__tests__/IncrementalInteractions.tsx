@@ -119,7 +119,7 @@ describe('MultiSelect incremental interactions', () => {
 
 		const [close] = getAllByRole('button');
 
-		userEvent.click(close);
+		userEvent.click(close!);
 
 		expect(queryAllByRole('row').length).toEqual(0);
 	});

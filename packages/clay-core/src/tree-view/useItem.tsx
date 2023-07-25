@@ -67,7 +67,7 @@ export function ItemContextProvider({children, value}: Props) {
 		position,
 	} = useDnD();
 
-	const keyRef = useRef(getKey(value.key));
+	const keyRef = useRef(getKey(value['key']));
 
 	const childRef = useRef<HTMLDivElement>(null);
 
@@ -144,7 +144,7 @@ export function ItemContextProvider({children, value}: Props) {
 		accept: 'treeViewItem',
 		canDrop(dragItem: unknown) {
 			return !isMovingIntoItself(
-				(dragItem as Value).item.indexes,
+				(dragItem as Value)['item'].indexes,
 				item.indexes
 			);
 		},
@@ -156,7 +156,7 @@ export function ItemContextProvider({children, value}: Props) {
 			if (
 				monitor.didDrop() ||
 				!monitor.canDrop() ||
-				(dragItem as Value).item.key === item.key ||
+				(dragItem as Value)['item'].key === item.key ||
 				!isValidDrop.current
 			) {
 				return;
@@ -178,11 +178,11 @@ export function ItemContextProvider({children, value}: Props) {
 				const tree = createImmutableTree(items as any, nestedKey!);
 
 				const isMoved = onItemMove(
-					removeItemInternalProps((dragItem as Value).item),
+					removeItemInternalProps((dragItem as Value)['item']),
 					tree.nodeByPath(indexes).parent,
 					{
-						next: indexes[indexes.length - 1],
-						previous: (dragItem as Value).item.index,
+						next: indexes[indexes.length - 1]!,
+						previous: (dragItem as Value)['item'].index,
 					}
 				);
 
@@ -191,7 +191,7 @@ export function ItemContextProvider({children, value}: Props) {
 				}
 			}
 
-			reorder((dragItem as Value).item.indexes, indexes);
+			reorder((dragItem as Value)['item'].indexes, indexes);
 		},
 		hover(dragItem, monitor) {
 			if (!monitor.canDrop() || isDragging) {
@@ -258,12 +258,12 @@ export function ItemContextProvider({children, value}: Props) {
 
 				const isHovered = onItemHover(
 					removeItemInternalProps(
-						(dragItem as unknown as Value).item
+						(dragItem as unknown as Value)['item']
 					),
 					tree.nodeByPath(indexes).parent,
 					{
-						next: indexes[indexes.length - 1],
-						previous: (dragItem as unknown as Value).item.index,
+						next: indexes[indexes.length - 1]!,
+						previous: (dragItem as unknown as Value)['item'].index,
 					}
 				);
 

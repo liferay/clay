@@ -34,7 +34,7 @@ const Trigger = ({
 	</Button>
 );
 
-type Props<T> = {
+type Props<T extends Record<string, any> | string> = {
 	/**
 	 * Flag to define which item has the active state/current page.
 	 */
@@ -118,19 +118,21 @@ function depthActive<T extends Record<string, any>>(
 		}
 
 		if ('items' in item) {
-			return depthActive(item.items as Array<T>);
+			return depthActive(item['items'] as Array<T>);
 		}
 
 		return false;
 	});
 }
 
-function VerticalNav<T>(props: Props<T>): JSX.Element & {
+function VerticalNav<T extends Record<string, any> | string>(
+	props: Props<T>
+): JSX.Element & {
 	Trigger: typeof Trigger;
 	Item: typeof Item;
 };
 
-function VerticalNav<T>({
+function VerticalNav<T extends Record<string, any> | string>({
 	active,
 	activation = 'manual',
 	children,

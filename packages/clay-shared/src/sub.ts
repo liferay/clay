@@ -14,7 +14,7 @@ export const sub = (langKey: string, args: Array<React.ReactText>) => {
 		.filter((val) => val.length !== 0);
 
 	for (let i = 0; i < args.length; i++) {
-		const arg = args[i];
+		const arg = args[i]!;
 
 		const indexKey = `{${i}}`;
 

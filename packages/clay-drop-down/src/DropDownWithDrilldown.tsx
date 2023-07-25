@@ -227,10 +227,10 @@ export const ClayDropDownWithDrilldown = ({
 							direction={direction}
 							header={
 								activeMenu === menuKey && !!history.length
-									? history.slice(-1)[0].title
+									? history.slice(-1)[0]!.title
 									: undefined
 							}
-							items={menus[menuKey]}
+							items={menus[menuKey]!}
 							key={menuKey}
 							messages={messages}
 							onBack={() => {
@@ -242,7 +242,7 @@ export const ClayDropDownWithDrilldown = ({
 
 								setDirection('prev');
 
-								setActiveMenu(parent.id);
+								setActiveMenu(parent!.id);
 							}}
 							onForward={(title, childId) => {
 								setHistory([

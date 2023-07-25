@@ -109,7 +109,7 @@ describe('TreeView incremental interactions', () => {
 						},
 					]}
 				>
-					{(item, selection, expand) => (
+					{(item, _selection, expand) => (
 						<TreeView.Item>
 							<TreeView.ItemStack
 								onClick={(event) => {
@@ -208,9 +208,9 @@ describe('TreeView incremental interactions', () => {
 					'input.custom-control-input[type=checkbox]'
 				);
 
-				fireEvent.click(item0);
+				fireEvent.click(item0!);
 
-				expect(item0.checked).toBeFalsy();
+				expect(item0!.checked).toBeFalsy();
 				expect(
 					container.querySelectorAll<HTMLInputElement>(
 						'input.custom-control-input[type=checkbox]:indeterminate'
@@ -243,14 +243,14 @@ describe('TreeView incremental interactions', () => {
 						'input.custom-control-input[type=checkbox]'
 					);
 
-				fireEvent.click(root);
+				fireEvent.click(root!);
 
-				expect(root.checked).toBeTruthy();
+				expect(root!.checked).toBeTruthy();
 
-				fireEvent.click(item);
+				fireEvent.click(item!);
 
-				expect(item.checked).toBeTruthy();
-				expect(root.checked).toBeFalsy();
+				expect(item!.checked).toBeTruthy();
+				expect(root!.checked).toBeFalsy();
 			});
 
 			it('select multiple item using multiple selection', () => {
@@ -281,11 +281,11 @@ describe('TreeView incremental interactions', () => {
 						'input.custom-control-input[type=checkbox]'
 					);
 
-				fireEvent.click(root);
-				fireEvent.click(item);
+				fireEvent.click(root!);
+				fireEvent.click(item!);
 
-				expect(item.checked).toBeTruthy();
-				expect(root.checked).toBeTruthy();
+				expect(item!.checked).toBeTruthy();
+				expect(root!.checked).toBeTruthy();
 			});
 
 			it('select children and parent recursively using recursive multiple selection', () => {
@@ -338,7 +338,7 @@ describe('TreeView incremental interactions', () => {
 					'input.custom-control-input[type=checkbox]'
 				);
 
-				expect(item.checked).toBeTruthy();
+				expect(item!.checked).toBeTruthy();
 			});
 
 			it('pressing space selects item', () => {
@@ -406,14 +406,14 @@ describe('TreeView incremental interactions', () => {
 
 			const [root, item] = getAllByRole('treeitem');
 
-			fireEvent.click(root);
+			fireEvent.click(root!);
 
-			expect(root.classList).toContain('active');
+			expect(root!.classList).toContain('active');
 
-			fireEvent.click(item);
+			fireEvent.click(item!);
 
-			expect(item.classList).toContain('active');
-			expect(root.classList).not.toContain('active');
+			expect(item!.classList).toContain('active');
+			expect(root!.classList).not.toContain('active');
 		});
 
 		it('trigger selection manually using single selection', () => {
@@ -471,12 +471,12 @@ describe('TreeView incremental interactions', () => {
 
 			fireEvent.click(getByTestId('root'));
 
-			expect(root.classList).toContain('active');
+			expect(root!.classList).toContain('active');
 
 			fireEvent.click(getByTestId('item'));
 
-			expect(item.classList).toContain('active');
-			expect(root.classList).not.toContain('active');
+			expect(item!.classList).toContain('active');
+			expect(root!.classList).not.toContain('active');
 		});
 
 		it('trigger selection manually using multiple selection', () => {
@@ -552,8 +552,8 @@ describe('TreeView incremental interactions', () => {
 			fireEvent.click(getByTestId('root'));
 			fireEvent.click(getByTestId('item'));
 
-			expect(item.classList).toContain('active');
-			expect(root.classList).toContain('active');
+			expect(item!.classList).toContain('active');
+			expect(root!.classList).toContain('active');
 		});
 
 		it('trigger selection manually using recursive multiple selection', () => {
@@ -624,8 +624,8 @@ describe('TreeView incremental interactions', () => {
 
 			fireEvent.click(getByTestId('root'));
 
-			expect(item.classList).toContain('active');
-			expect(root.classList).toContain('active');
+			expect(item!.classList).toContain('active');
+			expect(root!.classList).toContain('active');
 		});
 	});
 
@@ -702,7 +702,7 @@ describe('TreeView incremental interactions', () => {
 
 			const [root, item] = getAllByRole('treeitem');
 
-			fireEvent.keyDown(root, {key: 'ArrowRight'});
+			fireEvent.keyDown(root!, {key: 'ArrowRight'});
 
 			expect(document.activeElement).toBe(item);
 		});
@@ -793,7 +793,7 @@ describe('TreeView incremental interactions', () => {
 
 			const [root, item] = getAllByRole('treeitem');
 
-			fireEvent.keyDown(item, {key: 'ArrowLeft'});
+			fireEvent.keyDown(item!, {key: 'ArrowLeft'});
 
 			expect(document.activeElement).toBe(root);
 		});
@@ -884,15 +884,15 @@ describe('TreeView incremental interactions', () => {
 
 			const [foo, bar, baz] = getAllByRole('treeitem');
 
-			fireEvent.keyDown(foo, {key: 'ArrowRight'});
+			fireEvent.keyDown(foo!, {key: 'ArrowRight'});
 
-			fireEvent.keyDown(foo, {key: 'ArrowDown'});
+			fireEvent.keyDown(foo!, {key: 'ArrowDown'});
 
-			fireEvent.keyDown(baz, {key: 'ArrowUp'});
+			fireEvent.keyDown(baz!, {key: 'ArrowUp'});
 
 			expect(document.activeElement).toBe(bar);
 
-			fireEvent.keyDown(bar, {key: 'ArrowUp'});
+			fireEvent.keyDown(bar!, {key: 'ArrowUp'});
 
 			expect(document.activeElement).toBe(foo);
 		});
@@ -940,7 +940,7 @@ describe('TreeView incremental interactions', () => {
 
 			const [, item] = getAllByRole('treeitem');
 
-			fireEvent.click(item);
+			fireEvent.click(item!);
 
 			await waitFor(() => getByText('Item 2'));
 
@@ -990,7 +990,7 @@ describe('TreeView incremental interactions', () => {
 
 			const [, item] = getAllByRole('treeitem');
 
-			fireEvent.keyDown(item, {key: 'ArrowRight'});
+			fireEvent.keyDown(item!, {key: 'ArrowRight'});
 
 			await waitFor(() => getByText('Item 2'));
 
@@ -1041,7 +1041,7 @@ describe('TreeView incremental interactions', () => {
 
 			const [, item] = getAllByRole('treeitem');
 
-			fireEvent.click(item);
+			fireEvent.click(item!);
 
 			expect(
 				container.querySelectorAll(
@@ -1092,8 +1092,8 @@ describe('TreeView incremental interactions', () => {
 								name: 'Root',
 							},
 						]}
-						onLoadMore={async (item, cursor: number = 0) => {
-							const fakeData = data[cursor];
+						onLoadMore={async (_item, cursor: number = 0) => {
+							const fakeData = data[cursor]!;
 							const next = cursor + 1;
 
 							if (cursor === null) {
@@ -1101,12 +1101,12 @@ describe('TreeView incremental interactions', () => {
 							}
 
 							return {
-								cursor: next <= fakeData.length ? next : null,
+								cursor: next <= fakeData!.length ? next : null,
 								items: fakeData,
 							};
 						}}
 					>
-						{(item, s, expand, load) => (
+						{(item, _selection, expand, load) => (
 							<TreeView.Item>
 								<TreeView.ItemStack>
 									{item.name}
@@ -1188,23 +1188,23 @@ describe('TreeView incremental interactions', () => {
 
 		const [item1, item2] = getAllByRole('treeitem');
 
-		expect(item1.classList).not.toContain('focus');
+		expect(item1!.classList).not.toContain('focus');
 
-		fireEvent.focus(item1);
+		fireEvent.focus(item1!);
 
-		expect(item1.classList).toContain('focus');
+		expect(item1!.classList).toContain('focus');
 
 		const [button1] = getAllByRole('button');
 
-		fireEvent.click(button1);
+		fireEvent.click(button1!);
 
-		expect(button1.getAttribute('aria-expanded')).toBe('true');
-		expect(item1.classList).toContain('focus');
+		expect(button1!.getAttribute('aria-expanded')).toBe('true');
+		expect(item1!.classList).toContain('focus');
 
-		userEvent.click(item2);
+		userEvent.click(item2!);
 
-		expect(button1.getAttribute('aria-expanded')).toBe('false');
-		expect(item1.classList).not.toContain('focus');
+		expect(button1!.getAttribute('aria-expanded')).toBe('false');
+		expect(item1!.classList).not.toContain('focus');
 	});
 
 	it('focus on item with action and move focus to another element the action should not be visible', () => {
@@ -1236,15 +1236,15 @@ describe('TreeView incremental interactions', () => {
 
 		const [item1, item2] = getAllByRole('treeitem');
 
-		expect(item1.classList).not.toContain('focus');
+		expect(item1!.classList).not.toContain('focus');
 
 		userEvent.tab();
 
-		expect(item1.classList).toContain('focus');
+		expect(item1!.classList).toContain('focus');
 
-		userEvent.click(item2);
+		userEvent.click(item2!);
 
-		expect(item1.classList).not.toContain('focus');
-		expect(item2.classList).not.toContain('focus');
+		expect(item1!.classList).not.toContain('focus');
+		expect(item2!.classList).not.toContain('focus');
 	});
 });

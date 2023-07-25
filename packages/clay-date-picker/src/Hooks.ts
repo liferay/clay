@@ -155,9 +155,9 @@ export const useCalendarNavigation = ({
 						document.activeElement!.getAttribute('data-index')
 					);
 
-					const currentRow = weeks[currentRowPosition];
+					const currentRow = weeks[currentRowPosition]!;
 
-					let nextFocus: IDay | null = null;
+					let nextFocus: IDay | null | undefined = null;
 
 					switch (event.key) {
 						case Keys.Right:
@@ -312,7 +312,7 @@ export const useCalendarNavigation = ({
 					lastKeyPressed.current === Keys.Up
 						? weeks.length - 1
 						: 0
-				];
+				]!;
 
 			switch (lastKeyPressed.current) {
 				case Keys.Right:
@@ -328,7 +328,7 @@ export const useCalendarNavigation = ({
 							lastKeyPressed.current === Keys.Left
 								? newRow.length - 1
 								: 0
-						]
+						]!
 					);
 					break;
 				}
@@ -346,7 +346,7 @@ export const useCalendarNavigation = ({
 								lastKeyPressed.current === Keys.Up
 									? weeks.length - 2
 									: 1
-							][position];
+							]![position]!;
 					}
 
 					focusNext(nextFocus);
@@ -436,18 +436,18 @@ function getWeekArray(d: Date, firstDayOfWeek = 0): Month {
 	});
 
 	// unshift days from start of the first week
-	const firstWeek = weekArray[0];
+	const firstWeek = weekArray[0]!;
 	for (let i = 7 - firstWeek.length; i > 0; i -= 1) {
-		const outsideDate = clone(firstWeek[0].date);
-		outsideDate.setDate(firstWeek[0].date.getDate() - 1);
+		const outsideDate = clone(firstWeek[0]!.date);
+		outsideDate.setDate(firstWeek[0]!.date.getDate() - 1);
 		firstWeek.unshift({date: outsideDate, previousMonth: true});
 	}
 
 	// push days until the end of the last week
-	const lastWeek = weekArray[weekArray.length - 1];
+	const lastWeek = weekArray[weekArray.length - 1]!;
 	for (let i = lastWeek.length; i < 7; i += 1) {
-		const outsideDate = clone(lastWeek[lastWeek.length - 1].date);
-		outsideDate.setDate(lastWeek[lastWeek.length - 1].date.getDate() + 1);
+		const outsideDate = clone(lastWeek[lastWeek.length - 1]!.date);
+		outsideDate.setDate(lastWeek[lastWeek.length - 1]!.date.getDate() + 1);
 		lastWeek.push({date: outsideDate, nextMonth: true});
 	}
 

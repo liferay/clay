@@ -114,8 +114,8 @@ describe('Picker basic rendering', () => {
 
 		const [apple] = getAllByRole('option');
 
-		expect(apple.getAttribute('aria-selected')).toBe('true');
-		expect(apple.textContent).toBe('Apple');
+		expect(apple!.getAttribute('aria-selected')).toBe('true');
+		expect(apple!.textContent).toBe('Apple');
 	});
 
 	it('renders the component as disabled', () => {
@@ -174,8 +174,8 @@ describe('Picker basic rendering', () => {
 		expect(selectedValue.getAttribute('aria-labelledby')).toBe(
 			'picker-label'
 		);
-		expect(label.getAttribute('id')).toBe('picker-label');
-		expect(label.getAttribute('for')).toBe('picker');
+		expect(label!.getAttribute('id')).toBe('picker-label');
+		expect(label!.getAttribute('for')).toBe('picker');
 	});
 
 	it('render component with custom trigger', () => {

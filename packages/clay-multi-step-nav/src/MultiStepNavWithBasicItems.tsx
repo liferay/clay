@@ -111,7 +111,7 @@ export const ClayMultiStepNavWithBasicItems = ({
 	let showSteps = steps;
 	const indexEnd = steps.length - 1;
 
-	const lastStep = steps[indexEnd];
+	const lastStep = steps[indexEnd]!;
 
 	if (steps.length > maxStepsShown) {
 		const indexBeforeDropdown = maxStepsShown - 1;
@@ -171,8 +171,8 @@ export const ClayMultiStepNavWithBasicItems = ({
 					>
 						<ClayMultiStepNav.Title>
 							{activeInDropDown
-								? steps[internalActive].title
-								: steps[showSteps.length].title}
+								? steps[internalActive]!.title
+								: steps[showSteps.length]!.title}
 						</ClayMultiStepNav.Title>
 						<ClayMultiStepNav.Divider />
 

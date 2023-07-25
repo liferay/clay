@@ -67,7 +67,7 @@ describe('ClayBreadcrumb', () => {
 		);
 
 		expect(mockWarnings).toBeCalled();
-		expect(mockWarnings.mock.calls[0][0]).toBe(
+		expect(mockWarnings.mock.calls[0]![0]).toBe(
 			'Warning: ClayBreadcrumb expects at least one `active` item on `items`.'
 		);
 
@@ -129,7 +129,7 @@ describe('ClayBreadcrumb', () => {
 
 		expect(itemClickMock).toHaveBeenCalled();
 
-		expect(itemClickMock.mock.calls[0][0].type).toBe('click');
+		expect(itemClickMock.mock.calls[0]![0].type).toBe('click');
 
 		expect(container).toMatchSnapshot();
 	});

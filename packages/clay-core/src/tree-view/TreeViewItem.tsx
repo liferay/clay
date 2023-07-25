@@ -447,7 +447,7 @@ export const TreeViewItem = React.forwardRef<
 										.then((newItem) => {
 											replace(item.indexes, {
 												...newItem,
-												index: item.index,
+												index: item['index'],
 												indexes: item.indexes,
 												itemRef: item.itemRef,
 												key: item.key,

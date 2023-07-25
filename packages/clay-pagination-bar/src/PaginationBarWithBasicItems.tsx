@@ -27,8 +27,6 @@ const defaultDeltas = [
 	},
 ];
 
-type Items = React.ComponentProps<typeof PaginationBar.DropDown>['items'];
-
 interface IDelta {
 	/**
 	 * Path or URL to be used for some SPA focused use cases.
@@ -212,7 +210,7 @@ export const ClayPaginationBarWithBasicItems = ({
 	});
 
 	if (!activeDelta) {
-		activeDelta = deltas[0].label;
+		activeDelta = deltas[0]!.label;
 	}
 
 	const totalPages = Math.ceil(totalItems / activeDelta);

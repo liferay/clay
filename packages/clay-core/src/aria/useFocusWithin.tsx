@@ -28,7 +28,7 @@ type Props<T> = {
 function getId(element: HTMLElement) {
 	const [type, id] = element.getAttribute('data-id')!.split(',');
 
-	return type === 'number' ? Number(id) : id;
+	return type === 'number' ? Number(id) : id!;
 }
 
 export function FocusWithinProvider<T extends HTMLElement>({
@@ -61,7 +61,7 @@ export function FocusWithinProvider<T extends HTMLElement>({
 		const hasItem = items.find((item) => focusId === getId(item));
 
 		if (!hasItem && items.length) {
-			setFocusId(getId(items[0]));
+			setFocusId(getId(items[0]!));
 		}
 	}, [children]);
 

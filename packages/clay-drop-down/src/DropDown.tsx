@@ -254,7 +254,7 @@ function ClayDropDown<T>({
 						const list = getFocusableList(menuElementRef);
 
 						if (list.length) {
-							list[0].focus();
+							list[0]!.focus();
 						}
 					}
 
@@ -330,7 +330,7 @@ function ClayDropDown<T>({
 								const list = getFocusableList(menuElementRef);
 
 								if (list.length) {
-									list[0].focus();
+									list[0]!.focus();
 								}
 							}, 10);
 						}}

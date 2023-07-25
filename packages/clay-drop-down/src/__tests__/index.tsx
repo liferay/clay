@@ -454,14 +454,14 @@ describe('ClayDropDown', () => {
 		expect(fruit).toBeDefined();
 		expect(vegetable).toBeDefined();
 
-		const [fruit1, fruit2, fruit3] = getAllByRole(fruit, 'menuitem');
+		const [fruit1, fruit2, fruit3] = getAllByRole(fruit!, 'menuitem');
 
 		expect(fruit1).toBeDefined();
 		expect(fruit2).toBeDefined();
 		expect(fruit3).toBeDefined();
 
 		const [vegetable1, vegetable2, vegetable3] = getAllByRole(
-			vegetable,
+			vegetable!,
 			'menuitem'
 		);
 
@@ -523,8 +523,8 @@ describe('ClayDropDown', () => {
 
 		const [fruit, vegetable] = cGetAllByRole('group');
 
-		const fruits = getAllByRole(fruit, 'menuitem');
-		const vegetables = getAllByRole(vegetable, 'menuitem');
+		const fruits = getAllByRole(fruit!, 'menuitem');
+		const vegetables = getAllByRole(vegetable!, 'menuitem');
 
 		expect(fruits.length).toBe(1);
 		expect(vegetables.length).toBe(1);

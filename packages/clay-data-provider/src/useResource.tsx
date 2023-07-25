@@ -618,6 +618,6 @@ const useResource = ({
 // This is just a fake component so that react-docgen can generate the Table
 // API for useResource hook.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const Resource = (props: Props) => <div />;
+const Resource = (_props: Props) => <div />;
 
 export {Resource, useResource};

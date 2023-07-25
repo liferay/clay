@@ -260,7 +260,7 @@ export function useMultipleSelection<T>(
 			children.forEach((item, index) => {
 				// TODO: The `key` property of the component that the developer
 				// can set is not being considered.
-				const key = getKey(index, item.id, currentKey);
+				const key = getKey(index, item['id'], currentKey);
 
 				if (select) {
 					selecteds.add(key);

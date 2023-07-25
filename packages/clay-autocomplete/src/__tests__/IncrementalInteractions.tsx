@@ -226,7 +226,7 @@ describe('Autocomplete incremental interactions', () => {
 
 		const [two] = getAllByRole('option');
 
-		fireEvent.click(two);
+		fireEvent.click(two!);
 
 		expect(document.querySelector('.dropdown-menu')).toBeFalsy();
 		expect(input.value).toBe('two');
@@ -308,25 +308,25 @@ describe('Autocomplete incremental interactions', () => {
 
 		userEvent.keyboard('[ArrowDown]');
 
-		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'true'
 		);
 
 		userEvent.keyboard('[ArrowLeft]');
 
-		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'false'
 		);
 
 		userEvent.keyboard('[ArrowDown]');
 
-		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'true'
 		);
 
 		userEvent.keyboard('[ArrowRight]');
 
-		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'false'
 		);
 	});
@@ -352,7 +352,7 @@ describe('Autocomplete incremental interactions', () => {
 
 		expect(queryByRole('listbox')).toBeDefined();
 		expect(input.getAttribute('aria-activedescendant')).toBe('three');
-		expect(getAllByRole('option')[2].getAttribute('aria-selected')).toBe(
+		expect(getAllByRole('option')[2]!.getAttribute('aria-selected')).toBe(
 			'true'
 		);
 	});
@@ -378,7 +378,7 @@ describe('Autocomplete incremental interactions', () => {
 
 		expect(queryByRole('listbox')).toBeDefined();
 		expect(input.getAttribute('aria-activedescendant')).toBe('one');
-		expect(getAllByRole('option')[0].getAttribute('aria-selected')).toBe(
+		expect(getAllByRole('option')[0]!.getAttribute('aria-selected')).toBe(
 			'true'
 		);
 	});
@@ -446,7 +446,7 @@ describe('Autocomplete incremental interactions', () => {
 
 			const [two] = getAllByRole('option');
 
-			fireEvent.click(two);
+			fireEvent.click(two!);
 
 			expect(queryByRole('listbox')).toBeFalsy();
 			expect(input.value).toBe('two');
@@ -488,7 +488,7 @@ describe('Autocomplete incremental interactions', () => {
 
 			const [two] = getAllByRole('option');
 
-			fireEvent.click(two);
+			fireEvent.click(two!);
 
 			expect(queryByRole('listbox')).toBeFalsy();
 			expect(input.value).toBe('two');
@@ -532,7 +532,7 @@ describe('Autocomplete incremental interactions', () => {
 
 			const [two] = getAllByRole('option');
 
-			fireEvent.click(two);
+			fireEvent.click(two!);
 
 			expect(queryByRole('listbox')).toBeFalsy();
 			expect(input.value).toBe('two');

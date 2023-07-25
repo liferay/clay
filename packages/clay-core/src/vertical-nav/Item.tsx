@@ -63,7 +63,7 @@ function findSelectedNested<T extends object>(items: Array<T>): T | undefined {
 
 		if ('items' in item) {
 			return findSelectedNested(
-				(item as Record<string, any>).items as Array<T>
+				(item as Record<string, any>)['items'] as Array<T>
 			);
 		}
 

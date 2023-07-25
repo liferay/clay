@@ -61,7 +61,7 @@ const ClayDatePickerTimePicker = ({
 	React.useEffect(() => {
 		const [hours, minutesAndAmpm] = currentTime.split(':');
 
-		const [minutes, ampm] = minutesAndAmpm.split(' ');
+		const [minutes, ampm] = minutesAndAmpm!.split(' ');
 
 		setValues((prevValues) => ({
 			...prevValues,

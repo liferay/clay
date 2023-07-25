@@ -11,7 +11,7 @@ interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**
 	 * Flag to indicate if item is active.
 	 */
-	active?: boolean;
+	active?: boolean | undefined;
 
 	/**
 	 * Callback for when item is clicked.

@@ -389,8 +389,8 @@ export function Picker<T extends Record<string, any> | string | number>({
 				id={id}
 				onClick={() => setActive(!active)}
 				onKeyDown={(event: React.KeyboardEvent<HTMLButtonElement>) => {
-					if (otherProps.onKeyDown) {
-						otherProps.onKeyDown(event);
+					if (otherProps['onKeyDown']) {
+						otherProps['onKeyDown'](event);
 					}
 
 					switch (event.key) {

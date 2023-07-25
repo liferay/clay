@@ -77,7 +77,7 @@ const initialState = {
 };
 
 const reducer = (
-	state: TState,
+	_state: TState,
 	action: TAction
 ): TState & {visible: boolean} => {
 	switch (action.type) {
