@@ -66,6 +66,11 @@ export type IProps<T> = {
 	alignmentByViewport?: boolean;
 
 	/**
+	 * Flag to allow an input value not corresponding to an item to be set.
+	 */
+	allowsCustomValue?: boolean;
+
+	/**
 	 * The initial value of the active state (uncontrolled).
 	 */
 	defaultActive?: boolean;
@@ -171,8 +176,9 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 	{
 		UNSAFE_loadingShrink,
 		active: externalActive,
-		as: As = Input,
 		alignmentByViewport: _,
+		allowsCustomValue,
+		as: As = Input,
 		children,
 		containerElementRef,
 		defaultActive,
@@ -253,7 +259,12 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 	useEffect(() => {
 		// Validates that the initial value exists in the items.
-		if (!currentItemSelected.current && value && items) {
+		if (
+			!allowsCustomValue &&
+			!currentItemSelected.current &&
+			value &&
+			items
+		) {
 			const hasItem = items.find((item) => {
 				if (typeof item === 'string') {
 					return item === value;
@@ -275,7 +286,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 	useEffect(() => {
 		// Does not update state on first render.
-		if (isFirst) {
+		if (isFirst || allowsCustomValue) {
 			return;
 		}
 
