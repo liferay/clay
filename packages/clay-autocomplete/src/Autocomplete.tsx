@@ -19,6 +19,7 @@ import {
 	useControlledState,
 	useDebounce,
 	useId,
+	useIsFirstRender,
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
@@ -240,11 +241,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 	const announcerAPI = useRef<AnnouncerAPI>(null);
 
-	useEffect(() => {
-		if (active === false) {
-			setValue(currentItemSelected.current);
-		}
-	}, [active]);
+	const isFirst = useIsFirstRender();
 
 	const filterFn = useCallback(
 		(itemValue: string) =>
@@ -253,6 +250,39 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			) !== null,
 		[value]
 	);
+
+	useEffect(() => {
+		// Validates that the initial value exists in the items.
+		if (!currentItemSelected.current && value && items) {
+			const hasItem = items.find((item) => {
+				if (typeof item === 'string') {
+					return item === value;
+				} else if (typeof item === 'object') {
+					// filter key is not defined and we cannot infer the data type.
+					if (!filterKey) {
+						return false;
+					}
+
+					return item[filterKey] === value;
+				}
+			});
+
+			if (hasItem) {
+				currentItemSelected.current = value;
+			}
+		}
+	}, []);
+
+	useEffect(() => {
+		// Does not update state on first render.
+		if (isFirst) {
+			return;
+		}
+
+		if (active === false && currentItemSelected.current !== value) {
+			setValue(currentItemSelected.current);
+		}
+	}, [active]);
 
 	const filteredItems = useMemo(() => {
 		if (debouncedLoadingChange) {

@@ -26,6 +26,7 @@ export {useNavigation, isTypeahead, getFocusableList} from './useNavigation';
 export {useOverlayPosition} from './useOverlayPositon';
 export {useHover} from './useHover';
 export {useIsMobileDevice} from './useIsMobileDevice';
+export {useIsFirstRender} from './useIsFirstRender';
 export {isMac, isIPhone, isIPad, isIOS, isAppleDevice} from './platform';
 export type {AlignPoints} from './useOverlayPositon';
 export type {IBaseProps as IPortalBaseProps} from './Portal';
