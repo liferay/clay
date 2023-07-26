@@ -24,6 +24,19 @@ describe('ClayEmptyState', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('does not render a reduced motion classes if imgSrcReducedMotion={null}', () => {
+		const {container} = render(
+			<ClayEmptyState
+				imgSrc="https://via.placeholder.com/256"
+				imgSrcReducedMotion={null}
+			/>
+		);
+
+		expect(
+			container.querySelector('.d-none-c-prefers-reduced-motion')
+		).toBe(null);
+	});
+
 	it('renders with a reduced motion image provided', () => {
 		const {container} = render(
 			<ClayEmptyState
