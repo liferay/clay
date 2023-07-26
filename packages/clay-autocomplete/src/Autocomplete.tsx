@@ -19,6 +19,7 @@ import {
 	useControlledState,
 	useDebounce,
 	useId,
+	useIsFirstRender,
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
@@ -63,6 +64,11 @@ export type IProps<T> = {
 	 * @deprecated since v3.92.0 - it is no longer necessary..
 	 */
 	alignmentByViewport?: boolean;
+
+	/**
+	 * Flag to allow an input value not corresponding to an item to be set.
+	 */
+	allowsCustomValue?: boolean;
 
 	/**
 	 * The initial value of the active state (uncontrolled).
@@ -170,8 +176,9 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 	{
 		UNSAFE_loadingShrink,
 		active: externalActive,
-		as: As = Input,
 		alignmentByViewport: _,
+		allowsCustomValue,
+		as: As = Input,
 		children,
 		containerElementRef,
 		defaultActive,
@@ -240,11 +247,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 
 	const announcerAPI = useRef<AnnouncerAPI>(null);
 
-	useEffect(() => {
-		if (active === false) {
-			setValue(currentItemSelected.current);
-		}
-	}, [active]);
+	const isFirst = useIsFirstRender();
 
 	const filterFn = useCallback(
 		(itemValue: string) =>
@@ -253,6 +256,44 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			) !== null,
 		[value]
 	);
+
+	useEffect(() => {
+		// Validates that the initial value exists in the items.
+		if (
+			!allowsCustomValue &&
+			!currentItemSelected.current &&
+			value &&
+			items
+		) {
+			const hasItem = items.find((item) => {
+				if (typeof item === 'string') {
+					return item === value;
+				} else if (typeof item === 'object') {
+					// filter key is not defined and we cannot infer the data type.
+					if (!filterKey) {
+						return false;
+					}
+
+					return item[filterKey] === value;
+				}
+			});
+
+			if (hasItem) {
+				currentItemSelected.current = value;
+			}
+		}
+	}, []);
+
+	useEffect(() => {
+		// Does not update state on first render.
+		if (isFirst || allowsCustomValue) {
+			return;
+		}
+
+		if (active === false && currentItemSelected.current !== value) {
+			setValue(currentItemSelected.current);
+		}
+	}, [active]);
 
 	const filteredItems = useMemo(() => {
 		if (debouncedLoadingChange) {
