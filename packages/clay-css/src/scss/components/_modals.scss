@@ -417,6 +417,10 @@
 		}
 	}
 
+	.modal-body {
+		overflow: auto;
+	}
+
 	.modal-content {
 		@include clay-css($modal-height-full-modal-content);
 
