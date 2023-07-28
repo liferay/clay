@@ -33,6 +33,11 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	collapseClassNames?: string;
 
 	/**
+	 * Adds classes to the collapse header element. Only when `collapsable` is true.
+	 */
+	collapseHeaderClassNames?: string;
+
+	/**
 	 * Flag to indicate the initial value of expanded (uncontrolled).
 	 */
 	defaultExpanded?: boolean;
@@ -81,6 +86,7 @@ function ClayPanel({
 	className,
 	collapsable,
 	collapseClassNames,
+	collapseHeaderClassNames,
 	defaultExpanded = false,
 	displayTitle,
 	displayType,
@@ -132,6 +138,7 @@ function ClayPanel({
 						aria-expanded={internalExpanded}
 						className={classNames(
 							'panel-header panel-header-link',
+							collapseHeaderClassNames,
 							{
 								'collapse-icon': showCollapseIcon,
 								'collapse-icon-middle': showCollapseIcon,
