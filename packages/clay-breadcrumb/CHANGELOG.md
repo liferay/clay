@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
+
+### Bug Fixes
+
+-   **@clayui/breadcrumb:** fix focus visible in breadcrumb ([62b1a24](https://github.com/liferay/clay/commit/62b1a241b390f0e4bcea9aa97322f14dacb539db))
+
 # [3.100.0](https://github.com/liferay/clay/compare/v3.99.4...v3.100.0) (2023-07-13)
 
 **Note:** Version bump only for package @clayui/breadcrumb

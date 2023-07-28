@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
+
+### Bug Fixes
+
+-   **@clayui/empty-state:** Use url constructor instead ([cd4d275](https://github.com/liferay/clay/commit/cd4d27542721cad88378096e7a02927aee831ed3))
+
+### Features
+
+-   **@clayui/empty-state:** Output a reduced motion image by default ([0e26922](https://github.com/liferay/clay/commit/0e269227afb155328a7a6936ad4f1a0864f59844))
+
 # [3.94.0](https://github.com/liferay/clay/compare/v3.93.0...v3.94.0) (2023-05-03)
 
 ### Bug Fixes

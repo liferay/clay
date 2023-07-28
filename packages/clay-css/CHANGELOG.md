@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Cadmin Modal is outputing wrong selector for .modal-open .modal ([a2f2787](https://github.com/liferay/clay/commit/a2f2787957506ed46068195f9a4bf25ed3d6b121))
+* **@clayui/css:** Cadmin slideout should use overflow visible for resize bar to show ([48f2a14](https://github.com/liferay/clay/commit/48f2a14d161b130f8016d675a7127c9f8ba6371d))
+* **@clayui/css:** Modal Height Full should overflow when content is too tall ([729c8e3](https://github.com/liferay/clay/commit/729c8e3dca922c6143fd8e11a5045d38e84fc1a1))
+
+
+### Features
+
+* **@clayui/css:** Adds :focus-visible support ([ba1f68b](https://github.com/liferay/clay/commit/ba1f68bacbab69a4796c9d19caead6c410503f66))
+* **@clayui/css:** Form mixins use focus-visible ([1da9164](https://github.com/liferay/clay/commit/1da9164f34432dd5ba9e12191712300408a1516b))
+
+
+
+
+
 # [3.100.0](https://github.com/liferay/clay/compare/v3.99.4...v3.100.0) (2023-07-13)
 
 

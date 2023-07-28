@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error when not validating value with items ([ab4421e](https://github.com/liferay/clay/commit/ab4421ede3b8b97084e694e3500b07f4ff1957f1))
+
+### Features
+
+-   **@clayui/autocomplete:** adds new API to allow custom value ([516de02](https://github.com/liferay/clay/commit/516de02e9cd2d8dbbecc60d7fc79935e377decf1))
+
 # [3.100.0](https://github.com/liferay/clay/compare/v3.99.4...v3.100.0) (2023-07-13)
 
 **Note:** Version bump only for package @clayui/autocomplete
