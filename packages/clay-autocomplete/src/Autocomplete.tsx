@@ -163,6 +163,25 @@ const List = React.forwardRef<
 	);
 });
 
+function hasItem<T extends Record<string, any> | string | number>(
+	items: Array<T>,
+	value: string,
+	filterKey?: string
+) {
+	return items.find((item) => {
+		if (typeof item === 'string') {
+			return item === value;
+		} else if (typeof item === 'object') {
+			// filter key is not defined and we cannot infer the data type.
+			if (!filterKey) {
+				return false;
+			}
+
+			return item[filterKey] === value;
+		}
+	});
+}
+
 const ESCAPE_REGEXP = /[.*+?^${}()|[\]\\]/g;
 
 const defaultMessages = {
@@ -213,7 +232,7 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 		value: externalItems,
 	});
 
-	const [value = '', setValue] = useControlledState({
+	const [value = '', setValue, isUncontrolled] = useControlledState({
 		defaultName: 'defaultValue',
 		defaultValue,
 		handleName: 'onChange',
@@ -265,32 +284,28 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 			value &&
 			items
 		) {
-			const hasItem = items.find((item) => {
-				if (typeof item === 'string') {
-					return item === value;
-				} else if (typeof item === 'object') {
-					// filter key is not defined and we cannot infer the data type.
-					if (!filterKey) {
-						return false;
-					}
-
-					return item[filterKey] === value;
-				}
-			});
-
-			if (hasItem) {
+			if (hasItem(items, value, filterKey)) {
 				currentItemSelected.current = value;
 			}
 		}
 	}, []);
 
 	useEffect(() => {
-		// Does not update state on first render.
-		if (isFirst || allowsCustomValue) {
+		// Does not update state on first render, if the custom value is allowed
+		// or if the value is empty.
+		if (isFirst || allowsCustomValue || !value) {
 			return;
 		}
 
 		if (active === false && currentItemSelected.current !== value) {
+			// The state is controlled so we have to revalidate if the typed value
+			// exists in the suggestion list.
+			if (!isUncontrolled && items && hasItem(items, value, filterKey)) {
+				currentItemSelected.current = value;
+
+				return;
+			}
+
 			setValue(currentItemSelected.current);
 		}
 	}, [active]);
