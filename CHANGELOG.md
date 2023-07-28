@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.101.1](https://github.com/liferay/clay/compare/v3.101.0...v3.101.1) (2023-07-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** does not revalidate the value if it is reset by the controlled state ([73ec258](https://github.com/liferay/clay/commit/73ec258196572004430780bc4330137437e36377))
+-   **@clayui/autocomplete:** improves value matching behavior with suggestion list when state is controlled ([5f33f5c](https://github.com/liferay/clay/commit/5f33f5c42a4dc2cef85de01743baebe2d6d1f829))
+
 # [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
 
 ### Bug Fixes
