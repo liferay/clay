@@ -285,8 +285,9 @@ function AutocompleteInner<T extends Record<string, any> | string | number>(
 	}, []);
 
 	useEffect(() => {
-		// Does not update state on first render.
-		if (isFirst || allowsCustomValue) {
+		// Does not update state on first render, if the custom value is allowed
+		// or if the value is empty.
+		if (isFirst || allowsCustomValue || !value) {
 			return;
 		}
 
