@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.102.0](https://github.com/liferay/clay/compare/v3.101.1...v3.102.0) (2023-08-01)
+
+### Features
+
+-   **@clayui/css:** Modals should grow to fit content ([6df4597](https://github.com/liferay/clay/commit/6df459759639f8f68950a6227759f276d2752d4a))
+-   **@clayui/panel:** Allow passing classNames to collapse header ([a41cb1d](https://github.com/liferay/clay/commit/a41cb1d55dca735ce91e57860ad57dd33ff0e090))
+
 ## [3.101.1](https://github.com/liferay/clay/compare/v3.101.0...v3.101.1) (2023-07-28)
 
 ### Bug Fixes
