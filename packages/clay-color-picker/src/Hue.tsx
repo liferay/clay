@@ -3,8 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import {Keys} from '@clayui/shared';
+import React, {useCallback} from 'react';
 
+import {LimitValue} from './Editor';
 import {usePointerPosition} from './hooks';
 import {hueToX, xToHue} from './util';
 
@@ -32,11 +34,26 @@ const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 
 	const {onPointerMove, setXY, x, y} = usePointerPosition(containerRef);
 
-	const removeListeners = () => {
+	const removeListeners = useCallback(() => {
 		selectorActive.current = false;
 
 		window.removeEventListener('pointermove', onPointerMove);
 		window.removeEventListener('pointerup', removeListeners);
+	}, []);
+
+	const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+		event.preventDefault();
+
+		switch (event.key) {
+			case Keys.Left:
+				onChange(value - 1);
+				break;
+			case Keys.Right:
+				onChange(value + 1);
+				break;
+			default:
+				return;
+		}
 	};
 
 	useIsomorphicLayoutEffect(() => {
@@ -55,7 +72,12 @@ const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 
 	return (
 		<div
+			aria-labelledby="color-range"
+			aria-valuemax={LimitValue.maxHue}
+			aria-valuemin={LimitValue.min}
+			aria-valuenow={value}
 			className="clay-color-range clay-color-range-hue"
+			onKeyDown={(event) => onKeyDown(event)}
 			onPointerDown={(event) => {
 				event.preventDefault();
 
@@ -70,9 +92,14 @@ const ClayColorPickerHue = ({value = 0, onChange = () => {}}: Props) => {
 				window.addEventListener('pointerup', removeListeners);
 			}}
 			ref={containerRef}
+			role="slider"
+			tabIndex={0}
 		>
 			<button
 				className="clay-color-pointer clay-color-range-pointer"
+				onBlur={() => {
+					selectorActive.current = false;
+				}}
 				style={{
 					background: `hsl(${value}, 100%, 50%)`,
 					left: x - 7,
