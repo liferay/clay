@@ -32,6 +32,13 @@ export interface IProps
 		| React.ReactElement<React.ComponentProps<typeof Item>>;
 
 	/**
+	 * Set a maximum width on container-fluid.
+	 */
+	fluidSize?:
+		| React.ComponentProps<typeof ClayLayout.Container>['fluidSize']
+		| false;
+
+	/**
 	 * Determines the style of the Navigation Bar
 	 */
 	inverted?: boolean;
@@ -54,6 +61,7 @@ function ClayNavigationBar(props: IProps): JSX.Element & {
 function ClayNavigationBar({
 	children,
 	className,
+	fluidSize,
 	inverted = false,
 	itemAriaCurrent: ariaCurrent = true,
 	spritemap,
@@ -93,7 +101,7 @@ function ClayNavigationBar({
 			<NavigationBarContext.Provider
 				value={{ariaCurrent: ariaCurrent ? 'page' : null}}
 			>
-				<ClayLayout.ContainerFluid>
+				<ClayLayout.ContainerFluid size={fluidSize}>
 					<ClayButton
 						aria-expanded={expanded}
 						className={classNames(
@@ -139,7 +147,7 @@ function ClayNavigationBar({
 						timeout={prefersReducedMotion ? 0 : 250}
 					>
 						<div>
-							<ClayLayout.ContainerFluid>
+							<ClayLayout.ContainerFluid size={fluidSize}>
 								<ul className="navbar-nav">{children}</ul>
 							</ClayLayout.ContainerFluid>
 						</div>

@@ -18,7 +18,11 @@ export const NavigationBar = (args: any) => {
 	const [triggerName, setTriggerName] = useState<string>(args.active);
 
 	return (
-		<ClayNavigationBar inverted={args.inverted} triggerLabel={triggerName}>
+		<ClayNavigationBar
+			fluidSize={args.fluidSize}
+			inverted={args.inverted}
+			triggerLabel={triggerName}
+		>
 			<ClayNavigationBar.Item active={args.active === 'Item 1'}>
 				<ClayLink href="#">Item 1</ClayLink>
 			</ClayNavigationBar.Item>
@@ -47,9 +51,14 @@ NavigationBar.argTypes = {
 		control: {type: 'select'},
 		options: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
 	},
+	fluidSize: {
+		control: {type: 'select'},
+		options: [undefined, false, 'sm', 'md', 'lg', 'xl'],
+	},
 };
 
 NavigationBar.args = {
 	active: 'Item 1',
+	fluidSize: 'xl',
 	inverted: false,
 };
