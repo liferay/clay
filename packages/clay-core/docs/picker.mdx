@@ -6,7 +6,12 @@ packageStatus: 'Beta'
 storybookPath: 'design-system-components-picker'
 ---
 
-import {PickerExample} from '$packages/clay-core/docs/picker';
+import {
+	PickerExample,
+	PickerGroupExample,
+	PickerTriggerExample,
+	PickerOptionsxample,
+} from '$packages/clay-core/docs/picker';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
@@ -17,6 +22,10 @@ import {PickerExample} from '$packages/clay-core/docs/picker';
     -   [Static](#static)
     -   [Dynamic](#dynamic)
 -   [Controlled and Uncontrolled component](#controlled-and-uncontrolled-component)
+-   [Composition](#composition)
+    -   [Custom Trigger](#custom-trigger)
+    -   [Custom Options](#custom-options)
+    -   [Group](#group)
 -   [Hybrid component](#hybrid-component)
 
 </div>
@@ -127,6 +136,22 @@ function Example() {
 	);
 }
 ```
+
+## Composition
+
+The composition allows you to customize the component or add new features. See some examples:
+
+### Custom Trigger
+
+<PickerTriggerExample />
+
+### Custom Options
+
+<PickerOptionsxample />
+
+### Group
+
+<PickerGroupExample />
 
 ## Hybrid component
 
