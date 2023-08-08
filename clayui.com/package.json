@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "clayui.com",
-	"version": "3.102.0",
+	"version": "3.103.0",
 	"license": "MIT",
 	"scripts": {
 		"copy:clay-css": "yarn copy:clay-css-js && yarn copy:clay-css-site-images && yarn copy:clay-css-images",
@@ -33,7 +33,7 @@
 		"@clayui/multi-select": "^3.101.1",
 		"@clayui/multi-step-nav": "^3.101.0",
 		"@clayui/nav": "^3.101.0",
-		"@clayui/navigation-bar": "^3.101.0",
+		"@clayui/navigation-bar": "^3.103.0",
 		"@clayui/pagination": "^3.101.0",
 		"@clayui/pagination-bar": "^3.101.0",
 		"@clayui/panel": "^3.102.0",

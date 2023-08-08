@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.103.0](https://github.com/liferay/clay/compare/v3.102.0...v3.103.0) (2023-08-08)
+
+### Features
+
+-   **@clayui/navigation-bar:** Adds fluidSize prop to customize container-fluid width ([5787c1d](https://github.com/liferay/clay/commit/5787c1de07b7129bc9059832d7bde1b411835c7b))
+
 # [3.102.0](https://github.com/liferay/clay/compare/v3.101.1...v3.102.0) (2023-08-01)
 
 ### Features
