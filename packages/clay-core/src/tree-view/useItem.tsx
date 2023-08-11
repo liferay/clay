@@ -37,6 +37,11 @@ function isMovingIntoItself(from: Array<number>, path: Array<number>) {
 	);
 }
 
+type DragItem = {
+	item: Value;
+	type: string;
+};
+
 export function ItemContextProvider({children, value}: Props) {
 	const {
 		dragAndDrop,
@@ -50,6 +55,7 @@ export function ItemContextProvider({children, value}: Props) {
 		reorder,
 	} = useTreeViewContext();
 	const {
+		cursor: parentCursor,
 		indexes: parentIndexes,
 		itemRef: parentItemRef,
 		key: parentKey,
@@ -83,9 +89,15 @@ export function ItemContextProvider({children, value}: Props) {
 		[parentIndexes, value.index]
 	);
 
+	const cursor = useMemo(
+		() => [...(parentCursor ?? []), keyRef.current],
+		[parentCursor, keyRef.current]
+	);
+
 	const item: Value = {
 		...value,
 		...keys.current.get(keyRef.current),
+		cursor,
 		indexes,
 		itemRef: childRef,
 		key: keyRef.current,
@@ -100,14 +112,15 @@ export function ItemContextProvider({children, value}: Props) {
 				keyRef.current,
 				hasLazyChildren,
 				indexes,
+				cursor,
 				parentKey
 			),
 		[layout.createPartialLayoutItem, hasLazyChildren, keyRef, parentKey]
 	);
 
 	useEffect(
-		() => layout.patchItem(keyRef.current, indexes),
-		[layout.patchItem, indexes]
+		() => layout.patchItem(keyRef.current, cursor, indexes),
+		[layout.patchItem, indexes, cursor]
 	);
 
 	const [{isDragging}, drag, preview] = useDrag({
@@ -152,11 +165,11 @@ export function ItemContextProvider({children, value}: Props) {
 			canDrop: monitor.canDrop(),
 			overTarget: monitor.isOver({shallow: true}),
 		}),
-		drop(dragItem: unknown, monitor) {
+		drop(dragItem: any, monitor) {
 			if (
 				monitor.didDrop() ||
 				!monitor.canDrop() ||
-				(dragItem as Value)['item'].key === item.key ||
+				dragItem.item.key === item.key ||
 				!isValidDrop.current
 			) {
 				return;
@@ -178,11 +191,11 @@ export function ItemContextProvider({children, value}: Props) {
 				const tree = createImmutableTree(items as any, nestedKey!);
 
 				const isMoved = onItemMove(
-					removeItemInternalProps((dragItem as Value)['item']),
+					removeItemInternalProps(dragItem.item),
 					tree.nodeByPath(indexes).parent!,
 					{
 						next: indexes[indexes.length - 1]!,
-						previous: (dragItem as Value)['item'].index,
+						previous: dragItem.item['index'],
 					}
 				);
 
@@ -191,7 +204,7 @@ export function ItemContextProvider({children, value}: Props) {
 				}
 			}
 
-			reorder((dragItem as Value)['item'].indexes, indexes);
+			reorder(dragItem.item.cursor, item.cursor, currentPosition!);
 		},
 		hover(dragItem, monitor) {
 			if (!monitor.canDrop() || isDragging) {

@@ -5,6 +5,13 @@
 
 import {Key, useCallback, useRef} from 'react';
 
+/**
+ * Cursors are the reference to the unique id of the items in the tree
+ * referring to their parent. Cursor creates the safe address of an item
+ * in the tree for immutability operations.
+ */
+export type Cursor = Array<React.Key>;
+
 export type LayoutInfo = {
 	children: Set<Key>;
 
@@ -14,6 +21,7 @@ export type LayoutInfo = {
 	 */
 	lazyChild: boolean;
 	loc: Array<number>;
+	cursor: Cursor;
 	parentKey?: Key;
 };
 
@@ -22,10 +30,11 @@ export type Layout = {
 		key: Key,
 		lazy: boolean,
 		loc: Array<number>,
+		cursor: Cursor,
 		parentKey?: Key
 	) => () => void;
 	layoutKeys: React.MutableRefObject<Map<Key, LayoutInfo>>;
-	patchItem: (key: Key, loc: Array<number>) => void;
+	patchItem: (key: Key, cursor: Cursor, loc: Array<number>) => void;
 };
 
 export function useLayout(): Layout {
@@ -46,12 +55,19 @@ export function useLayout(): Layout {
 	 * as in rendering.
 	 */
 	const createPartialLayoutItem = useCallback(
-		(key: Key, lazyChild: boolean, loc: Array<number>, parentKey?: Key) => {
+		(
+			key: Key,
+			lazyChild: boolean,
+			loc: Array<number>,
+			cursor: Cursor,
+			parentKey?: Key
+		) => {
 			const keyMap = layoutKeys.current.get(key);
 
 			if (!keyMap) {
 				layoutKeys.current.set(key, {
 					children: new Set(),
+					cursor,
 					lazyChild,
 					loc,
 					parentKey,
@@ -82,6 +98,7 @@ export function useLayout(): Layout {
 					// when the corresponding one is called.
 					layoutKeys.current.set(parentKey, {
 						children: new Set([key]),
+						cursor: cursor.slice(0, -1),
 						lazyChild: false,
 						loc: loc.slice(0, -1),
 						parentKey: undefined,
@@ -113,12 +130,13 @@ export function useLayout(): Layout {
 	);
 
 	const patchItem = useCallback(
-		(key: Key, loc: Array<number>) => {
+		(key: Key, cursor: Cursor, loc: Array<number>) => {
 			const keyMap = layoutKeys.current.get(key);
 
 			if (keyMap) {
 				layoutKeys.current.set(key, {
 					...keyMap,
+					cursor,
 					loc,
 				});
 			}

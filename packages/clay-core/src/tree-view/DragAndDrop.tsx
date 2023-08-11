@@ -36,6 +36,7 @@ export type DragAndDropMessages = {
 
 export type Value = {
 	[propName: string]: any;
+	cursor: Array<React.Key>;
 	indexes: Array<number>;
 	itemRef: React.RefObject<HTMLDivElement>;
 	key: React.Key;
@@ -266,7 +267,7 @@ export function DragAndDropProvider<T>({
 			}
 		}
 
-		reorder(dragLayoutItem!.loc, indexes);
+		reorder(dragLayoutItem!.cursor, dropLayoutItem!.cursor, position!);
 		setState({
 			currentDrag: null,
 			currentTarget: null,
