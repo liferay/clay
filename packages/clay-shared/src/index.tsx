@@ -28,6 +28,7 @@ export {useHover} from './useHover';
 export {useIsMobileDevice} from './useIsMobileDevice';
 export {useIsFirstRender} from './useIsFirstRender';
 export {isMac, isIPhone, isIPad, isIOS, isAppleDevice} from './platform';
+export {throttle} from './throttle';
 export type {AlignPoints} from './useOverlayPositon';
 export type {IBaseProps as IPortalBaseProps} from './Portal';
 export type {InternalDispatch} from './useControlledState';

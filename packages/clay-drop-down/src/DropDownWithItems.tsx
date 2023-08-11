@@ -9,11 +9,12 @@ import {
 	InternalDispatch,
 	Keys,
 	MouseSafeArea,
+	throttle,
 	useControlledState,
 	useNavigation,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useContext, useRef, useState} from 'react';
+import React, {useCallback, useContext, useRef, useState} from 'react';
 import warning from 'warning';
 
 import Caption from './Caption';
@@ -305,6 +306,13 @@ const OFFSET_MAP = {
 	trtl: LEFT_OFFSET,
 };
 
+function offsetFn(points: any) {
+	return OFFSET_MAP[points.join('') as keyof typeof OFFSET_MAP] as [
+		number,
+		number
+	];
+}
+
 const Contextual = ({
 	items,
 	label,
@@ -338,6 +346,11 @@ const Contextual = ({
 		visible,
 	});
 
+	const setThrottleVisible = useCallback(
+		throttle((value: boolean) => setVisible(value), 100),
+		[]
+	);
+
 	return (
 		<ClayDropDown.Item
 			{...otherProps}
@@ -370,14 +383,14 @@ const Contextual = ({
 				if (!visible) {
 					keyboardRef.current = false;
 					timeoutHandleRef.current = setTimeout(
-						() => setVisible(true),
-						500
+						() => setThrottleVisible(true),
+						400
 					);
 				}
 			}}
 			onMouseLeave={() => {
 				keyboardRef.current = false;
-				setVisible(false);
+				setThrottleVisible(false);
 
 				clearTimeout(timeoutHandleRef.current);
 				timeoutHandleRef.current = null;
@@ -395,11 +408,7 @@ const Contextual = ({
 					alignmentPosition={8}
 					hasLeftSymbols={hasLeftSymbols}
 					hasRightSymbols={hasRightSymbols}
-					offsetFn={(points) =>
-						OFFSET_MAP[
-							points.join('') as keyof typeof OFFSET_MAP
-						] as [number, number]
-					}
+					offsetFn={offsetFn}
 					onActiveChange={setVisible}
 					onKeyDown={navigationProps.onKeyDown}
 					ref={menuElementRef}
