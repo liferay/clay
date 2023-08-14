@@ -18,7 +18,7 @@ import {TreeViewItem, TreeViewItemStack} from './TreeViewItem';
 import {Icons, MoveItemIndex, OnLoadMore, TreeViewContext} from './context';
 import {ITreeProps, useTree} from './useTree';
 
-interface ITreeViewProps<T>
+interface ITreeViewProps<T extends Record<string, any>>
 	extends Omit<
 			React.HTMLAttributes<HTMLUListElement>,
 			'children' | 'onSelect'
@@ -120,13 +120,15 @@ interface ITreeViewProps<T>
 
 const focusableElements = ['.treeview-link[tabindex]'];
 
-export function TreeView<T>(props: ITreeViewProps<T>): JSX.Element & {
+export function TreeView<T extends Record<string, any>>(
+	props: ITreeViewProps<T>
+): JSX.Element & {
 	Item: typeof TreeViewItem;
 	Group: typeof TreeViewGroup;
 	ItemStack: typeof TreeViewItemStack;
 };
 
-export function TreeView<T>({
+export function TreeView<T extends Record<string, any>>({
 	children,
 	className,
 	defaultExpandedKeys,

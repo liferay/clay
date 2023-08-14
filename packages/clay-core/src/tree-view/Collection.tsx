@@ -16,7 +16,7 @@ import {ItemContextProvider, useItem} from './useItem';
 export type ChildrenFunction<T extends Record<string, any>> =
 	ChildrenFunctionBase<T, [Selection, Expand, LoadMore]>;
 
-export interface ICollectionProps<T> {
+export interface ICollectionProps<T extends Record<string, any>> {
 	children: React.ReactNode | ChildrenFunction<T>;
 
 	/**

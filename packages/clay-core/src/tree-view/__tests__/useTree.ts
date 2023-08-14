@@ -9,25 +9,33 @@ describe('useTree', () => {
 	it('patching the tree does not change the original tree', () => {
 		const tree = [
 			{
+				_key: 'A',
 				children: [
 					{
+						_key: 'C',
 						children: [
 							{
+								_key: 'E',
 								name: 'E',
 							},
 						],
 						name: 'C',
 					},
-					{name: 'D'},
+					{_key: 'D', name: 'D'},
 				],
 				name: 'A',
 			},
-			{name: 'B'},
+			{_key: 'B', name: 'B'},
 		];
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [0, 1], op: 'move', path: [0, 0]});
+		immutableTree.produce({
+			direction: 'middle',
+			from: ['A', 'D'],
+			op: 'move',
+			path: ['A', 'C'],
+		});
 
 		expect(immutableTree.applyPatches()).not.toMatchObject(tree);
 	});
@@ -35,15 +43,27 @@ describe('useTree', () => {
 	it('can move items from the root of the tree', () => {
 		const tree = [
 			{
-				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				_key: '1',
+				children: [
+					{_key: '2', name: 'Blogs'},
+					{_key: '3', name: 'Documents and Media'},
+				],
 				name: 'Liferay Drive',
 			},
 			{
-				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				_key: '4',
+				children: [
+					{_key: '5', name: 'Blogs'},
+					{_key: '6', name: 'Documents and Media'},
+				],
 				name: 'Repositories',
 			},
 			{
-				children: [{name: 'PDF'}, {name: 'Word'}],
+				_key: '7',
+				children: [
+					{_key: '8', name: 'PDF'},
+					{_key: '9', name: 'Word'},
+				],
 				name: 'Documents and Media',
 			},
 		];
@@ -69,7 +89,12 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [2, 0], op: 'move', path: [1, 0]});
+		immutableTree.produce({
+			direction: 'top',
+			from: ['7', '8'],
+			op: 'move',
+			path: ['4', '5'],
+		});
 
 		const result = immutableTree.applyPatches();
 
@@ -81,15 +106,27 @@ describe('useTree', () => {
 	it('can move nested items', () => {
 		const tree = [
 			{
-				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				_key: '1',
+				children: [
+					{_key: '2', name: 'Blogs'},
+					{_key: '3', name: 'Documents and Media'},
+				],
 				name: 'Liferay Drive',
 			},
 			{
-				children: [{name: 'Blogs'}, {name: 'Documents and Media'}],
+				_key: '4',
+				children: [
+					{_key: '5', name: 'Blogs'},
+					{_key: '6', name: 'Documents and Media'},
+				],
 				name: 'Repositories',
 			},
 			{
-				children: [{name: 'PDF'}, {name: 'Word'}],
+				_key: '7',
+				children: [
+					{_key: '8', name: 'PDF'},
+					{_key: '9', name: 'Word'},
+				],
 				name: 'Documents and Media',
 			},
 		];
@@ -117,7 +154,12 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [2, 0], op: 'move', path: [0, 1, 0]});
+		immutableTree.produce({
+			direction: 'middle',
+			from: ['7', '8'],
+			op: 'move',
+			path: ['1', '3'],
+		});
 
 		const result = immutableTree.applyPatches();
 
@@ -127,12 +169,15 @@ describe('useTree', () => {
 	it('move item on top of an item', () => {
 		const tree = [
 			{
+				_key: '1',
 				name: 'Foo',
 			},
 			{
+				_key: '2',
 				name: 'Bar',
 			},
 			{
+				_key: '3',
 				name: 'Baz',
 			},
 		];
@@ -151,7 +196,12 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [1], op: 'move', path: [0]});
+		immutableTree.produce({
+			direction: 'top',
+			from: ['2'],
+			op: 'move',
+			path: ['1'],
+		});
 
 		const result = immutableTree.applyPatches();
 
@@ -161,12 +211,15 @@ describe('useTree', () => {
 	it('move item on bottom of an item', () => {
 		const tree = [
 			{
+				_key: '1',
 				name: 'Foo',
 			},
 			{
+				_key: '2',
 				name: 'Bar',
 			},
 			{
+				_key: '3',
 				name: 'Baz',
 			},
 		];
@@ -185,7 +238,12 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [0], op: 'move', path: [2]});
+		immutableTree.produce({
+			direction: 'top',
+			from: ['1'],
+			op: 'move',
+			path: ['3'],
+		});
 
 		const result = immutableTree.applyPatches();
 
@@ -195,11 +253,14 @@ describe('useTree', () => {
 	it('move item below last item', () => {
 		const tree = [
 			{
+				_key: '1',
 				children: [
 					{
+						_key: '2',
 						name: 'Bar',
 					},
 					{
+						_key: '3',
 						name: 'Baz',
 					},
 				],
@@ -223,7 +284,12 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [0, 0], op: 'move', path: [0, 2]});
+		immutableTree.produce({
+			direction: 'bottom',
+			from: ['1', '2'],
+			op: 'move',
+			path: ['1', '3'],
+		});
 
 		const result = immutableTree.applyPatches();
 
@@ -233,11 +299,14 @@ describe('useTree', () => {
 	it('move an item to inside another item on the same level', () => {
 		const tree = [
 			{
+				_key: '1',
 				children: [
 					{
+						_key: '2',
 						name: 'Bar',
 					},
 					{
+						_key: '3',
 						name: 'Baz',
 					},
 				],
@@ -263,7 +332,12 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [0, 1], op: 'move', path: [0, 0, 0]});
+		immutableTree.produce({
+			direction: 'middle',
+			from: ['1', '3'],
+			op: 'move',
+			path: ['1', '2'],
+		});
 
 		const result = immutableTree.applyPatches();
 
@@ -273,13 +347,17 @@ describe('useTree', () => {
 	it('move an item to inside another item persisting the existing ones', () => {
 		const tree = [
 			{
+				_key: '1',
 				children: [
 					{
+						_key: '2',
 						name: 'Bar',
 					},
 					{
+						_key: '3',
 						children: [
 							{
+								_key: '4',
 								name: 'Foo Baz',
 							},
 						],
@@ -311,7 +389,12 @@ describe('useTree', () => {
 
 		const immutableTree = createImmutableTree(tree, 'children');
 
-		immutableTree.produce({from: [0, 0], op: 'move', path: [0, 1, 0]});
+		immutableTree.produce({
+			direction: 'top',
+			from: ['1', '2'],
+			op: 'move',
+			path: ['1', '3', '4'],
+		});
 
 		const result = immutableTree.applyPatches();
 

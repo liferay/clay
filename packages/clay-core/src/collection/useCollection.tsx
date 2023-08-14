@@ -160,15 +160,13 @@ export function useCollection<
 			};
 
 			function registerItem(
-				childKey: React.Key,
+				key: React.Key,
 				child: ChildElement,
 				index: number
 			) {
 				if (performFilter(child)) {
 					return;
 				}
-
-				const key = getKey(index, childKey, parentKey);
 
 				if (child.type.displayName === 'Item') {
 					layout.current.set(key, {
@@ -208,7 +206,18 @@ export function useCollection<
 
 					callNestedChild(child);
 
-					registerItem(child.key ?? getItemId(item), child, index);
+					const key = getKey(
+						index,
+						child.key ?? getItemId(item),
+						parentKey
+					);
+
+					// TODO: We need support for items with just number and string types.
+					if (typeof item === 'object') {
+						item['_key'] = key;
+					}
+
+					registerItem(key, child, index);
 				}
 			} else {
 				React.Children.forEach(children, (child, index) => {
@@ -218,7 +227,11 @@ export function useCollection<
 
 					callNestedChild(child as ChildElement);
 
-					registerItem(child.key!, child as ChildElement, index);
+					registerItem(
+						getKey(index, child.key!, parentKey),
+						child as ChildElement,
+						index
+					);
 				});
 			}
 		},
