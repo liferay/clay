@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
+ * SPDX-FileCopyrightText: © 2023 Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
@@ -110,6 +110,14 @@ interface IProps
 	label?: string;
 
 	/**
+	 * Message for aria-label
+	 */
+	messages?: {
+		close: string;
+		customColor: string;
+	};
+
+	/**
 	 * The input attribute for name
 	 */
 	name?: string;
@@ -191,6 +199,7 @@ const ClayColorPicker = ({
 	disabled,
 	dropDownContainerProps,
 	label,
+	messages,
 	name,
 	onActiveChange,
 	onChange,
@@ -343,6 +352,7 @@ const ClayColorPicker = ({
 						alignElementRef={triggerElementRef}
 						className="clay-color-dropdown-menu"
 						containerProps={dropDownContainerProps}
+						deps={[internalActive]}
 						onActiveChange={setInternalActive}
 						ref={dropdownContainerRef}
 						triggerRef={splotchRef}
@@ -374,6 +384,7 @@ const ClayColorPicker = ({
 								colors={customColors}
 								editorActive={customEditorActive}
 								label={label}
+								messages={messages}
 								onChange={(color, hex) => {
 									dispatch({
 										hex: color.toHex(),
