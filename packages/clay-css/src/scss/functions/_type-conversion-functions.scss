@@ -37,7 +37,7 @@
 	);
 
 	@if not index(map-keys($units), $unit) {
-		$_: log('Invalid unit `#{$unit}`.');
+		@error 'Invalid unit `#{$unit}`.';
 	}
 
 	@return $value * map-get($units, $unit);
@@ -53,7 +53,7 @@
 	@if type-of($value) == 'number' {
 		@return $value;
 	} @else if type-of($value) != 'string' {
-		$_: log('Value for `to-number` should be a number or a string.');
+		@error 'Value for `to-number` should be a number or a string.';
 	}
 
 	$digits: 0;
