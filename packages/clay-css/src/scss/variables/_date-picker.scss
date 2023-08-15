@@ -20,8 +20,8 @@ $date-picker-nav-row: () !default;
 $date-picker-nav-row: map-deep-merge(
 	(
 		display: flex,
-		margin-left: -0.25rem,
-		margin-right: -0.25rem,
+		margin-left: -0.125rem,
+		margin-right: -0.125rem,
 	),
 	$date-picker-nav-row
 );
@@ -51,6 +51,8 @@ $date-picker-nav-btn-monospaced: () !default;
 $date-picker-nav-btn-monospaced: map-deep-merge(
 	(
 		margin-bottom: 0,
+		margin-left: 0.125rem,
+		margin-right: 0.125rem,
 		margin-top: 0,
 	),
 	$date-picker-nav-btn-monospaced
@@ -148,8 +150,8 @@ $date-picker-calendar-header-container: map-merge(
 $date-picker-calendar-body-container: () !default;
 $date-picker-calendar-body-container: map-merge(
 	(
-		padding-left: 1rem,
-		padding-right: 1rem,
+		padding-left: 0.5rem,
+		padding-right: 0.5rem,
 		padding-bottom: 0.5rem,
 	),
 	$date-picker-calendar-body-container
@@ -161,10 +163,10 @@ $date-picker-calendar-footer-container: map-merge(
 		border-color: $gray-400,
 		border-style: solid,
 		border-width: 1px 0 0 0,
-		padding-bottom: 1rem,
-		padding-left: 1.5rem,
-		padding-right: 1.5rem,
-		padding-top: 1rem,
+		padding-bottom: 0.5rem,
+		padding-left: 0.875rem,
+		padding-right: 0.875rem,
+		padding-top: 0.5rem,
 	),
 	$date-picker-calendar-footer-container
 );
