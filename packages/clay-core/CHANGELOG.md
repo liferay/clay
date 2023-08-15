@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.103.1](https://github.com/liferay/clay/compare/v3.103.0...v3.103.1) (2023-08-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error not having forwardRef for list ([fc5aaca](https://github.com/liferay/clay/commit/fc5aaca12f249389b82cbf6d0f78f8336431a584))
+-   **@clayui/core:** Implements the use of cursor to reference unique items to move items in the tree ([51294c2](https://github.com/liferay/clay/commit/51294c2a7f122f51bcf50c542e451e131e00a1ed))
+
 # [3.101.0](https://github.com/liferay/clay/compare/v3.100.0...v3.101.0) (2023-07-28)
 
 **Note:** Version bump only for package @clayui/core

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.103.1](https://github.com/liferay/clay/compare/v3.103.0...v3.103.1) (2023-08-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix error not having forwardRef for list ([fc5aaca](https://github.com/liferay/clay/commit/fc5aaca12f249389b82cbf6d0f78f8336431a584))
+-   **@clayui/core:** Implements the use of cursor to reference unique items to move items in the tree ([51294c2](https://github.com/liferay/clay/commit/51294c2a7f122f51bcf50c542e451e131e00a1ed))
+-   **@clayui/css:** log() errors on dart-sass 1.65.1, use error instead ([eafa6f1](https://github.com/liferay/clay/commit/eafa6f109f235251f942d801cd6760c2a6eacef4))
+-   **@clayui/drop-down:** adds throttle to handle contextual menu visibility ([7d51b7a](https://github.com/liferay/clay/commit/7d51b7aa96dcd86c9e8c70cd97dec5c7c9279b73))
+-   **@clayui/drop-down:** update test threshold ([4ed8469](https://github.com/liferay/clay/commit/4ed8469873835ecd2f219df1df9e1bbbca2aaa3a))
+
 # [3.103.0](https://github.com/liferay/clay/compare/v3.102.0...v3.103.0) (2023-08-08)
 
 ### Features
