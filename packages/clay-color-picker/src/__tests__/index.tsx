@@ -4,7 +4,8 @@
  */
 
 import ClayColorPicker from '..';
-import {cleanup, fireEvent, render} from '@testing-library/react';
+import {cleanup, fireEvent, render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import getMouseEvent from '../../tests-util';
@@ -392,6 +393,35 @@ describe('Interactions', () => {
 			expect(handleColorsChange).toBeCalledTimes(1);
 
 			expect(document.body).toMatchSnapshot();
+		});
+
+		it('pressing right arrow key increase hue value', async () => {
+			const hueSlider = screen.getByRole('slider');
+
+			userEvent.click(hueSlider);
+			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleValueChange).toBeCalledTimes(1);
+
+			userEvent.keyboard('[ArrowRight]');
+
+			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleValueChange).toBeCalledTimes(2);
+
+			expect(hueSlider.getAttribute('aria-valuenow')).toBe('1');
+		});
+
+		it('pressing left arrow key descrease hue value', async () => {
+			const hueSlider = screen.getByRole('slider');
+
+			userEvent.click(hueSlider);
+			expect(handleColorsChange).toBeCalledTimes(1);
+			expect(handleValueChange).toBeCalledTimes(1);
+
+			userEvent.keyboard('[ArrowLeft]');
+			expect(handleColorsChange).toBeCalledTimes(2);
+			expect(handleValueChange).toBeCalledTimes(2);
+
+			expect(hueSlider.getAttribute('aria-valuenow')).toBe('0');
 		});
 	});
 
