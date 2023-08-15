@@ -3,6 +3,12 @@
 $date-picker-dropdown-menu: () !default;
 $date-picker-dropdown-menu: map-deep-merge(
 	(
+		breakpoint-down: 'sm',
+		mobile: (
+			font-size: 0.75rem,
+			max-width: 264px,
+			max-height: 254px,
+		),
 		max-width: 352px,
 	),
 	$date-picker-dropdown-menu
@@ -36,6 +42,11 @@ $date-picker-nav-select: map-deep-merge(
 	(
 		background-color: transparent,
 		border-color: transparent,
+		breakpoint-down: 'sm',
+		mobile: (
+			font-size: 0.75rem,
+			height: 1.5rem,
+		),
 		color: $secondary,
 		font-size: $font-size-sm,
 		font-weight: $font-weight-semi-bold,

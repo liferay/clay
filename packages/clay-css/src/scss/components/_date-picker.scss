@@ -2,6 +2,20 @@
 	.input-group-text {
 		@include clay-input-group-text-variant($date-picker-input-group-text);
 	}
+
+	.clay-time .form-control {
+		@include clay-css($date-picker-input-form-control);
+
+		$breakpoint-down: map-get($date-picker-input-form-control, breakpoint-down);
+
+		$mobile: setter(map-get($date-picker-calendar-header-container, mobile), ());
+
+		@if ($breakpoint-down) {
+			@include media-breakpoint-down($breakpoint-down) {
+				@include clay-css($mobile);
+			}
+		}
+	}
 }
 
 // Date Picker Dropdown Menu
@@ -56,14 +70,44 @@
 
 .date-picker-calendar-header {
 	@include clay-css($date-picker-calendar-header-container);
+
+	$breakpoint-down: map-get($date-picker-calendar-header-container, breakpoint-down);
+
+	$mobile: setter(map-get($date-picker-calendar-header-container, mobile), ());
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css($mobile);
+		}
+	}
 }
 
 .date-picker-calendar-body {
 	@include clay-css($date-picker-calendar-body-container);
+
+	$breakpoint-down: map-get($date-picker-calendar-body-container, breakpoint-down);
+
+	$mobile: setter(map-get($date-picker-calendar-body-container, mobile), ());
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css($mobile);
+		}
+	}
 }
 
 .date-picker-calendar-footer {
 	@include clay-css($date-picker-calendar-footer-container);
+
+	$breakpoint-down: map-get($date-picker-calendar-footer-container, breakpoint-down);
+
+	$mobile: setter(map-get($date-picker-calendar-footer-container, mobile), ());
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css($mobile);
+		}
+	}
 }
 
 .date-picker-calendar-item {
@@ -74,10 +118,30 @@
 
 .date-picker-row {
 	@include clay-row($date-picker-row);
+
+	$breakpoint-down: map-get($date-picker-row, breakpoint-down);
+
+	$mobile: setter(map-get($date-picker-row, mobile), ());
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css($mobile);
+		}
+	}
 }
 
 .date-picker-col {
 	@include clay-css($date-picker-col);
+
+	$breakpoint-down: map-get($date-picker-col, breakpoint-down);
+
+	$mobile: setter(map-get($date-picker-col, mobile), ());
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css($mobile);
+		}
+	}
 
 	&.c-selected {
 		@include clay-css(map-get($date-picker-col, c-selected));
@@ -104,6 +168,16 @@
 
 .date-picker-days-row {
 	@include clay-row($date-picker-days-row);
+
+	$breakpoint-down: map-get($date-picker-days-row, breakpoint-down);
+
+	$mobile: setter(map-get($date-picker-days-row, mobile), ());
+
+	@if ($breakpoint-down) {
+		@include media-breakpoint-down($breakpoint-down) {
+			@include clay-css($mobile);
+		}
+	}
 }
 
 .date-picker-day {
