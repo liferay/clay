@@ -12,7 +12,7 @@ export default (props) => {
 	useEffect(() => {
 		if (window.docsearch) {
 			window.docsearch({
-				apiKey: 'bc205a621e5176b8720081c2a3de450c',
+				apiKey: process.env.GATSBY_ALGOLIA_PUBLIC_KEY,
 				indexName: 'clay',
 				inputSelector: '#algolia-doc-search',
 			});
