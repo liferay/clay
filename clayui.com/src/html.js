@@ -34,10 +34,6 @@ export default (props) => {
 				/>
 
 				{props.headComponents}
-				<link
-					href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
-					rel="stylesheet"
-				/>
 				<script src="/js/jquery.min.js" />
 				<script src="/js/popper.js" />
 				<script src="/js/bootstrap.js" />
@@ -49,7 +45,6 @@ export default (props) => {
 				/>
 				{props.postBodyComponents}
 				<script src="/js/docs-site.js" />
-				<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />
 			</body>
 		</html>
 	);

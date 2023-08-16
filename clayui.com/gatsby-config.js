@@ -6,6 +6,10 @@
 const clay = require('@clayui/css');
 const path = require('path');
 
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
 	mapping: {
 		'MarkdownRemark.frontmatter.author': 'AuthorYaml',
