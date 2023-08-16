@@ -78,6 +78,11 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	containerProps?: IPortalBaseProps;
 
 	/**
+	 * @ignore
+	 */
+	deps?: Array<any>;
+
+	/**
 	 * Flag to indicate if menu is displaying a clay-icon on the left.
 	 */
 	hasLeftSymbols?: boolean;
@@ -153,6 +158,7 @@ const Menu = React.forwardRef<HTMLDivElement, IProps>(
 			className,
 			closeOnClickOutside = true,
 			containerProps = {},
+			deps = [active, children],
 			hasLeftSymbols,
 			hasRightSymbols,
 			height,
@@ -189,7 +195,7 @@ const Menu = React.forwardRef<HTMLDivElement, IProps>(
 				ref: menuRef,
 				triggerRef: alignElementRef,
 			},
-			[active, children]
+			deps
 		);
 
 		return (

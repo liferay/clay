@@ -26,6 +26,12 @@ function reducer(state: State, action: Partial<State>) {
 	};
 }
 
+export enum LimitValue {
+	maxRGB = 255,
+	maxHue = 360,
+	min = 0,
+}
+
 export function useEditor(
 	value: string,
 	color: Instance,
@@ -83,8 +89,8 @@ const RGBInput = ({name, onChange, value}: RGBInputProps) => {
 					<ClayInput
 						data-testid={`${name}Input`}
 						insetBefore
-						max="255"
-						min="0"
+						max={LimitValue.maxRGB}
+						min={LimitValue.min}
 						onChange={(event: any) => {
 							const value = event.target.value;
 
@@ -94,10 +100,10 @@ const RGBInput = ({name, onChange, value}: RGBInputProps) => {
 
 							let newVal = Number(value);
 
-							if (newVal < 0) {
-								newVal = 0;
-							} else if (newVal > 255) {
-								newVal = 255;
+							if (newVal < LimitValue.min) {
+								newVal = LimitValue.min;
+							} else if (newVal > LimitValue.maxRGB) {
+								newVal = LimitValue.maxRGB;
 							}
 
 							setInputValue(newVal);
@@ -188,6 +194,11 @@ export function Editor({
 
 			<Hue
 				onChange={(hue) => {
+					if (hue < LimitValue.min) {
+						hue = LimitValue.min;
+					} else if (hue > LimitValue.maxHue) {
+						hue = LimitValue.maxHue;
+					}
 					onHueChange(hue);
 					onColorChange(tinycolor({h: hue, s, v}));
 				}}

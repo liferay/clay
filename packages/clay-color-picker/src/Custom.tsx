@@ -46,6 +46,14 @@ type Props = {
 	 */
 	showPalette?: boolean;
 
+	/**
+	 * Message for aria-label
+	 */
+	messages?: {
+		close: string;
+		customColor: string;
+	};
+
 	splotch?: number;
 
 	/**
@@ -56,11 +64,17 @@ type Props = {
 
 const DEFAULT_SPLOTCH_COLOR = 'FFFFFF';
 
+const defaultMessages = {
+	close: 'close',
+	customColor: 'custom color',
+};
+
 const ClayColorPickerCustom = ({
 	color,
 	colors,
 	editorActive,
 	label,
+	messages = defaultMessages,
 	onChange,
 	onColorsChange,
 	onEditorActiveChange,
@@ -79,6 +93,11 @@ const ClayColorPickerCustom = ({
 
 					{showPalette && (
 						<button
+							aria-label={
+								editorActive
+									? messages.close
+									: messages.customColor
+							}
 							className={`${
 								editorActive ? 'close' : ''
 							} component-action`}

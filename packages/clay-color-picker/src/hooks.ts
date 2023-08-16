@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useCallback} from 'react';
 
 /**
  * Utility hook for calculating the mouse position
@@ -11,26 +11,37 @@ import React from 'react';
 export function usePointerPosition(containerRef: React.RefObject<any>) {
 	const [xy, setXY] = React.useState({x: 0, y: 0});
 
-	const onPointerMove = (event: React.PointerEvent | PointerEvent) => {
-		if (containerRef.current) {
-			const rect = containerRef.current.getBoundingClientRect();
-			const x = event.pageX;
+	const onPointerMove = useCallback(
+		(event: React.PointerEvent | PointerEvent) => {
+			if (containerRef.current) {
+				const rect = containerRef.current.getBoundingClientRect();
+				const x = event.pageX;
 
-			let newLeft = x - (rect.left + window.pageXOffset);
+				let newLeft = x - (rect.left + window.pageXOffset);
 
-			newLeft =
-				newLeft < 0 ? 0 : newLeft > rect.width ? rect.width : newLeft;
+				newLeft =
+					newLeft < 0
+						? 0
+						: newLeft > rect.width
+						? rect.width
+						: newLeft;
 
-			const y = event.pageY;
+				const y = event.pageY;
 
-			let newTop = y - (rect.top + window.pageYOffset);
+				let newTop = y - (rect.top + window.pageYOffset);
 
-			newTop =
-				newTop < 0 ? 0 : newTop > rect.height ? rect.height : newTop;
+				newTop =
+					newTop < 0
+						? 0
+						: newTop > rect.height
+						? rect.height
+						: newTop;
 
-			setXY({x: newLeft, y: newTop});
-		}
-	};
+				setXY({x: newLeft, y: newTop});
+			}
+		},
+		[]
+	);
 
 	return {...xy, onPointerMove, setXY};
 }
