@@ -119,6 +119,13 @@
 
 @mixin clay-row($map) {
 	@include clay-css($map);
+
+	$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+	$_media-breakpoint-up: map-get($map, media-breakpoint-up);
+
+	@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+		@include clay-generate-media-breakpoints($map, 'clay-css');
+	}
 }
 
 @mixin clay-custom-grid-columns($map) {
@@ -193,7 +200,7 @@
 /// A mixin that generates media-breakpoint-{up|down} styles from a Sass map.
 /// @param {Map} $map - A map of `key: value` pairs that is passed to the `clay-css` mixin
 
-@mixin clay-generate-media-breakpoints($map) {
+@mixin clay-generate-media-breakpoints($map, $mixin: 'clay-css') {
 	@if (type-of($map) == 'map') {
 		@if (map-get($map, media-breakpoint-up)) {
 			$media-breakpoint-up: map-get($map, media-breakpoint-up);
@@ -202,7 +209,19 @@
 				$breakpoint-up: map-get($media-breakpoint-up, $breakpoint);
 
 				@include media-breakpoint-up($breakpoint) {
-					@include clay-css($breakpoint-up);
+					@if ($mixin == 'clay-css') {
+						@include clay-css($breakpoint-up);
+					} @else if ($mixin == 'clay-button-variant') {
+						@include clay-button-variant($breakpoint-up);
+					} @else if ($mixin == 'clay-input-group-variant') {
+						@include clay-input-group-variant($breakpoint-up);
+					} @else if ($mixin == 'clay-input-group-text-variant') {
+						@include clay-input-group-text-variant($breakpoint-up);
+					} @else if ($mixin == 'clay-dropdown-menu-variant') {
+						@include clay-dropdown-menu-variant($breakpoint-up);
+					} @else if ($mixin == 'clay-menubar-vertical-variant') {
+						@include clay-menubar-vertical-variant($breakpoint-up);
+					}
 				}
 			}
 		}
@@ -214,7 +233,23 @@
 				$breakpoint-down: map-get($media-breakpoint-down, $breakpoint);
 
 				@include media-breakpoint-down($breakpoint) {
-					@include clay-css($breakpoint-down);
+					@if ($mixin == 'clay-css') {
+						@include clay-css($breakpoint-down);
+					} @else if ($mixin == 'clay-button-variant') {
+						@include clay-button-variant($breakpoint-down);
+					} @else if ($mixin == 'clay-input-group-variant') {
+						@include clay-input-group-variant($breakpoint-down);
+					} @else if ($mixin == 'clay-input-group-text-variant') {
+						@include clay-input-group-text-variant(
+							$breakpoint-down
+						);
+					} @else if ($mixin == 'clay-dropdown-menu-variant') {
+						@include clay-dropdown-menu-variant($breakpoint-down);
+					} @else if ($mixin == 'clay-menubar-vertical-variant') {
+						@include clay-menubar-vertical-variant(
+							$breakpoint-down
+						);
+					}
 				}
 			}
 		}

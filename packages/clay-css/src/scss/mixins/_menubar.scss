@@ -379,44 +379,14 @@
 				}
 			}
 
-			@if (map-get($map, media-breakpoint-down)) {
-				@each $breakpoint
-					in map-keys(map-get($map, media-breakpoint-down))
-				{
-					$media-breakpoint-down: map-deep-get(
-						$map,
-						media-breakpoint-down,
-						$breakpoint
-					);
+			$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+			$_media-breakpoint-up: map-get($map, media-breakpoint-up);
 
-					@if ($breakpoint) {
-						@include media-breakpoint-down($breakpoint) {
-							@include clay-menubar-vertical-variant(
-								$media-breakpoint-down
-							);
-						}
-					}
-				}
-			}
-
-			@if (map-get($map, media-breakpoint-up)) {
-				@each $breakpoint
-					in map-keys(map-get($map, media-breakpoint-up))
-				{
-					$media-breakpoint-up: map-deep-get(
-						$map,
-						media-breakpoint-up,
-						$breakpoint
-					);
-
-					@if ($breakpoint) {
-						@include media-breakpoint-up($breakpoint) {
-							@include clay-menubar-vertical-variant(
-								$media-breakpoint-up
-							);
-						}
-					}
-				}
+			@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+				@include clay-generate-media-breakpoints(
+					$map,
+					'clay-menubar-vertical-variant'
+				);
 			}
 		} @else {
 			.menubar-collapse {
@@ -972,41 +942,14 @@
 			}
 		}
 
-		@if (map-get($map, media-breakpoint-down)) {
-			@each $breakpoint in map-keys(map-get($map, media-breakpoint-down))
-			{
-				$media-breakpoint-down: map-deep-get(
-					$map,
-					media-breakpoint-down,
-					$breakpoint
-				);
+		$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+		$_media-breakpoint-up: map-get($map, media-breakpoint-up);
 
-				@if ($breakpoint) {
-					@include media-breakpoint-down($breakpoint) {
-						@include clay-menubar-vertical-variant(
-							$media-breakpoint-down
-						);
-					}
-				}
-			}
-		}
-
-		@if (map-get($map, media-breakpoint-up)) {
-			@each $breakpoint in map-keys(map-get($map, media-breakpoint-up)) {
-				$media-breakpoint-up: map-deep-get(
-					$map,
-					media-breakpoint-up,
-					$breakpoint
-				);
-
-				@if ($breakpoint) {
-					@include media-breakpoint-up($breakpoint) {
-						@include clay-menubar-vertical-variant(
-							$media-breakpoint-up
-						);
-					}
-				}
-			}
+		@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+			@include clay-generate-media-breakpoints(
+				$map,
+				'clay-menubar-vertical-variant'
+			);
 		}
 	}
 }
