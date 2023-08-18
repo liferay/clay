@@ -138,3 +138,13 @@ $breadcrumb-link: map-deep-merge(
 	),
 	$breadcrumb-link
 );
+
+// Breadcrumb Item Expand
+
+$breadcrumb-item-expand: () !default;
+$breadcrumb-item-expand: map-merge(
+	(
+		color: $breadcrumb-link-color,
+	),
+	$breadcrumb-item-expand
+);

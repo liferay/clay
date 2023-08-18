@@ -6,12 +6,20 @@
 	@include clay-link($breadcrumb-link);
 }
 
+.breadcrumb-item-expand {
+	@include clay-link($breadcrumb-item-expand);
+}
+
 .breadcrumb-item {
 	@include clay-css($breadcrumb-item);
 
 	&.active,
 	.active {
 		@include clay-css(map-get($breadcrumb-item, active));
+
+		.breadcrumb-link {
+			color: inherit;
+		}
 	}
 
 	> span {
