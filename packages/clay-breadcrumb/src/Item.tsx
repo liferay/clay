@@ -40,7 +40,7 @@ const Item = ({active, href, label, onClick, ...otherProps}: IItem) => (
 			aria-current={active ? 'page' : undefined}
 			className="breadcrumb-link"
 			data-testid={`testId${label}`}
-			href={href}
+			href={active ? '#' : href}
 			onClick={(event) => {
 				if (onClick) {
 					event.preventDefault();
