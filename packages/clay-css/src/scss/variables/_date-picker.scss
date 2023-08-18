@@ -64,10 +64,10 @@ $date-picker-nav-btn-monospaced: map-deep-merge(
 		media-breakpoint-down: (
 			xs: (
 				font-size: 0.75rem,
-				height: 1.375rem,
-				max-height: 1.375rem,
-				max-width: 1.375rem,
-				min-width: 1.375rem,
+				height: 1.5rem,
+				max-height: 1.5rem,
+				max-width: 1.5rem,
+				min-width: 1.5rem,
 			),
 		),
 	),
@@ -326,6 +326,14 @@ $date-picker-next-month-date: map-deep-merge(
 );
 
 // Date Picker Input Group
+
+$date-picker-input-group-item: () !default;
+$date-picker-input-group-item: map-deep-merge(
+	(
+		margin-left: 0.125rem,
+	),
+	$date-picker-input-group-item
+);
 
 $date-picker-input-group-text: () !default;
 $date-picker-input-group-text: map-deep-merge(

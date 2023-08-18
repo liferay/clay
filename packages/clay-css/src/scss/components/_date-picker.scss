@@ -1,12 +1,5 @@
 .date-picker {
 	.input-group-item {
-		$date-picker-input-group-item: () !default;
-		$date-picker-input-group-item: map-deep-merge(
-			(
-				margin-left: 0.125rem,
-			),
-			$date-picker-input-group-item
-		);
 		@include clay-input-group-item-variant($date-picker-input-group-item);
 	}
 
