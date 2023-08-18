@@ -10,6 +10,13 @@ $date-picker-dropdown-menu: map-deep-merge(
 		padding-right: 0,
 		padding-top: 0,
 		width: 100%,
+		media-breakpoint-down: (
+			xs: (
+				font-size: 0.75rem,
+				max-width: 264px,
+				max-height: 254px,
+			),
+		),
 	),
 	$date-picker-dropdown-menu
 );
@@ -50,39 +57,53 @@ $date-picker-nav-btn: map-deep-merge(
 $date-picker-nav-btn-monospaced: () !default;
 $date-picker-nav-btn-monospaced: map-deep-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			font-size: 0.75rem,
-			height: 1.375rem,
-			max-height: 1.375rem,
-			max-width: 1.375rem,
-		),
 		margin-bottom: 0,
 		margin-left: 0.125rem,
 		margin-right: 0.125rem,
 		margin-top: 0,
+		media-breakpoint-down: (
+			xs: (
+				font-size: 0.75rem,
+				height: 1.375rem,
+				max-height: 1.375rem,
+				max-width: 1.375rem,
+				min-width: 1.375rem,
+			),
+		),
 	),
 	$date-picker-nav-btn-monospaced
 );
 
 $date-picker-nav-select: () !default;
+$date-picker-nav-select: map-deep-merge(
+	(
+		media-breakpoint-down: (
+			xs: (
+				font-size: 0.75rem,
+				height: 1.5rem,
+			),
+		),
+	),
+	$date-picker-nav-select
+);
 
 // Date Picker Row
 
 $date-picker-row: () !default;
 $date-picker-row: map-deep-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			margin-bottom: 0.25rem,
-			margin-top: 0.25rem,
-		),
 		display: flex,
 		justify-content: space-between,
 		list-style: none,
 		margin-bottom: 0.5rem,
 		margin-top: 0.5rem,
 		padding: 0,
+		media-breakpoint-down: (
+			xs: (
+				margin-bottom: 0.25rem,
+				margin-top: 0.25rem,
+			),
+		),
 	),
 	$date-picker-row
 );
@@ -90,13 +111,9 @@ $date-picker-row: map-deep-merge(
 $date-picker-col: () !default;
 $date-picker-col: map-deep-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			padding-left: 0.375rem,
-			padding-right: 0.375rem,
-		),
-		padding-left: 0.5rem,
-		padding-right: 0.5rem,
+		display: flex,
+		flex-grow: 1,
+		justify-content: center,
 		c-selected: (
 			background-image: linear-gradient($primary-l3, $primary-l3),
 			background-repeat: no-repeat,
@@ -124,12 +141,13 @@ $date-picker-col: map-deep-merge(
 $date-picker-days-row: () !default;
 $date-picker-days-row: map-deep-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			margin-bottom: 0.25rem,
-		),
 		margin-bottom: 1rem,
 		margin-top: 0,
+		media-breakpoint-down: (
+			xs: (
+				margin-bottom: 0.25rem,
+			),
+		),
 	),
 	$date-picker-days-row
 );
@@ -160,17 +178,18 @@ $date-picker-calendar-container: map-merge(
 $date-picker-calendar-header-container: () !default;
 $date-picker-calendar-header-container: map-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			padding-bottom: 0.25rem,
-			padding-left: 0.375rem,
-			padding-right: 0.375rem,
-			padding-top: 0.5rem,
-		),
 		padding-bottom: 1rem,
 		padding-left: 1rem,
 		padding-right: 1rem,
 		padding-top: 1rem,
+		media-breakpoint-down: (
+			xs: (
+				padding-bottom: 0.25rem,
+				padding-left: 0.375rem,
+				padding-right: 0.375rem,
+				padding-top: 0.5rem,
+			),
+		),
 	),
 	$date-picker-calendar-header-container
 );
@@ -178,15 +197,16 @@ $date-picker-calendar-header-container: map-merge(
 $date-picker-calendar-body-container: () !default;
 $date-picker-calendar-body-container: map-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			padding-left: 0.375rem,
-			padding-right: 0.375rem,
-			padding-bottom: 0.25rem,
-		),
 		padding-left: 0.5rem,
 		padding-right: 0.5rem,
 		padding-bottom: 0.5rem,
+		media-breakpoint-down: (
+			xs: (
+				padding-left: 0.375rem,
+				padding-right: 0.375rem,
+				padding-bottom: 0.25rem,
+			),
+		),
 	),
 	$date-picker-calendar-body-container
 );
@@ -194,11 +214,6 @@ $date-picker-calendar-body-container: map-merge(
 $date-picker-calendar-footer-container: () !default;
 $date-picker-calendar-footer-container: map-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			padding-left: 0.75rem,
-			padding-right: 0.75rem,
-		),
 		border-color: $gray-400,
 		border-style: solid,
 		border-width: 1px 0 0 0,
@@ -206,6 +221,12 @@ $date-picker-calendar-footer-container: map-merge(
 		padding-left: 0.875rem,
 		padding-right: 0.875rem,
 		padding-top: 0.5rem,
+		media-breakpoint-down: (
+			xs: (
+				padding-left: 0.375rem,
+				padding-right: 0.375rem,
+			),
+		),
 	),
 	$date-picker-calendar-footer-container
 );
@@ -219,11 +240,6 @@ $date-picker-calendar-item: map-deep-merge(
 		background-color:
 			setter(map-get($date-picker-calendar-item, bg) transparent),
 		border-width: 0px,
-		breakpoint-down: 'sm',
-		mobile: (
-			height: 1.5rem,
-			width: 1.5rem,
-		),
 		disabled-cursor: $disabled-cursor,
 		display: inline-flex,
 		flex-shrink: 0,
@@ -242,6 +258,12 @@ $date-picker-calendar-item: map-deep-merge(
 		vertical-align: middle,
 		white-space: nowrap,
 		width: 2rem,
+		media-breakpoint-down: (
+			xs: (
+				height: 1.5rem,
+				width: 1.5rem,
+			),
+		),
 	),
 	$date-picker-calendar-item
 );
@@ -314,6 +336,13 @@ $date-picker-input-group-text: map-deep-merge(
 		min-width: 2rem,
 		padding-left: 0.25rem,
 		padding-right: 0.25rem,
+		media-breakpoint-down: (
+			xs: (
+				font-size: inherit,
+				height: $input-height-sm,
+				min-width: 1.5rem,
+			),
+		),
 	),
 	$date-picker-input-group-text
 );
@@ -321,16 +350,18 @@ $date-picker-input-group-text: map-deep-merge(
 $date-picker-input-form-control: () !default;
 $date-picker-input-form-control: map-deep-merge(
 	(
-		breakpoint-down: 'sm',
-		mobile: (
-			border-radius: clay-enable-rounded($input-border-radius-sm),
-			font-size: $input-font-size-sm,
-			height: $input-height-sm,
-			line-height: $input-line-height-sm,
-			padding-bottom: $input-padding-y-sm,
-			padding-left: $input-padding-x-sm,
-			padding-right: $input-padding-x-sm,
-			padding-top: $input-padding-y-sm,
+		media-breakpoint-down: (
+			xs: (
+				border-radius: clay-enable-rounded($input-border-radius-sm),
+				font-size: $input-font-size-sm,
+				height: $input-height-sm,
+				line-height: $input-line-height-sm,
+				min-height: $input-height-sm,
+				padding-bottom: $input-padding-y-sm,
+				padding-left: $input-padding-x-sm,
+				padding-right: $input-padding-x-sm,
+				padding-top: $input-padding-y-sm,
+			),
 		),
 	),
 	$date-picker-input-form-control
