@@ -13,11 +13,8 @@ const breadcrumbImportsCode = `import ClayBreadcrumb from '@clayui/breadcrumb';
 const BreadcrumbCode = `const Component = () => {
 	return (
 		<ClayBreadcrumb
-			ellipsisBuffer={1}
-			ellipsisProps={{'aria-label': 'More', title: 'More'}}
 			items={[
 				{
-					active: true,
 					href: '#1',
 					label: 'Home',
 				},
@@ -34,6 +31,7 @@ const BreadcrumbCode = `const Component = () => {
 					label: 'Projects',
 				},
 				{
+					active: true,
 					href: '#5',
 					label: 'Five',
 				}

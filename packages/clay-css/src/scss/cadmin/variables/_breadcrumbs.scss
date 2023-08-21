@@ -145,3 +145,13 @@ $cadmin-breadcrumb-link: map-deep-merge(
 	),
 	$cadmin-breadcrumb-link
 );
+
+// Breadcrumb Item Expand
+
+$cadmin-breadcrumb-toggle: () !default;
+$cadmin-breadcrumb-toggle: map-merge(
+	(
+		color: $cadmin-breadcrumb-link-color,
+	),
+	$cadmin-breadcrumb-toggle
+);

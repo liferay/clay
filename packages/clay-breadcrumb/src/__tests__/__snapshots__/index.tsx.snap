@@ -9,7 +9,7 @@ exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
     <button
       aria-expanded="false"
       aria-label="See full nested"
-      class="btn btn-monospaced btn-xs"
+      class="breadcrumb-toggle btn btn-monospaced btn-xs"
       title="See full nested"
       type="button"
     >
@@ -59,7 +59,7 @@ exports[`ClayBreadcrumb renders 1`] = `
     <button
       aria-expanded="false"
       aria-label="See full nested"
-      class="btn btn-monospaced btn-xs"
+      class="breadcrumb-toggle btn btn-monospaced btn-xs"
       title="See full nested"
       type="button"
     >
@@ -111,7 +111,7 @@ exports[`ClayBreadcrumb renders with properties passed by \`ellipsisProps\` 1`] 
     <button
       aria-expanded="false"
       aria-label="See full nested"
-      class="btn btn-monospaced btn-xs"
+      class="breadcrumb-toggle btn btn-monospaced btn-xs"
       title="See full nested"
       type="button"
     >

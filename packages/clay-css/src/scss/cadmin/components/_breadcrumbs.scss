@@ -15,12 +15,20 @@
 	}
 }
 
+.breadcrumb-toggle {
+	@include clay-link($cadmin-breadcrumb-toggle);
+}
+
 .breadcrumb-item {
 	@include clay-css($cadmin-breadcrumb-item);
 
 	&.active,
 	.active {
 		@include clay-css(map-get($cadmin-breadcrumb-item, active));
+
+		.breadcrumb-link {
+			color: inherit;
+		}
 	}
 
 	> span {
