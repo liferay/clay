@@ -6,8 +6,8 @@
 	@include clay-link($breadcrumb-link);
 }
 
-.breadcrumb-item-expand {
-	@include clay-link($breadcrumb-item-expand);
+.breadcrumb-toggle {
+	@include clay-link($breadcrumb-toggle);
 }
 
 .breadcrumb-item {

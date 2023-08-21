@@ -15,8 +15,8 @@
 	}
 }
 
-.breadcrumb-item-expand {
-	@include clay-link($cadmin-breadcrumb-item-expand);
+.breadcrumb-toggle {
+	@include clay-link($cadmin-breadcrumb-toggle);
 }
 
 .breadcrumb-item {

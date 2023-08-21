@@ -84,7 +84,7 @@ const ClayBreadcrumb = ({
 				<ClayButtonWithIcon
 					aria-expanded={collapsed}
 					aria-label={collapsed ? ariaLabels.close : ariaLabels.open}
-					className="breadcrumb-item-expand"
+					className="breadcrumb-toggle"
 					displayType={null}
 					onClick={() => setCollapsed(!collapsed)}
 					size="xs"
