@@ -130,6 +130,17 @@ export interface IProps<T>
 	};
 }
 
+const List = React.forwardRef<
+	HTMLUListElement,
+	React.HTMLAttributes<HTMLUListElement>
+>(function List({children, ...otherProps}, ref) {
+	return (
+		<ul {...otherProps} className="list-unstyled" ref={ref}>
+			{children}
+		</ul>
+	);
+});
+
 let counter = 0;
 
 function ClayDropDown<T>(props: IProps<T>): JSX.Element & {
@@ -349,14 +360,13 @@ function ClayDropDown<T>({
 							}}
 						>
 							{children instanceof Function ? (
-								<ul className="list-unstyled" role={role}>
-									<Collection<T>
-										items={items}
-										passthroughKey={false}
-									>
-										{children}
-									</Collection>
-								</ul>
+								<Collection<T>
+									as={List}
+									items={items}
+									role={role}
+								>
+									{children}
+								</Collection>
 							) : (
 								children
 							)}
