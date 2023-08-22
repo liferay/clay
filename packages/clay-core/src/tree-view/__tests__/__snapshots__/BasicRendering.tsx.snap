@@ -2,631 +2,659 @@
 
 exports[`TreeView basic rendering render dynamic content 1`] = `
 <div>
-  <ul
-    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
-    role="tree"
-    tabindex="-1"
+  <div
+    role="application"
   >
-    <li
-      class="treeview-item"
-      role="none"
+    <ul
+      class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+      role="tree"
+      tabindex="-1"
     >
-      <div
-        aria-expanded="false"
-        aria-labelledby="clay-id-15"
-        aria-owns="clay-id-16"
-        class="treeview-link"
-        data-id="string,Root"
-        role="treeitem"
-        style="padding-left: 0px;"
-        tabindex="0"
+      <li
+        class="treeview-item"
+        role="none"
       >
-        <span
-          class="c-inner"
-          style="margin-left: -0px;"
-          tabindex="-2"
+        <div
+          aria-expanded="false"
+          aria-labelledby="clay-id-15"
+          aria-owns="clay-id-16"
+          class="treeview-link"
+          data-id="string,Root"
+          role="treeitem"
+          style="padding-left: 0px;"
+          tabindex="0"
         >
-          <div
-            class="autofit-row"
+          <span
+            class="c-inner"
+            style="margin-left: -0px;"
+            tabindex="-2"
           >
             <div
-              class="autofit-col"
+              class="autofit-row"
             >
-              <button
-                aria-controls="Root"
-                aria-expanded="false"
-                class="component-expander btn btn-monospaced"
-                tabindex="-1"
-                type="button"
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-controls="Root"
+                  aria-expanded="false"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand"
               >
                 <span
-                  class="c-inner"
-                  tabindex="-2"
+                  class="component-text"
+                  id="clay-id-15"
+                  tabindex="-1"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-right"
-                    />
-                  </svg>
+                  Root
                 </span>
-              </button>
+              </div>
             </div>
-            <div
-              class="autofit-col autofit-col-expand"
-            >
-              <span
-                class="component-text"
-                id="clay-id-15"
-                tabindex="-1"
-              >
-                Root
-              </span>
-            </div>
-          </div>
-        </span>
-      </div>
-    </li>
-  </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`TreeView basic rendering render nested dynamic content 1`] = `
 <div>
-  <ul
-    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
-    role="tree"
-    tabindex="-1"
+  <div
+    role="application"
   >
-    <li
-      class="treeview-item"
-      role="none"
+    <ul
+      class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+      role="tree"
+      tabindex="-1"
     >
-      <div
-        aria-expanded="false"
-        aria-labelledby="clay-id-25"
-        aria-owns="clay-id-26"
-        class="treeview-link"
-        data-id="string,Foo"
-        role="treeitem"
-        style="padding-left: 0px;"
-        tabindex="0"
+      <li
+        class="treeview-item"
+        role="none"
       >
-        <span
-          class="c-inner"
-          style="margin-left: -0px;"
-          tabindex="-2"
+        <div
+          aria-expanded="false"
+          aria-labelledby="clay-id-25"
+          aria-owns="clay-id-26"
+          class="treeview-link"
+          data-id="string,Foo"
+          role="treeitem"
+          style="padding-left: 0px;"
+          tabindex="0"
         >
-          <div
-            class="autofit-row"
+          <span
+            class="c-inner"
+            style="margin-left: -0px;"
+            tabindex="-2"
           >
             <div
-              class="autofit-col"
+              class="autofit-row"
             >
-              <button
-                aria-controls="Foo"
-                aria-expanded="false"
-                class="component-expander btn btn-monospaced"
-                tabindex="-1"
-                type="button"
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-controls="Foo"
+                  aria-expanded="false"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand"
               >
                 <span
-                  class="c-inner"
-                  tabindex="-2"
+                  class="component-text"
+                  id="clay-id-25"
+                  tabindex="-1"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-right"
-                    />
-                  </svg>
+                  Foo
                 </span>
-              </button>
+              </div>
             </div>
-            <div
-              class="autofit-col autofit-col-expand"
-            >
-              <span
-                class="component-text"
-                id="clay-id-25"
-                tabindex="-1"
-              >
-                Foo
-              </span>
-            </div>
-          </div>
-        </span>
-      </div>
-    </li>
-  </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`TreeView basic rendering render static content 1`] = `
 <div>
-  <ul
-    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
-    role="tree"
-    tabindex="-1"
+  <div
+    role="application"
   >
-    <li
-      class="treeview-item"
-      role="none"
+    <ul
+      class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+      role="tree"
+      tabindex="-1"
     >
-      <div
-        aria-expanded="false"
-        aria-labelledby="clay-id-5"
-        aria-owns="clay-id-6"
-        class="treeview-link"
-        data-id="string,$.0"
-        role="treeitem"
-        style="padding-left: 0px;"
-        tabindex="0"
+      <li
+        class="treeview-item"
+        role="none"
       >
-        <span
-          class="c-inner"
-          style="margin-left: -0px;"
-          tabindex="-2"
+        <div
+          aria-expanded="false"
+          aria-labelledby="clay-id-5"
+          aria-owns="clay-id-6"
+          class="treeview-link"
+          data-id="string,$.0"
+          role="treeitem"
+          style="padding-left: 0px;"
+          tabindex="0"
         >
-          <div
-            class="autofit-row"
+          <span
+            class="c-inner"
+            style="margin-left: -0px;"
+            tabindex="-2"
           >
             <div
-              class="autofit-col"
+              class="autofit-row"
             >
-              <button
-                aria-controls="$.0"
-                aria-expanded="false"
-                class="component-expander btn btn-monospaced"
-                tabindex="-1"
-                type="button"
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="c-inner"
+                    tabindex="-2"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand"
               >
                 <span
-                  class="c-inner"
-                  tabindex="-2"
+                  class="component-text"
+                  id="clay-id-5"
+                  tabindex="-1"
                 >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-right"
-                    />
-                  </svg>
+                  Root
                 </span>
-              </button>
+              </div>
             </div>
-            <div
-              class="autofit-col autofit-col-expand"
-            >
-              <span
-                class="component-text"
-                id="clay-id-5"
-                tabindex="-1"
-              >
-                Root
-              </span>
-            </div>
-          </div>
-        </span>
-      </div>
-    </li>
-  </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`TreeView basic rendering render with actions 1`] = `
 <div>
-  <ul
-    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
-    role="tree"
-    tabindex="-1"
+  <div
+    role="application"
   >
-    <li
-      class="treeview-item"
-      role="none"
+    <ul
+      class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+      role="tree"
+      tabindex="-1"
     >
-      <div
-        aria-labelledby="clay-id-65"
-        aria-owns="clay-id-66"
-        class="treeview-link"
-        data-id="string,$.0"
-        role="treeitem"
-        style="padding-left: 24px;"
-        tabindex="0"
+      <li
+        class="treeview-item"
+        role="none"
       >
-        <span
-          class="c-inner"
-          style="margin-left: -24px;"
-          tabindex="-2"
+        <div
+          aria-labelledby="clay-id-65"
+          aria-owns="clay-id-66"
+          class="treeview-link"
+          data-id="string,$.0"
+          role="treeitem"
+          style="padding-left: 24px;"
+          tabindex="0"
         >
-          <div
-            class="autofit-row"
+          <span
+            class="c-inner"
+            style="margin-left: -24px;"
+            tabindex="-2"
           >
             <div
-              class="autofit-col autofit-col-expand"
-            >
-              <span
-                class="component-text"
-                id="clay-id-65"
-                tabindex="-1"
-              >
-                Root
-              </span>
-            </div>
-            <div
-              class="autofit-col"
-            >
-              <button
-                class="component-action quick-action-item btn btn-monospaced"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-times"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="icons.svg#times"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="autofit-col"
+              class="autofit-row"
             >
               <div
-                class="dropdown"
+                class="autofit-col autofit-col-expand"
+              >
+                <span
+                  class="component-text"
+                  id="clay-id-65"
+                  tabindex="-1"
+                >
+                  Root
+                </span>
+              </div>
+              <div
+                class="autofit-col"
               >
                 <button
-                  aria-controls="clay-dropdown-menu-1"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="dropdown-toggle component-action quick-action-item btn btn-monospaced"
+                  class="component-action quick-action-item btn btn-monospaced"
                   tabindex="0"
                   type="button"
                 >
                   <svg
-                    class="lexicon-icon lexicon-icon-ellipsis-v"
+                    class="lexicon-icon lexicon-icon-times"
                     role="presentation"
                   >
                     <use
-                      xlink:href="icons.svg#ellipsis-v"
+                      xlink:href="icons.svg#times"
                     />
                   </svg>
                 </button>
               </div>
+              <div
+                class="autofit-col"
+              >
+                <div
+                  class="dropdown"
+                >
+                  <button
+                    aria-controls="clay-dropdown-menu-1"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="dropdown-toggle component-action quick-action-item btn btn-monospaced"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-ellipsis-v"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#ellipsis-v"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-        </span>
-      </div>
-    </li>
-  </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`TreeView basic rendering render with checkbox 1`] = `
 <div>
-  <ul
-    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
-    role="tree"
-    tabindex="-1"
+  <div
+    role="application"
   >
-    <li
-      class="treeview-item"
-      role="none"
+    <ul
+      class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+      role="tree"
+      tabindex="-1"
     >
-      <div
-        aria-expanded="false"
-        aria-labelledby="clay-id-96"
-        aria-owns="clay-id-97"
-        class="treeview-link"
-        data-id="string,$.0"
-        role="treeitem"
-        style="padding-left: 0px;"
-        tabindex="0"
+      <li
+        class="treeview-item"
+        role="none"
       >
-        <span
-          class="c-inner"
-          style="margin-left: -0px;"
-          tabindex="-2"
+        <div
+          aria-expanded="false"
+          aria-labelledby="clay-id-96"
+          aria-owns="clay-id-97"
+          class="treeview-link"
+          data-id="string,$.0"
+          role="treeitem"
+          style="padding-left: 0px;"
+          tabindex="0"
         >
-          <div
-            class="autofit-row"
+          <span
+            class="c-inner"
+            style="margin-left: -0px;"
+            tabindex="-2"
           >
             <div
-              class="autofit-col"
-            >
-              <button
-                aria-controls="$.0"
-                aria-expanded="false"
-                class="component-expander btn btn-monospaced"
-                tabindex="-1"
-                type="button"
-              >
-                <span
-                  class="c-inner"
-                  tabindex="-2"
-                >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div
-              class="autofit-col"
+              class="autofit-row"
             >
               <div
-                class="custom-control custom-checkbox"
+                class="autofit-col"
               >
-                <label>
-                  <input
-                    class="custom-control-input"
-                    type="checkbox"
-                  />
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
+                >
                   <span
-                    class="custom-control-label"
-                  />
-                </label>
+                    class="c-inner"
+                    tabindex="-2"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <div
+                  class="custom-control custom-checkbox"
+                >
+                  <label>
+                    <input
+                      class="custom-control-input"
+                      type="checkbox"
+                    />
+                    <span
+                      class="custom-control-label"
+                    />
+                  </label>
+                </div>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand"
+              >
+                <span
+                  class="component-text"
+                  id="clay-id-96"
+                  tabindex="-1"
+                >
+                  Root
+                </span>
               </div>
             </div>
-            <div
-              class="autofit-col autofit-col-expand"
-            >
-              <span
-                class="component-text"
-                id="clay-id-96"
-                tabindex="-1"
-              >
-                Root
-              </span>
-            </div>
-          </div>
-        </span>
-      </div>
-    </li>
-  </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`TreeView basic rendering render with item active 1`] = `
 <div>
-  <ul
-    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
-    role="tree"
-    tabindex="-1"
+  <div
+    role="application"
   >
-    <li
-      class="treeview-item"
-      role="none"
+    <ul
+      class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+      role="tree"
+      tabindex="-1"
     >
-      <div
-        aria-expanded="false"
-        aria-labelledby="clay-id-160"
-        aria-owns="clay-id-161"
-        class="treeview-link active"
-        data-id="string,$.0"
-        role="treeitem"
-        style="padding-left: 0px;"
-        tabindex="0"
+      <li
+        class="treeview-item"
+        role="none"
       >
-        <span
-          class="c-inner"
-          style="margin-left: -0px;"
-          tabindex="-2"
+        <div
+          aria-expanded="false"
+          aria-labelledby="clay-id-160"
+          aria-owns="clay-id-161"
+          class="treeview-link active"
+          data-id="string,$.0"
+          role="treeitem"
+          style="padding-left: 0px;"
+          tabindex="0"
         >
-          <div
-            class="autofit-row"
+          <span
+            class="c-inner"
+            style="margin-left: -0px;"
+            tabindex="-2"
           >
             <div
-              class="autofit-col"
-            >
-              <button
-                aria-controls="$.0"
-                aria-expanded="false"
-                class="component-expander btn btn-monospaced"
-                tabindex="-1"
-                type="button"
-              >
-                <span
-                  class="c-inner"
-                  tabindex="-2"
-                >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div
-              class="autofit-col"
+              class="autofit-row"
             >
               <div
-                class="custom-control custom-checkbox"
+                class="autofit-col"
               >
-                <label>
-                  <input
-                    class="custom-control-input"
-                    type="checkbox"
-                  />
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
+                >
                   <span
-                    class="custom-control-label"
-                  />
-                </label>
+                    class="c-inner"
+                    tabindex="-2"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <div
+                  class="custom-control custom-checkbox"
+                >
+                  <label>
+                    <input
+                      class="custom-control-input"
+                      type="checkbox"
+                    />
+                    <span
+                      class="custom-control-label"
+                    />
+                  </label>
+                </div>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand"
+              >
+                <span
+                  class="component-text"
+                  id="clay-id-160"
+                  tabindex="-1"
+                >
+                  Root
+                </span>
               </div>
             </div>
-            <div
-              class="autofit-col autofit-col-expand"
-            >
-              <span
-                class="component-text"
-                id="clay-id-160"
-                tabindex="-1"
-              >
-                Root
-              </span>
-            </div>
-          </div>
-        </span>
-      </div>
-    </li>
-  </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`TreeView basic rendering render with text 1`] = `
 <div>
-  <ul
-    class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
-    role="tree"
-    tabindex="-1"
+  <div
+    role="application"
   >
-    <li
-      class="treeview-item"
-      role="none"
+    <ul
+      class="treeview show-quick-actions-on-hover treeview-light show-component-expander-on-hover"
+      role="tree"
+      tabindex="-1"
     >
-      <div
-        aria-expanded="false"
-        aria-labelledby="clay-id-106"
-        aria-owns="clay-id-107"
-        class="treeview-link"
-        data-id="string,$.0"
-        role="treeitem"
-        style="padding-left: 0px;"
-        tabindex="0"
+      <li
+        class="treeview-item"
+        role="none"
       >
-        <span
-          class="c-inner"
-          style="margin-left: -0px;"
-          tabindex="-2"
+        <div
+          aria-expanded="false"
+          aria-labelledby="clay-id-106"
+          aria-owns="clay-id-107"
+          class="treeview-link"
+          data-id="string,$.0"
+          role="treeitem"
+          style="padding-left: 0px;"
+          tabindex="0"
         >
-          <div
-            class="autofit-row"
+          <span
+            class="c-inner"
+            style="margin-left: -0px;"
+            tabindex="-2"
           >
             <div
-              class="autofit-col"
-            >
-              <button
-                aria-controls="$.0"
-                aria-expanded="false"
-                class="component-expander btn btn-monospaced"
-                tabindex="-1"
-                type="button"
-              >
-                <span
-                  class="c-inner"
-                  tabindex="-2"
-                >
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-down"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-down"
-                    />
-                  </svg>
-                  <svg
-                    class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="icons.svg#angle-right"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <div
-              class="autofit-col"
+              class="autofit-row"
             >
               <div
-                class="custom-control custom-checkbox"
+                class="autofit-col"
               >
-                <label>
-                  <input
-                    class="custom-control-input"
-                    type="checkbox"
-                  />
+                <button
+                  aria-controls="$.0"
+                  aria-expanded="false"
+                  class="component-expander btn btn-monospaced"
+                  tabindex="-1"
+                  type="button"
+                >
                   <span
-                    class="custom-control-label"
-                  />
-                </label>
+                    class="c-inner"
+                    tabindex="-2"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-down"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-down"
+                      />
+                    </svg>
+                    <svg
+                      class="lexicon-icon lexicon-icon-angle-right component-expanded-d-none"
+                      role="presentation"
+                    >
+                      <use
+                        xlink:href="icons.svg#angle-right"
+                      />
+                    </svg>
+                  </span>
+                </button>
               </div>
-            </div>
-            <div
-              class="autofit-col autofit-col-expand"
-            >
-              <span
-                class="component-text"
-                id="clay-id-106"
-                tabindex="-1"
+              <div
+                class="autofit-col"
+              >
+                <div
+                  class="custom-control custom-checkbox"
+                >
+                  <label>
+                    <input
+                      class="custom-control-input"
+                      type="checkbox"
+                    />
+                    <span
+                      class="custom-control-label"
+                    />
+                  </label>
+                </div>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand"
               >
                 <span
-                  class="text-3 text-truncate"
+                  class="component-text"
+                  id="clay-id-106"
+                  tabindex="-1"
                 >
-                  Root
+                  <span
+                    class="text-3 text-truncate"
+                  >
+                    Root
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
-          </div>
-        </span>
-      </div>
-    </li>
-  </ul>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;

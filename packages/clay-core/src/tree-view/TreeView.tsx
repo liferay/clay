@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {useNavigation} from '@clayui/shared';
+import {isAppleDevice, useNavigation} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useRef} from 'react';
 import {DndProvider} from 'react-dnd';
@@ -120,6 +120,10 @@ interface ITreeViewProps<T extends Record<string, any>>
 
 const focusableElements = ['.treeview-link[tabindex]'];
 
+const Application = ({children}: {children: React.ReactNode}) => (
+	<div role="application">{children}</div>
+);
+
 export function TreeView<T extends Record<string, any>>(
 	props: ITreeViewProps<T>
 ): JSX.Element & {
@@ -212,44 +216,51 @@ export function TreeView<T extends Record<string, any>>({
 		visible: true,
 	});
 
+	const Container = isAppleDevice() ? React.Fragment : Application;
+
 	return (
-		<ul
-			{...otherProps}
-			{...navigationProps}
-			className={classNames(
-				'treeview show-quick-actions-on-hover',
-				className,
-				{
-					[`treeview-${displayType}`]: displayType,
-					'show-component-expander-on-hover': showExpanderOnHover,
-				}
-			)}
-			ref={rootRef}
-			role="tree"
-			tabIndex={-1}
-		>
-			<DndProvider backend={HTML5Backend} context={dragAndDropContext}>
-				<TreeViewContext.Provider value={context}>
-					<DragAndDropProvider<T>
-						messages={messages}
-						nestedKey={nestedKey}
-						onItemHover={onItemHover}
-						onItemMove={onItemMove}
-						rootRef={rootRef}
-					>
-						<FocusWithinProvider
-							containerRef={rootRef}
-							focusableElements={focusableElements}
+		<Container>
+			<ul
+				{...otherProps}
+				{...navigationProps}
+				className={classNames(
+					'treeview show-quick-actions-on-hover',
+					className,
+					{
+						[`treeview-${displayType}`]: displayType,
+						'show-component-expander-on-hover': showExpanderOnHover,
+					}
+				)}
+				ref={rootRef}
+				role="tree"
+				tabIndex={-1}
+			>
+				<DndProvider
+					backend={HTML5Backend}
+					context={dragAndDropContext}
+				>
+					<TreeViewContext.Provider value={context}>
+						<DragAndDropProvider<T>
+							messages={messages}
+							nestedKey={nestedKey}
+							onItemHover={onItemHover}
+							onItemMove={onItemMove}
+							rootRef={rootRef}
 						>
-							<Collection<T> items={state.items}>
-								{children}
-							</Collection>
-							<DragLayer itemNameKey={itemNameKey} />
-						</FocusWithinProvider>
-					</DragAndDropProvider>
-				</TreeViewContext.Provider>
-			</DndProvider>
-		</ul>
+							<FocusWithinProvider
+								containerRef={rootRef}
+								focusableElements={focusableElements}
+							>
+								<Collection<T> items={state.items}>
+									{children}
+								</Collection>
+								<DragLayer itemNameKey={itemNameKey} />
+							</FocusWithinProvider>
+						</DragAndDropProvider>
+					</TreeViewContext.Provider>
+				</DndProvider>
+			</ul>
+		</Container>
 	);
 }
 
