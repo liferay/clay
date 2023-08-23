@@ -24,7 +24,7 @@ export const Default = () => (
 
 export const WithLinks = (args: any) => (
 	<ClayPaginationWithBasicItems
-		activePage={args.activePage}
+		defaultActive={args.activePage}
 		ellipsisBuffer={args.ellipsisBuffer}
 		ellipsisProps={{
 			'aria-label': 'More {0} through {1}',

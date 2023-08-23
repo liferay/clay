@@ -3,15 +3,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import ClayButton from '@clayui/button';
-import {ClayDropDownWithItems} from '@clayui/drop-down';
+import Button from '@clayui/button';
+import {__EXPERIMENTAL_MENU} from '@clayui/core';
+import DropDown from '@clayui/drop-down';
 import {sub} from '@clayui/shared';
 import React from 'react';
+
+const {Item, Menu} = __EXPERIMENTAL_MENU;
 
 export interface IPaginationEllipsisProps {
 	'aria-label'?: string;
 	alignmentPosition?: React.ComponentProps<
-		typeof ClayDropDownWithItems
+		typeof DropDown
 	>['alignmentPosition'];
 	disabled?: boolean;
 	disabledPages?: Array<number>;
@@ -22,7 +25,7 @@ export interface IPaginationEllipsisProps {
 }
 
 const ClayPaginationEllipsis = ({
-	alignmentPosition,
+	alignmentPosition: _alignmentPosition,
 	disabled = false,
 	disabledPages = [],
 	hrefConstructor,
@@ -30,50 +33,53 @@ const ClayPaginationEllipsis = ({
 	onPageChange,
 	...otherProps
 }: IPaginationEllipsisProps) => {
-	const pages = disabled
-		? []
-		: items.map((page) => ({
-				disabled: disabledPages.includes(page),
-				href: hrefConstructor ? hrefConstructor(page) : undefined,
-				label: String(page),
-				onClick: () => onPageChange && onPageChange(page),
-		  }));
-
 	const ariaLabel =
 		otherProps['aria-label'] && !disabled
 			? sub(otherProps['aria-label'], [
-					pages[0]?.label as string,
-					pages[pages.length - 1]?.label as string,
+					String(items[0]),
+					String(items[items.length - 1]),
 			  ])
 			: undefined;
 
 	const title =
 		otherProps['title'] && !disabled
 			? sub(otherProps['title'], [
-					pages[0]?.label as string,
-					pages[pages.length - 1]?.label as string,
+					String(items[0]),
+					String(items[items.length - 1]),
 			  ])
 			: undefined;
 
 	return (
-		<ClayDropDownWithItems
-			alignmentPosition={alignmentPosition}
-			className="page-item"
-			containerElement="li"
-			items={pages}
-			trigger={
-				<ClayButton
-					{...otherProps}
-					aria-label={ariaLabel}
-					className="page-link"
-					disabled={disabled}
-					displayType="unstyled"
-					title={title}
-				>
-					...
-				</ClayButton>
-			}
-		/>
+		<li className="page-item">
+			<Menu
+				disabled={disabled}
+				items={items}
+				trigger={
+					<Button
+						{...otherProps}
+						aria-label={ariaLabel}
+						className="page-link"
+						displayType="unstyled"
+						title={title}
+					>
+						...
+					</Button>
+				}
+			>
+				{(item) => (
+					<Item
+						disabled={disabledPages.includes(item)}
+						href={
+							hrefConstructor ? hrefConstructor(item) : undefined
+						}
+						key={item}
+						onClick={() => onPageChange && onPageChange(item)}
+					>
+						{String(item)}
+					</Item>
+				)}
+			</Menu>
+		</li>
 	);
 };
 
