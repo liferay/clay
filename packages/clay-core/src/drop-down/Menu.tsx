@@ -226,7 +226,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 							event.stopPropagation();
 
 							if (!active) {
-								setActive(true);
+								return setActive(true);
 							}
 
 							navigationProps.onKeyDown(event);
