@@ -30,7 +30,7 @@ export function useVirtual<T>({estimateSize, items = [], parentRef}: Props<T>) {
 		count: items.length,
 		estimateSize: () => estimateSize,
 		getScrollElement: () => parentRef.current,
-		overscan: 5,
+		overscan: 7,
 	});
 
 	const previousLengthRef = useRef(items.length);

@@ -123,7 +123,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 	});
 
 	const virtualizer = useVirtual<T>({
-		estimateSize: 37,
+		estimateSize: 32,
 		items: items ?? [],
 		parentRef: menuRef,
 	});
@@ -221,12 +221,13 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 							event.preventDefault();
 							setActive(!active);
 							break;
+						case Keys.Up:
 						case Keys.Down: {
 							event.preventDefault();
 							event.stopPropagation();
 
 							if (!active) {
-								return setActive(true);
+								setActive(true);
 							}
 
 							navigationProps.onKeyDown(event);
