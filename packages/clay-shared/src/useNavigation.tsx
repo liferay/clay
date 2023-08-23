@@ -129,9 +129,13 @@ export function useNavigation<T extends HTMLElement | null>({
 			}
 
 			if (collection?.virtualize) {
+				const isEnd =
+					collection.UNSAFE_virtualizer!.options.count - 1 === index;
+				const isStart = index === 0;
+
 				collection.UNSAFE_virtualizer!.scrollToIndex(index!, {
 					align: 'auto',
-					behavior: 'auto',
+					behavior: isStart || isEnd ? 'auto' : 'smooth',
 				});
 
 				if (!onNavigate && !element) {
@@ -215,6 +219,13 @@ export function useNavigation<T extends HTMLElement | null>({
 							position = (items as Array<React.Key>).indexOf(
 								focusKey!
 							);
+
+							if (position === -1) {
+								item =
+									event.key === key
+										? collection.getLastItem().key
+										: collection.getFirstItem().key;
+							}
 						} else {
 							const activeElement =
 								document.activeElement as HTMLElement;
@@ -383,30 +394,6 @@ export function useNavigation<T extends HTMLElement | null>({
 				collection.getItem(active).index,
 				{align: 'center', behavior: 'auto'}
 			);
-		} else if (containerRef.current && visible && collection?.virtualize) {
-			const activeElement = document.activeElement as HTMLElement;
-
-			const focusKey = activeElement.getAttribute('data-focus');
-
-			if (focusKey) {
-				collection.UNSAFE_virtualizer!.scrollToIndex(
-					collection.getItem(focusKey).index,
-					{align: 'center', behavior: 'auto'}
-				);
-			} else {
-				const item = collection.getFirstItem();
-				const element = containerRef.current.querySelector(
-					`[data-focus="${item.key}"]`
-				) as HTMLElement;
-
-				if (element) {
-					collection.UNSAFE_virtualizer!.scrollToIndex(item.index, {
-						align: 'center',
-						behavior: 'auto',
-					});
-					element.focus();
-				}
-			}
 		}
 	}, [visible]);
 
