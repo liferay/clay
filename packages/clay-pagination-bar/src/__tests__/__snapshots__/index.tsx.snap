@@ -92,19 +92,22 @@ exports[`ClayPaginationBar renders 1`] = `
           </a>
         </li>
         <li
-          class="dropdown page-item"
+          class="page-item"
         >
-          <button
-            aria-controls="clay-dropdown-menu-1"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-label="Show pages 4 through 9"
-            class="dropdown-toggle page-link btn btn-unstyled"
-            title="Show pages 4 through 9"
-            type="button"
+          <div
+            class="dropdown"
           >
-            ...
-          </button>
+            <button
+              aria-controls="clay-id-5"
+              aria-haspopup="true"
+              aria-label="Show pages 4 through 9"
+              class="dropdown-toggle page-link btn btn-unstyled"
+              title="Show pages 4 through 9"
+              type="button"
+            >
+              ...
+            </button>
+          </div>
         </li>
         <li
           class="page-item"
@@ -149,7 +152,7 @@ exports[`ClayPaginationBar renders without a DropDown 1`] = `
   >
     <div
       class="pagination-results"
-      id="clay-id-5"
+      id="clay-id-6"
     >
       Showing 1 to 10 of 100
     </div>
@@ -210,19 +213,22 @@ exports[`ClayPaginationBar renders without a DropDown 1`] = `
           </a>
         </li>
         <li
-          class="dropdown page-item"
+          class="page-item"
         >
-          <button
-            aria-controls="clay-dropdown-menu-2"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-label="Show pages 4 through 9"
-            class="dropdown-toggle page-link btn btn-unstyled"
-            title="Show pages 4 through 9"
-            type="button"
+          <div
+            class="dropdown"
           >
-            ...
-          </button>
+            <button
+              aria-controls="clay-id-8"
+              aria-haspopup="true"
+              aria-label="Show pages 4 through 9"
+              class="dropdown-toggle page-link btn btn-unstyled"
+              title="Show pages 4 through 9"
+              type="button"
+            >
+              ...
+            </button>
+          </div>
         </li>
         <li
           class="page-item"
@@ -267,7 +273,7 @@ exports[`ClayPaginationBar totalItems with 0 will render the pagination bar with
   >
     <div
       class="pagination-results"
-      id="clay-id-7"
+      id="clay-id-9"
     >
       Showing 1 to 1 of 1
     </div>
