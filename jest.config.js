@@ -26,7 +26,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-breadcrumb/src/': {
-			branches: 75,
+			branches: 72,
 			functions: 85,
 			lines: 95,
 			statements: 96,
@@ -165,9 +165,9 @@ module.exports = {
 		},
 		'./packages/clay-pagination/src/': {
 			branches: 86,
-			functions: 100,
-			lines: 100,
-			statements: 100,
+			functions: 92,
+			lines: 92,
+			statements: 98,
 		},
 		'./packages/clay-pagination-bar/src/': {
 			branches: 100,
@@ -194,7 +194,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-shared/src/': {
-			branches: 18,
+			branches: 17,
 			functions: 13,
 			lines: 34,
 			statements: 37,

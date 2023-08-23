@@ -39,19 +39,22 @@ exports[`ClayPagination renders 1`] = `
         </a>
       </li>
       <li
-        class="dropdown page-item"
+        class="page-item"
       >
-        <button
-          aria-controls="clay-dropdown-menu-1"
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-label="Show pages 2 through 9"
-          class="dropdown-toggle page-link btn btn-unstyled"
-          title="Show pages 2 through 9"
-          type="button"
+        <div
+          class="dropdown"
         >
-          ...
-        </button>
+          <button
+            aria-controls="clay-id-2"
+            aria-haspopup="true"
+            aria-label="Show pages 2 through 9"
+            class="dropdown-toggle page-link btn btn-unstyled"
+            title="Show pages 2 through 9"
+            type="button"
+          >
+            ...
+          </button>
+        </div>
       </li>
       <li
         class="page-item"
@@ -109,19 +112,22 @@ exports[`ClayPagination renders 1`] = `
         </a>
       </li>
       <li
-        class="dropdown page-item"
+        class="page-item"
       >
-        <button
-          aria-controls="clay-dropdown-menu-2"
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-label="Show pages 15 through 24"
-          class="dropdown-toggle page-link btn btn-unstyled"
-          title="Show pages 15 through 24"
-          type="button"
+        <div
+          class="dropdown"
         >
-          ...
-        </button>
+          <button
+            aria-controls="clay-id-4"
+            aria-haspopup="true"
+            aria-label="Show pages 15 through 24"
+            class="dropdown-toggle page-link btn btn-unstyled"
+            title="Show pages 15 through 24"
+            type="button"
+          >
+            ...
+          </button>
+        </div>
       </li>
       <li
         class="page-item"

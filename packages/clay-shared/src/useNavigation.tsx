@@ -124,13 +124,27 @@ export function useNavigation<T extends HTMLElement | null>({
 					? item
 					: document.getElementById(String(item))!;
 
-			onNavigate!(item, index);
+			if (onNavigate) {
+				onNavigate(item, index);
+			}
 
 			if (collection?.virtualize) {
 				collection.UNSAFE_virtualizer!.scrollToIndex(index!, {
 					align: 'auto',
-					behavior: 'smooth',
+					behavior: 'auto',
 				});
+
+				if (!onNavigate && !element) {
+					setTimeout(() => {
+						const nextFocus = containerRef.current!.querySelector(
+							`[data-focus="${item}"]`
+						) as HTMLElement;
+
+						if (nextFocus) {
+							nextFocus.focus();
+						}
+					}, 20);
+				}
 
 				return;
 			}
@@ -184,9 +198,22 @@ export function useNavigation<T extends HTMLElement | null>({
 					case Keys.Up: {
 						let position: number;
 
-						if (collection) {
+						const key =
+							orientation === 'vertical' ? Keys.Up : Keys.Left;
+
+						if (collection && typeof active === 'string') {
 							position = (items as Array<React.Key>).indexOf(
 								active!
+							);
+						} else if (collection) {
+							const activeElement =
+								document.activeElement as HTMLElement;
+
+							const focusKey =
+								activeElement.getAttribute('data-focus');
+
+							position = (items as Array<React.Key>).indexOf(
+								focusKey!
 							);
 						} else {
 							const activeElement =
@@ -209,9 +236,6 @@ export function useNavigation<T extends HTMLElement | null>({
 						if (position === -1) {
 							break;
 						}
-
-						const key =
-							orientation === 'vertical' ? Keys.Up : Keys.Left;
 
 						item =
 							items[
@@ -322,7 +346,7 @@ export function useNavigation<T extends HTMLElement | null>({
 							? item
 							: document.getElementById(String(item))!;
 
-					if (onNavigate) {
+					if (onNavigate || !element) {
 						accessibilityFocus(item, items);
 					} else {
 						element.focus();
@@ -359,6 +383,30 @@ export function useNavigation<T extends HTMLElement | null>({
 				collection.getItem(active).index,
 				{align: 'center', behavior: 'auto'}
 			);
+		} else if (containerRef.current && visible && collection?.virtualize) {
+			const activeElement = document.activeElement as HTMLElement;
+
+			const focusKey = activeElement.getAttribute('data-focus');
+
+			if (focusKey) {
+				collection.UNSAFE_virtualizer!.scrollToIndex(
+					collection.getItem(focusKey).index,
+					{align: 'center', behavior: 'auto'}
+				);
+			} else {
+				const item = collection.getFirstItem();
+				const element = containerRef.current.querySelector(
+					`[data-focus="${item.key}"]`
+				) as HTMLElement;
+
+				if (element) {
+					collection.UNSAFE_virtualizer!.scrollToIndex(item.index, {
+						align: 'center',
+						behavior: 'auto',
+					});
+					element.focus();
+				}
+			}
 		}
 	}, [visible]);
 
