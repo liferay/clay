@@ -221,6 +221,8 @@
 						@include clay-dropdown-menu-variant($breakpoint-up);
 					} @else if ($mixin == 'clay-menubar-vertical-variant') {
 						@include clay-menubar-vertical-variant($breakpoint-up);
+					} @else if ($mixin == 'clay-select-variant') {
+						@include clay-select-variant($breakpoint-up);
 					}
 				}
 			}
@@ -249,6 +251,8 @@
 						@include clay-menubar-vertical-variant(
 							$breakpoint-down
 						);
+					} @else if ($mixin == 'clay-select-variant') {
+						@include clay-select-variant($breakpoint-down);
 					}
 				}
 			}
