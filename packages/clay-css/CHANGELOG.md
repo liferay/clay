@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
+
+
+### Bug Fixes
+
+* **@clayui/breadcrumb:** updates colors to active state with link and expand button ([0313029](https://github.com/liferay/clay/commit/0313029dfe39c7689315919d9c3f36fdea8b97f9))
+* **@clayui/breadcrumb:** use `breadcrumb-toggle` instead of `breadcrumb-item-expand` ([a94ba61](https://github.com/liferay/clay/commit/a94ba614e9742ea83767d93573fc75608871c95f))
+
+
+### Features
+
+* **@clayui/css:** add `clay-generate-media-breakpoints` mixin to `clay-select-variant` ([dbd5aac](https://github.com/liferay/clay/commit/dbd5aacaec56a45179bc4ad3422752bca9570c5d))
+* **@clayui/css:** adds new size small to DatePicker ([bdbebeb](https://github.com/liferay/clay/commit/bdbebeba40bbd8c696881130a706f85212c99980))
+* **@clayui/css:** Adds param where you can specify the mixin to use for clay-generate-media-breakpoints ([bc1e2d7](https://github.com/liferay/clay/commit/bc1e2d7756a315230777dc7d752e8aa1210a67d4))
+* **@clayui/css:** Cadmin  Date Picker update to use newer media query pattern in variables ([90d3d72](https://github.com/liferay/clay/commit/90d3d72a5f24d276db018aa3553d93ca00a20455))
+* **@clayui/css:** Date Picker update to use newer media query pattern in variables ([25cc0c2](https://github.com/liferay/clay/commit/25cc0c239335cb21e102c7d1023f622b3f5a2e31))
+* **@clayui/css:** modifies DatePicker size to new default of 352px ([6ace393](https://github.com/liferay/clay/commit/6ace393fd30661ff8c0632f9d9ea2c7926be3c06))
+
+
+
+
+
 ## [3.103.1](https://github.com/liferay/clay/compare/v3.103.0...v3.103.1) (2023-08-15)
 
 

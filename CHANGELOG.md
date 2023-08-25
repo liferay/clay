@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
+
+### Bug Fixes
+
+-   **@clayui/breadcrumb:** the active item must not have the href ([4482a15](https://github.com/liferay/clay/commit/4482a15494fa4aef807bb4b023f18281e8cf54ed))
+-   **@clayui/breadcrumb:** updates colors to active state with link and expand button ([0313029](https://github.com/liferay/clay/commit/0313029dfe39c7689315919d9c3f36fdea8b97f9))
+-   **@clayui/breadcrumb:** use `breadcrumb-toggle` instead of `breadcrumb-item-expand` ([a94ba61](https://github.com/liferay/clay/commit/a94ba614e9742ea83767d93573fc75608871c95f))
+-   **@clayui/core:** fix error when interacting with TreeView using SR JAWS ([7933620](https://github.com/liferay/clay/commit/7933620ae9dc9ff356ae1692054674978152d365))
+-   **@clayui/core:** improves navigation for navigating up and down when opening a Menu ([f52c93d](https://github.com/liferay/clay/commit/f52c93d121eff8c210c7bc8ffdec6a8d27ca82eb))
+-   **@clayui/drop-down:** fix ref error on collection ([1ab3b26](https://github.com/liferay/clay/commit/1ab3b26eeadcb2aa0d7f07551621d79e095160f0))
+-   **@clayui/pagination:** fix bug rendering large list of items with virtualization ([9c0578d](https://github.com/liferay/clay/commit/9c0578d9990d633119eeb03e297e06c98d6225bd))
+
+### Features
+
+-   **@clayui/core:** adds new experimental Menu component ([4560451](https://github.com/liferay/clay/commit/45604517f2e589af9a86d5a88660ebd13cf460ec))
+-   **@clayui/css:** add `clay-generate-media-breakpoints` mixin to `clay-select-variant` ([dbd5aac](https://github.com/liferay/clay/commit/dbd5aacaec56a45179bc4ad3422752bca9570c5d))
+-   **@clayui/css:** adds new size small to DatePicker ([bdbebeb](https://github.com/liferay/clay/commit/bdbebeba40bbd8c696881130a706f85212c99980))
+-   **@clayui/css:** Adds param where you can specify the mixin to use for clay-generate-media-breakpoints ([bc1e2d7](https://github.com/liferay/clay/commit/bc1e2d7756a315230777dc7d752e8aa1210a67d4))
+-   **@clayui/css:** Cadmin Date Picker update to use newer media query pattern in variables ([90d3d72](https://github.com/liferay/clay/commit/90d3d72a5f24d276db018aa3553d93ca00a20455))
+-   **@clayui/css:** Date Picker update to use newer media query pattern in variables ([25cc0c2](https://github.com/liferay/clay/commit/25cc0c239335cb21e102c7d1023f622b3f5a2e31))
+-   **@clayui/css:** modifies DatePicker size to new default of 352px ([6ace393](https://github.com/liferay/clay/commit/6ace393fd30661ff8c0632f9d9ea2c7926be3c06))
+
 ## [3.103.1](https://github.com/liferay/clay/compare/v3.103.0...v3.103.1) (2023-08-15)
 
 ### Bug Fixes

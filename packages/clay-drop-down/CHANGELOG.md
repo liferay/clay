@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** fix ref error on collection ([1ab3b26](https://github.com/liferay/clay/commit/1ab3b26eeadcb2aa0d7f07551621d79e095160f0))
+
 ## [3.103.1](https://github.com/liferay/clay/compare/v3.103.0...v3.103.1) (2023-08-15)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** fix bug rendering large list of items with virtualization ([9c0578d](https://github.com/liferay/clay/commit/9c0578d9990d633119eeb03e297e06c98d6225bd))
+
 ## [3.103.1](https://github.com/liferay/clay/compare/v3.103.0...v3.103.1) (2023-08-15)
 
 **Note:** Version bump only for package @clayui/pagination
