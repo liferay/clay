@@ -13,8 +13,9 @@ $cadmin-date-picker-dropdown-menu: map-deep-merge(
 		media-breakpoint-down: (
 			xs: (
 				font-size: 12px,
+				margin: 0,
+				max-height: 255px,
 				max-width: 264px,
-				max-height: 254px,
 			),
 		),
 	),
@@ -252,6 +253,7 @@ $cadmin-date-picker-calendar-footer-container: map-merge(
 			xs: (
 				padding-left: 6px,
 				padding-right: 6px,
+				padding-top: 7px,
 			),
 		),
 	),
