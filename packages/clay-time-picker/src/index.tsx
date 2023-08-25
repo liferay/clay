@@ -395,7 +395,7 @@ const ClayTimePicker = ({
 					</ClayInput.GroupItem>
 				)}
 				<FocusScope arrowKeysLeftRight arrowKeysUpDown={false}>
-					<ClayInput.GroupItem shrink>
+					<ClayInput.GroupItem>
 						<div
 							className={classNames('form-control', {
 								disabled,

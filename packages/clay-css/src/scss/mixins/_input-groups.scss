@@ -189,24 +189,14 @@
 				@include clay-css(map-deep-get($map, lexicon-icon));
 			}
 
-			@if (map-get($map, media-breakpoint-down)) {
-				@each $breakpoint
-					in map-keys(map-get($map, media-breakpoint-down))
-				{
-					$media-breakpoint-down: map-deep-get(
-						$map,
-						media-breakpoint-down,
-						$breakpoint
-					);
+			$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+			$_media-breakpoint-up: map-get($map, media-breakpoint-up);
 
-					@if ($breakpoint) {
-						@include media-breakpoint-down($breakpoint) {
-							@include clay-input-group-text-variant(
-								$media-breakpoint-down
-							);
-						}
-					}
-				}
+			@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+				@include clay-generate-media-breakpoints(
+					$map,
+					'clay-input-group-text-variant'
+				);
 			}
 		}
 	}
@@ -495,24 +485,14 @@
 				@include clay-button-variant(map-deep-get($map, btn-unstyled));
 			}
 
-			@if (map-get($map, media-breakpoint-down)) {
-				@each $breakpoint
-					in map-keys(map-get($map, media-breakpoint-down))
-				{
-					$media-breakpoint-down: map-deep-get(
-						$map,
-						media-breakpoint-down,
-						$breakpoint
-					);
+			$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+			$_media-breakpoint-up: map-get($map, media-breakpoint-up);
 
-					@if ($breakpoint) {
-						@include media-breakpoint-down($breakpoint) {
-							@include clay-input-group-variant(
-								$media-breakpoint-down
-							);
-						}
-					}
-				}
+			@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+				@include clay-generate-media-breakpoints(
+					$map,
+					'clay-input-group-variant'
+				);
 			}
 		}
 	}

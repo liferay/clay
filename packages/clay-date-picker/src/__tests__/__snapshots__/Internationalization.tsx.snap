@@ -64,7 +64,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-19"
         role="dialog"
@@ -901,7 +901,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-7"
         role="dialog"
@@ -1738,7 +1738,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-22"
         role="dialog"
@@ -2575,7 +2575,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-4"
         role="dialog"
@@ -3412,7 +3412,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-16"
         role="dialog"
@@ -4249,7 +4249,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-10"
         role="dialog"
@@ -5190,7 +5190,7 @@ exports[`Internationalization FirstDayOfWeek first day of the week should start 
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-13"
         role="dialog"
@@ -6027,7 +6027,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
     <div>
       <div
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-1"
         role="dialog"
@@ -6951,7 +6951,7 @@ exports[`Internationalization renders the date picker in russian 1`] = `
                     </div>
                   </div>
                   <div
-                    class="input-group-item input-group-item-shrink"
+                    class="input-group-item"
                   >
                     <div
                       class="form-control"

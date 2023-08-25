@@ -3,7 +3,7 @@
 $date-picker-dropdown-menu: () !default;
 $date-picker-dropdown-menu: map-deep-merge(
 	(
-		max-width: 368px,
+		max-width: 352px,
 	),
 	$date-picker-dropdown-menu
 );

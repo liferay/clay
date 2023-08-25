@@ -1,4 +1,10 @@
 .date-picker {
+	.input-group-item {
+		@include clay-input-group-item-variant(
+			$cadmin-date-picker-input-group-item
+		);
+	}
+
 	.input-group-text {
 		@include clay-input-group-text-variant(
 			$cadmin-date-picker-input-group-text
@@ -37,8 +43,8 @@
 .date-picker-nav-item {
 	align-items: center;
 	display: flex;
-	padding-left: 4px;
-	padding-right: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 
 .date-picker-nav-item-expand {
@@ -58,14 +64,62 @@
 
 .date-picker-calendar-header {
 	@include clay-css($cadmin-date-picker-calendar-header-container);
+
+	$_media-breakpoint-down: map-get(
+		$cadmin-date-picker-calendar-header-container,
+		media-breakpoint-down
+	);
+	$_media-breakpoint-up: map-get(
+		$cadmin-date-picker-calendar-header-container,
+		media-breakpoint-up
+	);
+
+	@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+		@include clay-generate-media-breakpoints(
+			$cadmin-date-picker-calendar-header-container,
+			'clay-css'
+		);
+	}
 }
 
 .date-picker-calendar-body {
 	@include clay-css($cadmin-date-picker-calendar-body-container);
+
+	$_media-breakpoint-down: map-get(
+		$cadmin-date-picker-calendar-body-container,
+		media-breakpoint-down
+	);
+	$_media-breakpoint-up: map-get(
+		$cadmin-date-picker-calendar-body-container,
+		media-breakpoint-up
+	);
+
+	@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+		@include clay-generate-media-breakpoints(
+			$cadmin-date-picker-calendar-body-container,
+			'clay-css'
+		);
+	}
 }
 
 .date-picker-calendar-footer {
 	@include clay-css($cadmin-date-picker-calendar-footer-container);
+
+	$_media-breakpoint-down: map-get(
+		$cadmin-date-picker-calendar-footer-container,
+		media-breakpoint-down
+	);
+	$_media-breakpoint-up: map-get(
+		$cadmin-date-picker-calendar-footer-container,
+		media-breakpoint-up
+	);
+
+	@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+		@include clay-generate-media-breakpoints(
+			$cadmin-date-picker-calendar-footer-container,
+			'clay-css'
+		);
+	}
 }
 
 .date-picker-calendar-item {
@@ -124,6 +178,19 @@
 		);
 
 		@include clay-css($cadmin-_c-selected-end);
+	}
+
+	$_media-breakpoint-down: map-get(
+		$cadmin-date-picker-col,
+		media-breakpoint-down
+	);
+	$_media-breakpoint-up: map-get(
+		$cadmin-date-picker-col,
+		media-breakpoint-up
+	);
+
+	@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+		@include clay-generate-media-breakpoints($cadmin-date-picker-col);
 	}
 }
 

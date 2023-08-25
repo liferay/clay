@@ -919,8 +919,20 @@
 			)
 		);
 
+		$_media-breakpoint-down: map-get($map, media-breakpoint-down);
+		$_media-breakpoint-up: map-get($map, media-breakpoint-up);
+
+		$mobile: setter(map-get($map, mobile), ());
+
 		@if ($enabled) {
 			@include clay-css($base);
+
+			@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+				@include clay-generate-media-breakpoints(
+					$map,
+					'clay-select-variant'
+				);
+			}
 
 			&:hover,
 			&.hover {

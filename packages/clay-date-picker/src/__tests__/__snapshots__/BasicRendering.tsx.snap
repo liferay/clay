@@ -60,7 +60,7 @@ exports[`BasicRendering renders by default 1`] = `
         aria-hidden="true"
         aria-label="Choose date"
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu"
+        class="dropdown-menu date-picker date-picker-dropdown-menu"
         data-testid="dropdown"
         id="clay-id-1"
         role="dialog"
@@ -895,7 +895,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
       <div
         aria-label="Choose date"
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-7"
         role="dialog"
@@ -1762,7 +1762,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
       <div
         aria-label="Choose date"
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-10"
         role="dialog"
@@ -2551,7 +2551,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                     </div>
                   </div>
                   <div
-                    class="input-group-item input-group-item-shrink"
+                    class="input-group-item"
                   >
                     <div
                       class="form-control"
@@ -2741,7 +2741,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
       <div
         aria-label="Choose date"
         aria-modal="true"
-        class="dropdown-menu date-picker-dropdown-menu show"
+        class="dropdown-menu date-picker date-picker-dropdown-menu show"
         data-testid="dropdown"
         id="clay-id-14"
         role="dialog"

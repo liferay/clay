@@ -679,7 +679,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 							active={expandedValue}
 							alignElementRef={triggerElementRef}
 							aria-label={ariaLabels.dialog}
-							className="date-picker-dropdown-menu"
+							className="date-picker date-picker-dropdown-menu"
 							data-testid="dropdown"
 							id={ariaControls}
 							lock
