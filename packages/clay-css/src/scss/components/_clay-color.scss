@@ -151,6 +151,48 @@
 	@include clay-button-variant($clay-color-range-pointer);
 }
 
+// Clay Color Slider
+
+.clay-color-slider {
+	@include clay-range-variant($clay-color-slider);
+}
+
+.clay-color-slider-hue {
+	@include clay-range-variant($clay-color-slider-hue);
+}
+
+.clay-color-slider-alpha {
+	@include clay-range-variant($clay-color-slider-alpha);
+}
+
+// Clay Color Form Group
+
+.clay-color-form-group {
+	@include clay-css($clay-color-form-group);
+
+	.clay-range {
+		@include clay-css(map-get($clay-color-form-group, clay-range));
+	}
+
+	.form-control {
+		@include clay-form-control-variant(
+			map-get($clay-color-form-group, form-control)
+		);
+	}
+
+	.input-group {
+		$input-group: map-get($clay-color-form-group, input-group);
+
+		@include clay-input-group-variant($input-group);
+
+		.input-group-inset-item-before {
+			@include clay-css(
+				map-get($input-group, input-group-inset-item-before)
+			);
+		}
+	}
+}
+
 // Clay Color Sm
 
 %clay-color-sm-input-group-inset-item-before {

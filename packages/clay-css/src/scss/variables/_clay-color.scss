@@ -51,7 +51,7 @@ $clay-color-input-group-inset-item-before: map-merge(
 $clay-color-dropdown-menu: () !default;
 $clay-color-dropdown-menu: map-deep-merge(
 	(
-		max-height: 400px,
+		max-height: 500px,
 		max-width: none,
 		padding-bottom: 0,
 		padding-left: 1rem,
@@ -338,6 +338,162 @@ $clay-color-range-pointer: map-deep-merge(
 		top: 50%,
 	),
 	$clay-color-range-pointer
+);
+
+// Clay Color Form Group
+
+$clay-color-form-group: () !default;
+$clay-color-form-group: map-deep-merge(
+	(
+		display: flex,
+		align-items: center,
+		margin-top: 0.25rem,
+		margin-bottom: 1rem,
+		clay-range: (
+			flex-grow: 1,
+			flex-shrink: 0,
+			margin-right: 1rem,
+			width: 144px,
+		),
+		form-control: (
+			padding-left: 0,
+			padding-right: 10%,
+			text-align: right,
+		),
+		input-group: (
+			input-group-inset-item-before: (
+				font-weight: $font-weight-semi-bold,
+				padding-left: 10%,
+				padding-right: 0,
+				min-width: 1.125rem,
+			),
+		),
+	),
+	$clay-color-form-group
+);
+
+// Clay Color Slider
+
+$clay-color-slider: () !default;
+$clay-color-slider: map-deep-merge(
+	(
+		clay-range-input: (
+			border-radius: 100px,
+			clay-range-track: (
+				border-radius: inherit,
+				height: 0.5rem,
+				margin-top: -0.25rem,
+			),
+			clay-range-progress: (
+				background-color: transparent,
+				border-radius: inherit,
+				height: 0.5rem,
+				margin-top: -0.25rem,
+				width: 100%,
+			),
+			ms-thumb: (
+				visibility: visible,
+			),
+			moz-range-thumb: (
+				height: 0.625rem,
+				visibility: visible,
+				width: 0.625rem,
+			),
+			webkit-slider-thumb: (
+				visibility: visible,
+			),
+			clay-range-thumb: (
+				background-color: currentColor,
+				border-width: 0,
+				box-shadow: 0 0 0 0.125rem $white,
+				height: 0.625rem,
+				margin-top: -0.3125rem,
+				transition:
+					clay-enable-transitions(box-shadow 0.15s ease-in-out),
+				visibility: hidden,
+				width: 0.625rem,
+			),
+			form-control-range: (
+				background-color: inherit,
+				border-radius: inherit,
+				color: inherit,
+				height: 0.5rem,
+				webkit-slider-runnable-track: (
+					-webkit-appearance: none,
+					appearance: none,
+				),
+			),
+			focus: (
+				clay-range-thumb: (
+					box-shadow: #{0 0 0 0.125rem $white,
+					0 0 0 0.25rem $primary-l1},
+				),
+			),
+		),
+	),
+	$clay-color-slider
+);
+
+$clay-color-slider-hue: () !default;
+$clay-color-slider-hue: map-deep-merge(
+	(
+		clay-range-input: (
+			color: #26affd,
+			clay-range-track: (
+				background-image:
+					linear-gradient(
+						270deg,
+						#fc0d1b 0%,
+						#fc22d6 18.23%,
+						#1824fb 34.25%,
+						#2bf6fd 50.28%,
+						#2bfd2e 67.58%,
+						#fcfd37 81.22%,
+						#fc121b 100%
+					),
+			),
+		),
+	),
+	$clay-color-slider-hue
+);
+
+$clay-color-slider-alpha: () !default;
+$clay-color-slider-alpha: map-deep-merge(
+	(
+		clay-range-input: (
+			color: $black,
+			clay-range-track: (
+				background-color: $white,
+				background-image: #{linear-gradient(
+						45deg,
+						#e7e7ed 25%,
+						transparent 25%
+					),
+				linear-gradient(
+					-45deg,
+					#e7e7ed 25%,
+					transparent 25%,
+				),
+				linear-gradient(
+					45deg,
+					transparent 75%,
+					#e7e7ed 75%,
+				),
+				linear-gradient(-45deg, transparent 75%, #e7e7ed 75%)},
+				background-position: #{0 0,
+				0 4px,
+				4px -4px,
+				-4px 0px},
+				background-size: 8px 8px,
+			),
+			form-control-range: (
+				background-image:
+					linear-gradient(90deg, transparent 0%, currentcolor 100%),
+				color: inherit,
+			),
+		),
+	),
+	$clay-color-slider-alpha
 );
 
 // Clay Color Sm
