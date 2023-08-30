@@ -156,18 +156,6 @@ export function Editor({
 		[b, 'b'],
 	];
 
-	const [alpha, setAlpha] = useState<number>(1);
-
-	React.useEffect(() => {
-		let currentAlpha = color.getAlpha();
-
-		if (currentAlpha !== 0 && currentAlpha !== 1) {
-			currentAlpha = +currentAlpha.toFixed(2);
-		}
-
-		setAlpha(currentAlpha);
-	}, [alpha, color]);
-
 	return (
 		<>
 			<Hue
@@ -178,7 +166,9 @@ export function Editor({
 						hue = LimitValue.maxHue;
 					}
 					onHueChange(hue);
-					onColorChange(tinycolor({h: hue, s, v}).setAlpha(alpha));
+					onColorChange(
+						tinycolor({h: hue, s, v}).setAlpha(color.getAlpha())
+					);
 				}}
 				value={hue}
 			/>
@@ -192,7 +182,7 @@ export function Editor({
 								h: hue,
 								s: saturation,
 								v: visibility,
-							}).setAlpha(alpha)
+							}).setAlpha(color.getAlpha())
 						);
 					}}
 				/>
@@ -225,7 +215,7 @@ export function Editor({
 					const newColor = color.clone();
 					onColorChange(newColor.setAlpha(value));
 				}}
-				value={alpha}
+				value={color.getAlpha()}
 			/>
 
 			<div className="clay-color-footer">
@@ -265,11 +255,9 @@ export function Editor({
 									}
 								}}
 								type="text"
-								value={
-									hex.toUpperCase().slice(-2) === 'FF'
-										? hex.toUpperCase().substring(0, 6)
-										: hex
-								}
+								value={hex
+									.toUpperCase()
+									.substring(0, color.getAlpha() < 1 ? 8 : 6)}
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">

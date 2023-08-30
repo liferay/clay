@@ -54,7 +54,11 @@ const ClayColorPickerAlpha = ({color, onChange, value = 0}: Props) => {
 						}
 						step="0.01"
 						type="number"
-						value={value}
+						value={
+							value !== 0 && value !== 1
+								? value.toFixed(2)
+								: value
+						}
 					/>
 					<ClayInput.GroupInsetItem before tag="label">
 						A

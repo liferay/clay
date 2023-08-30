@@ -530,9 +530,10 @@ const ClayColorPicker = ({
 										if (internalActive) {
 											const newColors = [...customColors];
 
-											(newColors[state.splotch!] =
-												internalToHex(color)),
-												onColorsChange(newColors);
+											newColors[state.splotch!] =
+												internalToHex(color);
+
+											onColorsChange(newColors);
 										} else {
 											const colorIndex = findColorIndex(
 												customColors,
