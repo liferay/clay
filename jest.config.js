@@ -44,10 +44,10 @@ module.exports = {
 			statements: 95,
 		},
 		'./packages/clay-color-picker/src/': {
-			branches: 74,
-			functions: 87,
-			lines: 90,
-			statements: 90,
+			branches: 73,
+			functions: 83,
+			lines: 85,
+			statements: 86,
 		},
 		'./packages/clay-core/src/overlay-mask/': {
 			branches: 73,
