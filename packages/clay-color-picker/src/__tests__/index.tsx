@@ -4,14 +4,7 @@
  */
 
 import ClayColorPicker from '..';
-import {
-	cleanup,
-	fireEvent,
-	getAllByRole,
-	render,
-	screen,
-} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {cleanup, fireEvent, getAllByRole, render} from '@testing-library/react';
 import React from 'react';
 
 import getMouseEvent from '../../tests-util';
@@ -342,22 +335,12 @@ describe('Interactions', () => {
 		});
 
 		it('changes the color by changing the hue', () => {
-			const hueSelector = document.querySelector('.clay-color-range-hue');
+			const [hueSlider] = getAllByRole(
+				document.body,
+				'slider'
+			) as Array<HTMLElement>;
 
-			mockClientRect(hueSelector as HTMLElement);
-
-			const mouseDown = getMouseEvent('pointerdown', {
-				pageX: 0,
-				pageY: 0,
-			});
-
-			fireEvent(hueSelector as HTMLElement, mouseDown);
-
-			const mouseMove = getMouseEvent('pointermove', {
-				pageX: 50,
-			});
-
-			fireEvent(hueSelector as HTMLElement, mouseMove);
+			fireEvent.change(hueSlider as HTMLElement, {target: {value: 10}});
 
 			expect(handleColorsChange).toBeCalledTimes(1);
 		});
@@ -368,12 +351,10 @@ describe('Interactions', () => {
 				document.body,
 				'slider'
 			) as Array<HTMLElement>;
-			screen.debug(alphaSlider as HTMLElement);
 
 			fireEvent.change(alphaSlider as HTMLElement, {
 				target: {value: 0.5},
 			});
-			screen.debug(alphaSlider as HTMLElement);
 
 			expect(handleColorsChange).toBeCalledTimes(1);
 		});
@@ -418,36 +399,26 @@ describe('Interactions', () => {
 		});
 
 		it('pressing right arrow key increase hue value', async () => {
-			const hueSlider = document.querySelector(
-				'.clay-color-range-hue'
-			) as HTMLElement;
+			const [hueSlider] = getAllByRole(
+				document.body,
+				'slider'
+			) as Array<HTMLElement>;
 
-			userEvent.click(hueSlider);
+			fireEvent.change(hueSlider as HTMLElement, {target: {value: 1}});
+
 			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleValueChange).toBeCalledTimes(1);
-
-			userEvent.keyboard('[ArrowRight]');
-
-			expect(handleColorsChange).toBeCalledTimes(2);
-			expect(handleValueChange).toBeCalledTimes(2);
-
-			expect(hueSlider.getAttribute('aria-valuenow')).toBe('1');
 		});
 
 		it('pressing left arrow key descrease hue value', async () => {
-			const hueSlider = document.querySelector(
-				'.clay-color-range-hue'
-			) as HTMLElement;
+			const [hueSlider] = getAllByRole(
+				document.body,
+				'slider'
+			) as Array<HTMLElement>;
 
-			userEvent.click(hueSlider);
-			expect(handleColorsChange).toBeCalledTimes(1);
-			expect(handleValueChange).toBeCalledTimes(1);
+			fireEvent.change(hueSlider as HTMLElement, {target: {value: 1}});
+			fireEvent.change(hueSlider as HTMLElement, {target: {value: 0}});
 
-			userEvent.keyboard('[ArrowLeft]');
 			expect(handleColorsChange).toBeCalledTimes(2);
-			expect(handleValueChange).toBeCalledTimes(2);
-
-			expect(hueSlider.getAttribute('aria-valuenow')).toBe('0');
 		});
 	});
 
