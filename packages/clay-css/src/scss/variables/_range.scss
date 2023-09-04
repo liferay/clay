@@ -66,8 +66,16 @@ $clay-range-input: map-deep-merge(
 			position: absolute,
 			right: -0.75rem,
 			top: 50%,
-			visibility: hidden,
 			width: 1.5rem,
+		),
+		ms-thumb: (
+			visibility: hidden,
+		),
+		moz-range-thumb: (
+			visibility: hidden,
+		),
+		webkit-slider-thumb: (
+			visibility: hidden,
 		),
 		clay-range-track: (
 			appearance: none,
@@ -171,4 +179,28 @@ $clay-range-input: map-deep-merge(
 		),
 	),
 	$clay-range-input
+);
+
+$clay-range-progress-none: () !default;
+$clay-range-progress-none: map-deep-merge(
+	(
+		clay-range-input: (
+			ms-thumb: (
+				visibility: visible,
+			),
+			moz-range-thumb: (
+				visibility: visible,
+			),
+			webkit-slider-thumb: (
+				visibility: visible,
+			),
+			clay-range-thumb: (
+				visibility: hidden,
+			),
+			clay-range-progress: (
+				visibility: hidden,
+			),
+		),
+	),
+	$clay-range-progress-none
 );

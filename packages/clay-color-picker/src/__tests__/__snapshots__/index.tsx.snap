@@ -213,6 +213,21 @@ exports[`Interactions color editor interactions ability to change color of click
           </div>
         </div>
         <div
+          aria-labelledby="color-range"
+          aria-valuemax="360"
+          aria-valuemin="0"
+          aria-valuenow="0"
+          class="clay-color-range clay-color-range-hue"
+          role="slider"
+          tabindex="0"
+        >
+          <button
+            class="clay-color-pointer clay-color-range-pointer"
+            style="background: rgb(255, 0, 0); left: -7px;"
+            type="button"
+          />
+        </div>
+        <div
           class="clay-color-map-group"
         >
           <div
@@ -306,19 +321,58 @@ exports[`Interactions color editor interactions ability to change color of click
           </div>
         </div>
         <div
-          aria-labelledby="color-range"
-          aria-valuemax="360"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          class="clay-color-range clay-color-range-hue"
-          role="slider"
-          tabindex="0"
+          class="clay-color-form-group"
         >
-          <button
-            class="clay-color-pointer clay-color-range-pointer"
-            style="background: rgb(255, 0, 0); left: -7px;"
-            type="button"
-          />
+          <div
+            class="clay-range clay-color-slider clay-color-slider-alpha"
+          >
+            <div
+              class="clay-range-input"
+            >
+              <input
+                class="form-control-range"
+                max="1"
+                min="0"
+                step="0.01"
+                style="color: rgb(255, 255, 255);"
+                type="range"
+                value="1"
+              />
+              <div
+                class="clay-range-track"
+              />
+              <div
+                class="clay-range-progress"
+                style="width: 0%;"
+              >
+                <div
+                  class="clay-range-thumb"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="input-group"
+          >
+            <div
+              class="input-group-item"
+            >
+              <input
+                class="form-control input-group-inset input-group-inset-before"
+                data-testid="aInput"
+                max="1"
+                min="0"
+                step="0.01"
+                type="number"
+                value="1"
+              />
+              <label
+                class="input-group-inset-item input-group-inset-item-before"
+              >
+                A
+              </label>
+            </div>
+          </div>
         </div>
         <div
           class="clay-color-footer"

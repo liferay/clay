@@ -246,6 +246,14 @@ const ClayColorPicker = ({
 
 	const isHex = tinycolor(internalValue).getFormat() === 'hex';
 
+	const internalToHex = (color: any) => {
+		if (color.getAlpha() < 1) {
+			return color.toHex8().toUpperCase();
+		}
+
+		return color.toHex().toUpperCase();
+	};
+
 	const inputColorTypeSupport = useMemo(() => {
 		if (typeof document !== 'undefined') {
 			var input = document.createElement('input');
@@ -387,7 +395,7 @@ const ClayColorPicker = ({
 								messages={messages}
 								onChange={(color, hex) => {
 									dispatch({
-										hex: color.toHex(),
+										hex: internalToHex(color),
 										hue: color.toHsv().h,
 									});
 									setValue(hex);
@@ -415,8 +423,9 @@ const ClayColorPicker = ({
 								colors={customColors}
 								hex={state.hex}
 								hue={state.hue}
+								internalToHex={internalToHex}
 								onChange={(color, active) => {
-									const hex = color.toHex();
+									const hex = internalToHex(color);
 
 									if (active) {
 										const newColors = [...customColors];
@@ -431,7 +440,7 @@ const ClayColorPicker = ({
 									setValue(hex);
 								}}
 								onColorChange={(color) => {
-									const hex = color.toHex();
+									const hex = internalToHex(color);
 									const newColors = [...customColors];
 
 									newColors[state.splotch!] = hex;
@@ -469,8 +478,11 @@ const ClayColorPicker = ({
 									const newColor = tinycolor(value);
 
 									if (newColor.isValid()) {
-										if (newColor.getFormat() === 'hex') {
-											value = newColor.toHex();
+										if (
+											newColor.getFormat() ===
+											('hex' || 'hex8')
+										) {
+											value = internalToHex(newColor);
 										} else if (
 											newColor.toString() !== value
 										) {
@@ -511,7 +523,7 @@ const ClayColorPicker = ({
 											value.includes('var('))
 									) {
 										dispatch({
-											hex: color.toHex(),
+											hex: internalToHex(color),
 											hue: color.toHsv().h,
 										});
 
@@ -519,7 +531,7 @@ const ClayColorPicker = ({
 											const newColors = [...customColors];
 
 											newColors[state.splotch!] =
-												color.toHex();
+												internalToHex(color);
 
 											onColorsChange(newColors);
 										} else {
