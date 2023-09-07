@@ -99,6 +99,12 @@ $cadmin-input: map-deep-merge(
 				color: $cadmin-input-placeholder-focus-color,
 			),
 		),
+		focus-within: (
+			background-color: $cadmin-input-focus-bg,
+			border-color: $cadmin-input-focus-border-color,
+			box-shadow: $cadmin-input-focus-box-shadow,
+			color: $cadmin-input-focus-color,
+		),
 		disabled: (
 			background-color: $cadmin-input-disabled-bg,
 			border-color: $cadmin-input-disabled-border-color,
@@ -111,6 +117,23 @@ $cadmin-input: map-deep-merge(
 		),
 	),
 	$cadmin-input
+);
+
+// .form-control-focus-within
+
+$cadmin-form-control-container: () !default;
+$cadmin-form-control-container: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($cadmin-input-border-radius),
+		transition: clay-enable-transitions($cadmin-input-transition),
+		focus-within: (
+			background-color: $cadmin-input-focus-bg,
+			box-shadow: $cadmin-input-focus-box-shadow,
+			outline: 0,
+			z-index: 1,
+		),
+	),
+	$cadmin-form-control-container
 );
 
 // Form Control Variants

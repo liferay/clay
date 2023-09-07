@@ -1,6 +1,25 @@
 $cadmin-custom-forms-transition: background-color 0.15s ease-in-out,
 	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
 
+// Form File
+
+$cadmin-form-file: () !default;
+$cadmin-form-file: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($cadmin-input-border-radius),
+		display: flex,
+		position: relative,
+		transition: clay-enable-transitions($cadmin-input-transition),
+		focus-within: (
+			background-color: $cadmin-input-focus-bg,
+			box-shadow: $cadmin-input-focus-box-shadow,
+			outline: 0,
+			z-index: 1,
+		),
+	),
+	$cadmin-form-file
+);
+
 // Custom Control Indicator
 
 $cadmin-custom-control-indicator-size: 16px !default;
