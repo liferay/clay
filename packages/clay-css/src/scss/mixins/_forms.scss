@@ -601,6 +601,10 @@
 				}
 			}
 
+			&:focus-within:has(input:focus) {
+				@include clay-form-control-variant(map-get($map, focus-within));
+			}
+
 			&:active {
 				@include clay-css(map-get($map, active));
 			}
