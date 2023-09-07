@@ -399,7 +399,6 @@ const ClayTimePicker = ({
 						<div
 							className={classNames('form-control', {
 								disabled,
-								focus: isFocused,
 							})}
 							data-testid="formControl"
 							onMouseEnter={() => {
