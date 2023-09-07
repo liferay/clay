@@ -637,7 +637,7 @@ const ClayDatePicker = React.forwardRef<HTMLInputElement, IProps>(
 			<FocusScope arrowKeysUpDown={false}>
 				<div className="date-picker">
 					<ClayInput.Group ref={triggerElementRef}>
-						<ClayInput.GroupItem>
+						<ClayInput.GroupItem className="form-control-container">
 							<InputDate
 								{...otherProps}
 								ariaLabel={ariaLabels.input}
