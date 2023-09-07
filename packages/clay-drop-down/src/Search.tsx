@@ -89,7 +89,7 @@ const ClayDropDownSearch = ({
 		>
 			<div className="dropdown-section">
 				<ClayInput.Group small>
-					<ClayInput.GroupItem>
+					<ClayInput.GroupItem className="form-control-container">
 						<ClayInput
 							{...otherProps}
 							insetAfter
