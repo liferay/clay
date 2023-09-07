@@ -10,7 +10,7 @@ exports[`BasicRendering renders by default 1`] = `
         class="input-group"
       >
         <div
-          class="input-group-item"
+          class="input-group-item form-control-container"
         >
           <input
             name="datePicker"
@@ -845,7 +845,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item form-control-container"
         >
           <input
             name="datePicker"
@@ -1678,7 +1678,7 @@ exports[`BasicRendering renders date picker with native picker 1`] = `
         class="input-group"
       >
         <div
-          class="input-group-item"
+          class="input-group-item form-control-container"
         >
           <input
             name="datePicker"
@@ -1712,7 +1712,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item form-control-container"
         >
           <input
             name="datePicker"
@@ -2691,7 +2691,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item form-control-container"
         >
           <input
             name="datePicker"
