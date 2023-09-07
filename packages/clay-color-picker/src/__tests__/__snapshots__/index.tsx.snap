@@ -39,7 +39,7 @@ exports[`Interactions color editor interactions ability to change color of click
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is FFFFFF"
@@ -235,7 +235,7 @@ exports[`Interactions color editor interactions ability to change color of click
                 class="input-group"
               >
                 <div
-                  class="input-group-item"
+                  class="input-group-item form-control-container"
                 >
                   <input
                     class="form-control input-group-inset input-group-inset-before"
@@ -260,7 +260,7 @@ exports[`Interactions color editor interactions ability to change color of click
                 class="input-group"
               >
                 <div
-                  class="input-group-item"
+                  class="input-group-item form-control-container"
                 >
                   <input
                     class="form-control input-group-inset input-group-inset-before"
@@ -285,7 +285,7 @@ exports[`Interactions color editor interactions ability to change color of click
                 class="input-group"
               >
                 <div
-                  class="input-group-item"
+                  class="input-group-item form-control-container"
                 >
                   <input
                     class="form-control input-group-inset input-group-inset-before"
@@ -330,7 +330,7 @@ exports[`Interactions color editor interactions ability to change color of click
               class="input-group"
             >
               <div
-                class="input-group-item"
+                class="input-group-item form-control-container"
               >
                 <input
                   class="form-control input-group-inset input-group-inset-before"
@@ -391,7 +391,7 @@ exports[`Interactions opens custom color picker drop down when clicked 1`] = `
         </div>
       </div>
       <div
-        class="input-group-item input-group-append"
+        class="input-group-item form-control-container input-group-append"
       >
         <input
           aria-label="Color selection is 008000"
@@ -447,7 +447,7 @@ exports[`Rendering default 1`] = `
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is FFF"
@@ -825,7 +825,7 @@ exports[`Rendering disabled palette 1`] = `
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is FFF"
@@ -1204,7 +1204,7 @@ exports[`Rendering disabled state 1`] = `
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is FFF"
@@ -1582,7 +1582,7 @@ exports[`Rendering renders w/ var() 1`] = `
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is var(--blue)"
@@ -1968,7 +1968,7 @@ exports[`Rendering renders with a hash for the value 1`] = `
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is FFF"
@@ -2346,7 +2346,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is red"
@@ -2732,7 +2732,7 @@ exports[`Rendering small color-picker 1`] = `
           </div>
         </div>
         <div
-          class="input-group-item input-group-append"
+          class="input-group-item form-control-container input-group-append"
         >
           <input
             aria-label="Color selection is FFF"
