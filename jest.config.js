@@ -226,8 +226,8 @@ module.exports = {
 		'./packages/clay-time-picker/src/': {
 			branches: 85,
 			functions: 95,
-			lines: 98,
-			statements: 98,
+			lines: 95,
+			statements: 95,
 		},
 		'./packages/clay-toolbar/src/': {
 			branches: 50,

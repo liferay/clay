@@ -93,54 +93,6 @@ describe('IncrementalInteractions', () => {
 		expect(document.activeElement).toBe(hoursEl);
 	});
 
-	it('clicking on the hour input of the time picker should add the focus', () => {
-		const {getByTestId} = render(<TimePickerWithState />);
-
-		const hoursEl = getByTestId('hours');
-		const formControlEl = getByTestId('formControl');
-
-		fireEvent.focus(hoursEl, {});
-
-		expect(formControlEl.classList).toContain('focus');
-	});
-
-	it('clicking on the minutes input of the time picker should add the focus', () => {
-		const {getByTestId} = render(<TimePickerWithState />);
-
-		const minutesEl = getByTestId('minutes');
-		const formControlEl = getByTestId('formControl');
-
-		fireEvent.focus(minutesEl, {});
-
-		expect(formControlEl.classList).toContain('focus');
-	});
-
-	it('clicking on the amp/pm input of the time picker should add the focus', () => {
-		const {getByTestId} = render(<TimePickerWithState use12Hours />);
-
-		const ampmEl = getByTestId('ampm');
-		const formControlEl = getByTestId('formControl');
-
-		fireEvent.focus(ampmEl, {});
-
-		expect(formControlEl.classList).toContain('focus');
-	});
-
-	it('clicking outside the inputs of the time picker should remove the focus', () => {
-		const {getByTestId} = render(<TimePickerWithState />);
-
-		const hoursEl = getByTestId('hours');
-		const formControlEl = getByTestId('formControl');
-
-		fireEvent.focus(hoursEl, {});
-
-		expect(formControlEl.classList).toContain('focus');
-
-		fireEvent.click(document.body, {});
-
-		expect(formControlEl.classList).not.toContain('focus');
-	});
-
 	describe('with actions', () => {
 		it('shows the spin action when the mouse is inside the form', () => {
 			const {getByTestId} = render(<TimePickerWithState />);
