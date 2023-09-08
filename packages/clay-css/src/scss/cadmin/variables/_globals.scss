@@ -704,13 +704,19 @@ $cadmin-link-hover-decoration: underline !default;
 $cadmin-link: () !default;
 $cadmin-link: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $cadmin-link-color,
 		cursor: $cadmin-link-cursor,
 		text-decoration: $cadmin-link-decoration,
 		text-underline-offset: 0.23em,
+		transition: clay-enable-transitions($cadmin-component-transition),
 		hover: (
 			color: $cadmin-link-hover-color,
 			text-decoration: $cadmin-link-hover-decoration,
+		),
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
 		),
 	),
 	$cadmin-link
