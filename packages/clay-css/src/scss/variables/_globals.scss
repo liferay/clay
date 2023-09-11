@@ -587,12 +587,18 @@ $link-hover-decoration: underline !default;
 $link: () !default;
 $link: map-deep-merge(
 	(
+		border-radius: 1px,
 		color: $link-color,
 		text-decoration: $link-decoration,
 		text-underline-offset: 0.23em,
+		transition: clay-enable-transitions($component-transition),
 		hover: (
 			color: $link-hover-color,
 			text-decoration: $link-hover-decoration,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
 		),
 	),
 	$link
