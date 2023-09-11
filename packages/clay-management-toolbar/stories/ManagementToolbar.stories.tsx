@@ -101,7 +101,7 @@ export const Default = () => {
 
 				<ClayManagementToolbar.Search showMobile={searchMobile}>
 					<ClayInput.Group>
-						<ClayInput.GroupItem className="form-control-container">
+						<ClayInput.GroupItem className="input-group-item-focusable">
 							<ClayInput
 								aria-label="Search"
 								className="form-control input-group-inset input-group-inset-after"
