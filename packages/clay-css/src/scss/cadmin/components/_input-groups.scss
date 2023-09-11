@@ -82,6 +82,10 @@
 	@include clay-input-group-item-variant($cadmin-input-group-item-shrink);
 }
 
+.input-group-item-focusable {
+	@include clay-input-group-item-variant($cadmin-input-group-item-focusable);
+}
+
 // Input Group Text
 
 .input-group-text {

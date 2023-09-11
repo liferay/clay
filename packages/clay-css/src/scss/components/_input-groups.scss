@@ -134,6 +134,10 @@
 	@include clay-input-group-item-variant($input-group-item-shrink);
 }
 
+.input-group-item-focusable {
+	@include clay-input-group-item-variant($input-group-item-focusable);
+}
+
 // Input Group Text
 
 .input-group-text {

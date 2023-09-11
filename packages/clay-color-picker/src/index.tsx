@@ -449,7 +449,7 @@ const ClayColorPicker = ({
 					{showHex && (
 						<ClayInput.GroupItem
 							append
-							className="form-control-container"
+							className="input-group-item-focusable"
 						>
 							<ClayInput
 								{...otherProps}
