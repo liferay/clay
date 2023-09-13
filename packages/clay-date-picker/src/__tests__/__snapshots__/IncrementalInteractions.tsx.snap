@@ -14,7 +14,7 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item input-group-item-focusable"
         >
           <input
             name="datePicker"
@@ -847,7 +847,7 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item input-group-item-focusable"
         >
           <input
             name="datePicker"
@@ -1683,7 +1683,7 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item input-group-item-focusable"
         >
           <input
             name="datePicker"
@@ -2521,7 +2521,7 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item input-group-item-focusable"
         >
           <input
             name="datePicker"
@@ -3369,7 +3369,7 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item input-group-item-focusable"
         >
           <input
             name="datePicker"
@@ -4210,7 +4210,7 @@ exports[`IncrementalInteractions date entered in the input element should reflec
         style=""
       >
         <div
-          class="input-group-item"
+          class="input-group-item input-group-item-focusable"
         >
           <input
             name="datePicker"

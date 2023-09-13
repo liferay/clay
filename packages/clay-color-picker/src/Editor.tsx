@@ -86,7 +86,7 @@ const RGBInput = ({name, onChange, value}: RGBInputProps) => {
 	return (
 		<ClayForm.Group>
 			<ClayInput.Group>
-				<ClayInput.GroupItem>
+				<ClayInput.GroupItem className="input-group-item-focusable">
 					<ClayInput
 						data-testid={`${name}Input`}
 						insetBefore
@@ -221,7 +221,7 @@ export function Editor({
 			<div className="clay-color-footer">
 				<ClayForm.Group>
 					<ClayInput.Group>
-						<ClayInput.GroupItem>
+						<ClayInput.GroupItem className="input-group-item-focusable">
 							<ClayInput
 								data-testid="customHexInput"
 								insetBefore

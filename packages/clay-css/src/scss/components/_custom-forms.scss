@@ -1,6 +1,5 @@
 .form-file {
-	display: flex;
-	position: relative;
+	@include clay-form-control-variant($form-file);
 }
 
 .form-file-input {

@@ -299,8 +299,12 @@
 			}
 
 			&.focus {
+				@include clay-input-group-item-variant(map-get($map, focus));
+			}
+
+			&:focus-within:has(input:focus) {
 				@include clay-input-group-item-variant(
-					map-deep-get($map, focus)
+					map-get($map, focus-within)
 				);
 			}
 

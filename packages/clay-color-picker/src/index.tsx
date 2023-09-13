@@ -456,7 +456,10 @@ const ClayColorPicker = ({
 					</ClayDropDown.Menu>
 
 					{showHex && (
-						<ClayInput.GroupItem append>
+						<ClayInput.GroupItem
+							append
+							className="input-group-item-focusable"
+						>
 							<ClayInput
 								{...otherProps}
 								aria-label={sub(ariaLabels.selectionIs, [

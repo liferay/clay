@@ -202,7 +202,6 @@ const ClayTimePicker = ({
 	const useConfig: Config = config[use12Hours ? 'use12Hours' : 'use24Hours'];
 
 	const [actionVisible, setActionVisible] = useState(false);
-	const [isFocused, setIsFocused] = useState(false);
 	const elementRef = useRef<null | HTMLDivElement>(null);
 
 	const defaultFocused = {
@@ -357,7 +356,6 @@ const ClayTimePicker = ({
 		) {
 			setActionVisible(false);
 			setCurrentInputFocused(defaultFocused);
-			setIsFocused(false);
 		}
 	};
 
@@ -367,7 +365,6 @@ const ClayTimePicker = ({
 			configName,
 			focused: true,
 		});
-		setIsFocused(true);
 	};
 
 	useEffect(() => {
@@ -399,7 +396,6 @@ const ClayTimePicker = ({
 						<div
 							className={classNames('form-control', {
 								disabled,
-								focus: isFocused,
 							})}
 							data-testid="formControl"
 							onMouseEnter={() => {
