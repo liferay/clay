@@ -647,6 +647,7 @@ const iconsData = {
 	"information-live":         '"help", "instruction"',
 	"integer":                  '"10", "number"',
 	"italic":                   '"editor", "text"',
+	"key":                      '"key", "security", "save"',
 	"link":                     '"chain", "connection"',
 	"list":                     '"order", "sequence"',
 	"list-ol":                  '"number", "order", "sequence"',
