@@ -212,8 +212,12 @@
         "aliases": ["library", "pages"]
     },
     {
+        "name": "bookmarks-full",
+        "aliases": ["clip", "holder", "marker", "tag", "save"]
+    },
+    {
         "name": "bookmarks",
-        "aliases": ["clip", "holder", "marker", "tag"]
+        "aliases": ["clip", "holder", "marker", "tag", "save"]
     },
     {
         "name": "books",
