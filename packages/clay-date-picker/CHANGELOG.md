@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
+
+### Bug Fixes
+
+-   **@clayui/css:** Renames form-control-container to input-group-item-focusable ([54b0677](https://github.com/liferay/clay/commit/54b0677bf6eff26c2ab551120ed43a9b0a717100))
+
+### Features
+
+-   **@clayui/date-picker:** Use form-control-container on date-picker input-groups ([32dad5e](https://github.com/liferay/clay/commit/32dad5e6f980d27cb35451a06d9fe47b027a809d))
+
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 ### Features

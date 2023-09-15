@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
+
+### Bug Fixes
+
+-   **@clayui/css:** Renames form-control-container to input-group-item-focusable ([54b0677](https://github.com/liferay/clay/commit/54b0677bf6eff26c2ab551120ed43a9b0a717100))
+
+### Features
+
+-   **@clayui/drop-down:** Use form-control-container on search ([5d4c242](https://github.com/liferay/clay/commit/5d4c242da7577800cc067f8d0b61415688ca4d8a))
+
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 ### Bug Fixes

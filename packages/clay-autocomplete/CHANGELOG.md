@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error when navigating via keyboard with the mouse over the item ([f13e062](https://github.com/liferay/clay/commit/f13e062033445f70df32bdf31d068646215c9a78))
+
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 **Note:** Version bump only for package @clayui/autocomplete

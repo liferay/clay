@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fix error when navigating via keyboard with the mouse over the item ([f13e062](https://github.com/liferay/clay/commit/f13e062033445f70df32bdf31d068646215c9a78))
+-   **@clayui/css:** Range show clay-range-thumb instead of input range thumb for range with progress ([b5ca9d5](https://github.com/liferay/clay/commit/b5ca9d5c7e8469a165241e64d19565869300066e))
+-   **@clayui/css:** Renames form-control-container to input-group-item-focusable ([54b0677](https://github.com/liferay/clay/commit/54b0677bf6eff26c2ab551120ed43a9b0a717100))
+-   **@clayui/css:** Use component-focus-box-shadow for anchor tags ([3aaa6a2](https://github.com/liferay/clay/commit/3aaa6a23f94cdf3531c8fc06b607a8c1b98b6427))
+-   **@clayui/time-picker:** Removes focus class, no longer needed with focus-within ([059eaf8](https://github.com/liferay/clay/commit/059eaf8d10904f5163e7406fabd2c480a718d0d3))
+
+### Features
+
+-   **@clayui/color-picker:** Add alpha transparency slider ([534ebde](https://github.com/liferay/clay/commit/534ebde9a5b1c3b4e901643682b46d362bb4dd97))
+-   **@clayui/color-picker:** Use form-control-container for focus-within ([53df194](https://github.com/liferay/clay/commit/53df1940e153bec42000de0c18ff033b4b6fb401))
+-   **@clayui/css:** add new `key` icon ([c2c6851](https://github.com/liferay/clay/commit/c2c68511d765556d6a40fd78889aeaa238c29eea))
+-   **@clayui/css:** Adds focus-within ([deeaa3e](https://github.com/liferay/clay/commit/deeaa3ecf863e1fee42c486c7617b2c2d7c4fd6c))
+-   **@clayui/css:** Cadmin Clay Color adds hue and alpha range inputs ([b9b9db9](https://github.com/liferay/clay/commit/b9b9db94284c3bd3b91948163eecdd32ae214a0d))
+-   **@clayui/css:** Clay Color adds hue and alpha range inputs ([31b74e0](https://github.com/liferay/clay/commit/31b74e01d9fa96cb64e9c67332356d2f741e0f56))
+-   **@clayui/css:** Mixins adds clay-range-variant ([350f154](https://github.com/liferay/clay/commit/350f1544a7ae0c7a08319ad3b37f4e01f169ab8b))
+-   **@clayui/css:** Mixins clay-form-control-variant adds focus-within ([f359e03](https://github.com/liferay/clay/commit/f359e03dcf72be8e9341662af898c1e5a9924c80))
+-   **@clayui/css:** Mixins clay-input-group-item-variant adds focus-within ([ccc74fe](https://github.com/liferay/clay/commit/ccc74fe5f23bab139a83ad42c135b917b472c00e))
+-   **@clayui/css:** update `bookmarks` icon and add `bookmarks-full` icon ([db3ff38](https://github.com/liferay/clay/commit/db3ff3899ea974d8b526d66423465542ec51d8f2))
+-   **@clayui/css:** update `download`, `import-list`, `import`, `upload-multiple` and `upload` icons ([c8640fd](https://github.com/liferay/clay/commit/c8640fd56d601ab455317bf42f3f8322df490808))
+-   **@clayui/date-picker:** Use form-control-container on date-picker input-groups ([32dad5e](https://github.com/liferay/clay/commit/32dad5e6f980d27cb35451a06d9fe47b027a809d))
+-   **@clayui/drop-down:** Use form-control-container on search ([5d4c242](https://github.com/liferay/clay/commit/5d4c242da7577800cc067f8d0b61415688ca4d8a))
+
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 ### Bug Fixes

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
+
+### Bug Fixes
+
+-   **@clayui/css:** Renames form-control-container to input-group-item-focusable ([54b0677](https://github.com/liferay/clay/commit/54b0677bf6eff26c2ab551120ed43a9b0a717100))
+
+### Features
+
+-   **@clayui/color-picker:** Add alpha transparency slider ([534ebde](https://github.com/liferay/clay/commit/534ebde9a5b1c3b4e901643682b46d362bb4dd97))
+-   **@clayui/color-picker:** Use form-control-container for focus-within ([53df194](https://github.com/liferay/clay/commit/53df1940e153bec42000de0c18ff033b4b6fb401))
+
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 **Note:** Version bump only for package @clayui/color-picker
