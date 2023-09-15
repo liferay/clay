@@ -63,12 +63,15 @@ const NewItem = React.forwardRef<HTMLLIElement, IProps>(function NewItem(
 	const {activeDescendant, onActiveDescendant} = useAutocompleteState();
 	const {isFocusVisible} = useInteractionFocus();
 
+	const isFocus = isFocusVisible();
+
 	const hoverProps = useHover({
 		disabled,
-		onHover: useCallback(() => onActiveDescendant(keyValue!), [keyValue]),
+		onHover: useCallback(
+			() => !isFocus && onActiveDescendant(keyValue!),
+			[keyValue, isFocus]
+		),
 	});
-
-	const isFocus = isFocusVisible();
 
 	const currentValue = textValue ?? value ?? String(children);
 	const fuzzyMatch = fuzzy.match(match, currentValue, optionsFuzzy);

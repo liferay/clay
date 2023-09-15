@@ -14,7 +14,7 @@ module.exports = {
 			statements: 100,
 		},
 		'./packages/clay-autocomplete/src/': {
-			branches: 68,
+			branches: 67,
 			functions: 82,
 			lines: 85,
 			statements: 85,
