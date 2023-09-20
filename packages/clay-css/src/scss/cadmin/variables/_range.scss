@@ -120,15 +120,9 @@ $cadmin-clay-range-input: map-deep-merge(
 			z-index: $cadmin-zindex-clay-range-input-form-control,
 			hover: (
 				cursor: $cadmin-link-cursor,
-				clay-range-thumb: (
-					background-color: $cadmin-primary-l3,
-				),
 			),
 			focus: (
 				outline: 0,
-				clay-range-thumb: (
-					box-shadow: $cadmin-component-focus-inset-box-shadow,
-				),
 			),
 			disabled: (
 				color: $cadmin-clay-range-disabled-color,
@@ -166,6 +160,16 @@ $cadmin-clay-range-input: map-deep-merge(
 			after: (
 				content: unquote("'\\FEFF' attr(data-label-max)"),
 				right: 0,
+			),
+		),
+		focus: (
+			clay-range-thumb: (
+				box-shadow: $cadmin-component-focus-inset-box-shadow,
+			),
+		),
+		hover: (
+			clay-range-thumb: (
+				background-color: $cadmin-primary-l3,
 			),
 		),
 	),
