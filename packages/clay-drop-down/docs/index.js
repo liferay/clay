@@ -107,9 +107,14 @@ const dropDownWithItemsCode = `const Component = () => {
 					type: 'radio',
 					value: 'two',
 				},
+				{
+					label: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+					type: 'radio',
+					value: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+				},
 			],
 			label: 'radio',
-			name: 'radio',
+			name: 'dropdownWithItemsRadio',
 			onChange: (value) => alert('New Radio checked'),
 			type: 'radiogroup',
 		},
@@ -124,6 +129,12 @@ const dropDownWithItemsCode = `const Component = () => {
 				{
 					checked: true,
 					label: 'checkbox 1',
+					onChange: () => alert('checkbox changed'),
+					type: 'checkbox',
+				},
+				{
+					checked: true,
+					label: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 					onChange: () => alert('checkbox changed'),
 					type: 'checkbox',
 				},
