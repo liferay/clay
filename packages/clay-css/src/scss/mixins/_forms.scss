@@ -2301,6 +2301,10 @@
 			()
 		);
 		$focus-clay-range-thumb: map-merge(
+			setter(map-get($focus, clay-range-thumb), ()),
+			$focus-clay-range-thumb
+		);
+		$focus-clay-range-thumb: map-merge(
 			$focus-clay-range-thumb,
 			(
 				box-shadow:
