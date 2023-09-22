@@ -116,6 +116,7 @@ function DynamicCollection<
 	parentKey,
 	passthroughKey,
 	publicApi,
+	suppressTextValueWarning,
 }: ICollectionProps<T, P> & Props<P, K>) {
 	const state = useCollection({
 		children,
@@ -127,6 +128,7 @@ function DynamicCollection<
 		parentKey,
 		passthroughKey,
 		publicApi,
+		suppressTextValueWarning,
 	});
 
 	return <>{state.collection}</>;
@@ -152,6 +154,7 @@ export function Collection<
 	parentRef,
 	passthroughKey = true,
 	publicApi,
+	suppressTextValueWarning,
 	virtualize = false,
 	...otherProps
 }: Partial<ICollectionProps<T, P>> & Props<P, K> & Partial<IProps>) {
@@ -206,6 +209,7 @@ export function Collection<
 				parentRef={parentRef}
 				passthroughKey={passthroughKey}
 				publicApi={publicApi}
+				suppressTextValueWarning={suppressTextValueWarning}
 			>
 				{children}
 			</VirtualDynamicCollection>
@@ -221,6 +225,7 @@ export function Collection<
 				parentKey={parentKey}
 				passthroughKey={passthroughKey}
 				publicApi={publicApi}
+				suppressTextValueWarning={suppressTextValueWarning}
 			>
 				{children}
 			</DynamicCollection>

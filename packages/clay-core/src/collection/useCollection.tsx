@@ -131,7 +131,22 @@ export function useCollection<
 			return React.cloneElement(child as React.ReactElement<any>, {
 				key,
 				...(passthroughKey || hasChildNeedPassthroughKey
-					? {index, keyValue: key}
+					? {
+							index,
+							keyValue: key,
+
+							// We only pass the textValue to the component when the collection
+							// indicates that it will be used for accessibility issues.
+							...(!suppressTextValueWarning
+								? {
+										textValue: getTextValue(
+											key,
+											child,
+											true
+										),
+								  }
+								: {}),
+					  }
 					: {}),
 				...(props ? props : {}),
 			});
