@@ -21,19 +21,21 @@ $clay-range-input: map-deep-merge(
 		tooltip-inner: (
 			padding: 0.5rem 0.75rem,
 		),
-		hover: (
-			clay-range-thumb: (
-				background-color: $primary-l3,
+		form-control-range: (
+			hover: (
+				clay-range-thumb: (
+					background-color: $primary-l3,
+				),
 			),
-		),
-		focus: (
-			clay-range-thumb: (
-				box-shadow: $component-focus-inset-box-shadow,
+			focus: (
+				clay-range-thumb: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
 			),
-		),
-		disabled: (
-			clay-range-thumb: (
-				background-color: $gray-100,
+			disabled: (
+				clay-range-thumb: (
+					background-color: $gray-100,
+				),
 			),
 		),
 	),
