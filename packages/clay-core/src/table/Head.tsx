@@ -28,7 +28,7 @@ function HeadInner<T extends Record<string, any>>(
 		<thead {...otherProps} ref={ref}>
 			<ScopeContext.Provider value={Scope.Head}>
 				<tr>
-					<Collection items={items} passthroughKey={false}>
+					<Collection items={items} suppressTextValueWarning={false}>
 						{children}
 					</Collection>
 				</tr>
