@@ -40,9 +40,9 @@ type Props = {
 	keyValue?: React.Key;
 
 	/**
-	 * Whether the column allows sorting. Only available in the header column.
+	 * Whether the column allows sortable. Only available in the header column.
 	 */
-	sorting?: boolean;
+	sortable?: boolean;
 
 	/**
 	 * Aligns horizontally contents inside the Cell.
@@ -75,7 +75,7 @@ export const Column = React.forwardRef<HTMLTableCellElement, Props>(
 			delimiter,
 			expanded,
 			keyValue,
-			sorting,
+			sortable,
 			textAlign,
 			textValue,
 			truncate,
@@ -86,18 +86,17 @@ export const Column = React.forwardRef<HTMLTableCellElement, Props>(
 	) {
 		const {onSortChange, sort, sortDescriptionId} = useTable();
 		const scope = useScope();
-		const As = scope === Scope.Head ? 'th' : 'td';
+		const isHead = scope === Scope.Head;
+		const As = isHead ? 'th' : 'td';
 
 		return (
 			<As
 				{...otherProps}
 				aria-describedby={
-					scope === Scope.Head && sorting
-						? sortDescriptionId
-						: undefined
+					isHead && sortable ? sortDescriptionId : undefined
 				}
 				aria-sort={
-					scope === Scope.Head && sorting
+					isHead && sortable
 						? sort && keyValue === sort.column
 							? sort.direction
 							: 'none'
@@ -109,16 +108,14 @@ export const Column = React.forwardRef<HTMLTableCellElement, Props>(
 					[`table-column-text-${textAlign}`]: textAlign,
 					[`text-${align}`]: align,
 					'table-cell-ws-nowrap': !wrap,
-					'table-head-title': scope === Scope.Head,
+					'table-head-title': isHead,
 				})}
 				ref={ref}
 			>
-				{scope === Scope.Head && sorting ? (
+				{isHead && sortable ? (
 					<a
 						aria-describedby={
-							scope === Scope.Head && sorting
-								? sortDescriptionId
-								: undefined
+							isHead && sortable ? sortDescriptionId : undefined
 						}
 						className="inline-item text-truncate-inline"
 						href="#"
