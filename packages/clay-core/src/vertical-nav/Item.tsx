@@ -45,6 +45,12 @@ interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	 * Internal property.
 	 * @ignore
 	 */
+	textValue?: string;
+
+	/**
+	 * Internal property.
+	 * @ignore
+	 */
 	index?: number;
 
 	/**
@@ -84,6 +90,7 @@ export function Item<T extends object>({
 	items,
 	keyValue,
 	onClick,
+	textValue: _textValue,
 	...otherProps
 }: IProps<T>) {
 	const {
