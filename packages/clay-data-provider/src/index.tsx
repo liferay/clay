@@ -5,9 +5,7 @@
 
 import React from 'react';
 
-import {useResource} from './useResource';
-
-import type {NetworkStatus} from './useResource';
+import {FetchPolicy, NetworkStatus, Sorting, useResource} from './useResource';
 
 type ChildrenProps = {
 	data: any;
@@ -91,5 +89,5 @@ const ClayDataProvider = ({
 	);
 };
 
-export {useResource};
+export {useResource, FetchPolicy, NetworkStatus, Sorting};
 export default ClayDataProvider;
