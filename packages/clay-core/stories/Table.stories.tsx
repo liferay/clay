@@ -116,13 +116,13 @@ export const Sorting = () => {
 	return (
 		<Table onSortChange={onSortChange} sort={sort}>
 			<Head>
-				<Column key="name" sorting>
+				<Column key="name" sortable>
 					Name
 				</Column>
-				<Column key="files" sorting>
+				<Column key="files" sortable>
 					Files
 				</Column>
-				<Column key="type" sorting>
+				<Column key="type" sortable>
 					Type
 				</Column>
 			</Head>
