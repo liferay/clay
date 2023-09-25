@@ -36,9 +36,14 @@ const ITEMS = [
 				type: 'radio' as const,
 				value: 'two',
 			},
+			{
+				label: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+				type: 'radio' as const,
+				value: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
+			},
 		],
 		label: 'radio',
-		name: 'radio',
+		name: 'dropdownWithItemsRadio',
 		onChange: (value: string) => alert(`New Radio checked ${value}`),
 		type: 'radiogroup' as const,
 	},
@@ -53,6 +58,12 @@ const ITEMS = [
 			{
 				checked: true,
 				label: 'checkbox 1',
+				onChange: () => alert('checkbox changed'),
+				type: 'checkbox' as const,
+			},
+			{
+				checked: true,
+				label: 'ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual',
 				onChange: () => alert('checkbox changed'),
 				type: 'checkbox' as const,
 			},
@@ -244,6 +255,14 @@ export const Checkbox = () => (
 				/>
 			</ClayDropDown.Section>
 		</ClayDropDown.ItemList>
+		<ClayDropDown.ItemList>
+			<ClayDropDown.Section>
+				<ClayCheckbox
+					label="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+					onChange={() => {}}
+				/>
+			</ClayDropDown.Section>
+		</ClayDropDown.ItemList>
 	</ClayDropDown>
 );
 
@@ -286,10 +305,26 @@ export const Radio = () => (
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Group header="Order">
 				<ClayDropDown.Section>
-					<ClayRadio checked label="Ascending" value="asc" />
+					<ClayRadio
+						checked
+						label="Ascending"
+						name="dropdownRadio01"
+						value="asc"
+					/>
 				</ClayDropDown.Section>
 				<ClayDropDown.Section>
-					<ClayRadio label="Descending" value="desc" />
+					<ClayRadio
+						label="Descending"
+						name="dropdownRadio01"
+						value="desc"
+					/>
+				</ClayDropDown.Section>
+				<ClayDropDown.Section>
+					<ClayRadio
+						label="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+						name="dropdownRadio01"
+						value="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+					/>
 				</ClayDropDown.Section>
 			</ClayDropDown.Group>
 		</ClayDropDown.ItemList>

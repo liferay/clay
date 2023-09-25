@@ -477,7 +477,6 @@ const Radio = ({value = '', ...otherProps}: IItem & IInternalItem) => {
 			<ClayRadio
 				{...otherProps}
 				checked={checked === value}
-				inline
 				name={name}
 				onChange={() => onChange(value as string)}
 				tabIndex={!tabFocus ? -1 : undefined}
