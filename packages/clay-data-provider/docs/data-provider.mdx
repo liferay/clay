@@ -30,6 +30,7 @@ import {
     -   [Suspense and ErrorBoundary](#suspense-and-errorboundary)
     -   [Data Fetching](#data-fetching)
         -   [Fetch](#fetch)
+    -   [Sortable](#sortable)
 -   [Advanced](#advanced)
     -   [Avoiding thundering herd problem](#avoiding-thundering-herd-problem)
     -   [Caching data at root level](#caching-data-at-root-level)
@@ -204,6 +205,24 @@ const App = () => {
 	const {resource} = useResource({fetch, link: 'https://clay.dev'});
 	// ...
 };
+```
+
+### Sortable
+
+```javascript
+const {resource, sort, sortChange} = useResource({
+	fetch: (link, init, sort) => {
+		const url = new URL(link);
+
+		if (sort) {
+			url.searchParams.append('column', sort.column);
+			url.searchParams.append('direction', sort.direction);
+		}
+
+		return fetch(url, init);
+	},
+	link: 'https://clay.dev',
+});
 ```
 
 ## Advanced

@@ -10,6 +10,11 @@ import warning from 'warning';
 
 import {getIdentifier, timeout} from './util';
 
+export type Sorting = {
+	column: React.Key;
+	direction: 'ascending' | 'descending';
+};
+
 export enum FetchPolicy {
 	CacheFirst = 'cache-first',
 	NoCache = 'no-cache',
@@ -82,7 +87,8 @@ type Props = {
 	 */
 	fetch?: <T = unknown>(
 		link: string,
-		init?: RequestInit | undefined
+		init?: RequestInit | undefined,
+		sort?: Sorting | undefined
 	) => Promise<Response> | Promise<FetchCursor<T>> | Promise<T>;
 
 	/**
@@ -275,6 +281,8 @@ const useResource = ({
 		'DataProvider: for the integration with Suspense to work correctly, the ClayProvider must be declared at the root of the project.'
 	);
 
+	const [sort, setSort] = useState<Sorting | null>(null);
+
 	const [resource, setResource] = useState<any>(
 		client.current.read(identifier) ?? null
 	);
@@ -423,7 +431,7 @@ const useResource = ({
 		return uri.toString();
 	};
 
-	const doFetch = (retryAttempts = 0) => {
+	const doFetch = (retryAttempts = 0, doSort?: Sorting | null) => {
 		warning(
 			typeof link === 'string',
 			'DataProvider: The behavior of the `link` accepting a function has been deprecated in favor of the `fetcher` API. \n More details: https://clayui.com/docs/components/data-provider.html#data-fetching'
@@ -466,7 +474,8 @@ const useResource = ({
 						{
 							...fetchOptions,
 							signal: abortController.current.signal,
-						}
+						},
+						doSort || sort || undefined
 					),
 					abortController.current
 				)
@@ -543,6 +552,11 @@ const useResource = ({
 		doFetch();
 	};
 
+	const onSortChange = (sort: Sorting | null) => {
+		setSort(sort);
+		doFetch(0, sort);
+	};
+
 	useEffect(() => {
 		pollIntervalRef.current = pollInterval;
 
@@ -612,7 +626,7 @@ const useResource = ({
 		throw fetchingOrError;
 	}
 
-	return {loadMore, refetch, resource};
+	return {loadMore, refetch, resource, sort, sortChange: onSortChange};
 };
 
 // This is just a fake component so that react-docgen can generate the Table

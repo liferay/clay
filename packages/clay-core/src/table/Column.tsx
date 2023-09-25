@@ -3,10 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import Icon from '@clayui/icon';
 import classNames from 'classnames';
 import React from 'react';
 
 import {Scope, useScope} from './ScopeContext';
+import {useTable} from './context';
 
 type Props = {
 	/**
@@ -32,6 +34,17 @@ type Props = {
 	expanded?: boolean;
 
 	/**
+	 * Internal property.
+	 * @ignore
+	 */
+	keyValue?: React.Key;
+
+	/**
+	 * Whether the column allows sortable. Only available in the header column.
+	 */
+	sortable?: boolean;
+
+	/**
 	 * Aligns horizontally contents inside the Cell.
 	 */
 	textAlign?: 'center' | 'end' | 'start';
@@ -45,6 +58,11 @@ type Props = {
 	 * Break the text into lines when necessary.
 	 */
 	wrap?: boolean;
+
+	/**
+	 * Sets a text value if the component's content is not plain text.
+	 */
+	textValue?: string;
 } & React.ThHTMLAttributes<HTMLTableCellElement> &
 	React.TdHTMLAttributes<HTMLTableCellElement>;
 
@@ -56,29 +74,83 @@ export const Column = React.forwardRef<HTMLTableCellElement, Props>(
 			className,
 			delimiter,
 			expanded,
+			keyValue,
+			sortable,
 			textAlign,
+			textValue,
 			truncate,
 			wrap = true,
 			...otherProps
 		},
 		ref
 	) {
+		const {onSortChange, sort, sortDescriptionId} = useTable();
 		const scope = useScope();
-		const As = scope === Scope.Head ? 'th' : 'td';
+		const isHead = scope === Scope.Head;
+		const As = isHead ? 'th' : 'td';
 
 		return (
 			<As
 				{...otherProps}
+				aria-describedby={
+					isHead && sortable ? sortDescriptionId : undefined
+				}
+				aria-sort={
+					isHead && sortable
+						? sort && keyValue === sort.column
+							? sort.direction
+							: 'none'
+						: undefined
+				}
 				className={classNames(className, {
 					'table-cell-expand': truncate || expanded,
 					[`table-cell-${delimiter}`]: delimiter,
 					[`table-column-text-${textAlign}`]: textAlign,
 					[`text-${align}`]: align,
 					'table-cell-ws-nowrap': !wrap,
+					'table-head-title': isHead,
 				})}
 				ref={ref}
 			>
-				{truncate ? (
+				{isHead && sortable ? (
+					<a
+						aria-describedby={
+							isHead && sortable ? sortDescriptionId : undefined
+						}
+						className="inline-item text-truncate-inline"
+						href="#"
+						onClick={(event) => {
+							event.preventDefault();
+							onSortChange(
+								{
+									column: keyValue!,
+									direction:
+										sort && keyValue === sort.column
+											? sort.direction === 'ascending'
+												? 'descending'
+												: 'ascending'
+											: 'ascending',
+								},
+								textValue!
+							);
+						}}
+						role="button"
+					>
+						<span className="text-truncate">{children}</span>
+
+						{sort && keyValue === sort.column && (
+							<span className="inline-item inline-item-after">
+								<Icon
+									symbol={
+										sort.direction === 'ascending'
+											? 'order-arrow-up'
+											: 'order-arrow-down'
+									}
+								/>
+							</span>
+						)}
+					</a>
+				) : truncate ? (
 					<span className="text-truncate-inline">
 						<span className="text-truncate">{children}</span>
 					</span>

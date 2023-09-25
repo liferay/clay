@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {Body, Column, Head, Row, Table} from '../src/table';
 
@@ -73,6 +73,66 @@ export const DynamicCells = () => {
 				{(row) => (
 					<Row items={columns2}>
 						{(column) => <Column>{row[column.id]}</Column>}
+					</Row>
+				)}
+			</Body>
+		</Table>
+	);
+};
+
+type Sorting = {
+	column: React.Key;
+	direction: 'ascending' | 'descending';
+};
+
+export const Sorting = () => {
+	const [sort, setSort] = useState<Sorting | null>(null);
+	const [items, setItems] = useState([
+		{files: 22, id: 1, name: 'Games', type: 'File folder'},
+		{files: 7, id: 2, name: 'Program Files', type: 'File folder'},
+	]);
+
+	const onSortChange = useCallback((sort: Sorting | null) => {
+		if (sort) {
+			setItems((items) =>
+				items.sort((a, b) => {
+					let cmp = new Intl.Collator('en', {numeric: true}).compare(
+						a[sort.column],
+						b[sort.column]
+					);
+
+					if (sort.direction === 'descending') {
+						cmp *= -1;
+					}
+
+					return cmp;
+				})
+			);
+		}
+
+		setSort(sort);
+	}, []);
+
+	return (
+		<Table onSortChange={onSortChange} sort={sort}>
+			<Head>
+				<Column key="name" sortable>
+					Name
+				</Column>
+				<Column key="files" sortable>
+					Files
+				</Column>
+				<Column key="type" sortable>
+					Type
+				</Column>
+			</Head>
+
+			<Body items={items}>
+				{(row) => (
+					<Row>
+						<Column>{row['name']}</Column>
+						<Column>{row['files']}</Column>
+						<Column>{row['type']}</Column>
 					</Row>
 				)}
 			</Body>

@@ -102,7 +102,8 @@ describe('ClayDataProvider', () => {
 
 		expect(fetch).toHaveBeenCalledWith(
 			'https://clay.data/',
-			expect.any(Object)
+			expect.any(Object),
+			undefined
 		);
 	});
 
