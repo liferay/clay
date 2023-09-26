@@ -68,7 +68,7 @@
 				th {
 					@include clay-css(map-deep-get($map, thead, th));
 
-					[href] {
+					a[href] {
 						@include clay-link(map-deep-get($map, thead, th, href));
 					}
 				}
@@ -78,7 +78,7 @@
 			td {
 				@include clay-css(map-get($map, table-cell));
 
-				[href] {
+				a[href] {
 					@include clay-link(map-deep-get($map, table-cell, href));
 				}
 			}
@@ -330,7 +330,7 @@
 						map-deep-get($map, table-disabled, table-cell)
 					);
 
-					[href] {
+					a[href] {
 						@include clay-link(
 							map-deep-get($map, table-disabled, table-cell, href)
 						);

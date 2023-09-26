@@ -1039,7 +1039,7 @@
 			}
 
 			&[href],
-			[href] {
+			a[href] {
 				@include clay-link($href);
 			}
 		}
