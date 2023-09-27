@@ -439,7 +439,6 @@ $dropdown-section-custom-control-label: () !default;
 $dropdown-section-custom-control-label-text: () !default;
 $dropdown-section-custom-control-label-text: map-deep-merge(
 	(
-		display: block,
 		padding-left: 2rem,
 	),
 	$dropdown-section-custom-control-label-text

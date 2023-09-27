@@ -26,7 +26,7 @@ $cadmin-custom-control-indicator-size: 16px !default;
 
 $cadmin-custom-control-indicator-bg: $cadmin-white !default;
 $cadmin-custom-control-indicator-bg-size: 50% 50% !default;
-$cadmin-custom-control-indicator-border-color: $cadmin-gray-400 !default;
+$cadmin-custom-control-indicator-border-color: $cadmin-gray-600 !default;
 $cadmin-custom-control-indicator-border-style: solid !default;
 $cadmin-custom-control-indicator-border-width: 1px !default; // 1px
 $cadmin-custom-control-indicator-box-shadow: none !default;
@@ -201,7 +201,11 @@ $cadmin-label-custom-control-label: map-deep-merge(
 $cadmin-custom-control-label-text: () !default;
 $cadmin-custom-control-label-text: map-deep-merge(
 	(
-		padding-left: $cadmin-custom-control-description-padding-left,
+		display: block,
+		padding-left:
+			calc(
+				#{$cadmin-custom-control-indicator-size} + #{$cadmin-custom-control-description-padding-left}
+			),
 	),
 	$cadmin-custom-control-label-text
 );
