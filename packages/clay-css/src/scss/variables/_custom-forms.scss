@@ -227,7 +227,11 @@ $label-custom-control-label: map-deep-merge(
 $custom-control-label-text: () !default;
 $custom-control-label-text: map-deep-merge(
 	(
-		padding-left: $custom-control-description-padding-left,
+		display: block,
+		padding-left:
+			calc(
+				#{$custom-control-indicator-size} + #{$custom-control-description-padding-left}
+			),
 	),
 	$custom-control-label-text
 );
