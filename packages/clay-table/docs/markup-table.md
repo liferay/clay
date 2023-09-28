@@ -13,6 +13,7 @@ mainTabURL: 'docs/components/table.html'
     -   [Bordered](#css-bordered)
     -   [Hoverable](#css-hoverable)
     -   [Small](#css-small)
+    -   [Nested Rows](#css-table-nested-rows)
 -   [Responsiveness](#css-responsiveness)
     -   [Always Responsive](#css-always-responsive)
     -   [Breakpoints](#css-breakpoints)
@@ -796,6 +797,255 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 	</tbody>
 </table>
 ```
+
+### Nested Rows(#css-table-nested-rows)
+
+Example markup for Nested Rows in Frontend Dataset.
+
+<div class="sheet-example">
+    <div class="table-responsive">
+        <table class="show-quick-actions-on-hover table table-list table-nested-rows table-striped" role="treegrid">
+            <caption>Caption: Table List with filler content</caption>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        Label
+                    </th>
+                    <th scope="col">
+                        Scope
+                    </th>
+                    <th scope="col">
+                        System
+                    </th>
+                    <th scope="col">Modified Date</th>
+                    <th scope="col">
+                        Status
+                    </th>
+                    <th scope="col">
+                        <svg class="lexicon-icon lexicon-icon-caret-down" focusable="false" role="presentation">
+                            <use xlink:href="/images/icons/icons.svg#caret-down" />
+                        </svg>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-divider">
+                    <td colspan="6">Group 1</td>
+                </tr>
+                <tr aria-level="1" role="row">
+                    <td role="gridcell">
+                        <button class="component-action component-drag">
+                            <svg class="lexicon-icon lexicon-icon-drag" focusable="false" role="presentation">
+                                <use xlink:href="/images/icons/icons.svg#drag" />
+                            </svg>
+                        </button>
+                        <div class="autofit-row">
+                            <div class="autofit-col autofit-col-toggle"></div>
+                            <div class="autofit-col autofit-col-checkbox">
+                                <div class="custom-control custom-checkbox">
+                                    <label>
+                                        <input class="custom-control-input" type="checkbox">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="autofit-col autofit-col-icon">
+                                <svg class="lexicon-icon lexicon-icon-folder" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#folder" />
+                                </svg>
+                            </div>
+                            <div class="autofit-col autofit-col-expand">
+                                <span class="table-title">Root Object</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td role="gridcell">Company</td>
+                    <td role="gridcell">No</td>
+                    <td role="gridcell">June 12, 2023, 6:07:25PM</td>
+                    <td role="gridcell">
+                        <span class="label label-sm">Draft</span>
+                    </td>
+                    <td role="gridcell">
+                        <div class="quick-action-menu">
+                            <a class="component-action quick-action-item" href="#1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#trash" />
+                                </svg>
+                            </a>
+                            <a class="component-action quick-action-item" href="#1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#download" />
+                                </svg>
+                            </a>
+                            <a class="component-action quick-action-item" href="#1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-expand" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#expand" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="dropdown dropdown-action">
+                            <a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+                                </svg>
+                            </a>
+                            <ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+                                <li><a class="dropdown-item" href="#1" role="button">Download</a></li>
+                                <li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr aria-level="1" class="table-active" role="row">
+                    <td role="gridcell">
+                        <button class="component-action component-drag">
+                            <svg class="lexicon-icon lexicon-icon-drag" focusable="false" role="presentation">
+                                <use xlink:href="/images/icons/icons.svg#drag" />
+                            </svg>
+                        </button>
+                        <div class="autofit-row">
+                            <div class="autofit-col autofit-col-toggle">
+                                <button class="component-action" data-target="#tableCollapse01" type="button">
+                                    <span class="collapse-icon-closed">
+                                        <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+                                            <use xlink:href="/images/icons/icons.svg#angle-right" />
+                                        </svg>
+                                    </span>
+                                    <span class="collapse-icon-open">
+                                        <svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+                                            <use xlink:href="/images/icons/icons.svg#angle-down" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="autofit-col autofit-col-checkbox">
+                                <div class="custom-control custom-checkbox">
+                                    <label>
+                                        <input class="custom-control-input" type="checkbox">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="autofit-col autofit-col-expand">
+                                <span class="table-title">Root Object - First Level</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td role="gridcell">Company</td>
+                    <td role="gridcell">No</td>
+                    <td role="gridcell">June 12, 2023, 6:07:25PM</td>
+                    <td role="gridcell">
+                        <span class="label label-sm">Draft</span>
+                    </td>
+                    <td role="gridcell">
+                        <div class="quick-action-menu">
+                            <a class="component-action quick-action-item" href="#1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-trash" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#trash" />
+                                </svg>
+                            </a>
+                            <a class="component-action quick-action-item" href="#1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-download" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#download" />
+                                </svg>
+                            </a>
+                            <a class="component-action quick-action-item" href="#1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-expand" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#expand" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="dropdown dropdown-action">
+                            <a aria-expanded="false" aria-haspopup="true" class="component-action dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+                                <svg class="lexicon-icon lexicon-icon-ellipsis-v" focusable="false" role="presentation">
+                                    <use xlink:href="/images/icons/icons.svg#ellipsis-v" />
+                                </svg>
+                            </a>
+                            <ul aria-labelledby="" class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" href="#1" role="button">Remove</a></li>
+                                <li><a class="dropdown-item" href="#1" role="button">Download</a></li>
+                                <li><a class="dropdown-item" href="#1" role="button">Checkout</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr aria-level="2" class="collapse" id="tableCollapse01" role="row">
+                    <td role="gridcell">
+                        <button class="component-action component-drag">
+                            <svg class="lexicon-icon lexicon-icon-drag" focusable="false" role="presentation">
+                                <use xlink:href="/images/icons/icons.svg#drag" />
+                            </svg>
+                        </button>
+                        <div class="autofit-row">
+                            <div class="autofit-col autofit-col-toggle"></div>
+                            <div class="autofit-col autofit-col-toggle">
+                                <button class="component-action" data-target="#tableCollapse02" type="button">
+                                    <span class="collapse-icon-closed">
+                                        <svg class="lexicon-icon lexicon-icon-angle-right" focusable="false" role="presentation">
+                                            <use xlink:href="/images/icons/icons.svg#angle-right" />
+                                        </svg>
+                                    </span>
+                                    <span class="collapse-icon-open">
+                                        <svg class="lexicon-icon lexicon-icon-angle-down" focusable="false" role="presentation">
+                                            <use xlink:href="/images/icons/icons.svg#angle-down" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="autofit-col autofit-col-checkbox">
+                                <div class="custom-control custom-checkbox">
+                                    <label>
+                                        <input class="custom-control-input" type="checkbox">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="autofit-col autofit-col-expand">
+                                <span class="table-title">Second Level Object</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td role="gridcell">Company</td>
+                    <td role="gridcell">No</td>
+                    <td role="gridcell">June 13, 2023, 12:00PM</td>
+                    <td role="gridcell">--</td>
+                    <td role="gridcell">--</td>
+                </tr>
+                <tr aria-level="3" class="collapse" id="tableCollapse02" role="row">
+                    <td role="gridcell">
+                        <button class="component-action component-drag">
+                            <svg class="lexicon-icon lexicon-icon-drag" focusable="false" role="presentation">
+                                <use xlink:href="/images/icons/icons.svg#drag" />
+                            </svg>
+                        </button>
+                        <div class="autofit-row">
+                            <div class="autofit-col autofit-col-toggle"></div>
+                            <div class="autofit-col autofit-col-toggle"></div>
+                            <div class="autofit-col autofit-col-toggle"></div>
+                            <div class="autofit-col autofit-col-checkbox">
+                                <div class="custom-control custom-checkbox">
+                                    <label>
+                                        <input class="custom-control-input" type="checkbox">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="autofit-col autofit-col-expand">
+                                <span class="table-title">Third Level Object</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td role="gridcell">Company</td>
+                    <td role="gridcell">No</td>
+                    <td role="gridcell">June 13, 2023, 12:00PM</td>
+                    <td role="gridcell">--</td>
+                    <td role="gridcell">--</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 ## Inline Edit Table(#css-inline-edit-table)
 
