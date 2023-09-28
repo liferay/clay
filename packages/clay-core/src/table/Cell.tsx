@@ -66,8 +66,8 @@ type Props = {
 } & React.ThHTMLAttributes<HTMLTableCellElement> &
 	React.TdHTMLAttributes<HTMLTableCellElement>;
 
-export const Column = React.forwardRef<HTMLTableCellElement, Props>(
-	function ColumnInner(
+export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
+	function CellInner(
 		{
 			align,
 			children,
@@ -162,4 +162,4 @@ export const Column = React.forwardRef<HTMLTableCellElement, Props>(
 	}
 );
 
-Column.displayName = 'Item';
+Cell.displayName = 'Item';

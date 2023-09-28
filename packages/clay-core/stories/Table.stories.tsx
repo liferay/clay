@@ -5,7 +5,7 @@
 
 import React, {useCallback, useState} from 'react';
 
-import {Body, Column, Head, Row, Table} from '../src/table';
+import {Body, Cell, Head, Row, Table} from '../src/table';
 
 export default {
 	title: 'Design System/Components/Table',
@@ -31,14 +31,14 @@ export const Dynamic = () => {
 	return (
 		<Table>
 			<Head items={columns}>
-				{(column) => <Column key={column.id}>{column.name}</Column>}
+				{(column) => <Cell key={column.id}>{column.name}</Cell>}
 			</Head>
 
 			<Body items={rows}>
 				{(row) => (
 					<Row>
-						<Column>{row.name}</Column>
-						<Column>{row.type}</Column>
+						<Cell>{row.name}</Cell>
+						<Cell>{row.type}</Cell>
 					</Row>
 				)}
 			</Body>
@@ -66,13 +66,13 @@ export const DynamicCells = () => {
 	return (
 		<Table>
 			<Head items={columns2}>
-				{(column) => <Column key={column.id}>{column.name}</Column>}
+				{(column) => <Cell key={column.id}>{column.name}</Cell>}
 			</Head>
 
 			<Body items={rows2}>
 				{(row) => (
 					<Row items={columns2}>
-						{(column) => <Column>{row[column.id]}</Column>}
+						{(column) => <Cell>{row[column.id]}</Cell>}
 					</Row>
 				)}
 			</Body>
@@ -116,23 +116,23 @@ export const Sorting = () => {
 	return (
 		<Table onSortChange={onSortChange} sort={sort}>
 			<Head>
-				<Column key="name" sortable>
+				<Cell key="name" sortable>
 					Name
-				</Column>
-				<Column key="files" sortable>
+				</Cell>
+				<Cell key="files" sortable>
 					Files
-				</Column>
-				<Column key="type" sortable>
+				</Cell>
+				<Cell key="type" sortable>
 					Type
-				</Column>
+				</Cell>
 			</Head>
 
 			<Body items={items}>
 				{(row) => (
 					<Row>
-						<Column>{row['name']}</Column>
-						<Column>{row['files']}</Column>
-						<Column>{row['type']}</Column>
+						<Cell>{row['name']}</Cell>
+						<Cell>{row['files']}</Cell>
+						<Cell>{row['type']}</Cell>
 					</Row>
 				)}
 			</Body>

@@ -4,7 +4,7 @@
  */
 
 export * from './Body';
-export * from './Column';
+export * from './Cell';
 export * from './Head';
 export * from './Row';
 export * from './Table';
