@@ -403,6 +403,14 @@ $cadmin-c-table: map-deep-merge(
 				padding-right: 0,
 			),
 		),
+		component-drag: (
+			font-size: 14px,
+			height: 16px,
+			width: 16px,
+			focus: (
+				box-shadow: $cadmin-component-focus-inset-box-shadow,
+			),
+		),
 		custom-control: (
 			margin-bottom: 0,
 		),
@@ -466,6 +474,43 @@ $cadmin-c-table-sm: map-deep-merge(
 		),
 	),
 	$cadmin-c-table-sm
+);
+
+// .table-nested-rows
+
+$cadmin-c-table-nested-rows: () !default;
+$cadmin-c-table-nested-rows: map-deep-merge(
+	(
+		table-column-start: (
+			padding-left: 20px,
+		),
+		table-column-end: (
+			padding-right: 20px,
+		),
+		autofit-col: (
+			padding-left: 2px,
+			padding-right: 2px,
+			min-width: 28px,
+		),
+		autofit-col-checkbox: (
+			padding-right: 10px,
+		),
+		autofit-col-icon: (
+			padding-right: 10px,
+		),
+		component-drag: (
+			left: 2px,
+			position: absolute,
+			top: 50%,
+			transform: translateY(-50%),
+		),
+		component-toggle: (
+			font-size: 14px,
+			height: 24px,
+			width: 24px,
+		),
+	),
+	$cadmin-c-table-nested-rows
 );
 
 // Table Dark Variant

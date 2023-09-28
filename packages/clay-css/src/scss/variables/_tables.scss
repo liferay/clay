@@ -358,6 +358,14 @@ $c-table: map-deep-merge(
 				padding-right: 0,
 			),
 		),
+		component-drag: (
+			font-size: 0.875rem,
+			height: 1rem,
+			width: 1rem,
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
+			),
+		),
 		custom-control: (
 			margin-bottom: 0,
 		),
@@ -440,6 +448,43 @@ $c-table-sm: map-deep-merge(
 		),
 	),
 	$c-table-sm
+);
+
+// .table-nested-rows
+
+$c-table-nested-rows: () !default;
+$c-table-nested-rows: map-deep-merge(
+	(
+		table-column-start: (
+			padding-left: 1.25rem,
+		),
+		table-column-end: (
+			padding-right: 1.25rem,
+		),
+		autofit-col: (
+			padding-left: 0.125rem,
+			padding-right: 0.125rem,
+			min-width: 1.75rem,
+		),
+		autofit-col-checkbox: (
+			padding-right: 0.625rem,
+		),
+		autofit-col-icon: (
+			padding-right: 0.625rem,
+		),
+		component-drag: (
+			left: 2px,
+			position: absolute,
+			top: 50%,
+			transform: translateY(-50%),
+		),
+		component-toggle: (
+			font-size: 0.875rem,
+			height: 1.5rem,
+			width: 1.5rem,
+		),
+	),
+	$c-table-nested-rows
 );
 
 // Table Dark Variant
