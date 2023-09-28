@@ -454,6 +454,20 @@ caption {
 	}
 }
 
+// .table-nested-rows
+
+.table-nested-rows {
+	@include clay-table-variant($c-table-nested-rows);
+
+	.component-action.show .collapse-icon-closed {
+		display: none;
+	}
+
+	.component-action:not(.show) .collapse-icon-open {
+		display: none;
+	}
+}
+
 // Show Quick Action
 
 .show-quick-actions-on-hover {

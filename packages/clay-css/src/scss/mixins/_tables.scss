@@ -366,6 +366,30 @@
 				}
 			}
 
+			.autofit-col-checkbox {
+				@include clay-css(map-get($map, autofit-col-checkbox));
+			}
+
+			.autofit-col-icon {
+				@include clay-css(map-get($map, autofit-col-icon));
+			}
+
+			.autofit-col-toggle {
+				@include clay-css(map-get($map, autofit-col-toggle));
+			}
+
+			.component-action {
+				@include clay-link(map-get($map, component-action));
+			}
+
+			.component-drag {
+				@include clay-link(map-get($map, component-drag));
+			}
+
+			.component-toggle {
+				@include clay-link(map-get($map, component-toggle));
+			}
+
 			.custom-control,
 			.form-check {
 				@include clay-custom-control-variant(
