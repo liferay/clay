@@ -4,3 +4,4 @@
  */
 
 export {useIsMounted} from './useIsMounted';
+export {useForwardRef} from './useForwardRef';
