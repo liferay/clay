@@ -417,7 +417,7 @@ export function useNavigation<T extends HTMLElement | null>({
 }
 
 export function getFocusableList<T extends HTMLElement | null>(
-	containeRef: React.MutableRefObject<T>,
+	containeRef: React.MutableRefObject<T> | React.RefObject<T>,
 	focusableElements: Array<string> = FOCUSABLE_ELEMENTS
 ) {
 	if (!containeRef.current) {
