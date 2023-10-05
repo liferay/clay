@@ -8,8 +8,11 @@ import RootTable from '@clayui/table';
 import React, {useCallback, useRef} from 'react';
 import {createPortal} from 'react-dom';
 
+import {FocusWithinProvider} from '../aria';
+import {useForwardRef} from '../hooks';
 import {LiveAnnouncer} from '../live-announcer';
 import {Sorting, TableContext} from './context';
+import {useTreeNavigation} from './useTreeNavigation';
 
 import type {AnnouncerAPI} from '../live-announcer';
 
@@ -36,7 +39,18 @@ type Props = {
 	 * Current state of sort (controlled).
 	 */
 	sort?: Sorting | null;
+
+	/**
+	 * Flag to indicate which key name matches the nested rendering of the tree.
+	 */
+	nestedKey?: string;
 } & React.ComponentProps<typeof RootTable>;
+
+const focusableElements = ['[role="row"]', 'td[role="gridcell"]'];
+const locator = {
+	cell: 'gridcell',
+	row: 'row',
+};
 
 export const Table = React.forwardRef<HTMLDivElement, Props>(
 	function TableInner(
@@ -49,9 +63,10 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			},
 			onSortChange,
 			sort: externalSort,
+			nestedKey,
 			...otherProps
 		}: Props,
-		ref
+		outRef
 	) {
 		const [sort, setSorting] = useControlledState({
 			defaultName: 'defaultSort',
@@ -62,34 +77,53 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			value: externalSort,
 		});
 
+		const ref = useForwardRef(outRef);
 		const announcerAPI = useRef<AnnouncerAPI>(null);
+
+		const {navigationProps} = useTreeNavigation({
+			disabled: !nestedKey,
+			locator,
+			ref,
+		});
 
 		const sortDescriptionId = useId();
 
 		return (
-			<RootTable {...otherProps} ref={ref}>
+			<RootTable
+				{...otherProps}
+				{...navigationProps}
+				ref={ref}
+				role={nestedKey ? 'treegrid' : undefined}
+			>
 				<LiveAnnouncer ref={announcerAPI} />
 
-				<TableContext.Provider
-					value={{
-						onSortChange: useCallback(
-							(sort, textValue) => {
-								announcerAPI.current!.announce(
-									sub(messages!.sorting, [
-										textValue,
-										sort!.direction,
-									])
-								);
-								setSorting(sort);
-							},
-							[setSorting]
-						),
-						sort,
-						sortDescriptionId,
-					}}
+				<FocusWithinProvider
+					containerRef={ref}
+					focusableElements={focusableElements}
 				>
-					{children}
-				</TableContext.Provider>
+					<TableContext.Provider
+						value={{
+							nestedKey,
+							onSortChange: useCallback(
+								(sort, textValue) => {
+									announcerAPI.current!.announce(
+										sub(messages!.sorting, [
+											textValue,
+											sort!.direction,
+										])
+									);
+									setSorting(sort);
+								},
+								[setSorting]
+							),
+							sort,
+							sortDescriptionId,
+							treegrid: !!nestedKey,
+						}}
+					>
+						{children}
+					</TableContext.Provider>
+				</FocusWithinProvider>
 
 				{createPortal(
 					<div

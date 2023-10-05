@@ -14,10 +14,18 @@ type Context = {
 	onSortChange: (sorting: Sorting | null, textValue: string) => void;
 	sort: Sorting | null;
 	sortDescriptionId: string;
+	nestedKey?: string;
+	treegrid: boolean;
 };
 
 export const TableContext = React.createContext<Context>({} as Context);
 
 export function useTable() {
 	return useContext(TableContext);
+}
+
+export const RowLevelContext = React.createContext<number>(1);
+
+export function useLevel() {
+	return useContext(RowLevelContext);
 }

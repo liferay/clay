@@ -139,3 +139,50 @@ export const Sorting = () => {
 		</Table>
 	);
 };
+
+export const Treegrid = () => {
+	const columns = [
+		{
+			id: 'name',
+			name: 'Name',
+		},
+		{
+			id: 'type',
+			name: 'Type',
+		},
+	];
+
+	return (
+		<Table aria-label="Inbox" nestedKey="children">
+			<Head items={columns}>
+				{(column) => <Cell key={column.id}>{column.name}</Cell>}
+			</Head>
+
+			<Body
+				items={[
+					{
+						children: [{id: 10, name: 'WoW', type: 'MMORPG'}],
+						id: 1,
+						name: 'Games',
+						type: 'File folder',
+					},
+					{
+						id: 2,
+						name: 'Program Files',
+						type: 'File folder',
+					},
+				]}
+			>
+				{(row) => (
+					<Row items={columns}>
+						{(column) => (
+							<Cell key={`${row.id}:${column.id}`}>
+								{row[column.id]}
+							</Cell>
+						)}
+					</Row>
+				)}
+			</Body>
+		</Table>
+	);
+};

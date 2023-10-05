@@ -3,10 +3,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import React from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {ChildrenFunction, Collection} from '../collection';
 import {Scope, ScopeContext} from './ScopeContext';
+import {useTable} from './context';
 
 type Props<T> = {
 	/**
@@ -20,14 +21,66 @@ type Props<T> = {
 	items?: Array<T>;
 } & React.TableHTMLAttributes<HTMLTableSectionElement>;
 
+type ItemProps<T> = {
+	children: React.ReactElement;
+	item: T;
+	keyValue: React.Key;
+};
+
+function* flatten<T extends Record<string, any>>(
+	array: Array<T>,
+	nestedKey: string,
+	level = 1
+): IterableIterator<T> {
+	for (let i = 0; i < array.length; i++) {
+		const item = {
+			...array[i],
+			_index: i,
+			_level: level,
+			_size: array.length,
+		} as unknown as T;
+
+		if (Array.isArray(array[i]![nestedKey])) {
+			delete item[nestedKey];
+			yield item;
+			yield* flatten(array[i]![nestedKey], nestedKey, level + 1);
+		} else {
+			yield item;
+		}
+	}
+}
+
 function BodyInner<T extends Record<string, any>>(
-	{children, items, ...otherProps}: Props<T>,
+	{children, items: outItems, ...otherProps}: Props<T>,
 	ref: React.Ref<HTMLTableSectionElement>
 ) {
+	const {nestedKey} = useTable();
+
+	const items = useMemo(() => {
+		if (!nestedKey || !outItems) {
+			return outItems;
+		}
+
+		return [...flatten(outItems!, nestedKey)];
+	}, [outItems, nestedKey]);
+
 	return (
 		<tbody {...otherProps} ref={ref}>
 			<ScopeContext.Provider value={Scope.Body}>
-				<Collection items={items} passthroughKey={false}>
+				<Collection
+					itemContainer={useCallback(
+						({children, item, keyValue}: ItemProps<any>) =>
+							React.cloneElement(children, {
+								_index: item._index,
+								_level: item._level,
+								_size: item._size,
+								keyValue,
+							}),
+						[]
+					)}
+					items={items}
+					passthroughKey={false}
+				>
 					{children}
 				</Collection>
 			</ScopeContext.Provider>

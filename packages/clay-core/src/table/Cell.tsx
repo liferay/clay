@@ -7,8 +7,9 @@ import Icon from '@clayui/icon';
 import classNames from 'classnames';
 import React from 'react';
 
+import {useFocusWithin} from '../aria';
 import {Scope, useScope} from './ScopeContext';
-import {useTable} from './context';
+import {useLevel, useTable} from './context';
 
 type Props = {
 	/**
@@ -32,6 +33,12 @@ type Props = {
 	 * Fills out the remaining space inside a Cell.
 	 */
 	expanded?: boolean;
+
+	/**
+	 * Internal property.
+	 * @ignore
+	 */
+	index?: number;
 
 	/**
 	 * Internal property.
@@ -74,6 +81,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			className,
 			delimiter,
 			expanded,
+			index,
 			keyValue,
 			sortable,
 			textAlign,
@@ -84,14 +92,22 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 		},
 		ref
 	) {
-		const {onSortChange, sort, sortDescriptionId} = useTable();
+		const {onSortChange, sort, sortDescriptionId, treegrid} = useTable();
+		const focusWithinProps = useFocusWithin({
+			disabled: !treegrid,
+			id: keyValue!,
+		});
 		const scope = useScope();
+		const level = useLevel();
+
 		const isHead = scope === Scope.Head;
 		const As = isHead ? 'th' : 'td';
 
 		return (
 			<As
 				{...otherProps}
+				{...focusWithinProps}
+				aria-colindex={isHead && !sortable ? undefined : index}
 				aria-describedby={
 					isHead && sortable ? sortDescriptionId : undefined
 				}
@@ -110,31 +126,40 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					'table-cell-ws-nowrap': !wrap,
 					'table-head-title': isHead,
 				})}
+				data-id={
+					typeof keyValue === 'number'
+						? `number,${keyValue}`
+						: `string,${keyValue}`
+				}
+				onClick={(event) => {
+					if (!(isHead && sortable)) {
+						return;
+					}
+
+					event.preventDefault();
+					onSortChange(
+						{
+							column: keyValue!,
+							direction:
+								sort && keyValue === sort.column
+									? sort.direction === 'ascending'
+										? 'descending'
+										: 'ascending'
+									: 'ascending',
+						},
+						textValue!
+					);
+				}}
 				ref={ref}
+				role={treegrid ? 'gridcell' : undefined}
 			>
 				{isHead && sortable ? (
 					<a
-						aria-describedby={
-							isHead && sortable ? sortDescriptionId : undefined
-						}
 						className="inline-item text-truncate-inline"
 						href="#"
-						onClick={(event) => {
-							event.preventDefault();
-							onSortChange(
-								{
-									column: keyValue!,
-									direction:
-										sort && keyValue === sort.column
-											? sort.direction === 'ascending'
-												? 'descending'
-												: 'ascending'
-											: 'ascending',
-								},
-								textValue!
-							);
-						}}
-						role="button"
+						onClick={(event) => event.preventDefault()}
+						role="presentation"
+						tabIndex={-1}
 					>
 						<span className="text-truncate">{children}</span>
 
@@ -154,6 +179,14 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					<span className="text-truncate-inline">
 						<span className="text-truncate">{children}</span>
 					</span>
+				) : treegrid && index === 0 ? (
+					<div
+						style={{
+							paddingLeft: (level - 1) * 28,
+						}}
+					>
+						{children}
+					</div>
 				) : (
 					children
 				)}
