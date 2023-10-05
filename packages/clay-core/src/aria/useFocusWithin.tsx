@@ -80,11 +80,15 @@ type FocusWithinProps = {
 export function useFocusWithin({disabled, id}: FocusWithinProps) {
 	const {focusId, onFocusChange} = useContext(FocusContext);
 
-	const onFocus = useCallback(() => {
-		if (focusId !== id) {
-			onFocusChange(id);
-		}
-	}, [focusId]);
+	const onFocus = useCallback(
+		function onFocusInner<T>(event: React.FocusEvent<T>) {
+			if (focusId !== id) {
+				event.stopPropagation();
+				onFocusChange(id);
+			}
+		},
+		[focusId]
+	);
 
 	return useMemo(() => {
 		if (disabled) {
