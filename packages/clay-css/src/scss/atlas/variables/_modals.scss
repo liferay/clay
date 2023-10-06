@@ -9,12 +9,12 @@ $modal-backdrop-opacity: 0.8 !default;
 $modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $modal-content-border-color: transparent !default;
 
-$modal-inner-padding: 1.5rem !default; // 24px
+$modal-inner-padding: 1rem !default; // 16px
 
 // .modal-header
 
 $modal-header-border-color: $gray-300 !default;
-$modal-header-padding: 1.5rem !default; // 24px
+$modal-header-padding: 1rem !default; // 16px
 
 $modal-header: () !default;
 $modal-header: map-deep-merge(

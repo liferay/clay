@@ -69,6 +69,10 @@
 			max-height: calc(
 				100vh - #{$cadmin-modal-dialog-margin-y-sm-up * 2}
 			);
+
+			.modal-body, .modal-header {
+				padding: 1.5rem;
+			}
 		}
 	}
 

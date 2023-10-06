@@ -222,6 +222,10 @@
 
   .modal-content {
     @include box-shadow($modal-content-box-shadow-sm-up);
+
+    .modal-body, .modal-header {
+      padding: 1.5rem;
+    }
   }
 
   .modal-sm { max-width: $modal-sm; }
