@@ -92,7 +92,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/path/to/some/resource.svg#caret-top"
+                href="/path/to/some/resource.svg#caret-top"
               />
             </svg>
           </button>
@@ -106,7 +106,7 @@ exports[`Rendering renders ClaySelectBox with buttons to reorder options 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/path/to/some/resource.svg#caret-bottom"
+                href="/path/to/some/resource.svg#caret-bottom"
               />
             </svg>
           </button>

@@ -62,7 +62,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/path/to/some/resource.svg#caret-right"
+              href="/path/to/some/resource.svg#caret-right"
             />
           </svg>
         </button>
@@ -77,7 +77,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/path/to/some/resource.svg#caret-left"
+              href="/path/to/some/resource.svg#caret-left"
             />
           </svg>
         </button>
@@ -132,7 +132,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#caret-top"
+                    href="/path/to/some/resource.svg#caret-top"
                   />
                 </svg>
               </button>
@@ -147,7 +147,7 @@ exports[`Rendering renders ClayDualListBox 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#caret-bottom"
+                    href="/path/to/some/resource.svg#caret-bottom"
                   />
                 </svg>
               </button>

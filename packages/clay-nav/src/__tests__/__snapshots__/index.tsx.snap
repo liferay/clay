@@ -20,7 +20,7 @@ exports[`ClayVerticalNav renders 1`] = `
         role="presentation"
       >
         <use
-          xlink:href="/path/to#caret-bottom"
+          href="/path/to#caret-bottom"
         />
       </svg>
     </button>
@@ -53,7 +53,7 @@ exports[`ClayVerticalNav renders 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to#caret-right"
+                  href="/path/to#caret-right"
                 />
               </svg>
             </span>
@@ -66,7 +66,7 @@ exports[`ClayVerticalNav renders 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to#caret-bottom"
+                  href="/path/to#caret-bottom"
                 />
               </svg>
             </span>

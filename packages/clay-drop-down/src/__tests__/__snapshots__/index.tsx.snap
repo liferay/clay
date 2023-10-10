@@ -270,7 +270,7 @@ exports[`ClayDropDown renders with icons 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/foo/bar#trash"
+                    href="/foo/bar#trash"
                   />
                 </svg>
               </span>
@@ -294,7 +294,7 @@ exports[`ClayDropDown renders with icons 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/foo/bar#check"
+                    href="/foo/bar#check"
                   />
                 </svg>
               </span>
@@ -316,7 +316,7 @@ exports[`ClayDropDown renders with icons 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/foo/bar#trash"
+                    href="/foo/bar#trash"
                   />
                 </svg>
               </span>
@@ -329,7 +329,7 @@ exports[`ClayDropDown renders with icons 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/foo/bar#check"
+                    href="/foo/bar#check"
                   />
                 </svg>
               </span>
@@ -402,7 +402,7 @@ exports[`ClayDropDown renders with search input 1`] = `
                       role="presentation"
                     >
                       <use
-                        xlink:href="/foo/bar#search"
+                        href="/foo/bar#search"
                       />
                     </svg>
                   </button>

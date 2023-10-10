@@ -33,7 +33,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/foo/bar#check"
+              href="/foo/bar#check"
             />
           </svg>
         </button>
@@ -67,7 +67,7 @@ exports[`ClayMultiStepNav activates step on click 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/foo/bar#check"
+              href="/foo/bar#check"
             />
           </svg>
         </button>
@@ -164,7 +164,7 @@ exports[`ClayMultiStepNav renders 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/foo/bar#check"
+              href="/foo/bar#check"
             />
           </svg>
         </button>

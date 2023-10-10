@@ -27,7 +27,7 @@ exports[`ClayUpperToolbar renders 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/test.svg#lock"
+                href="/test.svg#lock"
               />
             </svg>
           </div>
@@ -73,7 +73,7 @@ exports[`ClayUpperToolbar renders 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/test.svg#angle-left"
+                    href="/test.svg#angle-left"
                   />
                 </svg>
               </button>
@@ -87,7 +87,7 @@ exports[`ClayUpperToolbar renders 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/test.svg#angle-right"
+                    href="/test.svg#angle-right"
                   />
                 </svg>
               </button>
@@ -136,7 +136,7 @@ exports[`ClayUpperToolbar renders 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/test.svg#ellipsis-v"
+                    href="/test.svg#ellipsis-v"
                   />
                 </svg>
               </button>

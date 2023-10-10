@@ -42,7 +42,7 @@ exports[`ClayModal renders 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="icons.svg#times"
+                  href="icons.svg#times"
                 />
               </svg>
             </button>
@@ -306,7 +306,7 @@ exports[`ClayModal renders with Header 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="icons.svg#times"
+                  href="icons.svg#times"
                 />
               </svg>
             </button>

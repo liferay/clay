@@ -23,7 +23,7 @@ exports[`Button renders ClayButtonWithIcon 1`] = `
       role="presentation"
     >
       <use
-        xlink:href="/some/path#trash"
+        href="/some/path#trash"
       />
     </svg>
   </button>
@@ -42,7 +42,7 @@ exports[`Button renders ClayButtonWithIcon without monospaced 1`] = `
       role="presentation"
     >
       <use
-        xlink:href="/some/path#trash"
+        href="/some/path#trash"
       />
     </svg>
   </button>
