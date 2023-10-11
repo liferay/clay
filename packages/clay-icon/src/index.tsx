@@ -46,7 +46,7 @@ const ClayIcon = React.forwardRef<SVGSVGElement, IProps>(
 				ref={ref}
 				role="presentation"
 			>
-				<use xlinkHref={`${spriteMapVal}#${symbol}`} />
+				<use href={`${spriteMapVal}#${symbol}`} />
 			</svg>
 		);
 	}

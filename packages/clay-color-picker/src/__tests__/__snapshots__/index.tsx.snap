@@ -82,7 +82,7 @@ exports[`Interactions color editor interactions ability to change color of click
                 role="presentation"
               >
                 <use
-                  xlink:href="/test/path#times"
+                  href="/test/path#times"
                 />
               </svg>
             </button>
@@ -1692,7 +1692,7 @@ exports[`Rendering renders w/ var() 1`] = `
               style="width: 10px;"
             >
               <use
-                xlink:href="/test/path#color-picker"
+                href="/test/path#color-picker"
               />
             </svg>
           </label>
@@ -2456,7 +2456,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
               style="width: 10px;"
             >
               <use
-                xlink:href="/test/path#color-picker"
+                href="/test/path#color-picker"
               />
             </svg>
           </label>

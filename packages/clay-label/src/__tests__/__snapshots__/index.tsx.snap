@@ -48,7 +48,7 @@ exports[`Rendering renders as a link and closable 1`] = `
         role="presentation"
       >
         <use
-          xlinkHref="path/to/spritemap#times-small"
+          href="path/to/spritemap#times-small"
         />
       </svg>
     </button>
@@ -78,7 +78,7 @@ exports[`Rendering renders as closable 1`] = `
         role="presentation"
       >
         <use
-          xlinkHref="path/to/spritemap#times-small"
+          href="path/to/spritemap#times-small"
         />
       </svg>
     </button>

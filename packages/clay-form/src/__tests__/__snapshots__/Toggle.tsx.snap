@@ -176,7 +176,7 @@ exports[`Rendering w/ symbol 1`] = `
             role="presentation"
           >
             <use
-              xlinkHref="/foo.svg#check"
+              href="/foo.svg#check"
             />
           </svg>
         </span>
@@ -188,7 +188,7 @@ exports[`Rendering w/ symbol 1`] = `
             role="presentation"
           >
             <use
-              xlinkHref="/foo.svg#times"
+              href="/foo.svg#times"
             />
           </svg>
         </span>

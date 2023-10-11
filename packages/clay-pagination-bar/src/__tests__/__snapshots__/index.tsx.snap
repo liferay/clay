@@ -24,7 +24,7 @@ exports[`ClayPaginationBar renders 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="path/to/spritemap#caret-double-l"
+            href="path/to/spritemap#caret-double-l"
           />
         </svg>
       </button>
@@ -53,7 +53,7 @@ exports[`ClayPaginationBar renders 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="path/to/spritemap#angle-left"
+                href="path/to/spritemap#angle-left"
               />
             </svg>
           </div>
@@ -134,7 +134,7 @@ exports[`ClayPaginationBar renders 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="path/to/spritemap#angle-right"
+                href="path/to/spritemap#angle-right"
               />
             </svg>
           </a>
@@ -174,7 +174,7 @@ exports[`ClayPaginationBar renders without a DropDown 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="path/to/spritemap#angle-left"
+                href="path/to/spritemap#angle-left"
               />
             </svg>
           </div>
@@ -255,7 +255,7 @@ exports[`ClayPaginationBar renders without a DropDown 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="path/to/spritemap#angle-right"
+                href="path/to/spritemap#angle-right"
               />
             </svg>
           </a>
@@ -295,7 +295,7 @@ exports[`ClayPaginationBar totalItems with 0 will render the pagination bar with
               role="presentation"
             >
               <use
-                xlink:href="path/to/spritemap#angle-left"
+                href="path/to/spritemap#angle-left"
               />
             </svg>
           </div>
@@ -323,7 +323,7 @@ exports[`ClayPaginationBar totalItems with 0 will render the pagination bar with
               role="presentation"
             >
               <use
-                xlink:href="path/to/spritemap#angle-right"
+                href="path/to/spritemap#angle-right"
               />
             </svg>
           </div>

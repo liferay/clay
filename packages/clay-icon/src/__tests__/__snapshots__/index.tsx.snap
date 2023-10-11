@@ -6,7 +6,7 @@ exports[`ClayIcon renders 1`] = `
   role="presentation"
 >
   <use
-    xlinkHref="/path/to/some/resource.svg#cool-icon"
+    href="/path/to/some/resource.svg#cool-icon"
   />
 </svg>
 `;
@@ -17,7 +17,7 @@ exports[`ClayIcon renders with context spritemap 1`] = `
   role="presentation"
 >
   <use
-    xlinkHref="foo/bar.svg#cool-icon"
+    href="foo/bar.svg#cool-icon"
   />
 </svg>
 `;

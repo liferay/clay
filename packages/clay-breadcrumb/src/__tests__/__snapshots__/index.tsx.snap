@@ -18,7 +18,7 @@ exports[`ClayBreadcrumb calls callback when an item is clicked 1`] = `
         role="presentation"
       >
         <use
-          xlink:href="path/to/spritemap#angle-double-right"
+          href="path/to/spritemap#angle-double-right"
         />
       </svg>
     </button>
@@ -68,7 +68,7 @@ exports[`ClayBreadcrumb renders 1`] = `
         role="presentation"
       >
         <use
-          xlink:href="path/to/spritemap#angle-double-right"
+          href="path/to/spritemap#angle-double-right"
         />
       </svg>
     </button>
@@ -120,7 +120,7 @@ exports[`ClayBreadcrumb renders with properties passed by \`ellipsisProps\` 1`] 
         role="presentation"
       >
         <use
-          xlink:href="path/to/spritemap#angle-double-right"
+          href="path/to/spritemap#angle-double-right"
         />
       </svg>
     </button>

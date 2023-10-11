@@ -59,7 +59,7 @@ exports[`ClayPanel renders with custom displayTitle 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/foo/bar#angle-right"
+            href="/foo/bar#angle-right"
           />
         </svg>
       </span>
@@ -71,7 +71,7 @@ exports[`ClayPanel renders with custom displayTitle 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/foo/bar#angle-down"
+            href="/foo/bar#angle-down"
           />
         </svg>
       </span>
@@ -202,7 +202,7 @@ exports[`ClayPanel renders with multiple panels 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/foo/bar#angle-right"
+              href="/foo/bar#angle-right"
             />
           </svg>
         </span>
@@ -214,7 +214,7 @@ exports[`ClayPanel renders with multiple panels 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/foo/bar#angle-down"
+              href="/foo/bar#angle-down"
             />
           </svg>
         </span>
@@ -254,7 +254,7 @@ exports[`ClayPanel renders without displayTitle 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/foo/bar#angle-right"
+            href="/foo/bar#angle-right"
           />
         </svg>
       </span>
@@ -266,7 +266,7 @@ exports[`ClayPanel renders without displayTitle 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/foo/bar#angle-down"
+            href="/foo/bar#angle-down"
           />
         </svg>
       </span>

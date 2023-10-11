@@ -25,7 +25,7 @@ exports[`ClayCard renders a ClayCard as a directory 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#folder"
+                  href="/path/to/some/resource.svg#folder"
                 />
               </svg>
             </span>
@@ -75,7 +75,7 @@ exports[`ClayCard renders a ClayCard as a file card 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/path/to/some/resource.svg#documents-and-media"
+            href="/path/to/some/resource.svg#documents-and-media"
           />
         </svg>
       </div>
@@ -180,7 +180,7 @@ exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                  href="/path/to/some/resource.svg#documents-and-media"
                 />
               </svg>
             </div>
@@ -294,7 +294,7 @@ exports[`ClayCard renders a ClayCard as a selectable folder 1`] = `
                     role="presentation"
                   >
                     <use
-                      xlink:href="/path/to/some/resource.svg#folder"
+                      href="/path/to/some/resource.svg#folder"
                     />
                   </svg>
                 </span>
@@ -368,7 +368,7 @@ exports[`ClayCard renders a ClayCard as a selectable image card 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-image"
+                    href="/path/to/some/resource.svg#document-image"
                   />
                 </svg>
               </span>
@@ -504,7 +504,7 @@ exports[`ClayCard renders a ClayCard as image card 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/path/to/some/resource.svg#document-image"
+              href="/path/to/some/resource.svg#document-image"
             />
           </svg>
         </span>
@@ -647,7 +647,7 @@ exports[`ClayCard renders a ClayCard as template navigation card as horizontal c
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#page"
+                  href="/path/to/some/resource.svg#page"
                 />
               </svg>
             </span>
@@ -698,7 +698,7 @@ exports[`ClayCard renders a ClayCard as template navigation card with icon inste
           role="presentation"
         >
           <use
-            xlink:href="/path/to/some/resource.svg#page-template"
+            href="/path/to/some/resource.svg#page-template"
           />
         </svg>
       </span>
@@ -747,7 +747,7 @@ exports[`ClayCard renders a ClayCard as user card 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/path/to/some/resource.svg#user"
+                href="/path/to/some/resource.svg#user"
               />
             </svg>
           </span>
@@ -850,7 +850,7 @@ exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
                       role="presentation"
                     >
                       <use
-                        xlink:href="/path/to/some/resource.svg#user"
+                        href="/path/to/some/resource.svg#user"
                       />
                     </svg>
                   </span>
@@ -957,7 +957,7 @@ exports[`ClayCard renders a ClayCard with an active selected state 1`] = `
                       role="presentation"
                     >
                       <use
-                        xlink:href="/path/to/some/resource.svg#folder"
+                        href="/path/to/some/resource.svg#folder"
                       />
                     </svg>
                   </span>
@@ -1021,7 +1021,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/path/to/some/resource.svg#documents-and-media"
+                href="/path/to/some/resource.svg#documents-and-media"
               />
             </svg>
           </div>
@@ -1111,7 +1111,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/path/to/some/resource.svg#documents-and-media"
+                href="/path/to/some/resource.svg#documents-and-media"
               />
             </svg>
           </div>
@@ -1220,7 +1220,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#user"
+                    href="/path/to/some/resource.svg#user"
                   />
                 </svg>
               </span>
@@ -1305,7 +1305,7 @@ exports[`ClayCard renders a group of ClayCards 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#user"
+                    href="/path/to/some/resource.svg#user"
                   />
                 </svg>
               </span>
@@ -1411,7 +1411,7 @@ exports[`ClayCardWithHorizontal renders as disabled 1`] = `
                       role="presentation"
                     >
                       <use
-                        xlink:href="/path/to/some/resource.svg#folder"
+                        href="/path/to/some/resource.svg#folder"
                       />
                     </svg>
                   </span>
@@ -1470,7 +1470,7 @@ exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#folder"
+                  href="/path/to/some/resource.svg#folder"
                 />
               </svg>
             </span>
@@ -1515,7 +1515,7 @@ exports[`ClayCardWithHorizontal renders as not selectable 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#ellipsis-v"
+                  href="/path/to/some/resource.svg#ellipsis-v"
                 />
               </svg>
             </button>
@@ -1566,7 +1566,7 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
                       role="presentation"
                     >
                       <use
-                        xlink:href="/path/to/some/resource.svg#folder"
+                        href="/path/to/some/resource.svg#folder"
                       />
                     </svg>
                   </span>
@@ -1632,7 +1632,7 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                  href="/path/to/some/resource.svg#documents-and-media"
                 />
               </svg>
             </div>
@@ -1647,7 +1647,7 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-default"
+                    href="/path/to/some/resource.svg#document-default"
                   />
                 </svg>
               </span>
@@ -1718,7 +1718,7 @@ exports[`ClayCardWithInfo renders as file card specifying the displayType 1`] = 
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                  href="/path/to/some/resource.svg#documents-and-media"
                 />
               </svg>
             </div>
@@ -1733,7 +1733,7 @@ exports[`ClayCardWithInfo renders as file card specifying the displayType 1`] = 
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-default"
+                    href="/path/to/some/resource.svg#document-default"
                   />
                 </svg>
               </span>
@@ -1811,7 +1811,7 @@ exports[`ClayCardWithInfo renders as image card specifying imageProps and not th
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-image"
+                    href="/path/to/some/resource.svg#document-image"
                   />
                 </svg>
               </span>
@@ -1889,7 +1889,7 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and i
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-image"
+                    href="/path/to/some/resource.svg#document-image"
                   />
                 </svg>
               </span>
@@ -1960,7 +1960,7 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and n
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#camera"
+                  href="/path/to/some/resource.svg#camera"
                 />
               </svg>
             </div>
@@ -1975,7 +1975,7 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and n
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-image"
+                    href="/path/to/some/resource.svg#document-image"
                   />
                 </svg>
               </span>
@@ -2052,7 +2052,7 @@ exports[`ClayCardWithInfo renders as image card with flush horizontal 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-image"
+                    href="/path/to/some/resource.svg#document-image"
                   />
                 </svg>
               </span>
@@ -2130,7 +2130,7 @@ exports[`ClayCardWithInfo renders as image card with flush vertical 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-image"
+                    href="/path/to/some/resource.svg#document-image"
                   />
                 </svg>
               </span>
@@ -2187,7 +2187,7 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/some/spritemap#documents-and-media"
+            href="/some/spritemap#documents-and-media"
           />
         </svg>
       </div>
@@ -2202,7 +2202,7 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/some/spritemap#document-default"
+              href="/some/spritemap#document-default"
             />
           </svg>
         </span>
@@ -2266,7 +2266,7 @@ exports[`ClayCardWithInfo renders as not selectable 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/some/spritemap#ellipsis-v"
+                  href="/some/spritemap#ellipsis-v"
                 />
               </svg>
             </button>
@@ -2308,7 +2308,7 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                  href="/path/to/some/resource.svg#documents-and-media"
                 />
               </svg>
             </div>
@@ -2323,7 +2323,7 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-default"
+                    href="/path/to/some/resource.svg#document-default"
                   />
                 </svg>
               </span>
@@ -2380,7 +2380,7 @@ exports[`ClayCardWithInfo renders with custom sticker 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/some/spritemap#documents-and-media"
+            href="/some/spritemap#documents-and-media"
           />
         </svg>
       </div>
@@ -2395,7 +2395,7 @@ exports[`ClayCardWithInfo renders with custom sticker 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/some/spritemap#document-default"
+              href="/some/spritemap#document-default"
             />
           </svg>
         </span>
@@ -2462,7 +2462,7 @@ exports[`ClayCardWithInfo renders with custom sticker with custom Icon 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="/some/spritemap#documents-and-media"
+            href="/some/spritemap#documents-and-media"
           />
         </svg>
       </div>
@@ -2477,7 +2477,7 @@ exports[`ClayCardWithInfo renders with custom sticker with custom Icon 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="/path/to/some/resource.svg#custom-symbol"
+              href="/path/to/some/resource.svg#custom-symbol"
             />
           </svg>
         </span>
@@ -2558,7 +2558,7 @@ exports[`ClayCardWithInfo renders with description 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                  href="/path/to/some/resource.svg#documents-and-media"
                 />
               </svg>
             </div>
@@ -2573,7 +2573,7 @@ exports[`ClayCardWithInfo renders with description 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#document-default"
+                    href="/path/to/some/resource.svg#document-default"
                   />
                 </svg>
               </span>
@@ -2658,7 +2658,7 @@ exports[`ClayCardWithInfo renders with no sticker 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/some/resource.svg#documents-and-media"
+                  href="/path/to/some/resource.svg#documents-and-media"
                 />
               </svg>
             </div>
@@ -2777,7 +2777,7 @@ exports[`ClayCardWithUser renders as disabled 1`] = `
                     role="presentation"
                   >
                     <use
-                      xlink:href="/path/to/some/resource.svg#user"
+                      href="/path/to/some/resource.svg#user"
                     />
                   </svg>
                 </span>
@@ -2854,7 +2854,7 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
                     role="presentation"
                   >
                     <use
-                      xlink:href="/path/to/some/resource.svg#user"
+                      href="/path/to/some/resource.svg#user"
                     />
                   </svg>
                 </span>
@@ -2908,7 +2908,7 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/path/to/some/resource.svg#ellipsis-v"
+                    href="/path/to/some/resource.svg#ellipsis-v"
                   />
                 </svg>
               </button>
@@ -2943,7 +2943,7 @@ exports[`ClayCardWithUser renders with description 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/path/to/some/resource.svg#user"
+                href="/path/to/some/resource.svg#user"
               />
             </svg>
           </span>
@@ -3018,7 +3018,7 @@ exports[`ClayCardWithUser renders with icon 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/path/to/some/resource.svg#custom-icon"
+                href="/path/to/some/resource.svg#custom-icon"
               />
             </svg>
           </span>

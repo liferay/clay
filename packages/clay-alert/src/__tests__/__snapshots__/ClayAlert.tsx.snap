@@ -23,7 +23,7 @@ exports[`ClayAlert render toast alert with stacked action 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -81,7 +81,7 @@ exports[`ClayAlert renders 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -128,7 +128,7 @@ exports[`ClayAlert renders alert inline with action 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -182,7 +182,7 @@ exports[`ClayAlert renders as \`feedback\` variant 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -224,7 +224,7 @@ exports[`ClayAlert renders as \`stripe\` variant 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/foo/bar#info-circle"
+                  href="/foo/bar#info-circle"
                 />
               </svg>
             </span>
@@ -272,7 +272,7 @@ exports[`ClayAlert renders as a different type 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#exclamation-full"
+                href="/foo/bar#exclamation-full"
               />
             </svg>
           </span>
@@ -325,7 +325,7 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/foo/bar#info-circle"
+                    href="/foo/bar#info-circle"
                   />
                 </svg>
               </span>
@@ -367,7 +367,7 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/foo/bar#info-circle"
+                    href="/foo/bar#info-circle"
                   />
                 </svg>
               </span>
@@ -409,7 +409,7 @@ exports[`ClayAlert renders with ToastContainer as a wrapper  1`] = `
                   role="presentation"
                 >
                   <use
-                    xlink:href="/foo/bar#info-circle"
+                    href="/foo/bar#info-circle"
                   />
                 </svg>
               </span>
@@ -458,7 +458,7 @@ exports[`ClayAlert renders with a footer and button 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -523,7 +523,7 @@ exports[`ClayAlert renders with a title and a message with markup 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -573,7 +573,7 @@ exports[`ClayAlert renders with an icon for closing 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -603,7 +603,7 @@ exports[`ClayAlert renders with an icon for closing 1`] = `
         role="presentation"
       >
         <use
-          xlink:href="/foo/bar#times"
+          href="/foo/bar#times"
         />
       </svg>
     </button>
@@ -634,7 +634,7 @@ exports[`ClayAlert renders with an icon for closing with autoClose 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>
@@ -664,7 +664,7 @@ exports[`ClayAlert renders with an icon for closing with autoClose 1`] = `
         role="presentation"
       >
         <use
-          xlink:href="/foo/bar#times"
+          href="/foo/bar#times"
         />
       </svg>
     </button>
@@ -695,7 +695,7 @@ exports[`ClayAlert renders with autoClose and without icon 1`] = `
               role="presentation"
             >
               <use
-                xlink:href="/foo/bar#info-circle"
+                href="/foo/bar#info-circle"
               />
             </svg>
           </span>

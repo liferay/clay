@@ -79,7 +79,7 @@ exports[`ClayList renders 1`] = `
             role="presentation"
           >
             <use
-              xlinkHref="/foo/bar#trash"
+              href="/foo/bar#trash"
             />
           </svg>
         </button>
@@ -93,7 +93,7 @@ exports[`ClayList renders 1`] = `
             role="presentation"
           >
             <use
-              xlinkHref="/foo/bar#cog"
+              href="/foo/bar#cog"
             />
           </svg>
         </button>
@@ -162,7 +162,7 @@ exports[`ClayListWithItems renders with headers 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/foo/bar#folder"
+                  href="/foo/bar#folder"
                 />
               </svg>
             </span>
@@ -208,7 +208,7 @@ exports[`ClayListWithItems renders with headers 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/foo/bar#folder"
+                  href="/foo/bar#folder"
                 />
               </svg>
             </span>

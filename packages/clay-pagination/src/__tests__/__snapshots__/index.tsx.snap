@@ -22,7 +22,7 @@ exports[`ClayPagination renders 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="path/to/spritemap#angle-left"
+              href="path/to/spritemap#angle-left"
             />
           </svg>
         </a>
@@ -154,7 +154,7 @@ exports[`ClayPagination renders 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="path/to/spritemap#angle-right"
+              href="path/to/spritemap#angle-right"
             />
           </svg>
         </a>
@@ -184,7 +184,7 @@ exports[`ClayPagination renders with only one page 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="path/to/spritemap#angle-left"
+              href="path/to/spritemap#angle-left"
             />
           </svg>
         </div>
@@ -212,7 +212,7 @@ exports[`ClayPagination renders with only one page 1`] = `
             role="presentation"
           >
             <use
-              xlink:href="path/to/spritemap#angle-right"
+              href="path/to/spritemap#angle-right"
             />
           </svg>
         </div>
@@ -242,7 +242,7 @@ exports[`ClayPagination totalPages with 0 will render the pagination with only o
             role="presentation"
           >
             <use
-              xlink:href="path/to/spritemap#angle-left"
+              href="path/to/spritemap#angle-left"
             />
           </svg>
         </div>
@@ -270,7 +270,7 @@ exports[`ClayPagination totalPages with 0 will render the pagination with only o
             role="presentation"
           >
             <use
-              xlink:href="path/to/spritemap#angle-right"
+              href="path/to/spritemap#angle-right"
             />
           </svg>
         </div>

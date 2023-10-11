@@ -69,7 +69,7 @@ exports[`ClayNavigationBar renders 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+            href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
       </button>
@@ -157,7 +157,7 @@ exports[`ClayNavigationBar renders a custom item 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+            href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
       </button>
@@ -257,7 +257,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
           role="presentation"
         >
           <use
-            xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+            href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
       </button>
@@ -345,7 +345,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
           role="presentation"
         >
           <use
-            xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+            href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
       </button>
@@ -405,7 +405,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
           role="presentation"
         >
           <use
-            xlink:href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
+            href="node_modules/clay-css/lib/images/icons/icons.svg#caret-bottom"
           />
         </svg>
       </button>

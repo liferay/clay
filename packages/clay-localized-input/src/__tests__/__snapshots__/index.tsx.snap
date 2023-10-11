@@ -46,7 +46,7 @@ exports[`ClayLocalizedInput renders 1`] = `
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/svg#en-us"
+                  href="/path/to/svg#en-us"
                 />
               </svg>
             </span>
@@ -123,7 +123,7 @@ exports[`ClayLocalizedInput renders with prepend content and result formatter 1`
                 role="presentation"
               >
                 <use
-                  xlink:href="/path/to/svg#en-us"
+                  href="/path/to/svg#en-us"
                 />
               </svg>
             </span>
