@@ -198,6 +198,7 @@ $btn-sizes: map-deep-merge(
 	(
 		btn-xs: (
 			font-size: 0.75rem,
+			line-height: 1.5,
 			padding-bottom: 0.125rem,
 			padding-left: 0.5rem,
 			padding-right: 0.5rem,
@@ -214,6 +215,9 @@ $btn-sizes: map-deep-merge(
 			),
 			btn-section: (
 				font-size: 0.375rem,
+			),
+			lexicon-icon: (
+				font-size: inherit,
 			),
 		),
 		btn-lg: $btn-lg,

@@ -278,7 +278,7 @@
 
 // Panel Group Sizes
 
-.panel-group-sm {
+%clay-panel-group-sm {
 	.panel {
 		@include clay-panel-variant($cadmin-panel-group-sm);
 	}
@@ -286,6 +286,10 @@
 	.panel-unstyled {
 		@include clay-panel-variant($cadmin-panel-group-sm-panel-unstyled);
 	}
+}
+
+.panel-group-sm {
+	@extend %clay-panel-group-sm;
 }
 
 // Panel Variants

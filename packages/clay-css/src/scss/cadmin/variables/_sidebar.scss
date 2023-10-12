@@ -129,6 +129,43 @@ $cadmin-sidebar: map-deep-merge(
 	$cadmin-sidebar
 );
 
+// Sidebar Sm
+
+$cadmin-sidebar-sm: () !default;
+$cadmin-sidebar-sm: map-deep-merge(
+	(
+		font-size: 0.875rem,
+		panel-group: (
+			extend: '%clay-panel-group-sm',
+		),
+		btn: (
+			extend: '%clay-btn-sm',
+			'&.btn-xs': (
+				extend: '%clay-btn-xs',
+			),
+			'&.btn-monospaced': (
+				extend: '%clay-btn-monospaced-sm',
+			),
+			'&.btn-monospaced.btn-xs': (
+				extend: '%clay-btn-monospaced-xs',
+			),
+		),
+		form-control: (
+			extend: '%clay-form-control-sm',
+		),
+		form-control-select: (
+			extend: '%clay-select-form-control-sm',
+		),
+		form-control-tag-group: (
+			extend: '%clay-form-control-tag-group-sm',
+		),
+		input-group: (
+			extend: '%clay-input-group-sm',
+		),
+	),
+	$cadmin-sidebar-sm
+);
+
 // Sidebar Light
 
 $cadmin-sidebar-light-navigation-bar: () !default;
@@ -260,6 +297,7 @@ $cadmin-sidebar-dark: map-deep-merge(
 $cadmin-sidebar-palette: () !default;
 $cadmin-sidebar-palette: map-deep-merge(
 	(
+		sidebar-sm: $cadmin-sidebar-sm,
 		sidebar-light: $cadmin-sidebar-light,
 		sidebar-dark: $cadmin-sidebar-dark,
 		sidebar-dark-l2: (
