@@ -384,6 +384,31 @@
 					map-get($map, component-navigation-bar)
 				);
 			}
+
+			.panel-group {
+				@include clay-map-to-css(map-get($map, panel-group));
+			}
+
+			.btn {
+				@include clay-map-to-css(map-get($map, btn));
+			}
+
+			.form-control {
+				@include clay-map-to-css(map-get($map, form-control));
+			}
+
+			select.form-control,
+			.form-control-select {
+				@include clay-map-to-css(map-get($map, form-control-select));
+			}
+
+			.form-control-tag-group {
+				@include clay-map-to-css(map-get($map, form-control-tag-group));
+			}
+
+			.input-group {
+				@include clay-map-to-css(map-get($map, input-group));
+			}
 		}
 	}
 }
