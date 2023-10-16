@@ -4,6 +4,11 @@
 *
 * SPDX-License-Identifier: BSD-3-Clause
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="m191.945 404.937 113.237 95.557c31.255 26.375 78.706 4.569 78.706-36.63V63.981C383.888 28.2 355.243 0 319.907 0H63.982C28.646 0 0 28.199 0 63.981v399.883c0 41.198 47.452 63.005 78.707 36.63l113.238-95.557Z"></path>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+	<mask id="mask0_4077_10" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="0" width="12" height="17">
+		<path class="lexicon-icon-outline" fill-rule="evenodd" clip-rule="evenodd" d="M8.00003 12.658L11.5397 15.645C12.5167 16.4695 14 15.7878 14 14.5L14 2C14 0.88147 13.1046 0 12 0H4.00003C2.89546 0 2 0.88147 2 2L2.00003 14.5C2.00003 15.7878 3.48331 16.4695 4.4603 15.645L8.00003 12.658Z"/>
+	</mask>
+	<g mask="url(#mask0_4077_10)">
+		<rect class="lexicon-icon-outline" width="16" height="16"/>
+	</g>
 </svg>
