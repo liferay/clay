@@ -11,10 +11,13 @@ export type Sorting = {
 };
 
 type Context = {
+	expandedKeys: Set<React.Key>;
+	messages: Record<string, string>;
+	nestedKey?: string;
+	onExpandedChange: (keys: Set<React.Key>) => void;
 	onSortChange: (sorting: Sorting | null, textValue: string) => void;
 	sort: Sorting | null;
 	sortDescriptionId: string;
-	nestedKey?: string;
 	treegrid: boolean;
 };
 
@@ -24,8 +27,14 @@ export function useTable() {
 	return useContext(TableContext);
 }
 
-export const RowLevelContext = React.createContext<number>(1);
+type RowContext = {
+	expandable?: boolean;
+	key: React.Key;
+	level: number;
+};
 
-export function useLevel() {
-	return useContext(RowLevelContext);
+export const RowContext = React.createContext<RowContext>({key: 0, level: 1});
+
+export function useRow() {
+	return useContext(RowContext);
 }

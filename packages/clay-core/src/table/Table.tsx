@@ -5,6 +5,7 @@
 
 import {sub, useControlledState, useId} from '@clayui/shared';
 import RootTable from '@clayui/table';
+import classNames from 'classnames';
 import React, {useCallback, useRef} from 'react';
 import {createPortal} from 'react-dom';
 
@@ -16,19 +17,36 @@ import {useTreeNavigation} from './useTreeNavigation';
 
 import type {AnnouncerAPI} from '../live-announcer';
 
-type Props = {
+export type Props = {
+	/**
+	 * Property to set the initial value of `expandedKeys` (uncontrolled).
+	 */
+	defaultExpandedKeys?: Set<React.Key>;
+
 	/**
 	 * Default state of sort (uncontrolled).
 	 */
 	defaultSort?: Sorting | null;
 
 	/**
+	 * The currently expanded keys in the collection (controlled).
+	 */
+	expandedKeys?: Set<React.Key>;
+
+	/**
 	 * Texts used for assertive messages to SRs.
 	 */
 	messages?: {
+		expandable: string;
 		sortDescription: string;
 		sorting: string;
 	};
+
+	/**
+	 * A callback that is called when items are expanded or collapsed
+	 * (controlled).
+	 */
+	onExpandedChange?: (keys: Set<React.Key>) => void;
 
 	/**
 	 * Callback for when the sorting change (controlled).
@@ -51,16 +69,22 @@ const locator = {
 	cell: 'gridcell',
 	row: 'row',
 };
+const defaultSet = new Set<React.Key>();
 
 export const Table = React.forwardRef<HTMLDivElement, Props>(
 	function TableInner(
 		{
 			children,
+			className,
+			defaultExpandedKeys = defaultSet,
 			defaultSort,
+			expandedKeys: externalExpandedKeys,
 			messages = {
+				expandable: 'expandable',
 				sortDescription: 'sortable column',
 				sorting: 'sorted by column {0} in {1} order',
 			},
+			onExpandedChange,
 			onSortChange,
 			sort: externalSort,
 			nestedKey,
@@ -68,6 +92,17 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 		}: Props,
 		outRef
 	) {
+		const [expandedKeys, setExpandedKeys] = useControlledState<
+			Set<React.Key>
+		>({
+			defaultName: 'defaultExpandedKeys',
+			defaultValue: defaultExpandedKeys,
+			handleName: 'onExpandedChange',
+			name: 'expandedKeys',
+			onChange: onExpandedChange,
+			value: externalExpandedKeys,
+		});
+
 		const [sort, setSorting] = useControlledState({
 			defaultName: 'defaultSort',
 			defaultValue: defaultSort,
@@ -92,6 +127,9 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			<RootTable
 				{...otherProps}
 				{...navigationProps}
+				className={classNames(className, {
+					'table-nested-rows': nestedKey,
+				})}
 				ref={ref}
 				role={nestedKey ? 'treegrid' : undefined}
 			>
@@ -103,7 +141,10 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				>
 					<TableContext.Provider
 						value={{
+							expandedKeys,
+							messages,
 							nestedKey,
+							onExpandedChange: setExpandedKeys,
 							onSortChange: useCallback(
 								(sort, textValue) => {
 									announcerAPI.current!.announce(

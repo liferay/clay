@@ -3,13 +3,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import Button from '@clayui/button';
 import Icon from '@clayui/icon';
+import Layout from '@clayui/layout';
 import classNames from 'classnames';
 import React from 'react';
 
 import {useFocusWithin} from '../aria';
 import {Scope, useScope} from './ScopeContext';
-import {useLevel, useTable} from './context';
+import {useRow, useTable} from './context';
 
 type Props = {
 	/**
@@ -92,16 +94,26 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 		},
 		ref
 	) {
-		const {onSortChange, sort, sortDescriptionId, treegrid} = useTable();
+		const {
+			expandedKeys,
+			messages,
+			onExpandedChange,
+			onSortChange,
+			sort,
+			sortDescriptionId,
+			treegrid,
+		} = useTable();
 		const focusWithinProps = useFocusWithin({
 			disabled: !treegrid,
 			id: keyValue!,
 		});
 		const scope = useScope();
-		const level = useLevel();
+		const {expandable, level} = useRow();
 
 		const isHead = scope === Scope.Head;
 		const As = isHead ? 'th' : 'td';
+
+		const childrenCount = React.Children.count(children);
 
 		return (
 			<As
@@ -180,13 +192,67 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						<span className="text-truncate">{children}</span>
 					</span>
 				) : treegrid && index === 0 ? (
-					<div
+					<Layout.ContentRow
 						style={{
-							paddingLeft: (level - 1) * 28,
+							paddingLeft:
+								(level - (expandable ? 1 : 0)) * 28 -
+								(expandable ? 4 : 0),
 						}}
 					>
-						{children}
-					</div>
+						{expandable && (
+							<Layout.ContentCol className="autofit-col-toggle">
+								<Button
+									aria-label={messages['expandable']}
+									borderless
+									displayType="secondary"
+									monospaced
+									onClick={() => {
+										const newExpandedKeys = new Set(
+											expandedKeys
+										);
+
+										if (newExpandedKeys.has(keyValue!)) {
+											newExpandedKeys.delete(keyValue!);
+										} else {
+											newExpandedKeys.add(keyValue!);
+										}
+
+										onExpandedChange(newExpandedKeys);
+									}}
+									size="xs"
+								>
+									<Icon
+										symbol={
+											expandedKeys.has(keyValue!)
+												? 'angle-down'
+												: 'angle-right'
+										}
+									/>
+								</Button>
+							</Layout.ContentCol>
+						)}
+
+						{React.Children.map(children, (child, index) => {
+							if (!child) {
+								return null;
+							}
+
+							return (
+								<Layout.ContentCol
+									className={classNames({
+										'autofit-col-checkbox':
+											React.isValidElement(child) &&
+											// @ts-ignore
+											child?.type.displayName ===
+												'ClayIcon',
+									})}
+									expand={index === childrenCount - 1}
+								>
+									{child}
+								</Layout.ContentCol>
+							);
+						})}
+					</Layout.ContentRow>
 				) : (
 					children
 				)}

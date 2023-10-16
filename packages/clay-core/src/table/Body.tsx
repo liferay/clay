@@ -27,6 +27,9 @@ type ItemProps<T> = {
 	keyValue: React.Key;
 };
 
+// TODO: Move the implementation to the Collection and use the benefits of
+// generator to pause the iteration and return later with a form of
+// yield CPU time for the browser.
 function* flatten<T extends Record<string, any>>(
 	array: Array<T>,
 	nestedKey: string,
@@ -42,6 +45,8 @@ function* flatten<T extends Record<string, any>>(
 
 		if (Array.isArray(array[i]![nestedKey])) {
 			delete item[nestedKey];
+			// @ts-ignore
+			item._expandable = true;
 			yield item;
 			yield* flatten(array[i]![nestedKey], nestedKey, level + 1);
 		} else {
@@ -67,10 +72,11 @@ function BodyInner<T extends Record<string, any>>(
 	return (
 		<tbody {...otherProps} ref={ref}>
 			<ScopeContext.Provider value={Scope.Body}>
-				<Collection
+				<Collection<T>
 					itemContainer={useCallback(
 						({children, item, keyValue}: ItemProps<any>) =>
 							React.cloneElement(children, {
+								_expandable: item._expandable,
 								_index: item._index,
 								_level: item._level,
 								_size: item._size,

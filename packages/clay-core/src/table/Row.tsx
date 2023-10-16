@@ -8,7 +8,7 @@ import React from 'react';
 
 import {useFocusWithin} from '../aria';
 import {ChildrenFunction, Collection} from '../collection';
-import {RowLevelContext, useTable} from './context';
+import {RowContext, useTable} from './context';
 
 type Props<T> = {
 	/**
@@ -40,6 +40,12 @@ type Props<T> = {
 
 	/**
 	 * Internal prop.
+	 * @ignore
+	 */
+	_expandable?: boolean;
+
+	/**
+	 * Internal prop.
 	 * posinset
 	 * @ignore
 	 */
@@ -62,6 +68,7 @@ type Props<T> = {
 
 function RowInner<T extends Record<string, any>>(
 	{
+		_expandable,
 		_index,
 		_level,
 		_size,
@@ -100,9 +107,15 @@ function RowInner<T extends Record<string, any>>(
 			ref={ref}
 			role={treegrid ? 'row' : undefined}
 		>
-			<RowLevelContext.Provider value={_level!}>
+			<RowContext.Provider
+				value={{
+					expandable: _expandable,
+					key: keyValue!,
+					level: _level!,
+				}}
+			>
 				<Collection items={items}>{children}</Collection>
-			</RowLevelContext.Provider>
+			</RowContext.Provider>
 		</tr>
 	);
 }

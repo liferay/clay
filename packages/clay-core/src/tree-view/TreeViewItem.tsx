@@ -328,9 +328,9 @@ export const TreeViewItem = React.forwardRef<
 							loadMore();
 						}
 					}}
-					onFocus={() => {
+					onFocus={(event) => {
 						if (focusWithinProps.onFocus) {
-							focusWithinProps.onFocus();
+							focusWithinProps.onFocus(event);
 						}
 
 						if (actions) {
