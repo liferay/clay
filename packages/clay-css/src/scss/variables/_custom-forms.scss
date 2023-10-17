@@ -173,11 +173,10 @@ $custom-control-label: map-deep-merge(
 				clay-enable-shadows($custom-control-indicator-box-shadow),
 			content: '',
 			display: block,
-			float: left,
 			font-size: $custom-control-indicator-size,
 			height: $custom-control-indicator-size,
 			left: 0,
-			position: relative,
+			position: absolute,
 			top: $custom-control-indicator-position-top,
 			transition: clay-enable-transitions($custom-forms-transition),
 			width: $custom-control-indicator-size,
@@ -225,16 +224,6 @@ $label-custom-control-label: map-deep-merge(
 // .custom-control-label-text
 
 $custom-control-label-text: () !default;
-$custom-control-label-text: map-deep-merge(
-	(
-		display: block,
-		padding-left:
-			calc(
-				#{$custom-control-indicator-size} + #{$custom-control-description-padding-left}
-			),
-	),
-	$custom-control-label-text
-);
 
 // .custom-control-label-text small, .custom-control-label-text .small
 
@@ -254,6 +243,10 @@ $custom-control: map-deep-merge(
 		margin-bottom: $custom-control-margin-bottom,
 		margin-top: $custom-control-margin-top,
 		min-height: $custom-control-min-height,
+		padding-left:
+			calc(
+				#{$custom-control-indicator-size} + #{$custom-control-description-padding-left}
+			),
 		position: relative,
 		text-align: left,
 		only-child: (

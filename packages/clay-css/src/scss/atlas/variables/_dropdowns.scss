@@ -196,6 +196,16 @@ $dropdown-divider: map-merge(
 
 // .dropdown-section
 
+/// @deprecated as of v3.x use map $dropdown-section instead
+
+$dropdown-section-custom-control: () !default;
+$dropdown-section-custom-control: map-deep-merge(
+	(
+		padding-left: 1.75rem,
+	),
+	$dropdown-section-custom-control
+);
+
 // @deprecated as of v3.x use map $dropdown-section instead
 
 $dropdown-section-custom-control-label: () !default;
@@ -219,12 +229,6 @@ $dropdown-section-active-custom-control-label: map-deep-merge(
 // @deprecated as of v3.x use map $dropdown-section instead
 
 $dropdown-section-custom-control-label-text: () !default;
-$dropdown-section-custom-control-label-text: map-deep-merge(
-	(
-		padding-left: 1.75rem,
-	),
-	$dropdown-section-custom-control-label-text
-);
 
 $dropdown-section: () !default;
 $dropdown-section: map-deep-merge(
