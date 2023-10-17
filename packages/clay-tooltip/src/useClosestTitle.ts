@@ -153,7 +153,9 @@ export function useClosestTitle(props: Props) {
 				? target
 				: closestAncestor(target, '[title], [data-title]');
 
-			if (node) {
+			const hasNonEmptyTitle = node?.getAttribute('title') !== '';
+
+			if (node && hasNonEmptyTitle) {
 				targetRef.current = target;
 
 				target.addEventListener('click', onClick);
