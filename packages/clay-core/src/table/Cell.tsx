@@ -6,8 +6,9 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {useFocusWithin} from '../aria';
 import {Scope, useScope} from './ScopeContext';
@@ -108,12 +109,27 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			id: keyValue!,
 		});
 		const scope = useScope();
-		const {expandable, level} = useRow();
+		const {expandable, key, level} = useRow();
 
 		const isHead = scope === Scope.Head;
 		const As = isHead ? 'th' : 'td';
 
 		const childrenCount = React.Children.count(children);
+
+		const toggle = useCallback(
+			(key: React.Key) => {
+				const newExpandedKeys = new Set(expandedKeys);
+
+				if (newExpandedKeys.has(key)) {
+					newExpandedKeys.delete(key);
+				} else {
+					newExpandedKeys.add(key);
+				}
+
+				onExpandedChange(newExpandedKeys);
+			},
+			[expandedKeys, onExpandedChange]
+		);
 
 		return (
 			<As
@@ -162,6 +178,11 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						textValue!
 					);
 				}}
+				onKeyDown={(event) => {
+					if (event.key === Keys.Enter) {
+						toggle(key!);
+					}
+				}}
 				ref={ref}
 				role={treegrid ? 'gridcell' : undefined}
 			>
@@ -206,24 +227,13 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 									borderless
 									displayType="secondary"
 									monospaced
-									onClick={() => {
-										const newExpandedKeys = new Set(
-											expandedKeys
-										);
-
-										if (newExpandedKeys.has(keyValue!)) {
-											newExpandedKeys.delete(keyValue!);
-										} else {
-											newExpandedKeys.add(keyValue!);
-										}
-
-										onExpandedChange(newExpandedKeys);
-									}}
+									onClick={() => toggle(key)}
 									size="xs"
+									tabIndex={-1}
 								>
 									<Icon
 										symbol={
-											expandedKeys.has(keyValue!)
+											expandedKeys.has(key)
 												? 'angle-down'
 												: 'angle-right'
 										}

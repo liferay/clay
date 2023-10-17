@@ -31,7 +31,7 @@ export function useTreeNavigation<T extends HTMLElement>({
 	locator,
 	ref,
 }: Props<T>) {
-	const onKeyDown = useCallback(
+	const onKeyDownCapture = useCallback(
 		(event: React.KeyboardEvent<T>) => {
 			if (
 				![Keys.Left, Keys.Right, Keys.Up, Keys.Down].includes(
@@ -78,7 +78,29 @@ export function useTreeNavigation<T extends HTMLElement>({
 				}
 				case Keys.Left: {
 					if (isRow) {
-						// TODO
+						if (
+							activeElement.getAttribute('aria-expanded') !==
+							'true'
+						) {
+							const items = getFocusableList<T>(ref, [
+								`[role="${locator.row}"]`,
+							]);
+
+							let position = items.indexOf(activeElement);
+
+							while (
+								items[position]?.getAttribute('aria-level') !==
+								String(
+									Number(
+										activeElement.getAttribute('aria-level')
+									) - 1
+								)
+							) {
+								position -= 1;
+							}
+
+							item = items[position];
+						}
 					} else {
 						const row = activeElement.closest(
 							`[role="${locator.row}"]`
@@ -103,9 +125,14 @@ export function useTreeNavigation<T extends HTMLElement>({
 				}
 				case Keys.Right: {
 					if (isRow) {
-						item = activeElement.querySelector(
-							`[role="${locator.cell}"]`
-						) as HTMLElement;
+						if (
+							activeElement.getAttribute('aria-expanded') !==
+							'false'
+						) {
+							item = activeElement.querySelector(
+								`[role="${locator.cell}"]`
+							) as HTMLElement;
+						}
 					} else {
 						const row = activeElement.closest(
 							`[role="${locator.row}"]`
@@ -137,5 +164,5 @@ export function useTreeNavigation<T extends HTMLElement>({
 		[disabled]
 	);
 
-	return {navigationProps: {onKeyDown}};
+	return {navigationProps: {onKeyDownCapture}};
 }

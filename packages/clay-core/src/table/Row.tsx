@@ -3,11 +3,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
 import {useFocusWithin} from '../aria';
 import {ChildrenFunction, Collection} from '../collection';
+import {useForwardRef} from '../hooks';
 import {RowContext, useTable} from './context';
 
 type Props<T> = {
@@ -80,18 +82,23 @@ function RowInner<T extends Record<string, any>>(
 		keyValue,
 		...otherProps
 	}: Props<T>,
-	ref: React.Ref<HTMLTableRowElement>
+	outRef: React.Ref<HTMLTableRowElement>
 ) {
-	const {treegrid} = useTable();
+	const {expandedKeys, onExpandedChange, treegrid} = useTable();
 	const focusWithinProps = useFocusWithin({
 		disabled: !treegrid,
 		id: keyValue!,
 	});
 
+	const ref = useForwardRef(outRef);
+
 	return (
 		<tr
 			{...otherProps}
 			{...focusWithinProps}
+			aria-expanded={
+				_expandable ? expandedKeys.has(keyValue!) : undefined
+			}
 			aria-level={treegrid ? _level : undefined}
 			aria-posinset={treegrid ? _index! + 1 : undefined}
 			aria-setsize={treegrid ? _size : undefined}
@@ -104,6 +111,35 @@ function RowInner<T extends Record<string, any>>(
 					? `number,${keyValue}`
 					: `string,${keyValue}`
 			}
+			onKeyDown={(event) => {
+				if (
+					document.activeElement !== ref.current ||
+					event.defaultPrevented
+				) {
+					return;
+				}
+
+				switch (event.key) {
+					case Keys.Left: {
+						if (expandedKeys.has(keyValue!)) {
+							const newExpandedKeys = new Set(expandedKeys);
+							newExpandedKeys.delete(keyValue!);
+							onExpandedChange(newExpandedKeys);
+						}
+						break;
+					}
+					case Keys.Right: {
+						if (!expandedKeys.has(keyValue!)) {
+							const newExpandedKeys = new Set(expandedKeys);
+							newExpandedKeys.add(keyValue!);
+							onExpandedChange(newExpandedKeys);
+						}
+						break;
+					}
+					default:
+						break;
+				}
+			}}
 			ref={ref}
 			role={treegrid ? 'row' : undefined}
 		>
