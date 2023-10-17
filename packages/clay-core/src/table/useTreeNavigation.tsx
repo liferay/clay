@@ -34,9 +34,14 @@ export function useTreeNavigation<T extends HTMLElement>({
 	const onKeyDownCapture = useCallback(
 		(event: React.KeyboardEvent<T>) => {
 			if (
-				![Keys.Left, Keys.Right, Keys.Up, Keys.Down].includes(
-					event.key
-				) &&
+				![
+					Keys.Left,
+					Keys.Right,
+					Keys.Up,
+					Keys.Down,
+					Keys.Home,
+					Keys.End,
+				].includes(event.key) &&
 				disabled
 			) {
 				return;
@@ -149,6 +154,27 @@ export function useTreeNavigation<T extends HTMLElement>({
 
 						item = items[position + 1];
 					}
+					break;
+				}
+				case Keys.Home:
+				case Keys.End: {
+					let items: Array<HTMLElement>;
+
+					if (isRow) {
+						items = getFocusableList<T>(ref, [
+							`[role="${locator.row}"]`,
+						]);
+					} else {
+						const row = activeElement.closest(
+							`[role="${locator.row}"]`
+						);
+						items = getFocusableList<T>({current: row as T}, [
+							`[role="${locator.cell}"]`,
+						]);
+					}
+
+					item =
+						items[event.key === Keys.Home ? 0 : items.length - 1];
 					break;
 				}
 				default: {
