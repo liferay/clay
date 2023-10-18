@@ -406,6 +406,7 @@ $form-check-card: map-deep-merge(
 		custom-control: (
 			display: inline,
 			margin-right: 0,
+			padding-left: 0,
 			position: static,
 			label: (
 				font-weight: $font-weight-normal,
