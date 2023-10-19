@@ -172,27 +172,6 @@ exports[`ClayCard renders a ClayCard as a selectable file card 1`] = `
             <span
               class="custom-control-label"
             />
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-documents-and-media"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/some/resource.svg#documents-and-media"
-                />
-              </svg>
-            </div>
-            <span
-              class="sticker sticker-danger sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                DOC
-              </span>
-            </span>
           </label>
         </div>
       </div>
@@ -274,52 +253,6 @@ exports[`ClayCard renders a ClayCard as a selectable folder 1`] = `
         <span
           class="custom-control-label"
         />
-        <div
-          class="card-body"
-        >
-          <div
-            class="card-row"
-          >
-            <div
-              class="autofit-col"
-            >
-              <span
-                class="sticker sticker-secondary"
-              >
-                <span
-                  class="sticker-overlay inline-item"
-                >
-                  <svg
-                    class="lexicon-icon lexicon-icon-folder"
-                    role="presentation"
-                  >
-                    <use
-                      href="/path/to/some/resource.svg#folder"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </div>
-            <div
-              class="autofit-col autofit-col-expand autofit-col-gutters"
-            >
-              <p
-                class="card-title"
-                title="Very Large Folder"
-              >
-                <span
-                  class="text-truncate-inline"
-                >
-                  <span
-                    class="text-truncate"
-                  >
-                    Very Large Folder
-                  </span>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
       </label>
     </div>
   </div>
@@ -348,31 +281,6 @@ exports[`ClayCard renders a ClayCard as a selectable image card 1`] = `
             <span
               class="custom-control-label"
             />
-            <div
-              class="aspect-ratio"
-            >
-              <img
-                alt="thumbnail"
-                class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-                src="https://via.placeholder.com/256"
-              />
-            </div>
-            <span
-              class="sticker sticker-danger sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-image"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-image"
-                  />
-                </svg>
-              </span>
-            </span>
           </label>
         </div>
       </div>
@@ -833,30 +741,6 @@ exports[`ClayCard renders a ClayCard as user selectable card 1`] = `
             <span
               class="custom-control-label"
             />
-            <div
-              class="aspect-ratio"
-            >
-              <div
-                class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-              >
-                <span
-                  class="sticker sticker-user-icon sticker-circle sticker-secondary"
-                >
-                  <span
-                    class="sticker-overlay"
-                  >
-                    <svg
-                      class="lexicon-icon lexicon-icon-user"
-                      role="presentation"
-                    >
-                      <use
-                        href="/path/to/some/resource.svg#user"
-                      />
-                    </svg>
-                  </span>
-                </span>
-              </div>
-            </div>
           </label>
         </div>
       </div>
@@ -937,52 +821,6 @@ exports[`ClayCard renders a ClayCard with an active selected state 1`] = `
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-body"
-          >
-            <div
-              class="card-row"
-            >
-              <div
-                class="autofit-col"
-              >
-                <span
-                  class="sticker sticker-secondary"
-                >
-                  <span
-                    class="sticker-overlay inline-item"
-                  >
-                    <svg
-                      class="lexicon-icon lexicon-icon-folder"
-                      role="presentation"
-                    >
-                      <use
-                        href="/path/to/some/resource.svg#folder"
-                      />
-                    </svg>
-                  </span>
-                </span>
-              </div>
-              <div
-                class="autofit-col autofit-col-expand autofit-col-gutters"
-              >
-                <p
-                  class="card-title"
-                  title="Very Large Folder"
-                >
-                  <span
-                    class="text-truncate-inline"
-                  >
-                    <span
-                      class="text-truncate"
-                    >
-                      Very Large Folder
-                    </span>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
         </label>
       </div>
     </div>
@@ -1388,57 +1226,6 @@ exports[`ClayCardWithHorizontal renders as disabled 1`] = `
         <span
           class="custom-control-label"
         />
-        <div
-          class="card card-horizontal"
-        >
-          <div
-            class="card-body"
-          >
-            <div
-              class="card-row"
-            >
-              <div
-                class="autofit-col"
-              >
-                <span
-                  class="sticker"
-                >
-                  <span
-                    class="sticker-overlay inline-item"
-                  >
-                    <svg
-                      class="lexicon-icon lexicon-icon-folder"
-                      role="presentation"
-                    >
-                      <use
-                        href="/path/to/some/resource.svg#folder"
-                      />
-                    </svg>
-                  </span>
-                </span>
-              </div>
-              <div
-                class="autofit-col autofit-col-expand autofit-col-gutters"
-              >
-                <p
-                  aria-label="Foo Bar"
-                  class="card-title"
-                  title="Foo Bar"
-                >
-                  <span
-                    class="text-truncate-inline"
-                  >
-                    <span
-                      class="text-truncate"
-                    >
-                      Foo Bar
-                    </span>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </label>
     </div>
   </div>
@@ -1543,58 +1330,6 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
         <span
           class="custom-control-label"
         />
-        <div
-          class="card card-horizontal"
-        >
-          <div
-            class="card-body"
-          >
-            <div
-              class="card-row"
-            >
-              <div
-                class="autofit-col"
-              >
-                <span
-                  class="sticker"
-                >
-                  <span
-                    class="sticker-overlay inline-item"
-                  >
-                    <svg
-                      class="lexicon-icon lexicon-icon-folder"
-                      role="presentation"
-                    >
-                      <use
-                        href="/path/to/some/resource.svg#folder"
-                      />
-                    </svg>
-                  </span>
-                </span>
-              </div>
-              <div
-                class="autofit-col autofit-col-expand autofit-col-gutters"
-              >
-                <p
-                  aria-label="Foo Bar"
-                  class="card-title"
-                  title="Foo Bar"
-                >
-                  <span
-                    class="text-truncate-inline"
-                  >
-                    <a
-                      class="text-truncate"
-                      href="#"
-                    >
-                      Foo Bar
-                    </a>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </label>
     </div>
   </div>
@@ -1621,38 +1356,6 @@ exports[`ClayCardWithInfo renders as disabled 1`] = `
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-documents-and-media"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/some/resource.svg#documents-and-media"
-                />
-              </svg>
-            </div>
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-default"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-default"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -1707,38 +1410,6 @@ exports[`ClayCardWithInfo renders as file card specifying the displayType 1`] = 
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-documents-and-media"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/some/resource.svg#documents-and-media"
-                />
-              </svg>
-            </div>
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-default"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-default"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -1793,30 +1464,6 @@ exports[`ClayCardWithInfo renders as image card specifying imageProps and not th
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <img
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-              src="path/to/an/image"
-            />
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-image"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-image"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -1871,30 +1518,6 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and i
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <img
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid"
-              src="path/to/an/image"
-            />
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-image"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-image"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -1949,38 +1572,6 @@ exports[`ClayCardWithInfo renders as image card specifying the displayType and n
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-camera"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/some/resource.svg#camera"
-                />
-              </svg>
-            </div>
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-image"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-image"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -2034,30 +1625,6 @@ exports[`ClayCardWithInfo renders as image card with flush horizontal 1`] = `
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <img
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-flush"
-              src="path/to/an/image"
-            />
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-image"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-image"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -2112,30 +1679,6 @@ exports[`ClayCardWithInfo renders as image card with flush vertical 1`] = `
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <img
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-vertical-flush"
-              src="path/to/an/image"
-            />
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-image"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-image"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -2297,38 +1840,6 @@ exports[`ClayCardWithInfo renders as selectable 1`] = `
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-documents-and-media"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/some/resource.svg#documents-and-media"
-                />
-              </svg>
-            </div>
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-default"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-default"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -2547,38 +2058,6 @@ exports[`ClayCardWithInfo renders with description 1`] = `
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-documents-and-media"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/some/resource.svg#documents-and-media"
-                />
-              </svg>
-            </div>
-            <span
-              class="sticker sticker-primary sticker-bottom-left"
-            >
-              <span
-                class="sticker-overlay"
-              >
-                <svg
-                  class="lexicon-icon lexicon-icon-document-default"
-                  role="presentation"
-                >
-                  <use
-                    href="/path/to/some/resource.svg#document-default"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
         </label>
       </div>
       <div
@@ -2647,22 +2126,6 @@ exports[`ClayCardWithInfo renders with no sticker 1`] = `
           <span
             class="custom-control-label"
           />
-          <div
-            class="card-item-first aspect-ratio"
-          >
-            <div
-              class="aspect-ratio-item aspect-ratio-item-center-middle aspect-ratio-item-fluid card-type-asset-icon"
-            >
-              <svg
-                class="lexicon-icon lexicon-icon-documents-and-media"
-                role="presentation"
-              >
-                <use
-                  href="/path/to/some/resource.svg#documents-and-media"
-                />
-              </svg>
-            </div>
-          </div>
         </label>
       </div>
       <div
@@ -2763,26 +2226,6 @@ exports[`ClayCardWithUser renders as disabled 1`] = `
             <span
               class="custom-control-label"
             />
-            <div
-              class="aspect-ratio-item-center-middle card-type-asset-icon"
-            >
-              <span
-                class="sticker sticker-user-icon sticker-circle"
-              >
-                <span
-                  class="sticker-overlay"
-                >
-                  <svg
-                    class="lexicon-icon lexicon-icon-user"
-                    role="presentation"
-                  >
-                    <use
-                      href="/path/to/some/resource.svg#user"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </div>
           </label>
         </div>
       </div>
@@ -2840,26 +2283,6 @@ exports[`ClayCardWithUser renders as selectable 1`] = `
             <span
               class="custom-control-label"
             />
-            <div
-              class="aspect-ratio-item-center-middle card-type-asset-icon"
-            >
-              <span
-                class="sticker sticker-user-icon sticker-circle"
-              >
-                <span
-                  class="sticker-overlay"
-                >
-                  <svg
-                    class="lexicon-icon lexicon-icon-user"
-                    role="presentation"
-                  >
-                    <use
-                      href="/path/to/some/resource.svg#user"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </div>
           </label>
         </div>
       </div>
