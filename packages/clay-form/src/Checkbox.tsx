@@ -95,11 +95,11 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 						{label && (
 							<span className="custom-control-label-text">
 								{label}
+
+								{children}
 							</span>
 						)}
 					</span>
-
-					{children}
 				</label>
 			</div>
 		);
