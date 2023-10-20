@@ -7,11 +7,11 @@ order: 2
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
--   [Install with NPM or Yarn](#install-with-npm-or-yarn)
-    -   [NPM](#npm)
-    -   [Yarn](#yarn)
--   [Install via Clay CSS CDN](#install-via-clay-css-cdn)
--   [Quick start](#quick-start)
+- [Install with NPM or Yarn](#install-with-npm-or-yarn)
+	- [NPM](#npm)
+	- [Yarn](#yarn)
+- [Install via Clay CSS CDN](#install-via-clay-css-cdn)
+- [Quick start](#quick-start)
 
 </div>
 </div>
@@ -41,6 +41,15 @@ npm install @clayui/css @clayui/*
 ```shell{expanded}
 yarn add @clayui/css @clayui/*
 ```
+
+> **_Important Note: Be Mindful of the Asterisk:_**
+> When using the `@clayui/*` command for installation, it's crucial to remember that the asterisk (*) is a placeholder. It's not a valid package name on its own. To install a specific Clay package, you must replace the asterisk with the name of the package you require.
+>
+> For instance, if you want to install the "Clay Button" package, the correct command would be:
+> 
+> ```shell
+> npm install @clayui/button or yarn add @clayui/button
+
 
 ### Install via Clay CSS CDN
 
@@ -72,6 +81,11 @@ Example:
 <div class="clay-site-alert alert alert-warning">
 	<strong class="lead">Warning</strong>
 	This quick start requires that you have a minimum knowledge of <a href="https://reactjs.org/docs/hooks-intro.html" target="_blank">React Hooks</a>, not much of your API's will be used but just <a href="https://reactjs.org/docs/hooks-reference.html#usestate" target="_blank"><b>useState</b></a> to control the component.
+</div>
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	To ensure that Clay functions correctly, please remember to import the CSS package from @clayui/css into your React entrypoint component, as demonstrated in the example below.
 </div>
 
 For this quick start we will use [codesandbox](https://codesandbox.io/) which does not need to install an environment on your machine.
