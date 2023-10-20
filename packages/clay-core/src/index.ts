@@ -23,6 +23,7 @@ export {VerticalNav} from './vertical-nav';
 export {Picker, Option} from './picker';
 export {FocusTrap} from './focus-trap';
 export {Nav} from './nav';
+export {Body, Cell, Head, Row, Table} from './table';
 
 // Experimental components
 export * as __EXPERIMENTAL_MENU from './drop-down';

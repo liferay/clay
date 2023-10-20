@@ -5,7 +5,8 @@
 
 import React, {useCallback, useState} from 'react';
 
-import {Body, Column, Head, Row, Table} from '../src/table';
+import {Icon, Text} from '../src';
+import {Body, Cell, Head, Row, Table} from '../src/table';
 
 export default {
 	title: 'Design System/Components/Table',
@@ -31,14 +32,14 @@ export const Dynamic = () => {
 	return (
 		<Table>
 			<Head items={columns}>
-				{(column) => <Column key={column.id}>{column.name}</Column>}
+				{(column) => <Cell key={column.id}>{column.name}</Cell>}
 			</Head>
 
 			<Body items={rows}>
 				{(row) => (
 					<Row>
-						<Column>{row.name}</Column>
-						<Column>{row.type}</Column>
+						<Cell>{row.name}</Cell>
+						<Cell>{row.type}</Cell>
 					</Row>
 				)}
 			</Body>
@@ -66,13 +67,13 @@ export const DynamicCells = () => {
 	return (
 		<Table>
 			<Head items={columns2}>
-				{(column) => <Column key={column.id}>{column.name}</Column>}
+				{(column) => <Cell key={column.id}>{column.name}</Cell>}
 			</Head>
 
 			<Body items={rows2}>
 				{(row) => (
 					<Row items={columns2}>
-						{(column) => <Column>{row[column.id]}</Column>}
+						{(column) => <Cell>{row[column.id]}</Cell>}
 					</Row>
 				)}
 			</Body>
@@ -116,23 +117,113 @@ export const Sorting = () => {
 	return (
 		<Table onSortChange={onSortChange} sort={sort}>
 			<Head>
-				<Column key="name" sortable>
+				<Cell key="name" sortable>
 					Name
-				</Column>
-				<Column key="files" sortable>
+				</Cell>
+				<Cell key="files" sortable>
 					Files
-				</Column>
-				<Column key="type" sortable>
+				</Cell>
+				<Cell key="type" sortable>
 					Type
-				</Column>
+				</Cell>
 			</Head>
 
 			<Body items={items}>
 				{(row) => (
 					<Row>
-						<Column>{row['name']}</Column>
-						<Column>{row['files']}</Column>
-						<Column>{row['type']}</Column>
+						<Cell>{row['name']}</Cell>
+						<Cell>{row['files']}</Cell>
+						<Cell>{row['type']}</Cell>
+					</Row>
+				)}
+			</Body>
+		</Table>
+	);
+};
+
+export const Treegrid = () => {
+	const [expandedKeys, setExpandedKeys] = useState(new Set([2, 3]));
+
+	const columns = [
+		{
+			id: 'name',
+			name: 'Name',
+		},
+		{
+			id: 'type',
+			name: 'Type',
+		},
+	];
+
+	const ICON_TYPES = {
+		Folder: <Icon symbol="folder" />,
+		Image: <Icon symbol="picture" />,
+		Text: <Icon symbol="document" />,
+		Vector: <Icon symbol="document-vector" />,
+	};
+
+	return (
+		<Table
+			aria-label="File Explorer"
+			expandedKeys={expandedKeys}
+			nestedKey="children"
+			onExpandedChange={setExpandedKeys}
+		>
+			<Head items={columns}>
+				{(column) => (
+					<Cell className="table-cell-minw-300" key={column.id}>
+						{column.name}
+					</Cell>
+				)}
+			</Head>
+
+			<Body
+				items={[
+					{id: 1, name: 'Folder A', type: 'Folder'},
+					{
+						children: [
+							{
+								children: [
+									{id: 5, name: 'Folder X', type: 'Folder'},
+									{id: 6, name: 'Folder Z', type: 'Folder'},
+									{
+										id: 7,
+										name: 'Text Document A',
+										type: 'Text',
+									},
+									{
+										id: 8,
+										name: 'Text Document B',
+										type: 'Image',
+									},
+									{
+										id: 9,
+										name: 'Text Document C',
+										type: 'Vector',
+									},
+								],
+								id: 3,
+								name: 'Folder 1',
+								type: 'Folder',
+							},
+							{id: 4, name: 'Image Document', type: 'Image'},
+						],
+						id: 2,
+						name: 'Folder B',
+						type: 'Folder',
+					},
+					{id: 10, name: 'Folder C', type: 'Folder'},
+				]}
+			>
+				{(row) => (
+					<Row>
+						<Cell key={`${row.id}:name`}>
+							{ICON_TYPES[row['type']]}
+							<Text size={3} weight="semi-bold">
+								{row['name']}
+							</Text>
+						</Cell>
+						<Cell key={`${row.id}:type`}>{row['type']}</Cell>
 					</Row>
 				)}
 			</Body>

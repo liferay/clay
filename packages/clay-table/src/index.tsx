@@ -15,7 +15,7 @@ type ResposiveSizeType = 'lg' | 'md' | 'sm' | 'xl';
 
 type VerticalAlignmentType = 'bottom' | 'middle' | 'top';
 
-interface IProps extends React.HTMLAttributes<HTMLTableElement> {
+export interface IProps extends React.HTMLAttributes<HTMLTableElement> {
 	/**
 	 * This property vertically align the contents
 	 * inside the table body according a given position.
