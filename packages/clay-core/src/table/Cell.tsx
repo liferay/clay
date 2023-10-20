@@ -192,7 +192,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						href="#"
 						onClick={(event) => event.preventDefault()}
 						role="presentation"
-						tabIndex={-1}
+						tabIndex={treegrid ? -1 : undefined}
 					>
 						<span className="text-truncate">{children}</span>
 
