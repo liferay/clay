@@ -145,11 +145,10 @@ $cadmin-custom-control-label: map-deep-merge(
 				clay-enable-shadows($cadmin-custom-control-indicator-box-shadow),
 			content: '',
 			display: block,
-			float: left,
 			font-size: $cadmin-custom-control-indicator-size,
 			height: $cadmin-custom-control-indicator-size,
 			left: 0,
-			position: relative,
+			position: absolute,
 			top: $cadmin-custom-control-indicator-position-top,
 			transition: clay-enable-transitions($cadmin-custom-forms-transition),
 			width: $cadmin-custom-control-indicator-size,
@@ -201,7 +200,8 @@ $cadmin-label-custom-control-label: map-deep-merge(
 $cadmin-custom-control-label-text: () !default;
 $cadmin-custom-control-label-text: map-deep-merge(
 	(
-		display: block,
+		display: inline-block,
+		max-width: 100%,
 		padding-left:
 			calc(
 				#{$cadmin-custom-control-indicator-size} + #{$cadmin-custom-control-description-padding-left}
@@ -236,10 +236,11 @@ $cadmin-custom-control: map-deep-merge(
 		),
 		label: (
 			cursor: map-get($cadmin-custom-control-label, cursor),
-			display: inline,
+			display: inline-block,
 			font-size: $cadmin-font-size-base,
 			margin-bottom: 0,
-			position: static,
+			min-height: 20px,
+			min-width: $cadmin-custom-control-indicator-size,
 		),
 	),
 	$cadmin-custom-control
