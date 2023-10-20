@@ -5,6 +5,7 @@
 
 import React, {useCallback, useState} from 'react';
 
+import {Icon, Text} from '../src';
 import {Body, Cell, Head, Row, Table} from '../src/table';
 
 export default {
@@ -141,6 +142,8 @@ export const Sorting = () => {
 };
 
 export const Treegrid = () => {
+	const [expandedKeys, setExpandedKeys] = useState(new Set([2, 3]));
+
 	const columns = [
 		{
 			id: 'name',
@@ -152,34 +155,75 @@ export const Treegrid = () => {
 		},
 	];
 
+	const ICON_TYPES = {
+		Folder: <Icon symbol="folder" />,
+		Image: <Icon symbol="picture" />,
+		Text: <Icon symbol="document" />,
+		Vector: <Icon symbol="document-vector" />,
+	};
+
 	return (
-		<Table aria-label="Inbox" nestedKey="children">
+		<Table
+			aria-label="File Explorer"
+			expandedKeys={expandedKeys}
+			nestedKey="children"
+			onExpandedChange={setExpandedKeys}
+		>
 			<Head items={columns}>
-				{(column) => <Cell key={column.id}>{column.name}</Cell>}
+				{(column) => (
+					<Cell className="table-cell-minw-300" key={column.id}>
+						{column.name}
+					</Cell>
+				)}
 			</Head>
 
 			<Body
 				items={[
+					{id: 1, name: 'Folder A', type: 'Folder'},
 					{
-						children: [{id: 10, name: 'WoW', type: 'MMORPG'}],
-						id: 1,
-						name: 'Games',
-						type: 'File folder',
-					},
-					{
+						children: [
+							{
+								children: [
+									{id: 5, name: 'Folder X', type: 'Folder'},
+									{id: 6, name: 'Folder Z', type: 'Folder'},
+									{
+										id: 7,
+										name: 'Text Document A',
+										type: 'Text',
+									},
+									{
+										id: 8,
+										name: 'Text Document B',
+										type: 'Image',
+									},
+									{
+										id: 9,
+										name: 'Text Document C',
+										type: 'Vector',
+									},
+								],
+								id: 3,
+								name: 'Folder 1',
+								type: 'Folder',
+							},
+							{id: 4, name: 'Image Document', type: 'Image'},
+						],
 						id: 2,
-						name: 'Program Files',
-						type: 'File folder',
+						name: 'Folder B',
+						type: 'Folder',
 					},
+					{id: 10, name: 'Folder C', type: 'Folder'},
 				]}
 			>
 				{(row) => (
-					<Row items={columns}>
-						{(column) => (
-							<Cell key={`${row.id}:${column.id}`}>
-								{row[column.id]}
-							</Cell>
-						)}
+					<Row>
+						<Cell key={`${row.id}:name`}>
+							{ICON_TYPES[row['type']]}
+							<Text size={3} weight="semi-bold">
+								{row['name']}
+							</Text>
+						</Cell>
+						<Cell key={`${row.id}:type`}>{row['type']}</Cell>
 					</Row>
 				)}
 			</Body>
