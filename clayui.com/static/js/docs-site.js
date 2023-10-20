@@ -39,7 +39,7 @@ if (!Element.prototype.closest) {
 			}
 		}
 
-		if (column) {
+		if (column && button) {
 			var button = column.querySelector('.component-action');
 
 			button.classList.toggle('show');
