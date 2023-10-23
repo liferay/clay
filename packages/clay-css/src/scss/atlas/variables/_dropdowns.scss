@@ -235,6 +235,11 @@ $dropdown-section: map-deep-merge(
 		active: (
 			custom-control-label: $dropdown-section-active-custom-control-label,
 		),
+		custom-control-outside: (
+			label: (
+				padding-left: 1.75rem,
+			),
+		),
 	),
 	$dropdown-section
 );

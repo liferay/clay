@@ -164,6 +164,10 @@ label.custom-control-label {
 	@include clay-custom-control-variant($cadmin-custom-radio);
 }
 
+.custom-control-outside {
+	@include clay-custom-control-variant($cadmin-custom-control-outside);
+}
+
 // Custom Control Inline
 
 .custom-control-inline {

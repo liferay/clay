@@ -533,3 +533,27 @@ $cadmin-custom-radio: map-deep-merge(
 	),
 	$cadmin-custom-radio
 );
+
+$cadmin-custom-control-outside: () !default;
+$cadmin-custom-control-outside: map-deep-merge(
+	(
+		label: (
+			display: block,
+			padding-left:
+				calc(
+					#{$cadmin-custom-control-indicator-size} + #{$cadmin-custom-control-description-padding-left}
+				),
+		),
+		custom-control-input: (
+			custom-control-label: (
+				before: (
+					position: absolute,
+				),
+			),
+		),
+		custom-control-label-text: (
+			padding-left: 0,
+		),
+	),
+	$cadmin-custom-control-outside
+);

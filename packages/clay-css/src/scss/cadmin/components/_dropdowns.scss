@@ -89,6 +89,12 @@
 		);
 	}
 
+	.custom-control-outside {
+		@include clay-custom-control-variant(
+			map-get($cadmin-dropdown-section, custom-control-outside)
+		);
+	}
+
 	&.active {
 		@include clay-css(
 			setter(map-get($cadmin-dropdown-section, active), ())

@@ -168,6 +168,10 @@ label.custom-control-label {
 	@include clay-custom-control-variant($custom-radio);
 }
 
+.custom-control-outside {
+	@include clay-custom-control-variant($custom-control-outside);
+}
+
 // Custom Control Inline
 
 .custom-control-inline {

@@ -82,6 +82,12 @@
 		);
 	}
 
+	.custom-control-outside {
+		@include clay-custom-control-variant(
+			map-get($dropdown-section, custom-control-outside)
+		);
+	}
+
 	&.active {
 		@include clay-css(map-get($dropdown-section, active));
 
