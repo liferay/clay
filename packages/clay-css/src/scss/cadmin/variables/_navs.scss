@@ -316,7 +316,7 @@ $cadmin-nav-tabs-link-hover-border-color: transparent !default;
 
 $cadmin-nav-tabs-link-active-bg: $cadmin-white !default;
 $cadmin-nav-tabs-link-active-border-color: $cadmin-gray-400 $cadmin-gray-400
-	$cadmin-body-bg !default;
+	$cadmin-nav-tabs-link-active-bg !default;
 $cadmin-nav-tabs-link-active-color: $cadmin-gray-900 !default;
 
 $cadmin-nav-tabs-link-show-color: $cadmin-nav-tabs-link-active-color !default;
@@ -379,10 +379,7 @@ $cadmin-nav-tabs-link: map-deep-merge(
 $cadmin-nav-tabs: () !default;
 $cadmin-nav-tabs: map-deep-merge(
 	(
-		background-color: $cadmin-gray-100,
-		border-color: $cadmin-gray-400,
-		border-style: solid,
-		border-width: 1px 0,
+		border-bottom: 1px solid $cadmin-gray-400,
 		padding-left: 24px,
 		padding-right: 24px,
 		padding-top: 7px,
