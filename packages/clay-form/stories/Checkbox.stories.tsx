@@ -46,16 +46,28 @@ export const Accessibility = () => {
 
 export const CustomContent = () => {
 	const [value, setValue] = useState<boolean>(false);
+	const [value2, setValue2] = useState<boolean>(false);
 
 	return (
-		<ClayCheckbox
-			checked={value}
-			label="Badge"
-			onChange={() => setValue((val) => !val)}
-		>
-			<span className="badge badge-primary">
-				<span className="badge-item badge-item-expand">10</span>
-			</span>
-		</ClayCheckbox>
+		<div style={{width: '300px'}}>
+			<ClayCheckbox
+				checked={value}
+				label="Badge"
+				onChange={() => setValue((val) => !val)}
+			>
+				<span className="badge badge-primary ml-1">
+					<span className="badge-item badge-item-expand">10</span>
+				</span>
+			</ClayCheckbox>
+			<ClayCheckbox
+				checked={value2}
+				label="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"
+				onChange={() => setValue2((val) => !val)}
+			>
+				<span className="badge badge-primary ml-1">
+					<span className="badge-item badge-item-expand">10</span>
+				</span>
+			</ClayCheckbox>
+		</div>
 	);
 };

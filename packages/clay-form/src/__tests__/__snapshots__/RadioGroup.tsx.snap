@@ -5,7 +5,7 @@ exports[`Rendering default 1`] = `
   className=""
 >
   <div
-    className="custom-control custom-radio"
+    className="custom-control custom-radio custom-control-outside"
   >
     <label>
       <input
@@ -28,7 +28,7 @@ exports[`Rendering default 1`] = `
     </label>
   </div>
   <div
-    className="custom-control custom-radio"
+    className="custom-control custom-radio custom-control-outside"
   >
     <label>
       <input
@@ -51,7 +51,7 @@ exports[`Rendering default 1`] = `
     </label>
   </div>
   <div
-    className="custom-control custom-radio"
+    className="custom-control custom-radio custom-control-outside"
   >
     <label>
       <input

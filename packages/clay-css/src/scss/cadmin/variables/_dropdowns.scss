@@ -327,7 +327,7 @@ $cadmin-dropdown-section-custom-control-label: map-deep-merge(
 $cadmin-dropdown-section-custom-control-label-text: () !default;
 $cadmin-dropdown-section-custom-control-label-text: map-deep-merge(
 	(
-		padding-left: 28px,
+		padding-left: 16px,
 	),
 	$cadmin-dropdown-section-custom-control-label-text
 );
@@ -353,6 +353,11 @@ $cadmin-dropdown-section: map-deep-merge(
 		custom-control-label: $cadmin-dropdown-section-custom-control-label,
 		custom-control-label-text:
 			$cadmin-dropdown-section-custom-control-label-text,
+		custom-control-outside: (
+			label: (
+				padding-left: 28px,
+			),
+		),
 		active: (
 			custom-control-label:
 				$cadmin-dropdown-section-active-custom-control-label,

@@ -69,6 +69,7 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 					containerProps.className,
 					{
 						'custom-control-inline': inline,
+						'custom-control-outside': label,
 					}
 				)}
 			>

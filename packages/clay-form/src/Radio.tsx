@@ -50,6 +50,7 @@ const ClayRadio = React.forwardRef<HTMLInputElement, IRadioProps>(
 					containerProps.className,
 					{
 						'custom-control-inline': inline,
+						'custom-control-outside': label,
 					}
 				)}
 			>

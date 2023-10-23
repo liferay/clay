@@ -426,7 +426,6 @@ $dropdown-section-custom-control: () !default;
 $dropdown-section-custom-control: map-deep-merge(
 	(
 		margin-bottom: 0,
-		padding-left: 2rem,
 	),
 	$dropdown-section-custom-control
 );

@@ -3,7 +3,7 @@
 exports[`ClayCheckbox render as read only 1`] = `
 <div>
   <div
-    class="custom-control custom-checkbox"
+    class="custom-control custom-checkbox custom-control-outside"
   >
     <label>
       <input
@@ -48,7 +48,7 @@ exports[`ClayCheckbox renders 1`] = `
 exports[`ClayCheckbox renders as checked 1`] = `
 <div>
   <div
-    class="custom-control custom-checkbox"
+    class="custom-control custom-checkbox custom-control-outside"
   >
     <label>
       <input
@@ -73,7 +73,7 @@ exports[`ClayCheckbox renders as checked 1`] = `
 exports[`ClayCheckbox renders as checked and disabled 1`] = `
 <div>
   <div
-    class="custom-control custom-checkbox"
+    class="custom-control custom-checkbox custom-control-outside"
   >
     <label>
       <input
@@ -99,7 +99,7 @@ exports[`ClayCheckbox renders as checked and disabled 1`] = `
 exports[`ClayCheckbox renders as disabled 1`] = `
 <div>
   <div
-    class="custom-control custom-checkbox"
+    class="custom-control custom-checkbox custom-control-outside"
   >
     <label>
       <input
@@ -124,7 +124,7 @@ exports[`ClayCheckbox renders as disabled 1`] = `
 exports[`ClayCheckbox renders with a label 1`] = `
 <div>
   <div
-    class="custom-control custom-checkbox"
+    class="custom-control custom-checkbox custom-control-outside"
   >
     <label>
       <input
@@ -148,7 +148,7 @@ exports[`ClayCheckbox renders with a label 1`] = `
 exports[`ClayCheckbox renders with an indeterminate value 1`] = `
 <div>
   <div
-    class="custom-control custom-checkbox"
+    class="custom-control custom-checkbox custom-control-outside"
   >
     <label>
       <input
@@ -173,7 +173,7 @@ exports[`ClayCheckbox renders with an indeterminate value 1`] = `
 exports[`ClayCheckbox renders with an indeterminate value and disabled 1`] = `
 <div>
   <div
-    class="custom-control custom-checkbox"
+    class="custom-control custom-checkbox custom-control-outside"
   >
     <label>
       <input
