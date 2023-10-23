@@ -7,11 +7,11 @@ order: 2
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
-- [Install with NPM or Yarn](#install-with-npm-or-yarn)
-	- [NPM](#npm)
-	- [Yarn](#yarn)
-- [Install via Clay CSS CDN](#install-via-clay-css-cdn)
-- [Quick start](#quick-start)
+-   [Install with NPM or Yarn](#install-with-npm-or-yarn)
+    -   [NPM](#npm)
+    -   [Yarn](#yarn)
+-   [Install via Clay CSS CDN](#install-via-clay-css-cdn)
+-   [Quick start](#quick-start)
 
 </div>
 </div>
@@ -33,23 +33,23 @@ You can check out the full list of [packages available in NPM](https://www.npmjs
 #### NPM
 
 ```shell{expanded}
-npm install @clayui/css @clayui/*
+npm install @clayui/css @clayui/{PACKAGE_NAME}
 ```
 
 #### Yarn
 
 ```shell{expanded}
-yarn add @clayui/css @clayui/*
+yarn add @clayui/css @clayui/{PACKAGE_NAME}
 ```
 
 > **_Important Note: Be Mindful of the Asterisk:_**
-> When using the `@clayui/*` command for installation, it's crucial to remember that the asterisk (*) is a placeholder. It's not a valid package name on its own. To install a specific Clay package, you must replace the asterisk with the name of the package you require.
+> When using the `@clayui/*` command for installation, it's crucial to remember that the asterisk (\*) is a placeholder. It's not a valid package name on its own. To install a specific Clay package, you must replace the asterisk with the name of the package you require.
 >
 > For instance, if you want to install the "Clay Button" package, the correct command would be:
-> 
+>
 > ```shell
 > npm install @clayui/button or yarn add @clayui/button
-
+> ```
 
 ### Install via Clay CSS CDN
 
