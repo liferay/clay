@@ -12,8 +12,7 @@
 	"types": "lib/index.d.ts",
 	"ts:main": "src/index.tsx",
 	"files": [
-		"lib",
-		"src"
+		"lib"
 	],
 	"scripts": {
 		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",

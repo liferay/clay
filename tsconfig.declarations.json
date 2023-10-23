@@ -5,7 +5,8 @@
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"noEmit": false,
-		"removeComments": false
+		"removeComments": false,
+		"paths": {}
 	},
 	"exclude": [
 		"node_modules",

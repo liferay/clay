@@ -3,7 +3,10 @@
 	"compilerOptions": {
 		"noEmit": true,
 		"declaration": true,
-		"emitDeclarationOnly": false
+		"emitDeclarationOnly": false,
+		"paths": {
+			"@clayui/*": ["node_modules/@clayui/*/src"]
+		}
 	},
 	"include": ["./packages/clay-*/src/**/*", "*.tsx", "*.ts"]
 }
