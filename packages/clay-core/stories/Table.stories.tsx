@@ -142,7 +142,9 @@ export const Sorting = () => {
 };
 
 export const Treegrid = () => {
-	const [expandedKeys, setExpandedKeys] = useState(new Set([2, 3]));
+	const [expandedKeys, setExpandedKeys] = useState<Set<React.Key>>(
+		new Set([2, 3])
+	);
 
 	const columns = [
 		{
