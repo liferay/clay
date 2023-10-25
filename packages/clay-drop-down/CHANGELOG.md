@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.106.0](https://github.com/liferay/clay/compare/v3.105.0...v3.106.0) (2023-10-25)
+
+### Bug Fixes
+
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+### Reverts
+
+-   Revert "chore(@clayui/drop-down): Update storybook with examples of long text in checkbox and radio" ([432ec99](https://github.com/liferay/clay/commit/432ec99b8d6d35687747b71d22b7c766a83e36e2))
+-   Revert "docs(@clayui/drop-down): Add checkbox and radio examples with long text" ([0fa8402](https://github.com/liferay/clay/commit/0fa840252786d5487a6a01ca1be355e4cef883e0))
+
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
 ### Bug Fixes

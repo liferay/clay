@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.106.0](https://github.com/liferay/clay/compare/v3.105.0...v3.106.0) (2023-10-25)
+
+### Bug Fixes
+
+-   **@clayui/core:** does not render the child items of an unexpanded item ([e308365](https://github.com/liferay/clay/commit/e30836554f424480e443c07342eb8f987f2b8428))
+-   **@clayui/core:** fixes nested focus error ([e8e339c](https://github.com/liferay/clay/commit/e8e339c1f83b7a9f94a75a5f36baf9fc482e628c))
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+### Features
+
+-   **@clayui/core:** add hook to handle tree navigation ([1331f57](https://github.com/liferay/clay/commit/1331f578f438a565c2d762d71f342b0f8753d289))
+-   **@clayui/core:** adds base implementation for rendering a table tree into an accessible list ([1fb9d6e](https://github.com/liferay/clay/commit/1fb9d6ecd8887b105f272bdaa972bd7e47cd420c))
+-   **@clayui/core:** adds controlled and uncontrolled expandable state ([56f3d8f](https://github.com/liferay/clay/commit/56f3d8f8c1afa43d8ca66973890948f9a78ab413))
+-   **@clayui/core:** adds keyboard interaction for the Home and End keys ([d2224ed](https://github.com/liferay/clay/commit/d2224ed9d70b1eed37cc4fa5870e8853f64ed211))
+-   **@clayui/core:** adds keyboard navigation interactions to row ([4a7f290](https://github.com/liferay/clay/commit/4a7f2909a95b674ae84f657c980a0295fb16e7b3))
+-   **@clayui/core:** adds new API to handle column sorting with accessibility support ([4a13361](https://github.com/liferay/clay/commit/4a13361065b710453c336bc10cc3c5c6b9858aac))
+-   **@clayui/core:** adds the implementation of the new data-oriented composition for Table ([d68bcaa](https://github.com/liferay/clay/commit/d68bcaa2efc725eac7e57d7fd1bf20f10e64aaa3))
+-   **@clayui/core:** makes the new table component public ([f2a686e](https://github.com/liferay/clay/commit/f2a686ed2a940e9d0378586671b4543be8c5773e))
+
 # [3.104.0](https://github.com/liferay/clay/compare/v3.103.1...v3.104.0) (2023-08-25)
 
 ### Bug Fixes

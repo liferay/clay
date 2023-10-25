@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.106.0](https://github.com/liferay/clay/compare/v3.105.0...v3.106.0) (2023-10-25)
+
+
+### Bug Fixes
+
+* **@clayui/css:** [href] CSS selector shouldn't target `<use href=""/>` element in svg ([02a2d19](https://github.com/liferay/clay/commit/02a2d190aed91991fcf94c973bc63abb9b04e678))
+* **@clayui/css:** Atlas range input map should use newer key value pattern to match better with the css selector ([eebde0f](https://github.com/liferay/clay/commit/eebde0f73cdda7849af5fccdadd079538f4e79f5))
+* **@clayui/css:** Cadmin nav-tabs remove deprecated styles ([c2ce6dc](https://github.com/liferay/clay/commit/c2ce6dc8798043ee0e81e4821d3495e20bb91686))
+* **@clayui/css:** Checkbox and Radio text should be vertically aligned at the start ([5ed8cb0](https://github.com/liferay/clay/commit/5ed8cb0e9e090aad61ea6b6f4dfa50c419a5dfab))
+* **@clayui/css:** Mixins clay-range-input-variant should accept new key value pattern for clay-range-thumb ([5b9199b](https://github.com/liferay/clay/commit/5b9199b1c7b288941a3c982b7e348c17208b0469))
+* **@clayui/css:** SVG Icons bookmarks and bookmarks-full should be centered ([46b51d7](https://github.com/liferay/clay/commit/46b51d7043db35e30f5ccec0c751602a6be29206))
+
+
+### Features
+
+* **@clayui/css:** Mixins `clay-sidebar-variant` adds more sub-components ([efe43c3](https://github.com/liferay/clay/commit/efe43c39b4a4574881d215998b4d81aed96d2ea9))
+* **@clayui/css:** Sidebar adds sidebar-sm ([dbc35d3](https://github.com/liferay/clay/commit/dbc35d3878bd0af109b73d893bc3ee0809d08a09))
+* **@clayui/css:** Tables adds table-nested-rows ([5bcc318](https://github.com/liferay/clay/commit/5bcc3189512e8dd8f231a17b8825945ef60060ac))
+
+
+### Reverts
+
+* Revert "fix(@clayui/css): Checkbox and Radio text should be vertically aligned at the start when breaking to new line" ([4d87dc3](https://github.com/liferay/clay/commit/4d87dc30d9fca63d8a0d4633cef9cd5c2ae5dac9))
+* Revert "fix(@clayui/css): Checkbox and radio text should be vertically aligned when breaking to a new line" ([d73c22c](https://github.com/liferay/clay/commit/d73c22c888dbf09de21a8e478faf2c854d484412))
+* Revert "fix(@clayui/css): Checkbox and Radio with badge breaks to new line" ([01a4411](https://github.com/liferay/clay/commit/01a44115d1cdf73353b98355bf959a452c57fdb7))
+
+
+
+
+
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
 

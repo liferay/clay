@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.106.0](https://github.com/liferay/clay/compare/v3.105.0...v3.106.0) (2023-10-25)
+
+### Bug Fixes
+
+-   **@clayui/core:** does not render the child items of an unexpanded item ([e308365](https://github.com/liferay/clay/commit/e30836554f424480e443c07342eb8f987f2b8428))
+-   **@clayui/core:** fixes nested focus error ([e8e339c](https://github.com/liferay/clay/commit/e8e339c1f83b7a9f94a75a5f36baf9fc482e628c))
+-   **@clayui/css:** [href] CSS selector shouldn't target `<use href=""/>` element in svg ([02a2d19](https://github.com/liferay/clay/commit/02a2d190aed91991fcf94c973bc63abb9b04e678))
+-   **@clayui/css:** Atlas range input map should use newer key value pattern to match better with the css selector ([eebde0f](https://github.com/liferay/clay/commit/eebde0f73cdda7849af5fccdadd079538f4e79f5))
+-   **@clayui/css:** Cadmin nav-tabs remove deprecated styles ([c2ce6dc](https://github.com/liferay/clay/commit/c2ce6dc8798043ee0e81e4821d3495e20bb91686))
+-   **@clayui/css:** Checkbox and Radio text should be vertically aligned at the start ([5ed8cb0](https://github.com/liferay/clay/commit/5ed8cb0e9e090aad61ea6b6f4dfa50c419a5dfab))
+-   **@clayui/css:** Mixins clay-range-input-variant should accept new key value pattern for clay-range-thumb ([5b9199b](https://github.com/liferay/clay/commit/5b9199b1c7b288941a3c982b7e348c17208b0469))
+-   **@clayui/css:** SVG Icons bookmarks and bookmarks-full should be centered ([46b51d7](https://github.com/liferay/clay/commit/46b51d7043db35e30f5ccec0c751602a6be29206))
+-   add proper location for linting ([e221837](https://github.com/liferay/clay/commit/e22183712190cbf72f41d796c7e0729abfca607f))
+-   override paths when generating d.ts files ([2ef177f](https://github.com/liferay/clay/commit/2ef177f8bb9772bf4d1191e6894a87df6dea7fca))
+-   remove 'src' dir from being packaged with npm ([9383e8d](https://github.com/liferay/clay/commit/9383e8d8abb25ca3396e7c6e4dfa53bbc72691c5))
+-   use package's directory for baseDir when generating type ([0a5c710](https://github.com/liferay/clay/commit/0a5c710092f36243bc8d5487f70e831295715072))
+
+### Features
+
+-   **@clayui/core:** add hook to handle tree navigation ([1331f57](https://github.com/liferay/clay/commit/1331f578f438a565c2d762d71f342b0f8753d289))
+-   **@clayui/core:** adds base implementation for rendering a table tree into an accessible list ([1fb9d6e](https://github.com/liferay/clay/commit/1fb9d6ecd8887b105f272bdaa972bd7e47cd420c))
+-   **@clayui/core:** adds controlled and uncontrolled expandable state ([56f3d8f](https://github.com/liferay/clay/commit/56f3d8f8c1afa43d8ca66973890948f9a78ab413))
+-   **@clayui/core:** adds keyboard interaction for the Home and End keys ([d2224ed](https://github.com/liferay/clay/commit/d2224ed9d70b1eed37cc4fa5870e8853f64ed211))
+-   **@clayui/core:** adds keyboard navigation interactions to row ([4a7f290](https://github.com/liferay/clay/commit/4a7f2909a95b674ae84f657c980a0295fb16e7b3))
+-   **@clayui/core:** adds new API to handle column sorting with accessibility support ([4a13361](https://github.com/liferay/clay/commit/4a13361065b710453c336bc10cc3c5c6b9858aac))
+-   **@clayui/core:** adds the implementation of the new data-oriented composition for Table ([d68bcaa](https://github.com/liferay/clay/commit/d68bcaa2efc725eac7e57d7fd1bf20f10e64aaa3))
+-   **@clayui/core:** makes the new table component public ([f2a686e](https://github.com/liferay/clay/commit/f2a686ed2a940e9d0378586671b4543be8c5773e))
+-   **@clayui/css:** Mixins `clay-sidebar-variant` adds more sub-components ([efe43c3](https://github.com/liferay/clay/commit/efe43c39b4a4574881d215998b4d81aed96d2ea9))
+-   **@clayui/css:** Sidebar adds sidebar-sm ([dbc35d3](https://github.com/liferay/clay/commit/dbc35d3878bd0af109b73d893bc3ee0809d08a09))
+-   **@clayui/css:** Tables adds table-nested-rows ([5bcc318](https://github.com/liferay/clay/commit/5bcc3189512e8dd8f231a17b8825945ef60060ac))
+-   **@clayui/data-provider:** adds sortable support ([a202306](https://github.com/liferay/clay/commit/a202306426b6bc5fa1d6b41bf3418d0a6f489b38))
+-   **@clayui/form:** Checkbox and Radio should use modifier class custom-control-outside if a label is present ([e2b6335](https://github.com/liferay/clay/commit/e2b633546c55ed1b266f92c277a14f278bf9c22e))
+
+### Reverts
+
+-   Revert "chore(@clayui/drop-down): Update storybook with examples of long text in checkbox and radio" ([432ec99](https://github.com/liferay/clay/commit/432ec99b8d6d35687747b71d22b7c766a83e36e2))
+-   Revert "docs(@clayui/drop-down): Add checkbox and radio examples with long text" ([0fa8402](https://github.com/liferay/clay/commit/0fa840252786d5487a6a01ca1be355e4cef883e0))
+-   Revert "fix(@clayui/drop-down): Radio buttons should be stacked in dropdown" ([7eac94d](https://github.com/liferay/clay/commit/7eac94d5921591647e06da3e41d767789248219d))
+-   Revert "fix(@clayui/css): Checkbox and Radio text should be vertically aligned at the start when breaking to new line" ([4d87dc3](https://github.com/liferay/clay/commit/4d87dc30d9fca63d8a0d4633cef9cd5c2ae5dac9))
+-   Revert "fix(@clayui/css): Checkbox and radio text should be vertically aligned when breaking to a new line" ([d73c22c](https://github.com/liferay/clay/commit/d73c22c888dbf09de21a8e478faf2c854d484412))
+-   Revert "fix(@clayui/css): Checkbox and Radio with badge breaks to new line" ([01a4411](https://github.com/liferay/clay/commit/01a44115d1cdf73353b98355bf959a452c57fdb7))
+
 # [3.105.0](https://github.com/liferay/clay/compare/v3.104.0...v3.105.0) (2023-09-15)
 
 ### Bug Fixes
