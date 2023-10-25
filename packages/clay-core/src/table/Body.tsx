@@ -86,13 +86,15 @@ function BodyInner<T extends Record<string, any>>(
 				<Collection<T>
 					itemContainer={useCallback(
 						({children, item, keyValue}: ItemProps<any>) =>
-							React.cloneElement(children, {
-								_expandable: item._expandable,
-								_index: item._index,
-								_level: item._level,
-								_size: item._size,
-								keyValue,
-							}),
+							item
+								? React.cloneElement(children, {
+										_expandable: item._expandable,
+										_index: item._index,
+										_level: item._level,
+										_size: item._size,
+										keyValue,
+								  })
+								: children,
 						[]
 					)}
 					items={items}
