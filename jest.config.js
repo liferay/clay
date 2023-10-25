@@ -245,6 +245,7 @@ module.exports = {
 	moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
 	resolver: `${__dirname}/scripts/jest-clay-lerna-resolver`,
 	setupFiles: [`${__dirname}/scripts/setupTests.ts`, 'raf/polyfill'],
+	setupFilesAfterEnv: [`${__dirname}/scripts/jest-setup.ts`],
 	testEnvironment: 'jsdom',
 	testMatch: [
 		`${process.cwd()}/**/__tests__/**/*.[jt]s?(x)`,
