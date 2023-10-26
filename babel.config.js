@@ -26,8 +26,9 @@ module.exports = (api) => {
 		],
 		presets: [
 			[
-				'@babel/env',
+				'@babel/preset-env',
 				{
+					exclude: ['transform-regenerator'],
 					targets: [
 						'last 2 Chrome versions',
 						'last 1 Edge versions',
