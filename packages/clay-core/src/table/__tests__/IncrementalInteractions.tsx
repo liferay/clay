@@ -14,15 +14,33 @@ type Sorting = {
 	direction: 'ascending' | 'descending';
 };
 
+const columns = [
+	{id: 'name', name: 'Name'},
+	{id: 'type', name: 'Type'},
+];
+
+const itemsTree = [
+	{
+		id: 1,
+		name: 'Foo',
+		type: 'PNG',
+	},
+	{id: 2, name: 'Bar', type: 'Files'},
+	{
+		children: [
+			{id: 4, name: 'Bar', type: 'Vector'},
+			{id: 5, name: 'Foo', type: 'Files'},
+		],
+		id: 3,
+		name: 'Baz',
+		type: 'Folder',
+	},
+];
+
 describe('Picker incremental interactions', () => {
 	afterEach(cleanup);
 
 	it('clicking on the column does the sorting', () => {
-		const columns = [
-			{id: 'name', name: 'Name'},
-			{id: 'type', name: 'Type'},
-		];
-
 		function ColumnSorting() {
 			const [sort, setSort] = useState<Sorting | null>(null);
 			const [items, setItems] = useState([
@@ -105,11 +123,6 @@ describe('Picker incremental interactions', () => {
 	});
 
 	it('clicking again on the header column with sorting reverses the ordering', () => {
-		const columns = [
-			{id: 'name', name: 'Name'},
-			{id: 'type', name: 'Type'},
-		];
-
 		const items = [
 			{id: 1, name: 'Foo', type: 'Foo'},
 			{id: 2, name: 'Bar', type: 'Bar'},
@@ -192,11 +205,6 @@ describe('Picker incremental interactions', () => {
 	});
 
 	it('clicking on a new header column will reset the order of the previous column', () => {
-		const columns = [
-			{id: 'name', name: 'Name'},
-			{id: 'type', name: 'Type'},
-		];
-
 		const items = [
 			{id: 1, name: 'Foo', type: 'PNG'},
 			{id: 2, name: 'Bar', type: 'Files'},
@@ -280,36 +288,13 @@ describe('Picker incremental interactions', () => {
 
 	describe('tree grid', () => {
 		it('pressing tab will move the focus to the first row', () => {
-			const columns = [
-				{id: 'name', name: 'Name'},
-				{id: 'type', name: 'Type'},
-			];
-
-			const items = [
-				{
-					id: 1,
-					name: 'Foo',
-					type: 'PNG',
-				},
-				{id: 2, name: 'Bar', type: 'Files'},
-				{
-					children: [
-						{id: 4, name: 'Bar', type: 'Vector'},
-						{id: 5, name: 'Foo', type: 'Files'},
-					],
-					id: 3,
-					name: 'Baz',
-					type: 'Folder',
-				},
-			];
-
 			const {getAllByRole} = render(
 				<Table nestedKey="children">
 					<Head items={columns}>
 						{(column) => <Cell key={column.id}>{column.name}</Cell>}
 					</Head>
 
-					<Body items={items}>
+					<Body items={itemsTree}>
 						{(row) => (
 							<Row items={columns}>
 								{(column) => (
@@ -334,36 +319,13 @@ describe('Picker incremental interactions', () => {
 		});
 
 		it('pressing tab again will move the focus to the next element outside the table', () => {
-			const columns = [
-				{id: 'name', name: 'Name'},
-				{id: 'type', name: 'Type'},
-			];
-
-			const items = [
-				{
-					id: 1,
-					name: 'Foo',
-					type: 'PNG',
-				},
-				{id: 2, name: 'Bar', type: 'Files'},
-				{
-					children: [
-						{id: 4, name: 'Bar', type: 'Vector'},
-						{id: 5, name: 'Foo', type: 'Files'},
-					],
-					id: 3,
-					name: 'Baz',
-					type: 'Folder',
-				},
-			];
-
 			const {getAllByRole} = render(
 				<Table nestedKey="children">
 					<Head items={columns}>
 						{(column) => <Cell key={column.id}>{column.name}</Cell>}
 					</Head>
 
-					<Body items={items}>
+					<Body items={itemsTree}>
 						{(row) => (
 							<Row items={columns}>
 								{(column) => (
@@ -393,29 +355,6 @@ describe('Picker incremental interactions', () => {
 
 		describe('keyboard interaction on row', () => {
 			it('pressing the down arrow key moves focus to the row below', () => {
-				const columns = [
-					{id: 'name', name: 'Name'},
-					{id: 'type', name: 'Type'},
-				];
-
-				const items = [
-					{
-						id: 1,
-						name: 'Foo',
-						type: 'PNG',
-					},
-					{id: 2, name: 'Bar', type: 'Files'},
-					{
-						children: [
-							{id: 4, name: 'Bar', type: 'Vector'},
-							{id: 5, name: 'Foo', type: 'Files'},
-						],
-						id: 3,
-						name: 'Baz',
-						type: 'Folder',
-					},
-				];
-
 				const {getAllByRole} = render(
 					<Table nestedKey="children">
 						<Head items={columns}>
@@ -424,7 +363,7 @@ describe('Picker incremental interactions', () => {
 							)}
 						</Head>
 
-						<Body items={items}>
+						<Body items={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -453,29 +392,6 @@ describe('Picker incremental interactions', () => {
 			});
 
 			it('pressing the up arrow key moves focus to the row above', () => {
-				const columns = [
-					{id: 'name', name: 'Name'},
-					{id: 'type', name: 'Type'},
-				];
-
-				const items = [
-					{
-						id: 1,
-						name: 'Foo',
-						type: 'PNG',
-					},
-					{id: 2, name: 'Bar', type: 'Files'},
-					{
-						children: [
-							{id: 4, name: 'Bar', type: 'Vector'},
-							{id: 5, name: 'Foo', type: 'Files'},
-						],
-						id: 3,
-						name: 'Baz',
-						type: 'Folder',
-					},
-				];
-
 				const {getAllByRole} = render(
 					<Table nestedKey="children">
 						<Head items={columns}>
@@ -484,7 +400,7 @@ describe('Picker incremental interactions', () => {
 							)}
 						</Head>
 
-						<Body items={items}>
+						<Body items={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -516,25 +432,373 @@ describe('Picker incremental interactions', () => {
 				expect(firstRow).toHaveFocus();
 			});
 
-			it('press the left arrow key to collpase the node with expandable', () => {});
+			it('press the left arrow key to collapse the node with expandable', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
 
-			it('pressing the left arrow key moves the focus to the row on the level above', () => {});
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
 
-			it('pressing the right arrow key expands the node if the node has children', () => {});
+				const [, firstRow, _secondRow, thirdRow] = getAllByRole('row');
 
-			it('pressing the right arrow key moves the focus to the first cell', () => {});
+				expect(document.activeElement).not.toEqual(firstRow);
+
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowDown/}');
+				userEvent.keyboard('{ArrowDown/}');
+
+				expect(thirdRow).toHaveFocus();
+				expect(thirdRow!.getAttribute('aria-expanded')).toBe('false');
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				expect(thirdRow!.getAttribute('aria-expanded')).toBe('true');
+
+				userEvent.keyboard('{ArrowLeft/}');
+
+				expect(thirdRow!.getAttribute('aria-expanded')).toBe('false');
+			});
+
+			it('pressing the left arrow key moves the focus to the row on the level above', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const [, firstRow, _secondRow, thirdRow] = getAllByRole('row');
+
+				expect(document.activeElement).not.toEqual(firstRow);
+
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowDown/}');
+				userEvent.keyboard('{ArrowDown/}');
+
+				expect(thirdRow).toHaveFocus();
+				expect(thirdRow!.getAttribute('aria-expanded')).toBe('false');
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				expect(thirdRow!.getAttribute('aria-expanded')).toBe('true');
+
+				userEvent.keyboard('{ArrowDown/}');
+
+				const [, , , , fourthRow] = getAllByRole('row');
+
+				expect(fourthRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowLeft/}');
+
+				expect(thirdRow).toHaveFocus();
+			});
+
+			it('pressing the right arrow key moves the focus to the first cell', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const [, firstRow, secondRow] = getAllByRole('row');
+
+				expect(document.activeElement).not.toEqual(firstRow);
+
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowDown/}');
+
+				expect(secondRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				const [, , , , row2Cell1] = getAllByRole('gridcell');
+
+				expect(row2Cell1).toHaveFocus();
+			});
 		});
 
 		describe('keyboard interaction on cell', () => {
-			it('pressing the up arrow key moves the focus to the cell above', () => {});
+			it('pressing the up arrow key moves the focus to the cell above', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
 
-			it('pressing the down arrow key moves focus to the cell below', () => {});
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
 
-			it('pressing the right arrow key moves focus to the cell to the right', () => {});
+				const [, firstRow, secondRow] = getAllByRole('row');
 
-			it('pressing the left arrow key moves the focus to the right cell', () => {});
+				expect(document.activeElement).not.toEqual(firstRow);
 
-			it('pressing the left arrow key in the first cell moves the focus to the row', () => {});
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowDown/}');
+
+				expect(secondRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				const [, , row1Cell1, , row2Cell1] = getAllByRole('gridcell');
+
+				expect(row2Cell1).toHaveFocus();
+
+				userEvent.keyboard('{ArrowUp/}');
+
+				expect(row1Cell1).toHaveFocus();
+			});
+
+			it('pressing the down arrow key moves focus to the cell below', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const [, firstRow] = getAllByRole('row');
+
+				expect(document.activeElement).not.toEqual(firstRow);
+
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				const [, , row1Cell1, , row2Cell1] = getAllByRole('gridcell');
+
+				expect(row1Cell1).toHaveFocus();
+
+				userEvent.keyboard('{ArrowDown/}');
+
+				expect(row2Cell1).toHaveFocus();
+			});
+
+			it('pressing the right arrow key moves focus to the cell to the right', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const [, firstRow] = getAllByRole('row');
+
+				expect(document.activeElement).not.toEqual(firstRow);
+
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				const [, , row1Cell1, row1Cell2] = getAllByRole('gridcell');
+
+				expect(row1Cell1).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				expect(row1Cell2).toHaveFocus();
+			});
+
+			it('pressing the left arrow key moves the focus to the right cell', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const [, firstRow] = getAllByRole('row');
+
+				expect(document.activeElement).not.toEqual(firstRow);
+
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				const [, , row1Cell1, row1Cell2] = getAllByRole('gridcell');
+
+				expect(row1Cell1).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				expect(row1Cell2).toHaveFocus();
+
+				userEvent.keyboard('{ArrowLeft/}');
+
+				expect(row1Cell1).toHaveFocus();
+			});
+
+			it('pressing the left arrow key in the first cell moves the focus to the row', () => {
+				const {getAllByRole} = render(
+					<Table nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body items={itemsTree}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const [, firstRow] = getAllByRole('row');
+
+				expect(document.activeElement).not.toEqual(firstRow);
+
+				userEvent.tab();
+
+				expect(firstRow).toHaveFocus();
+
+				userEvent.keyboard('{ArrowRight/}');
+
+				const [, , row1Cell1] = getAllByRole('gridcell');
+
+				expect(row1Cell1).toHaveFocus();
+
+				userEvent.keyboard('{ArrowLeft/}');
+
+				expect(firstRow).toHaveFocus();
+			});
 		});
 	});
 });
