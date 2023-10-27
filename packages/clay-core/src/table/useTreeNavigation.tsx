@@ -85,7 +85,8 @@ export function useTreeNavigation<T extends HTMLElement>({
 					if (isRow) {
 						if (
 							activeElement.getAttribute('aria-expanded') !==
-							'true'
+								'true' &&
+							activeElement.getAttribute('aria-level') !== '1'
 						) {
 							const items = getFocusableList<T>(ref, [
 								`[role="${locator.row}"]`,
