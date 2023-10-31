@@ -578,25 +578,11 @@ $cadmin-alert-indicator-start: map-deep-merge(
 			),
 		),
 		alert-feedback: (
-			padding-left:
-				calc(
-					#{$cadmin-alert-indicator-font-size} + #{map-deep-get(
-							$cadmin-alert-autofit-row,
-							autofit-col,
-							padding-left
-						)}
-				),
+			padding-left: calc(#{$cadmin-alert-indicator-font-size} + 8px),
 		),
 		alert-indicator: (
 			line-height: 1,
-			margin-left:
-				calc(
-					-1em - #{map-deep-get(
-							$cadmin-alert-autofit-row,
-							autofit-col,
-							padding-left
-						)}
-				),
+			margin-left: calc(-1em - 8px),
 			margin-top: 2px,
 			position: absolute,
 			lead: (
