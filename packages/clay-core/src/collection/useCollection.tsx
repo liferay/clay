@@ -414,9 +414,9 @@ export function useCollection<
 	// there are nested collections.
 	useEffect(
 		() => () => {
-			cleanUp();
-
 			if (forceUpdate) {
+				cleanUp();
+
 				forceUpdate(null);
 			}
 		},
