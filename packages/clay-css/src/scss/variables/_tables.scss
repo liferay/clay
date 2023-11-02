@@ -77,15 +77,7 @@ $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
 $table-head-height: 36px !default;
 
-// table-cell: Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
 $c-table-thead: () !default;
-$c-table-thead: map-merge(
-	(
-		background-color: $table-head-bg,
-	),
-	$c-table-thead
-);
 
 $table-head-link: () !default;
 
@@ -230,12 +222,10 @@ $table-action-link: map-deep-merge(
 
 // .table
 
-// thead, tbody, tfoot Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-// thead table-cell, tbody table-cell, tfoot table-cell: Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
 $c-table: () !default;
 $c-table: map-deep-merge(
 	(
+		background-color: $table-bg,
 		border-spacing: 0,
 		color: $table-color,
 		font-size: $table-font-size,
@@ -245,8 +235,8 @@ $c-table: map-deep-merge(
 			map-deep-merge(
 				$c-table-thead,
 				(
+					background-color: $table-head-bg,
 					table-cell: (
-						background-color: $table-head-bg,
 						border-bottom: $table-head-border-bottom-width solid
 							$table-border-color,
 						border-top-width: $table-head-border-top-width,
@@ -290,30 +280,17 @@ $c-table: map-deep-merge(
 			map-deep-merge(
 				$c-table-tbody,
 				(
-					table-cell: (
-						background-color:
-							map-get($c-table-tbody, background-color),
-					),
 					tbody: (
 						border-top: calc(2 * #{$table-border-width}) solid
 							$table-border-color,
 					),
 				)
 			),
-		tfoot:
-			map-deep-merge(
-				$c-table-tfoot,
-				(
-					table-cell: (
-						background-color:
-							map-get($c-table-tfoot, background-color),
-					),
-				)
-			),
+		tfoot: $c-table-tfoot,
 		caption: $c-table-caption,
 		table-divider: (
+			background-color: $table-divider-bg,
 			table-cell: (
-				background-color: $table-divider-bg,
 				color: $table-divider-color,
 				font-size: $table-divider-font-size,
 				font-weight: $table-divider-font-weight,
@@ -323,17 +300,14 @@ $c-table: map-deep-merge(
 		),
 		table-active: (
 			background-color: $table-active-bg,
-			table-cell: (
-				background-color: $table-active-bg,
-			),
 			quick-action-menu: (
 				background-color: $table-quick-action-menu-active-bg,
 			),
 		),
 		table-disabled: (
+			background-color: $table-disabled-bg,
 			color: $table-disabled-color,
 			table-cell: (
-				background-color: $table-disabled-bg,
 				cursor: $table-disabled-cursor,
 				href: (
 					color: $table-disabled-color,
@@ -389,10 +363,6 @@ $c-table-hover: map-deep-merge(
 				hover: (
 					background-color: $table-hover-bg,
 					color: $table-hover-color,
-					table-cell: (
-						background-color: $table-hover-bg,
-						color: $table-hover-color,
-					),
 					quick-action-menu: (
 						background-color: $table-quick-action-menu-hover-bg,
 					),
@@ -409,13 +379,72 @@ $c-table-hover: map-deep-merge(
 		table-disabled: (
 			hover: (
 				background-color: $table-disabled-bg,
-				table-cell: (
-					background-color: $table-disabled-bg,
-				),
 			),
 		),
 	),
 	$c-table-hover
+);
+
+// .table-focus
+
+$c-tr-table-focus: () !default;
+$c-tr-table-focus: map-deep-merge(
+	(
+		td: (
+			before: (
+				box-shadow: (
+					inset 0 0.2rem 0 0 rgba($primary, 0.25),
+					inset 0 -0.2rem 0 0 rgba($primary, 0.25),
+				),
+				content: '',
+				display: block,
+				position: absolute,
+				left: math-sign($table-border-width),
+				right: math-sign($table-border-width),
+				top: math-sign($table-border-width),
+				bottom: math-sign($table-border-width),
+				pointer-events: none,
+				z-index: 1,
+			),
+			first-child: (
+				after: (
+					box-shadow: inset 0.2rem 0 0 0 rgba($primary, 0.25),
+					content: '',
+					display: block,
+					position: absolute,
+					pointer-events: none,
+					top: $table-border-width,
+					bottom: $table-border-width,
+					left: math-sign($table-border-width),
+					z-index: 1,
+					width: 0.25rem,
+				),
+			),
+			last-child: (
+				after: (
+					box-shadow: inset -0.2rem 0 0 0 rgba($primary, 0.25),
+					content: '',
+					display: block,
+					position: absolute,
+					pointer-events: none,
+					top: $table-border-width,
+					bottom: $table-border-width,
+					right: math-sign($table-border-width),
+					z-index: 1,
+					width: 0.25rem,
+				),
+			),
+		),
+	),
+	$c-tr-table-focus
+);
+
+$c-td-table-focus: () !default;
+$c-td-table-focus: map-deep-merge(
+	(
+		box-shadow: clay-enable-shadows($component-focus-inset-box-shadow),
+	),
+	$c-td-table-focus
 );
 
 // .table-bordered
@@ -569,7 +598,6 @@ $table-list-head-link: () !default;
 $c-table-list-thead: () !default;
 $c-table-list-thead: map-merge(
 	(
-		background-color: $white,
 		border-top-left-radius:
 			clay-border-radius-inner(
 				$table-list-border-radius,
@@ -589,7 +617,6 @@ $c-table-list-thead: map-merge(
 $c-table-list-tbody: () !default;
 $c-table-list-tbody: map-merge(
 	(
-		background-color: $white,
 		border-bottom-left-radius:
 			clay-border-radius-inner(
 				$table-list-border-radius,
@@ -607,12 +634,6 @@ $c-table-list-tbody: map-merge(
 // Table List Tfoot
 
 $c-table-list-tfoot: () !default;
-$c-table-list-tfoot: map-merge(
-	(
-		background-color: $white,
-	),
-	$c-table-list-tfoot
-);
 
 // .table.table-list.table-bordered th, .table.table-list.table-bordered td
 
@@ -709,9 +730,6 @@ $table-list-action-link: map-deep-merge(
 
 // .table-list
 
-// thead, tbody, tfoot: Chrome 87 rendering issue. See https://github.com/liferay/clay/issues/3847.
-// thead table-cell, tbody table-cell, tfoot table-cell: Webkit (Safari 11) rendering issue with responsive-tables. See https://github.com/liferay/clay/issues/950
-
 $c-table-list: () !default;
 $c-table-list: map-merge(
 	(
@@ -729,7 +747,6 @@ $c-table-list: map-merge(
 				$c-table-list-thead,
 				(
 					table-cell: (
-						background-color: $table-list-head-bg,
 						border-bottom-width: 0,
 						font-size: $table-list-head-font-size,
 						font-weight: $table-list-head-font-weight,
@@ -745,8 +762,6 @@ $c-table-list: map-merge(
 				$c-table-list-tbody,
 				(
 					table-cell: (
-						background-color:
-							map-get($c-table-list-tbody, background-color),
 						vertical-align: middle,
 					),
 				)
@@ -756,8 +771,6 @@ $c-table-list: map-merge(
 				$c-table-list-tfoot,
 				(
 					table-cell: (
-						background-color:
-							map-get($c-table-list-tfoot, background-color),
 						vertical-align: middle,
 					),
 				)
@@ -773,9 +786,6 @@ $c-table-list: map-merge(
 		),
 		table-active: (
 			background-color: $table-list-active-bg,
-			table-cell: (
-				background-color: $table-list-active-bg,
-			),
 			quick-action-menu: (
 				background-color: $table-list-quick-action-menu-active-bg,
 			),
@@ -784,8 +794,6 @@ $c-table-list: map-merge(
 			background-color: $table-list-disabled-bg,
 			color: $table-list-disabled-color,
 			table-cell: (
-				background-color: $table-list-disabled-bg,
-				color: $table-list-disabled-color,
 				href: (
 					color: $table-list-disabled-color,
 					pointer-events: $table-list-disabled-pointer-events,
@@ -860,9 +868,6 @@ $c-table-list-table-hover: map-deep-merge(
 			tr: (
 				hover: (
 					background-color: $table-list-hover-bg,
-					table-cell: (
-						background-color: $table-list-hover-bg,
-					),
 					quick-action-menu: (
 						background-color: $table-list-quick-action-menu-hover-bg,
 					),
@@ -872,9 +877,6 @@ $c-table-list-table-hover: map-deep-merge(
 		table-active: (
 			hover: (
 				background-color: $table-list-active-bg,
-				table-cell: (
-					background-color: $table-list-active-bg,
-				),
 				quick-action-menu: (
 					background-color: $table-list-quick-action-menu-hover-bg,
 				),
@@ -884,9 +886,6 @@ $c-table-list-table-hover: map-deep-merge(
 			background-color: $table-list-disabled-bg,
 			hover: (
 				background-color: $table-list-disabled-bg,
-				table-cell: (
-					background-color: $table-list-disabled-bg,
-				),
 			),
 		),
 	),

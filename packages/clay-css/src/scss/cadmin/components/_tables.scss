@@ -75,6 +75,58 @@ caption {
 	@include clay-table-variant($cadmin-c-table-hover);
 }
 
+// Table Focus
+
+tr.table-focus {
+	@include clay-css($cadmin-c-tr-table-focus);
+
+	td {
+		$_td: setter(map-get($cadmin-c-tr-table-focus, td), ());
+
+		@include clay-css($_td);
+
+		&::before {
+			@include clay-css(map-get($_td, before));
+		}
+
+		&::after {
+			@include clay-css(map-get($_td, after));
+		}
+
+		&:first-child {
+			$_first-child: setter(map-get($_td, first-child), ());
+
+			@include clay-css($_first-child);
+
+			&::before {
+				@include clay-css(map-get($_first-child, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($_first-child, after));
+			}
+		}
+
+		&:last-child {
+			$_last-child: setter(map-get($_td, last-child), ());
+
+			@include clay-css($_last-child);
+
+			&::before {
+				@include clay-css(map-get($_last-child, before));
+			}
+
+			&::after {
+				@include clay-css(map-get($_last-child, after));
+			}
+		}
+	}
+}
+
+td.table-focus {
+	@include clay-css($cadmin-c-td-table-focus);
+}
+
 // Table Row Backgrounds
 
 .table-striped {
