@@ -466,10 +466,85 @@ $cadmin-badge-palette: map-deep-merge(
 		danger: $cadmin-badge-danger,
 		light: $cadmin-badge-light,
 		dark: $cadmin-badge-dark,
-		badge-beta: (
-			background-color: $cadmin-light-l1,
+		'.badge-translucent.badge-primary': (
+			background-color: rgba($cadmin-primary-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-primary-d1,
+		),
+		'.badge-translucent.badge-info, .badge-beta': (
+			background-color: rgba($cadmin-info-d1, 0.04),
+			border-color: transparent,
 			color: $cadmin-info-d1,
-			text-transform: uppercase,
+		),
+		'.badge-translucent.badge-success': (
+			background-color: rgba($cadmin-success-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-success-d1,
+		),
+		'.badge-translucent.badge-warning': (
+			background-color: rgba($cadmin-warning-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-warning-d1,
+		),
+		'.badge-translucent.badge-danger': (
+			background-color: rgba($cadmin-danger-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-danger-d1,
+		),
+		'%clay-dark-badge-translucent-primary': (
+			background-color: rgba($cadmin-primary-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-primary-l1,
+		),
+		'.clay-dark .badge-translucent.badge-primary': (
+			extend: '%clay-dark-badge-translucent-primary',
+		),
+		'.clay-dark.badge-translucent.badge-primary': (
+			extend: '%clay-dark-badge-translucent-primary',
+		),
+		'%clay-dark-badge-translucent-info': (
+			background-color: rgba($cadmin-info-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-info-l1,
+		),
+		'.clay-dark .badge-translucent.badge-info, .badge-beta-dark': (
+			extend: '%clay-dark-badge-translucent-info',
+		),
+		'.clay-dark.badge-translucent.badge-info': (
+			extend: '%clay-dark-badge-translucent-info',
+		),
+		'%clay-dark-badge-translucent-success': (
+			background-color: rgba($cadmin-success-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-success-l1,
+		),
+		'.clay-dark .badge-translucent.badge-success': (
+			extend: '%clay-dark-badge-translucent-success',
+		),
+		'.clay-dark.badge-translucent.badge-success': (
+			extend: '%clay-dark-badge-translucent-success',
+		),
+		'%clay-dark-badge-translucent-warning': (
+			background-color: rgba($cadmin-warning-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-warning-l1,
+		),
+		'.clay-dark .badge-translucent.badge-warning': (
+			extend: '%clay-dark-badge-translucent-warning',
+		),
+		'.clay-dark.badge-translucent.badge-warning': (
+			extend: '%clay-dark-badge-translucent-warning',
+		),
+		'%clay-dark-badge-translucent-danger': (
+			background-color: rgba($cadmin-danger-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-danger-l1,
+		),
+		'.clay-dark .badge-translucent.badge-danger': (
+			extend: '%clay-dark-badge-translucent-danger',
+		),
+		'.clay-dark.badge-translucent.badge-danger': (
+			extend: '%clay-dark-badge-translucent-danger',
 		),
 	),
 	$cadmin-badge-palette

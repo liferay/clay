@@ -68,12 +68,7 @@
 		$selector: if(
 			index($deprecated-keys, '#{$color}') != null,
 			str-insert($color, '.badge-', 1),
-			if
-				(
-					starts-with($color, 'badge'),
-					str-insert($color, '.', 1),
-					$color
-				)
+			if(starts-with($color, 'badge'), str-insert($color, '.', 1), $color)
 		);
 
 		@if (starts-with($color, '%') or map-get($value, extend)) {

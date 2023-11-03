@@ -721,6 +721,210 @@ $cadmin-btn-palette: map-deep-merge(
 				color: $cadmin-info-d1,
 			),
 		),
+		'.btn-translucent': (
+			extend: '%clay-btn-xs',
+			border-radius: clay-enable-rounded($cadmin-rounded-pill),
+		),
+		'.btn-translucent.btn-primary': (
+			background-color: rgba($cadmin-primary-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-primary-d1,
+			hover: (
+				background-color: rgba($cadmin-primary-d1, 0.06),
+				color: $cadmin-primary-d1,
+			),
+			focus: (
+				background-color: rgba($cadmin-primary-d1, 0.06),
+				color: $cadmin-primary-d1,
+			),
+			active: (
+				background-color: rgba($cadmin-primary-d1, 0.08),
+				color: $cadmin-primary-d1,
+			),
+		),
+		'.btn-translucent.btn-info, .btn-beta': (
+			background-color: rgba($cadmin-info-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-info-d1,
+			hover: (
+				background-color: rgba($cadmin-info-d1, 0.06),
+				color: $cadmin-info-d1,
+			),
+			focus: (
+				background-color: rgba($cadmin-info-d1, 0.06),
+				color: $cadmin-info-d1,
+			),
+			active: (
+				background-color: rgba($cadmin-info-d1, 0.08),
+				color: $cadmin-info-d1,
+			),
+		),
+		'.btn-translucent.btn-success': (
+			background-color: rgba($cadmin-success-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-success-d1,
+			hover: (
+				background-color: rgba($cadmin-success-d1, 0.06),
+				color: $cadmin-success-d1,
+			),
+			focus: (
+				background-color: rgba($cadmin-success-d1, 0.06),
+				color: $cadmin-success-d1,
+			),
+			active: (
+				background-color: rgba($cadmin-success-d1, 0.08),
+				color: $cadmin-success-d1,
+			),
+		),
+		'.btn-translucent.btn-warning': (
+			background-color: rgba($cadmin-warning-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-warning-d1,
+			hover: (
+				background-color: rgba($cadmin-warning-d1, 0.06),
+				color: $cadmin-warning-d1,
+			),
+			focus: (
+				background-color: rgba($cadmin-warning-d1, 0.06),
+				color: $cadmin-warning-d1,
+			),
+			active: (
+				background-color: rgba($cadmin-warning-d1, 0.08),
+				color: $cadmin-warning-d1,
+			),
+		),
+		'.btn-translucent.btn-danger': (
+			background-color: rgba($cadmin-danger-d1, 0.04),
+			border-color: transparent,
+			color: $cadmin-danger-d1,
+			hover: (
+				background-color: rgba($cadmin-danger-d1, 0.06),
+				color: $cadmin-danger-d1,
+			),
+			focus: (
+				background-color: rgba($cadmin-danger-d1, 0.06),
+				color: $cadmin-danger-d1,
+			),
+			active: (
+				background-color: rgba($cadmin-danger-d1, 0.08),
+				color: $cadmin-danger-d1,
+			),
+		),
+		'%clay-dark-btn-translucent-primary': (
+			background-color: rgba($cadmin-primary-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-primary-l1,
+			hover: (
+				background-color: rgba($cadmin-primary-l2, 0.06),
+				color: $cadmin-primary-l1,
+			),
+			focus: (
+				background-color: rgba($cadmin-primary-l2, 0.06),
+				color: $cadmin-primary-l1,
+			),
+			active: (
+				background-color: rgba($cadmin-primary-l2, 0.08),
+				color: $cadmin-primary-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-primary': (
+			extend: '%clay-dark-btn-translucent-primary',
+		),
+		'.clay-dark.btn-translucent.btn-primary': (
+			extend: '%clay-dark-btn-translucent-primary',
+		),
+		'%clay-dark-btn-translucent-info': (
+			background-color: rgba($cadmin-info-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-info-l1,
+			hover: (
+				background-color: rgba($cadmin-info-l2, 0.06),
+				color: $cadmin-info-l1,
+			),
+			focus: (
+				background-color: rgba($cadmin-info-l2, 0.06),
+				color: $cadmin-info-l1,
+			),
+			active: (
+				background-color: rgba($cadmin-info-l2, 0.08),
+				color: $cadmin-info-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-info, .btn-beta-dark': (
+			extend: '%clay-dark-btn-translucent-info',
+		),
+		'.clay-dark.btn-translucent.btn-info': (
+			extend: '%clay-dark-btn-translucent-info',
+		),
+		'%clay-dark-btn-translucent-success': (
+			background-color: rgba($cadmin-success-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-success-l1,
+			hover: (
+				background-color: rgba($cadmin-success-l2, 0.06),
+				color: $cadmin-success-l1,
+			),
+			focus: (
+				background-color: rgba($cadmin-success-l2, 0.06),
+				color: $cadmin-success-l1,
+			),
+			active: (
+				background-color: rgba($cadmin-success-l2, 0.08),
+				color: $cadmin-success-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-success': (
+			extend: '%clay-dark-btn-translucent-success',
+		),
+		'.clay-dark.btn-translucent.btn-success': (
+			extend: '%clay-dark-btn-translucent-success',
+		),
+		'%clay-dark-btn-translucent-warning': (
+			background-color: rgba($cadmin-warning-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-warning-l1,
+			hover: (
+				background-color: rgba($cadmin-warning-l2, 0.06),
+				color: $cadmin-warning-l1,
+			),
+			focus: (
+				background-color: rgba($cadmin-warning-l2, 0.06),
+				color: $cadmin-warning-l1,
+			),
+			active: (
+				background-color: rgba($cadmin-warning-l2, 0.08),
+				color: $cadmin-warning-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-warning': (
+			extend: '%clay-dark-btn-translucent-warning',
+		),
+		'.clay-dark.btn-translucent.btn-warning': (
+			extend: '%clay-dark-btn-translucent-warning',
+		),
+		'%clay-dark-btn-translucent-danger': (
+			background-color: rgba($cadmin-danger-l2, 0.04),
+			border-color: transparent,
+			color: $cadmin-danger-l1,
+			hover: (
+				background-color: rgba($cadmin-danger-l2, 0.06),
+				color: $cadmin-danger-l1,
+			),
+			focus: (
+				background-color: rgba($cadmin-danger-l2, 0.06),
+				color: $cadmin-danger-l1,
+			),
+			active: (
+				background-color: rgba($cadmin-danger-l2, 0.08),
+				color: $cadmin-danger-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-danger': (
+			extend: '%clay-dark-btn-translucent-danger',
+		),
+		'.clay-dark.btn-translucent.btn-danger': (
+			extend: '%clay-dark-btn-translucent-danger',
+		),
 	),
 	$cadmin-btn-palette
 );

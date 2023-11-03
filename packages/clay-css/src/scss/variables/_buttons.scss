@@ -894,24 +894,139 @@ $btn-palette: map-deep-merge(
 		light: $btn-light,
 		dark: $btn-dark,
 		link: $btn-link,
-		btn-beta: (
+		'.btn-translucent': (
+			extend: '%clay-btn-xs',
+			border-radius: $rounded-pill,
+		),
+		'.btn-translucent.btn-primary': (
+			background-color: rgba($primary-d1, 0.04),
+			border-color: transparent,
+			color: $primary-d1,
+			hover: (
+				background-color: rgba($primary-d1, 0.06),
+				color: $primary-d1,
+			),
+			focus: (
+				background-color: rgba($primary-d1, 0.06),
+				color: $primary-d1,
+			),
+			active: (
+				background-color: rgba($primary-d1, 0.08),
+				color: $primary-d1,
+			),
+		),
+		'.btn-translucent.btn-secondary': (
+			background-color: rgba($dark-l2, 0.04),
+			border-color: transparent,
+			color: $secondary,
+			hover: (
+				background-color: rgba($dark-l2, 0.06),
+				color: $secondary,
+			),
+			focus: (
+				background-color: rgba($dark-l2, 0.06),
+				color: $secondary,
+			),
+			active: (
+				background-color: rgba($dark-l2, 0.08),
+				color: $secondary,
+			),
+		),
+		'.btn-translucent.btn-info, .btn-beta': (
 			background-color: rgba($info-d1, 0.04),
+			border-color: transparent,
 			color: $info-d1,
-			text-transform: uppercase,
 			hover: (
 				background-color: rgba($info-d1, 0.06),
 				color: $info-d1,
 			),
 			focus: (
 				background-color: rgba($info-d1, 0.06),
+				color: $info-d1,
+			),
+			active: (
+				background-color: rgba($info-d1, 0.08),
 				color: $info-d1,
 			),
 		),
-		btn-beta-dark: (
+		'.btn-translucent.btn-success': (
+			background-color: rgba($success-d1, 0.04),
+			border-color: transparent,
+			color: $success-d1,
+			hover: (
+				background-color: rgba($success-d1, 0.06),
+				color: $success-d1,
+			),
+			focus: (
+				background-color: rgba($success-d1, 0.06),
+				color: $success-d1,
+			),
+			active: (
+				background-color: rgba($success-d1, 0.08),
+				color: $success-d1,
+			),
+		),
+		'.btn-translucent.btn-warning': (
+			background-color: rgba($warning-d1, 0.04),
+			border-color: transparent,
+			color: $warning-d1,
+			hover: (
+				background-color: rgba($warning-d1, 0.06),
+				color: $warning-d1,
+			),
+			focus: (
+				background-color: rgba($warning-d1, 0.06),
+				color: $warning-d1,
+			),
+			active: (
+				background-color: rgba($warning-d1, 0.08),
+				color: $warning-d1,
+			),
+		),
+		'.btn-translucent.btn-danger': (
+			background-color: rgba($danger-d1, 0.04),
+			border-color: transparent,
+			color: $danger-d1,
+			hover: (
+				background-color: rgba($danger-d1, 0.06),
+				color: $danger-d1,
+			),
+			focus: (
+				background-color: rgba($danger-d1, 0.06),
+				color: $danger-d1,
+			),
+			active: (
+				background-color: rgba($danger-d1, 0.08),
+				color: $danger-d1,
+			),
+		),
+		'%clay-dark-btn-translucent-primary': (
+			background-color: rgba($primary-l2, 0.04),
+			border-color: transparent,
+			color: $primary-l1,
+			hover: (
+				background-color: rgba($primary-l2, 0.06),
+				color: $primary-l1,
+			),
+			focus: (
+				background-color: rgba($primary-l2, 0.06),
+				color: $primary-l1,
+			),
+			active: (
+				background-color: rgba($primary-l2, 0.08),
+				color: $primary-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-primary': (
+			extend: '%clay-dark-btn-translucent-primary',
+		),
+		'.clay-dark.btn-translucent.btn-primary': (
+			extend: '%clay-dark-btn-translucent-primary',
+		),
+		'%clay-dark-btn-translucent-info': (
 			background-color: rgba($info-l2, 0.04),
 			border-color: transparent,
 			color: $info-l1,
-			text-transform: uppercase,
 			hover: (
 				background-color: rgba($info-l2, 0.06),
 				color: $info-l1,
@@ -920,6 +1035,85 @@ $btn-palette: map-deep-merge(
 				background-color: rgba($info-l2, 0.06),
 				color: $info-l1,
 			),
+			active: (
+				background-color: rgba($info-l2, 0.08),
+				color: $info-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-info, .btn-beta-dark': (
+			extend: '%clay-dark-btn-translucent-info',
+		),
+		'.clay-dark.btn-translucent.btn-info': (
+			extend: '%clay-dark-btn-translucent-info',
+		),
+		'%clay-dark-btn-translucent-success': (
+			background-color: rgba($success-l2, 0.04),
+			border-color: transparent,
+			color: $success-l1,
+			hover: (
+				background-color: rgba($success-l2, 0.06),
+				color: $success-l1,
+			),
+			focus: (
+				background-color: rgba($success-l2, 0.06),
+				color: $success-l1,
+			),
+			active: (
+				background-color: rgba($success-l2, 0.08),
+				color: $success-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-success': (
+			extend: '%clay-dark-btn-translucent-success',
+		),
+		'.clay-dark.btn-translucent.btn-success': (
+			extend: '%clay-dark-btn-translucent-success',
+		),
+		'%clay-dark-btn-translucent-warning': (
+			background-color: rgba($warning-l2, 0.04),
+			border-color: transparent,
+			color: $warning-l1,
+			hover: (
+				background-color: rgba($warning-l2, 0.06),
+				color: $warning-l1,
+			),
+			focus: (
+				background-color: rgba($warning-l2, 0.06),
+				color: $warning-l1,
+			),
+			active: (
+				background-color: rgba($warning-l2, 0.08),
+				color: $warning-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-warning': (
+			extend: '%clay-dark-btn-translucent-warning',
+		),
+		'.clay-dark.btn-translucent.btn-warning': (
+			extend: '%clay-dark-btn-translucent-warning',
+		),
+		'%clay-dark-btn-translucent-danger': (
+			background-color: rgba($danger-l2, 0.04),
+			border-color: transparent,
+			color: $danger-l1,
+			hover: (
+				background-color: rgba($danger-l2, 0.06),
+				color: $danger-l1,
+			),
+			focus: (
+				background-color: rgba($danger-l2, 0.06),
+				color: $danger-l1,
+			),
+			active: (
+				background-color: rgba($danger-l2, 0.08),
+				color: $danger-l1,
+			),
+		),
+		'.clay-dark .btn-translucent.btn-danger': (
+			extend: '%clay-dark-btn-translucent-danger',
+		),
+		'.clay-dark.btn-translucent.btn-danger': (
+			extend: '%clay-dark-btn-translucent-danger',
 		),
 	),
 	$btn-palette
