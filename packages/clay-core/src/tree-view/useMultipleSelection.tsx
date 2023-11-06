@@ -4,7 +4,7 @@
  */
 
 import {useControlledState} from '@clayui/shared';
-import {Key, useCallback, useMemo, useRef} from 'react';
+import {Key, useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {getKey} from '../collection';
 import {ITreeProps, createImmutableTree} from './useTree';
@@ -139,6 +139,10 @@ export function useMultipleSelection<T extends Record<string, any>>(
 						key
 					) as LayoutInfo;
 
+					if (!keyMap) {
+						return false;
+					}
+
 					const children = [...keyMap.children];
 
 					const unselected = children.some(
@@ -164,6 +168,41 @@ export function useMultipleSelection<T extends Record<string, any>>(
 			);
 		}
 	}, [selectedKeys]);
+
+	/**
+	 * This useEffect causes useMemo to be called every time the items change which can cause performance issues. We cannot change the useMemo because it is needed in other treeview cases. This should be improved in the future.
+	 */
+
+	useEffect(() => {
+		if (props.selectionMode === 'multiple-recursive' && !isUncontrolled) {
+			const newSelectedKeys = new Set(selectedKeys);
+
+			props.layoutKeys.current.forEach((keyMap, key) => {
+				if (!keyMap) {
+					return false;
+				}
+
+				const children = [...keyMap.children];
+
+				if (!children.length) {
+					return;
+				}
+
+				if (children.every((key) => selectedKeys.has(key))) {
+					newSelectedKeys.add(key);
+					indeterminateKeys.current.delete(key);
+				} else if (children.some((key) => selectedKeys.has(key))) {
+					newSelectedKeys.delete(key);
+					indeterminateKeys.current.add(key);
+				} else {
+					newSelectedKeys.delete(key);
+					indeterminateKeys.current.delete(key);
+				}
+			});
+
+			setSelectionKeys(newSelectedKeys);
+		}
+	}, [props.items]);
 
 	const toggleParentSelection = useCallback(
 		(
