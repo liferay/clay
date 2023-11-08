@@ -31,22 +31,10 @@ $table-head-link: map-deep-merge(
 // Table Body
 
 $c-table-tbody: () !default;
-$c-table-tbody: map-merge(
-	(
-		background-color: $white,
-	),
-	$c-table-tbody
-);
 
 // Table Footer
 
 $c-table-tfoot: () !default;
-$c-table-tfoot: map-merge(
-	(
-		background-color: $table-bg,
-	),
-	$c-table-tfoot
-);
 
 $table-caption-color: $gray-900 !default;
 
@@ -132,6 +120,41 @@ $table-link: map-deep-merge(
 		),
 	),
 	$table-link
+);
+
+// .table-focus
+
+$c-tr-table-focus: () !default;
+$c-tr-table-focus: map-deep-merge(
+	(
+		td: (
+			before: (
+				box-shadow: (
+					inset 0 0.125rem 0 0 $primary-l0,
+					inset 0 0.25rem 0 0 $white,
+					inset 0 -0.125rem 0 0 $primary-l0,
+					inset 0 -0.25rem 0 0 $white,
+				),
+			),
+			first-child: (
+				after: (
+					box-shadow: (
+						inset 0.125rem 0 0 0 $primary-l0,
+						inset 0.25rem 0 0 0 $white,
+					),
+				),
+			),
+			last-child: (
+				after: (
+					box-shadow: (
+						inset -0.125rem 0 0 0 $primary-l0,
+						inset -0.25rem 0 0 0 $white,
+					),
+				),
+			),
+		),
+	),
+	$c-tr-table-focus
 );
 
 // Table List
