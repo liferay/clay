@@ -57,7 +57,7 @@ const tableCode = `const TableExample = () => {
 				{(column) => <Cell key={column.id} sortable>{column.name}</Cell>}
 			</Head>
 
-			<Body items={items}>
+			<Body defaultItems={items}>
 				{(row) => (
 					<Row>
             <Cell><Text size={3} weight="semi-bold">{row['name']}</Text></Cell>
@@ -104,7 +104,7 @@ const tableTreeCode = `const TableExample = () => {
       </Head>
 
       <Body
-        items={[
+        defaultItems={[
           {
             children: [{id: 10,name: 'WoW',type: 'MMORPG'}],
             id: 1,
