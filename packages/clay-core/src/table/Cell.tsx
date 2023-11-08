@@ -6,6 +6,7 @@
 import Button from '@clayui/button';
 import Icon from '@clayui/icon';
 import Layout from '@clayui/layout';
+import LoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
@@ -99,6 +100,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			expandedKeys,
 			messages,
 			onExpandedChange,
+			onLoadMore,
 			onSortChange,
 			sort,
 			sortDescriptionId,
@@ -109,7 +111,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			id: keyValue!,
 		});
 		const scope = useScope();
-		const {expandable, key, level} = useRow();
+		const {expandable, isLoading, key, level, loadMore} = useRow();
 
 		const isHead = scope === Scope.Head;
 		const As = isHead ? 'th' : 'td';
@@ -212,22 +214,29 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					<span className="text-truncate-inline">
 						<span className="text-truncate">{children}</span>
 					</span>
-				) : treegrid && index === 0 ? (
+				) : treegrid && index === 0 && !isHead ? (
 					<Layout.ContentRow
 						style={{
 							paddingLeft:
-								(level - (expandable ? 1 : 0)) * 28 -
-								(expandable ? 4 : 0),
+								(level - (expandable || onLoadMore ? 1 : 0)) *
+									28 -
+								(expandable || onLoadMore ? 4 : 0),
 						}}
 					>
-						{expandable && (
+						{(expandable || onLoadMore) && !isLoading && (
 							<Layout.ContentCol className="autofit-col-toggle">
 								<Button
 									aria-label={messages['expandable']}
 									borderless
 									displayType="secondary"
 									monospaced
-									onClick={() => toggle(key)}
+									onClick={() => {
+										if (expandable) {
+											toggle(key);
+										} else {
+											loadMore();
+										}
+									}}
 									size="xs"
 									tabIndex={-1}
 								>
@@ -239,6 +248,14 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 										}
 									/>
 								</Button>
+							</Layout.ContentCol>
+						)}
+
+						{isLoading && (
+							<Layout.ContentCol className="autofit-col-toggle">
+								<div className="btn-monospaced btn-xs">
+									<LoadingIndicator size="sm" />
+								</div>
 							</Layout.ContentCol>
 						)}
 

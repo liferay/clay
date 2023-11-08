@@ -28,6 +28,43 @@ const rows = [
 	{id: 2, name: 'Program Files', type: 'File folder'},
 ];
 
+const items = [
+	{id: 1, name: 'Folder A', type: 'Folder'},
+	{
+		children: [
+			{
+				children: [
+					{id: 5, name: 'Folder X', type: 'Folder'},
+					{id: 6, name: 'Folder Z', type: 'Folder'},
+					{
+						id: 7,
+						name: 'Text Document A',
+						type: 'Text',
+					},
+					{
+						id: 8,
+						name: 'Text Document B',
+						type: 'Image',
+					},
+					{
+						id: 9,
+						name: 'Text Document C',
+						type: 'Vector',
+					},
+				],
+				id: 3,
+				name: 'Folder 1',
+				type: 'Folder',
+			},
+			{id: 4, name: 'Image Document', type: 'Image'},
+		],
+		id: 2,
+		name: 'Folder B',
+		type: 'Folder',
+	},
+	{id: 10, name: 'Folder C', type: 'Folder'},
+];
+
 export const Dynamic = () => {
 	return (
 		<Table>
@@ -70,7 +107,7 @@ export const DynamicCells = () => {
 				{(column) => <Cell key={column.id}>{column.name}</Cell>}
 			</Head>
 
-			<Body items={rows2}>
+			<Body defaultItems={rows2}>
 				{(row) => (
 					<Row items={columns2}>
 						{(column) => <Cell>{row[column.id]}</Cell>}
@@ -128,7 +165,7 @@ export const Sorting = () => {
 				</Cell>
 			</Head>
 
-			<Body items={items}>
+			<Body defaultItems={items}>
 				{(row) => (
 					<Row>
 						<Cell>{row['name']}</Cell>
@@ -179,44 +216,7 @@ export const Treegrid = () => {
 				)}
 			</Head>
 
-			<Body
-				items={[
-					{id: 1, name: 'Folder A', type: 'Folder'},
-					{
-						children: [
-							{
-								children: [
-									{id: 5, name: 'Folder X', type: 'Folder'},
-									{id: 6, name: 'Folder Z', type: 'Folder'},
-									{
-										id: 7,
-										name: 'Text Document A',
-										type: 'Text',
-									},
-									{
-										id: 8,
-										name: 'Text Document B',
-										type: 'Image',
-									},
-									{
-										id: 9,
-										name: 'Text Document C',
-										type: 'Vector',
-									},
-								],
-								id: 3,
-								name: 'Folder 1',
-								type: 'Folder',
-							},
-							{id: 4, name: 'Image Document', type: 'Image'},
-						],
-						id: 2,
-						name: 'Folder B',
-						type: 'Folder',
-					},
-					{id: 10, name: 'Folder C', type: 'Folder'},
-				]}
-			>
+			<Body defaultItems={items}>
 				{(row) => (
 					<Row>
 						<Cell key={`${row.id}:name`}>
@@ -232,3 +232,52 @@ export const Treegrid = () => {
 		</Table>
 	);
 };
+
+export const AsyncLoad = () => (
+	<Table
+		aria-label="File Explorer"
+		nestedKey="children"
+		onLoadMore={async (item: any) => {
+			// Delay to simulate loading of new data
+			await new Promise((resolve) => {
+				setTimeout(() => resolve(''), 1000);
+			});
+
+			return [
+				{
+					id: Math.random(),
+					name: `${item.name} ${Math.random()}`,
+				},
+				{
+					id: Math.random(),
+					name: `${item.name} ${Math.random()}`,
+				},
+				{
+					id: Math.random(),
+					name: `${item.name} ${Math.random()}`,
+				},
+			];
+		}}
+	>
+		<Head items={columns}>
+			{(column) => (
+				<Cell className="table-cell-minw-300" key={column.id}>
+					{column.name}
+				</Cell>
+			)}
+		</Head>
+
+		<Body defaultItems={items}>
+			{(row) => (
+				<Row>
+					<Cell key={`${row.id}:name`}>
+						<Text size={3} weight="semi-bold">
+							{row['name']}
+						</Text>
+					</Cell>
+					<Cell key={`${row.id}:type`}>{row['type']}</Cell>
+				</Row>
+			)}
+		</Body>
+	</Table>
+);

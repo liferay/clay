@@ -5,12 +5,12 @@
 
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {useFocusWithin} from '../aria';
 import {ChildrenFunction, Collection} from '../collection';
 import {useForwardRef} from '../hooks';
-import {RowContext, useTable} from './context';
+import {RowContext, useBody, useTable} from './context';
 
 type Props<T> = {
 	/**
@@ -66,13 +66,27 @@ type Props<T> = {
 	 * @ignore
 	 */
 	_size?: number;
+
+	/**
+	 * Internal prop.
+	 * @ignore
+	 */
+	_item?: T;
+
+	/**
+	 * Internal prop.
+	 * @ignore
+	 */
+	_loc?: Array<number>;
 } & React.HTMLAttributes<HTMLTableRowElement>;
 
 function RowInner<T extends Record<string, any>>(
 	{
 		_expandable,
 		_index,
+		_item,
 		_level,
+		_loc,
 		_size,
 		children,
 		className,
@@ -84,11 +98,40 @@ function RowInner<T extends Record<string, any>>(
 	}: Props<T>,
 	outRef: React.Ref<HTMLTableRowElement>
 ) {
-	const {expandedKeys, onExpandedChange, treegrid} = useTable();
+	const {expandedKeys, onExpandedChange, onLoadMore, treegrid} = useTable();
+	const {insert} = useBody();
 	const focusWithinProps = useFocusWithin({
 		disabled: !treegrid,
 		id: keyValue!,
 	});
+
+	const [isLoading, setIsLoading] = useState(false);
+
+	const loadMore = useCallback(() => {
+		if (_expandable || !onLoadMore) {
+			return;
+		}
+
+		setIsLoading(true);
+		onLoadMore(_item)
+			.then((items) => {
+				setIsLoading(false);
+				if (!items) {
+					return;
+				}
+
+				if (Array.isArray(items)) {
+					insert([..._loc!, 0], items);
+					const newExpandedKeys = new Set(expandedKeys);
+					newExpandedKeys.add(keyValue!);
+					onExpandedChange(newExpandedKeys);
+				}
+			})
+			.catch((error) => {
+				setIsLoading(false);
+				console.error(error);
+			});
+	}, [insert, keyValue, _expandable, onLoadMore]);
 
 	const ref = useForwardRef(outRef);
 
@@ -97,7 +140,9 @@ function RowInner<T extends Record<string, any>>(
 			{...otherProps}
 			{...focusWithinProps}
 			aria-expanded={
-				_expandable ? expandedKeys.has(keyValue!) : undefined
+				_expandable || onLoadMore
+					? expandedKeys.has(keyValue!)
+					: undefined
 			}
 			aria-level={treegrid ? _level : undefined}
 			aria-posinset={treegrid ? _index! + 1 : undefined}
@@ -114,7 +159,8 @@ function RowInner<T extends Record<string, any>>(
 			onKeyDown={(event) => {
 				if (
 					document.activeElement !== ref.current ||
-					event.defaultPrevented
+					event.defaultPrevented ||
+					(!_expandable && !onLoadMore)
 				) {
 					return;
 				}
@@ -129,10 +175,14 @@ function RowInner<T extends Record<string, any>>(
 						break;
 					}
 					case Keys.Right: {
-						if (!expandedKeys.has(keyValue!)) {
-							const newExpandedKeys = new Set(expandedKeys);
-							newExpandedKeys.add(keyValue!);
-							onExpandedChange(newExpandedKeys);
+						if (onLoadMore && !_expandable) {
+							loadMore();
+						} else {
+							if (!expandedKeys.has(keyValue!)) {
+								const newExpandedKeys = new Set(expandedKeys);
+								newExpandedKeys.add(keyValue!);
+								onExpandedChange(newExpandedKeys);
+							}
 						}
 						break;
 					}
@@ -146,8 +196,10 @@ function RowInner<T extends Record<string, any>>(
 			<RowContext.Provider
 				value={{
 					expandable: _expandable,
+					isLoading,
 					key: keyValue!,
 					level: _level!,
+					loadMore,
 				}}
 			>
 				<Collection items={items}>{children}</Collection>
