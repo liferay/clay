@@ -9,7 +9,7 @@ import Layout from '@clayui/layout';
 import LoadingIndicator from '@clayui/loading-indicator';
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {useFocusWithin} from '../aria';
 import {Scope, useScope} from './ScopeContext';
@@ -105,9 +105,13 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			sortDescriptionId,
 			treegrid,
 		} = useTable();
+
+		const [isFocused, setIsFocused] = useState(false);
+
 		const focusWithinProps = useFocusWithin({
 			disabled: !treegrid,
 			id: keyValue!,
+			onFocusChange: setIsFocused,
 		});
 		const scope = useScope();
 		const {expandable, isLoading, key, lazy, level, loadMore} = useRow();
@@ -153,6 +157,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					[`table-column-text-${textAlign}`]: textAlign,
 					[`text-${align}`]: align,
 					'table-cell-ws-nowrap': !wrap,
+					'table-focus': focusWithinProps.tabIndex === 0 && isFocused,
 					'table-head-title': isHead,
 				})}
 				data-id={

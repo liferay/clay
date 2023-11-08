@@ -75,9 +75,14 @@ export function FocusWithinProvider<T extends HTMLElement>({
 type FocusWithinProps = {
 	id: React.Key;
 	disabled: boolean;
+	onFocusChange?: (isFocused: boolean) => void;
 };
 
-export function useFocusWithin({disabled, id}: FocusWithinProps) {
+export function useFocusWithin({
+	disabled,
+	id,
+	onFocusChange: onFocusChanged,
+}: FocusWithinProps) {
 	const {focusId, onFocusChange} = useContext(FocusContext);
 
 	const onFocus = useCallback(
@@ -85,6 +90,19 @@ export function useFocusWithin({disabled, id}: FocusWithinProps) {
 			if (focusId !== id) {
 				event.stopPropagation();
 				onFocusChange(id);
+
+				if (onFocusChanged) {
+					onFocusChanged(true);
+				}
+			}
+		},
+		[focusId]
+	);
+
+	const onBlur = useCallback(
+		function onFocusInner() {
+			if (onFocusChanged) {
+				onFocusChanged(false);
 			}
 		},
 		[focusId]
@@ -98,8 +116,9 @@ export function useFocusWithin({disabled, id}: FocusWithinProps) {
 		}
 
 		return {
+			onBlur,
 			onFocus,
 			tabIndex: focusId === id ? 0 : -1,
 		};
-	}, [focusId, onFocus]);
+	}, [focusId, onFocus, onBlur]);
 }
