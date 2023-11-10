@@ -23,4 +23,36 @@ describe('ClayBadge', () => {
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
+
+	it('renders translucent', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayBadge displayType="info" label="Beta" translucent />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders dark and translucent', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayBadge dark displayType="info" label="Beta" translucent />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders displayType="beta" as info and translucent', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayBadge displayType="beta" label="Beta" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	it('renders displayType="beta-dark" as dark, info and translucent', () => {
+		const testRenderer = TestRenderer.create(
+			<ClayBadge displayType="beta-dark" label="Beta" />
+		);
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
 });
