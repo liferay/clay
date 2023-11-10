@@ -11,7 +11,18 @@ export default {
 	argTypes: {
 		displayType: {
 			control: {type: 'select'},
-			options: ['link', 'primary', 'secondary', 'unstyled'],
+			options: [
+				'link',
+				'primary',
+				'secondary',
+				'success',
+				'info',
+				'warning',
+				'danger',
+				'unstyled',
+				'beta',
+				'beta-dark',
+			],
 		},
 		size: {
 			control: {type: 'select'},
@@ -26,6 +37,7 @@ export const Default = (args: any) => (
 	<ClayButton
 		block={args.block}
 		borderless={args.borderless}
+		dark={args.dark}
 		disabled={args.disabled}
 		displayType={args.displayType}
 		monospaced={args.monospaced}
@@ -33,6 +45,7 @@ export const Default = (args: any) => (
 		rounded={args.rounded}
 		size={args.size}
 		small={args.small}
+		translucent={args.translucent}
 	>
 		{args.children}
 	</ClayButton>
@@ -42,12 +55,14 @@ Default.args = {
 	block: false,
 	borderless: false,
 	children: 'Click Me',
+	dark: false,
 	disabled: false,
 	displayType: 'primary',
 	monospaced: false,
 	outline: false,
 	rounded: false,
 	small: false,
+	translucent: false,
 };
 
 export const Group = (args: any) => (
