@@ -751,7 +751,7 @@ $c-prefers-link-underline: map-deep-merge(
 $c-prefers-letter-spacing: () !default;
 $c-prefers-letter-spacing: map-deep-merge(
 	(
-		'.c-prefers-letter-spacing-1': (
+		'.c-prefers-letter-spacing-1, .c-prefers-letter-spacing-1 *': (
 			letter-spacing: 1px !important,
 		),
 	),
