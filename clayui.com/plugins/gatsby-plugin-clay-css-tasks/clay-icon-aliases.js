@@ -779,6 +779,7 @@ const iconsData = {
 	"transform":                '"editor", "image"',
 	"trash":                    '"bin", "recycle"',
 	"twitter":                  '"deprecated"',
+	"twitter-x":                '"share"',
 	"underline":                '"editor", "style", "text"',
 	"undo":                     '"arrow", "back", "cancel", "control"',
 	"unlock":                   '"access", "login", "open", "security"',
