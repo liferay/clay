@@ -26,7 +26,7 @@ See https://liferay.dev/blogs/-/blogs/how-and-why-to-properly-write-copyright-st
 
 2) The `<svg></svg>` element should only have the attributes `xmlns` and `viewBox`.
 
-3) Remove any `fill` and `id` attributes from the SVG elements.
+3) Remove any `fill` and `id` attributes from the SVG elements, unless it is a language flag. Language flags should have the `fill` attribute.
 
 4) Remove any `<style></style>` tags and the classes / ids that are referenced by it.
 
