@@ -115,7 +115,7 @@ function createFilter<T extends Array<any>>(
 	key: string
 ) {
 	function applyFilter(value: string, tree: T) {
-		tree = tree
+		const filteredTree = tree
 			.map((item) => {
 				const immutableItem = {...item};
 
@@ -126,7 +126,17 @@ function createFilter<T extends Array<any>>(
 					);
 				}
 
-				if (immutableItem[key].includes(value.toLowerCase())) {
+				const matches = immutableItem[key].match(
+					new RegExp(
+						value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+						'i'
+					)
+				);
+
+				if (
+					matches !== null ||
+					Array.isArray(immutableItem[nestedKey])
+				) {
 					return immutableItem;
 				}
 
@@ -134,7 +144,7 @@ function createFilter<T extends Array<any>>(
 			})
 			.filter(Boolean) as T;
 
-		return tree;
+		return filteredTree.length > 0 ? filteredTree : undefined;
 	}
 
 	return {
@@ -1210,6 +1220,64 @@ export const AsyncLoadWithErrorHandling = () => {
 					</ClayAlert>
 				</ClayAlert.ToastContainer>
 			)}
+		</>
+	);
+};
+
+export const SelectionWithFilter = () => {
+	const [selectedKeys, setSelectionChange] = useState<Set<React.Key>>(
+		new Set()
+	);
+
+	const [value, setValue] = useState('');
+	const [items, setItems] = useState(ITEMS_DRIVE);
+
+	const OptionalCheckbox = (props: any) => <Checkbox {...props} />;
+
+	OptionalCheckbox.displayName = 'ClayCheckbox';
+
+	const itemsFiltered = useMemo<any>(() => {
+		if (!value) {
+			return items;
+		}
+
+		const filter = createFilter(items, 'children', 'name');
+
+		return filter.applyFilter(value);
+	}, [items, value]);
+
+	return (
+		<>
+			<Input
+				onChange={(event) => setValue(event.target.value)}
+				placeholder="Search..."
+				value={value}
+			/>
+			<TreeView
+				items={itemsFiltered}
+				onItemsChange={(data) => setItems(data as any)}
+				onSelectionChange={(keys) => setSelectionChange(keys)}
+				selectedKeys={selectedKeys}
+				selectionMode="multiple-recursive"
+				showExpanderOnHover={false}
+			>
+				{(item) => (
+					<TreeView.Item>
+						<TreeView.ItemStack>
+							<OptionalCheckbox />
+							{item.name}
+						</TreeView.ItemStack>
+						<TreeView.Group items={item.children}>
+							{(item) => (
+								<TreeView.Item>
+									<OptionalCheckbox />
+									{item.name}
+								</TreeView.Item>
+							)}
+						</TreeView.Group>
+					</TreeView.Item>
+				)}
+			</TreeView>
 		</>
 	);
 };
