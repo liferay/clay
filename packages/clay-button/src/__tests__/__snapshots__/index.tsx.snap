@@ -101,11 +101,44 @@ exports[`Button renders borderless 1`] = `
 </div>
 `;
 
+exports[`Button renders dark and translucent 1`] = `
+<div>
+  <button
+    class="btn btn-translucent clay-dark btn-info"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
 exports[`Button renders disabled 1`] = `
 <div>
   <button
     class="btn btn-primary"
     disabled=""
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders displayType="beta" as info and translucent 1`] = `
+<div>
+  <button
+    class="btn btn-translucent btn-info"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders displayType="beta-dark" as dark, info and translucent 1`] = `
+<div>
+  <button
+    class="btn btn-translucent clay-dark btn-info"
     type="button"
   >
     Button
@@ -139,6 +172,17 @@ exports[`Button renders small 1`] = `
 <div>
   <button
     class="btn btn-sm btn-primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders translucent 1`] = `
+<div>
+  <button
+    class="btn btn-translucent btn-info"
     type="button"
   >
     Button

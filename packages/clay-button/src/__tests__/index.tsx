@@ -83,6 +83,40 @@ describe('Button', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders translucent', () => {
+		const {container} = render(
+			<Button displayType="info" translucent>
+				Button
+			</Button>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders dark and translucent', () => {
+		const {container} = render(
+			<Button dark displayType="info" translucent>
+				Button
+			</Button>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders displayType="beta" as info and translucent', () => {
+		const {container} = render(<Button displayType="beta">Button</Button>);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders displayType="beta-dark" as dark, info and translucent', () => {
+		const {container} = render(
+			<Button displayType="beta-dark">Button</Button>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('renders with a ButtonGroup', () => {
 		const {container} = render(
 			<Button.Group>

@@ -5,14 +5,22 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/badges/'
 packageNpm: '@clayui/badge'
 ---
 
-import {Badge, BadgeBeta, BadgeBetaDark} from '$packages/clay-badge/docs/index';
+import {
+	Badge,
+	BadgeBeta,
+	BadgeBetaDark,
+	BadgeDark,
+	BadgeTranslucent,
+} from '$packages/clay-badge/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Display Types](#display-types)
--   [Beta](#badge-beta)
-    -   [Dark](#badge-beta-dark)
+-   [Translucent](#badge-translucent)
+-   [Clay Dark](#badge-clay-dark)
+-   [Beta (Deprecated)](#badge-beta)
+    -   [Dark (Deprecated)](#badge-beta-dark)
 
 </div>
 </div>
@@ -26,13 +34,37 @@ For numbers greater than 999, use K to indicate Thousands (5K for 5.231) and M t
 
 We recommend that you review the use cases in the <a href="https://storybook.clayui.com/?path=/story/design-system-components-badge--default">Storybook</a>.
 
-## Beta(#badge-beta)
+## Translucent(#badge-translucent)
+
+The boolean attribute `translucent` renders a badge with an opaque background color optimized for light backgrounds.
+
+<BadgeTranslucent />
+
+## Dark(#badge-clay-dark)
+
+The boolean attribute `dark` renders a badge with an opaque background color optimized for dark backgrounds. It adds the class `clay-dark` to the badge. The class `clay-dark` can be added to the parent element to make badges contained inside render the dark variant. When adding `clay-dark` to the parent element, the `dark` attribute on the badge should be omitted.
+
+<BadgeDark />
+
+## Beta (Deprecated)(#badge-beta)
+
+<div class="clay-site-alert alert alert-warning">
+	The property <code>displayType="beta"</code> has been deprecated in favor of
+	semantic attributes <code>displayType="info"</code> and{' '}
+	<code>translucent</code>.
+</div>
 
 A component to indicate beta features in DXP. The `badge-beta` variant doesn’t have any interaction. It just informs the user. It uses a Badge component with custom visual states.
 
 <BadgeBeta />
 
-## Beta Dark(#badge-beta-dark)
+## Beta Dark (Deprecated)(#badge-beta-dark)
+
+<div class="clay-site-alert alert alert-warning">
+	The property <code>displayType="beta-dark"</code> has been deprecated in
+	favor of semantic attributes <code>dark</code>,{' '}
+	<code>displayType="info"</code> and <code>translucent</code>.
+</div>
 
 `badge-beta-dark` is a dark variant of `badge-beta` to be used with dark backgrounds.
 

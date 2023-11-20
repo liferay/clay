@@ -26,10 +26,15 @@ export default {
 };
 
 export const Default = (args: any) => (
-	<ClayBadge displayType={args.displayType} label={args.label} />
+	<ClayBadge
+		displayType={args.displayType}
+		label={args.label}
+		translucent={args.translucent}
+	/>
 );
 
 Default.args = {
 	displayType: 'primary',
 	label: '100',
+	translucent: false,
 };

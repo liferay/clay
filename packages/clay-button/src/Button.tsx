@@ -39,7 +39,14 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	block?: boolean;
 
 	/**
+	 * Flag to indicate if the button should use the clay-dark variant.
+	 */
+	dark?: boolean;
+
+	/**
 	 * Determines the button variant to use.
+	 * The values `beta` and `beta-dark` are deprecated since v3.100.0 - use
+	 * `translucent` and `dark` instead.
 	 */
 	displayType?: DisplayType;
 
@@ -68,6 +75,11 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	 * @deprecated since v3.72.0 - use `size` instead.
 	 */
 	small?: boolean;
+
+	/**
+	 * Flag to indicate if the button should use the translucent variant.
+	 */
+	translucent?: boolean;
 }
 
 const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
@@ -78,12 +90,14 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 			borderless,
 			children,
 			className,
+			dark,
 			displayType = 'primary',
 			monospaced,
 			outline,
 			rounded,
 			size,
 			small,
+			translucent,
 			type = 'button',
 			...otherProps
 		}: IProps,
@@ -102,6 +116,15 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 			'Button Accessibility: Component has only the Icon declared. Define an `aria-label` or `aria-labelledby` attribute that labels the interactive button that screen readers can read. The `title` attribute is optional but consult your design team.'
 		);
 
+		if (displayType === 'beta') {
+			displayType = 'info';
+			translucent = true;
+		} else if (displayType === 'beta-dark') {
+			dark = true;
+			displayType = 'info';
+			translucent = true;
+		}
+
 		return (
 			<button
 				className={classNames(className, 'btn', {
@@ -110,6 +133,8 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 					'btn-monospaced': monospaced,
 					'btn-outline-borderless': borderless,
 					'btn-sm': small && !size,
+					'btn-translucent': translucent,
+					'clay-dark': dark,
 					[`btn-${displayType}`]:
 						displayType && !outline && !borderless,
 					[`btn-outline-${displayType}`]:

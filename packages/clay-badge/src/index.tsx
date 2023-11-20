@@ -18,7 +18,14 @@ type DisplayType =
 
 interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	/**
+	 * Flag to indicate if the badge should use the clay-dark variant.
+	 */
+	dark?: boolean;
+
+	/**
 	 * Determines the color of the badge.
+	 * The values `beta` and `beta-dark` are deprecated since v3.100.0 - use
+	 * `translucent` and `dark` instead.
 	 */
 	displayType?: DisplayType;
 
@@ -26,21 +33,52 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
 	 * Info that is shown inside of the badge itself.
 	 */
 	label?: string | number;
+
+	/**
+	 * Flag to indicate if the badge should use the translucent variant.
+	 */
+	translucent?: boolean;
 }
 
 const ClayBadge = React.forwardRef<HTMLSpanElement, IProps>(
 	(
-		{className, displayType = 'primary', label, ...otherProps}: IProps,
+		{
+			className,
+			dark,
+			displayType = 'primary',
+			label,
+			translucent,
+			...otherProps
+		}: IProps,
 		ref
-	) => (
-		<span
-			{...otherProps}
-			className={classNames('badge', `badge-${displayType}`, className)}
-			ref={ref}
-		>
-			<span className="badge-item badge-item-expand">{label}</span>
-		</span>
-	)
+	) => {
+		if (displayType === 'beta') {
+			displayType = 'info';
+			translucent = true;
+		} else if (displayType === 'beta-dark') {
+			dark = true;
+			displayType = 'info';
+			translucent = true;
+		}
+
+		return (
+			<span
+				{...otherProps}
+				className={classNames(
+					'badge',
+					`badge-${displayType}`,
+					className,
+					{
+						'badge-translucent': translucent,
+						'clay-dark': dark,
+					}
+				)}
+				ref={ref}
+			>
+				<span className="badge-item badge-item-expand">{label}</span>
+			</span>
+		);
+	}
 );
 
 ClayBadge.displayName = 'ClayBadge';
