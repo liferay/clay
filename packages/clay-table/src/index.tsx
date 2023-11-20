@@ -89,7 +89,7 @@ const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
 			noWrap,
 			responsive = true,
 			responsiveSize,
-			striped,
+			striped = true,
 			tableVerticalAlignment,
 			...otherProps
 		}: IProps,
