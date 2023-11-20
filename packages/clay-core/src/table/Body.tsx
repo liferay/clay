@@ -3,11 +3,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import {useControlledState} from '@clayui/shared';
 import React, {useCallback, useMemo} from 'react';
 
 import {ChildrenFunction, Collection} from '../collection';
+import {createImmutableTree} from '../tree-view/useTree';
 import {Scope, ScopeContext} from './ScopeContext';
-import {useTable} from './context';
+import {BodyContext, useTable} from './context';
 
 type Props<T> = {
 	/**
@@ -16,9 +18,19 @@ type Props<T> = {
 	children: React.ReactNode | ChildrenFunction<T, unknown>;
 
 	/**
-	 * Property to render content with dynamic data.
+	 * Property to set the initial value of items (uncontrolled).
+	 */
+	defaultItems?: Array<T>;
+
+	/**
+	 * Property to render content with dynamic data (controlled).
 	 */
 	items?: Array<T>;
+
+	/**
+	 * A callback which is called when the property of items is changed (controlled).
+	 */
+	onItemsChange?: (items: Array<T>) => void;
 } & React.TableHTMLAttributes<HTMLTableSectionElement>;
 
 type ItemProps<T> = {
@@ -34,13 +46,15 @@ function* flatten<T extends Record<string, any>>(
 	array: Array<T>,
 	expandedKeys: Set<React.Key>,
 	nestedKey: string,
-	level = 1
+	level = 1,
+	loc: Array<number> = []
 ): IterableIterator<T> {
 	for (let i = 0; i < array.length; i++) {
 		const item = {
 			...array[i],
 			_index: i,
 			_level: level,
+			_loc: [...loc, i],
 			_size: array.length,
 		} as unknown as T;
 
@@ -57,7 +71,8 @@ function* flatten<T extends Record<string, any>>(
 					array[i]![nestedKey],
 					expandedKeys,
 					nestedKey,
-					level + 1
+					level + 1,
+					item['_loc']
 				);
 			}
 		} else {
@@ -67,41 +82,71 @@ function* flatten<T extends Record<string, any>>(
 }
 
 function BodyInner<T extends Record<string, any>>(
-	{children, items: outItems, ...otherProps}: Props<T>,
+	{
+		children,
+		defaultItems,
+		items: outItems,
+		onItemsChange,
+		...otherProps
+	}: Props<T>,
 	ref: React.Ref<HTMLTableSectionElement>
 ) {
 	const {expandedKeys, nestedKey} = useTable();
 
+	const [treeItems, setTreeItems] = useControlledState({
+		defaultName: 'defaultItems',
+		defaultValue: defaultItems ?? [],
+		handleName: 'onItemsChange',
+		name: 'items',
+		onChange: onItemsChange,
+		value: outItems,
+	});
+
+	const insert = useCallback(
+		(path: Array<number>, value: unknown) => {
+			const tree = createImmutableTree(treeItems, nestedKey!);
+
+			tree.produce({op: 'add', path, value});
+
+			setTreeItems(tree.applyPatches());
+		},
+		[treeItems]
+	);
+
 	const items = useMemo(() => {
-		if (!nestedKey || !outItems) {
-			return outItems;
+		if (!nestedKey || !treeItems) {
+			return treeItems;
 		}
 
-		return [...flatten(outItems!, expandedKeys, nestedKey)];
+		return [...flatten(treeItems!, expandedKeys, nestedKey)];
 	}, [outItems, expandedKeys, nestedKey]);
 
 	return (
 		<tbody {...otherProps} ref={ref}>
 			<ScopeContext.Provider value={Scope.Body}>
-				<Collection<T>
-					itemContainer={useCallback(
-						({children, item, keyValue}: ItemProps<any>) =>
-							item
-								? React.cloneElement(children, {
-										_expandable: item._expandable,
-										_index: item._index,
-										_level: item._level,
-										_size: item._size,
-										keyValue,
-								  })
-								: children,
-						[]
-					)}
-					items={items}
-					passthroughKey={false}
-				>
-					{children}
-				</Collection>
+				<BodyContext.Provider value={{insert}}>
+					<Collection<T>
+						itemContainer={useCallback(
+							({children, item, keyValue}: ItemProps<any>) =>
+								item
+									? React.cloneElement(children, {
+											_expandable: item._expandable,
+											_index: item._index,
+											_item: item,
+											_level: item._level,
+											_loc: item._loc,
+											_size: item._size,
+											keyValue,
+									  })
+									: children,
+							[]
+						)}
+						items={items}
+						passthroughKey={false}
+					>
+						{children}
+					</Collection>
+				</BodyContext.Provider>
 			</ScopeContext.Provider>
 		</tbody>
 	);

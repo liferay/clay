@@ -49,6 +49,13 @@ export type Props = {
 	onExpandedChange?: (keys: Set<React.Key>) => void;
 
 	/**
+	 * When a tree is very large, loading items (nodes) asynchronously is preferred to
+	 * decrease the initial payload and memory space. The callback is called every time
+	 * the item is a leaf node of the tree.
+	 */
+	onLoadMore?: (item: unknown) => Promise<Array<any> | undefined>;
+
+	/**
 	 * Callback for when the sorting change (controlled).
 	 */
 	onSortChange?: (sorting: Sorting | null) => void;
@@ -85,6 +92,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				sorting: 'sorted by column {0} in {1} order',
 			},
 			onExpandedChange,
+			onLoadMore,
 			onSortChange,
 			sort: externalSort,
 			nestedKey,
@@ -145,6 +153,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 							messages,
 							nestedKey,
 							onExpandedChange: setExpandedKeys,
+							onLoadMore,
 							onSortChange: useCallback(
 								(sort, textValue) => {
 									announcerAPI.current!.announce(

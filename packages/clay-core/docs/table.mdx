@@ -19,6 +19,7 @@ storybookPath: 'design-system-components-table--dynamic'
     -   [Asynchronous](#asynchronous)
 -   [Nested row](#nested-row)
     -   [Expandable](#expandable)
+    -   [Asynchronous Item](#asynchronous-item)
 
 </div>
 </div>
@@ -91,7 +92,7 @@ Unlike static content, dynamic content is when the options can change during the
 	</Head>
 
 	<Body
-		items={[
+		defaultItems={[
 			{id: 1, name: 'Games', type: 'File folder'},
 			{id: 2, name: 'Program Files', type: 'File folder'},
 		]}
@@ -158,7 +159,7 @@ const filteredItems = useMemo(() => {
     </Cell>
   </Head>
 
-  <Body items={filteredItems}>
+  <Body defaultItems={filteredItems}>
     ...
   </Body>
 </Table>
@@ -198,7 +199,7 @@ const {
 		<Cell key="type">Type</Cell>
 	</Head>
 
-	<Body items={items}>...</Body>
+	<Body defaultItems={items}>...</Body>
 </Table>;
 ```
 
@@ -232,7 +233,7 @@ const [expandedKeys, setExpandedKeys] = useState(new Set());
 		{(column) => <Cell key={column.id}>{column.name}</Cell>}
 	</Head>
 
-	<Body items={rows}>
+	<Body defaultItems={rows}>
 		{(row) => (
 			<Row items={columns}>
 				{(column) => <Cell>{row[column.id]}</Cell>}
@@ -240,4 +241,46 @@ const [expandedKeys, setExpandedKeys] = useState(new Set());
 		)}
 	</Body>
 </Table>;
+```
+
+### Asynchronous Item
+
+When the tree is very large with a lot of data on a single node, loading the data asynchronously is essential to reduce the initial data payload and memory space. Table supports asynchronous node loading when the user expands a node.
+
+-   When returning `void`, `null` or `undefined` the Table will do nothing.
+-   When returning the `items` will add to the tree.
+
+<div class="clay-site-alert alert alert-info">
+	<strong class="lead">Warning</strong>
+	If you have an error in the asynchronous call of the <code className="gatsby-code-text">
+		onLoadMore
+	</code> method, only the suppression is done and an error is thrown on the console.
+</div>
+
+When adding a new asynchronous item to the tree, the `onItemsChange` method is respectively called to update the tree with a new value if the `items` prop is controlled.
+
+```jsx
+<Table
+	onLoadMore={async (item) => {
+		return await fetch(`example.com/tree/item?parent_id=${item.id}`);
+	}}
+>
+	<Head items={columns}>
+		{(column) => <Cell key={column.id}>{column.name}</Cell>}
+	</Head>
+
+	<Body
+		defaultItems={[
+			{id: 1, name: 'Games', type: 'File folder'},
+			{id: 2, name: 'Program Files', type: 'File folder'},
+		]}
+	>
+		{(row) => (
+			<Row>
+				<Cell>{row.name}</Cell>
+				<Cell>{row.type}</Cell>
+			</Row>
+		)}
+	</Body>
+</Table>
 ```

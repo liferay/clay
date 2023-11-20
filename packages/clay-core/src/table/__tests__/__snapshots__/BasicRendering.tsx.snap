@@ -341,16 +341,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
             role="gridcell"
             tabindex="-1"
           >
-            <div
-              class="autofit-row"
-              style="padding-left: 28px;"
-            >
-              <div
-                class="autofit-col autofit-col-expand"
-              >
-                Name
-              </div>
-            </div>
+            Name
           </th>
           <th
             class="table-head-title"

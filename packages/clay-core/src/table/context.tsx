@@ -15,6 +15,7 @@ type Context = {
 	messages: Record<string, string>;
 	nestedKey?: string;
 	onExpandedChange: (keys: Set<React.Key>) => void;
+	onLoadMore?: (item: unknown) => Promise<Array<any> | undefined>;
 	onSortChange: (sorting: Sorting | null, textValue: string) => void;
 	sort: Sorting | null;
 	sortDescriptionId: string;
@@ -29,12 +30,31 @@ export function useTable() {
 
 type RowContext = {
 	expandable?: boolean;
+	isLoading: boolean;
 	key: React.Key;
+	lazy: boolean;
 	level: number;
+	loadMore: () => void;
 };
 
-export const RowContext = React.createContext<RowContext>({key: 0, level: 1});
+export const RowContext = React.createContext<RowContext>({
+	isLoading: false,
+	key: 0,
+	lazy: false,
+	level: 1,
+	loadMore: () => {},
+});
 
 export function useRow() {
 	return useContext(RowContext);
+}
+
+type BodyContext = {
+	insert: (path: Array<number>, value: unknown) => void;
+};
+
+export const BodyContext = React.createContext<BodyContext>({} as BodyContext);
+
+export function useBody() {
+	return useContext(BodyContext);
 }
