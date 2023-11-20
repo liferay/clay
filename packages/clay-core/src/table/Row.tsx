@@ -107,9 +107,11 @@ function RowInner<T extends Record<string, any>>(
 ) {
 	const {expandedKeys, onExpandedChange, onLoadMore, treegrid} = useTable();
 	const {insert} = useBody();
+	const [isFocused, setIsFocused] = useState(false);
 	const focusWithinProps = useFocusWithin({
 		disabled: !treegrid,
 		id: keyValue!,
+		onFocusChange: setIsFocused,
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
@@ -155,6 +157,7 @@ function RowInner<T extends Record<string, any>>(
 			className={classNames(className, {
 				'table-divider': divider,
 				[`table-row-${delimiter}`]: delimiter,
+				'table-focus': focusWithinProps.tabIndex === 0 && isFocused,
 			})}
 			data-id={
 				typeof keyValue === 'number'

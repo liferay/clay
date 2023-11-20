@@ -390,7 +390,9 @@ $c-table-hover: map-deep-merge(
 $c-tr-table-focus: () !default;
 $c-tr-table-focus: map-deep-merge(
 	(
+		outline: 0,
 		td: (
+			outline: 0,
 			before: (
 				box-shadow: (
 					inset 0 0.2rem 0 0 rgba($primary, 0.25),
@@ -442,6 +444,7 @@ $c-tr-table-focus: map-deep-merge(
 $c-td-table-focus: () !default;
 $c-td-table-focus: map-deep-merge(
 	(
+		outline: 'none',
 		box-shadow: clay-enable-shadows($component-focus-inset-box-shadow),
 	),
 	$c-td-table-focus
