@@ -93,7 +93,7 @@ function BodyInner<T extends Record<string, any>>(
 ) {
 	const {expandedKeys, nestedKey} = useTable();
 
-	const [treeItems, setItems] = useControlledState({
+	const [treeItems, setTreeItems] = useControlledState({
 		defaultName: 'defaultItems',
 		defaultValue: defaultItems ?? [],
 		handleName: 'onItemsChange',
@@ -108,7 +108,7 @@ function BodyInner<T extends Record<string, any>>(
 
 			tree.produce({op: 'add', path, value});
 
-			setItems(tree.applyPatches());
+			setTreeItems(tree.applyPatches());
 		},
 		[treeItems]
 	);
