@@ -100,7 +100,6 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			expandedKeys,
 			messages,
 			onExpandedChange,
-			onLoadMore,
 			onSortChange,
 			sort,
 			sortDescriptionId,
@@ -111,7 +110,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			id: keyValue!,
 		});
 		const scope = useScope();
-		const {expandable, isLoading, key, level, loadMore} = useRow();
+		const {expandable, isLoading, key, lazy, level, loadMore} = useRow();
 
 		const isHead = scope === Scope.Head;
 		const As = isHead ? 'th' : 'td';
@@ -218,12 +217,11 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					<Layout.ContentRow
 						style={{
 							paddingLeft:
-								(level - (expandable || onLoadMore ? 1 : 0)) *
-									28 -
-								(expandable || onLoadMore ? 4 : 0),
+								(level - (expandable || lazy ? 1 : 0)) * 28 -
+								(expandable || lazy ? 4 : 0),
 						}}
 					>
-						{(expandable || onLoadMore) && !isLoading && (
+						{(expandable || lazy) && !isLoading && (
 							<Layout.ContentCol className="autofit-col-toggle">
 								<Button
 									aria-label={messages['expandable']}

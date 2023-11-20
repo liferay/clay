@@ -269,7 +269,7 @@ export const AsyncLoad = () => (
 
 		<Body defaultItems={items}>
 			{(row) => (
-				<Row>
+				<Row lazy>
 					<Cell key={`${row.id}:name`}>
 						<Text size={3} weight="semi-bold">
 							{row['name']}

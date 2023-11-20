@@ -41,6 +41,12 @@ type Props<T> = {
 	keyValue?: React.Key;
 
 	/**
+	 * Flag to indicate that the row has children to be loaded lazily when
+	 * `onLoadMore` is set.
+	 */
+	lazy?: boolean;
+
+	/**
 	 * Internal prop.
 	 * @ignore
 	 */
@@ -94,6 +100,7 @@ function RowInner<T extends Record<string, any>>(
 		divider,
 		items,
 		keyValue,
+		lazy = false,
 		...otherProps
 	}: Props<T>,
 	outRef: React.Ref<HTMLTableRowElement>
@@ -108,7 +115,7 @@ function RowInner<T extends Record<string, any>>(
 	const [isLoading, setIsLoading] = useState(false);
 
 	const loadMore = useCallback(() => {
-		if (_expandable || !onLoadMore) {
+		if (_expandable || !onLoadMore || !lazy) {
 			return;
 		}
 
@@ -131,7 +138,7 @@ function RowInner<T extends Record<string, any>>(
 				setIsLoading(false);
 				console.error(error);
 			});
-	}, [insert, keyValue, _expandable, onLoadMore]);
+	}, [insert, keyValue, _expandable, onLoadMore, lazy]);
 
 	const ref = useForwardRef(outRef);
 
@@ -140,9 +147,7 @@ function RowInner<T extends Record<string, any>>(
 			{...otherProps}
 			{...focusWithinProps}
 			aria-expanded={
-				_expandable || onLoadMore
-					? expandedKeys.has(keyValue!)
-					: undefined
+				_expandable || lazy ? expandedKeys.has(keyValue!) : undefined
 			}
 			aria-level={treegrid ? _level : undefined}
 			aria-posinset={treegrid ? _index! + 1 : undefined}
@@ -160,7 +165,7 @@ function RowInner<T extends Record<string, any>>(
 				if (
 					document.activeElement !== ref.current ||
 					event.defaultPrevented ||
-					(!_expandable && !onLoadMore)
+					(!_expandable && !lazy)
 				) {
 					return;
 				}
@@ -175,7 +180,7 @@ function RowInner<T extends Record<string, any>>(
 						break;
 					}
 					case Keys.Right: {
-						if (onLoadMore && !_expandable) {
+						if (onLoadMore && lazy && !_expandable) {
 							loadMore();
 						} else {
 							if (!expandedKeys.has(keyValue!)) {
@@ -198,6 +203,7 @@ function RowInner<T extends Record<string, any>>(
 					expandable: _expandable,
 					isLoading,
 					key: keyValue!,
+					lazy,
 					level: _level!,
 					loadMore,
 				}}

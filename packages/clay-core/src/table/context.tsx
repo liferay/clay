@@ -32,6 +32,7 @@ type RowContext = {
 	expandable?: boolean;
 	isLoading: boolean;
 	key: React.Key;
+	lazy: boolean;
 	level: number;
 	loadMore: () => void;
 };
@@ -39,6 +40,7 @@ type RowContext = {
 export const RowContext = React.createContext<RowContext>({
 	isLoading: false,
 	key: 0,
+	lazy: false,
 	level: 1,
 	loadMore: () => {},
 });
