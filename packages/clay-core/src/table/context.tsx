@@ -29,6 +29,7 @@ export function useTable() {
 }
 
 type RowContext = {
+	divider: boolean;
 	expandable?: boolean;
 	isLoading: boolean;
 	key: React.Key;
@@ -38,6 +39,7 @@ type RowContext = {
 };
 
 export const RowContext = React.createContext<RowContext>({
+	divider: false,
 	isLoading: false,
 	key: 0,
 	lazy: false,

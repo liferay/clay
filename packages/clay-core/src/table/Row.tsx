@@ -97,7 +97,7 @@ function RowInner<T extends Record<string, any>>(
 		children,
 		className,
 		delimiter,
-		divider,
+		divider = false,
 		items,
 		keyValue,
 		lazy = false,
@@ -203,6 +203,7 @@ function RowInner<T extends Record<string, any>>(
 		>
 			<RowContext.Provider
 				value={{
+					divider,
 					expandable: _expandable,
 					isLoading,
 					key: keyValue!,

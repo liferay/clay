@@ -118,6 +118,46 @@ export const DynamicCells = () => {
 	);
 };
 
+export const Sections = () => {
+	return (
+		<Table>
+			<Head items={columns}>
+				<Cell key="name">Name</Cell>
+				<Cell key="type">Type</Cell>
+			</Head>
+
+			<Body>
+				<Row divider>
+					<Cell>Folders</Cell>
+				</Row>
+				<Row>
+					<Cell>Games</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row>
+					<Cell>Program Files</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row>
+					<Cell>Core</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row divider>
+					<Cell>Folders</Cell>
+				</Row>
+				<Row>
+					<Cell>Games</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row>
+					<Cell>Program Files</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+			</Body>
+		</Table>
+	);
+};
+
 type Sorting = {
 	column: React.Key;
 	direction: 'ascending' | 'descending';
