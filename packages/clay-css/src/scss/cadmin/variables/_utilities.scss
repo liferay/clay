@@ -782,7 +782,8 @@ $cadmin-c-prefers-link-underline: map-deep-merge(
 $cadmin-c-prefers-letter-spacing: () !default;
 $cadmin-c-prefers-letter-spacing: map-deep-merge(
 	(
-		'.c-prefers-letter-spacing-1 .cadmin': (
+		'.c-prefers-letter-spacing-1 .cadmin, .c-prefers-letter-spacing-1 .cadmin *':
+		(
 			letter-spacing: 1px !important,
 		),
 	),
