@@ -78,7 +78,7 @@ export const LiveAnnouncer = forwardRef<AnnouncerAPI>(function LiveAnnouncer(
 		[announce]
 	);
 
-	return createPortal(
+	const content = (
 		<VisuallyHidden liveAnnouncer>
 			<div aria-live="assertive" aria-relevant="additions" role="log">
 				{logs
@@ -94,7 +94,10 @@ export const LiveAnnouncer = forwardRef<AnnouncerAPI>(function LiveAnnouncer(
 						<div key={log.id}>{log.message}</div>
 					))}
 			</div>
-		</VisuallyHidden>,
-		document.body
+		</VisuallyHidden>
 	);
+
+	return typeof document !== 'undefined'
+		? createPortal(content, document.body)
+		: content;
 });
