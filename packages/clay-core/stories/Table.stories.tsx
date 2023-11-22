@@ -72,7 +72,7 @@ export const Dynamic = () => {
 				{(column) => <Cell key={column.id}>{column.name}</Cell>}
 			</Head>
 
-			<Body items={rows}>
+			<Body defaultItems={rows}>
 				{(row) => (
 					<Row>
 						<Cell>{row.name}</Cell>
