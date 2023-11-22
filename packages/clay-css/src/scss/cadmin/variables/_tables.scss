@@ -567,7 +567,8 @@ $cadmin-c-table-head-bordered: map-deep-merge(
 	(
 		thead: (
 			table-cell: (
-				border-left: $cadmin-table-border-width solid $cadmin-table-border-color,
+				border-left: $cadmin-table-border-width solid
+					$cadmin-table-border-color,
 				start: (
 					border-left-width: 0,
 				),
