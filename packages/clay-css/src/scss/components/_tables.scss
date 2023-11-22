@@ -49,6 +49,10 @@ caption {
 	@include clay-table-variant($c-table-bordered);
 }
 
+.table-head-bordered {
+	@include clay-table-variant($c-table-head-bordered);
+}
+
 .table-borderless {
 	th,
 	td,

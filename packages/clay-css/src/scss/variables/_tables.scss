@@ -450,6 +450,23 @@ $c-td-table-focus: map-deep-merge(
 	$c-td-table-focus
 );
 
+// .table-head-bordered
+
+$c-table-head-bordered: () !default;
+$c-table-head-bordered: map-deep-merge(
+	(
+		thead: (
+			table-cell: (
+				border-left: $table-border-width solid $table-border-color,
+				start: (
+					border-left-width: 0,
+				),
+			),
+		),
+	),
+	$c-table-head-bordered
+);
+
 // .table-bordered
 
 $table-bordered-border-width: $table-border-width !default;

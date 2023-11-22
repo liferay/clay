@@ -72,6 +72,16 @@
 						@include clay-link(map-deep-get($map, thead, th, href));
 					}
 				}
+
+				th:first-child,
+				td:first-child {
+					@include clay-css(map-get($map, thead, table-cell, start));
+				}
+
+				th:last-child,
+				td:last-child {
+					@include clay-css(map-get($map, thead, table-cell, end));
+				}
 			}
 
 			th,

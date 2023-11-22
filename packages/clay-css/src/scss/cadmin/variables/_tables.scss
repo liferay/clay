@@ -560,6 +560,23 @@ $cadmin-table-dark-hover-color: $cadmin-table-dark-color !default;
 
 $cadmin-table-dark-accent-bg: rgba($cadmin-white, 0.05) !default;
 
+// .table-head-bordered
+
+$cadmin-c-table-head-bordered: () !default;
+$cadmin-c-table-head-bordered: map-deep-merge(
+	(
+		thead: (
+			table-cell: (
+				border-left: $cadmin-table-border-width solid $cadmin-table-border-color,
+				start: (
+					border-left-width: 0,
+				),
+			),
+		),
+	),
+	$cadmin-c-table-head-bordered
+);
+
 // .table-bordered
 
 $cadmin-table-bordered-border-width: $cadmin-table-border-width !default;
