@@ -37,6 +37,12 @@ caption {
 	caption-side: bottom;
 }
 
+// Table lg
+
+.table-lg {
+	@include clay-table-variant($c-table-lg);
+}
+
 // Table Sm
 
 .table-sm {

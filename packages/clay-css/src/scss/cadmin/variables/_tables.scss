@@ -54,7 +54,8 @@ $cadmin-table-striped-order: odd !default;
 // Table Cell applies to `th` and `td`
 
 $cadmin-table-cell-gutters: $cadmin-grid-gutter-width * 0.5 !default; // 15px
-$cadmin-table-cell-padding: 12px !default;
+$cadmin-table-cell-padding-lg: 17px !default;
+$cadmin-table-cell-padding: 13px !default;
 $cadmin-table-cell-padding-sm: 4.8px !default;
 
 $cadmin-table-cell-expand-min-width: 200px !default; // 200px
@@ -495,6 +496,18 @@ $cadmin-c-td-table-focus: map-deep-merge(
 			clay-enable-shadows($cadmin-component-focus-inset-box-shadow),
 	),
 	$cadmin-c-td-table-focus
+);
+
+// .table-lg
+
+$cadmin-c-table-lg: () !default;
+$cadmin-c-table-lg: map-deep-merge(
+	(
+		table-cell: (
+			padding: $cadmin-table-cell-padding-lg,
+		),
+	),
+	$cadmin-c-table-lg
 );
 
 // .table-sm
