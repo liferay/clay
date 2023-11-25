@@ -371,6 +371,10 @@ export function useCollection<
 		return Array.from(layout.current.keys());
 	}, []);
 
+	const getSize = useCallback(() => {
+		return layout.current.size;
+	}, []);
+
 	const cleanUp = useCallback(() => {
 		layout.current.forEach((value, key) => {
 			if (value.instanceId === collectionId) {
@@ -452,6 +456,7 @@ export function useCollection<
 		getItem,
 		getItems,
 		getLastItem,
+		getSize,
 		hasItem,
 		size: virtualizer ? virtualizer.getTotalSize() : undefined,
 		virtualize: !!virtualizer,
