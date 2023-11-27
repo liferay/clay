@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
+
+### Features
+
+-   **@clayui/css:** Add new twitter-x icon ([63486e8](https://github.com/liferay/clay/commit/63486e8677cd241adf9ff1eb17bbb4d063912851))
+
 ## [3.106.1](https://github.com/matuzalemsteles/clay/compare/v3.106.0...v3.106.1) (2023-10-26)
 
 **Note:** Version bump only for package clayui.com

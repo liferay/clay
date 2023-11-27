@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix infinite loop error in table ([a027700](https://github.com/liferay/clay/commit/a02770055dddb193aa2708da581794aad0f50f4c))
+-   **@clayui/core:** fixes bug when rendering LiveAnnouncer on server side ([5765be2](https://github.com/liferay/clay/commit/5765be264c5898d211220a995c17aa4f235f52e1))
+-   **@clayui/core:** fixes error when cleaning up the collection for explicitly nested collections ([e0714d1](https://github.com/liferay/clay/commit/e0714d1a089f951042364780d705ca89faaff8c0))
+
+### Features
+
+-   **@clayui/core:** adds asynchronous loading for Table items with nested row ([f1aea66](https://github.com/liferay/clay/commit/f1aea664a29c7b411e41ddf9d58c57f296a2c955))
+
 ## [3.106.1](https://github.com/liferay/clay/compare/v3.106.0...v3.106.1) (2023-10-26)
 
 **Note:** Version bump only for package @clayui/core

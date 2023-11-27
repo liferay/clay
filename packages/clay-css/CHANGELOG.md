@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Add increase text spacing on nav-link ([7d4b71d](https://github.com/liferay/clay/commit/7d4b71db5a751f0ebc3f9c9911e1eb9d5a36a529))
+* **@clayui/css:** Adds .table-focus for focus outline around table row ([5121443](https://github.com/liferay/clay/commit/51214435f680b09d288823e91715a1ba09142e97))
+* **@clayui/css:** Cadmin alert-indicator-start spacing should be 8px between icon and text ([7572f92](https://github.com/liferay/clay/commit/7572f92ed14c7889c8863d840a4ca68c0580c0b1))
+* **@clayui/css:** Cadmin dropdown-menu-indicator spacing is off by 4px ([3b0a184](https://github.com/liferay/clay/commit/3b0a184e3ec37990371530340363ca46d6de8b0c))
+
+
+### Features
+
+* **@clayui/css:** add `outline` to table-focus ([ae702bb](https://github.com/liferay/clay/commit/ae702bb4a6ab7cbc25b9a575a4127ebf6bf6e342))
+* **@clayui/css:** Add new twitter-x icon ([63486e8](https://github.com/liferay/clay/commit/63486e8677cd241adf9ff1eb17bbb4d063912851))
+* **@clayui/css:** Adds translucent buttons and badges ([f5792d0](https://github.com/liferay/clay/commit/f5792d0289bdb7bc6a652bb3eb3412d22c535446))
+* **@clayui/css:** Cadmin c-prefers-letter-spacing-* should apply to nav-link ([9576c84](https://github.com/liferay/clay/commit/9576c8480d811346095d6bea0a13e2e34c078425))
+* **@clayui/css:** SVG Icon adds English Canada flag (en-ca) ([322c896](https://github.com/liferay/clay/commit/322c896f8be1e61caf98d309e48adc7a144ddc1f))
+
+
+
+
+
 ## [3.106.1](https://github.com/liferay/clay/tree/master/packages/clay-css/compare/v3.106.0...v3.106.1) (2023-10-26)
 
 **Note:** Version bump only for package @clayui/css
