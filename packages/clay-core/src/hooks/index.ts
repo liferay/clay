@@ -4,4 +4,5 @@
  */
 
 export {useIsMounted} from './useIsMounted';
+export {useIsFirstRender} from './useIsFirstRender';
 export {useForwardRef} from './useForwardRef';

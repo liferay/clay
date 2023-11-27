@@ -7,6 +7,7 @@ import {useControlledState} from '@clayui/shared';
 import {Key, useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {getKey} from '../collection';
+import {useIsFirstRender} from '../hooks';
 import {ITreeProps, createImmutableTree} from './useTree';
 
 import type {ICollectionProps} from './Collection';
@@ -125,6 +126,8 @@ export function useMultipleSelection<T extends Record<string, any>>(
 		value: props.selectedKeys,
 	});
 
+	const isFirstRender = useIsFirstRender();
+
 	/**
 	 * We are using `useMemo` to do indeterminate state revalidation in the
 	 * render cycle instead of in the `useEffect` which happens after rendering.
@@ -170,11 +173,16 @@ export function useMultipleSelection<T extends Record<string, any>>(
 	}, [selectedKeys]);
 
 	/**
-	 * This useEffect causes useMemo to be called every time the items change which can cause performance issues. We cannot change the useMemo because it is needed in other treeview cases. This should be improved in the future.
+	 * This useEffect causes useMemo to be called every time the items change which
+	 * can cause performance issues. We cannot change the useMemo because it is
+	 * needed in other treeview cases. This should be improved in the future.
 	 */
-
 	useEffect(() => {
-		if (props.selectionMode === 'multiple-recursive' && !isUncontrolled) {
+		if (
+			!isFirstRender &&
+			props.selectionMode === 'multiple-recursive' &&
+			!isUncontrolled
+		) {
 			const newSelectedKeys = new Set(selectedKeys);
 
 			props.layoutKeys.current.forEach((keyMap, key) => {
