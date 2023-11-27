@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.107.1](https://github.com/liferay/clay/compare/v3.107.0...v3.107.1) (2023-11-27)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes error when deselecting the indeterminate state for pre selected items in the first render ([997461e](https://github.com/liferay/clay/commit/997461efe9bcd1f91334e1a1a3f9c50e131e50ac))
+
 # [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
 
 ### Bug Fixes
