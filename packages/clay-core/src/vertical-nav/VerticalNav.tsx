@@ -113,7 +113,7 @@ function depthActive<T extends Record<string, any>>(
 	items: Array<T>
 ): T | undefined {
 	return items.find((item) => {
-		if ('active' in item) {
+		if (item['active']) {
 			return true;
 		}
 
