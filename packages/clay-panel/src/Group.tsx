@@ -50,7 +50,6 @@ const ClayPanelGroup = ({
 	return (
 		<div
 			{...otherProps}
-			aria-orientation="vertical"
 			className={classNames('panel-group', className, {
 				'panel-group-fluid': fluid,
 				'panel-group-fluid-first': fluidFirst,
@@ -58,7 +57,6 @@ const ClayPanelGroup = ({
 				'panel-group-flush': flush,
 				'panel-group-sm': small,
 			})}
-			role="tablist"
 		>
 			{children}
 		</div>
