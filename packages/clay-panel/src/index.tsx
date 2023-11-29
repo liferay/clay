@@ -10,6 +10,7 @@ import {
 	InternalDispatch,
 	setElementFullHeight,
 	useControlledState,
+	useId,
 } from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
@@ -107,13 +108,14 @@ function ClayPanel({
 
 	const {prefersReducedMotion} = useProvider();
 
+	const ariaControlsId = useId();
+
 	return (
 		<div
 			{...otherProps}
 			className={classNames('panel', className, {
 				[`panel-${displayType}`]: displayType,
 			})}
-			role="tablist"
 		>
 			{!collapsable && (
 				<>
@@ -135,6 +137,7 @@ function ClayPanel({
 			{collapsable && (
 				<>
 					<ClayButton
+						aria-controls={ariaControlsId}
 						aria-expanded={internalExpanded}
 						className={classNames(
 							'panel-header panel-header-link',
@@ -148,7 +151,6 @@ function ClayPanel({
 						)}
 						displayType="unstyled"
 						onClick={() => setInternalExpanded(!internalExpanded)}
-						role="tab"
 					>
 						{displayTitle &&
 							(React.isValidElement(displayTitle) ? (
@@ -178,6 +180,7 @@ function ClayPanel({
 					</ClayButton>
 
 					<CSSTransition
+						aria-labelledby={ariaControlsId}
 						className={classNames(
 							'panel-collapse',
 							collapseClassNames,
@@ -190,6 +193,7 @@ function ClayPanel({
 							exit: `show`,
 							exitActive: 'collapsing',
 						}}
+						id={ariaControlsId}
 						in={internalExpanded}
 						onEnter={(element: HTMLElement) =>
 							setElementFullHeight(element)
@@ -201,7 +205,7 @@ function ClayPanel({
 						onExiting={(element) => {
 							element.style.height = '';
 						}}
-						role="tabpanel"
+						role="region"
 						timeout={!prefersReducedMotion ? 250 : 0}
 					>
 						<div>{children}</div>
