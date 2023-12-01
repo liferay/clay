@@ -58,11 +58,30 @@
 			@include clay-css($map);
 
 			thead {
-				@include clay-css(map-get($map, thead));
+				$_thead: setter(map-get($map, thead), ());
+
+				@include clay-css($_thead);
 
 				th,
 				td {
-					@include clay-css(map-deep-get($map, thead, table-cell));
+					$_thead-table-cell: setter(
+						map-get($_thead, table-cell),
+						()
+					);
+
+					@include clay-css($_thead-table-cell);
+
+					&:first-child {
+						@include clay-css(
+							map-get($_thead-table-cell, table-column-start)
+						);
+					}
+
+					&:last-child {
+						@include clay-css(
+							map-get($_thead-table-cell, table-column-end)
+						);
+					}
 				}
 
 				th {
@@ -71,16 +90,6 @@
 					a[href] {
 						@include clay-link(map-deep-get($map, thead, th, href));
 					}
-				}
-
-				th:first-child,
-				td:first-child {
-					@include clay-css(map-get($map, thead, table-cell, start));
-				}
-
-				th:last-child,
-				td:last-child {
-					@include clay-css(map-get($map, thead, table-cell, end));
 				}
 			}
 

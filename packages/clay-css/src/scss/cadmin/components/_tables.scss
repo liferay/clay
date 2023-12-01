@@ -43,6 +43,12 @@ caption {
 	@include clay-table-variant($cadmin-c-table-lg);
 }
 
+// Table Md
+
+.table-md {
+	@include clay-table-variant($cadmin-c-table-md);
+}
+
 // Table Sm
 
 .table-sm {
@@ -72,9 +78,12 @@ caption {
 
 .table-striped {
 	tbody tr:nth-of-type(#{$cadmin-table-striped-order}) {
-		td,
-		th {
-			background-color: $cadmin-table-accent-bg;
+		&:not(.table-active):not(.table-disabled):not(.table-divider) {
+			&,
+			td,
+			th {
+				background-color: $cadmin-table-accent-bg;
+			}
 		}
 	}
 }
@@ -137,17 +146,6 @@ td.table-focus {
 	@include clay-css($cadmin-c-td-table-focus);
 }
 
-// Table Row Backgrounds
-
-.table-striped {
-	tbody .table-disabled:nth-of-type(#{$cadmin-table-striped-order}) {
-		td,
-		th {
-			background-color: $cadmin-table-disabled-bg;
-		}
-	}
-}
-
 // Dark styles
 
 .table {
@@ -184,7 +182,13 @@ td.table-focus {
 
 	&.table-striped {
 		tbody tr:nth-of-type(#{$cadmin-table-striped-order}) {
-			background-color: $cadmin-table-dark-accent-bg;
+			&:not(.table-active):not(.table-disabled):not(.table-divider) {
+				&,
+				th,
+				td {
+					background-color: $cadmin-table-dark-accent-bg;
+				}
+			}
 		}
 	}
 
@@ -264,9 +268,12 @@ td.table-focus {
 
 .table-list.table-striped {
 	tbody tr:nth-of-type(#{$cadmin-table-striped-order}) {
-		td,
-		th {
-			background-color: $cadmin-table-list-accent-bg;
+		&:not(.table-active):not(.table-disabled):not(.table-divider) {
+			&,
+			td,
+			th {
+				background-color: $cadmin-table-list-accent-bg;
+			}
 		}
 	}
 }
@@ -275,18 +282,6 @@ td.table-focus {
 
 .table-list.table-hover {
 	@include clay-table-variant($cadmin-c-table-list-table-hover);
-}
-
-// Table List Disabled
-
-.table-list.table-striped {
-	tbody .table-disabled:nth-of-type(#{$cadmin-table-striped-order}) {
-		&,
-		td,
-		th {
-			background-color: $cadmin-table-list-disabled-bg;
-		}
-	}
 }
 
 // Table List Title

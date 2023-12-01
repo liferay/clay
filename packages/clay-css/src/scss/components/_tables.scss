@@ -43,6 +43,12 @@ caption {
 	@include clay-table-variant($c-table-lg);
 }
 
+// Table Md
+
+.table-md {
+	@include clay-table-variant($c-table-md);
+}
+
 // Table Sm
 
 .table-sm {
@@ -72,9 +78,12 @@ caption {
 
 .table-striped {
 	tbody tr:nth-of-type(#{$table-striped-order}) {
-		td,
-		th {
-			background-color: $table-accent-bg;
+		&:not(.table-active):not(.table-disabled):not(.table-divider) {
+			&,
+			td,
+			th {
+				background-color: $table-accent-bg;
+			}
 		}
 	}
 }
@@ -186,17 +195,6 @@ td.table-focus {
 	}
 }
 
-// Table Disabled
-
-.table-striped {
-	tbody .table-disabled:nth-of-type(#{$table-striped-order}) {
-		td,
-		th {
-			background-color: $table-disabled-bg;
-		}
-	}
-}
-
 // Dark styles
 
 .table {
@@ -233,7 +231,13 @@ td.table-focus {
 
 	&.table-striped {
 		tbody tr:nth-of-type(#{$table-striped-order}) {
-			background-color: $table-dark-accent-bg;
+			&:not(.table-active):not(.table-disabled):not(.table-divider) {
+				&,
+				th,
+				td {
+					background-color: $table-dark-accent-bg;
+				}
+			}
 		}
 	}
 
@@ -306,9 +310,12 @@ td.table-focus {
 
 .table-list.table-striped {
 	tbody tr:nth-of-type(#{$table-striped-order}) {
-		td,
-		th {
-			background-color: $table-list-accent-bg;
+		&:not(.table-active):not(.table-disabled):not(.table-divider) {
+			&,
+			th,
+			td {
+				background-color: $table-list-accent-bg;
+			}
 		}
 	}
 }
@@ -317,16 +324,6 @@ td.table-focus {
 
 .table-list.table-hover {
 	@include clay-table-variant($c-table-list-table-hover);
-}
-
-.table-list.table-striped {
-	tbody .table-disabled:nth-of-type(#{$table-striped-order}) {
-		&,
-		td,
-		th {
-			background-color: $table-list-disabled-bg;
-		}
-	}
 }
 
 // Table List Title
