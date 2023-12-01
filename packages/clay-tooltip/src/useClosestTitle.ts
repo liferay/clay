@@ -42,6 +42,7 @@ function closestAncestor(node: HTMLElement, s: string) {
 }
 
 type Props = {
+	forceHide: () => void;
 	onHide: () => void;
 	onClick: () => void;
 	tooltipRef: React.MutableRefObject<HTMLElement | null>;
@@ -129,6 +130,20 @@ export function useClosestTitle(props: Props) {
 		}
 	}, []);
 
+	const forceHide = useCallback(() => {
+		props.forceHide();
+
+		if (titleNodeRef.current) {
+			restoreTitle(titleNodeRef.current);
+			titleNodeRef.current = null;
+		}
+
+		if (targetRef.current) {
+			targetRef.current.removeEventListener('click', onClick);
+			targetRef.current = null;
+		}
+	}, []);
+
 	const getProps = useCallback(
 		(
 			event: React.MouseEvent<HTMLElement, MouseEvent>,
@@ -185,5 +200,11 @@ export function useClosestTitle(props: Props) {
 		[]
 	);
 
-	return {getProps, onHide, target: targetRef, titleNode: titleNodeRef};
+	return {
+		forceHide,
+		getProps,
+		onHide,
+		target: targetRef,
+		titleNode: titleNodeRef,
+	};
 }
