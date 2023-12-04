@@ -72,7 +72,7 @@ export const Dynamic = () => {
 				{(column) => <Cell key={column.id}>{column.name}</Cell>}
 			</Head>
 
-			<Body items={rows}>
+			<Body defaultItems={rows}>
 				{(row) => (
 					<Row>
 						<Cell>{row.name}</Cell>
@@ -113,6 +113,46 @@ export const DynamicCells = () => {
 						{(column) => <Cell>{row[column.id]}</Cell>}
 					</Row>
 				)}
+			</Body>
+		</Table>
+	);
+};
+
+export const Sections = () => {
+	return (
+		<Table>
+			<Head items={columns}>
+				<Cell key="name">Name</Cell>
+				<Cell key="type">Type</Cell>
+			</Head>
+
+			<Body>
+				<Row divider>
+					<Cell>Folders</Cell>
+				</Row>
+				<Row>
+					<Cell>Games</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row>
+					<Cell>Program Files</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row>
+					<Cell>Core</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row divider>
+					<Cell>Folders</Cell>
+				</Row>
+				<Row>
+					<Cell>Games</Cell>
+					<Cell>File folder</Cell>
+				</Row>
+				<Row>
+					<Cell>Program Files</Cell>
+					<Cell>File folder</Cell>
+				</Row>
 			</Body>
 		</Table>
 	);

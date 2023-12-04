@@ -114,7 +114,8 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			onFocusChange: setIsFocused,
 		});
 		const scope = useScope();
-		const {expandable, isLoading, key, lazy, level, loadMore} = useRow();
+		const {divider, expandable, isLoading, key, lazy, level, loadMore} =
+			useRow();
 
 		const isHead = scope === Scope.Head;
 		const As = isHead ? 'th' : 'td';
@@ -160,6 +161,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					'table-focus': focusWithinProps.tabIndex === 0 && isFocused,
 					'table-head-title': isHead,
 				})}
+				colSpan={divider ? 9 : undefined}
 				data-id={
 					typeof keyValue === 'number'
 						? `number,${keyValue}`

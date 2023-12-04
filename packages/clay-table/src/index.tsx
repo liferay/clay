@@ -89,7 +89,7 @@ const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
 			noWrap,
 			responsive = true,
 			responsiveSize,
-			striped,
+			striped = true,
 			tableVerticalAlignment,
 			...otherProps
 		}: IProps,
@@ -111,7 +111,7 @@ const ClayTable = React.forwardRef<HTMLDivElement, IProps>(
 							'table-bordered': borderedColumns,
 							'table-heading-nowrap': headingNoWrap,
 							'table-hover': hover,
-							'table-list': !borderless,
+							'table-list table-head-bordered': !borderless,
 							'table-nowrap': noWrap,
 							'table-striped': striped,
 							[`tbody-valign-${bodyVerticalAlignment}`]:

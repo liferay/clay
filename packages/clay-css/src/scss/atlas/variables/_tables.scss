@@ -1,5 +1,5 @@
 $table-bg: $white !default;
-$table-accent-bg: $gray-100 !default;
+$table-accent-bg: $light-l1 !default;
 $table-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
 $table-border-color: $gray-300 !default;
 $table-font-size: 0.875rem !default;
@@ -38,11 +38,10 @@ $c-table-tfoot: () !default;
 
 $table-caption-color: $gray-900 !default;
 
-$table-divider-bg: $gray-100 !default;
+$table-divider-bg: $gray-200 !default;
 $table-divider-color: $gray-600 !default;
 $table-divider-font-size: 0.75rem !default; // 12px
 $table-divider-font-weight: $font-weight-semi-bold !default;
-$table-divider-padding: 0.4375rem 0.75rem !default;
 $table-divider-text-transform: uppercase !default;
 
 $table-quick-action-menu-accent-bg: $table-accent-bg !default;
@@ -169,9 +168,6 @@ $table-list-active-bg: $table-list-hover-bg !default;
 $table-list-disabled-color: $gray-500 !default;
 
 $table-list-head-bg: $white !default;
-
-$table-list-divider-padding-x: 0.75rem !default; // 12px
-$table-list-divider-padding-y: 0.4375rem !default; // 7px
 
 // Table List Title
 

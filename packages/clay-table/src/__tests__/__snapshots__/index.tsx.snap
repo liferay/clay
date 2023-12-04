@@ -6,7 +6,7 @@ exports[`ClayTable renders 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     />
   </div>
 </div>
@@ -18,7 +18,7 @@ exports[`ClayTable renders a Cell delimited 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-striped"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead>
         <tr
@@ -65,7 +65,7 @@ exports[`ClayTable renders a Cell with text alignment set to center 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-striped"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead>
         <tr
@@ -94,7 +94,7 @@ exports[`ClayTable renders a full bottom vertical aligned table 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list thead-valign-bottom table-valign-bottom"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped thead-valign-bottom table-valign-bottom"
     >
       <thead />
       <tbody />
@@ -109,7 +109,7 @@ exports[`ClayTable renders a no wrapped table 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-heading-nowrap table-hover table-list table-nowrap"
+      class="table table-autofit show-quick-actions-on-hover table-heading-nowrap table-hover table-list table-head-bordered table-nowrap table-striped"
     >
       <thead />
       <tbody />
@@ -124,7 +124,7 @@ exports[`ClayTable renders a responsive table 1`] = `
     class="table-responsive table-responsive-sm"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead />
       <tbody />
@@ -139,7 +139,7 @@ exports[`ClayTable renders a responsive table 2`] = `
     class="table-responsive table-responsive-sm"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead />
       <tbody />
@@ -154,7 +154,7 @@ exports[`ClayTable renders a table hover 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead />
       <tbody />
@@ -169,7 +169,7 @@ exports[`ClayTable renders a table striped 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-striped"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead />
       <tbody />
@@ -184,7 +184,7 @@ exports[`ClayTable renders a table with a Body 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <tbody />
     </table>
@@ -198,7 +198,7 @@ exports[`ClayTable renders a table with a Head 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead />
     </table>
@@ -212,7 +212,7 @@ exports[`ClayTable renders a table with a Head and Body 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead />
       <tbody />
@@ -227,7 +227,7 @@ exports[`ClayTable renders a table with an active row 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <tbody>
         <tr
@@ -245,7 +245,7 @@ exports[`ClayTable renders a table with columns bordered 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-bordered table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-bordered table-hover table-list table-head-bordered table-striped"
     >
       <thead />
       <tbody />
@@ -260,7 +260,7 @@ exports[`ClayTable renders a table with multiple Cells into Row 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <tbody>
         <tr
@@ -298,7 +298,7 @@ exports[`ClayTable renders a table with multiple rows into Body 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <tbody>
         <tr
@@ -322,7 +322,7 @@ exports[`ClayTable renders a table with multiple rows into Head 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead>
         <tr
@@ -346,7 +346,7 @@ exports[`ClayTable renders with a headingTitle 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <tbody>
         <tr
@@ -397,7 +397,7 @@ exports[`ClayTable renders with non wrapped cells 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <tbody>
         <tr

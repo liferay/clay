@@ -69,6 +69,11 @@ export type Props = {
 	 * Flag to indicate which key name matches the nested rendering of the tree.
 	 */
 	nestedKey?: string;
+
+	/**
+	 * Defines the size of the table.
+	 */
+	size?: 'sm' | 'lg';
 } & React.ComponentProps<typeof RootTable>;
 
 const focusableElements = ['[role="row"]', 'td[role="gridcell"]'];
@@ -94,6 +99,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			onExpandedChange,
 			onLoadMore,
 			onSortChange,
+			size,
 			sort: externalSort,
 			nestedKey,
 			...otherProps
@@ -137,6 +143,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				{...navigationProps}
 				className={classNames(className, {
 					'table-nested-rows': nestedKey,
+					[`table-${size}`]: size,
 				})}
 				ref={ref}
 				role={nestedKey ? 'treegrid' : undefined}

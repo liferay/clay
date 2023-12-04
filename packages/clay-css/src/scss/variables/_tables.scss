@@ -52,9 +52,10 @@ $table-striped-order: odd !default;
 
 // Table Cell applies to `th` and `td`
 
-$table-cell-gutters: $grid-gutter-width * 0.5 !default; // 15px
-$table-cell-padding: 0.75rem !default;
-$table-cell-padding-sm: 0.3rem !default;
+$table-cell-gutters: 1.25rem !default;
+$table-cell-padding: 0.5rem 1rem !default;
+$table-cell-padding-sm: 0.25rem 1rem !default;
+$table-cell-padding-lg: 1.0625rem !default;
 
 $table-cell-expand-min-width: 12.5rem !default; // 200px
 
@@ -75,7 +76,7 @@ $table-head-border-top-width: 0px !default;
 $table-head-color: $gray-700 !default;
 $table-head-font-size: null !default;
 $table-head-font-weight: null !default;
-$table-head-height: 36px !default;
+$table-head-height: 56px !default;
 
 $c-table-thead: () !default;
 
@@ -107,7 +108,7 @@ $table-divider-bg: $white !default;
 $table-divider-color: null !default;
 $table-divider-font-weight: null !default;
 $table-divider-font-size: null !default;
-$table-divider-padding: $table-cell-padding !default;
+$table-divider-padding: 0.5rem 1rem 0.5rem 1.25rem !default;
 $table-divider-text-transform: null !default;
 
 $table-quick-action-menu-align-items: flex-start !default;
@@ -139,8 +140,8 @@ $c-table-caption: () !default;
 $c-table-caption: map-merge(
 	(
 		caption-side: top,
-		padding-left: $table-cell-padding,
-		padding-right: $table-cell-padding,
+		padding-left: nth($table-cell-padding, 2),
+		padding-right: nth($table-cell-padding, 2),
 	),
 	$c-table-caption
 );
@@ -240,7 +241,7 @@ $c-table: map-deep-merge(
 						border-bottom: $table-head-border-bottom-width solid
 							$table-border-color,
 						border-top-width: $table-head-border-top-width,
-						vertical-align: bottom,
+						vertical-align: middle,
 					),
 					th: (
 						href: $table-head-link,
@@ -249,9 +250,6 @@ $c-table: map-deep-merge(
 			),
 		table-column-start: (
 			padding-left: $table-cell-gutters,
-		),
-		table-column-end: (
-			padding-right: $table-cell-gutters,
 		),
 		th: (
 			background-clip: padding-box,
@@ -272,6 +270,7 @@ $c-table: map-deep-merge(
 			border-right-width: $table-data-border-right-width,
 			border-style: $table-data-border-style,
 			border-top-width: $table-data-border-top-width,
+			height: 56px,
 			padding: $table-cell-padding,
 			position: relative,
 			vertical-align: $table-data-vertical-align,
@@ -289,11 +288,13 @@ $c-table: map-deep-merge(
 		tfoot: $c-table-tfoot,
 		caption: $c-table-caption,
 		table-divider: (
-			background-color: $table-divider-bg,
 			table-cell: (
+				background-color: $table-divider-bg,
 				color: $table-divider-color,
 				font-size: $table-divider-font-size,
 				font-weight: $table-divider-font-weight,
+				height: 34px,
+				line-height: 17px,
 				padding: $table-divider-padding,
 				text-transform: $table-divider-text-transform,
 			),
@@ -323,8 +324,8 @@ $c-table: map-deep-merge(
 		),
 		autofit-col: (
 			justify-content: center,
-			padding-left: $table-cell-padding,
-			padding-right: $table-cell-padding,
+			padding-left: nth($table-cell-padding, 2),
+			padding-right: nth($table-cell-padding, 2),
 			first-child: (
 				padding-left: 0,
 			),
@@ -346,8 +347,8 @@ $c-table: map-deep-merge(
 		quick-action-menu: (
 			align-items: $table-quick-action-menu-align-items,
 			background-color: $table-quick-action-menu-bg,
-			padding-bottom: $table-cell-padding,
-			padding-top: $table-cell-padding,
+			padding-bottom: nth($table-cell-padding, 1),
+			padding-top: nth($table-cell-padding, 1),
 		),
 	),
 	$c-table
@@ -450,6 +451,23 @@ $c-td-table-focus: map-deep-merge(
 	$c-td-table-focus
 );
 
+// .table-head-bordered
+
+$c-table-head-bordered: () !default;
+$c-table-head-bordered: map-deep-merge(
+	(
+		thead: (
+			table-cell: (
+				border-left: $table-border-width solid $table-border-color,
+				table-column-start: (
+					border-left-width: 0,
+				),
+			),
+		),
+	),
+	$c-table-head-bordered
+);
+
 // .table-bordered
 
 $table-bordered-border-width: $table-border-width !default;
@@ -476,10 +494,36 @@ $c-table-sm: () !default;
 $c-table-sm: map-deep-merge(
 	(
 		table-cell: (
+			height: 32px,
 			padding: $table-cell-padding-sm,
 		),
 	),
 	$c-table-sm
+);
+
+// .table-md
+
+$c-table-md: () !default;
+$c-table-md: map-deep-merge(
+	(
+		table-cell: (
+			height: 48px,
+			padding: 0.375rem 1rem,
+		),
+	),
+	$c-table-md
+);
+
+// .table-lg
+
+$c-table-lg: () !default;
+$c-table-lg: map-deep-merge(
+	(
+		table-cell: (
+			padding: $table-cell-padding-lg,
+		),
+	),
+	$c-table-lg
 );
 
 // .table-nested-rows
@@ -487,12 +531,6 @@ $c-table-sm: map-deep-merge(
 $c-table-nested-rows: () !default;
 $c-table-nested-rows: map-deep-merge(
 	(
-		table-column-start: (
-			padding-left: 1.25rem,
-		),
-		table-column-end: (
-			padding-right: 1.25rem,
-		),
 		autofit-col: (
 			padding-left: 0.125rem,
 			padding-right: 0.125rem,
@@ -654,8 +692,8 @@ $c-table-list-caption: () !default;
 
 // .table-list .table-divider
 
-$table-list-divider-padding-x: 0.75rem !default;
-$table-list-divider-padding-y: 0.75rem !default;
+$table-list-divider-padding-x: 1rem !default;
+$table-list-divider-padding-y: 0.5rem !default;
 
 // .table-list .quick-action-menu
 
@@ -782,7 +820,7 @@ $c-table-list: map-merge(
 		table-divider: (
 			table-cell: (
 				padding-bottom: $table-list-divider-padding-y,
-				padding-left: $table-list-divider-padding-x,
+				padding-left: 1.25rem,
 				padding-right: $table-list-divider-padding-x,
 				padding-top: $table-list-divider-padding-y,
 			),

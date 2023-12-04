@@ -6,7 +6,7 @@ exports[`Table basic rendering render dynamic content 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead>
         <tr>
@@ -105,7 +105,7 @@ exports[`Table basic rendering render static content 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead>
         <tr>
@@ -204,7 +204,7 @@ exports[`Table basic rendering render with sort column 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
     >
       <thead>
         <tr>
@@ -330,7 +330,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
   >
     <table
       aria-label="File Explorer"
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-nested-rows"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped table-nested-rows"
       role="treegrid"
     >
       <thead>
