@@ -131,7 +131,11 @@ const TooltipProvider = ({
 
 	const {close, isOpen, open} = useTooltipState({delay});
 
-	const {getProps, onHide, target, titleNode} = useClosestTitle({
+	const {forceHide, getProps, onHide, target, titleNode} = useClosestTitle({
+		forceHide: useCallback(() => {
+			dispatch({type: 'reset'});
+			close();
+		}, []),
 		onClick: useCallback(() => {
 			isFocused.current = false;
 			isHovered.current = false;
@@ -184,7 +188,7 @@ const TooltipProvider = ({
 			if (isOpen && event.key === Keys.Esc) {
 				event.stopImmediatePropagation();
 
-				onHide();
+				forceHide();
 			}
 		};
 
