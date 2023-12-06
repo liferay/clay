@@ -792,6 +792,7 @@ const iconsData = {
 	"users":                    '"client", "contacts", "people"',
 	"vertical-scroll":          '"arrows", "expand"',
 	"video":                    '"multimedia", "play"',
+	"video-streaming":          '"video", "streaming", "direct", "video-streaming"',
 	"view":                     '"eye", "see", "show"',
 	"vocabulary":               '"abc", "editor", "order", "text"',
 	"warehouse":                '"boxes", "deposit", "house", "inventory", "stock"',
