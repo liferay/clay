@@ -15,6 +15,16 @@
 .modal,
 &.modal {
 	@include clay-css($cadmin-modal);
+
+	$_media-breakpoint-down: map-get($cadmin-modal, media-breakpoint-down);
+	$_media-breakpoint-up: map-get($cadmin-modal, media-breakpoint-up);
+
+	@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+		@include clay-generate-media-breakpoints(
+			$cadmin-modal,
+			'clay-map-to-css'
+		);
+	}
 }
 
 .modal-dialog {
@@ -218,6 +228,7 @@
 &.modal-footer {
 	> .modal-item-last {
 		margin-left: auto;
+		margin-right: 0;
 	}
 }
 
