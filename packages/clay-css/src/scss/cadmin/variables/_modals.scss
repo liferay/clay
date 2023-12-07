@@ -346,7 +346,7 @@ $cadmin-modal: map-deep-merge(
 			padding-right: $cadmin-modal-footer-padding-x,
 			padding-top: $cadmin-modal-footer-padding-y,
 			'> *': (
-				margin: calc(#{$cadmin-modal-footer-margin-between} * 0.5),
+				margin: 0 calc(#{$cadmin-modal-footer-margin-between} * 0.5),
 			),
 		),
 		modal-title: (
@@ -366,6 +366,26 @@ $cadmin-modal: map-deep-merge(
 			margin-right: $cadmin-modal-title-indicator-spacer-x,
 			margin-top: -0.2em,
 			vertical-align: middle,
+		),
+		media-breakpoint-down: (
+			sm: (
+				close: (
+					margin-right: -8px,
+				),
+				modal-header: (
+					height: 48px,
+					padding: 8px 16px,
+				),
+				modal-title: (
+					font-size: 18px,
+				),
+				modal-body: (
+					padding: 8px 16px,
+				),
+				modal-footer: (
+					padding: 8px,
+				),
+			),
 		),
 	),
 	$cadmin-modal

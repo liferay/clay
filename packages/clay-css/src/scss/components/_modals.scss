@@ -9,6 +9,13 @@
 
 .modal {
 	@include clay-css($modal);
+
+	$_media-breakpoint-down: map-get($modal, media-breakpoint-down);
+	$_media-breakpoint-up: map-get($modal, media-breakpoint-up);
+
+	@if ($_media-breakpoint-down) or ($_media-breakpoint-up) {
+		@include clay-generate-media-breakpoints($modal, 'clay-map-to-css');
+	}
 }
 
 .modal-dialog {
@@ -230,6 +237,7 @@
 .modal-footer {
 	> .modal-item-last {
 		margin-left: auto;
+		margin-right: 0;
 	}
 }
 

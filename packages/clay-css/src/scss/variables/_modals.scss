@@ -345,7 +345,7 @@ $modal: map-deep-merge(
 			padding-right: $modal-footer-padding-x,
 			padding-top: $modal-footer-padding-y,
 			'> *': (
-				margin: calc(#{$modal-footer-margin-between} * 0.5),
+				margin: 0 calc(#{$modal-footer-margin-between} * 0.5),
 			),
 		),
 		modal-title: (
@@ -365,6 +365,26 @@ $modal: map-deep-merge(
 			margin-right: $modal-title-indicator-spacer-x,
 			margin-top: -0.2em,
 			vertical-align: middle,
+		),
+		media-breakpoint-down: (
+			sm: (
+				close: (
+					margin-right: -0.5rem,
+				),
+				modal-header: (
+					height: 3rem,
+					padding: 0.5rem 1rem,
+				),
+				modal-title: (
+					font-size: 1.125rem,
+				),
+				modal-body: (
+					padding: 0.5rem 1rem,
+				),
+				modal-footer: (
+					padding: 0.5rem,
+				),
+			),
 		),
 	),
 	$modal
