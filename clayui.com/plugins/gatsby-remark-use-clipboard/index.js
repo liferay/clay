@@ -31,7 +31,7 @@ module.exports = ({markdownAST}) => {
 
 		const language = node.meta ? node.lang + node.meta : node.lang;
 
-		const {expanded} = parseOptions(language.match(/(?<=\{).+?(?=\})/g));
+		const {expanded} = parseOptions(language?.match(/(?<=\{).+?(?=\})/g));
 
 		const expandedClass = expanded ? ' expanded' : '';
 		const hideClass = expanded ? ' hide' : '';
