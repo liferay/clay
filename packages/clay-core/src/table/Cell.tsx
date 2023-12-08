@@ -210,27 +210,28 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 				}}
 			>
 				{isHead && sortable ? (
-					<a
-						className="inline-item text-truncate-inline"
-						href="#"
-						onClick={(event) => event.preventDefault()}
-						role="presentation"
-						tabIndex={treegrid ? -1 : undefined}
-					>
-						<span className="text-truncate">{children}</span>
-
-						{sort && keyValue === sort.column && (
-							<span className="inline-item inline-item-after">
-								<Icon
-									symbol={
-										sort.direction === 'ascending'
-											? 'order-arrow-up'
-											: 'order-arrow-down'
-									}
-								/>
+					<Layout.ContentRow>
+						<Layout.ContentCol expand>
+							<span className="text-truncate-inline">
+								<span className="text-truncate">
+									{children}
+								</span>
 							</span>
-						)}
-					</a>
+						</Layout.ContentCol>
+						<Layout.ContentCol>
+							<Button
+								aria-label=""
+								className="component-action"
+								displayType="unstyled"
+								monospaced
+								role="presentation"
+								size="xs"
+								tabIndex={-1}
+							>
+								<Icon symbol="order-arrow" />
+							</Button>
+						</Layout.ContentCol>
+					</Layout.ContentRow>
 				) : truncate ? (
 					<span className="text-truncate-inline">
 						<span className="text-truncate">{children}</span>
