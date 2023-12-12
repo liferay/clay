@@ -141,7 +141,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			<As
 				{...otherProps}
 				{...focusWithinProps}
-				aria-colindex={isHead && !sortable ? undefined : index}
+				aria-colindex={isHead && !sortable ? undefined : index! + 1}
 				aria-describedby={
 					isHead && sortable ? sortDescriptionId : undefined
 				}
