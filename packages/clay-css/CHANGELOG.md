@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Modals adjusts sizes in smaller screens for zoom accessibility ([375f83e](https://github.com/liferay/clay/commit/375f83ee7ca075b9cdb254274cb3f16334671dff))
+
+
+### Features
+
+* **@clayui/css:** add `table-head-bordered` ([9d721a4](https://github.com/liferay/clay/commit/9d721a4e18ea7e5c0d4b25de3caf4c468b40c45d))
+* **@clayui/css:** adds new size and table size adjustments ([7dd6758](https://github.com/liferay/clay/commit/7dd6758401521775a4f4304667973fbfadff4949))
+* **@clayui/css:** Adjust new table styles (FDS) ([ba4c5c3](https://github.com/liferay/clay/commit/ba4c5c344eacf3e710aeba87ef691accd26d9cd1))
+
+
+
+
+
 # [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
 
 

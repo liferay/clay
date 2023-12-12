@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix accessibility error for `aria-colindex` value ([931f426](https://github.com/liferay/clay/commit/931f426d24499e8deeb517194d56a60dc4193877))
+-   **@clayui/css:** Modals adjusts sizes in smaller screens for zoom accessibility ([375f83e](https://github.com/liferay/clay/commit/375f83ee7ca075b9cdb254274cb3f16334671dff))
+-   **@clayui/panel:** Disclosure Pattern to Clay Panel Component ([6ffa238](https://github.com/liferay/clay/commit/6ffa2381da4ef3d6e6a98c30b8fd4841ff0edd63))
+-   **@clayui/tooltip:** Fix close tooltip when pressing Escape key ([6f40c16](https://github.com/liferay/clay/commit/6f40c16ad2556a99c839822c1486a2e0b2ee710c))
+-   **@clayui/vertical-nav:** Fix focusable vertica navbar when item has active property equals to false ([aa3078b](https://github.com/liferay/clay/commit/aa3078be54ed2d22f699b1f4736b58e1e84bd0a7))
+-   **clayui.com:** fix build error ([0774484](https://github.com/liferay/clay/commit/0774484d231547f96a8d5e4c175423a143250cc9))
+
+### Features
+
+-   **@clayui/core:** add new API to define the `size` to table ([23d3384](https://github.com/liferay/clay/commit/23d338487bb1bf034a1d5ac54d54381c54cd3ee6))
+-   **@clayui/core:** add the example of Sections with Table ([0b4bfe4](https://github.com/liferay/clay/commit/0b4bfe4f984272512a0dc29dfbe316fee2c8eb76))
+-   **@clayui/css:** add `table-head-bordered` ([9d721a4](https://github.com/liferay/clay/commit/9d721a4e18ea7e5c0d4b25de3caf4c468b40c45d))
+-   **@clayui/css:** adds new size and table size adjustments ([7dd6758](https://github.com/liferay/clay/commit/7dd6758401521775a4f4304667973fbfadff4949))
+-   **@clayui/css:** Adjust new table styles (FDS) ([ba4c5c3](https://github.com/liferay/clay/commit/ba4c5c344eacf3e710aeba87ef691accd26d9cd1))
+-   **@clayui/table:** adds the border to the head by default ([fb2cbdb](https://github.com/liferay/clay/commit/fb2cbdb7ac749756ff4c1749056af54bed9441fe))
+-   **@clayui/table:** sets striped by default ([2ee5787](https://github.com/liferay/clay/commit/2ee5787ef5c2bd83aa66632014577a797645081c))
+
 ## [3.107.1](https://github.com/liferay/clay/compare/v3.107.0...v3.107.1) (2023-11-27)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
+
+### Bug Fixes
+
+-   **clayui.com:** fix build error ([0774484](https://github.com/liferay/clay/commit/0774484d231547f96a8d5e4c175423a143250cc9))
+
 ## [3.107.1](https://github.com/liferay/clay/compare/v3.107.0...v3.107.1) (2023-11-27)
 
 **Note:** Version bump only for package clayui.com

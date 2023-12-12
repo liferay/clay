@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
+
+### Features
+
+-   **@clayui/table:** adds the border to the head by default ([fb2cbdb](https://github.com/liferay/clay/commit/fb2cbdb7ac749756ff4c1749056af54bed9441fe))
+-   **@clayui/table:** sets striped by default ([2ee5787](https://github.com/liferay/clay/commit/2ee5787ef5c2bd83aa66632014577a797645081c))
+
 ## [3.106.1](https://github.com/liferay/clay/compare/v3.106.0...v3.106.1) (2023-10-26)
 
 **Note:** Version bump only for package @clayui/table

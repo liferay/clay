@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
+
+### Bug Fixes
+
+-   **@clayui/core:** fix accessibility error for `aria-colindex` value ([931f426](https://github.com/liferay/clay/commit/931f426d24499e8deeb517194d56a60dc4193877))
+-   **@clayui/vertical-nav:** Fix focusable vertica navbar when item has active property equals to false ([aa3078b](https://github.com/liferay/clay/commit/aa3078be54ed2d22f699b1f4736b58e1e84bd0a7))
+
+### Features
+
+-   **@clayui/core:** add new API to define the `size` to table ([23d3384](https://github.com/liferay/clay/commit/23d338487bb1bf034a1d5ac54d54381c54cd3ee6))
+-   **@clayui/core:** add the example of Sections with Table ([0b4bfe4](https://github.com/liferay/clay/commit/0b4bfe4f984272512a0dc29dfbe316fee2c8eb76))
+-   **@clayui/table:** adds the border to the head by default ([fb2cbdb](https://github.com/liferay/clay/commit/fb2cbdb7ac749756ff4c1749056af54bed9441fe))
+
 ## [3.107.1](https://github.com/liferay/clay/compare/v3.107.0...v3.107.1) (2023-11-27)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
+
+### Bug Fixes
+
+-   **@clayui/panel:** Disclosure Pattern to Clay Panel Component ([6ffa238](https://github.com/liferay/clay/commit/6ffa2381da4ef3d6e6a98c30b8fd4841ff0edd63))
+
 # [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
 
 **Note:** Version bump only for package @clayui/panel
