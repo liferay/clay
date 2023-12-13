@@ -19,6 +19,11 @@ type Props = {
 	href?: string;
 
 	/**
+	 * Item value for accessibility.
+	 */
+	textValue?: string;
+
+	/**
 	 * @ignore
 	 */
 	'data-index'?: number;
@@ -41,6 +46,7 @@ export const Item = React.forwardRef<HTMLLIElement, Props>(function ItemInner(
 		keyValue,
 		onClick,
 		style,
+		textValue: _,
 		...otherProps
 	}: Props,
 	ref

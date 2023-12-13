@@ -164,7 +164,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 		),
 		items,
 		suppressTextValueWarning: false,
-		virtualizer: items ? virtualizer : undefined,
+		virtualizer: items && items.length > 70 ? virtualizer : undefined,
 	});
 
 	useOverlayPosition(
