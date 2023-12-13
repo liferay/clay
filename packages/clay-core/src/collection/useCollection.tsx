@@ -53,6 +53,8 @@ export function useCollection<
 	K = unknown
 >({
 	children,
+	connectNested = true,
+	disabledKeys,
 	exclude,
 	filter,
 	filterKey,
@@ -317,12 +319,23 @@ export function useCollection<
 						? (children(publicItem, ...publicApi) as ChildElement)
 						: (children(publicItem) as ChildElement);
 
-					return performItemRender(
-						child,
-						getKey(index, child.key ?? getItemId(item), parentKey),
+					const key = getKey(
 						index,
-						item
+						child.key ?? getItemId(item),
+						parentKey
 					);
+
+					if (
+						disabledKeys &&
+						((Array.isArray(disabledKeys) &&
+							disabledKeys.includes(index)) ||
+							(disabledKeys instanceof Set &&
+								disabledKeys.has(key)))
+					) {
+						return null;
+					}
+
+					return performItemRender(child, key, index, item);
 				});
 			}
 
@@ -331,14 +344,26 @@ export function useCollection<
 					return null;
 				}
 
-				return performItemRender(
-					child as ChildElement,
-					getKey(index, child.key, parentKey),
-					index
-				);
+				const key = getKey(index, child.key, parentKey);
+
+				if (
+					disabledKeys &&
+					((Array.isArray(disabledKeys) &&
+						disabledKeys.includes(index)) ||
+						(disabledKeys instanceof Set && disabledKeys.has(key)))
+				) {
+					return null;
+				}
+
+				return performItemRender(child as ChildElement, key, index);
 			});
 		},
-		[performItemRender, publicApi, virtualizer?.getVirtualItems().length]
+		[
+			performItemRender,
+			publicApi,
+			virtualizer?.getVirtualItems().length,
+			disabledKeys,
+		]
 	);
 
 	const getItem = useCallback((key: React.Key) => {
@@ -371,9 +396,7 @@ export function useCollection<
 		return Array.from(layout.current.keys());
 	}, []);
 
-	const getSize = useCallback(() => {
-		return layout.current.size;
-	}, []);
+	const getSize = useCallback(() => layout.current.size, [collectionId]);
 
 	const cleanUp = useCallback(() => {
 		layout.current.forEach((value, key) => {
@@ -439,7 +462,7 @@ export function useCollection<
 
 	return {
 		UNSAFE_virtualizer: virtualizer,
-		collection: (
+		collection: connectNested ? (
 			<CollectionContext.Provider
 				value={{
 					forceUpdate: forceDeepRootUpdate
@@ -451,6 +474,8 @@ export function useCollection<
 			>
 				{rendered}
 			</CollectionContext.Provider>
+		) : (
+			<>{rendered}</>
 		),
 		getFirstItem,
 		getItem,
