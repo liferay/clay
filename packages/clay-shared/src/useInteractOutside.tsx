@@ -40,7 +40,11 @@ export function useInteractOutside({
 		}
 
 		const onPointerDown = (event: Event) => {
-			if (isValidEvent(event, ref, triggerRef) && state.onInteract) {
+			if (
+				(isValidEvent(event, ref, triggerRef) ||
+					event.view === undefined) &&
+				state.onInteract
+			) {
 				if (onInteractStart) {
 					onInteractStart(event);
 				}
@@ -52,9 +56,10 @@ export function useInteractOutside({
 		if (typeof PointerEvent !== 'undefined') {
 			const onPointerUp = (event: Event) => {
 				if (
-					state.isPointerDown &&
-					state.onInteract &&
-					isValidEvent(event, ref, triggerRef)
+					(state.isPointerDown &&
+						state.onInteract &&
+						isValidEvent(event, ref, triggerRef)) ||
+					(event.type === 'blur' && event.view === undefined)
 				) {
 					state.isPointerDown = false;
 					state.onInteract(event);
@@ -63,6 +68,8 @@ export function useInteractOutside({
 
 			document.addEventListener('pointerdown', onPointerDown, true);
 			document.addEventListener('pointerup', onPointerUp, true);
+			window.addEventListener('blur', onPointerUp, true);
+			window.addEventListener('blur', onPointerDown, true);
 
 			return () => {
 				document.removeEventListener(
@@ -71,6 +78,8 @@ export function useInteractOutside({
 					true
 				);
 				document.removeEventListener('pointerup', onPointerUp, true);
+				window.removeEventListener('blur', onPointerUp, true);
+				window.removeEventListener('blur', onPointerDown, true);
 			};
 		} else {
 			const onMouseUp = (event: Event) => {

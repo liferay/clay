@@ -112,14 +112,13 @@ export function Overlay({
 
 	useInteractOutside({
 		isDisabled: isOpen ? !isCloseOnInteractOutside : true,
-		onInteract: () => {
-			onHide('blur');
-		},
+		onInteract: () => {},
 		onInteractStart: (event) => {
 			if (overlayStack[overlayStack.length - 1] === menuRef && isModal) {
 				event.stopPropagation();
 				event.preventDefault();
 			}
+			onHide('blur');
 		},
 		ref: portalRef ?? menuRef,
 		triggerRef,
