@@ -5,11 +5,12 @@
 
 import {Keys} from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
 import {useFocusWithin} from '../aria';
-import {ChildrenFunction, Collection} from '../collection';
+import {ChildrenFunction, Collection, useCollection} from '../collection';
 import {useForwardRef} from '../hooks';
+import {Cell} from './Cell';
 import {RowContext, useBody, useTable} from './context';
 
 type Props<T> = {
@@ -105,7 +106,15 @@ function RowInner<T extends Record<string, any>>(
 	}: Props<T>,
 	outRef: React.Ref<HTMLTableRowElement>
 ) {
-	const {expandedKeys, onExpandedChange, onLoadMore, treegrid} = useTable();
+	const {
+		columnsVisibility,
+		expandedKeys,
+		headCellsCount,
+		hiddenColumns,
+		onExpandedChange,
+		onLoadMore,
+		treegrid,
+	} = useTable();
 	const {insert} = useBody();
 	const [isFocused, setIsFocused] = useState(false);
 	const focusWithinProps = useFocusWithin({
@@ -143,6 +152,17 @@ function RowInner<T extends Record<string, any>>(
 	}, [insert, keyValue, _expandable, onLoadMore, lazy]);
 
 	const ref = useForwardRef(outRef);
+
+	const disabledKeys = useMemo(
+		() => Array.from(hiddenColumns.values()),
+		[hiddenColumns]
+	);
+
+	const collection = useCollection({
+		children,
+		disabledKeys,
+		items,
+	});
 
 	return (
 		<tr
@@ -212,7 +232,13 @@ function RowInner<T extends Record<string, any>>(
 					loadMore,
 				}}
 			>
-				<Collection items={items}>{children}</Collection>
+				<Collection collection={collection} />
+
+				{columnsVisibility &&
+					!divider &&
+					collection.getSize() === headCellsCount && (
+						<Cell>{null}</Cell>
+					)}
 			</RowContext.Provider>
 		</tr>
 	);

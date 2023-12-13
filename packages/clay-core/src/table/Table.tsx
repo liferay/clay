@@ -6,7 +6,7 @@
 import {sub, useControlledState, useId} from '@clayui/shared';
 import RootTable from '@clayui/table';
 import classNames from 'classnames';
-import React, {useCallback, useRef} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import {FocusWithinProvider} from '../aria';
@@ -19,6 +19,11 @@ import type {AnnouncerAPI} from '../live-announcer';
 
 export type Props = {
 	/**
+	 * Flag to enable column visibility control.
+	 */
+	columnsVisibility?: boolean;
+
+	/**
 	 * Property to set the initial value of `expandedKeys` (uncontrolled).
 	 */
 	defaultExpandedKeys?: Set<React.Key>;
@@ -29,14 +34,25 @@ export type Props = {
 	defaultSort?: Sorting | null;
 
 	/**
+	 * Default value for hidden columns in the table (uncontrolled).
+	 */
+	defaultHiddenColumns?: Map<React.Key, number>;
+
+	/**
 	 * The currently expanded keys in the collection (controlled).
 	 */
 	expandedKeys?: Set<React.Key>;
 
 	/**
+	 * Defines which columns are hidden in the table (controlled).
+	 */
+	hiddenColumns?: Map<React.Key, number>;
+
+	/**
 	 * Texts used for assertive messages to SRs.
 	 */
 	messages?: {
+		columnsVisibility: string;
 		expandable: string;
 		sortDescription: string;
 		sorting: string;
@@ -59,6 +75,11 @@ export type Props = {
 	 * Callback for when the sorting change (controlled).
 	 */
 	onSortChange?: (sorting: Sorting | null) => void;
+
+	/**
+	 * Callback called when columns visibility changes (controlled).
+	 */
+	onHiddenColumnsChange?: (columns: Map<React.Key, number>) => void;
 
 	/**
 	 * Current state of sort (controlled).
@@ -86,17 +107,22 @@ const defaultSet = new Set<React.Key>();
 export const Table = React.forwardRef<HTMLDivElement, Props>(
 	function TableInner(
 		{
+			columnsVisibility = true,
 			children,
 			className,
 			defaultExpandedKeys = defaultSet,
 			defaultSort,
+			defaultHiddenColumns = new Map(),
 			expandedKeys: externalExpandedKeys,
 			messages = {
+				columnsVisibility: 'Manage Columns Visibility',
 				expandable: 'expandable',
 				sortDescription: 'sortable column',
 				sorting: 'sorted by column {0} in {1} order',
 			},
+			hiddenColumns: externalHiddenColumns,
 			onExpandedChange,
+			onHiddenColumnsChange,
 			onLoadMore,
 			onSortChange,
 			size,
@@ -126,6 +152,15 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			value: externalSort,
 		});
 
+		const [hidden, setHidden] = useControlledState({
+			defaultName: 'defaultSort',
+			defaultValue: defaultHiddenColumns,
+			handleName: 'onHiddenColumnsChange',
+			name: 'hiddenColumns',
+			onChange: onHiddenColumnsChange,
+			value: externalHiddenColumns,
+		});
+
 		const ref = useForwardRef(outRef);
 		const announcerAPI = useRef<AnnouncerAPI>(null);
 
@@ -137,6 +172,8 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 
 		const sortDescriptionId = useId();
 
+		const [headCellsCount, setHeadCellsCount] = useState(0);
+
 		return (
 			<RootTable
 				{...otherProps}
@@ -147,6 +184,10 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				})}
 				ref={ref}
 				role={nestedKey ? 'treegrid' : undefined}
+				style={{
+					tableLayout: 'fixed',
+				}}
+				tableVerticalAlignment="middle"
 			>
 				<LiveAnnouncer ref={announcerAPI} />
 
@@ -156,10 +197,28 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				>
 					<TableContext.Provider
 						value={{
+							columnsVisibility,
 							expandedKeys,
+							headCellsCount,
+							hiddenColumns: hidden,
 							messages,
 							nestedKey,
 							onExpandedChange: setExpandedKeys,
+							onHeadCellsChange: setHeadCellsCount,
+							onHiddenColumnsChange: useCallback(
+								(column: React.Key, index: number) => {
+									const columns = new Map(hidden);
+
+									if (columns.has(column)) {
+										columns.delete(column);
+									} else {
+										columns.set(column, index);
+									}
+
+									setHidden(columns);
+								},
+								[setHidden, hidden]
+							),
 							onLoadMore,
 							onSortChange: useCallback(
 								(sort, textValue) => {

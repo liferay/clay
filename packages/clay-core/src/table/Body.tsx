@@ -126,6 +126,7 @@ function BodyInner<T extends Record<string, any>>(
 			<ScopeContext.Provider value={Scope.Body}>
 				<BodyContext.Provider value={{insert}}>
 					<Collection<T>
+						connectNested={false}
 						itemContainer={useCallback(
 							({children, item, keyValue}: ItemProps<any>) =>
 								item
