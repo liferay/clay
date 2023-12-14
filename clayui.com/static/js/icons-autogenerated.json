@@ -1,5 +1,13 @@
 [
     {
+        "name": "union 5",
+        "aliases": [""]
+    },
+    {
+        "name": "vector 1",
+        "aliases": [""]
+    },
+    {
         "name": "accessibility",
         "aliases": ["human", "inclusive", "user"]
     },
@@ -92,6 +100,10 @@
         "aliases": ["arrow", "chevron"]
     },
     {
+        "name": "angle-right-1",
+        "aliases": ["arrow", "chevron"]
+    },
+    {
         "name": "angle-right-small",
         "aliases": ["arrow", "chevron"]
     },
@@ -128,6 +140,10 @@
         "aliases": ["box", "stock"]
     },
     {
+        "name": "arrow-down",
+        "aliases": ["down", "workflow"]
+    },
+    {
         "name": "arrow-end",
         "aliases": ["right", "stop", "workflow"]
     },
@@ -140,6 +156,10 @@
         "aliases": [""]
     },
     {
+        "name": "arrow-right",
+        "aliases": ["right", "workflow"]
+    },
+    {
         "name": "arrow-split",
         "aliases": ["down", "fork", "workflow"]
     },
@@ -148,8 +168,16 @@
         "aliases": ["right", "workflow"]
     },
     {
+        "name": "arrow-up-1",
+        "aliases": ["up", "workflow"]
+    },
+    {
         "name": "arrow-up-full",
         "aliases": ["circle", "upload", "workflow"]
+    },
+    {
+        "name": "arrow-up",
+        "aliases": ["up", "workflow"]
     },
     {
         "name": "arrow-xor",
@@ -640,6 +668,10 @@
         "aliases": ["field", "area"]
     },
     {
+        "name": "field",
+        "aliases": ["field"]
+    },
+    {
         "name": "fieldset",
         "aliases": [""]
     },
@@ -784,6 +816,10 @@
         "aliases": ["line", "minus", "rectangle"]
     },
     {
+        "name": "icon-relationship",
+        "aliases": ["icon", "relationship"]
+    },
+    {
         "name": "import-export",
         "aliases": ["deprecated"]
     },
@@ -876,8 +912,16 @@
         "aliases": ["access", "close", "multiple", "security"]
     },
     {
+        "name": "lock-wireless",
+        "aliases": ["access", "close", "multiple", "security", "wireless"]
+    },
+    {
         "name": "lock",
         "aliases": ["access", "close", "security"]
+    },
+    {
+        "name": "login-multiple",
+        "aliases": ["log in", "off", "on", "sign", "sign out", "turn"]
     },
     {
         "name": "logout",
@@ -952,6 +996,10 @@
         "aliases": ["arrows", "change", "position"]
     },
     {
+        "name": "multiple-upload",
+        "aliases": ["upload", "file"]
+    },
+    {
         "name": "myspace",
         "aliases": ["social"]
     },
@@ -977,7 +1025,7 @@
     },
     {
         "name": "open-id",
-        "aliases": [""]
+        "aliases": ["openid"]
     },
     {
         "name": "order-arrow-down",
@@ -1032,12 +1080,20 @@
         "aliases": [""]
     },
     {
+        "name": "order-pencil",
+        "aliases": ["commerce", "details"]
+    },
+    {
         "name": "organizations",
         "aliases": ["connection", "multiple", "structure"]
     },
     {
         "name": "page-template",
         "aliases": ["layout", "paper"]
+    },
+    {
+        "name": "page-tree",
+        "aliases": ["page", "version"]
     },
     {
         "name": "page",
@@ -1132,6 +1188,10 @@
         "aliases": ["paper"]
     },
     {
+        "name": "product-menu-2",
+        "aliases": ["list", "navigation", "sidebar"]
+    },
+    {
         "name": "product-menu-closed",
         "aliases": ["list", "navigation", "sidebar"]
     },
@@ -1170,6 +1230,10 @@
     {
         "name": "react",
         "aliases": [""]
+    },
+    {
+        "name": "rectangle-full",
+        "aliases": ["split-full"]
     },
     {
         "name": "rectangle-split",
@@ -1249,7 +1313,7 @@
     },
     {
         "name": "select-all",
-        "aliases": [""]
+        "aliases": ["input", "multiple", "options"]
     },
     {
         "name": "select-from-list",
@@ -1286,6 +1350,14 @@
     {
         "name": "shopping-cart",
         "aliases": ["buy", "commerce"]
+    },
+    {
+        "name": "short-down",
+        "aliases": ["arrow", "down"]
+    },
+    {
+        "name": "short-up",
+        "aliases": ["arrow", "up"]
     },
     {
         "name": "shortcut",
@@ -1408,6 +1480,10 @@
         "aliases": ["editor", "style", "text"]
     },
     {
+        "name": "subtract",
+        "aliases": ["subtract"]
+    },
+    {
         "name": "suitcase",
         "aliases": ["business"]
     },
@@ -1452,12 +1528,20 @@
         "aliases": ["experiment", "lab"]
     },
     {
+        "name": "text-box",
+        "aliases": ["a", "editor"]
+    },
+    {
         "name": "text-color",
         "aliases": [""]
     },
     {
         "name": "text-editor",
         "aliases": ["style"]
+    },
+    {
+        "name": "text-ellipsis",
+        "aliases": ["dots", "horizontal", "menu", "more"]
     },
     {
         "name": "text-l",
@@ -1498,6 +1582,10 @@
     {
         "name": "thumbs-up",
         "aliases": ["like", "social"]
+    },
+    {
+        "name": "thunder",
+        "aliases": ["thunder"]
     },
     {
         "name": "time",
@@ -1601,6 +1689,10 @@
     },
     {
         "name": "warning-full",
+        "aliases": ["alert", "attention", "exclamation", "validation"]
+    },
+    {
+        "name": "warning-open",
         "aliases": ["alert", "attention", "exclamation", "validation"]
     },
     {
