@@ -53,6 +53,8 @@ export type Props = {
 	 */
 	messages?: {
 		columnsVisibility: string;
+		columnsVisibilityDescription: string;
+		columnsVisibilityHeader: string;
 		expandable: string;
 		sortDescription: string;
 		sorting: string;
@@ -116,6 +118,9 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			expandedKeys: externalExpandedKeys,
 			messages = {
 				columnsVisibility: 'Manage Columns Visibility',
+				columnsVisibilityDescription:
+					'At least one column must remain visible.',
+				columnsVisibilityHeader: 'Columns Visibility',
 				expandable: 'expandable',
 				sortDescription: 'sortable column',
 				sorting: 'sorted by column {0} in {1} order',

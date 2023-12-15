@@ -15,6 +15,27 @@ import {Cell} from './Cell';
 import {Scope, ScopeContext} from './ScopeContext';
 import {useTable} from './context';
 
+type HeaderProps = {
+	name: string;
+	description: string;
+};
+
+const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
+	function HeaderInner({description, name}: HeaderProps, ref) {
+		return (
+			<li key={name} ref={ref} role="presentation">
+				<div className="dropdown-subheader mb-0">
+					{name.toUpperCase()}
+				</div>
+				<div className="dropdown-section py-0 text-secondary">
+					{description}
+				</div>
+				<div className="dropdown-divider" />
+			</li>
+		);
+	}
+);
+
 type Props<T> = {
 	/**
 	 * Children content to render a dynamic or static content.
@@ -60,7 +81,18 @@ function HeadInner<T extends Record<string, any>>(
 					{columnsVisibility && (
 						<Cell keyValue="visibility" width="72px">
 							<Menu
-								items={collection.getItems()}
+								items={[
+									{
+										description:
+											messages[
+												'columnsVisibilityDescription'
+											]!,
+										name: messages[
+											'columnsVisibilityHeader'
+										]!,
+									},
+									...collection.getItems(),
+								]}
 								trigger={
 									<Button
 										aria-label={
@@ -74,42 +106,54 @@ function HeadInner<T extends Record<string, any>>(
 									</Button>
 								}
 							>
-								{(item) => (
-									<Item
-										key={item}
-										textValue={
-											collection.getItem(item).value
-										}
-									>
-										<Layout.ContentRow>
-											<Layout.ContentCol expand>
-												{collection.getItem(item).value}
-											</Layout.ContentCol>
-											<Layout.ContentCol>
-												<Toggle
-													disabled={
-														!hiddenColumns.has(
-															item
-														) &&
-														headCellsCount - 1 ===
-															hiddenColumns.size
+								{(item) =>
+									typeof item === 'object' ? (
+										<Header
+											description={item.description}
+											key={item.name}
+											name={item.name}
+										/>
+									) : (
+										<Item
+											key={item}
+											textValue={
+												collection.getItem(item).value
+											}
+										>
+											<Layout.ContentRow>
+												<Layout.ContentCol expand>
+													{
+														collection.getItem(item)
+															.value
 													}
-													onToggle={() =>
-														onHiddenColumnsChange(
-															item,
-															collection.getItem(
+												</Layout.ContentCol>
+												<Layout.ContentCol>
+													<Toggle
+														disabled={
+															!hiddenColumns.has(
 																item
-															).index
-														)
-													}
-													toggled={hiddenColumns.has(
-														item
-													)}
-												/>
-											</Layout.ContentCol>
-										</Layout.ContentRow>
-									</Item>
-								)}
+															) &&
+															headCellsCount -
+																1 ===
+																hiddenColumns.size
+														}
+														onToggle={() =>
+															onHiddenColumnsChange(
+																item,
+																collection.getItem(
+																	item
+																).index
+															)
+														}
+														toggled={hiddenColumns.has(
+															item
+														)}
+													/>
+												</Layout.ContentCol>
+											</Layout.ContentRow>
+										</Item>
+									)
+								}
 							</Menu>
 						</Cell>
 					)}
