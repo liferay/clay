@@ -48,6 +48,12 @@ export function useInteractOutside({
 			}
 		};
 
+		const onBlur = (event: Event) => {
+			if (state.onInteract && (event as any).view === undefined) {
+				state.onInteract(event);
+			}
+		};
+
 		// Use pointer events if available. Otherwise, fall back to mouse and touch events.
 		if (typeof PointerEvent !== 'undefined') {
 			const onPointerUp = (event: Event) => {
@@ -63,6 +69,7 @@ export function useInteractOutside({
 
 			document.addEventListener('pointerdown', onPointerDown, true);
 			document.addEventListener('pointerup', onPointerUp, true);
+			window.addEventListener('blur', onBlur, true);
 
 			return () => {
 				document.removeEventListener(
@@ -71,6 +78,7 @@ export function useInteractOutside({
 					true
 				);
 				document.removeEventListener('pointerup', onPointerUp, true);
+				window.removeEventListener('blur', onBlur, true);
 			};
 		} else {
 			const onMouseUp = (event: Event) => {
@@ -103,12 +111,14 @@ export function useInteractOutside({
 			document.addEventListener('mouseup', onMouseUp, true);
 			document.addEventListener('touchstart', onPointerDown, true);
 			document.addEventListener('touchend', onTouchEnd, true);
+			window.addEventListener('blur', onBlur, true);
 
 			return () => {
 				document.removeEventListener('mousedown', onPointerDown, true);
 				document.removeEventListener('mouseup', onMouseUp, true);
 				document.removeEventListener('touchstart', onPointerDown, true);
 				document.removeEventListener('touchend', onTouchEnd, true);
+				window.removeEventListener('blur', onBlur, true);
 			};
 		}
 	}, [ref, state, isDisabled]);
