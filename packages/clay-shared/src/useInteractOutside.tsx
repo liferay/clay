@@ -40,11 +40,7 @@ export function useInteractOutside({
 		}
 
 		const onPointerDown = (event: Event) => {
-			if (
-				(isValidEvent(event, ref, triggerRef) ||
-					event.view === undefined) &&
-				state.onInteract
-			) {
+			if (isValidEvent(event, ref, triggerRef) && state.onInteract) {
 				if (onInteractStart) {
 					onInteractStart(event);
 				}
@@ -52,14 +48,19 @@ export function useInteractOutside({
 			}
 		};
 
+		const onBlur = (event: Event) => {
+			if (state.onInteract && (event as any).view === undefined) {
+				state.onInteract(event);
+			}
+		};
+
 		// Use pointer events if available. Otherwise, fall back to mouse and touch events.
 		if (typeof PointerEvent !== 'undefined') {
 			const onPointerUp = (event: Event) => {
 				if (
-					(state.isPointerDown &&
-						state.onInteract &&
-						isValidEvent(event, ref, triggerRef)) ||
-					(event.type === 'blur' && event.view === undefined)
+					state.isPointerDown &&
+					state.onInteract &&
+					isValidEvent(event, ref, triggerRef)
 				) {
 					state.isPointerDown = false;
 					state.onInteract(event);
@@ -68,8 +69,7 @@ export function useInteractOutside({
 
 			document.addEventListener('pointerdown', onPointerDown, true);
 			document.addEventListener('pointerup', onPointerUp, true);
-			window.addEventListener('blur', onPointerUp, true);
-			window.addEventListener('blur', onPointerDown, true);
+			window.addEventListener('blur', onBlur, true);
 
 			return () => {
 				document.removeEventListener(
@@ -78,8 +78,7 @@ export function useInteractOutside({
 					true
 				);
 				document.removeEventListener('pointerup', onPointerUp, true);
-				window.removeEventListener('blur', onPointerUp, true);
-				window.removeEventListener('blur', onPointerDown, true);
+				window.removeEventListener('blur', onBlur, true);
 			};
 		} else {
 			const onMouseUp = (event: Event) => {
@@ -112,12 +111,14 @@ export function useInteractOutside({
 			document.addEventListener('mouseup', onMouseUp, true);
 			document.addEventListener('touchstart', onPointerDown, true);
 			document.addEventListener('touchend', onTouchEnd, true);
+			window.addEventListener('blur', onBlur, true);
 
 			return () => {
 				document.removeEventListener('mousedown', onPointerDown, true);
 				document.removeEventListener('mouseup', onMouseUp, true);
 				document.removeEventListener('touchstart', onPointerDown, true);
 				document.removeEventListener('touchend', onTouchEnd, true);
+				window.removeEventListener('blur', onBlur, true);
 			};
 		}
 	}, [ref, state, isDisabled]);
