@@ -237,7 +237,12 @@ function RowInner<T extends Record<string, any>>(
 				{columnsVisibility &&
 					!divider &&
 					collection.getSize() === headCellsCount && (
-						<Cell>{null}</Cell>
+						<Cell
+							index={headCellsCount}
+							keyValue={`${keyValue}:visibility`}
+						>
+							{null}
+						</Cell>
 					)}
 			</RowContext.Provider>
 		</tr>
