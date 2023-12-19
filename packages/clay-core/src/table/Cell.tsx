@@ -168,6 +168,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					'table-cell-ws-nowrap': !wrap,
 					'table-focus': focusWithinProps.tabIndex === 0 && isFocused,
 					'table-head-title': isHead,
+					'table-sort': isHead && sortable,
 				})}
 				colSpan={
 					divider
@@ -219,17 +220,13 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 							</span>
 						</Layout.ContentCol>
 						<Layout.ContentCol>
-							<Button
-								aria-label=""
+							<span
 								className="component-action"
-								displayType="unstyled"
-								monospaced
 								role="presentation"
-								size="xs"
 								tabIndex={-1}
 							>
 								<Icon symbol="order-arrow" />
-							</Button>
+							</span>
 						</Layout.ContentCol>
 					</Layout.ContentRow>
 				) : truncate ? (

@@ -327,43 +327,91 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="1"
             aria-describedby="clay-id-17"
             aria-sort="none"
-            class="table-head-title"
+            class="table-head-title table-sort"
             data-id="string,name"
             style="width: auto;"
             tabindex="-1"
           >
-            <a
-              class="inline-item text-truncate-inline"
-              href="#"
-              role="presentation"
+            <div
+              class="autofit-row"
             >
-              <span
-                class="text-truncate"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Name
-              </span>
-            </a>
+                <span
+                  class="text-truncate-inline"
+                >
+                  <span
+                    class="text-truncate"
+                  >
+                    Name
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <span
+                  class="component-action"
+                  role="presentation"
+                  tabindex="-1"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-order-arrow"
+                    role="presentation"
+                  >
+                    <use
+                      href="#order-arrow"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
           </th>
           <th
             aria-colindex="2"
             aria-describedby="clay-id-17"
             aria-sort="none"
-            class="table-head-title"
+            class="table-head-title table-sort"
             data-id="string,type"
             style="width: auto;"
             tabindex="-1"
           >
-            <a
-              class="inline-item text-truncate-inline"
-              href="#"
-              role="presentation"
+            <div
+              class="autofit-row"
             >
-              <span
-                class="text-truncate"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Type
-              </span>
-            </a>
+                <span
+                  class="text-truncate-inline"
+                >
+                  <span
+                    class="text-truncate"
+                  >
+                    Type
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <span
+                  class="component-action"
+                  role="presentation"
+                  tabindex="-1"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-order-arrow"
+                    role="presentation"
+                  >
+                    <use
+                      href="#order-arrow"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
           </th>
           <th
             class="table-head-title"
