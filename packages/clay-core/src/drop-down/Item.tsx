@@ -57,6 +57,7 @@ export const Item = React.forwardRef<HTMLLIElement, Props>(function ItemInner(
 				data-focus={keyValue}
 				disabled={disabled}
 				href={href}
+				onClick={onClick}
 				tabIndex={-1}
 			>
 				{children}
