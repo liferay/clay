@@ -145,16 +145,34 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			[expandedKeys, onExpandedChange]
 		);
 
+		const doSort = useCallback(
+			() =>
+				onSortChange(
+					{
+						column: keyValue!,
+						direction:
+							sort && keyValue === sort.column
+								? sort.direction === 'ascending'
+									? 'descending'
+									: 'ascending'
+								: 'ascending',
+					},
+					textValue!
+				),
+			[onSortChange, keyValue, sort]
+		);
+
+		const isExpandable = (expandable || lazy) && !isLoading;
+		const isSortable = isHead && sortable;
+
 		return (
 			<As
 				{...otherProps}
 				{...focusWithinProps}
 				aria-colindex={isHead && !sortable ? undefined : index! + 1}
-				aria-describedby={
-					isHead && sortable ? sortDescriptionId : undefined
-				}
+				aria-describedby={isSortable ? sortDescriptionId : undefined}
 				aria-sort={
-					isHead && sortable
+					isSortable
 						? sort && keyValue === sort.column
 							? sort.direction
 							: 'none'
@@ -168,7 +186,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					'table-cell-ws-nowrap': !wrap,
 					'table-focus': focusWithinProps.tabIndex === 0 && isFocused,
 					'table-head-title': isHead,
-					'table-sort': isHead && sortable,
+					'table-sort': isSortable,
 				})}
 				colSpan={
 					divider
@@ -181,27 +199,23 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						: `string,${keyValue}`
 				}
 				onClick={(event) => {
-					if (!(isHead && sortable)) {
+					if (!isSortable) {
 						return;
 					}
 
 					event.preventDefault();
-					onSortChange(
-						{
-							column: keyValue!,
-							direction:
-								sort && keyValue === sort.column
-									? sort.direction === 'ascending'
-										? 'descending'
-										: 'ascending'
-									: 'ascending',
-						},
-						textValue!
-					);
+					doSort();
 				}}
 				onKeyDown={(event) => {
 					if (event.key === Keys.Enter) {
-						toggle(key!);
+						if (isSortable) {
+							event.preventDefault();
+							doSort();
+						}
+
+						if (treegrid && isExpandable) {
+							toggle(key!);
+						}
 					}
 				}}
 				ref={ref}
@@ -209,8 +223,11 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 				style={{
 					width,
 				}}
+				tabIndex={
+					treegrid || !isSortable ? focusWithinProps.tabIndex : 1
+				}
 			>
-				{isHead && sortable ? (
+				{isSortable ? (
 					<Layout.ContentRow>
 						<Layout.ContentCol expand>
 							<span className="text-truncate-inline">
@@ -241,7 +258,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 								(expandable || lazy ? 4 : 0),
 						}}
 					>
-						{(expandable || lazy) && !isLoading && (
+						{isExpandable && (
 							<Layout.ContentCol className="autofit-col-toggle">
 								<Button
 									aria-label={messages['expandable']}

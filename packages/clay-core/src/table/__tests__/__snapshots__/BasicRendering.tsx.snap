@@ -330,7 +330,6 @@ exports[`Table basic rendering render with sort column 1`] = `
             class="table-head-title table-sort"
             data-id="string,name"
             style="width: auto;"
-            tabindex="-1"
           >
             <div
               class="autofit-row"
@@ -374,8 +373,12 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-sort="none"
             class="table-head-title table-sort"
             data-id="string,type"
+<<<<<<< HEAD
             style="width: auto;"
             tabindex="-1"
+=======
+            tabindex="1"
+>>>>>>> 268cb8f02 (fix(@clayui/core): fixes error when not navigating through the head with sortable enabled and fixes error when expanding unnecessarily)
           >
             <div
               class="autofit-row"
