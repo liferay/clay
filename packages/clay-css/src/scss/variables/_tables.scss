@@ -322,6 +322,9 @@ $c-table: map-deep-merge(
 				color: $table-disabled-color,
 			),
 		),
+		table-sort: (
+			color: $gray-900,
+		),
 		autofit-col: (
 			justify-content: center,
 			padding-left: nth($table-cell-padding, 2),

@@ -369,6 +369,15 @@
 				}
 			}
 
+			.table-sort[aria-sort='ascending']
+				.lexicon-icon
+				.order-arrow-arrow-up,
+			.table-sort[aria-sort='descending']
+				.lexicon-icon
+				.order-arrow-arrow-down {
+				@include clay-css(map-get($map, table-sort));
+			}
+
 			.autofit-col {
 				@include clay-css(map-get($map, autofit-col));
 
