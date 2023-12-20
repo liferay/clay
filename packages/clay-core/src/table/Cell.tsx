@@ -71,6 +71,11 @@ type Props = {
 	wrap?: boolean;
 
 	/**
+	 * Sets the column width.
+	 */
+	width?: string;
+
+	/**
 	 * Sets a text value if the component's content is not plain text.
 	 */
 	textValue?: string;
@@ -91,13 +96,16 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			textAlign,
 			textValue,
 			truncate,
+			width = 'auto',
 			wrap = true,
 			...otherProps
 		},
 		ref
 	) {
 		const {
+			columnsVisibility,
 			expandedKeys,
+			headCellsCount,
 			messages,
 			onExpandedChange,
 			onSortChange,
@@ -161,7 +169,11 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					'table-focus': focusWithinProps.tabIndex === 0 && isFocused,
 					'table-head-title': isHead,
 				})}
-				colSpan={divider ? 9 : undefined}
+				colSpan={
+					divider
+						? headCellsCount + (columnsVisibility ? 1 : 0)
+						: undefined
+				}
 				data-id={
 					typeof keyValue === 'number'
 						? `number,${keyValue}`
@@ -193,6 +205,9 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 				}}
 				ref={ref}
 				role={treegrid ? 'gridcell' : undefined}
+				style={{
+					width,
+				}}
 			>
 				{isHead && sortable ? (
 					<a

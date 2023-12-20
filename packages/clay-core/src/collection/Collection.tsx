@@ -53,6 +53,7 @@ function VirtualDynamicCollection<
 >({
 	as,
 	children,
+	connectNested,
 	estimateSize = 37,
 	exclude,
 	filter,
@@ -75,6 +76,7 @@ function VirtualDynamicCollection<
 
 	const state = useCollection({
 		children,
+		connectNested,
 		exclude,
 		filter,
 		filterKey,
@@ -108,6 +110,7 @@ function DynamicCollection<
 	K = unknown
 >({
 	children,
+	connectNested,
 	exclude,
 	filter,
 	filterKey,
@@ -120,6 +123,7 @@ function DynamicCollection<
 }: ICollectionProps<T, P> & Props<P, K>) {
 	const state = useCollection({
 		children,
+		connectNested,
 		exclude,
 		filter,
 		filterKey,
@@ -142,6 +146,7 @@ export function Collection<
 	as,
 	children,
 	collection,
+	connectNested,
 	estimateSize,
 	exclude,
 	filter,
@@ -202,6 +207,7 @@ export function Collection<
 			<VirtualDynamicCollection
 				{...otherProps}
 				as={as}
+				connectNested={connectNested}
 				estimateSize={estimateSize}
 				itemContainer={itemContainer}
 				items={items}
@@ -217,6 +223,7 @@ export function Collection<
 	} else {
 		content = (
 			<DynamicCollection
+				connectNested={connectNested}
 				exclude={exclude}
 				filter={filter}
 				filterKey={filterKey}

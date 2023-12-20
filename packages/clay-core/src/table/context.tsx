@@ -11,12 +11,17 @@ export type Sorting = {
 };
 
 type Context = {
+	columnsVisibility: boolean;
 	expandedKeys: Set<React.Key>;
+	headCellsCount: number;
+	hiddenColumns: Map<React.Key, number>;
 	messages: Record<string, string>;
 	nestedKey?: string;
 	onExpandedChange: (keys: Set<React.Key>) => void;
+	onHeadCellsChange: (value: number) => void;
 	onLoadMore?: (item: unknown) => Promise<Array<any> | undefined>;
 	onSortChange: (sorting: Sorting | null, textValue: string) => void;
+	onHiddenColumnsChange: (column: React.Key, index: number) => void;
 	sort: Sorting | null;
 	sortDescriptionId: string;
 	treegrid: boolean;

@@ -45,6 +45,7 @@ export type CollectionState = {
 	getFirstItem: () => {key: React.Key; value: string; index: number};
 	getItem: (key: React.Key) => {value: string; index: number};
 	getItems: () => Array<React.Key>;
+	getSize: () => number;
 	getLastItem: () => {key: React.Key; value: string; index: number};
 	hasItem: (key: React.Key) => boolean;
 	size?: number;
@@ -52,6 +53,18 @@ export type CollectionState = {
 };
 
 export type Props<P, K> = {
+	/**
+	 * Flag to enable all nested collections to share the same data.
+	 */
+	connectNested?: boolean;
+
+	/**
+	 * Flag to not render items in the DOM but it does not affect the layout
+	 * record, for example when obtaining all items from the collection it
+	 * will still be there.
+	 */
+	disabledKeys?: Set<React.Key> | Array<number>;
+
 	/**
 	 * Properties that should be omitted from item data when passed to
 	 * children function.

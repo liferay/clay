@@ -6,13 +6,15 @@ exports[`Table basic rendering render dynamic content 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped table-valign-middle"
+      style="table-layout: fixed;"
     >
       <thead>
         <tr>
           <th
             class="table-head-title"
             data-id="string,name"
+            style="width: auto;"
             tabindex="-1"
           >
             Name
@@ -20,9 +22,37 @@ exports[`Table basic rendering render dynamic content 1`] = `
           <th
             class="table-head-title"
             data-id="string,type"
+            style="width: auto;"
             tabindex="-1"
           >
             Type
+          </th>
+          <th
+            class="table-head-title"
+            data-id="string,visibility"
+            style="width: 72px;"
+            tabindex="-1"
+          >
+            <div
+              class="dropdown"
+            >
+              <button
+                aria-controls="clay-id-12"
+                aria-haspopup="true"
+                aria-label="Manage Columns Visibility"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-bottom"
+                  role="presentation"
+                >
+                  <use
+                    href="#caret-bottom"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
@@ -36,6 +66,7 @@ exports[`Table basic rendering render dynamic content 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,name"
+            style="width: auto;"
             tabindex="-1"
           >
             Foo
@@ -44,10 +75,18 @@ exports[`Table basic rendering render dynamic content 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,type"
+            style="width: auto;"
             tabindex="-1"
           >
             Foo
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,1:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           class=""
@@ -58,6 +97,7 @@ exports[`Table basic rendering render dynamic content 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,name"
+            style="width: auto;"
             tabindex="-1"
           >
             Bar
@@ -66,10 +106,18 @@ exports[`Table basic rendering render dynamic content 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,type"
+            style="width: auto;"
             tabindex="-1"
           >
             Bar
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,2:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           class=""
@@ -80,6 +128,7 @@ exports[`Table basic rendering render dynamic content 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,name"
+            style="width: auto;"
             tabindex="-1"
           >
             Baz
@@ -88,10 +137,18 @@ exports[`Table basic rendering render dynamic content 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,type"
+            style="width: auto;"
             tabindex="-1"
           >
             Baz
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,3:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
       </tbody>
     </table>
@@ -105,13 +162,15 @@ exports[`Table basic rendering render static content 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped table-valign-middle"
+      style="table-layout: fixed;"
     >
       <thead>
         <tr>
           <th
             class="table-head-title"
             data-id="string,name"
+            style="width: auto;"
             tabindex="-1"
           >
             Name
@@ -119,9 +178,37 @@ exports[`Table basic rendering render static content 1`] = `
           <th
             class="table-head-title"
             data-id="string,type"
+            style="width: auto;"
             tabindex="-1"
           >
             Type
+          </th>
+          <th
+            class="table-head-title"
+            data-id="string,visibility"
+            style="width: 72px;"
+            tabindex="-1"
+          >
+            <div
+              class="dropdown"
+            >
+              <button
+                aria-controls="clay-id-4"
+                aria-haspopup="true"
+                aria-label="Manage Columns Visibility"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-bottom"
+                  role="presentation"
+                >
+                  <use
+                    href="#caret-bottom"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
@@ -135,6 +222,7 @@ exports[`Table basic rendering render static content 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,$.0"
+            style="width: auto;"
             tabindex="-1"
           >
             Foo
@@ -143,10 +231,18 @@ exports[`Table basic rendering render static content 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,$.1"
+            style="width: auto;"
             tabindex="-1"
           >
             Foo
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,undefined:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           class=""
@@ -157,6 +253,7 @@ exports[`Table basic rendering render static content 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,$.0"
+            style="width: auto;"
             tabindex="-1"
           >
             Bar
@@ -165,10 +262,18 @@ exports[`Table basic rendering render static content 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,$.1"
+            style="width: auto;"
             tabindex="-1"
           >
             Bar
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,undefined:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           class=""
@@ -179,6 +284,7 @@ exports[`Table basic rendering render static content 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,$.0"
+            style="width: auto;"
             tabindex="-1"
           >
             Baz
@@ -187,10 +293,18 @@ exports[`Table basic rendering render static content 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,$.1"
+            style="width: auto;"
             tabindex="-1"
           >
             Baz
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,undefined:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
       </tbody>
     </table>
@@ -204,16 +318,18 @@ exports[`Table basic rendering render with sort column 1`] = `
     class="table-responsive"
   >
     <table
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped table-valign-middle"
+      style="table-layout: fixed;"
     >
       <thead>
         <tr>
           <th
             aria-colindex="1"
-            aria-describedby="clay-id-13"
+            aria-describedby="clay-id-17"
             aria-sort="none"
             class="table-head-title"
             data-id="string,name"
+            style="width: auto;"
             tabindex="-1"
           >
             <a
@@ -230,10 +346,11 @@ exports[`Table basic rendering render with sort column 1`] = `
           </th>
           <th
             aria-colindex="2"
-            aria-describedby="clay-id-13"
+            aria-describedby="clay-id-17"
             aria-sort="none"
             class="table-head-title"
             data-id="string,type"
+            style="width: auto;"
             tabindex="-1"
           >
             <a
@@ -248,6 +365,33 @@ exports[`Table basic rendering render with sort column 1`] = `
               </span>
             </a>
           </th>
+          <th
+            class="table-head-title"
+            data-id="string,visibility"
+            style="width: 72px;"
+            tabindex="-1"
+          >
+            <div
+              class="dropdown"
+            >
+              <button
+                aria-controls="clay-id-20"
+                aria-haspopup="true"
+                aria-label="Manage Columns Visibility"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-bottom"
+                  role="presentation"
+                >
+                  <use
+                    href="#caret-bottom"
+                  />
+                </svg>
+              </button>
+            </div>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -260,6 +404,7 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,$.0"
+            style="width: auto;"
             tabindex="-1"
           >
             Foo
@@ -268,10 +413,18 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,$.1"
+            style="width: auto;"
             tabindex="-1"
           >
             Foo
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,undefined:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           class=""
@@ -282,6 +435,7 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,$.0"
+            style="width: auto;"
             tabindex="-1"
           >
             Bar
@@ -290,10 +444,18 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,$.1"
+            style="width: auto;"
             tabindex="-1"
           >
             Bar
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,undefined:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           class=""
@@ -304,6 +466,7 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="1"
             class=""
             data-id="string,$.0"
+            style="width: auto;"
             tabindex="-1"
           >
             Baz
@@ -312,10 +475,18 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="2"
             class=""
             data-id="string,$.1"
+            style="width: auto;"
             tabindex="-1"
           >
             Baz
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,undefined:visibility"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
       </tbody>
     </table>
@@ -330,8 +501,9 @@ exports[`Table basic rendering render with treegrid 1`] = `
   >
     <table
       aria-label="File Explorer"
-      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped table-nested-rows"
+      class="table table-autofit show-quick-actions-on-hover table-hover table-list table-head-bordered table-striped table-valign-middle table-nested-rows"
       role="treegrid"
+      style="table-layout: fixed;"
     >
       <thead>
         <tr>
@@ -339,6 +511,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class="table-head-title"
             data-id="string,name"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             Name
@@ -347,9 +520,38 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class="table-head-title"
             data-id="string,type"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             Type
+          </th>
+          <th
+            class="table-head-title"
+            data-id="string,visibility"
+            role="gridcell"
+            style="width: 72px;"
+            tabindex="-1"
+          >
+            <div
+              class="dropdown"
+            >
+              <button
+                aria-controls="clay-id-28"
+                aria-haspopup="true"
+                aria-label="Manage Columns Visibility"
+                class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                type="button"
+              >
+                <svg
+                  class="lexicon-icon lexicon-icon-caret-bottom"
+                  role="presentation"
+                >
+                  <use
+                    href="#caret-bottom"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
@@ -368,6 +570,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class=""
             data-id="string,1:name"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             <div
@@ -386,10 +589,19 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class=""
             data-id="string,1:type"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             Folder
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,1:visibility"
+            role="gridcell"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           aria-expanded="false"
@@ -406,6 +618,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class=""
             data-id="string,2:name"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             <div
@@ -443,10 +656,19 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class=""
             data-id="string,2:type"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             Folder
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,2:visibility"
+            role="gridcell"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
         <tr
           aria-level="1"
@@ -462,6 +684,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class=""
             data-id="string,10:name"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             <div
@@ -480,10 +703,19 @@ exports[`Table basic rendering render with treegrid 1`] = `
             class=""
             data-id="string,10:type"
             role="gridcell"
+            style="width: auto;"
             tabindex="-1"
           >
             Folder
           </td>
+          <td
+            aria-colindex="3"
+            class=""
+            data-id="string,10:visibility"
+            role="gridcell"
+            style="width: auto;"
+            tabindex="-1"
+          />
         </tr>
       </tbody>
     </table>

@@ -37,7 +37,7 @@ const itemsTree = [
 	},
 ];
 
-describe('Picker incremental interactions', () => {
+describe('Table incremental interactions', () => {
 	afterEach(cleanup);
 
 	it('clicking on the column does the sorting', () => {
@@ -84,7 +84,7 @@ describe('Picker incremental interactions', () => {
 						)}
 					</Head>
 
-					<Body items={items}>
+					<Body defaultItems={items}>
 						{(row) => (
 							<Row items={columns}>
 								{/** @ts-ignore */}
@@ -103,7 +103,7 @@ describe('Picker incremental interactions', () => {
 		expect(name!.getAttribute('aria-sort')).toBe('none');
 		expect(type!.getAttribute('aria-sort')).toBe('none');
 
-		const [row1Col1, , row2Col1, , row3Col1] = getAllByRole('cell');
+		const [row1Col1, , , row2Col1, , , row3Col1] = getAllByRole('cell');
 
 		expect(row1Col1!.textContent).toBe('Foo');
 		expect(row2Col1!.textContent).toBe('Bar');
@@ -114,7 +114,7 @@ describe('Picker incremental interactions', () => {
 		expect(name!.getAttribute('aria-sort')).toBe('ascending');
 		expect(type!.getAttribute('aria-sort')).toBe('none');
 
-		const [newRow1Col1, , newRow2Col1, , newRow3Col1] =
+		const [newRow1Col1, , , newRow2Col1, , , newRow3Col1] =
 			getAllByRole('cell');
 
 		expect(newRow1Col1!.textContent).toBe('Bar');
@@ -166,7 +166,7 @@ describe('Picker incremental interactions', () => {
 						)}
 					</Head>
 
-					<Body items={filteredItems}>
+					<Body defaultItems={filteredItems}>
 						{(row) => (
 							<Row items={columns}>
 								{/** @ts-ignore */}
@@ -185,7 +185,7 @@ describe('Picker incremental interactions', () => {
 		expect(name!.getAttribute('aria-sort')).toBe('ascending');
 		expect(type!.getAttribute('aria-sort')).toBe('none');
 
-		const [row1Col1, , row2Col1, , row3Col1] = getAllByRole('cell');
+		const [row1Col1, , , row2Col1, , , row3Col1] = getAllByRole('cell');
 
 		expect(row1Col1!.textContent).toBe('Bar');
 		expect(row2Col1!.textContent).toBe('Baz');
@@ -196,7 +196,7 @@ describe('Picker incremental interactions', () => {
 		expect(name!.getAttribute('aria-sort')).toBe('descending');
 		expect(type!.getAttribute('aria-sort')).toBe('none');
 
-		const [newRow1Col1, , newRow2Col1, , newRow3Col1] =
+		const [newRow1Col1, , , newRow2Col1, , , newRow3Col1] =
 			getAllByRole('cell');
 
 		expect(newRow1Col1!.textContent).toBe('Foo');
@@ -248,7 +248,7 @@ describe('Picker incremental interactions', () => {
 						)}
 					</Head>
 
-					<Body items={filteredItems}>
+					<Body defaultItems={filteredItems}>
 						{(row) => (
 							<Row items={columns}>
 								{/** @ts-ignore */}
@@ -267,7 +267,7 @@ describe('Picker incremental interactions', () => {
 		expect(name!.getAttribute('aria-sort')).toBe('ascending');
 		expect(type!.getAttribute('aria-sort')).toBe('none');
 
-		const [row1Col1, , row2Col1, , row3Col1] = getAllByRole('cell');
+		const [row1Col1, , , row2Col1, , , row3Col1] = getAllByRole('cell');
 
 		expect(row1Col1!.textContent).toBe('Bar');
 		expect(row2Col1!.textContent).toBe('Baz');
@@ -278,7 +278,7 @@ describe('Picker incremental interactions', () => {
 		expect(name!.getAttribute('aria-sort')).toBe('none');
 		expect(type!.getAttribute('aria-sort')).toBe('ascending');
 
-		const [, newRow1Col2, , newRow2Col2, , newRow3Col2] =
+		const [, newRow1Col2, , , newRow2Col2, , , newRow3Col2] =
 			getAllByRole('cell');
 
 		expect(newRow1Col2!.textContent).toBe('Files');
@@ -289,12 +289,12 @@ describe('Picker incremental interactions', () => {
 	describe('tree grid', () => {
 		it('pressing tab will move the focus to the first row', () => {
 			const {getAllByRole} = render(
-				<Table nestedKey="children">
+				<Table columnsVisibility={false} nestedKey="children">
 					<Head items={columns}>
 						{(column) => <Cell key={column.id}>{column.name}</Cell>}
 					</Head>
 
-					<Body items={itemsTree}>
+					<Body defaultItems={itemsTree}>
 						{(row) => (
 							<Row items={columns}>
 								{(column) => (
@@ -320,12 +320,12 @@ describe('Picker incremental interactions', () => {
 
 		it('pressing tab again will move the focus to the next element outside the table', () => {
 			const {getAllByRole} = render(
-				<Table nestedKey="children">
+				<Table columnsVisibility={false} nestedKey="children">
 					<Head items={columns}>
 						{(column) => <Cell key={column.id}>{column.name}</Cell>}
 					</Head>
 
-					<Body items={itemsTree}>
+					<Body defaultItems={itemsTree}>
 						{(row) => (
 							<Row items={columns}>
 								{(column) => (
@@ -356,7 +356,7 @@ describe('Picker incremental interactions', () => {
 		describe('keyboard interaction on row', () => {
 			it('pressing the down arrow key moves focus to the row below', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
@@ -393,14 +393,14 @@ describe('Picker incremental interactions', () => {
 
 			it('pressing the up arrow key moves focus to the row above', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -434,14 +434,14 @@ describe('Picker incremental interactions', () => {
 
 			it('press the left arrow key to collapse the node with expandable', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -481,14 +481,14 @@ describe('Picker incremental interactions', () => {
 
 			it('pressing the left arrow key moves the focus to the row on the level above', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -534,14 +534,14 @@ describe('Picker incremental interactions', () => {
 
 			it('pressing the right arrow key moves the focus to the first cell', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -579,14 +579,14 @@ describe('Picker incremental interactions', () => {
 		describe('keyboard interaction on cell', () => {
 			it('pressing the up arrow key moves the focus to the cell above', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -626,14 +626,14 @@ describe('Picker incremental interactions', () => {
 
 			it('pressing the down arrow key moves focus to the cell below', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -669,14 +669,14 @@ describe('Picker incremental interactions', () => {
 
 			it('pressing the right arrow key moves focus to the cell to the right', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -712,14 +712,14 @@ describe('Picker incremental interactions', () => {
 
 			it('pressing the left arrow key moves the focus to the right cell', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
@@ -759,14 +759,14 @@ describe('Picker incremental interactions', () => {
 
 			it('pressing the left arrow key in the first cell moves the focus to the row', () => {
 				const {getAllByRole} = render(
-					<Table nestedKey="children">
+					<Table columnsVisibility={false} nestedKey="children">
 						<Head items={columns}>
 							{(column) => (
 								<Cell key={column.id}>{column.name}</Cell>
 							)}
 						</Head>
 
-						<Body items={itemsTree}>
+						<Body defaultItems={itemsTree}>
 							{(row) => (
 								<Row items={columns}>
 									{(column) => (
