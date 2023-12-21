@@ -179,6 +179,16 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						: undefined
 				}
 				className={classNames(className, {
+					'order-arrow-down-active': isSortable
+						? sort &&
+						  keyValue === sort.column &&
+						  sort.direction === 'descending'
+						: undefined,
+					'order-arrow-up-active': isSortable
+						? sort &&
+						  keyValue === sort.column &&
+						  sort.direction === 'ascending'
+						: undefined,
 					'table-cell-expand': truncate || expanded,
 					[`table-cell-${delimiter}`]: delimiter,
 					[`table-column-text-${textAlign}`]: textAlign,
@@ -186,7 +196,6 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					'table-cell-ws-nowrap': !wrap,
 					'table-focus': focusWithinProps.tabIndex === 0 && isFocused,
 					'table-head-title': isHead,
-					'table-sort': isSortable,
 				})}
 				colSpan={
 					divider
@@ -223,9 +232,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 				style={{
 					width,
 				}}
-				tabIndex={
-					treegrid || !isSortable ? focusWithinProps.tabIndex : 1
-				}
+				tabIndex={focusWithinProps.tabIndex}
 			>
 				{isSortable ? (
 					<Layout.ContentRow>
@@ -237,13 +244,13 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 							</span>
 						</Layout.ContentCol>
 						<Layout.ContentCol>
-							<span
+							<button
+								aria-label="Sort Column"
 								className="component-action"
-								role="presentation"
-								tabIndex={-1}
+								type="button"
 							>
 								<Icon symbol="order-arrow" />
-							</span>
+							</button>
 						</Layout.ContentCol>
 					</Layout.ContentRow>
 				) : truncate ? (

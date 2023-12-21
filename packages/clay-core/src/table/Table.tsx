@@ -186,6 +186,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				className={classNames(className, {
 					'table-nested-rows': nestedKey,
 					[`table-${size}`]: size,
+					'table-sort': sort || sort === null,
 				})}
 				ref={ref}
 				role={nestedKey ? 'treegrid' : undefined}
