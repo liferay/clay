@@ -99,6 +99,7 @@ caption {
 tr.table-focus {
 	@include clay-css($c-tr-table-focus);
 
+	th,
 	td {
 		$_td: setter(map-get($c-tr-table-focus, td), ());
 
@@ -525,6 +526,12 @@ td.table-focus {
 	.component-action:not(.show) .collapse-icon-open {
 		display: none;
 	}
+}
+
+// .table-sort
+
+.table-sort {
+	@include clay-table-variant($c-table-sort);
 }
 
 // Show Quick Action

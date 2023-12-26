@@ -322,9 +322,6 @@ $c-table: map-deep-merge(
 				color: $table-disabled-color,
 			),
 		),
-		table-sort: (
-			color: $gray-900,
-		),
 		autofit-col: (
 			justify-content: center,
 			padding-left: nth($table-cell-padding, 2),
@@ -558,6 +555,30 @@ $c-table-nested-rows: map-deep-merge(
 		),
 	),
 	$c-table-nested-rows
+);
+
+// .table-sort
+
+$c-table-sort: () !default;
+$c-table-sort: map-deep-merge(
+	(
+		thead: (
+			table-cell: (
+				cursor: pointer,
+				transition: clay-enable-transitions($component-transition),
+				hover: (
+					background-color: $primary-l3,
+					color: $gray-900,
+				),
+				component-action: (
+					font-size: 0.75rem,
+					height: 1.5rem,
+					width: 1.5rem,
+				),
+			),
+		),
+	),
+	$c-table-sort
 );
 
 // Table Dark Variant

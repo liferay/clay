@@ -71,6 +71,10 @@
 
 					@include clay-css($_thead-table-cell);
 
+					&:hover {
+						@include clay-css(map-get($_thead-table-cell, hover));
+					}
+
 					&:first-child {
 						@include clay-css(
 							map-get($_thead-table-cell, table-column-start)
@@ -80,6 +84,12 @@
 					&:last-child {
 						@include clay-css(
 							map-get($_thead-table-cell, table-column-end)
+						);
+					}
+
+					.component-action {
+						@include clay-css(
+							map-get($_thead-table-cell, component-action)
 						);
 					}
 				}
@@ -367,15 +377,6 @@
 						map-deep-get($map, table-disabled, table-list-title)
 					);
 				}
-			}
-
-			.table-sort[aria-sort='ascending']
-				.lexicon-icon
-				.order-arrow-arrow-up,
-			.table-sort[aria-sort='descending']
-				.lexicon-icon
-				.order-arrow-arrow-down {
-				@include clay-css(map-get($map, table-sort));
 			}
 
 			.autofit-col {
