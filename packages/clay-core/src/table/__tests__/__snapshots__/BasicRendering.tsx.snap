@@ -327,9 +327,10 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="1"
             aria-describedby="clay-id-17"
             aria-sort="none"
-            class="table-head-title table-sort"
+            class="table-head-title"
             data-id="string,name"
             style="width: auto;"
+            tabindex="-1"
           >
             <div
               class="autofit-row"
@@ -350,10 +351,10 @@ exports[`Table basic rendering render with sort column 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
+                <button
+                  aria-label="Sort Column"
                   class="component-action"
-                  role="presentation"
-                  tabindex="-1"
+                  type="button"
                 >
                   <svg
                     class="lexicon-icon lexicon-icon-order-arrow"
@@ -363,7 +364,7 @@ exports[`Table basic rendering render with sort column 1`] = `
                       href="#order-arrow"
                     />
                   </svg>
-                </span>
+                </button>
               </div>
             </div>
           </th>
@@ -371,14 +372,10 @@ exports[`Table basic rendering render with sort column 1`] = `
             aria-colindex="2"
             aria-describedby="clay-id-17"
             aria-sort="none"
-            class="table-head-title table-sort"
+            class="table-head-title"
             data-id="string,type"
-<<<<<<< HEAD
             style="width: auto;"
             tabindex="-1"
-=======
-            tabindex="1"
->>>>>>> 268cb8f02 (fix(@clayui/core): fixes error when not navigating through the head with sortable enabled and fixes error when expanding unnecessarily)
           >
             <div
               class="autofit-row"
@@ -399,10 +396,10 @@ exports[`Table basic rendering render with sort column 1`] = `
               <div
                 class="autofit-col"
               >
-                <span
+                <button
+                  aria-label="Sort Column"
                   class="component-action"
-                  role="presentation"
-                  tabindex="-1"
+                  type="button"
                 >
                   <svg
                     class="lexicon-icon lexicon-icon-order-arrow"
@@ -412,7 +409,7 @@ exports[`Table basic rendering render with sort column 1`] = `
                       href="#order-arrow"
                     />
                   </svg>
-                </span>
+                </button>
               </div>
             </div>
           </th>
