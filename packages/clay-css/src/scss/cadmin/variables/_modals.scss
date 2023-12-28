@@ -58,7 +58,7 @@ $cadmin-modal-content: map-deep-merge(
 		color: $cadmin-modal-content-color,
 		display: flex,
 		flex-direction: column,
-		max-height: calc(100vh - #{$cadmin-modal-dialog-margin-y-sm-up} * 2),
+		max-height: calc(100vh - #{$cadmin-modal-dialog-margin} * 2),
 		outline: 0,
 		overflow: hidden,
 		pointer-events: auto,
@@ -381,6 +381,9 @@ $cadmin-modal: map-deep-merge(
 				),
 				modal-body: (
 					padding: 8px 16px,
+				),
+				modal-body-iframe: (
+					padding: 0px,
 				),
 				modal-footer: (
 					padding: 8px,
