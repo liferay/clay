@@ -24,7 +24,7 @@ jobs:
 
       - name: Get Author's Username
         id: get_author
-        run: echo "::set-output name=author::${{ github.event.issue.user.login }}"
+        run: echo "author=${{ github.event.issue.user.login }}" >> $GITHUB_OUTPUT
 
       - name: Add Comment
         uses: actions/github-script@v4
