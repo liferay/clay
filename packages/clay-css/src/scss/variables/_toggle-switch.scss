@@ -6,7 +6,8 @@ $toggle-switch-font-weight: if(
 ) !default;
 $toggle-switch-transition: background-color 100ms ease-in,
 	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
-	color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
+	color 100ms ease-in, left 100ms ease-in, opacity 100ms ease-in,
+	right 100ms ease-in !default;
 
 // must all be same units--start
 $toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
@@ -486,4 +487,65 @@ $simple-toggle-switch-reverse: map-deep-merge(
 		),
 	),
 	$simple-toggle-switch-reverse
+);
+
+// .toggle-switch-sm
+
+$toggle-switch-sizes: () !default;
+$toggle-switch-sizes: map-deep-merge(
+	(
+		toggle-switch-sm: (
+			simple-toggle-switch: (
+				toggle-switch-label: (
+					max-width: calc(100% - 38px),
+				),
+			),
+			toggle-switch-check: (
+				height: 16px,
+				width: 30px,
+				toggle-switch-bar: (
+					height: 16px,
+					line-height: 16px,
+					before: (
+						width: 30px,
+					),
+					after: (
+						height: 16px,
+						width: 16px,
+					),
+					toggle-switch-handle: (
+						min-width: 30px,
+						after: (
+							margin-left: 38px,
+						),
+					),
+					toggle-switch-icon: (
+						font-size: 0.6875rem,
+						height: 16px,
+						left: 0,
+						line-height: 16px,
+						width: 16px,
+					),
+					toggle-switch-icon-off: (
+						left: 14px,
+					),
+				),
+				checked: (
+					toggle-switch-bar: (
+						after: (
+							left: 14px,
+						),
+						button-icon: (
+							left: 14px,
+						),
+					),
+				),
+			),
+			toggle-switch-label: (
+				font-size: 0.75rem,
+				max-width: calc(100% - 38px),
+			),
+		),
+	),
+	$toggle-switch-sizes
 );

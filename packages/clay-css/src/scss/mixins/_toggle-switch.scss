@@ -1051,6 +1051,13 @@
 
 		@include clay-css($map);
 
+		.simple-toggle-switch,
+		&.simple-toggle-switch {
+			@include clay-toggle-switch-variant(
+				map-get($map, simple-toggle-switch)
+			);
+		}
+
 		.toggle-switch-check-bar {
 			@include clay-css(map-get($map, toggle-switch-check-bar));
 

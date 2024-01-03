@@ -40,3 +40,42 @@ $toggle-switch-button-on-bg: $white !default;
 $toggle-switch-button-on-border-color: $white !default;
 $toggle-switch-button-on-border-radius: $toggle-switch-button-border-radius !default;
 $toggle-switch-button-on-icon-color: $primary !default;
+
+// .toggle-switch-sm
+
+$toggle-switch-sizes: () !default;
+$toggle-switch-sizes: map-deep-merge(
+	(
+		toggle-switch-sm: (
+			toggle-switch-check: (
+				toggle-switch-bar: (
+					after: (
+						bottom: 0,
+						height: 12px,
+						left: 2px,
+						top: 2px,
+						width: 12px,
+					),
+					toggle-switch-icon: (
+						font-size: 0.5rem,
+						top: 0px,
+					),
+					toggle-switch-icon-off: (
+						left: 13px,
+					),
+				),
+				checked: (
+					toggle-switch-bar: (
+						after: (
+							left: 16px,
+						),
+						button-icon: (
+							left: 14px,
+						),
+					),
+				),
+			),
+		),
+	),
+	$toggle-switch-sizes
+);

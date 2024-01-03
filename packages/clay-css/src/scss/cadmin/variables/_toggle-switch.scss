@@ -2,7 +2,8 @@ $cadmin-toggle-switch-cursor: $cadmin-link-cursor !default;
 $cadmin-toggle-switch-font-weight: $cadmin-input-label-font-weight !default;
 $cadmin-toggle-switch-transition: background-color 100ms ease-in,
 	border-color 100ms ease-in, box-shadow 150ms ease-in-out,
-	color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
+	color 100ms ease-in, left 100ms ease-in, opacity 100ms ease-in,
+	right 100ms ease-in !default;
 
 // must all be same units--start
 $cadmin-toggle-switch-bar-padding: 4px !default; // space between button and bar, can be negative value
@@ -468,4 +469,69 @@ $cadmin-simple-toggle-switch-reverse: map-deep-merge(
 		),
 	),
 	$cadmin-simple-toggle-switch-reverse
+);
+
+// .toggle-switch-sm
+
+$cadmin-toggle-switch-sizes: () !default;
+$cadmin-toggle-switch-sizes: map-deep-merge(
+	(
+		toggle-switch-sm: (
+			simple-toggle-switch: (
+				toggle-switch-label: (
+					max-width: calc(100% - 38px),
+				),
+			),
+			toggle-switch-check: (
+				height: 16px,
+				width: 30px,
+				toggle-switch-bar: (
+					height: 16px,
+					line-height: 16px,
+					before: (
+						width: 30px,
+					),
+					after: (
+						bottom: 0,
+						height: 12px,
+						left: 2px,
+						top: 2px,
+						width: 12px,
+					),
+					toggle-switch-handle: (
+						min-width: 30px,
+						after: (
+							margin-left: 38px,
+						),
+					),
+					toggle-switch-icon: (
+						font-size: 8px,
+						height: 16px,
+						left: 0,
+						line-height: 16px,
+						top: 0px,
+						width: 16px,
+					),
+					toggle-switch-icon-off: (
+						left: 13px,
+					),
+				),
+				checked: (
+					toggle-switch-bar: (
+						after: (
+							left: 16px,
+						),
+						button-icon: (
+							left: 14px,
+						),
+					),
+				),
+			),
+			toggle-switch-label: (
+				font-size: 12px,
+				max-width: calc(100% - 38px),
+			),
+		),
+	),
+	$cadmin-toggle-switch-sizes
 );
