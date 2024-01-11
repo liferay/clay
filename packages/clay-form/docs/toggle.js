@@ -38,32 +38,32 @@ export const RadioToggle = () => {
 };
 
 const ToggleCode = `const Component = () => {
-	const [toggled, setToggle] = useState(false);
+	const [toggled1, setToggle1, toggled2, setToggle2, toggled3, setToggle3] = useState(false);
 
 	return (
 		<div style={{display: 'flex', justifyContent: 'space-around'}}>
 			<ClayToggle
 				label="Checkbox"
-				onToggle={setToggle}
-				toggled={toggled}
+				onToggle={setToggle1}
+				toggled={toggled1}
 			/>
 
 			<ClayToggle
 				label="with symbol"
-				onToggle={setToggle}
+				onToggle={setToggle2}
 				spritemap={spritemap}
 				symbol={{
 					off: 'times',
 					on: 'check',
 				}}
-				toggled={toggled}
+				toggled={toggled2}
 			/>
 
 			<ClayToggle
 				disabled
 				label="Disabled"
-				onToggle={setToggle}
-				toggled={toggled}
+				onToggle={setToggle3}
+				toggled={toggled3}
 			/>
 		</div>
 	);
@@ -72,11 +72,64 @@ const ToggleCode = `const Component = () => {
 render(<Component />);`;
 
 const toggleImports = `import React from 'react';
-import {ClayToggle} from '@clayui/form';;`;
+import {ClayToggle} from '@clayui/form';`;
 
 export const Toggle = () => {
 	const scope = {ClayToggle};
 	const code = ToggleCode;
 
 	return <Editor code={code} imports={toggleImports} scope={scope} />;
+};
+
+const ToggleSmCode = `const Component = () => {
+	const [toggled1, setToggle1, toggled2, setToggle2, toggled3, setToggle3] = useState(false);
+
+	return (
+		<div>
+			<div className="form-group">
+				<ClayToggle
+					label="Checkbox"
+					onToggle={setToggle1}
+					sizing="sm"
+					toggled={toggled1}
+				/>
+			</div>
+
+			<div className="form-group">
+				<ClayToggle
+					label="with symbol"
+					onToggle={setToggle2}
+					sizing="sm"
+					spritemap={spritemap}
+					symbol={{
+						off: 'times',
+						on: 'check',
+					}}
+					toggled={toggled2}
+				/>
+			</div>
+
+			<div className="form-group">
+				<ClayToggle
+					disabled
+					label="Disabled"
+					onToggle={setToggle3}
+					sizing="sm"
+					toggled={toggled3}
+				/>
+			</div>
+		</div>
+	);
+}
+
+render(<Component />);`;
+
+const toggleSmImports = `import React from 'react';
+import {ClayToggle} from '@clayui/form';`;
+
+export const ToggleSm = () => {
+	const scope = {ClayToggle};
+	const code = ToggleSmCode;
+
+	return <Editor code={code} imports={toggleSmImports} scope={scope} />;
 };
