@@ -14,6 +14,7 @@ export interface IToggleProps
 	id?: string;
 	label?: React.ReactText;
 	onToggle?: (val: boolean) => void;
+	sizing?: string;
 	spritemap?: string;
 	symbol?: {on: string; off: string};
 	toggled?: boolean;
@@ -32,6 +33,7 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 			onChange,
 			onToggle,
 			role = 'switch',
+			sizing,
 			spritemap,
 			symbol,
 			toggled,
@@ -52,7 +54,10 @@ const ClayToggle = React.forwardRef<HTMLLabelElement, IToggleProps>(
 					'toggle-switch',
 					'simple-toggle-switch',
 					containerProps.className,
-					{disabled}
+					{
+						disabled,
+						[`toggle-switch-${sizing}`]: sizing,
+					}
 				)}
 				ref={ref}
 			>
