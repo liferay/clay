@@ -102,6 +102,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
   <div>
     <button
       aria-activedescendant="Apple"
+      aria-controls="clay-id-12"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-owns="clay-id-12"
