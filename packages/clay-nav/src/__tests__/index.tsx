@@ -4,12 +4,7 @@
  */
 
 import {ClayVerticalNav} from '..';
-import {
-	cleanup,
-	fireEvent,
-	getAllByRole as docGetAllByRole,
-	render,
-} from '@testing-library/react';
+import {cleanup, fireEvent, render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -92,11 +87,11 @@ describe('ClayVerticalNav', () => {
 	});
 
 	it('expand items by pressing the right arrow key', () => {
-		const {getAllByRole} = render(
+		const {getByText} = render(
 			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
 		);
 
-		const [, , projects] = getAllByRole('button');
+		const projects = getByText('Projects');
 
 		userEvent.tab();
 		userEvent.tab();
@@ -109,11 +104,11 @@ describe('ClayVerticalNav', () => {
 	});
 
 	it('collapse items by pressing the left arrow key', () => {
-		const {getAllByRole} = render(
+		const {getByText} = render(
 			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
 		);
 
-		const [, , projects] = getAllByRole('button');
+		const projects = getByText('Projects');
 
 		userEvent.tab();
 		userEvent.tab();
@@ -130,11 +125,11 @@ describe('ClayVerticalNav', () => {
 	});
 
 	it('moves focus to first item if item is expanded', () => {
-		const {getAllByRole} = render(
+		const {getByText} = render(
 			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
 		);
 
-		const [, , projects] = getAllByRole('button');
+		const projects = getByText('Projects');
 
 		userEvent.tab();
 		userEvent.tab();
@@ -147,20 +142,17 @@ describe('ClayVerticalNav', () => {
 
 		userEvent.keyboard('[ArrowRight]');
 
-		const [first] = docGetAllByRole(
-			projects!.parentNode as HTMLElement,
-			'menuitem'
-		);
+		const first = getByText('Five');
 
 		expect(first).toEqual(document.activeElement);
 	});
 
 	it('move focus to parent if focus is on child when pressing left arrow key', () => {
-		const {getAllByRole} = render(
+		const {getByText} = render(
 			<ClayVerticalNav items={ITEMS} spritemap="/path/to" />
 		);
 
-		const [, , projects] = getAllByRole('button');
+		const projects = getByText('Projects');
 
 		userEvent.tab();
 		userEvent.tab();
@@ -173,10 +165,7 @@ describe('ClayVerticalNav', () => {
 
 		userEvent.keyboard('[ArrowRight]');
 
-		const [first] = docGetAllByRole(
-			projects!.parentNode as HTMLElement,
-			'menuitem'
-		);
+		const first = getByText('Five');
 
 		expect(first).toEqual(document.activeElement);
 

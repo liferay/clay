@@ -37,10 +37,10 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
           role="none"
         >
           <button
+            aria-controls="clay-id-6"
             aria-expanded="false"
-            aria-haspopup="true"
             class="nav-link collapse-icon collapsed btn btn-unstyled"
-            role="button"
+            role="menuitem"
             type="button"
           >
             Home
