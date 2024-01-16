@@ -370,9 +370,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 			<As
 				{...otherProps}
 				aria-activedescendant={active ? String(activeDescendant) : ''}
-				aria-controls={
-					active && isAppleDevice() ? ariaControls : undefined
-				}
+				aria-controls={active ? ariaControls : undefined}
 				aria-expanded={active}
 				aria-haspopup="listbox"
 				aria-owns={
