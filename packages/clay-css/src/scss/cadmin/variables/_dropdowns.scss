@@ -396,7 +396,7 @@ $cadmin-dropdown-item-indicator-start: map-deep-merge(
 		display: inline-flex,
 		height: $cadmin-dropdown-item-indicator-size,
 		justify-content: center,
-		left: $cadmin-dropdown-item-padding-x,
+		left: 0.75rem,
 		position: absolute,
 		right: auto,
 		top:

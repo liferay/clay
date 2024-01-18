@@ -255,8 +255,7 @@
 	.dropdown-caption,
 	.dropdown-item {
 		padding-left: calc(
-			#{$cadmin-dropdown-item-padding-x} + #{$cadmin-dropdown-item-indicator-size} +
-				#{$cadmin-dropdown-item-indicator-spacer-x}
+			0.5rem + #{$cadmin-dropdown-item-indicator-size} + #{$cadmin-dropdown-item-indicator-spacer-x}
 		);
 	}
 
@@ -301,11 +300,6 @@
 	}
 
 	.dropdown-item {
-		padding-right: calc(
-			#{$cadmin-dropdown-item-padding-x} + #{$cadmin-dropdown-item-indicator-size} +
-				#{$cadmin-dropdown-item-indicator-spacer-x}
-		);
-
 		@if ($cadmin-enable-c-inner) {
 			.c-inner {
 				margin-right: calc(

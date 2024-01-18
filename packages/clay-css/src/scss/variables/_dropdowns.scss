@@ -491,7 +491,7 @@ $dropdown-item-indicator-start: map-deep-merge(
 		display: inline-flex,
 		height: $dropdown-item-indicator-size,
 		justify-content: center,
-		left: $dropdown-item-padding-x,
+		left: 0.75rem,
 		position: absolute,
 		right: auto,
 		top:

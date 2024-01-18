@@ -265,7 +265,7 @@
 	.dropdown-caption,
 	.dropdown-item {
 		padding-left: calc(
-			#{$dropdown-item-padding-x} + #{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
+			0.5rem + #{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
 		);
 	}
 
@@ -309,10 +309,6 @@
 	}
 
 	.dropdown-item {
-		padding-right: calc(
-			#{$dropdown-item-padding-x} + #{$dropdown-item-indicator-size} + #{$dropdown-item-indicator-spacer-x}
-		);
-
 		@if ($enable-c-inner) {
 			.c-inner {
 				margin-right: calc(
