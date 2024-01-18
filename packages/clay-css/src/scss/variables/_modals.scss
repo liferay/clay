@@ -57,7 +57,7 @@ $modal-content: map-deep-merge(
 		color: $modal-content-color,
 		display: flex,
 		flex-direction: column,
-		max-height: calc(100vh - #{$modal-dialog-margin-y-sm-up} * 2),
+		max-height: calc(100vh - #{$modal-dialog-margin} * 2),
 		outline: 0,
 		overflow: hidden,
 		pointer-events: auto,
@@ -380,6 +380,9 @@ $modal: map-deep-merge(
 				),
 				modal-body: (
 					padding: 0.5rem 1rem,
+				),
+				modal-body-iframe: (
+					padding: 0,
 				),
 				modal-footer: (
 					padding: 0.5rem,
