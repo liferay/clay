@@ -88,6 +88,8 @@ type Props<T> = {
 	trigger: React.ReactElement & {
 		ref?: (node: HTMLButtonElement | null) => void;
 	};
+
+	style?: React.CSSProperties;
 } & Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize'>;
 
 function MenuInner<T extends Record<string, unknown> | string | number>(
@@ -101,6 +103,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 		items,
 		onActiveChange,
 		role = 'menu',
+		style,
 		trigger,
 		...otherProps
 	}: Props<T>,
@@ -266,6 +269,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 							)}
 							ref={menuRef}
 							role="presentation"
+							style={style}
 						>
 							<Collection<T>
 								{...otherProps}

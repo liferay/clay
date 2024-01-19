@@ -93,6 +93,10 @@ function HeadInner<T extends Record<string, any>>(
 									},
 									...collection.getItems(),
 								]}
+								style={{
+									maxWidth: '210px',
+									minWidth: '210px',
+								}}
 								trigger={
 									<Button
 										aria-label={
@@ -120,15 +124,20 @@ function HeadInner<T extends Record<string, any>>(
 												collection.getItem(item).value
 											}
 										>
-											<Layout.ContentRow>
+											<Layout.ContentRow verticalAlign="center">
 												<Layout.ContentCol expand>
 													{
 														collection.getItem(item)
 															.value
 													}
 												</Layout.ContentCol>
-												<Layout.ContentCol>
+												<Layout.ContentCol float="end">
 													<Toggle
+														containerProps={{
+															style: {
+																marginBottom: 0,
+															},
+														}}
 														disabled={
 															!hiddenColumns.has(
 																item
@@ -145,6 +154,7 @@ function HeadInner<T extends Record<string, any>>(
 																).index
 															)
 														}
+														sizing="sm"
 														toggled={hiddenColumns.has(
 															item
 														)}
