@@ -51,3 +51,35 @@
 .simple-toggle-switch-reverse {
 	@include clay-toggle-switch-variant($cadmin-simple-toggle-switch-reverse);
 }
+
+// Toggle Switch Sizes
+
+@each $size, $value in $cadmin-toggle-switch-sizes {
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($size, 'toggle-switch-'),
+			clay-str-replace($size, 'toggle-switch-', '.toggle-switch-'),
+			$size
+		);
+
+		@if (starts-with($size, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-toggle-switch-variant($value);
+			}
+		} @else if (starts-with($size, 'toggle-switch-')) {
+			$placeholder: '%clay-#{$size}';
+
+			#{$placeholder} {
+				@include clay-toggle-switch-variant($value);
+			}
+
+			#{$selector} {
+				@extend #{$placeholder} !optional;
+			}
+		} @else {
+			#{$selector} {
+				@include clay-toggle-switch-variant($value);
+			}
+		}
+	}
+}
