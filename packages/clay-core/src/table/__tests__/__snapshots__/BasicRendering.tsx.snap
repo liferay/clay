@@ -332,17 +332,41 @@ exports[`Table basic rendering render with sort column 1`] = `
             style="width: auto;"
             tabindex="-1"
           >
-            <a
-              class="inline-item text-truncate-inline"
-              href="#"
-              role="presentation"
+            <div
+              class="autofit-row"
             >
-              <span
-                class="text-truncate"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Name
-              </span>
-            </a>
+                <span
+                  class="text-truncate-inline"
+                >
+                  <span
+                    class="text-truncate"
+                  >
+                    Name
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-label="sortable column"
+                  class="component-action"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-order-arrow"
+                    role="presentation"
+                  >
+                    <use
+                      href="#order-arrow"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </th>
           <th
             aria-colindex="2"
@@ -353,17 +377,41 @@ exports[`Table basic rendering render with sort column 1`] = `
             style="width: auto;"
             tabindex="-1"
           >
-            <a
-              class="inline-item text-truncate-inline"
-              href="#"
-              role="presentation"
+            <div
+              class="autofit-row"
             >
-              <span
-                class="text-truncate"
+              <div
+                class="autofit-col autofit-col-expand"
               >
-                Type
-              </span>
-            </a>
+                <span
+                  class="text-truncate-inline"
+                >
+                  <span
+                    class="text-truncate"
+                  >
+                    Type
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col"
+              >
+                <button
+                  aria-label="sortable column"
+                  class="component-action"
+                  type="button"
+                >
+                  <svg
+                    class="lexicon-icon lexicon-icon-order-arrow"
+                    role="presentation"
+                  >
+                    <use
+                      href="#order-arrow"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </th>
           <th
             class="table-head-title"

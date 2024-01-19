@@ -360,6 +360,9 @@ $cadmin-c-table: map-deep-merge(
 				color: $cadmin-table-disabled-color,
 			),
 		),
+		table-sort: (
+			color: $cadmin-gray-900,
+		),
 		autofit-col: (
 			justify-content: center,
 			padding-left: nth($cadmin-table-cell-padding, 2),

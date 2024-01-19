@@ -145,22 +145,50 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			[expandedKeys, onExpandedChange]
 		);
 
+		const doSort = useCallback(
+			() =>
+				onSortChange(
+					{
+						column: keyValue!,
+						direction:
+							sort && keyValue === sort.column
+								? sort.direction === 'ascending'
+									? 'descending'
+									: 'ascending'
+								: 'ascending',
+					},
+					textValue!
+				),
+			[onSortChange, keyValue, sort]
+		);
+
+		const isExpandable = (expandable || lazy) && !isLoading;
+		const isSortable = isHead && sortable;
+
 		return (
 			<As
 				{...otherProps}
 				{...focusWithinProps}
 				aria-colindex={isHead && !sortable ? undefined : index! + 1}
-				aria-describedby={
-					isHead && sortable ? sortDescriptionId : undefined
-				}
+				aria-describedby={isSortable ? sortDescriptionId : undefined}
 				aria-sort={
-					isHead && sortable
+					isSortable
 						? sort && keyValue === sort.column
 							? sort.direction
 							: 'none'
 						: undefined
 				}
 				className={classNames(className, {
+					'order-arrow-down-active': isSortable
+						? sort &&
+						  keyValue === sort.column &&
+						  sort.direction === 'descending'
+						: undefined,
+					'order-arrow-up-active': isSortable
+						? sort &&
+						  keyValue === sort.column &&
+						  sort.direction === 'ascending'
+						: undefined,
 					'table-cell-expand': truncate || expanded,
 					[`table-cell-${delimiter}`]: delimiter,
 					[`table-column-text-${textAlign}`]: textAlign,
@@ -180,27 +208,23 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						: `string,${keyValue}`
 				}
 				onClick={(event) => {
-					if (!(isHead && sortable)) {
+					if (!isSortable) {
 						return;
 					}
 
 					event.preventDefault();
-					onSortChange(
-						{
-							column: keyValue!,
-							direction:
-								sort && keyValue === sort.column
-									? sort.direction === 'ascending'
-										? 'descending'
-										: 'ascending'
-									: 'ascending',
-						},
-						textValue!
-					);
+					doSort();
 				}}
 				onKeyDown={(event) => {
 					if (event.key === Keys.Enter) {
-						toggle(key!);
+						if (isSortable) {
+							event.preventDefault();
+							doSort();
+						}
+
+						if (treegrid && isExpandable) {
+							toggle(key!);
+						}
 					}
 				}}
 				ref={ref}
@@ -208,29 +232,27 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 				style={{
 					width,
 				}}
+				tabIndex={focusWithinProps.tabIndex}
 			>
-				{isHead && sortable ? (
-					<a
-						className="inline-item text-truncate-inline"
-						href="#"
-						onClick={(event) => event.preventDefault()}
-						role="presentation"
-						tabIndex={treegrid ? -1 : undefined}
-					>
-						<span className="text-truncate">{children}</span>
-
-						{sort && keyValue === sort.column && (
-							<span className="inline-item inline-item-after">
-								<Icon
-									symbol={
-										sort.direction === 'ascending'
-											? 'order-arrow-up'
-											: 'order-arrow-down'
-									}
-								/>
+				{isSortable ? (
+					<Layout.ContentRow>
+						<Layout.ContentCol expand>
+							<span className="text-truncate-inline">
+								<span className="text-truncate">
+									{children}
+								</span>
 							</span>
-						)}
-					</a>
+						</Layout.ContentCol>
+						<Layout.ContentCol>
+							<button
+								aria-label={messages['sortDescription']}
+								className="component-action"
+								type="button"
+							>
+								<Icon symbol="order-arrow" />
+							</button>
+						</Layout.ContentCol>
+					</Layout.ContentRow>
 				) : truncate ? (
 					<span className="text-truncate-inline">
 						<span className="text-truncate">{children}</span>
@@ -243,7 +265,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 								(expandable || lazy ? 4 : 0),
 						}}
 					>
-						{(expandable || lazy) && !isLoading && (
+						{isExpandable && (
 							<Layout.ContentCol className="autofit-col-toggle">
 								<Button
 									aria-label={messages['expandable']}

@@ -41,7 +41,7 @@ export function useTreeNavigation<T extends HTMLElement>({
 					Keys.Down,
 					Keys.Home,
 					Keys.End,
-				].includes(event.key) &&
+				].includes(event.key) ||
 				disabled
 			) {
 				return;
