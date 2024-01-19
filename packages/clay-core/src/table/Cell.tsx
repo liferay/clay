@@ -51,11 +51,6 @@ type Props = {
 	keyValue?: React.Key;
 
 	/**
-	 * Sets the `aria-label` on the sort button. The default is "Sort Column".
-	 */
-	sortAriaLabel?: string;
-
-	/**
 	 * Whether the column allows sortable. Only available in the header column.
 	 */
 	sortable?: boolean;
@@ -97,7 +92,6 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 			expanded,
 			index,
 			keyValue,
-			sortAriaLabel = 'Sort Column',
 			sortable,
 			textAlign,
 			textValue,
@@ -251,7 +245,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						</Layout.ContentCol>
 						<Layout.ContentCol>
 							<button
-								aria-label={sortAriaLabel}
+								aria-label={messages['sortDescription']}
 								className="component-action"
 								type="button"
 							>
