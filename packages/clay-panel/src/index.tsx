@@ -51,7 +51,7 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	/**
 	 * Flag to indicate the visual variation of the Panel.
 	 */
-	displayType?: 'unstyled' | 'secondary';
+	displayType?: 'block' | 'default' | 'secondary' | 'unstyled';
 
 	/**
 	 * Determines if menu is expanded or not (controlled).
@@ -67,6 +67,11 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Flag to toggle collapse icon visibility when `collapsable` is true.
 	 */
 	showCollapseIcon?: boolean;
+
+	/**
+	 * Flag to indicate the visual variation of the Panel.
+	 */
+	size?: 'lg' | 'sm';
 
 	/**
 	 * Path to spritemap for clay icons
@@ -94,6 +99,7 @@ function ClayPanel({
 	expanded,
 	onExpandedChange,
 	showCollapseIcon = true,
+	size,
 	spritemap,
 	...otherProps
 }: IProps) {
@@ -115,6 +121,7 @@ function ClayPanel({
 			{...otherProps}
 			className={classNames('panel', className, {
 				[`panel-${displayType}`]: displayType,
+				[`panel-${size}`]: size,
 			})}
 		>
 			{!collapsable && (
