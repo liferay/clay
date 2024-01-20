@@ -94,6 +94,71 @@ $panel-title-text-transform: null !default;
 $panel-title-small-font-size: null !default;
 $panel-title-small-margin-left: null !default;
 
+$panel: () !default;
+$panel: map-deep-merge(
+	(
+		background-color: $panel-bg,
+		border-color: $panel-border-color,
+		border-radius: clay-enable-rounded($panel-border-radius),
+		border-style: $panel-border-style,
+		border-width: $panel-border-width,
+		box-shadow: clay-enable-shadows($panel-box-shadow),
+		margin-bottom: $panel-margin-bottom,
+		word-wrap: break-word,
+		collapse-icon-middle: (
+			collapse-icon: (
+				font-size: inherit,
+			),
+		),
+		panel-header: (
+			border-bottom: $panel-header-border-bottom-width solid transparent,
+			border-top-left-radius:
+				clay-enable-rounded($panel-header-offset-border-radius),
+			border-top-right-radius:
+				clay-enable-rounded($panel-header-offset-border-radius),
+			display: block,
+			font-size: $panel-header-font-size,
+			line-height: $panel-header-line-height,
+			padding: $panel-header-padding-y $panel-header-padding-x,
+			position: relative,
+			width: 100%,
+			collapsed: (
+				border-bottom-left-radius:
+					clay-enable-rounded($panel-header-offset-border-radius),
+				border-bottom-right-radius:
+					clay-enable-rounded($panel-header-offset-border-radius),
+				link: $panel-header-collapsed-link,
+			),
+			collapse-icon: (
+				padding-left: $panel-header-collapse-icon-padding-left,
+				padding-right: $panel-header-collapse-icon-padding-right,
+			),
+			link: $panel-header-link,
+		),
+		panel-body: (
+			padding: $panel-body-padding-y $panel-body-padding-x,
+		),
+		panel-footer: (
+			border-bottom-left-radius:
+				clay-enable-rounded($panel-footer-offset-border-radius),
+			border-bottom-right-radius:
+				clay-enable-rounded($panel-footer-offset-border-radius),
+			border-top: $panel-footer-border-top-width solid transparent,
+			padding: $panel-footer-padding-y $panel-footer-padding-x,
+		),
+		panel-title: (
+			font-size: $panel-title-font-size,
+			font-weight: $panel-title-font-weight,
+			text-transform: $panel-title-text-transform,
+			small: (
+				font-size: $panel-title-small-font-size,
+				margin-left: $panel-title-small-margin-left,
+			),
+		),
+	),
+	$panel
+);
+
 // Panel Group
 
 $panel-group-panel-margin-bottom: math-sign(
@@ -211,4 +276,134 @@ $panel-unstyled: map-deep-merge(
 		),
 	),
 	$panel-unstyled
+);
+
+$panel-palette: () !default;
+$panel-palette: map-deep-merge(
+	(
+		panel-block: (
+			border-color: $gray-400,
+			collapse-icon: (
+				font-size: inherit,
+				top: 1.3125rem,
+			),
+			panel-header: (
+				font-size: 1.25rem,
+				line-height: 1.25,
+				padding: 1.15625rem 1.25rem,
+				'&.collapse-icon': (
+					padding-right: 3rem,
+				),
+			),
+			panel-title: (
+				font-size: inherit,
+				text-transform: none,
+			),
+			panel-body: (
+				padding: 0 1.25rem 1.25rem,
+			),
+			panel-footer: (
+				padding: 0 1.25rem 1.25rem,
+			),
+		),
+		panel-default: (
+			border-width: 0px,
+			panel-header: (
+				border-radius: clay-enable-rounded(0),
+				color: $gray-600,
+				font-size: 0.875rem,
+				line-height: 1.125rem,
+				padding-bottom: 0.40625rem,
+				padding-left: 0,
+				padding-right: 0,
+				padding-top: 0.40625rem,
+				text-transform: uppercase,
+				'&.collapse-icon': (
+					padding-right: 1.75rem,
+				),
+				link: (
+					border-bottom: 1px solid $gray-400,
+				),
+			),
+			collapse-icon: (
+				font-size: inherit,
+				right: 0,
+				top: 0.5rem,
+			),
+			collapse-icon-middle: (
+				collapse-icon: (
+					right: 0,
+				),
+			),
+			panel-body: (
+				padding: 1.25rem 0,
+			),
+			panel-title: (
+				font-size: inherit,
+			),
+			panel-footer: (
+				padding: 1.25rem 0,
+			),
+		),
+	),
+	$panel-palette
+);
+
+// Panel Sizes
+
+$panel-sizes: () !default;
+$panel-sizes: map-deep-merge(
+	(
+		'.panel-lg.panel-block': (
+			collapse-icon: (
+				top: 1.75rem,
+			),
+			panel-header: (
+				font-size: 1.5rem,
+				padding: 1.5rem 1.5rem,
+				'&.collapse-icon': (
+					padding-right: calc(1.5rem * 3),
+				),
+			),
+			panel-body: (
+				padding: 0 1.5rem 1.5rem,
+			),
+			panel-footer: (
+				padding: 0 1.5rem 1.5rem,
+			),
+		),
+		'.panel-sm.panel-block': (
+			collapse-icon: (
+				top: 0.9375rem,
+			),
+			panel-header: (
+				font-size: 1rem,
+				padding: 0.8125rem 1rem,
+				'&.collapse-icon': (
+					padding-right: calc(1rem * 3),
+				),
+			),
+			panel-body: (
+				padding: 0 1rem 1rem,
+			),
+			panel-footer: (
+				padding: 0 1rem 1rem,
+			),
+		),
+		'.panel-sm.panel-default': (
+			collapse-icon: (
+				top: 0.375rem,
+			),
+			panel-header: (
+				font-size: 0.75rem,
+				line-height: 1,
+				padding-bottom: 0.34375rem,
+				padding-top: 0.34375rem,
+				'&.collapse-icon': (
+					padding-right: 1.75rem,
+				),
+			),
+		),
+	),
+	$panel-sizes
 );

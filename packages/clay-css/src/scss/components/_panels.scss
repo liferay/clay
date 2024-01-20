@@ -1,26 +1,11 @@
 .panel {
-	background-color: $panel-bg;
-	border-color: $panel-border-color;
-	border-style: $panel-border-style;
-	border-width: $panel-border-width;
-
-	@include border-radius($panel-border-radius);
-
-	margin-bottom: $panel-margin-bottom;
-	word-wrap: break-word;
+	@include clay-css($panel);
 }
 
 .panel-header {
-	border-bottom: $panel-header-border-bottom-width solid transparent;
+	$_header: setter(map-get($panel, panel-header), ());
 
-	@include border-top-radius($panel-header-offset-border-radius);
-
-	display: block;
-	font-size: $panel-header-font-size;
-	line-height: $panel-header-line-height;
-	padding: $panel-header-padding-y $panel-header-padding-x;
-	position: relative;
-	width: 100%;
+	@include clay-css($_header);
 
 	@if ($enable-c-inner) {
 		.c-inner {
@@ -31,12 +16,11 @@
 	}
 
 	&.collapsed {
-		@include border-bottom-radius($panel-header-offset-border-radius);
+		@include clay-css(map-get($_header, collapsed));
 	}
 
 	&.collapse-icon {
-		padding-left: $panel-header-collapse-icon-padding-left;
-		padding-right: $panel-header-collapse-icon-padding-right;
+		@include clay-css(map-get($_header, collapse-icon));
 
 		@if ($enable-c-inner) {
 			.c-inner {
@@ -47,6 +31,20 @@
 						$panel-header-collapse-icon-padding-right
 					)};
 			}
+		}
+	}
+
+	&.collapse-icon-middle {
+		$_collapse-icon-middle: setter(
+			map-get($panel, collapse-icon-middle),
+			()
+		);
+
+		@include clay-css($_collapse-icon-middle);
+
+		.collapse-icon-closed,
+		.collapse-icon-open {
+			@include clay-css(map-get($_collapse-icon-middle, collapse-icon));
 		}
 	}
 
@@ -61,10 +59,14 @@
 }
 
 .panel-header-link {
-	@include clay-link($panel-header-link);
+	$_header-link: setter(map-get($panel, panel-header), ());
+
+	@include clay-link(map-get($_header-link, link));
 
 	&.panel-header.collapsed {
-		@include clay-link($panel-header-collapsed-link);
+		$_header-collapsed: setter(map-get($_header-link, collapsed), ());
+
+		@include clay-link(map-get($_header-collapsed, link));
 	}
 
 	.collapse-icon {
@@ -82,25 +84,21 @@
 }
 
 .panel-body {
-	padding: $panel-body-padding-y $panel-header-padding-x;
+	@include clay-css(map-get($panel, panel-body));
 }
 
 .panel-footer {
-	@include border-bottom-radius($panel-footer-offset-border-radius);
-
-	border-top: $panel-footer-border-top-width solid transparent;
-	padding: $panel-footer-padding-y $panel-footer-padding-x;
+	@include clay-css(map-get($panel, panel-footer));
 }
 
 .panel-title {
-	font-size: $panel-title-font-size;
-	font-weight: $panel-title-font-weight;
-	text-transform: $panel-title-text-transform;
+	$_title: setter(map-get($panel, panel-title), ());
+
+	@include clay-css($_title);
 
 	small,
 	.small {
-		font-size: $panel-title-small-font-size;
-		margin-left: $panel-title-small-margin-left;
+		@include clay-css(map-get($_title, small));
 	}
 }
 
@@ -335,6 +333,28 @@
 
 // Panel Variants
 
+@each $color, $value in $panel-palette {
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			if(starts-with($color, 'panel'), str-insert($color, '.', 1), $color)
+		);
+
+		@if (starts-with($color, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-panel-variant($value);
+			}
+		} @else {
+			#{$selector} {
+				@include clay-panel-variant($value);
+			}
+		}
+	}
+}
+
 .panel-secondary {
 	@include clay-panel-variant($panel-secondary);
 }
@@ -343,4 +363,28 @@
 
 .panel-unstyled {
 	@include clay-panel-variant($panel-unstyled);
+}
+
+// Panel Sizes
+
+@each $color, $value in $panel-sizes {
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($color, '.') or
+				starts-with($color, '#') or
+				starts-with($color, '%'),
+			$color,
+			if(starts-with($color, 'panel'), str-insert($color, '.', 1), $color)
+		);
+
+		@if (starts-with($color, '%') or map-get($value, extend)) {
+			#{$selector} {
+				@include clay-panel-variant($value);
+			}
+		} @else {
+			#{$selector} {
+				@include clay-panel-variant($value);
+			}
+		}
+	}
 }

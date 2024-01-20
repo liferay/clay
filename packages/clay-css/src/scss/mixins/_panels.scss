@@ -327,10 +327,34 @@
 					@include clay-link($header-link);
 				}
 
+				&.collapse-icon {
+					$_panel-header: setter(map-get($map, panel-header), ());
+
+					@include clay-css(
+						map-get($_panel-header, '&.collapse-icon')
+					);
+				}
+
 				&:not(.collapse-icon-middle) {
 					.collapse-icon-closed,
 					.collapse-icon-open {
 						@include clay-css($collapse-icon);
+					}
+				}
+
+				&.collapse-icon-middle {
+					$_collapse-icon-middle: setter(
+						map-get($map, collapse-icon-middle),
+						()
+					);
+
+					@include clay-css($_collapse-icon-middle);
+
+					.collapse-icon-closed,
+					.collapse-icon-open {
+						@include clay-css(
+							map-get($_collapse-icon-middle, collapse-icon)
+						);
 					}
 				}
 
