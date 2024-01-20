@@ -12,7 +12,11 @@ export default {
 	argTypes: {
 		displayType: {
 			control: {type: 'select'},
-			options: ['secondary', 'unstyled', undefined],
+			options: ['default', 'block', undefined],
+		},
+		size: {
+			control: {type: 'select'},
+			options: ['lg', 'sm', undefined],
 		},
 	},
 	component: ClayPanel,
@@ -20,7 +24,11 @@ export default {
 };
 
 export const Default = (args: any) => (
-	<ClayPanel displayTitle={args.displayTitle} displayType={args.displayType}>
+	<ClayPanel
+		displayTitle={args.displayTitle}
+		displayType={args.displayType}
+		size={args.size}
+	>
 		<ClayPanel.Header>Header!</ClayPanel.Header>
 		<ClayPanel.Body>Body!</ClayPanel.Body>
 		<ClayPanel.Footer>Footer!</ClayPanel.Footer>
@@ -42,6 +50,7 @@ export const Collapsable = (args: any) => {
 				displayTitle="Toggle me for expanding!"
 				displayType={args.displayType}
 				showCollapseIcon={args.showCollapseIcon}
+				size={args.size}
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
 				<ClayPanel.Body>Body!</ClayPanel.Body>
@@ -61,6 +70,7 @@ export const Collapsable = (args: any) => {
 				expanded={expanded}
 				onExpandedChange={setExpanded}
 				showCollapseIcon={args.showCollapseIcon}
+				size={args.size}
 			>
 				<ClayPanel.Header>Header!</ClayPanel.Header>
 				<ClayPanel.Body>Body!</ClayPanel.Body>
@@ -100,7 +110,7 @@ export const Sheet = (args: any) => (
 				<ClayPanel
 					collapsable
 					displayTitle={item}
-					displayType="secondary"
+					displayType="unstyled"
 					key={item}
 					showCollapseIcon
 				>
@@ -117,7 +127,7 @@ Sheet.args = {
 	fluid: true,
 };
 
-export const CollapsableWithTitle = () => (
+export const CollapsableWithTitle = (args: any) => (
 	<ClayPanel
 		collapsable
 		displayTitle={
@@ -132,7 +142,9 @@ export const CollapsableWithTitle = () => (
 				<ClayLabel displayType="success">State</ClayLabel>
 			</ClayPanel.Title>
 		}
+		displayType={args.displayType}
 		showCollapseIcon
+		size={args.size}
 	>
 		<ClayPanel.Header>Header!</ClayPanel.Header>
 		<ClayPanel.Body>Body!</ClayPanel.Body>
