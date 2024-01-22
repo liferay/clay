@@ -946,27 +946,27 @@ $dropdown-menu-palette: map-deep-merge(
 			dropdown-header: (
 				padding-bottom: 0.375rem,
 				padding-left: 1.75rem,
-				padding-right: 1.75rem,
+				padding-right: 0.5rem,
 				padding-top: 0.3125rem,
 			),
 			dropdown-subheader: (
 				padding-bottom: 0.4375rem,
 				padding-left: 1.75rem,
-				padding-right: 1.75rem,
+				padding-right: 0.5rem,
 				padding-top: 0.4375rem,
 			),
 			dropdown-section: (
 				padding-left: 1.75rem,
-				padding-right: 1.75rem,
+				padding-right: 0.5rem,
 			),
 			dropdown-item: (
 				padding-bottom: 0.375rem,
 				padding-left: 1.75rem,
-				padding-right: 1.75rem,
+				padding-right: 0.5rem,
 				padding-top: 0.3125rem,
 				'&.autofit-row': (
 					padding-left: 1.5rem,
-					padding-right: 1.5rem,
+					padding-right: 0.5rem,
 				),
 			),
 			dropdown-item-scroll: (
