@@ -37,10 +37,10 @@ exports[`ClayVerticalNav renders 1`] = `
           role="none"
         >
           <button
+            aria-controls="clay-id-2"
             aria-expanded="true"
-            aria-haspopup="true"
             class="nav-link collapse-icon btn btn-unstyled"
-            role="button"
+            role="menuitem"
             type="button"
           >
             Home
@@ -73,6 +73,7 @@ exports[`ClayVerticalNav renders 1`] = `
           </button>
           <ul
             class="nav nav-stacked"
+            id="clay-id-2"
             role="menu"
           >
             <li

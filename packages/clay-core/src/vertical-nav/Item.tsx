@@ -4,7 +4,7 @@
  */
 
 import {useProvider} from '@clayui/provider';
-import {Keys, setElementFullHeight} from '@clayui/shared';
+import {Keys, setElementFullHeight, useId} from '@clayui/shared';
 import React, {useContext, useMemo, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
@@ -128,13 +128,15 @@ export function Item<T extends object>({
 
 	const active = depreactedActive ?? activeKey === keyValue;
 
+	const ariaControlsId = useId();
+
 	return (
 		<Nav.Item role="none" {...otherProps}>
 			<Nav.Link
 				active={active}
+				aria-controls={items ? ariaControlsId : undefined}
 				aria-current={active ? ariaCurrent ?? undefined : undefined}
 				aria-expanded={items ? isExpanded : undefined}
-				aria-haspopup={items ? true : undefined}
 				collapsed={!isExpanded}
 				href={href}
 				onClick={(event) => {
@@ -188,7 +190,7 @@ export function Item<T extends object>({
 					}
 				}}
 				ref={itemRef}
-				role={items ? 'button' : 'menuitem'}
+				role="menuitem"
 				showIcon={!!items}
 				spritemap={spritemap}
 				tabIndex={
@@ -229,7 +231,7 @@ export function Item<T extends object>({
 					timeout={prefersReducedMotion ? 0 : 250}
 					unmountOnExit
 				>
-					<Nav ref={menusRef} role="menu" stacked>
+					<Nav id={ariaControlsId} ref={menusRef} role="menu" stacked>
 						<ParentContext.Provider value={itemRef}>
 							<Collection<T> items={items} parentKey={keyValue}>
 								{childrenRoot.current}
