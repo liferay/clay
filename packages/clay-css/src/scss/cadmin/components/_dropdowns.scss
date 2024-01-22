@@ -178,6 +178,22 @@
 	display: block;
 }
 
+// Dropdown Menu Variants
+
+@each $key, $value in $cadmin-dropdown-menu-palette {
+	@if not clay-is-map-unset($value) {
+		$selector: if(
+			starts-with($key, '.') or starts-with($key, '#'),
+			$key,
+			str-insert($key, '.', 1)
+		);
+
+		#{$selector} {
+			@include clay-dropdown-menu-variant($value);
+		}
+	}
+}
+
 // Dropdown Menu Alignment
 
 @each $cadmin-breakpoint in map-keys($cadmin-grid-breakpoints) {
