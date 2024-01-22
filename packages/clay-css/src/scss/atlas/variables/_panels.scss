@@ -10,6 +10,9 @@ $panel-header-link: () !default;
 $panel-header-link: map-deep-merge(
 	(
 		transition: box-shadow 0.15s ease-in-out,
+		hover: (
+			text-decoration: $panel-header-link-hover-text-decoration,
+		),
 		focus: (
 			box-shadow: $component-focus-box-shadow,
 			outline: 0,
@@ -40,6 +43,23 @@ $panel-title-text-transform: uppercase !default;
 
 $panel-title-small-font-size: 100% !default;
 $panel-title-small-margin-left: 0.375rem !default; // 6px
+
+// Panel
+
+$panel: () !default;
+$panel: map-deep-merge(
+	(
+		panel-header: (
+			border-bottom: $panel-header-border-bottom-width solid transparent,
+			font-size: $panel-header-font-size,
+			collapsed: (
+				link: $panel-header-collapsed-link,
+			),
+			link: $panel-header-link,
+		),
+	),
+	$panel
+);
 
 // Panel Group Sm
 

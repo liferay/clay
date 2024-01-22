@@ -36,10 +36,10 @@ exports[`ClayPanel renders 1`] = `
 exports[`ClayPanel renders with custom displayTitle 1`] = `
 <div>
   <div
-    class="panel panel-secondary"
+    class="panel"
   >
     <button
-      aria-controls="clay-id-9"
+      aria-controls="clay-id-10"
       aria-expanded="false"
       class="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
       type="button"
@@ -75,9 +75,9 @@ exports[`ClayPanel renders with custom displayTitle 1`] = `
       </span>
     </button>
     <div
-      aria-labelledby="clay-id-9"
+      aria-labelledby="clay-id-10"
       class="panel-collapse collapse"
-      id="clay-id-9"
+      id="clay-id-10"
       role="region"
     >
       <div
@@ -103,7 +103,40 @@ exports[`ClayPanel renders with custom displayTitle 1`] = `
 exports[`ClayPanel renders with different displayType 1`] = `
 <div>
   <div
-    class="panel panel-secondary"
+    class="panel panel-block"
+  >
+    <div
+      class="panel-header"
+    >
+      <span
+        class="panel-title"
+      >
+        Display Title
+      </span>
+    </div>
+    <div
+      class="panel-header"
+    >
+      Header!
+    </div>
+    <div
+      class="panel-body"
+    >
+      Body!
+    </div>
+    <div
+      class="panel-footer"
+    >
+      Footer!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayPanel renders with different size 1`] = `
+<div>
+  <div
+    class="panel panel-sm"
   >
     <div
       class="panel-header"
@@ -178,7 +211,7 @@ exports[`ClayPanel renders with multiple panels 1`] = `
       class="panel"
     >
       <button
-        aria-controls="clay-id-5"
+        aria-controls="clay-id-6"
         aria-expanded="false"
         class="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
         type="button"
@@ -214,9 +247,9 @@ exports[`ClayPanel renders with multiple panels 1`] = `
         </span>
       </button>
       <div
-        aria-labelledby="clay-id-5"
+        aria-labelledby="clay-id-6"
         class="panel-collapse collapse"
-        id="clay-id-5"
+        id="clay-id-6"
         role="region"
       >
         <div
@@ -233,10 +266,10 @@ exports[`ClayPanel renders with multiple panels 1`] = `
 exports[`ClayPanel renders without displayTitle 1`] = `
 <div>
   <div
-    class="panel panel-secondary"
+    class="panel"
   >
     <button
-      aria-controls="clay-id-10"
+      aria-controls="clay-id-11"
       aria-expanded="false"
       class="panel-header panel-header-link collapse-icon collapse-icon-middle collapsed btn btn-unstyled"
       type="button"
@@ -267,9 +300,9 @@ exports[`ClayPanel renders without displayTitle 1`] = `
       </span>
     </button>
     <div
-      aria-labelledby="clay-id-10"
+      aria-labelledby="clay-id-11"
       class="panel-collapse collapse"
-      id="clay-id-10"
+      id="clay-id-11"
       role="region"
     >
       <div
