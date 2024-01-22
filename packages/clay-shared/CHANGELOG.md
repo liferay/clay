@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
+
+### Bug Fixes
+
+-   **@clayui/drop-down:** Fix Dropdown doesnt close when click outside ([f5beaf9](https://github.com/liferay/clay/commit/f5beaf9cf012a0a81c7a2bcc1a440c6143ba37bc))
+
+### Features
+
+-   **@clayui/shared:** adds support for closing the overlay when clicking outside the body ([0a720b1](https://github.com/liferay/clay/commit/0a720b11ffe1e4d3a5fa02762c5be780093b87e2))
+
 # [3.107.0](https://github.com/liferay/clay/compare/v3.106.1...v3.107.0) (2023-11-27)
 
 **Note:** Version bump only for package @clayui/shared

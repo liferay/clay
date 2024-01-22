@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
+
+
+### Bug Fixes
+
+* **@clayui/css:** modal-body-iframe should have no padding on screens sm and below ([00dde4e](https://github.com/liferay/clay/commit/00dde4e2a4fc2787962c7518d0d31677e4ca75ab))
+* **@clayui/css:** SVG Icons update bookmarks and bookmarks-full icons to be centered ([d0b8c38](https://github.com/liferay/clay/commit/d0b8c382c49c3cab4904ba9e2ab1061d9c854688))
+* **@clayui/css:** Tables adds variant table-sort ([427430b](https://github.com/liferay/clay/commit/427430b99fc2591a05e25963fa9938bddad3b84f))
+* **@clayui/css:** video-streaming icon should have copyright text and SF ([686475b](https://github.com/liferay/clay/commit/686475b9d272d923bc67d77170f5f65a4a5f22ff))
+
+
+### Features
+
+* **@clayui/css:** Add new video-streaming icon ([9a088ba](https://github.com/liferay/clay/commit/9a088bad000a62395e58402b908937d75445e412))
+* **@clayui/css:** add table-sort to change icon appearance ([4a92472](https://github.com/liferay/clay/commit/4a92472fdfa58112221810297e5c83c73ebd4557))
+* **@clayui/css:** Toggle Switch adds toggle-switch-sm modifier ([ea5fdc5](https://github.com/liferay/clay/commit/ea5fdc55f7f0728827f86952512fdacba7a90720))
+
+
+
+
+
 # [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
 
 

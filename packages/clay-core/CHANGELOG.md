@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes error when not navigating through the head with sortable enabled and fixes error when expanding unnecessarily ([dbe7aff](https://github.com/liferay/clay/commit/dbe7aff9edb13a338f30a78e0a52f82c0eacd123))
+-   **@clayui/core:** Table move table-sort to table element ([ce7acf2](https://github.com/liferay/clay/commit/ce7acf2330e2ec0d410ddd002bdadd47cfe4792b))
+-   **@clayui/core:** updates the sort icon for table ([fda0727](https://github.com/liferay/clay/commit/fda0727922e0dd0b5bc16a59b3c6d25fdc7b679e))
+-   **@clayui/pagination:** Fix select pages from ellipsis dropdown ([8b73a6d](https://github.com/liferay/clay/commit/8b73a6da1f10f00acfe1d8137ffac00a04ff9a21))
+-   **@clayui/picker:** Update snapshot ([c6e38b1](https://github.com/liferay/clay/commit/c6e38b1223c42348080b466fab64acbf3556723a))
+-   **@clayui/picker:** Update Picker markup with aria-controls ([c2b6b83](https://github.com/liferay/clay/commit/c2b6b8308f23e3d1b5792054d7afcfd103034824))
+-   **@clayui/vertical-nav:** Add aria-controls on vertical navbar itens and change role to menuitem ([7e2a35b](https://github.com/liferay/clay/commit/7e2a35b95912b44a47fe159658dae8bc568466e8))
+-   **@clayui/vertical-nav:** Update tests and snapshots ([714281d](https://github.com/liferay/clay/commit/714281ddce37d70fcb6cf716bfdaf2f1bbe142cc))
+
+### Features
+
+-   **@clayui/core:** Adds attribute sortAriaLabel on Cell for custom aria-label on sort button ([c5675c0](https://github.com/liferay/clay/commit/c5675c0443b4ec25273a4172589e3656cdaabfd7))
+-   **@clayui/core:** adds column visibility feature ([65a07d0](https://github.com/liferay/clay/commit/65a07d00d3db7b1e36c1594c3c43dc8379d2f9cb))
+
 # [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
 
 ### Bug Fixes

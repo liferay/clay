@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes error when not navigating through the head with sortable enabled and fixes error when expanding unnecessarily ([dbe7aff](https://github.com/liferay/clay/commit/dbe7aff9edb13a338f30a78e0a52f82c0eacd123))
+-   **@clayui/core:** Table move table-sort to table element ([ce7acf2](https://github.com/liferay/clay/commit/ce7acf2330e2ec0d410ddd002bdadd47cfe4792b))
+-   **@clayui/core:** updates the sort icon for table ([fda0727](https://github.com/liferay/clay/commit/fda0727922e0dd0b5bc16a59b3c6d25fdc7b679e))
+-   **@clayui/css:** modal-body-iframe should have no padding on screens sm and below ([00dde4e](https://github.com/liferay/clay/commit/00dde4e2a4fc2787962c7518d0d31677e4ca75ab))
+-   **@clayui/css:** SVG Icons update bookmarks and bookmarks-full icons to be centered ([d0b8c38](https://github.com/liferay/clay/commit/d0b8c382c49c3cab4904ba9e2ab1061d9c854688))
+-   **@clayui/css:** Tables adds variant table-sort ([427430b](https://github.com/liferay/clay/commit/427430b99fc2591a05e25963fa9938bddad3b84f))
+-   **@clayui/css:** video-streaming icon should have copyright text and SF ([686475b](https://github.com/liferay/clay/commit/686475b9d272d923bc67d77170f5f65a4a5f22ff))
+-   **@clayui/drop-down:** Fix Dropdown doesnt close when click outside ([f5beaf9](https://github.com/liferay/clay/commit/f5beaf9cf012a0a81c7a2bcc1a440c6143ba37bc))
+-   **@clayui/pagination:** Fix select pages from ellipsis dropdown ([8b73a6d](https://github.com/liferay/clay/commit/8b73a6da1f10f00acfe1d8137ffac00a04ff9a21))
+-   **@clayui/picker:** Update snapshot ([c6e38b1](https://github.com/liferay/clay/commit/c6e38b1223c42348080b466fab64acbf3556723a))
+-   **@clayui/picker:** Update Picker markup with aria-controls ([c2b6b83](https://github.com/liferay/clay/commit/c2b6b8308f23e3d1b5792054d7afcfd103034824))
+-   **@clayui/vertical-nav:** Add aria-controls on vertical navbar itens and change role to menuitem ([7e2a35b](https://github.com/liferay/clay/commit/7e2a35b95912b44a47fe159658dae8bc568466e8))
+-   **@clayui/vertical-nav:** Update tests and snapshots ([714281d](https://github.com/liferay/clay/commit/714281ddce37d70fcb6cf716bfdaf2f1bbe142cc))
+
+### Features
+
+-   **@clayui/core:** Adds attribute sortAriaLabel on Cell for custom aria-label on sort button ([c5675c0](https://github.com/liferay/clay/commit/c5675c0443b4ec25273a4172589e3656cdaabfd7))
+-   **@clayui/core:** adds column visibility feature ([65a07d0](https://github.com/liferay/clay/commit/65a07d00d3db7b1e36c1594c3c43dc8379d2f9cb))
+-   **@clayui/css:** Add new video-streaming icon ([9a088ba](https://github.com/liferay/clay/commit/9a088bad000a62395e58402b908937d75445e412))
+-   **@clayui/css:** add table-sort to change icon appearance ([4a92472](https://github.com/liferay/clay/commit/4a92472fdfa58112221810297e5c83c73ebd4557))
+-   **@clayui/css:** Toggle Switch adds toggle-switch-sm modifier ([ea5fdc5](https://github.com/liferay/clay/commit/ea5fdc55f7f0728827f86952512fdacba7a90720))
+-   **@clayui/form:** Toggle Switch adds sizing attribute ([d29270b](https://github.com/liferay/clay/commit/d29270b6209f3880d3737fd06e778b5c8e9466e8))
+-   **@clayui/shared:** adds support for closing the overlay when clicking outside the body ([0a720b1](https://github.com/liferay/clay/commit/0a720b11ffe1e4d3a5fa02762c5be780093b87e2))
+
 # [3.108.0](https://github.com/liferay/clay/compare/v3.107.1...v3.108.0) (2023-12-12)
 
 ### Bug Fixes
