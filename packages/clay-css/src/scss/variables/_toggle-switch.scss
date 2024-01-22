@@ -515,6 +515,7 @@ $toggle-switch-sizes: map-deep-merge(
 					),
 					toggle-switch-handle: (
 						min-width: 30px,
+						max-width: 30px,
 						after: (
 							margin-left: 38px,
 						),
