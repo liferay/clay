@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.110.0](https://github.com/liferay/clay/compare/v3.109.0...v3.110.0) (2024-01-25)
+
+
+### Bug Fixes
+
+* **@clayui/css:** Fix text behaviour in Vertical Navigation component ([f363cc5](https://github.com/liferay/clay/commit/f363cc521118a275286fb565dc7170112fcedb9b))
+* **@clayui/css:** LPS-205556 Reduce padding on dropdown-menu-select (picker) ([ac93749](https://github.com/liferay/clay/commit/ac93749f075be022afe77ec0e0b29c2913f1f141))
+
+
+### Features
+
+* **@clayui/css:** Panels adds new variants and sizes ([35412b5](https://github.com/liferay/clay/commit/35412b51b488ff416e369419eb3092110c63bf38))
+
+
+
+
+
 # [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
 
 

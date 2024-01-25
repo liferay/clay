@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.110.0](https://github.com/liferay/clay/compare/v3.109.0...v3.110.0) (2024-01-25)
+
+### Features
+
+-   **@clayui/panel:** Update displayType and size props (LPS-202818) ([cda77e2](https://github.com/liferay/clay/commit/cda77e25e440876235ea3cec4c3cd8909eb66a96))
+
 # [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
 
 **Note:** Version bump only for package @clayui/panel
