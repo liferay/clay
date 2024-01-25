@@ -272,6 +272,7 @@ git push $REMOTE master --follow-tags
 git push $REMOTE master:stable
 
 # Publish packages to NPM
+yarn build && yarn buildTypes
 lerna publish from-package
 
 # Note: If this last step breaks, you may try running `lerna publish from-git` instead.
@@ -313,6 +314,9 @@ gh pr --submit liferay --branch stable --draft
 # Once CI is green, close the pull-request and merge changes to stable and master.
 # If you want to see a preview first, use the `--dry-run` flag.
 git push $REMOTE master --follow-tags
+
+# Build.
+yarn build && yarn buildTypes
 
 # Publish to NPM.
 # Make sure you are in the directory of the package you want to publish.
