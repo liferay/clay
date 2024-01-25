@@ -112,5 +112,9 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: NPM Identity
         run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - name: Build
+        run: yarn build
+      - name: Types
+        run: yarn buildTypes
       - name: Publish
         run: yarn lerna:publish

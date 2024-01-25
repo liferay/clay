@@ -17,7 +17,6 @@
 	"scripts": {
 		"build": "babel src --root-mode upward --out-dir lib --extensions .ts,.tsx",
 		"buildTypes": "tsc --project ./tsconfig.declarations.json",
-		"prepublishOnly": "yarn build && yarn buildTypes",
 		"test": "jest --config ../../jest.config.js"
 	},
 	"keywords": [
