@@ -46,7 +46,7 @@ $nav-tabs-link-padding-y: 0.28125rem !default; // 4.5px
 $nav-tabs-link-hover-border-color: transparent !default;
 
 $nav-tabs-link-active-bg: $white !default;
-$nav-tabs-link-active-border-color: $gray-400 $gray-400 $body-bg !default;
+$nav-tabs-link-active-border-color: $gray-400 $gray-400 $nav-tabs-link-active-bg !default;
 $nav-tabs-link-active-color: $gray-900 !default;
 
 $nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
