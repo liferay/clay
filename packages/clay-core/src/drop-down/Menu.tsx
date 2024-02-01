@@ -8,13 +8,19 @@ import {
 	InternalDispatch,
 	Keys,
 	Overlay,
+	getFocusableList,
 	useControlledState,
 	useId,
 	useNavigation,
 	useOverlayPosition,
 } from '@clayui/shared';
 import classNames from 'classnames';
-import React, {useCallback, useImperativeHandle, useRef} from 'react';
+import React, {
+	useCallback,
+	useEffect,
+	useImperativeHandle,
+	useRef,
+} from 'react';
 
 import {Collection, useCollection, useVirtual} from '../collection';
 
@@ -32,6 +38,8 @@ const List = React.forwardRef<
 });
 
 type Props<T> = {
+	alwaysClose?: boolean;
+
 	/**
 	 * The `aria-label` attribute defines a string value that labels an interactive
 	 * element.
@@ -95,6 +103,7 @@ type Props<T> = {
 function MenuInner<T extends Record<string, unknown> | string | number>(
 	{
 		active: externalActive,
+		alwaysClose = true,
 		as: As = 'div',
 		children,
 		className,
@@ -158,7 +167,9 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 							return;
 						}
 
-						setActive(false);
+						if (alwaysClose) {
+							setActive(false);
+						}
 					},
 					role: role === 'menu' ? 'menuitem' : 'option',
 				}) as React.ReactElement;
@@ -184,7 +195,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 
 	const {navigationProps} = useNavigation({
 		activation: 'manual',
-		collection,
+		collection: items && items.length > 70 ? collection : undefined,
 		containerRef: menuRef,
 		loop: true,
 		orientation: 'vertical',
@@ -271,53 +282,85 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 							role="presentation"
 							style={style}
 						>
-							<Collection<T>
-								{...otherProps}
-								as={List}
-								collection={collection}
-								id={ariaControlsId}
-								onKeyDown={(event) => {
-									switch (event.key) {
-										case Keys.Tab: {
-											event.preventDefault();
+							<FocusMenu
+								onRender={() => {
+									// After a few milliseconds querying the elements in the DOM
+									// inside the menu. This especially when the menu is not
+									// rendered yet only after the menu is opened, React needs
+									// to commit the changes to the DOM so that the elements are
+									// visible and we can move the focus.
+									setTimeout(() => {
+										const list = getFocusableList(menuRef);
 
-											setActive(false);
-
-											const list =
-												Array.from<HTMLElement>(
-													document.querySelectorAll(
-														FOCUSABLE_ELEMENTS.join(
-															','
-														)
-													)
-												);
-											const position = list.indexOf(
-												triggerRef.current!
-											);
-
-											const nextElement =
-												list[position + 1];
-
-											if (nextElement) {
-												nextElement.focus();
-											}
-											break;
+										if (list.length) {
+											list[0]!.focus();
 										}
-										default:
-											navigationProps.onKeyDown(event);
-											break;
-									}
+									}, 10);
 								}}
-								role={role}
 							>
-								{children}
-							</Collection>
+								<Collection<T>
+									{...otherProps}
+									as={List}
+									collection={collection}
+									id={ariaControlsId}
+									onKeyDown={(event) => {
+										switch (event.key) {
+											case Keys.Tab: {
+												event.preventDefault();
+
+												setActive(false);
+
+												const list =
+													Array.from<HTMLElement>(
+														document.querySelectorAll(
+															FOCUSABLE_ELEMENTS.join(
+																','
+															)
+														)
+													);
+												const position = list.indexOf(
+													triggerRef.current!
+												);
+
+												const nextElement =
+													list[position + 1];
+
+												if (nextElement) {
+													nextElement.focus();
+												}
+												break;
+											}
+											default:
+												navigationProps.onKeyDown(
+													event
+												);
+												break;
+										}
+									}}
+									role={role}
+								>
+									{children}
+								</Collection>
+							</FocusMenu>
 						</As>
 					</div>
 				</Overlay>
 			)}
 		</div>
 	);
+}
+
+type FocusMenuProps<T> = {
+	children: T;
+	onRender: () => void;
+};
+
+export function FocusMenu<T>({children, onRender}: FocusMenuProps<T>) {
+	useEffect(() => {
+		onRender();
+	}, []);
+
+	return children;
 }
 
 type ForwardRef = {
