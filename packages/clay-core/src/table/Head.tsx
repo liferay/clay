@@ -23,7 +23,7 @@ type HeaderProps = {
 const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
 	function HeaderInner({description, name}: HeaderProps, ref) {
 		return (
-			<li key={name} ref={ref} role="presentation">
+			<li key={name} ref={ref} role="presentation" tabIndex={-1}>
 				<div className="dropdown-subheader mb-0">
 					{name.toUpperCase()}
 				</div>
@@ -81,6 +81,7 @@ function HeadInner<T extends Record<string, any>>(
 					{columnsVisibility && (
 						<Cell keyValue="visibility" width="72px">
 							<Menu
+								alwaysClose={false}
 								items={[
 									{
 										description:
@@ -120,6 +121,13 @@ function HeadInner<T extends Record<string, any>>(
 									) : (
 										<Item
 											key={item}
+											onClick={() =>
+												onHiddenColumnsChange(
+													item,
+													collection.getItem(item)
+														.index
+												)
+											}
 											textValue={
 												collection.getItem(item).value
 											}
@@ -146,15 +154,8 @@ function HeadInner<T extends Record<string, any>>(
 																1 ===
 																hiddenColumns.size
 														}
-														onToggle={() =>
-															onHiddenColumnsChange(
-																item,
-																collection.getItem(
-																	item
-																).index
-															)
-														}
 														sizing="sm"
+														tabIndex={-1}
 														toggled={hiddenColumns.has(
 															item
 														)}
