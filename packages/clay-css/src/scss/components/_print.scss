@@ -62,8 +62,12 @@
 		// We don't set margin here because it breaks `size` in Chrome. We also
 		// don't use `!important` on `size` as it breaks in Chrome.
 
-		@page {
-			size: $print-page-size;
+		@at-root {
+			@media print {
+				@page {
+					size: $print-page-size;
+				}
+			}
 		}
 
 		body {
