@@ -118,10 +118,10 @@ This section shows you how to send a pull request. The main staff are always mon
 
 This section shows you how to write commit messages in Clay. Follow these guidelines to help us maintain order and make it easier to locate your changes.
 
-Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope and a subject:
+Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope, a jira ticket number and a subject:
 
 ```
-<type>(<scope>): <subject>
+<type>(<scope>): <jira ticket number> <subject>
 ```
 
 The header is mandatory and the scope of the header is optional.
@@ -139,6 +139,10 @@ The header is mandatory and the scope of the header is optional.
 #### Scope
 
 The scope could be anything specifying place of the commit change. For example `feat(@clayui/dropdown)`, `feat(@clayui/css)`, `fix(clayui.com)`, `docs(Badge)`, `fix(useCache)`, etc...
+
+#### Jira Ticket Number
+
+At present, we are exclusively utilizing LPD tickets for management. [Link for How To Open a LPD Ticket to Clay](https://liferay.atlassian.net/wiki/spaces/PEDS/pages/2391179332/Clay+New+Process)
 
 ### JavaScript Style Guide
 
