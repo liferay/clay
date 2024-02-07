@@ -81,6 +81,9 @@ function HeadInner<T extends Record<string, any>>(
 					{columnsVisibility && (
 						<Cell keyValue="visibility" width="72px">
 							<Menu
+								UNSAFE_focusableElements={[
+									'input[role="switch"]',
+								]}
 								alwaysClose={false}
 								items={[
 									{
@@ -128,6 +131,7 @@ function HeadInner<T extends Record<string, any>>(
 														.index
 												)
 											}
+											tabIndex={-1}
 											textValue={
 												collection.getItem(item).value
 											}
@@ -154,8 +158,31 @@ function HeadInner<T extends Record<string, any>>(
 																1 ===
 																hiddenColumns.size
 														}
+														onChange={(event) => {
+															event.stopPropagation();
+
+															onHiddenColumnsChange(
+																item,
+																collection.getItem(
+																	item
+																).index
+															);
+														}}
+														onKeyDown={(event) => {
+															switch (event.key) {
+																case 'Enter':
+																	onHiddenColumnsChange(
+																		item,
+																		collection.getItem(
+																			item
+																		).index
+																	);
+																	break;
+																default:
+																	break;
+															}
+														}}
 														sizing="sm"
-														tabIndex={-1}
 														toggled={hiddenColumns.has(
 															item
 														)}

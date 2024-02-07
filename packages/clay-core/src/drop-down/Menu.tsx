@@ -98,10 +98,13 @@ type Props<T> = {
 	};
 
 	style?: React.CSSProperties;
+
+	UNSAFE_focusableElements?: Array<string>;
 } & Omit<Partial<ICollectionProps<T, unknown>>, 'virtualize'>;
 
 function MenuInner<T extends Record<string, unknown> | string | number>(
 	{
+		UNSAFE_focusableElements,
 		active: externalActive,
 		alwaysClose = true,
 		as: As = 'div',
@@ -197,6 +200,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 		activation: 'manual',
 		collection: items && items.length > 70 ? collection : undefined,
 		containerRef: menuRef,
+		focusableElements: UNSAFE_focusableElements,
 		loop: true,
 		orientation: 'vertical',
 		typeahead: true,
@@ -290,7 +294,10 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 									// to commit the changes to the DOM so that the elements are
 									// visible and we can move the focus.
 									setTimeout(() => {
-										const list = getFocusableList(menuRef);
+										const list = getFocusableList(
+											menuRef,
+											UNSAFE_focusableElements
+										);
 
 										if (list.length) {
 											list[0]!.focus();
