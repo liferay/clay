@@ -639,6 +639,7 @@ const iconsData = {
 	"home":                     '"house"',
 	"horizontal-scroll":        '"arrows", "expand"',
 	"hr":                       '"line", "minus", "rectangle"',
+	"icon-rule-builder":		'"rules", "rule-builder", "logic"',
 	"import-export":            '"deprecated"',
 	"indent-less":              '"align", "arrow", "editor", "right", "text"',
 	"indent-more":              '"align", "arrow", "editor", "left", "text"',
