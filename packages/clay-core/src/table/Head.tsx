@@ -23,7 +23,7 @@ type HeaderProps = {
 const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
 	function HeaderInner({description, name}: HeaderProps, ref) {
 		return (
-			<li key={name} ref={ref} role="presentation">
+			<li key={name} ref={ref} role="presentation" tabIndex={-1}>
 				<div className="dropdown-subheader mb-0">
 					{name.toUpperCase()}
 				</div>
@@ -81,6 +81,10 @@ function HeadInner<T extends Record<string, any>>(
 					{columnsVisibility && (
 						<Cell keyValue="visibility" width="72px">
 							<Menu
+								UNSAFE_focusableElements={[
+									'input[role="switch"]',
+								]}
+								alwaysClose={false}
 								items={[
 									{
 										description:
@@ -120,6 +124,14 @@ function HeadInner<T extends Record<string, any>>(
 									) : (
 										<Item
 											key={item}
+											onClick={() =>
+												onHiddenColumnsChange(
+													item,
+													collection.getItem(item)
+														.index
+												)
+											}
+											tabIndex={-1}
 											textValue={
 												collection.getItem(item).value
 											}
@@ -146,14 +158,30 @@ function HeadInner<T extends Record<string, any>>(
 																1 ===
 																hiddenColumns.size
 														}
-														onToggle={() =>
+														onChange={(event) => {
+															event.stopPropagation();
+
 															onHiddenColumnsChange(
 																item,
 																collection.getItem(
 																	item
 																).index
-															)
-														}
+															);
+														}}
+														onKeyDown={(event) => {
+															switch (event.key) {
+																case 'Enter':
+																	onHiddenColumnsChange(
+																		item,
+																		collection.getItem(
+																			item
+																		).index
+																	);
+																	break;
+																default:
+																	break;
+															}
+														}}
 														sizing="sm"
 														toggled={hiddenColumns.has(
 															item
