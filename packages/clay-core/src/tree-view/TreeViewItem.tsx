@@ -265,6 +265,7 @@ export const TreeViewItem = React.forwardRef<
 					onBlur={(event) => {
 						if (
 							actions &&
+							event.relatedTarget &&
 							!item.itemRef.current?.contains(
 								event.relatedTarget as HTMLElement
 							)
