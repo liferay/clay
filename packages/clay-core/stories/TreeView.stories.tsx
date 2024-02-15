@@ -242,8 +242,12 @@ export const Actions = () => (
 					</Button>
 					<DropDownWithItems
 						items={[
-							{label: 'One'},
-							{label: 'Two'},
+							{
+								href: '#',
+								label: 'One',
+								onClick: (event) => event.preventDefault(),
+							},
+							{href: '#', label: 'Two'},
 							{label: 'Three'},
 						]}
 						trigger={
