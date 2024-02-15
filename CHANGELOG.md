@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug when clicking on item does not select ([eadd182](https://github.com/liferay/clay/commit/eadd18246c2e32fb8d8dbb32a299e6d6a8727a15))
+-   **@clayui/core:** fixes bug when not focusing on the first item ([f82643f](https://github.com/liferay/clay/commit/f82643f9bc651db841fc65cce22ee47e6af0c183))
+-   **@clayui/core:** fixes bug when visual focus is lost when items are updated in Picker ([202962b](https://github.com/liferay/clay/commit/202962bd0c51e854994016021715e83751f4c549))
+-   **@clayui/core:** fixes navigation to just Switch component instead of item ([14ad2a6](https://github.com/liferay/clay/commit/14ad2a6b85cb46c5653d065d3c77553fb599cb12))
+-   **@clayui/core:** LPS-203851 fixes bug when keeping DropDown open in TreeView actions in Firefox ([f1a7dc6](https://github.com/liferay/clay/commit/f1a7dc650b2d10b8e64d93455feee2ba8205fd84))
+-   **@clayui/css:** LPD-15629 Accessibility link and text should have 3:1 color contrast ([64584a6](https://github.com/liferay/clay/commit/64584a67cd73220c7011ccef1159784c6b60af57))
+-   **@clayui/css:** LPD-15988 Active nav tab bottom border shouldn't depend on $body-bg ([b89b64a](https://github.com/liferay/clay/commit/b89b64a483b35d571484c722afd2f803898a23b4))
+-   **@clayui/css:** LPD-16364 [@page](https://github.com/page) {.css-selector{}} is not valid css ([2df56c6](https://github.com/liferay/clay/commit/2df56c6cfaf048943d41f975329557d551f5c692))
+
+### Features
+
+-   **@clayui/css:** Add new icon-rule-builder icon ([33db79b](https://github.com/liferay/clay/commit/33db79b42bf25999503be4b6a8fa23111dd7f68d))
+
 # [3.110.0](https://github.com/liferay/clay/compare/v3.109.0...v3.110.0) (2024-01-25)
 
 ### Bug Fixes

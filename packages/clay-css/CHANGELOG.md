@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-15629 Accessibility link and text should have 3:1 color contrast ([64584a6](https://github.com/liferay/clay/commit/64584a67cd73220c7011ccef1159784c6b60af57))
+* **@clayui/css:** LPD-15988 Active nav tab bottom border shouldn't depend on $body-bg ([b89b64a](https://github.com/liferay/clay/commit/b89b64a483b35d571484c722afd2f803898a23b4))
+* **@clayui/css:** LPD-16364 [@page](https://github.com/page) {.css-selector{}} is not valid css ([2df56c6](https://github.com/liferay/clay/commit/2df56c6cfaf048943d41f975329557d551f5c692))
+
+
+### Features
+
+* **@clayui/css:** Add new icon-rule-builder icon ([33db79b](https://github.com/liferay/clay/commit/33db79b42bf25999503be4b6a8fa23111dd7f68d))
+
+
+
+
+
 # [3.110.0](https://github.com/liferay/clay/compare/v3.109.0...v3.110.0) (2024-01-25)
 
 

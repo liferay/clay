@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug when clicking on item does not select ([eadd182](https://github.com/liferay/clay/commit/eadd18246c2e32fb8d8dbb32a299e6d6a8727a15))
+-   **@clayui/core:** fixes bug when not focusing on the first item ([f82643f](https://github.com/liferay/clay/commit/f82643f9bc651db841fc65cce22ee47e6af0c183))
+-   **@clayui/core:** fixes bug when visual focus is lost when items are updated in Picker ([202962b](https://github.com/liferay/clay/commit/202962bd0c51e854994016021715e83751f4c549))
+-   **@clayui/core:** fixes navigation to just Switch component instead of item ([14ad2a6](https://github.com/liferay/clay/commit/14ad2a6b85cb46c5653d065d3c77553fb599cb12))
+-   **@clayui/core:** LPS-203851 fixes bug when keeping DropDown open in TreeView actions in Firefox ([f1a7dc6](https://github.com/liferay/clay/commit/f1a7dc650b2d10b8e64d93455feee2ba8205fd84))
+
 # [3.109.0](https://github.com/liferay/clay/compare/v3.108.0...v3.109.0) (2024-01-22)
 
 ### Bug Fixes
