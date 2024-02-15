@@ -192,7 +192,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 	});
 
 	const [activeDescendant, setActiveDescendant] = useState(() =>
-		typeof selectedKey !== 'undefined'
+		selectedKey || selectedKey === 0
 			? selectedKey
 			: collection.getFirstItem().key
 	);
@@ -271,6 +271,19 @@ export function Picker<T extends Record<string, any> | string | number>({
 			}, 1000);
 		}
 	}, [active]);
+
+	// When the items are updated, the visual focus is stale, meaning that when
+	// navigating via the keyboard it will not work because the key does not
+	// exist in the list, so we need to update the visual focus when the list
+	// is updated during the component life cycle.
+	useEffect(() => {
+		if (
+			!collection.getItem(selectedKey) &&
+			!collection.getItem(activeDescendant)
+		) {
+			setActiveDescendant(collection.getFirstItem().key);
+		}
+	}, [items]);
 
 	const [isArrowVisible, setIsArrowVisible] = useState<
 		null | 'top' | 'bottom' | 'both'
@@ -491,9 +504,9 @@ export function Picker<T extends Record<string, any> | string | number>({
 							onPress();
 						} else {
 							const key =
-								typeof selectedKey === 'undefined'
-									? collection.getFirstItem().key
-									: selectedKey;
+								selectedKey || selectedKey === 0
+									? selectedKey
+									: collection.getFirstItem().key;
 
 							if (key !== activeDescendant) {
 								setActiveDescendant(key);
