@@ -105,6 +105,8 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	 * Use this property for i18n.
 	 */
 	labels?: {
+		itemsPerPagePickerAriaLabel?: string;
+
 		paginationResults: string;
 
 		perPageItems: string;
@@ -148,6 +150,7 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 }
 
 const DEFAULT_LABELS = {
+	itemsPerPagePickerAriaLabel: 'Items Per Page',
 	paginationResults: 'Showing {0} to {1} of {2}',
 	perPageItems: '{0} items',
 	selectPerPageItems: '{0} items',
@@ -209,6 +212,8 @@ export const ClayPaginationBarWithBasicItems = ({
 		value: typeof active === 'undefined' ? activePage : active,
 	});
 
+	labels = {...DEFAULT_LABELS, ...labels};
+
 	if (!activeDelta) {
 		activeDelta = deltas[0]!.label;
 	}
@@ -230,6 +235,7 @@ export const ClayPaginationBarWithBasicItems = ({
 					<Picker
 						activeDelta={activeDelta}
 						aria-describedby={ariaDescribedby}
+						aria-label={labels.itemsPerPagePickerAriaLabel}
 						as={Trigger}
 						items={deltas}
 						labels={labels}
