@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.111.1](https://github.com/liferay/clay/compare/v3.111.0...v3.111.1) (2024-02-20)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** LPD-17368 Add aria-label on pagination picker to ideentify the combobox ([7df8b4c](https://github.com/liferay/clay/commit/7df8b4ce7bcf3502c162c29d842b44cf8e6e2e6c))
+-   **@clayui/pagination:** LPD-17368 Update snapshot ([74f3f21](https://github.com/liferay/clay/commit/74f3f21bcaa53c53566fa81a2bb977afa064365f))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/pagination-bar
