@@ -58,6 +58,14 @@ module.exports = {
 		},
 		{
 			options: {
+				host: process.env.LIFERAY_HOST,
+				siteId: process.env.LIFERAY_SIDE_ID,
+				username: process.env.LIFERAY_USERNAME,
+			},
+			resolve: 'gatsby-source-liferay',
+		},
+		{
+			options: {
 				extensions: ['.mdx'],
 				gatsbyRemarkPlugins: [
 					{

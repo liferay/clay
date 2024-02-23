@@ -165,7 +165,7 @@ export default function Documentation(props) {
 	const {
 		data,
 		location,
-		pageContext: {tabs = [], slug},
+		pageContext: {tabs = [], slug, pageRemote},
 	} = props;
 
 	const {allMarkdownRemark, allMdx, mainTab, pageMd, pageMdx} = data;
@@ -351,7 +351,10 @@ export default function Documentation(props) {
 
 													<CodeClipboard>
 														<Content
-															html={html}
+															html={
+																html ||
+																pageRemote.html
+															}
 															jsx={body}
 														/>
 													</CodeClipboard>
