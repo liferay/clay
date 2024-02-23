@@ -26,7 +26,7 @@ export default {
 		},
 		responsiveSize: {
 			control: {type: 'select'},
-			options: ['lg', 'md', 'sm', 'xl'],
+			options: ['lg', 'md', 'sm'],
 		},
 		tableVerticalAlignment: {
 			control: {type: 'select'},
