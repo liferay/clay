@@ -59,8 +59,7 @@ module.exports = {
 		{
 			options: {
 				host: process.env.LIFERAY_HOST,
-				siteId: process.env.LIFERAY_SIDE_ID,
-				username: process.env.LIFERAY_USERNAME,
+				siteId: process.env.LIFERAY_SITE_ID,
 			},
 			resolve: 'gatsby-source-liferay',
 		},

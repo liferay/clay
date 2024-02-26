@@ -195,6 +195,7 @@ const createDocs = (actions, edges, mdx, pathGroup) => {
 						component: template,
 						context: {
 							mainTabURL,
+							pageRemote: {},
 							pathGroup: pagePathGroup,
 							slug,
 							tabs,

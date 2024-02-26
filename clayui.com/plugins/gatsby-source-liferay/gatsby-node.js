@@ -5,44 +5,33 @@
 
 const {Headers, fetch} = require('fetch-undici');
 
-const fetchLiferay = async (slug, siteId, username, host) => {
-	return await fetch(
+const fetchLiferay = async (slug, siteId, host) => {
+	const response = await fetch(
 		new URL(
 			`/o/headless-delivery/v1.0/sites/${siteId}/site-pages${slug}`,
 			host
 		),
 		{
 			headers: new Headers({
-				Authorization: `Basic ${btoa(username)}`,
 				'User-Agent': 'Clay',
 				'content-type': 'application/json',
 			}),
 		}
-	)
-		.then(async (response) => {
-			const {status} = response;
+	);
 
-			const responseContentType = response.headers.get('content-type');
+	const {status} = response;
 
-			if (status === 204) {
-				return status;
-			} else if (
-				response.ok &&
-				responseContentType === 'application/json'
-			) {
-				return response.json();
-			} else {
-				const data = await response.text();
+	const responseContentType = response.headers.get('content-type');
 
-				if (data.includes('NOT_FOUND')) {
-					return JSON.parse(data);
-				}
+	if (!response.ok || status === 204) {
+		throw new Error('Error to Liferay fetch.');
+	} else if (response.ok && responseContentType === 'application/json') {
+		return response.json();
+	} else {
+		const data = await response.text();
 
-				return {data};
-			}
-		})
-		// eslint-disable-next-line no-console
-		.catch((error) => console.log(error));
+		return data;
+	}
 };
 
 const convertTimestamps = (nextObj, prevObj, prevKey) => {
@@ -62,12 +51,12 @@ const convertTimestamps = (nextObj, prevObj, prevKey) => {
 
 exports.sourceNodes = async (
 	{actions, createContentDigest, createNodeId},
-	{host, siteId, username}
+	{host, siteId}
 ) => {
 	const {createNode} = actions;
 
 	try {
-		const {items} = await fetchLiferay('', siteId, username, host);
+		const {items} = await fetchLiferay('', siteId, host);
 
 		const resources = await Promise.all(
 			items
@@ -75,10 +64,9 @@ exports.sourceNodes = async (
 					(resource) => !['Home', 'Search'].includes(resource.title)
 				)
 				.map(async (resource) => {
-					const {data} = await fetchLiferay(
+					const html = await fetchLiferay(
 						`${resource.friendlyUrlPath}/rendered-page`,
 						siteId,
-						username,
 						host
 					);
 
@@ -86,7 +74,7 @@ exports.sourceNodes = async (
 						dateCreated: resource.dateCreated,
 						dateModified: resource.dateModified,
 						datePublished: resource.datePublished,
-						html: data,
+						html,
 						id: createNodeId(resource.uuid),
 						liferay_id: resource.uuid,
 						slug: resource.friendlyUrlPath,
