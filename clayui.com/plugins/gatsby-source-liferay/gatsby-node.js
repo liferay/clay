@@ -4,6 +4,7 @@
  */
 
 const {Headers, fetch} = require('fetch-undici');
+const {parse} = require('node-html-parser');
 
 const fetchLiferay = async (slug, siteId, host) => {
 	const response = await fetch(
@@ -64,17 +65,35 @@ exports.sourceNodes = async (
 					(resource) => !['Home', 'Search'].includes(resource.title)
 				)
 				.map(async (resource) => {
-					const html = await fetchLiferay(
+					const data = await fetchLiferay(
 						`${resource.friendlyUrlPath}/rendered-page`,
 						siteId,
 						host
+					);
+
+					const html = parse(data);
+					const body = html.getElementById('main-content');
+
+					Array.from(body.querySelectorAll('source,img')).forEach(
+						(element) => {
+							const path =
+								element.getAttribute('src') ||
+								element.getAttribute('srcset');
+							const url = `${host}${path}`;
+
+							if (element.tagName === 'IMG') {
+								element.setAttribute('src', url);
+							} else {
+								element.setAttribute('srcset', url);
+							}
+						}
 					);
 
 					return {
 						dateCreated: resource.dateCreated,
 						dateModified: resource.dateModified,
 						datePublished: resource.datePublished,
-						html,
+						html: body.innerHTML,
 						id: createNodeId(resource.uuid),
 						liferay_id: resource.uuid,
 						slug: resource.friendlyUrlPath,
