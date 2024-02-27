@@ -25,7 +25,9 @@ const fetchLiferay = async (slug, siteId, host) => {
 	const responseContentType = response.headers.get('content-type');
 
 	if (!response.ok || status === 204) {
-		throw new Error('Error to Liferay fetch.');
+		const error = await response.text();
+
+		throw new Error('Error calling Liferay fetch.', {cause: error});
 	} else if (response.ok && responseContentType === 'application/json') {
 		return response.json();
 	} else {
