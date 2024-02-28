@@ -20,19 +20,32 @@ const TAB_MAP_NAME = {
 	markup: 'Markup',
 };
 
+const getFileName = (path) => {
+	const uri = path.split('/');
+
+	return uri[uri.length - 1].replace('.html', '');
+};
+
 const slugWithBar = (path) => {
 	return path.startsWith('/') ? path : `/${path}`;
 };
 
 const getTabs = (permalink, pathGroup) => {
 	const sortTabs = (a) => (a.name === 'API' ? 1 : -1);
+	const fileSlug = getFileName(permalink);
 
 	const tabs = pathGroup.filter(
 		({
 			node: {
-				fields: {mainTabURL},
+				fields: {mainTabURL, slug, type},
 			},
-		}) => mainTabURL === permalink
+		}) => {
+			if (type === 'LiferayDocument') {
+				return slug.substring(1) === fileSlug;
+			}
+
+			return mainTabURL === permalink;
+		}
 	);
 
 	if (tabs.length === 0) {
@@ -48,12 +61,24 @@ const getTabs = (permalink, pathGroup) => {
 			.map(
 				({
 					node: {
-						fields: {slug},
+						fields: {slug, type},
 					},
-				}) => ({
-					href: slug,
-					name: TAB_MAP_NAME[path.basename(slug, '.html')],
-				})
+				}) => {
+					if (type === 'LiferayDocument') {
+						return {
+							href: `${permalink.replace(
+								'.html',
+								''
+							)}/design.html`,
+							name: 'Design',
+						};
+					}
+
+					return {
+						href: slug,
+						name: TAB_MAP_NAME[path.basename(slug, '.html')],
+					};
+				}
 			)
 			.sort(sortTabs),
 	];
@@ -122,19 +147,58 @@ const createDocs = (actions, edges, mdx, pathGroup) => {
 					(slug.includes('docs/') || slug.includes('blog/')) &&
 					layout !== 'redirect'
 				) {
+					const tabs = getTabs(mainTabURL || slug, pathGroup);
+					const fileSlug = getFileName(mainTabURL || slug);
+
+					const pagePathGroup = pathGroup
+						.filter(
+							({
+								node: {
+									fields: {type},
+								},
+							}) => type !== 'LiferayDocument'
+						)
+						.map(
+							({
+								node: {
+									fields: {slug},
+								},
+							}) => slug
+						);
+
+					const designPageData = pathGroup.find(
+						(item) =>
+							item.node.fields.slug.substring(1) === fileSlug
+					);
+					const designPage = tabs.find(
+						(item) => item.name === 'Design'
+					);
+
+					if (designPage) {
+						createPage({
+							component: template,
+							context: {
+								mainTabURL,
+								pageRemote: {
+									html: designPageData.node.fields.html,
+									title: designPageData.node.fields.title,
+								},
+								pathGroup: pagePathGroup,
+								slug: designPage.href,
+								tabs,
+							},
+							path: designPage.href,
+						});
+					}
+
 					createPage({
 						component: template,
 						context: {
 							mainTabURL,
-							pathGroup: pathGroup.map(
-								({
-									node: {
-										fields: {slug},
-									},
-								}) => slug
-							),
+							pageRemote: {},
+							pathGroup: pagePathGroup,
 							slug,
-							tabs: getTabs(mainTabURL || slug, pathGroup),
+							tabs,
 						},
 						path: slug,
 					});
@@ -187,6 +251,17 @@ module.exports = async ({actions, graphql}) => {
 					}
 				}
 			}
+			allLiferayDocument {
+				edges {
+					node {
+						type
+						id
+						title
+						html
+						slug
+					}
+				}
+			}
 		}
 	`).then(async ({data, errors}) => {
 		if (errors) {
@@ -204,11 +279,21 @@ module.exports = async ({actions, graphql}) => {
 			}) => mainTabURL
 		);
 
+		const allDocuments = data.allLiferayDocument.edges.map(({node}) => ({
+			node: {fields: node},
+		}));
+
 		if (data.allMdx.edges) {
-			createDocs(actions, data.allMdx.edges, true, pathGroup);
+			createDocs(actions, data.allMdx.edges, true, [
+				...pathGroup,
+				...allDocuments,
+			]);
 		}
 
-		createDocs(actions, data.allMarkdownRemark.edges, false, pathGroup);
+		createDocs(actions, data.allMarkdownRemark.edges, false, [
+			...pathGroup,
+			...allDocuments,
+		]);
 
 		const newestBlogEntry = await graphql(
 			`
