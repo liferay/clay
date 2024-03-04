@@ -63,9 +63,9 @@ function HeadInner<T extends Record<string, any>>(
 
 	const collection = useCollection<T>({
 		children,
-		disabledKeys: new Set(hiddenColumns.keys()),
 		items,
 		suppressTextValueWarning: false,
+		visibleKeys: new Set(hiddenColumns.keys()),
 	});
 
 	useMemo(() => {

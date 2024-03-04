@@ -153,15 +153,15 @@ function RowInner<T extends Record<string, any>>(
 
 	const ref = useForwardRef(outRef);
 
-	const disabledKeys = useMemo(
+	const visibleKeys = useMemo(
 		() => Array.from(hiddenColumns.values()),
 		[hiddenColumns]
 	);
 
 	const collection = useCollection({
 		children,
-		disabledKeys,
 		items,
+		visibleKeys,
 	});
 
 	return (
