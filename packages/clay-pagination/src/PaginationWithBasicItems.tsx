@@ -164,6 +164,11 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 					disabled={internalActive === 1}
 					href={previousHref}
 					onClick={() => setActive(previousPage)}
+					role={
+						previousHref || internalActive === 1
+							? undefined
+							: 'button'
+					}
 				>
 					<ClayIcon spritemap={spritemap} symbol="angle-left" />
 				</Pagination.Item>
@@ -217,6 +222,11 @@ const ClayPaginationWithBasicItems = React.forwardRef<HTMLUListElement, IProps>(
 					disabled={internalActive === totalPages}
 					href={nextHref}
 					onClick={() => setActive(nextPage)}
+					role={
+						nextHref || internalActive === totalPages
+							? undefined
+							: 'button'
+					}
 				>
 					<ClayIcon spritemap={spritemap} symbol="angle-right" />
 				</Pagination.Item>
