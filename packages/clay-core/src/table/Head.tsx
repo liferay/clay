@@ -54,7 +54,6 @@ function HeadInner<T extends Record<string, any>>(
 ) {
 	const {
 		columnsVisibility,
-		headCellsCount,
 		hiddenColumns,
 		messages,
 		onHeadCellsChange,
@@ -69,6 +68,9 @@ function HeadInner<T extends Record<string, any>>(
 	});
 
 	useMemo(() => {
+		if (hiddenColumns.size === 0) {
+			onHiddenColumnsChange(collection.getItems(), 0);
+		}
 		onHeadCellsChange(collection.getSize());
 	}, []);
 
@@ -151,12 +153,11 @@ function HeadInner<T extends Record<string, any>>(
 															},
 														}}
 														disabled={
-															!hiddenColumns.has(
+															hiddenColumns.has(
 																item
 															) &&
-															headCellsCount -
-																1 ===
-																hiddenColumns.size
+															hiddenColumns.size ===
+																1
 														}
 														onChange={(event) => {
 															event.stopPropagation();

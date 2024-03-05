@@ -21,7 +21,10 @@ type Context = {
 	onHeadCellsChange: (value: number) => void;
 	onLoadMore?: (item: unknown) => Promise<Array<any> | undefined>;
 	onSortChange: (sorting: Sorting | null, textValue: string) => void;
-	onHiddenColumnsChange: (column: React.Key, index: number) => void;
+	onHiddenColumnsChange: (
+		column: React.Key | Array<React.Key>,
+		index: number
+	) => void;
 	sort: Sorting | null;
 	sortDescriptionId: string;
 	treegrid: boolean;

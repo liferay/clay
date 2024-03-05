@@ -212,7 +212,26 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 							onExpandedChange: setExpandedKeys,
 							onHeadCellsChange: setHeadCellsCount,
 							onHiddenColumnsChange: useCallback(
-								(column: React.Key, index: number) => {
+								(
+									column: React.Key | Array<React.Key>,
+									index: number
+								) => {
+									if (Array.isArray(column)) {
+										const columns = new Map(hidden);
+
+										column.forEach((value, index) => {
+											if (columns.has(value)) {
+												columns.delete(value);
+											} else {
+												columns.set(value, index);
+											}
+										});
+
+										setHidden(columns);
+
+										return;
+									}
+
 									const columns = new Map(hidden);
 
 									if (columns.has(column)) {
