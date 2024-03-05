@@ -729,6 +729,7 @@ const iconsData = {
 	"search-plus":              '"inspect", "lens", "zoom"',
 	"select":                   '"input", "multiple", "options"',
 	"select-from-list":         '"input", "multiple", "options"',
+	"seo":						'"inspect", "lens", "zoom"',
 	"separator":                '"divider", "group", "line"',
 	"shadow":                   '"effect", "light"',
 	"share":                    '"social"',
