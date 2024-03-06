@@ -15,6 +15,7 @@ exports[`ClayPagination renders 1`] = `
           aria-label="Go to the previous page, 11"
           class="page-link"
           data-testid="prevArrow"
+          role="button"
           tabindex="0"
         >
           <svg
@@ -45,7 +46,6 @@ exports[`ClayPagination renders 1`] = `
           class="dropdown"
         >
           <button
-            aria-controls="clay-id-2"
             aria-haspopup="true"
             aria-label="Show pages 2 through 9"
             class="dropdown-toggle page-link btn btn-unstyled"
@@ -118,7 +118,6 @@ exports[`ClayPagination renders 1`] = `
           class="dropdown"
         >
           <button
-            aria-controls="clay-id-4"
             aria-haspopup="true"
             aria-label="Show pages 15 through 24"
             class="dropdown-toggle page-link btn btn-unstyled"
@@ -147,6 +146,7 @@ exports[`ClayPagination renders 1`] = `
           aria-label="Go to the next page, 13"
           class="page-link"
           data-testid="nextArrow"
+          role="button"
           tabindex="0"
         >
           <svg

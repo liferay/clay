@@ -37,7 +37,6 @@ exports[`Table basic rendering render dynamic content 1`] = `
               class="dropdown"
             >
               <button
-                aria-controls="clay-id-12"
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
@@ -193,7 +192,6 @@ exports[`Table basic rendering render static content 1`] = `
               class="dropdown"
             >
               <button
-                aria-controls="clay-id-4"
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
@@ -423,7 +421,6 @@ exports[`Table basic rendering render with sort column 1`] = `
               class="dropdown"
             >
               <button
-                aria-controls="clay-id-20"
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
@@ -584,7 +581,6 @@ exports[`Table basic rendering render with treegrid 1`] = `
               class="dropdown"
             >
               <button
-                aria-controls="clay-id-28"
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
