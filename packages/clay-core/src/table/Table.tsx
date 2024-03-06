@@ -34,9 +34,9 @@ export type Props = {
 	defaultSort?: Sorting | null;
 
 	/**
-	 * Default value for hidden columns in the table (uncontrolled).
+	 * Default value for visible columns in the table (uncontrolled).
 	 */
-	defaultHiddenColumns?: Map<React.Key, number>;
+	defaultVisibleColumns?: Map<React.Key, number>;
 
 	/**
 	 * The currently expanded keys in the collection (controlled).
@@ -44,9 +44,9 @@ export type Props = {
 	expandedKeys?: Set<React.Key>;
 
 	/**
-	 * Defines which columns are hidden in the table (controlled).
+	 * Defines which columns are visible in the table (controlled).
 	 */
-	hiddenColumns?: Map<React.Key, number>;
+	visibleColumns?: Map<React.Key, number>;
 
 	/**
 	 * Texts used for assertive messages to SRs.
@@ -81,7 +81,7 @@ export type Props = {
 	/**
 	 * Callback called when columns visibility changes (controlled).
 	 */
-	onHiddenColumnsChange?: (columns: Map<React.Key, number>) => void;
+	onVisibleColumnsChange?: (columns: Map<React.Key, number>) => void;
 
 	/**
 	 * Current state of sort (controlled).
@@ -114,7 +114,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			className,
 			defaultExpandedKeys = defaultSet,
 			defaultSort,
-			defaultHiddenColumns = new Map(),
+			defaultVisibleColumns = new Map(),
 			expandedKeys: externalExpandedKeys,
 			messages = {
 				columnsVisibility: 'Manage Columns Visibility',
@@ -125,9 +125,9 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				sortDescription: 'sortable column',
 				sorting: 'sorted by column {0} in {1} order',
 			},
-			hiddenColumns: externalHiddenColumns,
+			visibleColumns: externalVisibleColumns,
 			onExpandedChange,
-			onHiddenColumnsChange,
+			onVisibleColumnsChange,
 			onLoadMore,
 			onSortChange,
 			size,
@@ -157,13 +157,13 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			value: externalSort,
 		});
 
-		const [hidden, setHidden] = useControlledState({
-			defaultName: 'defaultSort',
-			defaultValue: defaultHiddenColumns,
-			handleName: 'onHiddenColumnsChange',
-			name: 'hiddenColumns',
-			onChange: onHiddenColumnsChange,
-			value: externalHiddenColumns,
+		const [visibleColumns, setVisibleColumns] = useControlledState({
+			defaultName: 'defaultVisibleColumns',
+			defaultValue: defaultVisibleColumns,
+			handleName: 'onVisibleColumnsChange',
+			name: 'visibleColumns',
+			onChange: onVisibleColumnsChange,
+			value: externalVisibleColumns,
 		});
 
 		const ref = useForwardRef(outRef);
@@ -206,44 +206,10 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 							columnsVisibility,
 							expandedKeys,
 							headCellsCount,
-							hiddenColumns: hidden,
 							messages,
 							nestedKey,
 							onExpandedChange: setExpandedKeys,
 							onHeadCellsChange: setHeadCellsCount,
-							onHiddenColumnsChange: useCallback(
-								(
-									column: React.Key | Array<React.Key>,
-									index: number
-								) => {
-									if (Array.isArray(column)) {
-										const columns = new Map(hidden);
-
-										column.forEach((value, index) => {
-											if (columns.has(value)) {
-												columns.delete(value);
-											} else {
-												columns.set(value, index);
-											}
-										});
-
-										setHidden(columns);
-
-										return;
-									}
-
-									const columns = new Map(hidden);
-
-									if (columns.has(column)) {
-										columns.delete(column);
-									} else {
-										columns.set(column, index);
-									}
-
-									setHidden(columns);
-								},
-								[setHidden, hidden]
-							),
 							onLoadMore,
 							onSortChange: useCallback(
 								(sort, textValue) => {
@@ -257,9 +223,43 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 								},
 								[setSorting]
 							),
+							onVisibleColumnsChange: useCallback(
+								(
+									column: React.Key | Array<React.Key>,
+									index: number
+								) => {
+									if (Array.isArray(column)) {
+										const columns = new Map(visibleColumns);
+
+										column.forEach((value, index) => {
+											if (columns.has(value)) {
+												columns.delete(value);
+											} else {
+												columns.set(value, index);
+											}
+										});
+
+										setVisibleColumns(columns);
+
+										return;
+									}
+
+									const columns = new Map(visibleColumns);
+
+									if (columns.has(column)) {
+										columns.delete(column);
+									} else {
+										columns.set(column, index);
+									}
+
+									setVisibleColumns(columns);
+								},
+								[setVisibleColumns, visibleColumns]
+							),
 							sort,
 							sortDescriptionId,
 							treegrid: !!nestedKey,
+							visibleColumns,
 						}}
 					>
 						{children}

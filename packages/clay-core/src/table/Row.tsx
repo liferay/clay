@@ -110,10 +110,10 @@ function RowInner<T extends Record<string, any>>(
 		columnsVisibility,
 		expandedKeys,
 		headCellsCount,
-		hiddenColumns,
 		onExpandedChange,
 		onLoadMore,
 		treegrid,
+		visibleColumns,
 	} = useTable();
 	const {insert} = useBody();
 	const [isFocused, setIsFocused] = useState(false);
@@ -154,8 +154,8 @@ function RowInner<T extends Record<string, any>>(
 	const ref = useForwardRef(outRef);
 
 	const visibleKeys = useMemo(
-		() => Array.from(hiddenColumns.values()),
-		[hiddenColumns]
+		() => Array.from(visibleColumns.values()),
+		[visibleColumns]
 	);
 
 	const collection = useCollection({

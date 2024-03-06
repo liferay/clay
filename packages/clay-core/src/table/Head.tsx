@@ -54,22 +54,22 @@ function HeadInner<T extends Record<string, any>>(
 ) {
 	const {
 		columnsVisibility,
-		hiddenColumns,
 		messages,
 		onHeadCellsChange,
-		onHiddenColumnsChange,
+		onVisibleColumnsChange,
+		visibleColumns,
 	} = useTable();
 
 	const collection = useCollection<T>({
 		children,
 		items,
 		suppressTextValueWarning: false,
-		visibleKeys: new Set(hiddenColumns.keys()),
+		visibleKeys: new Set(visibleColumns.keys()),
 	});
 
 	useMemo(() => {
-		if (hiddenColumns.size === 0) {
-			onHiddenColumnsChange(collection.getItems(), 0);
+		if (visibleColumns.size === 0) {
+			onVisibleColumnsChange(collection.getItems(), 0);
 		}
 		onHeadCellsChange(collection.getSize());
 	}, []);
@@ -127,7 +127,7 @@ function HeadInner<T extends Record<string, any>>(
 										<Item
 											key={item}
 											onClick={() =>
-												onHiddenColumnsChange(
+												onVisibleColumnsChange(
 													item,
 													collection.getItem(item)
 														.index
@@ -153,16 +153,16 @@ function HeadInner<T extends Record<string, any>>(
 															},
 														}}
 														disabled={
-															hiddenColumns.has(
+															visibleColumns.has(
 																item
 															) &&
-															hiddenColumns.size ===
+															visibleColumns.size ===
 																1
 														}
 														onChange={(event) => {
 															event.stopPropagation();
 
-															onHiddenColumnsChange(
+															onVisibleColumnsChange(
 																item,
 																collection.getItem(
 																	item
@@ -172,7 +172,7 @@ function HeadInner<T extends Record<string, any>>(
 														onKeyDown={(event) => {
 															switch (event.key) {
 																case 'Enter':
-																	onHiddenColumnsChange(
+																	onVisibleColumnsChange(
 																		item,
 																		collection.getItem(
 																			item
@@ -184,7 +184,7 @@ function HeadInner<T extends Record<string, any>>(
 															}
 														}}
 														sizing="sm"
-														toggled={hiddenColumns.has(
+														toggled={visibleColumns.has(
 															item
 														)}
 													/>
