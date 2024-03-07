@@ -59,11 +59,11 @@ export type Props<P, K> = {
 	connectNested?: boolean;
 
 	/**
-	 * Flag to not render items in the DOM but it does not affect the layout
-	 * record, for example when obtaining all items from the collection it
+	 * Flag to render only the defined elements but does not affect the layout
+	 * registration, for example when getting all the items in the collection it
 	 * will still be there.
 	 */
-	disabledKeys?: Set<React.Key> | Array<number>;
+	visibleKeys?: Set<React.Key> | Array<number>;
 
 	/**
 	 * Properties that should be omitted from item data when passed to

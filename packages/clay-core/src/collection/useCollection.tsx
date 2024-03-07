@@ -54,7 +54,6 @@ export function useCollection<
 >({
 	children,
 	connectNested = true,
-	disabledKeys,
 	exclude,
 	filter,
 	filterKey,
@@ -67,6 +66,7 @@ export function useCollection<
 	publicApi,
 	suppressTextValueWarning = true,
 	virtualizer,
+	visibleKeys,
 }: ICollectionProps<T, P> & Props<P, K>): CollectionState {
 	const {forceUpdate, layout: parentLayout} = useContext(CollectionContext);
 
@@ -326,11 +326,13 @@ export function useCollection<
 					);
 
 					if (
-						disabledKeys &&
-						((Array.isArray(disabledKeys) &&
-							disabledKeys.includes(index)) ||
-							(disabledKeys instanceof Set &&
-								disabledKeys.has(key)))
+						visibleKeys &&
+						((Array.isArray(visibleKeys) &&
+							visibleKeys.length > 0 &&
+							!visibleKeys.includes(index)) ||
+							(visibleKeys instanceof Set &&
+								visibleKeys.size > 0 &&
+								!visibleKeys.has(key)))
 					) {
 						return null;
 					}
@@ -347,10 +349,13 @@ export function useCollection<
 				const key = getKey(index, child.key, parentKey);
 
 				if (
-					disabledKeys &&
-					((Array.isArray(disabledKeys) &&
-						disabledKeys.includes(index)) ||
-						(disabledKeys instanceof Set && disabledKeys.has(key)))
+					visibleKeys &&
+					((Array.isArray(visibleKeys) &&
+						visibleKeys.length > 0 &&
+						!visibleKeys.includes(index)) ||
+						(visibleKeys instanceof Set &&
+							visibleKeys.size > 0 &&
+							!visibleKeys.has(key)))
 				) {
 					return null;
 				}
@@ -362,7 +367,7 @@ export function useCollection<
 			performItemRender,
 			publicApi,
 			virtualizer?.getVirtualItems().length,
-			disabledKeys,
+			visibleKeys,
 		]
 	);
 
