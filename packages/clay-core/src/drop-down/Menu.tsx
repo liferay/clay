@@ -214,7 +214,7 @@ function MenuInner<T extends Record<string, unknown> | string | number>(
 	return (
 		<div className="dropdown" ref={containerRef}>
 			{React.cloneElement(trigger, {
-				'aria-controls': ariaControlsId,
+				'aria-controls': active ? ariaControlsId : undefined,
 				'aria-expanded': active,
 				'aria-haspopup': 'true',
 				className: classNames(
