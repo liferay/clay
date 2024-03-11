@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.112.0](https://github.com/liferay/clay/compare/v3.111.1...v3.112.0) (2024-03-11)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug when switching column visibility ([89a8f07](https://github.com/liferay/clay/commit/89a8f078ef78aeaab3a4056c2522d21ca5811a8c))
+-   **@clayui/core:** fixes columns visibility initial state behavior ([34614f8](https://github.com/liferay/clay/commit/34614f8275da1575424c8ae553d604c88b6f84a5))
+-   **@clayui/core:** remove `hiddenColumns` API in favor of `visibleColumns` ([5c05be4](https://github.com/liferay/clay/commit/5c05be4ee081d074a59095145f0397277ebf97f7))
+-   **@clayui/css:** Change tooltip background color ([fe3cfb3](https://github.com/liferay/clay/commit/fe3cfb33a22898c924ef3e3daa973856f238d02a))
+-   **@clayui/css:** LPD-19394 Removes padding from mark due to spacing issue in autocomplete ([f9943f9](https://github.com/liferay/clay/commit/f9943f9a9886d3b8b86eb6341c89436834a60703))
+-   **@clayui/pagination:** LPD-1285 accessibility issues on prev, next and ellipsis buttons ([640dd96](https://github.com/liferay/clay/commit/640dd960aaab0e67255ec46d121717b36a20133b))
+
+### Features
+
+-   **@clayui/autocomplete:** update component highlight ([b6fd6a9](https://github.com/liferay/clay/commit/b6fd6a969099a5c89bc48bfa06b2ec1ccf1a28cc))
+-   **@clayui/core:** update component highlight ([0993f12](https://github.com/liferay/clay/commit/0993f12909003a6cffa55f642d3bd272e5e6cad9))
+-   **@clayui/css:** LPD-19329 Adds SVG Icons bracket and braces ([b60ea14](https://github.com/liferay/clay/commit/b60ea143b898aecba577f22078bb927f64e8026e))
+-   **@clayui/css:** LPD-19394 Mark update colors and add a dark version ([e2e409a](https://github.com/liferay/clay/commit/e2e409af9e5e7bb57965869db01032c4ce90a346))
+-   **@clayui/css:** LPD-19703 Add new seo icon ([080ab51](https://github.com/liferay/clay/commit/080ab5122da55d4b0c5bdb7d017b2a3d1d11f8d3))
+-   **clayui.com:** adds implementation to render pages consuming from Liferay ([d3d6020](https://github.com/liferay/clay/commit/d3d6020eea92721ec2f2c74cb90bbcc956a89a1f))
+
 ## [3.111.1](https://github.com/liferay/clay/compare/v3.111.0...v3.111.1) (2024-02-20)
 
 ### Bug Fixes

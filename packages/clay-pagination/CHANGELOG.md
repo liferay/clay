@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.112.0](https://github.com/liferay/clay/compare/v3.111.1...v3.112.0) (2024-03-11)
+
+### Bug Fixes
+
+-   **@clayui/pagination:** LPD-1285 accessibility issues on prev, next and ellipsis buttons ([640dd96](https://github.com/liferay/clay/commit/640dd960aaab0e67255ec46d121717b36a20133b))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/pagination

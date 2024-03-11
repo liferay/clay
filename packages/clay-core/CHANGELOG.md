@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.112.0](https://github.com/liferay/clay/compare/v3.111.1...v3.112.0) (2024-03-11)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug when switching column visibility ([89a8f07](https://github.com/liferay/clay/commit/89a8f078ef78aeaab3a4056c2522d21ca5811a8c))
+-   **@clayui/core:** fixes columns visibility initial state behavior ([34614f8](https://github.com/liferay/clay/commit/34614f8275da1575424c8ae553d604c88b6f84a5))
+-   **@clayui/core:** remove `hiddenColumns` API in favor of `visibleColumns` ([5c05be4](https://github.com/liferay/clay/commit/5c05be4ee081d074a59095145f0397277ebf97f7))
+-   **@clayui/pagination:** LPD-1285 accessibility issues on prev, next and ellipsis buttons ([640dd96](https://github.com/liferay/clay/commit/640dd960aaab0e67255ec46d121717b36a20133b))
+
+### Features
+
+-   **@clayui/core:** update component highlight ([0993f12](https://github.com/liferay/clay/commit/0993f12909003a6cffa55f642d3bd272e5e6cad9))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 ### Bug Fixes

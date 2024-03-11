@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.112.0](https://github.com/liferay/clay/compare/v3.111.1...v3.112.0) (2024-03-11)
+
+### Features
+
+-   **@clayui/css:** LPD-19703 Add new seo icon ([080ab51](https://github.com/liferay/clay/commit/080ab5122da55d4b0c5bdb7d017b2a3d1d11f8d3))
+-   **clayui.com:** adds implementation to render pages consuming from Liferay ([d3d6020](https://github.com/liferay/clay/commit/d3d6020eea92721ec2f2c74cb90bbcc956a89a1f))
+
 ## [3.111.1](https://github.com/liferay/clay/compare/v3.111.0...v3.111.1) (2024-02-20)
 
 **Note:** Version bump only for package clayui.com
