@@ -694,31 +694,18 @@ $hr-margin-y: $spacer !default;
 
 $mark-bg: #fcf8e3 !default;
 $mark-color: null !default;
-$mark-padding: 2px 0.25em 3px 0 !default;
+$mark-padding: null !default;
 
 $mark: () !default;
 $mark: map-deep-merge(
 	(
 		background-color: $mark-bg,
-		box-decoration-break: clone,
-		box-shadow: -0.25em 0 0 $mark-bg,
 		color: $mark-color,
 		display: inline,
 		line-height: normal,
 		padding: $mark-padding,
 		position: relative,
 		white-space: pre-wrap,
-		before: (
-			background-color: $mark-bg,
-			bottom: 0,
-			content: '',
-			display: block,
-			position: absolute,
-			right: 100%,
-			top: 0,
-			width: 0.25em,
-			z-index: -1,
-		),
 	),
 	$mark
 );
@@ -727,11 +714,7 @@ $clay-dark-mark: () !default;
 $clay-dark-mark: map-deep-merge(
 	(
 		background-color: $dark-l2,
-		box-shadow: -0.25em 0 0 $dark-l2,
 		color: $white,
-		before: (
-			background-color: $dark-l2,
-		),
 	),
 	$clay-dark-mark
 );
