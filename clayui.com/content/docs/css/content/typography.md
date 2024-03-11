@@ -12,6 +12,7 @@ order: 3
 -   [Headings](#css-headings)
 -   [Display](#css-display)
 -   [Lead](#css-lead)
+-   [Highlight Text](#css-highlight-text)
 -   [Inline Text Elements](#css-inline-text-elements)
 -   [Reference Mark](#css-reference-mark)
 -   [Text Truncate](#css-text-truncate)
@@ -117,6 +118,20 @@ $display-1: (
 	Lead Body Text: Milk filter lungo as galão roast that crema blue mountain
 	shop turkish.
 </p>
+```
+
+## Highlight Text(#css-highlight-text)
+
+Use the `mark` tag or add the `mark` class to your HTML element to highlight text. The class `clay-dark` can be added to the element or the parent element for dark themed highlighting.
+
+<p><mark>Landscape</mark> Photography</p>
+
+<p><span class="clay-dark mark">Landscape</span> Picture</p>
+
+```html
+<p><mark>Landscape</mark> Photography</p>
+
+<p><span class="clay-dark mark">Landscape</span> Picture</p>
 ```
 
 ## Inline Text Elements(#css-inline-text-elements)

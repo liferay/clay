@@ -809,7 +809,49 @@ $cadmin-hr-border-color: rgba($cadmin-black, 0.1) !default;
 $cadmin-hr-border-width: $cadmin-border-width !default;
 $cadmin-hr-margin-y: $cadmin-spacer !default;
 
-$cadmin-mark-padding: 0.2em !default;
+$cadmin-mark-bg: #ffe399 !default;
+$cadmin-mark-color: null !default;
+$cadmin-mark-padding: 2px 0.25em 3px 0 !default;
+
+$cadmin-mark: () !default;
+$cadmin-mark: map-deep-merge(
+	(
+		background-color: $cadmin-mark-bg,
+		box-decoration-break: clone,
+		box-shadow: -0.25em 0 0 $cadmin-mark-bg,
+		color: $cadmin-mark-color,
+		display: inline,
+		line-height: normal,
+		padding: $cadmin-mark-padding,
+		position: relative,
+		white-space: pre-wrap,
+		before: (
+			background-color: $cadmin-mark-bg,
+			bottom: 0,
+			content: '',
+			display: block,
+			position: absolute,
+			right: 100%,
+			top: 0,
+			width: 0.25em,
+			z-index: -1,
+		),
+	),
+	$cadmin-mark
+);
+
+$cadmin-clay-dark-mark: () !default;
+$cadmin-clay-dark-mark: map-deep-merge(
+	(
+		background-color: $cadmin-dark-l2,
+		box-shadow: -0.25em 0 0 $cadmin-dark-l2,
+		color: $cadmin-white,
+		before: (
+			background-color: $cadmin-dark-l2,
+		),
+	),
+	$cadmin-clay-dark-mark
+);
 
 $cadmin-dt-font-weight: $cadmin-font-weight-bold !default;
 
@@ -829,8 +871,6 @@ $cadmin-pre-color: $cadmin-gray-900 !default;
 $cadmin-pre-scrollable-max-height: 340px !default;
 
 $cadmin-list-inline-padding: 8px !default;
-
-$cadmin-mark-bg: #fcf8e3 !default;
 
 // Buttons + Forms
 

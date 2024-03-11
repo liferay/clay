@@ -535,7 +535,7 @@ $hr-border-color: rgba($black, 0.1) !default;
 $hr-border-width: $border-width !default;
 $hr-margin-y: $spacer !default;
 
-$mark-padding: 0.2em !default;
+$mark-bg: #ffe399 !default;
 
 $dt-font-weight: $font-weight-bold !default;
 
@@ -555,8 +555,6 @@ $pre-color: $gray-900 !default;
 $pre-scrollable-max-height: 340px !default;
 
 $list-inline-padding: 0.5rem !default;
-
-$mark-bg: #fcf8e3 !default;
 
 // Buttons + Forms
 

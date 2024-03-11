@@ -110,7 +110,22 @@ small,
 
 mark,
 .mark {
-	@include clay-highlight-text($mark-bg, $mark-color);
+	@include clay-css($mark);
+
+	&::before {
+		@include clay-css(map-get($mark, before));
+	}
+}
+
+mark.clay-dark,
+.clay-dark.mark,
+.clay-dark mark,
+.clay-dark .mark {
+	@include clay-css($clay-dark-mark);
+
+	&::before {
+		@include clay-css(map-get($clay-dark-mark, before));
+	}
 }
 
 // Lists
