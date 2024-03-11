@@ -33,7 +33,14 @@ export function TextHighlight({children, match}: Props) {
 							const value = item.replace(/\+/g, '');
 
 							return value ? (
-								<Text key={index}>{value}</Text>
+								<Text
+									className={
+										!item.includes('}') ? 'mark' : undefined
+									}
+									key={index}
+								>
+									{value}
+								</Text>
 							) : null;
 						})
 						.filter(Boolean)
