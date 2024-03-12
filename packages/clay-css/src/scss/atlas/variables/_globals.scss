@@ -122,7 +122,7 @@ $secondary-d2: clay-darken(clay-saturate($secondary, 5.36), 23.92) !default;
 $secondary-l0: clay-lighten(
 	clay-saturate(clay-adjust-hue($secondary, 3), 0.03),
 	11.18
-);
+) !default;
 $secondary-l1: clay-lighten(
 	clay-saturate(clay-adjust-hue($secondary, -3), 5.39),
 	23.92
