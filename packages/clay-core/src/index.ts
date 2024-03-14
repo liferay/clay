@@ -17,6 +17,7 @@ export {Provider, useProvider} from '@clayui/provider';
 
 export {Alert} from './alert';
 export {Badge} from './badge';
+export {Breadcrumb} from './breadcrumb';
 export {Heading, Text, TextHighlight} from './typography';
 export {OverlayMask} from './overlay-mask';
 export {TreeView} from './tree-view';
