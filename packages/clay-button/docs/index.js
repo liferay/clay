@@ -12,23 +12,20 @@ const buttonDisplayTypesImportsCode = `import ClayButton from '@clayui/button';`
 
 const ButtonDisplayTypesCode = `const Component = () => {
 	return (
-		<>
+		<ClayButton.Group spaced>
 			<ClayButton displayType="primary">
 				Button Primary
 			</ClayButton>
 			<ClayButton displayType="secondary">
 				Button Secondary
 			</ClayButton>
-			<ClayButton displayType={null}>
-				Base Button
-			</ClayButton>
 			<ClayButton displayType="link">
 				Button Link
 			</ClayButton>
-			<ClayButton displayType="unstyled">
-				Button Unstyled
+			<ClayButton borderless>
+				Button Borderless
 			</ClayButton>
-		</>
+		</ClayButton.Group>
 	);
 }
 
@@ -52,8 +49,8 @@ const ButtonJSPCode = `<clay:button
 />
 
 <clay:button
-	displayType="unstyled"
-	label="Button Unstyled"
+	displayType="outline-borderless"
+	label="Button Borderless"
 />`;
 
 const ButtonDisplayTypes = () => {
@@ -132,198 +129,4 @@ const ButtonIcon = () => {
 	return <Editor code={code} imports={buttonIconImportsCode} scope={scope} />;
 };
 
-const buttonTranslucentImportsCode = `import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon;'`;
-
-const ButtonTranslucentCode = `const Component = () => {
-	return (
-		<>
-			<ClayButton displayType="primary" translucent>
-				<span className="inline-item">
-					{'Primary'}
-				</span>
-			</ClayButton>
-
-			<ClayButton displayType="success" translucent>
-				<span className="inline-item">
-					{'Success'}
-				</span>
-			</ClayButton>
-
-			<ClayButton displayType="info" translucent>
-				<span className="inline-item">
-					{'Info'}
-				</span>
-
-				<span className="inline-item inline-item-after">
-					<ClayIcon spritemap={spritemap} symbol="info-panel-open" />
-				</span>
-			</ClayButton>
-
-			<ClayButton displayType="warning" translucent>
-				<span className="inline-item">
-					{'Warning'}
-				</span>
-
-				<span className="inline-item inline-item-after">
-					<ClayIcon spritemap={spritemap} symbol="warning-full" />
-				</span>
-			</ClayButton>
-
-			<ClayButton displayType="danger" translucent>
-				<span className="inline-item">
-					{'Danger'}
-				</span>
-			</ClayButton>
-		</>
-	);
-}
-
-render(<Component />);`;
-
-const ButtonTranslucent = () => {
-	const scope = {ClayButton, ClayButtonWithIcon, ClayIcon};
-	const code = ButtonTranslucentCode;
-
-	return (
-		<Editor
-			code={code}
-			imports={buttonTranslucentImportsCode}
-			scope={scope}
-		/>
-	);
-};
-
-// START
-
-const buttonClayDarkImportsCode = `import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon;'`;
-
-const ButtonClayDarkCode = `const Component = () => {
-	return (
-		<>
-			<div className="bg-dark clay-dark p-2">
-				<ClayButton displayType="primary" translucent>
-					<span className="inline-item">
-						{'Primary'}
-					</span>
-				</ClayButton>
-
-				<ClayButton displayType="success" translucent>
-					<span className="inline-item">
-						{'Success'}
-					</span>
-				</ClayButton>
-
-				<ClayButton displayType="info" translucent>
-					<span className="inline-item">
-						{'Info'}
-					</span>
-
-					<span className="inline-item inline-item-after">
-						<ClayIcon spritemap={spritemap} symbol="info-panel-open" />
-					</span>
-				</ClayButton>
-
-				<ClayButton displayType="warning" translucent>
-					<span className="inline-item">
-						{'Warning'}
-					</span>
-
-					<span className="inline-item inline-item-after">
-						<ClayIcon spritemap={spritemap} symbol="warning-full" />
-					</span>
-				</ClayButton>
-
-				<ClayButton displayType="danger" translucent>
-					<span className="inline-item">
-						{'Danger'}
-					</span>
-				</ClayButton>
-			</div>
-		</>
-	);
-}
-
-render(<Component />);`;
-
-const ButtonClayDark = () => {
-	const scope = {ClayButton, ClayButtonWithIcon, ClayIcon};
-	const code = ButtonClayDarkCode;
-
-	return (
-		<Editor code={code} imports={buttonClayDarkImportsCode} scope={scope} />
-	);
-};
-
-// END
-
-const buttonBetaImportsCode = `import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon;'`;
-
-const ButtonBetaCode = `const Component = () => {
-	return (
-		<>
-			<ClayButton className="rounded-circle" displayType="beta" size="xs">
-				<span className="inline-item">
-					{'Beta'}
-				</span>
-
-				<span className="inline-item inline-item-after">
-					<ClayIcon spritemap={spritemap} symbol="info-panel-open" />
-				</span>
-			</ClayButton>
-		</>
-	);
-}
-
-render(<Component />);`;
-
-const ButtonBeta = () => {
-	const scope = {ClayButton, ClayButtonWithIcon, ClayIcon};
-	const code = ButtonBetaCode;
-
-	return <Editor code={code} imports={buttonBetaImportsCode} scope={scope} />;
-};
-
-const buttonBetaDarkImportsCode = `import ClayButton from '@clayui/button';
-import ClayIcon from '@clayui/icon;'`;
-
-const ButtonBetaDarkCode = `const Component = () => {
-	return (
-		<>
-			<div className="bg-dark p-2">
-				<ClayButton className="rounded-circle" displayType="beta-dark" size="xs">
-					<span className="inline-item">
-						{'Beta'}
-					</span>
-
-					<span className="inline-item inline-item-after">
-						<ClayIcon spritemap={spritemap} symbol="info-panel-open" />
-					</span>
-				</ClayButton>
-			</div>
-		</>
-	);
-}
-
-render(<Component />);`;
-
-const ButtonBetaDark = () => {
-	const scope = {ClayButton, ClayButtonWithIcon, ClayIcon};
-	const code = ButtonBetaDarkCode;
-
-	return (
-		<Editor code={code} imports={buttonBetaDarkImportsCode} scope={scope} />
-	);
-};
-
-export {
-	ButtonDisplayTypes,
-	ButtonGroup,
-	ButtonIcon,
-	ButtonBeta,
-	ButtonBetaDark,
-	ButtonTranslucent,
-	ButtonClayDark,
-};
+export {ButtonDisplayTypes, ButtonGroup, ButtonIcon};

@@ -47,6 +47,7 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	 * Determines the button variant to use.
 	 * The values `beta` and `beta-dark` are deprecated since v3.100.0 - use
 	 * `translucent` and `dark` instead.
+	 * The values `null` and `unstyled` are for internal use only.
 	 */
 	displayType?: DisplayType;
 
