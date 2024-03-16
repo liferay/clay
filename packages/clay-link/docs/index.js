@@ -25,24 +25,6 @@ const LinkCode = `const Component = () => {
 			<ClayLink displayType="primary" href="#link-styles">
 				{'Primary'}
 			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="secondary" href="#link-styles">
-				{'Secondary'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="danger" href="#link-styles">
-				{'Danger'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="tertiary" href="#link-styles">
-				{'Tertiary'}
-			</ClayLink>
 		</div>
 	);
 }
@@ -63,24 +45,6 @@ const LinkJSPCode = `<clay:link href="#link-styles" label="Default" />
 	displayType="primary"
 	href="#link-styles"
 	label="Primary"
-/>
-
-<clay:link
-	displayType="secondary"
-	href="#link-styles"
-	label="Secondary"
-/>
-
-<clay:link
-	displayType="danger"
-	href="#link-styles"
-	label="Danger"
-/>
-
-<clay:link
-	displayType="tertiary"
-	href="#link-styles"
-	label="Tertiary"
 />`;
 
 export const Link = () => {
@@ -110,24 +74,6 @@ const LinkWeightCode = `const Component = () => {
 			<ClayLink displayType="primary" href="#link-styles" weight="semi-bold">
 				{'Primary'}
 			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="secondary" href="#link-styles" weight="semi-bold">
-				{'Secondary'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="danger" href="#link-styles" weight="semi-bold">
-				{'Danger'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="tertiary" href="#link-styles" weight="semi-bold">
-				{'Tertiary'}
-			</ClayLink>
 		</div>
 	);
 }
@@ -140,27 +86,6 @@ const LinkWeightJSPCode = `<clay:link
 	displayType="primary"
 	href="#link-styles"
 	label="Primary"
-	weight="semi-bold"
-/>
-
-<clay:link
-	displayType="secondary"
-	href="#link-styles"
-	label="Secondary"
-	weight="semi-bold"
-/>
-
-<clay:link
-	displayType="danger"
-	href="#link-styles"
-	label="Danger"
-	weight="semi-bold"
-/>
-
-<clay:link
-	displayType="tertiary"
-	href="#link-styles"
-	label="Tertiary"
 	weight="semi-bold"
 />`;
 
@@ -190,24 +115,6 @@ const LinkFontSizeCode = `const Component = () => {
 		<div>
 			<ClayLink displayType="primary" fontSize="11" href="#link-styles" weight="semi-bold">
 				{'Primary'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="secondary" fontSize="8" href="#link-styles" weight="semi-bold">
-				{'Secondary'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="danger" fontSize="6" href="#link-styles" weight="semi-bold">
-				{'Danger'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="tertiary" fontSize="2" href="#link-styles" weight="semi-bold">
-				{'Tertiary'}
 			</ClayLink>
 		</div>
 	);
@@ -250,12 +157,6 @@ const LinkOutlineCode = `const Component = () => {
 			<ClayLink displayType="primary" href="#link-styles" outline>
 				{'Primary'}
 			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="secondary" href="#link-styles" outline>
-				{'Secondary'}
-			</ClayLink>
 		</div>
 	);
 }
@@ -293,12 +194,6 @@ const LinkBorderlessCode = `const Component = () => {
 		<div>
 			<ClayLink borderless displayType="primary" href="#link-styles" outline>
 				{'Primary'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink borderless displayType="secondary" href="#link-styles" outline>
-				{'Secondary'}
 			</ClayLink>
 		</div>
 	);
@@ -338,12 +233,6 @@ const LinkMonospacedCode = `const Component = () => {
 		<div>
 			<ClayLink displayType="primary" href="#link-styles" monospaced outline>
 				{'P'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink displayType="secondary" href="#link-styles" monospaced outline>
-				{'S'}
 			</ClayLink>
 		</div>
 	);

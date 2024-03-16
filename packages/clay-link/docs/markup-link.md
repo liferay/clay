@@ -27,20 +27,18 @@ mainTabURL: 'docs/components/link.html'
 	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#link">WAI-ARIA</a> accessibility pratices for links when writting your markup.
 </div>
 
-These elements should be used to style links based on the global link, primary, and secondary colors.
+These elements should be used to style links based on the global link and primary colors.
 
 ## Styles(#css-styles)
 
 <div class="sheet-example">
 	<div><a href="#1">Regular Anchor Tag</a></div>
 	<div><a class="link-primary" href="#1">.link-primary</a></div>
-	<div><a class="link-secondary" href="#1">.link-secondary</a></div>
 </div>
 
 ```html
 <div><a href="#1">Regular Anchor Tag</a></div>
 <div><a class="link-primary" href="#1">.link-primary</a></div>
-<div><a class="link-secondary" href="#1">.link-secondary</a></div>
 ```
 
 ## Single Link(#css-single-link)
@@ -49,12 +47,10 @@ Use `.single-link` on an anchor to add a semi-bold style to the link and should 
 
 <div class="sheet-example">
 	<a class="link-primary single-link" href="#1"> .link-primary.single-link </a>
-	<a class="link-secondary single-link" href="#1"> .link-secondary.single-link </a>
 </div>
 
 ```html
 <a class="link-primary single-link" href="#1">.link-primary.single-link</a>
-<a class="link-secondary single-link" href="#1">.link-secondary.single-link</a>
 ```
 
 ## Component Links(#css-component-links)
@@ -159,34 +155,28 @@ Use these patterns for actions in components.
 
 <div class="sheet-example">
 	<a class="link-outline link-outline-primary" href="#1">Primary</a>
-	<a class="link-outline link-outline-secondary" href="#1">Secondary</a>
 </div>
 
 ```html
 <a class="link-outline link-outline-primary" href="#1">Primary</a>
-<a class="link-outline link-outline-secondary" href="#1">Secondary</a>
 ```
 
 ## Outline Borderless(#css-outline-borderless)
 
 <div class="sheet-example">
 	<a class="link-outline link-outline-borderless link-outline-primary" href="#1">Primary</a>
-	<a class="link-outline link-outline-borderless link-outline-secondary" href="#1">Secondary</a>
 </div>
 
 ```html
 <a class="link-outline link-outline-borderless link-outline-primary" href="#1"
 	>Primary</a
 >
-<a class="link-outline link-outline-borderless link-outline-secondary" href="#1"
-	>Secondary</a
->
 ```
 
 ## External Link(#css-external-link)
 
 <div class="sheet-example">
-	<a aria-label="External Link" class="link-secondary" href="#link-styles" title="External Link">
+	<a aria-label="External Link" class="link-primary" href="#link-styles" title="External Link">
 		External Link
 	</a>
 </div>
@@ -194,7 +184,7 @@ Use these patterns for actions in components.
 ```html
 <a
 	aria-label="External Link"
-	class="link-secondary"
+	class="link-primary"
 	href="#link-styles"
 	title="External Link"
 >
@@ -216,20 +206,6 @@ Use these patterns for actions in components.
 		<span class="inline-item">
 			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
 				<use href="/images/icons/icons.svg#add-cell" />
-			</svg>
-		</span>
-	</a>
-	<a aria-label="Image" title="Image" class="link-monospaced link-outline link-outline-secondary" href="#1">
-		<span class="inline-item">
-			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#picture" />
-			</svg>
-		</span>
-	</a>
-	<a aria-label="Image" title="Image" class="link-monospaced link-outline link-outline-borderless link-outline-secondary" href="#1">
-		<span class="inline-item">
-			<svg class="lexicon-icon lexicon-icon-picture" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#picture" />
 			</svg>
 		</span>
 	</a>
@@ -269,46 +245,12 @@ Use these patterns for actions in components.
 		</svg>
 	</span>
 </a>
-
-<a
-	aria-label="Image"
-	title="Image"
-	class="link-monospaced link-outline link-outline-secondary"
-	href="#1"
->
-	<span class="inline-item">
-		<svg
-			class="lexicon-icon lexicon-icon-picture"
-			focusable="false"
-			role="presentation"
-		>
-			<use href="/images/icons/icons.svg#picture" />
-		</svg>
-	</span>
-</a>
-
-<a
-	aria-label="Image"
-	title="Image"
-	class="link-monospaced link-outline link-outline-borderless link-outline-secondary"
-	href="#1"
->
-	<span class="inline-item">
-		<svg
-			class="lexicon-icon lexicon-icon-picture"
-			focusable="false"
-			role="presentation"
-		>
-			<use href="/images/icons/icons.svg#picture" />
-		</svg>
-	</span>
-</a>
 ```
 
 ## Title Link(#css-title-link)
 
 <div class="sheet-example">
-	<a aria-label="Title Link" class="component-title link-secondary" href="#title-link" title="Title">
+	<a aria-label="Title Link" class="component-title link-primary" href="#title-link" title="Title">
 		Title Link
 	</a>
 </div>
@@ -316,7 +258,7 @@ Use these patterns for actions in components.
 ```html
 <a
 	aria-label="Title Link"
-	class="component-title link-secondary"
+	class="component-title link-primary"
 	href="#title-link"
 	title="Title"
 >
