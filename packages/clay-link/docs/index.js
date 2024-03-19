@@ -12,16 +12,6 @@ const linkImportsCode = `import ClayLink from '@clayui/link';`;
 const LinkCode = `const Component = () => {
 	return (
 		<div className="row">
-			<ClayLink href="#link-styles">{'Default'}</ClayLink>
-
-			<span className="mr-1"></span>
-
-			<ClayLink aria-label="My Link" href="#link-styles">
-				{'With Aria Label'}
-			</ClayLink>
-
-			<span className="mr-1"></span>
-
 			<ClayLink displayType="primary" href="#link-styles">
 				{'Primary'}
 			</ClayLink>
@@ -102,49 +92,6 @@ export const LinkWeight = () => {
 			imports: linkWeightJSPImportsCode,
 			name: 'JSP',
 			value: LinkWeightJSPCode,
-		},
-	];
-
-	return <Editor code={codeSnippets} scope={scope} />;
-};
-
-const linkFontSizeImportsCode = `import ClayLink from '@clayui/link';`;
-
-const LinkFontSizeCode = `const Component = () => {
-	return (
-		<div>
-			<ClayLink displayType="primary" fontSize="11" href="#link-styles" weight="semi-bold">
-				{'Primary'}
-			</ClayLink>
-		</div>
-	);
-}
-
-render(<Component />);`;
-
-const linkFontSizeJSPImportsCode = `<%@ taglib uri="http://liferay.com/tld/clay" prefix="clay" %>`;
-
-const LinkFontSizeJSPCode = `<clay:link
-	displayType="primary"
-	fontSize="11"
-	href="#link-styles"
-	label="Primary"
-	weight="semi-bold"
-/>`;
-
-export const LinkFontSize = () => {
-	const scope = {ClayLink};
-	const codeSnippets = [
-		{
-			imports: linkFontSizeImportsCode,
-			name: 'React',
-			value: LinkFontSizeCode,
-		},
-		{
-			disabled: true,
-			imports: linkFontSizeJSPImportsCode,
-			name: 'JSP',
-			value: LinkFontSizeJSPCode,
 		},
 	];
 
