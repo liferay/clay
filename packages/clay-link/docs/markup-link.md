@@ -14,20 +14,15 @@ mainTabURL: 'docs/components/link.html'
 -   [Component Action](#css-component-action)
     -   [Anchor](#css-anchor)
     -   [Button](#css-button)
--   [Outline](#css-outline)
--   [Outline Borderless](#css-outline-borderless)
 -   [External Link](#css-external-link)
--   [Monospaced](#css-monospaced)
 -   [Title Link](#css-title-link)
 
 </div>
 </div>
 
 <div class="clay-site-alert alert alert-warning">
-	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#link">WAI-ARIA</a> accessibility pratices for links when writting your markup.
+	Don't forget to check <a href="https://www.w3.org/TR/wai-aria-practices/#link">WAI-ARIA</a> accessibility practices for links when writing your markup.
 </div>
-
-These elements should be used to style links based on the global link and primary colors.
 
 ## Styles(#css-styles)
 
@@ -151,28 +146,6 @@ Use these patterns for actions in components.
 </button>
 ```
 
-## Outline(#css-outline)
-
-<div class="sheet-example">
-	<a class="link-outline link-outline-primary" href="#1">Primary</a>
-</div>
-
-```html
-<a class="link-outline link-outline-primary" href="#1">Primary</a>
-```
-
-## Outline Borderless(#css-outline-borderless)
-
-<div class="sheet-example">
-	<a class="link-outline link-outline-borderless link-outline-primary" href="#1">Primary</a>
-</div>
-
-```html
-<a class="link-outline link-outline-borderless link-outline-primary" href="#1"
-	>Primary</a
->
-```
-
 ## External Link(#css-external-link)
 
 <div class="sheet-example">
@@ -189,61 +162,6 @@ Use these patterns for actions in components.
 	title="External Link"
 >
 	External Link
-</a>
-```
-
-## Monospaced(#css-monospaced)
-
-<div class="sheet-example">
-	<a aria-label="Add cell" title="Add cell" class="link-monospaced link-outline link-outline-primary" href="#1">
-		<span class="inline-item">
-			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#add-cell" />
-			</svg>
-		</span>
-	</a>
-	<a aria-label="Add cell" title="Add cell" class="link-monospaced link-outline link-outline-borderless link-outline-primary" href="#1">
-		<span class="inline-item">
-			<svg class="lexicon-icon lexicon-icon-add-cell" focusable="false" role="presentation">
-				<use href="/images/icons/icons.svg#add-cell" />
-			</svg>
-		</span>
-	</a>
-</div>
-
-```html
-<a
-	aria-label="Add cell"
-	title="Add cell"
-	class="link-monospaced link-outline link-outline-primary"
-	href="#1"
->
-	<span class="inline-item">
-		<svg
-			class="lexicon-icon lexicon-icon-add-cell"
-			focusable="false"
-			role="presentation"
-		>
-			<use href="/images/icons/icons.svg#add-cell" />
-		</svg>
-	</span>
-</a>
-
-<a
-	aria-label="Add cell"
-	title="Add cell"
-	class="link-monospaced link-outline link-outline-borderless link-outline-primary"
-	href="#1"
->
-	<span class="inline-item">
-		<svg
-			class="lexicon-icon lexicon-icon-add-cell"
-			focusable="false"
-			role="presentation"
-		>
-			<use href="/images/icons/icons.svg#add-cell" />
-		</svg>
-	</span>
 </a>
 ```
 

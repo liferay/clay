@@ -5,23 +5,12 @@ lexiconDefinition: 'https://liferay.design/lexicon/core-components/link/'
 packageNpm: '@clayui/link'
 ---
 
-import {
-	Link,
-	LinkBorderless,
-	LinkMonospaced,
-	LinkOutline,
-	LinkWeight,
-	LinkContext,
-} from '$packages/clay-link/docs/index';
+import {Link, LinkContext} from '$packages/clay-link/docs/index';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Basic Usage](#basic-usage)
-    -   [Semi Bold](#link-semi-bold)
-    -   [Outline](#link-outline)
-    -   [Borderless](#link-outline-borderless)
-    -   [Monospaced](#link-monospaced)
 -   [With Context](#with-context)
 
 </div>
@@ -32,30 +21,6 @@ import {
 By default, when using ClayLink your component will be rendered as an anchor.
 
 <Link />
-
-### Semi Bold(#link-semi-bold)
-
-The `weight` attribute sets the `font-weight` for the link. The available values are `normal`, `semi-bold`, and `null`.
-
-<LinkWeight />
-
-### Outline(#link-outline)
-
-The `outline` attribute enables the `link-outline` variation of `ClayLink`.
-
-<LinkOutline />
-
-### Borderless(#link-outline-borderless)
-
-The `borderless` attribute removes the border from `link-outline`.
-
-<LinkBorderless />
-
-### Monospaced(#link-monospaced)
-
-The `monospaced` attribute renders a link that is equal width and height.
-
-<LinkMonospaced />
 
 ## With Context
 
