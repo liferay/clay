@@ -534,6 +534,8 @@ const iconsData = {
 	"border-style":             '"line", "stroke", "dashed", "solid"',
 	"border-width":             '"line", "stroke", "weight", "thickness"',
 	"box-container":            '"chest", "collection", "package"',
+	"braces":                   '"container", "curly brackets", "keys", "object", "record"',
+	"brackets":                 '"array", "container"',
 	"breadcrumb":               '"navigation", "path", "sequence", "steps"',
 	"button":                   '"box", "grid", "rectangle", "squares"',
 	"calendar":                 '"agenda", "date", "days", "picker", "time"',
