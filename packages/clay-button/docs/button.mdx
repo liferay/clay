@@ -6,13 +6,10 @@ packageNpm: '@clayui/button'
 ---
 
 import {
-	ButtonBeta,
-	ButtonBetaDark,
 	ButtonClayDark,
 	ButtonDisplayTypes,
 	ButtonGroup,
 	ButtonIcon,
-	ButtonTranslucent,
 } from '$packages/clay-button/docs/index';
 
 <div class="nav-toc-absolute">
@@ -21,10 +18,6 @@ import {
 -   [Display Types](#display-types)
 -   [Group](#group)
 -   [Icon](#icon)
--   [Translucent](#btn-translucent)
--   [Clay Dark](#btn-clay-dark)
--   [Beta (Deprecated)](#btn-beta)
-    -   [Dark (Deprecated)](#btn-beta-dark)
 
 </div>
 </div>
@@ -32,8 +25,6 @@ import {
 ## Display Types
 
 You can determine how your button can be displayed using the [`displayType`](#api-displayType) property:
-
-Set `displayType` to `unstyled` to reset all the stylings from Bootstrap 4.
 
 If you want use the button as a link set `displayType` to `link`.
 
@@ -52,39 +43,3 @@ Use the [`spaced`](#api-spaced) property to create spacing between buttons.
 You can use the high-level component `ClayButtonWithIcon` to create a button with only an icon. If you need an icon and text, you need to compose with `ClayIcon`
 
 <ButtonIcon />
-
-## Translucent(#btn-translucent)
-
-The boolean attribute `translucent` renders a button with an opaque background color optimized for light backgrounds. It renders as an extra small button with rounded borders.
-
-<ButtonTranslucent />
-
-## Dark(#btn-clay-dark)
-
-The boolean attribute `dark` renders a button with an opaque background color optimized for dark backgrounds. It adds the class `clay-dark` to the button. The class `clay-dark` can be added to the parent element to make buttons contained inside render the dark variant. When adding `clay-dark` to the parent element, the `dark` attribute on the button should be omitted.
-
-<ButtonClayDark />
-
-## Beta (Deprecated)(#btn-beta)
-
-<div class="clay-site-alert alert alert-warning">
-	The property <code>displayType="beta"</code> has been deprecated in favor of
-	semantic attributes <code>displayType="info"</code> and{' '}
-	<code>translucent</code>.
-</div>
-
-A component to indicate beta features in DXP. The Button variant should be used when the component can be placed close to a non-interactive UI element, such as a title or a section. Also, a default popover is shown if the user interacts with it.
-
-<ButtonBeta />
-
-### Beta Dark (Deprecated)(#btn-beta-dark)
-
-<div class="clay-site-alert alert alert-warning">
-	The property <code>displayType="beta-dark"</code> has been deprecated in
-	favor of semantic attributes <code>dark</code>,{' '}
-	<code>displayType="info"</code> and <code>translucent</code>.
-</div>
-
-`btn-beta-dark` is a dark variant of `btn-beta` to be used with dark backgrounds.
-
-<ButtonBetaDark />
