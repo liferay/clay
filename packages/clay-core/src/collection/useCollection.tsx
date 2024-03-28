@@ -219,7 +219,7 @@ export function useCollection<
 							: (item as T);
 					const child = Array.isArray(publicApi)
 						? (children(publicItem, ...publicApi) as ChildElement)
-						: (children(publicItem) as ChildElement);
+						: (children(publicItem, index) as ChildElement);
 
 					callNestedChild(child);
 
@@ -274,7 +274,10 @@ export function useCollection<
 									publicItem,
 									...publicApi
 							  ) as ChildElement)
-							: (children(publicItem) as ChildElement);
+							: (children(
+									publicItem,
+									virtual.index
+							  ) as ChildElement);
 
 						const props = {
 							'data-index': virtual.index,
@@ -317,7 +320,7 @@ export function useCollection<
 							: item;
 					const child = Array.isArray(publicApi)
 						? (children(publicItem, ...publicApi) as ChildElement)
-						: (children(publicItem) as ChildElement);
+						: (children(publicItem, index) as ChildElement);
 
 					const key = getKey(
 						index,
