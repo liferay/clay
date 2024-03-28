@@ -20,7 +20,7 @@ export type ChildElement = IReactTypeElement & {
 
 export type ChildrenFunction<T, P> = P extends Array<unknown>
 	? (item: T, ...args: P) => React.ReactElement
-	: (item: T) => React.ReactElement;
+	: (item: T, index?: number) => React.ReactElement;
 
 export interface ICollectionProps<T, P> {
 	/**
