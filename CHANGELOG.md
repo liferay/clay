@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-19703 Change seo icon aliases ([fca81bd](https://github.com/liferay/clay/commit/fca81bd57bd7df52a4a7875d161fa209504bfab8))
+-   **@clayui/css:** LPD-20261 Atlas $secondary-l0 is missing !default flag ([d45422c](https://github.com/liferay/clay/commit/d45422cf7be0f7a1f2f980cb644d8c640f21d84b))
+
+### Features
+
+-   **@clayui/core:** adds the `index` available in the item collection API ([06fc444](https://github.com/liferay/clay/commit/06fc4449e85dc7c89b27c94f46f98a5a70a68a4b))
+
 # [3.112.0](https://github.com/liferay/clay/compare/v3.111.1...v3.112.0) (2024-03-11)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-19703 Change seo icon aliases ([fca81bd](https://github.com/liferay/clay/commit/fca81bd57bd7df52a4a7875d161fa209504bfab8))
+
 # [3.112.0](https://github.com/liferay/clay/compare/v3.111.1...v3.112.0) (2024-03-11)
 
 ### Features
