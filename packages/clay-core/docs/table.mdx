@@ -165,6 +165,65 @@ const filteredItems = useMemo(() => {
 </Table>
 ```
 
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	When implementing ClayTable from a React application, the icons may not render.
+	The <a href="https://clayui.com/docs/components/provider.html#application-provider">
+		Application Provider
+	</a> method will make the icons available for use.
+</div>
+
+```jsx
+import {Provider} from '@clayui/core';
+
+const spritemap = 'icons.svg';
+
+const [sort, setSort] = useState<Sorting | null>(null);
+const [items, setItems] = useState([
+  {files: 22, id: 1, name: 'Games', type: 'File folder'},
+  {files: 7, id: 2, name: 'Program Files', type: 'File folder'},
+]);
+
+const filteredItems = useMemo(() => {
+  if (!sort) {
+    return;
+  }
+
+  return items.sort((a, b) => {
+    let cmp = new Intl.Collator('en', {numeric: true}).compare(
+      a[sort.column],
+      b[sort.column]
+    );
+
+    if (sort.direction === 'descending') {
+      cmp *= -1;
+    }
+
+    return cmp;
+  });
+}, [sort, items])
+
+<Provider spritemap={spritemap}>
+  <Table onSortChange={setSort} sort={sort}>
+    <Head>
+      <Cell key="name" sortable>
+        Name
+      </Cell>
+      <Cell key="files" sortable>
+        Files
+      </Cell>
+      <Cell key="type" sortable>
+        Type
+      </Cell>
+    </Head>
+
+    <Body defaultItems={filteredItems}>
+      ...
+    </Body>
+  </Table>
+</Provider>
+```
+
 ### Asynchronous
 
 Most tables with sorting can have a lot of data and are paged so the sorting must happen on the server side instead of implementing the logic on the client side. You can achieve this level of implementation by composing using the [`useResource` hook](/docs/components/data-provider.html).
