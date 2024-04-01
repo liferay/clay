@@ -1,0 +1,13 @@
+name: Clayui.com Nightly Build
+
+on:
+  schedule:
+    # Run at At 02:00 AM UTC (07:00 PM PDT)
+    - cron: '0 2 * * *'
+jobs:
+  build:
+    name: Request Netlify Webhook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_WEBHOOK }}
