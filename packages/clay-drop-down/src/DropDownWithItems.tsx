@@ -141,6 +141,11 @@ export interface IProps
 	menuWidth?: React.ComponentProps<typeof ClayDropDown>['menuWidth'];
 
 	/**
+	 * Prop to use language keys.
+	 */
+	messages?: string;
+
+	/**
 	 * Function for setting the offset of the menu from the trigger.
 	 */
 	offsetFn?: React.ComponentProps<typeof ClayDropDown>['offsetFn'];

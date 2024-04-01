@@ -12,11 +12,16 @@ import React from 'react';
  */
 const ClayPaginationBarDropDown = ({
 	className,
+	messages = 'Items Per Page',
+	trigger,
 	...otherProps
 }: React.ComponentProps<typeof ClayDropDownWithItems>) => {
 	return (
 		<ClayDropDownWithItems
 			className={classNames(className, 'pagination-items-per-page')}
+			trigger={React.cloneElement(trigger, {
+				'aria-label': messages,
+			})}
 			{...otherProps}
 		/>
 	);
