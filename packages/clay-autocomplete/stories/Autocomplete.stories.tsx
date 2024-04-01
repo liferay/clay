@@ -288,69 +288,6 @@ export const AsyncFilter = () => {
 	);
 };
 
-export const AsyncFilterPaginated = () => {
-	const [value, setValue] = useState('');
-
-	const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(
-		NetworkStatus.Unused
-	);
-	const {loadMore, resource} = useResource({
-		fetch: async (link: string, options) => {
-			const result = await fetch(link, options);
-			const json = await result.json();
-
-			return {
-				cursor: json.info.next,
-				items: json.results,
-			};
-		},
-		fetchPolicy: FetchPolicy.CacheFirst,
-		link: 'https://rickandmortyapi.com/api/character/',
-		onNetworkStatusChange: setNetworkStatus,
-		variables: {name: value},
-	});
-
-	return (
-		<div className="row">
-			<div className="col-md-5">
-				<div className="sheet">
-					<div className="form-group">
-						<label
-							htmlFor="clay-autocomplete-1"
-							id="clay-autocomplete-label-1"
-						>
-							Name
-						</label>
-						<ClayAutocomplete
-							aria-labelledby="clay-autocomplete-label-1"
-							id="clay-autocomplete-1"
-							items={(resource as Array<RickandMorty>) ?? []}
-							loadingState={networkStatus}
-							messages={{
-								listCount: '{0} option available.',
-								listCountPlural: '{0} options available.',
-								loading: 'Loading...',
-								notFound: 'No results found',
-							}}
-							onChange={setValue}
-							onItemsChange={() => {}}
-							onLoadMore={loadMore}
-							placeholder="Enter a name"
-							value={value}
-						>
-							{(item) => (
-								<ClayAutocomplete.Item key={item.id}>
-									{item.name}
-								</ClayAutocomplete.Item>
-							)}
-						</ClayAutocomplete>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-};
-
 export const Keyboard = () => {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 	const [value, setValue] = useState('');
