@@ -15,6 +15,7 @@ storybookPath: 'design-system-components-table--dynamic'
 -   [Content](#content)
     -   [Static](#static)
     -   [Dynamic](#dynamic)
+-   [Icons](#icons)
 -   [Sorting](#sorting)
     -   [Asynchronous](#asynchronous)
 -   [Nested row](#nested-row)
@@ -105,6 +106,55 @@ Unlike static content, dynamic content is when the options can change during the
 		)}
 	</Body>
 </Table>
+```
+
+## Icons
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	When implementing ClayTable from a React application, the icons may not render.
+	The <a href="https://clayui.com/docs/components/provider.html#application-provider">
+		Application Provider
+	</a> method will make the icons available for use.
+</div>
+
+```jsx
+import {Provider} from '@clayui/core';
+
+const spritemap = 'icons.svg';
+
+<Provider spritemap={spritemap}>
+	<Table>
+		<Head
+			items={[
+				{
+					id: '1',
+					name: 'Name',
+				},
+				{
+					id: '2',
+					name: 'Type',
+				},
+			]}
+		>
+			{(column) => <Cell key={column.id}>{column.name}</Cell>}
+		</Head>
+
+		<Body
+			defaultItems={[
+				{id: 1, name: 'Games', type: 'File folder'},
+				{id: 2, name: 'Program Files', type: 'File folder'},
+			]}
+		>
+			{(row) => (
+				<Row>
+					<Cell>{row.name}</Cell>
+					<Cell>{row.type}</Cell>
+				</Row>
+			)}
+		</Body>
+	</Table>
+</Provider>;
 ```
 
 ## Sorting
