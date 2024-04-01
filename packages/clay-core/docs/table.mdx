@@ -15,6 +15,7 @@ storybookPath: 'design-system-components-table--dynamic'
 -   [Content](#content)
     -   [Static](#static)
     -   [Dynamic](#dynamic)
+-   [Icons](#icons)
 -   [Sorting](#sorting)
     -   [Asynchronous](#asynchronous)
 -   [Nested row](#nested-row)
@@ -107,6 +108,55 @@ Unlike static content, dynamic content is when the options can change during the
 </Table>
 ```
 
+## Icons
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	When implementing ClayTable from a React application, the icons may not render.
+	The <a href="https://clayui.com/docs/components/provider.html#application-provider">
+		Application Provider
+	</a> method will make the icons available for use.
+</div>
+
+```jsx
+import {Provider} from '@clayui/core';
+
+const spritemap = 'icons.svg';
+
+<Provider spritemap={spritemap}>
+	<Table>
+		<Head
+			items={[
+				{
+					id: '1',
+					name: 'Name',
+				},
+				{
+					id: '2',
+					name: 'Type',
+				},
+			]}
+		>
+			{(column) => <Cell key={column.id}>{column.name}</Cell>}
+		</Head>
+
+		<Body
+			defaultItems={[
+				{id: 1, name: 'Games', type: 'File folder'},
+				{id: 2, name: 'Program Files', type: 'File folder'},
+			]}
+		>
+			{(row) => (
+				<Row>
+					<Cell>{row.name}</Cell>
+					<Cell>{row.type}</Cell>
+				</Row>
+			)}
+		</Body>
+	</Table>
+</Provider>;
+```
+
 ## Sorting
 
 Column sorting is implemented OOTB so the developer doesn't need to worry about implementing the UI details but the developer still needs to add their filter layer since the component is data-agnostic and allows you to do this asynchronously, it is important, especially when your data is paged, that the filter must happen in the backend.
@@ -163,65 +213,6 @@ const filteredItems = useMemo(() => {
     ...
   </Body>
 </Table>
-```
-
-<div class="clay-site-alert alert alert-warning">
-	<strong class="lead">Warning</strong>
-	When implementing ClayTable from a React application, the icons may not render.
-	The <a href="https://clayui.com/docs/components/provider.html#application-provider">
-		Application Provider
-	</a> method will make the icons available for use.
-</div>
-
-```jsx
-import {Provider} from '@clayui/core';
-
-const spritemap = 'icons.svg';
-
-const [sort, setSort] = useState<Sorting | null>(null);
-const [items, setItems] = useState([
-  {files: 22, id: 1, name: 'Games', type: 'File folder'},
-  {files: 7, id: 2, name: 'Program Files', type: 'File folder'},
-]);
-
-const filteredItems = useMemo(() => {
-  if (!sort) {
-    return;
-  }
-
-  return items.sort((a, b) => {
-    let cmp = new Intl.Collator('en', {numeric: true}).compare(
-      a[sort.column],
-      b[sort.column]
-    );
-
-    if (sort.direction === 'descending') {
-      cmp *= -1;
-    }
-
-    return cmp;
-  });
-}, [sort, items])
-
-<Provider spritemap={spritemap}>
-  <Table onSortChange={setSort} sort={sort}>
-    <Head>
-      <Cell key="name" sortable>
-        Name
-      </Cell>
-      <Cell key="files" sortable>
-        Files
-      </Cell>
-      <Cell key="type" sortable>
-        Type
-      </Cell>
-    </Head>
-
-    <Body defaultItems={filteredItems}>
-      ...
-    </Body>
-  </Table>
-</Provider>
 ```
 
 ### Asynchronous
