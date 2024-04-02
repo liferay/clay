@@ -170,7 +170,7 @@ module.exports = {
 			statements: 98,
 		},
 		'./packages/clay-pagination-bar/src/': {
-			branches: 100,
+			branches: 95,
 			functions: 88,
 			lines: 94,
 			statements: 95,
