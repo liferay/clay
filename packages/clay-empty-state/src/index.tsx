@@ -6,6 +6,8 @@
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
+import EmptyStatesSVG from './EmptyStatesSVG';
+
 interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	/**
 	 * Message the user will see describing what they can do when on this screen
@@ -37,6 +39,8 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	 */
 	small?: boolean;
 
+	stateImg?: string;
+
 	/**
 	 * Title of the message highlighting the description
 	 */
@@ -54,10 +58,11 @@ const ClayEmptyState = ({
 	imgSrc,
 	imgSrcReducedMotion,
 	small,
+	stateImg,
 	title = defaultTile,
 	...otherProps
 }: IProps) => {
-	const hasImg = imgSrc || imgProps;
+	const hasImg = imgSrc || imgProps || stateImg;
 
 	const [error, setError] = useState(false);
 
@@ -105,32 +110,37 @@ const ClayEmptyState = ({
 		>
 			{hasImg && (
 				<div className="c-empty-state-image">
-					<div className="c-empty-state-aspect-ratio">
-						<img
-							alt=""
-							className={classNames(
-								'aspect-ratio-item aspect-ratio-item-fluid',
-								reducedMotionImage &&
-									'd-none-c-prefers-reduced-motion',
-								imgProps && imgProps.className
-							)}
-							src={imgSrc}
-							{...imgProps}
-						/>
-						{reducedMotionImage && (
+					{stateImg && <EmptyStatesSVG stateImg={stateImg} />}
+
+					{imgSrc && (
+						<div className="c-empty-state-aspect-ratio">
 							<img
 								alt=""
 								className={classNames(
-									'aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion',
-									imgPropsReducedMotion &&
-										imgPropsReducedMotion.className
+									'aspect-ratio-item aspect-ratio-item-fluid',
+									reducedMotionImage &&
+										'd-none-c-prefers-reduced-motion',
+									imgProps && imgProps.className
 								)}
-								onError={() => setError(true)}
-								src={reducedMotionImage}
-								{...imgPropsReducedMotion}
+								src={imgSrc}
+								{...imgProps}
 							/>
-						)}
-					</div>
+
+							{reducedMotionImage && (
+								<img
+									alt=""
+									className={classNames(
+										'aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion',
+										imgPropsReducedMotion &&
+											imgPropsReducedMotion.className
+									)}
+									onError={() => setError(true)}
+									src={reducedMotionImage}
+									{...imgPropsReducedMotion}
+								/>
+							)}
+						</div>
+					)}
 				</div>
 			)}
 
