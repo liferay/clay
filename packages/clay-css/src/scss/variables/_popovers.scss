@@ -34,7 +34,7 @@ $popover-arrow-height: 0.5rem !default;
 $popover-arrow-offset: 0.375rem !default;
 $popover-arrow-width: 1rem !default;
 
-$popover-arrow-outer-color: fade-in($popover-border-color, 0.05) !default;
+$popover-arrow-outer-color: rgba($black, 0.25) !default;
 
 $popover-bottom-arrow-color: $popover-header-bg !default;
 $popover-bottom-left-arrow-color: $popover-header-bg !default;
