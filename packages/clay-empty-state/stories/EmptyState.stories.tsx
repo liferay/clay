@@ -54,10 +54,6 @@ export const SuccessState = () => (
 export const WithImage = () => (
 	<ClayEmptyState
 		description="You don't have more notifications to review"
-		imgProps={{
-			alt: 'test test',
-			title: 'hello world',
-		}}
 		state="success"
 		title="Hurray"
 	/>
