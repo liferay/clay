@@ -5,7 +5,7 @@
 
 import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import {ClayCheckbox} from '@clayui/form';
+import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
@@ -81,11 +81,6 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	>;
 
 	/**
-	 * Callback for when item is selected
-	 */
-	onSelectChange?: (val: boolean) => void;
-
-	/**
 	 * Flag to indicate if card is selected
 	 */
 	selected?: boolean;
@@ -115,6 +110,23 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	title: string;
 }
 
+/**
+ * Different types of props depending on selectableType.
+ *
+ * onSelectChange: callback for when item is selected
+ * selectableType: determines what type of selectable it is
+ */
+
+type CheckboxProps = {
+	onSelectChange?: (value: boolean) => void;
+	selectableType?: 'checkbox';
+};
+
+type RadioProps = {
+	onSelectChange?: (value: string) => void;
+	selectableType: 'radio';
+};
+
 export const ClayCardWithInfo = ({
 	'aria-label': ariaLabel,
 	actions,
@@ -131,13 +143,14 @@ export const ClayCardWithInfo = ({
 	imgProps,
 	labels,
 	onSelectChange,
+	selectableType,
 	selected = false,
 	spritemap,
 	stickerProps = {},
 	symbol,
 	title,
 	...otherProps
-}: IProps) => {
+}: IProps & (RadioProps | CheckboxProps)) => {
 	const isCardType = {
 		file: displayType === 'file' && !imgProps,
 		image: displayType === 'image' || imgProps,
@@ -212,16 +225,25 @@ export const ClayCardWithInfo = ({
 			displayType={isCardType.image ? 'image' : 'file'}
 			selectable={!!onSelectChange}
 		>
-			{onSelectChange && (
-				<ClayCheckbox
-					{...checkboxProps}
-					checked={selected}
-					disabled={disabled}
-					onChange={() => onSelectChange(!selected)}
-				>
-					{headerContent}
-				</ClayCheckbox>
-			)}
+			{onSelectChange &&
+				(selectableType === 'radio' ? (
+					<ClayRadio
+						checked={selected}
+						disabled={disabled}
+						onChange={({target: {value}}) => onSelectChange(value)}
+					>
+						{headerContent}
+					</ClayRadio>
+				) : (
+					<ClayCheckbox
+						{...checkboxProps}
+						checked={selected}
+						disabled={disabled}
+						onChange={() => onSelectChange(!selected)}
+					>
+						{headerContent}
+					</ClayCheckbox>
+				))}
 
 			{!onSelectChange && headerContent}
 
