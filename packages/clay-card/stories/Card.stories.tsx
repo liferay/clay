@@ -43,65 +43,104 @@ const ClayCheckboxWithState = (props: any) => {
 
 export const CardWithInfo = (args: any) => {
 	const [value, setValue] = useState<boolean>(false);
+	const [radioValue, setRadioValue] = useState<string>('');
 
 	return (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCardWithInfo
-					description="A cool description"
-					href="#"
-					labels={[
-						{
-							displayType: 'success',
-							value: 'Awesome',
-						},
-					]}
-					stickerProps={{
-						title: 'File',
-					}}
-					title="Very Large File"
-				/>
-			</div>
-
-			<div className="col-md-4">
-				<ClayCardWithInfo
-					actions={[
-						{
-							label: 'clickable',
-							onClick: () => {
-								alert('you clicked!');
+		<>
+			<div className="row">
+				<div className="col-md-4">
+					<ClayCardWithInfo
+						description="A cool description"
+						href="#"
+						labels={[
+							{
+								displayType: 'success',
+								value: 'Awesome',
 							},
-						},
-						{type: 'divider'},
-						{
-							href: '#',
-							label: 'linkable',
-						},
-					]}
-					description="A cool description"
-					disabled={args.disabled}
-					href="#"
-					labels={[
-						{
-							displayType: 'success',
-							value: 'Awesome',
-						},
-						{
+						]}
+						stickerProps={{
+							title: 'File',
+						}}
+						title="Very Large File"
+					/>
+				</div>
+
+				<div className="col-md-4">
+					<ClayCardWithInfo
+						actions={[
+							{
+								label: 'clickable',
+								onClick: () => {
+									alert('you clicked!');
+								},
+							},
+							{type: 'divider'},
+							{
+								href: '#',
+								label: 'linkable',
+							},
+						]}
+						description="A cool description"
+						disabled={args.disabled}
+						href="#"
+						labels={[
+							{
+								displayType: 'success',
+								value: 'Awesome',
+							},
+							{
+								displayType: 'danger',
+								value: 'Crazy',
+							},
+						]}
+						onSelectChange={(newVal) => setValue(newVal)}
+						selected={value}
+						stickerProps={{
+							content: 'DOC',
 							displayType: 'danger',
-							value: 'Crazy',
-						},
-					]}
-					onSelectChange={(newVal) => setValue(newVal)}
-					selected={value}
-					stickerProps={{
-						content: 'DOC',
-						displayType: 'danger',
-						title: 'Document',
-					}}
-					title="Selectable File"
-				/>
+							title: 'Document',
+						}}
+						title="Selectable File"
+					/>
+				</div>
 			</div>
-		</div>
+			<div className="row">
+				<div className="col-md-12">
+					<ClayCard.Group label="Radio Card Group">
+						<ClayCardWithInfo
+							description="A cool description"
+							labels={[
+								{
+									displayType: 'danger',
+									value: 'Crazy',
+								},
+							]}
+							onSelectChange={(value) => setRadioValue(value)}
+							radioProps={{value: 'radio1'}}
+							selectableType="radio"
+							selected={radioValue === 'radio1'}
+							stickerProps={null}
+							title="Radio Card 1"
+						/>
+						<ClayCardWithInfo
+							description="A cool description"
+							labels={[
+								{
+									displayType: 'success',
+									value: 'Awesome',
+								},
+							]}
+							onSelectChange={(value) => setRadioValue(value)}
+							radioProps={{value: 'radio2'}}
+							selectableType="radio"
+							selected={radioValue === 'radio2'}
+							stickerProps={null}
+							title="Radio Card 2"
+						/>
+					</ClayCard.Group>
+				</div>
+			</div>
+		</>
 	);
 };
 
