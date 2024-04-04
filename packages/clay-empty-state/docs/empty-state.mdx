@@ -30,11 +30,17 @@ Even without an animation you can still pass in `children` to the component as s
 
 ## With Animation
 
-Adding an image to the component is easy, just point the `imgSrc` to the image you want to use
+Adding an image to the component is easy, just add the property `state` and point the state you want to display.
 
 <EmptyStateWithImage />
 
 ## Reduced Motion
+
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	The usage of `imgSrc`, `imgProps`, `imgSrcReducedMotion` and`imgPropsReducedMotion`
+	are deprecated. Use the`state` property instead.
+</div>
 
 The CSS class `c-prefers-reduced-motion` forces the unanimated image to display. It bypasses the system's reduced motion setting. You can add this class on the `body` tag or a specific component's parent container to disable all animations and transitions.
 

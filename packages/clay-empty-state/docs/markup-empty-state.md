@@ -17,6 +17,10 @@ mainTabURL: 'docs/components/empty-state.html'
 </div>
 </div>
 
+<div class="clay-site-alert alert alert-warning">
+	The usage of animated GIFs are deprecated. 
+</div>
+
 ## Without Animation(#css-without-animation)
 
 <div class="sheet-example">
