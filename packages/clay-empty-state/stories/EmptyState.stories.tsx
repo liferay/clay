@@ -29,11 +29,7 @@ export const Title = () => (
 );
 
 export const EmptyState = (args: any) => (
-	<ClayEmptyState
-		// imgSrc={emptyImage}
-		small={args.small}
-		stateImg="emptyState"
-	>
+	<ClayEmptyState small={args.small} state="empty">
 		<ClayButton displayType="secondary">Button</ClayButton>
 	</ClayEmptyState>
 );
@@ -45,7 +41,7 @@ EmptyState.args = {
 export const SearchState = () => (
 	<ClayEmptyState
 		description="This is a description of what the button will allow you to do"
-		stateImg="searchState"
+		state="search"
 		title="No content yet"
 	/>
 );
@@ -53,8 +49,7 @@ export const SearchState = () => (
 export const SuccessState = () => (
 	<ClayEmptyState
 		description="You don't have more notifications to review"
-		imgSrcReducedMotion={null}
-		stateImg="successState"
+		state="success"
 		title="Hurray"
 	/>
 );
@@ -66,7 +61,7 @@ export const WithImage = () => (
 			alt: 'test test',
 			title: 'hello world',
 		}}
-		stateImg="successState"
+		state="success"
 		title="Hurray"
 	/>
 );

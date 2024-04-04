@@ -6,7 +6,7 @@
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
-import EmptyStatesSVG from './EmptyStatesSVG';
+import {States} from './States';
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	/**
@@ -16,21 +16,25 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 
 	/**
 	 * HTMLImage element attributes to add to the image within the component
+	 * @deprecated since v3.113.0 - this is no longer necessary.
 	 */
 	imgProps?: React.ImgHTMLAttributes<HTMLImageElement>;
 
 	/**
 	 * HTMLImage element attributes to add to the reduced motion image within the component
+	 * @deprecated since v3.113.0 - this is no longer necessary.
 	 */
 	imgPropsReducedMotion?: React.ImgHTMLAttributes<HTMLImageElement>;
 
 	/**
 	 * Source of the image to signify the state
+	 * @deprecated since v3.113.0 - use `state` instead.
 	 */
 	imgSrc?: string;
 
 	/**
 	 * Source of the image to show when `.c-prefers-reduced-motion` is active
+	 * @deprecated since v3.113.0 - use `state` instead.
 	 */
 	imgSrcReducedMotion?: string | null;
 
@@ -39,7 +43,10 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	 */
 	small?: boolean;
 
-	stateImg?: string;
+	/**
+	 * Flag to define the content state image.
+	 */
+	state?: 'empty' | 'success' | 'search';
 
 	/**
 	 * Title of the message highlighting the description
@@ -50,6 +57,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 const defaultTile = 'No results found';
 
 const ClayEmptyState = ({
+	'aria-label': ariaLabel,
 	children,
 	className,
 	description = 'Sorry, there are no results found',
@@ -58,11 +66,11 @@ const ClayEmptyState = ({
 	imgSrc,
 	imgSrcReducedMotion,
 	small,
-	stateImg,
+	state,
 	title = defaultTile,
 	...otherProps
 }: IProps) => {
-	const hasImg = imgSrc || imgProps || stateImg;
+	const hasImg = imgSrc || imgProps;
 
 	const [error, setError] = useState(false);
 
@@ -103,15 +111,13 @@ const ClayEmptyState = ({
 	return (
 		<div
 			className={classNames(className, 'c-empty-state', {
-				'c-empty-state-animation': hasImg,
+				'c-empty-state-animation': hasImg || state,
 				'c-empty-state-sm': small,
 			})}
 			{...otherProps}
 		>
 			{hasImg && (
 				<div className="c-empty-state-image">
-					{stateImg && <EmptyStatesSVG stateImg={stateImg} />}
-
 					{imgSrc && (
 						<div className="c-empty-state-aspect-ratio">
 							<img
@@ -141,6 +147,16 @@ const ClayEmptyState = ({
 							)}
 						</div>
 					)}
+				</div>
+			)}
+
+			{state && !hasImg && (
+				<div
+					aria-label={ariaLabel || title || defaultTile}
+					className="c-empty-state-image"
+					role="img"
+				>
+					<States state={state} />
 				</div>
 			)}
 
