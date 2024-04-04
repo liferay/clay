@@ -121,6 +121,7 @@ export const CardWithInfo = (args: any) => {
 							selected={radioValue === 'radio1'}
 							stickerProps={null}
 							title="Radio Card 1"
+							truncate={false}
 						/>
 						<ClayCardWithInfo
 							description="A cool description"
@@ -136,6 +137,7 @@ export const CardWithInfo = (args: any) => {
 							selected={radioValue === 'radio2'}
 							stickerProps={null}
 							title="Radio Card 2"
+							truncate={false}
 						/>
 					</ClayCard.Group>
 				</div>
