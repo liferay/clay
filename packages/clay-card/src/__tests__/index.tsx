@@ -1080,4 +1080,36 @@ describe('ClayCardWithInfo', () => {
 		expect(onDropDownItemClick).toHaveBeenCalledTimes(1);
 		expect(onSelectChangeFn).not.toHaveBeenCalledTimes(1);
 	});
+
+	it('renders with radio button', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				href="#"
+				onSelectChange={jest.fn()}
+				radioProps={{value: 'radio1'}}
+				selectableType="radio"
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				stickerProps={null}
+				title="Radio Card"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with no truncate text', () => {
+		const {container} = render(
+			<ClayCardWithInfo
+				href="#"
+				onSelectChange={jest.fn()}
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				title="Foo Bar"
+				truncate={false}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
 });
