@@ -29,6 +29,12 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	checkboxProps?: React.HTMLAttributes<HTMLInputElement>;
 
 	/**
+	 * Props to add to the radio element
+	 */
+
+	radioProps?: React.HTMLAttributes<HTMLInputElement> & {value: string};
+
+	/**
 	 * Description of the file
 	 */
 	description?: React.ReactText;
@@ -143,6 +149,7 @@ export const ClayCardWithInfo = ({
 	imgProps,
 	labels,
 	onSelectChange,
+	radioProps = {value: ''},
 	selectableType,
 	selected = false,
 	spritemap,
@@ -228,6 +235,7 @@ export const ClayCardWithInfo = ({
 			{onSelectChange &&
 				(selectableType === 'radio' ? (
 					<ClayRadio
+						{...radioProps}
 						checked={selected}
 						disabled={disabled}
 						onChange={({target: {value}}) => onSelectChange(value)}
