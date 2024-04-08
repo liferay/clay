@@ -126,13 +126,20 @@ function HeadInner<T extends Record<string, any>>(
 									) : (
 										<Item
 											key={item}
-											onClick={() =>
+											onClick={() => {
+												if (
+													visibleColumns.has(item) &&
+													visibleColumns.size === 1
+												) {
+													return;
+												}
+
 												onVisibleColumnsChange(
 													item,
 													collection.getItem(item)
 														.index
-												)
-											}
+												);
+											}}
 											tabIndex={-1}
 											textValue={
 												collection.getItem(item).value
