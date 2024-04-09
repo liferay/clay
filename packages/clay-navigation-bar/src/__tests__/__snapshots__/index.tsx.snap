@@ -3,7 +3,7 @@
 exports[`ClayNavigationBar collapses the previously expanded dropdown when trigger element is clicked 1`] = `
 <div
   class="navbar-collapse collapse"
-  style="height: 0px"
+  style="height: auto"
 >
   <div
     class="container-fluid container-fluid-max-xl"
@@ -191,7 +191,7 @@ exports[`ClayNavigationBar renders a custom item 1`] = `
 exports[`ClayNavigationBar renders a dropdown when clicking the trigger element from NavigationBar 1`] = `
 <div
   class="navbar-collapse show"
-  style="height: 0px"
+  style="height: auto"
 >
   <div
     class="container-fluid container-fluid-max-xl"

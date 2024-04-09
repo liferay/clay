@@ -137,10 +137,16 @@ function ClayNavigationBar({
 						onEnter={(element: HTMLElement) =>
 							element.setAttribute('style', `height: 0px`)
 						}
+						onEntered={(element: HTMLElement) =>
+							element.setAttribute('style', `height: auto`)
+						}
 						onEntering={(element: HTMLElement) =>
 							setElementFullHeight(element)
 						}
 						onExit={(element) => setElementFullHeight(element)}
+						onExited={(element) =>
+							element.setAttribute('style', `height: auto`)
+						}
 						onExiting={(element) =>
 							element.setAttribute('style', `height: 0px`)
 						}
