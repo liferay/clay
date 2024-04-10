@@ -712,6 +712,35 @@ describe('ClayCardWithUser', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('renders with radio button', () => {
+		const {container} = render(
+			<ClayCardWithUser
+				href="#"
+				name="Foo Bar"
+				onSelectChange={jest.fn()}
+				radioProps={{value: 'radio1'}}
+				selectableType="radio"
+				spritemap="/path/to/some/resource.svg"
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it('renders with no truncate text', () => {
+		const {container} = render(
+			<ClayCardWithUser
+				href="#"
+				name="Foo Bar"
+				selected={false}
+				spritemap="/path/to/some/resource.svg"
+				truncate={false}
+			/>
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it('renders ClayCardWithNavigation with image', () => {
 		const {container} = render(
 			<ClayCardWithNavigation
