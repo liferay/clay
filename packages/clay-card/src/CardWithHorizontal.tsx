@@ -67,6 +67,11 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Name of the item
 	 */
 	title: string;
+
+	/**
+	 * Flag to indicate if the card text is truncated
+	 */
+	truncate?: boolean;
 }
 
 /**
@@ -102,6 +107,7 @@ export const ClayCardWithHorizontal = ({
 	spritemap,
 	symbol = 'folder',
 	title,
+	truncate = true,
 	...otherProps
 }: IProps & (RadioProps | CheckboxProps)) => {
 	const content = (
@@ -119,6 +125,7 @@ export const ClayCardWithHorizontal = ({
 						disabled={disabled}
 						displayType="title"
 						href={href}
+						truncate={truncate}
 					>
 						{title}
 					</ClayCard.Description>
