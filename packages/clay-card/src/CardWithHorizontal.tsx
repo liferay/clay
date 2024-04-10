@@ -5,7 +5,7 @@
 
 import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import {ClayCheckbox} from '@clayui/form';
+import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
 import ClaySticker from '@clayui/sticker';
@@ -43,9 +43,10 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	href?: string;
 
 	/**
-	 * Callback for when item is selected
+	 * Props to add to the radio element
 	 */
-	onSelectChange?: (val: boolean) => void;
+
+	radioProps?: React.HTMLAttributes<HTMLInputElement> & {value: string};
 
 	/**
 	 * Flag to indicate if card is selected
@@ -68,6 +69,23 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	title: string;
 }
 
+/**
+ * Different types of props depending on selectableType.
+ *
+ * onSelectChange: callback for when item is selected
+ * selectableType: determines what type of selectable it is
+ */
+
+type CheckboxProps = {
+	onSelectChange?: (value: boolean) => void;
+	selectableType?: 'checkbox';
+};
+
+type RadioProps = {
+	onSelectChange?: (value: string) => void;
+	selectableType: 'radio';
+};
+
 export const ClayCardWithHorizontal = ({
 	'aria-label': ariaLabel,
 	actions,
@@ -78,12 +96,14 @@ export const ClayCardWithHorizontal = ({
 	},
 	href,
 	onSelectChange,
+	radioProps = {value: ''},
+	selectableType,
 	selected = false,
 	spritemap,
 	symbol = 'folder',
 	title,
 	...otherProps
-}: IProps) => {
+}: IProps & (RadioProps | CheckboxProps)) => {
 	const content = (
 		<ClayCard.Body>
 			<ClayCard.Row>
@@ -132,16 +152,30 @@ export const ClayCardWithHorizontal = ({
 			active={selected}
 			selectable={!!onSelectChange}
 		>
-			{onSelectChange && (
-				<ClayCheckbox
-					{...checkboxProps}
-					checked={selected}
-					disabled={disabled}
-					onChange={() => onSelectChange(!selected)}
-				>
-					<ClayCardHorizontal.Body>{content}</ClayCardHorizontal.Body>
-				</ClayCheckbox>
-			)}
+			{onSelectChange &&
+				(selectableType === 'radio' ? (
+					<ClayRadio
+						{...radioProps}
+						checked={selected}
+						disabled={disabled}
+						onChange={({target: {value}}) => onSelectChange(value)}
+					>
+						<ClayCardHorizontal.Body>
+							{content}
+						</ClayCardHorizontal.Body>
+					</ClayRadio>
+				) : (
+					<ClayCheckbox
+						{...checkboxProps}
+						checked={selected}
+						disabled={disabled}
+						onChange={() => onSelectChange(!selected)}
+					>
+						<ClayCardHorizontal.Body>
+							{content}
+						</ClayCardHorizontal.Body>
+					</ClayCheckbox>
+				))}
 
 			{!onSelectChange && content}
 		</ClayCardHorizontal>
