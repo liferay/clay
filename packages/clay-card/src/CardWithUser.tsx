@@ -94,6 +94,11 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Icon name to use for user avatar
 	 */
 	userSymbol?: string;
+
+	/**
+	 * Flag to indicate if the card text is truncated
+	 */
+	truncate?: boolean;
 }
 
 /**
@@ -134,6 +139,7 @@ export const ClayCardWithUser = ({
 	userDisplayType,
 	userImageSrc,
 	userSymbol = 'user',
+	truncate = true,
 	...otherProps
 }: IProps & (RadioProps | CheckboxProps)) => {
 	const content = (
@@ -196,12 +202,16 @@ export const ClayCardWithUser = ({
 							disabled={disabled}
 							displayType="title"
 							href={href}
+							truncate={truncate}
 						>
 							{name}
 						</ClayCard.Description>
 
 						{description && (
-							<ClayCard.Description displayType="subtitle">
+							<ClayCard.Description
+								displayType="subtitle"
+								truncate={truncate}
+							>
 								{description}
 							</ClayCard.Description>
 						)}
