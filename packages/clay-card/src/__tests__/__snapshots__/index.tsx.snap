@@ -1601,6 +1601,134 @@ exports[`ClayCardWithHorizontal renders as selectable 1`] = `
 </div>
 `;
 
+exports[`ClayCardWithHorizontal renders with no truncate text 1`] = `
+<div>
+  <div
+    class="card user-card card-type-asset"
+  >
+    <div
+      class="card-item-first aspect-ratio"
+    >
+      <div
+        class="aspect-ratio-item-center-middle card-type-asset-icon"
+      >
+        <span
+          class="sticker sticker-user-icon sticker-circle"
+        >
+          <span
+            class="sticker-overlay"
+          >
+            <svg
+              class="lexicon-icon lexicon-icon-user"
+              role="presentation"
+            >
+              <use
+                href="/path/to/some/resource.svg#user"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-row"
+      >
+        <div
+          class="autofit-col autofit-col-expand"
+        >
+          <p
+            aria-label="Foo Bar"
+            class="card-title"
+            title="Foo Bar"
+          >
+            Foo Bar
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ClayCardWithHorizontal renders with radio button 1`] = `
+<div>
+  <div
+    class="form-check-card form-check form-check-middle-left card-type-directory"
+  >
+    <div
+      class="custom-control custom-radio"
+    >
+      <label>
+        <input
+          class="custom-control-input"
+          disabled=""
+          role="radio"
+          type="radio"
+          value="radio1"
+        />
+        <span
+          class="custom-control-label"
+        />
+        <div
+          class="card card-horizontal"
+        >
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-row"
+            >
+              <div
+                class="autofit-col"
+              >
+                <span
+                  class="sticker"
+                >
+                  <span
+                    class="sticker-overlay inline-item"
+                  >
+                    <svg
+                      class="lexicon-icon lexicon-icon-folder"
+                      role="presentation"
+                    >
+                      <use
+                        href="/path/to/some/resource.svg#folder"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="autofit-col autofit-col-expand autofit-col-gutters"
+              >
+                <p
+                  aria-label="Foo Bar"
+                  class="card-title"
+                  title="Foo Bar"
+                >
+                  <span
+                    class="text-truncate-inline"
+                  >
+                    <span
+                      class="text-truncate"
+                    >
+                      Foo Bar
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ClayCardWithInfo renders as disabled 1`] = `
 <div>
   <div
