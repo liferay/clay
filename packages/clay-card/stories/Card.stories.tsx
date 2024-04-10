@@ -215,36 +215,92 @@ CardWithInfoImage.args = {
 
 export const CardWithHorizontal = (args: any) => {
 	const [value, setValue] = useState<boolean>(false);
+	const [radioValue, setRadioValue] = useState<string>('');
 
 	return (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCardWithHorizontal href="#" title="Very Large Folder" />
-			</div>
+		<>
+			<div className="row">
+				<div className="col-md-4">
+					<ClayCardWithHorizontal
+						href="#"
+						title="Very Large Folder"
+					/>
+				</div>
 
-			<div className="col-md-4">
-				<ClayCardWithHorizontal
-					actions={[
-						{
-							label: 'clickable',
-							onClick: () => {
-								alert('you clicked!');
+				<div className="col-md-4">
+					<ClayCardWithHorizontal
+						actions={[
+							{
+								label: 'clickable',
+								onClick: () => {
+									alert('you clicked!');
+								},
 							},
-						},
-						{type: 'divider'},
-						{
-							href: '#',
-							label: 'linkable',
-						},
-					]}
-					disabled={args.disabled}
-					href="#"
-					onSelectChange={setValue}
-					selected={value}
-					title="Selectable Folder"
-				/>
+							{type: 'divider'},
+							{
+								href: '#',
+								label: 'linkable',
+							},
+						]}
+						disabled={args.disabled}
+						href="#"
+						onSelectChange={setValue}
+						selected={value}
+						title="Selectable Folder"
+					/>
+				</div>
 			</div>
-		</div>
+			<div className="row">
+				<div className="col-md-12">
+					<ClayCard.Group label="Radio Card Group">
+						<ClayCardWithHorizontal
+							actions={[
+								{
+									label: 'clickable',
+									onClick: () => {
+										alert('you clicked!');
+									},
+								},
+								{type: 'divider'},
+								{
+									href: '#',
+									label: 'linkable',
+								},
+							]}
+							disabled={args.disabled}
+							href="#"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio1'}}
+							selectableType="radio"
+							selected={radioValue === 'radio1'}
+							title="Radio Selectable Folder 1"
+						/>
+						<ClayCardWithHorizontal
+							actions={[
+								{
+									label: 'clickable',
+									onClick: () => {
+										alert('you clicked!');
+									},
+								},
+								{type: 'divider'},
+								{
+									href: '#',
+									label: 'linkable',
+								},
+							]}
+							disabled={args.disabled}
+							href="#"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio2'}}
+							selectableType="radio"
+							selected={radioValue === 'radio2'}
+							title="Radio Selectable Folder 2"
+						/>
+					</ClayCard.Group>
+				</div>
+			</div>
+		</>
 	);
 };
 
