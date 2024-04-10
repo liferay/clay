@@ -13,7 +13,7 @@ export function States({state}: Props) {
 	switch (state) {
 		case 'empty':
 			return (
-				<svg className="empty-state-animation" viewBox="0 0 250 250">
+				<svg className="empty-state-svg" viewBox="0 0 250 250">
 					<defs>
 						<clipPath id="a">
 							<path
@@ -390,7 +390,7 @@ export function States({state}: Props) {
 			);
 		case 'success':
 			return (
-				<svg className="success-state-animation" viewBox="0 0 250 250">
+				<svg className="success-state-svg" viewBox="0 0 250 250">
 					<defs>
 						<clipPath id="a">
 							<path
@@ -787,7 +787,7 @@ export function States({state}: Props) {
 			);
 		case 'search':
 			return (
-				<svg className="search-state-animation" viewBox="0 0 250 250">
+				<svg className="search-state-svg" viewBox="0 0 250 250">
 					<defs>
 						<clipPath id="a">
 							<path
