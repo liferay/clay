@@ -217,10 +217,55 @@ const FormInputGroupMixed = () => {
 	);
 };
 
+const formInputGroupStackedCode = `const Component = () => {
+	return (
+		<>
+			<ClayForm.Group>
+				<ClayInput.Group stacked>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="Email" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink prepend>
+						<ClayInput.GroupText>
+							{'@'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="liferay" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<ClayInput.GroupText>
+							{'.com'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</>
+	);
+}
+
+render(<Component />)`;
+
+const FormInputGroupStacked = () => {
+	const scope = {
+		ClayForm,
+		ClayInput,
+	};
+
+	return (
+		<Editor
+			code={formInputGroupStackedCode}
+			imports={formInputGroupImports}
+			scope={scope}
+		/>
+	);
+};
+
 export {
 	FormInput,
 	FormInputGroupConnected,
 	FormInputGroupMixed,
 	FormInputGroupSeparated,
+	FormInputGroupStacked,
 	FormInputTextArea,
 };

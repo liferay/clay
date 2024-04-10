@@ -7,24 +7,13 @@ navigationParent: 'docs/components/form.html'
 storybookPath: 'design-system-components-input'
 ---
 
-import {
-	FormInput,
-	FormInputGroupConnected,
-	FormInputGroupMixed,
-	FormInputGroupSeparated,
-	FormInputTextArea,
-} from '$packages/clay-form/docs/input';
+import {FormInput, FormInputTextArea} from '$packages/clay-form/docs/input';
 
 <div class="nav-toc-absolute">
 <div class="nav-toc">
 
 -   [Basic Usage](#basic-usage)
 -   [Using another elements as an input](#using-another-elements-as-an-input)
--   [Groups](#groups)
-    -   [Separated](#separated)
-    -   [Connected](#connected)
-    -   [Mixed](#mixed)
-    -   [Stacked](#stacked)
 
 </div>
 </div>
@@ -40,27 +29,3 @@ import {
 If you want to use another component instead of input for enter text typed things, you can just pass this tag to `component` property, like the example below:
 
 <FormInputTextArea />
-
-### Groups
-
-If you want to create groups of inputs, use `<ClayInput.Group>`, `<ClayInput.GroupInsetItem>`, `<ClayInput.GroupItem>` and `<ClayInput.GroupText>`.
-
-#### Separated
-
-Wrap each item in a `<ClayInput.Group>` with `<ClayInput.GroupItem>`. If you want to make an item shrink to fit, use `shrink` property.
-
-<FormInputGroupSeparated />
-
-#### Connected
-
-For creating a connected input group, use `prepend` property for each `<ClayInput.GroupItem>` and for the last `<ClayInput.GroupItem>` use the property `append`.
-
-<FormInputGroupConnected />
-
-#### Mixed
-
-<FormInputGroupMixed />
-
-#### Stacked
-
-For creating a stack of the items inside a item group, use `stacked` property in the `<ClayInput.Group>` and use `shrink` property for using in screens sizes less than 576px.
