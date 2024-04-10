@@ -339,43 +339,75 @@ export const CardWithNavigation = () => (
 
 export const CardWithUser = (args: any) => {
 	const [value, setValue] = useState<boolean>(false);
+	const [radioValue, setRadioValue] = useState<string>('');
 
 	return (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCardWithUser
-					actions={[
-						{
-							label: 'clickable',
-							onClick: () => {
-								alert('you clicked!');
+		<>
+			<div className="row">
+				<div className="col-md-4">
+					<ClayCardWithUser
+						actions={[
+							{
+								label: 'clickable',
+								onClick: () => {
+									alert('you clicked!');
+								},
 							},
-						},
-						{type: 'divider'},
-						{
-							href: '#',
-							label: 'linkable',
-						},
-					]}
-					description="Assistant to the regional manager"
-					disabled={args.disabled}
-					href="#"
-					name="Abraham Kuyper"
-					onSelectChange={setValue}
-					selected={value}
-					stickerTitle="User Icon"
-				/>
+							{type: 'divider'},
+							{
+								href: '#',
+								label: 'linkable',
+							},
+						]}
+						description="Assistant to the regional manager"
+						disabled={args.disabled}
+						href="#"
+						name="Abraham Kuyper"
+						onSelectChange={setValue}
+						selected={value}
+						stickerTitle="User Icon"
+					/>
+				</div>
+				<div className="col-md-4">
+					<ClayCardWithUser
+						description="Assistant to the regional manager"
+						disabled={args.disabled}
+						name="Abraham Kuyper"
+						stickerTitle="User Icon"
+						userImageSrc="https://via.placeholder.com/256"
+					/>
+				</div>
 			</div>
-			<div className="col-md-4">
-				<ClayCardWithUser
-					description="Assistant to the regional manager"
-					disabled={args.disabled}
-					name="Abraham Kuyper"
-					stickerTitle="User Icon"
-					userImageSrc="https://via.placeholder.com/256"
-				/>
+
+			<div className="row">
+				<div className="col-md-12">
+					<ClayCard.Group label="Radio Card Group">
+						<ClayCardWithUser
+							description="Assistant to the regional manager"
+							disabled={args.disabled}
+							name="Abraham Kuyper I"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio1'}}
+							selectableType="radio"
+							selected={radioValue === 'radio1'}
+							stickerTitle="User Icon"
+							userImageSrc="https://via.placeholder.com/256"
+						/>
+						<ClayCardWithUser
+							description="Assistant to the regional manager"
+							disabled={args.disabled}
+							name="Abraham Kuyper II"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio2'}}
+							selectableType="radio"
+							selected={radioValue === 'radio2'}
+							stickerTitle="User Icon"
+							userImageSrc="https://via.placeholder.com/256"
+						/>
+					</ClayCard.Group>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
