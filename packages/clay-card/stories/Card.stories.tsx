@@ -43,65 +43,106 @@ const ClayCheckboxWithState = (props: any) => {
 
 export const CardWithInfo = (args: any) => {
 	const [value, setValue] = useState<boolean>(false);
+	const [radioValue, setRadioValue] = useState<string>('');
 
 	return (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCardWithInfo
-					description="A cool description"
-					href="#"
-					labels={[
-						{
-							displayType: 'success',
-							value: 'Awesome',
-						},
-					]}
-					stickerProps={{
-						title: 'File',
-					}}
-					title="Very Large File"
-				/>
-			</div>
-
-			<div className="col-md-4">
-				<ClayCardWithInfo
-					actions={[
-						{
-							label: 'clickable',
-							onClick: () => {
-								alert('you clicked!');
+		<>
+			<div className="row">
+				<div className="col-md-4">
+					<ClayCardWithInfo
+						description="A cool description"
+						href="#"
+						labels={[
+							{
+								displayType: 'success',
+								value: 'Awesome',
 							},
-						},
-						{type: 'divider'},
-						{
-							href: '#',
-							label: 'linkable',
-						},
-					]}
-					description="A cool description"
-					disabled={args.disabled}
-					href="#"
-					labels={[
-						{
-							displayType: 'success',
-							value: 'Awesome',
-						},
-						{
+						]}
+						stickerProps={{
+							title: 'File',
+						}}
+						title="Very Large File"
+					/>
+				</div>
+
+				<div className="col-md-4">
+					<ClayCardWithInfo
+						actions={[
+							{
+								label: 'clickable',
+								onClick: () => {
+									alert('you clicked!');
+								},
+							},
+							{type: 'divider'},
+							{
+								href: '#',
+								label: 'linkable',
+							},
+						]}
+						description="A cool description"
+						disabled={args.disabled}
+						href="#"
+						labels={[
+							{
+								displayType: 'success',
+								value: 'Awesome',
+							},
+							{
+								displayType: 'danger',
+								value: 'Crazy',
+							},
+						]}
+						onSelectChange={(newVal) => setValue(newVal)}
+						selected={value}
+						stickerProps={{
+							content: 'DOC',
 							displayType: 'danger',
-							value: 'Crazy',
-						},
-					]}
-					onSelectChange={(newVal) => setValue(newVal)}
-					selected={value}
-					stickerProps={{
-						content: 'DOC',
-						displayType: 'danger',
-						title: 'Document',
-					}}
-					title="Selectable File"
-				/>
+							title: 'Document',
+						}}
+						title="Selectable File"
+					/>
+				</div>
 			</div>
-		</div>
+			<div className="row">
+				<div className="col-md-12">
+					<ClayCard.Group label="Radio Card Group">
+						<ClayCardWithInfo
+							description="A cool description"
+							labels={[
+								{
+									displayType: 'danger',
+									value: 'Crazy',
+								},
+							]}
+							onSelectChange={(value) => setRadioValue(value)}
+							radioProps={{value: 'radio1'}}
+							selectableType="radio"
+							selected={radioValue === 'radio1'}
+							stickerProps={null}
+							title="Radio Card 1"
+							truncate={false}
+						/>
+						<ClayCardWithInfo
+							description="A cool description"
+							labels={[
+								{
+									displayType: 'success',
+									value: 'Awesome',
+								},
+							]}
+							onSelectChange={(value) => setRadioValue(value)}
+							radioProps={{value: 'radio2'}}
+							selectableType="radio"
+							selected={radioValue === 'radio2'}
+							stickerProps={null}
+							title="Radio Card 2"
+							truncate={false}
+						/>
+					</ClayCard.Group>
+				</div>
+			</div>
+		</>
 	);
 };
 
@@ -174,36 +215,92 @@ CardWithInfoImage.args = {
 
 export const CardWithHorizontal = (args: any) => {
 	const [value, setValue] = useState<boolean>(false);
+	const [radioValue, setRadioValue] = useState<string>('');
 
 	return (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCardWithHorizontal href="#" title="Very Large Folder" />
-			</div>
+		<>
+			<div className="row">
+				<div className="col-md-4">
+					<ClayCardWithHorizontal
+						href="#"
+						title="Very Large Folder"
+					/>
+				</div>
 
-			<div className="col-md-4">
-				<ClayCardWithHorizontal
-					actions={[
-						{
-							label: 'clickable',
-							onClick: () => {
-								alert('you clicked!');
+				<div className="col-md-4">
+					<ClayCardWithHorizontal
+						actions={[
+							{
+								label: 'clickable',
+								onClick: () => {
+									alert('you clicked!');
+								},
 							},
-						},
-						{type: 'divider'},
-						{
-							href: '#',
-							label: 'linkable',
-						},
-					]}
-					disabled={args.disabled}
-					href="#"
-					onSelectChange={setValue}
-					selected={value}
-					title="Selectable Folder"
-				/>
+							{type: 'divider'},
+							{
+								href: '#',
+								label: 'linkable',
+							},
+						]}
+						disabled={args.disabled}
+						href="#"
+						onSelectChange={setValue}
+						selected={value}
+						title="Selectable Folder"
+					/>
+				</div>
 			</div>
-		</div>
+			<div className="row">
+				<div className="col-md-12">
+					<ClayCard.Group label="Radio Card Group">
+						<ClayCardWithHorizontal
+							actions={[
+								{
+									label: 'clickable',
+									onClick: () => {
+										alert('you clicked!');
+									},
+								},
+								{type: 'divider'},
+								{
+									href: '#',
+									label: 'linkable',
+								},
+							]}
+							disabled={args.disabled}
+							href="#"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio1'}}
+							selectableType="radio"
+							selected={radioValue === 'radio1'}
+							title="Radio Selectable Folder 1"
+						/>
+						<ClayCardWithHorizontal
+							actions={[
+								{
+									label: 'clickable',
+									onClick: () => {
+										alert('you clicked!');
+									},
+								},
+								{type: 'divider'},
+								{
+									href: '#',
+									label: 'linkable',
+								},
+							]}
+							disabled={args.disabled}
+							href="#"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio2'}}
+							selectableType="radio"
+							selected={radioValue === 'radio2'}
+							title="Radio Selectable Folder 2"
+						/>
+					</ClayCard.Group>
+				</div>
+			</div>
+		</>
 	);
 };
 
@@ -242,43 +339,75 @@ export const CardWithNavigation = () => (
 
 export const CardWithUser = (args: any) => {
 	const [value, setValue] = useState<boolean>(false);
+	const [radioValue, setRadioValue] = useState<string>('');
 
 	return (
-		<div className="row">
-			<div className="col-md-4">
-				<ClayCardWithUser
-					actions={[
-						{
-							label: 'clickable',
-							onClick: () => {
-								alert('you clicked!');
+		<>
+			<div className="row">
+				<div className="col-md-4">
+					<ClayCardWithUser
+						actions={[
+							{
+								label: 'clickable',
+								onClick: () => {
+									alert('you clicked!');
+								},
 							},
-						},
-						{type: 'divider'},
-						{
-							href: '#',
-							label: 'linkable',
-						},
-					]}
-					description="Assistant to the regional manager"
-					disabled={args.disabled}
-					href="#"
-					name="Abraham Kuyper"
-					onSelectChange={setValue}
-					selected={value}
-					stickerTitle="User Icon"
-				/>
+							{type: 'divider'},
+							{
+								href: '#',
+								label: 'linkable',
+							},
+						]}
+						description="Assistant to the regional manager"
+						disabled={args.disabled}
+						href="#"
+						name="Abraham Kuyper"
+						onSelectChange={setValue}
+						selected={value}
+						stickerTitle="User Icon"
+					/>
+				</div>
+				<div className="col-md-4">
+					<ClayCardWithUser
+						description="Assistant to the regional manager"
+						disabled={args.disabled}
+						name="Abraham Kuyper"
+						stickerTitle="User Icon"
+						userImageSrc="https://via.placeholder.com/256"
+					/>
+				</div>
 			</div>
-			<div className="col-md-4">
-				<ClayCardWithUser
-					description="Assistant to the regional manager"
-					disabled={args.disabled}
-					name="Abraham Kuyper"
-					stickerTitle="User Icon"
-					userImageSrc="https://via.placeholder.com/256"
-				/>
+
+			<div className="row">
+				<div className="col-md-12">
+					<ClayCard.Group label="Radio Card Group">
+						<ClayCardWithUser
+							description="Assistant to the regional manager"
+							disabled={args.disabled}
+							name="Abraham Kuyper I"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio1'}}
+							selectableType="radio"
+							selected={radioValue === 'radio1'}
+							stickerTitle="User Icon"
+							userImageSrc="https://via.placeholder.com/256"
+						/>
+						<ClayCardWithUser
+							description="Assistant to the regional manager"
+							disabled={args.disabled}
+							name="Abraham Kuyper II"
+							onSelectChange={setRadioValue}
+							radioProps={{value: 'radio2'}}
+							selectableType="radio"
+							selected={radioValue === 'radio2'}
+							stickerTitle="User Icon"
+							userImageSrc="https://via.placeholder.com/256"
+						/>
+					</ClayCard.Group>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

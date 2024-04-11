@@ -5,7 +5,7 @@
 
 import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import {ClayCheckbox} from '@clayui/form';
+import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
 import ClaySticker, {DisplayType as StickerDisplayType} from '@clayui/sticker';
@@ -55,9 +55,10 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	name: string;
 
 	/**
-	 * Callback for when item is selected
+	 * Props to add to the radio element
 	 */
-	onSelectChange?: (val: boolean) => void;
+
+	radioProps?: React.HTMLAttributes<HTMLInputElement> & {value: string};
 
 	/**
 	 * Flag to indicate if card is selected
@@ -93,7 +94,29 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Icon name to use for user avatar
 	 */
 	userSymbol?: string;
+
+	/**
+	 * Flag to indicate if the card text is truncated
+	 */
+	truncate?: boolean;
 }
+
+/**
+ * Different types of props depending on selectableType.
+ *
+ * onSelectChange: callback for when item is selected
+ * selectableType: determines what type of selectable it is
+ */
+
+type CheckboxProps = {
+	onSelectChange?: (value: boolean) => void;
+	selectableType?: 'checkbox';
+};
+
+type RadioProps = {
+	onSelectChange?: (value: string) => void;
+	selectableType: 'radio';
+};
 
 export const ClayCardWithUser = ({
 	'aria-label': ariaLabel,
@@ -110,12 +133,15 @@ export const ClayCardWithUser = ({
 	selected = false,
 	spritemap,
 	stickerTitle,
+	selectableType,
+	radioProps = {value: ''},
 	userImageAlt = 'thumbnail',
 	userDisplayType,
 	userImageSrc,
 	userSymbol = 'user',
+	truncate = true,
 	...otherProps
-}: IProps) => {
+}: IProps & (RadioProps | CheckboxProps)) => {
 	const content = (
 		<div className="aspect-ratio-item-center-middle card-type-asset-icon">
 			<ClaySticker
@@ -142,16 +168,28 @@ export const ClayCardWithUser = ({
 			selectable={!!onSelectChange}
 		>
 			<ClayCard.AspectRatio className="card-item-first">
-				{onSelectChange && (
-					<ClayCheckbox
-						{...checkboxProps}
-						checked={selected}
-						disabled={disabled}
-						onChange={() => onSelectChange(!selected)}
-					>
-						{content}
-					</ClayCheckbox>
-				)}
+				{onSelectChange &&
+					(selectableType === 'radio' ? (
+						<ClayRadio
+							{...radioProps}
+							checked={selected}
+							disabled={disabled}
+							onChange={({target: {value}}) =>
+								onSelectChange(value)
+							}
+						>
+							{content}
+						</ClayRadio>
+					) : (
+						<ClayCheckbox
+							{...checkboxProps}
+							checked={selected}
+							disabled={disabled}
+							onChange={() => onSelectChange(!selected)}
+						>
+							{content}
+						</ClayCheckbox>
+					))}
 
 				{!onSelectChange && content}
 			</ClayCard.AspectRatio>
@@ -164,12 +202,16 @@ export const ClayCardWithUser = ({
 							disabled={disabled}
 							displayType="title"
 							href={href}
+							truncate={truncate}
 						>
 							{name}
 						</ClayCard.Description>
 
 						{description && (
-							<ClayCard.Description displayType="subtitle">
+							<ClayCard.Description
+								displayType="subtitle"
+								truncate={truncate}
+							>
 								{description}
 							</ClayCard.Description>
 						)}

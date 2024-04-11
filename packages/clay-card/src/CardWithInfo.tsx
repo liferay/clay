@@ -5,7 +5,7 @@
 
 import {ClayButtonWithIcon} from '@clayui/button';
 import {ClayDropDownWithItems} from '@clayui/drop-down';
-import {ClayCheckbox} from '@clayui/form';
+import {ClayCheckbox, ClayRadio} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
@@ -27,6 +27,12 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Props to add to the checkbox element
 	 */
 	checkboxProps?: React.HTMLAttributes<HTMLInputElement>;
+
+	/**
+	 * Props to add to the radio element
+	 */
+
+	radioProps?: React.HTMLAttributes<HTMLInputElement> & {value: string};
 
 	/**
 	 * Description of the file
@@ -81,11 +87,6 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	>;
 
 	/**
-	 * Callback for when item is selected
-	 */
-	onSelectChange?: (val: boolean) => void;
-
-	/**
 	 * Flag to indicate if card is selected
 	 */
 	selected?: boolean;
@@ -113,7 +114,29 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Name of the file
 	 */
 	title: string;
+
+	/**
+	 * Flag to indicate if the card text is truncated
+	 */
+	truncate?: boolean;
 }
+
+/**
+ * Different types of props depending on selectableType.
+ *
+ * onSelectChange: callback for when item is selected
+ * selectableType: determines what type of selectable it is
+ */
+
+type CheckboxProps = {
+	onSelectChange?: (value: boolean) => void;
+	selectableType?: 'checkbox';
+};
+
+type RadioProps = {
+	onSelectChange?: (value: string) => void;
+	selectableType: 'radio';
+};
 
 export const ClayCardWithInfo = ({
 	'aria-label': ariaLabel,
@@ -131,13 +154,16 @@ export const ClayCardWithInfo = ({
 	imgProps,
 	labels,
 	onSelectChange,
+	radioProps = {value: ''},
+	selectableType,
 	selected = false,
 	spritemap,
 	stickerProps = {},
 	symbol,
 	title,
+	truncate = true,
 	...otherProps
-}: IProps) => {
+}: IProps & (RadioProps | CheckboxProps)) => {
 	const isCardType = {
 		file: displayType === 'file' && !imgProps,
 		image: displayType === 'image' || imgProps,
@@ -212,16 +238,26 @@ export const ClayCardWithInfo = ({
 			displayType={isCardType.image ? 'image' : 'file'}
 			selectable={!!onSelectChange}
 		>
-			{onSelectChange && (
-				<ClayCheckbox
-					{...checkboxProps}
-					checked={selected}
-					disabled={disabled}
-					onChange={() => onSelectChange(!selected)}
-				>
-					{headerContent}
-				</ClayCheckbox>
-			)}
+			{onSelectChange &&
+				(selectableType === 'radio' ? (
+					<ClayRadio
+						{...radioProps}
+						checked={selected}
+						disabled={disabled}
+						onChange={({target: {value}}) => onSelectChange(value)}
+					>
+						{headerContent}
+					</ClayRadio>
+				) : (
+					<ClayCheckbox
+						{...checkboxProps}
+						checked={selected}
+						disabled={disabled}
+						onChange={() => onSelectChange(!selected)}
+					>
+						{headerContent}
+					</ClayCheckbox>
+				))}
 
 			{!onSelectChange && headerContent}
 
@@ -233,12 +269,16 @@ export const ClayCardWithInfo = ({
 							disabled={disabled}
 							displayType="title"
 							href={href}
+							truncate={truncate}
 						>
 							{title}
 						</ClayCard.Description>
 
 						{description && (
-							<ClayCard.Description displayType="subtitle">
+							<ClayCard.Description
+								displayType="subtitle"
+								truncate={truncate}
+							>
 								{description}
 							</ClayCard.Description>
 						)}
