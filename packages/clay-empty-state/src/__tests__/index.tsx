@@ -17,33 +17,7 @@ describe('ClayEmptyState', () => {
 	});
 
 	it('renders with an image provided', () => {
-		const {container} = render(
-			<ClayEmptyState imgSrc="https://via.placeholder.com/256" />
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it('does not render a reduced motion classes if imgSrcReducedMotion={null}', () => {
-		const {container} = render(
-			<ClayEmptyState
-				imgSrc="https://via.placeholder.com/256"
-				imgSrcReducedMotion={null}
-			/>
-		);
-
-		expect(
-			container.querySelector('.d-none-c-prefers-reduced-motion')
-		).toBe(null);
-	});
-
-	it('renders with a reduced motion image provided', () => {
-		const {container} = render(
-			<ClayEmptyState
-				imgSrc="https://via.placeholder.com/256"
-				imgSrcReducedMotion="https://via.placeholder.com/256"
-			/>
-		);
+		const {container} = render(<ClayEmptyState state="empty" />);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -64,27 +38,7 @@ describe('ClayEmptyState', () => {
 
 	it('renders with different image props', () => {
 		const {container} = render(
-			<ClayEmptyState
-				imgProps={{alt: 'hello world'}}
-				imgSrc="https://via.placeholder.com/256"
-			>
-				My Empty State
-			</ClayEmptyState>
-		);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it('renders with different reduced motion image props', () => {
-		const {container} = render(
-			<ClayEmptyState
-				imgProps={{alt: 'hello world'}}
-				imgPropsReducedMotion={{alt: 'hello world?'}}
-				imgSrc="https://via.placeholder.com/256"
-				imgSrcReducedMotion="https://via.placeholder.com/256"
-			>
-				My Empty State
-			</ClayEmptyState>
+			<ClayEmptyState state="success">My Success State</ClayEmptyState>
 		);
 
 		expect(container).toMatchSnapshot();

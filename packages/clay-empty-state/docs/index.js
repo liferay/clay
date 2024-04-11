@@ -39,9 +39,7 @@ const emptyStateWithImageCode = `const Component = () => {
 	return (
 		<ClayEmptyState
 			description="You don't have more notifications to review"
-			imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
-			imgSrc="/images/success_state.gif"
-			imgSrcReducedMotion="/images/success_state_reduced_motion.gif"
+			state="success"
 			title="Hurray"
 		/>
 	);
@@ -68,9 +66,7 @@ const emptyStateReducedMotionWithImageCode = `const Component = () => {
 		<div className="c-prefers-reduced-motion">
 			<ClayEmptyState
 				description="You don't have more notifications to review"
-				imgProps={{alt: 'Alternative Text', title: 'Hello World!'}}
-				imgSrc="/images/success_state.gif"
-				imgSrcReducedMotion="/images/success_state_reduced_motion.gif"
+				state="empty"
 				title="Hurray"
 			/>
 		</div>

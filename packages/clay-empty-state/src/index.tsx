@@ -6,6 +6,8 @@
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
+import {States} from './States';
+
 interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	/**
 	 * Message the user will see describing what they can do when on this screen
@@ -14,21 +16,25 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 
 	/**
 	 * HTMLImage element attributes to add to the image within the component
+	 * @deprecated since v3.113.0 - this is no longer necessary.
 	 */
 	imgProps?: React.ImgHTMLAttributes<HTMLImageElement>;
 
 	/**
 	 * HTMLImage element attributes to add to the reduced motion image within the component
+	 * @deprecated since v3.113.0 - this is no longer necessary.
 	 */
 	imgPropsReducedMotion?: React.ImgHTMLAttributes<HTMLImageElement>;
 
 	/**
 	 * Source of the image to signify the state
+	 * @deprecated since v3.113.0 - use `state` instead.
 	 */
 	imgSrc?: string;
 
 	/**
 	 * Source of the image to show when `.c-prefers-reduced-motion` is active
+	 * @deprecated since v3.113.0 - use `state` instead.
 	 */
 	imgSrcReducedMotion?: string | null;
 
@@ -36,6 +42,11 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	 * Indicates empty state should be a small variant.
 	 */
 	small?: boolean;
+
+	/**
+	 * Flag to define the content state image.
+	 */
+	state?: 'empty' | 'success' | 'search';
 
 	/**
 	 * Title of the message highlighting the description
@@ -46,6 +57,7 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 const defaultTile = 'No results found';
 
 const ClayEmptyState = ({
+	'aria-label': ariaLabel,
 	children,
 	className,
 	description = 'Sorry, there are no results found',
@@ -54,6 +66,7 @@ const ClayEmptyState = ({
 	imgSrc,
 	imgSrcReducedMotion,
 	small,
+	state,
 	title = defaultTile,
 	...otherProps
 }: IProps) => {
@@ -98,39 +111,52 @@ const ClayEmptyState = ({
 	return (
 		<div
 			className={classNames(className, 'c-empty-state', {
-				'c-empty-state-animation': hasImg,
+				'c-empty-state-animation': hasImg || state,
 				'c-empty-state-sm': small,
 			})}
 			{...otherProps}
 		>
 			{hasImg && (
 				<div className="c-empty-state-image">
-					<div className="c-empty-state-aspect-ratio">
-						<img
-							alt=""
-							className={classNames(
-								'aspect-ratio-item aspect-ratio-item-fluid',
-								reducedMotionImage &&
-									'd-none-c-prefers-reduced-motion',
-								imgProps && imgProps.className
-							)}
-							src={imgSrc}
-							{...imgProps}
-						/>
-						{reducedMotionImage && (
+					{imgSrc && (
+						<div className="c-empty-state-aspect-ratio">
 							<img
 								alt=""
 								className={classNames(
-									'aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion',
-									imgPropsReducedMotion &&
-										imgPropsReducedMotion.className
+									'aspect-ratio-item aspect-ratio-item-fluid',
+									reducedMotionImage &&
+										'd-none-c-prefers-reduced-motion',
+									imgProps && imgProps.className
 								)}
-								onError={() => setError(true)}
-								src={reducedMotionImage}
-								{...imgPropsReducedMotion}
+								src={imgSrc}
+								{...imgProps}
 							/>
-						)}
-					</div>
+
+							{reducedMotionImage && (
+								<img
+									alt=""
+									className={classNames(
+										'aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion',
+										imgPropsReducedMotion &&
+											imgPropsReducedMotion.className
+									)}
+									onError={() => setError(true)}
+									src={reducedMotionImage}
+									{...imgPropsReducedMotion}
+								/>
+							)}
+						</div>
+					)}
+				</div>
+			)}
+
+			{state && !hasImg && (
+				<div
+					aria-label={ariaLabel || title || defaultTile}
+					className="c-empty-state-image"
+					role="img"
+				>
+					<States state={state} />
 				</div>
 			)}
 
