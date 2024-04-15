@@ -7,27 +7,6 @@ import Editor from '$clayui.com/src/components/Editor';
 import {ClayCheckbox} from '@clayui/form';
 import React from 'react';
 
-const checkboxImportsCode = `import {ClayCheckbox} from '@clayui/form';
-`;
-
-export const Checkbox = () => {
-	const scope = {ClayCheckbox};
-	const code = `const Component = () => {
-	
-	return (
-		<ClayCheckbox
-			aria-label="hello! Can you see me?"
-			checked={true}
-			readOnly
-		/>
-	);
-}
-
-render(<Component />)`;
-
-	return <Editor code={code} imports={checkboxImportsCode} scope={scope} />;
-};
-
 const checkboxContainerPropsImportsCode = `import {ClayCheckbox} from '@clayui/form';
 `;
 
