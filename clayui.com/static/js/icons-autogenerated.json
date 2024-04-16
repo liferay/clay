@@ -416,6 +416,10 @@
         "aliases": ["box", "grid", "rectangle", "squares"]
     },
     {
+        "name": "content-shield",
+        "aliases": ["csp", "security", "shield"]
+    },
+    {
         "name": "control-panel",
         "aliases": ["change", "effects", "settings"]
     },
@@ -1248,6 +1252,10 @@
         "aliases": ["condition"]
     },
     {
+        "name": "scim",
+        "aliases": ["shield"]
+    },
+    {
         "name": "search-experiences",
         "aliases": [""]
     },
@@ -1294,6 +1302,10 @@
     {
         "name": "sheets",
         "aliases": ["assets", "layers"]
+    },
+    {
+        "name": "shield-asterisk",
+        "aliases": ["authentication", "mfa", "security", "shield"]
     },
     {
         "name": "shield-check",
