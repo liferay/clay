@@ -11,23 +11,19 @@ import React from 'react';
 const AlertCode = `const Component = () => {
 	return (
 		<>
-			<ClayAlert displayType="info" spritemap={spritemap} title="Info">
+			<ClayAlert displayType="info" spritemap={spritemap} title="Info" role={null}>
 				This is an info message.
 			</ClayAlert>
 
-			<ClayAlert displayType="secondary" spritemap={spritemap} title="Secondary">
-				This is a secondary message.
-			</ClayAlert>
-
-			<ClayAlert displayType="success" spritemap={spritemap} title="Success">
+			<ClayAlert displayType="success" spritemap={spritemap} title="Success" role={null}>
 				This is a success message.
 			</ClayAlert>
 
-			<ClayAlert displayType="warning" spritemap={spritemap} title="Warning">
+			<ClayAlert displayType="warning" spritemap={spritemap} title="Warning" role={null}>
 				This is a warning message.
 			</ClayAlert>
 
-			<ClayAlert displayType="danger" spritemap={spritemap} title="Danger">
+			<ClayAlert displayType="danger" spritemap={spritemap} title="Danger" role={null}>
 				This is a danger message.
 			</ClayAlert>
 		</>
@@ -70,16 +66,37 @@ export const Alert = () => {
 const AlertVariantsCode = `const Component = () => {
 	return (
 		<>
-			<ClayAlert displayType="info" spritemap={spritemap} title="Info" variant="stripe">
+			<div className="c-mt-3">
+				<ClayAlert
+					actions={
+						<ClayButton.Group spaced>
+							<ClayButton displayType="warning" small>
+								Replace
+							</ClayButton>
+							<ClayButton alert>
+								Keep Both
+							</ClayButton>
+						</ClayButton.Group>
+					}
+					displayType="warning"
+					onClose={() => {}}
+					title="Alert"
+					variant="inline"
+				>
+					A file with this name already exists.
+				</ClayAlert>
+			</div>
+
+			<ClayAlert displayType="info" spritemap={spritemap} title="Info" variant="stripe" role={null}>
 				This is a stripe variant.
 			</ClayAlert>
 
 			<div className="c-mt-3">
-				<ClayAlert displayType="success" spritemap={spritemap} title="This is an inline variant." variant="inline" />
+				<ClayAlert displayType="success" spritemap={spritemap} title="This is an inline variant." variant="inline" role={null} />
 			</div>
 
 			<div className="c-mt-3">
-				<ClayAlert displayType="danger" spritemap={spritemap} title="This is a feedback variant." variant="feedback" />
+				<ClayAlert displayType="danger" spritemap={spritemap} title="This is a feedback variant." variant="feedback" role={null} />
 			</div>
 		</>
 	);
@@ -111,7 +128,7 @@ const AlertVariantsJSPCode = `<clay:stripe
 />`;
 
 export const AlertVariants = () => {
-	const scope = {ClayAlert};
+	const scope = {ClayAlert, ClayButton};
 
 	const codeSnippets = [
 		{
@@ -132,7 +149,7 @@ export const AlertVariants = () => {
 const AlertIconCode = `const Component = () => {
 	return (
 		<>
-			<ClayAlert displayType="info" spritemap={spritemap} symbol="thumbs-up-full" title="Info" variant="stripe">
+			<ClayAlert displayType="info" spritemap={spritemap} symbol="thumbs-up-full" title="Info" variant="stripe" role={null}>
 				This is a stripe variant.
 			</ClayAlert>
 		</>
@@ -164,6 +181,7 @@ const AlertWithButtonCode = `const Component = () => {
 			displayType="info"
 			spritemap={spritemap}
 			title="With a Button"
+			role={null}
 		>
 			{'This is an alert with a button!'}
 
@@ -207,6 +225,7 @@ const AlertInlineCode = `const Component = () => {
 			spritemap={spritemap}
 			title="With a Button"
 			variant="inline"
+			role={null}
 		>
 			{'This is an alert with a button!'}
 		</ClayAlert>
@@ -236,13 +255,13 @@ const AlertToastContainerCode = `const Component = () => {
 	return (
 		<>
 			<div>
-				<button
+				<ClayButton
 					onClick={() =>
 						setToastItems([...toastItems, Math.random() * 100])
 					}
 				>
 					{'Add Alert'}
-				</button>
+				</ClayButton>
 			</div>
 
 			<ClayAlert.ToastContainer>
@@ -267,7 +286,7 @@ const AlertToastContainerCode = `const Component = () => {
 render(<Component />);`;
 
 export const AlertToastContainer = () => {
-	const scope = {ClayAlert};
+	const scope = {ClayAlert, ClayButton};
 	const code = AlertToastContainerCode;
 
 	return (
