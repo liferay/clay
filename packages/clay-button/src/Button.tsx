@@ -69,7 +69,7 @@ export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Determines the size of a button.
 	 */
-	size?: 'xs' | 'sm';
+	size?: 'xs' | 'regular' | 'sm';
 
 	/**
 	 * Indicates button should be a small variant.
@@ -96,7 +96,7 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 			monospaced,
 			outline,
 			rounded,
-			size,
+			size = 'regular',
 			small,
 			translucent,
 			type = 'button',
@@ -133,7 +133,7 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 					'btn-block': block,
 					'btn-monospaced': monospaced,
 					'btn-outline-borderless': borderless,
-					'btn-sm': small && !size,
+					'btn-sm': small && (!size || size === 'regular'),
 					'btn-translucent': translucent,
 					'clay-dark': dark,
 					[`btn-${displayType}`]:
@@ -141,7 +141,7 @@ const ClayButton = React.forwardRef<HTMLButtonElement, IProps>(
 					[`btn-outline-${displayType}`]:
 						displayType && (outline || borderless),
 					'rounded-pill': rounded,
-					[`btn-${size}`]: size,
+					[`btn-${size}`]: size && size !== 'regular',
 				})}
 				ref={ref}
 				type={type}
