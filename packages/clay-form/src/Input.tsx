@@ -174,7 +174,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	/**
 	 * Selects the height of the input.
 	 */
-	sizing?: 'lg' | 'sm';
+	sizing?: 'lg' | 'regular' | 'sm';
 }
 
 const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
@@ -184,7 +184,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 			component: Component = 'input',
 			insetAfter,
 			insetBefore,
-			sizing,
+			sizing = 'regular',
 			type = 'text',
 			...otherProps
 		}: IProps,
@@ -193,7 +193,7 @@ const ClayInput = React.forwardRef<HTMLInputElement, IProps>(
 		<Component
 			{...otherProps}
 			className={classNames('form-control', className, {
-				[`form-control-${sizing}`]: sizing,
+				[`form-control-${sizing}`]: sizing && sizing !== 'regular',
 				['input-group-inset']: insetAfter || insetBefore,
 				['input-group-inset-after']: insetAfter,
 				['input-group-inset-before']: insetBefore,
