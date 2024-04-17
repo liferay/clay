@@ -4,9 +4,9 @@
  */
 
 import ClayButton from '@clayui/button';
-const emptyImage = require('@clayui/css/src/images/images/empty_state.gif');
-const searchImage = require('@clayui/css/src/images/images/search_state.gif');
-const successImage = require('@clayui/css/src/images/images/success_state.gif');
+const emptyImage = require('@clayui/css/src/images/images/empty_state.svg');
+const searchImage = require('@clayui/css/src/images/images/search_state.svg');
+const successImage = require('@clayui/css/src/images/images/success_state.svg');
 import React from 'react';
 
 import ClayEmptyState from '../src';
