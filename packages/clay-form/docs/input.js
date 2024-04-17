@@ -9,6 +9,7 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import React from 'react';
 
 const formInputGroupImports = `import ClayForm, {ClayInput} from '@clayui/form';
+import ClayButton from '@clayui/button';
 `;
 
 const formInputCode = `const Component = () => {
@@ -69,31 +70,26 @@ const formInputGroupSeparatedCode = `const Component = () => {
 			<ClayForm.Group>
 				<ClayInput.Group>
 					<ClayInput.GroupItem shrink>
-						<ClayInput.GroupText>
-							{'@'}
-						</ClayInput.GroupText>
+						<ClayButton displayType="secondary" type="submit">Search</ClayButton>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem>
-						<ClayInput placeholder="Username" type="text" />
+						<ClayInput placeholder="Search Query" type="text" />
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 			</ClayForm.Group>
 			<ClayForm.Group>
 				<ClayInput.Group>
-					<ClayInput.GroupItem>
-						<ClayInput placeholder="Email" type="text" />
-					</ClayInput.GroupItem>
 					<ClayInput.GroupItem shrink>
 						<ClayInput.GroupText>
-							{'@'}
+							{'$'}
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem>
-						<ClayInput placeholder="liferay" type="text" />
+						<ClayInput placeholder="5,000" type="text" />
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem shrink>
 						<ClayInput.GroupText>
-							{'.com'}
+							{'.00'}
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
@@ -106,6 +102,7 @@ render(<Component />)`;
 
 const FormInputGroupSeparated = () => {
 	const scope = {
+		ClayButton,
 		ClayForm,
 		ClayInput,
 	};
@@ -125,12 +122,10 @@ const formInputGroupConnectedCode = `const Component = () => {
 			<ClayForm.Group>
 				<ClayInput.Group>
 					<ClayInput.GroupItem shrink prepend>
-						<ClayInput.GroupText>
-							{'@'}
-						</ClayInput.GroupText>
+						<ClayButton displayType="secondary" type="submit">Search</ClayButton>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append>
-						<ClayInput placeholder="Username" type="text" />
+						<ClayInput placeholder="Search Query" type="text" />
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
 			</ClayForm.Group>
@@ -139,17 +134,26 @@ const formInputGroupConnectedCode = `const Component = () => {
 					<ClayInput.GroupItem prepend>
 						<ClayInput placeholder="Email" type="text" />
 					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<ClayInput.GroupText>
+							{'@liferay.com'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+			<ClayForm.Group>
+				<ClayInput.Group>
 					<ClayInput.GroupItem shrink prepend>
 						<ClayInput.GroupText>
-							{'@'}
+							{'$'}
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem prepend>
-						<ClayInput placeholder="liferay" type="text" />
+						<ClayInput placeholder="5,000" type="text" />
 					</ClayInput.GroupItem>
 					<ClayInput.GroupItem append shrink>
 						<ClayInput.GroupText>
-							{'.com'}
+							{'.00'}
 						</ClayInput.GroupText>
 					</ClayInput.GroupItem>
 				</ClayInput.Group>
@@ -162,6 +166,7 @@ render(<Component />)`;
 
 const FormInputGroupConnected = () => {
 	const scope = {
+		ClayButton,
 		ClayForm,
 		ClayInput,
 	};
@@ -217,10 +222,55 @@ const FormInputGroupMixed = () => {
 	);
 };
 
+const formInputGroupStackedCode = `const Component = () => {
+	return (
+		<>
+			<ClayForm.Group>
+				<ClayInput.Group stacked>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="Email" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem shrink prepend>
+						<ClayInput.GroupText>
+							{'@'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem prepend>
+						<ClayInput placeholder="liferay" type="text" />
+					</ClayInput.GroupItem>
+					<ClayInput.GroupItem append shrink>
+						<ClayInput.GroupText>
+							{'.com'}
+						</ClayInput.GroupText>
+					</ClayInput.GroupItem>
+				</ClayInput.Group>
+			</ClayForm.Group>
+		</>
+	);
+}
+
+render(<Component />)`;
+
+const FormInputGroupStacked = () => {
+	const scope = {
+		ClayForm,
+		ClayInput,
+	};
+
+	return (
+		<Editor
+			code={formInputGroupStackedCode}
+			imports={formInputGroupImports}
+			scope={scope}
+		/>
+	);
+};
+
 export {
 	FormInput,
 	FormInputGroupConnected,
 	FormInputGroupMixed,
 	FormInputGroupSeparated,
+	FormInputGroupStacked,
 	FormInputTextArea,
 };
