@@ -86,10 +86,10 @@ module.exports = {
 			statements: 69,
 		},
 		'./packages/clay-empty-state/src/': {
-			branches: 41,
-			functions: 60,
-			lines: 71,
-			statements: 70,
+			branches: 75,
+			functions: 66,
+			lines: 80,
+			statements: 80,
 		},
 		'./packages/clay-form/src/': {
 			branches: 62,

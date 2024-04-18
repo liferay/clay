@@ -6,8 +6,6 @@
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
-import {States} from './States';
-
 interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	/**
 	 * Message the user will see describing what they can do when on this screen
@@ -16,25 +14,21 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 
 	/**
 	 * HTMLImage element attributes to add to the image within the component
-	 * @deprecated since v3.113.0 - this is no longer necessary.
 	 */
 	imgProps?: React.ImgHTMLAttributes<HTMLImageElement>;
 
 	/**
 	 * HTMLImage element attributes to add to the reduced motion image within the component
-	 * @deprecated since v3.113.0 - this is no longer necessary.
 	 */
 	imgPropsReducedMotion?: React.ImgHTMLAttributes<HTMLImageElement>;
 
 	/**
 	 * Source of the image to signify the state
-	 * @deprecated since v3.113.0 - use `state` instead.
 	 */
 	imgSrc?: string;
 
 	/**
 	 * Source of the image to show when `.c-prefers-reduced-motion` is active
-	 * @deprecated since v3.113.0 - use `state` instead.
 	 */
 	imgSrcReducedMotion?: string | null;
 
@@ -44,20 +38,13 @@ interface IProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
 	small?: boolean;
 
 	/**
-	 * Flag to define the content state image.
-	 */
-	state?: 'empty' | 'success' | 'search';
-
-	/**
 	 * Title of the message highlighting the description
 	 */
 	title?: string | null;
 }
-
 const defaultTile = 'No results found';
 
 const ClayEmptyState = ({
-	'aria-label': ariaLabel,
 	children,
 	className,
 	description = 'Sorry, there are no results found',
@@ -66,14 +53,11 @@ const ClayEmptyState = ({
 	imgSrc,
 	imgSrcReducedMotion,
 	small,
-	state,
 	title = defaultTile,
 	...otherProps
 }: IProps) => {
 	const hasImg = imgSrc || imgProps;
-
 	const [error, setError] = useState(false);
-
 	const reducedMotionImage = useMemo(() => {
 		if (error) {
 			console.warn(
@@ -82,7 +66,6 @@ const ClayEmptyState = ({
 
 			return null;
 		}
-
 		if (imgSrc && imgSrcReducedMotion !== null) {
 			const url = new URL(
 				imgSrc,
@@ -90,7 +73,6 @@ const ClayEmptyState = ({
 					? undefined
 					: `https://${location.host}`
 			);
-
 			const hasImgExtension = url.pathname.match(/.(gif|png| jpeg|jpg)/);
 
 			return hasImgExtension
@@ -111,52 +93,39 @@ const ClayEmptyState = ({
 	return (
 		<div
 			className={classNames(className, 'c-empty-state', {
-				'c-empty-state-animation': hasImg || state,
+				'c-empty-state-animation': hasImg,
 				'c-empty-state-sm': small,
 			})}
 			{...otherProps}
 		>
 			{hasImg && (
 				<div className="c-empty-state-image">
-					{imgSrc && (
-						<div className="c-empty-state-aspect-ratio">
+					<div className="c-empty-state-aspect-ratio">
+						<img
+							alt=""
+							className={classNames(
+								'aspect-ratio-item aspect-ratio-item-fluid',
+								reducedMotionImage &&
+									'd-none-c-prefers-reduced-motion',
+								imgProps && imgProps.className
+							)}
+							src={imgSrc}
+							{...imgProps}
+						/>
+						{reducedMotionImage && (
 							<img
 								alt=""
 								className={classNames(
-									'aspect-ratio-item aspect-ratio-item-fluid',
-									reducedMotionImage &&
-										'd-none-c-prefers-reduced-motion',
-									imgProps && imgProps.className
+									'aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion',
+									imgPropsReducedMotion &&
+										imgPropsReducedMotion.className
 								)}
-								src={imgSrc}
-								{...imgProps}
+								onError={() => setError(true)}
+								src={reducedMotionImage}
+								{...imgPropsReducedMotion}
 							/>
-
-							{reducedMotionImage && (
-								<img
-									alt=""
-									className={classNames(
-										'aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion',
-										imgPropsReducedMotion &&
-											imgPropsReducedMotion.className
-									)}
-									onError={() => setError(true)}
-									src={reducedMotionImage}
-									{...imgPropsReducedMotion}
-								/>
-							)}
-						</div>
-					)}
-				</div>
-			)}
-
-			{state && !hasImg && (
-				<div
-					aria-label={ariaLabel || title || defaultTile}
-					className="c-empty-state-image"
-					role="img"
-				>
-					<States state={state} />
+						)}
+					</div>
 				</div>
 			)}
 
@@ -167,12 +136,9 @@ const ClayEmptyState = ({
 					</span>
 				</span>
 			</div>
-
 			<div className="c-empty-state-text">{description}</div>
-
 			{children && <div className="c-empty-state-footer">{children}</div>}
 		</div>
 	);
 };
-
 export default ClayEmptyState;

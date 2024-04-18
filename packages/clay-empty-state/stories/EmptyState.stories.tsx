@@ -4,6 +4,9 @@
  */
 
 import ClayButton from '@clayui/button';
+const emptyImage = require('@clayui/css/src/images/images/empty_state.svg');
+const searchImage = require('@clayui/css/src/images/images/search_state.svg');
+const successImage = require('@clayui/css/src/images/images/success_state.svg');
 import React from 'react';
 
 import ClayEmptyState from '../src';
@@ -26,7 +29,7 @@ export const Title = () => (
 );
 
 export const EmptyState = (args: any) => (
-	<ClayEmptyState small={args.small} state="empty">
+	<ClayEmptyState imgSrc={emptyImage} small={args.small}>
 		<ClayButton displayType="secondary">Button</ClayButton>
 	</ClayEmptyState>
 );
@@ -38,7 +41,7 @@ EmptyState.args = {
 export const SearchState = () => (
 	<ClayEmptyState
 		description="This is a description of what the button will allow you to do"
-		state="search"
+		imgSrc={searchImage}
 		title="No content yet"
 	/>
 );
@@ -46,7 +49,7 @@ export const SearchState = () => (
 export const SuccessState = () => (
 	<ClayEmptyState
 		description="You don't have more notifications to review"
-		state="success"
+		imgSrc={successImage}
 		title="Hurray"
 	/>
 );
@@ -54,7 +57,7 @@ export const SuccessState = () => (
 export const WithImage = () => (
 	<ClayEmptyState
 		description="You don't have more notifications to review"
-		state="success"
+		imgSrc={successImage}
 		title="Hurray"
 	/>
 );
