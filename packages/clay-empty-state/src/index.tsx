@@ -85,7 +85,7 @@ const ClayEmptyState = ({
 				: null;
 		}
 	}, [error, imgSrcReducedMotion]);
-	
+
 	imgPropsReducedMotion = imgPropsReducedMotion
 		? imgPropsReducedMotion
 		: imgProps;

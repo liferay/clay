@@ -29,7 +29,7 @@ export const Title = () => (
 );
 
 export const EmptyState = (args: any) => (
-	<ClayEmptyState imgSrc={emptyImage} small={args.small} >
+	<ClayEmptyState imgSrc={emptyImage} small={args.small}>
 		<ClayButton displayType="secondary">Button</ClayButton>
 	</ClayEmptyState>
 );
