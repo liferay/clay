@@ -73,7 +73,9 @@ const ClayEmptyState = ({
 					? undefined
 					: `https://${location.host}`
 			);
-			const hasImgExtension = url.pathname.match(/.(gif|png| jpeg|jpg)/);
+			const hasImgExtension = url.pathname.match(
+				/.(gif|png|jpeg|jpg|svg)/
+			);
 
 			return hasImgExtension
 				? `${url.pathname.substring(
