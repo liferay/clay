@@ -44,7 +44,7 @@ exports[`ClayEmptyState renders with a reduced motion image provided 1`] = `
         class="c-empty-state-aspect-ratio"
       >
         <img
-          alt="No results found"
+          alt=""
           class="aspect-ratio-item aspect-ratio-item-fluid"
           src="https://via.placeholder.com/256"
         />
@@ -84,7 +84,7 @@ exports[`ClayEmptyState renders with an image provided 1`] = `
         class="c-empty-state-aspect-ratio"
       >
         <img
-          alt="No results found"
+          alt=""
           class="aspect-ratio-item aspect-ratio-item-fluid"
           src="https://via.placeholder.com/256"
         />
