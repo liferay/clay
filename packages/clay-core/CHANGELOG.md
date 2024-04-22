@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug when changing column visibility when there is only one column visible and disabled ([bdfcd86](https://github.com/liferay/clay/commit/bdfcd867f50b73efae4569ce3b86c18eedbcc83a))
+
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
 ### Features

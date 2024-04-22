@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
+
+### Features
+
+-   **@clayui/empty-state:** LPD-21741 Add new SVG empty, success and search state ([0afe5f5](https://github.com/liferay/clay/commit/0afe5f553cd309d9125fd259ec61b27c0c9b0770))
+-   **@clayui/empty-state:** LPD-21741 add SVG file and change paths ([e6de535](https://github.com/liferay/clay/commit/e6de5358c45ebca7585154f7972b88e00fb9d307))
+-   **@clayui/empty-state:** LPD-21741 adjusting the props name to state and removes redundancy ([d2e32a5](https://github.com/liferay/clay/commit/d2e32a5b6bc17f5e5fddc3b77e1dcfc710f863dd))
+-   **@clayui/empty-state:** LPD-21741 change snapshot and update jest config ([51a31c4](https://github.com/liferay/clay/commit/51a31c4663acf6d308dc5e1afe2ffa27d4360ce1))
+-   **@clayui/empty-state:** LPD-21741 Change style to include reduce motion ([da98cfa](https://github.com/liferay/clay/commit/da98cfac3a9fe54f2eaa300744af57121aeb85cb))
+-   **@clayui/empty-state:** LPD-21741 Cleanup and adjustment of success SVG ([7455b58](https://github.com/liferay/clay/commit/7455b58a60bbdf3c954096076c3e622e11c3ed24))
+-   **@clayui/empty-state:** LPD-21741 Cleanup and update stories ([a0a3f31](https://github.com/liferay/clay/commit/a0a3f31dcfdbdacdfc00c785cca15042a0ef7eb1))
+-   **@clayui/empty-state:** LPD-21741 Move style inline, keep animations styles on Clay CSS ([d84528f](https://github.com/liferay/clay/commit/d84528f51032129b41eaf18efb68f944bea63e13))
+-   **@clayui/empty-state:** LPD-21741 remove changes to the empty state component ([bb132b3](https://github.com/liferay/clay/commit/bb132b346f86f19a0cb32995cef80936bf46bf81))
+-   **@clayui/empty-state:** LPD-21741 SF ([19b1a0d](https://github.com/liferay/clay/commit/19b1a0de2e8be08ae5d0abd2596b33469784c2cc))
+-   **@clayui/empty-state:** LPD-21741 Update docs ([593bdd5](https://github.com/liferay/clay/commit/593bdd51a3b48f5c6bf891c33e79cba75b35e726))
+-   **@clayui/empty-state:** LPD-21741 Update docs and add SVG on pathname match ([22c541b](https://github.com/liferay/clay/commit/22c541b09bf58c97b998ad982acfffd17f667f88))
+-   **@clayui/empty-state:** LPD-21741 update snapshot ([40ebe8b](https://github.com/liferay/clay/commit/40ebe8b3bf67ab24da8cc90d936a7f19307f3dad))
+-   **@clayui/empty-state:** LPD-21741 Update snapshots ([e03f190](https://github.com/liferay/clay/commit/e03f19010830aba90f50ad372f464433635c3720))
+-   **@clayui/empty-state:** LPD-21741 Update tests, snapshots and size limit ([2d84b51](https://github.com/liferay/clay/commit/2d84b51f97c7f8187b8c88da96eccd2da7a50fba))
+
 # [3.111.0](https://github.com/liferay/clay/compare/v3.110.0...v3.111.0) (2024-02-15)
 
 **Note:** Version bump only for package @clayui/empty-state

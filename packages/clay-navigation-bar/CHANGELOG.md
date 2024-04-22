@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
+
+### Bug Fixes
+
+-   **@clayui/navigation-bar:** fixes navbar size bug when resizing ([42bd090](https://github.com/liferay/clay/commit/42bd090b354173234b270ce49bfba7b58431f9c5))
+
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
 **Note:** Version bump only for package @clayui/navigation-bar

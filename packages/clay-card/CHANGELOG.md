@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
+
+### Features
+
+-   **@clayui/card:** LPD-1261 Add ClayRadio component and its radioProps ([1960c4d](https://github.com/liferay/clay/commit/1960c4df8ac544cd7c14ee64bf57139d74f8bd73))
+-   **@clayui/card:** LPD-1261 Add new radio card case in CardWithInfo stories ([188a70c](https://github.com/liferay/clay/commit/188a70c3ce54e91d50e13bbac4086fd57342397d))
+-   **@clayui/card:** LPD-1261 Add radio selectable example in CardWithHorizontal story ([8e9b395](https://github.com/liferay/clay/commit/8e9b39539a278c0c8916020d035c402a419f46e9))
+-   **@clayui/card:** LPD-1261 Add radio selectable example in CardWithUser story ([74a7a59](https://github.com/liferay/clay/commit/74a7a59b737a05de3ca50a07e2e6c382009c0a6e))
+-   **@clayui/card:** LPD-1261 Add radio selectable to CardWithHorizontal ([5231664](https://github.com/liferay/clay/commit/52316644cba723d8d28e9809ccc3dfafa804f507))
+-   **@clayui/card:** LPD-1261 Add radio selectable to CardWithUser ([8326f49](https://github.com/liferay/clay/commit/8326f49c7d7246444cc66ff0f840c2e866c15fa7))
+-   **@clayui/card:** LPD-1261 Add selectableType prop to choose between checkbox and radio ([ca499f8](https://github.com/liferay/clay/commit/ca499f8524b1772b094cf7933b19261813bbdee2))
+-   **@clayui/card:** LPD-1261 Add tests ([843ace6](https://github.com/liferay/clay/commit/843ace6c63d7ef8bd2ef80247e5cb0c8d2803384))
+-   **@clayui/card:** LPD-1261 Add tests for ClayCardWithHorizontal ([9cd1e0a](https://github.com/liferay/clay/commit/9cd1e0a38e6722463d3d92d7486bfe105bc46e08))
+-   **@clayui/card:** LPD-1261 Add tests for ClayCardWithUser ([04cc498](https://github.com/liferay/clay/commit/04cc4982bfd17b78cdbe5cf0c8638e4f4bb9b350))
+-   **@clayui/card:** LPD-1261 Add truncate prop to CardWithHorizontal ([6f88188](https://github.com/liferay/clay/commit/6f88188e1065bfe5eb3081487728162249c49267))
+-   **@clayui/card:** LPD-1261 Add truncate prop to CardWithUser ([43793e3](https://github.com/liferay/clay/commit/43793e368b4288e03a2bcc7c87e70fe1e6bae724))
+-   **@clayui/card:** LPD-1261 Add truncate props to determine if the card text is truncated or not ([a786599](https://github.com/liferay/clay/commit/a786599314b3a59953e01592e6c1da21e5dfd604))
+
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
 **Note:** Version bump only for package @clayui/card

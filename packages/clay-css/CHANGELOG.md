@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
+
+
+### Bug Fixes
+
+* **@clayui/css:** fix padding in modal footer ([feb9724](https://github.com/liferay/clay/commit/feb972477fa7a09854aa28c38762913a41d824e2))
+* **@clayui/css:** LPD-21741 c-prefers-reduced-motion should disable animation when on a parent element ([2034f5b](https://github.com/liferay/clay/commit/2034f5b06aedcde9a80485abf8691804e28afe5c))
+* **@clayui/css:** LPD-22263 remove use of fade-in function ([160152d](https://github.com/liferay/clay/commit/160152d3233b429af4543923f5680b1dbdcd483e))
+* **@clayui/css:** update footer spacing in the modal ([72a2217](https://github.com/liferay/clay/commit/72a22175bd1a25af30a7a382a66255d60d8e13e5))
+* **@clayui/css:** update footer spacing in the modal on cadmin ([35231c4](https://github.com/liferay/clay/commit/35231c499ed3d4de113ab185d7534bbe9caef5b2))
+
+
+### Features
+
+* **@clayui/css:** LPD-21829 Adds content-shield, scim, shield-asterisk svgs ([cc51841](https://github.com/liferay/clay/commit/cc518419ced71f4d3a31dadf076ae282f9d4c6ec))
+* **@clayui/empty-state:** LPD-21741 Add new SVG empty, success and search state ([0afe5f5](https://github.com/liferay/clay/commit/0afe5f553cd309d9125fd259ec61b27c0c9b0770))
+* **@clayui/empty-state:** LPD-21741 Add reduced motion SVGs ([9e4798f](https://github.com/liferay/clay/commit/9e4798f744edbb86f0634a8e7cae4f93c483791f))
+* **@clayui/empty-state:** LPD-21741 add SVG file and change paths ([e6de535](https://github.com/liferay/clay/commit/e6de5358c45ebca7585154f7972b88e00fb9d307))
+* **@clayui/empty-state:** LPD-21741 Cleanup and update stories ([a0a3f31](https://github.com/liferay/clay/commit/a0a3f31dcfdbdacdfc00c785cca15042a0ef7eb1))
+* **@clayui/empty-state:** LPD-21741 Move style inline, keep animations styles on Clay CSS ([d84528f](https://github.com/liferay/clay/commit/d84528f51032129b41eaf18efb68f944bea63e13))
+* **@clayui/empty-state:** LPD-21741 remove changes to the empty state component ([bb132b3](https://github.com/liferay/clay/commit/bb132b346f86f19a0cb32995cef80936bf46bf81))
+
+
+
+
+
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
 

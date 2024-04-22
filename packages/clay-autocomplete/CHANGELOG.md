@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
+
+### Bug Fixes
+
+-   **clay-autocomplete:** Remove autocomplete async filter paginated example ([6366d29](https://github.com/liferay/clay/commit/6366d296e17be2f8aac6474951cc1728a208eca5))
+
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
 **Note:** Version bump only for package @clayui/autocomplete
