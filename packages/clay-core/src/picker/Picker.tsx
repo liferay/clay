@@ -127,6 +127,11 @@ export type Props<T> = {
 	selectedKey?: React.Key;
 
 	/**
+	 * Flag to define the panel width behavior.
+	 */
+	width?: 'flexible' | 'fixed';
+
+	/**
 	 * Sets the className for the React.Portal Menu element.
 	 */
 	UNSAFE_menuClassName?: string;
@@ -163,6 +168,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 	onSelectionChange,
 	placeholder = 'Select an option',
 	selectedKey: externalSelectedKey,
+	width = 'fixed',
 	...otherProps
 }: Props<T>) {
 	const [active, setActive] = useControlledState({
@@ -529,6 +535,15 @@ export function Picker<T extends Record<string, any> | string | number>({
 						)}
 						ref={menuRef}
 						role="presentation"
+						style={
+							width === 'flexible' &&
+							(triggerRef.current?.clientWidth || 0) > 160
+								? {
+										maxWidth: 'none',
+										width: `${triggerRef.current?.clientWidth}px`,
+								  }
+								: {}
+						}
 					>
 						{UNSAFE_behavior === 'secondary' &&
 							(isArrowVisible === 'top' ||

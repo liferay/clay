@@ -943,6 +943,7 @@ $dropdown-menu-palette: () !default;
 $dropdown-menu-palette: map-deep-merge(
 	(
 		'.dropdown-menu-select.dropdown-menu': (
+			min-width: 160px,
 			dropdown-header: (
 				padding-bottom: 0.375rem,
 				padding-left: 1.75rem,
