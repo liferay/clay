@@ -43,9 +43,16 @@
 	flex-wrap: wrap;
 }
 
+.btn-group-spaced {
+	@include clay-css($cadmin-btn-group-spaced);
+}
+
 .btn-group-nowrap {
 	flex-wrap: nowrap;
 }
+
+// @deprecated as of v3.113.0 replace `.btn-group` with `.btn-group-spaced`
+// instead
 
 .btn-group-item {
 	align-items: center;

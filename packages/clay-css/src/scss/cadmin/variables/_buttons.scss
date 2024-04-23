@@ -382,6 +382,18 @@ $cadmin-btn-unstyled: map-deep-merge(
 
 $cadmin-btn-group-item-margin-right: 16px !default;
 
+$cadmin-btn-group-spaced: () !default;
+$cadmin-btn-group-spaced: map-merge(
+	(
+		align-items: center,
+		column-gap: $cadmin-btn-group-item-margin-right,
+		display: inline-flex,
+		flex-wrap: wrap,
+		position: relative,
+	),
+	$cadmin-btn-group-spaced
+);
+
 // Button Toolbar
 
 $cadmin-btn-toolbar-spacer-x: 8px !default; // 8px

@@ -374,6 +374,18 @@ $btn-unstyled: map-deep-merge(
 
 $btn-group-item-margin-right: map-get($spacers, 2) !default;
 
+$btn-group-spaced: () !default;
+$btn-group-spaced: map-merge(
+	(
+		align-items: center,
+		column-gap: $btn-group-item-margin-right,
+		display: inline-flex,
+		flex-wrap: wrap,
+		position: relative,
+	),
+	$btn-group-spaced
+);
+
 // Button Toolbar
 
 $btn-toolbar-spacer-x: 0.5rem !default; // 8px
