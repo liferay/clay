@@ -52,29 +52,21 @@ exports[`Button renders ClayButtonWithIcon without monospaced 1`] = `
 exports[`Button renders a ButtonGroup with spaced 1`] = `
 <div>
   <div
-    class="btn-group"
+    class="btn-group-spaced"
     role="group"
   >
-    <div
-      class="btn-group-item"
+    <button
+      class="btn btn-primary"
+      type="button"
     >
-      <button
-        class="btn btn-primary"
-        type="button"
-      >
-        Button
-      </button>
-    </div>
-    <div
-      class="btn-group-item"
+      Button
+    </button>
+    <button
+      class="btn btn-primary"
+      type="button"
     >
-      <button
-        class="btn btn-primary"
-        type="button"
-      >
-        Button
-      </button>
-    </div>
+      Button
+    </button>
   </div>
 </div>
 `;
