@@ -225,3 +225,45 @@ export const CustomGroup = () => {
 		</div>
 	);
 };
+
+export const Width = ({width}: {width: 'fixed' | 'flexible'}) => {
+	const pickerId = useId();
+	const labelId = useId();
+
+	return (
+		<div style={{width: '250px'}}>
+			<Form.Group>
+				<label htmlFor={pickerId} id={labelId}>
+					Choose a fruit
+				</label>
+				<Picker aria-labelledby={labelId} id={pickerId} width={width}>
+					<Option key="apple">Apple</Option>
+					<Option disabled key="banana">
+						Banana
+					</Option>
+					<Option key="mangos">Mangos</Option>
+					<Option key="blueberry">Blueberry</Option>
+					<Option key="boysenberry">Boysenberry</Option>
+					<Option key="cherry">Cherry</Option>
+					<Option key="cranberry">Cranberry</Option>
+					<Option key="eggplant">Eggplant</Option>
+					<Option key="fig">Fig</Option>
+					<Option key="grape">Grape</Option>
+					<Option key="guava">Guava</Option>
+					<Option key="huckleberry">Huckleberry</Option>
+				</Picker>
+			</Form.Group>
+		</div>
+	);
+};
+
+Width.args = {
+	width: 'flexible',
+};
+
+Width.argTypes = {
+	width: {
+		control: {type: 'select'},
+		options: ['fixed', 'flexible'],
+	},
+};
