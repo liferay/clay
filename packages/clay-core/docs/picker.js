@@ -13,6 +13,52 @@ import Layout from '@clayui/layout';
 import {useId} from '@clayui/shared';
 import React from 'react';
 
+const PickerWidthExample = () => {
+	const imports = `import {Option, Picker} from '@clayui/core';
+import Form from '@clayui/form';
+import React from 'react';`;
+
+	const code = `const CustomWidth = () => {
+	return (
+		<div style={{width: '240px'}}>
+			<Form.Group>
+				<label htmlFor="picker" id="picker-label">
+					Choose a fruit
+				</label>
+				<Picker
+					width="flexible"
+					aria-labelledby="picker-label"
+					id="picker"
+					items={[
+						'Apple',
+						'Banana',
+						'Mangos',
+						'Blueberry',
+						'Boysenberry',
+						'Cherry',
+						'Cranberry',
+						'Eggplant',
+						'Fig',
+						'Grape',
+						'Guava',
+						'Huckleberry',
+					]}
+					placeholder="Select a fruit"
+				>
+					{(item) => <Option key={item}>{item}</Option>}
+				</Picker>
+			</Form.Group>
+		</div>
+	);
+};
+
+render(<CustomWidth />)`;
+
+	return (
+		<Editor code={code} imports={imports} scope={{Form, Option, Picker}} />
+	);
+};
+
 const exampleImports = `import {Option, Picker} from '@clayui/core';
 import Form from '@clayui/form';
 import React from 'react';`;
@@ -262,6 +308,7 @@ const PickerGroupExample = () => {
 	);
 };
 export {
+	PickerWidthExample,
 	PickerExample,
 	PickerGroupExample,
 	PickerTriggerExample,
