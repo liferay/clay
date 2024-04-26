@@ -20,30 +20,27 @@ import React from 'react';`;
 
 	const code = `const CustomWidth = () => {
 	return (
-		<div style={{width: '240px'}}>
+		<div style={{width: '100px'}}>
 			<Form.Group>
 				<label htmlFor="picker" id="picker-label">
-					Choose a fruit
+					Year
 				</label>
 				<Picker
-					width="flexible"
+					width={85}
 					aria-labelledby="picker-label"
 					id="picker"
 					items={[
-						'Apple',
-						'Banana',
-						'Mangos',
-						'Blueberry',
-						'Boysenberry',
-						'Cherry',
-						'Cranberry',
-						'Eggplant',
-						'Fig',
-						'Grape',
-						'Guava',
-						'Huckleberry',
+						'2020',
+						'2021',
+						'2022',
+						'2023',
+						'2024',
+						'2025',
+						'2026',
+						'2027',
+						'2028',
 					]}
-					placeholder="Select a fruit"
+					placeholder="Year"
 				>
 					{(item) => <Option key={item}>{item}</Option>}
 				</Picker>
