@@ -127,6 +127,11 @@ export type Props<T> = {
 	selectedKey?: React.Key;
 
 	/**
+	 * Sets the fixed width of the panel.
+	 */
+	width?: number;
+
+	/**
 	 * Sets the className for the React.Portal Menu element.
 	 */
 	UNSAFE_menuClassName?: string;
@@ -163,6 +168,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 	onSelectionChange,
 	placeholder = 'Select an option',
 	selectedKey: externalSelectedKey,
+	width,
 	...otherProps
 }: Props<T>) {
 	const [active, setActive] = useControlledState({
@@ -521,14 +527,25 @@ export function Picker<T extends Record<string, any> | string | number>({
 				>
 					<div
 						className={classNames(
-							'dropdown-menu dropdown-menu-indicator-start dropdown-menu-select show',
+							'dropdown-menu dropdown-menu-indicator-start dropdown-menu-select dropdown-menu-width-shrink show',
 							{
-								'dropdown-menu-height-lg dropdown-menu-width-shrink':
+								'dropdown-menu-height-lg':
 									UNSAFE_behavior === 'secondary',
 							}
 						)}
 						ref={menuRef}
 						role="presentation"
+						style={{
+							maxWidth: 'none',
+							width: `${
+								typeof width === 'number'
+									? width
+									: (triggerRef.current?.clientWidth || 0) >
+									  160
+									? triggerRef.current?.clientWidth
+									: 160
+							}px`,
+						}}
 					>
 						{UNSAFE_behavior === 'secondary' &&
 							(isArrowVisible === 'top' ||

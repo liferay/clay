@@ -109,6 +109,7 @@ const ClayDatePickerDateNavigation = ({
 							)
 						}
 						selectedKey={String(currentMonth.getFullYear())}
+						width={85}
 					>
 						{(item) => (
 							<Option key={item.value}>

@@ -13,6 +13,49 @@ import Layout from '@clayui/layout';
 import {useId} from '@clayui/shared';
 import React from 'react';
 
+const PickerWidthExample = () => {
+	const imports = `import {Option, Picker} from '@clayui/core';
+import Form from '@clayui/form';
+import React from 'react';`;
+
+	const code = `const CustomWidth = () => {
+	return (
+		<div style={{width: '100px'}}>
+			<Form.Group>
+				<label htmlFor="picker" id="picker-label">
+					Year
+				</label>
+				<Picker
+					width={85}
+					aria-labelledby="picker-label"
+					id="picker"
+					items={[
+						'2020',
+						'2021',
+						'2022',
+						'2023',
+						'2024',
+						'2025',
+						'2026',
+						'2027',
+						'2028',
+					]}
+					placeholder="Year"
+				>
+					{(item) => <Option key={item}>{item}</Option>}
+				</Picker>
+			</Form.Group>
+		</div>
+	);
+};
+
+render(<CustomWidth />)`;
+
+	return (
+		<Editor code={code} imports={imports} scope={{Form, Option, Picker}} />
+	);
+};
+
 const exampleImports = `import {Option, Picker} from '@clayui/core';
 import Form from '@clayui/form';
 import React from 'react';`;
@@ -262,6 +305,7 @@ const PickerGroupExample = () => {
 	);
 };
 export {
+	PickerWidthExample,
 	PickerExample,
 	PickerGroupExample,
 	PickerTriggerExample,
