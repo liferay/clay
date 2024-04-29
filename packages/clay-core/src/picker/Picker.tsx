@@ -127,7 +127,7 @@ export type Props<T> = {
 	selectedKey?: React.Key;
 
 	/**
-	 * Flag to define the panel width.
+	 * Sets the fixed width of the panel.
 	 */
 	width?: number;
 
