@@ -11,6 +11,7 @@ export type Sorting = {
 };
 
 type Context = {
+	alwaysVisibleColumns: Set<React.Key>;
 	columnsVisibility: boolean;
 	expandedKeys: Set<React.Key>;
 	headCellsCount: number;

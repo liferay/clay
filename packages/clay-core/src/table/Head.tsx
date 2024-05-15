@@ -53,6 +53,7 @@ function HeadInner<T extends Record<string, any>>(
 	ref: React.Ref<HTMLTableSectionElement>
 ) {
 	const {
+		alwaysVisibleColumns,
 		columnsVisibility,
 		messages,
 		onHeadCellsChange,
@@ -97,7 +98,12 @@ function HeadInner<T extends Record<string, any>>(
 											'columnsVisibilityHeader'
 										]!,
 									},
-									...collection.getItems(),
+									...collection
+										.getItems()
+										.filter(
+											(item) =>
+												!alwaysVisibleColumns.has(item)
+										),
 								]}
 								style={{
 									maxWidth: '210px',
