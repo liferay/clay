@@ -153,10 +153,16 @@ function RowInner<T extends Record<string, any>>(
 
 	const ref = useForwardRef(outRef);
 
-	const visibleKeys = useMemo(
-		() => Array.from(visibleColumns.values()),
-		[visibleColumns]
-	);
+	const visibleKeys = useMemo(() => {
+		const count = React.Children.count(children);
+
+		return [
+			...Array.from(visibleColumns.values()),
+			...(columnsVisibility && count > visibleColumns.size
+				? [count - 1]
+				: []),
+		];
+	}, [columnsVisibility, visibleColumns]);
 
 	const collection = useCollection({
 		children,
