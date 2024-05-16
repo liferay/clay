@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.115.0](https://github.com/liferay/clay/compare/v3.114.0...v3.115.0) (2024-05-16)
+
+### Features
+
+-   **@clayui/button:** LPD-23703 Use btn-group-spaced to space buttons instead of btn-group-item ([bf1275e](https://github.com/liferay/clay/commit/bf1275e5d132b03e7b52970c5328e4a3ee4b3541))
+
 # [3.113.0](https://github.com/liferay/clay/compare/v3.112.0...v3.113.0) (2024-03-28)
 
 **Note:** Version bump only for package @clayui/button

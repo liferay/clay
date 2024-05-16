@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.115.0](https://github.com/liferay/clay/compare/v3.114.0...v3.115.0) (2024-05-16)
+
+**Note:** Version bump only for package @clayui/autocomplete
+
 # [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
 
 ### Bug Fixes

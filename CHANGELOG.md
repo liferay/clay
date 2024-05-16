@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.115.0](https://github.com/liferay/clay/compare/v3.114.0...v3.115.0) (2024-05-16)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug when not rendering the action cell ([5f6eec5](https://github.com/liferay/clay/commit/5f6eec58859d9153a19a92cddcee0d8cc5a2c9fa))
+
+### Features
+
+-   **@clayui/button:** LPD-23703 Use btn-group-spaced to space buttons instead of btn-group-item ([bf1275e](https://github.com/liferay/clay/commit/bf1275e5d132b03e7b52970c5328e4a3ee4b3541))
+-   **@clayui/core:** add new API to omit a column to columns visibility ([2e8d0f6](https://github.com/liferay/clay/commit/2e8d0f60d886251063b1833a38c4c72c8e07f051))
+-   **@clayui/core:** adds new width API for the picker ([c37d3d4](https://github.com/liferay/clay/commit/c37d3d466c5b9ec35e109ffc43f14be04b7a96dc))
+-   **@clayui/core:** changes the API behavior to only define the width ([17681fb](https://github.com/liferay/clay/commit/17681fb2ab356237a10cff11a0cc5ba82eb6720a))
+-   **@clayui/css:** LPD-23703 Adds btn-group-spaced for a separated button group ([bfbd088](https://github.com/liferay/clay/commit/bfbd08844de6d83c8f0d5e27771d80735a9e8104))
+
 # [3.114.0](https://github.com/liferay/clay/compare/v3.113.0...v3.114.0) (2024-04-22)
 
 ### Bug Fixes
