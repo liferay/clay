@@ -19,6 +19,12 @@ import type {AnnouncerAPI} from '../live-announcer';
 
 export type Props = {
 	/**
+	 * Defines the columns that are always visible and will be ignored by the
+	 * visible columns functionality.
+	 */
+	alwaysVisibleColumns?: Set<React.Key>;
+
+	/**
 	 * Flag to enable column visibility control.
 	 */
 	columnsVisibility?: boolean;
@@ -109,6 +115,7 @@ const defaultSet = new Set<React.Key>();
 export const Table = React.forwardRef<HTMLDivElement, Props>(
 	function TableInner(
 		{
+			alwaysVisibleColumns = new Set(),
 			columnsVisibility = true,
 			children,
 			className,
@@ -203,6 +210,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 				>
 					<TableContext.Provider
 						value={{
+							alwaysVisibleColumns,
 							columnsVisibility,
 							expandedKeys,
 							headCellsCount,
