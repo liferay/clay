@@ -5,6 +5,7 @@
 
 import ClayButton from '@clayui/button';
 const emptyImage = require('@clayui/css/src/images/images/empty_state.svg');
+const emptyImageReducedMotion = require('@clayui/css/src/images/images/empty_state_reduced_motion.svg');
 const searchImage = require('@clayui/css/src/images/images/search_state.svg');
 const successImage = require('@clayui/css/src/images/images/success_state.svg');
 import React from 'react';
@@ -60,4 +61,26 @@ export const WithImage = () => (
 		imgSrc={successImage}
 		title="Hurray"
 	/>
+);
+
+export const WithReducedMotion = () => (
+	<div className="c-prefers-reduced-motion">
+		<ClayEmptyState
+			description="You don't have more notifications to review"
+			imgSrc={successImage}
+			imgSrcReducedMotion={emptyImageReducedMotion}
+			title="Hurray"
+		/>
+	</div>
+);
+
+export const WithReducedMotionNull = () => (
+	<div className="c-prefers-reduced-motion">
+		<ClayEmptyState
+			description="You don't have more notifications to review"
+			imgSrc={successImage}
+			imgSrcReducedMotion={null}
+			title="Hurray"
+		/>
+	</div>
 );

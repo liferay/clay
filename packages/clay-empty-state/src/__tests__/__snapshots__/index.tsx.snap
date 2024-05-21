@@ -45,7 +45,12 @@ exports[`ClayEmptyState renders with a reduced motion image provided 1`] = `
       >
         <img
           alt=""
-          class="aspect-ratio-item aspect-ratio-item-fluid"
+          class="aspect-ratio-item aspect-ratio-item-fluid d-none-c-prefers-reduced-motion"
+          src="https://via.placeholder.com/256"
+        />
+        <img
+          alt=""
+          class="aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion"
           src="https://via.placeholder.com/256"
         />
       </div>
@@ -197,7 +202,12 @@ exports[`ClayEmptyState renders with different reduced motion image props 1`] = 
       >
         <img
           alt="hello world"
-          class="aspect-ratio-item aspect-ratio-item-fluid"
+          class="aspect-ratio-item aspect-ratio-item-fluid d-none-c-prefers-reduced-motion"
+          src="https://via.placeholder.com/256"
+        />
+        <img
+          alt="hello world?"
+          class="aspect-ratio-item aspect-ratio-item-fluid d-block-c-prefers-reduced-motion"
           src="https://via.placeholder.com/256"
         />
       </div>

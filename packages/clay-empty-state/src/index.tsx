@@ -58,6 +58,7 @@ const ClayEmptyState = ({
 }: IProps) => {
 	const hasImg = imgSrc || imgProps;
 	const [error, setError] = useState(false);
+
 	const reducedMotionImage = useMemo(() => {
 		if (error) {
 			console.warn(
@@ -66,13 +67,16 @@ const ClayEmptyState = ({
 
 			return null;
 		}
-		if (imgSrc && imgSrcReducedMotion !== null) {
+		if (imgSrcReducedMotion) {
+			return imgSrcReducedMotion;
+		} else if (imgSrc) {
 			const url = new URL(
 				imgSrc,
 				imgSrc?.match(/http:\/\/|https:\/\//)
 					? undefined
 					: `https://${location.host}`
 			);
+
 			const hasImgExtension = url.pathname.match(
 				/.(gif|png|jpeg|jpg|svg)/
 			);
