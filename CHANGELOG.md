@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.115.1](https://github.com/liferay/clay/compare/v3.115.0...v3.115.1) (2024-05-21)
+
+### Bug Fixes
+
+-   **@clayui/core:** Fixes bug when rendering the last columns visibility cell for dynamic rendering ([8621482](https://github.com/liferay/clay/commit/862148209afc3952c27ab8018c4e3cb598ebfe0e))
+-   **@clayui/empty-state:** LPD-2278 Add flexbox property to prevent image to overlap text ([cb3285e](https://github.com/liferay/clay/commit/cb3285e22f26058114a29b3ed5a09ae3b0c1097e))
+
 # [3.115.0](https://github.com/liferay/clay/compare/v3.114.0...v3.115.0) (2024-05-16)
 
 ### Bug Fixes
