@@ -6,6 +6,7 @@ $cadmin-c-empty-state-animation: map-deep-merge(
 		align-items: center,
 		display: flex,
 		flex-direction: column,
+		flex-shrink: 0,
 		margin: 80px auto 24px,
 		max-width: 340px,
 		text-align: center,
