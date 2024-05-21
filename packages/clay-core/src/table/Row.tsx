@@ -154,7 +154,9 @@ function RowInner<T extends Record<string, any>>(
 	const ref = useForwardRef(outRef);
 
 	const visibleKeys = useMemo(() => {
-		const count = React.Children.count(children);
+		// This is a speculation/inference about the size of items to decide
+		// to render a last cell as an action.
+		const count = items ? items.length : React.Children.count(children);
 
 		return [
 			...Array.from(visibleColumns.values()),
@@ -162,7 +164,7 @@ function RowInner<T extends Record<string, any>>(
 				? [count - 1]
 				: []),
 		];
-	}, [columnsVisibility, visibleColumns]);
+	}, [columnsVisibility, items?.length, visibleColumns]);
 
 	const collection = useCollection({
 		children,
