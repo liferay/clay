@@ -216,18 +216,25 @@ $cadmin-treeview-light: map-deep-merge(
 				),
 			),
 			hover: (
-				border: 1px solid $cadmin-secondary-l0,
+				box-shadow: inset 0 0 0 1px $cadmin-secondary-l0,
+			),
+			focus: (
+				box-shadow: $cadmin-component-focus-inset-box-shadow,
 			),
 			active: (
 				background-color: $cadmin-primary-l3,
-				border: 1px solid $cadmin-primary,
+				box-shadow: inset 0 0 0 1px $cadmin-primary,
 				color: $cadmin-dark-l2,
+				focus: (
+					box-shadow: $cadmin-component-focus-inset-box-shadow,
+				),
 			),
 			active-class: (
+				background-color: $cadmin-primary-l3,
+				box-shadow: inset 0 0 0 1px $cadmin-primary,
+				color: $cadmin-dark-l2,
 				focus: (
-					background-color: $cadmin-primary-l3,
-					border: 1px solid $cadmin-primary,
-					color: $cadmin-dark-l2,
+					box-shadow: $cadmin-component-focus-inset-box-shadow,
 				),
 			),
 			disabled: (
@@ -235,8 +242,9 @@ $cadmin-treeview-light: map-deep-merge(
 				color: rgba($cadmin-gray-600, 0.5),
 			),
 			show: (
-				background-color: null,
-				color: null,
+				background-color: c-unset,
+				box-shadow: c-unset,
+				color: c-unset,
 			),
 		),
 	),
@@ -258,18 +266,25 @@ $cadmin-treeview-dark: map-deep-merge(
 				),
 			),
 			hover: (
-				border: 1px solid $cadmin-secondary-l0,
+				box-shadow: inset 0 0 0 1px $cadmin-secondary-l0,
+			),
+			focus: (
+				box-shadow: $cadmin-component-focus-inset-box-shadow,
 			),
 			active: (
 				background-color: $cadmin-dark-l2,
-				border: 1px solid $cadmin-primary,
+				box-shadow: inset 0 0 0 1px $cadmin-primary,
 				color: $cadmin-primary-l3,
+				focus: (
+					box-shadow: $cadmin-component-focus-inset-box-shadow,
+				),
 			),
 			active-class: (
+				background-color: $cadmin-dark-l2,
+				box-shadow: inset 0 0 0 1px $cadmin-primary,
+				color: $cadmin-primary-l3,
 				focus: (
-					background-color: $cadmin-dark-l2,
-					border: 1px solid $cadmin-primary,
-					color: $cadmin-primary-l3,
+					box-shadow: $cadmin-component-focus-inset-box-shadow,
 				),
 			),
 			disabled: (
@@ -277,8 +292,9 @@ $cadmin-treeview-dark: map-deep-merge(
 				color: rgba($cadmin-secondary-l1, 0.5),
 			),
 			show: (
-				background-color: null,
-				color: null,
+				background-color: c-unset,
+				box-shadow: c-unset,
+				color: c-unset,
 			),
 		),
 		component-action: (

@@ -217,18 +217,25 @@ $treeview-light: map-deep-merge(
 				),
 			),
 			hover: (
-				border: 1px solid $secondary-l0,
+				box-shadow: inset 0 0 0 1px $secondary-l0,
+			),
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
 			),
 			active: (
 				background-color: $primary-l3,
-				border: 1px solid $primary,
+				box-shadow: inset 0 0 0 1px $primary,
 				color: $dark-l2,
+				focus: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
 			),
 			active-class: (
+				background-color: $primary-l3,
+				box-shadow: inset 0 0 0 1px $primary,
+				color: $dark-l2,
 				focus: (
-					background-color: $primary-l3,
-					border: 1px solid $primary,
-					color: $dark-l2,
+					box-shadow: $component-focus-inset-box-shadow,
 				),
 			),
 			disabled: (
@@ -236,8 +243,9 @@ $treeview-light: map-deep-merge(
 				color: rgba($gray-600, 0.5),
 			),
 			show: (
-				background-color: null,
-				color: null,
+				background-color: c-unset,
+				box-shadow: c-unset,
+				color: c-unset,
 			),
 		),
 	),
@@ -263,18 +271,25 @@ $treeview-dark: map-deep-merge(
 				),
 			),
 			hover: (
-				border: 1px solid $secondary-l0,
+				box-shadow: inset 0 0 0 1px $secondary-l0,
+			),
+			focus: (
+				box-shadow: $component-focus-inset-box-shadow,
 			),
 			active: (
 				background-color: $dark-l2,
-				border: 1px solid $primary,
+				box-shadow: inset 0 0 0 1px $primary,
 				color: $primary-l3,
+				focus: (
+					box-shadow: $component-focus-inset-box-shadow,
+				),
 			),
 			active-class: (
+				background-color: $dark-l2,
+				box-shadow: inset 0 0 0 1px $primary,
+				color: $primary-l3,
 				focus: (
-					background-color: $dark-l2,
-					border: 1px solid $primary,
-					color: $primary-l3,
+					box-shadow: $component-focus-inset-box-shadow,
 				),
 			),
 			disabled: (
@@ -282,8 +297,9 @@ $treeview-dark: map-deep-merge(
 				color: rgba($secondary-l1, 0.5),
 			),
 			show: (
-				background-color: null,
-				color: null,
+				background-color: c-unset,
+				box-shadow: c-unset,
+				color: c-unset,
 			),
 		),
 		component-action: (
