@@ -224,9 +224,11 @@ $cadmin-treeview-light: map-deep-merge(
 				color: $cadmin-dark-l2,
 			),
 			active-class: (
-				background-color: $cadmin-primary-l3,
-				border: 1px solid $cadmin-primary,
-				color: $cadmin-dark-l2,
+				focus: (
+					background-color: $cadmin-primary-l3,
+					border: 1px solid $cadmin-primary,
+					color: $cadmin-dark-l2,
+				),
 			),
 			disabled: (
 				background-color: transparent,
@@ -258,10 +260,17 @@ $cadmin-treeview-dark: map-deep-merge(
 			hover: (
 				border: 1px solid $cadmin-secondary-l0,
 			),
-			active-class: (
+			active: (
 				background-color: $cadmin-dark-l2,
 				border: 1px solid $cadmin-primary,
 				color: $cadmin-primary-l3,
+			),
+			active-class: (
+				focus: (
+					background-color: $cadmin-dark-l2,
+					border: 1px solid $cadmin-primary,
+					color: $cadmin-primary-l3,
+				),
 			),
 			disabled: (
 				background-color: transparent,

@@ -225,9 +225,11 @@ $treeview-light: map-deep-merge(
 				color: $dark-l2,
 			),
 			active-class: (
-				background-color: $primary-l3,
-				border: 1px solid $primary,
-				color: $dark-l2,
+				focus: (
+					background-color: $primary-l3,
+					border: 1px solid $primary,
+					color: $dark-l2,
+				),
 			),
 			disabled: (
 				background-color: transparent,
@@ -263,10 +265,17 @@ $treeview-dark: map-deep-merge(
 			hover: (
 				border: 1px solid $secondary-l0,
 			),
-			active-class: (
+			active: (
 				background-color: $dark-l2,
 				border: 1px solid $primary,
 				color: $primary-l3,
+			),
+			active-class: (
+				focus: (
+					background-color: $dark-l2,
+					border: 1px solid $primary,
+					color: $primary-l3,
+				),
 			),
 			disabled: (
 				background-color: transparent,
