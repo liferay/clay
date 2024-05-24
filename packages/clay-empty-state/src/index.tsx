@@ -136,11 +136,7 @@ const ClayEmptyState = ({
 			)}
 
 			<div className="c-empty-state-title">
-				<span className="text-truncate-inline">
-					<span className="text-truncate">
-						{title || defaultTile}
-					</span>
-				</span>
+				<span>{title || defaultTile}</span>
 			</div>
 			<div className="c-empty-state-text">{description}</div>
 			{children && <div className="c-empty-state-footer">{children}</div>}
