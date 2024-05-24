@@ -69,7 +69,7 @@ const ClayEmptyState = ({
 		}
 		if (imgSrcReducedMotion) {
 			return imgSrcReducedMotion;
-		} else if (imgSrc) {
+		} else if (imgSrc && imgSrcReducedMotion !== null) {
 			const url = new URL(
 				imgSrc,
 				imgSrc?.match(/http:\/\/|https:\/\//)
