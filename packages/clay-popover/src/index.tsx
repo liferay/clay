@@ -247,10 +247,18 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				}
 			};
 
+			const onBlur = (event: FocusEvent) => {
+				if (event.view === undefined) {
+					setShow(false);
+				}
+			};
+
 			window.addEventListener('keydown', handleKeyDown);
+			window.addEventListener('blur', onBlur);
 
 			return () => {
 				window.removeEventListener('keydown', handleKeyDown);
+				window.removeEventListener('blur', onBlur);
 			};
 		}, []);
 
