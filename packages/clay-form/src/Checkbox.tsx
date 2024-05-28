@@ -18,6 +18,11 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	containerProps?: React.HTMLAttributes<HTMLDivElement>;
 
 	/**
+	 * Props to disable checkbox.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Flag to indicate that checkbox is in an indeterminate state.
 	 */
 	indeterminate?: boolean;
@@ -45,10 +50,10 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 			children,
 			className,
 			containerProps = {},
+			disabled,
 			indeterminate = false,
 			inline,
 			label,
-			readOnly,
 			...otherProps
 		}: IProps,
 		ref
@@ -76,13 +81,12 @@ const ClayCheckbox = React.forwardRef<HTMLInputElement, IProps>(
 				<label>
 					<input
 						{...otherProps}
-						aria-disabled={readOnly}
 						checked={checked}
 						className={classNames(
 							'custom-control-input',
 							className
 						)}
-						readOnly={readOnly}
+						disabled={disabled}
 						ref={(r) => {
 							inputRef.current = r;
 							if (typeof ref === 'function') {
