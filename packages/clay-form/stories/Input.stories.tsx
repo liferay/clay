@@ -12,7 +12,7 @@ export default {
 	argTypes: {
 		sizing: {
 			control: {type: 'select'},
-			options: ['lg', 'sm'],
+			options: ['lg', 'regular', 'sm'],
 		},
 	},
 	title: 'Design System/Components/Input',
@@ -27,7 +27,7 @@ export const Default = (args: any) => (
 				id="basicInputText"
 				placeholder="Insert your name here"
 				readOnly={args.readOnly}
-				sizing={args.sizing}
+				sizing={args.sizing === 'regular' ? null : args.sizing}
 				type="text"
 			/>
 		</ClayForm.Group>
@@ -37,7 +37,7 @@ export const Default = (args: any) => (
 Default.args = {
 	disabled: false,
 	readOnly: false,
-	sizing: undefined,
+	sizing: 'regular',
 };
 
 export const InputFeedback = () => (
