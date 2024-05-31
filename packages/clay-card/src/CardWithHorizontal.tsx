@@ -46,7 +46,10 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Props to add to the radio element
 	 */
 
-	radioProps?: React.HTMLAttributes<HTMLInputElement> & {value: string};
+	radioProps?: React.HTMLAttributes<HTMLInputElement> & {
+		name: string;
+		value: string;
+	};
 
 	/**
 	 * Flag to indicate if card is selected
@@ -101,7 +104,7 @@ export const ClayCardWithHorizontal = ({
 	},
 	href,
 	onSelectChange,
-	radioProps = {value: ''},
+	radioProps = {name: '', value: ''},
 	selectableType,
 	selected = false,
 	spritemap,
