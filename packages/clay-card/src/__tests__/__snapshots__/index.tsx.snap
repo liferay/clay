@@ -1665,6 +1665,7 @@ exports[`ClayCardWithHorizontal renders with radio button 1`] = `
         <input
           class="custom-control-input"
           disabled=""
+          name="cards"
           role="radio"
           type="radio"
           value="radio1"
@@ -2917,6 +2918,7 @@ exports[`ClayCardWithInfo renders with radio button 1`] = `
         <label>
           <input
             class="custom-control-input"
+            name="cards"
             role="radio"
             type="radio"
             value="radio1"
@@ -3461,6 +3463,7 @@ exports[`ClayCardWithUser renders with radio button 1`] = `
           <label>
             <input
               class="custom-control-input"
+              name="cards"
               role="radio"
               type="radio"
               value="radio1"

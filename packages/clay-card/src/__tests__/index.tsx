@@ -718,7 +718,7 @@ describe('ClayCardWithUser', () => {
 				href="#"
 				name="Foo Bar"
 				onSelectChange={jest.fn()}
-				radioProps={{value: 'radio1'}}
+				radioProps={{name: 'cards', value: 'radio1'}}
 				selectableType="radio"
 				spritemap="/path/to/some/resource.svg"
 			/>
@@ -835,7 +835,7 @@ describe('ClayCardWithHorizontal', () => {
 				disabled
 				href="#"
 				onSelectChange={jest.fn()}
-				radioProps={{value: 'radio1'}}
+				radioProps={{name: 'cards', value: 'radio1'}}
 				selectableType="radio"
 				selected={false}
 				spritemap="/path/to/some/resource.svg"
@@ -1146,7 +1146,7 @@ describe('ClayCardWithInfo', () => {
 			<ClayCardWithInfo
 				href="#"
 				onSelectChange={jest.fn()}
-				radioProps={{value: 'radio1'}}
+				radioProps={{name: 'cards', value: 'radio1'}}
 				selectableType="radio"
 				selected={false}
 				spritemap="/path/to/some/resource.svg"
