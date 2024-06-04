@@ -32,7 +32,10 @@ export interface IProps extends React.BaseHTMLAttributes<HTMLDivElement> {
 	 * Props to add to the radio element
 	 */
 
-	radioProps?: React.HTMLAttributes<HTMLInputElement> & {value: string};
+	radioProps?: React.HTMLAttributes<HTMLInputElement> & {
+		name: string;
+		value: string;
+	};
 
 	/**
 	 * Description of the file
@@ -154,7 +157,7 @@ export const ClayCardWithInfo = ({
 	imgProps,
 	labels,
 	onSelectChange,
-	radioProps = {value: ''},
+	radioProps = {name: '', value: ''},
 	selectableType,
 	selected = false,
 	spritemap,

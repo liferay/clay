@@ -116,7 +116,7 @@ export const CardWithInfo = (args: any) => {
 								},
 							]}
 							onSelectChange={(value) => setRadioValue(value)}
-							radioProps={{value: 'radio1'}}
+							radioProps={{name: 'cards', value: 'radio1'}}
 							selectableType="radio"
 							selected={radioValue === 'radio1'}
 							stickerProps={null}
@@ -132,7 +132,7 @@ export const CardWithInfo = (args: any) => {
 								},
 							]}
 							onSelectChange={(value) => setRadioValue(value)}
-							radioProps={{value: 'radio2'}}
+							radioProps={{name: 'cards', value: 'radio2'}}
 							selectableType="radio"
 							selected={radioValue === 'radio2'}
 							stickerProps={null}
@@ -270,7 +270,7 @@ export const CardWithHorizontal = (args: any) => {
 							disabled={args.disabled}
 							href="#"
 							onSelectChange={setRadioValue}
-							radioProps={{value: 'radio1'}}
+							radioProps={{name: 'cards', value: 'radio1'}}
 							selectableType="radio"
 							selected={radioValue === 'radio1'}
 							title="Radio Selectable Folder 1"
@@ -292,7 +292,7 @@ export const CardWithHorizontal = (args: any) => {
 							disabled={args.disabled}
 							href="#"
 							onSelectChange={setRadioValue}
-							radioProps={{value: 'radio2'}}
+							radioProps={{name: 'cards', value: 'radio2'}}
 							selectableType="radio"
 							selected={radioValue === 'radio2'}
 							title="Radio Selectable Folder 2"
@@ -387,7 +387,7 @@ export const CardWithUser = (args: any) => {
 							disabled={args.disabled}
 							name="Abraham Kuyper I"
 							onSelectChange={setRadioValue}
-							radioProps={{value: 'radio1'}}
+							radioProps={{name: 'cards', value: 'radio1'}}
 							selectableType="radio"
 							selected={radioValue === 'radio1'}
 							stickerTitle="User Icon"
@@ -398,7 +398,7 @@ export const CardWithUser = (args: any) => {
 							disabled={args.disabled}
 							name="Abraham Kuyper II"
 							onSelectChange={setRadioValue}
-							radioProps={{value: 'radio2'}}
+							radioProps={{name: 'cards', value: 'radio2'}}
 							selectableType="radio"
 							selected={radioValue === 'radio2'}
 							stickerTitle="User Icon"
