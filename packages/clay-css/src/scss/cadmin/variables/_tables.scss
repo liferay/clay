@@ -185,7 +185,7 @@ $cadmin-table-title-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		color: $cadmin-gray-900,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
@@ -206,7 +206,7 @@ $cadmin-table-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		color: $cadmin-gray-900,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
@@ -228,7 +228,7 @@ $cadmin-table-action-link: map-deep-merge(
 		align-items: center,
 		border-radius: $cadmin-btn-border-radius,
 		color: $cadmin-gray-600,
-		display: inline-flex,
+		display: inline,
 		font-size: 16px,
 		height: 32px,
 		justify-content: center,
@@ -761,7 +761,7 @@ $cadmin-table-list-title-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		color: $cadmin-gray-900,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
@@ -782,7 +782,7 @@ $cadmin-table-list-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		color: $cadmin-gray-900,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
@@ -803,7 +803,7 @@ $cadmin-table-list-action-link: map-deep-merge(
 	(
 		align-items: center,
 		color: $cadmin-gray-600,
-		display: inline-flex,
+		display: inline,
 		font-size: 16px,
 		height: 32px,
 		justify-content: center,

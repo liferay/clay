@@ -55,7 +55,7 @@ $table-title-link: () !default;
 $table-title-link: map-deep-merge(
 	(
 		border-radius: 1px,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		focus: (
@@ -107,7 +107,7 @@ $table-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		color: $gray-900,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
@@ -186,7 +186,7 @@ $table-list-title-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		color: $gray-900,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
@@ -207,7 +207,7 @@ $table-list-link: map-deep-merge(
 	(
 		border-radius: 1px,
 		color: $gray-900,
-		display: inline-flex,
+		display: inline,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
 		hover: (
