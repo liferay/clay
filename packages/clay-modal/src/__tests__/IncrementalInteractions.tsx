@@ -166,7 +166,7 @@ describe('Modal -> IncrementalInteractions', () => {
 		expect(document.querySelector(modalElSelector)).toBeDefined();
 	});
 
-	it('close the modal when pressing ESC', () => {
+	it('close the modal when pressing ESC', async () => {
 		const {container} = render(<ModalWithState initialVisible />);
 
 		act(() => {
@@ -182,7 +182,7 @@ describe('Modal -> IncrementalInteractions', () => {
 		expect(backdropEl).toBeDefined();
 		expect(modalEl).toBeDefined();
 
-		fireEvent.keyUp(container, {key: 'Escape'});
+		fireEvent.keyDown(container, {key: 'Escape'});
 
 		expect(document.body.classList).not.toContain('modal-open');
 		expect(document.querySelector(backdropElSelector)).toBeNull();
