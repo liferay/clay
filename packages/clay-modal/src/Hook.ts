@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {FOCUSABLE_ELEMENTS, Keys} from '@clayui/shared';
-import React from 'react';
+import {FOCUSABLE_ELEMENTS, Keys, stack} from '@clayui/shared';
+import React, {useEffect} from 'react';
 
 /**
  * A hook that takes care of controlling click, keyup and keydown events
@@ -14,7 +14,9 @@ import React from 'react';
 const useUserInteractions = (
 	modalElementRef: React.MutableRefObject<any>,
 	modalBodyElementRef: React.MutableRefObject<any>,
-	onClick: () => void
+	onClick: () => void,
+	show: boolean,
+	content: boolean
 ) => {
 	const mouseEventTargetRef = React.useRef<EventTarget | null>(null);
 
@@ -32,6 +34,13 @@ const useUserInteractions = (
 	};
 
 	const handleKeydown = (event: KeyboardEvent) => {
+		if (
+			event.key === Keys.Esc &&
+			stack[stack.length - 1] === modalElementRef
+		) {
+			onClick();
+		}
+
 		if (event.key === Keys.Tab) {
 			if (
 				modalElementRef.current &&
@@ -58,12 +67,6 @@ const useUserInteractions = (
 					event.preventDefault();
 				}
 			}
-		}
-	};
-
-	const handleKeyup = (event: KeyboardEvent) => {
-		if (event.key === Keys.Esc) {
-			onClick();
 		}
 	};
 
@@ -97,19 +100,17 @@ const useUserInteractions = (
 	 * Just listen for keyup, keydown, and click when
 	 * changeAttachEvent is true.
 	 */
-	React.useEffect(() => {
+	useEffect(() => {
 		document.addEventListener('keydown', handleKeydown);
-		document.addEventListener('keyup', handleKeyup);
 		document.addEventListener('mousedown', handleDocumentMouseDown);
 		document.addEventListener('mouseup', handleDocumentMouseUp);
 
 		return () => {
 			document.removeEventListener('keydown', handleKeydown);
-			document.removeEventListener('keyup', handleKeyup);
 			document.removeEventListener('mousedown', handleDocumentMouseDown);
 			document.removeEventListener('mouseup', handleDocumentMouseUp);
 		};
-	}, []);
+	}, [show, content]);
 };
 
 export {useUserInteractions};
