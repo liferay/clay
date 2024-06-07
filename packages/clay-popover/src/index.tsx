@@ -9,6 +9,7 @@ import {
 	InternalDispatch,
 	doAlign,
 	observeRect,
+	stack,
 	useControlledState,
 } from '@clayui/shared';
 import classNames from 'classnames';
@@ -241,26 +242,49 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 		}, [closeOnClickOutside, trigger]);
 
 		useEffect(() => {
-			const handleKeyDown = (event: KeyboardEvent) => {
-				if (event.key === 'Escape') {
-					setShow(false);
-				}
-			};
-
-			const onBlur = (event: FocusEvent) => {
-				if (event.view === undefined) {
-					setShow(false);
-				}
-			};
-
-			window.addEventListener('keydown', handleKeyDown);
-			window.addEventListener('blur', onBlur);
+			if (internalShow) {
+				stack.push(popoverRef);
+			}
 
 			return () => {
-				window.removeEventListener('keydown', handleKeyDown);
-				window.removeEventListener('blur', onBlur);
+				const index = stack.indexOf(popoverRef);
+
+				if (index >= 0) {
+					stack.splice(index, 1);
+				}
 			};
-		}, []);
+		}, [internalShow, popoverRef]);
+
+		useEffect(() => {
+			const handleKeyDown = (event: KeyboardEvent) => {
+				if (
+					event.key === 'Escape' &&
+					stack[stack.length - 1] === popoverRef
+				) {
+					setShow(false);
+					triggerRef.current?.focus();
+				}
+			};
+
+			const onBlur = (event: any) => {
+				if (
+					popoverRef.current &&
+					!popoverRef.current.contains(event.relatedTarget)
+				) {
+					setShow(false);
+				}
+			};
+
+			if (internalShow) {
+				document.addEventListener('keydown', handleKeyDown);
+				window.addEventListener('blur', onBlur);
+
+				return () => {
+					document.removeEventListener('keydown', handleKeyDown);
+					window.removeEventListener('blur', onBlur);
+				};
+			}
+		}, [internalShow]);
 
 		let content = (
 			<div
