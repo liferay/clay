@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {ClayPortal, IPortalBaseProps} from '@clayui/shared';
+import {ClayPortal, IPortalBaseProps, stack} from '@clayui/shared';
 import {suppressOthers} from 'aria-hidden';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
@@ -105,7 +105,9 @@ const ClayModal = ({
 	useUserInteractions(
 		modalElementRef,
 		modalBodyElementRef,
-		() => !disableAutoClose && observer.dispatch(ObserverType.Close)
+		() => !disableAutoClose && observer.dispatch(ObserverType.Close),
+		show,
+		content
 	);
 
 	useEffect(() => {
@@ -126,7 +128,25 @@ const ClayModal = ({
 	}, []);
 
 	useEffect(() => {
-		if (modalElementRef.current && show) {
+		if (show && content) {
+			stack.push(modalElementRef);
+		}
+
+		return () => {
+			const index = stack.indexOf(modalElementRef);
+
+			if (index >= 0) {
+				stack.splice(index, 1);
+			}
+		};
+	}, [show, modalElementRef, content]);
+
+	useEffect(() => {
+		if (
+			modalElementRef.current &&
+			show &&
+			stack[stack.length - 1] === modalElementRef
+		) {
 			// Hide everything from ARIA except the Modal Body
 			return suppressOthers(modalElementRef.current);
 		}
