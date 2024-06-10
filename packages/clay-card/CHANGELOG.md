@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
+
+### Features
+
+-   **@clayui/card:** LPD-1261 Add name to group all radio type inputs ([71bee15](https://github.com/liferay/clay/commit/71bee153028969c857783346f2dbece96eafb544))
+-   **@clayui/card:** LPD-1261 Update stories adding name in radioProps ([b07d58a](https://github.com/liferay/clay/commit/b07d58aea871d437b9e15bf39e0edf707281fcbf))
+-   **@clayui/card:** LPD-1261 Update tests adding name in radioProps ([bd32f54](https://github.com/liferay/clay/commit/bd32f54255fdd14ed0c14738867d51608d95be14))
+
 ## [3.115.1](https://github.com/liferay/clay/compare/v3.115.0...v3.115.1) (2024-05-21)
 
 **Note:** Version bump only for package @clayui/card

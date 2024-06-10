@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
+
+### Features
+
+-   **@clayui/button:** add regular size ([af300c8](https://github.com/liferay/clay/commit/af300c85566f759d3b77aed7ca58baa0dcfcdc98))
+
 # [3.115.0](https://github.com/liferay/clay/compare/v3.114.0...v3.115.0) (2024-05-16)
 
 ### Features

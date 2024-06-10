@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
+
+### Bug Fixes
+
+-   **@clayui/table:** fixes bug when hiding all columns ([27d0aee](https://github.com/liferay/clay/commit/27d0aee7e048a5ce78d730bab3a8e0695757e6cc))
+
 ## [3.115.1](https://github.com/liferay/clay/compare/v3.115.0...v3.115.1) (2024-05-21)
 
 ### Bug Fixes

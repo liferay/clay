@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-27401 Refactor. Change display property to allow long words break into multiple lines ([3e0ed1d](https://github.com/liferay/clay/commit/3e0ed1df192e0c4b05950fcb958cbf7b8673f8f4))
+-   **@clayui/table:** fixes bug when hiding all columns ([27d0aee](https://github.com/liferay/clay/commit/27d0aee7e048a5ce78d730bab3a8e0695757e6cc))
+
+### Features
+
+-   **@clayui/button:** add regular size ([af300c8](https://github.com/liferay/clay/commit/af300c85566f759d3b77aed7ca58baa0dcfcdc98))
+-   **@clayui/card:** LPD-1261 Add name to group all radio type inputs ([71bee15](https://github.com/liferay/clay/commit/71bee153028969c857783346f2dbece96eafb544))
+-   **@clayui/card:** LPD-1261 Update stories adding name in radioProps ([b07d58a](https://github.com/liferay/clay/commit/b07d58aea871d437b9e15bf39e0edf707281fcbf))
+-   **@clayui/card:** LPD-1261 Update tests adding name in radioProps ([bd32f54](https://github.com/liferay/clay/commit/bd32f54255fdd14ed0c14738867d51608d95be14))
+-   **@clayui/form:** add regular size to input ([53a62b1](https://github.com/liferay/clay/commit/53a62b1cc7ca7c80e471107ba67ddf3fdceca3ee))
+
 ## [3.115.2](https://github.com/liferay/clay/compare/v3.115.1...v3.115.2) (2024-05-24)
 
 ### Bug Fixes

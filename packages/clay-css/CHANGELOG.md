@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-27401 Refactor. Change display property to allow long words break into multiple lines ([3e0ed1d](https://github.com/liferay/clay/commit/3e0ed1df192e0c4b05950fcb958cbf7b8673f8f4))
+
+
+
+
+
 ## [3.115.2](https://github.com/liferay/clay/compare/v3.115.1...v3.115.2) (2024-05-24)
 
 
