@@ -169,7 +169,8 @@ function HeadInner<T extends Record<string, any>>(
 															visibleColumns.has(
 																item
 															) &&
-															visibleColumns.size ===
+															visibleColumns.size -
+																alwaysVisibleColumns.size ===
 																1
 														}
 														onChange={(event) => {
