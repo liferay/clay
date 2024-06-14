@@ -206,7 +206,11 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 			if (!disableScroll && popoverScrollerRef.current && internalShow) {
 				popoverScrollerRef.current.focus();
 			}
-		}, [disableScroll, popoverScrollerRef, internalShow]);
+
+			if (disableScroll && popoverRef.current && internalShow) {
+				popoverRef.current.focus();
+			}
+		}, [disableScroll, popoverRef, popoverScrollerRef, internalShow]);
 
 		useEffect(() => {
 			if (closeOnClickOutside && trigger) {
@@ -300,6 +304,7 @@ const ClayPopover = React.forwardRef<HTMLDivElement, IProps>(
 				)}
 				ref={ref as React.RefObject<HTMLDivElement>}
 				{...otherProps}
+				tabIndex={disableScroll ? -1 : undefined}
 			>
 				<div className="arrow" />
 
