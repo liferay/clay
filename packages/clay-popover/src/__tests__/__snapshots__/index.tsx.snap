@@ -72,6 +72,7 @@ exports[`ClayPopover renders without scroll 1`] = `
 <div>
   <div
     class="popover clay-popover-bottom"
+    tabindex="-1"
   >
     <div
       class="arrow"
