@@ -90,6 +90,71 @@
 	@if (type-of($map) == 'map') {
 		$enabled: setter(map-get($map, enabled), true);
 
+		$focus: setter(map-get($map, focus), ());
+		$focus: map-merge(
+			$focus,
+			(
+				background-color:
+					setter(
+						map-get($map, focus-bg),
+						map-get($focus, background-color)
+					),
+				border-color:
+					setter(
+						map-get($map, focus-border-color),
+						map-get($focus, border-color)
+					),
+				border-radius:
+					setter(
+						map-get($map, focus-border-radius),
+						map-get($focus, border-radius)
+					),
+				box-shadow:
+					setter(
+						map-get($map, focus-box-shadow),
+						map-get($focus, box-shadow)
+					),
+				color:
+					setter(map-get($map, focus-color), map-get($focus, color)),
+				opacity:
+					setter(
+						map-get($map, focus-opacity),
+						map-get($focus, opacity)
+					),
+				outline:
+					setter(
+						map-get($map, focus-outline),
+						map-get($focus, outline)
+					),
+				text-decoration:
+					setter(
+						map-get($map, focus-text-decoration),
+						map-get($focus, text-decoration)
+					),
+				z-index:
+					setter(
+						map-get($map, focus-z-index),
+						map-get($focus, z-index)
+					),
+			)
+		);
+
+		$_enable-focus-visible: if(
+			variable-exists(enable-focus-visible),
+			$enable-focus-visible,
+			if(
+				variable-exists(cadmin-enable-focus-visible),
+				$cadmin-enable-focus-visible,
+				true
+			)
+		);
+
+		$_c-prefers-focus-selector: if(
+			$_enable-focus-visible,
+			'.c-prefers-focus &:focus',
+			''
+		);
+
 		@if ($enabled) {
 			@include clay-css($map);
 
@@ -121,6 +186,38 @@
 
 			.close {
 				@include clay-close(map-get($map, close));
+			}
+
+			@at-root {
+				&.focus,
+				#{$focus-visible-selector},
+				#{$_c-prefers-focus-selector} {
+					@include clay-css($focus);
+
+					&::before {
+						@include clay-css(map-get($focus, before));
+					}
+
+					&::after {
+						@include clay-css(map-get($focus, after));
+					}
+
+					.inline-item {
+						@include clay-css(map-get($focus, inline-item));
+					}
+
+					.inline-item-before {
+						@include clay-css(map-get($focus, inline-item-before));
+					}
+
+					.inline-item-middle {
+						@include clay-css(map-get($focus, inline-item-middle));
+					}
+
+					.inline-item-after {
+						@include clay-css(map-get($focus, inline-item-after));
+					}
+				}
 			}
 		}
 	}
