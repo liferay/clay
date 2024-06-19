@@ -80,6 +80,10 @@ $popover: map-deep-merge(
 		word-spacing: normal,
 		word-wrap: break-word,
 		z-index: $zindex-popover,
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 		arrow: (
 			display: block,
 			height: $popover-arrow-height,

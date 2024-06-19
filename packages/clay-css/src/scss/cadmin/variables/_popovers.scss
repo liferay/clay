@@ -80,6 +80,10 @@ $cadmin-popover: map-deep-merge(
 		word-spacing: normal,
 		word-wrap: break-word,
 		z-index: $cadmin-zindex-popover,
+		focus: (
+			box-shadow: $cadmin-component-focus-box-shadow,
+			outline: 0,
+		),
 		arrow: (
 			display: block,
 			height: $cadmin-popover-arrow-height,
