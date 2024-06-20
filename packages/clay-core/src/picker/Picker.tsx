@@ -127,9 +127,9 @@ export type Props<T> = {
 	selectedKey?: React.Key;
 
 	/**
-	 * Sets the fixed width of the panel.
+	 * Sets the width of the panel.
 	 */
-	width?: number;
+	width?: number | string;
 
 	/**
 	 * Sets the className for the React.Portal Menu element.
@@ -382,6 +382,20 @@ export function Picker<T extends Record<string, any> | string | number>({
 		);
 	}
 
+	const getComponentWidth = () => {
+		if (typeof width === 'string' && width === 'auto') {
+			return width;
+		}
+
+		if (typeof width === 'number' && width > 160) {
+			return `${width}px`;
+		}
+
+		const clientWidth = triggerRef?.current?.clientWidth || 0;
+
+		return clientWidth > 160 ? `${clientWidth}px` : '160px';
+	};
+
 	return (
 		<>
 			<LiveAnnouncer ref={announcerAPI} />
@@ -537,14 +551,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 						role="presentation"
 						style={{
 							maxWidth: 'none',
-							width: `${
-								typeof width === 'number'
-									? width
-									: (triggerRef.current?.clientWidth || 0) >
-									  160
-									? triggerRef.current?.clientWidth
-									: 160
-							}px`,
+							width: getComponentWidth(),
 						}}
 					>
 						{UNSAFE_behavior === 'secondary' &&
