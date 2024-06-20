@@ -303,6 +303,27 @@ export const Width = () => {
 					</Picker>
 				</Form.Group>
 			</div>
+
+			<div style={{width: '100px'}}>
+				<Form.Group>
+					<label htmlFor={pickerId} id={labelId}>
+						Long Option Year
+					</label>
+					<Picker
+						aria-labelledby={labelId}
+						id={pickerId}
+						placeholder="Year"
+					>
+						<Option key="2020">
+							2020 was really a looooooooong year
+						</Option>
+						<Option key="2021">2021</Option>
+						<Option key="2022">2022</Option>
+						<Option key="2023">2023</Option>
+						<Option key="2024">2024</Option>
+					</Picker>
+				</Form.Group>
+			</div>
 		</>
 	);
 };
