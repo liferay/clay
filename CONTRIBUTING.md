@@ -232,6 +232,8 @@ The automated release is done through Github Actions, the action must be manuall
 
 > Sets the encoded version via input is optional. Just define if necessary.
 
+When all tests pass, create a release note in the [Github interface](https://github.com/liferay/clay/releases) of the generated version containing the changelog that is automatically generated in CHANGELOG.md.
+
 ### Manual release
 
 To publish a new version for all packages that have updated, follow these steps:
@@ -387,17 +389,28 @@ git diff --stat yarn.lock
 # you may need to update snapshots for various modules
 cd {PORTAL_ROOT}/modules
 ../gradlew packageRunTest
-
-# Once all tests have passed, send a pull request!
-#
-# 1. Send pull request to https://github.com/liferay-frontend/liferay-portal
-# 2. Copy the generated changelog and use that in your pull request description.
-# 3. Link your pull request to the LPS ticket in the current Jira Epic.
-#    - To find this, use the LPS from the Github milestone name and then look at
-#     the linked issues. The LPS is typically called "Update Clay Dependencies"
-
-# Lastly, share the release information in our public Slack channel!
 ```
+
+Once all tests have ✅ passed, send a pull request!
+
+1. Send pull request to https://github.com/liferay-platform-experience/liferay-portal
+2. Copy the **generated changelog** and use that in your pull request description.
+    - The PR title and commit message can be: "LPD-XXXXXX Update packages `@clayui/*` to v{CLAY_VERSION}"
+3. Link your pull request to the LPD ticket in the current Jira Epic.
+    - To find this, the LPD is typically called "Update Clay Dependencies".
+4. Run E2E testing.
+    - `ci:test:relevant`
+    - `ci:test:clay`
+        - If relevant is not passed, it is good to check that the important tests are passing. It may happen that we have flaky tests now that poshi tests are not being given much priority and we no longer have QA checking.
+
+Lastly, share the release information in our public Slack channel!
+
+1. Create a thread in the channel #t-dxp-platform-experience
+    - The title usually has a pattern `[:clay: Clay Release {MONTH DAY} - In progress]`
+2. Add a message to the thread placing the links:
+    - Link to the LPD ticket that is related to updating Clay packages on liferay-portal.
+    - Link to epic ticket
+    - Link to the [release note](https://github.com/liferay/clay/releases) that was created manually using the Github interface
 
 ## Testing local changes in liferay-portal
 
