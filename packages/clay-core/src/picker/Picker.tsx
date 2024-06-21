@@ -382,16 +382,7 @@ export function Picker<T extends Record<string, any> | string | number>({
 		);
 	}
 
-	const clientWidth = triggerRef.current?.clientWidth;
-	let menuMinWidth = '160px';
-	let menuWidth = 'auto';
-
-	if (typeof width === 'number') {
-		menuMinWidth = `${clientWidth || 0}px`;
-		menuWidth = `${width}px`;
-	} else if ((clientWidth || 0) > 160) {
-		menuMinWidth = `${clientWidth}px`;
-	}
+	const clientWidth = triggerRef.current?.clientWidth || 0;
 
 	return (
 		<>
@@ -548,8 +539,13 @@ export function Picker<T extends Record<string, any> | string | number>({
 						role="presentation"
 						style={{
 							maxWidth: 'none',
-							minWidth: menuMinWidth,
-							width: menuWidth,
+							minWidth: !width
+								? `${Math.max(160, clientWidth)}px`
+								: undefined,
+							width:
+								typeof width === 'number'
+									? `${Math.max(width, clientWidth)}px`
+									: undefined,
 						}}
 					>
 						{UNSAFE_behavior === 'secondary' &&
