@@ -129,7 +129,7 @@ export type Props<T> = {
 	/**
 	 * Sets the width of the panel.
 	 */
-	width?: number | string;
+	width?: number;
 
 	/**
 	 * Sets the className for the React.Portal Menu element.
@@ -382,19 +382,16 @@ export function Picker<T extends Record<string, any> | string | number>({
 		);
 	}
 
-	const getComponentWidth = () => {
-		if (typeof width === 'string' && width === 'auto') {
-			return width;
-		}
+	const clientWidth = triggerRef.current?.clientWidth;
+	let menuMinWidth = '160px';
+	let menuWidth = 'auto';
 
-		if (typeof width === 'number' && width > 160) {
-			return `${width}px`;
-		}
-
-		const clientWidth = triggerRef?.current?.clientWidth || 0;
-
-		return clientWidth > 160 ? `${clientWidth}px` : '160px';
-	};
+	if (typeof width === 'number') {
+		menuMinWidth = `${clientWidth || 0}px`;
+		menuWidth = `${width}px`;
+	} else if ((clientWidth || 0) > 160) {
+		menuMinWidth = `${clientWidth}px`;
+	}
 
 	return (
 		<>
@@ -551,7 +548,8 @@ export function Picker<T extends Record<string, any> | string | number>({
 						role="presentation"
 						style={{
 							maxWidth: 'none',
-							width: getComponentWidth(),
+							minWidth: menuMinWidth,
+							width: menuWidth,
 						}}
 					>
 						{UNSAFE_behavior === 'secondary' &&
