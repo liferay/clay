@@ -237,7 +237,11 @@ export const Width = () => {
 					<label htmlFor={pickerId} id={labelId}>
 						Choose a fruit
 					</label>
-					<Picker aria-labelledby={labelId} id={pickerId}>
+					<Picker
+						aria-labelledby={labelId}
+						defaultActive
+						id={pickerId}
+					>
 						<Option key="apple">Apple</Option>
 						<Option disabled key="banana">
 							Banana
@@ -263,6 +267,7 @@ export const Width = () => {
 					</label>
 					<Picker
 						aria-labelledby={labelId}
+						defaultActive
 						id={pickerId}
 						placeholder="Fruit"
 					>
@@ -291,6 +296,7 @@ export const Width = () => {
 					</label>
 					<Picker
 						aria-labelledby={labelId}
+						defaultActive
 						id={pickerId}
 						placeholder="Year"
 						width={85}
@@ -311,6 +317,7 @@ export const Width = () => {
 					</label>
 					<Picker
 						aria-labelledby={labelId}
+						defaultActive
 						id={pickerId}
 						placeholder="Year"
 					>
