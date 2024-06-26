@@ -231,8 +231,8 @@ export const Width = () => {
 	const labelId = useId();
 
 	return (
-		<>
-			<div style={{width: '250px'}}>
+		<div style={{display: 'flex'}}>
+			<div style={{marginRight: '50px', width: '250px'}}>
 				<Form.Group>
 					<label htmlFor={pickerId} id={labelId}>
 						Choose a fruit
@@ -260,7 +260,7 @@ export const Width = () => {
 				</Form.Group>
 			</div>
 
-			<div style={{width: '100px'}}>
+			<div style={{marginRight: '80px', width: '100px'}}>
 				<Form.Group>
 					<label htmlFor={pickerId} id={labelId}>
 						Choose a fruit
@@ -289,7 +289,7 @@ export const Width = () => {
 				</Form.Group>
 			</div>
 
-			<div style={{width: '100px'}}>
+			<div style={{marginRight: '50px', width: '100px'}}>
 				<Form.Group>
 					<label htmlFor={pickerId} id={labelId}>
 						Year
@@ -310,7 +310,7 @@ export const Width = () => {
 				</Form.Group>
 			</div>
 
-			<div style={{width: '100px'}}>
+			<div style={{marginRight: '50px', width: '100px'}}>
 				<Form.Group>
 					<label htmlFor={pickerId} id={labelId}>
 						Long Option Year
@@ -331,6 +331,6 @@ export const Width = () => {
 					</Picker>
 				</Form.Group>
 			</div>
-		</>
+		</div>
 	);
 };
