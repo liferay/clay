@@ -127,7 +127,7 @@ export type Props<T> = {
 	selectedKey?: React.Key;
 
 	/**
-	 * Sets the fixed width of the panel.
+	 * Sets the width of the panel.
 	 */
 	width?: number;
 
@@ -382,6 +382,8 @@ export function Picker<T extends Record<string, any> | string | number>({
 		);
 	}
 
+	const clientWidth = triggerRef.current?.clientWidth || 0;
+
 	return (
 		<>
 			<LiveAnnouncer ref={announcerAPI} />
@@ -537,14 +539,13 @@ export function Picker<T extends Record<string, any> | string | number>({
 						role="presentation"
 						style={{
 							maxWidth: 'none',
-							width: `${
+							minWidth: !width
+								? `${Math.max(160, clientWidth)}px`
+								: undefined,
+							width:
 								typeof width === 'number'
-									? width
-									: (triggerRef.current?.clientWidth || 0) >
-									  160
-									? triggerRef.current?.clientWidth
-									: 160
-							}px`,
+									? `${Math.max(width, clientWidth)}px`
+									: undefined,
 						}}
 					>
 						{UNSAFE_behavior === 'secondary' &&

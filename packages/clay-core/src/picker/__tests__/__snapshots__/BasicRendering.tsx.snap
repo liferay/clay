@@ -134,7 +134,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
     <div
       class="dropdown-menu dropdown-menu-indicator-start dropdown-menu-select dropdown-menu-width-shrink show"
       role="presentation"
-      style="max-width: none; width: 160px; left: -999px; top: -995px;"
+      style="max-width: none; min-width: 160px; left: -999px; top: -995px;"
     >
       <ul
         class="inline-scroller list-unstyled"

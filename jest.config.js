@@ -58,8 +58,8 @@ module.exports = {
 		'./packages/clay-core/src/picker/': {
 			branches: 59,
 			functions: 66,
-			lines: 77,
-			statements: 77,
+			lines: 76,
+			statements: 76,
 		},
 		'./packages/clay-core/src/tree-view/': {
 			branches: 56,

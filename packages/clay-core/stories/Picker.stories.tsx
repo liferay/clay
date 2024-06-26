@@ -231,13 +231,17 @@ export const Width = () => {
 	const labelId = useId();
 
 	return (
-		<>
-			<div style={{width: '250px'}}>
+		<div style={{display: 'flex'}}>
+			<div style={{marginRight: '50px', width: '250px'}}>
 				<Form.Group>
 					<label htmlFor={pickerId} id={labelId}>
 						Choose a fruit
 					</label>
-					<Picker aria-labelledby={labelId} id={pickerId}>
+					<Picker
+						aria-labelledby={labelId}
+						defaultActive
+						id={pickerId}
+					>
 						<Option key="apple">Apple</Option>
 						<Option disabled key="banana">
 							Banana
@@ -256,13 +260,14 @@ export const Width = () => {
 				</Form.Group>
 			</div>
 
-			<div style={{width: '100px'}}>
+			<div style={{marginRight: '80px', width: '100px'}}>
 				<Form.Group>
 					<label htmlFor={pickerId} id={labelId}>
 						Choose a fruit
 					</label>
 					<Picker
 						aria-labelledby={labelId}
+						defaultActive
 						id={pickerId}
 						placeholder="Fruit"
 					>
@@ -284,13 +289,14 @@ export const Width = () => {
 				</Form.Group>
 			</div>
 
-			<div style={{width: '100px'}}>
+			<div style={{marginRight: '50px', width: '100px'}}>
 				<Form.Group>
 					<label htmlFor={pickerId} id={labelId}>
 						Year
 					</label>
 					<Picker
 						aria-labelledby={labelId}
+						defaultActive
 						id={pickerId}
 						placeholder="Year"
 						width={85}
@@ -303,6 +309,28 @@ export const Width = () => {
 					</Picker>
 				</Form.Group>
 			</div>
-		</>
+
+			<div style={{marginRight: '50px', width: '100px'}}>
+				<Form.Group>
+					<label htmlFor={pickerId} id={labelId}>
+						Long Option Year
+					</label>
+					<Picker
+						aria-labelledby={labelId}
+						defaultActive
+						id={pickerId}
+						placeholder="Year"
+					>
+						<Option key="2020">
+							2020 was really a looooooooong year
+						</Option>
+						<Option key="2021">2021</Option>
+						<Option key="2022">2022</Option>
+						<Option key="2023">2023</Option>
+						<Option key="2024">2024</Option>
+					</Picker>
+				</Form.Group>
+			</div>
+		</div>
 	);
 };
