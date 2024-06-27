@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.116.1](https://github.com/liferay/clay/compare/v3.116.0...v3.116.1) (2024-06-27)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-15615 Add focus style on popover when disableScroll is enabled ([8fa8734](https://github.com/liferay/clay/commit/8fa87341a922d6e97358c5c04f11be501a0f0efe))
+* **@clayui/css:** LPD-15615 Popovers source format and add focus styles for cadmin ([60a2e07](https://github.com/liferay/clay/commit/60a2e074087a8980047b3e345d3c78e8e13b9f89))
+
+
+
+
+
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
 

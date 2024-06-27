@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.116.1](https://github.com/liferay/clay/compare/v3.116.0...v3.116.1) (2024-06-27)
+
+### Bug Fixes
+
+-   **@clayui/popover:** LPD-15615 Add focus on popover when disableScroll is enabled ([47bb642](https://github.com/liferay/clay/commit/47bb642449e9bd41c072359ef45bab53867642fe))
+-   **@clayui/popover:** LPD-15615 Update snapshot ([cd5ebda](https://github.com/liferay/clay/commit/cd5ebdaed1aa8386b606bb44e0384b790c6c907f))
+
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
 **Note:** Version bump only for package @clayui/popover

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.116.1](https://github.com/liferay/clay/compare/v3.116.0...v3.116.1) (2024-06-27)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-15615 Add focus style on popover when disableScroll is enabled ([8fa8734](https://github.com/liferay/clay/commit/8fa87341a922d6e97358c5c04f11be501a0f0efe))
+-   **@clayui/css:** LPD-15615 Popovers source format and add focus styles for cadmin ([60a2e07](https://github.com/liferay/clay/commit/60a2e074087a8980047b3e345d3c78e8e13b9f89))
+-   **@clayui/picker:** LPD-28522 Add min width and change function logic ([2f97b9b](https://github.com/liferay/clay/commit/2f97b9b7a56e688f015461a989fd287cee3110c2))
+-   **@clayui/picker:** LPD-28522 Add option to add auto width ([d8517dd](https://github.com/liferay/clay/commit/d8517dd5bc405bf78c84ed238dfc0c7352700a95))
+-   **@clayui/picker:** LPD-28522 Update picker stories and test config ([e11d87b](https://github.com/liferay/clay/commit/e11d87bc98247fe0fe40c2202313f2b25d17295d))
+-   **@clayui/picker:** LPD-28522 Update snapshot ([9985cc5](https://github.com/liferay/clay/commit/9985cc51209dde65faef5fc4e10bccbbd83dda54))
+-   **@clayui/popover:** LPD-15615 Add focus on popover when disableScroll is enabled ([47bb642](https://github.com/liferay/clay/commit/47bb642449e9bd41c072359ef45bab53867642fe))
+-   **@clayui/popover:** LPD-15615 Update snapshot ([cd5ebda](https://github.com/liferay/clay/commit/cd5ebdaed1aa8386b606bb44e0384b790c6c907f))
+
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
 ### Bug Fixes
