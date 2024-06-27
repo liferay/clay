@@ -116,5 +116,7 @@ jobs:
         run: yarn build
       - name: Types
         run: yarn buildTypes
+      - name: Git
+        run: git restore packages/clay-css/src/scss/_license-text.scss
       - name: Publish
         run: yarn lerna:publish
