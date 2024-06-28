@@ -79,12 +79,32 @@ type Props = {
 	 * Sets a text value if the component's content is not plain text.
 	 */
 	textValue?: string;
+
+	/**
+	 * @ignore
+	 */
+	UNSAFE_resizable?: boolean;
+
+	/**
+	 * @ignore
+	 */
+	UNSAFE_resizerClassName?: string;
+
+	/**
+	 * @ignore
+	 */
+	UNSAFE_resizerOnMouseDown?: (
+		event: React.MouseEvent<HTMLDivElement, MouseEvent>
+	) => void;
 } & React.ThHTMLAttributes<HTMLTableCellElement> &
 	React.TdHTMLAttributes<HTMLTableCellElement>;
 
 export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 	function CellInner(
 		{
+			UNSAFE_resizable,
+			UNSAFE_resizerClassName,
+			UNSAFE_resizerOnMouseDown,
 			align,
 			children,
 			className,
@@ -324,6 +344,13 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 					</Layout.ContentRow>
 				) : (
 					children
+				)}
+
+				{UNSAFE_resizable && (
+					<div
+						className={UNSAFE_resizerClassName}
+						onMouseDown={UNSAFE_resizerOnMouseDown}
+					/>
 				)}
 			</As>
 		);
