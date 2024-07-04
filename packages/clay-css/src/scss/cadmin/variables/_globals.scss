@@ -129,7 +129,7 @@ $cadmin-colors: map-merge(
 $cadmin-primary: #0b5fff !default;
 $cadmin-primary-d1: clay-darken($cadmin-primary, 5.1) !default;
 $cadmin-primary-d2: clay-darken($cadmin-primary, 10) !default;
-$cadmin-primary-l0: clay-lighten($cadmin-primary, 13.92) !default;
+$cadmin-primary-l0: clay-lighten($cadmin-primary, 14.9) !default;
 $cadmin-primary-l1: clay-lighten($cadmin-primary, 22.94) !default;
 $cadmin-primary-l2: clay-lighten($cadmin-primary, 32.94) !default;
 $cadmin-primary-l3: clay-lighten($cadmin-primary, 44.9) !default;
@@ -144,8 +144,8 @@ $cadmin-secondary-d2: clay-darken(
 	23.92
 ) !default;
 $cadmin-secondary-l0: clay-lighten(
-	clay-saturate(clay-adjust-hue($cadmin-secondary, 3), 0.03),
-	11.18
+	clay-saturate(clay-adjust-hue($cadmin-secondary, 32), 1.25),
+	15.29
 );
 $cadmin-secondary-l1: clay-lighten(
 	clay-saturate(clay-adjust-hue($cadmin-secondary, -3), 5.39),

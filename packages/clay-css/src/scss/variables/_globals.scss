@@ -112,7 +112,7 @@ $colors: map-merge(
 $primary: $blue !default;
 $primary-d1: clay-darken($primary, 7.5) !default;
 $primary-d2: clay-darken($primary, 10) !default;
-$primary-l0: clay-lighten($primary, 13.92) !default;
+$primary-l0: clay-lighten($primary, 17.06) !default;
 $primary-l1: clay-lighten($primary, 22.94) !default;
 $primary-l2: clay-lighten($primary, 32.94) !default;
 $primary-l3: clay-lighten($primary, 44.9) !default;
@@ -120,7 +120,7 @@ $primary-l3: clay-lighten($primary, 44.9) !default;
 $secondary: $gray-600 !default;
 $secondary-d1: clay-darken($secondary, 7.5) !default;
 $secondary-d2: clay-darken($secondary, 10) !default;
-$secondary-l0: clay-lighten($secondary, 11) !default;
+$secondary-l0: clay-lighten($secondary, 15.29) !default;
 $secondary-l1: clay-lighten($secondary, 22.94) !default;
 $secondary-l2: clay-lighten($secondary, 32.94) !default;
 $secondary-l3: clay-lighten($secondary, 44.9) !default;
