@@ -1215,7 +1215,7 @@ $nav-underline-link-highlight-left: 0 !default;
 $nav-underline-link-highlight-right: 0 !default;
 $nav-underline-link-highlight-top: null !default;
 
-$nav-underline-link-active-highlight: #528EFF !default;
+$nav-underline-link-active-highlight: #5791ff !default;
 $nav-underline-link-active-content: '' !default;
 $nav-underline-link-active-highlight-height: 0.125rem !default; // 2px
 
