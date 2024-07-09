@@ -45,6 +45,7 @@ exports[`ModalProvider -> IncrementalInteractions renders a modal when dispatchi
             <h1
               class="modal-title"
               id="clay-modal-label-9"
+              tabindex="-1"
             >
               Title
             </h1>

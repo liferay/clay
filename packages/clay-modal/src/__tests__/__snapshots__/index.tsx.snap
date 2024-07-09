@@ -29,6 +29,7 @@ exports[`ClayModal renders 1`] = `
             <h1
               class="modal-title"
               id="clay-modal-label-1"
+              tabindex="-1"
             >
               Foo
             </h1>
@@ -123,6 +124,7 @@ exports[`ClayModal renders Header w/ low-level API 1`] = `
                   <h1
                     class="modal-title"
                     id="clay-modal-label-3"
+                    tabindex="-1"
                   >
                     Modal Title
                   </h1>
@@ -293,6 +295,7 @@ exports[`ClayModal renders with Header 1`] = `
             <h1
               class="modal-title"
               id="clay-modal-label-2"
+              tabindex="-1"
             >
               Foo
             </h1>
