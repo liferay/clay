@@ -235,7 +235,13 @@
 // Modal Title
 
 .modal-title {
-	@include clay-map-to-css(map-get($cadmin-modal, modal-title));
+	$_modal-title: setter(map-get($cadmin-modal, modal-title), ());
+
+	@include clay-map-to-css($_modal-title);
+
+	&[tabindex='-1'] {
+		@include clay-css(map-get($_modal-title, '[tabindex="-1"]'));
+	}
 
 	@include clay-scale-component {
 		font-size: $cadmin-modal-title-font-size-mobile;

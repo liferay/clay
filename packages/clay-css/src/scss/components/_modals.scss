@@ -244,7 +244,13 @@
 // Modal Title
 
 .modal-title {
-	@include clay-css(map-get($modal, modal-title));
+	$_modal-title: setter(map-get($modal, modal-title), ());
+
+	@include clay-css($_modal-title);
+
+	&[tabindex='-1'] {
+		@include clay-css(map-get($_modal-title, '[tabindex="-1"]'));
+	}
 
 	@include clay-scale-component {
 		font-size: $modal-title-font-size-mobile;
