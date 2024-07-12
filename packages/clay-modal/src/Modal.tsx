@@ -117,7 +117,14 @@ const ClayModal = ({
 
 	useEffect(() => {
 		if (modalBodyElementRef.current && show && content) {
-			modalBodyElementRef.current.focus();
+			const focusedElement =
+				modalBodyElementRef.current.querySelector('h1');
+
+			if (focusedElement) {
+				focusedElement.focus();
+			} else {
+				modalBodyElementRef.current.focus();
+			}
 		}
 	}, [show, content]);
 

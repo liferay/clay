@@ -66,6 +66,7 @@ export const Title = ({
 	return (
 		<h1
 			className={classNames('modal-title', className)}
+			tabIndex={-1}
 			{...otherProps}
 			id={ariaLabelledby}
 		>
