@@ -14,6 +14,9 @@ mainTabURL: 'docs/components/button.html'
     -   [Sass API](#css-button-size-sass-api)
 -   [Active state](#css-active-state)
 -   [Disabled State](#css-disabled-state)
+-   [Group](#css-group)
+    -   [Split Button](#css-split-button)
+    -   [Button group](#css-button-group)
 -   [Icons](#css-icons)
     -   [Sass API](#css-button-monospaced-sass-api)
     -   [With text button](#css-with-text-button)
@@ -175,6 +178,92 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 ```html
 <button class="btn btn-primary" disabled="" type="button">Primary</button>
 <button class="btn btn-secondary" disabled="" type="button">Secondary</button>
+```
+
+## Group(#css-group)
+
+### Split Button(#css-split-button)
+
+Split buttons are used when you need to offer the user a quick main action along with secondary actions.
+
+<div class="sheet-example">
+	<div class="btn-group" role="group">
+		<button class="btn btn-primary" type="button">Primary</button>
+		<button aria-expanded="false" aria-haspopup="true" class="btn btn-primary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
+			<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</button>
+		<div class="dropdown-menu dropdown-menu-right">
+			<a class="dropdown-item" href="#1">Action</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#1">Scope</a>
+		</div>
+	</div>
+	<div class="btn-group" role="group">
+		<button class="btn btn-secondary" type="button">Secondary</button>
+		<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary btn-monospaced dropdown-toggle" data-toggle="dropdown" type="button">
+			<svg class="lexicon-icon lexicon-icon-caret-bottom" focusable="false" role="presentation">
+				<use href="/images/icons/icons.svg#caret-bottom" />
+			</svg>
+		</button>
+		<div class="dropdown-menu dropdown-menu-right">
+			<a class="dropdown-item" href="#1">Action</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#1">Scope</a>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="btn-group dropdown" role="group">
+	<button class="btn btn-primary" type="button">Primary</button>
+	<button
+		aria-expanded="false"
+		aria-haspopup="true"
+		class="btn btn-primary btn-monospaced dropdown-toggle"
+		data-toggle="dropdown"
+		type="button"
+	>
+		<svg
+			class="lexicon-icon lexicon-icon-caret-bottom"
+			focusable="false"
+			role="presentation"
+		>
+			<use href="/images/icons/icons.svg#caret-bottom" />
+		</svg>
+	</button>
+</div>
+```
+
+### Button group(#css-button-group)
+
+Button groups are used to switch between complementary views for example, but they must never be used for complementary actions, "Change and Cancel" actions, or "Save and Cancel" actions. In those cases, single buttons are the correct solution.
+
+<div class="sheet-example">
+	<div class="mb-2">
+		<div class="btn-group" role="group">
+			<button class="btn btn-secondary" type="button">Day</button>
+			<button class="active btn btn-secondary" type="button">Month</button>
+			<button class="btn btn-secondary" type="button">Year</button>
+		</div>
+	</div>
+	<div class="mb-2">
+		<div class="btn-group" role="group">
+			<button class="btn btn-secondary" type="button">Day</button>
+			<button class="active btn btn-secondary" type="button">Month</button>
+			<button class="btn btn-secondary" type="button">Year</button>
+			<button class="btn" disabled>Agenda</button>
+		</div>
+	</div>
+</div>
+
+```html
+<div class="btn-group" role="group">
+	<button class="btn btn-secondary" type="button">Day</button>
+	<button class="active btn btn-secondary" type="button">Month</button>
+	<button class="btn" type="button">Year</button>
+</div>
 ```
 
 ## Icons(#css-icons)
