@@ -236,6 +236,10 @@
 				}
 			}
 
+			.label-item-expand {
+				@include clay-css(map-get($map, label-item-expand));
+			}
+
 			.label-item-before {
 				@include clay-css($label-item-before);
 			}
@@ -689,6 +693,10 @@
 				.lexicon-icon {
 					@include clay-css($lexicon-icon);
 				}
+			}
+
+			.label-item-expand {
+				@include clay-css(map-get($map, label-item-expand));
 			}
 
 			.label-item-before {
