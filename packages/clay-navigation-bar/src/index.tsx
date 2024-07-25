@@ -7,7 +7,7 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import ClayLayout from '@clayui/layout';
 import {useProvider} from '@clayui/provider';
-import {setElementFullHeight} from '@clayui/shared';
+import {setElementFullHeight, sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
@@ -44,6 +44,15 @@ export interface IProps
 	inverted?: boolean;
 
 	/**
+	 * Defines aria-label messages to display for the screen reader.
+	 */
+	messages: {
+		close: 'Close';
+		open: 'Open';
+		trigger: '{0} Menu, Current Page: {1}';
+	};
+
+	/**
 	 * Path to the location of the spritemap resource.
 	 */
 	spritemap?: string;
@@ -64,6 +73,11 @@ function ClayNavigationBar({
 	fluidSize,
 	inverted = false,
 	itemAriaCurrent: ariaCurrent = true,
+	messages = {
+		close: 'Close',
+		open: 'Open',
+		trigger: '{0} Menu, Current Page: {1}',
+	},
 	spritemap,
 	triggerLabel,
 	...otherProps
@@ -104,6 +118,10 @@ function ClayNavigationBar({
 				<ClayLayout.ContainerFluid size={fluidSize}>
 					<ClayButton
 						aria-expanded={expanded}
+						aria-label={sub(messages.trigger, [
+							expanded ? messages.close : messages.open,
+							triggerLabel,
+						])}
 						className={classNames(
 							'navbar-toggler',
 							'navbar-toggler-link',

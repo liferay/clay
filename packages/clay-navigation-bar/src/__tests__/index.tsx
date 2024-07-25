@@ -21,6 +21,11 @@ describe('ClayNavigationBar', () => {
 		const {container} = render(
 			<ClayNavigationBar
 				inverted
+				messages={{
+					close: 'Close',
+					open: 'Open',
+					trigger: '{0} Menu, Current Page: {1}',
+				}}
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
@@ -47,6 +52,11 @@ describe('ClayNavigationBar', () => {
 		const {container} = render(
 			<ClayNavigationBar
 				inverted
+				messages={{
+					close: 'Close',
+					open: 'Open',
+					trigger: '{0} Menu, Current Page: {1}',
+				}}
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
@@ -67,6 +77,11 @@ describe('ClayNavigationBar', () => {
 		const {container, getByText} = render(
 			<ClayNavigationBar
 				inverted
+				messages={{
+					close: 'Close',
+					open: 'Open',
+					trigger: '{0} Menu, Current Page: {1}',
+				}}
 				spritemap={spritemap}
 				triggerLabel="Trigger Label"
 			>
@@ -103,6 +118,11 @@ describe('ClayNavigationBar', () => {
 		const {container, getByTestId} = render(
 			<ClayNavigationBar
 				inverted
+				messages={{
+					close: 'Close',
+					open: 'Open',
+					trigger: '{0} Menu, Current Page: {1}',
+				}}
 				spritemap={spritemap}
 				triggerLabel="Trigger Label"
 			>
@@ -149,6 +169,11 @@ describe('ClayNavigationBar', () => {
 		const {container} = render(
 			<ClayNavigationBar
 				inverted
+				messages={{
+					close: 'Close',
+					open: 'Open',
+					trigger: '{0} Menu, Current Page: {1}',
+				}}
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
@@ -179,6 +204,11 @@ describe('ClayNavigationBar', () => {
 		const {container} = render(
 			<ClayNavigationBar
 				inverted
+				messages={{
+					close: 'Close',
+					open: 'Open',
+					trigger: '{0} Menu, Current Page: {1}',
+				}}
 				spritemap={spritemap}
 				triggerLabel={label}
 			>
@@ -206,6 +236,11 @@ describe('ClayNavigationBar', () => {
 		const {container} = render(
 			<ClayNavigationBar
 				inverted
+				messages={{
+					close: 'Close',
+					open: 'Open',
+					trigger: '{0} Menu, Current Page: {1}',
+				}}
 				spritemap={spritemap}
 				triggerLabel={label}
 			>

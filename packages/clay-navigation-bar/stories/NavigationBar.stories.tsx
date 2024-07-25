@@ -21,6 +21,11 @@ export const NavigationBar = (args: any) => {
 		<ClayNavigationBar
 			fluidSize={args.fluidSize}
 			inverted={args.inverted}
+			messages={{
+				close: 'Close',
+				open: 'Open',
+				trigger: '{0} Menu, Current Page: {1}',
+			}}
 			triggerLabel={triggerName}
 		>
 			<ClayNavigationBar.Item active={args.active === 'Item 1'}>
