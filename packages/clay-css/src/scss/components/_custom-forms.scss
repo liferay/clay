@@ -144,14 +144,6 @@ label.custom-control-label {
 
 // Custom Control Indicator
 
-.custom-control-label::before {
-	@include clay-css(map-get($custom-control-label, before));
-}
-
-.custom-control-label::after {
-	@include clay-css(map-get($custom-control-label, after));
-}
-
 .custom-control-input {
 	@include clay-custom-control-input-variant($custom-control-input);
 }
