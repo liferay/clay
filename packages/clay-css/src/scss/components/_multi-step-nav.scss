@@ -121,7 +121,7 @@
 		@include clay-css($multi-step-item-error);
 
 		.multi-step-title {
-			@include clay-css(
+			@include clay-text-typography(
 				map-get($multi-step-item-error, multi-step-title)
 			);
 		}
@@ -158,7 +158,7 @@
 
 	&.disabled {
 		.multi-step-title {
-			color: $multi-step-title-disabled-color;
+			@include clay-text-typography($multi-step-title-disabled);
 		}
 
 		.multi-step-icon {
@@ -197,12 +197,7 @@
 }
 
 .multi-step-title {
-	color: $multi-step-title-color;
-	font-size: $multi-step-title-font-size;
-	font-weight: $multi-step-title-font-weight;
-	line-height: normal;
-	margin-bottom: $multi-step-title-margin-bottom;
-	word-wrap: break-word;
+	@include clay-text-typography($multi-step-title);
 }
 
 .multi-step-item-expand {

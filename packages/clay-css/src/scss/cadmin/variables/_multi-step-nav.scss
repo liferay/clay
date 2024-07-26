@@ -48,6 +48,19 @@ $cadmin-multi-step-title-font-weight: $cadmin-font-weight-semi-bold !default;
 $cadmin-multi-step-title-margin-bottom: 10px !default; // 10px
 $cadmin-multi-step-title-max-width: 100px !default;
 
+$cadmin-multi-step-title: () !default;
+$cadmin-multi-step-title: map-deep-merge(
+	(
+		color: $cadmin-multi-step-title-color,
+		font-size: $cadmin-multi-step-title-font-size,
+		font-weight: $cadmin-multi-step-title-font-weight,
+		line-height: normal,
+		margin-bottom: $cadmin-multi-step-title-margin-bottom,
+		word-wrap: break-word,
+	),
+	$cadmin-multi-step-title
+);
+
 $cadmin-multi-step-title-center: () !default;
 $cadmin-multi-step-title-center: map-deep-merge(
 	(
@@ -126,3 +139,11 @@ $cadmin-multi-step-icon-disabled-focus-box-shadow: none !default;
 $cadmin-multi-step-divider-disabled-bg: $cadmin-multi-step-icon-disabled-bg !default;
 $cadmin-multi-step-title-disabled-color: $cadmin-multi-step-icon-disabled-color !default;
 $cadmin-multi-step-indicator-label-disabled-color: $cadmin-multi-step-title-disabled-color !default;
+
+$cadmin-multi-step-title-disabled: () !default;
+$cadmin-multi-step-title-disabled: map-deep-merge(
+	(
+		color: $cadmin-multi-step-title-disabled-color,
+	),
+	$cadmin-multi-step-title-disabled
+);

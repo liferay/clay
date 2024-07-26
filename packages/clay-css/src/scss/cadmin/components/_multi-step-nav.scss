@@ -109,7 +109,7 @@
 		@include clay-css($cadmin-multi-step-item-error);
 
 		.multi-step-title {
-			@include clay-css(
+			@include clay-text-typography(
 				map-get($cadmin-multi-step-item-error, multi-step-title)
 			);
 		}
@@ -146,7 +146,7 @@
 
 	&.disabled {
 		.multi-step-title {
-			color: $cadmin-multi-step-title-disabled-color;
+			@include clay-text-typography($cadmin-multi-step-title-disabled);
 		}
 
 		.multi-step-icon {
@@ -183,12 +183,7 @@
 }
 
 .multi-step-title {
-	color: $cadmin-multi-step-title-color;
-	font-size: $cadmin-multi-step-title-font-size;
-	font-weight: $cadmin-multi-step-title-font-weight;
-	line-height: normal;
-	margin-bottom: $cadmin-multi-step-title-margin-bottom;
-	word-wrap: break-word;
+	@include clay-text-typography($cadmin-multi-step-title);
 }
 
 .multi-step-item-expand {
