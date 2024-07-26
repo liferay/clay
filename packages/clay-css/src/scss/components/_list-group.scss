@@ -246,10 +246,7 @@
 }
 
 .list-group-item-flex {
-	display: flex;
-	margin-bottom: -$list-group-border-width;
-	padding-left: $list-group-item-padding-x * 0.5;
-	padding-right: $list-group-item-padding-x * 0.5;
+	@include clay-css($list-group-item-flex);
 
 	&:last-child {
 		margin-bottom: 0;
@@ -264,9 +261,7 @@
 	}
 
 	.autofit-col {
-		justify-content: $list-group-item-flex-align-items;
-		padding-left: $list-group-item-padding-x * 0.5;
-		padding-right: $list-group-item-padding-x * 0.5;
+		@include clay-css(map-get($list-group-item-flex, autofit-col));
 
 		.custom-control:only-child {
 			margin-bottom: 0;
