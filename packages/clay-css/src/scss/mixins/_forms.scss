@@ -2272,10 +2272,10 @@
 
 		$hover-clay-range-thumb: setter(
 			map-deep-get($map, hover, clay-range-thumb),
-			()
+			setter(map-get($hover, clay-range-thumb), ())
 		);
 		$hover-clay-range-thumb: map-merge(
-			$hover-clay-range-thumb,
+			setter(map-get($hover, clay-range-thumb), ()),
 			(
 				background-color:
 					setter(
@@ -2334,10 +2334,10 @@
 
 		$disabled-clay-range-thumb: setter(
 			map-deep-get($map, disabled, clay-range-thumb),
-			()
+			setter(map-get($disabled, clay-range-thumb), ())
 		);
 		$disabled-clay-range-thumb: map-merge(
-			$disabled-clay-range-thumb,
+			setter(map-get($disabled, clay-range-thumb), ()),
 			(
 				background-color:
 					setter(
