@@ -79,6 +79,19 @@ $multi-step-title-font-weight: null !default;
 $multi-step-title-margin-bottom: 0.625rem !default; // 10px
 $multi-step-title-max-width: 100px !default;
 
+$multi-step-title: () !default;
+$multi-step-title: map-deep-merge(
+	(
+		color: $multi-step-title-color,
+		font-size: $multi-step-title-font-size,
+		font-weight: $multi-step-title-font-weight,
+		line-height: normal,
+		margin-bottom: $multi-step-title-margin-bottom,
+		word-wrap: break-word,
+	),
+	$multi-step-title
+);
+
 $multi-step-item-margin-bottom: 10px !default;
 $multi-step-item-width: 75px !default;
 $multi-step-item-fixed-width: 150px !default;
@@ -160,3 +173,11 @@ $multi-step-icon-disabled-focus-box-shadow: none !default;
 $multi-step-divider-disabled-bg: $multi-step-icon-disabled-bg !default;
 $multi-step-title-disabled-color: $multi-step-icon-disabled-color !default;
 $multi-step-indicator-label-disabled-color: $multi-step-title-disabled-color !default;
+
+$multi-step-title-disabled: () !default;
+$multi-step-title-disabled: map-deep-merge(
+	(
+		color: $multi-step-title-disabled-color,
+	),
+	$multi-step-title-disabled
+);
