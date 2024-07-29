@@ -18,21 +18,10 @@
 }
 
 .list-group {
-	@include border-radius($cadmin-list-group-border-radius);
-	@include box-shadow($cadmin-list-group-box-shadow);
-
-	color: $cadmin-list-group-color;
-	display: flex;
-	flex-direction: column;
-	font-size: $cadmin-list-group-font-size;
-	margin-bottom: $cadmin-list-group-margin-bottom;
-	margin-top: $cadmin-list-group-margin-top;
-	padding-left: 0;
+	@include clay-css($cadmin-list-group);
 
 	.list-group {
-		@if ($cadmin-list-group-box-shadow != null) {
-			@include box-shadow(none);
-		}
+		@include clay-css(map-get($cadmin-list-group, list-group));
 	}
 }
 

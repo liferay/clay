@@ -18,21 +18,10 @@
 }
 
 .list-group {
-	@include border-radius($list-group-border-radius);
-	@include box-shadow($list-group-box-shadow);
-
-	color: $list-group-color;
-	display: flex;
-	flex-direction: column;
-	font-size: $list-group-font-size;
-	margin-bottom: $list-group-margin-bottom;
-	margin-top: $list-group-margin-top;
-	padding-left: 0;
+	@include clay-css($list-group);
 
 	.list-group {
-		@if ($list-group-box-shadow != null) {
-			@include box-shadow(none);
-		}
+		@include clay-css(map-get($list-group, list-group));
 	}
 }
 

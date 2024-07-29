@@ -224,6 +224,25 @@ $cadmin-list-group-link-color: $cadmin-gray-900 !default;
 $cadmin-list-group-link-hover-color: $cadmin-list-group-link-color !default;
 $cadmin-list-group-link-active-color: $cadmin-list-group-link-color !default;
 
+$cadmin-list-group: () !default;
+$cadmin-list-group: map-deep-merge(
+	(
+		border-radius: clay-enable-rounded($cadmin-list-group-border-radius),
+		box-shadow: clay-enable-shadows($cadmin-list-group-box-shadow),
+		color: $cadmin-list-group-color,
+		display: flex,
+		flex-direction: column,
+		font-size: $cadmin-list-group-font-size,
+		margin-bottom: $cadmin-list-group-margin-bottom,
+		margin-top: $cadmin-list-group-margin-top,
+		padding-left: 0,
+		list-group: (
+			box-shadow: if($cadmin-list-group-box-shadow != null, none, null),
+		),
+	),
+	$cadmin-list-group
+);
+
 // List Group Notification
 
 $cadmin-list-group-notification-item-border-bottom-color: $cadmin-list-group-border-color !default;
