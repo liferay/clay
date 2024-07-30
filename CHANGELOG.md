@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.117.0](https://github.com/liferay/clay/compare/v3.116.1...v3.117.0) (2024-07-30)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-30959 Adds $list-group Sass map for more customization options ([2fa2486](https://github.com/liferay/clay/commit/2fa2486a70fb6ede60e00672de806aa8d4d85d7d))
+-   **@clayui/css:** LPD-32257 adds $list-group-item-flex map and use calc() to calculate padding ([8c9f197](https://github.com/liferay/clay/commit/8c9f19721ef1d9d0b3472b4f0e289b585f61cf7d))
+-   **@clayui/css:** LPD-32258 Convert .mutli-step-title to use Sass map ([ae502d4](https://github.com/liferay/clay/commit/ae502d49b3840deb167fe0a467a2f0ab3abcb294))
+-   **@clayui/css:** LPD-32259 Duplicate .custom-control-label selectors are being output ([5845ea2](https://github.com/liferay/clay/commit/5845ea2a64387ac055c023bdbd857c11b23b71a4))
+-   **@clayui/css:** LPD-32264 clay-range-input-variant hover state should work ([36f37a9](https://github.com/liferay/clay/commit/36f37a9da320ef8ba2969cb66412f259138f55ea))
+-   **@clayui/css:** Modal title shouldn't have focus outline when focused via js ([c563744](https://github.com/liferay/clay/commit/c5637440feeedd6c4037e2453c55fb6302d774af))
+-   **@clayui/modal:** move focus to h1 ([b777174](https://github.com/liferay/clay/commit/b777174cd61d29fe1ebce1d7de5bd25dfed62e69))
+
+### Features
+
+-   **@clayui/css:** LPD-30958 Add ability to style label-item-expand in clay-label-\* mixins ([f7efe45](https://github.com/liferay/clay/commit/f7efe45eb45059931c5641fb176872daf1c9f23a))
+
 ## [3.116.1](https://github.com/liferay/clay/compare/v3.116.0...v3.116.1) (2024-06-27)
 
 ### Bug Fixes
