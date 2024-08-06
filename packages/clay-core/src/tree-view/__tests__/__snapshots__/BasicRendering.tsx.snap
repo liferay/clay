@@ -422,6 +422,7 @@ exports[`TreeView basic rendering render with checkbox 1`] = `
                 >
                   <label>
                     <input
+                      aria-labelledby="clay-id-96"
                       class="custom-control-input"
                       type="checkbox"
                     />
@@ -524,6 +525,7 @@ exports[`TreeView basic rendering render with item active 1`] = `
                 >
                   <label>
                     <input
+                      aria-labelledby="clay-id-160"
                       class="custom-control-input"
                       type="checkbox"
                     />
@@ -626,6 +628,7 @@ exports[`TreeView basic rendering render with text 1`] = `
                 >
                   <label>
                     <input
+                      aria-labelledby="clay-id-106"
                       class="custom-control-input"
                       type="checkbox"
                     />
