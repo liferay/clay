@@ -780,6 +780,7 @@ export function TreeViewItemStack({
 					// @ts-ignore
 				} else if (child?.type.displayName === 'ClayCheckbox') {
 					content = React.cloneElement(child as React.ReactElement, {
+						'aria-labelledby': labelId,
 						checked: selection.selectedKeys.has(item.key),
 						disabled: loading || disabled,
 						indeterminate: selection.isIndeterminate(item.key),
