@@ -5,7 +5,6 @@
 
 import ClayDropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
-import ClayIcon from '@clayui/icon';
 import {
 	FocusScope,
 	InternalDispatch,
@@ -561,15 +560,7 @@ const ClayColorPicker = ({
 							/>
 
 							<ClayInput.GroupInsetItem before tag="label">
-								{isHex ? (
-									'#'
-								) : (
-									<ClayIcon
-										spritemap={spritemap}
-										style={{width: 10}}
-										symbol="color-picker"
-									/>
-								)}
+								{isHex ? '#' : ''}
 							</ClayInput.GroupInsetItem>
 						</ClayInput.GroupItem>
 					)}

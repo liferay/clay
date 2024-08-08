@@ -1685,17 +1685,7 @@ exports[`Rendering renders w/ var() 1`] = `
           />
           <label
             class="input-group-inset-item input-group-inset-item-before"
-          >
-            <svg
-              class="lexicon-icon lexicon-icon-color-picker"
-              role="presentation"
-              style="width: 10px;"
-            >
-              <use
-                href="/test/path#color-picker"
-              />
-            </svg>
-          </label>
+          />
         </div>
       </div>
     </div>
@@ -2449,17 +2439,7 @@ exports[`Rendering renders with a named color for the value 1`] = `
           />
           <label
             class="input-group-inset-item input-group-inset-item-before"
-          >
-            <svg
-              class="lexicon-icon lexicon-icon-color-picker"
-              role="presentation"
-              style="width: 10px;"
-            >
-              <use
-                href="/test/path#color-picker"
-              />
-            </svg>
-          </label>
+          />
         </div>
       </div>
     </div>
