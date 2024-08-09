@@ -95,6 +95,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 			id,
 			label = 'Check for translations',
 			locales,
+			menuElementAttrs,
 			onSelectedLocaleChange,
 			onTranslationsChange,
 			placeholder = 'Text to translate...',
@@ -146,6 +147,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 					<ClayInput.GroupItem shrink>
 						<ClayDropDown
 							active={active}
+							menuElementAttrs={menuElementAttrs}
 							onActiveChange={setActive}
 							trigger={
 								<ClayButton
