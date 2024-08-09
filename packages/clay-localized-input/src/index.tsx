@@ -9,6 +9,7 @@ import ClayForm, {ClayInput} from '@clayui/form';
 import ClayIcon from '@clayui/icon';
 import ClayLabel from '@clayui/label';
 import ClayLayout from '@clayui/layout';
+import {IPortalBaseProps} from '@clayui/shared';
 import React from 'react';
 
 interface IItem {
@@ -40,6 +41,11 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	 * Label of the input
 	 */
 	label?: React.ReactText;
+
+	/**
+	 * Prop to pass DOM element attributes to DropDown.Menu
+	 */
+	menuElementAttrs?: React.HTMLAttributes<HTMLDivElement> & IPortalBaseProps;
 
 	/**
 	 * Content to be prepended in case you want to localize a URL.
@@ -95,6 +101,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 			id,
 			label = 'Check for translations',
 			locales,
+			menuElementAttrs,
 			onSelectedLocaleChange,
 			onTranslationsChange,
 			placeholder = 'Text to translate...',
@@ -146,6 +153,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 					<ClayInput.GroupItem shrink>
 						<ClayDropDown
 							active={active}
+							menuElementAttrs={menuElementAttrs}
 							onActiveChange={setActive}
 							trigger={
 								<ClayButton
