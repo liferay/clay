@@ -23,6 +23,7 @@ export const Default = (args: any) => {
 			name="colorPicker1"
 			onValueChange={setColor}
 			showHex={args.showHex}
+			small={args.small}
 			title={args.title}
 			value={color}
 		/>
@@ -33,6 +34,7 @@ Default.args = {
 	disabled: false,
 	label: 'Default Colors',
 	showHex: true,
+	small: false,
 	title: 'Default',
 };
 
@@ -57,6 +59,7 @@ export const CustomColors = (args: any) => {
 			onChange={setColor}
 			onColorsChange={setCustoms}
 			showHex={args.showHex}
+			small={args.small}
 			title={args.title}
 			value={color}
 		/>
@@ -67,6 +70,7 @@ CustomColors.args = {
 	disabled: false,
 	label: 'Custom Colors',
 	showHex: true,
+	small: false,
 	title: 'Default',
 };
 
@@ -92,6 +96,7 @@ export const CustomAndPredefinedColors = (args: any) => {
 			onColorsChange={setCustoms}
 			showHex
 			showPredefinedColorsWithCustom
+			small={args.small}
 			title={args.title}
 			value={color}
 		/>
@@ -101,6 +106,7 @@ export const CustomAndPredefinedColors = (args: any) => {
 CustomAndPredefinedColors.args = {
 	disabled: false,
 	label: 'Custom Colors',
+	small: false,
 	title: 'Default',
 };
 
@@ -126,6 +132,7 @@ export const CustomPalette = (args: any) => {
 			onColorsChange={setCustoms}
 			showHex={args.showHex}
 			showPalette={false}
+			small={args.small}
 			title={args.title}
 			value={color}
 		/>
@@ -136,6 +143,7 @@ CustomPalette.args = {
 	disabled: false,
 	label: '',
 	showHex: true,
+	small: false,
 	title: 'Default',
 };
 
@@ -148,6 +156,7 @@ export const Native = (args: any) => {
 			label={args.label}
 			onValueChange={setColor}
 			showHex={args.showHex}
+			small={args.small}
 			title={args.title}
 			useNative
 			value={color}
@@ -159,29 +168,7 @@ Native.args = {
 	disabled: false,
 	label: 'Default Colors',
 	showHex: true,
-	title: 'Default',
-};
-
-export const Small = (args: any) => {
-	const [color, setColor] = React.useState('FFFFFF');
-
-	return (
-		<ClayColorPicker
-			disabled={args.disabled}
-			label={args.label}
-			onChange={setColor}
-			showHex={args.showHex}
-			small
-			title={args.title}
-			value={color}
-		/>
-	);
-};
-
-Small.args = {
-	disabled: false,
-	label: 'Default Colors',
-	showHex: true,
+	small: false,
 	title: 'Default',
 };
 
