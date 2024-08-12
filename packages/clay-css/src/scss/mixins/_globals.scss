@@ -373,7 +373,20 @@
 	@each $key, $value in $map {
 		@if not clay-is-map-unset($value) {
 			@if (type-of($value) == 'map') {
+				$pseudo-classes: 'active', 'disabled', 'first-child', 'focus',
+					'hover', 'last-child', 'visited';
+
+				$pseudo-elements: 'after', 'before';
+
 				$valid-prefixes: '#', '&', '.', '>', '@', '~', '+', '[';
+
+				@if (index($pseudo-classes, $key)) {
+					$key: str-insert($key, '&:', 1);
+				}
+
+				@if (index($pseudo-elements, $key)) {
+					$key: str-insert($key, '&::', 1);
+				}
 
 				$selector: if(
 					index($valid-prefixes, str-slice($key, 1, 1)),
