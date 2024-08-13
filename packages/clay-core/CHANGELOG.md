@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.118.0](https://github.com/liferay/clay/compare/v3.117.0...v3.118.0) (2024-08-13)
+
+### Bug Fixes
+
+-   **@clayui/tree-view:** LPD-1277 Add aria-labelledby to correlate treeview label with checkbox ([dfd826a](https://github.com/liferay/clay/commit/dfd826a02fb7f0c16d54ed99ecda4a55ef684447))
+-   **@clayui/tree-view:** LPD-1277 Update snapshots ([d368dce](https://github.com/liferay/clay/commit/d368dce9cab6e5cb45410df4d48816dad1dccdca))
+
 # [3.117.0](https://github.com/liferay/clay/compare/v3.116.1...v3.117.0) (2024-07-30)
 
 **Note:** Version bump only for package @clayui/core

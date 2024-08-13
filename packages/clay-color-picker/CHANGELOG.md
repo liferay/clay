@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.118.0](https://github.com/liferay/clay/compare/v3.117.0...v3.118.0) (2024-08-13)
+
+### Features
+
+-   **@clayui/color-picker:** Remove color-picker icon and update tests ([3fbe7ac](https://github.com/liferay/clay/commit/3fbe7ac108c65b580018f148ba9cae28f288b8c0))
+-   **@clayui/color-picker:** Remove small color-picker example and add ([2005ade](https://github.com/liferay/clay/commit/2005ade74c49c7af3962cbdd3fee55de8c6def1d))
+
 # [3.117.0](https://github.com/liferay/clay/compare/v3.116.1...v3.117.0) (2024-07-30)
 
 **Note:** Version bump only for package @clayui/color-picker
