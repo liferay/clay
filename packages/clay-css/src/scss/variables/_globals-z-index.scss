@@ -21,4 +21,7 @@ $zindex-pagination-link-focus: 4 !default;
 $zindex-pagination-link-active: 3 !default;
 $zindex-pagination-link-disabled: 0 !default;
 $zindex-panel-header-link-focus: 1 !default;
-$zindex-sidenav: $zindex-fixed + 5 !default; // 1035
+$zindex-sidenav: calc(#{$zindex-dropdown} - 25) !default; // 975
+
+$zindex-c-slideout: $zindex-sidenav !default; // 975
+$zindex-c-slideout-height-full: calc(#{$zindex-fixed} + 5) !default; // 1035

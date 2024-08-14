@@ -37,3 +37,7 @@
 		@include clay-slideout-variant($cadmin-c-slideout-end-sm-down);
 	}
 }
+
+.c-slideout-height-full {
+	@include clay-slideout-variant($cadmin-c-slideout-height-full);
+}
