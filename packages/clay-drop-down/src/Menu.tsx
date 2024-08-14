@@ -200,6 +200,7 @@ const Menu = React.forwardRef<HTMLDivElement, IProps>(
 
 		return (
 			<Overlay
+				inert
 				isCloseOnInteractOutside={closeOnClickOutside}
 				isKeyboardDismiss
 				isModal={lock}

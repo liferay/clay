@@ -14,6 +14,7 @@ import type {Undo} from 'aria-hidden';
 
 type Props = {
 	children: React.ReactElement;
+	inert?: boolean;
 	isCloseOnInteractOutside?: boolean;
 	isKeyboardDismiss?: boolean;
 	isModal?: boolean;
@@ -35,6 +36,7 @@ const overlayStack: Array<React.RefObject<Element>> = [];
  */
 export function Overlay({
 	children,
+	inert,
 	isCloseOnInteractOutside = false,
 	isKeyboardDismiss = false,
 	isModal = false,
@@ -148,7 +150,7 @@ export function Overlay({
 			// Inert is a new native feature to better handle DOM arias that are not
 			// assertive to a SR or that should ignore any user interaction.
 			// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert
-			if (isModal && supportsInert()) {
+			if ((isModal || inert) && supportsInert()) {
 				unsuppressCallbackRef.current = suppressOthers(elements);
 
 				return () => {
@@ -161,7 +163,7 @@ export function Overlay({
 				return hideOthers(elements);
 			}
 		}
-	}, [isModal, isOpen]);
+	}, [isModal, inert, isOpen]);
 
 	return (
 		<ClayPortal className={menuClassName} subPortalRef={portalRef}>

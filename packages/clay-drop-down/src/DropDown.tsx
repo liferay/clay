@@ -326,6 +326,7 @@ function ClayDropDown<T>({
 						navigationProps.onKeyDown(event);
 					}}
 					ref={menuElementRef}
+					suppress={[triggerElementRef, menuElementRef]}
 					triggerRef={triggerElementRef}
 					width={menuWidth}
 				>
