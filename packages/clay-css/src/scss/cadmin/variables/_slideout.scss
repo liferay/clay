@@ -49,7 +49,7 @@ $cadmin-c-slideout: map-deep-merge(
 	(
 		display: flex,
 		overflow: hidden,
-		z-index: $cadmin-zindex-sidenav,
+		z-index: $cadmin-zindex-c-slideout,
 		c-slideout-shown: (
 			overflow: visible,
 		),
@@ -191,4 +191,12 @@ $cadmin-c-slideout-end-sm-down: map-deep-merge(
 		),
 	),
 	$cadmin-c-slideout-end-sm-down
+);
+
+$cadmin-c-slideout-height-full: () !default;
+$cadmin-c-slideout-height-full: map-deep-merge(
+	(
+		z-index: $cadmin-zindex-c-slideout-height-full,
+	),
+	$cadmin-c-slideout-height-full
 );
