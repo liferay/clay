@@ -73,7 +73,7 @@ Static content is when the `<Table />` options do not change during the lifecycl
 
 ### Dynamic
 
-Unlike static content, dynamic content is when the options can change during the lifecycle of the application or when the data comes from a service. Dynamic content rendering is data agnostic, this allows you to configure how to render the component options regardless of the chosen data structure.
+Unlike static content, dynamic content is when the options can change during the lifecycle of the application or when the data comes from a service. Dynamic content rendering is data agnostic, this allows you to configure how to render the component options regardless of the chosen data structure. For more information about controlled and uncontrolled components, visit [this blog post](/blog/2022/05/02/api-consistency-improvements-for-controlled-and-uncontrolled-components.html).
 
 ```jsx
 <Table>
@@ -93,10 +93,13 @@ Unlike static content, dynamic content is when the options can change during the
 	</Head>
 
 	<Body
-		defaultItems={[
+		items={[
 			{id: 1, name: 'Games', type: 'File folder'},
 			{id: 2, name: 'Program Files', type: 'File folder'},
 		]}
+		onItemsChange={() => {
+			// do something
+		}}
 	>
 		{(row) => (
 			<Row>
