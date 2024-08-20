@@ -61,6 +61,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	};
 
 	/**
+	 * Disables the component.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Disables the button responsible for moving items from right to left box.
 	 */
 	disableRTL?: boolean;
@@ -107,6 +112,7 @@ const ClayDualListBox = ({
 		transferRTL: 'Transfer Item Right to Left',
 	},
 	className,
+	disabled,
 	disableLTR,
 	disableRTL,
 	items = [[], []],
@@ -142,6 +148,7 @@ const ClayDualListBox = ({
 			<div className="clay-dual-listbox">
 				<ClaySelectBox
 					className="clay-dual-listbox-item clay-dual-listbox-item-expand listbox-left"
+					disabled={disabled}
 					id={left.id}
 					items={leftItems!}
 					label={left.label}
@@ -159,7 +166,9 @@ const ClayDualListBox = ({
 						aria-label={ariaLabels.transferLTR}
 						className="transfer-button-ltr"
 						data-testid="ltr"
-						disabled={leftSelected.length === 0 || disableLTR}
+						disabled={
+							leftSelected.length === 0 || disableLTR || disabled
+						}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayLeft, arrayRight] = swapArrayItems(
@@ -178,7 +187,9 @@ const ClayDualListBox = ({
 						aria-label={ariaLabels.transferRTL}
 						className="transfer-button-rtl"
 						data-testid="rtl"
-						disabled={rightSelected.length === 0 || disableRTL}
+						disabled={
+							rightSelected.length === 0 || disableRTL || disabled
+						}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayRight, arrayLeft] = swapArrayItems(
@@ -196,6 +207,7 @@ const ClayDualListBox = ({
 
 				<ClaySelectBox
 					className="clay-dual-listbox-item clay-dual-listbox-item-expand listbox-right"
+					disabled={disabled}
 					id={right.id}
 					items={rightItems!}
 					label={right.label}
