@@ -66,6 +66,7 @@ export const Default = (args: any) => {
 
 	return (
 		<ClayDualListBox
+			disabled={args.disabled}
 			disableLTR={
 				args.disableLTR ||
 				secondSelectBoxItems.length >= args.rightMaxItems
@@ -94,6 +95,7 @@ export const Default = (args: any) => {
 };
 
 Default.args = {
+	disabled: false,
 	disableLTR: false,
 	disableRTL: false,
 	leftMaxItems: 5,
