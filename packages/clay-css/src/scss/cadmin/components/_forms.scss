@@ -131,10 +131,13 @@ fieldset[disabled] label {
 
 // This adds disabled styles to div.form-control inside a disabled fielset.
 
-fieldset[disabled] .form-control {
-	$disabled: setter(map-get($cadmin-input, disabled), ());
+fieldset[disabled] {
+	select.form-control[multiple],
+	.form-control {
+		$disabled: setter(map-get($cadmin-input, disabled), ());
 
-	@include clay-css($disabled);
+		@include clay-css($disabled);
+	}
 }
 
 // Readonly controls as plain text

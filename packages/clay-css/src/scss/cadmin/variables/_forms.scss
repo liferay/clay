@@ -1326,6 +1326,13 @@ $cadmin-input-select-size: map-deep-merge(
 				),
 			),
 		),
+		disabled: (
+			option: (
+				hover: (
+					background-image: none,
+				),
+			),
+		),
 		option: (
 			padding: 7px 8px,
 			checked: (

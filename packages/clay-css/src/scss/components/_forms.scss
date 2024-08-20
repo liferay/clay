@@ -110,8 +110,11 @@ fieldset[disabled] label {
 
 // This adds disabled styles to div.form-control inside a disabled fielset.
 
-fieldset[disabled] .form-control {
-	@include clay-css(map-get($input, disabled));
+fieldset[disabled] {
+	select.form-control[multiple],
+	.form-control {
+		@include clay-css(map-get($input, disabled));
+	}
 }
 
 // Readonly controls as plain text
