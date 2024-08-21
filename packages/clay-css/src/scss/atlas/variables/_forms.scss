@@ -448,6 +448,13 @@ $input-select-size: map-deep-merge(
 				),
 			),
 		),
+		disabled: (
+			option: (
+				hover: (
+					background-image: none,
+				),
+			),
+		),
 		option: (
 			padding: 0.4375rem 0.5rem,
 			hover: (

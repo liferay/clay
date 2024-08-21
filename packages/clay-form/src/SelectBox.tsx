@@ -70,6 +70,11 @@ interface IProps extends React.HTMLAttributes<HTMLSelectElement> {
 	buttonAlignment?: 'center' | 'end';
 
 	/**
+	 * Disables the component.
+	 */
+	disabled?: boolean;
+
+	/**
 	 * Items to be displayed in the Select Box.
 	 */
 	items: Array<TItem>;
@@ -137,6 +142,7 @@ const ClaySelectBox = ({
 	},
 	buttonAlignment = 'end',
 	className,
+	disabled,
 	id,
 	items,
 	label,
@@ -165,7 +171,12 @@ const ClaySelectBox = ({
 	return (
 		<div className={classNames(className, 'form-group')}>
 			{label && (
-				<label className="reorder-label" htmlFor={id}>
+				<label
+					className={classNames('reorder-label', {
+						disabled,
+					})}
+					htmlFor={id}
+				>
 					{label}
 				</label>
 			)}
@@ -178,6 +189,7 @@ const ClaySelectBox = ({
 				<select
 					{...otherProps}
 					className="form-control form-control-inset"
+					disabled={disabled}
 					id={id}
 					multiple={multiple}
 					onChange={(event) => {
