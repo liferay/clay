@@ -46,7 +46,7 @@ export interface IProps
 	/**
 	 * Defines aria-label messages to display for the screen reader.
 	 */
-	messages: {
+	messages?: {
 		close: 'Close';
 		open: 'Open';
 		trigger: '{0} Menu, Current Page: {1}';
@@ -120,7 +120,7 @@ function ClayNavigationBar({
 						aria-expanded={expanded}
 						aria-label={sub(messages.trigger, [
 							expanded ? messages.close : messages.open,
-							triggerLabel,
+							triggerLabel ?? '',
 						])}
 						className={classNames(
 							'navbar-toggler',
