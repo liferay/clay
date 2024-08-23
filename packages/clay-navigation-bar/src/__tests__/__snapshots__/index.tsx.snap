@@ -55,6 +55,7 @@ exports[`ClayNavigationBar renders 1`] = `
     >
       <button
         aria-expanded="false"
+        aria-label="Open Menu, Current Page: Item 1"
         class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
         type="button"
@@ -143,6 +144,7 @@ exports[`ClayNavigationBar renders a custom item 1`] = `
     >
       <button
         aria-expanded="false"
+        aria-label="Open Menu, Current Page: Item 1"
         class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
         type="button"
@@ -243,6 +245,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
     >
       <button
         aria-expanded="false"
+        aria-label="Open Menu, Current Page: Item 1"
         class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
         type="button"
@@ -331,6 +334,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
     >
       <button
         aria-expanded="false"
+        aria-label="Open Menu, Current Page: Item 1"
         class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
         type="button"
@@ -391,6 +395,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
     >
       <button
         aria-expanded="false"
+        aria-label="Open Menu, Current Page: Item 1"
         class="navbar-toggler navbar-toggler-link collapsed btn btn-unstyled"
         data-testid="navbarToggler"
         type="button"
