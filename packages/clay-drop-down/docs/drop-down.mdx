@@ -41,10 +41,7 @@ export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
-				<DropDown
-					filterKey="name"
-					trigger={<Button>Select</Button>}
-				>
+				<DropDown filterKey="name" trigger={<Button>Select</Button>}>
 					<DropDown.Search placeholder="Type to filter" />
 					<DropDown.ItemList items={items}>
 						{(item) => (
@@ -354,10 +351,7 @@ export default function App() {
 	return (
 		<Provider spritemap="/public/icons.svg">
 			<div className="p-4">
-				<DropDown
-					filterKey="name"
-					trigger={<Button>Select</Button>}
-				>
+				<DropDown filterKey="name" trigger={<Button>Select</Button>}>
 					<DropDown.Search placeholder="Type to filter" />
 					<DropDown.ItemList items={items}>
 						{(item) => (
@@ -442,7 +436,11 @@ export default function App() {
 							{href: '#', title: '2nd hash link'},
 							{child: 'x0a5', title: 'Subnav'},
 						],
-						x0a5: [{title: 'The'}, {type: 'divider'}, {title: 'End'}],
+						x0a5: [
+							{title: 'The'},
+							{type: 'divider'},
+							{title: 'End'},
+						],
 					}}
 					spritemap={spritemap}
 					trigger={<Button>{'Click Me'}</Button>}
