@@ -51,7 +51,6 @@ exports[`BasicRendering renders by default 1`] = `
   </div>
   <div>
     <span
-      aria-hidden="true"
       data-focus-scope-start="true"
       tabindex="0"
     />
@@ -823,7 +822,6 @@ exports[`BasicRendering renders by default 1`] = `
       </div>
     </div>
     <span
-      aria-hidden="true"
       data-focus-scope-end="true"
       tabindex="0"
     />
