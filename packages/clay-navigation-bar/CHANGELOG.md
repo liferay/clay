@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
+
+### Features
+
+-   **@clayui/navigation-bar:** Add sr-only description for mobile view ([fd7f4c7](https://github.com/liferay/clay/commit/fd7f4c7ed9f0279f680d2dfa19478fb9f4d66e36))
+
 # [3.116.0](https://github.com/liferay/clay/compare/v3.115.2...v3.116.0) (2024-06-10)
 
 **Note:** Version bump only for package @clayui/navigation-bar

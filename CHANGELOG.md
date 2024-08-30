@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
+
+### Bug Fixes
+
+-   **@clayui/css:** LPD-2001 c-prefers-expanded-text shouldn't use max-width ([949c73e](https://github.com/liferay/clay/commit/949c73ed5cb5c47c5825187c7a750478e65687e9))
+-   **@clayui/css:** LPD-34095 Reduce the default c-slideout z-index so dropdown-menu's aren't hidden ([1b85ea6](https://github.com/liferay/clay/commit/1b85ea62175a1e05a729570a4d026c297ea2c244))
+-   **@clayui/css:** LPD-34319 Dual List Box disabled styles when wrapped in fieldset[disabled] ([9a39146](https://github.com/liferay/clay/commit/9a39146797f24596ecf89feea108bde4bf3f5bf9))
+-   **@clayui/drop-down:** fixes bug with chrome blocking element focus when clicking outside the menu ([9a99238](https://github.com/liferay/clay/commit/9a99238852f27fc50e3b75ca95a2db72dd79d3ed))
+-   **@clayui/form:** LPD-34319 adds disabled to Dual Listbox ([867dee3](https://github.com/liferay/clay/commit/867dee399e7e88d9bc607bd63ae6464e9a3d8427))
+-   **@clayui/shared:** remove suppression from elements before focus ([c9a9e83](https://github.com/liferay/clay/commit/c9a9e83de3fc017569d7d2e6dfb0393c5f878351))
+-   **@clayui/shared:** Removes suppression of focusable elements from focus trap ([2728431](https://github.com/liferay/clay/commit/27284318283fc4c720dbd8fb86365b731a5d79fd))
+
+### Features
+
+-   **@clayui/navigation-bar:** Add sr-only description for mobile view ([fd7f4c7](https://github.com/liferay/clay/commit/fd7f4c7ed9f0279f680d2dfa19478fb9f4d66e36))
+
+### BREAKING CHANGES
+
+-   **@clayui/css:** c-slideout is no longer above fixed navigation menus. If you need the old z-index please add the class c-slideout-height-full to c-slideout
+
 # [3.118.0](https://github.com/liferay/clay/compare/v3.117.0...v3.118.0) (2024-08-13)
 
 ### Bug Fixes
