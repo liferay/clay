@@ -74,6 +74,7 @@ export function Option({
 	disabled,
 	keyValue,
 	textValue,
+	...otherProps
 }: Props) {
 	const {
 		activeDescendant,
@@ -95,6 +96,7 @@ export function Option({
 	if (isMobile) {
 		return (
 			<option
+				{...otherProps}
 				aria-describedby={ariaDescribedby}
 				disabled={disabled}
 				value={keyValue}
@@ -107,6 +109,7 @@ export function Option({
 	return (
 		<li role="presentation">
 			<button
+				{...otherProps}
 				{...hoverProps}
 				aria-describedby={ariaDescribedby}
 				aria-label={ariaLabel}
