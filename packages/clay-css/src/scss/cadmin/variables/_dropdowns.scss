@@ -664,7 +664,6 @@ $cadmin-dropdown-menu-width-shrink: () !default;
 $cadmin-dropdown-menu-width-shrink: map-deep-merge(
 	(
 		min-width: 0,
-		white-space: nowrap,
 	),
 	$cadmin-dropdown-menu-width-shrink
 );
