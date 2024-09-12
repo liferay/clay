@@ -5,6 +5,7 @@
 
 import Icon from '@clayui/icon';
 import {cleanup, render} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import {Option, Picker} from '../../';
@@ -207,5 +208,23 @@ describe('Picker basic rendering', () => {
 		expect(selectedValue.getAttribute('role')).toBe('combobox');
 		expect(selectedValue.getAttribute('aria-expanded')).toBe('false');
 		expect(selectedValue.getAttribute('tabindex')).toBe('0');
+	});
+
+	it('render option with a custom attribute prefixed by "data-"', () => {
+		const {getByRole} = render(
+			<Picker>
+				<Option data-attribute="data-attribute-value" />
+			</Picker>
+		);
+
+		const combobox = getByRole('combobox');
+
+		userEvent.click(combobox);
+
+		const option = getByRole('option');
+
+		expect(option.getAttribute('data-attribute')).toBe(
+			'data-attribute-value'
+		);
 	});
 });
