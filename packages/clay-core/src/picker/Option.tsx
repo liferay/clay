@@ -58,6 +58,12 @@ type Props = {
 	keyValue?: React.Key;
 
 	/**
+	 * Internal property.
+	 * @ignore
+	 */
+	index?: number;
+
+	/**
 	 * Sets a text value if the component's content is not plain text. This value
 	 * is used in the combobox element to show the selected option.
 	 */
@@ -72,6 +78,7 @@ export function Option({
 	'aria-setsize': ariaSetSize,
 	children,
 	disabled,
+	index: _index,
 	keyValue,
 	textValue,
 	...otherProps

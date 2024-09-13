@@ -159,7 +159,6 @@ exports[`IncrementalInteractions clicking a month on the selector should change 
                   data-testid="year-select"
                 >
                   <option
-                    index="0"
                     value="2019"
                   >
                     2019
@@ -992,7 +991,6 @@ exports[`IncrementalInteractions clicking on the date icon should close the drop
                   data-testid="year-select"
                 >
                   <option
-                    index="0"
                     value="2019"
                   >
                     2019
@@ -1828,7 +1826,6 @@ exports[`IncrementalInteractions clicking on the date icon should open the dropd
                   data-testid="year-select"
                 >
                   <option
-                    index="0"
                     value="2019"
                   >
                     2019
@@ -2667,25 +2664,21 @@ exports[`IncrementalInteractions clicking on the year selector should switch to 
                   data-testid="year-select"
                 >
                   <option
-                    index="0"
                     value="2017"
                   >
                     2017
                   </option>
                   <option
-                    index="1"
                     value="2018"
                   >
                     2018
                   </option>
                   <option
-                    index="2"
                     value="2019"
                   >
                     2019
                   </option>
                   <option
-                    index="3"
                     value="2020"
                   >
                     2020
@@ -3523,7 +3516,6 @@ exports[`IncrementalInteractions clicking outside the dropdown should close the 
                   data-testid="year-select"
                 >
                   <option
-                    index="0"
                     value="2019"
                   >
                     2019
@@ -4359,7 +4351,6 @@ exports[`IncrementalInteractions date entered in the input element should reflec
                   data-testid="year-select"
                 >
                   <option
-                    index="0"
                     value="2019"
                   >
                     2019
