@@ -757,7 +757,6 @@ $dropdown-menu-width-shrink: () !default;
 $dropdown-menu-width-shrink: map-deep-merge(
 	(
 		min-width: 0,
-		white-space: nowrap,
 	),
 	$dropdown-menu-width-shrink
 );
