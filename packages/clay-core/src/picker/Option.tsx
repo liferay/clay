@@ -58,6 +58,12 @@ type Props = {
 	keyValue?: React.Key;
 
 	/**
+	 * Internal property.
+	 * @ignore
+	 */
+	index?: number;
+
+	/**
 	 * Sets a text value if the component's content is not plain text. This value
 	 * is used in the combobox element to show the selected option.
 	 */
@@ -72,8 +78,10 @@ export function Option({
 	'aria-setsize': ariaSetSize,
 	children,
 	disabled,
+	index: _index,
 	keyValue,
 	textValue,
+	...otherProps
 }: Props) {
 	const {
 		activeDescendant,
@@ -95,6 +103,7 @@ export function Option({
 	if (isMobile) {
 		return (
 			<option
+				{...otherProps}
 				aria-describedby={ariaDescribedby}
 				disabled={disabled}
 				value={keyValue}
@@ -107,6 +116,7 @@ export function Option({
 	return (
 		<li role="presentation">
 			<button
+				{...otherProps}
 				{...hoverProps}
 				aria-describedby={ariaDescribedby}
 				aria-label={ariaLabel}
