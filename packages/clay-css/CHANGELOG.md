@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.119.1](https://github.com/liferay/clay/compare/v3.119.0...v3.119.1) (2024-09-13)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-33185 The clay-css mixin should support more properties ([9ebfbbe](https://github.com/liferay/clay/commit/9ebfbbe4f0e1271b58d7938335b4bff38f4bdf49))
+* **@clayui/css:** LPD-36088 Table Striped hover states should work ([18a5c48](https://github.com/liferay/clay/commit/18a5c48bb6a9bd94bf49d349ea649776bce248a2))
+* **@clayui/css:** Remove white-space: nowrap on dropdown-menu-width-shrink ([f3ddc9b](https://github.com/liferay/clay/commit/f3ddc9b04e17bab65a8f294193bc165448c0aedc))
+
+
+
+
+
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
 
