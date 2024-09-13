@@ -22,16 +22,19 @@ exports[`Picker basic rendering render dynamic content using native selector 1`]
     class="form-control form-control-select form-control-select-secondary"
   >
     <option
+      index="0"
       value="Apple"
     >
       Apple
     </option>
     <option
+      index="1"
       value="Banana"
     >
       Banana
     </option>
     <option
+      index="2"
       value="Blueberry"
     >
       Blueberry
@@ -79,16 +82,19 @@ exports[`Picker basic rendering render static content using native selector 1`] 
     class="form-control form-control-select form-control-select-secondary"
   >
     <option
+      index="0"
       value="apple"
     >
       Apple
     </option>
     <option
+      index="1"
       value="banana"
     >
       Banana
     </option>
     <option
+      index="2"
       value="blueberry"
     >
       Blueberry
@@ -149,6 +155,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
             aria-selected="false"
             class="dropdown-item focus"
             id="Apple"
+            index="0"
             role="option"
             tabindex="-1"
           >
@@ -162,6 +169,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
             aria-selected="false"
             class="dropdown-item"
             id="Banana"
+            index="1"
             role="option"
             tabindex="-1"
           >
@@ -175,6 +183,7 @@ exports[`Picker basic rendering renders open component by default 1`] = `
             aria-selected="false"
             class="dropdown-item"
             id="Blueberry"
+            index="2"
             role="option"
             tabindex="-1"
           >
