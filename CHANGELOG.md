@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.120.0](https://github.com/liferay/clay/compare/v3.119.1...v3.120.0) (2024-09-13)
+
+### Features
+
+-   **@clayui/core:** LPD-35826 Add unity test to check if props prefixed by "data-" are rendered as attributes in the option element ([3be3a12](https://github.com/liferay/clay/commit/3be3a120598b89de327a8b771034f43149154fe7))
+-   **@clayui/core:** LPD-35826 Allow props prefixed by "data-" to be rendered as attributes in Picker's Options ([75d052d](https://github.com/liferay/clay/commit/75d052da00a2a495916e6a0058c44f6a63286504))
+-   **@clayui/core:** LPD-35826 Update unit tests snapshots ([ca7c524](https://github.com/liferay/clay/commit/ca7c5243d44ff5df25295481a3510aca1a802291))
+
 ## [3.119.1](https://github.com/liferay/clay/compare/v3.119.0...v3.119.1) (2024-09-13)
 
 ### Bug Fixes
