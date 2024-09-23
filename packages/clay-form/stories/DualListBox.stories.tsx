@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classnames from 'classnames';
 import React, {useState} from 'react';
 
-import {ClayDualListBox} from '../src';
+import ClayForm, {ClayDualListBox} from '../src';
 
 export default {
 	argTypes: {
@@ -59,19 +60,27 @@ const moveBoxesOptions = [
 
 export const Default = (args: any) => {
 	const [items, setItems] = useState(moveBoxesOptions);
+
 	const [leftSelected, setLeftSelected] = useState<Array<string>>([]);
 	const [rightSelected, setRightSelected] = useState<Array<string>>([]);
 
 	const [firstSelectBoxItems, secondSelectBoxItems] = items;
 
+	const isLeftError =
+		rightSelected.length + firstSelectBoxItems.length > args.leftMaxItems;
+	const isRightError =
+		leftSelected.length + secondSelectBoxItems.length > args.rightMaxItems;
+
 	return (
 		<ClayDualListBox
 			disableLTR={
 				args.disableLTR ||
+				isRightError ||
 				secondSelectBoxItems.length >= args.rightMaxItems
 			}
 			disableRTL={
 				args.disableRTL ||
+				isLeftError ||
 				firstSelectBoxItems.length >= args.leftMaxItems
 			}
 			disabled={args.disabled}
@@ -82,7 +91,11 @@ export const Default = (args: any) => {
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
-			onItemsChange={setItems}
+			onItemsChange={(event) => {
+				setItems(event);
+				setLeftSelected([]);
+				setRightSelected([]);
+			}}
 			right={{
 				id: 'rightSelectBox',
 				label: 'In Use',
@@ -90,7 +103,19 @@ export const Default = (args: any) => {
 				selected: rightSelected,
 			}}
 			size={8}
-		/>
+		>
+			<ClayForm.FeedbackGroup
+				className={classnames('d-none', 'has-error', {
+					'd-block': isLeftError || isRightError,
+				})}
+			>
+				<ClayForm.FeedbackItem>
+					The maximum number of items for{' '}
+					{isLeftError ? 'Available' : 'In Use'} is{' '}
+					{args.leftMaxItems}
+				</ClayForm.FeedbackItem>
+			</ClayForm.FeedbackGroup>
+		</ClayDualListBox>
 	);
 };
 
@@ -99,5 +124,5 @@ Default.args = {
 	disableRTL: false,
 	disabled: false,
 	leftMaxItems: 5,
-	rightMaxItems: 3,
+	rightMaxItems: 5,
 };
