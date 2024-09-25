@@ -111,6 +111,7 @@ const ClayDualListBox = ({
 		transferLTR: 'Transfer Item Left to Right',
 		transferRTL: 'Transfer Item Right to Left',
 	},
+	children,
 	className,
 	disabled,
 	disableLTR,
@@ -166,9 +167,7 @@ const ClayDualListBox = ({
 						aria-label={ariaLabels.transferLTR}
 						className="transfer-button-ltr"
 						data-testid="ltr"
-						disabled={
-							leftSelected.length === 0 || disableLTR || disabled
-						}
+						disabled={disableLTR || disabled}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayLeft, arrayRight] = swapArrayItems(
@@ -187,9 +186,7 @@ const ClayDualListBox = ({
 						aria-label={ariaLabels.transferRTL}
 						className="transfer-button-rtl"
 						data-testid="rtl"
-						disabled={
-							rightSelected.length === 0 || disableRTL || disabled
-						}
+						disabled={disableRTL || disabled}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayRight, arrayLeft] = swapArrayItems(
@@ -222,6 +219,8 @@ const ClayDualListBox = ({
 					value={rightSelected}
 				/>
 			</div>
+
+			{children}
 		</div>
 	);
 };
