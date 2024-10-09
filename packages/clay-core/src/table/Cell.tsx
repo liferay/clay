@@ -199,16 +199,6 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						: undefined
 				}
 				className={classNames(className, {
-					'order-arrow-down-active': isSortable
-						? sort &&
-						  keyValue === sort.column &&
-						  sort.direction === 'descending'
-						: undefined,
-					'order-arrow-up-active': isSortable
-						? sort &&
-						  keyValue === sort.column &&
-						  sort.direction === 'ascending'
-						: undefined,
 					'table-cell-expand': truncate || expanded,
 					[`table-cell-${delimiter}`]: delimiter,
 					[`table-column-text-${textAlign}`]: textAlign,
@@ -269,7 +259,15 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 								className="component-action"
 								type="button"
 							>
-								<Icon symbol="order-arrow" />
+								<Icon
+									symbol={
+										sort && keyValue === sort.column
+											? sort.direction === 'descending'
+												? 'order-list-down'
+												: 'order-list-up'
+											: 'order-arrow'
+									}
+								/>
 							</button>
 						</Layout.ContentCol>
 					</Layout.ContentRow>
