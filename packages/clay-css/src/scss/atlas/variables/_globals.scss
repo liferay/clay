@@ -77,16 +77,105 @@ $grays: map-merge(
 	$grays
 );
 
+$blue-d4: #004799 !default;
+$blue-d3: #0053b3 !default;
+$blue-d2: #005fcc !default;
+$blue-d1: #006be6 !default;
 $blue: if($enable-lexicon-flat-colors, #4b9fff, #0b5fff) !default;
+$blue-l1: #338fff !default;
+$blue-l2: #66abff !default;
+$blue-l3: #97c5ff !default;
+$blue-l4: #cce3ff !default;
+
+$indigo-d4: #0017e5 !default;
+$indigo-d3: #001aff !default;
+$indigo-d2: #1a30ff !default;
+$indigo-d1: #3347ff !default;
 $indigo: if($enable-lexicon-flat-colors, #7785ff, #6610f2) !default;
+$indigo-l1: #808cff !default;
+$indigo-l2: #99a3ff !default;
+$indigo-l3: #b2baff !default;
+$indigo-l4: #ccd1ff !default;
+
+$purple-d4: #7700cc !default;
+$purple-d3: #8600e6 !default;
+$purple-d2: #9500ff !default;
+$purple-d1: #9f1aff !default;
 $purple: if($enable-lexicon-flat-colors, #af78ff, #6f42c1) !default;
+$purple-l1: #bf66ff !default;
+$purple-l2: #ca80ff !default;
+$purple-l3: #d499ff !default;
+$purple-l4: #dfb3ff !default;
+
+$pink-d4: #800048 !default;
+$pink-d3: #990057 !default;
+$pink-d2: #b30065 !default;
+$pink-d1: #cc0074 !default;
 $pink: if($enable-lexicon-flat-colors, #ff73c3, #e83e8c) !default;
+$pink-l1: #ff4db2 !default;
+$pink-l2: #ff80c8 !default;
+$pink-l3: #ff99d3 !default;
+$pink-l4: #ffb3de !default;
+
+$red-d4: #800000 !default;
+$red-d3: #990000 !default;
+$red-d2: #b30000 !default;
+$red-d1: #cc0000 !default;
 $red: if($enable-lexicon-flat-colors, #ff5f5f, #da1414) !default;
+$red-l1: #ff4d4d !default;
+$red-l2: #ff6666 !default;
+$red-l3: #ff8080 !default;
+$red-l4: #ff9999 !default;
+
+$orange-d4: #662700 !default;
+$orange-d3: #803100 !default;
+$orange-d2: #993b00 !default;
+$orange-d1: #b34400 !default;
 $orange: if($enable-lexicon-flat-colors, #ffb46e, #b95000) !default;
+$orange-l1: #ff6200 !default;
+$orange-l2: #ff8133 !default;
+$orange-l3: #ffa166 !default;
+$orange-l4: #ffc099 !default;
+
+$yellow-d4: #997000 !default;
+$yellow-d3: #b38900 !default;
+$yellow-d2: #cc9600 !default;
+$yellow-d1: #e6a800 !default;
 $yellow: if($enable-lexicon-flat-colors, #ffd76e, #ffc107) !default;
+$yellow-l1: #ffc933 !default;
+$yellow-l2: #ffd666 !default;
+$yellow-l3: #ffe499 !default;
+$yellow-l4: #fff1cc !default;
+
+$green-d4: #162d06 !default;
+$green-d3: #22430a !default;
+$green-d2: #2e590d !default;
+$green-d1: #397010 !default;
 $green: if($enable-lexicon-flat-colors, #9be169, #287d3d) !default;
+$green-l1: #53a117 !default;
+$green-l2: #67c91d !default;
+$green-l3: #81e236 !default;
+$green-l4: #9de963 !default;
+
+$teal-d4: #092a25 !default;
+$teal-d3: #0d3f37 !default;
+$teal-d2: #125449 !default;
+$teal-d1: #16695b !default;
 $teal: if($enable-lexicon-flat-colors, #50d2a0, #20c997) !default;
+$teal-l1: #24a892 !default;
+$teal-l2: #42d7be !default;
+$teal-l3: #6ce0cc !default;
+$teal-l4: #96e9db !default;
+
+$cyan-d4: #00334d !default;
+$cyan-d3: #004466 !default;
+$cyan-d2: #005580 !default;
+$cyan-d1: #006699 !default;
 $cyan: if($enable-lexicon-flat-colors, #5fc8ff, #17a2b8) !default;
+$cyan-l1: #0099e6 !default;
+$cyan-l2: #33bbff !default;
+$cyan-l3: #66ccff !default;
+$cyan-l4: #99ddff !default;
 
 $colors: () !default;
 $colors: map-merge(
