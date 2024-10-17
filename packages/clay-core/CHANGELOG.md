@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
+
+### Features
+
+-   **@clayui/core:** Update sorting icons for the Clay Table. ([ac89778](https://github.com/liferay/clay/commit/ac8977871220ab1bdad2ea81fd54a7f25943f19a))
+
 # [3.120.0](https://github.com/liferay/clay/compare/v3.119.1...v3.120.0) (2024-09-13)
 
 ### Features

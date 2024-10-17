@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
+
+
+### Features
+
+* **@clayui/css:** LPD-39299 Adds d4-l1 for colors ([083c268](https://github.com/liferay/clay/commit/083c268c6113425790efa92fb121e0d9d7a22fd4))
+
+
+
+
+
 ## [3.119.1](https://github.com/liferay/clay/compare/v3.119.0...v3.119.1) (2024-09-13)
 
 
