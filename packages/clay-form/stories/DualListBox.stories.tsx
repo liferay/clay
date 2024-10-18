@@ -64,25 +64,10 @@ export const Default = (args: any) => {
 	const [leftSelected, setLeftSelected] = useState<Array<string>>([]);
 	const [rightSelected, setRightSelected] = useState<Array<string>>([]);
 
-	const [firstSelectBoxItems, secondSelectBoxItems] = items;
-
-	const isLeftError =
-		rightSelected.length + firstSelectBoxItems.length > args.leftMaxItems;
-	const isRightError =
-		leftSelected.length + secondSelectBoxItems.length > args.rightMaxItems;
-
 	return (
 		<ClayDualListBox
-			disableLTR={
-				args.disableLTR ||
-				isRightError ||
-				secondSelectBoxItems.length >= args.rightMaxItems
-			}
-			disableRTL={
-				args.disableRTL ||
-				isLeftError ||
-				firstSelectBoxItems.length >= args.leftMaxItems
-			}
+			disableLTR={args.disableLTR}
+			disableRTL={args.disableRTL}
 			disabled={args.disabled}
 			items={items}
 			left={{
@@ -91,6 +76,7 @@ export const Default = (args: any) => {
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
+			leftMaxItems={args.leftMaxItems}
 			onItemsChange={(event) => {
 				setItems(event);
 				setLeftSelected([]);
@@ -102,20 +88,9 @@ export const Default = (args: any) => {
 				onSelectChange: setRightSelected,
 				selected: rightSelected,
 			}}
+			rightMaxItems={args.rightMaxItems}
 			size={8}
-		>
-			<ClayForm.FeedbackGroup
-				className={classnames('d-none', 'has-error', {
-					'd-block': isLeftError || isRightError,
-				})}
-			>
-				<ClayForm.FeedbackItem>
-					The maximum number of items for{' '}
-					{isLeftError ? 'Available' : 'In Use'} is{' '}
-					{args.leftMaxItems}
-				</ClayForm.FeedbackItem>
-			</ClayForm.FeedbackGroup>
-		</ClayDualListBox>
+		/>
 	);
 };
 

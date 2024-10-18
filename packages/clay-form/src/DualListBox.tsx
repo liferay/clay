@@ -4,9 +4,11 @@
  */
 
 import {ClayButtonWithIcon} from '@clayui/button';
+import {sub} from '@clayui/shared';
 import classNames from 'classnames';
 import React from 'react';
 
+import Form from './Form';
 import ClaySelectBox, {TItem, getSelectedIndexes} from './SelectBox';
 
 type TItems = Array<Array<TItem>>;
@@ -56,6 +58,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Labels for the aria attributes
 	 */
 	ariaLabels?: {
+		error?: string;
 		transferLTR: string;
 		transferRTL: string;
 	};
@@ -104,22 +107,36 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Path to the spritemap that Icon should use when referencing symbols.
 	 */
 	spritemap?: string;
+
+	/**
+	 * Sets the maximum value of items on the left side.
+	 */
+	leftMaxItems?: number;
+
+	/**
+	 * Sets the maximum value of items on the right side.
+	 */
+	rightMaxItems?: number;
 }
+
+const defaultError = 'The maximum number of items for {0} is {1}';
 
 const ClayDualListBox = ({
 	ariaLabels = {
+		error: defaultError,
 		transferLTR: 'Transfer Item Left to Right',
 		transferRTL: 'Transfer Item Right to Left',
 	},
-	children,
 	className,
 	disabled,
 	disableLTR,
 	disableRTL,
 	items = [[], []],
 	left = {},
+	leftMaxItems,
 	onItemsChange,
 	right = {},
+	rightMaxItems,
 	size,
 	spritemap,
 	...otherProps
@@ -144,6 +161,19 @@ const ClayDualListBox = ({
 	const selectedIndexesLeft = getSelectedIndexes(leftItems!, leftSelected);
 	const selectedIndexesRight = getSelectedIndexes(rightItems!, rightSelected);
 
+	const isLeftError = leftMaxItems
+		? rightSelected.length + leftItems!.length > leftMaxItems
+		: false;
+	const isRightError = rightMaxItems
+		? leftSelected.length + rightItems!.length > rightMaxItems
+		: false;
+	const hasMaxItemsLeft = leftMaxItems
+		? leftItems!.length > leftMaxItems
+		: false;
+	const hasMaxItemsRight = rightMaxItems
+		? rightItems!.length > rightMaxItems
+		: false;
+
 	return (
 		<div {...otherProps} className={classNames(className, 'form-group')}>
 			<div className="clay-dual-listbox">
@@ -167,7 +197,12 @@ const ClayDualListBox = ({
 						aria-label={ariaLabels.transferLTR}
 						className="transfer-button-ltr"
 						data-testid="ltr"
-						disabled={disableLTR || disabled}
+						disabled={
+							disableLTR ||
+							isLeftError ||
+							hasMaxItemsLeft ||
+							disabled
+						}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayLeft, arrayRight] = swapArrayItems(
@@ -186,7 +221,12 @@ const ClayDualListBox = ({
 						aria-label={ariaLabels.transferRTL}
 						className="transfer-button-rtl"
 						data-testid="rtl"
-						disabled={disableRTL || disabled}
+						disabled={
+							disableRTL ||
+							isRightError ||
+							hasMaxItemsRight ||
+							disabled
+						}
 						displayType="secondary"
 						onClick={() => {
 							const [arrayRight, arrayLeft] = swapArrayItems(
@@ -220,7 +260,17 @@ const ClayDualListBox = ({
 				/>
 			</div>
 
-			{children}
+			{isLeftError ||
+				(isRightError && (
+					<Form.FeedbackGroup className="has-error">
+						<Form.FeedbackItem>
+							{sub(ariaLabels.error || defaultError, [
+								isLeftError ? left.label! : right.label!,
+								isLeftError ? leftMaxItems! : rightMaxItems!,
+							])}
+						</Form.FeedbackItem>
+					</Form.FeedbackGroup>
+				))}
 		</div>
 	);
 };
