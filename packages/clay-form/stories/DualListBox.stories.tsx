@@ -3,9 +3,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+import classnames from 'classnames';
 import React, {useState} from 'react';
 
-import {ClayDualListBox} from '../src';
+import ClayForm, {ClayDualListBox} from '../src';
 
 export default {
 	argTypes: {
@@ -59,21 +60,14 @@ const moveBoxesOptions = [
 
 export const Default = (args: any) => {
 	const [items, setItems] = useState(moveBoxesOptions);
+
 	const [leftSelected, setLeftSelected] = useState<Array<string>>([]);
 	const [rightSelected, setRightSelected] = useState<Array<string>>([]);
 
-	const [firstSelectBoxItems, secondSelectBoxItems] = items;
-
 	return (
 		<ClayDualListBox
-			disableLTR={
-				args.disableLTR ||
-				secondSelectBoxItems.length >= args.rightMaxItems
-			}
-			disableRTL={
-				args.disableRTL ||
-				firstSelectBoxItems.length >= args.leftMaxItems
-			}
+			disableLTR={args.disableLTR}
+			disableRTL={args.disableRTL}
 			disabled={args.disabled}
 			items={items}
 			left={{
@@ -82,13 +76,19 @@ export const Default = (args: any) => {
 				onSelectChange: setLeftSelected,
 				selected: leftSelected,
 			}}
-			onItemsChange={setItems}
+			leftMaxItems={args.leftMaxItems}
+			onItemsChange={(event) => {
+				setItems(event);
+				setLeftSelected([]);
+				setRightSelected([]);
+			}}
 			right={{
 				id: 'rightSelectBox',
 				label: 'In Use',
 				onSelectChange: setRightSelected,
 				selected: rightSelected,
 			}}
+			rightMaxItems={args.rightMaxItems}
 			size={8}
 		/>
 	);
@@ -99,5 +99,5 @@ Default.args = {
 	disableRTL: false,
 	disabled: false,
 	leftMaxItems: 5,
-	rightMaxItems: 3,
+	rightMaxItems: 5,
 };
