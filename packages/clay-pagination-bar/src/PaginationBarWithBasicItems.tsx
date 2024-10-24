@@ -246,7 +246,7 @@ export const ClayPaginationBarWithBasicItems = ({
 						spritemap={spritemap}
 					>
 						{(item) => (
-							<Option key={item.label}>
+							<Option href={item.href} key={item.label}>
 								{sub(labels.selectPerPageItems, [
 									String(item.label),
 								])}
