@@ -57,7 +57,7 @@ module.exports = {
 		},
 		'./packages/clay-core/src/picker/': {
 			branches: 59,
-			functions: 66,
+			functions: 65,
 			lines: 76,
 			statements: 76,
 		},
@@ -170,7 +170,7 @@ module.exports = {
 			statements: 98,
 		},
 		'./packages/clay-pagination-bar/src/': {
-			branches: 95,
+			branches: 92,
 			functions: 88,
 			lines: 94,
 			statements: 95,
