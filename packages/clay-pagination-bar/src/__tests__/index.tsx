@@ -126,6 +126,46 @@ describe('ClayPaginationBar', () => {
 		expect(getByRole('listbox')).toBeTruthy();
 	});
 
+	it('render option a link when item has href', () => {
+		const items = [
+			{
+				href: '#1',
+				label: 1,
+			},
+			{
+				label: 2,
+			},
+			{
+				href: '#3',
+				label: 3,
+			},
+			{
+				label: 4,
+			},
+		];
+
+		const {getByRole, getByText} = render(
+			<ClayPaginationBarWithBasicItems
+				activeDelta={4}
+				deltas={items}
+				spritemap={spritemap}
+				totalItems={4}
+			/>
+		);
+
+		const combobox = getByRole('combobox');
+
+		fireEvent.click(combobox);
+
+		const link1 = getByText('1 items').closest('a');
+		const link3 = getByText('3 items').closest('a');
+
+		expect(link1).toHaveAttribute('href', '#1');
+		expect(link3).toHaveAttribute('href', '#3');
+
+		expect(getByText('2 items').closest('a')).toBeNull();
+	});
+
 	it('automatically goes to page 1 if active page exceeds delta', () => {
 		const Comp = () => {
 			const [activePage, setActivePage] = React.useState(2);
