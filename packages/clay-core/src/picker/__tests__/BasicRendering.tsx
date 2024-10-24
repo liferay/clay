@@ -227,4 +227,46 @@ describe('Picker basic rendering', () => {
 			'data-attribute-value'
 		);
 	});
+
+	it('render option a link when item has href', () => {
+		const items = [
+			{
+				href: '#1',
+				label: 1,
+			},
+			{
+				label: 2,
+			},
+			{
+				href: '#3',
+				label: 3,
+			},
+			{
+				label: 4,
+			},
+		];
+
+		const {getByRole, getByText} = render(
+			<Picker items={items}>
+				{(item) => (
+					<Option href={item?.href} key={item.label}>
+						{item.label}
+					</Option>
+				)}
+			</Picker>
+		);
+
+		const combobox = getByRole('combobox');
+
+		userEvent.click(combobox);
+
+		const link1 = getByText('1').closest('a');
+		const link3 = getByText('3').closest('a');
+
+		expect(link1).toHaveAttribute('href', '#1');
+		expect(link3).toHaveAttribute('href', '#3');
+
+		expect(getByText('2').closest('a')).toBeNull();
+		expect(getByText('4').closest('a')).toBeNull();
+	});
 });
