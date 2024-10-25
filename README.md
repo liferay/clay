@@ -25,6 +25,7 @@ Clay is Liferay's web implementation of the [Lexicon Experience Language](https:
 -   [Documentation](#documentation)
 -   [Migration Guides](#migration-guides)
 -   [Setup](#setup)
+-   [Troubleshooting Setup](#troubleshooting-setup)
 -   [clayui.com](#clayuicom)
 -   [Contributing](#contributing)
 -   [License](#license)
@@ -111,6 +112,43 @@ yarn workspace @clayui/css run build && yarn storybook
 ```
 yarn test
 ```
+
+## Troubleshooting Setup
+
+The latest version of Python that is supported to build Clay locally is 3.10. There is an error when setting up the Clay project with Python 3.12.
+
+```
+ModuleNotFoundError: No module named 'distutils'
+gyp ERR! configure error
+gyp ERR! stack Error: gyp failed with exit code: 1
+gyp ERR! stack     at ChildProcess.onCpExit (/clay/node_modules/node-gyp/lib/configure.js:325:16)
+gyp ERR! stack     at ChildProcess.emit (node:events:519:28)
+gyp ERR! stack     at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+gyp ERR! System Darwin 20.6.0
+gyp ERR! command "/usr/local/bin/node" "/clay/node_modules/.bin/node-gyp" "rebuild"
+gyp ERR! cwd /clay/node_modules/deasync
+gyp ERR! node -v v20.15.1
+```
+
+You will need to switch to Python 3.10. Instructions for switching Python versions:
+
+### Linux
+
+https://linuxconfig.org/how-to-switch-between-python-versions-on-fedora-linux
+
+### UNIX/MACOS
+
+https://github.com/pyenv/pyenv
+
+Once you are running the correct Python version, you need to clear the cache in the `/node_modules/` directory.
+
+`rm -rf node_modules`
+
+You should also clear the `/node_modules/` directory in Clay CSS.
+
+`rm -rf packages/clay-css/node_modules`
+
+Then re-run `yarn` in the `/clay/` directory and in `/packages/clay-css/`.
 
 ## clayui.com
 
