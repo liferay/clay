@@ -3,10 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import classnames from 'classnames';
 import React, {useState} from 'react';
 
-import ClayForm, {ClayDualListBox} from '../src';
+import {ClayDualListBox} from '../src';
 
 export default {
 	argTypes: {
