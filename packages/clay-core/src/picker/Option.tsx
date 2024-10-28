@@ -64,6 +64,11 @@ type Props = {
 	index?: number;
 
 	/**
+	 * Path or URL
+	 */
+	href?: string;
+
+	/**
 	 * Sets a text value if the component's content is not plain text. This value
 	 * is used in the combobox element to show the selected option.
 	 */
@@ -78,6 +83,7 @@ export function Option({
 	'aria-setsize': ariaSetSize,
 	children,
 	disabled,
+	href,
 	index: _index,
 	keyValue,
 	textValue,
@@ -113,11 +119,14 @@ export function Option({
 		);
 	}
 
+	const As = href ? 'a' : 'button';
+
 	return (
 		<li role="presentation">
-			<button
+			<As
 				{...otherProps}
 				{...hoverProps}
+				{...(href ? {href} : {})}
 				aria-describedby={ariaDescribedby}
 				aria-label={ariaLabel}
 				aria-labelledby={ariaLabelledby}
@@ -142,7 +151,7 @@ export function Option({
 				)}
 
 				{children}
-			</button>
+			</As>
 		</li>
 	);
 }
