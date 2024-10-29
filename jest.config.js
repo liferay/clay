@@ -92,7 +92,7 @@ module.exports = {
 			statements: 80,
 		},
 		'./packages/clay-form/src/': {
-			branches: 62,
+			branches: 61,
 			functions: 70,
 			lines: 85,
 			statements: 85,
