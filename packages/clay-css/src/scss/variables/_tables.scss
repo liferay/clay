@@ -324,8 +324,8 @@ $c-table: map-deep-merge(
 		),
 		autofit-col: (
 			justify-content: center,
-			padding-left: nth($table-cell-padding, 2),
-			padding-right: nth($table-cell-padding, 2),
+			padding-left: calc(nth($table-cell-padding, 2) / 2),
+			padding-right: calc(nth($table-cell-padding, 2) / 2),
 			first-child: (
 				padding-left: 0,
 			),
