@@ -37,6 +37,21 @@ const itemsTree = [
 	},
 ];
 
+const emptyStateItems = [
+	{
+		id: 1,
+		name: 'Foo',
+		type: 'PNG',
+	},
+	{id: 2, name: 'Bar', type: 'Files'},
+	{
+		children: [],
+		id: 3,
+		name: 'Baz',
+		type: 'Folder',
+	},
+];
+
 describe('Table incremental interactions', () => {
 	afterEach(cleanup);
 
@@ -477,6 +492,35 @@ describe('Table incremental interactions', () => {
 				userEvent.keyboard('{ArrowLeft/}');
 
 				expect(thirdRow!.getAttribute('aria-expanded')).toBe('false');
+			});
+
+			it('does not render left arrow button when child array is empty', () => {
+				const {queryByRole} = render(
+					<Table columnsVisibility={false} nestedKey="children">
+						<Head items={columns}>
+							{(column) => (
+								<Cell key={column.id}>{column.name}</Cell>
+							)}
+						</Head>
+
+						<Body defaultItems={emptyStateItems}>
+							{(row) => (
+								<Row items={columns}>
+									{(column) => (
+										<Cell key={`${row.id}:${column.id}`}>
+											{/** @ts-ignore */}
+											{row[column.id]}
+										</Cell>
+									)}
+								</Row>
+							)}
+						</Body>
+					</Table>
+				);
+
+				const buttonRole = queryByRole('presentation');
+
+				expect(buttonRole).not.toBeInTheDocument();
 			});
 
 			it('pressing the left arrow key moves the focus to the row on the level above', () => {
