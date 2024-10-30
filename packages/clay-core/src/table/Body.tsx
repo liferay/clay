@@ -58,7 +58,10 @@ function* flatten<T extends Record<string, any>>(
 			_size: array.length,
 		} as unknown as T;
 
-		if (Array.isArray(array[i]![nestedKey])) {
+		if (
+			Array.isArray(array[i]![nestedKey]) &&
+			array[i]![nestedKey].length > 0
+		) {
 			delete item[nestedKey];
 			// @ts-ignore
 			item._expandable = true;
