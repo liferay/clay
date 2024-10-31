@@ -110,6 +110,11 @@ export type Props<P, K> = {
 	notFound?: JSX.Element;
 
 	/**
+	 * Defines which key should be used as the item identifier.
+	 */
+	itemIdKey?: string;
+
+	/**
 	 * Flag to enable force updating the root collection when layout creation
 	 * is done at render time from nested collections instead of assembling
 	 * everything in the root.

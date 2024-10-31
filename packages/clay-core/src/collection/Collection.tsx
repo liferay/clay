@@ -115,6 +115,7 @@ function DynamicCollection<
 	filter,
 	filterKey,
 	itemContainer,
+	itemIdKey,
 	items,
 	parentKey,
 	passthroughKey,
@@ -128,6 +129,7 @@ function DynamicCollection<
 		filter,
 		filterKey,
 		itemContainer,
+		itemIdKey,
 		items,
 		parentKey,
 		passthroughKey,
@@ -153,6 +155,7 @@ export function Collection<
 	filterKey,
 	isLoading,
 	itemContainer,
+	itemIdKey = 'id',
 	items,
 	onLoadMore,
 	parentKey,
@@ -210,6 +213,7 @@ export function Collection<
 				connectNested={connectNested}
 				estimateSize={estimateSize}
 				itemContainer={itemContainer}
+				itemIdKey={itemIdKey}
 				items={items}
 				parentKey={parentKey}
 				parentRef={parentRef}
@@ -228,6 +232,7 @@ export function Collection<
 				filter={filter}
 				filterKey={filterKey}
 				itemContainer={itemContainer}
+				itemIdKey={itemIdKey}
 				items={items}
 				parentKey={parentKey}
 				passthroughKey={passthroughKey}
