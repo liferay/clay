@@ -13,7 +13,7 @@ module.exports = {
 	},
 	extends: ['plugin:@liferay/react'],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@liferay', '@typescript-eslint'],
+	plugins: ['@liferay', '@typescript-eslint', 'react-compiler'],
 	rules: {
 		'@liferay/empty-line-between-elements': 'off',
 		'@liferay/no-dynamic-require': 'off',
