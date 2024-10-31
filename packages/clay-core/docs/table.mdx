@@ -278,6 +278,16 @@ When using the nested row pattern, Clay automatically changes the accessibility 
 
 Expanding nodes is done OOTB in the component but it is also possible to control the state to modify behaviors if necessary or use it to save a session to improve the user experience.
 
+<div class="clay-site-alert alert alert-warning">
+	<strong class="lead">Warning</strong>
+	If your data structure does not have a key property <code class="language-text">
+		id
+	</code> that is used as a unique identifier for each item, you need to configure
+	which key will be used to identify the item by using the <code class="language-text">
+		itemIdKey
+	</code> API in the <code class="language-text">Table</code> component.
+</div>
+
 ```jsx
 const [expandedKeys, setExpandedKeys] = useState(new Set());
 
@@ -289,7 +299,9 @@ const [expandedKeys, setExpandedKeys] = useState(new Set());
 	<Body defaultItems={rows}>
 		{(row) => (
 			<Row items={columns}>
-				{(column) => <Cell>{row[column.id]}</Cell>}
+				{(column) => (
+					<Cell key={`${row.id}:${column.id}`}>{row[column.id]}</Cell>
+				)}
 			</Row>
 		)}
 	</Body>
