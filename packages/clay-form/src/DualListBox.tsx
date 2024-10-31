@@ -168,10 +168,10 @@ const ClayDualListBox = ({
 		? leftSelected.length + rightItems!.length > rightMaxItems
 		: false;
 	const hasMaxItemsLeft = leftMaxItems
-		? leftItems!.length > leftMaxItems
+		? leftItems!.length >= leftMaxItems
 		: false;
 	const hasMaxItemsRight = rightMaxItems
-		? rightItems!.length > rightMaxItems
+		? rightItems!.length >= rightMaxItems
 		: false;
 
 	return (
@@ -199,8 +199,8 @@ const ClayDualListBox = ({
 						data-testid="ltr"
 						disabled={
 							disableLTR ||
-							isLeftError ||
-							hasMaxItemsLeft ||
+							hasMaxItemsRight ||
+							isRightError ||
 							disabled
 						}
 						displayType="secondary"
@@ -223,8 +223,8 @@ const ClayDualListBox = ({
 						data-testid="rtl"
 						disabled={
 							disableRTL ||
-							isRightError ||
-							hasMaxItemsRight ||
+							hasMaxItemsLeft ||
+							isLeftError ||
 							disabled
 						}
 						displayType="secondary"
@@ -260,17 +260,16 @@ const ClayDualListBox = ({
 				/>
 			</div>
 
-			{isLeftError ||
-				(isRightError && (
-					<Form.FeedbackGroup className="has-error">
-						<Form.FeedbackItem>
-							{sub(ariaLabels.error || defaultError, [
-								isLeftError ? left.label! : right.label!,
-								isLeftError ? leftMaxItems! : rightMaxItems!,
-							])}
-						</Form.FeedbackItem>
-					</Form.FeedbackGroup>
-				))}
+			{(isLeftError || isRightError) && (
+				<Form.FeedbackGroup className="has-error">
+					<Form.FeedbackItem>
+						{sub(ariaLabels.error || defaultError, [
+							isLeftError ? left.label! : right.label!,
+							isLeftError ? leftMaxItems! : rightMaxItems!,
+						])}
+					</Form.FeedbackItem>
+				</Form.FeedbackGroup>
+			)}
 		</div>
 	);
 };
