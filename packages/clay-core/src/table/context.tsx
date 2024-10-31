@@ -15,6 +15,7 @@ type Context = {
 	columnsVisibility: boolean;
 	expandedKeys: Set<React.Key>;
 	headCellsCount: number;
+	itemIdKey: string;
 	visibleColumns: Map<React.Key, number>;
 	messages: Record<string, string>;
 	nestedKey?: string;

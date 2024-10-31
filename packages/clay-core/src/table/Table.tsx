@@ -100,6 +100,11 @@ export type Props = {
 	nestedKey?: string;
 
 	/**
+	 * Defines which key should be used as the item identifier.
+	 */
+	itemIdKey?: string;
+
+	/**
 	 * Defines the size of the table.
 	 */
 	size?: 'sm' | 'lg';
@@ -123,6 +128,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 			defaultSort,
 			defaultVisibleColumns = new Map(),
 			expandedKeys: externalExpandedKeys,
+			itemIdKey = 'id',
 			messages = {
 				columnsVisibility: 'Manage Columns Visibility',
 				columnsVisibilityDescription:
@@ -214,6 +220,7 @@ export const Table = React.forwardRef<HTMLDivElement, Props>(
 							columnsVisibility,
 							expandedKeys,
 							headCellsCount,
+							itemIdKey,
 							messages,
 							nestedKey,
 							onExpandedChange: setExpandedKeys,

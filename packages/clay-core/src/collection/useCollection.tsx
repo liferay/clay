@@ -43,8 +43,8 @@ const CollectionContext = React.createContext({} as CollectionContextProps);
 
 const SECTION_NAMES = ['Group', 'Section'];
 
-function getItemId(value: Record<string, any> | string | number) {
-	return typeof value === 'object' ? value['id'] : value;
+function getItemId(value: Record<string, any> | string | number, key: string) {
+	return typeof value === 'object' ? value[key] : value;
 }
 
 export function useCollection<
@@ -59,6 +59,7 @@ export function useCollection<
 	filterKey,
 	forceDeepRootUpdate,
 	itemContainer: ItemContainer,
+	itemIdKey = 'id',
 	items,
 	notFound,
 	parentKey,
@@ -225,7 +226,7 @@ export function useCollection<
 
 					const key = getKey(
 						index,
-						child.key ?? getItemId(item),
+						child.key ?? getItemId(item, itemIdKey),
 						parentKey
 					);
 
@@ -252,7 +253,7 @@ export function useCollection<
 				});
 			}
 		},
-		[performFilter, publicApi]
+		[performFilter, publicApi, itemIdKey]
 	);
 
 	const performCollectionRender = useCallback(
@@ -303,7 +304,7 @@ export function useCollection<
 							child,
 							getKey(
 								virtual.index,
-								child.key ?? getItemId(item),
+								child.key ?? getItemId(item, itemIdKey),
 								parentKey
 							),
 							virtual.index,
@@ -324,7 +325,7 @@ export function useCollection<
 
 					const key = getKey(
 						index,
-						child.key ?? getItemId(item),
+						child.key ?? getItemId(item, itemIdKey),
 						parentKey
 					);
 
@@ -371,6 +372,7 @@ export function useCollection<
 			publicApi,
 			virtualizer?.getVirtualItems().length,
 			visibleKeys,
+			itemIdKey,
 		]
 	);
 
