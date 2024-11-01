@@ -63,6 +63,7 @@ $cadmin-menubar-vertical-transparent-md: map-deep-merge(
 			border-radius: $cadmin-border-radius,
 			color: $cadmin-gray-600,
 			letter-spacing: 0.016rem,
+			line-height: 1.25rem,
 			margin-bottom: 4px,
 			transition: #{color 0.15s ease-in-out,
 			background-color 0.15s ease-in-out,
