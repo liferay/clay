@@ -6,6 +6,7 @@ $menubar-vertical-transparent-md: map-deep-merge(
 		nav-link: (
 			border-radius: $border-radius,
 			letter-spacing: 0.016rem,
+			line-height: 1.25rem,
 			margin-bottom: 0.25rem,
 			transition: #{color 0.15s ease-in-out,
 			background-color 0.15s ease-in-out,
