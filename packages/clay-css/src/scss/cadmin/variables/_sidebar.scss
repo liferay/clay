@@ -9,7 +9,6 @@ $cadmin-sidebar-header-component-title: () !default;
 $cadmin-sidebar-header-component-title: map-deep-merge(
 	(
 		font-size: 20px,
-		font-weight: $cadmin-font-weight-semi-bold,
 		href: (
 			color: $cadmin-gray-900,
 		),
