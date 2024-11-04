@@ -101,6 +101,30 @@
 						@include clay-link(map-deep-get($map, thead, th, href));
 					}
 				}
+
+				.autofit-col {
+					$_autofit-col: setter(map-get($_thead, autofit-col), ());
+
+					@include clay-css($_autofit-col);
+
+					&:first-child {
+						$_first-child: setter(
+							map-get($_autofit-col, first-child),
+							()
+						);
+
+						@include clay-css($_first-child);
+					}
+
+					&:last-child {
+						$_last-child: setter(
+							map-get($_autofit-col, last-child),
+							()
+						);
+
+						@include clay-css($_last-child);
+					}
+				}
 			}
 
 			th,

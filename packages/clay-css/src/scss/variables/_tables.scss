@@ -246,6 +246,16 @@ $c-table: map-deep-merge(
 					th: (
 						href: $table-head-link,
 					),
+					autofit-col: (
+						padding-left: 0.125rem,
+						padding-right: 0.125rem,
+						first-child: (
+							padding-left: 0,
+						),
+						last-child: (
+							padding-right: 0,
+						),
+					),
 				)
 			),
 		table-column-start: (
