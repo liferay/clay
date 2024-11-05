@@ -414,6 +414,7 @@ const flagsData = {
 	"ru-ru":                        '"ru-ru", "Russian", "Russia"',
 	"ru-tj":                        '"ru-tj", "Russian", "Tajikistan"',
 	"ru-ru":                        '"ru-ru", "Russian", "Russia"',
+	"rw-rw":                        '"rw-rw", "Kinyarwanda", "Rwanda"',
 	"sa-in":                        '"sa-in", "Sanskrit", "India"',
 	"se-fi":                        '"se-fi", "Sami", "Inari Finland"',
 	"se-no":                        '"se-no", "Sami", "Southern Norway"',
