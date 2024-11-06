@@ -184,6 +184,11 @@ export interface IProps
 	 * The value that will be passed to the search input element.
 	 */
 	searchValue?: string;
+
+	/**
+	 * Flag indicating if the caret icon should be displayed on the right side.
+	 */
+	triggerIcon?: string;
 }
 
 const findNested = <
@@ -584,6 +589,7 @@ export const ClayDropDownWithItems = ({
 	searchable,
 	searchProps,
 	searchValue = '',
+	triggerIcon = 'undefined',
 	spritemap,
 	trigger,
 }: IProps) => {
@@ -637,6 +643,7 @@ export const ClayDropDownWithItems = ({
 					}
 				},
 			})}
+			triggerIcon={triggerIcon}
 		>
 			<ClayDropDownContext.Provider
 				value={{
