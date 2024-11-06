@@ -13,7 +13,17 @@ exports[`ClayDropDownWithDrilldown renders 1`] = `
         class="dropdown-toggle"
         data-testid="trigger"
         style=""
-      />
+      >
+         
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom ml-1"
+          role="presentation"
+        >
+          <use
+            href="#caret-bottom"
+          />
+        </svg>
+      </button>
     </div>
   </div>
   <div>
@@ -224,7 +234,17 @@ exports[`ClayDropDownWithDrilldown renders dividers 1`] = `
         class="dropdown-toggle"
         data-testid="trigger"
         style=""
-      />
+      >
+         
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom ml-1"
+          role="presentation"
+        >
+          <use
+            href="#caret-bottom"
+          />
+        </svg>
+      </button>
     </div>
   </div>
   <div>
@@ -450,7 +470,17 @@ exports[`ClayDropDownWithDrilldown renders with the menu initially active 1`] = 
         aria-haspopup="true"
         class="dropdown-toggle"
         data-testid="trigger"
-      />
+      >
+         
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom ml-1"
+          role="presentation"
+        >
+          <use
+            href="#caret-bottom"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </body>
@@ -468,7 +498,17 @@ exports[`ClayDropDownWithDrilldown the menu can be toggled by clicking in an ite
         aria-haspopup="true"
         class="dropdown-toggle"
         data-testid="trigger"
-      />
+      >
+         
+        <svg
+          class="lexicon-icon lexicon-icon-caret-bottom ml-1"
+          role="presentation"
+        >
+          <use
+            href="#caret-bottom"
+          />
+        </svg>
+      </button>
     </div>
   </div>
   <div>
