@@ -165,6 +165,7 @@ const ClayLocalizedInput = React.forwardRef<HTMLInputElement, IProps>(
 									</span>
 								</ClayButton>
 							}
+							triggerIcon="undefined"
 						>
 							<ClayDropDown.ItemList>
 								{locales.map((locale) => {
