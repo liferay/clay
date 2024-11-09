@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export type Status = | 'danger' | 'info' | 'success' | 'warning';
+export type Status = 'danger' | 'info' | 'success' | 'warning';
 
-export type Size = | 'full-screen' | 'lg' | 'sm';
+export type Size = 'full-screen' | 'lg' | 'sm';
 
 export enum ObserverType {
 	Close = 0,
