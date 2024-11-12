@@ -188,7 +188,7 @@ export interface IProps
 	/**
 	 * Flag indicating if the caret icon should be displayed on the right side.
 	 */
-	triggerIcon?: string;
+	triggerIcon?: string | null;
 }
 
 const findNested = <
@@ -589,7 +589,7 @@ export const ClayDropDownWithItems = ({
 	searchable,
 	searchProps,
 	searchValue = '',
-	triggerIcon = 'undefined',
+	triggerIcon = null,
 	spritemap,
 	trigger,
 }: IProps) => {

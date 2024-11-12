@@ -126,7 +126,7 @@ export interface IProps<T>
 	/**
 	 * Flag indicating if the caret icon should be displayed on the right side.
 	 */
-	triggerIcon?: string;
+	triggerIcon?: string | null;
 
 	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
@@ -238,14 +238,18 @@ function ClayDropDown<T>({
 				'aria-controls': ariaControls,
 				'aria-expanded': internalActive,
 				'aria-haspopup': 'true',
-				children: (
-					<>
-						{trigger.props.children}{' '}
-						{triggerIcon !== 'undefined' && (
+				children:
+					React.isValidElement(trigger) &&
+					// @ts-ignore
+					trigger?.type.displayName === 'ClayButton' &&
+					triggerIcon ? (
+						<>
+							{trigger.props.children}{' '}
 							<ClayIcon className="ml-1" symbol={triggerIcon} />
-						)}
-					</>
-				),
+						</>
+					) : (
+						trigger.props.children
+					),
 				className: classNames(
 					'dropdown-toggle',
 					trigger.props.className
