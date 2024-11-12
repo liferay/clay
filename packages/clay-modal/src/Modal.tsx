@@ -22,7 +22,7 @@ import Header, {
 	TitleSection,
 } from './Header';
 import {useUserInteractions} from './Hook';
-import {Observer, ObserverType, Size} from './types';
+import {Observer, ObserverType} from './types';
 
 interface IProps
 	extends React.HTMLAttributes<HTMLDivElement>,
@@ -52,7 +52,7 @@ interface IProps
 	/**
 	 * The size of element modal.
 	 */
-	size?: Size;
+	size?: 'full-screen' | 'lg' | 'sm';
 
 	/**
 	 * Observer is Modal's communication system with `useModal`
@@ -74,7 +74,7 @@ const warningMessage = `You need to pass the 'observer' prop to ClayModal for ev
 > 	<ClayModal observer={observer}>
 > 		...
 > 	</ClayModal>
-> ); 
+> );
 `;
 
 let counter = 0;
