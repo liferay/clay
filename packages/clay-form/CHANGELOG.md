@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
+
+### Bug Fixes
+
+-   **@clayui/form:** LPD-36696 DualListBox maximum items should correctly disable buttons and error message ([53e9e80](https://github.com/liferay/clay/commit/53e9e806b38a0fe76d709b0bdab0341ec56b3a5c))
+-   **@clayui/form:** LPD-36696 DualListBox adds children and don't disable left right buttons if no items are selected ([c796665](https://github.com/liferay/clay/commit/c796665296793965109aaf425fa3086d66b465ae))
+
+### Features
+
+-   **@clayui/form:** LPD-36696 Add new API to set maximum items for Left and Right side with error message ([8e0ab50](https://github.com/liferay/clay/commit/8e0ab5031c2f1ff596ea33e8ad25b6c81b5a1796))
+-   **@clayui/form:** LPD-36696 sf ([766d9a8](https://github.com/liferay/clay/commit/766d9a89570a030c2aa223910c10586e52549df8))
+
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
 ### Bug Fixes

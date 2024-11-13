@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
+
+
+### Bug Fixes
+
+* **@clayui/css:** LPD-39960 Fix padding between text and icon on table head ([f0f92e0](https://github.com/liferay/clay/commit/f0f92e0dc0453b1db5cab10fc58e3d3a1b5f24c2))
+* **@clayui/css:** LPD-39960 make autofit-col spacing smaller in thead ([8649001](https://github.com/liferay/clay/commit/86490017a745c6e1105a0643895ce4b76553dd72))
+* **@clayui/sidebar:** LPD-39580 Sidebar Header Title should be bold (700) ([e0090c3](https://github.com/liferay/clay/commit/e0090c377d90f1a30f2e9cc348dea82a3b47d120))
+* **@clayui/vertical-nav:** LPD-39579 Vertical Navigation Items height should be 40px by default, not 41px ([0c17878](https://github.com/liferay/clay/commit/0c17878a5ab308c3553e2b9fa0eed56e4b57a856))
+
+
+### Features
+
+* **@clayui/css:** LPD-39977 Add new marketplace icon ([cb64738](https://github.com/liferay/clay/commit/cb647389827dc10cb1c6fd456001cdc2300b2b7e))
+* **@clayui/css:** LPD-41347 - Add Rwanda Flag Icon ([2c48243](https://github.com/liferay/clay/commit/2c482432299ac635ee1442deca2163114c5b7fdb))
+
+
+
+
+
 # [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
 
 

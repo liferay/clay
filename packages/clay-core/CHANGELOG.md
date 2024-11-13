@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-39956 - Not render left arrow button when child array is empty ([2d154b4](https://github.com/liferay/clay/commit/2d154b422c494ffd5c9809d892352734a544f7ea))
+-   **@clayui/core:** LPD-39956 - Update tests ([eb0c15a](https://github.com/liferay/clay/commit/eb0c15a9f7a4e3f4418c6ad00868d3f297331900))
+-   **@clayui/picker:** LPD-38518 - Add case test for picker option ([97b6bbb](https://github.com/liferay/clay/commit/97b6bbbf777c1127b9545c66b7051fb967cc802d))
+-   **@clayui/picker:** LPD-38518 - Add prop "href" to handle options with links ([2392cb9](https://github.com/liferay/clay/commit/2392cb972a15194a7751ba8cbcbbc59997f73e63))
+
+### Features
+
+-   **@clayui/core:** add new API to set item id key for table ([c5b49d3](https://github.com/liferay/clay/commit/c5b49d3ecd8f75da616c9c2a4b35e2b32cb86bc5))
+
 # [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
 
 ### Features

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
+
+### Features
+
+-   **@clayui/css:** LPD-39977 Add new marketplace icon ([cb64738](https://github.com/liferay/clay/commit/cb647389827dc10cb1c6fd456001cdc2300b2b7e))
+-   **@clayui/css:** LPD-41347 - Add Rwanda Flag Icon ([2c48243](https://github.com/liferay/clay/commit/2c482432299ac635ee1442deca2163114c5b7fdb))
+
 # [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
 
 **Note:** Version bump only for package clayui.com

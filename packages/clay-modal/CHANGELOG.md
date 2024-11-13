@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
+
+### Bug Fixes
+
+-   **@clayui/modal:** LPD-41004 clayui.com Modal should list more detail about size ([1a922a4](https://github.com/liferay/clay/commit/1a922a4766d593210b5b48cec526fc0eca79ca4b))
+-   **@clayui/modal:** LPD-41004 exposes size types in the modal's Table API ([821a939](https://github.com/liferay/clay/commit/821a93946afb6b766ab4b1563c88033f21e58be6))
+
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
 **Note:** Version bump only for package @clayui/modal

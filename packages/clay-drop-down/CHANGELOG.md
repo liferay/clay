@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
+
+### Features
+
+-   **@clayui/dropdown:** LPD-41310 Adds caret icon only for trigger that is button ([aebf2f3](https://github.com/liferay/clay/commit/aebf2f3658851cdbb417da69d4376289b4702dd7))
+-   **@clayui/dropdown:** LPD-41310 Update Clay Dropdown Component to Include Caret Icon ([5a5ed73](https://github.com/liferay/clay/commit/5a5ed73880743362a0be7569df4e5ce484b776a5))
+-   **@clayui/dropdown:** LPD-41310 Update spanshots ([56dfcd7](https://github.com/liferay/clay/commit/56dfcd72015021861504e632294441a51c3b9d0b))
+
 # [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
 
 **Note:** Version bump only for package @clayui/drop-down

@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
+
+### Bug Fixes
+
+-   **@clayui/core:** LPD-39956 - Not render left arrow button when child array is empty ([2d154b4](https://github.com/liferay/clay/commit/2d154b422c494ffd5c9809d892352734a544f7ea))
+-   **@clayui/core:** LPD-39956 - Update tests ([eb0c15a](https://github.com/liferay/clay/commit/eb0c15a9f7a4e3f4418c6ad00868d3f297331900))
+-   **@clayui/css:** LPD-39960 Fix padding between text and icon on table head ([f0f92e0](https://github.com/liferay/clay/commit/f0f92e0dc0453b1db5cab10fc58e3d3a1b5f24c2))
+-   **@clayui/css:** LPD-39960 make autofit-col spacing smaller in thead ([8649001](https://github.com/liferay/clay/commit/86490017a745c6e1105a0643895ce4b76553dd72))
+-   **@clayui/form:** LPD-36696 DualListBox maximum items should correctly disable buttons and error message ([53e9e80](https://github.com/liferay/clay/commit/53e9e806b38a0fe76d709b0bdab0341ec56b3a5c))
+-   **@clayui/form:** LPD-36696 DualListBox adds children and don't disable left right buttons if no items are selected ([c796665](https://github.com/liferay/clay/commit/c796665296793965109aaf425fa3086d66b465ae))
+-   **@clayui/modal:** LPD-41004 clayui.com Modal should list more detail about size ([1a922a4](https://github.com/liferay/clay/commit/1a922a4766d593210b5b48cec526fc0eca79ca4b))
+-   **@clayui/modal:** LPD-41004 exposes size types in the modal's Table API ([821a939](https://github.com/liferay/clay/commit/821a93946afb6b766ab4b1563c88033f21e58be6))
+-   **@clayui/pagination-bar:** LPD-38518 - Add case test for pagination bar ([0294c7d](https://github.com/liferay/clay/commit/0294c7ddfe4ec96f0a064c748938c2c27076173a))
+-   **@clayui/picker:** LPD-38518 - Add case test for picker option ([97b6bbb](https://github.com/liferay/clay/commit/97b6bbbf777c1127b9545c66b7051fb967cc802d))
+-   **@clayui/picker:** LPD-38518 - Add prop "href" to handle options with links ([2392cb9](https://github.com/liferay/clay/commit/2392cb972a15194a7751ba8cbcbbc59997f73e63))
+-   **@clayui/sidebar:** LPD-39580 Sidebar Header Title should be bold (700) ([e0090c3](https://github.com/liferay/clay/commit/e0090c377d90f1a30f2e9cc348dea82a3b47d120))
+-   **@clayui/vertical-nav:** LPD-39579 Vertical Navigation Items height should be 40px by default, not 41px ([0c17878](https://github.com/liferay/clay/commit/0c17878a5ab308c3553e2b9fa0eed56e4b57a856))
+
+### Features
+
+-   **@clayui/core:** add new API to set item id key for table ([c5b49d3](https://github.com/liferay/clay/commit/c5b49d3ecd8f75da616c9c2a4b35e2b32cb86bc5))
+-   **@clayui/css:** LPD-39977 Add new marketplace icon ([cb64738](https://github.com/liferay/clay/commit/cb647389827dc10cb1c6fd456001cdc2300b2b7e))
+-   **@clayui/css:** LPD-41347 - Add Rwanda Flag Icon ([2c48243](https://github.com/liferay/clay/commit/2c482432299ac635ee1442deca2163114c5b7fdb))
+-   **@clayui/dropdown:** LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed ([1805059](https://github.com/liferay/clay/commit/18050596e1599f15aeb5959e395360910cba0250))
+-   **@clayui/dropdown:** LPD-41310 Adds caret icon only for trigger that is button ([aebf2f3](https://github.com/liferay/clay/commit/aebf2f3658851cdbb417da69d4376289b4702dd7))
+-   **@clayui/dropdown:** LPD-41310 Update Clay Dropdown Component to Include Caret Icon ([5a5ed73](https://github.com/liferay/clay/commit/5a5ed73880743362a0be7569df4e5ce484b776a5))
+-   **@clayui/dropdown:** LPD-41310 Update spanshots ([56dfcd7](https://github.com/liferay/clay/commit/56dfcd72015021861504e632294441a51c3b9d0b))
+-   **@clayui/form:** LPD-36696 Add new API to set maximum items for Left and Right side with error message ([8e0ab50](https://github.com/liferay/clay/commit/8e0ab5031c2f1ff596ea33e8ad25b6c81b5a1796))
+-   **@clayui/form:** LPD-36696 sf ([766d9a8](https://github.com/liferay/clay/commit/766d9a89570a030c2aa223910c10586e52549df8))
+-   adding react compiler plugin ([a2d14c9](https://github.com/liferay/clay/commit/a2d14c9fe85abc4b7cbdfd4f6456865f28498c84))
+
 # [3.121.0](https://github.com/liferay/clay/compare/v3.120.0...v3.121.0) (2024-10-17)
 
 ### Features
