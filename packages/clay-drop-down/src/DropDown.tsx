@@ -4,6 +4,7 @@
  */
 
 import {__NOT_PUBLIC_COLLECTION} from '@clayui/core';
+import ClayIcon from '@clayui/icon';
 import {
 	FOCUSABLE_ELEMENTS,
 	InternalDispatch,
@@ -123,6 +124,11 @@ export interface IProps<T>
 	renderMenuOnClick?: boolean;
 
 	/**
+	 * Flag indicating if the caret icon should be displayed on the right side.
+	 */
+	triggerIcon?: string | null;
+
+	/**
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
 	trigger: React.ReactElement & {
@@ -178,6 +184,7 @@ function ClayDropDown<T>({
 	renderMenuOnClick = false,
 	role = 'menu',
 	trigger,
+	triggerIcon = 'caret-bottom',
 	...otherProps
 }: IProps<T>) {
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
@@ -231,6 +238,18 @@ function ClayDropDown<T>({
 				'aria-controls': ariaControls,
 				'aria-expanded': internalActive,
 				'aria-haspopup': 'true',
+				children:
+					React.isValidElement(trigger) &&
+					// @ts-ignore
+					trigger?.type.displayName === 'ClayButton' &&
+					triggerIcon ? (
+						<>
+							{trigger.props.children}{' '}
+							<ClayIcon className="ml-1" symbol={triggerIcon} />
+						</>
+					) : (
+						trigger.props.children
+					),
 				className: classNames(
 					'dropdown-toggle',
 					trigger.props.className
