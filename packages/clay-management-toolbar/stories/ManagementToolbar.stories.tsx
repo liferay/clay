@@ -73,17 +73,13 @@ export const Default = () => {
 										<span className="navbar-text-truncate">
 											Filter and Order
 										</span>
-
-										<ClayIcon
-											className="inline-item inline-item-after"
-											symbol="caret-bottom"
-										/>
 									</span>
 									<span className="navbar-breakpoint-d-none">
 										<ClayIcon symbol="filter" />
 									</span>
 								</ClayButton>
 							}
+							triggerIcon="caret-bottom"
 						/>
 					</ClayManagementToolbar.Item>
 
@@ -168,6 +164,7 @@ export const Default = () => {
 								/>
 							</ClayButton>
 						}
+						triggerIcon="caret-double-l"
 					/>
 
 					<ClayManagementToolbar.Item>

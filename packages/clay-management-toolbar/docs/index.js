@@ -221,12 +221,6 @@ const ManagementToolbarCode = `const Component = () => {
 									<span className="navbar-text-truncate">
 										{'Filter and Order'}
 									</span>
-
-									<ClayIcon
-										className="inline-item inline-item-after"
-										spritemap={spritemap}
-										symbol="caret-bottom"
-									/>
 								</span>
 								<span className="navbar-breakpoint-d-none">
 									<ClayIcon
@@ -236,6 +230,7 @@ const ManagementToolbarCode = `const Component = () => {
 								</span>
 							</ClayButton>
 						}
+							triggerIcon="caret-bottom"
 					/>
 
 					<ClayManagementToolbar.Item>
@@ -332,6 +327,7 @@ const ManagementToolbarCode = `const Component = () => {
 									/>
 								</ClayButton>
 							}
+							triggerIcon="caret-double-l"
 						/>
 					</ClayManagementToolbar.Item>
 
