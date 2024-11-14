@@ -24,7 +24,9 @@ import {
     -   [Value](#value)
 -   [Without Trigger](#without-trigger)
 -   [Variants](#variants)
+    -   [Icon](#icon)
     -   [With Items](#with-items)
+        -   [Customizable Trigger Icon](#customizable-trigger-icon)
         -   [Cascading Menu](#cascading-menu)
     -   [Drilldown](#drilldown)
 -   [Caveats](#caveats)
@@ -249,11 +251,21 @@ const Menu = ({children, hasLeftSymbols, hasRightSymbols}) => {
 
 Clay provides other ways to use the Clay component, which we call high-level components, which are designed to do a specific high-level behavior different from compositing that allow different possibilities, are less flexible.
 
+### Icon
+
+By default, a caret icon (▼) is displayed alongside the button text to indicate the dropdown functionality. This visually indicates a dropdown menu and improve user understanding.
+
+The caret icon can be removed by passing `null` to the `triggerIcon` prop.
+
 ### With Items
 
 Allows you to create a simple DropDown, through its API you are able to create a Menu with groups of checkboxes and radios, links, buttons, search, caption, etc.
 
 <DropDownWithItems />
+
+#### Customizable Trigger Icon
+
+When using `DropDownWithItems`, you can customize the icon on the dropdown button via the `triggerIcon` prop.
 
 #### Cascading Menu
 
