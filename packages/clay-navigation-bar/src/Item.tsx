@@ -44,11 +44,7 @@ const ClayNavigationBarIcon = ({
 							'aria-current': active
 								? ariaCurrent ?? undefined
 								: undefined,
-							children: (
-								<span className="navbar-text-truncate">
-									{child.props.children}
-								</span>
-							),
+							children: <span>{child.props.children}</span>,
 							className: classNames(
 								'nav-link',
 								child.props.className?.replace('nav-link', ''),
