@@ -40,6 +40,7 @@ exports[`Table basic rendering render dynamic content 1`] = `
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                title="Manage Columns Visibility"
                 type="button"
               >
                 <svg
@@ -195,6 +196,7 @@ exports[`Table basic rendering render static content 1`] = `
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                title="Manage Columns Visibility"
                 type="button"
               >
                 <svg
@@ -350,8 +352,8 @@ exports[`Table basic rendering render with sort column 1`] = `
                 class="autofit-col"
               >
                 <button
-                  aria-label="sortable column"
                   class="component-action"
+                  title="sortable column"
                   type="button"
                 >
                   <svg
@@ -395,8 +397,8 @@ exports[`Table basic rendering render with sort column 1`] = `
                 class="autofit-col"
               >
                 <button
-                  aria-label="sortable column"
                   class="component-action"
+                  title="sortable column"
                   type="button"
                 >
                   <svg
@@ -424,6 +426,7 @@ exports[`Table basic rendering render with sort column 1`] = `
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                title="Manage Columns Visibility"
                 type="button"
               >
                 <svg
@@ -584,6 +587,7 @@ exports[`Table basic rendering render with treegrid 1`] = `
                 aria-haspopup="true"
                 aria-label="Manage Columns Visibility"
                 class="dropdown-toggle btn btn-monospaced btn-outline-borderless btn-outline-secondary"
+                title="Manage Columns Visibility"
                 type="button"
               >
                 <svg
@@ -673,9 +677,9 @@ exports[`Table basic rendering render with treegrid 1`] = `
                 class="autofit-col-toggle autofit-col"
               >
                 <button
-                  aria-label="expandable"
                   class="btn btn-monospaced btn-outline-borderless btn-outline-secondary btn-xs"
                   tabindex="-1"
+                  title="expandable"
                   type="button"
                 >
                   <svg

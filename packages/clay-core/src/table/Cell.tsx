@@ -255,8 +255,8 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						</Layout.ContentCol>
 						<Layout.ContentCol>
 							<button
-								aria-label={messages['sortDescription']}
 								className="component-action"
+								title={messages['sortDescription']}
 								type="button"
 							>
 								<Icon
@@ -286,7 +286,6 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 						{isExpandable && (
 							<Layout.ContentCol className="autofit-col-toggle">
 								<Button
-									aria-label={messages['expandable']}
 									borderless
 									displayType="secondary"
 									monospaced
@@ -299,6 +298,7 @@ export const Cell = React.forwardRef<HTMLTableCellElement, Props>(
 									}}
 									size="xs"
 									tabIndex={-1}
+									title={messages['expandable']}
 								>
 									<Icon
 										symbol={

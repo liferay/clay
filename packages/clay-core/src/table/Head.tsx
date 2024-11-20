@@ -117,6 +117,7 @@ function HeadInner<T extends Record<string, any>>(
 										borderless
 										displayType="secondary"
 										monospaced
+										title={messages['columnsVisibility']}
 									>
 										<Icon symbol="caret-bottom" />
 									</Button>
