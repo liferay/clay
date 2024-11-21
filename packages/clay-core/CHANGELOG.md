@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.123.0](https://github.com/liferay/clay/compare/v3.122.0...v3.123.0) (2024-11-21)
+
+### Features
+
+-   **@clayui/table:** LPD-42395 Add tooltips to table action buttons in Clay Table ([2834a18](https://github.com/liferay/clay/commit/2834a1823c064d035d223aaf0fe4dfbb14f161fd))
+-   **@clayui/table:** LPD-42395 Update snapshot ([09038db](https://github.com/liferay/clay/commit/09038db3141e12383efc68905240890568a74337))
+
 # [3.122.0](https://github.com/liferay/clay/compare/v3.121.0...v3.122.0) (2024-11-13)
 
 ### Bug Fixes
