@@ -402,6 +402,106 @@ $sticker-dark: map-deep-merge(
 	$sticker-dark
 );
 
+$sticker-space-color-0: () !default;
+$sticker-space-color-0: map-deep-merge(
+	(
+		background-color: $light,
+		border: 1px solid $dark,
+		color: $dark,
+	),
+	$sticker-space-color-0
+);
+
+$sticker-space-color-1: () !default;
+$sticker-space-color-1: map-deep-merge(
+	(
+		background-color: $purple-l5,
+		border: 1px solid $purple,
+		color: $purple,
+	),
+	$sticker-space-color-1
+);
+
+$sticker-space-color-2: () !default;
+$sticker-space-color-2: map-deep-merge(
+	(
+		background-color: $yellow-l5,
+		border: 1px solid $yellow-d3,
+		color: $yellow-d3,
+	),
+	$sticker-space-color-2
+);
+
+$sticker-space-color-3: () !default;
+$sticker-space-color-3: map-deep-merge(
+	(
+		background-color: $green-l5,
+		border: 1px solid $green,
+		color: $green,
+	),
+	$sticker-space-color-3
+);
+
+$sticker-space-color-4: () !default;
+$sticker-space-color-4: map-deep-merge(
+	(
+		background-color: $red-l5,
+		border: 1px solid $red,
+		color: $red,
+	),
+	$sticker-space-color-4
+);
+
+$sticker-space-color-5: () !default;
+$sticker-space-color-5: map-deep-merge(
+	(
+		background-color: $orange-l5,
+		border: 1px solid $orange,
+		color: $orange,
+	),
+	$sticker-space-color-5
+);
+
+$sticker-space-color-6: () !default;
+$sticker-space-color-6: map-deep-merge(
+	(
+		background-color: $teal-l5,
+		border: 1px solid $teal,
+		color: $teal,
+	),
+	$sticker-space-color-6
+);
+
+$sticker-space-color-7: () !default;
+$sticker-space-color-7: map-deep-merge(
+	(
+		background-color: $cyan-l5,
+		border: 1px solid $cyan,
+		color: $cyan,
+	),
+	$sticker-space-color-7
+);
+
+$sticker-space-color-8: () !default;
+$sticker-space-color-8: map-deep-merge(
+	(
+		background-color: $pink-l5,
+		border: 1px solid $pink,
+		color: $pink-d4,
+	),
+	$sticker-space-color-8
+);
+
+$sticker-space-color-9: () !default;
+$sticker-space-color-9: map-deep-merge(
+	(
+		background-color: $white,
+		border: 1px solid $dark-l2,
+		color: $dark-l2,
+	),
+	$sticker-space-color-9
+);
+
 $sticker-palette: () !default;
 $sticker-palette: map-deep-merge(
 	(
@@ -413,6 +513,16 @@ $sticker-palette: map-deep-merge(
 		danger: $sticker-danger,
 		light: $sticker-light,
 		dark: $sticker-dark,
+		'.sticker-space-color-0': $sticker-space-color-0,
+		'.sticker-space-color-1': $sticker-space-color-1,
+		'.sticker-space-color-2': $sticker-space-color-2,
+		'.sticker-space-color-3': $sticker-space-color-3,
+		'.sticker-space-color-4': $sticker-space-color-4,
+		'.sticker-space-color-5': $sticker-space-color-5,
+		'.sticker-space-color-6': $sticker-space-color-6,
+		'.sticker-space-color-7': $sticker-space-color-7,
+		'.sticker-space-color-8': $sticker-space-color-8,
+		'.sticker-space-color-9': $sticker-space-color-9,
 	),
 	$sticker-palette
 );
