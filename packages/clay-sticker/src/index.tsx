@@ -15,7 +15,17 @@ export type DisplayType =
 	| 'secondary'
 	| 'success'
 	| 'unstyled'
-	| 'warning';
+	| 'warning'
+	| 'space-color-0'
+	| 'space-color-1'
+	| 'space-color-2'
+	| 'space-color-3'
+	| 'space-color-4'
+	| 'space-color-5'
+	| 'space-color-6'
+	| 'space-color-7'
+	| 'space-color-8'
+	| 'space-color-9';
 
 type Shape = 'circle' | 'user-icon';
 
