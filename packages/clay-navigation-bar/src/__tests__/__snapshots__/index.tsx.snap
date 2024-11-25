@@ -19,9 +19,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
           class="nav-link active"
           href="#1"
         >
-          <span
-            class="navbar-text-truncate"
-          >
+          <span>
             Item 1
           </span>
         </a>
@@ -33,9 +31,7 @@ exports[`ClayNavigationBar collapses the previously expanded dropdown when trigg
           class="nav-link btn"
           type="button"
         >
-          <span
-            class="navbar-text-truncate"
-          >
+          <span>
             Item 2
           </span>
         </button>
@@ -91,9 +87,7 @@ exports[`ClayNavigationBar renders 1`] = `
                 class="nav-link active"
                 href="#1"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 1
                 </span>
               </a>
@@ -105,9 +99,7 @@ exports[`ClayNavigationBar renders 1`] = `
                 class="nav-link btn"
                 type="button"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 2
                 </span>
               </button>
@@ -119,9 +111,7 @@ exports[`ClayNavigationBar renders 1`] = `
                 class="nav-link"
                 href="#3"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 3
                 </span>
               </a>
@@ -209,9 +199,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
           class="nav-link active"
           href="#1"
         >
-          <span
-            class="navbar-text-truncate"
-          >
+          <span>
             Item 1
           </span>
         </a>
@@ -223,9 +211,7 @@ exports[`ClayNavigationBar renders a dropdown when clicking the trigger element 
           class="nav-link btn"
           type="button"
         >
-          <span
-            class="navbar-text-truncate"
-          >
+          <span>
             Item 2
           </span>
         </button>
@@ -280,9 +266,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
                 class="nav-link"
                 href="#1"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 1
                 </span>
               </a>
@@ -295,9 +279,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
                 class="nav-link active btn"
                 type="button"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 2
                 </span>
               </button>
@@ -309,9 +291,7 @@ exports[`ClayNavigationBar renders when passing more than one active item 1`] = 
                 class="nav-link"
                 href="#3"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 3
                 </span>
               </a>
@@ -370,9 +350,7 @@ exports[`ClayNavigationBar renders with a single item 1`] = `
                 class="nav-link active"
                 href="#1"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 1
                 </span>
               </a>
@@ -431,9 +409,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
                 class="nav-link active"
                 href="#1"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 1
                 </span>
               </a>
@@ -446,9 +422,7 @@ exports[`ClayNavigationBar throws a warning when passing more than one active pr
                 class="nav-link active btn"
                 type="button"
               >
-                <span
-                  class="navbar-text-truncate"
-                >
+                <span>
                   Item 2
                 </span>
               </button>
