@@ -91,6 +91,7 @@ export const Default = (args: any) => (
 		menuWidth={args.width}
 		renderMenuOnClick={args.renderMenuOnClick}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		<ClayDropDown.ItemList>
 			{[
@@ -123,6 +124,7 @@ export const Dynamic = () => (
 	<ClayDropDown
 		items={['one', 'two', 'three', 'four']}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		{(item) => (
 			<ClayDropDown.Item key={item} onClick={() => {}}>
@@ -134,7 +136,10 @@ export const Dynamic = () => (
 
 export const DynamicWithSearch = () => {
 	return (
-		<ClayDropDown trigger={<ClayButton>Click Me</ClayButton>}>
+		<ClayDropDown
+			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
+		>
 			<ClayDropDown.Search placeholder="Type to filter" />
 			<ClayDropDown.ItemList items={['one', 'two', 'three', 'four']}>
 				{(item: string) => (
@@ -173,6 +178,7 @@ export const DynamicGroup = () => {
 		<ClayDropDown
 			filterKey="name"
 			trigger={<ClayButton>Select</ClayButton>}
+			triggerIcon="caret-bottom"
 		>
 			<ClayDropDown.Search placeholder="Type to filter" />
 			<ClayDropDown.ItemList items={items}>
@@ -201,6 +207,7 @@ export const Groups = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Group header="Group #1">
@@ -234,6 +241,7 @@ export const Checkbox = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Section>
@@ -254,6 +262,7 @@ export const Search = () => {
 		<ClayDropDown
 			alignmentPosition={Align.BottomLeft}
 			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
 		>
 			<ClayDropDown.Search
 				onChange={(event) => setQuery(event.target.value)}
@@ -282,6 +291,7 @@ export const Radio = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		<ClayDropDown.ItemList>
 			<ClayDropDown.Group header="Order">
@@ -300,6 +310,7 @@ export const CaptionAndHelp = () => (
 	<ClayDropDown
 		alignmentPosition={Align.BottomLeft}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		<ClayDropDown.Help>Can I help you?</ClayDropDown.Help>
 
@@ -325,6 +336,7 @@ export const ItemsWithIcons = () => (
 		hasLeftSymbols
 		hasRightSymbols
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		<ClayDropDown.ItemList>
 			{[
@@ -350,6 +362,7 @@ export const CustomOffset = () => (
 		alignmentPosition={Align.BottomLeft}
 		offsetFn={() => [20, 20]}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	>
 		<ClayDropDown.ItemList>
 			{[
@@ -382,6 +395,7 @@ export const AlignmentPositions = () => (
 					]}
 					key={alignPosition}
 					trigger={<ClayButton>{alignPosition}</ClayButton>}
+					triggerIcon="caret-bottom"
 				/>
 				<br />
 			</>
@@ -413,6 +427,7 @@ export const Drilldown = (args: any) => (
 		}}
 		renderMenuOnClick={args.renderMenuOnClick}
 		trigger={<ClayButton>Click Me</ClayButton>}
+		triggerIcon="caret-bottom"
 	/>
 );
 
@@ -455,6 +470,7 @@ export const DrillDownWithActive = () => {
 			}}
 			onActiveChange={onActiveChange}
 			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
 		/>
 	);
 };
@@ -486,6 +502,7 @@ export const DropDownWithItems = (args: any) => {
 			searchValue={value}
 			searchable={args.searchable}
 			trigger={<ClayButton>Click Me</ClayButton>}
+			triggerIcon="caret-bottom"
 		/>
 	);
 };
@@ -526,6 +543,7 @@ export const DropDownWithItemsWithCustomActive = () => {
 				searchValue={value}
 				searchable
 				trigger={<ClayButton>Click Me</ClayButton>}
+				triggerIcon="caret-bottom"
 			/>
 
 			<button onClick={() => setActive(!active)} style={{float: 'right'}}>
@@ -622,5 +640,6 @@ export const CascadingMenu = () => (
 			{label: 'Repository'},
 		]}
 		trigger={<ClayButton>Cascading Menu</ClayButton>}
+		triggerIcon="caret-bottom"
 	/>
 );
