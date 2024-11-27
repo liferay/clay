@@ -13,7 +13,7 @@ import React, {useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import warning from 'warning';
 
-import Item from './Item';
+import {Item} from './Item';
 import {NavigationBarContext} from './context';
 
 export interface IProps
@@ -54,11 +54,7 @@ export interface IProps
 	triggerLabel: string;
 }
 
-function ClayNavigationBar(props: IProps): JSX.Element & {
-	Item: typeof Item;
-};
-
-function ClayNavigationBar({
+function NavigationBar({
 	children,
 	className,
 	fluidSize,
@@ -164,6 +160,7 @@ function ClayNavigationBar({
 	);
 }
 
-ClayNavigationBar.Item = Item;
+NavigationBar.Item = Item;
 
-export default ClayNavigationBar;
+export {NavigationBar, Item};
+export default NavigationBar;
