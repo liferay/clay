@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.123.1](https://github.com/liferay/clay/compare/v3.123.0...v3.123.1) (2024-11-27)
+
+### Bug Fixes
+
+-   **@clayui/core:** Adapt snapshots ([c218410](https://github.com/liferay/clay/commit/c218410398160abb942b68c2a73d42fe058cfe74))
+-   **@clayui/core:** Remove navbar-text-truncate class ([3ca40d6](https://github.com/liferay/clay/commit/3ca40d6b7b26de39ed1c8089f21047c2f749d160))
+
 # [3.119.0](https://github.com/liferay/clay/compare/v3.118.0...v3.119.0) (2024-08-30)
 
 ### Features

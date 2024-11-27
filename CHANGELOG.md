@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.123.1](https://github.com/liferay/clay/compare/v3.123.0...v3.123.1) (2024-11-27)
+
+### Bug Fixes
+
+-   **@clayui/core:** Adapt snapshots ([c218410](https://github.com/liferay/clay/commit/c218410398160abb942b68c2a73d42fe058cfe74))
+-   **@clayui/core:** Remove navbar-text-truncate class ([3ca40d6](https://github.com/liferay/clay/commit/3ca40d6b7b26de39ed1c8089f21047c2f749d160))
+
+### Reverts
+
+-   Revert "feat(@clayui/dropdown): LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed" ([7d9f443](https://github.com/liferay/clay/commit/7d9f443586d32b854953a24ae82318628e7a3676))
+
 # [3.123.0](https://github.com/liferay/clay/compare/v3.122.0...v3.123.0) (2024-11-21)
 
 ### Features

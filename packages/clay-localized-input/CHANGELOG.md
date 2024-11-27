@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.123.1](https://github.com/liferay/clay/compare/v3.123.0...v3.123.1) (2024-11-27)
+
+### Reverts
+
+-   Revert "feat(@clayui/dropdown): LPD-41310 Add "triggerIcon=undefined" prop to prevent caret-icon to be displayed" ([7d9f443](https://github.com/liferay/clay/commit/7d9f443586d32b854953a24ae82318628e7a3676))
+
 # [3.123.0](https://github.com/liferay/clay/compare/v3.122.0...v3.123.0) (2024-11-21)
 
 **Note:** Version bump only for package @clayui/localized-input
