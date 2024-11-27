@@ -109,6 +109,11 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	 * Element that is used as the trigger which will activate the dropdown on click.
 	 */
 	trigger: React.ReactElement;
+
+	/**
+	 * Flag indicating if the caret icon should be displayed on the right side.
+	 */
+	triggerIcon?: string | null;
 }
 
 type History = {
@@ -138,6 +143,7 @@ export const ClayDropDownWithDrilldown = ({
 	renderMenuOnClick,
 	spritemap,
 	trigger,
+	triggerIcon = null,
 }: IProps) => {
 	const [activeMenu, setActiveMenu] = useState(
 		defaultActiveMenu ?? initialActiveMenu
@@ -218,6 +224,7 @@ export const ClayDropDownWithDrilldown = ({
 			}}
 			renderMenuOnClick={renderMenuOnClick}
 			trigger={trigger}
+			triggerIcon={triggerIcon}
 		>
 			<Drilldown.Inner ref={innerRef}>
 				{menuIds.map((menuKey) => {

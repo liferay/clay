@@ -16,7 +16,7 @@ const dropDownImportsCode = `import ClayDropDown from '@clayui/drop-down';`;
 const dropDownCode = `const Component = () => {
 	return (
 		<ClayDropDown
-			trigger={<button className="btn btn-primary">Click here!</button>}
+			closeOnClick
 			menuElementAttrs={{
 				className: 'my-custom-dropdown-menu',
 				containerProps: {
@@ -24,7 +24,8 @@ const dropDownCode = `const Component = () => {
 					id: 'dropdownMenuReactPortalDiv',
 				},
 			}}
-			closeOnClick
+			trigger={<button className="btn btn-primary">Click here!</button>}
+			triggerIcon='caret-bottom'
 		>
 			<ClayDropDown.Help>{'Can I help you?'}</ClayDropDown.Help>
 			<ClayDropDown.ItemList>
@@ -153,6 +154,7 @@ const dropDownWithItemsCode = `const Component = () => {
 			searchable={true}
 			spritemap={spritemap}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			triggerIcon='caret-bottom'
 		/>
     );
 }
@@ -194,6 +196,7 @@ const dropDownWithDrilldownCode = `const Component = () => {
 			}}
 			spritemap={spritemap}
 			trigger={<ClayButton>{'Click Me'}</ClayButton>}
+			triggerIcon='caret-bottom'
 		/>
     );
 }
@@ -241,6 +244,7 @@ const dropDownExampleCode = `const Component = () => {
 		<DropDown
 			filterKey="name"
 			trigger={<Button>Select</Button>}
+			triggerIcon='caret-bottom'
 		>
 			<DropDown.Search placeholder="Type to filter" />
 			<DropDown.ItemList items={items}>

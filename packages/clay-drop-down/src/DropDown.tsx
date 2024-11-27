@@ -184,7 +184,7 @@ function ClayDropDown<T>({
 	renderMenuOnClick = false,
 	role = 'menu',
 	trigger,
-	triggerIcon = 'caret-bottom',
+	triggerIcon = null,
 	...otherProps
 }: IProps<T>) {
 	const triggerElementRef = useRef<HTMLButtonElement | null>(null);
