@@ -36,7 +36,7 @@ const Header = React.forwardRef<HTMLLIElement, HeaderProps>(
 	}
 );
 
-type Props<T> = {
+interface IProps<T> extends React.TableHTMLAttributes<HTMLTableSectionElement> {
 	/**
 	 * Children content to render a dynamic or static content.
 	 */
@@ -46,10 +46,10 @@ type Props<T> = {
 	 * Property to render content with dynamic data.
 	 */
 	items?: Array<T>;
-} & React.TableHTMLAttributes<HTMLTableSectionElement>;
+}
 
-function HeadInner<T extends Record<string, any>>(
-	{children, items, ...otherProps}: Props<T>,
+export const Head = function HeadInner<T extends Record<string, any>>(
+	{children, items, ...otherProps}: IProps<T>,
 	ref: React.Ref<HTMLTableSectionElement>
 ) {
 	const {
@@ -214,15 +214,15 @@ function HeadInner<T extends Record<string, any>>(
 			</ScopeContext.Provider>
 		</thead>
 	);
-}
+};
 
 type ForwardRef = {
 	displayName: string;
 	<T>(
-		props: Props<T> & {ref?: React.Ref<HTMLTableSectionElement>}
+		props: IProps<T> & {ref?: React.Ref<HTMLTableSectionElement>}
 	): JSX.Element;
 };
 
-export const Head = React.forwardRef(HeadInner) as ForwardRef;
+export const ForwardHead = React.forwardRef(Head) as ForwardRef;
 
-Head.displayName = 'TableHead';
+ForwardHead.displayName = 'TableHead';
