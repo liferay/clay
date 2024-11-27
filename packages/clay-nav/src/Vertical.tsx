@@ -7,6 +7,8 @@ import {Nav, VerticalNav} from '@clayui/core';
 import React from 'react';
 import warning from 'warning';
 
+export type DisplayType = null | 'primary';
+
 interface IItem extends React.ComponentProps<typeof Nav.Item> {
 	/**
 	 * Flag to indicate if item is active.
@@ -64,6 +66,11 @@ export interface IProps extends React.ComponentProps<typeof VerticalNav> {
 	activeLabel?: string;
 
 	/**
+	 * Determines the Vertical Nav variant to use.
+	 */
+	displayType?: DisplayType;
+
+	/**
 	 * Flag to activate the Decorator variation.
 	 */
 	decorated?: boolean;
@@ -102,6 +109,7 @@ function ClayVerticalNav(props: IProps): JSX.Element & {
 function ClayVerticalNav({
 	activeLabel,
 	children,
+	displayType,
 	triggerLabel = 'Menu',
 	...otherProps
 }: IProps) {
@@ -110,7 +118,7 @@ function ClayVerticalNav({
 		'ClayVerticalNav: The `activeLabel` API has been deprecated in favor of `triggerLabel` and will be removed in the next major release.'
 	);
 
-	if (children) {
+	if (children && !displayType) {
 		return (
 			<VerticalNav
 				{...otherProps}

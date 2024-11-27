@@ -11,12 +11,14 @@ $nav-link-disabled-cursor: $disabled-cursor !default;
 $nav-link: () !default;
 $nav-link: map-deep-merge(
 	(
+		cursor: pointer,
 		display: block,
 		padding-bottom: $nav-link-padding-y,
 		padding-left: $nav-link-padding-x,
 		padding-right: $nav-link-padding-x,
 		padding-top: $nav-link-padding-y,
 		position: relative,
+		user-select: none,
 		hover: (
 			text-decoration: none,
 		),
