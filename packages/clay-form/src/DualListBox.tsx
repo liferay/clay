@@ -101,7 +101,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 	spritemap?: string;
 }
 
-const ClayDualListBox = ({
+export const DualListBox = ({
 	ariaLabels = {
 		transferLTR: 'Transfer Item Left to Right',
 		transferRTL: 'Transfer Item Right to Left',
@@ -214,4 +214,4 @@ const ClayDualListBox = ({
 	);
 };
 
-export default ClayDualListBox;
+export default DualListBox;
