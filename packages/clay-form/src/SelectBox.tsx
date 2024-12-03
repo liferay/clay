@@ -130,7 +130,7 @@ export const getSelectedIndexes = (
 		return acc;
 	}, []);
 
-const ClaySelectBox = ({
+export const SelectBox = ({
 	ariaLabels = {
 		reorderDown: 'Reorder Down',
 		reorderUp: 'Reorder Up',
@@ -262,4 +262,4 @@ const ClaySelectBox = ({
 	);
 };
 
-export default ClaySelectBox;
+export default SelectBox;
