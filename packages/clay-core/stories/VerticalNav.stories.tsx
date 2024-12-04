@@ -6,6 +6,10 @@
 import Button from '@clayui/button';
 import React, {useState} from 'react';
 
+import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import ClayIcon from '@clayui/icon';
+import ClayLink from '@clayui/link';
+
 import {VerticalNav} from '../src';
 
 type Item = {
@@ -483,5 +487,149 @@ export const ControlledExpandedKeys = () => {
 				)}
 			</VerticalNav>
 		</>
+	);
+};
+
+const items_cms_product_menu = [
+	{
+		href: '#home',
+		icon: 'home',
+		label: 'Home',
+	},
+	{
+		href: '#analytics',
+		icon: 'analytics',
+		label: 'Analytics',
+	},
+	{
+		itemClass: 'mt-3',
+		items: [
+			{
+				href: '#all',
+				icon: 'sheets',
+				label: 'All',
+			},
+			{
+				href: '#content',
+				icon: 'catalog',
+				label: 'Content',
+			},
+			{
+				href: '#files',
+				icon: 'documents-and-media',
+				label: 'Files',
+			},
+		],
+		label: 'Assets',
+	},
+	{
+		href: '#shared-with-me',
+		icon: 'users',
+		itemClass: 'mt-3',
+		label: 'Shared With Me',
+	},
+	{
+		itemClass: 'mt-3',
+		items: [
+			{
+				href: '#structures',
+				icon: 'edit-layout',
+				label: 'Structures',
+			},
+			{
+				href: '#collections',
+				icon: 'books',
+				label: 'Collections',
+			},
+			{
+				href: '#categorization',
+				icon: 'vocabulary',
+				label: 'Categorization',
+			},
+			{
+				href: '#workflow',
+				icon: 'workflow',
+				label: 'Workflow',
+			},
+		],
+		label: 'Admin',
+	},
+	{
+		itemClass: 'mt-3',
+		items: [
+			{
+				href: '#marketing',
+				label: 'Marketing',
+				sticker: {
+					displayType: 'danger',
+					label: 'M',
+				},
+			},
+			{
+				href: '#campaigns',
+				label: 'Campaigns',
+				sticker: {
+					displaytype: 'primary',
+					label: 'C',
+				},
+			},
+			{
+				href: '#all-spaces',
+				icon: 'box-container',
+				label: 'All Spaces',
+			},
+		],
+		label: 'Spaces',
+		plusButton: {
+			ariaLabel: 'New Space',
+			title: 'New Space',
+		},
+	},
+	{
+		href: '#recycle-bin',
+		icon: 'trash',
+		itemClass: 'mt-3',
+		label: 'Recycle Bin',
+	},
+] as Array<Item>;
+
+export const Primary = () => {
+	return (
+		<VerticalNav
+			active="Home"
+			displayType="primary"
+			items={items_cms_product_menu}
+		>
+			{(item) => (
+				<VerticalNav.Item
+					href={item.href}
+					items={item.items}
+					key={item.label}
+				>
+					<div className="autofit-row">
+						{item.icon && (
+							<div className="autofit-col">
+								<ClayIcon symbol={item.icon} />
+							</div>
+						)}
+						<div className="autofit-col autofit-col-expand">
+							{item.label}
+						</div>
+						{item.plusButton && (
+							<div className="autofit-col">
+								<ClayButtonWithIcon
+									aria-label={item.plusButton.ariaLabel}
+									displayType="secondary"
+									monospaced
+									size="xs"
+									symbol="plus"
+									title={item.plusButton.title}
+								/>
+							</div>
+						)}
+					</div>
+				</VerticalNav.Item>
+			)}
+		</VerticalNav>
 	);
 };
