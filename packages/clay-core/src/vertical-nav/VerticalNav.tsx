@@ -34,16 +34,6 @@ const Trigger = ({
 	</Button>
 );
 
-const Menubar = ({collection, value}) => {
-	return (
-		<Nav aria-orientation="vertical" nested role="menubar">
-			<VerticalNavContext.Provider value={value}>
-				<Collection collection={collection} />
-			</VerticalNavContext.Provider>
-		</Nav>
-	);
-};
-
 type Props<T extends Record<string, any> | string> = {
 	/**
 	 * Flag to define which item has the active state/current page.
@@ -254,22 +244,30 @@ function VerticalNav<T extends Record<string, any> | string>({
 		return depthActive(items as Array<Record<string, any>>);
 	}, [active, items]);
 
-	const menubarValue = {
-		activeKey:
-			active && collection.hasItem(active)
-				? active
-				: hasDepthActive
-				? null
-				: undefined,
-		ariaCurrent: ariaCurrent ? 'page' : null,
-		childrenRoot: childrenRootRef,
-		close,
-		expandedKeys,
-		firstKey: collection.getFirstItem().key,
-		open,
-		spritemap,
-		toggle,
-	};
+	const content = (
+		<Nav aria-orientation="vertical" nested role="menubar">
+			<VerticalNavContext.Provider
+				value={{
+					activeKey:
+						active && collection.hasItem(active)
+							? active
+							: hasDepthActive
+							? null
+							: undefined,
+					ariaCurrent: ariaCurrent ? 'page' : null,
+					childrenRoot: childrenRootRef,
+					close,
+					expandedKeys,
+					firstKey: collection.getFirstItem().key,
+					open,
+					spritemap,
+					toggle,
+				}}
+			>
+				<Collection collection={collection} />
+			</VerticalNavContext.Provider>
+		</Nav>
+	);
 
 	return (
 		<nav
@@ -303,16 +301,12 @@ function VerticalNav<T extends Record<string, any> | string>({
 						})}
 						ref={containerRef}
 					>
-						<Menubar collection={collection} value={menubarValue} />
+						{content}
 					</div>
 				</>
 			)}
 
-			{displayType === 'primary' && (
-				<>
-					<Menubar collection={collection} value={menubarValue} />
-				</>
-			)}
+			{displayType === 'primary' && content}
 		</nav>
 	);
 }
