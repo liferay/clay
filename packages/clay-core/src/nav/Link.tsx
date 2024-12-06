@@ -36,7 +36,7 @@ export interface IProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export const Link = React.forwardRef<
-	HTMLButtonElement | HTMLAnchorElement,
+	HTMLButtonElement | HTMLAnchorElement | HTMLDivElement,
 	IProps
 >(
 	(
@@ -55,14 +55,18 @@ export const Link = React.forwardRef<
 		if (showIcon) {
 			return (
 				<div
-					{...otherProps}
+					{...(otherProps as Omit<
+						IProps,
+						keyof React.AnchorHTMLAttributes<HTMLAnchorElement>
+					> &
+						React.HTMLAttributes<HTMLDivElement>)}
 					className={classNames('nav-link', className, {
 						active,
 						['collapse-icon']: showIcon,
 						collapsed,
 						disabled,
 					})}
-					ref={ref}
+					ref={ref as React.Ref<HTMLDivElement>}
 				>
 					{children}
 					<span className="collapse-icon-closed">

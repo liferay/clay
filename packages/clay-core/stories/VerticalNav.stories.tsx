@@ -490,6 +490,24 @@ export const ControlledExpandedKeys = () => {
 	);
 };
 
+type ProductMenuItem = {
+	id: string;
+	href?: string;
+	label: string;
+	active?: boolean;
+	icon?: string;
+	itemClass?: string;
+	sticker?: {
+		displayType: string;
+		label: string;
+	};
+	plusButton?: {
+		ariaLabel: string;
+		title: string;
+	};
+	items?: Array<ProductMenuItem>;
+};
+
 const items_cms_product_menu = [
 	{
 		href: '#home',
@@ -591,7 +609,7 @@ const items_cms_product_menu = [
 		itemClass: 'mt-3',
 		label: 'Recycle Bin',
 	},
-] as Array<Item>;
+] as Array<ProductMenuItem>;
 
 export const Primary = () => {
 	return (
