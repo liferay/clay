@@ -36,24 +36,23 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
           class="nav-item"
           role="none"
         >
-          <button
+          <div
             aria-controls="clay-id-6"
             aria-expanded="false"
-            class="nav-link collapse-icon collapsed btn btn-unstyled"
+            class="nav-link collapse-icon collapsed"
             role="menuitem"
-            type="button"
           >
             Home
             <span
               class="collapse-icon-closed"
             >
               <svg
-                class="lexicon-icon lexicon-icon-caret-right"
+                class="lexicon-icon lexicon-icon-angle-right-small"
                 focusable="false"
                 role="presentation"
               >
                 <use
-                  href="#caret-right"
+                  href="#angle-right-small"
                 />
               </svg>
             </span>
@@ -61,16 +60,16 @@ exports[`VerticalNav basic rendering render dynamic content 1`] = `
               class="collapse-icon-open"
             >
               <svg
-                class="lexicon-icon lexicon-icon-caret-bottom"
+                class="lexicon-icon lexicon-icon-angle-down-small"
                 focusable="false"
                 role="presentation"
               >
                 <use
-                  href="#caret-bottom"
+                  href="#angle-down-small"
                 />
               </svg>
             </span>
-          </button>
+          </div>
         </li>
         <li
           class="nav-item"
