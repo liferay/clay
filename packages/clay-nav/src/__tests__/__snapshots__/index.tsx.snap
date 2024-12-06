@@ -36,24 +36,23 @@ exports[`ClayVerticalNav renders 1`] = `
           class="nav-item"
           role="none"
         >
-          <button
+          <div
             aria-controls="clay-id-2"
             aria-expanded="true"
-            class="nav-link collapse-icon btn btn-unstyled"
+            class="nav-link collapse-icon"
             role="menuitem"
-            type="button"
           >
             Home
             <span
               class="collapse-icon-closed"
             >
               <svg
-                class="lexicon-icon lexicon-icon-caret-right"
+                class="lexicon-icon lexicon-icon-angle-right-small"
                 focusable="false"
                 role="presentation"
               >
                 <use
-                  href="/path/to#caret-right"
+                  href="/path/to#angle-right-small"
                 />
               </svg>
             </span>
@@ -61,16 +60,16 @@ exports[`ClayVerticalNav renders 1`] = `
               class="collapse-icon-open"
             >
               <svg
-                class="lexicon-icon lexicon-icon-caret-bottom"
+                class="lexicon-icon lexicon-icon-angle-down-small"
                 focusable="false"
                 role="presentation"
               >
                 <use
-                  href="/path/to#caret-bottom"
+                  href="/path/to#angle-down-small"
                 />
               </svg>
             </span>
-          </button>
+          </div>
           <ul
             class="nav nav-stacked"
             id="clay-id-2"

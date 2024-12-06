@@ -938,6 +938,40 @@
 				}
 			}
 
+			&.collapse-icon {
+				$_collapse-icon: setter(map-get($map, collapse-icon), ());
+
+				@include clay-css($_collapse-icon);
+
+				.collapse-icon-closed {
+					@include clay-css(
+						map-get($_collapse-icon, collapse-icon-closed)
+					);
+				}
+
+				.collapse-icon-open {
+					@include clay-css(
+						map-get($_collapse-icon, collapse-icon-open)
+					);
+				}
+			}
+
+			.autofit-row {
+				$_autofit-row: setter(map-get($map, autofit-row), ());
+
+				@include clay-css($_autofit-row);
+
+				.autofit-col {
+					@include clay-css(map-get($_autofit-row, autofit-col));
+				}
+
+				.autofit-col-expand {
+					@include clay-css(
+						map-get($_autofit-row, autofit-col-expand)
+					);
+				}
+			}
+
 			@if (map-get($c-inner, enabled)) {
 				> .c-inner {
 					@include clay-css($c-inner);

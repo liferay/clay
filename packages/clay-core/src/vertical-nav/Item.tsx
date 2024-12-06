@@ -81,7 +81,7 @@ const ParentContext = React.createContext<React.RefObject<
 	HTMLButtonElement | HTMLAnchorElement
 > | null>(null);
 
-export function Item<T extends object>({
+export function Item<T extends Record<string, any>>({
 	active: depreactedActive,
 	children,
 	href,

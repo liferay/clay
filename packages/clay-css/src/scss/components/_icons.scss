@@ -29,7 +29,8 @@
 // Collapse Icon
 
 a.collapse-icon,
-button.collapse-icon {
+button.collapse-icon,
+.collapse-icon[tabindex] {
 	padding-left: $collapse-icon-padding-left;
 	padding-right: $collapse-icon-padding-right;
 
