@@ -3,12 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Button from '@clayui/button';
-import React, {useState} from 'react';
-
-import ClayButton, {ClayButtonWithIcon} from '@clayui/button';
+import Button, {ClayButtonWithIcon} from '@clayui/button';
 import ClayIcon from '@clayui/icon';
-import ClayLink from '@clayui/link';
+import React, {useState} from 'react';
 
 import {VerticalNav} from '../src';
 
