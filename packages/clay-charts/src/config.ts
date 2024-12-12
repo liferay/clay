@@ -4,15 +4,15 @@
  */
 
 export const DEFAULT_COLORS = [
-	'#4B9BFF',
-	'#FFB46E',
-	'#FF5F5F',
-	'#50D2A0',
-	'#FF73C3',
-	'#9CE269',
-	'#AF78FF',
-	'#FFD76E',
-	'#5FC8FF',
+	'#006eff',
+	'#cc4e00',
+	'#e60000',
+	'#1b7e6e',
+	'#e50082',
+	'#458613',
+	'#aa33ff',
+	'#cc4e00',
+	'#0077b3',
 ];
 
 export const DEFAULT_GRID_OBJECT = {

@@ -10,10 +10,10 @@ import React from 'react';
 
 const DEFAULT_COLOR = {
 	range: {
-		max: '#0065e4',
-		min: '#b1d4ff',
+		max: '#006be6',
+		min: '#97c5ff',
 	},
-	selected: '#4b9bff',
+	selected: '#006eff',
 	value: 'pop_est',
 };
 
