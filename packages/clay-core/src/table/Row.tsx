@@ -160,11 +160,9 @@ function RowInner<T extends Record<string, any>>(
 
 		return [
 			...Array.from(visibleColumns.values()),
-			...(columnsVisibility && count > visibleColumns.size
-				? [count - 1]
-				: []),
+			...(columnsVisibility && count > headCellsCount ? [count - 1] : []),
 		];
-	}, [columnsVisibility, items?.length, visibleColumns]);
+	}, [columnsVisibility, items?.length, visibleColumns, headCellsCount]);
 
 	const collection = useCollection({
 		children,
