@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.124.0](https://github.com/liferay/clay/compare/v3.123.1...v3.124.0) (2024-12-18)
+
+### Bug Fixes
+
+-   **@clayui/core:** fixes bug when keeping the column visible when it should be hidden ([2bcbcf3](https://github.com/liferay/clay/commit/2bcbcf3a6448675252106c17c50e5ebc44ebac03))
+-   **@clayui/core:** fixes bug when updating the state at render time a… 27bf8ca …nd the number of table columns when the state changes ([1b4a50e](https://github.com/liferay/clay/commit/1b4a50ef505ba0fc15871d00b755e8829445005c))
+-   **@clayui/core:** fixes keyboard navigation bug for VerticalNav with `displayType` primary ([40dfe9b](https://github.com/liferay/clay/commit/40dfe9b9eff8f8fc93b3d3500c9c7ac887fdbf2a))
+
+### Features
+
+-   **@clayui/core:** LPD-40160 Add displayType primary for VerticalNav for CMS Product Menu variant ([8cbefc8](https://github.com/liferay/clay/commit/8cbefc8b9ac21e85d3c1566709d53dc15924fff7))
+-   **@clayui/core:** LPD-40160 Add floating menubar action button ([1a2e082](https://github.com/liferay/clay/commit/1a2e082a906c463a91cd2a0d2058b5e713ae6669))
+-   **@clayui/core:** LPD-40160 Add floating menubar action button ([7782b3a](https://github.com/liferay/clay/commit/7782b3a204a96bfe70f66970051ce818ea5f1007))
+
 # [3.123.0](https://github.com/liferay/clay/compare/v3.122.0...v3.123.0) (2024-11-21)
 
 ### Features

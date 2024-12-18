@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.124.0](https://github.com/liferay/clay/compare/v3.123.1...v3.124.0) (2024-12-18)
+
+### Bug Fixes
+
+-   **@clayui/charts:** LPD-44040 Update Clay Chart colors for accessibility ([63575e3](https://github.com/liferay/clay/commit/63575e3b8a3009e0d3d9d975028e0f7a18027611))
+-   **@clayui/core:** fixes bug when keeping the column visible when it should be hidden ([2bcbcf3](https://github.com/liferay/clay/commit/2bcbcf3a6448675252106c17c50e5ebc44ebac03))
+-   **@clayui/core:** fixes bug when updating the state at render time a… 27bf8ca …nd the number of table columns when the state changes ([1b4a50e](https://github.com/liferay/clay/commit/1b4a50ef505ba0fc15871d00b755e8829445005c))
+-   **@clayui/core:** fixes keyboard navigation bug for VerticalNav with `displayType` primary ([40dfe9b](https://github.com/liferay/clay/commit/40dfe9b9eff8f8fc93b3d3500c9c7ac887fdbf2a))
+-   **@clayui/css:** LPD-44040 Update Atlas base colors ([11d00af](https://github.com/liferay/clay/commit/11d00af8b378fac5363c108de836c0c9cb5da027))
+
+### Features
+
+-   **@clayui/core:** LPD-40160 Add displayType primary for VerticalNav for CMS Product Menu variant ([8cbefc8](https://github.com/liferay/clay/commit/8cbefc8b9ac21e85d3c1566709d53dc15924fff7))
+-   **@clayui/core:** LPD-40160 Add floating menubar action button ([1a2e082](https://github.com/liferay/clay/commit/1a2e082a906c463a91cd2a0d2058b5e713ae6669))
+-   **@clayui/core:** LPD-40160 Add floating menubar action button ([7782b3a](https://github.com/liferay/clay/commit/7782b3a204a96bfe70f66970051ce818ea5f1007))
+-   **@clayui/css:** LPD-40160 Adds menubar-action for adding New Space ([2bbfd72](https://github.com/liferay/clay/commit/2bbfd7202be9b8569605ee0e2d43e120faa97565))
+-   **@clayui/css:** LPD-40160 Adds menubar-primary for CMS Product Menu variant ([5144840](https://github.com/liferay/clay/commit/514484057c7192019919b1c13cdd29e1800ae789))
+-   **@clayui/css:** LPD-42908 Adds language flags fr-BE, fr-CH, de-CH, it-CH, mk-MK, de-AT ([98411df](https://github.com/liferay/clay/commit/98411df8ea06dc73617e2ee152153c80111deb84))
+-   **@clayui/css:** LPD-44385 Add language flag no-No.svg ([84999dd](https://github.com/liferay/clay/commit/84999dd061470b3b96bf379ba66f46a102adeb0d))
+
 ## [3.123.1](https://github.com/liferay/clay/compare/v3.123.0...v3.123.1) (2024-11-27)
 
 ### Bug Fixes

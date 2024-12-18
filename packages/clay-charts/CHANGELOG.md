@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.124.0](https://github.com/liferay/clay/compare/v3.123.1...v3.124.0) (2024-12-18)
+
+### Bug Fixes
+
+-   **@clayui/charts:** LPD-44040 Update Clay Chart colors for accessibility ([63575e3](https://github.com/liferay/clay/commit/63575e3b8a3009e0d3d9d975028e0f7a18027611))
+
 ## [3.106.1](https://github.com/matuzalemsteles/clay/compare/v3.106.0...v3.106.1) (2023-10-26)
 
 **Note:** Version bump only for package @clayui/charts
