@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import Button, {ClayButtonWithIcon} from '@clayui/button';
+import Button from '@clayui/button';
 import ClayIcon from '@clayui/icon';
+import ClaySticker from '@clayui/sticker';
 import React, {useState} from 'react';
 
 import {VerticalNav} from '../src';
@@ -498,7 +499,7 @@ type ProductMenuItem = {
 		displayType: string;
 		label: string;
 	};
-	plusButton?: {
+	menubarAction?: {
 		ariaLabel: string;
 		title: string;
 	};
@@ -517,6 +518,7 @@ const items_cms_product_menu = [
 		label: 'Analytics',
 	},
 	{
+		initialExpanded: true,
 		itemClass: 'mt-3',
 		items: [
 			{
@@ -544,6 +546,7 @@ const items_cms_product_menu = [
 		label: 'Shared With Me',
 	},
 	{
+		initialExpanded: true,
 		itemClass: 'mt-3',
 		items: [
 			{
@@ -570,6 +573,7 @@ const items_cms_product_menu = [
 		label: 'Admin',
 	},
 	{
+		initialExpanded: true,
 		itemClass: 'mt-3',
 		items: [
 			{
@@ -584,7 +588,7 @@ const items_cms_product_menu = [
 				href: '#campaigns',
 				label: 'Campaigns',
 				sticker: {
-					displaytype: 'primary',
+					displayType: 'primary',
 					label: 'C',
 				},
 			},
@@ -595,7 +599,7 @@ const items_cms_product_menu = [
 			},
 		],
 		label: 'Spaces',
-		plusButton: {
+		menubarAction: {
 			ariaLabel: 'New Space',
 			title: 'New Space',
 		},
@@ -618,30 +622,31 @@ export const Primary = () => {
 			{(item) => (
 				<VerticalNav.Item
 					href={item.href}
+					initialExpanded={item.initialExpanded}
 					items={item.items}
 					key={item.label}
+					menubarAction={item.menubarAction}
+					textValue={item.label}
 				>
 					<div className="autofit-row">
+						{item.sticker && (
+							<ClaySticker
+								displayType={item.sticker.displayType}
+								size="sm"
+							>
+								{item.sticker.label}
+							</ClaySticker>
+						)}
+
 						{item.icon && (
 							<div className="autofit-col">
 								<ClayIcon symbol={item.icon} />
 							</div>
 						)}
+
 						<div className="autofit-col autofit-col-expand">
 							{item.label}
 						</div>
-						{item.plusButton && (
-							<div className="autofit-col">
-								<ClayButtonWithIcon
-									aria-label={item.plusButton.ariaLabel}
-									displayType="secondary"
-									monospaced
-									size="xs"
-									symbol="plus"
-									title={item.plusButton.title}
-								/>
-							</div>
-						)}
 					</div>
 				</VerticalNav.Item>
 			)}
