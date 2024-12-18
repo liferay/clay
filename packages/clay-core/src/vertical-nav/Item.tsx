@@ -8,6 +8,8 @@ import {Keys, setElementFullHeight, useId} from '@clayui/shared';
 import React, {useContext, useMemo, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
+import classNames from 'classnames';
+import {ClayButtonWithIcon} from '@clayui/button';
 import {Collection} from '../collection';
 import {Nav} from '../nav';
 import {useVertical} from './context';
@@ -40,6 +42,14 @@ interface IProps<T> extends React.HTMLAttributes<HTMLLIElement> {
 	 * @ignore
 	 */
 	keyValue?: React.Key;
+
+	/**
+	 * Properties to pass to the menubar action
+	 */
+	menubarAction?: {
+		ariaLabel: string;
+		title: string;
+	};
 
 	/**
 	 * Internal property.
@@ -89,6 +99,7 @@ export function Item<T extends Record<string, any>>({
 	initialExpanded,
 	items,
 	keyValue,
+	menubarAction,
 	onClick,
 	textValue: _textValue,
 	...otherProps
@@ -137,6 +148,7 @@ export function Item<T extends Record<string, any>>({
 				aria-controls={items ? ariaControlsId : undefined}
 				aria-current={active ? ariaCurrent ?? undefined : undefined}
 				aria-expanded={items ? isExpanded : undefined}
+				className={menubarAction ? 'menubar-action-1' : ''}
 				collapsed={!isExpanded}
 				href={href}
 				onClick={(event) => {
@@ -203,6 +215,18 @@ export function Item<T extends Record<string, any>>({
 			>
 				{children}
 			</Nav.Link>
+
+			{menubarAction && (
+				<ClayButtonWithIcon
+					aria-label={menubarAction.ariaLabel}
+					className="menubar-action"
+					displayType="secondary"
+					monospaced
+					size="xs"
+					symbol="plus"
+					title={menubarAction.title}
+				/>
+			)}
 
 			{items && (
 				<CSSTransition

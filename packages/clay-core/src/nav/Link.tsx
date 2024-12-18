@@ -52,44 +52,6 @@ export const Link = React.forwardRef<
 		},
 		ref
 	) => {
-		if (showIcon) {
-			return (
-				<div
-					{...(otherProps as Omit<
-						IProps,
-						keyof React.AnchorHTMLAttributes<HTMLAnchorElement>
-					> &
-						React.HTMLAttributes<HTMLDivElement>)}
-					className={classNames('nav-link', className, {
-						active,
-						['collapse-icon']: showIcon,
-						collapsed,
-						disabled,
-					})}
-					ref={ref as React.Ref<HTMLDivElement>}
-				>
-					{children}
-					<span className="collapse-icon-closed">
-						<Icon
-							focusable="false"
-							role="presentation"
-							spritemap={spritemap}
-							symbol="angle-right-small"
-						/>
-					</span>
-
-					<span className="collapse-icon-open">
-						<Icon
-							focusable="false"
-							role="presentation"
-							spritemap={spritemap}
-							symbol="angle-down-small"
-						/>
-					</span>
-				</div>
-			);
-		}
-
 		return (
 			<LinkOrButton
 				{...otherProps}
@@ -104,6 +66,28 @@ export const Link = React.forwardRef<
 				ref={ref}
 			>
 				{children}
+
+				{showIcon && (
+					<>
+						<span className="collapse-icon-closed">
+							<Icon
+								focusable="false"
+								role="presentation"
+								spritemap={spritemap}
+								symbol="angle-right-small"
+							/>
+						</span>
+
+						<span className="collapse-icon-open">
+							<Icon
+								focusable="false"
+								role="presentation"
+								spritemap={spritemap}
+								symbol="angle-down-small"
+							/>
+						</span>
+					</>
+				)}
 			</LinkOrButton>
 		);
 	}
